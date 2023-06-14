@@ -13,7 +13,7 @@ A PDF document may optionally have a document outline (also called as bookmarks)
 
 ## Showing/hiding the outline view
 
-The PDF viewer’s built-in outline view that displays the document outline in a tree like structure can be shown or hidden using the `IsOutlineViewVisible` property. The default value of this property is `false`. 
+The PDF viewer’s built-in outline view that displays the document outline in a tree like structure can be shown or hidden using the [IsOutlineViewVisible](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_IsOutlineViewVisible) property. The default value of this property is `false`. 
 
 {% tabs %}
 {% highlight XAML %}
@@ -30,7 +30,7 @@ pdfViewer.IsOutlineViewVisible = true;
 
 ## Accessing outline elements
 
-To access the document outline and its elements, you can use the `DocumentOutline` property. This property provides a list of outline elements. 
+To access the document outline and its elements, you can use the [DocumentOutline](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_DocumentOutline) property. This property provides a list of outline elements. 
 
 {% tabs %}
 {% highlight c# %}
@@ -42,7 +42,7 @@ var documentOutline = pdfViewer.DocumentOutline;
 
 ## Accessing nested child elements
 
-The outline elements nested within each outline element can be accessed from the `OutlineElement.Children` property. Below code snippet illustrates accessing the 2nd element in the document outline. And then accessing its 3rd child.
+The outline elements nested within each outline element can be accessed from the [OutlineElement.Children](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.OutlineElement.html#Syncfusion_Maui_PdfViewer_OutlineElement_Children) property. Below code snippet illustrates accessing the 2nd element in the document outline. And then accessing its 3rd child.
 
 {% tabs %}
 {% highlight c# %}
@@ -63,7 +63,7 @@ As mentioned above, you can show the outline view by setting the `IsOultineViewV
 
 ### Navigating programmatically
 
-The PDF viewer allows the users to navigate to an outline element using the `GoToOutlineElement` method. The below code snippet illustrates the same.
+The PDF viewer allows the users to navigate to an outline element using the [GoToOutlineElement](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_GoToOutlineElement_Syncfusion_Maui_PdfViewer_OutlineElement_) method. The below code snippet illustrates the same.
 
 {% tabs %}
 {% highlight c# %}

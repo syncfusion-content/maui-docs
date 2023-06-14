@@ -142,7 +142,7 @@ ComboBox
 Enum and List type property.
 </td>
 <td>
-{{'[SfComboBox](https://help.syncfusion.com/maui/combobox)'| markdownify }}
+{{'[SfComboBox](https://help.syncfusion.com/maui/combobox/overview)'| markdownify }}
 </td>
 </tr>
 <tr>
@@ -156,7 +156,7 @@ AutoComplete
 Enum and List type property.
 </td>
 <td>
-{{'[SfAutoComplete](https://help.syncfusion.com/maui/autocomplete)'| markdownify }}
+{{'[SfAutoComplete](https://help.syncfusion.com/maui/autocomplete/overview)'| markdownify }}
 </td>
 </tr>
 <tr>
@@ -504,7 +504,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 
 ## Combo Box editor
 
-In the Combo Box editor, the [SfComboBox](https://help.syncfusion.com/maui/combobox) will be loaded.
+In the Combo Box editor, the [SfComboBox](https://help.syncfusion.com/maui/combobox/overview) will be loaded.
 
 #### Changing the ItemsSource of combo box
 
@@ -734,7 +734,7 @@ N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-dataform/t
 
 ## AutoComplete editor
 
-In the autocomplete editor, the [SfAutoComplete](https://help.syncfusion.com/maui/autocomplete) is loaded.
+In the autocomplete editor, the [SfAutoComplete](https://help.syncfusion.com/maui/autocomplete/overview) is loaded.
 
 #### Changing the ItemsSource of autocomplete editor
 
