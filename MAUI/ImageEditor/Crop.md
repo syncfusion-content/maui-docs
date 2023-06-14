@@ -1,186 +1,179 @@
 ---
 layout: post
-title: Selection and Cropping in ##Platform_Name## ImageEditor Control | Syncfusion
-description: Learn here all about Selection and Cropping in Syncfusion ##Platform_Name## ImageEditor component of Syncfusion Essential JS 2 and more.
-platform: ej2-asp-core-mvc
-control: Selection and Cropping
-publishingplatform: ##Platform_Name##
+title: Crop in .NET MAUI ImageEditor control | Syncfusion
+description: Learn here all about Crop support in Syncfusion .NET MAUI ImageEditor (SfImageEditor) control and more.
+platform: MAUI
+control: SfImageEditor
 documentation: ug
 ---
 
-# Selection and Cropping
+# Crop in .NET MAUI ImageEditor (SfImageEditor)
 
-The Image Editor control has multiple selection options including custom, square, circle, and customized to various aspects ratios. The selection region can be dragged and resized for cropping an image. The selection can be made by either using a toolbar or the `select` method.  
+You can use the cropping tool in the Image Editor to select and crop a specific portion of an image.
 
-In the `select` method, the selection type needs to be specified as a custom, square, circle, and aspect ratios such as 3:2, 4:3, 5:4, 7:5, 16:9.
+## Image cropping ratio
 
-In the toolbar, the selection can be made by clicking the crop dropdown button and picking the selection option such as custom, square, circle, and aspect ratios.
+The Image Editor control provides various selection options for cropping images, including custom, square, circle, and customized to various aspects ratios. You can drag and resize the selection region to crop the desired area of an image.
 
-## Custom
+Cropping operation can be done in the following two ways:
 
-The selection region can be customized by dragging and resizing an image.
+* Enable cropping and visually select the crop region.
+* Manually entering the cropping area.
 
-In the toolbar, the custom selection can be done by clicking the crop dropdown button and picking the `Custom` option from that popup.
+N> You can also crop the image at a specific position with annotations. 
 
-In the following example, the `select` method is used in the button click to the custom selection.
+### Handling the cropping tool
 
-{% if page.publishingplatform == "aspnet-core" %}
+The [`Crop`]() method in the image editor control crop the image based on the [`ImageCropType`]. It allows users to enable or disable the cropping region displayed over the image, making it easier to visually choose the area for cropping.
+
+    * ImageCropType - Specifies the selection type for cropping the image.
+
+* The following code shows cropping the image to any desired size.
+
+{% capture codesnippet1 %}
+
+{% highlight C# %}
+
+// To perform free-hand cropping:
+
+imageEditor.Crop(ImageCropType.Free);    
+
+{% endhighlight %}
+
+{% endcapture %}
+
+{{ codesnippet1 | UnOrderList_Indent_Level_1 }} 
+
+* The following code shows cropping an image in square format.
+
+{% capture codesnippet2 %}
+
+{% highlight C# %}
+
+// To crop an image as a square dimension.
+
+imageEditor.Crop(1,1);
+
+{% endhighlight %}
+
+{% endcapture %}
+
+{{ codesnippet2 | UnOrderList_Indent_Level_1 }} 
+
+* To crop the image with a specific ratio (16:9):
+
+{% capture codesnippet3 %}
+
+{% highlight C# %}
+
+// For cropping the image with ratio, x value as 16, and y value as 9.
+
+imageEditor.Crop(16,9);    
+
+{% endhighlight %} 
+
+{% endcapture %}
+
+{{ codesnippet3 | UnOrderList_Indent_Level_1 }} 
+
+* To position the cropping window with custom location, pass the desired rectangle in [`Crop`]() method. Each value in the rectangle should be in offset value(0 to 100).
+
+{% capture codesnippet4 %}
+
+{% highlight C# %}
+
+Rect rect = new Rect(20,20,50,50);
+
+imageEditor.Crop(rect);    
+
+{% endhighlight %} 
+
+{% endcapture %}
+
+{{ codesnippet4 | UnOrderList_Indent_Level_1 }} 
+
+After the cropping area has been selected, the [`SaveEdits`]() method is called, which in turn crops the selected region and displays the cropped image on the image editor.
+
+{% highlight C# %}
+
+imageEditor.SaveEdits();
+
+{% endhighlight %}
+
+After selecting the cropping area, if you decide to cancel the edits and revert back to the original image, you can use the [`CancelEdits`]() method. It discard the changes made during the cropping process and restore the image to its initial state.
+
+{% highlight C# %}
+
+imageEditor.CancelEdits();
+
+{% endhighlight %}
+
+### Circle cropping
+
+You can also crop an image in a circular or elliptical format, which is useful for profile pictures. Use the [`Crop`]() method with an empty Rect and set the isEllipse parameter to true.
+
+{% highlight C# %}
+
+{% endhighlight %}
+
+![SfImageEditor](ImageEditor_images/CircleCropPreview.png)
+
+The following image show cases the circularly cropped image.
+
+![SfImageEditor](ImageEditor_images/CircleCrop.png)
+
+ The following code shows cropping an image in elliptical format.
+
+{% highlight C# %}
+
+// To crop an image as a elliptical dimension.
+
+imageEditor.Crop(new Rect(), true);
+
+{% endhighlight %}
+
+### Entering the cropping area manually
+
+To manually enter the cropping area without enabling the cropping functionality, use the overloaded [`Crop(Rect rect)`]() method. It can be done by simply define a rectangle and pass it to the [`Crop`]() method.
 
 {% tabs %}
-{% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/image-editor/selection-cropping/custom/tagHelper %}
+
+{% highlight C# %}
+
+imageEditor.Crop(new Rect(100,100,150,200));
+
 {% endhighlight %}
-{% highlight c# tabtitle="Default.cs" %}
-{% include code-snippet/image-editor/selection-cropping/custom/default.cs %}
-{% endhighlight %}
+
 {% endtabs %}
 
-{% elsif page.publishingplatform == "aspnet-mvc" %}
+![SfImageEditor](ImageEditor_images/cropaspect.png)
+
+### Programmatically selecting the cropping ratio
+
+Programmatically, you can select the desired cropping ratio from the various aspect ratios available in the built-in cropping toolbar by specifying the corresponding index of the toolbar item using the [`Crop`]() method.
+
+The following code sample will add the cropping preview on the image in square shape.
 
 {% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/image-editor/selection-cropping/custom/razor %}
+
+{% highlight C# %}
+
+ imageEditor.Crop(1, 1);
+
 {% endhighlight %}
-{% highlight c# tabtitle="Default.cs" %}
-{% include code-snippet/image-editor/selection-cropping/custom/default.cs %}
-{% endhighlight %}
-{% endtabs %}
-{% endif %}
 
-Output be like the below.
-
-![ImageEditor Sample](images/image-editor-custom.jpg)
-
-## Square
-
-The selection region can be customized as a square. That square can be dragged and resized. In the toolbar, the square selection can be done by clicking the crop dropdown button and picking the `Square` option from that popup.
-
-In the following example, the `select` method is used in the button click to the square selection.
-
-{% if page.publishingplatform == "aspnet-core" %}
-
-{% tabs %}
-{% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/image-editor/selection-cropping/square/tagHelper %}
-{% endhighlight %}
-{% highlight c# tabtitle="Default.cs" %}
-{% include code-snippet/image-editor/selection-cropping/square/default.cs %}
-{% endhighlight %}
 {% endtabs %}
 
-{% elsif page.publishingplatform == "aspnet-mvc" %}
+* To crop an image in a circle or an ellipse with a specific ratio, use [`Crop`]() with a ratio argument and an optional parameter of true, which specifies whether the cropping panel should be added in an elliptical or rectangle shape. The default value is `false`.
 
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/image-editor/selection-cropping/square/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="Default.cs" %}
-{% include code-snippet/image-editor/selection-cropping/square/default.cs %}
-{% endhighlight %}
-{% endtabs %}
-{% endif %}
+{% capture codesnippet6 %}
 
-Output be like the below.
+{% highlight C# %}
 
-![ImageEditor Sample](images/image-editor-square.jpg)
+imageEditor.Crop(new Rect(20,20,50,50), true);   
 
-## Circle
+{% endhighlight %} 
 
-The selection region can be customized as a circle. That circle can be moved and resized. In the toolbar, the circle selection can be done by clicking the crop dropdown button and picking the `Circle` option from that popup.
+{% endcapture %}
 
-In the following example, the `select` method is used in the button click to the circle selection.
-
-{% if page.publishingplatform == "aspnet-core" %}
-
-{% tabs %}
-{% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/image-editor/selection-cropping/circle/tagHelper %}
-{% endhighlight %}
-{% highlight c# tabtitle="Default.cs" %}
-{% include code-snippet/image-editor/selection-cropping/circle/default.cs %}
-{% endhighlight %}
-{% endtabs %}
-
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/image-editor/selection-cropping/circle/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="Default.cs" %}
-{% include code-snippet/image-editor/selection-cropping/circle/default.cs %}
-{% endhighlight %}
-{% endtabs %}
-{% endif %}
-
-Output be like the below.
-
-![ImageEditor Sample](images/image-editor-circle.jpg)
-
-## Ratio
-
-The selection region can be customized according to the predefined ratios including 4:3, 7:5, 16:9, and more. In the toolbar, the Ratio selection can be done by clicking the crop dropdown button and picking the 4:3, 7:5, or 16:9 option from that popup.
-
-In the following example, the `select` method is used in the button click to the ratio selection.
-
-{% if page.publishingplatform == "aspnet-core" %}
-
-{% tabs %}
-{% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/image-editor/selection-cropping/ratio/tagHelper %}
-{% endhighlight %}
-{% highlight c# tabtitle="Default.cs" %}
-{% include code-snippet/image-editor/selection-cropping/ratio/default.cs %}
-{% endhighlight %}
-{% endtabs %}
-
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/image-editor/selection-cropping/ratio/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="Default.cs" %}
-{% include code-snippet/image-editor/selection-cropping/ratio/default.cs %}
-{% endhighlight %}
-{% endtabs %}
-{% endif %}
-
-Output be like the below.
-
-![ImageEditor Sample](images/image-editor-ratio.jpg)
-
-## Cropping
-
-The Image Editor control crops the image based on the selection. The cropping can be made by either using a toolbar or the crop method.
-
-In the toolbar, cropping can be made by clicking the OK button which is enabled only after performing the selection.
-
-In the following example, the `select` and `crop` method is used in the button click event to perform selection and cropping.
-
-{% if page.publishingplatform == "aspnet-core" %}
-
-{% tabs %}
-{% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/image-editor/selection-cropping/cropping/tagHelper %}
-{% endhighlight %}
-{% highlight c# tabtitle="Default.cs" %}
-{% include code-snippet/image-editor/selection-cropping/cropping/default.cs %}
-{% endhighlight %}
-{% endtabs %}
-
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/image-editor/selection-cropping/cropping/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="Default.cs" %}
-{% include code-snippet/image-editor/selection-cropping/cropping/default.cs %}
-{% endhighlight %}
-{% endtabs %}
-{% endif %}
-
-Output be like the below.
-
-![ImageEditor Sample](images/image-editor-cropping.jpg)
+{{ codesnippet6 | UnOrderList_Indent_Level_1 }}
