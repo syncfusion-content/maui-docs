@@ -20,9 +20,11 @@ this.scheduler.AllowAppointmentDrag = false;
 {% endhighlight %}
 {% endtabs %}
 
+![Appointment Drag and Drop in .NET MAUI Scheduler](images/drag-and-drop/appointment-drag-and-drop.gif)
+
 Refer [here](https://help.syncfusion.com/maui/scheduler/appointments#creating-business-objects) to create a business object class.
 
-N> Inherit this class from the `INotifyPropertyChanged` for dynamic changes in custom data.
+N> Inherit the business object class class from the `INotifyPropertyChanged` for dynamic changes in custom data.
 
 ## Handle appointment drag starting
 You can get the appointment details and handle whether the appointment can be draggable or not by using `AppointmentDragStarting` event. This event will be triggered when the appointment is started dragging. The `AppointmentDragStartingEventArgs` argument contains the following properties.

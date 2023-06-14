@@ -324,6 +324,8 @@ In the numeric editor, the `SfNumericEntry` will be loaded and DataForm Numeric 
 
 Also, to add a DataForm Numeric editor, register the editor as `DataFormEditorType.Numeric` for the required property using the [RegisterEditor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_RegisterEditor_System_String_Syncfusion_Maui_DataForm_DataFormEditorType_) method.
 
+![Numeric editor in .NET MAUI DataForm.](images/editors/dataform-numeric-editor.png)
+
 #### Changing the Numeric editor properties
 You can use `GenerateDataFormItem` event to change Numeric editor properties
 
@@ -373,6 +375,8 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 In the Masked text editor, the `SfMaskedEntry` will be loaded and DataForm Masked text editor supports `PhoneNumber` and `CreditCard` data type property of [DataTypeAttribute](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.datatype?view=net-7.0).
 
 Also, to add a DataForm Masked text editor, register the editor as `DataFormEditorType.MaskedText` for the required property using the [RegisterEditor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_RegisterEditor_System_String_Syncfusion_Maui_DataForm_DataFormEditorType_) method.
+
+![Masked text editor in .NET MAUI DataForm.](images/editors/dataform-masked-editor.png)
 
 #### Changing the  Masked text editor properties
 You can use `GenerateDataFormItem` event to change Masked text editor properties
