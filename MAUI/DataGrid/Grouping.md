@@ -123,15 +123,15 @@ The following code snippet shows how to apply a background color to the indent c
 {% highlight c# %}
 public class CellStyleConverter : IValueConverter
 {
-    public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+    object IValueConverter.Convert(object value, Type targetType, object parameter, CultureInfo info)
     {
-        var columnIndex = (value as DataGridIndentCell).DataColumn.ColumnIndex;
-        if (columnIndex == 0)
+        var rowType = ((value as GridIndentCell)?.Parent as DataGridRow)?.DataRow?.RowType.ToString();
+        if (rowType == "HeaderRow")
+            return Colors.Bisque;
+        else if (rowType == "CaptionCoveredRow")
             return Colors.LightBlue;
-
-        if (columnIndex == 1)
-            return Colors.LightPink;
-        return Colors.LemonChiffon;
+        else
+            return Colors.PaleVioletRed;
     }
     public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
     {
