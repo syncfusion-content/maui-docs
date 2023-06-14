@@ -11,7 +11,7 @@ documentation: ug
 
 The Syncfusion Visual Studio Toolbox for the .NET MAUI platform is a valuable resource for developers seeking to seamlessly incorporate the Syncfusion .NET MAUI components into their applications. Designed to be compatible with Visual Studio 2022, this toolbox offers a streamlined workflow, simplifying the integration and configuration process of Syncfusion components.
 
-I> The Syncfusion .NET MAUI Toolbox supports Visual Studio 2022 and is available from Essential Studio 2023 Volume 2(version) onwards.
+I> The Syncfusion .NET MAUI Toolbox supports Visual Studio 2022 and is available from Essential Studio 2023 Volume 2(v22.1.34) onwards.
 
 > To check whether the **.NET MAUI Extensions - Syncfusion** extension is installed or not in Visual Studio Extension Manager by navigating to **Extension > Manage Extensions > Installed** for Visual Studio 2022. If this extension is not installed, follow the steps outlined in the [download and installation](download-and-installation) help topic to install the extension.
 
