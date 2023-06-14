@@ -92,7 +92,9 @@ this.dataGrid.IndentColumnWidth = 60;
 
 ### Customize indent column background color
 
-The indent columns can be customized by the writing style for DataGridIntentCell TargetType. The following code snippet shows how to apply a background color to the indent cell based on the column index:
+The indent columns can be customized by the writing style for DataGridIndentCell TargetType. 
+
+The following code snippet shows how to apply a background color to the indent cell based on the column index:
 
 {% tabs %}
 {% highlight xaml %}
@@ -133,13 +135,13 @@ public class CellStyleConverter : IValueConverter
     }
     public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
     {
-        throw new NotImplementedException();
+        return null;
     }
 }
 {% endhighlight %}
 {% endtabs %}
 
-![SfDataGrid with IndentColumnBackgroundColour](Images\Grouping\maui-datagrid-indent-column-background-colour.png)
+![SfDataGrid with IndentColumnBackgroundColor](Images\Grouping\maui-datagrid-indent-column-background-color.png)
 
 ## Custom grouping
 
