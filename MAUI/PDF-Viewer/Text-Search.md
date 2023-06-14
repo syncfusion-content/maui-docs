@@ -13,7 +13,7 @@ The [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.
 
 ## Initiate a text search
 
-The `SearchTextAsync` method asynchronously searches the specified text throughout the PDF document and highlights each occurrence (match). To start the search, you need to call the method in a button click by passing the text to be searched as a parameter as shown in the following example.
+The [SearchTextAsync](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_SearchTextAsync_System_String_TextSearchOptions_System_Threading_CancellationTokenSource_) method asynchronously searches the specified text throughout the PDF document and highlights each occurrence (match). To start the search, you need to call the method in a button click by passing the text to be searched as a parameter as shown in the following example:
 
 {% tabs %}
 {% highlight C# hl_lines="8" %}
@@ -33,11 +33,11 @@ The `SearchTextAsync` method asynchronously searches the specified text througho
 
 ### Search result
 
-The `TextSearchResult` will be obtained at the end of search text operation and it will hold search result. It allows you to navigate to next or previous matches of the text as well as provides the following details.
+The [TextSearchResult](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.TextSearchResult.html) will be obtained at the end of the search text operation and it will hold the search result. It allows you to navigate to the next or previous matches of the text as well as provides the following details:
 
-1. <b>Total matches count</b> – It provides the total number of matches that have been found in the PDF document.
+1. <b>[Total matches count](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.TextSearchResult.html#Syncfusion_Maui_PdfViewer_TextSearchResult_TotalMatchesCount)</b> – It provides the total number of matches that have been found in the PDF document.
 
-2. <b>Current match index</b> – It gives the index of the current focused match. The value is index based.
+2. <b>[Current match index](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.TextSearchResult.html#Syncfusion_Maui_PdfViewer_TextSearchResult_CurrentMatchIndex)</b> – It gives the index of the currently focused match. The value is index based.
 
 {% tabs %}
 {% highlight C# hl_lines="5 6" %}
@@ -58,7 +58,7 @@ N> * If the total matches count is 0, then there were no matches found for the g
 
 ### Navigate to the next and previous match
 
-The `GoToNextMatch` and `GoToPreviousMatch` functionalities of the `TextSearchResult` help you to navigate to the next and previous matches of the text respectively. You can follow the below steps to achieve the same.
+The [GoToNextMatch](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.TextSearchResult.html#Syncfusion_Maui_PdfViewer_TextSearchResult_GoToNextMatch) and [GoToPreviousMatch](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.TextSearchResult.html#Syncfusion_Maui_PdfViewer_TextSearchResult_GoToPreviousMatch) functionalities of the `TextSearchResult` help you to navigate to the next and previous matches of the text respectively. You can follow the given steps to achieve the same:
 
 1.	Search a text and store the search result in a global variable.
 
@@ -100,7 +100,7 @@ The `GoToNextMatch` and `GoToPreviousMatch` functionalities of the `TextSearchRe
 
 ### Close the text search
 
-The `Clear` functionality of the `TextSearchResult` removes all the traces of the searched text in the PDF document.
+The [Clear](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.TextSearchResult.html#Syncfusion_Maui_PdfViewer_TextSearchResult_Clear) functionality of the `TextSearchResult` removes all the traces of the searched text in the PDF document.
 
 {% tabs %}
 {% highlight C# hl_lines="4" %}
@@ -116,7 +116,7 @@ The `Clear` functionality of the `TextSearchResult` removes all the traces of th
 
 ## Text Search progress
 
-By using the `SearchTextAsync` the search result will be obtained only after all the pages has been searched. If the search completion takes a long time for a PDF document with more pages, you may get the current search result while the search is still in progress by using the `TextSearchProgress` event. The event is triggered on each page after the search is completed on the page and `SearchResult` property of the `TextSearchProgressEventArgs` contains the current search result. See the following code example.
+By using the `SearchTextAsync` the search result will be obtained only after all the pages has been searched. If the search completion takes a long time for a PDF document with more pages, you may get the current search result while the search is still in progress by using the [TextSearchProgress](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_TextSearchProgress) event. The event is triggered on each page after the search is completed on the page and [SearchResult](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.TextSearchProgressEventArgs.html#Syncfusion_Maui_PdfViewer_TextSearchProgressEventArgs_SearchResult) property of the [TextSearchProgressEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.TextSearchProgressEventArgs.html) contains the current search result as shown on the following code example:
 
 {% tabs %}
 {% highlight XAML hl_lines="3" %}
@@ -145,7 +145,7 @@ By using the `SearchTextAsync` the search result will be obtained only after all
 
 ### Search completion percentage
 
-The `TotalPagesSearched` property of the `TextSearchProgressEventArgs` provides the total number of pages that have been searched to find the specified text across the PDF document. You may use this information to find the search completion percentage. See the code example below.
+The [TotalPagesSearched](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.TextSearchProgressEventArgs.html#Syncfusion_Maui_PdfViewer_TextSearchProgressEventArgs_TotalPagesSearched) property of the `TextSearchProgressEventArgs` provides the total number of pages that have been searched to find the specified text across the PDF document. You may use this information to find the search completion percentage as shown in the following code example:
 
 {% tabs %}
 {% highlight C# %}
@@ -165,7 +165,7 @@ The `Clear` method of the `TextSearchResult` can be used to cancel the text sear
 1.	If search is running for a long time. 
 2.	When a wrong key word is entered and initiated the search.
 
-See the following code example to cancel a currently running search.
+The following code example shows how to cancel a currently running search.
 
 {% tabs %}
 {% highlight C# hl_lines="10" %}
@@ -193,7 +193,7 @@ By default, the case and other characteristics of the text will not be considere
 2.	`CaseSensitive` - To search text with case sensitive.
 3.	`WholeWords` – To search only the whole words.
 
-You need to pass the `TextSearchOptions` as a parameter to the `SearchTextAsync` method as shown in the following code example.
+You need to pass the `TextSearchOptions` as a parameter to the `SearchTextAsync` method as shown in the following code example:
 
 {% tabs %}
 {% highlight C# hl_lines="5" %}
@@ -210,7 +210,7 @@ You need to pass the `TextSearchOptions` as a parameter to the `SearchTextAsync`
 
 ## Customize the text match highlight colors
 
-The highlight colors of the current match and other matches of a text can be customized with the help of the `TextSearchSettings` property of the `SfPdfViewer`.
+The highlight colors of the current match and other matches of a text can be customized with the help of the [TextSearchSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.TextSearchSettings.html#Syncfusion_Maui_PdfViewer_TextSearchSettings__ctor) property of the `SfPdfViewer`.
 
 {% tabs %}
 {% highlight XAML hl_lines="4 5" %}

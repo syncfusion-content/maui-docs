@@ -116,6 +116,10 @@ The PDF viewer allows the users to perform certain operations such as page navig
 <td><code>Ctrl</code> + <code>End</code></td>
 <td>Goes to last page</td>
 </tr>
+<tr>
+<td><code>Ctrl</code> + <code>C</code></td>
+<td>Copies the selected text to the clipboard</td>
+</tr>
 </table>
 
 ### Limitations
