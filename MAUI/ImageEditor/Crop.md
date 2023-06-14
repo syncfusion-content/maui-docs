@@ -116,11 +116,11 @@ You can also crop an image in a circular or elliptical format, which is useful f
 
 {% endhighlight %}
 
-![SfImageEditor](ImageEditor_images/CircleCropPreview.png)
+![SfImageEditor](images/circle-crop-preview.jpg)
 
 The following image show cases the circularly cropped image.
 
-![SfImageEditor](ImageEditor_images/CircleCrop.png)
+![SfImageEditor](images/circle-crop.jpg)
 
  The following code shows cropping an image in elliptical format.
 
