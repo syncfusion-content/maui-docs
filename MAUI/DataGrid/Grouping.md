@@ -88,6 +88,57 @@ this.dataGrid.IndentColumnWidth = 60;
 {% endhighlight %}
 {% endtabs %}
 
+### Customize indent column background color
+
+Set the background colors to indent cells based on the column where indent cells are present. Refer to the following code snippet to apply background color to indent cells based on the column index.
+
+{% tabs %}
+{% highlight xaml %}
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:CellStyleConverter x:Key="cellStyleConverter" />
+            <Style  TargetType="syncfusion:GridIndentCell">
+                <Setter Property="Background"
+                        Value="{Binding Source={RelativeSource Mode=Self}, 
+                        Converter={StaticResource 
+                        Key=cellStyleConverter}}" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <syncfusion:SfDataGrid  x:Name="dataGrid"
+                            AutoGenerateColumns="True"
+                            ItemsSource="{Binding Orders}" />
+
+    <syncfusion:SfDataGrid.GroupColumnDescriptions>
+        <syncfusion:GroupColumnDescription ColumnName="Name" />
+        <syncfusion:GroupColumnDescription ColumnName="ShipCity" />
+    </syncfusion:SfDataGrid.GroupColumnDescriptions>    
+{% endhighlight %}
+
+{% highlight c# %}
+public class CellStyleConverter : IValueConverter
+{
+    public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+    {
+        var columnIndex = (value as GridIndentCell).DataColumn.ColumnIndex;
+        if (columnIndex == 0)
+            return Colors.LightBlue;
+
+        if (columnIndex == 1)
+            return Colors.LightPink;
+        return Colors.LemonChiffon;
+    }
+    public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+    {
+        throw new NotImplementedException();
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
+![SfDataGrid with IndentColumnBackgroundColour](Images\Grouping\maui-datagrid-indent-column-background-colour.png)
+
 ## Custom grouping
 
 The SfDataGrid allows to group a column based on custom logic when the standard grouping techniques do not meet the requirements.
