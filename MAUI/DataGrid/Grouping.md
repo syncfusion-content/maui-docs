@@ -71,6 +71,8 @@ The following screenshot shows the multi-grouping:
 
 Indent columns are the columns present to the left of the `CaptionSummaryRows` when `GroupingMode` is set as multiple. The number of indent cells in each `CaptionSummaryRow` will be determined by the level of that `Group`. For example, the first group will have only one indent cell and the next immediate group will have an extra indent cell. It keeps on adding by one for each lower level groups to maintain the tree structure. Each data row will have indent cells count equal to the level of the last sub group in view. The following customizations can be done for indent cells:
 
+### Customize indent column width
+
 The width of indent column can be customized by the [IndentColumnWidth]() property. The default width of the indent column is 35. 
 
 {% tabs %}
@@ -90,7 +92,7 @@ this.dataGrid.IndentColumnWidth = 60;
 
 ### Customize indent column background color
 
-Set the background colors to indent cells based on the column where indent cells are present. Refer to the following code snippet to apply background color to indent cells based on the column index.
+The indent columns can be customized by the writing style for DataGridIntentCell TargetType. The following code snippet shows how to apply a background color to the indent cell based on the column index:
 
 {% tabs %}
 {% highlight xaml %}
