@@ -85,6 +85,18 @@ To migrate easier from [Xamarin SfListView](https://www.syncfusion.com/xamarin-u
 <td>{{'[QueryItemSizeEventArgs.DataItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.QueryItemSizeEventArgs.html#Syncfusion_Maui_ListView_QueryItemSizeEventArgs_DataItem)'| markdownify }}</td>
 <td>Gets the underlying data of the queried item.</td>
 </tr>
+
+<tr>
+<td>{{'[ItemData](https://help.syncfusion.com/cr/xamarin/Syncfusion.ListView.XForms.ItemDraggingEventArgs.html#Syncfusion_ListView_XForms_ItemDraggingEventArgs_ItemData)'| markdownify }}</td>
+<td>{{'ItemDraggingEventArgs.DataItem`| markdownify }}</td>
+<td>Gets the underlying data object of the ListViewItem that is currently being dragged from the bound data source.</td>
+</tr>
+
+<tr>
+<td>{{'[CanAdjustDragItemAxis](https://help.syncfusion.com/cr/xamarin/Syncfusion.ListView.XForms.DragDropController.html#Syncfusion_ListView_XForms_DragDropController_CanAdjustDragItemAxis)'| markdownify }}</td>
+<td>{{'CanAdjustDragItemAxis'| markdownify }}</td>
+<td>A property that Gets or sets a value that determines whether to adjust the X position of the drag item for vertical orientation and the Y position for horizontal orientation.</td>
+</tr>
 </table> 
 
 ## Enums
@@ -167,5 +179,4 @@ To migrate easier from [Xamarin SfListView](https://www.syncfusion.com/xamarin-u
 
 ## Upcoming features
 
-  * Item reordering
   * Pull to refresh
