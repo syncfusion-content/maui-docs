@@ -99,7 +99,7 @@ The indent columns can be customized by the writing style for DataGridIntentCell
     <ContentPage.Resources>
         <ResourceDictionary>
             <local:CellStyleConverter x:Key="cellStyleConverter" />
-            <Style  TargetType="syncfusion:GridIndentCell">
+            <Style  TargetType="syncfusion:DataGridIndentCell">
                 <Setter Property="Background"
                         Value="{Binding Source={RelativeSource Mode=Self}, 
                         Converter={StaticResource 
@@ -123,7 +123,7 @@ public class CellStyleConverter : IValueConverter
 {
     public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
     {
-        var columnIndex = (value as GridIndentCell).DataColumn.ColumnIndex;
+        var columnIndex = (value as DataGridIndentCell).DataColumn.ColumnIndex;
         if (columnIndex == 0)
             return Colors.LightBlue;
 
