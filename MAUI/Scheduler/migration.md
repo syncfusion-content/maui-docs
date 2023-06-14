@@ -2651,27 +2651,22 @@ this.Content = scheduler;
 <td>Occurs when header item is tapped.</td></tr>
 
 <tr>
-<td>{{'[OnAppointmentLoadedEvent](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.SfSchedule.html#Syncfusion_SfSchedule_XForms_SfSchedule_MonthInlineAppointmentTapped)'| markdownify }}</td>
+<td>{{'[OnAppointmentLoadedEvent](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.SfSchedule.html#Syncfusion_SfSchedule_XForms_SfSchedule_OnAppointmentLoadedEvent)'| markdownify }}</td>
 <td>{{'[AppointmentTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimeSlotView.html?tabs=tabid-9%2Ctabid-3%2Ctabid-5%2Ctabid-7%2Ctabid-1#Syncfusion_Maui_Scheduler_SchedulerTimeSlotView_AppointmentTemplate)'| markdownify }} (From DaysView, TimelineView, and MonthView)</td>
 <td>Gets or sets the appointment template to customize the default UI.</td></tr>
 
 <tr>
-<td>{{'[OnMonthInlineAppointmentLoadedEvent](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.SfSchedule.html#Syncfusion_SfSchedule_XForms_SfSchedule_MonthInlineAppointmentTapped)'| markdownify }}</td>
+<td>{{'[OnMonthInlineAppointmentLoadedEvent](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.SfSchedule.html#Syncfusion_SfSchedule_XForms_SfSchedule_OnMonthInlineAppointmentLoadedEvent)'| markdownify }}</td>
 <td>{{'[AppointmentTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimeSlotView.html?tabs=tabid-9%2Ctabid-3%2Ctabid-5%2Ctabid-7%2Ctabid-1#Syncfusion_Maui_Scheduler_SchedulerTimeSlotView_AppointmentTemplate)'| markdownify }} (From MonthView)</td>
 <td>Gets or sets the appointment template to customize the default UI.</td></tr>
 
 <tr>
-<td>{{'[OnMonthInlineLoadedEvent](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.SfSchedule.html#Syncfusion_SfSchedule_XForms_SfSchedule_MonthInlineAppointmentTapped)'| markdownify }}</td>
+<td>{{'[OnMonthInlineLoadedEvent](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.SfSchedule.html#Syncfusion_SfSchedule_XForms_SfSchedule_OnMonthInlineLoadedEvent)'| markdownify }}</td>
 <td>{{'[AppointmentTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimeSlotView.html?tabs=tabid-9%2Ctabid-3%2Ctabid-5%2Ctabid-7%2Ctabid-1#Syncfusion_Maui_Scheduler_SchedulerTimeSlotView_AppointmentTemplate)'| markdownify }} (From MonthView)</td>
 <td>Gets or sets the appointment template to customize the default UI.</td></tr>
 
 <tr>
-<td>{{'[OnMonthCellLoadedEvent](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.SfSchedule.html#Syncfusion_SfSchedule_XForms_SfSchedule_MonthInlineAppointmentTapped)'| markdownify }}</td>
-<td>{{'[CellTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html#Syncfusion_Maui_Scheduler_SchedulerMonthView_CellTemplate)'| markdownify }}</td>
-<td>Gets or sets the month cell template or template selector.</td></tr>
-
-<tr>
-<td>{{'[OnMonthCellLoadedEvent](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.SfSchedule.html#Syncfusion_SfSchedule_XForms_SfSchedule_MonthInlineAppointmentTapped)'| markdownify }}</td>
+<td>{{'[OnMonthCellLoadedEvent](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.SfSchedule.html#Syncfusion_SfSchedule_XForms_SfSchedule_OnMonthCellLoadedEvent)'| markdownify }}</td>
 <td>{{'[CellTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html#Syncfusion_Maui_Scheduler_SchedulerMonthView_CellTemplate)'| markdownify }}</td>
 <td>Gets or sets the month cell template or template selector.</td></tr>
 
@@ -2742,7 +2737,6 @@ this.Content = scheduler;
 * Command support for Tapped, DoubleTapped, LongPressed, and ViewChanged events.
 * Support to change text color for each scheduler appointment.
 * Suspend and resume for appointment update.
-* Appointment Drag and Drop.
 
 ## Known issues in .NET MAUI Scheduler 
 

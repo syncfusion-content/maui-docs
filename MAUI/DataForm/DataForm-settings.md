@@ -632,7 +632,7 @@ Please refer [here](https://help.syncfusion.com/maui/dataform/validation#validat
 You can customize editor view by using `InitializeDataEditor` method of `DataFormItemManager`.
 
 {% tabs %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# %}
 
 this.dataForm.ItemManager = new DataFormItemManagerEditorExt();
 
@@ -655,6 +655,7 @@ The data form auto generates the editors based on the data type, you can explici
 
 N> Use the [FieldName](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html#Syncfusion_Maui_DataForm_DataFormItem_FieldName) property to bind the editor to the data object property.
 [GenerateDataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_GenerateDataFormItem) event will not be trigger when [AutoGenerateItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_AutoGenerateItems) is false.
+
 {% tabs %}
 {% highlight XAML %}
    

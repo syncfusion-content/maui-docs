@@ -331,7 +331,7 @@ You can use `GenerateDataFormItem` event to change Numeric editor properties
 {% tabs %}
 {% highlight C# %}
 
-public string Amount { get; set; }
+public int Amount { get; set; }
 public double Number { get; set; }
 public int Percentage { get; set; }
 
