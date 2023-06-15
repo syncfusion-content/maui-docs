@@ -33,6 +33,26 @@ After you have selected the desired text, click the <b>Copy</b> option that appe
 
 N> In desktop platforms, you can also use the keyboard shortcut <code>Ctrl</code> + <code>C</code> (<code>Command</code> + <code>C</code> on MAC) to copy the text.
 
+## Disabling text selection
+
+The ‘EnableTextSelection’ property allows you to enable or disable the text selection in the `SfPdfViewer`. You can assign it a value of `False` to disable the text selection. This can be helpful in situations when you want to prevent users from selecting and copying text contents from the PDF files that are being displayed in the `SfPdfViewer`.
+
+Refer to the following code example to disable the text selection.
+
+{% tabs %}
+{% highlight XAML %}
+
+<syncfusion:SfPdfViewer x:Name="PdfViewer" EnableTextSelection="False"/>
+
+{% endhighlight %}
+{% highlight C# %}
+
+	SfPdfViewer PdfViewer = new SfPdfViewer();
+	PdfViewer.EnableTextSelection = false;
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Customize the text selection highlight color
 
 The ‘TextSelectionSettings’ provides the customizable options for the text selection. The ‘HighlightColor’ property of the ‘TextSelectionSettings’ allows you to customize the color of the text highlight when you selected it. 
