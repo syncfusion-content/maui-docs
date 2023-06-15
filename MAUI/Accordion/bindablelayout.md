@@ -157,8 +157,9 @@ BindableLayout.SetItemsSource(Accordion, viewModel.Employees);
 The `SfAccordion` accepts the `AccordionItem` as its child element. The appearance of each `AccordionItem` can be defined by setting the `BindableLayout.ItemTemplate` property.
 
 {% tabs %}
-{% highlight xaml %}
-<syncfusion:SfAccordion  x:Name="accordion" BindableLayout.ItemsSource="{Binding Employees}" >
+{% highlight xaml hl_lines="2" %}
+<syncfusion:SfAccordion  x:Name="accordion"
+                         BindableLayout.ItemsSource="{Binding Employees}" >
     <BindableLayout.ItemTemplate>
         <DataTemplate>
             <syncfusion:AccordionItem IsExpanded="{Binding IsExpanded}">
@@ -234,83 +235,9 @@ DataTemplate ItemTemplate = new DataTemplate(() =>
     content.RowSpacing = 2;
     content.BackgroundColor = Color.FromArgb("#f4f4f4");
     var contentGrid = new Grid();
-    contentGrid.Margin = new Thickness(16, 6, 0, 0);
-    contentGrid.RowDefinitions.Add(new RowDefinition() { Height = 25 });
-    contentGrid.RowDefinitions.Add(new RowDefinition() { Height = 25 });
-    contentGrid.RowDefinitions.Add(new RowDefinition() { Height = 25 });
-    contentGrid.RowDefinitions.Add(new RowDefinition() { Height = 25 });
-    contentGrid.RowDefinitions.Add(new RowDefinition() { Height = DeviceInfo.Platform == DevicePlatform.WinUI || DeviceInfo.Platform == DevicePlatform.MacCatalyst ? 70 : DeviceInfo.Platform == DevicePlatform.Android ? 90 : DeviceInfo.Platform == DevicePlatform.iOS ? 100 : 90 });
-    contentGrid.RowDefinitions.Add(new RowDefinition() { Height = GridLength.Auto });
-    contentGrid.ColumnDefinitions.Add(new ColumnDefinition() { Width = 100 });
-    contentGrid.ColumnDefinitions.Add(new ColumnDefinition() { Width = 100 });
-    contentGrid.ColumnDefinitions.Add(new ColumnDefinition() { Width = GridLength.Star });
-    var image = new Image();
-    image.SetBinding(Image.SourceProperty, new Binding("Image"));
-    var frame = new Frame() { BorderColor = Colors.Transparent, Padding = 0, Margin = new Thickness(0, 0, 0, 7) };
-    frame.Content = image;
-    contentGrid.SetRowSpan(frame, 4);
-    contentGrid.SetRow(frame, 0);
-    contentGrid.SetColumn(frame, 0);
-    contentGrid.Children.Add(frame);
-    var position = new Label() { Text = "Position", Margin = new Thickness(6, 0, 0, 0) };
-    contentGrid.SetColumn(position, 1);
-    contentGrid.SetRow(position, 0);
-    contentGrid.Children.Add(position);
-    var positionVal = new Label();
-    positionVal.SetBinding(Label.TextProperty, new Binding("Position"));
-    contentGrid.SetColumn(positionVal, 2);
-    contentGrid.SetRow(positionVal, 0);
-    contentGrid.Children.Add(positionVal);
-    var organization = new Label() { Text = "Organization", Margin = new Thickness(6, 0, 0, 0) };
-    contentGrid.SetColumn(organization, 1);
-    contentGrid.SetRow(organization, 1);
-    contentGrid.Children.Add(organization);
-    var organizationVal = new Label();
-    organizationVal.SetBinding(Label.TextProperty, new Binding("OrganizationUnit"));
-    contentGrid.SetColumn(organizationVal, 2);
-    contentGrid.SetRow(organizationVal, 1);
-    contentGrid.Children.Add(organizationVal);
-    var dob = new Label() { Text = "Date Of Birth", Margin = new Thickness(6, 0, 0, 0) };
-    contentGrid.SetColumn(dob, 1);
-    contentGrid.SetRow(dob, 2);
-    contentGrid.Children.Add(dob);
-    var dobVal = new Label();
-    dobVal.SetBinding(Label.TextProperty, new Binding("DateOfBirth"));
-    contentGrid.SetColumn(dobVal, 2);
-    contentGrid.SetRow(dobVal, 2);
-    contentGrid.Children.Add(dobVal);
-    var location = new Label() { Text = "Location", Margin = new Thickness(6, 0, 0, 0) };
-    contentGrid.SetColumn(location, 1);
-    contentGrid.SetRow(location, 3);
-    contentGrid.Children.Add(location);
-    var locationVal = new Label();
-    locationVal.SetBinding(Label.TextProperty, new Binding("Location"));
-    contentGrid.SetColumn(locationVal, 2);
-    contentGrid.SetRow(locationVal, 3);
-    contentGrid.Children.Add(locationVal);
-    var description = new Label() { Padding = new Thickness(0, 10, 0, 10), LineBreakMode = LineBreakMode.WordWrap, FontSize = 14, CharacterSpacing = 0.25, VerticalTextAlignment = TextAlignment.Center };
-    description.SetBinding(Label.TextProperty, new Binding("Description"));
-    contentGrid.SetRow(description, 4);
-    contentGrid.SetColumnSpan(description, 3);
-    contentGrid.Children.Add(description);
-    var stack = new StackLayout();
-    var label1 = new Label()
-    {
-        Text = "\ue700",
-        FontSize = 16,
-        Margin = new Thickness(0, 2, 2, 2),
-        VerticalOptions = LayoutOptions.Center,
-        VerticalTextAlignment = TextAlignment.Center,
-        FontFamily = DeviceInfo.Platform == DevicePlatform.WinUI ? "AccordionFontIcons.ttf#AccordionFontIcons" : DeviceInfo.Platform == DevicePlatform.Android ? "AccordionFontIcons.ttf#" : DeviceInfo.Platform == DevicePlatform.iOS ? "AccordionFontIcons" : "AccordionFontIcons"
-    };
-    var label2 = new Label() { Text = "(617) 555-1234", CharacterSpacing = 0.25, FontSize = 14, VerticalOptions = LayoutOptions.Center };
-    label2.SetBinding(Label.TextProperty, new Binding("Phone"));
-    stack.Children.Add(label1);
-    stack.Children.Add(label2);
 
-    stack.Orientation = StackOrientation.Horizontal;
-    stack.Margin = new Thickness(0, 0, 0, 12);
-    contentGrid.SetRow(stack, 5);
+    (......)
+
     contentGrid.Children.Add(stack);
     content.Children.Add(contentGrid);
     accordionItem.Content = contentGrid;
