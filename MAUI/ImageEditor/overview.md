@@ -1,6 +1,6 @@
 ---
 layout: post
-title: About .NET MAUI ImageEditor control | Syncfusion
+title: Overview of .NET MAUI ImageEditor control | Syncfusion
 description: Learn here all about introduction of Syncfusion .NET MAUI ImageEditor(SfImageEditor) control, its basic features and functionalities of imageeditor.
 platform: maui
 control: SfImageEditor
@@ -13,11 +13,11 @@ The Syncfusion .NET MAUI ImageEditor (SfImageEditor) is a very handy tool, which
 
 
 ## Key features
- * Crop, rotate, and flip operations. 
- * Text, Path, and Shapes
- * Undo and Redo Operations
- * Reset the edited image 
- * Zoom and Pan Operations
- * Saving Images to Device
- * Built-in Toolbar
- * Image Effects
+ * Image cropping: Crop portions of an image as per the requirement.
+ * Effects: Apply various visual effects to an image, such as brightness, blur, contrast, exposure, saturation, sharpen, hue, and opacity.
+ * Zooming: Support to zoom and pan images.
+ * Transformation : Performs image transformations such as rotation and flip.
+ * Annotation: Add text, built-in shapes, and freehand drawing to the images.
+ * Toolbar: Toolbars are used to interact and edit images with customization.
+ * Undo and redo: Allows users to undo or redo changes made to the image.
+ * Save: Allows users to save the edited image in the desired location.

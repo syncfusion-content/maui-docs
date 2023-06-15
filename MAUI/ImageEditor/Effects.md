@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Image Effect in .NET MAUI ImageEditor control | Syncfusion
-description: Learn here all about Image Effect support in Syncfusion .NET MAUI Image Editor (SfImageEditor) control and more.
+title: Image Effects in .NET MAUI ImageEditor control | Syncfusion
+description: Learn here all about Image Effect support in Syncfusion .NET MAUI Image Editor (SfImageEditor) control.
 platform: maui
 control: SfImageEditor
 documentation: ug
@@ -23,9 +23,12 @@ Using the image editor control, you can add effects such as Hue, Saturation, Bri
 
 The EffectValue are the corresponding ImageEffect values, which varies for each effect, and they are explained as follows.
 
+N> The Image Effect enum also contains “None” option, which removes all the previously applied effects, which are not saved.
+The ImageEffect method only applies the effect to preview image, if you want to save the applied effect you should call SaveEdits method.
+
 ## Brightness
 
-Brightness is used to adjusts the overall lightness or darkness of the image. The value of brightness effect ranges from -1 to 1.
+Brightness is used to adjusts the overall lightness or darkness of the image. The value of brightness effect ranges from -1 to 1 and the default value is 0.
 
 {% highlight C# %}
 
@@ -41,7 +44,7 @@ public MainPage()
 
 ## Blur
 
-Blur is used to Creates a soft and unfocused appearance by reducing the image's sharpness. The value of blur effect ranges from 0 to 1.
+Blur is used to Creates a soft and unfocused appearance by reducing the image's sharpness. The value of blur effect ranges from 0 to 1 and the default value is 0.
 
 {% highlight C# %}
 
@@ -57,7 +60,7 @@ public MainPage()
 
 ## Contrast
 
-Contrast is used to increases or decreases the difference between light and dark areas, making the image more visually distinct. The value of contrast effect ranges from -1 to 1.
+Contrast is used to increases or decreases the difference between light and dark areas, making the image more visually distinct. The value of contrast effect ranges from -1 to 1 and the default value is 0.
 
 {% highlight C# %}
 
@@ -73,7 +76,7 @@ public MainPage()
 
 ## Exposure
 
-Exposure is used to alters the overall brightness and darkness levels of the image. The value of the exposure effect ranges from -1 to 1.
+Exposure is used to alters the overall brightness and darkness levels of the image. The value of the exposure effect ranges from -1 to 1 and the default value is 0.
 
 {% highlight C# %}
 
@@ -87,10 +90,9 @@ public MainPage()
 {% endhighlight %}
 
 
-
 ## Hue
 
-Hue is used to changes the overall color tone of the image by shifting the color spectrum. The value of hue effect ranges from -1 to 1.
+Hue is used to changes the overall color tone of the image by shifting the color spectrum. The value of hue effect ranges from -1 to 1 and the default value is 0.
 
 {% highlight C# %}
 
@@ -106,7 +108,7 @@ public MainPage()
 
 ## Saturation
 
-Saturation is used to enhances or reduces the intensity and vividness of colors in the image. The value of the saturation effect ranges from -1 to 1.
+Saturation is used to enhances or reduces the intensity and vividness of colors in the image. The value of the saturation effect ranges from -1 to 1 and the default value is 0
 
 {% highlight C# %}
 
@@ -120,11 +122,9 @@ public MainPage()
 {% endhighlight %}
 
 
-
-
 ## Sharpen
 
-Sharpen is used to enhances the clarity and definition of edges and details in the image. The value of sharpen effect ranges from 0 to 6.
+Sharpen is used to enhances the clarity and definition of edges and details in the image. The value of sharpen effect ranges from 0 to 6 and the default value is 0.
 
 {% highlight C# %}
 
@@ -139,7 +139,7 @@ public MainPage()
 
 ## Opacity
 
-Opacity is used to controls the transparency or visibility of the image. The value of opacity effect ranges from 0 to 1.
+Opacity is used to control the transparency or visibility of the image. The value of the opacity effect ranges from 0 to 1 and the default value is 1.
 
 {% highlight C# %}
 
@@ -152,4 +152,43 @@ public MainPage()
 
 {% endhighlight %}
 
-N> The Image Effect enum also contains “None” option, which removes all the previously applied effects, which are not saved displays the original image. When applying effect through the Apply Image effect method, the effects will be saved automatically. But, if you apply effect from toolbar, each effect will be saved only when clicking the OK button, else all the applied effects will not be saved.
+## Save or Cancel applied effects
+
+You should call SaveEdits method to save the applied effects in view, otherwise the effects will be reset on next action.
+
+{% highlight C# %}
+
+public MainPage()
+{               
+    . . .
+    this.imageEditor.SaveEdits();
+    . . .
+}
+
+{% endhighlight %}
+
+The applied effects can be cancelled using CancelEdits method or calling ImageEffect method with ImageEffect.None
+
+{% tabs %}
+{% highlight CancelEdits %}
+
+public MainPage()
+{               
+    . . .
+    this.imageEditor.SaveEdits();
+    . . .
+}
+
+{% endhighlight %}
+
+{% highlight ImageEffect.None %}
+
+public MainPage()
+{               
+    . . .
+    this.imageEditor.ImageEffect(ImageEffect.None, 0);
+    . . .
+}
+
+{% endhighlight %}
+{% endtabs %}
