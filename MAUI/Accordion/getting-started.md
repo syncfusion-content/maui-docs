@@ -208,7 +208,7 @@ The `SfAccordion` allows you to customize the scroll position of the expanded ac
 {% endhighlight %}
 {% endtabs %}
 
-## Bring accordion item into view
+## Bring an accordion item into view
 
 The `BringIntoView` method is used to bring a specific item into view by scrolling to it programmatically.
 
