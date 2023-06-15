@@ -235,3 +235,112 @@ The `SfAccordion` allows you to customize the vertical spacing between the accor
     accordion.ItemSpacing = 6.0d;
 {% endhighlight %}
 {% endtabs %}
+
+## Events 
+
+There are four built-in events in the SfAccordion control namely:
+
+* Expanding
+* Expanded
+* Collapsing
+* Collapsed
+
+### Expanding Event
+
+The `Expanding` event will be triggered when the accordion item is being expanded. It can cancel expansion with `ExpandingAndCollapsingEventArgs` that contains the following property:
+
+* `Cancel`: Expansion is based on this value.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+<syncfusion:SfAccordion Expanding="SfAccordion_Expanding">
+    <syncfusion:SfAccordion.Items>
+        <syncfusion:AccordionItem>
+            ...
+            ...
+        </syncfusion:AccordionItem>
+    </syncfusion:SfAccordion.Items>
+ </syncfusion:SfAccordion>
+{%endhighlight%}
+
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="3" %}
+private void SfAccordion_Expanding(object sender, Syncfusion.Maui.Accordion.ExpandingAndCollapsingEventArgs e)
+{
+    e.Cancel = true;
+}
+{% endhighlight %}
+{% endtabs %}
+
+### Expanded Event
+
+The `Expanded` event is triggered when the accordion item is fully expanded. You can execute your own code when this event occurs.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+<syncfusion:SfAccordion Expanded="SfAccordion_Expanded">
+    <syncfusion:SfAccordion.Items>
+        <syncfusion:AccordionItem>
+            ...
+            ...
+        </syncfusion:AccordionItem>
+    </syncfusion:SfAccordion.Items>
+ </syncfusion:SfAccordion>
+{%endhighlight%}
+
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+private void SfAccordion_Expanded(object sender, Syncfusion.Maui.Accordion.ExpandedAndCollapsedEventArgs e)
+{
+    // Codes that need to be executed once the accordion item is expanded.
+}
+{% endhighlight %}
+{% endtabs %}
+
+### Collapsing Event
+
+The `Collapsing` event will be triggered when the expander control is being collapsed.It can cancel collapsing with `ExpandingAndCollapsingEventArgs` that contains the following property:
+
+* `Cancel`: Collapsing is based on this value.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+<syncfusion:SfAccordion Collapsing="SfAccordion_Collapsing">
+    <syncfusion:SfAccordion.Items>
+        <syncfusion:AccordionItem>
+            ...
+            ...
+        </syncfusion:AccordionItem>
+    </syncfusion:SfAccordion.Items>
+ </syncfusion:SfAccordion>
+{%endhighlight%}
+
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="3" %}
+private void SfAccordion_Collapsing(object sender, Syncfusion.Maui.Accordion.ExpandingAndCollapsingEventArgs e)
+{
+    e.Cancel = true;
+}
+{% endhighlight %}
+{% endtabs %}
+
+### Collapsed Event 
+
+The `Collapsed` event is triggered when the accordion item is collapsed. You can execute your own code when this event occurs.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+<syncfusion:SfAccordion Collapsed="SfAccordion_Collapsed">
+    <syncfusion:SfAccordion.Items>
+        <syncfusion:AccordionItem>
+            ...
+            ...
+        </syncfusion:AccordionItem>
+    </syncfusion:SfAccordion.Items>
+ </syncfusion:SfAccordion>
+{%endhighlight%}
+
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+private void SfAccordion_Collapsed(object sender, Syncfusion.Maui.Accordion.ExpandedAndCollapsedEventArgs e)
+{
+    // Codes that need to be executed once the accordion item is collapsed.
+}
+{% endhighlight %}
+{% endtabs %}
