@@ -117,7 +117,7 @@ You can change the appointment of drag and drop settings in Scheduler by using t
 
 {% tabs %}
 {% highlight xaml %}
-<schedule:SfScheduler x:Name="dragAndDrop" ShowBusyIndicator="True"
+<schedule:SfScheduler x:Name="scheduler" ShowBusyIndicator="True"
                     AppointmentsSource="{Binding DragEvents}"
                     View="Week"
                     DisplayDate="{Binding DisplayDate}"
@@ -177,15 +177,15 @@ scheduler.DragDropSettings.ShowTimeIndicator = false;
 {% endtabs %}
 
 N>
-* Not applicable for Month and Timeline Month views.
-* If the [TimeRulerWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerDaysView.html#Syncfusion_Maui_Scheduler_SchedulerDaysView_TimeRulerWidth) property value is zero, then drag time indicator will not be shown.
-
+* The drag time indicator is applicable only when the [TimeRulerWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerDaysView.html#Syncfusion_Maui_Scheduler_SchedulerDaysView_TimeRulerWidth) property is greater than zero in Day, Week, and WorkWeek views and the [TimeRulerHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimelineView.html#Syncfusion_Maui_Scheduler_SchedulerTimelineView_TimeRulerHeight) property is is greater than zero in TimeLineDay, TimeLineWeek, TimeLineWorkWeek views.
+* The drag time indicator is not applicable for Month and Timeline Month views.
+ 
 #### Change drag time Indicator text style
 You can change the drag time indicator style by using the `TimeIndicatorStyle` property of `DragDropSettings`.
 
 {% tabs %}
 {% highlight xaml %}
-<schedule:SfScheduler x:Name="dragAndDrop" ShowBusyIndicator="True"
+<schedule:SfScheduler x:Name="scheduler" ShowBusyIndicator="True"
                     AppointmentsSource="{Binding DragEvents}"
                     View="Week"
                     DisplayDate="{Binding DisplayDate}"

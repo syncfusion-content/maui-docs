@@ -629,7 +629,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 Please refer [here](https://help.syncfusion.com/maui/dataform/validation#validation-label-appearance-customization) to learn more about changing the [ErrorLabelTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html#Syncfusion_Maui_DataForm_DataFormItem_ErrorLabelTextStyle) and [ValidMessageLabelTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html#Syncfusion_Maui_DataForm_DataFormItem_ValidMessageLabelTextStyle)
 
 ## Editor view customization
-ou can customize the editor view by using the  `InitializeDataEditor` method of `DataFormItemManager`.
+You can customize the editor view by using the  `InitializeDataEditor` method of `DataFormItemManager`.
 
 {% tabs %}
 {% highlight c# %}

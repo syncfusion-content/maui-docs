@@ -2485,9 +2485,9 @@ The following code example explains how to customize the drag-and-drop operation
 {% highlight xaml %}
 
 <schedule:SfSchedule AllowAppointmentDrag="True" >
-    <scheduler:SfSchedule.DragDropSettings>
-        <scheduler:DragDropSettings AllowNavigation="False" />
-    </scheduler:SfSchedule.DragDropSettings>
+    <schedule:SfSchedule.DragDropSettings>
+        <schedule:DragDropSettings AllowNavigation="False" />
+    </schedule:SfSchedule.DragDropSettings>
 </schedule:SfSchedule>
 
 {% endhighlight %}
@@ -2495,8 +2495,8 @@ The following code example explains how to customize the drag-and-drop operation
 {% highlight C# %}
 
 SfSchedule schedule = new SfSchedule();
-schedule.DragDropSettings.AllowNavigation = true;
-schedule.DragDropSettings.AllowScroll = true;
+schedule.DragDropSettings.AllowNavigation = false;
+schedule.DragDropSettings.AllowScroll = false;
 this.Content = schedule;
 
 {% endhighlight %}
@@ -2520,8 +2520,8 @@ this.Content = schedule;
 {% highlight C# %}
 
 SfScheduler scheduler = new SfScheduler();
-scheduler.DragDropSettings.AllowNavigation = true;
-scheduler.DragDropSettings.AllowScroll = true;
+scheduler.DragDropSettings.AllowNavigation = false;
+scheduler.DragDropSettings.AllowScroll = false;
 this.Content = scheduler;
 
 {% endhighlight %}
