@@ -258,6 +258,11 @@ this.Content = scheduler;
 <td>Nil</td>
 <td>Not Supported.</td></tr>
 
+<tr>
+<td>{{'[DragDropSettings](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.DragDropSettings.html)'| markdownify }}</td>
+<td>DragDropSettings</td>
+<td>Represent drag-and-drop settings to customize the drag-and-drop operations of appointments in scheduler.</td></tr>
+
 </table> 
 
 ## Properties
@@ -498,6 +503,17 @@ this.Content = scheduler;
 <td>Nil</td>
 <td>{{'[CalendarType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_CalendarType)' | markdownify }}</td>
 <td>Gets or sets the calendar system to use.The default value is Gregorian.</td></tr>
+
+<tr>
+<td>{{'[AllowAppointmentDrag](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.SfSchedule.html#Syncfusion_SfSchedule_XForms_SfSchedule_AllowAppointmentDrag)'| markdownify }}</td>
+<td>AllowAppointmentDrag</td>
+<td>Get or set a value indicating whether the schedule can allow the appointment to drag or not on the view.</td></tr>
+
+<tr>
+<td>{{'[DragDropSettings](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.SfSchedule.html#Syncfusion_SfSchedule_XForms_SfSchedule_DragDropSettings)'| markdownify }}</td>
+<td>DragDropSettings</td>
+<td>Get or set the drag and drop settings to customize the appointment position, dragging indicator style, navigation, and time indicator format.</td></tr>
+
 
 </table> 
 
@@ -2454,6 +2470,104 @@ this.Content = scheduler;
 
 </table> 
 
+### DragDropSettings
+
+The following code example explains how to customize the drag-and-drop operations of appointments in the schedule.
+
+<table>
+<tr>
+<th>Xamarin SfSchedule</th>
+<th>.NET MAUI SfScheduler</th></tr>
+<tr>
+<td>
+{% tabs %}
+
+{% highlight xaml %}
+
+<schedule:SfSchedule AllowAppointmentDrag="True" >
+    <schedule:SfSchedule.DragDropSettings>
+        <schedule:DragDropSettings AllowNavigation="False" />
+    </schedule:SfSchedule.DragDropSettings>
+</schedule:SfSchedule>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfSchedule schedule = new SfSchedule();
+schedule.DragDropSettings.AllowNavigation = false;
+schedule.DragDropSettings.AllowScroll = false;
+this.Content = schedule;
+
+{% endhighlight %}
+
+{% endtabs %}
+</td>
+<td>
+{% tabs %}
+
+{% highlight xaml %}
+
+<scheduler:SfScheduler x:Name="scheduler" View="Week" 
+                        AllowAppointmentDrag="True" >
+    <scheduler:SfScheduler.DragDropSettings>
+        <scheduler:DragDropSettings AllowNavigation="False" />
+    </scheduler:SfScheduler.DragDropSettings>
+</scheduler:SfScheduler>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfScheduler scheduler = new SfScheduler();
+scheduler.DragDropSettings.AllowNavigation = false;
+scheduler.DragDropSettings.AllowScroll = false;
+this.Content = scheduler;
+
+{% endhighlight %}
+
+{% endtabs %}
+</td></tr>
+</table>
+
+<table>
+<tr>
+<th>Xamarin SfSchedule <br/> (DragDropSettings)</th>
+<th>.NET MAUI SfScheduler <br/> (DragDropSettings)</th>
+<th>Description</th></tr> 
+
+<tr>
+<td>{{'[AllowNavigate](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.DragDropSettings.html#Syncfusion_SfSchedule_XForms_DragDropSettings_AllowNavigate)'| markdownify }}</td>
+<td>AllowNavigation</td>
+<td>Get or set a value indicating whether the user can navigate views while dragging the appointment or not.</td></tr>
+
+<tr>
+<td>{{'[AllowScroll](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.DragDropSettings.html#Syncfusion_SfSchedule_XForms_DragDropSettings_AllowScroll)'| markdownify }}</td>
+<td>AllowScroll</td>
+<td>Get or set a value indicating whether the user can scroll the time slot while dragging the appointment or not.</td></tr>
+
+<tr>
+<td>{{'[AutoNavigationDelay](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.DragDropSettings.html#Syncfusion_SfSchedule_XForms_DragDropSettings_AutoNavigationDelay)'| markdownify }}</td>
+<td>AutoNavigationDelay</td>
+<td>Get or set the auto navigation time delay while dragging an appointment within the scheduler control.</td></tr>
+
+<tr>
+<td>{{'[ShowTimeIndicator](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.DragDropSettings.html#Syncfusion_SfSchedule_XForms_DragDropSettings_ShowTimeIndicator)'| markdownify }}</td>
+<td>ShowTimeIndicator</td>
+<td>Get or set a value indicating whether the drag and drop indicator should be displayed within the scheduler control during appointment dragging.</td></tr>
+
+<tr>
+<td>{{'[TimeIndicatorStyle](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.DragDropSettings.html#Syncfusion_SfSchedule_XForms_DragDropSettings_TimeIndicatorStyle)'| markdownify }}</td>
+<td>TimeIndicatorStyle</td>
+<td>Get or set the style of the drag and drop indicator displayed during appointment dragging within the scheduler control.</td></tr>
+
+<tr>
+<td>Nil</td>
+<td>TimeIndicatorTextFormat</td>
+<td>Get or set the display format for the time indicator that appears when an appointment is dragged and dropped within the scheduler control's day, week, workweek, timeline day, timeline week, and timeline workweek views.</td></tr>
+
+</table> 
+
 ## Enums
 
 <table>
@@ -2537,24 +2651,39 @@ this.Content = scheduler;
 <td>Occurs when header item is tapped.</td></tr>
 
 <tr>
-<td>{{'[OnAppointmentLoadedEvent](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.SfSchedule.html#Syncfusion_SfSchedule_XForms_SfSchedule_MonthInlineAppointmentTapped)'| markdownify }}</td>
+<td>{{'[OnAppointmentLoadedEvent](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.SfSchedule.html#Syncfusion_SfSchedule_XForms_SfSchedule_OnAppointmentLoadedEvent)'| markdownify }}</td>
 <td>{{'[AppointmentTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimeSlotView.html?tabs=tabid-9%2Ctabid-3%2Ctabid-5%2Ctabid-7%2Ctabid-1#Syncfusion_Maui_Scheduler_SchedulerTimeSlotView_AppointmentTemplate)'| markdownify }} (From DaysView, TimelineView, and MonthView)</td>
 <td>Gets or sets the appointment template to customize the default UI.</td></tr>
 
 <tr>
-<td>{{'[OnMonthInlineAppointmentLoadedEvent](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.SfSchedule.html#Syncfusion_SfSchedule_XForms_SfSchedule_MonthInlineAppointmentTapped)'| markdownify }}</td>
+<td>{{'[OnMonthInlineAppointmentLoadedEvent](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.SfSchedule.html#Syncfusion_SfSchedule_XForms_SfSchedule_OnMonthInlineAppointmentLoadedEvent)'| markdownify }}</td>
 <td>{{'[AppointmentTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimeSlotView.html?tabs=tabid-9%2Ctabid-3%2Ctabid-5%2Ctabid-7%2Ctabid-1#Syncfusion_Maui_Scheduler_SchedulerTimeSlotView_AppointmentTemplate)'| markdownify }} (From MonthView)</td>
 <td>Gets or sets the appointment template to customize the default UI.</td></tr>
 
 <tr>
-<td>{{'[OnMonthInlineLoadedEvent](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.SfSchedule.html#Syncfusion_SfSchedule_XForms_SfSchedule_MonthInlineAppointmentTapped)'| markdownify }}</td>
+<td>{{'[OnMonthInlineLoadedEvent](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.SfSchedule.html#Syncfusion_SfSchedule_XForms_SfSchedule_OnMonthInlineLoadedEvent)'| markdownify }}</td>
 <td>{{'[AppointmentTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimeSlotView.html?tabs=tabid-9%2Ctabid-3%2Ctabid-5%2Ctabid-7%2Ctabid-1#Syncfusion_Maui_Scheduler_SchedulerTimeSlotView_AppointmentTemplate)'| markdownify }} (From MonthView)</td>
 <td>Gets or sets the appointment template to customize the default UI.</td></tr>
 
 <tr>
-<td>{{'[OnMonthCellLoadedEvent](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.SfSchedule.html#Syncfusion_SfSchedule_XForms_SfSchedule_MonthInlineAppointmentTapped)'| markdownify }}</td>
+<td>{{'[OnMonthCellLoadedEvent](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.SfSchedule.html#Syncfusion_SfSchedule_XForms_SfSchedule_OnMonthCellLoadedEvent)'| markdownify }}</td>
 <td>{{'[CellTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html#Syncfusion_Maui_Scheduler_SchedulerMonthView_CellTemplate)'| markdownify }}</td>
 <td>Gets or sets the month cell template or template selector.</td></tr>
+
+<tr>
+<td>{{'[AppointmentDragStarting](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.SfSchedule.html#Syncfusion_SfSchedule_XForms_SfSchedule_AppointmentDragStarting)'| markdownify }}</td>
+<td>AppointmentDragStarting</td>
+<td>Occur when the user starts dragging an appointment.</td></tr>
+
+<tr>
+<td>{{'[AppointmentDragOver](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.SfSchedule.html#Syncfusion_SfSchedule_XForms_SfSchedule_AppointmentDragOver)'| markdownify }}</td>
+<td>AppointmentDragOver</td>
+<td>Occur when the user is dragging an appointment.</td></tr>
+
+<tr>
+<td>{{'[AppointmentDrop](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.SfSchedule.html#Syncfusion_SfSchedule_XForms_SfSchedule_AppointmentDrop)'| markdownify }}</td>
+<td>AppointmentDrop</td>
+<td>Occur when the user drops an appointment.</td></tr>
 
 </table> 
 
@@ -2608,7 +2737,6 @@ this.Content = scheduler;
 * Command support for Tapped, DoubleTapped, LongPressed, and ViewChanged events.
 * Support to change text color for each scheduler appointment.
 * Suspend and resume for appointment update.
-* Appointment Drag and Drop.
 
 ## Known issues in .NET MAUI Scheduler 
 
