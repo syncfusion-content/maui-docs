@@ -86,7 +86,7 @@ A collection of five values is required to plot a point on an OHLC chart, includ
 
 ## Bull and Bear Color
 
-In the OHLC chart, the [BullFillColor]() property is used to specify a fill color for the segments that indicates an increase in the stock price in the measured time interval, and the [BearFillColor]() property is used to specify a fill color for the segments that indicates a decrease in the stock price in the measured time interval.
+In the OHLC chart, the [BullishFill]() property is used to specify a fill color for the segments that indicates an increase in the stock price in the measured time interval, and the [BearishFill]() property is used to specify a fill color for the segments that indicates a decrease in the stock price in the measured time interval.
 
 {% tabs %}
 
@@ -108,8 +108,8 @@ In the OHLC chart, the [BullFillColor]() property is used to specify a fill colo
                                High="High"
                                Low="Low"
                                Close="Close"
-                               BullFillColor="Blue"
-                               BearFillColor="Orange"/>
+                               BullishFill="Blue"
+                               BearishFill="Orange"/>
 
 </chart:SfCartesianChart>
 
@@ -131,8 +131,8 @@ In the OHLC chart, the [BullFillColor]() property is used to specify a fill colo
         High = "High",
         Low = "Low",
         Close = "Close",
-        BullFillColor = Colors.Blue,
-        BearFillColor = Colors.Orange,
+        BullishFill = Colors.Blue,
+        BearishFill = Colors.Orange,
     };
 
     chart.Series.Add(series);
