@@ -43,7 +43,7 @@ listView.DragStartMode = DragStartMode.OnHold;
 To enable drag and drop using both 'OnHold' and 'OnDragIndicator', follow the code example:
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight xaml hl_lines="4"%}
 <ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView">
   <syncfusion:SfListView x:Name="listView" 
                    ItemsSource="{Binding ToDoList}"
@@ -66,7 +66,7 @@ To drag and drop the items by `DragIndicatorView`, set the `SfListView.DragStart
 N> You must set the SfListView instance as reference to the `ListView` property in `DragIndicatorView`.
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight xaml hl_lines="15"%}
 <ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView">
   <syncfusion:SfListView x:Name="listView" 
                    ItemsSource="{Binding ToDoList}"
@@ -95,7 +95,7 @@ N> You must set the SfListView instance as reference to the `ListView` property 
 </syncfusion:SfListView>                
 </ContentPage>
 {% endhighlight %}
-{% highlight c# %}
+{% highlight c# hl_lines="17"%}
 listView.ItemTemplate = new DataTemplate(() =>
 {
   var grid = new Grid();
@@ -138,13 +138,11 @@ By defining the `SfListView.DragItemTemplate` property of the `SfListView`, you 
 N> If the `BackgroundColor` is set for the `DragItemTemplate` or `DragIndicatorView`, make sure to set `InputTransparent` to `true`. This is necessary because dragging does not occur when using the `DragIndicatorView` in UWP.
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight xaml hl_lines="5"%}
 <ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView">
   <syncfusion:SfListView x:Name="listView" 
                    ItemsSource="{Binding ToDoList}"
-                   DragStartMode="OnHold"
-                   BackgroundColor="#FFE8E8EC"
-                   ItemSize="60">
+                   DragStartMode="OnHold">
   <syncfusion:SfListView.DragItemTemplate>
     <DataTemplate>
       <Grid Padding="10">
@@ -155,7 +153,7 @@ N> If the `BackgroundColor` is set for the `DragItemTemplate` or `DragIndicatorV
 </syncfusion:SfListView>                
 </ContentPage>
 {% endhighlight %}
-{% highlight c# %}
+{% highlight c# hl_lines="1"%}
 listView.DragItemTemplate = new DataTemplate(() => {
   var grid = new Grid();
   var name = new Label { FontSize = 15 };
@@ -236,7 +234,7 @@ To cancel dropping for the dragged item, handle the `ItemDragging` event based o
 You can cancel the dropping action for a particular item by setting the `Cancel` property of the `ItemDraggingEventArgs`.
 
 {% tabs %}
-{% highlight c# %}
+{% highlight c# hl_lines="8"%}
 using Syncfusion.Maui.ListView.Helpers;
 private void ListView_ItemDragging(object sender, ItemDraggingEventArgs e)
 {
@@ -254,7 +252,7 @@ private void ListView_ItemDragging(object sender, ItemDraggingEventArgs e)
 The underlying collection can be reordered directly by setting the `UpdateSource` property to `true`. The default value is `false`. 
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight xaml hl_lines="9"%}
 <ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView">
   <syncfusion:SfListView x:Name="listView" 
                    ItemsSource="{Binding ToDoList}"
@@ -277,7 +275,7 @@ this.listView.DragDropController.UpdateSource = true;
 We can able to update collection even when `UpdateSource` is `false`. Like, user can decide where dragged item should be dropped actually by handling the `ItemDragging` event with `DragAction.Drop`.
 
 {% tabs %}
-{% highlight c# %}
+{% highlight c# hl_lines="3"%}
 private void ListView_ItemDragging(object sender, ItemDraggingEventArgs e)
 {
    if (e.Action == DragAction.Drop)
@@ -361,7 +359,7 @@ public partial class MainPage : ContentPage
 {% endtabs %}
 
 {% tabs %}
-{% highlight c# %}
+{% highlight c# hl_lines="11,14,23,26,29"%}
 private async void ListView_ItemDragging(object sender, ItemDraggingEventArgs e)
 {
   var viewModel = this.listView.BindingContext as ViewModel;
@@ -411,7 +409,7 @@ N> While auto-scrolling, dragging item cannot be skipped.
 Skip the dragging item by bounds of dragging item, and bounds of current and next group item.
 
 {% tabs %}
-{% highlight c# %}
+{% highlight c# hl_lines="4,25"%}
 using Syncfusion.Maui.ListView.Helpers;
 private async void ListView_ItemDragging(object sender, ItemDraggingEventArgs e)
 {
@@ -458,7 +456,6 @@ private GroupResult GetGroup(object itemData)
 {% endhighlight %}
 {% endtabs %}
 
-![Skip dragging item into another group](Images/item-drag-and-drop/maui-listview-draganddrop.gif)
 
 ## Drag and drop customization
 
@@ -467,7 +464,7 @@ private GroupResult GetGroup(object itemData)
 To adjust the X and Y coordinates of the drag item while dragging, you can set the `CanAdjustDragItemAxis` property of the `DragDropController` class to true. By default, the Y coordinates can be adjusted if the `SfListView.Orientation` is set to `Vertical`, and the X coordinates can be adjusted if the `Orientation` is set to `Horizontal`.
 
 {% tabs %}
-{% highlight c# %}
+{% highlight c# hl_lines="7"%}
 this.listView.DragDropController = new DragDropControllerExt(this.listView);
 
 public class DragDropControllerExt : DragDropController
