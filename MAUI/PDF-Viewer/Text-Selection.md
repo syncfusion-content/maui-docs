@@ -35,7 +35,7 @@ N> In desktop platforms, you can also use the keyboard shortcut <code>Ctrl</code
 
 ## Disabling text selection
 
-The ‘EnableTextSelection’ property allows you to enable or disable the text selection in the `SfPdfViewer`. You can assign it a value of `False` to disable the text selection. This can be helpful in situations when you want to prevent users from selecting and copying text contents from the PDF files that are being displayed in the `SfPdfViewer`.
+The ‘EnableTextSelection’ property allows you to enable or disable the text selection in the `SfPdfViewer`. You can assign it a value of `False` to disable the text selection. This can be helpful in situations when you want to prevent users from selecting and copying text contents from the PDF files that are being displayed.
 
 Refer to the following code example to disable the text selection.
 
