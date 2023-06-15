@@ -174,7 +174,7 @@ The header row can be customized by the writing style for [DataGridHeaderRow](ht
 ![Header row styling in .NET MAUI DataGrid](Images/styling/maui-datagrid-headerrow-style.png)
 
 ### Styling Table Summary cell
-The header cells can be customized by the writing style for [DataGridTableSummaryCell]() TargetType.
+The table summary cells can be customized by the writing style for [DataGridTableSummaryCell]() TargetType.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml"%}
@@ -195,7 +195,7 @@ The header cells can be customized by the writing style for [DataGridTableSummar
 ![Table summary cell styling in .NET MAUI DataGrid](Images/styling/maui-datagrid-table-summary-cell-style.png)
 
 ### Styling Table Summary row
-The header row can be customized by the writing style for [DataGridTableSummaryRowView]() TargetType.
+The table summary row can be customized by the writing style for [DataGridTableSummaryRowView]() TargetType.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml"%}
@@ -212,7 +212,7 @@ The header row can be customized by the writing style for [DataGridTableSummaryR
 ![Table summary row styling in .NET MAUI DataGrid](Images/styling/maui-datagrid-table-summary-row-style.png)
 
 ### Styling Caption Summary cell
-The header cells can be customized by the writing style for [DataGridCaptionSummaryCell]() TargetType.
+The caption summary cells can be customized by the writing style for [DataGridCaptionSummaryCell]() TargetType.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml"%}
@@ -233,7 +233,7 @@ The header cells can be customized by the writing style for [DataGridCaptionSumm
 ![Caption summary cell styling in .NET MAUI DataGrid](Images/styling/maui-datagrid-caption-summary-cell-style.png)
 
 ### Styling Caption Summary row
-The header row can be customized by the writing style for [DataGridCaptionSummaryRowView]() TargetType.
+The caption summary row can be customized by the writing style for [DataGridCaptionSummaryRowView]() TargetType.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml"%}
@@ -250,7 +250,7 @@ The header row can be customized by the writing style for [DataGridCaptionSummar
 ![Caption summary row styling in .NET MAUI DataGrid](Images/styling/maui-datagrid-caption-summary-row-style.png)
 
 ### Styling Group Summary cell
-The header cells can be customized by the writing style for [DataGridGroupSummaryCell]() TargetType.
+The group summary cells can be customized by the writing style for [DataGridGroupSummaryCell]() TargetType.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml"%}
@@ -271,7 +271,7 @@ The header cells can be customized by the writing style for [DataGridGroupSummar
 ![Group summary cell styling in .NET MAUI DataGrid](Images/styling/maui-datagrid-group-summary-cell-style.png)
 
 ### Styling Group Summary row
-The header row can be customized by the writing style for [DataGridGroupSummaryRowView]() TargetType.
+The group summary row can be customized by the writing style for [DataGridGroupSummaryRowView]() TargetType.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml"%}
