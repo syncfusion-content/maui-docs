@@ -392,3 +392,103 @@ private void Expander_Expanding(object sender, ExpandingAndCollapsingEventArgs e
 {% endhighlight %}
 {% endtabs %} 
 
+## Events 
+
+There are four built-in events in the SfExpander control namely:
+
+* Expanding
+* Expanded
+* Collapsing
+* Collapsed
+
+### Expanding Event
+
+The `Expanding` event is triggered when an expander is expanding in the application. It provides the "ExpandingAndCollapsedEventArgs" argument, which includes a `Cancel` property. Setting `Cancel` to true cancels the expander's expansion, while false allows it to continue expanding.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+<syncfusion:SfExpander Expanding="SfExpander_Expanding"/>
+{%endhighlight%}
+
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="4 9" %}
+public MainPage()
+{
+    InitializeComponent();
+    expander.Expanding += Expander_Expanding;
+}
+
+private void expander_Expanding(object sender, ExpandingAndCollapsingEventArgs e)
+{
+    e.Cancel = true;
+}
+{% endhighlight %}
+{% endtabs %}
+
+### Expanded Event
+
+The `Expanded` event is triggered when an expander is expanded in the application. You can execute your own code when this event occurs.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+<syncfusion:SfExpander Expanded="SfExpander_Expanded"/>
+{%endhighlight%}
+
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="4" %}
+public MainPage()
+{
+    InitializeComponent();
+    expander.Expanded += Expander_Expanded;
+}
+
+private void expander_Expanded(object sender, ExpandedAndCollapsedEventArgs e)
+{
+    // Codes that need to be executed once the expander is expanded.
+}
+{% endhighlight %}
+{% endtabs %}
+
+### Collapsing Event
+
+The `Collapsing` event is triggered when an expander is collapsing in the application. It provides the "ExpandingAndCollapsedEventArgs" argument, which includes a `Cancel` property. Setting `Cancel` to true cancels the expander from collapsing, while false allows it to continue collapsing.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+<syncfusion:SfExpander Collapsing="SfExpander_Collapsing"/>
+{%endhighlight%}
+
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="4 9" %}
+public MainPage()
+{
+    InitializeComponent();
+    expander.Collapsing += Expander_Collapsing;
+}
+
+private void expander_Collapsing(object sender, ExpandingAndCollapsingEventArgs e)
+{
+    e.Cancel = true;
+}
+{% endhighlight %}
+{% endtabs %}
+
+### Collapsed Event 
+
+The `Collapsed` event is triggered when an expander is collapsed in the application. You can execute your own code when this event occurs.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+<syncfusion:SfExpander Collapsed="SfExpander_Collapsed"/>
+{%endhighlight%}
+
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="4" %}
+public MainPage()
+{
+    InitializeComponent();
+    expander.Collapsed += Expander_Collapsed;
+}
+
+private void expander_Collapsed(object sender, ExpandedAndCollapsedEventArgs e)
+{
+    // Codes that need to be executed once the expander is collapsed.
+}
+{% endhighlight %}
+{% endtabs %}
