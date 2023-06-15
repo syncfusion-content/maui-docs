@@ -20,7 +20,3 @@ pdfViewer.EnableDocumentLinkNavigation = false;
 
 {% endhighlight %}
 {% endtabs %}
-
-### Limitations
-
-In Android, pinch to zoom will not work on the document link annotations.
