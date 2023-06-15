@@ -235,3 +235,95 @@ The `SfAccordion` allows you to customize the vertical spacing between the accor
     accordion.ItemSpacing = 6.0d;
 {% endhighlight %}
 {% endtabs %}
+
+## Events
+
+### Get the index of expanded or collapsed accordion item.
+
+You can get the index of the interacted `AccordionItem` by using the `Collapsed`. It will occur after an `AccordionItem` is collapsed when tapping on the Header. The `ExpandedAndCollapsedEventArgs` properties provide data for the `Collapsed` event.  
+
+{% tabs %}
+{% highlight xaml %}
+<syncfusion:SfAccordion x:Name="Accordion" Collapsed="Accordion_Collapsed">
+{% endhighlight %}
+{% highlight c# %}
+Accordion.Collapsed += Accordion_Collapsed;
+private void Accordion_Collapsed(object sender, Syncfusion.Maui.Accordion.ExpandedAndCollapsedEventArgs e)
+{
+    var value = e.Index.ToString();
+    DisplayAlert("Index", value, "ok");
+}
+{% endhighlight %}
+{% endtabs %}		
+
+Using the `Expanded` event, you can get the index of the interacted `AccordionItem.` It will occur after an `AccordionItem` is expanded when tapping the `Header`. The `ExpandedAndCollapsedEventArgs` properties provide data for the `Expanded` event.  
+
+{% tabs %}
+{% highlight xaml %}
+<syncfusion:SfAccordion x:Name="Accordion" Expanded="Accordion_Expanded">
+{% endhighlight %}
+{% highlight c# %}
+Accordion.Expanded += Accordion_Expanded;
+private void Accordion_Expanded(object sender, Syncfusion.Maui.Accordion.ExpandedAndCollapsedEventArgs e)
+{
+    var value = e.Index.ToString();
+    DisplayAlert("Index", value, "ok");
+}
+{% endhighlight %}
+{% endtabs %}
+
+### Restricting the accordion item expanding and collapsing 
+
+The `Collapsing` event occurs while collapsing an `AccordionItem` when tapping on the `Header`. You can cancel the collapsing action by using the `Cancel` property in the event args. 
+
+{% tabs %}
+{% highlight xaml %}
+<syncfusion:SfAccordion x:Name="Accordion" Collapsing="Accordion_Collapsing">
+{% endhighlight %}
+{% highlight c# %}
+Accordion.Collapsing += Accordion_Collapsing;
+private void Accordion_Collapsing(object sender, ExpandingAndCollapsingEventArgs e)
+{
+   e.Cancel = true;
+}
+{% endhighlight %}
+{% endtabs %}
+
+You can also get the index of the interacted `AccordionItem` by using the `index` property of the `ExpandingAndCollapsingEventArgs`.
+
+{% tabs %}
+{% highlight c# %}
+private void Accordion_Collapsing(object sender, ExpandingAndCollapsingEventArgs e)
+{
+    var value = e.Index.ToString();
+    DisplayAlert("Index", value, "ok");
+}
+{% endhighlight %}
+{% endtabs %}
+
+The `Expanding` event occurs while expanding an `AccordionItem` when tapping on the `Header`. You can cancel the expanding action by using the `Cancel` property in the event args. 
+
+{% tabs %}
+{% highlight xaml %}
+<syncfusion:SfAccordion x:Name="Accordion" Expanding="Accordion_Expanding">
+{% endhighlight %}
+{% highlight c# %}
+Accordion.Expanding += Accordion_Expanding;
+private void Accordion_Expanding(object sender, ExpandingAndCollapsingEventArgs e)
+{
+    e.Cancel = true;
+}
+{% endhighlight %}
+{% endtabs %}
+
+You can also get the index of the interacted `AccordionItem` by using the `index` property of the `ExpandingAndCollapsingEventArgs`.
+
+{% tabs %}
+{% highlight c# %}
+private void Accordion_Expanding(object sender, ExpandingAndCollapsingEventArgs e)
+{
+    var value = e.Index.ToString();
+    DisplayAlert("Index",value, "ok");
+}
+{% endhighlight %}
+{% endtabs %}
