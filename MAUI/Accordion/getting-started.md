@@ -250,6 +250,7 @@ There are four built-in events in the SfAccordion control namely:
 The `Expanding` event will be triggered when the accordion item is being expanded. It can cancel expansion with `ExpandingAndCollapsingEventArgs` that contains the following property:
 
 * `Cancel`:Indicates that the expansion or collapse action should be cancelled.
+* `Index`:Gets the index of the current expanding accordion item.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -266,7 +267,10 @@ The `Expanding` event will be triggered when the accordion item is being expande
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="3" %}
 private void SfAccordion_Expanding(object sender, Syncfusion.Maui.Accordion.ExpandingAndCollapsingEventArgs e)
 {
-    e.Cancel = true;
+    if (e.Index == 2)
+    {
+        e.Cancel = true;
+    }
 }
 {% endhighlight %}
 {% endtabs %}
@@ -290,7 +294,8 @@ The `Expanded` event is triggered when the accordion item is fully expanded. You
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 private void SfAccordion_Expanded(object sender, Syncfusion.Maui.Accordion.ExpandedAndCollapsedEventArgs e)
 {
-    // Codes that need to be executed once the accordion item is expanded.
+    // Get the index of current accordion item
+    int index = e.Index;
 }
 {% endhighlight %}
 {% endtabs %}
@@ -300,6 +305,7 @@ private void SfAccordion_Expanded(object sender, Syncfusion.Maui.Accordion.Expan
 The `Collapsing` event will be triggered when the expander control is being collapsed.It can cancel collapsing with `ExpandingAndCollapsingEventArgs` that contains the following property:
 
 * `Cancel`: Indicates that the expansion or collapse action should be cancelled.
+* `Index`:Gets the index of the current collapsing accordion item.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -316,7 +322,10 @@ The `Collapsing` event will be triggered when the expander control is being coll
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="3" %}
 private void SfAccordion_Collapsing(object sender, Syncfusion.Maui.Accordion.ExpandingAndCollapsingEventArgs e)
 {
-    e.Cancel = true;
+    if (e.Index == 2)
+    {
+        e.Cancel = true;
+    }
 }
 {% endhighlight %}
 {% endtabs %}
@@ -340,7 +349,8 @@ The `Collapsed` event is triggered when the accordion item is collapsed. You can
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 private void SfAccordion_Collapsed(object sender, Syncfusion.Maui.Accordion.ExpandedAndCollapsedEventArgs e)
 {
-    // Codes that need to be executed once the accordion item is collapsed.
+    // Get the index of current accordion item
+    int index = e.Index;
 }
 {% endhighlight %}
 {% endtabs %}
