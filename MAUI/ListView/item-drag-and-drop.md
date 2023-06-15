@@ -9,7 +9,7 @@ documentation: ug
 
 # Item Reordering in .NET MAUI ListView (SfListView)
 
-The SfListView allows reordering by dragging and dropping items. It supports displaying the customized view in a template while dragging the item. It can be enabled by setting the `SfListView.DragStartMode` property to `OnHold`. The drag and drop options are listed as follows:
+The `SfListView` allows reordering by dragging and dropping items. It supports displaying the customized view in a template while dragging the item. It can be enabled by setting the `SfListView.DragStartMode` property to `OnHold`. The drag and drop options are listed as follows:
 
  * `None`: Disables drag and drop. This is the default value.
  * `OnHold`: Allows dragging and dropping by holding the item.
@@ -156,7 +156,7 @@ N> If the `BackgroundColor` is set for the `DragItemTemplate` or `DragIndicatorV
 </ContentPage>
 {% endhighlight %}
 {% highlight c# %}
-listView.ItemTemplate = new DataTemplate(() => {
+listView.DragItemTemplate = new DataTemplate(() => {
   var grid = new Grid();
   var name = new Label { FontSize = 15 };
   name.SetBinding(Label.TextProperty, new Binding("Name"));
@@ -216,6 +216,8 @@ this.listView.AutoScroller.AllowOutsideScroll = false;
 
 To disable dragging for a particular item, handle the `ItemDragging` event based on the conditions of `Action` event argument.
 
+You can cancel the dragging action for a particular item by setting the `Cancel` property of the `ItemDraggingEventArgs`.
+
 {% tabs %}
 {% highlight c# %}
 private void ListView_ItemDragging(object sender, ItemDraggingEventArgs e)
@@ -230,6 +232,8 @@ private void ListView_ItemDragging(object sender, ItemDraggingEventArgs e)
 ## Cancel dropping for the dragged item
 
 To cancel dropping for the dragged item, handle the `ItemDragging` event based on the conditions of `Action` event argument. 
+
+You can cancel the dropping action for a particular item by setting the `Cancel` property of the `ItemDraggingEventArgs`.
 
 {% tabs %}
 {% highlight c# %}
@@ -322,10 +326,10 @@ public partial class MainPage : ContentPage
   public MainPage()
   {
     InitializeComponent();
+    var maingrid = new Grid();
+    maingrid.RowDefinitions.Add(new RowDefinition { Height = new GridLength(40) });
+    maingrid.RowDefinitions.Add(new RowDefinition { Height = new GridLength(1, GridUnitType.Star) });
     var grid = new Grid();
-    grid.RowDefinitions.Add(new RowDefinition { Height = new GridLength(40) });
-    grid.RowDefinitions.Add(new RowDefinition { Height = new GridLength(1, GridUnitType.Star) });
-    var grid1 = new Grid();
     var headerLabel = new Label()
     {
         Text = "To Do Items"
@@ -336,8 +340,8 @@ public partial class MainPage : ContentPage
     var deleteLabel = new Label() { Text = "DeleteItem" };
     stackLayout.Children.Add(image);
     stackLayout.Children.Add(deleteLabel);
-    grid1.Children.Add(headerLabel);
-    grid1.Children.Add(stackLayout);
+    grid.Children.Add(headerLabel);
+    grid.Children.Add(stackLayout);
     var listView = new SfListView()
     {
         DragStartMode = DragStartMode.OnHold,
@@ -345,11 +349,12 @@ public partial class MainPage : ContentPage
         SelectionMode = Syncfusion.Maui.ListView.SelectionMode.None,
         BackgroundColor = Color.FromHex("#FFE8E8EC")
     };
-    listView.SetBinding(ListView.ItemsSourceProperty, new Binding("ToDoList"));
-    grid.Children.Add(grid1);
-    grid.Children.Add(listView);
-    grid.SetRow(listView, 0);
-    grid.SetColumn(listView, 1);
+    listView.ItemsSource = viewModel.ToDoList;
+    maingrid.Children.Add(grid);
+    maingrid.SetRow(grid, 0);
+    maingrid.Children.Add(listView);
+    maingrid.SetRow(listView, 1);
+    this.Content = maingrid;
   }
 }
 {% endhighlight %}
@@ -459,7 +464,7 @@ private GroupResult GetGroup(object itemData)
 
 ### Adjust drag item axis
 
-To adjust the drag item coordinates (X and Y) while dragging, you can return true from the virtual method `CanAdjustDragItemAxis` of the `DragDropController` class. By default, the Y coordinates can be adjusted if the `SfListView.Orientation` is set to `Vertical`, and the X coordinates can be adjusted if the `Orientation` is set to `Horizontal`.
+To adjust the X and Y coordinates of the drag item while dragging, you can set the `CanAdjustDragItemAxis` property of the `DragDropController` class to true. By default, the Y coordinates can be adjusted if the `SfListView.Orientation` is set to `Vertical`, and the X coordinates can be adjusted if the `Orientation` is set to `Horizontal`.
 
 {% tabs %}
 {% highlight c# %}
