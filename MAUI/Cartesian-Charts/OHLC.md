@@ -52,7 +52,6 @@ A collection of five values is required to plot a point on an OHLC chart, includ
                                High="High"
                                Low="Low"
                                Close="Close"/>
-
 </chart:SfCartesianChart>
 
 {% endhighlight %}
