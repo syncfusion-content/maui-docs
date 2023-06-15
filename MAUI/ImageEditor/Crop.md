@@ -30,67 +30,11 @@ The `Crop` method in the image editor control crop the image based on the `Image
 
 * The following code shows cropping the image to any desired size.
 
-{% capture codesnippet1 %}
-
 {% highlight C# %}
 
-// To perform free-hand cropping:
-
-imageEditor.Crop(ImageCropType.Free);    
+imageEditor.SaveEdits();
 
 {% endhighlight %}
-
-{% endcapture %}
-
-{{ codesnippet1 | UnOrderList_Indent_Level_1 }} 
-
-* The following code shows cropping an image in square format.
-
-{% capture codesnippet2 %}
-
-{% highlight C# %}
-
-// To crop an image as a square dimension.
-
-imageEditor.Crop(1,1);
-
-{% endhighlight %}
-
-{% endcapture %}
-
-{{ codesnippet2 | UnOrderList_Indent_Level_1 }} 
-
-* To crop the image with a specific ratio (16:9):
-
-{% capture codesnippet3 %}
-
-{% highlight C# %}
-
-// For cropping the image with ratio, x value as 16, and y value as 9.
-
-imageEditor.Crop(16,9);    
-
-{% endhighlight %} 
-
-{% endcapture %}
-
-{{ codesnippet3 | UnOrderList_Indent_Level_1 }} 
-
-* To position the cropping window with custom location, pass the desired rectangle in `Crop` method. Each value in the rectangle should be in offset value(0 to 100).
-
-{% capture codesnippet4 %}
-
-{% highlight C# %}
-
-Rect rect = new Rect(20,20,50,50);
-
-imageEditor.Crop(rect);    
-
-{% endhighlight %} 
-
-{% endcapture %}
-
-{{ codesnippet4 | UnOrderList_Indent_Level_1 }} 
 
 After the cropping area has been selected, the `SaveEdits` method is called, which in turn crops the selected region and displays the cropped image on the image editor.
 
@@ -105,6 +49,46 @@ After selecting the cropping area, if you decide to cancel the edits and revert 
 {% highlight C# %}
 
 imageEditor.CancelEdits();
+
+{% endhighlight %}
+
+## Freehand Crop
+
+This type of crop allows you to freely select and crop a region of the image by drawing a custom shape. You can manually outline the desired area using your cursor or touch input.The selection region can be customized by dragging and resizing an image.
+
+{% highlight C# %}
+
+imageEditor.Crop(ImageCropType.Free);
+
+{% endhighlight %}
+
+### Original Crop
+
+With the original crop, the image is cropped to its original dimensions. This means that no aspect ratio or specific shape is enforced, and the cropped image retains its original width and height.
+
+{% highlight C# %}
+
+imageEditor.Crop(ImageCropType.Original);
+
+{% endhighlight %}
+
+### Square Crop
+
+The square crop option allows you to crop the image into a perfect square shape. This is useful when you want to create square thumbnails or profile pictures.
+
+{% highlight C# %}
+
+imageEditor.Crop(1,1);
+
+{% endhighlight %}
+
+### Ratio Crop
+
+The ratio crop enables you to crop the image with a specific aspect ratio. You can specify the desired ratio using the width and height values. For example, setting the ratio to 16:9 will result in a crop with a width-to-height ratio of 16:9.
+
+{% highlight C# %}
+
+imageEditor.Crop(16,9);
 
 {% endhighlight %}
 
@@ -124,7 +108,7 @@ The following image show cases the circularly cropped image.
 
 // To crop an image as a elliptical dimension.
 
-imageEditor.Crop(new Rect(), true);
+imageEditor.Crop(new Rect(20,20,50,50), true);
 
 {% endhighlight %}
 
@@ -136,7 +120,7 @@ To manually enter the cropping area without enabling the cropping functionality,
 
 {% highlight C# %}
 
-imageEditor.Crop(new Rect(100,100,150,200));
+imageEditor.Crop(new Rect(50,50,150,200));
 
 {% endhighlight %}
 
