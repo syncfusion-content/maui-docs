@@ -15,7 +15,6 @@ A legend is a graphical representation that explains the meaning of the data ser
 
 {% highlight xaml %}
 
-
     <chart:SfCartesianChart>
             <chart:SfCartesianChart.XAxes>
                 <chart:CategoryAxis/>
@@ -27,20 +26,20 @@ A legend is a graphical representation that explains the meaning of the data ser
             <chart:ColumnSeries ItemsSource="{Binding Product}"
                                 XBindingPath="Country"
                                 YBindingPath="Value"
-                                Label="Cofee" ></chart:ColumnSeries>
+                                Label="Cofee"></chart:ColumnSeries>
 
             <chart:ColumnSeries ItemsSource="{Binding Import}"
                                 XBindingPath="Country"
                                 YBindingPath="Value"
-                                Label="Tea" ></chart:ColumnSeries>
+                                Label="Tea"></chart:ColumnSeries>
 
             <chart:ColumnSeries ItemsSource="{Binding Export}"
                                 XBindingPath="Country"
                                 YBindingPath="Value"
-                                Label="Soft Drinks" ></chart:ColumnSeries>
+                                Label="Soft Drinks"></chart:ColumnSeries>
 
             <chart:SfCartesianChart.Legend>
-                <chart:ChartLegend  ></chart:ChartLegend>
+                <chart:ChartLegend></chart:ChartLegend>
             </chart:SfCartesianChart.Legend>
     </chart:SfCartesianChart>
 
@@ -87,11 +86,9 @@ A legend is a graphical representation that explains the meaning of the data ser
 
         Content = chart;
 
-
 {% endhighlight %}
 
 {% endtabs %}
-
 
 ![Chart Legend in MAUI Chart](Legend_images/maui_chart_legend_Enable.png)
 
@@ -103,11 +100,10 @@ To control the visibility of the legend in a chart control, the [IsVisible]() pr
 
 {% highlight xaml %}
 
-
     <chart:SfCartesianChart>
         ...
             <chart:SfCartesianChart.Legend>
-                <chart:ChartLegend IsVisible="True" ></chart:ChartLegend>
+                <chart:ChartLegend IsVisible="True"></chart:ChartLegend>
             </chart:SfCartesianChart.Legend>
 
     </chart:SfCartesianChart>
@@ -144,7 +140,6 @@ N> By default, the [LegendPlacement]() is [LegendPlacement.Top]()
 
 {% highlight xaml %}
 
-
     <chart:SfCartesianChart>
         ...
             <chart:SfCartesianChart.Legend>
@@ -158,7 +153,6 @@ N> By default, the [LegendPlacement]() is [LegendPlacement.Top]()
 {% highlight c# %}
  SfCartesianChart chart = new SfCartesianChart();
         ...
-
         ChartLegend legend = new ChartLegend();
         legend.Placement= LegendPlacement.Bottom;
         chart.Legend = legend;
@@ -178,7 +172,6 @@ We can control the visibility of the series by enabling the [ToggleSeriesVisibil
 {% tabs %}
 
 {% highlight xaml %}
-
 
     <chart:SfCartesianChart>
         ...
@@ -222,26 +215,25 @@ N> The default value for the LegendIcon in the Series is circular in shape.
 
 {% highlight xaml %}
 
-
     <chart:SfCartesianChart>
         ...
             <chart:ColumnSeries ItemsSource="{Binding Product}"
                                 XBindingPath="Country"
                                 YBindingPath="Value"
                                 Label="Cofee"
-                                LegendIcon="Hexagon" ></chart:ColumnSeries>
+                                LegendIcon="Hexagon"></chart:ColumnSeries>
 
             <chart:ColumnSeries ItemsSource="{Binding Import}"
                                 XBindingPath="Country"
                                 YBindingPath="Value"
                                 Label="Tea"
-                                LegendIcon="Triangle" ></chart:ColumnSeries>
+                                LegendIcon="Triangle"></chart:ColumnSeries>
 
             <chart:ColumnSeries ItemsSource="{Binding Export}"
                                 XBindingPath="Country"
                                 YBindingPath="Value"
                                 Label="Soft Drinks"
-                                LegendIcon="Pentagon" ></chart:ColumnSeries>
+                                LegendIcon="Pentagon"></chart:ColumnSeries>
 
     </chart:SfCartesianChart>
 
@@ -250,7 +242,6 @@ N> The default value for the LegendIcon in the Series is circular in shape.
 {% highlight c# %}
  SfCartesianChart chart = new SfCartesianChart();
         ...
-
         ColumnSeries coffeeSeries = new ColumnSeries()
         {
             ItemsSource = this.Product,
@@ -297,7 +288,6 @@ Each series has its own legend icon. This can be achieved through the [LegendIco
 
 {% highlight xaml %}
 
-
     <chart:SfCartesianChart>
         ...
             <chart:ColumnSeries ItemsSource="{Binding Product}"
@@ -325,7 +315,6 @@ Each series has its own legend icon. This can be achieved through the [LegendIco
 {% highlight c# %}
  SfCartesianChart chart = new SfCartesianChart();
         ...
-
         ColumnSeries coffeeSeries = new ColumnSeries()
         {
             ItemsSource = this.Product,
@@ -352,8 +341,7 @@ Each series has its own legend icon. This can be achieved through the [LegendIco
             XBindingPath = "Country",
             YBindingPath = "Value",
             LegendIcon = ChartLegendIconType.SeriesType,
-            Label = "Soft Drinks"
-            
+            Label = "Soft Drinks"          
         };
         chart.Series.Add(softDrinksSeries);
 
