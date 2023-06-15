@@ -208,6 +208,30 @@ The `SfAccordion` allows you to customize the scroll position of the expanded ac
 {% endhighlight %}
 {% endtabs %}
 
+## Bring accordion item into view
+
+The `BringIntoView` method is used to bring a specific item into view by scrolling to it programmatically.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+<syncfusion:SfAccordion x:Name="accordion">
+    <syncfusion:SfAccordion.Items>
+        <syncfusion:AccordionItem>
+            ...
+            ...
+        </syncfusion:AccordionItem>
+    </syncfusion:SfAccordion.Items>
+ </syncfusion:SfAccordion>
+{% endhighlight %}
+
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+private void Button_Clicked(object sender, EventArgs e)
+{
+    accordion.BringIntoView(accordion.Items[15]);
+}
+{% endhighlight %}
+{% endtabs %}
+
 ## Expand mode
 
 You can expand single or multiple items using the `ExpandMode` property. By default, the expanded mode is set to `Single`.  
@@ -351,30 +375,6 @@ private void SfAccordion_Collapsed(object sender, Syncfusion.Maui.Accordion.Expa
 {
     // Get the index of current accordion item
     int index = e.Index;
-}
-{% endhighlight %}
-{% endtabs %}
-
-## Bring accordion item into view
-
-The `BringIntoView` method is used to bring a specific item into view by scrolling to it programmatically.
-
-{% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
-<syncfusion:SfAccordion x:Name="accordion">
-    <syncfusion:SfAccordion.Items>
-        <syncfusion:AccordionItem>
-            ...
-            ...
-        </syncfusion:AccordionItem>
-    </syncfusion:SfAccordion.Items>
- </syncfusion:SfAccordion>
-{% endhighlight %}
-
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
-private void Button_Clicked(object sender, EventArgs e)
-{
-    accordion.BringIntoView(accordion.Items[15]);
 }
 {% endhighlight %}
 {% endtabs %}
