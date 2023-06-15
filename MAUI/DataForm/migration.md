@@ -177,13 +177,13 @@ this.Content = dataForm;
 <tr>
 <td>{{'[DataFormNumericItem](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.DataForm.DataFormNumericItem.html)'| markdownify }}</td>
 <td>DataFormNumericItem</td>
-<td>Represents the class that encapsulates the layout and numeric editor(SfNumericEntry) settings for data field.</td>
+<td>Represent the class that encapsulates the layout and numeric editor(SfNumericEntry) settings for data field.</td>
 </tr>
 
 <tr>
 <td>{{'[DataFormMaskedEditTextItem](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.DataForm.DataFormMaskedEditTextItem.html)'| markdownify }}</td>
 <td>DataFormMaskedTextItem</td>
-<td>Represents the class that encapsulates the layout and masked text editor(SfMaskedEntry) settings for data field.</td>
+<td>Represent the class that encapsulates the layout and masked text editor(SfMaskedEntry) settings for data field.</td>
 </tr>
 
 <tr>
@@ -347,7 +347,7 @@ public class DataModel
 <tr>
 <td>{{'[ItemManager](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.DataForm.SfDataForm.html#Syncfusion_XForms_DataForm_SfDataForm_ItemManager)'| markdownify }}</td>
 <td>ItemManager</td>
-<td>Gets or sets the item manager.</td>
+<td>Get or set the item manager.</td>
 </tr>
 
 <tr>
@@ -917,31 +917,31 @@ The following properties of the `Xamarin SfDataForm` is moved to the [DataFormDe
 <tr>
 <td>{{'[AllowNull](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.DataForm.DataFormNumericItemBase.html#Syncfusion_XForms_DataForm_DataFormNumericItemBase_AllowNull)'| markdownify }}</td>
 <td>AllowNull</td>
-<td>Gets or sets a value indicating whether the DataFormNumericEditor allows null value or not.</td>
+<td>Get or set a value indicating whether the DataFormNumericEditor allows a null value or not.</td>
 </tr>
 
 <tr>
 <td>{{'[FormatString](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.DataForm.DataFormNumericItemBase.html#Syncfusion_XForms_DataForm_DataFormNumericItemBase_FormatString)'| markdownify }}</td>
 <td>CustomFormat</td>
-<td>Gets or sets the format used to specify the formatting of editor value.</td>
+<td>Get or set the format used to specify the formatting of the editor value.</td>
 </tr>
 
 <tr>
 <td>{{'[Maximum](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.DataForm.DataFormNumericUpDownItem.html#Syncfusion_XForms_DataForm_DataFormNumericUpDownItem_Maximum)'| markdownify }}</td>
 <td>Maximum</td>
-<td>Gets or sets the numerical maximum value for DataFormNumericEditor.</td>
+<td>Get or set the numerical maximum value for DataFormNumericEditor.</td>
 </tr>
 
 <tr>
 <td>{{'[Minimum](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.DataForm.DataFormNumericUpDownItem.html#Syncfusion_XForms_DataForm_DataFormNumericUpDownItem_Minimum)'| markdownify }}</td>
 <td>Minimum</td>
-<td>Gets or sets the numerical minimum value for DataFormNumericEditor.</td>
+<td>Get or set the numerical minimum value for DataFormNumericEditor.</td>
 </tr>
 
 <tr>
 <td>{{'[CultureInfo](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.DataForm.DataFormNumericItemBase.html#Syncfusion_XForms_DataForm_DataFormNumericItemBase_CultureInfo)'| markdownify }}</td>
 <td>Culture</td>
-<td>Gets or sets the culture for DataFormNumericEditor.</td>
+<td>Get or set the culture for DataFormNumericEditor.</td>
 </tr>
 
 </table>
@@ -957,31 +957,31 @@ The following properties of the `Xamarin SfDataForm` is moved to the [DataFormDe
 <tr>
 <td>{{'[CultureInfo](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.DataForm.DataFormMaskedEditTextItem.html#Syncfusion_XForms_DataForm_DataFormMaskedEditTextItem_CultureInfo)'| markdownify }}</td>
 <td>Culture</td>
-<td>Gets or sets the culture for mask values based on the given culture.</td>
+<td>Get or set the culture for mask values based on the given culture.</td>
 </tr>
 
 <tr>
 <td>{{'[Mask](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.DataForm.DataFormMaskedEditTextItem.html#Syncfusion_XForms_DataForm_DataFormMaskedEditTextItem_Mask)'| markdownify }}</td>
 <td>Mask</td>
-<td>Gets or sets the mask value which restricts the inputs provided in the control.</td>
+<td>Get or set the mask value which restricts the inputs provided in the control.</td>
 </tr>
 
 <tr>
 <td>{{'[MaskType](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.DataForm.DataFormMaskedEditTextItem.html#Syncfusion_XForms_DataForm_DataFormMaskedEditTextItem_MaskType)'| markdownify }}</td>
 <td></td>
-<td>Gets or sets the mask type for the DataFormMaskedTextEditor.</td>
+<td>Get or set the mask type for the DataFormMaskedTextEditor.</td>
 </tr>
 
 <tr>
 <td>{{'[PromptChar](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.DataForm.DataFormMaskedEditTextItem.html#Syncfusion_XForms_DataForm_DataFormMaskedEditTextItem_PromptChar)'| markdownify }}</td>
 <td>PromptChar</td>
-<td>Gets or sets a char which used as a prompt char of DataFormMaskedTextEditor.</td>
+<td>Get or set a char which is used as a prompt char of DataFormMaskedTextEditor.</td>
 </tr>
 
 <tr>
 <td>{{'[ValueMaskFormat](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.DataForm.DataFormMaskedEditTextItem.html#Syncfusion_XForms_DataForm_DataFormMaskedEditTextItem_ValueMaskFormat)'| markdownify }}</td>
 <td>ValueMaskFormat</td>
-<td>Gets or sets the format for the value.</td>
+<td>Get or set the format for the value.</td>
 </tr>
 
 </table>

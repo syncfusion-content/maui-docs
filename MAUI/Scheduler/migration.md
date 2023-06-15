@@ -261,7 +261,7 @@ this.Content = scheduler;
 <tr>
 <td>{{'[DragDropSettings](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.DragDropSettings.html)'| markdownify }}</td>
 <td>DragDropSettings</td>
-<td>Represents drag and drop settings to customize the drag and drop operations of appointments in schedule.</td></tr>
+<td>Represent drag-and-drop settings to customize the drag-and-drop operations of appointments in scheduler.</td></tr>
 
 </table> 
 
@@ -507,12 +507,12 @@ this.Content = scheduler;
 <tr>
 <td>{{'[AllowAppointmentDrag](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.SfSchedule.html#Syncfusion_SfSchedule_XForms_SfSchedule_AllowAppointmentDrag)'| markdownify }}</td>
 <td>AllowAppointmentDrag</td>
-<td>Gets or sets a value indicating whether the schedule can allows the appointment to drag or not on the view.</td></tr>
+<td>Get or set a value indicating whether the schedule can allow the appointment to drag or not on the view.</td></tr>
 
 <tr>
 <td>{{'[DragDropSettings](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.SfSchedule.html#Syncfusion_SfSchedule_XForms_SfSchedule_DragDropSettings)'| markdownify }}</td>
 <td>DragDropSettings</td>
-<td>Gets or sets the drag and drop settings to customize the appointment position, dragging indicator style, navigation, and time indicator format.</td></tr>
+<td>Get or set the drag and drop settings to customize the appointment position, dragging indicator style, navigation, and time indicator format.</td></tr>
 
 
 </table> 
@@ -2472,7 +2472,7 @@ this.Content = scheduler;
 
 ### DragDropSettings
 
-The following code example explains how to customize the drag and drop operations of appointments in schedule.
+The following code example explains how to customize the drag-and-drop operations of appointments in the schedule.
 
 <table>
 <tr>
@@ -2539,32 +2539,32 @@ this.Content = scheduler;
 <tr>
 <td>{{'[AllowNavigate](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.DragDropSettings.html#Syncfusion_SfSchedule_XForms_DragDropSettings_AllowNavigate)'| markdownify }}</td>
 <td>AllowNavigation</td>
-<td>Gets or sets a value indicating whether the user can navigate views while dragging the appointment or not.</td></tr>
+<td>Get or set a value indicating whether the user can navigate views while dragging the appointment or not.</td></tr>
 
 <tr>
 <td>{{'[AllowScroll](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.DragDropSettings.html#Syncfusion_SfSchedule_XForms_DragDropSettings_AllowScroll)'| markdownify }}</td>
 <td>AllowScroll</td>
-<td>Gets or sets a value indicating whether the user can scroll the time slot while dragging the appointment or not.</td></tr>
+<td>Get or set a value indicating whether the user can scroll the time slot while dragging the appointment or not.</td></tr>
 
 <tr>
 <td>{{'[AutoNavigationDelay](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.DragDropSettings.html#Syncfusion_SfSchedule_XForms_DragDropSettings_AutoNavigationDelay)'| markdownify }}</td>
 <td>AutoNavigationDelay</td>
-<td>Gets or sets the auto navigation time delay while dragging an appointment within the scheduler control.</td></tr>
+<td>Get or set the auto navigation time delay while dragging an appointment within the scheduler control.</td></tr>
 
 <tr>
 <td>{{'[ShowTimeIndicator](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.DragDropSettings.html#Syncfusion_SfSchedule_XForms_DragDropSettings_ShowTimeIndicator)'| markdownify }}</td>
 <td>ShowTimeIndicator</td>
-<td>Gets or sets a value indicating whether the drag and drop indicator should be displayed within the scheduler control during appointment dragging.</td></tr>
+<td>Get or set a value indicating whether the drag and drop indicator should be displayed within the scheduler control during appointment dragging.</td></tr>
 
 <tr>
 <td>{{'[TimeIndicatorStyle](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.DragDropSettings.html#Syncfusion_SfSchedule_XForms_DragDropSettings_TimeIndicatorStyle)'| markdownify }}</td>
 <td>TimeIndicatorStyle</td>
-<td>Gets or sets the style of the drag and drop indicator displayed during appointment dragging within the scheduler control.</td></tr>
+<td>Get or set the style of the drag and drop indicator displayed during appointment dragging within the scheduler control.</td></tr>
 
 <tr>
 <td>Nil</td>
 <td>TimeIndicatorTextFormat</td>
-<td>Gets or sets the display format for the time indicator that appears when an appointment is dragged and dropped within the scheduler control's day, week, workweek, timeline day, timeline week, and timeline workweek views.</td></tr>
+<td>Get or set the display format for the time indicator that appears when an appointment is dragged and dropped within the scheduler control's day, week, workweek, timeline day, timeline week, and timeline workweek views.</td></tr>
 
 </table> 
 
@@ -2673,17 +2673,17 @@ this.Content = scheduler;
 <tr>
 <td>{{'[AppointmentDragStarting](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.SfSchedule.html#Syncfusion_SfSchedule_XForms_SfSchedule_AppointmentDragStarting)'| markdownify }}</td>
 <td>AppointmentDragStarting</td>
-<td>Occurs when the user starts dragging an appointment.</td></tr>
+<td>Occur when the user starts dragging an appointment.</td></tr>
 
 <tr>
 <td>{{'[AppointmentDragOver](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.SfSchedule.html#Syncfusion_SfSchedule_XForms_SfSchedule_AppointmentDragOver)'| markdownify }}</td>
 <td>AppointmentDragOver</td>
-<td>Occurs when the user is dragging an appointment.</td></tr>
+<td>Occur when the user is dragging an appointment.</td></tr>
 
 <tr>
 <td>{{'[AppointmentDrop](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.SfSchedule.html#Syncfusion_SfSchedule_XForms_SfSchedule_AppointmentDrop)'| markdownify }}</td>
 <td>AppointmentDrop</td>
-<td>Occurs when the user drops an appointment.</td></tr>
+<td>Occur when the user drops an appointment.</td></tr>
 
 </table> 
 

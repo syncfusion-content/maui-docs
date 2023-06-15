@@ -629,7 +629,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 Please refer [here](https://help.syncfusion.com/maui/dataform/validation#validation-label-appearance-customization) to learn more about changing the [ErrorLabelTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html#Syncfusion_Maui_DataForm_DataFormItem_ErrorLabelTextStyle) and [ValidMessageLabelTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html#Syncfusion_Maui_DataForm_DataFormItem_ValidMessageLabelTextStyle)
 
 ## Editor view customization
-You can customize editor view by using `InitializeDataEditor` method of `DataFormItemManager`.
+ou can customize the editor view by using the  `InitializeDataEditor` method of `DataFormItemManager`.
 
 {% tabs %}
 {% highlight c# %}
@@ -861,7 +861,7 @@ N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-dataform/t
 
 ## Explicitly create data editors from custom data dictionary
 
-You can [explicitly](https://help.syncfusion.com/maui/dataform/dataform-settings#explicitly-create-data-editors) add the data editors from custom data dictionary and also get the value from dictionary and set the editors value to dictionary by implementing `DataFormItemManager`, which has methods to get and set values for the editors.
+You can [explicitly](https://help.syncfusion.com/maui/dataform/dataform-settings#explicitly-create-data-editors) add the data editors from the custom data dictionary and also get the value from the dictionary and set the editors value to the dictionary by implementing `DataFormItemManager`, which has the methods to get and set values for the editors.
 
 {% tabs %}
 {% highlight C# %}
