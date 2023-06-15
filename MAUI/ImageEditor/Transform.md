@@ -13,7 +13,7 @@ The Image Editor in .NET MAUI provides options for rotating and flipping images,
 
 ## Rotate
 
-The [`Rotate`]() method is used to rotate images with annotations. Each rotation will rotate the image 90 degrees clockwise. You can rotate the image using either the toolbar or the  [`Rotate`]() method.
+The `Rotate` method is used to rotate images with annotations. Each rotation will rotate the image 90 degrees clockwise. You can rotate the image using either the toolbar or the `Rotate` method.
 
 N> Angle cannot be specified in code to alter the rotation angle of the image.
 
@@ -23,20 +23,16 @@ N> Angle cannot be specified in code to alter the rotation angle of the image.
 
 {% endhighlight %}
 
-![ImageEditor Sample](images/image-editor-rotate.jpg)
-
 ## Flip
 
-The image editor control is capable of showing the mirror image. The [`Flip`]() method allows you to flip the image horizontally or vertically based on the [`ImageFlipDirection`]. Flipping the image can be done by either using a toolbar or the [`Flip`]() method.
+The image editor control is capable of showing the mirror image. The `Flip` method allows you to flip the image horizontally or vertically based on the `ImageFlipDirection`. Flipping the image can be done by either using a toolbar or the `Flip` method.
 
     * ImageFlipDirection - Specifies the direction in which to flip the image.
 
-In the following example, the [`Flip`]() method is used to vertically flip the image.
+In the following example, the `Flip` method is used to vertically flip the image.
 
 {% highlight C# %}
 
               imageEditor.Flip(ImageFlipDirection.Vertical);
 
 {% endhighlight %}
-
-![ImageEditor Sample](images/image-editor-flip.jpg)

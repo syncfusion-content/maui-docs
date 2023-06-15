@@ -24,7 +24,7 @@ N> You can also crop the image at a specific position with annotations.
 
 ### Handling the cropping tool
 
-The [`Crop`]() method in the image editor control crop the image based on the [`ImageCropType`]. It allows users to enable or disable the cropping region displayed over the image, making it easier to visually choose the area for cropping.
+The `Crop` method in the image editor control crop the image based on the `ImageCropType`. It allows users to enable or disable the cropping region displayed over the image, making it easier to visually choose the area for cropping.
 
     * ImageCropType - Specifies the selection type for cropping the image.
 
@@ -76,7 +76,7 @@ imageEditor.Crop(16,9);
 
 {{ codesnippet3 | UnOrderList_Indent_Level_1 }} 
 
-* To position the cropping window with custom location, pass the desired rectangle in [`Crop`]() method. Each value in the rectangle should be in offset value(0 to 100).
+* To position the cropping window with custom location, pass the desired rectangle in `Crop` method. Each value in the rectangle should be in offset value(0 to 100).
 
 {% capture codesnippet4 %}
 
@@ -92,7 +92,7 @@ imageEditor.Crop(rect);
 
 {{ codesnippet4 | UnOrderList_Indent_Level_1 }} 
 
-After the cropping area has been selected, the [`SaveEdits`]() method is called, which in turn crops the selected region and displays the cropped image on the image editor.
+After the cropping area has been selected, the `SaveEdits` method is called, which in turn crops the selected region and displays the cropped image on the image editor.
 
 {% highlight C# %}
 
@@ -100,7 +100,7 @@ imageEditor.SaveEdits();
 
 {% endhighlight %}
 
-After selecting the cropping area, if you decide to cancel the edits and revert back to the original image, you can use the [`CancelEdits`]() method. It discard the changes made during the cropping process and restore the image to its initial state.
+After selecting the cropping area, if you decide to cancel the edits and revert back to the original image, you can use the `CancelEdits` method. It discard the changes made during the cropping process and restore the image to its initial state.
 
 {% highlight C# %}
 
@@ -110,17 +110,13 @@ imageEditor.CancelEdits();
 
 ### Circle cropping
 
-You can also crop an image in a circular or elliptical format, which is useful for profile pictures. Use the [`Crop`]() method with an empty Rect and set the isEllipse parameter to true.
+You can also crop an image in a circular or elliptical format, which is useful for profile pictures. Use the `Crop` method with an empty Rect and set the isEllipse parameter to true.
 
 {% highlight C# %}
 
 {% endhighlight %}
 
-![SfImageEditor](images/circle-crop-preview.jpg)
-
 The following image show cases the circularly cropped image.
-
-![SfImageEditor](images/circle-crop.jpg)
 
  The following code shows cropping an image in elliptical format.
 
@@ -134,7 +130,7 @@ imageEditor.Crop(new Rect(), true);
 
 ### Entering the cropping area manually
 
-To manually enter the cropping area without enabling the cropping functionality, use the overloaded [`Crop(Rect rect)`]() method. It can be done by simply define a rectangle and pass it to the [`Crop`]() method.
+To manually enter the cropping area without enabling the cropping functionality, use the overloaded `Crop(Rect rect)` method. It can be done by simply define a rectangle and pass it to the `Crop` method.
 
 {% tabs %}
 
@@ -146,11 +142,9 @@ imageEditor.Crop(new Rect(100,100,150,200));
 
 {% endtabs %}
 
-![SfImageEditor](ImageEditor_images/cropaspect.png)
-
 ### Programmatically selecting the cropping ratio
 
-Programmatically, you can select the desired cropping ratio from the various aspect ratios available in the built-in cropping toolbar by specifying the corresponding index of the toolbar item using the [`Crop`]() method.
+Programmatically, you can select the desired cropping ratio from the various aspect ratios available in the built-in cropping toolbar by specifying the corresponding index of the toolbar item using the `Crop` method.
 
 The following code sample will add the cropping preview on the image in square shape.
 
@@ -164,7 +158,7 @@ The following code sample will add the cropping preview on the image in square s
 
 {% endtabs %}
 
-* To crop an image in a circle or an ellipse with a specific ratio, use [`Crop`]() with a ratio argument and an optional parameter of true, which specifies whether the cropping panel should be added in an elliptical or rectangle shape. The default value is `false`.
+* To crop an image in a circle or an ellipse with a specific ratio, use `Crop` with a ratio argument and an optional parameter of true, which specifies whether the cropping panel should be added in an elliptical or rectangle shape. The default value is `false`.
 
 {% capture codesnippet6 %}
 
