@@ -30,7 +30,7 @@ documentation: ug
     . . .
     xmlns:imageEditor="clr-namespace:Syncfusion.Maui.ImageEditor;assembly=Syncfusion.Maui.ImageEditor">
 
-    <imageEditor:SfImageEditor Source="image_name.extension" />
+    <imageEditor:SfImageEditor Source="image.png" />
 </ContentPage>
 
 {% endhighlight %}
@@ -95,7 +95,6 @@ Refer to the following steps to add an image to the pcl project:
 4. Browse to the location on your computer where the image file is stored.
 5. Select the image file you want to add to the "Resources" folder.
 6. Click the "Add" button to add the image file to the project.
-7. After the image has been imported, ensure whether the image Build Action has been set to `EmbeddedResource`.
 
 N> Image formats such as JPEG and PNG can be loaded to the image editor.
 
@@ -109,7 +108,7 @@ The following code shows adding an image to the image editor control with the fo
              xmlns:imageEditor="clr-namespace:Syncfusion.Maui.ImageEditor;assembly=Syncfusion.Maui.ImageEditor"
              x:Class="Syncfusion.MainPage">
 
-             <imageEditor:SfImageEditor Source="syncfusion.png"/>
+             <imageEditor:SfImageEditor Source="image.jpeg"/>
 </ContentPage>
 
 {% endhighlight %}
@@ -124,7 +123,7 @@ public partial class MainPage : ContentPage
 	{
 		InitializeComponent();
         SfImageEditor imageEditor = new SfImageEditor();
-        imageEditor.Source = "syncfusion.png";
+        imageEditor.Source = "image.jpeg";
         this.content = imageEditor;
     }
 {% endhighlight %}
