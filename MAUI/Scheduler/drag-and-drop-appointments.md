@@ -142,8 +142,18 @@ scheduler.DragDropSettings = new DragDropSettings
 Using the `AllowNavigate` property of the `DragDropSettings` you can handle whether you can navigate views while dragging the appointment or not. The default value of the AllowNavigate property is `true`.
 
 {% tabs %}
+{% highlight xaml %}
+<schedule:SfScheduler x:Name="Scheduler"
+                    View="Week">
+<schedule:SfScheduler.DragDropSettings>
+    <schedule:DragDropSettings AllowNavigation="False">
+    </schedule:DragDropSettings>
+</schedule:SfScheduler.DragDropSettings>
+</schedule:SfScheduler>
+{% endhighlight %}
 {% highlight c# %}
-scheduler.DragDropSettings.AllowNavigation = true;
+this.Scheduler.View = SchedulerView.Week;
+this.Scheduler.DragDropSettings.AllowNavigation = false;
 {% endhighlight %}
 {% endtabs %}
 
@@ -152,7 +162,8 @@ Using the `AutoNavigationDelay` property you can handle the navigation time when
 
 {% tabs %}
 {% highlight c# %}
-scheduler.DragDropSettings.AutoNavigationDelay = new TimeSpan(0, 0, 2);
+this.Scheduler.View = SchedulerView.Week;
+this.Scheduler.DragDropSettings.AutoNavigationDelay = new TimeSpan(0, 0, 0, 0, 2000);
 {% endhighlight %}
 {% endtabs %}
 
@@ -160,8 +171,18 @@ scheduler.DragDropSettings.AutoNavigationDelay = new TimeSpan(0, 0, 2);
 Using the `AllowScroll` property you can handle scrolling the time slot while dragging the appointment or not, while dragging the appointment to the endpoint of the current view in Schedule. The default value of the `AllowScroll` property is `true`.
 
 {% tabs %}
+{% highlight xaml %}
+<schedule:SfScheduler x:Name="Scheduler"
+                    View="Week">
+<schedule:SfScheduler.DragDropSettings>
+    <schedule:DragDropSettings AllowScroll="False">
+    </schedule:DragDropSettings>
+</schedule:SfScheduler.DragDropSettings>
+</schedule:SfScheduler>
+{% endhighlight %}
 {% highlight c# %}
-scheduler.DragDropSettings.AllowScroll = false;
+this.Scheduler.View = SchedulerView.Week;
+this.Scheduler.DragDropSettings.AllowScroll = false;
 {% endhighlight %}
 {% endtabs %}
 
@@ -171,8 +192,18 @@ N> This is not applicable for MonthView.
 You can handle whether the drag and drop indicator should be displayed within the scheduler during appointment dragging by using the `ShowTimeIndicator` property which shows the dragged appointment's current position time. The default value of the `ShowTimeIndicator` property is `true`.
 
 {% tabs %}
+{% highlight xaml %}
+<schedule:SfScheduler x:Name="Scheduler"
+                    View="Week">
+<schedule:SfScheduler.DragDropSettings>
+    <schedule:DragDropSettings ShowTimeIndicator="False">
+    </schedule:DragDropSettings>
+</schedule:SfScheduler.DragDropSettings>
+</schedule:SfScheduler>
+{% endhighlight %}
 {% highlight c# %}
-scheduler.DragDropSettings.ShowTimeIndicator = false;
+this.Scheduler.View = SchedulerView.Week;
+this.Scheduler.DragDropSettings.ShowTimeIndicator = false;
 {% endhighlight %}
 {% endtabs %}
 
@@ -180,22 +211,35 @@ N>
 * The drag time indicator is applicable only when the [TimeRulerWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerDaysView.html#Syncfusion_Maui_Scheduler_SchedulerDaysView_TimeRulerWidth) property is greater than zero in Day, Week, and WorkWeek views and the [TimeRulerHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimelineView.html#Syncfusion_Maui_Scheduler_SchedulerTimelineView_TimeRulerHeight) property is is greater than zero in TimeLineDay, TimeLineWeek, TimeLineWorkWeek views.
 * The drag time indicator is not applicable for Month and Timeline Month views.
  
-#### Change drag time Indicator text style
+#### Change drag time indicator text style
 You can change the drag time indicator style by using the `TimeIndicatorStyle` property of `DragDropSettings`.
 
 {% tabs %}
 {% highlight xaml %}
 <schedule:SfScheduler x:Name="scheduler" ShowBusyIndicator="True"
                     AppointmentsSource="{Binding DragEvents}"
-                    View="Week"
-                    DisplayDate="{Binding DisplayDate}"
-                    AllowedViews="Day,Week,WorkWeek,Month">
+                    View="Week">
         <schedule:SfScheduler.DragDropSettings>
             <schedule:DragDropSettings TimeIndicatorStyle="{schedule:SchedulerTextStyle TextColor=Green}"/>
         </schedule:SfScheduler.DragDropSettings>
 </schedule:SfScheduler>
 {% endhighlight %}
 {% highlight c# %}
-scheduler.DragDropSettings.TimeIndicatorStyle = new SchedulerTextStyle { TextColor = Colors.Green };
+this.Scheduler.View = SchedulerView.Week;
+var timeIndicatorStyle = new SchedulerTextStyle()
+{
+   TextColor = Colors.Green,
+};
+this.Scheduler.DragDropSettings.TimeIndicatorStyle = timeIndicatorStyle;
+{% endhighlight %}
+{% endtabs %}
+
+#### Change drag time indicator format
+You can change the drag time indicator format by using the `TimeIndicatorTextFormat` property of `DragDropSettings`.
+
+{% tabs %}
+{% highlight c# %}
+this.Scheduler.View = SchedulerView.Week;
+this.Scheduler.DragDropSettings.TimeIndicatorTextFormat = "hh:mm";
 {% endhighlight %}
 {% endtabs %}
