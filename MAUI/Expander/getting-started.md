@@ -318,11 +318,12 @@ There are four built-in events in the SfExpander control namely:
 
 The `Expanding` event will be triggered when the expander control is being expanded.It can cancel expansion with `ExpandingAndCollapsingEventArgs` that contains the following property:
 
-* `Cancel`: Expansion is based on this value.
+* `Cancel`: Indicates that the expansion or collapse action should be cancelled.
+
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 <syncfusion:SfExpander Expanding="SfExpander_Expanding"/>
-{%endhighlight%}
+{% endhighlight %}
 
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="3" %}
 private void SfExpander_Expanding(object sender, ExpandingAndCollapsingEventArgs e)
@@ -339,7 +340,7 @@ The `Expanded` event is triggered when the expander is fully expanded. You can e
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 <syncfusion:SfExpander Expanded="SfExpander_Expanded"/>
-{%endhighlight%}
+{% endhighlight %}
 
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 private void SfExpander_Expanded(object sender, ExpandedAndCollapsedEventArgs e)
@@ -353,11 +354,12 @@ private void SfExpander_Expanded(object sender, ExpandedAndCollapsedEventArgs e)
 
 The `Collapsing` event will be triggered when the expander control is being collapsed.It can cancel collapsing with `ExpandingAndCollapsingEventArgs` that contains the following property:
 
-* `Cancel`: Collapsing is based on this value.
+* `Cancel`: Indicates that the expansion or collapse action should be cancelled.
+
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 <syncfusion:SfExpander Collapsing="SfExpander_Collapsing"/>
-{%endhighlight%}
+{% endhighlight %}
 
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="3" %}
 private void SfExpander_Collapsing(object sender, ExpandingAndCollapsingEventArgs e)
@@ -374,7 +376,7 @@ The `Collapsed` event is triggered when the expander is collapsed. You can execu
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 <syncfusion:SfExpander Collapsed="SfExpander_Collapsed"/>
-{%endhighlight%}
+{% endhighlight %}
 
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 private void SfExpander_Collapsed(object sender, ExpandedAndCollapsedEventArgs e)
