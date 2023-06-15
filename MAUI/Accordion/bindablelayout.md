@@ -13,7 +13,7 @@ The `SfAccordion` allows you to set a collection of items by setting the `Bindab
 
 ## Creating Data Model
 
-Create a simple data model to bind the data for SfAccordion as shown in the following code example in a new class file, and save it as `EmployeeInfo.cs` file:
+Create a simple data model to bind the data for `SfAccordion` as shown in the following code example in a new class file, and save it as an `EmployeeInfo.cs` file:
 
 {% tabs %}
 {% highlight c# %}
@@ -322,13 +322,13 @@ BindableLayout.SetItemsSource(accordion, viewModel.Employees);
 {% endhighlight %}
 {% endtabs %}
 
-![.NET MAUI Forms Accordion with Bindable Layout](Images/maui-accordion-with-bindablelayout.png)
+![.NET MAUI Forms Accordion with Bindable Layout](Images/bindablelayout/maui-accordion-with-bindablelayout.png)
 
 ## Events
 
 ### Get the index of expanded or collapsed accordion item.
 
-You can get the index of the interacted `AccordionItem` by using the `Collapsed`. It will occur after an `AccordionItem` is collapsed when tapping the Header. The `ExpandedAndCollapsedEventArgs` properties provide data for the `Collapsed` event.  
+You can get the index of the interacted `AccordionItem` by using the `Collapsed`. It will occur after an `AccordionItem` is collapsed when tapping on the Header. The `ExpandedAndCollapsedEventArgs` properties provide data for the `Collapsed` event.  
 
 {% tabs %}
 {% highlight xaml %}
@@ -344,7 +344,7 @@ private void Accordion_Collapsed(object sender, Syncfusion.Maui.Accordion.Expand
 {% endhighlight %}
 {% endtabs %}		
 
-Using the `Expanded` event, you can get the index of the interacted `AccordionItem.` It will occur after an `AccordionItem` is expanded when tapping on the `Header`. The `ExpandedAndCollapsedEventArgs` properties provides data for the `Expanded` event.  
+Using the `Expanded` event, you can get the index of the interacted `AccordionItem.` It will occur after an `AccordionItem` is expanded when tapping the `Header`. The `ExpandedAndCollapsedEventArgs` properties provide data for the `Expanded` event.  
 
 {% tabs %}
 {% highlight xaml %}
@@ -372,7 +372,7 @@ The `Collapsing` event occurs while collapsing an `AccordionItem` when tapping o
 Accordion.Collapsing += Accordion_Collapsing;
 private void Accordion_Collapsing(object sender, ExpandingAndCollapsingEventArgs e)
 {
-   e.cancel = true;
+   e.Cancel = true;
 }
 {% endhighlight %}
 {% endtabs %}
