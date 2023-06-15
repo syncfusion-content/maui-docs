@@ -19,82 +19,75 @@ This section explains the steps required to add the `.NET MAUI NumericEntry` con
 
 In this walkthrough, you will create a .NET MAUI application that contains the `NumericEntry` control.
 
-## Adding control manually in XAML
+## Handler registration 
 
-To add `NumericEntry` control manually in XAML, follow the below steps.
+ In the MauiProgram.cs file, register the handler for Syncfusion core.
 
-1. Create a `.NET MAUI 3 desktop app for C# and .NET 5`.
-2.  Download and refer the following NuGet package in the project.
+{% highlight c# hl_lines="6 17" %}
+using Microsoft.Maui;
+using Microsoft.Maui.Hosting;
+using Microsoft.Maui.Controls.Compatibility;
+using Microsoft.Maui.Controls.Hosting;
+using Microsoft.Maui.Controls.Xaml;
+using Syncfusion.Maui.Core.Hosting;
 
-    * `Syncfusion.Maui.Inputs`
-3. Import the control namespace `Syncfusion.Maui.Inputs` in XAML page.
-4. Initialize the `NumericEntry` control.
+namespace MaskedEntrySample
+{
+    public static class MauiProgram
+    {
+        public static MauiApp CreateMauiApp()
+        {
+            var builder = MauiApp.CreateBuilder();
+            builder
+            .UseMauiApp<App>()
+            .ConfigureSyncfusionCore()
+            .ConfigureFonts(fonts =>
+            {
+                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+            });
 
-{% capture codesnippet1 %}
+            return builder.Build();
+        }      
+    }
+}   
+
+{% endhighlight %} 
+
+## Adding the .NET MAUI Numeric Entry control
+
+Step 1: Add the NuGet to the project as discussed in the above reference section. 
+
+Step 2: Add the namespace as shown in the following code sample.
+
 {% tabs %}
 {% highlight xaml %}
 
-<Page
-    x:Class="GettingStarted.MainPage"
-    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:GettingStarted"
-    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:editors="using:Syncfusion.UI.Xaml.Editors"
-    mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-    <Grid Name="grid">
-        <!--Adding NumericEntry control -->
-        <editors:SfNumericEntry HorizontalOptions="Center"
-                             VerticalOptions="Center" 
-                             Value="15.35" />
-    </Grid>
-</Page>
+	<xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Inputs;assembly=Syncfusion.Maui.Inputs"/>
 
 {% endhighlight %}
-{% endtabs %}
-{% endcapture %}
-{{ codesnippet1 | OrderList_Indent_Level_1 }}
-
-## Adding control manually in C#
-
-To add `NumericEntry` control manually in C# , follow the below steps.
-
-1. Create a `.NET MAUI 3 desktop app for C# and .NET 5`.
-2.  Download and refer the following NuGet in the project.
-
-    * `Syncfusion.Maui.Inputs`
-
-3. Import the control namespace `Syncfusion.Maui.Inputs` in C# page.
-4. Initialize the `NumericEntry` control.
-
-{% capture codesnippet2 %}
-{% tabs %}
 {% highlight c# %}
 
-namespace GettingStarted
-{
-    public sealed partial class MainPage : Page
-    {
-        public MainPage()
-        {
-            this.InitializeComponent();
-            // Creating an instance of the NumericEntry control
-            SfNumericEntry sfNumericEntry = new SfNumericEntry();
-            sfNumericEntry.HorizontalOptions = LayoutOptions.Center;
-            sfNumericEntry.VerticalOptions = LayoutOptions.Center;
-            sfNumericEntry.Value = 15.35;
-
-            grid.Children.Add(sfNumericEntry);
-        }
-    }
-}
+	using Syncfusion.Maui.Inputs;
 
 {% endhighlight %}
 {% endtabs %}
-{% endcapture %}
-{{ codesnippet2 | OrderList_Indent_Level_1 }}
+
+## Initialize Numeric Entry
+
+Now, add the `SfNumericEntry` control with a required optimal name using the included namespace.
+
+{% tabs %}
+{% highlight xaml %}
+
+	<syncfusion:SfNumericEntry x:Name="numericEntry" />
+	
+{% endhighlight %}
+{% highlight C# %}
+
+        numericEntry = new SfNumericEntry();
+
+{% endhighlight %}
+{% endtabs %}
 
 ![.NET MAUI NumericEntry Application](GettingStarted_images/gettingStarted_img.png)
 
@@ -188,7 +181,7 @@ You can prompt the user with any information by using the `PlaceholderText` prop
 {% highlight C# %}
 
 SfNumberBox SfNumberBox= new SfNumberBox();
-SfNumberBox.PlaceholderText = "Enter input here...";
+SfNumberBox.Placeholder = "Enter input here...";
 sfNumberBox.HorizontalOptions = LayoutOptions.Center;
 sfNumberBox.VerticalOptions = LayoutOptions.Center;
 
@@ -245,7 +238,7 @@ The `ValueChanged` event is triggered, when the `Value` property of `NumericEntr
 <editors:SfNumericEntry HorizontalOptions="Center"
                      VerticalOptions="Center" 
                      x:Name="sfNumericEntry"
-                     ValueChanged="sfNumberBox_ValueChanged" />
+                     ValueChanged="sfNumericEntry_ValueChanged" />
 
 {% endhighlight %}
 {% highlight C# %}

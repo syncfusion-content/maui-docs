@@ -85,7 +85,7 @@ hoursWorked.CustomFormat = "00.000";
 
 ## Apply custom format
 
-You can apply custom formats to the `NumericEntry` control using the **0** and **#** format specifiers. Using these format specifiers you can set the minimum and the maximum number of fractional digits in the [CustomFormat](https://help.syncfusion.com/cr/winui/Syncfusion.UI.Xaml.Editors.SfNumberBox.html#Syncfusion_UI_Xaml_Editors_SfNumberBox_CustomFormat) property. 
+You can apply custom formats to the `NumericEntry` control using the **0** and **#** format specifiers. Using these format specifiers you can set the minimum and the maximum number of fractional digits in the `CustomFormat` property. 
 
    * **0** (Zero placeholder) replaces the zero with the corresponding digit present in the value; otherwise, zero appends with the leftmost position of the value. 
 

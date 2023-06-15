@@ -1,15 +1,15 @@
 ---
 layout: post
 title: About .NET MAUI NumericEntry control | Syncfusion
-description: Learn here all about introduction of Syncfusion .NET MAUI NumericEntry (SfNumberBox) control, its features, and more.
-platform: maui
+description: Learn here all about introduction of Syncfusion .NET MAUI NumericEntry (SfNumericEntry) control, its features, and more.
+platform: MAUI
 control: SfNumericEntry
 documentation: ug
 ---
 
 # .NET MAUI NumericEntry Overview
 
-The `.NET MAUI NumericEntry` control provides an intuitive and advanced editor control that allows you to enter numeric values in currency, percent, decimal formats and much more. It validates the user input independent of the custom format applied. It also validates the input when the focus is lost or the `Enter` key is pressed in `NumericEntry` control. It supports showing watermark text in the editor.
+The .NET MAUI NumericEntry control is designed to provide a user-friendly and advanced input experience for numeric values. It supports a wide range of numeric formats, including currency, percentage, and decimals, among others. With its key features, it enables enhanced user experience and facilitates input validation.
 
 ## Control Structure
 
@@ -17,10 +17,8 @@ The `.NET MAUI NumericEntry` control provides an intuitive and advanced editor c
 
 ## Key Features
 
-* Supports validation of input when the focus is lost or after pressing the `Enter` key.
-* Supports increasing and decreasing the value by `PageUp`, `PageDown`, `UpArrow`, `DownArrow` keys and mouse scrolling.
-* Supports increasing and decreasing the value using `Up-Down button`.
-* Supports to show values in different custom formats.
-* Supports to show values in currency, percent and decimal formats.
-* Supports to show values based on the different culture and regional settings.
-* Supports to show watermark text when `NumericEntry` has empty or null value.
+* Input validation triggered when focus is lost or the enter key is pressed.
+* Convenient value increment and decrement using the up-down button.
+* Flexible display of values in various custom formats.
+* Adapts to different cultural and regional settings for value presentation.
+* Placeholder text displayed when the Numeric Entry control contains an empty or null value.
