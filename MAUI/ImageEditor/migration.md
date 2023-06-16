@@ -290,7 +290,7 @@ Applicable for crop view selection, shape and text annotation selection.
 </tr>
 
 <tr>
-<td>Nil</td>
+<td>RotatableElement</td>
 <td>IsRotatable</td>
 <td>Gets or sets a value indicating whether the text is rotatable or not.</td>
 </tr>
