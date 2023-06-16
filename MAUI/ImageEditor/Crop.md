@@ -22,7 +22,7 @@ Cropping operation can be done in the following two ways:
 
 N> You can also crop the image at a specific position with annotations. 
 
-### Handling the cropping tool
+## Handling the cropping tool
 
 The `Crop` method in the image editor control crop the image based on the `ImageCropType`. It allows users to enable or disable the cropping region displayed over the image, making it easier to visually choose the area for cropping.
 
@@ -62,7 +62,7 @@ imageEditor.Crop(ImageCropType.Free);
 
 {% endhighlight %}
 
-### Original Crop
+## Original Crop
 
 With the original crop, the image is cropped to its original dimensions. This means that no aspect ratio and the cropped image retains its original width and height.
 
@@ -72,7 +72,7 @@ imageEditor.Crop(ImageCropType.Original);
 
 {% endhighlight %}
 
-### Square Crop
+## Square Crop
 
 The square crop option allows you to crop the image into a perfect square shape. This is useful when you want to create square thumbnails or profile pictures.
 
@@ -82,7 +82,7 @@ imageEditor.Crop(1,1);
 
 {% endhighlight %}
 
-### Ratio Crop
+## Ratio Crop
 
 The ratio crop enables you to crop the image with a specific aspect ratio. You can specify the desired ratio using the width and height values. For example, setting the ratio to 16:9 will result in a crop with a width-to-height ratio of 16:9.
 
@@ -92,7 +92,7 @@ imageEditor.Crop(16,9);
 
 {% endhighlight %}
 
-### Circle cropping
+## Circle cropping
 
 You can also crop an image in a circular or elliptical format, which is useful for profile pictures. Use the `Crop` method with an empty Rect and set the isEllipse parameter to true.
 
