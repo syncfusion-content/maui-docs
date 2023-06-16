@@ -62,7 +62,12 @@ To make migration from [Xamarin SfPdfViewer](https://www.syncfusion.com/xamarin-
 <tr>
 <td>{{'[EnableDocumentLinkAnnotation](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.SfPdfViewer.html#Syncfusion_SfPdfViewer_XForms_SfPdfViewer_EnableDocumentLinkAnnotation)'| markdownify}}</td>
 <td>{{'[EnableDocumentLinkNavigation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_EnableDocumentLinkNavigation)'| markdownify}}</td>
-<td>Gets or sets the value that indicates whether the hyperlink navigation can be performed or not.</td>
+<td>Gets or sets a value that indicates whether document link annotations (TOC) in the PDF can be interacted with.</td>
+</tr>
+<tr>
+<td>{{'[AllowHyperlinkNavigation](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.SfPdfViewer.html#Syncfusion_SfPdfViewer_XForms_SfPdfViewer_AllowHyperlinkNavigation)'| markdownify}}</td>
+<td>{{'[EnableHyperlinkNavigation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_EnableHyperlinkNavigation)'| markdownify}}</td>
+<td>Gets or sets a value that indicates whether document link annotations (TOC) in the PDF can be interacted with.</td>
 </tr>
 <tr>
 <td>{{'[Bookmarks](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.SfPdfViewer.html#Syncfusion_SfPdfViewer_XForms_SfPdfViewer_Bookmarks)'| markdownify}}</td>
@@ -71,13 +76,25 @@ To make migration from [Xamarin SfPdfViewer](https://www.syncfusion.com/xamarin-
 </tr>
 <tr>
 <td>{{'[IsTextSelectionEnabled](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.SfPdfViewer.html#Syncfusion_SfPdfViewer_XForms_SfPdfViewer_IsTextSelectionEnabled)'| markdownify}}</td>
-<td>{{EnableTextSelection| markdownify}}</td>
-<td>Gets or sets a value indicating whether gets or sets a value that indicates whether text selection is enabled.</td>
+<td>EnableTextSelection</td>
+<td>Gets or sets a value that indicates whether the text selection is enabled or not. The default value is true.</td>
 </tr>
 <tr>
 <td>{{'[TextSelectionColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.TextSelectionSettings.html#Syncfusion_SfPdfViewer_XForms_TextSelectionSettings_TextSelectionColor)'| markdownify}}</td>
-<td>{{HighlightColor| markdownify}}</td>
-<td>Gets or sets the color being used to highlight the text during selection.</td>
+<td>HighlightColor</td>
+<td>Gets or sets the color to highlight the selected text. The default value is <code>Color.FromRgba(0, 0, 205, 80)</code>.</td>
+</tr>
+<tr>
+<td>{{'[CurrentInstanceColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.TextSearchSettings.html#Syncfusion_SfPdfViewer_XForms_TextSearchSettings_CurrentInstanceColor)'| markdownify}}</td>
+<td>{{'[CurrentMatchHighlightColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.TextSearchSettings.html#Syncfusion_Maui_PdfViewer_TextSearchSettings_CurrentMatchHighlightColor)'| markdownify}}</td>
+<td>Gets or sets the color for highlighting the current match of the searched text. The default value is <code>Color.FromRgba(249, 125, 0, 80)</code>.
+</td>
+</tr>
+<tr>
+<td>{{'[OtherInstanceColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.TextSearchSettings.html#Syncfusion_SfPdfViewer_XForms_TextSearchSettings_OtherInstanceColor)'| markdownify}}</td>
+<td>{{'[OtherMatchesHighlightColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.TextSearchSettings.html#Syncfusion_Maui_PdfViewer_TextSearchSettings_OtherMatchesHighlightColor)'| markdownify}}</td>
+<td>Gets or sets the color for highlighting the other matches of the searched text. The default value is <code>Color.FromRgba(255, 255, 0, 50)</code>.
+</td>
 </tr>
 </table>
 
@@ -94,9 +111,15 @@ To make migration from [Xamarin SfPdfViewer](https://www.syncfusion.com/xamarin-
 <td>Occurs when the PDF Viewer fails to load a PDF document. That is, when any corrupted document is loaded, when any password-protected document is loaded with an invalid or empty password, or when any non-PDF document is loaded.</td>
 </tr>
 <tr>
+<td>{{'[SearchInitiated](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.SfPdfViewer.html#Syncfusion_SfPdfViewer_XForms_SfPdfViewer_SearchInitiated)'| markdownify}}, {{'[SearchCompleted](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.SfPdfViewer.html#Syncfusion_SfPdfViewer_XForms_SfPdfViewer_SearchCompleted)'| markdownify}}</td>
+<td>{{'[TextSearchProgress](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_TextSearchProgress)'| markdownify }}</td>
+<td>Occurs when the text search is in progress.
+</td>
+</tr>
+<tr>
 <td>{{'[TextSelectionCompleted](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.SfPdfViewer.html#Syncfusion_SfPdfViewer_XForms_SfPdfViewer_TextSelectionCompleted)'| markdownify}}</td>
-<td>{{TextSelectionChanged| markdownify}}</td>
-<td>Occurs when text selection is completed.</td>
+<td>TextSelectionChanged</td>
+<td>Occurs when the text is selected or when the selected text is changed.</td>
 </tr>
 </table>
 
@@ -116,6 +139,46 @@ To make migration from [Xamarin SfPdfViewer](https://www.syncfusion.com/xamarin-
 <td>{{'[GoToBookmark](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.SfPdfViewer.html#Syncfusion_SfPdfViewer_XForms_SfPdfViewer_GoToBookmark_Syncfusion_Pdf_Interactive_PdfBookmark_)'| markdownify}}</td>
 <td>{{'[GoToOutlineElement](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_GoToOutlineElement_Syncfusion_Maui_PdfViewer_OutlineElement_)'| markdownify}}</td>
 <td>Navigates to the location of the given outline element.</td>
+</tr>
+<tr>
+<td>{{'[SearchText](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.SfPdfViewer.html#Syncfusion_SfPdfViewer_XForms_SfPdfViewer_SearchText_System_String_)'| markdownify}}</td>
+<td>{{'[SearchTextAsync](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_SearchTextAsync_System_String_TextSearchOptions_System_Threading_CancellationTokenSource_)'| markdownify}}</td>
+<td>Finds and highlights all occurrences of the given text in the PDF document asynchronously.</td>
+</tr>
+<tr>
+<td>{{'[CancelSearch](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.SfPdfViewer.html#Syncfusion_SfPdfViewer_XForms_SfPdfViewer_CancelSearch)'| markdownify}}</td>
+<td>{{'[Clear](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.TextSearchResult.html#Syncfusion_Maui_PdfViewer_TextSearchResult_Clear)'| markdownify}}</td>
+<td>Clears the highlighted searched text in the PDF document and the search information from the results. Also, it cancels the progress while the text search is running.
+</td>
+</tr>
+<tr>
+<td>{{'[SearchNext](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.SfPdfViewer.html#Syncfusion_SfPdfViewer_XForms_SfPdfViewer_SearchNext)'| markdownify}}</td>
+<td>{{'[GoToNextMatch](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.TextSearchResult.html#Syncfusion_Maui_PdfViewer_TextSearchResult_GoToNextMatch)'| markdownify}}</td>
+<td>Navigates to the next match of the searched text.</td>
+</tr>
+<tr>
+<td>{{'[SearchPrevious](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.SfPdfViewer.html#Syncfusion_SfPdfViewer_XForms_SfPdfViewer_SearchPrevious)'| markdownify}}</td>
+<td>{{'[GoToPreviousMatch](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.TextSearchResult.html#Syncfusion_Maui_PdfViewer_TextSearchResult_GoToPreviousMatch)'| markdownify}}</td>
+<td>Navigates to the previous match of the searched text.</td>
+</tr>
+</table>
+
+## Classes
+
+<table>
+<tr>
+<th>Xamarin SfPdfViewer</th>
+<th>.NET MAUI SfPdfViewer</th>
+<th>Description</th></tr>
+<tr>
+<td>{{'[TextSelectionCompletedEventArgs](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.TextSelectionCompletedEventArgs.html)'| markdownify }}</td>
+<td>TextSelectionChangedEventArgs</td>
+<td>Provides data for TextSelectionChanged event.</td>
+</tr>
+<tr>
+<td>{{'[UnhandledConditionEventArgs](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.UnhandledConditionEventArgs.html#Syncfusion_SfPdfViewer_XForms_UnhandledConditionEventArgs)'| markdownify }}</td>
+<td>{{'[DocumentLoadFailedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.DocumentLoadFailedEventArgs.html)'| markdownify }}</td>
+<td>Provides data for the {{'[DocumentLoadFailed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_DocumentLoadFailed)'| markdownify }} event.</td>
 </tr>
 </table>
 
