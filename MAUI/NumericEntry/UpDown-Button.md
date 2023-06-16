@@ -37,7 +37,7 @@ sfNumericEntry.VerticalOptions = LayoutOptions.Center;
 {% endhighlight %}
 {% endtabs %}
 
-![.NET MAUI NumericEntry Watermark Text](GettingStarted_images/valuechange-bykeys.gif)
+![.NET MAUI NumericEntry Placeholder Text](GettingStarted_images/valuechange-bykeys.gif)
 
 ## UpDown button placement
 
