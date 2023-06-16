@@ -377,7 +377,7 @@ Also, to add a DataForm Masked text editor, register the editor as `DataFormEdit
 
 ![Masked text editor in .NET MAUI DataForm.](images/editors/dataform-masked-editor.png)
 
-#### Changing the  Masked text editor properties
+#### Changing the Masked text editor properties
 You can use the `GenerateDataFormItem` event to change Masked text editor properties
 
 

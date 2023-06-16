@@ -157,7 +157,7 @@ this.Scheduler.DragDropSettings.AllowNavigation = false;
 {% endhighlight %}
 {% endtabs %}
 
-#### Handle navigation delay for dragged appointment
+#### Handle dragging appointment navigation delay
 Using the `AutoNavigationDelay` property you can handle the navigation time when navigating through views while holding the dragged appointment.
 
 {% tabs %}
