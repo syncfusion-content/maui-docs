@@ -110,7 +110,7 @@ imageEditor.Crop(new Rect(20,20,50,50), true);
 
 {% endhighlight %}
 
-### Entering the cropping area manually
+## Entering the cropping area manually
 
 To manually enter the cropping area without enabling the cropping functionality, use the overloaded `Crop(Rect rect)` method. It can be done by simply define a rectangle and pass it to the `Crop` method.
 
@@ -124,7 +124,7 @@ imageEditor.Crop(new Rect(50,50,150,200));
 
 {% endtabs %}
 
-### Programmatically selecting the cropping ratio
+## Programmatically selecting the cropping ratio
 
 Programmatically, you can select the desired cropping ratio from the various aspect ratios available in the built-in cropping toolbar by specifying the corresponding index of the toolbar item using the `Crop` method.
 
