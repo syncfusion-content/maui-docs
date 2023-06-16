@@ -23,7 +23,7 @@ The drag and drop scenarios are as follows:
  * Items can be reordered in the same group or in other groups but, no groups can be added to other groups.
  * Groups, header, and footer cannot be reordered.
 
-TTo enable drag and drop using 'OnHold', follow the code example below.
+To enable drag and drop using `OnHold`, follow the code example below.
 
 {% tabs %}
 {% highlight xaml %}
@@ -38,7 +38,7 @@ listView.DragStartMode = DragStartMode.OnHold;
 {% endhighlight %}
 {% endtabs %}
 
-To enable drag and drop using both 'OnHold' and 'OnDragIndicator', follow the code example below.
+To enable drag and drop using both `OnHold` and `OnDragIndicator`, follow the code example below.
 
 {% tabs %}
 {% highlight xaml hl_lines="4"%}
