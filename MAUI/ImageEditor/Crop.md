@@ -74,17 +74,17 @@ imageEditor.Crop(ImageCropType.Original);
 
 ## Square Crop
 
-The square crop option allows you to crop the image into a perfect square shape. This is useful when you want to create square thumbnails or profile pictures.
+The square crop option allows you to crop the image into a perfect square shape.
 
 {% highlight C# %}
 
-imageEditor.Crop(1,1);
+imageEditor.Crop(ImageCropType.Square);
 
 {% endhighlight %}
 
 ## Ratio Crop
 
-The ratio crop enables you to crop the image with a specific aspect ratio. You can specify the desired ratio using the width and height values. For example, setting the ratio to 16:9 will result in a crop with a width-to-height ratio of 16:9.
+The ratio crop enables you to crop the image with a specific aspect ratio. You can specify the desired ratio using the width and height values. The default ratio is 4:3 when using `ImageCropType.Ratio`, but you can change it by using the `Crop` method with the ratio parameter.  
 
 {% highlight C# %}
 
@@ -92,27 +92,33 @@ imageEditor.Crop(16,9);
 
 {% endhighlight %}
 
-## Circle cropping
+## Circle crop
 
-You can also crop an image in a circular or elliptical format, which is useful for profile pictures. Use the `Crop` method with an empty Rect and set the isEllipse parameter to true.
+You can crop an image in a circular format, specifically for profile pictures, you can use the `Crop` method. This method ensures that the image is cropped into a perfect circle with a 1:1 ratio.
+
+* The following code shows cropping an image in circle format.
 
 {% highlight C# %}
+
+imageEditor.Crop(ImageCropType.Circle);
 
 {% endhighlight %}
 
-The following image show cases the circularly cropped image.
+## Ellipse crop
 
- The following code shows cropping an image in elliptical format.
+To crop an image in an elliptical format, such as for profile pictures, you can use the `Crop` method. This allows for free-style cropping in an elliptical shape.
+
+ * The following code shows cropping an image in elliptical format.
 
 {% highlight C# %}
 
-imageEditor.Crop(new Rect(20,20,50,50), true);
+imageEditor.Crop(ImageCropType.Ellipse);
 
 {% endhighlight %}
 
 ## Entering the cropping area manually
 
-To manually enter the cropping area without enabling the cropping functionality, use the overloaded `Crop(Rect rect)` method. It can be done by simply define a rectangle and pass it to the `Crop` method.
+To manually enter the cropping area without enabling the cropping functionality, use the overloaded `Crop(Rect rect)` method. It can be done by simply define a rectangle and pass it to the `Crop` method. If the `isEllipse` parameter is set to true, it will perform an ellipse crop. The default value of `isEllipse` is `false`.
 
 {% tabs %}
 
@@ -123,6 +129,20 @@ imageEditor.Crop(new Rect(50,50,150,200));
 {% endhighlight %}
 
 {% endtabs %}
+
+* To crop an image in an ellipse with a specific rectangle, use `Crop` with a rectangle value and an optional parameter of true, which specifies whether the cropping panel should be added in an elliptical or rectangle shape.
+
+{% capture codesnippet6 %}
+
+{% highlight C# %}
+
+imageEditor.Crop(new Rect(20,20,50,50), true);   
+
+{% endhighlight %} 
+
+{% endcapture %}
+
+{{ codesnippet6 | UnOrderList_Indent_Level_1 }}
 
 ## Programmatically selecting the cropping ratio
 
@@ -139,17 +159,3 @@ The following code sample will add the cropping preview on the image in square s
 {% endhighlight %}
 
 {% endtabs %}
-
-* To crop an image in a circle or an ellipse with a specific ratio, use `Crop` with a ratio argument and an optional parameter of true, which specifies whether the cropping panel should be added in an elliptical or rectangle shape. The default value is `false`.
-
-{% capture codesnippet6 %}
-
-{% highlight C# %}
-
-imageEditor.Crop(new Rect(20,20,50,50), true);   
-
-{% endhighlight %} 
-
-{% endcapture %}
-
-{{ codesnippet6 | UnOrderList_Indent_Level_1 }}
