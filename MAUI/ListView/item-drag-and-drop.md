@@ -171,7 +171,7 @@ The `ItemDragging` event is raised while dragging and dropping the item in the `
  * `Action`: Return the drag `Action` such as start, dragging, and drop.
  * `Bounds`: Return bounds of drag item when dragging and dropping.
  * `Handled`: If this member is set to `true`, dragging can be handled. It is applicable only if `Action` is `Dragging`.
- * `DataItem`: Returns the underlying data of the dragging item. 
+ * `DataItem`: Return the underlying data of the dragging item. 
  * `NewIndex`: Return the item index of the `DataSource.DisplayItems` where the dragging item will be dropped.
  * `OldIndex`: Return the item index of the `DataSource.DisplayItems` where the dragging item started. The OldIndex and NewIndex will be the same if `Action` is `Start`.
  * `Position`: Returns the touch position of the drag item from the screen coordinates.
