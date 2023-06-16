@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Item Reordering in .NET MAUI ListView control | Syncfusion
-description: Learn here all about Item Reordering support in Syncfusion .NET MAUI ListView (SfListView) control and more.
+title: Item Reordering in .NET MAUI ListView Control | Syncfusion
+description: Learn here all about Item Reordering support in the Syncfusion .NET MAUI ListView (SfListView) control and more.
 platform: MAUI
 control: SfListView
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Item Reordering in .NET MAUI ListView (SfListView)
 
-The `SfListView` allows reordering by dragging and dropping items. It supports displaying the customized view in a template while dragging the item. It can be enabled by setting the `SfListView.DragStartMode` property to `OnHold`. The drag and drop options are listed as follows:
+The `SfListView` allows reordering by dragging and dropping items. It supports displaying the customized view in a template while dragging the item. It can be enabled by setting the `SfListView.DragStartMode` property to `OnHold`. The drag-and-drop options are listed as follows:
 
  * `None`: Disables drag and drop. This is the default value.
  * `OnHold`: Allows dragging and dropping by holding the item.
@@ -20,10 +20,10 @@ N> The `GridLayout` does not support drag and drop.
 The drag and drop scenarios are as follows:
 
  * Items can be reordered to any position by auto-scrolling.
- * Items can be reordered in same group or in other groups but, no groups can be added to other groups.
+ * Items can be reordered in the same group or in other groups but, no groups can be added to other groups.
  * Groups, header, and footer cannot be reordered.
 
-To enable drag and drop using 'OnHold', follow the code example:
+TTo enable drag and drop using 'OnHold', follow the code example below.
 
 {% tabs %}
 {% highlight xaml %}
@@ -40,7 +40,7 @@ listView.DragStartMode = DragStartMode.OnHold;
 {% endhighlight %}
 {% endtabs %}
 
-To enable drag and drop using both 'OnHold' and 'OnDragIndicator', follow the code example:
+To enable drag and drop using both 'OnHold' and 'OnDragIndicator', follow the code example below.
 
 {% tabs %}
 {% highlight xaml hl_lines="4"%}
@@ -57,7 +57,7 @@ listView.DragStartMode = DragStartMode.OnHold | DragStartMode.OnDragIndicator;
 {% endhighlight %}
 {% endtabs %}
 
-N> Reordering changes made only in view, and not in underlying collection. Thus, the changes will be reverted when performing sorting, grouping, or any other operation that refreshes view. You can update underlying collection by setting `UpdateSource` to `true`.
+N> Reordering changes made only in view, and not in the underlying collection. Thus, the changes will be reverted when performing sorting, grouping, or any other operation that refreshes the view. You can update the underlying collection by setting `UpdateSource` to `true`.
 
 ## Drag indicator view
 
@@ -168,7 +168,7 @@ listView.DragItemTemplate = new DataTemplate(() => {
 
 The `ItemDragging` event is raised while dragging and dropping the item in the `SfListView`. The `ItemDraggingEventArgs` has the following members which provides the information for the `ItemDragging` event:
 
- * `Action`: Returns the drag `Action` such as start, dragging, and drop.
+ * `Action`: Return the drag `Action` such as start, dragging, and drop.
  * `Bounds`: Return bounds of drag item when dragging and dropping.
  * `Handled`: If this member is set to `true`, dragging can be handled. It is applicable only if `Action` is `Dragging`.
  * `DataItem`: Returns the underlying data of the dragging item. 
@@ -402,11 +402,11 @@ private async void ListView_ItemDragging(object sender, ItemDraggingEventArgs e)
 
 ## Skip dragging item into another group
 
-To skip dragging from one group to another group, handle the `ItemDragging` event based on the conditions of `Action` and `Bounds` event arguments.
+To skip dragging from one group to another group, handle the `ItemDragging` event based on the conditions of the `Action` and `Bounds` event arguments.
 
 N> While auto-scrolling, dragging item cannot be skipped.
 
-Skip the dragging item by bounds of dragging item, and bounds of current and next group item.
+Skip the dragging item by the bounds of the dragging item, and the bounds of the current and next group item.
 
 {% tabs %}
 {% highlight c# hl_lines="4,25"%}
