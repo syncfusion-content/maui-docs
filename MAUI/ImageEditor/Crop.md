@@ -106,8 +106,6 @@ The following image show cases the circularly cropped image.
 
 {% highlight C# %}
 
-// To crop an image as a elliptical dimension.
-
 imageEditor.Crop(new Rect(20,20,50,50), true);
 
 {% endhighlight %}
