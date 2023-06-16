@@ -30,9 +30,7 @@ TTo enable drag and drop using 'OnHold', follow the code example below.
 <ContentPage  xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView">
   <syncfusion:SfListView x:Name="listView" 
                    ItemsSource="{Binding ToDoList}"
-                   DragStartMode="OnHold"
-                   BackgroundColor="#FFE8E8EC"
-                   ItemSize="60" />
+                   DragStartMode="OnHold" />
 </ContentPage>
 {% endhighlight %}
 {% highlight c# %}
