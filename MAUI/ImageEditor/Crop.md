@@ -32,7 +32,7 @@ The `Crop` method in the image editor control crop the image based on the `Image
 
 {% highlight C# %}
 
-imageEditor.SaveEdits();
+imageEditor.Crop(ImageCropType.Free);
 
 {% endhighlight %}
 
@@ -54,7 +54,7 @@ imageEditor.CancelEdits();
 
 ## Freehand Crop
 
-This type of crop allows you to freely select and crop a region of the image by drawing a custom shape. You can manually outline the desired area using your cursor or touch input.The selection region can be customized by dragging and resizing an image.
+This type of crop allows you to freely select and crop a region of the image. You can manually outline the desired area using your cursor or touch input.The selection region can be customized by dragging and resizing an image.
 
 {% highlight C# %}
 
@@ -64,7 +64,7 @@ imageEditor.Crop(ImageCropType.Free);
 
 ### Original Crop
 
-With the original crop, the image is cropped to its original dimensions. This means that no aspect ratio or specific shape is enforced, and the cropped image retains its original width and height.
+With the original crop, the image is cropped to its original dimensions. This means that no aspect ratio and the cropped image retains its original width and height.
 
 {% highlight C# %}
 
