@@ -21,7 +21,7 @@ In this walkthrough, you will create a .NET MAUI application that contains the `
 
 ## Handler registration 
 
- In the MauiProgram.cs file, register the handler for Syncfusion core.
+In the MauiProgram.cs file, register the handler for the Syncfusion core.
 
 {% highlight c# hl_lines="6 17" %}
 using Microsoft.Maui;
@@ -93,7 +93,7 @@ Now, add the `SfNumericEntry` control with a required optimal name using the inc
 
 ## Editing the value
 
-By default, the `NumericEntry` control allows you to enter numeric input and restricts the alphabetic input. Once `Enter` key is pressed or control focus is lost, the value of the `NumericEntry` control is validated and updated based on the format applied.
+By default, the `NumericEntry` control allows you to enter numeric input and restricts the alphabetic input. Once the `Enter` key is pressed or control focus is lost, the value of the `NumericEntry` control is validated and updated based on the format applied.
 
 {% tabs %}
 {% highlight xaml %}
@@ -117,7 +117,7 @@ sfNumericEntry.CustomFormat = "0.000";
 
 ## Change number format
 
-You can change the format in which the value should be displayed using the `CustomFormat` property . By default, value of the `CustomFormat` property is **null**. 
+You can change the format in which the value should be displayed using the `CustomFormat` property. By default, the value of the `CustomFormat` property is **null**.
 
 {% tabs %}
 {% highlight xaml %}
@@ -143,7 +143,7 @@ sfNumberBox.CustomFormat = "C2";
 
 ## Accept null value
 
-By default, `NumericEntry` control allows **null** value. A null value is assigned when the user clicks the clear button or clears the input. You can disable this by setting the value of `AllowNull` property as **false**. When value of the `AllowNull` property is set to **false** and the input is cleared, the `NumericEntry` control returns it to **0**. 
+By default, the `NumericEntry` control allows a **null** value. A null value is assigned when the user clicks the clear button or clears the input. You can disable this by setting the value of the `AllowNull` property as **false**. When the value of the `AllowNull` property is set to **false**, and the input is cleared, the `NumericEntry` control returns it to **0**.
 
 {% tabs %}
 {% highlight xaml %}
@@ -168,7 +168,7 @@ sfNumericEntry.AllowNull = false;
 
 ## Setting Placeholder Text
 
-You can prompt the user with any information by using the `PlaceholderText` property. Watermark text will be displayed only when the value of the `AllowNull` property is **true** and the value of `NumericEntry` control is **null**. The default value of `Placeholder` property is **string.Empty** (No string will be displayed).
+You can prompt the user with any information using the `PlaceholderText` property. Placeholder text will be displayed only when the value of the `AllowNull` property is **true** and the value of the `NumericEntry` control is **null**. The default value of the `Placeholder` property is **string.Empty** (No string will be displayed).
 
 {% tabs %}
 {% highlight xaml %}
@@ -192,7 +192,7 @@ sfNumberBox.VerticalOptions = LayoutOptions.Center;
 
 ## Clear button visibility 
 
-The `ShowClearButton` property is used to show or hide the clear button in `NumericEntry`. By default, visibility of the clear button is enabled.
+The `ShowClearButton` property is used to show or hide the clear button in the `NumericEntry`. By default, visibility of the clear button is enabled.
 
 N> The clear button appears only when the text box is focused and the `IsEditable` property value is set to **true**.
 {% tabs %}
@@ -227,10 +227,10 @@ If IsEditable is false
 
 ## Value changed notification
 
-The `ValueChanged` event is triggered, when the `Value` property of `NumericEntry` control is changed. The value will not be changed when the user enters the input. The value of the `NumericEntry` control will be changed after validation is performed on the `Enter` keypress or when the focus is lost in the control. The `ValueChanged` contains the following properties.
+The `ValueChanged` event is triggered when the `Value` property of the `NumericEntry` control is changed. The value will not be changed when the user enters the input. The value of the `NumericEntry` control will be changed after validation is performed on the `Enter` keypress or when the focus is lost in the control. The `ValueChanged` contains the following properties.
 
- * `NewValue` - Contains the new input value.
- * `OldValue` - Contains the previous input value.
+ * `NewValue`- Contains the new input value.
+ * `OldValue`- Contains the previous input value.
 
 {% tabs %}
 {% highlight xaml %}
