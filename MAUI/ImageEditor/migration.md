@@ -217,7 +217,8 @@ Applicable for crop view selection, shape and text annotation selection.
 <tr>
 <th>Xamarin SfImageEditor</th>
 <th>.NET MAUI SfImageEditor</th>
-<th>Description</th></tr>
+<th>Description</th>
+</tr>
 
 <tr>
 <td>ShapeType</td>
@@ -248,7 +249,7 @@ Applicable for crop view selection, shape and text annotation selection.
 <td>ImageCropType</td>
 <td>Specifies the image crop types.</td>
 </tr>
-
+</table>
 
 ## Events
 
