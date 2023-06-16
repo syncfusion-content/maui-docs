@@ -408,6 +408,65 @@ Underlying records will be the BindingContext for the `CellTemplate`.
 {% endhighlight %}
 {% endtabs %}
 
+### Load edit template to the template column
+
+The `SfDataGrid` allows you to load any custom view in edit mode using the [EditTemplate]() property.
+
+{% highlight xaml %}
+    <ContentPage.Content>
+        <syncfusion:SfDataGrid x:Name="dataGrid"
+                               ItemsSource="{Binding OrderInfoCollection}"
+                               SelectionMode="Multiple"
+                               NavigationMode="Cell"
+                               AllowEditing="True"
+                               AutoGenerateColumnsMode="None">
+            <syncfusion:SfDataGrid.Columns>
+                <syncfusion:DataGridTemplateColumn HeaderText="Template"
+                                                   MappingName="Name"
+                                                   Width="100">
+                    <syncfusion:DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <Label x:Name="changeValue"
+                                       Grid.Column="1"
+                                       HorizontalTextAlignment="Center"
+                                       VerticalTextAlignment="Center"
+                                       Text="{Binding Name}"
+                                       TextColor="Black" />
+                            </Grid>
+                        </DataTemplate>
+                    </syncfusion:DataGridTemplateColumn.CellTemplate>
+                    <syncfusion:DataGridTemplateColumn.EditTemplate>
+                        <DataTemplate>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <Entry Grid.Column="1"
+                                       Text="{Binding OrderID}">
+                                </Entry>
+                            </Grid>
+                        </DataTemplate>
+                    </syncfusion:DataGridTemplateColumn.EditTemplate>
+                </syncfusion:DataGridTemplateColumn>
+                <syncfusion:DataGridNumericColumn Format="#"
+                                                  MappingName="OrderID"
+                                                  HeaderText="OrderID" />
+                <syncfusion:DataGridTextColumn ColumnWidthMode="FitByHeader"
+                                               MappingName="Name"
+                                               HeaderText="Name" />
+                <syncfusion:DataGridTextColumn  MappingName="ShipCity"
+                                                HeaderText="Ship City" />
+            </syncfusion:SfDataGrid.Columns>
+        </syncfusion:SfDataGrid>
+    </ContentPage.Content>
+{% endhighlight %}
+
 ### Load view through template selector
 
 You can load any view to the cells through the `CellTemplate` by assigning the `TemplateSelector`.
