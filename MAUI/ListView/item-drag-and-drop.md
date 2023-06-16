@@ -125,7 +125,7 @@ listView.ItemTemplate = new DataTemplate(() =>
 {% endhighlight %}
 {% endtabs %}
 
-The screenshot shows the output of the reordering items by drag and drop. 
+The screenshot shows the output of the reordering items by drag and drop.Download the entire source code from GitHub [here](https://github.com/SyncfusionExamples/how-to-load-drag-view-indicator-in-.net-maui-listview.).
 
 ![Item reordering by drag and drop](Images/item-drag-and-drop/maui-listview-dragviewindicator.gif)
 
@@ -396,6 +396,8 @@ private async void ListView_ItemDragging(object sender, ItemDraggingEventArgs e)
 {% endhighlight %}
 {% endtabs %}
 
+Download the sample from GitHub [here](https://github.com/SyncfusionExamples/how-to-delete-a-dragging-item-after-dropping-it-to-a-specific-view-in-.net-maui-listview.).
+
 ![Delete item while drop in listview](Images/item-drag-and-drop/maui-listview-draganddel.gif)
 
 ## Skip dragging item into another group
@@ -454,6 +456,7 @@ private GroupResult GetGroup(object itemData)
 {% endhighlight %}
 {% endtabs %}
 
+Download sample from GitHub [here](https://github.com/SyncfusionExamples/how-to-skip-dragging-an-item-from-one-group-to-another-in-.net-maui-listview.)
 
 ## Drag and drop customization
 
