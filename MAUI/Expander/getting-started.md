@@ -265,7 +265,7 @@ Now, run the application to render the desired output.
 
 ![.NET MAUI Expander](Images/maui-expander-with-gettingstarted.png)
 
-You can download expander sample for .NET MAUI here [ExpanderGettingStarted](https://github.com/SyncfusionExamples/getting-started-with-.net-maui-expander).
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/getting-started-with-.net-maui-expander).
 
 ## Animation duration
 
