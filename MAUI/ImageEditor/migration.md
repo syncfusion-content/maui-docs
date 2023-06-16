@@ -211,6 +211,136 @@ Applicable for crop view selection, shape and text annotation selection.
 
 </table>
 
+#### ImageEditorAnnotationSettings 
+
+<table>
+<tr>
+<th>Xamarin SfImageEditor</th>
+<th>.NET MAUI SfImageEditor</th>
+<th>Description</th></tr>
+<tr>
+<td>Bounds</td>
+<td>Bounds</td>
+<td>Gets or sets the annotation view bounds.</td>
+</tr>
+
+<tr>
+<td>EnableDrag</td>
+<td>AllowDrag</td>
+<td>Gets or sets a value indicating whether to enable drag action for annotation.</td>
+</tr>
+
+<tr>
+<td>IsResizable</td>
+<td>AllowResize</td>
+<td>Gets or sets a value indicating whether the resizing action is enabled or not for annotation.</td>
+</tr>
+
+<tr>
+<td>Opacity</td>
+<td>Opacity</td>
+<td>Gets or sets the opacity value. It ranges from 0 to 1.</td>
+</tr>
+</table>
+
+
+#### ImageEditorShapeSettings 
+
+<table>
+<tr>
+<th>Xamarin SfImageEditor</th>
+<th>.NET MAUI SfImageEditor</th>
+<th>Description</th></tr>
+<tr>
+<td>Color</td>
+<td>Color</td>
+<td>Gets or sets the shape annotation color.</td>
+</tr>
+
+<tr>
+<td>StrokeWidth</td>
+<td>StrokeThickness</td>
+<td>Gets or sets the shape annotation stroke thickness.</td>
+</tr>
+
+<tr>
+<td>FillColor</td>
+<td>IsFilled</td>
+<td>Gets or sets a value indicating whether the color should be applied to the shape fill or stroke.</td>
+</tr>
+</table>
+
+#### ImageEditorTextSettings 
+
+<table>
+<tr>
+<th>Xamarin SfImageEditor</th>
+<th>.NET MAUI SfImageEditor</th>
+<th>Description</th></tr>
+<tr>
+<td>Angle</td>
+<td>RotationAngle</td>
+<td>Gets or sets the initial rotation angle for text.</td>
+</tr>
+
+<tr>
+<td>Nil</td>
+<td>TextStyle</td>
+<td>Gets or sets the text style for text.</td>
+</tr>
+
+<tr>
+<td>Nil</td>
+<td>IsRotatable</td>
+<td>Gets or sets a value indicating whether the text is rotatable or not.</td>
+</tr>
+
+<tr>
+<td>TextAlignment</td>
+<td>TextAlignment</td>
+<td>Gets or sets the TextAlignment for the text.</td>
+</tr>
+
+<tr>
+<td>IsEditable</td>
+<td>IsEditable</td>
+<td>Gets or sets a value indicating whether the text is editable or not.</td>
+</tr>
+</table>
+
+
+#### ImageEditorTextStyle
+
+<table>
+<tr>
+<th>Xamarin SfImageEditor</th>
+<th>.NET MAUI SfImageEditor</th>
+<th>Description</th></tr>
+<tr>
+<td>Color</td>
+<td>TextColor</td>
+<td>Gets or sets the color for the text.</td>
+</tr>
+
+<tr>
+<td>FontSize</td>
+<td>FontSize</td>
+<td>Gets or sets the font size of the text.</td>
+</tr>
+
+<tr>
+<td>FontFamily</td>
+<td>FontFamily</td>
+<td>Gets or sets the font family for the text.</td>
+</tr>
+
+<tr>
+<td>TextEffects</td>
+<td>FontAttribute</td>
+<td>Gets or sets the font attribute for the text.</td>
+</tr>
+</table>
+
 ## Enums
 
 <table>
@@ -387,101 +517,4 @@ Applicable for crop view selection, shape and text annotation selection.
 <td>ImageEffect</td>
 <td>Method to apply various visual effects to the image, such as adjusted brightness, blur, contrast, exposure, saturation, sharpen, hue, and opacity.</td>
 </tr>
-
-<tr>
-<td>Bounds</td>
-<td>Bounds</td>
-<td>Gets or sets the annotation view bounds.</td>
-</tr>
-
-<tr>
-<td>EnableDrag</td>
-<td>AllowDrag</td>
-<td>Gets or sets a value indicating whether to enable drag action for annotation.</td>
-</tr>
-
-<tr>
-<td>IsResizable</td>
-<td>AllowResize</td>
-<td>Gets or sets a value indicating whether the resizing action is enabled or not for annotation.</td>
-</tr>
-
-<tr>
-<td>Opacity</td>
-<td>Opacity</td>
-<td>Gets or sets the opacity value. It ranges from 0 to 1.</td>
-</tr>
-
-<tr>
-<td>Color</td>
-<td>Color</td>
-<td>Gets or sets the shape annotation color.</td>
-</tr>
-
-<tr>
-<td>StrokeWidth</td>
-<td>StrokeThickness</td>
-<td>Gets or sets the shape annotation stroke thickness.</td>
-</tr>
-
-<tr>
-<td>FillColor</td>
-<td>IsFilled</td>
-<td>Gets or sets a value indicating whether the color should be applied to the shape fill or stroke.</td>
-</tr>
-
-<tr>
-<td>Angle</td>
-<td>RotationAngle</td>
-<td>Gets or sets the initial rotation angle for text.</td>
-</tr>
-
-<tr>
-<td>Nil</td>
-<td>TextStyle</td>
-<td>Gets or sets the text style for text.</td>
-</tr>
-
-<tr>
-<td>Nil</td>
-<td>IsRotatable</td>
-<td>Gets or sets a value indicating whether the text is rotatable or not.</td>
-</tr>
-
-<tr>
-<td>TextAlignment</td>
-<td>TextAlignment</td>
-<td>Gets or sets the TextAlignment for the text.</td>
-</tr>
-
-<tr>
-<td>IsEditable</td>
-<td>IsEditable</td>
-<td>Gets or sets a value indicating whether the text is editable or not.</td>
-</tr>
-
-<tr>
-<td>Color</td>
-<td>TextColor</td>
-<td>Gets or sets the color for the text.</td>
-</tr>
-
-<tr>
-<td>FontSize</td>
-<td>FontSize</td>
-<td>Gets or sets the font size of the text.</td>
-</tr>
-
-<tr>
-<td>FontFamily</td>
-<td>FontFamily</td>
-<td>Gets or sets the font family for the text.</td>
-</tr>
-
-<tr>
-<td>TextEffects</td>
-<td>FontAttribute</td>
-<td>Gets or sets the font attribute for the text.</td>
-</tr>
-
 </table>

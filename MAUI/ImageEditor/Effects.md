@@ -9,7 +9,7 @@ documentation: ug
 
 # Image Effect in .NET MAUI Image Editor (SfImageEditor)
 
-Using the image editor control, you can add effects such as Hue, Saturation, Brightness, Contrast, Blur, and Sharpen to the image. These effects can be applied from toolbar or using the ImageEffect method. The [`ApplyImageEffect`] method contains two arguments: [`ImageEffect`] and [`EffectValue`]. The ImageEffect is an Enum, which contains the following effects:
+With the image editor control, you can apply various effects such as Brightness, Hue, Saturation, Contrast, Blur, Opacity, and Sharpen to your image. These effects can be applied using the toolbar or by utilizing the ImageEffect method. The ImageEffect method consists of two arguments: ImageEffect and EffectValue. The ImageEffect is an enumeration that includes the following effects:
 
 * Brightness
 * Blur
@@ -28,7 +28,7 @@ The ImageEffect method only applies the effect to preview image, if you want to 
 
 ## Brightness
 
-Brightness is used to adjusts the overall lightness or darkness of the image. The value of brightness effect ranges from -1 to 1 and the default value is 0.
+Brightness is used to adjust the overall lightness or darkness of the image. The value of the brightness effect ranges from -1 to 1 and the default value is 0.
 
 {% highlight C# %}
 
@@ -76,7 +76,7 @@ public MainPage()
 
 ## Exposure
 
-Exposure is used to alters the overall brightness and darkness levels of the image. The value of the exposure effect ranges from -1 to 1 and the default value is 0.
+Exposure is used to alter the overall brightness and darkness levels of the image. The value of the exposure effect ranges from -1 to 1 and the default value is 0.
 
 {% highlight C# %}
 

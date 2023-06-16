@@ -83,9 +83,9 @@ namespace GettingStarted
 {% endhighlight %}
 {% endtabs %}
 
-##Loading an image to image editor
+## Loading an image to image editor
 
-Refer to the following steps to add an image to the pcl project:
+Refer to the following steps to add an image to the project:
 
 1. Locate the "Resources" folder in your .NET MAUI project. This folder is typically located in the project's root directory.
 2. Right-click on the "Resources" folder in the project structure view or Solution Explorer.
