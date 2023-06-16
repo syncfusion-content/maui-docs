@@ -580,6 +580,227 @@ dataGrid.Columns.Add(dateColumn);
 {% endhighlight %}
 {% endtabs %}
 
+## DataGridComboBoxColumn
+
+The [GridComboBoxColumn]() inherits all the properties of the [SfDataGrid.DataGridColumn](). It displays a list of items in the form of a `SfComboBox` as the content of a column. To enable or disable editing for a particular column, set the [DataGridColumn.AllowEditing]() property to true or false. When in editing mode, it displays a [SfComboBox]() element. The data source for the SfComboBox can be set using the [DataGridComboBoxColumn.ItemsSource]() property. The combobox column can be populated with data in the following ways:
+
+* Collection of primitive types
+* Collection of user-defined types (custom objects)
+
+![DataGrid with editing in comboBox column](Images\column-types\maui-datagrid-comboBox-column.png)
+
+### Collection of primitive types
+
+To display the collection of items in the comboBox drop down, create a [DataGridComboBoxColumn]() and set its [DataGridComboBoxColumn.ItemsSource]() property to a simple collection. 
+
+To load the `DataGridComboBoxColumn` with a simple string collection, follow the code example:
+
+{% tabs %}
+{% highlight xaml %}
+    <ContentPage.BindingContext>
+        <local:ViewModel x:Name="viewModel" />
+    </ContentPage.BindingContext>
+
+    <sfGrid:SfDataGrid x:Name="dataGrid"
+                       ItemsSource="{Binding OrdersInfo}">
+        <sfGrid:SfDataGrid.Columns>
+            <sfgrid:DataGridComboBoxColumn BindingContext="{x:Reference viewModel}"
+                                           HeaderText="Name"
+                                           ItemsSource="{Binding CustomerNames}"
+                                           MappingName="DealerName" />
+        </sfGrid:SfDataGrid.Columns>
+    </sfGrid:SfDataGrid>
+{% endhighlight %}
+
+{% highlight c# %}
+dataGrid = new SfDataGrid();
+DataGridComboBoxColumn comboBoxColumn = new DataGridComboBoxColumn()
+{
+    BindingContext = viewModel,
+    MappingName = "DealerName",
+    ItemsSource = viewModel.CustomerNames,
+    HeaderText = "Name"
+
+};
+dataGrid.Columns.Add(comboBoxColumn);
+{% endhighlight %}
+{% endtabs %}
+
+{% highlight c# %}
+// ViewModel class
+public class ViewModel
+{
+    public ObservableCollection<string> CustomerNames { get; set; }
+
+    public ViewModel()
+    {
+        this.CustomerNames = Customers.ToObservableCollection();
+    }
+
+    internal string[] Customers = new string[] {"Adams","Crowley","Ellis","Gable","Irvine","Keefe","Mendoza","Owens","Rooney","Wadded",};
+    
+}
+{% endhighlight %}
+
+### Collection of user-defined types
+
+To display a list of user-defined items in the combo-box drop down, create a [DataGridComboBoxColumn]() and set its [DataGridComboBoxColumn.ItemsSource]() property to a user-defined collection. By default, the combo-box column will display the values from the [DataGridColumn.MappingName]() property of the column if the [DisplayMemberPath]() is not set.
+
+### Loading Different ItemSource for each row of DataGridComboBoxColumn
+
+You can load the different ItemsSource to each row of DataGridComboBoxColumn by setting [DataGridComboBoxColumn.ItemsSourceSelector]() property.
+
+### Implementing IItemsSourceSelector
+
+[DataGridComboBoxColumn.ItemsSourceSelector]() needs to implement IItemsSourceSelector interface which requires you to implement GetItemsSource method which receives the below parameters,
+
+* Record – data object associated with row.
+* Data Context – Binding context of data grid.
+
+In the below code, ItemsSource for ShipCity column returned based on ShipCountry column value using the record and Binding context of data grid passed to GetItemsSource method.
+
+{% tabs %}
+{% highlight xaml %}
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:ItemSourceSelector x:Key="converter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <sfgrid:SfDataGrid x:Name="dataGrid"
+                       ItemsSource="{Binding DealerInformation}"
+                       AllowEditing="True"
+                       AutoGenerateColumnsMode="None"
+                       NavigationMode="Cell"
+                       EditTapAction="OnDoubleTap"
+                       SelectionMode="Single">
+        <sfgrid:SfDataGrid.Columns>
+            <sfgrid:DataGridComboBoxColumn BindingContext="{x:Reference viewModel}"
+                                           ItemsSource="{Binding CountryList}"
+                                           MappingName="ShipCountry"
+                                           LoadUIView="True">
+            </sfgrid:DataGridComboBoxColumn>
+
+            <sfgrid:DataGridComboBoxColumn ItemsSourceSelector="{StaticResource converter}"
+                                           MappingName="ShipCity"
+                                           LoadUIView="True">
+            </sfgrid:DataGridComboBoxColumn>
+        </sfgrid:SfDataGrid.Columns>
+    </sfgrid:SfDataGrid>
+{% endhighlight %}
+
+{% highlight c# %}
+public class ItemSourceSelector : IItemsSourceSelector
+{
+    public IEnumerable GetItemsSource(object record, object dataContext)
+    {
+        if (record == null)
+        {
+            return null;
+        }
+
+        var orderinfo = record as DealerInfo;
+        var countryName = orderinfo.ShipCountry;
+        var viewModel = dataContext as EditingViewModel;
+
+        // Returns ShipCity collection based on ShipCountry.
+        if (viewModel.ShipCities.ContainsKey(countryName))
+        {
+            string[] shipcities = null;
+            viewModel.ShipCities.TryGetValue(countryName, out shipcities);
+            return shipcities.ToList();
+        }
+
+        return null;
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
+![DataGrid with ItemSourceSelector comboBox column](Images\column-types\maui-datagrid-comboBox-column-itemsourceselector.png)
+![DataGrid with ItemSourceSelector comboBox column](Images\column-types\maui-datagrid-comboBox-column-itemsourceselector2.png)
+
+### Editing the combo box
+
+The [DataGridComboBoxColumn]() supports both editable and non-editable text box to choose selected items in given data source. Users can select one item from the suggestion list.
+
+[IsEditableMode]() property is used to enable the user input in [DataGridComboBoxColumn](). The default value is `false`.
+
+{% tabs %}
+{% highlight xaml %}
+    <local:ViewModel x:Name="viewModel" />
+    </ContentPage.BindingContext>
+
+    <sfGrid:SfDataGrid x:Name="dataGrid"
+                       ItemsSource="{Binding OrdersInfo}">
+        <sfGrid:SfDataGrid.Columns>
+            <sfgrid:DataGridComboBoxColumn BindingContext="{x:Reference viewModel}"
+                                           HeaderText="Name"
+                                           IsEditableMode="True"
+                                           ItemsSource="{Binding CustomerNames}"
+                                           MappingName="DealerName" />
+        </sfGrid:SfDataGrid.Columns>
+    </sfGrid:SfDataGrid>
+{% endhighlight %}
+
+{% highlight c# %}
+dataGrid = new SfDataGrid();
+DataGridComboBoxColumn comboBoxColumn = new DataGridComboBoxColumn()
+{
+    BindingContext = viewModel,
+    MappingName = "DealerName",
+    ItemsSource = viewModel.CustomerNames,
+    IsEditableMode = True,
+    HeaderText = "Name"
+
+};
+dataGrid.Columns.Add(comboBoxColumn);
+{% endhighlight %}
+{% endtabs %}
+
+![DataGrid with Edited comboBox column](Images\column-types\maui-datagrid-combobox-column-editing.png)
+
+### Auto suggesting on edit mode
+
+By default, auto suggestion in the dropdown will display the value based on the [StartsWith]() filter condition. This can be changed to retrieve the matches with the Contains condition by using the [SuggestionMode]() property.
+
+{% tabs %}
+{% highlight xaml %}
+    <ContentPage.BindingContext>
+        <local:ViewModel x:Name="viewModel" />
+    </ContentPage.BindingContext>
+
+    <sfGrid:SfDataGrid x:Name="dataGrid"
+                       ItemsSource="{Binding OrdersInfo}">
+        <sfGrid:SfDataGrid.Columns>
+            <sfgrid:DataGridComboBoxColumn BindingContext="{x:Reference viewModel}"
+                                           HeaderText="Name"
+                                           IsEditableMode="True"
+                                           SuggestionMode="Contains"
+                                           ItemsSource="{Binding CustomerNames}"
+                                           MappingName="DealerName" />
+        </sfGrid:SfDataGrid.Columns>
+    </sfGrid:SfDataGrid>
+{% endhighlight %}
+
+{% highlight c# %}
+dataGrid = new SfDataGrid();
+DataGridComboBoxColumn comboBoxColumn = new DataGridComboBoxColumn()
+{
+    BindingContext = viewModel,
+    MappingName = "DealerName",
+    ItemsSource = viewModel.CustomerNames,
+    IsEditableMode = True,
+    SuggestionMode = SuggestionMode.Contains,
+    HeaderText = "Name"
+
+};
+dataGrid.Columns.Add(comboBoxColumn);
+{% endhighlight %}
+{% endtabs %}
+
+![DataGrid with Suggesting comboBox column](Images\column-types\maui-datagrid-combobox-column-editing-suggest.png)
+
 ## DataGridNumericColumn
 
 The `DataGridNumericColumn` inherits all the properties of the `DataGridColumn`. It is used to display numeric data. To create a  `DataGridNumericColumn`, the property corresponding to the column in the underlying collection must be a numeric type (int, double, float, etc.). 
