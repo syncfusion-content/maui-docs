@@ -123,7 +123,7 @@ this.Content = imageEditor;
 
 ## Properties
 
-#### SfImageEdiotr
+#### SfImageEditor
 
 
 {% tabs %}
@@ -162,7 +162,7 @@ this.Content = imageEditor;
 <tr>
 <td>ZoomLevel</td>
 <td>ZoomLevel</td>
-<td>Gets or sets the current zoom level.</td>
+<td>Gets or sets the initial zoom level.</td>
 </tr>
 
 <tr>
@@ -178,7 +178,7 @@ this.Content = imageEditor;
 </tr>
 
 <tr>
-<td>Nil</td>
+<td>ActualImageRenderedBounds </td>
 <td>ImageRenderedSize</td>
 <td>Gets the image rendered size.</td>
 </tr>
@@ -196,7 +196,7 @@ this.Content = imageEditor;
 </tr>
 
 <tr>
-<td>Nil</td>
+<td>ToolbarSettings.IsVisible</td>
 <td>ShowToolbar</td>
 <td>Gets or sets the value indicating whether to enable or disable default toolbar.</td>
 </tr>
@@ -370,7 +370,7 @@ Applicable for crop view selection, shape and text annotation selection.
 </tr>
 
 <tr>
-<td>Nil</td>
+<td>Delete</td>
 <td>DeleteAnnotation</td>
 <td>Method to remove the current selected annotations.</td>
 </tr>
@@ -382,7 +382,7 @@ Applicable for crop view selection, shape and text annotation selection.
 </tr>
 
 <tr>
-<td>ImageEffect</td>
+<td>ApplyImageEffect</td>
 <td>ImageEffect</td>
 <td>Method to apply various visual effects to the image, such as adjusted brightness, blur, contrast, exposure, saturation, sharpen, hue, and opacity.</td>
 </tr>
