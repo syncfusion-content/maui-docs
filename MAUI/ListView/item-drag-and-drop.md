@@ -61,9 +61,9 @@ N> Reordering changes made only in view, and not in the underlying collection. T
 
 ## Drag indicator view
 
-To drag and drop the items by `DragIndicatorView`, set the `SfListView.DragStartMode` property to `OnDragIndicator`. To display the dragging item, define any custom user interface(UI) in `DragIndicatorView`.
+To drag and drop the items by the `DragIndicatorView`, set the `SfListView.DragStartMode` property to `OnDragIndicator`. To display the dragging item, define any custom user interface(UI) in the `DragIndicatorView`.
 
-N> You must set the SfListView instance as reference to the `ListView` property in `DragIndicatorView`.
+N> You must set the SfListView instance as a reference to the `ListView` property in `DragIndicatorView`.
 
 {% tabs %}
 {% highlight xaml hl_lines="15"%}
@@ -166,21 +166,21 @@ listView.DragItemTemplate = new DataTemplate(() => {
 
 ## Event
 
-The `ItemDragging` event is raised while dragging and dropping the item in the `SfListView`. The `ItemDraggingEventArgs` has the following members which provides the information for the `ItemDragging` event:
+The `ItemDragging` event is raised while dragging and dropping the item in the `SfListView`. The `ItemDraggingEventArgs` has the following members which provide the information for the `ItemDragging` event:
 
  * `Action`: Return the drag `Action` such as start, dragging, and drop.
  * `Bounds`: Return bounds of drag item when dragging and dropping.
  * `Handled`: If this member is set to `true`, dragging can be handled. It is applicable only if `Action` is `Dragging`.
  * `DataItem`: Returns the underlying data of the dragging item. 
- * `NewIndex`: Returns the item index of the `DataSource.DisplayItems` where dragging item is going to be dropped.
- * `OldIndex`: Returns the item index of the `DataSource.DisplayItems` where dragging item started. The OldIndex and NewIndex will be same if `Action` is `Start`.
- * `Position`: Returns the touch position of the drag item from screen coordinates.
+ * `NewIndex`: Return the item index of the `DataSource.DisplayItems` where the dragging item will be dropped.
+ * `OldIndex`: Return the item index of the `DataSource.DisplayItems` where the dragging item started. The OldIndex and NewIndex will be the same if `Action` is `Start`.
+ * `Position`: Returns the touch position of the drag item from the screen coordinates.
 
 ## Auto scroll options
 
 ### Auto scroll margin
 
-To adjust auto scroll margin, set a value to the `ScrollMargin` property of `AutoScroller` to enable auto-scrolling while dragging. The default value is `15`. Auto-scrolling will be enabled when reaching `ScrollMargin` from view bounds while dragging.
+To adjust the auto scroll margin, set a value to the `ScrollMargin` property of `AutoScroller` to enable auto-scrolling while dragging. The default value is `15`. Auto-scrolling will be enabled when reaching the `ScrollMargin` from view bounds while dragging.
 
 To disable auto-scrolling, set the value to `0` for `ScrollMargin`.
 
@@ -192,7 +192,7 @@ this.listView.AutoScroller.ScrollMargin = 20;
 
 ### Auto scroll interval
 
-To adjust auto-scroll interval while dragging, set the `Interval` property of `AutoScroller`. The default value is `150 milliseconds`.
+To adjust the auto-scroll interval while dragging, set the `Interval` property of `AutoScroller`. The default value is `150 milliseconds`.
 
 {% tabs %}
 {% highlight c# %}
@@ -212,7 +212,7 @@ this.listView.AutoScroller.AllowOutsideScroll = false;
 
 ## Disable dragging for particular item
 
-To disable dragging for a particular item, handle the `ItemDragging` event based on the conditions of `Action` event argument.
+To disable dragging for a particular item, handle the `ItemDragging` event based on the conditions of the `Action` event argument.
 
 You can cancel the dragging action for a particular item by setting the `Cancel` property of the `ItemDraggingEventArgs`.
 
@@ -229,9 +229,9 @@ private void ListView_ItemDragging(object sender, ItemDraggingEventArgs e)
 
 ## Cancel dropping for the dragged item
 
-To cancel dropping for the dragged item, handle the `ItemDragging` event based on the conditions of `Action` event argument. 
+To cancel dropping for the dragged item, handle the `ItemDragging` event based on the conditions of the `Action` event argument. 
 
-You can cancel the dropping action for a particular item by setting the `Cancel` property of the `ItemDraggingEventArgs`.
+You can cancel the dropping action for an item by setting the `Cancel` property of the `ItemDraggingEventArgs`.
 
 {% tabs %}
 {% highlight c# hl_lines="8"%}
@@ -272,7 +272,7 @@ this.listView.DragDropController.UpdateSource = true;
 {% endhighlight %}
 {% endtabs %}
 
-We can able to update collection even when `UpdateSource` is `false`. Like, user can decide where dragged item should be dropped actually by handling the `ItemDragging` event with `DragAction.Drop`.
+You can update collection even when `UpdateSource` is `false`. Like, the user can decide where the dragged item should be dropped actually by handling the `ItemDragging` event with `DragAction.Drop`.
 
 {% tabs %}
 {% highlight c# hl_lines="3"%}
@@ -286,13 +286,13 @@ private void ListView_ItemDragging(object sender, ItemDraggingEventArgs e)
 {% endhighlight %}
 {% endtabs %}
 
-N> Underlying collection will not be updated when any data operation like sorting or grouping is performed. The order will be maintained only in `DisplayItems` of data source. When drag and drop an item between groups, the value of the property in which grouping is performed is updated in data object. 
+N> Underlying collection will not be updated when any data operation like sorting or grouping is performed. The order will be maintained only in the `DisplayItems` of the data source. When drag and drop an item between groups, the value of the property in which grouping is performed is updated in the data object. 
 
 ## Delete item when dropping in particular view
 
-To delete the dragged item when dropping into a particular view, handle the `ItemDragging` event based on the conditions of `Action` and `Bounds` event arguments. 
+To delete the dragged item when dropping into a view, handle the `ItemDragging` event based on the conditions of the `Action` and `Bounds` event arguments. 
 
-To delete the dragged item from the underlying collection when dropping into delete icon, follow the code example. It will enable or disable whenever drag started, and dropped by `IsVisible` property in ViewModel.
+To delete the dragged item from the underlying collection when dropping into the delete icon, follow the code example. It will enable or disable whenever drag started, and dropped by the `IsVisible` property in ViewModel.
 
 {% tabs %}
 {% highlight xaml %}
