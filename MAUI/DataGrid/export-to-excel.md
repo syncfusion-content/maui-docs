@@ -205,6 +205,20 @@ DataGridPdfExportingOption option = new DataGridPdfExportingOption();
 
 <img alt="Exclude columns when exporting" src="Images\Export-to-Excel\maui-datagrid-excluded-columns.png" width="689"/>
 
+### Export Selected Rows of SfDataGrid
+
+SfDataGrid allows you to export only the currently selected rows in the grid to the worksheet using the `DataGridExcelExportingController.ExportToExcel` method by passing the instance of the SfDataGrid and `SfDataGrid.SelectedRows` collection as an argument.
+
+Refer the below code to export the selected rows alone to Excel.
+
+{% tabs %}
+{% highlight c# %}
+ObservableCollection<object> selectedItems = dataGrid.SelectedRows;
+var excelEngine = excelExport.ExportToExcel(this.dataGrid, selectedItems);
+{% endhighlight %}
+{% endtabs %}
+
+
 ### Customize Exporting Excel Version
 
 The SfDataGrid allows exporting the data to Excel in specific versions by using the `DataGridExcelExportingOption.ExcelVersion` property.
