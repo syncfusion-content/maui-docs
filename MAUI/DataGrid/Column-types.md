@@ -408,7 +408,7 @@ Underlying records will be the BindingContext for the `CellTemplate`.
 {% endhighlight %}
 {% endtabs %}
 
-### Load edit template to the template column
+### Edit template
 
 The `SfDataGrid` allows you to load any custom view in edit mode using the [EditTemplate]() property.
 
@@ -421,8 +421,16 @@ The `SfDataGrid` allows you to load any custom view in edit mode using the [Edit
                                AllowEditing="True"
                                AutoGenerateColumnsMode="None">
             <syncfusion:SfDataGrid.Columns>
-                <syncfusion:DataGridTemplateColumn HeaderText="Template"
-                                                   MappingName="Name"
+                <syncfusion:DataGridNumericColumn Format="#"
+                                                  MappingName="OrderID"
+                                                  HeaderText="Order ID" />
+                <syncfusion:DataGridTextColumn ColumnWidthMode="FitByHeader"
+                                               MappingName="Name"
+                                               HeaderText="Customer ID" />
+                <syncfusion:DataGridTextColumn  MappingName="ShipCountry"
+                                                HeaderText="Ship Country" />
+                <syncfusion:DataGridTemplateColumn HeaderText="Is Confirmed"
+                                                   MappingName="IsOnline"
                                                    Width="100">
                     <syncfusion:DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
@@ -435,7 +443,7 @@ The `SfDataGrid` allows you to load any custom view in edit mode using the [Edit
                                        Grid.Column="1"
                                        HorizontalTextAlignment="Center"
                                        VerticalTextAlignment="Center"
-                                       Text="{Binding Name}"
+                                       Text="{Binding IsOnline}"
                                        TextColor="Black" />
                             </Grid>
                         </DataTemplate>
@@ -447,21 +455,13 @@ The `SfDataGrid` allows you to load any custom view in edit mode using the [Edit
                                     <ColumnDefinition Width="Auto" />
                                     <ColumnDefinition Width="*" />
                                 </Grid.ColumnDefinitions>
-                                <Entry Grid.Column="1"
-                                       Text="{Binding OrderID}">
-                                </Entry>
+                                <CheckBox Grid.Column="1"
+                                          IsChecked="{Binding IsOnline}">
+                                </CheckBox>
                             </Grid>
                         </DataTemplate>
                     </syncfusion:DataGridTemplateColumn.EditTemplate>
                 </syncfusion:DataGridTemplateColumn>
-                <syncfusion:DataGridNumericColumn Format="#"
-                                                  MappingName="OrderID"
-                                                  HeaderText="OrderID" />
-                <syncfusion:DataGridTextColumn ColumnWidthMode="FitByHeader"
-                                               MappingName="Name"
-                                               HeaderText="Name" />
-                <syncfusion:DataGridTextColumn  MappingName="ShipCity"
-                                                HeaderText="Ship City" />
             </syncfusion:SfDataGrid.Columns>
         </syncfusion:SfDataGrid>
     </ContentPage.Content>

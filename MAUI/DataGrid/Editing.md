@@ -23,14 +23,21 @@ dataGrid.NavigationMode = NavigationMode.Cell;
 
 ## Column editing
 
-To enable or disable editing for a specific column, you need to set the [DataGridColumn.AllowEditing]() property.
+To enable or disable editing for a specific column, you can simply set the [DataGridColumn.AllowEditing]() property to true or false.
 
 {% tabs %}
 {% highlight xaml %}
+    <syncfusion:SfDataGrid x:Name="dataGrid"
+                           SelectionMode="Multiple"    
+                           NavigationMode="Cell" 
+                           ItemsSource="{Binding Orders}" />
+
     <syncfusion:DataGridTextColumn AllowEditing="True"
                                    MappingName="OrderID" />
 {% endhighlight %}
 {% highlight c# %}
+dataGrid.SelectionMode = SelectionMode.Multiple;
+dataGrid.NavigationMode = NavigationMode.Cell;
 DataGridTextColumn column = new DataGridTextColumn();
 column.MappingName="OrderID";
 column.AllowEditing = false;
@@ -41,7 +48,7 @@ N>The `DataGridColumn.AllowEditing` takes higher priority than the `SfDataGrid.A
 
 ## Entering into edit mode
 
-To enter edit mode by simply tapping or double-tapping the grid cells, set the [SfDataGrid.EditTapAction]() property.
+To enter the edit mode, you can simply tap or double-tap the grid cell. The behavior of the edit mode tapping is controlled by the [SfDataGrid.EditTapAction]() property, with the default value being EditTapAction.DoubleTap.
 
 {% tabs %}
 {% highlight xaml %}
@@ -57,7 +64,7 @@ this.dataGrid.EditTapAction = TapAction.OnDoubleTap;
 {% endhighlight %}
 {% endtabs %}
 
-N> The keyboard will be collapsed when editing grid cell gets unfocused.
+N> The keyboard will collapse when the editing grid cell loses focus.
 
 ## Support for IEditableObject
 
@@ -271,11 +278,11 @@ public class OrderInfo : INotifyPropertyChanged, IEditableObject
 
 ## Editing events
 
-The SfDataGrid triggers the following events while editing:
+The SfDataGrid invokes the following events during editing:
 
 ### CurrentCellBeginEdit
 
-The [SfDataGrid.CurrentCellBeginEdit]() event occurs when the CurrentCell enters into edit mode. The [DataGridCurrentCellBeginEditEventArgs]() has the following members which provides information for `SfDataGrid.CurrentCellBeginEdit` event:
+The [SfDataGrid.CurrentCellBeginEdit]() event occurs when the CurrentCell enters into edit mode. The [DataGridCurrentCellBeginEditEventArgs]() has the following members that provides information for `SfDataGrid.CurrentCellBeginEdit` event:
 
  * [Cancel](): When this member set to ‘true’, the event is canceled and the CurrentCell does not enter into the edit mode.
  * [RowColumnIndex](): Gets the current row and column index of the DataGrid.
@@ -296,7 +303,7 @@ private void DataGrid_CurrentCellBeginEdit(object sender, DataGridCurrentCellBeg
 
 ### CurrentCellEndEdit
 
-The [CurrentCellEndEdit]() event occurs when the CurrentCell exits the edit mode. The [DataGridCurrentCellEndEditEventArgs]() has following members which provides information for `SfDataGrid.CurrentCellEndEdit` event:
+The [CurrentCellEndEdit]() event occurs when the CurrentCell exits the edit mode. The [DataGridCurrentCellEndEditEventArgs]() has following members that provides information for `SfDataGrid.CurrentCellEndEdit` event:
 
  * [RowColumnIndex](): Gets the current row and column index of the DataGrid.
  * [Cancel](): When this member set to ‘true’, the event is canceled and the edited value is not committed in the underlying collection.
@@ -315,11 +322,11 @@ private void DataGrid_CurrentCellEndEdit(object sender, DataGridCurrentCellEndEd
 
 {% endhighlight %}
 
-## Programmatically edit a cell
+## Programmatic editing
 
 ### Begin editing
 
-The SfDataGrid allows you to programmatically edit a cell by calling the [SfDataGrid.BeginEdit]() method. By calling this method, the particular cell enters into edit mode, allowing you to edit the data manually or programmatically. To programmatically edit a cell, refer to the following code example:
+The SfDataGrid allows you to programmatically edit a cell by calling the [SfDataGrid.BeginEdit]() method. This method enters the particular cell into edit mode, enabling the editing of data programmatically. To programmatically edit a cell, refer to the code example below:
 
 {% highlight c# %}
 this.dataGrid.Loaded += DataGrid_Loaded;
@@ -332,7 +339,7 @@ private void DataGrid_Loaded(object sender, EventArgs e)
 
 ### End editing
 
-The [SfDataGrid.EndEdit]() method can be called to programmatically end editing. When this method is called, a cell that is currently in edit mode will commit the edited value to the underlying collection and exit the edit mode. To programmatically end the editing process, refer to the following code example:
+The [SfDataGrid.EndEdit]() method allows you to programmatically conclude the editing process. When called, it commits the edited value of a cell to the underlying collection and exits the edit mode. To programmatically end the editing process, you can refer to the following code example
 
 {% highlight c# %}
 this.dataGrid.EndEdit();
@@ -340,13 +347,11 @@ this.dataGrid.EndEdit();
 
 ### Cancel editing
 
-The [SfDataGrid.CancelEdit]() method can be called to programmatically cancel editing. When this method is called, a cell that is currently in edit mode will exit the edit mode without committing the edited value to the underlying collection. To programmatically cancel the editing process, refer to the following code example:
+The [SfDataGrid.CancelEdit]() method allows you to programmatically cancel the editing process. When called, this method exits the edit mode of a cell without committing the edited value to the underlying collection. To programmatically cancel the editing process, use the code example provided:
 
 {% highlight c# %}
 this.dataGrid.CancelEdit();
 {% endhighlight %}
-
-## How to
 
 ### Cancel editing for a particular Cell
 
@@ -361,9 +366,9 @@ private void DataGrid_CurrentCellBeginEdit(object sender, DataGridCurrentCellBeg
 }
 {% endhighlight %}
 
-### Cancel edited value from getting committed
+### Cancel edited value from being committed
 
-To prevent the edited value from getting committed, use the [CurrentCellEndEdit]() event. To prevent the edited values from getting committed in the underlying collection, follow the code example:
+To prevent the edited value from being committed, use the [CurrentCellEndEdit]() event. This event prevents the edited values from being committed to the underlying collection. Refer to the code example below:
 
 {% highlight c# %}
 this.dataGrid.CurrentCellEndEdit += DataGrid_CurrentCellEndEdit;
