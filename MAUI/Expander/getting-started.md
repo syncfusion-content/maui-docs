@@ -263,8 +263,9 @@ N> Loading the `Label` as direct children of the `Header` or `Content` of the Ex
 
 Now, run the application to render the desired output.
 
-![.NET MAUI Expander](Images/maui-expander-with-gettingstarted.png)
+![.NET MAUI Expander](Images/maui-expander-with-gettingstarted.gif)
 
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/getting-started-with-.net-maui-expander).
 
 ## Animation duration
 

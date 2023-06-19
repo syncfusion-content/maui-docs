@@ -162,7 +162,7 @@ N> When loading Label as direct children of `Header` or `Content` of `AccordionI
 
 Now, run the application to render the following output.
 
-![.NET MAUI Accordion with items](Images/getting-started/maui-accordion-with-defining-accordion-items.png)
+![.NET MAUI Accordion with items](Images/getting-started/maui-accordion-with-defining-accordion-items.gif)
 
 N> When adding the template control inside the `StackLayout` or `Grid` with a height set to `Auto`, the child element will not receive the height changes at runtime. Since the `SfAccordion` is a template-based control, the default height value cannot be determined. Therefore, it is recommended to provide the `HorizontalOptions` and `VerticalOptions` as `FillAndExpand` options for the control.
 
