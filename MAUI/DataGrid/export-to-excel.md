@@ -28,19 +28,37 @@ The code sample below illustrates the process of exporting data to Excel using t
 
 {% tabs %}
 {% highlight xaml %}
-<StackLayout>
-    <Button Text="Export" Clicked="ExportToExcel_Clicked"/>
-    <syncfusion:SfDataGrid x:Name="dataGrid"
-                            AutoGenerateColumnsMode="None"
-                            VerticalOptions="FillAndExpand"
-                    ItemsSource="{Binding Employees}"   >
-         <syncfusion:DataGridNumericColumn MappingName="EmployeeID" HeaderText="ID"/>
-                <syncfusion:DataGridTextColumn MappingName="Name" HeaderText="Name"/>
-                <syncfusion:DataGridDateColumn MappingName="HireDate" HeaderText="Hire Date"/>
-                <syncfusion:DataGridTextColumn MappingName="Title" HeaderText="Title"/>
-                <syncfusion:DataGridTextColumn MappingName="ContactID" HeaderText="Contact ID"/>         
-    </syncfusion:SfDataGrid>
-</StackLayout>
+    <StackLayout>
+        <Button Text="Export"
+                Clicked="ExportToExcel_Clicked" />
+        <syncfusion:SfDataGrid x:Name="dataGrid"
+                               Margin="20"
+                               VerticalOptions="FillAndExpand"
+                               ItemsSource="{Binding OrderInfoCollection}"
+                               GridLinesVisibility="Both"
+                               HeaderGridLinesVisibility="Both"
+                               AutoGenerateColumnsMode="None"
+                               ColumnWidthMode="Auto">
+            <syncfusion:SfDataGrid.Columns>
+                <syncfusion:DataGridNumericColumn Format="D"
+                                                  HeaderText="Order ID"
+                                                  MappingName="OrderID">
+                </syncfusion:DataGridNumericColumn>
+                <syncfusion:DataGridTextColumn HeaderText="Customer ID"
+                                               MappingName="CustomerID">
+                </syncfusion:DataGridTextColumn>
+                <syncfusion:DataGridTextColumn MappingName="Customer"
+                                               HeaderText="Customer">
+                </syncfusion:DataGridTextColumn>
+                <syncfusion:DataGridTextColumn HeaderText="Ship City"
+                                               MappingName="ShipCity">
+                </syncfusion:DataGridTextColumn>
+                <syncfusion:DataGridTextColumn HeaderText="Ship Country"
+                                               MappingName="ShipCountry">
+                </syncfusion:DataGridTextColumn>
+            </syncfusion:SfDataGrid.Columns>
+        </syncfusion:SfDataGrid>
+    </StackLayout>
 {% endhighlight %}
 {% highlight c# %}
 private void ExportToExcel_Clicked(object sender, EventArgs e)
@@ -169,11 +187,11 @@ option.CanExportTableSummary= true;
 {% endhighlight %}
 {% endtabs %}
 
-* ExportTableSummary = true;
+* CanExportTableSummary = true;
 <img alt="Export DataGrid with table summary" src="Images\Export-to-Excel\maui-datagrid-export-table-summary.png" width="689"/>
 
 
-* ExportTableSummary = false;
+* CanExportTableSummary = false;
 
 <img alt="Export DataGrid without table summary" src="Images\Export-to-Excel\maui-datagrid-exclude-table-summary.png" width="689"/>
 
@@ -437,7 +455,7 @@ option.CanExportRowHeight = false;
 {% endhighlight %}
 {% endtabs %}
 
-![Export DataGrid to Excel format with customized row height for all rows](SfDataGrid_images/Excel/ColumnWidth.png)
+<img alt="Export DataGrid to Excel format with customized row height for all rows" src="Images\Export-to-Excel\maui-datagrid-ColumnWidth.png" width="689"/>
 
 ### ExportColumnWidth
 
@@ -516,12 +534,12 @@ You can use these events to customize the properties of the grid cells exported 
 {% highlight c# %}
 DataGridExcelExportingController excelExport = new DataGridExcelExportingController();
 excelExport.RowExporting += ExcelExport_RowExporting;
-  private void ExcelExport_RowExporting(object sender, DataGridRowExcelExportingEventArgs e)
-        {
+private void ExcelExport_RowExporting(object sender, DataGridRowExcelExportingEventArgs e)
+{
     if (!(e.Record.Data is OrderInfo))
         return;
 
-   if (e.CellType == ExportCellType.RecordCell && e.ColumnName == "FirstName")
+    if (e.CellType == ExportCellType.RecordCell && e.ColumnName == "FirstName")
     {
         e.Range.CellStyle.ColorIndex = Syncfusion.XlsIO.ExcelKnownColors.Red;
     }
