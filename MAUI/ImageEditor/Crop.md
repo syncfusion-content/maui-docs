@@ -1,30 +1,28 @@
 ---
 layout: post
 title: Crop in .NET MAUI ImageEditor control | Syncfusion
-description: Learn here all about Crop support in Syncfusion .NET MAUI ImageEditor (SfImageEditor) control and more.
-platform: MAUI
+description: Learn here all about crop support in Syncfusion .NET MAUI ImageEditor (SfImageEditor) control.
+platform: .NET MAUI
 control: SfImageEditor
 documentation: ug
 ---
 
 # Crop in .NET MAUI ImageEditor (SfImageEditor)
 
-You can use the cropping tool in the Image Editor to select and crop a specific portion of an image.
+Using the Image Editor's cropping tool, you can select and crop a particular section of an image.
 
 ## Image cropping ratio
 
-The Image Editor control provides various selection options for cropping images, including custom, square, circle, and customized to various aspects ratios. You can drag and resize the selection region to crop the desired area of an image.
+The Image Editor control provides a range of selection choices for cropping images, such as custom, square, circle, and different aspect ratios. To crop a specific area of an image, simply drag and resize the selection region.
 
-Cropping operation can be done in the following two ways:
+There are two methods to perform the cropping operation:
 
-* Enable cropping and visually select the crop region.
-* Manually entering the cropping area.
-
-N> You can also crop the image at a specific position with annotations. 
+* Enable cropping and visually choose the cropping area.
+* Input the cropping region manually.
 
 ## Handling the cropping tool
 
-The `Crop` method in the image editor control crop the image based on the `ImageCropType`. It allows users to enable or disable the cropping region displayed over the image, making it easier to visually choose the area for cropping.
+The `Crop` method in the image editor control crops the image based on the `ImageCropType`. It allows users to enable or disable the cropping region displayed over the image, making it easier to visually choose the area for cropping.
 
     * ImageCropType - Specifies the selection type for cropping the image.
 
@@ -54,7 +52,7 @@ imageEditor.CancelEdits();
 
 ## Freehand Crop
 
-This type of crop allows you to freely select and crop a region of the image. You can manually outline the desired area using your cursor or touch input.The selection region can be customized by dragging and resizing an image.
+The selection region can be customized by dragging and resizing an image.
 
 {% highlight C# %}
 
@@ -94,7 +92,7 @@ imageEditor.Crop(16,9);
 
 ## Circle crop
 
-You can crop an image in a circular format, specifically for profile pictures, you can use the `Crop` method. This method ensures that the image is cropped into a perfect circle with a 1:1 ratio.
+You can crop an image in a circular format using the `ImageCropType.Circle` crop type. This method ensures that the image is cropped into a perfect circle with a 1:1 ratio.
 
 * The following code shows cropping an image in circle format.
 
@@ -106,7 +104,7 @@ imageEditor.Crop(ImageCropType.Circle);
 
 ## Ellipse crop
 
-To crop an image in an elliptical format, such as for profile pictures, you can use the `Crop` method. This allows for free-style cropping in an elliptical shape.
+To crop an image in an elliptical format you can use the `ImageCropType.Ellipse` crop type. This allows for free-style cropping in an elliptical shape.
 
  * The following code shows cropping an image in elliptical format.
 
@@ -118,11 +116,12 @@ imageEditor.Crop(ImageCropType.Ellipse);
 
 ## Entering the cropping area manually
 
-To manually enter the cropping area without enabling the cropping functionality, use the overloaded `Crop(Rect rect)` method. It can be done by simply define a rectangle and pass it to the `Crop` method. If the `isEllipse` parameter is set to true, it will perform an ellipse crop. The default value of `isEllipse` is `false`.
+To manually enter the cropping area use the `Crop(Rect rect)` method. It can be done by simply define a rectangle and pass it to the `Crop` method. If the `isEllipse` parameter is set to true, it will perform an elliptical crop. The default value of `isEllipse` parameter is `false`.
 
 {% highlight C# %}
 
 imageEditor.Crop(new Rect(50,50,150,200));
+imageEditor.SaveEdits();
 
 {% endhighlight %}
 
@@ -130,7 +129,8 @@ imageEditor.Crop(new Rect(50,50,150,200));
 
 {% highlight C# %}
 
-imageEditor.Crop(new Rect(20,20,50,50), true);   
+imageEditor.Crop(new Rect(20,20,50,50), true);
+imageEditor.SaveEdits();   
 
 {% endhighlight %} 
 
