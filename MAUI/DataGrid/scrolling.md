@@ -49,3 +49,40 @@ You can scroll programmatically to a particular column using the `SfDataGrid.Scr
 this.dataGrid.ScrollToColumnIndex(4, true, ScrollToPosition.MakeVisible);
 {% endhighlight %}
 {% endtabs %}
+
+## Scrollbar Visibility
+
+The visibility of the horizontal and vertical scrollbars can be customized using the [SfDataGrid.HorizontalScrollBarVisibility]() and [SfDataGrid.VerticalScrollBarVisibility]() properties. By default, the visibility of both the horizontal and vertical scrollbars is set to ScrollBarVisibility.Default.
+
+The following code snippets demonstrate how to hide the vertical and horizontal scrollbars:
+
+{% tabs %}
+{% highlight xaml %}
+    <sfgrid:SfDataGrid x:Name="dataGrid"                                       
+                       ItemsSource="{Binding OrdersInfo}"         
+                       HorizontalScrollBarVisibility="Never"
+                       VerticalScrollBarVisibility="Never">   
+    </sfgrid:SfDataGrid> 
+{% endhighlight %}
+
+{% highlight C# %}  
+namespace DataGridSample
+{
+    public partial class MainPage : ContentPage
+    {
+        public MainPage()
+        {
+            InitializeComponent();
+            ViewModel viewModel = new ViewModel();
+            SfDataGrid dataGrid = new SfDataGrid();
+            dataGrid.ItemsSource = viewModel.OrdersInfo;   
+            dataGrid.HorizontalScrollBarVisibility = ScrollBarVisibility.Never;
+            dataGrid.VerticalScrollBarVisibility = ScrollBarVisibility.Never;
+            this.Content = dataGrid;
+        }
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
+N> These properties do not have any effect when the datagrid has no scrollable content in its respective direction. In such cases, the scroll bar will not be displayed.
