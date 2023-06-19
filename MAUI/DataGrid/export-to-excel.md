@@ -9,9 +9,9 @@ documentation: UG
 
 # Export To Excel in MAUI DataGrid (SfDataGrid)
 
-The SfDataGrid allows for exporting data to Excel, providing various customization options such as personalized appearance, excluding certain columns, excluding headers, adjusting custom row height, modifying custom column width, and more.
+The SfDataGrid enables data export to Excel, offering several customization options such as personalized appearance, exclusion of specific columns or headers, adjustment of custom row height and column width, and more.
 
-The following NuGet package should be installed to export the SfDataGrid to Excel file.
+To export the SfDataGrid to an Excel file, the following NuGet package should be installed.
 
 <table>
 <tr>
@@ -79,13 +79,13 @@ private void ExportToExcel_Clicked(object sender, EventArgs e)
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="Export DataGrid to Excel format" src="Images\Export-to-Excel\maui-datagrid-datagrid-to-excel.png" width="689"/>
+<img alt="Export DataGrid to Excel format" src="Images\export-to-excel\maui-datagrid-datagrid-to-excel.png" width="689"/>
 
-N> SfDataGrid cannot export the DataGridTemplateColumn to PDF or Excel,  since we cannot get the loaded views and draw them with the particular range, values etc from DataGridTemplateColumn.
+N> The SfDataGrid is unable to export the DataGridTemplateColumn to PDF or Excel because it is not possible to access to the loaded views necessary for drawing them with specific range, values, and so on from the DataGridTemplateColumn.
 
 ## Exporting Options
 
-Additionally, you can export the data to Excel by providing the grid and `DataGridExcelExportingOption` as arguments to the `ExportToExcel` method, which offers several customization options.
+Furthermore, you can export the data to Excel by providing the grid and `DataGridExcelExportingOption` as arguments to the `ExportToExcel` method, which provides various customization options.
 
 {% tabs %}
 {% highlight c# %}
@@ -101,7 +101,7 @@ The SfDataGrid provides several properties in `DataGridExcelExportingOption` cla
 
 ### Exporting formatted text and actual value
 
-By default, the actual value will only be exported to Excel. To export the display text, set the ExportMode property as Text.
+The actual value will be exported to Excel by default. To export the display text, you need to set the ExportMode property as Text.
 
 {% tabs%}
 {% highlight c# %}
@@ -117,15 +117,15 @@ var workBook = excelEngine.Excel.Workbooks[0];
 
 #### ExcelColumnIndex
 
-The `ExcelColumnIndex Property` gets or internally sets the column index being exported to the Excel. Each column is exported based on this index to identify the current exporting column index.
+The `ExcelColumnIndex Property` retrieves or internally sets the column index that is being exported to Excel. Each column is exported based on this index to identify the current exporting column.
 
 #### ExcelRowIndex
 
-The `ExcelRowIndex Property` gets the row index being exported to the Excel. Each row is exported based on this index to identify the current exporting row index.
+The `ExcelRowIndex Property` retrieves the row index that is being exported to Excel. Each row is exported based on this index to identify the current exporting row index.
 
 #### Columns
 
-Using the property `System.Collections.IEnumerable Columns` you can get or set the `ExcludedColumns` columns collection which contains all the columns that are to be exported. The columns in the ExcludedColumns List will not be a member of the Columns collection.
+By using the `System.Collections.IEnumerable Columns` property, you can retrieve or set the `ExcludedColumns` collection of columns, which contains all the columns to be exported. The columns in the ExcludedColumns list will not be included in the Columns collection.
 
 ## Customize header, groups and table summary when exporting
 
@@ -142,12 +142,12 @@ option.CanExportGroups = true;
 
 * CanExportGroups = true; 
 
-<img alt="Export DataGrid to Excel format with group summary rows" src="Images\Export-to-Excel\maui-datagrid-export-groups.png" width="689"/>
+<img alt="Export DataGrid to Excel format with group summary rows" src="Images\export-to-excel\maui-datagrid-export-groups.png" width="689"/>
 
 
 * CanExportGroups = false;
 
-<img alt="Export DataGrid to Excel format with group summary rows" src="Images\Export-to-Excel\maui-datagrid-datagrid-to-excel.png" width="689"/>
+<img alt="Export DataGrid to Excel format with group summary rows" src="Images\export-to-excel\maui-datagrid-exclude-groups.png" width="689"/>
 
 ### Export header
 
@@ -160,7 +160,7 @@ DataGridPdfExportingOption option = new DataGridPdfExportingOption();
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="Export DataGrid to Excel format without header cells" src="Images\Export-to-Excel\maui-datagrid-exclude-header.png" width="689"/>
+<img alt="Export DataGrid to Excel format without header cells" src="Images\export-to-excel\maui-datagrid-exclude-header.png" width="689"/>
 
 ### ExportGroupSummary
 
@@ -174,7 +174,7 @@ option.CanExportGroups = true;
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="Export DataGrid to Excel format with group summary rows" src="Images\Export-to-Excel\maui-datagrid-export-group-summary.png" width="689"/>
+<img alt="Export DataGrid to Excel format with group summary rows" src="Images\export-to-excel\maui-datagrid-export-group-summary.png" width="689"/>
 
 #### Export table summary
 
@@ -188,17 +188,17 @@ option.CanExportTableSummary= true;
 {% endtabs %}
 
 * CanExportTableSummary = true;
-<img alt="Export DataGrid with table summary" src="Images\Export-to-Excel\maui-datagrid-export-table-summary.png" width="689"/>
+<img alt="Export DataGrid with table summary" src="Images\export-to-excel\maui-datagrid-export-table-summary.png" width="689"/>
 
 
 * CanExportTableSummary = false;
 
-<img alt="Export DataGrid without table summary" src="Images\Export-to-Excel\maui-datagrid-exclude-table-summary.png" width="689"/>
+<img alt="Export DataGrid without table summary" src="Images\export-to-excel\maui-datagrid-exclude-table-summary.png" width="689"/>
 
 
 ### Export groups with outlines
 
-To export the data grid with applied grouping, enable the group expand or collapse option in the Excel sheet by setting the `DataGridExcelExportingOption.CanAllowOutlining` to `true`. The default value of this property is false so, you cannot expand or collapse the group in the Excel sheet.
+To export the data grid with applied grouping, enable the option to expand or collapse groups in the Excel sheet by setting the `DataGridExcelExportingOption.CanAllowOutlining` to `true`. By default, this property is set to false, so you cannot expand or collapse the groups in the Excel sheet.
 
 {% tabs %}
 {% highlight c# %}
@@ -221,13 +221,13 @@ DataGridPdfExportingOption option = new DataGridPdfExportingOption();
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="Exclude columns when exporting" src="Images\Export-to-Excel\maui-datagrid-excluded-columns.png" width="689"/>
+<img alt="Exclude columns when exporting" src="Images\export-to-excel\maui-datagrid-excluded-columns.png" width="689"/>
 
 ### Export Selected Rows of SfDataGrid
 
-SfDataGrid allows you to export only the currently selected rows in the grid to the worksheet using the `DataGridExcelExportingController.ExportToExcel` method by passing the instance of the SfDataGrid and `SfDataGrid.SelectedRows` collection as an argument.
+The SfDataGrid enables you to export only the currently selected rows in the grid to the worksheet using the `DataGridExcelExportingController.ExportToExcel` method. To achieve this, you need to pass the instance of the SfDataGrid and the `SfDataGrid.SelectedRows` collection as arguments.
 
-Refer the below code to export the selected rows alone to Excel.
+Please refer to the code snippet below, which demonstrates how to export the selected rows to Excel:
 
 {% tabs %}
 {% highlight c# %}
@@ -261,7 +261,7 @@ option.StartColumnIndex = 3;
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="Export DataGrid to Excel format from the specified column index" src="Images\Export-to-Excel\maui-datagrid-start-column-index.png" width="689"/>
+<img alt="Export DataGrid to Excel format from the specified column index" src="Images\export-to-excel\maui-datagrid-start-column-index.png" width="689"/>
 
 #### StartRowIndex
 
@@ -273,11 +273,11 @@ option.StartRowIndex = 3;
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="Export DataGrid to Excel format from the specified row index" src="Images\Export-to-Excel\maui-datagrid-start-row-index.png" width="689"/>
+<img alt="Export DataGrid to Excel format from the specified row index" src="Images\export-to-excel\maui-datagrid-start-row-index.png" width="689"/>
 
 ### Exporting with sorting and filtering
 
-The SfDataGrid allows exporting the data grid to Excel with sorting and filtering options enabled on the column header in Excel sheet by setting the `DataGridExcelExportingOption.CanAllowSortingAndFiltering` to `true`. The default value of this property is false.
+The SfDataGrid enables the export of the data grid to Excel while allowing sorting and filtering options to be enabled on the column header in the Excel sheet. This can be achieved by setting the `DataGridExcelExportingOption.CanAllowSortingAndFiltering` property to `true`. By default, this property is set to false.
 
 {% tabs %}
 {% highlight c# %}
@@ -286,7 +286,7 @@ option.CanAllowSortingAndFiltering = true;
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="Export DataGrid to Excel with sorting and filtering" src="Images\Export-to-Excel\maui-datagrid-can-allow-sorting-filtering.png" width="689"/>
+<img alt="Export DataGrid to Excel with sorting and filtering" src="Images\export-to-excel\maui-datagrid-can-allow-sorting-filtering.png" width="689"/>
 
 
 ### Applying styles while exporting
@@ -300,7 +300,7 @@ option.CanApplyGridStyle = true;
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="Export DataGrid to Excel with styling applied" src="Images\Export-to-Excel\maui-datagrid-can-apply-gridstyle.png" width="689"/>
+<img alt="Export DataGrid to Excel with styling applied" src="Images\export-to-excel\maui-datagrid-can-apply-gridstyle.png" width="689"/>
 
 #### TopTableSummaryStyle
 
@@ -322,7 +322,7 @@ option.TopTableSummaryStyle = new DataGridExportCellStyle()
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="Export DataGrid to Excel format with style applied for table summary rows at the top" src="Images\Export-to-Excel\maui-datagrid-top-table-summary-style.png" width="689"/> 
+<img alt="Export DataGrid to Excel format with style applied for table summary rows at the top" src="Images\export-to-excel\maui-datagrid-top-table-summary-style.png" width="689"/> 
 
 #### BottomTableSummaryStyle
 
@@ -344,7 +344,7 @@ option.BottomTableSummaryStyle = new DataGridExportCellStyle()
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="Export DataGrid to Excel format with style applied for table summary rows at the bottom" src="Images\Export-to-Excel\maui-datagrid-bottom-table-summary-style.png" width="689"/> 
+<img alt="Export DataGrid to Excel format with style applied for table summary rows at the bottom" src="Images\export-to-excel\maui-datagrid-bottom-table-summary-style.png" width="689"/> 
 
 #### GroupCaptionStyle
 
@@ -366,7 +366,7 @@ option.GroupCaptionStyle = new DataGridExportCellStyle()
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="Export DataGrid to Excel format with style applied for Group summary rows" src="Images\Export-to-Excel\maui-datagrid-group-caption-style.png" width="689"/> 
+<img alt="Export DataGrid to Excel format with style applied for Group summary rows" src="Images\export-to-excel\maui-datagrid-group-caption-style.png" width="689"/> 
 
 #### HeaderStyle
 
@@ -384,7 +384,7 @@ option.HeaderStyle = new DataGridExportCellStyle()
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="Export DataGrid to Excel format with styling for header cells" src="Images\Export-to-Excel\maui-datagrid-header-style.png" width="689"/> 
+<img alt="Export DataGrid to Excel format with styling for header cells" src="Images\export-to-excel\maui-datagrid-header-style.png" width="689"/> 
 
 #### RecordStyle
 
@@ -406,11 +406,11 @@ option.RecordStyle = new DataGridExportCellStyle()
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="Export DataGrid to Excel format with styling for record cells" src="Images\Export-to-Excel\maui-datagrid-record-style.png" width="689"/>
+<img alt="Export DataGrid to Excel format with styling for record cells" src="Images\export-to-excel\maui-datagrid-record-style.png" width="689"/>
 
 #### GroupSummaryStyle 
 
-`SfDataGrid` supports exporting the `GroupSummary` rows with custom style by using the `DataGridExcelExportingOption.GroupSummaryStyle` property.
+The `SfDataGrid` allows exporting the `GroupSummary` rows with custom style by using the `DataGridExcelExportingOption.GroupSummaryStyle` property.
 
 {% tabs %}
 {% highlight c# %}
@@ -428,7 +428,7 @@ option.GroupSummaryStyle = new DataGridExportCellStyle()
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="Export DataGrid to Excel format with styling applied for group summary rows" src="Images\Export-to-Excel\maui-datagrid-group-summary-style.png" width="689"/>
+<img alt="Export DataGrid to Excel format with styling applied for group summary rows" src="Images\export-to-excel\maui-datagrid-group-summary-style.png" width="689"/>
 
 ## Row Height and Column Width customization
 
@@ -455,7 +455,7 @@ option.CanExportRowHeight = false;
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="Export DataGrid to Excel format with customized row height for all rows" src="Images\Export-to-Excel\maui-datagrid-ColumnWidth.png" width="689"/>
+<img alt="Export DataGrid to Excel format with customized row height for all rows" src="Images\export-to-excel\maui-datagrid-column-width.png" width="689"/>
 
 ### ExportColumnWidth
 
@@ -480,7 +480,7 @@ option.CanExportRowHeight = true;
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="Export DataGrid to Excel format with default row heigh" src="Images\Export-to-Excel\maui-datagrid-datagrid-to-excel.png" width="689"/>
+<img alt="Export DataGrid to Excel format with default row heigh" src="Images\export-to-excel\maui-datagrid-datagrid-row-width.png" width="689"/>
 
 ## Events
 
