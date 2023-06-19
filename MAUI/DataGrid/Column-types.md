@@ -799,7 +799,7 @@ dataGrid.Columns.Add(comboBoxColumn);
 {% endhighlight %}
 {% endtabs %}
 
-![DataGrid with Suggesting comboBox column](Images\column-types\maui-datagrid-combobox-column-editing-suggest.png)
+![DataGrid with Suggesting comboBox column](Images\column-types\maui-datagrid-combobox-column-editing.png)
 
 ## DataGridNumericColumn
 
