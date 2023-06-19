@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Navigate using document link annotations in .NET MAUI PDF Viewer control | Syncfusion
-description: Learn here about document link annotations in Syncfusion .NET MAUI PDF Viewer (SfPdfViewer) control.
+title: Document link navigation in .NET MAUI PDF Viewer control | Syncfusion
+description: Learn here about document link navigation in Syncfusion .NET MAUI PDF Viewer (SfPdfViewer) control.
 platform: MAUI
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Document link annotations
+# Document link navigation
 
 The PDF viewer allows navigating from one part of the PDF document to another using document link annotations. When a document link annotation is tapped, the PDF viewer scrolls to its destination. This type of link annotations is most often used to represent the table of contents of a PDF document. 
 
@@ -20,7 +20,3 @@ pdfViewer.EnableDocumentLinkNavigation = false;
 
 {% endhighlight %}
 {% endtabs %}
-
-### Limitations
-
-In Android, pinch to zoom will not work on the document link annotations.
