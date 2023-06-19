@@ -192,3 +192,5 @@ The appearance of the `SfAccordion` can be customized using the following two `V
 {% endtabs %}
 
 ![Expanded and collapsed visual states in .NET MAUI Accordion](Images/appearance/maui-accordion-with-visual-state-manager.png)
+
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/customize-the-ui-appearance-using-visual-states-in-.net-maui-accordion).
