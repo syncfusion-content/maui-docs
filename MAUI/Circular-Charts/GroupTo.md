@@ -9,7 +9,7 @@ documentation: ug
 
 # Grouping Data Points in .NET MAUI SfCircularChart
 
-The small segments in the pie chart can be grouped into an `Others` category using the [GroupTo]() and [GroupMode]() properties of the [PieSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.PieSeries.html). The [GroupMode]() property is used to specify the grouping type based on slice angle, actual data point value, or percentage. The [GroupTo]() property is used to set the limit to group data points into a single slice. The grouped segment is labeled as `Others` in the chart legend.
+The small segments in the circular chart can be grouped into an `Others` category using the [GroupTo]() and [GroupMode]() properties of the circular chart. The [GroupMode]() property is used to specify the grouping type based on slice angle, actual data point value, or percentage. The [GroupTo]() property is used to set the limit to group data points into a single slice. The grouped segment is labeled as `Others` in the chart legend.
 
 {% tabs %}
 
@@ -46,4 +46,4 @@ chart.Series.Add(series);
 
 {% endtabs %}
 
-![Grouped data points pie chart in MAUI](GroupTo_images/GroupTo_in_CircularChart.png)
+![Grouped data points circular chart in MAUI](GroupTo_images/GroupTo_in_CircularChart.png)
