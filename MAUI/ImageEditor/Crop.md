@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Crop in .NET MAUI ImageEditor control | Syncfusion
-description: Learn here all about crop support in Syncfusion .NET MAUI ImageEditor (SfImageEditor) control.
+title: Crop in .NET MAUI ImageEditor Control | Syncfusion
+description: Learn here all about crop support in the Syncfusion .NET MAUI ImageEditor (SfImageEditor) control.
 platform: .NET MAUI
 control: SfImageEditor
 documentation: ug
@@ -15,7 +15,7 @@ Using the Image Editor's cropping tool, you can select and crop a particular sec
 
 The Image Editor control provides a range of selection choices for cropping images, such as custom, square, circle, and different aspect ratios. To crop a specific area of an image, simply drag and resize the selection region.
 
-There are two methods to perform the cropping operation:
+The following are two methods to perform the cropping operation:
 
 * Enable cropping and visually choose the cropping area.
 * Input the cropping region manually.
@@ -24,7 +24,7 @@ There are two methods to perform the cropping operation:
 
 The `Crop` method in the image editor control crops the image based on the `ImageCropType`. It allows users to enable or disable the cropping region displayed over the image, making it easier to visually choose the area for cropping.
 
-    * ImageCropType - Specifies the selection type for cropping the image.
+    * ImageCropType - Specify the selection type for cropping the image.
 
 * The following code shows cropping the image to any desired size.
 
@@ -42,7 +42,7 @@ imageEditor.SaveEdits();
 
 {% endhighlight %}
 
-After selecting the cropping area, if you decide to cancel the edits and revert back to the original image, you can use the `CancelEdits` method. It discard the changes made during the cropping process and restore the image to its initial state.
+After selecting the cropping area, if you decide to cancel the edits and revert back to the original image, you can use the `CancelEdits` method. It discards the changes made during the cropping process and restores the image to its initial state.
 
 {% highlight C# %}
 
@@ -52,7 +52,7 @@ imageEditor.CancelEdits();
 
 ## Freehand Crop
 
-The selection region can be customized by dragging and resizing an image.
+The selected region can be customized by dragging and resizing an image.
 
 {% highlight C# %}
 
@@ -82,7 +82,7 @@ imageEditor.Crop(ImageCropType.Square);
 
 ## Ratio Crop
 
-The ratio crop enables you to crop the image with a specific aspect ratio. You can specify the desired ratio using the width and height values. The default ratio is 4:3 when using `ImageCropType.Ratio`, but you can change it by using the `Crop` method with the ratio parameter.  
+The ratio crop enables you to crop the image with a specific aspect ratio. You can specify the desired ratio using the width and height values. The default ratio is 4:3 when using the `ImageCropType.Ratio`, but you can change it by using the Crop method with the ratio parameter.  
 
 {% highlight C# %}
 
@@ -116,7 +116,7 @@ imageEditor.Crop(ImageCropType.Ellipse);
 
 ## Entering the cropping area manually
 
-To manually enter the cropping area use the `Crop(Rect rect)` method. It can be done by simply define a rectangle and pass it to the `Crop` method. If the `isEllipse` parameter is set to true, it will perform an elliptical crop. The default value of `isEllipse` parameter is `false`.
+To manually enter the cropping area, use the `Crop(Rect rect)` method. It can be done by simply defining a rectangle and passing it to the `Crop` method. If the `isEllipse` parameter is set to true, it will perform an elliptical crop. The default value of the `isEllipse` parameter is `false`.
 
 {% highlight C# %}
 
@@ -138,7 +138,7 @@ imageEditor.SaveEdits();
 
 Programmatically, you can select the desired cropping ratio from the various aspect ratios available in the built-in cropping toolbar by specifying the corresponding index of the toolbar item using the `Crop` method.
 
-The following code sample will add the cropping preview on the image in square shape.
+The following code sample will add the cropping preview on the image in a square shape.
 
 {% highlight C# %}
 

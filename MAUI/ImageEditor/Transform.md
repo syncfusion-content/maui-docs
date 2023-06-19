@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Transform in .NET MAUI ImageEditor control | Syncfusion
-description: Learn here all about Transform in Syncfusion .NET MAUI ImageEditor (SfImageEditor) control and more.
+title: Transform in .NET MAUI ImageEditor Control | Syncfusion
+description: Learn here all about how to Transform in Syncfusion .NET MAUI ImageEditor (SfImageEditor) control and more.
 platform: MAUI
 control: SfImageEditor
 documentation: ug
@@ -15,7 +15,7 @@ The Image Editor in .NET MAUI provides options for rotating and flipping images,
 
 The `Rotate` method is used to rotate images with annotations. Each rotation will rotate the image 90 degrees clockwise. You can rotate the image using either the toolbar or the `Rotate` method.
 
-N> Angle cannot be specified in code to alter the rotation angle of the image.
+N> Angle cannot be specified in the code to alter the rotation angle of the image.
 
 {% highlight C# %}
 
