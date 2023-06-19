@@ -591,9 +591,9 @@ The [GridComboBoxColumn]() inherits all the properties of the [SfDataGrid.DataGr
 
 ### Collection of primitive types
 
-To display the collection of items in the comboBox drop down, create a [DataGridComboBoxColumn]() and set its [DataGridComboBoxColumn.ItemsSource]() property to a simple collection. 
+To display the collection of items in the ComboBox drop-down, create a [DataGridComboBoxColumn]() and set its [ItemsSource]() property to a simple collection.
 
-To load the `DataGridComboBoxColumn` with a simple string collection, follow the code example:
+To load the `DataGridComboBoxColumn` with a simple string collection, you can refer to the code example below:
 
 {% tabs %}
 {% highlight xaml %}
@@ -644,20 +644,20 @@ public class ViewModel
 
 ### Collection of user-defined types
 
-To display a list of user-defined items in the combo-box drop down, create a [DataGridComboBoxColumn]() and set its [DataGridComboBoxColumn.ItemsSource]() property to a user-defined collection. By default, the combo-box column will display the values from the [DataGridColumn.MappingName]() property of the column if the [DisplayMemberPath]() is not set.
+To display a list of user-defined items in the drop-down of a combo box, create a [DataGridComboBoxColumn]() and set its [ItemsSource]() property to a user-defined collection. By default, if the [DisplayMemberPath]() is not set, the combo box column will display the values from the MappingName property of the column.
 
 ### Loading Different ItemSource for each row of DataGridComboBoxColumn
 
-You can load the different ItemsSource to each row of DataGridComboBoxColumn by setting [DataGridComboBoxColumn.ItemsSourceSelector]() property.
+To load different ItemSources for each row of a DataGridComboBoxColumn, you can utilize the [DataGridComboBoxColumn.ItemsSourceSelector]() property.
 
 ### Implementing IItemsSourceSelector
 
-[DataGridComboBoxColumn.ItemsSourceSelector]() needs to implement IItemsSourceSelector interface which requires you to implement GetItemsSource method which receives the below parameters,
+[DataGridComboBoxColumn.ItemsSourceSelector]() needs to implement the IItemsSourceSelector interface, which requires you to implement the GetItemsSource method. This method receives the following parameters:
 
-* Record – data object associated with row.
-* Data Context – Binding context of data grid.
+* Record: This is the data object associated with the row.
+* Data Context: This is the binding context of the data grid.
 
-In the below code, ItemsSource for ShipCity column returned based on ShipCountry column value using the record and Binding context of data grid passed to GetItemsSource method.
+In the provided code, the ItemsSource for the ShipCity column is returned based on the value of the ShipCountry column. This is done by using the record and the binding context of the data grid, which are passed to the GetItemsSource method.
 
 {% tabs %}
 {% highlight xaml %}
@@ -722,9 +722,9 @@ public class ItemSourceSelector : IItemsSourceSelector
 
 ### Editing the combo box
 
-The [DataGridComboBoxColumn]() supports both editable and non-editable text box to choose selected items in given data source. Users can select one item from the suggestion list.
+The [DataGridComboBoxColumn]() supports both editable and non-editable text boxes for selecting items from a given data source. Users can choose one item from the suggestion list
 
-[IsEditableMode]() property is used to enable the user input in [DataGridComboBoxColumn](). The default value is `false`.
+The [IsEditableMode]() property is used to enable the user input in [DataGridComboBoxColumn](). Its default value is `false`.
 
 {% tabs %}
 {% highlight xaml %}
@@ -762,7 +762,7 @@ dataGrid.Columns.Add(comboBoxColumn);
 
 ### Auto suggesting on edit mode
 
-By default, auto suggestion in the dropdown will display the value based on the [StartsWith]() filter condition. This can be changed to retrieve the matches with the Contains condition by using the [SuggestionMode]() property.
+By default, the auto-suggestion in the dropdown will display values based on the [StartsWith]() filter condition. However, you can change this behavior by utilizing the [SuggestionMode]() property to retrieve matches using the Contains condition
 
 {% tabs %}
 {% highlight xaml %}
