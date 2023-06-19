@@ -13,7 +13,7 @@ documentation: ug
 
 The Image Editor control saves the edited image as PNG and JPEG.
 
-The [`Save`]() method is used to save the modified image as an image, and it accepts a file name, file type, file path, image size as parameters. The file type parameter supports PNG and JPEG. It also saves an image by clicking the save button from the toolbar and the supported file types are PNG and JPEG.
+The `Save` method is used to save the modified image as an image, and it accepts a file name, file type, file path, image size as parameters. The file type parameter supports PNG and JPEG. It also saves an image by clicking the save button from the toolbar and the supported file types are PNG and JPEG.
 
 {% highlight C# %}
 
@@ -23,7 +23,7 @@ The [`Save`]() method is used to save the modified image as an image, and it acc
 
 ## Save events
 
-The SfImageEditor has events when performing the save operation, such as [`ImageSaving`]() and [`ImageSaved`]().
+The SfImageEditor has events when performing the save operation, such as `ImageSaving` and `ImageSaved`.
 
 ### ImageSaving
 
