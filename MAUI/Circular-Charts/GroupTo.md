@@ -15,7 +15,7 @@ The small segments in the pie chart can be grouped into an `Others` category usi
 
 {% highlight xaml %}
 
-<<chart:SfCircularChart>
+<chart:SfCircularChart>
 
         <chart:PieSeries ItemsSource="{Binding Data}" 
                          GroupMode="Value"
@@ -46,4 +46,4 @@ chart.Series.Add(series);
 
 {% endtabs %}
 
-![Exploded doughnut chart in MAUI](GroupTo_images/GroupTo_in_CircularChart.png)
+![Grouped data points pie chart in MAUI](GroupTo_images/GroupTo_in_CircularChart.png)
