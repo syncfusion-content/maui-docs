@@ -2,7 +2,7 @@
 layout: post
 title: Migrate from Xamarin to .NET MAUI ImageEditor (SfImageEditor) | Syncfusion
 description: Learn about Migrating from Syncfusion Xamarin.Forms ImageEditor to Syncfusion .NET MAUI ImageEditor control.
-platform: MAUI
+platform: .Net MAUI
 control: SfImageEditor
 documentation: ug
 ---  
@@ -125,7 +125,6 @@ this.Content = imageEditor;
 
 #### SfImageEditor
 
-
 {% tabs %}
 {% highlight XAML %}
 <ContentPage 
@@ -243,7 +242,6 @@ Applicable for crop view selection, shape and text annotation selection.
 </tr>
 </table>
 
-
 #### ImageEditorShapeSettings 
 
 <table>
@@ -307,7 +305,6 @@ Applicable for crop view selection, shape and text annotation selection.
 <td>Gets or sets a value indicating whether the text is editable or not.</td>
 </tr>
 </table>
-
 
 #### ImageEditorTextStyle
 

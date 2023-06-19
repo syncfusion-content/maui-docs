@@ -2,7 +2,7 @@
 layout: post
 title: Getting Started with .NET MAUI ImageEditor control | Syncfusion
 description: Learn here all about getting started with Syncfusion .NET MAUI ImageEditor(SfImageEditor) control
-platform: maui
+platform: .Net MAUI
 control: SfImageEditor
 documentation: ug
 ---

@@ -2,14 +2,14 @@
 layout: post
 title: Image Effects in .NET MAUI ImageEditor control | Syncfusion
 description: Learn here all about Image Effect support in Syncfusion .NET MAUI Image Editor (SfImageEditor) control.
-platform: maui
+platform: .Net MAUI
 control: SfImageEditor
 documentation: ug
 ---
 
 # Image Effect in .NET MAUI Image Editor (SfImageEditor)
 
-With the image editor control, you can apply various effects such as Brightness, Hue, Saturation, Contrast, Blur, Opacity, and Sharpen to your image. These effects can be applied using the toolbar or by utilizing the ImageEffect method. The ImageEffect method consists of two arguments: ImageEffect and EffectValue. The ImageEffect is an enumeration that includes the following effects:
+Using the image editor control, you can apply various effects such as Brightness, Hue, Saturation, Contrast, Blur, Opacity, and Sharpen to your image. These effects can be applied using the toolbar or by utilizing the `ImageEffect` method. The `ImageEffect` method consists of two arguments: `ImageEffect` and `EffectValue`. The ImageEffect is an enumeration that includes the following effects:
 
 * Brightness
 * Blur
@@ -41,10 +41,9 @@ public MainPage()
 
 {% endhighlight %}
 
-
 ## Blur
 
-Blur is used to Creates a soft and unfocused appearance by reducing the image's sharpness. The value of blur effect ranges from 0 to 1 and the default value is 0.
+Blur is used to create a soft and unfocused appearance by reducing the image's sharpness. The value of blur effect ranges from 0 to 1 and the default value is 0.
 
 {% highlight C# %}
 
@@ -60,7 +59,7 @@ public MainPage()
 
 ## Contrast
 
-Contrast is used to increases or decreases the difference between light and dark areas, making the image more visually distinct. The value of contrast effect ranges from -1 to 1 and the default value is 0.
+Contrast is used to increase or decrease the difference between light and dark areas, making the image more visually distinct. The value of contrast effect ranges from -1 to 1 and the default value is 0.
 
 {% highlight C# %}
 
@@ -72,7 +71,6 @@ public MainPage()
 }
 
 {% endhighlight %}
-
 
 ## Exposure
 
@@ -89,7 +87,6 @@ public MainPage()
 
 {% endhighlight %}
 
-
 ## Hue
 
 Hue is used to changes the overall color tone of the image by shifting the color spectrum. The value of hue effect ranges from -1 to 1 and the default value is 0.
@@ -105,10 +102,9 @@ public MainPage()
 
 {% endhighlight %}
 
-
 ## Saturation
 
-Saturation is used to enhances or reduces the intensity and vividness of colors in the image. The value of the saturation effect ranges from -1 to 1 and the default value is 0
+Saturation is used to enhance or reduce the intensity and vividness of colors in the image. The value of the saturation effect ranges from -1 to 1 and the default value is 0.
 
 {% highlight C# %}
 
@@ -120,7 +116,6 @@ public MainPage()
 }
 
 {% endhighlight %}
-
 
 ## Sharpen
 
