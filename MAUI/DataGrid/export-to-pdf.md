@@ -8,9 +8,9 @@ documentation: UG
 ---
 # Export To PDF in MAUI DataGrid (SfDataGrid)
 
-The SfDataGrid provides extensive support for exporting data to PDF, offering various customization options to meet your specific requirements. With this feature, you can customize the appearance of the exported PDF, exclude specific columns or headers, and even define custom row heights and column widths and so on.
+The SfDataGrid offers comprehensive support for exporting data to PDF, providing a range of customization options to suit your specific needs. This feature allows you to personalize the exported PDF's appearance, exclude specific columns or headers, and even define custom row heights and column widths, among other possibilities.
 
-If you are using nuget package in the package, the following NuGet package should be installed to export the SfDataGrid to PDF file.
+If you are utilizing a NuGet package to facilitate the process, please ensure that the following package is installed in order to export the SfDataGrid to a PDF file:
 
 <table>
 <tr>
@@ -23,7 +23,7 @@ If you are using nuget package in the package, the following NuGet package shoul
 </tr>
 </table>
 
-You can export the SfDataGrid to PDF by using the following extension methods present in the Syncfusion.Maui.DataGrid.Exporting namespace.
+You can export the SfDataGrid to PDF by using the extension methods provided in the Syncfusion.Maui.DataGrid.Exporting namespace.
 
 * `ExportToPdf`
 * `ExportToPdfGrid`
@@ -34,11 +34,11 @@ The following code illustrates how to create and display a SfDataGrid in view.
 {% highlight xaml %}
 <StackLayout>
     <Button Text="Export" Clicked="ExportToPDF_Clicked"/>
-    <syncfusion:SfDataGrid x:Name="dataGrid"
+    <syncfusion:SfDataGrid  x:Name="dataGrid"
                             AutoGenerateColumnsMode="None"
                             VerticalOptions="FillAndExpand"
-                               ColumnWidthMode="Auto"
-                    ItemsSource="{Binding OrderInfoCollection}" >
+                            ColumnWidthMode="Auto"
+                            ItemsSource="{Binding OrderInfoCollection}" >
         <syncfusion:SfDataGrid.Columns>
             <syncfusion:DataGridNumericColumn MappingName="OrderID" HeaderText="Order ID" Format="d"/>
             <syncfusion:DataGridTextColumn MappingName="CustomerID" HeaderText="Customer ID"/>
@@ -53,7 +53,7 @@ The following code illustrates how to create and display a SfDataGrid in view.
 
 ## ExportToPdf
 
-You can export the data to PDF by using the `DataGridPdfExportingController.ExportToPdf` method by passing the SfDataGrid as an argument. 
+To export the data to PDF, you can use the `DataGridPdfExportingController.ExportToPdf` method, which requires passing the SfDataGrid as an argument.
 
 {% tabs %}
 {% highlight c# %}
@@ -75,7 +75,7 @@ private void ExportToPDF_Clicked(object sender, EventArgs e)
 
 ## ExportToPdfGrid
 
-You can also export the data to PDF by using the `DataGridPdfExportingController.ExportToPdfGrid` method by passing the SfDataGrid as an argument. 
+To export the data to PDF, you can also use the `DataGridPdfExportingController.ExportToPdfGrid` method, which requires passing the SfDataGrid as an argument.
 
 {% tabs %}
 {% highlight c# %}
@@ -101,13 +101,13 @@ private void ExportToPDF_Clicked(object sender, EventArgs e)
 
 <img alt="Export DataGrid to Excel format" src="Images\export-to-pdf\maui-datagrid-export-datagrid-to-pdf.png" width="689"/>
 
-N> SfDataGrid cannot export the DataGridTemplateColumn to PDF or Excel,  since we cannot get the loaded views and draw them with the particular range, values etc from DataGridTemplateColumn.
+N> SfDataGrid cannot export the DataGridTemplateColumn to PDF or Excel due to the inability to access the loaded views and accurately capture their content and layout in a specific range and value from the DataGridTemplateColumn.
 
 ## Exporting options
 
 ### Exclude columns when exporting
 
-By default, all the columns (including hidden columns) in the SfDataGrid will be exported to PDF. To exclude some particular columns when exporting to PDF, add those columns to `DataGridPdfExportingOption.ExcludeColumns` list.
+By default, all columns, including hidden columns, are exported to PDF in the SfDataGrid. If you want to exclude specific columns during PDF export, you can add those columns to the `DataGridPdfExportingOption.ExcludeColumns` list.
 
 {% tabs %}
 {% highlight c# %}
@@ -122,9 +122,9 @@ option.ExcludedColumns = list;
 <img alt="Export DataGrid to PDF format with certain columns excluded" src="Images\export-to-pdf\maui-datagrid-exclude-columns.png" width="689"/>
 
 
-### Getting PDF document 
+### Obtaining a PDF document
 
-The `DataGridPdfExportingOption.PdfDocument` allows exporting the SfDataGrid to an existing or a new PDF document. 
+The `DataGridPdfExportingOption.PdfDocument` enables the export of the SfDataGrid to either an existing or a new PDF document.
 
 {% tabs %}
 {% highlight c# %}
@@ -138,13 +138,13 @@ option.PdfDocument = pdfDocument;
 {% endhighlight %}
 {% endtabs %}
 
-### Getting Columns for customization
+### Obtaining columns for customization
 
-Using the property `Columns` you can get or set the `System.Collections.IEnumerable` columns collection which contains all the columns that are to be exported. The columns in the ExcludedColumns List will not be a member of the Columns collection.
+By utilizing the property `Columns`, you can retrieve or modify the `System.Collections.IEnumerable columns` collection, which includes all the columns intended for export. Any columns listed in the ExcludedColumns List will not be included in the Columns collection.
 
 ### Column header on each page
 
-You can show or hide the column headers on each page of the exported PDF document by using the `DataGridPdfExportingOption.CanRepeatHeaders` property. The default value is true.
+To display or conceal the column headers on every page of the exported PDF document, you can use the `DataGridPdfExportingOption.CanRepeatHeaders` property. By default, its value is set to true.
 
 {% tabs %}
 {% highlight c# %}
@@ -211,9 +211,9 @@ option.CanExportGroupSummary = true;
 
 #### Exporting the selected rows of SfDataGrid
 
-SfDataGrid allows you to export only the currently selected rows in the grid to the document using the `DataGridPdfExportingController.ExportToPdf` method by passing the instance of the SfDataGrid and `SfDataGrid.SelectedRows` collection as an argument.
+The SfDataGrid allows you to export only the currently selected rows in the grid to a document using the `DataGridPdfExportingController.ExportToPdf` method. To achieve this, you need to pass the instance of the SfDataGrid and the `SfDataGrid.SelectedRows` collection as arguments to the method.
 
-Refer the below code to export the selected rows alone to the PDF document.
+Please refer to the code below for exporting only the selected rows to a PDF document:
 
 {% tabs %}
 {% highlight c# %}
@@ -224,7 +224,7 @@ var pdfDoc = pdfExport.ExportToPdf(this.dataGrid, selectedItems);
 
 ### Export all columns in one page
 
-Gets or sets a value indicating whether all the columns should be fitted on a page or not. To export all the columns in one page, set the`DataGridPdfExportingOption.CanFitAllColumnsInOnePage` property to `true`.
+Gets or sets a value indicating whether all the columns should be fitted on a page. To export all the columns in one page, set the `DataGridPdfExportingOption.CanFitAllColumnsInOnePage` property to `true`.
 
 {% tabs %}
 {% highlight c# %}
@@ -238,14 +238,14 @@ option.CanFitAllColumnsInOnePage = true;
 
 ### Exporting the grid from a specified page and point
 
-The SfDataGrid allows exporting the data to a particular staring position on a particular PDF page using the following options:
+The SfDataGrid allows exporting data to a specific starting position on a particular PDF page using the following options:
 
 * StartPageIndex
 * StartPoint 
 
 #### StartPageIndex 
 
-The SfDataGrid allows exporting the data to a particular page in the PDF document by using the `DataGridPdfExportingOption.StartPageIndex` property.
+The SfDataGrid allows you to export data to a specific page in a PDF document by using the `DataGridPdfExportingOption.StartPageIndex` property.
 
 {% tabs %}
 {% highlight c# %}
@@ -256,7 +256,7 @@ option.StartPageIndex = 2;
 
 #### StartPoint
 
-The SfDataGrid allows exporting the data to a particular x,y starting point in the PDF page by using the `DataGridPdfExportingOption.StartPoint` property.
+The SfDataGrid allows exporting data to a specific starting point (x, y coordinates) on a PDF page using the `DataGridPdfExportingOption.StartPoint` property.
 
 {% tabs %}
 {% highlight c# %}
@@ -268,7 +268,7 @@ option.StartPoint = new Syncfusion.Drawing.PointF(0, 500);
 
 ### Applying styles while exporting
 
-The SfDataGrid allows exporting the data with the applied DefaultStyle by setting the `DataGridPdfExportingOption.CanApplyGridStyle` property to `true`. By default, data will be exported without the DefaultStyle.
+The SfDataGrid allows exporting data with the applied DefaultStyle by setting the `DataGridPdfExportingOption.CanApplyGridStyle` property to true. By default, the data will be exported without the DefaultStyle.
 
 {% tabs %}
 {% highlight c# %}
@@ -279,58 +279,14 @@ option.CanApplyGridStyle = true;
 
 <img alt="Export DataGrid to PDF format with style applied" src="Images\export-to-pdf\maui-datagrid-export-with-defaultstyle.png" width="689"/>
 
-You can also customize the following styles while exporting to PDF:
+You can customize the following styles when exporting to PDF as well:
 
-* BottomTableSummaryStyle 
-* GroupCaptionStyle
 * HeaderStyle
 * RecordStyle 
 * TopTableSummaryStyle
+* BottomTableSummaryStyle 
+* GroupCaptionStyle
 * GroupSummaryStyle
-
-#### BottomTableSummaryStyle
-
-The SfDataGrid supports exporting the bottom table summary with custom style by using the `DataGridPdfExportingOption.BottomTableSummaryStyle` property.
-
-{% tabs %}
-{% highlight c# %}
-DataGridPdfExportingOption option = new DataGridPdfExportingOption();
-option.BottomTableSummaryStyle = new PdfGridCellStyle()
-{
-    BackgroundBrush = PdfBrushes.Gray,
-    Borders = new PdfBorders() { Bottom = PdfPens.AliceBlue, Left = PdfPens.AliceBlue, Right = PdfPens.AliceBlue, Top = PdfPens.AliceBlue },
-    CellPadding = new PdfPaddings(5,5,5,5),
-    TextBrush = PdfBrushes.White,
-    TextPen = PdfPens.White,
-    StringFormat = new PdfStringFormat() { Alignment = PdfTextAlignment.    Center, CharacterSpacing = 3f, WordSpacing = 10f }
-};
-{% endhighlight %}
-{% endtabs %}
-
-<img alt="Export DataGrid to PDF format with style applied for table summary rows at the bottom" src="Images\export-to-pdf\maui-datagrid-bottom-table-summary-style.png" width="689"/>
-
-
-
-#### GroupCaptionStyle
-
-The SfDataGrid supports exporting the group caption summaries with custom style by using the `DataGridPdfExportingOption.GroupCaptionStyle` property.
-
-{% tabs %}
-{% highlight c# %}
-DataGridPdfExportingOption option = new DataGridPdfExportingOption();
-option.GroupCaptionStyle = new PdfGridCellStyle()
-{
-    BackgroundBrush = PdfBrushes.Gray,
-    Borders = new PdfBorders() { Bottom = PdfPens.AliceBlue, Left = PdfPens.AliceBlue, Right = PdfPens.AliceBlue, Top = PdfPens.AliceBlue },
-    CellPadding = new PdfPaddings(5,5,5,5),
-    TextBrush = PdfBrushes.White,
-    TextPen = PdfPens.White,
-    StringFormat = new PdfStringFormat() { Alignment = PdfTextAlignment.Center, CharacterSpacing = 10f, WordSpacing = 10f }
-};
-{% endhighlight %}
-{% endtabs %}
-
-<img alt="Export DataGrid to PDF format with style applied for group caption style" src="Images\export-to-pdf\maui-datagrid-group-caption-style.png" width="689"/>
 
 #### HeaderStyle
 
@@ -394,6 +350,50 @@ DataGridPdfExportingOption option = new DataGridPdfExportingOption();
 
 <img alt="Export DataGrid to PDF format with style applied for table summary rows at the Top" src="Images\export-to-pdf\maui-datagrid-top-table-summary-style.png" width="689"/>
 
+#### BottomTableSummaryStyle
+
+The SfDataGrid supports exporting the bottom table summary with custom style by using the `DataGridPdfExportingOption.BottomTableSummaryStyle` property.
+
+{% tabs %}
+{% highlight c# %}
+DataGridPdfExportingOption option = new DataGridPdfExportingOption();
+option.BottomTableSummaryStyle = new PdfGridCellStyle()
+{
+    BackgroundBrush = PdfBrushes.Gray,
+    Borders = new PdfBorders() { Bottom = PdfPens.AliceBlue, Left = PdfPens.AliceBlue, Right = PdfPens.AliceBlue, Top = PdfPens.AliceBlue },
+    CellPadding = new PdfPaddings(5,5,5,5),
+    TextBrush = PdfBrushes.White,
+    TextPen = PdfPens.White,
+    StringFormat = new PdfStringFormat() { Alignment = PdfTextAlignment.    Center, CharacterSpacing = 3f, WordSpacing = 10f }
+};
+{% endhighlight %}
+{% endtabs %}
+
+<img alt="Export DataGrid to PDF format with style applied for table summary rows at the bottom" src="Images\export-to-pdf\maui-datagrid-bottom-table-summary-style.png" width="689"/>
+
+
+
+#### GroupCaptionStyle
+
+The SfDataGrid supports exporting the group caption summaries with custom style by using the `DataGridPdfExportingOption.GroupCaptionStyle` property.
+
+{% tabs %}
+{% highlight c# %}
+DataGridPdfExportingOption option = new DataGridPdfExportingOption();
+option.GroupCaptionStyle = new PdfGridCellStyle()
+{
+    BackgroundBrush = PdfBrushes.Gray,
+    Borders = new PdfBorders() { Bottom = PdfPens.AliceBlue, Left = PdfPens.AliceBlue, Right = PdfPens.AliceBlue, Top = PdfPens.AliceBlue },
+    CellPadding = new PdfPaddings(5,5,5,5),
+    TextBrush = PdfBrushes.White,
+    TextPen = PdfPens.White,
+    StringFormat = new PdfStringFormat() { Alignment = PdfTextAlignment.Center, CharacterSpacing = 10f, WordSpacing = 10f }
+};
+{% endhighlight %}
+{% endtabs %}
+
+<img alt="Export DataGrid to PDF format with style applied for group caption style" src="Images\export-to-pdf\maui-datagrid-group-caption-style.png" width="689"/>
+
 #### GroupSummaryStyle 
 
 `SfDataGrid` supports exporting the `GroupSummary` rows with custom style by using the `DataGridPdfExportingOption.GroupSummaryStyle` property.
@@ -415,7 +415,7 @@ option.GroupSummaryStyle = new PdfGridCellStyle()
 
 ### Customizing borders
 
-The SfDataGrid allows customizing the grid borders as follows using the `DataGridPdfExportingOption.GridLineType` property:
+The SfDataGrid provides the ability to customize grid borders by utilizing the `DataGridPdfExportingOption.GridLineType` property.
 
 * Both
 * Horizontal
@@ -476,9 +476,9 @@ option.GridLineType = GridLineType.None;
 
 ## Setting header and footer
 
-The SfDataGrid provides a way to display additional content at the top (header) or bottom (footer) of the page when exporting to PDF by handling the `DataGridPdfExportingController.HeaderAndFooterExporting` event.
+The SfDataGrid offers a way to include additional content at the top (header) or bottom (footer) of the page when exporting to PDF. This can be achieved by handling the `DataGridPdfExportingController.HeaderAndFooterExporting` event.
 
-You can insert string in the header and footer in PdfHeaderFooterEventHandler. Setting `PdfPageTemplateElement` as `PdfHeaderFooterEventArgs.PdfDocumentTemplate.Top` loads the content at the top of the page. Setting the `PdfPageTemplateElement` as `PdfHeaderFooterEventArgs.PdfDocumentTemplate.Bottom` loads the content at the bottom of the page.
+To insert a string in the header or footer, you need to use the `PdfHeaderFooterEventHandler`. By setting the `PdfPageTemplateElement` as `PdfHeaderFooterEventArgs.PdfDocumentTemplate.Top`, you can load the content at the top of the page. Similarly, setting the `PdfPageTemplateElement` as `PdfHeaderFooterEventArgs.PdfDocumentTemplate.Bottom` will load the content at the bottom of the page.
 
 {% tabs %}
 {% highlight c# %}
@@ -503,9 +503,9 @@ private void PdfExport_HeaderAndFooterExporting(object sender, DataGridPdfHeader
 
 ## Change PDF page orientation
 
-You can change the page orientation of the PDF document when exporting. Default page orientation is portrait.
+You have the option to change the page orientation of a PDF document during the export process. The default page orientation is `portrait`.
 
-To change the page orientation, export PDF grid value by using the ExportToPdfGrid method. Then, draw that PDF grid into a PDF document by changing the `PageSettings.Orientation` property of PDF document.
+To modify the page orientation, you can export the PDF grid value using the ExportToPdfGrid method. Afterwards, you can draw the PDF grid into a PDF document by adjusting the `PageSettings.Orientation` property of the PDF document.
 
 {% tabs %}
 {% highlight c# %}
@@ -521,7 +521,7 @@ pdfDoc.PageSettings.Orientation = PdfPageOrientation.Landscape;
 
 ### ExportColumnWidth
 
-By default, the data grid columns will be exported to PDF with `DataGridPdfExportingOption.DefaultColumnWidth` value. To export the data grid to PDF with exact column widths, set the `DataGridPdfExportingOption.CanExportColumnWidth` to `true`.
+By default, the columns of the data grid will be exported to PDF using the `DataGridPdfExportingOption.DefaultColumnWidth` value. If you want to export the data grid to PDF with precise column widths, you can set the `DataGridPdfExportingOption.CanExportColumnWidth` to true.
 
 {% tabs %}
 {% highlight c# %}
@@ -532,7 +532,7 @@ option.CanExportColumnWidth = true;
 
 ### ExportRowHeight
 
-By default, the data grid rows will be exported to PDF with `DataGridPdfExportingOption.DefaultRowHeight` value. To export the data grid to PDF with exact row heights, set the `DataGridPdfExportingOption.CanExportRowHeight` to `true`. 
+By default, the data grid rows will be exported to PDF using the `DataGridPdfExportingOption.DefaultRowHeight` value. If you want to export the data grid to PDF with the exact row heights, you can set the `DataGridPdfExportingOption.CanExportRowHeight` to `true`.
 
 {% tabs %}
 {% highlight c# %}
@@ -567,21 +567,21 @@ option.CanExportRowHeight = true;
 
 ## Events
 
-The SfDataGrid provides you the following events for exporting:
+The SfDataGrid provides the following events for exporting:
 
-* `RowExporting`: Raised when exporting a row at the execution time.
-* `CellExporting`: Raised when exporting a cell at the execution time.
+* `RowExporting` : This event is raised when exporting a row during execution.
+* `CellExporting` : This event is raised when exporting a cell during execution.
 
 ### RowExporting
 
-The `DataGridRowPdfExportingEventHandler` delegate allows customizing the styles of record rows and group caption rows. The `RowExporting` event is triggered with `DataGridRowPdfExportingEventArgs` that contains the following properties:
+The `DataGridRowPdfExportingEventHandler` delegate allows for customizing the styles of record rows and group caption rows. The RowExporting event is triggered with `DataGridRowPdfExportingEventArgs`, which contains the following properties:
 
-* `PdfGrid`: Customizes the pdfGrid properties such as `Background`, `CellPadding`, `CellSpacing`, and so on.
-* `PdfRow`: Specifies the `PDFGridRow` to be exported. Customizes the properties of a particular row. 
-* `Record`: Gets the collection of exported underlying data objects.
-* `RowType`: Specifies the row type using `ExportRowType` enum. Checks the row type and applies different styles based on the row type.
+* `PdfGrid`: Customizes the properties of the pdfGrid, such as `Background`, `CellPadding`, `CellSpacing`, and more.
+* `PdfRow`: Specifies the `PDFGridRow` to be exported and allows customization of the properties of a particular row.
+* `Record`: Retrieves the collection of exported underlying data objects.
+* `RowType`: Specifies the row type using the `ExportRowType` enum. It checks the row type and applies different styles based on the type.
 
-You can use this event to customize the properties of the grid rows exported to PDF. The following code example illustrates how to change the background color of the record rows and caption summary rows when exporting.
+You can use this event to customize the properties of the grid rows that are exported to PDF. The following code example demonstrates how to change the background color of the record rows and caption summary rows during the export process.
 
 {% tabs %}
 {% highlight c# %}
@@ -602,23 +602,21 @@ void pdfExport_RowExporting (object sender, DataGridRowPdfExportingEventArgs e)
 
 ### CellExporting
 
-The `DataGridCellPdfExportingEventHandler` delegate allows customizing the styles for the header cells, record cells, group caption cells, and group summary cells. The `CellExporting` event is triggered with `DataGridCellPdfExportingEventArgs` that contains the following properties:
+The `DataGridCellPdfExportingEventHandler` delegate allows for customizing the styles of header cells, record cells, and group caption cells. The CellExporting event is triggered with `DataGridCellPdfExportingEventArgs`, which contains the following properties:
 
-The `DataGridCellPdfExportingEventHandler` delegate allows customizing the styles for header cells, record cells, and group caption cells. The `CellExporting` event is triggered with `DataGridCellPdfExportingEventArgs` that contains the following properties:
+* `CellType`: Specifies the cell type using the `ExportCellType` enum. It checks the cell type and applies different cell styles based on the type.
 
-* `CellType`: Specifies the cell type using `ExportCellType` enum. Checks the cell type and applies different cell styles based on the cell type.
+* `CellValue`: Contains the actual exported value used to format the PDF using the `Range` property.
 
-* `CellValue`: Contains the exported actual value to format the PDF using the `Range` property.
-
-* `ColumnName`: Specifies the column name (MappingName) of the exporting cell. Applies formatting for a particular column by checking the `ColumnName`.
+* `ColumnName`: Specifies the column name (MappingName) of the exporting cell. It applies formatting for a particular column by checking the `ColumnName`.
 
 * `Handled`: Determines whether the cell is exported to PDF or not.
 
-* `PdfGrid`: Specifies the `PDFGridCell` to be exported. Customizes Background, Foreground, Font, Alignment, etc., properties of a particular cell.
+* `PdfGrid`: Specifies the `PDFGridCell` to be exported. It customizes properties such as `Background`, `Foreground`, `Font`, `Alignment`, etc., for a particular cell.
 
-* `Record`: Gets the collection of exported underlying data objects.
+* `Record`:  Retrieves the collection of underlying data objects being exported.
 
-You can use this event to customize the properties of the grid cells exported to PDF. The following code example illustrates how to customize the background color, foreground color, and cell value of the header cells, record cells, and caption summary cells when exporting.
+You can use this event to customize the properties of grid cells that are exported to PDF. The code example below demonstrates how to customize the background color, Text color, and cell value of header cells, record cells, and caption summary cells during the export process.
 
 {% tabs %}
 {% highlight c# %}
@@ -643,11 +641,11 @@ void pdfExport_CellExporting(object sender, DataGridCellPdfExportingEventArgs e)
 
 <img alt="Customize the cells in a DataGrid while exporting using the CellExporting event" src="Images\export-to-pdf\maui-datagrid-cell-exporting.png" width="689"/>
 
-## Cell customization in PDF while exporting
+## Cell customization
 
 ### Customize the cells based on column name
 
-You can customize the column style based on the row data when exporting to PDF by handling the `CellExporting` event.
+You can customize the record cell style in a specific column based on the column name when exporting to PDF by handling the `CellExporting` event.
 
 {% tabs %}
 {% highlight c# %}
