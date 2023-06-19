@@ -30,10 +30,11 @@ To enable or disable editing for a specific column, you can simply set the [Data
     <syncfusion:SfDataGrid x:Name="dataGrid"
                            SelectionMode="Multiple"    
                            NavigationMode="Cell" 
-                           ItemsSource="{Binding Orders}" />
+                           ItemsSource="{Binding Orders}">
 
     <syncfusion:DataGridTextColumn AllowEditing="True"
                                    MappingName="OrderID" />
+    </syncfusion:SfDataGrid>
 {% endhighlight %}
 {% highlight c# %}
 dataGrid.SelectionMode = SelectionMode.Multiple;
