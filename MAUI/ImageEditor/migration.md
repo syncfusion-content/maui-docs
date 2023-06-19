@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Migrate from Xamarin to .NET MAUI ImageEditor (SfImageEditor) | Syncfusion
-description: Learn about Migrating from Syncfusion Xamarin.Forms ImageEditor to Syncfusion .NET MAUI ImageEditor control.
+description: : Learn about Migrating from Syncfusion Xamarin.Forms ImageEditor to Syncfusion .NET MAUI ImageEditor control.
 platform: .Net MAUI
 control: SfImageEditor
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Migrate from Xamarin.Forms SfImageEditor to .NET MAUI SfImageEditor
 
-To make the migration from the `[Xamarin SfImageEditor]` to the `[.NET MAUI SfImageEditor]` easier, most of the APIs from the `Xamarin SfImageEditor` were kept in the `.NET MAUI SfImageEditor`. However, to maintain the consistency of API naming in the `.NET MAUI SfImageEditor`, some of the APIs have been renamed. Please find the difference in the following topics.
+To make the migration from the `[Xamarin SfImageEditor]` to the `[.NET MAUI SfImageEditor]` easier, most of the APIs from the Xamarin SfImageEditor are kept in the `.NET MAUI SfImageEditor`. However, to maintain the consistency of API naming in the `.NET MAUI SfImageEditor`, some of the APIs have been renamed. Please find the difference in the following topics.
 
 ## Namespaces
 
@@ -434,7 +434,7 @@ Applicable for crop view selection, shape and text annotation selection.
 <tr>
 <td>Flip</td>
 <td>Flip</td>
-<td>Method to reverses the image along its horizontal or vertical axis.</td>
+<td>Method to reverse the image along its horizontal or vertical axis. </td>
 </tr>
 
 <tr>
