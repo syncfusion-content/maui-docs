@@ -185,3 +185,132 @@ inputLayout.Content = new SfMaskedEntry() { MaskType = MaskedEntryMaskType.Simpl
 {% endtabs %}
 
 ![MaskedEntry](images/SupportedInputViews/MaskedEntry.png)
+
+## Picker
+
+To initialize the `Picker` control and launch it in each platform, refer to the `getting started with picker` documentation.
+
+{% tabs %}
+{% highlight XAML %}
+
+<inputLayout:SfTextInputLayout Hint="Fruit" 
+                               HelperText="Select a fruit"
+                               ContainerType="Outlined" >
+   <picker:Picker>
+        <Picker.ItemsSource>
+            <x:Array Type="{x:Type x:String}">
+                <x:String>Apple</x:String>
+                <x:String>Orange</x:String>
+                <x:String>Strawberry</x:String>
+            </x:Array>
+        </Picker.ItemsSource>
+   </picker:Picker>
+</inputLayout:SfTextInputLayout> 
+
+{% endhighlight %}
+{% highlight C# %}
+
+var inputLayout = new SfTextInputLayout();
+inputLayout.Hint = "Fruit"; 
+inputLayout.HelperText = "Select a fruit";
+inputLayout.ContainerType = ContainerType.OutLined;
+inputLayout.ContainerBackground = Colors.Transparent;
+inputLayout.Content = new SfPicker(); 
+
+{% endhighlight %}
+{% endtabs %}
+
+![Picker](images/SupportedInputViews/Picker.jpg)
+
+N> UWP and WPF will not support `Xamarin.Forms Picker` as input view of the text input layout.
+
+## TimePicker
+
+To initialize the `TimePicker` control and launch it in each platform, refer to the `getting started with time picker` documentation.
+
+{% tabs %}
+{% highlight XAML %}
+
+ <inputLayout:SfTextInputLayout Hint="Time" 
+                               HelperText="Select a start time"
+                               ContainerType="Outlined" >
+    <timepicker:TimePicker Time="12:00"/>
+ </inputLayout:SfTextInputLayout>
+
+{% endhighlight %}
+{% highlight C# %}
+
+var inputLayout = new SfTextInputLayout();
+inputLayout.Hint = "Time"; 
+inputLayout.HelperText = "Select a start time";
+inputLayout.ContainerType = ContainerType.OutLined;
+inputLayout.ContainerBackground = Colors.Transparent;
+inputLayout.Content = new TimePicker() {Time="12:00"}; 
+
+{% endhighlight %}
+{% endtabs %}
+
+![TimePicker](images/SupportedInputViews/TimePicker.jpg)
+
+N> UWP and WPF will not support `Xamarin.Forms TimePicker` as input view of the text input layout.
+
+## DatePicker
+
+To initialize the `DatePicker` control and launch it in each platform, refer to the `getting started with date picker` documentation.
+
+{% tabs %}
+{% highlight XAML %}
+
+<inputLayout:SfTextInputLayout Hint="Date of Birth" 
+                               HelperText="Select birth date"
+                               ContainerType="Outlined" >
+    <datepicker:DatePicker Date="06/20/2023"/>
+</inputLayout:SfTextInputLayout> 
+
+{% endhighlight %}
+{% highlight C# %}
+
+var inputLayout = new SfTextInputLayout();
+inputLayout.Hint = "Date of Birth"; 
+inputLayout.HelperText = "Select birth date";
+inputLayout.ContainerType = ContainerType.OutLined;
+inputLayout.ContainerBackground = Colors.Transparent;
+inputLayout.Content = new DatePicker() {Date="06/20/2023"}; 
+
+{% endhighlight %}
+{% endtabs %}
+
+![DatePicker](images/SupportedInputViews/DatePicker.jpg)
+
+N> UWP and WPF will not support `Xamarin.Forms DatePicker` as input view of the text input layout.
+
+## NumericEntry
+
+To initialize the `NumericEntry` control and launch it in each platform, refer to the `getting started with numeric entry` documentation.
+
+{% tabs %}
+{% highlight XAML %}
+
+<inputLayout:SfTextInputLayout Hint="Amount" 
+                               HelperText="Enter the amount"
+                               ContainerType="Outlined"
+                               ContainerBackground="Transparent" >
+   <numericEntry:SfNumericEntry Value="100" 
+                                ShowClearButton="True" 
+                                UpDownPlacementMode="Inline"/>
+</inputLayout:SfTextInputLayout> 
+
+{% endhighlight %}
+{% highlight C# %}
+
+var inputLayout = new SfTextInputLayout();
+inputLayout.Hint = "Card number"; 
+inputLayout.HelperText = "Required *";
+inputLayout.ContainerType = ContainerType.OutLined;
+inputLayout.ContainerBackground = Colors.Transparent;
+inputLayout.Content = new SfNumericEntry() {Value="100", ShowClearButton="True", UpDownPlacementMode="Inline"}; 
+
+{% endhighlight %}
+{% endtabs %}
+
+![NumericEntry](images/SupportedInputViews/NumericEntry_TIL.png)
