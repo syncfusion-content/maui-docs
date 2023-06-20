@@ -45,9 +45,7 @@ To enable drag and drop using both `OnHold` and `OnDragIndicator`, follow the co
 <ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView">
   <syncfusion:SfListView x:Name="listView" 
                    ItemsSource="{Binding ToDoList}"
-                   DragStartMode="OnHold, OnDragIndicator"
-                   BackgroundColor="#FFE8E8EC"
-                   ItemSize="60" />
+                   DragStartMode="OnHold, OnDragIndicator"/>
 </ContentPage>
 {% endhighlight %}
 {% highlight c# %}
@@ -64,29 +62,26 @@ To drag and drop the items by the `DragIndicatorView`, set the `SfListView.DragS
 N> You must set the SfListView instance as a reference to the `ListView` property in `DragIndicatorView`.
 
 {% tabs %}
-{% highlight xaml hl_lines="15"%}
+{% highlight xaml hl_lines="13"%}
 <ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView">
   <syncfusion:SfListView x:Name="listView" 
                    ItemsSource="{Binding ToDoList}"
-                   DragStartMode="OnDragIndicator"
-                   BackgroundColor="#FFE8E8EC"
-                   ItemSize="60">
+                   DragStartMode="OnDragIndicator">
   <syncfusion:SfListView.ItemTemplate>
     <DataTemplate>
-      <Grid Padding="10">
+      <Grid>
           <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />
             <ColumnDefinition Width="60" />
           </Grid.ColumnDefinitions>
-          <Label x:Name="textLabel" Text="{Binding Name}" Grid.Column="1" FontSize="15" TextColor="#333333" />
-          <syncfusion:DragIndicatorView Grid.Column="2" ListView="{x:Reference listView}" 
+          <Label x:Name="textLabel" Text="{Binding Name}" Grid.Column="0" FontSize="15" TextColor="#333333" />
+          <syncfusion:DragIndicatorView Grid.Column="1" ListView="{x:Reference listView}" 
                     HorizontalOptions="Center" 
                     VerticalOptions="Center">
             <Grid Padding="10, 20, 20, 20">
               <Image Source="dragindicator.png" />
             </Grid>
           </syncfusion:DragIndicatorView>
-        </Grid>
       </Grid>
     </DataTemplate>
   </syncfusion:SfListView.ItemTemplate>
@@ -118,22 +113,20 @@ listView.ItemTemplate = new DataTemplate(() =>
 
   grid.Children.Add(name);
   grid.Children.Add(dragIndicatorView);
-  grid.SetRow(dragIndicatorView, 1);
-  grid.SetColumn(dragIndicatorView, 0);
+  grid.SetColumn(name, 0);
+  grid.SetColumn(dragIndicatorView, 1);
   return grid;
 });
 {% endhighlight %}
 {% endtabs %}
 
-The screenshot shows the output of the reordering items by drag and drop.Download the entire source code from GitHub [here](https://github.com/SyncfusionExamples/how-to-load-drag-view-indicator-in-.net-maui-listview.).
+The screenshot shows the output of the reordering items by drag and drop. Download the entire source code from GitHub [here](https://github.com/SyncfusionExamples/how-to-load-drag-view-indicator-in-.net-maui-listview.).
 
 ![Item reordering by drag and drop](Images/item-drag-and-drop/maui-listview-dragviewindicator.gif)
 
 ## Drag item customization
 
 By defining the `SfListView.DragItemTemplate` property of the `SfListView`, you can display a custom user interface (UI) when performing drag and drop operations. The template can be defined either in code or XAML.
-
-N> If the `BackgroundColor` is set for the `DragItemTemplate` or `DragIndicatorView`, make sure to set `InputTransparent` to `true`. This is necessary because dragging does not occur when using the `DragIndicatorView` in UWP.
 
 {% tabs %}
 {% highlight xaml hl_lines="5"%}
@@ -247,16 +240,14 @@ private void ListView_ItemDragging(object sender, ItemDraggingEventArgs e)
 
 ## Reorder the underlying collection
 
-The underlying collection can be reordered directly by setting the `UpdateSource` property to `true`. The default value is `false`. 
+The underlying collection can be reordered directly by setting the `DragDropController.UpdateSource` property to `true`. The default value is `false`. 
 
 {% tabs %}
-{% highlight xaml hl_lines="9"%}
+{% highlight xaml hl_lines="7"%}
 <ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView">
   <syncfusion:SfListView x:Name="listView" 
                    ItemsSource="{Binding ToDoList}"
-                   DragStartMode="OnHold"
-                   BackgroundColor="#FFE8E8EC"
-                   ItemSize="60">
+                   DragStartMode="OnHold">
   <syncfusion:SfListView.DragDropController>
                 <syncfusion:DragDropController
                     UpdateSource="True">
@@ -270,7 +261,8 @@ this.listView.DragDropController.UpdateSource = true;
 {% endhighlight %}
 {% endtabs %}
 
-You can update collection even when `UpdateSource` is `false`. Like, the user can decide where the dragged item should be dropped actually by handling the `ItemDragging` event with `DragAction.Drop`.
+You can update collection even when `
+UpdateSource` is `false`. Like, the user can decide where the dragged item should be dropped actually by handling the `ItemDragging` event with `DragAction.Drop`.
 
 {% tabs %}
 {% highlight c# hl_lines="3"%}
@@ -303,16 +295,14 @@ To delete the dragged item from the underlying collection when dropping into the
 
   <Grid BackgroundColor="#2196F3">
     <Label Text="To Do Items" x:Name="headerLabel"  TextColor="White" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="Center" />
-    <StackLayout x:Name="stackLayout" IsVisible="{Binding IsVisible}" Orientation="Horizontal" VerticalOptions="Center" HorizontalOptions="Center">
+    <StackLayout x:Name="stackLayout" IsVisible="{Binding Path=IsVisible, Source={x:Reference headerLabel}, Converter={StaticResource inverseBoolConverter}}" Orientation="Horizontal" VerticalOptions="Center" HorizontalOptions="Center">
           <Image Source="delete.png" HeightRequest="30" WidthRequest="30" VerticalOptions="Center" HorizontalOptions="Center" />
           <Label x:Name="deleteLabel" Text="Delete Item" FontAttributes="Bold" TextColor="White" VerticalTextAlignment="Center" />
     </StackLayout>
   </Grid>
   <syncfusion:SfListView x:Name="listView" Grid.Row="1"
                    ItemsSource="{Binding ToDoList}"
-                   DragStartMode="OnHold"
-                   BackgroundColor="#FFE8E8EC"
-                   ItemSize="60" />
+                   DragStartMode="OnHold"/>
 </Grid>            
 </ContentPage>
 {% endhighlight %}
@@ -361,19 +351,17 @@ public partial class MainPage : ContentPage
 private async void ListView_ItemDragging(object sender, ItemDraggingEventArgs e)
 {
   var viewModel = this.listView.BindingContext as ViewModel;
+  var position = new Point(e.Position.X - this.ListView.Bounds.X, Math.Abs(e.Position.Y - this.ListView.Bounds.Y));
 
   if (e.Action == DragAction.Start)
   {
-    viewModel.IsVisible = true;
     this.headerLabel.IsVisible = false;
   }
 
   if(e.Action == DragAction.Dragging)
   {
-    var position = new Point(e.Position.X - this.ListView.Bounds.X, Math.Abs(e.Position.Y - this.ListView.Bounds.Y));
     if ((this.Stack.Bounds.Y < position.Y) && (this.Stack.Bounds.Y + this.Stack.Height) > position.Y)
     {
-      viewModel.IsVisible = true;
       this.deleteLabel.TextColor = Colors.Red;
     }
     else
@@ -382,13 +370,11 @@ private async void ListView_ItemDragging(object sender, ItemDraggingEventArgs e)
 
   if(e.Action == DragAction.Drop)
   {
-    var position = new Point(e.Position.X - this.ListView.Bounds.X, Math.Abs(e.Position.Y - this.ListView.Bounds.Y));
     if ((this.Stack.Bounds.Y < position.Y) && (this.Stack.Bounds.Y + this.Stack.Height) > position.Y)
     {
       await Task.Delay(100);
       viewModel.ToDoList.Remove(e.DataItem as ToDoItem);
     }
-    viewModel.IsVisible = false;
     this.deleteLabel.TextColor = Colors.White;
     this.headerLabel.IsVisible = true;
   }
