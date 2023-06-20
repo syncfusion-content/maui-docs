@@ -24,7 +24,7 @@ To export the SfDataGrid to an Excel file, the following NuGet package should be
 </tr>
 </table>
 
-The code sample below illustrates the process of exporting data to Excel using the `DataGridExcelExportingController.ExportToExcel` method, with SfDataGrid passed as an argument.
+The following code sample illustrates the process of exporting data to Excel. It utilizes the `DataGridExcelExportingController.ExportToExcel` method, with the SfDataGrid passed as an argument.
 
 {% tabs %}
 {% highlight xaml %}
@@ -97,7 +97,7 @@ var excelEngine = excelExport.ExportToExcel(this.dataGrid, exportOption);
 {% endhighlight %}
 {% endtabs %}
 
-The SfDataGrid provides several properties in `DataGridExcelExportingOption` class to customize the grid while exporting it to Excel.
+The SfDataGrid offers various properties within the `DataGridExcelExportingOption` class to enable customization of the grid when exporting it to Excel.
 
 ### Exporting formatted text and actual value
 
@@ -209,7 +209,7 @@ DataGridExcelExportingOption option = new DataGridExcelExportingOption();
 
 ### Exclude columns when exporting
 
-By default, all the columns (including hidden columns) in the SfDataGrid will be exported to Excel. To exclude some particular columns when exporting to Excel, add those columns to the `DataGridExcelExportingOption.ExcludeColumns` property in `DataGridExcelExportingOption` list.
+By default, all columns (including hidden columns) in the SfDataGrid are exported to Excel. To exclude specific columns when exporting to Excel, add those columns to the `DataGridExcelExportingOption.ExcludeColumns` property in the `DataGridExcelExportingOption` list.
 
 {% tabs %}
 {% highlight c# %}
@@ -239,7 +239,7 @@ var excelEngine = excelExport.ExportToExcel(this.dataGrid, selectedItems);
 
 ### Customize Exporting Excel Version
 
-The SfDataGrid allows exporting the data to Excel in specific versions by using the `DataGridExcelExportingOption.ExcelVersion` property.
+The SfDataGrid enables the exportation of data to Excel in specific versions through the utilization of the `DataGridExcelExportingOption.ExcelVersion` property.
 
 {% tabs %}
 {% highlight c# %}
