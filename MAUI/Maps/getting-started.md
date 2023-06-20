@@ -11,6 +11,11 @@ documentation: ug
 
 This section explains the steps required to add the maps control with the shape layer and its elements such as data labels, tooltip, markers, and legends. This section covers only basic features needed to know to get started with Syncfusion maps.
 
+To get start quickly with our .NET MAUI Maps, you can check the below video.
+
+{% youtube
+"youtube:https://www.youtube.com/watch?v=ibUB70vM5DU"%}
+
 ## Creating an application using the .NET MAUI Maps
 
 * Create a new .NET MAUI application in the Visual Studio.
