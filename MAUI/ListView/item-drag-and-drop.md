@@ -400,64 +400,6 @@ Download the sample from GitHub [here](https://github.com/SyncfusionExamples/how
 
 ![Delete item while drop in listview](Images/item-drag-and-drop/maui-listview-draganddel.gif)
 
-## Skip dragging item into another group
-
-To skip dragging from one group to another group, handle the `ItemDragging` event based on the conditions of the `Action` and `Bounds` event arguments.
-
-N> While auto-scrolling, dragging item cannot be skipped.
-
-Skip the dragging item by the bounds of the dragging item, and the bounds of the current and next group item.
-
-{% tabs %}
-{% highlight c# hl_lines="4,25"%}
-using Syncfusion.Maui.ListView.Helpers;
-private async void ListView_ItemDragging(object sender, ItemDraggingEventArgs e)
-{
-  if (e.Action == DragAction.Dragging)
-  {
-    var currentGroup = this.GetGroup(e.DataItem);
-    var container = this.ListView.GetVisualContainer();
-    var groupIndex = this.ListView.DataSource.Groups.IndexOf(currentGroup);
-    var nextGroup = (groupIndex + 1 < this.ListView.DataSource.Groups.Count) ? this.ListView.DataSource.Groups[groupIndex + 1] : null;
-    ListViewItem groupItem = null;
-    ListViewItem nextGroupItem = null;
-
-    foreach (ListViewItem item in container.Children)
-    {
-      if (item.BindingContext == null || !item.Visibility)
-        continue;
-
-      if (item.BindingContext.Equals(currentGroup))
-        groupItem = item;
-
-      if (nextGroup != null && item.BindingContext.Equals(nextGroup))
-        nextGroupItem = item;
-      }
-
-      if (groupItem != null && e.Bounds.Y <= groupItem.Y + groupItem.Height || nextGroupItem != null && (e.Bounds.Y + e.Bounds.Height >= nextGroupItem.Y))
-        e.Handled = true;
-  }
-}
-
-private GroupResult GetGroup(object itemData)
-{
-  GroupResult itemGroup = null;
-
-  foreach (var item in this.listView.DataSource.DisplayItems)
-  {
-    if (item is GroupResult)
-      itemGroup = item as GroupResult;
-
-    if (item == itemData)
-      break;
-  }
-  return itemGroup;
-}
-{% endhighlight %}
-{% endtabs %}
-
-Download sample from GitHub [here](https://github.com/SyncfusionExamples/how-to-skip-dragging-an-item-from-one-group-to-another-in-.net-maui-listview.)
-
 ## Drag and drop customization
 
 ### Adjust drag item axis
@@ -477,7 +419,4 @@ public class DragDropControllerExt : DragDropController
 }
 {% endhighlight %}
 {% endtabs %}
-
-
-
 
