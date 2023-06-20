@@ -43,14 +43,14 @@ Default group caption format is `{ColumnName}: {Key} - {ItemsCount} Items`.
 You can customize the group caption text format by setting the `SfDataGrid.GroupCaptionTextFormat` property. The code example below illustrates how to customize the group caption text in the data grid:
 
 {% tabs %}
-{% highlight xaml%}
+{% highlight xaml %}
     <sfGrid:SfDataGrid x:Name="dataGrid"
                        AutoGenerateColumns="True"
                        ColumnSizer="Star"
                        GroupCaptionTextFormat="{}{ColumnName}: {Key}">
 {% endhighlight %}
 
-{% highlight c#%}
+{% highlight c# %}
 // Customized group caption text
 dataGrid.GroupCaptionTextFormat = "{ColumnName} : {Key}";
 {% endhighlight %}
@@ -66,7 +66,7 @@ The following screenshot shows the outcome of the previous code:
 Display summary information in a row by setting the [DataGridSummaryRow.ShowSummaryInRow]() property to `true` and define summary columns. You have to define the [DataGridSummaryRow.Title]() based on the [DataGridSummaryColumn.Name]() property in order to format the values of the summary columns in the row.
 
 {% tabs %}
-{% highlight xaml%}
+{% highlight xaml %}
     <sfGrid:SfDataGrid.CaptionSummaryRow>
         <sfGrid:DataGridSummaryRow Title="Total Salary :{TotalSalary} for {ProductCount} members"
                                    ShowSummaryInRow="True">
@@ -84,7 +84,7 @@ Display summary information in a row by setting the [DataGridSummaryRow.ShowSumm
     </sfGrid:SfDataGrid.CaptionSummaryRow>
 {% endhighlight %}
 
-{% highlight c#%}
+{% highlight c# %}
 DataGridSummaryRow summaryRow = new DataGridSummaryRow();
 summaryRow.Title = "Total Salary:{TotalSalary} for {ProductCount} members";
 summaryRow.ShowSummaryInRow = true;
@@ -128,7 +128,7 @@ Please refer to the "Formatting Summary" section for more information on how to 
 In the following code snippet, a summary is defined for the `Salary` column:
 
 {% tabs %}
-{% highlight xaml%}
+{% highlight xaml %}
     <sfGrid:SfDataGrid.CaptionSummaryRow>
         <sfGrid:DataGridSummaryRow Name="CaptionSummary"
                                    ShowSummaryInRow="False">
@@ -153,7 +153,7 @@ summaryRow.SummaryColumns.Add(new DataGridSummaryColumn()
     SummaryType = SummaryType.DoubleAggregate
 });
 sfGrid.CaptionSummaryRow= summaryRow;
-{% endhighlight c#%}
+{% endhighlight c# %}
 {% endtabs %}
 
 ![DataGrid with caption summary cells customized](Images\caption-summary\maui-datagrid-show-summary-in-column.png)
@@ -171,7 +171,7 @@ The template for a caption summary row can be customized by using the [SfDataGri
 Please refer to the code example below, where a label is loaded in the caption summary template of the caption summary row:
 
 {% tabs %}
-{% highlight xaml%}
+{% highlight xaml %}
     <ContentPage.Resources>
         <ResourceDictionary>
             <local:GroupCaptionConverter x:Key="SummaryConverter" />
@@ -252,7 +252,7 @@ The template for a caption summary column can be customized by using the `DataGr
 Here's an example code snippet that demonstrates how to load a label in the template of a caption summary column:
 
 {% tabs %}
-{% highlight xaml%}
+{% highlight xaml %}
      <ContentPage.Resources>
          <ResourceDictionary>
              <local:GroupCaptionConverter x:Key="SummaryConverter" />
@@ -468,7 +468,7 @@ The template for a group summary row can be customized by using the `SfDataGrid.
 Refer to the code example below, which demonstrates how to load a label in the group summary template of a group summary row:
 
 {% tabs %}
-{% highlight xaml%}
+{% highlight xaml %}
     <ContentPage.Resources>
         <ResourceDictionary>
             <local:GroupSummaryConverter x:Key="SummaryConverter" />
@@ -509,7 +509,7 @@ Refer to the code example below, which demonstrates how to load a label in the g
             </sfgrid:DataGridSummaryRow>
         </sfgrid:SfDataGrid.GroupSummaryRows>
     </sfgrid:SfDataGrid>
-{% endhighlight%}
+{% endhighlight %}
 {% endtabs %}
 
 {% tabs %}
@@ -547,7 +547,7 @@ The template for a group summary column can be customized by using the `GridSumm
 Please refer to the code example below, which demonstrates how to load a label in the template of a group summary column:
 
 {% tabs %}
-{% highlight xaml%}
+{% highlight xaml %}
     <ContentPage.Resources>
         <ResourceDictionary>
             <local:GroupSummaryConverter x:Key="SummaryConverter" />
