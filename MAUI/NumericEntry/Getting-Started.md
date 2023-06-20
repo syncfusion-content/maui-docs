@@ -11,13 +11,9 @@ documentation: ug
 
 This section explains the steps required to add the `.NET MAUI NumericEntry` control in the MAUI application and utilize the various functions provided.
 
-## Structure of NumericEntry control
-
-![.NET MAUI NumericEntry Structure](Overview_images/overview_img.png)
-
 ## Creating an application with .NET MAUI NumericEntry
 
-In this walkthrough, you will create a .NET MAUI application that contains the `NumericEntry` control.
+This section explains the steps required to work with the `SfNumericEntry` control for .NET MAUI.
 
 ## Handler registration 
 
@@ -99,8 +95,8 @@ By default, the `NumericEntry` control allows you to enter numeric input and res
 {% highlight xaml %}
 
 <editors:SfNumericEntry HorizontalOptions="Center" 
-                     VerticalOptions="Center" 
-                     CustomFormat="0.000" />
+                        VerticalOptions="Center" 
+                        CustomFormat="0.000" />
 
 {% endhighlight %}
 {% highlight C# %}
@@ -123,9 +119,9 @@ You can change the format in which the value should be displayed using the `Cust
 {% highlight xaml %}
 
 <editors:SfNumericEntry HorizontalOptions="Center"
-                     VerticalOptions="Center"
-                     Value="12.5" 
-                     CustomFormat="C2" />
+                        VerticalOptions="Center"
+                        Value="12.5" 
+                        CustomFormat="C2" />
 
 {% endhighlight %}
 {% highlight C# %}
@@ -149,14 +145,15 @@ By default, the `NumericEntry` control allows a **null** value. A null value is 
 {% highlight xaml %}
 
 <editors:SfNumericEntry HorizontalOptions="Center"
-                     VerticalOptions="Center"
-                     Value="12315"
-                     AllowNull="False" />
+                        VerticalOptions="Center"
+                        Value="12315"
+                        AllowNull="False" />
 
 {% endhighlight %}
 {% highlight C# %}
 
 SfNumericEntry sfNumericEntry = new SfNumericEntry();
+sfNumericEntry.Value=12315;
 sfNumericEntry.HorizontalOptions = LayoutOptions.Center;
 sfNumericEntry.VerticalOptions = LayoutOptions.Center;
 sfNumericEntry.AllowNull = false;
@@ -198,19 +195,18 @@ N> The clear button appears only when the text box is focused and the `IsEditabl
 {% tabs %}
 {% highlight xaml %}
 
-<editors:SfNumericEntry x:Name="numericEntry"  
-            WidthRequest="300"                   
-            ShowClearButton="True" 
-            IsEditable="True" 
-            Value="10"/>
+<editors:SfNumericEntry ShowClearButton="True" 
+                        IsEditable="True" 
+                        Value="10"/>
 
 
 {% endhighlight %}
 {% highlight C# %}
 
-SfNumericEntry SfNumericEntry = new SfNumericEntry();
-SfNumericEntry.ShowClearButton = true;
-SfNumericEntry.IsEditable = true; 
+SfNumericEntry sfNumericEntry = new SfNumericEntry();
+sfNumricEntry.Value=10;
+sfNumericEntry.ShowClearButton = true;
+sfNumericEntry.IsEditable = true; 
 
 
 {% endhighlight %}
@@ -236,8 +232,7 @@ The `ValueChanged` event is triggered when the `Value` property of the `NumericE
 {% highlight xaml %}
 
 <editors:SfNumericEntry HorizontalOptions="Center"
-                     VerticalOptions="Center" 
-                     x:Name="sfNumericEntry"
+                     VerticalOptions="Center"
                      ValueChanged="sfNumericEntry_ValueChanged" />
 
 {% endhighlight %}
@@ -256,7 +251,7 @@ You can handle the event as follows.
 {% tabs %}
 {% highlight C# %}
 
-private void sfNumericEntry_ValueChanged(object sender, ValueChangedEventArgs e)
+private void sfNumericEntry_ValueChanged(object sender, NumericEntryValueChangedEventArgs e)
 {
     var oldValue = e.OldValue;
     var newValue = e.NewValue;

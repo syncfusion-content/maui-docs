@@ -22,6 +22,18 @@ Using the **N**, **C**, and **P** format values, we can apply numeric, currency,
 N> You can apply various custom formats available in `this page`, which are supported for the `double` type.
 
 {% tabs %}
+{% highlight xaml %}
+
+// Format stock price in currency.
+<editors:SfNumericEntry CustomFormat="C2"/>
+
+// Format product discount in percent.
+<editors:SfNumericEntry CustomFormat="P2"/>
+
+// Format worked hours in decimal.
+<editors:SfNumericEntry CustomFormat="N2"/>
+
+{% endhighlight %}
 {% highlight c# %}
 
 // Format stock price in currency.
@@ -47,6 +59,18 @@ For the `CustomFormat` property, use the **0** format specifier to set the minim
 N> **0** (Zero placeholder) replaces the zero with the corresponding digit present in the value; otherwise, zero appends with the leftmost position of the value. 
 
 {% tabs %}
+{% highlight xaml %}
+
+// Format stock price in currency.
+<editors:SfNumericEntry CustomFormat = "$00000.00"/>
+
+// Format product discount in percentage.
+<editors:SfNumericEntry CustomFormat = "00000.00%"/>
+
+// Format worked hours in decimal.
+<editors:SfNumericEntry CustomFormat = "00000.00"/>
+
+{% endhighlight %}
 {% highlight c# %}
 
 // Format stock price in currency.
@@ -72,6 +96,13 @@ For the `CustomFormat` property, use the **0** format specifier to set the minim
 N> **0** (Zero placeholder) replaces the zero with the corresponding digit in the value.
 
 {% tabs %}
+{% highlight xaml %}
+
+<editors:SfNumericEntry CustomFormat = "$000.000"/>
+<editors:SfNumericEntry CustomFormat = "00.000%"/>
+<editors:SfNumericEntry CustomFormat = "00.000"/>
+
+{% endhighlight %}
 {% highlight c# %}
 
 stockPrice.CustomFormat = "$000.000";
@@ -96,6 +127,13 @@ In the following example, the value of the `CustomFormat` property is **#.00##**
 {% tabs %}
 {% highlight xaml %}
 
+<editors:SfNumericEntry CustomFormat = "$00.00##"/>
+<editors:SfNumericEntry CustomFormat = "00.00##%"/>
+<editors:SfNumericEntry CustomFormat = "00.00##"/>
+
+{% endhighlight %}
+{% highlight c# %}
+
 stockPrice.CustomFormat = "$00.00##";
 productDiscount.CustomFormat = "00.00##%";
 hoursWorked.CustomFormat = "00.00##";
@@ -113,10 +151,9 @@ The culture support allows the control to be configured for a specific language.
 {% tabs %}
 {% highlight c# %}
 
-CultureInfo ci = new CultureInfo("en-US");
-NumericEntry.Culture = ci;
+CultureInfo culture = new CultureInfo("en-US");
+NumericEntry.Culture = culture;
          
-
 {% endhighlight %}
 {% endtabs %}
 

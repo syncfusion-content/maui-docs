@@ -17,7 +17,7 @@ By default, an empty or null value is set in the `NumericEntry` control when the
 
 N> When the value of the `Minimum` property is **15**, and the `AllowNull` property is **true**, the **null** value is returned in the `NumericEntry` control after clearing the input.
 
-N> When the value of the Minimum property is **15**, and the `AllowNull` property is **false**, the `minimum` value is returned in `Num` control after clearing the input.
+N> When the value of the Minimum property is **15**, and the `AllowNull` property is **false**, the `minimum` value is returned in `NumericEntry` control after clearing the input.
 
 {% tabs %}
 {% highlight xaml %}
@@ -71,7 +71,7 @@ sfNumericEntry.Value = 50;
 
 ## Restrict text editing
 
-You can prevent users from editing the numerical value in the editor using the `IsEditable` property. However, you can still change the value using the up-down buttons, mouse scroll, keyboard arrows, and page keys. By default, the value of the `IsEditable` property is **false**.
+You can prevent users from editing the numerical value in the editor using the `IsEditable` property. However, you can still change the value using the up-down buttons, mouse scroll, keyboard arrows, and page keys. By default, the value of the `IsEditable` property is **true**.
 
 
 

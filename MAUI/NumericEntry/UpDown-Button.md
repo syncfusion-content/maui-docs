@@ -29,8 +29,10 @@ N> The value in the `NumericEntry` can also be changed by mouse scrolling. The m
 {% endhighlight %}
 {% highlight C# %}
 
-SfNumericEntry SfNumericEntry= new SfNumericEntry();
-SfNumericEntry.Placeholder = "Enter input here...";
+SfNumericEntry sfNumericEntry= new SfNumericEntry();
+sfNumericEntry.Value=10;
+sfNumericEntry.SmallChange=5;
+sfNumericEntry.LargeChange=10;
 sfNumericEntry.HorizontalOptions = LayoutOptions.Center;
 sfNumericEntry.VerticalOptions = LayoutOptions.Center;
 
@@ -48,8 +50,7 @@ N> When using the up-down button, the `NumericEntry` control value changes based
 {% tabs %}
 {% highlight XAML %}
 
-<editors:SfNumericEntry x:Name="sfNumericEntry" 
-                     HorizontalOptions="Center"
+<editors:SfNumericEntry HorizontalOptions="Center"
                      VerticalOptions="Center"
                      Value="360";
                      UpDownPlacementMode="Inline" />
@@ -60,9 +61,10 @@ N> When using the up-down button, the `NumericEntry` control value changes based
 SfNumericEntry sfNumericEntry = new SfNumericEntry();
 sfNumericEntry.HorizontalOptions = LayoutOptions.Center;
 sfNumericEntry.VerticalOptions = LayoutOptions.Center;
+sfNumericEntry.Value=360;
 sfNumericEntry.UpDownPlacementMode = NumericEntryUpDownPlacementMode.Inline;
 
 {% endhighlight %}
 {% endtabs %}
 
-![UpDown Placement in .NET MAUI NumericEntry](SpinButton_images/spinbuttonPlacement.gif)
+![UpDown Placement in .NET MAUI NumericEntry](UpDownButton_images/UpDownButtonPlacement.gif)
