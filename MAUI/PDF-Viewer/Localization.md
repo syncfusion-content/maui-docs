@@ -9,9 +9,9 @@ documentation: ug
 
 # Localization in .NET MAUI PDF Viewer (SfPdfViewer)
 
-Localization is the process of translating the application resources into different language for the specific cultures. [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) is set up by default with the language code `en-US`. However, by including a resource file (.resx) in the application with the particular language code, the static text used in the `SfPdfViewer` can be localized to a different language. 
+Localization is the process of translating the application resources into a different language for the specific cultures. [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) is set up by default with the language code `en-US`. However, by including a resource file (.resx) in the application with the language code, the static text used in the `SfPdfViewer` can be localized to a different language. 
 
-Follow the instructions below to apply localization to the `SfPdfViewer`.
+Follow the instructions given to apply localization to the `SfPdfViewer`.
 
 ## Change the current user interface culture
 
@@ -37,29 +37,29 @@ public partial class App : Application
 {% endhighlight %}
 {% endtabs %}
 
-## Create and add the resource file into the application
+## Create and add the resource file to the application
 
-Follow the below steps to create and add the resource file into the application.
+Follow the given steps to create and add the resource file to the application.
 
 1. Right-click on the `Resources` folder in the application.
 
     ![Resources folder in the .NET MAUI PDF Viewer application.](Images/Localization/Resources.png)
 
-2. Click `Add` and then `NewItem`.
+2. Click the `Add` option and then select `NewItem`.
 
     ![Add new item in the .NET MAUI PDF Viewer application.](Images/Localization/NewItem.png)
 
-3. In the `Add New Item` wizard, select the `Resource File` item and name the file in the format `<control name>.<culture name>.resx`. For example, name the file as SfPdfViewer.fr.resx for `French` culture.
+3. In the `Add New Item` wizard, select the `Resource File` option and name the file in the format `<control name>.<culture name>.resx`. For example, name the file as SfPdfViewer.fr.resx for `French` culture.
 
     ![Adding resource file in the .NET MAUI PDF Viewer application.](Images/Localization/Resx.png)
 
-4. Click `Add` to add the resource file in the Resources folder.
+4. Click the `Add` option to add the resource file in the Resources folder.
 
 5. Change the `Build Action` of the resource file as `Embedded resource`.
 
     ![Build action of resource file](Images/Localization/BuildAction.png)
 
-6. Double tap on the resource file to add (or) edit the name and value details in the resource designer. You can find the default names and values of `SfPdfViewer` in the later section.
+6. Double tap on the resource file to add the name and value details in the Resource Designer. You can refer to the default names and values in the following section:
  
     ![Localization name value pair in the .NET MAUI PDF Viewer application.](Images/Localization/NameValue.png)
 	
@@ -91,7 +91,7 @@ public partial class App : Application
 
 ## Default names and values
 
-The default name and value information used in the `SfPdfViewer` in the language `en-US` is listed in the following table.
+The following table contains the default name and value details used in the SfPdfViewer in the `en-US` 
 
 <table>
 <tr>

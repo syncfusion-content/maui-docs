@@ -15,6 +15,7 @@ To get start quickly with apply styling .NET MAUI DataGrid, you can check on thi
 
 <style>#MAUIDataGridVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUIDataGridVideoTutorial' src="https://www.youtube.com/embed/1HHHz5isIM4?start=66"></iframe>
 
+
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml"%}
 <ContentPage xmlns:syncfusion="http://schemas.syncfusion.com/maui">
@@ -171,6 +172,120 @@ The header row can be customized by the writing style for [DataGridHeaderRow](ht
 {% endtabs %}
 
 ![Header row styling in .NET MAUI DataGrid](Images/styling/maui-datagrid-headerrow-style.png)
+
+### Styling Table Summary cell
+The table summary cell can be customized by the writing style for [DataGridTableSummaryCell]() TargetType.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml"%}
+<ContentPage xmlns:syncfusion="http://schemas.syncfusion.com/maui">
+    <ContentPage.Resources>
+        <Style TargetType="syncfusion:DataGridTableSummaryCell">
+            <Setter Property="Background" Value="#0074E3"/>
+            <Setter Property="TextColor" Value="White"/>
+            <Setter Property="FontAttributes" Value="Bold"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="FontFamily" Value="TimesNewRoman"/>
+        </Style>
+    </ContentPage.Resources>
+</ContentPage>
+{% endhighlight %}
+{% endtabs %}
+
+![Table summary cell styling in .NET MAUI DataGrid](Images/styling/maui-datagrid-table-summary-cell-style.png)
+
+### Styling Table Summary row
+The table summary row can be customized by the writing style for [DataGridTableSummaryRowView]() TargetType.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml"%}
+<ContentPage xmlns:syncfusion="http://schemas.syncfusion.com/maui">
+    <ContentPage.Resources>
+        <Style TargetType="syncfusion:DataGridTableSummaryRowView">
+            <Setter Property="Background" Value="#0074E3"/>
+        </Style>
+    </ContentPage.Resources>
+</ContentPage>
+{% endhighlight %}
+{% endtabs %}
+
+![Table summary row styling in .NET MAUI DataGrid](Images/styling/maui-datagrid-table-summary-row-style.png)
+
+### Styling Caption Summary cell
+The caption summary cell can be customized by the writing style for [DataGridCaptionSummaryCell]() TargetType.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml"%}
+<ContentPage xmlns:syncfusion="http://schemas.syncfusion.com/maui">
+    <ContentPage.Resources>
+        <Style TargetType="syncfusion:DataGridCaptionSummaryCell">
+            <Setter Property="Background" Value="#0074E3"/>
+            <Setter Property="TextColor" Value="White"/>
+            <Setter Property="FontAttributes" Value="Bold"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="FontFamily" Value="TimesNewRoman"/>
+        </Style>
+    </ContentPage.Resources>
+</ContentPage>
+{% endhighlight %}
+{% endtabs %}
+
+![Caption summary cell styling in .NET MAUI DataGrid](Images/styling/maui-datagrid-caption-summary-cell-style.png)
+
+### Styling Caption Summary row
+The caption summary row can be customized by the writing style for [DataGridCaptionSummaryRowView]() TargetType.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml"%}
+<ContentPage xmlns:syncfusion="http://schemas.syncfusion.com/maui">
+    <ContentPage.Resources>
+        <Style TargetType="syncfusion:DataGridCaptionSummaryRowView">
+            <Setter Property="Background" Value="#0074E3"/>
+        </Style>
+    </ContentPage.Resources>
+</ContentPage>
+{% endhighlight %}
+{% endtabs %}
+
+![Caption summary row styling in .NET MAUI DataGrid](Images/styling/maui-datagrid-caption-summary-row-style.png)
+
+### Styling Group Summary cell
+The group summary cell can be customized by the writing style for [DataGridGroupSummaryCell]() TargetType.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml"%}
+<ContentPage xmlns:syncfusion="http://schemas.syncfusion.com/maui">
+    <ContentPage.Resources>
+        <Style TargetType="syncfusion:DataGridGroupSummaryCell">
+            <Setter Property="Background" Value="#0074E3"/>
+            <Setter Property="TextColor" Value="White"/>
+            <Setter Property="FontAttributes" Value="Bold"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="FontFamily" Value="TimesNewRoman"/>
+        </Style>
+    </ContentPage.Resources>
+</ContentPage>
+{% endhighlight %}
+{% endtabs %}
+
+![Group summary cell styling in .NET MAUI DataGrid](Images/styling/maui-datagrid-group-summary-cell-style.png)
+
+### Styling Group Summary row
+The group summary row can be customized by the writing style for [DataGridGroupSummaryRowView]() TargetType.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml"%}
+<ContentPage xmlns:syncfusion="http://schemas.syncfusion.com/maui">
+    <ContentPage.Resources>
+        <Style TargetType="syncfusion:DataGridGroupSummaryRowView">
+            <Setter Property="Background" Value="#0074E3"/>
+        </Style>
+    </ContentPage.Resources>
+</ContentPage>
+{% endhighlight %}
+{% endtabs %}
+
+![Group summary row styling in .NET MAUI DataGrid](Images/styling/maui-datagrid-group-summary-row-style.png)
 
 ### Column Styling 
 You can apply the style for a particular column by using [DataGridColumn.CellStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_CellStyleProperty) and [DataGridColumn.HeaderStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_HeaderStyleProperty) property.
