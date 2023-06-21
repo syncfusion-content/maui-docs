@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Basic Features in .NET MAUI Masked Entry control | Syncfusion
-description:  Learn here all about Basic Features support in Syncfusion .NET MAUI Masked Entry (SfMaskedEntry) control and more.
+Description: Learn about Basic Features support in Syncfusion .NET MAUI Masked Entry (SfMaskedEntry) control and more.
 platform: maui
 control: SfMaskedEntry
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 ## Setting ClearButtonVisibility
 
-ClearButtonVisibility, of type ClearButtonVisibility, controls whether a clear button is displayed, which enables the user to clear the text. The default value of this property is `ClearButtonVisibility.Never`.
+The ClearButtonVisibility of type ClearButtonVisibility controls whether a clear button is displayed, which enables the user to clear the text. The default value of this property is `ClearButtonVisibility.Never`.
 
 {% tabs %}
 {% highlight XAML %}
@@ -37,10 +37,11 @@ maskedEntry.ClearButtonVisibility = Visible;
 
 ## Setting CursorPosition
 
-Cursor position in the masked entry can either be obtained or updated using `CursorPosition` property in SfMaskedEntry.
+The cursor position in the masked entry can either be obtained or updated using the `CursorPosition` property in SfMaskedEntry.
 
 ## Setting FontSize
-The Masked Entry control provides the user to customize the font size of the text inside the entry part using `FontSize` property of type double.
+
+The Masked Entry control allows the user to customize the font size of the text inside the entry part using the `FontSize` property of type double.
 
 {% tabs %}
 {% highlight XAML %}
@@ -67,7 +68,9 @@ maskedEntry.FontSize = 18;
 
 ## Setting FontAttributes
 
-The Masked Entry control provides the user to customize the font attribute of the text inside the entry part using `FontAttributes` property of type FontAttributes.
+The Masked Entry control allows the user to customize the font attribute of the text inside the entry part using the `FontAttributes` property of the type FontAttributes.
+
+
 
 {% tabs %}
 {% highlight XAML %}
@@ -94,7 +97,7 @@ maskedEntry.FontAttributes = FontAttributes.Bold;
 
 ## Setting FontFamily
 
-The Masked Entry control provides the user to customize the font family of the text inside the entry part using `FontFamily` property of type string.
+The Masked Entry control allows the user to customize the text's font family inside the entry part using the `FontFamily` property of the type string.
 
 {% tabs %}
 {% highlight XAML %}
@@ -121,12 +124,12 @@ maskedEntry.FontFamily = "Lobster-Regular";
 
 ## Setting Keyboard
 
-The Masked Entry control provides the user to specifies the virtual keyboard that's displayed when entering text using `Keyboard` property of type Keyboard.
+The Masked Entry control allows the user to specify the virtual keyboard displayed when entering text using the `Keyboard` property of type Keyboard.
 
 
 ## Setting Placeholder
 
-The Masked Entry control provides the user to defines the text that's displayed when the Mask and Value is empty using `Placeholder` property of type `string.` The default value of the Placeholder property is string.Empty.
+The Masked Entry control allows the user to define the text displayed when the Mask and Value are empty using the `Placeholder` property of type `string`. The default value of the Placeholder property is string.Empty.
 
 {% tabs %}
 {% highlight XAML %}
@@ -148,7 +151,7 @@ maskedEntry.Placeholder = "Enter the value";
 
 ## Setting PlaceholderColor
 
-The `SfMaskedEntry` control provides the user to customize the color of the placeholder text using `PlaceholderColor` property of type `Color.` The default value of the PlaceholderColor property is Colors.Gray.
+The `SfMaskedEntry` control allows the user to customize the color of the placeholder text using the `PlaceholderColor` property of type `Color`. The default value of the PlaceholderColor property is Colors.Gray.
 
 {% tabs %}
 {% highlight XAML %}
@@ -172,7 +175,7 @@ maskedEntry.PlaceholderColor =  Colors.Green;
 
 ## Setting TextColor
 
-The `SfMaskedEntry` control provides the user to customize the color of the entered text using `TextColor` property of type `Color.` The default value of the TextColor property is Colors.Black.
+The `SfMaskedEntry` control provides the user to customize the color of the entered text using the `TextColor` property of type `Color`. The default value of the TextColor property is Colors.Black.
 
 {% tabs %}
 {% highlight XAML %}
