@@ -10,7 +10,7 @@ documentation: ug
 # Right to left in .NET MAUI PDF Viewer (SfPdfViewer)
 
 By default, the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) control laid out in the left-to-right flow direction. For the convenience of right-to-left language users, it enables changing the flow direction to right-to-left (RTL). This can be achieved by setting the [FlowDirection](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.iview.flowdirection?view=net-maui-7.0) property to `RightToLeft`. 
-Setting the `FlowDirection` property to `RightToLeft` on SfPdfViewer sets the alignment to the right, and layouts the built-in controls used in the SfPdfViewer to flow from right-to-left. Refer the following code example to apply the same.
+Setting the `FlowDirection` property to `RightToLeft` on the SfPdfViewer sets the alignment to the right, and layouts the built-in controls used in the SfPdfViewer to flow from right-to-left. Refer to the following code example to apply the same.
 
 {% tabs %}
 {% highlight XAML %}
@@ -27,4 +27,4 @@ Setting the `FlowDirection` property to `RightToLeft` on SfPdfViewer sets the al
 {% endhighlight %}
 {% endtabs %}
 
-N> Right-to-Left language users can also refer to `Localization` section for information on how to localize the static text used in the SfPdfViewer to other languages.
+N> Right-to-Left language users can also refer to this [section](https://help.syncfusion.com/maui/pdf-viewer/migration#upcoming-features) for information on how to localize the static text used in the PDF reader to other language.
