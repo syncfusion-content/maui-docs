@@ -7,7 +7,7 @@ control: Chips
 documentation: ug
 ---
 
-# DataTemplateSelector in Xamarin Chips
+# DataTemplateSelector in .NET MAUI Chips
 You can customize the appearance of each chip with different templates based on specific constraints using the [`DataTemplateSelector`].
 
 ## Create and initialize business models 
@@ -123,4 +123,4 @@ this.Content = chipGroup;
 {% endhighlight %}
 {% endtabs %}
 
-![DataTemplateSelector support for SfChipGroup in Xamarin.Forms](images\customization-images/xamarin-forms-datatemplateselector.png)
+![DataTemplateSelector support for SfChipGroup in .NET MAUI](images\customization-images/datatemplateselector.png)

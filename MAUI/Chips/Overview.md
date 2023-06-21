@@ -17,4 +17,4 @@ The .NET MAUI Chip control is a versatile and feature-rich component that allows
 * Customize the appearance of the chips by adding a background image.
 * Easily modify the text color, background color, border color, border thickness, and selection color of the MAUI Chips, ensuring a cohesive and visually appealing design.
 
-![NET MAUI Chip](chip_images/maui_chip.png)
+![NET MAUI Chip](images/overview/maui_chip.png)

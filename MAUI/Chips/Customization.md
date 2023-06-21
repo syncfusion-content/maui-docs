@@ -7,7 +7,7 @@ control: Chips
 documentation: ug
 ---
 
-# Customization in Xamarin Chips
+# Customization in .NET MAUI Chips
 
 The chip control supports to customize the background color, border color, close button color, and more. The chip control can be customized using the following properties:
 
@@ -92,11 +92,9 @@ The [`ShowSelectionIndicator`] property sets the visible state of selection indi
   
    <ContentPage.Content>
         <StackLayout Margin="8,8,8,8" >
-           <core:SfChip  Text="James" 
-                            WidthRequest="150"
+           <core:SfChip     WidthRequest="150"
                             HorizontalOptions="Center"
                             VerticalOptions="Center"
-                            ShowCloseButton="true"
                             ShowSelectionIndicator="true"
                             >
            </core:SfChip>  
@@ -121,11 +119,9 @@ namespace ChipCustomization
             InitializeComponent();
             StackLayout stackLayout = new StackLayout();
             SfChip chip = new SfChip();
-            chip.Text = "James";
             chip.WidthRequest = 150;
             chip.HorizontalOptions = LayoutOptions.Center;
             chip.VerticalOptions = LayoutOptions.Center;
-            chip.ShowCloseButton = true;
             chip.ShowSelectionIndicator = true;
             stackLayout.Children.Add(chip);
             this.Content = stackLayout;
@@ -159,8 +155,7 @@ The [`CloseButtonColor`] property customizes the color of the close button in Sf
   
    <ContentPage.Content>
         <StackLayout Margin="8,8,8,8" >
-           <core:SfChip  Text="James" 
-                            WidthRequest="150"
+           <core:SfChip     WidthRequest="150"
                             HorizontalOptions="Center"
                             VerticalOptions="Center"
                             ShowCloseButton="true"
@@ -188,7 +183,6 @@ namespace ChipCustomization
             InitializeComponent();
             StackLayout stackLayout = new StackLayout();
             SfChip chip = new SfChip();
-            chip.Text = "James";
             chip.WidthRequest = 150;
             chip.HorizontalOptions = LayoutOptions.Center;
             chip.VerticalOptions = LayoutOptions.Center;
@@ -206,7 +200,8 @@ namespace ChipCustomization
 
 ![SfChip with CloseButtonColor](images/customization-images/chip_closebuttoncolor_image.png)
 
-N> The default value of CloseButtonColor is [`Color.FromHex("#6b6b6b")`].
+N> The Default value of ClosebuttonColor is [`Color.FromArgb("#49454E")`].
+
 
 ## SelectionIndicatorColor
 
@@ -226,13 +221,10 @@ The [`SelectionIndicatorColor`] property customizes the selection indicator colo
   
    <ContentPage.Content>
         <StackLayout Margin="8,8,8,8" >
-           <core:SfChip  Text="James" 
-                            WidthRequest="150"
+           <core:SfChip     WidthRequest="150"
                             HorizontalOptions="Center"
                             VerticalOptions="Center"
-                            ShowCloseButton="true"
                             ShowSelectionIndicator="true"
-                            CloseButtonColor = "White"
                             SelectionIndicatorColor = "White"
                             >
            </core:SfChip>  
@@ -257,13 +249,10 @@ namespace ChipCustomization
             InitializeComponent();
             StackLayout stackLayout = new StackLayout();
             SfChip chip = new SfChip();
-            chip.Text = "James";
             chip.WidthRequest = 150;
             chip.HorizontalOptions = LayoutOptions.Center;
             chip.VerticalOptions = LayoutOptions.Center;
-            chip.ShowCloseButton = true;
             chip.ShowSelectionIndicator = true;
-            chip.CloseButtonColor = Colors.White;
             chip.SelectionIndicatorColor = Colors.White;
             stackLayout.Children.Add(chip);
             this.Content = stackLayout;
@@ -277,7 +266,7 @@ namespace ChipCustomization
 
 ![SfChip with SelectionIndicatorColor](images/customization-images/chip_selectionindicatorcolor_image.png)
 
-N> The default value of SelectionIndicatorColor is [`Color.FromHex("#6b6b6b")`].
+N> The default value of SelectionIndicatorColor is [`Color.FromRgb(30, 25, 43)`].
 
 ## BackgroundColor
 
@@ -297,14 +286,9 @@ The [`BackgroundColor`] property customizes the background color of SfChip.
   
    <ContentPage.Content>
         <StackLayout Margin="8,8,8,8" >
-           <core:SfChip  Text="James" 
-                            WidthRequest="150"
+           <core:SfChip     WidthRequest="150"
                             HorizontalOptions="Center"
                             VerticalOptions="Center"
-                            ShowCloseButton="true"
-                            ShowSelectionIndicator="true"
-                            CloseButtonColor = "White"
-                            SelectionIndicatorColor = "White"
                             BackgroundColor="#512dcd"
                             >
            </core:SfChip>  
@@ -329,14 +313,10 @@ namespace ChipCustomization
             InitializeComponent();
             StackLayout stackLayout = new StackLayout();
             SfChip chip = new SfChip();
-            chip.Text = "James";
             chip.WidthRequest = 150;
             chip.HorizontalOptions = LayoutOptions.Center;
             chip.VerticalOptions = LayoutOptions.Center;
-            chip.ShowSelectionIndicator = true;
-            chip.CloseButtonColor = Colors.White;
-            chip.SelectionIndicatorColor = Colors.White;
-            chip.BackgroundColor = Colors.Aqua;
+            chip.BackgroundColor = Colors.Violet;
             stackLayout.Children.Add(chip);
             this.Content = stackLayout;
         }
@@ -348,8 +328,6 @@ namespace ChipCustomization
 {% endtabs %}
 
 ![SfChip with BackgroundColor](images/customization-images/chip_chipbackgroundcolor_image.png)
-
-N> The default value of BackgroundColor is [`Color.Accent`].
 
 ## Stroke
 
@@ -369,8 +347,7 @@ The [`Stroke`] property customizes the color of border in SfChip.
   
    <ContentPage.Content>
         <StackLayout Margin="8,8,8,8" >
-           <core:SfChip  Text="James" 
-                            WidthRequest="150"
+           <core:SfChip     WidthRequest="150"
                             HorizontalOptions="Center"
                             VerticalOptions="Center"
                             Stroke="Black"
@@ -398,7 +375,6 @@ namespace ChipCustomization
             InitializeComponent();
             StackLayout stackLayout = new StackLayout();
             SfChip chip = new SfChip();
-            chip.Text = "James";
             chip.WidthRequest = 150;
             chip.HorizontalOptions = LayoutOptions.Center;
             chip.VerticalOptions = LayoutOptions.Center;
@@ -415,7 +391,7 @@ namespace ChipCustomization
 
 ![SfChip with Stroke](images/customization-images/chip_stroke_image.png)
 
-N> The default value of BorderColor is [`Color.Transparent`].
+N> The default value of Stroke is [`Color.FromArgb("#79747E")`].
 
 ## StrokeThickness
 
@@ -435,8 +411,7 @@ The [`StrokeThickness`] property is used to customizes the border thickness of t
   
    <ContentPage.Content>
         <StackLayout Margin="8,8,8,8" >
-           <core:SfChip  Text="James" 
-                            WidthRequest="150"
+           <core:SfChip     WidthRequest="150"
                             HorizontalOptions="Center"
                             VerticalOptions="Center"
                             StrokeThickness="5"
@@ -464,12 +439,10 @@ namespace ChipCustomization
             InitializeComponent();
             StackLayout stackLayout = new StackLayout();
             SfChip chip = new SfChip();
-            chip.Text = "James";
             chip.WidthRequest = 150;
             chip.HorizontalOptions = LayoutOptions.Center;
             chip.VerticalOptions = LayoutOptions.Center;
             chip.StrokeThickness = 5;
-            chip.CornerRadius = 5;
             chip.Stroke = Colors.Black;
             stackLayout.Children.Add(chip);
             this.Content = stackLayout;
@@ -501,8 +474,7 @@ The `CornerRadius` property is used to customize the rounded edges in SfChip as 
   
    <ContentPage.Content>
         <StackLayout Margin="8,8,8,8" >
-           <core:SfChip  Text="James" 
-                            WidthRequest="150"
+           <core:SfChip     WidthRequest="150"
                             HorizontalOptions="Center"
                             VerticalOptions="Center"
                             CornerRadius = "4"
@@ -530,7 +502,6 @@ namespace ChipCustomization
             InitializeComponent();
             StackLayout stackLayout = new StackLayout();
             SfChip chip = new SfChip();
-            chip.Text = "James";
             chip.WidthRequest = 150;
             chip.HorizontalOptions = LayoutOptions.Center;
             chip.VerticalOptions = LayoutOptions.Center;
@@ -568,14 +539,9 @@ The [`FontAttributes`] property customizes the font style of text in SfChip.
   
    <ContentPage.Content>
         <StackLayout Margin="8,8,8,8" >
-           <core:SfChip  Text="James" 
-                            WidthRequest="150"
+           <core:SfChip     WidthRequest="150"
                             HorizontalOptions="Center"
                             VerticalOptions="Center"
-                            ShowCloseButton="true"
-                            ShowSelectionIndicator="true"
-                            CloseButtonColor = "White"
-                            SelectionIndicatorColor = "White"
                             FontAttributes="Italic" >
            </core:SfChip>  
         </StackLayout>
@@ -599,13 +565,9 @@ namespace ChipCustomization
             InitializeComponent();
             StackLayout stackLayout = new StackLayout();
             SfChip chip = new SfChip();
-            chip.Text = "James";
             chip.WidthRequest = 150;
             chip.HorizontalOptions = LayoutOptions.Center;
             chip.VerticalOptions = LayoutOptions.Center;
-            chip.ShowSelectionIndicator = true;
-            chip.CloseButtonColor = Colors.White;
-            chip.SelectionIndicatorColor = Colors.White;
             chip.FontAttributes = FontAttributes.Italic;
             stackLayout.Children.Add(chip);
             this.Content = stackLayout;
@@ -618,6 +580,8 @@ namespace ChipCustomization
 {% endtabs %}
 
 ![SfChip with FontAttributes](images/customization-images/chip_fontattribute_image.png)
+
+N> The Default value of FontAttributes is [`FontAttributes.None`]
 
 ## FontFamily
 
@@ -637,14 +601,9 @@ The [`FontFamily`] property customizes the font family of text in SfChip.
   
    <ContentPage.Content>
         <StackLayout Margin="8,8,8,8" >
-           <core:SfChip  Text="James" 
-                            WidthRequest="150"
+           <core:SfChip     WidthRequest="150"
                             HorizontalOptions="Center"
                             VerticalOptions="Center"
-                            ShowCloseButton="true"
-                            ShowSelectionIndicator="true"
-                            CloseButtonColor = "White"
-                            SelectionIndicatorColor = "White"
                             FontFamily="times new roman"
                             >
            </core:SfChip>  
@@ -669,13 +628,9 @@ namespace ChipCustomization
             InitializeComponent();
             StackLayout stackLayout = new StackLayout();
             SfChip chip = new SfChip();
-            chip.Text = "James";
             chip.WidthRequest = 150;
             chip.HorizontalOptions = LayoutOptions.Center;
             chip.VerticalOptions = LayoutOptions.Center;
-            chip.ShowSelectionIndicator = true;
-            chip.CloseButtonColor = Colors.White;
-            chip.SelectionIndicatorColor = Colors.White;
             chip.FontFamily = "times new roman";
             stackLayout.Children.Add(chip);
             this.Content = stackLayout;
@@ -707,14 +662,10 @@ The [`FontSize`] property customizes the size of text in SfChip.
   
    <ContentPage.Content>
         <StackLayout Margin="8,8,8,8" >
-           <core:SfChip  Text="James" 
+        <core:SfChip        Text="James"
                             WidthRequest="150"
                             HorizontalOptions="Center"
                             VerticalOptions="Center"
-                            ShowCloseButton="true"
-                            ShowSelectionIndicator="true"
-                            CloseButtonColor = "White"
-                            SelectionIndicatorColor = "White"
                             FontSize = "10"
                             >
            </core:SfChip>  
@@ -743,9 +694,6 @@ namespace ChipCustomization
             chip.WidthRequest = 150;
             chip.HorizontalOptions = LayoutOptions.Center;
             chip.VerticalOptions = LayoutOptions.Center;
-            chip.ShowSelectionIndicator = true;
-            chip.CloseButtonColor = Colors.White;
-            chip.SelectionIndicatorColor = Colors.White;
             chip.FontSize = 10;
             stackLayout.Children.Add(chip);
             this.Content = stackLayout;
@@ -782,14 +730,10 @@ The [`TextColor`] property customizes the color of text in SfChip.
   
    <ContentPage.Content>
         <StackLayout Margin="8,8,8,8" >
-           <core:SfChip  Text="James" 
+           <core:SfChip     Text="James"
                             WidthRequest="150"
                             HorizontalOptions="Center"
                             VerticalOptions="Center"
-                            ShowCloseButton="true"
-                            ShowSelectionIndicator="true"
-                            CloseButtonColor = "White"
-                            SelectionIndicatorColor = "White"
                             BackgroundColor="Aqua"
                             TextColor="Black"
                             >
@@ -819,9 +763,6 @@ namespace ChipCustomization
             chip.WidthRequest = 150;
             chip.HorizontalOptions = LayoutOptions.Center;
             chip.VerticalOptions = LayoutOptions.Center;
-            chip.ShowSelectionIndicator = true;
-            chip.CloseButtonColor = Colors.White;
-            chip.SelectionIndicatorColor = Colors.White;
             chip.BackgroundColor = Colors.Aqua;
             chip.TextColor = Colors.Black;
             stackLayout.Children.Add(chip);
@@ -836,11 +777,11 @@ namespace ChipCustomization
 
 ![SfChip with TextColor](images/customization-images/chip_textcolor_image.png)
 
-N> The default value of TextColor is [`Color.White`].
+N> The default value of TextColor is [`Color.FromArgb("#1C1B1F")`].
 
 ## TextAlignment
 
-The [`HorizontalTextAlignment `] and [`VerticalTextAlignment `] properties customize the alignment of text in SfChip.
+The [`HorizontalTextAlignment`] and [`VerticalTextAlignment`] properties customize the alignment of text in SfChip.
 
 {% tabs %}
 
@@ -856,16 +797,12 @@ The [`HorizontalTextAlignment `] and [`VerticalTextAlignment `] properties custo
   
    <ContentPage.Content>
         <StackLayout Margin="8,8,8,8" >
-           <core:SfChip  Text="James" 
+           <core:SfChip     Text="James"
                             WidthRequest="150"
                             HorizontalOptions="Center"
                             VerticalOptions="Center"
-                            ShowSelectionIndicator="true"
-                            SelectionIndicatorColor = "White"
-                            BackgroundColor="Aqua"
                             HorizontalTextAlignment="Start"
                             VerticalTextAlignment="Start"
-                            TextColor="Black"
                             >
            </core:SfChip>  
         </StackLayout>
@@ -889,16 +826,12 @@ namespace ChipCustomization
             InitializeComponent();
             StackLayout stackLayout = new StackLayout();
             SfChip chip = new SfChip();
-            chip.Text = "James";
             chip.WidthRequest = 150;
+            chip.Text = "James";
             chip.HorizontalOptions = LayoutOptions.Center;
             chip.VerticalOptions = LayoutOptions.Center;
-            chip.ShowSelectionIndicator = true;
-            chip.SelectionIndicatorColor = Colors.White;
-            chip.BackgroundColor = Colors.Aqua;
             chip.HorizontalTextAlignment = TextAlignment.Start;
             chip.VerticalTextAlignment = TextAlignment.Start;
-            chip.TextColor = Colors.Black;
             stackLayout.Children.Add(chip);
             this.Content = stackLayout;
         }
@@ -931,12 +864,9 @@ You can enable the icon image using the [`ShowIcon`] property to know whether an
   
    <ContentPage.Content>
         <StackLayout Margin="8,8,8,8" >
-           <core:SfChip  Text="James" 
-                            WidthRequest="150"
+           <core:SfChip     WidthRequest="150"
                             HorizontalOptions="Center"
                             VerticalOptions="Center"
-                            BackgroundColor="Aqua"
-                            TextColor="Black"
                             ImageSource="ChipUserContact.png"
                             ShowIcon="true"
                             >
@@ -962,12 +892,9 @@ namespace ChipCustomization
             InitializeComponent();
             StackLayout stackLayout = new StackLayout();
             SfChip chip = new SfChip();
-            chip.Text = "James";
             chip.WidthRequest = 150;
             chip.HorizontalOptions = LayoutOptions.Center;
             chip.VerticalOptions = LayoutOptions.Center;
-            chip.BackgroundColor = Colors.Aqua;
-            chip.TextColor = Colors.Black;
             chip.ImageSource = "ChipUserContact.png";
             chip.ShowIcon = true;
             stackLayout.Children.Add(chip);
@@ -986,7 +913,7 @@ N> The default value of ShowIcon is [`false`].
 
 ## BackgroundImage
 
-The [`Image`] property is used to customize the height, width, image source and aspect for the image of SfChip.
+The [`BackgroundImage`] property is used to customize the aspect for the image of SfChip.
 
 {% tabs %}
 
@@ -1002,12 +929,10 @@ The [`Image`] property is used to customize the height, width, image source and 
   
    <ContentPage.Content>
         <StackLayout Margin="8,8,8,8" >
-           <core:SfChip  Text="James" 
-                            WidthRequest="150"
+           <core:SfChip     WidthRequest="150"
                             HorizontalOptions="Center"
                             VerticalOptions="Center"
-                            ShowIcon="true"
-                            BackgroundImage="ChipUserContact.png">
+                            BackgroundImage="Lion.png">
            </core:SfChip>             
         </StackLayout>
     </ContentPage.Content>
@@ -1030,14 +955,11 @@ namespace ChipCustomization
             InitializeComponent();
             StackLayout stackLayout = new StackLayout();
             SfChip chip = new SfChip();
-            chip.Text = "James";
             chip.WidthRequest = 150;
             chip.HorizontalOptions = LayoutOptions.Center;
             chip.VerticalOptions = LayoutOptions.Center;
-            chip.BackgroundColor = Colors.Aqua;
-            chip.TextColor = Colors.Black;
             chip.ShowIcon = true;
-            chip.BackgroundImage="ChipUserContact.png";
+            chip.BackgroundImage="Lion.png";
             stackLayout.Children.Add(chip);
             this.Content = stackLayout;
         }
@@ -1054,9 +976,6 @@ namespace ChipCustomization
 
 The [`ImageSource`] property customizes the icon image of SfChip by adding a custom image.
 
-N> Enable the [`ShowIcon`] property to enable the [`ImageSource`] property.
-
-
 {% tabs %}
 
 {% highlight xaml %}
@@ -1071,12 +990,9 @@ N> Enable the [`ShowIcon`] property to enable the [`ImageSource`] property.
   
    <ContentPage.Content>
         <StackLayout Margin="8,8,8,8" >
-           <core:SfChip  Text="James" 
-                            WidthRequest="150"
+           <core:SfChip     WidthRequest="150"
                             HorizontalOptions="Center"
                             VerticalOptions="Center"
-                            BackgroundColor="Aqua"
-                            TextColor="Black"
                             ImageSource="ChipUserContact.png"
                             ShowIcon="true"
                             >
@@ -1102,12 +1018,9 @@ namespace ChipCustomization
             InitializeComponent();
             StackLayout stackLayout = new StackLayout();
             SfChip chip = new SfChip();
-            chip.Text = "James";
             chip.WidthRequest = 150;
             chip.HorizontalOptions = LayoutOptions.Center;
             chip.VerticalOptions = LayoutOptions.Center;
-            chip.BackgroundColor = Colors.Aqua;
-            chip.TextColor = Colors.Black;
             chip.ImageSource = "ChipUserContact.png";
             chip.ShowIcon = true;
             stackLayout.Children.Add(chip);
@@ -1122,11 +1035,11 @@ namespace ChipCustomization
 
 ![SfChip with ImageSource](images/customization-images/chip_imagesource_image.png)
 
+N> Enable the [`ShowIcon`] property to enable the [`ImageSource`] property.
+
 ## ImageSize
 
 The [`ImageSize`] property customizes the width of icon image in SfChip.
-
-N> Enable the [`ShowIcon`] property to enable the [`ImageSource`] property.
 
 {% tabs %}
 
@@ -1142,12 +1055,9 @@ N> Enable the [`ShowIcon`] property to enable the [`ImageSource`] property.
   
    <ContentPage.Content>
         <StackLayout Margin="8,8,8,8" >
-           <core:SfChip  Text="James" 
-                            WidthRequest="150"
+           <core:SfChip     WidthRequest="150"
                             HorizontalOptions="Center"
                             VerticalOptions="Center"
-                            BackgroundColor="Aqua"
-                            TextColor="Black"
                             ImageSource="ChipUserContact.png"
                             ImageSize="25"
                             ShowIcon="true"
@@ -1174,12 +1084,9 @@ namespace ChipCustomization
             InitializeComponent();
             StackLayout stackLayout = new StackLayout();
             SfChip chip = new SfChip();
-            chip.Text = "James";
             chip.WidthRequest = 150;
             chip.HorizontalOptions = LayoutOptions.Center;
             chip.VerticalOptions = LayoutOptions.Center;
-            chip.BackgroundColor = Colors.Aqua;
-            chip.TextColor = Colors.Black;
             chip.ImageSource = "ChipUserContact.png";
             chip.ImageSize = 25;
             chip.ShowIcon = true;
@@ -1193,9 +1100,9 @@ namespace ChipCustomization
 
 {% endtabs %}
 
-![SfChip with ImageWidth](images/customization-images/chip_imagesize_image.png)
+![SfChip with ImageSize](images/customization-images/chip_imagesize_image.png)
 
-N> The default value of ImageWidth is [`32`].
+N> The default value of ImageSize is [`18d`].
 
 ## ImageAlignment 
 
@@ -1217,15 +1124,12 @@ N> Enable the [`ShowIcon`] property to enable the [`ImageSource`] property.
   
    <ContentPage.Content>
         <StackLayout Margin="8,8,8,8" >
-           <core:SfChip  Text="James" 
+           <core:SfChip  
                             WidthRequest="150"
                             HorizontalOptions="Center"
                             VerticalOptions="Center"
-                            BackgroundColor="Aqua"
-                            TextColor="Black"
                             ImageSource="ChipUserContact.png"
                             ImageAlignment="End"
-                            ImageSize="25"
                             ShowIcon="true"
                             >
            </core:SfChip>  
@@ -1250,15 +1154,11 @@ namespace ChipCustomization
             InitializeComponent();
             StackLayout stackLayout = new StackLayout();
             SfChip chip = new SfChip();
-            chip.Text = "James";
             chip.WidthRequest = 150;
             chip.HorizontalOptions = LayoutOptions.Center;
             chip.VerticalOptions = LayoutOptions.Center;
-            chip.BackgroundColor = Colors.Aqua;
-            chip.TextColor = Colors.Black;
             chip.ImageSource = "ChipUserContact.png";
             chip.ImageAlignment = Alignment.End;
-            chip.ImageSize = 25;
             chip.ShowIcon = true;
             stackLayout.Children.Add(chip);
             this.Content = stackLayout;
@@ -1297,11 +1197,9 @@ The [`Command`] property associates a command with an instance of SfChip. This p
    <ContentPage.Content>
         <StackLayout Margin="8,8,0,0">
             <core:SfChip x:Name="Chip" 
-                            Text="Chip"
                             HorizontalOptions="Center"
                             VerticalOptions="Center"
                             WidthRequest="150"
-                            ShowCloseButton="true"
                             BackgroundColor="{Binding Background}"
                             Command="{Binding ButtonCommand}">
             </core:SfChip>  
@@ -1389,15 +1287,13 @@ The [`InputView`] property allows to provide a view to the input chip. In this e
 		ItemsSource="{Binding Employees}"
 		ChipPadding="8,8,0,0" 
         ChipType="Input"
-        FlowDirection="LeftToRight"
-		DisplayMemberPath="Name">
+        DisplayMemberPath="Name">
 		<core:SfChipGroup.InputView>
 			<Entry x:Name="entry" 
                 Placeholder="Enter Name"
 				Margin="10,10,0,0" 
                 VerticalOptions="Center" 
-			    FontSize="15"
-				WidthRequest="110"
+			    WidthRequest="110"
 				Completed="Entry_Completed"/>
 		</coreSfChipGroup.InputView>
 	</core:SfChipGroup>
@@ -1443,7 +1339,7 @@ N> The InputView is visible only in the Input type. The default value of InputVi
 
 ## ChipBackground
 
-The [`ChipBackground`] property customizes the background color of the selected chip.
+The [`ChipBackground`] property customizes the background color of the SfChipGroup.
 
 {% tabs %}
 
@@ -1465,8 +1361,75 @@ The [`ChipBackground`] property customizes the background color of the selected 
             <core:SfChipGroup
                 ItemsSource="{Binding Employees}"
                 DisplayMemberPath="Name"
+                ChipBackground="#512dcd"
+                >
+            </core:SfChipGroup>
+        </StackLayout>  
+    </ContentPage.Content>
+    
+</ContentPage>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+using System;
+using Syncfusion.Maui.Core;
+
+namespace ChipCustomization
+{
+    public partial class MainPage : ContentPage
+    {
+        public MainPage()
+        {
+            InitializeComponent();
+            StackLayout stack = new StackLayout();
+            SfChipGroup chipGroup = new SfChipGroup();
+            stack.Children.Add(chipGroup);
+            chipGroup.ChipLayout = layout;
+            this.BindingContext = new ViewModel();
+            chipGroup.SetBinding(SfChipGroup.ItemsSourceProperty, "Employees");
+            chipGroup.DisplayMemberPath = "Name";
+            chipGroup.ChipBackground = Colors.Violet;
+            this.Content = stack;
+        }
+    }
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![SfChipGroup with ChipBackground](images/customization-images/chipgroup_chipbackgroundcolor_image.png)
+
+N> The default value of ChipBackground is [`Colors.Transparent`].
+
+The [`ChipBackground`] property customizes the background color of the selected chip.
+
+So, here we should add visual states to enable selected chip background color also set the ChipType to Choice.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<ContentPage 
+	xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:core ="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:ChipCustomization"
+    x:Class="ChipCustomization.MainPage">
+ 
+ <ContentPage.BindingContext>
+        <local:ViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout Margin="10,10,10,10">
+            <core:SfChipGroup x:Name="sfChipGroup"
+                ItemsSource="{Binding Employees}"
+                DisplayMemberPath="Name"
                 ChipType="Choice">
-                    <VisualStateManager.VisualStateGroups>
+                <VisualStateManager.VisualStateGroups>
                     <VisualStateGroup x:Name="CommonStates">
                         <VisualState x:Name="Normal">
                             <VisualState.Setters>
@@ -1494,6 +1457,34 @@ The [`ChipBackground`] property customizes the background color of the selected 
 using System;
 using Syncfusion.Maui.Core;
 
+public MainPage()
+	{
+		InitializeComponent();
+
+        VisualStateGroupList visualStateGroupList = new VisualStateGroupList();
+        VisualState normalState = new VisualState() { Name="Normal"};
+
+        VisualStateGroup commonStateGroup = new VisualStateGroup();
+        if (sfChipGroup.ChipType == SfChipsType.Choice)
+        {
+            normalState.Setters.Add(new Setter { Property = SfChipGroup.ChipBackgroundProperty, Value = Colors.White });
+        }
+
+
+        VisualState selectedState = new VisualState
+        {
+            Name = "Selected"
+        };
+        selectedState.Setters.Add(new Setter { Property = SfChipGroup.ChipBackgroundProperty, Value = Colors.Violet });
+
+        commonStateGroup.States.Add(normalState);
+        commonStateGroup.States.Add(selectedState);
+        visualStateGroupList.Add(commonStateGroup);
+
+        VisualStateManager.SetVisualStateGroups(sfChipGroup, visualStateGroupList);
+
+    }
+
 namespace ChipCustomization
 {
     public partial class MainPage : ContentPage
@@ -1520,216 +1511,6 @@ namespace ChipCustomization
 
 ![SfChipGroup with SelectedChipBackgroundColor](images/customization-images/chipgroup_chipbackground_image.png)
 
-N> The default value of SelectedChipBackgroundColor is [`Color.Accent`].
-
-## ChipTextColor
-
-The [`SelectedChipTextColor`] property customizes the text color of the selected chip.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<ContentPage 
-	xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:core ="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:ChipCustomization"
-    x:Class="ChipCustomization.MainPage">
- 
- <ContentPage.BindingContext>
-        <local:ViewModel/>
-    </ContentPage.BindingContext>
-    <ContentPage.Content>
-        <StackLayout Margin="10,10,10,10">
-            <core:SfChipGroup
-                ItemsSource="{Binding Employees}"
-                DisplayMemberPath="Name"
-                ChipBackground="White"
-                ChipTextColor="Green"
-                ChipType="Choice">
-            </core:SfChipGroup>
-        </StackLayout>  
-    </ContentPage.Content>
-    
-</ContentPage>
-
-{% endhighlight %}
-
-{% highlight c# %}
-
-using System;
-using Syncfusion.Maui.Core;
-
-namespace ChipCustomization
-{
-    public partial class MainPage : ContentPage
-    {
-        public MainPage()
-        {
-            InitializeComponent();
-            StackLayout stack = new StackLayout();
-            SfChipGroup chipGroup = new SfChipGroup();
-            stack.Children.Add(chipGroup);
-            chipGroup.ChipLayout = layout;
-            this.BindingContext = new ViewModel();
-            chipGroup.SetBinding(SfChipGroup.ItemsSourceProperty, "Employees");
-            chipGroup.DisplayMemberPath = "Name";
-            chipGroup.ChipBackground = Colors.White;
-            chipGroup.ChipTextColor = Colors.Green;
-            chipGroup.ChipType = SfChipsType.Choice;
-            this.Content = stack;
-        }
-    }
-}
-
-{% endhighlight %}
-
-{% endtabs %}
-
-![SfChipGroup with SelectedChipTextColor](images/customization-images/chipgroup_selectedchiptextcolor_image.png)
-
-N> The default value of SelectedChipTextColor is [`Color.White`].
-
-## ChipBackground
-
-The [`ChipBackgroundColor`] property customizes the background color of the SfChipGroup.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<ContentPage 
-	xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:core ="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:ChipCustomization"
-    x:Class="ChipCustomization.MainPage">
- 
- <ContentPage.BindingContext>
-        <local:ViewModel/>
-    </ContentPage.BindingContext>
-    <ContentPage.Content>
-        <StackLayout Margin="10,10,10,10">
-            <core:SfChipGroup
-                ItemsSource="{Binding Employees}"
-                DisplayMemberPath="Name"
-                ChipBackground="#512dcd"
-                ChipType="Choice">
-            </core:SfChipGroup>
-        </StackLayout>  
-    </ContentPage.Content>
-    
-</ContentPage>
-
-{% endhighlight %}
-
-{% highlight c# %}
-
-using System;
-using Syncfusion.Maui.Core;
-
-namespace ChipCustomization
-{
-    public partial class MainPage : ContentPage
-    {
-        public MainPage()
-        {
-            InitializeComponent();
-            StackLayout stack = new StackLayout();
-            SfChipGroup chipGroup = new SfChipGroup();
-            stack.Children.Add(chipGroup);
-            chipGroup.ChipLayout = layout;
-            this.BindingContext = new ViewModel();
-            chipGroup.SetBinding(SfChipGroup.ItemsSourceProperty, "Employees");
-            chipGroup.DisplayMemberPath = "Name";
-            chipGroup.ChipBackground = Colors.Aqua;
-            chipGroup.ChipType = SfChipsType.Choice;
-            this.Content = stack;
-        }
-    }
-}
-
-{% endhighlight %}
-
-{% endtabs %}
-
-![SfChipGroup with ChipBackground](images/customization-images/chipgroup_chipbackgroundcolor_image.png)
-
-N> The default value of ChipBackground is [`Color.FromHex("#E0E0E0")`].
-
-## ChipStroke
-
-The [`ChipStroke`] property customizes the border color of the SfChipGroup.
-
-{% tabs %}
-
-{% highlight xaml %}
-
- <ContentPage 
-	xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:core ="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:ChipCustomization"
-    x:Class="ChipCustomization.MainPage">
- 
- <ContentPage.BindingContext>
-        <local:ViewModel/>
-    </ContentPage.BindingContext>
-    <ContentPage.Content>
-        <StackLayout Margin="10,10,10,10">
-            <core:SfChipGroup
-                ItemsSource="{Binding Employees}"
-                DisplayMemberPath="Name"
-                ChipStrokeThickness="5" 
-                ChipStroke="Black"
-                ChipBackground="#512dcd">
-            </core:SfChipGroup>
-        </StackLayout>  
-    </ContentPage.Content>
-    
-</ContentPage>
-
-{% endhighlight %}
-
-{% highlight c# %}
-
-using System;
-using Syncfusion.Maui.Core;
-
-namespace ChipCustomization
-{
-    public partial class MainPage : ContentPage
-    {
-        public MainPage()
-        {
-            InitializeComponent();
-            StackLayout stack = new StackLayout();
-            SfChipGroup chipGroup = new SfChipGroup();
-            stack.Children.Add(chipGroup);
-            chipGroup.ChipLayout = layout;
-            this.BindingContext = new ViewModel();
-            chipGroup.SetBinding(SfChipGroup.ItemsSourceProperty, "Employees");
-            chipGroup.DisplayMemberPath = "Name";
-            chipGroup.ChipStrokeThickness = 5;
-            chipGroup.ChipStroke = Colors.Black;
-            chipGroup.ChipBackground = Colors.#512dcd;
-            this.Content = stack;
-        }
-    }
-}
-
-{% endhighlight %}
-
-{% endtabs %}
-
-![SfChipGroup with ChipStroke](images/customization-images/chipgroup_chipstroke_image.png)
-
-N> The default value of ChipBorderColor is [`Color.Transparent`].
-
 ## ChipTextColor
 
 The [`ChipTextColor`] property customizes the text color of the SfChipGroup.
@@ -1753,9 +1534,8 @@ The [`ChipTextColor`] property customizes the text color of the SfChipGroup.
             <core:SfChipGroup
                 ItemsSource="{Binding Employees}"
                 DisplayMemberPath="Name"
-                ChipTextColor="Blue">
+                ChipTextColor="Red">
             </core:SfChipGroup>
-          
         </StackLayout>  
     </ContentPage.Content>
     
@@ -1794,7 +1574,186 @@ namespace ChipCustomization
 
 ![SfChipGroup with ChipTextColor](images/customization-images/chipgroup_chiptextcolor_image.png)
 
-N> The default value of ChipTextColor is [`Color.FromHex("#212121")`].
+N> The default value of ChipTextColor is [`Color.FromArgb("#1C1B1F")`].
+
+The [`ChipTextColor`] property customizes the text color of the selected chip.
+
+So, here we should enable visual states to set the selected ChipTextColor property.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<ContentPage 
+	xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:core ="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:ChipCustomization"
+    x:Class="ChipCustomization.MainPage">
+ 
+ <ContentPage.BindingContext>
+        <local:ViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout Margin="10,10,10,10">
+            <core:SfChipGroup x:Name="sfChipGroup"
+                ItemsSource="{Binding Employees}"
+                DisplayMemberPath="Name"
+                ChipBackground="White"
+                ChipTextColor="Green"
+                ChipType="Choice">
+            <VisualStateManager.VisualStateGroups>
+                    <VisualStateGroup x:Name="CommonStates">
+                        <VisualState x:Name="Normal">
+                            <VisualState.Setters>
+                                <Setter Property="ChipTrextColor" Value="Black" />
+                            </VisualState.Setters>
+                        </VisualState>
+                        <VisualState x:Name="Selected">
+                            <VisualState.Setters>
+                                <Setter Property="ChipTextcolor" Value="Green" />
+                             </VisualState.Setters>
+                        </VisualState>
+                    </VisualStateGroup>
+                </VisualStateManager.VisualStateGroups>
+            </core:SfChipGroup>
+        </StackLayout>  
+    </ContentPage.Content>
+    
+</ContentPage>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+using System;
+using Syncfusion.Maui.Core;
+
+public MainPage()
+	{
+		InitializeComponent();
+
+        VisualStateGroupList visualStateGroupList = new VisualStateGroupList();
+        VisualState normalState = new VisualState() { Name="Normal"};
+
+        VisualStateGroup commonStateGroup = new VisualStateGroup();
+        if (sfChipGroup.ChipType == SfChipsType.Choice)
+        {
+            normalState.Setters.Add(new Setter { Property = SfChipGroup.ChipTextColorProperty, Value = Colors.Black });
+        }
+
+
+        VisualState selectedState = new VisualState
+        {
+            Name = "Selected"
+        };
+        selectedState.Setters.Add(new Setter { Property = SfChipGroup.ChipTextColorProperty, Value = Colors.Green });
+        
+        commonStateGroup.States.Add(normalState);
+        commonStateGroup.States.Add(selectedState);
+        visualStateGroupList.Add(commonStateGroup);
+
+        VisualStateManager.SetVisualStateGroups(sfChipGroup, visualStateGroupList);
+
+    }
+
+namespace ChipCustomization
+{
+    public partial class MainPage : ContentPage
+    {
+        public MainPage()
+        {
+            InitializeComponent();
+            StackLayout stack = new StackLayout();
+            SfChipGroup chipGroup = new SfChipGroup();
+            stack.Children.Add(chipGroup);
+            chipGroup.ChipLayout = layout;
+            this.BindingContext = new ViewModel();
+            chipGroup.SetBinding(SfChipGroup.ItemsSourceProperty, "Employees");
+            chipGroup.DisplayMemberPath = "Name";
+            chipGroup.ChipBackground = Colors.White;
+            chipGroup.ChipType = SfChipsType.Choice;
+            this.Content = stack;
+        }
+    }
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![SfChipGroup with SelectedChipTextColor](images/customization-images/chipgroup_selectedchiptextcolor_image.png)
+
+N> The default value of SelectedChipTextColor is [`Color.White`].
+
+## ChipStroke
+
+The [`ChipStroke`] property customizes the border color of the SfChipGroup.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+ <ContentPage 
+	xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:core ="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:ChipCustomization"
+    x:Class="ChipCustomization.MainPage">
+ 
+ <ContentPage.BindingContext>
+        <local:ViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout Margin="10,10,10,10">
+            <core:SfChipGroup
+                ItemsSource="{Binding Employees}"
+                DisplayMemberPath="Name"
+                ChipStroke="Black"
+                ChipBackground="#512dcd">
+            </core:SfChipGroup>
+        </StackLayout>  
+    </ContentPage.Content>
+    
+</ContentPage>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+using System;
+using Syncfusion.Maui.Core;
+
+namespace ChipCustomization
+{
+    public partial class MainPage : ContentPage
+    {
+        public MainPage()
+        {
+            InitializeComponent();
+            StackLayout stack = new StackLayout();
+            SfChipGroup chipGroup = new SfChipGroup();
+            stack.Children.Add(chipGroup);
+            chipGroup.ChipLayout = layout;
+            this.BindingContext = new ViewModel();
+            chipGroup.SetBinding(SfChipGroup.ItemsSourceProperty, "Employees");
+            chipGroup.DisplayMemberPath = "Name";
+            chipGroup.ChipStroke = Colors.Black;
+            chipGroup.ChipBackground = Colors.#512dcd;
+            this.Content = stack;
+        }
+    }
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![SfChipGroup with ChipStroke](images/customization-images/chipgroup_chipstroke_image.png)
+
+N> The default value of ChipBorderColor is [`Color.FromArgb("#79747E")`].
 
 ## ChipTextSize
 
@@ -1931,7 +1890,7 @@ N> The default value of ChipPadding is [`Thickness(5d, 0, 0, 0)`].
 
 ## ChipStrokeThickness
 
-The [`ChipBorderWidth`] property customizes the border width of the SfChipGroup.
+The [`ChipStrokeThickness`] property customizes the border width of the SfChipGroup.
 
 {% tabs %}
 
@@ -1995,7 +1954,7 @@ namespace ChipCustomization
 
 ![SfChipGroup with ChipStrokeThickness](images/customization-images/chipgroup_chipstrokethickness_image.png)
 
-N> The default value of ChipBorderWidth is [`0d`].
+N> The default value of ChipStrokeThickness is [`2d`].
 
 ## ItemHeight
 
@@ -2091,7 +2050,6 @@ You can enable the icon image using the [`ShowIcon`] property to know whether an
                 ImageMemberPath="Image"
                 ChipImageSize="30"
                 ShowIcon="true"
-                ChipBackground="Violet"
                 DisplayMemberPath="Name">
              </core:SfChipGroup>  
         </Grid>
@@ -2121,11 +2079,6 @@ namespace ChipCustomization
             chipGroup.SetBinding(SfChipGroup.ItemsSourceProperty, "Employees");
             chipGroup.DisplayMemberPath = "Name";
             chipGroup.ImageMemberPath = "Image";
-            chipGroup.ChipImageWidth = 30;
-            chipGroup.SelectionIndicatorColor = Color.Black;
-            chipGroup.CloseButtonColor = Colors.White;
-            chipGroup.ChipBackground = Colors.Violet;
-            chipGroup.ChipType = SfChipsType.Input;
             chipGroup.ShowIcon = true;
             chipGroup.ChipPadding = new Thickness(8, 8, 0, 0);
             this.Content = stack;
@@ -2211,10 +2164,7 @@ The [`CloseButtonColor`] property customizes the color of close button in the Sf
         <StackLayout Margin="8,8,0,0">
             <core:SfChipGroup 
                 ItemsSource="{Binding Employees}" 
-                ImageMemberPath="Image"
-                ShowIcon="true"
-                CloseButtonColor="Yellow"
-                ChipBackground="Violet"
+                CloseButtonColor="Red"
                 DisplayMemberPath="Name">
             </core:SfChipGroup>  
         </StackLayout>
@@ -2243,10 +2193,7 @@ namespace ChipCustomization
             this.BindingContext = new ViewModel();
             chipGroup.SetBinding(SfChipGroup.ItemsSourceProperty, "Employees");
             chipGroup.DisplayMemberPath = "Name";
-            chipGroup.ImageMemberPath = "Image";
-            chipGroup.SelectionIndicatorColor = Colors.Black;
-            chipGroup.CloseButtonColor = Colors.White;
-            chipGroup.ChipBackground = Colors.Aqua;
+            chipGroup.CloseButtonColor = Colors.Red;
             this.Content = stack;
         }
     }
@@ -2258,11 +2205,13 @@ namespace ChipCustomization
 
 ![SfChipGroup with CloseButtonColor](images/customization-images/chipgroup_closebuttoncolor_image.png)
 
-N> The default value of CloseButtonColor is [`Color.Black`].
+N> The default value of CloseButtonColor is [`Color.FromArgb("#49454E")`].
 
 ## SelectionIndicatorColor
 
 The [`SelectionIndicatorColor`] property customizes the selection indicator color of the SfChipGroup.
+
+Here, we should enable visual states to set the color to SelectionIndicatorColor property.
 
 {% tabs %}
 
@@ -2281,13 +2230,27 @@ The [`SelectionIndicatorColor`] property customizes the selection indicator colo
     </ContentPage.BindingContext>
     <ContentPage.Content>
         <StackLayout Margin="8,8,0,0">
-            <core:SfChipGroup 
+            <core:SfChipGroup x:Name="sfChipGroup"
                 ItemsSource="{Binding Employees}" 
                 ChipType="Filter"
                 SelectionIndicatorColor="Black"
-                CloseButtonColor="White"
-                ChipBackground="Aqua"
                 DisplayMemberPath="Name">
+<VisualStateManager.VisualStateGroups>
+    <VisualStateGroup x:Name="CommonStates">
+        <VisualState x:Name="Normal">
+            <VisualState.Setters>
+                <Setter Property="ChipTextColor" Value="Black" />
+                <Setter Property="ChipBackground" Value="white" />
+            </VisualState.Setters>
+        </VisualState>
+        <VisualState x:Name="Selected">
+            <VisualState.Setters>
+                <Setter Property="ChipTextColor" Value="White" />
+                <Setter Property="ChipBackground" Value="#512dcd" />
+            </VisualState.Setters>
+        </VisualState>
+    </VisualStateGroup>
+</VisualStateManager.VisualStateGroups>
             </core:SfChipGroup>  
         </StackLayout>
     </ContentPage.Content>
@@ -2301,6 +2264,37 @@ The [`SelectionIndicatorColor`] property customizes the selection indicator colo
 using System;
 using Syncfusion.Maui.Core;
 
+public MainPage()
+	{
+		InitializeComponent();
+
+        VisualStateGroupList visualStateGroupList = new VisualStateGroupList();
+        VisualState normalState = new VisualState() { Name="Normal"};
+
+        VisualStateGroup commonStateGroup = new VisualStateGroup();
+        if (sfChipGroup.ChipType == SfChipsType.Filter)
+        {
+            
+            normalState.Setters.Add(new Setter { Property = SfChipGroup.ChipTextColorProperty, Value = Colors.Black });
+            normalState.Setters.Add(new Setter { Property = SfChipGroup.ChipBackgroundProperty, Value = Colors.White });
+        }
+
+
+        VisualState selectedState = new VisualState
+        {
+            Name = "Selected"
+        };
+        selectedState.Setters.Add(new Setter { Property = SfChipGroup.ChipTextColorProperty, Value = Colors.Green });
+        selectedState.Setters.Add(new Setter { Property = SfChipGroup.ChipBackgroundProperty, Value = Colors.Violet });
+
+        commonStateGroup.States.Add(normalState);
+        commonStateGroup.States.Add(selectedState);
+        visualStateGroupList.Add(commonStateGroup);
+
+        VisualStateManager.SetVisualStateGroups(sfChipGroup, visualStateGroupList);
+
+    }
+
 namespace ChipCustomization
 {
     public partial class MainPage : ContentPage
@@ -2311,21 +2305,10 @@ namespace ChipCustomization
             StackLayout stack = new StackLayout();
             SfChipGroup chipGroup = new SfChipGroup();
             stack.Children.Add(chipGroup);
-            FlexLayout layout = new FlexLayout()
-            {
-                Direction = FlexDirection.Row,
-                HorizontalOptions = LayoutOptions.Start,
-                VerticalOptions = LayoutOptions.Center,
-                
-            };
-           
             chipGroup.ChipLayout = layout;
             this.BindingContext = new ViewModel();
             chipGroup.SetBinding(SfChipGroup.ItemsSourceProperty, "Employees");
             chipGroup.DisplayMemberPath = "Name";
-            chipGroup.SelectionIndicatorColor = Colors.Black;
-            chipGroup.CloseButtonColor = Colors.White;
-            chipGroup.ChipBackground = Colors.Aqua;
             chipGroup.ChipType = SfChipsType.Filter;
             this.Content = stack;
         }
@@ -2338,7 +2321,7 @@ namespace ChipCustomization
 
 ![SfChipGroup with SelectionIndicatorColor](images/customization-images/chipgroup_selectionindicatorcolor_image.png)
 
-N> The default value of SelectionIndicatorColor is [`Color.White`].
+N> The default value of SelectionIndicatorColor is [`Color.FromRgb(30, 25, 43)`].
 
 ## ChipImageSize
 
@@ -2366,7 +2349,6 @@ The [ChipImageWidth] property customizes the width of icon image in the SfChipGr
                 ImageMemberPath="Image"
                 ChipImageSize="50"
                 ShowIcon="true"
-                ChipBackground="Violet"
                 DisplayMemberPath="Name">
             </core:SfChipGroup>  
         </StackLayout>
@@ -2401,8 +2383,6 @@ namespace ChipCustomization
             chipGroup.DisplayMemberPath = "Name";
             chipGroup.ImageMemberPath = "Image";
             chipGroup.ChipImageSize = 50;
-            chipGroup.ChipBackground = Colors.Aqua;
-            chipGroup.ChipType = SfChipsType.Choice;
             chipGroup.ShowIcon = true;
             this.Content = stack;
         }
@@ -2425,7 +2405,7 @@ namespace ChipCustomization
         }
     }
 
-  //ViewModel Class
+// ViewModel Class
 
     public class ViewModel : INotifyPropertyChanged
     {
@@ -2468,9 +2448,8 @@ namespace ChipCustomization
 
 {% endtabs %}
 
-![SfChipGroup with ChipImageWidth](images/customization-images/chipgroup_chipimagesize_image.png)
+![SfChipGroup with ChipImageSize](images/customization-images/chipgroup_chipimagesize_image.png)
 
-N> The default value of ChipImageWidth is [`26`].
+N> The default value of ChipImageWidth is [`18d`].
 
-## See also
 

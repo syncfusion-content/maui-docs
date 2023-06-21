@@ -7,7 +7,7 @@ control: Chips
 documentation: ug
 ---
 
-# Events in Xamarin Chips
+# Events in .NET MAUI Chips
 
 ## SelectionChanging Event
 The [SelectionChanging] event is triggered before the Chip is selected. You can restrict a chip from being selected, by canceling this event, by setting [Cancel] property in the event argument to true. The argument contains the following information,
@@ -36,4 +36,3 @@ The [ItemRemoved] event is triggered after the chip is removed from [SfChipGroup
 
 N> The [ItemRemoved] event is supported only in the [`Input`] type.
 
-## See also

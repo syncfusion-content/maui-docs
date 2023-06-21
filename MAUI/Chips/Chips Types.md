@@ -7,7 +7,7 @@ control: Chips
 documentation: ug
 ---
 
-# Chips Types in Xamarin Chips
+# Chips Types in .NET MAUI Chips
 
 ## Input
 
@@ -29,23 +29,8 @@ The following code illustrates how to get an input type chip.
 			Completed="entry_Completed"
 			Margin="10,10,0,0">
                 </Entry>
-            </chip:SfChipGroup.InputView>
-<VisualStateManager.VisualStateGroups>
-    <VisualStateGroup x:Name="CommonStates">
-        <VisualState x:Name="Normal">
-            <VisualState.Setters>
-                <Setter Property="ChipTextColor" Value="Black" />
-                <Setter Property="ChipBackground" Value="white" />
-            </VisualState.Setters>
-        </VisualState>
-        <VisualState x:Name="Selected">
-            <VisualState.Setters>
-                <Setter Property="ChipTextColor" Value="White" />
-                <Setter Property="ChipBackground" Value="#512dcd" />
-            </VisualState.Setters>
-        </VisualState>
-    </VisualStateGroup>
-</VisualStateManager.VisualStateGroups>
+</chip:SfChipGroup.InputView>
+
 </chip:SfChipGroup>
 	
 {% endhighlight %}
@@ -54,7 +39,7 @@ The following code illustrates how to get an input type chip.
 
 [MainPage.cs]
 ...
-private void Entry_Completed(object sender, EventArgs e)
+private void entry_Completed(object sender, EventArgs e)
 {
 	var viewModel = this.BindingContext as ViewModel;
 	var image = random.Next(1,20);
@@ -69,12 +54,6 @@ public class Employee
 {
 
     public string Name { get; set; }
-
-    public string ProfilePicture { get; set; }
-
-    public string Designation { get; set; }
-
-    public string ID { get; set; }
 
 }
 
@@ -161,57 +140,30 @@ public class EmployeeViewModel : INotifyPropertyChanged
         {
             Name = "Joseph",
 
-            ProfilePicture = "jackson.png",
-
-            Designation = "Developer",
-
-            ID = "E001",
         });
 
         Employees.Add(new Employee
         {
             Name = "Anne Joseph",
 
-            ProfilePicture = "tye.png",
-
-            Designation = "Developer",
-
-            ID = "E002",
         });
         Employees.Add(new Employee
         {
             Name = "Andrew Fuller",
 
-            ProfilePicture = "liam.png",
-
-            Designation = "Team Lead",
-
-            ID = "E003",
         });
         Employees.Add(new Employee
         {
             Name = "Emilio Alvaro",
 
-            ProfilePicture = "gabriella.png",
-
-            Designation = "Product Manager",
-
-            ID = "E004"
         });
         Employees.Add(new Employee
         {
             Name = "Janet Leverling",
 
-            ProfilePicture = "people_circle1.png",
-
-            Designation = "HR",
-
-            ID = "E005",
         });
 
         SelectedEmployee = Employees[0];
-
-        ActionCommand = new Command(ShowPopup);
 
     }
 
@@ -225,12 +177,14 @@ public class EmployeeViewModel : INotifyPropertyChanged
 
 Allows users to select a single chip from a group of items. Selecting a chip will automatically deselect the previously selected chips. 
 
+Here, we should add visual states to set ChipType to Choice.
+
 The following code illustrates how to get choice typed ChipGroup.
 
 {% tabs %}
 
 {% highlight xaml %}
-<chip:SfChipGroup 
+<chip:SfChipGroup    x:Name="sfChipGroup"
                      Margin="200,100,0,0"  
                      ItemsSource="{Binding Employees}" 
                      DisplayMemberPath="Name" 
@@ -258,6 +212,8 @@ The following code illustrates how to get choice typed ChipGroup.
 
 {% highlight c# %}
 
+using Syncfusion.Maui.Core;
+
 public MainPage()
 	{
 		InitializeComponent();
@@ -266,7 +222,7 @@ public MainPage()
         VisualState normalState = new VisualState() { Name="Normal"};
 
         VisualStateGroup commonStateGroup = new VisualStateGroup();
-        if (this.ChipType == SfChipsType.Filter || this.ChipType == SfChipsType.Choice)
+        if (sfChipGroup.ChipType == SfChipsType.Choice)
         {
             
             normalState.Setters.Add(new Setter { Property = SfChipGroup.ChipTextColorProperty, Value = Colors.Black });
@@ -302,12 +258,6 @@ public class Employee
 
     public string Name { get; set; }
 
-    public string ProfilePicture { get; set; }
-
-    public string Designation { get; set; }
-
-    public string ID { get; set; }
-
 }
 
 [ViewModel]
@@ -393,52 +343,27 @@ public class EmployeeViewModel : INotifyPropertyChanged
         {
             Name = "Joseph",
 
-            ProfilePicture = "jackson.png",
-
-            Designation = "Developer",
-
-            ID = "E001",
         });
 
         Employees.Add(new Employee
         {
             Name = "Anne Joseph",
 
-            ProfilePicture = "tye.png",
-
-            Designation = "Developer",
-
-            ID = "E002",
         });
         Employees.Add(new Employee
         {
             Name = "Andrew Fuller",
 
-            ProfilePicture = "liam.png",
-
-            Designation = "Team Lead",
-
-            ID = "E003",
         });
         Employees.Add(new Employee
         {
             Name = "Emilio Alvaro",
 
-            ProfilePicture = "gabriella.png",
-
-            Designation = "Product Manager",
-
-            ID = "E004"
         });
         Employees.Add(new Employee
         {
             Name = "Janet Leverling",
 
-            ProfilePicture = "people_circle1.png",
-
-            Designation = "HR",
-
-            ID = "E005",
         });
 
         SelectedEmployee = Employees[0];
@@ -452,8 +377,6 @@ public class EmployeeViewModel : INotifyPropertyChanged
 {% endhighlight %}
 
 ![Choice typed in .NET MAUI SfChipGroup](images/items/Choice.png)
-
-
 
 ### ChoiceMode
 
@@ -489,8 +412,7 @@ public class EmployeeViewModel : INotifyPropertyChanged
 
 {% highlight c# %}
 
-using Syncfusion.XForms.Buttons;
-using Xamarin.Forms;
+using Syncfusion.Maui.Core;
 
 namespace Chips
 {
@@ -518,9 +440,11 @@ namespace Chips
 
 ## Filter
 
-Allows users to select more than one chip in a group of chips. The selected chips are indicated by selection indicator in this type. The selection indicator can be customized using the [`SelectionIndicatorColor`] property. Use the [`SelectedItems`] property to get the list of selected chips.
+Allows users to select more than one chip in a group of chips. The selected chips are indicated by selection indicator in this type. The selection indicator can be customized using the [`SelectionIndicatorColor`] property. Use the [`SelectedItem`] property to get the list of selected chips.
 
 This selection changes are notified by using [SelectionChanging] and [SelectionChanged] events.
+
+Here, we should add visual states to set the ChipType to Filter.
 
 The following code illustrates how to get filter typed ChipGroup.
 
@@ -528,12 +452,12 @@ The following code illustrates how to get filter typed ChipGroup.
 
 {% highlight xaml %}
 
-<chip:SfChipGroup 
+<chip:SfChipGroup    x:Name="sfChipGroup"
                      Margin="200,100,0,0"  
                      ItemsSource="{Binding Employees}" 
                      DisplayMemberPath="Name" 
 					 SelectionIndicatorColor="White"
-                     ChipType="Filter">
+                     ChipType="Filter" >
 			
 <VisualStateManager.VisualStateGroups>
     <VisualStateGroup x:Name="CommonStates">
@@ -557,6 +481,8 @@ The following code illustrates how to get filter typed ChipGroup.
 
 {% highlight c# %}
 
+using Syncfusion.Maui.Core;
+
 public MainPage()
 	{
 		InitializeComponent();
@@ -565,9 +491,8 @@ public MainPage()
         VisualState normalState = new VisualState() { Name="Normal"};
 
         VisualStateGroup commonStateGroup = new VisualStateGroup();
-        if (this.ChipType == SfChipsType.Filter || this.ChipType == SfChipsType.Choice)
+        if (sfChipGroup.ChipType == SfChipsType.Filter)
         {
-            
             normalState.Setters.Add(new Setter { Property = SfChipGroup.ChipTextColorProperty, Value = Colors.Black });
             normalState.Setters.Add(new Setter { Property = SfChipGroup.ChipBackgroundProperty, Value = Colors.White });
         }
@@ -586,7 +511,7 @@ public MainPage()
 
         VisualStateManager.SetVisualStateGroups(sfChipGroup, visualStateGroupList);
 
-        }
+    }
 
 {% endhighlight %}
 
@@ -601,12 +526,6 @@ public class Employee
 
     public string Name { get; set; }
 
-    public string ProfilePicture { get; set; }
-
-    public string Designation { get; set; }
-
-    public string ID { get; set; }
-
 }
 
 [ViewModel]
@@ -662,7 +581,7 @@ public class EmployeeViewModel : INotifyPropertyChanged
             selectedEmployee = value;
             OnPropertyChanged(nameof(SelectedEmployee));
         }
-     }
+    }
     public Command ActionCommand { get; set; }
 
     private void ShowPopup(Object obj)
@@ -692,57 +611,30 @@ public class EmployeeViewModel : INotifyPropertyChanged
         {
             Name = "Joseph",
 
-            ProfilePicture = "jackson.png",
-
-            Designation = "Developer",
-
-            ID = "E001",
         });
 
         Employees.Add(new Employee
         {
             Name = "Anne Joseph",
 
-            ProfilePicture = "tye.png",
-
-            Designation = "Developer",
-
-            ID = "E002",
         });
         Employees.Add(new Employee
         {
             Name = "Andrew Fuller",
 
-            ProfilePicture = "liam.png",
-
-            Designation = "Team Lead",
-
-            ID = "E003",
         });
         Employees.Add(new Employee
         {
             Name = "Emilio Alvaro",
 
-            ProfilePicture = "gabriella.png",
-
-            Designation = "Product Manager",
-
-            ID = "E004"
         });
         Employees.Add(new Employee
         {
             Name = "Janet Leverling",
 
-            ProfilePicture = "people_circle1.png",
-
-            Designation = "HR",
-
-            ID = "E005",
         });
 
         SelectedEmployee = Employees[0];
-
-        ActionCommand = new Command(ShowPopup);
 
     }
 
@@ -750,7 +642,7 @@ public class EmployeeViewModel : INotifyPropertyChanged
 
 {% endhighlight %}
 
-![Filter typed in .NET MAUI SfChipGroup](images/items/Filter.png)
+![Filter type SfChipGroup in .NET MAUI](images/items/Filter.png)
 
 ## Action
 
@@ -763,188 +655,121 @@ The following code illustrates how to get action typed ChipGroup.
 {% tabs %}
 
 {% highlight xaml %}
-<Label FontFamily="Roboto-Medium"
-                               Margin="{StaticResource LabelMargin}"
-                               Text="Select result (Action Chips)"/>
-        <ScrollView Margin="{StaticResource ChipMargin}">
-            <chip:SfChipGroup Command="{Binding ActionCommand}" 
-                                              ChipPadding="2,0,0,0" 
-                                              ItemsSource="{Binding ActionItems,Mode=TwoWay}" 
-                                              ChipType="Action">
-            </chip:SfChipGroup>
-        </ScrollView>
-        <Label FontFamily="Roboto-Medium" 
-                       Margin="{StaticResource LabelMargin}"
-                       Text="Search results"/>
-        <Label x:Name="labelText" 
-					   FontFamily="Roboto-Regular"
-                       Text="{Binding Result,Mode=TwoWay}" 
-                       MaxLines="10"
-                       LineBreakMode="WordWrap"
-                       Margin="10,5,5,0"/>
+<ContentPage.BindingContext>
+        <local:ViewModel></local:ViewModel>
+    </ContentPage.BindingContext>
+<chip:SfChipGroup
+    Command="{Binding ActionCommand}" 
+    ItemsSource="{Binding Employees}"
+    DisplayMemberPath="Name"
+    CloseButtonColor="Black"
+    ChipType="Action">
+</chip:SfChipGroup>
+            <StackLayout Orientation="Horizontal">
+<Label Margin="10,60,0,0"
+	                Text="Name:" 
+				    FontAttributes="Bold" 
+				    FontSize="14" />
+<Label Margin="10,60,0,0"
+				Text="{Binding Result}"
+				FontAttributes="Bold" 
+				FontSize="14" />
+            </StackLayout>
 {% endhighlight %}
 
 {% highlight c# %}
 [Model]
 
-public class Employee
+public class Person
 {
-
-    public string Name { get; set; }
-
-    public string ProfilePicture { get; set; }
-
-    public string Designation { get; set; }
-
-    public string ID { get; set; }
-
+    public string Name
+    {
+        get;
+        set;
+    }
 }
 
 [ViewModel]
 
-public class EmployeeViewModel : INotifyPropertyChanged
+public class ViewModel : INotifyPropertyChanged
 {
+    private ICommand actionCommand;
 
-    private Employee selectedEmployee;
+    private ObservableCollection<Person> employees;
 
-    private ObservableCollection<Employee> employees;
+    private string result;
+
+    public ICommand ActionCommand
+    {
+        get
+        {
+            return actionCommand;
+        }
+        set
+        {
+            actionCommand = value;
+        }
+    }
+
+    public ObservableCollection<Person> Employees
+    {
+        get
+        {
+            return employees;
+        }
+        set
+        {
+            Employees = value;
+            OnPropertyChanged("Employees");
+        }
+    }
+
+    public string Result
+    {
+        get
+        {
+            return result;
+        }
+        set
+        {
+            result = value;
+            OnPropertyChanged("Result");
+        }
+    }
+
+    public ViewModel()
+    {
+        ActionCommand = new Command(HandleAction);
+        employees = new ObservableCollection<Person>();
+        employees.Add(new Person() { Name = "John" });
+        employees.Add(new Person() { Name = "James" });
+        employees.Add(new Person() { Name = "Linda" });
+        employees.Add(new Person() { Name = "Rose" });
+        employees.Add(new Person() { Name = "Mark" });
+    }
 
     public event PropertyChangedEventHandler PropertyChanged;
 
-    private ObservableCollection<string> items = new() { "Joseph", "Alazari", "Rocketuh", "Raja" };
-    public ObservableCollection<string> Items
+    public void OnPropertyChanged(string property)
     {
-        get { return items; }
-        set
+        if (PropertyChanged != null)
         {
-            items = value;
-            OnPropertyChanged(nameof(Items));
+            PropertyChanged(this, new PropertyChangedEventArgs(property));
         }
     }
 
-    private Employee selectedItem = new() { Name = "Joseph" };
-
-    public Employee SelectedItems { get { return selectedItem; } set { selectedItem = value; OnPropertyChanged(nameof(SelectedItems)); } }
-
-    public ObservableCollection<Employee> Employees
+    private void HandleAction(object obj)
     {
-        get
-        {
-
-         return employees;
-
-        }
-        set
-        {
-            employees = value;
-            OnPropertyChanged(nameof(Employees));
-        }
-
+        Result = (obj as Person).Name.ToString();
     }
-
-     public Employee SelectedEmployee
-    {
-        get
-        {
-            return selectedEmployee;
-        }
-        set
-        {
-            selectedEmployee = value;
-            OnPropertyChanged(nameof(SelectedEmployee));
-        }
-     }
-    public Command ActionCommand { get; set; }
-
-    private void ShowPopup(Object obj)
-    {
-        if (obj is Employee chip)
-        {
-            this.Result = chip.Name;
-        }
-    }
-
-    private string result;
-    public string Result
-    {
-        get { return result; }
-        set { result = value; OnPropertyChanged(); }
-    }
-
-     public void OnPropertyChanged([CallerMemberName] string name = null) =>
-
-     PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
-
-    public EmployeeViewModel()
-    {
-        this.Employees = new ObservableCollection<Employee>();
-
-        Employees.Add(new Employee
-        {
-            Name = "Joseph",
-
-            ProfilePicture = "jackson.png",
-
-            Designation = "Developer",
-
-            ID = "E001",
-        });
-
-        Employees.Add(new Employee
-        {
-            Name = "Anne Joseph",
-
-            ProfilePicture = "tye.png",
-
-            Designation = "Developer",
-
-            ID = "E002",
-        });
-        Employees.Add(new Employee
-        {
-            Name = "Andrew Fuller",
-
-            ProfilePicture = "liam.png",
-
-            Designation = "Team Lead",
-
-            ID = "E003",
-        });
-        Employees.Add(new Employee
-        {
-            Name = "Emilio Alvaro",
-
-            ProfilePicture = "gabriella.png",
-
-            Designation = "Product Manager",
-
-            ID = "E004"
-        });
-        Employees.Add(new Employee
-        {
-            Name = "Janet Leverling",
-
-            ProfilePicture = "people_circle1.png",
-
-            Designation = "HR",
-
-            ID = "E005",
-        });
-
-        SelectedEmployee = Employees[0];
-
-        ActionCommand = new Command(ShowPopup);
-
-    }
-
 }
 
 {% endhighlight %}
 
-![Action typed in Xamarin.Forms SfChipGroup](images/items/Action.png)
+![Action typed in .NET MAUI SfChipGroup](images/items/Action.png)
 
 
-## See also
+
 
 
 
