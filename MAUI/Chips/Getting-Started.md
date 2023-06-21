@@ -21,7 +21,7 @@ N> Assemblies can be found in unzipped package location(Documents/Syncfusion/{Ve
 
 ## Adding .NET MAUI Chips reference
 
-Syncfusion Xamarin components are available in [nuget.org](https://www.nuget.org/). To add Chips to your project, open the NuGet package manager in Visual Studio, search for [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core), and then install it.
+Syncfusion .NET MAUI components are available in [nuget.org](https://www.nuget.org/). To add Chips to your project, open the NuGet package manager in Visual Studio, search for [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core), and then install it.
 
 ## Handler Registration
 
@@ -101,11 +101,6 @@ Content = chips;
 {% endhighlight %}
 
 {% endtabs %}
-
-
-### Android
-
-The Android platform does not require any additional configuration to render the chips control.
 
 ## Initialize chips
 
@@ -190,13 +185,8 @@ The chips control creates chip for each object and arranges chips in a StackLayo
 					<FlexLayout 
 						HorizontalOptions="Start" 
 						VerticalOptions="Center" 
-						SelectionIndicatorColor="White"  
-                        Command="{Binding ActionCommand}"   
-                        DisplayMemberPath="Name" 
-                        ChipType="Input"
-                        FlowDirection="LeftToRight"
-				
-				</core:SfChipGroup.ChipLayout>
+						DisplayMemberPath="Name"/> 
+                </core:SfChipGroup.ChipLayout>
 			</core:SfChipGroup> 
 		</Grid>
 	</ContentPage.Content>
@@ -220,7 +210,7 @@ namespace Chips
 			grid.Children.Add(chipGroup);
 			FlexLayout layout = new FlexLayout()
 			{
-				FlowDirection = FlexDirection.LeftToRight,
+				chipGroup.DispalyMemberpath="Name",
 				HorizontalOptions = LayoutOptions.Start,
 				VerticalOptions = LayoutOptions.Center,
 			};
@@ -323,17 +313,13 @@ Create an instance of ViewModel class,and then set it as the `BindingContext`. B
 			<core:SfChipGroup 
 				ItemsSource="{Binding Employees}" 
 				ChipPadding="8,8,0,0" 
-				DisplayMemberPath="Name">
+				DisplayMemberPath="Name"
+				ChipType="Input">
 				<core:SfChipGroup.ChipLayout>
 					<FlexLayout 
 						HorizontalOptions="Start" 
 						VerticalOptions="Center" 
-						SelectionIndicatorColor="White"  
-                        Command="{Binding ActionCommand}"   
-                        DisplayMemberPath="Name" 
-                        FlowDirection="LeftToRight"
-						CloseButtonColor="Black"
-                        ChipBackground="white"
+						ChipBackground="white"
                         ChipTextColor="Black"/>
 				</core:SfChipGroup.ChipLayout>
 			</core:SfChipGroup>  
@@ -361,9 +347,9 @@ namespace Chips
 			this.BindingContext = new ViewModel();
 			chipGroup.SetBinding(SfChipGroup.ItemsSourceProperty, "Employees");
 			chipGroup.DisplayMemberPath = "Name";
+			chipGroup.ChipType = SfChipsType.Input;
 			chipGroup.CloseButtonColor = Colors.Black;
 			chipGroup.ChiBackground = Colors.White;
-			chipGroup.CloseTextColor = Colors.Black;
 			chipGroup.ChipPadding = new Thickness(8, 8, 0, 0);
 			this.Content = grid;
 		}
@@ -397,7 +383,8 @@ namespace Chips
 			<core:SfChipGroup
 				Command="{Binding ActionCommand}" 
 				ItemsSource="{Binding Employees}"
-				Type="Action">
+				DisplayMemberPath="Name"
+				ChipType="Action">
 			</core:SfChipGroup>
 			<StackLayout Orientation="Horizontal">
 			<Label 
@@ -503,9 +490,6 @@ namespace Chips
 
 {% endtabs %}
 
-![action typed chip group](images/action-type-chip/action_type_chip.png)
+![ChipGroup sample with display member path and itemsSource demo](images/getting-started/action.png)
 
-You can find the complete getting started sample from this [link.](http://www.syncfusion.com/downloads/support/directtrac/general/ze/GettingStarted1258894659.zip)
-
-## See also
 
