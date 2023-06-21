@@ -486,3 +486,100 @@ this.dataGrid.ShowColumnWhenGrouped = false;
 
 {% endhighlight %}
 {% endtabs %}
+
+## Customize Group Icon with template
+
+By default , the SfDatagrid loads two different paths for denoting the group expanded and collapsed state. The group icon can be Customized by the [sfDataGrid.GroupExpandCollapseTemplate]() property. When loading as a template, you have the ability to load a single template that indicates the expanded state of a group. This template will then rotate to represent the collapsed state. Refer to the following code snippet for using template:
+
+{% tabs %}
+
+{% highlight xaml %}
+    <syncfusion:SfDataGrid VerticalOptions="FillAndExpand"
+                               HorizontalOptions="FillAndExpand"
+                               ItemsSource="{Binding OrderInfoCollection}"
+                               x:Name="dataGrid"
+                               GroupingMode="Multiple"
+                               AllowGroupExpandCollapse="True"
+                               AutoGenerateColumnsMode="None"
+                               >
+            <syncfusion:SfDataGrid.GroupExpandCollapseTemplate>
+                <DataTemplate>
+                    <Image Source="downward_icon.png"/>
+                </DataTemplate>
+            </syncfusion:SfDataGrid.GroupExpandCollapseTemplate>
+            
+            <syncfusion:SfDataGrid.GroupColumnDescriptions>
+                <syncfusion:GroupColumnDescription ColumnName="Name" />
+                <syncfusion:GroupColumnDescription ColumnName="ShipCity" />
+            </syncfusion:SfDataGrid.GroupColumnDescriptions>
+    </syncfusion:SfDataGrid>                           
+{% endhighlight %}
+
+{% highlight c# %}
+this.dataGrid.GroupingMode = GroupingMode.Multiple;
+this.dataGrid.AllowGroupExpandCollapse = true;
+dataGrid.GroupExpandCollapseTemplate = new DataTemplate(() =>
+        {
+            var imageView1 = new Image()
+            {
+                Source = "downward_icon.png",
+                Aspect = Aspect.AspectFit,
+            };
+            return imageView1;
+        });
+{% endhighlight %}
+{% endtabs %}
+
+![DataGrid with template](Images\Grouping\maui-datagrid-template.gif)
+
+## Customize Group Icon with template Selector
+
+By default , the SfDatagrid loads two different paths for denoting the group expanded and collapsed state. The group icon can be Customized by the [sfDataGrid.GroupExpandCollapseTemplate]() property. When loading as a template Selector, you have the ability to load multiple templates that indicates the expanded and collapsed states of the groups. Refer to the following code snippet for using template selector: 
+
+{% tabs %}
+
+{% highlight xaml %}
+    <syncfusion:SfDataGrid VerticalOptions="FillAndExpand"
+                               HorizontalOptions="FillAndExpand"
+                               ItemsSource="{Binding OrderInfoCollection}"
+                               x:Name="dataGrid"
+                               GroupingMode="Multiple"
+                               AllowGroupExpandCollapse="True"
+                               AutoGenerateColumnsMode="None"
+                               >
+            <syncfusion:SfDataGrid.GroupExpandCollapseTemplate>
+                <local:ExpandCollapseTemplate ExpandTemplate="{StaticResource ExpandIcon }"
+                                              CollapseTemplate="{StaticResource CollapseIcon}" />
+            </syncfusion:SfDataGrid.GroupExpandCollapseTemplate>
+            
+            <syncfusion:SfDataGrid.GroupColumnDescriptions>
+                <syncfusion:GroupColumnDescription ColumnName="Name" />
+                <syncfusion:GroupColumnDescription ColumnName="ShipCity" />
+            </syncfusion:SfDataGrid.GroupColumnDescriptions>
+    </syncfusion:SfDataGrid>                           
+{% endhighlight %}
+
+{% highlight c# %}
+public class ExpandCollapseTemplate : DataTemplateSelector
+{
+    public DataTemplate ExpandTemplate { get; set; }
+
+    public DataTemplate CollapseTemplate { get; set; }
+
+    protected override DataTemplate OnSelectTemplate(object item, BindableObject container)
+    {
+        var isExpanded = (item as Group).IsExpanded;
+        if (isExpanded)
+        {
+            return ExpandTemplate;
+        }
+        else
+        {
+            return CollapseTemplate;
+        }
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
+![DataGrid with template selector](Images\Grouping\maui-datagrid-template-selector.gif)

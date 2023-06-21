@@ -801,6 +801,46 @@ dataGrid.Columns.Add(comboBoxColumn);
 
 ![DataGrid with Suggesting comboBox column](Images\column-types\maui-datagrid-combobox-column-editing.png)
 
+### Hide ClearButton
+
+By default, the clear button X will be displayed in the editor of the ComboBox control, which can be used to clear the entered input. Hide the clear button in ComboBox control using the [ShowClearButton]() property. The default value of the `ShowClearButton` property value is true.
+
+{% tabs %}
+{% highlight xaml %}
+    <ContentPage.BindingContext>
+        <local:ViewModel x:Name="viewModel" />
+    </ContentPage.BindingContext>
+
+    <sfGrid:SfDataGrid x:Name="dataGrid"
+                       ItemsSource="{Binding OrdersInfo}">
+        <sfGrid:SfDataGrid.Columns>
+            <sfgrid:DataGridComboBoxColumn BindingContext="{x:Reference viewModel}"
+                                           HeaderText="Name"
+                                           IsEditableMode="True"
+                                           ShowClearButton="False"
+                                           ItemsSource="{Binding CustomerNames}"
+                                           MappingName="DealerName" />
+        </sfGrid:SfDataGrid.Columns>
+    </sfGrid:SfDataGrid>
+{% endhighlight %}
+{% highlight c# %}
+dataGrid = new SfDataGrid();
+DataGridComboBoxColumn comboBoxColumn = new DataGridComboBoxColumn()
+{
+    BindingContext = viewModel,
+    MappingName = "DealerName",
+    IsEditableMode= true,
+    ItemsSource = viewModel.CustomerNames,
+    HeaderText = "Name",
+    ShowClearButton= false,
+
+};
+dataGrid.Columns.Add(comboBoxColumn);
+{% endhighlight %}
+{% endtabs %}
+
+N> The `ShowClearButton` property has no effect in non-editable mode..
+
 ## DataGridNumericColumn
 
 The `DataGridNumericColumn` inherits all the properties of the `DataGridColumn`. It is used to display numeric data. To create a  `DataGridNumericColumn`, the property corresponding to the column in the underlying collection must be a numeric type (int, double, float, etc.). 
