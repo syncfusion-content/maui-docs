@@ -165,7 +165,7 @@ public MainPage()
 The applied effects can be canceled using the `CancelEdits` method or by calling the ImageEffect method with ImageEffect.None.
 
 {% tabs %}
-{% highlight C# %}
+{% highlight c# %}
 
 public MainPage()
 {               
@@ -176,7 +176,7 @@ public MainPage()
 
 {% endhighlight %}
 
-{% highlight ImageEffect.None %}
+{% highlight c# %}
 
 public MainPage()
 {               
