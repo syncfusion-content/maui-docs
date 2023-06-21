@@ -26,7 +26,7 @@ The following code illustrates how to get an input type chip.
 			VerticalOptions="Center" HeightRequest="40"
 			FontSize="15" 
 			WidthRequest="110" 
-			Completed="entry_Completed"
+			Completed="Entry_Completed"
 			Margin="10,10,0,0">
                 </Entry>
 </chip:SfChipGroup.InputView>
@@ -39,22 +39,19 @@ The following code illustrates how to get an input type chip.
 
 [MainPage.cs]
 ...
-private void entry_Completed(object sender, EventArgs e)
+private void Entry_Completed(object sender, EventArgs e)
 {
-	var viewModel = this.BindingContext as ViewModel;
-	var image = random.Next(1,20);
-	var name = (sender as InputView).Text;
-	viewModel.InputItems.Add(new Model() {PersonName=name, PersonImage=Images[image]});
-	entry.Text = "";
+    var viewModel = this.BindingContext as EmployeeViewModel;
+    var name = (sender as InputView).Text;
+    viewModel.Employees.Add(new Employee() { Name = name });
+    entry.Text = "";    
 }
 ..
 [Model]
 
 public class Employee
 {
-
     public string Name { get; set; }
-
 }
 
 [ViewModel]
@@ -62,26 +59,9 @@ public class Employee
 public class EmployeeViewModel : INotifyPropertyChanged
 {
 
-    private Employee selectedEmployee;
-
     private ObservableCollection<Employee> employees;
 
     public event PropertyChangedEventHandler PropertyChanged;
-
-    private ObservableCollection<string> items = new() { "Joseph", "Alazari", "Rocketuh", "Raja" };
-    public ObservableCollection<string> Items
-    {
-        get { return items; }
-        set
-        {
-            items = value;
-            OnPropertyChanged(nameof(Items));
-        }
-    }
-
-    private Employee selectedItem = new() { Name = "Joseph" };
-
-    public Employee SelectedItems { get { return selectedItem; } set { selectedItem = value; OnPropertyChanged(nameof(SelectedItems)); } }
 
     public ObservableCollection<Employee> Employees
     {
@@ -99,28 +79,6 @@ public class EmployeeViewModel : INotifyPropertyChanged
 
     }
 
-     public Employee SelectedEmployee
-    {
-        get
-        {
-            return selectedEmployee;
-        }
-        set
-        {
-            selectedEmployee = value;
-            OnPropertyChanged(nameof(SelectedEmployee));
-        }
-     }
-    public Command ActionCommand { get; set; }
-
-    private void ShowPopup(Object obj)
-    {
-        if (obj is Employee chip)
-        {
-            this.Result = chip.Name;
-        }
-    }
-
     private string result;
     public string Result
     {
@@ -136,35 +94,11 @@ public class EmployeeViewModel : INotifyPropertyChanged
     {
         this.Employees = new ObservableCollection<Employee>();
 
-        Employees.Add(new Employee
-        {
-            Name = "Joseph",
-
-        });
-
-        Employees.Add(new Employee
-        {
-            Name = "Anne Joseph",
-
-        });
-        Employees.Add(new Employee
-        {
-            Name = "Andrew Fuller",
-
-        });
-        Employees.Add(new Employee
-        {
-            Name = "Emilio Alvaro",
-
-        });
-        Employees.Add(new Employee
-        {
-            Name = "Janet Leverling",
-
-        });
-
-        SelectedEmployee = Employees[0];
-
+        Employees.Add(new Employee() { Name = "Joseph" });
+        Employees.Add(new Employee() { Name = "Anne Joseph" });
+        Employees.Add(new Employee() { Name = "Andrew Fuller  " });
+        Employees.Add(new Employee() { Name = "Emilio Alvaro" });
+        Employees.Add(new Employee() { Name = "Janet Leverling" });
     }
 
 }
@@ -229,7 +163,6 @@ public MainPage()
             normalState.Setters.Add(new Setter { Property = SfChipGroup.ChipBackgroundProperty, Value = Colors.White });
         }
 
-
         VisualState selectedState = new VisualState
         {
             Name = "Selected"
@@ -265,8 +198,6 @@ public class Employee
 public class EmployeeViewModel : INotifyPropertyChanged
 {
 
-    private Employee selectedEmployee;
-
     private ObservableCollection<Employee> employees;
 
     public event PropertyChangedEventHandler PropertyChanged;
@@ -281,10 +212,6 @@ public class EmployeeViewModel : INotifyPropertyChanged
             OnPropertyChanged(nameof(Items));
         }
     }
-
-    private Employee selectedItem = new() { Name = "Joseph" };
-
-    public Employee SelectedItems { get { return selectedItem; } set { selectedItem = value; OnPropertyChanged(nameof(SelectedItems)); } }
 
     public ObservableCollection<Employee> Employees
     {
@@ -302,28 +229,6 @@ public class EmployeeViewModel : INotifyPropertyChanged
 
     }
 
-     public Employee SelectedEmployee
-    {
-        get
-        {
-            return selectedEmployee;
-        }
-        set
-        {
-            selectedEmployee = value;
-            OnPropertyChanged(nameof(SelectedEmployee));
-        }
-     }
-    public Command ActionCommand { get; set; }
-
-    private void ShowPopup(Object obj)
-    {
-        if (obj is Employee chip)
-        {
-            this.Result = chip.Name;
-        }
-    }
-
     private string result;
     public string Result
     {
@@ -331,44 +236,19 @@ public class EmployeeViewModel : INotifyPropertyChanged
         set { result = value; OnPropertyChanged(); }
     }
 
-     public void OnPropertyChanged([CallerMemberName] string name = null) =>
+    public void OnPropertyChanged([CallerMemberName] string name = null) =>
 
-     PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
+    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
 
     public EmployeeViewModel()
     {
         this.Employees = new ObservableCollection<Employee>();
 
-        Employees.Add(new Employee
-        {
-            Name = "Joseph",
-
-        });
-
-        Employees.Add(new Employee
-        {
-            Name = "Anne Joseph",
-
-        });
-        Employees.Add(new Employee
-        {
-            Name = "Andrew Fuller",
-
-        });
-        Employees.Add(new Employee
-        {
-            Name = "Emilio Alvaro",
-
-        });
-        Employees.Add(new Employee
-        {
-            Name = "Janet Leverling",
-
-        });
-
-        SelectedEmployee = Employees[0];
-
-        ActionCommand = new Command(ShowPopup);
+        Employees.Add(new Employee() { Name = "Joseph" });
+        Employees.Add(new Employee() { Name = "Anne Joseph" });
+        Employees.Add(new Employee() { Name = "Andrew Fuller  " });
+        Employees.Add(new Employee() { Name = "Emilio Alvaro" });
+        Employees.Add(new Employee() { Name = "Janet Leverling" });
 
     }
 
@@ -389,22 +269,17 @@ public class EmployeeViewModel : INotifyPropertyChanged
 {% highlight xaml %}
 
 <ContentPage
-    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:core ="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:Chips"
-    x:Class="Chips.GettingStarted">
-	<ContentPage.Content>
-		<core:SfChipGroup Type="Choice" ChoiceMode="SingleOrNone">
-			<core:SfChipGroup.Items>
-				<core:SfChip Text="Extra Small"/>
-				<core:SfChip Text="Small"/>
-				<core:SfChip Text="Medium"/>
-				<core:SfChip Text="Large"/>
-				<core:SfChip Text="Extra Large"/>
-			</core:SfChipGroup.Items>
-		</core:SfChipGroup>
+    xmlns:chip ="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core" >
+<ContentPage.Content>
+		<chip:SfChipGroup Type="Choice" ChoiceMode="SingleOrNone">
+			<chip.SfChipGroup.Items>
+				<chip:SfChip Text="Extra Small"/>
+				<chip:SfChip Text="Small"/>
+				<chip:SfChip Text="Medium"/>
+				<chip:SfChip Text="Large"/>
+				<chip:SfChip Text="Extra Large"/>
+			</chip:SfChipGroup.Items>
+		</chip:SfChipGroup>
 	</ContentPage.Content>
 </ContentPage>
 
@@ -444,7 +319,7 @@ Allows users to select more than one chip in a group of chips. The selected chip
 
 This selection changes are notified by using [SelectionChanging] and [SelectionChanged] events.
 
-Here, we should add visual states to set the ChipType to Filter.
+Here, Add visual states to set the ChipType to Filter.
 
 The following code illustrates how to get filter typed ChipGroup.
 
@@ -454,11 +329,11 @@ The following code illustrates how to get filter typed ChipGroup.
 
 <chip:SfChipGroup    x:Name="sfChipGroup"
                      Margin="200,100,0,0"  
-                     ItemsSource="{Binding Employees}" 
-                     DisplayMemberPath="Name" 
-					 SelectionIndicatorColor="White"
-                     ChipType="Filter" >
-			
+                     ItemsSource="{Binding Employees}"
+                     SelectionIndicatorColor="White" 
+                     ChipType="Filter" 
+                     DisplayMemberPath="Name" >
+					 
 <VisualStateManager.VisualStateGroups>
     <VisualStateGroup x:Name="CommonStates">
         <VisualState x:Name="Normal">
@@ -497,7 +372,6 @@ public MainPage()
             normalState.Setters.Add(new Setter { Property = SfChipGroup.ChipBackgroundProperty, Value = Colors.White });
         }
 
-
         VisualState selectedState = new VisualState
         {
             Name = "Selected"
@@ -533,8 +407,6 @@ public class Employee
 public class EmployeeViewModel : INotifyPropertyChanged
 {
 
-    private Employee selectedEmployee;
-
     private ObservableCollection<Employee> employees;
 
     public event PropertyChangedEventHandler PropertyChanged;
@@ -549,10 +421,6 @@ public class EmployeeViewModel : INotifyPropertyChanged
             OnPropertyChanged(nameof(Items));
         }
     }
-
-    private Employee selectedItem = new() { Name = "Joseph" };
-
-    public Employee SelectedItems { get { return selectedItem; } set { selectedItem = value; OnPropertyChanged(nameof(SelectedItems)); } }
 
     public ObservableCollection<Employee> Employees
     {
@@ -570,28 +438,6 @@ public class EmployeeViewModel : INotifyPropertyChanged
 
     }
 
-     public Employee SelectedEmployee
-    {
-        get
-        {
-            return selectedEmployee;
-        }
-        set
-        {
-            selectedEmployee = value;
-            OnPropertyChanged(nameof(SelectedEmployee));
-        }
-    }
-    public Command ActionCommand { get; set; }
-
-    private void ShowPopup(Object obj)
-    {
-        if (obj is Employee chip)
-        {
-            this.Result = chip.Name;
-        }
-    }
-
     private string result;
     public string Result
     {
@@ -607,34 +453,11 @@ public class EmployeeViewModel : INotifyPropertyChanged
     {
         this.Employees = new ObservableCollection<Employee>();
 
-        Employees.Add(new Employee
-        {
-            Name = "Joseph",
-
-        });
-
-        Employees.Add(new Employee
-        {
-            Name = "Anne Joseph",
-
-        });
-        Employees.Add(new Employee
-        {
-            Name = "Andrew Fuller",
-
-        });
-        Employees.Add(new Employee
-        {
-            Name = "Emilio Alvaro",
-
-        });
-        Employees.Add(new Employee
-        {
-            Name = "Janet Leverling",
-
-        });
-
-        SelectedEmployee = Employees[0];
+        Employees.Add(new Employee() { Name = "Joseph" });
+        Employees.Add(new Employee() { Name = "Anne Joseph" });
+        Employees.Add(new Employee() { Name = "Andrew Fuller  " });
+        Employees.Add(new Employee() { Name = "Emilio Alvaro" });
+        Employees.Add(new Employee() { Name = "Janet Leverling" });
 
     }
 
@@ -656,8 +479,8 @@ The following code illustrates how to get action typed ChipGroup.
 
 {% highlight xaml %}
 <ContentPage.BindingContext>
-        <local:ViewModel></local:ViewModel>
-    </ContentPage.BindingContext>
+        <local:ViewModel/>
+</ContentPage.BindingContext>
 <chip:SfChipGroup
     Command="{Binding ActionCommand}" 
     ItemsSource="{Binding Employees}"
