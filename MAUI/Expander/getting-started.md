@@ -263,8 +263,9 @@ N> Loading the `Label` as direct children of the `Header` or `Content` of the Ex
 
 Now, run the application to render the desired output.
 
-![.NET MAUI Expander](Images/maui-expander-with-gettingstarted.png)
+![.NET MAUI Expander](Images/maui-expander-with-gettingstarted.gif)
 
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/getting-started-with-.net-maui-expander).
 
 ## Animation duration
 
@@ -305,90 +306,83 @@ The `SfExpander` allows you to programmatically expand and collapse by using the
 {% endhighlight %}
 {% endtabs %}
 
-### Customize the expander when collapsing or expanding
+## Events 
 
-Customize the expander by using the `Collapsed` event. This event occurs after a `SfExpander` is collapsed when tapping on the header.
+There are four built-in events in the SfExpander control namely:
+
+* Expanding
+* Expanded
+* Collapsing
+* Collapsed
+
+### Expanding Event
+
+The `Expanding` event will be triggered when the expander control is being expanded.It can cancel expansion with `ExpandingAndCollapsingEventArgs` that contains the following property:
+
+* `Cancel`: Indicates that the expansion or collapse action should be cancelled.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
-<syncfusion:SfExpander x:Name ="expander" Collapsed="Expander_Collapsed">
-    <syncfusion:SfExpander.Header>
-        <Grid>
-            <Label x:Name="label"  Text="Veggie burger" FontSize="Large"/>
-        </Grid>
-    </syncfusion:SfExpander.Header>
-	
-    <syncfusion:SfExpander.Content>
-        <Grid>
-            <Label Text="Veggie burger, garden burger, or tofu burger uses a meat analogue, a meat substitute such as tofu, textured vegetable protein, seitan (wheat gluten), Quorn, beans, grains or an assortment of vegetables, which are ground up and formed into patties."/>
-        </Grid>
-    </syncfusion:SfExpander.Content>
-</syncfusion:SfExpander> 
+<syncfusion:SfExpander Expanding="SfExpander_Expanding"/>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
-private void Expander_Collapsed(object sender, ExpandedAndCollapsedEventArgs e)
+
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="3" %}
+private void SfExpander_Expanding(object sender, ExpandingAndCollapsingEventArgs e)
 {
-    label.Text = "Burger and Pizza";
-    expander.HeaderBackground = Colors.Aqua;
+    e.Cancel = true;
 }
 {% endhighlight %}
 {% endtabs %}
 
-Customize the expander by using the `Expanded` event. It will occur after a `SfExpander` is expanded when tapping the header.
+### Expanded Event
+
+The `Expanded` event is triggered when the expander is fully expanded. You can execute your own code when this event occurs.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
-<syncfusion:SfExpander x:Name ="expander" Expanded="Expander_Expanded">
-    <syncfusion:SfExpander.Header>
-        <Grid >
-            <Label x:Name="label"  Text="Veggie burger" FontSize="Large"/>
-        </Grid>
-    </syncfusion:SfExpander.Header>
-	
-    <syncfusion:SfExpander.Content>
-        <Grid>
-            <Label Text="Veggie burger, garden burger, or tofu burger uses a meat analogue, a meat substitute such as tofu, textured vegetable protein, seitan (wheat gluten), Quorn, beans, grains or an assortment of vegetables, which are ground up and formed into patties."/>
-        </Grid>
-    </syncfusion:SfExpander.Content>
-</syncfusion:SfExpander>
+<syncfusion:SfExpander Expanded="SfExpander_Expanded"/>
 {% endhighlight %}
+
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
-private void Expander_Expanded(object sender, ExpandedAndCollapsedEventArgs e)
+private void SfExpander_Expanded(object sender, ExpandedAndCollapsedEventArgs e)
 {
-    label.Text = "Burger";
-    expander.HeaderBackground = Colors.YellowGreen;
+    // Codes that need to be executed once the expander is expanded.
 }
 {% endhighlight %}
 {% endtabs %}
 
-### Restricting the expander while expanding and collapsing 
+### Collapsing Event
 
-Prevent the Expander from being collapsed by handling the `Collapsing` event. This event occurs when a user attempts to collapse the `SfExpander` by tapping the header. Cancel the user action by setting the `Cancel` property of the `ExpandingAndCollapsingEventArgs`.
+The `Collapsing` event will be triggered when the expander control is being collapsed.It can cancel collapsing with `ExpandingAndCollapsingEventArgs` that contains the following property:
+
+* `Cancel`: Indicates that the expansion or collapse action should be cancelled.
+
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
-<syncfusion:SfExpander x:Name ="expander" Collapsing="Expander_Collapsing" >
-</syncfusion:SfExpander>
+<syncfusion:SfExpander Collapsing="SfExpander_Collapsing"/>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
-private void Expander_Collapsing(object sender, ExpandingAndCollapsingEventArgs e)
+
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="3" %}
+private void SfExpander_Collapsing(object sender, ExpandingAndCollapsingEventArgs e)
 {
-   e.Cancel = true;
+    e.Cancel = true;
 }
 {% endhighlight %}
 {% endtabs %}
 
-Restrict the Expander being expanded by the `Expanding` event. This event occurs when a user tries to expand the `SfExpander` while tapping the header. Cancel the user action using the `Cancel` property of the `ExpandingAndCollapsingEventArgs`.
+### Collapsed Event 
+
+The `Collapsed` event is triggered when the expander is collapsed. You can execute your own code when this event occurs.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
-<syncfusion:SfExpander x:Name ="expander" Expanding="Expander_Expanding" >
-</syncfusion:SfExpander>
+<syncfusion:SfExpander Collapsed="SfExpander_Collapsed"/>
 {% endhighlight %}
+
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
-private void Expander_Expanding(object sender, ExpandingAndCollapsingEventArgs e)
+private void SfExpander_Collapsed(object sender, ExpandedAndCollapsedEventArgs e)
 {
-   e.Cancel = true;
+    // Codes that need to be executed once the expander is collapsed.
 }
 {% endhighlight %}
-{% endtabs %} 
-
+{% endtabs %}
