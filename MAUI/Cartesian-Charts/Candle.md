@@ -172,6 +172,8 @@ In Candle Series, the [EnableSolidCandle]() property is used to specify whether 
 
 </chart:SfCartesianChart>
 
+{% endhighlight %}
+
 {% highlight c# %}
 
     SfCartesianChart chart = new SfCartesianChart();
