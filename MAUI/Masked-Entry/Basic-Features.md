@@ -11,7 +11,7 @@ documentation: ug
 
 ## Setting ClearButtonVisibility
 
-The ClearButtonVisibility of type ClearButtonVisibility controls whether a clear button is displayed, which enables the user to clear the text. The default value of this property is `ClearButtonVisibility.Never`.
+The ClearButtonVisibility of type [ClearButtonVisibility](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html#Syncfusion_Maui_Inputs_SfMaskedEntry_ClearButtonVisibility) controls whether a clear button is displayed, which enables the user to clear the text. The default value of this property is `ClearButtonVisibility.Never`.
 
 {% tabs %}
 {% highlight XAML %}
@@ -19,7 +19,7 @@ The ClearButtonVisibility of type ClearButtonVisibility controls whether a clear
 <syncfusion:SfMaskedEntry WidthRequest="200"
                           MaskType="Simple"
                           Mask="(000) 000-0000"
-                          ClearButtonVisibility = "Visible" />
+                          ClearButtonVisibility = "WhileEditing" />
 
 {% endhighlight %}
 {% highlight C# %}
@@ -28,7 +28,7 @@ maskedEntry = new SfMaskedEntry();
 maskedEntry.WidthRequest = "200";
 maskedEntry.MaskType = MaskedEntryMaskType.Simple;
 maskedEntry.Mask = "(000) 000-0000";  
-maskedEntry.ClearButtonVisibility = Visible;
+maskedEntry.ClearButtonVisibility = ClearButtonVisibility.WhileEditing;
 
 {% endhighlight %}
 {% endtabs %}
@@ -41,7 +41,7 @@ The cursor position in the masked entry can either be obtained or updated using 
 
 ## Setting FontSize
 
-The Masked Entry control allows the user to customize the font size of the text inside the entry part using the `FontSize` property of type double.
+The Masked Entry control allows the user to customize the font size of the text inside the entry part using the [FontSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html#Syncfusion_Maui_Inputs_SfMaskedEntry_FontSize) property of type double.
 
 {% tabs %}
 {% highlight XAML %}
@@ -68,7 +68,7 @@ maskedEntry.FontSize = 18;
 
 ## Setting FontAttributes
 
-The Masked Entry control allows the user to customize the font attribute of the text inside the entry part using the `FontAttributes` property of the type FontAttributes.
+The Masked Entry control allows the user to customize the font attribute of the text inside the entry part using the [FontAttributes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html#Syncfusion_Maui_Inputs_SfMaskedEntry_FontAttributes) property of the type FontAttributes.
 
 
 
@@ -97,7 +97,7 @@ maskedEntry.FontAttributes = FontAttributes.Bold;
 
 ## Setting FontFamily
 
-The Masked Entry control allows the user to customize the text's font family inside the entry part using the `FontFamily` property of the type string.
+The Masked Entry control allows the user to customize the text's font family inside the entry part using the [FontFamily](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html#Syncfusion_Maui_Inputs_SfMaskedEntry_FontFamily) property of the type string.
 
 {% tabs %}
 {% highlight XAML %}
@@ -124,7 +124,7 @@ maskedEntry.FontFamily = "Lobster-Regular";
 
 ## Setting Keyboard
 
-The Masked Entry control allows the user to specify the virtual keyboard displayed when entering text using the `Keyboard` property of type Keyboard.
+The Masked Entry control allows the user to specify the virtual keyboard displayed when entering text using the [Keyboard](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html#Syncfusion_Maui_Inputs_SfMaskedEntry_Keyboard) property of type Keyboard.
 
 
 ## Setting Placeholder
@@ -175,7 +175,7 @@ maskedEntry.PlaceholderColor =  Colors.Green;
 
 ## Setting TextColor
 
-The `SfMaskedEntry` control provides the user to customize the color of the entered text using the `TextColor` property of type `Color`. The default value of the TextColor property is Colors.Black.
+The `SfMaskedEntry` control provides the user to customize the color of the entered text using the [TextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html#Syncfusion_Maui_Inputs_SfMaskedEntry_TextColor) property of type `Color`. The default value of the TextColor property is Colors.Black.
 
 {% tabs %}
 {% highlight XAML %}
