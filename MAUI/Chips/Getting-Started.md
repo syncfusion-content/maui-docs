@@ -63,11 +63,13 @@ Step 1: Add the NuGet to the project
 
 Step 2: Add the namespace as shown in the following code sample:
 
+## For SfChip
+
 {% tabs %}
 
 {% highlight xaml %}
 
-    xmlns:editors="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
+    xmlns:chip="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
 	
 {% endhighlight %}
 
@@ -85,11 +87,9 @@ Step 3: Set the control to content in `ContentPage.`
 
 {% highlight xaml %}
 
-
 <ContentPage.Content>    
-    <core:SfChip x:Name="chips" />
+    <chip:SfChip x:Name="chips" />
 </ContentPage.Content>
-
 
 {% endhighlight %}
 
@@ -103,6 +103,10 @@ Content = chips;
 {% endtabs %}
 
 ## Initialize chips
+
+Import the [`SfChipGroup`] namespace in respective page
+
+## For SfChipGroup
 
 {% tabs %}
 
@@ -120,6 +124,8 @@ using Syncfusion.Maui.Core;
 
 {% endtabs %}
 
+Then initialize an empty [`SfChipGroup`] as shown in the following code:
+
 {% tabs %}
 
 {% highlight xaml %}
@@ -127,18 +133,17 @@ using Syncfusion.Maui.Core;
 <ContentPage
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
 	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:core="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
+    xmlns:chip="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:Chips"
     x:Class="Chips.GettingStarted">
 	<ContentPage.Content>
 		<Grid>
-			<core:SfChipGroup/>
+			<chip:SfChipGroup/>
 		</Grid>
 	</ContentPage.Content>
 </ContentPage>
 
-	
 {% endhighlight %}
 
 {% highlight c# %}
@@ -153,7 +158,8 @@ namespace Chips
 		{
 			InitializeComponent();
 			Grid grid = new Grid();
-			grid.Children.Add(new SfChipGroup());
+			SfChipGroup chipGroup = new SfChipGroup();
+			grid.Children.Add(chipGroup);
 			this.Content = grid;
 		}
 	}
@@ -174,20 +180,20 @@ The chips control creates chip for each object and arranges chips in a StackLayo
 <ContentPage
 	xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
 	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:core="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
+    xmlns:chip="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:Chips"
     x:Class="Chips.GettingStarted">
 	<ContentPage.Content>
 		<Grid>
-			<core:SfChipGroup>
-				<core:SfChipGroup.ChipLayout>
+			<chip:SfChipGroup DisplayMemberPath="Name">
+				<chip:SfChipGroup.ChipLayout>
 					<FlexLayout 
 						HorizontalOptions="Start" 
 						VerticalOptions="Center" 
-						DisplayMemberPath="Name"/> 
-                </core:SfChipGroup.ChipLayout>
-			</core:SfChipGroup> 
+						/> 
+                </chip:SfChipGroup.ChipLayout>
+			</chip:SfChipGroup> 
 		</Grid>
 	</ContentPage.Content>
 </ContentPage >
@@ -207,10 +213,10 @@ namespace Chips
 			InitializeComponent();
 			Grid grid = new Grid();
 			SfChipGroup chipGroup = new SfChipGroup();
+			chipGroup.DispalyMemberpath="Name",
 			grid.Children.Add(chipGroup);
 			FlexLayout layout = new FlexLayout()
 			{
-				chipGroup.DispalyMemberpath="Name",
 				HorizontalOptions = LayoutOptions.Start,
 				VerticalOptions = LayoutOptions.Center,
 			};
@@ -301,7 +307,7 @@ Create an instance of ViewModel class,and then set it as the `BindingContext`. B
 <ContentPage
 	xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
 	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:core="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
+    xmlns:chip="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:Chips"
     x:Class="Chips.GettingStarted">
@@ -310,19 +316,15 @@ Create an instance of ViewModel class,and then set it as the `BindingContext`. B
 	</ContentPage.BindingContext>
 	<ContentPage.Content>
 		<Grid>
-			<core:SfChipGroup 
+			<chip:SfChipGroup 
 				ItemsSource="{Binding Employees}" 
 				ChipPadding="8,8,0,0" 
 				DisplayMemberPath="Name"
-				ChipType="Input">
-				<core:SfChipGroup.ChipLayout>
-					<FlexLayout 
-						HorizontalOptions="Start" 
-						VerticalOptions="Center" 
-						ChipBackground="white"
-                        ChipTextColor="Black"/>
-				</core:SfChipGroup.ChipLayout>
-			</core:SfChipGroup>  
+				ChipBackground="white"
+            	ChipTextColor="Black"
+				HorizontalOptions="Start" 
+				VerticalOptions="Center">
+			</chip:SfChipGroup>  
 		</Grid>
 	</ContentPage.Content>
 </ContentPage>
@@ -343,11 +345,9 @@ namespace Chips
 			Grid grid = new Grid();
 			SfChipGroup chipGroup = new SfChipGroup();
 			grid.Children.Add(chipGroup);
-			chipGroup.ChipLayout = layout;
 			this.BindingContext = new ViewModel();
 			chipGroup.SetBinding(SfChipGroup.ItemsSourceProperty, "Employees");
 			chipGroup.DisplayMemberPath = "Name";
-			chipGroup.ChipType = SfChipsType.Input;
 			chipGroup.CloseButtonColor = Colors.Black;
 			chipGroup.ChiBackground = Colors.White;
 			chipGroup.ChipPadding = new Thickness(8, 8, 0, 0);
@@ -364,6 +364,11 @@ namespace Chips
 
 ## Set types of chip group
 
+The functionality of chips control differ based on its [`ChipType`] property.
+By default type of chips control have Input type. Input chip types have close button, using it chip can be can removed dynamically from children and the layout.
+
+The following code example uses the [`Action`] type. In Action type, [`Command`] property of [`SfChipGroup`] is executed when any chip in the group is tapped. Here the Employee name of corresponding chip is set as label text when the Command is executed.
+
 {% tabs %}
 
 {% highlight xaml %}
@@ -371,7 +376,7 @@ namespace Chips
 <ContentPage
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:core="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
+    xmlns:chip="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:Chips"
     x:Class="Chips.GettingStarted">
@@ -380,12 +385,12 @@ namespace Chips
 	</ContentPage.BindingContext>
 	<ContentPage.Content>
 		<StackLayout>
-			<core:SfChipGroup
+			<chip:SfChipGroup
 				Command="{Binding ActionCommand}" 
 				ItemsSource="{Binding Employees}"
 				DisplayMemberPath="Name"
 				ChipType="Action">
-			</core:SfChipGroup>
+			</chip:SfChipGroup>
 			<StackLayout Orientation="Horizontal">
 			<Label 
 				Text="Name:" 
