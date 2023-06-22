@@ -22,7 +22,7 @@ The following are two methods to perform the cropping operation:
 
 ## Handling the cropping tool
 
-The `Crop` method in the image editor control crops the image based on the `ImageCropType`. It allows users to enable or disable the cropping region displayed over the image, making it easier to visually choose the area for cropping.
+The [Crop](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_Crop_Syncfusion_Maui_ImageEditor_ImageCropType_) method in the image editor control crops the image based on the [ImageCropType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageCropType.html). It allows users to enable or disable the cropping region displayed over the image, making it easier to visually choose the area for cropping.
 
     * ImageCropType - Specify the selection type for cropping the image.
 
@@ -34,7 +34,7 @@ imageEditor.Crop(ImageCropType.Free);
 
 {% endhighlight %}
 
-After the cropping area has been selected, the `SaveEdits` method is called, which in turn crops the selected region and displays the cropped image on the image editor.
+After the cropping area has been selected, the [SaveEdits](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_SaveEdits) method is called, which in turn crops the selected region and displays the cropped image on the image editor.
 
 {% highlight C# %}
 
@@ -104,7 +104,7 @@ imageEditor.Crop(ImageCropType.Circle);
 
 ## Ellipse crop
 
-To crop an image in an elliptical format you can use the `ImageCropType.Ellipse` crop type. This allows for free-style cropping in an elliptical shape.
+To crop an image in an elliptical format you can use the [ImageCropType.Ellipse](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageCropType.html#Syncfusion_Maui_ImageEditor_ImageCropType_Ellipse) crop type. This allows for free-style cropping in an elliptical shape.
 
  * The following code shows cropping an image in elliptical format.
 
@@ -116,7 +116,7 @@ imageEditor.Crop(ImageCropType.Ellipse);
 
 ## Entering the cropping area manually
 
-To manually enter the cropping area, use the `Crop(Rect rect)` method. It can be done by simply defining a rectangle and passing it to the `Crop` method. If the `isEllipse` parameter is set to true, it will perform an elliptical crop. The default value of the `isEllipse` parameter is `false`.
+To manually enter the cropping area, use the [Crop(Rect rect)](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_Crop_Microsoft_Maui_Graphics_Rect_System_Boolean_) method. It can be done by simply defining a rectangle and passing it to the [Crop](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_Crop_Syncfusion_Maui_ImageEditor_ImageCropType_) method. If the `isEllipse` parameter is set to true, it will perform an elliptical crop. The default value of the `isEllipse` parameter is `false`.
 
 {% highlight C# %}
 
@@ -136,7 +136,7 @@ imageEditor.SaveEdits();
 
 ## Programmatically selecting the cropping ratio
 
-Programmatically, you can select the desired cropping ratio from the various aspect ratios available in the built-in cropping toolbar by specifying the corresponding index of the toolbar item using the `Crop` method.
+Programmatically, you can select the desired cropping ratio from the various aspect ratios available in the built-in cropping toolbar by specifying the corresponding index of the toolbar item using the [Crop](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_Crop_Syncfusion_Maui_ImageEditor_ImageCropType_) method.
 
 The following code sample will add the cropping preview on the image in a square shape.
 
