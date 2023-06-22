@@ -27,20 +27,20 @@ Chips control also provides support to create and set [`SfChip`] as item. It can
 <ContentPage
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:core ="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
+    xmlns:chip ="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:Chips"
     x:Class="Chips.GettingStarted">
 	<ContentPage.Content>
-		<core:SfChipGroup ChipType="Action">
-			<core:SfChipGroup.Items>
-				<core:SfChip Text="Extra Small"/>
-				<core:SfChip Text="Small"/>
-				<core:SfChip Text="Medium"/>
-				<core:SfChip Text="Large"/>
-				<core:SfChip Text="Extra Large"/>
-			</core:SfChipGroup.Items>
-		</core:SfChipGroup>
+		<chip:SfChipGroup ChipBackground="Violet">
+			<chip:SfChipGroup.Items>
+				<chip:SfChip Text="Extra Small"/>
+				<chip:SfChip Text="Small"/>
+				<chip:SfChip Text="Medium"/>
+				<chip:SfChip Text="Large"/>
+				<chip:SfChip Text="Extra Large"/>
+			</chip:SfChipGroup.Items>
+		</chip:SfChipGroup>
 	</ContentPage.Content>
 </ContentPage>
 
@@ -66,8 +66,7 @@ namespace Chips
 			chipGroup.Items.Add(new SfChip(){Text="Medium"});
 			chipGroup.Items.Add(new SfChip(){Text="Large"});
 			chipGroup.Items.Add(new SfChip(){Text="Extra Large"});
-			chipGroup.HeightRequest = 30;
-        	chipGroup.BackgroundColor = Colors.Violet;
+			chipGroup.ChipBackground = Colors.Violet;
 			this.Content = grid;
 		}
 	}
