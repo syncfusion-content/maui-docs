@@ -51,9 +51,11 @@ N>
 
 {% tabs %}
 {% highlight XAML hl_lines="2" %}
+
 <calendar:SfCalendar x:Name="Calendar"
-					 Identifier="Hijri">
+					   Identifier="Hijri">
 </calendar:SfCalendar>
+
 {% endhighlight %}
 {% highlight C# hl_lines="2" %}
 
