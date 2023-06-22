@@ -15,7 +15,7 @@ To migrate easier from the Xamarin SfNumericTextBox and SfNumericUpDown to `.NET
 
 <table>
 <tr>
-<th>Xamarin SfNumericTextBox</th>
+<th>Xamarin SfNumericTextBox <br> Xamarin SfNumericUpDown</th>
 <th>.NET MAUI SfNumericEntry</th></tr>
 <tr>
 <td>Syncfusion.SfNumericTextBox.XForms</td>
@@ -26,7 +26,7 @@ To migrate easier from the Xamarin SfNumericTextBox and SfNumericUpDown to `.NET
 
 <table> 
 <tr>
-<th>Xamarin SfNumericTextBox</th>
+<th>Xamarin SfNumericTextBox <br> Xamarin SfNumericUpDown </th>
 <th>.NET MAUI SfNumericEntry</th>
 <th>Description</th></tr>
 <tr>
@@ -64,7 +64,7 @@ To migrate easier from the Xamarin SfNumericTextBox and SfNumericUpDown to `.NET
 <table> 
 <tr>
 <th>Event Name</th>
-<th>Xamarin SfNumericTextBox</th>
+<th>Xamarin SfNumericTextBox <br> Xamarin SfNumericUpDown </th>
 <th>.NET MAUI SfNumericEntry</th>
 <th>Description</th></tr>
 <tr>
