@@ -1,22 +1,21 @@
 ---
 layout: post
 title: Shape Annotation in .NET MAUI ImageEditor control | Syncfusion
-description: Learn here all about the shape annotation feature of Syncfusion .NET MAUI ImageEditor (SfImageEditor) control and more.
-platform: MAUI
+description: Learn here all about the shape annotation feature of Syncfusion .NET MAUI ImageEditor(SfImageEditor) control.
+platform: .NET MAUI
 control: SfImageEditor
 documentation: ug
 ---
 
 # Shape Annotation in .NET MAUI ImageEditor (SfImageEditor)
 
-The image editor control allows you to adding various shapes with customizable settings.
+The image editor control allows you to add various shapes with customizable settings
 
 ## Shape types
 
 * Circle
 * Rectangle
 * Arrow
-* Pen
 * Line
 * Dotted
 * DoubleArrow
@@ -25,51 +24,57 @@ The image editor control allows you to adding various shapes with customizable s
 
 ## Customize shape settings
 
-The shape annotations can be customized by following common annotation customizing properties.
+The shape annotations can be customized using common annotation customization properties.
 
-* `Bounds`: Specifies the annotation view bounds.
-* `AllowDrag`: Enable or disable the dragging for annotations.
-* `AllowResize`: Enable or disable the resizing for annotations.
+* `Bounds`: Specifies the bounds of the annotation view.
+* `AllowDrag`:  Enables or disables the dragging for annotations.
+* `AllowResize`: Enables or disables the resizing for annotations.
 * `Opacity`: Specifies the opacity of annotations.
 
-The shapes can be inserted and customized by changing its stroke color, fill color, and stroke thickness. The shapes can be made by either using a toolbar or the `AddShape` method.
+Shapes can be inserted and customized by changing their stroke color, fill color, and stroke thickness. You can create shapes using either a toolbar or the `AddShape` method.
 
-In the `AddShape` method, the shapes can be inserted by specifying fillcolor, stroke color and stroke thickness. The [`AddShape`] method has the following parameters.
+In the `AddShape` method, you can insert shapes by specifying the fill color, stroke color, and stroke thickness. The [`AddShape`] method has the following parameters.
 
 *  `StrokeThickness` - Specifies the stroke width of the shapes.
 *  `Color` - Specifies the stroke color of the shapes.    
-*  `IsFilled` - Enable or disble the fill color of the shapes.
+*  `IsFilled` - Enables or disbles the fill color of the shapes.
 *  `FillColor` - The fill color of the shapes.
 
+{% tabs %}
 {% highlight C# %}
 
     imageEditor.AddShape(AnnotationShape.Rectangle, new ImageEditorShapeSettings() { Color = Colors.Blue, StrokeThickness = 5, IsFilled =false });
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Delete the selected shape
 
-You can delete the selected shape by either using the toolbar or the `DeleteAnnotation` method.
+You can delete the selected shape using either the toolbar or the `DeleteAnnotation` method.
 
+{% tabs %}
 {% highlight C# %}
 
     imageEditor.DeleteAnnotation();
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Clear all annotations
 
-You can remove all the annotations using `ClearAnnotations` method.
+You can remove all the annotations using the `ClearAnnotations` method.
 
+{% tabs %}
 {% highlight C# %}
 
     imageEditor.ClearAnnotations();
 
 {% endhighlight %}
+{% endtabs %}
 
 ## AnnotationSelected event
 
-This event Occurs when the annotation is selected.
+The `AnnotationSelected` event occurs when an annotation is selected.
 
 {% tabs %}
 
@@ -96,7 +101,7 @@ This event Occurs when the annotation is selected.
 
 ## Add shape using ImageLoaded event
 
-This event Occurs when the image is loaded.
+The `ImageLoaded` event occurs when the image is loaded.
 
 {% tabs %}
 
@@ -120,41 +125,41 @@ This event Occurs when the image is loaded.
 
 ## Add shape with manual bounds
 
-The shape can be added by user defined view bounds.
+Shapes can be added by user-defined view bounds.
 
+{% tabs %}
 {% highlight C# %}
 
    imageEditor.AddShape(AnnotationShape.Arrow, new ImageEditorShapeSettings() { Bounds=new Rect(0.1,0.1,0.5,0.5)});
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Freehand draw
 
 The image editor control allows you to create freehand drawings with customizable settings.
 
+{% tabs %}
 {% highlight C# %}
 
     imageEditor.AddShape(AnnotationShape.Pen);
 
 {% endhighlight %}
-
+{% endtabs %}
 
 ## Customize the pen settings
 
-This annotation can be customized by changing the pen color and stroke thickness and it can be made by either using a toolbar or the `AddShape` method.
+The annotation can be customized by changing the pen color and stroke thickness and it can be created using either a toolbar or the `AddShape` method.
 
 *  `StrokeThickness` - Specifies the stroke width of the pen.
 *  `Color` - Specifies the stroke color of the pen.
 
 In the following example, the `AddShape` method is used to toggle the freehand drawings.
 
+{% tabs %}
 {% highlight C# %}
 
     imageEditor.AddShape(AnnotationShape.Pen, new ImageEditorShapeSettings() {Color=Colors.Blue, StrokeThickness=5});
 
 {% endhighlight %}
-
-
-
-
-
+{% endtabs %}

@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Annotation in .NET MAUI ImageEditor control | Syncfusion
-description: Learn here all about the save feature of Syncfusion .NET MAUI ImageEditor (SfImageEditor) control and more.
-platform: MAUI
+title: Save in .NET MAUI ImageEditor control | Syncfusion
+description: Learn here all about save support in the Syncfusion .NET MAUI ImageEditor(SfImageEditor) control.
+platform: .NET MAUI
 control: SfImageEditor
 documentation: ug
 ---
 
 # Save in .NET MAUI ImageEditor (SfImageEditor)
 
-## Save
+The Image Editor control in .NET MAUI allows you to save the edited image as PNG and JPEG.
 
-The Image Editor control saves the edited image as PNG and JPEG.
+To save the modified image, you can use the `Save` method, which accepts parameters such as file name, file type, file path, and image size. The supported file types for saving are PNG and JPEG. You can also save the image by clicking the save button on the toolbar.
 
-The `Save` method is used to save the modified image as an image, and it accepts a file name, file type, file path, image size as parameters. The file type parameter supports PNG and JPEG. It also saves an image by clicking the save button from the toolbar and the supported file types are PNG and JPEG.
+{% tabs %}
 
 {% highlight C# %}
 
@@ -21,29 +21,29 @@ The `Save` method is used to save the modified image as an image, and it accepts
 
 {% endhighlight %}
 
+{% endtabs %}
+
 ## Save events
 
-The SfImageEditor has events when performing the save operation, such as `ImageSaving` and `ImageSaved`.
+The Image Editor has events when performing the save operation, such as `ImageSaving` and `ImageSaved`.
 
 ### ImageSaving
 
-This event occurs before saving the image.
+This `ImageSaving` event occurs before saving the image.
 
-`Cancel` : You can control the save functionality using the `Cancel` argument.
-
-It restricts saving image to the default location when set `Cancel` value to `true`.
+`Cancel`: You can control the save functionality by setting the `Cancel` argument to `true`. When `Cancel` is set to `true`, it restricts saving the image to the default location.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-            <imageEditor:SfImageEditor Source="{Binding Image}" ImageSaving="imageEditor_ImageSaving" />
+            <imageEditor:SfImageEditor Source="{Binding Image}" ImageSaving="OnImageSaving" />
 
 {% endhighlight %}
 
 {% highlight C# %}
             
-            private void imageEditor_ImageSaving(object sender, ImageSavingEventArgs args)
+            private void OnImageSaving(object sender, ImageSavingEventArgs args)
             {
                 args.Cancel = true;  
             }
@@ -52,18 +52,24 @@ It restricts saving image to the default location when set `Cancel` value to `tr
 
 {% endtabs %}
 
-`Stream` : You can get current image edits as stream using this argument.
+`ImageStream` : You can access the current image edits as a stream using the `ImageStream` argument.
+
+{% tabs %}
 
 {% highlight C# %}
            
     private void SfImageEditor_ImageSaving(object sender, ImageSavingEventArgs args)
     {
-        var stream = args.Stream;
+        var stream = args.ImageStream;
     }
 
 {% endhighlight %}
 
+{% endtabs %}
+
 `FileName`: You can save the edited image in the specified name. 
+
+{% tabs %}
 
 {% highlight c# %}
 
@@ -74,9 +80,28 @@ It restricts saving image to the default location when set `Cancel` value to `tr
 
 {% endhighlight %}
 
+{% endtabs %}
+
+`FileType`: You can specify the file type of the saved image.
+
+{% tabs %}
+
+{% highlight c# %}
+
+    private void SfImageEditor_ImageSaving(object sender, ImageSavingEventArgs args)
+    {
+        args.FileType = ImageFileType.Png;
+    }
+
+{% endhighlight %}
+
+{% endtabs %}
+
 ### ImageSaved
 
-This event occurs after the image has been saved. To get the location of the saved image, use the location argument as shown in the following code.
+The `ImageSaved` event occurs after the image has been saved. To get the location of the saved image, use the `Location` argument as shown in the following code.
+
+{% tabs %}
 
 {% highlight C# %}
 
@@ -94,7 +119,6 @@ This event occurs after the image has been saved. To get the location of the sav
         string savedLocation = args.Location; 
     }
 
-
 {% endhighlight %}
 
-
+{% endtabs %}

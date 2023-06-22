@@ -1,71 +1,78 @@
 ---
 layout: post
 title: Text Annotation in .NET MAUI ImageEditor control | Syncfusion
-description: Learn here all about the text annotation feature of Syncfusion .NET MAUI ImageEditor (SfImageEditor) control and more.
-platform: MAUI
+description: Learn here all about the text annotation feature of Syncfusion .NET MAUI ImageEditor(SfImageEditor) control.
+platform: .NET MAUI
 control: SfImageEditor
 documentation: ug
 ---
 
 # Text Annotation in .NET MAUI ImageEditor (SfImageEditor)
 
-The image editor control allows you to adding a text with customizable settings.
+The ImageEditor control in .NET MAUI allows you to add text with customizable settings.
 
+{% tabs %}
 {% highlight C# %}
 
     imageEditor.AddText("Good morning");
 
 {% endhighlight %}
-
+{% endtabs %}
 
 ## Customize text settings
 
-The text annotation can be customized by following common annotation customizing properties.
+The text annotation can be customized using common annotation customization properties:
 
-* `Bounds`: Specifies the annotation view bounds.
-* `AllowDrag`: Enable or disable the dragging for annotations.
-* `AllowResize`: Enable or disable the resizing for annotations.
+* `Bounds`: Specifies the bounds of the annotation view.
+* `AllowDrag`: Enables or disables dragging for annotations.
+* `AllowResize`: Enables or disables resizing for annotations.
 * `Opacity`: Specifies the opacity of annotations.
 
-The Text annotation can be inserted and customized by changing its color, font family, font size, and font styles such as bold and italic. The text annotation can be made by either using a toolbar or `AddText` method.
+The text annotation can be inserted and customized by changing its color, font family, font size, and font styles such as bold and italic. You can create text annotations using either a toolbar or the `AddText` method.
 
 The `ImageEditorTextSettings` consists of the following properties:
 
 * `RotationAngle`: Changes the angle of text.
-* `IsEditable`: Enable or disable the text editing.
-* `IsRotatable`: Enable or disable the text rotation.
+* `IsEditable`: Enables or disables the text editing.
+* `IsRotatable`: Enables or disables the text rotation.
 * `TextAlignment`: Specifies the alignment of the text.
-* `TextStyle`: Change the text appearance such as `TextColor`, `FontSize`, `FontAttributes`, and `FontFamily` in image editor using the ImageEditorTextSettings.TextStyle property.
+* `TextStyle`: Change the text appearance such as `TextColor`, `FontSize`, `FontAttributes`, and `FontFamily` in image editor using the `ImageEditorTextSettings.TextStyle` property.
 
+{% tabs %}
 {% highlight C# %}
 
     imageEditor.AddText("Good Day", new ImageEditorTextSettings() { RotationAngle=90, IsRotatable=true, IsEditable=true, TextAlignment=TextAlignment.Start, TextStyle= new ImageEditorTextStyle() { FontSize=14, TextColor=Colors.Black, FontFamily="Arial", FontAttributes=FontAttributes.Italic } }); 
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Delete the text
 
-You can delete the selected text by either using the toolbar or the `DeleteAnnotation` method.
+You can delete the selected text using either the toolbar or the `DeleteAnnotation` method.
 
+{% tabs %}
 {% highlight C# %}
 
     imageEditor.DeleteAnnotation();
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Clear all texts
 
-You can remove all the texts using `ClearAnnotations` method.
+You can remove all the texts using the `ClearAnnotations` method.
 
+{% tabs %}
 {% highlight C# %}
 
     imageEditor.ClearAnnotations();
 
 {% endhighlight %}
+{% endtabs %}
 
 ## AnnotationSelected event
 
-This event Occurs when the annotation is selected.
+This `AnnotationSelected` event occurs when the annotation is selected.
 
 {% tabs %}
 
@@ -92,7 +99,7 @@ This event Occurs when the annotation is selected.
 
 ## Add shape using ImageLoaded event
 
-This event Occurs when the image is loaded.
+This `ImageLoaded` event occurs when the image is loaded.
 
 {% tabs %}
 
@@ -116,12 +123,12 @@ This event Occurs when the image is loaded.
 
 ## Add text with manual bounds
 
-The text can be added by user defined view bounds.
+The text can be added with user-defined view bounds.
 
+{% tabs %}
 {% highlight C# %}
 
    imageEditor.AddText("Good morning", new ImageEditorTextSettings() { Bounds = new Rect(0.1, 0.1, 0.5, 0.5) });
 
 {% endhighlight %}
-
-
+{% endtabs %}
