@@ -880,7 +880,7 @@ using Syncfusion.Maui.Core;
     stackLayout.Children.Add(chip);
     this.Content = stackLayout;
         
-% endhighlight %}
+{% endhighlight %}
 
 {% endtabs %}
 

@@ -15,6 +15,8 @@ Arranges the chips in a layout and enables the close button for each chip. Using
 
 The following code illustrates how to get an input type chip.
 
+{% tabs %}
+
 {% highlight xaml %}
 <chip:SfChipGroup 
                      Margin="200,100,0,0"  
@@ -116,6 +118,8 @@ public class EmployeeViewModel : INotifyPropertyChanged
 }
 
 {% endhighlight %}
+
+{% endtabs %}
 
 ![Input type in .NET MAUI SfChipGroup](images/items/Input.png)
 
@@ -607,6 +611,8 @@ public class ViewModel : INotifyPropertyChanged
 }
 
 {% endhighlight %}
+
+{% endtabs %}
 
 ![Action typed in .NET MAUI SfChipGroup](images/items/Action.png)
 
