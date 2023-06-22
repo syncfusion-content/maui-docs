@@ -79,7 +79,7 @@ Assign the already defined [`DataTemplateSelector`] to the [`ItemTemplate`] of t
 {% highlight xaml %}
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:core ="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
+             xmlns:chip ="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
              x:Class="SimpleSample.MainPage"
              xmlns:local="clr-namespace:SimpleSample;assembly=SimpleSample">
              
@@ -87,12 +87,12 @@ Assign the already defined [`DataTemplateSelector`] to the [`ItemTemplate`] of t
         <ResourceDictionary>
             <DataTemplate x:Key="happyTemplate">
                 <StackLayout>
-                    <core:SfChip HeightRequest="40" WidthRequest="120" Text="{Binding Text}" BackgroundColor="#00bdae" ShowIcon="True" ImageSource="{Binding ImageSource}"  ShowCloseButton="True" ShowSelectionIndicator="False" ImageAlignment="Left" CloseButtonColor="White"/>
+                    <chip:SfChip HeightRequest="40" WidthRequest="120" Text="{Binding Text}" BackgroundColor="#00bdae" ShowIcon="True" ImageSource="{Binding ImageSource}"  ShowCloseButton="True" ShowSelectionIndicator="False" ImageAlignment="Left" CloseButtonColor="White"/>
             </StackLayout>
             </DataTemplate>
             <DataTemplate x:Key="sadTemplate">
                 <StackLayout>
-                    <core:SfChip HeightRequest="40" WidthRequest="120" Text="{Binding Text}" BackgroundColor="#e56590" ShowIcon="True" ImageSource="{Binding ImageSource}"  ShowCloseButton="True" ShowSelectionIndicator="False" ImageAlignment="Left" CloseButtonColor="White"/>
+                    <chip:SfChip HeightRequest="40" WidthRequest="120" Text="{Binding Text}" BackgroundColor="#e56590" ShowIcon="True" ImageSource="{Binding ImageSource}"  ShowCloseButton="True" ShowSelectionIndicator="False" ImageAlignment="Left" CloseButtonColor="White"/>
                 </StackLayout>
             </DataTemplate>
             <local:ChipDataTemplateSelector x:Key="selector" 
@@ -105,11 +105,11 @@ Assign the already defined [`DataTemplateSelector`] to the [`ItemTemplate`] of t
         <local:ChipViewModel/>
     </ContentPage.BindingContext>
 
-	<core: SfChipGroup x:Name="chipgroup"                                                           ChipBackground="Transparent"                                    
+	<chip: SfChipGroup x:Name="chipgroup"                                                           ChipBackground="Transparent"                                    
     ItemsSource="{Binding Data}" 
     ItemTemplate="{StaticResource selector}">
         ...
-    </core:SfChipGroup>
+    </chip:SfChipGroup>
       
 </ContentPage>
 {% endhighlight %}
