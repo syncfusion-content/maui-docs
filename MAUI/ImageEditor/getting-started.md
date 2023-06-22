@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with .NET MAUI ImageEditor (SfImageEditor)
 
-This section explains the steps to create and load an image to the image editor control.
+This section explains the steps to create and load an image to the [.Net MAUI ImageEditor(SfImageEditor)](https://www.syncfusion.com/maui-controls/maui-image-editor) control.
 
 ## Creating an application using the .NET MAUI ImageEditor
 

@@ -42,7 +42,7 @@ imageEditor.SaveEdits();
 
 {% endhighlight %}
 
-After selecting the cropping area, if you decide to cancel the edits and revert back to the original image, you can use the `CancelEdits` method. It discards the changes made during the cropping process and restores the image to its initial state.
+After selecting the cropping area, if you decide to cancel the edits and revert back to the original image, you can use the [CancelEdits](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_CancelEdits) method. It discards the changes made during the cropping process and restores the image to its initial state.
 
 {% highlight C# %}
 
@@ -62,7 +62,7 @@ imageEditor.Crop(ImageCropType.Free);
 
 ## Original Crop
 
-With the original crop, the image is cropped to its original dimensions. This means that no aspect ratio and the cropped image retains its original width and height.
+With the original crop, the image is cropped to its original dimensions. This means that no aspect ratio and the cropped image retains its original width and height ratio.
 
 {% highlight C# %}
 
@@ -82,7 +82,7 @@ imageEditor.Crop(ImageCropType.Square);
 
 ## Ratio Crop
 
-The ratio crop enables you to crop the image with a specific aspect ratio. You can specify the desired ratio using the width and height values. The default ratio is 4:3 when using the `ImageCropType.Ratio`, but you can change it by using the Crop method with the ratio parameter.  
+The ratio crop enables you to crop the image with a specific aspect ratio. You can specify the desired ratio using the width and height values. The default ratio is 4:3 when using the [ImageCropType.Ratio](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageCropType.html#Syncfusion_Maui_ImageEditor_ImageCropType_Ratio), but you can change it by using the Crop method with the ratio parameter.  
 
 {% highlight C# %}
 
@@ -92,7 +92,7 @@ imageEditor.Crop(16,9);
 
 ## Circle crop
 
-You can crop an image in a circular format using the `ImageCropType.Circle` crop type. This method ensures that the image is cropped into a perfect circle with a 1:1 ratio.
+You can crop an image in a circular format using the [ImageCropType.Circle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageCropType.html#Syncfusion_Maui_ImageEditor_ImageCropType_Circle) crop type. This method ensures that the image is cropped into a perfect circle with a 1:1 ratio.
 
 * The following code shows cropping an image in circle format.
 
@@ -125,7 +125,7 @@ imageEditor.SaveEdits();
 
 {% endhighlight %}
 
-* To crop an image in an ellipse with a specific rectangle, use `Crop` with a rectangle value and an optional parameter of true, which specifies whether the cropping panel should be added in an elliptical or rectangle shape.
+* To crop an image in an ellipse with a specific rectangle, use [Crop](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_Crop_Syncfusion_Maui_ImageEditor_ImageCropType_) with a rectangle value and an optional parameter of true, which specifies whether the cropping panel should be added in an elliptical or rectangle shape.
 
 {% highlight C# %}
 
