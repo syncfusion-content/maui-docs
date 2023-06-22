@@ -51,7 +51,7 @@ namespace MaskedEntrySample
 
 ## Adding the .NET MAUI Numeric Entry control
 
-Step 1: Add the NuGet to the project as discussed in the above reference section. 
+Step 1: Add the NuGet to the project as discussed in the above reference section. 
 
 Step 2: Add the namespace as shown in the following code sample.
 
