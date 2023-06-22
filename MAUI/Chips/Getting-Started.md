@@ -61,11 +61,7 @@ namespace AutocompleteSample
 
 Step 1: Add the NuGet to the project
 
-Step 2: Add the namespace as shown in the following code snippet:
-
-Step 3: Set the control to content in `ContentPage.`
-
-## For SfChip
+Step 2: Add the namespace as shown in the following code snippet
 
 {% tabs %}
 
@@ -82,6 +78,10 @@ Step 3: Set the control to content in `ContentPage.`
 {% endhighlight %}
 
 {% endtabs %}
+
+Step 3: Set the control to content in `ContentPage.`
+
+## For SfChip
 
 {% tabs %}
 
@@ -104,7 +104,7 @@ Content = chips;
 
 ## For SfChipGroup
 
-Then initialize an empty [`SfChipGroup`] as shown in the following code:
+Initialize an empty [`SfChipGroup`] as shown in the following code snippet
 
 {% tabs %}
 
