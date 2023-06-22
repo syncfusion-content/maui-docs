@@ -266,7 +266,7 @@ public class EmployeeViewModel : INotifyPropertyChanged
 <ContentPage
     xmlns:chip ="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core" >
 <ContentPage.Content>
-		<chip:SfChipGroup Type="Choice" ChoiceMode="SingleOrNone">
+		<chip:SfChipGroup ChipType="Choice" ChoiceMode="SingleOrNone">
 			<chip.SfChipGroup.Items>
 				<chip:SfChip Text="Extra Small"/>
 				<chip:SfChip Text="Small"/>
@@ -292,7 +292,7 @@ namespace Chips
 		{
 			InitializeComponent();
 			Grid grid = new Grid();
-			var chipGroup = new SfChipGroup(){Type = SfChipsType.Choice, ChoiceMode = ChoiceMode.SingleOrNone};
+			var chipGroup = new SfChipGroup(){ChipType = SfChipsType.Choice, ChoiceMode = ChoiceMode.SingleOrNone};
 			grid.Children.Add(chipGroup);
 			chipGroup.Items.Add(new SfChip(){Text="Extra Small"});
 			chipGroup.Items.Add(new SfChip(){Text="Small"});
