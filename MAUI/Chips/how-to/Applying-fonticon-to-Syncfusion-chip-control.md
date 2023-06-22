@@ -44,12 +44,12 @@ Create the instance for `FontImageSource` and set to [`ImageSource`] property of
  SfChip chip = new SfChip();
  chip.ShowIcon = true;
  chip.Text = "Syncfusion"; 
- chip.FontSize = "17";
+ chip.FontSize = 17;
  chip.TextColor = Colors.White;
- chip.WidthRequest = "120";
- chip.HeightRequest = "40";
- chip.ImageSize = "15";
- chip.Padding = "0,0,0,2";
+ chip.WidthRequest = 120;
+ chip.HeightRequest = 40;
+ chip.ImageSize = 15;
+ chip.Padding = new Thickness(0,0,0,2);
 
  var fontImageSource = new FontImageSource();
  fontImageSource.Glyph = "&#xEB52";
