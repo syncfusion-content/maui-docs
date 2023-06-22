@@ -1508,7 +1508,7 @@ using Syncfusion.Maui.Core;
     this.BindingContext = new ViewModel();
     chipGroup.SetBinding(SfChipGroup.ItemsSourceProperty, "Employees");
     chipGroup.ChipStrokeThickness = 5;
-    chipGroup.ChipStroke = Color.Black;
+    chipGroup.ChipStroke = Colors.Black;
     chipGroup.DisplayMemberPath = "Name";
     this.Content = stack;
         
