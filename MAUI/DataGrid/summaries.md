@@ -30,7 +30,7 @@ The data grid provides built-in support for caption summaries. The caption summa
 
 ### Formatting built-in caption summary
 
-By default, the caption summary rows in the data grid are displayed using the [SfDataGrid.GroupCaptionTextFormat]() property.
+By default, the caption summary rows in the data grid are displayed using the [SfDataGrid.GroupCaptionTextFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_GroupCaptionTextFormatProperty) property.
 
 Default group caption format is `{ColumnName}: {Key} - {ItemsCount} Items`.
 
@@ -40,7 +40,7 @@ Default group caption format is `{ColumnName}: {Key} - {ItemsCount} Items`.
 
 ![DataGrid with formatting in caption summary row](Images\caption-summary\maui-datagrid-default.png)
 
-You can customize the group caption text format by setting the `SfDataGrid.GroupCaptionTextFormat` property. The code example below illustrates how to customize the group caption text in the data grid:
+You can customize the group caption text format by setting the `SfDataGrid.GroupCaptionTextFormat` property. The code example below illustrates how to customize the `group caption text` in the data grid:
 
 {% tabs %}
 {% highlight xaml %}
@@ -63,7 +63,7 @@ The following screenshot shows the outcome of the previous code:
 
 ### Displaying summary for a row
 
-Display summary information in a row by setting the [DataGridSummaryRow.ShowSummaryInRow]() property to `true` and define summary columns. You have to define the [DataGridSummaryRow.Title]() based on the [DataGridSummaryColumn.Name]() property in order to format the values of the summary columns in the row.
+Display summary information in a row by setting the [DataGridSummaryRow.ShowSummaryInRow](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSummaryRow.html#Syncfusion_Maui_DataGrid_DataGridSummaryRow_ShowSummaryInRow) property to `true` and define summary columns. You have to define the [DataGridSummaryRow.Title](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSummaryRow.html#Syncfusion_Maui_DataGrid_DataGridSummaryRow_Title) based on the [DataGridSummaryColumn.Name](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSummaryColumn.html#Syncfusion_Maui_DataGrid_DataGridSummaryColumn_Name) property in order to format the values of the summary columns in the row.
 
 {% tabs %}
 {% highlight xaml %}
@@ -115,15 +115,15 @@ The following screenshot shows the outcome for both values of `ShowSummaryInRow`
 
 To display summary information in a column, you need to set the `DataGridSummaryRow.ShowSummaryInRow` to `false` and define summary columns using the `SfDataGrid.DataGridSummaryColumn` object. The `DataGridSummaryColumn` object has several important properties:
 
-* [Name](): This property defines the name of the `DataGridSummaryColumn`, which is used to identify the column in the `DataGridSummaryRow` and provide a title for it.
-* [MappingName](): This property defines the corresponding column name used for the summary calculation.
-* [SummaryType]():  This property defines the `SummaryType` enum property, which determines the type of aggregate function used for the summary calculation. 
+* [Name](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSummaryColumn.html#Syncfusion_Maui_DataGrid_DataGridSummaryColumn_Name): This property defines the name of the `DataGridSummaryColumn`, which is used to identify the column in the `DataGridSummaryRow` and provide a title for it.
+* [MappingName](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSummaryColumn.html#Syncfusion_Maui_DataGrid_DataGridSummaryColumn_MappingName): This property defines the corresponding column name used for the summary calculation.
+* [SummaryType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSummaryColumn.html#Syncfusion_Maui_DataGrid_DataGridSummaryColumn_SummaryType):  This property defines the `SummaryType` enum property, which determines the type of aggregate function used for the summary calculation. 
 
-The DataGrid control provides several predefined aggregates, such as CountAggregate, Int32Aggregate, and DoubleAggregate. When the summary type is set as Custom, you can define a CustomAggregate class object to calculate custom summaries.
+The DataGrid control provides several predefined aggregates, such as `CountAggregate`, `Int32Aggregate`, and `DoubleAggregate`. When the summary type is set as `Custom`, you can define a `CustomAggregate` class object to calculate custom summaries.
 
-The [Format]() property defines a string property that formats the summary value and displays it. The Format property can have two parts separated by a colon (:). The first part denotes the aggregate function name, and the second part denotes the display format of the summary value.
+The [Format](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSummaryColumn.html#Syncfusion_Maui_DataGrid_DataGridSummaryColumn_Format) property defines a string property that formats the summary value and displays it. The Format property can have two parts separated by a colon (:). The first part denotes the aggregate function name, and the second part denotes the display format of the summary value.
 
-Please refer to the "Formatting Summary" section for more information on how to format the summary, and the "Aggregate Types" section to learn about the different summary types.
+Please refer to the [Formatting Summary](#_Formatting_Summary) section for more information on how to format the summary, and the `Aggregate Types` section to learn about the different summary types.
 
 In the following code snippet, a summary is defined for the `Salary` column:
 
@@ -166,9 +166,9 @@ The data grid allows you to host any view(s) inside a caption summary for the en
 
 ### Displaying template for a row
 
-The template for a caption summary row can be customized by using the [SfDataGrid.CaptionSummaryTemplate]() property. This allows you to define a custom template according to your requirements.
+The template for a caption summary row can be customized by using the [SfDataGrid.CaptionSummaryTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CaptionSummaryTemplate) property. This allows you to define a custom template according to your requirements.
 
-Please refer to the code example below, where a label is loaded in the caption summary template of the caption summary row:
+Please refer to the code example below, where a label is loaded in the `caption summary template` of the `caption summary row`:
 
 {% tabs %}
 {% highlight xaml %}
@@ -249,7 +249,7 @@ N> The `DataTemplateSelector` can also be directly assigned to the `CaptionSumma
 
 The template for a caption summary column can be customized by using the `DataGridSummaryColumn.Template` property. This allows you to define a custom template according to your requirements.
 
-Here's an example code snippet that demonstrates how to load a label in the template of a caption summary column:
+Here's an example code snippet that demonstrates how to load a label in the template of a `caption summary column`:
 
 {% tabs %}
 {% highlight xaml %}
@@ -335,15 +335,15 @@ public class GroupCaptionConverter : IValueConverter
 
 ## Group summary
 
-Group summary values are calculated based on the records within each group. The summary information will be displayed at the bottom of each group. You can view the group summary row by expanding the corresponding group header. The data grid allows for the addition of any number of group summary rows.
+`Group summary` values are calculated based on the records within each group. The summary information will be displayed at the bottom of each group. You can view the group summary row by expanding the corresponding group header. The data grid allows for the addition of any number of group summary rows.
 
-To add group summary rows in the data grid, you can add the [DataGridSummaryRow]() objects to the [SfDataGrid.GroupSummaryRows]() collection.
+To add group summary rows in the data grid, you can add the [DataGridSummaryRow](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSummaryRow.html) objects to the [SfDataGrid.GroupSummaryRows](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_GroupSummaryRowsProperty) collection.
 
 ### Displaying summary in the row
 
-Summary information can be displayed in the entire row by setting the [DataGridSummaryRow.ShowSummaryInRow]() property to `true` and defining summary columns. The [DataGridSummaryRow.Title]() property needs to be defined based on the [DataGridSummaryRow.Name]() property in order to format the values of the summary columns in a row.
+Summary information can be displayed in the entire row by setting the [DataGridSummaryRow.ShowSummaryInRow](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSummaryRow.html#Syncfusion_Maui_DataGrid_DataGridSummaryRow_ShowSummaryInRow) property to `true` and defining summary columns. The [DataGridSummaryRow.Title](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSummaryRow.html#Syncfusion_Maui_DataGrid_DataGridSummaryRow_Title) property needs to be defined based on the [DataGridSummaryRow.Name](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSummaryRow.html#Syncfusion_Maui_DataGrid_DataGridSummaryRow_Name) property in order to format the values of the summary columns in a row.
 
-Please refer to the [Formatting Summary]()  section to learn more about how to format the summary.
+Please refer to the [Formatting Summary](#formatting-summary)  section to learn more about how to format the summary.
 
 {% tabs %}
 
@@ -406,11 +406,11 @@ this.dataGrid.GroupSummaryRows.Add(new DataGridSummaryRow()
 
 ### Displaying summary in the column
 
-The summary information can be displayed in a column by setting the [DataGridSummaryRow.ShowSummaryInRow]() property to `false` and defining summary columns. To calculate the summary based on a column, you need to specify the following properties:
+The summary information can be displayed in a column by setting the [DataGridSummaryRow.ShowSummaryInRow](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSummaryRow.html#Syncfusion_Maui_DataGrid_DataGridSummaryRow_ShowSummaryInRow) property to `false` and defining summary columns. To calculate the summary based on a column, you need to specify the following properties:
 
-[DataGridSummaryColumn.MappingName](): This property provides the MappingName of the column (the property name of the data object) for which you want to calculate the summary.
-[DataGridSummaryColumn.SummaryType](): This property provides different built-in summary calculation functions for various types.
-[DataGridSummaryColumn.Format](): This property allows you to specify a format string for the summary based on the supported function name in the specified SummaryType.
+[DataGridSummaryColumn.MappingName](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSummaryColumn.html#Syncfusion_Maui_DataGrid_DataGridSummaryColumn_MappingName): This property provides the MappingName of the column (the property name of the data object) for which you want to calculate the summary.
+[DataGridSummaryColumn.SummaryType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSummaryColumn.html#Syncfusion_Maui_DataGrid_DataGridSummaryColumn_SummaryType): This property provides different built-in summary calculation functions for various types.
+[DataGridSummaryColumn.Format](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSummaryColumn.html#Syncfusion_Maui_DataGrid_DataGridSummaryColumn_Format): This property allows you to specify a format string for the summary based on the supported function name in the specified SummaryType.
 
 Please refer to the [Formatting Summary](#formatting-summary) section to learn more about how to format the summary, and the [Aggregate Types](#aggregate-types) section to understand the different Summary Types.
 
@@ -697,7 +697,7 @@ summaryRow2.SummaryColumns.Add(new DataGridSummaryColumn()
     Format = "{Sum:C0}",
     SummaryType = SummaryType.DoubleAggregate
 });
-sfGrid.TableSummaryRows.Add(summaryRow2);
+sfGrid.TableSummaryRows.Add(summaryRow2);`
 {% endhighlight %}
 {% endtabs %}
 
@@ -1200,8 +1200,6 @@ Used for custom summaries
 </td>
 </tr>
 </table>
-
-N> The above aggregate types can be applied for `TableSummaries`.
 
 ## Custom summaries
 
