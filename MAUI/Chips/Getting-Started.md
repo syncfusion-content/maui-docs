@@ -61,9 +61,7 @@ namespace AutocompleteSample
 
 Step 1: Add the NuGet to the project
 
-Step 2: Add the namespace as shown in the following code sample:
-
-## For SfChip
+Step 2: Add the namespace as shown in the following code snippet
 
 {% tabs %}
 
@@ -83,6 +81,8 @@ Step 2: Add the namespace as shown in the following code sample:
 
 Step 3: Set the control to content in `ContentPage.`
 
+## For SfChip
+
 {% tabs %}
 
 {% highlight xaml %}
@@ -95,36 +95,16 @@ Step 3: Set the control to content in `ContentPage.`
 
 {% highlight c# %}
           
-SfChips chips = new SfChips(); 
+SfChip chips = new SfChip(); 
 Content = chips;  
 
 {% endhighlight %}
 
 {% endtabs %}
 
-## Initialize chips
-
-Import the [`SfChipGroup`] namespace in respective page
-
 ## For SfChipGroup
 
-{% tabs %}
-
-{% highlight xaml %}
-
-xmlns:chip ="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
-	
-{% endhighlight %}
-
-{% highlight c# %}
-
-using Syncfusion.Maui.Core;
-
-{% endhighlight %}
-
-{% endtabs %}
-
-Then initialize an empty [`SfChipGroup`] as shown in the following code:
+Initialize an empty [`SfChipGroup`] as shown in the following code snippet
 
 {% tabs %}
 
@@ -348,7 +328,9 @@ namespace Chips
 			this.BindingContext = new ViewModel();
 			chipGroup.SetBinding(SfChipGroup.ItemsSourceProperty, "Employees");
 			chipGroup.DisplayMemberPath = "Name";
-			chipGroup.CloseButtonColor = Colors.Black;
+			chipGroup.HorizontalOptions = LayoutOptions.Start;
+			chipGroup.VerticalOptions = LayoutOptions.Center;
+			chipGroup.ChipTextColor = Colors.Black;
 			chipGroup.ChiBackground = Colors.White;
 			chipGroup.ChipPadding = new Thickness(8, 8, 0, 0);
 			this.Content = grid;
@@ -426,37 +408,25 @@ namespace Chips
 		private string result;
 
 		public ICommand ActionCommand
-		{
-			get
-			{
-				return actionCommand;
-			}
-			set
-			{
-				actionCommand = value;
-			}
-		}
-
-		public ObservableCollection<Person> Employees
-		{
-			get
-			{
-				return employees;
-			}
-			set
-			{
-				Employees = value;
-				OnPropertyChanged("Employees");
-			}
-		}
+    	{
+			get { return actionCommand; }
+			set { actionCommand = value; }
+    	}
+    
+    	public ObservableCollection<Person> Employees
+    	{
+        	get { return employees; }
+        	set
+        	{
+            	Employees = value;
+            	OnPropertyChanged("Employees");
+        	}
+    	}
 
 		public string Result
 		{
-			get
-			{
-				return result;
-			}
-			set
+			get { return result; }
+			set 
 			{
 				result = value;
 				OnPropertyChanged("Result");

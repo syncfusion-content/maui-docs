@@ -28,7 +28,7 @@ This section explains the steps to create and load an image to the image editor 
     . . .
     xmlns:imageEditor="clr-namespace:Syncfusion.Maui.ImageEditor;assembly=Syncfusion.Maui.ImageEditor">
 
-    <imageEditor:SfImageEditor Source="image.png" />
+    <imageEditor:SfImageEditor />
 </ContentPage>
 
 {% endhighlight %}
@@ -93,6 +93,7 @@ Refer to the following steps to add an image to the project:
 4. Browse to the location on your computer where the image file is stored.
 5. Select the image file you want to add to the "Resources" folder.
 6. Click "Add" to add the image file to the project.
+7. Assign the image name, including its extension, to the [Source](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_Source) property of the image editor control. 
 
 N> Image formats such as JPEG and PNG can be loaded to the image editor.
 
@@ -119,10 +120,11 @@ public partial class MainPage : ContentPage
 {
 	public MainPage()
 	{
-		InitializeComponent();
+        InitializeComponent();
         SfImageEditor imageEditor = new SfImageEditor();
         imageEditor.Source = "image.jpeg";
         this.content = imageEditor;
     }
+}
 {% endhighlight %}
 {% endtabs %}
