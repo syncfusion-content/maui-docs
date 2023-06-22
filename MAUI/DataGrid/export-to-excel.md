@@ -438,7 +438,8 @@ The SfDataGrid allows customizing the column width in Excel file by using the [D
 
 {% tabs %}
 {% highlight c# %}
-DataGridExcelExportingOption option = new DataGridExcelExportingOption();option.DefaultColumnWidth = 150;
+DataGridExcelExportingOption option = new DataGridExcelExportingOption();
+option.DefaultColumnWidth = 150;
 option.CanExportColumnWidth = false;
 {% endhighlight %}
 {% endtabs %}
