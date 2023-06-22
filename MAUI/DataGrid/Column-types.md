@@ -626,6 +626,7 @@ dataGrid.Columns.Add(comboBoxColumn);
 {% endhighlight %}
 {% endtabs %}
 
+{% tabs %}
 {% highlight c# %}
 // ViewModel class
 public class ViewModel
@@ -641,6 +642,7 @@ public class ViewModel
     
 }
 {% endhighlight %}
+{% endtabs %}
 
 ### Collection of user-defined types
 
@@ -722,7 +724,7 @@ public class ItemSourceSelector : IItemsSourceSelector
 
 ### Editing the combo box
 
-The `DataGridComboBoxColumn` supports both editable and non-editable text boxes for selecting items from a given data source. Users can choose one item from the suggestion list
+The `DataGridComboBoxColumn` supports both editable and non-editable text boxes for selecting items from a given data source. Users can choose one item from the suggestion list.
 
 The [IsEditableMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridComboBoxColumn.html#Syncfusion_Maui_DataGrid_DataGridComboBoxColumn_IsEditableMode) property is used to enable the user input in `DataGridComboBoxColumn`. Its default value is `false`.
 
@@ -762,7 +764,7 @@ dataGrid.Columns.Add(comboBoxColumn);
 
 ### Auto suggesting on edit mode
 
-By default, the auto-suggestion in the dropdown will display values based on the [StartsWith](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ComboBoxTextSearchMode.html#Syncfusion_Maui_Inputs_ComboBoxTextSearchMode_StartsWith) filter condition. However, you can change this behavior by utilizing the [SuggestionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridComboBoxColumn.html#Syncfusion_Maui_DataGrid_DataGridComboBoxColumn_SuggestionMode) property to retrieve matches using the Contains condition
+By default, the auto-suggestion in the dropdown will display values based on the [StartsWith](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ComboBoxTextSearchMode.html#Syncfusion_Maui_Inputs_ComboBoxTextSearchMode_StartsWith) filter condition. However, you can change this behavior by utilizing the [SuggestionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridComboBoxColumn.html#Syncfusion_Maui_DataGrid_DataGridComboBoxColumn_SuggestionMode) property to retrieve matches using the Contains condition.
 
 {% tabs %}
 {% highlight xaml %}
