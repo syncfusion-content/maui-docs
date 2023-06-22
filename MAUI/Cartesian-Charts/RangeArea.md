@@ -15,9 +15,9 @@ Range Area Chart is a type of data visualization useful for displaying the relat
 
 By displaying ranges of data, range area series can make it easier to compare multiple datasets at once.
 
-To render a range area chart, create an instance of the [RangeAreaSeries](), and add it to the [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) collection property of the [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html?tabs=tabid-1).
+To render a range area chart, create an instance of the [RangeAreaSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.RangeAreaSeries.html), and add it to the [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) collection property of the [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html?tabs=tabid-1).
 
-Since the [RangeAreaSeries]() requires two Y values for each point, your data should contain both the high and low values. These high and low values specify the maximum and minimum ranges of the point.
+Since the [RangeAreaSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.RangeAreaSeries.html) requires two Y values for each point, your data should contain both the high and low values. These high and low values specify the maximum and minimum ranges of the point.
 
 N> The Cartesian chart has the [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) as its default content.
 
@@ -71,7 +71,7 @@ N> The Cartesian chart has the [Series](https://help.syncfusion.com/cr/maui/Sync
 
 ## Enable Marker
 
-A marker, also known as a symbol, is used to determine or highlight the position of the data point. To enable markers in the series, set the [ShowMarkers] property to true.
+A marker, also known as a symbol, is used to determine or highlight the position of the data point. To enable markers in the series, set the [ShowMarkers](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.RangeAreaSeries.html#Syncfusion_Maui_Charts_RangeAreaSeries_ShowMarkers) property to true.
 
 {% tabs %}
 
