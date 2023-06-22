@@ -1253,7 +1253,7 @@ So, Add visual states to enable selected chip text color also set the ChipType t
                         </VisualState>
                         <VisualState x:Name="Selected">
                             <VisualState.Setters>
-                                <Setter Property="ChipTextcolor" Value="Green" />
+                                <Setter Property="ChipTextColor" Value="Green" />
                              </VisualState.Setters>
                         </VisualState>
                     </VisualStateGroup>
@@ -1357,7 +1357,7 @@ using Syncfusion.Maui.Core;
     chipGroup.SetBinding(SfChipGroup.ItemsSourceProperty, "Employees");
     chipGroup.DisplayMemberPath = "Name";
     chipGroup.ChipStroke = Colors.Black;
-    chipGroup.ChipBackground = Colors.#512dcd;
+    chipGroup.ChipBackground = Colors.Violet;
     this.Content = stack;
         
 {% endhighlight %}
