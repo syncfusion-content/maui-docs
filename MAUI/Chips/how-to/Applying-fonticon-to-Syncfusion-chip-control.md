@@ -48,13 +48,14 @@ Create the instance for `FontImageSource` and set to [`ImageSource`] property of
  chip.Text = "Syncfusion"; 
  chip.FontSize = 17;
  chip.TextColor = Colors.White;
+ chip.BackgroundColor = Colors.Violet;
  chip.WidthRequest = 120;
  chip.HeightRequest = 40;
  chip.ImageSize = 15;
  chip.Padding = new Thickness(0,0,0,2);
  
  var fontImageSource = new FontImageSource();
- fontImageSource.Glyph = "&#xEB52";
+ fontImageSource.Glyph = "\uEB52";
  fontImageSource.Size = 12;
  fontImageSource.Color = Colors.White;
  fontImageSource.FontFamily = "Segoe MDL2 Assets";           
