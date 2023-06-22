@@ -57,7 +57,7 @@ Create the instance for `FontImageSource` and set to [`ImageSource`] property of
  var fontImageSource = new FontImageSource();
  fontImageSource.Glyph = "\uEB52";
  fontImageSource.Size = 12;
- fontImageSource.Color = Colors.Black;
+ fontImageSource.Color = Colors.White;
  fontImageSource.FontFamily = "Segoe MDL2 Assets";           
  chip.ImageSource = fontImageSource;
  this.Content = chip;
