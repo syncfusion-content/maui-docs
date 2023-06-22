@@ -27,18 +27,30 @@ The following code illustrates how to get an input type chip.
 			FontSize="15" 
 			WidthRequest="110" 
 			Completed="Entry_Completed"
-			Margin="10,10,0,0">
-                </Entry>
+			>
+</Entry>
 </chip:SfChipGroup.InputView>
 
 </chip:SfChipGroup>
-	
+
 {% endhighlight %}
 
 {% highlight c# %}
 
 [MainPage.cs]
-...
+
+using Syncfusion.Maui.Core;
+
+    SfChipGroup chipGroup = new SfChipGroup();
+    var entry= new Entry { Margin = new Thickness(10, 10, 0, 0), WidthRequest = 110, HeightRequest = 40 };
+    chipGroup.InputView = entry;
+    entry.Completed += Entry_Completed;
+    this.BindingContext = new ViewModel();
+    chipGroup.SetBinding(SfChipGroup.ItemsSourceProperty, "Employees");
+    chipGroup.DisplayMemberPath = "Name";
+    chipGroup.ChipType = SfChipsType.Input;
+   
+
 private void Entry_Completed(object sender, EventArgs e)
 {
     var viewModel = this.BindingContext as EmployeeViewModel;
@@ -152,6 +164,12 @@ public MainPage()
 	{
 		InitializeComponent();
 
+        SfChipGroup chipGroup = new SfChipGroup();
+        this.BindingContext = new ViewModel();
+        chipGroup.SetBinding(SfChipGroup.ItemsSourceProperty, "Employees");
+        chipGroup.DisplayMemberPath = "Name";
+        chipGroup.ChipType = SfChipsType.Choice;
+
         VisualStateGroupList visualStateGroupList = new VisualStateGroupList();
         VisualState normalState = new VisualState() { Name="Normal"};
 
@@ -202,38 +220,15 @@ public class EmployeeViewModel : INotifyPropertyChanged
 
     public event PropertyChangedEventHandler PropertyChanged;
 
-    private ObservableCollection<string> items = new() { "Joseph", "Alazari", "Rocketuh", "Raja" };
-    public ObservableCollection<string> Items
-    {
-        get { return items; }
-        set
-        {
-            items = value;
-            OnPropertyChanged(nameof(Items));
-        }
-    }
-
     public ObservableCollection<Employee> Employees
     {
-        get
-        {
-
-         return employees;
-
-        }
+        get { return employees; }
         set
         {
             employees = value;
             OnPropertyChanged(nameof(Employees));
         }
 
-    }
-
-    private string result;
-    public string Result
-    {
-        get { return result; }
-        set { result = value; OnPropertyChanged(); }
     }
 
     public void OnPropertyChanged([CallerMemberName] string name = null) =>
@@ -362,6 +357,13 @@ public MainPage()
 	{
 		InitializeComponent();
 
+        SfChipGroup chipGroup = new SfChipGroup();
+        this.BindingContext = new ViewModel();
+        chipGroup.SetBinding(SfChipGroup.ItemsSourceProperty, "Employees");
+        chipGroup.DisplayMemberPath = "Name";
+        chipGroup.SelectionIndicatorColor = Colors.White;
+        chipGroup.ChipType = SfChipsType.Filter;
+
         VisualStateGroupList visualStateGroupList = new VisualStateGroupList();
         VisualState normalState = new VisualState() { Name="Normal"};
 
@@ -424,12 +426,7 @@ public class EmployeeViewModel : INotifyPropertyChanged
 
     public ObservableCollection<Employee> Employees
     {
-        get
-        {
-
-         return employees;
-
-        }
+        get { return employees; }
         set
         {
             employees = value;
@@ -438,16 +435,9 @@ public class EmployeeViewModel : INotifyPropertyChanged
 
     }
 
-    private string result;
-    public string Result
-    {
-        get { return result; }
-        set { result = value; OnPropertyChanged(); }
-    }
+    public void OnPropertyChanged([CallerMemberName] string name = null) =>
 
-     public void OnPropertyChanged([CallerMemberName] string name = null) =>
-
-     PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
+    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
 
     public EmployeeViewModel()
     {
@@ -488,7 +478,7 @@ The following code illustrates how to get action typed ChipGroup.
     CloseButtonColor="Black"
     ChipType="Action">
 </chip:SfChipGroup>
-            <StackLayout Orientation="Horizontal">
+<StackLayout Orientation="Horizontal">
 <Label Margin="10,60,0,0"
 	                Text="Name:" 
 				    FontAttributes="Bold" 
@@ -497,10 +487,50 @@ The following code illustrates how to get action typed ChipGroup.
 				Text="{Binding Result}"
 				FontAttributes="Bold" 
 				FontSize="14" />
-            </StackLayout>
+</StackLayout>
 {% endhighlight %}
 
 {% highlight c# %}
+
+using Syncfusion.Maui.Core;
+
+    ViewModel viewModel = new ViewModel();
+        SfChipGroup chipGroup = new SfChipGroup()
+        {
+            ItemsSource = viewModel.Employees,
+            DisplayMemberPath = "Name",
+            CloseButtonColor = Colors.Black,
+            ChipType = SfChipsType.Action,
+            
+        };
+        StackLayout stackLayout = new StackLayout()
+        {
+            Orientation = StackOrientation.Horizontal
+        };
+        Label nameLabel = new Label()
+        {
+            Margin = new Thickness(10, 60, 0, 0),
+            Text = "Name:",
+            FontAttributes = FontAttributes.Bold,
+            FontSize = 14
+        };
+        Label resultLabel = new Label()
+        {
+            Margin = new Thickness(10, 60, 0, 0),
+            FontAttributes = FontAttributes.Bold,
+            FontSize = 14,
+            
+        };
+        this.BindingContext = viewModel;
+        chipGroup.SetBinding(SfChipGroup.CommandProperty,new Binding( "ActionCommand"));
+        resultLabel.SetBinding(Label.TextProperty, new Binding("Result"));
+        StackLayout stackLayout2 = new StackLayout();
+        stackLayout.Children.Add(nameLabel);
+        stackLayout.Children.Add(resultLabel);
+        stackLayout2.Children.Add(chipGroup);
+        stackLayout2.Children.Add(stackLayout);
+        this.Content = stackLayout2;
+
 [Model]
 
 public class Person
@@ -524,22 +554,13 @@ public class ViewModel : INotifyPropertyChanged
 
     public ICommand ActionCommand
     {
-        get
-        {
-            return actionCommand;
-        }
-        set
-        {
-            actionCommand = value;
-        }
+        get { return actionCommand; }
+        set { actionCommand = value; }
     }
-
+    
     public ObservableCollection<Person> Employees
     {
-        get
-        {
-            return employees;
-        }
+        get { return employees; }
         set
         {
             Employees = value;
@@ -549,10 +570,7 @@ public class ViewModel : INotifyPropertyChanged
 
     public string Result
     {
-        get
-        {
-            return result;
-        }
+        get { return result; }
         set
         {
             result = value;
