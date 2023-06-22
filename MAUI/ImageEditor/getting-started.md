@@ -125,5 +125,6 @@ public partial class MainPage : ContentPage
         imageEditor.Source = "image.jpeg";
         this.content = imageEditor;
     }
+}
 {% endhighlight %}
 {% endtabs %}
