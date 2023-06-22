@@ -170,7 +170,7 @@ The applied effects can be canceled using the [CancelEdits](https://help.syncfus
 public MainPage()
 {               
     . . .
-    this.imageEditor.CancelEdits();
+    this.imageEditor.SaveEdits();
     . . .
 }
 
