@@ -3,7 +3,7 @@ layout: post
 title: Installation of .NET MAUI Sample Browser App | Syncfusion
 description: Describes about how to download and install the Syncfusion .NET MAUI Sample Browser App in each platform
 platform: maui
-control: Demo
+control: Demos
 documentation: ug
 
 ---
