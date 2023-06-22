@@ -1,6 +1,6 @@
 # Editing in MAUI DataGrid (SfDataGrid)
 
-The [Syncfusion .NET MAUI DataGrid]() (SfDataGrid) control supports editing cell values by setting the [SfDataGrid.AllowEditing property](), [SfDataGrid.NavigationMode]() to Cell, and setting the [SfDataGrid.SelectionMode]() to any value other than None.
+The [Syncfusion .NET MAUI DataGrid]() (SfDataGrid) control supports editing cell values by setting the [SfDataGrid.AllowEditing property](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AllowEditing), [SfDataGrid.NavigationMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_NavigationMode) to Cell, and setting the [SfDataGrid.SelectionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_SelectionMode) to any value other than None.
 
 To enable editing, follow the code example:
 
@@ -23,7 +23,7 @@ dataGrid.NavigationMode = NavigationMode.Cell;
 
 ## Column editing
 
-To enable or disable editing for a specific column, you can simply set the [DataGridColumn.AllowEditing]() property to true or false.
+To enable or disable editing for a specific column, you can simply set the [DataGridColumn.AllowEditing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_AllowEditing) property to true or false.
 
 {% tabs %}
 {% highlight xaml %}
@@ -49,7 +49,7 @@ N>The `DataGridColumn.AllowEditing` takes higher priority than the `SfDataGrid.A
 
 ## Entering into edit mode
 
-To enter the edit mode, you can simply tap or double-tap the grid cell. The behavior of the edit mode tapping is controlled by the [SfDataGrid.EditTapAction]() property, with the default value being EditTapAction.DoubleTap.
+To enter the edit mode, you can simply tap or double-tap the grid cell. The behavior of the edit mode tapping is controlled by the [SfDataGrid.EditTapAction](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_EditTapAction) property, with the default value being EditTapAction.DoubleTap.
 
 {% tabs %}
 {% highlight xaml %}
@@ -69,15 +69,15 @@ N> The keyboard will collapse when the editing grid cell loses focus.
 
 ## Support for IEditableObject
 
-The SfDataGrid supports committing and rolling back changes at the row level when the underlying data object implements the [IEditableObject]() interface.
+The SfDataGrid supports committing and rolling back changes at the row level when the underlying data object implements the [IEditableObject](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.ieditableobject?view=net-6.0) interface.
 
 Editing changes in a row will be committed only when tapping on next row.
 
 The `IEditableObject` interface provides the following methods to capture editing:
 
- * [BeginEdit](): Called to begin editing on the underlying data object when cells in a row enter edit mode.
- * [CancelEdit](): Called when you cancel editing to discard the changes in a row since the last BeginEdit call.
- * [EndEdit](): Called when you move to the next row, tapping to commit changes in the underlying data object since the last BeginEdit call.
+ * [BeginEdit](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.ieditableobject.beginedit?view=net-6.0): Called to begin editing on the underlying data object when cells in a row enter edit mode.
+ * [CancelEdit](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.ieditableobject.canceledit?view=net-6.0): Called when you cancel editing to discard the changes in a row since the last BeginEdit call.
+ * [EndEdit](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.ieditableobject.endedit?view=net-6.0): Called when you move to the next row, tapping to commit changes in the underlying data object since the last BeginEdit call.
 
 The following code snippet demonstrates a simple implementation of the `IEditableObject` interface:
 
@@ -283,7 +283,7 @@ The SfDataGrid invokes the following events during editing:
 
 ### CurrentCellBeginEdit
 
-The [SfDataGrid.CurrentCellBeginEdit]() event occurs when the CurrentCell enters into edit mode. The [DataGridCurrentCellBeginEditEventArgs]() has the following members that provides information for `SfDataGrid.CurrentCellBeginEdit` event:
+The [SfDataGrid.CurrentCellBeginEdit](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CurrentCellBeginEdit) event occurs when the CurrentCell enters into edit mode. The [DataGridCurrentCellBeginEditEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCurrentCellBeginEditEventArgs.html) has the following members that provides information for `SfDataGrid.CurrentCellBeginEdit` event:
 
  * [Cancel](): When this member set to ‘true’, the event is canceled and the CurrentCell does not enter into the edit mode.
  * [RowColumnIndex](): Gets the current row and column index of the DataGrid.
@@ -304,7 +304,7 @@ private void DataGrid_CurrentCellBeginEdit(object sender, DataGridCurrentCellBeg
 
 ### CurrentCellEndEdit
 
-The [CurrentCellEndEdit]() event occurs when the CurrentCell exits the edit mode. The [DataGridCurrentCellEndEditEventArgs]() has following members that provides information for `SfDataGrid.CurrentCellEndEdit` event:
+The [CurrentCellEndEdit](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CurrentCellEndEdit) event occurs when the CurrentCell exits the edit mode. The [DataGridCurrentCellEndEditEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCurrentCellEndEditEventArgs.html) has following members that provides information for `SfDataGrid.CurrentCellEndEdit` event:
 
  * [RowColumnIndex](): Gets the current row and column index of the DataGrid.
  * [Cancel](): When this member set to ‘true’, the event is canceled and the edited value is not committed in the underlying collection.
@@ -327,7 +327,7 @@ private void DataGrid_CurrentCellEndEdit(object sender, DataGridCurrentCellEndEd
 
 ### Begin editing
 
-The SfDataGrid allows you to programmatically edit a cell by calling the [SfDataGrid.BeginEdit]() method. This method enters the particular cell into edit mode, enabling the editing of data programmatically. To programmatically edit a cell, refer to the code example below:
+The SfDataGrid allows you to programmatically edit a cell by calling the [SfDataGrid.BeginEdit](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_BeginEdit_System_Int32_System_Int32_) method. This method enters the particular cell into edit mode, enabling the editing of data programmatically. To programmatically edit a cell, refer to the code example below:
 
 {% highlight c# %}
 this.dataGrid.Loaded += DataGrid_Loaded;
@@ -340,7 +340,7 @@ private void DataGrid_Loaded(object sender, EventArgs e)
 
 ### End editing
 
-The [SfDataGrid.EndEdit]() method allows you to programmatically conclude the editing process. When called, it commits the edited value of a cell to the underlying collection and exits the edit mode. To programmatically end the editing process, you can refer to the following code example
+The [SfDataGrid.EndEdit](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_EndEdit) method allows you to programmatically conclude the editing process. When called, it commits the edited value of a cell to the underlying collection and exits the edit mode. To programmatically end the editing process, you can refer to the following code example
 
 {% highlight c# %}
 this.dataGrid.EndEdit();
@@ -348,7 +348,7 @@ this.dataGrid.EndEdit();
 
 ### Cancel editing
 
-The [SfDataGrid.CancelEdit]() method allows you to programmatically cancel the editing process. When called, this method exits the edit mode of a cell without committing the edited value to the underlying collection. To programmatically cancel the editing process, use the code example provided:
+The [SfDataGrid.CancelEdit](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CancelEdit) method allows you to programmatically cancel the editing process. When called, this method exits the edit mode of a cell without committing the edited value to the underlying collection. To programmatically cancel the editing process, use the code example provided:
 
 {% highlight c# %}
 this.dataGrid.CancelEdit();
@@ -356,7 +356,7 @@ this.dataGrid.CancelEdit();
 
 ### Cancel editing for a particular Cell
 
-The [SfDataGrid.CurrentCellBeginEdit]() event can be used to cancel the editing operation for the corresponding cell. To cancel the editing operation using the `SfDataGrid.CurrentCellBeginEdit` event, follow the code example:
+The `SfDataGrid.CurrentCellBeginEdit` event can be used to cancel the editing operation for the corresponding cell. To cancel the editing operation using the `SfDataGrid.CurrentCellBeginEdit` event, follow the code example:
 
 {% highlight c# %}
 this.dataGrid.CurrentCellBeginEdit += DataGrid_CurrentCellBeginEdit;
@@ -369,7 +369,7 @@ private void DataGrid_CurrentCellBeginEdit(object sender, DataGridCurrentCellBeg
 
 ### Cancel edited value from being committed
 
-To prevent the edited value from being committed, use the [CurrentCellEndEdit]() event. This event prevents the edited values from being committed to the underlying collection. Refer to the code example below:
+To prevent the edited value from being committed, use the `CurrentCellEndEdit` event. This event prevents the edited values from being committed to the underlying collection. Refer to the code example below:
 
 {% highlight c# %}
 this.dataGrid.CurrentCellEndEdit += DataGrid_CurrentCellEndEdit;
