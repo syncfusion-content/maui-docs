@@ -40,8 +40,10 @@ Create the instance for `FontImageSource` and set to [`ImageSource`] property of
 {% endhighlight %}
 
 {% highlight c# %}
- 
+
+ Grid grid = new Grid();
  SfChip chip = new SfChip();
+ grid.Children.Add(chip);
  chip.ShowIcon = true;
  chip.Text = "Syncfusion"; 
  chip.FontSize = 17;
@@ -57,7 +59,8 @@ Create the instance for `FontImageSource` and set to [`ImageSource`] property of
  fontImageSource.Color = Colors.White;
  fontImageSource.FontFamily = "Segoe MDL2 Assets";           
  chip.ImageSource = fontImageSource;
-
+ this.Content = chip;
+ 
 {% endhighlight %}
 
 {% endtabs %}
