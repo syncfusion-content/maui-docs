@@ -801,9 +801,9 @@ dataGrid.Columns.Add(comboBoxColumn);
 
 ![DataGrid with Suggesting comboBox column](Images\column-types\maui-datagrid-combobox-column-editing.png)
 
-### Hide ClearButton
+### Change clear button visibility
 
-By default, the clear button X will be displayed in the editor of the ComboBox control, which can be used to clear the entered input. Hide the clear button in ComboBox control using the [ShowClearButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridComboBoxColumn.html#Syncfusion_Maui_DataGrid_DataGridComboBoxColumn_ShowClearButton) property. The default value of the `ShowClearButton` property value is true.
+The ComboBox control includes a clear button that allows users to easily remove the entered input. The visibility of the clear button can be adjusted using the [ShowClearButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridComboBoxColumn.html#Syncfusion_Maui_DataGrid_DataGridComboBoxColumn_ShowClearButton) property. By default, the `ShowClearButton` property is set to true.
 
 {% tabs %}
 {% highlight xaml %}

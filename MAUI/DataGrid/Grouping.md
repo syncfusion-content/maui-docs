@@ -487,9 +487,9 @@ this.dataGrid.ShowColumnWhenGrouped = false;
 {% endhighlight %}
 {% endtabs %}
 
-## Customize Group Icon with template
+## Load group icon through template
 
-By default , the SfDatagrid loads two different paths for denoting the group expanded and collapsed state. The group icon can be Customized by the [sfDataGrid.GroupExpandCollapseTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_GroupExpandCollapseTemplate) property. When loading as a template, you have the ability to load a single template that indicates the expanded state of a group. This template will then rotate to represent the collapsed state. Refer to the following code snippet for using template:
+The SfDataGrid uses an icon to indicate the expand and collapse state of groups. You can personalize the group icon by using the [sfDataGrid.GroupExpandCollapseTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_GroupExpandCollapseTemplate) property. This property allows you to define a custom template that will be displayed in its normal form when the group is expanded, and it will rotate downwards when the group is collapsed. To implement this, refer to the following code snippet:
 
 {% tabs %}
 
@@ -532,9 +532,9 @@ dataGrid.GroupExpandCollapseTemplate = new DataTemplate(() =>
 
 ![DataGrid with template](Images\Grouping\maui-datagrid-template.gif)
 
-## Customize Group Icon with template Selector
+## Load group icon through template selector
 
-By default , the SfDatagrid loads two different paths for denoting the group expanded and collapsed state. The group icon can be Customized by the [sfDataGrid.GroupExpandCollapseTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_GroupExpandCollapseTemplate) property. When loading as a template Selector, you have the ability to load multiple templates that indicates the expanded and collapsed states of the groups. Refer to the following code snippet for using template selector: 
+When choosing a `GroupExpandCollapseTemplate` as a DataTemplateSelector, you have the option to supply distinct templates for both the expanded and collapsed states of the group
 
 {% tabs %}
 
