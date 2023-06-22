@@ -70,12 +70,12 @@ All the DateTime properties of the calendar can be given in two ways when the ca
 * Create an display date value by declaring the calendar identifier and respective calendar identifier date.
 
 {% tabs %}
-{% highlight MainPage.xaml %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 
 <calendar:SfCalendar x:Name="Calendar" />
 
 {% endhighlight %}
-{% highlight MainPage.xaml.cs hl_lines="2" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="2" %}
 
 this.Calendar.Identifier = CalendarIdentifier.Hijri;
 this.Calendar.DisplayDate = new DateTime(1444, 11, 21, 0, 0, 0, new HijriCalendar());
@@ -86,12 +86,12 @@ this.Calendar.DisplayDate = new DateTime(1444, 11, 21, 0, 0, 0, new HijriCalenda
 * Create an display date value by declaring the local system date. In this case, the system date will be converted to the respective calendar identifier date.
 
 {% tabs %}
-{% highlight MainPage.xaml s%}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 
 <calendar:SfCalendar x:Name="Calendar" />
 
 {% endhighlight %}
-{% highlight MainPage.xaml.cs hl_lines="2" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="2" %}
 
 this.Calendar.Identifier = CalendarIdentifier.Hijri;
 this.Calendar.DisplayDate = new DateTime(2023, 6, 9);

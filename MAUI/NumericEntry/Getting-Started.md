@@ -51,14 +51,14 @@ namespace MaskedEntrySample
 
 ## Adding the .NET MAUI Numeric Entry control
 
-Step 1: Add the NuGet to the project as discussed in the above reference section. 
+Step 1: Add the NuGet to the project as discussed in the above reference section. 
 
 Step 2: Add the namespace as shown in the following code sample.
 
 {% tabs %}
 {% highlight xaml %}
 
-	<xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Inputs;assembly=Syncfusion.Maui.Inputs"/>
+	<xmlns:editors="clr-namespace:Syncfusion.Maui.Inputs;assembly=Syncfusion.Maui.Inputs"/>
 
 {% endhighlight %}
 {% highlight c# %}
@@ -75,7 +75,7 @@ Now, add the `SfNumericEntry` control with a required optimal name using the inc
 {% tabs %}
 {% highlight xaml %}
 
-	<syncfusion:SfNumericEntry x:Name="numericEntry" />
+	<editors:SfNumericEntry x:Name="numericEntry" />
 	
 {% endhighlight %}
 {% highlight C# %}
@@ -259,3 +259,5 @@ private void sfNumericEntry_ValueChanged(object sender, NumericEntryValueChanged
 
 {% endhighlight %}
 {% endtabs %}
+
+You can find the complete getting started sample of .NET MAUI from this [link.](https://github.com/SyncfusionExamples/maui-numericentry-samples)
