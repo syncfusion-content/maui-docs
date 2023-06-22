@@ -1210,7 +1210,7 @@ using Syncfusion.Maui.Core;
     this.BindingContext = new ViewModel();
     chipGroup.SetBinding(SfChipGroup.ItemsSourceProperty, "Employees");
     chipGroup.DisplayMemberPath = "Name";
-    chipGroup.ChipTextColor = Color.Blue;
+    chipGroup.ChipTextColor = Colors.Blue;
     this.Content = stack;
         
 {% endhighlight %}
