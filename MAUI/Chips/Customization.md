@@ -726,7 +726,6 @@ using Syncfusion.Maui.Core;
     chip.WidthRequest = 150;
     chip.HorizontalOptions = LayoutOptions.Center;
     chip.VerticalOptions = LayoutOptions.Center;
-    chip.ShowIcon = true;
     chip.BackgroundImage="Lion.png";
     stackLayout.Children.Add(chip);
     this.Content = stackLayout;
@@ -841,8 +840,6 @@ N> The default value of ImageSize is [`18d`].
 
 The [`ImageAlignment`] property customizes the alignment of icon image in SfChip.
 
-N> Enable the [`ShowIcon`] property to enable the [`ImageSource`] property.
-
 {% tabs %}
 
 {% highlight xaml %}
@@ -951,7 +948,7 @@ public class CommandDemoViewModel : INotifyPropertyChanged
     public CommandDemoViewModel()
     {
         BackgroundColor();
-        this.Background=Colors.Violet;
+        this.Background = Colors.Violet;
     }
 
     private void BackgroundColor()
@@ -1015,9 +1012,7 @@ The [`InputView`] property allows to provide a view to the input chip. In this e
 
 using Syncfusion.Maui.Core;
 
-    Grid grid = new Grid();
     SfChipGroup chipGroup = new SfChipGroup();
-    grid.Children.Add(chipGroup);
     var entry= new Entry { Margin = new Thickness(10, 10, 0, 0), WidthRequest = 110 };
     chipGroup.InputView = entry;
     this.BindingContext = new ViewModel();
@@ -1025,8 +1020,7 @@ using Syncfusion.Maui.Core;
     chipGroup.DisplayMemberPath = "Name";
     chipGroup.ChipPadding = new Thickness(8, 8, 0, 0);
     chipGroup.ChipType = SfChipsType.Input;
-    this.Content = grid;
-		
+    
 {% endhighlight %}
 
 {% endtabs %}
@@ -1072,7 +1066,6 @@ using Syncfusion.Maui.Core;
     StackLayout stack = new StackLayout();
     SfChipGroup chipGroup = new SfChipGroup();
     stack.Children.Add(chipGroup);
-    chipGroup.ChipLayout = layout;
     this.BindingContext = new ViewModel();
     chipGroup.SetBinding(SfChipGroup.ItemsSourceProperty, "Employees");
     chipGroup.DisplayMemberPath = "Name";
@@ -1142,7 +1135,6 @@ public MainPage()
         StackLayout stack = new StackLayout();
         SfChipGroup chipGroup = new SfChipGroup();
         stack.Children.Add(chipGroup);
-        chipGroup.ChipLayout = layout;
         this.BindingContext = new ViewModel();
         chipGroup.SetBinding(SfChipGroup.ItemsSourceProperty, "Employees");
         chipGroup.DisplayMemberPath = "Name";
@@ -1153,7 +1145,7 @@ public MainPage()
         VisualState normalState = new VisualState() { Name="Normal"};
 
         VisualStateGroup commonStateGroup = new VisualStateGroup();
-        if (sfChipGroup.ChipType == SfChipsType.Choice)
+        if (chipGroup.ChipType == SfChipsType.Choice)
         {
             normalState.Setters.Add(new Setter { Property = SfChipGroup.ChipBackgroundProperty, Value = Colors.White });
         }
@@ -1169,7 +1161,7 @@ public MainPage()
         commonStateGroup.States.Add(selectedState);
         visualStateGroupList.Add(commonStateGroup);
 
-        VisualStateManager.SetVisualStateGroups(sfChipGroup, visualStateGroupList);
+        VisualStateManager.SetVisualStateGroups(chipGroup, visualStateGroupList);
 
     }
 
@@ -1215,11 +1207,10 @@ using Syncfusion.Maui.Core;
     StackLayout stack = new StackLayout();
     SfChipGroup chipGroup = new SfChipGroup();
     stack.Children.Add(chipGroup);
-    chipGroup.ChipLayout = layout;
     this.BindingContext = new ViewModel();
     chipGroup.SetBinding(SfChipGroup.ItemsSourceProperty, "Employees");
     chipGroup.DisplayMemberPath = "Name";
-    chipGroup.ChipTextColor = Color.Blue;
+    chipGroup.ChipTextColor = Colors.Blue;
     this.Content = stack;
         
 {% endhighlight %}
@@ -1257,12 +1248,12 @@ So, Add visual states to enable selected chip text color also set the ChipType t
                     <VisualStateGroup x:Name="CommonStates">
                         <VisualState x:Name="Normal">
                             <VisualState.Setters>
-                                <Setter Property="ChipTrextColor" Value="Black" />
+                                <Setter Property="ChipTextColor" Value="Black" />
                             </VisualState.Setters>
                         </VisualState>
                         <VisualState x:Name="Selected">
                             <VisualState.Setters>
-                                <Setter Property="ChipTextcolor" Value="Green" />
+                                <Setter Property="ChipTextColor" Value="Green" />
                              </VisualState.Setters>
                         </VisualState>
                     </VisualStateGroup>
@@ -1286,7 +1277,6 @@ public MainPage()
         StackLayout stack = new StackLayout();
         SfChipGroup chipGroup = new SfChipGroup();
         stack.Children.Add(chipGroup);
-        chipGroup.ChipLayout = layout;
         this.BindingContext = new ViewModel();
         chipGroup.SetBinding(SfChipGroup.ItemsSourceProperty, "Employees");
         chipGroup.DisplayMemberPath = "Name";
@@ -1298,7 +1288,7 @@ public MainPage()
         VisualState normalState = new VisualState() { Name="Normal"};
 
         VisualStateGroup commonStateGroup = new VisualStateGroup();
-        if (sfChipGroup.ChipType == SfChipsType.Choice)
+        if (chipGroup.ChipType == SfChipsType.Choice)
         {
             normalState.Setters.Add(new Setter { Property = SfChipGroup.ChipTextColorProperty, Value = Colors.Black });
         }
@@ -1314,7 +1304,7 @@ public MainPage()
         commonStateGroup.States.Add(selectedState);
         visualStateGroupList.Add(commonStateGroup);
 
-        VisualStateManager.SetVisualStateGroups(sfChipGroup, visualStateGroupList);
+        VisualStateManager.SetVisualStateGroups(chipGroup, visualStateGroupList);
 
     }
 
@@ -1363,12 +1353,11 @@ using Syncfusion.Maui.Core;
     StackLayout stack = new StackLayout();
     SfChipGroup chipGroup = new SfChipGroup();
     stack.Children.Add(chipGroup);
-    chipGroup.ChipLayout = layout;
     this.BindingContext = new ViewModel();
     chipGroup.SetBinding(SfChipGroup.ItemsSourceProperty, "Employees");
     chipGroup.DisplayMemberPath = "Name";
     chipGroup.ChipStroke = Colors.Black;
-    chipGroup.ChipBackground = Colors.#512dcd;
+    chipGroup.ChipBackground = Colors.Violet;
     this.Content = stack;
         
 {% endhighlight %}
@@ -1415,7 +1404,6 @@ using Syncfusion.Maui.Core;
     StackLayout stack = new StackLayout();
     SfChipGroup chipGroup = new SfChipGroup();
     stack.Children.Add(chipGroup);
-    chipGroup.ChipLayout = layout;
     this.BindingContext = new ViewModel();
     chipGroup.SetBinding(SfChipGroup.ItemsSourceProperty, "Employees");
     chipGroup.DisplayMemberPath = "Name";
@@ -1466,7 +1454,6 @@ using Syncfusion.Maui.Core;
     StackLayout stack = new StackLayout();
     SfChipGroup chipGroup = new SfChipGroup();
     stack.Children.Add(chipGroup);
-    chipGroup.ChipLayout = layout;
     this.BindingContext = new ViewModel();
     chipGroup.SetBinding(SfChipGroup.ItemsSourceProperty, "Employees");
     chipGroup.ChipPadding = new Thickness(8, 0, 0, 0);
@@ -1518,11 +1505,10 @@ using Syncfusion.Maui.Core;
     StackLayout stack = new StackLayout();
     SfChipGroup chipGroup = new SfChipGroup();
     stack.Children.Add(chipGroup);
-    chipGroup.ChipLayout = layout;
     this.BindingContext = new ViewModel();
     chipGroup.SetBinding(SfChipGroup.ItemsSourceProperty, "Employees");
     chipGroup.ChipStrokeThickness = 5;
-    chipGroup.ChipStroke = Color.Black;
+    chipGroup.ChipStroke = Colors.Black;
     chipGroup.DisplayMemberPath = "Name";
     this.Content = stack;
         
@@ -1571,7 +1557,6 @@ using Syncfusion.Maui.Core;
     StackLayout stack = new StackLayout();
     SfChipGroup chipGroup = new SfChipGroup();
     stack.Children.Add(chipGroup);
-    chipGroup.ChipLayout = layout;
     this.BindingContext = new ViewModel();
     chipGroup.SetBinding(SfChipGroup.ItemsSourceProperty, "Employees");
     chipGroup.ItemHeight = 60;
@@ -1602,7 +1587,6 @@ You can enable the icon image using the [`ShowIcon`] property to know whether an
         <local:ViewModel x:Name="viewModel"/>
     </ContentPage.BindingContext>
     <ContentPage.Content>
-        <Grid>
             <chip:SfChipGroup 
                 ItemsSource="{Binding Employees}" 
                 ChipPadding="8,8,0,0" 
@@ -1611,7 +1595,6 @@ You can enable the icon image using the [`ShowIcon`] property to know whether an
                 ShowIcon="true"
                 DisplayMemberPath="Name">
              </chip:SfChipGroup>  
-        </Grid>
     </ContentPage.Content>
     
 </ContentPage>
@@ -1627,10 +1610,10 @@ public partial class MainPage : ContentPage
     public MainPage()
     {
         InitializeComponent();
+
         StackLayout stack = new StackLayout();
         SfChipGroup chipGroup = new SfChipGroup();
         stack.Children.Add(chipGroup);
-        chipGroup.ChipLayout = layout;
         this.BindingContext = new ViewModel();
         chipGroup.SetBinding(SfChipGroup.ItemsSourceProperty, "Employees");
         chipGroup.DisplayMemberPath = "Name";
@@ -1663,10 +1646,7 @@ public class ViewModel : INotifyPropertyChanged
     private ObservableCollection<Person> employees;
     public ObservableCollection<Person> Employees
     {
-        get
-        {
-            return employees;
-        }
+        get { return employees; }
         set
         {
             Employees = value;
@@ -1737,7 +1717,6 @@ using Syncfusion.Maui.Core;
     StackLayout stack = new StackLayout();
     SfChipGroup chipGroup = new SfChipGroup();
     stack.Children.Add(chipGroup);
-    chipGroup.ChipLayout = layout;
     this.BindingContext = new ViewModel();
     chipGroup.SetBinding(SfChipGroup.ItemsSourceProperty, "Employees");
     chipGroup.DisplayMemberPath = "Name";
@@ -1755,8 +1734,6 @@ N> The default value of CloseButtonColor is [`Color.FromArgb("#49454E")`].
 ## SelectionIndicatorColor
 
 The [`SelectionIndicatorColor`] property customizes the selection indicator color of the SfChipGroup.
-
-Here, we should enable visual states to set the color to SelectionIndicatorColor property.
 
 {% tabs %}
 
@@ -1790,11 +1767,10 @@ using Syncfusion.Maui.Core;
     StackLayout stack = new StackLayout();
     SfChipGroup chipGroup = new SfChipGroup();
     stack.Children.Add(chipGroup);
-    chipGroup.ChipLayout = layout;
     this.BindingContext = new ViewModel();
     chipGroup.SetBinding(SfChipGroup.ItemsSourceProperty, "Employees");
     chipGroup.DisplayMemberPath = "Name";
-    chipGroup.ChipType = SfChipsType.Filter;
+    chipGroup.SelectionIndicatorColor = Colors.White;
     this.Content = stack;
         
 {% endhighlight %}
@@ -1843,7 +1819,6 @@ using Syncfusion.Maui.Core;
     StackLayout stack = new StackLayout();
     SfChipGroup chipGroup = new SfChipGroup();
     stack.Children.Add(chipGroup);
-    chipGroup.ChipLayout = layout;
     this.BindingContext = new ViewModel();
     chipGroup.SetBinding(SfChipGroup.ItemsSourceProperty, "Employees");
     chipGroup.DisplayMemberPath = "Name";
