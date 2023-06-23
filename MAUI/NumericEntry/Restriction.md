@@ -9,11 +9,11 @@ documentation: ug
 
 # Value change restriction in .NET MAUI NumericEntry
 
-This section describes how to restrict the change in the value of the `NumericEntry` control using `AllowNull`, `Minimum`, and `Maximum` properties.
+This section describes how to restrict the change in the value of the [NumericEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html) control using [AllowNull](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_AllowNull), [Minimum](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_Minimum), and [Maximum](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_Maximum) properties.
 
 ## Restrict null value
 
-By default, an empty or null value is set in the `NumericEntry` control when the input is cleared, as the default value of the `AllowNull` property is **true**. When the `AllowNull` property value is **false**, the `NumericEntry` control returns the value to **0** in the editor after clearing the input.
+By default, an empty or null value is set in the `NumericEntry` control when the input is cleared, as the default value of the `AllowNull` property is **true**. When the [AllowNull](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_AllowNull) property value is **false**, the `NumericEntry` control returns the value to **0** in the editor after clearing the input.
 
 N> When the value of the `Minimum` property is **15**, and the `AllowNull` property is **true**, the **null** value is returned in the `NumericEntry` control after clearing the input.
 
@@ -23,9 +23,9 @@ N> When the value of the Minimum property is **15**, and the `AllowNull` propert
 {% highlight xaml %}
 
 <editors:SfNumericEntry HorizontalOptions="Center"
-                     VerticalOptions="Center" 
-                     Value="10" 
-                     AllowNull="False" />
+                        VerticalOptions="Center" 
+                        Value="10" 
+                        AllowNull="False" />
 
 {% endhighlight %}
 {% highlight C# %}
@@ -43,16 +43,16 @@ sfNumericEntry.AllowNull = false;
 
 ## Restrict value within range
 
-You can restrict the users to enter input within a minimum and maximum range in the `NumericEntry` control using the Minimum and Maximum properties. The default value of the `Minimum` property is the **double.MinValue** and `Maximum` property is **double.MaxValue**.
+You can restrict the users to enter input within a minimum and maximum range in the `NumericEntry` control using the Minimum and Maximum properties. The default value of the [Minimum](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_Minimum) property is the **double.MinValue** and [Maximum](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_Maximum) property is **double.MaxValue**.
 
 {% tabs %}
 {% highlight xaml %}
 
 <editors:SfNumericEntry HorizontalOptions="Center"
-                     VerticalOptions="Center"
-                     Value="50"
-                     Minimum="10"
-                     Maximum="30" />
+                        VerticalOptions="Center"
+                        Value="50"
+                        Minimum="10"
+                        Maximum="30" />
 
 {% endhighlight %}
 {% highlight C# %}
@@ -71,7 +71,7 @@ sfNumericEntry.Value = 50;
 
 ## Restrict text editing
 
-You can prevent users from editing the numerical value in the editor using the `IsEditable` property. However, you can still change the value using the up-down buttons, mouse scroll, keyboard arrows, and page keys. By default, the value of the `IsEditable` property is **true**.
+You can prevent users from editing the numerical value in the editor using the [IsEditable](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_IsEditable) property. However, you can still change the value using the up-down buttons, mouse scroll, keyboard arrows, and page keys. By default, the value of the `IsEditable` property is **true**.
 
 
 
@@ -79,9 +79,9 @@ You can prevent users from editing the numerical value in the editor using the `
 {% highlight xaml %}
 
 <editors:SfNumericEntry x:Name="sfNumericEntry" 
-                     HorizontalOptions="Center"
-                     VerticalOptions="Center"
-                     IsEditable="True" />
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        IsEditable="True" />
 
 {% endhighlight %}
 {% highlight C# %}
