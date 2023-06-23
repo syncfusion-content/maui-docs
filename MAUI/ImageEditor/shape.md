@@ -118,7 +118,7 @@ You can annotate an shape on image loading using the [`Imageloaded`](https://hel
 
 {% highlight xaml tabtitle="XAML" %}
 
-    <imageEditor:SfImageEditor Source="image.png" ImageLoaded = "OnImageLoaded" />
+    <imageEditor:SfImageEditor x:Name="imageEditor" Source="image.png" ImageLoaded = "OnImageLoaded" />
 
 {% endhighlight %}
 
@@ -126,7 +126,7 @@ You can annotate an shape on image loading using the [`Imageloaded`](https://hel
 
     private void OnImageLoaded(object sender, EventArgs e)
     {
-        imageEditor.AddShape(AnnotationShape.Circle);
+        this.imageEditor.AddShape(AnnotationShape.Circle);
     }
 
 {% endhighlight %}

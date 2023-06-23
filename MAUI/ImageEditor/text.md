@@ -113,7 +113,7 @@ This [`ImageLoaded`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEd
 
 {% highlight xaml tabtitle="XAML" %}
 
-    <imageEditor:SfImageEditor Source="image.png" ImageLoaded = "OnImageLoaded" />
+    <imageEditor:SfImageEditor x:Name="imageEditor" Source="image.png" ImageLoaded = "OnImageLoaded" />
 
 {% endhighlight %}
 
@@ -121,7 +121,7 @@ This [`ImageLoaded`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEd
 
     private void OnImageLoaded(object sender, EventArgs e)
     {
-        imageEditor.AddText("Good morning");
+        this.imageEditor.AddText("Good morning");
     }
 
 {% endhighlight %}

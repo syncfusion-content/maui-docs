@@ -132,7 +132,7 @@ This [`ImageSaving`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEd
 
 {% highlight c# tabtitle="C#" %}
 
-    private void SfImageEditor_ImageSaving(object sender, ImageSavingEventArgs args)
+    private void OnImageSaving(object sender, ImageSavingEventArgs args)
     {
         args.FileName = "SavedImage";
     }
@@ -147,7 +147,7 @@ This [`ImageSaving`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEd
 
 {% highlight c# tabtitle="C#" %}
 
-    private void SfImageEditor_ImageSaving(object sender, ImageSavingEventArgs args)
+    private void OnImageSaving(object sender, ImageSavingEventArgs args)
     {
         args.FileType = ImageFileType.Png;
     }
