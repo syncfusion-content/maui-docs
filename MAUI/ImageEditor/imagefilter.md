@@ -31,7 +31,7 @@ The ImageEffect method only applies the effect to the preview image. If you want
 Brightness is used to adjust the overall lightness or darkness of the image. The value of the brightness effect ranges from -1 to 1, and the default value is 0.
 
 {% tabs %}
-{% highlight C# %}
+{% highlight C# tabtitle="C#" %}
 
 public MainPage()
 {               
@@ -48,7 +48,7 @@ public MainPage()
 Blur creates a soft and unfocused appearance by reducing the image's sharpness. The value of the blur effect ranges from 0 to 1, and the default value is 0.
 
 {% tabs %}
-{% highlight C# %}
+{% highlight C# tabtitle="C#" %}
 
 public MainPage()
 {               
@@ -65,7 +65,7 @@ public MainPage()
 Contrast increases or decreases the difference between light and dark areas, making the image more visually distinct. The value of the contrast effect ranges from -1 to 1, and the default value is 0.
 
 {% tabs %}
-{% highlight C# %}
+{% highlight C# tabtitle="C#" %}
 
 public MainPage()
 {               
@@ -82,7 +82,7 @@ public MainPage()
 Exposure is used to alter the overall brightness and darkness levels of the image. The value of the exposure effect ranges from -1 to 1, and the default value is 0.
 
 {% tabs %}
-{% highlight C# %}
+{% highlight C# tabtitle="C#" %}
 
 public MainPage()
 {               
@@ -99,7 +99,7 @@ public MainPage()
 Hue is used to change the overall color tone of the image by shifting the color spectrum. The value of the hue effect ranges from -1 to 1, and the default value is 0.
 
 {% tabs %}
-{% highlight C# %}
+{% highlight C# tabtitle="C#" %}
 
 public MainPage()
 {               
@@ -116,7 +116,7 @@ public MainPage()
 Saturation enhances or reduces the intensity and vividness of colors in the image. The value of the saturation effect ranges from -1 to 1, and the default value is 0.
 
 {% tabs %}
-{% highlight C# %}
+{% highlight C# tabtitle="C#" %}
 
 public MainPage()
 {               
@@ -133,7 +133,7 @@ public MainPage()
 Sharpen enhances the clarity and definition of edges and details in the image. The value of the sharpen effect ranges from 0 to 6, and the default value is 0.
 
 {% tabs %}
-{% highlight C# %}
+{% highlight C# tabtitle="C#" %}
 
 public MainPage()
 {               
@@ -150,7 +150,7 @@ public MainPage()
 Opacity is used to control the transparency or visibility of the image. The value of the opacity effect ranges from 0 to 1, and the default value is 1.
 
 {% tabs %}
-{% highlight C# %}
+{% highlight C# tabtitle="C#" %}
 
 public MainPage()
 {               
@@ -167,7 +167,7 @@ public MainPage()
 Call the SaveEdits method to save the applied effects in view; otherwise, the effects will be reset on the next action.
 
 {% tabs %}
-{% highlight C# %}
+{% highlight C# tabtitle="C#" %}
 
 public MainPage()
 {               
@@ -182,7 +182,7 @@ public MainPage()
 The applied effects can be canceled using the `CancelEdits` method or by calling the ImageEffect method with ImageEffect.None.
 
 {% tabs %}
-{% highlight c# %}
+{% highlight C# tabtitle="C#" %}
 
 public MainPage()
 {               
@@ -193,7 +193,7 @@ public MainPage()
 
 {% endhighlight %}
 
-{% highlight c# %}
+{% highlight C# tabtitle="C#" %}
 
 public MainPage()
 {               

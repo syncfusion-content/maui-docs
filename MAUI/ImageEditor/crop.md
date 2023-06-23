@@ -29,7 +29,7 @@ The `Crop` method in the image editor control crops the image based on the `Imag
  The following code shows cropping the image to any desired size.
 
 {% tabs %}
-{% highlight c# %}
+{% highlight C# tabtitle="C#" %}
 
 imageEditor.Crop(ImageCropType.Free);
 
@@ -39,7 +39,7 @@ imageEditor.Crop(ImageCropType.Free);
 After the cropping area has been selected, the `SaveEdits` method is called, which in turn crops the selected region and displays the cropped image on the image editor.
 
 {% tabs %}
-{% highlight c# %}
+{% highlight C# tabtitle="C#" %}
 
 imageEditor.SaveEdits();
 
@@ -49,7 +49,7 @@ imageEditor.SaveEdits();
 After selecting the cropping area, if you decide to cancel the edits and revert back to the original image, you can use the `CancelEdits` method. It discards the changes made during the cropping process and restores the image to its initial state.
 
 {% tabs %}
-{% highlight c# %}
+{% highlight C# tabtitle="C#" %}
 
 imageEditor.CancelEdits();
 
@@ -61,7 +61,7 @@ imageEditor.CancelEdits();
 The selected region can be customized by dragging and resizing an image.
 
 {% tabs %}
-{% highlight c# %}
+{% highlight C# tabtitle="C#" %}
 
 imageEditor.Crop(ImageCropType.Free);
 
@@ -73,7 +73,7 @@ imageEditor.Crop(ImageCropType.Free);
 With the original crop, the image is cropped to its original dimensions. This means that no aspect ratio and the cropped image retains its original width and height.
 
 {% tabs %}
-{% highlight c# %}
+{% highlight C# tabtitle="C#" %}
 
 imageEditor.Crop(ImageCropType.Original);
 
@@ -97,7 +97,7 @@ imageEditor.Crop(ImageCropType.Square);
 The ratio crop enables you to crop the image with a specific aspect ratio. You can specify the desired ratio using the width and height values. The default ratio is 4:3 when using the `ImageCropType.Ratio`, but you can change it by using the Crop method with the ratio parameter.
 
 {% tabs %}
-{% highlight c# %}
+{% highlight C# tabtitle="C#" %}
 
 imageEditor.Crop(16,9);
 
@@ -111,7 +111,7 @@ You can crop an image in a circular format using the `ImageCropType.Circle` crop
 The following code shows cropping an image in circle format.
 
 {% tabs %}
-{% highlight c# %}
+{% highlight C# tabtitle="C#" %}
 
 imageEditor.Crop(ImageCropType.Circle);
 
@@ -125,7 +125,7 @@ To crop an image in an elliptical format you can use the `ImageCropType.Ellipse`
  The following code shows cropping an image in elliptical format.
 
 {% tabs %}
-{% highlight c# %}
+{% highlight C# tabtitle="C#" %}
 
 imageEditor.Crop(ImageCropType.Ellipse);
 
@@ -137,7 +137,7 @@ imageEditor.Crop(ImageCropType.Ellipse);
 To manually enter the cropping area, use the `Crop(Rect rect)` method. It can be done by simply defining a rectangle and passing it to the `Crop` method. If the `isEllipse` parameter is set to true, it will perform an elliptical crop. The default value of the `isEllipse` parameter is `false`.
 
 {% tabs %}
-{% highlight c# %}
+{% highlight C# tabtitle="C#" %}
 
 imageEditor.Crop(new Rect(50,50,150,200));
 imageEditor.SaveEdits();
@@ -148,7 +148,7 @@ imageEditor.SaveEdits();
 * To crop an image in an ellipse with a specific rectangle, use `Crop` with a rectangle value and an optional parameter of true, which specifies whether the cropping panel should be added in an elliptical or rectangle shape.
 
 {% tabs %}
-{% highlight c# %}
+{% highlight C# tabtitle="C#" %}
 
 imageEditor.Crop(new Rect(20,20,50,50), true);
 imageEditor.SaveEdits();   
@@ -163,7 +163,7 @@ Programmatically, you can select the desired cropping ratio from the various asp
 The following code sample will add the cropping preview on the image in a square shape.
 
 {% tabs %}
-{% highlight c# %}
+{% highlight C# tabtitle="C#" %}
 
  imageEditor.Crop(1, 1);
 

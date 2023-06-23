@@ -18,7 +18,7 @@ The `Rotate` method is used to rotate images with annotations. Each rotation wil
 N> Angle cannot be specified in the code to alter the rotation angle of the image.
 
 {% tabs %}
-{% highlight c# %}
+{% highlight C# tabtitle="C#" %}
 
               imageEditor.Rotate();
 
@@ -34,7 +34,7 @@ The image editor control is capable of showing the mirror image. The `Flip` meth
 In the following example, the `Flip` method is used to vertically flip the image.
 
 {% tabs %}
-{% highlight c# %}
+{% highlight C# tabtitle="C#" %}
 
               imageEditor.Flip(ImageFlipDirection.Vertical);
 
