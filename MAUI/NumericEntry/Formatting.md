@@ -13,7 +13,7 @@ This section explains how to change the value format of the `NumericEntry` contr
 
 ## Currency, percentage and decimal format
 
-You can format the value of a `NumericEntry` control using the `CustomFormat` property. By default, the value is formatted based on the current culture's decimal format. The default value of the `CustomFormat` properties is **null**.
+The value of the `NumericEntry` control can be formatted using the `CustomFormat` property. By default, the value is formatted based on the current culture's decimal format. The default value of the `CustomFormat` properties is **null**.
 
 The following example shows how to set the `CurrencyFormatter`, `DecimalFormatter`, and `PercentFormatter` for the `NumberFormatter` property. 
 

@@ -582,7 +582,7 @@ dataGrid.Columns.Add(dateColumn);
 
 ## DataGridComboBoxColumn
 
-The [GridComboBoxColumn]() inherits all the properties of the [SfDataGrid.DataGridColumn](). It displays a list of items in the form of a `SfComboBox` as the content of a column. To enable or disable editing for a particular column, set the [DataGridColumn.AllowEditing]() property to true or false. When in editing mode, it displays a [SfComboBox]() element. The data source for the SfComboBox can be set using the [DataGridComboBoxColumn.ItemsSource]() property. The combobox column can be populated with data in the following ways:
+The [DataGridComboBoxColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridComboBoxColumn.html) inherits all the properties of the [SfDataGrid.DataGridColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html). It displays a list of items in the form of a `SfComboBox` as the content of a column. To enable or disable editing for a particular column, set the [DataGridColumn.AllowEditing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_AllowEditing) property to true or false. When in editing mode, it displays a [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) element. The data source for the SfComboBox can be set using the [DataGridComboBoxColumn.ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridComboBoxColumn.html#Syncfusion_Maui_DataGrid_DataGridComboBoxColumn_ItemsSource) property. The combobox column can be populated with data in the following ways:
 
 * Collection of primitive types
 * Collection of user-defined types (custom objects)
@@ -591,7 +591,7 @@ The [GridComboBoxColumn]() inherits all the properties of the [SfDataGrid.DataGr
 
 ### Collection of primitive types
 
-To display the collection of items in the ComboBox drop-down, create a [DataGridComboBoxColumn]() and set its [ItemsSource]() property to a simple collection.
+To display the collection of items in the ComboBox drop-down, create a `DataGridComboBoxColumn` and set its `ItemsSource` property to a simple collection.
 
 To load the `DataGridComboBoxColumn` with a simple string collection, you can refer to the code example below:
 
@@ -626,6 +626,7 @@ dataGrid.Columns.Add(comboBoxColumn);
 {% endhighlight %}
 {% endtabs %}
 
+{% tabs %}
 {% highlight c# %}
 // ViewModel class
 public class ViewModel
@@ -641,18 +642,19 @@ public class ViewModel
     
 }
 {% endhighlight %}
+{% endtabs %}
 
 ### Collection of user-defined types
 
-To display a list of user-defined items in the drop-down of a combo box, create a [DataGridComboBoxColumn]() and set its [ItemsSource]() property to a user-defined collection. By default, if the [DisplayMemberPath]() is not set, the combo box column will display the values from the MappingName property of the column.
+To display a list of user-defined items in the drop-down of a combo box, create a `DataGridComboBoxColumn` and set its `ItemsSource` property to a user-defined collection. By default, if the [DisplayMemberPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridComboBoxColumn.html#Syncfusion_Maui_DataGrid_DataGridComboBoxColumn_DisplayMemberPath) is not set, the combo box column will display the values from the MappingName property of the column.
 
 ### Loading Different ItemSource for each row of DataGridComboBoxColumn
 
-To load different ItemSources for each row of a DataGridComboBoxColumn, you can utilize the [DataGridComboBoxColumn.ItemsSourceSelector]() property.
+To load different ItemSources for each row of a DataGridComboBoxColumn, you can utilize the [DataGridComboBoxColumn.ItemsSourceSelector](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridComboBoxColumn.html#Syncfusion_Maui_DataGrid_DataGridComboBoxColumn_ItemsSourceSelector) property.
 
 ### Implementing IItemsSourceSelector
 
-[DataGridComboBoxColumn.ItemsSourceSelector]() needs to implement the IItemsSourceSelector interface, which requires you to implement the GetItemsSource method. This method receives the following parameters:
+`DataGridComboBoxColumn.ItemsSourceSelector` needs to implement the IItemsSourceSelector interface, which requires you to implement the GetItemsSource method. This method receives the following parameters:
 
 * Record: This is the data object associated with the row.
 * Data Context: This is the binding context of the data grid.
@@ -722,9 +724,9 @@ public class ItemSourceSelector : IItemsSourceSelector
 
 ### Editing the combo box
 
-The [DataGridComboBoxColumn]() supports both editable and non-editable text boxes for selecting items from a given data source. Users can choose one item from the suggestion list
+The `DataGridComboBoxColumn` supports both editable and non-editable text boxes for selecting items from a given data source. Users can choose one item from the suggestion list.
 
-The [IsEditableMode]() property is used to enable the user input in [DataGridComboBoxColumn](). Its default value is `false`.
+The [IsEditableMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridComboBoxColumn.html#Syncfusion_Maui_DataGrid_DataGridComboBoxColumn_IsEditableMode) property is used to enable the user input in `DataGridComboBoxColumn`. Its default value is `false`.
 
 {% tabs %}
 {% highlight xaml %}
@@ -762,7 +764,7 @@ dataGrid.Columns.Add(comboBoxColumn);
 
 ### Auto suggesting on edit mode
 
-By default, the auto-suggestion in the dropdown will display values based on the [StartsWith]() filter condition. However, you can change this behavior by utilizing the [SuggestionMode]() property to retrieve matches using the Contains condition
+By default, the auto-suggestion in the dropdown will display values based on the [StartsWith](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ComboBoxTextSearchMode.html#Syncfusion_Maui_Inputs_ComboBoxTextSearchMode_StartsWith) filter condition. However, you can change this behavior by utilizing the [SuggestionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridComboBoxColumn.html#Syncfusion_Maui_DataGrid_DataGridComboBoxColumn_SuggestionMode) property to retrieve matches using the Contains condition.
 
 {% tabs %}
 {% highlight xaml %}
@@ -800,6 +802,46 @@ dataGrid.Columns.Add(comboBoxColumn);
 {% endtabs %}
 
 ![DataGrid with Suggesting comboBox column](Images\column-types\maui-datagrid-combobox-column-editing.png)
+
+### Change clear button visibility
+
+The ComboBox control includes a clear button that allows users to easily remove the entered input. The visibility of the clear button can be adjusted using the [ShowClearButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridComboBoxColumn.html#Syncfusion_Maui_DataGrid_DataGridComboBoxColumn_ShowClearButton) property. By default, the `ShowClearButton` property is set to true.
+
+{% tabs %}
+{% highlight xaml %}
+    <ContentPage.BindingContext>
+        <local:ViewModel x:Name="viewModel" />
+    </ContentPage.BindingContext>
+
+    <sfGrid:SfDataGrid x:Name="dataGrid"
+                       ItemsSource="{Binding OrdersInfo}">
+        <sfGrid:SfDataGrid.Columns>
+            <sfgrid:DataGridComboBoxColumn BindingContext="{x:Reference viewModel}"
+                                           HeaderText="Name"
+                                           IsEditableMode="True"
+                                           ShowClearButton="False"
+                                           ItemsSource="{Binding CustomerNames}"
+                                           MappingName="DealerName" />
+        </sfGrid:SfDataGrid.Columns>
+    </sfGrid:SfDataGrid>
+{% endhighlight %}
+{% highlight c# %}
+dataGrid = new SfDataGrid();
+DataGridComboBoxColumn comboBoxColumn = new DataGridComboBoxColumn()
+{
+    BindingContext = viewModel,
+    MappingName = "DealerName",
+    IsEditableMode= true,
+    ItemsSource = viewModel.CustomerNames,
+    HeaderText = "Name",
+    ShowClearButton= false,
+
+};
+dataGrid.Columns.Add(comboBoxColumn);
+{% endhighlight %}
+{% endtabs %}
+
+N> The `ShowClearButton` property has no effect in non-editable mode..
 
 ## DataGridNumericColumn
 

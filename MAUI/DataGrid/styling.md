@@ -174,7 +174,7 @@ The header row can be customized by the writing style for [DataGridHeaderRow](ht
 ![Header row styling in .NET MAUI DataGrid](Images/styling/maui-datagrid-headerrow-style.png)
 
 ### Styling Table Summary cell
-The table summary cell can be customized by the writing style for [DataGridTableSummaryCell]() TargetType.
+The table summary cell can be customized by the writing style for [DataGridTableSummaryCell](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridTableSummaryCell.html) TargetType.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml"%}
@@ -195,7 +195,7 @@ The table summary cell can be customized by the writing style for [DataGridTable
 ![Table summary cell styling in .NET MAUI DataGrid](Images/styling/maui-datagrid-table-summary-cell-style.png)
 
 ### Styling Table Summary row
-The table summary row can be customized by the writing style for [DataGridTableSummaryRowView]() TargetType.
+The table summary row can be customized by the writing style for [DataGridTableSummaryRowView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridTableSummaryRowView.html) TargetType.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml"%}
@@ -212,7 +212,7 @@ The table summary row can be customized by the writing style for [DataGridTableS
 ![Table summary row styling in .NET MAUI DataGrid](Images/styling/maui-datagrid-table-summary-row-style.png)
 
 ### Styling Caption Summary cell
-The caption summary cell can be customized by the writing style for [DataGridCaptionSummaryCell]() TargetType.
+The caption summary cell can be customized by the writing style for [DataGridCaptionSummaryCell](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCaptionSummaryCell.html) TargetType.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml"%}
@@ -233,7 +233,7 @@ The caption summary cell can be customized by the writing style for [DataGridCap
 ![Caption summary cell styling in .NET MAUI DataGrid](Images/styling/maui-datagrid-caption-summary-cell-style.png)
 
 ### Styling Caption Summary row
-The caption summary row can be customized by the writing style for [DataGridCaptionSummaryRowView]() TargetType.
+The caption summary row can be customized by the writing style for [DataGridCaptionSummaryRowView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCaptionSummaryRowView.html) TargetType.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml"%}
@@ -250,7 +250,7 @@ The caption summary row can be customized by the writing style for [DataGridCapt
 ![Caption summary row styling in .NET MAUI DataGrid](Images/styling/maui-datagrid-caption-summary-row-style.png)
 
 ### Styling Group Summary cell
-The group summary cell can be customized by the writing style for [DataGridGroupSummaryCell]() TargetType.
+The group summary cell can be customized by the writing style for [DataGridGroupSummaryCell](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridGroupSummaryCell.html) TargetType.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml"%}
@@ -271,7 +271,7 @@ The group summary cell can be customized by the writing style for [DataGridGroup
 ![Group summary cell styling in .NET MAUI DataGrid](Images/styling/maui-datagrid-group-summary-cell-style.png)
 
 ### Styling Group Summary row
-The group summary row can be customized by the writing style for [DataGridGroupSummaryRowView]() TargetType.
+The group summary row can be customized by the writing style for [DataGridGroupSummaryRowView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridGroupSummaryRowView.html) TargetType.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml"%}
