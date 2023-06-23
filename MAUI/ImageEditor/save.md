@@ -11,7 +11,7 @@ documentation: ug
 
 The Image Editor control in .NET MAUI allows you to save the edited image as PNG and JPEG.
 
-To save the modified image, you can use the `Save` method, which accepts parameters such as file name, file type, file path, and image size. The supported file types for saving are PNG and JPEG. You can also save the image by clicking the save button on the toolbar.
+To save the modified image, you can use the [`Save`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_Save_System_Nullable_Syncfusion_Maui_ImageEditor_ImageFileType__System_String_System_String_System_Nullable_Microsoft_Maui_Graphics_Size__) method, which accepts parameters such as file name, file type, file path, and image size. The supported file types for saving are PNG and JPEG. You can also save the image by clicking the save button on the toolbar.
 
 {% tabs %}
 
@@ -79,15 +79,15 @@ N> For android should include permission in AndroidManifest.xml file. Please ref
 
 ## Save events
 
-The Image Editor has events when performing the save operation, such as `ImageSaving` and `ImageSaved`.
+The Image Editor has events when performing the save operation, such as [`ImageSaving`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_ImageSaving) and [`ImageSaved`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_ImageSaved).
 
 ## ImageSaving
 
-This `ImageSaving` event occurs before saving the image.
+This [`ImageSaving`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_ImageSaving) event occurs before saving the image.
 
-`Cancel`: You can control the save functionality by setting the `Cancel` argument to `true`. 
+[`Cancel`](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.canceleventargs.cancel?view=net-6.0): You can control the save functionality by setting the [`Cancel`](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.canceleventargs.cancel?view=net-6.0) argument to `true`. 
 
-`Cancel`: It restricts the saving of the image to the default location.
+[`Cancel`](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.canceleventargs.cancel?view=net-6.0): It restricts the saving of the image to the default location.
 
 {% tabs %}
 
@@ -111,7 +111,7 @@ This `ImageSaving` event occurs before saving the image.
 
 {% endtabs %}
 
-`ImageStream` : You can access the current image edits as a stream using the `ImageStream` argument.
+[`ImageStream`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageSavingEventArgs.html#Syncfusion_Maui_ImageEditor_ImageSavingEventArgs_ImageStream) : You can access the current image edits as a stream using the [`ImageStream`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageSavingEventArgs.html#Syncfusion_Maui_ImageEditor_ImageSavingEventArgs_ImageStream) argument.
 
 {% tabs %}
 
@@ -126,7 +126,7 @@ This `ImageSaving` event occurs before saving the image.
 
 {% endtabs %}
 
-`FileName`: You can save the edited image in the specified name. 
+[`FileName`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageSavingEventArgs.html#Syncfusion_Maui_ImageEditor_ImageSavingEventArgs_FileName): You can save the edited image in the specified name. 
 
 {% tabs %}
 
@@ -141,7 +141,7 @@ This `ImageSaving` event occurs before saving the image.
 
 {% endtabs %}
 
-`FileType`: You can change the file type of the saved image to `ImageFileType.Png` or `ImageFileType.Jpeg`.
+[`FileType`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageSavingEventArgs.html#Syncfusion_Maui_ImageEditor_ImageSavingEventArgs_FileType): You can change the file type of the saved image to [`ImageFileType.Png`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageFileType.html#Syncfusion_Maui_ImageEditor_ImageFileType_Png) or [`ImageFileType.Jpeg`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageFileType.html#Syncfusion_Maui_ImageEditor_ImageFileType_Jpeg).
 
 {% tabs %}
 
@@ -158,7 +158,7 @@ This `ImageSaving` event occurs before saving the image.
 
 ## ImageSaved
 
-The `ImageSaved` event occurs after the image has been saved. To get the location of the saved image, use the `Location` argument as shown in the following code.
+The [`ImageSaved`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_ImageSaved) event occurs after the image has been saved. To get the location of the saved image, use the [`Location`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageSavedEventArgs.html#Syncfusion_Maui_ImageEditor_ImageSavedEventArgs_Location) argument as shown in the following code.
 
 {% tabs %}
 

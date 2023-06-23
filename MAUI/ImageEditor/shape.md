@@ -13,7 +13,7 @@ The image editor control allows you to add various shapes with customizable sett
 
 ## Add shape annotation
 
-You can annotate any shapes over an image using the `AddShape` method.
+You can annotate any shapes over an image using the [`AddShape`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_AddShape_Syncfusion_Maui_ImageEditor_AnnotationShape_Syncfusion_Maui_ImageEditor_ImageEditorShapeSettings_) method.
 
 {% tabs %}
 {% highlight C# tabtitle="C#" %}
@@ -25,7 +25,7 @@ You can annotate any shapes over an image using the `AddShape` method.
 
 ## Shape types
 
-The `AnnotationShape` enum contains the below shape types.
+The [`AnnotationShape`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.AnnotationShape.html) enum contains the below shape types.
 
 * Circle
 * Rectangle
@@ -38,21 +38,15 @@ The `AnnotationShape` enum contains the below shape types.
 
 ## Customize shape settings
 
-You can customize the appearance of each shape using the `ShapeSettings`
+You can customize the appearance of each shape using the [`ImageEditorShapeSettings`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorShapeSettings.html).
 
-* `AllowDrag`: Enables or disables the dragging for shape annotation.
-* `AllowResize`: Enables or disables the resizing for shape annotation.
-* `Bounds`: Specifies the bounds of the shapes. You can position the shapes wherever you want on the image. The value of the shape bounds should fall between 0 and 1.
-* `Color` - Specifies the color of the shape annotation.
-* `IsFilled` - Enables or disables the fill color of the shapes. This is applicable only for `AnnotationShape.Rectangle` and `AnnotationShape.Circle` shape types.
-* `StrokeThickness` - Specifies the stroke width of the shapes. It is not applicable for and in the filled state.
-* `Opacity`: Specifies the opacity of shape annotation. This value ranges from 0 to 1.
-
-In the `AddShape` method, you can insert shapes by specifying the fill color, stroke color, and stroke thickness. The [`AddShape`] method has the following parameters.
-
-*  `StrokeThickness` - Specifies the stroke width of the shapes.
-*  `Color` - Specifies the stroke color of the shapes.    
-*  `IsFilled` - Enables or disbles the fill color of the shapes.
+* [`AllowDrag`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorAnnotationSettings.html#Syncfusion_Maui_ImageEditor_ImageEditorAnnotationSettings_AllowDrag): Enables or disables the dragging for shape annotation.
+* [`AllowResize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorAnnotationSettings.html#Syncfusion_Maui_ImageEditor_ImageEditorAnnotationSettings_AllowResize): Enables or disables the resizing for shape annotation.
+* [`Bounds`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorAnnotationSettings.html#Syncfusion_Maui_ImageEditor_ImageEditorAnnotationSettings_Bounds): Specifies the bounds of the shapes. You can position the shapes wherever you want on the image. The value of the shape bounds should fall between 0 and 1.
+* [`Color`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorShapeSettings.html#Syncfusion_Maui_ImageEditor_ImageEditorShapeSettings_Color) - Specifies the color of the shape annotation.
+* [`IsFilled`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorShapeSettings.html#Syncfusion_Maui_ImageEditor_ImageEditorShapeSettings_IsFilled) - Enables or disables the fill color of the shapes. This is applicable only for [`AnnotationShape.Rectangle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.AnnotationShape.html#Syncfusion_Maui_ImageEditor_AnnotationShape_Rectangle) and [`AnnotationShape.Circle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.AnnotationShape.html#Syncfusion_Maui_ImageEditor_AnnotationShape_Circle) shape types.
+* [`StrokeThickness`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorShapeSettings.html#Syncfusion_Maui_ImageEditor_ImageEditorShapeSettings_StrokeThickness) - Specifies the stroke width of the shapes. It is not applicable for and in the filled state.
+* [`Opacity`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorAnnotationSettings.html#Syncfusion_Maui_ImageEditor_ImageEditorAnnotationSettings_Opacity): Specifies the opacity of shape annotation. This value ranges from 0 to 1.
 
 {% tabs %}
 {% highlight C# tabtitle="C#" %}
@@ -64,7 +58,7 @@ In the `AddShape` method, you can insert shapes by specifying the fill color, st
 
 ## Delete the selected shape
 
-You can delete the selected shape using either the toolbar or the `DeleteAnnotation` method.
+You can delete the selected shape using either the toolbar or the [`DeleteAnnotation`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_DeleteAnnotation) method.
 
 {% tabs %}
 {% highlight C# tabtitle="C#" %}
@@ -76,7 +70,7 @@ You can delete the selected shape using either the toolbar or the `DeleteAnnotat
 
 ## Clear all annotations
 
-You can remove all the annotations using the `ClearAnnotations` method.
+You can remove all the annotations using the [`ClearAnnotations`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_ClearAnnotations) method.
 
 N> It will remove text annotations as well.
 
@@ -90,7 +84,7 @@ N> It will remove text annotations as well.
 
 ## AnnotationSelected event
 
-The `AnnotationSelected` event occurs when an annotation is selected.
+The [`AnnotationSelected`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_AnnotationSelected) event occurs when an annotation is selected.
 
 N> The event is common for text and shape annotations.
 
@@ -118,7 +112,7 @@ N> The event is common for text and shape annotations.
 
 ## Add shape on initial loading
 
-You can annotate an shape on image loading using the `Imageloaded` event.
+You can annotate an shape on image loading using the [`Imageloaded`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_ImageLoaded) event.
 
 {% tabs %}
 
@@ -141,7 +135,7 @@ You can annotate an shape on image loading using the `Imageloaded` event.
 
 ## Add shape with manual bounds
 
-Shapes can be added by user-defined view bounds. The bounds are treated as ratio values of image width and height, so you have to specify bounds rectangle values in the range of 0.1
+Shapes can be added by user-defined view bounds. The [`Bounds`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorAnnotationSettings.html#Syncfusion_Maui_ImageEditor_ImageEditorAnnotationSettings_Bounds) are treated as ratio values of image width and height, so you have to specify bounds rectangle values in the range of 0.1
 
 {% tabs %}
 {% highlight C# tabtitle="C#" %}
@@ -153,7 +147,7 @@ Shapes can be added by user-defined view bounds. The bounds are treated as ratio
 
 ## Restrict shape drag and resize
 
-To restrict the drag action on a shape, set the `AllowDrag` property to `false` in the `ImageEditorShapeSettings` object..
+To restrict the drag action on a shape, set the [`AllowDrag`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorAnnotationSettings.html#Syncfusion_Maui_ImageEditor_ImageEditorAnnotationSettings_AllowDrag) property to `false`.
 
 {% tabs %}
 {% highlight C# tabtitle="C#" %}
@@ -163,7 +157,7 @@ To restrict the drag action on a shape, set the `AllowDrag` property to `false` 
 {% endhighlight %}
 {% endtabs %}
 
-To restrict the resize action on a shape, set the `AllowResize` property to `false` in the `ImageEditorShapeSettings` object.
+To restrict the resize action on a shape, set the [`AllowResize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorAnnotationSettings.html#Syncfusion_Maui_ImageEditor_ImageEditorAnnotationSettings_AllowResize) property to `false`.
 
 {% tabs %}
 {% highlight C# tabtitle="C#" %}
@@ -175,7 +169,7 @@ To restrict the resize action on a shape, set the `AllowResize` property to `fal
 
 ## Freehand Draw
 
-The image editor control allows you to create freehand drawings with customizable settings. The `AddShape` method enables the canvas view, in which you can draw objects.
+The image editor control allows you to create freehand drawings with customizable settings. The [`AddShape`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_AddShape_Syncfusion_Maui_ImageEditor_AnnotationShape_Syncfusion_Maui_ImageEditor_ImageEditorShapeSettings_) method enables the canvas view, in which you can draw objects.
 
 {% tabs %}
 {% highlight C# tabtitle="C#" %}
@@ -187,12 +181,12 @@ The image editor control allows you to create freehand drawings with customizabl
 
 ## Customize the draw settings
 
-*  `StrokeThickness` - Specifies the stroke width of the drawing pen.
-*  `Color` - Specifies the stroke color of the drawing pen.
+*  [`StrokeThickness`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorShapeSettings.html#Syncfusion_Maui_ImageEditor_ImageEditorShapeSettings_StrokeThickness) - Specifies the stroke width of the drawing pen.
+*  [`Color`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorShapeSettings.html#Syncfusion_Maui_ImageEditor_ImageEditorShapeSettings_Color) - Specifies the stroke color of the drawing pen.
 
 N> The other shape settings are not applicable for freehand draw.
 
-In the following example, the `AddShape` method is used to toggle the freehand drawings.
+In the following example, the [`AddShape`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_AddShape_Syncfusion_Maui_ImageEditor_AnnotationShape_Syncfusion_Maui_ImageEditor_ImageEditorShapeSettings_) method is used to toggle the freehand drawings.
 
 {% tabs %}
 {% highlight C# tabtitle="C#" %}
