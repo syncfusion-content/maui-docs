@@ -38,6 +38,10 @@ To migrate easier from Xamarin SfChips to [.NET MAUI SfChips](https://help.syncf
 <td> {{'[Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChip.html#Syncfusion_Maui_Core_SfChip_Stroke)'| markdownify }}</td>
 <td>Gets or sets the color of the border.</td></tr>
 <tr>
+<td> {{'[BackgroundImage](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Buttons.SfButton.html#Syncfusion_XForms_Buttons_SfButton_BackgroundImage)'| markdownify }}</td>
+<td> {{'[BackgroundImageSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChip.html#Syncfusion_Maui_Core_SfChip_BackgroundImageSource)'| markdownify }} </td>
+<td>Gets or sets the background image in chip.</td></tr>
+<tr>
 <td> {{'[ImageWidth](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Buttons.SfButton.html#Syncfusion_XForms_Buttons_SfButton_ImageWidth)'| markdownify }}</td>
 <td> {{'[ImageSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChip.html#Syncfusion_Maui_Core_SfChip_ImageSize)'| markdownify }}</td>
 <td>Gets or sets the image size in chip.</td></tr>
