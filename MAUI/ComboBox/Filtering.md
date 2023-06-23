@@ -83,6 +83,8 @@ public class CityViewModel
 
 {% highlight C# %}
 
+SfComboBox comboBox = new SfComboBox();
+comboBox.IsEditable = true;
 comboBox.IsFilteringEnabled = true;
 
 {% endhighlight %}
