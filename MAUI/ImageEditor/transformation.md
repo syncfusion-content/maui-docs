@@ -17,11 +17,13 @@ The [Rotate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfI
 
 N> Angle cannot be specified in the code to alter the rotation angle of the image.
 
-{% highlight C# %}
+{% tabs %}
+{% highlight C# tabtitle="C#" %}
 
               imageEditor.Rotate();
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Flip
 
@@ -31,8 +33,10 @@ The image editor control is capable of showing the mirror image. The [Flip](http
 
 In the following example, the `Flip` method is used to vertically flip the image.
 
-{% highlight C# %}
+{% tabs %}
+{% highlight C# tabtitle="C#" %}
 
               imageEditor.Flip(ImageFlipDirection.Vertical);
 
 {% endhighlight %}
+{% endtabs %}
