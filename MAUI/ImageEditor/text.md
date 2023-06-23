@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Text Annotation in .NET MAUI ImageEditor control | Syncfusion
-description: Learn here all about the text annotation feature of Syncfusion .NET MAUI ImageEditor(SfImageEditor) control.
+description: Learn about the text annotation feature of Syncfusion .NET MAUI ImageEditor(SfImageEditor) control.
 platform: .NET MAUI
 control: SfImageEditor
 documentation: ug
@@ -21,11 +21,11 @@ The ImageEditor control in .NET MAUI allows you to add text using the [`AddText`
 
 ## Customize text appearance
 
-You can customize the appearance of text annotation using [`ImageEditorTextSettings`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorTextSettings.html#).
+Customize the appearance of text annotation using the [`ImageEditorTextSettings`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorTextSettings.html#).
 
 * [`AllowDrag`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorAnnotationSettings.html#Syncfusion_Maui_ImageEditor_ImageEditorAnnotationSettings_AllowDrag): Enables or disables the dragging of text annotation. The default value is `true`.
 * [`AllowResize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorAnnotationSettings.html#Syncfusion_Maui_ImageEditor_ImageEditorAnnotationSettings_AllowResize): Enables or disables the resizing of shape annotation. The default value is `true`.
-* [`Bounds`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorAnnotationSettings.html#Syncfusion_Maui_ImageEditor_ImageEditorAnnotationSettings_Bounds): Specifies the bounds of the text view. You can position the text wherever you want on the image. The value of the text bounds should fall between 0 and 1.
+* [`Bounds`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorAnnotationSettings.html#Syncfusion_Maui_ImageEditor_ImageEditorAnnotationSettings_Bounds): Specifies the bounds of the text view. Position the text wherever you want on the image. The value of the text bounds should fall between 0 and 1.
 * [`Opacity`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorAnnotationSettings.html#Syncfusion_Maui_ImageEditor_ImageEditorAnnotationSettings_Opacity): Specifies the opacity of shape annotation. The value should fall between 0 to 1.
 * [`RotationAngle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorTextSettings.html#Syncfusion_Maui_ImageEditor_ImageEditorTextSettings_RotationAngle): Specifies the initial rotation angle of the text. The value should fall between 0 to 360.
 
@@ -58,7 +58,7 @@ You can customize the appearance of text annotation using [`ImageEditorTextSetti
 
 ## Delete the text
 
-You can delete the selected text using either the toolbar or the [`DeleteAnnotation`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_DeleteAnnotation) method.
+Delete the selected text using either the toolbar or the [`DeleteAnnotation`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_DeleteAnnotation) method.
 
 {% tabs %}
 {% highlight C# tabtitle="C#" %}
@@ -70,7 +70,7 @@ You can delete the selected text using either the toolbar or the [`DeleteAnnotat
 
 ## Clear all texts
 
-You can remove all the text annotations using the [`ClearAnnotations`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_ClearAnnotations) method.
+Remove all the text annotations using the [`ClearAnnotations`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_ClearAnnotations) method.
 
 N> This removes shape and pen annotations as well.
 
@@ -112,7 +112,7 @@ N> This is common for Shape and Text annotations.
 
 ## Add text on initial loading
 
-You can add a text on image loading using the [`Imageloaded`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_ImageLoaded) event.
+Add a text on image loading using the [`Imageloaded`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_ImageLoaded) event.
 
 {% tabs %}
 
