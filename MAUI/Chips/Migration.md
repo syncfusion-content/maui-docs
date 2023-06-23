@@ -9,7 +9,7 @@ documentation: ug
 
 # Migrating from Xamarin SfChips to .NET MAUI SfChips 
 
-To migrate easier from Xamarin SfChips to [.NET MAUI SfChips](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChip.html), we kept most of the APIs from Xamarin SfChips in MAUI SfChips. However, to maintain the consistency of API naming in MAUI SfAutocomplete, we renamed some of the APIs. The APIs changed in MAUI SfChips from Xamarin SfChips are detailed as follows:
+To migrate easier from Xamarin SfChips to [.NET MAUI SfChips](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChip.html), we kept most of the APIs from Xamarin SfChips in MAUI SfChips. However, to maintain the consistency of API naming in MAUI SfChips, we renamed some of the APIs. The APIs changed in MAUI SfChips from Xamarin SfChips are detailed as follows:
 
 ## Namespaces 
 
