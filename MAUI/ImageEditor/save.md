@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Save in .NET MAUI ImageEditor control | Syncfusion
-description: Learn here all about save support in the Syncfusion .NET MAUI ImageEditor(SfImageEditor) control.
+title: Image save in .NET MAUI ImageEditor control | Syncfusion
+description: Learn here all about save support in the Syncfusion .NET MAUI ImageEditor(SfImageEditor) control and more.
 platform: .NET MAUI
 control: SfImageEditor
 documentation: ug
@@ -23,30 +23,89 @@ To save the modified image, you can use the `Save` method, which accepts paramet
 
 {% endtabs %}
 
+The saved image will be added to the device for each platform in the following locations:
+
+## Windows, MacCatalyst and iOS
+
+For Windows, MacCatalyst, and iOS platforms, you can save the image to the following location:
+
+`System.Environment.SpecialFolder.MyPictures`
+
+Please refer to the [System.Environment.SpecialFolder](https://learn.microsoft.com/en-us/dotnet/api/system.environment.specialfolder?view=net-7.0) documentation for more information.
+
+### Windows device Location: 
+
+On a Windows device, the image should be saved to:
+
+`C:\Users\your name\Pictures`
+
+### MacCatalyst device Location:
+
+On a MacCatalyst device, the image should be saved to: 
+
+`/Users/your name/Documents/Pictures`
+
+### iOS device location:
+
+On an iOS device, the image should be saved to:
+
+`/Photos/Pictures`
+
+## Android
+
+### API 29 and above: 
+
+For devices running Android API 29 and above, you can save the image to the `Pictures` folder using the following relative path:
+
+ `Android.Provider.MediaStore.IMediaColumns.RelativePath`
+
+Please refer to the [MediaStore.MediaColumns](https://developer.android.com/reference/android/provider/MediaStore.MediaColumns#RELATIVE_PATH) documentation for more details.
+
+### API 28 and below:
+
+For devices running Android API 28 and below, you can save the image using the following URI:
+
+`Android.Provider.MediaStore.Images.Media.ExternalContentUri`
+
+Please refer to the [MediaStore.Images.Media](https://developer.android.com/reference/android/provider/MediaStore.Images.Media#EXTERNAL_CONTENT_URI) documentation for further information.
+
+### Device location: 
+
+On an Android device, the image should be saved to:
+
+`\Internal storage\Pictures`
+
+N> For android should include permission in AndroidManifest.xml file. Please refer to the [App Model Permissions](https://learn.microsoft.com/en-us/dotnet/maui/platform-integration/appmodel/permissions?tabs=android) documentation for more details.
+
 ## Save events
 
 The Image Editor has events when performing the save operation, such as `ImageSaving` and `ImageSaved`.
 
-### ImageSaving
+## ImageSaving
 
 This `ImageSaving` event occurs before saving the image.
 
-`Cancel`: You can control the save functionality by setting the `Cancel` argument to `true`. When `Cancel` is set to `true`, it restricts saving the image to the default location.
+`Cancel`: You can control the save functionality by setting the `Cancel` argument to `true`. 
+
+`Cancel`: It restricts the saving of the image to the default location.
 
 {% tabs %}
 
-{% highlight xaml tabtitle="XAML" %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 
-            <imageEditor:SfImageEditor Source="{Binding Image}" ImageSaving="OnImageSaving" />
+            <imageEditor:SfImageEditor x:Name="imageEditor" Source="image.png" ImageSaving="OnImageSaving" />
 
 {% endhighlight %}
 
-{% highlight C# tabtitle="C#" %}
+{% highlight C# tabtitle="MainPage.xaml.cs" %}
             
-            private void OnImageSaving(object sender, ImageSavingEventArgs args)
+        private void OnImageSaving(object sender, ImageSavingEventArgs args)
+        {
+            if (!this.imageEditor.IsImageEdited)
             {
-                args.Cancel = true;  
+               args.Cancel = true;
             }
+        }
 
 {% endhighlight %}
 
@@ -58,10 +117,10 @@ This `ImageSaving` event occurs before saving the image.
 
 {% highlight C# tabtitle="C#" %}
            
-    private void SfImageEditor_ImageSaving(object sender, ImageSavingEventArgs args)
-    {
-        var stream = args.ImageStream;
-    }
+   private void OnImageSaving(object sender, ImageSavingEventArgs args)
+   {
+       stream = args.ImageStream;
+   }
 
 {% endhighlight %}
 
@@ -82,7 +141,7 @@ This `ImageSaving` event occurs before saving the image.
 
 {% endtabs %}
 
-`FileType`: You can specify the file type of the saved image.
+`FileType`: You can change the file type of the saved image to `ImageFileType.Png` or `ImageFileType.Jpeg`.
 
 {% tabs %}
 
@@ -97,7 +156,7 @@ This `ImageSaving` event occurs before saving the image.
 
 {% endtabs %}
 
-### ImageSaved
+## ImageSaved
 
 The `ImageSaved` event occurs after the image has been saved. To get the location of the saved image, use the `Location` argument as shown in the following code.
 
@@ -109,12 +168,12 @@ The `ImageSaved` event occurs after the image has been saved. To get the locatio
     {               
                     . . .
 
-        imageEditor.ImageSaved += imageEditor_ImageSaved;
+        imageEditor.ImageSaved += OnImageSaved;
 
                     . . .
     }
 
-    private void imageEditor_ImageSaved(object sender, ImageSavedEventArgs args)
+    private void OnImageSaved(object sender, ImageSavedEventArgs args)
     {
         string savedLocation = args.Location; 
     }

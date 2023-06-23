@@ -11,7 +11,21 @@ documentation: ug
 
 The image editor control allows you to add various shapes with customizable settings
 
+## Add shape annotation
+
+You can annotate any shapes over an image using the `AddShape` method.
+
+{% tabs %}
+{% highlight C# tabtitle="C#" %}
+
+   imageEditor.AddShape(AnnotationShape.Arrow)
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Shape types
+
+The `AnnotationShape` enum contains the below shape types.
 
 * Circle
 * Rectangle
@@ -24,21 +38,21 @@ The image editor control allows you to add various shapes with customizable sett
 
 ## Customize shape settings
 
-The shape annotations can be customized using common annotation customization properties.
+You can customize the appearance of each shape using the `ShapeSettings`
 
-* `Bounds`: Specifies the bounds of the annotation view.
-* `AllowDrag`:  Enables or disables the dragging for annotations.
-* `AllowResize`: Enables or disables the resizing for annotations.
-* `Opacity`: Specifies the opacity of annotations.
-
-Shapes can be inserted and customized by changing their stroke color, fill color, and stroke thickness. You can create shapes using either a toolbar or the `AddShape` method.
+* `AllowDrag`: Enables or disables the dragging for shape annotation.
+* `AllowResize`: Enables or disables the resizing for shape annotation.
+* `Bounds`: Specifies the bounds of the shapes. You can position the shapes wherever you want on the image. The value of the shape bounds should fall between 0 and 1.
+* `Color` - Specifies the color of the shape annotation.
+* `IsFilled` - Enables or disables the fill color of the shapes. This is applicable only for `AnnotationShape.Rectangle` and `AnnotationShape.Circle` shape types.
+* `StrokeThickness` - Specifies the stroke width of the shapes. It is not applicable for and in the filled state.
+* `Opacity`: Specifies the opacity of shape annotation. This value ranges from 0 to 1.
 
 In the `AddShape` method, you can insert shapes by specifying the fill color, stroke color, and stroke thickness. The [`AddShape`] method has the following parameters.
 
 *  `StrokeThickness` - Specifies the stroke width of the shapes.
 *  `Color` - Specifies the stroke color of the shapes.    
 *  `IsFilled` - Enables or disbles the fill color of the shapes.
-*  `FillColor` - The fill color of the shapes.
 
 {% tabs %}
 {% highlight C# tabtitle="C#" %}
@@ -64,6 +78,8 @@ You can delete the selected shape using either the toolbar or the `DeleteAnnotat
 
 You can remove all the annotations using the `ClearAnnotations` method.
 
+N> It will remove text annotations as well.
+
 {% tabs %}
 {% highlight C# tabtitle="C#" %}
 
@@ -76,17 +92,18 @@ You can remove all the annotations using the `ClearAnnotations` method.
 
 The `AnnotationSelected` event occurs when an annotation is selected.
 
+N> The event is common for text and shape annotations.
+
 {% tabs %}
 
 {% highlight xaml tabtitle="XAML" %}
 
-    <imageEditor:SfImageEditor Source="{Binding Image}" AnnotationSelected = "imageEditor_AnnotationSelected" />
+    <imageEditor:SfImageEditor Source="image.png" AnnotationSelected = "OnAnnotationSelected" />
 
 {% endhighlight %}
 
 {% highlight C# tabtitle="C#" %}
 
-    this.imageEditor.AnnotationSelected += this.OnAnnotationSelected;
     private void OnAnnotationSelected(object sender, AnnotationSelectedEventArgs e)
     {
         if (e.AnnotationSettings is ImageEditorShapeSettings shapeSettings)
@@ -99,24 +116,23 @@ The `AnnotationSelected` event occurs when an annotation is selected.
 
 {% endtabs %}
 
-## Add shape using ImageLoaded event
+## Add shape on initial loading
 
-The `ImageLoaded` event occurs when the image is loaded.
+You can annotate an shape on image loading using the `Imageloaded` event.
 
 {% tabs %}
 
 {% highlight xaml tabtitle="XAML" %}
 
-    <imageEditor:SfImageEditor Source="{Binding Image}" ImageLoaded="imageEditor_ImageLoaded" />
+    <imageEditor:SfImageEditor Source="image.png" ImageLoaded = "OnImageLoaded" />
 
 {% endhighlight %}
 
 {% highlight C# tabtitle="C#" %}
 
-    imageEditor.ImageLoaded += imageEditor_ImageLoaded;
-    private void imageEditor_ImageLoaded(object sender, EventArgs e)
+    private void OnImageLoaded(object sender, EventArgs e)
     {
-        editor1.AddShape(AnnotationShape.Circle);
+        imageEditor.AddShape(AnnotationShape.Circle);
     }
 
 {% endhighlight %}
@@ -125,7 +141,7 @@ The `ImageLoaded` event occurs when the image is loaded.
 
 ## Add shape with manual bounds
 
-Shapes can be added by user-defined view bounds.
+Shapes can be added by user-defined view bounds. The bounds are treated as ratio values of image width and height, so you have to specify bounds rectangle values in the range of 0.1
 
 {% tabs %}
 {% highlight C# tabtitle="C#" %}
@@ -135,9 +151,31 @@ Shapes can be added by user-defined view bounds.
 {% endhighlight %}
 {% endtabs %}
 
-## Freehand draw
+## Restrict shape drag and resize
 
-The image editor control allows you to create freehand drawings with customizable settings.
+To restrict the drag action on a shape, set the `AllowDrag` property to `false` in the `ImageEditorShapeSettings` object..
+
+{% tabs %}
+{% highlight C# tabtitle="C#" %}
+
+    imageEditor.AddShape(AnnotationShape.Circle, new ImageEditorShapeSettings() { AllowDrag = false });
+
+{% endhighlight %}
+{% endtabs %}
+
+To restrict the resize action on a shape, set the `AllowResize` property to `false` in the `ImageEditorShapeSettings` object.
+
+{% tabs %}
+{% highlight C# tabtitle="C#" %}
+
+    imageEditor.AddShape(AnnotationShape.Circle, new ImageEditorShapeSettings() { AllowResize = false });
+
+{% endhighlight %}
+{% endtabs %}
+
+## Freehand Draw
+
+The image editor control allows you to create freehand drawings with customizable settings. The `AddShape` method enables the canvas view, in which you can draw objects.
 
 {% tabs %}
 {% highlight C# tabtitle="C#" %}
@@ -147,12 +185,12 @@ The image editor control allows you to create freehand drawings with customizabl
 {% endhighlight %}
 {% endtabs %}
 
-## Customize the pen settings
+## Customize the draw settings
 
-The annotation can be customized by changing the pen color and stroke thickness and it can be created using either a toolbar or the `AddShape` method.
+*  `StrokeThickness` - Specifies the stroke width of the drawing pen.
+*  `Color` - Specifies the stroke color of the drawing pen.
 
-*  `StrokeThickness` - Specifies the stroke width of the pen.
-*  `Color` - Specifies the stroke color of the pen.
+N> The other shape settings are not applicable for freehand draw.
 
 In the following example, the `AddShape` method is used to toggle the freehand drawings.
 

@@ -9,7 +9,7 @@ documentation: ug
 
 # Text Annotation in .NET MAUI ImageEditor (SfImageEditor)
 
-The ImageEditor control in .NET MAUI allows you to add text with customizable settings.
+The ImageEditor control in .NET MAUI allows you to add text using the `AddText` method with customizable settings.
 
 {% tabs %}
 {% highlight C# tabtitle="C#" %}
@@ -21,27 +21,32 @@ The ImageEditor control in .NET MAUI allows you to add text with customizable se
 
 ## Customize text settings
 
-The text annotation can be customized using common annotation customization properties:
+You can customize the appearance of text annotation using `ImageEditorTextSettings`.
 
-* `Bounds`: Specifies the bounds of the annotation view.
-* `AllowDrag`: Enables or disables dragging for annotations.
-* `AllowResize`: Enables or disables resizing for annotations.
-* `Opacity`: Specifies the opacity of annotations.
+* `AllowDrag`: Enables or disables the dragging of text annotation.
+* `AllowResize`: Enables or disables the resizing of shape annotation.
+* `Bounds`: Specifies the bounds of the text view. You can position the text wherever you want on the image. The value of the text bounds should fall between 0 and 1.
+* `Opacity`: Specifies the opacity of shape annotation. This value ranges from 0 to 1.
+* `RotationAngle`: Specifies the initial rotation angle of the text. The value should fall between 0 to 360.
 
-The text annotation can be inserted and customized by changing its color, font family, font size, and font styles such as bold and italic. You can create text annotations using either a toolbar or the `AddText` method.
-
-The `ImageEditorTextSettings` consists of the following properties:
-
-* `RotationAngle`: Changes the angle of text.
-* `IsEditable`: Enables or disables the text editing.
+* `IsEditable`: Enables or disables text editing.
 * `IsRotatable`: Enables or disables the text rotation.
-* `TextAlignment`: Specifies the alignment of the text.
-* `TextStyle`: Change the text appearance such as `TextColor`, `FontSize`, `FontAttributes`, and `FontFamily` in image editor using the `ImageEditorTextSettings.TextStyle` property.
+* `TextAlignment`: Specifies the start, center, or end alignment of the text.
+* `TextStyle`: Change the text appearance such as `TextColor`, `FontSize`, `FontAttributes`, and `FontFamily` in the image editor using the `ImageEditorTextSettings.TextStyle` property.
 
 {% tabs %}
 {% highlight C# tabtitle="C#" %}
 
-    imageEditor.AddText("Good Day", new ImageEditorTextSettings() { RotationAngle=90, IsRotatable=true, IsEditable=true, TextAlignment=TextAlignment.Start, TextStyle= new ImageEditorTextStyle() { FontSize=14, TextColor=Colors.Black, FontFamily="Arial", FontAttributes=FontAttributes.Italic } }); 
+     imageEditor.AddText("Good Day", new ImageEditorTextSettings() { 
+            RotationAngle = 90, 
+            IsRotatable = true, 
+            IsEditable = true, 
+            TextAlignment = TextAlignment.Start, 
+            TextStyle = new ImageEditorTextStyle() { 
+                FontSize = 14,
+                TextColor = Colors.Black, 
+                FontFamily = "Arial", 
+                FontAttributes = FontAttributes.Italic } }); 
 
 {% endhighlight %}
 {% endtabs %}
@@ -62,6 +67,8 @@ You can delete the selected text using either the toolbar or the `DeleteAnnotati
 
 You can remove all the texts using the `ClearAnnotations` method.
 
+N> This removes shape and pen annotations as well.
+
 {% tabs %}
 {% highlight C# tabtitle="C#" %}
 
@@ -74,17 +81,18 @@ You can remove all the texts using the `ClearAnnotations` method.
 
 This `AnnotationSelected` event occurs when the annotation is selected.
 
+N> This is common for Shape and Text annotations.
+
 {% tabs %}
 
 {% highlight xaml tabtitle="XAML" %}
 
-    <imageEditor:SfImageEditor Source="{Binding Image}" AnnotationSelected = "imageEditor_AnnotationSelected" />
+    <imageEditor:SfImageEditor Source="image.png" AnnotationSelected = "OnAnnotationSelected" />
 
 {% endhighlight %}
 
 {% highlight C# tabtitle="C#" %}
 
-    this.imageEditor.AnnotationSelected += this.OnAnnotationSelected;
     private void OnAnnotationSelected(object sender, AnnotationSelectedEventArgs e)
     {
         if (e.AnnotationSettings is ImageEditorTextSettings textSettings)
@@ -97,7 +105,7 @@ This `AnnotationSelected` event occurs when the annotation is selected.
 
 {% endtabs %}
 
-## Add shape using ImageLoaded event
+## Add text on initial loading
 
 This `ImageLoaded` event occurs when the image is loaded.
 
@@ -105,16 +113,15 @@ This `ImageLoaded` event occurs when the image is loaded.
 
 {% highlight xaml tabtitle="XAML" %}
 
-    <imageEditor:SfImageEditor Source="{Binding Image}" ImageLoaded="imageEditor_ImageLoaded" />
+    <imageEditor:SfImageEditor Source="image.png" ImageLoaded = "OnImageLoaded" />
 
 {% endhighlight %}
 
 {% highlight C# tabtitle="C#" %}
 
-    imageEditor.ImageLoaded += imageEditor_ImageLoaded;
-    private void imageEditor_ImageLoaded(object sender, EventArgs e)
+    private void OnImageLoaded(object sender, EventArgs e)
     {
-        editor1.AddText("Good morning");
+        imageEditor.AddText("Good morning");
     }
 
 {% endhighlight %}
@@ -123,7 +130,7 @@ This `ImageLoaded` event occurs when the image is loaded.
 
 ## Add text with manual bounds
 
-The text can be added with user-defined view bounds.
+The text can be added with user-defined view bounds. The bounds are treated as ratio values of image width and height, so you have to specify bound's rectangle values in the range of 0 to 1
 
 {% tabs %}
 {% highlight C# tabtitle="C#" %}
