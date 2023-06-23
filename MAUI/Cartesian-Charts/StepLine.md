@@ -13,7 +13,7 @@ Step line chart is used to display the data showing changes in values over time 
 
 ## Step Line Chart
 
-To render the Step line chart, create an instance of the [StepLineSeries](), and add it to the  [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) collection property of the [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html?tabs=tabid-1).
+To render the Step line chart, create an instance of the [StepLineSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.StepLineSeries.html), and add it to the [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) collection property of the [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html?tabs=tabid-1).
 
 N> The cartesian chart has [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) as its default content.
 
@@ -77,7 +77,7 @@ N> The cartesian chart has [Series](https://help.syncfusion.com/cr/maui/Syncfusi
 
 ## Dashed Step Line Chart
 
-The [StrokeDashArray](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.LineSeries.html#Syncfusion_Maui_Charts_LineSeries_StrokeDashArray) property of the [StepLineSeries]() is used to render the Step line series with dashes. An odd value is considered as rendering size, and an Even value is considered a gap.
+The [StrokeDashArray](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.LineSeries.html#Syncfusion_Maui_Charts_LineSeries_StrokeDashArray) property of the [StepLineSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.StepLineSeries.html) is used to render the Step line series with dashes. An odd value is considered as rendering size, and an Even value is considered a gap.
 
 {% tabs %}
 

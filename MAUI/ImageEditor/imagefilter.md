@@ -9,7 +9,7 @@ documentation: ug
 
 # Image Effect in .NET MAUI Image Editor (SfImageEditor)
 
-Using the image editor control, apply various effects such as Brightness, Hue, Saturation, Contrast, Blur, Opacity, and Sharpen to your image. These effects can be applied using the toolbar or by utilizing the `ImageEffect` method. The `ImageEffect` method consists of two arguments: `ImageEffect` and `EffectValue`. The ImageEffect is an enumeration that includes the following effects:
+Using the image editor control, apply various effects such as Brightness, Hue, Saturation, Contrast, Blur, Opacity, and Sharpen to your image. These effects can be applied using the toolbar or by utilizing the [ImageEffect](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEffect.html) method. The [ImageEffect](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEffect.html) method consists of two arguments: [ImageEffect](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEffect.html) and `EffectValue`. The [ImageEffect](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEffect.html) is an enumeration that includes the following effects:
 
 * Brightness
 * Blur
@@ -21,10 +21,10 @@ Using the image editor control, apply various effects such as Brightness, Hue, S
 * Opacity
 * None
 
-The EffectValue are the corresponding ImageEffect values, which varies for each effect, and they are explained as follows.
+The `EffectValue` are the corresponding [ImageEffect](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEffect.html) values, which varies for each effect, and they are explained as follows.
 
-N> The Image Effect enum also contains “None” option, which removes all the previously applied effects, which are not saved.
-The ImageEffect method only applies the effect to the preview image. If you want to save the applied effect, call the SaveEdits method.
+N> The [ImageEffect](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEffect.html) enum also contains [None](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEffect.html#Syncfusion_Maui_ImageEditor_ImageEffect_None) option, which removes all the previously applied effects, which are not saved.
+The [ImageEffect](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEffect.html) method only applies the effect to the preview image. If you want to save the applied effect, call the [SaveEdits](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_SaveEdits) method.
 
 ## Brightness
 
@@ -164,7 +164,7 @@ public MainPage()
 
 ## Save or Cancel applied effects
 
-Call the SaveEdits method to save the applied effects in view; otherwise, the effects will be reset on the next action.
+Call the [SaveEdits](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_SaveEdits) method to save the applied effects in view; otherwise, the effects will be reset on the next action.
 
 {% tabs %}
 {% highlight C# tabtitle="C#" %}
@@ -179,7 +179,7 @@ public MainPage()
 {% endhighlight %}
 {% endtabs %}
 
-The applied effects can be canceled using the `CancelEdits` method or by calling the ImageEffect method with ImageEffect.None.
+The applied effects can be canceled using the [CancelEdits](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_CancelEdits) method or by calling the [ImageEffect](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEffect.html) method with [ImageEffect.None](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEffect.html#Syncfusion_Maui_ImageEditor_ImageEffect_None).
 
 {% tabs %}
 {% highlight C# tabtitle="C#" %}
