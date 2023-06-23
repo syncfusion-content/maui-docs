@@ -9,7 +9,7 @@ documentation: ug
 
 # Migrating from Xamarin SfNumericTextBox and SfNumericUpDown to .NET MAUI SfNumericEntry
 
-To migrate easier from the Xamarin SfNumericTextBox and SfNumericUpDown to `.NET MAUI SfNumericEntry`, most of the APIs are kept from the Xamarin SfNumericTextBox and SfNumericUpDown  in MAUI SfNumericEntry. However, to maintain the consistency of API naming in MAUI SfNumericEntry, rename some of the APIs. The APIs changed in MAUI SfNumericEntry from Xamarin SfNumericTextBox and SfNumericUpDown are detailed as follows.
+To migrate easier from the Xamarin SfNumericTextBox and SfNumericUpDown to [.NET MAUI SfNumericEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html), most of the APIs are kept from the Xamarin SfNumericTextBox and SfNumericUpDown  in MAUI SfNumericEntry. However, to maintain the consistency of API naming in MAUI SfNumericEntry, rename some of the APIs. The APIs changed in MAUI SfNumericEntry from Xamarin SfNumericTextBox and SfNumericUpDown are detailed as follows.
 
 ## Namespaces 
 
@@ -33,10 +33,6 @@ To migrate easier from the Xamarin SfNumericTextBox and SfNumericUpDown to `.NET
 <td>[BorderColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfNumericTextBox.XForms.SfNumericTextBox.html#Syncfusion_SfNumericTextBox_XForms_SfNumericTextBox_BorderColor)</td>
 <td>[Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_Stroke)</td>
 <td>Gets or sets a color that describes the stroke.</td></tr>
-<tr>
-<td>[AllowDefaultDecimalDigits](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfNumericTextBox.XForms.SfNumericTextBox.html#Syncfusion_SfNumericTextBox_XForms_SfNumericTextBox_AllowDefaultDecimalDigits)</td>
-<td>[AllowNull](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_AllowNull)</td>
-<td>Gets or sets a value indicating whether the SfNumericEntry allows null value or not.</td></tr>
 <tr>
 <td>[ClearButtonVisibility](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfNumericTextBox.XForms.SfNumericTextBox.html#Syncfusion_SfNumericTextBox_XForms_SfNumericTextBox_ClearButtonVisibility)</td>
 <td>[ShowClearButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_ShowClearButton)</td>
