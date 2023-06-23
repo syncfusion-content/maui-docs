@@ -9,17 +9,17 @@ documentation: ug
 
 # Getting Started with .NET MAUI ImageEditor (SfImageEditor)
 
-This section explains the steps to create and load an image to the image editor control.
+This section explains the steps to create and load an image to the [.Net MAUI ImageEditor(SfImageEditor)](https://www.syncfusion.com/maui-controls/maui-image-editor) control.
 
 ## Creating an application using the .NET MAUI ImageEditor
 
 1. Create a new .NET MAUI application in Visual Studio.
 
-2. Syncfusion .NET MAUI components are available in [nuget.org](https://www.nuget.org/). To add the SfImageEditor to your project, open the NuGet package manager in Visual Studio, search for `[Syncfusion.Maui.ImageEditor]` and install it.
+2. Syncfusion .NET MAUI components are available in [nuget.org](https://www.nuget.org/). To add the SfImageEditor to your project, open the NuGet package manager in Visual Studio, search for [Syncfusion.Maui.ImageEditor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.html) and install it.
 
-3. To initialize the control, import the control namespace `Syncfusion.Maui.ImageEditor` in XAML or C# code.
+3. To initialize the control, import the control namespace [Syncfusion.Maui.ImageEditor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.html) in XAML or C# code.
 
-4. Initialize `SfImageEditor.`
+4. Initialize [SfImageEditor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html).
 
 {% tabs %}
 {% highlight XAML hl_lines="3 5" %}
@@ -52,7 +52,7 @@ public partial class MainPage : ContentPage
 
 ## Register the handler
 
-The `Syncfusion.Maui.Core` nuget is a dependent package for all Syncfusion controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion core.
+The [Syncfusion.Maui.Core](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.html) nuget is a dependent package for all Syncfusion controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion core.
 
 {% tabs %}
 {% highlight C# tabtitle="MauiProgram.cs" hl_lines="1 10" %}
