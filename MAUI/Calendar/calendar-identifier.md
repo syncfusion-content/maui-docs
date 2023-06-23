@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 # Calendar identifier in .NET MAUI Calendar (SfCalendar)
-The .NET MAUI Calendar supports Calendar Identifier to display the different types of calendars based on various cultures and regions. The supported identifiers are Gregorian, Hijri, Korean, Persian, Taiwan, ThaiBuddhist, and UmAlQura. Change the calendar identifier using the [Identifier] property in the SfCalendar.
+The [.NET MAUI Calendar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html) supports Calendar Identifier to display the different types of calendars based on various cultures and regions. The supported identifiers are Gregorian, Hijri, Korean, Persian, Taiwan, ThaiBuddhist, and UmAlQura. Change the calendar identifier using the [Identifier](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_Identifier) property in the SfCalendar.
 
 <table>
 <tr>
@@ -47,13 +47,15 @@ N>
 * The Flow Direction will be updated based on the calendar identifier. All the DateTime values, such as DisplayDate, MinimumDate, MaximumDate, SelectedDate, SelectedDates, SelectedDateRange, SelectableDayPredicate, and SpecialDayPredicate, can be given in two ways.
 * The DateTime instance without specifying calendar identifier. The calendar will handle the DateTime value for the specified calendar identifier.
 * When a DateTime instance has a calendar identifier, the calendar handles it directly.
-* View haeder will show full week day name for all the calendar identifiers except gregorian calendar while the text format is "ddddd".
+* View header will show full week day name for all the calendar identifiers except gregorian calendar while the text format is "ddddd".
 
 {% tabs %}
 {% highlight XAML hl_lines="2" %}
+
 <calendar:SfCalendar x:Name="Calendar"
-					 Identifier="Hijri">
+					   Identifier="Hijri">
 </calendar:SfCalendar>
+
 {% endhighlight %}
 {% highlight C# hl_lines="2" %}
 
@@ -65,7 +67,7 @@ this.Content = calendar;
 {% endtabs %}
 
 ### DateTime values in Calendar identifiers
-All the DateTime properties of the calendar can be given in two ways when the calendar identifier is specified other than the GregorianCalendar.
+All the DateTime properties of the calendar can be given in two ways when the calendar identifier is specified other than the [GregorianCalendar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarIdentifier.html#Syncfusion_Maui_Calendar_CalendarIdentifier_Gregorian).
 
 * Create an display date value by declaring the calendar identifier and respective calendar identifier date.
 
