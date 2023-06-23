@@ -85,7 +85,7 @@ imageEditor.Crop(ImageCropType.Original);
 The square crop option allows you to crop the image into a perfect square shape.
 
 {% tabs %}
-{% highlight c# %}
+{% highlight C# tabtitle="C#" %}
 
 imageEditor.Crop(ImageCropType.Square);
 
