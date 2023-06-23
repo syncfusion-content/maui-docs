@@ -43,6 +43,8 @@ public MainPage()
 {% endhighlight %}
 {% endtabs %}
 
+![Brightness Effect in .NET Maui ImageEditor](images/imagefilter/imageeditor-brightness.png)
+
 ## Blur
 
 Blur creates a soft and unfocused appearance by reducing the image's sharpness. The value of the blur effect ranges from 0 to 1, and the default value is 0.
@@ -59,6 +61,8 @@ public MainPage()
 
 {% endhighlight %}
 {% endtabs %}
+
+![Blur Effect in .NET Maui ImageEditor](images/imagefilter/imageeditor-blur.png)
 
 ## Contrast
 
@@ -77,6 +81,8 @@ public MainPage()
 {% endhighlight %}
 {% endtabs %}
 
+![Contrast Effect in .NET Maui ImageEditor](images/imagefilter/imageeditor-contrast.png)
+
 ## Exposure
 
 Exposure is used to alter the overall brightness and darkness levels of the image. The value of the exposure effect ranges from -1 to 1, and the default value is 0.
@@ -93,6 +99,8 @@ public MainPage()
 
 {% endhighlight %}
 {% endtabs %}
+
+![Exposure Effect in .NET Maui ImageEditor](images/imagefilter/imageeditor-exposure.png)
 
 ## Hue
 
@@ -111,6 +119,8 @@ public MainPage()
 {% endhighlight %}
 {% endtabs %}
 
+![Hue Effect in .NET Maui ImageEditor](images/imagefilter/imageeditor-hue.png)
+
 ## Saturation
 
 Saturation enhances or reduces the intensity and vividness of colors in the image. The value of the saturation effect ranges from -1 to 1, and the default value is 0.
@@ -127,6 +137,8 @@ public MainPage()
 
 {% endhighlight %}
 {% endtabs %}
+
+![Saturation Effect in .NET Maui ImageEditor](images/imagefilter/imageeditor-saturation.png)
 
 ## Sharpen
 
@@ -145,6 +157,8 @@ public MainPage()
 {% endhighlight %}
 {% endtabs %}
 
+![Exposure Effect in .NET Maui ImageEditor](images/imagefilter/imageeditor-sharpen.png)
+
 ## Opacity
 
 Opacity is used to control the transparency or visibility of the image. The value of the opacity effect ranges from 0 to 1, and the default value is 1.
@@ -161,6 +175,8 @@ public MainPage()
 
 {% endhighlight %}
 {% endtabs %}
+
+![Opacity in .NET MAUI ImageEditor](images/imagefilter/imageeditor-opacity.png)
 
 ## Save or Cancel applied effects
 

@@ -68,6 +68,8 @@ imageEditor.Crop(ImageCropType.Free);
 {% endhighlight %}
 {% endtabs %}
 
+![Freehand crop in .NET Maui ImageEditor](images/crop/imageeditor-free-crop.png)
+
 ## Original Crop
 
 With the original crop, the image is cropped to its original dimensions. This means that no aspect ratio and the cropped image retains its original width and height ratio.
@@ -79,6 +81,8 @@ imageEditor.Crop(ImageCropType.Original);
 
 {% endhighlight %}
 {% endtabs %}
+
+![Original crop in .NET Maui ImageEditor](images/crop/imageeditor-original-crop.png)
 
 ## Square Crop
 
@@ -92,6 +96,8 @@ imageEditor.Crop(ImageCropType.Square);
 {% endhighlight %}
 {% endtabs %}
 
+![Square crop in .NET Maui ImageEditor](images/crop/imageeditor-square-crop.png)
+
 ## Ratio Crop
 
 The ratio crop enables you to crop the image with a specific aspect ratio. You can specify the desired ratio using the width and height values. The default ratio is 4:3 when using the [ImageCropType.Ratio](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageCropType.html#Syncfusion_Maui_ImageEditor_ImageCropType_Ratio), but you can change it by using the Crop method with the ratio parameter.  
@@ -103,6 +109,8 @@ imageEditor.Crop(16,9);
 
 {% endhighlight %}
 {% endtabs %}
+
+![Ratio crop in .NET Maui ImageEditor](images/crop/imageeditor-ratio-crop.png)
 
 ## Circle crop
 
@@ -118,6 +126,8 @@ imageEditor.Crop(ImageCropType.Circle);
 {% endhighlight %}
 {% endtabs %}
 
+![Circle crop in .NET Maui ImageEditor](images/crop/imageeditor-circle-crop.png)
+
 ## Ellipse crop
 
 To crop an image in an elliptical format you can use the [ImageCropType.Ellipse](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageCropType.html#Syncfusion_Maui_ImageEditor_ImageCropType_Ellipse) crop type. This allows for free-style cropping in an elliptical shape.
@@ -131,6 +141,8 @@ imageEditor.Crop(ImageCropType.Ellipse);
 
 {% endhighlight %}
 {% endtabs %}
+
+![Ellipse crop in .NET Maui ImageEditor](images/crop/imageeditor-ellipse-crop.png)
 
 ## Entering the cropping area manually
 
