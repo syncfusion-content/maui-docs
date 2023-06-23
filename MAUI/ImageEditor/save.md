@@ -25,7 +25,7 @@ To save the modified image, you can use the [`Save`](https://help.syncfusion.com
 
 The saved image will be added to the device for each platform in the following locations:
 
-## Windows, MacCatalyst and iOS
+#### Windows, MacCatalyst and iOS
 
 In Windows, MacCatalyst, and iOS platforms, the image will be saved in the following location:
 
@@ -45,7 +45,7 @@ On an iOS device, the image will be saved to:
 
 `/Photos/Pictures`
 
-## Android
+#### Android
 
 **API 29 and above**
 
