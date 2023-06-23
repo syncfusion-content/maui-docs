@@ -41,7 +41,7 @@ In the `AddShape` method, you can insert shapes by specifying the fill color, st
 *  `FillColor` - The fill color of the shapes.
 
 {% tabs %}
-{% highlight C# %}
+{% highlight C# tabtitle="C#" %}
 
     imageEditor.AddShape(AnnotationShape.Rectangle, new ImageEditorShapeSettings() { Color = Colors.Blue, StrokeThickness = 5, IsFilled =false });
 
@@ -53,7 +53,7 @@ In the `AddShape` method, you can insert shapes by specifying the fill color, st
 You can delete the selected shape using either the toolbar or the `DeleteAnnotation` method.
 
 {% tabs %}
-{% highlight C# %}
+{% highlight C# tabtitle="C#" %}
 
     imageEditor.DeleteAnnotation();
 
@@ -65,7 +65,7 @@ You can delete the selected shape using either the toolbar or the `DeleteAnnotat
 You can remove all the annotations using the `ClearAnnotations` method.
 
 {% tabs %}
-{% highlight C# %}
+{% highlight C# tabtitle="C#" %}
 
     imageEditor.ClearAnnotations();
 
@@ -78,13 +78,13 @@ The `AnnotationSelected` event occurs when an annotation is selected.
 
 {% tabs %}
 
-{% highlight xaml %}
+{% highlight xaml tabtitle="XAML" %}
 
     <imageEditor:SfImageEditor Source="{Binding Image}" AnnotationSelected = "imageEditor_AnnotationSelected" />
 
 {% endhighlight %}
 
-{% highlight C# %}
+{% highlight C# tabtitle="C#" %}
 
     this.imageEditor.AnnotationSelected += this.OnAnnotationSelected;
     private void OnAnnotationSelected(object sender, AnnotationSelectedEventArgs e)
@@ -105,13 +105,13 @@ The `ImageLoaded` event occurs when the image is loaded.
 
 {% tabs %}
 
-{% highlight xaml %}
+{% highlight xaml tabtitle="XAML" %}
 
     <imageEditor:SfImageEditor Source="{Binding Image}" ImageLoaded="imageEditor_ImageLoaded" />
 
 {% endhighlight %}
 
-{% highlight C# %}
+{% highlight C# tabtitle="C#" %}
 
     imageEditor.ImageLoaded += imageEditor_ImageLoaded;
     private void imageEditor_ImageLoaded(object sender, EventArgs e)
@@ -128,7 +128,7 @@ The `ImageLoaded` event occurs when the image is loaded.
 Shapes can be added by user-defined view bounds.
 
 {% tabs %}
-{% highlight C# %}
+{% highlight C# tabtitle="C#" %}
 
    imageEditor.AddShape(AnnotationShape.Arrow, new ImageEditorShapeSettings() { Bounds=new Rect(0.1,0.1,0.5,0.5)});
 
@@ -140,7 +140,7 @@ Shapes can be added by user-defined view bounds.
 The image editor control allows you to create freehand drawings with customizable settings.
 
 {% tabs %}
-{% highlight C# %}
+{% highlight C# tabtitle="C#" %}
 
     imageEditor.AddShape(AnnotationShape.Pen);
 
@@ -157,7 +157,7 @@ The annotation can be customized by changing the pen color and stroke thickness 
 In the following example, the `AddShape` method is used to toggle the freehand drawings.
 
 {% tabs %}
-{% highlight C# %}
+{% highlight C# tabtitle="C#" %}
 
     imageEditor.AddShape(AnnotationShape.Pen, new ImageEditorShapeSettings() {Color=Colors.Blue, StrokeThickness=5});
 

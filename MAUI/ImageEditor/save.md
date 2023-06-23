@@ -15,7 +15,7 @@ To save the modified image, you can use the `Save` method, which accepts paramet
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight C# tabtitle="C#" %}
 
               imageEditor.Save(ImageFileType.Png, "D:\\Syncfusion\\Pictures", "Syncfusion");
 
@@ -35,13 +35,13 @@ This `ImageSaving` event occurs before saving the image.
 
 {% tabs %}
 
-{% highlight xaml %}
+{% highlight xaml tabtitle="XAML" %}
 
             <imageEditor:SfImageEditor Source="{Binding Image}" ImageSaving="OnImageSaving" />
 
 {% endhighlight %}
 
-{% highlight C# %}
+{% highlight C# tabtitle="C#" %}
             
             private void OnImageSaving(object sender, ImageSavingEventArgs args)
             {
@@ -56,7 +56,7 @@ This `ImageSaving` event occurs before saving the image.
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight C# tabtitle="C#" %}
            
     private void SfImageEditor_ImageSaving(object sender, ImageSavingEventArgs args)
     {
@@ -71,7 +71,7 @@ This `ImageSaving` event occurs before saving the image.
 
 {% tabs %}
 
-{% highlight c# %}
+{% highlight c# tabtitle="C#" %}
 
     private void SfImageEditor_ImageSaving(object sender, ImageSavingEventArgs args)
     {
@@ -86,7 +86,7 @@ This `ImageSaving` event occurs before saving the image.
 
 {% tabs %}
 
-{% highlight c# %}
+{% highlight c# tabtitle="C#" %}
 
     private void SfImageEditor_ImageSaving(object sender, ImageSavingEventArgs args)
     {
@@ -103,7 +103,7 @@ The `ImageSaved` event occurs after the image has been saved. To get the locatio
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight C# tabtitle="C#" %}
 
     public MainPage()
     {               

@@ -12,7 +12,7 @@ documentation: ug
 The ImageEditor control in .NET MAUI allows you to add text with customizable settings.
 
 {% tabs %}
-{% highlight C# %}
+{% highlight C# tabtitle="C#" %}
 
     imageEditor.AddText("Good morning");
 
@@ -39,7 +39,7 @@ The `ImageEditorTextSettings` consists of the following properties:
 * `TextStyle`: Change the text appearance such as `TextColor`, `FontSize`, `FontAttributes`, and `FontFamily` in image editor using the `ImageEditorTextSettings.TextStyle` property.
 
 {% tabs %}
-{% highlight C# %}
+{% highlight C# tabtitle="C#" %}
 
     imageEditor.AddText("Good Day", new ImageEditorTextSettings() { RotationAngle=90, IsRotatable=true, IsEditable=true, TextAlignment=TextAlignment.Start, TextStyle= new ImageEditorTextStyle() { FontSize=14, TextColor=Colors.Black, FontFamily="Arial", FontAttributes=FontAttributes.Italic } }); 
 
@@ -51,7 +51,7 @@ The `ImageEditorTextSettings` consists of the following properties:
 You can delete the selected text using either the toolbar or the `DeleteAnnotation` method.
 
 {% tabs %}
-{% highlight C# %}
+{% highlight C# tabtitle="C#" %}
 
     imageEditor.DeleteAnnotation();
 
@@ -63,7 +63,7 @@ You can delete the selected text using either the toolbar or the `DeleteAnnotati
 You can remove all the texts using the `ClearAnnotations` method.
 
 {% tabs %}
-{% highlight C# %}
+{% highlight C# tabtitle="C#" %}
 
     imageEditor.ClearAnnotations();
 
@@ -76,13 +76,13 @@ This `AnnotationSelected` event occurs when the annotation is selected.
 
 {% tabs %}
 
-{% highlight xaml %}
+{% highlight xaml tabtitle="XAML" %}
 
     <imageEditor:SfImageEditor Source="{Binding Image}" AnnotationSelected = "imageEditor_AnnotationSelected" />
 
 {% endhighlight %}
 
-{% highlight C# %}
+{% highlight C# tabtitle="C#" %}
 
     this.imageEditor.AnnotationSelected += this.OnAnnotationSelected;
     private void OnAnnotationSelected(object sender, AnnotationSelectedEventArgs e)
@@ -103,13 +103,13 @@ This `ImageLoaded` event occurs when the image is loaded.
 
 {% tabs %}
 
-{% highlight xaml %}
+{% highlight xaml tabtitle="XAML" %}
 
     <imageEditor:SfImageEditor Source="{Binding Image}" ImageLoaded="imageEditor_ImageLoaded" />
 
 {% endhighlight %}
 
-{% highlight C# %}
+{% highlight C# tabtitle="C#" %}
 
     imageEditor.ImageLoaded += imageEditor_ImageLoaded;
     private void imageEditor_ImageLoaded(object sender, EventArgs e)
@@ -126,7 +126,7 @@ This `ImageLoaded` event occurs when the image is loaded.
 The text can be added with user-defined view bounds.
 
 {% tabs %}
-{% highlight C# %}
+{% highlight C# tabtitle="C#" %}
 
    imageEditor.AddText("Good morning", new ImageEditorTextSettings() { Bounds = new Rect(0.1, 0.1, 0.5, 0.5) });
 
