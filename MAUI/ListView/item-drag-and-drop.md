@@ -9,13 +9,13 @@ documentation: ug
 
 # Item Reordering in .NET MAUI ListView (SfListView)
 
-The `SfListView` allows reordering by dragging and dropping items. It supports displaying the customized view in a template while dragging the item. It can be enabled by setting the `SfListView.DragStartMode` property to `OnHold`. The drag-and-drop options are listed as follows:
+The `SfListView` allows reordering by dragging and dropping items. It supports displaying the customized view in a template while dragging the item. It can be enabled by setting the [SfListView.DragStartMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_DragStartMode) property to `OnHold`. The drag-and-drop options are listed as follows:
 
- * `None`: Disables drag and drop. This is the default value.
- * `OnHold`: Allows dragging and dropping by holding the item.
- * `OnDragIndicator`: Allows dragging and dropping by loading the `DragIndicatorView` within `SfListView.ItemTemplate`.
+ * [None](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.DragStartMode.html#Syncfusion_Maui_ListView_DragStartMode_None): Disables drag and drop. This is the default value.
+ * [OnHold](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.DragStartMode.html#Syncfusion_Maui_ListView_DragStartMode_OnHold): Allows dragging and dropping by holding the item.
+ * [OnDragIndicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.DragStartMode.html#Syncfusion_Maui_ListView_DragStartMode_OnDragIndicator): Allows dragging and dropping by loading the [DragIndicatorView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.DragIndicatorView.html) within [SfListView.ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemTemplate).
 
-N> The `GridLayout` does not support drag and drop. 
+N> The [GridLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.GridLayout.html) does not support drag and drop. 
 
 The drag and drop scenarios are as follows:
 
@@ -53,13 +53,13 @@ listView.DragStartMode = DragStartMode.OnHold | DragStartMode.OnDragIndicator;
 {% endhighlight %}
 {% endtabs %}
 
-N> Reordering changes made only in view, and not in the underlying collection. Thus, the changes will be reverted when performing sorting, grouping, or any other operation that refreshes the view. You can update the underlying collection by setting `UpdateSource` to `true`.
+N> Reordering changes made only in view, and not in the underlying collection. Thus, the changes will be reverted when performing sorting, grouping, or any other operation that refreshes the view. You can update the underlying collection by setting [UpdateSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.DragDropController.html#Syncfusion_Maui_ListView_DragDropController_UpdateSource) to `true`.
 
 ## Drag indicator view
 
-To drag and drop the items by the `DragIndicatorView`, set the `SfListView.DragStartMode` property to `OnDragIndicator`. To display the dragging item, define any custom user interface(UI) in the `DragIndicatorView`.
+To drag and drop the items by the [DragIndicatorView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.DragIndicatorView.html), set the [SfListView.DragStartMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_DragStartMode) property to `OnDragIndicator`. To display the dragging item, define any custom user interface(UI) in the `DragIndicatorView`.
 
-N> You must set the SfListView instance as a reference to the `ListView` property in `DragIndicatorView`.
+N> You must set the SfListView instance as a reference to the [ListView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.DragIndicatorView.html#Syncfusion_Maui_ListView_DragIndicatorView_ListView) property in `DragIndicatorView`.
 
 {% tabs %}
 {% highlight xaml hl_lines="13"%}
@@ -126,7 +126,7 @@ The screenshot shows the output of the reordering items by drag and drop. Downlo
 
 ## Drag item customization
 
-By defining the `SfListView.DragItemTemplate` property of the `SfListView`, you can display a custom user interface (UI) when performing drag and drop operations. The template can be defined either in code or XAML.
+By defining the [SfListView.DragItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_DragItemTemplate) property of the `SfListView`, you can display a custom user interface (UI) when performing drag and drop operations. The template can be defined either in code or XAML.
 
 {% tabs %}
 {% highlight xaml hl_lines="5"%}
@@ -157,21 +157,21 @@ listView.DragItemTemplate = new DataTemplate(() => {
 
 ## Event
 
-The `ItemDragging` event is raised while dragging and dropping the item in the `SfListView`. The `ItemDraggingEventArgs` has the following members which provide the information for the `ItemDragging` event:
+The [ItemDragging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemDragging) event is raised while dragging and dropping the item in the [SfListView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html). The [ItemDraggingEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemDraggingEventArgs.html) has the following members which provide the information for the `ItemDragging` event:
 
- * `Action`: Return the drag `Action` such as start, dragging, and drop.
- * `Bounds`: Return bounds of drag item when dragging and dropping.
- * `Handled`: If this member is set to `true`, dragging can be handled. It is applicable only if `Action` is `Dragging`.
- * `DataItem`: Return the underlying data of the dragging item. 
- * `NewIndex`: Return the item index of the `DataSource.DisplayItems` where the dragging item will be dropped.
- * `OldIndex`: Return the item index of the `DataSource.DisplayItems` where the dragging item started. The OldIndex and NewIndex will be the same if `Action` is `Start`.
- * `Position`: Returns the touch position of the drag item from the screen coordinates.
+ * [Action](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemDraggingEventArgs.html#Syncfusion_Maui_ListView_ItemDraggingEventArgs_Action): Return the drag `Action` such as start, dragging, and drop.
+ * [Bounds](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemDraggingEventArgs.html#Syncfusion_Maui_ListView_ItemDraggingEventArgs_Bounds): Return bounds of drag item when dragging and dropping.
+ * [Handled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemDraggingEventArgs.html#Syncfusion_Maui_ListView_ItemDraggingEventArgs_Handled): If this member is set to `true`, dragging can be handled. It is applicable only if `Action` is `Dragging`.
+ * [DataItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemDraggingEventArgs.html#Syncfusion_Maui_ListView_ItemDraggingEventArgs_DataItem): Return the underlying data of the dragging item. 
+ * [NewIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemDraggingEventArgs.html#Syncfusion_Maui_ListView_ItemDraggingEventArgs_NewIndex): Return the item index of the [DataSource.DisplayItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataSource.DisplayItems.html) where the dragging item will be dropped.
+ * [OldIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemDraggingEventArgs.html#Syncfusion_Maui_ListView_ItemDraggingEventArgs_OldIndex): Return the item index of the [DataSource.DisplayItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataSource.DisplayItems.html) where the dragging item started. The OldIndex and NewIndex will be the same if `Action` is `Start`.
+ * [Position](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemDraggingEventArgs.html#Syncfusion_Maui_ListView_ItemDraggingEventArgs_Position): Returns the touch position of the drag item from the screen coordinates.
 
 ## Auto scroll options
 
 ### Auto scroll margin
 
-To adjust the auto scroll margin, set a value to the `ScrollMargin` property of `AutoScroller` to enable auto-scrolling while dragging. The default value is `15`. Auto-scrolling will be enabled when reaching the `ScrollMargin` from view bounds while dragging.
+To adjust the auto scroll margin, set a value to the [ScrollMargin](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.AutoScroller.html#Syncfusion_Maui_ListView_AutoScroller_ScrollMargin) property of [AutoScroller](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.AutoScroller.html) to enable auto-scrolling while dragging. The default value is `15`. Auto-scrolling will be enabled when reaching the `ScrollMargin` from view bounds while dragging.
 
 To disable auto-scrolling, set the value to `0` for `ScrollMargin`.
 
@@ -183,7 +183,7 @@ this.listView.AutoScroller.ScrollMargin = 20;
 
 ### Auto scroll interval
 
-To adjust the auto-scroll interval while dragging, set the `Interval` property of `AutoScroller`. The default value is `150 milliseconds`.
+To adjust the auto-scroll interval while dragging, set the [Interval](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.AutoScroller.html#Syncfusion_Maui_ListView_AutoScroller_Interval) property of [AutoScroller](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.AutoScroller.html). The default value is `150 milliseconds`.
 
 {% tabs %}
 {% highlight c# %}
@@ -193,7 +193,7 @@ this.listView.AutoScroller.Interval = new TimeSpan(0, 0, 0, 0, 200);
 
 ### Disable outside scroll
 
-To disable auto-scroll when dragging item moves outside the `SfListView` while dragging, set the `AllowOutsideScroll` property of `AutoScroller` to `false`. The default value is `true`.
+To disable auto-scroll when dragging item moves outside the `SfListView` while dragging, set the [AllowOutsideScroll](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.AutoScroller.html#Syncfusion_Maui_ListView_AutoScroller_AllowOutsideScroll) property of [AutoScroller](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.AutoScroller.html) to `false`. The default value is `true`.
 
 {% tabs %}
 {% highlight c# %}
@@ -203,7 +203,7 @@ this.listView.AutoScroller.AllowOutsideScroll = false;
 
 ## Disable dragging for particular item
 
-To disable dragging for a particular item, handle the `ItemDragging` event based on the conditions of the `Action` event argument.
+To disable dragging for a particular item, handle the [ItemDragging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemDragging) event based on the conditions of the [Action](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemDraggingEventArgs.html#Syncfusion_Maui_ListView_ItemDraggingEventArgs_Action) event argument.
 
 You can cancel the dragging action for a particular item by setting the `Cancel` property of the `ItemDraggingEventArgs`.
 
@@ -220,7 +220,7 @@ private void ListView_ItemDragging(object sender, ItemDraggingEventArgs e)
 
 ## Cancel dropping for the dragged item
 
-To cancel dropping for the dragged item, handle the `ItemDragging` event based on the conditions of the `Action` event argument. 
+To cancel dropping for the dragged item, handle the [ItemDragging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemDragging) event based on the conditions of the [Action](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemDraggingEventArgs.html#Syncfusion_Maui_ListView_ItemDraggingEventArgs_Action) event argument. 
 
 You can cancel the dropping action for an item by setting the `Cancel` property of the `ItemDraggingEventArgs`.
 
@@ -240,7 +240,7 @@ private void ListView_ItemDragging(object sender, ItemDraggingEventArgs e)
 
 ## Reorder the underlying collection
 
-The underlying collection can be reordered directly by setting the `DragDropController.UpdateSource` property to `true`. The default value is `false`. 
+The underlying collection can be reordered directly by setting the [DragDropController.UpdateSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.DragDropController.html#Syncfusion_Maui_ListView_DragDropController_UpdateSource) property to `true`. The default value is `false`. 
 
 {% tabs %}
 {% highlight xaml hl_lines="7"%}
@@ -261,8 +261,7 @@ this.listView.DragDropController.UpdateSource = true;
 {% endhighlight %}
 {% endtabs %}
 
-You can update collection even when `
-UpdateSource` is `false`. Like, the user can decide where the dragged item should be dropped actually by handling the `ItemDragging` event with `DragAction.Drop`.
+You can update collection even when `UpdateSource` is `false`. Like, the user can decide where the dragged item should be dropped actually by handling the `ItemDragging` event with [DragAction.Drop](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.DragAction.html#Syncfusion_Maui_ListView_DragAction_Drop).
 
 {% tabs %}
 {% highlight c# hl_lines="3"%}
@@ -280,7 +279,7 @@ N> Underlying collection will not be updated when any data operation like sortin
 
 ## Delete item when dropping in particular view
 
-To delete the dragged item when dropping into a view, handle the `ItemDragging` event based on the conditions of the `Action` and `Bounds` event arguments. 
+To delete the dragged item when dropping into a view, handle the [ItemDragging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemDragging) event based on the conditions of the [Action](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemDraggingEventArgs.html#Syncfusion_Maui_ListView_ItemDraggingEventArgs_Action) and `Bounds` event arguments. 
 
 To delete the dragged item from the underlying collection when dropping into the delete icon, follow the code example. It will enable or disable whenever drag started, and dropped by the `IsVisible` property in ViewModel.
 
@@ -390,7 +389,7 @@ Download the sample from GitHub [here](https://github.com/SyncfusionExamples/how
 
 ### Adjust drag item axis
 
-To adjust the X and Y coordinates of the drag item while dragging, you can set the `CanAdjustDragItemAxis` property of the `DragDropController` class to true. By default, the Y coordinates can be adjusted if the `SfListView.Orientation` is set to `Vertical`, and the X coordinates can be adjusted if the `Orientation` is set to `Horizontal`.
+To adjust the X and Y coordinates of the drag item while dragging, you can set the [CanAdjustDragItemAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.DragDropController.html#Syncfusion_Maui_ListView_DragDropController_CanAdjustDragItemAxis) property of the [DragDropController](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.DragDropController.html) class to true. By default, the Y coordinates can be adjusted if the [SfListView.Orientation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_Orientation) is set to `Vertical`, and the X coordinates can be adjusted if the `Orientation` is set to `Horizontal`.
 
 {% tabs %}
 {% highlight c# hl_lines="7"%}
