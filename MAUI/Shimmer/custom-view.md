@@ -22,27 +22,21 @@ The `CustomView` property of the [SfShimmer](https://help.syncfusion.com/cr/maui
                     ColumnSpacing="15"
                     RowSpacing="10">
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="10" />
-                        <RowDefinition Height="10" />
-                        
                         <RowDefinition Height="Auto" />
                         <RowDefinition Height="Auto" />
-                        
+
                         <RowDefinition Height="Auto" />
                         <RowDefinition Height="Auto" />
-                        
+
                         <RowDefinition Height="Auto" />
                         <RowDefinition Height="Auto" />
-                        
+
                         <RowDefinition Height="Auto" />
                         <RowDefinition Height="Auto" />
-                        
+
                         <RowDefinition Height="Auto" />
                         <RowDefinition Height="Auto" />
-                        
-                        <RowDefinition Height="Auto" />
-                        <RowDefinition Height="Auto" />
-                        
+
                         <RowDefinition Height="Auto" />
                         <RowDefinition Height="Auto" />
                     </Grid.RowDefinitions>
@@ -52,120 +46,101 @@ The `CustomView` property of the [SfShimmer](https://help.syncfusion.com/cr/maui
                         <ColumnDefinition Width="Auto" />
                     </Grid.ColumnDefinitions>
                     
-                    <BoxView BackgroundColor="Gray"
+                    <BoxView Color="Gray"
                              Grid.Row="0"
-                             Grid.ColumnSpan="2"
-                             HorizontalOptions="Start"
-                             WidthRequest="300" />
-
-                    <BoxView BackgroundColor="Gray"
-                             Grid.Row="1"
-                             Grid.ColumnSpan="2"
-                             HorizontalOptions="Start"
-                             WidthRequest="250" />
-
-                    <BoxView BackgroundColor="Gray"
-                             Grid.Row="2"
                              Grid.ColumnSpan="2"
                              HeightRequest="10"
                              HorizontalOptions="Start"
                              VerticalOptions="Start"
                              WidthRequest="280" />
-                    
-                    <BoxView BackgroundColor="Gray"
-                             Grid.Row="3"
-                             Grid.ColumnSpan="2"
-                             HeightRequest="10"
-                             HorizontalOptions="Start"
-                             VerticalOptions="Start"
-                             WidthRequest="260" />
 
-                    <BoxView BackgroundColor="Gray"
-                             Grid.Row="5"
-                             Grid.RowSpan="8" />
-                    
-                    <BoxView BackgroundColor="Gray"
-                             Grid.Row="5"
-                             Grid.Column="1"
-                             HeightRequest="10"
-                             HorizontalOptions="Start"
-                             VerticalOptions="Start"
-                             WidthRequest="180" />
+                    <BoxView Color="Gray"
+                                Grid.Row="1"
+                                Grid.ColumnSpan="2"
+                                HeightRequest="10"
+                                HorizontalOptions="Start"
+                                VerticalOptions="Start"
+                                WidthRequest="260" />
 
-                    <BoxView BackgroundColor="Gray"
-                             Grid.Row="6"
-                             Grid.Column="1"
-                             HeightRequest="10"
-                             HorizontalOptions="Start"
-                             VerticalOptions="Start"
-                             WidthRequest="190" />
-                    
-                    <BoxView BackgroundColor="Gray"
-                             Grid.Row="7"
-                             Grid.Column="1"
-                             HeightRequest="10"
-                             HorizontalOptions="Start"
-                             VerticalOptions="Start"
-                             WidthRequest="170" />
+                    <BoxView Color="Gray"
+                                Grid.Row="2"
+                                Grid.RowSpan="8" />
 
-                    <BoxView BackgroundColor="Gray"
-                             Grid.Row="8"
-                             Grid.Column="1"
-                             HeightRequest="10"
-                             HorizontalOptions="Start"
-                             VerticalOptions="Start"
-                             WidthRequest="180" />
+                    <BoxView Color="Gray"
+                                Grid.Row="2"
+                                Grid.Column="1"
+                                HeightRequest="10"
+                                HorizontalOptions="Start"
+                                VerticalOptions="Start"
+                                WidthRequest="190" />
 
-                    <BoxView BackgroundColor="Gray"
-                             Grid.Row="9"
-                             Grid.Column="1"
-                             HeightRequest="10"
-                             HorizontalOptions="Start"
-                             VerticalOptions="Start"
-                             WidthRequest="150" />
-                        
-                    <BoxView BackgroundColor="Gray"
-                             Grid.Row="10"
-                             Grid.Column="1"
-                             HeightRequest="10"
-                             HorizontalOptions="Start"
-                             VerticalOptions="Start"
-                             WidthRequest="160" />
-                        
-                    <BoxView BackgroundColor="Gray"
-                             Grid.Row="11"
-                             Grid.Column="1"
-                             HeightRequest="10"
-                             HorizontalOptions="Start"
-                             VerticalOptions="Start"
-                             WidthRequest="175" />
-                        
-                    <BoxView BackgroundColor="Gray"
-                             Grid.Row="13"
-                             Grid.RowSpan="3"
-                             Grid.Column="1"
-                             Margin="0,5,0,0" />
-                    
-                    <BoxView BackgroundColor="Gray"
-                             Grid.Row="13"
-                             HeightRequest="10"
-                             HorizontalOptions="Start"
-                             VerticalOptions="Start"
-                             WidthRequest="150" />
-                        
-                    <BoxView BackgroundColor="Gray"
-                             Grid.Row="14"
-                             HeightRequest="10"
-                             HorizontalOptions="Start"
-                             VerticalOptions="Start"
-                             WidthRequest="160" />
-                        
-                    <BoxView BackgroundColor="Gray"
-                             Grid.Row="15"
-                             HeightRequest="10"
-                             HorizontalOptions="Start"
-                             VerticalOptions="Start"
-                             WidthRequest="175" />
+                    <BoxView Color="Gray"
+                                Grid.Row="3"
+                                Grid.Column="1"
+                                HeightRequest="10"
+                                HorizontalOptions="Start"
+                                VerticalOptions="Start"
+                                WidthRequest="190" />
+
+                    <BoxView Color="Gray"
+                                Grid.Row="4"
+                                Grid.Column="1"
+                                HeightRequest="10"
+                                HorizontalOptions="Start"
+                                VerticalOptions="Start"
+                                WidthRequest="170" />
+
+                    <BoxView Color="Gray"
+                                Grid.Row="5"
+                                Grid.Column="1"
+                                HeightRequest="10"
+                                HorizontalOptions="Start"
+                                VerticalOptions="Start"
+                                WidthRequest="190" />
+
+                    <BoxView Color="Gray"
+                                Grid.Row="6"
+                                Grid.Column="1"
+                                HeightRequest="10"
+                                HorizontalOptions="Start"
+                                VerticalOptions="Start"
+                                WidthRequest="150" />
+
+                    <BoxView Color="Gray"
+                                Grid.Row="7"
+                                Grid.Column="1"
+                                HeightRequest="10"
+                                HorizontalOptions="Start"
+                                VerticalOptions="Start"
+                                WidthRequest="160" />
+
+                    <BoxView Color="Gray"
+                                Grid.Row="8"
+                                Grid.Column="1"
+                                HeightRequest="10"
+                                HorizontalOptions="Start"
+                                VerticalOptions="Start"
+                                WidthRequest="175" />
+
+                    <BoxView Color="Gray"
+                                Grid.Row="10"
+                                Grid.RowSpan="2"
+                                Grid.Column="1"
+                                Margin="0,5,0,0" />
+
+                    <BoxView Color="Gray"
+                                Grid.Row="10"
+                                HeightRequest="10"
+                                HorizontalOptions="Start"
+                                VerticalOptions="Start"
+                                WidthRequest="160" />
+
+                    <BoxView Color="Gray"
+                                Grid.Row="11"
+                                HeightRequest="10"
+                                HorizontalOptions="Start"
+                                VerticalOptions="Start"
+                                WidthRequest="175" />
                 </Grid>
             </shimmer:SfShimmer.CustomView>
         </shimmer:SfShimmer>
@@ -175,19 +150,15 @@ The `CustomView` property of the [SfShimmer](https://help.syncfusion.com/cr/maui
 {% highlight C# %} 
 
     SfShimmer shimmer = new SfShimmer();
-    this.Content = shimmer;
-    var grid = new Grid
-       {
+        this.Content = shimmer;
+        Grid grid = new Grid
+        {
             Padding = 10,
             ColumnSpacing = 15,
             RowSpacing = 10,
             VerticalOptions = LayoutOptions.Fill,
             RowDefinitions = new RowDefinitionCollection()
             {
-                new RowDefinition { Height = 10 },
-                new RowDefinition { Height = 10 },
-                new RowDefinition { Height = GridLength.Auto },
-                new RowDefinition { Height = GridLength.Auto },
                 new RowDefinition { Height = GridLength.Auto },
                 new RowDefinition { Height = GridLength.Auto },
                 new RowDefinition { Height = GridLength.Auto },
@@ -211,48 +182,52 @@ The `CustomView` property of the [SfShimmer](https://help.syncfusion.com/cr/maui
 
         var boxView1 = new BoxView
         {
-            HorizontalOptions = LayoutOptions.Start,
             BackgroundColor = Colors.Gray,
-            WidthRequest = 300
+            HorizontalOptions = LayoutOptions.Start,
+            VerticalOptions = LayoutOptions.Start,
+            WidthRequest = 280,
+            HeightRequest = 10
         };
 
         var boxView2 = new BoxView
         {
-            HorizontalOptions = LayoutOptions.Start,
             BackgroundColor = Colors.Gray,
-            WidthRequest = 250
+            HorizontalOptions = LayoutOptions.Start,
+            VerticalOptions = LayoutOptions.Start,
+            WidthRequest = 260,
+            HeightRequest = 10
         };
 
         var boxView3 = new BoxView
         {
-            HorizontalOptions = LayoutOptions.Start,
-            VerticalOptions = LayoutOptions.Start,
             BackgroundColor = Colors.Gray,
-            HeightRequest = 10,
-            WidthRequest = 280
         };
 
         var boxView4 = new BoxView
         {
+            BackgroundColor = Colors.Gray,
             HorizontalOptions = LayoutOptions.Start,
             VerticalOptions = LayoutOptions.Start,
-            BackgroundColor = Colors.Gray,
-            WidthRequest = 260,
-            HeightRequest = 10,
+            WidthRequest = 190,
+            HeightRequest = 10
         };
 
         var boxView5 = new BoxView
         {
-            BackgroundColor = Colors.Gray
+            BackgroundColor = Colors.Gray,
+            HorizontalOptions = LayoutOptions.Start,
+            VerticalOptions = LayoutOptions.Start,
+            WidthRequest = 190,
+            HeightRequest = 10
         };
 
         var boxView6 = new BoxView
         {
-            HorizontalOptions = LayoutOptions.Start,
-            HeightRequest = 10,
             BackgroundColor = Colors.Gray,
+            HorizontalOptions = LayoutOptions.Start,
             VerticalOptions = LayoutOptions.Start,
-            WidthRequest = 180
+            WidthRequest = 170,
+            HeightRequest = 10
         };
 
         var boxView7 = new BoxView
@@ -260,85 +235,60 @@ The `CustomView` property of the [SfShimmer](https://help.syncfusion.com/cr/maui
             HorizontalOptions = LayoutOptions.Start,
             VerticalOptions = LayoutOptions.Start,
             BackgroundColor = Colors.Gray,
-            HeightRequest = 10,
-            WidthRequest = 190
+            WidthRequest = 190,
+            HeightRequest = 10
+
         };
         var boxView8 = new BoxView
         {
+            BackgroundColor = Colors.Gray,
             HorizontalOptions = LayoutOptions.Start,
             VerticalOptions = LayoutOptions.Start,
-            HeightRequest = 10,
-            BackgroundColor = Colors.Gray,
-            WidthRequest = 170
+            WidthRequest = 150,
+            HeightRequest = 10
+            
         };
 
         var boxView9 = new BoxView
         {
+            BackgroundColor = Colors.Gray,
             HorizontalOptions = LayoutOptions.Start,
             VerticalOptions = LayoutOptions.Start,
-            BackgroundColor = Colors.Gray,
-            HeightRequest = 10,
-            WidthRequest = 180
+            WidthRequest = 160,
+            HeightRequest = 10
         };
 
         var boxView10 = new BoxView
         {
+            BackgroundColor = Colors.Gray,
             HorizontalOptions = LayoutOptions.Start,
             VerticalOptions = LayoutOptions.Start,
-            BackgroundColor = Colors.Gray,
-            HeightRequest = 10,
-            WidthRequest = 150
+            WidthRequest = 175,
+            HeightRequest = 10
         };
 
         var boxView11 = new BoxView
-        {
-            HorizontalOptions = LayoutOptions.Start,
-            VerticalOptions = LayoutOptions.Start,
-            BackgroundColor = Colors.Gray,
-            HeightRequest = 10,
-            WidthRequest = 160
-        };
-
-        var boxView12 = new BoxView
-        {
-            HorizontalOptions = LayoutOptions.Start,
-            VerticalOptions = LayoutOptions.Start,
-            BackgroundColor = Colors.Gray,
-            HeightRequest = 10,
-            WidthRequest = 175
-        };
-
-        var boxView13 = new BoxView
         {
             BackgroundColor = Colors.Gray,
             Margin = new Thickness(0, 5, 0, 0)
         };
 
-        var boxView14 = new BoxView
+        var boxView12 = new BoxView
         {
+            BackgroundColor = Colors.Gray,
             HorizontalOptions = LayoutOptions.Start,
             VerticalOptions = LayoutOptions.Start,
-            BackgroundColor = Colors.Gray,
-            HeightRequest = 10,
-            WidthRequest = 150
+            WidthRequest = 160,
+            HeightRequest = 10
         };
 
-        var boxView15 = new BoxView
+        var boxView13 = new BoxView
         {
+            BackgroundColor = Colors.Gray,
             HorizontalOptions = LayoutOptions.Start,
             VerticalOptions = LayoutOptions.Start,
-            BackgroundColor = Colors.Gray,
-            HeightRequest = 10,
-            WidthRequest = 160
-        };
-
-        var boxView16 = new BoxView
-        {
-            HorizontalOptions = LayoutOptions.Start,
-            VerticalOptions = LayoutOptions.Start,
-            BackgroundColor = Colors.Gray,
-            HeightRequest = 10,
-            WidthRequest = 175
+            WidthRequest = 175,
+            HeightRequest = 10
         };
 
         grid.Add(boxView1, 0, 0);
@@ -348,36 +298,28 @@ The `CustomView` property of the [SfShimmer](https://help.syncfusion.com/cr/maui
         Grid.SetColumnSpan(boxView2, 2);
 
         grid.Add(boxView3, 0, 2);
-        Grid.SetColumnSpan(boxView3, 2);
+        Grid.SetRowSpan(boxView3, 8);
 
-        grid.Add(boxView4, 0, 3);
-        Grid.SetColumnSpan(boxView4, 2);
+        grid.Add(boxView4, 1, 2);
 
-        grid.Add(boxView5, 0, 5);
-        Grid.SetRowSpan(boxView5, 8);
+        grid.Add(boxView5, 1, 3);
 
-        grid.Add(boxView6, 1, 5);
+        grid.Add(boxView6, 1, 4);
 
-        grid.Add(boxView7, 1, 6);
+        grid.Add(boxView7, 1, 5);
 
-        grid.Add(boxView8, 1, 7);
+        grid.Add(boxView8, 1, 6);
 
-        grid.Add(boxView9, 1, 8);
+        grid.Add(boxView9, 1, 7);
 
-        grid.Add(boxView10, 1, 9);
+        grid.Add(boxView10, 1, 8);
 
         grid.Add(boxView11, 1, 10);
+        Grid.SetRowSpan(boxView11, 2);
 
-        grid.Add(boxView12, 1, 11);
+        grid.Add(boxView12, 0, 10);
 
-        grid.Add(boxView13, 1, 13);
-        Grid.SetRowSpan(boxView13, 3);
-
-        grid.Add(boxView14, 0, 13);
-
-        grid.Add(boxView15, 0, 14);
-
-        grid.Add(boxView16, 0, 15);
+        grid.Add(boxView13, 0, 11);
 
         shimmer.CustomView = grid;
 
