@@ -46,7 +46,7 @@ The `CustomView` property of the [SfShimmer](https://help.syncfusion.com/cr/maui
                         <ColumnDefinition Width="Auto" />
                     </Grid.ColumnDefinitions>
                     
-                    <BoxView Color="Gray"
+                    <BoxView BackgroundColor="Gray"
                              Grid.Row="0"
                              Grid.ColumnSpan="2"
                              HeightRequest="10"
@@ -54,7 +54,7 @@ The `CustomView` property of the [SfShimmer](https://help.syncfusion.com/cr/maui
                              VerticalOptions="Start"
                              WidthRequest="280" />
 
-                    <BoxView Color="Gray"
+                    <BoxView BackgroundColor="Gray"
                                 Grid.Row="1"
                                 Grid.ColumnSpan="2"
                                 HeightRequest="10"
@@ -62,11 +62,11 @@ The `CustomView` property of the [SfShimmer](https://help.syncfusion.com/cr/maui
                                 VerticalOptions="Start"
                                 WidthRequest="260" />
 
-                    <BoxView Color="Gray"
+                    <BoxView BackgroundColor="Gray"
                                 Grid.Row="2"
                                 Grid.RowSpan="8" />
 
-                    <BoxView Color="Gray"
+                    <BoxView BackgroundColor="Gray"
                                 Grid.Row="2"
                                 Grid.Column="1"
                                 HeightRequest="10"
@@ -74,7 +74,7 @@ The `CustomView` property of the [SfShimmer](https://help.syncfusion.com/cr/maui
                                 VerticalOptions="Start"
                                 WidthRequest="190" />
 
-                    <BoxView Color="Gray"
+                    <BoxView BackgroundColor="Gray"
                                 Grid.Row="3"
                                 Grid.Column="1"
                                 HeightRequest="10"
@@ -82,7 +82,7 @@ The `CustomView` property of the [SfShimmer](https://help.syncfusion.com/cr/maui
                                 VerticalOptions="Start"
                                 WidthRequest="190" />
 
-                    <BoxView Color="Gray"
+                    <BoxView BackgroundColor="Gray"
                                 Grid.Row="4"
                                 Grid.Column="1"
                                 HeightRequest="10"
@@ -90,7 +90,7 @@ The `CustomView` property of the [SfShimmer](https://help.syncfusion.com/cr/maui
                                 VerticalOptions="Start"
                                 WidthRequest="170" />
 
-                    <BoxView Color="Gray"
+                    <BoxView BackgroundColor="Gray"
                                 Grid.Row="5"
                                 Grid.Column="1"
                                 HeightRequest="10"
@@ -98,7 +98,7 @@ The `CustomView` property of the [SfShimmer](https://help.syncfusion.com/cr/maui
                                 VerticalOptions="Start"
                                 WidthRequest="190" />
 
-                    <BoxView Color="Gray"
+                    <BoxView BackgroundColor="Gray"
                                 Grid.Row="6"
                                 Grid.Column="1"
                                 HeightRequest="10"
@@ -106,7 +106,7 @@ The `CustomView` property of the [SfShimmer](https://help.syncfusion.com/cr/maui
                                 VerticalOptions="Start"
                                 WidthRequest="150" />
 
-                    <BoxView Color="Gray"
+                    <BoxView BackgroundColor="Gray"
                                 Grid.Row="7"
                                 Grid.Column="1"
                                 HeightRequest="10"
@@ -114,7 +114,7 @@ The `CustomView` property of the [SfShimmer](https://help.syncfusion.com/cr/maui
                                 VerticalOptions="Start"
                                 WidthRequest="160" />
 
-                    <BoxView Color="Gray"
+                    <BoxView BackgroundColor="Gray"
                                 Grid.Row="8"
                                 Grid.Column="1"
                                 HeightRequest="10"
@@ -122,20 +122,20 @@ The `CustomView` property of the [SfShimmer](https://help.syncfusion.com/cr/maui
                                 VerticalOptions="Start"
                                 WidthRequest="175" />
 
-                    <BoxView Color="Gray"
+                    <BoxView BackgroundColor="Gray"
                                 Grid.Row="10"
                                 Grid.RowSpan="2"
                                 Grid.Column="1"
                                 Margin="0,5,0,0" />
 
-                    <BoxView Color="Gray"
+                    <BoxView BackgroundColor="Gray"
                                 Grid.Row="10"
                                 HeightRequest="10"
                                 HorizontalOptions="Start"
                                 VerticalOptions="Start"
                                 WidthRequest="160" />
 
-                    <BoxView Color="Gray"
+                    <BoxView BackgroundColor="Gray"
                                 Grid.Row="11"
                                 HeightRequest="10"
                                 HorizontalOptions="Start"
