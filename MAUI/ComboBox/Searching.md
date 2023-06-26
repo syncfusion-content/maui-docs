@@ -217,6 +217,31 @@ public class StringLengthSearchingBehavior : IComboBoxSearchBehavior
 </editors:SfComboBox>
 
 {% endhighlight %}
+
+{% highlight C# %}
+
+using Syncfusion.Maui.Inputs;
+
+SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
+StringLengthSearchingBehavior stringLengthSearch = new StringLengthSearchingBehavior();
+StackLayout stack = new StackLayout();
+SfComboBox comboBox;
+comboBox = new SfComboBox
+{
+    WidthRequest = 200,
+    HeightRequest = 50,
+    IsEditable = true,
+    SearchBehavior = stringLengthSearch,
+    IsFilteringEnabled = true,
+    ItemsSource = socialMediaViewModel.SocialMedias,
+    TextMemberPath = "CityName",
+    DisplayMemberPath = "CityName",
+    BindingContext = cityViewModel
+};
+stack.Children.Add(comboBox);
+this.Content = stack;
+
+{% endhighlight %}
 {% endtabs %}
 
 For e.g. After typing `9` in selection box, the first item that fully matches the typed length will be highlighted.
