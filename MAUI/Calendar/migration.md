@@ -1126,5 +1126,4 @@ this.Content = calendar;
 
 ## Upcoming Features
 
-* Cell template support for month, year, decade and century views.
 * Multi range selection support.
