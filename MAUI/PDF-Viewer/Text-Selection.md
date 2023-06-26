@@ -24,6 +24,8 @@ In mobile platforms such as Android and iOS, the long press text selection featu
 3.	The word is highlighted and there are selection handles that appear at the start and end of the selection.
 4.	You can move the selection handles to modify or extend the text selection.
 
+![Select text from PDF document using touch.](Images/Text-Selection/text_selection.gif)
+
 ## Copy the selected text
 
 After you have selected the desired text, click the <b>Copy</b> option that appears to copy it to the clipboard.  The selected text is now copied to the clipboard and ready for pasting into other applications.
