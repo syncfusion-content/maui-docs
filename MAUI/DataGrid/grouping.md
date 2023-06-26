@@ -126,6 +126,7 @@ To set a custom grouping converter for the group description that is added to gr
         </syncfusion:SfDataGrid>
     </ContentPage> 
 {% endhighlight %}
+
 {% highlight c# %}
 dataGrid.GroupColumnDescriptions.Add (new GroupColumnDescription () {
     ColumnName = "Freight",
@@ -136,6 +137,7 @@ dataGrid.GroupColumnDescriptions.Add (new GroupColumnDescription () {
 
 The following code example illustrates the converter used for applying custom grouping logic.
 
+{% tabs %}
 {% highlight c# %}
 public class GroupConverter : IValueConverter
 {
@@ -158,6 +160,7 @@ public class GroupConverter : IValueConverter
     }
 }
 {% endhighlight %}
+{% endtabs %}
 
 ### Using KeySelector
 
@@ -238,6 +241,7 @@ In custom grouping, you can sort all the inner records of each group by setting 
     </ContentPage>
 
 {% endhighlight %}
+
 {% highlight c# %}
 
 datagrid.GroupColumnDescriptions.Add(new GroupColumnDescription()
@@ -371,6 +375,7 @@ By default, column grouping occurs based on the value in the underlying collecti
                                    GroupMode="Display"
                                    Format="#" />
 {% endhighlight %}
+
 {% highlight c# %}
 DataGridTextColumn orderID = new DataGridTextColumn();
 orderID.MappingName = "OrderID";

@@ -270,7 +270,7 @@ Currently working on delivering brand-new .NET MAUI controls that can be used in
 			<a href="https://help.syncfusion.com/xamarin/masked-entry/getting-started">SfMaskedEdit</a><br/>
 		</td>
 		<td rowspan="1" valign="top">
-			<a href="https://help.syncfusion.com/maui/masked-entry/getting-started">SfMaskedEntry</a><br/>
+			<a href="https://help.syncfusion.com/maui/masked-entry/migration">SfMaskedEntry</a><br/>
 		</td>
 	</tr>
 	<tr>
@@ -294,7 +294,7 @@ Currently working on delivering brand-new .NET MAUI controls that can be used in
 			<a href="https://help.syncfusion.com/xamarin/chips/getting-started">SfChips</a><br/>
 		</td>
 		<td rowspan="1" valign="top">
-			Volume 2 2023<br/>
+			<a href="https://help.syncfusion.com/maui/chips/migration">SfChips</a><br/>
 		</td>
 	</tr>
 	<tr>
@@ -302,7 +302,7 @@ Currently working on delivering brand-new .NET MAUI controls that can be used in
 			<a href="https://help.syncfusion.com/xamarin/image-editor/getting-started">SfImageEditor</a><br/>
 		</td>
 		<td rowspan="1" valign="top">
-			Volume 2 2023<br/>
+			<a href="https://help.syncfusion.com/maui/imageeditor/migration">SfImageEditor</a><br/>
 		</td>
 	</tr>
 	<tr>
@@ -310,7 +310,31 @@ Currently working on delivering brand-new .NET MAUI controls that can be used in
 			<a href="https://help.syncfusion.com/xamarin/numeric-entry/getting-started">SfNumericTextBox</a><br/>
 		</td>
 		<td rowspan="1" valign="top">
-			Volume 2 2023<br/>
+			<a href="https://help.syncfusion.com/maui/numericentry/migration">SfNumericEntry</a><br/>
+		</td>
+	</tr>
+	<tr>
+	    <td rowspan="1" valign="top">
+			<a href="https://help.syncfusion.com/xamarin/accordion/getting-started">SfAccordion</a><br/>
+		</td>
+		<td rowspan="1" valign="top">
+			<a href="https://help.syncfusion.com/maui/accordion/migration">SfAccordion</a><br/>
+		</td>
+	</tr>
+	<tr>
+	    <td rowspan="1" valign="top">
+			<a href="https://help.syncfusion.com/xamarin/expander/getting-started">SfExpander</a><br/>
+		</td>
+		<td rowspan="1" valign="top">
+			<a href="https://help.syncfusion.com/maui/expander/migration">SfExpander</a><br/>
+		</td>
+	</tr>
+	<tr>
+	    <td rowspan="1" valign="top">
+			<a href="https://help.syncfusion.com/xamarin/numericupdown/getting-started">SfNumericUpDown</a><br/>
+		</td>
+		<td rowspan="1" valign="top">
+			<a href="https://help.syncfusion.com/maui/numericentry/migration">SfNumericEntry</a><br/>
 		</td>
 	</tr>
 	<tr>
@@ -403,14 +427,6 @@ Currently working on delivering brand-new .NET MAUI controls that can be used in
 	</tr>
 	<tr>
 	    <td rowspan="1" valign="top">
-			<a href="https://help.syncfusion.com/xamarin/accordion/getting-started">SfAccordion</a><br/>
-		</td>
-		<td rowspan="1" valign="top">
-			Underway<br/>
-		</td>
-	</tr>
-	<tr>
-	    <td rowspan="1" valign="top">
 			<a href="https://help.syncfusion.com/xamarin/carousel-view/getting-started">SfCarousel</a><br/>
 		</td>
 		<td rowspan="1" valign="top">
@@ -443,14 +459,6 @@ Currently working on delivering brand-new .NET MAUI controls that can be used in
 	</tr>
 	<tr>
 	    <td rowspan="1" valign="top">
-			<a href="https://help.syncfusion.com/xamarin/expander/getting-started">SfExpander</a><br/>
-		</td>
-		<td rowspan="1" valign="top">
-			Underway<br/>
-		</td>
-	</tr>
-	<tr>
-	    <td rowspan="1" valign="top">
 			<a href="https://help.syncfusion.com/xamarin/kanban-board/getting-started">SfKanban</a><br/>
 		</td>
 		<td rowspan="1" valign="top">
@@ -460,14 +468,6 @@ Currently working on delivering brand-new .NET MAUI controls that can be used in
 	<tr>
 	    <td rowspan="1" valign="top">
 			<a href="https://help.syncfusion.com/xamarin/navigation-drawer/getting-started">SfNavigationDrawer</a><br/>
-		</td>
-		<td rowspan="1" valign="top">
-			Underway<br/>
-		</td>
-	</tr>
-	<tr>
-	    <td rowspan="1" valign="top">
-			<a href="https://help.syncfusion.com/xamarin/numericupdown/getting-started">SfNumericUpDown</a><br/>
 		</td>
 		<td rowspan="1" valign="top">
 			Underway<br/>

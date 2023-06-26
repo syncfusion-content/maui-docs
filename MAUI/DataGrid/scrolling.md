@@ -52,7 +52,7 @@ this.dataGrid.ScrollToColumnIndex(4, true, ScrollToPosition.MakeVisible);
 
 ## Scrollbar Visibility
 
-The visibility of the horizontal and vertical scrollbars can be customized using the [SfDataGrid.HorizontalScrollBarVisibility]() and [SfDataGrid.VerticalScrollBarVisibility]() properties. By default, the visibility of both the horizontal and vertical scrollbars is set to ScrollBarVisibility.Default.
+The visibility of the horizontal and vertical scrollbars can be customized using the [SfDataGrid.HorizontalScrollBarVisibility](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_HorizontalScrollBarVisibilityProperty) and [SfDataGrid.VerticalScrollBarVisibility](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_VerticalScrollBarVisibilityProperty) properties. By default, the visibility of both the horizontal and vertical scrollbars is set to `ScrollBarVisibility.Default`.
 
 The following code snippets demonstrate how to hide the vertical and horizontal scrollbars:
 
