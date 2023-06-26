@@ -30,16 +30,20 @@ N> `DynamicSizeMode` property from the Xamarin SfAccordion is not moved to the M
 <tr>
 <th>Xamarin SfAccordion</th>
 <th>.NET MAUI SfAccordion</th>
-<th>Description</th></tr>
+<th>Description</th>
+</tr>
+
 <tr>
-<td>HeaderBackgroundColor</td>
-<td>HeaderBackground</td>
-<td>Gets or sets the background color of the header in the Accordion control.</td></tr>
+<td>{{'[HeaderBackgroundColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Accordion.AccordionItem.html#Syncfusion_XForms_Accordion_AccordionItem_HeaderBackgroundColor)'| markdownify }}</td>
+<td>{{'[HeaderBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.AccordionItem.html#Syncfusion_Maui_Accordion_AccordionItem_HeaderBackground)'| markdownify }}</td>
+<td>Gets or sets the background color of the header in the Accordion control.</td>
+</tr>
+
 <tr>
-<td>IconColor</td>
-<td>HeaderIconColor</td>
-<td>Gets or sets the color of the header icon in the Accordion control.</td></tr>
-</table>
+<td>{{'[IconColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Accordion.AccordionItem.html#Syncfusion_XForms_Accordion_AccordionItem_IconColor)'| markdownify }}</td>
+<td>{{'[HeaderIconColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.AccordionItem.html#Syncfusion_Maui_Accordion_AccordionItem_HeaderIconColor)'| markdownify }}</td>
+<td>Gets or sets the color of the header icon in the Accordion control.</td>
+</tr>
 
 ## Enums
 
@@ -47,13 +51,18 @@ N> `DynamicSizeMode` property from the Xamarin SfAccordion is not moved to the M
 <tr>
 <th>Xamarin SfAccordion</th>
 <th>.NET MAUI SfAccordion</th>
-<th>Description</th></tr>
+<th>Description</th>
+</tr>
+
 <tr>
-<td>AutoScrollPosition</td>
-<td>AccordionAutoScrollPosition</td>
-<td>Specifies the auto-scroll positions for the Accordion control.</td></tr>
+<td>{{'[AutoScrollPosition](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Accordion.AutoScrollPosition.html)'| markdownify }}</td>
+<td>{{'[AccordionAutoScrollPosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.AccordionAutoScrollPosition.html)'| markdownify }}</td>
+<td>Specifies the auto-scroll positions for the Accordion control.</td>
+</tr>
+
 <tr>
-<td>ExpandMode</td>
-<td>AccordionExpandMode</td>
-<td>Specifies the expand mode for the items in the Accordion control.</td></tr>
+<td>{{'[ExpandMode](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Accordion.ExpandMode.html)'| markdownify }}</td>
+<td>{{'[AccordionExpandMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.AccordionExpandMode.html)'| markdownify }}</td>
+<td>Specifies the expand mode for the items in the Accordion control.</td>
+</tr>
 </table>

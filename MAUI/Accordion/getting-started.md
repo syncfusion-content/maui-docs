@@ -81,7 +81,7 @@ namespace GettingStarted
 
 ## Defining accordion items 
 
-The `SfAccordion` is a layout control with a vertically stacked list of accordion `Items` that comprise of the `Header` and `Content`. You can load any view in the `Header` and `Content` sections. Users can expand or collapse the content view by tapping `Header`. 
+The [SfAccordion](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.SfAccordion.html) is a layout control with a vertically stacked list of accordion [Items](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.SfAccordion.html#Syncfusion_Maui_Accordion_SfAccordion_Items) that comprise of the [Header](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.AccordionItem.html#Syncfusion_Maui_Accordion_AccordionItem_Header) and [Content](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.AccordionItem.html#Syncfusion_Maui_Accordion_AccordionItem_Content). You can load any view in the `Header` and `Content` sections. Users can expand or collapse the content view by tapping `Header`. 
 
 Here, the Grid is loaded in the Header and Content of accordion items.
 
@@ -170,7 +170,7 @@ N> When adding the template control inside the `StackLayout` or `Grid` with a he
 
 ## Animation duration
 
-The `SfAccordion` allows you to customize the expanding and collapsing duration of accordion items by using the `AnimationDuration` property. By default, the animation duration is set to `200 milliseconds`. 
+The `SfAccordion` allows you to customize the expanding and collapsing duration of accordion items by using the [AnimationDuration](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.SfAccordion.html#Syncfusion_Maui_Accordion_SfAccordion_AnimationDuration) property. By default, the animation duration is set to `200 milliseconds`. 
 
 {% tabs %}
 {% highlight xaml hl_lines="2" %}
@@ -184,7 +184,7 @@ The `SfAccordion` allows you to customize the expanding and collapsing duration 
 
 ## Animation easing
 
-You can customize the rate of change of a parameter over time or the animation style of an accordion item by using the `AnimationEasing` property. By default, the animation easing is set to `Linear`.  
+You can customize the rate of change of a parameter over time or the animation style of an accordion item by using the [AnimationEasing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.SfAccordion.html#Syncfusion_Maui_Accordion_SfAccordion_AnimationEasing) property. By default, the animation easing is set to `Linear`.  
 
 {% tabs %}
 {% highlight xaml hl_lines="2" %}
@@ -198,7 +198,7 @@ You can customize the rate of change of a parameter over time or the animation s
 
 ## Auto scroll position
 
-The `SfAccordion` allows you to customize the scroll position of the expanded accordion item using the `AutoScrollPosition` property. By default, the auto-scroll position is set to `MakeVisible`.  
+The `SfAccordion` allows you to customize the scroll position of the expanded accordion item using the [AutoScrollPosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.SfAccordion.html#Syncfusion_Maui_Accordion_SfAccordion_AutoScrollPosition) property. By default, the auto-scroll position is set to `MakeVisible`.  
 
 {% tabs %}
 {% highlight xaml %}
@@ -236,7 +236,7 @@ private void Button_Clicked(object sender, EventArgs e)
 
 ## Expand mode
 
-You can expand single or multiple items using the `ExpandMode` property. By default, the expanded mode is set to `Single`.  
+You can expand single or multiple items using the [ExpandMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.SfAccordion.html#Syncfusion_Maui_Accordion_SfAccordion_ExpandMode) property. By default, the expanded mode is set to `Single`.  
 
 {% tabs %}
 {% highlight xaml %}
@@ -250,7 +250,7 @@ You can expand single or multiple items using the `ExpandMode` property. By defa
 
 ## Item spacing
 
-The `SfAccordion` allows you to customize the vertical spacing between the accordion items by using the `ItemSpacing` property. 
+The `SfAccordion` allows you to customize the vertical spacing between the accordion items by using the [ItemSpacing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.SfAccordion.html#Syncfusion_Maui_Accordion_SfAccordion_ItemSpacing) property. 
 
 {% tabs %}
 {% highlight xaml %}
@@ -266,17 +266,17 @@ The `SfAccordion` allows you to customize the vertical spacing between the accor
 
 There are four built-in events in the SfAccordion control namely:
 
-* Expanding
-* Expanded
-* Collapsing
-* Collapsed
+* [Expanding](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Accordion.SfAccordion.html#Syncfusion_XForms_Accordion_SfAccordion_Expanding)
+* [Expanded](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Accordion.SfAccordion.html#Syncfusion_XForms_Accordion_SfAccordion_Expanded)
+* [Collapsing](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Accordion.SfAccordion.html#Syncfusion_XForms_Accordion_SfAccordion_Collapsing)
+* [Collapsed](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Accordion.SfAccordion.html#Syncfusion_XForms_Accordion_SfAccordion_Collapsed)
 
 ### Expanding Event
 
-The `Expanding` event will be triggered when the accordion item is being expanded. It can cancel expansion with `ExpandingAndCollapsingEventArgs` that contains the following property:
+The [Expanding](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Accordion.SfAccordion.html#Syncfusion_XForms_Accordion_SfAccordion_Expanding) event will be triggered when the accordion item is being expanded. It can cancel expansion with [ExpandingAndCollapsingEventArgs](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Accordion.ExpandingAndCollapsingEventArgs.html) that contains the following property:
 
 * `Cancel`:Indicates that the expansion or collapse action should be cancelled.
-* `Index`:Gets the index of the current expanding accordion item.
+* [Index](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.ExpandingAndCollapsingEventArgs.html#Syncfusion_Maui_Accordion_ExpandingAndCollapsingEventArgs_Index):Gets the index of the current expanding accordion item.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -303,7 +303,7 @@ private void SfAccordion_Expanding(object sender, Syncfusion.Maui.Accordion.Expa
 
 ### Expanded Event
 
-The `Expanded` event is triggered when the accordion item is fully expanded. You can execute your own code when this event occurs.
+The [Expanded](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Accordion.SfAccordion.html#Syncfusion_XForms_Accordion_SfAccordion_Expanded) event is triggered when the accordion item is fully expanded. You can execute your own code when this event occurs.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -328,10 +328,10 @@ private void SfAccordion_Expanded(object sender, Syncfusion.Maui.Accordion.Expan
 
 ### Collapsing Event
 
-The `Collapsing` event will be triggered when the expander control is being collapsed.It can cancel collapsing with `ExpandingAndCollapsingEventArgs` that contains the following property:
+The [Collapsing](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Accordion.SfAccordion.html#Syncfusion_XForms_Accordion_SfAccordion_Collapsing) event will be triggered when the expander control is being collapsed.It can cancel collapsing with [ExpandingAndCollapsingEventArgs](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Accordion.ExpandingAndCollapsingEventArgs.html) that contains the following property:
 
 * `Cancel`: Indicates that the expansion or collapse action should be cancelled.
-* `Index`:Gets the index of the current collapsing accordion item.
+* [Index](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.ExpandingAndCollapsingEventArgs.html#Syncfusion_Maui_Accordion_ExpandingAndCollapsingEventArgs_Index):Gets the index of the current collapsing accordion item.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -358,7 +358,7 @@ private void SfAccordion_Collapsing(object sender, Syncfusion.Maui.Accordion.Exp
 
 ### Collapsed Event 
 
-The `Collapsed` event is triggered when the accordion item is collapsed. You can execute your own code when this event occurs.
+The [Collapsed](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Accordion.SfAccordion.html#Syncfusion_XForms_Accordion_SfAccordion_Collapsed) event is triggered when the accordion item is collapsed. You can execute your own code when this event occurs.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
