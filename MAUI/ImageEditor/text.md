@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Text Annotation in .NET MAUI ImageEditor control | Syncfusion
-description: Learn about the text annotation feature of Syncfusion .NET MAUI ImageEditor(SfImageEditor) control.
+title: Text Annotation in .NET MAUI Image Editor control | Syncfusion
+description: Learn about the text annotation feature of Syncfusion .NET MAUI Image Editor(SfImageEditor) control.
 platform: .NET MAUI
 control: SfImageEditor
 documentation: ug
@@ -82,7 +82,7 @@ N> This removes shape and pen annotations as well.
 {% endhighlight %}
 {% endtabs %}
 
-## AnnotationSelected event
+## Annotation selected event
 
 This [`AnnotationSelected`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_AnnotationSelected) event occurs when the annotation is selected.
 
@@ -133,14 +133,24 @@ Add a text on image loading using the [`Imageloaded`](https://help.syncfusion.co
 
 {% endtabs %}
 
-## Add text with manual bounds
+### Add text with manual bounds
 
-The text can be added with user-defined view bounds. The [`Bounds`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorAnnotationSettings.html#Syncfusion_Maui_ImageEditor_ImageEditorAnnotationSettings_Bounds) are treated as ratio values of image width and height, so you have to specify bound's rectangle values in the range of 0 to 1
+The text can be added with user-defined view bounds. The [`Bounds`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorAnnotationSettings.html#Syncfusion_Maui_ImageEditor_ImageEditorAnnotationSettings_Bounds) are treated as ratio values of image width and height, so you have to specify bound's rectangle values in the range of 0 to 1.
 
 {% tabs %}
+
+{% highlight xaml tabtitle="XAML" %}
+
+    <imageEditor:SfImageEditor x:Name="imageEditor" Source="image.png" ImageLoaded = "OnImageLoaded" />
+
+{% endhighlight %}
+
 {% highlight C# tabtitle="C#" %}
 
-   imageEditor.AddText("Good morning", new ImageEditorTextSettings() { Bounds = new Rect(0.1, 0.1, 0.5, 0.5) });
+    private void OnImageLoaded(object sender, EventArgs e)
+    {
+        imageEditor.AddText("Good morning", new ImageEditorTextSettings() { Bounds = new Rect(0.1, 0.1, 0.5, 0.5) });
+    }
 
 {% endhighlight %}
 {% endtabs %}

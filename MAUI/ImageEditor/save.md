@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Image save in .NET MAUI ImageEditor control | Syncfusion
+title: Save image .NET MAUI ImageEditor control | Syncfusion
 description: Learn about save support in the Syncfusion .NET MAUI ImageEditor(SfImageEditor) control and more.
 platform: .NET MAUI
 control: SfImageEditor
 documentation: ug
 ---
 
-# Save in .NET MAUI ImageEditor (SfImageEditor)
+# Save image using .NET MAUI Image Editor (SfImageEditor)
 
 The Image Editor control in .NET MAUI allows you to save the edited image as PNG and JPEG.
 
@@ -78,11 +78,11 @@ N> For android, you should include permission in AndroidManifest.xml file. Pleas
 {% endhighlight %}
 {% endtabs %}
 
-## Save events
+## Image save action events
 
 The Image Editor has events when performing the save operation, such as [`ImageSaving`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_ImageSaving) and [`ImageSaved`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_ImageSaved).
 
-## ImageSaving
+### Image saving event
 
 This [`ImageSaving`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_ImageSaving) event occurs before saving the image.
 
@@ -155,7 +155,7 @@ This [`ImageSaving`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEd
 
 {% endtabs %}
 
-## ImageSaved
+### Image saved event
 
 The [`ImageSaved`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_ImageSaved) event occurs after the image has been saved. To get the location of the saved image, use the [`Location`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageSavedEventArgs.html#Syncfusion_Maui_ImageEditor_ImageSavedEventArgs_Location) argument as shown in the following code.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Shape Annotation in .NET MAUI ImageEditor control | Syncfusion
-description: Learn about the shape annotation feature of Syncfusion .NET MAUI ImageEditor(SfImageEditor) control.
+title: Shape Annotations in .NET MAUI ImageEditor control | Syncfusion
+description: Learn about the shape annotations feature of Syncfusion .NET MAUI ImageEditor(SfImageEditor) control.
 platform: .NET MAUI
 control: SfImageEditor
 documentation: ug
 ---
 
-# Shape Annotation in .NET MAUI ImageEditor (SfImageEditor)
+# Shape Annotations in .NET MAUI ImageEditor (SfImageEditor)
 
 The image editor control allows you to add various shapes with customizable settings.
 
@@ -88,7 +88,7 @@ N> It will remove text and pen annotations as well.
 {% endhighlight %}
 {% endtabs %}
 
-## AnnotationSelected event
+## Annotation selected event
 
 The [`AnnotationSelected`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_AnnotationSelected) event occurs when an annotation is selected.
 
@@ -139,19 +139,29 @@ Annotate a shape on image loading using the [`Imageloaded`](https://help.syncfus
 
 {% endtabs %}
 
-## Add shape with manual bounds
+### Add shape with manual bounds
 
 Shapes can be added by user-defined view bounds. The [`Bounds`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorAnnotationSettings.html#Syncfusion_Maui_ImageEditor_ImageEditorAnnotationSettings_Bounds) are treated as ratio values of image width and height, so you have to specify bounds rectangle values in the range of 0.1
-
 {% tabs %}
-{% highlight C# tabtitle="C#" %}
 
-   imageEditor.AddShape(AnnotationShape.Arrow, new ImageEditorShapeSettings() 
-   { 
-    Bounds=new Rect(0.1,0.1,0.5,0.5)
-   });
+{% highlight xaml tabtitle="XAML" %}
+
+    <imageEditor:SfImageEditor x:Name="imageEditor" Source="image.png" ImageLoaded = "OnImageLoaded" />
 
 {% endhighlight %}
+
+{% highlight C# tabtitle="C#" %}
+
+    private void OnImageLoaded(object sender, EventArgs e)
+    {
+        imageEditor.AddShape(AnnotationShape.Arrow, new ImageEditorShapeSettings()
+        {
+            Bounds = new Rect(0.1, 0.1, 0.5, 0.5)
+        });
+    }
+
+{% endhighlight %}
+
 {% endtabs %}
 
 ## Restrict shape drag and resize
@@ -178,7 +188,7 @@ To restrict the resize action on a shape, set the [`AllowResize`](https://help.s
 
 ## Freehand Draw
 
-The image editor control allows you to create freehand drawings with customizable settings. The [`AddShape`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_AddShape_Syncfusion_Maui_ImageEditor_AnnotationShape_Syncfusion_Maui_ImageEditor_ImageEditorShapeSettings_) method enables the canvas view, in which you can draw objects.
+The image editor control allows you to create freehand drawings such as signature, pen drawing with customizable settings. The [`AddShape`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_AddShape_Syncfusion_Maui_ImageEditor_AnnotationShape_Syncfusion_Maui_ImageEditor_ImageEditorShapeSettings_) method enables the canvas view, in which you can draw objects.
 
 {% tabs %}
 {% highlight C# tabtitle="C#" %}
@@ -188,7 +198,7 @@ The image editor control allows you to create freehand drawings with customizabl
 {% endhighlight %}
 {% endtabs %}
 
-## Customize the draw settings
+## Customize the pen drawing settings
 
 *  [`StrokeThickness`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorShapeSettings.html#Syncfusion_Maui_ImageEditor_ImageEditorShapeSettings_StrokeThickness) - Specifies the stroke width of the drawing pen.
 *  [`Color`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorShapeSettings.html#Syncfusion_Maui_ImageEditor_ImageEditorShapeSettings_Color) - Specifies the stroke color of the drawing pen.
