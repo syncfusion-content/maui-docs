@@ -470,7 +470,7 @@ Applicable for crop view selection, shape and text annotation selection.
 </tr>
 
 <tr>
-<td>CancelEdits</td>
+<td>Nil</td>
 <td>{{'[CancelEdits](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_CancelEdits)'| markdownify }}</td>
 <td>Method to cancel the editing actions.</td>
 </tr>
