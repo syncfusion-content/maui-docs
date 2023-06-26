@@ -79,18 +79,8 @@ public class EmployeeViewModel : INotifyPropertyChanged
 
     public ObservableCollection<Employee> Employees
     {
-        get
-        {
-
-         return employees;
-
-        }
-        set
-        {
-            employees = value;
-            OnPropertyChanged(nameof(Employees));
-        }
-
+        get { return employees; }
+        set { employees = value; OnPropertyChanged(nameof(Employees)); }
     }
 
     private string result;
@@ -127,7 +117,7 @@ public class EmployeeViewModel : INotifyPropertyChanged
 
 Allows users to select a single chip from a group of items. Selecting a chip will automatically deselect the previously selected chips. 
 
-Here, we should add visual states to set ChipType to Choice.
+Here, Add visual states to set ChipType to Choice.
 
 The following code illustrates how to get choice typed ChipGroup.
 
@@ -164,41 +154,35 @@ The following code illustrates how to get choice typed ChipGroup.
 
 using Syncfusion.Maui.Core;
 
-public MainPage()
-	{
-		InitializeComponent();
+    SfChipGroup chipGroup = new SfChipGroup();
+    this.BindingContext = new ViewModel();
+    chipGroup.SetBinding(SfChipGroup.ItemsSourceProperty, "Employees");
+    chipGroup.DisplayMemberPath = "Name";
+    chipGroup.ChipType = SfChipsType.Choice;
 
-        SfChipGroup chipGroup = new SfChipGroup();
-        this.BindingContext = new ViewModel();
-        chipGroup.SetBinding(SfChipGroup.ItemsSourceProperty, "Employees");
-        chipGroup.DisplayMemberPath = "Name";
-        chipGroup.ChipType = SfChipsType.Choice;
+    VisualStateGroupList visualStateGroupList = new VisualStateGroupList();
+    VisualState normalState = new VisualState() { Name="Normal"};
 
-        VisualStateGroupList visualStateGroupList = new VisualStateGroupList();
-        VisualState normalState = new VisualState() { Name="Normal"};
+    VisualStateGroup commonStateGroup = new VisualStateGroup();
+    if (sfChipGroup.ChipType == SfChipsType.Choice)
+    {
+        
+        normalState.Setters.Add(new Setter { Property = SfChipGroup.ChipTextColorProperty, Value = Colors.Black });
+        normalState.Setters.Add(new Setter { Property = SfChipGroup.ChipBackgroundProperty, Value = Colors.White });
+    }
 
-        VisualStateGroup commonStateGroup = new VisualStateGroup();
-        if (sfChipGroup.ChipType == SfChipsType.Choice)
-        {
-            
-            normalState.Setters.Add(new Setter { Property = SfChipGroup.ChipTextColorProperty, Value = Colors.Black });
-            normalState.Setters.Add(new Setter { Property = SfChipGroup.ChipBackgroundProperty, Value = Colors.White });
-        }
+    VisualState selectedState = new VisualState
+    {
+        Name = "Selected"
+    };
+    selectedState.Setters.Add(new Setter { Property = SfChipGroup.ChipTextColorProperty, Value = Colors.Green });
+    selectedState.Setters.Add(new Setter { Property = SfChipGroup.ChipBackgroundProperty, Value = Colors.Violet });
 
-        VisualState selectedState = new VisualState
-        {
-            Name = "Selected"
-        };
-        selectedState.Setters.Add(new Setter { Property = SfChipGroup.ChipTextColorProperty, Value = Colors.Green });
-        selectedState.Setters.Add(new Setter { Property = SfChipGroup.ChipBackgroundProperty, Value = Colors.Violet });
+    commonStateGroup.States.Add(normalState);
+    commonStateGroup.States.Add(selectedState);
+    visualStateGroupList.Add(commonStateGroup);
 
-        commonStateGroup.States.Add(normalState);
-        commonStateGroup.States.Add(selectedState);
-        visualStateGroupList.Add(commonStateGroup);
-
-        VisualStateManager.SetVisualStateGroups(sfChipGroup, visualStateGroupList);
-
-        }
+    VisualStateManager.SetVisualStateGroups(sfChipGroup, visualStateGroupList);
 
 {% endhighlight %}
 
@@ -210,9 +194,7 @@ public MainPage()
 
 public class Employee
 {
-
     public string Name { get; set; }
-
 }
 
 [ViewModel]
@@ -227,12 +209,7 @@ public class EmployeeViewModel : INotifyPropertyChanged
     public ObservableCollection<Employee> Employees
     {
         get { return employees; }
-        set
-        {
-            employees = value;
-            OnPropertyChanged(nameof(Employees));
-        }
-
+        set { employees = value; OnPropertyChanged(nameof(Employees));}
     }
 
     public void OnPropertyChanged([CallerMemberName] string name = null) =>
@@ -259,7 +236,7 @@ public class EmployeeViewModel : INotifyPropertyChanged
 
 ### ChoiceMode
 
-[`Single`] - At least, one item must be in selected state and the selected item cannot be deselected, if [`ChoiceMode`] is Single.
+[`Single`] - At least, one item must be in selected state and the selected item cannot be deselected, if [`ChoiceMode`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html#Syncfusion_Maui_Core_SfChipGroup_ChoiceMode) is Single.
 
 [`SingleOrNone`] - Unlike [`Single`] it is possible to deselect the selected item and keep all the items in deselected state.
 
@@ -267,20 +244,20 @@ public class EmployeeViewModel : INotifyPropertyChanged
 
 {% highlight xaml %}
 
-<ContentPage
-    xmlns:chip ="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core" >
 <ContentPage.Content>
-		<chip:SfChipGroup ChipType="Choice" ChoiceMode="SingleOrNone">
-			<chip.SfChipGroup.Items>
-				<chip:SfChip Text="Extra Small"/>
-				<chip:SfChip Text="Small"/>
-				<chip:SfChip Text="Medium"/>
-				<chip:SfChip Text="Large"/>
-				<chip:SfChip Text="Extra Large"/>
-			</chip:SfChipGroup.Items>
-		</chip:SfChipGroup>
-	</ContentPage.Content>
-</ContentPage>
+    <Grid>
+    <chip:SfChipGroup ChipType="Choice" ChoiceMode="SingleOrNone">
+        <chip.SfChipGroup.Items>
+            <chip:SfChip Text="Extra Small"/>
+            <chip:SfChip Text="Small"/>
+            <chip:SfChip Text="Medium"/>
+            <chip:SfChip Text="Large"/>
+            <chip:SfChip Text="Extra Large"/>
+        </chip:SfChipGroup.Items>
+    </chip:SfChipGroup>
+    </Grid>
+</ContentPage.Content>
+
 
 {% endhighlight %}
 
@@ -288,36 +265,26 @@ public class EmployeeViewModel : INotifyPropertyChanged
 
 using Syncfusion.Maui.Core;
 
-namespace Chips
-{
-	public partial class GettingStarted: ContentPage
-	{
-		public GettingStarted()
-		{
-			InitializeComponent();
-			Grid grid = new Grid();
-			var chipGroup = new SfChipGroup(){ChipType = SfChipsType.Choice, ChoiceMode = ChoiceMode.SingleOrNone};
-			grid.Children.Add(chipGroup);
-   			chipGroup.HeightRequest = 40;
-			chipGroup.Items.Add(new SfChip(){Text="Extra Small"});
-			chipGroup.Items.Add(new SfChip(){Text="Small"});
-			chipGroup.Items.Add(new SfChip(){Text="Medium"});
-			chipGroup.Items.Add(new SfChip(){Text="Large"});
-			chipGroup.Items.Add(new SfChip(){Text="Extra Large"});
-			this.Content = grid;
-		}
-	}
-}
-
+    Grid grid = new Grid();
+    var chipGroup = new SfChipGroup(){ChipType = SfChipsType.Choice, ChoiceMode = ChoiceMode.SingleOrNone};
+    grid.Children.Add(chipGroup);
+    chipGroup.HeightRequest = 40;
+    chipGroup.Items.Add(new SfChip(){Text="Extra Small"});
+    chipGroup.Items.Add(new SfChip(){Text="Small"});
+    chipGroup.Items.Add(new SfChip(){Text="Medium"});
+    chipGroup.Items.Add(new SfChip(){Text="Large"});
+    chipGroup.Items.Add(new SfChip(){Text="Extra Large"});
+    this.Content = grid;
+		
 {% endhighlight %}
 
 {% endtabs %}
 
 ## Filter
 
-Allows users to select more than one chip in a group of chips. The selected chips are indicated by selection indicator in this type. The selection indicator can be customized using the [`SelectionIndicatorColor`] property. Use the [`SelectedItem`] property to get the list of selected chips.
+Allows users to select more than one chip in a group of chips. The selected chips are indicated by selection indicator in this type. The selection indicator can be customized using the [`SelectionIndicatorColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html#Syncfusion_Maui_Core_SfChipGroup_SelectionIndicatorColor) property. Use the [`SelectedItem`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html#Syncfusion_Maui_Core_SfChipGroup_SelectedItem) property to get the list of selected chips.
 
-This selection changes are notified by using [SelectionChanging] and [SelectionChanged] events.
+This selection changes are notified by using [SelectionChanging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html#Syncfusion_Maui_Core_SfChipGroup_SelectionChanging) and [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html#Syncfusion_Maui_Core_SfChipGroup_SelectionChanged) events.
 
 Here, Add visual states to set the ChipType to Filter.
 
@@ -358,41 +325,35 @@ The following code illustrates how to get filter typed ChipGroup.
 
 using Syncfusion.Maui.Core;
 
-public MainPage()
-	{
-		InitializeComponent();
+    SfChipGroup chipGroup = new SfChipGroup();
+    this.BindingContext = new ViewModel();
+    chipGroup.SetBinding(SfChipGroup.ItemsSourceProperty, "Employees");
+    chipGroup.DisplayMemberPath = "Name";
+    chipGroup.SelectionIndicatorColor = Colors.White;
+    chipGroup.ChipType = SfChipsType.Filter;
 
-        SfChipGroup chipGroup = new SfChipGroup();
-        this.BindingContext = new ViewModel();
-        chipGroup.SetBinding(SfChipGroup.ItemsSourceProperty, "Employees");
-        chipGroup.DisplayMemberPath = "Name";
-        chipGroup.SelectionIndicatorColor = Colors.White;
-        chipGroup.ChipType = SfChipsType.Filter;
+    VisualStateGroupList visualStateGroupList = new VisualStateGroupList();
+    VisualState normalState = new VisualState() { Name="Normal"};
 
-        VisualStateGroupList visualStateGroupList = new VisualStateGroupList();
-        VisualState normalState = new VisualState() { Name="Normal"};
-
-        VisualStateGroup commonStateGroup = new VisualStateGroup();
-        if (sfChipGroup.ChipType == SfChipsType.Filter)
-        {
-            normalState.Setters.Add(new Setter { Property = SfChipGroup.ChipTextColorProperty, Value = Colors.Black });
-            normalState.Setters.Add(new Setter { Property = SfChipGroup.ChipBackgroundProperty, Value = Colors.White });
-        }
-
-        VisualState selectedState = new VisualState
-        {
-            Name = "Selected"
-        };
-        selectedState.Setters.Add(new Setter { Property = SfChipGroup.ChipTextColorProperty, Value = Colors.Green });
-        selectedState.Setters.Add(new Setter { Property = SfChipGroup.ChipBackgroundProperty, Value = Colors.Violet });
-
-        commonStateGroup.States.Add(normalState);
-        commonStateGroup.States.Add(selectedState);
-        visualStateGroupList.Add(commonStateGroup);
-
-        VisualStateManager.SetVisualStateGroups(sfChipGroup, visualStateGroupList);
-
+    VisualStateGroup commonStateGroup = new VisualStateGroup();
+    if (sfChipGroup.ChipType == SfChipsType.Filter)
+    {
+        normalState.Setters.Add(new Setter { Property = SfChipGroup.ChipTextColorProperty, Value = Colors.Black });
+        normalState.Setters.Add(new Setter { Property = SfChipGroup.ChipBackgroundProperty, Value = Colors.White });
     }
+
+    VisualState selectedState = new VisualState
+    {
+        Name = "Selected"
+    };
+    selectedState.Setters.Add(new Setter { Property = SfChipGroup.ChipTextColorProperty, Value = Colors.Green });
+    selectedState.Setters.Add(new Setter { Property = SfChipGroup.ChipBackgroundProperty, Value = Colors.Violet });
+
+    commonStateGroup.States.Add(normalState);
+    commonStateGroup.States.Add(selectedState);
+    visualStateGroupList.Add(commonStateGroup);
+
+    VisualStateManager.SetVisualStateGroups(sfChipGroup, visualStateGroupList);
 
 {% endhighlight %}
 
@@ -404,9 +365,7 @@ public MainPage()
 
 public class Employee
 {
-
     public string Name { get; set; }
-
 }
 
 [ViewModel]
@@ -422,22 +381,13 @@ public class EmployeeViewModel : INotifyPropertyChanged
     public ObservableCollection<string> Items
     {
         get { return items; }
-        set
-        {
-            items = value;
-            OnPropertyChanged(nameof(Items));
-        }
+        set { items = value; OnPropertyChanged(nameof(Items)); }
     }
 
     public ObservableCollection<Employee> Employees
     {
         get { return employees; }
-        set
-        {
-            employees = value;
-            OnPropertyChanged(nameof(Employees));
-        }
-
+        set { employees = value; OnPropertyChanged(nameof(Employees));}
     }
 
     public void OnPropertyChanged([CallerMemberName] string name = null) =>
@@ -464,9 +414,9 @@ public class EmployeeViewModel : INotifyPropertyChanged
 
 ## Action
 
-Action type of [`SfChipGroup`] executes the [`Command`] when clicking the chip in [`SfChipGroup`]. On its [`Command`] action, you can do our desired action.
+Action type of [`SfChipGroup`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html#Syncfusion_Maui_Core_SfChipGroup_SelectionChanged) executes the [`Command`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html#Syncfusion_Maui_Core_SfChipGroup_Command) when clicking the chip in `SfChipGroup`. On its `Command` action, you can do our desired action.
 
-The [`Command`] will execute only for action typed [`SfChipGroup`].
+The `Command` will execute only for action typed `SfChipGroup`.
 
 The following code illustrates how to get action typed ChipGroup.
 
@@ -499,7 +449,7 @@ The following code illustrates how to get action typed ChipGroup.
 
 using Syncfusion.Maui.Core;
 
-    ViewModel viewModel = new ViewModel();
+        ViewModel viewModel = new ViewModel();
         SfChipGroup chipGroup = new SfChipGroup()
         {
             ItemsSource = viewModel.Employees,
@@ -566,21 +516,13 @@ public class ViewModel : INotifyPropertyChanged
     public ObservableCollection<Person> Employees
     {
         get { return employees; }
-        set
-        {
-            Employees = value;
-            OnPropertyChanged("Employees");
-        }
+        set { Employees = value; OnPropertyChanged("Employees"); }
     }
 
     public string Result
     {
         get { return result; }
-        set
-        {
-            result = value;
-            OnPropertyChanged("Result");
-        }
+        set { result = value; OnPropertyChanged("Result"); }
     }
 
     public ViewModel()
