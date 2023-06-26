@@ -9,9 +9,9 @@ documentation: ug
 
 # Setting the FontIcon to SfChip
 
-SfChip is supported to display the font icon by setting `FontImageSource` to its [ImageSource] property with following below steps.
+SfChip is supported to display the font icon by setting [`FontImageSource`] to its [ImageSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChip.html#Syncfusion_Maui_Core_SfChip_ImageSource) property with following below steps.
 
-Create the instance for `FontImageSource` and set to [`ImageSource`] property of SfChip as shown in the below code snippet.
+Create the instance for `FontImageSource` and set to `ImageSource` property of SfChip as shown in the below code snippet.
 
 {% tabs %}
 

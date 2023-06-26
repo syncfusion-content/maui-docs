@@ -57,6 +57,28 @@ Generated for the string type properties with [DataType(DataType.Password)] attr
 </tr>
 <tr>
 <td>
+{{'[DataFormNumericItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormNumericItem.html)'| markdownify }}
+</td>
+<td>
+{{'[SfNumericEntry](https://help.syncfusion.com/maui/numeric-entry/overview)'| markdownify }}
+</td>
+<td>
+Generated for int, double, float type property. 
+</td>
+</tr>
+<tr>
+<td>
+{{'[DataFormMaskedTextItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormMaskedTextItem.html)'| markdownify }}
+</td>
+<td>
+{{'[SfMaskedEntry](https://help.syncfusion.com/maui/masked-entry/overview)'| markdownify }}
+</td>
+<td>
+Generated for the string type properties with [DataType(DataType.PhoneNumber)] and [DataType(DataType.CreditCard)] attribute.
+</td>
+</tr>
+<tr>
+<td>
 {{'[DataFormDateItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormDateItem.html)'| markdownify }}
 </td>
 <td>
@@ -629,7 +651,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 Please refer [here](https://help.syncfusion.com/maui/dataform/validation#validation-label-appearance-customization) to learn more about changing the [ErrorLabelTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html#Syncfusion_Maui_DataForm_DataFormItem_ErrorLabelTextStyle) and [ValidMessageLabelTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html#Syncfusion_Maui_DataForm_DataFormItem_ValidMessageLabelTextStyle)
 
 ## Editor view customization
-You can customize the editor view by using the  `InitializeDataEditor` method of `DataFormItemManager`.
+You can customize the editor view by using the  [InitializeDataEditor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItemManager.html#Syncfusion_Maui_DataForm_DataFormItemManager_InitializeDataEditor_Syncfusion_Maui_DataForm_DataFormItem_Microsoft_Maui_Controls_View_) method of [DataFormItemManager](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItemManager.html).
 
 {% tabs %}
 {% highlight c# %}
@@ -647,7 +669,9 @@ public class DataFormItemManagerEditorExt : DataFormItemManager
 }
 
 {% endhighlight %}
-{% endtabs %} 
+{% endtabs %}
+
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-dataform/tree/master/EditorViewCustomizationSample)
 
 ## Explicitly create data editors
 
@@ -861,7 +885,7 @@ N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-dataform/t
 
 ## Explicitly create data editors from custom data dictionary
 
-You can [explicitly](https://help.syncfusion.com/maui/dataform/dataform-settings#explicitly-create-data-editors) add the data editors from the custom data dictionary and also get the value from the dictionary and set the editors value to the dictionary by implementing `DataFormItemManager`, which has the methods to get and set values for the editors.
+You can [explicitly](https://help.syncfusion.com/maui/dataform/dataform-settings#explicitly-create-data-editors) add the data editors from the custom data dictionary and also get the value from the dictionary and set the editors value to the dictionary by implementing [DataFormItemManager](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItemManager.html), which has the methods to get and set values for the editors.
 
 {% tabs %}
 {% highlight C# %}
@@ -929,3 +953,5 @@ public class DataFormItemManagerExt : DataFormItemManager
 
 {% endhighlight %}
 {% endtabs %}
+
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-dataform/tree/master/CustomDataDictionarySample)
