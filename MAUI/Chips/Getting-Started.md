@@ -11,14 +11,6 @@ documentation: ug
 
 This section explains the steps required to create chips and arrange them in a layout for performing action. This section covers only the minimal features that you needed to know to get started with the chips.
 
-## Assembly deployment
-
-After installing [Essential Studio for .NET MAUI](https://www.syncfusion.com/downloads/maui), you can find all the required assemblies in the installation folders, {Syncfusion Essential Studio Installed location} \Essential Studio\\{Version #}\.NET MAUI\lib.
-
-E.g.: C:\Program Files (x86) \Syncfusion\Essential Studio\19.1.0.54\.NET MAUI\lib
-
-N> Assemblies can be found in unzipped package location(Documents/Syncfusion/{Version #}/.NET MAUI/lib) in Mac.
-
 ## Adding .NET MAUI Chips reference
 
 Syncfusion .NET MAUI components are available in [nuget.org](https://www.nuget.org/). To add Chips to your project, open the NuGet package manager in Visual Studio, search for [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core), and then install it.
@@ -110,19 +102,12 @@ Initialize an empty [`SfChipGroup`] as shown in the following code snippet
 
 {% highlight xaml %}
 
-<ContentPage
-    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:chip="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:Chips"
-    x:Class="Chips.GettingStarted">
-	<ContentPage.Content>
-		<Grid>
-			<chip:SfChipGroup/>
-		</Grid>
-	</ContentPage.Content>
-</ContentPage>
+<ContentPage.Content>
+	<Grid>
+		<chip:SfChipGroup/>
+	</Grid>
+</ContentPage.Content>
+
 
 {% endhighlight %}
 
@@ -130,21 +115,11 @@ Initialize an empty [`SfChipGroup`] as shown in the following code snippet
 
 using Syncfusion.Maui.Core;
 
-namespace Chips
-{
-	public partial class GettingStarted: ContentPage
-	{
-		public GettingStarted()
-		{
-			InitializeComponent();
-			Grid grid = new Grid();
-			SfChipGroup chipGroup = new SfChipGroup();
-			grid.Children.Add(chipGroup);
-			this.Content = grid;
-		}
-	}
-}
-
+	Grid grid = new Grid();
+	SfChipGroup chipGroup = new SfChipGroup();
+	grid.Children.Add(chipGroup);
+	this.Content = grid;
+		
 {% endhighlight %}
 
 {% endtabs %}
@@ -157,55 +132,37 @@ The chips control creates chip for each object and arranges chips in a StackLayo
 
 {% highlight xaml %}
 
-<ContentPage
-	xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:chip="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:Chips"
-    x:Class="Chips.GettingStarted">
-	<ContentPage.Content>
-		<Grid>
-			<chip:SfChipGroup DisplayMemberPath="Name">
-				<chip:SfChipGroup.ChipLayout>
-					<FlexLayout 
-						HorizontalOptions="Start" 
-						VerticalOptions="Center" 
-						/> 
-                </chip:SfChipGroup.ChipLayout>
-			</chip:SfChipGroup> 
-		</Grid>
-	</ContentPage.Content>
-</ContentPage >
-	
+<ContentPage.Content>
+	<Grid>
+		<chip:SfChipGroup DisplayMemberPath="Name">
+			<chip:SfChipGroup.ChipLayout>
+				<FlexLayout 
+					HorizontalOptions="Start" 
+					VerticalOptions="Center" 
+					/> 
+			</chip:SfChipGroup.ChipLayout>
+		</chip:SfChipGroup> 
+	</Grid>
+</ContentPage.Content>
+
 {% endhighlight %}
 
 {% highlight c# %}
 
 using Syncfusion.Maui.Core;
 
-namespace Chips
-{
-	public partial class GettingStarted: ContentPage
+	Grid grid = new Grid();
+	SfChipGroup chipGroup = new SfChipGroup();
+	chipGroup.DispalyMemberpath="Name",
+	grid.Children.Add(chipGroup);
+	FlexLayout layout = new FlexLayout()
 	{
-		public GettingStarted()
-		{
-			InitializeComponent();
-			Grid grid = new Grid();
-			SfChipGroup chipGroup = new SfChipGroup();
-			chipGroup.DispalyMemberpath="Name",
-			grid.Children.Add(chipGroup);
-			FlexLayout layout = new FlexLayout()
-			{
-				HorizontalOptions = LayoutOptions.Start,
-				VerticalOptions = LayoutOptions.Center,
-			};
-			chipGroup.ChipLayout = layout;
-			this.Content = grid;
-		}
-	}
-}
-
+		HorizontalOptions = LayoutOptions.Start,
+		VerticalOptions = LayoutOptions.Center,
+	};
+	chipGroup.ChipLayout = layout;
+	this.Content = grid;
+		
 {% endhighlight %}
 
 {% endtabs %}
@@ -243,15 +200,8 @@ namespace Chips
 		private ObservableCollection<Person> employees;
 		public ObservableCollection<Person> Employees
 		{
-			get
-			{
-				return employees;
-			}
-			set
-			{
-				Employees = value;
-				OnPropertyChanged("Employees");
-			}
+			get { return employees; }
+			set { Employees = value; OnPropertyChanged("Employees"); }
 		}
 
 		public ViewModel()
@@ -284,60 +234,44 @@ Create an instance of ViewModel class,and then set it as the `BindingContext`. B
 
 {% highlight xaml %}
 
-<ContentPage
-	xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:chip="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:Chips"
-    x:Class="Chips.GettingStarted">
-	<ContentPage.BindingContext>
-		<local:ViewModel x:Name="viewModel"/>
-	</ContentPage.BindingContext>
-	<ContentPage.Content>
-		<Grid>
-			<chip:SfChipGroup 
-				ItemsSource="{Binding Employees}" 
-				ChipPadding="8,8,0,0" 
-				DisplayMemberPath="Name"
-				ChipBackground="white"
-            	ChipTextColor="Black"
-				HorizontalOptions="Start" 
-				VerticalOptions="Center">
-			</chip:SfChipGroup>  
-		</Grid>
-	</ContentPage.Content>
-</ContentPage>
+<ContentPage.BindingContext>
+	<local:ViewModel x:Name="viewModel"/>
+</ContentPage.BindingContext>
+<ContentPage.Content>
+	<Grid>
+		<chip:SfChipGroup 
+			ItemsSource="{Binding Employees}" 
+			ChipPadding="8,8,0,0" 
+			DisplayMemberPath="Name"
+			ChipBackground="white"
+			ChipTextColor="Black"
+			HorizontalOptions="Start" 
+			VerticalOptions="Center">
+		</chip:SfChipGroup>  
+	</Grid>
+</ContentPage.Content>
 
 {% endhighlight %}
 
 {% highlight c# %}
+
 using Syncfusion.Maui.Core;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
-namespace Chips
-{
-	public partial class GettingStarted: ContentPage
-	{
-		public GettingStarted()
-		{
-			InitializeComponent();
-			Grid grid = new Grid();
-			SfChipGroup chipGroup = new SfChipGroup();
-			grid.Children.Add(chipGroup);
-			this.BindingContext = new ViewModel();
-			chipGroup.SetBinding(SfChipGroup.ItemsSourceProperty, "Employees");
-			chipGroup.DisplayMemberPath = "Name";
-			chipGroup.HorizontalOptions = LayoutOptions.Start;
-			chipGroup.VerticalOptions = LayoutOptions.Center;
-			chipGroup.ChipTextColor = Colors.Black;
-			chipGroup.ChiBackground = Colors.White;
-			chipGroup.ChipPadding = new Thickness(8, 8, 0, 0);
-			this.Content = grid;
-		}
-	}
-}
 
+	Grid grid = new Grid();
+	SfChipGroup chipGroup = new SfChipGroup();
+	grid.Children.Add(chipGroup);
+	this.BindingContext = new ViewModel();
+	chipGroup.SetBinding(SfChipGroup.ItemsSourceProperty, "Employees");
+	chipGroup.DisplayMemberPath = "Name";
+	chipGroup.HorizontalOptions = LayoutOptions.Start;
+	chipGroup.VerticalOptions = LayoutOptions.Center;
+	chipGroup.ChipTextColor = Colors.Black;
+	chipGroup.ChiBackground = Colors.White;
+	chipGroup.ChipPadding = new Thickness(8, 8, 0, 0);
+	this.Content = grid;
+		
 {% endhighlight %}
 
 {% endtabs %}
@@ -346,46 +280,39 @@ namespace Chips
 
 ## Set types of chip group
 
-The functionality of chips control differ based on its [`ChipType`] property.
+The functionality of chips control differ based on its [`ChipType`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html#Syncfusion_Maui_Core_SfChipGroup_ChipType) property.
 By default type of chips control have Input type. Input chip types have close button, using it chip can be can removed dynamically from children and the layout.
 
-The following code example uses the [`Action`] type. In Action type, [`Command`] property of [`SfChipGroup`] is executed when any chip in the group is tapped. Here the Employee name of corresponding chip is set as label text when the Command is executed.
+The following code example uses the [`Action`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipsType.html#Syncfusion_Maui_Core_SfChipsType_Action) type. In Action type, [`Command`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChip.html#Syncfusion_Maui_Core_SfChip_Command) property of [`SfChipGroup`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html) is executed when any chip in the group is tapped. Here the Employee name of corresponding chip is set as label text when the Command is executed.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<ContentPage
-    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:chip="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:Chips"
-    x:Class="Chips.GettingStarted">
-	<ContentPage.BindingContext>
-		<local:ViewModel/>
-	</ContentPage.BindingContext>
-	<ContentPage.Content>
-		<StackLayout>
-			<chip:SfChipGroup
-				Command="{Binding ActionCommand}" 
-				ItemsSource="{Binding Employees}"
-				DisplayMemberPath="Name"
-				ChipType="Action">
-			</chip:SfChipGroup>
-			<StackLayout Orientation="Horizontal">
-			<Label 
-				Text="Name:" 
-				FontAttributes="Bold" 
-				FontSize="14" />
-			<Label 
-				Text="{Binding Result}"
-				FontAttributes="Bold" 
-				FontSize="14" />
-			</StackLayout>
-		</StackLayout>  
-	</ContentPage.Content>
-</ContentPage>
+<ContentPage.BindingContext>
+	<local:ViewModel/>
+</ContentPage.BindingContext>
+<ContentPage.Content>
+	<StackLayout>
+		<chip:SfChipGroup
+			Command="{Binding ActionCommand}" 
+			ItemsSource="{Binding Employees}"
+			DisplayMemberPath="Name"
+			ChipType="Action">
+		</chip:SfChipGroup>
+		<StackLayout Orientation="Horizontal">
+		<Label 
+			Text="Name:" 
+			FontAttributes="Bold" 
+			FontSize="14" />
+		<Label 
+			Text="{Binding Result}"
+			FontAttributes="Bold" 
+			FontSize="14" />
+		</StackLayout>
+	</StackLayout>  
+</ContentPage.Content>
+
 
 {% endhighlight %}
 
@@ -416,21 +343,13 @@ namespace Chips
     	public ObservableCollection<Person> Employees
     	{
         	get { return employees; }
-        	set
-        	{
-            	Employees = value;
-            	OnPropertyChanged("Employees");
-        	}
+        	set { Employees = value; OnPropertyChanged("Employees"); }
     	}
 
 		public string Result
 		{
 			get { return result; }
-			set 
-			{
-				result = value;
-				OnPropertyChanged("Result");
-			}
+			set { result = value; OnPropertyChanged("Result"); }
 		}
 
 		public ViewModel()
