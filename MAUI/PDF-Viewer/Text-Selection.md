@@ -20,11 +20,8 @@ In desktop platforms like macOS and Windows, you can select text using the mouse
 In mobile platforms such as Android and iOS, the long press text selection feature allows you to select text by pressing and holding the finger on the screen. Refer to the following steps for long-press text selection on a mobile device.
 
 1.	Locate the text you want to select.
-
 2.	Place your finger on the screen and hold it against the text you wish to select.
-
 3.	The word is highlighted and there are selection handles that appear at the start and end of the selection.
-
 4.	You can move the selection handles to modify or extend the text selection.
 
 ## Copy the selected text
