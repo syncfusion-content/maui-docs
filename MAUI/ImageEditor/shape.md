@@ -16,9 +16,27 @@ The image editor control allows you to add various shapes with customizable sett
 Annotate any shapes over an image using the [`AddShape`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_AddShape_Syncfusion_Maui_ImageEditor_AnnotationShape_Syncfusion_Maui_ImageEditor_ImageEditorShapeSettings_) method.
 
 {% tabs %}
-{% highlight C# tabtitle="C#" %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 
-   imageEditor.AddShape(AnnotationShape.Arrow)
+   <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="40" />
+        </Grid.RowDefinitions>
+        <imageEditor:SfImageEditor x:Name="imageEditor"
+                                   Source="image.jpeg" />
+        <Button Grid.Row="1"
+                Text="AddShape"
+                Clicked="OnAddShapeClicked" />
+    </Grid>  
+
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+    private void OnAddShapeClicked(object sender, EventArgs e)
+    {
+        this.imageEditor.AddShape(AnnotationShape.Arrow)
+    }
 
 {% endhighlight %}
 {% endtabs %}
@@ -49,15 +67,33 @@ Customize the appearance of each shape using the [`ImageEditorShapeSettings`](ht
 * [`Opacity`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorAnnotationSettings.html#Syncfusion_Maui_ImageEditor_ImageEditorAnnotationSettings_Opacity): Specifies the opacity of shape annotation. This value ranges from 0 to 1.
 
 {% tabs %}
-{% highlight C# tabtitle="C#" %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 
-    imageEditor.AddShape(AnnotationShape.Rectangle, 
-    new ImageEditorShapeSettings() 
-    { 
-        Color = Colors.Blue, 
-        StrokeThickness = 5, 
-        IsFilled =false 
-    });
+   <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="40" />
+        </Grid.RowDefinitions>
+        <imageEditor:SfImageEditor x:Name="imageEditor"
+                                   Source="image.jpeg" />
+        <Button Grid.Row="1"
+                Text="AddShape"
+                Clicked="OnAddShapeClicked" />
+    </Grid>  
+
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+    private void OnAddShapeClicked(object sender, EventArgs e)
+    {
+        this.imageEditor.AddShape(AnnotationShape.Rectangle,
+             new ImageEditorShapeSettings()
+             {
+                 Color = Colors.Blue,
+                 StrokeThickness = 5,
+                 IsFilled = false
+             });
+    }
 
 {% endhighlight %}
 {% endtabs %}
@@ -67,9 +103,27 @@ Customize the appearance of each shape using the [`ImageEditorShapeSettings`](ht
 Delete the selected shape using either the toolbar or the [`DeleteAnnotation`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_DeleteAnnotation) method.
 
 {% tabs %}
-{% highlight C# tabtitle="C#" %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 
-    imageEditor.DeleteAnnotation();
+   <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="40" />
+        </Grid.RowDefinitions>
+        <imageEditor:SfImageEditor x:Name="imageEditor"
+                                   Source="image.jpeg" />
+        <Button Grid.Row="1"
+                Text="DeleteAnnotation"
+                Clicked="OnDeleteAnnotationClicked" />
+    </Grid>  
+
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+    private void OnDeleteAnnotationClicked(object sender, EventArgs e)
+    {
+        this.imageEditor.DeleteAnnotation();
+    }
 
 {% endhighlight %}
 {% endtabs %}
@@ -81,9 +135,27 @@ Remove all the annotations using the [`ClearAnnotations`](https://help.syncfusio
 N> It will remove text and pen annotations as well.
 
 {% tabs %}
-{% highlight C# tabtitle="C#" %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 
-    imageEditor.ClearAnnotations();
+   <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="40" />
+        </Grid.RowDefinitions>
+        <imageEditor:SfImageEditor x:Name="imageEditor"
+                                   Source="image.jpeg" />
+        <Button Grid.Row="1"
+                Text="ClearAnnotations"
+                Clicked="OnClearAnnotationsClicked" />
+    </Grid>  
+
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+    private void OnClearAnnotationsClicked(object sender, EventArgs e)
+    {
+        this.imageEditor.ClearAnnotations();
+    }
 
 {% endhighlight %}
 {% endtabs %}
@@ -96,13 +168,13 @@ N> The event is common for text and shape annotations.
 
 {% tabs %}
 
-{% highlight xaml tabtitle="XAML" %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 
     <imageEditor:SfImageEditor Source="image.png" AnnotationSelected = "OnAnnotationSelected" />
 
 {% endhighlight %}
 
-{% highlight C# tabtitle="C#" %}
+{% highlight C# tabtitle="MainPage.xaml.cs" %}
 
     private void OnAnnotationSelected(object sender, AnnotationSelectedEventArgs e)
     {
@@ -122,13 +194,13 @@ Annotate a shape on image loading using the [`Imageloaded`](https://help.syncfus
 
 {% tabs %}
 
-{% highlight xaml tabtitle="XAML" %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 
     <imageEditor:SfImageEditor x:Name="imageEditor" Source="image.png" ImageLoaded = "OnImageLoaded" />
 
 {% endhighlight %}
 
-{% highlight C# tabtitle="C#" %}
+{% highlight C# tabtitle="MainPage.xaml.cs" %}
 
     private void OnImageLoaded(object sender, EventArgs e)
     {
@@ -139,18 +211,20 @@ Annotate a shape on image loading using the [`Imageloaded`](https://help.syncfus
 
 {% endtabs %}
 
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-image-editor-examples/tree/master/ImageLoadedSample)
+
 ### Add shape with manual bounds
 
 Shapes can be added by user-defined view bounds. The [`Bounds`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorAnnotationSettings.html#Syncfusion_Maui_ImageEditor_ImageEditorAnnotationSettings_Bounds) are treated as ratio values of image width and height, so you have to specify bounds rectangle values in the range of 0.1
 {% tabs %}
 
-{% highlight xaml tabtitle="XAML" %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 
     <imageEditor:SfImageEditor x:Name="imageEditor" Source="image.png" ImageLoaded = "OnImageLoaded" />
 
 {% endhighlight %}
 
-{% highlight C# tabtitle="C#" %}
+{% highlight C# tabtitle="MainPage.xaml.cs" %}
 
     private void OnImageLoaded(object sender, EventArgs e)
     {
@@ -191,9 +265,27 @@ To restrict the resize action on a shape, set the [`AllowResize`](https://help.s
 The image editor control allows you to create freehand drawings such as signature, pen drawing with customizable settings. The [`AddShape`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_AddShape_Syncfusion_Maui_ImageEditor_AnnotationShape_Syncfusion_Maui_ImageEditor_ImageEditorShapeSettings_) method enables the canvas view, in which you can draw objects.
 
 {% tabs %}
-{% highlight C# tabtitle="C#" %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 
-    imageEditor.AddShape(AnnotationShape.Pen);
+   <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="40" />
+        </Grid.RowDefinitions>
+        <imageEditor:SfImageEditor x:Name="imageEditor"
+                                   Source="image.jpeg" />
+        <Button Grid.Row="1"
+                Text="FreeHand draw"
+                Clicked="OnFreeHandDrawClicked" />
+    </Grid>  
+
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+    private void OnFreeHandDrawClicked(object sender, EventArgs e)
+    {
+        this.imageEditor.AddShape(AnnotationShape.Pen);
+    }
 
 {% endhighlight %}
 {% endtabs %}
@@ -208,9 +300,27 @@ N> The other shape settings are not applicable for freehand draw.
 In the following example, the [`AddShape`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_AddShape_Syncfusion_Maui_ImageEditor_AnnotationShape_Syncfusion_Maui_ImageEditor_ImageEditorShapeSettings_) method is used to toggle the freehand drawings.
 
 {% tabs %}
-{% highlight C# tabtitle="C#" %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 
-    imageEditor.AddShape(AnnotationShape.Pen, new ImageEditorShapeSettings() {Color=Colors.Blue, StrokeThickness=5});
+   <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="40" />
+        </Grid.RowDefinitions>
+        <imageEditor:SfImageEditor x:Name="imageEditor"
+                                   Source="image.jpeg" />
+        <Button Grid.Row="1"
+                Text="FreeHand draw"
+                Clicked="OnFreeHandDrawClicked" />
+    </Grid>  
+
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+    private void OnFreeHandDrawClicked(object sender, EventArgs e)
+    {
+        imageEditor.AddShape(AnnotationShape.Pen, new ImageEditorShapeSettings() {Color=Colors.Blue, StrokeThickness=5});
+    }
 
 {% endhighlight %}
 {% endtabs %}
