@@ -15,6 +15,8 @@ Using [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewe
 
 In desktop platforms like macOS and Windows, you can select text using the mouse pointer by clicking and dragging over the text you want to select. You will notice that the selected text is highlighted when you move the pointer. 
 
+![Select text from PDF document using mouse.](Images/Text-Selection/text_selection_mouse.gif)
+
 ## Selection using touch
 
 In mobile platforms such as Android and iOS, the long press text selection feature allows you to select text by pressing and holding the finger on the screen. Refer to the following steps for long-press text selection on a mobile device.
