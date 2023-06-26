@@ -33,12 +33,7 @@ Brightness is used to adjust the overall lightness or darkness of the image. The
 {% tabs %}
 {% highlight C# tabtitle="C#" %}
 
-public MainPage()
-{               
-    . . .
-    this.imageEditor.ImageEffect(ImageEffect.Brightness, -0.6);
-    . . .
-}
+this.imageEditor.ImageEffect(ImageEffect.Brightness, -0.6);
 
 {% endhighlight %}
 {% endtabs %}
@@ -52,12 +47,7 @@ Blur creates a soft and unfocused appearance by reducing the image's sharpness. 
 {% tabs %}
 {% highlight C# tabtitle="C#" %}
 
-public MainPage()
-{               
-    . . .
-    this.imageEditor.ImageEffect(ImageEffect.Blur, 0.5);
-    . . .
-}
+this.imageEditor.ImageEffect(ImageEffect.Blur, 0.5);
 
 {% endhighlight %}
 {% endtabs %}
@@ -71,12 +61,7 @@ Contrast increases or decreases the difference between light and dark areas, mak
 {% tabs %}
 {% highlight C# tabtitle="C#" %}
 
-public MainPage()
-{               
-    . . .
-    this.imageEditor.ImageEffect(ImageEffect. Contrast, -0.8);
-    . . .
-}
+this.imageEditor.ImageEffect(ImageEffect. Contrast, -0.8);
 
 {% endhighlight %}
 {% endtabs %}
@@ -90,12 +75,7 @@ Exposure is used to alter the overall brightness and darkness levels of the imag
 {% tabs %}
 {% highlight C# tabtitle="C#" %}
 
-public MainPage()
-{               
-    . . .
-    this.imageEditor.ImageEffect(ImageEffect. Exposure, -0.4);
-    . . .
-}
+this.imageEditor.ImageEffect(ImageEffect. Exposure, -0.4);
 
 {% endhighlight %}
 {% endtabs %}
@@ -109,12 +89,7 @@ Hue is used to change the overall color tone of the image by shifting the color 
 {% tabs %}
 {% highlight C# tabtitle="C#" %}
 
-public MainPage()
-{               
-    . . .
-    this.imageEditor.ImageEffect(ImageEffect.Hue, 0.2);
-    . . .
-}
+this.imageEditor.ImageEffect(ImageEffect.Hue, 0.2);
 
 {% endhighlight %}
 {% endtabs %}
@@ -128,12 +103,7 @@ Saturation enhances or reduces the intensity and vividness of colors in the imag
 {% tabs %}
 {% highlight C# tabtitle="C#" %}
 
-public MainPage()
-{               
-    . . .
-    this.imageEditor.ImageEffect(ImageEffect. Saturation, -0.8);
-    . . .
-}
+this.imageEditor.ImageEffect(ImageEffect. Saturation, -0.8);
 
 {% endhighlight %}
 {% endtabs %}
@@ -147,12 +117,7 @@ Sharpen enhances the clarity and definition of edges and details in the image. T
 {% tabs %}
 {% highlight C# tabtitle="C#" %}
 
-public MainPage()
-{               
-    . . .
-    this.imageEditor.ImageEffect(ImageEffect.Sharpen, 0.5);
-    . . .
-}
+this.imageEditor.ImageEffect(ImageEffect.Sharpen, 0.5);
 
 {% endhighlight %}
 {% endtabs %}
@@ -166,12 +131,7 @@ Opacity is used to control the transparency or visibility of the image. The valu
 {% tabs %}
 {% highlight C# tabtitle="C#" %}
 
-public MainPage()
-{               
-    . . .
-    this.imageEditor.ImageEffect(ImageEffect. Opacity, 0.5);
-    . . .
-}
+this.imageEditor.ImageEffect(ImageEffect. Opacity, 0.5);
 
 {% endhighlight %}
 {% endtabs %}
@@ -185,12 +145,7 @@ Call the [SaveEdits](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEd
 {% tabs %}
 {% highlight C# tabtitle="C#" %}
 
-public MainPage()
-{               
-    . . .
-    this.imageEditor.SaveEdits();
-    . . .
-}
+this.imageEditor.SaveEdits();
 
 {% endhighlight %}
 {% endtabs %}
@@ -200,23 +155,13 @@ The applied effects can be canceled using the [CancelEdits](https://help.syncfus
 {% tabs %}
 {% highlight C# tabtitle="C#" %}
 
-public MainPage()
-{               
-    . . .
-    this.imageEditor.CancelEdits();
-    . . .
-}
+this.imageEditor.CancelEdits();
 
 {% endhighlight %}
 
 {% highlight C# tabtitle="C#" %}
 
-public MainPage()
-{               
-    . . .
-    this.imageEditor.ImageEffect(ImageEffect.None, 0);
-    . . .
-}
+this.imageEditor.ImageEffect(ImageEffect.None, 0);
 
 {% endhighlight %}
 {% endtabs %}

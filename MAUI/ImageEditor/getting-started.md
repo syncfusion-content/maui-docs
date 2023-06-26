@@ -100,18 +100,16 @@ N> Image formats such as JPEG and PNG can be loaded to the image editor.
 The following code shows adding an image to the image editor control with the format as "JPEG" and name as "image."
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight xaml hl_lines="3" %}
 
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:imageEditor="clr-namespace:Syncfusion.Maui.ImageEditor;assembly=Syncfusion.Maui.ImageEditor"
-             x:Class="Syncfusion.MainPage">
+<ContentPage 
+            . . .
+            <imageEditor:SfImageEditor Source="image.jpeg"/>
 
-             <imageEditor:SfImageEditor Source="image.jpeg"/>
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# %}
+{% highlight C# hl_lines="9 10 11" %}
 
 using Syncfusion.Maui.ImageEditor;
 namespace SyncfusionImageEditor;

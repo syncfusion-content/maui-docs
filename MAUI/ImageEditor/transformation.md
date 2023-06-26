@@ -20,7 +20,7 @@ N> Angle cannot be specified in the code to alter the rotation angle of the imag
 {% tabs %}
 {% highlight C# tabtitle="C#" %}
 
-              imageEditor.Rotate();
+this.imageEditor.Rotate();
 
 {% endhighlight %}
 {% endtabs %}
@@ -31,14 +31,14 @@ N> Angle cannot be specified in the code to alter the rotation angle of the imag
 
 The image editor control is capable of showing the mirror image. The [Flip](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_Flip_Syncfusion_Maui_ImageEditor_ImageFlipDirection_) method allows you to flip the image horizontally or vertically based on the [ImageFlipDirection](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageFlipDirection.html). Flipping the image can be done by either using a toolbar or the [Flip](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_Flip_Syncfusion_Maui_ImageEditor_ImageFlipDirection_) method.
 
-    * ImageFlipDirection - Specifies the direction in which to flip the image.
+* ImageFlipDirection - Specifies the direction in which to flip the image.
 
-In the following example, the `Flip` method is used to vertically flip the image.
+In the following example, the [Flip](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_Flip_Syncfusion_Maui_ImageEditor_ImageFlipDirection_) method is used to vertically flip the image.
 
 {% tabs %}
 {% highlight C# tabtitle="C#" %}
 
-              imageEditor.Flip(ImageFlipDirection.Vertical);
+this.imageEditor.Flip(ImageFlipDirection.Vertical);
 
 {% endhighlight %}
 {% endtabs %}

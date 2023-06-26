@@ -127,12 +127,14 @@ this.Content = imageEditor;
 
 {% tabs %}
 {% highlight XAML %}
+
 <ContentPage 
 ...
 xmlns:imageEditor="clr-namespace:Syncfusion.Maui.ImageEditor;assembly=Syncfusion.Maui.ImageEditor">
     <imageEditor:SfImageEditor x:Name="imageEditor"
                        Source="syncfusion.png"/>
 </ContentPage>
+
 {% endhighlight %}
 
 {% highlight C# %}
@@ -388,7 +390,7 @@ Applicable for crop view selection, shape and text annotation selection.
 
 <tr>
 <td>{{'[BeginReset](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfImageEditor.XForms.SfImageEditor.html#Syncfusion_SfImageEditor_XForms_SfImageEditor_BeginReset)'| markdownify }}</td>
-<td>{{'[BeginReset]()</td>
+<td>{{'[BeginReset](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_BeginReset)'| markdownify }}</td>
 <td>Occurs when the image reset action.</td>
 </tr>
 
@@ -468,7 +470,7 @@ Applicable for crop view selection, shape and text annotation selection.
 </tr>
 
 <tr>
-<td>`CancelEdits]()`</td>
+<td>CancelEdits</td>
 <td>{{'[CancelEdits](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_CancelEdits)'| markdownify }}</td>
 <td>Method to cancel the editing actions.</td>
 </tr>

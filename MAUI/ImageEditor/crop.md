@@ -31,7 +31,7 @@ The [Crop](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfIma
 {% tabs %}
 {% highlight C# tabtitle="C#" %}
 
-imageEditor.Crop(ImageCropType.Free);
+this.imageEditor.Crop(ImageCropType.Free);
 
 {% endhighlight %}
 {% endtabs %}
@@ -41,7 +41,7 @@ After the cropping area has been selected, the [SaveEdits](https://help.syncfusi
 {% tabs %}
 {% highlight C# tabtitle="C#" %}
 
-imageEditor.SaveEdits();
+this.imageEditor.SaveEdits();
 
 {% endhighlight %}
 {% endtabs %}
@@ -51,7 +51,7 @@ After selecting the cropping area, if you decide to cancel the edits and revert 
 {% tabs %}
 {% highlight C# tabtitle="C#" %}
 
-imageEditor.CancelEdits();
+this.imageEditor.CancelEdits();
 
 {% endhighlight %}
 {% endtabs %}
@@ -63,7 +63,7 @@ The selected region can be customized by dragging and resizing an image.
 {% tabs %}
 {% highlight C# tabtitle="C#" %}
 
-imageEditor.Crop(ImageCropType.Free);
+this.imageEditor.Crop(ImageCropType.Free);
 
 {% endhighlight %}
 {% endtabs %}
@@ -77,7 +77,7 @@ With the original crop, the image is cropped to its original dimensions. This me
 {% tabs %}
 {% highlight C# tabtitle="C#" %}
 
-imageEditor.Crop(ImageCropType.Original);
+this.imageEditor.Crop(ImageCropType.Original);
 
 {% endhighlight %}
 {% endtabs %}
@@ -91,7 +91,7 @@ The square crop option allows you to crop the image into a perfect square shape.
 {% tabs %}
 {% highlight C# tabtitle="C#" %}
 
-imageEditor.Crop(ImageCropType.Square);
+this.imageEditor.Crop(ImageCropType.Square);
 
 {% endhighlight %}
 {% endtabs %}
@@ -105,7 +105,7 @@ The ratio crop enables you to crop the image with a specific aspect ratio. You c
 {% tabs %}
 {% highlight C# tabtitle="C#" %}
 
-imageEditor.Crop(16,9);
+this.imageEditor.Crop(16,9);
 
 {% endhighlight %}
 {% endtabs %}
@@ -121,7 +121,7 @@ The following code shows cropping an image in circle format.
 {% tabs %}
 {% highlight C# tabtitle="C#" %}
 
-imageEditor.Crop(ImageCropType.Circle);
+this.imageEditor.Crop(ImageCropType.Circle);
 
 {% endhighlight %}
 {% endtabs %}
@@ -132,12 +132,12 @@ imageEditor.Crop(ImageCropType.Circle);
 
 To crop an image in an elliptical format you can use the [ImageCropType.Ellipse](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageCropType.html#Syncfusion_Maui_ImageEditor_ImageCropType_Ellipse) crop type. This allows for free-style cropping in an elliptical shape.
 
- The following code shows cropping an image in elliptical format.
+The following code shows cropping an image in elliptical format.
 
 {% tabs %}
 {% highlight C# tabtitle="C#" %}
 
-imageEditor.Crop(ImageCropType.Ellipse);
+this.imageEditor.Crop(ImageCropType.Ellipse);
 
 {% endhighlight %}
 {% endtabs %}
@@ -151,8 +151,8 @@ To manually enter the cropping area, use the [Crop(Rect rect)](https://help.sync
 {% tabs %}
 {% highlight C# tabtitle="C#" %}
 
-imageEditor.Crop(new Rect(50,50,150,200));
-imageEditor.SaveEdits();
+this.imageEditor.Crop(new Rect(50,50,150,200));
+this.imageEditor.SaveEdits();
 
 {% endhighlight %}
 {% endtabs %}
@@ -162,8 +162,8 @@ imageEditor.SaveEdits();
 {% tabs %}
 {% highlight C# tabtitle="C#" %}
 
-imageEditor.Crop(new Rect(20,20,50,50), true);
-imageEditor.SaveEdits();   
+this.imageEditor.Crop(new Rect(20,20,50,50), true);
+this.imageEditor.SaveEdits();   
 
 {% endhighlight %} 
 {% endtabs %}
@@ -177,7 +177,7 @@ The following code sample will add the cropping preview on the image in a square
 {% tabs %}
 {% highlight C# tabtitle="C#" %}
 
- imageEditor.Crop(1, 1);
+this.imageEditor.Crop(1, 1);
 
 {% endhighlight %}
 {% endtabs %}
