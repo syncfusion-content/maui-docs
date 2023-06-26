@@ -9,7 +9,7 @@ documentation: UG
 
 # Export To Excel in MAUI DataGrid (SfDataGrid)
 
-The SfDataGrid enables data export to Excel, offering several customization options such as personalized appearance, exclusion of specific columns or headers, adjustment of custom row height and column width, and more.
+The [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html) enables data export to Excel, offering several customization options such as personalized appearance, exclusion of specific columns or headers, adjustment of custom row height and column width, and more.
 
 To export the SfDataGrid to an Excel file, the following NuGet package should be installed.
 
@@ -24,7 +24,7 @@ To export the SfDataGrid to an Excel file, the following NuGet package should be
 </tr>
 </table>
 
-The following code sample illustrates the process of exporting data to Excel. It utilizes the `DataGridExcelExportingController.ExportToExcel` method, with the SfDataGrid passed as an argument.
+The following code sample illustrates the process of exporting data to Excel. It utilizes the [DataGridExcelExportingController.ExportToExcel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.Exporting.DataGridExcelExportingController.html#Syncfusion_Maui_DataGrid_Exporting_DataGridExcelExportingController_ExportToExcel_Syncfusion_Maui_DataGrid_SfDataGrid_) method, with the SfDataGrid passed as an argument.
 
 {% tabs %}
 {% highlight xaml %}
@@ -85,7 +85,7 @@ N> The SfDataGrid is unable to export the DataGridTemplateColumn to PDF or Excel
 
 ## Exporting Options
 
-Furthermore, you can export the data to Excel by providing the grid and `DataGridExcelExportingOption` as arguments to the `ExportToExcel` method, which provides various customization options.
+Furthermore, you can export the data to Excel by providing the grid and [DataGridExcelExportingOption](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.Exporting.DataGridExcelExportingOption.html#properties) as arguments to the `ExportToExcel` method, which provides various customization options.
 
 {% tabs %}
 {% highlight c# %}
@@ -117,21 +117,21 @@ var workBook = excelEngine.Excel.Workbooks[0];
 
 #### ExcelColumnIndex
 
-The `ExcelColumnIndex Property` retrieves or internally sets the column index that is being exported to Excel. Each column is exported based on this index to identify the current exporting column.
+The [ExcelColumnIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.Exporting.DataGridExcelExportingOption.html#Syncfusion_Maui_DataGrid_Exporting_DataGridExcelExportingOption_ExcelColumnIndex) Property retrieves or internally sets the column index that is being exported to Excel. Each column is exported based on this index to identify the current exporting column.
 
 #### ExcelRowIndex
 
-The `ExcelRowIndex Property` retrieves the row index that is being exported to Excel. Each row is exported based on this index to identify the current exporting row index.
+The [ExcelRowIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.Exporting.DataGridExcelExportingOption.html#Syncfusion_Maui_DataGrid_Exporting_DataGridExcelExportingOption_ExcelRowIndex) Property retrieves the row index that is being exported to Excel. Each row is exported based on this index to identify the current exporting row index.
 
 #### Columns
 
-By using the `System.Collections.IEnumerable Columns` property, you can retrieve or set the `ExcludedColumns` collection of columns, which contains all the columns to be exported. The columns in the ExcludedColumns list will not be included in the Columns collection.
+By using the `System.Collections.IEnumerable Columns` property, you can retrieve or set the [ExcludedColumns](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.Exporting.DataGridExcelExportingOption.html#Syncfusion_Maui_DataGrid_Exporting_DataGridExcelExportingOption_ExcludedColumns) collection of columns, which contains all the columns to be exported. The columns in the ExcludedColumns list will not be included in the Columns collection.
 
 ## Customize header, groups and table summary when exporting
 
 ### Export groups
 
-By default, all the groups in the data grid will be exported to Excel sheet. To export the data grid without groups, set the `DataGridExcelExportingOption.CanExportGroups` property to `false`.
+By default, all the groups in the data grid will be exported to Excel sheet. To export the data grid without groups, set the [DataGridExcelExportingOption.CanExportGroups](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.Exporting.DataGridExcelExportingOption.html#Syncfusion_Maui_DataGrid_Exporting_DataGridExcelExportingOption_CanExportGroups) property to `false`.
 
 {% tabs %}
 {% highlight c# %}
@@ -151,7 +151,7 @@ option.CanExportGroups = true;
 
 ### Export header
 
-By default, the column headers will be exported to Excel sheet. To export the SfDataGrid without column headers, set the `DataGridExcelExportingOption.CanExportHeader` property to `false`.
+By default, the column headers will be exported to Excel sheet. To export the SfDataGrid without column headers, set the [DataGridExcelExportingOption.CanExportHeader](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.Exporting.DataGridExcelExportingOption.html#Syncfusion_Maui_DataGrid_Exporting_DataGridExcelExportingOption_CanExportHeader) property to `false`.
 
 {% tabs %}
 {% highlight c# %}
@@ -164,7 +164,7 @@ DataGridPdfExportingOption option = new DataGridPdfExportingOption();
 
 ### ExportGroupSummary
 
-By default, the `GroupSummary` rows in the data grid will be exported to Excel. To export the `SfDataGrid` without group summaries, set the `DataGridExcelExportingOption.CanExportGroupSummary` property to `false`.
+By default, the `GroupSummary` rows in the data grid will be exported to Excel. To export the `SfDataGrid` without group summaries, set the [DataGridExcelExportingOption.CanExportGroupSummary](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.Exporting.DataGridExcelExportingOption.html#Syncfusion_Maui_DataGrid_Exporting_DataGridExcelExportingOption_CanExportGroupSummary) property to `false`.
 
 {% tabs %}
 {% highlight c# %}
@@ -178,7 +178,7 @@ option.CanExportGroups = true;
 
 #### Export table summary
 
-By default, table summaries in the data grid will be exported to Excel. To export the SfDataGrid without table summaries, set the `DataGridExcelExportingOption.CanExportTableSummary` property to `false`.
+By default, table summaries in the data grid will be exported to Excel. To export the SfDataGrid without table summaries, set the [DataGridExcelExportingOption.CanExportTableSummary](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.Exporting.DataGridExcelExportingOption.html#Syncfusion_Maui_DataGrid_Exporting_DataGridExcelExportingOption_CanExportGroupSummary) property to `false`.
 
 {% tabs %}
 {% highlight c# %}
@@ -198,7 +198,7 @@ option.CanExportTableSummary= true;
 
 ### Export groups with outlines
 
-To export the data grid with applied grouping, enable the option to expand or collapse groups in the Excel sheet by setting the `DataGridExcelExportingOption.CanAllowOutlining` to `true`. By default, this property is set to false, so you cannot expand or collapse the groups in the Excel sheet.
+To export the data grid with applied grouping, enable the option to expand or collapse groups in the Excel sheet by setting the [DataGridExcelExportingOption.CanAllowOutlining](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.Exporting.DataGridExcelExportingOption.html#Syncfusion_Maui_DataGrid_Exporting_DataGridExcelExportingOption_CanAllowOutlining) to `true`. By default, this property is set to false, so you cannot expand or collapse the groups in the Excel sheet.
 
 {% tabs %}
 {% highlight c# %}
@@ -209,7 +209,7 @@ DataGridExcelExportingOption option = new DataGridExcelExportingOption();
 
 ### Exclude columns when exporting
 
-By default, all columns (including hidden columns) in the SfDataGrid are exported to Excel. To exclude specific columns when exporting to Excel, add those columns to the `DataGridExcelExportingOption.ExcludeColumns` property in the `DataGridExcelExportingOption` list.
+By default, all columns (including hidden columns) in the SfDataGrid are exported to Excel. To exclude specific columns when exporting to Excel, add those columns to the [DataGridExcelExportingOption.ExcludeColumns](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.Exporting.DataGridExcelExportingOption.html#Syncfusion_Maui_DataGrid_Exporting_DataGridExcelExportingOption_ExcludedColumns) property in the `DataGridExcelExportingOption` list.
 
 {% tabs %}
 {% highlight c# %}
@@ -239,7 +239,7 @@ var excelEngine = excelExport.ExportToExcel(this.dataGrid, selectedItems);
 
 ### Customize Exporting Excel Version
 
-The SfDataGrid enables the exportation of data to Excel in specific versions through the utilization of the `DataGridExcelExportingOption.ExcelVersion` property.
+The SfDataGrid enables the exportation of data to Excel in specific versions through the utilization of the [DataGridExcelExportingOption.ExcelVersion](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.Exporting.DataGridExcelExportingOption.html#Syncfusion_Maui_DataGrid_Exporting_DataGridExcelExportingOption_ExcelVersion) property.
 
 {% tabs %}
 {% highlight c# %}
@@ -252,7 +252,7 @@ option.ExcelVersion = Syncfusion.XlsIO.ExcelVersion.Excel2013;
 
 #### StartColumnIndex
 
-By default, the exported SfDataGrid will start from the 0th column in the Excel sheet. You can specify the starting column by using the `DataGridExcelExportingOption.StartColumnIndex` property.
+By default, the exported SfDataGrid will start from the 0th column in the Excel sheet. You can specify the starting column by using the [DataGridExcelExportingOption.StartColumnIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.Exporting.DataGridExcelExportingOption.html#Syncfusion_Maui_DataGrid_Exporting_DataGridExcelExportingOption_StartColumnIndex) property.
 
 {% tabs %}
 {% highlight c# %}
@@ -265,7 +265,7 @@ option.StartColumnIndex = 3;
 
 #### StartRowIndex
 
-By default, the exported SfDataGrid will start from the 0th row in the Excel sheet. You can specify the starting row by using the `DataGridExcelExportingOption.StartRowIndex` property.
+By default, the exported SfDataGrid will start from the 0th row in the Excel sheet. You can specify the starting row by using the [DataGridExcelExportingOption.StartRowIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.Exporting.DataGridExcelExportingOption.html#Syncfusion_Maui_DataGrid_Exporting_DataGridExcelExportingOption_StartRowIndex) property.
 {% tabs %}
 {% highlight c# %}
 DataGridExcelExportingOption option = new DataGridExcelExportingOption();
@@ -277,7 +277,7 @@ option.StartRowIndex = 3;
 
 ### Exporting with sorting and filtering
 
-The SfDataGrid enables the export of the data grid to Excel while allowing sorting and filtering options to be enabled on the column header in the Excel sheet. This can be achieved by setting the `DataGridExcelExportingOption.CanAllowSortingAndFiltering` property to `true`. By default, this property is set to false.
+The SfDataGrid enables the export of the data grid to Excel while allowing sorting and filtering options to be enabled on the column header in the Excel sheet. This can be achieved by setting the [DataGridExcelExportingOption.CanAllowSortingAndFiltering](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.Exporting.DataGridExcelExportingOption.html#Syncfusion_Maui_DataGrid_Exporting_DataGridExcelExportingOption_CanAllowSortingAndFiltering) property to `true`. By default, this property is set to false.
 
 {% tabs %}
 {% highlight c# %}
@@ -291,7 +291,7 @@ option.CanAllowSortingAndFiltering = true;
 
 ### Applying styles while exporting
 
-The SfDataGrid allows exporting the data with the applied GridStyle by setting the `DataGridExcelExportingOption.CanApplyGridStyle` to `true`. By default, the data will be exported without the GridStyle.
+The SfDataGrid allows exporting the data with the applied GridStyle by setting the [DataGridExcelExportingOption.CanApplyGridStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.Exporting.DataGridExcelExportingOption.html#Syncfusion_Maui_DataGrid_Exporting_DataGridExcelExportingOption_CanApplyGridStyle) to `true`. By default, the data will be exported without the GridStyle.
 
 {% tabs %}
 {% highlight c# %}
@@ -304,7 +304,7 @@ option.CanApplyGridStyle = true;
 
 #### TopTableSummaryStyle
 
-The SfDataGrid supports exporting the top table summary with custom style by using the `DataGridExcelExportingOption.TopTableSummaryStyle` property.
+The SfDataGrid supports exporting the top table summary with custom style by using the [DataGridExcelExportingOption.TopTableSummaryStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.Exporting.DataGridExcelExportingOption.html#Syncfusion_Maui_DataGrid_Exporting_DataGridExcelExportingOption_TopTableSummaryStyle) property.
 
 {% tabs %}
 {% highlight c# %}
@@ -326,7 +326,7 @@ option.TopTableSummaryStyle = new DataGridExportCellStyle()
 
 #### BottomTableSummaryStyle
 
-The SfDataGrid supports exporting the bottom table summary with custom style by using the `DataGridExcelExportingOption.BottomTableSummaryStyle` property.
+The SfDataGrid supports exporting the bottom table summary with custom style by using the [DataGridExcelExportingOption.BottomTableSummaryStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.Exporting.DataGridExcelExportingOption.html#Syncfusion_Maui_DataGrid_Exporting_DataGridExcelExportingOption_BottomTableSummaryStyle) property.
 
 {% tabs %}
 {% highlight c# %}
@@ -348,7 +348,7 @@ option.BottomTableSummaryStyle = new DataGridExportCellStyle()
 
 #### GroupCaptionStyle
 
-The SfDataGrid supports exporting the GroupCaptionSummaries with custom style by using the `DataGridExcelExportingOption.GroupCaptionStyle` property.
+The SfDataGrid supports exporting the GroupCaptionSummaries with custom style by using the [DataGridExcelExportingOption.GroupCaptionStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.Exporting.DataGridExcelExportingOption.html#Syncfusion_Maui_DataGrid_Exporting_DataGridExcelExportingOption_GroupCaptionStyle) property.
 
 {% tabs %}
 {% highlight c# %}
@@ -370,7 +370,7 @@ option.GroupCaptionStyle = new DataGridExportCellStyle()
 
 #### HeaderStyle
 
-The SfDataGrid allows exporting the column headers with custom style by using the `DataGridExcelExportingOption.HeaderStyle` property.
+The SfDataGrid allows exporting the column headers with custom style by using the [DataGridExcelExportingOption.HeaderStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.Exporting.DataGridExcelExportingOption.html#Syncfusion_Maui_DataGrid_Exporting_DataGridExcelExportingOption_HeaderStyle) property.
 
 {% tabs %}
 {% highlight c# %}
@@ -388,7 +388,7 @@ option.HeaderStyle = new DataGridExportCellStyle()
 
 #### RecordStyle
 
-The SfDataGrid allows exporting the records with custom style by using the `DataGridExcelExportingOption.RecordStyle` property.
+The SfDataGrid allows exporting the records with custom style by using the [DataGridExcelExportingOption.RecordStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.Exporting.DataGridExcelExportingOption.html#Syncfusion_Maui_DataGrid_Exporting_DataGridExcelExportingOption_RecordStyle) property.
 
 {% tabs %}
 {% highlight c# %}
@@ -410,7 +410,7 @@ option.RecordStyle = new DataGridExportCellStyle()
 
 #### GroupSummaryStyle 
 
-The `SfDataGrid` allows exporting the `GroupSummary` rows with custom style by using the `DataGridExcelExportingOption.GroupSummaryStyle` property.
+The `SfDataGrid` allows exporting the `GroupSummary` rows with custom style by using the [DataGridExcelExportingOption.GroupSummaryStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.Exporting.DataGridExcelExportingOption.html#Syncfusion_Maui_DataGrid_Exporting_DataGridExcelExportingOption_GroupSummaryStyle) property.
 
 {% tabs %}
 {% highlight c# %}
@@ -434,7 +434,7 @@ option.GroupSummaryStyle = new DataGridExportCellStyle()
 
 ### DefaultColumnWidth
 
-The SfDataGrid allows customizing the column width in Excel file by using the `DataGridExcelExportingOption.DefaultColumnWidth` property. The `DefaultColumnWidth` value will be applied to all the columns in the Excel sheet.
+The SfDataGrid allows customizing the column width in Excel file by using the [DataGridExcelExportingOption.DefaultColumnWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.Exporting.DataGridExcelExportingOption.html#Syncfusion_Maui_DataGrid_Exporting_DataGridExcelExportingOption_DefaultColumnWidth) property. The `DefaultColumnWidth` value will be applied to all the columns in the Excel sheet.
 
 {% tabs %}
 {% highlight c# %}
@@ -446,7 +446,7 @@ option.CanExportColumnWidth = false;
 
 ### DefaultRowHeight
 
-The SfDataGrid allows customizing the row height in Excel file by using the `DataGridExcelExportingOption.DefaultRowHeight` property. The `DefaultRowHeight` value will be applied to all the rows in the Excel sheet.
+The SfDataGrid allows customizing the row height in Excel file by using the [DataGridExcelExportingOption.DefaultRowHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.Exporting.DataGridExcelExportingOption.html#Syncfusion_Maui_DataGrid_Exporting_DataGridExcelExportingOption_DefaultRowHeight) property. The `DefaultRowHeight` value will be applied to all the rows in the Excel sheet.
 
 {% tabs %}
 {% highlight c# %}
@@ -460,7 +460,7 @@ option.CanExportRowHeight = false;
 
 ### ExportColumnWidth
 
-By default, the data grid columns will be exported to Excel with `DataGridExcelExportingOption.DefaultColumnWidth` value. You can also export the data grid to Excel with exact column widths by setting the `DataGridExcelExportingOption.CanExportColumnWidth` property to `true`. 
+By default, the data grid columns will be exported to Excel with `DataGridExcelExportingOption.DefaultColumnWidth` value. You can also export the data grid to Excel with exact column widths by setting the [DataGridExcelExportingOption.CanExportColumnWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.Exporting.DataGridExcelExportingOption.html#Syncfusion_Maui_DataGrid_Exporting_DataGridExcelExportingOption_CanExportColumnWidth) property to `true`. 
 
 {% tabs %}
 {% highlight c# %}
@@ -472,7 +472,7 @@ option.CanExportColumnWidth = true;
 
 ### ExportRowHeight
 
-By default, the data grid rows will be exported to Excel with `DataGridExcelExportingOption.DefaultRowHeight` value. You can also export the data grid to Excel with exact row heights by setting the `DataGridExcelExportingOption.CanExportRowHeight` property to `true`.
+By default, the data grid rows will be exported to Excel with `DataGridExcelExportingOption.DefaultRowHeight` value. You can also export the data grid to Excel with exact row heights by setting the [DataGridExcelExportingOption.CanExportRowHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.Exporting.DataGridExcelExportingOption.html#Syncfusion_Maui_DataGrid_Exporting_DataGridExcelExportingOption_CanExportRowHeight) property to `true`.
 
 {% tabs %}
 {% highlight c# %}
@@ -492,7 +492,7 @@ The SfDataGrid provides the following events when exporting to Excel:
 
 ### Row exporting
 
-The `DataGridRowExcelExportingEventHandler` delegate allows customizing the styles for record rows and group caption rows. The `RowExporting` event is triggered with `DataGridRowExcelExportingEventArgs` that contains the following properties:
+The `DataGridRowExcelExportingEventHandler` delegate allows customizing the styles for record rows and group caption rows. The `RowExporting` event is triggered with [ataGridRowExcelExportingEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.Exporting.DataGridRowExcelExportingEventArgs.html) that contains the following properties:
 
 * `Range`: Specifies the Excel range to be exported. It provides full access to the exporting cell in Excel.
 * `Record`: Gets the collection of the exported underlying data objects.
@@ -520,7 +520,7 @@ private void ExcelExport_RowExporting(object sender, DataGridRowExcelExportingEv
 
 ### CellExporting
 
-The `DataGridCellExcelExportingEventHandler` delegate allows customizing the styles for header cells, record cells, and group caption cells. The `CellExporting` event is triggered with `DataGridCellExcelExportingEventArgs` that contains the following properties:
+The `DataGridCellExcelExportingEventHandler` delegate allows customizing the styles for header cells, record cells, and group caption cells. The `CellExporting` event is triggered with [DataGridCellExcelExportingEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.Exporting.DataGridCellExcelExportingEventArgs.html) that contains the following properties:
 
 * `CellType`: Specifies the cell type by using `ExportCellType` enum. Checks the cell type and apply different cell styles based on the cell type.
 * `CellValue`: Contains the exported actual value. Applies formatting in Excel by using the `Range` property.
