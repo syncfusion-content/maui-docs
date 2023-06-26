@@ -31,9 +31,27 @@ The [ImageEffect](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEdito
 Brightness is used to adjust the overall lightness or darkness of the image. The value of the brightness effect ranges from -1 to 1, and the default value is 0.
 
 {% tabs %}
-{% highlight C# tabtitle="C#" %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 
-this.imageEditor.ImageEffect(ImageEffect.Brightness, -0.6);
+   <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="40" />
+        </Grid.RowDefinitions>
+        <imageEditor:SfImageEditor x:Name="imageEditor"
+                                   Source="image.jpeg" />
+        <Button Grid.Row="1"
+                Text="Brightness"
+                Clicked="OnBrightnessClicked" />
+    </Grid>  
+
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+    private void OnBrightnessClicked(object sender, EventArgs e)
+    {
+        this.imageEditor.ImageEffect(ImageEffect.Brightness, -0.6);
+    }
 
 {% endhighlight %}
 {% endtabs %}
@@ -45,9 +63,27 @@ this.imageEditor.ImageEffect(ImageEffect.Brightness, -0.6);
 Blur creates a soft and unfocused appearance by reducing the image's sharpness. The value of the blur effect ranges from 0 to 1, and the default value is 0.
 
 {% tabs %}
-{% highlight C# tabtitle="C#" %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 
-this.imageEditor.ImageEffect(ImageEffect.Blur, 0.5);
+   <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="40" />
+        </Grid.RowDefinitions>
+        <imageEditor:SfImageEditor x:Name="imageEditor"
+                                   Source="image.jpeg" />
+        <Button Grid.Row="1"
+                Text="Blur"
+                Clicked="OnBlurClicked" />
+    </Grid>  
+
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+    private void OnBlurClicked(object sender, EventArgs e)
+    {
+        this.imageEditor.ImageEffect(ImageEffect.Blur, 0.5);
+    }
 
 {% endhighlight %}
 {% endtabs %}
@@ -59,9 +95,27 @@ this.imageEditor.ImageEffect(ImageEffect.Blur, 0.5);
 Contrast increases or decreases the difference between light and dark areas, making the image more visually distinct. The value of the contrast effect ranges from -1 to 1, and the default value is 0.
 
 {% tabs %}
-{% highlight C# tabtitle="C#" %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 
-this.imageEditor.ImageEffect(ImageEffect. Contrast, -0.8);
+   <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="40" />
+        </Grid.RowDefinitions>
+        <imageEditor:SfImageEditor x:Name="imageEditor"
+                                   Source="image.jpeg" />
+        <Button Grid.Row="1"
+                Text="Contrast"
+                Clicked="OnContrastClicked" />
+    </Grid>  
+
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+    private void OnContrastClicked(object sender, EventArgs e)
+    {
+        this.imageEditor.ImageEffect(ImageEffect. Contrast, -0.8);
+    }
 
 {% endhighlight %}
 {% endtabs %}
@@ -73,9 +127,27 @@ this.imageEditor.ImageEffect(ImageEffect. Contrast, -0.8);
 Exposure is used to alter the overall brightness and darkness levels of the image. The value of the exposure effect ranges from -1 to 1, and the default value is 0.
 
 {% tabs %}
-{% highlight C# tabtitle="C#" %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 
-this.imageEditor.ImageEffect(ImageEffect. Exposure, -0.4);
+   <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="40" />
+        </Grid.RowDefinitions>
+        <imageEditor:SfImageEditor x:Name="imageEditor"
+                                   Source="image.jpeg" />
+        <Button Grid.Row="1"
+                Text="Exposure"
+                Clicked="OnExposureClicked" />
+    </Grid>  
+
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+    private void OnExposureClicked(object sender, EventArgs e)
+    {
+        this.imageEditor.ImageEffect(ImageEffect. Exposure, -0.4);
+    }
 
 {% endhighlight %}
 {% endtabs %}
@@ -87,9 +159,27 @@ this.imageEditor.ImageEffect(ImageEffect. Exposure, -0.4);
 Hue is used to change the overall color tone of the image by shifting the color spectrum. The value of the hue effect ranges from -1 to 1, and the default value is 0.
 
 {% tabs %}
-{% highlight C# tabtitle="C#" %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 
-this.imageEditor.ImageEffect(ImageEffect.Hue, 0.2);
+   <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="40" />
+        </Grid.RowDefinitions>
+        <imageEditor:SfImageEditor x:Name="imageEditor"
+                                   Source="image.jpeg" />
+        <Button Grid.Row="1"
+                Text="Hue"
+                Clicked="OnHueClicked" />
+    </Grid>  
+
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+    private void OnHueClicked(object sender, EventArgs e)
+    {
+        this.imageEditor.ImageEffect(ImageEffect.Hue, 0.2);
+    }
 
 {% endhighlight %}
 {% endtabs %}
@@ -101,9 +191,27 @@ this.imageEditor.ImageEffect(ImageEffect.Hue, 0.2);
 Saturation enhances or reduces the intensity and vividness of colors in the image. The value of the saturation effect ranges from -1 to 1, and the default value is 0.
 
 {% tabs %}
-{% highlight C# tabtitle="C#" %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 
-this.imageEditor.ImageEffect(ImageEffect. Saturation, -0.8);
+   <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="40" />
+        </Grid.RowDefinitions>
+        <imageEditor:SfImageEditor x:Name="imageEditor"
+                                   Source="image.jpeg" />
+        <Button Grid.Row="1"
+                Text="Saturation"
+                Clicked="OnSaturationClicked" />
+    </Grid>  
+
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+    private void OnSaturationClicked(object sender, EventArgs e)
+    {
+        this.imageEditor.ImageEffect(ImageEffect. Saturation, -0.8);
+    }
 
 {% endhighlight %}
 {% endtabs %}
@@ -115,9 +223,27 @@ this.imageEditor.ImageEffect(ImageEffect. Saturation, -0.8);
 Sharpen enhances the clarity and definition of edges and details in the image. The value of the sharpen effect ranges from 0 to 6, and the default value is 0.
 
 {% tabs %}
-{% highlight C# tabtitle="C#" %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 
-this.imageEditor.ImageEffect(ImageEffect.Sharpen, 0.5);
+   <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="40" />
+        </Grid.RowDefinitions>
+        <imageEditor:SfImageEditor x:Name="imageEditor"
+                                   Source="image.jpeg" />
+        <Button Grid.Row="1"
+                Text="Sharpen"
+                Clicked="OnSharpenClicked" />
+    </Grid>  
+
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+    private void OnSharpenClicked(object sender, EventArgs e)
+    {
+        this.imageEditor.ImageEffect(ImageEffect.Sharpen, 0.5);
+    }
 
 {% endhighlight %}
 {% endtabs %}
@@ -129,9 +255,27 @@ this.imageEditor.ImageEffect(ImageEffect.Sharpen, 0.5);
 Opacity is used to control the transparency or visibility of the image. The value of the opacity effect ranges from 0 to 1, and the default value is 1.
 
 {% tabs %}
-{% highlight C# tabtitle="C#" %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 
-this.imageEditor.ImageEffect(ImageEffect. Opacity, 0.5);
+   <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="40" />
+        </Grid.RowDefinitions>
+        <imageEditor:SfImageEditor x:Name="imageEditor"
+                                   Source="image.jpeg" />
+        <Button Grid.Row="1"
+                Text="Opacity"
+                Clicked="OnOpacityClicked" />
+    </Grid>  
+
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+    private void OnOpacityClicked(object sender, EventArgs e)
+    {
+        this.imageEditor.ImageEffect(ImageEffect. Opacity, 0.5);
+    }
 
 {% endhighlight %}
 {% endtabs %}
@@ -143,9 +287,27 @@ this.imageEditor.ImageEffect(ImageEffect. Opacity, 0.5);
 Call the [SaveEdits](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_SaveEdits) method to save the applied effects in view; otherwise, the effects will be reset on the next action.
 
 {% tabs %}
-{% highlight C# tabtitle="C#" %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 
-this.imageEditor.SaveEdits();
+   <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="40" />
+        </Grid.RowDefinitions>
+        <imageEditor:SfImageEditor x:Name="imageEditor"
+                                   Source="image.jpeg" />
+        <Button Grid.Row="1"
+                Text="SaveEdits"
+                Clicked="OnSaveEditsClicked" />
+    </Grid>  
+
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+    private void OnSaveEditsClicked(object sender, EventArgs e)
+    {
+        this.imageEditor.SaveEdits();
+    }
 
 {% endhighlight %}
 {% endtabs %}
@@ -153,12 +315,33 @@ this.imageEditor.SaveEdits();
 The applied effects can be canceled using the [CancelEdits](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_CancelEdits) method or by calling the [ImageEffect](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEffect.html) method with [ImageEffect.None](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEffect.html#Syncfusion_Maui_ImageEditor_ImageEffect_None).
 
 {% tabs %}
-{% highlight C# tabtitle="C#" %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 
-this.imageEditor.CancelEdits();
+   <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="40" />
+        </Grid.RowDefinitions>
+        <imageEditor:SfImageEditor x:Name="imageEditor"
+                                   Source="image.jpeg" />
+        <Button Grid.Row="1"
+                Text="CancelEdits"
+                Clicked="OnCancelEditsClicked" />
+    </Grid>  
 
 {% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
+    private void OnCancelEditsClicked(object sender, EventArgs e)
+    {
+        this.imageEditor.CancelEdits();
+    }
+
+{% endhighlight %}
+{% endtabs %}
+
+
+{% tabs %}
 {% highlight C# tabtitle="C#" %}
 
 this.imageEditor.ImageEffect(ImageEffect.None, 0);
