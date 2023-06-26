@@ -66,13 +66,13 @@ The string type property with
 Numeric
 </td>
 <td>
-DataFormNumericItem
+{{'[DataFormNumericItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormNumericItem.html)'| markdownify }}
 </td>
 <td>
 The int, double, float type property and any other type apart from the below specified cases.
 </td>
 <td>
-SfNumericEntry
+{{'[SfNumericEntry](https://help.syncfusion.com/maui/numeric-entry/overview)'| markdownify }}
 </td>
 </tr>
 <tr>
@@ -80,13 +80,13 @@ SfNumericEntry
 MaskedText
 </td>
 <td>
-DataFormMaskedTextItem
+{{'[DataFormMaskedTextItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormMaskedTextItem.html)'| markdownify }}
 </td>
 <td>
 The string type property with [DataType(DataType.PhoneNumber)] and [DataType(DataType.CreditCard)] attribute.
 </td>
 <td>
-SfMaskedEntry
+{{'[SfMaskedEntry](https://help.syncfusion.com/maui/masked-entry/overview)'| markdownify }}
 </td>
 </tr>
 <tr>
@@ -320,14 +320,12 @@ public string Password { get; set; }
 ![Password editor in .NET MAUI DataForm.](images/editors/dataform-password-editor.png)
 
 ## Numeric editor
-In the numeric editor, the `SfNumericEntry` will be loaded and the DataForm Numeric editor supports `int`, `double`, and `float` data type properties.
-
-Also, to add a DataForm Numeric editor, register the editor as `DataFormEditorType.Numeric` for the required property using the [RegisterEditor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_RegisterEditor_System_String_Syncfusion_Maui_DataForm_DataFormEditorType_) method.
+In the numeric editor, the [SfNumericEntry](https://help.syncfusion.com/maui/numeric-entry/overview) will be loaded and the DataForm Numeric editor supports `int`, `double`, and `float` data type properties.
 
 ![Numeric editor in .NET MAUI DataForm.](images/editors/dataform-numeric-editor.png)
 
 #### Changing the Numeric editor properties
-You can use the `GenerateDataFormItem` event to change Numeric editor properties.
+You can use the [GenerateDataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_GenerateDataFormItem) event to change Numeric editor properties.
 
 {% tabs %}
 {% highlight C# %}
@@ -339,31 +337,30 @@ public int Percentage { get; set; }
 {% endhighlight %}
 {% highlight C# %}
 
-this.dataForm.RegisterEditor("Amount", DataFormEditorType.Numeric);
 this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
 private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
 {
-        if (e.DataFormItem != null)
+    if (e.DataFormItem != null)
+    {
+        if (e.DataFormItem.FieldName == "Amount" && e.DataFormItem is DataFormNumericItem amount)
         {
-            if (e.DataFormItem.FieldName == "Amount" && e.DataFormItem is DataFormNumericItem amount)
-            {
-                amount.AllowNull = true;
-                amount.CustomFormat = "C";
-                amount.Culture = new CultureInfo("fr-FR");
-                amount.ShowClearButton = true;
-            }
-            else if (e.DataFormItem.FieldName == "Percentage" && e.DataFormItem is DataFormNumericItem percentage)
-            {
-                percentage.AllowNull = true;
-                percentage.CustomFormat = "P";
-                percentage.Culture = new CultureInfo("en-In");
-                percentage.ShowClearButton = false;
-                percentage.Maximum = 123.45;
-                percentage.Minimum = 0.012;
-                percentage.Keyboard = Keyboard.Numeric;
-            }
+            amount.AllowNull = true;
+            amount.CustomFormat = "C";
+            amount.Culture = new CultureInfo("fr-FR");
+            amount.ShowClearButton = true;
         }
+        else if (e.DataFormItem.FieldName == "Percentage" && e.DataFormItem is DataFormNumericItem percentage)
+        {
+            percentage.AllowNull = true;
+            percentage.CustomFormat = "P";
+            percentage.Culture = new CultureInfo("en-In");
+            percentage.ShowClearButton = false;
+            percentage.Maximum = 123.45;
+            percentage.Minimum = 0.012;
+            percentage.Keyboard = Keyboard.Numeric;
+        }
+    }
 }
 
 {% endhighlight %}
@@ -371,26 +368,26 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 
 ## Masked text editor
 
-In the Masked text editor, the `SfMaskedEntry` will be loaded and DataForm Masked text editor supports the `PhoneNumber` and `CreditCard` data type property of [DataTypeAttribute](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.datatype?view=net-7.0).
+In the Masked text editor, the [SfMaskedEntry](https://help.syncfusion.com/maui/masked-entry/overview) will be loaded and DataForm Masked text editor supports the `PhoneNumber` and `CreditCard` data type property of [DataTypeAttribute](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.datatype?view=net-7.0).
 
-Also, to add a DataForm Masked text editor, register the editor as `DataFormEditorType.MaskedText` for the required property using the [RegisterEditor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_RegisterEditor_System_String_Syncfusion_Maui_DataForm_DataFormEditorType_) method.
+Also, to add a DataForm Masked text editor, register the editor as [DataFormEditorType.MaskedText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormEditorType.html#Syncfusion_Maui_DataForm_DataFormEditorType_MaskedText) for the required property using the [RegisterEditor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_RegisterEditor_System_String_Syncfusion_Maui_DataForm_DataFormEditorType_) method.
 
 ![Masked text editor in .NET MAUI DataForm.](images/editors/dataform-masked-editor.png)
 
 #### Changing the Masked text editor properties
-You can use the `GenerateDataFormItem` event to change Masked text editor properties
+You can use the [GenerateDataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_GenerateDataFormItem) event to change Masked text editor properties
 
 
 {% tabs %}
 {% highlight C# %}
 
-    [DataType(DataType.PhoneNumber)]
-    public string PhoneNumber { get; set; }
+[DataType(DataType.PhoneNumber)]
+public string PhoneNumber { get; set; }
 
-    [DataType(DataType.CreditCard)]
-    public string CreditCard { get; set; }
+[DataType(DataType.CreditCard)]
+public string CreditCard { get; set; }
 
-    public string Amount { get; set; }
+public string Amount { get; set; }
 
 {% endhighlight %}
 {% highlight C# %}
@@ -400,24 +397,24 @@ this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
 private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
 {
-        if (e.DataFormItem != null)
+    if (e.DataFormItem != null)
+    {
+        if (e.DataFormItem.FieldName == "Amount" && e.DataFormItem is DataFormMaskedTextItem amount)
         {
-            if (e.DataFormItem.FieldName == "Amount" && e.DataFormItem is DataFormMaskedTextItem amount)
-            {
-                amount.PromptChar = '_';
-                amount.MaskType = MaskedEditorMaskType.Simple;
-                amount.Mask = "0,000.00";
-                amount.Culture = new CultureInfo("fr-FR");
-            }
-            else if (e.DataFormItem.FieldName == "PhoneNumber" && e.DataFormItem is DataFormMaskedTextItem phoneNumber)
-            {
-                phoneNumber.PromptChar = '#';
-                phoneNumber.MaskType = MaskedEditorMaskType.Simple;
-                phoneNumber.Mask="000 000 0000";
-                phoneNumber.Culture = new CultureInfo("en-In");
-                phoneNumber.ClearButtonVisibility = MaskedEditorClearButtonVisibility.WhileEditing;
-            }
+            amount.PromptChar = '_';
+            amount.MaskType = MaskedEditorMaskType.Simple;
+            amount.Mask = "0,000.00";
+            amount.Culture = new CultureInfo("fr-FR");
         }
+        else if (e.DataFormItem.FieldName == "PhoneNumber" && e.DataFormItem is DataFormMaskedTextItem phoneNumber)
+        {
+            phoneNumber.PromptChar = '#';
+            phoneNumber.MaskType = MaskedEditorMaskType.Simple;
+            phoneNumber.Mask="000 000 0000";
+            phoneNumber.Culture = new CultureInfo("en-In");
+            phoneNumber.ClearButtonVisibility = MaskedEditorClearButtonVisibility.WhileEditing;
+        }
+    }
 }
 
 {% endhighlight %}
