@@ -19,21 +19,17 @@ This section provides a quick overview of how to get started with the Accordion 
  4. Initialize the `SfAccordion` control.
  
 {% tabs %}
-{% highlight xaml hl_lines="6" %}
-
+{% highlight xaml hl_lines="4" %}
 <ContentPage   
     . . .
       xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Accordion;assembly=Syncfusion.Maui.Expander">
-
     <syncfusion:SfAccordion />
 </ContentPage>
-
 {% endhighlight %}
-{% highlight c# hl_lines="10" %}
 
+{% highlight c# hl_lines="8" %}
 using Syncfusion.Maui.Accordion;
 . . .
-
 public partial class MainPage : ContentPage
 {
     public MainPage()
@@ -42,7 +38,6 @@ public partial class MainPage : ContentPage
         SfAccordion accordion = new SfAccordion();
     }
 }
-
 {% endhighlight %}
 {% endtabs %}
 
@@ -88,8 +83,7 @@ Here, the Grid is loaded in the Header and Content of accordion items.
 N> When loading Label as direct children of `Header` or `Content` of `AccordionItem`, then it will lead to an exception. So, load `Label` inside `Grid` to overcome the crash.
 
 {% tabs %}
-{% highlight xaml hl_lines="10" %}
-
+{% highlight xaml hl_lines="9 10" %}
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
@@ -201,7 +195,7 @@ You can customize the rate of change of a parameter over time or the animation s
 The `SfAccordion` allows you to customize the scroll position of the expanded accordion item using the [AutoScrollPosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.SfAccordion.html#Syncfusion_Maui_Accordion_SfAccordion_AutoScrollPosition) property. By default, the auto-scroll position is set to `MakeVisible`.  
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight xaml hl_lines="2" %}
     <syncfusion:SfAccordion x:Name="accordion"
                              AutoScrollPosition="Top"/>
 {% endhighlight %}
@@ -226,7 +220,7 @@ The `BringIntoView` method is used to bring a specific item into view by scrolli
  </syncfusion:SfAccordion>
 {% endhighlight %}
 
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# hl_lines="3" tabtitle="MainPage.xaml.cs" %}
 private void Button_Clicked(object sender, EventArgs e)
 {
     accordion.BringIntoView(accordion.Items[15]);
@@ -239,11 +233,11 @@ private void Button_Clicked(object sender, EventArgs e)
 You can expand single or multiple items using the [ExpandMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.SfAccordion.html#Syncfusion_Maui_Accordion_SfAccordion_ExpandMode) property. By default, the expanded mode is set to `Single`.  
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight xaml hl_lines="2" %}
     <syncfusion:SfAccordion x:Name="accordion" 
                             ExpandMode="Multiple" />
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
+{% highlight c# %}
     accordion.ExpandMode = AccordionExpandMode.Multiple;
 {% endhighlight %}
 {% endtabs %}
@@ -253,7 +247,7 @@ You can expand single or multiple items using the [ExpandMode](https://help.sync
 The `SfAccordion` allows you to customize the vertical spacing between the accordion items by using the [ItemSpacing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.SfAccordion.html#Syncfusion_Maui_Accordion_SfAccordion_ItemSpacing) property. 
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight xaml hl_lines="2"%}
     <syncfusion:SfAccordion x:Name="accordion" 
                             ItemSpacing="6.0d" />
 {% endhighlight %}
@@ -279,7 +273,7 @@ The [Expanding](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Accordi
 * [Index](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.ExpandingAndCollapsingEventArgs.html#Syncfusion_Maui_Accordion_ExpandingAndCollapsingEventArgs_Index):Gets the index of the current expanding accordion item.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="1"%}
 <syncfusion:SfAccordion Expanding="SfAccordion_Expanding">
     <syncfusion:SfAccordion.Items>
         <syncfusion:AccordionItem>
@@ -306,7 +300,7 @@ private void SfAccordion_Expanding(object sender, Syncfusion.Maui.Accordion.Expa
 The [Expanded](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Accordion.SfAccordion.html#Syncfusion_XForms_Accordion_SfAccordion_Expanded) event is triggered when the accordion item is fully expanded. You can execute your own code when this event occurs.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="1" %}
 <syncfusion:SfAccordion Expanded="SfAccordion_Expanded">
     <syncfusion:SfAccordion.Items>
         <syncfusion:AccordionItem>
@@ -317,7 +311,7 @@ The [Expanded](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Accordio
  </syncfusion:SfAccordion>
 {% endhighlight %}
 
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="4"%}
 private void SfAccordion_Expanded(object sender, Syncfusion.Maui.Accordion.ExpandedAndCollapsedEventArgs e)
 {
     // Get the index of current accordion item
@@ -334,7 +328,7 @@ The [Collapsing](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Accord
 * [Index](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.ExpandingAndCollapsingEventArgs.html#Syncfusion_Maui_Accordion_ExpandingAndCollapsingEventArgs_Index):Gets the index of the current collapsing accordion item.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="1"%}
 <syncfusion:SfAccordion Collapsing="SfAccordion_Collapsing">
     <syncfusion:SfAccordion.Items>
         <syncfusion:AccordionItem>
@@ -361,7 +355,7 @@ private void SfAccordion_Collapsing(object sender, Syncfusion.Maui.Accordion.Exp
 The [Collapsed](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Accordion.SfAccordion.html#Syncfusion_XForms_Accordion_SfAccordion_Collapsed) event is triggered when the accordion item is collapsed. You can execute your own code when this event occurs.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="1"%}
 <syncfusion:SfAccordion Collapsed="SfAccordion_Collapsed">
     <syncfusion:SfAccordion.Items>
         <syncfusion:AccordionItem>
@@ -372,7 +366,7 @@ The [Collapsed](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Accordi
  </syncfusion:SfAccordion>
 {% endhighlight %}
 
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="4"%}
 private void SfAccordion_Collapsed(object sender, Syncfusion.Maui.Accordion.ExpandedAndCollapsedEventArgs e)
 {
     // Get the index of current accordion item
