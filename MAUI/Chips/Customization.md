@@ -13,29 +13,23 @@ The chip control supports to customize the background color, border color, close
 
 ## ShowCloseButton
 
-The [`ShowCloseButton`] property sets the visible state of close button in SfChip.
+The [`ShowCloseButton`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChip.html#Syncfusion_Maui_Core_SfChip_ShowCloseButton) property sets the visible state of close button in SfChip.
 
 {% tabs %}
 
 {% highlight xaml %}
-
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:chip ="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:ChipCustomization"
-    x:Class="ChipCustomization.MainPage">
   
-   <ContentPage.Content>
-        <StackLayout Margin="8,8,8,8" >
-           <chip:SfChip     Text="James" 
-                            WidthRequest="150"
-                            HorizontalOptions="Center"
-                            VerticalOptions="Center"
-                            ShowCloseButton="true" >
-           </chip:SfChip>  
-        </StackLayout>
-    </ContentPage.Content>
+<ContentPage.Content>
+    <StackLayout Margin="8,8,8,8" >
+        <chip:SfChip     Text="James" 
+                        WidthRequest="97"
+                        HeightRequest="34"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        ShowCloseButton="true" >
+        </chip:SfChip>  
+    </StackLayout>
+</ContentPage.Content>
     
 </ContentPage>
 
@@ -45,26 +39,17 @@ The [`ShowCloseButton`] property sets the visible state of close button in SfChi
 
 using Syncfusion.Maui.Core;
 
-namespace ChipCustomization
-{
-    public partial class MainPage : ContentPage
-    {
-        public MainPage()
-        {
-            InitializeComponent();
-            StackLayout stackLayout = new StackLayout();
-            SfChip chip = new SfChip();
-            chip.Text = "James";
-            chip.WidthRequest = 150;
-            chip.HorizontalOptions = LayoutOptions.Center;
-            chip.VerticalOptions = LayoutOptions.Center;
-            chip.ShowCloseButton = true;
-            stackLayout.Children.Add(chip);
-            this.Content = stackLayout;
-        }
-    }
-}
-
+    StackLayout stackLayout = new StackLayout();
+    SfChip chip = new SfChip();
+    chip.Text = "James";
+    chip.WidthRequest = 97;
+    chip.WidthRequest = 34;
+    chip.HorizontalOptions = LayoutOptions.Center;
+    chip.VerticalOptions = LayoutOptions.Center;
+    chip.ShowCloseButton = true;
+    stackLayout.Children.Add(chip);
+    this.Content = stackLayout;
+        
 {% endhighlight %}
 
 {% endtabs %}
@@ -75,7 +60,7 @@ N> The default value of ShowCloseButton is [`false`].
 
 ## ShowSelectionIndicator
 
-The [`ShowSelectionIndicator`] property sets the visible state of selection indicator in SfChip.
+The [`ShowSelectionIndicator`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChip.html#Syncfusion_Maui_Core_SfChip_ShowSelectionIndicator) property sets the visible state of selection indicator in SfChip.
 
 {% tabs %}
 
@@ -83,7 +68,7 @@ The [`ShowSelectionIndicator`] property sets the visible state of selection indi
   
    <ContentPage.Content>
         <StackLayout Margin="8,8,8,8" >
-           <chip:SfChip     WidthRequest="150"
+           <chip:SfChip     WidthRequest="97"
                             HorizontalOptions="Center"
                             VerticalOptions="Center"
                             ShowSelectionIndicator="true"
@@ -92,8 +77,6 @@ The [`ShowSelectionIndicator`] property sets the visible state of selection indi
         </StackLayout>
     </ContentPage.Content>
     
-
-
 {% endhighlight %}
 
 {% highlight c# %}
@@ -102,7 +85,7 @@ using Syncfusion.Maui.Core;
 
    StackLayout stackLayout = new StackLayout();
    SfChip chip = new SfChip();
-   chip.WidthRequest = 150;
+   chip.WidthRequest = 97;
    chip.HorizontalOptions = LayoutOptions.Center;
    chip.VerticalOptions = LayoutOptions.Center;
    chip.ShowSelectionIndicator = true;
@@ -119,28 +102,23 @@ N> The default value of ShowSelectionIndicator is [`false`].
 
 ## CloseButtonColor
 
-The [`CloseButtonColor`] property customizes the color of the close button in SfChip.
+The [`CloseButtonColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChip.html#Syncfusion_Maui_Core_SfChip_CloseButtonColor) property customizes the color of the close button in SfChip.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<ContentPage 
-	xmlns:chip ="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
-    >
-    <ContentPage.Content>
-        <StackLayout Margin="8,8,8,8" >
-           <chip:SfChip     WidthRequest="150"
-                            HorizontalOptions="Center"
-                            VerticalOptions="Center"
-                            ShowCloseButton="true"
-                            CloseButtonColor="White"
-                            >
-           </chip:SfChip>  
-        </StackLayout>
-    </ContentPage.Content>
-    
-</ContentPage>
+<ContentPage.Content>
+    <StackLayout Margin="8,8,8,8" >
+        <chip:SfChip     WidthRequest="97"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        ShowCloseButton="true"
+                        CloseButtonColor="Red"
+                        >
+        </chip:SfChip>  
+    </StackLayout>
+</ContentPage.Content>
 
 {% endhighlight %}
 
@@ -150,15 +128,14 @@ using Syncfusion.Maui.Core;
 
     StackLayout stackLayout = new StackLayout();
     SfChip chip = new SfChip();
-    chip.WidthRequest = 150;
+    chip.WidthRequest = 97;
     chip.HorizontalOptions = LayoutOptions.Center;
     chip.VerticalOptions = LayoutOptions.Center;
     chip.ShowCloseButton = true;
-    chip.CloseButtonColor = Colors.Black;
+    chip.CloseButtonColor = Colors.Red;
     stackLayout.Children.Add(chip);
     this.Content = stackLayout;
         
-
 {% endhighlight %}
 
 {% endtabs %}
@@ -170,28 +147,23 @@ N> The Default value of ClosebuttonColor is [`Color.FromArgb("#49454E")`].
 
 ## SelectionIndicatorColor
 
-The [`SelectionIndicatorColor`] property customizes the selection indicator color in SfChip.
+The [`SelectionIndicatorColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChip.html#Syncfusion_Maui_Core_SfChip_SelectionIndicatorColor) property customizes the selection indicator color in SfChip.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<ContentPage 
-    xmlns:chip ="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
-    >
-    <ContentPage.Content>
-        <StackLayout Margin="8,8,8,8" >
-           <chip:SfChip     WidthRequest="150"
-                            HorizontalOptions="Center"
-                            VerticalOptions="Center"
-                            ShowSelectionIndicator="true"
-                            SelectionIndicatorColor = "White"
-                            >
-           </chip:SfChip>  
-        </StackLayout>
-    </ContentPage.Content>
-    
-</ContentPage>
+<ContentPage.Content>
+    <StackLayout Margin="8,8,8,8" >
+        <chip:SfChip     WidthRequest="97"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        ShowSelectionIndicator="true"
+                        SelectionIndicatorColor = "Yellow"
+                        >
+        </chip:SfChip>  
+    </StackLayout>
+</ContentPage.Content>
 
 {% endhighlight %}
 
@@ -201,11 +173,11 @@ using Syncfusion.Maui.Core;
 
     StackLayout stackLayout = new StackLayout();
     SfChip chip = new SfChip();
-    chip.WidthRequest = 150;
+    chip.WidthRequest = 97;
     chip.HorizontalOptions = LayoutOptions.Center;
     chip.VerticalOptions = LayoutOptions.Center;
     chip.ShowSelectionIndicator = true;
-    chip.SelectionIndicatorColor = Colors.White;
+    chip.SelectionIndicatorColor = Colors.Yellow;
     stackLayout.Children.Add(chip);
     this.Content = stackLayout;
         
@@ -219,27 +191,22 @@ N> The default value of SelectionIndicatorColor is [`Color.FromRgb(30, 25, 43)`]
 
 ## BackgroundColor
 
-The [`BackgroundColor`] property customizes the background color of SfChip.
+The [`BackgroundColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChip.html#Syncfusion_Maui_Core_SfChip_BackgroundColor) property customizes the background color of SfChip.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<ContentPage 
-	xmlns:chip ="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
-    >
-    <ContentPage.Content>
-        <StackLayout Margin="8,8,8,8" >
-           <chip:SfChip     WidthRequest="150"
-                            HorizontalOptions="Center"
-                            VerticalOptions="Center"
-                            BackgroundColor="#512dcd"
-                            >
-           </chip:SfChip>  
-        </StackLayout>
-    </ContentPage.Content>
-    
-</ContentPage>
+<ContentPage.Content>
+    <StackLayout Margin="8,8,8,8" >
+        <chip:SfChip     WidthRequest="97"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        BackgroundColor="LightCoral"
+                        >
+        </chip:SfChip>  
+    </StackLayout>
+</ContentPage.Content>
 
 {% endhighlight %}
 
@@ -249,10 +216,10 @@ using Syncfusion.Maui.Core;
 
     StackLayout stackLayout = new StackLayout();
     SfChip chip = new SfChip();
-    chip.WidthRequest = 150;
+    chip.WidthRequest = 97;
     chip.HorizontalOptions = LayoutOptions.Center;
     chip.VerticalOptions = LayoutOptions.Center;
-    chip.BackgroundColor = Colors.Violet;
+    chip.BackgroundColor = Colors.LightCoral;
     stackLayout.Children.Add(chip);
     this.Content = stackLayout;
         
@@ -264,27 +231,22 @@ using Syncfusion.Maui.Core;
 
 ## Stroke
 
-The [`Stroke`] property customizes the color of border in SfChip.
+The [`Stroke`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChip.html#Syncfusion_Maui_Core_SfChip_Stroke) property customizes the color of border in SfChip.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<ContentPage 
-	xmlns:chip ="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
-    >
-    <ContentPage.Content>
-        <StackLayout Margin="8,8,8,8" >
-           <chip:SfChip     WidthRequest="150"
-                            HorizontalOptions="Center"
-                            VerticalOptions="Center"
-                            Stroke="Black"
-                            >
-           </chip:SfChip>  
-        </StackLayout>
-    </ContentPage.Content>
-    
-</ContentPage>
+<ContentPage.Content>
+    <StackLayout Margin="8,8,8,8" >
+        <chip:SfChip     WidthRequest="97"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        Stroke="Black"
+                        >
+        </chip:SfChip>  
+    </StackLayout>
+</ContentPage.Content>
 
 {% endhighlight %}
 
@@ -294,7 +256,7 @@ using Syncfusion.Maui.Core;
 
     StackLayout stackLayout = new StackLayout();
     SfChip chip = new SfChip();
-    chip.WidthRequest = 150;
+    chip.WidthRequest = 97;
     chip.HorizontalOptions = LayoutOptions.Center;
     chip.VerticalOptions = LayoutOptions.Center;
     chip.Stroke = Colors.Black;
@@ -309,29 +271,24 @@ using Syncfusion.Maui.Core;
 
 ## StrokeThickness
 
-The [`StrokeThickness`] property is used to customizes the border thickness of the SfChip on four sides.
+The [`StrokeThickness`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChip.html#Syncfusion_Maui_Core_SfChip_StrokeThickness) property is used to customizes the border thickness of the SfChip on four sides.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<ContentPage 
-	xmlns:chip ="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
-    >
-    <ContentPage.Content>
-        <StackLayout Margin="8,8,8,8" >
-           <chip:SfChip     WidthRequest="150"
-                            HorizontalOptions="Center"
-                            VerticalOptions="Center"
-                            StrokeThickness="5"
-                            Stroke = "Black" 
-                           >
-           </chip:SfChip>  
-        </StackLayout>
-    </ContentPage.Content>
+<ContentPage.Content>
+    <StackLayout Margin="8,8,8,8" >
+        <chip:SfChip     WidthRequest="97"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        StrokeThickness="7"
+                        Stroke = "Black" 
+                        >
+        </chip:SfChip>  
+    </StackLayout>
+</ContentPage.Content>
     
-</ContentPage>
-
 {% endhighlight %}
 
 {% highlight c# %}
@@ -340,7 +297,7 @@ using Syncfusion.Maui.Core;
 
     StackLayout stackLayout = new StackLayout();
     SfChip chip = new SfChip();
-    chip.WidthRequest = 150;
+    chip.WidthRequest = 97;
     chip.HorizontalOptions = LayoutOptions.Center;
     chip.VerticalOptions = LayoutOptions.Center;
     chip.StrokeThickness = 5;
@@ -356,28 +313,23 @@ using Syncfusion.Maui.Core;
 
 ## CornerRadius
 
-The `CornerRadius` property is used to customize the rounded edges in SfChip as demonstrated in the following code sample.
+The [`CornerRadius`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChip.html#Syncfusion_Maui_Core_SfChip_CornerRadius) property is used to customize the rounded edges in SfChip as demonstrated in the following code sample.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<ContentPage 
-	xmlns:chip ="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
-    >
-    <ContentPage.Content>
-        <StackLayout Margin="8,8,8,8" >
-           <chip:SfChip     WidthRequest="150"
-                            HorizontalOptions="Center"
-                            VerticalOptions="Center"
-                            CornerRadius = "4"
-                            Stroke="Black"
-                            >
-           </chip:SfChip>  
-        </StackLayout>
-    </ContentPage.Content>
-    
-</ContentPage>
+<ContentPage.Content>
+    <StackLayout Margin="8,8,8,8" >
+        <chip:SfChip     WidthRequest="97"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        CornerRadius = "25"
+                        Stroke="Black"
+                        >
+        </chip:SfChip>  
+    </StackLayout>
+</ContentPage.Content>
 
 {% endhighlight %}
 
@@ -387,10 +339,10 @@ using Syncfusion.Maui.Core;
 
     StackLayout stackLayout = new StackLayout();
     SfChip chip = new SfChip();
-    chip.WidthRequest = 150;
+    chip.WidthRequest = 97;
     chip.HorizontalOptions = LayoutOptions.Center;
     chip.VerticalOptions = LayoutOptions.Center;
-    chip.CornerRadius = 4;
+    chip.CornerRadius = 25;
     chip.Stroke = Colors.Black;
     stackLayout.Children.Add(chip);
     this.Content = stackLayout;
@@ -405,26 +357,21 @@ N> The default value of CornerRadius is [`Thickness(8)`].
 
 ## FontAttributes
 
-The [`FontAttributes`] property customizes the font style of text in SfChip.
+The [`FontAttributes`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChip.html#Syncfusion_Maui_Core_SfChip_FontAttributes) property customizes the font style of text in SfChip.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<ContentPage 
-	xmlns:chip ="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
-    >
-    <ContentPage.Content>
-        <StackLayout Margin="8,8,8,8" >
-           <chip:SfChip     WidthRequest="150"
-                            HorizontalOptions="Center"
-                            VerticalOptions="Center"
-                            FontAttributes="Italic" >
-           </chip:SfChip>  
-        </StackLayout>
-    </ContentPage.Content>
-    
-</ContentPage>
+<ContentPage.Content>
+    <StackLayout Margin="8,8,8,8" >
+        <chip:SfChip     WidthRequest="97"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        FontAttributes="Italic" >
+        </chip:SfChip>  
+    </StackLayout>
+</ContentPage.Content>
 
 {% endhighlight %}
 
@@ -434,7 +381,7 @@ using Syncfusion.Maui.Core;
 
     StackLayout stackLayout = new StackLayout();
     SfChip chip = new SfChip();
-    chip.WidthRequest = 150;
+    chip.WidthRequest = 97;
     chip.HorizontalOptions = LayoutOptions.Center;
     chip.VerticalOptions = LayoutOptions.Center;
     chip.FontAttributes = FontAttributes.Italic;
@@ -449,27 +396,22 @@ using Syncfusion.Maui.Core;
 
 ## FontFamily
 
-The [`FontFamily`] property customizes the font family of text in SfChip.
+The [`FontFamily`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChip.html#Syncfusion_Maui_Core_SfChip_FontFamily) property customizes the font family of text in SfChip.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<ContentPage 
-	xmlns:chip ="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
-    >
-    <ContentPage.Content>
-        <StackLayout Margin="8,8,8,8" >
-           <chip:SfChip     WidthRequest="150"
-                            HorizontalOptions="Center"
-                            VerticalOptions="Center"
-                            FontFamily="times new roman"
-                            >
-           </chip:SfChip>  
-        </StackLayout>
-    </ContentPage.Content>
-    
-</ContentPage>
+<ContentPage.Content>
+    <StackLayout Margin="8,8,8,8" >
+        <chip:SfChip     WidthRequest="97"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        FontFamily="times new roman"
+                        >
+        </chip:SfChip>  
+    </StackLayout>
+</ContentPage.Content>
 
 {% endhighlight %}
 
@@ -479,7 +421,7 @@ using Syncfusion.Maui.Core;
 
     StackLayout stackLayout = new StackLayout();
     SfChip chip = new SfChip();
-    chip.WidthRequest = 150;
+    chip.WidthRequest = 97;
     chip.HorizontalOptions = LayoutOptions.Center;
     chip.VerticalOptions = LayoutOptions.Center;
     chip.FontFamily = "times new roman";
@@ -494,28 +436,23 @@ using Syncfusion.Maui.Core;
 
 ## FontSize
 
-The [`FontSize`] property customizes the size of text in SfChip.
+The [`FontSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChip.html#Syncfusion_Maui_Core_SfChip_FontSize) property customizes the size of text in SfChip.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<ContentPage 
-	xmlns:chip ="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
-    >
-    <ContentPage.Content>
-        <StackLayout Margin="8,8,8,8" >
-        <chip:SfChip        Text="James"
-                            WidthRequest="150"
-                            HorizontalOptions="Center"
-                            VerticalOptions="Center"
-                            FontSize = "10"
-                            >
-           </chip:SfChip>  
-        </StackLayout>
-    </ContentPage.Content>
-    
-</ContentPage>
+<ContentPage.Content>
+    <StackLayout Margin="8,8,8,8" >
+    <chip:SfChip        Text="James"
+                        WidthRequest="97"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        FontSize = "15"
+                        >
+        </chip:SfChip>  
+    </StackLayout>
+</ContentPage.Content>
 
 {% endhighlight %}
 
@@ -526,10 +463,10 @@ using Syncfusion.Maui.Core;
     StackLayout stackLayout = new StackLayout();
     SfChip chip = new SfChip();
     chip.Text = "James";
-    chip.WidthRequest = 150;
+    chip.WidthRequest = 97;
     chip.HorizontalOptions = LayoutOptions.Center;
     chip.VerticalOptions = LayoutOptions.Center;
-    chip.FontSize = 10;
+    chip.FontSize = 15;
     stackLayout.Children.Add(chip);
     this.Content = stackLayout;
         
@@ -543,30 +480,25 @@ N> Default Value of FontSize is [`14d`]
    
 ## TextColor
 
-The [`TextColor`] property customizes the color of text in SfChip.
+The [`TextColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChip.html#Syncfusion_Maui_Core_SfChip_TextColor) property customizes the color of text in SfChip.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<ContentPage 
-	xmlns:chip ="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
-    >
-    <ContentPage.Content>
-        <StackLayout Margin="8,8,8,8" >
-           <chip:SfChip     Text="James"
-                            WidthRequest="150"
-                            HorizontalOptions="Center"
-                            VerticalOptions="Center"
-                            BackgroundColor="Aqua"
-                            TextColor="Black"
-                            >
-           </chip:SfChip>  
-        </StackLayout>
-    </ContentPage.Content>
+<ContentPage.Content>
+    <StackLayout Margin="8,8,8,8" >
+        <chip:SfChip     Text="James"
+                        WidthRequest="97"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        BackgroundColor="Aqua"
+                        TextColor="Red"
+                        >
+        </chip:SfChip>  
+    </StackLayout>
+</ContentPage.Content>
     
-</ContentPage>
-
 {% endhighlight %}
 
 {% highlight c# %}
@@ -576,11 +508,11 @@ using Syncfusion.Maui.Core;
     StackLayout stackLayout = new StackLayout();
     SfChip chip = new SfChip();
     chip.Text = "James";
-    chip.WidthRequest = 150;
+    chip.WidthRequest = 97;
     chip.HorizontalOptions = LayoutOptions.Center;
     chip.VerticalOptions = LayoutOptions.Center;
     chip.BackgroundColor = Colors.Aqua;
-    chip.TextColor = Colors.Black;
+    chip.TextColor = Colors.Red;
     stackLayout.Children.Add(chip);
     this.Content = stackLayout;
         
@@ -594,29 +526,24 @@ N> The default value of TextColor is [`Color.FromArgb("#1C1B1F")`].
 
 ## TextAlignment
 
-The [`HorizontalTextAlignment`] and [`VerticalTextAlignment`] properties customize the alignment of text in SfChip.
+The [`HorizontalTextAlignment`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChip.html#Syncfusion_Maui_Core_SfChip_HorizontalTextAlignment) and [`VerticalTextAlignment`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChip.html#Syncfusion_Maui_Core_SfChip_VerticalTextAlignment) properties customize the alignment of text in SfChip.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<ContentPage 
-	xmlns:chip ="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
-    >
-    <ContentPage.Content>
-        <StackLayout Margin="8,8,8,8" >
-           <chip:SfChip     Text="James"
-                            WidthRequest="150"
-                            HorizontalOptions="Center"
-                            VerticalOptions="Center"
-                            HorizontalTextAlignment="Start"
-                            VerticalTextAlignment="Start"
-                            >
-           </chip:SfChip>  
-        </StackLayout>
-    </ContentPage.Content>
-    
-</ContentPage>
+<ContentPage.Content>
+    <StackLayout Margin="8,8,8,8" >
+        <chip:SfChip     Text="James"
+                        WidthRequest="120"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        HorizontalTextAlignment="Start"
+                        VerticalTextAlignment="Center"
+                        >
+        </chip:SfChip>  
+    </StackLayout>
+</ContentPage.Content>
 
 {% endhighlight %}
 
@@ -626,12 +553,12 @@ using Syncfusion.Maui.Core;
 
     StackLayout stackLayout = new StackLayout();
     SfChip chip = new SfChip();
-    chip.WidthRequest = 150;
+    chip.WidthRequest = 120;
     chip.Text = "James";
     chip.HorizontalOptions = LayoutOptions.Center;
     chip.VerticalOptions = LayoutOptions.Center;
     chip.HorizontalTextAlignment = TextAlignment.Start;
-    chip.VerticalTextAlignment = TextAlignment.Start;
+    chip.VerticalTextAlignment = TextAlignment.Center;
     stackLayout.Children.Add(chip);
     this.Content = stackLayout;
         
@@ -645,29 +572,24 @@ N> The default values of HorizontalTextAlignment and VerticalTextAlignment are [
 
 ## ShowIcon
 
-You can enable the icon image using the [`ShowIcon`] property to know whether any image appears to the SfChip.
+You can enable the icon image using the [`ShowIcon`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChip.html#Syncfusion_Maui_Core_SfChip_ShowIcon) property to know whether any image appears to the SfChip.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<ContentPage 
-	xmlns:chip ="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
-    >
-    <ContentPage.Content>
-        <StackLayout Margin="8,8,8,8" >
-           <chip:SfChip     WidthRequest="150"
-                            HorizontalOptions="Center"
-                            VerticalOptions="Center"
-                            ImageSource="ChipUserContact.png"
-                            ShowIcon="true"
-                            >
-           </chip:SfChip>  
-        </StackLayout>
-    </ContentPage.Content>
+<ContentPage.Content>
+    <StackLayout Margin="8,8,8,8" >
+        <chip:SfChip     WidthRequest="100"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        ImageSource="ChipUserContact.png"
+                        ShowIcon="true"
+                        >
+        </chip:SfChip>  
+    </StackLayout>
+</ContentPage.Content>
     
-</ContentPage>
-
 {% endhighlight %}
 
 {% highlight c# %}
@@ -688,32 +610,27 @@ using Syncfusion.Maui.Core;
 
 {% endtabs %}
 
-![SfChip with ShowIcon](images/customization-images/chip_imagesource_image.png)
+![SfChip with ShowIcon](images/customization-images/chip_showicon_image.png)
 
 N> The default value of ShowIcon is [`false`].
 
 ## BackgroundImage
 
-The [`BackgroundImage`] property is used to customize the aspect for the image of SfChip.
+The [`BackgroundImage`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChip.html#Syncfusion_Maui_Core_SfChip_BackgroundImageSource) property is used to customize the aspect for the image of SfChip.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<ContentPage 
-	xmlns:chip ="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
-    >
-    <ContentPage.Content>
-        <StackLayout Margin="8,8,8,8" >
-           <chip:SfChip     WidthRequest="150"
-                            HorizontalOptions="Center"
-                            VerticalOptions="Center"
-                            BackgroundImage="Lion.png">
-           </chip:SfChip>             
-        </StackLayout>
-    </ContentPage.Content>
-    
-</ContentPage>
+<ContentPage.Content>
+    <StackLayout Margin="8,8,8,8" >
+        <chip:SfChip     WidthRequest="100"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        BackgroundImage="lion.png">
+        </chip:SfChip>             
+    </StackLayout>
+</ContentPage.Content>
 
 {% endhighlight %}
 
@@ -723,10 +640,10 @@ using Syncfusion.Maui.Core;
 
     StackLayout stackLayout = new StackLayout();
     SfChip chip = new SfChip();
-    chip.WidthRequest = 150;
+    chip.WidthRequest = 100;
     chip.HorizontalOptions = LayoutOptions.Center;
     chip.VerticalOptions = LayoutOptions.Center;
-    chip.BackgroundImage="Lion.png";
+    chip.BackgroundImage="lion.png";
     stackLayout.Children.Add(chip);
     this.Content = stackLayout;
         
@@ -738,29 +655,24 @@ using Syncfusion.Maui.Core;
 
 ## ImageSource
 
-The [`ImageSource`] property customizes the icon image of SfChip by adding a custom image.
+The [`ImageSource`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChip.html#Syncfusion_Maui_Core_SfChip_ImageSource) property customizes the icon image of SfChip by adding a custom image.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<ContentPage 
-	xmlns:chip ="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
-    >
-    <ContentPage.Content>
-        <StackLayout Margin="8,8,8,8" >
-           <chip:SfChip     WidthRequest="150"
-                            HorizontalOptions="Center"
-                            VerticalOptions="Center"
-                            ImageSource="ChipUserContact.png"
-                            ShowIcon="true"
-                            >
-           </chip:SfChip>  
-        </StackLayout>
-    </ContentPage.Content>
+<ContentPage.Content>
+    <StackLayout Margin="8,8,8,8" >
+        <chip:SfChip     WidthRequest="100"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        ImageSource="ChipUserContact.png"
+                        ShowIcon="true"
+                        >
+        </chip:SfChip>  
+    </StackLayout>
+</ContentPage.Content>
     
-</ContentPage>
-
 {% endhighlight %}
 
 {% highlight c# %}
@@ -769,7 +681,7 @@ using Syncfusion.Maui.Core;
 
     StackLayout stackLayout = new StackLayout();
     SfChip chip = new SfChip();
-    chip.WidthRequest = 150;
+    chip.WidthRequest = 100;
     chip.HorizontalOptions = LayoutOptions.Center;
     chip.VerticalOptions = LayoutOptions.Center;
     chip.ImageSource = "ChipUserContact.png";
@@ -787,29 +699,24 @@ N> Enable the [`ShowIcon`] property to enable the [`ImageSource`] property.
 
 ## ImageSize
 
-The [`ImageSize`] property customizes the width of icon image in SfChip.
+The [`ImageSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChip.html#Syncfusion_Maui_Core_SfChip_ImageSize) property customizes the width and height of icon image in SfChip.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<ContentPage 
-	xmlns:chip ="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
-    >
-    <ContentPage.Content>
-        <StackLayout Margin="8,8,8,8" >
-           <chip:SfChip     WidthRequest="150"
-                            HorizontalOptions="Center"
-                            VerticalOptions="Center"
-                            ImageSource="ChipUserContact.png"
-                            ImageSize="25"
-                            ShowIcon="true"
-                            >
-           </chip:SfChip>  
-        </StackLayout>
-    </ContentPage.Content>
-    
-</ContentPage>
+<ContentPage.Content>
+    <StackLayout Margin="8,8,8,8" >
+        <chip:SfChip     WidthRequest="120"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        ImageSource="ChipUserContact.png"
+                        ImageSize="30"
+                        ShowIcon="true"
+                        >
+        </chip:SfChip>  
+    </StackLayout>
+</ContentPage.Content>
 
 {% endhighlight %}
 
@@ -819,11 +726,11 @@ using Syncfusion.Maui.Core;
 
     StackLayout stackLayout = new StackLayout();
     SfChip chip = new SfChip();
-    chip.WidthRequest = 150;
+    chip.WidthRequest = 120;
     chip.HorizontalOptions = LayoutOptions.Center;
     chip.VerticalOptions = LayoutOptions.Center;
     chip.ImageSource = "ChipUserContact.png";
-    chip.ImageSize = 25;
+    chip.ImageSize = 30;
     chip.ShowIcon = true;
     stackLayout.Children.Add(chip);
     this.Content = stackLayout;
@@ -838,30 +745,25 @@ N> The default value of ImageSize is [`18d`].
 
 ## ImageAlignment 
 
-The [`ImageAlignment`] property customizes the alignment of icon image in SfChip.
+The [`ImageAlignment`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChip.html#Syncfusion_Maui_Core_SfChip_ImageAlignment) property customizes the alignment of icon image in SfChip.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<ContentPage 
-	xmlns:chip ="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
-    >
-    <ContentPage.Content>
-        <StackLayout Margin="8,8,8,8" >
-           <chip:SfChip  
-                            WidthRequest="150"
-                            HorizontalOptions="Center"
-                            VerticalOptions="Center"
-                            ImageSource="ChipUserContact.png"
-                            ImageAlignment="End"
-                            ShowIcon="true"
-                            >
-           </chip:SfChip>  
-        </StackLayout>
-    </ContentPage.Content>
-    
-</ContentPage>
+<ContentPage.Content>
+    <StackLayout Margin="8,8,8,8" >
+        <chip:SfChip  
+                        WidthRequest="100"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        ImageSource="ChipUserContact.png"
+                        ImageAlignment="End"
+                        ShowIcon="true"
+                        >
+        </chip:SfChip>  
+    </StackLayout>
+</ContentPage.Content>
 
 {% endhighlight %}
 
@@ -871,7 +773,7 @@ using Syncfusion.Maui.Core;
 
     StackLayout stackLayout = new StackLayout();
     SfChip chip = new SfChip();
-    chip.WidthRequest = 150;
+    chip.WidthRequest = 100;
     chip.HorizontalOptions = LayoutOptions.Center;
     chip.VerticalOptions = LayoutOptions.Center;
     chip.ImageSource = "ChipUserContact.png";
@@ -890,33 +792,28 @@ N> The default value of ImageAlignment is [`Alignment.Start`].
 
 ## Command
 
-The [`Command`] property associates a command with an instance of SfChip. This property is most often set with MVVM pattern to bind callbacks back into the ViewModel.
+The [`Command`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChip.html#Syncfusion_Maui_Core_SfChip_Command) property associates a command with an instance of SfChip. This property is most often set with MVVM pattern to bind callbacks back into the ViewModel.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<ContentPage 
-	xmlns:chip ="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
-    xmlns:local="clr-namespace:ChipCustomization">
-    <ContentPage.BindingContext>
-       <local:CommandDemoViewModel />
-   </ContentPage.BindingContext>
+<ContentPage.BindingContext>
+    <local:CommandDemoViewModel />
+</ContentPage.BindingContext>
 
-   <ContentPage.Content>
-        <StackLayout Margin="8,8,0,0">
-            <chip:SfChip x:Name="Chip" 
-                            HorizontalOptions="Center"
-                            VerticalOptions="Center"
-                            WidthRequest="150"
-                            BackgroundColor="{Binding Background}"
-                            Command="{Binding ButtonCommand}">
-            </chip:SfChip>  
-        </StackLayout>
-    </ContentPage.Content>
+<ContentPage.Content>
+    <StackLayout Margin="8,8,0,0">
+        <chip:SfChip x:Name="Chip" 
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        WidthRequest="120"
+                        BackgroundColor="{Binding Background}"
+                        Command="{Binding ButtonCommand}">
+        </chip:SfChip>  
+    </StackLayout>
+</ContentPage.Content>
     
-</ContentPage>
-
 {% endhighlight %}
 
 {% highlight c# %}
@@ -931,11 +828,7 @@ public class CommandDemoViewModel : INotifyPropertyChanged
     public Color Background
     {
         get { return _background; }
-        set
-        {
-            _background = value;
-            NotifyPropertyChanged();
-        }
+        set { _background = value; NotifyPropertyChanged(); }
     }
 
     private void NotifyPropertyChanged([CallerMemberName] String propertyName = "")
@@ -974,37 +867,32 @@ The chip group supports to customize the chip's background color, border color, 
 
 ## InputView
 
-The [`InputView`] property allows to provide a view to the input chip. In this example, the input chip is used to add an employee at run time. To get the employee name as input, an entry is added as InputView.
+The [`InputView`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html#Syncfusion_Maui_Core_SfChipGroup_InputView) property allows to provide a view to the input chip. In this example, the input chip is used to add an employee at run time. To get the employee name as input, an entry is added as InputView.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<ContentPage
-    xmlns:chip ="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
-    xmlns:local="clr-namespace:Chips"
-    >
-	<ContentPage.BindingContext>
-		<local:ViewModel x:Name="viewModel"/>
-	</ContentPage.BindingContext>
-	<ContentPage.Content>
-	<chip:SfChipGroup 
-		x:Name="chipGroup" 
-		ItemsSource="{Binding Employees}"
-		ChipPadding="8,8,0,0" 
-        ChipType="Input"
-        DisplayMemberPath="Name">
-		<chip:SfChipGroup.InputView>
-			<Entry x:Name="entry" 
-                Placeholder="Enter Name"
-				Margin="10,10,0,0" 
-                VerticalOptions="Center" 
-			    WidthRequest="110"
-				/>
-		</chip:SfChipGroup.InputView>
-	</chip:SfChipGroup>
-	</ContentPage.Content>
-</ContentPage>
+<ContentPage.BindingContext>
+    <local:ViewModel x:Name="viewModel"/>
+</ContentPage.BindingContext>
+<ContentPage.Content>
+<chip:SfChipGroup 
+    x:Name="chipGroup" 
+    ItemsSource="{Binding Employees}"
+    ChipPadding="8,8,0,0" 
+    ChipType="Input"
+    DisplayMemberPath="Name">
+    <chip:SfChipGroup.InputView>
+        <Entry x:Name="entry" 
+            Placeholder="Enter Name"
+            Margin="10,10,0,0" 
+            VerticalOptions="Center" 
+            WidthRequest="110"
+            />
+    </chip:SfChipGroup.InputView>
+</chip:SfChipGroup>
+</ContentPage.Content>
 
 {% endhighlight %}
 
@@ -1031,16 +919,12 @@ N> The InputView is visible only in the Input type. The default value of InputVi
 
 ## ChipBackground
 
-The [`ChipBackground`] property customizes the background color of the SfChipGroup.
+The [`ChipBackground`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html#Syncfusion_Maui_Core_SfChipGroup_ChipBackground) property customizes the background color of the SfChipGroup.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<ContentPage
-    xmlns:chip ="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
-    xmlns:local="clr-namespace:Chips"
-    >
     <ContentPage.BindingContext>
         <local:ViewModel/>
     </ContentPage.BindingContext>
@@ -1055,8 +939,6 @@ The [`ChipBackground`] property customizes the background color of the SfChipGro
         </StackLayout>  
     </ContentPage.Content>
     
-</ContentPage>
-
 {% endhighlight %}
 
 {% highlight c# %}
@@ -1080,7 +962,7 @@ using Syncfusion.Maui.Core;
 
 N> The default value of ChipBackground is [`Colors.Transparent`].
 
-The [`ChipBackground`] property customizes the background color of the selected chip.
+The [`ChipBackground`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html#Syncfusion_Maui_Core_SfChipGroup_ChipBackground) property customizes the background color of the selected chip.
 
 So, Add visual states to enable selected chip background color also set the ChipType to Choice or Filter.
 
@@ -1088,40 +970,34 @@ So, Add visual states to enable selected chip background color also set the Chip
 
 {% highlight xaml %}
 
-<ContentPage
-    xmlns:chip ="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
-    xmlns:local="clr-namespace:Chips"
-    >
-    <ContentPage.BindingContext>
-        <local:ViewModel/>
-    </ContentPage.BindingContext>
-    <ContentPage.Content>
-        <StackLayout Margin="10,10,10,10">
-            <chip:SfChipGroup x:Name="sfChipGroup"
-                ItemsSource="{Binding Employees}"
-                DisplayMemberPath="Name"
-                ChipType="Choice">
-                <VisualStateManager.VisualStateGroups>
-                    <VisualStateGroup x:Name="CommonStates">
-                        <VisualState x:Name="Normal">
-                            <VisualState.Setters>
-                                <Setter Property="ChipBackground" Value="white" />
+<ContentPage.BindingContext>
+    <local:ViewModel/>
+</ContentPage.BindingContext>
+<ContentPage.Content>
+    <StackLayout Margin="10,10,10,10">
+        <chip:SfChipGroup x:Name="sfChipGroup"
+            ItemsSource="{Binding Employees}"
+            DisplayMemberPath="Name"
+            ChipType="Choice">
+            <VisualStateManager.VisualStateGroups>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Normal">
+                        <VisualState.Setters>
+                            <Setter Property="ChipBackground" Value="white" />
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState x:Name="Selected">
+                        <VisualState.Setters>
+                            <Setter Property="ChipBackground" Value="#502cd5" />
                             </VisualState.Setters>
-                        </VisualState>
-                        <VisualState x:Name="Selected">
-                            <VisualState.Setters>
-                                <Setter Property="ChipBackground" Value="#502cd5" />
-                             </VisualState.Setters>
-                        </VisualState>
-                    </VisualStateGroup>
-                </VisualStateManager.VisualStateGroups>
-            </chip:SfChipGroup>
-            </chip:SfChipGroup>
-        </StackLayout>  
-    </ContentPage.Content>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateManager.VisualStateGroups>
+        </chip:SfChipGroup>
+        </chip:SfChipGroup>
+    </StackLayout>  
+</ContentPage.Content>
     
-</ContentPage>
-
 {% endhighlight %}
 
 {% highlight c# %}
@@ -1173,30 +1049,24 @@ public MainPage()
 
 ## ChipTextColor
 
-The [`ChipTextColor`] property customizes the text color of the SfChipGroup.
+The [`ChipTextColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html#Syncfusion_Maui_Core_SfChipGroup_ChipTextColor) property customizes the text color of the SfChipGroup.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<ContentPage
-    xmlns:chip ="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
-    xmlns:local="clr-namespace:Chips"
-    >
-    <ContentPage.BindingContext>
-        <local:ViewModel/>
-    </ContentPage.BindingContext>
-    <ContentPage.Content>
-        <StackLayout Margin="10,10,10,10">
-            <chip:SfChipGroup
-                ItemsSource="{Binding Employees}"
-                DisplayMemberPath="Name"
-                ChipTextColor="Red">
-            </chip:SfChipGroup>
-        </StackLayout>  
-    </ContentPage.Content>
-    
-</ContentPage>
+<ContentPage.BindingContext>
+    <local:ViewModel/>
+</ContentPage.BindingContext>
+<ContentPage.Content>
+    <StackLayout Margin="10,10,10,10">
+        <chip:SfChipGroup
+            ItemsSource="{Binding Employees}"
+            DisplayMemberPath="Name"
+            ChipTextColor="Red">
+        </chip:SfChipGroup>
+    </StackLayout>  
+</ContentPage.Content>
 
 {% endhighlight %}
 
@@ -1221,7 +1091,7 @@ using Syncfusion.Maui.Core;
 
 N> The default value of ChipTextColor is [`Color.FromArgb("#1C1B1F")`].
 
-The [`ChipTextColor`] property customizes the text color of the selected chip.
+The [`ChipTextColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html#Syncfusion_Maui_Core_SfChipGroup_ChipTextColor) property customizes the text color of the selected chip.
 
 So, Add visual states to enable selected chip text color also set the ChipType to Choice or Filter.
 
@@ -1229,40 +1099,34 @@ So, Add visual states to enable selected chip text color also set the ChipType t
 
 {% highlight xaml %}
 
-<ContentPage
-    xmlns:chip ="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
-    xmlns:local="clr-namespace:Chips"
-    >
-    <ContentPage.BindingContext>
-        <local:ViewModel/>
-    </ContentPage.BindingContext>
-    <ContentPage.Content>
-        <StackLayout Margin="10,10,10,10">
-            <chip:SfChipGroup x:Name="sfChipGroup"
-                ItemsSource="{Binding Employees}"
-                DisplayMemberPath="Name"
-                ChipBackground="White"
-                ChipTextColor="Green"
-                ChipType="Choice">
-            <VisualStateManager.VisualStateGroups>
-                    <VisualStateGroup x:Name="CommonStates">
-                        <VisualState x:Name="Normal">
-                            <VisualState.Setters>
-                                <Setter Property="ChipTextColor" Value="Black" />
+<ContentPage.BindingContext>
+    <local:ViewModel/>
+</ContentPage.BindingContext>
+<ContentPage.Content>
+    <StackLayout Margin="10,10,10,10">
+        <chip:SfChipGroup x:Name="sfChipGroup"
+            ItemsSource="{Binding Employees}"
+            DisplayMemberPath="Name"
+            ChipBackground="White"
+            ChipTextColor="Green"
+            ChipType="Choice">
+        <VisualStateManager.VisualStateGroups>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Normal">
+                        <VisualState.Setters>
+                            <Setter Property="ChipTextColor" Value="Black" />
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState x:Name="Selected">
+                        <VisualState.Setters>
+                            <Setter Property="ChipTextColor" Value="Green" />
                             </VisualState.Setters>
-                        </VisualState>
-                        <VisualState x:Name="Selected">
-                            <VisualState.Setters>
-                                <Setter Property="ChipTextColor" Value="Green" />
-                             </VisualState.Setters>
-                        </VisualState>
-                    </VisualStateGroup>
-                </VisualStateManager.VisualStateGroups>
-            </chip:SfChipGroup>
-        </StackLayout>  
-    </ContentPage.Content>
-    
-</ContentPage>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateManager.VisualStateGroups>
+        </chip:SfChipGroup>
+    </StackLayout>  
+</ContentPage.Content>
 
 {% endhighlight %}
 
@@ -1318,31 +1182,25 @@ N> The default value of SelectedChipTextColor is [`Color.White`].
 
 ## ChipStroke
 
-The [`ChipStroke`] property customizes the border color of the SfChipGroup.
+The [`ChipStroke`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html#Syncfusion_Maui_Core_SfChipGroup_ChipStroke) property customizes the border color of the SfChipGroup.
 
 {% tabs %}
 
 {% highlight xaml %}
 
- <ContentPage
-    xmlns:chip ="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
-    xmlns:local="clr-namespace:Chips"
-    >
-    <ContentPage.BindingContext>
-        <local:ViewModel/>
-    </ContentPage.BindingContext>
-    <ContentPage.Content>
-        <StackLayout Margin="10,10,10,10">
-            <chip:SfChipGroup
-                ItemsSource="{Binding Employees}"
-                DisplayMemberPath="Name"
-                ChipStroke="Black"
-                ChipBackground="#512dcd">
-            </chip:SfChipGroup>
-        </StackLayout>  
-    </ContentPage.Content>
-    
-</ContentPage>
+<ContentPage.BindingContext>
+    <local:ViewModel/>
+</ContentPage.BindingContext>
+<ContentPage.Content>
+    <StackLayout Margin="10,10,10,10">
+        <chip:SfChipGroup
+            ItemsSource="{Binding Employees}"
+            DisplayMemberPath="Name"
+            ChipStroke="Red"
+            ChipBackground="LightYellow">
+        </chip:SfChipGroup>
+    </StackLayout>  
+</ContentPage.Content>
 
 {% endhighlight %}
 
@@ -1356,8 +1214,8 @@ using Syncfusion.Maui.Core;
     this.BindingContext = new ViewModel();
     chipGroup.SetBinding(SfChipGroup.ItemsSourceProperty, "Employees");
     chipGroup.DisplayMemberPath = "Name";
-    chipGroup.ChipStroke = Colors.Black;
-    chipGroup.ChipBackground = Colors.Violet;
+    chipGroup.ChipStroke = Colors.Red;
+    chipGroup.ChipBackground = Colors.LightYellow;
     this.Content = stack;
         
 {% endhighlight %}
@@ -1370,31 +1228,25 @@ N> The default value of ChipBorderColor is [`Color.FromArgb("#79747E")`].
 
 ## ChipTextSize
 
-The [`ChipTextSize`] property customizes the text size of the SfChipGroup.
+The [`ChipTextSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html#Syncfusion_Maui_Core_SfChipGroup_ChipTextSize) property customizes the text size of the SfChipGroup.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<ContentPage
-    xmlns:chip ="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
-    xmlns:local="clr-namespace:Chips"
-    >
-    <ContentPage.BindingContext>
-        <local:ViewModel/>
-    </ContentPage.BindingContext>
-    <ContentPage.Content>
-        <StackLayout Margin="8,8,0,0">
-            <chip:SfChipGroup
-                ItemsSource="{Binding Employees}"
-                DisplayMemberPath="Name"
-                ChipTextSize="10">
-            </chip:SfChipGroup>
-        </StackLayout>  
-    </ContentPage.Content>
+<ContentPage.BindingContext>
+    <local:ViewModel/>
+</ContentPage.BindingContext>
+<ContentPage.Content>
+    <StackLayout Margin="8,8,0,0">
+        <chip:SfChipGroup
+            ItemsSource="{Binding Employees}"
+            DisplayMemberPath="Name"
+            ChipTextSize="10">
+        </chip:SfChipGroup>
+    </StackLayout>  
+</ContentPage.Content>
     
-</ContentPage>
-
 {% endhighlight %}
 
 {% highlight c# %}
@@ -1420,30 +1272,24 @@ N> The default value of ChipTextSize is [`14d`].
 
 ## ChipPadding
 
-The [`ChipPadding`] property sets spacing between each chip.
+The [`ChipPadding`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html#Syncfusion_Maui_Core_SfChipGroup_ChipPadding) property sets spacing between each chip.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<ContentPage
-    xmlns:chip ="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
-    xmlns:local="clr-namespace:Chips"
-    >
-    <ContentPage.BindingContext>
-        <local:ViewModel/>
-    </ContentPage.BindingContext>
-    <ContentPage.Content>
-        <StackLayout Margin="8,8,0,0">
-            <chip:SfChipGroup
-                ItemsSource="{Binding Employees}"
-                DisplayMemberPath="Name"
-                ChipPadding="8,0,0,0">
-            </chip:SfChipGroup>
-        </StackLayout>  
-    </ContentPage.Content>
-    
-</ContentPage>
+<ContentPage.BindingContext>
+    <local:ViewModel/>
+</ContentPage.BindingContext>
+<ContentPage.Content>
+    <StackLayout Margin="8,8,0,0">
+        <chip:SfChipGroup
+            ItemsSource="{Binding Employees}"
+            DisplayMemberPath="Name"
+            ChipPadding="8,0,0,0">
+        </chip:SfChipGroup>
+    </StackLayout>  
+</ContentPage.Content>
 
 {% endhighlight %}
 
@@ -1470,32 +1316,26 @@ N> The default value of ChipPadding is [`Thickness(5d, 0, 0, 0)`].
 
 ## ChipStrokeThickness
 
-The [`ChipStrokeThickness`] property customizes the border width of the SfChipGroup.
+The [`ChipStrokeThickness`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html#Syncfusion_Maui_Core_SfChipGroup_ChipStrokeThickness) property customizes the border width of the SfChipGroup.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<ContentPage
-    xmlns:chip ="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
-    xmlns:local="clr-namespace:Chips"
-    >
-    <ContentPage.BindingContext>
-        <local:ViewModel/>
-    </ContentPage.BindingContext>
-    <ContentPage.Content>
-        <StackLayout Margin="8,8,0,0">
-            <chip:SfChipGroup
-                ItemsSource="{Binding Employees}"
-                ChipStrokeThickness="5"
-                DisplayMemberPath="Name"
-                ChipStroke="Black">
-            </chip:SfChipGroup>
-        </StackLayout>  
-    </ContentPage.Content>
+<ContentPage.BindingContext>
+    <local:ViewModel/>
+</ContentPage.BindingContext>
+<ContentPage.Content>
+    <StackLayout Margin="8,8,0,0">
+        <chip:SfChipGroup
+            ItemsSource="{Binding Employees}"
+            ChipStrokeThickness="7"
+            DisplayMemberPath="Name"
+            ChipStroke="Red">
+        </chip:SfChipGroup>
+    </StackLayout>  
+</ContentPage.Content>
     
-</ContentPage>
-
 {% endhighlight %}
 
 {% highlight c# %}
@@ -1507,8 +1347,8 @@ using Syncfusion.Maui.Core;
     stack.Children.Add(chipGroup);
     this.BindingContext = new ViewModel();
     chipGroup.SetBinding(SfChipGroup.ItemsSourceProperty, "Employees");
-    chipGroup.ChipStrokeThickness = 5;
-    chipGroup.ChipStroke = Colors.Black;
+    chipGroup.ChipStrokeThickness = 7;
+    chipGroup.ChipStroke = Colors.Red;
     chipGroup.DisplayMemberPath = "Name";
     this.Content = stack;
         
@@ -1522,31 +1362,25 @@ N> The default value of ChipStrokeThickness is [`2d`].
 
 ## ItemHeight
 
-The [`ItemHeight`] property customizes the height of the items in the SfChipGroup.
+The [`ItemHeight`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html#Syncfusion_Maui_Core_SfChipGroup_ItemHeight) property customizes the height of the items in the SfChipGroup.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<ContentPage
-    xmlns:chip ="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
-    xmlns:local="clr-namespace:Chips"
-    >
-    <ContentPage.BindingContext>
-        <local:ViewModel/>
-    </ContentPage.BindingContext>
-    <ContentPage.Content>
-        <StackLayout Margin="8,8,0,0">
-            <chip:SfChipGroup
-                ItemsSource="{Binding Employees}"
-                ItemHeight="60"
-                DisplayMemberPath="Name"
-                >
-            </chip:SfChipGroup>
-        </StackLayout>  
-    </ContentPage.Content>
-    
-</ContentPage>
+<ContentPage.BindingContext>
+    <local:ViewModel/>
+</ContentPage.BindingContext>
+<ContentPage.Content>
+    <StackLayout Margin="8,8,0,0">
+        <chip:SfChipGroup
+            ItemsSource="{Binding Employees}"
+            ItemHeight="60"
+            DisplayMemberPath="Name"
+            >
+        </chip:SfChipGroup>
+    </StackLayout>  
+</ContentPage.Content>
 
 {% endhighlight %}
 
@@ -1573,31 +1407,25 @@ N> The default value of ItemHeight is [`double.NaN`].
 
 ## ShowIcon
 
-You can enable the icon image using the [`ShowIcon`] property to know whether any image appears on the SfChipGroup.
+You can enable the icon image using the [`ShowIcon`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html#Syncfusion_Maui_Core_SfChipGroup_ShowIcon) property to know whether any image appears on the SfChipGroup.
 
 {% tabs %}
 
 {% highlight xaml %}
 
- <ContentPage
-    xmlns:chip ="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
-    xmlns:local="clr-namespace:Chips"
-    >
-    <ContentPage.BindingContext>
-        <local:ViewModel x:Name="viewModel"/>
-    </ContentPage.BindingContext>
-    <ContentPage.Content>
-            <chip:SfChipGroup 
-                ItemsSource="{Binding Employees}" 
-                ChipPadding="8,8,0,0" 
-                ImageMemberPath="Image"
-                ChipImageSize="30"
-                ShowIcon="true"
-                DisplayMemberPath="Name">
-             </chip:SfChipGroup>  
-    </ContentPage.Content>
-    
-</ContentPage>
+<ContentPage.BindingContext>
+    <local:ViewModel x:Name="viewModel"/>
+</ContentPage.BindingContext>
+<ContentPage.Content>
+        <chip:SfChipGroup 
+            ItemsSource="{Binding Employees}" 
+            ChipPadding="8,8,0,0" 
+            ImageMemberPath="Image"
+            ChipImageSize="30"
+            ShowIcon="true"
+            DisplayMemberPath="Name">
+            </chip:SfChipGroup>  
+</ContentPage.Content>
 
 {% endhighlight %}
 
@@ -1605,26 +1433,18 @@ You can enable the icon image using the [`ShowIcon`] property to know whether an
 
 using Syncfusion.Maui.Core;
 
-public partial class MainPage : ContentPage
-{
-    public MainPage()
-    {
-        InitializeComponent();
-
-        StackLayout stack = new StackLayout();
-        SfChipGroup chipGroup = new SfChipGroup();
-        stack.Children.Add(chipGroup);
-        this.BindingContext = new ViewModel();
-        chipGroup.SetBinding(SfChipGroup.ItemsSourceProperty, "Employees");
-        chipGroup.DisplayMemberPath = "Name";
-        chipGroup.ImageMemberPath = "Image";
-        chipGroup.ChipImageSize = 30;
-        chipGroup.ShowIcon = true;
-        chipGroup.ChipPadding = new Thickness(8, 8, 0, 0);
-        this.Content = stack;
-    }
-}
-
+    StackLayout stack = new StackLayout();
+    SfChipGroup chipGroup = new SfChipGroup();
+    stack.Children.Add(chipGroup);
+    this.BindingContext = new ViewModel();
+    chipGroup.SetBinding(SfChipGroup.ItemsSourceProperty, "Employees");
+    chipGroup.DisplayMemberPath = "Name";
+    chipGroup.ImageMemberPath = "Image";
+    chipGroup.ChipImageSize = 30;
+    chipGroup.ShowIcon = true;
+    chipGroup.ChipPadding = new Thickness(8, 8, 0, 0);
+    this.Content = stack;
+    
 [Model]
 public class Person
 {
@@ -1647,11 +1467,7 @@ public class ViewModel : INotifyPropertyChanged
     public ObservableCollection<Person> Employees
     {
         get { return employees; }
-        set
-        {
-            Employees = value;
-            OnPropertyChanged("Employees");
-        }
+        set { Employees = value; OnPropertyChanged("Employees"); }
     }
 
     public ViewModel()
@@ -1674,7 +1490,6 @@ public class ViewModel : INotifyPropertyChanged
     }
 }
 
-
 {% endhighlight %}
 
 {% endtabs %}
@@ -1683,31 +1498,26 @@ public class ViewModel : INotifyPropertyChanged
 
 ## CloseButtonColor
 
-The [`CloseButtonColor`] property customizes the color of close button in the SfChipGroup.
+The [`CloseButtonColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html#Syncfusion_Maui_Core_SfChipGroup_CloseButtonColor) property customizes the color of close button in the SfChipGroup.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<ContentPage
-    xmlns:chip ="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
-    xmlns:local="clr-namespace:Chips"
-    >
-    <ContentPage.BindingContext>
-        <local:ViewModel x:Name="viewModel"/>
-    </ContentPage.BindingContext>
-    <ContentPage.Content>
-        <StackLayout Margin="8,8,0,0">
-            <chip:SfChipGroup 
-                ItemsSource="{Binding Employees}" 
-                CloseButtonColor="Red"
-                DisplayMemberPath="Name">
-            </chip:SfChipGroup>  
-        </StackLayout>
-    </ContentPage.Content>
+<ContentPage.BindingContext>
+    <local:ViewModel x:Name="viewModel"/>
+</ContentPage.BindingContext>
+<ContentPage.Content>
+    <StackLayout Margin="8,8,0,0">
+        <chip:SfChipGroup 
+            ItemsSource="{Binding Employees}" 
+            CloseButtonColor="Red"
+            ChipBackground = "LightYellow"
+            DisplayMemberPath="Name">
+        </chip:SfChipGroup>  
+    </StackLayout>
+</ContentPage.Content>
     
-</ContentPage>
-
 {% endhighlight %}
 
 {% highlight c# %}
@@ -1733,30 +1543,24 @@ N> The default value of CloseButtonColor is [`Color.FromArgb("#49454E")`].
 
 ## SelectionIndicatorColor
 
-The [`SelectionIndicatorColor`] property customizes the selection indicator color of the SfChipGroup.
+The [`SelectionIndicatorColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html#Syncfusion_Maui_Core_SfChipGroup_SelectionIndicatorColor) property customizes the selection indicator color of the SfChipGroup.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<ContentPage
-    xmlns:chip ="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
-    xmlns:local="clr-namespace:Chips"
-    >
-    <ContentPage.BindingContext>
-        <local:ViewModel x:Name="viewModel"/>
-    </ContentPage.BindingContext>
-    <ContentPage.Content>
-        <StackLayout Margin="8,8,0,0">
-            <chip:SfChipGroup x:Name="sfChipGroup"
-                ItemsSource="{Binding Employees}" 
-                SelectionIndicatorColor="White"
-                DisplayMemberPath="Name">
-            </chip:SfChipGroup>  
-        </StackLayout>
-    </ContentPage.Content>
-    
-</ContentPage>
+<ContentPage.BindingContext>
+    <local:ViewModel x:Name="viewModel"/>
+</ContentPage.BindingContext>
+<ContentPage.Content>
+    <StackLayout Margin="8,8,0,0">
+        <chip:SfChipGroup x:Name="sfChipGroup"
+            ItemsSource="{Binding Employees}" 
+            SelectionIndicatorColor="White"
+            DisplayMemberPath="Name">
+        </chip:SfChipGroup>  
+    </StackLayout>
+</ContentPage.Content>
 
 {% endhighlight %}
 
@@ -1783,33 +1587,27 @@ N> The default value of SelectionIndicatorColor is [`Color.FromRgb(30, 25, 43)`]
 
 ## ChipImageSize
 
-The [ChipImageSize] property customizes the width of icon image in the SfChipGroup.
+The [ChipImageSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html#Syncfusion_Maui_Core_SfChipGroup_ChipImageSize) property customizes the width of icon image in the SfChipGroup.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<ContentPage
-    xmlns:chip ="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
-    xmlns:local="clr-namespace:Chips"
-    >
-    <ContentPage.BindingContext>
-        <local:ViewModel x:Name="viewModel"/>
-    </ContentPage.BindingContext>
-    <ContentPage.Content>
-        <StackLayout Margin="8,8,0,0">
-            <chip:SfChipGroup 
-                ItemsSource="{Binding Employees}" 
-                ImageMemberPath="Image"
-                ChipImageSize="50"
-                ShowIcon="true"
-                DisplayMemberPath="Name">
-            </chip:SfChipGroup>  
-        </StackLayout>
-    </ContentPage.Content>
+<ContentPage.BindingContext>
+    <local:ViewModel x:Name="viewModel"/>
+</ContentPage.BindingContext>
+<ContentPage.Content>
+    <StackLayout Margin="8,8,0,0">
+        <chip:SfChipGroup 
+            ItemsSource="{Binding Employees}" 
+            ImageMemberPath="Image"
+            ChipImageSize="50"
+            ShowIcon="true"
+            DisplayMemberPath="Name">
+        </chip:SfChipGroup>  
+    </StackLayout>
+</ContentPage.Content>
     
-</ContentPage>
-
 {% endhighlight %}
 
 {% highlight c# %}

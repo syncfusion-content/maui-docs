@@ -13,65 +13,48 @@ Chips can be populated with either business objects and SfChip. This section exp
 
 ## Populating business objects as items
 
-Business objects can be populated in Chips using the `ItemsSource` property.
-Refer to this [documentation] to know more details about populating the chips control with list of employee details.
+Business objects can be populated in Chips using the [`ItemsSource`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html#Syncfusion_Maui_Core_SfChipGroup_ItemsSource) property.
+Refer to this `documentation` to know more details about populating the chips control with list of employee details.
 
 ## Populating SfChip as items
 
-Chips control also provides support to create and set [`SfChip`] as item. It can be achieved using the [`Items`] property.
+Chips control also provides support to create and set [`SfChip`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChip.html) as item. It can be achieved using the [`Items`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html#Syncfusion_Maui_Core_SfChipGroup_Items) property.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<ContentPage
-    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:chip ="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:Chips"
-    x:Class="Chips.GettingStarted">
-	<ContentPage.Content>
-		<chip:SfChipGroup ChipBackground="Violet">
-			<chip:SfChipGroup.Items>
-				<chip:SfChip Text="Extra Small"/>
-				<chip:SfChip Text="Small"/>
-				<chip:SfChip Text="Medium"/>
-				<chip:SfChip Text="Large"/>
-				<chip:SfChip Text="Extra Large"/>
-			</chip:SfChipGroup.Items>
-		</chip:SfChipGroup>
-	</ContentPage.Content>
-</ContentPage>
+<ContentPage.Content>
+<Grid>
+	<chip:SfChipGroup ChipBackground="Violet">
+	<chip:SfChipGroup.Items>
+			<chip:SfChip Text="Extra Small"/>
+			<chip:SfChip Text="Small"/>
+			<chip:SfChip Text="Medium"/>
+			<chip:SfChip Text="Large"/>
+			<chip:SfChip Text="Extra Large"/>
+		</chip:SfChipGroup.Items>
+	</chip:SfChipGroup>
+</Grid>
+</ContentPage.Content>
 
-	
 {% endhighlight %}
 
 {% highlight c# %}
 
 using Syncfusion.Maui.Core;
 
-namespace Chips
-{
-	public partial class GettingStarted: ContentPage
-	{
-		public GettingStarted()
-		{
-			InitializeComponent();
-			Grid grid = new Grid();
-			var chipGroup = new SfChipGroup(){Type = SfChipsType.Action};
-			grid.Children.Add(chipGroup);
-			chipGroup.Items.Add(new SfChip(){Text="Extra Small"});
-			chipGroup.Items.Add(new SfChip(){Text="Small"});
-			chipGroup.Items.Add(new SfChip(){Text="Medium"});
-			chipGroup.Items.Add(new SfChip(){Text="Large"});
-			chipGroup.Items.Add(new SfChip(){Text="Extra Large"});
-			chipGroup.ChipBackground = Colors.Violet;
-			this.Content = grid;
-		}
-	}
-}
-
+	Grid grid = new Grid();
+	var chipGroup = new SfChipGroup(){Type = SfChipsType.Action};
+	grid.Children.Add(chipGroup);
+	chipGroup.Items.Add(new SfChip(){Text="Extra Small"});
+	chipGroup.Items.Add(new SfChip(){Text="Small"});
+	chipGroup.Items.Add(new SfChip(){Text="Medium"});
+	chipGroup.Items.Add(new SfChip(){Text="Large"});
+	chipGroup.Items.Add(new SfChip(){Text="Extra Large"});
+	chipGroup.ChipBackground = Colors.Violet;
+	this.Content = grid;
+		
 {% endhighlight %}
 
 {% endtabs %}
