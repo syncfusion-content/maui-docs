@@ -697,7 +697,7 @@ summaryRow2.SummaryColumns.Add(new DataGridSummaryColumn()
     Format = "{Sum:C0}",
     SummaryType = SummaryType.DoubleAggregate
 });
-sfGrid.TableSummaryRows.Add(summaryRow2);`
+sfGrid.TableSummaryRows.Add(summaryRow2);
 {% endhighlight %}
 {% endtabs %}
 
