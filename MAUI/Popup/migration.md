@@ -217,21 +217,7 @@ N> All the properties from the Xamarin.Forms PopupView class is moved to the MAU
 <td>Positions the popup view relative to the given view.</td></tr>
 </table>
 
-## Methods
-
-<table>
-<tr>
-<th>Xamarin SfPopupLayout</th>
-<th>.NET MAUI SfPopup</th>
-<th>Description</th></tr>
-<tr>
-<td>{{'[PopupView.Refresh()](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.PopupLayout.PopupView.html#Syncfusion_XForms_PopupLayout_PopupView_Refresh)'| markdownify }}</td>
-<td>Nil</td>
-<td>Not supported</td></tr>
-</table>
-
 ## Upcoming Features
 
 * Popup position - ShowAtTouchPoint()
 * Animation 
-* Padding

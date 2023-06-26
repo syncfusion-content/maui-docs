@@ -13,11 +13,12 @@ The .NET MAUI SfExpander comes with built-in support for customizing the appeara
 
 ## Header icon position 
 
-The `SfExpander` allows you to customize the position of the header icon by using the `HeaderIconPosition` property. By default, the header icon position is `End`. 
+The [SfExpander](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Expander.SfExpander.html) allows you to customize the position of the header icon by using the [HeaderIconPosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Expander.SfExpander.html#Syncfusion_Maui_Expander_SfExpander_HeaderIconPosition) property. By default, the header icon position is [End](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Expander.ExpanderIconPosition.html#Syncfusion_Maui_Expander_ExpanderIconPosition_End). 
 
 {% tabs %}
-{% highlight xaml %}
-    <syncfusion:SfExpander x:Name="expander" HeaderIconPosition="Start" />
+{% highlight xaml hl_lines="2"%}
+    <syncfusion:SfExpander x:Name="expander" 
+                           HeaderIconPosition="Start" />
 {% endhighlight %}
 {% highlight c# %}
     expander.HeaderIconPosition = Syncfusion.Maui.Expander.ExpanderIconPosition.Start;
@@ -28,11 +29,12 @@ The `SfExpander` allows you to customize the position of the header icon by usin
 
 ## Header background color customization
 
-The `SfExpander` allows you to customize the background color of the expander header by using the `HeaderBackgroundColor` property.
+The [SfExpander](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Expander.SfExpander.html) allows you to customize the background color of the expander header by using the [HeaderBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Expander.SfExpander.html#Syncfusion_Maui_Expander_SfExpander_HeaderBackground) property.
 
 {% tabs %}
-{% highlight xaml %}
-    <syncfusion:SfExpander x:Name="expander" HeaderBackground="Pink"/>
+{% highlight xaml hl_lines="2" %}
+    <syncfusion:SfExpander x:Name="expander" 
+                           HeaderBackground="Pink"/>
 {% endhighlight %}
 {% highlight c# %}
     expander.HeaderBackground = Colors.Pink;
@@ -41,11 +43,12 @@ The `SfExpander` allows you to customize the background color of the expander he
 
 ## Icon color customization
 
-The `SfExpander` allows you to customize the color of the expander icon by using the `HeaderIconColor` property.
+The [SfExpander](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Expander.SfExpander.html) allows you to customize the color of the expander icon by using the [HeaderIconColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Expander.SfExpander.html#Syncfusion_Maui_Expander_SfExpander_HeaderIconColor) property.
 
 {% tabs %}
-{% highlight xaml %}
-    <syncfusion:SfExpander x:Name="expander" HeaderIconColor="Brown"/>
+{% highlight xaml hl_lines="2" %}
+    <syncfusion:SfExpander x:Name="expander"
+                           HeaderIconColor="Brown"/>
 {% endhighlight %}
 {% highlight c# %}
     expander.HeaderIconColor = Colors.Brown;
@@ -54,13 +57,13 @@ The `SfExpander` allows you to customize the color of the expander icon by using
 
 ## Visual State Manager
 
-The appearance of the `SfExpander` can be customized using the following two `VisualStates`:
+The appearance of the [SfExpander](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Expander.SfExpander.html) can be customized using the following two `VisualStates`:
 
 * Expanded
 * Collapsed
 
 {% tabs %}
-{% highlight xaml hl_lines="26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43" %}
+{% highlight xaml hl_lines="23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40" %}
 <syncfusion:SfExpander x:Name="expander1" IsExpanded="True" >
     <syncfusion:SfExpander.Header>
         <Grid >
