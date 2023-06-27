@@ -717,6 +717,7 @@ The cursor position in the input view can either be obtained or updated using th
 using Syncfusion.Maui.Inputs;
 
 SfComboBox comboBox = new SfComboBox();
+comboBox.IsEditable = true;
 comboBox.CursorPosition = 4;
 
 {% endhighlight %}
