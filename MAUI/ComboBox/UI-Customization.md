@@ -709,6 +709,7 @@ The cursor position in the input view can either be obtained or updated using th
 <editors:SfComboBox x:Name="comboBox"
                             WidthRequest="250" 
                             HeightRequest="35"
+                            IsEditable="True"
                             CursorPosition = "4" />
 {% endhighlight %}
 {% highlight C# %}
