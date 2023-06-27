@@ -41,6 +41,8 @@ Annotate any shapes over an image using the [`AddShape`](https://help.syncfusion
 {% endhighlight %}
 {% endtabs %}
 
+![Shape annotation in .NET Maui ImageEditor](images/shape/imageeditor-shape-annotation.png)
+
 ## Shape types
 
 The [`AnnotationShape`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.AnnotationShape.html) enum contains the following shape types.
@@ -97,6 +99,8 @@ Customize the appearance of each shape using the [`ImageEditorShapeSettings`](ht
 
 {% endhighlight %}
 {% endtabs %}
+
+![Shape annotation customization in .NET Maui ImageEditor](images/shape/imageeditor-shape-customization.png)
 
 ## Delete the selected shape
 
@@ -275,7 +279,7 @@ The image editor control allows you to create freehand drawings such as signatur
         <imageEditor:SfImageEditor x:Name="imageEditor"
                                    Source="image.jpeg" />
         <Button Grid.Row="1"
-                Text="FreeHand draw"
+                Text="FreeHandDraw"
                 Clicked="OnFreeHandDrawClicked" />
     </Grid>  
 
@@ -289,6 +293,8 @@ The image editor control allows you to create freehand drawings such as signatur
 
 {% endhighlight %}
 {% endtabs %}
+
+![FreeHand drawing in .NET Maui ImageEditor](images/freehand-draw/imageeditor-freeHand-drawing.gif)
 
 ## Customize the pen drawing settings
 
@@ -310,7 +316,7 @@ In the following example, the [`AddShape`](https://help.syncfusion.com/cr/maui/S
         <imageEditor:SfImageEditor x:Name="imageEditor"
                                    Source="image.jpeg" />
         <Button Grid.Row="1"
-                Text="FreeHand draw"
+                Text="FreeHandDraw"
                 Clicked="OnFreeHandDrawClicked" />
     </Grid>  
 

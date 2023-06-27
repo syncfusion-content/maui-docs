@@ -94,6 +94,8 @@ N> For android, you should include permission in AndroidManifest.xml file. Pleas
 {% endhighlight %}
 {% endtabs %}
 
+![Image save in .NET Maui ImageEditor](images/save/imageeditor-save-image.png)
+
 ## Image save action events
 
 The Image Editor has events when performing the save operation, such as [`ImageSaving`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_ImageSaving) and [`ImageSaved`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_ImageSaved).

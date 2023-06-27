@@ -114,7 +114,7 @@ Contrast increases or decreases the difference between light and dark areas, mak
 
     private void OnContrastClicked(object sender, EventArgs e)
     {
-        this.imageEditor.ImageEffect(ImageEffect. Contrast, -0.8);
+        this.imageEditor.ImageEffect(ImageEffect.Contrast, -0.8);
     }
 
 {% endhighlight %}
@@ -146,7 +146,7 @@ Exposure is used to alter the overall brightness and darkness levels of the imag
 
     private void OnExposureClicked(object sender, EventArgs e)
     {
-        this.imageEditor.ImageEffect(ImageEffect. Exposure, -0.4);
+        this.imageEditor.ImageEffect(ImageEffect.Exposure, -0.4);
     }
 
 {% endhighlight %}
@@ -210,7 +210,7 @@ Saturation enhances or reduces the intensity and vividness of colors in the imag
 
     private void OnSaturationClicked(object sender, EventArgs e)
     {
-        this.imageEditor.ImageEffect(ImageEffect. Saturation, -0.8);
+        this.imageEditor.ImageEffect(ImageEffect.Saturation, -0.8);
     }
 
 {% endhighlight %}
@@ -274,7 +274,7 @@ Opacity is used to control the transparency or visibility of the image. The valu
 
     private void OnOpacityClicked(object sender, EventArgs e)
     {
-        this.imageEditor.ImageEffect(ImageEffect. Opacity, 0.5);
+        this.imageEditor.ImageEffect(ImageEffect.Opacity, 0.5);
     }
 
 {% endhighlight %}

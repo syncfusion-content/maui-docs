@@ -37,6 +37,8 @@ The ImageEditor control in .NET MAUI allows you to add text using the [`AddText`
 {% endhighlight %}
 {% endtabs %}
 
+![Shape annotation in .NET Maui ImageEditor](images/text/imageeditor-text-annotation.png)
+
 ## Customize text appearance
 
 Customize the appearance of text annotation using the [`ImageEditorTextSettings`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorTextSettings.html#).
@@ -91,6 +93,8 @@ Customize the appearance of text annotation using the [`ImageEditorTextSettings`
 
 {% endhighlight %}
 {% endtabs %}
+
+![Text annotation customization in .NET Maui ImageEditor](images/text/imageeditor-text-customization.png)
 
 ## Delete the text
 
