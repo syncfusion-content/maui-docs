@@ -723,4 +723,4 @@ comboBox.CursorPosition = 4;
 {% endhighlight %}
 {% endtabs %}
 
-N> Cursor position support available for editable mode only and Two way binding not supported in Android platform.
+N> The cursor position support is available for editable mode only, and two-way binding is not supported in the Android platform.
