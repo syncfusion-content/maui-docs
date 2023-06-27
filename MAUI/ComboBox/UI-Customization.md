@@ -701,7 +701,7 @@ The following image illustrates the result of the above code:
 
 ## CursorPosition
 
-The cursor position in the input view can either be obtained or updated using the `CursorPosition` property in SfComboBox.
+The cursor position in the input view can be obtained or updated using the CursorPosition property in the SfComboBox.
 
 {% tabs %}
 {% highlight xaml %}
@@ -723,4 +723,4 @@ comboBox.CursorPosition = 4;
 {% endhighlight %}
 {% endtabs %}
 
-N> Cursor position support available for editable mode only and Two way binding not supported in Android platform.
+N> The cursor position support is available for editable mode only, and two-way binding is not supported in the Android platform.
