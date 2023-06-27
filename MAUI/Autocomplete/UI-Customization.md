@@ -673,7 +673,7 @@ The following image illustrates the result of the above code:
 
 ## CursorPosition
 
-The cursor position in the input view can either be obtained or updated using the `CursorPosition` property in SfAutocomplete.
+The cursor position in the input view can be obtained or updated using the `CursorPosition` property in the SfAutocomplete.
 
 {% tabs %}
 {% highlight xaml %}
