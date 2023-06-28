@@ -33,11 +33,7 @@ Brightness is used to adjust the overall lightness or darkness of the image. The
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-   <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition />
-            <RowDefinition Height="40" />
-        </Grid.RowDefinitions>
+   <Grid RowDefinitions="0.9*, 0.1*">
         <imageEditor:SfImageEditor x:Name="imageEditor"
                                    Source="image.jpeg" />
         <Button Grid.Row="1"
@@ -65,11 +61,7 @@ Blur creates a soft and unfocused appearance by reducing the image's sharpness. 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-   <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition />
-            <RowDefinition Height="40" />
-        </Grid.RowDefinitions>
+   <Grid RowDefinitions="0.9*, 0.1*">
         <imageEditor:SfImageEditor x:Name="imageEditor"
                                    Source="image.jpeg" />
         <Button Grid.Row="1"
@@ -97,11 +89,7 @@ Contrast increases or decreases the difference between light and dark areas, mak
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-   <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition />
-            <RowDefinition Height="40" />
-        </Grid.RowDefinitions>
+   <Grid RowDefinitions="0.9*, 0.1*">
         <imageEditor:SfImageEditor x:Name="imageEditor"
                                    Source="image.jpeg" />
         <Button Grid.Row="1"
@@ -129,11 +117,7 @@ Exposure is used to alter the overall brightness and darkness levels of the imag
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-   <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition />
-            <RowDefinition Height="40" />
-        </Grid.RowDefinitions>
+   <Grid RowDefinitions="0.9*, 0.1*">
         <imageEditor:SfImageEditor x:Name="imageEditor"
                                    Source="image.jpeg" />
         <Button Grid.Row="1"
@@ -161,11 +145,7 @@ Hue is used to change the overall color tone of the image by shifting the color 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-   <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition />
-            <RowDefinition Height="40" />
-        </Grid.RowDefinitions>
+   <Grid RowDefinitions="0.9*, 0.1*">
         <imageEditor:SfImageEditor x:Name="imageEditor"
                                    Source="image.jpeg" />
         <Button Grid.Row="1"
@@ -193,11 +173,7 @@ Saturation enhances or reduces the intensity and vividness of colors in the imag
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-   <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition />
-            <RowDefinition Height="40" />
-        </Grid.RowDefinitions>
+   <Grid RowDefinitions="0.9*, 0.1*">
         <imageEditor:SfImageEditor x:Name="imageEditor"
                                    Source="image.jpeg" />
         <Button Grid.Row="1"
@@ -225,11 +201,7 @@ Sharpen enhances the clarity and definition of edges and details in the image. T
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-   <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition />
-            <RowDefinition Height="40" />
-        </Grid.RowDefinitions>
+   <Grid RowDefinitions="0.9*, 0.1*">
         <imageEditor:SfImageEditor x:Name="imageEditor"
                                    Source="image.jpeg" />
         <Button Grid.Row="1"
@@ -257,11 +229,7 @@ Opacity is used to control the transparency or visibility of the image. The valu
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-   <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition />
-            <RowDefinition Height="40" />
-        </Grid.RowDefinitions>
+   <Grid RowDefinitions="0.9*, 0.1*">
         <imageEditor:SfImageEditor x:Name="imageEditor"
                                    Source="image.jpeg" />
         <Button Grid.Row="1"
@@ -289,11 +257,7 @@ Call the [SaveEdits](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEd
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-   <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition />
-            <RowDefinition Height="40" />
-        </Grid.RowDefinitions>
+   <Grid RowDefinitions="0.9*, 0.1*">
         <imageEditor:SfImageEditor x:Name="imageEditor"
                                    Source="image.jpeg" />
         <Button Grid.Row="1"
@@ -317,11 +281,7 @@ The applied effects can be canceled using the [CancelEdits](https://help.syncfus
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-   <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition />
-            <RowDefinition Height="40" />
-        </Grid.RowDefinitions>
+   <Grid RowDefinitions="0.9*, 0.1*">
         <imageEditor:SfImageEditor x:Name="imageEditor"
                                    Source="image.jpeg" />
         <Button Grid.Row="1"

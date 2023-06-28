@@ -18,11 +18,7 @@ Annotate any shapes over an image using the [`AddShape`](https://help.syncfusion
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-   <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition />
-            <RowDefinition Height="40" />
-        </Grid.RowDefinitions>
+   <Grid RowDefinitions="0.9*, 0.1*">
         <imageEditor:SfImageEditor x:Name="imageEditor"
                                    Source="image.jpeg" />
         <Button Grid.Row="1"
@@ -71,11 +67,7 @@ Customize the appearance of each shape using the [`ImageEditorShapeSettings`](ht
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-   <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition />
-            <RowDefinition Height="40" />
-        </Grid.RowDefinitions>
+   <Grid RowDefinitions="0.9*, 0.1*">
         <imageEditor:SfImageEditor x:Name="imageEditor"
                                    Source="image.jpeg" />
         <Button Grid.Row="1"
@@ -109,11 +101,7 @@ Delete the selected shape using either the toolbar or the [`DeleteAnnotation`](h
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-   <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition />
-            <RowDefinition Height="40" />
-        </Grid.RowDefinitions>
+   <Grid RowDefinitions="0.9*, 0.1*">
         <imageEditor:SfImageEditor x:Name="imageEditor"
                                    Source="image.jpeg" />
         <Button Grid.Row="1"
@@ -141,11 +129,7 @@ N> It will remove text and pen annotations as well.
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-   <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition />
-            <RowDefinition Height="40" />
-        </Grid.RowDefinitions>
+   <Grid RowDefinitions="0.9*, 0.1*">
         <imageEditor:SfImageEditor x:Name="imageEditor"
                                    Source="image.jpeg" />
         <Button Grid.Row="1"
@@ -271,11 +255,7 @@ The image editor control allows you to create freehand drawings such as signatur
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-   <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition />
-            <RowDefinition Height="40" />
-        </Grid.RowDefinitions>
+   <Grid RowDefinitions="0.9*, 0.1*">
         <imageEditor:SfImageEditor x:Name="imageEditor"
                                    Source="image.jpeg" />
         <Button Grid.Row="1"
@@ -308,11 +288,7 @@ In the following example, the [`AddShape`](https://help.syncfusion.com/cr/maui/S
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-   <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition />
-            <RowDefinition Height="40" />
-        </Grid.RowDefinitions>
+   <Grid RowDefinitions="0.9*, 0.1*">
         <imageEditor:SfImageEditor x:Name="imageEditor"
                                    Source="image.jpeg" />
         <Button Grid.Row="1"

@@ -20,11 +20,7 @@ N> Angle cannot be specified in the code to alter the rotation angle of the imag
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-   <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition />
-            <RowDefinition Height="40" />
-        </Grid.RowDefinitions>
+   <Grid RowDefinitions="0.9*, 0.1*">
         <imageEditor:SfImageEditor x:Name="imageEditor"
                                    Source="image.jpeg" />
         <Button Grid.Row="1"
@@ -56,11 +52,7 @@ In the following example, the [Flip](https://help.syncfusion.com/cr/maui/Syncfus
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-   <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition />
-            <RowDefinition Height="40" />
-        </Grid.RowDefinitions>
+   <Grid RowDefinitions="0.9*, 0.1*">
         <imageEditor:SfImageEditor x:Name="imageEditor"
                                    Source="image.jpeg" />
         <Button Grid.Row="1"

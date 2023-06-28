@@ -31,11 +31,7 @@ The [Crop](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfIma
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-   <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition />
-            <RowDefinition Height="40" />
-        </Grid.RowDefinitions>
+   <Grid RowDefinitions="0.9*, 0.1*">
         <imageEditor:SfImageEditor x:Name="imageEditor"
                                    Source="image.jpeg" />
         <Button Grid.Row="1"
@@ -59,11 +55,7 @@ After the cropping area has been selected, the [SaveEdits](https://help.syncfusi
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-   <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition />
-            <RowDefinition Height="40" />
-        </Grid.RowDefinitions>
+   <Grid RowDefinitions="0.9*, 0.1*">
         <imageEditor:SfImageEditor x:Name="imageEditor"
                                    Source="image.jpeg" />
         <Button Grid.Row="1"
@@ -87,11 +79,7 @@ After selecting the cropping area, if you decide to cancel the edits and revert 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-   <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition />
-            <RowDefinition Height="40" />
-        </Grid.RowDefinitions>
+   <Grid RowDefinitions="0.9*, 0.1*">
         <imageEditor:SfImageEditor x:Name="imageEditor"
                                    Source="image.jpeg" />
         <Button Grid.Row="1"
@@ -117,11 +105,7 @@ The selected region can be customized by dragging and resizing an image.
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-   <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition />
-            <RowDefinition Height="40" />
-        </Grid.RowDefinitions>
+   <Grid RowDefinitions="0.9*, 0.1*">
         <imageEditor:SfImageEditor x:Name="imageEditor"
                                    Source="image.jpeg" />
         <Button Grid.Row="1"
@@ -149,11 +133,7 @@ With the original crop, the image is cropped to its original dimensions. This me
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-   <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition />
-            <RowDefinition Height="40" />
-        </Grid.RowDefinitions>
+   <Grid RowDefinitions="0.9*, 0.1*">
         <imageEditor:SfImageEditor x:Name="imageEditor"
                                    Source="image.jpeg" />
         <Button Grid.Row="1"
@@ -181,11 +161,7 @@ The square crop option allows you to crop the image into a perfect square shape.
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-   <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition />
-            <RowDefinition Height="40" />
-        </Grid.RowDefinitions>
+   <Grid RowDefinitions="0.9*, 0.1*">
         <imageEditor:SfImageEditor x:Name="imageEditor"
                                    Source="image.jpeg" />
         <Button Grid.Row="1"
@@ -213,11 +189,7 @@ The ratio crop enables you to crop the image with a specific aspect ratio. You c
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-   <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition />
-            <RowDefinition Height="40" />
-        </Grid.RowDefinitions>
+   <Grid RowDefinitions="0.9*, 0.1*">
         <imageEditor:SfImageEditor x:Name="imageEditor"
                                    Source="image.jpeg" />
         <Button Grid.Row="1"
@@ -247,11 +219,7 @@ The following code shows cropping an image in circle format.
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-   <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition />
-            <RowDefinition Height="40" />
-        </Grid.RowDefinitions>
+   <Grid RowDefinitions="0.9*, 0.1*">
         <imageEditor:SfImageEditor x:Name="imageEditor"
                                    Source="image.jpeg" />
         <Button Grid.Row="1"
@@ -281,11 +249,7 @@ The following code shows cropping an image in elliptical format.
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-   <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition />
-            <RowDefinition Height="40" />
-        </Grid.RowDefinitions>
+   <Grid RowDefinitions="0.9*, 0.1*">
         <imageEditor:SfImageEditor x:Name="imageEditor"
                                    Source="image.jpeg" />
         <Button Grid.Row="1"
@@ -313,11 +277,7 @@ To manually enter the cropping area, use the [Crop(Rect rect)](https://help.sync
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-   <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition />
-            <RowDefinition Height="40" />
-        </Grid.RowDefinitions>
+   <Grid RowDefinitions="0.9*, 0.1*">
         <imageEditor:SfImageEditor x:Name="imageEditor"
                                    Source="image.jpeg" />
         <Button Grid.Row="1"
@@ -342,11 +302,7 @@ To manually enter the cropping area, use the [Crop(Rect rect)](https://help.sync
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-   <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition />
-            <RowDefinition Height="40" />
-        </Grid.RowDefinitions>
+   <Grid RowDefinitions="0.9*, 0.1*">
         <imageEditor:SfImageEditor x:Name="imageEditor"
                                    Source="image.jpeg" />
         <Button Grid.Row="1"
@@ -375,11 +331,7 @@ The following code sample will add the cropping preview on the image in a square
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-   <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition />
-            <RowDefinition Height="40" />
-        </Grid.RowDefinitions>
+   <Grid RowDefinitions="0.9*, 0.1*">
         <imageEditor:SfImageEditor x:Name="imageEditor"
                                    Source="image.jpeg" />
         <Button Grid.Row="1"

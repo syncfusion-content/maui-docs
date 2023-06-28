@@ -14,11 +14,7 @@ The ImageEditor control in .NET MAUI allows you to add text using the [`AddText`
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-   <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition />
-            <RowDefinition Height="40" />
-        </Grid.RowDefinitions>
+   <Grid RowDefinitions="0.9*, 0.1*">
         <imageEditor:SfImageEditor x:Name="imageEditor"
                                    Source="image.jpeg" />
         <Button Grid.Row="1"
@@ -57,11 +53,7 @@ Customize the appearance of text annotation using the [`ImageEditorTextSettings`
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-   <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition />
-            <RowDefinition Height="40" />
-        </Grid.RowDefinitions>
+   <Grid RowDefinitions="0.9*, 0.1*">
         <imageEditor:SfImageEditor x:Name="imageEditor"
                                    Source="image.jpeg" />
         <Button Grid.Row="1"
@@ -103,11 +95,7 @@ Delete the selected text using either the toolbar or the [`DeleteAnnotation`](ht
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-   <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition />
-            <RowDefinition Height="40" />
-        </Grid.RowDefinitions>
+   <Grid RowDefinitions="0.9*, 0.1*">
         <imageEditor:SfImageEditor x:Name="imageEditor"
                                    Source="image.jpeg" />
         <Button Grid.Row="1"
@@ -135,11 +123,7 @@ N> This removes shape and pen annotations as well.
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-   <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition />
-            <RowDefinition Height="40" />
-        </Grid.RowDefinitions>
+   <Grid RowDefinitions="0.9*, 0.1*">
         <imageEditor:SfImageEditor x:Name="imageEditor"
                                    Source="image.jpeg" />
         <Button Grid.Row="1"
