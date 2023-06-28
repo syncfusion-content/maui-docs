@@ -9,16 +9,17 @@ documentation: ug
 
 # Zooming in .NET MAUI ImageEditor (SfImageEditor)
 
-The image editor control provides support to zoom and pan actions over an image.
+The image editor control in .NET MAUI provides support for zooming and panning actions on an image.
 
 The following properties are used for zooming feature of the image editor control:
 
 * EnableZooming
+* ZoomLevl
 * Maximum ZoomLevel
 
 ## Enable zooming
 
-You can enable or disable the zooming functionality by setting the [`AllowZoom`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_AllowZoom) value to true or false. By default, the [`AllowZoom`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_AllowZoom) value is set to `true`.
+To enable or disable the zooming functionality, set the value of the [`AllowZoom`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_AllowZoom) property to true or false. By default, the [`AllowZoom`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_AllowZoom) value is set to `true`.
 
 {% tabs %}
 
@@ -68,9 +69,11 @@ Programmatically, you can zoom the loaded image without any interaction by setti
 
 {% endtabs %}
 
+![Zooming in .NET Maui ImageEditor](images/zoom/imageeditor-zooming.gif)
+
 ## Maximum zoom level
 
-You can set the maximum zoom level to image using the [`MaximumZoomLevel`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_MaximumZoomLevel) property.
+To define the maximum zoom level for the image, make use of the [`MaximumZoomLevel`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_MaximumZoomLevel) property.
 
 {% tabs %}
 
