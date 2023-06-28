@@ -131,7 +131,7 @@ public partial class MainPage : ContentPage
 
 ## Show or hide toolbar
 
-To show or hide the toolbar, set the [`ShowToolbar`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html?tabs=tabid-1%2Ctabid-15%2Ctabid-17%2Ctabid-23%2Ctabid-21%2Ctabid-13%2Ctabid-19%2Ctabid-37%2Ctabid-55%2Ctabid-51%2Ctabid-39%2Ctabid-47%2Ctabid-43%2Ctabid-45%2Ctabid-41%2Ctabid-27%2Ctabid-53%2Ctabid-35%2Ctabid-31%2Ctabid-29%2Ctabid-25%2Ctabid-49%2Ctabid-33%2Ctabid-11%2Ctabid-7%2Ctabid-9%2Ctabid-5%2Ctabid-3#Syncfusion_Maui_ImageEditor_SfImageEditor_ShowToolbar) property to either true or false. By default, the [`ShowToolbar`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html?tabs=tabid-1%2Ctabid-15%2Ctabid-17%2Ctabid-23%2Ctabid-21%2Ctabid-13%2Ctabid-19%2Ctabid-37%2Ctabid-55%2Ctabid-51%2Ctabid-39%2Ctabid-47%2Ctabid-43%2Ctabid-45%2Ctabid-41%2Ctabid-27%2Ctabid-53%2Ctabid-35%2Ctabid-31%2Ctabid-29%2Ctabid-25%2Ctabid-49%2Ctabid-33%2Ctabid-11%2Ctabid-7%2Ctabid-9%2Ctabid-5%2Ctabid-3#Syncfusion_Maui_ImageEditor_SfImageEditor_ShowToolbar) property is set to `true`.
+To show or hide the toolbar, set the [`ShowToolbar`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_ShowToolbar) property to either true or false. By default, the [`ShowToolbar`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_ShowToolbar) property is set to `true`.
 
 {% tabs %}
 {% highlight xaml %}
