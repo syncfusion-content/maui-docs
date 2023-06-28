@@ -44,6 +44,7 @@ N> `DynamicSizeMode` property from the Xamarin SfAccordion is not moved to the M
 <td>{{'[HeaderIconColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.AccordionItem.html#Syncfusion_Maui_Accordion_AccordionItem_HeaderIconColor)'| markdownify }}</td>
 <td>Gets or sets the color of the header icon in the Accordion control.</td>
 </tr>
+</table>
 
 ## Enums
 
