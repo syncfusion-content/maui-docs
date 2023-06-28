@@ -16,7 +16,7 @@ The data grid supports to display the concise information about the bound data o
 * **Table Summary** - Used to display the summary information at top and/or bottom in SfDataGrid.
 
 
-![DataGrid with summary rows](Images\Table-Summary\ShowSummaryInRow.png) 
+![DataGrid with summary rows](Images\caption-summary\maui-datagrid-summaries.png) 
 
 Summary rows are represented by using the [DataGridSummaryRow](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSummaryRow.html) that hold summary information of columns in the [SummaryColumns](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSummaryRow.html#Syncfusion_Maui_DataGrid_DataGridSummaryRow_SummaryColumns) property . The `SummaryColumns` contains the collection of [DataGridSummaryColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSummaryColumn.html) which carries name, format, and summary aggregate type of the column.
 
@@ -182,7 +182,7 @@ Please refer to the code example below, where a label is loaded in the `caption 
         <sfgrid:SfDataGrid.CaptionSummaryTemplate>
             <DataTemplate>
                 <StackLayout Orientation="Horizontal">
-                    <Label Text="{Binding Converter={StaticResource SummaryConverter}, ConverterParameter = {x:ReferencedataGrid} }"
+                    <Label Text="{Binding Converter={StaticResource SummaryConverter}, ConverterParameter = {x:Reference dataGrid} }"
                            FontSize="Default"
                            VerticalTextAlignment="Center"
                            HorizontalTextAlignment="Start"
@@ -280,7 +280,7 @@ Here's an example code snippet that demonstrates how to load a label in the temp
                             <DataTemplate>
                                 <StackLayout Orientation="Horizontal"
                                              BackgroundColor="Gray">
-                                    <Label Text="{Binding Converter={StaticResource SummaryConverter}, ConverterParameter {x:ReferencedataGrid} }"
+                                    <Label Text="{Binding Converter={StaticResource SummaryConverter}, ConverterParameter {x:Reference dataGrid} }"
                                            VerticalOptions="CenterAndExpand"
                                            TextColor="White"
                                            FontSize="Default"
@@ -479,7 +479,7 @@ Refer to the code example below, which demonstrates how to load a label in the g
         <sfgrid:SfDataGrid.GroupSummaryTemplate>
             <DataTemplate>
                 <StackLayout Orientation="Horizontal">
-                    <Label Text="{Binding Converter={StaticResource SummaryConverter}, ConverterParameter = {x:ReferencedataGrid} }"
+                    <Label Text="{Binding Converter={StaticResource SummaryConverter}, ConverterParameter = {x:Reference dataGrid} }"
                            FontSize="Default"
                            VerticalTextAlignment="Center"
                            HorizontalTextAlignment="Start"
@@ -574,7 +574,7 @@ Please refer to the code example below, which demonstrates how to load a label i
                             <DataTemplate>
                                 <StackLayout Orientation="Horizontal"
                                              BackgroundColor="Gray">
-                                    <Label Text="{Binding Converter={StaticResource SummaryConverter}, ConverterParameter {x:ReferencedataGrid} }"
+                                    <Label Text="{Binding Converter={StaticResource SummaryConverter}, ConverterParameter {x:Reference dataGrid} }"
                                            VerticalOptions="CenterAndExpand"
                                            TextColor="White"
                                            FontSize="Medium"
@@ -697,7 +697,7 @@ summaryRow2.SummaryColumns.Add(new DataGridSummaryColumn()
     Format = "{Sum:C0}",
     SummaryType = SummaryType.DoubleAggregate
 });
-sfGrid.TableSummaryRows.Add(summaryRow2);`
+sfGrid.TableSummaryRows.Add(summaryRow2);
 {% endhighlight %}
 {% endtabs %}
 
@@ -915,7 +915,7 @@ Refer the below code example in which a label is loaded in the table summary tem
                 <DataTemplate>
                     <StackLayout Orientation="Horizontal"
                                  BackgroundColor="Gray">
-                        <Label Text="{Binding Converter={StaticResource SummaryConverter}, ConverterParameter = {x:ReferencedataGrid} }"
+                        <Label Text="{Binding Converter={StaticResource SummaryConverter}, ConverterParameter = {x:Reference dataGrid} }"
                                TextColor="White"
                                FontSize="Large"
                                VerticalTextAlignment="Center"

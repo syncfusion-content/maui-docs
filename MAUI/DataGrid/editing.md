@@ -1,3 +1,12 @@
+---
+layout: post
+title: Editing in MAUI DataGrid control | Syncfusion
+description: Learn here all about Editing support in Syncfusion MAUI DataGrid (SfDataGrid) control and more about it.
+platform: MAUI
+control: SfDataGrid
+documentation: UG
+---
+
 # Editing in MAUI DataGrid (SfDataGrid)
 
 The [Syncfusion .NET MAUI DataGrid]() (SfDataGrid) control supports editing cell values by setting the [SfDataGrid.AllowEditing property](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AllowEditing), [SfDataGrid.NavigationMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_NavigationMode) to Cell, and setting the [SfDataGrid.SelectionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_SelectionMode) to any value other than None.

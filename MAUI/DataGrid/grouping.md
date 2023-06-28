@@ -1,3 +1,12 @@
+---
+layout: post
+title: Grouping in MAUI DataGrid control | Syncfusion
+description: Learn here all about Grouping support in Syncfusion MAUI DataGrid (SfDataGrid) control and more about it.
+platform: MAUI
+control: SfDataGrid
+documentation: UG
+---
+
 # Grouping in MAUI DataGrid (SfDataGrid)
 
 Grouping in a datagrid refers to the process of organizing and categorizing data based on specific criteria or field values. It allows you to group related records together, creating a hierarchical structure within the datagrid. Each group is identified by its [CaptionSummaryRow](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CaptionSummaryRowProperty) to get the underlying records in view.
