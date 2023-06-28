@@ -182,7 +182,7 @@ Please refer to the code example below, where a label is loaded in the `caption 
         <sfgrid:SfDataGrid.CaptionSummaryTemplate>
             <DataTemplate>
                 <StackLayout Orientation="Horizontal">
-                    <Label Text="{Binding Converter={StaticResource SummaryConverter}, ConverterParameter = {x:ReferencedataGrid} }"
+                    <Label Text="{Binding Converter={StaticResource SummaryConverter}, ConverterParameter = {x:Reference dataGrid} }"
                            FontSize="Default"
                            VerticalTextAlignment="Center"
                            HorizontalTextAlignment="Start"
@@ -280,7 +280,7 @@ Here's an example code snippet that demonstrates how to load a label in the temp
                             <DataTemplate>
                                 <StackLayout Orientation="Horizontal"
                                              BackgroundColor="Gray">
-                                    <Label Text="{Binding Converter={StaticResource SummaryConverter}, ConverterParameter {x:ReferencedataGrid} }"
+                                    <Label Text="{Binding Converter={StaticResource SummaryConverter}, ConverterParameter {x:Reference dataGrid} }"
                                            VerticalOptions="CenterAndExpand"
                                            TextColor="White"
                                            FontSize="Default"
@@ -479,7 +479,7 @@ Refer to the code example below, which demonstrates how to load a label in the g
         <sfgrid:SfDataGrid.GroupSummaryTemplate>
             <DataTemplate>
                 <StackLayout Orientation="Horizontal">
-                    <Label Text="{Binding Converter={StaticResource SummaryConverter}, ConverterParameter = {x:ReferencedataGrid} }"
+                    <Label Text="{Binding Converter={StaticResource SummaryConverter}, ConverterParameter = {x:Reference dataGrid} }"
                            FontSize="Default"
                            VerticalTextAlignment="Center"
                            HorizontalTextAlignment="Start"
@@ -574,7 +574,7 @@ Please refer to the code example below, which demonstrates how to load a label i
                             <DataTemplate>
                                 <StackLayout Orientation="Horizontal"
                                              BackgroundColor="Gray">
-                                    <Label Text="{Binding Converter={StaticResource SummaryConverter}, ConverterParameter {x:ReferencedataGrid} }"
+                                    <Label Text="{Binding Converter={StaticResource SummaryConverter}, ConverterParameter {x:Reference dataGrid} }"
                                            VerticalOptions="CenterAndExpand"
                                            TextColor="White"
                                            FontSize="Medium"
@@ -915,7 +915,7 @@ Refer the below code example in which a label is loaded in the table summary tem
                 <DataTemplate>
                     <StackLayout Orientation="Horizontal"
                                  BackgroundColor="Gray">
-                        <Label Text="{Binding Converter={StaticResource SummaryConverter}, ConverterParameter = {x:ReferencedataGrid} }"
+                        <Label Text="{Binding Converter={StaticResource SummaryConverter}, ConverterParameter = {x:Reference dataGrid} }"
                                TextColor="White"
                                FontSize="Large"
                                VerticalTextAlignment="Center"
