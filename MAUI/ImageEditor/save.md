@@ -14,13 +14,25 @@ The Image Editor control in .NET MAUI allows you to save the edited image as PNG
 To save the modified image, use the [`Save`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_Save_System_Nullable_Syncfusion_Maui_ImageEditor_ImageFileType__System_String_System_String_System_Nullable_Microsoft_Maui_Graphics_Size__) method, which accepts parameters such as file name, file type, file path, and image size. The supported file types for saving are [`PNG`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageFileType.html#Syncfusion_Maui_ImageEditor_ImageFileType_Png) and [`JPEG`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageFileType.html#Syncfusion_Maui_ImageEditor_ImageFileType_Jpeg). You can also save the image by clicking the save on the toolbar.
 
 {% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 
-{% highlight C# tabtitle="C#" %}
-
-    imageEditor.Save(ImageFileType.Png, "D:\\Syncfusion\\Pictures", "Syncfusion");
+   <Grid RowDefinitions="0.9*, 0.1*">
+        <imageEditor:SfImageEditor x:Name="imageEditor"
+                                   Source="image.jpeg" />
+        <Button Grid.Row="1"
+                Text="Save"
+                Clicked="OnSaveImageClicked" />
+    </Grid>  
 
 {% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
+    private void OnSaveImageClicked(object sender, EventArgs e)
+    {
+        this.imageEditor.Save(ImageFileType.Png, "D:\\Syncfusion\\Pictures", "Syncfusion");
+    }
+
+{% endhighlight %}
 {% endtabs %}
 
 The saved image will be added to the device for each platform in the following locations:
@@ -78,6 +90,8 @@ N> For android, you should include permission in AndroidManifest.xml file. Pleas
 {% endhighlight %}
 {% endtabs %}
 
+![Image save in .NET Maui ImageEditor](images/save/imageeditor-save-image.png)
+
 ## Image save action events
 
 The Image Editor has events when performing the save operation, such as [`ImageSaving`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_ImageSaving) and [`ImageSaved`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_ImageSaved).
@@ -115,6 +129,13 @@ This [`ImageSaving`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEd
 {% tabs %}
 
 {% highlight C# tabtitle="C#" %}
+
+    public MainPage()
+    {               
+        . . .
+        imageEditor.ImageSaving += OnImageSaving;
+        . . .
+    }
            
    private void OnImageSaving(object sender, ImageSavingEventArgs args)
    {
@@ -131,6 +152,13 @@ This [`ImageSaving`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEd
 
 {% highlight c# tabtitle="C#" %}
 
+    public MainPage()
+    {               
+        . . .
+        imageEditor.ImageSaving += OnImageSaving;
+        . . .
+    }
+
     private void OnImageSaving(object sender, ImageSavingEventArgs args)
     {
         args.FileName = "SavedImage";
@@ -145,6 +173,13 @@ This [`ImageSaving`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEd
 {% tabs %}
 
 {% highlight c# tabtitle="C#" %}
+
+    public MainPage()
+    {               
+        . . .
+        imageEditor.ImageSaving += OnImageSaving;
+        . . .
+    }
 
     private void OnImageSaving(object sender, ImageSavingEventArgs args)
     {
@@ -161,15 +196,14 @@ The [`ImageSaved`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEdit
 
 {% tabs %}
 
-{% highlight C# tabtitle="C#" %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 
-    public MainPage()
-    {               
-        . . .
-        imageEditor.ImageSaved += OnImageSaved;
-        . . .
-    }
+    <imageEditor:SfImageEditor Source="image.png" ImageSaved="OnImageSaved" />
 
+{% endhighlight %}
+
+{% highlight C# tabtitle="MainPage.xaml.cs" %}
+            
     private void OnImageSaved(object sender, ImageSavedEventArgs args)
     {
         string savedLocation = args.Location; 
@@ -178,3 +212,5 @@ The [`ImageSaved`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEdit
 {% endhighlight %}
 
 {% endtabs %}
+
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-image-editor-examples/tree/master/ImageSavingSample)
