@@ -349,8 +349,8 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
         if (e.DataFormItem.FieldName == "Amount" && e.DataFormItem is DataFormNumericItem amount)
         {
             amount.AllowNull = true;
-            amount.CustomFormat = "C";
             amount.Culture = new CultureInfo("et-EE");
+            // To enter a minimum of 2 decimal digits and maximum of 4 decimal digits, set CustomFormat = "#,0.00##"
             amount.CustomFormat = "#,0.00##";
         }
         else if (e.DataFormItem.FieldName == "Percentage" && e.DataFormItem is DataFormNumericItem percentage)
