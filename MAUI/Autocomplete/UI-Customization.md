@@ -670,3 +670,27 @@ Completed event can be subscribed in C# also:
 The following image illustrates the result of the above code:
 
 ![.NET MAUI Autocomplete completed event](Images/UICustomization/CompletedEvent.png)
+
+## CursorPosition
+
+The cursor position in the input view can be obtained or updated using the [CursorPosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDropdownEntry.html#Syncfusion_Maui_Core_SfDropdownEntry_CursorPosition) property in the SfAutocomplete.
+
+{% tabs %}
+{% highlight xaml %}
+
+<editors:SfAutocomplete x:Name="autoComplete"
+                            WidthRequest="250" 
+                            HeightRequest="35"
+                            CursorPosition = "4" />
+{% endhighlight %}
+{% highlight C# %}
+
+using Syncfusion.Maui.Inputs;
+
+SfAutocomplete autocomplete = new SfAutocomplete();
+autocomplete.CursorPosition = 4;
+
+{% endhighlight %}
+{% endtabs %}
+
+N> Two way binding not supported in Android platform.
