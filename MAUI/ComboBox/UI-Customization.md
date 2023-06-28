@@ -701,7 +701,7 @@ The following image illustrates the result of the above code:
 
 ## CursorPosition
 
-The cursor position in the input view can be obtained or updated using the CursorPosition property in the SfComboBox.
+The cursor position in the input view can be obtained or updated using the [CursorPosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDropdownEntry.html#Syncfusion_Maui_Core_SfDropdownEntry_CursorPosition) property in the SfComboBox.
 
 {% tabs %}
 {% highlight xaml %}
