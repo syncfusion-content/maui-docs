@@ -698,3 +698,29 @@ Completed event can be subscribed in C# also:
 The following image illustrates the result of the above code:
 
 ![.NET MAUI ComboBox completed event](Images/UICustomization/CompletedEvent.png)
+
+## CursorPosition
+
+The cursor position in the input view can be obtained or updated using the [CursorPosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDropdownEntry.html#Syncfusion_Maui_Core_SfDropdownEntry_CursorPosition) property in the SfComboBox.
+
+{% tabs %}
+{% highlight xaml %}
+
+<editors:SfComboBox x:Name="comboBox"
+                            WidthRequest="250" 
+                            HeightRequest="35"
+                            IsEditable="True"
+                            CursorPosition = "4" />
+{% endhighlight %}
+{% highlight C# %}
+
+using Syncfusion.Maui.Inputs;
+
+SfComboBox comboBox = new SfComboBox();
+comboBox.IsEditable = true;
+comboBox.CursorPosition = 4;
+
+{% endhighlight %}
+{% endtabs %}
+
+N> The cursor position support is available for editable mode only, and two-way binding is not supported in the Android platform.
