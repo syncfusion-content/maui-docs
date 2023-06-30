@@ -215,12 +215,7 @@ public partial class MainPage : ContentPage
         InitializeComponent();
         SfImageEditor imageEditor = new SfImageEditor();
         Assembly assembly = Assembly.GetExecutingAssembly();
-        imageEditor.Source = ImageSource.FromStream(() =>
-        {
-            Stream openStream = assembly.GetManifestResourceStream("MyProject.Resources.Images.image.jpeg");
-            return openStream;
-        });
-
+        imageEditor.Source = ImageSource.FromStream(() => assembly.GetManifestResourceStream("MyProject.Resources.Images.image.jpeg"))
         this.content = imageEditor;
     }
 }
