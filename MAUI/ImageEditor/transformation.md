@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Transform in .NET MAUI ImageEditor Control | Syncfusion
+title: Transform in .NET MAUI Image Editor Control | Syncfusion
 description: Learn here all about how to Transform in Syncfusion .NET MAUI ImageEditor (SfImageEditor) control and more.
 platform: .NET MAUI
 control: SfImageEditor
 documentation: ug
 ---
 
-# Transform in .NET MAUI ImageEditor (SfImageEditor)
+# Transform in .NET MAUI Image Editor (SfImageEditor)
 
 The Image Editor in .NET MAUI provides options for rotating and flipping images, along with the ability to add annotations.
 

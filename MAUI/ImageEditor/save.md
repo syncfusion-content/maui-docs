@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Save image .NET MAUI ImageEditor control | Syncfusion
+title: Save image .NET MAUI Image Editor control | Syncfusion
 description: Learn about save support in the Syncfusion .NET MAUI ImageEditor(SfImageEditor) control and more.
 platform: .NET MAUI
 control: SfImageEditor
