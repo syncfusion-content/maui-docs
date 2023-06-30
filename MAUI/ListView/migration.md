@@ -88,13 +88,13 @@ To migrate easier from [Xamarin SfListView](https://www.syncfusion.com/xamarin-u
 
 <tr>
 <td>{{'[ItemData](https://help.syncfusion.com/cr/xamarin/Syncfusion.ListView.XForms.ItemDraggingEventArgs.html#Syncfusion_ListView_XForms_ItemDraggingEventArgs_ItemData)'| markdownify }}</td>
-<td>{{'ItemDraggingEventArgs.DataItem`| markdownify }}</td>
+<td>{{'[ItemDraggingEventArgs.DataItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemDraggingEventArgs.html#Syncfusion_Maui_ListView_ItemDraggingEventArgs_DataItem)'| markdownify }}</td>
 <td>Gets the underlying data object of the ListViewItem that is currently being dragged from the bound data source.</td>
 </tr>
 
 <tr>
 <td>{{'[CanAdjustDragItemAxis](https://help.syncfusion.com/cr/xamarin/Syncfusion.ListView.XForms.DragDropController.html#Syncfusion_ListView_XForms_DragDropController_CanAdjustDragItemAxis)'| markdownify }}</td>
-<td>{{'CanAdjustDragItemAxis'| markdownify }}</td>
+<td>{{'[CanAdjustDragItemAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.DragDropController.html#Syncfusion_Maui_ListView_DragDropController_CanAdjustDragItemAxis)'| markdownify }}</td>
 <td>A property that Gets or sets a value that determines whether to adjust the X position of the drag item for vertical orientation and the Y position for horizontal orientation.</td>
 </tr>
 </table> 
