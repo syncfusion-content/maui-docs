@@ -517,3 +517,12 @@ Applicable for crop view selection, shape and text annotation selection.
 <td>Method to apply various visual effects to the image, such as adjusted brightness, blur, contrast, exposure, saturation, sharpen, hue, and opacity.</td>
 </tr>
 </table>
+
+## Upcoming features
+
+* Support to browse image from local device storage.
+* Support to save image using folder picker in device storage.
+* Localization support for the image editor, allowing you to use it in your preferred language.
+* Support for image processing capabilities for annotations.
+* Customization support for toolbar.
+* Support for pan and zoom improvements while performing the crop action on images.

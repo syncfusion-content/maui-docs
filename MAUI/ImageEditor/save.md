@@ -215,7 +215,7 @@ The [`ImageSaved`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEdit
 
 ## Reset
 
-The [`Reset`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_Reset) method, resets an image to its original state by discarding the changes performed to it. You can start fresh and explore different creative possibilities.the complete set of changes made in image and also resets the image to original loaded image.
+The [`Reset`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_Reset) method, resets an image to its original state by discarding the changes performed to it. You can start fresh and explore different creative possibilities. The complete set of changes made in the image and also resets the image to the original loaded image.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -241,7 +241,7 @@ The [`Reset`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.Sf
 
 ## Reset events
 
-The SfImageEditor has events when performing reset operation namely [`BeginReset`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_BeginReset).
+The SfImageEditor has event when performing reset operation namely [`BeginReset`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_BeginReset).
 
 ### BeginReset
 
