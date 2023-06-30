@@ -13,10 +13,10 @@ The .NET MAUI SfAccordion comes with built-in support for customizing the appear
 
 ## Header icon position 
  
-The `SfAccordion` allows you to customize the position of the header icon in each accordion item using the `HeaderIconPosition` property. By default, the header icon position is set to `End`.
+The [SfAccordion](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.SfAccordion.html) allows you to customize the position of the header icon in each accordion item using the [HeaderIconPosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.SfAccordion.html#Syncfusion_Maui_Accordion_SfAccordion_HeaderIconPosition) property. By default, the header icon position is set to [End](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Expander.ExpanderIconPosition.html#Syncfusion_Maui_Expander_ExpanderIconPosition_End).
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight xaml hl_lines="2" %}
 <syncfusion:SfAccordion x:Name="accordion" 
                         HeaderIconPosition="Start" />
 {% endhighlight %}
@@ -27,17 +27,17 @@ accordion.HeaderIconPosition = Syncfusion.Maui.Expander.ExpanderIconPosition.Sta
 
 ## Header background color customization
 
-The `SfAccordion` allows you to customize the background color of the expander header by using the `HeaderBackground` property.
+The [SfAccordion](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.SfAccordion.html) allows you to customize the background color of the expander header by using the [HeaderBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.AccordionItem.html#Syncfusion_Maui_Accordion_AccordionItem_HeaderBackground) property.
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight xaml hl_lines="3" %}
 <syncfusion:SfAccordion x:Name="accordion">
     <syncfusion:SfAccordion.Items>
         <syncfusion:AccordionItem HeaderBackground="Pink"/>
     </syncfusion:SfAccordion.Items>
 </syncfusion:SfAccordion>
 {% endhighlight %}
-{% highlight c# %}
+{% highlight c# hl_lines="18" %}
 SfAccordion accordion;
 public MainPage()
 {
@@ -63,17 +63,17 @@ public AccordionItem GenerateAccordionItem()
 
 ## Icon color customization
 
-The `SfAccordion` allows you to customize the color of the expander icon by using the `HeaderIconColor` property.
+The [SfAccordion](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.SfAccordion.html) allows you to customize the color of the expander icon by using the [HeaderIconColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.AccordionItem.html#Syncfusion_Maui_Accordion_AccordionItem_HeaderIconColor) property.
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight xaml hl_lines="3" %}
 <syncfusion:SfAccordion x:Name="accordion">
     <syncfusion:SfAccordion.Items>
         <syncfusion:AccordionItem HeaderIconColor="Brown"/>
     </syncfusion:SfAccordion.Items>
 </syncfusion:SfAccordion>
 {% endhighlight %}
-{% highlight c# %}
+{% highlight c# hl_lines="18" %}
 SfAccordion accordion;
 public MainPage()
 {
@@ -99,7 +99,7 @@ public AccordionItem GenerateAccordionItem()
 
 ## Visual State Manager
 
-The appearance of the `SfAccordion` can be customized using the following two `VisualStates`:
+The appearance of the [SfAccordion](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.SfAccordion.html) can be customized using the following two `VisualStates`:
 
 * Expanded
 * Collapsed
