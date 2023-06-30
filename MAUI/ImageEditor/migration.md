@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Migrate from Xamarin to .NET MAUI ImageEditor (SfImageEditor) | Syncfusion
+title: Migrate from Xamarin to .NET MAUI Image Editor (SfImageEditor) | Syncfusion
 description: Learn about Migrating from Syncfusion Xamarin.Forms ImageEditor to Syncfusion .NET MAUI ImageEditor control.
 platform: .NET MAUI
 control: SfImageEditor
@@ -517,3 +517,14 @@ Applicable for crop view selection, shape and text annotation selection.
 <td>Method to apply various visual effects to the image, such as adjusted brightness, blur, contrast, exposure, saturation, sharpen, hue, and opacity.</td>
 </tr>
 </table>
+
+## Upcoming features
+
+* Built in support to browse image from local device storage.
+* Built in support to save image using folder picker in device storage.
+* Localization support for the image editor toolbar, allowing you to use it in your preferred language.
+* Support for annotations Z ordering.
+* Support for serialize and deserialize the annotations.
+* Support to add custom shapes or views.
+* Support for pan and zoom improvements while performing the crop action on images.
+* Support to toolbar customization.
