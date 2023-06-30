@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Overview of .NET MAUI Image Editor control | Syncfusion
+title: Overview of .NET MAUI Image Editor Control | Syncfusion
 description: Learn about the introduction of Syncfusion .NET MAUI ImageEditor(SfImageEditor) control, its basic features, and the functionalities of imageeditor.
 platform: .NET MAUI
 control: SfImageEditor
