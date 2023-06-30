@@ -85,19 +85,9 @@ namespace GettingStarted
 
 ## Loading an image to image editor
 
-Refer to the following steps to add an image to the project:
-
-1. Locate the "Resources" folder in your .NET MAUI project. This folder is typically located in the project's root directory.
-2. Right-click on the "Resources" folder in the project structure view or Solution Explorer.
-3. From the context menu, select "Add" and then "Existing Item." This will open a file selection dialog.
-4. Browse to the location on your computer where the image file is stored.
-5. Select the image file you want to add to the "Resources" folder.
-6. Click "Add" to add the image file to the project.
-7. Assign the image name, including its extension, to the [Source](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_Source) property of the image editor control. 
+The [Source](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_Source) property is used to load images from different sources:
 
 N> Image formats such as JPEG and PNG can be loaded to the image editor.
-
-The [Source](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_Source) property is used to load images from different sources:
 
 ### Loading a local file
 
@@ -165,7 +155,19 @@ public partial class MainPage : ContentPage
 
 ### Load an image from Resource folder
 
-To load an image from a resource file, you can use the following code example
+To load an image from a resource file.
+
+Refer to the following steps to add an image to the project:
+
+1. Locate the "Resources" folder in your .NET MAUI project. This folder is typically located in the project's root directory.
+2. Right-click on the "Resources" folder in the project structure view or Solution Explorer.
+3. From the context menu, select "Add" and then "Existing Item." This will open a file selection dialog.
+4. Browse to the location on your computer where the image file is stored.
+5. Select the image file you want to add to the "Resources" folder.
+6. Click "Add" to add the image file to the project.
+7. Assign the image name, including its extension, to the [Source](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_Source) property of the image editor control.
+
+The following code shows adding an image to the image editor control:
 
 {% tabs %}
 {% highlight xaml %}
