@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Events in .NET MAUI ImageEditor control | Syncfusion
+title: Events in .NET MAUI Image Editor control | Syncfusion
 description: Learn here all about the Events support in Syncfusion .NET MAUI ImageEditor(SfImageEditor) control and more.
 platform: .NET MAUI
 control: SfImageEditor
@@ -63,5 +63,3 @@ N> This is common for Shape and Text annotations.
 {% endhighlight %}
 
 {% endtabs %}
-
-N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-image-editor-examples/tree/master/ImageSavingSample)

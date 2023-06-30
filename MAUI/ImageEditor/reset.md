@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Reset image .NET MAUI ImageEditor control | Syncfusion
+title: Reset image .NET MAUI Image Editor control | Syncfusion
 description: Learn about reset support in the Syncfusion .NET MAUI ImageEditor(SfImageEditor) control and more.
 platform: .NET MAUI
 control: SfImageEditor
@@ -32,6 +32,8 @@ The [`Reset`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.Sf
 
 {% endhighlight %}
 {% endtabs %}
+
+![Reset Image in .NET Maui ImageEditor](images/reset/imageeditor-reset-image.gif)
 
 ## Reset image event
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with .NET MAUI ImageEditor control | Syncfusion
+title: Getting Started with .NET MAUI Image Editor control | Syncfusion
 description: Learn about getting started with Syncfusion .NET MAUI ImageEditor(SfImageEditor) control.
 platform: .NET MAUI
 control: SfImageEditor
@@ -131,7 +131,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-### Load a remote file
+### Load an image from URI
 
 To load an image from a remote URI, you can use the following code example:
 
@@ -163,7 +163,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-### Load a resource file
+### Load an image from Resource folder
 
 To load an image from a resource file, you can use the following code example
 
@@ -195,7 +195,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-### Loading from stream
+### Load an image from stream
 
 To load an image from a byte array, use the provided code example for stream-based loading.
 
