@@ -9,7 +9,7 @@ documentation: ug
 
 # BindableLayout in .NET MAUI Accordion (SfAccordion)
 
-The `SfAccordion` control allows the use of [.NET MAUI BindableLayout](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/layouts/bindablelayout) to bind a data collection using `BindableLayout.ItemsSource` and `BindableLayout.ItemTemplate` properties.
+The [SfAccordion](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.SfAccordion.html) control allows the use of [.NET MAUI BindableLayout](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/layouts/bindablelayout) to bind a data collection using `BindableLayout.ItemsSource` and `BindableLayout.ItemTemplate` properties.
 
 ## Creating Data Model
 
@@ -213,16 +213,17 @@ this.BindingContext = new EmployeeDetails();
 The following code example binds the collection created in the previous step to the `BindableLayout.ItemsSource` property.
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight xaml hl_lines="7"%}
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Accordion;assembly=Syncfusion.Maui.Expander"
              xmlns:local="clr-namespace:AccordionBindableLayout"
              x:Class="AccordionBindableLayout.MainPage">
-    <syncfusion:SfAccordion x:Name="Accordion" BindableLayout.ItemsSource="{Binding Employees}"/>
+    <syncfusion:SfAccordion x:Name="Accordion"
+                            BindableLayout.ItemsSource="{Binding Employees}"/>
 </ContentPage>      
 {% endhighlight %}
-{% highlight c# %}
+{% highlight c# hl_lines="2"%}
 SfAccordion Accordion = new SfAccordion();
 BindableLayout.SetItemsSource(Accordion, viewModel.Employees);
 {% endhighlight %}
@@ -230,10 +231,10 @@ BindableLayout.SetItemsSource(Accordion, viewModel.Employees);
 
 ## Defining the AccordionItem
 
-The `SfAccordion` accepts the `AccordionItem` as its child element. The appearance of each `AccordionItem` can be defined by setting the `BindableLayout.ItemTemplate` property.
+The [SfAccordion](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.SfAccordion.html) accepts the [AccordionItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.AccordionItem.html) as its child element. The appearance of each `AccordionItem` can be defined by setting the `BindableLayout.ItemTemplate` property.
 
 {% tabs %}
-{% highlight xaml hl_lines="2,3" %}
+{% highlight xaml hl_lines="2 3" %}
 <syncfusion:SfAccordion  x:Name="accordion"
                          BindableLayout.ItemsSource="{Binding Employees}" >
     <BindableLayout.ItemTemplate>
@@ -294,7 +295,7 @@ The `SfAccordion` accepts the `AccordionItem` as its child element. The appearan
     </BindableLayout.ItemTemplate>
 </syncfusion:SfAccordion>    
 {% endhighlight %}
-{% highlight c# hl_lines="27,28"%}
+{% highlight c# hl_lines="26 27"%}
 SfAccordion accordion = new SfAccordion();
 DataTemplate ItemTemplate = new DataTemplate(() =>
 {
