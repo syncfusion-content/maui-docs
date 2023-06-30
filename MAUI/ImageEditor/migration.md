@@ -520,9 +520,11 @@ Applicable for crop view selection, shape and text annotation selection.
 
 ## Upcoming features
 
-* Support to browse image from local device storage.
-* Support to save image using folder picker in device storage.
-* Localization support for the image editor, allowing you to use it in your preferred language.
-* Support for image processing capabilities for annotations.
-* Customization support for toolbar.
+* Built in support to browse image from local device storage.
+* Built in support to save image using folder picker in device storage.
+* Localization support for the image editor toolbar, allowing you to use it in your preferred language.
+* Support for annotations Z ordering.
+* Support for serialize and deserialize the annotations.
+* Support to add custom shapes or views.
 * Support for pan and zoom improvements while performing the crop action on images.
+* Support to toolbar customization.

@@ -97,14 +97,18 @@ Refer to the following steps to add an image to the project:
 
 N> Image formats such as JPEG and PNG can be loaded to the image editor.
 
-The following code shows adding an image to the image editor control with the format as "JPEG" and name as "image."
+The [Source](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_Source) property is used to load images from different sources:
+
+### Loading a local file
+
+To load an image from a local path. The following code shows adding an image to the image editor control with the format as "JPEG" and name as "image."
 
 {% tabs %}
 {% highlight xaml hl_lines="3" %}
 
 <ContentPage 
             . . .
-            <imageEditor:SfImageEditor Source="image.jpeg"/>
+            <imageEditor:SfImageEditor Source="D:\images\image.jpeg"/>
 
 </ContentPage>
 
@@ -120,7 +124,101 @@ public partial class MainPage : ContentPage
 	{
         InitializeComponent();
         SfImageEditor imageEditor = new SfImageEditor();
-        imageEditor.Source = "image.jpeg";
+        imageEditor.Source = ImageSource.FromFile("D:\\images\\image.jpeg");
+        this.content = imageEditor;
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
+### Load a remote file
+
+To load an image from a remote URI, you can use the following code example:
+
+{% tabs %}
+{% highlight xaml %}
+
+<ContentPage 
+            . . .
+            <imageEditor:SfImageEditor Source="https://dummyimage.com/300x200/000/fff.png"/>
+
+</ContentPage>
+
+{% endhighlight %}
+{% highlight C#  %}
+
+using Syncfusion.Maui.ImageEditor;
+namespace SyncfusionImageEditor;
+
+public partial class MainPage : ContentPage
+{
+	public MainPage()
+	{
+        InitializeComponent();
+        SfImageEditor imageEditor = new SfImageEditor();
+        imageEditor.Source = ImageSource.FromUri(new Uri("https://dummyimage.com/300x200/000/fff.png"));
+        this.content = imageEditor;
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
+### Load a resource file
+
+To load an image from a resource file, you can use the following code example
+
+{% tabs %}
+{% highlight xaml %}
+
+<ContentPage 
+            . . .
+            <imageEditor:SfImageEditor Source="image.jpeg"/>
+
+</ContentPage>
+
+{% endhighlight %}
+{% highlight C#  %}
+
+using Syncfusion.Maui.ImageEditor;
+namespace SyncfusionImageEditor;
+
+public partial class MainPage : ContentPage
+{
+	public MainPage()
+	{
+        InitializeComponent();
+        SfImageEditor imageEditor = new SfImageEditor();
+        imageEditor.Source =  ImageSource.FromResource("MyProject.Resources.Images.image.jpeg");
+        this.content = imageEditor;
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
+### Loading from stream
+
+To load an image from a byte array, use the provided code example for stream-based loading.
+
+{% tabs %}
+{% highlight C#  %}
+
+using Syncfusion.Maui.ImageEditor;
+using System.Reflection;
+namespace SyncfusionImageEditor;
+
+public partial class MainPage : ContentPage
+{
+	public MainPage()
+	{
+        InitializeComponent();
+        SfImageEditor imageEditor = new SfImageEditor();
+        Assembly assembly = Assembly.GetExecutingAssembly();
+        imageEditor.Source = ImageSource.FromStream(() =>
+        {
+            Stream openStream = assembly.GetManifestResourceStream("MyProject.Resources.Images.image.jpeg");
+            return openStream;
+        });
+
         this.content = imageEditor;
     }
 }
