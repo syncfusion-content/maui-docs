@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Events in .NET MAUI Image Editor control | Syncfusion
-description: Learn here all about the Events support in Syncfusion .NET MAUI ImageEditor(SfImageEditor) control and more.
+title: Events in .NET MAUI Image Editor Control | Syncfusion
+description: Learn here all about the Events support in the Syncfusion .NET MAUI ImageEditor(SfImageEditor) control and more.
 platform: .NET MAUI
 control: SfImageEditor
 documentation: ug
 ---
 
-# Events in .NET MAUI Image Editor (SfImageEditor)
+# Events in the .NET MAUI Image Editor (SfImageEditor)
 
 The SfImageEditor supports the [`Imageloaded`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_ImageLoaded) and [`AnnotationSelected`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_AnnotationSelected) events to interact with [.NET MAUI Image Editor](https://help.syncfusion.com/maui/imageeditor/overview).
 
 ## Image loaded event
 
-This [`Imageloaded`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_ImageLoaded) event will be triggered after the image has been loaded. By this event you can add any shapes or text over an image or crop an image while initially loading the image. 
+This [`Imageloaded`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_ImageLoaded) event will be triggered after the image has been loaded. By this event, you can add any shapes or text over an image or crop an image while initially loading the image.
 
 {% tabs %}
 
