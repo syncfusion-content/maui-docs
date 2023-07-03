@@ -269,8 +269,8 @@ There are four built-in events in the SfAccordion control namely:
 
 The [Expanding](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.SfAccordion.html#Syncfusion_Maui_Accordion_SfAccordion_Expanding) event will be triggered when the accordion item is being expanded. It can cancel expansion with [ExpandingAndCollapsingEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.ExpandingAndCollapsingEventArgs.html) that contains the following property:
 
-* `Cancel`:Indicates that the expansion or collapse action should be cancelled.
-* [Index](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.ExpandingAndCollapsingEventArgs.html#Syncfusion_Maui_Accordion_ExpandingAndCollapsingEventArgs_Index):Gets the index of the current expanding accordion item.
+* `Cancel`: Indicates that the expansion or collapse action should be cancelled.
+* [Index](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.ExpandingAndCollapsingEventArgs.html#Syncfusion_Maui_Accordion_ExpandingAndCollapsingEventArgs_Index): Gets the index of the current expanding accordion item.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="1"%}
@@ -325,7 +325,7 @@ private void SfAccordion_Expanded(object sender, Syncfusion.Maui.Accordion.Expan
 The [Collapsing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.SfAccordion.html#Syncfusion_Maui_Accordion_SfAccordion_Collapsing) event will be triggered when the expander control is being collapsed.It can cancel collapsing with [ExpandingAndCollapsingEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.ExpandingAndCollapsingEventArgs.html) that contains the following property:
 
 * `Cancel`: Indicates that the expansion or collapse action should be cancelled.
-* [Index](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.ExpandingAndCollapsingEventArgs.html#Syncfusion_Maui_Accordion_ExpandingAndCollapsingEventArgs_Index):Gets the index of the current collapsing accordion item.
+* [Index](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.ExpandingAndCollapsingEventArgs.html#Syncfusion_Maui_Accordion_ExpandingAndCollapsingEventArgs_Index): Gets the index of the current collapsing accordion item.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="1"%}
