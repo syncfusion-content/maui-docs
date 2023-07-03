@@ -123,7 +123,7 @@ public partial class MainPage : ContentPage
 
 ### Load an image from URI
 
-To load an image from a remote URI, you can use the following code example:
+To load an image from a remote URI, you can use the following code example.
 
 {% tabs %}
 {% highlight xaml %}
@@ -167,7 +167,7 @@ Refer to the following steps to add an image to the project:
 6. Click "Add" to add the image file to the project.
 7. Assign the image name, including its extension, to the [Source](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_Source) property of the image editor control.
 
-The following code shows adding an image to the image editor control:
+The following code shows adding an image to the image editor control.
 
 {% tabs %}
 {% highlight xaml %}
