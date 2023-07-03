@@ -7,7 +7,7 @@ control: SfImageEditor
 documentation: ug
 ---
 
-# .NET MAUI Image Editor (SfImageEditor) Image Zooming
+# The .NET MAUI Image Editor (SfImageEditor) Image Zooming
 
 The image editor control in the .NET MAUI provides support for zooming and panning actions on an image.
 
