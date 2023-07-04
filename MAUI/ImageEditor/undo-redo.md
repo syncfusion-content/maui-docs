@@ -9,7 +9,7 @@ documentation: ug
 
 # Undo Redo in .NET MAUI Image Editor (SfImageEditor)
 
-One of the important features of the image editor control is to perform `Undo` and `Redo` to revert the edited changes.
+One of the important features of the image editor control is to perform the `Undo` and `Redo` to revert the edited changes.
 
 ## Undo
 

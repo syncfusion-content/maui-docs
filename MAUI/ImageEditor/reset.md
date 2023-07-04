@@ -9,7 +9,7 @@ documentation: ug
 
 # Reset image using the .NET MAUI Image Editor (SfImageEditor)
 
-The Image Editor control in .NET MAUI allows you to reset the edited image to the original loaded image.
+The Image Editor control in the .NET MAUI allows you to reset the edited image to the original loaded image.
 
 ## Reset method
 
