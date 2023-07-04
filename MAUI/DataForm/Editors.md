@@ -320,7 +320,9 @@ public string Password { get; set; }
 ![Password editor in .NET MAUI DataForm.](images/editors/dataform-password-editor.png)
 
 ## Numeric editor
-In the numeric editor, the [SfNumericEntry](https://help.syncfusion.com/maui/numeric-entry/overview) will be loaded and the DataForm Numeric editor supports `int`, `double`, and `float` data type properties.
+In the numeric editor, the [SfNumericEntry](https://help.syncfusion.com/maui/numeric-entry/overview) will be loaded and the DataForm Numeric editor supports `int`, `double`, and `float` data type properties. 
+
+Also, to add a DataForm numeric editor, register the editor as [DataFormEditorType.Numeric](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormEditorType.html#Syncfusion_Maui_DataForm_DataFormEditorType_Numeric) for the required field using the [RegisterEditor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_RegisterEditor_System_String_Syncfusion_Maui_DataForm_DataFormEditorType_) method.
 
 ![Numeric editor in .NET MAUI DataForm.](images/editors/dataform-numeric-editor.png)
 
@@ -330,13 +332,14 @@ You can use the [GenerateDataFormItem](https://help.syncfusion.com/cr/maui/Syncf
 {% tabs %}
 {% highlight C# %}
 
-public int Amount { get; set; }
+public decimal Amount { get; set; }
 public double Number { get; set; }
 public int Percentage { get; set; }
 
 {% endhighlight %}
 {% highlight C# %}
 
+this.dataForm.RegisterEditor("Amount", DataFormEditorType.Numeric);
 this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
 private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
@@ -346,9 +349,9 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
         if (e.DataFormItem.FieldName == "Amount" && e.DataFormItem is DataFormNumericItem amount)
         {
             amount.AllowNull = true;
-            amount.CustomFormat = "C";
-            amount.Culture = new CultureInfo("fr-FR");
-            amount.ShowClearButton = true;
+            amount.Culture = new CultureInfo("et-EE");
+            // To enter a minimum of 2 decimal digits and maximum of 4 decimal digits, set CustomFormat = "#,0.00##"
+            amount.CustomFormat = "#,0.00##";
         }
         else if (e.DataFormItem.FieldName == "Percentage" && e.DataFormItem is DataFormNumericItem percentage)
         {
@@ -370,7 +373,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 
 In the Masked text editor, the [SfMaskedEntry](https://help.syncfusion.com/maui/masked-entry/overview) will be loaded and DataForm Masked text editor supports the `PhoneNumber` and `CreditCard` data type property of [DataTypeAttribute](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.datatype?view=net-7.0).
 
-Also, to add a DataForm Masked text editor, register the editor as [DataFormEditorType.MaskedText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormEditorType.html#Syncfusion_Maui_DataForm_DataFormEditorType_MaskedText) for the required property using the [RegisterEditor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_RegisterEditor_System_String_Syncfusion_Maui_DataForm_DataFormEditorType_) method.
+Also, to add a DataForm Masked text editor, register the editor as [DataFormEditorType.MaskedText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormEditorType.html#Syncfusion_Maui_DataForm_DataFormEditorType_MaskedText) for the required field using the [RegisterEditor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_RegisterEditor_System_String_Syncfusion_Maui_DataForm_DataFormEditorType_) method.
 
 ![Masked text editor in .NET MAUI DataForm.](images/editors/dataform-masked-editor.png)
 
@@ -387,7 +390,7 @@ public string PhoneNumber { get; set; }
 [DataType(DataType.CreditCard)]
 public string CreditCard { get; set; }
 
-public string Amount { get; set; }
+public decimal Amount { get; set; }
 
 {% endhighlight %}
 {% highlight C# %}
@@ -401,10 +404,10 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
     {
         if (e.DataFormItem.FieldName == "Amount" && e.DataFormItem is DataFormMaskedTextItem amount)
         {
-            amount.PromptChar = '_';
+            amount.PromptChar = 'X'
             amount.MaskType = MaskedEditorMaskType.Simple;
-            amount.Mask = "0,000.00";
-            amount.Culture = new CultureInfo("fr-FR");
+            amount.Mask = "000000.00";
+            amount.ValueMaskFormat = MaskedEditorMaskFormat.IncludeLiterals;
         }
         else if (e.DataFormItem.FieldName == "PhoneNumber" && e.DataFormItem is DataFormMaskedTextItem phoneNumber)
         {
