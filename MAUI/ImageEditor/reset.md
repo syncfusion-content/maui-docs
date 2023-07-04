@@ -9,6 +9,10 @@ documentation: ug
 
 # Reset image using the .NET MAUI Image Editor (SfImageEditor)
 
+The Image Editor control in the .NET MAUI allows you to reset the edited image to the original loaded image.
+
+## Reset method
+
 The [`Reset`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_Reset) method, resets an image to its original state by discarding the changes performed to it. You can start fresh and explore different creative possibilities. The complete set of changes made in the image and also resets the image to the original loaded image.
 
 {% tabs %}
@@ -35,7 +39,7 @@ The [`Reset`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.Sf
 
 ![Reset Image in .NET Maui ImageEditor](images/reset/imageeditor-reset-image.gif)
 
-## Reset the image event
+## Reset action event
 
 This [`BeginReset`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_BeginReset) event occurs before resetting the changes made in an image. You can control the reset functionality using the cancel argument.
 
