@@ -83,7 +83,7 @@ Here, the Grid with Labels is loaded in the Header and Content of the expander.
 N> Loading the `Label` as direct children of the `Header` or `Content` of the Expander will lead to an exception. So, load the Label inside the Grid to overcome the crash.
 
 {% tabs %}
-{% highlight xaml  hl_lines="11"%}
+{% highlight xaml hl_lines="11"%}
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
