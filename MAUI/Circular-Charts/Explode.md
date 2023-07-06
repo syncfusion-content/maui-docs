@@ -9,6 +9,8 @@ documentation: ug
 
 # Explode segments in .NET MAUI SfCircularChart
 
+## Exploding a segment
+
 Exploding a segment is used to pull attention to a specific area of the circular chart. The following properties are used to explode the segments in the circular chart.
 
 * [ExplodeIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.PieSeries.html#Syncfusion_Maui_Charts_PieSeries_ExplodeIndex) - Used to explode any specific segment.
@@ -52,4 +54,43 @@ chart.Series.Add(series);
 
 {% endtabs %}
 
-![Exploded doughnut chart in MAUI](Explode_images/explode_segment_in_circularchart.gif)
+![Exploding a segment in a doughnut chart in MAUI.](Explode_images/explode_segment_in_circularchart.gif)
+
+## Exploding all the segments
+
+By setting the [ExplodeAll](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.PieSeries.html#Syncfusion_Maui_Charts_PieSeries_ExplodeAll) property of the [PieSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.PieSeries.html) to true, all segments in a circular chart can be visually exploded and highlighted on touch/tap interaction.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<chart:SfCircularChart>
+    . . .
+    <chart:DoughnutSeries x:Name="DoughnutSeries"
+					  ItemsSource="{Binding Data}"
+					  XBindingPath="XValue"
+					  YBindingPath="YValue"
+                      ExplodeAll="True" />
+</chart:SfCircularChart>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+SfCircularChart chart = new SfCircularChart();
+. . .
+DoughnutSeries series = new DoughnutSeries()
+{
+    ItemsSource = new ViewModel().Data,
+    XBindingPath = "XValue",
+    YBindingPath = "YValue",
+    ExplodeAll = true
+};
+
+chart.Series.Add(series);
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Exploding all segments in a doughnut chart in MAUI.]()
