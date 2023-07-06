@@ -161,4 +161,4 @@ chart.Mode =  PyramidMode.Surface;
 
 {% endtabs %}
 
-![Pyramid mode support in MAUI Chart]()
+![Pyramid mode support in MAUI Chart](Appearance_images/MAUI_Pyramid_mode.png)

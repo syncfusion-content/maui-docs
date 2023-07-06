@@ -93,4 +93,4 @@ chart.Series.Add(series);
 
 {% endtabs %}
 
-![Exploding all segments in a doughnut chart in MAUI.]()
+![Exploding all segments in a doughnut chart in MAUI.](Explode_images/MAUI_ExplodeAll.png)
