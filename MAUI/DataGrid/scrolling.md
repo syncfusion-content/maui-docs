@@ -26,7 +26,7 @@ You can scroll programmatically to a particular row and column using the `SfData
 
 {% tabs %}
 {% highlight C# %}
-this.dataGrid.ScrollToRowColumnIndex(15, 4, true, ScrollToPosition.Start);
+this.dataGrid.ScrollToRowColumnIndex(15, 4, ScrollToPosition.Start, ScrollToPosition.Start, true);
 {% endhighlight %}
 {% endtabs %}
 
@@ -36,7 +36,7 @@ You can scroll programmatically to a particular row using the `SfDataGrid.Scroll
 
 {% tabs %}
 {% highlight C# %}
-this.dataGrid.ScrollToRowIndex(30, true, ScrollToPosition.End);
+this.dataGrid.ScrollToRowIndex(30, ScrollToPosition.End, true);
 {% endhighlight %}
 {% endtabs %}
 
@@ -46,7 +46,7 @@ You can scroll programmatically to a particular column using the `SfDataGrid.Scr
 
 {% tabs %}
 {% highlight C# %}
-this.dataGrid.ScrollToColumnIndex(4, true, ScrollToPosition.MakeVisible);
+this.dataGrid.ScrollToColumnIndex(4, ScrollToPosition.MakeVisible, true);
 {% endhighlight %}
 {% endtabs %}
 
