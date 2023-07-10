@@ -215,8 +215,8 @@ By default, all columns (including hidden columns) in the SfDataGrid are exporte
 {% highlight c# %}
 DataGridPdfExportingOption option = new DataGridPdfExportingOption();
         var list = new List<string>();
-        list.Add("EmployeeID");
-        list.Add("Name");
+        list.Add("OrderID");
+        list.Add("Customer");
         option.ExcludedColumns = list;
 {% endhighlight %}
 {% endtabs %}
