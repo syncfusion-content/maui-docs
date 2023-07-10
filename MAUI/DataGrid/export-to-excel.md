@@ -101,7 +101,7 @@ The SfDataGrid offers various properties within the `DataGridExcelExportingOptio
 
 ### Exporting formatted text and actual value
 
-The actual value will be exported to Excel by default. To export the display text, you need to set the ExportMode property as Text.
+The actual value will be exported to Excel by default. To export the display text, you need to set the `ExportMode` property as Text.
 
 {% tabs%}
 {% highlight c# %}

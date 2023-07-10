@@ -11,9 +11,9 @@ documentation: UG
 
 Grouping in a datagrid refers to the process of organizing and categorizing data based on specific criteria or field values. It allows you to group related records together, creating a hierarchical structure within the datagrid. Each group is identified by its [CaptionSummaryRow](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CaptionSummaryRowProperty) to get the underlying records in view.
 
-N> To update the grouping for the newly added row or column, set the `SfDataGrid.View.LiveDataUpdateMode` to `LiveDataUpdateMode.AllowDataShaping`.
-
-N> When `BeginInit` method is called, it suspends all the updates until `EndInit` method is called.  
+N> 
+* To update the grouping for the newly added row or column, set the `SfDataGrid.View.LiveDataUpdateMode` to `LiveDataUpdateMode.AllowDataShaping`.
+* When `BeginInit` method is called, it suspends all the updates until `EndInit` method is called.  
 
 ## Programmatic grouping
 
@@ -366,6 +366,7 @@ To expand and collapse specfic groups programmatically, you can simply invoke th
 {% tabs %}
 {% highlight c# %}
 var group = (dataGrid.View.Groups[0] as Group);
+
 this.dataGrid.ExpandGroup(group);
 this.dataGrid.CollapseGroup(group);
 {% endhighlight %}
@@ -393,7 +394,7 @@ orderID.Format = "#";
 {% endhighlight%} 
 {% endtabs %}
 
-The following screenshot shows a comparison between two group modes. GroupMode.Value on the Top and GroupMode.Display on the Bottom:
+The following screenshot shows a comparison between two group modes. `GroupMode.Value` on the Top and `GroupMode.Display` on the Bottom:
 ![DataGrid with group mode](Images\Grouping\maui-datagrid-mode-value.png)
 ![DataGrid with group mode](Images\Grouping\maui-datagrid-mode-display.png)
 
@@ -403,15 +404,15 @@ To clear the applied grouping, you can simply remove the particular item from th
 
 {% tabs %}
 {% highlight c# %}
-    //Clearing the Group
-    dataGrid.GroupColumnDescriptions.Clear();
+//Clearing the Group
+dataGrid.GroupColumnDescriptions.Clear();
 
-    //Removing the Group based on group item
-    var groupColumn = dataGrid.GroupColumnDescriptions[1];
-    dataGrid.GroupColumnDescriptions.Remove(groupColumn);
-        
-    //Removing the Group based on group index
-    dataGrid.GroupColumnDescriptions.RemoveAt(0);
+//Removing the Group based on group item
+var groupColumn = dataGrid.GroupColumnDescriptions[1];
+dataGrid.GroupColumnDescriptions.Remove(groupColumn);
+    
+//Removing the Group based on group index
+dataGrid.GroupColumnDescriptions.RemoveAt(0);
 {% endhighlight%} 
 {% endtabs %}
 

@@ -582,7 +582,7 @@ dataGrid.Columns.Add(dateColumn);
 
 ## DataGridComboBoxColumn
 
-The [DataGridComboBoxColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridComboBoxColumn.html) inherits all the properties of the [SfDataGrid.DataGridColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html). It displays a list of items in the form of a `SfComboBox` as the content of a column. To enable or disable editing for a particular column, set the [DataGridColumn.AllowEditing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_AllowEditing) property to true or false. When in editing mode, it displays a [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) element. The data source for the SfComboBox can be set using the [DataGridComboBoxColumn.ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridComboBoxColumn.html#Syncfusion_Maui_DataGrid_DataGridComboBoxColumn_ItemsSource) property. The combobox column can be populated with data in the following ways:
+The [DataGridComboBoxColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridComboBoxColumn.html) inherits all the properties of the [SfDataGrid.DataGridColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html). It displays a list of items in the form of a [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) as the content of a column. To enable or disable editing for a particular column, set the [DataGridColumn.AllowEditing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_AllowEditing) property to true or false. When in editing mode, it displays a `SfComboBox` element. The data source for the `SfComboBox` can be set using the [DataGridComboBoxColumn.ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridComboBoxColumn.html#Syncfusion_Maui_DataGrid_DataGridComboBoxColumn_ItemsSource) property. The combobox column can be populated with data in the following ways:
 
 * Collection of primitive types
 * Collection of user-defined types (custom objects)
@@ -628,7 +628,7 @@ dataGrid.Columns.Add(comboBoxColumn);
 
 {% tabs %}
 {% highlight c# %}
-// ViewModel class
+
 public class ViewModel
 {
     public ObservableCollection<string> CustomerNames { get; set; }
@@ -646,9 +646,9 @@ public class ViewModel
 
 ### Collection of user-defined types
 
-To display a list of user-defined items in the drop-down of a combo box, create a `DataGridComboBoxColumn` and set its `ItemsSource` property to a user-defined collection. By default, if the [DisplayMemberPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridComboBoxColumn.html#Syncfusion_Maui_DataGrid_DataGridComboBoxColumn_DisplayMemberPath) is not set, the combo box column will display the values from the MappingName property of the column.
+To display a list of user-defined items in the drop-down of a combo box, create a `DataGridComboBoxColumn` and set its `ItemsSource` property to a user-defined collection. By default, if the [DisplayMemberPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridComboBoxColumn.html#Syncfusion_Maui_DataGrid_DataGridComboBoxColumn_DisplayMemberPath) is not set, the combo box column will display the values from the `MappingName` property of the column.
 
-### Loading Different ItemSource for each row of DataGridComboBoxColumn
+### Loading different ItemSource for each row of DataGridComboBoxColumn
 
 To load different ItemSources for each row of a DataGridComboBoxColumn, you can utilize the [DataGridComboBoxColumn.ItemsSourceSelector](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridComboBoxColumn.html#Syncfusion_Maui_DataGrid_DataGridComboBoxColumn_ItemsSourceSelector) property.
 
@@ -764,7 +764,7 @@ dataGrid.Columns.Add(comboBoxColumn);
 
 ### Auto suggesting on edit mode
 
-By default, the auto-suggestion in the dropdown will display values based on the [StartsWith](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ComboBoxTextSearchMode.html#Syncfusion_Maui_Inputs_ComboBoxTextSearchMode_StartsWith) filter condition. However, you can change this behavior by utilizing the [SuggestionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridComboBoxColumn.html#Syncfusion_Maui_DataGrid_DataGridComboBoxColumn_SuggestionMode) property to retrieve matches using the Contains condition.
+By default, the auto-suggestion in the dropdown will display values based on the [StartsWith](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ComboBoxTextSearchMode.html#Syncfusion_Maui_Inputs_ComboBoxTextSearchMode_StartsWith) filter condition. However, you can change this behavior by utilizing the [SuggestionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridComboBoxColumn.html#Syncfusion_Maui_DataGrid_DataGridComboBoxColumn_SuggestionMode) property to retrieve matches using the `Contains` condition.
 
 {% tabs %}
 {% highlight xaml %}
