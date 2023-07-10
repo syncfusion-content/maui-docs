@@ -28,12 +28,12 @@ To apply column grouping, please refer to the following code example:
 
 {% tabs %}
 {% highlight xaml %}
-    <syncfusion:SfDataGrid x:Name="dataGrid"
-                           ItemsSource="{Binding OrdersInfo}">
-        <syncfusion:SfDataGrid.GroupColumnDescriptions>
-            <syncfusion:GroupColumnDescription ColumnName="Name" />
-        </syncfusion:SfDataGrid.GroupColumnDescriptions>
-    </syncfusion:SfDataGrid> 
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                        ItemsSource="{Binding OrdersInfo}">
+    <syncfusion:SfDataGrid.GroupColumnDescriptions>
+        <syncfusion:GroupColumnDescription ColumnName="Name" />
+    </syncfusion:SfDataGrid.GroupColumnDescriptions>
+</syncfusion:SfDataGrid> 
 {% endhighlight %}
 {% highlight c# %}
     dataGrid.GroupColumnDescriptions.Add (new GroupColumnDescription () {
@@ -52,15 +52,15 @@ The SfDataGrid also allows to group the data against one or more columns using t
 
 {% tabs %}
 {% highlight xaml %}
-    <syncfusion:SfDataGrid  x:Name="dataGrid"
-                            ItemsSource="{Binding Orders}"
-                            GroupingMode="Multiple">
-                            
-        <syncfusion:SfDataGrid.GroupColumnDescriptions>
-            <syncfusion:GroupColumnDescription ColumnName="Name" />
-            <syncfusion:GroupColumnDescription ColumnName="ShipCity" />
-        </syncfusion:SfDataGrid.GroupColumnDescriptions>
-    </syncfusion:SfDataGrid>
+<syncfusion:SfDataGrid  x:Name="dataGrid"
+                        ItemsSource="{Binding Orders}"
+                        GroupingMode="Multiple">
+                        
+    <syncfusion:SfDataGrid.GroupColumnDescriptions>
+        <syncfusion:GroupColumnDescription ColumnName="Name" />
+        <syncfusion:GroupColumnDescription ColumnName="ShipCity" />
+    </syncfusion:SfDataGrid.GroupColumnDescriptions>
+</syncfusion:SfDataGrid>
 {% endhighlight %}
 
 {% highlight c# %}
@@ -84,10 +84,10 @@ The width of indent column can be customized by the [IndentColumnWidth](https://
 
 {% tabs %}
 {% highlight xaml %}
-    <syncfusion:SfDataGrid  x:Name="dataGrid"
-                            AutoGenerateColumns="True"
-                            ItemsSource="{Binding Orders}"
-                            IndentColumnWidth="60" />
+<syncfusion:SfDataGrid  x:Name="dataGrid"
+                        AutoGenerateColumns="True"
+                        ItemsSource="{Binding Orders}"
+                        IndentColumnWidth="60" />
 {% endhighlight %}
 
 {% highlight c# %}
@@ -109,31 +109,31 @@ To set a custom grouping converter for the group description that is added to gr
 
 {% tabs %}
 {% highlight xaml %}
-    <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-                 xmlns:syncfusion="clr-namespace:Syncfusion.Maui.DataGrid;assembly=Syncfusion.Maui.DataGrid"
-                 xmlns:local="clr-namespace:GroupingUI"
-                 x:Class="GroupingUI.MainPage">
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                xmlns:syncfusion="clr-namespace:Syncfusion.Maui.DataGrid;assembly=Syncfusion.Maui.DataGrid"
+                xmlns:local="clr-namespace:GroupingUI"
+                x:Class="GroupingUI.MainPage">
 
-        <ContentPage.Resources>
-            <ResourceDictionary>
-                <local:GroupConverter x:Key="groupConverter" />
-            </ResourceDictionary>
-        </ContentPage.Resources>
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:GroupConverter x:Key="groupConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
 
-        <ContentPage.BindingContext>
-            <local:ViewModel x:Name="viewModel" />
-        </ContentPage.BindingContext>
+    <ContentPage.BindingContext>
+        <local:ViewModel x:Name="viewModel" />
+    </ContentPage.BindingContext>
 
-        <syncfusion:SfDataGrid x:Name="dataGrid"
-                               ItemsSource="{Binding OrdersInfo}">
+    <syncfusion:SfDataGrid x:Name="dataGrid"
+                            ItemsSource="{Binding OrdersInfo}">
 
-            <syncfusion:SfDataGrid.GroupColumnDescriptions>
-                <syncfusion:GroupColumnDescription ColumnName="Freight"
-                                                   Converter="{StaticResource groupConverter}" />
-            </syncfusion:SfDataGrid.GroupColumnDescriptions>
-        </syncfusion:SfDataGrid>
-    </ContentPage> 
+        <syncfusion:SfDataGrid.GroupColumnDescriptions>
+            <syncfusion:GroupColumnDescription ColumnName="Freight"
+                                                Converter="{StaticResource groupConverter}" />
+        </syncfusion:SfDataGrid.GroupColumnDescriptions>
+    </syncfusion:SfDataGrid>
+</ContentPage> 
 {% endhighlight %}
 
 {% highlight c# %}
@@ -220,34 +220,34 @@ In custom grouping, you can sort all the inner records of each group by setting 
 
 {% tabs %}
 {% highlight xaml %}
-    <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-                 xmlns:syncfusion="clr-namespace:Syncfusion.Maui.DataGrid;assembly=Syncfusion.Maui.DataGrid"
-                 xmlns:local="clr-namespace:GroupingUI"
-                 x:Class="GroupingUI.MainPage">
-        <ContentPage.Resources>
-            <ResourceDictionary>
-                <local:GroupOrderNoConverter x:Key="groupOrderNoConverter" />
-                <local:PriceConverter x:key="priceConverter" />
-            </ResourceDictionary>
-        </ContentPage.Resources>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                xmlns:syncfusion="clr-namespace:Syncfusion.Maui.DataGrid;assembly=Syncfusion.Maui.DataGrid"
+                xmlns:local="clr-namespace:GroupingUI"
+                x:Class="GroupingUI.MainPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:GroupOrderNoConverter x:Key="groupOrderNoConverter" />
+            <local:PriceConverter x:key="priceConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
 
-        <ContentPage.BindingContext>
-            <local:ViewModel x:Name="viewModel" />
-        </ContentPage.BindingContext>
+    <ContentPage.BindingContext>
+        <local:ViewModel x:Name="viewModel" />
+    </ContentPage.BindingContext>
 
-        <syncfusion:SfDataGrid x:Name="dataGrid"
-                               ItemsSource="{Binding OrdersInfo}">
-            <Syncfusion:SfDataGrid.GroupColumnDescriptions>
-                <Syncfusion:GroupColumnDescription ColumnName="OrderID"
-                                                   Converter="{StaticResource groupOrderNoConverter}"
-                                                   SortGroupRecords="false" />
-                <Syncfusion:GroupColumnDescription ColumnName="Price"
-                                                   Converter="{StaticResource priceConverter}"
-                                                   SortGroupRecords="True" />
-            </Syncfusion:SfDataGrid.GroupColumnDescriptions>
-        </syncfusion:SfDataGrid>
-    </ContentPage>
+    <syncfusion:SfDataGrid x:Name="dataGrid"
+                            ItemsSource="{Binding OrdersInfo}">
+        <Syncfusion:SfDataGrid.GroupColumnDescriptions>
+            <Syncfusion:GroupColumnDescription ColumnName="OrderID"
+                                                Converter="{StaticResource groupOrderNoConverter}"
+                                                SortGroupRecords="false" />
+            <Syncfusion:GroupColumnDescription ColumnName="Price"
+                                                Converter="{StaticResource priceConverter}"
+                                                SortGroupRecords="True" />
+        </Syncfusion:SfDataGrid.GroupColumnDescriptions>
+    </syncfusion:SfDataGrid>
+</ContentPage>
 
 {% endhighlight %}
 
@@ -320,10 +320,10 @@ To expand all groups initially, set the [SfDataGrid.AutoExpandGroups](https://he
 
 {% tabs %}
 {% highlight xaml %}
-    <syncfusion:SfDataGrid  x:Name="dataGrid"
-                            AutoExpandGroups="True"
-                            AllowGroupExpandCollapse="True"
-                            ItemsSource="{Binding Orders}" />
+<syncfusion:SfDataGrid  x:Name="dataGrid"
+                        AutoExpandGroups="True"
+                        AllowGroupExpandCollapse="True"
+                        ItemsSource="{Binding Orders}" />
 {% endhighlight %}
 {% highlight c# %}
 this.dataGrid.AutoExpandGroups = true;
@@ -338,9 +338,9 @@ To expand and collapse the groups at runtime, you can simply set the [SfDataGrid
 {% tabs %}
 {% highlight xaml %}
 
-    <syncfusion:SfDataGrid  x:Name="dataGrid"
-                            AllowGroupExpandCollapse="True"
-                            ItemsSource="{Binding Orders}" />
+<syncfusion:SfDataGrid  x:Name="dataGrid"
+                        AllowGroupExpandCollapse="True"
+                        ItemsSource="{Binding Orders}" />
                        
 {% endhighlight %}
 {% highlight c# %}
@@ -380,10 +380,10 @@ By default, column grouping occurs based on the value in the underlying collecti
 
 {% tabs %}
 {% highlight xaml %}
-    <syncfusion:DataGridTextColumn HeaderText="Order ID"
-                                   MappingName="OrderID"
-                                   GroupMode="Display"
-                                   Format="#" />
+<syncfusion:DataGridTextColumn HeaderText="Order ID"
+                                MappingName="OrderID"
+                                GroupMode="Display"
+                                Format="#" />
 {% endhighlight %}
 
 {% highlight c# %}
@@ -489,10 +489,10 @@ The visibility of the grouped column can be customized by the [SfDataGrid.ShowCo
 {% tabs %}
 
 {% highlight xaml %}
-    <syncfusion:SfDataGrid  x:Name="dataGrid"
-                            AutoGenerateColumns="True"
-                            ItemsSource="{Binding Orders}"
-                            ShowColumnWhenGrouped="False" />
+<syncfusion:SfDataGrid  x:Name="dataGrid"
+                        AutoGenerateColumns="True"
+                        ItemsSource="{Binding Orders}"
+                        ShowColumnWhenGrouped="False" />
 {% endhighlight %}
 
 {% highlight c# %}
@@ -509,25 +509,25 @@ The SfDataGrid uses an icon to indicate the expand and collapse state of groups.
 {% tabs %}
 
 {% highlight xaml %}
-    <syncfusion:SfDataGrid VerticalOptions="FillAndExpand"
-                               HorizontalOptions="FillAndExpand"
-                               ItemsSource="{Binding OrderInfoCollection}"
-                               x:Name="dataGrid"
-                               GroupingMode="Multiple"
-                               AllowGroupExpandCollapse="True"
-                               AutoGenerateColumnsMode="None"
-                               >
-            <syncfusion:SfDataGrid.GroupExpandCollapseTemplate>
-                <DataTemplate>
-                    <Image Source="downward_icon.png"/>
-                </DataTemplate>
-            </syncfusion:SfDataGrid.GroupExpandCollapseTemplate>
-            
-            <syncfusion:SfDataGrid.GroupColumnDescriptions>
-                <syncfusion:GroupColumnDescription ColumnName="Name" />
-                <syncfusion:GroupColumnDescription ColumnName="ShipCity" />
-            </syncfusion:SfDataGrid.GroupColumnDescriptions>
-    </syncfusion:SfDataGrid>                           
+<syncfusion:SfDataGrid VerticalOptions="FillAndExpand"
+                            HorizontalOptions="FillAndExpand"
+                            ItemsSource="{Binding OrderInfoCollection}"
+                            x:Name="dataGrid"
+                            GroupingMode="Multiple"
+                            AllowGroupExpandCollapse="True"
+                            AutoGenerateColumnsMode="None"
+                            >
+        <syncfusion:SfDataGrid.GroupExpandCollapseTemplate>
+            <DataTemplate>
+                <Image Source="downward_icon.png"/>
+            </DataTemplate>
+        </syncfusion:SfDataGrid.GroupExpandCollapseTemplate>
+        
+        <syncfusion:SfDataGrid.GroupColumnDescriptions>
+            <syncfusion:GroupColumnDescription ColumnName="Name" />
+            <syncfusion:GroupColumnDescription ColumnName="ShipCity" />
+        </syncfusion:SfDataGrid.GroupColumnDescriptions>
+</syncfusion:SfDataGrid>                           
 {% endhighlight %}
 
 {% highlight c# %}
@@ -554,24 +554,24 @@ When choosing a `GroupExpandCollapseTemplate` as a DataTemplateSelector, you hav
 {% tabs %}
 
 {% highlight xaml %}
-    <syncfusion:SfDataGrid VerticalOptions="FillAndExpand"  
-                               HorizontalOptions="FillAndExpand"
-                               ItemsSource="{Binding OrderInfoCollection}"
-                               x:Name="dataGrid"
-                               GroupingMode="Multiple"
-                               AllowGroupExpandCollapse="True"
-                               AutoGenerateColumnsMode="None"
-                               >
-            <syncfusion:SfDataGrid.GroupExpandCollapseTemplate>
-                <local:ExpandCollapseTemplate ExpandTemplate="{StaticResource ExpandIcon }"
-                                              CollapseTemplate="{StaticResource CollapseIcon}" />
-            </syncfusion:SfDataGrid.GroupExpandCollapseTemplate>
-            
-            <syncfusion:SfDataGrid.GroupColumnDescriptions>
-                <syncfusion:GroupColumnDescription ColumnName="Name" />
-                <syncfusion:GroupColumnDescription ColumnName="ShipCity" />
-            </syncfusion:SfDataGrid.GroupColumnDescriptions>
-    </syncfusion:SfDataGrid>                           
+<syncfusion:SfDataGrid VerticalOptions="FillAndExpand"  
+                            HorizontalOptions="FillAndExpand"
+                            ItemsSource="{Binding OrderInfoCollection}"
+                            x:Name="dataGrid"
+                            GroupingMode="Multiple"
+                            AllowGroupExpandCollapse="True"
+                            AutoGenerateColumnsMode="None"
+                            >
+        <syncfusion:SfDataGrid.GroupExpandCollapseTemplate>
+            <local:ExpandCollapseTemplate ExpandTemplate="{StaticResource ExpandIcon }"
+                                            CollapseTemplate="{StaticResource CollapseIcon}" />
+        </syncfusion:SfDataGrid.GroupExpandCollapseTemplate>
+        
+        <syncfusion:SfDataGrid.GroupColumnDescriptions>
+            <syncfusion:GroupColumnDescription ColumnName="Name" />
+            <syncfusion:GroupColumnDescription ColumnName="ShipCity" />
+        </syncfusion:SfDataGrid.GroupColumnDescriptions>
+</syncfusion:SfDataGrid>                           
 {% endhighlight %}
 
 {% highlight c# %}
