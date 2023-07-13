@@ -379,14 +379,6 @@ Currently working on delivering brand-new .NET MAUI controls that can be used in
 	</tr>
 	<tr>
 	    <td rowspan="1" valign="top">
-			<a href="https://help.syncfusion.com/xamarin/pull-to-refresh/getting-started">SfPullToRefresh</a><br/>
-		</td>
-		<td rowspan="1" valign="top">
-			Volume 3 2023<br/>
-		</td>
-	</tr>
-	<tr>
-	    <td rowspan="1" valign="top">
 			<a href="https://help.syncfusion.com/xamarin/radio-button/getting-started">SfRadioButton</a><br/>
 		</td>
 		<td rowspan="1" valign="top">
@@ -419,6 +411,14 @@ Currently working on delivering brand-new .NET MAUI controls that can be used in
 	</tr>
 	<tr>
 	    <td rowspan="1" valign="top">
+			<a href="https://help.syncfusion.com/xamarin/pull-to-refresh/getting-started">SfPullToRefresh</a><br/>
+		</td>
+		<td rowspan="1" valign="top">
+			Volume 4 2023<br/>
+		</td>
+	</tr>
+	<tr>
+	    <td rowspan="1" valign="top">
 			<a href="https://help.syncfusion.com/xamarin/segmented-control/getting-started">SfSegmentedControl</a><br/>
 		</td>
 		<td rowspan="1" valign="top">
@@ -430,7 +430,7 @@ Currently working on delivering brand-new .NET MAUI controls that can be used in
 			<a href="https://help.syncfusion.com/xamarin/carousel-view/getting-started">SfCarousel</a><br/>
 		</td>
 		<td rowspan="1" valign="top">
-			Underway<br/>
+			Volume 4 2023<br/>
 		</td>
 	</tr>
 	<tr>
