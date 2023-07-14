@@ -129,3 +129,36 @@ public class ViewModel
 {% endtabs %}
 
 ![Gradient support in MAUI Chart](Appearance_images/MAUI_pyramid_chart_gradient.png)
+
+## Pyramid modes
+
+The [SfPyramidChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPyramidChart.html) allows you to render a chart in a linear or surface mode by using the [Mode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPyramidChart.html#Syncfusion_Maui_Charts_SfPyramidChart_Mode) property. In the [Linear](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.PyramidMode.html#Syncfusion_Maui_Charts_PyramidMode_Linear) mode, the height of the pyramid segment is based on the y-value. In the [Surface](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.PyramidMode.html#Syncfusion_Maui_Charts_PyramidMode_Surface) mode, the area of the pyramid segment is based on the y-value. By default, the Mode property is set to linear.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<chart:SfPyramidChart ItemsSource="{Binding Data}" 
+                      XBindingPath="XValue" 
+                      YBindingPath="YValue"
+                      Mode="Surface">
+</chart:SfPyramidChart>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+SfPyramidChart chart = new SfPyramidChart();
+
+ViewModel viewModel = new ViewModel();
+
+chart.ItemsSource = viewModel.Data;
+chart.XBindingPath = "XValue";
+chart.YBindingPath = "YValue";
+chart.Mode =  PyramidMode.Surface;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Pyramid mode support in MAUI Chart](Appearance_images/MAUI_Pyramid_mode.png)
