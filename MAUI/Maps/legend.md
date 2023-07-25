@@ -11,7 +11,7 @@ documentation: ug
 
 Using a legend, you can provide clear information on the data plotted on the map.
 
-To learn more about our .NET MAUI Maps layers, you can check the below video.
+To learn more about our .NET MAUI Maps legend, you can check the below video.
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=mNkPkNfYG0g"%}

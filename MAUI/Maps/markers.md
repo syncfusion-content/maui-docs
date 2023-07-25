@@ -11,6 +11,11 @@ documentation: ug
 
 Markers can be used to denote the locations. It is possible to use the built-in symbols or display a custom control at a specific latitude and longitude on a map.
 
+To learn more about our .NET MAUI Maps markers, you can check the below video.
+
+{% youtube
+"youtube:https://www.youtube.com/watch?v=XGeOzARor3U"%}
+
 ## Adding markers
 
 ### Shape layer

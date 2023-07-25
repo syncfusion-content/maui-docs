@@ -10,6 +10,11 @@ documentation: ug
 # Tooltip in .NET MAUI Maps (SfMaps)
 A tooltip indicates the shape, bubble and marker information during the tap or hover interactions. This section demonstrates how to show tooltips for the shapes, bubbles, and markers in the maps and how to customize them.
 
+To learn more about our .NET MAUI Maps tooltip, you can check the below video.
+
+{% youtube
+"youtube:https://www.youtube.com/watch?v=mNkPkNfYG0g"%}
+
 ## Tooltip for the shapes
 
 The [`ShowShapeTooltip`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShowShapeTooltip) is used to indicate the shape information whenever you interact with the shapes i.e., while tapping on touch devices and hovering enter in the mouse enabled devices.

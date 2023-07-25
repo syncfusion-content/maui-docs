@@ -11,6 +11,11 @@ documentation: ug
 
 Bubbles can be rendered in different colors and sizes based on the data values of their assigned shape. You can add information to shapes such as population density, number of users, and more. 
 
+To learn more about our .NET MAUI Maps bubbles, you can check the below video.
+
+{% youtube
+"youtube:https://www.youtube.com/watch?v=mNkPkNfYG0g"%}
+
 ## Enable bubbles
 
 You can enable bubbles using the [`ShowBubbles`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShowBubbles). You can customize bubbles using the [`BubbleSettings`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_BubbleSettings). This property is used to specify the value based on which the bubble's size has to be rendered.

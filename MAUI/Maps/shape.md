@@ -11,6 +11,11 @@ documentation: ug
 
 This section explains about shapes and how to apply colors to them based on specific values in the .NET MAUI maps.
 
+To learn more about our .NET MAUI Maps layers, you can check the below video.
+
+{% youtube
+"youtube:https://www.youtube.com/watch?v=3z07lWrQy5I"%}
+
 ## Shape color
 
 You can apply color, stroke color and thickness to the shapes using the [`ShapeFill`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShapeFill), [`ShapeStroke`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShapeStroke) and [`ShapeStrokeThickness`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShapeStrokeThickness) properties respectively.
