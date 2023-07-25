@@ -11,6 +11,11 @@ documentation: ug
 
 The shape sublayer is where geographical rendering will happen for the sublayer. This is similar to the main [`MapShapeLayer`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html) rendering. This section explains adding a shape sublayer on the shape layer.
 
+To learn more about our .NET MAUI Maps layers, you can check the below video.
+
+{% youtube
+"youtube:https://www.youtube.com/watch?v=3z07lWrQy5I"%}
+
 ## Shape sublayer on tile layer
 
 The [`Sublayers`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLayer.html#Syncfusion_Maui_Maps_MapLayer_Sublayers) in `MapTileLayer` contains collection of [`MapSublayer`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapSublayer.html).The actual geographical rendering is done in the each [`MapShapeSublayer`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeSublayer.html). The [`ShapesSource`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeSublayer.html#Syncfusion_Maui_Maps_MapShapeSublayer_ShapesSource) property of the [`MapShapeSublayer`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeSublayer.html) is of type [`MapSource`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapSource.html). The path of the .json file which contains the GeoJSON data has to be set to the [`ShapesSource`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeSublayer.html#Syncfusion_Maui_Maps_MapShapeSublayer_ShapesSource).
