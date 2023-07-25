@@ -72,7 +72,7 @@ Numeric
 The int, double, float type property and any other type apart from the below specified cases.
 </td>
 <td>
-{{'[SfNumericEntry](https://help.syncfusion.com/maui/numeric-entry/overview)'| markdownify }}
+{{'[SfNumericEntry](https://help.syncfusion.com/maui/numericentry/overview)'| markdownify }}
 </td>
 </tr>
 <tr>
