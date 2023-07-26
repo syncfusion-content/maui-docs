@@ -22,4 +22,9 @@ The [.NET MAUI PDF Viewer](https://www.syncfusion.com/maui-controls/maui-pdf-vie
 * **Outline view** - Use the outline view's hierarchical list of headings and subheadings to instantly navigate to the required topic in the document.
 * **Document link navigation** - Navigate to the topic or position by tapping the document link annotation of the topics in the table of contents in a PDF document..
 * **Hyperlink navigation** - Detects hyperlinks, and tapping on the hyperlink will open the URL in a browser.
+* **Ink or Free hand drawing annotation** - Add, remove, modify, save, import and export ink annotations in PDF files.
+* **Shape annotations** - Add, remove, modify, import and export shape annotations in PDF files. The available shapes are arrow, circle, line, and rectangle.   
+* **Stamp annotation** -  Add, remove, modify, import and export stamp annotations in PDF files.
+* **Text markup annotations** - Add, remove, modify, import and export text markup annotations in PDF files.
+* **Save** - Save the modified PDF files.
 * **Localization** - All static text within the PDF Viewer can be localized to any supported language.

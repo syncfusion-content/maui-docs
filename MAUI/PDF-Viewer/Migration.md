@@ -187,19 +187,15 @@ To make migration from [Xamarin SfPdfViewer](https://www.syncfusion.com/xamarin-
 * Built-in toolbar
 * Themes
 * Accessibility
-* Text markup annotations
-* Shape annotations
-* Ink or Free hand drawing annotation
+* Shape annotations (polygon and polylines)
 * Ink eraser tool
 * Sticky note annotation
 * Free text annotation
-* Stamp annotation
 * Handwritten signatures
-* Lock annotations
 * Form Filling
-* Save – Form data and Annotations
-* Undo/Redo – Form data and Annotations
-* Export/Import – Form data and Annotations
+* Save – Form data
+* Undo/Redo – Form data
+* Export/Import – Form data
 * Thumbnail
 * Single page view mode
 * Print
