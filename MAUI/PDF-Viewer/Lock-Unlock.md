@@ -27,7 +27,7 @@ To lock all annotations in a document, set the `IsLocked` property of the `Annot
 {% endhighlight %}
 {% endtabs %}
 
-Similarly, to unlock all the annotations, set the `IsLocked` property value to `false`.
+* Similarly, to unlock all the annotations, set the `IsLocked` property value to `false`.
 
 ## Lock Specific Annotation Types
 
@@ -48,7 +48,7 @@ You can also use the `AnnotationSettings` property to lock a specific annotation
 {% endhighlight %}
 {% endtabs %}
 
-Similarly, to unlock the specific annotation types, set the `IsLocked` property value to `false`.
+* Similarly, to unlock the specific annotation types, set the `IsLocked` property value to `false`.
 
 ## Lock Specific Annotation
 
@@ -69,7 +69,7 @@ To lock a specific annotation in a document, access the annotation instance and 
 {% endhighlight %}
 {% endtabs %}
 
-Similarly, to unlock the annotation, set the `IsLocked` property value to `false`.
+* Similarly, to unlock the annotation, set the `IsLocked` property value to `false`.
 
 ## Lock the Selected Annotation
 
@@ -91,4 +91,4 @@ To lock the selected annotation, access the selected annotation instance and set
 {% endhighlight %}
 {% endtabs %}
 
-Similarly, to unlock the selected annotation, set the `IsLocked` property value to `false`.
+* Similarly, to unlock the selected annotation, set the `IsLocked` property value to `false`.
