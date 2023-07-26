@@ -171,7 +171,3 @@ You can edit the properties of the selected shape annotation programmatically by
 
 {% endhighlight %}
 {% endtabs %}
-
-
-
-
