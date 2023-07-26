@@ -55,7 +55,7 @@ The `AnnotationSettings` property of SfPdfViewer allows you to customize the def
 {% endhighlight %}
 {% endtabs %}
 
-The following images represent the customized selector color of an unlocked and locked circle annotations respectively. 
+The following images represent the customized selector color of an unlocked and locked circle annotation. 
 
 ![Selector color of an unlocked annotation.](Images/Annotations/selected-unlocked.png)
 
