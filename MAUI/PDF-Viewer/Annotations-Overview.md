@@ -15,15 +15,15 @@ The [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.
 
 The `SfPdfViewer` supports the following annotation types.
 
-1. Circle
+1. Arrow
 
-2. Highlight
+2. Circle
 
-3. Ink
+3. Highlight
 
-4. Line
+4. Ink
 
-5. Rectangle
+5. Line
 
 6. Square
 
