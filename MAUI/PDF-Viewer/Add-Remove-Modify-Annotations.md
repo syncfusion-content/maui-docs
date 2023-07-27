@@ -21,24 +21,24 @@ You can add a new annotation to the PDF document programmatically by creating an
 
 {% tabs %}
 {% highlight c# %}
+void AddCircleAnnotation()
+{
+    int pageNumber = 1;
+    //Define the bounds for circle in the PDF coordinates.
+    RectF circleBounds = new RectF(10, 10, 100, 100);
+    
+    //Create a circle annotation.
+    CircleAnnotation annotation = new CircleAnnotation(circleBounds, pageNumber); 
 
-        void AddCircleAnnotation()
-        {
-            int pageNumber = 1;
-            RectF circleBounds = new RectF(10, 10, 100, 100);
-            //Create a circle annotation.
-            CircleAnnotation annotation = new CircleAnnotation(circleBounds, pageNumber); //Provide the bounds in the PDF coordinates.
+    //Set the appearance for the circle annotation.
+    annotation.Color = Colors.Red; //Stroke color
+    annotation.FillColor = Colors.Green; //Fill color
+    annotation.BorderWidth = 2; //Stroke thickness
+    annotation.Opacity = 0.75f; // 75% Opacity
 
-            //Set the appearance for the circle annotation.
-            annotation.Color = Colors.Red; //Stroke color
-            annotation.FillColor = Colors.Green; //Fill color
-            annotation.BorderWidth = 2; //Stroke thickness
-            annotation.Opacity = 0.75f; // 75% Opacity
-
-            //Add the annotation to the PDF document.
-            PdfViewer.AddAnnotation(annotation);
-        }
-
+    //Add the annotation to the PDF document using `AddAnnotation` method of `SfPdfViewer`.
+    PdfViewer.AddAnnotation(annotation);
+}
 {% endhighlight %}
 {% endtabs %}
 
@@ -48,19 +48,17 @@ The `AnnotationAdded` event occurs when an annotation is added successfully to t
 
 {% tabs %}
 {% highlight c# %}
+void WireAnnotationAddedEvent()
+{
+    // Wire the annotation added event of `SfPdfViewer` control.
+    PdfViewer.AnnotationAdded += OnAnnotationAdded;
+}
 
-        void WireAnnotationAddedEvent()
-        {
-            // Wire the annotation added event of the PDF Viewer.
-            PdfViewer.AnnotationAdded += OnAnnotationAdded;
-        }
-
-        private void OnAnnotationAdded(object sender, AnnotationEventArgs e)
-        {
-            Annotation addedAnnotation = e.Annotation;
-            Debug.WriteLine("{0} is added to the document successfully", addedAnnotation.Name);
-        }
-
+private void OnAnnotationAdded(object sender, AnnotationEventArgs e)
+{
+    Annotation addedAnnotation = e.Annotation;
+    Debug.WriteLine("{0} is added to the document successfully", addedAnnotation.Name);
+}
 {% endhighlight %}
 {% endtabs %}
 
@@ -74,16 +72,15 @@ You can remove the selected annotation programmatically by providing the selecte
 
 {% tabs %}
 {% highlight c# %}
-
-        /// <summary>
-        /// Remove the selected annotation.
-        /// </summary>
-        /// <param name="selectedAnnotation">The selected annotation instance that may be obtained from the annotation selected event</param>
-        void RemoveSelectedAnnotation(Annotation selectedAnnotation)
-        {
-            PdfViewer.RemoveAnnotation(selectedAnnotation);
-        }
-		
+/// <summary>
+/// Remove the selected annotation.
+/// </summary>
+/// <param name="selectedAnnotation">The selected annotation instance that may be obtained from the annotation selected event</param>
+void RemoveSelectedAnnotation(Annotation selectedAnnotation)
+{
+    // Remove the annotation using the RemoveAnnotation method of SfPdfViewer instance.
+    PdfViewer.RemoveAnnotation(selectedAnnotation);
+}
 {% endhighlight %}
 {% endtabs %}
 
@@ -95,19 +92,17 @@ You can remove an annotation from the document programmatically by providing the
 
 {% tabs %}
 {% highlight c# %}
+void RemoveFirstAnnotation()
+{
+    //Obtain the annotation collection using `SfPdfViewer` instance.
+    ReadOnlyObservableCollection<Annotation> annotations = PdfViewer.Annotations;
 
-        void RemoveFirstAnnotation()
-        {
-            //Obtain the annotation collection.
-            ReadOnlyObservableCollection<Annotation> annotations = pdfViewer.Annotations;
+    //Obtain the first annotation in the annotation collection.
+    Annotation firstAnnotation = annotations[0];
 
-            //Obtain the first annotation in the annotation collection.
-            Annotation firstAnnotation = annotations[0];
-
-            //Deselect the selected annotation.
-            PdfViewer.RemoveAnnotation(firstAnnotation);
-        }
-		
+    //Remove the annotation using RemoveAnnotation method of `SfPdfViewer`.
+    PdfViewer.RemoveAnnotation(firstAnnotation);
+}
 {% endhighlight %}
 {% endtabs %}
 
@@ -117,13 +112,11 @@ You can remove all the annotations from a document programmatically by calling `
 
 {% tabs %}
 {% highlight c# %}
-
-        void RemoveAllAnnotations()
-        {
-            // Removes all the annotations from a PDF document.
-            PdfViewer.RemoveAllAnnotations();
-        }
-		
+void RemoveAllAnnotations()
+{
+    // Removes all the annotations from a PDF document using `RemoveAllAnnotations` method of `SfPdfViewer`.
+    PdfViewer.RemoveAllAnnotations();
+}		
 {% endhighlight %}
 {% endtabs %}
 
@@ -133,19 +126,17 @@ The `AnnotationRemoved` event occurs when an annotation is removed successfully 
 
 {% tabs %}
 {% highlight c# %}
+void WireAnnotationRemovedEvent()
+{
+    // Wire the annotation removed event of `SfPdfViewer`.
+    PdfViewer.AnnotationRemoved += OnAnnotationRemoved;
+}
 
-        void WireAnnotationRemovedEvent()
-        {
-            // Wire the annotation removed event of the PDF Viewer.
-            PdfViewer.AnnotationRemoved += OnAnnotationRemoved;
-        }
-
-        private void OnAnnotationRemoved(object sender, AnnotationEventArgs e)
-        {
-            Annotation removedAnnotation = e.Annotation;
-            Debug.WriteLine("{0} is removed from the document successfully", removedAnnotation.Name);
-        }
-		
+private void OnAnnotationRemoved(object sender, AnnotationEventArgs e)
+{
+    Annotation removedAnnotation = e.Annotation;
+    Debug.WriteLine("{0} is removed from the document successfully", removedAnnotation.Name);
+}
 {% endhighlight %}
 {% endtabs %}
 
@@ -159,28 +150,26 @@ You can edit the properties of an annotation from the document programmatically 
 
 {% tabs %}
 {% highlight c# %}
+void EditFirstAnnotation()
+{
+    //Obtain the annotation collection using `SfPdfViewer` instance.
+    ReadOnlyObservableCollection<Annotation> annotations = PdfViewer.Annotations;
 
-        void EditFirstAnnotation()
-        {
-            //Obtain the annotation collection.
-            ReadOnlyObservableCollection<Annotation> annotations = PdfViewer.Annotations;
+    //Obtain the first annotation in the annotation collection.
+    Annotation annotation = annotations[0];
 
-            //Obtain the first annotation in the annotation collection.
-            Annotation annotation = annotations[0];
+    //Edit the annotation properties.
+    annotation.Color = Colors.Green; //Stroke color.
+    annotation.Opacity = 0.75f; // 75% Opacity
 
-            //Edit the annotation properties.
-            annotation.Color = Colors.Green; //Stroke color.
-            annotation.Opacity = 0.75f; // 75% Opacity
-
-            //Type cast to edit the properties of the specific annotation type. Here the first annotation is a circle annotation.
-            if (annotation is CircleAnnotation circleAnnotation)
-            {
-                circleAnnotation.FillColor = Colors.Red; //Inner fill color.
-                circleAnnotation.BorderWidth = 2; //Stroke thickness.
-                circleAnnotation.Bounds = new RectF(10, 10, 100, 100); // Bounds in PDF coordinates.
-            }
-        }
-		
+    //Type cast to edit the properties of the specific annotation type. Here the first annotation is a circle annotation.
+    if (annotation is CircleAnnotation circleAnnotation)
+    {
+        circleAnnotation.FillColor = Colors.Red; //Inner fill color.
+        circleAnnotation.BorderWidth = 2; //Stroke thickness.
+        circleAnnotation.Bounds = new RectF(10, 10, 100, 100); // Bounds in PDF coordinates.
+    }
+}
 {% endhighlight %}
 {% endtabs %}
 
@@ -190,26 +179,24 @@ You can edit the properties of the selected annotation programmatically by acces
 
 {% tabs %}
 {% highlight c# %}
+/// <summary>
+/// Edits the selected annotation.
+/// </summary>
+/// <param name="selectedAnnotation">The selected annotation instance may be obtained from the annotation selected event</param>
+void EditSelectedAnnotation(Annotation selectedAnnotation)
+{
+    //Edit the annotation properties.
+    selectedAnnotation.Color = Colors.Green; //Stroke color.
+    selectedAnnotation.Opacity = 0.75f; // 75% Opacity
 
-        /// <summary>
-        /// Edits the selected annotation.
-        /// </summary>
-        /// <param name="selectedAnnotation">The selected annotation instance may be obtained from the annotation selected event</param>
-        void EditSelectedAnnotation(Annotation selectedAnnotation)
-        {
-            //Edit the annotation properties.
-            selectedAnnotation.Color = Colors.Green; //Stroke color.
-            selectedAnnotation.Opacity = 0.75f; // 75% Opacity
-
-            //Type cast to edit the properties of the specific annotation type. Here the first annotation is a circle annotation.
-            if (selectedAnnotation is CircleAnnotation circleAnnotation)
-            {
-                circleAnnotation.FillColor = Colors.Red; //Inner fill color.
-                circleAnnotation.BorderWidth = 2; //Stroke thickness.
-                circleAnnotation.Bounds = new RectF(0, 0, 100, 100); // Bounds in PDF coordinates.
-            }
-        }
-
+    //Type cast to edit the properties of the specific annotation type. Here the first annotation is a circle annotation.
+    if (selectedAnnotation is CircleAnnotation circleAnnotation)
+    {
+        circleAnnotation.FillColor = Colors.Red; //Inner fill color.
+        circleAnnotation.BorderWidth = 2; //Stroke thickness.
+        circleAnnotation.Bounds = new RectF(0, 0, 100, 100); // Bounds in PDF coordinates.
+    }
+}
 {% endhighlight %}
 {% endtabs %}
 
@@ -219,18 +206,16 @@ The `AnnotationEdited` event occurs when an annotation is edited in the PDF docu
 
 {% tabs %}
 {% highlight c# %}
+void WireAnnotationEditedEvent()
+{
+    // Wire the annotation edited event of `SfPdfViewer`.
+    PdfViewer.AnnotationEdited += OnAnnotationEdited;
+}
 
-        void WireAnnotationEditedEvent()
-        {
-            // Wire the annotation edited event of the PDF Viewer.
-            PdfViewer.AnnotationEdited += OnAnnotationEdited;
-        }
-
-        private void OnAnnotationEdited(object sender, AnnotationEventArgs e)
-        {
-            Annotation editedAnnotation = e.Annotation;
-            Debug.WriteLine("The {0} is edited successfully", editedAnnotation.Name);
-        }
-
+private void OnAnnotationEdited(object sender, AnnotationEventArgs e)
+{
+    Annotation editedAnnotation = e.Annotation;
+    Debug.WriteLine("The {0} is edited successfully", editedAnnotation.Name);
+}
 {% endhighlight %}
 {% endtabs %}

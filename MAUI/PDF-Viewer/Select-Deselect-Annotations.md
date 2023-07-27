@@ -23,16 +23,14 @@ You can select an annotation programmatically by providing the annotation instan
 
 {% tabs %}
 {% highlight c# %}
-
-        void SelectAnnotation()
-        {
-            //Obtain the annotation collection.
-            ReadOnlyObservableCollection<Annotation> annotations = PdfViewer.Annotations;
-            
-            //Select the first annotation in the collection.
-            PdfViewer.SelectAnnotation(annotations[0]);
-        }
-		
+void SelectAnnotation()
+{
+    //Obtain the annotation collection using `SfPdfViewer` instance.
+    ReadOnlyObservableCollection<Annotation> annotations = PdfViewer.Annotations;
+    
+    //Select the first annotation in the collection using the `SelectAnnotation` method of `SfPdfViewer` instance.
+    PdfViewer.SelectAnnotation(annotations[0]);
+}
 {% endhighlight %}
 {% endtabs %}
 
@@ -42,16 +40,14 @@ The `AnnotationSettings` property of SfPdfViewer allows you to customize the def
 
 {% tabs %}
 {% highlight c# %}
+void CustomizeSelectorAppearance()
+{
+    //Customize the selector color for unlocked annotations using the `AnnotationSettings` property of `SfPdfViewer` instance.
+    PdfViewer.AnnotationSettings.Selector.Color = Colors.Blue;
 
-        void CustomizeSelectorAppearance()
-        {
-            //Customize the selector color for unlocked annotations.
-            PdfViewer.AnnotationSettings.Selector.Color = Colors.Blue;
-
-            //Customize the selector color for locked annotations.
-            PdfViewer.AnnotationSettings.Selector.LockedColor = Colors.LightGray;
-        }
-		
+    //Customize the selector color for locked annotations using the `AnnotationSettings` property of `SfPdfViewer` instance..
+    PdfViewer.AnnotationSettings.Selector.LockedColor = Colors.LightGray;
+}	
 {% endhighlight %}
 {% endtabs %}
 
@@ -67,22 +63,20 @@ The `AnnotationSelected` event occurs when an annotation is selected interactive
 
 {% tabs %}
 {% highlight c# %}
+void WireAnnotationSelectedEvent()
+{
+    // Wire the annotation selected event of `SfPdfViewer`.
+    PdfViewer.AnnotationSelected += OnAnnotationSelected;
+}
 
-        void WireAnnotationSelectedEvent()
-        {
-            // Wire the annotation selected event of the PDF Viewer.
-            PdfViewer.AnnotationSelected += OnAnnotationSelected;
-        }
-
-        private void OnAnnotationSelected(object sender, AnnotationEventArgs e)
-        {
-            // Obtain the selected annotation.
-            Annotation selectedAnnotation = e.Annotation;
-            // Modify the selected annotation properties.
-            selectedAnnotation.Color = Colors.Blue;
-            selectedAnnotation.Opacity = 0.5f; // 50% Opacity
-        }
-		
+private void OnAnnotationSelected(object sender, AnnotationEventArgs e)
+{
+    // Obtain the selected annotation.
+    Annotation selectedAnnotation = e.Annotation;
+    // Modify the selected annotation properties.
+    selectedAnnotation.Color = Colors.Blue;
+    selectedAnnotation.Opacity = 0.5f; // 50% Opacity
+}
 {% endhighlight %}
 {% endtabs %}
 
@@ -96,16 +90,15 @@ You can deselect the annotation programmatically by providing the selected annot
 
 {% tabs %}
 {% highlight c# %}
-
-        /// <summary>
-        /// Deselect the selected annotation.
-        /// </summary>
-        /// <param name="selectedAnnotation">The selected annotation instance that may be obtained from the annotation selected event</param>
-        void DeselectAnnotation(Annotation selectedAnnotation)
-        {
-            PdfViewer.DeselectAnnotation(selectedAnnotation);
-        }
-		
+/// <summary>
+/// Deselect the selected annotation.
+/// </summary>
+/// <param name="selectedAnnotation">The selected annotation instance that may be obtained from the annotation selected event</param>
+void DeselectAnnotation(Annotation selectedAnnotation)
+{
+    // Deselect the annottaion using the DeSelectAnnotation method of the `SfPdfViewer` control.
+    PdfViewer.DeselectAnnotation(selectedAnnotation);
+}
 {% endhighlight %}
 {% endtabs %}
 
@@ -115,19 +108,18 @@ The `AnnotationDeselected` event occurs when an annotation is selected interacti
 
 {% tabs %}
 {% highlight c# %}
+void WireAnnotationDeselectedEvent()
+{
+    // Wire the annotation deselected event of the `SfPdfViewer` control.
+    PdfViewer.AnnotationDeselected += OnAnnotationDeselected;
+}
 
-        void WireAnnotationDeselectedEvent()
-        {
-            // Wire the annotation deselected event of the PDF Viewer.
-            PdfViewer.AnnotationDeselected += OnAnnotationDeselected;
-        }
-
-        private void OnAnnotationDeselected(object sender, AnnotationEventArgs e)
-        {
-            // Obtain the deselected annotation.
-            Annotation deselectedAnnotation = e.Annotation;            
-            //You can handle your logics here…
-        }
-		
+private void OnAnnotationDeselected(object sender, AnnotationEventArgs e)
+{
+    // Obtain the deselected annotation if required.
+    Annotation deselectedAnnotation = e.Annotation;
+              
+    //You can handle your logics here…
+}
 {% endhighlight %}
 {% endtabs %}

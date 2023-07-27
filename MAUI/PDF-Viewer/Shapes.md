@@ -16,11 +16,8 @@ The shape annotations feature of `SfPdfViewer` allows you to add, remove and mod
 The following shape annotation types are now available in the PDF Viewer.
 
 1.	Arrow
-
 2.	Circle.
-
 3.	Line.
-
 4.	Square.
 
 ## Adding Annotations
@@ -32,35 +29,26 @@ This section will go through how to add shape annotations to a PDF document inte
 You can draw and add shape annotations to a PDF document interactively by touch (or mouse down) and drag. The following steps explains how to draw shape annotation on a PDF.
 
 1.	Set the `AnnotationMode` property of the SfPdfViewer to any shape (say `Circle`). It activates the circle drawing mode on the control.
-
 2.	Place your finger (or mouse) on the screen, where you want to start drawing the circle.
-
 3.	Draw the circle by dragging the finger (or cursor) across the screen.
-
 4.	Finish the circle by releasing the finger (or cursor).
-
 5.	Repeat the steps 2-4, if you want to create multiple circles on other areas during the drawing mode.
-
 6.	Once you have done, set the `AnnotationMode` to `None`. It will disable the circle drawing mode and save the drawn circles to the PDF pages as circle annotations. 
-
 7.	You can later move, resize, or edit the annotation.
 
 The following code explains how to enable the circle annotation mode. Similarly, you can change the annotation mode for drawing other shapes.
 
 {% tabs %}
 {% highlight XAML %}
-
 <syncfusion:SfPdfViewer x:Name="PdfViewer" AnnotationMode="Circle"/>
-
 {% endhighlight %}
 {% highlight C# %}
-
-        // Enable or activate the circle drawing mode.
-        void EnableCircleDrawingMode()
-        {
-            PdfViewer.AnnotationMode = AnnotationMode.Circle;
-        }
-
+// Enable or activate the circle drawing mode.
+void EnableCircleDrawingMode()
+{
+    // Set the `AnnotationMode` property of `SfPdfViewer` instance to `Circle`.
+    PdfViewer.AnnotationMode = AnnotationMode.Circle;
+}
 {% endhighlight %}
 {% endtabs %}
 
@@ -68,18 +56,15 @@ Similarly, refer to following code to disable the circle annotation mode.
 
 {% tabs %}
 {% highlight XAML %}
-
 <syncfusion:SfPdfViewer x:Name="PdfViewer" AnnotationMode="None"/>
-
 {% endhighlight %}
 {% highlight C# %}
-
-        // Disable or deactivate the circle drawing mode.
-        void DisableCircleDrawingMode()
-        {
-            PdfViewer.AnnotationMode = AnnotationMode.None;
-        }
-
+// Disable or deactivate the circle drawing mode.
+void DisableCircleDrawingMode()
+{
+    // Set the `AnnotationMode` property of `SfPdfViewer` instance to `None`.
+    PdfViewer.AnnotationMode = AnnotationMode.None;
+}
 {% endhighlight %}
 {% endtabs %}
 
@@ -89,32 +74,31 @@ You can create and add circle annotation to a PDF document programmatically usin
 
 {% tabs %}
 {% highlight C# %}
+CircleAnnotation CreateCircleAnnoation()
+{
+    int pageNumber = 1;
+    //Define the bounds for circle in the PDF coordinates.
+    RectF circleBounds = new RectF(10, 10, 100, 100); 
 
-        CircleAnnotation CreateCircleAnnoation()
-        {
-            int pageNumber = 1;
-            RectF circleBounds = new RectF(10, 10, 100, 100); //Provide the bounds in the PDF coordinates.
+    //Create a circle annotation.
+    CircleAnnotation annotation = new CircleAnnotation(circleBounds, pageNumber);
+    
+    //Set the appearance for the circle annotation.
+    annotation.Color = Colors.Red; // set the stroke color
+    annotation.FillColor = Colors.Green; // set the inner fill color.
+    annotation.BorderWidth = 2; // set the stroke thickness.
+    annotation.Opacity = 0.75f; // set the opacity 75%
 
-            //Create a circle annotation.
-            CircleAnnotation annotation = new CircleAnnotation(circleBounds, pageNumber);
-            
-            //Set the appearance for the circle annotation.
-            annotation.Color = Colors.Red; // set the stroke color
-            annotation.FillColor = Colors.Green; // set the inner fill color.
-            annotation.BorderWidth = 2; // set the stroke thickness.
-            annotation.Opacity = 0.75f; // set the opacity 75%
+    return annotation;
+}
 
-            return annotation;
-        }
+void AddCircleAnnotation()
+{
+    Annotation circleAnnotation = CreateCircleAnnoation();
 
-        void AddCircleAnnotation()
-        {
-            Annotation circleAnnotation = CreateCircleAnnoation();
-
-            //Add the circle annotation to the PDF document using the AddAnnotation method of `SfPdfViewer` instance.
-            PdfViewer.AddAnnotation(circleAnnotation);
-        }
-
+    //Add the circle annotation to the PDF document using the AddAnnotation method of `SfPdfViewer` instance.
+    PdfViewer.AddAnnotation(circleAnnotation);
+}
 {% endhighlight %}
 {% endtabs %}
 
@@ -126,19 +110,22 @@ The following example explains how to obtain the default circle annotation setti
 
 {% tabs %}
 {% highlight C# %}
+void CustomizeDefaultCircleSettings()
+{
+    //Obtain the default circle annotation settings from the `SfPdfViewer` instance.
+    ShapeAnnotationSettings circleAnnotationSettings = PdfViewer.AnnotationSettings.Circle;
 
-        void CustomizeDefaultCircleSettings()
-        {
-            //Obtain the default circle annotation settings from the `SfPdfViewer` instance.
-            ShapeAnnotationSettings circleAnnotationSettings = PdfViewer.AnnotationSettings.Circle;
+    //Modify the default properties.
 
-            //Modify the default properties.
-            circleAnnotationSettings.Color = Colors.Blue; // Sets the default stroke color to blue.
-            circleAnnotationSettings.FillColor = Colors.Red; // Sets the inner fill color to red.
-            circleAnnotationSettings.BorderWidth = 2; // Sets the default stroke thickness to 2.
-            circleAnnotationSettings.Opacity = 0.75f; // Sets the default opacity to 75%.
-        }
-
+    // Set the default stroke color to blue.
+    circleAnnotationSettings.Color = Colors.Blue;
+    // Set the inner fill color to red.
+    circleAnnotationSettings.FillColor = Colors.Red;
+    // Set the default stroke thickness to 2.
+    circleAnnotationSettings.BorderWidth = 2;
+    // Sets the default opacity to 75%.
+    circleAnnotationSettings.Opacity = 0.75f;
+}
 {% endhighlight %}
 {% endtabs %}
 
@@ -148,26 +135,24 @@ You can edit the properties of the selected shape annotation programmatically by
 
 {% tabs %}
 {% highlight C# %}
+/// <summary>
+/// Edit the selected circle annotation.
+/// </summary>
+/// <param name="selectedAnnotation">The selected annotation instance that may be obtained from the annotation selected event</param>
+void EditSelectedCicleAnnotation(Annotation selectedAnnotation)
+{
+    //Type cast the selected annotation as circle annotation.
+    if (selectedAnnotation is CircleAnnotation circleAnnotation)
+    {
+        //Change the color to blue.
+        circleAnnotation.Color = Colors.Blue;
 
-        /// <summary>
-        /// Edit the selected circle annotation.
-        /// </summary>
-        /// <param name="selectedAnnotation">The selected annotation instance that may be obtained from the annotation selected event</param>
-        void EditSelectedCicleAnnotation(Annotation selectedAnnotation)
-        {
-            //Type cast the selected annotation as circle annotation.
-            if (selectedAnnotation is CircleAnnotation circleAnnotation)
-            {
-                //Change the color to blue.
-                circleAnnotation.Color = Colors.Blue;
+        //Change the stroke thickness to 1.
+        circleAnnotation.BorderWidth = 1;
 
-                //Change the stroke thickness to 1.
-                circleAnnotation.BorderWidth = 1;
-
-                //Change the opacity to 75%.
-                circleAnnotation.Opacity = 0.75f;
-            }
-        }
-
+        //Change the opacity to 75%.
+        circleAnnotation.Opacity = 0.75f;
+    }
+}
 {% endhighlight %}
 {% endtabs %}
