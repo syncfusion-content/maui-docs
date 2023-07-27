@@ -36,6 +36,7 @@ You can draw and add shape annotations to a PDF document interactively by touch 
 6.	Once you have done, set the `AnnotationMode` to `None`. It will disable the circle drawing mode and save the drawn circles to the PDF pages as circle annotations. 
 7.	You can later move, resize, or edit the annotation.
 
+
 The following code explains how to enable the circle annotation mode. Similarly, you can change the annotation mode for drawing other shapes.
 
 {% tabs %}
@@ -77,13 +78,13 @@ You can create and add circle annotation to a PDF document programmatically usin
 CircleAnnotation CreateCircleAnnoation()
 {
     int pageNumber = 1;
-    //Define the bounds for circle in the PDF coordinates.
+    // Define the bounds for circle in the PDF coordinates.
     RectF circleBounds = new RectF(10, 10, 100, 100); 
 
-    //Create a circle annotation.
+    // Create a circle annotation.
     CircleAnnotation annotation = new CircleAnnotation(circleBounds, pageNumber);
     
-    //Set the appearance for the circle annotation.
+    // Set the appearance for the circle annotation.
     annotation.Color = Colors.Red; // set the stroke color
     annotation.FillColor = Colors.Green; // set the inner fill color.
     annotation.BorderWidth = 2; // set the stroke thickness.
@@ -117,14 +118,10 @@ void CustomizeDefaultCircleSettings()
 
     //Modify the default properties.
 
-    // Set the default stroke color to blue.
-    circleAnnotationSettings.Color = Colors.Blue;
-    // Set the inner fill color to red.
-    circleAnnotationSettings.FillColor = Colors.Red;
-    // Set the default stroke thickness to 2.
-    circleAnnotationSettings.BorderWidth = 2;
-    // Sets the default opacity to 75%.
-    circleAnnotationSettings.Opacity = 0.75f;
+    circleAnnotationSettings.Color = Colors.Blue; // Set the default stroke color to blue.
+    circleAnnotationSettings.FillColor = Colors.Red; // Set the inner fill color to red.
+    circleAnnotationSettings.BorderWidth = 2; // Set the default stroke thickness to 2.
+    circleAnnotationSettings.Opacity = 0.75f; // Set the default opacity to 75%.
 }
 {% endhighlight %}
 {% endtabs %}
@@ -141,17 +138,12 @@ You can edit the properties of the selected shape annotation programmatically by
 /// <param name="selectedAnnotation">The selected annotation instance that may be obtained from the annotation selected event</param>
 void EditSelectedCicleAnnotation(Annotation selectedAnnotation)
 {
-    //Type cast the selected annotation as circle annotation.
+    // Type cast the selected annotation as circle annotation.
     if (selectedAnnotation is CircleAnnotation circleAnnotation)
     {
-        //Change the color to blue.
-        circleAnnotation.Color = Colors.Blue;
-
-        //Change the stroke thickness to 1.
-        circleAnnotation.BorderWidth = 1;
-
-        //Change the opacity to 75%.
-        circleAnnotation.Opacity = 0.75f;
+        circleAnnotation.Color = Colors.Blue; // Change the color to blue.
+        circleAnnotation.BorderWidth = 1; // Change the stroke thickness to 1.
+        circleAnnotation.Opacity = 0.75f; // Change the opacity to 75%.
     }
 }
 {% endhighlight %}

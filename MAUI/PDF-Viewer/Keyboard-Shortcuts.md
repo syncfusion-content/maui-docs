@@ -144,5 +144,3 @@ The PDF viewer allows the users to perform certain operations such as page navig
 * In Windows, it is the default behavior of UI elements to receive notification of the key pressed event only when they are focused. So, while using keyboard shortcuts in Windows, please make sure that the PDF viewer control is focused by either tapping or clicking on it. 
 
 N> Use the `Command` key instead of the `Ctrl` key in macOS.
-
-

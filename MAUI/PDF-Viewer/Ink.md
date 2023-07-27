@@ -27,6 +27,7 @@ You can draw and add ink annotations to a PDF document with UI interaction using
 6.	Once you have done, set the `AnnotationMode` to `None`. It will disable the drawing mode and save the drawn strokes to the PDF page as a single ink annotation.
 7.	You can later move, resize, or edit the annotation.
 
+
 The following code explains how to enable the ink annotation mode.
 
 {% tabs %}
@@ -74,16 +75,16 @@ InkAnnotation CreateInkAnnotation()
 {
     int pageNumber = 1;
     
-    //Provide the points collection to draw a stroke. Here a single stroke is created.
+    // Provide the points collection to draw a stroke. Here a single stroke is created.
     List<List<float>> pointsCollection = new List<List<float>>()
     {
         new List<float> { 40, 300, 60, 100, 40, 50, 40, 300 }
     };
 
-    //Create an ink annotation.
+    // Create an ink annotation.
     InkAnnotation annotation = new InkAnnotation(pointsCollection, pageNumber);
 
-    //Set the appearance for the ink annotation.
+    // Set the appearance for the ink annotation.
     annotation.Color = Colors.Red; //Stroke color
     annotation.BorderWidth = 2; //Stroke thickness.
     annotation.Opacity = 0.75f; // 75% opacity
@@ -96,7 +97,7 @@ void AddInkAnnotation()
 {
     Annotation inkAnnotation = CreateInkAnnotation();
 
-    //Add the ink annotation to the PDF document using `AddAnnotation` method of the `SfPdfViewer` instance.
+    // Add the ink annotation to the PDF document using `AddAnnotation` method of the `SfPdfViewer` instance.
     PdfViewer.AddAnnotation(inkAnnotation);
 }
 {% endhighlight %}
@@ -114,10 +115,10 @@ You can customize the default appearance of ink annotation using the `InkAnnotat
 {% highlight C# %}
 void CustomizeDefaultInkSettings()
 {
-    //Obtain the default ink annotation settings from the `SfPdfViewer` instance.
+    // Obtain the default ink annotation settings from the `SfPdfViewer` instance.
     InkAnnotationSettings inkSettings = PdfViewer.AnnotationSettings.Ink;
 
-    //Modify the default appearance properties
+    // Modify the default appearance properties
     inkSettings.Color = Colors.Blue; // Stroke color
     inkSettings.BorderWidth = 2; // Stroke thickness
     inkSettings.Opacity = 0.75f; // 75% opacity
@@ -133,10 +134,10 @@ When drawing ink annotations on a PDF document interactively, all the strokes th
 {% highlight C# %}
 void DisableAggregateInkStrokes()
 {
-    //Obtain the default ink annotation settings from the `SfPdfViewer` instance.
+    // Obtain the default ink annotation settings from the `SfPdfViewer` instance.
     InkAnnotationSettings inkSettings = PdfViewer.AnnotationSettings.Ink;
 
-    //Disable aggregating the insk strokes
+    // Disable aggregating the insk strokes
     inkSettings.AggregateInkStrokes = false;
 }
 {% endhighlight %}
@@ -154,17 +155,12 @@ You can edit the properties of the selected ink annotation programmatically by a
 /// <param name="selectedAnnotation">The selected annotation instance that may be obtained from the annotation selected event</param>
 void EditSelectedInkAnnotation(Annotation selectedAnnotation)
 {
-    //Type cast the selected annotation as ink annotation.
+    // Type cast the selected annotation as ink annotation.
     if(selectedAnnotation is InkAnnotation inkAnnotation)
     {
-        //Change the color to blue.
-        inkAnnotation.Color = Colors.Blue;
-
-        //Change the stroke thickness to 1.
-        inkAnnotation.BorderWidth = 1;
-        
-        //Change the opacity to 75%.
-        inkAnnotation.Opacity = 0.75f;
+        inkAnnotation.Color = Colors.Blue; // Change the color to blue.
+        inkAnnotation.BorderWidth = 1; // Change the stroke thickness to 1.
+        inkAnnotation.Opacity = 0.75f; // Change the opacity to 75%.
     }
 }
 {% endhighlight %}
