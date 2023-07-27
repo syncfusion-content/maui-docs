@@ -130,7 +130,6 @@ Filter the matching items based on the starting text and the first filtered item
                     DisplayMemberPath="CityName" />
        
 {% endhighlight %}
-
 {% highlight C# %}
 
 using Syncfusion.Maui.Inputs;
@@ -175,6 +174,7 @@ Filter the matching items that contain specific text, and the first filtered ite
                     DisplayMemberPath="CityName" />
 
 {% endhighlight %}
+
 {% highlight C# %}
 
 using Syncfusion.Maui.Inputs;

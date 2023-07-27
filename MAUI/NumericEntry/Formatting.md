@@ -19,7 +19,7 @@ The following example shows how to set the `CurrencyFormatter`, `DecimalFormatte
 
 Using the **N**, **C**, and **P** format values, we can apply numeric, currency, and percent custom formats in the `CustomFormat` property. 
 
-N> You can apply various custom formats available in [this page](https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-numeric-format-strings), which are supported for the `double` type.
+N> You can apply various custom formats available in  [this page](https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-numeric-format-strings), which are supported for the `double` type.
 
 {% tabs %}
 {% highlight xaml %}

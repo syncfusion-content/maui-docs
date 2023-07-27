@@ -242,7 +242,6 @@ stack.Children.Add(comboBox);
 this.Content = stack;
 
 {% endhighlight %}
-
 {% endtabs %}
 
 For e.g. After typing `9` in selection box, the first item that fully matches the typed length will be highlighted.
