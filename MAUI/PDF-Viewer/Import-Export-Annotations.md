@@ -17,18 +17,16 @@ You can add annotations to a PDF document by importing them from FDF and XFDF fi
 
 {% tabs %}
 {% highlight C# %}
-
-        void ImportAnnotations()
-        {
-            //Create a file stream from the XFDF file containing the annotations information. Here a file named "AnnotationsInfo.xfdf" is read from the application's data directory.
-            string fileName = Path.Combine(FileSystem.Current.AppDataDirectory, "AnnotationsInfo.xfdf");
-            Stream inputFileStream = File.OpenRead(fileName);
-            inputFileStream.Position = 0;
-            
-            //Provide the file stream and the data format information as parameters to the `ImportAnnotations` method of `SfPdfViewer` instance to import the annotations to the PDF document.
-            PdfViewer.ImportAnnotations(inputFileStream, Syncfusion.Pdf.Parsing.AnnotationDataFormat.XFdf);
-        }
-
+void ImportAnnotations()
+{
+    //Create a file stream from the XFDF file containing the annotations information. Here a file named "AnnotationsInfo.xfdf" is read from the application's data directory.
+    string fileName = Path.Combine(FileSystem.Current.AppDataDirectory, "AnnotationsInfo.xfdf");
+    Stream inputFileStream = File.OpenRead(fileName);
+    inputFileStream.Position = 0;
+    
+    //Provide the file stream and the data format information as parameters to the `ImportAnnotations` method of `SfPdfViewer` instance to import the annotations.
+    PdfViewer.ImportAnnotations(inputFileStream, Syncfusion.Pdf.Parsing.AnnotationDataFormat.XFdf);
+}
 {% endhighlight %}
 {% endtabs %}
 
@@ -41,17 +39,15 @@ The `SfPdfViewer` allows you to export annotations from a PDF document into FDF 
 
 {% tabs %}
 {% highlight C# %}
+private void ExportAnnotations()
+{
+    //Create a file stream to export the annotations. Here a file named "ExportedFile.xfdf" is created in the application's data directory.
+    string targetFile = Path.Combine(FileSystem.Current.AppDataDirectory, "ExportedFile.xfdf");
+    FileStream fileStream = File.Create(targetFile);
 
-        private void ExportAnnotations()
-        {
-            //Create a file stream to export the annotations. Here a file named "ExportedFile.xfdf" is created in the application's data directory.
-            string targetFile = Path.Combine(FileSystem.Current.AppDataDirectory, "ExportedFile.xfdf");
-            FileStream fileStream = File.Create(targetFile);
-
-            //Export the annotations to the file stream by passing stream to the `ExportAnnotations` method of `SfPdfViewer` instance.
-            PdfViewer.ExportAnnotations(fileStream, Syncfusion.Pdf.Parsing.AnnotationDataFormat.XFdf);
-        }
-
+    //Export the annotations to the file stream by passing stream to the `ExportAnnotations` method of `SfPdfViewer` instance.
+    PdfViewer.ExportAnnotations(fileStream, Syncfusion.Pdf.Parsing.AnnotationDataFormat.XFdf);
+}
 {% endhighlight %}
 {% endtabs %}
 
@@ -63,38 +59,36 @@ You can export only specific list of annotations from a PDF document, by providi
 
 {% tabs %}
 {% highlight C# %}
+// Get the first few annotations in the PDF document
+List<Annotation> GetAnnotations(int count)
+{
+    //Obtain the annotation collection using `SfPdfViewer` instance.
+    ReadOnlyObservableCollection<Annotation> annotations = PdfViewer.Annotations;
 
-        //Get the annotations from the first based on the given count.
-        List<Annotation> GetAnnotations(int count)
-        {
-            //Obtain the annotation collection.
-            ReadOnlyObservableCollection<Annotation> annotations = PdfViewer.Annotations;
+    //Create a list of annotations to be exported.
+    List<Annotation> annotationsToBeExported = new List<Annotation>();
 
-            //Create a list of annotations to be exported.
-            List<Annotation> annotationsToBeExported = new List<Annotation>();
+    //Add the annotations in the list.
+    for (int i = 0; i < count; i++)
+    {
+        annotationsToBeExported.Add(annotations[i]);
+    }
+    return annotationsToBeExported;
+}
 
-            //Add the annotations in the list.
-            for (int i = 0; i < count; i++)
-            {
-                annotationsToBeExported.Add(annotations[i]);
-            }
-            return annotationsToBeExported;
-        }
+// Export the specific list of annotations. 
+void ExportSpecificAnnotations()
+{
+    //Create a file stream to export the annotations. Here a file named "ExportedFile.xfdf" is created in the application's data directory.
+    string targetFile = Path.Combine(FileSystem.Current.AppDataDirectory, "ExportedFile.xfdf");
+    FileStream fileStream = File.Create(targetFile);
 
-        // Export the specific list of annotations. 
-        void ExportSpecificAnnotations()
-        {
-            //Create a file stream to export the annotations. Here a file named "ExportedFile.xfdf" is created in the application's data directory.
-            string targetFile = Path.Combine(FileSystem.Current.AppDataDirectory, "ExportedFile.xfdf");
-            FileStream fileStream = File.Create(targetFile);
+    //Get the first five annotations in the PDF document
+    List<Annotation> annotationsToBeExported = GetAnnotations(5);
 
-            //Get the first five annotations in the PDF document
-            List<Annotation> annotationsToBeExported = GetAnnotations(5);
-
-            //Export the annotations to the file stream.
-            PdfViewer.ExportAnnotations(fileStream, Syncfusion.Pdf.Parsing.AnnotationDataFormat.XFdf, annotationsToBeExported);
-        }
-
+    //Export the annotations to the file stream using `ExportAnnotations` method of `SfPdfViewer`.
+    PdfViewer.ExportAnnotations(fileStream, Syncfusion.Pdf.Parsing.AnnotationDataFormat.XFdf, annotationsToBeExported);
+}
 {% endhighlight %}
 {% endtabs %}
 

@@ -15,7 +15,6 @@ The following example explains how to save the modified document if the document
 
 {% tabs %}
 {% highlight c# %}
-
         private void SaveDocument()
         {
             //Create a file stream to save the PDF document. Here a file named "ModifiedDocument.pdf" is created in the application's data directory.
@@ -24,8 +23,7 @@ The following example explains how to save the modified document if the document
             
             //Save the PDF document.
             PdfViewer.SaveDocument(fileStream);
-        }
-		
+        }		
 {% endhighlight %}
 {% endtabs %}
 

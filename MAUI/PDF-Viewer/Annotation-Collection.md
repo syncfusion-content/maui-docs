@@ -13,31 +13,29 @@ The existing annotations in a PDF document can be accessed using the `Annotation
 
 {% tabs %}
 {% highlight c# %}
+public void WireDocumentLoadedEvent()
+{
+    // Wire the document loaded event of the `SfPdfViewer` to occur when a PDF document is loaded.
+    PdfViewer.DocumentLoaded += OnDocumentLoaded;
+}
 
-        public void WireDocumentLoadedEvent()
+private void OnDocumentLoaded(object sender, EventArgs e)
+{
+    if (sender is SfPdfViewer pdfViewer)
+    {
+        //Obtain the annotation collection.
+        ReadOnlyObservableCollection<Annotation> annotations = pdfViewer.Annotations;
+        
+        if (annotations.Count > 0)
         {
-            // Wire the document loaded event of the `SfPdfViewer` to occur when a PDF document is loaded.
-            PdfViewer.DocumentLoaded += OnDocumentLoaded;
-        }
-
-        private void OnDocumentLoaded(object sender, EventArgs e)
-        {
-            if (sender is SfPdfViewer pdfViewer)
+            //Type cast the annotation to get the annotation specific properties.
+            if (annotations[0] is SquareAnnotation squareAnnotation)
             {
-                //Obtain the annotation collection.
-                ReadOnlyObservableCollection<Annotation> annotations = pdfViewer.Annotations;
-                
-                if (annotations.Count > 0)
-                {
-                    //Type cast the annotation to get the annotation specific properties.
-                    if (annotations[0] is SquareAnnotation squareAnnotation)
-                    {
-                        RectF bounds = squareAnnotation.Bounds;
-                        Color color = squareAnnotation.Color;
-                    }
-                }
+                RectF bounds = squareAnnotation.Bounds;
+                Color color = squareAnnotation.Color;
             }
         }
-		
+    }
+}
 {% endhighlight %}
 {% endtabs %}

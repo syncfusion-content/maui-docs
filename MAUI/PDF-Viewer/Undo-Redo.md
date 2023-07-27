@@ -33,42 +33,35 @@ For desktop platforms such as Windows and macOS, you can also use the following 
 
 ## Undo
 
-You can perform undo to reverse the most recent action performed on the annotations using the `UndoCommand` of the `SfPdfViewer`. The following code explains how to execute the command to perform the action.
+You can perform undo to reverse the most recent action performed on the annotations using the `UndoCommand` of the `SfPdfViewer`. The following code examples explains how to bind the command to a button in XAML to perform the action on button click and also executing the command programmatically as well.
 
 {% tabs %}
 {% highlight XAML %}
-
-        <syncfusion:SfPdfViewer x:Name="PdfViewer"/>
-        <Button x:Name="Undo" Command="{Binding Path=UndoCommand,Source={x:Reference PdfViewer}}"/>
-
+<syncfusion:SfPdfViewer x:Name="PdfViewer"/>
+<Button x:Name="Undo" Command="{Binding Path=UndoCommand,Source={x:Reference PdfViewer}}"/>
 {% endhighlight %}
 {% highlight C# %}
-
-        void PerformUndo()
-        {
-            PdfViewer.UndoCommand.Execute(true);
-        }
-
+void PerformUndo()
+{
+    // Undo the last operation using the UndoCommand of `SfPdfViewer` instance.
+    PdfViewer.UndoCommand.Execute(true);
+}
 {% endhighlight %}
 {% endtabs %}
 
 ## Redo
 
-You can perform redo to restore the last undone function using the `RedoCommand` of the `SfPdfViewer`. The following code explains how to execute the command to perform the action.
+You can perform redo to restore the last undone function using the `RedoCommand` of the `SfPdfViewer`. The following code examples explains how to bind the command to a button in XAML to perform the action on button click and also executing the command programmatically as well.
 
 {% tabs %}
 {% highlight XAML %}
-
-        <syncfusion:SfPdfViewer x:Name="PdfViewer"/>
-        <Button x:Name="Redo" Command="{Binding Path=RedoCommand,Source={x:Reference PdfViewer}}"/>
-
-{% endhighlight %}
+<syncfusion:SfPdfViewer x:Name="PdfViewer"/>
+<Button x:Name="Redo" Command="{Binding Path=RedoCommand,Source={x:Reference PdfViewer}}"/>{% endhighlight %}
 {% highlight C# %}
-
-        void PerformRedo()
-        {
-            PdfViewer.RedoCommand.Execute(true);
-        }
-
+void PerformRedo()
+{
+    // Redo the last operation using the RedoCommand of `SfPdfViewer` instance.
+    PdfViewer.RedoCommand.Execute(true);
+}
 {% endhighlight %}
 {% endtabs %}

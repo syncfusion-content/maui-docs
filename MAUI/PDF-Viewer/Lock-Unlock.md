@@ -17,13 +17,11 @@ To lock all annotations in a document, set the `IsLocked` property of the `Annot
 
 {% tabs %}
 {% highlight C# %}
-
-        void LockAllAnnotations()
-        {
-            // Locks all the annotations in a PDF document using the AnnnotationSettings property of the `SfPdfViewer` instance.
-            PdfViewer.AnnotationSettings.IsLocked = true;
-        }
-
+void LockAllAnnotations()
+{
+    // Lock all the annotations in a PDF document using the `AnnnotationSettings` property of the `SfPdfViewer` instance.
+    PdfViewer.AnnotationSettings.IsLocked = true;
+}
 {% endhighlight %}
 {% endtabs %}
 
@@ -35,16 +33,14 @@ You can also use the `AnnotationSettings` property to lock a specific annotation
 
 {% tabs %}
 {% highlight C# %}
-
-        void LockCircleAnnotations()
-        {
-            //Obtain the default circle annotation settings using `SfPdfViewer` instance.
-            ShapeAnnotationSettings circleAnnotationSettings = PdfViewer.AnnotationSettings.Circle;
-            
-            //Lock all the circle annotations.
-            circleAnnotationSettings.IsLocked = true;
-        }
-
+void LockCircleAnnotations()
+{
+    //Obtain the default circle annotation settings using `SfPdfViewer` instance.
+    ShapeAnnotationSettings circleAnnotationSettings = PdfViewer.AnnotationSettings.Circle;
+    
+    //Lock all the circle annotations.
+    circleAnnotationSettings.IsLocked = true;
+}
 {% endhighlight %}
 {% endtabs %}
 
@@ -56,16 +52,17 @@ To lock a specific annotation in a document, access the annotation instance and 
 
 {% tabs %}
 {% highlight C# %}
+void LockFirstAnnotation()
+{
+    //Obtain the annotation collection using the `SfPdfViewer` instance.
+    ReadOnlyObservableCollection<Annotation> annotations = PdfViewer.Annotations;
 
-        void LockCircleAnnotations()
-        {
-            //Obtain the default circle annotation settings using `SfPdfViewer` instance.
-            ShapeAnnotationSettings circleAnnotationSettings = PdfViewer.AnnotationSettings.Circle;
-            
-            //Lock all the circle annotations.
-            circleAnnotationSettings.IsLocked = true;
-        }
+    //Obtain the first annotation in the annotation collection.
+    Annotation firstAnnotation = annotations[0];
 
+    //Lock the annotation.
+    firstAnnotation.IsLocked = true;
+}
 {% endhighlight %}
 {% endtabs %}
 
@@ -77,17 +74,15 @@ To lock the selected annotation, access the selected annotation instance and set
 
 {% tabs %}
 {% highlight C# %}
-
-        /// <summary>
-        /// Locks the selected annotation.
-        /// </summary>
-        /// <param name="selectedAnnotation">The selected annotation instance that may be obtained from the annotation selected event<</param>
-        void LockSelectedAnnotation(Annotation selectedAnnotation)
-        {
-            //Lock the annotation.
-            selectedAnnotation.IsLocked = true;
-        }
-
+/// <summary>
+/// Locks the selected annotation.
+/// </summary>
+/// <param name="selectedAnnotation">The selected annotation instance that may be obtained from the annotation selected event<</param>
+void LockSelectedAnnotation(Annotation selectedAnnotation)
+{
+    //Lock the annotation.
+    selectedAnnotation.IsLocked = true;
+}
 {% endhighlight %}
 {% endtabs %}
 

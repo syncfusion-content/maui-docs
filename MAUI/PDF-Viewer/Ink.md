@@ -20,17 +20,11 @@ This section will go through how to add ink annotations to a PDF document intera
 You can draw and add ink annotations to a PDF document with UI interaction using touch or mouse. The following steps explains how to draw ink annotation on a PDF.
 
 1.	Set the `AnnotationMode` property of the SfPdfViewer to `Ink`. It activates the ink drawing mode on the control.
-
 2.	Place your finger (or mouse) on the screen, where you want to start drawing the ink stroke.
-
 3.	Draw the stroke by dragging the finger (or cursor) across the screen.
-
 4.	Finish the stroke by releasing the finger (or cursor).
-
 5.	Repeat the steps 2-4, if you want to create multiple strokes on other areas during the ink drawing mode.
-
 6.	Once you have done, set the `AnnotationMode` to `None`. It will disable the drawing mode and save the drawn strokes to the PDF page as a single ink annotation.
-
 7.	You can later move, resize, or edit the annotation.
 
 The following code explains how to enable the ink annotation mode.
@@ -42,13 +36,12 @@ The following code explains how to enable the ink annotation mode.
 
 {% endhighlight %}
 {% highlight C# %}
-
-        // Enable or activate the ink drawing mode.
-        void EnableInkDrawingMode()
-        {
-            PdfViewer.AnnotationMode = AnnotationMode.Ink;
-        }
-
+// Enable or activate the ink drawing mode.
+void EnableInkDrawingMode()
+{
+    // Set the annotation mode to ink using the `SfPdfViewer` instance.
+    PdfViewer.AnnotationMode = AnnotationMode.Ink;
+}
 {% endhighlight %}
 {% endtabs %}
 
@@ -61,13 +54,12 @@ Similarly, refer to following code to disable the ink annotation mode.
 
 {% endhighlight %}
 {% highlight C# %}
-
-        // Disable or deactivate the ink drawing mode.
-        void DisableInkDrawingMode()
-        {
-            PdfViewer.AnnotationMode = AnnotationMode.None;
-        }
-
+// Disable or deactivate the ink drawing mode.
+void DisableInkDrawingMode()
+{
+    // Set the annotation mode to none using the `SfPdfViewer` instance.
+    PdfViewer.AnnotationMode = AnnotationMode.None;
+}
 {% endhighlight %}
 {% endtabs %}
 
@@ -77,38 +69,36 @@ You can create and add an ink annotation to a PDF document programmatically usin
 
 {% tabs %}
 {% highlight C# %}
+// Create an ink annotation
+InkAnnotation CreateInkAnnotation()
+{
+    int pageNumber = 1;
+    
+    //Provide the points collection to draw a stroke. Here a single stroke is created.
+    List<List<float>> pointsCollection = new List<List<float>>()
+    {
+        new List<float> { 40, 300, 60, 100, 40, 50, 40, 300 }
+    };
 
-        // Create an ink annotation
-        InkAnnotation CreateInkAnnotation()
-        {
-            int pageNumber = 1;
-            
-            //Provide the points collection to draw a stroke. Here a single stroke is created.
-            List<List<float>> pointsCollection = new List<List<float>>()
-            {
-                new List<float> { 40, 300, 60, 100, 40, 50, 40, 300 }
-            };
+    //Create an ink annotation.
+    InkAnnotation annotation = new InkAnnotation(pointsCollection, pageNumber);
 
-            //Create an ink annotation.
-            InkAnnotation annotation = new InkAnnotation(pointsCollection, pageNumber);
+    //Set the appearance for the ink annotation.
+    annotation.Color = Colors.Red; //Stroke color
+    annotation.BorderWidth = 2; //Stroke thickness.
+    annotation.Opacity = 0.75f; // 75% opacity
 
-            //Set the appearance for the ink annotation.
-            annotation.Color = Colors.Red; //Stroke color
-            annotation.BorderWidth = 2; //Stroke thickness.
-            annotation.Opacity = 0.75f; // 75% opacity
+    // return the annotation.
+    return annotation;
+}
 
-            // return the annotation.
-            return annotation;
-        }
+void AddInkAnnotation()
+{
+    Annotation inkAnnotation = CreateInkAnnotation();
 
-        void AddInkAnnotation()
-        {
-            Annotation inkAnnotation = CreateInkAnnotation();
-
-            //Add the ink annotation to the PDF document using `AddAnnotation` method of the `SfPdfViewer` instance.
-            PdfViewer.AddAnnotation(inkAnnotation);
-        }
-
+    //Add the ink annotation to the PDF document using `AddAnnotation` method of the `SfPdfViewer` instance.
+    PdfViewer.AddAnnotation(inkAnnotation);
+}
 {% endhighlight %}
 {% endtabs %}
 
@@ -122,18 +112,16 @@ You can customize the default appearance of ink annotation using the `InkAnnotat
 
 {% tabs %}
 {% highlight C# %}
+void CustomizeDefaultInkSettings()
+{
+    //Obtain the default ink annotation settings from the `SfPdfViewer` instance.
+    InkAnnotationSettings inkSettings = PdfViewer.AnnotationSettings.Ink;
 
-        void CustomizeDefaultInkSettings()
-        {
-            //Obtain the default ink annotation settings from the `SfPdfViewer` instance.
-            InkAnnotationSettings inkSettings = PdfViewer.AnnotationSettings.Ink;
-
-            //Modify the default appearance properties
-            inkSettings.Color = Colors.Blue; // Stroke color
-            inkSettings.BorderWidth = 2; // Stroke thickness
-            inkSettings.Opacity = 0.75f; // 75% opacity
-        }
-
+    //Modify the default appearance properties
+    inkSettings.Color = Colors.Blue; // Stroke color
+    inkSettings.BorderWidth = 2; // Stroke thickness
+    inkSettings.Opacity = 0.75f; // 75% opacity
+}
 {% endhighlight %}
 {% endtabs %}
 
@@ -143,16 +131,14 @@ When drawing ink annotations on a PDF document interactively, all the strokes th
 
 {% tabs %}
 {% highlight C# %}
+void DisableAggregateInkStrokes()
+{
+    //Obtain the default ink annotation settings from the `SfPdfViewer` instance.
+    InkAnnotationSettings inkSettings = PdfViewer.AnnotationSettings.Ink;
 
-        void DisableAggregateInkStrokes()
-        {
-            //Obtain the default ink annotation settings from the `SfPdfViewer` instance.
-            InkAnnotationSettings inkSettings = PdfViewer.AnnotationSettings.Ink;
-
-            //Disable aggregating the insk strokes
-            inkSettings.AggregateInkStrokes = false;
-        }
-
+    //Disable aggregating the insk strokes
+    inkSettings.AggregateInkStrokes = false;
+}
 {% endhighlight %}
 {% endtabs %}
 
@@ -162,26 +148,24 @@ You can edit the properties of the selected ink annotation programmatically by a
 
 {% tabs %}
 {% highlight C# %}
+/// <summary>
+/// Edit the selected ink annotation.
+/// </summary>
+/// <param name="selectedAnnotation">The selected annotation instance that may be obtained from the annotation selected event</param>
+void EditSelectedInkAnnotation(Annotation selectedAnnotation)
+{
+    //Type cast the selected annotation as ink annotation.
+    if(selectedAnnotation is InkAnnotation inkAnnotation)
+    {
+        //Change the color to blue.
+        inkAnnotation.Color = Colors.Blue;
 
-        /// <summary>
-        /// Edit the selected ink annotation.
-        /// </summary>
-        /// <param name="selectedAnnotation">The selected annotation instance that may be obtained from the annotation selected event</param>
-        void EditSelectedInkAnnotation(Annotation selectedAnnotation)
-        {
-            //Type cast the selected annotation as ink annotation.
-            if(selectedAnnotation is InkAnnotation inkAnnotation)
-            {
-                //Change the color to blue.
-                inkAnnotation.Color = Colors.Blue;
-
-                //Change the stroke thickness to 1.
-                inkAnnotation.BorderWidth = 1;
-                
-                //Change the opacity to 75%.
-                inkAnnotation.Opacity = 0.75f;
-            }
-        }
-
+        //Change the stroke thickness to 1.
+        inkAnnotation.BorderWidth = 1;
+        
+        //Change the opacity to 75%.
+        inkAnnotation.Opacity = 0.75f;
+    }
+}
 {% endhighlight %}
 {% endtabs %}
