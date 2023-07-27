@@ -23,12 +23,12 @@ private void OnDocumentLoaded(object sender, EventArgs e)
 {
     if (sender is SfPdfViewer pdfViewer)
     {
-        //Obtain the annotation collection.
+        // Obtain the annotation collection.
         ReadOnlyObservableCollection<Annotation> annotations = pdfViewer.Annotations;
         
         if (annotations.Count > 0)
         {
-            //Type cast the annotation to get the annotation specific properties.
+            // Type cast the annotation to get the annotation specific properties.
             if (annotations[0] is SquareAnnotation squareAnnotation)
             {
                 RectF bounds = squareAnnotation.Bounds;

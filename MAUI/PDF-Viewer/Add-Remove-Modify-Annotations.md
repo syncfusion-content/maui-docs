@@ -24,19 +24,19 @@ You can add a new annotation to the PDF document programmatically by creating an
 void AddCircleAnnotation()
 {
     int pageNumber = 1;
-    //Define the bounds for circle in the PDF coordinates.
+    // Define the bounds for circle in the PDF coordinates.
     RectF circleBounds = new RectF(10, 10, 100, 100);
     
-    //Create a circle annotation.
+    // Create a circle annotation.
     CircleAnnotation annotation = new CircleAnnotation(circleBounds, pageNumber); 
 
-    //Set the appearance for the circle annotation.
+    // Set the appearance for the circle annotation.
     annotation.Color = Colors.Red; //Stroke color
     annotation.FillColor = Colors.Green; //Fill color
     annotation.BorderWidth = 2; //Stroke thickness
     annotation.Opacity = 0.75f; // 75% Opacity
 
-    //Add the annotation to the PDF document using `AddAnnotation` method of `SfPdfViewer`.
+    // Add the annotation to the PDF document using `AddAnnotation` method of `SfPdfViewer`.
     PdfViewer.AddAnnotation(annotation);
 }
 {% endhighlight %}
@@ -152,17 +152,17 @@ You can edit the properties of an annotation from the document programmatically 
 {% highlight c# %}
 void EditFirstAnnotation()
 {
-    //Obtain the annotation collection using `SfPdfViewer` instance.
+    // Obtain the annotation collection using `SfPdfViewer` instance.
     ReadOnlyObservableCollection<Annotation> annotations = PdfViewer.Annotations;
 
-    //Obtain the first annotation in the annotation collection.
+    // Obtain the first annotation in the annotation collection.
     Annotation annotation = annotations[0];
 
-    //Edit the annotation properties.
+    // Edit the annotation properties.
     annotation.Color = Colors.Green; //Stroke color.
     annotation.Opacity = 0.75f; // 75% Opacity
 
-    //Type cast to edit the properties of the specific annotation type. Here the first annotation is a circle annotation.
+    // Type cast to edit the properties of the specific annotation type. Here the first annotation is a circle annotation.
     if (annotation is CircleAnnotation circleAnnotation)
     {
         circleAnnotation.FillColor = Colors.Red; //Inner fill color.
@@ -185,11 +185,11 @@ You can edit the properties of the selected annotation programmatically by acces
 /// <param name="selectedAnnotation">The selected annotation instance may be obtained from the annotation selected event</param>
 void EditSelectedAnnotation(Annotation selectedAnnotation)
 {
-    //Edit the annotation properties.
+    // Edit the annotation properties.
     selectedAnnotation.Color = Colors.Green; //Stroke color.
     selectedAnnotation.Opacity = 0.75f; // 75% Opacity
 
-    //Type cast to edit the properties of the specific annotation type. Here the first annotation is a circle annotation.
+    // Type cast to edit the properties of the specific annotation type. Here the first annotation is a circle annotation.
     if (selectedAnnotation is CircleAnnotation circleAnnotation)
     {
         circleAnnotation.FillColor = Colors.Red; //Inner fill color.

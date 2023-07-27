@@ -48,7 +48,7 @@ void AddStampAnnotation()
 {
     StampAnnotation stampAnnotation = CreateApprovedStandardStamp();
 
-    //Add the stamp to the PDF document using `SfPdfViewer` instance.
+    // Add the stamp to the PDF document using `SfPdfViewer` instance.
     PdfViewer.AddAnnotation(stampAnnotation);
 }
 {% endhighlight %}
@@ -68,16 +68,16 @@ StampAnnotation CreateCustomStamp()
 {
     int pageNumber = 1;
 
-    //Define the position and size for the stamp to be placed in the PDF page.
+    // Define the position and size for the stamp to be placed in the PDF page.
     RectF bounds = new RectF(50, 50, 200, 100);
 
-    //Create image stream from the image to be used as stamp.
+    // Create image stream from the image to be used as stamp.
     Stream imageStream = this.GetType().Assembly.GetManifestResourceStream("Annotations.Assets." + "Logo.png");
 
-    //Create a custom stamp annotation using the image steeam.
+    // Create a custom stamp annotation using the image steeam.
     StampAnnotation customStamp = new StampAnnotation(imageStream,pageNumber,bounds);
 
-    //Return the stamp annotation.
+    // Return the stamp annotation.
     return customStamp;
 }
 
@@ -85,7 +85,7 @@ void AddCustomStampAnnotation()
 {
     StampAnnotation stampAnnotation = CreateCustomStamp();
 
-    //Add the stamp to the PDF document using `SfPdfViewer` instance.
+    // Add the stamp to the PDF document using `SfPdfViewer` instance.
     PdfViewer.AddAnnotation(stampAnnotation);
 }
 {% endhighlight %}
@@ -105,10 +105,10 @@ The following example shows how to edit some of the properties of the selected s
 /// <param name="selectedAnnotation">The selected annotation instance that may be obtained from the annotation selected event</param>
 void EditSelectedStampAnnotation(Annotation selectedAnnotation)
 {
-    //Type cast the selected annotation as stamp annotation.
+    // Type cast the selected annotation as stamp annotation.
     if (selectedAnnotation is StampAnnotation stampAnnotation)
     {
-        //Change the opacity to 75%.
+        // Change the opacity to 75%.
         stampAnnotation.Opacity = 0.75f;
     }
 }
