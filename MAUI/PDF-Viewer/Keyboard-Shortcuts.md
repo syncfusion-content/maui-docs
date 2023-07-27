@@ -120,6 +120,22 @@ The PDF viewer allows the users to perform certain operations such as page navig
 <td><code>Ctrl</code> + <code>C</code></td>
 <td>Copies the selected text to the clipboard</td>
 </tr>
+<tr>
+<td><code>Delete</code></td>
+<td>Removes the selected annotation from a PDF document</td>
+</tr>
+<tr>
+<td><code>Ctrl</code> + <code>z</code></td>
+<td>Undo - Reverse the most recent action performed on the annotations</td>
+</tr>
+<tr>
+<td><code>Ctrl</code> + <code>y</code></td>
+<td>Redo – Restores the last undone function</td>
+</tr>
+<tr>
+<td><code>Esc</code></td>
+<td>Deselects the currently selected annotation</td>
+</tr>
 </table>
 
 ### Limitations

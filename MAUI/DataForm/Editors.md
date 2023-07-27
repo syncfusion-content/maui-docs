@@ -9,6 +9,10 @@ documentation: UG
 
 # Data Editors in .NET MAUI DataForm (SfDataForm)
 
+To get start quickly with data editors in .NET MAUI DataForm, you can check on this video:
+
+{% youtube "https://www.youtube.com/watch?v=Fv__sIKRsIA" %}
+
 The data form supports the following built-in editors to edit the data:
 
 <table>
