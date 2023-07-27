@@ -11,10 +11,10 @@ documentation: ug
 
 The tile layer renders the tiles returned from web map tile services such as Bing Maps, OpenStreetMaps, Google Maps, TomTom, etc.
 
-To learn more about the .NET MAUI Maps layers, you can check the following video.
+To learn more about the .NET MAUI Maps tile layer, you can check the following video.
 
 {% youtube
-"youtube:https://www.youtube.com/watch?v=3z07lWrQy5I"%}
+"youtube:https://www.youtube.com/watch?v=3z07lWrQy5I&t=397"%}
 
 ## Setting URL template
 

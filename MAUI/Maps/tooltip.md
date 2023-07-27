@@ -13,7 +13,7 @@ A tooltip indicates the shape, bubble and marker information during the tap or h
 To learn more about the .NET MAUI Maps tooltip, you can check the following video.
 
 {% youtube
-"youtube:https://www.youtube.com/watch?v=mNkPkNfYG0g"%}
+"youtube:https://www.youtube.com/watch?v=mNkPkNfYG0g&t=375"%}
 
 ## Tooltip for the shapes
 

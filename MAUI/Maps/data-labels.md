@@ -14,7 +14,7 @@ Data labels provides identification for the shapes by displaying their names. Yo
 To learn more about the .NET MAUI Maps data labels, you can check the following video.
 
 {% youtube
-"youtube:https://www.youtube.com/watch?v=XGeOzARor3U"%}
+"youtube:https://www.youtube.com/watch?v=XGeOzARor3U&t=71s"%}
 
 ## Show data labels
 

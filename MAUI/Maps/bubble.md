@@ -14,7 +14,7 @@ Bubbles can be rendered in different colors and sizes based on the data values o
 To learn more about the .NET MAUI Maps bubbles, you can check the following video.
 
 {% youtube
-"youtube:https://www.youtube.com/watch?v=mNkPkNfYG0g"%}
+"youtube:https://www.youtube.com/watch?v=mNkPkNfYG0g&t=82s"%}
 
 ## Enable bubbles
 

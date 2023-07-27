@@ -14,7 +14,7 @@ Markers can be used to denote the locations. It is possible to use the built-in 
 To learn more about the .NET MAUI Maps markers, you can check the following video.
 
 {% youtube
-"youtube:https://www.youtube.com/watch?v=XGeOzARor3U"%}
+"youtube:https://www.youtube.com/watch?v=XGeOzARor3U&t=170"%}
 
 ## Adding markers
 
