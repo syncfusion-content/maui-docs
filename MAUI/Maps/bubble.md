@@ -11,7 +11,7 @@ documentation: ug
 
 Bubbles can be rendered in different colors and sizes based on the data values of their assigned shape. You can add information to shapes such as population density, number of users, and more. 
 
-To learn more about our .NET MAUI Maps bubbles, you can check the below video.
+To learn more about the .NET MAUI Maps bubbles, you can check the following video.
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=mNkPkNfYG0g"%}

@@ -11,7 +11,7 @@ documentation: ug
 
 Data labels provides identification for the shapes by displaying their names. You can trim or hide the labels if they exceed the shape bounds.
 
-To learn more about our .NET MAUI Maps data labels, you can check the below video.
+To learn more about the .NET MAUI Maps data labels, you can check the following video.
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=XGeOzARor3U"%}

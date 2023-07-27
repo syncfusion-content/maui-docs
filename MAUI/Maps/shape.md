@@ -11,7 +11,7 @@ documentation: ug
 
 This section explains about shapes and how to apply colors to them based on specific values in the .NET MAUI maps.
 
-To learn more about our .NET MAUI Maps layers, you can check the below video.
+To learn more about the .NET MAUI Maps layers, you can check the following video.
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=3z07lWrQy5I"%}
