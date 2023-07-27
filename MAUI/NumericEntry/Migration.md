@@ -53,7 +53,7 @@ To migrate easier from the Xamarin SfNumericTextBox and SfNumericUpDown to [.NET
 <td>{{'[WatermarkColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfNumericTextBox.XForms.SfNumericTextBox.html#Syncfusion_SfNumericTextBox_XForms_SfNumericTextBox_WatermarkColor)'| markdownify }}</td>
 <td>{{'[PlaceholderColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_PlaceholderColor)'| markdownify }}</td>
 <td>Get or set the text that is displayed in the control until the value is changed by a user action or some other operation.</td></tr>
-</table> 
+</table>
 
 ## Events
 
