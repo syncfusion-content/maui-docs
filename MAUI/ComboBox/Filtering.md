@@ -175,6 +175,7 @@ Filter the matching items that contain specific text, and the first filtered ite
                     DisplayMemberPath="CityName" />
 
 {% endhighlight %}
+
 {% highlight C# %}
 
 using Syncfusion.Maui.Inputs;
