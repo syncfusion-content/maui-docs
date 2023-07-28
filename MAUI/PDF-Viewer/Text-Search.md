@@ -18,15 +18,15 @@ The [SearchTextAsync](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfVie
 {% tabs %}
 {% highlight C# hl_lines="8" %}
 
-private void SearchButtonClicked(object sender, EventArgs e)
-{
-	SearchText("key");
-}
+    private void SearchButtonClicked(object sender, EventArgs e)
+    {
+        SearchText("key");
+    }
 
-async void SearchText(string text)
-{
-	await PdfViewer.SearchTextAsync(text);
-}
+    async void SearchText(string text)
+    {
+        await PdfViewer.SearchTextAsync(text);
+    }
 
 {% endhighlight %}
 {% endtabs %}
@@ -42,13 +42,13 @@ The [TextSearchResult](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfVi
 {% tabs %}
 {% highlight C# hl_lines="5 6" %}
 
-async void SearchText(string text)
-{
-	TextSearchResult searchResult = await PdfViewer.SearchTextAsync(text);
-	// Get the total matches count and current match index.
-	int totalMatchesCount = searchResult.TotalMatchesCount;
-	int currentMatchIndex = searchResult.CurrentMatchIndex;
-}
+    async void SearchText(string text)
+    {
+        TextSearchResult searchResult = await PdfViewer.SearchTextAsync(text);
+        // Get the total matches count and current match index.
+        int totalMatchesCount = searchResult.TotalMatchesCount;
+        int currentMatchIndex = searchResult.CurrentMatchIndex;
+    }
 
 {% endhighlight %}
 {% endtabs %}
@@ -65,15 +65,15 @@ The [GoToNextMatch](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewe
 {% tabs %}
 {% highlight C# %}
 
-/// <summary>
-/// Stores the search result obtained from searching the text.
-/// </summary>
-TextSearchResult SearchResult;
+    /// <summary>
+    /// Stores the search result obtained from searching the text.
+    /// </summary>
+    TextSearchResult SearchResult;
 
-async void SearchText(string text)
-{
-	SearchResult = await PdfViewer.SearchTextAsync(text);
-}
+    async void SearchText(string text)
+    {
+        SearchResult = await PdfViewer.SearchTextAsync(text);
+    }
 
 {% endhighlight %}
 {% endtabs %}
@@ -83,17 +83,17 @@ async void SearchText(string text)
 {% tabs %}
 {% highlight C# hl_lines="4 10" %}
 
-private void NextMatchButtonClicked(object sender, EventArgs e)
-{
-	// Navigate to the next match.
-	SearchResult.GoToNextMatch();
-}
+    private void NextMatchButtonClicked(object sender, EventArgs e)
+    {
+        // Navigate to the next match.
+        SearchResult.GoToNextMatch();
+    }
 
-private void PreviousMatchButtonClicked(object sender, EventArgs e)
-{
-	// Navigate to the previous match.
-	SearchResult.GoToPreviousMatch();
-}
+    private void PreviousMatchButtonClicked(object sender, EventArgs e)
+    {
+        // Navigate to the previous match.
+        SearchResult.GoToPreviousMatch();
+    }
 
 {% endhighlight %}
 {% endtabs %}
@@ -105,11 +105,11 @@ The [Clear](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.TextSe
 {% tabs %}
 {% highlight C# hl_lines="4" %}
 
-private void CloseSearchButtonClicked(object sender, EventArgs e)
-{
-	// Closes the search and clears any traces of the searched text in the PDF document.
-	SearchResult.Clear();
-}
+    private void CloseSearchButtonClicked(object sender, EventArgs e)
+    {
+        // Closes the search and clears any traces of the searched text in the PDF document.
+        SearchResult.Clear();
+    }
 
 {% endhighlight %}
 {% endtabs %}
@@ -121,24 +121,24 @@ By using the `SearchTextAsync` the search result will be obtained only after all
 {% tabs %}
 {% highlight XAML hl_lines="3" %}
 
-<syncfusion:SfPdfViewer 
-	x:Name="PdfViewer"
-	TextSearchProgress="PdfTextSearchProgress"/>
+        <syncfusion:SfPdfViewer 
+            x:Name="PdfViewer"
+            TextSearchProgress="PdfTextSearchProgress"/>
 			
 {% endhighlight %}
 {% highlight C# hl_lines="3 9" %}
 
-async void SearchText(string text)
-{
-	PdfViewer.TextSearchProgress += PdfTextSearchProgress;
-	await PdfViewer.SearchTextAsync(text);
-}
+    async void SearchText(string text)
+    {
+        PdfViewer.TextSearchProgress += PdfTextSearchProgress;
+        await PdfViewer.SearchTextAsync(text);
+    }
 
-private void PdfTextSearchProgress(object sender, TextSearchProgressEventArgs e)
-{
-	TextSearchResult searchResult = e.SearchResult;
-	int totalMatchesFound = searchResult.TotalMatchesCount;
-}
+    private void PdfTextSearchProgress(object sender, TextSearchProgressEventArgs e)
+    {
+        TextSearchResult searchResult = e.SearchResult;
+        int totalMatchesFound = searchResult.TotalMatchesCount;
+    }
 	
 {% endhighlight %}
 {% endtabs %}
@@ -150,10 +150,10 @@ The [TotalPagesSearched](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Pdf
 {% tabs %}
 {% highlight C# %}
 
-private void PdfTextSearchProgress(object sender, TextSearchProgressEventArgs e)
-{
-	float searchCompletionPercentage = (float)e.TotalPagesSearched / (float)PdfViewer.PageCount;
-}
+    private void PdfTextSearchProgress(object sender, TextSearchProgressEventArgs e)
+    {
+        float searchCompletionPercentage = (float)e.TotalPagesSearched / (float)PdfViewer.PageCount;
+    }
 	
 {% endhighlight %}
 {% endtabs %}
@@ -170,17 +170,17 @@ The following code example shows how to cancel a currently running search.
 {% tabs %}
 {% highlight C# hl_lines="10" %}
 
-async void SearchText(string text)
-{
-	PdfViewer.TextSearchProgress += PdfTextSearchProgress;
-	await PdfViewer.SearchTextAsync(text);
-}
+    async void SearchText(string text)
+    {
+        PdfViewer.TextSearchProgress += PdfTextSearchProgress;
+        await PdfViewer.SearchTextAsync(text);
+    }
 
-private void PdfTextSearchProgress(object sender, TextSearchProgressEventArgs e)
-{
-	// Cancel the search operation when it is running but does not need to be continued.
-	e.SearchResult?.Clear();
-}
+    private void PdfTextSearchProgress(object sender, TextSearchProgressEventArgs e)
+    {
+        // Cancel the search operation when it is running but does not need to be continued.
+        e.SearchResult?.Clear();
+    }
 	
 {% endhighlight %}
 {% endtabs %}
@@ -198,12 +198,12 @@ You need to pass the `TextSearchOptions` as a parameter to the `SearchTextAsync`
 {% tabs %}
 {% highlight C# hl_lines="5" %}
 
-async void SearchText(string text)
-{
-	PdfViewer.TextSearchProgress += PdfTextSearchProgress;
-	TextSearchOptions searchOptions = TextSearchOptions.CaseSensitive;
-	await PdfViewer.SearchTextAsync(text, searchOptions);
-}
+    async void SearchText(string text)
+    {
+        PdfViewer.TextSearchProgress += PdfTextSearchProgress;
+        TextSearchOptions searchOptions = TextSearchOptions.CaseSensitive;
+        await PdfViewer.SearchTextAsync(text, searchOptions);
+    }
 	
 {% endhighlight %}
 {% endtabs %}
@@ -215,19 +215,19 @@ The highlight colors of the current match and other matches of a text can be cus
 {% tabs %}
 {% highlight XAML hl_lines="4 5" %}
 
-<syncfusion:SfPdfViewer x:Name="PdfViewer">
-	<syncfusion:SfPdfViewer.TextSearchSettings>
-		<syncfusion:TextSearchSettings 
-			CurrentMatchHighlightColor="#438F00FF"  
-			OtherMatchesHighlightColor="#4300FF00"/>
-	</syncfusion:SfPdfViewer.TextSearchSettings>
-</syncfusion:SfPdfViewer>
+        <syncfusion:SfPdfViewer x:Name="PdfViewer">
+            <syncfusion:SfPdfViewer.TextSearchSettings>
+                <syncfusion:TextSearchSettings 
+                    CurrentMatchHighlightColor="#438F00FF"  
+                    OtherMatchesHighlightColor="#4300FF00"/>
+            </syncfusion:SfPdfViewer.TextSearchSettings>
+        </syncfusion:SfPdfViewer>
 			
 {% endhighlight %}
 {% highlight C# hl_lines="3 9" %}
 
-PdfViewer.TextSearchSettings.CurrentMatchHighlightColor = Color.FromRgba("#8F00FF43");
-PdfViewer.TextSearchSettings.OtherMatchesHighlightColor= Color.FromRgba("#00FF0043");
+	PdfViewer.TextSearchSettings.CurrentMatchHighlightColor = Color.FromRgba("#8F00FF43");
+	PdfViewer.TextSearchSettings.OtherMatchesHighlightColor= Color.FromRgba("#00FF0043");
 
 {% endhighlight %}
 {% endtabs %}

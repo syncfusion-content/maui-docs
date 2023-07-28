@@ -34,14 +34,14 @@ You can customize the loading indicator’s properties by applying a style with 
 {% tabs %}
 {% highlight xaml %}
 
-<syncfusion:SfPdfViewer>
-	<syncfusion:SfPdfViewer.Resources>
-		<Style TargetType="ActivityIndicator" 
-			   ApplyToDerivedTypes="True">
-				<Setter Property="Color" Value="Red" />
-			</Style>
-	</syncfusion:SfPdfViewer.Resources>
-</syncfusion:SfPdfViewer>
+	<syncfusion:SfPdfViewer>
+		<syncfusion:SfPdfViewer.Resources>
+			<Style TargetType="ActivityIndicator" 
+				   ApplyToDerivedTypes="True">
+					<Setter Property="Color" Value="Red" />
+				</Style>
+		</syncfusion:SfPdfViewer.Resources>
+	</syncfusion:SfPdfViewer>
 
 {% endhighlight %} 
 {% endtabs %}
