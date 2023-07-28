@@ -29,8 +29,8 @@ public partial class App : Application
 	public App()
 	{
 		InitializeComponent();
-        CultureInfo.CurrentUICulture = new CultureInfo("fr-FR");
-        MainPage = new AppShell();
+		CultureInfo.CurrentUICulture = new CultureInfo("fr-FR");
+		MainPage = new AppShell();
 	}
 }
 
@@ -79,10 +79,10 @@ public partial class App : Application
 	public App()
 	{
 		InitializeComponent();
-        CultureInfo.CurrentUICulture = new CultureInfo("fr-FR");
-        SfPdfViewerResources.ResourceManager = new ResourceManager("PdfViewerLocalization.Resources.SfPdfViewer", 
+		CultureInfo.CurrentUICulture = new CultureInfo("fr-FR");
+		SfPdfViewerResources.ResourceManager = new ResourceManager("PdfViewerLocalization.Resources.SfPdfViewer", 
 			Application.Current.GetType().Assembly);
-        MainPage = new AppShell();
+		MainPage = new AppShell();
 	}
 }
 

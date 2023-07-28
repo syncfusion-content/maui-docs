@@ -18,17 +18,17 @@ The `DocumentLoaded` event triggers after the document is loaded in the `SfPdfVi
 {% tabs %}
 {% highlight XAML hl_lines="3" %}
 
-	<syncfusion:SfPdfViewer 
-		x:Name="PdfViewer" 
-		DocumentLoaded="PdfViewer_DocumentLoaded"/>
+<syncfusion:SfPdfViewer 
+	x:Name="PdfViewer" 
+	DocumentLoaded="PdfViewer_DocumentLoaded"/>
 
 {% endhighlight %}
 {% highlight C# %}
 
-	private void PdfViewer_DocumentLoaded(object sender, EventArgs e)
-	{
-	   DisplayAlert("Info", "Document loaded successfully", "OK");
-	}
+private void PdfViewer_DocumentLoaded(object sender, EventArgs e)
+{
+   DisplayAlert("Info", "Document loaded successfully", "OK");
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -62,17 +62,17 @@ The [DocumentLoadFailedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion
 {% tabs %}
 {% highlight XAML hl_lines="3" %}
 
-	<syncfusion:SfPdfViewer 
-		x:Name="PdfViewer" 
-		DocumentLoadFailed="PdfViewer_DocumentLoadFailed"/>
-	
+<syncfusion:SfPdfViewer 
+	x:Name="PdfViewer" 
+	DocumentLoadFailed="PdfViewer_DocumentLoadFailed"/>
+
 {% endhighlight %}
 {% highlight C# %}
 
-	private void PdfViewer_DocumentLoadFailed(object sender, DocumentLoadFailedEventArgs e)
-	{
-		DisplayAlert( e.Message, e.Exception.StackTrace, "OK");
-	}
+private void PdfViewer_DocumentLoadFailed(object sender, DocumentLoadFailedEventArgs e)
+{
+	DisplayAlert( e.Message, e.Exception.StackTrace, "OK");
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -84,24 +84,24 @@ The `DocumentLoadFailed` event allows you to handle the load failures at the app
 {% tabs %}
 {% highlight XAML hl_lines="3" %}
 
-        <syncfusion:SfPdfViewer 
-            x:Name="PdfViewer"
-            DocumentLoadFailed="PdfDocumentLoadFailed"/>
-			
+<syncfusion:SfPdfViewer 
+	x:Name="PdfViewer"
+	DocumentLoadFailed="PdfDocumentLoadFailed"/>
+	
 {% endhighlight %}
 {% highlight C# hl_lines="4" %}
 
-	public MainPage()
-	{
-		InitializeComponent();
-        PdfViewer.DocumentLoadFailed += PdfDocumentLoadFailed;
-    }
+public MainPage()
+{
+	InitializeComponent();
+	PdfViewer.DocumentLoadFailed += PdfDocumentLoadFailed;
+}
 
-    private void PdfDocumentLoadFailed(object sender, DocumentLoadFailedEventArgs e)
-    {
-        e.Handled = true;
-        // Handle your logic here.
-    }
+private void PdfDocumentLoadFailed(object sender, DocumentLoadFailedEventArgs e)
+{
+	e.Handled = true;
+	// Handle your logic here.
+}
 	
 {% endhighlight %}
 {% endtabs %}

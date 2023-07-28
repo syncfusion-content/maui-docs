@@ -20,7 +20,7 @@ private void SaveDocument()
 	// Create a file stream to save the PDF document. Here a file named "ModifiedDocument.pdf" is created in the application's data directory.
 	string fileName = Path.Combine(FileSystem.Current.AppDataDirectory, "ModifiedDocument.pdf");
 	using FileStream fileStream = File.Create(fileName);
-	
+
 	// Save the PDF document.
 	PdfViewer.SaveDocument(fileStream);
 }

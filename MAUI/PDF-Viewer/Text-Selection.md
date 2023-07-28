@@ -48,8 +48,8 @@ Refer to the following code example to disable the text selection.
 {% endhighlight %}
 {% highlight C# %}
 
-	SfPdfViewer PdfViewer = new SfPdfViewer();
-	PdfViewer.EnableTextSelection = false;
+SfPdfViewer PdfViewer = new SfPdfViewer();
+PdfViewer.EnableTextSelection = false;
 
 {% endhighlight %}
 {% endtabs %}
@@ -63,18 +63,18 @@ Refer to the following code sample to change the highlight color.
 {% tabs %}
 {% highlight XAML hl_lines="4" %}
 
-    <syncfusion:SfPdfViewer x:Name="PdfViewer">
-        <syncfusion:SfPdfViewer.TextSelectionSettings>
-            <syncfusion:TextSelectionSettings 
-                    HighlightColor="#43FFFF00"/>
-        </syncfusion:SfPdfViewer.TextSelectionSettings>
-    </syncfusion:SfPdfViewer>
+<syncfusion:SfPdfViewer x:Name="PdfViewer">
+	<syncfusion:SfPdfViewer.TextSelectionSettings>
+		<syncfusion:TextSelectionSettings 
+				HighlightColor="#43FFFF00"/>
+	</syncfusion:SfPdfViewer.TextSelectionSettings>
+</syncfusion:SfPdfViewer>
 
 {% endhighlight %}
 {% highlight C# hl_lines="2" %}
 
-	SfPdfViewer PdfViewer = new SfPdfViewer();
-	PdfViewer.TextSelectionSettings.HighlightColor = Color.FromRgba(255, 255, 0, 127);
+SfPdfViewer PdfViewer = new SfPdfViewer();
+PdfViewer.TextSelectionSettings.HighlightColor = Color.FromRgba(255, 255, 0, 127);
 
 {% endhighlight %}
 {% endtabs %}
@@ -98,19 +98,19 @@ Refer to the following code sample that explains how to wire the event to handle
 {% tabs %}
 {% highlight C# hl_lines="4 11" %}
 
-	public MainPage()
-	{
-		InitializeComponent();
-        PdfViewer.TextSelectionChanged += PdfViewer_TextSelectionChanged;
-    }
+public MainPage()
+{
+	InitializeComponent();
+	PdfViewer.TextSelectionChanged += PdfViewer_TextSelectionChanged;
+}
 
-    private void PdfViewer_TextSelectionChanged(object sender, TextSelectionChangedEventArgs e)
-    {
-        string selectedText = e.SelectedText;
-        int pageNumber = e.PageNumber;
-        // Write your logic to handle the selected text and set the ‘Handled’ to true, to prevent the default copy context menu from appearing.
-        e.Handled = true;
-    }
+private void PdfViewer_TextSelectionChanged(object sender, TextSelectionChangedEventArgs e)
+{
+	string selectedText = e.SelectedText;
+	int pageNumber = e.PageNumber;
+	// Write your logic to handle the selected text and set the ‘Handled’ to true, to prevent the default copy context menu from appearing.
+	e.Handled = true;
+}
 
 {% endhighlight %}
 {% endtabs %}

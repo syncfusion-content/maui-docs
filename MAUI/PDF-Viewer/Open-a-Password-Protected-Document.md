@@ -54,25 +54,25 @@ When attempting to open a password protected document, the [SfPdfViewer](https:/
 {% tabs %}
 {% highlight xaml %}
 
-        <syncfusion:SfPdfViewer 
-            x:Name="PdfViewer"
-            PasswordRequested="PdfPasswordRequested"/>
+<syncfusion:SfPdfViewer 
+	x:Name="PdfViewer"
+	PasswordRequested="PdfPasswordRequested"/>
 
 {% endhighlight %}
 {% highlight c# hl_lines="4" %}
 
-	public MainPage()
-	{
-		InitializeComponent();
-        PdfViewer.PasswordRequested += PdfPasswordRequested;
-    }
+public MainPage()
+{
+	InitializeComponent();
+	PdfViewer.PasswordRequested += PdfPasswordRequested;
+}
 
-    private void PdfPasswordRequested(object sender, PasswordRequestedEventArgs e)
-    {
-        e.Handled = true;
-        // Handle your own logic here.
-        e.Password = "{Document's password}";
-    }
+private void PdfPasswordRequested(object sender, PasswordRequestedEventArgs e)
+{
+	e.Handled = true;
+	// Handle your own logic here.
+	e.Password = "{Document's password}";
+}
 
 {% endhighlight %}
 {% endtabs %}
