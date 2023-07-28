@@ -73,10 +73,6 @@ The PDF viewer allows the users to perform certain operations such as page navig
 <td>Submits the password entered in the built-in password dialog. Ignored if the password dialog is not showing</td>
 </tr>
 <tr>
-<td><code>Esc</code></td>
-<td>Closes the currently showing built-in dialog if any</td>
-</tr>
-<tr>
 <td><code>Home</code></td>
 <td>Scrolls to the top.</td>
 </tr>
@@ -134,7 +130,12 @@ The PDF viewer allows the users to perform certain operations such as page navig
 </tr>
 <tr>
 <td><code>Esc</code></td>
-<td>Deselects the currently selected annotation</td>
+<td>
+   <ul>
+    <li>Closes the currently showing built-in dialog if any</li>
+    <li>Deselects the currently selected annotation</li>
+   </ul>
+</td>
 </tr>
 </table>
 
@@ -144,5 +145,3 @@ The PDF viewer allows the users to perform certain operations such as page navig
 * In Windows, it is the default behavior of UI elements to receive notification of the key pressed event only when they are focused. So, while using keyboard shortcuts in Windows, please make sure that the PDF viewer control is focused by either tapping or clicking on it. 
 
 N> Use the `Command` key instead of the `Ctrl` key in macOS.
-
-

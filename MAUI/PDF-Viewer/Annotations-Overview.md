@@ -7,7 +7,7 @@ control: SfPdfViewer
 documentation: ug
 ---
 
-# Annotations
+# Annotations in .NET MAUI PDF Viewer (SfPdfViewer)
 
 The [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) allows you to add, remove and modify annotations in the PDF documents. This section will go through the various annotation types available in PDF Viewer.
 

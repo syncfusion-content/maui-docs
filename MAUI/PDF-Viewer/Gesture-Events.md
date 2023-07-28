@@ -7,9 +7,9 @@ control: SfPdfViewer
 documentation: ug
 ---
 
-# Gesture events
+# Gesture Events in .NET MAUI PDF Viewer (SfPdfViewer)
 
-## Tapped Event
+## Tapped event
 
 The `SfPdfViewer` provides a `Tapped` event that occurs when a tap gesture is detected in the control and allows you to perform custom actions when a tap occurs. This event provides information about the page number and position at the tapped location through the `GestureEventArgs`. 
 The following code example demonstrates how to subscribe to the `Tapped` event.
