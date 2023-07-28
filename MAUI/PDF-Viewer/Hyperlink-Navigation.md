@@ -18,24 +18,24 @@ The [HyperlinkClicked](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfVi
 {% tabs %}
 {% highlight XAML hl_lines="3" %}
 
-<syncfusion:SfPdfViewer 
-	x:Name="PdfViewer"
-	HyperlinkClicked="PdfHyperlinkClicked"/>
+            <syncfusion:SfPdfViewer 
+                x:Name="PdfViewer"
+                HyperlinkClicked="PdfHyperlinkClicked"/>
 			
 {% endhighlight %}
 {% highlight C# hl_lines="4" %}
 
-public MainPage()
-{
-	InitializeComponent();
-	PdfViewer.HyperlinkClicked += PdfHyperlinkClicked;
-}
+	public MainPage()
+	{
+		InitializeComponent();
+        PdfViewer.HyperlinkClicked += PdfHyperlinkClicked;
+    }
 
-private async void PdfHyperlinkClicked(object sender, HyperlinkClickedEventArgs e)
-{
-	e.Handled = true;
-	await Browser.Default.OpenAsync(e.Uri, BrowserLaunchMode.SystemPreferred);
-}
+    private async void PdfHyperlinkClicked(object sender, HyperlinkClickedEventArgs e)
+    {
+        e.Handled = true;
+        await Browser.Default.OpenAsync(e.Uri, BrowserLaunchMode.SystemPreferred);
+    }
 	
 {% endhighlight %}
 {% endtabs %}
@@ -47,14 +47,14 @@ Enable or disable the recognition of hyperlinks in PDF documents using the [Enab
 {% tabs %}
 {% highlight XAML %}
 
-<syncfusion:SfPdfViewer 
-	x:Name="PdfViewer" 
-	EnableHyperlinkNavigation="False"/>
+            <syncfusion:SfPdfViewer 
+                x:Name="PdfViewer" 
+                EnableHyperlinkNavigation="False"/>
 			
 {% endhighlight %}
 {% highlight C# %}
 
-PdfViewer.EnableHyperlinkNavigation = false;
+	PdfViewer.EnableHyperlinkNavigation = false;
 	
 {% endhighlight %}
 {% endtabs %}

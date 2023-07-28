@@ -15,14 +15,14 @@ Setting the `FlowDirection` property to `RightToLeft` on the SfPdfViewer sets th
 {% tabs %}
 {% highlight XAML %}
 
-<syncfusion:SfPdfViewer
-	x:Name="PdfViewer"
-	FlowDirection="RightToLeft"/>
+        <syncfusion:SfPdfViewer
+            x:Name="PdfViewer"
+            FlowDirection="RightToLeft"/>
 
 {% endhighlight %}
 {% highlight C# %}
 
-PdfViewer.FlowDirection = FlowDirection.RightToLeft;
+        PdfViewer.FlowDirection = FlowDirection.RightToLeft;
 
 {% endhighlight %}
 {% endtabs %}
