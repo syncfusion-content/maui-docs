@@ -16,12 +16,12 @@ The following code example demonstrates how to subscribe to the `Tapped` event.
 
 {% tabs %}
 {% highlight xaml %}
-    <syncfusion:SfPdfViewer x:Name="PdfViewer" Tapped="PdfViewer_Tapped"/>
+<syncfusion:SfPdfViewer x:Name="PdfViewer" Tapped="PdfViewer_Tapped"/>
 {% endhighlight %}
 
 {% highlight c# %}
-        SfPdfViewer PdfViewer = new SfPdfViewer();
-        PdfViewer.Tapped += PdfViewer_Tapped;
+SfPdfViewer PdfViewer = new SfPdfViewer();
+PdfViewer.Tapped += PdfViewer_Tapped;
 {% endhighlight %}
 {% endtabs %}
 
@@ -29,10 +29,10 @@ In the above example, the `PdfViewer_Tapped` method is registered as the event h
 
 {% tabs %}
 {% highlight c# %}
-    private void PdfViewer_Tapped(object sender, GestureEventArgs e)
-    {
-        // Handle the tap event here.
-    }
+private void PdfViewer_Tapped(object sender, GestureEventArgs e)
+{
+	// Handle the tap event here.
+}
 {% endhighlight %}
 {% endtabs %}
 
@@ -48,16 +48,16 @@ The following code example that demonstrates how to retrieve information from th
 
 {% tabs %}
 {% highlight c# %}
-    private void PdfViewer_Tapped(object sender, GestureEventArgs e)
-    {
-        // To get the pointer position on the control where the tap occurred.
-        var pointerPosition = e.Position;
-        // To get the page number where the tap occurred.
-        var pageNumber = e.PageNumber;
-        // To get the page position where the tap occurred.
-        var pagePoistion = e.PagePosition;
+private void PdfViewer_Tapped(object sender, GestureEventArgs e)
+{
+	// To get the pointer position on the control where the tap occurred.
+	var pointerPosition = e.Position;
+	// To get the page number where the tap occurred.
+	var pageNumber = e.PageNumber;
+	// To get the page position where the tap occurred.
+	var pagePoistion = e.PagePosition;
 
-        // Handle the tap event here with the above information if required.
-    }
+	// Handle the tap event here with the above information if required.
+}
 {% endhighlight %}
 {% endtabs %}	
