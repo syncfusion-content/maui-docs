@@ -25,10 +25,10 @@ You can select an annotation programmatically by providing the annotation instan
 {% highlight c# %}
 void SelectAnnotation()
 {
-    //Obtain the annotation collection using `SfPdfViewer` instance.
+    // Obtain the annotation collection using `SfPdfViewer` instance.
     ReadOnlyObservableCollection<Annotation> annotations = PdfViewer.Annotations;
     
-    //Select the first annotation in the collection using the `SelectAnnotation` method of `SfPdfViewer` instance.
+    // Select the first annotation in the collection using the `SelectAnnotation` method of `SfPdfViewer` instance.
     PdfViewer.SelectAnnotation(annotations[0]);
 }
 {% endhighlight %}
@@ -42,10 +42,10 @@ The `AnnotationSettings` property of SfPdfViewer allows you to customize the def
 {% highlight c# %}
 void CustomizeSelectorAppearance()
 {
-    //Customize the selector color for unlocked annotations using the `AnnotationSettings` property of `SfPdfViewer` instance.
+    // Customize the selector color for unlocked annotations using the `AnnotationSettings` property of `SfPdfViewer` instance.
     PdfViewer.AnnotationSettings.Selector.Color = Colors.Blue;
 
-    //Customize the selector color for locked annotations using the `AnnotationSettings` property of `SfPdfViewer` instance..
+    // Customize the selector color for locked annotations using the `AnnotationSettings` property of `SfPdfViewer` instance..
     PdfViewer.AnnotationSettings.Selector.LockedColor = Colors.LightGray;
 }	
 {% endhighlight %}
@@ -119,7 +119,7 @@ private void OnAnnotationDeselected(object sender, AnnotationEventArgs e)
     // Obtain the deselected annotation if required.
     Annotation deselectedAnnotation = e.Annotation;
               
-    //You can handle your logics here…
+    // You can handle your logics here…
 }
 {% endhighlight %}
 {% endtabs %}
