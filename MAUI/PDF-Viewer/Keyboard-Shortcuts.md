@@ -7,7 +7,7 @@ control: SfPdfViewer
 documentation: ug
 ---
 
-# Keyboard shortcuts
+# Keyboard shortcuts in .NET MAUI PDF Viewer (SfPdfViewer)
 
 The PDF viewer allows the users to perform certain operations such as page navigation using keyboard shortcuts in Windows and macOS platforms. The below table lists the available shortcuts and the corresponding operations.
 
@@ -73,10 +73,6 @@ The PDF viewer allows the users to perform certain operations such as page navig
 <td>Submits the password entered in the built-in password dialog. Ignored if the password dialog is not showing</td>
 </tr>
 <tr>
-<td><code>Esc</code></td>
-<td>Closes the currently showing built-in dialog if any</td>
-</tr>
-<tr>
 <td><code>Home</code></td>
 <td>Scrolls to the top.</td>
 </tr>
@@ -130,11 +126,16 @@ The PDF viewer allows the users to perform certain operations such as page navig
 </tr>
 <tr>
 <td><code>Ctrl</code> + <code>y</code></td>
-<td>Redo – Restores the last undone function</td>
+<td>Redo – Restores the last undone action</td>
 </tr>
 <tr>
 <td><code>Esc</code></td>
-<td>Deselects the currently selected annotation</td>
+<td>
+   <ul>
+    <li>Closes the currently showing built-in dialog.</li>
+    <li>Deselects the currently selected annotation.</li>
+   </ul>
+</td>
 </tr>
 </table>
 

@@ -7,11 +7,11 @@ control: SfPdfViewer
 documentation: ug
 ---
 
-# Shape Annotations
+# Shape Annotations in .NET MAUI PDF Viewer (SfPdfViewer)
 
 The shape annotations feature of `SfPdfViewer` allows you to add, remove and modify shapes in the PDF document. This is useful for making corrections or emphasizing important points in the document. This section will go through the various types and functions available in PDF Viewer for working with shape annotations.
 
-## Types of Shapes
+## Types of shapes
 
 The following shape annotation types are now available in the PDF Viewer.
 
@@ -20,11 +20,11 @@ The following shape annotation types are now available in the PDF Viewer.
 3.	Line.
 4.	Square.
 
-## Adding Annotations
+## Add shapes to a PDF document
 
 This section will go through how to add shape annotations to a PDF document interactively by drawing on the PDF document as well as programmatically.
 
-### Adding Annotations with UI Interaction
+### Add shapes with UI interaction
 
 You can draw and add shape annotations to a PDF document interactively by touch (or mouse down) and drag. The following steps explains how to draw shape annotation on a PDF.
 
@@ -69,7 +69,7 @@ void DisableCircleDrawingMode()
 {% endhighlight %}
 {% endtabs %}
 
-### Adding Annotations Programmatically
+### Add shapes programmatically
 
 You can create and add circle annotation to a PDF document programmatically using the `AddAnnotation` method of the `SfPdfViewer`. The following example explains how to create a circle annotation and add it to the first page of a PDF document. Similarly, you can add other shapes also.
 
@@ -103,7 +103,7 @@ void AddCircleAnnotation()
 {% endhighlight %}
 {% endtabs %}
 
-## Annotation Settings
+## Shape annotation settings
 
 In the shape annotation mode, the shape annotations will be drawn with a default appearance. You can modify the annotation after it has been added to the pages. However, if you need to define the appearance before drawing on the document, you can change its default settings using the `AnnotationSettings` property of the `SfPdfViewer`. For that you need to obtain the default shape annotation settings.
 
@@ -126,7 +126,7 @@ void CustomizeDefaultCircleSettings()
 {% endhighlight %}
 {% endtabs %}
 
-## Edit the Selected Annotation
+## Edit the selected shape annotation
 
 You can edit the properties of the selected shape annotation programmatically by accessing the selected annotation instance. The selected annotation instance may be obtained from the `AnnotationSelected` event. The following example shows how to edit some of the properties of the selected circle annotation. Similarly, you can modify the other shape annotations properties.
 

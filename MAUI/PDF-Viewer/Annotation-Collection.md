@@ -7,7 +7,7 @@ control: SfPdfViewer
 documentation: ug
 ---
 
-# Annotation Collection
+# Annotation Collection in .NET MAUI PDF Viewer (SfPdfViewer)
 
 The existing annotations in a PDF document can be accessed using the `Annotations` property of the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html). This read only property will have the annotation collection information as soon as the document is loaded into the PDF Viewer. The following example explains how to use the property to obtain the information about a square annotation that is the first on a specific document.
 
