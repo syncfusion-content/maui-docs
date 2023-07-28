@@ -35,10 +35,10 @@ You can also use the `AnnotationSettings` property to lock a specific annotation
 {% highlight C# %}
 void LockCircleAnnotations()
 {
-    //Obtain the default circle annotation settings using `SfPdfViewer` instance.
+    // Obtain the default circle annotation settings using `SfPdfViewer` instance.
     ShapeAnnotationSettings circleAnnotationSettings = PdfViewer.AnnotationSettings.Circle;
     
-    //Lock all the circle annotations.
+    // Lock all the circle annotations.
     circleAnnotationSettings.IsLocked = true;
 }
 {% endhighlight %}
@@ -54,13 +54,13 @@ To lock a specific annotation in a document, access the annotation instance and 
 {% highlight C# %}
 void LockFirstAnnotation()
 {
-    //Obtain the annotation collection using the `SfPdfViewer` instance.
+    // Obtain the annotation collection using the `SfPdfViewer` instance.
     ReadOnlyObservableCollection<Annotation> annotations = PdfViewer.Annotations;
 
-    //Obtain the first annotation in the annotation collection.
+    // Obtain the first annotation in the annotation collection.
     Annotation firstAnnotation = annotations[0];
 
-    //Lock the annotation.
+    // Lock the annotation.
     firstAnnotation.IsLocked = true;
 }
 {% endhighlight %}
@@ -80,7 +80,7 @@ To lock the selected annotation, access the selected annotation instance and set
 /// <param name="selectedAnnotation">The selected annotation instance that may be obtained from the annotation selected event<</param>
 void LockSelectedAnnotation(Annotation selectedAnnotation)
 {
-    //Lock the annotation.
+    // Lock the annotation.
     selectedAnnotation.IsLocked = true;
 }
 {% endhighlight %}

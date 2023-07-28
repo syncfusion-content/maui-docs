@@ -20,6 +20,7 @@ The following text markup annotation types are now available in the PDF Viewer.
 3.	Strike-out.
 4.	Underline.
 
+
 The following image shows the appearance of the text markup annotation types.
 
 ![Text Markup Annotation Types.](Images/Annotations/text-markups.png)
@@ -30,7 +31,7 @@ This section will go through how to add text markup annotations to a PDF documen
 
 ### Adding Annotations using Annotation Mode
 
-You can add text markup annotations to a PDF document by touch (or mouse down) and drag using `AnnotationMode` property of the `SfPdfViewer`. The following steps explains how to add text markup  annotation on a text in a PDF.\
+You can add text markup annotations to a PDF document by touch (or mouse down) and drag using `AnnotationMode` property of the `SfPdfViewer`. The following steps explains how to add text markup  annotation on a text in a PDF.
 
 1.	Set the `AnnotationMode` property of the SfPdfViewer to any text markups (say `Highlight`). It activates the highlight annotation mode on the control.
 2.	Place your finger (or mouse) on the text in the PDF document, where you want to start adding the text markup.
@@ -39,6 +40,7 @@ You can add text markup annotations to a PDF document by touch (or mouse down) a
 5.	Repeat the steps 2-4, if you want to add multiple text markups on other areas during the annotation mode.
 6.	Once you have done, set the `AnnotationMode` to `None`. It will disable the annotation mode. 
 7.	You can later select and edit the annotations if required.
+
 
 The following code explains how to enable the highlight annotation mode. Similarly, you can change the annotation mode for adding other text markups.
 
@@ -52,7 +54,7 @@ The following code explains how to enable the highlight annotation mode. Similar
 // Enable or activate the highlight annotation mode.
 void EnableHighlightAnnotationMode()
 {
-    // Set the `AnnotationMode` of the `SfPdfViewer` to `Highlight`.
+    // Set the `AnnotationMode` of the `SfPdfViewer` to `Highlight`
     PdfViewer.AnnotationMode = AnnotationMode.Highlight;
 }
 {% endhighlight %}
@@ -70,7 +72,7 @@ Similarly, refer to following code to disable the highlight annotation mode.
 // Disable or deactivate the highlight annotation mode.
 void DisableHighlightMode()
 {
-    // Set the `AnnotationMode` of the `SfPdfViewer` to `None`.
+    // Set the `AnnotationMode` of the `SfPdfViewer` to `None`
     PdfViewer.AnnotationMode = AnnotationMode.None;
 }
 {% endhighlight %}
@@ -94,25 +96,25 @@ HighlightAnnotation CreateHighlightAnnotation()
 {
     int pageNumber = 1;
 
-    //Create a list of text bounds that represents a multiple lines of text markups. Here a single line text markup are created.
+    // Create a list of text bounds that represents a multiple lines of text markups. Here a single line text markup are created.
     List<RectF> textBoundsCollection = new List<RectF> { new RectF(100, 100, 100, 20) };
 
-    //Create an highlight annotation.
+    // Create an highlight annotation.
     HighlightAnnotation annotation = new HighlightAnnotation(pageNumber, textBoundsCollection);
 
-    //Set the appearance for the highlight annotation.
-    annotation.Color = Colors.Yellow; // set the highlight color.
-    annotation.Opacity = 0.5f; // set the opacity 50%
+    // Set the appearance for the highlight annotation
+    annotation.Color = Colors.Yellow; // set the highlight color
+    annotation.Opacity = 0.5f; // set the opacity to 50%
 
     return annotation;
 }
 
 void AddHighlightAnnotation()
 {
-    //Create a highlight annotation.
+    // Create a highlight annotation.
     Annotation highlightAnnotation = CreateHighlightAnnotation();
 
-    //Add the highlight annotation to the PDF document using the AddAnnotation method of the `SfPdfViewer` instance.
+    // Add the highlight annotation to the PDF document using the AddAnnotation method of the `SfPdfViewer` instance.
     PdfViewer.AddAnnotation(highlightAnnotation);
 }
 {% endhighlight %}
@@ -128,10 +130,10 @@ The following example explains how to obtain the default highlight annotation se
 {% highlight C# %}
 void CustomizeDefaultHighlightSettings()
 {
-    //Obtain the default highlight annotation settings from the `SfPdfViewer` instance.
+    // Obtain the default highlight annotation settings from the `SfPdfViewer` instance.
     TextMarkupAnnotationSettings highlightAnnotationSettings = PdfViewer.AnnotationSettings.Highlight;
 
-    //Modify the default properties.
+    // Modify the default properties.
 
     // Set the default stroke color to blue.
     highlightAnnotationSettings.Color = Colors.Blue; 
@@ -153,12 +155,12 @@ You can edit the properties of the selected text markup annotation programmatica
 /// <param name="selectedAnnotation">The selected annotation instance that may be obtained from the annotation selected event</param>
 void EditSelectedHighlightAnnotation(Annotation selectedAnnotation)
 {
-    //Type cast the selected annotation as highlight annotation.
+    // Type cast the selected annotation as highlight annotation.
     if (selectedAnnotation is HighlightAnnotation highlightAnnotation)
     {
-        //Change the color to blue.
+        // Change the color to blue.
         highlightAnnotation.Color = Colors.Blue;
-        //Change the opacity to 75%.
+        // Change the opacity to 75%.
         highlightAnnotation.Opacity = 0.75f;
     }
 }
