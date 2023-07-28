@@ -7,22 +7,22 @@ control: SfPdfViewer
 documentation: ug
 ---
 
-# Stamp Annotations
+# Stamp Annotations in .NET MAUI PDF Viewer (SfPdfViewer)
 
 The stamp annotations feature of `SfPdfViewer` allows you to add, remove and modify stamps or custom images in the PDF document. This section will go through the various types and functions available in PDF Viewer for working with stamp annotations.
 
-## Types of Stamps
+## Types of stamps
 
 The following stamp annotation types are now available in the PDF Viewer.
 
 1.	Standard (or built-in) stamps.
 2.	Custom (or image) stamps.
 
-## Adding Stamps
+## Add stamps to a PDF document
 
 This section will go through how to add stamp annotations to a PDF document programmatically to a PDF document.
 
-### Adding Standard Stamps
+### Add standard stamps
 
 There are 18 standard stamp types are available in the `SfPdfViewer` that are most commonly used in documents. The appropriate standard stamp type can be selected from the `StampType` enumeration. 
 
@@ -48,7 +48,7 @@ void AddStampAnnotation()
 {
     StampAnnotation stampAnnotation = CreateApprovedStandardStamp();
 
-    //Add the stamp to the PDF document using `SfPdfViewer` instance.
+    // Add the stamp to the PDF document using `SfPdfViewer` instance.
     PdfViewer.AddAnnotation(stampAnnotation);
 }
 {% endhighlight %}
@@ -58,7 +58,7 @@ The following image represents the approved standard stamp appearance in the PDF
 
 ![Standard Approved Stamp.](Images/Annotations/approved-stamp.png)
 
-### Adding custom stamps
+### Add custom stamps
 
 You can create a custom stamp from any images and add it to a PDF document. The following example explains how to create a custom stamp from an image in the application and add it to a PDF document using the `AddAnnotation` method of the `SfPdfViewer`.
 
@@ -68,16 +68,16 @@ StampAnnotation CreateCustomStamp()
 {
     int pageNumber = 1;
 
-    //Define the position and size for the stamp to be placed in the PDF page.
+    // Define the position and size for the stamp to be placed in the PDF page.
     RectF bounds = new RectF(50, 50, 200, 100);
 
-    //Create image stream from the image to be used as stamp.
+    // Create image stream from the image to be used as stamp.
     Stream imageStream = this.GetType().Assembly.GetManifestResourceStream("Annotations.Assets." + "Logo.png");
 
-    //Create a custom stamp annotation using the image steeam.
+    // Create a custom stamp annotation using the image steeam.
     StampAnnotation customStamp = new StampAnnotation(imageStream,pageNumber,bounds);
 
-    //Return the stamp annotation.
+    // Return the stamp annotation.
     return customStamp;
 }
 
@@ -85,13 +85,13 @@ void AddCustomStampAnnotation()
 {
     StampAnnotation stampAnnotation = CreateCustomStamp();
 
-    //Add the stamp to the PDF document using `SfPdfViewer` instance.
+    // Add the stamp to the PDF document using `SfPdfViewer` instance.
     PdfViewer.AddAnnotation(stampAnnotation);
 }
 {% endhighlight %}
 {% endtabs %}
 
-## Edit the Selected Annotation
+## Edit the selected stamp
 
 You can edit the properties of the selected stamp annotation programmatically by accessing the selected annotation instance. The selected annotation instance may be obtained from the `AnnotationSelected` event. 
 
@@ -105,10 +105,10 @@ The following example shows how to edit some of the properties of the selected s
 /// <param name="selectedAnnotation">The selected annotation instance that may be obtained from the annotation selected event</param>
 void EditSelectedStampAnnotation(Annotation selectedAnnotation)
 {
-    //Type cast the selected annotation as stamp annotation.
+    // Type cast the selected annotation as stamp annotation.
     if (selectedAnnotation is StampAnnotation stampAnnotation)
     {
-        //Change the opacity to 75%.
+        // Change the opacity to 75%.
         stampAnnotation.Opacity = 0.75f;
     }
 }
