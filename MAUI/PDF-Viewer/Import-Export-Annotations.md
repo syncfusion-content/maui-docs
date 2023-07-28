@@ -7,11 +7,11 @@ control: SfPdfViewer
 documentation: ug
 ---
 
-# Import and Export Annotations
+# Import and Export Annotations in .NET MAUI PDF Viewer (SfPdfViewer)
 
 This section will go through the various functions available in the `SfPdfViewer` to import and export annotations in a PDF document.
 
-## Import Annotations
+## Import annotations
 
 You can add annotations to a PDF document by importing them from FDF and XFDF files by using the `ImportAnnotations` method. You need to provide the stream of the file containing the annotations and the data format information as parameters to the method. The following example explains how to import annotations from an XFDF file, assuming that the file is in the application’s data directory. 
 

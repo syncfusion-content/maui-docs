@@ -7,7 +7,7 @@ control: SfPdfViewer
 documentation: ug
 ---
 
-# Document link navigation
+# Document Link Navigation in .NET MAUI PDF Viewer (SfPdfViewer)
 
 The PDF viewer allows navigating from one part of the PDF document to another using document link annotations. When a document link annotation is tapped, the PDF viewer scrolls to its destination. This type of link annotations is most often used to represent the table of contents of a PDF document. 
 

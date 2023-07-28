@@ -7,22 +7,22 @@ control: SfPdfViewer
 documentation: ug
 ---
 
-# Stamp Annotations
+# Stamp Annotations in .NET MAUI PDF Viewer (SfPdfViewer)
 
 The stamp annotations feature of `SfPdfViewer` allows you to add, remove and modify stamps or custom images in the PDF document. This section will go through the various types and functions available in PDF Viewer for working with stamp annotations.
 
-## Types of Stamps
+## Types of stamps
 
 The following stamp annotation types are now available in the PDF Viewer.
 
 1.	Standard (or built-in) stamps.
 2.	Custom (or image) stamps.
 
-## Adding Stamps
+## Add stamps to a PDF document
 
 This section will go through how to add stamp annotations to a PDF document programmatically to a PDF document.
 
-### Adding Standard Stamps
+### Add standard stamps
 
 There are 18 standard stamp types are available in the `SfPdfViewer` that are most commonly used in documents. The appropriate standard stamp type can be selected from the `StampType` enumeration. 
 
@@ -58,7 +58,7 @@ The following image represents the approved standard stamp appearance in the PDF
 
 ![Standard Approved Stamp.](Images/Annotations/approved-stamp.png)
 
-### Adding custom stamps
+### Add custom stamps
 
 You can create a custom stamp from any images and add it to a PDF document. The following example explains how to create a custom stamp from an image in the application and add it to a PDF document using the `AddAnnotation` method of the `SfPdfViewer`.
 
@@ -91,7 +91,7 @@ void AddCustomStampAnnotation()
 {% endhighlight %}
 {% endtabs %}
 
-## Edit the Selected Annotation
+## Edit the selected stamp
 
 You can edit the properties of the selected stamp annotation programmatically by accessing the selected annotation instance. The selected annotation instance may be obtained from the `AnnotationSelected` event. 
 

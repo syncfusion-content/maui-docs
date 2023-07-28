@@ -7,11 +7,11 @@ control: SfPdfViewer
 documentation: ug
 ---
 
-# Text Markup Annotations
+# Text Markup Annotations in .NET MAUI PDF Viewer (SfPdfViewer)
 
 The text markup annotations feature of `SfPdfViewer` allows you to add, remove and modify text markups in the PDF document. This is useful for making corrections or emphasizing important texts in the document. This section will go through the various types and functions available in PDF Viewer for working with text markup annotations.
 
-## Types of Text Markups
+## Types of text markups
 
 The following text markup annotation types are now available in the PDF Viewer.
 
@@ -25,11 +25,11 @@ The following image shows the appearance of the text markup annotation types.
 
 ![Text Markup Annotation Types.](Images/Annotations/text-markups.png)
 
-## Adding Text Markups
+## Add text markups
 
 This section will go through how to add text markup annotations to a PDF document interactively as well as programmatically to a PDF document.
 
-### Adding Annotations using Annotation Mode
+### Add text markups from annotation mode
 
 You can add text markup annotations to a PDF document by touch (or mouse down) and drag using `AnnotationMode` property of the `SfPdfViewer`. The following steps explains how to add text markup  annotation on a text in a PDF.
 
@@ -78,7 +78,7 @@ void DisableHighlightMode()
 {% endhighlight %}
 {% endtabs %}
 
-### Adding Annotation using Text Selection
+### Add text markups from text selection
 
 Text markups can be added to a PDF document using the text selection without enabling the `AnnotationMode`. Select the text you want in a PDF document, and a context menu with the text markup options will appear after you complete your selection. You can select any of the text markup options to add annotation to a text in the PDF document. 
 
@@ -120,7 +120,7 @@ void AddHighlightAnnotation()
 {% endhighlight %}
 {% endtabs %}
 
-## Annotation Settings
+## Text markup annotation settings
 
 In the text markup annotation mode, the text markups will be added with a default appearance. You can modify the annotation after it has been added to the pages. However, if you need to define the appearance before adding text markups on the document, you can change its default settings using the `AnnotationSettings` property of the `SfPdfViewer`. For that you need to obtain the default text markup annotation settings.
 
@@ -143,7 +143,7 @@ void CustomizeDefaultHighlightSettings()
 {% endhighlight %}
 {% endtabs %}
 
-## Edit the Selected Annotation
+## Edit the selected text markup annotation
 
 You can edit the properties of the selected text markup annotation programmatically by accessing the selected annotation instance. The selected annotation instance may be obtained from the `AnnotationSelected` event. The following example shows how to edit some of the properties of the selected highlight annotation. Similarly, you can modify the other text markup annotations properties.
 
