@@ -96,7 +96,6 @@ To make migration from [Xamarin SfPdfViewer](https://www.syncfusion.com/xamarin-
 <td>Gets or sets the color for highlighting the other matches of the searched text. The default value is <code>Color.FromRgba(255, 255, 0, 50)</code>.
 </td>
 </tr>
-
 <tr>
 <td>{{'[AnnotationMode](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.SfPdfViewer.html#Syncfusion_SfPdfViewer_XForms_SfPdfViewer_AnnotationMode)'| markdownify}}</td>
 <td>{{'[AnnotationMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationMode)'| markdownify}}</td>
@@ -128,294 +127,139 @@ To make migration from [Xamarin SfPdfViewer](https://www.syncfusion.com/xamarin-
 <td>The command that performs the redo operation.</td>
 </tr>
 <tr>
-<td>{{'[Arrow](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.AnnotationMode.html#Syncfusion_SfPdfViewer_XForms_AnnotationMode_Arrow)'| markdownify}}</td>
-<td>Arrow</td>
-<td>Represents the annotation mode for drawing arrow shape.</td>
-</tr>
-<tr>
-<td>{{'[Circle](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.AnnotationMode.html#Syncfusion_SfPdfViewer_XForms_AnnotationMode_Circle)'| markdownify}}</td>
-<td>Circle</td>
-<td>Represents the annotation mode for drawing circle shape.</td>
-</tr>
-<tr>
-<td>{{'[Highlight](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.AnnotationMode.html#Syncfusion_SfPdfViewer_XForms_AnnotationMode_Highlight)'| markdownify}}</td>
-<td>Highlight</td>
-<td>Represents the annotation mode for highlighting text.</td>
-</tr>
-<tr>
-<td>{{'[Ink](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.AnnotationMode.html#Syncfusion_SfPdfViewer_XForms_AnnotationMode_Ink)'| markdownify}}</td>
-<td>Ink</td>
-<td>Represents the annotation mode for drawing free hand inks.</td>
-</tr>
-<tr>
-<td>{{'[Line](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.AnnotationMode.html#Syncfusion_SfPdfViewer_XForms_AnnotationMode_Line)'| markdownify}}</td>
-<td>Line</td>
-<td>Represents the annotation mode for drawing line shape.</td>
-</tr>
-<tr>
-<td>{{'[None](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.AnnotationMode.html#Syncfusion_SfPdfViewer_XForms_AnnotationMode_None)'| markdownify}}</td>
-<td>None</td>
-<td>Represents the mode in which no annotation can be drawn.</td>
-</tr>
-<tr>
-<td>{{'[Rectangle](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.AnnotationMode.html#Syncfusion_SfPdfViewer_XForms_AnnotationMode_Rectangle)'| markdownify}}</td>
-<td>Square</td>
-<td>Represents the annotation mode for drawing square shape.</td>
-</tr>
-<tr>
-<td>{{'[Squiggly](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.AnnotationMode.html#Syncfusion_SfPdfViewer_XForms_AnnotationMode_Squiggly)'| markdownify}}</td>
-<td>Squiggly</td>
-<td>Represents the annotation mode for adding squiggly lines on the text.</td>
-</tr>
-<tr>
-<td>{{'[Strikethrough](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.AnnotationMode.html#Syncfusion_SfPdfViewer_XForms_AnnotationMode_Strikethrough)'| markdownify}}</td>
-<td>StrikeOut</td>
-<td>Represents the annotation mode for striking out text.</td>
-</tr>
-<tr>
-<td>{{'[Underline](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.AnnotationMode.html#Syncfusion_SfPdfViewer_XForms_AnnotationMode_Underline)'| markdownify}}</td>
-<td>Underline</td>
-<td>Represents the annotation mode for underlining text.</td>
-</tr>
-<tr>
 <td>{{'[InkPointsCollection](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.InkAnnotation.html#Syncfusion_SfPdfViewer_XForms_InkAnnotation_InkPointsCollection)'| markdownify}}</td>
-<td>Points Collection</td>
+<td>{{'[Points Collection](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.InkAnnotation.html#Syncfusion_Maui_PdfViewer_InkAnnotation_PointsCollection)'| markdownify}}</td>
 <td>Gets or sets the series of coordinates that represent the ink points of an ink annotation.</td>
 </tr>
 <tr>
-<td>{{'[Bounds](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.InkAnnotation.html#Syncfusion_SfPdfViewer_XForms_InkAnnotation_Bounds)'| markdownify}}</td>
-<td>InkAnnotation.Bounds</td>
-<td>Gets or sets the bounds for the ink annotation.</td>
-</tr>
-<tr>
-<td>{{'[Bounds](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.StampAnnotation.html#Syncfusion_SfPdfViewer_XForms_StampAnnotation_Bounds)'| markdownify}}</td>
-<td>StampAnnotation.Bounds</td>
-<td>Gets or sets the bounds for the stamp annotation.</td>
-</tr>
-<tr>
-<td>{{'[Bounds](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.ShapeAnnotation.html#Syncfusion_SfPdfViewer_XForms_ShapeAnnotation_Bounds)'| markdownify}}</td>
-<td>ShapeAnnotation.Bounds</td>
-<td>Gets or sets the bounds for the shape annotation.</td>
-</tr>
-<tr>
-<td>{{'[Name](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.InkAnnotation.html#Syncfusion_SfPdfViewer_XForms_InkAnnotation_Name)'| markdownify}}</td>
-<td>InkAnnotation.Name</td>
-<td>Gets or sets the name of an annotation.</td>
-</tr>
-<tr>
-<td>{{'[Name](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.StampAnnotation.html#Syncfusion_SfPdfViewer_XForms_StampAnnotation_Name)'| markdownify}}</td>
-<td>StampAnnotation.Name</td>
-<td>Gets or sets the name of an annotation.</td>
-</tr>
-<tr>
 <td>{{'[Name](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.ShapeAnnotation.html#Syncfusion_SfPdfViewer_XForms_ShapeAnnotation_Name)'| markdownify}}</td>
-<td>ShapeAnnotation.Name</td>
+<td>
+<div>{{'[ArrowAnnotation.Name](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.Annotation.html#Syncfusion_Maui_PdfViewer_Annotation_Name)'| markdownify}}</div>
+<div>{{'[CircleAnnotation.Name](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.Annotation.html#Syncfusion_Maui_PdfViewer_Annotation_Name)'| markdownify}}</div>
+<div>{{'[InkAnnotation.Name](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.Annotation.html#Syncfusion_Maui_PdfViewer_Annotation_Name)'| markdownify}}</div>
+<div>{{'[LineAnnotation.Name](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.Annotation.html#Syncfusion_Maui_PdfViewer_Annotation_Name)'| markdownify}}</div>
+<div>{{'[SquareAnnotation.Name](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.Annotation.html#Syncfusion_Maui_PdfViewer_Annotation_Name)'| markdownify}}</div>
+<div>{{'[StampAnnotation.Name](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.Annotation.html#Syncfusion_Maui_PdfViewer_Annotation_Name)'| markdownify}}</div>
+</td>
 <td>Gets or sets the name of an annotation.</td>
-</tr>
-<tr>
-<td>{{'[PageNumber](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.InkAnnotation.html#Syncfusion_SfPdfViewer_XForms_InkAnnotation_PageNumber)'| markdownify}}</td>
-<td>InkAnnotation.PageNumber</td>
-<td>Gets the page number of an annotation.</td>
-</tr>
-<tr>
-<td>{{'[PageNumber](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.StampAnnotation.html#Syncfusion_SfPdfViewer_XForms_StampAnnotation_PageNumber)'| markdownify}}</td>
-<td>StampAnnotation.PageNumber</td>
-<td>Gets the page number of an annotation.</td>
 </tr>
 <tr>
 <td>{{'[PageNumber](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.ShapeAnnotation.html#Syncfusion_SfPdfViewer_XForms_ShapeAnnotation_PageNumber)'| markdownify}}</td>
-<td>ShapeAnnotation.PageNumber</td>
+<td>
+<div>{{'[ArrowAnnotation.PageNumber](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.Annotation.html#Syncfusion_Maui_PdfViewer_Annotation_PageNumber)'| markdownify}}</div>
+<div>{{'[CircleAnnotation.PageNumber](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.Annotation.html#Syncfusion_Maui_PdfViewer_Annotation_PageNumber)'| markdownify}}</div>
+<div>{{'[InkAnnotation.PageNumber](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.Annotation.html#Syncfusion_Maui_PdfViewer_Annotation_PageNumber)'| markdownify}}</div>
+<div>{{'[LineAnnotation.PageNumber](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.Annotation.html#Syncfusion_Maui_PdfViewer_Annotation_PageNumber)'| markdownify}}</div>
+<div>{{'[SquareAnnotation.PageNumber](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.Annotation.html#Syncfusion_Maui_PdfViewer_Annotation_PageNumber)'| markdownify}}</div>
+<div>{{'[StampAnnotation.PageNumber](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.Annotation.html#Syncfusion_Maui_PdfViewer_Annotation_PageNumber)'| markdownify}}</div>
+</td>
 <td>Gets the page number of an annotation.</td>
 </tr>
 <tr>
 <td>{{'[IsLocked](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.AnnotationSettings.html#Syncfusion_SfPdfViewer_XForms_AnnotationSettings_IsLocked)'| markdownify}}</td>
-<td>AnnotationSettings.IsLocked</td>
+<td>
+<div>{{'[AnnotationSettings.IsLocked](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.BaseAnnotationSettings.html#Syncfusion_Maui_PdfViewer_BaseAnnotationSettings_IsLocked)'| markdownify}}</div>
+<div>{{'[CircleAnnotation.IsLocked](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.Annotation.html#Syncfusion_Maui_PdfViewer_Annotation_IsLocked)'| markdownify}}</div>
+<div>{{'[LineAnnotation.IsLocked](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.Annotation.html#Syncfusion_Maui_PdfViewer_Annotation_IsLocked)'| markdownify}}</div>
+<div>{{'[SquareAnnotation.IsLocked](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.Annotation.html#Syncfusion_Maui_PdfViewer_Annotation_IsLocked)'| markdownify}}</div>
+<div>{{'[InkAnnotationSettings.IsLocked](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.BaseAnnotationSettings.html#Syncfusion_Maui_PdfViewer_BaseAnnotationSettings_IsLocked)'| markdownify}}</div>
+<div>{{'[ShapeAnnotationSettings.IsLocked](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.BaseAnnotationSettings.html#Syncfusion_Maui_PdfViewer_BaseAnnotationSettings_IsLocked)'| markdownify}}</div>
+<div>{{'[StampAnnotationSettings.IsLocked](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.BaseAnnotationSettings.html#Syncfusion_Maui_PdfViewer_BaseAnnotationSettings_IsLocked)'| markdownify}}</div>
+<div>{{'[HighlightAnnotationSettings.IsLocked](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.BaseAnnotationSettings.html#Syncfusion_Maui_PdfViewer_BaseAnnotationSettings_IsLocked)'| markdownify}}</div>
+<div>{{'[SquigglyAnnotationSettings.IsLocked](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.BaseAnnotationSettings.html#Syncfusion_Maui_PdfViewer_BaseAnnotationSettings_IsLocked)'| markdownify}}</div>
+<div>{{'[StrikeOutAnnotationSettings.IsLocked](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.BaseAnnotationSettings.html#Syncfusion_Maui_PdfViewer_BaseAnnotationSettings_IsLocked)'| markdownify}}</div>
+<div>{{'[UnderlineAnnotationSettings.IsLocked](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.BaseAnnotationSettings.html#Syncfusion_Maui_PdfViewer_BaseAnnotationSettings_IsLocked)'| markdownify}}</div>
+</td>
 <td>Gets or sets a value indicating whether annotations should be locked.</td>
-</tr>
-<tr>
-<td>{{'[IsLocked](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.RectangleAnnotation.html#Syncfusion_SfPdfViewer_XForms_RectangleAnnotation_IsLocked)'| markdownify}}</td>
-<td>SquareAnnotation.IsLocked</td>
-<td>Gets or sets a value indicating whether annotations should be locked.</td>
-</tr>
-<tr>
-<td>{{'[IsLocked](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.CircleAnnotation.html#Syncfusion_SfPdfViewer_XForms_CircleAnnotation_IsLocked)'| markdownify}}</td>
-<td>CircleAnnotation.IsLocked</td>
-<td>Gets or sets a value indicating whether annotations should be locked.</td>
-</tr>
-<tr>
-<td>{{'[IsLocked](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.LineAnnotation.html#Syncfusion_SfPdfViewer_XForms_LineAnnotation_IsLocked)'| markdownify}}</td>
-<td>LineAnnotation.IsLocked</td>
-<td>Gets or sets a value indicating whether annotations should be locked.</td>
-</tr>
-<tr>
-<td>{{'[IsLocked](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.InkAnnotationSettings.html#Syncfusion_SfPdfViewer_XForms_InkAnnotationSettings_IsLocked)'| markdownify}}</td>
-<td>InkAnnotationSettings.IsLocked</td>
-<td>Gets or sets a value indicating whether annotations should be locked.</td>
-</tr>
-<tr>
-<td>{{'[IsLocked](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.ShapeAnnotationSettings.html#Syncfusion_SfPdfViewer_XForms_ShapeAnnotationSettings_IsLocked)'| markdownify}}</td>
-<td>ShapeAnnotationSettings.IsLocked</td>
-<td>Gets or sets a value indicating whether annotations should be locked.</td>
-</tr>
-<tr>
-<td>{{'[IsLocked](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.StampAnnotation.html#Syncfusion_SfPdfViewer_XForms_StampAnnotation_IsLocked)'| markdownify}}</td>
-<td>StampAnnotationSettings.IsLocked</td>
-<td>Gets or sets a value indicating whether annotations should be locked.</td>
-</tr>
-<tr>
-<td>{{'[IsLocked](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.HighlightAnnotationSettings.html#Syncfusion_SfPdfViewer_XForms_HighlightAnnotationSettings_IsLocked)'| markdownify}}</td>
-<td>HighlightAnnotationSettings.IsLocked</td>
-<td>Gets or sets a value indicating whether annotations should be locked.</td>
-</tr>
-<tr>
-<td>{{'[IsLocked](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.SquigglyAnnotationSettings.html#Syncfusion_SfPdfViewer_XForms_SquigglyAnnotationSettings_IsLocked)'| markdownify}}</td>
-<td>SquigglyAnnotationSettings.IsLocked</td>
-<td>Gets or sets a value indicating whether annotations should be locked.</td>
-</tr>
-<tr>
-<td>{{'[IsLocked](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.StrikethroughAnnotationSettings.html#Syncfusion_SfPdfViewer_XForms_StrikethroughAnnotationSettings_IsLocked)'| markdownify}}</td>
-<td>StrikeOutAnnotationSettings.IsLocked</td>
-<td>Gets or sets a value indicating whether annotations should be locked.</td>
-</tr>
-<tr>
-<td>{{'[IsLocked](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.UnderlineAnnotationSettings.html#Syncfusion_SfPdfViewer_XForms_UnderlineAnnotationSettings_IsLocked)'| markdownify}}</td>
-<td>UnderlineAnnotationSettings.IsLocked</td>
-<td>Gets or sets a value indicating whether annotations should be locked.</td>
-</tr>
-<tr>
-<td>{{'[MinimumSize](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.InkAnnotationSettings.html#Syncfusion_SfPdfViewer_XForms_InkAnnotationSettings_MinimumSize'| markdownify}}</td>
-<td>InkAnnotationSettings.MinimumSize</td>
-<td>Gets or sets the minimum size for ink annotation.</td>
-</tr>
-<tr>
-<td>{{'[MinimumSize](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.ShapeAnnotationSettings.html#Syncfusion_SfPdfViewer_XForms_ShapeAnnotationSettings_MinimumSize)'| markdownify}}</td>
-<td>MinimumSize</td>
-<td>Gets or sets the minimum size for shape annotations.</td>
 </tr>
 <tr>
 <td>{{'[Thickness](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.InkAnnotationSettings.html#Syncfusion_SfPdfViewer_XForms_InkAnnotationSettings_Thickness)'| markdownify}}</td>
-<td>InkAnnotationSettings.BorderWidth</td>
-<td>Gets or sets the border thickness of an ink annotation.</td>
-</tr>
-<tr>
-<td>{{'[Thickness](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.ShapeAnnotationSettings.html#Syncfusion_SfPdfViewer_XForms_ShapeAnnotationSettings_Thickness)'| markdownify}}</td>
-<td>ShapeAnnotationSettings.BorderWidth</td>
-<td>Gets or sets the border thickness of an shape annotation.</td>
+<td>
+<div>{{'[InkAnnotationSettings.BorderWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.InkAnnotationSettings.html#Syncfusion_Maui_PdfViewer_InkAnnotationSettings_BorderWidth)'| markdownify}}</div>
+<div>{{'[ShapeAnnotationSettings.BorderWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.ShapeAnnotationSettings.html#Syncfusion_Maui_PdfViewer_ShapeAnnotationSettings_BorderWidth)'| markdownify}}</div>
+</td>
+<td>Gets or sets the border thickness of an annotation.</td>
 </tr>
 <tr>
 <td>{{'[EnableSeparateAttributesForEachStroke](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.InkAnnotationSettings.html#Syncfusion_SfPdfViewer_XForms_InkAnnotationSettings_EnableSeparateAttributesForEachStroke)'| markdownify}}</td>
-<td>AggregateInkStrokes</td>
+<td>{{'[AggregateInkStrokes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.InkAnnotationSettings.html#Syncfusion_Maui_PdfViewer_InkAnnotationSettings_AggregateInkStrokes)'| markdownify}}</td>
 <td>Gets or sets a value indicating whether each ink strokes should be treated as separate ink annotations. </td>
 </tr>
 <tr>
 <td>{{'[Color](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.InkAnnotationSettings.html#Syncfusion_SfPdfViewer_XForms_InkAnnotationSettings_Color)'| markdownify}}</td>
-<td>InkAnnotationSettings.Color</td>
-<td>Gets or sets the default stroke color of annotations.</td>
+<td>
+<div>{{'[InkAnnotationSettings.Color](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.AnnotationAppearanceSettings.html#Syncfusion_Maui_PdfViewer_AnnotationAppearanceSettings_Color)'| markdownify}}</div>
+</td>
+<td>Gets or sets the default stroke color of an Ink annotation.</td>
 </tr>
 <tr>
 <td>{{'[StrokeColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.ShapeAnnotationSettings.html#Syncfusion_SfPdfViewer_XForms_ShapeAnnotationSettings_StrokeColor)'| markdownify}}</td>
-<td>ShapeAnnotationSettings.Color</td>
-<td>Gets or sets the default stroke color of annotations.</td>
-</tr>
-<tr>
-<td>{{'[StrokeColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.SelectorSettings.html#Syncfusion_SfPdfViewer_XForms_SelectorSettings_StrokeColor)'| markdownify}}</td>
-<td>AnnotationSelectorSettings.Color</td>
-<td>Gets or sets the default stroke color of annotations.</td>
-</tr>
-<tr>
-<td>{{'[Color](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.HighlightAnnotationSettings.html#Syncfusion_SfPdfViewer_XForms_HighlightAnnotationSettings_Color)'| markdownify}}</td>
-<td>HighlightAnnotationSettings.Color</td>
-<td>Gets or sets the default stroke color of annotations.</td>
-</tr>
-<tr>
-<td>{{'[Color](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.SquigglyAnnotationSettings.html#Syncfusion_SfPdfViewer_XForms_SquigglyAnnotationSettings_Color)'| markdownify}}</td>
-<td>SquigglyAnnotationSettings.Color</td>
-<td>Gets or sets the default stroke color of annotations.</td>
-</tr>
-<tr>
-<td>{{'[Color](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.StrikethroughAnnotationSettings.html#Syncfusion_SfPdfViewer_XForms_StrikethroughAnnotationSettings_Color)'| markdownify}}</td>
-<td>StrikeOutAnnotationSettings.Color</td>
-<td>Gets or sets the default stroke color of annotations.</td>
-</tr>
-<tr>
-<td>{{'[Color](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.UnderlineAnnotationSettings.html#Syncfusion_SfPdfViewer_XForms_UnderlineAnnotationSettings_Color)'| markdownify}}</td>
-<td>UnderlineAnnotationSettings.Color</td>
+<td>
+<div>{{'[ShapeAnnotationSettings.Color](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.AnnotationAppearanceSettings.html#Syncfusion_Maui_PdfViewer_AnnotationAppearanceSettings_Color)'| markdownify}}</div>
+<div>{{'[AnnotationSelectorSettings.Color](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.AnnotationSelectorSettings.html#Syncfusion_Maui_PdfViewer_AnnotationSelectorSettings_Color)'| markdownify}}</div>
+<div>{{'[HighlightAnnotationSettings.Color](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.AnnotationAppearanceSettings.html#Syncfusion_Maui_PdfViewer_AnnotationAppearanceSettings_Color)'| markdownify}}</div>
+<div>{{'[SquigglyAnnotationSettings.Color](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.AnnotationAppearanceSettings.html#Syncfusion_Maui_PdfViewer_AnnotationAppearanceSettings_Color)'| markdownify}}</div>
+<div>{{'[StrikeOutAnnotationSettings.Color](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.AnnotationAppearanceSettings.html#Syncfusion_Maui_PdfViewer_AnnotationAppearanceSettings_Color)'| markdownify}}</div>
+<div>{{'[UnderlineAnnotationSettings.Color](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.AnnotationAppearanceSettings.html#Syncfusion_Maui_PdfViewer_AnnotationAppearanceSettings_Color)'| markdownify}}</div>
+</td>
 <td>Gets or sets the default stroke color of annotations.</td>
 </tr>
 <tr>
 <td>{{'[Opacity](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.InkAnnotationSettings.html#Syncfusion_SfPdfViewer_XForms_InkAnnotationSettings_Opacity)'| markdownify}}</td>
-<td>InkAnnotationSettings.Opacity</td>
-<td>Gets or sets the default stroke color of annotations.</td>
-</tr>
-<tr>
-<td>{{'[Opacity](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.ShapeAnnotationSettings.html#Syncfusion_SfPdfViewer_XForms_ShapeAnnotationSettings_Opacity)'| markdownify}}</td>
-<td>ShapeAnnotationSettings.Opacity</td>
-<td>Gets or sets the default stroke color of annotations.</td>
-</tr>
-<tr>
-<td>{{'[Opacity](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.HighlightAnnotationSettings.html#Syncfusion_SfPdfViewer_XForms_HighlightAnnotationSettings_Opacity)'| markdownify}}</td>
-<td>HighlightAnnotationSettings.Opacity</td>
-<td>Gets or sets the default opacity of annotations.</td>
-</tr>
-<tr>
-<td>{{'[Opacity](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.SquigglyAnnotationSettings.html#Syncfusion_SfPdfViewer_XForms_SquigglyAnnotationSettings_Opacity)'| markdownify}}</td>
-<td>SquigglyAnnotationSettings.Opacity</td>
-<td>Gets or sets the default opacity of annotations.</td>
-</tr>
-<tr>
-<td>{{'[Opacity](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.StrikethroughAnnotationSettings.html#Syncfusion_SfPdfViewer_XForms_StrikethroughAnnotationSettings_Opacity)'| markdownify}}</td>
-<td>StrikeOutAnnotationSettings.Opacity</td>
-<td>Gets or sets the default opacity of annotations.</td>
-</tr>
-<tr>
-<td>{{'[Opacity](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.UnderlineAnnotationSettings.html#Syncfusion_SfPdfViewer_XForms_UnderlineAnnotationSettings_Opacity)'| markdownify}}</td>
-<td>UnderlineAnnotationSettings.Opacity</td>
+<td>
+<div>{{'[InkAnnotationSettings.Opacity](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.AnnotationAppearanceSettings.html#Syncfusion_Maui_PdfViewer_AnnotationAppearanceSettings_Opacity)'| markdownify}}</div>
+<div>{{'[ShapeAnnotationSettings.Opacity](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.AnnotationAppearanceSettings.html#Syncfusion_Maui_PdfViewer_AnnotationAppearanceSettings_Opacity)'| markdownify}}</div>
+<div>{{'[HighlightAnnotationSettings.Opacity](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.AnnotationAppearanceSettings.html#Syncfusion_Maui_PdfViewer_AnnotationAppearanceSettings_Opacity)'| markdownify}}</div>
+<div>{{'[SquigglyAnnotationSettings.Opacity](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.AnnotationAppearanceSettings.html#Syncfusion_Maui_PdfViewer_AnnotationAppearanceSettings_Opacity)'| markdownify}}</div>
+<div>{{'[StrikeOutAnnotationSettings.Opacity](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.AnnotationAppearanceSettings.html#Syncfusion_Maui_PdfViewer_AnnotationAppearanceSettings_Opacity)'| markdownify}}</div>
+<div>{{'[UnderlineAnnotationSettings.Opacity](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.AnnotationAppearanceSettings.html#Syncfusion_Maui_PdfViewer_AnnotationAppearanceSettings_Opacity)'| markdownify}}</div>
+</td>
 <td>Gets or sets the default opacity of annotations.</td>
 </tr>
 <tr>
 <td>{{'[LockedStrokeColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.SelectorSettings.html#Syncfusion_SfPdfViewer_XForms_SelectorSettings_LockedStrokeColor)'| markdownify}}</td>
-<td>LockedColor</td>
+<td>{{'[LockedColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.AnnotationSelectorSettings.html#Syncfusion_Maui_PdfViewer_AnnotationSelectorSettings_LockedColor)'| markdownify}}</td>
 <td>Gets or sets the default color of annotation selector when the selected annotation is locked.</td>
 </tr>
 <tr>
 <tr>
 <td>{{'[LinePoints](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.ShapeAnnotation.html#Syncfusion_SfPdfViewer_XForms_ShapeAnnotation_LinePoints)'| markdownify}}</td>
-<td>LineAnnotation.Points</td>
+<td>{{'[LineAnnotation.Points](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.LineAnnotation.html#Syncfusion_Maui_PdfViewer_LineAnnotation_Points)'| markdownify}}</td>
 <td>Gets or sets the series of coordinates that represent the starting point and ending point of a line annotation.</td>
 </tr>
 <tr>
 <td>{{'[Rectangle](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.AnnotationSettings.html#Syncfusion_SfPdfViewer_XForms_AnnotationSettings_Rectangle)'| markdownify}}</td>
-<td>ShapeAnnotationSettings.Square</td>
+<td>{{'[ShapeAnnotationSettings.Square](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.AnnotationSettings.html#Syncfusion_Maui_PdfViewer_AnnotationSettings_Square)'| markdownify}}</td>
 <td>Gets or sets the default settings for square annotations.</td>
 </tr>
 <tr>
 <td>{{'[Circle](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.AnnotationSettings.html#Syncfusion_SfPdfViewer_XForms_AnnotationSettings_Circle)'| markdownify}}</td>
-<td>ShapeAnnotationSettings.Circle</td>
+<td>{{'[ShapeAnnotationSettings.Circle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.AnnotationSettings.html#Syncfusion_Maui_PdfViewer_AnnotationSettings_Circle)'| markdownify}}</td>
 <td>Gets or sets the default settings for circle annotations.</td>
 </tr>
 <tr>
 <td>{{'[Line](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.AnnotationSettings.html#Syncfusion_SfPdfViewer_XForms_AnnotationSettings_Line)'| markdownify}}</td>
-<td>ShapeAnnotationSettings.Line</td>
+<td>{{'[ShapeAnnotationSettings.Line](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.AnnotationSettings.html#Syncfusion_Maui_PdfViewer_AnnotationSettings_Line)'| markdownify}}</td>
 <td>Gets or sets the default settings for line annotations.</td>
 </tr>
 <tr>
 <td>{{'[Arrow](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.AnnotationSettings.html#Syncfusion_SfPdfViewer_XForms_AnnotationSettings_Arrow)'| markdownify}}</td>
-<td>ShapeAnnotationSettings.Arrow</td>
+<td>{{'[ShapeAnnotationSettings.Arrow](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.AnnotationSettings.html#Syncfusion_Maui_PdfViewer_AnnotationSettings_Arrow)'| markdownify}}</td>
 <td>Gets or sets the default settings for arrow annotations.</td>
 </tr>
 <tr>
 <td>{{'[Ink](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.AnnotationSettings.html#Syncfusion_SfPdfViewer_XForms_AnnotationSettings_Ink)'| markdownify}}</td>
-<td>InkAnnotationSettings.Ink</td>
+<td>{{'[InkAnnotationSettings.Ink](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.AnnotationSettings.html#Syncfusion_Maui_PdfViewer_AnnotationSettings_Ink)'| markdownify}}</td>
 <td>Gets or sets the default settings for ink annotations.</td>
 </tr>
 <tr>
 <td>{{'[Stamp](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.AnnotationSettings.html#Syncfusion_SfPdfViewer_XForms_AnnotationSettings_Stamp)'| markdownify}}</td>
-<td>StampAnnotationSettings.Stamp</td>
+<td>{{'[StampAnnotationSettings.Stamp](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.AnnotationSettings.html#Syncfusion_Maui_PdfViewer_AnnotationSettings_Stamp)'| markdownify}}</td>
 <td>Gets or sets the default settings for stamp annotations.</td>
 </tr>
 <tr>
 <td>{{'[Selector](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.AnnotationSettings.html#Syncfusion_SfPdfViewer_XForms_AnnotationSettings_Selector)'| markdownify}}</td>
-<td>AnnotationSelectorSettings.Selector</td>
+<td>{{'[AnnotationSelectorSettings.Selector](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.AnnotationSettings.html#Syncfusion_Maui_PdfViewer_AnnotationSettings_Selector)'| markdownify}}</td>
 <td>Gets or sets the default settings for the annotation selector.</td>
 </tr>
 </table>
@@ -435,8 +279,7 @@ To make migration from [Xamarin SfPdfViewer](https://www.syncfusion.com/xamarin-
 <tr>
 <td>{{'[SearchInitiated](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.SfPdfViewer.html#Syncfusion_SfPdfViewer_XForms_SfPdfViewer_SearchInitiated)'| markdownify}}, {{'[SearchCompleted](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.SfPdfViewer.html#Syncfusion_SfPdfViewer_XForms_SfPdfViewer_SearchCompleted)'| markdownify}}</td>
 <td>{{'[TextSearchProgress](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_TextSearchProgress)'| markdownify }}</td>
-<td>Occurs when the text search is in progress.
-</td>
+<td>Occurs when the text search is in progress.</td>
 </tr>
 <tr>
 <td>{{'[TextSelectionCompleted](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.SfPdfViewer.html#Syncfusion_SfPdfViewer_XForms_SfPdfViewer_TextSelectionCompleted)'| markdownify}}</td>
@@ -551,6 +394,25 @@ To make migration from [Xamarin SfPdfViewer](https://www.syncfusion.com/xamarin-
 <td>{{'[UnhandledConditionEventArgs](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.UnhandledConditionEventArgs.html#Syncfusion_SfPdfViewer_XForms_UnhandledConditionEventArgs)'| markdownify }}</td>
 <td>{{'[DocumentLoadFailedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.DocumentLoadFailedEventArgs.html)'| markdownify }}</td>
 <td>Provides data for the {{'[DocumentLoadFailed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_DocumentLoadFailed)'| markdownify }} event.</td>
+</tr>
+<tr>
+<td>{{'[TextMarkupAnnotation](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.TextMarkupAnnotation.html)'| markdownify }}</td>
+<td>
+<div>{{'[HighlightAnnotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.HighlightAnnotation.html)'| markdownify }} </div>
+<div>{{'[SquigglyAnnotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SquigglyAnnotation.html)'| markdownify }} </div>
+<div>{{'[StrikeOutAnnotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.StrikeOutAnnotation.html)'| markdownify }} </div>
+<div>{{'[UnderlineAnnotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.UnderlineAnnotation.html)'| markdownify }} </div>
+</td>
+<td>Represents the textmarkup annotation on the text contents in the page.</td>
+</tr>
+<tr>
+<td>{{'[ShapeAnnotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.ShapeAnnotation.html)'| markdownify }}</td>
+<td>
+<div>{{'[CircleAnnotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.CircleAnnotation.html)'| markdownify }} </div>
+<div>{{'[LineAnnotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.InkAnnotation.html)'| markdownify }} </div>
+<div>{{'[SquareAnnotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SquareAnnotation.html)'| markdownify }} </div>
+</td>
+<td>Represents an annotation that displays a shape on the page.</td>
 </tr>
 </table>
 
