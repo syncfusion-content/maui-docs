@@ -7,26 +7,26 @@ control: SfPdfViewer
 documentation: ug
 ---
 
-# Stamp Annotations
+# Stamp Annotations in .NET MAUI PDF Viewer (SfPdfViewer)
 
-The stamp annotations feature of `SfPdfViewer` allows you to add, remove and modify stamps or custom images in the PDF document. This section will go through the various types and functions available in PDF Viewer for working with stamp annotations.
+The stamp annotations feature of [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) allows you to add, remove and modify stamps or custom images in the PDF document. This section will go through the various types and functions available in PDF Viewer for working with stamp annotations.
 
-## Types of Stamps
+## Types of stamps
 
 The following stamp annotation types are now available in the PDF Viewer.
 
 1.	Standard (or built-in) stamps.
 2.	Custom (or image) stamps.
 
-## Adding Stamps
+## Adding stamps
 
 This section will go through how to add stamp annotations to a PDF document programmatically to a PDF document.
 
-### Adding Standard Stamps
+### Adding standard stamps
 
-There are 18 standard stamp types are available in the `SfPdfViewer` that are most commonly used in documents. The appropriate standard stamp type can be selected from the `StampType` enumeration. 
+There are 18 standard stamp types are available in the `SfPdfViewer` that are most commonly used in documents. The appropriate standard stamp type can be selected from the [StampType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.StampType.html) enumeration. 
 
-The following example explains how to create a `Approved` standard stamp and add it to the first page of a PDF document using the `AddAnnotation` method of the `SfPdfViewer`.
+The following example explains how to create a [Approved](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.StampType.html#Syncfusion_Maui_PdfViewer_StampType_Approved) standard stamp and add it to the first page of a PDF document using the [AddAnnotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AddAnnotation_Syncfusion_Maui_PdfViewer_Annotation_) method of the `SfPdfViewer`.
 
 {% tabs %}
 {% highlight C# %}
@@ -91,9 +91,9 @@ void AddCustomStampAnnotation()
 {% endhighlight %}
 {% endtabs %}
 
-## Edit the Selected Annotation
+## Edit the selected annotation
 
-You can edit the properties of the selected stamp annotation programmatically by accessing the selected annotation instance. The selected annotation instance may be obtained from the `AnnotationSelected` event. 
+You can edit the properties of the selected stamp annotation programmatically by accessing the selected annotation instance. The selected annotation instance may be obtained from the [AnnotationSelected](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationSelected) event. 
 
 The following example shows how to edit some of the properties of the selected stamp annotation. Similarly, you can modify the other properties if required.
 

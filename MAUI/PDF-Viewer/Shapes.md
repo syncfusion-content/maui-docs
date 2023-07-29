@@ -7,11 +7,11 @@ control: SfPdfViewer
 documentation: ug
 ---
 
-# Shape Annotations
+# Shape Annotations in .NET MAUI PDF Viewer (SfPdfViewer)
 
-The shape annotations feature of `SfPdfViewer` allows you to add, remove and modify shapes in the PDF document. This is useful for making corrections or emphasizing important points in the document. This section will go through the various types and functions available in PDF Viewer for working with shape annotations.
+The shape annotations feature of [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) allows you to add, remove and modify shapes in the PDF document. This is useful for making corrections or emphasizing important points in the document. This section will go through the various types and functions available in PDF Viewer for working with shape annotations.
 
-## Types of Shapes
+## Types of shapes
 
 The following shape annotation types are now available in the PDF Viewer.
 
@@ -20,20 +20,20 @@ The following shape annotation types are now available in the PDF Viewer.
 3.	Line.
 4.	Square.
 
-## Adding Annotations
+## Adding annotations
 
 This section will go through how to add shape annotations to a PDF document interactively by drawing on the PDF document as well as programmatically.
 
-### Adding Annotations with UI Interaction
+### Adding annotations with UI interaction
 
 You can draw and add shape annotations to a PDF document interactively by touch (or mouse down) and drag. The following steps explains how to draw shape annotation on a PDF.
 
-1.	Set the `AnnotationMode` property of the SfPdfViewer to any shape (say `Circle`). It activates the circle drawing mode on the control.
+1.	Set the [AnnotationMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationMode) property of the SfPdfViewer to any shape (say [Circle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.AnnotationMode.html#Syncfusion_Maui_PdfViewer_AnnotationMode_Circle)). It activates the circle drawing mode on the control.
 2.	Place your finger (or mouse) on the screen, where you want to start drawing the circle.
 3.	Draw the circle by dragging the finger (or cursor) across the screen.
 4.	Finish the circle by releasing the finger (or cursor).
 5.	Repeat the steps 2-4, if you want to create multiple circles on other areas during the drawing mode.
-6.	Once you have done, set the `AnnotationMode` to `None`. It will disable the circle drawing mode and save the drawn circles to the PDF pages as circle annotations. 
+6.	Once you have done, set the `AnnotationMode` to [None](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.AnnotationMode.html#Syncfusion_Maui_PdfViewer_AnnotationMode_None). It will disable the circle drawing mode and save the drawn circles to the PDF pages as circle annotations. 
 7.	You can later move, resize, or edit the annotation.
 
 The following code explains how to enable the circle annotation mode. Similarly, you can change the annotation mode for drawing other shapes.
@@ -68,9 +68,9 @@ void DisableCircleDrawingMode()
 {% endhighlight %}
 {% endtabs %}
 
-### Adding Annotations Programmatically
+### Adding annotations programmatically
 
-You can create and add circle annotation to a PDF document programmatically using the `AddAnnotation` method of the `SfPdfViewer`. The following example explains how to create a circle annotation and add it to the first page of a PDF document. Similarly, you can add other shapes also.
+You can create and add circle annotation to a PDF document programmatically using the [AddAnnotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AddAnnotation_Syncfusion_Maui_PdfViewer_Annotation_) method of the `SfPdfViewer`. The following example explains how to create a circle annotation and add it to the first page of a PDF document. Similarly, you can add other shapes also.
 
 {% tabs %}
 {% highlight C# %}
@@ -102,9 +102,9 @@ void AddCircleAnnotation()
 {% endhighlight %}
 {% endtabs %}
 
-## Annotation Settings
+## Annotation settings
 
-In the shape annotation mode, the shape annotations will be drawn with a default appearance. You can modify the annotation after it has been added to the pages. However, if you need to define the appearance before drawing on the document, you can change its default settings using the `AnnotationSettings` property of the `SfPdfViewer`. For that you need to obtain the default shape annotation settings.
+In the shape annotation mode, the shape annotations will be drawn with a default appearance. You can modify the annotation after it has been added to the pages. However, if you need to define the appearance before drawing on the document, you can change its default settings using the [AnnotationSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationSettings) property of the `SfPdfViewer`. For that you need to obtain the default shape annotation settings.
 
 The following example explains how to obtain the default circle annotation settings and modify some of its properties. Similarly, you can modify properties of other shape annotations also.
 
@@ -129,9 +129,9 @@ void CustomizeDefaultCircleSettings()
 {% endhighlight %}
 {% endtabs %}
 
-## Edit the Selected Annotation
+## Edit the selected annotation
 
-You can edit the properties of the selected shape annotation programmatically by accessing the selected annotation instance. The selected annotation instance may be obtained from the `AnnotationSelected` event. The following example shows how to edit some of the properties of the selected circle annotation. Similarly, you can modify the other shape annotations properties.
+You can edit the properties of the selected shape annotation programmatically by accessing the selected annotation instance. The selected annotation instance may be obtained from the [AnnotationSelected](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationSelected) event. The following example shows how to edit some of the properties of the selected circle annotation. Similarly, you can modify the other shape annotations properties.
 
 {% tabs %}
 {% highlight C# %}

@@ -7,11 +7,11 @@ control: SfPdfViewer
 documentation: ug
 ---
 
-# Ink Annotation
+# Ink Annotation in .NET MAUI PDF Viewer (SfPdfViewer)
 
 The ink annotation feature of SfPdfViewer allows you to add, remove and modify free hand drawings (ink) in the PDF document. This is useful for making corrections or emphasizing important points in the document. This section will go through the various functions available in the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) for working with ink annotations.
 
-## Adding Ink Annotations
+## Adding ink annotations
 
 This section will go through how to add ink annotations to a PDF document interactively by drawing on the PDF document as well as programmatically.
 
@@ -19,12 +19,12 @@ This section will go through how to add ink annotations to a PDF document intera
 
 You can draw and add ink annotations to a PDF document with UI interaction using touch or mouse. The following steps explains how to draw ink annotation on a PDF.
 
-1.	Set the `AnnotationMode` property of the SfPdfViewer to `Ink`. It activates the ink drawing mode on the control.
+1.	Set the [AnnotationMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationMode) property of the SfPdfViewer to [Ink](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.AnnotationMode.html#Syncfusion_Maui_PdfViewer_AnnotationMode_Ink). It activates the ink drawing mode on the control.
 2.	Place your finger (or mouse) on the screen, where you want to start drawing the ink stroke.
 3.	Draw the stroke by dragging the finger (or cursor) across the screen.
 4.	Finish the stroke by releasing the finger (or cursor).
 5.	Repeat the steps 2-4, if you want to create multiple strokes on other areas during the ink drawing mode.
-6.	Once you have done, set the `AnnotationMode` to `None`. It will disable the drawing mode and save the drawn strokes to the PDF page as a single ink annotation.
+6.	Once you have done, set the `AnnotationMode` to [None](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.AnnotationMode.html#Syncfusion_Maui_PdfViewer_AnnotationMode_None). It will disable the drawing mode and save the drawn strokes to the PDF page as a single ink annotation.
 7.	You can later move, resize, or edit the annotation.
 
 The following code explains how to enable the ink annotation mode.
@@ -63,9 +63,9 @@ void DisableInkDrawingMode()
 {% endhighlight %}
 {% endtabs %}
 
-## Adding Annotations Programmatically
+## Adding annotations programmatically
 
-You can create and add an ink annotation to a PDF document programmatically using the `AddAnnotation` method of the `SfPdfViewer`. The following example explains how to create an ink annotation and add it to the first page of a PDF document.
+You can create and add an ink annotation to a PDF document programmatically using the [AddAnnotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AddAnnotation_Syncfusion_Maui_PdfViewer_Annotation_) method of the `SfPdfViewer`. The following example explains how to create an ink annotation and add it to the first page of a PDF document.
 
 {% tabs %}
 {% highlight C# %}
@@ -102,13 +102,13 @@ void AddInkAnnotation()
 {% endhighlight %}
 {% endtabs %}
 
-## Annotation Settings
+## Annotation settings
 
-In the ink annotation mode, the ink annotation will be drawn with a default appearance and behavior. You can modify the annotation after it has been added to the pages. However, if you need to define the appearance and behavior before drawing on the document, you can change its default settings using the `AnnotationSettings` property of the `SfPdfViewer`.
+In the ink annotation mode, the ink annotation will be drawn with a default appearance and behavior. You can modify the annotation after it has been added to the pages. However, if you need to define the appearance and behavior before drawing on the document, you can change its default settings using the [AnnotationSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationSettings) property of the `SfPdfViewer`.
 
-### Customize the Default Appearance
+### Customize the default appearance
 
-You can customize the default appearance of ink annotation using the `InkAnnotationSettings`. The following example explains how to obtain the default ink annotation settings and modify its appearance properties. Similarly, you can modify other available properties also.
+You can customize the default appearance of ink annotation using the [InkAnnotationSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.InkAnnotationSettings.html). The following example explains how to obtain the default ink annotation settings and modify its appearance properties. Similarly, you can modify other available properties also.
 
 {% tabs %}
 {% highlight C# %}
@@ -125,9 +125,9 @@ void CustomizeDefaultInkSettings()
 {% endhighlight %}
 {% endtabs %}
 
-### Consider Strokes as Individual Ink Annotations
+### Consider each stroke as a separate ink annotation
 
-When drawing ink annotations on a PDF document interactively, all the strokes that are created during a session are treated as a single ink annotation. The session here refers to the duration between enabling and disabling the ink drawing mode. However, if you wish to consider each stroke as an individual ink annotation, set the `AggregateInkStrokes` property of the default ink annotation settings to `false`. This allows you to access and modify individual strokes. The following example explains how to access the default ink annotation settings and set the property to `false`.
+When drawing ink annotations on a PDF document interactively, all the strokes that are created during a session are treated as a single ink annotation. The session here refers to the duration between enabling and disabling the ink drawing mode. However, if you wish to consider each stroke as an individual ink annotation, set the [AggregateInkStrokes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.InkAnnotationSettings.html#Syncfusion_Maui_PdfViewer_InkAnnotationSettings_AggregateInkStrokes) property of the default ink annotation settings to `false`. This allows you to access and modify individual strokes. The following example explains how to access the default ink annotation settings and set the property to `false`.
 
 {% tabs %}
 {% highlight C# %}
@@ -142,9 +142,9 @@ void DisableAggregateInkStrokes()
 {% endhighlight %}
 {% endtabs %}
 
-## Edit the Selected Annotation
+## Edit the selected annotation
 
-You can edit the properties of the selected ink annotation programmatically by accessing the selected annotation instance. The selected annotation instance may be obtained from the `AnnotationSelected` event. The following example shows how to edit some of the properties of the selected ink annotation. Similar you can modify the other properties.
+You can edit the properties of the selected ink annotation programmatically by accessing the selected annotation instance. The selected annotation instance may be obtained from the [AnnotationSelected](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationSelected) event. The following example shows how to edit some of the properties of the selected ink annotation. Similar you can modify the other properties.
 
 {% tabs %}
 {% highlight C# %}

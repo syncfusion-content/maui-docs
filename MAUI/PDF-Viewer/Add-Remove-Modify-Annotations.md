@@ -7,17 +7,17 @@ control: SfPdfViewer
 documentation: ug
 ---
 
-# Add, Remove and Edit Annotations
+# Add, Remove and Edit Annotations in .NET MAUI PDF Viewer (SfPdfViewer)
 
 This section will go through the various functions available in the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) for adding, removing and  editing annotations in a PDF document. 
 
-## Add Annotations to a PDF Document
+## Add annotations to a PDF document
 
 This section will go through how to add annotations to a PDF document programmatically.
 
-### Add Annotations Programmatically 
+### Add annotations programmatically 
 
-You can add a new annotation to the PDF document programmatically by creating an annotation instance and providing it as a parameter to the `AddAnnotation` method. The following example shows how to create an instance of a circle annotation and add it to the PDF document. Similarly, you can create and add other types of annotation. 
+You can add a new annotation to the PDF document programmatically by creating an annotation instance and providing it as a parameter to the [AddAnnotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AddAnnotation_Syncfusion_Maui_PdfViewer_Annotation_) method. The following example shows how to create an instance of a circle annotation and add it to the PDF document. Similarly, you can create and add other types of annotation. 
 
 {% tabs %}
 {% highlight c# %}
@@ -42,9 +42,9 @@ void AddCircleAnnotation()
 {% endhighlight %}
 {% endtabs %}
 
-### Annotation Added Event
+### Annotation added event
 
-The `AnnotationAdded` event occurs when an annotation is added successfully to the PDF document. The following example explains how to wire and handle the event.
+The [AnnotationAdded](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationAdded) event occurs when an annotation is added successfully to the PDF document. The following example explains how to wire and handle the event.
 
 {% tabs %}
 {% highlight c# %}
@@ -62,13 +62,13 @@ private void OnAnnotationAdded(object sender, AnnotationEventArgs e)
 {% endhighlight %}
 {% endtabs %}
 
-## Remove Annotations from the PDF Document
+## Remove annotations from the PDF document
 
 This section will go through different methods of removing annotations from a PDF document.
 
-### Remove the Selected Annotation
+### Remove the selected annotation
 
-You can remove the selected annotation programmatically by providing the selected annotation instance as the parameter to `RemoveAnnotation` method. The selected annotation instance may be obtained from the `AnnotationSelected` event. The following example shows how to remove the selected annotation.
+You can remove the selected annotation programmatically by providing the selected annotation instance as the parameter to [RemoveAnnotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_RemoveAnnotation_Syncfusion_Maui_PdfViewer_Annotation_) method. The selected annotation instance may be obtained from the [AnnotationSelected](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationSelected) event. The following example shows how to remove the selected annotation.
 
 {% tabs %}
 {% highlight c# %}
@@ -86,7 +86,7 @@ void RemoveSelectedAnnotation(Annotation selectedAnnotation)
 
 In desktop platforms like macOS and Windows, you can also use the keyboard shortcut `Delete` to remove the selected annotation from the PDF document directly.
 
-### Remove Specific Annotation
+### Remove specific annotation
 
 You can remove an annotation from the document programmatically by providing the specific annotation instance as the parameter to `RemoveAnnotation` method of `SfPdfViewer`. The following example shows how to remove the first annotation in the annotation collection from a PDF document.
 
@@ -108,7 +108,7 @@ void RemoveFirstAnnotation()
 
 ### Remove all the Annotations
 
-You can remove all the annotations from a document programmatically by calling `RemoveAllAnnotations` method. The following example shows how to remove all the annotations from a PDF document.
+You can remove all the annotations from a document programmatically by calling [RemoveAllAnnotations](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_RemoveAllAnnotations) method. The following example shows how to remove all the annotations from a PDF document.
 
 {% tabs %}
 {% highlight c# %}
@@ -120,9 +120,9 @@ void RemoveAllAnnotations()
 {% endhighlight %}
 {% endtabs %}
 
-### Annotation Removed Event
+### Annotation removed event
 
-The `AnnotationRemoved` event occurs when an annotation is removed successfully from the PDF document. The following example explains how to wire and handle the event.
+The [AnnotationRemoved](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationRemoved) event occurs when an annotation is removed successfully from the PDF document. The following example explains how to wire and handle the event.
 
 {% tabs %}
 {% highlight c# %}
@@ -140,13 +140,13 @@ private void OnAnnotationRemoved(object sender, AnnotationEventArgs e)
 {% endhighlight %}
 {% endtabs %}
 
-## Editing Annotations
+## Editing annotations
 
 This section will go through different methods of editing annotations in a PDF document programmatically.
 
-### Editing a Specific Annotation
+### Editing a specific annotation
 
-You can edit the properties of an annotation from the document programmatically by accessing the specific annotation instance from the `Annotations` property of the SfPdfViewer. The following example shows how to edit the first annotation in the annotation collection. Similarly, you can modify the other properties also.
+You can edit the properties of an annotation from the document programmatically by accessing the specific annotation instance from the [Annotations](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_Annotations) property of the SfPdfViewer. The following example shows how to edit the first annotation in the annotation collection. Similarly, you can modify the other properties also.
 
 {% tabs %}
 {% highlight c# %}
@@ -173,7 +173,7 @@ void EditFirstAnnotation()
 {% endhighlight %}
 {% endtabs %}
 
-### Editing the Selected Annotation
+### Editing the selected annotation
 
 You can edit the properties of the selected annotation programmatically by accessing the selected annotation instance. The selected annotation instance may be obtained from the `AnnotationSelected` event. The following example shows how to edit the selected annotation assuming that the annotation is a circle type.
 
@@ -200,9 +200,9 @@ void EditSelectedAnnotation(Annotation selectedAnnotation)
 {% endhighlight %}
 {% endtabs %}
 
-### Annotation Edited Event
+### Annotation edited event
 
-The `AnnotationEdited` event occurs when an annotation is edited in the PDF document. The following example explains how to wire and handle the event.
+The [AnnotationEdited](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationEdited) event occurs when an annotation is edited in the PDF document. The following example explains how to wire and handle the event.
 
 {% tabs %}
 {% highlight c# %}
