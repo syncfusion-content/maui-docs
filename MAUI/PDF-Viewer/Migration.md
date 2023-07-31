@@ -407,6 +407,34 @@ To make migration from [Xamarin SfPdfViewer](https://www.syncfusion.com/xamarin-
 </td>
 <td>Represents an annotation that displays a shape on the page.</td>
 </tr>
+<tr>
+<td>
+<div>{{'[AnnotationMovedOrResizedEventArgs](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.AnnotationMovedOrResizedEventArgs.html)'| markdownify }} </div>
+<div>{{'[InkAddedEventArgs](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.InkAddedEventArgs.html)'| markdownify }} </div>
+<div>{{'[InkDeselectedEventArgs](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.InkDeselectedEventArgs.html)'| markdownify }} </div>
+<div>{{'[InkEditedEventArgs](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.InkEditedEventArgs.html)'| markdownify }} </div>
+<div>{{'[InkRemovedEventArgs](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.InkRemovedEventArgs.html)'| markdownify }} </div>
+<div>{{'[InkSelectedEventArgs](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.InkSelectedEventArgs.html)'| markdownify }} </div>
+<div>{{'[ShapeAnnotationAddedEventArgs](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.ShapeAnnotationAddedEventArgs.html)'| markdownify }} </div>
+<div>{{'[ShapeAnnotationDeselectedEventArgs](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.ShapeAnnotationDeselectedEventArgs.html)'| markdownify }} </div>
+<div>{{'[ShapeAnnotationEditedEventArgs](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.ShapeAnnotationEditedEventArgs.html)'| markdownify }} </div>
+<div>{{'[ShapeAnnotationRemovedEventArgs](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.ShapeAnnotationRemovedEventArgs.html)'| markdownify }} </div>
+<div>{{'[ShapeAnnotationSelectedEventArgs](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.ShapeAnnotationSelectedEventArgs.html)'| markdownify }} </div>
+<div>{{'[StampAnnotationAddedEventArgs](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.StampAnnotationAddedEventArgs.html)'| markdownify }} </div>
+<div>{{'[StampAnnotationDeselectedEventArgs ](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.StampAnnotationDeselectedEventArgs.html)'| markdownify }} </div>
+<div>{{'[StampAnnotationMovedOrResizedEventArgs ](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.StampAnnotationMovedOrResizedEventArgs.html)'| markdownify }} </div>
+<div>{{'[StampAnnotationRemovedEventArgs ](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.StampAnnotationRemovedEventArgs.html)'| markdownify }} </div>
+<div>{{'[StampAnnotationSelectedEventArgs ](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.StampAnnotationSelectedEventArgs.html)'| markdownify }} </div>
+<div>{{'[TextMarkupAddedEventArgs](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.TextMarkupAddedEventArgs.html)'| markdownify }} </div>
+<div>{{'[TextMarkupDeselectedEventArgs](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.TextMarkupDeselectedEventArgs.html)'| markdownify }} </div>
+<div>{{'[TextMarkupEditedEventArgs](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.TextMarkupEditedEventArgs.html)'| markdownify }} </div>
+<div>{{'[TextMarkupRemovedEventArgs](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.TextMarkupRemovedEventArgs.html)'| markdownify }} </div>
+<div>{{'[TextMarkupSelectedEventArgs](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.TextMarkupSelectedEventArgs.html)'| markdownify }} </div>
+</td>
+<td>{{'[AnnotationEventArgs ](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.AnnotationEventArgs.html)'| markdownify }}</td>
+<td></td>
+</tr>
+
 </table>
 
 ## Upcoming Features   
