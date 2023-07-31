@@ -9,7 +9,7 @@ documentation: ug
 
 # Import and Export Annotations in .NET MAUI PDF Viewer (SfPdfViewer)
 
-This section will go through the various functions available in the [Position](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.GestureEventArgs.html#Syncfusion_Maui_PdfViewer_GestureEventArgs_Position) to import and export annotations in a PDF document.
+This section will go through the various functions available in the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) to import and export annotations in a PDF document.
 
 ## Import annotations
 

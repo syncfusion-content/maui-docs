@@ -145,7 +145,7 @@ void CustomizeDefaultHighlightSettings()
 
 ## Edit the selected text markup annotation
 
-You can edit the properties of the selected text markup annotation programmatically by accessing the selected annotation instance. The selected annotation instance may be obtained from the [AnnotationSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationSettings) event. The following example shows how to edit some of the properties of the selected highlight annotation. Similarly, you can modify the other text markup annotations properties.
+You can edit the properties of the selected text markup annotation programmatically by accessing the selected annotation instance. The selected annotation instance may be obtained from the [AnnotationSelected](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationSelected) event. The following example shows how to edit some of the properties of the selected highlight annotation. Similarly, you can modify the other text markup annotations properties.
 
 {% tabs %}
 {% highlight C# %}
