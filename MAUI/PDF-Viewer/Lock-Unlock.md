@@ -13,7 +13,7 @@ You can lock an annotation to prevent it from being edited. The annotation that 
 
 ## Lock all annotations in a document
 
-To lock all annotations in a document, set the [IsLocked](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.BaseAnnotationSettings.html#properties) property of the [AnnotationSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.AnnotationSettings.html) to `true`. The following example explains how to lock all annotations in a document.
+To lock all annotations in a document, set the [IsLocked](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.BaseAnnotationSettings.html#Syncfusion_Maui_PdfViewer_BaseAnnotationSettings_IsLocked) property of the [AnnotationSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.AnnotationSettings.html) to `true`. The following example explains how to lock all annotations in a document.
 
 {% tabs %}
 {% highlight C# %}
