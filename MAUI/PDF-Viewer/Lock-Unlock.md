@@ -73,7 +73,7 @@ void LockCircleAnnotations()
 
 ## Lock the selected annotation
 
-To lock the selected annotation, access the selected annotation instance and set the `IsLocked` property of the annotation to `true`. The selected annotation instance may be obtained from the [AnnotationSelected](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationSelected) event. The following example explains how to lock the selected annotation in a PDF document.
+To lock the selected annotation, access the selected annotation instance and set the [IsLocked](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.Annotation.html#Syncfusion_Maui_PdfViewer_Annotation_IsLocked) property of the annotation to `true`. The selected annotation instance may be obtained from the [AnnotationSelected](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationSelected) event. The following example explains how to lock the selected annotation in a PDF document.
 
 {% tabs %}
 {% highlight C# %}
