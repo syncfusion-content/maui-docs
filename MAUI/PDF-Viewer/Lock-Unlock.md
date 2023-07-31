@@ -13,7 +13,7 @@ You can lock an annotation to prevent it from being edited. The annotation that 
 
 ## Lock all annotations in a document
 
-To lock all annotations in a document, set the `IsLocked` property of the `AnnotationSettings` to `true`. The following example explains how to lock all annotations in a document.
+To lock all annotations in a document, set the [IsLocked](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.BaseAnnotationSettings.html#properties) property of the [AnnotationSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.AnnotationSettings.html) to `true`. The following example explains how to lock all annotations in a document.
 
 {% tabs %}
 {% highlight C# %}
@@ -30,7 +30,7 @@ void LockAllAnnotations()
 
 ## Lock specific annotation
 
-To lock a specific annotation in a document, access the annotation instance and set the `IsLocked` property of the annotation to `true`. The following example explains how to lock the first annotation in a PDF document.
+To lock a specific annotation in a document, access the annotation instance and set the [IsLocked](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.Annotation.html#Syncfusion_Maui_PdfViewer_Annotation_IsLocked) property of the annotation to `true`. The following example explains how to lock the first annotation in a PDF document.
 
 {% tabs %}
 {% highlight C# %}
@@ -53,7 +53,7 @@ void LockFirstAnnotation()
 
 ## Lock specific annotation types
 
-You can also use the `AnnotationSettings` property to lock a specific annotation type in a document. The following example explains how to lock all the circle annotations in a document by accessing the circle annotation settings. Similarly, you can lock other types of annotation.
+You can also use the [AnnotationSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationSettings) property to lock a specific annotation type in a document. The following example explains how to lock all the circle annotations in a document by accessing the circle annotation settings. Similarly, you can lock other types of annotation.
 
 {% tabs %}
 {% highlight C# %}
@@ -73,7 +73,7 @@ void LockCircleAnnotations()
 
 ## Lock the selected annotation
 
-To lock the selected annotation, access the selected annotation instance and set the `IsLocked` property of the annotation to `true`. The selected annotation instance may be obtained from the `AnnotationSelected` event. The following example explains how to lock the selected annotation in a PDF document.
+To lock the selected annotation, access the selected annotation instance and set the `IsLocked` property of the annotation to `true`. The selected annotation instance may be obtained from the [AnnotationSelected](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationSelected) event. The following example explains how to lock the selected annotation in a PDF document.
 
 {% tabs %}
 {% highlight C# %}

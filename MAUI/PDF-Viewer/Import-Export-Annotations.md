@@ -9,11 +9,11 @@ documentation: ug
 
 # Import and Export Annotations in .NET MAUI PDF Viewer (SfPdfViewer)
 
-This section will go through the various functions available in the `SfPdfViewer` to import and export annotations in a PDF document.
+This section will go through the various functions available in the [Position](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.GestureEventArgs.html#Syncfusion_Maui_PdfViewer_GestureEventArgs_Position) to import and export annotations in a PDF document.
 
 ## Import annotations
 
-You can add annotations to a PDF document by importing them from FDF and XFDF files by using the `ImportAnnotations` method. You need to provide the stream of the file containing the annotations and the data format information as parameters to the method. The following example explains how to import annotations from an XFDF file, assuming that the file is in the application’s data directory. 
+You can add annotations to a PDF document by importing them from FDF and XFDF files by using the [ImportAnnotations](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_ImportAnnotations_System_IO_Stream_Syncfusion_Pdf_Parsing_AnnotationDataFormat_) method. You need to provide the stream of the file containing the annotations and the data format information as parameters to the method. The following example explains how to import annotations from an XFDF file, assuming that the file is in the application’s data directory. 
 
 {% tabs %}
 {% highlight C# %}
@@ -31,11 +31,11 @@ void ImportAnnotations()
 {% endtabs %}
 
 * Similarly, you may import annotations from an FDF file also.
-* To import the annotations asynchronously, you may use the `ImportAnnotationsAsync` method.
+* To import the annotations asynchronously, you may use the [ImportAnnotationsAsync](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_ImportAnnotationsAsync_System_IO_Stream_Syncfusion_Pdf_Parsing_AnnotationDataFormat_System_Threading_CancellationToken_) method.
 
 ## Export annotations
 
-The `SfPdfViewer` allows you to export annotations from a PDF document into FDF and XFDF files. This will help you to save the annotation information in a separate file rather than the complete PDF file. You need to provide the FDF or XFDF file stream as a parameter to the `ExportAnnotations` method to achieve the same. The annotations information will be exported to the given file stream. The following code explains how to export annotations from a PDF document into an XFDF file in the application’s data directory.
+The `SfPdfViewer` allows you to export annotations from a PDF document into FDF and XFDF files. This will help you to save the annotation information in a separate file rather than the complete PDF file. You need to provide the FDF or XFDF file stream as a parameter to the [ExportAnnotations](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_ExportAnnotations_System_IO_Stream_Syncfusion_Pdf_Parsing_AnnotationDataFormat_System_Collections_Generic_List_Syncfusion_Maui_PdfViewer_Annotation__) method to achieve the same. The annotations information will be exported to the given file stream. The following code explains how to export annotations from a PDF document into an XFDF file in the application’s data directory.
 
 {% tabs %}
 {% highlight C# %}
@@ -51,7 +51,7 @@ private void ExportAnnotations()
 {% endhighlight %}
 {% endtabs %}
 
-* Similarly, you may export annotations into an FDF file also. To import the annotations asynchronously, you may use the `ExportAnnotationsAsync` method.
+* Similarly, you may export annotations into an FDF file also. To import the annotations asynchronously, you may use the [ExportAnnotationsAsync](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_ExportAnnotationsAsync_System_IO_Stream_Syncfusion_Pdf_Parsing_AnnotationDataFormat_System_Collections_Generic_List_Syncfusion_Maui_PdfViewer_Annotation__System_Threading_CancellationToken_) method.
 
 ### Export specific list of annotations
 
