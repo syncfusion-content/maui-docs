@@ -141,3 +141,109 @@ comboBox.TextSearchMode = ComboBoxTextSearchMode.Contains;
 The following image illustrates the result of the above code:
 
 ![.NET MAUI ComboBox TextSearchMode Contains](Images/Searching/TextSearchModeContains.png)
+
+### Custom searching
+
+The ComboBox control provides support to apply your own custom search logic to highlight the item in the drop-down based on your search criteria by using the [SearchBehavior] property. The default value of `SearchBehavior` is `null`.
+
+Now, let us create a custom searching class to apply our own search logic to ComboBox control by the following steps:
+
+**Step 1:** Create a class that derives from the [IComboBoxSearchBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.IComboBoxSearchBehavior.html) interface. 
+
+{% tabs %}
+{% highlight C# %}
+
+/// <summary>
+/// Represents a custom searching behavior for `ComboBox` control. 
+/// </summary>
+public class StringLengthSearchingBehavior : IComboBoxSearchBehavior
+{
+   
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+**Step 2:** Then, implement the [GetHighlightIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.IComboBoxSearchBehavior.html#Syncfusion_Maui_Inputs_IComboBoxSearchBehavior_GetHighlightIndex_Syncfusion_Maui_Inputs_SfComboBox_Syncfusion_Maui_Inputs_ComboBoxSearchInfo_) method of IComboBoxSearchBehavior interface to calculate the highlight index depending on the filtered items list and text entered in the ComboBox control that needs to be highlighted in drop-down. The `GetHighlightIndex` method contains the following arguments:
+
+* [source](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) - The owner of the search behavior, which holds information about ItemsSource, Items properties, and so on.
+* [searchInfo](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ComboBoxSearchInfo.html) - Contains details about the filtered items list and the text entered in ComboBox control. You may compute the index that has to be highlighted in the drop-down list using these details.
+
+The following example demonstrates how to highlight the first item that fully matches the typed length entered in the ComboBox control.
+
+{% tabs %}
+{% highlight C# %}
+
+/// <summary>
+/// Represents a custom searching behavior for `ComboBox` control. 
+/// </summary>
+public class StringLengthSearchingBehavior : IComboBoxSearchBehavior
+{
+    private int charLength;
+
+    /// <summary>
+    /// Return the highlight index that fully matches the typed length entered in the ComboBox control.
+    /// </summary>
+    public int GetHighlightIndex(SfComboBox source, ComboBoxSearchInfo searchInfo)
+    {
+        if (int.TryParse(searchInfo.Text, out this.charLength)) 
+        {
+           var fullMatch = searchInfo.FilteredItems.OfType<SocialMedia>().FirstOrDefault(i => i.Name.Length == charLength); 
+           if (fullMatch != null)
+           {
+              return searchInfo.FilteredItems.IndexOf(fullMatch); 
+           }
+        }
+       
+        return -1;
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+**Step3:** Apply custom searching to the ComboBox control by using the `SearchBehavior` property. 
+
+{% tabs %}
+{% highlight XAML %}
+
+<editors:SfComboBox IsEditable="True"
+                    ItemsSource="{Binding SocialMedias}"
+                    TextMemberPath="Name"
+                    DisplayMemberPath="Name">
+        <editors:SfComboBox.SearchBehavior>
+            <local:StringLengthSearchingBehavior/>
+        </editors:SfComboBox.SearchBehavior>
+</editors:SfComboBox>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+using Syncfusion.Maui.Inputs;
+
+SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
+StringLengthSearchingBehavior stringLengthSearch = new StringLengthSearchingBehavior();
+StackLayout stack = new StackLayout();
+SfComboBox comboBox;
+comboBox = new SfComboBox
+{
+    WidthRequest = 200,
+    HeightRequest = 50,
+    IsEditable = true,
+    SearchBehavior = stringLengthSearch,
+    IsFilteringEnabled = true,
+    ItemsSource = socialMediaViewModel.SocialMedias,
+    TextMemberPath = "CityName",
+    DisplayMemberPath = "CityName",
+    BindingContext = cityViewModel
+};
+stack.Children.Add(comboBox);
+this.Content = stack;
+
+{% endhighlight %}
+{% endtabs %}
+
+For e.g. After typing `9` in selection box, the first item that fully matches the typed length will be highlighted.
+
+![.NET MAUI ComboBox highlight the first item that fully matches the typed length](Images/Searching/CustomSearching.png)

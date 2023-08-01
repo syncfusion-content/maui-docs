@@ -22,7 +22,7 @@ Sort the data programmatically by adding or removing the [SortColumnDescription]
 The `SortColumnDescription` object holds the following two properties:
 
 * **ColumnName**: The name of a column to be sorted.
-* **SortDirection**: An object of type [ListSortDirection](https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.listsortdirection?view=net-6.0) defines the sorting direction.
+* **SortDirection**: An object of type [ListSortDirection](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.listsortdirection?view=net-6.0) defines the sorting direction.
 
 {% tabs %}
 {% highlight xaml %}
@@ -169,7 +169,7 @@ The `SfDataGrid` provides support to sort columns based on custom logic when the
 The `SortComparer` object contains the following properties:
 
 * **PropertyName**: The `MappingName` of the column that applies custom sorting.
-* **Comparer**: Gets or sets the custom comparer that implements the [IComparer](https://docs.microsoft.com/en-us/dotnet/api/system.collections.icomparer?view=net-6.0) and [ISortDirection](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Data.ISortDirection.html) interfaces.
+* **Comparer**: Gets or sets the custom comparer that implements the [IComparer](https://learn.microsoft.com/en-us/dotnet/api/system.collections.icomparer?view=net-6.0) and [ISortDirection](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Data.ISortDirection.html) interfaces.
 
 The following example shows how to sort the columns based on the length of their cell values:
 

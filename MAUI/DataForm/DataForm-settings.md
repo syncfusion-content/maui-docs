@@ -57,6 +57,28 @@ Generated for the string type properties with [DataType(DataType.Password)] attr
 </tr>
 <tr>
 <td>
+{{'[DataFormNumericItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormNumericItem.html)'| markdownify }}
+</td>
+<td>
+{{'[SfNumericEntry](https://help.syncfusion.com/maui/numeric-entry/overview)'| markdownify }}
+</td>
+<td>
+Generated for int, double, float type property. 
+</td>
+</tr>
+<tr>
+<td>
+{{'[DataFormMaskedTextItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormMaskedTextItem.html)'| markdownify }}
+</td>
+<td>
+{{'[SfMaskedEntry](https://help.syncfusion.com/maui/masked-entry/overview)'| markdownify }}
+</td>
+<td>
+Generated for the string type properties with [DataType(DataType.PhoneNumber)] and [DataType(DataType.CreditCard)] attribute.
+</td>
+</tr>
+<tr>
+<td>
 {{'[DataFormDateItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormDateItem.html)'| markdownify }}
 </td>
 <td>
@@ -104,7 +126,7 @@ Generated for the Bool type property.
 {{'[DataFormComboBoxItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormComboBoxItem.html)'| markdownify }}
 </td>
 <td>
-{{'[SfComboBox](https://help.syncfusion.com/maui/combobox)'| markdownify }}
+{{'[SfComboBox](https://help.syncfusion.com/maui/combobox/overview)'| markdownify }}
 </td>
 <td>
 Generated for the enum type property. 
@@ -114,7 +136,7 @@ Generated for the enum type property.
 {{'[DataFormAutoCompleteItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormAutoCompleteItem.html)'| markdownify }}
 </td>
 <td>
-{{'[SfAutoComplete](https://help.syncfusion.com/maui/autocomplete)'| markdownify }}
+{{'[SfAutoComplete](https://help.syncfusion.com/maui/autocomplete/overview)'| markdownify }}
 </td>
 <td>
 Generated for the enum type property. 
@@ -628,12 +650,36 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 
 Please refer [here](https://help.syncfusion.com/maui/dataform/validation#validation-label-appearance-customization) to learn more about changing the [ErrorLabelTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html#Syncfusion_Maui_DataForm_DataFormItem_ErrorLabelTextStyle) and [ValidMessageLabelTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html#Syncfusion_Maui_DataForm_DataFormItem_ValidMessageLabelTextStyle)
 
+## Editor view customization
+You can customize the editor view by using the  [InitializeDataEditor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItemManager.html#Syncfusion_Maui_DataForm_DataFormItemManager_InitializeDataEditor_Syncfusion_Maui_DataForm_DataFormItem_Microsoft_Maui_Controls_View_) method of [DataFormItemManager](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItemManager.html).
+
+{% tabs %}
+{% highlight c# %}
+
+this.dataForm.ItemManager = new DataFormItemManagerEditorExt();
+
+public class DataFormItemManagerEditorExt : DataFormItemManager
+{
+    if (editor is Entry entry)
+    {
+        entry.SelectionLength = 5;
+        entry.TextTransform = TextTransform.Lowercase;
+        entry.VerticalTextAlignment = TextAlignment.Center;
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-dataform/tree/master/EditorViewCustomizationSample)
+
 ## Explicitly create data editors
 
 The data form auto generates the editors based on the data type, you can explicitly add the data editors by adding [SfDataForm.Items](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_Items) manually and you need to change the [AutoGenerateItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_AutoGenerateItems) property to false.
 
 N> Use the [FieldName](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html#Syncfusion_Maui_DataForm_DataFormItem_FieldName) property to bind the editor to the data object property.
 [GenerateDataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_GenerateDataFormItem) event will not be trigger when [AutoGenerateItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_AutoGenerateItems) is false.
+
 {% tabs %}
 {% highlight XAML %}
    
@@ -836,3 +882,76 @@ You can add custom editor manually by adding the custom view as an [EditorView](
 {% endtabs %}
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-dataform/tree/master/ExplicitDataFormItems)
+
+## Explicitly create data editors from custom data dictionary
+
+You can [explicitly](https://help.syncfusion.com/maui/dataform/dataform-settings#explicitly-create-data-editors) add the data editors from the custom data dictionary and also get the value from the dictionary and set the editors value to the dictionary by implementing [DataFormItemManager](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItemManager.html), which has the methods to get and set values for the editors.
+
+{% tabs %}
+{% highlight C# %}
+
+Dictionary<string, object> dictionary = new Dictionary<string, object>();
+dictionary.Add("Name", "John");
+dictionary.Add("Password", "1234");
+
+ObservableCollection<DataFormViewItem> items = new ObservableCollection<DataFormViewItem>();
+foreach (var key in dictionary.Keys)
+{
+    DataFormItem dataFormItem = null;
+    if (key == "Name")
+    {
+        dataFormItem = new DataFormTextItem()
+        {
+            FieldName = key,
+            LayoutType = DataFormLayoutType.TextInputLayout,
+        };
+    }
+    else if (key == "Password")
+    {
+        dataFormItem = new DataFormPasswordItem()
+        {
+            FieldName = key,
+            EditorTextStyle = new DataFormTextStyle { TextColor = Colors.Violet },
+        };
+    }
+
+    if (dataFormItem != null)
+    {
+        items.Add(dataFormItem);
+    }
+}
+
+dataForm.Items = items;
+dataForm.AutoGenerateItems = false;
+dataForm.ItemManager = new DataFormItemManagerExt(dictionary);
+
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight c# tabtitle="DataFormItemManagerExt" %}
+
+public class DataFormItemManagerExt : DataFormItemManager
+{
+    Dictionary<string, object> dataFormDictionary;
+
+    public DataFormItemManagerExt(Dictionary<string, object> dictionary)
+    {
+        dataFormDictionary = dictionary;
+    }
+
+    public override object GetValue(DataFormItem dataFormItem)
+    {
+        return dataFormDictionary[dataFormItem.FieldName];
+    }
+
+    public override void SetValue(DataFormItem dataFormItem, object value)
+    {
+        dataFormDictionary[dataFormItem.FieldName] = value;
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-dataform/tree/master/CustomDataDictionarySample)

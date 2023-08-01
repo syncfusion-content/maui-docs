@@ -9,6 +9,10 @@ documentation: UG
 
 # Data Editors in .NET MAUI DataForm (SfDataForm)
 
+To get start quickly with data editors in .NET MAUI DataForm, you can check on this video:
+
+{% youtube "https://www.youtube.com/watch?v=Fv__sIKRsIA" %}
+
 The data form supports the following built-in editors to edit the data:
 
 <table>
@@ -59,6 +63,34 @@ The string type property with
 </td>
 <td>
 {{'[Entry](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/entry?view=net-maui-7.0)'| markdownify }}
+</td>
+</tr>
+<tr>
+<td>
+Numeric
+</td>
+<td>
+{{'[DataFormNumericItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormNumericItem.html)'| markdownify }}
+</td>
+<td>
+The int, double, float type property and any other type apart from the below specified cases.
+</td>
+<td>
+{{'[SfNumericEntry](https://help.syncfusion.com/maui/numericentry/overview)'| markdownify }}
+</td>
+</tr>
+<tr>
+<td>
+MaskedText
+</td>
+<td>
+{{'[DataFormMaskedTextItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormMaskedTextItem.html)'| markdownify }}
+</td>
+<td>
+The string type property with [DataType(DataType.PhoneNumber)] and [DataType(DataType.CreditCard)] attribute.
+</td>
+<td>
+{{'[SfMaskedEntry](https://help.syncfusion.com/maui/masked-entry/overview)'| markdownify }}
 </td>
 </tr>
 <tr>
@@ -142,7 +174,7 @@ ComboBox
 Enum and List type property.
 </td>
 <td>
-{{'[SfComboBox](https://help.syncfusion.com/maui/combobox)'| markdownify }}
+{{'[SfComboBox](https://help.syncfusion.com/maui/combobox/overview)'| markdownify }}
 </td>
 </tr>
 <tr>
@@ -156,7 +188,7 @@ AutoComplete
 Enum and List type property.
 </td>
 <td>
-{{'[SfAutoComplete](https://help.syncfusion.com/maui/autocomplete)'| markdownify }}
+{{'[SfAutoComplete](https://help.syncfusion.com/maui/autocomplete/overview)'| markdownify }}
 </td>
 </tr>
 <tr>
@@ -290,6 +322,110 @@ public string Password { get; set; }
 {% endtabs %}
 
 ![Password editor in .NET MAUI DataForm.](images/editors/dataform-password-editor.png)
+
+## Numeric editor
+In the numeric editor, the [SfNumericEntry](https://help.syncfusion.com/maui/numeric-entry/overview) will be loaded and the DataForm Numeric editor supports `int`, `double`, and `float` data type properties. 
+
+Also, to add a DataForm numeric editor, register the editor as [DataFormEditorType.Numeric](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormEditorType.html#Syncfusion_Maui_DataForm_DataFormEditorType_Numeric) for the required field using the [RegisterEditor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_RegisterEditor_System_String_Syncfusion_Maui_DataForm_DataFormEditorType_) method.
+
+![Numeric editor in .NET MAUI DataForm.](images/editors/dataform-numeric-editor.png)
+
+#### Changing the Numeric editor properties
+You can use the [GenerateDataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_GenerateDataFormItem) event to change Numeric editor properties.
+
+{% tabs %}
+{% highlight C# %}
+
+public decimal Amount { get; set; }
+public double Number { get; set; }
+public int Percentage { get; set; }
+
+{% endhighlight %}
+{% highlight C# %}
+
+this.dataForm.RegisterEditor("Amount", DataFormEditorType.Numeric);
+this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+
+private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+{
+    if (e.DataFormItem != null)
+    {
+        if (e.DataFormItem.FieldName == "Amount" && e.DataFormItem is DataFormNumericItem amount)
+        {
+            amount.AllowNull = true;
+            amount.Culture = new CultureInfo("et-EE");
+            // To enter a minimum of 2 decimal digits and maximum of 4 decimal digits, set CustomFormat = "#,0.00##"
+            amount.CustomFormat = "#,0.00##";
+        }
+        else if (e.DataFormItem.FieldName == "Percentage" && e.DataFormItem is DataFormNumericItem percentage)
+        {
+            percentage.AllowNull = true;
+            percentage.CustomFormat = "P";
+            percentage.Culture = new CultureInfo("en-In");
+            percentage.ShowClearButton = false;
+            percentage.Maximum = 123.45;
+            percentage.Minimum = 0.012;
+            percentage.Keyboard = Keyboard.Numeric;
+        }
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+## Masked text editor
+
+In the Masked text editor, the [SfMaskedEntry](https://help.syncfusion.com/maui/masked-entry/overview) will be loaded and DataForm Masked text editor supports the `PhoneNumber` and `CreditCard` data type property of [DataTypeAttribute](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.datatype?view=net-7.0).
+
+Also, to add a DataForm Masked text editor, register the editor as [DataFormEditorType.MaskedText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormEditorType.html#Syncfusion_Maui_DataForm_DataFormEditorType_MaskedText) for the required field using the [RegisterEditor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_RegisterEditor_System_String_Syncfusion_Maui_DataForm_DataFormEditorType_) method.
+
+![Masked text editor in .NET MAUI DataForm.](images/editors/dataform-masked-editor.png)
+
+#### Changing the Masked text editor properties
+You can use the [GenerateDataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_GenerateDataFormItem) event to change Masked text editor properties
+
+
+{% tabs %}
+{% highlight C# %}
+
+[DataType(DataType.PhoneNumber)]
+public string PhoneNumber { get; set; }
+
+[DataType(DataType.CreditCard)]
+public string CreditCard { get; set; }
+
+public decimal Amount { get; set; }
+
+{% endhighlight %}
+{% highlight C# %}
+
+this.dataForm.RegisterEditor("Amount", DataFormEditorType.MaskedText);
+this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+
+private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+{
+    if (e.DataFormItem != null)
+    {
+        if (e.DataFormItem.FieldName == "Amount" && e.DataFormItem is DataFormMaskedTextItem amount)
+        {
+            amount.PromptChar = 'X'
+            amount.MaskType = MaskedEditorMaskType.Simple;
+            amount.Mask = "000000.00";
+            amount.ValueMaskFormat = MaskedEditorMaskFormat.IncludeLiterals;
+        }
+        else if (e.DataFormItem.FieldName == "PhoneNumber" && e.DataFormItem is DataFormMaskedTextItem phoneNumber)
+        {
+            phoneNumber.PromptChar = '#';
+            phoneNumber.MaskType = MaskedEditorMaskType.Simple;
+            phoneNumber.Mask="000 000 0000";
+            phoneNumber.Culture = new CultureInfo("en-In");
+            phoneNumber.ClearButtonVisibility = MaskedEditorClearButtonVisibility.WhileEditing;
+        }
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Date editor
 
@@ -504,7 +640,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 
 ## Combo Box editor
 
-In the Combo Box editor, the [SfComboBox](https://help.syncfusion.com/maui/combobox) will be loaded.
+In the Combo Box editor, the [SfComboBox](https://help.syncfusion.com/maui/combobox/overview) will be loaded.
 
 #### Changing the ItemsSource of combo box
 
@@ -734,7 +870,7 @@ N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-dataform/t
 
 ## AutoComplete editor
 
-In the autocomplete editor, the [SfAutoComplete](https://help.syncfusion.com/maui/autocomplete) is loaded.
+In the autocomplete editor, the [SfAutoComplete](https://help.syncfusion.com/maui/autocomplete/overview) is loaded.
 
 #### Changing the ItemsSource of autocomplete editor
 

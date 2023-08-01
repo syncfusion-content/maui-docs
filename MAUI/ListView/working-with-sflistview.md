@@ -124,7 +124,7 @@ The [ItemLongPress](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView
 
 N>
 * Interaction events of the `SfListView` will be triggered for all the `ListViewItems` like `HeaderItem`, `FooterItem`, `GroupHeaderItem`, `LoadMoreItem`, and `RecordItem`. Handle the interaction actions based on the `ItemType` of the event args. 
-* The `LongPress` interaction with the mouse is not supported in the `WinUI` platform. For more details about this, refer to this [link](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.uielement.holding?view=winrt-22621#remarks).
+* The `LongPress` interaction with the mouse is not supported in the `WinUI` platform. For more details about this, refer to this [link](https://learn.microsoft.com/en-us/uwp/api/windows.ui.xaml.uielement.holding?view=winrt-22621#remarks).
 
 ### ItemAppearing
 
@@ -332,4 +332,4 @@ private bool FilterDepartures(object obj)
 
 ## See also
 
-[How to set the font size for .NET MAUI ListView (SfListView)](https://www.syncfusion.com/kb/13081/)
+[How to set the font size for .NET MAUI ListView (SfListView)](https://support.syncfusion.com/kb/article/11569/how-to-set-the-font-size-for-net-maui-listview-sflistview)

@@ -26,7 +26,7 @@ You can scroll programmatically to a particular row and column using the `SfData
 
 {% tabs %}
 {% highlight C# %}
-this.dataGrid.ScrollToRowColumnIndex(15, 4, true, ScrollToPosition.Start);
+this.dataGrid.ScrollToRowColumnIndex(15, 4, ScrollToPosition.Start, ScrollToPosition.Start, true);
 {% endhighlight %}
 {% endtabs %}
 
@@ -36,7 +36,7 @@ You can scroll programmatically to a particular row using the `SfDataGrid.Scroll
 
 {% tabs %}
 {% highlight C# %}
-this.dataGrid.ScrollToRowIndex(30, true, ScrollToPosition.End);
+this.dataGrid.ScrollToRowIndex(30, ScrollToPosition.End, true);
 {% endhighlight %}
 {% endtabs %}
 
@@ -46,6 +46,43 @@ You can scroll programmatically to a particular column using the `SfDataGrid.Scr
 
 {% tabs %}
 {% highlight C# %}
-this.dataGrid.ScrollToColumnIndex(4, true, ScrollToPosition.MakeVisible);
+this.dataGrid.ScrollToColumnIndex(4, ScrollToPosition.MakeVisible, true);
 {% endhighlight %}
 {% endtabs %}
+
+## Scrollbar Visibility
+
+The visibility of the horizontal and vertical scrollbars can be customized using the [SfDataGrid.HorizontalScrollBarVisibility](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_HorizontalScrollBarVisibilityProperty) and [SfDataGrid.VerticalScrollBarVisibility](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_VerticalScrollBarVisibilityProperty) properties. By default, the visibility of both the horizontal and vertical scrollbars is set to `ScrollBarVisibility.Default`.
+
+The following code snippets demonstrate how to hide the vertical and horizontal scrollbars:
+
+{% tabs %}
+{% highlight xaml %}
+    <sfgrid:SfDataGrid x:Name="dataGrid"                                       
+                       ItemsSource="{Binding OrdersInfo}"         
+                       HorizontalScrollBarVisibility="Never"
+                       VerticalScrollBarVisibility="Never">   
+    </sfgrid:SfDataGrid> 
+{% endhighlight %}
+
+{% highlight C# %}  
+namespace DataGridSample
+{
+    public partial class MainPage : ContentPage
+    {
+        public MainPage()
+        {
+            InitializeComponent();
+            ViewModel viewModel = new ViewModel();
+            SfDataGrid dataGrid = new SfDataGrid();
+            dataGrid.ItemsSource = viewModel.OrdersInfo;   
+            dataGrid.HorizontalScrollBarVisibility = ScrollBarVisibility.Never;
+            dataGrid.VerticalScrollBarVisibility = ScrollBarVisibility.Never;
+            this.Content = dataGrid;
+        }
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
+N> These properties do not have any effect when the datagrid has no scrollable content in its respective direction. In such cases, the scroll bar will not be displayed.

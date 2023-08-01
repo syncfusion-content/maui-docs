@@ -177,7 +177,7 @@ To initialize the [MaskedEntry](https://help.syncfusion.com/maui/masked-entry/ov
 var inputLayout = new SfTextInputLayout();
 inputLayout.Hint = "Card number"; 
 inputLayout.HelperText = "Required *";
-inputLayout.ContainerType = ContainerType.OutLined;
+inputLayout.ContainerType = ContainerType.Outlined;
 inputLayout.ContainerBackground = Colors.Transparent;
 inputLayout.Content = new SfMaskedEntry() { MaskType = MaskedEntryMaskType.Simple, Mask = "0000 0000 0000 0000" }; 
 
@@ -185,3 +185,139 @@ inputLayout.Content = new SfMaskedEntry() { MaskType = MaskedEntryMaskType.Simpl
 {% endtabs %}
 
 ![MaskedEntry](images/SupportedInputViews/MaskedEntry.png)
+
+## NumericEntry
+
+To initialize the `NumericEntry` control and launch it in each platform, refer to the `getting started with numeric entry` documentation.
+
+{% tabs %}
+{% highlight XAML %}
+
+<inputLayout:SfTextInputLayout Hint="Amount" 
+                               HelperText="Enter the amount"
+                               ContainerType="Outlined"
+                               ContainerBackground="Transparent" >
+   <numericEntry:SfNumericEntry Value="100" 
+                                ShowClearButton="True" 
+                                UpDownPlacementMode="Inline"/>
+</inputLayout:SfTextInputLayout> 
+
+{% endhighlight %}
+{% highlight C# %}
+
+var inputLayout = new SfTextInputLayout();
+inputLayout.Hint = "Amount"; 
+inputLayout.HelperText = "Enter the amount";
+inputLayout.ContainerType = ContainerType.Outlined;
+inputLayout.ContainerBackground = Colors.Transparent;
+inputLayout.Content = new SfNumericEntry() { Value=100, 
+                                             ShowClearButton=True, 
+                                             UpDownPlacementMode=NumericEntryUpDownPlacementMode.Inline}; 
+
+{% endhighlight %}
+{% endtabs %}
+
+![NumericEntry](images/SupportedInputViews/NumericEntry_TIL.png)
+
+## Picker
+
+To initialize the [Picker](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/picker) control and launch it in each platform, refer to the `getting started with picker` documentation.
+
+{% tabs %}
+{% highlight XAML %}
+
+<inputLayout:SfTextInputLayout Hint="Fruit" 
+                               HelperText="Select a fruit"
+                               ContainerType="Outlined" >
+   <picker:Picker SelectedItem="Apple">
+        <Picker.ItemsSource>
+            <x:Array Type="{x:Type x:String}">
+                <x:String>Apple</x:String>
+                <x:String>Orange</x:String>
+                <x:String>Strawberry</x:String>
+            </x:Array>
+        </Picker.ItemsSource>
+   </picker:Picker>
+</inputLayout:SfTextInputLayout> 
+
+{% endhighlight %}
+{% highlight C# %}
+
+var inputLayout = new SfTextInputLayout();
+inputLayout.Hint = "Fruit"; 
+inputLayout.HelperText = "Select a fruit";
+inputLayout.ContainerType = ContainerType.Outlined;
+inputLayout.ContainerBackground = Colors.Transparent;
+var picker = new Picker();
+picker.Items.Add("Apple");
+picker.Items.Add("Orange");
+picker.Items.Add("Strawberry");
+picker.SelectedItem = "Apple";
+inputLayout.Content = picker;
+
+{% endhighlight %}
+{% endtabs %}
+
+![Picker](images/SupportedInputViews/Picker.jpg)
+
+N> Windows platform will not support `.NET MAUI Picker` as input view of the text input layout.
+## TimePicker
+
+To initialize the [TimePicker](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/timepicker) control and launch it in each platform, refer to the `getting started with time picker` documentation.
+
+{% tabs %}
+{% highlight XAML %}
+
+ <inputLayout:SfTextInputLayout Hint="Time" 
+                               HelperText="Select a start time"
+                               ContainerType="Outlined" >
+    <timepicker:TimePicker/>
+ </inputLayout:SfTextInputLayout>
+
+{% endhighlight %}
+{% highlight C# %}
+
+var inputLayout = new SfTextInputLayout();
+inputLayout.Hint = "Time"; 
+inputLayout.HelperText = "Select a start time";
+inputLayout.ContainerType = ContainerType.Outlined;
+inputLayout.ContainerBackground = Colors.Transparent;
+inputLayout.Content = new TimePicker(); 
+
+{% endhighlight %}
+{% endtabs %}
+
+![TimePicker](images/SupportedInputViews/TimePicker.jpg)
+
+N> Windows platform will not support `.NET MAUI TimePicker` as input view of the text input layout.
+
+## DatePicker
+
+To initialize the [DatePicker]( https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/DatePicker) control and launch it in each platform, refer to the `getting started with date picker` documentation.
+
+{% tabs %}
+{% highlight XAML %}
+
+<inputLayout:SfTextInputLayout Hint="Date of Birth" 
+                               HelperText="Select birth date"
+                               ContainerType="Outlined" >
+    <datepicker:DatePicker/>
+</inputLayout:SfTextInputLayout> 
+
+{% endhighlight %}
+{% highlight C# %}
+
+var inputLayout = new SfTextInputLayout();
+inputLayout.Hint = "Date of Birth"; 
+inputLayout.HelperText = "Select birth date";
+inputLayout.ContainerType = ContainerType.Outlined;
+inputLayout.ContainerBackground = Colors.Transparent;
+inputLayout.Content = new DatePicker(); 
+
+{% endhighlight %}
+{% endtabs %}
+
+![DatePicker](images/SupportedInputViews/DatePicker.jpg)
+
+N> Windows platform will not support `.NET MAUI DatePicker` as input view of the text input layout.
+

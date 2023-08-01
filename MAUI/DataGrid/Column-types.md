@@ -11,6 +11,10 @@ documentation: UG
 
 The SfDataGrid contains different types of columns. The functionalities of the columns can be implied by their names. Any of the columns can be used depending on the requirements.
 
+To get start quickly with column types in .NET MAUI DataGrid, you can check on this video:
+
+<style>#MAUIDataGridVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUIDataGridVideoTutorial' src="https://www.youtube.com/embed/tLNua3iGnGE"></iframe>
+
 The following table describes the types of columns and their usage:
 
 <table>
@@ -290,7 +294,7 @@ dataGrid.Columns.Add( new DataGridTextColumn()
 
 ## DataGridCheckBoxColumn
 
-The `DataGridCheckBoxColumn` inherits all the properties of the `DataGridColumn`. It loads a [CheckBox](https://docs.microsoft.com/en-us/dotnet/maui/user-interface/controls/checkbox) as the content of record cells in the column and responds to value changes in it. The underlying data source can be changed so that it toggles the values shown in the CheckBox. The `SfDataGrid` automatically generates `DataGridCheckBoxColumn` the property in the underlying collection of the type is set to bool.
+The `DataGridCheckBoxColumn` inherits all the properties of the `DataGridColumn`. It loads a [CheckBox](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/checkbox) as the content of record cells in the column and responds to value changes in it. The underlying data source can be changed so that it toggles the values shown in the CheckBox. The `SfDataGrid` automatically generates `DataGridCheckBoxColumn` the property in the underlying collection of the type is set to bool.
  
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml"%}
@@ -404,6 +408,65 @@ Underlying records will be the BindingContext for the `CellTemplate`.
 {% endhighlight %}
 {% endtabs %}
 
+### Edit template
+
+The `SfDataGrid` allows you to load any custom view in edit mode using the [EditTemplate]() property.
+
+{% highlight xaml %}
+    <ContentPage.Content>
+        <syncfusion:SfDataGrid x:Name="dataGrid"
+                               ItemsSource="{Binding OrderInfoCollection}"
+                               SelectionMode="Multiple"
+                               NavigationMode="Cell"
+                               AllowEditing="True"
+                               AutoGenerateColumnsMode="None">
+            <syncfusion:SfDataGrid.Columns>
+                <syncfusion:DataGridNumericColumn Format="#"
+                                                  MappingName="OrderID"
+                                                  HeaderText="Order ID" />
+                <syncfusion:DataGridTextColumn ColumnWidthMode="FitByHeader"
+                                               MappingName="Name"
+                                               HeaderText="Customer ID" />
+                <syncfusion:DataGridTextColumn  MappingName="ShipCountry"
+                                                HeaderText="Ship Country" />
+                <syncfusion:DataGridTemplateColumn HeaderText="Is Confirmed"
+                                                   MappingName="IsOnline"
+                                                   Width="100">
+                    <syncfusion:DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <Label x:Name="changeValue"
+                                       Grid.Column="1"
+                                       HorizontalTextAlignment="Center"
+                                       VerticalTextAlignment="Center"
+                                       Text="{Binding IsOnline}"
+                                       TextColor="Black" />
+                            </Grid>
+                        </DataTemplate>
+                    </syncfusion:DataGridTemplateColumn.CellTemplate>
+                    <syncfusion:DataGridTemplateColumn.EditTemplate>
+                        <DataTemplate>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <CheckBox Grid.Column="1"
+                                          IsChecked="{Binding IsOnline}">
+                                </CheckBox>
+                            </Grid>
+                        </DataTemplate>
+                    </syncfusion:DataGridTemplateColumn.EditTemplate>
+                </syncfusion:DataGridTemplateColumn>
+            </syncfusion:SfDataGrid.Columns>
+        </syncfusion:SfDataGrid>
+    </ContentPage.Content>
+{% endhighlight %}
+
 ### Load view through template selector
 
 You can load any view to the cells through the `CellTemplate` by assigning the `TemplateSelector`.
@@ -516,6 +579,269 @@ DataGridDateColumn dateColumn = new DataGridDateColumn()
 dataGrid.Columns.Add(dateColumn);
 {% endhighlight %}
 {% endtabs %}
+
+## DataGridComboBoxColumn
+
+The [DataGridComboBoxColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridComboBoxColumn.html) inherits all the properties of the [SfDataGrid.DataGridColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html). It displays a list of items in the form of a [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) as the content of a column. To enable or disable editing for a particular column, set the [DataGridColumn.AllowEditing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_AllowEditing) property to true or false. When in editing mode, it displays a `SfComboBox` element. The data source for the `SfComboBox` can be set using the [DataGridComboBoxColumn.ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridComboBoxColumn.html#Syncfusion_Maui_DataGrid_DataGridComboBoxColumn_ItemsSource) property. The combobox column can be populated with data in the following ways:
+
+* Collection of primitive types
+* Collection of user-defined types (custom objects)
+
+![DataGrid with editing in comboBox column](Images\column-types\maui-datagrid-comboBox-column.png)
+
+### Collection of primitive types
+
+To display the collection of items in the ComboBox drop-down, create a `DataGridComboBoxColumn` and set its `ItemsSource` property to a simple collection.
+
+To load the `DataGridComboBoxColumn` with a simple string collection, you can refer to the code example below:
+
+{% tabs %}
+{% highlight xaml %}
+    <ContentPage.BindingContext>
+        <local:ViewModel x:Name="viewModel" />
+    </ContentPage.BindingContext>
+
+    <sfGrid:SfDataGrid x:Name="dataGrid"
+                       ItemsSource="{Binding OrdersInfo}">
+        <sfGrid:SfDataGrid.Columns>
+            <sfgrid:DataGridComboBoxColumn BindingContext="{x:Reference viewModel}"
+                                           HeaderText="Name"
+                                           ItemsSource="{Binding CustomerNames}"
+                                           MappingName="DealerName" />
+        </sfGrid:SfDataGrid.Columns>
+    </sfGrid:SfDataGrid>
+{% endhighlight %}
+
+{% highlight c# %}
+dataGrid = new SfDataGrid();
+DataGridComboBoxColumn comboBoxColumn = new DataGridComboBoxColumn()
+{
+    BindingContext = viewModel,
+    MappingName = "DealerName",
+    ItemsSource = viewModel.CustomerNames,
+    HeaderText = "Name"
+
+};
+dataGrid.Columns.Add(comboBoxColumn);
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight c# %}
+
+public class ViewModel
+{
+    public ObservableCollection<string> CustomerNames { get; set; }
+
+    public ViewModel()
+    {
+        this.CustomerNames = Customers.ToObservableCollection();
+    }
+
+    internal string[] Customers = new string[] {"Adams","Crowley","Ellis","Gable","Irvine","Keefe","Mendoza","Owens","Rooney","Wadded",};
+    
+}
+{% endhighlight %}
+{% endtabs %}
+
+### Collection of user-defined types
+
+To display a list of user-defined items in the drop-down of a combo box, create a `DataGridComboBoxColumn` and set its `ItemsSource` property to a user-defined collection. By default, if the [DisplayMemberPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridComboBoxColumn.html#Syncfusion_Maui_DataGrid_DataGridComboBoxColumn_DisplayMemberPath) is not set, the combo box column will display the values from the `MappingName` property of the column.
+
+### Loading different ItemSource for each row of DataGridComboBoxColumn
+
+To load different ItemSources for each row of a DataGridComboBoxColumn, you can utilize the [DataGridComboBoxColumn.ItemsSourceSelector](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridComboBoxColumn.html#Syncfusion_Maui_DataGrid_DataGridComboBoxColumn_ItemsSourceSelector) property.
+
+### Implementing IItemsSourceSelector
+
+`DataGridComboBoxColumn.ItemsSourceSelector` needs to implement the IItemsSourceSelector interface, which requires you to implement the GetItemsSource method. This method receives the following parameters:
+
+* Record: This is the data object associated with the row.
+* Data Context: This is the binding context of the data grid.
+
+In the provided code, the ItemsSource for the ShipCity column is returned based on the value of the ShipCountry column. This is done by using the record and the binding context of the data grid, which are passed to the GetItemsSource method.
+
+{% tabs %}
+{% highlight xaml %}
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:ItemSourceSelector x:Key="converter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <sfgrid:SfDataGrid x:Name="dataGrid"
+                       ItemsSource="{Binding DealerInformation}"
+                       AllowEditing="True"
+                       AutoGenerateColumnsMode="None"
+                       NavigationMode="Cell"
+                       EditTapAction="OnDoubleTap"
+                       SelectionMode="Single">
+        <sfgrid:SfDataGrid.Columns>
+            <sfgrid:DataGridComboBoxColumn BindingContext="{x:Reference viewModel}"
+                                           ItemsSource="{Binding CountryList}"
+                                           MappingName="ShipCountry"
+                                           LoadUIView="True">
+            </sfgrid:DataGridComboBoxColumn>
+
+            <sfgrid:DataGridComboBoxColumn ItemsSourceSelector="{StaticResource converter}"
+                                           MappingName="ShipCity"
+                                           LoadUIView="True">
+            </sfgrid:DataGridComboBoxColumn>
+        </sfgrid:SfDataGrid.Columns>
+    </sfgrid:SfDataGrid>
+{% endhighlight %}
+
+{% highlight c# %}
+public class ItemSourceSelector : IItemsSourceSelector
+{
+    public IEnumerable GetItemsSource(object record, object dataContext)
+    {
+        if (record == null)
+        {
+            return null;
+        }
+
+        var orderinfo = record as DealerInfo;
+        var countryName = orderinfo.ShipCountry;
+        var viewModel = dataContext as EditingViewModel;
+
+        // Returns ShipCity collection based on ShipCountry.
+        if (viewModel.ShipCities.ContainsKey(countryName))
+        {
+            string[] shipcities = null;
+            viewModel.ShipCities.TryGetValue(countryName, out shipcities);
+            return shipcities.ToList();
+        }
+
+        return null;
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
+![DataGrid with ItemSourceSelector comboBox column](Images\column-types\maui-datagrid-comboBox-column-itemsourceselector.png)
+![DataGrid with ItemSourceSelector comboBox column](Images\column-types\maui-datagrid-comboBox-column-itemsourceselector2.png)
+
+### Editing the combo box
+
+The `DataGridComboBoxColumn` supports both editable and non-editable text boxes for selecting items from a given data source. Users can choose one item from the suggestion list.
+
+The [IsEditableMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridComboBoxColumn.html#Syncfusion_Maui_DataGrid_DataGridComboBoxColumn_IsEditableMode) property is used to enable the user input in `DataGridComboBoxColumn`. Its default value is `false`.
+
+{% tabs %}
+{% highlight xaml %}
+    <local:ViewModel x:Name="viewModel" />
+    </ContentPage.BindingContext>
+
+    <sfGrid:SfDataGrid x:Name="dataGrid"
+                       ItemsSource="{Binding OrdersInfo}">
+        <sfGrid:SfDataGrid.Columns>
+            <sfgrid:DataGridComboBoxColumn BindingContext="{x:Reference viewModel}"
+                                           HeaderText="Name"
+                                           IsEditableMode="True"
+                                           ItemsSource="{Binding CustomerNames}"
+                                           MappingName="DealerName" />
+        </sfGrid:SfDataGrid.Columns>
+    </sfGrid:SfDataGrid>
+{% endhighlight %}
+
+{% highlight c# %}
+dataGrid = new SfDataGrid();
+DataGridComboBoxColumn comboBoxColumn = new DataGridComboBoxColumn()
+{
+    BindingContext = viewModel,
+    MappingName = "DealerName",
+    ItemsSource = viewModel.CustomerNames,
+    IsEditableMode = True,
+    HeaderText = "Name"
+
+};
+dataGrid.Columns.Add(comboBoxColumn);
+{% endhighlight %}
+{% endtabs %}
+
+![DataGrid with Edited comboBox column](Images\column-types\maui-datagrid-combobox-column-editing.png)
+
+### Auto suggesting on edit mode
+
+By default, the auto-suggestion in the dropdown will display values based on the [StartsWith](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ComboBoxTextSearchMode.html#Syncfusion_Maui_Inputs_ComboBoxTextSearchMode_StartsWith) filter condition. However, you can change this behavior by utilizing the [SuggestionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridComboBoxColumn.html#Syncfusion_Maui_DataGrid_DataGridComboBoxColumn_SuggestionMode) property to retrieve matches using the `Contains` condition.
+
+{% tabs %}
+{% highlight xaml %}
+    <ContentPage.BindingContext>
+        <local:ViewModel x:Name="viewModel" />
+    </ContentPage.BindingContext>
+
+    <sfGrid:SfDataGrid x:Name="dataGrid"
+                       ItemsSource="{Binding OrdersInfo}">
+        <sfGrid:SfDataGrid.Columns>
+            <sfgrid:DataGridComboBoxColumn BindingContext="{x:Reference viewModel}"
+                                           HeaderText="Name"
+                                           IsEditableMode="True"
+                                           SuggestionMode="Contains"
+                                           ItemsSource="{Binding CustomerNames}"
+                                           MappingName="DealerName" />
+        </sfGrid:SfDataGrid.Columns>
+    </sfGrid:SfDataGrid>
+{% endhighlight %}
+
+{% highlight c# %}
+dataGrid = new SfDataGrid();
+DataGridComboBoxColumn comboBoxColumn = new DataGridComboBoxColumn()
+{
+    BindingContext = viewModel,
+    MappingName = "DealerName",
+    ItemsSource = viewModel.CustomerNames,
+    IsEditableMode = True,
+    SuggestionMode = SuggestionMode.Contains,
+    HeaderText = "Name"
+
+};
+dataGrid.Columns.Add(comboBoxColumn);
+{% endhighlight %}
+{% endtabs %}
+
+![DataGrid with Suggesting comboBox column](Images\column-types\maui-datagrid-combobox-column-editing.png)
+
+### Change clear button visibility
+
+The ComboBox control includes a clear button that allows users to easily remove the entered input. The visibility of the clear button can be adjusted using the [ShowClearButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridComboBoxColumn.html#Syncfusion_Maui_DataGrid_DataGridComboBoxColumn_ShowClearButton) property. By default, the `ShowClearButton` property is set to true.
+
+{% tabs %}
+{% highlight xaml %}
+    <ContentPage.BindingContext>
+        <local:ViewModel x:Name="viewModel" />
+    </ContentPage.BindingContext>
+
+    <sfGrid:SfDataGrid x:Name="dataGrid"
+                       ItemsSource="{Binding OrdersInfo}">
+        <sfGrid:SfDataGrid.Columns>
+            <sfgrid:DataGridComboBoxColumn BindingContext="{x:Reference viewModel}"
+                                           HeaderText="Name"
+                                           IsEditableMode="True"
+                                           ShowClearButton="False"
+                                           ItemsSource="{Binding CustomerNames}"
+                                           MappingName="DealerName" />
+        </sfGrid:SfDataGrid.Columns>
+    </sfGrid:SfDataGrid>
+{% endhighlight %}
+{% highlight c# %}
+dataGrid = new SfDataGrid();
+DataGridComboBoxColumn comboBoxColumn = new DataGridComboBoxColumn()
+{
+    BindingContext = viewModel,
+    MappingName = "DealerName",
+    IsEditableMode= true,
+    ItemsSource = viewModel.CustomerNames,
+    HeaderText = "Name",
+    ShowClearButton= false,
+
+};
+dataGrid.Columns.Add(comboBoxColumn);
+{% endhighlight %}
+{% endtabs %}
+
+N> The `ShowClearButton` property has no effect in non-editable mode..
 
 ## DataGridNumericColumn
 
