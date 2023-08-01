@@ -66,26 +66,6 @@ private void OnAnnotationAdded(object sender, AnnotationEventArgs e)
 
 This section will go through different methods of removing annotations from a PDF document.
 
-### Remove the selected annotation
-
-You can remove the selected annotation programmatically by providing the selected annotation instance as the parameter to [RemoveAnnotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_RemoveAnnotation_Syncfusion_Maui_PdfViewer_Annotation_) method. The selected annotation instance may be obtained from the [AnnotationSelected](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationSelected) event. The following example shows how to remove the selected annotation.
-
-{% tabs %}
-{% highlight c# %}
-/// <summary>
-/// Remove the selected annotation.
-/// </summary>
-/// <param name="selectedAnnotation">The selected annotation instance that may be obtained from the annotation selected event</param>
-void RemoveSelectedAnnotation(Annotation selectedAnnotation)
-{
-    // Remove the annotation using the RemoveAnnotation method of SfPdfViewer instance.
-    PdfViewer.RemoveAnnotation(selectedAnnotation);
-}
-{% endhighlight %}
-{% endtabs %}
-
-In desktop platforms like macOS and Windows, you can also use the keyboard shortcut `Delete` to remove the selected annotation from the PDF document directly.
-
 ### Remove a specific annotation
 
 You can remove an annotation from the document programmatically by providing the specific annotation instance as the parameter to `RemoveAnnotation` method of `SfPdfViewer`. The following example shows how to remove the first annotation in the annotation collection from a PDF document.
@@ -168,33 +148,6 @@ void EditFirstAnnotation()
         circleAnnotation.FillColor = Colors.Red; //Inner fill color.
         circleAnnotation.BorderWidth = 2; //Stroke thickness.
         circleAnnotation.Bounds = new RectF(10, 10, 100, 100); // Bounds in PDF coordinates.
-    }
-}
-{% endhighlight %}
-{% endtabs %}
-
-### Edit the selected annotation
-
-You can edit the properties of the selected annotation programmatically by accessing the selected annotation instance. The selected annotation instance may be obtained from the `AnnotationSelected` event. The following example shows how to edit the selected annotation assuming that the annotation is a circle type.
-
-{% tabs %}
-{% highlight c# %}
-/// <summary>
-/// Edits the selected annotation.
-/// </summary>
-/// <param name="selectedAnnotation">The selected annotation instance may be obtained from the annotation selected event</param>
-void EditSelectedAnnotation(Annotation selectedAnnotation)
-{
-    // Edit the annotation properties.
-    selectedAnnotation.Color = Colors.Green; //Stroke color.
-    selectedAnnotation.Opacity = 0.75f; // 75% Opacity
-
-    // Type cast to edit the properties of the specific annotation type. Here the first annotation is a circle annotation.
-    if (selectedAnnotation is CircleAnnotation circleAnnotation)
-    {
-        circleAnnotation.FillColor = Colors.Red; //Inner fill color.
-        circleAnnotation.BorderWidth = 2; //Stroke thickness.
-        circleAnnotation.Bounds = new RectF(0, 0, 100, 100); // Bounds in PDF coordinates.
     }
 }
 {% endhighlight %}
