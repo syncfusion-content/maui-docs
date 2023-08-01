@@ -9,7 +9,7 @@ documentation: ug
 
 # Save a Document in .NET MAUI PDF Viewer (SfPdfViewer)
 
-The [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) allows you to save a modified document to the specified file stream. It helps you to prevent your work from being lost. You need to provide the PDF file stream as a parameter to the `SaveDocument` method of the `SfPdfViewer`. The modified document will be saved to the given file stream. 
+The [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) allows you to save a modified document to the specified file stream. It helps you to prevent your work from being lost. You need to provide the PDF file stream as a parameter to the [SaveDocument](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_SaveDocument_System_IO_Stream_) method of the `SfPdfViewer`. The modified document will be saved to the given file stream. 
 
 The following example explains how to save the modified document if the document needs to be saved in the application’s data directory. 
 
@@ -27,4 +27,4 @@ The following example explains how to save the modified document if the document
 {% endhighlight %}
 {% endtabs %}
 
-To save a document asynchronously, you may use the `SaveDocumentAsync` method  of the `SfPdfViewer`.
+To save a document asynchronously, you may use the [SaveDocumentAsync](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_SaveDocumentAsync_System_IO_Stream_System_Threading_CancellationToken_) method  of the `SfPdfViewer`.
