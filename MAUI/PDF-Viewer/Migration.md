@@ -240,7 +240,7 @@ To make migration from [Xamarin SfPdfViewer](https://www.syncfusion.com/xamarin-
 <td>Occurs when an annotation is added to a page.</td>
 </tr>
 <tr>
-<td>{
+<td>
 <div>{{'[InkDeselected](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.SfPdfViewer.html#Syncfusion_SfPdfViewer_XForms_SfPdfViewer_InkDeselected)'| markdownify }} </div>
 <div>{{'[ShapeAnnotationDeselected](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.SfPdfViewer.html#Syncfusion_SfPdfViewer_XForms_SfPdfViewer_ShapeAnnotationDeselected)'| markdownify }} </div>
 <div>{{'[StampAnnotationDeselected](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.SfPdfViewer.html#Syncfusion_SfPdfViewer_XForms_SfPdfViewer_StampAnnotationDeselected)'| markdownify }} </div>
@@ -432,9 +432,8 @@ To make migration from [Xamarin SfPdfViewer](https://www.syncfusion.com/xamarin-
 <div>{{'[TextMarkupSelectedEventArgs](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.TextMarkupSelectedEventArgs.html)'| markdownify }} </div>
 </td>
 <td>{{'[AnnotationEventArgs ](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.AnnotationEventArgs.html)'| markdownify }}</td>
-<td></td>
+<td>Provides data for the AnnotationAdded, AnnotationSelected, AnnotationDeselected, AnnotationEdited, AnnotationRemoved events.</td>
 </tr>
-
 </table>
 
 ## Upcoming Features   
