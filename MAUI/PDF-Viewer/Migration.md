@@ -133,8 +133,7 @@ To make migration from [Xamarin SfPdfViewer](https://www.syncfusion.com/xamarin-
 </tr>
 <tr>
 <td>{{'[InkAnnotationSettings.Thickness](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.InkAnnotationSettings.html#Syncfusion_SfPdfViewer_XForms_InkAnnotationSettings_Thickness)'| markdownify}}</td>
-<td>{{'[InkAnnotationSettings.BorderWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.InkAnnotationSettings.html#Syncfusion_Maui_PdfViewer_InkAnnotationSettings_BorderWidth)'| markdownify}}
-</td>
+<td>{{'[InkAnnotationSettings.BorderWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.InkAnnotationSettings.html#Syncfusion_Maui_PdfViewer_InkAnnotationSettings_BorderWidth)'| markdownify}}</td>
 <td>Gets or sets the border thickness of an ink annotation.</td>
 </tr>
 <tr>
@@ -145,9 +144,8 @@ To make migration from [Xamarin SfPdfViewer](https://www.syncfusion.com/xamarin-
 <tr>
 <td>{{'[InkAnnotationSettings.EnableSeparateAttributesForEachStroke](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.InkAnnotationSettings.html#Syncfusion_SfPdfViewer_XForms_InkAnnotationSettings_EnableSeparateAttributesForEachStroke)'| markdownify}}</td>
 <td>{{'[InkAnnotationSettings.AggregateInkStrokes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.InkAnnotationSettings.html#Syncfusion_Maui_PdfViewer_InkAnnotationSettings_AggregateInkStrokes)'| markdownify}}</td>
-<td>Gets or sets a value indicating whether each ink strokes should be treated as separate ink annotations. </td>
+<td>Gets or sets a value indicating whether each ink strokes should be treated as separate ink annotations.</td>
 </tr>
-<tr>
 <tr>
 <td>{{'[ShapeAnnotationSettings.StrokeColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.ShapeAnnotationSettings.html#Syncfusion_SfPdfViewer_XForms_ShapeAnnotationSettings_StrokeColor)'| markdownify}}</td>
 <td>{{'[ShapeAnnotationSettings.Color](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.AnnotationAppearanceSettings.html#Syncfusion_Maui_PdfViewer_AnnotationAppearanceSettings_Color)'| markdownify}}</td>
@@ -156,14 +154,13 @@ To make migration from [Xamarin SfPdfViewer](https://www.syncfusion.com/xamarin-
 <tr>
 <td>{{'[SelectorSettings.StrokeColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.SelectorSettings.html#Syncfusion_SfPdfViewer_XForms_SelectorSettings_StrokeColor)'| markdownify }}</td>
 <td>{{'[AnnotationSelectorSettings.Color](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.AnnotationSelectorSettings.html#Syncfusion_Maui_PdfViewer_AnnotationSelectorSettings_Color)'| markdownify}}</td>
-<td>Gets or sets the default color of annotation selector..</td>
+<td>Gets or sets the default color of annotation selector.</td>
 </tr>
 <tr>
 <td>{{'[LockedStrokeColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.SelectorSettings.html#Syncfusion_SfPdfViewer_XForms_SelectorSettings_LockedStrokeColor)'| markdownify}}</td>
 <td>{{'[LockedColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.AnnotationSelectorSettings.html#Syncfusion_Maui_PdfViewer_AnnotationSelectorSettings_LockedColor)'| markdownify}}</td>
 <td>Gets or sets the default color of annotation selector when the selected annotation is locked.</td>
 </tr>
-<tr>
 <tr>
 <td>{{'[LinePoints](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.ShapeAnnotation.html#Syncfusion_SfPdfViewer_XForms_ShapeAnnotation_LinePoints)'| markdownify}}</td>
 <td>{{'[LineAnnotation.Points](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.LineAnnotation.html#Syncfusion_Maui_PdfViewer_LineAnnotation_Points)'| markdownify}}</td>
@@ -221,8 +218,7 @@ To make migration from [Xamarin SfPdfViewer](https://www.syncfusion.com/xamarin-
 <tr>
 <td>{{'[SearchInitiated](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.SfPdfViewer.html#Syncfusion_SfPdfViewer_XForms_SfPdfViewer_SearchInitiated)'| markdownify}}, {{'[SearchCompleted](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.SfPdfViewer.html#Syncfusion_SfPdfViewer_XForms_SfPdfViewer_SearchCompleted)'| markdownify}}</td>
 <td>{{'[TextSearchProgress](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_TextSearchProgress)'| markdownify }}</td>
-<td>Occurs when the text search is in progress.
-</td>
+<td>Occurs when the text search is in progress.</td>
 </tr>
 <tr>
 <td>{{'[TextSelectionCompleted](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.SfPdfViewer.html#Syncfusion_SfPdfViewer_XForms_SfPdfViewer_TextSelectionCompleted)'| markdownify}}</td>
@@ -431,8 +427,8 @@ To make migration from [Xamarin SfPdfViewer](https://www.syncfusion.com/xamarin-
 <div>{{'[TextMarkupRemovedEventArgs](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.TextMarkupRemovedEventArgs.html)'| markdownify }},</div>
 <div>{{'[TextMarkupSelectedEventArgs](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.TextMarkupSelectedEventArgs.html)'| markdownify }}</div>
 </td>
-<td>{{'[AnnotationEventArgs ](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.AnnotationEventArgs.html)'| markdownify }}</td>
-<td>Provides data for the [AnnotationAdded](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationAdded), [AnnotationSelected](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationSelected), [AnnotationDeselected](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationDeselected), [AnnotationEdited](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationEdited), [AnnotationRemoved](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationRemoved) events.</td>
+<td>{{'[AnnotationEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.AnnotationEventArgs.html)'| markdownify}}</td>
+<td>Provides data for the {{'[AnnotationAdded](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationAdded)'| markdownify}}, {{'[AnnotationSelected](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationSelected)'| markdownify}}, {{'[AnnotationDeselected](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationDeselected)'| markdownify}}, {{'[AnnotationEdited](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationEdited)'| markdownify}}, {{'[AnnotationRemoved](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationRemoved)'| markdownify}} events.</td>
 </tr>
 </table>
 
