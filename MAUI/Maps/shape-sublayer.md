@@ -13,9 +13,7 @@ The shape sublayer is where geographical rendering will happen for the sublayer.
 
 To learn more about the .NET MAUI Maps shape sub layer, you can check the following video.
 
-{% youtube
-"youtube:https://www.youtube.com/watch?v=CuI9bkGhBu8&t=52s"%}
-
+<style>#MAUIMapsVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUIMapsVideoTutorial' src="https://www.youtube.com/embed/CuI9bkGhBu8?start=52"></iframe>
 
 ## Shape sublayer on tile layer
 
