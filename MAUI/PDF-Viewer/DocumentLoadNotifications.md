@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Document Load Notifications in .NET MAUI PDF Viewer control | Syncfusion
+title: Document Load Events in .NET MAUI PDF Viewer control | Syncfusion
 description: Learn here all about events that notifies whether the document has been opened or not opened in the Syncfusion .NET MAUI PDF Viewer (SfPdfViewer).
 platform: MAUI
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Document Load Notifications in .NET MAUI PDF Viewer (SfPdfViewer)
+# Document Load Events in .NET MAUI PDF Viewer (SfPdfViewer)
 
 The [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) supports the [DocumentLoaded](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_DocumentLoaded) and [DocumentLoadFailed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_DocumentLoadFailed) events to notify whether the document has been opened and displayed in the view or not.
 
@@ -62,17 +62,17 @@ The [DocumentLoadFailedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion
 {% tabs %}
 {% highlight XAML hl_lines="3" %}
 
-	<syncfusion:SfPdfViewer 
-		x:Name="PdfViewer" 
-		DocumentLoadFailed="PdfViewer_DocumentLoadFailed"/>
+<syncfusion:SfPdfViewer 
+	x:Name="PdfViewer" 
+	DocumentLoadFailed="PdfViewer_DocumentLoadFailed"/>
 	
 {% endhighlight %}
 {% highlight C# %}
 
-	private void PdfViewer_DocumentLoadFailed(object sender, DocumentLoadFailedEventArgs e)
-	{
-		DisplayAlert( e.Message, e.Exception.StackTrace, "OK");
-	}
+private void PdfViewer_DocumentLoadFailed(object sender, DocumentLoadFailedEventArgs e)
+{
+	DisplayAlert( e.Message, e.Exception.StackTrace, "OK");
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -84,24 +84,24 @@ The `DocumentLoadFailed` event allows you to handle the load failures at the app
 {% tabs %}
 {% highlight XAML hl_lines="3" %}
 
-        <syncfusion:SfPdfViewer 
-            x:Name="PdfViewer"
-            DocumentLoadFailed="PdfDocumentLoadFailed"/>
+<syncfusion:SfPdfViewer 
+	x:Name="PdfViewer"
+	DocumentLoadFailed="PdfDocumentLoadFailed"/>
 			
 {% endhighlight %}
 {% highlight C# hl_lines="4" %}
 
-	public MainPage()
-	{
-		InitializeComponent();
-        PdfViewer.DocumentLoadFailed += PdfDocumentLoadFailed;
-    }
+public MainPage()
+{
+	InitializeComponent();
+	PdfViewer.DocumentLoadFailed += PdfDocumentLoadFailed;
+}
 
-    private void PdfDocumentLoadFailed(object sender, DocumentLoadFailedEventArgs e)
-    {
-        e.Handled = true;
-        // Handle your logic here.
-    }
+private void PdfDocumentLoadFailed(object sender, DocumentLoadFailedEventArgs e)
+{
+	e.Handled = true;
+	// Handle your logic here.
+}
 	
 {% endhighlight %}
 {% endtabs %}
