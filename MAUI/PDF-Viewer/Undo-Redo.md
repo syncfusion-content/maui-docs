@@ -7,7 +7,7 @@ control: SfPdfViewer
 documentation: ug
 ---
 
-# Undo and Redo
+# Undo and Redo in .NET MAUI PDF Viewer (SfPdfViewer)
 
 If you performed any undesired actions when on adding, removing, moving, resizing or editing annotations, you can undo and redo the action to restore the previous state. This section will go through how to perform the undo and redo the changes made on the annotations.
 

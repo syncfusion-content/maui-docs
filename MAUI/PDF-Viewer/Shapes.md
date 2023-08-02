@@ -7,11 +7,11 @@ control: SfPdfViewer
 documentation: ug
 ---
 
-# Shape Annotations
+# Shape Annotations in .NET MAUI PDF Viewer (SfPdfViewer)
 
 The shape annotations feature of [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) allows you to add, remove and modify shapes in the PDF document. This is useful for making corrections or emphasizing important points in the document. This section will go through the various types and functions available in PDF Viewer for working with shape annotations.
 
-## Types of Shapes
+## Types of shapes
 
 The following shape annotation types are now available in the PDF Viewer.
 
@@ -20,11 +20,11 @@ The following shape annotation types are now available in the PDF Viewer.
 3.	Line.
 4.	Square.
 
-## Adding Annotations
+## Add shapes to a PDF document
 
 This section will go through how to add shape annotations to a PDF document interactively by drawing on the PDF document as well as programmatically.
 
-### Adding Annotations with UI Interaction
+### Add shapes with UI interaction
 
 You can draw and add shape annotations to a PDF document interactively by touch (or mouse down) and drag. The following steps explains how to draw shape annotation on a PDF.
 
@@ -35,6 +35,7 @@ You can draw and add shape annotations to a PDF document interactively by touch 
 5.	Repeat the steps 2-4, if you want to create multiple circles on other areas during the drawing mode.
 6.	Once you have done, set the `AnnotationMode` to [None](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.AnnotationMode.html#Syncfusion_Maui_PdfViewer_AnnotationMode_None). It will disable the circle drawing mode and save the drawn circles to the PDF pages as circle annotations. 
 7.	You can later move, resize, or edit the annotation.
+
 
 The following code explains how to enable the circle annotation mode. Similarly, you can change the annotation mode for drawing other shapes.
 
@@ -68,7 +69,7 @@ void DisableCircleDrawingMode()
 {% endhighlight %}
 {% endtabs %}
 
-### Adding Annotations Programmatically
+### Add shapes programmatically
 
 You can create and add circle annotation to a PDF document programmatically using the [AddAnnotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AddAnnotation_Syncfusion_Maui_PdfViewer_Annotation_) method of the `SfPdfViewer`. The following example explains how to create a circle annotation and add it to the first page of a PDF document. Similarly, you can add other shapes also.
 
@@ -77,13 +78,13 @@ You can create and add circle annotation to a PDF document programmatically usin
 CircleAnnotation CreateCircleAnnoation()
 {
     int pageNumber = 1;
-    //Define the bounds for circle in the PDF coordinates.
+    // Define the bounds for circle in the PDF coordinates.
     RectF circleBounds = new RectF(10, 10, 100, 100); 
 
-    //Create a circle annotation.
+    // Create a circle annotation.
     CircleAnnotation annotation = new CircleAnnotation(circleBounds, pageNumber);
     
-    //Set the appearance for the circle annotation.
+    // Set the appearance for the circle annotation.
     annotation.Color = Colors.Red; // set the stroke color
     annotation.FillColor = Colors.Green; // set the inner fill color.
     annotation.BorderWidth = 2; // set the stroke thickness.
@@ -102,7 +103,7 @@ void AddCircleAnnotation()
 {% endhighlight %}
 {% endtabs %}
 
-## Annotation Settings
+## Shape annotation settings
 
 In the shape annotation mode, the shape annotations will be drawn with a default appearance. You can modify the annotation after it has been added to the pages. However, if you need to define the appearance before drawing on the document, you can change its default settings using the [AnnotationSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationSettings) property of the `SfPdfViewer`. For that you need to obtain the default shape annotation settings.
 
@@ -117,19 +118,15 @@ void CustomizeDefaultCircleSettings()
 
     //Modify the default properties.
 
-    // Set the default stroke color to blue.
-    circleAnnotationSettings.Color = Colors.Blue;
-    // Set the inner fill color to red.
-    circleAnnotationSettings.FillColor = Colors.Red;
-    // Set the default stroke thickness to 2.
-    circleAnnotationSettings.BorderWidth = 2;
-    // Sets the default opacity to 75%.
-    circleAnnotationSettings.Opacity = 0.75f;
+    circleAnnotationSettings.Color = Colors.Blue; // Set the default stroke color to blue.
+    circleAnnotationSettings.FillColor = Colors.Red; // Set the inner fill color to red.
+    circleAnnotationSettings.BorderWidth = 2; // Set the default stroke thickness to 2.
+    circleAnnotationSettings.Opacity = 0.75f; // Set the default opacity to 75%.
 }
 {% endhighlight %}
 {% endtabs %}
 
-## Edit the Selected Annotation
+## Edit the selected shape annotation
 
 You can edit the properties of the selected shape annotation programmatically by accessing the selected annotation instance. The selected annotation instance may be obtained from the [AnnotationSelected](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationSelected) event. The following example shows how to edit some of the properties of the selected circle annotation. Similarly, you can modify the other shape annotations properties.
 
@@ -141,17 +138,12 @@ You can edit the properties of the selected shape annotation programmatically by
 /// <param name="selectedAnnotation">The selected annotation instance that may be obtained from the annotation selected event</param>
 void EditSelectedCicleAnnotation(Annotation selectedAnnotation)
 {
-    //Type cast the selected annotation as circle annotation.
+    // Type cast the selected annotation as circle annotation.
     if (selectedAnnotation is CircleAnnotation circleAnnotation)
     {
-        //Change the color to blue.
-        circleAnnotation.Color = Colors.Blue;
-
-        //Change the stroke thickness to 1.
-        circleAnnotation.BorderWidth = 1;
-
-        //Change the opacity to 75%.
-        circleAnnotation.Opacity = 0.75f;
+        circleAnnotation.Color = Colors.Blue; // Change the color to blue.
+        circleAnnotation.BorderWidth = 1; // Change the stroke thickness to 1.
+        circleAnnotation.Opacity = 0.75f; // Change the opacity to 75%.
     }
 }
 {% endhighlight %}
