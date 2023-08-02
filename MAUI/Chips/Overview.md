@@ -1,16 +1,16 @@
 ---
 layout: post
-title: What's New in Essential Studio for .NET MAUI | Syncfusion
+title: Overview | .NET MAUI Chips | Syncfusion
 platform: maui-controls
-description: Chip arranges multiple chips in a Layout and groups them to make selection easy.
+description: Learn here about what's new in Essential Studio for .NET MAUI SfChip Control, its elements, and more.
 control: SfChip
 ---
 
-## .NET MAUI Chips Overview
+# Overview in .NET MAUI Chips
 
 The .NET MAUI Chip control is a versatile and feature-rich component that allows you to present information in an interactive and customizable layout. It enables you to arrange multiple chips in a layout and group them, making a selection and interaction seamless.
 
-### Key features
+## Key features
 
 * Choose from various layout options such as stack, flex, and more to arrange the chips according to your needs.
 * Convert text into compact chips, providing a concise way to display information.
