@@ -7,17 +7,17 @@ control: SfPdfViewer
 documentation: ug
 ---
 
-# Select and Deselct Annotations
+# Select and Deselct Annotations in .NET MAUI PDF Viewer (SfPdfViewer)
 
 This section will go through the various functions available in the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) for selecting and deselecting annotations in a PDF document.
 
-## Select an Annotation
+## Select an annotation
 
 You can select an annotation by simply tapping on the annotation using touch or mouse. When the annotation is selected, the selection border (selector) appears, indicating that the annotation is selected. It also lets you move or resize the annotation if the actions are supported by the annotation type. The following image represents the circle annotation is selected.
 
 ![Selected annotation representation.](Images/Annotations/selected-circle.png)
 
-### Select an Annotation Programmatically
+### Select an annotation programmatically
 
 You can select an annotation programmatically by providing the annotation instance as the parameter to the [SelectAnnotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_SelectAnnotation_Syncfusion_Maui_PdfViewer_Annotation_) method. The annotation instance can be found in the Annotations property of the `SfPdfViewer`. The following example explains how to select the first annotation in the annotation collection.
 
@@ -25,16 +25,16 @@ You can select an annotation programmatically by providing the annotation instan
 {% highlight c# %}
 void SelectAnnotation()
 {
-    //Obtain the annotation collection using `SfPdfViewer` instance.
+    // Obtain the annotation collection using `SfPdfViewer` instance.
     ReadOnlyObservableCollection<Annotation> annotations = PdfViewer.Annotations;
     
-    //Select the first annotation in the collection using the `SelectAnnotation` method of `SfPdfViewer` instance.
+    // Select the first annotation in the collection using the `SelectAnnotation` method of `SfPdfViewer` instance.
     PdfViewer.SelectAnnotation(annotations[0]);
 }
 {% endhighlight %}
 {% endtabs %}
 
-### Customizing Selector Appearance
+### Customizing selector appearance
 
 The [AnnotationSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationSettings) property of SfPdfViewer allows you to customize the default selector color. The following example explains how to customize the selector color for locked and unlocked annotations.
 
@@ -42,10 +42,10 @@ The [AnnotationSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Pdf
 {% highlight c# %}
 void CustomizeSelectorAppearance()
 {
-    //Customize the selector color for unlocked annotations using the `AnnotationSettings` property of `SfPdfViewer` instance.
+    // Customize the selector color for unlocked annotations using the `AnnotationSettings` property of `SfPdfViewer` instance.
     PdfViewer.AnnotationSettings.Selector.Color = Colors.Blue;
 
-    //Customize the selector color for locked annotations using the `AnnotationSettings` property of `SfPdfViewer` instance..
+    // Customize the selector color for locked annotations using the `AnnotationSettings` property of `SfPdfViewer` instance..
     PdfViewer.AnnotationSettings.Selector.LockedColor = Colors.LightGray;
 }	
 {% endhighlight %}
@@ -57,7 +57,7 @@ The following images represent the customized selector color of an unlocked and 
 
 ![Selector color of a locked annotation.](Images/Annotations/selected-locked.png)
 
-### Annotation Selected Event
+### AnnotationSelected event
 
 The [AnnotationSelected](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationSelected) event occurs when an annotation is selected interactively or programmatically. The selected annotation instance will be provided through the [Annotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.AnnotationEventArgs.html#Syncfusion_Maui_PdfViewer_AnnotationEventArgs_Annotation) property of the event arguments. The following example explains how to wire the event to obtain and modify the selected annotation properties.
 
@@ -80,11 +80,62 @@ private void OnAnnotationSelected(object sender, AnnotationEventArgs e)
 {% endhighlight %}
 {% endtabs %}
 
-## Deselect an Annotation
+### Remove the selected annotation
 
-You can deselect the selected annotation by simply tapping outside of it using touch or mouse. When the annotation is deselected, the selection border (selector) disappears, indicating that the annotation is deselected.
+You can remove the selected annotation programmatically by providing the selected annotation instance as the parameter to [RemoveAnnotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_RemoveAnnotation_Syncfusion_Maui_PdfViewer_Annotation_) method. The selected annotation instance may be obtained from the [AnnotationSelected](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationSelected) event. The following example shows how to remove the selected annotation.
 
-### Deselect an Annotation Programmatically 
+{% tabs %}
+{% highlight c# %}
+/// <summary>
+/// Remove the selected annotation.
+/// </summary>
+/// <param name="selectedAnnotation">The selected annotation instance that may be obtained from the annotation selected event</param>
+void RemoveSelectedAnnotation(Annotation selectedAnnotation)
+{
+    // Remove the annotation using the RemoveAnnotation method of SfPdfViewer instance.
+    PdfViewer.RemoveAnnotation(selectedAnnotation);
+}
+{% endhighlight %}
+{% endtabs %}
+
+* In desktop platforms like macOS and Windows, you can also use the keyboard shortcut `Delete` to remove the selected annotation from the PDF document directly.
+
+
+### Edit the selected annotation
+
+You can edit the properties of the selected annotation programmatically by accessing the selected annotation instance. The selected annotation instance may be obtained from the `AnnotationSelected` event. The following example shows how to edit the selected annotation assuming that the annotation is a circle type.
+
+{% tabs %}
+{% highlight c# %}
+/// <summary>
+/// Edits the selected annotation.
+/// </summary>
+/// <param name="selectedAnnotation">The selected annotation instance may be obtained from the annotation selected event</param>
+void EditSelectedAnnotation(Annotation selectedAnnotation)
+{
+    // Edit the annotation properties.
+    selectedAnnotation.Color = Colors.Green; //Stroke color.
+    selectedAnnotation.Opacity = 0.75f; // 75% Opacity
+
+    // Type cast to edit the properties of the specific annotation type. Here the first annotation is a circle annotation.
+    if (selectedAnnotation is CircleAnnotation circleAnnotation)
+    {
+        circleAnnotation.FillColor = Colors.Red; //Inner fill color.
+        circleAnnotation.BorderWidth = 2; //Stroke thickness.
+        circleAnnotation.Bounds = new RectF(0, 0, 100, 100); // Bounds in PDF coordinates.
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
+## Deselect an annotation
+
+You can deselect an annotation by simply tapping outside of its bounds using touch or mouse. When the annotation is deselected, the selection border (selector) disappears, indicating that the annotation is deselected.
+
+* In desktop platforms like macOS and Windows, you can also use the keyboard shortcut `Esc` to deselect an annotation.
+
+
+### Deselect an annotation programmatically 
 
 You can deselect the annotation programmatically by providing the selected annotation instance as the parameter to [DeselectAnnotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_DeselectAnnotation_Syncfusion_Maui_PdfViewer_Annotation_) method. The selected annotation instance may be obtained from the `AnnotationSelected` event. The following example shows how to deselect the selected annotation. 
 
@@ -102,7 +153,7 @@ void DeselectAnnotation(Annotation selectedAnnotation)
 {% endhighlight %}
 {% endtabs %}
 
-### Annotation Deselected Event
+### AnnotationDeselected event
 
 The [AnnotationDeselected](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationDeselected) event occurs when an annotation is selected interactively or programmatically. The following example explains how to wire the event to obtain the deselected annotation.
 
@@ -119,7 +170,7 @@ private void OnAnnotationDeselected(object sender, AnnotationEventArgs e)
     // Obtain the deselected annotation if required.
     Annotation deselectedAnnotation = e.Annotation;
               
-    //You can handle your logics here…
+    // You can handle your logics here…
 }
 {% endhighlight %}
 {% endtabs %}
