@@ -15,6 +15,7 @@ To learn more about the .NET MAUI Maps line layer, you can check the following v
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=CuI9bkGhBu8&t=483s"%}
+<style>#MAUIMapsVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUIMapsVideoTutorial' src="https://www.youtube.com/embed/CuI9bkGhBu8?start=483"></iframe>
 
 ## Adding lines
 
