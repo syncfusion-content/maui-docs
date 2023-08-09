@@ -579,5 +579,3 @@ this.Content = chart;
 {% endtabs %}
 
 
-
-
