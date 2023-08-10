@@ -1343,19 +1343,18 @@ public class Summary : ContentPage
 
 public class DataGridTableSummaryCellRendererExt : DataGridTableSummaryCellRenderer
 {
-    public DataGridTableSummaryCellRendererExt()
+    protected override void OnSetCellStyle(DataColumnBase dataColumn)
+{
+    base.OnSetCellStyle(dataColumn);
+    dataColumn.ColumnElement.Background = Colors.LightBlue;
+    if (dataColumn.ColumnElement != null)
     {
+        (dataColumn.ColumnElement.Content as Label).HorizontalTextAlignment = TextAlignment.Start;
+        (dataColumn.ColumnElement.Content as Label).FontSize = 16;
+        (dataColumn.ColumnElement.Content as Label).FontAttributes = FontAttributes.Bold;
+        (dataColumn.ColumnElement.Content as Label).TextColor = Colors.White;
     }
-
-    protected override void OnInitializeDisplayView(DataColumnBase dataColumn, Label view)
-    {
-        base.OnInitializeDisplayView(dataColumn, view);
-        view.HorizontalTextAlignment = TextAlignment.Start;
-        view.BackgroundColor = Colors.DarkCyan;
-        view.FontSize = 16;
-        view.TextColor = Colors.White;
-
-    }
+}
 }
 {% endhighlight %}
 {% endtabs %}
