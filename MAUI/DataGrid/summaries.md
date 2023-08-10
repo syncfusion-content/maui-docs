@@ -1347,10 +1347,10 @@ public class DataGridTableSummaryCellRendererExt : DataGridTableSummaryCellRende
     {
         base.OnSetCellStyle(dataColumn);
 
-        dataColumn.ColumnElement.Background = Colors.LightBlue;
-        if (dataColumn.ColumnElement != null)
+        if (dataColumn.ColumnElement != null && dataColumn.ColumnElement.Content is Label label)
         {
-            Label label = dataColumn.ColumnElement.Content as Label;
+            dataColumn.ColumnElement.Background = Colors.LightBlue;
+
             label.HorizontalTextAlignment = TextAlignment.Start;
             label.FontSize = 16;
             label.FontAttributes = FontAttributes.Bold;
