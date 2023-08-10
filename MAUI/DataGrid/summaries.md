@@ -1344,17 +1344,17 @@ public class Summary : ContentPage
 public class DataGridTableSummaryCellRendererExt : DataGridTableSummaryCellRenderer
 {
     protected override void OnSetCellStyle(DataColumnBase dataColumn)
-{
-    base.OnSetCellStyle(dataColumn);
-    dataColumn.ColumnElement.Background = Colors.LightBlue;
-    if (dataColumn.ColumnElement != null)
     {
-        (dataColumn.ColumnElement.Content as Label).HorizontalTextAlignment = TextAlignment.Start;
-        (dataColumn.ColumnElement.Content as Label).FontSize = 16;
-        (dataColumn.ColumnElement.Content as Label).FontAttributes = FontAttributes.Bold;
-        (dataColumn.ColumnElement.Content as Label).TextColor = Colors.White;
+        base.OnSetCellStyle(dataColumn);
+        dataColumn.ColumnElement.Background = Colors.LightBlue;
+        if (dataColumn.ColumnElement != null)
+        {
+            (dataColumn.ColumnElement.Content as Label).HorizontalTextAlignment = TextAlignment.Start;
+            (dataColumn.ColumnElement.Content as Label).FontSize = 16;
+            (dataColumn.ColumnElement.Content as Label).FontAttributes = FontAttributes.Bold;
+            (dataColumn.ColumnElement.Content as Label).TextColor = Colors.White;
+        }
     }
-}
 }
 {% endhighlight %}
 {% endtabs %}
