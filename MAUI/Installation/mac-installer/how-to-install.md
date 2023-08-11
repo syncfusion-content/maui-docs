@@ -69,3 +69,8 @@ The steps below show how to install .NET MAUI Mac installer. 
    
    ![Installed Location](images/Mac_Installer10.png)
 
+## License key registration in samples
+
+After the installation, the license key is required to register the demo source that is included in the Mac installer. To learn about the steps for license registration for the .NET MAUI Mac installer, please refer to this.
+
+Register the license key in [App.xaml.cs](https://help.syncfusion.com/maui/licensing/how-to-register-in-an-application#net-maui) constructor before InitializeComponent().
