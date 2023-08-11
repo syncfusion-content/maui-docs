@@ -11,7 +11,7 @@ documentation: ug
 
 This section provides a quick overview for working with the SfDataGrid for .NET MAUI. Walk through the entire process of creating a real world of this control.
 
-To get start quickly with .NET MAUI DataGrid, you can check on this video:
+To get start quickly with [.NET MAUI DataGrid](https://www.syncfusion.com/maui-controls/maui-datagrid), you can check on this video:
 
 <style>#MAUIDataGridVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUIDataGridVideoTutorial' src='https://www.youtube.com/embed/xW0a7JlHbz4'></iframe>
 
@@ -348,3 +348,5 @@ public MainPage()
 {% endtabs %}
 
 N> Set `HorizontalOptions` and `VerticalOptions` to grid accordingly. When the `SfDataGrid` doesn't obtain finite size from its parent to layout in the View, the predefined `MinimumHeightRequest` and `MinimumWidthRequest`, which is 300, will be acquired.
+
+N> You can refer to our [.NET MAUI DataGrid](https://www.syncfusion.com/maui-controls/maui-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI DataGrid Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/DataGrid) that shows you how to render the DataGrid in .NET MAUI.
