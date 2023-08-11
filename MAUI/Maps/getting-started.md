@@ -577,6 +577,4 @@ this.Content = map;
 
 ![.NET MAUI Maps with tile layer](images/getting-started/getting_started_tile_layer.png)
 
-N> 
-* Get the complete getting started sample from [GitHub](https://github.com/SyncfusionExamples/.NET-MAUI-Maps-Getting-Started) link.
-* You can refer to our [.NET MAUI Maps](https://www.syncfusion.com/maui-controls/maui-maps) feature tour page for its groundbreaking feature representations.
+N> You can refer to our [.NET MAUI Maps](https://www.syncfusion.com/maui-controls/maui-maps) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Maps](https://github.com/syncfusion/maui-demos/tree/master/MAUI/Maps) example that shows you how to configure the Maps in .NET MAUI.
