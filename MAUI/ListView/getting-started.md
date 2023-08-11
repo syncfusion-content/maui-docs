@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with .NET Maui ListView (SfListView)
 
-This section provides a quick overview of how to get started with the .NET Maui ListView (SfListView) for Maui. Walk-through the entire process of creating the real world SfListView.
+This section provides a quick overview of how to get started with the [.NET Maui ListView](https://www.syncfusion.com/maui-controls/maui-listview) (SfListView) for Maui. Walk-through the entire process of creating the real world SfListView.
 
 To get start quickly with .NET MAUI ListView, you can check on this video:
 
@@ -541,3 +541,5 @@ listView.FooterTemplate = new DataTemplate(() =>
 {% endtabs %}
 
 ![.Net MAUI ListView with Header and Footer](Images/getting-started/maui-listview-with-header-and-footer.jpg)
+
+N> You can also explore our [.NET MAUI ListView example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/ListView) that shows you how to render the ListView in .NET MAUI.

@@ -13,7 +13,7 @@ This section explains how to perform selection and its related operations in the
 
 ## UI selection
 
-The .NET MAUI ListView (SfListView) allows you to select items either programmatically or touch interactions by setting the [SfListView.SelectionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_SelectionMode) property value something other than `None`. The control has different selection modes to perform selection operations listed as follows:
+The [.NET Maui ListView](https://www.syncfusion.com/maui-controls/maui-listview) (SfListView) allows you to select items either programmatically or touch interactions by setting the [SfListView.SelectionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_SelectionMode) property value something other than `None`. The control has different selection modes to perform selection operations listed as follows:
 
  * [None](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SelectionMode.html#Syncfusion_Maui_ListView_SelectionMode_None): Allows disabling selection.
  * [Single](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SelectionMode.html#Syncfusion_Maui_ListView_SelectionMode_Single): Allows selecting single item only. When clicking the selected item, selection will not be cleared. This is the default value for `SelectionMode`.
