@@ -11,8 +11,8 @@ documentation: ug
 
 This section explains how to filter the data and its related operations in the SfListView.
 
-To get start quickly with .NET MAUI ListView Filtering, you can check on this video:
-<style>#MAUIListViewFilteringVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUIListViewFilteringVideoTutorial' src='https://www.youtube.com/watch?v=IedulwH4h4c'></iframe>
+To get start quickly with filtering in .NET MAUI ListView, you can check on this video:
+<style>#MAUIListViewFilteringVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUIListViewFilteringVideoTutorial' src='https://www.youtube.com/embed/IedulwH4h4c'></iframe>
 
 ## Programmatic filtering
 

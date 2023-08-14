@@ -11,8 +11,8 @@ documentation: ug
 
 A group is a collection of items that belong to a specific category. When grouping is applied, the data is organized into different groups based on key values. Each group is identified by its [Key](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataSource.Extensions.GroupResult.html#Syncfusion_DataSource_Extensions_GroupResult_Key), which allows you to access the underlying data in the group.
 
-To get start quickly with .NET MAUI ListView Grouping, you can check on this video:
-<style>#MAUIListViewGroupingVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUIListViewGroupingVideoTutorial' src='https://www.youtube.com/watch?v=EzjBHeIPPw4'></iframe>
+To get start quickly with grouping in .NET MAUI ListView, you can check on this video:
+<style>#MAUIListViewGroupingVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUIListViewGroupingVideoTutorial' src='https://www.youtube.com/embed/EzjBHeIPPw4'></iframe>
 
 N> When the ItemsSource is changed for a ListView, [DataSource.GroupDescriptors](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataSource.DataSource.html#Syncfusion_DataSource_DataSource_GroupDescriptors) will be cleared by default. If you want to retain grouping in the listview, you need to add `DataSource.GroupDescriptors` again after changing the ItemsSource.
 
