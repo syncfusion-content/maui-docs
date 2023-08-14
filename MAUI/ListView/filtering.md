@@ -11,6 +11,9 @@ documentation: ug
 
 This section explains how to filter the data and its related operations in the SfListView.
 
+To get start quickly with filtering in .NET MAUI ListView, you can check on this video:
+<style>#MAUIListViewFilteringVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUIListViewFilteringVideoTutorial' src='https://www.youtube.com/embed/IedulwH4h4c'></iframe>
+
 ## Programmatic filtering
 
 The [SfListView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html) supports data filtering by setting the [SfListView.DataSource.Filter](https://help.syncfusion.com/cr/maui/Syncfusion.DataSource.DataSource.html#Syncfusion_DataSource_DataSource_Filter) property. You have to call the [SfListView.DataSource.RefreshFilter](https://help.syncfusion.com/cr/maui/Syncfusion.DataSource.DataSource.html#Syncfusion_DataSource_DataSource_RefreshFilter) method after assigning the `Filter` property for refreshing the view.
