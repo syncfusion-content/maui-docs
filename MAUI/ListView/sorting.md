@@ -11,6 +11,9 @@ documentation: ug
 
 The `SfListView` supports sorting the data either in ascending or descending order by using the [DataSource.SortDescriptors](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataSource.DataSource.html#Syncfusion_DataSource_DataSource_SortDescriptors) property and custom logic.
 
+To get start quickly with .NET MAUI ListView Sorting, you can check on this video:
+<style>#MAUIListViewSortingVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUIListViewSortingVideoTutorial' src='https://www.youtube.com/watch?v=IedulwH4h4c'></iframe>
+
 N> When the `ItemsSource` is changed for a ListView, `DataSource.SortDescriptors` will be cleared by default. You need to add `DataSource.SortDescriptors` again after changing the `ItemsSource`, if you want to retain sorting in the listview.
 
 N> To sort the newly added listview items at runtime, set the [SfListView.DataSource.LiveDataUpdateMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataSource.LiveDataUpdateMode.html) to [LiveDataUpdateMode.AllowDataShaping](https://help.syncfusion.com/cr/maui/Syncfusion.DataSource.LiveDataUpdateMode.html#Syncfusion_DataSource_LiveDataUpdateMode_AllowDataShaping). 
