@@ -11,6 +11,9 @@ documentation: ug
 
 The `SfListView` allows customizing the appearance of the underlying data, and provides different functionalities to the end-user.
 
+To get start quickly with .NET MAUI ListView Appearance, you can check on this video:
+<style>#MAUIListViewAppearanceVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUIListViewAppearanceVideoTutorial' src='https://www.youtube.com/embed/qp4MglFU0q4'></iframe>
+
 ## Item template
 
 A template can be used to present the data in a way that makes sense for the application by using different controls. `SfListView` allows customizing the appearance of the view by setting the [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemTemplate) property.
