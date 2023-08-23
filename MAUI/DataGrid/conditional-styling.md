@@ -388,7 +388,7 @@ public class ForeColorConverter : IValueConverter
 
 ### Conditional styling of caption summary cells using converter
 
-The appearance of caption summary cell can be customized conditionally based on [SummaryValues]() by using `converter`, where converter returns the value based on summary value. 
+The appearance of caption summary cell can be customized conditionally based on [SummaryValues]() by using `converter`, where converter returns the value based on `SummaryValues`. 
 
 {% tabs %}
 {% highlight xaml %}
@@ -444,7 +444,7 @@ Here, caption summary cells are customized based on `Salary` summary value.
 
 ## Group summary cell style
 
-Group summary cells can be customized conditionally by getting particular summary value from `SummaryValues` through converter. Likewise, you can also customize the group summary cell based on various properties exposed in [DataGridSummaryRow]() (example: [ShowSummaryInRow]() property).
+Group summary cells can be customized conditionally by getting particular summary value from `SummaryValues` through converter. Likewise, you can also customize the group summary cell based on various properties exposed in [DataGridSummaryRow](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSummaryRow.html) (example: [ShowSummaryInRow](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSummaryRow.html#Syncfusion_Maui_DataGrid_DataGridSummaryRow_ShowSummaryInRow) property).
 
 ### Conditional styling of group summary cell using converter
 
@@ -505,7 +505,7 @@ Here, group summary cells are customized based on `Salary` summary value.
 
 ## Table summary cell
 
-Table summary cells can be customized conditionally by getting particular summary value from `SummaryValues` through `converter`. Likewise, you can also customize the table summary cell based on various properties exposed in [DataGridTableSummaryRow]() (example: [ShowSummaryInRow]() property).
+Table summary cells can be customized conditionally by getting particular summary value from `SummaryValues` through `converter`. Likewise, you can also customize the table summary cell based on various properties exposed in [DataGridTableSummaryRow](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridTableSummaryRow.html) (example: `ShowSummaryInRow` property).
 
 ### Conditional styling of table summary cells using converter
 
