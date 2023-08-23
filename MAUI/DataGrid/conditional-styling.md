@@ -392,28 +392,27 @@ The appearance of caption summary cell can be customized conditionally based on 
 
 {% tabs %}
 {% highlight xaml %}
-<ContentPage.Resources>
-    <local:ColorConverter x:Key="converter" />
-    <Style TargetType="syncfusion:DataGridCaptionSummaryCell">
-    <Setter Property="Background"
-                Value="{Binding Converter={StaticResource converter}}" />
-    </Style>
-</ContentPage.Resources>
-
-<syncfusion:SfDataGrid x:Name="dataGrid" 
-                       ItemsSource="{Binding Orders}">
-        <syncfusion:SfDataGrid.CaptionSummaryRow>
-    <syncfusion:DataGridSummaryRow Name="CaptionSummary"
-                               ShowSummaryInRow="False"
-                               Title="Total Salary: {CaptionSummary}">
-        <syncfusion:DataGridSummaryRow.SummaryColumns>
-            <syncfusion:DataGridSummaryColumn Name="CaptionSummary"
-                                          Format="{}{Sum:C0}"
-                                          MappingName="Salary"
-                                          SummaryType="DoubleAggregate" />
-        </syncfusion:DataGridSummaryRow.SummaryColumns>
-    </syncfusion:DataGridSummaryRow>
-</syncfusion:SfDataGrid.CaptionSummaryRow>
+    <ContentPage.Resources>
+        <local:ColorConverter x:Key="converter" />
+        <Style TargetType="syncfusion:DataGridCaptionSummaryCell">
+        <Setter Property="Background"
+                    Value="{Binding Converter={StaticResource converter}}" />
+        </Style>
+    </ContentPage.Resources>
+    <syncfusion:SfDataGrid x:Name="dataGrid" 
+                        ItemsSource="{Binding Orders}">
+            <syncfusion:SfDataGrid.CaptionSummaryRow>
+        <syncfusion:DataGridSummaryRow Name="CaptionSummary"
+                                ShowSummaryInRow="False"
+                                Title="Total Salary: {CaptionSummary}">
+            <syncfusion:DataGridSummaryRow.SummaryColumns>
+                <syncfusion:DataGridSummaryColumn Name="CaptionSummary"
+                                            Format="{}{Sum:C0}"
+                                            MappingName="Salary"
+                                            SummaryType="DoubleAggregate" />
+            </syncfusion:DataGridSummaryRow.SummaryColumns>
+        </syncfusion:DataGridSummaryRow>
+        </syncfusion:SfDataGrid.CaptionSummaryRow>
     </syncfusion:SfDataGrid>
 {% endhighlight %}
 {% highlight c# %}
