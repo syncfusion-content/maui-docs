@@ -79,6 +79,43 @@ chart.ZoomPanBehavior = zooming;
 
 {% endtabs %}
 
+### Directional Zooming
+
+The directional Zooming feature enhances your zooming experience by allowing you to zoom in and out in a specific direction. This feature is enabled by setting the [EnableDirectionalZooming]() property to `true` as shown in the following code sample and the [EnablePinchZooming](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartZoomPanBehavior.html#Syncfusion_Maui_Charts_ChartZoomPanBehavior_EnablePinchZooming) should not be set as `false,` because it relies on the pinch gesture direction. The default value of this property is false.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+    <chart:SfCartesianChart>
+        ...
+        <chart:SfCartesianChart.ZoomPanBehavior>
+            <chart:ChartZoomPanBehavior EnablePinchZooming="True"
+                                        EnableDirectionalZooming="True"/>
+        </chart:SfCartesianChart.ZoomPanBehavior>
+        ...
+    </chart:SfCartesianChart>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+    SfCartesianChart chart = new SfCartesianChart();
+    ...
+    ChartZoomPanBehavior zooming = new ChartZoomPanBehavior()
+    {
+        EnablePinchZooming=true,
+        EnableDirectionalZooming = true
+    };
+
+    chart.ZoomPanBehavior = zooming;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+N> The directional Zooming Feature is not supported in the macOS platform.
+
 ### Zooming by setting ZoomFactor and ZoomPosition
 
 [ZoomFactor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_ZoomFactor) defines the percentage of visible range from the total range of axis values. [ZoomPosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_ZoomPosition) defines the position for ranges of values that need to be displayed as a result of [ZoomFactor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_ZoomFactor). 
