@@ -25,7 +25,7 @@ The stacked headers can be added using the following steps:
 {% tabs %}
 {% highlight xaml %}
 <syncfusion:SfDataGrid x:Name="dataGrid"         
-                       ItemsSource="{Binding Orders}">
+                       ItemsSource="{Binding OrderInfoCollection}">
      <syncfusion:SfDataGrid.StackedHeaderRows>
             <syncfusion:DataGridStackedHeaderRow>
                 <syncfusion:DataGridStackedHeaderRow.Columns>

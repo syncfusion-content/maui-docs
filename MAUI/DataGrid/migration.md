@@ -156,12 +156,12 @@ To make migration from [Xamarin SfDataGrid](https://www.syncfusion.com/xamarin-u
 </tr>
 <tr>
 <td>{{'[FrozenRowsCount](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.SfDataGrid.html#Syncfusion_SfDataGrid_XForms_SfDataGrid_FrozenRowsCount)'| markdownify }}</td>
-<td>{{'[FrozenRowCount(https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_FrozenRowCount)'| markdownify }}</td>
+<td>{{'[FrozenRowCount](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_FrozenRowCount)'| markdownify }}</td>
 <td>The number of non-scrolling rows at the top of SfDataGrid.</td>
 </tr>
 <tr>
 <td>{{'[FrozenColumnsCount](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.SfDataGrid.html#Syncfusion_SfDataGrid_XForms_SfDataGrid_FrozenColumnsCount)'| markdownify }}</td>
-<td>{{'[FrozenColumnCount(https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_FrozenColumnCount)'| markdownify }}</td>
+<td>{{'[FrozenColumnCount](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_FrozenColumnCount)'| markdownify }}</td>
 <td>The number of non-scrolling columns at the left side of SfDataGrid.</td>
 </tr>
 </table>
@@ -342,16 +342,11 @@ We have passed the optional parameters such as {{'[canIncludeHiddenColumns](http
 ## Upcoming Features   
 
 *   Paging
-*	Right to left
+*	Right to left (Mac and iOS)
 *	Accessibility
 *	Custom selection
-*	Grouping
-*	Summaries (Group and Caption)
-*	Editing
-*	ComboBox column
 *	Load more
 *	Swiping
-*	Exporting to Excel and Pdf
 *	Unbound row
 *	Unbound column
 *	Pull To Refresh
