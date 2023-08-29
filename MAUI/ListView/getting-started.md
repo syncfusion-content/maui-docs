@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with .NET Maui ListView (SfListView)
 
-This section provides a quick overview of how to get started with the .NET MAUI ListView (SfListView) for Maui. Walk-through the entire process of creating the real world SfListView.
+This section provides a quick overview of how to get started with the .NET Maui ListView (SfListView) for Maui. Walk-through the entire process of creating the real world SfListView.
 
 To get start quickly with .NET MAUI ListView, you can check on this video:
 
