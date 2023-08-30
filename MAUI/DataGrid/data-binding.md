@@ -79,8 +79,6 @@ SfDataGrid control provides support to bind complex property to its columns. 
 {% endhighlight %}
 {% endtabs %}
 
-All the data operations (sorting, grouping, filtering and etc.) are supported when you are binding complex property. If the data operations are not working as expected, set [DataGridColumn.UseBindingValue]() as `true` to make it work. 
-
 ### Limitations when binding complex property 
 
 * SfDataGrid doesn’t support [LiveDataUpdateMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_LiveDataUpdateModeProperty) - `AllowDataShaping` and `AllowSummaryUpdate`.
