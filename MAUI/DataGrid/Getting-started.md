@@ -283,7 +283,8 @@ In the SfDataGrid, sorting can be done on its data by setting the [SfDataGrid.So
 {% tabs %}
 {% highlight xaml %}
 <syncfusion:SfDataGrid x:Name="dataGrid"
-                           ItemsSource="{Binding OrderInfoCollection}" SortingMode="Single" />
+                       ItemsSource="{Binding OrderInfoCollection}"
+                       SortingMode="Single" />
 {% endhighlight %}
 {% highlight c# %}
 dataGrid.SortingMode=DataGridSortingMode.Single; 

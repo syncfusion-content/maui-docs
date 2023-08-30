@@ -26,7 +26,8 @@ The codes below codes demonstrate how to bind a data source to the `SfDataGrid`.
         <local:ViewModel/>
     </ContentPage.BindingContext>
 
-    <syncfusion:SfDataGrid x:Name="sfDataGrid" ItemsSource="{Binding OrderInfoCollection}" />
+    <syncfusion:SfDataGrid x:Name="sfDataGrid"
+                       ItemsSource="{Binding OrderInfoCollection}" />
 </ContentPage>
 {% endhighlight %}
 
