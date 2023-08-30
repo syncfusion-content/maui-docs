@@ -84,6 +84,26 @@ Similarly, it retains the sorting of the columns that are defined explicitly at 
 </tr>
 </table>
 
+### Auto generate columns for custom type
+
+By default columns are also auto generated for custom type properties and for parent properties of complex properties in the data object.
+In case of complex properties, use the [SfDataGrid.AutoGenerateColumnsModeForCustomType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AutoGenerateColumnsModeForCustomType) to auto generate columns for either parent property, inner properties of the parent or both parent and inner properties.
+
+{% tabs %}
+{% highlight xaml %}
+  <syncfusion:SfDataGrid x:Name="dataGrid"
+                           ItemsSource="{Binding OrderInfoCollection}"
+                           AutoGenerateColumnsModeForCustomType="Both"
+                           NavigationMode="Cell"
+                           SelectionMode="Single">
+    </syncfusion:SfDataGrid>
+{% endhighlight %}
+
+{% highlight c# %}
+this.dataGrid.AutoGenerateColumnsModeForCustomType = AutoGenerateColumnsModeForCustomType.Both;
+{% endhighlight %}
+{% endtabs %}
+
 ### Customize automatically generated columns
 
 The auto generated column can be customized by handling the [SfDataGrid.AutoGeneratingColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AutoGeneratingColumn) event. The event will be invoked when the column is auto-generated.
@@ -135,13 +155,20 @@ There are different types of columns available. Any column can be created based 
 
 {% tabs %}
 {% highlight xaml %}
-<syncfusion:SfDataGrid x:Name="sfDataGrid" AutoGenerateColumnsMode="None" ItemsSource="{Binding OrderInfoCollection}" >
+<syncfusion:SfDataGrid x:Name="sfDataGrid"
+                       AutoGenerateColumnsMode="None"
+                       ItemsSource="{Binding OrderInfoCollection}">
     <syncfusion:SfDataGrid.Columns>
-        <syncfusion:DataGridNumericColumn HeaderText="Order ID" MappingName="OrderID"/>
-        <syncfusion:DataGridTextColumn  HeaderText="Customer ID" MappingName="CustomerID"/>
-        <syncfusion:DataGridTextColumn  HeaderText="Customer" MappingName="Customer"/>
-        <syncfusion:DataGridTextColumn  HeaderText="Ship City" MappingName="ShipCity"/>
-        <syncfusion:DataGridTextColumn  HeaderText="Ship Country" MappingName="ShipCountry"/>
+        <syncfusion:DataGridNumericColumn HeaderText="Order ID"
+                                          MappingName="OrderID" />
+        <syncfusion:DataGridTextColumn  HeaderText="Customer ID"
+                                        MappingName="CustomerID" />
+        <syncfusion:DataGridTextColumn  HeaderText="Customer"
+                                        MappingName="Customer" />
+        <syncfusion:DataGridTextColumn  HeaderText="Ship City"
+                                        MappingName="ShipCity" />
+        <syncfusion:DataGridTextColumn  HeaderText="Ship Country"
+                                        MappingName="ShipCountry" />
     </syncfusion:SfDataGrid.Columns>
 </syncfusion:SfDataGrid>
 {% endhighlight %}
@@ -208,3 +235,5 @@ this.sfDataGrid.Columns.Remove(column);
 this.sfDataGrid.Columns.RemoveAt(1);
 {% endhighlight %}
 {% endtabs %}
+
+

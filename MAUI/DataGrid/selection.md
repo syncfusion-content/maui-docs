@@ -378,6 +378,27 @@ private void dataGrid_CellTapped(object sender,DataGridCellTappedEventArgs e)
 {% endhighlight %}
 {% endtabs %}
 
+### CellRightTapped event
+
+This event will be triggered while Right tapping a cell in the DataGrid. This event has the [DataGridCellRightTappedEventArgs]() as arguments. 
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                   CellRightTapped="dataGrid_CellRightTapped"
+                   ItemsSource="{Binding OrderInfoCollection}" />
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+private void dataGrid_CellRightTapped(object sender, DataGridCellRightTappedEventArgs e)
+{
+    var rowIndex = e.RowColumnIndex.RowIndex;
+    var rowData = e.RowData;
+    var columnIndex = e.RowColumnIndex.ColumnIndex;
+    var column = e.Column;
+}
+{% endhighlight %}
+{% endtabs %}
+
 ### CellDoubleTapped event
 
 This event will be triggered while double tapping a cell in the DataGrid. This event has the [DataGridCellDoubleTappedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCellDoubleTappedEventArgs.html) as arguments. 
