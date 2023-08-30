@@ -116,7 +116,7 @@ The directional zooming feature enhances your zooming experience by allowing you
 
 T> [EnablePinchZooming](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartZoomPanBehavior.html#Syncfusion_Maui_Charts_ChartZoomPanBehavior_EnablePinchZooming) should be set as `true`, because directional zooming relies on the pinch gesture direction.
 
-N> The directional zooming Feature is not supported in the macOS platform.
+N> The directional Zooming Feature is not supported in the macOS platform.
 
 ### Zooming by setting ZoomFactor and ZoomPosition
 
