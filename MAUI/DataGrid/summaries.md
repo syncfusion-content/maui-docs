@@ -1223,10 +1223,8 @@ In the following code snippet, `Standard Deviation` is calculated for quantity o
 {% highlight c#%}
 public class CustomAggregate : ISummaryAggregate
 {
-    public CustomAggregate()
-    {
-    }
     public double StdDev { get; set; }
+    
     public Action<System.Collections.IEnumerable, string, System.ComponentModel.PropertyDescriptor> CalculateAggregateFunc()
     {
         return (items, property, pd) =>

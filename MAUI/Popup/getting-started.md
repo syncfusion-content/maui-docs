@@ -11,6 +11,8 @@ documentation: ug
 
 This section provides a quick overview of how to get start with the .NET MAUI Popup (SfPopup) for MAUI. Walk through the entire process of creating the real-world SfPopup.
 
+To get start quickly with .NET MAUI Popup, you can check on this video:
+<style>#MAUIPopupVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUIPopupVideoTutorial' src='https://www.youtube.com/embed/HTk6JAGP-qE'></iframe>
 
 ## Creating an application using the .NET MAUI Popup
 

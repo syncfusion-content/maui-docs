@@ -11,6 +11,9 @@ documentation: ug
 
 This section provides a quick overview of how to get started with the SfExpander for .NET MAUI. Walk-through the entire process of creating the real world of this control.
 
+To get start quickly with .NET MAUI Expander, you can check on this video:
+<style>#MAUIExpanderVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUIExpanderVideoTutorial' src='https://www.youtube.com/embed/zTVbps0m8i0'></iframe>
+
 ## Creating an application using the .NET MAUI Expander
 
  1. Create a new .NET MAUI application in Visual Studio.
@@ -261,7 +264,7 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/getting-started
 
 ## Animation duration
 
-The [SfExpander](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Expander.SfExpander.html) allows you to customize the expanding and collapsing duration by using the [AnimationDuration](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Expander.SfExpander.html#Syncfusion_Maui_Expander_SfExpander_AnimationDuration) property. By default, the animation duration is `200 milliseconds`.
+The [SfExpander](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Expander.SfExpander.html) allows you to customize the expanding and collapsing duration by using the [AnimationDuration](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Expander.SfExpander.html#Syncfusion_Maui_Expander_SfExpander_AnimationDuration) property. By default, the animation duration is `300 milliseconds`.
 
 {% tabs %}
 {% highlight xaml hl_lines="2" %}

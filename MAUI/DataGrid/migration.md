@@ -41,6 +41,11 @@ To make migration from [Xamarin SfDataGrid](https://www.syncfusion.com/xamarin-u
 <td>{{'[DataGridSortingGestureType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSortingGestureType.html)'| markdownify }}</td>
 <td>Defines the constants that specifies how the sorting is applied.</td>
 </tr>
+<tr>
+<td>{{'[Position](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.GridTableSummaryRow.html#Syncfusion_SfDataGrid_XForms_GridTableSummaryRow_PositionProperty)'| markdownify }}</td>
+<td>{{'[SummaryRowPosition]()'| markdownify }}</td>
+<td>Defines the constants that specify whether the table summary row is positioned at the top or bottom of the DataGrid.</td>
+</tr>
 </table>
 
 ## Properties
