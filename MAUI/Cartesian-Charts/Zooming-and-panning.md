@@ -81,7 +81,7 @@ chart.ZoomPanBehavior = zooming;
 
 ### Directional Zooming
 
-The directional zooming feature enhances your zooming experience by allowing you to zoom in and out in a specific direction. This feature is enabled by setting the [EnableDirectionalZooming]() property to `true` as shown in the following code sample. The default value of this property is false.
+The directional Zooming feature enhances your zooming experience by allowing you to zoom in and out in a specific direction. This feature is enabled by setting the [EnableDirectionalZooming]() property to `true` as shown in the following code sample. The default value of this property is false.
 
 {% tabs %}
 
