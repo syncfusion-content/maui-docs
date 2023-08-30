@@ -84,7 +84,7 @@ The code below applies the [ColumnWidthMode.Fill](https://help.syncfusion.com/cr
 {% highlight xaml %}
 <syncfusion:SfDataGrid  x:Name="dataGrid"
                         ColumnWidthMode="Fill"
-                        ItemsSource="{Binding Orders}" />
+                        ItemsSource="{Binding OrderInfoCollection}" />
 {% endhighlight %}
 {% endtabs %}
 
@@ -220,7 +220,7 @@ public class CustomColumnSizer : DataGridColumnSizer
 </ContentPage.Resources>
 
 <syncfusion:SfDataGrid x:Name="dataGrid"
-                        ItemsSource="{Binding OrdersInfo,Mode=TwoWay}"
+                        ItemsSource="{Binding OrderInfoCollection,Mode=TwoWay}"
                         ColumnWidthMode="Auto"
                         ColumnSizer="{x:StaticResource CustomColumnSizer}">
 </syncfusion:SfDataGrid>
