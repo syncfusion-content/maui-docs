@@ -136,10 +136,13 @@ The `SfDataGrid` provides the support to apply the conditional style for specifi
     <ContentPage.Content>
         <syncfusion:SfDataGrid ItemsSource="{Binding OrderInfoCollection}">
             <syncfusion:SfDataGrid.Columns>
-                <syncfusion:DataGridNumericColumn MappingName="OrderID" HeaderText="Order ID"  Format="d">
+                <syncfusion:DataGridNumericColumn MappingName="OrderID"
+                                                HeaderText="Order ID"
+                                                Format="d">
                     <syncfusion:DataGridNumericColumn.CellStyle>
                         <Style TargetType="syncfusion:DataGridCell">
-                            <Setter Property="Background" Value="{Binding OrderID, Converter={StaticResource converter}}"/>
+                            <Setter Property="Background"
+                                    Value="{Binding OrderID, Converter={StaticResource converter}}" />
                         </Style>
                     </syncfusion:DataGridNumericColumn.CellStyle>
                 </syncfusion:DataGridNumericColumn>
@@ -400,7 +403,7 @@ The appearance of caption summary cell can be customized conditionally based on 
         </Style>
     </ContentPage.Resources>
     <syncfusion:SfDataGrid x:Name="dataGrid" 
-                        ItemsSource="{Binding Orders}">
+                        ItemsSource="{Binding OrderInfoCollection}">
             <syncfusion:SfDataGrid.CaptionSummaryRow>
         <syncfusion:DataGridSummaryRow Name="CaptionSummary"
                                 ShowSummaryInRow="False"
@@ -461,7 +464,7 @@ The appearance of group summary cell can be customized conditionally based on su
     </ContentPage.Resources>
     <syncfusion:SfDataGrid x:Name="dataGrid" 
                         ShowGroupDropArea="True"
-                        ItemsSource="{Binding Orders}">
+                        ItemsSource="{Binding OrderInfoCollection}">
             <syncfusion:SfDataGrid.GroupSummaryRows>
             <syncfusion:DataGridSummaryRow Title="salary {Salary}"
                                             ShowSummaryInRow="True">
@@ -522,7 +525,7 @@ The appearance of table summary cell can be customized conditionally based on su
     </ContentPage.Resources>
     <syncfusion:SfDataGrid x:Name="dataGrid"
                         ShowRowHeader="True"
-                        ItemsSource="{Binding Orders}">
+                        ItemsSource="{Binding OrderInfoCollection}">
                 <syncfusion:SfDataGrid.TableSummaryRows>
         <syncfusion:DataGridTableSummaryRow Title="Total Salary :{TotalSalary}"
                                         Position="Bottom"
