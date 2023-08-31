@@ -9,7 +9,7 @@ documentation: UG
 
 # Column Types in .NET MAUI DataGrid (SfDataGrid)
 
-The SfDataGrid contains different types of columns. The functionalities of the columns can be implied by their names. Any of the columns can be used depending on the requirements.
+The [.NET MAUI DataGrid](https://www.syncfusion.com/maui-controls/maui-datagrid) contains different types of columns. The functionalities of the columns can be implied by their names. Any of the columns can be used depending on the requirements.
 
 To get start quickly with column types in .NET MAUI DataGrid, you can check on this video:
 
