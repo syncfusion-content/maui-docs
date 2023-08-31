@@ -247,7 +247,7 @@ public class CustomSortComparer : IComparer<object>, ISortDirection
 
 ## Load sort icon through template
 
-The SfDataGrid uses an icon to indicate the ascending and descending states of groups. You can personalize the sorting icon by utilizing the `sfDataGrid.SortIconTemplate` property. This property enables you to define a custom template that will appear in its regular form when the sort is in ascending order, and it will rotate downward when the sort is in descending order. To implement this, refer to the following code snippet:
+The SfDataGrid uses an icon to indicate the ascending and descending states of sorting. You can personalize the sorting icon by using the `SfDataGrid.SortIconTemplate` property. This property allows you to define a custom template that appears in its regular form when the sort is in ascending order. It will rotate downward when the sort is in descending order. To implement this, refer to the following code snippet:
 
 {% tabs %}
 
