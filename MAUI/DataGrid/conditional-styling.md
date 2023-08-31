@@ -398,7 +398,7 @@ The appearance of caption summary cell can be customized conditionally based on 
     <ContentPage.Resources>
         <local:ColorConverter x:Key="converter" />
         <Style TargetType="syncfusion:DataGridCaptionSummaryCell">
-        <Setter Property="Background"
+            <Setter Property="Background"
                     Value="{Binding Converter={StaticResource converter}}" />
         </Style>
     </ContentPage.Resources>
@@ -458,7 +458,7 @@ The appearance of group summary cell can be customized conditionally based on su
     <ContentPage.Resources>
         <local:ColorConverter x:Key="converter" />
         <Style TargetType="syncfusion:DataGridGroupSummaryCell">
-        <Setter Property="Background"
+            <Setter Property="Background"
                     Value="{Binding Converter={StaticResource converter}}" />
         </Style>
     </ContentPage.Resources>
@@ -519,7 +519,7 @@ The appearance of table summary cell can be customized conditionally based on su
     <ContentPage.Resources>
         <local:ColorConverter x:Key="converter" />
         <Style TargetType="syncfusion:DataGridTableSummaryCell">
-        <Setter Property="Background"
+            <Setter Property="Background"
                     Value="{Binding Converter={StaticResource converter}}" />
         </Style>
     </ContentPage.Resources>
@@ -569,7 +569,7 @@ public class ColorConverter : IValueConverter
     }
     public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
     {
-        throw new NotImplementedException();
+        return null;
     }
 }
 {% endhighlight %}
@@ -577,4 +577,4 @@ public class ColorConverter : IValueConverter
 
 Here, table summary cells are customized based on `Salary` summary value.
 
-![Conditional Style of WPF DataGrid Table Summary Cells using Converter](maui-datagrid-conditional-tablesummary.png)
+![Conditional styling of table summary cell using converter](maui-datagrid-conditional-tablesummary.png)

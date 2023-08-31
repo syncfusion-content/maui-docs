@@ -350,7 +350,7 @@ this.dataGrid.AllowGroupExpandCollapse = true;
 
 ### Expand or collapse all the groups
 
-To expand and collapse the groups programmatically, you can simply invoke the [SfDataGrid.ExpandAllGroups](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ExpandAllGroups) and [SfDataGrid.CollapseAllGroups]() methods.
+To expand and collapse the groups programmatically, you can simply invoke the [SfDataGrid.ExpandAllGroups](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ExpandAllGroups) and [SfDataGrid.CollapseAllGroups](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CollapseAllGroups) methods.
 
 {% tabs %}
 {% highlight c# %}
