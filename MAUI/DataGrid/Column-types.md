@@ -53,6 +53,11 @@ The following table describes the types of columns and their usage:
 <td>{{'[DataGridDateCellRenderer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridDateCellRenderer.html)'| markdownify }}</td>
 <td>To display the date and time value.</td>
 </tr>
+<tr>
+<td>{{'[DataGridComboBoxColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridComboBoxColumn.html)'| markdownify }}</td>
+<td>{{'[DataGridComboBoxRenderer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridComboBoxRenderer.html)'| markdownify }}</td>
+<td>To display the date and time value.</td>
+</tr>
 </table>
 
 ## DataGridColumn

@@ -53,7 +53,7 @@ public partial class MainPage : ContentPage
 To use this control inside an application, you must initialize the `SfDataGrid` handler.
 
 {% tabs %}
-{% highlight c# tabtitle="MauiProgram.cs" hl_lines="4 5 21 22" %}
+{% highlight c# tabtitle="MauiProgram.cs" hl_lines="4 20" %}
 
 using Microsoft.Maui.Controls.Hosting;
 using Microsoft.Maui.Controls.Xaml;
