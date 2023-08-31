@@ -210,3 +210,90 @@ chart.ZoomPanBehavior = zooming;
 {% endhighlight %}
 
 {% endtabs %}
+
+## Selection zooming
+
+Selection zooming feature allows users to interactively choose a particular area of the chart and zoom in. By specifying [EnableSelectionZooming]() property to `true` as shown in the following code snippet, you can double tap and drag to select a range on the chart to be zoomed in.
+
+{% tabs %}
+
+{% highlight xml %}
+
+<chart:SfCartesianChart>
+    <chart:SfCartesianChart.ZoomPanBehavior>
+        <chart:ChartZoomPanBehavior EnableSelectionZooming ="True"/>
+    </chart:SfCartesianChart.ZoomPanBehavior>
+    ...
+</chart:SfCartesianChart>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+SfCartesianChart chart = new SfCartesianChart();
+ChartZoomPanBehavior zooming = new ChartZoomPanBehavior()
+{
+    EnableSelectionZooming = true
+};
+
+chart.ZoomPanBehavior = zooming;
+...
+
+{% endhighlight %}
+
+{% endtabs %}
+
+Following screenshot shows the selection on chart area,
+![Selection zooming support in MAUI Chart](Zooming-and-panning_images/MAUI_selection_zooming.png)
+Following screenshot shows the zoomed area,
+![After selection zooming in MAUI Chart](Zooming-and-panning_images/MAUI_after_selection_zooming.png)
+### Selection rectangle customization
+
+You can customize the selection rectangle using the below properties.
+
+* [SelectionRectStrokeWidth]() - used to change the stroke width of selection rectangle
+
+* [SelectionRectStroke]() - used to change the stroke color of selection rectangle.
+
+* [SelectionRectStrokeDashArray]() - used to change the stroke dashes of selection rectangle.
+
+* [SelectionRectFill]() - used to change the fill color of selection rectangle.
+
+### Show trackball axis label
+
+By specifying the [ShowTrackballLabel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_ShowTrackballLabel) property to true, 
+Following code snippet illustrates how enable to axis trackball label while selection zooming.
+
+{% tabs %}
+
+{% highlight xml %}
+
+<chart:SfCartesianChart>
+    . . .
+    <chart:SfCartesianChart.XAxes>
+        <chart:NumericalAxis ShowTrackballLabel="True"/>
+    </chart:SfCartesianChart.XAxes>
+    <chart:SfCartesianChart.YAxes>
+        <chart:NumericalAxis ShowTrackballLabel="True"/>
+    </chart:SfCartesianChart.YAxes>
+
+</chart:SfCartesianChart>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+SfCartesianChart chart = new SfCartesianChart();
+. . .
+NumericalAxis primaryAxis = new NumericalAxis();
+primaryAxis.ShowTrackballLabel = True;
+chart.XAxes.Add(primaryAxis);
+
+NumericalAxis secondaryAxis = new NumericalAxis();
+secondaryAxis.ShowTrackballLabel = True;
+chart.YAxes.Add(secondaryAxis);
+
+{% endhighlight %}
+
+{% endtabs %}
+![Selection zooming with trackBall axis label support in MAUI Chart](Zooming-and-panning_images/MAUI_selection_zooming_ShowTrackballLabel.png)
