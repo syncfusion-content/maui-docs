@@ -86,8 +86,7 @@ Similarly, it retains the sorting of the columns that are defined explicitly at 
 
 ### Auto generate columns for custom type
 
-By default columns are also auto generated for custom type properties and for parent properties of complex properties in the data object.
-In case of complex properties, use the [SfDataGrid.AutoGenerateColumnsModeForCustomType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AutoGenerateColumnsModeForCustomType) to auto generate columns for either parent property, inner properties of the parent or both parent and inner properties.
+By default, columns are also auto-generated for custom type properties and parent properties of complex properties in the data object. In the case of complex properties, use the [SfDataGrid.AutoGenerateColumnsModeForCustomType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AutoGenerateColumnsModeForCustomType) to auto-generate columns for either the parent property, inner properties of the parent, or both the parent and inner properties.
 
 {% tabs %}
 {% highlight xaml %}

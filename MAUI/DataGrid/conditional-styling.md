@@ -391,7 +391,7 @@ public class ForeColorConverter : IValueConverter
 
 ### Conditional styling of caption summary cells using converter
 
-The appearance of caption summary cell can be customized conditionally based on [SummaryValues]() by using `converter`, where converter returns the value based on `SummaryValues`. 
+The appearance of caption summary cell can be customized conditionally based on [SummaryValues]() by using a `converter`, where converter returns the value based on `SummaryValues`. 
 
 {% tabs %}
 {% highlight xaml %}
@@ -435,7 +435,7 @@ public class ColorConverter : IValueConverter
     }
     public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
     {
-        throw new NotImplementedException();
+        return null;
     }
 }
 {% endhighlight %}
@@ -443,7 +443,7 @@ public class ColorConverter : IValueConverter
 
 Here, caption summary cells are customized based on `Salary` summary value.
 
-![Conditional Style of DataGrid Caption Summary Cell using Converter](maui-datagrid-conditional-captionsummary.png)
+![Conditional style of caption summary cell using converter](maui-datagrid-conditional-captionsummary.png)
 
 ## Group summary cell style
 
@@ -496,7 +496,7 @@ public class ColorConverter : IValueConverter
     }
     public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
     {
-        throw new NotImplementedException();
+        return null;
     }
 }
 {% endhighlight %}
@@ -504,7 +504,7 @@ public class ColorConverter : IValueConverter
 
 Here, group summary cells are customized based on `Salary` summary value.
 
-![Conditional Style of DataGrid Group Summary Cell using Converter](maui-datagrid-conditional-groupsummary.png)
+![Conditional style of group summary cell using converter](maui-datagrid-conditional-groupsummary.png)
 
 ## Table summary cell
 
