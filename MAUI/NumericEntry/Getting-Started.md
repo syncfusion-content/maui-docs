@@ -11,6 +11,10 @@ documentation: ug
 
 This section explains the steps required to add the [.NET MAUI NumericEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html) control in the MAUI application and utilize the various functions provided.
 
+To get start quickly with our .NET MAUI Numeric Entry, you can check the below video.
+
+{% youtube "https://www.youtube.com/watch?v=BHw8UpoUmoM&ab_channel=Syncfusion%2CInc" %}
+
 ## Creating an application with .NET MAUI NumericEntry
 
 This section explains the steps required to work with the [SfNumericEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html) control for .NET MAUI.
