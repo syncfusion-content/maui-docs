@@ -19,7 +19,7 @@ To enable editing, follow the code example:
                            AllowEditing="True"
                            SelectionMode="Multiple"    
                            NavigationMode="Cell" 
-                           ItemsSource="{Binding Orders}" />
+                           ItemsSource="{Binding OrderInfoCollection}" />
 {% endhighlight %}
 
 {% highlight c# %}
@@ -40,7 +40,7 @@ To enable or disable editing for a specific column, you can simply set the [Data
     <syncfusion:SfDataGrid x:Name="dataGrid"
                            SelectionMode="Multiple"    
                            NavigationMode="Cell" 
-                           ItemsSource="{Binding Orders}">
+                           ItemsSource="{Binding OrderInfoCollection}">
 
     <syncfusion:DataGridTextColumn AllowEditing="True"
                                    MappingName="OrderID" />
@@ -65,6 +65,7 @@ To enter the edit mode, you can simply tap or double-tap the grid cell. The beha
 {% highlight xaml %}
     <sfgrid:SfDataGrid x:Name="dataGrid"
                                AllowEditing="True"
+                               ItemsSource="{Binding OrderInfoCollection}"
                                EditTapAction="OnTap">
 {% endhighlight %}
 {% highlight c# %}

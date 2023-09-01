@@ -45,6 +45,7 @@ You can customize the group caption text format by setting the `SfDataGrid.Group
 {% tabs %}
 {% highlight xaml %}
     <sfGrid:SfDataGrid x:Name="dataGrid"
+                       ItemsSource="{Binding OrderInfoCollection}"
                        AutoGenerateColumns="True"
                        ColumnSizer="Star"
                        GroupCaptionTextFormat="{}{ColumnName}: {Key}">
@@ -178,7 +179,7 @@ Please refer to the code example below, where a label is loaded in the `caption 
         </ResourceDictionary>
     </ContentPage.Resources>
     <sfgrid:SfDataGrid x:Name="dataGrid"
-                       ItemsSource="{Binding OrdersInfo}">
+                       ItemsSource="{Binding OrderInfoCollection}">
         <sfgrid:SfDataGrid.CaptionSummaryTemplate>
             <DataTemplate>
                 <StackLayout Orientation="Horizontal">
@@ -259,6 +260,7 @@ Here's an example code snippet that demonstrates how to load a label in the temp
          </ResourceDictionary>
      </ContentPage.Resources>
      <sfgrid:SfDataGrid x:Name="dataGrid"
+                       ItemsSource="{Binding OrderInfoCollection}"
                        AllowResizingColumn="True"
                        AutoGenerateColumns="False"
                        ColumnSizer="Star">
@@ -349,6 +351,7 @@ Please refer to the [Formatting Summary](#formatting-summary)  section to learn 
 
 {% highlight xaml %}
     <sfgrid:SfDataGrid x:Name="dataGrid"
+                       ItemsSource="{Binding OrderInfoCollection}"
                        AllowResizingColumn="True"
                        AllowGroupExpandCollapse="True"
                        AutoGenerateColumns="True"
@@ -419,6 +422,7 @@ In the following code snippet, a summary is defined for the `Salary` and `Custom
 {% tabs %}
 {% highlight xaml %}
     <sfgrid:SfDataGrid x:Name="dataGrid"
+                       ItemsSource="{Binding OrderInfoCollection}"
                        AllowResizingColumn="True"
                        AutoGenerateColumns="True"
                        ColumnSizer="Star">
@@ -475,7 +479,7 @@ Refer to the code example below, which demonstrates how to load a label in the g
         </ResourceDictionary>
     </ContentPage.Resources>
     <sfgrid:SfDataGrid x:Name="dataGrid"
-                       ItemsSource="{Binding OrdersInfo}">
+                       ItemsSource="{Binding OrderInfoCollection}">
         <sfgrid:SfDataGrid.GroupSummaryTemplate>
             <DataTemplate>
                 <StackLayout Orientation="Horizontal">
@@ -554,6 +558,7 @@ Please refer to the code example below, which demonstrates how to load a label i
         </ResourceDictionary>
     </ContentPage.Resources>
     <sfgrid:SfDataGrid x:Name="dataGrid"
+                       ItemsSource="{Binding OrderInfoCollection}"
                        AllowResizingColumn="True"
                        AutoGenerateColumns="False"
                        ColumnSizer="Star">
@@ -899,7 +904,7 @@ Refer the below code example in which a label is loaded in the table summary tem
     </ContentPage.Resources>
     <StackLayout>
         <sfgrid:SfDataGrid x:Name="dataGrid"
-                           ItemsSource="{Binding OrdersInfo}"
+                           ItemsSource="{Binding OrderInfoCollection}"
                            AutoGenerateColumns="False"
                            AllowEditing="True"
                            NavigationMode="Cell"
@@ -992,7 +997,7 @@ Refer the below code example in which a label is loaded in the template of table
     </ContentPage.Resources>
     <StackLayout>
         <sfgrid:SfDataGrid x:Name="dataGrid"
-                           ItemsSource="{Binding OrdersInfo}"
+                           ItemsSource="{Binding OrderInfoCollection}"
                            AutoGenerateColumns="False"
                            AllowEditing="True"
                            NavigationMode="Cell"
@@ -1349,7 +1354,7 @@ public class DataGridTableSummaryCellRendererExt : DataGridTableSummaryCellRende
 
         if (dataColumn.ColumnElement != null && dataColumn.ColumnElement.Content is Label label)
         {
-            dataColumn.ColumnElement.Background = Colors.LightBlue;
+            dataColumn.ColumnElement.Background = Colors.Green;
 
             label.HorizontalTextAlignment = TextAlignment.Start;
             label.FontSize = 16;
