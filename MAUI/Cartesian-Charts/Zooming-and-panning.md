@@ -213,7 +213,7 @@ chart.ZoomPanBehavior = zooming;
 
 ## Selection zooming
 
-Selection zooming feature allows users to interactively choose a particular area of the chart and zoom in. By specifying [EnableSelectionZooming]() property to `true` as shown in the following code snippet, you can double tap and drag to select a range on the chart to be zoomed in.
+Selection zooming feature allows users to interactively choose a particular area of the chart and zoom in. By specifying [EnableSelectionZooming]() property to `true` as shown in the following code snippet, you can double tap and drag to select a range on the chart to be zoomed in. The default value of this property is false.
 
 {% tabs %}
 
