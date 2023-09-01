@@ -68,3 +68,43 @@ sfNumericEntry.UpDownPlacementMode = NumericEntryUpDownPlacementMode.Inline;
 {% endtabs %}
 
 ![UpDown Placement in .NET MAUI NumericEntry](UpDownButton_images/UpDownButtonPlacement.gif)
+
+## Auto reverse in SfNumericEntry
+
+When incrementing, control will begin at the `Minimum` value and progress to the `Maximum` value. When decrementing, control will begin at the `Maximum` value and decreasing to the `Minimum` value.
+
+N> The default value of this boolean property is `false`.
+{% tabs %}
+{% highlight XAML %}
+
+<editors:SfNumericEntry HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        UpDownPlacementMode="Inline"
+                        IsEditable=true;
+                        Minimum=10;
+                        Maximum=50;
+                        AutoReverse=true;/>
+                     
+{% endhighlight %}
+{% highlight c# %}
+
+using Syncfusion.Maui.Inputs;
+
+Grid grid = new Grid();
+SfNumericEntry sfNumericEntry = new SfNumericEntry();
+grid.Children.Add(sfNumericEntry);
+sfNumericEntry.HorizontalOptions = LayoutOptions.Center;
+sfNumericEntry.VerticalOptions = LayoutOptions.Center;
+sfNumericEntry.IsEditable = true;
+sfNumericEntry.UpDownPlacementMode = NumericEntryUpDownPlacementMode.Inline;
+sfNumericEntry.Minimum=10;
+sfNumericEntry.Maximum=50;
+sfNumericEntry.AutoReverse = true;
+this.Content = grid;
+
+{% endhighlight %}
+{% endtabs %}
+
+![AutoReverse support in .NET MAUI NumericEntry](UpDownButton_images/AutoReverseSupport.gif)
+
+
