@@ -77,12 +77,10 @@ N> The default value of this boolean property is `false`.
 {% tabs %}
 {% highlight XAML %}
 
-<editors:SfNumericEntry HorizontalOptions="Center"
-                        VerticalOptions="Center"
-                        UpDownPlacementMode="Inline"
+<editors:SfNumericEntry UpDownPlacementMode="Inline"
                         IsEditable=true;
-                        Minimum=10;
-                        Maximum=50;
+                        Minimum=0;
+                        Maximum=10;
                         AutoReverse=true;/>
                      
 {% endhighlight %}
@@ -90,17 +88,13 @@ N> The default value of this boolean property is `false`.
 
 using Syncfusion.Maui.Inputs;
 
-Grid grid = new Grid();
 SfNumericEntry sfNumericEntry = new SfNumericEntry();
-grid.Children.Add(sfNumericEntry);
-sfNumericEntry.HorizontalOptions = LayoutOptions.Center;
-sfNumericEntry.VerticalOptions = LayoutOptions.Center;
-sfNumericEntry.IsEditable = true;
 sfNumericEntry.UpDownPlacementMode = NumericEntryUpDownPlacementMode.Inline;
-sfNumericEntry.Minimum=10;
-sfNumericEntry.Maximum=50;
+sfNumericEntry.IsEditable = true;
+sfNumericEntry.Minimum=0;
+sfNumericEntry.Maximum=10;
 sfNumericEntry.AutoReverse = true;
-this.Content = grid;
+this.Content = sfNumericEntry;
 
 {% endhighlight %}
 {% endtabs %}
