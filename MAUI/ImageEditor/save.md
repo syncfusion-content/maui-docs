@@ -215,4 +215,27 @@ The [`ImageSaved`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEdit
 
 {% endtabs %}
 
+### Save picker opening event
+
+The `SavePickerOpening` event occurs while save picker opening. By this event, you can enable or disable the save picker.
+
+{% tabs %}
+
+{% highlight xaml tabtitle="MainPage.xaml" %}
+
+    <imageEditor:SfImageEditor Source="image.png" SavePickerOpening="OnSavePickerOpening" />
+
+{% endhighlight %}
+
+{% highlight C# tabtitle="MainPage.xaml.cs" %}
+            
+    private void OnSavePickerOpening(object sender, CancelEventArgs args)
+    {
+        args.Cancel = true;
+    }
+
+{% endhighlight %}
+
+{% endtabs %}
+
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-image-editor-examples/tree/master/ImageSavingSample)

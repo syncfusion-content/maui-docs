@@ -63,3 +63,26 @@ N> This is common for Shape and Text annotations.
 {% endhighlight %}
 
 {% endtabs %}
+
+## Browse image event
+
+This `BrowseImage` event will be triggered while browsing the image source. By this event, you can enable or disable the image browse picker.
+
+{% tabs %}
+
+{% highlight xaml tabtitle="MainPage.xaml" %}
+
+    <imageEditor:SfImageEditor Source="image.png" BrowseImage = "OnImageBrowse" />
+
+{% endhighlight %}
+
+{% highlight C# tabtitle="MainPage.xaml.cs" %}
+            
+    private void OnImageBrowse(object sender, CancelEventArgs e)
+    {
+        e.Cancel = true;
+    }
+
+{% endhighlight %}
+
+{% endtabs %}
