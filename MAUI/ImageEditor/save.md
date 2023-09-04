@@ -217,7 +217,7 @@ The [`ImageSaved`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEdit
 
 ### Save picker opening event
 
-The `SavePickerOpening` event occurs while save picker opening. By this event, you can enable or disable the save picker.
+The `SavePickerOpening` event occurs while the save picker is opening. Using this event, you can enable or disable the save picker.
 
 {% tabs %}
 
