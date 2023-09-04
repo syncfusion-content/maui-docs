@@ -106,7 +106,6 @@ editor.ToolbarSettings.ToolbarItems[3].Icon = ImageSource.FromResource("ImageEdi
 
 {% endhighlight %}
 
-
 ## ToolbarItemSelected event 
 
 Whenever you tap the toolbar menu item, the `ToolbarItemSelected` event will be triggered, and you can get the respective tapped toolbar item as an argument as shown in the following code snippet. 
@@ -140,7 +139,7 @@ To show or hide the toolbar, set the `IsVisible` property of toolbar to either t
   
      <imageeditor:SfImageEditor.ToolbarSettings>
 			<imageeditor:ToolbarSettings IsVisible="false" />
-		</imageeditor:SfImageEditor.ToolbarSettings>
+	</imageeditor:SfImageEditor.ToolbarSettings>
       
 {% endhighlight %}
 
@@ -177,6 +176,30 @@ N> You can customize an icon by specifying its `Name`.
 
 {% endtabs %}
 
+## To hide/show the tooltip
+
+You can hide or show the tooltip and setting the boolean values to true or false.
+
+{% tabs %}
+{% highlight XAML %}
+
+<imageEditor:SfImageEditor Source="table.png">
+    <imageEditor:SfImageEditor.ToolbarSettings>
+        <imageEditor:ImageEditorToolbarSettings ShowTooltip="False" />
+    </imageEditor:SfImageEditor.ToolbarSettings>
+</imageEditor:SfImageEditor>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfImageEditor imageEditor = new SfImageEditor();
+imageEditor.Source = ImageSource.FromFile("image4.png");
+imageEditor.ToolbarSettings.ShowTooltip = false;
+
+{% endhighlight %}
+
+{% endtabs %}
 
 ![SfImageEditor](ImageEditor_images/Toolbaritemvisibiliy.png)
 
@@ -229,35 +252,20 @@ The image editor control supports to customize the default height of the `Header
 
 The toolbar items will be resized based on the height. To change the height of the toolbar, refer to the following code snippet.
 
-{% tabs %}
-
-{% highlight XAML %}
-
-         <imageeditor:SfImageEditor.ToolbarSettings>
-                    <imageeditor:ToolbarSettings 
-                        HeaderToolbarHeight="70"
-                        FooterToolbarHeight="70"                          
-                        SubItemToolbarHeight="70"/>
-                </imageeditor:SfImageEditor.ToolbarSettings>
-
-{% endhighlight %}
-
 {% highlight C# %}
 
-    editor.ToolbarSettings.HeaderToolbarHeight = 70;
-    editor.ToolbarSettings.FooterToolbarHeight = 70;
-    editor.ToolbarSettings.SubItemToolbarHeight = 70;
+    SfImageEditor imageEditor = new SfImageEditor();
+    imageEditor.Source = ImageSource.FromFile("image4.png");
+    imageEditor.Toolbars[0].Size = 80;
+    imageEditor.Toolbars[1].Size = 50;
 
 {% endhighlight %}
-
-{% endtabs %}
-
 
 ![SfImageEditor](ImageEditor_images/ToolbarHeightCustomization.png)
 
-### Individual toolbar item height customization
+### Toolbar Item Customization
 
-You can arrange the toolbar items based on the toolbar height using the following properties:
+You can arrange the toolbar items based on the toolbar the following properties:
 
 1.  [`TextHeight`](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfImageEditor.XForms.ToolbarItem.html#Syncfusion_SfImageEditor_XForms_ToolbarItem_TextHeight)
 2.  [`IconHeight`](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfImageEditor.XForms.ToolbarItem.html#Syncfusion_SfImageEditor_XForms_ToolbarItem_IconHeight)
@@ -265,18 +273,23 @@ You can arrange the toolbar items based on the toolbar height using the followin
 To change the toolbar item Text and Icon height, refer to the following code snippet.
 
 {% tabs %}
+{% highlight XAML %}
+
+<imageEditor:SfImageEditor Source="table.png">
+    <imageEditor:SfImageEditor.ToolbarSettings>
+        <imageEditor:ImageEditorToolbarSettings DisabledColor="Violet" TextColor="pink" IconColor="Yellow" />
+    </imageEditor:SfImageEditor.ToolbarSettings>
+</imageEditor:SfImageEditor>
+
+{% endhighlight %}
 
 {% highlight C# %}
 
-     FooterToolbarItem footerItem = new FooterToolbarItem()
-            {
-                IconHeight=40,
-                TextHeight=20,
-                Icon = ImageSource.FromResource("ImageEditor.share.png"),
-                Text = "Share"
-            };
-
-            editor.ToolbarSettings.ToolbarItems.Add(footerItem);
+SfImageEditor imageEditor = new SfImageEditor();
+imageEditor.Source = ImageSource.FromFile("image4.png");
+imageEditor.ToolbarSettings.DisabledColor = Colors.Violet;
+imageEditor.ToolbarSettings.TextColor = Colors.Pink;
+imageEditor.ToolbarSettings.IconColor = Colors.Yellow;
     
 {% endhighlight %}
 
@@ -284,32 +297,149 @@ To change the toolbar item Text and Icon height, refer to the following code sni
 
 ## Toolbar color customization
 
-Border color of the toolbar can be customized with the help of [`BorderColor`](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfImageEditor.XForms.ToolbarSettings.html#Syncfusion_SfImageEditor_XForms_ToolbarSettings_BorderColor) property in [`ToolbarSettings`](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfImageEditor.XForms.ToolbarSettings.html).
+Border color of the toolbar can be customized with the help of `BorderColor` property in `ToolbarSettings`.
 
 {% tabs %}
-
 {% highlight XAML %}
 
-    <editor:SfImageEditor x:Name="editor" Source="{Binding Image}" >
-                <editor:SfImageEditor.ToolbarSettings>
-                    <editor:ToolbarSettings BorderColor="Red"></editor:ToolbarSettings>
-                </editor:SfImageEditor.ToolbarSettings>        
-            </editor:SfImageEditor>
+<imageEditor:SfImageEditor Source="table.png">
+    <imageEditor:SfImageEditor.ToolbarSettings>
+        <imageEditor:ImageEditorToolbarSettings Stroke="Violet" Background="pink" />
+    </imageEditor:SfImageEditor.ToolbarSettings>
+</imageEditor:SfImageEditor>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-         SfImageEditor editor = new SfImageEditor();
-            editor.Source = ImageSource.FromResource("XFormsUG.RoadView.jpeg");
-            editor.ToolbarSettings = new ToolbarSettings()
-            {
-                BorderColor = Color.Red,
-            };
-            this.Content = editor;
+SfImageEditor imageEditor = new SfImageEditor();
+imageEditor.Source = ImageSource.FromFile("image4.png");
+imageEditor.ToolbarSettings.Stroke = Colors.Violet;
+imageEditor.ToolbarSettings.Background = Colors.Pink;
+    
+{% endhighlight %}
+
+{% endtabs %}
+
+## Custom Toolbar
+
+{% tabs %}
+{% highlight XAML %}
+
+<imageEditor:SfImageEditor Source="table.png"
+                           AutoGenerateToolbarItems="False">
+    <imageEditor:SfImageEditor.Toolbars>
+        <imageEditor:ImageEditorToolbar Orientaion="Vertical">
+            <imageEditor:ImageEditorToolbar.ToolbarItems>
+                <imageEditor:ImageEditorToolbarItem Name="Browse" />
+                <imageEditor:ImageEditorToolbarItem Name="Save" />
+            </imageEditor:ImageEditorToolbar.ToolbarItems>
+        </imageEditor:ImageEditorToolbar>
+        <imageEditor:ImageEditorToolbar Orientaion="Vertical"
+                                        Position="End">
+            <imageEditor:ImageEditorToolbar.ToolbarItems>
+                <imageEditor:ImageEditorToolbarItem Name="Text" />
+                <imageEditor:ImageEditorToolbarItem Name="Shape" />
+                <imageEditor:ImageEditorToolbarItem Name="Pen" />
+            </imageEditor:ImageEditorToolbar.ToolbarItems>
+        </imageEditor:ImageEditorToolbar>
+    </imageEditor:SfImageEditor.Toolbars>
+</imageEditor:SfImageEditor>
+
 
 {% endhighlight %}
 
-{% endtabs %}## Customize toolbar items
+{% highlight C# %}
 
-The image editor control provides support to customize and configure the appearance of toolbar menu. You can customize the toolbar by adding respective FooterToolbarItem and HeaderToolbarItem.
+SfImageEditor imageEditor = new SfImageEditor();
+imageEditor.Source = ImageSource.FromFile("image4.png");
+imageEditor.ToolbarSettings.Stroke = Colors.Violet;
+imageEditor.ToolbarSettings.Background = Colors.Pink;
+    
+{% endhighlight %}
+
+{% endtabs %}
+
+## Custom sub toolbar
+
+{% tabs %}
+{% highlight XAML %}
+
+<imageEditor:SfImageEditor Source="table.png"
+                           AutoGenerateToolbarItems="False">
+    <imageEditor:SfImageEditor.Toolbars>
+        <imageEditor:ImageEditorToolbar Orientaion="Vertical"
+                                        Position="End">
+            <imageEditor:ImageEditorToolbar.ToolbarItems>
+                <imageEditor:ImageEditorToolbarItem Name="Text">
+                    <imageEditor:ImageEditorToolbarItem.SubToolbars>
+                        <imageEditor:ImageEditorToolbar>
+                            <imageEditor:ImageEditorToolbar.ToolbarItems>
+                                <imageEditor:ImageEditorToolbarItem Name="AddText" />
+                                <imageEditor:ImageEditorToolbarItem Name="TextColor" />
+                                <imageEditor:ImageEditorToolbarItem Name="Delete" />
+                            </imageEditor:ImageEditorToolbar.ToolbarItems>
+                        </imageEditor:ImageEditorToolbar>
+                    </imageEditor:ImageEditorToolbarItem.SubToolbars>
+                </imageEditor:ImageEditorToolbarItem>
+                <imageEditor:ImageEditorToolbarItem Name="Shape" />
+                <imageEditor:ImageEditorToolbarItem Name="Pen" />
+            </imageEditor:ImageEditorToolbar.ToolbarItems>
+        </imageEditor:ImageEditorToolbar>
+    </imageEditor:SfImageEditor.Toolbars>
+</imageEditor:SfImageEditor>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfImageEditor imageEditor = new SfImageEditor();
+imageEditor.Source = ImageSource.FromFile("image4.png");
+imageEditor.ToolbarSettings.Stroke = Colors.Violet;
+imageEditor.ToolbarSettings.Background = Colors.Pink;
+    
+{% endhighlight %}
+
+{% endtabs %}
+
+## Custom group item toolbar
+
+{% tabs %}
+{% highlight XAML %}
+
+<imageEditor:SfImageEditor Source="table.png"
+                           AutoGenerateToolbarItems="False">
+    <imageEditor:SfImageEditor.Toolbars>
+        <imageEditor:ImageEditorToolbar Orientaion="Vertical"
+                                        Position="Start">
+            <imageEditor:ImageEditorToolbar.ToolbarItems>
+                <imageEditor:ImageEditorToolbarGroupItem Alignment="Start">
+                    <imageEditor:ImageEditorToolbarGroupItem.Items>
+                        <imageEditor:ImageEditorToolbarItem Name="Browse" />
+                        <imageEditor:ImageEditorToolbarItem Name="Save" />
+                    </imageEditor:ImageEditorToolbarGroupItem.Items>
+                </imageEditor:ImageEditorToolbarGroupItem>
+                <imageEditor:ImageEditorToolbarGroupItem Alignment="End">
+                    <imageEditor:ImageEditorToolbarGroupItem.Items>
+                        <imageEditor:ImageEditorToolbarItem Name="Reset" />
+                        <imageEditor:ImageEditorToolbarItem Name="SaveEdit" />
+                    </imageEditor:ImageEditorToolbarGroupItem.Items>
+                </imageEditor:ImageEditorToolbarGroupItem>
+            </imageEditor:ImageEditorToolbar.ToolbarItems>
+        </imageEditor:ImageEditorToolbar>
+    </imageEditor:SfImageEditor.Toolbars>
+</imageEditor:SfImageEditor>
+
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfImageEditor imageEditor = new SfImageEditor();
+imageEditor.Source = ImageSource.FromFile("image4.png");
+imageEditor.ToolbarSettings.Stroke = Colors.Violet;
+imageEditor.ToolbarSettings.Background = Colors.Pink;
+    
+{% endhighlight %}
+
+{% endtabs %}
