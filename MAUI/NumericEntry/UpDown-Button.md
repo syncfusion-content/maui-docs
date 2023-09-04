@@ -78,7 +78,7 @@ N> The default value of this property is `false`.
 {% highlight XAML %}
 
 <editors:SfNumericEntry UpDownPlacementMode="Inline"
-                        AutoReverse="true"
+                        AutoReverse="True"
                         Minimum="0"
                         Maximum="10"/>
                         
