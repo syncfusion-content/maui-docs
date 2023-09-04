@@ -71,30 +71,26 @@ sfNumericEntry.UpDownPlacementMode = NumericEntryUpDownPlacementMode.Inline;
 
 ## Auto reverse in SfNumericEntry
 
-When incrementing, control will begin at the `Minimum` value and progress to the `Maximum` value. When decrementing, control will begin at the `Maximum` value and decreasing to the `Minimum` value.
+Auto reverse in numeric up-down buttons allows the control to automatically switch direction when reaching its `minimum` or `maximum` value. When incrementing, it starts at the `minimum` and progresses to the `maximum`, and vice versa.
 
-N> The default value of this boolean property is `false`.
+N> The default value of this property is `false`.
 {% tabs %}
 {% highlight XAML %}
 
 <editors:SfNumericEntry UpDownPlacementMode="Inline"
-                        IsEditable=true;
-                        Minimum=0;
-                        Maximum=10;
-                        AutoReverse=true;/>
+                        AutoReverse="true"
+                        Minimum="0"
+                        Maximum="10"/>
+                        
                      
 {% endhighlight %}
 {% highlight c# %}
 
-using Syncfusion.Maui.Inputs;
-
 SfNumericEntry sfNumericEntry = new SfNumericEntry();
 sfNumericEntry.UpDownPlacementMode = NumericEntryUpDownPlacementMode.Inline;
-sfNumericEntry.IsEditable = true;
+sfNumericEntry.AutoReverse = true;
 sfNumericEntry.Minimum=0;
 sfNumericEntry.Maximum=10;
-sfNumericEntry.AutoReverse = true;
-this.Content = sfNumericEntry;
 
 {% endhighlight %}
 {% endtabs %}
