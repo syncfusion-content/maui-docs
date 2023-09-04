@@ -53,7 +53,7 @@ public partial class MainPage : ContentPage
 To use this control inside an application, you must initialize the `SfDataGrid` handler.
 
 {% tabs %}
-{% highlight c# tabtitle="MauiProgram.cs" hl_lines="4 5 21 22" %}
+{% highlight c# tabtitle="MauiProgram.cs" hl_lines="4 20" %}
 
 using Microsoft.Maui.Controls.Hosting;
 using Microsoft.Maui.Controls.Xaml;
@@ -205,6 +205,16 @@ The following code example binds the collection created in the previous step to 
     <ContentPage.Content>
         <syncfusion:SfDataGrid x:Name="dataGrid"
                                ItemsSource="{Binding OrderInfoCollection}">
+        <syncfusion:SfDataGrid.Columns>
+            <syncfusion:DataGridNumericColumn HeaderText="Order ID" Format="0"
+                                            MappingName="OrderID" Width="150"/>
+            <syncfusion:DataGridTextColumn  HeaderText="Customer ID"
+                                            MappingName="CustomerID"
+                                            Width="150" />
+            <syncfusion:DataGridTextColumn  HeaderText="Ship Country"
+                                            MappingName="ShipCountry"
+                                            Width="150" />
+        </syncfusion:SfDataGrid.Columns>
         </syncfusion:SfDataGrid>
     </ContentPage.Content>
 </ContentPage>
@@ -273,7 +283,8 @@ In the SfDataGrid, sorting can be done on its data by setting the [SfDataGrid.So
 {% tabs %}
 {% highlight xaml %}
 <syncfusion:SfDataGrid x:Name="dataGrid"
-                           ItemsSource="{Binding OrderInfoCollection}" SortingMode="Single" />
+                       ItemsSource="{Binding OrderInfoCollection}"
+                       SortingMode="Single" />
 {% endhighlight %}
 {% highlight c# %}
 dataGrid.SortingMode=DataGridSortingMode.Single; 
