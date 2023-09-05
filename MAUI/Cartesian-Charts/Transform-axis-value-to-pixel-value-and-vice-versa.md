@@ -14,7 +14,9 @@ documentation: ug
 * [`ValueToPoint(ChartAxis axis,double value)`]() - Converts the data point value to screen point.
 * [`PointToValue(ChartAxis axis,double x, double y)`]() - Converts the screen point to chart value.
 
-{% highlight c# %}
+{% tabs %}
+
+{% highlight C# %}
 
 
 if (chart is SfCartesianChart cartesianChart)
@@ -30,3 +32,5 @@ if (chart is SfCartesianChart cartesianChart)
 }
 
 {% endhighlight  %}
+
+{% endtabs %}
