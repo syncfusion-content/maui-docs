@@ -276,7 +276,7 @@ public class ViewModel : INotifyPropertyChanged
 
 ### Display a popup asynchronously
 
-Display a popup asynchronously using `ShowAsync()`. Returns `true` if user click acceptText Otherwise returns `false`.
+The `SfPopup` can be displayed asynchronously using `ShowAsync()`. Returns `true` if user click acceptText Otherwise returns `false`.
 
 {% tabs %}
 {% highlight xaml %}
@@ -317,7 +317,7 @@ public partial class MainPage : ContentPage
 
 ### Display a popup asynchronously using static method
 
-Display a popup asynchronously with title, message, acceptText and declineText using static method `SfPopup.Show(string title, string message, string acceptText, string declineText)`. Returns `true` if user click acceptText Otherwise returns `false`.
+The `SfPopup` can be displayed asynchronously with title, message, acceptText and declineText using static method `SfPopup.Show(string title, string message, string acceptText, string declineText)`. Returns `true` if user click acceptText Otherwise returns `false`.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
