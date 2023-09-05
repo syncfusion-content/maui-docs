@@ -243,10 +243,8 @@ chart.ZoomPanBehavior = zooming;
 
 {% endtabs %}
 
-Following screenshot shows the selection on chart area,
-![Selection zooming support in MAUI Chart](Zooming-and-panning_images/MAUI_selection_zooming.png)
-Following screenshot shows the zoomed area,
-![After selection zooming in MAUI Chart](Zooming-and-panning_images/MAUI_after_selection_zooming.png)
+![Selection zooming support in MAUI Chart](Zooming-and-panning_images/maui_selection_zooming.gif)
+
 ### Selection rectangle customization
 
 You can customize the selection rectangle using the below properties.
@@ -310,5 +308,3 @@ chart.YAxes.Add(secondaryAxis);
 {% endhighlight %}
 
 {% endtabs %}
-
-![Selection zooming with trackBall axis label support in MAUI Chart](Zooming-and-panning_images/maui_selection_zooming.gif)
