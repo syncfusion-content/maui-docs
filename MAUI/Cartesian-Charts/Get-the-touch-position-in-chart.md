@@ -13,6 +13,8 @@ ChartInteractiveBehavior provides the following override methods to get the x an
 * [`OnTouchMove`]() - Called when a user's finger or touch input device is in contact within the Chart area and moves across it's surface.
 * [`OnTouchDown`]() -  Called when the user made the initial contact of a user's finger or touch input device with the Chart Area.
 
+{% tabs %}
+
 {% highlight c# %}
 
 public class ChartInteractiveExt: ChartInteractiveBehavior
@@ -34,3 +36,5 @@ public class ChartInteractiveExt: ChartInteractiveBehavior
 }
 
 {% endhighlight  %}
+
+{% endtabs %}
