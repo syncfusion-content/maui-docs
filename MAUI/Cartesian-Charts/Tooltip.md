@@ -221,3 +221,73 @@ this.Content = chart;
 {% endtabs %}
 
 ![Tooltip template in MAUI Chart](Tooltip_images/maui_chart_tooltip_customization.png)
+
+## Methods
+
+You can show or hide the chart tooltip programmatically by using the show or hide method.
+
+### Show method
+
+The [Show]() method is used to activate the tooltip at the specified location.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+    <chart:SfCartesianChart>
+        .....
+        <chart:SfCartesianChart.TooltipBehavior>
+            <chart:ChartTooltipBehavior x:Name="tooltip"></chart:ChartTooltipBehavior>
+        </chart:SfCartesianChart.TooltipBehavior>
+        .....
+    </chart:SfCartesianChart>
+
+    <Button Text="Show tooltip" Clicked="Button_Clicked"></Button>
+
+{% endhighlight %}
+
+{% endtabs %}
+
+{% tabs %}
+
+{% highlight c# %}
+
+    public partial class MainPage : ContentPage
+    {
+
+        public MainPage()
+        {
+            InitializeComponent();
+            BindingContext = this;
+        }
+
+        private void Button_Clicked(object sender, EventArgs e)
+        {
+            //pointX - determines the x position of tooltip, pointY - determines the y position of tooltip and bool value determines whether the tooltip should be animated while displaying.
+            tooltip.Show(pointX,pointY,true);
+        }
+    }
+
+        
+{% endhighlight %}
+
+{% endtabs %}
+
+N> The tooltip will be activated at the specified location only if there is any data point under the specified location.
+
+### Hide method
+
+The [Hide]() method is used to hide the tooltip programmatically.
+
+{% tabs %}
+
+{% highlight c# %}
+
+        //The argument determines whether the tooltip should be animated while hiding.
+
+        tooltip.Hide(true);
+        
+{% endhighlight %}
+
+{% endtabs %}
+
