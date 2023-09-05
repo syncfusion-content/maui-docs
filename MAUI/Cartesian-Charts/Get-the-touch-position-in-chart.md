@@ -17,23 +17,23 @@ ChartInteractiveBehavior provides the following override methods to get the x an
 
 {% highlight c# %}
 
-public class ChartInteractiveExt: ChartInteractiveBehavior
-{
-    protected override void OnTouchDown(ChartBase chart, float pointX, float pointY)
+    public class ChartInteractiveExt: ChartInteractiveBehavior
     {
-        base.OnTouchDown(chart, pointX, pointY);
-    }
+        protected override void OnTouchDown(ChartBase chart, float pointX, float pointY)
+        {
+            base.OnTouchDown(chart, pointX, pointY);
+        }
 
-    protected override void OnTouchMove(ChartBase chart, float pointX, float pointY)
-    {
-        base.OnTouchMove(chart, pointX, pointY);
-    }
+        protected override void OnTouchMove(ChartBase chart, float pointX, float pointY)
+        {
+            base.OnTouchMove(chart, pointX, pointY);
+        }
 
-    protected override void OnTouchUp(ChartBase chart, float pointX, float pointY)
-    {
-        base.OnTouchUp(chart, pointX, pointY);
+        protected override void OnTouchUp(ChartBase chart, float pointX, float pointY)
+        {
+            base.OnTouchUp(chart, pointX, pointY);
+        }
     }
-}
 
 {% endhighlight  %}
 
