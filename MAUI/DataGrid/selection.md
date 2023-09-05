@@ -571,7 +571,3 @@ public class ViewModel : INotifyPropertyChanged
     }
 {% endhighlight %}
 {% endtabs %}
-
-
-
-
