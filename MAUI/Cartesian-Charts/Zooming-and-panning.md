@@ -258,7 +258,7 @@ You can customize the selection rectangle using the below properties.
 * [SelectionRectFill]() - used to change the fill color of selection rectangle.
 
 ### Show trackball axis label
-The trackball axis label on selection zooming can be enabled using the [ShowTrackballLabel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_ShowTrackballLabel) property. The trackball axis labels can be customized using following properties:
+The trackball axis label is enabled by setting the [ShowTrackballLabel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_ShowTrackballLabel) property to `true`. The default value of the [ShowTrackballLabel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_ShowTrackballLabel) is `false`. The trackball axis labels can be customized using following properties:
 
 * `Background` - Gets or sets the background color of the labels.
 * `CornerRadius` - Gets or sets a value that defines the rounded corners for labels.
@@ -272,7 +272,7 @@ The trackball axis label on selection zooming can be enabled using the [ShowTrac
 * `LabelFormat` - Gets or sets the label format. This property is used to set numeric or date-time format to the chart axis label.
 * `LabelAlignment` - Gets or sets the axis label at start, end, and center positions.
 
-N> If the axis labels in the selection zooming trackball are cropped or hidden, you should use the LabelExtent property to extend the space between the axis labels and the axis title accordingly.
+N> If the axis labels in the selection zooming trackball are cropped or hidden, you should use the [LabelExtent]() property to extend the space between the axis labels and the axis title accordingly.
 
 Following code snippet illustrates how enable to axis trackball label while selection zooming.
 
@@ -314,25 +314,25 @@ Following code snippet illustrates how enable to axis trackball label while sele
 SfCartesianChart chart = new SfCartesianChart();
 . . .
 NumericalAxis primaryAxis = new NumericalAxis();
-primaryAxis.ShowTrackballLabel = True;
-ChartLabelStyle trackballLabelStyle = new ChartLabelStyle();
-trackballLabelStyle.Background = Colors.LightBlue;
-trackballLabelStyle.FontSize = 15;
-trackballLabelStyle.CornerRadius = 5;
-trackballLabelStyle.StrokeWidth = 2;
-trackballLabelStyle.Stroke = Colors.Gray;
-primaryAxis.TrackballLabelStyle = trackballLabelStyle;
+primaryAxis.ShowTrackballLabel = true;
+ChartLabelStyle primaryAxisTrackballLabelStyle = new ChartLabelStyle();
+primaryAxisTrackballLabelStyle.Background = Colors.LightBlue;
+primaryAxisTrackballLabelStyle.FontSize = 15;
+primaryAxisTrackballLabelStyle.CornerRadius = 5;
+primaryAxisTrackballLabelStyle.StrokeWidth = 2;
+primaryAxisTrackballLabelStyle.Stroke = Colors.Gray;
+primaryAxis.TrackballLabelStyle = primaryAxisTrackballLabelStyle;
 chart.XAxes.Add(primaryAxis);
 
 NumericalAxis secondaryAxis = new NumericalAxis();
-secondaryAxis.ShowTrackballLabel = True;
-ChartLabelStyle trackballLabelStyle = new ChartLabelStyle();
-trackballLabelStyle.Background = Colors.LightBlue;
-trackballLabelStyle.FontSize = 15;
-trackballLabelStyle.CornerRadius = 5;
-trackballLabelStyle.StrokeWidth = 2;
-trackballLabelStyle.Stroke = Colors.Gray;
-secondaryAxis.TrackballLabelStyle = trackballLabelStyle;
+secondaryAxis.ShowTrackballLabel = true;
+ChartLabelStyle secondaryAxisTrackballLabelStyle = new ChartLabelStyle();
+secondaryAxisTrackballLabelStyle.Background = Colors.LightBlue;
+secondaryAxisTrackballLabelStyle.FontSize = 15;
+secondaryAxisTrackballLabelStyle.CornerRadius = 5;
+secondaryAxisTrackballLabelStyle.StrokeWidth = 2;
+secondaryAxisTrackballLabelStyle.Stroke = Colors.Gray;
+secondaryAxis.TrackballLabelStyle = secondaryAxisTrackballLabelStyle;
 chart.YAxes.Add(secondaryAxis);
 
 {% endhighlight %}
