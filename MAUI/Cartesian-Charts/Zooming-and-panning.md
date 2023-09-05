@@ -282,13 +282,29 @@ Following code snippet illustrates how enable to axis trackball label while sele
 
 <chart:SfCartesianChart>
     . . .
-    <chart:SfCartesianChart.XAxes>
-        <chart:NumericalAxis ShowTrackballLabel="True"/>
-    </chart:SfCartesianChart.XAxes>
-    <chart:SfCartesianChart.YAxes>
-        <chart:NumericalAxis ShowTrackballLabel="True"/>
-    </chart:SfCartesianChart.YAxes>
-
+        <chart:SfCartesianChart.XAxes>
+            <chart:NumericalAxis ShowTrackballLabel="True">
+                <chart:NumericalAxis.TrackballLabelStyle>
+                    <chart:ChartLabelStyle Background="LightBlue"   
+                              FontSize="15" 
+                              CornerRadius="5"
+                              StrokeWidth="2" 
+                              Stroke="Gray" />
+                </chart:NumericalAxis.TrackballLabelStyle>
+            </chart:NumericalAxis>
+        </chart:SfCartesianChart.XAxes>
+        <chart:SfCartesianChart.YAxes>
+            <chart:NumericalAxis ShowTrackballLabel="True">
+                <chart:NumericalAxis.TrackballLabelStyle>
+                    <chart:ChartLabelStyle Background="LightBlue"   
+                              FontSize="15" 
+                              CornerRadius="5"
+                              StrokeWidth="2" 
+                              Stroke="Gray" />
+                </chart:NumericalAxis.TrackballLabelStyle>
+            </chart:NumericalAxis>
+        </chart:SfCartesianChart.YAxes>
+        
 </chart:SfCartesianChart>
 
 {% endhighlight %}
@@ -299,10 +315,24 @@ SfCartesianChart chart = new SfCartesianChart();
 . . .
 NumericalAxis primaryAxis = new NumericalAxis();
 primaryAxis.ShowTrackballLabel = True;
+ChartLabelStyle trackballLabelStyle = new ChartLabelStyle();
+trackballLabelStyle.Background = Colors.LightBlue;
+trackballLabelStyle.FontSize = 15;
+trackballLabelStyle.CornerRadius = 5;
+trackballLabelStyle.StrokeWidth = 2;
+trackballLabelStyle.Stroke = Colors.Gray;
+primaryAxis.TrackballLabelStyle = trackballLabelStyle;
 chart.XAxes.Add(primaryAxis);
 
 NumericalAxis secondaryAxis = new NumericalAxis();
 secondaryAxis.ShowTrackballLabel = True;
+ChartLabelStyle trackballLabelStyle = new ChartLabelStyle();
+trackballLabelStyle.Background = Colors.LightBlue;
+trackballLabelStyle.FontSize = 15;
+trackballLabelStyle.CornerRadius = 5;
+trackballLabelStyle.StrokeWidth = 2;
+trackballLabelStyle.Stroke = Colors.Gray;
+secondaryAxis.TrackballLabelStyle = trackballLabelStyle;
 chart.YAxes.Add(secondaryAxis);
 
 {% endhighlight %}
