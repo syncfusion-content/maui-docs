@@ -66,7 +66,8 @@ N> This is common for Shape and Text annotations.
 
 ## Browse image event
 
-This `BrowseImage` event will be triggered while browsing the image source. By this event, you can enable or disable the image browse picker.
+This `BrowseImage` event will be triggered while browsing the image source. 
+`Cancel`: Enable or disable the image browse picker by setting the `Cancel` argument true or false.
 
 {% tabs %}
 
