@@ -53,9 +53,9 @@ You can write custom style for the properties in the `SfDataGrid.DefaultStyle` c
 <Application.Resources>
     <ResourceDictionary>
         <syncfusion:DataGridStyle x:Key="customStyle" 
-                                  RowBackground="Bisque"
-                                  HeaderRowBackground="Red"
-                                  RowTextColor="Red"
+                                  RowBackground="LightBlue"
+                                  HeaderRowBackground="Blue"
+                                  RowTextColor="Black"
                                   HeaderRowTextColor="White"/>
     </ResourceDictionary>
 </Application.Resources>
@@ -78,9 +78,9 @@ You can write custom style for the properties in the `SfDataGrid.DefaultStyle` c
     <ContentPage.Resources>
         <ResourceDictionary>
             <syncfusion:DataGridStyle x:Key="customStyle" 
-                                  RowBackground="Bisque"
-                                  HeaderRowBackground="Red"
-                                  RowTextColor="Red"
+                                  RowBackground="LightBlue"
+                                  HeaderRowBackground="Blue"
+                                  RowTextColor="Black"
                                   HeaderRowTextColor="White"/>
         </ResourceDictionary>
     </ContentPage.Resources>

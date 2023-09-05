@@ -26,7 +26,8 @@ The codes below codes demonstrate how to bind a data source to the `SfDataGrid`.
         <local:ViewModel/>
     </ContentPage.BindingContext>
 
-    <syncfusion:SfDataGrid x:Name="sfDataGrid" ItemsSource="{Binding OrderInfoCollection}" />
+    <syncfusion:SfDataGrid x:Name="sfDataGrid"
+                       ItemsSource="{Binding OrderInfoCollection}" />
 </ContentPage>
 {% endhighlight %}
 
@@ -60,6 +61,27 @@ this.sfDataGrid1.ItemsSource = table;
 * Custom sorting is not supported.
 * [SfDataGrid.View.Filter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Data.ICollectionViewAdv.html#Syncfusion_Maui_Data_ICollectionViewAdv_Filter) is not supported.
 * [SfDataGrid.View.LiveDataUpdateMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Data.ICollectionViewAdv.html#Syncfusion_Maui_Data_ICollectionViewAdv_LiveDataUpdateMode) is not supported.
+
+## Binding complex properties
+
+The SfDataGrid control provides support for binding complex properties to its columns. To bind the complex property to [DataGridColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html), set the complex property path to [MappingName](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_MappingName).
+
+{% tabs %}
+{% highlight xaml %}
+<syncfusion:SfDataGrid AutoGenerateColumnsMode="None"
+                       ItemsSource="{Binding OrderInfoCollection}">
+    <syncfusion:SfDataGrid.Columns>
+        <syncfusion:DataGridTextColumn MappingName="OrderID" />
+        <syncfusion:DataGridTextColumn MappingName="Customer.CustomerID" />
+        <syncfusion:DataGridTextColumn MappingName="ShipCity" />
+    </syncfusion:SfDataGrid.Columns>
+</syncfusion:SfDataGrid>
+{% endhighlight %}
+{% endtabs %}
+
+### Limitations when binding complex property 
+
+* SfDataGrid doesn’t support [LiveDataUpdateMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_LiveDataUpdateModeProperty) - `AllowDataShaping` and `AllowSummaryUpdate`.
 
 ## View
 
