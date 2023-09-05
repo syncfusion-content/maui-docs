@@ -11,13 +11,13 @@ documentation: ug
 
 [`SfCartesianChart`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html?tabs=tabid-1) offers two utility methods to transform the pixel to chart point and vice-versa.
 
-* [`ValueToPoint(double value)`]() - Converts the data point value to screen point.
-* [`PointToValue(double x, double y)`]() - Converts the screen point to chart value.
+* [`ValueToPoint(ChartAxis axis,double value)`]() - Converts the data point value to screen point.
+* [`PointToValue(ChartAxis axis,double x, double y)`]() - Converts the screen point to chart value.
 
 {% highlight c# %}
 
-float chartPointX = chart.ValueToPoint(axis,Value);
+float chartPointX = chart.ValueToPoint(axis, value);
 
-double chartValue = chart.PointToValue(axis,xValue,yValue);
+double chartValue = chart.PointToValue(axis, xValue, yValue);
 
 {% endhighlight  %}
