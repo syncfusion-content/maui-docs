@@ -279,6 +279,34 @@ public partial class MainPage : ContentPage
 
 ![Displaying a .NET MAUI Popup with stroke customization](Images/styles/maui-popup-with-stroke-customization.png)
 
+### popup background
+
+The `SfPopup` allows to customize the background color of popupview using the `PopupBackground` property.
+
+{% tabs %}
+{% highlight xaml hl_lines="3" %}
+    <sfPopup:SfPopup x:Name="popup">
+        <sfPopup:SfPopup.PopupStyle>
+            <sfPopup:PopupStyle PopupBackground="#C3B0D6" />
+        </sfPopup:SfPopup.PopupStyle>
+    </sfPopup:SfPopup>
+{% endhighlight %}
+{% highlight c# hl_lines="8" %}
+public partial class MainPage : ContentPage
+{
+    SfPopup popup;
+    public MainPage()
+    {
+        InitializeComponent();
+        popup = new SfPopup();
+        popup.PopupStyle.PopupBackground = Color.FromArgb("C3B0D6");
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
+![Displaying a .NET MAUI Popup with PopupView Background](Images/styles/maui-popup-with-popupview-background.png)
+
 ## Styling overlay background
 
 The SfPopup allows to customize the background color of overlay using the [OverlayColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupStyle.html#Syncfusion_Maui_Popup_PopupStyle_OverlayColor) property.
@@ -540,47 +568,3 @@ public partial class MainPage : ContentPage
 {% endtabs %}
 
 ![Displaying a .NET MAUI Popup with shadow](Images/styles/maui-popup-with-shadow.png)
-
-## How to
-
-### Set background color for popupview
-
-Set `PopupBackground` to change the background color of popupview. Refer to the code example below for reference.
-
-{% tabs %}
-{% highlight xaml hl_lines="15" %}
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:PopupDemo"
-             xmlns:sfPopup="clr-namespace:Syncfusion.Maui.Popup;assembly=Syncfusion.Maui.Popup"
-             x:Class="PopupDemo.MainPage">
-    <StackLayout Padding="20">
-        <Button x:Name="clickToShowPopup"
-                Text="ClickToShowPopup"
-                VerticalOptions="Start"
-                HorizontalOptions="Center"
-                Clicked="ClickToShowPopup_Clicked" />
-        <sfPopup:SfPopup x:Name="popup">
-            <sfPopup:SfPopup.PopupStyle>
-                <sfPopup:PopupStyle PopupBackground="#C3B0D6" />
-            </sfPopup:SfPopup.PopupStyle>
-        </sfPopup:SfPopup>
-    </StackLayout>
-</ContentPage>
-{% endhighlight %}
-{% highlight c# hl_lines="8" %}
-public partial class MainPage : ContentPage
-{
-    SfPopup popup;
-    public MainPage()
-    {
-        InitializeComponent();
-        popup = new SfPopup();
-        popup.PopupStyle.PopupBackground = Color.FromArgb("C3B0D6");
-    }
-}
-{% endhighlight %}
-{% endtabs %}
-
-![Displaying a .NET MAUI Popup with PopupView Background](Images/styles/maui-popup-with-popupview-background.png)
