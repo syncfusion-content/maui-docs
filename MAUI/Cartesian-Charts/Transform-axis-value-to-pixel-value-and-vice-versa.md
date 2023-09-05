@@ -16,7 +16,7 @@ documentation: ug
 
 {% highlight c# %}
 
-float chartPointX = chart.ValueToPoint(axis, value);
+float chartPoint = chart.ValueToPoint(axis, value);
 
 double chartValue = chart.PointToValue(axis, xValue, yValue);
 
