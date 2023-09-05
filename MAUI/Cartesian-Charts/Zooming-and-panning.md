@@ -104,7 +104,7 @@ The directional Zooming feature enhances your zooming experience by allowing you
     ...
     ChartZoomPanBehavior zooming = new ChartZoomPanBehavior()
     {
-        EnablePinchZooming=true,
+        EnablePinchZooming = true,
         EnableDirectionalZooming = true
     };
 
