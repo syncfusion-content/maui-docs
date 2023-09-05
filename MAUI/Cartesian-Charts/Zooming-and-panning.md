@@ -260,8 +260,22 @@ You can customize the selection rectangle using the below properties.
 * [SelectionRectFill]() - used to change the fill color of selection rectangle.
 
 ### Show trackball axis label
+The trackball axis label on selection zooming can be enabled using the [ShowTrackballLabel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_ShowTrackballLabel) property. The trackball axis labels can be customized using following properties:
 
-By specifying the [ShowTrackballLabel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_ShowTrackballLabel) property to true, 
+* `Background` - Gets or sets the background color of the labels.
+* `CornerRadius` - Gets or sets a value that defines the rounded corners for labels.
+* `FontAttributes` - Gets or sets the font style for the label.
+* `FontFamily` - Gets or sets the font family name for the label.
+* `FontSize` - Gets or sets the font size for the label.
+* `Margin` - Gets or sets the margin of the label to customize the appearance of label. 
+* `Stroke` - Gets or sets the border stroke color of the labels.
+* `StrokeWidth` - Gets or sets the border thickness of the label.
+* `TextColor` - Gets or sets the color for the text of the label.
+* `LabelFormat` - Gets or sets the label format. This property is used to set numeric or date-time format to the chart axis label.
+* `LabelAlignment` - Gets or sets the axis label at start, end, and center positions.
+
+N> If the axis labels in the selection zooming trackball are cropped or hidden, you should use the LabelExtent property to extend the space between the axis labels and the axis title accordingly.
+
 Following code snippet illustrates how enable to axis trackball label while selection zooming.
 
 {% tabs %}
@@ -296,4 +310,5 @@ chart.YAxes.Add(secondaryAxis);
 {% endhighlight %}
 
 {% endtabs %}
-![Selection zooming with trackBall axis label support in MAUI Chart](Zooming-and-panning_images/MAUI_selection_zooming_ShowTrackballLabel.png)
+
+![Selection zooming with trackBall axis label support in MAUI Chart](Zooming-and-panning_images/maui_selection_zooming.gif)
