@@ -279,7 +279,7 @@ public partial class MainPage : ContentPage
 
 ![Displaying a .NET MAUI Popup with stroke customization](Images/styles/maui-popup-with-stroke-customization.png)
 
-### popup background
+## popup background
 
 The `SfPopup` allows to customize the background color of popupview using the `PopupBackground` property.
 
