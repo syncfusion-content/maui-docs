@@ -258,7 +258,6 @@ The [Show]() method is used to activate the tooltip at the specified location.
         public MainPage()
         {
             InitializeComponent();
-            BindingContext = this;
         }
 
         private void Button_Clicked(object sender, EventArgs e)
@@ -286,7 +285,7 @@ The [Hide]() method is used to hide the tooltip programmatically.
         //The argument determines whether the tooltip should be animated while hiding.
 
         tooltip.Hide(true);
-        
+
 {% endhighlight %}
 
 {% endtabs %}
