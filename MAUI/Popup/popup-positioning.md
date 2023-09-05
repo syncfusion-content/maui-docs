@@ -38,6 +38,12 @@ Following are the list of options available to show SfPopup at various positions
 <tr>
 <td>{{'[Show(bool)](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_Show_System_Boolean_)'| markdownify }}</td>
 <td>Similar as <code>SfPopup.IsFullScreen</code> property.</td></tr>
+<tr>
+<td><code>SfPopup.Show(string title, string message)</code></td>
+<td>Static method to show popup with title and message.</td></tr>
+<tr>
+<td><code>SfPopup.Show(string title, string message, string acceptText)</code></td>
+<td>Static method to show popup with title, message and acceptText.</td></tr>
 </table>
 
 ## Center positioning
@@ -267,6 +273,84 @@ public class ViewModel : INotifyPropertyChanged
 ![Relative positioning of .NET MAUI Popup in MVVM](Images/popup-positioning/maui-popup-relative-positioning-in-mvvm.png)
 
 ## How to
+
+### Display a popup asynchronously
+
+Display a popup asynchronously using `ShowAsync()`. Returns `true` if user click acceptText Otherwise returns `false`.
+
+{% tabs %}
+{% highlight xaml %}
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:PopupDemo"
+             xmlns:sfPopup="clr-namespace:Syncfusion.Maui.Popup;assembly=Syncfusion.Maui.Popup"
+             x:Class="PopupDemo.MainPage">
+    <StackLayout padding="20">
+        <Button x:Name="clickToShowPopup"
+                Text="ClickToShowPopup"
+                VerticalOptions="Start"
+                HorizontalOptions="Center"
+                Clicked="ClickToShowPopup_Clicked" />
+        <sfPopup:SfPopup x:Name="popup">
+        </sfPopup:SfPopup>
+    </StackLayout>
+</ContentPage>
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="12" %}
+using Syncfusion.Maui.Popup;
+public partial class MainPage : ContentPage
+{
+  SfPopup popup;
+  public MainPage()
+  {
+    InitializeComponent();
+    popup = new SfPopup();
+  }
+  private async void ClickToShowPopup_Clicked(object sender, EventArgs e)
+  {
+    bool answer = await popup.ShowAsync();
+  }
+}
+{% endhighlight %}
+{% endtabs %}
+
+### Display a popup asynchronously using static method
+
+Display a popup asynchronously with title, message, acceptText and declineText using static method `SfPopup.Show(string title, string message, string acceptText, string declineText)`. Returns `true` if user click acceptText Otherwise returns `false`.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:sfPopup="clr-namespace:Syncfusion.Maui.Popup;assembly=Syncfusion.Maui.Popup"
+             x:Class="PopupMauiPositioning.MainPage">
+  <ContentPage.Content>
+    <StackLayout Padding="20">
+      <Button x:Name="clickToShowPopup" Text="ClickToShowPopup" 
+              VerticalOptions="Start" HorizontalOptions="Center" 
+              Clicked="ClickToShowPopup_Clicked" />
+    </StackLayout>
+  </ContentPage.Content>
+</ContentPage>
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="10" %}
+using Syncfusion.Maui.Popup;
+public partial class MainPage : ContentPage
+{
+  public MainPage()
+  {
+    InitializeComponent();
+  }
+  private async void ClickToShowPopup_Clicked(object sender, EventArgs e)
+  {
+    bool answer = await SfPopup.Show("Question?", "Would you like to play a game", "Yes", "No");
+  }
+}
+{% endhighlight %}
+{% endtabs %}
+
+![Displaying a .NET MAUI Popup asynchronously](Images/popup-positioning/show-popup-asynchronously-using-static-method.png)
 
 ### Load the SfPopup in CellTappedEvent of the SfDataGrid
 
