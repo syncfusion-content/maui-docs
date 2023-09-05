@@ -19,17 +19,17 @@ documentation: ug
 {% highlight C# %}
 
 
-if (chart is SfCartesianChart cartesianChart)
-{
-    //Convert screen point to chart point.
-    var xValue = cartesianChart.PointToValue(cartesianChart.XAxes[0], pointX, pointY);
-    var yValue = cartesianChart.PointToValue(cartesianChart.YAxes[0], pointX, pointY);
+    if (chart is SfCartesianChart cartesianChart)
+    {
+        //Convert screen point to chart point.
+        var xValue = cartesianChart.PointToValue(cartesianChart.XAxes[0], pointX, pointY);
+        var yValue = cartesianChart.PointToValue(cartesianChart.YAxes[0], pointX, pointY);
 
-    //Convert chart point to screen point.
-    var xPoint = cartesianChart.ValueToPoint(cartesianChart.XAxes[0], xValue);
-    var yPoint = cartesianChart.ValueToPoint(cartesianChart.YAxes[0], yValue);
+        //Convert chart point to screen point.
+        var xPoint = cartesianChart.ValueToPoint(cartesianChart.XAxes[0], xValue);
+        var yPoint = cartesianChart.ValueToPoint(cartesianChart.YAxes[0], yValue);
     
-}
+    }
 
 {% endhighlight  %}
 
