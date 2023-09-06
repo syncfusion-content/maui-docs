@@ -11,6 +11,10 @@ documentation: ug
 
 This section explains the steps required to add the Range Selector control and its elements such as track, ticks, labels and tooltip. This section covers only basic features needed to know to get started with Syncfusion Range Selector.
 
+To get start quickly with .NET MAUI Range Selector, you can check the below video.
+
+{% youtube "https://www.youtube.com/watch?v=LrnvOOjQ7jE" %}
+
 ## Creating an application with .NET MAUI
 
 Create a new .NET MAUI application in Visual Studio.

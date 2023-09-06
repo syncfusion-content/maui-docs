@@ -11,6 +11,10 @@ documentation: ug
 
 This section explains the steps required to add the range slider control and its elements such as track, ticks, labels and tooltip. This section covers only basic features needed to know to get started with Syncfusion Range Slider.
 
+To get start quickly with .NET MAUI Range Slider, you can check the below video.
+
+{% youtube "https://www.youtube.com/watch?v=9W1N5rH0zD0" %}
+
 ## Creating an application with .NET MAUI
 
 Create a new .NET MAUI application in Visual Studio.
