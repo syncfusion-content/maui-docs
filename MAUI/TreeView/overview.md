@@ -1,7 +1,7 @@
 ---
 layout: post
-title: About .NET MAUI TreeView control | Syncfusion
-description: Learn here all about introduction of Syncfusion .NET MAUI TreeView (SfTreeView) control, its elements and more.
+title: About .NET MAUI TreeView Control | Syncfusion
+description: Learn here all about introduction of the Syncfusion .NET MAUI TreeView (SfTreeView) control, its elements and more.
 platform: MAUI
 control: TreeView
 documentation: ug
@@ -20,8 +20,3 @@ The Syncfusion .NET MAUI TreeView is a data-oriented control that displays data 
  * Selection - Support for selection with different selection modes and keyboard navigation.
 
  * Templating - Provides complete UI customization through template and template selectors.
-
-
-
-
-
