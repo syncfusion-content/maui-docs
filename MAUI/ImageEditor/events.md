@@ -67,7 +67,7 @@ N> This is common for Shape and Text annotations.
 ## Browse image event
 
 This `BrowseImage` event occurs while browsing the image source.
-Cancel: We can restrict the default image browse picker opening by setting the Cancel argument true.
+`Cancel`: We can restrict the default image browse picker opening by setting the `Cancel` argument `true`.
 
 {% tabs %}
 
