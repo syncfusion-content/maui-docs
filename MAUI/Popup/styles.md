@@ -281,7 +281,7 @@ public partial class MainPage : ContentPage
 
 ## popup background
 
-The `SfPopup` allows to customize the background color of popupview using the `PopupBackground` property.
+The `SfPopup` allows to customize the background color of popup view using the `PopupBackground` property.
 
 {% tabs %}
 {% highlight xaml hl_lines="3" %}
