@@ -3,7 +3,7 @@ layout: post
 title: About .NET MAUI DatePicker control | Syncfusion
 description: Learn here all about introduction of Syncfusion .NET MAUI DatePicker (SfDatePicker) control, its elements and more.
 platform: maui
-control: DatePicker
+control: SfDatePicker
 documentation: ug
 ---
 

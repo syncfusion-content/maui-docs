@@ -440,6 +440,16 @@ datePicker.Format = PickerDateFormat.MM_dd_yyyy;
 <td>Not Supported.</td>
 </tr>
 <tr>
+<td>{{'[HeaderView](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_HeaderViewProperty)'| markdownify }}</td>
+<td>Nil</td>
+<td>Not Supported.</td>
+</tr>
+<tr>
+<td>{{'[FooterView](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_FooterViewProperty)'| markdownify }}</td>
+<td>Nil</td>
+<td>Not Supported.</td>
+</tr>
+<tr>
 <td>Nil</td>
 <td>{{'[ColumnDividerColor]()'| markdownify }}</td>
 <td>Gets or sets the divider color of the columns.</td>

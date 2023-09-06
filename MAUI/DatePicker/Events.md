@@ -59,10 +59,9 @@ The [`Closed`]() event was triggered, after the DatePicker was closed.
             datePicker.Closing += SfDatePicker_Closing;
             datePicker.Closed += SfDatePicker_Closed;
         }
-        
+
         private void SfDatePicker_Opened(object sender, EventArgs e)
         {
-
         }
 
         private void SfDatePicker_Closing(object sender, System.ComponentModel.CancelEventArgs e)
@@ -73,7 +72,6 @@ The [`Closed`]() event was triggered, after the DatePicker was closed.
 
         private void SfDatePicker_Closed(object sender, EventArgs e)
         {
-
         }
     }
     

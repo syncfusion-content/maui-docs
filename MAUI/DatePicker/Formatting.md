@@ -3,7 +3,7 @@ layout: post
 title: Formatting in .NET MAUI DatePicker control | Syncfusion
 description: Learn here all about Formatting support in Syncfusion .NET MAUI DatePicker (SfDatePicker) control and more.
 platform: maui
-control: DatePicker
+control: SfDatePicker
 documentation: ug
 ---
 
