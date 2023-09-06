@@ -256,14 +256,14 @@ Selection zooming feature allows users to interactively choose a particular area
 
 {% tabs %}
 
-{% highlight xml %}
+{% highlight xaml %}
 
-<chart:SfCartesianChart>
-    <chart:SfCartesianChart.ZoomPanBehavior>
-        <chart:ChartZoomPanBehavior EnableSelectionZooming ="True"/>
-    </chart:SfCartesianChart.ZoomPanBehavior>
-    ...
-</chart:SfCartesianChart>
+    <chart:SfCartesianChart>
+        <chart:SfCartesianChart.ZoomPanBehavior>
+            <chart:ChartZoomPanBehavior EnableSelectionZooming ="True"/>
+        </chart:SfCartesianChart.ZoomPanBehavior>
+        ...
+    </chart:SfCartesianChart>
 
 {% endhighlight %}
 
@@ -316,34 +316,34 @@ Following code snippet illustrates how enable to axis trackball label while sele
 
 {% tabs %}
 
-{% highlight xml %}
+{% highlight xaml %}
 
-<chart:SfCartesianChart>
-    . . .
-        <chart:SfCartesianChart.XAxes>
-            <chart:NumericalAxis ShowTrackballLabel="True">
-                <chart:NumericalAxis.TrackballLabelStyle>
-                    <chart:ChartLabelStyle Background="LightBlue"   
-                              FontSize="15" 
-                              CornerRadius="5"
-                              StrokeWidth="2" 
-                              Stroke="Gray" />
-                </chart:NumericalAxis.TrackballLabelStyle>
-            </chart:NumericalAxis>
-        </chart:SfCartesianChart.XAxes>
-        <chart:SfCartesianChart.YAxes>
-            <chart:NumericalAxis ShowTrackballLabel="True">
-                <chart:NumericalAxis.TrackballLabelStyle>
-                    <chart:ChartLabelStyle Background="LightBlue"   
-                              FontSize="15" 
-                              CornerRadius="5"
-                              StrokeWidth="2" 
-                              Stroke="Gray" />
-                </chart:NumericalAxis.TrackballLabelStyle>
-            </chart:NumericalAxis>
-        </chart:SfCartesianChart.YAxes>
-        
-</chart:SfCartesianChart>
+    <chart:SfCartesianChart>
+        . . .
+            <chart:SfCartesianChart.XAxes>
+                <chart:NumericalAxis ShowTrackballLabel="True">
+                    <chart:NumericalAxis.TrackballLabelStyle>
+                        <chart:ChartLabelStyle Background="LightBlue"   
+                                FontSize="15" 
+                                CornerRadius="5"
+                                StrokeWidth="2" 
+                                Stroke="Gray" />
+                    </chart:NumericalAxis.TrackballLabelStyle>
+                </chart:NumericalAxis>
+            </chart:SfCartesianChart.XAxes>
+            <chart:SfCartesianChart.YAxes>
+                <chart:NumericalAxis ShowTrackballLabel="True">
+                    <chart:NumericalAxis.TrackballLabelStyle>
+                        <chart:ChartLabelStyle Background="LightBlue"   
+                                FontSize="15" 
+                                CornerRadius="5"
+                                StrokeWidth="2" 
+                                Stroke="Gray" />
+                    </chart:NumericalAxis.TrackballLabelStyle>
+                </chart:NumericalAxis>
+            </chart:SfCartesianChart.YAxes>
+            
+    </chart:SfCartesianChart>
 
 {% endhighlight %}
 
