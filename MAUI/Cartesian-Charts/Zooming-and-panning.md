@@ -288,16 +288,16 @@ chart.ZoomPanBehavior = zooming;
 
 You can customize the selection rectangle using the below properties.
 
-* [SelectionRectStrokeWidth]() - used to change the stroke width of selection rectangle
+* [SelectionRectStrokeWidth]() - Gets or sets the stroke width for selection rectangle.
 
-* [SelectionRectStroke]() - used to change the stroke color of selection rectangle.
+* [SelectionRectStroke]() -  Gets or set the stroke color for selection rectangle.
 
-* [SelectionRectStrokeDashArray]() - used to change the stroke dashes of selection rectangle.
+* [SelectionRectStrokeDashArray]() - Gets or set the stroke dashes for selection rectangle.
 
-* [SelectionRectFill]() - used to change the fill color of selection rectangle.
+* [SelectionRectFill]() - Gets or sets the fill color for the selection rectangle.
 
 ### Show trackball axis label
-The selection zooming trackball axis label is enabled by setting the [ShowTrackballLabel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_ShowTrackballLabel) property to `true`. The default value of the [ShowTrackballLabel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_ShowTrackballLabel) is `false`. The trackball axis labels can be customized using following properties:
+The selection zooming trackball axis label is enabled by setting the [ShowTrackballLabel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_ShowTrackballLabel) property to `true`. The default value of the [ShowTrackballLabel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_ShowTrackballLabel) is `false`. The TrackballLabelStyle[] property provides to customize the trackball axis labels. These options are:
 
 * `Background` - Gets or sets the background color of the labels.
 * `CornerRadius` - Gets or sets a value that defines the rounded corners for labels.
@@ -309,7 +309,6 @@ The selection zooming trackball axis label is enabled by setting the [ShowTrackb
 * `StrokeWidth` - Gets or sets the border thickness of the label.
 * `TextColor` - Gets or sets the color for the text of the label.
 * `LabelFormat` - Gets or sets the label format. This property is used to set numeric or date-time format to the chart axis label.
-* `LabelAlignment` - Gets or sets the axis label at start, end, and center positions.
 
 N> If the axis labels in the selection zooming trackball are cropped or hidden, you should use the [LabelExtent]() property to extend the space between the axis labels and the axis title accordingly.
 
