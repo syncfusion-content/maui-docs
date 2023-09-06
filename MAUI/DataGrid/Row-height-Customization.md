@@ -9,7 +9,7 @@ documentation: ug
 
 # Row Height Customization in .NET MAUI DataGrid (SfDataGrid)
 
-The DataGrid provides an option to customize the header row height and the row height of all the grids or a particular row. To achieve this customization, see the following sections:
+The [.NET MAUI DataGrid](https://www.syncfusion.com/maui-controls/maui-datagrid) provides an option to customize the header row height and the row height of all the grids or a particular row. To achieve this customization, see the following sections:
 
 To get start quickly with customize the row height in .NET MAUI DataGrid, you can check on this video:
 

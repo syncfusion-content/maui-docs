@@ -29,7 +29,7 @@ To apply column grouping, please refer to the following code example:
 {% tabs %}
 {% highlight xaml %}
 <syncfusion:SfDataGrid x:Name="dataGrid"
-                        ItemsSource="{Binding OrdersInfo}">
+                        ItemsSource="{Binding OrderInfoCollection}">
     <syncfusion:SfDataGrid.GroupColumnDescriptions>
         <syncfusion:GroupColumnDescription ColumnName="Name" />
     </syncfusion:SfDataGrid.GroupColumnDescriptions>
@@ -53,7 +53,7 @@ The SfDataGrid also allows to group the data against one or more columns using t
 {% tabs %}
 {% highlight xaml %}
 <syncfusion:SfDataGrid  x:Name="dataGrid"
-                        ItemsSource="{Binding Orders}"
+                        ItemsSource="{Binding OrderInfoCollection}"
                         GroupingMode="Multiple">
                         
     <syncfusion:SfDataGrid.GroupColumnDescriptions>
@@ -86,7 +86,7 @@ The width of indent column can be customized by the [IndentColumnWidth](https://
 {% highlight xaml %}
 <syncfusion:SfDataGrid  x:Name="dataGrid"
                         AutoGenerateColumns="True"
-                        ItemsSource="{Binding Orders}"
+                        ItemsSource="{Binding OrderInfoCollection}"
                         IndentColumnWidth="60" />
 {% endhighlight %}
 
@@ -126,7 +126,7 @@ To set a custom grouping converter for the group description that is added to gr
     </ContentPage.BindingContext>
 
     <syncfusion:SfDataGrid x:Name="dataGrid"
-                            ItemsSource="{Binding OrdersInfo}">
+                            ItemsSource="{Binding OrderInfoCollection}">
 
         <syncfusion:SfDataGrid.GroupColumnDescriptions>
             <syncfusion:GroupColumnDescription ColumnName="Freight"
@@ -237,7 +237,7 @@ In custom grouping, you can sort all the inner records of each group by setting 
     </ContentPage.BindingContext>
 
     <syncfusion:SfDataGrid x:Name="dataGrid"
-                            ItemsSource="{Binding OrdersInfo}">
+                            ItemsSource="{Binding OrderInfoCollection}">
         <Syncfusion:SfDataGrid.GroupColumnDescriptions>
             <Syncfusion:GroupColumnDescription ColumnName="OrderID"
                                                 Converter="{StaticResource groupOrderNoConverter}"
@@ -323,7 +323,7 @@ To expand all groups initially, set the [SfDataGrid.AutoExpandGroups](https://he
 <syncfusion:SfDataGrid  x:Name="dataGrid"
                         AutoExpandGroups="True"
                         AllowGroupExpandCollapse="True"
-                        ItemsSource="{Binding Orders}" />
+                        ItemsSource="{Binding OrderInfoCollection}" />
 {% endhighlight %}
 {% highlight c# %}
 this.dataGrid.AutoExpandGroups = true;
@@ -340,7 +340,7 @@ To expand and collapse the groups at runtime, you can simply set the [SfDataGrid
 
 <syncfusion:SfDataGrid  x:Name="dataGrid"
                         AllowGroupExpandCollapse="True"
-                        ItemsSource="{Binding Orders}" />
+                        ItemsSource="{Binding OrderInfoCollection}" />
                        
 {% endhighlight %}
 {% highlight c# %}
@@ -350,12 +350,12 @@ this.dataGrid.AllowGroupExpandCollapse = true;
 
 ### Expand or collapse all the groups
 
-To expand and collapse the groups programmatically, you can simply invoke the [SfDataGrid.ExpandAllGroup](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ExpandAllGroups) and [SfDataGrid.CollapseAllGroup]() methods.
+To expand and collapse the groups programmatically, you can simply invoke the [SfDataGrid.ExpandAllGroups](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ExpandAllGroups) and [SfDataGrid.CollapseAllGroups](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CollapseAllGroups) methods.
 
 {% tabs %}
 {% highlight c# %}
-this.dataGrid.ExpandAllGroup();
-this.dataGrid.CollapseAllGroup();
+this.dataGrid.ExpandAllGroups();
+this.dataGrid.CollapseAllGroups();
 {% endhighlight %}
 {% endtabs %}
 
@@ -491,7 +491,7 @@ The visibility of the grouped column can be customized by the [SfDataGrid.ShowCo
 {% highlight xaml %}
 <syncfusion:SfDataGrid  x:Name="dataGrid"
                         AutoGenerateColumns="True"
-                        ItemsSource="{Binding Orders}"
+                        ItemsSource="{Binding OrderInfoCollection}"
                         ShowColumnWhenGrouped="False" />
 {% endhighlight %}
 
