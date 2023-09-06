@@ -1,23 +1,23 @@
 ---
 layout: post
-title: Customizations in .NET MAUI DatePicker control | Syncfusion
-description: Learn here all about Customizations support in Syncfusion .NET MAUI DatePicker (SfDatePicker) control and more.
+title: Customizations in .NET MAUI TimePicker control | Syncfusion
+description: Learn here all about Customizations support in Syncfusion .NET MAUI TimePicker (SfTimePicker) control and more.
 platform: maui
-control: SfDatePicker
+control: SfTimePicker
 documentation: ug
 ---
 
-# Customizations in .NET MAUI DatePicker (SfDatePicker)
+# Customizations in .NET MAUI TimePicker (SfTimePicker)
 
-You can customize the header, column header, footer, selected item of the [`SfDatePicker`]().
+You can customize the header, column header, footer, selected item of the [`SfTimePicker`]().
 
 ## Header customization
 
-[`SfDatePicker`]() allows customizing the header's background, text color, and fonts.
+[`SfTimePicker`]() allows customizing the header's background, text color, and fonts.
 
 ### Set header text
 
-[`SfDatePicker`]() allows providing custom text to its header by setting the [`SfDatePicker.HeaderView`]() property.
+[`SfTimePicker`]() allows providing custom text to its header by setting the [`SfTimePicker.HeaderView`]() property.
 
 {% tabs %}
 
@@ -26,15 +26,15 @@ You can customize the header, column header, footer, selected item of the [`SfDa
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:DatePickerSample"
+             xmlns:local="clr-namespace:TimePickerSample"
              xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker"
-             x:Class="DatePickerSample.MainPage">
+             x:Class="TimePickerSample.MainPage">
     <ContentPage.Content>
-        <syncfusion:SfDatePicker x:Name="datepicker" >
-            <syncfusion:SfDatePicker.HeaderView >
-                <syncfusion:PickerHeaderView Height="40" Text="Date Picker"/>
-            </syncfusion:SfDatePicker.HeaderView>
-        </syncfusion.SfDatePicker>
+        <syncfusion:SfTimePicker x:Name="TimePicker" >
+            <syncfusion:SfTimePicker.HeaderView >
+                <syncfusion:PickerHeaderView Height="40" Text="Time Picker"/>
+            </syncfusion:SfTimePicker.HeaderView>
+        </syncfusion.SfTimePicker>
     </ContentPage.Content>
 </ContentPage>
  
@@ -44,21 +44,21 @@ You can customize the header, column header, footer, selected item of the [`SfDa
 
 using Syncfusion.Maui.Picker;
 
-namespace DatePickerSample
+namespace TimePickerSample
 {
     public partial class MainPage : ContentPage
     {
         public MainPage()
         {
             InitializeComponent();
-            SfDatePicker datePicker = new SfDatePicker();
-            datepicker.HeaderView = new PickerHeaderView()
+            SfTimePicker timePicker = new SfTimePicker();
+            timePicker.HeaderView = new PickerHeaderView()
             {
                 Height = 40,
-                Text = "Date Picker"
+                Text = "Time Picker"
             };
 
-            this.Content = datePicker;
+            this.Content = timePicker;
         }
     }
 }
@@ -69,7 +69,7 @@ namespace DatePickerSample
 
 ### Background
 
-Background color of the header can be customized by setting the [`SfDatePicker.HeaderView`]() property.
+Background color of the header can be customized by setting the [`SfTimePicker.HeaderView`]() property.
 
 {% tabs %}
 
@@ -78,15 +78,15 @@ Background color of the header can be customized by setting the [`SfDatePicker.H
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:DatePickerSample"
+             xmlns:local="clr-namespace:TimePickerSample"
              xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker"
-             x:Class="DatePickerSample.MainPage">
+             x:Class="TimePickerSample.MainPage">
     <ContentPage.Content>
-        <syncfusion:SfDatePicker x:Name="datepicker" >
-            <syncfusion:SfDatePicker.HeaderView >
-                <syncfusion:PickerHeaderView Height="40" Text="Date Picker" Background="Orange"/>
-            </syncfusion:SfDatePicker.HeaderView>
-        </syncfusion.SfDatePicker>
+        <syncfusion:SfTimePicker x:Name="TimePicker" >
+            <syncfusion:SfTimePicker.HeaderView >
+                <syncfusion:PickerHeaderView Height="40" Text="Time Picker" Background="Orange"/>
+            </syncfusion:SfTimePicker.HeaderView>
+        </syncfusion.SfTimePicker>
     </ContentPage.Content>
 </ContentPage>
 
@@ -96,22 +96,22 @@ Background color of the header can be customized by setting the [`SfDatePicker.H
 
 using Syncfusion.Maui.Picker;
 
-namespace DatePickerSample
+namespace TimePickerSample
 {
     public partial class MainPage : ContentPage
     {
         public MainPage()
         {
             InitializeComponent();
-            SfDatePicker datePicker = new SfDatePicker();
-            datepicker.HeaderView = new PickerHeaderView()
+            SfTimePicker timePicker = new SfTimePicker();
+            timePicker.HeaderView = new PickerHeaderView()
             {
                 Height = 40,
-                Text = "Date Picker",
+                Text = "Time Picker",
                 Background = Colors.Orange,
             };
 
-            this.Content = datePicker;
+            this.Content = timePicker;
         }
     }
 }
@@ -122,7 +122,7 @@ namespace DatePickerSample
 
 ### Text color 
 
-Text color of the header can be customized by setting the [`SfDatePicker.HeaderView`]() property.
+Text color of the header can be customized by setting the [`SfTimePicker.HeaderView`]() property.
 
 {% tabs %}
 
@@ -131,19 +131,19 @@ Text color of the header can be customized by setting the [`SfDatePicker.HeaderV
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:DatePickerSample"
+             xmlns:local="clr-namespace:TimePickerSample"
              xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker"
-             x:Class="DatePickerSample.MainPage">
+             x:Class="TimePickerSample.MainPage">
     <ContentPage.Content>
-        <syncfusion:SfDatePicker x:Name="datepicker" >
-            <syncfusion:SfDatePicker.HeaderView >
-                <syncfusion:PickerHeaderView Height="40" Text="Date Picker" >
+        <syncfusion:SfTimePicker x:Name="TimePicker" >
+            <syncfusion:SfTimePicker.HeaderView >
+                <syncfusion:PickerHeaderView Height="40" Text="Time Picker" >
                     <syncfusion:PickerHeaderView.TextStyle >
                         <syncfusion:PickerTextStyle TextColor="Violet" />
                     </syncfusion:PickerHeaderView.TextStyle>
                 </syncfusion:PickerHeaderView>
-            </syncfusion:SfDatePicker.HeaderView>
-        </syncfusion.SfDatePicker>
+            </syncfusion:SfTimePicker.HeaderView>
+        </syncfusion.SfTimePicker>
     </ContentPage.Content>
 </ContentPage>
 
@@ -153,25 +153,25 @@ Text color of the header can be customized by setting the [`SfDatePicker.HeaderV
 
 using Syncfusion.Maui.Picker;
 
-namespace DatePickerSample
+namespace TimePickerSample
 {
     public partial class MainPage : ContentPage
     {
         public MainPage()
         {
             InitializeComponent();
-            SfDatePicker datePicker = new SfDatePicker();
-            datepicker.HeaderView = new PickerHeaderView()
+            SfTimePicker timePicker = new SfTimePicker();
+            timePicker.HeaderView = new PickerHeaderView()
             {
                 Height = 40,
-                Text = "Date Picker",
+                Text = "Time Picker",
                 TextStyle = new PickerTextStyle()
                 {
                     TextColor = Colors.Violet,
                 }
             };
 
-            this.Content = datePicker;
+            this.Content = timePicker;
         }
     }
 }
@@ -186,7 +186,7 @@ This section explains the Font customization of header text.
 
 #### FontFamily
 
-FontFamily of the header text can be customized by setting the [`SfDatePicker.HeaderView`]() property.
+FontFamily of the header text can be customized by setting the [`SfTimePicker.HeaderView`]() property.
 
 {% tabs %}
 
@@ -195,19 +195,19 @@ FontFamily of the header text can be customized by setting the [`SfDatePicker.He
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:DatePickerSample"
+             xmlns:local="clr-namespace:TimePickerSample"
              xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker"
-             x:Class="DatePickerSample.MainPage">
+             x:Class="TimePickerSample.MainPage">
     <ContentPage.Content>
-        <syncfusion:SfDatePicker x:Name="datepicker" >
-            <syncfusion:SfDatePicker.HeaderView >
-                <syncfusion:PickerHeaderView Height="40" Text="Date Picker" >
+        <syncfusion:SfTimePicker x:Name="TimePicker" >
+            <syncfusion:SfTimePicker.HeaderView >
+                <syncfusion:PickerHeaderView Height="40" Text="Time Picker" >
                     <syncfusion:PickerHeaderView.TextStyle >
                         <syncfusion:PickerTextStyle FontFamily="Times New Roman" />
                     </syncfusion:PickerHeaderView.TextStyle>
                 </syncfusion:PickerHeaderView>
-            </syncfusion:SfDatePicker.HeaderView>
-        </syncfusion.SfDatePicker>
+            </syncfusion:SfTimePicker.HeaderView>
+        </syncfusion.SfTimePicker>
     </ContentPage.Content>
 </ContentPage>
 
@@ -217,25 +217,25 @@ FontFamily of the header text can be customized by setting the [`SfDatePicker.He
 
 using Syncfusion.Maui.Picker;
 
-namespace DatePickerSample
+namespace TimePickerSample
 {
     public partial class MainPage : ContentPage
     {
         public MainPage()
         {
             InitializeComponent();
-            SfDatePicker datePicker = new SfDatePicker();
-            datepicker.HeaderView = new PickerHeaderView()
+            SfTimePicker timePicker = new SfTimePicker();
+            timePicker.HeaderView = new PickerHeaderView()
             {
                 Height = 40,
-                Text = "Date Picker",
+                Text = "Time Picker",
                 TextStyle = new PickerTextStyle()
                 {
                     FontFamily = "Times New Roman",
                 }
             };
 
-            this.Content = datePicker;
+            this.Content = timePicker;
         }
     }
 }
@@ -246,7 +246,7 @@ namespace DatePickerSample
 
 #### FontSize
 
-FontSize of the header text can be customized by setting the [`SfDatePicker.HeaderView`]() property.
+FontSize of the header text can be customized by setting the [`SfTimePicker.HeaderView`]() property.
 
 {% tabs %}
 
@@ -255,19 +255,19 @@ FontSize of the header text can be customized by setting the [`SfDatePicker.Head
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:DatePickerSample"
+             xmlns:local="clr-namespace:TimePickerSample"
              xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker"
-             x:Class="DatePickerSample.MainPage">
+             x:Class="TimePickerSample.MainPage">
     <ContentPage.Content>
-        <syncfusion:SfDatePicker x:Name="datepicker" >
-            <syncfusion:SfDatePicker.HeaderView >
-                <syncfusion:PickerHeaderView Height="40" Text="Date Picker" >
+        <syncfusion:SfTimePicker x:Name="TimePicker" >
+            <syncfusion:SfTimePicker.HeaderView >
+                <syncfusion:PickerHeaderView Height="40" Text="Time Picker" >
                     <syncfusion:PickerHeaderView.TextStyle >
                         <syncfusion:PickerTextStyle FontSize="12" />
                     </syncfusion:PickerHeaderView.TextStyle>
                 </syncfusion:PickerHeaderView>
-            </syncfusion:SfDatePicker.HeaderView>
-        </syncfusion.SfDatePicker>
+            </syncfusion:SfTimePicker.HeaderView>
+        </syncfusion.SfTimePicker>
     </ContentPage.Content>
 </ContentPage>
 
@@ -277,25 +277,25 @@ FontSize of the header text can be customized by setting the [`SfDatePicker.Head
 
 using Syncfusion.Maui.Picker;
 
-namespace DatePickerSample
+namespace TimePickerSample
 {
     public partial class MainPage : ContentPage
     {
         public MainPage()
         {
             InitializeComponent();
-            SfDatePicker datePicker = new SfDatePicker();
-            datepicker.HeaderView = new PickerHeaderView()
+            SfTimePicker timePicker = new SfTimePicker();
+            timePicker.HeaderView = new PickerHeaderView()
             {
                 Height = 40,
-                Text = "Date Picker",
+                Text = "Time Picker",
                 TextStyle = new PickerTextStyle()
                 {
                     FontSize = 12,
                 }
             };
 
-            this.Content = datePicker;
+            this.Content = timePicker;
         }
     }
 }
@@ -306,7 +306,7 @@ namespace DatePickerSample
 
 #### FontAttribute
 
-FontAttribute of the header text can be customized by setting the [`SfDatePicker.HeaderView`]() property.
+FontAttribute of the header text can be customized by setting the [`SfTimePicker.HeaderView`]() property.
 
 {% tabs %}
 
@@ -315,19 +315,19 @@ FontAttribute of the header text can be customized by setting the [`SfDatePicker
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:DatePickerSample"
+             xmlns:local="clr-namespace:TimePickerSample"
              xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker"
-             x:Class="DatePickerSample.MainPage">
+             x:Class="TimePickerSample.MainPage">
     <ContentPage.Content>
-        <syncfusion:SfDatePicker x:Name="datepicker" >
-            <syncfusion:SfDatePicker.HeaderView >
-                <syncfusion:PickerHeaderView Height="40" Text="Date Picker" >
+        <syncfusion:SfTimePicker x:Name="TimePicker" >
+            <syncfusion:SfTimePicker.HeaderView >
+                <syncfusion:PickerHeaderView Height="40" Text="Time Picker" >
                     <syncfusion:PickerHeaderView.TextStyle >
                         <syncfusion:PickerTextStyle FontAttributes="Italic" />
                     </syncfusion:PickerHeaderView.TextStyle>
                 </syncfusion:PickerHeaderView>
-            </syncfusion:SfDatePicker.HeaderView>
-        </syncfusion.SfDatePicker>
+            </syncfusion:SfTimePicker.HeaderView>
+        </syncfusion.SfTimePicker>
     </ContentPage.Content>
 </ContentPage>
 
@@ -337,25 +337,25 @@ FontAttribute of the header text can be customized by setting the [`SfDatePicker
 
 using Syncfusion.Maui.Picker;
 
-namespace DatePickerSample
+namespace TimePickerSample
 {
     public partial class MainPage : ContentPage
     {
         public MainPage()
         {
             InitializeComponent();
-            SfDatePicker datePicker = new SfDatePicker();
-            datepicker.HeaderView = new PickerHeaderView()
+            SfTimePicker timePicker = new SfTimePicker();
+            timePicker.HeaderView = new PickerHeaderView()
             {
                 Height = 40,
-                Text = "Date Picker",
+                Text = "Time Picker",
                 TextStyle = new PickerTextStyle()
                 {
                     FontAttributes = FontAttributes.Italic,
                 }
             };
 
-            this.Content = datePicker;
+            this.Content = timePicker;
         }
     }
 }
@@ -366,11 +366,11 @@ namespace DatePickerSample
 
 ## Column header customization
 
-[`SfDatePicker`]() allows customizing the column header's background, text color, and fonts.
+[`SfTimePicker`]() allows customizing the column header's background, text color, and fonts.
 
 ### Set custom column header 
 
-[`SfDatePicker`]() allows providing custom text to its column header by setting the [`SfDatePicker.ColumnHeaderView`](). And its contain [`ColumnHeaderView.DayHeaderText`]() [`ColumnHeaderView.MonthHeaderText`](), and [`ColumnHeaderView.YearHeaderText`]() properties. Default value of [`ColumnHeaderView.DayHeaderText`]() property is "Day", [`ColumnHeaderView.MonthHeaderText`]() is "Month", and [`ColumnHeaderView.YearHeaderText`]() is "Year".
+[`SfTimePicker`]() allows providing custom text to its column header by setting the [`SfTimePicker.ColumnHeaderView`](). And its contain [`ColumnHeaderView.HourHeaderText`]() [`ColumnHeaderView.MinuteHeaderText`](), and [`ColumnHeaderView.SecondHeaderText`]() properties. Default value of [`ColumnHeaderView.HourHeaderText`]() property is "Hour", [`ColumnHeaderView.MinuteHeaderText`]() is "Minute", and [`ColumnHeaderView.SecondHeaderText`]() is "Second".
 
 {% tabs %}
 
@@ -379,17 +379,17 @@ namespace DatePickerSample
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:DatePickerSample"
+             xmlns:local="clr-namespace:TimePickerSample"
              xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker"
-             x:Class="DatePickerSample.MainPage">
+             x:Class="TimePickerSample.MainPage">
     <ContentPage.Content>
-        <syncfusion:SfDatePicker x:Name="datepicker" >
-            <syncfusion:SfDatePicker.ColumnHeaderView >
-                <syncfusion:DatePickerColumnHeaderView DayHeaderText="Day Column"
-                                                        MonthHeaderText="Month Column"
-                                                        YearHeaderText="YearColumn"/>
-            </syncfusion:SfDatePicker.ColumnHeaderView>
-        </syncfusion.SfDatePicker>
+        <syncfusion:SfTimePicker x:Name="TimePicker" >
+            <syncfusion:SfTimePicker.ColumnHeaderView >
+                <syncfusion:TimePickerColumnHeaderView HourHeaderText="Hour Column"
+                                                        MinuteHeaderText="Minute Column"
+                                                        SecondHeaderText="Second Column"/>
+            </syncfusion:SfTimePicker.ColumnHeaderView>
+        </syncfusion.SfTimePicker>
     </ContentPage.Content>
 </ContentPage>
  
@@ -399,22 +399,22 @@ namespace DatePickerSample
 
 using Syncfusion.Maui.Picker;
 
-namespace DatePickerSample
+namespace TimePickerSample
 {
     public partial class MainPage : ContentPage
     {
         public MainPage()
         {
             InitializeComponent();
-            SfDatePicker datePicker = new SfDatePicker();
-            datepicker.ColumnHeaderView = new DatePickerColumnHeaderView()
+            SfTimePicker timePicker = new SfTimePicker();
+            timePicker.ColumnHeaderView = new TimePickerColumnHeaderView()
             {
-                DayHeaderText = "Day Column",
-                MonthHeaderText = "Month Column",
-                YearHeaderText = "Year Column"
+                HourHeaderText = "Hour Column",
+                MinuteHeaderText = "Minute Column",
+                SecondHeaderText = "Second Column"
             };
 
-            this.Content = datePicker;
+            this.Content = timePicker;
         }
     }
 }
@@ -425,7 +425,7 @@ namespace DatePickerSample
 
 ### Background
 
-Background color of the column header can be customized by setting the [`SfDatePicker.ColumnHeaderView`]() property.
+Background color of the column header can be customized by setting the [`SfTimePicker.ColumnHeaderView`]() property.
 
 {% tabs %}
 
@@ -434,15 +434,15 @@ Background color of the column header can be customized by setting the [`SfDateP
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:DatePickerSample"
+             xmlns:local="clr-namespace:TimePickerSample"
              xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker"
-             x:Class="DatePickerSample.MainPage">
+             x:Class="TimePickerSample.MainPage">
     <ContentPage.Content>
-        <syncfusion:SfDatePicker x:Name="datepicker" >
-            <syncfusion:SfDatePicker.ColumnHeaderView >
-                <syncfusion:DatePickerColumnHeaderView Background="Orange"/>
-            </syncfusion:SfDatePicker.ColumnHeaderView>
-        </syncfusion.SfDatePicker>
+        <syncfusion:SfTimePicker x:Name="TimePicker" >
+            <syncfusion:SfTimePicker.ColumnHeaderView >
+                <syncfusion:TimePickerColumnHeaderView Background="Orange"/>
+            </syncfusion:SfTimePicker.ColumnHeaderView>
+        </syncfusion.SfTimePicker>
     </ContentPage.Content>
 </ContentPage>
 
@@ -452,20 +452,20 @@ Background color of the column header can be customized by setting the [`SfDateP
 
 using Syncfusion.Maui.Picker;
 
-namespace DatePickerSample
+namespace TimePickerSample
 {
     public partial class MainPage : ContentPage
     {
         public MainPage()
         {
             InitializeComponent();
-            SfDatePicker datePicker = new SfDatePicker();
-            datepicker.ColumnHeaderView = new DatePickerColumnHeaderView()
+            SfTimePicker timePicker = new SfTimePicker();
+            timePicker.ColumnHeaderView = new TimePickerColumnHeaderView()
             {
                 Background = Colors.Orange,
             };
 
-            this.Content = datePicker;
+            this.Content = timePicker;
         }
     }
 }
@@ -476,7 +476,7 @@ namespace DatePickerSample
 
 ### Text color 
 
-Text color of the column header can be customized by setting the [`SfDatePicker.ColumnHeaderView`]() property.
+Text color of the column header can be customized by setting the [`SfTimePicker.ColumnHeaderView`]() property.
 
 {% tabs %}
 
@@ -485,19 +485,19 @@ Text color of the column header can be customized by setting the [`SfDatePicker.
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:DatePickerSample"
+             xmlns:local="clr-namespace:TimePickerSample"
              xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker"
-             x:Class="DatePickerSample.MainPage">
+             x:Class="TimePickerSample.MainPage">
     <ContentPage.Content>
-        <syncfusion:SfDatePicker x:Name="datepicker" >
-            <syncfusion:SfDatePicker.ColumnHeaderView >
-                <syncfusion:DatePickerColumnHeaderView >
-                    <syncfusion:DatePickerColumnHeaderView.TextStyle >
+        <syncfusion:SfTimePicker x:Name="TimePicker" >
+            <syncfusion:SfTimePicker.ColumnHeaderView >
+                <syncfusion:TimePickerColumnHeaderView >
+                    <syncfusion:TimePickerColumnHeaderView.TextStyle >
                         <syncfusion:PickerTextStyle TextColor="Violet"/>
-                    </syncfusion:DatePickerColumnHeaderView.TextStyle>
-                </syncfusion:DatePickerColumnHeaderView>
-            </syncfusion:SfDatePicker.ColumnHeaderView>
-        </syncfusion.SfDatePicker>
+                    </syncfusion:TimePickerColumnHeaderView.TextStyle>
+                </syncfusion:TimePickerColumnHeaderView>
+            </syncfusion:SfTimePicker.ColumnHeaderView>
+        </syncfusion.SfTimePicker>
     </ContentPage.Content>
 </ContentPage>
 
@@ -507,15 +507,15 @@ Text color of the column header can be customized by setting the [`SfDatePicker.
 
 using Syncfusion.Maui.Picker;
 
-namespace DatePickerSample
+namespace TimePickerSample
 {
     public partial class MainPage : ContentPage
     {
         public MainPage()
         {
             InitializeComponent();
-            SfDatePicker datePicker = new SfDatePicker();
-            datepicker.ColumnHeaderView = new DatePickerColumnHeaderView()
+            SfTimePicker timePicker = new SfTimePicker();
+            timePicker.ColumnHeaderView = new TimePickerColumnHeaderView()
             {
                 TextStyle = new PickerTextStyle()
                 {
@@ -523,7 +523,7 @@ namespace DatePickerSample
                 }
             };
 
-            this.Content = datePicker;
+            this.Content = timePicker;
         }
     }
 }
@@ -538,7 +538,7 @@ This section explains the Font customization of column header text.
 
 #### FontFamily
 
-FontFamily of the column header text can be customized by setting the [`SfDatePicker.ColumnHeaderView`]() property.
+FontFamily of the column header text can be customized by setting the [`SfTimePicker.ColumnHeaderView`]() property.
 
 {% tabs %}
 
@@ -547,19 +547,19 @@ FontFamily of the column header text can be customized by setting the [`SfDatePi
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:DatePickerSample"
+             xmlns:local="clr-namespace:TimePickerSample"
              xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker"
-             x:Class="DatePickerSample.MainPage">
+             x:Class="TimePickerSample.MainPage">
     <ContentPage.Content>
-        <syncfusion:SfDatePicker x:Name="datepicker" >
-            <syncfusion:SfDatePicker.ColumnHeaderView >
-                <syncfusion:DatePickerColumnHeaderView >
-                    <syncfusion:DatePickerColumnHeaderView.TextStyle >
+        <syncfusion:SfTimePicker x:Name="TimePicker" >
+            <syncfusion:SfTimePicker.ColumnHeaderView >
+                <syncfusion:TimePickerColumnHeaderView >
+                    <syncfusion:TimePickerColumnHeaderView.TextStyle >
                         <syncfusion:PickerTextStyle FontFamily="Times New Roman"/>
-                    </syncfusion:DatePickerColumnHeaderView.TextStyle>
-                </syncfusion:DatePickerColumnHeaderView>
-            </syncfusion:SfDatePicker.ColumnHeaderView>
-        </syncfusion.SfDatePicker>
+                    </syncfusion:TimePickerColumnHeaderView.TextStyle>
+                </syncfusion:TimePickerColumnHeaderView>
+            </syncfusion:SfTimePicker.ColumnHeaderView>
+        </syncfusion.SfTimePicker>
     </ContentPage.Content>
 </ContentPage>
 
@@ -569,15 +569,15 @@ FontFamily of the column header text can be customized by setting the [`SfDatePi
 
 using Syncfusion.Maui.Picker;
 
-namespace DatePickerSample
+namespace TimePickerSample
 {
     public partial class MainPage : ContentPage
     {
         public MainPage()
         {
             InitializeComponent();
-            SfDatePicker datePicker = new SfDatePicker();
-            datepicker.ColumnHeaderView = new DatePickerColumnHeaderView()
+            SfTimePicker timePicker = new SfTimePicker();
+            timePicker.ColumnHeaderView = new TimePickerColumnHeaderView()
             {
                 TextStyle = new PickerTextStyle()
                 {
@@ -585,7 +585,7 @@ namespace DatePickerSample
                 }
             };
 
-            this.Content = datePicker;
+            this.Content = timePicker;
         }
     }
 }
@@ -596,7 +596,7 @@ namespace DatePickerSample
 
 #### FontSize
 
-FontSize of the column header text can be customized by setting the [`SfDatePicker.ColumnHeaderView`]() property.
+FontSize of the column header text can be customized by setting the [`SfTimePicker.ColumnHeaderView`]() property.
 
 {% tabs %}
 
@@ -605,19 +605,19 @@ FontSize of the column header text can be customized by setting the [`SfDatePick
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:DatePickerSample"
+             xmlns:local="clr-namespace:TimePickerSample"
              xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker"
-             x:Class="DatePickerSample.MainPage">
+             x:Class="TimePickerSample.MainPage">
     <ContentPage.Content>
-        <syncfusion:SfDatePicker x:Name="datepicker" >
-            <syncfusion:SfDatePicker.ColumnHeaderView >
-                <syncfusion:DatePickerColumnHeaderView >
-                    <syncfusion:DatePickerColumnHeaderView.TextStyle >
+        <syncfusion:SfTimePicker x:Name="TimePicker" >
+            <syncfusion:SfTimePicker.ColumnHeaderView >
+                <syncfusion:TimePickerColumnHeaderView >
+                    <syncfusion:TimePickerColumnHeaderView.TextStyle >
                         <syncfusion:PickerTextStyle FontSize="12"/>
-                    </syncfusion:DatePickerColumnHeaderView.TextStyle>
-                </syncfusion:DatePickerColumnHeaderView>
-            </syncfusion:SfDatePicker.ColumnHeaderView>
-        </syncfusion.SfDatePicker>
+                    </syncfusion:TimePickerColumnHeaderView.TextStyle>
+                </syncfusion:TimePickerColumnHeaderView>
+            </syncfusion:SfTimePicker.ColumnHeaderView>
+        </syncfusion.SfTimePicker>
     </ContentPage.Content>
 </ContentPage>
 
@@ -627,15 +627,15 @@ FontSize of the column header text can be customized by setting the [`SfDatePick
 
 using Syncfusion.Maui.Picker;
 
-namespace DatePickerSample
+namespace TimePickerSample
 {
     public partial class MainPage : ContentPage
     {
         public MainPage()
         {
             InitializeComponent();
-            SfDatePicker datePicker = new SfDatePicker();
-            datepicker.ColumnHeaderView = new DatePickerColumnHeaderView()
+            SfTimePicker timePicker = new SfTimePicker();
+            timePicker.ColumnHeaderView = new TimePickerColumnHeaderView()
             {
                 TextStyle = new PickerTextStyle()
                 {
@@ -643,7 +643,7 @@ namespace DatePickerSample
                 }
             };
 
-            this.Content = datePicker;
+            this.Content = timePicker;
         }
     }
 }
@@ -654,7 +654,7 @@ namespace DatePickerSample
 
 #### FontAttribute
 
-FontAttribute of the column header text can be customized by setting the [`SfDatePicker.ColumnHeaderView`]() property.
+FontAttribute of the column header text can be customized by setting the [`SfTimePicker.ColumnHeaderView`]() property.
 
 {% tabs %}
 
@@ -663,19 +663,19 @@ FontAttribute of the column header text can be customized by setting the [`SfDat
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:DatePickerSample"
+             xmlns:local="clr-namespace:TimePickerSample"
              xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker"
-             x:Class="DatePickerSample.MainPage">
+             x:Class="TimePickerSample.MainPage">
     <ContentPage.Content>
-        <syncfusion:SfDatePicker x:Name="datepicker" >
-            <syncfusion:SfDatePicker.ColumnHeaderView >
-                <syncfusion:DatePickerColumnHeaderView >
-                    <syncfusion:DatePickerColumnHeaderView.TextStyle >
+        <syncfusion:SfTimePicker x:Name="TimePicker" >
+            <syncfusion:SfTimePicker.ColumnHeaderView >
+                <syncfusion:TimePickerColumnHeaderView >
+                    <syncfusion:TimePickerColumnHeaderView.TextStyle >
                         <syncfusion:PickerTextStyle FontAttributes="Italic"/>
-                    </syncfusion:DatePickerColumnHeaderView.TextStyle>
-                </syncfusion:DatePickerColumnHeaderView>
-            </syncfusion:SfDatePicker.ColumnHeaderView>
-        </syncfusion.SfDatePicker>
+                    </syncfusion:TimePickerColumnHeaderView.TextStyle>
+                </syncfusion:TimePickerColumnHeaderView>
+            </syncfusion:SfTimePicker.ColumnHeaderView>
+        </syncfusion.SfTimePicker>
     </ContentPage.Content>
 </ContentPage>
 
@@ -685,15 +685,15 @@ FontAttribute of the column header text can be customized by setting the [`SfDat
 
 using Syncfusion.Maui.Picker;
 
-namespace DatePickerSample
+namespace TimePickerSample
 {
     public partial class MainPage : ContentPage
     {
         public MainPage()
         {
             InitializeComponent();
-            SfDatePicker datePicker = new SfDatePicker();
-            datepicker.ColumnHeaderView = new DatePickerColumnHeaderView()
+            SfTimePicker timePicker = new SfTimePicker();
+            timePicker.ColumnHeaderView = new TimePickerColumnHeaderView()
             {
                 TextStyle = new PickerTextStyle()
                 {
@@ -701,7 +701,7 @@ namespace DatePickerSample
                 }
             };
 
-            this.Content = datePicker;
+            this.Content = timePicker;
         }
     }
 }
@@ -712,11 +712,11 @@ namespace DatePickerSample
 
 ## Footer customization
 
-[`SfDatePicker`]() allows customizing background, text color of the OK and Cancel buttons of the footer.
+[`SfTimePicker`]() allows customizing background, text color of the OK and Cancel buttons of the footer.
 
 ### OK and Cancel buttons customizations
 
-[`SfDatePicker`]() allows providing custom text to its column header by setting the [`SfDatePicker.FooterView`](). And its contain [`FooterView.OkButtonText`]() [`FooterView.CancelButtonText`]() properties. Default value of [`FooterView.OkButtonText`]() property is "OK", [`FooterView.CancelButtonText`]() is "Cancel".
+[`SfTimePicker`]() allows providing custom text to its column header by setting the [`SfTimePicker.FooterView`](). And its contain [`FooterView.OkButtonText`]() [`FooterView.CancelButtonText`]() properties. Default value of [`FooterView.OkButtonText`]() property is "OK", [`FooterView.CancelButtonText`]() is "Cancel".
 
 {% tabs %}
 
@@ -725,16 +725,16 @@ namespace DatePickerSample
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:DatePickerSample"
+             xmlns:local="clr-namespace:TimePickerSample"
              xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker"
-             x:Class="DatePickerSample.MainPage">
+             x:Class="TimePickerSample.MainPage">
     <ContentPage.Content>
-        <syncfusion:SfDatePicker x:Name="datepicker" >
-            <syncfusion:SfDatePicker.FooterView >
+        <syncfusion:SfTimePicker x:Name="TimePicker" >
+            <syncfusion:SfTimePicker.FooterView >
                 <syncfusion:PickerFooterView Height="40" OkButtonText="Ok Button"
                                             CancelButtonText="Cancel Button"/>
-            </syncfusion:SfDatePicker.FooterView>
-        </syncfusion.SfDatePicker>
+            </syncfusion:SfTimePicker.FooterView>
+        </syncfusion.SfTimePicker>
     </ContentPage.Content>
 </ContentPage>
  
@@ -744,22 +744,22 @@ namespace DatePickerSample
 
 using Syncfusion.Maui.Picker;
 
-namespace DatePickerSample
+namespace TimePickerSample
 {
     public partial class MainPage : ContentPage
     {
         public MainPage()
         {
             InitializeComponent();
-            SfDatePicker datePicker = new SfDatePicker();
-            datepicker.FooterView = new PickerFooterView()
+            SfTimePicker timePicker = new SfTimePicker();
+            timePicker.FooterView = new PickerFooterView()
             {
                 Height = 40,
                 OkButtonText = "Ok Button",
                 CancelButtonText = "Cancel Button",
             };
 
-            this.Content = datePicker;
+            this.Content = timePicker;
         }
     }
 }
@@ -770,7 +770,7 @@ namespace DatePickerSample
 
 #### Background
 
-Background colors of the OK and Cancel buttons can be customized by setting the [`SfDatePicker.FooterView`]() properties.
+Background colors of the OK and Cancel buttons can be customized by setting the [`SfTimePicker.FooterView`]() properties.
 
 {% tabs %}
 
@@ -779,16 +779,16 @@ Background colors of the OK and Cancel buttons can be customized by setting the 
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:DatePickerSample"
+             xmlns:local="clr-namespace:TimePickerSample"
              xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker"
-             x:Class="DatePickerSample.MainPage">
+             x:Class="TimePickerSample.MainPage">
     <ContentPage.Content>
-        <syncfusion:SfDatePicker x:Name="datepicker" >
-            <syncfusion:SfDatePicker.FooterView >
+        <syncfusion:SfTimePicker x:Name="TimePicker" >
+            <syncfusion:SfTimePicker.FooterView >
                 <syncfusion:PickerFooterView Background="Orange">
                 </syncfusion:PickerFooterView>
-            </syncfusion:SfDatePicker.FooterView>
-        </syncfusion.SfDatePicker>
+            </syncfusion:SfTimePicker.FooterView>
+        </syncfusion.SfTimePicker>
     </ContentPage.Content>
 </ContentPage>
 
@@ -798,20 +798,20 @@ Background colors of the OK and Cancel buttons can be customized by setting the 
 
 using Syncfusion.Maui.Picker;
 
-namespace DatePickerSample
+namespace TimePickerSample
 {
     public partial class MainPage : ContentPage
     {
         public MainPage()
         {
             InitializeComponent();
-            SfDatePicker datePicker = new SfDatePicker;
-            datepicker.FooterView = new PickerFooterView()
+            SfTimePicker timePicker = new SfTimePicker;
+            timePicker.FooterView = new PickerFooterView()
             {
                 Background = Colors.Violet,
             };
 
-            this.Content = datePicker;
+            this.Content = timePicker;
         }
     }
 }
@@ -822,7 +822,7 @@ namespace DatePickerSample
 
 #### Text-Color 
 
-Text colors of the OK and Cancel buttons can be customized by setting the [`SfDatePicker.FooterView`]() properties.
+Text colors of the OK and Cancel buttons can be customized by setting the [`SfTimePicker.FooterView`]() properties.
 
 {% tabs %}
 
@@ -831,19 +831,19 @@ Text colors of the OK and Cancel buttons can be customized by setting the [`SfDa
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:DatePickerSample"
+             xmlns:local="clr-namespace:TimePickerSample"
              xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker"
-             x:Class="DatePickerSample.MainPage">
+             x:Class="TimePickerSample.MainPage">
     <ContentPage.Content>
-        <syncfusion:SfDatePicker x:Name="datepicker" >
-            <syncfusion:SfDatePicker.FooterView >
+        <syncfusion:SfTimePicker x:Name="TimePicker" >
+            <syncfusion:SfTimePicker.FooterView >
                 <syncfusion:PickerFooterView >
                     <syncfusion:PickerFooterView.TextStyle >
                         <syncfusion:PickerTextStyle TextColor="Violet"/>
                     </syncfusion:PickerFooterView.TextStyle>
                 </syncfusion:PickerFooterView>
-            </syncfusion:SfDatePicker.FooterView>
-        </syncfusion.SfDatePicker>
+            </syncfusion:SfTimePicker.FooterView>
+        </syncfusion.SfTimePicker>
     </ContentPage.Content>
 </ContentPage>
 
@@ -853,15 +853,15 @@ Text colors of the OK and Cancel buttons can be customized by setting the [`SfDa
 
 using Syncfusion.Maui.Picker;
 
-namespace DatePickerSample
+namespace TimePickerSample
 {
     public partial class MainPage : ContentPage
     {
         public MainPage()
         {
             InitializeComponent();
-            SfDatePicker datePicker = new SfDatePicker();
-            datepicker.FooterView = new PickerFooterView()
+            SfTimePicker timePicker = new SfTimePicker();
+            timePicker.FooterView = new PickerFooterView()
             {
                 TextStyle = new PickerTextStyle()
                 {
@@ -869,7 +869,7 @@ namespace DatePickerSample
                 }
             };
 
-            this.Content = datePicker;
+            this.Content = timePicker;
         }
     }
 }
@@ -884,7 +884,7 @@ This section explains the Font customization of footer text.
 
 #### FontFamily
 
-FontFamily of the footer text can be customized by setting the [`SfDatePicker.FooterView`]() property.
+FontFamily of the footer text can be customized by setting the [`SfTimePicker.FooterView`]() property.
 
 {% tabs %}
 
@@ -893,19 +893,19 @@ FontFamily of the footer text can be customized by setting the [`SfDatePicker.Fo
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:DatePickerSample"
+             xmlns:local="clr-namespace:TimePickerSample"
              xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker"
-             x:Class="DatePickerSample.MainPage">
+             x:Class="TimePickerSample.MainPage">
     <ContentPage.Content>
-        <syncfusion:SfDatePicker x:Name="datepicker" >
-            <syncfusion:SfDatePicker.FooterView >
+        <syncfusion:SfTimePicker x:Name="TimePicker" >
+            <syncfusion:SfTimePicker.FooterView >
                 <syncfusion:PickerFooterView >
                     <syncfusion:PickerFooterView.TextStyle >
                         <syncfusion:PickerTextStyle FontFamily="Times New Roman"/>
                     </syncfusion:PickerFooterView.TextStyle>
                 </syncfusion:PickerFooterView>
-            </syncfusion:SfDatePicker.FooterView>
-        </syncfusion.SfDatePicker>
+            </syncfusion:SfTimePicker.FooterView>
+        </syncfusion.SfTimePicker>
     </ContentPage.Content>
 </ContentPage>
 
@@ -915,15 +915,15 @@ FontFamily of the footer text can be customized by setting the [`SfDatePicker.Fo
 
 using Syncfusion.Maui.Picker;
 
-namespace DatePickerSample
+namespace TimePickerSample
 {
     public partial class MainPage : ContentPage
     {
         public MainPage()
         {
             InitializeComponent();
-            SfDatePicker datePicker = new SfDatePicker();
-            datepicker.FooterView = new PickerFooterView()
+            SfTimePicker timePicker = new SfTimePicker();
+            timePicker.FooterView = new PickerFooterView()
             {
                 TextStyle = new PickerTextStyle()
                 {
@@ -931,7 +931,7 @@ namespace DatePickerSample
                 }
             };
 
-            this.Content = datePicker;
+            this.Content = timePicker;
         }
     }
 }
@@ -942,7 +942,7 @@ namespace DatePickerSample
 
 #### FontSize
 
-FontSize of the footer text can be customized by setting the [`SfDatePicker.FooterView`]() property.
+FontSize of the footer text can be customized by setting the [`SfTimePicker.FooterView`]() property.
 
 {% tabs %}
 
@@ -951,19 +951,19 @@ FontSize of the footer text can be customized by setting the [`SfDatePicker.Foot
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:DatePickerSample"
+             xmlns:local="clr-namespace:TimePickerSample"
              xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker"
-             x:Class="DatePickerSample.MainPage">
+             x:Class="TimePickerSample.MainPage">
     <ContentPage.Content>
-        <syncfusion:SfDatePicker x:Name="datepicker" >
-            <syncfusion:SfDatePicker.FooterView >
+        <syncfusion:SfTimePicker x:Name="TimePicker" >
+            <syncfusion:SfTimePicker.FooterView >
                 <syncfusion:PickerFooterView >
                     <syncfusion:PickerFooterView.TextStyle >
                         <syncfusion:PickerTextStyle FontSize="12"/>
                     </syncfusion:PickerFooterView.TextStyle>
                 </syncfusion:PickerFooterView>
-            </syncfusion:SfDatePicker.FooterView>
-        </syncfusion.SfDatePicker>
+            </syncfusion:SfTimePicker.FooterView>
+        </syncfusion.SfTimePicker>
     </ContentPage.Content>
 </ContentPage>
 
@@ -973,15 +973,15 @@ FontSize of the footer text can be customized by setting the [`SfDatePicker.Foot
 
 using Syncfusion.Maui.Picker;
 
-namespace DatePickerSample
+namespace TimePickerSample
 {
     public partial class MainPage : ContentPage
     {
         public MainPage()
         {
             InitializeComponent();
-            SfDatePicker datePicker = new SfDatePicker();
-            datepicker.FooterView = new PickerFooterView()
+            SfTimePicker timePicker = new SfTimePicker();
+            timePicker.FooterView = new PickerFooterView()
             {
                 TextStyle = new PickerTextStyle()
                 {
@@ -989,7 +989,7 @@ namespace DatePickerSample
                 }
             };
 
-            this.Content = datePicker;
+            this.Content = timePicker;
         }
     }
 }
@@ -1000,7 +1000,7 @@ namespace DatePickerSample
 
 #### FontAttribute
 
-FontAttribute of the footer text can be customized by setting the [`SfDatePicker.FooterView`]() property.
+FontAttribute of the footer text can be customized by setting the [`SfTimePicker.FooterView`]() property.
 
 {% tabs %}
 
@@ -1009,19 +1009,19 @@ FontAttribute of the footer text can be customized by setting the [`SfDatePicker
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:DatePickerSample"
+             xmlns:local="clr-namespace:TimePickerSample"
              xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker"
-             x:Class="DatePickerSample.MainPage">
+             x:Class="TimePickerSample.MainPage">
     <ContentPage.Content>
-        <syncfusion:SfDatePicker x:Name="datepicker" >
-            <syncfusion:SfDatePicker.FooterView >
+        <syncfusion:SfTimePicker x:Name="TimePicker" >
+            <syncfusion:SfTimePicker.FooterView >
                 <syncfusion:PickerFooterView >
                     <syncfusion:PickerFooterView.TextStyle >
                         <syncfusion:PickerTextStyle FontAttributes="Italic"/>
                     </syncfusion:PickerFooterView.TextStyle>
                 </syncfusion:PickerFooterView>
-            </syncfusion:SfDatePicker.FooterView>
-        </syncfusion.SfDatePicker>
+            </syncfusion:SfTimePicker.FooterView>
+        </syncfusion.SfTimePicker>
     </ContentPage.Content>
 </ContentPage>
 
@@ -1031,15 +1031,15 @@ FontAttribute of the footer text can be customized by setting the [`SfDatePicker
 
 using Syncfusion.Maui.Picker;
 
-namespace DatePickerSample
+namespace TimePickerSample
 {
     public partial class MainPage : ContentPage
     {
         public MainPage()
         {
             InitializeComponent();
-            SfDatePicker datePicker = new SfDatePicker();
-            datepicker.FooterView = new PickerFooterView()
+            SfTimePicker timePicker = new SfTimePicker();
+            timePicker.FooterView = new PickerFooterView()
             {
                 TextStyle = new PickerTextStyle()
                 {
@@ -1047,7 +1047,7 @@ namespace DatePickerSample
                 }
             };
 
-            this.Content = datePicker;
+            this.Content = timePicker;
         }
     }
 }
@@ -1058,11 +1058,11 @@ namespace DatePickerSample
 
 ## Selected item customization
 
-[`SfDatePicker`]() allows customizing the SelectedItem's background, text color, and fonts.
+[`SfTimePicker`]() allows customizing the SelectedItem's background, text color, and fonts.
 
 ### Corner Radius
 
-The corner radius of the SelectedItem can be customized by setting the [`SfDatePicker.SelectionView`]() property.
+The corner radius of the SelectedItem can be customized by setting the [`SfTimePicker.SelectionView`]() property.
 
 {% tabs %}
 
@@ -1071,16 +1071,16 @@ The corner radius of the SelectedItem can be customized by setting the [`SfDateP
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:DatePickerSample"
+             xmlns:local="clr-namespace:TimePickerSample"
              xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker"
-             x:Class="DatePickerSample.MainPage">
+             x:Class="TimePickerSample.MainPage">
     <ContentPage.Content>
-        <syncfusion:SfDatePicker x:Name="datepicker" >
-            <syncfusion:SfDatePicker.SelectionView >
+        <syncfusion:SfTimePicker x:Name="TimePicker" >
+            <syncfusion:SfTimePicker.SelectionView >
                 <syncfusion:PickerSelectionView CornerRadius="5">
                 </syncfusion:PickerSelectionView>
-            </syncfusion:SfDatePicker.SelectionView>
-        </syncfusion.SfDatePicker>
+            </syncfusion:SfTimePicker.SelectionView>
+        </syncfusion.SfTimePicker>
     </ContentPage.Content>
 </ContentPage>
 
@@ -1090,20 +1090,20 @@ The corner radius of the SelectedItem can be customized by setting the [`SfDateP
 
 using Syncfusion.Maui.Picker;
 
-namespace DatePickerSample
+namespace TimePickerSample
 {
     public partial class MainPage : ContentPage
     {
         public MainPage()
         {
             InitializeComponent();
-            SfDatePicker datePicker = new SfDatePicker;
-            datepicker.SelectionView = new PickerSelectionView()
+            SfTimePicker timePicker = new SfTimePicker();
+            timePicker.SelectionView = new PickerSelectionView()
             {
                 CornerRadius = 5,
             };
 
-            this.Content = datePicker;
+            this.Content = timePicker;
         }
     }
 }
@@ -1114,7 +1114,7 @@ namespace DatePickerSample
 
 ### Padding
 
-The padding of the SelectedItem can be customized by setting the [`SfDatePicker.SelectionView`]() property.
+The padding of the SelectedItem can be customized by setting the [`SfTimePicker.SelectionView`]() property.
 
 {% tabs %}
 
@@ -1123,16 +1123,16 @@ The padding of the SelectedItem can be customized by setting the [`SfDatePicker.
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:DatePickerSample"
+             xmlns:local="clr-namespace:TimePickerSample"
              xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker"
-             x:Class="DatePickerSample.MainPage">
+             x:Class="TimePickerSample.MainPage">
     <ContentPage.Content>
-        <syncfusion:SfDatePicker x:Name="datepicker" >
-            <syncfusion:SfDatePicker.SelectionView >
+        <syncfusion:SfTimePicker x:Name="TimePicker" >
+            <syncfusion:SfTimePicker.SelectionView >
                 <syncfusion:PickerSelectionView Padding="5, 10, 5, 10">
                 </syncfusion:PickerSelectionView>
-            </syncfusion:SfDatePicker.SelectionView>
-        </syncfusion.SfDatePicker>
+            </syncfusion:SfTimePicker.SelectionView>
+        </syncfusion.SfTimePicker>
     </ContentPage.Content>
 </ContentPage>
 
@@ -1142,20 +1142,20 @@ The padding of the SelectedItem can be customized by setting the [`SfDatePicker.
 
 using Syncfusion.Maui.Picker;
 
-namespace DatePickerSample
+namespace TimePickerSample
 {
     public partial class MainPage : ContentPage
     {
         public MainPage()
         {
             InitializeComponent();
-            SfDatePicker datePicker = new SfDatePicker;
-            datepicker.SelectionView = new PickerSelectionView()
+            SfTimePicker timePicker = new SfTimePicker();
+            timePicker.SelectionView = new PickerSelectionView()
             {
                 Padding = new Thickness(5, 10, 5, 10),
             };
 
-            this.Content = datePicker;
+            this.Content = timePicker;
         }
     }
 }
@@ -1166,7 +1166,7 @@ namespace DatePickerSample
 
 ### Background
 
-The background color of the SelectedItem can be customized by setting the [`SfDatePicker.SelectionView`]() property.
+The background color of the SelectedItem can be customized by setting the [`SfTimePicker.SelectionView`]() property.
 
 {% tabs %}
 
@@ -1175,16 +1175,16 @@ The background color of the SelectedItem can be customized by setting the [`SfDa
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:DatePickerSample"
+             xmlns:local="clr-namespace:TimePickerSample"
              xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker"
-             x:Class="DatePickerSample.MainPage">
+             x:Class="TimePickerSample.MainPage">
     <ContentPage.Content>
-        <syncfusion:SfDatePicker x:Name="datepicker" >
-            <syncfusion:SfDatePicker.SelectionView >
+        <syncfusion:SfTimePicker x:Name="TimePicker" >
+            <syncfusion:SfTimePicker.SelectionView >
                 <syncfusion:PickerSelectionView Background="Orange">
                 </syncfusion:PickerSelectionView>
-            </syncfusion:SfDatePicker.SelectionView>
-        </syncfusion.SfDatePicker>
+            </syncfusion:SfTimePicker.SelectionView>
+        </syncfusion.SfTimePicker>
     </ContentPage.Content>
 </ContentPage>
 
@@ -1194,20 +1194,20 @@ The background color of the SelectedItem can be customized by setting the [`SfDa
 
 using Syncfusion.Maui.Picker;
 
-namespace DatePickerSample
+namespace TimePickerSample
 {
     public partial class MainPage : ContentPage
     {
         public MainPage()
         {
             InitializeComponent();
-            SfDatePicker datePicker = new SfDatePicker;
-            datepicker.SelectionView = new PickerSelectionView()
+            SfTimePicker timePicker = new SfTimePicker();
+            timePicker.SelectionView = new PickerSelectionView()
             {
                 Background = Colors.Violet,
             };
 
-            this.Content = datePicker;
+            this.Content = timePicker;
         }
     }
 }
@@ -1218,7 +1218,7 @@ namespace DatePickerSample
 
 ### Stroke color 
 
-Stroke color of the SelectedItem can be customized by setting the [`SfDatePicker.SelectionView`]() property.
+Stroke color of the SelectedItem can be customized by setting the [`SfTimePicker.SelectionView`]() property.
 
 {% tabs %}
 
@@ -1227,16 +1227,16 @@ Stroke color of the SelectedItem can be customized by setting the [`SfDatePicker
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:DatePickerSample"
+             xmlns:local="clr-namespace:TimePickerSample"
              xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker"
-             x:Class="DatePickerSample.MainPage">
+             x:Class="TimePickerSample.MainPage">
     <ContentPage.Content>
-        <syncfusion:SfDatePicker x:Name="datepicker" >
-            <syncfusion:SfDatePicker.SelectionView >
+        <syncfusion:SfTimePicker x:Name="TimePicker" >
+            <syncfusion:SfTimePicker.SelectionView >
                 <syncfusion:PickerSelectionView StrokeColor="Violet"/>
                 </syncfusion:PickerSelectionView>
-            </syncfusion:SfDatePicker.SelectionView>
-        </syncfusion.SfDatePicker>
+            </syncfusion:SfTimePicker.SelectionView>
+        </syncfusion.SfTimePicker>
     </ContentPage.Content>
 </ContentPage>
 
@@ -1246,20 +1246,20 @@ Stroke color of the SelectedItem can be customized by setting the [`SfDatePicker
 
 using Syncfusion.Maui.Picker;
 
-namespace DatePickerSample
+namespace TimePickerSample
 {
     public partial class MainPage : ContentPage
     {
         public MainPage()
         {
             InitializeComponent();
-            SfDatePicker datePicker = new SfDatePicker();
-            datepicker.SelectionView = new PickerSelectionView()
+            SfTimePicker timePicker = new SfTimePicker();
+            timePicker.SelectionView = new PickerSelectionView()
             {
                 StrokeColor = Colors.Violet,
             };
 
-            this.Content = datePicker;
+            this.Content = timePicker;
         }
     }
 }
