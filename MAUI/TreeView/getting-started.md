@@ -252,33 +252,34 @@ public class FileManagerViewModel
    private void GenerateSource()
    {
       var nodeImageInfo = new ObservableCollection<FileManager>();
-      var doc = new FileManager() { ItemName = "Documents", ImageIcon = ImageSource.FromResource("GettingStarted.Resources.Images.Icons.folder.png") };
-      var download = new FileManager() { ItemName = "Downloads", ImageIcon = ImageSource.FromResource("GettingStarted.Resources.Images.Icons.folder.png") };
-      var mp3 = new FileManager() { ItemName = "Music", ImageIcon = ImageSource.FromResource("GettingStarted.Resources.Images.Icons.folder.png") };
-      var pictures = new FileManager() { ItemName = "Pictures", ImageIcon = ImageSource.FromResource("GettingStarted.Resources.Images.Icons.folder.png") };
-      var video = new FileManager() { ItemName = "Videos", ImageIcon = ImageSource.FromResource("GettingStarted.Resources.Images.Icons.folder.png") };
+       var doc = new FileManager() { ItemName = "Documents", ImageIcon = "folder.png" };
+            var download = new FileManager() { ItemName = "Downloads", ImageIcon = "folder.png" };
+            var mp3 = new FileManager() { ItemName = "Music", ImageIcon ="folder.png" };
+            var pictures = new FileManager() { ItemName = "Pictures", ImageIcon = "folder.png" };
+            var video = new FileManager() { ItemName = "Videos", ImageIcon ="folder.png" };
 
-      var pollution = new FileManager() { ItemName = "Environmental Pollution.docx", ImageIcon = ImageSource.FromResource("GettingStarted.Resources.Images.Icons.Word.png")};
-      var globalWarming = new FileManager() { ItemName = "Global Warming.ppt", ImageIcon = ImageSource.FromResource("GettingStarted.Resources.Icons.ppt.png") };
-      var sanitation = new FileManager() { ItemName = "Sanitation.docx", ImageIcon = ImageSource.FromResource("GettingStarted.Resources.Images.Icons.Word.png") };
-      var socialNetwork = new FileManager() { ItemName = "Social Network.pdf", ImageIcon = ImageSource.FromResource("GettingStarted.Resources.Icons.pdfimage.png") };
-      var youthEmpower = new FileManager() { ItemName = "Youth Empowerment.pdf", ImageIcon = ImageSource.FromResource("GettingStarted.Resources.Icons.pdfimage.png") };
+            var pollution = new FileManager() { ItemName = "Environmental Pollution.docx", ImageIcon = "word.png" };
+            var globalWarming = new FileManager() { ItemName = "Global Warming.ppt", ImageIcon = "ppt.png" };
+            var sanitation = new FileManager() { ItemName = "Sanitation.docx", ImageIcon = "word.png"};
+            var socialNetwork = new FileManager() { ItemName = "Social Network.pdf", ImageIcon ="pdfimage.png" };
+            var youthEmpower = new FileManager() { ItemName = "Youth Empowerment.pdf", ImageIcon = "pdfimage.png" };
 
-      var tutorials = new FileManager() { ItemName = "Tutorials.zip", ImageIcon = ImageSource.FromResource("GettingStarted.Resources.Icons.zip.png") };
-      var TypeScript = new FileManager() { ItemName = "TypeScript.7z", ImageIcon = ImageSource.FromResource("GettingStarted.Resources.Icons.zip.png") };
-      var uiGuide = new FileManager() { ItemName = "UI-Guide.pdf", ImageIcon = ImageSource.FromResource("GettingStarted.Resources.Icons.pdfimage.png") };
+           
+            var tutorials = new FileManager() { ItemName = "Tutorials.zip", ImageIcon = "zip.png" };
+            var typeScript = new FileManager() { ItemName = "TypeScript.7z", ImageIcon ="zip.png" };
+            var uiGuide = new FileManager() { ItemName = "UI-Guide.pdf", ImageIcon = "pdfimage.png"};
 
-      var song = new FileManager() { ItemName = "Gouttes", ImageIcon = ImageSource.FromResource("GettingStarted.Resources.Icons.Audio.png") };
+            var song = new FileManager() { ItemName = "Gouttes", ImageIcon = "audio.png" };
 
-      var camera = new FileManager() { ItemName = "Camera Roll", ImageIcon = ImageSource.FromResource("GettingStarted.Resources.Icons.folder.png") };
-      var stone = new FileManager() { ItemName = "Stone.jpg", ImageIcon = ImageSource.FromResource("GettingStarted.Resources.Images.Icons.Image.png") };
-      var wind = new FileManager() { ItemName = "Wind.jpg", ImageIcon = ImageSource.FromResource("GettingStarted.Resources.Images.Icons.Image.png") };
+            var camera = new FileManager() { ItemName = "Camera Roll", ImageIcon = "folder.png" };
+            var stone = new FileManager() { ItemName = "Stone.jpg", ImageIcon = "image.png" };
+            var wind = new FileManager() { ItemName = "Wind.jpg", ImageIcon = "image.png"};
 
-      var img0 = new FileManager() { ItemName = "WIN_20160726_094117.JPG", ImageIcon = ImageSource.FromResource("GettingStarted.Resources.Images.Icons.people_circle23.png") };
-      var img1 = new FileManager() { ItemName = "WIN_20160726_094118.JPG", ImageIcon = ImageSource.FromResource("GettingStarted.Resources.Images.Icons.people_circle23.png") };
+            var img0 = new FileManager() { ItemName = "WIN_20160726_094117.JPG", ImageIcon = "people_circle23.png" };
+            var img1 = new FileManager() { ItemName = "WIN_20160726_094118.JPG", ImageIcon = "people_circle2.png" };
 
-      var video1 = new FileManager() { ItemName = "Naturals.mp4", ImageIcon = ImageSource.FromResource("GettingStarted.Resources.Icons.video.png") };
-      var video2 = new FileManager() { ItemName = "Wild.mpg", ImageIcon = ImageSource.FromResource("GettingStarted.Resources.Icons.video.png") };
+            var video1 = new FileManager() { ItemName = "Naturals.mp4", ImageIcon = "video.png" };
+            var video2 = new FileManager() { ItemName = "Wild.mpeg", ImageIcon = "video.png" };
 
       doc.SubFiles = new ObservableCollection<FileManager>
       {
@@ -538,33 +539,34 @@ public class FileManagerViewModel
     {
         var nodeImageInfo = new ObservableCollection<Folder>();
 
-      var doc = new FileManager() { ItemName = "Documents", ImageIcon = ImageSource.FromResource("GettingStarted.Resources.Images.Icons.folder.png") };
-      var download = new FileManager() { ItemName = "Downloads", ImageIcon = ImageSource.FromResource("GettingStarted.Resources.Images.Icons.folder.png") };
-      var mp3 = new FileManager() { ItemName = "Music", ImageIcon = ImageSource.FromResource("GettingStarted.Resources.Images.Icons.folder.png") };
-      var pictures = new FileManager() { ItemName = "Pictures", ImageIcon = ImageSource.FromResource("GettingStarted.Resources.Images.Icons.folder.png") };
-      var video = new FileManager() { ItemName = "Videos", ImageIcon = ImageSource.FromResource("GettingStarted.Resources.Images.Icons.folder.png") };
+       var doc = new FileManager() { ItemName = "Documents", ImageIcon = "folder.png" };
+            var download = new FileManager() { ItemName = "Downloads", ImageIcon = "folder.png" };
+            var mp3 = new FileManager() { ItemName = "Music", ImageIcon ="folder.png" };
+            var pictures = new FileManager() { ItemName = "Pictures", ImageIcon = "folder.png" };
+            var video = new FileManager() { ItemName = "Videos", ImageIcon ="folder.png" };
 
-      var pollution = new FileManager() { ItemName = "Environmental Pollution.docx", ImageIcon = ImageSource.FromResource("GettingStarted.Resources.Images.Icons.Word.png")};
-      var globalWarming = new FileManager() { ItemName = "Global Warming.ppt", ImageIcon = ImageSource.FromResource("GettingStarted.Resources.Icons.ppt.png") };
-      var sanitation = new FileManager() { ItemName = "Sanitation.docx", ImageIcon = ImageSource.FromResource("GettingStarted.Resources.Images.Icons.Word.png") };
-      var socialNetwork = new FileManager() { ItemName = "Social Network.pdf", ImageIcon = ImageSource.FromResource("GettingStarted.Resources.Icons.pdfimage.png") };
-      var youthEmpower = new FileManager() { ItemName = "Youth Empowerment.pdf", ImageIcon = ImageSource.FromResource("GettingStarted.Resources.Icons.pdfimage.png") };
+            var pollution = new FileManager() { ItemName = "Environmental Pollution.docx", ImageIcon = "word.png" };
+            var globalWarming = new FileManager() { ItemName = "Global Warming.ppt", ImageIcon = "ppt.png" };
+            var sanitation = new FileManager() { ItemName = "Sanitation.docx", ImageIcon = "word.png"};
+            var socialNetwork = new FileManager() { ItemName = "Social Network.pdf", ImageIcon ="pdfimage.png" };
+            var youthEmpower = new FileManager() { ItemName = "Youth Empowerment.pdf", ImageIcon = "pdfimage.png" };
 
-      var tutorials = new FileManager() { ItemName = "Tutorials.zip", ImageIcon = ImageSource.FromResource("GettingStarted.Resources.Icons.zip.png") };
-      var TypeScript = new FileManager() { ItemName = "TypeScript.7z", ImageIcon = ImageSource.FromResource("GettingStarted.Resources.Icons.zip.png") };
-      var uiGuide = new FileManager() { ItemName = "UI-Guide.pdf", ImageIcon = ImageSource.FromResource("GettingStarted.Resources.Icons.pdfimage.png") };
+           
+            var tutorials = new FileManager() { ItemName = "Tutorials.zip", ImageIcon = "zip.png" };
+            var typeScript = new FileManager() { ItemName = "TypeScript.7z", ImageIcon ="zip.png" };
+            var uiGuide = new FileManager() { ItemName = "UI-Guide.pdf", ImageIcon = "pdfimage.png"};
 
-      var song = new FileManager() { ItemName = "Gouttes", ImageIcon = ImageSource.FromResource("GettingStarted.Resources.Icons.Audio.png") };
+            var song = new FileManager() { ItemName = "Gouttes", ImageIcon = "audio.png" };
 
-      var camera = new FileManager() { ItemName = "Camera Roll", ImageIcon = ImageSource.FromResource("GettingStarted.Resources.Icons.folder.png") };
-      var stone = new FileManager() { ItemName = "Stone.jpg", ImageIcon = ImageSource.FromResource("GettingStarted.Resources.Images.Icons.Image.png") };
-      var wind = new FileManager() { ItemName = "Wind.jpg", ImageIcon = ImageSource.FromResource("GettingStarted.Resources.Images.Icons.Image.png") };
+            var camera = new FileManager() { ItemName = "Camera Roll", ImageIcon = "folder.png" };
+            var stone = new FileManager() { ItemName = "Stone.jpg", ImageIcon = "image.png" };
+            var wind = new FileManager() { ItemName = "Wind.jpg", ImageIcon = "image.png"};
 
-      var img0 = new FileManager() { ItemName = "WIN_20160726_094117.JPG", ImageIcon = ImageSource.FromResource("GettingStarted.Resources.Images.Icons.people_circle23.png") };
-      var img1 = new FileManager() { ItemName = "WIN_20160726_094118.JPG", ImageIcon = ImageSource.FromResource("GettingStarted.Resources.Images.Icons.people_circle23.png") };
+            var img0 = new FileManager() { ItemName = "WIN_20160726_094117.JPG", ImageIcon = "people_circle23.png" };
+            var img1 = new FileManager() { ItemName = "WIN_20160726_094118.JPG", ImageIcon = "people_circle2.png" };
 
-      var video1 = new FileManager() { ItemName = "Naturals.mp4", ImageIcon = ImageSource.FromResource("GettingStarted.Resources.Icons.video.png") };
-      var video2 = new FileManager() { ItemName = "Wild.mpg", ImageIcon = ImageSource.FromResource("GettingStarted.Resources.Icons.video.png") };
+            var video1 = new FileManager() { ItemName = "Naturals.mp4", ImageIcon = "video.png" };
+            var video2 = new FileManager() { ItemName = "Wild.mpeg", ImageIcon = "video.png" };
 
         doc.Files = new ObservableCollection<File>
         {
@@ -667,7 +669,7 @@ this.Content=treeView;
 
 ## Defining a template to expander and content view
 
-By defining the ExpanderTemplate and ItemTemplate properties, a custom user interface (UI) can be created to display the data items for both expander and content view. It is applicable for both Unbound mode and Bound mode data items.
+By defining the ExpanderTemplate and ItemTemplate properties, a custom user interface (UI) can be created to display the data items for both expander and content view. It is applicable for both the Unbound and Bound mode data items.
 
 N> By default, the binding context for each tree view item will be the data model object for Bound Mode and `TreeViewNode` for Unbound Mode. However, you can change the binding context for tree view items in Bound Mode as  `TreeViewNode` by defining the  `ItemTemplateContextType` enumeration to `Node`, which is applicable for both `ExpanderTemplate` and `ItemTemplate` properties.
 
