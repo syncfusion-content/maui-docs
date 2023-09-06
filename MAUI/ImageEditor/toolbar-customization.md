@@ -35,15 +35,9 @@ You can get or set the names of built-in toolbar and dynamically added toolbar i
 
 {% endhighlight %}
 
-N> The following built-in toolbar item names are available in image editor: `Browse`, `Separator`, `Undo`, `Redo`, `ZoomOut`, `ZoomIn`, `Reset`, `Save`, `SaveEdit`, `Crop`, `Shape`, `Text`, `Pen`, `Effects`, `Rotate`, `FlipHorizontal`, `FlipVertical`, `StrokeThickness`, `Circle`, `Arrow`, `Transform`, `Crop`, `free`, `original`, `square`, `3:1`, `3:2`, `4:3`, `5:4`, `16:9`, `Rotate`, `Flip`, `Reset`, `Undo`, `Redo`, `Save`, `Effects`, `Hue`, `Saturation`, `Brightness`, `Contrast`, `Blur` and `Sharpen`.
+N> The following built-in toolbar item names are available in image editor: `Browse`, `Undo`, `Redo`, `ZoomOut`, `ZoomIn`, `Reset`, `Save`, `SaveEdit`, `Crop`, `Shape`, `Text`, `Pen`, `Effects`, `Rotate`, `FlipHorizontal`, `FlipVertical`, `custom`, `original`, `ellipse`, `circle`, `square`, `3:1`, `3:2`, `4:3`, `5:4`, `7:5`, `16:9`, `Rectangle`, `Circle`, `Arrow`, `Line`, `Dotted`, `DoubleArrow`, `DottedArrow`, `DottedDoubleArrow`, `ShapeStrokeThickness`, `ShapeStrokeColor`, `ShapeFill`, `ShapeStroke`, `AddText`, `StrokeThickness`, `Delete`, `FontFamily`, `TextAlignment`, `FontAttributes`, `TextColor`, `Start`, `Center`, `End`, `DefaultText`, `Handlee`, `Pinyon Script`, `Kaushan Script`, `Boogaloo`, `Bold`, `Italic`, `Color`, `ShapeStrokeOpacity`, `PenStrokeOpacity`, `TextColorOpacity`, `PenStrokeThickness`, `PenStrokeColor`, `Back`, `Blur`, `Contrast`, `Sharpen`, `Brightness`, `Saturation`, `Hue`, `Opacity`,  and `Exposure`.
 
 N> You cannot modify the names of existing built-in toolbar items and cannot create toolbar item with these list.
-
-The toolbar menu contains a set of header and footer menu items that help to perform editing actions. This can be categorized into the following types:
-
-1. HeaderToolbarItem
-2. FooterToolbarItem
-3. SubItems
 
 ## Adding Toolbar Items to the Header Toolbar
 
@@ -109,6 +103,8 @@ editor.ToolbarSettings.ToolbarItems[3].Icon = ImageSource.FromResource("ImageEdi
 ## ToolbarItemSelected event 
 
 Whenever you tap the toolbar menu item, the `ToolbarItemSelected` event will be triggered, and you can get the respective tapped toolbar item as an argument as shown in the following code snippet. 
+
+Default toolbar item action can be restricted by setting `e.cancel` to `true`.
 
 {% tabs %}
 
@@ -312,11 +308,11 @@ imageEditor.ToolbarSettings.Background = Colors.Pink;
 
 {% endtabs %}
 
-## Toolbar Orientation and Position
+## Toolbar Orientation
 
-You can control the orientation and position of your toolbars as needed. 
+You can easily manage the orientation of your toolbars to achieve the desired layout. Adjusting the orientation, you can customize the way your toolbar elements are arranged within your application.
 
-For example, you can set the header toolbar to a vertical orientation and the footer toolbar to start at a specific position:
+For example, you can set the header toolbar to a vertical orientation:
 
 {% tabs %}
 
@@ -326,6 +322,21 @@ SfImageEditor imageEditor = new SfImageEditor();
 imageEditor.Source = ImageSource.FromFile("image4.png");
 var headerToolbar = imageEditor.Toolbars[0];
 headerToolbar.Orientaion = ToolbarOrientation.Vertical;
+    
+{% endhighlight %}
+
+{% endtabs %}
+
+## Toolbar Position
+
+You can easily adjust the position of your toolbar, ensuring it aligns precisely where you want it to be displayed in your application's layout. 
+
+{% tabs %}
+
+{% highlight C# %}
+
+SfImageEditor imageEditor = new SfImageEditor();
+imageEditor.Source = ImageSource.FromFile("image4.png");
 var footerToolbar = imageEditor.Toolbars[1];
 footerToolbar.Position = ToolbarPosition.Start;
     
