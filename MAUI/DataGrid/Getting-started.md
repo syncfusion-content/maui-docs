@@ -53,7 +53,7 @@ public partial class MainPage : ContentPage
 To use this control inside an application, you must initialize the `SfDataGrid` handler.
 
 {% tabs %}
-{% highlight c# tabtitle="MauiProgram.cs" hl_lines="4 5 21 22" %}
+{% highlight c# tabtitle="MauiProgram.cs" hl_lines="4 20" %}
 
 using Microsoft.Maui.Controls.Hosting;
 using Microsoft.Maui.Controls.Xaml;
@@ -205,6 +205,16 @@ The following code example binds the collection created in the previous step to 
     <ContentPage.Content>
         <syncfusion:SfDataGrid x:Name="dataGrid"
                                ItemsSource="{Binding OrderInfoCollection}">
+        <syncfusion:SfDataGrid.Columns>
+            <syncfusion:DataGridNumericColumn HeaderText="Order ID" Format="0"
+                                            MappingName="OrderID" Width="150"/>
+            <syncfusion:DataGridTextColumn  HeaderText="Customer ID"
+                                            MappingName="CustomerID"
+                                            Width="150" />
+            <syncfusion:DataGridTextColumn  HeaderText="Ship Country"
+                                            MappingName="ShipCountry"
+                                            Width="150" />
+        </syncfusion:SfDataGrid.Columns>
         </syncfusion:SfDataGrid>
     </ContentPage.Content>
 </ContentPage>
@@ -273,7 +283,8 @@ In the SfDataGrid, sorting can be done on its data by setting the [SfDataGrid.So
 {% tabs %}
 {% highlight xaml %}
 <syncfusion:SfDataGrid x:Name="dataGrid"
-                           ItemsSource="{Binding OrderInfoCollection}" SortingMode="Single" />
+                       ItemsSource="{Binding OrderInfoCollection}"
+                       SortingMode="Single" />
 {% endhighlight %}
 {% highlight c# %}
 dataGrid.SortingMode=DataGridSortingMode.Single; 
@@ -348,3 +359,5 @@ public MainPage()
 {% endtabs %}
 
 N> Set `HorizontalOptions` and `VerticalOptions` to grid accordingly. When the `SfDataGrid` doesn't obtain finite size from its parent to layout in the View, the predefined `MinimumHeightRequest` and `MinimumWidthRequest`, which is 300, will be acquired.
+
+N> You can refer to our [.NET MAUI DataGrid](https://www.syncfusion.com/maui-controls/maui-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI DataGrid Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/DataGrid) that shows you how to render the DataGrid in .NET MAUI.
