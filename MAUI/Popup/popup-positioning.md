@@ -276,7 +276,7 @@ public class ViewModel : INotifyPropertyChanged
 
 ### Returning result
 
-The `SfPopup` allows display the popup with returning result using `ShowAsync()`. Returns `true` if user close the popup using accept button, Otherwise returns `false`.
+The `ShowAsync()` method of the Popup allows you to display the popup and returns `true` if the user closes it using the accept button, or `false` otherwise.
 
 {% tabs %}
 {% highlight xaml %}
@@ -315,7 +315,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-The `SfPopup` allows display the popup with returning result using static method `SfPopup.Show(string title, string message, string acceptText, string declineText)`. Returns `true` if user close the popup using accept button, Otherwise returns `false`.
+The `Show(string title, string message, string acceptText, string declineText)` static method of the Popup allows you to display the popup and returns `true` if the user closes it using the accept button, or `false` otherwise.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
