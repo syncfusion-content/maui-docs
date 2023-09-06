@@ -11,28 +11,29 @@ documentation: ug
 
 ## Animation Modes
 
-Built-in animations are available in SfPopup, which is applied when the PopupView opens and closes in the screen.
+Built-in animations are available in SfPopup, which is applied when the Popup view opens and closes in the screen. By default, the animation mode is set to `Fade`
 The SfPopup has different animation modes as listed below:
 
-* `Zoom`
-* `Fade`
-* `SlideOnLeft`
-* `SlideOnRight`
-* `SlideOnTop`
-* `SlideOnBottom`
-* `None`
+* Zoom
+* Fade
+* SlideOnLeft
+* SlideOnRight
+* SlideOnTop
+* SlideOnBottom
+* None
 
 N> Setting of the AnimationMode is same for both `Displaying popup when the SfPopup is set as root view` and `Displaying popup on the go`. 
 
 ### Zoom 
 
-Zoom-out animation will be applied when the PopupView opens and Zoom-in animation will be applied when the PopupView closes.
+Zoom-out animation will be applied when the Popup view opens and Zoom-in animation will be applied when the Popup view closes.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<sfPopup:SfPopup x:Name="popup" AnimationMode="Zoom" />
+<sfPopup:SfPopup x:Name="popup" 
+                 AnimationMode="Zoom" />
 
 {% endhighlight %}
 
@@ -48,17 +49,18 @@ public MainPage()
 
 {% endtabs %}
 
-![Popup with zoom animation](Images/popup-animation//zoom-animation.gif)
+![.NET MAUI Popup with zoom animation](Images/popup-animation//zoom-animation.gif)
 
 ### Fade 
 
-Fade-out animation will be applied when the PopupView opens and Fade-in animation will be applied when the PopupView closes.
+Fade-out animation will be applied when the Popup view opens and Fade-in animation will be applied when the Popup view closes.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<sfPopup:SfPopup x:Name="popup" AnimationMode="Fade" />
+<sfPopup:SfPopup x:Name="popup"
+                 AnimationMode="Fade" />
 
 {% endhighlight %}
 
@@ -74,17 +76,18 @@ public MainPage()
 
 {% endtabs %}
 
-![Popup with fade animation](Images/popup-animation//fade-animation.gif)
+![.NET MAUI Popup with fade animation](Images/popup-animation//fade-animation.gif)
 
 ### SlideOnLeft 
 
-PopupView will be animated from left-to-right when it opens and from right-to-left when it closes.
+Popup view will be animated from left-to-right when it opens and from right-to-left when it closes.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<sfPopup:SfPopup x:Name="popup" AnimationMode="SlideOnLeft" />
+<sfPopup:SfPopup x:Name="popup"
+                 AnimationMode="SlideOnLeft" />
 
 {% endhighlight %}
 
@@ -100,17 +103,18 @@ public MainPage()
 
 {% endtabs %}
 
-![Popup with slide on left animation](Images/popup-animation//slideonleft-animation.gif)
+![.NET MAUI Popup with slide on left animation](Images/popup-animation//slideonleft-animation.gif)
 
 ### SlideOnRight
 
-PopupView will be animated from right-to-left when it opens and from left-to-right when it closes.
+Popup view will be animated from right-to-left when it opens and from left-to-right when it closes.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<sfPopup:SfPopup x:Name="popup" AnimationMode="SlideOnRight" />
+<sfPopup:SfPopup x:Name="popup"
+                 AnimationMode="SlideOnRight" />
 
 {% endhighlight %}
 
@@ -126,17 +130,18 @@ public MainPage()
 
 {% endtabs %}
 
-![Popup with slide on right animation](Images/popup-animation//slideonright-animation.gif)
+![.NET MAUI Popup with slide on right animation](Images/popup-animation//slideonright-animation.gif)
 
 ### SlideOnTop 
 
-PopupView will be animated from top-to-bottom when it opens and from bottom-to-top when it closes.
+Popup view will be animated from top-to-bottom when it opens and from bottom-to-top when it closes.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<sfPopup:SfPopup x:Name="popup" AnimationMode="SlideOnTop" />
+<sfPopup:SfPopup x:Name="popup"
+                 AnimationMode="SlideOnTop" />
 
 {% endhighlight %}
 
@@ -153,17 +158,18 @@ public MainPage()
 {% endtabs %}
 
 
-![Popup with slide on top animation](Images/popup-animation//slideontop-animation.gif)
+![.NET MAUI Popup with slide on top animation](Images/popup-animation//slideontop-animation.gif)
 
 ### SlideOnBottom
 
-PopupView will be animated from bottom-to-top when it opens and from top-to-bottom when it closes.
+Popup view will be animated from bottom-to-top when it opens and from top-to-bottom when it closes.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<sfPopup:SfPopup x:Name="popup" AnimationMode="SlideOnBottom" />
+<sfPopup:SfPopup x:Name="popup"
+                 AnimationMode="SlideOnBottom" />
 
 {% endhighlight %}
 
@@ -179,7 +185,7 @@ public MainPage()
 
 {% endtabs %}
 
-![Popup with slide on bottom animation](Images/popup-animation//slideonbottom-animation.gif)
+![.NET MAUI Popup with slide on bottom animation](Images/popup-animation//slideonbottom-animation.gif)
 
 ### None
 
@@ -189,7 +195,8 @@ Animation will not be applied.
 
 {% highlight xaml %}
 
-<sfPopup:SfPopup x:Name="popup" AnimationMode="None" />
+<sfPopup:SfPopup x:Name="popup"
+                 AnimationMode="None" />
 
 {% endhighlight %}
 
@@ -205,6 +212,50 @@ public MainPage()
 
 {% endtabs %}
 
-## Animation Easing Effects
+## Animation duration
 
-The `SfPopup` allows to show the `PopupView` with various easing effects for all the available `SfPopup.AnimationMode` using the `SfPopup.AnimationEasing` property .
+The `SfPopup` allows you to customize the opening and closing animation duration of Popup view by using the `AnimationDuration` property. By default, the animation duration is set to `300 milliseconds`. 
+
+{% tabs %}
+{% highlight xaml}
+
+<sfPopup:SfPopup x:Name="popup"
+                 AnimationDuration="150" />
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+public MainPage()
+{
+    InitializeComponent();
+    popup.AnimationDuration = 150;
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+## Animation easing
+
+The `SfPopup` allows to show the Popup view with various easing effects for all the available `SfPopup.AnimationMode` using the `SfPopup.AnimationEasing` property.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<sfPopup:SfPopup x:Name="popup"
+                 AnimationEasing="SinIn" />
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+public MainPage()
+{
+    InitializeComponent();
+    popup.AnimationEasing = PopupAnimationEasing.SinIn;
+}
+
+{% endhighlight %}
+
+{% endtabs %}
