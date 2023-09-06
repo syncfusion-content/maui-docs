@@ -40,10 +40,10 @@ Following are the list of options available to show SfPopup at various positions
 <td>Similar as <code>SfPopup.IsFullScreen</code> property.</td></tr>
 <tr>
 <td><code>SfPopup.Show(string title, string message)</code></td>
-<td>Static method to show popup with title and message.</td></tr>
+<td>Static method to show a popup with the title and message.</td></tr>
 <tr>
 <td><code>SfPopup.Show(string title, string message, string acceptText)</code></td>
-<td>Static method to show popup with title, message and acceptText.</td></tr>
+<td>Static method to show a popup with the title, message and acceptText.</td></tr>
 </table>
 
 ## Center positioning
