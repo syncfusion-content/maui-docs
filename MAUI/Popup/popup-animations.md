@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Popup Animations in .NET MAUI Popup control | Syncfusion
-description: Learn here all about Popup Animations support in Syncfusion .NET MAUI Popup (SfPopup) control and more.
+title: Popup Animations in .NET MAUI Popup Control | Syncfusion
+description: Learn here all about Popup Animations support in the Syncfusion .NET MAUI Popup (SfPopup) control and more.
 platform: MAUI
 control: SfPopup
 documentation: ug
@@ -22,7 +22,7 @@ The SfPopup has different animation modes as listed below:
 * `SlideOnBottom`
 * `None`
 
-N> Setting of AnimationMode is same for both `Displaying popup when the SfPopup is set as root view` and `Displaying popup on the go`. 
+N> Setting of the AnimationMode is same for both `Displaying popup when the SfPopup is set as root view` and `Displaying popup on the go`. 
 
 ### Zoom 
 
@@ -38,14 +38,10 @@ Zoom-out animation will be applied when the PopupView opens and Zoom-in animatio
 
 {% highlight c# %}
 
-//MainPage.cs
-
 public MainPage()
 {
-    ....
     InitializeComponent();
     popup.AnimationMode = AnimationMode.Zoom;
-    ....
 }
 
 {% endhighlight %}
@@ -68,14 +64,10 @@ Fade-out animation will be applied when the PopupView opens and Fade-in animatio
 
 {% highlight c# %}
 
-//MainPage.cs
-
 public MainPage()
 {
-    ....
     InitializeComponent();
     popup.AnimationMode = AnimationMode.Fade;
-    ....
 }
 
 {% endhighlight %}
@@ -98,14 +90,10 @@ PopupView will be animated from left-to-right when it opens and from right-to-le
 
 {% highlight c# %}
 
-//MainPage.cs
-
 public MainPage()
 {
-    ....
     InitializeComponent();
     popup.AnimationMode = AnimationMode.SlideOnLeft;
-    ....
 }
 
 {% endhighlight %}
@@ -128,14 +116,10 @@ PopupView will be animated from right-to-left when it opens and from left-to-rig
 
 {% highlight c# %}
 
-//MainPage.cs
-
 public MainPage()
 {
-    ....
     InitializeComponent();
     popup.AnimationMode = AnimationMode.SlideOnRight;
-    ....
 }
 
 {% endhighlight %}
@@ -158,14 +142,10 @@ PopupView will be animated from top-to-bottom when it opens and from bottom-to-t
 
 {% highlight c# %}
 
-//MainPage.cs
-
 public MainPage()
 {
-    ....
     InitializeComponent();
     popup.AnimationMode = AnimationMode.SlideOnTop;
-    ....
 }
 
 {% endhighlight %}
@@ -189,14 +169,10 @@ PopupView will be animated from bottom-to-top when it opens and from top-to-bott
 
 {% highlight c# %}
 
-//MainPage.cs
-
 public MainPage()
 {
-    ....
     InitializeComponent();
     popup.AnimationMode = AnimationMode.SlideOnBottom;
-    ....
 }
 
 {% endhighlight %}
@@ -219,14 +195,10 @@ Animation will not be applied.
 
 {% highlight c# %}
 
-//MainPage.cs
-
 public MainPage()
 {
-    ....
     InitializeComponent();
     popup.AnimationMode = AnimationMode.None;
-    ....
 }
 
 {% endhighlight %}
@@ -235,4 +207,4 @@ public MainPage()
 
 ## Animation Easing Effects
 
-The `SfPopup` allows to show the `PopupView` with various easing effects for all available `SfPopup.AnimationMode` using the `SfPopup.AnimationEasing` property .
+The `SfPopup` allows to show the `PopupView` with various easing effects for all the available `SfPopup.AnimationMode` using the `SfPopup.AnimationEasing` property .
