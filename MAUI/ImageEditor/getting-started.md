@@ -87,7 +87,7 @@ namespace GettingStarted
 
 The [Source](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_Source) property is used to load images from different sources:
 
-N> Image formats such as JPEG and PNG can be loaded to the image editor.
+N> Image formats such as JPEG, PNG and BMP can be loaded to the image editor.
 
 ### Loading a local file
 

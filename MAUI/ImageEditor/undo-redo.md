@@ -62,3 +62,6 @@ The [`Redo`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfI
 
 {% endhighlight %}
 {% endtabs %}
+
+N> Performing any new action after using the `Undo` function will clear the `Redo` history. This means that if you've undone several actions and then start adding something new, you won't be able to use `Redo` to bring back the actions you previously undid.
+
