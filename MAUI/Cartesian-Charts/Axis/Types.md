@@ -530,6 +530,10 @@ chart.YAxes.Add(new LogarithmicAxis( ) { LogarithmicBase = 5 });
 
 ![LogarithmicAxis base customization in MAUI Chart](Axis_Images/maui_chart_logarithmic_axis_base.jpg)
 
+To customize the [ChartAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html) in .NET MAUI Cartesian Charts, you can check the below video.
+
+{% youtube "https://www.youtube.com/watch?v=IGLyuQS18iQ" %}
+
 ## Inversed
 
 Axis can be inverted by using the [IsInversed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_IsInversed) property. The default value of this property is `False`.
