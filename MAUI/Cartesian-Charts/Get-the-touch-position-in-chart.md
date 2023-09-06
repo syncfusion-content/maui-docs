@@ -17,6 +17,23 @@ ChartInteractiveBehavior provides the following override methods to get the x an
 
 {% tabs %}
 
+{% highlight xaml %}
+
+    <chart:SfCartesianChart>
+        .........
+
+        <chart:SfCartesianChart.InteractiveBehavior>
+                <local:ChartInteractiveExt></local:ChartInteractiveExt>
+        </chart:SfCartesianChart.InteractiveBehavior>
+
+    </chart:SfCartesianChart>
+
+{% endhighlight %}
+
+{% endtabs %}
+
+{% tabs %}
+
 {% highlight c# %}
 
     public class ChartInteractiveExt: ChartInteractiveBehavior
