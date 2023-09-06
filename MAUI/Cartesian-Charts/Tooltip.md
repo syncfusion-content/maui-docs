@@ -252,22 +252,13 @@ The [Show]() method is used to activate the tooltip at the specified location.
 
 {% highlight c# %}
 
-    public partial class MainPage : ContentPage
-    {
-
-        public MainPage()
-        {
-            InitializeComponent();
-        }
-
         private void Button_Clicked(object sender, EventArgs e)
         {
             //pointX - determines the x position of tooltip, pointY - determines the y position of tooltip and bool value determines whether the tooltip should be animated while displaying.
-            tooltip.Show(pointX,pointY,true);
+            
+            tooltip.Show(pointX, pointY, true);
         }
-    }
-
-        
+   
 {% endhighlight %}
 
 {% endtabs %}
@@ -284,7 +275,7 @@ The [Hide]() method is used to hide the tooltip programmatically.
 
         //The argument determines whether the tooltip should be animated while hiding.
 
-        tooltip.Hide(true);
+        tooltip.Hide();
 
 {% endhighlight %}
 
