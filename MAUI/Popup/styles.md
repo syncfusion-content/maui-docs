@@ -281,7 +281,7 @@ public partial class MainPage : ContentPage
 
 ## popup background
 
-The `SfPopup` allows to customize the background color of popup view using the `PopupBackground` property.
+The `SfPopup` allows to customize the background color of the popup view using the `PopupBackground` property.
 
 {% tabs %}
 {% highlight xaml hl_lines="3" %}
@@ -305,7 +305,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![Displaying a .NET MAUI Popup with PopupView Background](Images/styles/maui-popup-with-popupview-background.png)
+![Displaying a .NET MAUI Popup with the PopupView Background](Images/styles/maui-popup-with-popupview-background.png)
 
 ## Styling overlay background
 
