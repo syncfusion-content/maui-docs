@@ -224,6 +224,8 @@ public partial class MainPage : ContentPage
 
 ![GettingStarted in .NET Maui ImageEditor](images\getting-started\imageeditor-gettingstarted.png)
 
+N> If we set the Stream source with a local variable, the stream will be closed after it is used by the image, and we cannot process the stream again. So we recommend using stream images using the Lamba function so that we can process them whenever needed.
+
 ## Show or hide toolbar
 
 To show or hide the toolbar, set the [`ShowToolbar`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_ShowToolbar) property to either true or false. By default, the [`ShowToolbar`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_ShowToolbar) property is set to `true`.
@@ -259,3 +261,39 @@ public partial class MainPage : ContentPage
 {% endtabs %}
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-image-editor-examples/tree/master/GettingStarted)
+
+## Get the image stream
+The `GetImageStream` method used to return the image in the form of a stream.
+
+{% tabs %}
+{% highlight C#  %}
+
+using Syncfusion.Maui.ImageEditor;
+namespace SyncfusionImageEditor;
+
+public partial class MainPage : ContentPage
+{
+    SfImageEditor imageEditor = new SfImageEditor();
+	public MainPage()
+	{
+        InitializeComponent();
+        Grid grid = new Grid();
+        Button getStream = new Button();
+        getStream.Text = "Get Stream";
+        getStream.WidthRequest = 200;
+        getStream.BackgroundColor = Colors.Blue;
+        getStream.Clicked += GetStream_Clicked; ;
+        grid.RowDefinitions.Add(new RowDefinition { Height = 350}); 
+        grid.RowDefinitions.Add(new RowDefinition { Height = GridLength.Auto});
+        grid.Add(editor,0,0);
+        grid.Add(getStream, 0,1);
+        this.Content = grid;
+    }
+
+    private void GetStream_Clicked(object sender, EventArgs e)
+    {
+        editor.GetImageStream();
+    }
+}
+{% endhighlight %}
+{% endtabs %}
