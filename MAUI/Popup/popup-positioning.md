@@ -348,8 +348,6 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![Displaying a .NET MAUI Popup asynchronously](Images/popup-positioning/show-popup-asynchronously-using-static-method.png)
-
 ### Load the SfPopup in CellTappedEvent of the SfDataGrid
 
 The `SfPopup` allows opening it in the [CellTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CellTapped) event of the `SfDataGrid`.
