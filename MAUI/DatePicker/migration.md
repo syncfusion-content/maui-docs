@@ -101,7 +101,22 @@ this.Content = datePicker;
 <tr>
 <td>{{'[Nill]'| markdownify }}</td>
 <td>{{'[DatePickerColumnHeaderView]()'| markdownify }}</td>
-<td>Represents a column header view used to achieve date picker header custom view.</td>
+<td>Represents a column header view used to achieve date picker column header custom view.</td>
+</tr>
+<tr>
+<td>{{'[Nill]'| markdownify }}</td>
+<td>{{'[PickerHeaderView]()'| markdownify }}</td>
+<td>Represents a header view used to achieve date picker header custom view.</td>
+</tr>
+<tr>
+<td>{{'[Nill]'| markdownify }}</td>
+<td>{{'[PickerFooterView]()'| markdownify }}</td>
+<td>Represents a footer view used to achieve date picker footer custom view.</td>
+</tr>
+<tr>
+<td>{{'[Nill]'| markdownify }}</td>
+<td>{{'[PickerSelectionView]()'| markdownify }}</td>
+<td>Represents a selection view used to achieve date picker selection custom view.</td>
 </tr>
 <tr>
 <td>{{'[DateChangedEventArgs](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.DateChangedEventArgs.html)' | markdownify }}</td>
@@ -453,6 +468,96 @@ datePicker.Format = PickerDateFormat.MM_dd_yyyy;
 <td>Nil</td>
 <td>{{'[ColumnDividerColor]()'| markdownify }}</td>
 <td>Gets or sets the divider color of the columns.</td>
+</tr>
+</table>
+
+## DatePicker Column Header View
+
+<table>
+<tr>
+<th>Xamarin SfDatePicker</th>
+<th>.NET MAUI SfDatePicker</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>Nil</td>
+<td>{{'[DividerColor]()'| markdownify }}</td>
+<td>Defines the divider color for the column header.</td>
+</tr>
+</table>
+
+## Picker Header View
+
+<table>
+<tr>
+<th>Xamarin SfDatePicker</th>
+<th>.NET MAUI SfDatePicker</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>Nil</td>
+<td>{{'[Text]()'| markdownify }}</td>
+<td>Defines the text for the header.</td>
+</tr>
+<tr>
+<td>Nil</td>
+<td>{{'[DividerColor]()'| markdownify }}</td>
+<td>Defines the divider color for the column header.</td>
+</tr>
+</table>
+
+## Picker Footer View
+
+<table>
+<tr>
+<th>Xamarin SfDatePicker</th>
+<th>.NET MAUI SfDatePicker</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>Nil</td>
+<td>{{'[DividerColor]()'| markdownify }}</td>
+<td>Defines the divider color for the footer.</td>
+</tr>
+<tr>
+<td>Nil</td>
+<td>{{'[OkButtonText]()'| markdownify }}</td>
+<td>Defines the ok button text of the footer.</td>
+</tr>
+<tr>
+<td>Nil</td>
+<td>{{'[CancelButtonText]()'| markdownify }}</td>
+<td>Defines the cancel button text for the footer.</td>
+</tr>
+<tr>
+<td>Nil</td>
+<td>{{'[ShowOkButton]()'| markdownify }}</td>
+<td>Defines the show ok button for the footer.</td>
+</tr>
+</table>
+
+## Picker Selection View
+
+<table>
+<tr>
+<th>Xamarin SfDatePicker</th>
+<th>.NET MAUI SfDatePicker</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>Nil</td>
+<td>{{'[Stroke]()'| markdownify }}</td>
+<td>Defines the stroke color for the selection.</td>
+</tr>
+<tr>
+<td>Nil</td>
+<td>{{'[CornerRadius]()'| markdownify }}</td>
+<td>Defines the corner radius of the selection.</td>
+</tr>
+<tr>
+<td>Nil</td>
+<td>{{'[Padding]()'| markdownify }}</td>
+<td>Defines the padding for the selection.</td>
 </tr>
 </table>
 

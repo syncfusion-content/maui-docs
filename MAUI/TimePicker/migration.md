@@ -104,6 +104,21 @@ this.Content = timePicker;
 <td>Represents a column header view used to achieve time picker header custom view.</td>
 </tr>
 <tr>
+<td>{{'[Nill]'| markdownify }}</td>
+<td>{{'[PickerHeaderView]()'| markdownify }}</td>
+<td>Represents a header view used to achieve time picker header custom view.</td>
+</tr>
+<tr>
+<td>{{'[Nill]'| markdownify }}</td>
+<td>{{'[PickerFooterView]()'| markdownify }}</td>
+<td>Represents a footer view used to achieve time picker footer custom view.</td>
+</tr>
+<tr>
+<td>{{'[Nill]'| markdownify }}</td>
+<td>{{'[PickerSelectionView]()'| markdownify }}</td>
+<td>Represents a selection view used to achieve time picker selection custom view.</td>
+</tr>
+<tr>
 <td>{{'[TimeChangedEventArgs](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.TimeChangedEventArgs.html)' | markdownify }}</td>
 <td>{{'[TimePickerSelectionChangedEventArgs]()' | markdownify }}</td>
 <td>Represents a class which is used to hold the selection changed event details.</td>
@@ -448,6 +463,96 @@ timePicker.Format = PickerTimeFormat.h_mm_ss_tt;
 <td>Nil</td>
 <td>{{'[ColumnDividerColor]()'| markdownify }}</td>
 <td>Gets or sets the divider color of the columns.</td>
+</tr>
+</table>
+
+## TimePicker Column Header View
+
+<table>
+<tr>
+<th>Xamarin SfTimePicker</th>
+<th>.NET MAUI SfTimePicker</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>Nil</td>
+<td>{{'[DividerColor]()'| markdownify }}</td>
+<td>Defines the divider color for the column header.</td>
+</tr>
+</table>
+
+## Picker Header View
+
+<table>
+<tr>
+<th>Xamarin SfTimePicker</th>
+<th>.NET MAUI SfTimePicker</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>Nil</td>
+<td>{{'[Text]()'| markdownify }}</td>
+<td>Defines the text for the header.</td>
+</tr>
+<tr>
+<td>Nil</td>
+<td>{{'[DividerColor]()'| markdownify }}</td>
+<td>Defines the divider color for the column header.</td>
+</tr>
+</table>
+
+## Picker Footer View
+
+<table>
+<tr>
+<th>Xamarin SfTimePicker</th>
+<th>.NET MAUI SfTimePicker</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>Nil</td>
+<td>{{'[DividerColor]()'| markdownify }}</td>
+<td>Defines the divider color for the footer.</td>
+</tr>
+<tr>
+<td>Nil</td>
+<td>{{'[OkButtonText]()'| markdownify }}</td>
+<td>Defines the ok button text of the footer.</td>
+</tr>
+<tr>
+<td>Nil</td>
+<td>{{'[CancelButtonText]()'| markdownify }}</td>
+<td>Defines the cancel button text for the footer.</td>
+</tr>
+<tr>
+<td>Nil</td>
+<td>{{'[ShowOkButton]()'| markdownify }}</td>
+<td>Defines the show ok button for the footer.</td>
+</tr>
+</table>
+
+## Picker Selection View
+
+<table>
+<tr>
+<th>Xamarin SfTimePicker</th>
+<th>.NET MAUI SfTimePicker</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>Nil</td>
+<td>{{'[Stroke]()'| markdownify }}</td>
+<td>Defines the stroke color for the selection.</td>
+</tr>
+<tr>
+<td>Nil</td>
+<td>{{'[CornerRadius]()'| markdownify }}</td>
+<td>Defines the corner radius of the selection.</td>
+</tr>
+<tr>
+<td>Nil</td>
+<td>{{'[Padding]()'| markdownify }}</td>
+<td>Defines the padding for the selection.</td>
 </tr>
 </table>
 
