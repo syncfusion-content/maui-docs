@@ -17,19 +17,19 @@ To customize the appearance of the toolbar by using the `ToolbarSettings` proper
 
 * `Background`: Specifies background color of the toolbar.
 * `IconColor`: Specifies the color of the icons in the toolbar.
-* `IconSize`: Specifies the size of the icons in the toolbar. The default value is 44.
+* `IconSize`: Specifies the size of the icons in the toolbar. The default value is 48.
 * `DisabledColor`: Specifies the color of the disabled icons in the toolbar.
 
 {% tabs %}
 
 {% highlight XAML %}
   
-<imageEditor:SfImageEditor Source="table.png">
+<imageEditor:SfImageEditor Source="image.png">
     <imageEditor:SfImageEditor.ToolbarSettings>
         <imageEditor:ImageEditorToolbarSettings Background="LightGreen"
                                                 IconColor="Tomato"
                                                 DisabledColor="Lavender"
-                                                IconSize="50" />
+                                                IconSize="50, 50" />
     </imageEditor:SfImageEditor.ToolbarSettings>
 </imageEditor:SfImageEditor>
       
@@ -38,7 +38,7 @@ To customize the appearance of the toolbar by using the `ToolbarSettings` proper
 {% highlight C# %}
 
 SfImageEditor imageEditor = new SfImageEditor();
-imageEditor.Source = ImageSource.FromFile("image4.png");
+imageEditor.Source = ImageSource.FromFile("image.png");
 imageEditor.ToolbarSettings.Background = Brush.LightGreen;
 imageEditor.ToolbarSettings.IconColor = Colors.Tomato;
 imageEditor.ToolbarSettings.DisabledColor = Colors.Lavender;
@@ -50,17 +50,17 @@ imageEditor.ToolbarSettings.IconSize = new Size(50, 50);
 
 ## Toolbar Orientation
 
-To customize the layout of toolbars to achieve the desired design by using the `Orientation` property in the `ImageEditorToolbar` class. The default value is `ToolbarOrientation.Horizontal`.
+The toolbar orientation can be changed to achieve the desired design by using the `Orientation` property in the `ImageEditorToolbar` class. The default value is `ToolbarOrientation.Horizontal`.
 
-For example, you can set the header toolbar to a vertical orientation:
+For example, you can set the toolbar to a vertical orientation:
 
 {% tabs %}
 
 {% highlight C# %}
 
 SfImageEditor imageEditor = new SfImageEditor();
-imageEditor.Source = ImageSource.FromFile("image4.png");
-var headerToolbar = imageEditor.Toolbars[0];
+imageEditor.Source = ImageSource.FromFile("image.png");
+ImageEditorToolbar headerToolbar = imageEditor.Toolbars[0];
 headerToolbar.Orientaion = ToolbarOrientation.Vertical;
     
 {% endhighlight %}
@@ -76,8 +76,8 @@ To adjust the alignment of the toolbar by using the `Position` property in the `
 {% highlight C# %}
 
 SfImageEditor imageEditor = new SfImageEditor();
-imageEditor.Source = ImageSource.FromFile("image4.png");
-var footerToolbar = imageEditor.Toolbars[1];
+imageEditor.Source = ImageSource.FromFile("image.png");
+ImageEditorToolbar footerToolbar = imageEditor.Toolbars[1];
 footerToolbar.Position = ToolbarPosition.Start;
     
 {% endhighlight %}
@@ -86,14 +86,14 @@ footerToolbar.Position = ToolbarPosition.Start;
 
 ### Toolbar size customization
 
-The size of the toolbar items will be adjusted according to the specified dimension by using `Size`property in the `ImageEditorToolbar` class.
+The size of the toolbar can be adjusted by using the `Size` property in the `ImageEditorToolbar` class.
 
 For horizontal orientation, the size will be considered as width, and for vertical orientation, it will be considered as height.
 
 {% highlight C# %}
 
     SfImageEditor imageEditor = new SfImageEditor();
-    imageEditor.Source = ImageSource.FromFile("image4.png");
+    imageEditor.Source = ImageSource.FromFile("image.png");
     imageEditor.Toolbars[0].Size = 80;
     imageEditor.Toolbars[1].Size = 50;
 
@@ -107,9 +107,9 @@ Customize a crop types using `CropTypes` property in `ImageEditorToolbarSettings
 
 {% highlight XAML %}
   
-<imageEditor:SfImageEditor Source="table.png">
+<imageEditor:SfImageEditor Source="image.png">
     <imageEditor:SfImageEditor.ToolbarSettings>
-        <imageEditor:ImageEditorToolbarSettings CropTypes="Circle,Square,Free" />
+        <imageEditor:ImageEditorToolbarSettings CropTypes="Circle, Square, Free" />
     </imageEditor:SfImageEditor.ToolbarSettings>
 </imageEditor:SfImageEditor>
 
@@ -119,8 +119,8 @@ Customize a crop types using `CropTypes` property in `ImageEditorToolbarSettings
 {% highlight C# %}
 
 SfImageEditor imageEditor = new SfImageEditor();
-imageEditor.Source = ImageSource.FromFile("image4.png");
-imageEditor.ToolbarSettings.CropTypes = ImageCropType.Square;
+imageEditor.Source = ImageSource.FromFile("image.png");
+imageEditor.ToolbarSettings.CropTypes = ImageCropType.Circle | ImageCropType.Square | ImageCropType.Free;
 
 {% endhighlight %}
 
@@ -134,9 +134,9 @@ Customize a effect types using `EffectTypes` property in `ImageEditorToolbarSett
 
 {% highlight XAML %}
   
-<imageEditor:SfImageEditor Source="table.png">
+<imageEditor:SfImageEditor Source="image.png">
     <imageEditor:SfImageEditor.ToolbarSettings>
-        <imageEditor:ImageEditorToolbarSettings EffectTypes="Hue, Blur" />
+        <imageEditor:ImageEditorToolbarSettings EffectTypes="Hue, Blur, Brightness" />
     </imageEditor:SfImageEditor.ToolbarSettings>
 </imageEditor:SfImageEditor>
       
@@ -145,8 +145,8 @@ Customize a effect types using `EffectTypes` property in `ImageEditorToolbarSett
 {% highlight C# %}
 
 SfImageEditor imageEditor = new SfImageEditor();
-imageEditor.Source = ImageSource.FromFile("image4.png");
-imageEditor.ToolbarSettings.EffectTypes = ImageEffect.Blur;
+imageEditor.Source = ImageSource.FromFile("image.png");
+imageEditor.ToolbarSettings.EffectTypes = ImageEffect.Hue | ImageEffect.Blur | ImageEffect.Brightness;
 
 {% endhighlight %}
 
@@ -154,15 +154,15 @@ imageEditor.ToolbarSettings.EffectTypes = ImageEffect.Blur;
 
 ## Customize default shape option
 
-Customize a shape types using `EffectTypes` property in `ImageEditorToolbarSettings` class.
+Customize a shape types using `Shapes` property in `ImageEditorToolbarSettings` class.
 
 {% tabs %}
 
 {% highlight XAML %}
   
-<imageEditor:SfImageEditor Source="table.png">
+<imageEditor:SfImageEditor Source="image.png">
     <imageEditor:SfImageEditor.ToolbarSettings>
-        <imageEditor:ImageEditorToolbarSettings Shapes="Circle, Line" />
+        <imageEditor:ImageEditorToolbarSettings Shapes="Circle, Line, DottedArrow, DoubleArrow" />
     </imageEditor:SfImageEditor.ToolbarSettings>
 </imageEditor:SfImageEditor>
 
@@ -171,8 +171,8 @@ Customize a shape types using `EffectTypes` property in `ImageEditorToolbarSetti
 {% highlight C# %}
 
 SfImageEditor imageEditor = new SfImageEditor();
-imageEditor.Source = ImageSource.FromFile("image4.png");
-imageEditor.ToolbarSettings.Shapes = AnnotationShape.Line;
+imageEditor.Source = ImageSource.FromFile("image.png");
+imageEditor.ToolbarSettings.Shapes = AnnotationShape.Circle | AnnotationShape.Line | AnnotationShape.DottedArrow | AnnotationShape.DoubleArrow;
 
 {% endhighlight %}
 
@@ -186,7 +186,7 @@ You can change the default colors of the `ColorPalette` in toolbar.
 
 {% highlight XAML %}
   
-<imageEditor:SfImageEditor Source="table.png">
+<imageEditor:SfImageEditor Source="image.png">
     <imageEditor:SfImageEditor.ToolbarSettings>
         <imageEditor:ImageEditorToolbarSettings>
             <imageEditor:ImageEditorToolbarSettings.ColorPalette>
@@ -203,7 +203,7 @@ You can change the default colors of the `ColorPalette` in toolbar.
 {% highlight C# %}
 
     SfImageEditor imageEditor = new SfImageEditor();
-    imageEditor.Source = ImageSource.FromFile("image4.png");
+    imageEditor.Source = ImageSource.FromFile("image.png");
     imageEditor.ToolbarSettings.ColorPalette.Add(Colors.Yellow);
     imageEditor.ToolbarSettings.ColorPalette.Add(Colors.Pink);
     imageEditor.ToolbarSettings.ColorPalette.Add(Colors.Violet);
@@ -211,6 +211,8 @@ You can change the default colors of the `ColorPalette` in toolbar.
 {% endhighlight %}
 
 {% endtabs %}
+
+N> Color palette colors are common for Text, Shape and Pen.
 
 ## Default Toolbar items
 
@@ -228,7 +230,7 @@ public MainPage()
 {			
     InitializeComponent();
     SfImageEditor imageEditor = new SfImageEditor();
-    imageEditor.Source = ImageSource.FromFile("image4.png");
+    imageEditor.Source = ImageSource.FromFile("image.png");
     string itemName = imageEditor.Toolbars[1].ToolbarItems[0].Name;
 }
 
@@ -238,20 +240,20 @@ N> The following built-in toolbar item names are available in image editor: `Bro
 
 N> You cannot modify the names of existing built-in toolbar items and cannot create toolbar item with these list.
 
-## To get an item from inbuilt top toolbar
+## Get an item from inbuilt top toolbar
 
 The `ImageEditorToolbarItem` is placed on the top of the image editor, and you can customize the header toolbar item using the `View` and `Name` properties:
 
 {% highlight C# %}
 
 SfImageEditor imageEditor = new SfImageEditor();
-imageEditor.Source = ImageSource.FromFile("image4.png");
+imageEditor.Source = ImageSource.FromFile("image.png");
 
 ImageEditorToolbar headerToolbar = imageEditor.Toolbars[0];
-IImageEditorToolbarItem browseGroup = headerToolbar.ToolbarItems[0];
-ImageEditorToolbarItem browseItem = ((ImageEditorToolbarGroupItem)browseGroup).Items.FirstOrDefault();
-IImageEditorToolbarItem saveGroup = headerToolbar.ToolbarItems[2];
-ImageEditorToolbarItem saveItem = ((ImageEditorToolbarGroupItem)saveGroup).Items.FirstOrDefault(i => i.Name == "Save");
+ImageEditorToolbarGroupItem browseGroup = (ImageEditorToolbarGroupItem) headerToolbar.ToolbarItems[0];
+ImageEditorToolbarItem browseItem = browseGroup.Items.FirstOrDefault();
+ImageEditorToolbarGroupItem saveGroup = (ImageEditorToolbarGroupItem) headerToolbar.ToolbarItems[2];
+ImageEditorToolbarItem saveItem = saveGroup.Items.FirstOrDefault(i => i.Name == "Save");
 
 {% endhighlight %}
 
@@ -264,9 +266,9 @@ Refer to the following code snippet to customize footer toolbar item.
 {% highlight C# %}
 
 SfImageEditor imageEditor = new SfImageEditor();
-imageEditor.Source = ImageSource.FromFile("image4.png");
-var footerToolbar = imageEditor.Toolbars[1];
-var textItems = footerToolbar.ToolbarItems.FirstOrDefault(i => i.Name == "Text");
+imageEditor.Source = ImageSource.FromFile("image.png");
+ImageEditorToolbar footerToolbar = imageEditor.Toolbars[1];
+ImageEditorToolbarItem textItem = (ImageEditorToolbarItem)footerToolbar.ToolbarItems.FirstOrDefault(i => i.Name == "Text");
 
 {% endhighlight %}
 
@@ -279,11 +281,11 @@ Refer to the following code snippet to customize sub items of footer toolbar ite
 {% highlight C# %}
 
 SfImageEditor imageEditor = new SfImageEditor();
-imageEditor.Source = ImageSource.FromFile("image4.png");
-var footerToolbar = imageEditor.Toolbars[1];
-var shapeItems = footerToolbar.ToolbarItems.FirstOrDefault(i => i.Name == "Shape");
-var shapeSubItems = ((ImageEditorToolbarItem)shapeItems).SubToolbars[0].ToolbarItems;
-var arrowItem = shapeSubItems.FirstOrDefault(i => i.Name == "Arrow");
+imageEditor.Source = ImageSource.FromFile("image.png");
+ImageEditorToolbar footerToolbar = imageEditor.Toolbars[1];
+ImageEditorToolbarItem shapeItem = (ImageEditorToolbarItem)footerToolbar.ToolbarItems.FirstOrDefault(i => i.Name == "Shape");
+ImageEditorToolbar subtoolbar = shapeItem.SubToolbars[0];
+ImageEditorToolbarItem arrowItem = (ImageEditorToolbarItem)subtoolbar.ToolbarItems.FirstOrDefault(i => i.Name == "Arrow");
 
 {% endhighlight %}
 
@@ -300,7 +302,7 @@ N> You can customize an icon by specifying its `Name`.
 {% highlight C# %}
 
         SfImageEditor imageEditor = new SfImageEditor();
-        imageEditor.Source = ImageSource.FromFile("image4.png");
+        imageEditor.Source = ImageSource.FromFile("image.png");
         imageEditor.SetToolbarItemVisibility("Shape", false);
 
 {% endhighlight %}
@@ -316,15 +318,15 @@ You can enable or disable the toolbar items by using `IsEnabled` property in `Im
 {% highlight C# %}
 
 SfImageEditor imageEditor = new SfImageEditor();
-imageEditor.Source = ImageSource.FromFile("image4.png");
+imageEditor.Source = ImageSource.FromFile("image.png");
 
 ImageEditorToolbar headerToolbar = imageEditor.Toolbars[0];
-IImageEditorToolbarItem browseGroup = headerToolbar.ToolbarItems[0];
-ImageEditorToolbarItem browseItem = ((ImageEditorToolbarGroupItem)browseGroup).Items.FirstOrDefault();
+ImageEditorToolbarGroupItem browseGroup = (ImageEditorToolbarGroupItem) headerToolbar.ToolbarItems[0];
+ImageEditorToolbarItem browseItem = browseGroup.Items.FirstOrDefault();
 browseItem.IsEnabled = false;
 
-IImageEditorToolbarItem saveGroup = headerToolbar.ToolbarItems[2];
-ImageEditorToolbarItem saveItem = ((ImageEditorToolbarGroupItem)saveGroup).Items.FirstOrDefault(i => i.Name == "Save");
+ImageEditorToolbarGroupItem saveGroup = (ImageEditorToolbarGroupItem) headerToolbar.ToolbarItems[2];
+ImageEditorToolbarItem saveItem = saveGroup.Items.FirstOrDefault(i => i.Name == "Save");
 saveItem.IsEnabled = false;
 
 {% endhighlight %}
@@ -340,15 +342,15 @@ To Customize the toolbar items view by specifying their icon names and setting t
 {% highlight C# %}
 
 Image image = new Image();
-image.Source = ImageSource.FromResource("SfListViewIssue.Resources.Images.editortable.jpg");
+image.Source = ImageSource.FromResource("MyProject.Resources.Images.zoom.jpg");
 
 SfImageEditor imageEditor = new SfImageEditor();
-imageEditor.Source = ImageSource.FromFile("image4.png");
+imageEditor.Source = ImageSource.FromFile("image.png");
 
 ImageEditorToolbar headerToolbar = imageEditor.Toolbars[0];
-IImageEditorToolbarItem saveGroup = headerToolbar.ToolbarItems[1];
-ImageEditorToolbarItem saveItem = ((ImageEditorToolbarGroupItem)saveGroup).Items.FirstOrDefault(i => i.Name == "ZoomIn");
-saveItem.View = image;
+ImageEditorToolbarGroupItem zoomGroup = (ImageEditorToolbarGroupItem)headerToolbar.ToolbarItems[1];
+ImageEditorToolbarItem zoomItem = (zoomGroup).Items.FirstOrDefault(i => i.Name == "ZoomIn");
+zoomItem.View = image;
 
 {% endhighlight %}
 
@@ -362,7 +364,7 @@ You can create `SubToolbars` within your toolbar items to organize related actio
 
 {% highlight XAML %}
 
-<imageEditor:SfImageEditor Source="table.png"
+<imageEditor:SfImageEditor Source="image.png"
                            AutoGenerateToolbarItems="False">
     <imageEditor:SfImageEditor.Toolbars>
         <imageEditor:ImageEditorToolbar Orientaion="Vertical"
@@ -391,9 +393,9 @@ You can create `SubToolbars` within your toolbar items to organize related actio
 {% highlight C# %}
 
 SfImageEditor imageEditor = new SfImageEditor();
-imageEditor.Source = ImageSource.FromFile("image4.png");
+imageEditor.Source = ImageSource.FromFile("image.png");
 imageEditor.AutoGenerateToolbarItems = false;
-var editorToolbar = new ImageEditorToolbar();
+ImageEditorToolbar editorToolbar = new ();
 editorToolbar.Orientaion = ToolbarOrientation.Vertical;
 editorToolbar.Position = ToolbarPosition.End;
 editorToolbar.ToolbarItems = new List<IImageEditorToolbarItem>()
@@ -430,7 +432,7 @@ Creating custom toolbars in SfImageEditor provides you with complete control ove
 
 {% highlight XAML %}
 
-<imageEditor:SfImageEditor Source="table.png">
+<imageEditor:SfImageEditor Source="image.png">
     <imageEditor:SfImageEditor.Toolbars>
         <imageEditor:ImageEditorToolbar>
             <imageEditor:ImageEditorToolbar.ToolbarItems>
@@ -453,14 +455,15 @@ Creating custom toolbars in SfImageEditor provides you with complete control ove
 {% highlight C# %}
 
 SfImageEditor imageEditor = new SfImageEditor();
-imageEditor.Source = ImageSource.FromFile("image4.png");
-var editorToolbar = new ImageEditorToolbar();
+imageEditor.Source = ImageSource.FromFile("image.png");
+ImageEditorToolbar editorToolbar = new ();
 editorToolbar.ToolbarItems = new List<IImageEditorToolbarItem>()
 {
     new ImageEditorToolbarItem(){ Name = "Browse"},
     new ImageEditorToolbarItem(){ Name = "Save"}
 };
-var editorToolbar1 = new ImageEditorToolbar();
+
+ImageEditorToolbar annotationToolbar = new ();
 editorToolbar1.ToolbarItems = new List<IImageEditorToolbarItem>()
 {
     new ImageEditorToolbarItem(){ Name = "Text"},
@@ -469,7 +472,7 @@ editorToolbar1.ToolbarItems = new List<IImageEditorToolbarItem>()
 };
 
 imageEditor.Toolbars.Add(editorToolbar);
-imageEditor.Toolbars.Add(editorToolbar1);
+imageEditor.Toolbars.Add(annotationToolbar);
     
 {% endhighlight %}
 
@@ -483,7 +486,7 @@ Grouping toolbar items allows you to organize actions efficiently. You can place
 
 {% highlight XAML %}
 
-<imageEditor:SfImageEditor Source="table.png"
+<imageEditor:SfImageEditor Source="image.png"
                            AutoGenerateToolbarItems="False">
     <imageEditor:SfImageEditor.Toolbars>
         <imageEditor:ImageEditorToolbar Position="End">
@@ -510,33 +513,33 @@ Grouping toolbar items allows you to organize actions efficiently. You can place
 {% highlight C# %}
 
 SfImageEditor imageEditor = new SfImageEditor();
-imageEditor.Source = ImageSource.FromFile("image4.png");
+imageEditor.Source = ImageSource.FromFile("image.png");
 imageEditor.AutoGenerateToolbarItems = false;
-var editorToolbar = new ImageEditorToolbar();
+ImageEditorToolbar editorToolbar = new ();
 editorToolbar.Position = ToolbarPosition.End;
 
-var groupItem = new ImageEditorToolbarGroupItem()
+ImageEditorToolbarGroupItem browseGroup = new ()
 {
     Alignment = ToolbarGroupItemAlignment.Start,
     Items = new List<ImageEditorToolbarItem>()
         {
             new ImageEditorToolbarItem(){ Name ="Browse"},
-            new ImageEditorToolbarItem(){ Name ="Save"  }
+            new ImageEditorToolbarItem(){ Name ="Reset"  }
         }
 };
 
-var groupItem1 = new ImageEditorToolbarGroupItem()
+ImageEditorToolbarGroupItem saveGroup = new ()
 {
     Alignment = ToolbarGroupItemAlignment.End,
     Items = new List<ImageEditorToolbarItem>()
         {
-            new ImageEditorToolbarItem(){ Name ="Reset"},
+            new ImageEditorToolbarItem(){ Name ="Save"},
             new ImageEditorToolbarItem(){ Name ="SaveEdit"}
         }
 };
 
-editorToolbar.ToolbarItems.Add(groupItem);
-editorToolbar.ToolbarItems.Add(groupItem1);
+editorToolbar.ToolbarItems.Add(browseGroup);
+editorToolbar.ToolbarItems.Add(saveGroup);
 imageEditor.Toolbars.Add(editorToolbar);
     
 {% endhighlight %}
