@@ -30,6 +30,18 @@ ChartInteractiveBehavior provides the following override methods to get the x an
 
 {% endhighlight %}
 
+{% highlight C# %}
+
+    SfCartesianChart chart = new SfCartesianChart();
+    .......
+    
+    ChartInteractiveExt interactiveExt = new ChartInteractiveExt();
+    chart.Behaviors.Add(interactiveExt);
+
+    Content = chart;
+
+{% endhighlight %}
+
 {% endtabs %}
 
 {% tabs %}
@@ -58,8 +70,3 @@ ChartInteractiveBehavior provides the following override methods to get the x an
 
 {% endtabs %}
 
-# See also
-
-[How to add data points on interactions in .NET MAUI Cartesian Chart]()
-
-[How to activate the trackball on touch in NET MAUI Cartesian Chart]()
