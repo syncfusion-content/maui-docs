@@ -97,7 +97,7 @@ this.dataGrid.IndentColumnWidth = 60;
 
 ### Customize indent column background color
 
-The indent columns can be customized by the writing style for DataGridIndentCell TargetType. 
+The indent columns can be customized by writing the implicit style for the [DataGridIndentCell](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridIndentCell.html). 
 
 The following code snippet shows how to apply a background color to the indent cell based on the column index:
 
