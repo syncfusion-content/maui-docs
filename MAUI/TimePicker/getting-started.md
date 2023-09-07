@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Getting started with MAUI TimePicker control | Syncfusion
-description: Learn here all about getting started with Syncfusion .NET MAUI TimePicker (SfTimePicker) control and its basic features.
+title: Getting started with .NET MAUI Time Picker control | Syncfusion
+description: Learn here all about getting started with Syncfusion .NET MAUI Time Picker (SfTimePicker) control and its basic features.
 platform: maui
 control: SfTimePicker
 documentation: ug
 ---
 
-# Getting started with .NET MAUI TimePicker (SfTimePicker)
-This section explains how to add the TimePicker control. This section covers only the basic features needed to get started with Syncfusion TimePicker.
+# Getting started with .NET MAUI Time Picker (SfTimePicker)
+This section explains how to add the Time Picker control. This section covers only the basic features needed to get started with Syncfusion Time Picker.
 
-## Creating an application using the .NET MAUI TimePicker
+## Creating an application using the .NET MAUI Time Picker
 
 1. Create a new .NET MAUI application in Visual Studio.
 
@@ -21,7 +21,7 @@ This section explains how to add the TimePicker control. This section covers onl
 4. Initialize `SfTimePicker.`
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3 5" %}
+{% highlight xaml tabtitle="XAML" hl_lines="3 5" %}
 
 <ContentPage   
     . . .
@@ -31,7 +31,7 @@ This section explains how to add the TimePicker control. This section covers onl
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1 9 10" %}
+{% highlight c# tabtitle="C#" hl_lines="1 9 10" %}
 
 using Syncfusion.Maui.Picker;
 . . .
@@ -82,12 +82,12 @@ namespace GettingStarted
 {% endhighlight %}
 {% endtabs %}
 
-## Set header to the TimePicker
+## Set header to the Time Picker
 
-The SfTimePicker control allows you to the add the header text by setting the [Text] property in the [PickerHeaderView]. To enable the header view by setting the [Height] property in [PickerHeaderView].
+The SfTimePicker control allows you to add the header text by setting the [Text] property in the [PickerHeaderView]. To enable the header view by setting the [Height] property in [PickerHeaderView].
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="XAML" hl_lines="3" %}
 
 <picker:SfTimePicker x:Name="picker">
     <picker:SfTimePicker.HeaderView>
@@ -96,7 +96,7 @@ The SfTimePicker control allows you to the add the header text by setting the [T
 </picker:SfTimePicker>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" hl_lines="4 5" %}
 
 SfTimePicker picker = new SfTimePicker();
 picker.HeaderView = new PickerHeaderView()
@@ -110,12 +110,12 @@ this.Content = picker;
 {% endhighlight %}
 {% endtabs %}
 
-## Set footer to the TimePicker
+## Set footer to the Time Picker
 
 In SfTimePicker control, validation buttons (OK and Cancel) can be customized by setting the [OkButtonText] and [CancelButtonText] property in the [PickerFooterView]. It allows you to confirm or cancel the selected time.  The `OkButtonText` can be enabled by using the [ShowOkButton] property in [PickerFooterView].
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="XAML" hl_lines="3" %}
 
 <picker:SfTimePicker x:Name="Picker">
     <picker:SfTimePicker.FooterView>
@@ -124,7 +124,7 @@ In SfTimePicker control, validation buttons (OK and Cancel) can be customized by
 </picker:SfTimePicker>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" hl_lines="4 5" %}
 
 SfTimePicker picker = new SfTimePicker();
 picker.FooterView= new PickerFooterView()
@@ -138,12 +138,12 @@ this.Content = picker;
 {% endhighlight %}  
 {% endtabs %}
 
-## Set height and width to the TimePicker
+## Set height and width to the Time Picker
 
-The SfTimePicker control allows you to the change the height and the width by using the [HeightRequest] and [WidthRequest] property in [SfTimePicker].
+The SfTimePicker control allows you to the change the height and width by using the [HeightRequest] and [WidthRequest] property in [SfTimePicker].
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="XAML" hl_lines="3 5" %}
 
 <picker:SfTimePicker x:Name="Picker" 
                     HeightRequest="280" 
@@ -151,7 +151,7 @@ The SfTimePicker control allows you to the change the height and the width by us
 </picker:SfTimePicker>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" hl_lines="3 4" %}
 
 SfTimePicker picker = new SfTimePicker()
 {
@@ -164,17 +164,19 @@ this.Content = picker;
 {% endhighlight %}  
 {% endtabs %}
 
-## Set selected time to the TimePicker
+## Set selected time to the Time Picker
 
-The SfTimePicker control allows you to the select the time by using the [SelectedTime] property in [SfTimePicker]. The default value of the `SelectedTime` is current time.
+The SfTimePicker control allows you to select the time by using the [SelectedTime] property in [SfTimePicker]. The default value of the `SelectedTime` is current time.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="XAML" hl_lines="2" %}
 
-<picker:SfTimePicker x:Name="Picker" SelectedTime="07.22.01" />
+<picker:SfTimePicker x:Name="Picker" 
+                     SelectedTime="07:22:01">
+</picker:SfTimePicker>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" hl_lines="3" %}
 
 SfTimePicker picker = new SfTimePicker()
 {

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting started with MAUI Picker control | Syncfusion
+title: Getting started with .NET MAUI Picker control | Syncfusion
 description: Learn here all about getting started with Syncfusion .NET MAUI Picker (SfPicker) control and its basic features.
 platform: maui
 control: SfPicker
@@ -21,7 +21,7 @@ This section explains how to add the Picker control. This section covers only th
 4. Initialize `SfPicker.`
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3 5" %}
+{% highlight xaml tabtitle="XAML" hl_lines="3 5" %}
 
 <ContentPage   
     . . .
@@ -31,7 +31,7 @@ This section explains how to add the Picker control. This section covers only th
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1 9 10" %}
+{% highlight c# tabtitle="C#" hl_lines="1 9 10" %}
 
 using Syncfusion.Maui.Picker;
 . . .
@@ -84,10 +84,10 @@ namespace GettingStarted
 
 ## Set header to the Picker
 
-The SfPicker control allows you to the add the header text by setting the [Text] property in the [PickerHeaderView]. To enable the header view by setting the [Height] property in [PickerHeaderView].
+The SfPicker control allows you to add the header text by setting the [Text] property in the [PickerHeaderView]. To enable the header view by setting the [Height] property in [PickerHeaderView].
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="XAML" hl_lines="3" %}
 
 <picker:SfPicker x:Name="picker">
     <picker:SfPicker.HeaderView>
@@ -96,7 +96,7 @@ The SfPicker control allows you to the add the header text by setting the [Text]
 </picker:SfPicker>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" hl_lines="4 5" %}
 
 SfPicker picker = new SfPicker();
 picker.HeaderView = new PickerHeaderView()
@@ -112,9 +112,9 @@ this.Content = picker;
 
 ## Add picker items to the picker
 
-The .NET MAUI Picker control is a data bounded control. Hence, you must create collection of data’s and bind it to picker control.
+The .NET MAUI Picker control is a data bounded control. Hence, you must create collection of data’s and bind it to the picker control.
 
-Create a simple Observable Collection of data for the picker
+* Create a simple Observable Collection of data for the picker,
 
 {% tabs %}
 {% highlight c# tabtitle="ItemInfo.cs" %}
@@ -149,10 +149,10 @@ public class ItemInfo
 
 * Bind the Collection to picker
 
-Picker control allows you to bind collection of data by setting the [ItemsSource] property from [PickerColumn]. You can bind the collection of data in both XAML or C#.
+Picker control allows you to bind the collection of data by setting the [ItemsSource] property from [PickerColumn]. You can bind the collection of data in both XAML or C#.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="XAML" hl_lines="6 10 11 12" %}
 
 <picker:SfPicker x:Name="picker">
     <picker:SfPicker.HeaderView>
@@ -168,7 +168,7 @@ Picker control allows you to bind collection of data by setting the [ItemsSource
 </ContentPage.BindingContext>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" hl_lines="1 8" %}
 
 ItemInfo itemInfo = new ItemInfo();
 SfPicker picker = new SfPicker()
@@ -193,7 +193,7 @@ this.Content = picker;
 In SfPicker control, validation buttons (OK and Cancel) can be customized by setting the [OkButtonText] and [CancelButtonText] property in the [PickerFooterView]. It allows you to confirm or cancel the selected item.  The `OkButtonText` can be enabled by using the [ShowOkButton] property in [PickerFooterView].
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="XAML" hl_lines="3" %}
 
 <picker:SfPicker x:Name="Picker">
     <picker:SfPicker.FooterView>
@@ -202,7 +202,7 @@ In SfPicker control, validation buttons (OK and Cancel) can be customized by set
 </picker:SfPicker>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" hl_lines="4 5" %}
 
 SfPicker picker = new SfPicker();
 picker.FooterView= new PickerFooterView()
@@ -221,7 +221,7 @@ this.Content = picker;
 The SfPicker control allows you to the add the column header text by setting the [HeaderText] property in [PickerColumn] and you need to add the column header height by setting the [Height] property in [PickerColumnHeaderView]. Its text style and background color are customizable.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="XAML" hl_lines="7 12" %}
 
 <picker:SfPicker x:Name="picker">
 <picker:SfPicker.HeaderView>
@@ -244,7 +244,7 @@ The SfPicker control allows you to the add the column header text by setting the
 </picker:SfPicker>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" hl_lines="14 21" %}
 
 ItemInfo itemInfo = new ItemInfo();
 SfPicker picker = new SfPicker()
@@ -283,10 +283,10 @@ this.Content = picker;
 
 ## Set height and width to the Picker
 
-The SfPicker control allows you to the change the height and width by using the [HeightRequest] and [WidthRequest] property in [SfPicker].
+The SfPicker control allows you to change the height and width by using the [HeightRequest] and [WidthRequest] property in [SfPicker].
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="XAML" hl_lines="2 3" %}
 
 <picker:SfPicker x:Name="Picker" 
                     HeightRequest="280" 
@@ -294,7 +294,7 @@ The SfPicker control allows you to the change the height and width by using the 
 </picker:SfPicker>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" hl_lines="3 4" %}
 
 SfPicker picker = new SfPicker()
 {
