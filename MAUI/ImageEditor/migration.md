@@ -529,6 +529,5 @@ Applicable for crop view selection, shape and text annotation selection.
 * Support for pan and zoom improvements while performing the crop action on the images.
 * Support to toolbar customization.
 
-## Known issues
-* Image not loading properly from stream or URI binding source.
-https://github.com/dotnet/maui/issues/15871
+## Known issues in .Net MAUI ImageEditor
+* [Mac, iOS]Image is not loading properly from the stream or URI binding source.
