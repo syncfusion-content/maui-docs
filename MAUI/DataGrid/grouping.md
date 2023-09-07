@@ -76,11 +76,9 @@ this.dataGrid.GroupingMode = GroupingMode.Multiple;
 The following screenshot shows the multi-grouping:
 ![DataGrid with multi-column grouping](Images\Grouping\maui-datagrid-multiple-grouping.png)
 
-## Indent column customization
+## Customize indent column width
 
-Indent columns are the columns present to the left of the `CaptionSummaryRows` when `GroupingMode` is set as multiple. The number of indent cells in each `CaptionSummaryRow` will be determined by the level of that `Group`. For example, the first group will have only one indent cell and the next immediate group will have an extra indent cell. It keeps on adding by one for each lower level groups to maintain the tree structure. Each data row will have indent cells count equal to the level of the last sub group in view. The following customizations can be done for indent cells:
-
-The width of indent column can be customized by the [IndentColumnWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_IndentColumnWidthProperty) property. The default width of the indent column is 35. 
+The width of indent column can be customized by the [IndentColumnWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_IndentColumnWidthProperty) property. The default width of the indent column is 35.
 
 {% tabs %}
 {% highlight xaml %}
@@ -96,6 +94,59 @@ this.dataGrid.IndentColumnWidth = 60;
 
 {% endhighlight %}
 {% endtabs %}
+
+### Customize indent column background color
+
+The indent columns can be customized by the writing style for DataGridIndentCell TargetType. 
+
+The following code snippet shows how to apply a background color to the indent cell based on the column index:
+
+{% tabs %}
+{% highlight xaml %}
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:CellStyleConverter x:Key="cellStyleConverter" />
+            <Style  TargetType="syncfusion:DataGridIndentCell">
+                <Setter Property="Background"
+                        Value="{Binding Source={RelativeSource Mode=Self}, 
+                        Converter={StaticResource 
+                        Key=cellStyleConverter}}" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <syncfusion:SfDataGrid  x:Name="dataGrid"
+                            AutoGenerateColumns="True"
+                            ItemsSource="{Binding Orders}" />
+
+    <syncfusion:SfDataGrid.GroupColumnDescriptions>
+        <syncfusion:GroupColumnDescription ColumnName="Name" />
+        <syncfusion:GroupColumnDescription ColumnName="ShipCity" />
+    </syncfusion:SfDataGrid.GroupColumnDescriptions>    
+{% endhighlight %}
+
+{% highlight c# %}
+public class CellStyleConverter : IValueConverter
+{
+    object IValueConverter.Convert(object value, Type targetType, object parameter, CultureInfo info)
+    {
+        var rowType = ((value as GridIndentCell)?.Parent as DataGridRow)?.DataRow?.RowType.ToString();
+        if (rowType == "HeaderRow")
+            return Colors.Bisque;
+        else if (rowType == "CaptionCoveredRow")
+            return Colors.LightBlue;
+        else
+            return Colors.PaleVioletRed;
+    }
+    public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+    {
+        return null;
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
+![SfDataGrid with IndentColumnBackgroundColor](Images\Grouping\maui-datagrid-indent-column-background-color.png)
 
 ## Custom grouping
 
