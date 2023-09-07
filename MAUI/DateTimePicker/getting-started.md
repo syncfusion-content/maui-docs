@@ -1,0 +1,160 @@
+---
+layout: post
+title: Getting started with MAUI DateTimePicker control | Syncfusion
+description: Learn here all about getting started with Syncfusion .NET MAUI DateTimePicker (SfDateTimePicker) control and its basic features.
+platform: maui
+control: SfDateTimePicker
+documentation: ug
+---
+
+# Getting started with .NET MAUI DateTimePicker (SfDateTimePicker)
+This section explains how to add the DateTimePicker control. This section covers only the basic features needed to get started with Syncfusion DateTimePicker.
+
+## Creating an application using the .NET MAUI DateTimePicker
+
+1. Create a new .NET MAUI application in Visual Studio.
+
+2. Syncfusion .NET MAUI components are available on [nuget.org](https://www.nuget.org/). To add `SfDateTimePicker` to your project, open the NuGet package manager in Visual Studio, search for [Syncfusion.Maui.Picker](https://www.nuget.org/packages/Syncfusion.Maui.Picker), and then install it.
+
+3. To initialize the control, import the control namespace `Syncfusion.Maui.Picker` in XAML or C# code.
+
+4. Initialize `SfDateTimePicker.`
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3 5" %}
+
+<ContentPage   
+    . . .
+    xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+
+    <picker:SfDateTimePicker />
+</ContentPage>
+
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1 9 10" %}
+
+using Syncfusion.Maui.Picker;
+. . .
+
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        SfDateTimePicker picker = new SfDateTimePicker();
+        this.Content = picker;
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+## Register the handler
+
+The `Syncfusion.Maui.Core` NuGet is a dependent package for all Syncfusion controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion core.
+
+{% tabs %}
+{% highlight C# tabtitle="MauiProgram.cs" hl_lines="1 10" %}
+
+using Syncfusion.Maui.Core.Hosting;
+namespace GettingStarted
+{
+    public static class MauiProgram
+    {
+        public static MauiApp CreateMauiApp()
+        {
+            var builder = MauiApp.CreateBuilder();
+
+            builder.ConfigureSyncfusionCore();
+            builder
+            .UseMauiApp<App>()
+            .ConfigureFonts(fonts =>
+            {
+                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+                fonts.AddFont("Segoe-mdl2.ttf", "SegoeMDL2");
+            });
+
+            return builder.Build();
+        }
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+## Set footer to the DateTimePicker
+
+In SfDateTimePicker control, validation buttons (OK and Cancel) can be customized by setting the [OkButtonText] and [CancelButtonText] property in the [PickerFooterView]. It allows you to confirm or cancel the selected item.  The `OkButtonText` can be enabled by using the [ShowOkButton] property in [PickerFooterView].
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+
+<picker:SfDateTimePicker x:Name="Picker">
+    <picker:SfDateTimePicker.FooterView>
+        <picker:PickerFooterView ShowOkButton="True" Height="40" />
+    </picker:SfDateTimePicker.FooterView>
+</picker:SfDateTimePicker>
+
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+SfDateTimePicker picker = new SfDateTimePicker();
+picker.FooterView= new PickerFooterView()
+{  
+    ShowOkButton = true,
+    Height = 40,
+};
+
+this.Content = picker;
+
+{% endhighlight %}  
+{% endtabs %}
+
+## Set height and width to the DateTimePicker
+
+The SfDateTimePicker control allows you to the change the height and the width by using the [HeightRequest] and [WidthRequest] property in [SfDateTimePicker].
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+
+<picker:SfDateTimePicker x:Name="Picker" 
+                    HeightRequest="280" 
+                    WidthRequest="300">
+</picker:SfDateTimePicker>
+
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+SfDateTimePicker picker = new SfDateTimePicker()
+{
+    HeightRequest = 280,
+    WidthRequest = 300,
+};
+
+this.Content = picker;
+
+{% endhighlight %}  
+{% endtabs %}
+
+## Set selected date and selected time to the DateTimePicker
+
+The SfDateTimePicker control allows you to the select the date and time by using the [SelectedDate] and [SelectedTime] property in [SfDateTimePicker]. The default value of the `SelectedDate` is current date and `SelectedTime` is currrent time.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+
+<picker:SfDateTimePicker x:Name="Picker" SelectedDate="9/7/2023" SelectedTime="07.22.01" />
+
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+SfDateTimePicker picker = new SfDateTimePicker()
+{
+    SelectedDate = new DateTime(2023, 9, 7).Date,
+    SelectedTime = new TimeSpan(07, 22, 01),
+};
+
+this.Content = picker;
+
+{% endhighlight %}  
+{% endtabs %}

@@ -21,7 +21,7 @@ Syncfusion .NET MAUI TimePicker (SfTimePicker) control that allows users to sele
 
 * **Selection view**: Selection view is used to show the selected time and it can be customized.
 
-* **Date format**: Offers 9 predefined formats, to represent the value of the time.
+* **Time format**: Offers 9 predefined formats, to represent the value of the time.
 
 * **Picker mode**: To show the picker in a Popup with a dialog mode and relative dialog mode is used to allign the picker in a specific position.
 
