@@ -120,6 +120,59 @@ namespace DatePickerSample
 
 {% endtabs %}
 
+### Divider Color
+
+Divider color of the header can be customized by setting the [`SfDatePicker.HeaderView`]() property.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:DatePickerSample"
+             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker"
+             x:Class="DatePickerSample.MainPage">
+    <ContentPage.Content>
+        <syncfusion:SfDatePicker x:Name="datepicker" >
+            <syncfusion:SfDatePicker.HeaderView >
+                <syncfusion:PickerHeaderView Height="40" Text="Date Picker" DividerColor="Blue"/>
+            </syncfusion:SfDatePicker.HeaderView>
+        </syncfusion.SfDatePicker>
+    </ContentPage.Content>
+</ContentPage>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+using Syncfusion.Maui.Picker;
+
+namespace DatePickerSample
+{
+    public partial class MainPage : ContentPage
+    {
+        public MainPage()
+        {
+            InitializeComponent();
+            SfDatePicker datePicker = new SfDatePicker();
+            datepicker.HeaderView = new PickerHeaderView()
+            {
+                Height = 40,
+                Text = "Date Picker",
+                DividerColor = Colors.Blue,
+            };
+
+            this.Content = datePicker;
+        }
+    }
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
 ### Text color 
 
 Text color of the header can be customized by setting the [`SfDatePicker.HeaderView`]() property.
@@ -474,6 +527,57 @@ namespace DatePickerSample
 
 {% endtabs %}
 
+### Divider Color
+
+Divider color of the column header can be customized by setting the [`SfDatePicker.ColumnHeaderView`]() property.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:DatePickerSample"
+             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker"
+             x:Class="DatePickerSample.MainPage">
+    <ContentPage.Content>
+        <syncfusion:SfDatePicker x:Name="datepicker" >
+            <syncfusion:SfDatePicker.ColumnHeaderView >
+                <syncfusion:DatePickerColumnHeaderView DividerColor="Blue"/>
+            </syncfusion:SfDatePicker.ColumnHeaderView>
+        </syncfusion.SfDatePicker>
+    </ContentPage.Content>
+</ContentPage>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+using Syncfusion.Maui.Picker;
+
+namespace DatePickerSample
+{
+    public partial class MainPage : ContentPage
+    {
+        public MainPage()
+        {
+            InitializeComponent();
+            SfDatePicker datePicker = new SfDatePicker();
+            datepicker.ColumnHeaderView = new DatePickerColumnHeaderView()
+            {
+                DividerColor = Colors.Blue,
+            };
+
+            this.Content = datePicker;
+        }
+    }
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
 ### Text color 
 
 Text color of the column header can be customized by setting the [`SfDatePicker.ColumnHeaderView`]() property.
@@ -809,6 +913,58 @@ namespace DatePickerSample
             datepicker.FooterView = new PickerFooterView()
             {
                 Background = Colors.Violet,
+            };
+
+            this.Content = datePicker;
+        }
+    }
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
+#### Divider Color
+
+Divider colors of the OK and Cancel buttons can be customized by setting the [`SfDatePicker.FooterView`]() properties.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:DatePickerSample"
+             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker"
+             x:Class="DatePickerSample.MainPage">
+    <ContentPage.Content>
+        <syncfusion:SfDatePicker x:Name="datepicker" >
+            <syncfusion:SfDatePicker.FooterView >
+                <syncfusion:PickerFooterView DividerColor="Blue">
+                </syncfusion:PickerFooterView>
+            </syncfusion:SfDatePicker.FooterView>
+        </syncfusion.SfDatePicker>
+    </ContentPage.Content>
+</ContentPage>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+using Syncfusion.Maui.Picker;
+
+namespace DatePickerSample
+{
+    public partial class MainPage : ContentPage
+    {
+        public MainPage()
+        {
+            InitializeComponent();
+            SfDatePicker datePicker = new SfDatePicker;
+            datepicker.FooterView = new PickerFooterView()
+            {
+                DividerColor = Colors.Blue,
             };
 
             this.Content = datePicker;

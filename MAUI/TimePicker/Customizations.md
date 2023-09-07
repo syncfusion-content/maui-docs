@@ -120,6 +120,59 @@ namespace TimePickerSample
 
 {% endtabs %}
 
+### Divider Color
+
+Divider color of the header can be customized by setting the [`SfTimePicker.HeaderView`]() property.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:TimePickerSample"
+             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker"
+             x:Class="TimePickerSample.MainPage">
+    <ContentPage.Content>
+        <syncfusion:SfTimePicker x:Name="TimePicker" >
+            <syncfusion:SfTimePicker.HeaderView >
+                <syncfusion:PickerHeaderView Height="40" Text="Time Picker" DividerColor="Blue"/>
+            </syncfusion:SfTimePicker.HeaderView>
+        </syncfusion.SfTimePicker>
+    </ContentPage.Content>
+</ContentPage>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+using Syncfusion.Maui.Picker;
+
+namespace TimePickerSample
+{
+    public partial class MainPage : ContentPage
+    {
+        public MainPage()
+        {
+            InitializeComponent();
+            SfTimePicker timePicker = new SfTimePicker();
+            timePicker.HeaderView = new PickerHeaderView()
+            {
+                Height = 40,
+                Text = "Time Picker",
+                DividerColor = Colors.Blue,
+            };
+
+            this.Content = timePicker;
+        }
+    }
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
 ### Text color 
 
 Text color of the header can be customized by setting the [`SfTimePicker.HeaderView`]() property.
@@ -474,6 +527,57 @@ namespace TimePickerSample
 
 {% endtabs %}
 
+### Divider Color
+
+Divider color of the column header can be customized by setting the [`SfTimePicker.ColumnHeaderView`]() property.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:TimePickerSample"
+             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker"
+             x:Class="TimePickerSample.MainPage">
+    <ContentPage.Content>
+        <syncfusion:SfTimePicker x:Name="TimePicker" >
+            <syncfusion:SfTimePicker.ColumnHeaderView >
+                <syncfusion:TimePickerColumnHeaderView DividerColor="Blue"/>
+            </syncfusion:SfTimePicker.ColumnHeaderView>
+        </syncfusion.SfTimePicker>
+    </ContentPage.Content>
+</ContentPage>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+using Syncfusion.Maui.Picker;
+
+namespace TimePickerSample
+{
+    public partial class MainPage : ContentPage
+    {
+        public MainPage()
+        {
+            InitializeComponent();
+            SfTimePicker timePicker = new SfTimePicker();
+            timePicker.ColumnHeaderView = new TimePickerColumnHeaderView()
+            {
+                DividerColor = Colors.Blue,
+            };
+
+            this.Content = timePicker;
+        }
+    }
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
 ### Text color 
 
 Text color of the column header can be customized by setting the [`SfTimePicker.ColumnHeaderView`]() property.
@@ -770,7 +874,7 @@ namespace TimePickerSample
 
 #### Background
 
-Background colors of the OK and Cancel buttons can be customized by setting the [`SfTimePicker.FooterView`]() properties.
+Background color of the OK and Cancel buttons can be customized by setting the [`SfTimePicker.FooterView`]() properties.
 
 {% tabs %}
 
@@ -809,6 +913,58 @@ namespace TimePickerSample
             timePicker.FooterView = new PickerFooterView()
             {
                 Background = Colors.Violet,
+            };
+
+            this.Content = timePicker;
+        }
+    }
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
+#### Divider Color
+
+Divider color of the OK and Cancel buttons can be customized by setting the [`SfTimePicker.FooterView`]() properties.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:TimePickerSample"
+             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker"
+             x:Class="TimePickerSample.MainPage">
+    <ContentPage.Content>
+        <syncfusion:SfTimePicker x:Name="TimePicker" >
+            <syncfusion:SfTimePicker.FooterView >
+                <syncfusion:PickerFooterView DividerColor="Blue">
+                </syncfusion:PickerFooterView>
+            </syncfusion:SfTimePicker.FooterView>
+        </syncfusion.SfTimePicker>
+    </ContentPage.Content>
+</ContentPage>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+using Syncfusion.Maui.Picker;
+
+namespace TimePickerSample
+{
+    public partial class MainPage : ContentPage
+    {
+        public MainPage()
+        {
+            InitializeComponent();
+            SfTimePicker timePicker = new SfTimePicker;
+            timePicker.FooterView = new PickerFooterView()
+            {
+                DividerColor = Colors.Blue,
             };
 
             this.Content = timePicker;
