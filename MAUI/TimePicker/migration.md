@@ -200,9 +200,24 @@ timePicker.Format = PickerTimeFormat.h_mm_ss_tt;
 <th>Description</th>
 </tr>
 <tr>
+<td>{{'[CancelCommand](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.SfTimePicker.html#Syncfusion_XForms_Pickers_SfTimePicker_CancelCommandProperty)'| markdownify }}</td>
+<td>Nil</td>
+<td>Not Supported.</td>
+</tr>
+<tr>
+<td>{{'[CommandParameter](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.SfTimePicker.html#Syncfusion_XForms_Pickers_SfTimePicker_CommandParameterProperty)'| markdownify }}</td>
+<td>Nil</td>
+<td>Not Supported.</td>
+</tr>
+<tr>
 <td>{{'[Format](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.SfTimePicker.html#Syncfusion_XForms_Pickers_SfTimePicker_FormatProperty)'| markdownify }}</td>
 <td>{{'[Format]()'| markdownify }}</td>
 <td>Get or set the format that is used to change the format of SfTimePicker.</td>
+</tr>
+<tr>
+<td>{{'[HourHeaderText](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.SfTimePicker.html#Syncfusion_XForms_Pickers_SfTimePicker_HourHeaderTextProperty)'| markdownify }}</td>
+<td>{{'[[HourHeaderText]()(From [TimePickerColumnHeaderView]())]'| markdownify }}</td>
+<td>Gets or sets the hour header text to change the hour column header.</td>
 </tr>
 <tr>
 <td>{{'[HourInterval](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.SfTimePicker.html#Syncfusion_XForms_Pickers_SfTimePicker_HourIntervalProperty)'| markdownify }}</td>
@@ -210,9 +225,29 @@ timePicker.Format = PickerTimeFormat.h_mm_ss_tt;
 <td>Gets or sets the hour interval to restrict the visible hours.</td>
 </tr>
 <tr>
+<td>{{'[MeridiemHeaderText](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.SfTimePicker.html#Syncfusion_XForms_Pickers_SfTimePicker_MeridiemHeaderTextProperty)'| markdownify }}</td>
+<td>{{'[[MeridiemHeaderText]()(From [TimePickerColumnHeaderView]())]'| markdownify }}</td>
+<td>Gets or sets the meridiem header text to change the meridiem column header.</td>
+</tr>
+<tr>
+<td>{{'[MinuteHeaderText](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.SfTimePicker.html#Syncfusion_XForms_Pickers_SfTimePicker_MinuteHeaderTextProperty)'| markdownify }}</td>
+<td>{{'[[MinuteHeaderText]()(From [TimePickerColumnHeaderView]())]'| markdownify }}</td>
+<td>Gets or sets the hour header text to change the hour column header.</td>
+</tr>
+<tr>
 <td>{{'[MinuteInterval](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.SfTimePicker.html#Syncfusion_XForms_Pickers_SfTimePicker_MinuteIntervalProperty)'| markdownify }}</td>
 <td>{{'[MinuteInterval]()'| markdownify }}</td>
 <td>Gets or sets the minute interval to restrict the visible minutes.</td>
+</tr>
+<tr>
+<td>{{'[OkCommand](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.SfTimePicker.html#Syncfusion_XForms_Pickers_SfTimePicker_OkCommandProperty)'| markdownify }}</td>
+<td>Nil</td>
+<td>Not Supported.</td>
+</tr>
+<tr>
+<td>{{'[SecondHeaderText](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.SfTimePicker.html#Syncfusion_XForms_Pickers_SfTimePicker_SecondHeaderTextProperty)'| markdownify }}</td>
+<td>{{'[[SecondHeaderText]()(From [TimePickerColumnHeaderView]())]'| markdownify }}</td>
+<td>Gets or sets the hour header text to change the hour column header.</td>
 </tr>
 <tr>
 <td>{{'[SecondInterval](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.SfTimePicker.html#Syncfusion_XForms_Pickers_SfTimePicker_SecondIntervalProperty)'| markdownify }}</td>
@@ -223,41 +258,6 @@ timePicker.Format = PickerTimeFormat.h_mm_ss_tt;
 <td>{{'[Time](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.SfTimePicker.html#Syncfusion_XForms_Pickers_SfTimePicker_TimeProperty)'| markdownify }}</td>
 <td>{{'[SelectedTime]()'| markdownify }}</td>
 <td>Gets or sets the selected time to select the particular time of the time picker.</td>
-</tr>
-<tr>
-<td>{{'[HourHeaderText](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.SfTimePicker.html#Syncfusion_XForms_Pickers_SfTimePicker_HourHeaderTextProperty)'| markdownify }}</td>
-<td>{{'[[HourHeaderText]()(From [TimePickerColumnHeaderView]())]'| markdownify }}</td>
-<td>Gets or sets the hour header text to change the hour column header.</td>
-</tr>
-<tr>
-<td>{{'[MinuteHeaderText](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.SfTimePicker.html#Syncfusion_XForms_Pickers_SfTimePicker_MinuteHeaderTextProperty)'| markdownify }}</td>
-<td>{{'[[MinuteHeaderText]()(From [TimePickerColumnHeaderView]())]'| markdownify }}</td>
-<td>Gets or sets the hour header text to change the hour column header.</td>
-</tr>
-<tr>
-<td>{{'[SecondHeaderText](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.SfTimePicker.html#Syncfusion_XForms_Pickers_SfTimePicker_SecondHeaderTextProperty)'| markdownify }}</td>
-<td>{{'[[SecondHeaderText]()(From [TimePickerColumnHeaderView]())]'| markdownify }}</td>
-<td>Gets or sets the hour header text to change the hour column header.</td>
-</tr>
-<tr>
-<td>{{'[MeridiemHeaderText](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.SfTimePicker.html#Syncfusion_XForms_Pickers_SfTimePicker_MeridiemHeaderTextProperty)'| markdownify }}</td>
-<td>{{'[[MeridiemHeaderText]()(From [TimePickerColumnHeaderView]())]'| markdownify }}</td>
-<td>Gets or sets the meridiem header text to change the meridiem column header.</td>
-</tr>
-<tr>
-<td>{{'[CommandParameter](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.SfTimePicker.html#Syncfusion_XForms_Pickers_SfTimePicker_CommandParameterProperty)'| markdownify }}</td>
-<td>Nil</td>
-<td>Not Supported.</td>
-</tr>
-<tr>
-<td>{{'[OkCommand](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.SfTimePicker.html#Syncfusion_XForms_Pickers_SfTimePicker_OkCommandProperty)'| markdownify }}</td>
-<td>Nil</td>
-<td>Not Supported.</td>
-</tr>
-<tr>
-<td>{{'[CancelCommand](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.SfTimePicker.html#Syncfusion_XForms_Pickers_SfTimePicker_CancelCommandProperty)'| markdownify }}</td>
-<td>Nil</td>
-<td>Not Supported.</td>
 </tr>
 </table>
 
@@ -270,29 +270,9 @@ timePicker.Format = PickerTimeFormat.h_mm_ss_tt;
 <th>Description</th>
 </tr>
 <tr>
-<td>{{'[HeaderTextColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_HeaderTextColorProperty)'| markdownify }}</td>
-<td>{{'[[TextColor]()(From [TextStyle]() of [PickerHeaderView]())]'| markdownify }}</td>
-<td>Gets or sets the text color of the text style.</td>
-</tr>
-<tr>
-<td>{{'[IsOpen](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_IsOpenProperty)'| markdownify }}</td>
-<td>{{'[IsOpen]()'| markdownify }}</td>
-<td>Gets or sets the open to allow the dialog mode.</td>
-</tr>
-<tr>
-<td>{{'[ColumnHeaderTextColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_HeaderTextColorProperty)'| markdownify }}</td>
-<td>{{'[[TextColor]()(From [TextStyle]() of [TimePickerColumnHeaderView]())]'| markdownify }}</td>
-<td>Gets or sets the text color of the text style.</td>
-</tr>
-<tr>
-<td>{{'[ColumnHeaderFontFamily](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_ColumnHeaderFontFamilyProperty)'| markdownify }}</td>
-<td>{{'[[FontFamily]()(From [TextStyle]() of [TimePickerColumnHeaderView]())]'| markdownify }}</td>
-<td>Gets or sets the font family of the text style.</td>
-</tr>
-<tr>
-<td>{{'[HeaderFontAttribute](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_HeaderFontAttributeProperty)'| markdownify }}</td>
-<td>{{'[[FontAttribute]()(From [TextStyle]() of [PickerHeaderView]())]'| markdownify }}</td>
-<td>Gets or sets the font attribute of the text style.</td>
+<td>{{'[BackgroundColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_BackgroundColorProperty)'| markdownify }}</td>
+<td>{{'[BackgroundColor]()'| markdownify }}</td>
+<td>Gets or sets the background color of the timePicker.</td>
 </tr>
 <tr>
 <td>{{'[BorderColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_BorderColorProperty)'| markdownify }}</td>
@@ -300,17 +280,47 @@ timePicker.Format = PickerTimeFormat.h_mm_ss_tt;
 <td>Not Supported.</td>
 </tr>
 <tr>
-<td>{{'[ShowFooter](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_ShowFooterProperty)'| markdownify }}</td>
-<td>Nil</td>
-<td>Not Supported.</td>
+<td>{{'[CancelButtonBackgroundColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_CancelButtonBackgroundColorProperty)'| markdownify }}</td>
+<td>{{'[[BackgroundColor]()(From [PickerFooterView]())]'| markdownify }}</td>
+<td>Gets or sets the background color of the footer.</td>
 </tr>
 <tr>
-<td>{{'[PickerHeight](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_PickerHeightProperty)'| markdownify }}</td>
-<td>Nil</td>
-<td>Not Supported.</td>
+<td>{{'[CancelButtonTextColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_CancelButtonTextColorProperty)'| markdownify }}</td>
+<td>{{'[[TextColor]()(From [TextStyle]() of [PickerFooterView]())]'| markdownify }}</td>
+<td>Gets or sets the text color of the text style.</td>
 </tr>
 <tr>
-<td>{{'[UnSelectedItemFontFamily](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_UnselectedItemFontFamilyProperty)'| markdownify }}</td>
+<td>{{'[ColumnHeaderBackgroundColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_ColumnHeaderBackgroundColorProperty)'| markdownify }}</td>
+<td>{{'[[BackgroundColor]()(From [TimePickerColumnHeaderView]())]'| markdownify }}</td>
+<td>Gets or sets the background color of the column header.</td>
+</tr>
+<tr>
+<td>{{'[ColumnHeaderFontAttributes](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_ColumnHeaderFontAttributeProperty)'| markdownify }}</td>
+<td>{{'[[FontAttributes]()(From [TextStyle]() of [TimePickerColumnHeaderView]())]'| markdownify }}</td>
+<td>Gets or sets the font attribute of the text style.</td>
+</tr>
+<tr>
+<td>{{'[ColumnHeaderFontFamily](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_ColumnHeaderFontFamilyProperty)'| markdownify }}</td>
+<td>{{'[[FontFamily]()(From [TextStyle]() of [TimePickerColumnHeaderView]())]'| markdownify }}</td>
+<td>Gets or sets the font family of the text style.</td>
+</tr>
+<tr>
+<td>{{'[ColumnHeaderFontSize](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_ColumnHeaderFontSizeProperty)'| markdownify }}</td>
+<td>{{'[[FontSize]()(From [TextStyle]() of [TimePickerColumnHeaderView]())]'| markdownify }}</td>
+<td>Gets or sets the font size of the text style.</td>
+</tr>
+<tr>
+<td>{{'[ColumnHeaderHeight](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_ColumnHeaderHeightProperty)'| markdownify }}</td>
+<td>{{'[[Height]()(From [TimePickerColumnHeaderView]())]'| markdownify }}</td>
+<td>Gets or sets the height of the column header.</td>
+</tr>
+<tr>
+<td>{{'[ColumnHeaderTextColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_HeaderTextColorProperty)'| markdownify }}</td>
+<td>{{'[[TextColor]()(From [TextStyle]() of [TimePickerColumnHeaderView]())]'| markdownify }}</td>
+<td>Gets or sets the text color of the text style.</td>
+</tr>
+<tr>
+<td>{{'[EnableLooping](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_EnableLoopingProperty)'| markdownify }}</td>
 <td>Nil</td>
 <td>Not Supported.</td>
 </tr>
@@ -320,9 +330,9 @@ timePicker.Format = PickerTimeFormat.h_mm_ss_tt;
 <td>Gets or sets the height of the footer view.</td>
 </tr>
 <tr>
-<td>{{'[ColumnHeaderBackgroundColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_ColumnHeaderBackgroundColorProperty)'| markdownify }}</td>
-<td>{{'[[BackgroundColor]()(From [TimePickerColumnHeaderView]())]'| markdownify }}</td>
-<td>Gets or sets the background color of the column header.</td>
+<td>{{'[FooterView](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_FooterViewProperty)'| markdownify }}</td>
+<td>Nil</td>
+<td>Not Supported.</td>
 </tr>
 <tr>
 <td>{{'[HeaderBackgroundColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_HeaderBackgroundColorProperty)'| markdownify }}</td>
@@ -330,17 +340,47 @@ timePicker.Format = PickerTimeFormat.h_mm_ss_tt;
 <td>Gets or sets the background color of the header.</td>
 </tr>
 <tr>
-<td>{{'[BackgroundColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_BackgroundColorProperty)'| markdownify }}</td>
-<td>{{'[BackgroundColor]()'| markdownify }}</td>
-<td>Gets or sets the background color of the timePicker.</td>
+<td>{{'[HeaderFontAttribute](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_HeaderFontAttributeProperty)'| markdownify }}</td>
+<td>{{'[[FontAttribute]()(From [TextStyle]() of [PickerHeaderView]())]'| markdownify }}</td>
+<td>Gets or sets the font attribute of the text style.</td>
+</tr>
+<tr>
+<td>{{'[HeaderFontFamily](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_HeaderFontFamilyProperty)'| markdownify }}</td>
+<td>{{'[[FontFamily]()(From [TextStyle]() of [PickerHeaderView]())]'| markdownify }}</td>
+<td>Gets or sets the font family of the text style.</td>
+</tr>
+<tr>
+<td>{{'[HeaderFontSize](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_HeaderFontSizeProperty)'| markdownify }}</td>
+<td>{{'[[FontSize]()(From [TextStyle]() of [PickerHeaderView]())]'| markdownify }}</td>
+<td>Gets or sets the font size of the text style.</td>
+</tr>
+<tr>
+<td>{{'[HeaderHeight](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_HeaderHeightProperty)'| markdownify }}</td>
+<td>{{'[[Height]()(From [PickerHeaderView]())]'| markdownify }}</td>
+<td>Gets or sets the height of the header.</td>
+</tr>
+<tr>
+<td>{{'[HeaderTextColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_HeaderTextColorProperty)'| markdownify }}</td>
+<td>{{'[[TextColor]()(From [TextStyle]() of [PickerHeaderView]())]'| markdownify }}</td>
+<td>Gets or sets the text color of the text style.</td>
+</tr>
+<tr>
+<td>{{'[HeaderView](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_HeaderViewProperty)'| markdownify }}</td>
+<td>Nil</td>
+<td>Not Supported.</td>
+</tr>
+<tr>
+<td>{{'[IsOpen](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_IsOpenProperty)'| markdownify }}</td>
+<td>{{'[IsOpen]()'| markdownify }}</td>
+<td>Gets or sets the open to allow the dialog mode.</td>
+</tr>
+<tr>
+<td>{{'[ItemHeight](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_ItemHeightProperty)'| markdownify }}</td>
+<td>{{'[ItemHeight]()'| markdownify }}</td>
+<td>Gets or sets the item height of the each item source.</td>
 </tr>
 <tr>
 <td>{{'[OkButtonBackgroundColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_OKButtonBackgroundColorProperty)'| markdownify }}</td>
-<td>{{'[[BackgroundColor]()(From [PickerFooterView]())]'| markdownify }}</td>
-<td>Gets or sets the background color of the footer.</td>
-</tr>
-<tr>
-<td>{{'[CancelButtonBackgroundColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_CancelButtonBackgroundColorProperty)'| markdownify }}</td>
 <td>{{'[[BackgroundColor]()(From [PickerFooterView]())]'| markdownify }}</td>
 <td>Gets or sets the background color of the footer.</td>
 </tr>
@@ -350,19 +390,9 @@ timePicker.Format = PickerTimeFormat.h_mm_ss_tt;
 <td>Gets or sets the text color of the text style.</td>
 </tr>
 <tr>
-<td>{{'[SelectionBackgroundColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_SelectionBackgroundColorProperty)'| markdownify }}</td>
-<td>{{'[[BackgroundColor]()(From [PickerSelectionView]())]'| markdownify }}</td>
-<td>Gets or sets the background color of the selected item.</td>
-</tr>
-<tr>
-<td>{{'[UnSelectedItemTextColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_UnselectedItemTextColorProperty)'| markdownify }}</td>
+<td>{{'[PickerHeight](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_PickerHeightProperty)'| markdownify }}</td>
 <td>Nil</td>
 <td>Not Supported.</td>
-</tr>
-<tr>
-<td>{{'[ColumnHeaderFontAttributes](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_ColumnHeaderFontAttributeProperty)'| markdownify }}</td>
-<td>{{'[[FontAttributes]()(From [TextStyle]() of [TimePickerColumnHeaderView]())]'| markdownify }}</td>
-<td>Gets or sets the font attribute of the text style.</td>
 </tr>
 <tr>
 <td>{{'[PickerWidth](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_PickerWidthProperty)'| markdownify }}</td>
@@ -370,29 +400,24 @@ timePicker.Format = PickerTimeFormat.h_mm_ss_tt;
 <td>Gets or sets the width of the column.</td>
 </tr>
 <tr>
-<td>{{'[HeaderFontFamily](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_HeaderFontFamilyProperty)'| markdownify }}</td>
-<td>{{'[[FontFamily]()(From [TextStyle]() of [PickerHeaderView]())]'| markdownify }}</td>
+<td>{{'[SelectionBackgroundColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_SelectionBackgroundColorProperty)'| markdownify }}</td>
+<td>{{'[[BackgroundColor]()(From [PickerSelectionView]())]'| markdownify }}</td>
+<td>Gets or sets the background color of the selected item.</td>
+</tr>
+<tr>
+<td>{{'[SelectedItemFontAttributes](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_SelectedItemFontAttributeProperty)'| markdownify }}</td>
+<td>{{'[[FontAttributes]()(From [SelectedTextStyle]() of [PickerBase]())]'| markdownify }}</td>
+<td>Gets or sets the font attribute of the text style.</td>
+</tr>
+<tr>
+<td>{{'[SelectedItemFontFamily](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_SelectedItemFontFamilyProperty)'| markdownify }}</td>
+<td>{{'[[FontFamily]()(From [SelectedTextStyle]() of [PickerBase]())]'| markdownify }}</td>
 <td>Gets or sets the font family of the text style.</td>
 </tr>
 <tr>
-<td>{{'[UnSelectedItemFontAttributes](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_UnselectedItemFontAttributeProperty)'| markdownify }}</td>
-<td>Nil</td>
-<td>Not Supported.</td>
-</tr>
-<tr>
-<td>{{'[ShowHeader](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_ShowHeaderProperty)'| markdownify }}</td>
-<td>Nil</td>
-<td>Not Supported.</td>
-</tr>
-<tr>
-<td>{{'[HeaderFontSize](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_HeaderFontSizeProperty)'| markdownify }}</td>
-<td>{{'[[FontSize]()(From [TextStyle]() of [PickerHeaderView]())]'| markdownify }}</td>
+<td>{{'[SelectedItemFontSize](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_SelectedItemFontSizeProperty)'| markdownify }}</td>
+<td>{{'[[FontSize]()(From [SelectedTextStyle]() of [PickerBase]())]'| markdownify }}</td>
 <td>Gets or sets the font size of the text style.</td>
-</tr>
-<tr>
-<td>{{'[UnSelectedItemFontSize](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_UnselectedItemFontSizeProperty)'| markdownify }}</td>
-<td>Nil</td>
-<td>Not Supported.</td>
 </tr>
 <tr>
 <td>{{'[SelectedItemTextColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_SelectedItemTextColorProperty)'| markdownify }}</td>
@@ -405,57 +430,32 @@ timePicker.Format = PickerTimeFormat.h_mm_ss_tt;
 <td>Not Supported.</td>
 </tr>
 <tr>
-<td>{{'[ColumnHeaderHeight](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_ColumnHeaderHeightProperty)'| markdownify }}</td>
-<td>{{'[[Height]()(From [TimePickerColumnHeaderView]())]'| markdownify }}</td>
-<td>Gets or sets the height of the column header.</td>
-</tr>
-<tr>
-<td>{{'[HeaderHeight](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_HeaderHeightProperty)'| markdownify }}</td>
-<td>{{'[[Height]()(From [PickerHeaderView]())]'| markdownify }}</td>
-<td>Gets or sets the height of the header.</td>
-</tr>
-<tr>
-<td>{{'[ColumnHeaderFontSize](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_ColumnHeaderFontSizeProperty)'| markdownify }}</td>
-<td>{{'[[FontSize]()(From [TextStyle]() of [TimePickerColumnHeaderView]())]'| markdownify }}</td>
-<td>Gets or sets the font size of the text style.</td>
-</tr>
-<tr>
-<td>{{'[SelectedItemFontSize](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_SelectedItemFontSizeProperty)'| markdownify }}</td>
-<td>{{'[[FontSize]()(From [SelectedTextStyle]() of [PickerBase]())]'| markdownify }}</td>
-<td>Gets or sets the font size of the text style.</td>
-</tr>
-<tr>
-<td>{{'[SelectedItemFontFamily](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_SelectedItemFontFamilyProperty)'| markdownify }}</td>
-<td>{{'[[FontFamily]()(From [SelectedTextStyle]() of [PickerBase]())]'| markdownify }}</td>
-<td>Gets or sets the font family of the text style.</td>
-</tr>
-<tr>
-<td>{{'[ItemHeight](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_ItemHeightProperty)'| markdownify }}</td>
-<td>{{'[ItemHeight]()'| markdownify }}</td>
-<td>Gets or sets the item height of the each item source.</td>
-</tr>
-<tr>
-<td>{{'[SelectedItemFontAttributes](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_SelectedItemFontAttributeProperty)'| markdownify }}</td>
-<td>{{'[[FontAttributes]()(From [SelectedTextStyle]() of [PickerBase]())]'| markdownify }}</td>
-<td>Gets or sets the font attribute of the text style.</td>
-</tr>
-<tr>
-<td>{{'[CancelButtonTextColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_CancelButtonTextColorProperty)'| markdownify }}</td>
-<td>{{'[[TextColor]()(From [TextStyle]() of [PickerFooterView]())]'| markdownify }}</td>
-<td>Gets or sets the text color of the text style.</td>
-</tr>
-<tr>
-<td>{{'[EnableLooping](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_EnableLoopingProperty)'| markdownify }}</td>
+<td>{{'[ShowFooter](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_ShowFooterProperty)'| markdownify }}</td>
 <td>Nil</td>
 <td>Not Supported.</td>
 </tr>
 <tr>
-<td>{{'[HeaderView](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_HeaderViewProperty)'| markdownify }}</td>
+<td>{{'[ShowHeader](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_ShowHeaderProperty)'| markdownify }}</td>
 <td>Nil</td>
 <td>Not Supported.</td>
 </tr>
 <tr>
-<td>{{'[FooterView](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_FooterViewProperty)'| markdownify }}</td>
+<td>{{'[UnSelectedItemFontAttributes](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_UnselectedItemFontAttributeProperty)'| markdownify }}</td>
+<td>Nil</td>
+<td>Not Supported.</td>
+</tr>
+<tr>
+<td>{{'[UnSelectedItemFontFamily](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_UnselectedItemFontFamilyProperty)'| markdownify }}</td>
+<td>Nil</td>
+<td>Not Supported.</td>
+</tr>
+<tr>
+<td>{{'[UnSelectedItemFontSize](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_UnselectedItemFontSizeProperty)'| markdownify }}</td>
+<td>Nil</td>
+<td>Not Supported.</td>
+</tr>
+<tr>
+<td>{{'[UnSelectedItemTextColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_UnselectedItemTextColorProperty)'| markdownify }}</td>
 <td>Nil</td>
 <td>Not Supported.</td>
 </tr>
