@@ -13,7 +13,7 @@ This section explains the steps required to work with the `.NET MAUI Button` con
 
 ## Creating an application with .NET MAUI Button
 
-This section explains the steps required to work with the `SfNumericEntry` control for .NET MAUI.
+This section explains the steps required to work with the `SfButton` control for .NET MAUI.
 
 ## Adding a .NET MAUI Button reference
 
@@ -86,7 +86,7 @@ Now, add the `SfButton` control with a required optimal name using the included 
 
 {% highlight C# %}
 
-        button = new SfButton();
+        SfButton button = new SfButton();
 
 {% endhighlight %}
 

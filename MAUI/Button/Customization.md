@@ -242,40 +242,11 @@ button.ShowIcon = True;
 {% endhighlight %}
 {% endtabs %}
 
-## Image
-
-The `Image` property is used to customize the height, width, image source and aspect for the image of `SfButton`.
-
-{% tabs %}
-{% highlight xaml %}
-
-<button:SfButton x:Name="button" Text="Button" ImageSource="ButtonUserContact.png">
-</button:SfButton>
-
-{% endhighlight %}
-{% highlight c# %}
-
-SfButton button = new SfButton();
-button.Text = "Button";
-button.HorizontalOptions = LayoutOptions.Center;
-button.VerticalOptions = LayoutOptions.Center;
-button.Image = new Image()
-{
-    source = "ButtonUserContact.png",
-    WidthRequest = 50,
-    HeightRequest = 50
-};
-
-{% endhighlight %}
-{% endtabs %}
-
-![SfButton with image property](images/Button_image.png)
-
 ### ImageSource
 
-The [`ImageSource`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Buttons.SfButton.html#Syncfusion_XForms_Buttons_SfButton_ImageSource) property is used to customize the icon image of [`SfButton`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Buttons.SfButton.html) by adding a custom image.
+The `ImageSource` property is used to customize the icon image of `SfButton` by adding a custom image.
 
-N> Enable the [`ShowIcon`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Buttons.SfButton.html#Syncfusion_XForms_Buttons_SfButton_ShowIcon) property to enable the [`ImageSource`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Buttons.SfButton.html#Syncfusion_XForms_Buttons_SfButton_ImageSource) property. 
+N> Enable the `ShowIcon` property to enable the `ImageSource` property. 
 
 {% tabs %}
 {% highlight xaml %}
@@ -296,16 +267,16 @@ button.ShowIcon = True;
 
 ![SfButton with image with content](images/Button_icon.png)
 
-### ImageWidth
+### ImageSize
 
-The [`ImageWidth`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Buttons.SfButton.html#Syncfusion_XForms_Buttons_SfButton_ImageWidth) property is used to customize the width of icon image in [`SfButton`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Buttons.SfButton.html).
+The `ImageSize` property is used to customize the width of icon image in `SfButton`.
 
-N> Enable the [`ShowIcon`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Buttons.SfButton.html#Syncfusion_XForms_Buttons_SfButton_ShowIcon) property to enable the [`ImageSource`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Buttons.SfButton.html#Syncfusion_XForms_Buttons_SfButton_ImageSource) property. 
+N> Enable the `ShowIcon` property to enable the `ImageSource` property. 
 
 {% tabs %}
 {% highlight xaml %}
 
-<button:SfButton x:Name="button" Text="Button" ImageSource="Heart.png" ShowIcon="True" ImageWidth="50">
+<button:SfButton x:Name="button" Text="Button" ImageSource="Heart.png" ShowIcon="True" ImageSize="50">
 </button:SfButton>
 
 {% endhighlight %}
@@ -315,23 +286,23 @@ SfButton button = new SfButton();
 button.Text = "Button";
 button.ImageSource = "Heart.png";
 button.ShowIcon = true;
-button.ImageWidth = 50;
+button.ImageSize= 50;
 
 {% endhighlight %}
 {% endtabs %}
 
 ### ImageAlignment 
 
-The [`ImageAlignment`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Buttons.SfButton.html#Syncfusion_XForms_Buttons_SfButton_ImageAlignment) property is used to customize the alignment of icon image in [`SfButton`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Buttons.SfButton.html). The following options are available in [`ImageAlignment`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Buttons.SfButton.html#Syncfusion_XForms_Buttons_SfButton_ImageAlignment):
+The `ImageAlignment` property is used to customize the alignment of icon image in `SfButton`. The following options are available in `ImageAlignment`:
 
-* [`Start`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Buttons.Alignment.html#Syncfusion_XForms_Buttons_Alignment_Start) - Places the image at the left most of [`SfButton`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Buttons.SfButton.html).
-* [`End`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Buttons.Alignment.html#Syncfusion_XForms_Buttons_Alignment_End) - Places the image at the right most of [`SfButton`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Buttons.SfButton.html).
-* [`Top`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Buttons.Alignment.html#Syncfusion_XForms_Buttons_Alignment_Top) - Places the image at the top of the text.
-* [`Bottom`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Buttons.Alignment.html#Syncfusion_XForms_Buttons_Alignment_Bottom) - Places the image at the bottom of the text.
-* [`Left`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Buttons.Alignment.html#Syncfusion_XForms_Buttons_Alignment_Left) - Although the flow direction has been applied, it always places the image in the left part of [`SfButton`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Buttons.SfButton.html). For example, in the direction of the RTL flow, the image setting will move to the right. Use ['Left'](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Buttons.Alignment.html#Syncfusion_XForms_Buttons_Alignment_Left) alignment to show this in the same left position.
-* [`Right`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Buttons.Alignment.html#Syncfusion_XForms_Buttons_Alignment_Right) - Although flow direction has been applied, the image is always located in the right part of [`SfButton`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Buttons.SfButton.html). For example, in the direction of the RTL flow, the image setting will move to the left. But use ['Right'](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Buttons.Alignment.html#Syncfusion_XForms_Buttons_Alignment_Right) alignment to show this in the same right position.
+* `Start` - Places the image at the left most of `SfButton`.
+* `End` - Places the image at the right most of `SfButton`.
+* `Top` - Places the image at the top of the text.
+* `Bottom` - Places the image at the bottom of the text.
+* `Left` - Although the flow direction has been applied, it always places the image in the left part of `SfButton`. For example, in the direction of the RTL flow, the image setting will move to the right. Use `Left` alignment to show this in the same left position.
+* `Right` - Although flow direction has been applied, the image is always located in the right part of `SfButton`. For example, in the direction of the RTL flow, the image setting will move to the left. But use `Right` alignment to show this in the same right position.
 
-N> Enable the [`ShowIcon`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Buttons.SfButton.html#Syncfusion_XForms_Buttons_SfButton_ShowIcon) property to enable the [`ImageSource`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Buttons.SfButton.html#Syncfusion_XForms_Buttons_SfButton_ImageSource) property. 
+N> Enable the `ShowIcon` property to enable the `ImageSource` property. 
 
 **End image alignment in `SfButton`**
 
@@ -653,7 +624,7 @@ radialButton.BackgroundGradient = radialGradientBrush;
 
 ## Command
 
-The [`Command`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Buttons.SfButton.html#Syncfusion_XForms_Buttons_SfButton_Command)  property is used to associate a command with an instance of [`SfButton`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Buttons.SfButton.html). This property is most often set with MVVM pattern to bind callbacks back into the ViewModel.
+The `Command`  property is used to associate a command with an instance of `SfButton`. This property is most often set with MVVM pattern to bind callbacks back into the ViewModel.
 
 N> Default value is [`null`].
 
@@ -664,7 +635,7 @@ N> Default value is [`null`].
     <local:CommandDemoViewModel />
  </ContentPage.BindingContext>
 
-<button:SfButton x:Name="button" Text="Button" BackgroundColor="{Binding Background}" Command="{Binding ButtonCommand}">
+<button:SfButton x:Name="button" Text="Button" Background="{Binding Background}" Command="{Binding ButtonCommand}">
 </button:SfButton>
 
 {% endhighlight %}
@@ -712,93 +683,3 @@ public class CommandDemoViewModel : INotifyPropertyChanged
 
 {% endhighlight %}
 {% endtabs %}
-
-## Shadow Effect
-
-The button control provides shadow effect support. To enable shadow effect, set the [`HasShadow`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Border.SfBorder.html#Syncfusion_XForms_Border_SfBorder_HasShadow) property to true.
-
-You can customize the color of shadow using the [`ShadowColor`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Border.SfBorder.html#Syncfusion_XForms_Border_SfBorder_ShadowColor) property. 
-
-{% tabs %}
-
-{% highlight xaml %}
-
-          <SyncfusionButton:SfButton
-                                     HeightRequest="50"
-                                     WidthRequest="200"
-                                     VerticalOptions="Center"
-                                     HorizontalOptions="Center"
-                                     CornerRadius="25"
-                                     HasShadow="True"
-                                     BorderWidth="1"
-                                     BorderColor="Gray"
-                                     BackgroundColor="#538EEC"
-                                     ImageSource="Basket.png"
-                                     ShowIcon="True"
-                                     ImageAlignment="End"
-                                     Text="ADD To CART"/>
-	
-{% endhighlight %}
-
-{% highlight C# %}
-
-SfButton button = new SfButton()
-            {
-                HeightRequest = 50,
-                WidthRequest = 200,
-                HorizontalOptions = LayoutOptions.Center,
-                VerticalOptions = LayoutOptions.Center,
-                CornerRadius = new Thickness(25),
-                HasShadow = true,
-                BorderWidth = 1,
-                BorderColor = Color.Gray,
-                BackgroundColor = Color.FromHex("#538EEC"),
-                ImageSource = "Basket.png",
-                ShowIcon = true,
-                ImageAlignment = Alignment.Start,
-                Text = "ADD To CART"
-            };
-
-            this.Content = button;
-
-{% endhighlight %}
-
-{% endtabs %}
-
-N> Shadow support has not been provided for UWP Platform.
-
-![ShadowImage](images/Xamarin_Forms_Shadow.png)
-
-## Ripple Effect
-
-The button control provides ripple effect support. To enable the ripple effect, set the [`EnableRippleEffect`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Buttons.SfButton.html#Syncfusion_XForms_Buttons_SfButton_EnableRippleEffect) property to true. By default, [`EnableRippleEffect`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Buttons.SfButton.html#Syncfusion_XForms_Buttons_SfButton_EnableRippleEffect) value is true.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<button:SfButton x:Name="button" Text="Button" EnableRippleEffect="false" />
-
-{% endhighlight %}
-
-{% highlight c# %}
-
-SfButton button = new SfButton();
-button.Text = "Button";
-button.EnableRippleEffect = false;
-
-{% endhighlight %}
-
-{% endtabs %}
-
-N> Ripple Effect support has not been provided for UWP and WPF Platform.
-
-The complete customization sample:[Customization](http://www.syncfusion.com/downloads/support/directtrac/general/ze/Customization-1070507783)
-
-## See also
-
-[How to create a different shape of Xamarin.Forms button](https://www.syncfusion.com/kb/11850/how-to-create-a-different-shape-of-xamarin-forms-button)
-
-[How to create a round or circle button in Xamarin.Forms](https://www.syncfusion.com/kb/10938/how-to-create-a-round-or-circle-button-in-xamarin-forms)
-
-[How to add the SVG images in Xamarin.Forms button](https://www.syncfusion.com/kb/11682/how-to-add-the-svg-images-in-xamarin-forms-button)
