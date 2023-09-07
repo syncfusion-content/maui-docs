@@ -401,8 +401,8 @@ datePicker.Format = PickerDateFormat.MM_dd_yyyy;
 </tr>
 <tr>
 <td>{{'[PickerWidth](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_PickerWidthProperty)'| markdownify }}</td>
-<td>{{'[[Width]()(From [PickerColumn]())]'| markdownify }}</td>
-<td>Gets or sets the width of the column.</td>
+<td>Nil</td>
+<td>Not Supported.</td>
 </tr>
 <tr>
 <td>{{'[SelectionBackgroundColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_SelectionBackgroundColorProperty)'| markdownify }}</td>
