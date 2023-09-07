@@ -68,3 +68,31 @@ sfNumericEntry.UpDownPlacementMode = NumericEntryUpDownPlacementMode.Inline;
 {% endtabs %}
 
 ![UpDown Placement in .NET MAUI NumericEntry](UpDownButton_images/UpDownButtonPlacement.gif)
+
+## Auto reverse in SfNumericEntry
+
+Auto-reverse in `NumericEntry` allows the control to automatically switch direction when reaching its `minimum` or `maximum` value. When incrementing, it starts at the `minimum` and progresses to the `maximum,` and conversely.
+
+N> The default value of this property is `false.`
+{% tabs %}
+{% highlight XAML %}
+
+<editors:SfNumericEntry UpDownPlacementMode="Inline"
+                        AutoReverse="True"
+                        Minimum="0"
+                        Maximum="10"/>
+                        
+                     
+{% endhighlight %}
+{% highlight c# %}
+
+SfNumericEntry sfNumericEntry = new SfNumericEntry();
+sfNumericEntry.UpDownPlacementMode = NumericEntryUpDownPlacementMode.Inline;
+sfNumericEntry.AutoReverse = true;
+sfNumericEntry.Minimum=0;
+sfNumericEntry.Maximum=10;
+
+{% endhighlight %}
+{% endtabs %}
+
+![AutoReverse support in .NET MAUI NumericEntry](UpDownButton_images/AutoReverseSupport.gif)
