@@ -224,7 +224,9 @@ public partial class MainPage : ContentPage
 
 ![GettingStarted in .NET Maui ImageEditor](images\getting-started\imageeditor-gettingstarted.png)
 
-N> If we set the Stream source with a local variable, the stream will be closed after it is used by the image, and we cannot process the stream again. So we recommend using stream images using the Lamba function so that we can process them whenever needed.
+N> If we set the Stream source with a local variable, the stream will be closed after it is used by the image, and we cannot process the stream again. So we recommend using stream images by creating a new stream instance inside Lamba function so that we can process them whenever needed.
+
+imageEditor.Source = ImageSource.FromStream(() => new MemoryStream(imageBytes))
 
 ## Show or hide toolbar
 
@@ -263,37 +265,26 @@ public partial class MainPage : ContentPage
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-image-editor-examples/tree/master/GettingStarted)
 
 ## Get the image stream
-The `GetImageStream` method used to return the image in the form of a stream.
+The [`GetImageStream`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_GetImageStream) method is used to return the edited image in the form of a stream.
 
 {% tabs %}
-{% highlight C#  %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 
-using Syncfusion.Maui.ImageEditor;
-namespace SyncfusionImageEditor;
+   <Grid RowDefinitions="0.9*, 0.1*">
+        <imageEditor:SfImageEditor x:Name="imageEditor"
+                                   Source="image.jpeg" />
+        <Button Grid.Row="1"
+                Text="Get Image Stream"
+                Clicked="OnGetStreamClicked" />
+    </Grid>  
 
-public partial class MainPage : ContentPage
-{
-    SfImageEditor imageEditor = new SfImageEditor();
-	public MainPage()
-	{
-        InitializeComponent();
-        Grid grid = new Grid();
-        Button getStream = new Button();
-        getStream.Text = "Get Stream";
-        getStream.WidthRequest = 200;
-        getStream.BackgroundColor = Colors.Blue;
-        getStream.Clicked += GetStream_Clicked; ;
-        grid.RowDefinitions.Add(new RowDefinition { Height = 350}); 
-        grid.RowDefinitions.Add(new RowDefinition { Height = GridLength.Auto});
-        grid.Add(editor,0,0);
-        grid.Add(getStream, 0,1);
-        this.Content = grid;
-    }
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-    private void GetStream_Clicked(object sender, EventArgs e)
+    private void OnGetStreamClicked(object sender, EventArgs e)
     {
-        editor.GetImageStream();
+        this.imageEditor.GetImageStream();
     }
-}
+
 {% endhighlight %}
 {% endtabs %}

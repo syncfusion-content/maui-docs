@@ -530,5 +530,5 @@ Applicable for crop view selection, shape and text annotation selection.
 * Support to toolbar customization.
 
 ## Known issues
-* Image not loading from stream or URI binding source.
+* Image not loading properly from stream or URI binding source.
 https://github.com/dotnet/maui/issues/15871
