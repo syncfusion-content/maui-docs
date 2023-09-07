@@ -411,22 +411,22 @@ datePicker.Format = PickerDateFormat.MM_dd_yyyy;
 </tr>
 <tr>
 <td>{{'[SelectedItemFontAttributes](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_SelectedItemFontAttributeProperty)'| markdownify }}</td>
-<td>{{'[[FontAttributes]()(From [SelectedTextStyle]() of [PickerBase]())]'| markdownify }}</td>
+<td>{{'[[FontAttributes]()([SelectedTextStyle]())]'| markdownify }}</td>
 <td>Gets or sets the font attribute of the text style.</td>
 </tr>
 <tr>
 <td>{{'[SelectedItemFontFamily](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_SelectedItemFontFamilyProperty)'| markdownify }}</td>
-<td>{{'[[FontFamily]()(From [SelectedTextStyle]() of [PickerBase]())]'| markdownify }}</td>
+<td>{{'[[FontFamily]()([SelectedTextStyle]())]'| markdownify }}</td>
 <td>Gets or sets the font family of the text style.</td>
 </tr>
 <tr>
 <td>{{'[SelectedItemFontSize](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_SelectedItemFontSizeProperty)'| markdownify }}</td>
-<td>{{'[[FontSize]()(From [SelectedTextStyle]() of [PickerBase]())]'| markdownify }}</td>
+<td>{{'[[FontSize]()([SelectedTextStyle]())]'| markdownify }}</td>
 <td>Gets or sets the font size of the text style.</td>
 </tr>
 <tr>
 <td>{{'[SelectedItemTextColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_SelectedItemTextColorProperty)'| markdownify }}</td>
-<td>{{'[[TextColor]()(From [SelectedTextStyle]() of [PickerBase]())]'| markdownify }}</td>
+<td>{{'[[TextColor]()([SelectedTextStyle]())]'| markdownify }}</td>
 <td>Gets or sets the text color of the text style.</td>
 </tr>
 <tr>

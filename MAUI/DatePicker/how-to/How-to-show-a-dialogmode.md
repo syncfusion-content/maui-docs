@@ -157,3 +157,146 @@ namespace DatePickerSample
 {% endhighlight %}
 
 {% endtabs %}
+
+## How to set an interval
+
+### How to set an interval between days
+
+DatePicker provides an option to give an interval between days using the [`SfDatePicker.DayInterval`]() property.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:DatePickerSample"
+             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker"
+             x:Class="DatePickerSample.MainPage">
+    <ContentPage.Content>
+        <syncfusion:SfDatePicker x:Name="datePicker"
+                                 DayInterval="2"/>
+    </ContentPage.Content>
+</ContentPage>
+
+{% endhighlight %}
+
+{% highlight c# %}  
+
+using Syncfusion.Maui.Picker;
+
+namespace DatePickerSample
+{
+    public partial class MainPage : ContentPage
+    {
+        public MainPage()
+        {
+            InitializeComponent();
+            SfDatePicker datePicker = new SfDatePicker()
+            {
+                DayInterval = 2
+            };
+
+            this.Content = datePicker;
+        }
+    }
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
+### How to set an interval between months
+
+DatePicker provides an option to give an interval between months using the [`SfDatePicker.MonthInterval`]() property.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:DatePickerSample"
+             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker"
+             x:Class="DatePickerSample.MainPage">
+    <ContentPage.Content>
+        <syncfusion:SfDatePicker x:Name="datePicker"
+                                 MonthInterval="2"/>
+    </ContentPage.Content>
+</ContentPage>
+
+{% endhighlight %}
+
+{% highlight c# %}  
+
+using Syncfusion.Maui.Picker;
+
+namespace DatePickerSample
+{
+    public partial class MainPage : ContentPage
+    {
+        public MainPage()
+        {
+            InitializeComponent();
+            SfDatePicker datePicker = new SfDatePicker()
+            {
+                MonthInterval = 2
+            };
+
+            this.Content = datePicker;
+        }
+    }
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
+### How to set an interval between years
+
+DatePicker provides an option to give an interval between years using the [`SfDatePicker.YearInterval`]() property.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:DatePickerSample"
+             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker"
+             x:Class="DatePickerSample.MainPage">
+    <ContentPage.Content>
+        <syncfusion:SfDatePicker x:Name="datePicker"
+                                 YearInterval="2"/>
+    </ContentPage.Content>
+</ContentPage>
+
+{% endhighlight %}
+
+{% highlight c# %}  
+
+using Syncfusion.Maui.Picker;
+
+namespace DatePickerSample
+{
+    public partial class MainPage : ContentPage
+    {
+        public MainPage()
+        {
+            InitializeComponent();
+            SfDatePicker datePicker = new SfDatePicker()
+            {
+                YearInterval = 2
+            };
+
+            this.Content = datePicker;
+        }
+    }
+}
+
+{% endhighlight %}
+
+{% endtabs %}
