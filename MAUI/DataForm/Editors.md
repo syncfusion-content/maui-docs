@@ -373,6 +373,36 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {% endhighlight %}
 {% endtabs %}
 
+#### Numeric up-down editor
+
+The numeric up-down button will be displayed in the numeric editor, When `UpDownPlacementMode` property of `DataFormNumericItem` is set to `NumericEditorUpDownPlacementMode.Inline`. By defult, the `NumericEditorUpDownPlacementMode` is `Hidden`.
+
+{% tabs %}
+{% highlight C# %}
+
+public double Amount { get; set; }
+
+
+{% endhighlight %}
+{% highlight C# %}
+
+this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+
+private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+{
+    if (e.DataFormItem != null)
+    {
+        if (e.DataFormItem.FieldName == "Amount" && e.DataFormItem is DataFormNumericItem amount)
+        {
+            amount.AllowNull = true;
+            amount.UpDownPlacementMode = NumericEditorUpDownPlacementMode.Inline;
+        }
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Masked text editor
 
 In the Masked text editor, the [SfMaskedEntry](https://help.syncfusion.com/maui/masked-entry/overview) will be loaded and DataForm Masked text editor supports the `PhoneNumber` and `CreditCard` data type property of [DataTypeAttribute](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.datatype?view=net-7.0).

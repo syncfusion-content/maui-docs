@@ -399,3 +399,26 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {% endtabs %}
 
 Here, the `Name` field will be hidden.
+
+## Change the editor height
+
+The data form editor height is changed by using the `EditorHeight` property of the [DataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html).
+
+{% tabs %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+
+private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+{
+    if (e.DataFormItem != null)
+    {
+        if (e.DataFormItem.FieldName == "Name")
+        {
+            e.DataFormItem.EditorHeight = 60;
+        }
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
