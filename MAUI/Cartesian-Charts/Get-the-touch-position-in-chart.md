@@ -9,11 +9,11 @@ documentation: ug
 
 # Get the touch position in SfCartesianChart
 
-ChartInteractiveBehavior provides the following override methods to get the x and y positions when touch the [`SfCartesianChart`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html?tabs=tabid-1).
+ChartInteractiveBehavior provides the following override methods to get the x and y positions when touching the [`SfCartesianChart`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html?tabs=tabid-1).
 
-* [`OnTouchUp`]() - Called when a user lifts their finger or release their touch input from the Chart area. 
-* [`OnTouchMove`]() - Called when a user's finger or touch input device is in contact within the Chart area and moves across it's surface.
-* [`OnTouchDown`]() -  Called when the user made the initial contact of a user's finger or touch input device with the Chart Area.
+* [`OnTouchUp`]() - Called when a user lifts their finger or releases their touch input from the Chart area. 
+* [`OnTouchMove`]() - Called when a user's finger or touch input device is in contact with the Chart area and moves across its surface.
+* [`OnTouchDown`]() -  Called when the user makes the initial contact of a user's finger or touch input device with the Chart Area.
 
 {% tabs %}
 
