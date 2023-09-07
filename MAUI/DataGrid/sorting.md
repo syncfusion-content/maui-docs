@@ -244,3 +244,109 @@ public class CustomSortComparer : IComparer<object>, ISortDirection
 }
 {% endhighlight %}
 {% endtabs %}
+
+## Load sort icon through template
+
+The SfDataGrid uses an icon to indicate the ascending and descending states of sorting. You can personalize the sorting icon by using the [SfDataGrid.SortIconTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_SortIconTemplate) property. This property allows you to define a custom template that appears in its regular form when the sort is in ascending order. It will rotate downward when the sort is in descending order. To implement this, refer to the following code snippet:
+
+{% tabs %}
+
+{% highlight xaml %}
+<syncfusion:SfDataGrid ItemsSource="{Binding OrderInfoCollection}"
+                            x:Name="dataGrid"
+                            SortingMode="Multiple"
+                            >
+        <syncfusion:SfDataGrid.SortIconTemplate>
+                <DataTemplate>
+                    <Image Source="expand_less.png"/>
+                </DataTemplate>
+        </syncfusion:SfDataGrid.SortIconTemplate>
+</syncfusion:SfDataGrid>                           
+{% endhighlight %}
+
+{% highlight c# %}
+this.dataGrid.SortingMode = DataGridSortingMode.Multiple;
+dataGrid.SortIconTemplate = new DataTemplate(() =>
+        {
+            var imageView1 = new Image()
+            {
+                Source = "expand_less.png",
+                Aspect = Aspect.AspectFit,
+            };
+            return imageView1;
+        });
+{% endhighlight %}
+{% endtabs %}
+
+![DataGrid with sort icon template](Images\sorting\maui-datagrid-sort-icon-template.png)
+
+## Load sort icon through template selector
+
+When choosing a [SortIconTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_SortIconTemplate) as a DataTemplateSelector, you have the option to supply distinct templates for both the ascending and descending states of the sorting.
+
+{% tabs %}
+
+{% highlight xaml %}
+<ContentPage.Resources>
+        <ResourceDictionary>
+            <DataTemplate x:Key="Descending">
+                <Image>
+                    <Image.Source>
+                        <FontImageSource Color="Red" Glyph="&#xe701;"
+                                 FontFamily="{OnPlatform iOS=MauiMaterialAssets, MacCatalyst=MauiMaterialAssets, WinUI=MauiMaterialAssets.ttf#, Android=MauiMaterialAssets.ttf#}"
+                                 Size="44" />
+                    </Image.Source>
+                </Image>
+            </DataTemplate>
+            <DataTemplate x:Key="Ascending">
+                <Image>
+                    <Image.Source>
+                        <FontImageSource Color="Green" Glyph="&#xe702;"
+                                 FontFamily="{OnPlatform iOS=MauiMaterialAssets, MacCatalyst=MauiMaterialAssets, WinUI=MauiMaterialAssets.ttf#, Android=MauiMaterialAssets.ttf#}"
+                                 Size="44" />
+                    </Image.Source>
+                </Image>
+            </DataTemplate>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+<ContentPage.Content>
+<syncfusion:SfDataGrid  ItemsSource="{Binding OrderInfoCollection}"
+                            x:Name="dataGrid"
+                            SortingMode="Multiple"
+                            >
+        <syncfusion:SfDataGrid.SortIconTemplate >
+            <local:SortIconTemplate AscendingTemplate="{StaticResource Ascending }" DescendingTemplate="{StaticResource Descending}" />
+        </syncfusion:SfDataGrid.SortIconTemplate>
+</syncfusion:SfDataGrid>
+<ContentPage.Content>                         
+{% endhighlight %}
+
+{% highlight c# %}
+public class SortIconTemplate : DataTemplateSelector
+{
+    public DataTemplate AscendingTemplate { get; set; }
+
+    public DataTemplate DescendingTemplate { get; set; }
+
+    protected override DataTemplate OnSelectTemplate(object item, BindableObject container)
+    {      
+        var description = item as SortColumnDescription;
+        if (description == null)
+        {
+            return null;
+        }
+
+        if (description.SortDirection == System.ComponentModel.ListSortDirection.Ascending)
+        {
+            return AscendingTemplate;
+        }
+        else
+        {
+            return DescendingTemplate;
+        }
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
+![DataGrid with sort template selector](Images\sorting\maui-datagrid-sort-template-selector.png)

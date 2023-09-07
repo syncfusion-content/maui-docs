@@ -139,3 +139,5 @@ N> 2. And, if you are using multiple pages in your application, then make sure t
 ![Getting started with .NET MAUI PDF Viewer](Images\Getting-Started\maui-pdf-viewer-getting-started.png)
 
 The **Getting Started** example project for the.NET MAUI PDF Viewer can be downloaded [here](https://github.com/SyncfusionExamples/maui-pdf-viewer-examples). 
+
+N> You can refer to our [.NET MAUI PDF Viewer](https://www.syncfusion.com/maui-controls/maui-pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI PDF Viewer Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/PdfViewer) that shows you how to render the PDF Viewer in .NET MAUI.
