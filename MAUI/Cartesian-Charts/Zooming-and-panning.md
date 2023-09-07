@@ -254,6 +254,8 @@ chart.ZoomPanBehavior = zooming;
 
 Selection zooming feature allows users to interactively choose a particular area of the chart and zoom in. By specifying [EnableSelectionZooming]() property to `true` as shown in the following code snippet, you can double tap and drag to select a range on the chart to be zoomed in. The default value of this property is false.
 
+N> To perform selection zooming on a desktop, hold the left mouse button, double-click, and drag. For mobile, hold your finger, double-click, and drag to create a selection rectangle.
+
 {% tabs %}
 
 {% highlight xaml %}
