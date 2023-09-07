@@ -130,7 +130,7 @@ public class CellStyleConverter : IValueConverter
 {
     object IValueConverter.Convert(object value, Type targetType, object parameter, CultureInfo info)
     {
-        var rowType = ((value as GridIndentCell)?.Parent as DataGridRow)?.DataRow?.RowType.ToString();
+        var rowType = ((value as DataGridIndentCell)?.Parent as DataGridRow)?.DataRow?.RowType.ToString();
         if (rowType == "HeaderRow")
             return Colors.Bisque;
         else if (rowType == "CaptionCoveredRow")
