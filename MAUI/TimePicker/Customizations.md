@@ -1212,13 +1212,225 @@ namespace TimePickerSample
 
 {% endtabs %}
 
-## Selected item customization
+## Selected Item customization
 
-[`SfTimePicker`]() allows customizing the SelectedItem's background, text color, and fonts.
+[`SfTimePicker`]() allows customizing text color and fonts for selected item.
+
+### Text-Color 
+
+Text colors of the selected item can be customized by setting the [`SfTimePicker.SelectedTextStyle`]() properties.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:TimePickerSample"
+             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker"
+             x:Class="TimePickerSample.MainPage">
+    <ContentPage.Content>
+        <syncfusion:SfTimePicker x:Name="TimePicker" >
+            <syncfusion:SfTimePicker.SelectedTextStyle >
+                <syncfusion:PickerTextStyle TextColor="Violet"/>
+            </syncfusion:SfTimePicker.SelectedTextStyle>
+        </syncfusion.SfTimePicker>
+    </ContentPage.Content>
+</ContentPage>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+using Syncfusion.Maui.Picker;
+
+namespace TimePickerSample
+{
+    public partial class MainPage : ContentPage
+    {
+        public MainPage()
+        {
+            InitializeComponent();
+            SfTimePicker timePicker = new SfTimePicker();
+            timePicker.SelectedTextStyle = new PickerTextStyle()
+            {
+                TextColor = Colors.Violet,
+            };
+
+            this.Content = timePicker;
+        }
+    }
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
+### Font 
+
+This section explains the Font customization of selected text.
+
+#### FontFamily
+
+FontFamily of the selected text can be customized by setting the [`SfTimePicker.SelectedTextStyle`]() property.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:TimePickerSample"
+             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker"
+             x:Class="TimePickerSample.MainPage">
+    <ContentPage.Content>
+        <syncfusion:SfTimePicker x:Name="TimePicker" >
+            <syncfusion:SfTimePicker.SelectedTextStyle >
+                <syncfusion:PickerTextStyle FontFamily="Times New Roman"/>
+            </syncfusion:SfTimePicker.SelectedTextStyle>
+        </syncfusion.SfTimePicker>
+    </ContentPage.Content>
+</ContentPage>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+using Syncfusion.Maui.Picker;
+
+namespace TimePickerSample
+{
+    public partial class MainPage : ContentPage
+    {
+        public MainPage()
+        {
+            InitializeComponent();
+            SfTimePicker timePicker = new SfTimePicker();
+            timePicker.SelectedTextStyle =  new PickerTextStyle()
+            {
+                FontFamily = "Times New Roman",
+            };
+
+            this.Content = timePicker;
+        }
+    }
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
+#### FontSize
+
+FontSize of the selected text can be customized by setting the [`SfTimePicker.SelectedTextStyle`]() property.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:TimePickerSample"
+             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker"
+             x:Class="TimePickerSample.MainPage">
+    <ContentPage.Content>
+        <syncfusion:SfTimePicker x:Name="TimePicker" >
+            <syncfusion:SfTimePicker.SelectedTextStyle >
+                <syncfusion:PickerTextStyle FontSize="12"/>
+            </syncfusion:SfTimePicker.SelectedTextStyle>
+        </syncfusion.SfTimePicker>
+    </ContentPage.Content>
+</ContentPage>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+using Syncfusion.Maui.Picker;
+
+namespace TimePickerSample
+{
+    public partial class MainPage : ContentPage
+    {
+        public MainPage()
+        {
+            InitializeComponent();
+            SfTimePicker timePicker = new SfTimePicker();
+            timePicker.FooterView =  new PickerTextStyle()
+            {
+                FontSize = 12,
+            };
+
+            this.Content = timePicker;
+        }
+    }
+}
+
+{% endhighlight %}
+
+{% endtabs %}   
+
+#### FontAttribute
+
+FontAttribute of the selected text can be customized by setting the [`SfTimePicker.SelectedTextStyle`]() property.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:TimePickerSample"
+             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker"
+             x:Class="TimePickerSample.MainPage">
+    <ContentPage.Content>
+        <syncfusion:SfTimePicker x:Name="TimePicker" >
+            <syncfusion:SfTimePicker.SelectedTextStyle >
+                <syncfusion:PickerTextStyle FontAttributes="Italic"/>
+            </syncfusion:SfTimePicker.SelectedTextStyle>
+        </syncfusion.SfTimePicker>
+    </ContentPage.Content>
+</ContentPage>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+using Syncfusion.Maui.Picker;
+
+namespace TimePickerSample
+{
+    public partial class MainPage : ContentPage
+    {
+        public MainPage()
+        {
+            InitializeComponent();
+            SfTimePicker timePicker = new SfTimePicker();
+            timePicker.FooterView = new PickerTextStyle()
+            {
+                FontAttributes = FontAttributes.Italic,
+            };
+
+            this.Content = timePicker;
+        }
+    }
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
+## Selection customization
+
+[`SfTimePicker`]() allows customizing the Selection's background, corner radius, stroke color and padding.
 
 ### Corner Radius
 
-The corner radius of the SelectedItem can be customized by setting the [`SfTimePicker.SelectionView`]() property.
+The corner radius of the Selection can be customized by setting the [`SfTimePicker.SelectionView`]() property.
 
 {% tabs %}
 
@@ -1270,7 +1482,7 @@ namespace TimePickerSample
 
 ### Padding
 
-The padding of the SelectedItem can be customized by setting the [`SfTimePicker.SelectionView`]() property.
+The padding of the Selection can be customized by setting the [`SfTimePicker.SelectionView`]() property.
 
 {% tabs %}
 
@@ -1322,7 +1534,7 @@ namespace TimePickerSample
 
 ### Background
 
-The background color of the SelectedItem can be customized by setting the [`SfTimePicker.SelectionView`]() property.
+The background color of the Selection can be customized by setting the [`SfTimePicker.SelectionView`]() property.
 
 {% tabs %}
 
@@ -1374,7 +1586,7 @@ namespace TimePickerSample
 
 ### Stroke color 
 
-Stroke color of the SelectedItem can be customized by setting the [`SfTimePicker.SelectionView`]() property.
+Stroke color of the Selection can be customized by setting the [`SfTimePicker.SelectionView`]() property.
 
 {% tabs %}
 

@@ -1212,13 +1212,225 @@ namespace DatePickerSample
 
 {% endtabs %}
 
-## Selected item customization
+## Selected Item customization
 
-[`SfDatePicker`]() allows customizing the SelectedItem's background, text color, and fonts.
+[`SfDatePicker`]() allows customizing text color and fonts for selected item.
+
+### Text-Color 
+
+Text colors of the selected item can be customized by setting the [`SfDatePicker.SelectedTextStyle`]() properties.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:DatePickerSample"
+             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker"
+             x:Class="DatePickerSample.MainPage">
+    <ContentPage.Content>
+        <syncfusion:SfDatePicker x:Name="datepicker" >
+            <syncfusion:SfDatePicker.SelectedTextStyle >
+                <syncfusion:PickerTextStyle TextColor="Violet"/>
+            </syncfusion:SfDatePicker.SelectedTextStyle>
+        </syncfusion.SfDatePicker>
+    </ContentPage.Content>
+</ContentPage>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+using Syncfusion.Maui.Picker;
+
+namespace DatePickerSample
+{
+    public partial class MainPage : ContentPage
+    {
+        public MainPage()
+        {
+            InitializeComponent();
+            SfDatePicker datePicker = new SfDatePicker();
+            datepicker.SelectedTextStyle = new PickerTextStyle()
+            {
+                TextColor = Colors.Violet,
+            };
+
+            this.Content = datePicker;
+        }
+    }
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
+### Font 
+
+This section explains the Font customization of selected text.
+
+#### FontFamily
+
+FontFamily of the selected text can be customized by setting the [`SfDatePicker.SelectedTextStyle`]() property.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:DatePickerSample"
+             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker"
+             x:Class="DatePickerSample.MainPage">
+    <ContentPage.Content>
+        <syncfusion:SfDatePicker x:Name="datepicker" >
+            <syncfusion:SfDatePicker.SelectedTextStyle >
+                <syncfusion:PickerTextStyle FontFamily="Times New Roman"/>
+            </syncfusion:SfDatePicker.SelectedTextStyle>
+        </syncfusion.SfDatePicker>
+    </ContentPage.Content>
+</ContentPage>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+using Syncfusion.Maui.Picker;
+
+namespace DatePickerSample
+{
+    public partial class MainPage : ContentPage
+    {
+        public MainPage()
+        {
+            InitializeComponent();
+            SfDatePicker datePicker = new SfDatePicker();
+            datepicker.SelectedTextStyle = new PickerTextStyle()
+            {
+                FontFamily = "Times New Roman",
+            };
+
+            this.Content = datePicker;
+        }
+    }
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
+#### FontSize
+
+FontSize of the selected text can be customized by setting the [`SfDatePicker.SelectedTextStyle`]() property.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:DatePickerSample"
+             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker"
+             x:Class="DatePickerSample.MainPage">
+    <ContentPage.Content>
+        <syncfusion:SfDatePicker x:Name="datepicker" >
+            <syncfusion:SfDatePicker.SelectedTextStyle >
+                <syncfusion:PickerTextStyle FontSize="12"/>
+            </syncfusion:SfDatePicker.SelectedTextStyle>
+        </syncfusion.SfDatePicker>
+    </ContentPage.Content>
+</ContentPage>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+using Syncfusion.Maui.Picker;
+
+namespace DatePickerSample
+{
+    public partial class MainPage : ContentPage
+    {
+        public MainPage()
+        {
+            InitializeComponent();
+            SfDatePicker datePicker = new SfDatePicker();
+            datepicker.SelectedTextStyle = new PickerTextStyle()
+            {
+                FontSize = 12,
+            };
+
+            this.Content = datePicker;
+        }
+    }
+}
+
+{% endhighlight %}
+
+{% endtabs %}   
+
+#### FontAttribute
+
+FontAttribute of the selected text can be customized by setting the [`SfDatePicker.SelectedTextStyle`]() property.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:DatePickerSample"
+             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker"
+             x:Class="DatePickerSample.MainPage">
+    <ContentPage.Content>
+        <syncfusion:SfDatePicker x:Name="datepicker" >
+            <syncfusion:SfDatePicker.SelectedTextStyle >
+                <syncfusion:PickerTextStyle FontAttributes="Italic"/>
+            </syncfusion:SfDatePicker.SelectedTextStyle>
+        </syncfusion.SfDatePicker>
+    </ContentPage.Content>
+</ContentPage>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+using Syncfusion.Maui.Picker;
+
+namespace DatePickerSample
+{
+    public partial class MainPage : ContentPage
+    {
+        public MainPage()
+        {
+            InitializeComponent();
+            SfDatePicker datePicker = new SfDatePicker();
+            datepicker.SelectedTextStyle = new PickerTextStyle()
+            {
+                FontAttributes = FontAttributes.Italic,
+            };
+
+            this.Content = datePicker;
+        }
+    }
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
+## Selection customization
+
+[`SfDatePicker`]() allows customizing the Selection's background, corner radius, stroke , and padding.
 
 ### Corner Radius
 
-The corner radius of the SelectedItem can be customized by setting the [`SfDatePicker.SelectionView`]() property.
+The corner radius of the Selection can be customized by setting the [`SfDatePicker.SelectionView`]() property.
 
 {% tabs %}
 
@@ -1270,7 +1482,7 @@ namespace DatePickerSample
 
 ### Padding
 
-The padding of the SelectedItem can be customized by setting the [`SfDatePicker.SelectionView`]() property.
+The padding of the Selection can be customized by setting the [`SfDatePicker.SelectionView`]() property.
 
 {% tabs %}
 
@@ -1322,7 +1534,7 @@ namespace DatePickerSample
 
 ### Background
 
-The background color of the SelectedItem can be customized by setting the [`SfDatePicker.SelectionView`]() property.
+The background color of the Selection can be customized by setting the [`SfDatePicker.SelectionView`]() property.
 
 {% tabs %}
 
@@ -1374,7 +1586,7 @@ namespace DatePickerSample
 
 ### Stroke color 
 
-Stroke color of the SelectedItem can be customized by setting the [`SfDatePicker.SelectionView`]() property.
+Stroke color of the Selection can be customized by setting the [`SfDatePicker.SelectionView`]() property.
 
 {% tabs %}
 
