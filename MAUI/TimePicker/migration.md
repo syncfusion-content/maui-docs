@@ -497,7 +497,7 @@ timePicker.Format = PickerTimeFormat.h_mm_ss_tt;
 <tr>
 <td>Nil</td>
 <td>{{'[DividerColor]()'| markdownify }}</td>
-<td>Defines the divider color for the column header.</td>
+<td>Defines the divider color for the header.</td>
 </tr>
 </table>
 

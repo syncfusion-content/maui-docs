@@ -230,14 +230,14 @@ datePicker.Format = PickerDateFormat.MM_dd_yyyy;
 <td>Get or set the format that is used to change the format of SfDatePicker.</td>
 </tr>
 <tr>
-<td>{{'[MinimumDate](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.SfDatePicker.html#Syncfusion_XForms_Pickers_SfDatePicker_MinimumDateProperty)'| markdownify }}</td>
-<td>{{'[MinimumDate]()'| markdownify }}</td>
-<td>Gets or sets the minimum date to restrict the visible dates in the SfDatePicker.</td>
-</tr>
-<tr>
 <td>{{'[MaximumDate](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.SfDatePicker.html#Syncfusion_XForms_Pickers_SfDatePicker_MaximumDateProperty)'| markdownify }}</td>
 <td>{{'[MaximumDate]()'| markdownify }}</td>
 <td>Gets or sets the maximum date to restrict the visible dates in the SfDatePicker.</td>
+</tr>
+<tr>
+<td>{{'[MinimumDate](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.SfDatePicker.html#Syncfusion_XForms_Pickers_SfDatePicker_MinimumDateProperty)'| markdownify }}</td>
+<td>{{'[MinimumDate]()'| markdownify }}</td>
+<td>Gets or sets the minimum date to restrict the visible dates in the SfDatePicker.</td>
 </tr>
 <tr>
 <td>{{'[MonthHeaderText](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.SfDatePicker.html#Syncfusion_XForms_Pickers_SfDatePicker_MonthHeaderTextProperty)'| markdownify }}</td>
