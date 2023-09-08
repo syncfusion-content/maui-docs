@@ -302,17 +302,17 @@ datePicker.Format = PickerDateFormat.MM_dd_yyyy;
 <tr>
 <td>{{'[ColumnHeaderFontAttributes](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_ColumnHeaderFontAttributeProperty)'| markdownify }}</td>
 <td>{{'[[FontAttributes]()(From [TextStyle]() of [DatePickerColumnHeaderView]())]'| markdownify }}</td>
-<td>Gets or sets the font attribute of the text style.</td>
+<td>Gets or sets the font attribute of the column header text style.</td>
 </tr>
 <tr>
 <td>{{'[ColumnHeaderFontFamily](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_ColumnHeaderFontFamilyProperty)'| markdownify }}</td>
 <td>{{'[[FontFamily]()(From [TextStyle]() of [DatePickerColumnHeaderView]())]'| markdownify }}</td>
-<td>Gets or sets the font family of the text style.</td>
+<td>Gets or sets the font family of the column header text style.</td>
 </tr>
 <tr>
 <td>{{'[ColumnHeaderFontSize](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_ColumnHeaderFontSizeProperty)'| markdownify }}</td>
 <td>{{'[[FontSize]()(From [TextStyle]() of [DatePickerColumnHeaderView]())]'| markdownify }}</td>
-<td>Gets or sets the font size of the text style.</td>
+<td>Gets or sets the font size of the column header text style.</td>
 </tr>
 <tr>
 <td>{{'[ColumnHeaderHeight](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_ColumnHeaderHeightProperty)'| markdownify }}</td>
@@ -322,7 +322,7 @@ datePicker.Format = PickerDateFormat.MM_dd_yyyy;
 <tr>
 <td>{{'[ColumnHeaderTextColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_HeaderTextColorProperty)'| markdownify }}</td>
 <td>{{'[[TextColor]()(From [TextStyle]() of [DatePickerColumnHeaderView]())]'| markdownify }}</td>
-<td>Gets or sets the text color of the text style.</td>
+<td>Gets or sets the text color of the column header text style.</td>
 </tr>
 <tr>
 <td>{{'[EnableLooping](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_EnableLoopingProperty)'| markdownify }}</td>
@@ -347,17 +347,17 @@ datePicker.Format = PickerDateFormat.MM_dd_yyyy;
 <tr>
 <td>{{'[HeaderFontAttribute](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_HeaderFontAttributeProperty)'| markdownify }}</td>
 <td>{{'[[FontAttribute]()(From [TextStyle]() of [PickerHeaderView]())]'| markdownify }}</td>
-<td>Gets or sets the font attribute of the text style.</td>
+<td>Gets or sets the font attribute of the header text style.</td>
 </tr>
 <tr>
 <td>{{'[HeaderFontFamily](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_HeaderFontFamilyProperty)'| markdownify }}</td>
 <td>{{'[[FontFamily]()(From [TextStyle]() of [PickerHeaderView]())]'| markdownify }}</td>
-<td>Gets or sets the font family of the text style.</td>
+<td>Gets or sets the font family of the header text style.</td>
 </tr>
 <tr>
 <td>{{'[HeaderFontSize](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_HeaderFontSizeProperty)'| markdownify }}</td>
 <td>{{'[[FontSize]()(From [TextStyle]() of [PickerHeaderView]())]'| markdownify }}</td>
-<td>Gets or sets the font size of the text style.</td>
+<td>Gets or sets the font size of the header text style.</td>
 </tr>
 <tr>
 <td>{{'[HeaderHeight](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_HeaderHeightProperty)'| markdownify }}</td>
@@ -367,7 +367,7 @@ datePicker.Format = PickerDateFormat.MM_dd_yyyy;
 <tr>
 <td>{{'[HeaderTextColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_HeaderTextColorProperty)'| markdownify }}</td>
 <td>{{'[[TextColor]()(From [TextStyle]() of [PickerHeaderView]())]'| markdownify }}</td>
-<td>Gets or sets the text color of the text style.</td>
+<td>Gets or sets the text color of the header text style.</td>
 </tr>
 <tr>
 <td>{{'[HeaderView](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_HeaderViewProperty)'| markdownify }}</td>
@@ -412,22 +412,22 @@ datePicker.Format = PickerDateFormat.MM_dd_yyyy;
 <tr>
 <td>{{'[SelectedItemFontAttributes](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_SelectedItemFontAttributeProperty)'| markdownify }}</td>
 <td>{{'[[FontAttributes]()([SelectedTextStyle]())]'| markdownify }}</td>
-<td>Gets or sets the font attribute of the text style.</td>
+<td>Gets or sets the font attribute of the selected text style.</td>
 </tr>
 <tr>
 <td>{{'[SelectedItemFontFamily](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_SelectedItemFontFamilyProperty)'| markdownify }}</td>
 <td>{{'[[FontFamily]()([SelectedTextStyle]())]'| markdownify }}</td>
-<td>Gets or sets the font family of the text style.</td>
+<td>Gets or sets the font family of the selected text style.</td>
 </tr>
 <tr>
 <td>{{'[SelectedItemFontSize](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_SelectedItemFontSizeProperty)'| markdownify }}</td>
 <td>{{'[[FontSize]()([SelectedTextStyle]())]'| markdownify }}</td>
-<td>Gets or sets the font size of the text style.</td>
+<td>Gets or sets the font size of the selected text style.</td>
 </tr>
 <tr>
 <td>{{'[SelectedItemTextColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_SelectedItemTextColorProperty)'| markdownify }}</td>
 <td>{{'[[TextColor]()([SelectedTextStyle]())]'| markdownify }}</td>
-<td>Gets or sets the text color of the text style.</td>
+<td>Gets or sets the text color of the selected text style.</td>
 </tr>
 <tr>
 <td>{{'[ShowColumnHeader](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_ShowColumnHeaderProperty)'| markdownify }}</td>
@@ -446,23 +446,23 @@ datePicker.Format = PickerDateFormat.MM_dd_yyyy;
 </tr>
 <tr>
 <td>{{'[UnSelectedItemFontAttributes](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_UnselectedItemFontAttributeProperty)'| markdownify }}</td>
-<td>Nil</td>
-<td>Not Supported.</td>
+<td>{{'[[FontAttributes]()([TextStyle]())]'| markdownify }}</td>
+<td>Gets or sets the font attributes of the unselected text style..</td>
 </tr>
 <tr>
 <td>{{'[UnSelectedItemFontFamily](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_UnselectedItemFontFamilyProperty)'| markdownify }}</td>
-<td>Nil</td>
-<td>Not Supported.</td>
+<td>{{'[[FontFamily]()([TextStyle]())]'| markdownify }}</td>
+<td>Gets or sets the font family of the unselected text style..</td>
 </tr>
 <tr>
 <td>{{'[UnSelectedItemFontSize](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_UnselectedItemFontSizeProperty)'| markdownify }}</td>
-<td>Nil</td>
-<td>Not Supported.</td>
+<td>{{'[[FontSize]()([TextStyle]())]'| markdownify }}</td>
+<td>Gets or sets the font size of the unselected text style..</td>
 </tr>
 <tr>
 <td>{{'[UnSelectedItemTextColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_UnselectedItemTextColorProperty)'| markdownify }}</td>
-<td>Nil</td>
-<td>Not Supported.</td>
+<td>{{'[[TextColor]()([TextStyle]())]'| markdownify }}</td>
+<td>Gets or sets the text color of the unselected text style..</td>
 </tr>
 <tr>
 <td>Nil</td>
@@ -476,8 +476,103 @@ datePicker.Format = PickerDateFormat.MM_dd_yyyy;
 <table>
 <tr>
 <th>Xamarin SfDatePicker</th>
+<th>.NET MAUI SfDatePicker</th></tr>
+<tr>
+<td>
+{% tabs %}
+
+{% highlight xaml %}
+
+<ContentPage
+xmlns:syncfusion="clr-namespace:Syncfusion.XForms.Pickers;assembly=Syncfusion.SfPicker.XForms">
+
+    <syncfusion:SfDatePicker ShowColumnHeader="True"/>
+
+</ContentPage>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+using Syncfusion.SfPicker.XForms;
+...
+
+SfDatePicker datePicker = new SfDatePicker();
+datePicker.ShowColumnHeader = true;
+this.Content = datePicker;
+{% endhighlight %}
+
+{% endtabs %}
+
+</td>
+<td>
+{% tabs %}
+
+{% highlight xaml %}
+
+<ContentPage
+xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+
+    <syncfusion:SfDatePicker>
+        <syncfusion:SfDatePicker.ColumnHeaderView>
+            <syncfusion:DatePickerColumnHeaderView Height="50"/>
+        </syncfusion:SfDatePicker.ColumnHeaderView>
+    </syncfusion:SfDatePicker>
+
+</ContentPage>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+using Syncfusion.Maui.Picker;
+...
+
+SfDatePicker datePicker = new SfDatePicker();
+datePicker.ColumnHeaderView.Height = 50;
+this.Content = datePicker;
+
+{% endhighlight %}
+
+{% endtabs %}
+</td></tr>
+</table>
+
+<table>
+<tr>
+<th>Xamarin SfDatePicker</th>
 <th>.NET MAUI SfDatePicker</th>
 <th>Description</th>
+</tr>
+<tr>
+<td>{{'[ColumnHeaderBackgroundColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_ColumnHeaderBackgroundColorProperty)'| markdownify }}</td>
+<td>{{'[[BackgroundColor]()]'| markdownify }}</td>
+<td>Gets or sets the background color of the column header.</td>
+</tr>
+<tr>
+<td>{{'[ColumnHeaderFontAttributes](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_ColumnHeaderFontAttributeProperty)'| markdownify }}</td>
+<td>{{'[[FontAttributes]()(From [TextStyle]())]'| markdownify }}</td>
+<td>Gets or sets the font attribute of the column header text style.</td>
+</tr>
+<tr>
+<td>{{'[ColumnHeaderFontFamily](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_ColumnHeaderFontFamilyProperty)'| markdownify }}</td>
+<td>{{'[[FontFamily]()(From [TextStyle]())]'| markdownify }}</td>
+<td>Gets or sets the font family of the column header text style.</td>
+</tr>
+<tr>
+<td>{{'[ColumnHeaderFontSize](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_ColumnHeaderFontSizeProperty)'| markdownify }}</td>
+<td>{{'[[FontSize]()(From [TextStyle]())]'| markdownify }}</td>
+<td>Gets or sets the font size of the column header text style.</td>
+</tr>
+<tr>
+<td>{{'[ColumnHeaderHeight](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_ColumnHeaderHeightProperty)'| markdownify }}</td>
+<td>{{'[[Height]()]'| markdownify }}</td>
+<td>Gets or sets the height of the column header.</td>
+</tr>
+<tr>
+<td>{{'[ColumnHeaderTextColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_HeaderTextColorProperty)'| markdownify }}</td>
+<td>{{'[[TextColor]()(From [TextStyle]())]'| markdownify }}</td>
+<td>Gets or sets the text color of the column header text style.</td>
 </tr>
 <tr>
 <td>Nil</td>
@@ -491,8 +586,103 @@ datePicker.Format = PickerDateFormat.MM_dd_yyyy;
 <table>
 <tr>
 <th>Xamarin SfDatePicker</th>
+<th>.NET MAUI SfDatePicker</th></tr>
+<tr>
+<td>
+{% tabs %}
+
+{% highlight xaml %}
+
+<ContentPage
+xmlns:syncfusion="clr-namespace:Syncfusion.XForms.Pickers;assembly=Syncfusion.SfPicker.XForms">
+
+    <syncfusion:SfDatePicker ShowHeader="True"/>
+
+</ContentPage>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+using Syncfusion.SfPicker.XForms;
+...
+
+SfDatePicker datePicker = new SfDatePicker();
+datePicker.ShowHeader = true; 
+this.Content = datePicker;
+{% endhighlight %}
+
+{% endtabs %}
+
+</td>
+<td>
+{% tabs %}
+
+{% highlight xaml %}
+
+<ContentPage
+xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+
+    <syncfusion:SfDatePicker>
+        <syncfusion:SfDatePicker.HeaderView>
+            <syncfusion:PickerHeaderView Height="50"/>
+        </syncfusion:SfDatePicker.HeaderView>
+    </syncfusion:SfDatePicker>
+
+</ContentPage>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+using Syncfusion.Maui.Picker;
+...
+
+SfDatePicker datePicker = new SfDatePicker();
+datePicker.HeaderView.Height = 50;
+this.Content = datePicker;
+
+{% endhighlight %}
+
+{% endtabs %}
+</td></tr>
+</table>
+
+<table>
+<tr>
+<th>Xamarin SfDatePicker</th>
 <th>.NET MAUI SfDatePicker</th>
 <th>Description</th>
+</tr>
+<tr>
+<td>{{'[HeaderBackgroundColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_HeaderBackgroundColorProperty)'| markdownify }}</td>
+<td>{{'[[BackgroundColor]()]'| markdownify }}</td>
+<td>Gets or sets the background color of the header.</td>
+</tr>
+<tr>
+<td>{{'[HeaderFontAttribute](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_HeaderFontAttributeProperty)'| markdownify }}</td>
+<td>{{'[[FontAttribute]()(From [TextStyle]())]'| markdownify }}</td>
+<td>Gets or sets the font attribute of the header text style.</td>
+</tr>
+<tr>
+<td>{{'[HeaderFontFamily](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_HeaderFontFamilyProperty)'| markdownify }}</td>
+<td>{{'[[FontFamily]()(From [TextStyle]())]'| markdownify }}</td>
+<td>Gets or sets the font family of the header text style.</td>
+</tr>
+<tr>
+<td>{{'[HeaderFontSize](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_HeaderFontSizeProperty)'| markdownify }}</td>
+<td>{{'[[FontSize]()(From [TextStyle]())]'| markdownify }}</td>
+<td>Gets or sets the font size of the header text style.</td>
+</tr>
+<tr>
+<td>{{'[HeaderHeight](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_HeaderHeightProperty)'| markdownify }}</td>
+<td>{{'[[Height]()]'| markdownify }}</td>
+<td>Gets or sets the height of the header.</td>
+</tr>
+<tr>
+<td>{{'[HeaderTextColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_HeaderTextColorProperty)'| markdownify }}</td>
+<td>{{'[[TextColor]()(From [TextStyle]())]'| markdownify }}</td>
+<td>Gets or sets the text color of the header text style.</td>
 </tr>
 <tr>
 <td>Nil</td>
@@ -511,8 +701,83 @@ datePicker.Format = PickerDateFormat.MM_dd_yyyy;
 <table>
 <tr>
 <th>Xamarin SfDatePicker</th>
+<th>.NET MAUI SfDatePicker</th></tr>
+<tr>
+<td>
+{% tabs %}
+
+{% highlight xaml %}
+
+<ContentPage
+xmlns:syncfusion="clr-namespace:Syncfusion.XForms.Pickers;assembly=Syncfusion.SfPicker.XForms">
+
+    <syncfusion:SfDatePicker ShowFooter="True"/>
+
+</ContentPage>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+using Syncfusion.SfPicker.XForms;
+...
+
+SfDatePicker datepicker = new SfDatePicker();
+datepicker.ShowFooter = true; 
+this.Content = datepicker;
+{% endhighlight %}
+
+{% endtabs %}
+
+</td>
+<td>
+{% tabs %}
+
+{% highlight xaml %}
+
+<ContentPage
+xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+
+    <syncfusion:SfDatePicker>
+        <syncfusion:SfDatePicker.FooterView>
+            <syncfusion:PickerFooterView Height="50"/>
+        </syncfusion:SfDatePicker.FooterView>
+    </syncfusion:SfDatePicker>
+
+</ContentPage>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+using Syncfusion.Maui.Picker;
+...
+
+SfDatePicker datepicker = new SfDatePicker();
+datepicker.FooterView.Height = 50;
+this.Content = datepicker;
+
+{% endhighlight %}
+
+{% endtabs %}
+</td></tr>
+</table>
+
+<table>
+<tr>
+<th>Xamarin SfDatePicker</th>
 <th>.NET MAUI SfDatePicker</th>
 <th>Description</th>
+</tr>
+<tr>
+<td>{{'[CancelButtonBackgroundColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_CancelButtonBackgroundColorProperty)'| markdownify }}</td>
+<td>{{'[[BackgroundColor]()]'| markdownify }}</td>
+<td>Gets or sets the background color of the footer.</td>
+</tr>
+<tr>
+<td>{{'[FooterHeight](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_FooterHeightProperty)'| markdownify }}</td>
+<td>{{'[[Height]()]'| markdownify }}</td>
+<td>Gets or sets the height of the footer view.</td>
 </tr>
 <tr>
 <td>Nil</td>
@@ -534,9 +799,84 @@ datePicker.Format = PickerDateFormat.MM_dd_yyyy;
 <td>{{'[ShowOkButton]()'| markdownify }}</td>
 <td>Defines the show ok button for the footer.</td>
 </tr>
+<tr>
+<td>{{'[OkButtonBackgroundColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_OKButtonBackgroundColorProperty)'| markdownify }}</td>
+<td>{{'[[BackgroundColor]()]'| markdownify }}</td>
+<td>Gets or sets the background color of the footer.</td>
+</tr>
+<tr>
+<td>{{'[OkButtonTextColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_OKButtonTextColorProperty)'| markdownify }}</td>
+<td>{{'[[TextColor]()(From [TextStyle]())]'| markdownify }}</td>
+<td>Gets or sets the text color of the text style.</td>
+</tr>
 </table>
 
 ## Picker Selection View
+
+<table>
+<tr>
+<th>Xamarin SfDatePicker</th>
+<th>.NET MAUI SfDatePicker</th></tr>
+<tr>
+<td>
+{% tabs %}
+
+{% highlight xaml %}
+
+<ContentPage
+xmlns:syncfusion="clr-namespace:Syncfusion.XForms.Pickers;assembly=Syncfusion.SfPicker.XForms">
+
+    <syncfusion:SfDatePicker SelectionBackgroundColor="Red"/>
+
+</ContentPage>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+using Syncfusion.SfPicker.XForms;
+...
+
+SfDatePicker datePicker = new SfDatePicker();
+datePicker.SelectionBackgroundColor = Colors.Red; 
+this.Content = datePicker;
+{% endhighlight %}
+
+{% endtabs %}
+
+</td>
+<td>
+{% tabs %}
+
+{% highlight xaml %}
+
+<ContentPage
+xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+
+    <syncfusion:SfDatePicker>
+        <syncfusion:SfDatePicker.SelectionView>
+            <syncfusion:PickerSelectionView Background="Red"/>
+        </syncfusion:SfDatePicker.SelectionView>
+    </syncfusion:SfDatePicker>
+
+</ContentPage>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+using Syncfusion.Maui.Picker;
+...
+
+SfDatePicker datePicker = new SfDatePicker();
+datePicker.SelectionView.Background = Brush.Red;
+this.Content = datePicker;
+
+{% endhighlight %}
+
+{% endtabs %}
+</td></tr>
+</table>
 
 <table>
 <tr>
@@ -558,6 +898,11 @@ datePicker.Format = PickerDateFormat.MM_dd_yyyy;
 <td>Nil</td>
 <td>{{'[Padding]()'| markdownify }}</td>
 <td>Defines the padding for the selection.</td>
+</tr>
+<tr>
+<td>{{'[SelectionBackgroundColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_SelectionBackgroundColorProperty)'| markdownify }}</td>
+<td>{{'[[BackgroundColor]()]'| markdownify }}</td>
+<td>Gets or sets the background color of the selected item.</td>
 </tr>
 </table>
 
