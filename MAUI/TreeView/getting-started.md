@@ -11,7 +11,6 @@ documentation: ug
 
 This section provides a quick overview for getting started with the TreeView with the .NET Maui TreeView(SfTreeView) for Maui. Walk through the entire process of creating real world of this control.
 
-
 ## Creating an application using the .NET MAUI TreeView
 
  1. Create a new .NET MAUI application in Visual Studio.
@@ -365,6 +364,7 @@ public partial class MainPage : ContentPage
         SfTreeView treeView = new SfTreeView();
         FileManagerViewModel viewModel = new FileManagerViewModel();
         treeView.ItemsSource = viewModel.ImageNodeInfo; 
+        treeView.ChildPropertyName = "SubFiles";
         this.Content = treeView;
     }    
 }
