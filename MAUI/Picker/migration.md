@@ -203,8 +203,8 @@ this.Content = picker;
 </tr>
 <tr>
 <td>{{'[HeaderView](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_HeaderViewProperty)'| markdownify }}</td>
-<td>{{'[BaseColumnHeaderView]()'| markdownify }}</td>
-<td>Gets or sets the value of column header view. This property can be used to customize the of header column in Picker.</td>
+<td>{{'[HeaderView]()'| markdownify }}</td>
+<td>Gets or sets the value of header view. This property can be used to customize the of header in SfPicker.</td>
 </tr>
 <tr>
 <td>{{'[FooterView](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_FooterViewProperty)'| markdownify }}</td>
