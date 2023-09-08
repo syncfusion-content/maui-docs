@@ -314,11 +314,6 @@ this.Content = picker;
 <td>Not Supported.</td>
 </tr>
 <tr>
-<td>{{'[UnSelectedItemFontFamily](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_UnselectedItemFontFamilyProperty)'| markdownify }}</td>
-<td>Nil</td>
-<td>Not Supported.</td>
-</tr>
-<tr>
 <td>{{'[BackgroundColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_BackgroundColorProperty)'| markdownify }}</td>
 <td>{{'[Background]()'| markdownify }}</td>
 <td>Gets or sets the background color of the picker.</td>
@@ -330,8 +325,8 @@ this.Content = picker;
 </tr>
 <tr>
 <td>{{'[UnSelectedItemTextColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_UnselectedItemTextColorProperty)'| markdownify }}</td>
-<td>Nil</td>
-<td>Not Supported.</td>
+<td>{{'[[TextColor]()(From [TextStyle]() of [PickerBase]())]'| markdownify }}</td>
+<td>Gets or sets the text color of the text style.</td>
 </tr>
 <tr>
 <td>{{'[ColumnHeaderFontAttributes](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_ColumnHeaderFontAttributeProperty)'| markdownify }}</td>
@@ -351,12 +346,12 @@ this.Content = picker;
 <tr>
 <td>{{'[UnSelectedItemFontAttributes](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_UnselectedItemFontAttributeProperty)'| markdownify }}</td>
 <td>{{'[[FontAttributes]()(From [TextStyle]() of [PickerBase]())]'| markdownify }}</td>
-<td>Not Supported.</td>
+<td>Gets or sets the font attribute of the text style.</td>
 </tr>
 <tr>
 <td>{{'[UnSelectedItemFontSize](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_UnselectedItemFontSizeProperty)'| markdownify }}</td>
 <td>{{'[[FontSize]()(From [TextStyle]() of [PickerBase]())]'| markdownify }}</td>
-<td>Not Supported.</td>
+<td>Gets or sets the font size of the text style.</td>
 </tr>
 <tr>
 <td>{{'[SelectedItemTextColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_SelectedItemTextColorProperty)'| markdownify }}</td>
@@ -885,31 +880,6 @@ this.Content = picker;
 <td>Nil</td>
 <td>{{'[ShowOkButton]()'| markdownify }}</td>
 <td>Gets or sets a value indicating whether to show the cancel button in the footer view of SfPicker.</td>
-</tr>
-</table>
-
-## Picker Selection View
-
-<table>
-<tr>
-<th>Xamarin SfPicker</th>
-<th>.NET MAUI SfPicker</th>
-<th>Description</th>
-</tr>
-<tr>
-<td>Nil</td>
-<td>{{'[Stroke]()'| markdownify }}</td>
-<td>Defines the stroke color for the selection.</td>
-</tr>
-<tr>
-<td>Nil</td>
-<td>{{'[CornerRadius]()'| markdownify }}</td>
-<td>Defines the corner radius of the selection.</td>
-</tr>
-<tr>
-<td>Nil</td>
-<td>{{'[Padding]()'| markdownify }}</td>
-<td>Defines the padding for the selection.</td>
 </tr>
 </table>
 
