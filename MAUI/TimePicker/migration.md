@@ -215,6 +215,11 @@ timePicker.Format = PickerTimeFormat.h_mm_ss_tt;
 <td>Get or set the format that is used to change the format of SfTimePicker.</td>
 </tr>
 <tr>
+<td>{{'[HeaderText](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.SfTimePicker.html#Syncfusion_XForms_Pickers_SfTimePicker_HeaderText)'| markdownify }}</td>
+<td>{{'[[Text]()(From [PickerHeaderView]())]'| markdownify }}</td>
+<td>Gets or sets the header text to change the text of the header.</td>
+</tr>
+<tr>
 <td>{{'[HourHeaderText](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.SfTimePicker.html#Syncfusion_XForms_Pickers_SfTimePicker_HourHeaderText)'| markdownify }}</td>
 <td>{{'[[HourHeaderText]()(From [TimePickerColumnHeaderView]())]'| markdownify }}</td>
 <td>Gets or sets the hour header text to change the hour column header.</td>
