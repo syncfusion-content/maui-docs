@@ -254,7 +254,7 @@ The [Show]() method is used to activate the tooltip at the specified location.
 
         private void Button_Clicked(object sender, EventArgs e)
         {
-            //pointX - determines the x position of tooltip, pointY - determines the y position of tooltip and bool value determines whether the tooltip should be animated while displaying.
+            //pointX - determines the x position of the tooltip, pointY - determines the y position of the tooltip and the bool value determines whether the tooltip should be animated while displaying.
             
             tooltip.Show(pointX, pointY, true);
         }
