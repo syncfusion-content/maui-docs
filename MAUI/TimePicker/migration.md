@@ -200,62 +200,62 @@ timePicker.Format = PickerTimeFormat.h_mm_ss_tt;
 <th>Description</th>
 </tr>
 <tr>
-<td>{{'[CancelCommand](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.SfTimePicker.html#Syncfusion_XForms_Pickers_SfTimePicker_CancelCommandProperty)'| markdownify }}</td>
+<td>{{'[CancelCommand](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.SfTimePicker.html#Syncfusion_XForms_Pickers_SfTimePicker_CancelCommand)'| markdownify }}</td>
 <td>Nil</td>
 <td>Not Supported.</td>
 </tr>
 <tr>
-<td>{{'[CommandParameter](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.SfTimePicker.html#Syncfusion_XForms_Pickers_SfTimePicker_CommandParameterProperty)'| markdownify }}</td>
+<td>{{'[CommandParameter](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.SfTimePicker.html#Syncfusion_XForms_Pickers_SfTimePicker_CommandParameter)'| markdownify }}</td>
 <td>Nil</td>
 <td>Not Supported.</td>
 </tr>
 <tr>
-<td>{{'[Format](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.SfTimePicker.html#Syncfusion_XForms_Pickers_SfTimePicker_FormatProperty)'| markdownify }}</td>
+<td>{{'[Format](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.SfTimePicker.html#Syncfusion_XForms_Pickers_SfTimePicker_Format)'| markdownify }}</td>
 <td>{{'[Format]()'| markdownify }}</td>
 <td>Get or set the format that is used to change the format of SfTimePicker.</td>
 </tr>
 <tr>
-<td>{{'[HourHeaderText](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.SfTimePicker.html#Syncfusion_XForms_Pickers_SfTimePicker_HourHeaderTextProperty)'| markdownify }}</td>
+<td>{{'[HourHeaderText](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.SfTimePicker.html#Syncfusion_XForms_Pickers_SfTimePicker_HourHeaderText)'| markdownify }}</td>
 <td>{{'[[HourHeaderText]()(From [TimePickerColumnHeaderView]())]'| markdownify }}</td>
 <td>Gets or sets the hour header text to change the hour column header.</td>
 </tr>
 <tr>
-<td>{{'[HourInterval](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.SfTimePicker.html#Syncfusion_XForms_Pickers_SfTimePicker_HourIntervalProperty)'| markdownify }}</td>
+<td>{{'[HourInterval](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.SfTimePicker.html#Syncfusion_XForms_Pickers_SfTimePicker_HourInterval)'| markdownify }}</td>
 <td>{{'[HourInterval]()'| markdownify }}</td>
 <td>Gets or sets the hour interval to restrict the visible hours.</td>
 </tr>
 <tr>
-<td>{{'[MeridiemHeaderText](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.SfTimePicker.html#Syncfusion_XForms_Pickers_SfTimePicker_MeridiemHeaderTextProperty)'| markdownify }}</td>
+<td>{{'[MeridiemHeaderText](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.SfTimePicker.html#Syncfusion_XForms_Pickers_SfTimePicker_MeridiemHeaderText)'| markdownify }}</td>
 <td>{{'[[MeridiemHeaderText]()(From [TimePickerColumnHeaderView]())]'| markdownify }}</td>
 <td>Gets or sets the meridiem header text to change the meridiem column header.</td>
 </tr>
 <tr>
-<td>{{'[MinuteHeaderText](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.SfTimePicker.html#Syncfusion_XForms_Pickers_SfTimePicker_MinuteHeaderTextProperty)'| markdownify }}</td>
-<td>{{'[[MinuteHeaderText]()(From [TimePickerColumnHeaderView]())]'| markdownify }}</td>
-<td>Gets or sets the hour header text to change the hour column header.</td>
-</tr>
-<tr>
-<td>{{'[MinuteInterval](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.SfTimePicker.html#Syncfusion_XForms_Pickers_SfTimePicker_MinuteIntervalProperty)'| markdownify }}</td>
+<td>{{'[MinuteInterval](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.SfTimePicker.html#Syncfusion_XForms_Pickers_SfTimePicker_MinuteInterval)'| markdownify }}</td>
 <td>{{'[MinuteInterval]()'| markdownify }}</td>
 <td>Gets or sets the minute interval to restrict the visible minutes.</td>
 </tr>
 <tr>
-<td>{{'[OkCommand](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.SfTimePicker.html#Syncfusion_XForms_Pickers_SfTimePicker_OkCommandProperty)'| markdownify }}</td>
+<td>{{'[MinutesHeaderText](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.SfTimePicker.html#Syncfusion_XForms_Pickers_SfTimePicker_MinutesHeaderText)'| markdownify }}</td>
+<td>{{'[[MinuteHeaderText]()(From [TimePickerColumnHeaderView]())]'| markdownify }}</td>
+<td>Gets or sets the hour header text to change the hour column header.</td>
+</tr>
+<tr>
+<td>{{'[OkCommand](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.SfTimePicker.html#Syncfusion_XForms_Pickers_SfTimePicker_OkCommand)'| markdownify }}</td>
 <td>Nil</td>
 <td>Not Supported.</td>
 </tr>
 <tr>
-<td>{{'[SecondHeaderText](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.SfTimePicker.html#Syncfusion_XForms_Pickers_SfTimePicker_SecondHeaderTextProperty)'| markdownify }}</td>
-<td>{{'[[SecondHeaderText]()(From [TimePickerColumnHeaderView]())]'| markdownify }}</td>
-<td>Gets or sets the hour header text to change the hour column header.</td>
-</tr>
-<tr>
-<td>{{'[SecondInterval](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.SfTimePicker.html#Syncfusion_XForms_Pickers_SfTimePicker_SecondIntervalProperty)'| markdownify }}</td>
+<td>{{'[SecondInterval](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.SfTimePicker.html#Syncfusion_XForms_Pickers_SfTimePicker_SecondInterval)'| markdownify }}</td>
 <td>{{'[SecondInterval]()'| markdownify }}</td>
 <td>Gets or sets the second interval to restrict the visible seconds.</td>
 </tr>
 <tr>
-<td>{{'[Time](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.SfTimePicker.html#Syncfusion_XForms_Pickers_SfTimePicker_TimeProperty)'| markdownify }}</td>
+<td>{{'[SecondHeaderText](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.SfTimePicker.html#Syncfusion_XForms_Pickers_SfTimePicker_SecondsHeaderText)'| markdownify }}</td>
+<td>{{'[[SecondHeaderText]()(From [TimePickerColumnHeaderView]())]'| markdownify }}</td>
+<td>Gets or sets the hour header text to change the hour column header.</td>
+</tr>
+<tr>
+<td>{{'[Time](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.SfTimePicker.html#Syncfusion_XForms_Pickers_SfTimePicker_Time)'| markdownify }}</td>
 <td>{{'[SelectedTime]()'| markdownify }}</td>
 <td>Gets or sets the selected time to select the particular time of the time picker.</td>
 </tr>
