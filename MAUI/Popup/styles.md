@@ -279,6 +279,34 @@ public partial class MainPage : ContentPage
 
 ![Displaying a .NET MAUI Popup with stroke customization](Images/styles/maui-popup-with-stroke-customization.png)
 
+## popup background
+
+The `SfPopup` allows to customize the background color of the popup view using the `PopupBackground` property.
+
+{% tabs %}
+{% highlight xaml hl_lines="3" %}
+    <sfPopup:SfPopup x:Name="popup">
+        <sfPopup:SfPopup.PopupStyle>
+            <sfPopup:PopupStyle PopupBackground="#C3B0D6" />
+        </sfPopup:SfPopup.PopupStyle>
+    </sfPopup:SfPopup>
+{% endhighlight %}
+{% highlight c# hl_lines="8" %}
+public partial class MainPage : ContentPage
+{
+    SfPopup popup;
+    public MainPage()
+    {
+        InitializeComponent();
+        popup = new SfPopup();
+        popup.PopupStyle.PopupBackground = Color.FromArgb("C3B0D6");
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
+![Displaying a .NET MAUI Popup with the PopupView Background](Images/styles/maui-popup-with-popupview-background.png)
+
 ## Styling overlay background
 
 The SfPopup allows to customize the background color of overlay using the [OverlayColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupStyle.html#Syncfusion_Maui_Popup_PopupStyle_OverlayColor) property.
