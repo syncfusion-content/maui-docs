@@ -15,7 +15,7 @@ This section provides a quick overview for getting started with the TreeView wit
 ## Creating an application using the .NET MAUI TreeView
 
  1. Create a new .NET MAUI application in Visual Studio.
- 2. The Syncfusion .NET MAUI components are available on nuget.org. To add SfTreeView to your project, open the NuGet package manager in Visual Studio, search for Syncfusion.Maui.TreeView and then install it.
+ 2. The Syncfusion .NET MAUI components are available on [nuget.org](https://www.nuget.org/) To add SfTreeView to your project, open the NuGet package manager in Visual Studio, search for `Syncfusion.Maui.TreeView` and then install it.
  3. Import the control namespace `Syncfusion.Maui.TreeView` in XAML or C# code.
  4. Initialize the `SfTreeView` control.
  

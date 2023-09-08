@@ -9,14 +9,16 @@ documentation: ug
 
 # Overview of .NET MAUI TreeView (SfTreeView)
 
-The Syncfusion .NET MAUI TreeView is a data-oriented control that displays data in a hierarchical structure with expanding and collapsing nodes. It is commonly used to illustrate a folder structure, or nested relationships in an application.
+The Syncfusion .NET MAUI TreeView is a data-oriented control that displays the hierarchical data,such as organizational structures and nested connections, within your application. It provides a user-friendly way to interact with complex data structures and navigate through different levels of information by allowing users to expand and collapse nodes to reveal or hide underlying information.
 
 ## Key features
 
- * Optimized view reusing strategy for enhanced performance.
+ * `Enhanced performance`: Uses an optimized view-reusing strategy.
 
- * Binding and unbound mode - Support for binding hierarchical data or add unbound tree nodes.
+ * `Bound and unbound modes`: Bind hierarchical data or manually add unbound tree nodes.
 
- * Selection - Support for selection with different selection modes and keyboard navigation.
+ * `Selection`: Select nodes through different selection modes and keyboard navigation.
 
- * Templating - Provides complete UI customization through template and template selectors.
+ * `Item templating`: Customize the appearance of each node.
+
+ * `Expand and collapse nodes`: Easily reveal or hide underlying information.
