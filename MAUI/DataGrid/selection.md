@@ -422,7 +422,7 @@ private void dataGrid_CellLongPress(object sender,DataGridCellLongPressEventArgs
 {% endtabs %}
 
 ### CellRightTapped event
-This event will be triggered when a right-click mouse gesture is recognized on a cell. This event has the `DataGridCellRightTappedEventArgs` as arguments.
+This event will be triggered when a right-click mouse gesture is recognized on a cell. This event has the [DataGridCellRightTappedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCellRightTappedEventArgs.html) as arguments.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
