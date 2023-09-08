@@ -110,8 +110,8 @@ public class FileManagerViewModel
    
    private void GenerateSource()
    {
-         var nodeImageInfo = new ObservableCollection<FileManager>();
-       var doc = new FileManager() { ItemName = "Documents", ImageIcon = "folder.png" };
+            var nodeImageInfo = new ObservableCollection<FileManager>();
+            var doc = new FileManager() { ItemName = "Documents", ImageIcon = "folder.png" };
             var download = new FileManager() { ItemName = "Downloads", ImageIcon = "folder.png" };
             var mp3 = new FileManager() { ItemName = "Music", ImageIcon ="folder.png" };
             var pictures = new FileManager() { ItemName = "Pictures", ImageIcon = "folder.png" };
@@ -192,6 +192,12 @@ public class FileManagerViewModel
 {% endhighlight %}
 {% endtabs %}
 
+### Bind to hierarchical datasource
+
+To create a tree view using data binding, set a hierarchical data collection to the `ItemsSource` property. And set the child object name to the `ChildPropertyName` property.
+
+{% tabs %}
+{% highlight xaml %}
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
