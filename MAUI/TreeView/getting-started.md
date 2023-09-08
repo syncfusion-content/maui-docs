@@ -53,7 +53,7 @@ public partial class MainPage : ContentPage
 The `Syncfusion.Maui.Core` NuGet is a dependent package for all the Syncfusion controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion core.
 
 {% tabs %}
-{% highlight c# hl_lines="4 20" %}
+{% highlight c#  tabtitle="MauiProgram.cs" hl_lines="4 20" %}
 using Microsoft.Maui.Controls.Hosting;
 using Microsoft.Maui.Controls.Xaml;
 using Microsoft.Maui.Hosting;
@@ -163,11 +163,10 @@ namespace GettingStarted
     }
 }
 
-
 {% endhighlight %}
 {% endtabs %}
 
-Download the entire source code from GitHub here.
+Download the entire source code from GitHub [here](https://github.com/SyncfusionExamples/populate-the-nodes-in-unbound-mode-in-.net-maui-treeview).
 
 ## Creating data model for the tree view
 
@@ -363,8 +362,8 @@ public partial class MainPage : ContentPage
     public MainPage()
     {
         InitializeComponent();
-        SfTreeView treeView=new SfTreeView();
-        FileManagerViewModel=FileManagerViewModel();
+        SfTreeView treeView = new SfTreeView();
+        FileManagerViewModel = FileManagerViewModel();
         treeView.ItemsSource = viewModel.ImageNodeInfo; 
         this.Content = treeView;
     }    
@@ -633,7 +632,7 @@ You can create a tree view by binding the `ItemsSource` to the hierarchy propert
 I> `ItemsSource` is an alternative mechanism to `Nodes` for adding content into the TreeView control. You cannot set both `ItemsSource` and `Nodes` at the same time. When you use `ItemsSource`, nodes are created internally, but you cannot access them from the `Nodes` property.
 
 {% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="13" %}
+{% highlight xaml hl_lines="13" %}
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:syncfusion="clr-namespace:Syncfusion.Maui.TreeView;assembly=Syncfusion.Maui.TreeView"
@@ -645,7 +644,7 @@ I> `ItemsSource` is an alternative mechanism to `Nodes` for adding content into 
     <local:FileManagerViewModel x:Name="viewModel" />
   </ContentPage.BindingContext>
    <syncfusion:SfTreeView x:Name="treeView" 
-                          ItemsSource="{Binding Folder}" >
+                          ItemsSource="{Binding Folders}" >
        <sfTreeView:SfTreeView.HierarchyPropertyDescriptors>
             <treeviewengine:HierarchyPropertyDescriptor TargetType="{x:Type local:Folder}" ChildPropertyName="Files"/>
             <treeviewengine:HierarchyPropertyDescriptor TargetType="{x:Type local:File}" ChildPropertyName="SubFiles"/>
@@ -654,7 +653,7 @@ I> `ItemsSource` is an alternative mechanism to `Nodes` for adding content into 
                   
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="12" %}
+{% highlight c# hl_lines="12" %}
 
 using Syncfusion.Maui.TreeView;
 using Syncfusion.TreeView.Engine;
@@ -682,14 +681,14 @@ namespace GettingStarted
 
 ## Defining a template to expander and content view
 
-By defining the ExpanderTemplate and ItemTemplate properties, a custom user interface (UI) can be created to display the data items for both expander and content view. It is applicable for both the Unbound and Bound mode data items.
+By defining the `ExpanderTemplate` and `ItemTemplate` properties, a custom user interface (UI) can be created to display the data items for both expander and content view. It is applicable for both the Unbound and Bound mode data items.
 
 N> By default, the binding context for each tree view item will be the data model object for Bound Mode and `TreeViewNode` for Unbound Mode. However, you can change the binding context for tree view items in Bound Mode as  `TreeViewNode` by defining the  `ItemTemplateContextType` enumeration to `Node`, which is applicable for both `ExpanderTemplate` and `ItemTemplate` properties.
 
 The following code example demonstrates how to customize your content view using the `ItemTemplate` and `ExpanderTemplate` property in both XAML and C#.
 
 {% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="12 34" %}
+{% highlight xaml hl_lines="12 34" %}
 <ContentPage  xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:syncfusion="clr-namespace:Syncfusion.Maui.TreeView;assembly=Syncfusion.Maui.TreeView"
@@ -701,7 +700,7 @@ The following code example demonstrates how to customize your content view using
     <ContentPage.Content>
        <syncfusion:SfTreeView x:Name="treeView" 
                               ItemsSource="{Binding ImageNodeInfo}"
-                             ItemTemplateContextType="Node">
+                              ItemTemplateContextType="Node">
             <syncfusion:SfTreeView.ItemTemplate>
                 <DataTemplate>
                            <Grid x:Name="grid" RowSpacing="0" 
@@ -736,7 +735,7 @@ The following code example demonstrates how to customize your content view using
     </ContentPage.Content>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="C#"  hl_lines="7 20" %}
+{% highlight c# hl_lines="7 20" %}
 using Syncfusion.Maui.TreeView;
 
 namespace GettingStarted
@@ -763,12 +762,17 @@ namespace GettingStarted
 
             return grid;
         });
+
         treeView.ExpanderTemplate = new DataTemplate(()=>
         {
             var grid = new Grid();
             var expanderIcon = new Image();
             imageIcon.SetBinding(Image.SourceProperty, new Binding("IsExpanded"));
-        })
+            imageIcon.SetBinding(Image.IsVisibleProperty, new Binding("HasChildNodes"));
+            grid.Children.Add(grid);
+            return grid;
+        });
+
         this.Content = treeView;
     }
 }
@@ -776,18 +780,18 @@ namespace GettingStarted
 {% endhighlight%}
 {% endtabs %}
 
-Download the entire source code from GitHub here.
+Download the entire source code from GitHub [here](https://github.com/SyncfusionExamples/data-binding-in-.net-maui-treeview).
 
 ## Interacting with a tree view
 
 The TreeView allows you to expand and collapse the nodes either by user interaction on the nodes or by programmatically. The expanding and collapsing interactions can be handled with the help of `NodeCollapsing` and `NodeExpanding` events.
 
-You can define how the nodes to be expanded while loading the TreeView by using the AutoExpandMode property. Also, the TreeView allows you to set the restrictions whether expanding and collapsing of nodes can be performed only by tapping in expander view or in both expander view and content view by using the ExpandActionTarget property.
+You can define how the nodes to be expanded while loading the TreeView by using the AutoExpandMode property. Also, the TreeView allows you to set the restrictions whether expanding and collapsing of nodes can be performed only by tapping in expander view or in both expander view and content view by using the `ExpandActionTarget` property.
 
 N> the `AutoExpandMode` property is only applicable for bound mode. For Unbound mode you need to set `IsExpanded` property to `true` while creating the nodes, to be in expanded state while loading the TreeView.
 
 {% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines= "8 9" %}
+{% highlight xaml hl_lines= "8 9" %}
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
@@ -799,7 +803,8 @@ N> the `AutoExpandMode` property is only applicable for bound mode. For Unbound 
                          ExpandActionTarget="Node"/>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="C#" hl_line= "11 12" %}
+{% highlight c# hl_line= "12 13" %}
+using Syncfusion.Maui.TreeView;
 using Syncfusion.Maui.TreeView;
 
 namespace GettingStarted
@@ -809,10 +814,11 @@ namespace GettingStarted
         SfTreeView treeView;
         public MainPage()
         {
+            InitializeComponent();
             treeView = new SfTreeView();
-            treeView.AutoExpandMode = AutoExpandMode.AllNodesExpanded;
-            treeView.ExpandActionTarget = ExpandActionTarget.Node;
-            this.Content=treeView;
+            treeView.AutoExpandMode =TreeViewAutoExpandMode.AllNodesExpanded;
+            treeView.ExpandActionTarget = TreeViewExpandActionTarget.Node;
+            this.Content = treeView;
         }
     }
 }
@@ -825,10 +831,10 @@ The `TreeView` allows selecting the item by setting the `SelectionMode` property
 
 It also allows changing the selection highlight color by using the `SelectionBackground` property. Additionally, for unbound mode, you can change the selection foreground color of the text by using the `SelectionForeground` property.
 
-The selection operations can be handled with the help of SelectionChanging and SelectionChanged.
+The selection operations can be handled with the help of `SelectionChanging` and `SelectionChanged` events.
  
 {% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="8 9 10" %}
+{% highlight xaml hl_lines="8 9 10" %}
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:syncfusion="clr-namespace:Syncfusion.Maui.TreeView;assembly=Syncfusion.Maui.TreeView"
@@ -841,8 +847,9 @@ The selection operations can be handled with the help of SelectionChanging and S
                         SelectionForeground="#1C1B1F"/>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines=" 11 12 13" %}
+{% highlight c# hl_lines=" 12 13 14" %}
 using Syncfusion.Maui.TreeView;
+using Syncfusion.TreeView.Engine;
 
 namespace GettingStarted
 {
@@ -852,7 +859,7 @@ namespace GettingStarted
         public MainPage()
         {
             treeView = new SfTreeView();
-            treeView.SelectionMode = SelectionMode.Single;
+            treeView.SelectionMode = TreeViewSelectionMode.Single;
             treeView.SelectionBackground = Color.FromHex("#EADDFF");
             treeView.SelectionForeground = Color.FromHex("#1C1B1F");
             this.Content=treeView;
@@ -867,7 +874,7 @@ namespace GettingStarted
 You can reset the visible treeview items by using the `ResetTreeViewItems` method. If the parameter is null, all the visible treeview items will reset. If you are passing the data object as a parameter, a particular treeview item will reset.
  
 {% tabs %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# %}
 treeView.ResetTreeViewItems();
 {% endhighlight %}
 {% endtabs %}
@@ -876,7 +883,7 @@ treeView.ResetTreeViewItems();
 You can refresh the view by using the `RefreshView` method. It will be used to refresh the items in the treeview at runtime while updating the view.
 
 {% tabs %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# %}
  treeView.RefreshView();
 {% endhighlight %}
 {% endtabs %}
