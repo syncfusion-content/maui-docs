@@ -291,7 +291,7 @@ ImageEditorToolbarItem arrowItem = (ImageEditorToolbarItem)subtoolbar.ToolbarIte
 
 N> You can remove the existing toolbar items `Name` from image editor toolbarItems collection based on the index value and change the icon and text values dynamically for any of the already added toolbar item based on the index.
 
-## To change item visibility
+## Set item visibility
 
 You can hide or show the toolbar items by specifying their icon names and setting the boolean values to true or false.
 
@@ -309,9 +309,9 @@ N> You can customize an icon by specifying its `Name`.
 
 {% endtabs %}
 
-## To change item enable state
+## Set item enable/disable state
 
-You can enable or disable the toolbar items by using `IsEnabled` property in `ImageEditorToolbarItem` class. Specifying their icon names and setting the boolean values to true or false.
+You can enable or disable the toolbar items by using `IsEnabled` property in `ImageEditorToolbarItem` class.
 
 {% tabs %}
 
@@ -333,7 +333,7 @@ saveItem.IsEnabled = false;
 
 {% endtabs %}
 
-## To change item view
+## Customize item view
 
 To Customize the toolbar items view by specifying their icon names and setting the view using `View` property in `ImageEditorToolbarItem`.
 
@@ -349,76 +349,37 @@ imageEditor.Source = ImageSource.FromFile("image.png");
 
 ImageEditorToolbar headerToolbar = imageEditor.Toolbars[0];
 ImageEditorToolbarGroupItem zoomGroup = (ImageEditorToolbarGroupItem)headerToolbar.ToolbarItems[1];
-ImageEditorToolbarItem zoomItem = (zoomGroup).Items.FirstOrDefault(i => i.Name == "ZoomIn");
+ImageEditorToolbarItem zoomItem = zoomGroup.Items.FirstOrDefault(i => i.Name == "ZoomIn");
 zoomItem.View = image;
 
 {% endhighlight %}
 
 {% endtabs %}
 
-## Add a new sub toolbar by clearing existing sub toolbar 
+## Add SubToolbar
 
 You can create `SubToolbars` within your toolbar items to organize related actions.
 
 {% tabs %}
 
-{% highlight XAML %}
-
-<imageEditor:SfImageEditor Source="image.png"
-                           AutoGenerateToolbarItems="False">
-    <imageEditor:SfImageEditor.Toolbars>
-        <imageEditor:ImageEditorToolbar Orientaion="Vertical"
-                                        Position="End">
-            <imageEditor:ImageEditorToolbar.ToolbarItems>
-                <imageEditor:ImageEditorToolbarItem Name="Text">
-                    <imageEditor:ImageEditorToolbarItem.SubToolbars>
-                        <imageEditor:ImageEditorToolbar>
-                            <imageEditor:ImageEditorToolbar.ToolbarItems>
-                                <imageEditor:ImageEditorToolbarItem Name="AddText" />
-                                <imageEditor:ImageEditorToolbarItem Name="TextColor" />
-                                <imageEditor:ImageEditorToolbarItem Name="Delete" />
-                            </imageEditor:ImageEditorToolbar.ToolbarItems>
-                        </imageEditor:ImageEditorToolbar>
-                    </imageEditor:ImageEditorToolbarItem.SubToolbars>
-                </imageEditor:ImageEditorToolbarItem>
-                <imageEditor:ImageEditorToolbarItem Name="Shape" />
-                <imageEditor:ImageEditorToolbarItem Name="Pen" />
-            </imageEditor:ImageEditorToolbar.ToolbarItems>
-        </imageEditor:ImageEditorToolbar>
-    </imageEditor:SfImageEditor.Toolbars>
-</imageEditor:SfImageEditor>
-
-{% endhighlight %}
-
 {% highlight C# %}
 
 SfImageEditor imageEditor = new SfImageEditor();
-imageEditor.Source = ImageSource.FromFile("image.png");
-imageEditor.AutoGenerateToolbarItems = false;
-ImageEditorToolbar editorToolbar = new ();
-editorToolbar.Orientaion = ToolbarOrientation.Vertical;
-editorToolbar.Position = ToolbarPosition.End;
-editorToolbar.ToolbarItems = new List<IImageEditorToolbarItem>()
+imageEditor.Source = ImageSource.FromFile("image4.png");
+ImageEditorToolbar footerToolbar = imageEditor.Toolbars[1];
+ImageEditorToolbarItem cropItem = (ImageEditorToolbarItem)footerToolbar.ToolbarItems.FirstOrDefault(i => i.Name == "Crop");
+cropItem.SubToolbars = new List<ImageEditorToolbar>()
 {
-    new ImageEditorToolbarItem(){ Name = "Text",
-        SubToolbars = new List<ImageEditorToolbar>()
+    new ImageEditorToolbar()
+    {
+        ToolbarItems = new List<IImageEditorToolbarItem>()
         {
-            new ImageEditorToolbar()
-            {
-                ToolbarItems = new List<IImageEditorToolbarItem>()
-                {
-                   new ImageEditorToolbarItem(){ Name = "AddText"},
-                   new ImageEditorToolbarItem(){ Name = "TextColor"},
-                   new ImageEditorToolbarItem(){ Name = "Delete"}
-                },
-            }
-        }
-    },
-    new ImageEditorToolbarItem(){ Name = "Shape"},
-    new ImageEditorToolbarItem(){ Name = "Pen"}
+           new ImageEditorToolbarItem(){ Name = "Rectangle"},
+           new ImageEditorToolbarItem(){ Name = "Pen"},
+           new ImageEditorToolbarItem(){ Name = "AddText"}
+        },
+    }
 };
-
-imageEditor.Toolbars.Add(editorToolbar);
 
 {% endhighlight %}
 
@@ -426,54 +387,20 @@ imageEditor.Toolbars.Add(editorToolbar);
 
 ## Add an item with the existing toolbar.
 
-Creating custom toolbars in SfImageEditor provides you with complete control over the layout and content of your app's toolbar.
+You can explicitly add the `ImageEditorToolbarItem` to the `ImageEditorToolbar` manually.
 
 {% tabs %}
-
-{% highlight XAML %}
-
-<imageEditor:SfImageEditor Source="image.png">
-    <imageEditor:SfImageEditor.Toolbars>
-        <imageEditor:ImageEditorToolbar>
-            <imageEditor:ImageEditorToolbar.ToolbarItems>
-                <imageEditor:ImageEditorToolbarItem Name="Browse" />
-                <imageEditor:ImageEditorToolbarItem Name="Save" />
-            </imageEditor:ImageEditorToolbar.ToolbarItems>
-        </imageEditor:ImageEditorToolbar>
-        <imageEditor:ImageEditorToolbar>
-            <imageEditor:ImageEditorToolbar.ToolbarItems>
-                <imageEditor:ImageEditorToolbarItem Name="Text" />
-                <imageEditor:ImageEditorToolbarItem Name="Shape" />
-                <imageEditor:ImageEditorToolbarItem Name="Pen" />
-            </imageEditor:ImageEditorToolbar.ToolbarItems>
-        </imageEditor:ImageEditorToolbar>
-    </imageEditor:SfImageEditor.Toolbars>
-</imageEditor:SfImageEditor>
-
-{% endhighlight %}
 
 {% highlight C# %}
 
 SfImageEditor imageEditor = new SfImageEditor();
 imageEditor.Source = ImageSource.FromFile("image.png");
-ImageEditorToolbar editorToolbar = new ();
-editorToolbar.ToolbarItems = new List<IImageEditorToolbarItem>()
-{
-    new ImageEditorToolbarItem(){ Name = "Browse"},
-    new ImageEditorToolbarItem(){ Name = "Save"}
-};
+Image image = new Image();
+image.Source = ImageSource.FromResource("MyProject.Resources.Images.share.png");
+ImageEditorToolbar headerToolbar = imageEditor.Toolbars[0];
+ImageEditorToolbarGroupItem saveGroup = (ImageEditorToolbarGroupItem)headerToolbar.ToolbarItems[2];
+saveGroup.Items.Add(new ImageEditorToolbarItem() { Name = "Share", View = image });
 
-ImageEditorToolbar annotationToolbar = new ();
-editorToolbar1.ToolbarItems = new List<IImageEditorToolbarItem>()
-{
-    new ImageEditorToolbarItem(){ Name = "Text"},
-    new ImageEditorToolbarItem(){ Name = "Shape"},
-    new ImageEditorToolbarItem(){ Name = "Pen"}
-};
-
-imageEditor.Toolbars.Add(editorToolbar);
-imageEditor.Toolbars.Add(annotationToolbar);
-    
 {% endhighlight %}
 
 {% endtabs %}
@@ -552,24 +479,63 @@ You can create `SubToolbars` within our default toolbar items to organize relate
 
 {% tabs %}
 
+{% highlight XAML %}
+
+<imageEditor:SfImageEditor Source="image.png"
+                           AutoGenerateToolbarItems="False">
+    <imageEditor:SfImageEditor.Toolbars>
+        <imageEditor:ImageEditorToolbar Orientaion="Vertical"
+                                        Position="End">
+            <imageEditor:ImageEditorToolbar.ToolbarItems>
+                <imageEditor:ImageEditorToolbarItem Name="Text">
+                    <imageEditor:ImageEditorToolbarItem.SubToolbars>
+                        <imageEditor:ImageEditorToolbar>
+                            <imageEditor:ImageEditorToolbar.ToolbarItems>
+                                <imageEditor:ImageEditorToolbarItem Name="AddText" />
+                                <imageEditor:ImageEditorToolbarItem Name="TextColor" />
+                                <imageEditor:ImageEditorToolbarItem Name="Delete" />
+                            </imageEditor:ImageEditorToolbar.ToolbarItems>
+                        </imageEditor:ImageEditorToolbar>
+                    </imageEditor:ImageEditorToolbarItem.SubToolbars>
+                </imageEditor:ImageEditorToolbarItem>
+                <imageEditor:ImageEditorToolbarItem Name="Shape" />
+                <imageEditor:ImageEditorToolbarItem Name="Pen" />
+            </imageEditor:ImageEditorToolbar.ToolbarItems>
+        </imageEditor:ImageEditorToolbar>
+    </imageEditor:SfImageEditor.Toolbars>
+</imageEditor:SfImageEditor>
+
+{% endhighlight %}
+
 {% highlight C# %}
 
 SfImageEditor imageEditor = new SfImageEditor();
 imageEditor.Source = ImageSource.FromFile("image.png");
-ImageEditorToolbar footerToolbar = imageEditor.Toolbars[1];
-ImageEditorToolbarItem shapeItem = (ImageEditorToolbarItem)footerToolbar.ToolbarItems.FirstOrDefault(i => i.Name == "Shape");
-shapeItem.SubToolbars = new List<ImageEditorToolbar>()
+imageEditor.AutoGenerateToolbarItems = false;
+ImageEditorToolbar editorToolbar = new ();
+editorToolbar.Orientaion = ToolbarOrientation.Vertical;
+editorToolbar.Position = ToolbarPosition.End;
+editorToolbar.ToolbarItems = new List<IImageEditorToolbarItem>()
 {
-    new ImageEditorToolbar()
-    {
-        ToolbarItems = new List<IImageEditorToolbarItem>()
+    new ImageEditorToolbarItem(){ Name = "Text",
+        SubToolbars = new List<ImageEditorToolbar>()
         {
-           new ImageEditorToolbarItem(){ Name = "Circle"},
-           new ImageEditorToolbarItem(){ Name = "Pen"},
-           new ImageEditorToolbarItem(){ Name = "AddText"}
-        },
-    }
+            new ImageEditorToolbar()
+            {
+                ToolbarItems = new List<IImageEditorToolbarItem>()
+                {
+                   new ImageEditorToolbarItem(){ Name = "AddText"},
+                   new ImageEditorToolbarItem(){ Name = "TextColor"},
+                   new ImageEditorToolbarItem(){ Name = "Delete"}
+                },
+            }
+        }
+    },
+    new ImageEditorToolbarItem(){ Name = "Shape"},
+    new ImageEditorToolbarItem(){ Name = "Pen"}
 };
+
+imageEditor.Toolbars.Add(editorToolbar);
 
 {% endhighlight %}
 
