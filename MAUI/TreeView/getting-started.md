@@ -167,6 +167,8 @@ namespace GettingStarted
 
 Download the entire source code from GitHub [here](https://github.com/SyncfusionExamples/populate-the-nodes-in-unbound-mode-in-.net-maui-treeview).
 
+![.NET MAUI TreeView with items](Images/unoundMode/maui-treeView-unboundMode.png)
+
 ## Creating data model for the tree view
 
 Create a data model to bind it to the control. 
@@ -781,6 +783,8 @@ namespace GettingStarted
 {% endtabs %}
 
 Download the entire source code from GitHub [here](https://github.com/SyncfusionExamples/data-binding-in-.net-maui-treeview).
+
+![.NET MAUI TreeView with items](Images/BoundMode/maui-treeView-boundMode.png)
 
 ## Interacting with a tree view
 

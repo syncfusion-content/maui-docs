@@ -227,6 +227,7 @@ this.Content = treeView;
 {% endtabs %}
 
 Download the entire source code from GitHub here.
+![.NET MAUI TreeView with items](Images/BoundMode/maui-treeView-boundMode.png)
 
 ## Populating Nodes without data binding - Unbound Mode
 
@@ -308,3 +309,4 @@ namespace GettingStarted
 {% endtabs %}
 
 Download the entire source code from GitHub here.
+![.NET MAUI TreeView with items](Images/unoundMode/maui-treeView-unboundMode.png)
