@@ -1,20 +1,20 @@
 ---
 layout: post
 title: Getting started with .NET MAUI Time Picker control | Syncfusion
-description: Learn here all about getting started with Syncfusion .NET MAUI Time Picker (SfTimePicker) control and its basic features.
+description: Learn about getting started with Syncfusion .NET MAUI Time Picker (SfTimePicker) control and its basic features.
 platform: maui
 control: SfTimePicker
 documentation: ug
 ---
 
 # Getting started with .NET MAUI Time Picker (SfTimePicker)
-This section explains how to add the Time Picker control. This section covers only the basic features needed to get started with Syncfusion Time Picker.
+This section explains how to add the Time Picker control. It covers only the basic features needed to get started with the Syncfusion Time Picker.
 
 ## Creating an application using the .NET MAUI Time Picker
 
 1. Create a new .NET MAUI application in Visual Studio.
 
-2. Syncfusion .NET MAUI components are available on [nuget.org](https://www.nuget.org/). To add `SfTimePicker` to your project, open the NuGet package manager in Visual Studio, search for [Syncfusion.Maui.Picker](https://www.nuget.org/packages/Syncfusion.Maui.Picker), and then install it.
+2. Syncfusion .NET MAUI components are available on [nuget.org](https://www.nuget.org/). To add `SfTimePicker` to your project, open the NuGet package manager in Visual Studio, search for [Syncfusion.Maui.Picker](https://www.nuget.org/packages/Syncfusion.Maui.Picker), then install it.
 
 3. To initialize the control, import the control namespace `Syncfusion.Maui.Picker` in XAML or C# code.
 
@@ -84,7 +84,7 @@ namespace GettingStarted
 
 ## Set header to the Time Picker
 
-The SfTimePicker control allows you to add the header text by setting the [Text] property in the [PickerHeaderView]. To enable the header view by setting the [Height] property in [PickerHeaderView].
+The SfTimePicker control allows you to add the header text by setting the [Text] property in the [PickerHeaderView]. Enable the header view by setting the [Height] property in the [PickerHeaderView].
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="3" %}
@@ -112,7 +112,7 @@ this.Content = picker;
 
 ## Set footer to the Time Picker
 
-In SfTimePicker control, validation buttons (OK and Cancel) can be customized by setting the [OkButtonText] and [CancelButtonText] property in the [PickerFooterView]. It allows you to confirm or cancel the selected time.  The `OkButtonText` can be enabled by using the [ShowOkButton] property in [PickerFooterView].
+In the SfTimePicker control, validation buttons (OK and Cancel) can be customized by setting the [OkButtonText] and [CancelButtonText] properties in the [PickerFooterView]. It allows you to confirm or cancel the selected time. The `OkButtonText` can be enabled using the [ShowOkButton] property in the [PickerFooterView].
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="3" %}
@@ -140,7 +140,7 @@ this.Content = picker;
 
 ## Set height and width to the Time Picker
 
-The SfTimePicker control allows you to the change the height and width by using the [HeightRequest] and [WidthRequest] property in [SfTimePicker].
+The SfTimePicker control allows you to change the height and width by using the [HeightRequest] and [WidthRequest] properties in the [SfTimePicker].
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="3 5" %}
@@ -166,7 +166,7 @@ this.Content = picker;
 
 ## Set selected time to the Time Picker
 
-The SfTimePicker control allows you to select the time by using the [SelectedTime] property in [SfTimePicker]. The default value of the `SelectedTime` is current time.
+The SfTimePicker control allows you to select the time using the [SelectedTime] property in the [SfTimePicker]. The default value of the `SelectedTime` is the current time.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="2" %}

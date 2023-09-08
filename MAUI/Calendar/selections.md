@@ -189,7 +189,7 @@ this.Calendar.RangeSelectionDirection = CalendarRangeSelectionDirection.None;
 ![None range selection in .NET MAUI Calendar.](images/selection/maui-none-range-selection.png)
 
 ## Multiple range selection
-The `MultiRange` selection can be performed in the Calendar by setting the `CalendarSelectionMode` property to `MultiRange`. In this selection, you can select multiple range of dates from the calenda by interacting the cell either tap or swipe action.
+The `MultiRange` selection can be performed in the Calendar by setting the `CalendarSelectionMode` property to `MultiRange`. In this selection, select a multiple range of dates from the calendar by interacting with the cell, either tap or swipe action.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}

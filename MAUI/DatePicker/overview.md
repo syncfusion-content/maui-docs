@@ -1,7 +1,7 @@
 ---
 layout: post
 title: About .NET MAUI Date Picker control | Syncfusion
-description: Learn here about the overview of Syncfusion .NET MAUI Date Picker (SfDatePicker) control, its basic features, and date picker functionalities.
+description: Learn about the overview of Syncfusion .NET MAUI Date Picker (SfDatePicker) control, its basic features, and date picker functionalities.
 platform: maui
 control: SfDatePicker
 documentation: ug
@@ -9,17 +9,17 @@ documentation: ug
 
 # Overview of .NET MAUI Date Picker (SfDatePicker)
 
-Syncfusion .NET MAUI Date Picker (SfDatePicker) control allows you to select a date and visualizes its items inside a popup or a drop-down UI element. The Date Picker also enables you to set date ranges, date formats, and to customize its dialog appearance by configuring its header, footer, and more.
+Syncfusion .NET MAUI Date Picker (SfDatePicker) control allows you to select a date and visualize its items inside a popup or a drop-down UI element. The Date Picker also enables you to set date ranges and formats and customize its dialog appearance by configuring its header, footer, and more.
 
 ## Key features
 
-* **Header view**: The Date Picker allows you to add header text and customize it.
+* **Header view**: The Date Picker allows you to add the header text and customize it.
 
 * **Column header view**: The .NET MAUI Date Picker supports a customizable column header view to separate headings for each column.
 
 * **Footer view**: Provides validation buttons (OK and Cancel) in the footer view. The footer text and background color can be customized.
 
-* **Selection view**: Selection view is used to show the selected date and is customizable.
+* **Selection view**: The selection view is used to show the selected date, and it is customizable.
 
 * **Date format**: Offers 8 predefined formats to represent the value of the date in different string formats.
 
@@ -27,6 +27,6 @@ Syncfusion .NET MAUI Date Picker (SfDatePicker) control allows you to select a d
 
 * **Date restriction**: Restrict the selection of date items beyond the specified minimum and maximum dates.
 
-* **Intervals**: The date values can be populated with intervals for days, months, and years, individually.
+* **Intervals**: The date values can be populated individually with intervals for days, months, and years.
 
 * **Picker interactions**: The .NET MAUI Date Picker allows you to select dates through tap and scroll interaction.

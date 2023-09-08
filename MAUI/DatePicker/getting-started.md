@@ -1,20 +1,20 @@
 ---
 layout: post
 title: Getting started with .NET MAUI Date Picker control | Syncfusion
-description: Learn here all about getting started with Syncfusion .NET MAUI Date Picker (SfDatePicker) control and its basic features.
+description: Learn about getting started with Syncfusion .NET MAUI Date Picker (SfDatePicker) control and its basic features.
 platform: maui
 control: SfDatePicker
 documentation: ug
 ---
 
 # Getting started with .NET MAUI Date Picker (SfDatePicker)
-This section explains how to add the Date Picker control. This section covers only the basic features needed to get started with Syncfusion Date Picker.
+This section explains how to add the Date Picker control. It covers only the basic features needed to get started with Syncfusion Date Picker.
 
 ## Creating an application using the .NET MAUI Date Picker
 
 1. Create a new .NET MAUI application in Visual Studio.
 
-2. Syncfusion .NET MAUI components are available on [nuget.org](https://www.nuget.org/). To add `SfDatePicker` to your project, open the NuGet package manager in Visual Studio, search for [Syncfusion.Maui.Picker](https://www.nuget.org/packages/Syncfusion.Maui.Picker), and then install it.
+2. Syncfusion .NET MAUI components are available on [nuget.org](https://www.nuget.org/). To add the `SfDatePicker` to your project, open the NuGet package manager in Visual Studio, search for [Syncfusion.Maui.Picker](https://www.nuget.org/packages/Syncfusion.Maui.Picker), then install it.
 
 3. To initialize the control, import the control namespace `Syncfusion.Maui.Picker` in XAML or C# code.
 
@@ -84,7 +84,7 @@ namespace GettingStarted
 
 ## Set header to the Date Picker
 
-The SfDatePicker control allows you to add the header text by setting the [Text] property in the [PickerHeaderView]. To enable the header view by setting the [Height] property in [PickerHeaderView].
+The SfDatePicker control allows you to add the header text by setting the [Text] property in the [PickerHeaderView]. To enable the header view by setting the [Height] property in the [PickerHeaderView].
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="3" %}
@@ -112,7 +112,7 @@ this.Content = picker;
 
 ## Set footer to the Date Picker
 
-In SfDatePicker control, validation buttons (OK and Cancel) can be customized by setting the [OkButtonText] and [CancelButtonText] property in the [PickerFooterView]. It allows you to confirm or cancel the selected date.  The `OkButtonText` can be enabled by using the [ShowOkButton] property in [PickerFooterView].
+In the SfDatePicker control, validation buttons (OK and Cancel) can be customized by setting the [OkButtonText] and [CancelButtonText] properties in the [PickerFooterView]. It allows you to confirm or cancel the selected date. The `OkButtonText` can be enabled using the [ShowOkButton] property in the [PickerFooterView].
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="3" %}
@@ -140,7 +140,7 @@ this.Content = picker;
 
 ## Set height and width to the Date Picker
 
-The SfDatePicker control allows you to the change the height and the width by using the [HeightRequest] and [WidthRequest] property in [SfDatePicker].
+The SfDatePicker control allows you to change the height and the width using the [HeightRequest] and [WidthRequest] properties in the [SfDatePicker].
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines=" 2 3" %}
@@ -166,7 +166,7 @@ this.Content = picker;
 
 ## Set selected date to the Date Picker
 
-The SfDatePicker control allows you to select the date by using the [SelectedDate] property in [SfDatePicker]. The default value of the `SelectedDate` is current date.
+The SfDatePicker control allows you to select the date using the [SelectedDate] property in the [SfDatePicker]. The default value of the `SelectedDate` is the current date.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="2" %}
