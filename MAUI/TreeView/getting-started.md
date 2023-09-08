@@ -20,7 +20,7 @@ This section provides a quick overview for getting started with the TreeView wit
  4. Initialize the `SfTreeView` control.
  
 {% tabs %}
-{% highlight xaml tabtitle="XAML" %}
+{% highlight xaml hl_lines= "4" %}
 
 <ContentPage   
     . . .
@@ -30,7 +30,7 @@ This section provides a quick overview for getting started with the TreeView wit
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="C#" %}
+{% highlight c# hl_lines= "6" %}
 
 using Syncfusion.Maui.TreeView;
 . . .
@@ -41,7 +41,7 @@ public partial class MainPage : ContentPage
     {
         InitializeComponent();
         SfTreeView treeView = new SfTreeView();
-        this.Content= treeView;
+        this.Content = treeView;
     }
 }
 
@@ -53,7 +53,7 @@ public partial class MainPage : ContentPage
 The `Syncfusion.Maui.Core` NuGet is a dependent package for all the Syncfusion controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion core.
 
 {% tabs %}
-{% highlight c# tabtitle="MauiProgram.cs" hl_lines="4 20" %}
+{% highlight c# hl_lines="4 20" %}
 using Microsoft.Maui.Controls.Hosting;
 using Microsoft.Maui.Controls.Xaml;
 using Microsoft.Maui.Hosting;
@@ -88,7 +88,7 @@ You can create and manage the `TreeViewNode` objects by yourself to display the 
 I> ItemsSource is an alternative mechanism to `Nodes` for putting content into the TreeView control. You cannot set both `ItemsSource` and `Nodes` at the same time. When you use `ItemsSource`, nodes created for you internally, but you cannot access them from `Nodes` property.
 
 {% tabs %}
-{% highlight xaml tabtitle="XAML" %}
+{% highlight xaml %}
 
 <ContentPage   
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
@@ -125,22 +125,21 @@ I> ItemsSource is an alternative mechanism to `Nodes` for putting content into t
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="C#" %}
+{% highlight c# %}
 
 using Microsoft.Maui.Controls;
 using Syncfusion.Maui.TreeView;
 using Syncfusion.TreeView.Engine;
 using System;
 
-public partial class MainPage : ContentPage
-{
-    namespace GettingStarted
+namespace GettingStarted
 {
     public class MainPage : ContentPage
     {
         SfTreeView treeView;
         public MainPage()
         {
+            InitializeComponent();
             treeView = new SfTreeView();
 
             var australia = new TreeViewNode() { Content = "Australia" };
@@ -159,11 +158,11 @@ public partial class MainPage : ContentPage
             treeView.Nodes.Add(australia);
             treeView.Nodes.Add(usa);
 
-            this.Content=treeView;
+            this.Content = treeView;
         }
     }
 }
-}
+
 
 {% endhighlight %}
 {% endtabs %}
@@ -252,34 +251,33 @@ public class FileManagerViewModel
    private void GenerateSource()
    {
       var nodeImageInfo = new ObservableCollection<FileManager>();
-       var doc = new FileManager() { ItemName = "Documents", ImageIcon = "folder.png" };
-            var download = new FileManager() { ItemName = "Downloads", ImageIcon = "folder.png" };
-            var mp3 = new FileManager() { ItemName = "Music", ImageIcon ="folder.png" };
-            var pictures = new FileManager() { ItemName = "Pictures", ImageIcon = "folder.png" };
-            var video = new FileManager() { ItemName = "Videos", ImageIcon ="folder.png" };
+      var doc = new FileManager() { ItemName = "Documents", ImageIcon = "folder.png" };
+      var download = new FileManager() { ItemName = "Downloads", ImageIcon = "folder.png" };
+      var mp3 = new FileManager() { ItemName = "Music", ImageIcon ="folder.png" };
+      var pictures = new FileManager() { ItemName = "Pictures", ImageIcon = "folder.png" };
+      var video = new FileManager() { ItemName = "Videos", ImageIcon ="folder.png" };
 
-            var pollution = new FileManager() { ItemName = "Environmental Pollution.docx", ImageIcon = "word.png" };
-            var globalWarming = new FileManager() { ItemName = "Global Warming.ppt", ImageIcon = "ppt.png" };
-            var sanitation = new FileManager() { ItemName = "Sanitation.docx", ImageIcon = "word.png"};
-            var socialNetwork = new FileManager() { ItemName = "Social Network.pdf", ImageIcon ="pdfimage.png" };
-            var youthEmpower = new FileManager() { ItemName = "Youth Empowerment.pdf", ImageIcon = "pdfimage.png" };
+      var pollution = new FileManager() { ItemName = "Environmental Pollution.docx", ImageIcon = "word.png" };
+      var globalWarming = new FileManager() { ItemName = "Global Warming.ppt", ImageIcon = "ppt.png" };
+      var sanitation = new FileManager() { ItemName = "Sanitation.docx", ImageIcon = "word.png"};
+      var socialNetwork = new FileManager() { ItemName = "Social Network.pdf", ImageIcon ="pdfimage.png" };
+      var youthEmpower = new FileManager() { ItemName = "Youth Empowerment.pdf", ImageIcon = "pdfimage.png" };
+          
+      var tutorials = new FileManager() { ItemName = "Tutorials.zip", ImageIcon = "zip.png" };
+      var typeScript = new FileManager() { ItemName = "TypeScript.7z", ImageIcon ="zip.png" };
+      var uiGuide = new FileManager() { ItemName = "UI-Guide.pdf", ImageIcon = "pdfimage.png"};
 
-           
-            var tutorials = new FileManager() { ItemName = "Tutorials.zip", ImageIcon = "zip.png" };
-            var typeScript = new FileManager() { ItemName = "TypeScript.7z", ImageIcon ="zip.png" };
-            var uiGuide = new FileManager() { ItemName = "UI-Guide.pdf", ImageIcon = "pdfimage.png"};
+      var song = new FileManager() { ItemName = "Gouttes", ImageIcon = "audio.png" };
 
-            var song = new FileManager() { ItemName = "Gouttes", ImageIcon = "audio.png" };
+      var camera = new FileManager() { ItemName = "Camera Roll", ImageIcon = "folder.png" };
+      var stone = new FileManager() { ItemName = "Stone.jpg", ImageIcon = "image.png" };
+      var wind = new FileManager() { ItemName = "Wind.jpg", ImageIcon = "image.png"};
 
-            var camera = new FileManager() { ItemName = "Camera Roll", ImageIcon = "folder.png" };
-            var stone = new FileManager() { ItemName = "Stone.jpg", ImageIcon = "image.png" };
-            var wind = new FileManager() { ItemName = "Wind.jpg", ImageIcon = "image.png"};
+      var img0 = new FileManager() { ItemName = "WIN_20160726_094117.JPG", ImageIcon = "people_circle23.png" };
+      var img1 = new FileManager() { ItemName = "WIN_20160726_094118.JPG", ImageIcon = "people_circle2.png" };
 
-            var img0 = new FileManager() { ItemName = "WIN_20160726_094117.JPG", ImageIcon = "people_circle23.png" };
-            var img1 = new FileManager() { ItemName = "WIN_20160726_094118.JPG", ImageIcon = "people_circle2.png" };
-
-            var video1 = new FileManager() { ItemName = "Naturals.mp4", ImageIcon = "video.png" };
-            var video2 = new FileManager() { ItemName = "Wild.mpeg", ImageIcon = "video.png" };
+      var video1 = new FileManager() { ItemName = "Naturals.mp4", ImageIcon = "video.png" };
+      var video2 = new FileManager() { ItemName = "Wild.mpeg", ImageIcon = "video.png" };
 
       doc.SubFiles = new ObservableCollection<FileManager>
       {
@@ -340,7 +338,7 @@ You can create a tree view by binding the `ItemsSource` to a hierarchical data s
 `ItemsSource` is an alternative mechanism to Nodes for putting content into the TreeView control. You cannot set both `ItemsSource` and `Nodes` at the same time. When you use `ItemsSource`, nodes created for you internally, but you cannot access them from the `Nodes` property.
 
 {% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="10" %}
+{% highlight xaml hl_lines="11" %}
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:syncfusion="clr-namespace:Syncfusion.Maui.TreeView;assembly=Syncfusion.Maui.TreeView"
@@ -355,11 +353,23 @@ You can create a tree view by binding the `ItemsSource` to a hierarchical data s
                    ChildPropertyName="SubFiles"/>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="2" %}
-SfTreeView treeView=new SfTreeView();
-FileManagerViewModel=FileManagerViewModel();
-treeView.ItemsSource = viewModel.ImageNodeInfo; 
-this.Content=treeView;
+{% highlight c# hl_lines="8" %}
+using Syncfusion.Maui.TreeView;
+
+namespace GettingStarted;
+
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        SfTreeView treeView=new SfTreeView();
+        FileManagerViewModel=FileManagerViewModel();
+        treeView.ItemsSource = viewModel.ImageNodeInfo; 
+        this.Content = treeView;
+    }    
+}
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -526,10 +536,6 @@ public class FileManagerViewModel
 {
     public ObservableCollection<Folder> Folders { get; set; }
 
-    public ObservableCollection<File> Files { get; set; }
-
-    public ObservableCollection<SubFile> SubFiles { get; set; }
-
     public FileManagerViewModel()
     {
         this.Folders = GetFiles();
@@ -539,34 +545,33 @@ public class FileManagerViewModel
     {
         var nodeImageInfo = new ObservableCollection<Folder>();
 
-       var doc = new FileManager() { ItemName = "Documents", ImageIcon = "folder.png" };
-            var download = new FileManager() { ItemName = "Downloads", ImageIcon = "folder.png" };
-            var mp3 = new FileManager() { ItemName = "Music", ImageIcon ="folder.png" };
-            var pictures = new FileManager() { ItemName = "Pictures", ImageIcon = "folder.png" };
-            var video = new FileManager() { ItemName = "Videos", ImageIcon ="folder.png" };
+        var doc = new Folder() { ItemName = "Documents", ImageIcon = "folder.png" };
+        var download = new Folder() { ItemName = "Downloads", ImageIcon = "folder.png" };
+        var mp3 = new Folder() { ItemName = "Music", ImageIcon ="folder.png" };
+        var pictures = new Folder() { ItemName = "Pictures", ImageIcon = "folder.png" };
+        var video = new Folder() { ItemName = "Videos", ImageIcon ="folder.png" };
 
-            var pollution = new FileManager() { ItemName = "Environmental Pollution.docx", ImageIcon = "word.png" };
-            var globalWarming = new FileManager() { ItemName = "Global Warming.ppt", ImageIcon = "ppt.png" };
-            var sanitation = new FileManager() { ItemName = "Sanitation.docx", ImageIcon = "word.png"};
-            var socialNetwork = new FileManager() { ItemName = "Social Network.pdf", ImageIcon ="pdfimage.png" };
-            var youthEmpower = new FileManager() { ItemName = "Youth Empowerment.pdf", ImageIcon = "pdfimage.png" };
+        var pollution = new File() { ItemName = "Environmental Pollution.docx", ImageIcon = "word.png" };
+        var globalWarming = new File() { ItemName = "Global Warming.ppt", ImageIcon = "ppt.png" };
+        var sanitation = new File() { ItemName = "Sanitation.docx", ImageIcon = "word.png"};
+        var socialNetwork = new File() { ItemName = "Social Network.pdf", ImageIcon ="pdfimage.png" };
+        var youthEmpower = new File() { ItemName = "Youth Empowerment.pdf", ImageIcon = "pdfimage.png" };
+   
+        var tutorials = new File() { ItemName = "Tutorials.zip", ImageIcon = "zip.png" };
+        var typeScript = new File() { ItemName = "TypeScript.7z", ImageIcon ="zip.png" };
+        var uiGuide = new File() { ItemName = "UI-Guide.pdf", ImageIcon = "pdfimage.png"};
 
-           
-            var tutorials = new FileManager() { ItemName = "Tutorials.zip", ImageIcon = "zip.png" };
-            var typeScript = new FileManager() { ItemName = "TypeScript.7z", ImageIcon ="zip.png" };
-            var uiGuide = new FileManager() { ItemName = "UI-Guide.pdf", ImageIcon = "pdfimage.png"};
+        var song = new File() { ItemName = "Gouttes", ImageIcon = "audio.png" };
 
-            var song = new FileManager() { ItemName = "Gouttes", ImageIcon = "audio.png" };
+        var camera = new File() { ItemName = "Camera Roll", ImageIcon = "folder.png" };
+        var stone = new File() { ItemName = "Stone.jpg", ImageIcon = "image.png" };
+        var wind = new File() { ItemName = "Wind.jpg", ImageIcon = "image.png"};
 
-            var camera = new FileManager() { ItemName = "Camera Roll", ImageIcon = "folder.png" };
-            var stone = new FileManager() { ItemName = "Stone.jpg", ImageIcon = "image.png" };
-            var wind = new FileManager() { ItemName = "Wind.jpg", ImageIcon = "image.png"};
+        var img0 = new SubFile() { ItemName = "WIN_20160726_094117.JPG", ImageIcon = "people_circle23.png" };
+        var img1 = new SubFile() { ItemName = "WIN_20160726_094118.JPG", ImageIcon = "people_circle2.png" };
 
-            var img0 = new FileManager() { ItemName = "WIN_20160726_094117.JPG", ImageIcon = "people_circle23.png" };
-            var img1 = new FileManager() { ItemName = "WIN_20160726_094118.JPG", ImageIcon = "people_circle2.png" };
-
-            var video1 = new FileManager() { ItemName = "Naturals.mp4", ImageIcon = "video.png" };
-            var video2 = new FileManager() { ItemName = "Wild.mpeg", ImageIcon = "video.png" };
+        var video1 = new File() { ItemName = "Naturals.mp4", ImageIcon = "video.png" };
+        var video2 = new File() { ItemName = "Wild.mpeg", ImageIcon = "video.png" };
 
         doc.Files = new ObservableCollection<File>
         {
@@ -640,7 +645,7 @@ I> `ItemsSource` is an alternative mechanism to `Nodes` for adding content into 
     <local:FileManagerViewModel x:Name="viewModel" />
   </ContentPage.BindingContext>
    <syncfusion:SfTreeView x:Name="treeView" 
-                          ItemsSource="{Binding ImageNodeInfo}" >
+                          ItemsSource="{Binding Folder}" >
        <sfTreeView:SfTreeView.HierarchyPropertyDescriptors>
             <treeviewengine:HierarchyPropertyDescriptor TargetType="{x:Type local:Folder}" ChildPropertyName="Files"/>
             <treeviewengine:HierarchyPropertyDescriptor TargetType="{x:Type local:File}" ChildPropertyName="SubFiles"/>
@@ -649,20 +654,28 @@ I> `ItemsSource` is an alternative mechanism to `Nodes` for adding content into 
                   
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="8" %}
+{% highlight c# tabtitle="C#" hl_lines="12" %}
 
 using Syncfusion.Maui.TreeView;
 using Syncfusion.TreeView.Engine;
 using System;
 
-SfTreeView treeView = new SfTreeView();
-treeView.ItemsSource = viewModel.ImageNodeInfo; 
-FileManagerViewModel viewModel = new FileManagerViewModel ();
-var data = new HierarchyPropertyDescriptors();
-data.Add(new Syncfusion.TreeView.Engine.HierarchyPropertyDescriptor() { TargetType = typeof(Folder), ChildPropertyName = "Files" });
-data.Add(new Syncfusion.TreeView.Engine.HierarchyPropertyDescriptor() { TargetType = typeof(Files), ChildPropertyName = "SubFiles" });
-treeView.HierarchyPropertyDescriptors = data;
-this.Content=treeView;
+namespace GettingStarted
+{
+    public partial class MainPage : ContentPage
+    {
+        InitializeComponent();
+
+       SfTreeView treeView = new SfTreeView();
+       treeView.ItemsSource = viewModel.ImageNodeInfo; 
+       FileManagerViewModel viewModel = new FileManagerViewModel ();
+       var propertyDescriptor = new HierarchyPropertyDescriptors();
+       propertyDescriptor.Add(new Syncfusion.TreeView.Engine.HierarchyPropertyDescriptor() { TargetType = typeof(Folder), ChildPropertyName = "Files" });
+       propertyDescriptor.Add(new Syncfusion.TreeView.Engine.HierarchyPropertyDescriptor() { TargetType = typeof(Files), ChildPropertyName = "SubFiles" });
+       treeView.HierarchyPropertyDescriptors = propertyDescriptor;
+       this.Content = treeView;
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -687,13 +700,14 @@ The following code example demonstrates how to customize your content view using
     </ContentPage.BindingContext>
     <ContentPage.Content>
        <syncfusion:SfTreeView x:Name="treeView" 
-                              ItemsSource="{Binding ImageNodeInfo}">
+                              ItemsSource="{Binding ImageNodeInfo}"
+                             ItemTemplateContextType="Node">
             <syncfusion:SfTreeView.ItemTemplate>
                 <DataTemplate>
                            <Grid x:Name="grid" RowSpacing="0" 
                                  BackgroundColor="Transparent">
                               <Grid Padding="5,5,5,5">
-                                  <Image Source="{Binding ImageIcon}" 
+                                  <Image Source="{Binding Content.ImageIcon}" 
                                          VerticalOptions="Center"
                                          HorizontalOptions="Center" 
                                          HeightRequest="35" 
@@ -704,7 +718,7 @@ The following code example demonstrates how to customize your content view using
                                     Padding="1,0,0,0"
                                     VerticalOptions="Center">
                               <Label LineBreakMode="NoWrap" 
-                                     Text="{Binding ItemName}" 
+                                     Text="{Binding Content.ItemName}" 
                                      VerticalTextAlignment="Center"/>
                               </Grid>
                            </Grid>
@@ -725,31 +739,40 @@ The following code example demonstrates how to customize your content view using
 {% highlight c# tabtitle="C#"  hl_lines="7 20" %}
 using Syncfusion.Maui.TreeView;
 
-SfTreeView treeView = new SfTreeView();
-FileManagerViewModel viewModel = new FileManagerViewModel ();
-treeView.ItemsSource = viewModel.ImageNodeInfo; 
-treeview.ChildPropertyName = "SubFiles";
-treeView.ItemTemplateContextType = ItemTemplateContextType.Node;
-treeView.ItemTemplate = new DataTemplate(() => 
+namespace GettingStarted
 {
-    var grid = new Grid();
-    var imageIcon = new Image();
-    imageIcon.SetBinding(Image.SourceProperty, new Binding("Content.ImageIcon"));
-    var itemName = new Label { FontSize = 15 };
-    itemName.SetBinding(Label.TextProperty, new Binding("Content.ItemName"));
+    public partial class MainPage : ContentPage
+    {
+        InitializeComponent();
 
-    grid.Children.Add(imageIcon);
-    grid.Children.Add(itemName, 1, 0);
+        SfTreeView treeView = new SfTreeView();
+        FileManagerViewModel viewModel = new FileManagerViewModel ();
+        treeView.ItemsSource = viewModel.ImageNodeInfo; 
+        treeview.ChildPropertyName = "SubFiles";
+        treeView.ItemTemplateContextType = ItemTemplateContextType.Node;
+        treeView.ItemTemplate = new DataTemplate(() => 
+        {
+            var grid = new Grid();
+            var imageIcon = new Image();
+            imageIcon.SetBinding(Image.SourceProperty, new Binding("Content.ImageIcon"));
+            var itemName = new Label { FontSize = 15 };
+            itemName.SetBinding(Label.TextProperty, new Binding("Content.ItemName"));
 
-    return grid;
-});
-treeView.ExpanderTemplate = new DataTemplate(()=>
-{
-    var grid = new Grid();
-    var expanderIcon = new Image();
-    imageIcon.SetBinding(Image.SourceProperty, new Binding("IsExpanded"));
-})
-this.Content=treeView;
+            grid.Children.Add(imageIcon);
+            grid.Children.Add(itemName, 1, 0);
+
+            return grid;
+        });
+        treeView.ExpanderTemplate = new DataTemplate(()=>
+        {
+            var grid = new Grid();
+            var expanderIcon = new Image();
+            imageIcon.SetBinding(Image.SourceProperty, new Binding("IsExpanded"));
+        })
+        this.Content = treeView;
+    }
+}
+
 {% endhighlight%}
 {% endtabs %}
 
@@ -764,7 +787,7 @@ You can define how the nodes to be expanded while loading the TreeView by using 
 N> the `AutoExpandMode` property is only applicable for bound mode. For Unbound mode you need to set `IsExpanded` property to `true` while creating the nodes, to be in expanded state while loading the TreeView.
 
 {% tabs %}
-{% highlight xaml tabtitle="XAML" %}
+{% highlight xaml tabtitle="XAML" hl_lines= "8 9" %}
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
@@ -776,7 +799,7 @@ N> the `AutoExpandMode` property is only applicable for bound mode. For Unbound 
                          ExpandActionTarget="Node"/>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="C#" %}
+{% highlight c# tabtitle="C#" hl_line= "11 12" %}
 using Syncfusion.Maui.TreeView;
 
 namespace GettingStarted
@@ -805,7 +828,7 @@ It also allows changing the selection highlight color by using the `SelectionBac
 The selection operations can be handled with the help of SelectionChanging and SelectionChanged.
  
 {% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="8" %}
+{% highlight xaml tabtitle="XAML" hl_lines="8 9 10" %}
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:syncfusion="clr-namespace:Syncfusion.Maui.TreeView;assembly=Syncfusion.Maui.TreeView"
@@ -818,7 +841,7 @@ The selection operations can be handled with the help of SelectionChanging and S
                         SelectionForeground="#1C1B1F"/>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="12 13" %}
+{% highlight c# tabtitle="C#" hl_lines=" 11 12 13" %}
 using Syncfusion.Maui.TreeView;
 
 namespace GettingStarted
