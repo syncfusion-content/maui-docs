@@ -192,6 +192,9 @@ public class FileManagerViewModel
 {% endhighlight %}
 {% endtabs %}
 
+{% tabs %}
+{% highlight xaml %}
+
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
@@ -207,6 +210,9 @@ public class FileManagerViewModel
        </syncfusion:SfTreeView>
     </ContentPage.Content>
 </ContentPage>
+
+{% endhighlight %}
+{% endtabs %}
 
 {% endhighlight %}
 {% highlight c# %}
@@ -274,7 +280,6 @@ namespace GettingStarted
     public class MainPage : ContentPage
     {
         SfTreeView treeView;
-
         public MainPage()
         {
             treeView = new SfTreeView();
