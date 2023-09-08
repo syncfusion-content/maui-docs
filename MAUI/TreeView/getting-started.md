@@ -85,7 +85,7 @@ namespace GettingStarted
 
 You can create and manage the `TreeViewNode` objects by yourself to display the data in a hierarchical view. To create a tree view, you can use a `TreeView` control and a hierarchy of `TreeViewNode` objects. You can create the node hierarchy by adding one or more root nodes to the TreeView control’s Nodes collection. Each `TreeViewNode` can then have more nodes added to its Children collection. You can nest the tree view nodes to any depth you need.
 
-I> ItemsSource is an alternative mechanism to `Nodes` for putting content into the TreeView control. You cannot set both `ItemsSource` and `Nodes` at the same time. When you use `ItemsSource`, nodes created for you internally, but you cannot access them from `Nodes` property.
+I> `ItemsSource` is an alternative mechanism to `Nodes` for putting content into the TreeView control. You cannot set both `ItemsSource` and `Nodes` at the same time. When you use `ItemsSource`, nodes created for you internally, but you cannot access them from `Nodes` property.
 
 {% tabs %}
 {% highlight xaml %}
@@ -334,7 +334,7 @@ public class FileManagerViewModel
 
 You can create a tree view by binding the `ItemsSource` to a hierarchical data source. To create a tree view using data binding, set a hierarchical collection to the `ItemsSource` property. Then in the `ItemTemplate` and `ExpanderTemplate`, set the child items collection to the `ItemsSource` property.
 
-`ItemsSource` is an alternative mechanism to Nodes for putting content into the TreeView control. You cannot set both `ItemsSource` and `Nodes` at the same time. When you use `ItemsSource`, nodes created for you internally, but you cannot access them from the `Nodes` property.
+I> `ItemsSource` is an alternative mechanism to Nodes for putting content into the TreeView control. You cannot set both `ItemsSource` and `Nodes` at the same time. When you use `ItemsSource`, nodes created for you internally, but you cannot access them from the `Nodes` property.
 
 {% tabs %}
 {% highlight xaml hl_lines="11" %}
@@ -363,7 +363,7 @@ public partial class MainPage : ContentPage
     {
         InitializeComponent();
         SfTreeView treeView = new SfTreeView();
-        FileManagerViewModel = FileManagerViewModel();
+        FileManagerViewModel viewModel = new FileManagerViewModel();
         treeView.ItemsSource = viewModel.ImageNodeInfo; 
         this.Content = treeView;
     }    
@@ -527,7 +527,7 @@ public class SubFile : INotifyPropertyChanged
 
 N> If you need your hierarchical data model to respond to the property changes, then implement the `INotifyPropertyChanged` interface in your model class.
 
-Create a model repository class with the `ImageNodeInfo` collection property initialized with the required number of data objects in a new class file as shown in the following code example, and save it as `FileManagerViewModel.cs` file:
+Create a model repository class with the `Folders` collection property initialized with the required number of data objects in a new class file as shown in the following code example, and save it as `FileManagerViewModel.cs` file:
 
 {% tabs %}
 {% highlight c# tabtitle="FileManagerViewModel.cs" %}
@@ -645,10 +645,10 @@ I> `ItemsSource` is an alternative mechanism to `Nodes` for adding content into 
   </ContentPage.BindingContext>
    <syncfusion:SfTreeView x:Name="treeView" 
                           ItemsSource="{Binding Folders}" >
-       <sfTreeView:SfTreeView.HierarchyPropertyDescriptors>
+       <syncfusion:SfTreeView.HierarchyPropertyDescriptors>
             <treeviewengine:HierarchyPropertyDescriptor TargetType="{x:Type local:Folder}" ChildPropertyName="Files"/>
             <treeviewengine:HierarchyPropertyDescriptor TargetType="{x:Type local:File}" ChildPropertyName="SubFiles"/>
-         </sfTreeView:SfTreeView.HierarchyPropertyDescriptors>
+        </syncfusion:SfTreeView.HierarchyPropertyDescriptors>
     </syncfusion:SfTreeView>
                   
 </ContentPage>
@@ -666,8 +666,8 @@ namespace GettingStarted
         InitializeComponent();
 
        SfTreeView treeView = new SfTreeView();
-       treeView.ItemsSource = viewModel.ImageNodeInfo; 
-       FileManagerViewModel viewModel = new FileManagerViewModel ();
+       FileManagerViewModel viewModel = new FileManagerViewModel();
+       treeView.ItemsSource = viewModel.Folders; 
        var propertyDescriptor = new HierarchyPropertyDescriptors();
        propertyDescriptor.Add(new Syncfusion.TreeView.Engine.HierarchyPropertyDescriptor() { TargetType = typeof(Folder), ChildPropertyName = "Files" });
        propertyDescriptor.Add(new Syncfusion.TreeView.Engine.HierarchyPropertyDescriptor() { TargetType = typeof(Files), ChildPropertyName = "SubFiles" });
@@ -745,7 +745,7 @@ namespace GettingStarted
         InitializeComponent();
 
         SfTreeView treeView = new SfTreeView();
-        FileManagerViewModel viewModel = new FileManagerViewModel ();
+        FileManagerViewModel viewModel = new FileManagerViewModel();
         treeView.ItemsSource = viewModel.ImageNodeInfo; 
         treeview.ChildPropertyName = "SubFiles";
         treeView.ItemTemplateContextType = ItemTemplateContextType.Node;
@@ -805,18 +805,17 @@ N> the `AutoExpandMode` property is only applicable for bound mode. For Unbound 
 {% endhighlight %}
 {% highlight c# hl_line= "12 13" %}
 using Syncfusion.Maui.TreeView;
-using Syncfusion.Maui.TreeView;
+using Syncfusion.TreeView.Engine;
 
 namespace GettingStarted
 {
     public class MainPage : ContentPage
     {
-        SfTreeView treeView;
         public MainPage()
         {
             InitializeComponent();
-            treeView = new SfTreeView();
-            treeView.AutoExpandMode =TreeViewAutoExpandMode.AllNodesExpanded;
+            SfTreeView treeView = new SfTreeView();
+            treeView.AutoExpandMode = TreeViewAutoExpandMode.AllNodesExpanded;
             treeView.ExpandActionTarget = TreeViewExpandActionTarget.Node;
             this.Content = treeView;
         }
@@ -849,7 +848,6 @@ The selection operations can be handled with the help of `SelectionChanging` and
 {% endhighlight %}
 {% highlight c# hl_lines=" 12 13 14" %}
 using Syncfusion.Maui.TreeView;
-using Syncfusion.TreeView.Engine;
 
 namespace GettingStarted
 {
@@ -887,4 +885,3 @@ You can refresh the view by using the `RefreshView` method. It will be used to r
  treeView.RefreshView();
 {% endhighlight %}
 {% endtabs %}
-
