@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Data Population in .NET MAUI TreeView Control | Syncfusion
-description: Learn here all about Data Population support in the Syncfusion .NET MAUI TreeView (SfTreeView) ontrol and more.
+description: Learn here all about Data Population support in the Syncfusion .NET MAUI TreeView (SfTreeView) control and more.
 platform: .NET MAUI
 control: SfTreeView
 documentation: ug
