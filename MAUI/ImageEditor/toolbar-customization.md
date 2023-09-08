@@ -13,7 +13,7 @@ You can customize the existing toolbar appearance, visibility, position, and ori
 
 ## Toolbar style customization
 
-To customize the appearance of the toolbar by using the `ToolbarSettings` property. Below are some of the properties you can customize:
+You can customize the appearance of the toolbar by using the `ToolbarSettings` property. Below are some of the properties you can customize:
 
 * `Background`: Specifies background color of the toolbar.
 * `IconColor`: Specifies the color of the icons in the toolbar.
@@ -69,7 +69,7 @@ headerToolbar.Orientaion = ToolbarOrientation.Vertical;
 
 ## Toolbar Position
 
-To adjust the alignment of the toolbar by using the `Position` property in the `ImageEditorToolbar` class. The default value is `ToolbarPosition.Start`.
+The toolbar can be positioned before or after the image of the ImageEditor by using the `Position` property in the `ImageEditorToolbar` class. The default value is `ToolbarPosition.Start`.
 
 {% tabs %}
 
@@ -101,7 +101,7 @@ For horizontal orientation, the size will be considered as width, and for vertic
 
 ## Customize default crop option
 
-Customize a crop types using `CropTypes` property in `ImageEditorToolbarSettings` class.
+You can show the required crop types alone in the crop types toolbar by using the `CropTypes` property in the `ImageEditorToolbarSettings` class.
 
 {% tabs %}
 
@@ -128,7 +128,7 @@ imageEditor.ToolbarSettings.CropTypes = ImageCropType.Circle | ImageCropType.Squ
 
 ## Customize default Effects option
 
-Customize a effect types using `EffectTypes` property in `ImageEditorToolbarSettings` class.
+You can show the required effect types alone in the effects toolbar by using the `EffectTypes` property in the `ImageEditorToolbarSettings` class.
 
 {% tabs %}
 
@@ -154,7 +154,7 @@ imageEditor.ToolbarSettings.EffectTypes = ImageEffect.Hue | ImageEffect.Blur | I
 
 ## Customize default shape option
 
-Customize a shape types using `Shapes` property in `ImageEditorToolbarSettings` class.
+You can show the required shape types alone in the shapes toolbar by using the `Shapes` property in the `ImageEditorToolbarSettings` class.
 
 {% tabs %}
 
@@ -240,9 +240,9 @@ N> The following built-in toolbar item names are available in image editor: `Bro
 
 N> You cannot modify the names of existing built-in toolbar items and cannot create toolbar item with these list.
 
-## Get an item from inbuilt top toolbar
+## Get an item from default top toolbar
 
-The `ImageEditorToolbarItem` is placed on the top of the image editor, and you can customize the header toolbar item using the `View` and `Name` properties:
+The default top toolbar contains 3 groups and each group contains its own items. You can get the `ImageEditorToolbarItem` and customize the properties.
 
 {% highlight C# %}
 
@@ -257,9 +257,9 @@ ImageEditorToolbarItem saveItem = saveGroup.Items.FirstOrDefault(i => i.Name == 
 
 {% endhighlight %}
 
-## To get an item from inbuilt bottom toolbar
+## Get an item from default bottom toolbar
 
-The `ImageEditorToolbarItem` is placed on the bottom of the image editor, and you can customize the footer toolbar item using the `View` and `Name` properties.
+The default bottom toolbar contains `ToolbarItems` and each item has the `SubToolbars`. You can get the required `ImageEditorToolbarItem` using the `Name` and customize the default settings.
 
 Refer to the following code snippet to customize footer toolbar item.
 
@@ -272,11 +272,11 @@ ImageEditorToolbarItem textItem = (ImageEditorToolbarItem)footerToolbar.ToolbarI
 
 {% endhighlight %}
 
-## To get an item from sub toolbar
+## Get an item from sub toolbar
 
-To retrieve an `ImageEditorToolbarItem` from the sub toolbar within the footer toolbar.
+The sub-toolbars contains it's own items and it can be retried as below.
 
-Refer to the following code snippet to customize sub items of footer toolbar item.
+Refer to the following code snippet to customize sub items of bottom toolbar item.
 
 {% highlight C# %}
 
@@ -426,7 +426,7 @@ imageEditor.Toolbars.Add(editorToolbar);
 
 ## Add an item with the existing toolbar.
 
-Creating custom toolbars in SfImageEditor provides you with complete control over the layout and content of your app's toolbar. 
+Creating custom toolbars in SfImageEditor provides you with complete control over the layout and content of your app's toolbar.
 
 {% tabs %}
 
@@ -478,9 +478,9 @@ imageEditor.Toolbars.Add(annotationToolbar);
 
 {% endtabs %}
 
-## Add new custom toolbar 
+## Explicitly create Toolbars
 
-Grouping toolbar items allows you to organize actions efficiently. You can place items in various alignments to suit your app's design.
+The ImageEditor auto-generates the toolbars, You can explicitly add the Toolbars by adding the Toolbars manually and you need to change the `AutoGenerateToolbarItems` property to `false`.
 
 {% tabs %}
 
@@ -546,6 +546,35 @@ imageEditor.Toolbars.Add(editorToolbar);
 
 {% endtabs %}
 
+## SubToolbar with explicit toolbars
+
+You can create `SubToolbars` within our default toolbar items to organize related actions.
+
+{% tabs %}
+
+{% highlight C# %}
+
+SfImageEditor imageEditor = new SfImageEditor();
+imageEditor.Source = ImageSource.FromFile("image.png");
+ImageEditorToolbar footerToolbar = imageEditor.Toolbars[1];
+ImageEditorToolbarItem shapeItem = (ImageEditorToolbarItem)footerToolbar.ToolbarItems.FirstOrDefault(i => i.Name == "Shape");
+shapeItem.SubToolbars = new List<ImageEditorToolbar>()
+{
+    new ImageEditorToolbar()
+    {
+        ToolbarItems = new List<IImageEditorToolbarItem>()
+        {
+           new ImageEditorToolbarItem(){ Name = "Circle"},
+           new ImageEditorToolbarItem(){ Name = "Pen"},
+           new ImageEditorToolbarItem(){ Name = "AddText"}
+        },
+    }
+};
+
+{% endhighlight %}
+
+{% endtabs %}
+
 ## ToolbarItemSelected event 
 
 Whenever you tap the toolbar menu item, the `ToolbarItemSelected` event will be triggered, and you can get the respective tapped toolbar item as an argument as shown in the following code snippet. 
@@ -556,13 +585,13 @@ Default toolbar item action can be restricted by setting `e.cancel` to `true`.
 
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-    <imageEditor:SfImageEditor Source="image.png" ToolbarItemSelected = "imageEditor_ToolbarItemSelected" />
+    <imageEditor:SfImageEditor Source="image.png" ToolbarItemSelected = "OnImageEditorToolbarItemSelected" />
 
 {% endhighlight %}
 
 {% highlight C# tabtitle="MainPage.xaml.cs" %}
             
-    private void imageEditor_ToolbarItemSelected(object sender, ToolbarItemSelectedEventArgs e)
+    private void OnImageEditorToolbarItemSelected(object sender, ToolbarItemSelectedEventArgs e)
     {
         DisplayAlert("Selected ToolbarItem is  " + e.ToolbarItem.Name, "Ok", "Cancel");
     }
