@@ -13,13 +13,13 @@ The sticky note annotation feature of [SfPdfViewer](https://help.syncfusion.com/
 
 ## Types of sticky notes
 
-The following sticky note icon types are currently available in SfPdfViewer. The icon types can be selected from the `StickyNoteIcon` enumeration.
+The following sticky note icon types are currently available in [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html). The icon types can be selected from the `StickyNoteIcon` enumeration.
 
 ![Sticky note icon types](Images/Annotations/sticky-note-icon-types.png)
 
 ## Add sticky notes
 
-Currently, there is no support for a sticky note annotation mode in the AnnotationMode property.  But the sticky notes can be added programmatically using the AddAnnotation method of the SfPdfViewer.
+Currently, there is no support for a sticky note annotation mode in the [AnnotationMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationMode) property.  But the sticky notes can be added programmatically using the [AddAnnotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AddAnnotation_Syncfusion_Maui_PdfViewer_Annotation_) method of the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html).
 
 The following example explains how to create a sticky note with comment icon and add it to the first page of a PDF document.
 
