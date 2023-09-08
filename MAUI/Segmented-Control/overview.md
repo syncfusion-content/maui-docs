@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Overview of .NET MAUI Segmented control | Syncfusion
-description: Learn about the introduction of Syncfusion .NET MAUI Segmented(SfSegmented) control in mobile and desktop applications from a single shared codebase.
+description: Learn about the introduction of Syncfusion .NET MAUI Segmented (SfSegmented) control in mobile and desktop applications from a single shared codebase.
 platform: maui
 control: SfSegmentedControl
 documentation: ug

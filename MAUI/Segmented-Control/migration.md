@@ -576,6 +576,28 @@ public class ViewModel
 
 </table>
 
+## Methods
+
+<table>
+<tr>
+<th>Xamarin SfSegmented control</th>
+<th>.NET MAUI SfSegmented control</th>
+<th>Description</th></tr>
+
+<tr>
+<td>{{'[ScrollTo](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Buttons.SfSegmentedControl.html#Syncfusion_XForms_Buttons_SfSegmentedControl_ScrollTo_System_Int32_Syncfusion_XForms_Buttons_ScrollToPosition_)'| markdownify }}</td>
+<td>ScrollTo</td>
+<td>Method to scrolls the scroll viewer to the specified index.</td>
+</tr>
+
+<tr>
+<td>NA</td>
+<td>SetSegmentEnabled</td>
+<td>Sets the enabled state of a specific segment at the specified index.</td>
+</tr>
+
+</table>
+
 ## Upcoming Features
 
 ## Known issues in .NET MAUI Segmented control

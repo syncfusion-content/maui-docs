@@ -87,7 +87,6 @@ You can add the data inside the segmented control in three different ways:
 
 1. String data
 2. SfSegmentItem
-3. Custom View
 
 Items inside the segmented control can be added using the `ItemsSource` property of `SfSegmentedControl`, which holds the collection/list of items.
 
@@ -102,7 +101,7 @@ You can add string data as `ItemsSource` to `SfSegmentedControl`.
             
     xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons"
 
-    <buttons:SfSegmentedControl x:Name="segmentControl">
+    <buttons:SfSegmentedControl x:Name="segmentedControl">
     </buttons:SfSegmentedControl>
 </ContentPage>
 
@@ -149,11 +148,10 @@ You can add `SfSegmentItem` as `ItemsSource` to `SfSegmentedControl`.
         <local:ViewModel/>
     </ContentPage.BindingContext>
 
-        <buttons:SfSegmentedControl x:Name="segmentControl"
+        <buttons:SfSegmentedControl x:Name="segmentedControl"
                                     Stroke="Black"
                                     SelectedIndex="1"
                                     BackgroundColor="Transparent"
-                                    VisibleSegmentsCount="6"
                                     ItemsSource="{Binding ItemCollection}">
     </buttons:SfSegmentedControl>
 </ContentPage>
