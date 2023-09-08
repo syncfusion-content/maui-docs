@@ -88,7 +88,7 @@ The `FontFamily` property is used to customize the font family of text in `SfBut
 {% tabs %}
 {% highlight xaml %}
 
-<button:SfButton x:Name="button" Text="Button" FontFamily = "Arial">
+<button:SfButton x:Name="button" Text="Button" FontFamily = "Samantha-Demo">
 </button:SfButton>
 
 {% endhighlight %}
@@ -96,7 +96,7 @@ The `FontFamily` property is used to customize the font family of text in `SfBut
 
 SfButton button = new SfButton();
 button.Text = "Button";
-button.FontFamily = "Arial";
+button.FontFamily = "Samantha-Demo";
 
 {% endhighlight %}
 {% endtabs %}

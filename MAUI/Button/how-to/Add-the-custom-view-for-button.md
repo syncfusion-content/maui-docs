@@ -84,4 +84,4 @@ button.Content = happyTemplate;
 {% endhighlight %}
 {% endtabs %}
 
-![SfButton with custom view](images/button_content.png)
+![SfButton with custom view](images/button-content.png)
