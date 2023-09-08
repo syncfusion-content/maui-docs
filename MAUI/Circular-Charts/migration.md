@@ -669,10 +669,6 @@ N> For more information about selection check [here](https://help.syncfusion.com
 * DataTemplate support for data labels.
 * Connector lines customization support.
 
-**Tooltip**
-
-* Hide and Show method for tooltip.
-
 ## Known issue 
 
 * [iOS] [#9135](https://github.com/dotnet/maui/issues/9135) - The chart legend was taking up a huge amount of vertical space or becoming hidden.

@@ -645,10 +645,6 @@ chart.SelectionBehavior = selection;
 * DataTemplate support for data labels.
 * Connector lines customization support.
 
-**Tooltip**
-
-* Hide and Show method for tooltip.
-
 ## Unsupported features from Xamarin.Forms
 
 * In.NET MAUI, the [ChartDataPoint](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.ChartDataPoint.html#) model class was no longer available. Instead, create your own model.
