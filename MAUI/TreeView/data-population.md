@@ -215,6 +215,9 @@ To create a tree view using data binding, set a hierarchical data collection to 
 </ContentPage>
 
 {% endhighlight %}
+{% endtabs %}
+
+{% endhighlight %}
 {% highlight c# %}
 
 SfTreeView treeView = new SfTreeView();
@@ -280,7 +283,6 @@ namespace GettingStarted
     public class MainPage : ContentPage
     {
         SfTreeView treeView;
-
         public MainPage()
         {
             treeView = new SfTreeView();
