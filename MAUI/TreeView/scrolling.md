@@ -18,7 +18,7 @@ The TreeView allows programmatic scrolling based on the data model and `TreeView
 {% highlight c# hl_line="5" %}
 private void BringIntoView_Clicked(object sender, EventArgs e)
 {
-    var count= viewModel.ImageNodeInfo.Count;
+    var count = viewModel.ImageNodeInfo.Count;
     var data = viewModel.ImageNodeInfo[count-1];
     TreeView.BringIntoView(data);
 }
@@ -31,10 +31,9 @@ The `BringIntoView` method comprises of other optional parameters to decide on t
 
 ### Scroll to the child item with animation
 
-The second optional parameter `disableAnimation` in `BringIntoView` method decides whether the scrolling animation should be enabled or disabled when the child item comes into view. By default, the scrolling will be animated.
+The second optional parameter `disableAnimation` in `BringIntoView` method decides whether the scrolling animation should be enabled or disabled when the child item comes into view. By default, the scrolling will be `animated`.
 
 * If the parameter value is `true`, scrolling animation will be disabled.
-
 * If the parameter value is `false`, scrolling animation will be enabled.
 
 
@@ -43,7 +42,7 @@ The second optional parameter `disableAnimation` in `BringIntoView` method decid
 
 private void BringIntoView_Clicked(object sender, EventArgs e)
 {
-    var count= viewModel.ImageNodeInfo.Count;
+    var count = viewModel.ImageNodeInfo.Count;
     var data = viewModel.ImageNodeInfo[count-1];
     // Here, the second optional parameter has been passed as true hence it will disable the animation
     TreeView.BringIntoView(data, true);
@@ -65,7 +64,7 @@ The third optional parameter `canExpand` in `BringIntoView` method decides wheth
 
 private void BringIntoView_Clicked(object sender, EventArgs e)
 {
-    var count= viewModel.ImageNodeInfo.Count;
+    var count = viewModel.ImageNodeInfo.Count;
     var data = viewModel.ImageNodeInfo[count-1];
     TreeView.BringIntoView(data, false, true);
 }
@@ -91,7 +90,7 @@ The fourth optional parameter `scrollToPosition` in `BringIntoView` method allow
 {% highlight c# hl_line="6"%}
 private void BringIntoView_Clicked(object sender, EventArgs e)
 {
-    var count= viewModel.ImageNodeInfo.Count;
+    var count = viewModel.ImageNodeInfo.Count;
     var data = viewModel.ImageNodeInfo[count-1];
     // Scrolls to the data item to make visible in the view.
     treeView.BringIntoView(data, false, false, ScrollToPosition.MakeVisible);
@@ -100,16 +99,15 @@ private void BringIntoView_Clicked(object sender, EventArgs e)
 {% endtabs %}
 
 ## Scrollbar Visibility
-The TreeView provides an option to enable or disable the `Scrollbar` visibility by using the `IsScrollBarVisible` property. By default, the value will be true.
 
-N> Due to some restrictions in native ScrollView renderer in Xamarin.Forms, you cannot change the `IsScrollBarVisible` value at runtime. It can be defined only when initializing the TreeView.
+The TreeView provides an option to enable or disable the `Scrollbar` visibility by using the `ScrollBarVisibility` property. By default, the value will be `Default`.
 
 {% tabs %}
 {% highlight xaml%}
-<syncfusion:SfTreeView x:Name="treeView" IsScrollBarVisible="False" />
+<syncfusion:SfTreeView x:Name="treeView" ScrollBarVisibility="Always" />
 {% endhighlight %}
 {% highlight c# hl_line="2" %}
 SfTreeView treeView = new SfTreeView();
-treeView.IsScrollBarVisible=false;
+treeView.ScrollBarVisibility = ScrollBarVisibility.Always;
 {% endhighlight %}
 {% endtabs %}

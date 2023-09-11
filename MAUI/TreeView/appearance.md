@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Appearance | TreeView for Maui | Syncfusion
-description: Learn about Appearance support in Syncfusion Maui Treeview (SfTreeView) Control and more details.
+title: Appearance in .NET MAUI TreeView Control  | Syncfusion
+description: Learn about Appearance support in Syncfusion .NET MAUI TreeView (SfTreeView) Control and more details.
 platform: MAUI
 control: SfTreeView
 documentation: ug
@@ -18,7 +18,7 @@ A template can be used to present the data in a way that makes sense for the app
 The TreeView allows you to customize the appearance of content view and expander view by setting the `ItemTemplate` and `ExpanderTemplate` properties.
 
 {% tabs %}
-{% highlight xaml hl_lines="15" %}
+{% highlight xaml hl_lines="14" %}
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
@@ -30,13 +30,12 @@ The TreeView allows you to customize the appearance of content view and expander
     </ContentPage.BindingContext>
     <ContentPage.Content>
        <syncfusion:SfTreeView x:Name="treeView"
-                              ItemTemplateContextType="Node"
                               ChildPropertyName="SubFiles"
                               ItemsSource="{Binding ImageNodeInfo}"/>
              <syncfusion:SfTreeView.ItemTemplate>
                 <DataTemplate>
                     <Grid Padding="5,0,0,0">
-                        <Label Text="{Binding Content.ItemName}" 
+                        <Label Text="{Binding ItemName}" 
                                VerticalTextAlignment="Center"/>
                    </Grid>
                 </DataTemplate>
@@ -59,12 +58,11 @@ namespace GettingStarted
             treeView = new SfTreeView();
             FileManagerViewModel viewModel = new FileManagerViewModel();
             treeView.ChildPropertyName = "SubFiles";
-            treeView.ItemTemplateContextType = ItemTemplateContextType.Node;
             treeView.ItemsSource = viewModel.ImageNodeInfo; 
             treeView.ItemTemplate = new DataTemplate(() => {
                 var grid = new Grid ();
                 var itemName = new Label;
-                itemName.SetBinding(Label.TextProperty, new Binding("Content.ItemName"));
+                itemName.SetBinding(Label.TextProperty, new Binding("ItemName"));
                 grid.Children.Add(itemName);
                 return grid;
             });
@@ -83,7 +81,7 @@ By default, the binding context of tree view item will be the data model object 
 For Bound Mode, you can change the binding context of the treeview items by using `ItemTemplateContextType` property.
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight xaml hl_line="12" %}
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
@@ -110,7 +108,7 @@ For Bound Mode, you can change the binding context of the treeview items by usin
     </ContentPage.Content>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# %}
+{% highlight c# hl_line="14" %}
 using Syncfusion.Maui.TreeView;
 
 namespace GettingStarted
@@ -143,15 +141,17 @@ namespace GettingStarted
 Similarly, you can customize the expander view by using `ExpanderTemplate` property like above example.
 
 ## ItemTemplate Selector
+
 The TreeView allows you to customize the appearance of each item with different templates based on specific constraints by using the `DataTemplateSelector`. You can choose a `DataTemplate` for each item at runtime based on the value of data-bound property using `DataTemplateSelector`.
 
 ### Create a data template selector
+
 Create custom class that inherits from `DataTemplateSelector`, and override the `OnSelectTemplate` method to return the `DataTemplate` for that item. At runtime, the TreeView invokes the `OnSelectTemplate` method for each item and passes the data object as parameter.
 
 Create different templates and by using `DataTemplateSelector`, load those templates using `OnSelectTemplate` based on requirements.
 
 {% tabs %}
-{% highlight c# %}
+{% highlight c# tabtitle="ItemTemplateSelector.cs" %}
 public class ItemTemplateSelector : DataTemplateSelector
 {
     public DataTemplate Template1 { get; set; }
@@ -204,21 +204,21 @@ SfTreeView treeView = new SfTreeView();
 treeView.ItemTemplate = new ItemTemplateSelector()
 {% endhighlight %}
 <% endtabs %>
-Download the entire source code from GitHub here
+Download the entire source code from GitHub here.
 
 Similarly, you can provide `DataTemplateSelector` for `ExpanderTemplate` property.
 
 ## Indentation
 
-The TreeView allows customizing the indent spacing of items by setting the `Indentation` property. The default value of this property is `30`. This property can be customized at runtime.
+The TreeView allows customizing the indent spacing of items by setting the `Indentation` property. The default value of this property is `30d`. This property can be customized at runtime.
 
 {% tabs %}
 {% highlight xaml %}
-<syncfusion:SfTreeView x:Name="treeView" Indentation="30">
+<syncfusion:SfTreeView x:Name="treeView" Indentation="40">
 {% endhighlight %}
-{% highlight c# hl_lines="2" %}
+{% highlight c# hl_lines ="2" %}
 SfTreeView treeView = new SfTreeView();
-treeView.Indentation = 30;
+treeView.Indentation = 40;
 {% endhighlight %}
 <% endtabs %>
 
@@ -228,11 +228,11 @@ The TreeView allows customizing the width of expander view by setting the `Expan
 
 {% tabs %}
 {% highlight xaml %}
-<syncfusion:SfTreeView x:Name="treeView" ExpanderWidth="32">
+<syncfusion:SfTreeView x:Name="treeView" ExpanderWidth="40">
 {% endhighlight %}
-{% highlight c# hl_lines="2" %}
+{% highlight c# hl_lines ="2" %}
 SfTreeView treeView = new SfTreeView();
-treeView.ExpanderWidth = 32;
+treeView.ExpanderWidth = 40;
 {% endhighlight %}
 <% endtabs %>
 
@@ -246,7 +246,7 @@ The TreeView allows you change the position of expander view by setting the `Exp
 {% highlight xaml %}
 <syncfusion:SfTreeView x:Name="treeView" ExpanderPosition="End">
 {% endhighlight %}
-{% highlight c# hl_lines="2" %}
+{% highlight c# hl_lines = "2" %}
 SfTreeView treeView = new SfTreeView();
 treeView.ExpanderPosition = ExpanderPosition.End;
 {% endhighlight %}
@@ -276,14 +276,10 @@ The TreeView allows you to customize the style of `TreeViewItem` based on differ
                            ItemsSource="{Binding Folders}">
         <syncfusion:SfTreeView.ItemTemplate>
             <DataTemplate>
-                <ViewCell>
-                    <ViewCell.View>
                         <Label LineBreakMode="NoWrap"
                                Text="{Binding Content.FolderName}"
                                FontSize="Medium"
                                FontAttributes="{Binding Level,Converter={x:StaticResource FontAttributeConverter}}"/>
-                    </ViewCell.View>
-                </ViewCell>
             </DataTemplate>
         </syncfusion:SfTreeView.ItemTemplate>
     </syncfusion:SfTreeView>
@@ -293,7 +289,7 @@ The TreeView allows you to customize the style of `TreeViewItem` based on differ
 <% endtabs %>
 
 {% endhighlight %}
-{% highlight c# %}
+{% highlight c# tabtitle = "converter.cs" %}
 public class FontAttributeConverter : IValueConverter
 {
     public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
