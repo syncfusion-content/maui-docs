@@ -9,417 +9,91 @@ documentation: ug
 
 # Customizations in .NET MAUI TimePicker (SfTimePicker)
 
-You can customize the header, column header, footer, selected item of the [`SfTimePicker`]().
+Each cell of the header, column header, footer and selection views can be customized in [.NET MAUI TimePicker]() (SfTimePicker).
 
 ## Header customization
 
-[`SfTimePicker`]() allows customizing the header's background, text color, and fonts.
+You can customize the time picker header view cell by using the `HeaderView` property of `SfTimePicker`.
 
 ### Set header text
 
-[`SfTimePicker`]() allows providing custom text to its header by setting the [`SfTimePicker.HeaderView`]() property.
+The SfTimePicker control allows you to add the header text by setting the [Text] property in the [PickerHeaderView]. To enable the header view by setting the [Height] property in the [PickerHeaderView].
 
 {% tabs %}
 
-{% highlight xaml %}
+{% highlight xaml tabtitle="XAML" hl_lines="2" %}
 
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:TimePickerSample"
-             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker"
-             x:Class="TimePickerSample.MainPage">
-    <ContentPage.Content>
-        <syncfusion:SfTimePicker x:Name="TimePicker" >
-            <syncfusion:SfTimePicker.HeaderView >
-                <syncfusion:PickerHeaderView Height="40" Text="Time Picker"/>
-            </syncfusion:SfTimePicker.HeaderView>
-        </syncfusion.SfTimePicker>
-    </ContentPage.Content>
-</ContentPage>
+<picker:SfTimePicker x:Name="timePicker" >
+    <picker:SfTimePicker.HeaderView >
+        <picker:PickerHeaderView Height="40" Text="Time Picker"/>
+    </picker:SfTimePicker.HeaderView>
+</picker:SfTimePicker>
  
 {% endhighlight %}
 
-{% highlight c# %}
+{% highlight c# tabtitle="C#" hl_lines="4" %}
 
-using Syncfusion.Maui.Picker;
 
-namespace TimePickerSample
+SfTimePicker timePicker = new SfTimePicker();
+timePicker.HeaderView = new PickerHeaderView()
 {
-    public partial class MainPage : ContentPage
-    {
-        public MainPage()
-        {
-            InitializeComponent();
-            SfTimePicker timePicker = new SfTimePicker();
-            timePicker.HeaderView = new PickerHeaderView()
-            {
-                Height = 40,
-                Text = "Time Picker"
-            };
+    Height = 40,
+    Text = "Time Picker"
+};
 
-            this.Content = timePicker;
-        }
-    }
-}
+this.Content = timePicker;
 
 {% endhighlight %}
 
 {% endtabs %}
 
-### Background
+### Customization of header
 
-Background color of the header can be customized by setting the [`SfTimePicker.HeaderView`]() property.
+*    **Header View** - You can customize the header view text style, divider color and background of the `TimePicker` using the [TextStyle](), [DividerColor]() and [Background]() properties of the [HeaderView]().
 
 {% tabs %}
 
-{% highlight xaml %}
+{% highlight xaml tabtitle="XAML" hl_lines="2" %}
 
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:TimePickerSample"
-             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker"
-             x:Class="TimePickerSample.MainPage">
-    <ContentPage.Content>
-        <syncfusion:SfTimePicker x:Name="TimePicker" >
-            <syncfusion:SfTimePicker.HeaderView >
-                <syncfusion:PickerHeaderView Height="40" Text="Time Picker" Background="Orange"/>
-            </syncfusion:SfTimePicker.HeaderView>
-        </syncfusion.SfTimePicker>
-    </ContentPage.Content>
-</ContentPage>
+<picker:SfTimePicker x:Name="timePicker" >
+    <picker:SfTimePicker.HeaderView >
+        <picker:PickerHeaderView Height="40" Text="Time Picker" DividerColor="#FFEFD2" Background="#6750A4">
+            <picker:PickerHeaderView.TextStyle >
+                <picker:PickerTextStyle FontSize="15" TextColor="White" />
+            </picker:PickerHeaderView.TextStyle>
+        </picker:PickerHeaderView>
+    </picker:SfTimePicker.HeaderView>
+</picker:SfTimePicker>
 
 {% endhighlight %}
 
-{% highlight c# %}
+{% highlight c# tabtitle="C#" hl_lines="4" %}
 
-using Syncfusion.Maui.Picker;
-
-namespace TimePickerSample
+SfTimePicker timePicker = new SfTimePicker();
+timePicker.HeaderView = new PickerHeaderView()
 {
-    public partial class MainPage : ContentPage
+    Height = 40,
+    Text = "Time Picker",
+    DividerColor = Color.FromArgb("#FFEFD2")
+    Background = Color.FromArgb("#6750A4"),
+    TextStyle = new PickerTextStyle()
     {
-        public MainPage()
-        {
-            InitializeComponent();
-            SfTimePicker timePicker = new SfTimePicker();
-            timePicker.HeaderView = new PickerHeaderView()
-            {
-                Height = 40,
-                Text = "Time Picker",
-                Background = Colors.Orange,
-            };
-
-            this.Content = timePicker;
-        }
+        TextColor = Colors.White,
+        FontSize = 15,
     }
-}
+};
+
+this.Content = timePicker;
 
 {% endhighlight %}
 
 {% endtabs %}
 
-### Divider Color
-
-Divider color of the header can be customized by setting the [`SfTimePicker.HeaderView`]() property.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:TimePickerSample"
-             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker"
-             x:Class="TimePickerSample.MainPage">
-    <ContentPage.Content>
-        <syncfusion:SfTimePicker x:Name="TimePicker" >
-            <syncfusion:SfTimePicker.HeaderView >
-                <syncfusion:PickerHeaderView Height="40" Text="Time Picker" DividerColor="Blue"/>
-            </syncfusion:SfTimePicker.HeaderView>
-        </syncfusion.SfTimePicker>
-    </ContentPage.Content>
-</ContentPage>
-
-{% endhighlight %}
-
-{% highlight c# %}
-
-using Syncfusion.Maui.Picker;
-
-namespace TimePickerSample
-{
-    public partial class MainPage : ContentPage
-    {
-        public MainPage()
-        {
-            InitializeComponent();
-            SfTimePicker timePicker = new SfTimePicker();
-            timePicker.HeaderView = new PickerHeaderView()
-            {
-                Height = 40,
-                Text = "Time Picker",
-                DividerColor = Colors.Blue,
-            };
-
-            this.Content = timePicker;
-        }
-    }
-}
-
-{% endhighlight %}
-
-{% endtabs %}
-
-### Text color 
-
-Text color of the header can be customized by setting the [`SfTimePicker.HeaderView`]() property.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:TimePickerSample"
-             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker"
-             x:Class="TimePickerSample.MainPage">
-    <ContentPage.Content>
-        <syncfusion:SfTimePicker x:Name="TimePicker" >
-            <syncfusion:SfTimePicker.HeaderView >
-                <syncfusion:PickerHeaderView Height="40" Text="Time Picker" >
-                    <syncfusion:PickerHeaderView.TextStyle >
-                        <syncfusion:PickerTextStyle TextColor="Violet" />
-                    </syncfusion:PickerHeaderView.TextStyle>
-                </syncfusion:PickerHeaderView>
-            </syncfusion:SfTimePicker.HeaderView>
-        </syncfusion.SfTimePicker>
-    </ContentPage.Content>
-</ContentPage>
-
-{% endhighlight %}
-
-{% highlight c# %}
-
-using Syncfusion.Maui.Picker;
-
-namespace TimePickerSample
-{
-    public partial class MainPage : ContentPage
-    {
-        public MainPage()
-        {
-            InitializeComponent();
-            SfTimePicker timePicker = new SfTimePicker();
-            timePicker.HeaderView = new PickerHeaderView()
-            {
-                Height = 40,
-                Text = "Time Picker",
-                TextStyle = new PickerTextStyle()
-                {
-                    TextColor = Colors.Violet,
-                }
-            };
-
-            this.Content = timePicker;
-        }
-    }
-}
-
-{% endhighlight %}
-
-{% endtabs %}
-
-### Font 
-
-This section explains the Font customization of header text.
-
-#### FontFamily
-
-FontFamily of the header text can be customized by setting the [`SfTimePicker.HeaderView`]() property.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:TimePickerSample"
-             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker"
-             x:Class="TimePickerSample.MainPage">
-    <ContentPage.Content>
-        <syncfusion:SfTimePicker x:Name="TimePicker" >
-            <syncfusion:SfTimePicker.HeaderView >
-                <syncfusion:PickerHeaderView Height="40" Text="Time Picker" >
-                    <syncfusion:PickerHeaderView.TextStyle >
-                        <syncfusion:PickerTextStyle FontFamily="Times New Roman" />
-                    </syncfusion:PickerHeaderView.TextStyle>
-                </syncfusion:PickerHeaderView>
-            </syncfusion:SfTimePicker.HeaderView>
-        </syncfusion.SfTimePicker>
-    </ContentPage.Content>
-</ContentPage>
-
-{% endhighlight %}
-
-{% highlight c# %}
-
-using Syncfusion.Maui.Picker;
-
-namespace TimePickerSample
-{
-    public partial class MainPage : ContentPage
-    {
-        public MainPage()
-        {
-            InitializeComponent();
-            SfTimePicker timePicker = new SfTimePicker();
-            timePicker.HeaderView = new PickerHeaderView()
-            {
-                Height = 40,
-                Text = "Time Picker",
-                TextStyle = new PickerTextStyle()
-                {
-                    FontFamily = "Times New Roman",
-                }
-            };
-
-            this.Content = timePicker;
-        }
-    }
-}
-
-{% endhighlight %}
-
-{% endtabs %}
-
-#### FontSize
-
-FontSize of the header text can be customized by setting the [`SfTimePicker.HeaderView`]() property.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:TimePickerSample"
-             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker"
-             x:Class="TimePickerSample.MainPage">
-    <ContentPage.Content>
-        <syncfusion:SfTimePicker x:Name="TimePicker" >
-            <syncfusion:SfTimePicker.HeaderView >
-                <syncfusion:PickerHeaderView Height="40" Text="Time Picker" >
-                    <syncfusion:PickerHeaderView.TextStyle >
-                        <syncfusion:PickerTextStyle FontSize="12" />
-                    </syncfusion:PickerHeaderView.TextStyle>
-                </syncfusion:PickerHeaderView>
-            </syncfusion:SfTimePicker.HeaderView>
-        </syncfusion.SfTimePicker>
-    </ContentPage.Content>
-</ContentPage>
-
-{% endhighlight %}
-
-{% highlight c# %}
-
-using Syncfusion.Maui.Picker;
-
-namespace TimePickerSample
-{
-    public partial class MainPage : ContentPage
-    {
-        public MainPage()
-        {
-            InitializeComponent();
-            SfTimePicker timePicker = new SfTimePicker();
-            timePicker.HeaderView = new PickerHeaderView()
-            {
-                Height = 40,
-                Text = "Time Picker",
-                TextStyle = new PickerTextStyle()
-                {
-                    FontSize = 12,
-                }
-            };
-
-            this.Content = timePicker;
-        }
-    }
-}
-
-{% endhighlight %}
-
-{% endtabs %}   
-
-#### FontAttribute
-
-FontAttribute of the header text can be customized by setting the [`SfTimePicker.HeaderView`]() property.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:TimePickerSample"
-             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker"
-             x:Class="TimePickerSample.MainPage">
-    <ContentPage.Content>
-        <syncfusion:SfTimePicker x:Name="TimePicker" >
-            <syncfusion:SfTimePicker.HeaderView >
-                <syncfusion:PickerHeaderView Height="40" Text="Time Picker" >
-                    <syncfusion:PickerHeaderView.TextStyle >
-                        <syncfusion:PickerTextStyle FontAttributes="Italic" />
-                    </syncfusion:PickerHeaderView.TextStyle>
-                </syncfusion:PickerHeaderView>
-            </syncfusion:SfTimePicker.HeaderView>
-        </syncfusion.SfTimePicker>
-    </ContentPage.Content>
-</ContentPage>
-
-{% endhighlight %}
-
-{% highlight c# %}
-
-using Syncfusion.Maui.Picker;
-
-namespace TimePickerSample
-{
-    public partial class MainPage : ContentPage
-    {
-        public MainPage()
-        {
-            InitializeComponent();
-            SfTimePicker timePicker = new SfTimePicker();
-            timePicker.HeaderView = new PickerHeaderView()
-            {
-                Height = 40,
-                Text = "Time Picker",
-                TextStyle = new PickerTextStyle()
-                {
-                    FontAttributes = FontAttributes.Italic,
-                }
-            };
-
-            this.Content = timePicker;
-        }
-    }
-}
-
-{% endhighlight %}
-
-{% endtabs %}
+![Header view Customization in .NET MAUI TimePicker.]()
 
 ## Column header customization
 
-[`SfTimePicker`]() allows customizing the column header's background, text color, and fonts.
+You can customize the time picker column header view cell by using the `ColumnHeaderView` property of `SfTimePicker`.
 
 ### Set custom column header 
 
@@ -427,1211 +101,226 @@ namespace TimePickerSample
 
 {% tabs %}
 
-{% highlight xaml %}
+{% highlight xaml tabtitle="XAML" hl_lines="2" %}
 
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:TimePickerSample"
-             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker"
-             x:Class="TimePickerSample.MainPage">
-    <ContentPage.Content>
-        <syncfusion:SfTimePicker x:Name="TimePicker" >
-            <syncfusion:SfTimePicker.ColumnHeaderView >
-                <syncfusion:TimePickerColumnHeaderView HourHeaderText="Hour Column"
-                                                        MinuteHeaderText="Minute Column"
-                                                        SecondHeaderText="Second Column"/>
-            </syncfusion:SfTimePicker.ColumnHeaderView>
-        </syncfusion.SfTimePicker>
-    </ContentPage.Content>
-</ContentPage>
+<picker:SfTimePicker x:Name="timePicker" >
+    <picker:SfTimePicker.ColumnHeaderView >
+        <picker:TimePickerColumnHeaderView HourHeaderText="Hour Column"
+                                            MinuteHeaderText="Minute Column"
+                                            SecondHeaderText="Second Column"/>
+    </picker:SfTimePicker.ColumnHeaderView>
+</picker:SfTimePicker>
  
 {% endhighlight %}
 
-{% highlight c# %}
+{% highlight c# tabtitle="C#" hl_lines="4" %}
 
-using Syncfusion.Maui.Picker;
-
-namespace TimePickerSample
+SfTimePicker timePicker = new SfTimePicker();
+timePicker.ColumnHeaderView = new TimePickerColumnHeaderView()
 {
-    public partial class MainPage : ContentPage
-    {
-        public MainPage()
-        {
-            InitializeComponent();
-            SfTimePicker timePicker = new SfTimePicker();
-            timePicker.ColumnHeaderView = new TimePickerColumnHeaderView()
-            {
-                HourHeaderText = "Hour Column",
-                MinuteHeaderText = "Minute Column",
-                SecondHeaderText = "Second Column"
-            };
+    HourHeaderText = "Hour Column",
+    MinuteHeaderText = "Minute Column",
+    SecondHeaderText = "Second Column"
+};
 
-            this.Content = timePicker;
-        }
-    }
-}
+this.Content = timePicker;
 
 {% endhighlight %}
 
 {% endtabs %}
 
-### Background
+### Customization of column header
 
-Background color of the column header can be customized by setting the [`SfTimePicker.ColumnHeaderView`]() property.
+*    **Column Header View** - You can customize the column header view text style, divider color and background of the `TimePicker` using the [TextStyle](), [DividerColor]() and [Background]() properties of the [ColumnHeaderView]().
 
 {% tabs %}
 
-{% highlight xaml %}
+{% highlight xaml tabtitle="XAML" hl_lines="2" %}
 
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:TimePickerSample"
-             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker"
-             x:Class="TimePickerSample.MainPage">
-    <ContentPage.Content>
-        <syncfusion:SfTimePicker x:Name="TimePicker" >
-            <syncfusion:SfTimePicker.ColumnHeaderView >
-                <syncfusion:TimePickerColumnHeaderView Background="Orange"/>
-            </syncfusion:SfTimePicker.ColumnHeaderView>
-        </syncfusion.SfTimePicker>
-    </ContentPage.Content>
-</ContentPage>
+<picker:SfTimePicker x:Name="timePicker" >
+    <picker:SfTimePicker.ColumnHeaderView >
+        <picker:TimePickerColumnHeaderView DividerColor="#FFEFD2" Background="#6750A4">
+            <picker:TimePickerColumnHeaderView.TextStyle >
+                <picker:PickerTextStyle FontSize="15" TextColor="White" />
+            </picker:TimePickerColumnHeaderView.TextStyle>
+        </picker:TimePickerColumnHeaderView>
+    </picker:SfTimePicker.ColumnHeaderView>
+</picker:SfTimePicker>
 
 {% endhighlight %}
 
-{% highlight c# %}
+{% highlight c# tabtitle="C#" hl_lines="4" %}
 
-using Syncfusion.Maui.Picker;
-
-namespace TimePickerSample
+SfTimePicker timePicker = new SfTimePicker();
+timePicker.ColumnHeaderView = new TimePickerColumnHeaderView()
 {
-    public partial class MainPage : ContentPage
+    DividerColor = Color.FromArgb("#FFEFD2")
+    Background = Color.FromArgb("#6750A4"),
+    TextStyle = new PickerTextStyle()
     {
-        public MainPage()
-        {
-            InitializeComponent();
-            SfTimePicker timePicker = new SfTimePicker();
-            timePicker.ColumnHeaderView = new TimePickerColumnHeaderView()
-            {
-                Background = Colors.Orange,
-            };
-
-            this.Content = timePicker;
-        }
+        TextColor = Colors.White,
+        FontSize = 15,
     }
-}
+};
+
+this.Content = timePicker;
 
 {% endhighlight %}
 
 {% endtabs %}
 
-### Divider Color
-
-Divider color of the column header can be customized by setting the [`SfTimePicker.ColumnHeaderView`]() property.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:TimePickerSample"
-             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker"
-             x:Class="TimePickerSample.MainPage">
-    <ContentPage.Content>
-        <syncfusion:SfTimePicker x:Name="TimePicker" >
-            <syncfusion:SfTimePicker.ColumnHeaderView >
-                <syncfusion:TimePickerColumnHeaderView DividerColor="Blue"/>
-            </syncfusion:SfTimePicker.ColumnHeaderView>
-        </syncfusion.SfTimePicker>
-    </ContentPage.Content>
-</ContentPage>
-
-{% endhighlight %}
-
-{% highlight c# %}
-
-using Syncfusion.Maui.Picker;
-
-namespace TimePickerSample
-{
-    public partial class MainPage : ContentPage
-    {
-        public MainPage()
-        {
-            InitializeComponent();
-            SfTimePicker timePicker = new SfTimePicker();
-            timePicker.ColumnHeaderView = new TimePickerColumnHeaderView()
-            {
-                DividerColor = Colors.Blue,
-            };
-
-            this.Content = timePicker;
-        }
-    }
-}
-
-{% endhighlight %}
-
-{% endtabs %}
-
-### Text color 
-
-Text color of the column header can be customized by setting the [`SfTimePicker.ColumnHeaderView`]() property.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:TimePickerSample"
-             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker"
-             x:Class="TimePickerSample.MainPage">
-    <ContentPage.Content>
-        <syncfusion:SfTimePicker x:Name="TimePicker" >
-            <syncfusion:SfTimePicker.ColumnHeaderView >
-                <syncfusion:TimePickerColumnHeaderView >
-                    <syncfusion:TimePickerColumnHeaderView.TextStyle >
-                        <syncfusion:PickerTextStyle TextColor="Violet"/>
-                    </syncfusion:TimePickerColumnHeaderView.TextStyle>
-                </syncfusion:TimePickerColumnHeaderView>
-            </syncfusion:SfTimePicker.ColumnHeaderView>
-        </syncfusion.SfTimePicker>
-    </ContentPage.Content>
-</ContentPage>
-
-{% endhighlight %}
-
-{% highlight c# %}
-
-using Syncfusion.Maui.Picker;
-
-namespace TimePickerSample
-{
-    public partial class MainPage : ContentPage
-    {
-        public MainPage()
-        {
-            InitializeComponent();
-            SfTimePicker timePicker = new SfTimePicker();
-            timePicker.ColumnHeaderView = new TimePickerColumnHeaderView()
-            {
-                TextStyle = new PickerTextStyle()
-                {
-                    TextColor = Colors.Violet,
-                }
-            };
-
-            this.Content = timePicker;
-        }
-    }
-}
-
-{% endhighlight %}
-
-{% endtabs %}
-
-### Font 
-
-This section explains the Font customization of column header text.
-
-#### FontFamily
-
-FontFamily of the column header text can be customized by setting the [`SfTimePicker.ColumnHeaderView`]() property.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:TimePickerSample"
-             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker"
-             x:Class="TimePickerSample.MainPage">
-    <ContentPage.Content>
-        <syncfusion:SfTimePicker x:Name="TimePicker" >
-            <syncfusion:SfTimePicker.ColumnHeaderView >
-                <syncfusion:TimePickerColumnHeaderView >
-                    <syncfusion:TimePickerColumnHeaderView.TextStyle >
-                        <syncfusion:PickerTextStyle FontFamily="Times New Roman"/>
-                    </syncfusion:TimePickerColumnHeaderView.TextStyle>
-                </syncfusion:TimePickerColumnHeaderView>
-            </syncfusion:SfTimePicker.ColumnHeaderView>
-        </syncfusion.SfTimePicker>
-    </ContentPage.Content>
-</ContentPage>
-
-{% endhighlight %}
-
-{% highlight c# %}
-
-using Syncfusion.Maui.Picker;
-
-namespace TimePickerSample
-{
-    public partial class MainPage : ContentPage
-    {
-        public MainPage()
-        {
-            InitializeComponent();
-            SfTimePicker timePicker = new SfTimePicker();
-            timePicker.ColumnHeaderView = new TimePickerColumnHeaderView()
-            {
-                TextStyle = new PickerTextStyle()
-                {
-                    FontFamily = "Times New Roman",
-                }
-            };
-
-            this.Content = timePicker;
-        }
-    }
-}
-
-{% endhighlight %}
-
-{% endtabs %}
-
-#### FontSize
-
-FontSize of the column header text can be customized by setting the [`SfTimePicker.ColumnHeaderView`]() property.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:TimePickerSample"
-             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker"
-             x:Class="TimePickerSample.MainPage">
-    <ContentPage.Content>
-        <syncfusion:SfTimePicker x:Name="TimePicker" >
-            <syncfusion:SfTimePicker.ColumnHeaderView >
-                <syncfusion:TimePickerColumnHeaderView >
-                    <syncfusion:TimePickerColumnHeaderView.TextStyle >
-                        <syncfusion:PickerTextStyle FontSize="12"/>
-                    </syncfusion:TimePickerColumnHeaderView.TextStyle>
-                </syncfusion:TimePickerColumnHeaderView>
-            </syncfusion:SfTimePicker.ColumnHeaderView>
-        </syncfusion.SfTimePicker>
-    </ContentPage.Content>
-</ContentPage>
-
-{% endhighlight %}
-
-{% highlight c# %}
-
-using Syncfusion.Maui.Picker;
-
-namespace TimePickerSample
-{
-    public partial class MainPage : ContentPage
-    {
-        public MainPage()
-        {
-            InitializeComponent();
-            SfTimePicker timePicker = new SfTimePicker();
-            timePicker.ColumnHeaderView = new TimePickerColumnHeaderView()
-            {
-                TextStyle = new PickerTextStyle()
-                {
-                    FontSize = 12,
-                }
-            };
-
-            this.Content = timePicker;
-        }
-    }
-}
-
-{% endhighlight %}
-
-{% endtabs %}   
-
-#### FontAttribute
-
-FontAttribute of the column header text can be customized by setting the [`SfTimePicker.ColumnHeaderView`]() property.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:TimePickerSample"
-             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker"
-             x:Class="TimePickerSample.MainPage">
-    <ContentPage.Content>
-        <syncfusion:SfTimePicker x:Name="TimePicker" >
-            <syncfusion:SfTimePicker.ColumnHeaderView >
-                <syncfusion:TimePickerColumnHeaderView >
-                    <syncfusion:TimePickerColumnHeaderView.TextStyle >
-                        <syncfusion:PickerTextStyle FontAttributes="Italic"/>
-                    </syncfusion:TimePickerColumnHeaderView.TextStyle>
-                </syncfusion:TimePickerColumnHeaderView>
-            </syncfusion:SfTimePicker.ColumnHeaderView>
-        </syncfusion.SfTimePicker>
-    </ContentPage.Content>
-</ContentPage>
-
-{% endhighlight %}
-
-{% highlight c# %}
-
-using Syncfusion.Maui.Picker;
-
-namespace TimePickerSample
-{
-    public partial class MainPage : ContentPage
-    {
-        public MainPage()
-        {
-            InitializeComponent();
-            SfTimePicker timePicker = new SfTimePicker();
-            timePicker.ColumnHeaderView = new TimePickerColumnHeaderView()
-            {
-                TextStyle = new PickerTextStyle()
-                {
-                    FontAttributes = FontAttributes.Italic,
-                }
-            };
-
-            this.Content = timePicker;
-        }
-    }
-}
-
-{% endhighlight %}
-
-{% endtabs %}
+![Column Header view Customization in .NET MAUI TimePicker.]()
 
 ## Footer customization
 
-[`SfTimePicker`]() allows customizing background, text color of the OK and Cancel buttons of the footer.
+You can customize the time picker footer view cell by using the `FooterView` property of `SfTimePicker`.
 
-### OK and Cancel buttons customizations
+### Set footer with ok and cancel button customizations
 
-[`SfTimePicker`]() allows providing custom text to its column header by setting the [`SfTimePicker.FooterView`](). And its contain [`FooterView.OkButtonText`]() [`FooterView.CancelButtonText`]() properties. Default value of [`FooterView.OkButtonText`]() property is "OK", [`FooterView.CancelButtonText`]() is "Cancel".
+In the SfTimePicker control, validation buttons (OK and Cancel) can be customized by setting the [OkButtonText] and [CancelButtonText] properties in the [PickerFooterView]. It allows you to confirm or cancel the selected Time. The `OkButtonText` can be enabled using the [ShowOkButton] property in the [PickerFooterView].
+The Default value of [OkButtonText]() property is "OK", [CancelButtonText]() is "Cancel".
 
 {% tabs %}
 
-{% highlight xaml %}
+{% highlight xaml tabtitle="XAML" hl_lines="2" %}
 
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:TimePickerSample"
-             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker"
-             x:Class="TimePickerSample.MainPage">
-    <ContentPage.Content>
-        <syncfusion:SfTimePicker x:Name="TimePicker" >
-            <syncfusion:SfTimePicker.FooterView >
-                <syncfusion:PickerFooterView Height="40" OkButtonText="Ok Button"
-                                            CancelButtonText="Cancel Button"/>
-            </syncfusion:SfTimePicker.FooterView>
-        </syncfusion.SfTimePicker>
-    </ContentPage.Content>
-</ContentPage>
+<picker:SfTimePicker x:Name="timePicker" >
+    <picker:SfTimePicker.FooterView >
+        <picker:PickerFooterView Height="40" OkButtonText="Ok Button"
+                                    CancelButtonText="Cancel Button"/>
+    </picker:SfTimePicker.FooterView>
+</picker:SfTimePicker>
  
 {% endhighlight %}
 
-{% highlight c# %}
+{% highlight c# tabtitle="C#" hl_lines="4" %}
 
-using Syncfusion.Maui.Picker;
-
-namespace TimePickerSample
+SfTimePicker timePicker = new SfTimePicker();
+timePicker.FooterView = new PickerFooterView()
 {
-    public partial class MainPage : ContentPage
-    {
-        public MainPage()
-        {
-            InitializeComponent();
-            SfTimePicker timePicker = new SfTimePicker();
-            timePicker.FooterView = new PickerFooterView()
-            {
-                Height = 40,
-                OkButtonText = "Ok Button",
-                CancelButtonText = "Cancel Button",
-            };
+    Height = 40,
+    OkButtonText = "Ok Button",
+    CancelButtonText = "Cancel Button",
+};
 
-            this.Content = timePicker;
-        }
-    }
-}
+this.Content = timePicker;
 
 {% endhighlight %}
 
 {% endtabs %}
 
-#### Background
+### Customization of footer
 
-Background color of the OK and Cancel buttons can be customized by setting the [`SfTimePicker.FooterView`]() properties.
+*    **Footer View** - You can customize the footer view text style, divider color and background of the `TimePicker` using the [TextStyle](), [DividerColor]() and [Background]() properties of the [FooterView]().
 
 {% tabs %}
 
-{% highlight xaml %}
+{% highlight xaml tabtitle="XAML" hl_lines="2" %}
 
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:TimePickerSample"
-             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker"
-             x:Class="TimePickerSample.MainPage">
-    <ContentPage.Content>
-        <syncfusion:SfTimePicker x:Name="TimePicker" >
-            <syncfusion:SfTimePicker.FooterView >
-                <syncfusion:PickerFooterView Background="Orange">
-                </syncfusion:PickerFooterView>
-            </syncfusion:SfTimePicker.FooterView>
-        </syncfusion.SfTimePicker>
-    </ContentPage.Content>
-</ContentPage>
+<picker:SfTimePicker x:Name="timePicker" >
+    <picker:SfTimePicker.FooterView >
+        <picker:PickerFooterView Height="40" Text="Time Picker" DividerColor="#FFEFD2" Background="#6750A4">
+            <picker:PickerFooterView.TextStyle >
+                <picker:PickerTextStyle FontSize="15" TextColor="White" />
+            </picker:PickerFooterView.TextStyle>
+        </picker:PickerFooterView>
+    </picker:SfTimePicker.FooterView>
+</picker:SfTimePicker>
 
 {% endhighlight %}
 
-{% highlight c# %}
+{% highlight c# tabtitle="C#" hl_lines="4" %}
 
-using Syncfusion.Maui.Picker;
-
-namespace TimePickerSample
+SfTimePicker timePicker = new SfTimePicker();
+timePicker.FooterView = new PickerFooterView()
 {
-    public partial class MainPage : ContentPage
+    Height = 40,
+    DividerColor = Color.FromArgb("#FFEFD2")
+    Background = Color.FromArgb("#6750A4"),
+    TextStyle = new PickerTextStyle()
     {
-        public MainPage()
-        {
-            InitializeComponent();
-            SfTimePicker timePicker = new SfTimePicker;
-            timePicker.FooterView = new PickerFooterView()
-            {
-                Background = Colors.Violet,
-            };
-
-            this.Content = timePicker;
-        }
+        TextColor = Colors.White,
+        FontSize = 15,
     }
-}
+};
+
+this.Content = timePicker;
 
 {% endhighlight %}
 
 {% endtabs %}
 
-#### Divider Color
+![Footer view Customization in .NET MAUI TimePicker.]()
 
-Divider color of the OK and Cancel buttons can be customized by setting the [`SfTimePicker.FooterView`]() properties.
+## Selection View Customization
+
+You can customize the time picker selection view cell by using the `SelectionView` property of `SfTimePicker`.
+
+### Set selection view
+
+In the SfTimePicker control, corner radius, stroke , and padding can be customized by setting the [CornerRadius], [Stroke] and [Padding] properties in the [PickerSelectionView].
 
 {% tabs %}
 
-{% highlight xaml %}
+{% highlight xaml tabtitle="XAML" hl_lines="2" %}
 
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:TimePickerSample"
-             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker"
-             x:Class="TimePickerSample.MainPage">
-    <ContentPage.Content>
-        <syncfusion:SfTimePicker x:Name="TimePicker" >
-            <syncfusion:SfTimePicker.FooterView >
-                <syncfusion:PickerFooterView DividerColor="Blue">
-                </syncfusion:PickerFooterView>
-            </syncfusion:SfTimePicker.FooterView>
-        </syncfusion.SfTimePicker>
-    </ContentPage.Content>
-</ContentPage>
-
+<picker:SfTimePicker x:Name="timePicker" >
+    <picker:SfTimePicker.SelectionView >
+        <picker:PickerSelectionView CornerRadius="5" Stroke="Violet" Padding="5, 10, 5, 10" Background="#6750A4" />
+    </picker:SfTimePicker.SelectionView>
+</picker:SfTimePicker>
+ 
 {% endhighlight %}
 
-{% highlight c# %}
+{% highlight c# tabtitle="C#" hl_lines="4" %}
 
-using Syncfusion.Maui.Picker;
-
-namespace TimePickerSample
+SfTimePicker timePicker = new SfTimePicker();
+timePicker.SelectionView = new PickerSelectionView()
 {
-    public partial class MainPage : ContentPage
-    {
-        public MainPage()
-        {
-            InitializeComponent();
-            SfTimePicker timePicker = new SfTimePicker;
-            timePicker.FooterView = new PickerFooterView()
-            {
-                DividerColor = Colors.Blue,
-            };
+    CornerRadius = 5,
+    Stroke = Colors.Violet,
+    Pading = new Thickness(5, 10, 5, 10),
+    Background = Color.FromArgb("#6750A4"),
+};
 
-            this.Content = timePicker;
-        }
-    }
-}
+this.Content = timePicker;
 
 {% endhighlight %}
 
 {% endtabs %}
 
-#### Text-Color 
+### Customization of selected intem
 
-Text colors of the OK and Cancel buttons can be customized by setting the [`SfTimePicker.FooterView`]() properties.
+*    **Selected Item** - You can customize the selected view text style of the `TimePicker` using the [SelectedTextStyle]() property of the [SfTimePicker].
 
 {% tabs %}
 
-{% highlight xaml %}
+{% highlight xaml tabtitle="XAML" hl_lines="2" %}
 
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:TimePickerSample"
-             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker"
-             x:Class="TimePickerSample.MainPage">
-    <ContentPage.Content>
-        <syncfusion:SfTimePicker x:Name="TimePicker" >
-            <syncfusion:SfTimePicker.FooterView >
-                <syncfusion:PickerFooterView >
-                    <syncfusion:PickerFooterView.TextStyle >
-                        <syncfusion:PickerTextStyle TextColor="Violet"/>
-                    </syncfusion:PickerFooterView.TextStyle>
-                </syncfusion:PickerFooterView>
-            </syncfusion:SfTimePicker.FooterView>
-        </syncfusion.SfTimePicker>
-    </ContentPage.Content>
-</ContentPage>
+<picker:SfTimePicker x:Name="timePicker" >
+    <picker:SfTimePicker.SelectedTextStyle >
+        <picker:PickerTextStyle FontSize="15" TextColor="White"/>
+    </picker:SfTimePicker.SelectedTextStyle>
+</picker:SfTimePicker>
 
 {% endhighlight %}
 
-{% highlight c# %}
+{% highlight c# tabtitle="C#" hl_lines="4" %}
 
-using Syncfusion.Maui.Picker;
-
-namespace TimePickerSample
+SfTimePicker timePicker = new SfTimePicker();
+timePicker.SelectedTextStyle = new PickerTextStyle()
 {
-    public partial class MainPage : ContentPage
+    TextStyle = new PickerTextStyle()
     {
-        public MainPage()
-        {
-            InitializeComponent();
-            SfTimePicker timePicker = new SfTimePicker();
-            timePicker.FooterView = new PickerFooterView()
-            {
-                TextStyle = new PickerTextStyle()
-                {
-                    TextColor = Colors.Violet,
-                }
-            };
-
-            this.Content = timePicker;
-        }
+        TextColor = Colors.White,
+        FontSize = 15,
     }
-}
+};
+
+this.Content = timePicker;
 
 {% endhighlight %}
 
 {% endtabs %}
 
-### Font 
-
-This section explains the Font customization of footer text.
-
-#### FontFamily
-
-FontFamily of the footer text can be customized by setting the [`SfTimePicker.FooterView`]() property.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:TimePickerSample"
-             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker"
-             x:Class="TimePickerSample.MainPage">
-    <ContentPage.Content>
-        <syncfusion:SfTimePicker x:Name="TimePicker" >
-            <syncfusion:SfTimePicker.FooterView >
-                <syncfusion:PickerFooterView >
-                    <syncfusion:PickerFooterView.TextStyle >
-                        <syncfusion:PickerTextStyle FontFamily="Times New Roman"/>
-                    </syncfusion:PickerFooterView.TextStyle>
-                </syncfusion:PickerFooterView>
-            </syncfusion:SfTimePicker.FooterView>
-        </syncfusion.SfTimePicker>
-    </ContentPage.Content>
-</ContentPage>
-
-{% endhighlight %}
-
-{% highlight c# %}
-
-using Syncfusion.Maui.Picker;
-
-namespace TimePickerSample
-{
-    public partial class MainPage : ContentPage
-    {
-        public MainPage()
-        {
-            InitializeComponent();
-            SfTimePicker timePicker = new SfTimePicker();
-            timePicker.FooterView = new PickerFooterView()
-            {
-                TextStyle = new PickerTextStyle()
-                {
-                    FontFamily = "Times New Roman",
-                }
-            };
-
-            this.Content = timePicker;
-        }
-    }
-}
-
-{% endhighlight %}
-
-{% endtabs %}
-
-#### FontSize
-
-FontSize of the footer text can be customized by setting the [`SfTimePicker.FooterView`]() property.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:TimePickerSample"
-             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker"
-             x:Class="TimePickerSample.MainPage">
-    <ContentPage.Content>
-        <syncfusion:SfTimePicker x:Name="TimePicker" >
-            <syncfusion:SfTimePicker.FooterView >
-                <syncfusion:PickerFooterView >
-                    <syncfusion:PickerFooterView.TextStyle >
-                        <syncfusion:PickerTextStyle FontSize="12"/>
-                    </syncfusion:PickerFooterView.TextStyle>
-                </syncfusion:PickerFooterView>
-            </syncfusion:SfTimePicker.FooterView>
-        </syncfusion.SfTimePicker>
-    </ContentPage.Content>
-</ContentPage>
-
-{% endhighlight %}
-
-{% highlight c# %}
-
-using Syncfusion.Maui.Picker;
-
-namespace TimePickerSample
-{
-    public partial class MainPage : ContentPage
-    {
-        public MainPage()
-        {
-            InitializeComponent();
-            SfTimePicker timePicker = new SfTimePicker();
-            timePicker.FooterView = new PickerFooterView()
-            {
-                TextStyle = new PickerTextStyle()
-                {
-                    FontSize = 12,
-                }
-            };
-
-            this.Content = timePicker;
-        }
-    }
-}
-
-{% endhighlight %}
-
-{% endtabs %}   
-
-#### FontAttribute
-
-FontAttribute of the footer text can be customized by setting the [`SfTimePicker.FooterView`]() property.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:TimePickerSample"
-             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker"
-             x:Class="TimePickerSample.MainPage">
-    <ContentPage.Content>
-        <syncfusion:SfTimePicker x:Name="TimePicker" >
-            <syncfusion:SfTimePicker.FooterView >
-                <syncfusion:PickerFooterView >
-                    <syncfusion:PickerFooterView.TextStyle >
-                        <syncfusion:PickerTextStyle FontAttributes="Italic"/>
-                    </syncfusion:PickerFooterView.TextStyle>
-                </syncfusion:PickerFooterView>
-            </syncfusion:SfTimePicker.FooterView>
-        </syncfusion.SfTimePicker>
-    </ContentPage.Content>
-</ContentPage>
-
-{% endhighlight %}
-
-{% highlight c# %}
-
-using Syncfusion.Maui.Picker;
-
-namespace TimePickerSample
-{
-    public partial class MainPage : ContentPage
-    {
-        public MainPage()
-        {
-            InitializeComponent();
-            SfTimePicker timePicker = new SfTimePicker();
-            timePicker.FooterView = new PickerFooterView()
-            {
-                TextStyle = new PickerTextStyle()
-                {
-                    FontAttributes = FontAttributes.Italic,
-                }
-            };
-
-            this.Content = timePicker;
-        }
-    }
-}
-
-{% endhighlight %}
-
-{% endtabs %}
-
-## Selected Item customization
-
-[`SfTimePicker`]() allows customizing text color and fonts for selected item.
-
-### Text-Color 
-
-Text colors of the selected item can be customized by setting the [`SfTimePicker.SelectedTextStyle`]() properties.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:TimePickerSample"
-             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker"
-             x:Class="TimePickerSample.MainPage">
-    <ContentPage.Content>
-        <syncfusion:SfTimePicker x:Name="TimePicker" >
-            <syncfusion:SfTimePicker.SelectedTextStyle >
-                <syncfusion:PickerTextStyle TextColor="Violet"/>
-            </syncfusion:SfTimePicker.SelectedTextStyle>
-        </syncfusion.SfTimePicker>
-    </ContentPage.Content>
-</ContentPage>
-
-{% endhighlight %}
-
-{% highlight c# %}
-
-using Syncfusion.Maui.Picker;
-
-namespace TimePickerSample
-{
-    public partial class MainPage : ContentPage
-    {
-        public MainPage()
-        {
-            InitializeComponent();
-            SfTimePicker timePicker = new SfTimePicker();
-            timePicker.SelectedTextStyle = new PickerTextStyle()
-            {
-                TextColor = Colors.Violet,
-            };
-
-            this.Content = timePicker;
-        }
-    }
-}
-
-{% endhighlight %}
-
-{% endtabs %}
-
-### Font 
-
-This section explains the Font customization of selected text.
-
-#### FontFamily
-
-FontFamily of the selected text can be customized by setting the [`SfTimePicker.SelectedTextStyle`]() property.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:TimePickerSample"
-             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker"
-             x:Class="TimePickerSample.MainPage">
-    <ContentPage.Content>
-        <syncfusion:SfTimePicker x:Name="TimePicker" >
-            <syncfusion:SfTimePicker.SelectedTextStyle >
-                <syncfusion:PickerTextStyle FontFamily="Times New Roman"/>
-            </syncfusion:SfTimePicker.SelectedTextStyle>
-        </syncfusion.SfTimePicker>
-    </ContentPage.Content>
-</ContentPage>
-
-{% endhighlight %}
-
-{% highlight c# %}
-
-using Syncfusion.Maui.Picker;
-
-namespace TimePickerSample
-{
-    public partial class MainPage : ContentPage
-    {
-        public MainPage()
-        {
-            InitializeComponent();
-            SfTimePicker timePicker = new SfTimePicker();
-            timePicker.SelectedTextStyle =  new PickerTextStyle()
-            {
-                FontFamily = "Times New Roman",
-            };
-
-            this.Content = timePicker;
-        }
-    }
-}
-
-{% endhighlight %}
-
-{% endtabs %}
-
-#### FontSize
-
-FontSize of the selected text can be customized by setting the [`SfTimePicker.SelectedTextStyle`]() property.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:TimePickerSample"
-             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker"
-             x:Class="TimePickerSample.MainPage">
-    <ContentPage.Content>
-        <syncfusion:SfTimePicker x:Name="TimePicker" >
-            <syncfusion:SfTimePicker.SelectedTextStyle >
-                <syncfusion:PickerTextStyle FontSize="12"/>
-            </syncfusion:SfTimePicker.SelectedTextStyle>
-        </syncfusion.SfTimePicker>
-    </ContentPage.Content>
-</ContentPage>
-
-{% endhighlight %}
-
-{% highlight c# %}
-
-using Syncfusion.Maui.Picker;
-
-namespace TimePickerSample
-{
-    public partial class MainPage : ContentPage
-    {
-        public MainPage()
-        {
-            InitializeComponent();
-            SfTimePicker timePicker = new SfTimePicker();
-            timePicker.FooterView =  new PickerTextStyle()
-            {
-                FontSize = 12,
-            };
-
-            this.Content = timePicker;
-        }
-    }
-}
-
-{% endhighlight %}
-
-{% endtabs %}   
-
-#### FontAttribute
-
-FontAttribute of the selected text can be customized by setting the [`SfTimePicker.SelectedTextStyle`]() property.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:TimePickerSample"
-             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker"
-             x:Class="TimePickerSample.MainPage">
-    <ContentPage.Content>
-        <syncfusion:SfTimePicker x:Name="TimePicker" >
-            <syncfusion:SfTimePicker.SelectedTextStyle >
-                <syncfusion:PickerTextStyle FontAttributes="Italic"/>
-            </syncfusion:SfTimePicker.SelectedTextStyle>
-        </syncfusion.SfTimePicker>
-    </ContentPage.Content>
-</ContentPage>
-
-{% endhighlight %}
-
-{% highlight c# %}
-
-using Syncfusion.Maui.Picker;
-
-namespace TimePickerSample
-{
-    public partial class MainPage : ContentPage
-    {
-        public MainPage()
-        {
-            InitializeComponent();
-            SfTimePicker timePicker = new SfTimePicker();
-            timePicker.FooterView = new PickerTextStyle()
-            {
-                FontAttributes = FontAttributes.Italic,
-            };
-
-            this.Content = timePicker;
-        }
-    }
-}
-
-{% endhighlight %}
-
-{% endtabs %}
-
-## Selection customization
-
-[`SfTimePicker`]() allows customizing the Selection's background, corner radius, stroke color and padding.
-
-### Corner Radius
-
-The corner radius of the Selection can be customized by setting the [`SfTimePicker.SelectionView`]() property.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:TimePickerSample"
-             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker"
-             x:Class="TimePickerSample.MainPage">
-    <ContentPage.Content>
-        <syncfusion:SfTimePicker x:Name="TimePicker" >
-            <syncfusion:SfTimePicker.SelectionView >
-                <syncfusion:PickerSelectionView CornerRadius="5">
-                </syncfusion:PickerSelectionView>
-            </syncfusion:SfTimePicker.SelectionView>
-        </syncfusion.SfTimePicker>
-    </ContentPage.Content>
-</ContentPage>
-
-{% endhighlight %}
-
-{% highlight c# %}
-
-using Syncfusion.Maui.Picker;
-
-namespace TimePickerSample
-{
-    public partial class MainPage : ContentPage
-    {
-        public MainPage()
-        {
-            InitializeComponent();
-            SfTimePicker timePicker = new SfTimePicker();
-            timePicker.SelectionView = new PickerSelectionView()
-            {
-                CornerRadius = 5,
-            };
-
-            this.Content = timePicker;
-        }
-    }
-}
-
-{% endhighlight %}
-
-{% endtabs %}
-
-### Padding
-
-The padding of the Selection can be customized by setting the [`SfTimePicker.SelectionView`]() property.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:TimePickerSample"
-             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker"
-             x:Class="TimePickerSample.MainPage">
-    <ContentPage.Content>
-        <syncfusion:SfTimePicker x:Name="TimePicker" >
-            <syncfusion:SfTimePicker.SelectionView >
-                <syncfusion:PickerSelectionView Padding="5, 10, 5, 10">
-                </syncfusion:PickerSelectionView>
-            </syncfusion:SfTimePicker.SelectionView>
-        </syncfusion.SfTimePicker>
-    </ContentPage.Content>
-</ContentPage>
-
-{% endhighlight %}
-
-{% highlight c# %}
-
-using Syncfusion.Maui.Picker;
-
-namespace TimePickerSample
-{
-    public partial class MainPage : ContentPage
-    {
-        public MainPage()
-        {
-            InitializeComponent();
-            SfTimePicker timePicker = new SfTimePicker();
-            timePicker.SelectionView = new PickerSelectionView()
-            {
-                Padding = new Thickness(5, 10, 5, 10),
-            };
-
-            this.Content = timePicker;
-        }
-    }
-}
-
-{% endhighlight %}
-
-{% endtabs %}
-
-### Background
-
-The background color of the Selection can be customized by setting the [`SfTimePicker.SelectionView`]() property.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:TimePickerSample"
-             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker"
-             x:Class="TimePickerSample.MainPage">
-    <ContentPage.Content>
-        <syncfusion:SfTimePicker x:Name="TimePicker" >
-            <syncfusion:SfTimePicker.SelectionView >
-                <syncfusion:PickerSelectionView Background="Orange">
-                </syncfusion:PickerSelectionView>
-            </syncfusion:SfTimePicker.SelectionView>
-        </syncfusion.SfTimePicker>
-    </ContentPage.Content>
-</ContentPage>
-
-{% endhighlight %}
-
-{% highlight c# %}
-
-using Syncfusion.Maui.Picker;
-
-namespace TimePickerSample
-{
-    public partial class MainPage : ContentPage
-    {
-        public MainPage()
-        {
-            InitializeComponent();
-            SfTimePicker timePicker = new SfTimePicker();
-            timePicker.SelectionView = new PickerSelectionView()
-            {
-                Background = Colors.Violet,
-            };
-
-            this.Content = timePicker;
-        }
-    }
-}
-
-{% endhighlight %}
-
-{% endtabs %}
-
-### Stroke color 
-
-Stroke color of the Selection can be customized by setting the [`SfTimePicker.SelectionView`]() property.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:TimePickerSample"
-             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker"
-             x:Class="TimePickerSample.MainPage">
-    <ContentPage.Content>
-        <syncfusion:SfTimePicker x:Name="TimePicker" >
-            <syncfusion:SfTimePicker.SelectionView >
-                <syncfusion:PickerSelectionView StrokeColor="Violet"/>
-                </syncfusion:PickerSelectionView>
-            </syncfusion:SfTimePicker.SelectionView>
-        </syncfusion.SfTimePicker>
-    </ContentPage.Content>
-</ContentPage>
-
-{% endhighlight %}
-
-{% highlight c# %}
-
-using Syncfusion.Maui.Picker;
-
-namespace TimePickerSample
-{
-    public partial class MainPage : ContentPage
-    {
-        public MainPage()
-        {
-            InitializeComponent();
-            SfTimePicker timePicker = new SfTimePicker();
-            timePicker.SelectionView = new PickerSelectionView()
-            {
-                StrokeColor = Colors.Violet,
-            };
-
-            this.Content = timePicker;
-        }
-    }
-}
-
-{% endhighlight %}
-
-{% endtabs %}
+![Selection view Customization in .NET MAUI TimePicker.]()
