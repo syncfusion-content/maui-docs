@@ -120,19 +120,19 @@ checkBox.Text = "CheckBox";
 {% endhighlight %}
 {% endtabs %}
 
-![](Images/Caption.png) 
+![.NET MAUI CheckBox](Images/GettingStarted/checkbox.png) 
 
 ## Change the check box state
 
-The three visual states of [`SfCheckBox`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Buttons.SfCheckBox.html) are: 
+The three visual states of [`SfCheckBox`] are: 
 
 * Checked
 * Unchecked
 * Indeterminate
 
-![Xamarin.Forms CheckBox states](Images/States.png) 
+![.NET MAUI CheckBox](Images/GettingStarted/tristate.png) 
 
-You can change the state of the check box using the [`IsChecked`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Buttons.ToggleButton.html#Syncfusion_XForms_Buttons_ToggleButton_IsChecked) property of [`SfCheckBox`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Buttons.SfCheckBox.html). In checked state, a tick mark is added to the visualization of check box.
+You can change the state of the check box using the [`IsChecked`] [`SfCheckBox`]. In checked state, a tick mark is added to the visualization of check box.
 
 <table>
 <tr>
@@ -196,7 +196,7 @@ checkBox.IsChecked = true;
 {% endhighlight %}
 {% endtabs %}
 
-![](Images/Agree.png)
+![.NET MAUI CheckBox](Images/GettingStarted/termsandconditions.png) 
 
 Multiple check boxes can be used as a group for multi-select scenarios in which a user chooses one or more items from the group of choices that are not mutually exclusive.
 
@@ -224,7 +224,7 @@ onion.IsChecked = true;
 {% endhighlight %}
 {% endtabs %}
 
-![](Images/StateChange.png)
+![.NET MAUI CheckBox](Images/GettingStarted/pizzatoppings.png)
 
 ## Intermediate
 
@@ -292,7 +292,9 @@ private void CheckBox_StateChanged(object sender, StateChangedEventArgs e)
 {% endhighlight %}
 {% endtabs %}
 
-![Xamarin.Forms CheckBox intermediate state](Images/Inter1.jpg) ![Xamarin.Forms CheckBox intermediate Image2](Images/Inter2.jpg)
+![.NET MAUI CheckBox](Images/GettingStarted/picktoppings.png)
+
+![.NET MAUI CheckBox](Images/GettingStarted/selectalltoppings.png)
 
 This demo can be downloaded from this [link].
 

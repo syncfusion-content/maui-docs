@@ -73,7 +73,9 @@ VisualStateManager.SetVisualStateGroups(radioButton, visualStateGroupList);
 {% endtabs %}
 
 **Checked visual state:**
-![SfRadioButton with visual state of checked state]
+
+![SfRadioButton with visual state of checked state](Images/VisualState/checkedvisualstate.png)
 
 **Unchecked visual state:**
-![SfRadioButton with visual state of unchecked state]
+
+![SfRadioButton with visual state of unchecked state](Images/VisualState/uncheckedvisualstate.png)

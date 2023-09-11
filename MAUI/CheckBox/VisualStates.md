@@ -18,7 +18,7 @@ The visual of CheckBox can be customized using `VisualStates`. The [`SfCheckBox`
 {% tabs %}
 {% highlight xaml %}
 
-<buttons:SfCheckBox Text="CheckBox">
+<buttons:SfCheckBox Text="CheckBox" IsThreeState="True">
     <VisualStateManager.VisualStateGroups>
         <VisualStateGroup x:Name="CommonStates">
             <VisualState x:Name="Checked">
@@ -35,6 +35,7 @@ The visual of CheckBox can be customized using `VisualStates`. The [`SfCheckBox`
             </VisualState>
             <VisualState x:Name="Intermediate">
                 <VisualState.Setters>
+                    <Setter Property="CheckedColor" Value="Blue"/>
                     <Setter Property="Text" Value="Intermediate State"/>
                 </VisualState.Setters>
             </VisualState>
@@ -45,7 +46,7 @@ The visual of CheckBox can be customized using `VisualStates`. The [`SfCheckBox`
 {% endhighlight %}
 {% highlight c# %}
 
-SfCheckBox checkBox = new SfCheckBox() { Text = "CheckBox" };
+SfCheckBox checkBox = new SfCheckBox() { Text = "CheckBox", IsThreeState = "True" };
 VisualStateGroupList visualStateGroupList = new VisualStateGroupList();
 VisualStateGroup commonStateGroup = new VisualStateGroup();
 
@@ -70,6 +71,7 @@ VisualState intermediateState = new VisualState
 };
 
 intermediateState.Setters.Add(new Setter { Property = SfCheckBox.TextProperty, Value = "Intermediate State") });
+intermediateState.Setters.Add(new Setter { Property = SfCheckBox.CheckedColorProperty, Value = Color.Blue });
 
 commonStateGroup.States.Add(checkedState);
 commonStateGroup.States.Add(uncheckedState);
@@ -83,12 +85,12 @@ VisualStateManager.SetVisualStateGroups(checkBox, visualStateGroupList);
 
 **Checked visual state:**
 
-![SfCheckBox with visual state of checked state]
+![.NET MAUI CheckBox](Images/VisualStates/checkedstate.png)
 
 **Unchecked visual state:**
 
-![SfCheckBox with visual state of unchecked state]
+![.NET MAUI CheckBox](Images/VisualStates/uncheckedstate.png)
 
 **Intermediate visual state:**
 
-![SfCheckBox with visual state of intermediate state]
+![.NET MAUI CheckBox](Images/VisualStates/intermediatestate.png)

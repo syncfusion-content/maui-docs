@@ -9,7 +9,7 @@ documentation: ug
 
 ## Creating an application with .NET MAUI RadioButton
 
-This section explains the steps required to work with the `SfButton` control for .NET MAUI.
+This section explains the steps required to work with the `SfRadioButton` control for .NET MAUI.
 
 ## Adding a .NET MAUI RadioButton reference
 
@@ -51,7 +51,7 @@ namespace ButtonSample
 
 ## Create a Simple SfRadioButton
 
-The [`SfRadioButton`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Buttons.SfRadioButton.html) control is configured entirely in C# code or by using XAML markup. The following steps explain how to create a [`SfRadioButton`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Buttons.SfRadioButton.html) and configure its elements.
+The [`SfRadioButton`] control is configured entirely in C# code or by using XAML markup. The following steps explain how to create a [`SfRadioButton`] and configure its elements.
 
 ### Add namespace for referred assemblies
 
@@ -116,7 +116,7 @@ radioButton.Text = "RadioButton";
 {% endhighlight %}
 {% endtabs %}
 
-![Xamarin.Forms Radio Button caption text]
+![.NET MAUI RadioButton](Images/GettingStarted/radiobutton.png)
 
 This demo can be downloaded from this [link]
 
@@ -151,7 +151,7 @@ radioGroup.Children.Add(female);
 
 N> [`SfRadioButtons`] are mutually exclusive among them when they are defined within [`SfRadioGroup`].
 
-![Xamarin.Forms Radio Button states](Images/StateChage.png)
+![.NET MAUI RadioButton](Images/GettingStarted/statechange.png)
 
 This demo can be downloaded from this [link].
 

@@ -52,9 +52,7 @@ private void CheckBox_StateChanged(object sender, Syncfusion.Maui.Buttons.StateC
 {% endhighlight %}
 {% endtabs %}
 
-![Checked state image](Images/Event1.png)
-![Unchecked state image](Images/Event2.png)
-![Indeterminate state image ](Images/Event3.png)
+![.NET MAUI CheckBox](Images/GettingStarted/tristate.png)
 
 ## See also
 

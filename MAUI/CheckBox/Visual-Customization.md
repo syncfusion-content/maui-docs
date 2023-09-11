@@ -25,7 +25,7 @@ checkBox.CornerRadius = 5.0f;
 {% endhighlight %}
 {% endtabs %}
 
-![CheckBox CornerRadius](Images/Radius.png)
+![.NET MAUI CheckBox](Images/Visual-Customization/checkboxradii.png)
 
 ## Customizing a state color
 
@@ -52,7 +52,7 @@ indeterminate.CheckedColor = Color.Purple;
 {% endhighlight %}
 {% endtabs %}
 
-![CheckedColor and UncheckedColor in Checkbox](Images/StateColor.png)
+![.NET MAUI CheckBox](Images/Visual-Customization/statecolor.png)
 
 ## StrokeThickness
 
@@ -83,7 +83,7 @@ check3.UncheckedColor = Color.Blue;
 {% endhighlight %}
 {% endtabs %}
 
-![CheckBox StrokeThickness](Images/BorderWidth.png)
+![.NET MAUI CheckBox](Images/Visual-Customization/strokethickness.png)
 
 ## Setting a caption text appearance
 
@@ -111,7 +111,7 @@ caption.FontSize = 20;
 {% endhighlight %}
 {% endtabs %}
 
-![CheckBox TextAppearance]
+![.NET MAUI CheckBox](Iamges/Visual-Customization/textappearance.png)
  
 ## TickColor Customization
 
@@ -152,8 +152,8 @@ namespace CheckBoxCustomization
 {% endhighlight %}
 {% endtabs %}
 
-![SfCheckBox with TickColor]
+![.NET MAUI CheckBox](Images/Visual-Customization/tickcolor.png)
 
 ## See also
 
-[How to get the values of selected checkboxes in a group using Xamarin.Forms](https://www.syncfusion.com/kb/10915/how-to-get-the-values-of-selected-checkboxes-in-a-group-using-xamarin-forms)
+[How to get the values of selected checkboxes in a group using .NET MAUI]

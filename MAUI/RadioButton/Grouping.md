@@ -56,7 +56,7 @@ stackLayoutayout.Children.Add(volvo);
 {% endhighlight %}
 {% endtabs %}
 
-![GroupKey support for SfRadioButton]
+![GroupKey support for SfRadioButton](Images/Grouping/groupkey.png)
 
 ### CheckedChanged event
 
@@ -93,7 +93,7 @@ radioGroup.Children.Add(creditCard);
 {% endhighlight %}
 {% endtabs %}
 
-![RadioGroup Image]
+![RadioGroup Image](Images/Grouping/radiogroup.png)
 
 ### Orientation in SfRadioGroup
 
@@ -123,8 +123,8 @@ radioGroup.Children.Add(creditCard);
 {% endhighlight %}
 {% endtabs %}
 
-![RadioGroup horizontal orientation]
+![RadioGroup horizontal orientation](Images/Grouping/radiogrouporientation.png)
 
 ## See also
 
-[How to get the selected Xamarin.Forms radio button (SfRadioButton)]
+[How to get the selected .NET MAUI radio button (SfRadioButton)]

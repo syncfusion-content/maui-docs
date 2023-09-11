@@ -34,7 +34,7 @@ radioGroup.Children.Add(uncheck);
 {% endhighlight %}
 {% endtabs %}
 
-![CheckedColor and UncheckedColor in RadioButton]
+![CheckedColor and UncheckedColor in RadioButton](Images/VisualCustomization/radiostatecolor.png)
 
 ## StrokeThickness
 
@@ -42,7 +42,7 @@ The stroke thickness of the circle in the RadioButton control can be customized 
 
 {% tabs %}
 {% highlight xaml %}
-<syncfusion:SfRadioGroup >
+<syncfusion:SfRadioGroup>
 <syncfusion:SfRadioButton Text="Checked State" IsChecked="True" StrokeThickness="3"/>
 <syncfusion:SfRadioButton Text="UnChecked State" StrokeThickness="3"/>
 </syncfusion:SfRadioGroup>
@@ -61,7 +61,7 @@ radioGroup.Children.Add(uncheck);
 {% endhighlight %}
 {% endtabs %}
 
-![RadioButton StrokeThickness]
+![RadioButton StrokeThickness](Images/VisualCustomization/radiostrokethickness.png)
 
 N> StrokeThickness support has not been provided for Android Platform.
 
@@ -92,8 +92,8 @@ radioButton.FontSize = 20;
 {% endhighlight %}
 {% endtabs %}
 
-![RadioButton TextAppereance]
+![RadioButton TextAppereance](Images/VisualCustomization/radioappearance.png)
 
 ## See also
 
-[How to wrap text in Xamarin.Forms radio button (SfRadioButton)]
+[]
