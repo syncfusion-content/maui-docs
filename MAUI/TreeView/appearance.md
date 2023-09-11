@@ -214,7 +214,7 @@ The TreeView allows customizing the indent spacing of items by setting the `Inde
 
 {% tabs %}
 {% highlight xaml %}
-<syncfusion:SfTreeView x:Name="treeView" Indentation="40">
+<syncfusion:SfTreeView x:Name="treeView" Indentation="30">
 {% endhighlight %}
 {% highlight c# hl_lines="2" %}
 SfTreeView treeView = new SfTreeView();
@@ -228,7 +228,7 @@ The TreeView allows customizing the width of expander view by setting the `Expan
 
 {% tabs %}
 {% highlight xaml %}
-<syncfusion:SfTreeView x:Name="treeView" ExpanderWidth="40">
+<syncfusion:SfTreeView x:Name="treeView" ExpanderWidth="32">
 {% endhighlight %}
 {% highlight c# hl_lines="2" %}
 SfTreeView treeView = new SfTreeView();
