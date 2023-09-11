@@ -19,7 +19,7 @@ This section provides a quick overview for getting started with the TreeView wit
  4. Initialize the `SfTreeView` control.
  
 {% tabs %}
-{% highlight xaml hl_lines= "5" %}
+{% highlight xaml hl_lines="5" %}
 
 <ContentPage   
     . . .
