@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Formatting in .NET MAUI TimePicker control | Syncfusion
-description: Learn here all about Formatting support in Syncfusion .NET MAUI TimePicker (SfTimePicker) control and more.
+title: Formatting in .NET MAUI Time Picker control | Syncfusion
+description: Learn here all about formatting support in Syncfusion .NET MAUI Time Picker (SfTimePicker) control and more.
 platform: maui
 control: SfTimePicker
 documentation: ug
 ---
 
 
-# Formatting in .NET MAUI TimePicker (SfTimePicker)
+# Formatting in .NET MAUI Time Picker (SfTimePicker)
 
 [Format]() is a way to represent the value of the time in a different string format.
 

@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Date Restriction in .NET MAUI DatePicker control | Syncfusion
-description: Learn here all about Date Restriction support in Syncfusion .NET MAUI DatePicker (SfDatePicker) control and more.
+title: Date Restriction in .NET MAUI Date Picker control | Syncfusion
+description: Learn here all about date restriction support in Syncfusion .NET MAUI Date Picker (SfDatePicker) control and more.
 platform: maui
 control: SfDatePicker
 documentation: ug
 ---
 
 
-# Date Restriction in .NET MAUI DatePicker (SfDatePicker)
+# Date Restriction in .NET MAUI Date Picker (SfDatePicker)
 
-DatePicker provides an option to select a date value within a specified range by using the [MinimumDate]() and [MaximumDate]() properties. Always the [MinimumDate]() value has to be lesser than the [MaximumDate]() value.
+Date Picker provides an option to select a date value within a specified range by using the [MinimumDate]() and [MaximumDate]() properties of [SfDatePicker](). Always the [MinimumDate]() value has to be lesser than the [MaximumDate]() value.
 
 {% tabs %}
 

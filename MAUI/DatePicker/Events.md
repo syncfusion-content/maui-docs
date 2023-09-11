@@ -1,15 +1,15 @@
 ---
 layout: post
-title: DatePicker Events in .NET MAUI DatePicker control | Syncfusion
-description: Learn here all about DatePicker Events support in Syncfusion .NET MAUI Date Picker (SfDatePicker) control and more.
+title: DatePicker Events in .NET MAUI Date Picker control | Syncfusion
+description: Learn here all about date picker events support in Syncfusion .NET MAUI Date Picker (SfDatePicker) control and more.
 platform: maui
 control: SfDatePicker
 documentation: ug
 ---
 
-# Events in .NET MAUI DatePicker (SfDatePicker)
+# Events in .NET MAUI Date Picker (SfDatePicker)
 
-The DatePicker has the events `SelectionChanged` for notifying after user interactions in [.NET MAUI DatePicker]().
+The Date Picker has the events `SelectionChanged` for notifying after user interactions in [.NET MAUI Date Picker]().
 
 ## SelectionChanged
 
@@ -17,7 +17,7 @@ The [SelectionChanged]() event is used to notify when the cell selection is chan
 
 * `Sender`: This contains the `SfDatePicker` object.
 
-* `EventArgs`: In DatePicker, [DatePickerSelectionChangedEventArgs]() is used for this event which holds the data of NewValue and OldValue.
+* `EventArgs`: In Date Picker, [DatePickerSelectionChangedEventArgs]() is used for this event which holds the data of NewValue and OldValue.
 
     * [NewValue]() : Returns the new selected date.
     * [OldValue]() : Returns the old selected date.
@@ -45,23 +45,23 @@ private void DatePicker_SelectionChanged(object sender, DatePickerSelectionChang
 {% endhighlight %}
 {% endtabs %}
 
-# Events in .NET MAUI DatePicker in Dialog (SfDatePicker)
+## Events in dialog mode (SfDatePicker)
 
-The DatePicker [Dialog]() mode has the events `Opened`, `Closing`, `Closed` for notifying after user interactions in [.NET MAUI DatePicker]().
+The Date Picker [Dialog]() mode has the events `Opened`, `Closing`, `Closed` for notifying after user interactions in [.NET MAUI Date Picker]().
 
-## Opened event
+### Opened event
 
-The [Opened]() event occurs when the DatePicker is opened. 
+The [Opened]() event occurs when the Date Picker is opened. 
 
-## Closing event 
+### Closing event 
 
-The [Closing]() event occurs when the DatePicker closes.
+The [Closing]() event occurs when the Date Picker closes.
 
 Drop-down close can be restricted by setting `e.cancel` to true.
 
-## Closed event
+### Closed event
 
-The [Closed]() event was triggered, after the DatePicker was closed.
+The [Closed]() event was triggered, after the Date Picker was closed.
 
 {% tabs %}
 

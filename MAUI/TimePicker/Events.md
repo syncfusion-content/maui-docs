@@ -1,15 +1,15 @@
 ---
 layout: post
-title: TimePicker Events in .NET MAUI TimePicker control | Syncfusion
-description: Learn here all about TimePicker Events support in Syncfusion .NET MAUI Date Picker (SfTimePicker) control and more.
+title: Time Picker events in .NET MAUI Time Picker control | Syncfusion
+description: Learn here all about time picker events support in Syncfusion .NET MAUI Time Picker (SfTimePicker) control and more.
 platform: maui
 control: SfTimePicker
 documentation: ug
 ---
 
-# Events in .NET MAUI TimePicker (SfTimePicker)
+# Events in .NET MAUI Time Picker (SfTimePicker)
 
-The TimePicker has the events `SelectionChanged` for notifying after user interactions in [.NET MAUI TimePicker]().
+The Time Picker has the events `SelectionChanged` for notifying after user interactions in [.NET MAUI Time Picker]().
 
 ## SelectionChanged
 
@@ -17,7 +17,7 @@ The [SelectionChanged]() event is used to notify when the cell selection is chan
 
 * `Sender`: This contains the `SfTimePicker` object.
 
-* `EventArgs`: In TimePicker, [TimePickerSelectionChangedEventArgs]() is used for this event which holds the data of NewValue and OldValue.
+* `EventArgs`: In Time Picker, [TimePickerSelectionChangedEventArgs]() is used for this event which holds the data of NewValue and OldValue.
 
     * [NewValue]() : Returns the new selected date.
     * [OldValue]() : Returns the old selected date.
@@ -32,9 +32,9 @@ The [SelectionChanged]() event is used to notify when the cell selection is chan
 {% endhighlight %}
 {% highlight c# tabtitle="C#" hl_lines="4" %}
 
-SfTimePicker TimePicker = new SfTimePicker();
-TimePicker.SelectionChanged += TimePicker_SelectionChanged;
-this.Content = TimePicker;
+SfTimePicker timePicker = new SfTimePicker();
+timePicker.SelectionChanged += TimePicker_SelectionChanged;
+this.Content = timePicker;
 
 private void TimePicker_SelectionChanged(object sender, TimePickerSelectionChangedEventArgs e)
 {
@@ -45,23 +45,23 @@ private void TimePicker_SelectionChanged(object sender, TimePickerSelectionChang
 {% endhighlight %}
 {% endtabs %}
 
-# Events in .NET MAUI TimePicker in Dialog (SfTimePicker)
+# Events in .NET MAUI Time Picker in Dialog (SfTimePicker)
 
-The TimePicker [Dialog]() mode has the events `Opened`, `Closing`, `Closed` for notifying after user interactions in [.NET MAUI TimePicker]().
+The Time Picker [Dialog]() mode has the events `Opened`, `Closing`, `Closed` for notifying after user interactions in [.NET MAUI TimePicker]().
 
 ## Opened event
 
-The [Opened]() event occurs when the TimePicker is opened. 
+The [Opened]() event occurs when the Time Picker is opened. 
 
 ## Closing event 
 
-The [Closing]() event occurs when the TimePicker closes.
+The [Closing]() event occurs when the Time Picker closes.
 
 Drop-down close can be restricted by setting `e.cancel` to true.
 
 ## Closed event
 
-The [Closed]() event was triggered, after the TimePicker was closed.
+The [Closed]() event was triggered, after the Time Picker was closed.
 
 {% tabs %}
 

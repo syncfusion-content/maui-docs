@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Customizations in .NET MAUI DatePicker control | Syncfusion
-description: Learn here all about Customizations support in Syncfusion .NET MAUI DatePicker (SfDatePicker) control and more.
+title: Customizations in .NET MAUI Date Picker control | Syncfusion
+description: Learn here all about Customizations support in Syncfusion .NET MAUI Date Picker (SfDatePicker) control and more.
 platform: maui
 control: SfDatePicker
 documentation: ug
 ---
 
-# Customizations in .NET MAUI DatePicker (SfDatePicker)
+# Customizations in .NET MAUI Date Picker (SfDatePicker)
 
-Each cell of the header, column header, footer and selection views can be customized in [.NET MAUI DatePicker]() (SfDatePicker).
+In the [.NET MAUI Date Picker]() of the header, column header, footer and selection views can be customized.
 
 ## Header customization
 
-You can customize the date picker header view cell by using the `HeaderView` property of `SfDatePicker`.
+You can customize the date picker header by using the `HeaderView` property of `SfDatePicker`.
 
 ### Set header text
 
@@ -49,7 +49,7 @@ this.Content = datePicker;
 
 ### Customization of header
 
-*    **Header View** - You can customize the header view text style, divider color and background of the `DatePicker` using the [TextStyle](), [DividerColor]() and [Background]() properties of the [HeaderView]().
+*    **Header View** - You can customize the header text style, divider color and background of the `DatePicker` using the [TextStyle](), [DividerColor]() and [Background]() properties of the [HeaderView]().
 
 {% tabs %}
 
@@ -89,15 +89,15 @@ this.Content = datePicker;
 
 {% endtabs %}
 
-![Header view Customization in .NET MAUI DatePicker.]()
+![Header view Customization in .NET MAUI Date Picker.]()
 
 ## Column header customization
 
-You can customize the date picker column header view cell by using the `ColumnHeaderView` property of `SfDatePicker`.
+You can customize the date picker column header by using the `ColumnHeaderView` property of `SfDatePicker`.
 
 ### Set custom column header 
 
-[`SfDatePicker`]() allows providing custom text to its column header by setting the [`SfDatePicker.ColumnHeaderView`](). And its contain [`ColumnHeaderView.DayHeaderText`]() [`ColumnHeaderView.MonthHeaderText`](), and [`ColumnHeaderView.YearHeaderText`]() properties. Default value of [`ColumnHeaderView.DayHeaderText`]() property is "Day", [`ColumnHeaderView.MonthHeaderText`]() is "Month", and [`ColumnHeaderView.YearHeaderText`]() is "Year".
+[SfDatePicker]() allows providing custom text to its column header by setting the [ColumnHeaderView]() property of [SfDatePicker](). And its contain [DayHeaderText]() [MonthHeaderText](), and [YearHeaderText]() properties of [DatePickerColumnHeaderView](). Default value of [DayHeaderText]() property is "Day", [MonthHeaderText]() is "Month", and [YearHeaderText]() is "Year".
 
 {% tabs %}
 
@@ -169,15 +169,15 @@ this.Content = datePicker;
 
 {% endtabs %}
 
-![Column Header view Customization in .NET MAUI DatePicker.]()
+![Column Header view Customization in .NET MAUI Date Picker.]()
 
 ## Footer customization
 
-You can customize the date picker footer view cell by using the `FooterView` property of `SfDatePicker`.
+You can customize the date picker footer view by using the `FooterView` property of `SfDatePicker`.
 
 ### Set footer with ok and cancel button customizations
 
-In the SfDatePicker control, validation buttons (OK and Cancel) can be customized by setting the [OkButtonText] and [CancelButtonText] properties in the [PickerFooterView]. It allows you to confirm or cancel the selected date. The `OkButtonText` can be enabled using the [ShowOkButton] property in the [PickerFooterView].
+In the SfDatePicker control, validation buttons (OK and Cancel) can be customized by setting the [OkButtonText] and [CancelButtonText] properties of [PickerFooterView]. It allows you to confirm or cancel the selected date. The `OkButtonText` can be enabled using the [ShowOkButton] property in the [PickerFooterView].
 The Default value of [OkButtonText]() property is "OK", [CancelButtonText]() is "Cancel".
 
 {% tabs %}
@@ -211,7 +211,7 @@ this.Content = datePicker;
 
 ### Customization of footer
 
-*    **Footer View** - You can customize the footer view text style, divider color and background of the `DatePicker` using the [TextStyle](), [DividerColor]() and [Background]() properties of the [FooterView]().
+*    **Footer View** - You can customize the footer text style, divider color and background of the `DatePicker` using the [TextStyle](), [DividerColor]() and [Background]() properties of the [FooterView]().
 
 {% tabs %}
 
@@ -219,7 +219,7 @@ this.Content = datePicker;
 
 <picker:SfDatePicker x:Name="datepicker" >
     <picker:SfDatePicker.FooterView >
-        <picker:PickerFooterView Height="40" Text="Date Picker" DividerColor="#FFEFD2" Background="#6750A4">
+        <picker:PickerFooterView Height="40" DividerColor="#FFEFD2" Background="#6750A4">
             <picker:PickerFooterView.TextStyle >
                 <picker:PickerTextStyle FontSize="15" TextColor="White" />
             </picker:PickerFooterView.TextStyle>
@@ -250,11 +250,11 @@ this.Content = datePicker;
 
 {% endtabs %}
 
-![Footer view Customization in .NET MAUI DatePicker.]()
+![Footer view Customization in .NET MAUI Date Picker.]()
 
 ## Selection View Customization
 
-You can customize the date picker selection view cell by using the `SelectionView` property of `SfDatePicker`.
+You can customize the date picker selection view by using the `SelectionView` property of `SfDatePicker`.
 
 ### Set selection view
 
@@ -323,4 +323,4 @@ this.Content = datePicker;
 
 {% endtabs %}
 
-![Selection view Customization in .NET MAUI DatePicker.]()
+![Selection view Customization in .NET MAUI Date Picker.]()
