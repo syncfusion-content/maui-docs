@@ -7,9 +7,9 @@ control: SfTreeView
 documentation: ug
 ---
 
-# Appearance in Maui TreeView (SfTreeView)
+# Appearance in .NET Maui TreeView (SfTreeView)
 
-The .NET MAUI SfTreeView allows customizing appearance of the underlying data, and provides different functionalities to the end-user.
+The SfTreeView allows customizing appearance of the underlying data, and provides different functionalities to the end-user.
 
 ## ItemTemplate
  
@@ -166,6 +166,7 @@ public class ItemTemplateSelector : DataTemplateSelector
         var treeviewNode = item as TreeViewNode;
         if (treeviewNode == null)
             return null;
+
         if (treeviewNode.Level == 0)
             return Template1;
         else
@@ -201,7 +202,7 @@ Following code example illustrates to load the different templates for treeview 
 {% endhighlight %}
 {% highlight c# hl_lines="2" %}
 SfTreeView treeView = new SfTreeView();
-treeView.ItemTemplate = new ItemTemplateSelector()
+treeView.ItemTemplate = new ItemTemplateSelector();
 {% endhighlight %}
 <% endtabs %>
 Download the entire source code from GitHub here.
@@ -258,7 +259,7 @@ treeView.ExpanderPosition = ExpanderPosition.End;
 The TreeView allows you to customize the style of `TreeViewItem` based on different levels by using `IValueConverter`.
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 <ContentPage  xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:syncfusion="clr-namespace:Syncfusion.Maui.TreeView;assembly=Syncfusion.Maui.TreeView"
@@ -289,8 +290,8 @@ The TreeView allows you to customize the style of `TreeViewItem` based on differ
 {% endhighlight %}
 <% endtabs %>
 
-{% endhighlight %}
-{% highlight c# tabtitle = "converter.cs" %}
+{% tabs %}
+{% highlight c# tabtitle = "Converter.cs" %}
 public class FontAttributeConverter : IValueConverter
 {
     public object Convert(object value, Type targetType, object parameter, CultureInfo culture)

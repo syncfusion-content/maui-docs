@@ -9,12 +9,13 @@ documentation: ug
 
 # Scrolling in .NET MAUI TreeView (SfTreeView)
 
-The .NET MAUI TreeView provides various options to achieve programmatic scrolling. Please walkthrough the below section in detail to achieve the same.
+The SfTreeView provides various options to achieve programmatic scrolling. Please walkthrough the below section in detail to achieve the same.
 
 ## Bring Into View
 
 The TreeView allows programmatic scrolling based on the data model and `TreeViewNode` by using the `BringIntoView` method.
 
+{% tabs %}
 {% highlight c# hl_line="5" %}
 private void BringIntoView_Clicked(object sender, EventArgs e)
 {
@@ -35,7 +36,6 @@ The second optional parameter `disableAnimation` in `BringIntoView` method decid
 
 * If the parameter value is `true`, scrolling animation will be disabled.
 * If the parameter value is `false`, scrolling animation will be enabled.
-
 
 {% tabs %}
 {% highlight c# hl_line="6" %}
