@@ -917,7 +917,7 @@ this.Content = scheduler;
 
 <tr>
 <td>{{'[TextColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.ScheduleAppointment.html#Syncfusion_SfSchedule_XForms_ScheduleAppointment_TextColor)'| markdownify }}</td>
-<td>{{'[TextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTextStyle.html#Syncfusion_Maui_Scheduler_SchedulerTextStyle_TextColor)'| markdownify }} (From AppointmentTextStyle)</td>
+<td>TextColor</td>
 <td>Gets or sets the text color for an appointment in the SfScheduler.</td></tr>
 
 <tr>
@@ -974,12 +974,6 @@ this.Content = scheduler;
 <td>{{'[ResourceIds](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.ScheduleAppointment.html#Syncfusion_SfSchedule_XForms_ScheduleAppointment_ResourceIds)'| markdownify }}</td>
 <td>{{'[ResourceIds]()'| markdownify }}</td>
 <td>Gets or sets the resource ids property for the schedule appointment to allocate the corresponding resource to the appointment.</td></tr>
-
-<tr>    
-<td>{{'[TextColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.ScheduleAppointment.html#Syncfusion_SfSchedule_XForms_ScheduleAppointment_TextColor)'| markdownify }}</td>
-<td>TextColor</td>
-<td>Gets or sets the text color for an appointment in the SfScheduler.</td></tr>
-
 
 </table> 
 
@@ -2746,7 +2740,6 @@ this.Content = scheduler;
 ## Upcoming Features
 
 * Command support for Tapped, DoubleTapped, LongPressed, and ViewChanged events.
-* Support to change text color for each scheduler appointment.
 * Suspend and resume for appointment update.
 
 ## Known issues in .NET MAUI Scheduler 

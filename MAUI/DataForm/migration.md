@@ -1353,7 +1353,6 @@ The common properties of `Xamarin SfDataForm` list items ( [ DataFormPickerEdito
 ## Upcoming Features
 
 * Support for group header view customization.
-* Support for DataFormViewItem's auto height.
 * Support for programmatic scrolling to a specific editor.
 * Support for dataform theming.
 

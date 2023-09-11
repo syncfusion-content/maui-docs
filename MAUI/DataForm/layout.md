@@ -402,7 +402,7 @@ Here, the `Name` field will be hidden.
 
 ## Change the editor height
 
-The data form editor height is changed by using the `EditorHeight` property of the [DataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html).
+The .NET MAUI DataForm allows you to modify the height of each editor to fit the height of the data form or to customize the height based on text size by using the `EditorHeight` property of the [DataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html).
 
 {% tabs %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
@@ -422,3 +422,5 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 
 {% endhighlight %}
 {% endtabs %}
+
+N> The `EditorHeight` customization is applicable for both [Default](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormLayoutType.html#Syncfusion_Maui_DataForm_DataFormLayoutType_Default) and [TextInputLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormLayoutType.html#Syncfusion_Maui_DataForm_DataFormLayoutType_TextInputLayout) layout types.
