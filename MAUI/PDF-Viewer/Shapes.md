@@ -40,9 +40,6 @@ You can draw and add shape annotations to a PDF document interactively by touch 
 The following code explains how to enable the circle annotation mode. Similarly, you can change the annotation mode for drawing other shapes.
 
 {% tabs %}
-{% highlight XAML %}
-<syncfusion:SfPdfViewer x:Name="PdfViewer" AnnotationMode="Circle"/>
-{% endhighlight %}
 {% highlight C# %}
 // Enable or activate the circle drawing mode.
 void EnableCircleDrawingMode()
@@ -56,9 +53,6 @@ void EnableCircleDrawingMode()
 Similarly, refer to following code to disable the circle annotation mode.
 
 {% tabs %}
-{% highlight XAML %}
-<syncfusion:SfPdfViewer x:Name="PdfViewer" AnnotationMode="None"/>
-{% endhighlight %}
 {% highlight C# %}
 // Disable or deactivate the circle drawing mode.
 void DisableCircleDrawingMode()
