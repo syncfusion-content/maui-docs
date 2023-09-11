@@ -18,56 +18,56 @@ The visual of Radio Button can be customized using `VisualStates`. The [`SfRadio
 {% tabs %}
 {% highlight xaml %}
 
-<buttons:SfRadioButton Text="Radio Button">
-    <VisualStateManager.VisualStateGroups>
-        <VisualStateGroup x:Name="CommonStates">
-            <VisualState x:Name="Checked">
-                <VisualState.Setters>
-                    <Setter Property="TextColor" Value="Blue"/>
-                    <Setter Property="BackgroundColor" Value="#8bc5fb"/>
-                    <Setter Property="CheckedColor" Value="Blue"/>
-                </VisualState.Setters>
-            </VisualState>
-            <VisualState x:Name="Unchecked">
-                <VisualState.Setters>
-                    <Setter Property="TextColor" Value="#ea3737"/>
-                    <Setter Property="BackgroundColor" Value="#f6acac"/>
-                    <Setter Property="UncheckedColor" Value="#ea3737"/>
-                </VisualState.Setters>
-            </VisualState>
-        </VisualStateGroup>
-    </VisualStateManager.VisualStateGroups>
-</buttons:SfRadioButton>
+    <buttons:SfRadioButton Text="Radio Button">
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="CommonStates">
+                <VisualState x:Name="Checked">
+                    <VisualState.Setters>
+                        <Setter Property="TextColor" Value="Blue"/>
+                        <Setter Property="BackgroundColor" Value="#8bc5fb"/>
+                        <Setter Property="CheckedColor" Value="Blue"/>
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="Unchecked">
+                    <VisualState.Setters>
+                        <Setter Property="TextColor" Value="#ea3737"/>
+                        <Setter Property="BackgroundColor" Value="#f6acac"/>
+                        <Setter Property="UncheckedColor" Value="#ea3737"/>
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+    </buttons:SfRadioButton>
 
 {% endhighlight %}
 {% highlight c# %}
 
-SfRadioButton radioButton = new SfRadioButton { Text = "Radio Button" };
-VisualStateGroupList visualStateGroupList = new VisualStateGroupList();
-VisualStateGroup commonStateGroup = new VisualStateGroup();
+    SfRadioButton radioButton = new SfRadioButton { Text = "Radio Button" };
+    VisualStateGroupList visualStateGroupList = new VisualStateGroupList();
+    VisualStateGroup commonStateGroup = new VisualStateGroup();
 
-VisualState checkedState = new VisualState
-{
-    Name = "Checked"
-};
+    VisualState checkedState = new VisualState
+    {
+        Name = "Checked"
+    };
 
-checkedState.Setters.Add(new Setter { Property = SfRadioButton.TextColorProperty, Value = Color.Blue });
-checkedState.Setters.Add(new Setter { Property = SfRadioButton.BackgroundColorProperty, Value = Color.FromHex("#8bc5fb") });
-checkedState.Setters.Add(new Setter { Property = SfRadioButton.CheckedColorProperty, Value = Color.Blue });
+    checkedState.Setters.Add(new Setter { Property = SfRadioButton.TextColorProperty, Value = Color.Blue });
+    checkedState.Setters.Add(new Setter { Property = SfRadioButton.BackgroundColorProperty, Value = Color.FromHex("#8bc5fb") });
+    checkedState.Setters.Add(new Setter { Property = SfRadioButton.CheckedColorProperty, Value = Color.Blue });
 
-VisualState uncheckedState = new VisualState
-{
-    Name = "Unchecked"
-};
-uncheckedState.Setters.Add(new Setter { Property = SfRadioButton.TextColorProperty, Value = Color.FromHex("#ea3737") });
-uncheckedState.Setters.Add(new Setter { Property = SfRadioButton.BackgroundColorProperty, Value = Color.FromHex("#f6acac") });
-uncheckedState.Setters.Add(new Setter { Property = SfRadioButton.UncheckedColorProperty, Value = Color.FromHex("#ea3737") });
+    VisualState uncheckedState = new VisualState
+    {
+        Name = "Unchecked"
+    };
+    uncheckedState.Setters.Add(new Setter { Property = SfRadioButton.TextColorProperty, Value = Color.FromHex("#ea3737") });
+    uncheckedState.Setters.Add(new Setter { Property = SfRadioButton.BackgroundColorProperty, Value = Color.FromHex("#f6acac") });
+    uncheckedState.Setters.Add(new Setter { Property = SfRadioButton.UncheckedColorProperty, Value = Color.FromHex("#ea3737") });
 
-commonStateGroup.States.Add(checkedState);
-commonStateGroup.States.Add(uncheckedState);
+    commonStateGroup.States.Add(checkedState);
+    commonStateGroup.States.Add(uncheckedState);
 
-visualStateGroupList.Add(commonStateGroup);
-VisualStateManager.SetVisualStateGroups(radioButton, visualStateGroupList);
+    visualStateGroupList.Add(commonStateGroup);
+    VisualStateManager.SetVisualStateGroups(radioButton, visualStateGroupList);
 
 {% endhighlight %}
 {% endtabs %}

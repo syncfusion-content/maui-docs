@@ -18,40 +18,40 @@ The [`GroupKey`] in [`SfRadioButton`] allows you to group a set of radio buttons
 {% tabs %}
 {% highlight xaml %}
 
-<ContentPage.Resources>
-    <syncfusion:SfRadioGroupKey x:Key="carBrand" />
-</ContentPage.Resources>
+    <ContentPage.Resources>
+        <syncfusion:SfRadioGroupKey x:Key="carBrand" />
+    </ContentPage.Resources>
 
-<StackLayout>
-    <syncfusion:SfRadioButton Text="Honda" GroupKey="{StaticResource carBrand}"/>
-    <syncfusion:SfRadioButton Text="Hyundai" GroupKey="{StaticResource carBrand}"/>
-    <syncfusion:SfRadioButton Text="Volkswagen" GroupKey="{StaticResource carBrand}"/>
-    <syncfusion:SfRadioButton Text="Toyota" GroupKey="{StaticResource carBrand}"/>
-    <syncfusion:SfRadioButton Text="Volvo" GroupKey="{StaticResource carBrand}"/>
-</StackLayout>
+    <StackLayout>
+        <syncfusion:SfRadioButton Text="Honda" GroupKey="{StaticResource carBrand}"/>
+        <syncfusion:SfRadioButton Text="Hyundai" GroupKey="{StaticResource carBrand}"/>
+        <syncfusion:SfRadioButton Text="Volkswagen" GroupKey="{StaticResource carBrand}"/>
+        <syncfusion:SfRadioButton Text="Toyota" GroupKey="{StaticResource carBrand}"/>
+        <syncfusion:SfRadioButton Text="Volvo" GroupKey="{StaticResource carBrand}"/>
+    </StackLayout>
 
 {% endhighlight %}
 {% highlight c# %}
 
-SfRadioGroupKey carBrand = new SfRadioGroupKey();
+    SfRadioGroupKey carBrand = new SfRadioGroupKey();
 
-SfRadioButton honda = new SfRadioButton(){Text = "Honda", GroupKey = carBrand};
-SfRadioButton hyundai = new SfRadioButton(){Text = "Hyundai", GroupKey = carBrand};
-SfRadioButton volkswagen = new SfRadioButton(){Text = "Volkswagen", GroupKey = carBrand};
-SfRadioButton toyota = new SfRadioButton(){Text = "Toyota", GroupKey = carBrand};
-SfRadioButton volvo = new SfRadioButton(){Text = "Volvo", GroupKey = carBrand};
+    SfRadioButton honda = new SfRadioButton(){Text = "Honda", GroupKey = carBrand};
+    SfRadioButton hyundai = new SfRadioButton(){Text = "Hyundai", GroupKey = carBrand};
+    SfRadioButton volkswagen = new SfRadioButton(){Text = "Volkswagen", GroupKey = carBrand};
+    SfRadioButton toyota = new SfRadioButton(){Text = "Toyota", GroupKey = carBrand};
+    SfRadioButton volvo = new SfRadioButton(){Text = "Volvo", GroupKey = carBrand};
 
-StackLayout stackLayout = new StackLayout()
-{
-    Wrap = FlexWrap.Wrap,
-    AlignContent = FlexAlignContent.Start,
-    AlignItems = FlexAlignItems.Start
-};
-stackLayout.Children.Add(honda);
-stackLayout.Children.Add(hyundai);
-stackLayout.Children.Add(volkswagen);
-stackLayout.Children.Add(toyota);
-stackLayoutayout.Children.Add(volvo);
+    StackLayout stackLayout = new StackLayout()
+    {
+        Wrap = FlexWrap.Wrap,
+        AlignContent = FlexAlignContent.Start,
+        AlignItems = FlexAlignItems.Start
+    };
+    stackLayout.Children.Add(honda);
+    stackLayout.Children.Add(hyundai);
+    stackLayout.Children.Add(volkswagen);
+    stackLayout.Children.Add(toyota);
+    stackLayoutayout.Children.Add(volvo);
 
 {% endhighlight %}
 {% endtabs %}
@@ -72,23 +72,23 @@ The [`CheckedChanged`] event of [`SfRadioGroupKey`] occurs when a checked item i
 {% tabs %}
 {% highlight xaml %}
 
-<syncfusion:SfRadioGroup>
-    <syncfusion:SfRadioButton Text="Net banking" />
-    <syncfusion:SfRadioButton Text="Debit card" />
-    <syncfusion:SfRadioButton Text="Credit card" />
-</syncfusion:SfRadioGroup>
+    <syncfusion:SfRadioGroup>
+        <syncfusion:SfRadioButton Text="Net banking" />
+        <syncfusion:SfRadioButton Text="Debit card" />
+        <syncfusion:SfRadioButton Text="Credit card" />
+    </syncfusion:SfRadioGroup>
 
 {% endhighlight %}
 {% highlight c# %}
 
-SfRadioGroup radioGroup = new SfRadioGroup();
-SfRadioButton netBanking = new SfRadioButton() {Text = "Net banking"};
-SfRadioButton debitCard = new SfRadioButton() {Text = "Debit card"};
-SfRadioButton creditCard = new SfRadioButton() {Text = "Credit card"};
+    SfRadioGroup radioGroup = new SfRadioGroup();
+    SfRadioButton netBanking = new SfRadioButton() {Text = "Net banking"};
+    SfRadioButton debitCard = new SfRadioButton() {Text = "Debit card"};
+    SfRadioButton creditCard = new SfRadioButton() {Text = "Credit card"};
 
-radioGroup.Children.Add(netBanking);
-radioGroup.Children.Add(debitCard);
-radioGroup.Children.Add(creditCard);
+    radioGroup.Children.Add(netBanking);
+    radioGroup.Children.Add(debitCard);
+    radioGroup.Children.Add(creditCard);
 
 {% endhighlight %}
 {% endtabs %}
@@ -102,23 +102,23 @@ radioGroup.Children.Add(creditCard);
 {% tabs %}
 {% highlight xaml %}
 
-<SyncfusionButton:SfRadioGroup Orientation="Horizontal">
-    <SyncfusionButton:SfRadioButton Text="Net banking" />
-    <SyncfusionButton:SfRadioButton Text="Debit card" />
-    <SyncfusionButton:SfRadioButton Text="Credit card" />
-</SyncfusionButton:SfRadioGroup>
+    <SyncfusionButton:SfRadioGroup Orientation="Horizontal">
+        <SyncfusionButton:SfRadioButton Text="Net banking" />
+        <SyncfusionButton:SfRadioButton Text="Debit card" />
+        <SyncfusionButton:SfRadioButton Text="Credit card" />
+    </SyncfusionButton:SfRadioGroup>
 
 {% endhighlight %}
 {% highlight c# %}
 
-SfRadioGroup radioGroup = new SfRadioGroup(){Orientation = StackOrientation.Horizontal};
-SfRadioButton netBanking = new SfRadioButton() {Text = "Net banking"};
-SfRadioButton debitCard = new SfRadioButton() {Text = "Debit card"};
-SfRadioButton creditCard = new SfRadioButton() {Text = "Credit card"};
+    SfRadioGroup radioGroup = new SfRadioGroup(){Orientation = StackOrientation.Horizontal};
+    SfRadioButton netBanking = new SfRadioButton() {Text = "Net banking"};
+    SfRadioButton debitCard = new SfRadioButton() {Text = "Debit card"};
+    SfRadioButton creditCard = new SfRadioButton() {Text = "Credit card"};
 
-radioGroup.Children.Add(netBanking);
-radioGroup.Children.Add(debitCard);
-radioGroup.Children.Add(creditCard);
+    radioGroup.Children.Add(netBanking);
+    radioGroup.Children.Add(debitCard);
+    radioGroup.Children.Add(creditCard);
 
 {% endhighlight %}
 {% endtabs %}

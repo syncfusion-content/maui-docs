@@ -15,22 +15,26 @@ The default state colors can be customized using the [`CheckedColor`] and [`Unch
 
 {% tabs %}
 {% highlight xaml %}
-<syncfusion:SfRadioGroup x:Name="radioGroup">
-<syncfusion:SfRadioButton x:Name="check" Text="RadioButton" IsChecked="True" CheckedColor="Green"/>
-<syncfusion:SfRadioButton x:Name="uncheck" Text="RadioButton" UncheckedColor="Violet"/>
-</syncfusion:SfRadioGroup>
+
+	<syncfusion:SfRadioGroup x:Name="radioGroup">
+	<syncfusion:SfRadioButton x:Name="check" Text="RadioButton" IsChecked="True" CheckedColor="Green"/>
+	<syncfusion:SfRadioButton x:Name="uncheck" Text="RadioButton" UncheckedColor="Violet"/>
+	</syncfusion:SfRadioGroup>
+
 {% endhighlight %}
 {% highlight c# %}
-SfRadioGroup radioGroup = new SfRadioGroup();
-SfRadioButton check = new SfRadioButton();
-check.Text = "RadioButton";
-check.IsChecked = true;
-check.CheckedColor = Color.Green;
-SfRadioButton uncheck = new SfRadioButton();
-uncheck.Text = "RadioButton";
-uncheck.UncheckedColor = Color.Violet;
-radioGroup.Children.Add(check);
-radioGroup.Children.Add(uncheck);
+
+	SfRadioGroup radioGroup = new SfRadioGroup();
+	SfRadioButton check = new SfRadioButton();
+	check.Text = "RadioButton";
+	check.IsChecked = true;
+	check.CheckedColor = Color.Green;
+	SfRadioButton uncheck = new SfRadioButton();
+	uncheck.Text = "RadioButton";
+	uncheck.UncheckedColor = Color.Violet;
+	radioGroup.Children.Add(check);
+	radioGroup.Children.Add(uncheck);
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -42,22 +46,26 @@ The stroke thickness of the circle in the RadioButton control can be customized 
 
 {% tabs %}
 {% highlight xaml %}
-<syncfusion:SfRadioGroup>
-<syncfusion:SfRadioButton Text="Checked State" IsChecked="True" StrokeThickness="3"/>
-<syncfusion:SfRadioButton Text="UnChecked State" StrokeThickness="3"/>
-</syncfusion:SfRadioGroup>
+
+	<syncfusion:SfRadioGroup>
+	<syncfusion:SfRadioButton Text="Checked State" IsChecked="True" StrokeThickness="3"/>
+	<syncfusion:SfRadioButton Text="UnChecked State" StrokeThickness="3"/>
+	</syncfusion:SfRadioGroup>
+
 {% endhighlight %}
 {% highlight c# %}
-SfRadioGroup radioGroup = new SfRadioGroup();
-SfRadioButton check = new SfRadioButton();
-check.Text = "Checked State";
-check.IsChecked = true;
-check.StrokeThickness = 3;
-SfRadioButton uncheck = new SfRadioButton();
-uncheck.Text = "UnChecked State";
-uncheck.StrokeThickness = 3;
-radioGroup.Children.Add(check);
-radioGroup.Children.Add(uncheck);
+
+	SfRadioGroup radioGroup = new SfRadioGroup();
+	SfRadioButton check = new SfRadioButton();
+	check.Text = "Checked State";
+	check.IsChecked = true;
+	check.StrokeThickness = 3;
+	SfRadioButton uncheck = new SfRadioButton();
+	uncheck.Text = "UnChecked State";
+	uncheck.StrokeThickness = 3;
+	radioGroup.Children.Add(check);
+	radioGroup.Children.Add(uncheck);
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -78,17 +86,21 @@ You can customize the display text appearance of the [`SfRadioButton`] control u
 
 {% tabs %}
 {% highlight xaml %}
-<syncfusion:SfRadioButton x:Name="radioButton" Text="RadioButton" IsChecked="True" TextColor="Violet" HorizontalTextAlignment="Center" FontFamily="Arial" FontAttributes="Bold" FontSize="20"/>
+
+	<syncfusion:SfRadioButton x:Name="radioButton" Text="RadioButton" IsChecked="True" TextColor="Violet" HorizontalTextAlignment="Center" FontFamily="Arial" FontAttributes="Bold" FontSize="20"/>
+
 {% endhighlight %}
 {% highlight c# %}
-SfRadioButton radioButton = new SfRadioButton();
-radioButton.Text = "RadioButton";
-radioButton.IsChecked = true;
-radioButton.TextColor = Color.Violet;
-radioButton.HorizontalTextAlignment = TextAlignment.Center;
-radioButton.FontFamily = "Arial";
-radioButton.FontAttributes = FontAttributes.Bold;
-radioButton.FontSize = 20;
+
+	SfRadioButton radioButton = new SfRadioButton();
+	radioButton.Text = "RadioButton";
+	radioButton.IsChecked = true;
+	radioButton.TextColor = Color.Violet;
+	radioButton.HorizontalTextAlignment = TextAlignment.Center;
+	radioButton.FontFamily = "Arial";
+	radioButton.FontAttributes = FontAttributes.Bold;
+	radioButton.FontSize = 20;
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -96,4 +108,4 @@ radioButton.FontSize = 20;
 
 ## See also
 
-[]
+[How to get the selected .NET MAUI radio button (SfRadioButton)]

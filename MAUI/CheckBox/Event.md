@@ -17,15 +17,16 @@ Occurs when the value(state) of the [`IsChecked`] property is changed by either 
 
 {% tabs %}
 {% highlight xaml %}
-<syncfusion:SfCheckBox x:Name="checkBox" Text="Unchecked State" IsThreeState="True" StateChanged="CheckBox_StateChanged"/>
+
+    <syncfusion:SfCheckBox x:Name="checkBox" Text="Unchecked State" IsThreeState="True" StateChanged="CheckBox_StateChanged"/>
 
 {% endhighlight %}
 {% highlight c# %}
 
-SfCheckBox checkBox = new SfCheckBox();
-checkBox.Text = "Unchecked State";
-checkBox.IsThreeState = true;
-checkBox.StateChanged += CheckBox_StateChanged;
+    SfCheckBox checkBox = new SfCheckBox();
+    checkBox.Text = "Unchecked State";
+    checkBox.IsThreeState = true;
+    checkBox.StateChanged += CheckBox_StateChanged;
 	
 {% endhighlight %}
 {% endtabs %}
@@ -33,21 +34,21 @@ checkBox.StateChanged += CheckBox_StateChanged;
 {% tabs %}
 {% highlight c# %}
 
-private void CheckBox_StateChanged(object sender, Syncfusion.Maui.Buttons.StateChangedEventArgs e)
-{
-    if (e.IsChecked.HasValue && e.IsChecked.Value)
+    private void CheckBox_StateChanged(object sender, Syncfusion.Maui.Buttons.StateChangedEventArgs e)
     {
-        checkBox.Text = "Checked State";
+        if (e.IsChecked.HasValue && e.IsChecked.Value)
+        {
+            checkBox.Text = "Checked State";
+        }
+        else if(e.IsChecked.HasValue && !e.IsChecked.Value)
+        {
+            checkBox.Text = "Unchecked State";
+        }
+        else
+        {
+        checkBox.Text = "Indeterminate State";
+        }
     }
-    else if(e.IsChecked.HasValue && !e.IsChecked.Value)
-    {
-        checkBox.Text = "Unchecked State";
-    }
-    else
-    {
-    checkBox.Text = "Indeterminate State";
-    }
-}
 
 {% endhighlight %}
 {% endtabs %}

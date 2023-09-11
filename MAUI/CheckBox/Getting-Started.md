@@ -24,32 +24,33 @@ Syncfusion .NET MAUI controls are available in [Nuget.org](https://www.nuget.org
 In the MauiProgram.cs file, register the handler for the Syncfusion core.
 
 {% highlight c# hl_lines="6 17" %}
-using Microsoft.Maui;
-using Microsoft.Maui.Hosting;
-using Microsoft.Maui.Controls.Compatibility;
-using Microsoft.Maui.Controls.Hosting;
-using Microsoft.Maui.Controls.Xaml;
-using Syncfusion.Maui.Core.Hosting;
 
-namespace ButtonSample
-{
-    public static class MauiProgram
+    using Microsoft.Maui;
+    using Microsoft.Maui.Hosting;
+    using Microsoft.Maui.Controls.Compatibility;
+    using Microsoft.Maui.Controls.Hosting;
+    using Microsoft.Maui.Controls.Xaml;
+    using Syncfusion.Maui.Core.Hosting;
+
+    namespace ButtonSample
     {
-        public static MauiApp CreateMauiApp()
+        public static class MauiProgram
         {
-            var builder = MauiApp.CreateBuilder();
-            builder
-            .UseMauiApp<App>()
-            .ConfigureSyncfusionCore()
-            .ConfigureFonts(fonts =>
+            public static MauiApp CreateMauiApp()
             {
-                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-            });
+                var builder = MauiApp.CreateBuilder();
+                builder
+                .UseMauiApp<App>()
+                .ConfigureSyncfusionCore()
+                .ConfigureFonts(fonts =>
+                {
+                    fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+                });
 
-            return builder.Build();
-        }      
-    }
-}   
+                return builder.Build();
+            }      
+        }
+    }   
 
 {% endhighlight %} 
 
@@ -61,10 +62,14 @@ The [MAUI CheckBox] (SfCheckBox) control is configured entirely in C# code or by
 
 {% tabs %}
 {% highlight xaml %}
-xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons"
+
+    xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons"
+
 {% endhighlight %}
 {% highlight c# %}
-using Syncfusion.Maui.Buttons;
+
+    using Syncfusion.Maui.Buttons;
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -73,35 +78,39 @@ using Syncfusion.Maui.Buttons;
 {% tabs %}
 {% highlight xaml %}
 
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:GettingStarted"
-	         xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons"             
-	         x:Class="GettingStarted.MainPage">
-    <ContentPage.Content>
-        <StackLayout>
-              <syncfusion:SfCheckBox x:Name="checkBox"/>
-        </StackLayout>
-    </ContentPage.Content>
-</ContentPage>
+    <?xml version="1.0" encoding="utf-8" ?>
+    <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                 xmlns:local="clr-namespace:GettingStarted"
+	             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons"             
+	             x:Class="GettingStarted.MainPage">
+        <ContentPage.Content>
+            <StackLayout>
+                  <syncfusion:SfCheckBox x:Name="checkBox"/>
+            </StackLayout>
+        </ContentPage.Content>
+    </ContentPage>
+
 {% endhighlight %}
 {% highlight c# %}
-using Syncfusion.Maui.Buttons;
-namespace GettingStarted
-{
-    public partial class MainPage : ContentPage
+
+    using Syncfusion.Maui.Buttons;
+
+    namespace GettingStarted
     {
-        public MainPage()
+        public partial class MainPage : ContentPage
         {
-            InitializeComponent();
-            StackLayout stackLayout = new StackLayout();
-            SfCheckBox checkBox = new SfCheckBox();
-            stackLayout.Children.Add(checkbox);
-            this.Content = stackLayout;
+            public MainPage()
+            {
+                InitializeComponent();
+                StackLayout stackLayout = new StackLayout();
+                SfCheckBox checkBox = new SfCheckBox();
+                stackLayout.Children.Add(checkbox);
+                this.Content = stackLayout;
+            }
         }
     }
-}
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -111,12 +120,14 @@ The check box caption can be defined using the [`Text`] property of [`SfCheckBox
 
 {% tabs %}
 {% highlight xaml %}
-<syncfusion:SfCheckBox x:Name="checkBox" IsChecked="True" Text="CheckBox"/>
-{% endhighlight %}
-{% highlight c# %}
-SfCheckBox checkBox = new SfCheckBox();
-checkBox.IsChecked = true;
-checkBox.Text = "CheckBox";
+
+    <syncfusion:SfCheckBox x:Name="checkBox" IsChecked="True" Text="CheckBox"/>
+    {% endhighlight %}
+    {% highlight c# %}
+    SfCheckBox checkBox = new SfCheckBox();
+    checkBox.IsChecked = true;
+    checkBox.Text = "CheckBox";
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -187,12 +198,16 @@ Check box can be used as a single or as a group. A single check box mostly used 
 
 {% tabs %}
 {% highlight xaml %}
-<syncfusion:SfCheckBox x:Name="checkBox" Text="I agree to the terms of services for this site" IsChecked="True"/> 
+
+    <syncfusion:SfCheckBox x:Name="checkBox" Text="I agree to the terms of services for this site" IsChecked="True"/> 
+
 {% endhighlight %}
 {% highlight c# %}
-SfCheckBox checkBox = new SfCheckBox();
-checkBox.Text = "I agree to the terms of services for this site";
-checkBox.IsChecked = true;
+
+    SfCheckBox checkBox = new SfCheckBox();
+    checkBox.Text = "I agree to the terms of services for this site";
+    checkBox.IsChecked = true;
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -202,25 +217,29 @@ Multiple check boxes can be used as a group for multi-select scenarios in which 
 
 {% tabs %}
 {% highlight xaml %}
-<Label x:Name="label" Text="Pizza Toppings" />
-<syncfusion:SfCheckBox x:Name="pepperoni" Text="Pepperoni"/>
-<syncfusion:SfCheckBox x:Name="beef" Text="Beef" IsChecked="True"/>
-<syncfusion:SfCheckBox x:Name="mushroom" Text="Mushrooms"/>
-<syncfusion:SfCheckBox x:Name="onion" Text="Onions" IsChecked="True"/>
+
+    <Label x:Name="label" Text="Pizza Toppings" />
+    <syncfusion:SfCheckBox x:Name="pepperoni" Text="Pepperoni"/>
+    <syncfusion:SfCheckBox x:Name="beef" Text="Beef" IsChecked="True"/>
+    <syncfusion:SfCheckBox x:Name="mushroom" Text="Mushrooms"/>
+    <syncfusion:SfCheckBox x:Name="onion" Text="Onions" IsChecked="True"/>
+
 {% endhighlight %}
 {% highlight c# %}
-Label label = new Label();
-label.Text = "Pizza Toppings";
-SfCheckBox pepperoni= new SfCheckBox();
-pepperoni.Text = "Pepperoni";
-SfCheckBox beef= new SfCheckBox();
-beef.Text = "Beef";
-beef.IsChecked = true;
-SfCheckBox mushroom = new SfCheckBox();
-mushroom.Text = "Mushrooms";
-SfCheckBox onion = new SfCheckBox();
-onion.Text = "Pepperoni";
-onion.IsChecked = true;
+
+    Label label = new Label();
+    label.Text = "Pizza Toppings";
+    SfCheckBox pepperoni= new SfCheckBox();
+    pepperoni.Text = "Pepperoni";
+    SfCheckBox beef= new SfCheckBox();
+    beef.Text = "Beef";
+    beef.IsChecked = true;
+    SfCheckBox mushroom = new SfCheckBox();
+    mushroom.Text = "Mushrooms";
+    SfCheckBox onion = new SfCheckBox();
+    onion.Text = "Pepperoni";
+    onion.IsChecked = true;
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -236,58 +255,60 @@ The Intermediate state is used when a group of sub-choices has both checked and 
 
 {% tabs %}
 {% highlight xaml %}
-<syncfusion:SfCheckBox x:Name="selectAll" Text="Select All" IsChecked="{x:Null}" StateChanged="SelectAll_StateChanged"/>
-<syncfusion:SfCheckBox x:Name="pepperoni" Text="Pepperoni" StateChanged="CheckBox_StateChanged"/>
-<syncfusion:SfCheckBox x:Name="beef" Text="Beef" IsChecked="True" StateChanged="CheckBox_StateChanged"/>
-<syncfusion:SfCheckBox x:Name="mushroom" Text="Mushrooms" StateChanged="CheckBox_StateChanged"/>
-<syncfusion:SfCheckBox x:Name="onion" Text="Onions" IsChecked="True" StateChanged="CheckBox_StateChanged"/>
+
+    <syncfusion:SfCheckBox x:Name="selectAll" Text="Select All" IsChecked="{x:Null}" StateChanged="SelectAll_StateChanged"/>
+    <syncfusion:SfCheckBox x:Name="pepperoni" Text="Pepperoni" StateChanged="CheckBox_StateChanged"/>
+    <syncfusion:SfCheckBox x:Name="beef" Text="Beef" IsChecked="True" StateChanged="CheckBox_StateChanged"/>
+    <syncfusion:SfCheckBox x:Name="mushroom" Text="Mushrooms" StateChanged="CheckBox_StateChanged"/>
+    <syncfusion:SfCheckBox x:Name="onion" Text="Onions" IsChecked="True" StateChanged="CheckBox_StateChanged"/>
 
 {% endhighlight %}
 {% highlight c# %}
-bool skip = false;
-SfCheckBox selectAll, pepperoni, beef, mushroom, onion;
-selectAll = new SfCheckBox();
-selectAll.StateChanged += SelectAll_StateChanged;
-selectAll.Text = "Select All";
-pepperoni = new SfCheckBox();
-pepperoni.StateChanged += CheckBox_StateChanged;
-pepperoni.Text = "Pepperoni";
-beef = new SfCheckBox();
-beef.StateChanged += CheckBox_StateChanged;
-beef.Text = "Beef";
-beef.IsChecked = true;
-mushroom = new SfCheckBox();
-mushroom.StateChanged += CheckBox_StateChanged;
-mushroom.Text = "Mushrooms";
-onion = new SfCheckBox();
-onion.StateChanged += CheckBox_StateChanged;
-onion.Text = "Onions";
-onion.IsChecked = true;
 
-private void SelectAll_StateChanged(object sender, StateChangedEventArgs e)
-{
-    if (!skip)
-    {
-       skip = true;
-       pepperoni.IsChecked = beef.IsChecked = mushroom.IsChecked = onion.IsChecked = e.IsChecked;
-       skip = false;
-    }
-}
+    bool skip = false;
+    SfCheckBox selectAll, pepperoni, beef, mushroom, onion;
+    selectAll = new SfCheckBox();
+    selectAll.StateChanged += SelectAll_StateChanged;
+    selectAll.Text = "Select All";
+    pepperoni = new SfCheckBox();
+    pepperoni.StateChanged += CheckBox_StateChanged;
+    pepperoni.Text = "Pepperoni";
+    beef = new SfCheckBox();
+    beef.StateChanged += CheckBox_StateChanged;
+    beef.Text = "Beef";
+    beef.IsChecked = true;
+    mushroom = new SfCheckBox();
+    mushroom.StateChanged += CheckBox_StateChanged;
+    mushroom.Text = "Mushrooms";
+    onion = new SfCheckBox();
+    onion.StateChanged += CheckBox_StateChanged;
+    onion.Text = "Onions";
+    onion.IsChecked = true;
 
-private void CheckBox_StateChanged(object sender, StateChangedEventArgs e)
-{
-    if (!skip)
+    private void SelectAll_StateChanged(object sender, StateChangedEventArgs e)
     {
-       skip = true;
-       if (pepperoni.IsChecked.Value && beef.IsChecked.Value && mushroom.IsChecked.Value && onion.IsChecked.Value)
-           selectAll.IsChecked = true;
-       else if (!pepperoni.IsChecked.Value && !beef.IsChecked.Value && !mushroom.IsChecked.Value && !onion.IsChecked.Value)
-	       selectAll.IsChecked = false;
-       else
-           selectAll.IsChecked = null;
-       skip = false;
+        if (!skip)
+        {
+           skip = true;
+           pepperoni.IsChecked = beef.IsChecked = mushroom.IsChecked = onion.IsChecked = e.IsChecked;
+           skip = false;
+        }
     }
-}
+
+    private void CheckBox_StateChanged(object sender, StateChangedEventArgs e)
+    {
+        if (!skip)
+        {
+           skip = true;
+           if (pepperoni.IsChecked.Value && beef.IsChecked.Value && mushroom.IsChecked.Value && onion.IsChecked.Value)
+               selectAll.IsChecked = true;
+           else if (!pepperoni.IsChecked.Value && !beef.IsChecked.Value && !mushroom.IsChecked.Value && !onion.IsChecked.Value)
+	           selectAll.IsChecked = false;
+           else
+               selectAll.IsChecked = null;
+           skip = false;
+        }
+    }
 		
 {% endhighlight %}
 {% endtabs %}
