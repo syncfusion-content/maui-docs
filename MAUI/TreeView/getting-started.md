@@ -84,7 +84,8 @@ namespace GettingStarted
 
 You can create and manage the `TreeViewNode` objects by yourself to display the data in a hierarchical view. To create a tree view, you can use a `TreeView` control and a hierarchy of `TreeViewNode` objects. You can create the node hierarchy by adding one or more root nodes to the TreeView control’s Nodes collection. Each `TreeViewNode` can then have more nodes added to its Children collection. You can nest the tree view nodes to any depth you need.
 
-I> `ItemsSource` is an alternative mechanism to `Nodes` for putting content into the TreeView control. You cannot set both `ItemsSource` and `Nodes` at the same time. When you use `ItemsSource`, nodes created for you internally, but you cannot access them from `Nodes` property.
+I> `ItemsSource` is an alternative mechanism to `Nodes` for adding content into the TreeView control. You cannot set both `ItemsSource` and `Nodes` at the same time. When you use `ItemsSource`, nodes are created internally, but you cannot access them from the `Nodes` property.
+
 
 {% tabs %}
 {% highlight xaml %}
@@ -335,7 +336,7 @@ public class FileManagerViewModel
 
 You can create a tree view by binding the `ItemsSource` to a hierarchical data source. To create a tree view using data binding, set a hierarchical collection to the `ItemsSource` property. Then in the `ItemTemplate` and `ExpanderTemplate`, set the child items collection to the `ItemsSource` property.
 
-I> `ItemsSource` is an alternative mechanism to Nodes for putting content into the TreeView control. You cannot set both `ItemsSource` and `Nodes` at the same time. When you use `ItemsSource`, nodes created for you internally, but you cannot access them from the `Nodes` property.
+I> ItemsSource is an alternative mechanism to Nodes for adding content into the TreeView control. You cannot set both ItemsSource and Nodes at the same time. When you use ItemsSource, nodes are created internally, but you cannot access them from the Nodes property.
 
 {% tabs %}
 {% highlight xaml hl_lines="11" %}

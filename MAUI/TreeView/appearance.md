@@ -9,13 +9,13 @@ documentation: ug
 
 # Appearance in .NET Maui TreeView (SfTreeView)
 
-The SfTreeView allows customizing appearance of the underlying data, and provides different functionalities to the end-user.
+The `SfTreeView` allows customizing the appearance of the underlying data and provides different functionalities to the end user.
 
 ## ItemTemplate
  
 A template can be used to present the data in a way that makes sense for the application by using different controls.
 
-The TreeView allows you to customize the appearance of content view and expander view by setting the `ItemTemplate` and `ExpanderTemplate` properties.
+The TreeView allows you to customize the appearance of the content view and expander view by setting the `ItemTemplate` and `ExpanderTemplate` properties.
 
 {% tabs %}
 {% highlight xaml hl_lines="14" %}
@@ -76,9 +76,9 @@ namespace GettingStarted
 
 ## BindingContext for ItemTemplate
 
-By default, the binding context of tree view item will be the data model object for Bound Mode and `TreeViewNode` for Unbound Mode.
+By default, the binding context of the tree view item will be the data model object for Bound Mode and `TreeViewNode` for Unbound Mode.
 
-For Bound Mode, you can change the binding context of the treeview items by using `ItemTemplateContextType` property.
+For Bound Mode, you can change the binding context of the treeview items using the `ItemTemplateContextType` property.
 
 {% tabs %}
 {% highlight xaml hl_lines = "12" %}
@@ -138,17 +138,17 @@ namespace GettingStarted
 {% endhighlight %}
 {% endtabs %}
 
-Similarly, you can customize the expander view by using `ExpanderTemplate` property like above example.
+Similarly, you can customize the expander view using the `ExpanderTemplate` property, as shown in the example above.
 
 ## ItemTemplate Selector
 
-The TreeView allows you to customize the appearance of each item with different templates based on specific constraints by using the `DataTemplateSelector`. You can choose a `DataTemplate` for each item at runtime based on the value of data-bound property using `DataTemplateSelector`.
+The TreeView allows you to customize the appearance of each item with different templates based on specific constraints using the `DataTemplateSelector`. You can choose a `DataTemplate` for each item at runtime based on the value of the data-bound property using the `DataTemplateSelector`.
 
 ### Create a data template selector
 
-Create custom class that inherits from `DataTemplateSelector`, and override the `OnSelectTemplate` method to return the `DataTemplate` for that item. At runtime, the TreeView invokes the `OnSelectTemplate` method for each item and passes the data object as parameter.
+Create a custom class that inherits from the `DataTemplateSelector`, and overrides the `OnSelectTemplate` method to return the `DataTemplate` for that item. At runtime, the TreeView invokes the `OnSelectTemplate` method for each item and passes the data object as parameter.
 
-Create different templates and by using `DataTemplateSelector`, load those templates using `OnSelectTemplate` based on requirements.
+Create different templates and load them using `DataTemplateSelector` in the `OnSelectTemplate` based on the requirements.
 
 {% tabs %}
 {% highlight c# tabtitle="ItemTemplateSelector.cs" %}
@@ -178,9 +178,9 @@ public class ItemTemplateSelector : DataTemplateSelector
 
 ### Applying a data template selector
 
-Assign custom `DataTemplateSelector` to the `ItemTemplate` either in XAML or C#.
+Assign a custom `DataTemplateSelector` to the ItemTemplate, either in XAML or C#.
 
-Following code example illustrates to load the different templates for treeview items using `DataTemplateSelector` based on different levels.
+The following code example illustrates how to load different templates for treeview items using the `DataTemplateSelector` based on different levels.
 
 {% tabs %}
 {% highlight xaml hl_lines="13" %}
@@ -205,13 +205,14 @@ SfTreeView treeView = new SfTreeView();
 treeView.ItemTemplate = new ItemTemplateSelector();
 {% endhighlight %}
 <% endtabs %>
+
 Download the entire source code from GitHub here.
 
-Similarly, you can provide `DataTemplateSelector` for `ExpanderTemplate` property.
+Similarly, you can provide a `DataTemplateSelector` for the `ExpanderTemplate` property.
 
 ## Indentation
 
-The TreeView allows customizing the indent spacing of items by setting the `Indentation` property. The default value of this property is `30d`. This property can be customized at runtime.
+The TreeView allows for customization of the indent spacing of items by setting the `Indentation` property. The default value of this property is `30d`, but it can be customized at runtime.
 
 {% tabs %}
 {% highlight xaml %}
@@ -225,7 +226,7 @@ treeView.Indentation = 40;
 
 ## ExpanderWidth
 
-The TreeView allows customizing the width of expander view by setting the `ExpanderWidth` property. The default value of this property is `32d`. This property can be customized at runtime.
+The TreeView allows customization of the width of the expander view by setting the `ExpanderWidth` property. The default value of this property is `32d`. This property can be customized at runtime.
 
 {% tabs %}
 {% highlight xaml %}
@@ -239,7 +240,7 @@ treeView.ExpanderWidth = 40;
 
 ## ExpanderPosition
 
-The TreeView allows you change the position of expander view by setting the `ExpanderPosition` property. The default value of this property is `Start`.This property has following two positions:
+The TreeView allows you to change the position of the expander view by setting the `ExpanderPosition` property. The default value of this property is Start.This property has the following two positions:
 
 * `Start`: Allows displaying the expander view at the start position.
 * `End`: Allows displaying the expander view at the end position.
@@ -256,7 +257,7 @@ treeView.ExpanderPosition = ExpanderPosition.End;
 
 ## Level based styling
 
-The TreeView allows you to customize the style of `TreeViewItem` based on different levels by using `IValueConverter`.
+The TreeView allows you to customize the style of the TreeViewItem based on different levels by using the IValueConverter.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
