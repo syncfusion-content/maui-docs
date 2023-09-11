@@ -11,7 +11,7 @@ documentation: ug
 
 Customize the built-in toolbar appearance, visibility, position, and orientation of each toolbar and add new toolbars.
 
-## Build-in Toolbar items
+## Built-in Toolbar Items
 
 Customize each toolbar item using the `Name` and `View` properties. Get or set the names of the built-in toolbar and dynamically add toolbar items using the `Name` property.
 
@@ -31,7 +31,7 @@ N> The following built-in toolbar item names are available in image editor: `Bro
 
 N> You cannot modify the names of existing built-in toolbar items or create toolbar items with this list.
 
-#### Get an item from default top toolbar
+#### Get an item from the default top toolbar
 
 The default top toolbar contains three groups, each containing its items. Get the `ImageEditorToolbarItem` and customize the properties.
 {% highlight C# %}
@@ -47,7 +47,7 @@ ImageEditorToolbarItem saveItem = saveGroup.Items.FirstOrDefault(i => i.Name == 
 
 {% endhighlight %}
 
-#### Get an item from default bottom toolbar
+#### Get an item from the default bottom toolbar
 
 The default bottom toolbar contains `ToolbarItems`, and each item has `SubToolbars`. Get the required `ImageEditorToolbarItem` using the `Name` and customize the default settings.
 
@@ -62,7 +62,7 @@ ImageEditorToolbarItem textItem = (ImageEditorToolbarItem)footerToolbar.ToolbarI
 
 {% endhighlight %}
 
-#### Get an item from sub toolbar
+#### Get an item from the sub-toolbar
 
 The sub-toolbars contain their own items, and they can be retried as follows.
 
@@ -197,7 +197,7 @@ Change the default colors of the `ColorPalette` in the toolbar.
 
 N> Color palette colors are common for Text, Shape and Pen.
 
-## Explicitly create Toolbars
+## Explicitly Create Toolbars
 
 The ImageEditor automatically generates the toolbars. To add the toolbars manually, you need to explicitly add them and change the `AutoGenerateToolbarItems` property to `false`.
 
@@ -265,7 +265,7 @@ imageEditor.Toolbars.Add(editorToolbar);
 
 {% endtabs %}
 
-### Create Sub toolbar explicitly
+### Create the sub-toolbar explicitly
 
 Create `SubToolbars` within our default toolbar items to organize related actions.
 
@@ -333,7 +333,7 @@ imageEditor.Toolbars.Add(editorToolbar);
 
 {% endtabs %}
 
-## Change toolbar item visibility
+## Change the Toolbar Item Visibility
 
 Hide or show the toolbar items by specifying their icon names and setting the boolean values to true or false.
 
@@ -351,7 +351,7 @@ N> Customize an icon by specifying its `Name`.
 
 {% endtabs %}
 
-## Change toolbar item enable/disable state
+## Change the Toolbar Item to Enable or Disable State
 
 Enable or disable the toolbar items by using the `IsEnabled` property in the `ImageEditorToolbarItem` class.
 
@@ -375,7 +375,7 @@ saveItem.IsEnabled = false;
 
 {% endtabs %}
 
-## Customize toolbar item view
+## Customize the Toolbar Item View
 
 To customize the view of toolbar items, specify their icon names and set the view using the `View` property in the `ImageEditorToolbarItem`.
 
@@ -398,7 +398,7 @@ saveItem.View = image;
 
 {% endtabs %}
 
-## Add SubToolbar
+## Add the SubToolbar
 
 Create `SubToolbars` within your toolbar items to organize related actions.
 
@@ -428,7 +428,7 @@ cropItem.SubToolbars = new List<ImageEditorToolbar>()
 
 {% endtabs %}
 
-## Add an item with the existing toolbar.
+## Add an Item with the Existing Toolbar.
 
 Explicitly add the `ImageEditorToolbarItem` to the `ImageEditorToolbar` manually.
 
@@ -486,7 +486,7 @@ footerToolbar.Position = ToolbarPosition.Start;
 
 {% endtabs %}
 
-## Toolbar size customization
+## Toolbar Size Customization
 
 The size of the toolbar can be adjusted by using the `Size` property in the `ImageEditorToolbar` class.
 
@@ -502,7 +502,7 @@ For horizontal orientation, the size will be considered as width, and for vertic
 
 {% endhighlight %}
 
-## Appearance customization
+## Appearance Customization
 
 Customize the appearance of the toolbar by using the `ToolbarSettings` property. The following are some of the properties you can customize:
 
@@ -539,7 +539,7 @@ imageEditor.ToolbarSettings.IconSize = new Size(50, 50);
 
 {% endtabs %}
 
-## Notifying Toolbar Item Selected
+## Notifying the Toolbar Item Selected
 
 Whenever you tap the toolbar menu item, the `ToolbarItemSelected` event will be triggered, and you'll get the respective tapped toolbar item as an argument as shown in the following code sample.
 
