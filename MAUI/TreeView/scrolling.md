@@ -16,7 +16,7 @@ The SfTreeView provides various options to achieve programmatic scrolling. Pleas
 The TreeView allows programmatic scrolling based on the data model and `TreeViewNode` by using the `BringIntoView` method.
 
 {% tabs %}
-{% highlight c# hl_line="5" %}
+{% highlight c# hl_lines = "5" %}
 private void BringIntoView_Clicked(object sender, EventArgs e)
 {
     var count = viewModel.ImageNodeInfo.Count;
@@ -38,7 +38,7 @@ The second optional parameter `disableAnimation` in `BringIntoView` method decid
 * If the parameter value is `false`, scrolling animation will be enabled.
 
 {% tabs %}
-{% highlight c# hl_line="6" %}
+{% highlight c# hl_lines = "6" %}
 
 private void BringIntoView_Clicked(object sender, EventArgs e)
 {
@@ -60,7 +60,7 @@ The third optional parameter `canExpand` in `BringIntoView` method decides wheth
 * If the parameter value is `false`, TreeView does not expand the collapsed node and only scroll for item which is not in collapsed state.
 
 {% tabs %}
-{% highlight c# hl_line="5" %}
+{% highlight c# hl_line = "5" %}
 
 private void BringIntoView_Clicked(object sender, EventArgs e)
 {
@@ -87,7 +87,7 @@ The fourth optional parameter `scrollToPosition` in `BringIntoView` method allow
 * `End`: Scroll to make the node positioned at the end of the view.
 
 {% tabs %}
-{% highlight c# hl_line="6"%}
+{% highlight c# hl_lines = "6"%}
 private void BringIntoView_Clicked(object sender, EventArgs e)
 {
     var count = viewModel.ImageNodeInfo.Count;
@@ -106,7 +106,7 @@ The TreeView provides an option to enable or disable the `Scrollbar` visibility 
 {% highlight xaml%}
 <syncfusion:SfTreeView x:Name="treeView" ScrollBarVisibility="Always" />
 {% endhighlight %}
-{% highlight c# hl_line="2" %}
+{% highlight c# hl_lines = "2" %}
 SfTreeView treeView = new SfTreeView();
 treeView.ScrollBarVisibility = ScrollBarVisibility.Always;
 {% endhighlight %}

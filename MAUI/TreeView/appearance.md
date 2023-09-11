@@ -44,7 +44,7 @@ The TreeView allows you to customize the appearance of content view and expander
     </ContentPage.Content>
 </ContentPage>
 {% endhighlight %}
-{% highlight c#  hl_line= "15" %}
+{% highlight c#  hl_lines= "15" %}
 using Syncfusion.Maui.TreeView;
 
 namespace GettingStarted
@@ -81,7 +81,7 @@ By default, the binding context of tree view item will be the data model object 
 For Bound Mode, you can change the binding context of the treeview items by using `ItemTemplateContextType` property.
 
 {% tabs %}
-{% highlight xaml hl_line="12" %}
+{% highlight xaml hl_lines = "12" %}
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
@@ -108,7 +108,7 @@ For Bound Mode, you can change the binding context of the treeview items by usin
     </ContentPage.Content>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# hl_line="14" %}
+{% highlight c# hl_lines = "14" %}
 using Syncfusion.Maui.TreeView;
 
 namespace GettingStarted
