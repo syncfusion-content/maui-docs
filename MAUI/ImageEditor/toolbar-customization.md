@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Toolbar Customization in .NET MAUI Image Editor Control | Syncfusion
-description: Learn here all about toolbar customization support in the Syncfusion .NET MAUI ImageEditor (SfImageEditor) control.
+description: Learn about toolbar customization support in the Syncfusion .NET MAUI ImageEditor (SfImageEditor) control.
 platform: .NET MAUI
 control: SfImageEditor
 documentation: ug
@@ -9,11 +9,11 @@ documentation: ug
 
 # Toolbar Customization in .NET MAUI Image Editor (SfImageEditor)
 
-You can customize the build-in toolbar appearance, visibility, position, and orientation of each toolbar and can add new toolbars.
+Customize the built-in toolbar appearance, visibility, position, and orientation of each toolbar and add new toolbars.
 
 ## Build-in Toolbar items
 
-Customize each toolbar item using the `Name` and `View` properties. You can get or set the names of built-in toolbar and dynamically added toolbar items using the `Name` property.
+Customize each toolbar item using the `Name` and `View` properties. Get or set the names of the built-in toolbar and dynamically add toolbar items using the `Name` property.
 
 {% highlight C# %}
 
@@ -29,12 +29,11 @@ public MainPage()
 
 N> The following built-in toolbar item names are available in image editor: `Browse`, `Undo`, `Redo`, `ZoomOut`, `ZoomIn`, `Reset`, `Save`, `SaveEdit`, `Crop`, `Shape`, `Text`, `Pen`, `Effects`, `Rotate`, `FlipHorizontal`, `FlipVertical`, `custom`, `original`, `ellipse`, `circle`, `square`, `3:1`, `3:2`, `4:3`, `5:4`, `7:5`, `16:9`, `Rectangle`, `Circle`, `Arrow`, `Line`, `Dotted`, `DoubleArrow`, `DottedArrow`, `DottedDoubleArrow`, `ShapeStrokeThickness`, `ShapeStrokeColor`, `ShapeFill`, `ShapeStroke`, `AddText`, `StrokeThickness`, `Delete`, `FontFamily`, `TextAlignment`, `FontAttributes`, `TextColor`, `Start`, `Center`, `End`, `DefaultText`, `Handlee`, `Pinyon Script`, `Kaushan Script`, `Boogaloo`, `Bold`, `Italic`, `Color`, `ShapeStrokeOpacity`, `PenStrokeOpacity`, `TextColorOpacity`, `PenStrokeThickness`, `PenStrokeColor`, `Back`, `Blur`, `Contrast`, `Sharpen`, `Brightness`, `Saturation`, `Hue`, `Opacity`,  and `Exposure`.
 
-N> You cannot modify the names of existing built-in toolbar items and cannot create toolbar item with these list.
+N> You cannot modify the names of existing built-in toolbar items or create toolbar items with this list.
 
 #### Get an item from default top toolbar
 
-The default top toolbar contains 3 groups and each group contains its own items. You can get the `ImageEditorToolbarItem` and customize the properties.
-
+The default top toolbar contains three groups, each containing its items. Get the `ImageEditorToolbarItem` and customize the properties.
 {% highlight C# %}
 
 SfImageEditor imageEditor = new SfImageEditor();
@@ -50,9 +49,9 @@ ImageEditorToolbarItem saveItem = saveGroup.Items.FirstOrDefault(i => i.Name == 
 
 #### Get an item from default bottom toolbar
 
-The default bottom toolbar contains `ToolbarItems` and each item has the `SubToolbars`. You can get the required `ImageEditorToolbarItem` using the `Name` and customize the default settings.
+The default bottom toolbar contains `ToolbarItems`, and each item has `SubToolbars`. Get the required `ImageEditorToolbarItem` using the `Name` and customize the default settings.
 
-Refer to the following code snippet to customize footer toolbar item.
+Refer to the following code sample to customize the footer toolbar item.
 
 {% highlight C# %}
 
@@ -65,7 +64,7 @@ ImageEditorToolbarItem textItem = (ImageEditorToolbarItem)footerToolbar.ToolbarI
 
 #### Get an item from sub toolbar
 
-The sub-toolbars contains it's own items and it can be retried as below.
+The sub-toolbars contain their own items, and they can be retried as follows.
 
 Refer to the following code snippet to customize sub items of bottom toolbar item.
 
@@ -80,13 +79,13 @@ ImageEditorToolbarItem arrowItem = (ImageEditorToolbarItem)subtoolbar.ToolbarIte
 
 {% endhighlight %}
 
-N> You can remove the existing toolbar items `Name` from image editor toolbarItems collection based on the index value and change the icon and text values dynamically for any of the already added toolbar item based on the index.
+N> Remove the existing toolbar items `Name` from the image editor toolbarItems collection based on the index value. Change the icon and text values dynamically for any already added toolbar items based on the index.
 
 ### Change toolbar options
 
 #### Change the Crop options
 
-You can show the required crop types alone in the crop types toolbar by using the `CropTypes` property in the `ImageEditorToolbarSettings` class.
+Show the required crop types alone in the crop types toolbar by using the `CropTypes` property in the `ImageEditorToolbarSettings` class.
 
 {% tabs %}
 
@@ -112,7 +111,7 @@ imageEditor.ToolbarSettings.CropTypes = ImageCropType.Circle | ImageCropType.Squ
 
 #### Change the Effect options
 
-You can show the required effect types alone in the effects toolbar by using the `EffectTypes` property in the `ImageEditorToolbarSettings` class.
+Show the required effect types alone in the effects toolbar by using the `EffectTypes` property in the `ImageEditorToolbarSettings` class.
 
 {% tabs %}
 
@@ -138,7 +137,7 @@ imageEditor.ToolbarSettings.EffectTypes = ImageEffect.Hue | ImageEffect.Blur | I
 
 #### Change the Shapes options
 
-You can show the required shape types alone in the shapes toolbar by using the `Shapes` property in the `ImageEditorToolbarSettings` class.
+Show the required shape types alone in the shapes toolbar by using the `Shapes` property in the `ImageEditorToolbarSettings` class.
 
 {% tabs %}
 
@@ -164,7 +163,7 @@ imageEditor.ToolbarSettings.Shapes = AnnotationShape.Circle | AnnotationShape.Li
 
 #### Customize the Color Palette
 
-You can change the default colors of the `ColorPalette` in toolbar.
+Change the default colors of the `ColorPalette` in the toolbar.
 
 {% tabs %}
 
@@ -200,7 +199,7 @@ N> Color palette colors are common for Text, Shape and Pen.
 
 ## Explicitly create Toolbars
 
-The ImageEditor auto-generates the toolbars, You can explicitly add the Toolbars by adding the Toolbars manually and you need to change the `AutoGenerateToolbarItems` property to `false`.
+The ImageEditor automatically generates the toolbars. To add the toolbars manually, you need to explicitly add them and change the `AutoGenerateToolbarItems` property to `false`.
 
 {% tabs %}
 
@@ -268,7 +267,7 @@ imageEditor.Toolbars.Add(editorToolbar);
 
 ### Create Sub toolbar explicitly
 
-You can create `SubToolbars` within our default toolbar items to organize related actions.
+Create `SubToolbars` within our default toolbar items to organize related actions.
 
 {% tabs %}
 
@@ -336,9 +335,9 @@ imageEditor.Toolbars.Add(editorToolbar);
 
 ## Change toolbar item visibility
 
-You can hide or show the toolbar items by specifying their icon names and setting the boolean values to true or false.
+Hide or show the toolbar items by specifying their icon names and setting the boolean values to true or false.
 
-N> You can customize an icon by specifying its `Name`.
+N> Customize an icon by specifying its `Name`.
 
 {% tabs %}
 
@@ -354,7 +353,7 @@ N> You can customize an icon by specifying its `Name`.
 
 ## Change toolbar item enable/disable state
 
-You can enable or disable the toolbar items by using `IsEnabled` property in `ImageEditorToolbarItem` class.
+Enable or disable the toolbar items by using the `IsEnabled` property in the `ImageEditorToolbarItem` class.
 
 {% tabs %}
 
@@ -378,7 +377,7 @@ saveItem.IsEnabled = false;
 
 ## Customize toolbar item view
 
-To Customize the toolbar items view by specifying their icon names and setting the view using `View` property in `ImageEditorToolbarItem`.
+To customize the view of toolbar items, specify their icon names and set the view using the `View` property in the `ImageEditorToolbarItem`.
 
 {% tabs %}
 
@@ -401,7 +400,7 @@ saveItem.View = image;
 
 ## Add SubToolbar
 
-You can create `SubToolbars` within your toolbar items to organize related actions.
+Create `SubToolbars` within your toolbar items to organize related actions.
 
 {% tabs %}
 
@@ -431,7 +430,7 @@ cropItem.SubToolbars = new List<ImageEditorToolbar>()
 
 ## Add an item with the existing toolbar.
 
-You can explicitly add the `ImageEditorToolbarItem` to the `ImageEditorToolbar` manually.
+Explicitly add the `ImageEditorToolbarItem` to the `ImageEditorToolbar` manually.
 
 {% tabs %}
 
@@ -455,7 +454,7 @@ saveGroup.Items.Add(new ImageEditorToolbarItem() { Name = "Share", View = image 
 
 The toolbar orientation can be changed to achieve the desired design by using the `Orientation` property in the `ImageEditorToolbar` class. The default value is `ToolbarOrientation.Horizontal`.
 
-For example, you can set the toolbar to a vertical orientation:
+For example, set the toolbar to a vertical orientation:
 
 {% tabs %}
 
@@ -505,9 +504,9 @@ For horizontal orientation, the size will be considered as width, and for vertic
 
 ## Appearance customization
 
-You can customize the appearance of the toolbar by using the `ToolbarSettings` property. Below are some of the properties you can customize:
+Customize the appearance of the toolbar by using the `ToolbarSettings` property. The following are some of the properties you can customize:
 
-* `Background`: Specifies background color of the toolbar.
+* `Background`: Specifies the background color of the toolbar.
 * `IconColor`: Specifies the color of the icons in the toolbar.
 * `IconSize`: Specifies the size of the icons in the toolbar. The default value is 48.
 * `DisabledColor`: Specifies the color of the disabled icons in the toolbar.
@@ -542,9 +541,9 @@ imageEditor.ToolbarSettings.IconSize = new Size(50, 50);
 
 ## Notifying Toolbar Item Selected
 
-Whenever you tap the toolbar menu item, the `ToolbarItemSelected` event will be triggered, and you can get the respective tapped toolbar item as an argument as shown in the following code snippet. 
+Whenever you tap the toolbar menu item, the `ToolbarItemSelected` event will be triggered, and you'll get the respective tapped toolbar item as an argument as shown in the following code sample.
 
-Default toolbar item action can be restricted by setting `e.cancel` to `true`.
+The default toolbar item action can be restricted by setting the `e.cancel` to `true`.
 
 {% tabs %}
 
