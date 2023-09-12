@@ -251,7 +251,7 @@ The TreeView allows you to change the position of the expander view by setting t
 {% endhighlight %}
 {% highlight c# hl_lines = "2" %}
 SfTreeView treeView = new SfTreeView();
-treeView.ExpanderPosition = ExpanderPosition.End;
+treeView.ExpanderPosition = TreeViewExpanderPosition.End;
 {% endhighlight %}
 <% endtabs %>
 
