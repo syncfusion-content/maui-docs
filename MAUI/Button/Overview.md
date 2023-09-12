@@ -17,4 +17,4 @@ The .NET MAUI Button is a custom button control with UI customization. You can s
  * Display an image as the background for the control.
  * Display custom content in the button control.
 
-![Overview image of SfButton](Images/overview.png)
+![Overview image of SfButton](Images/overview/overview.png)
