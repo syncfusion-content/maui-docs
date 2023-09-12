@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Events in .NET MAUI CheckBox control | Syncfusion
-description: Learn about Events support in Syncfusion Essential Studio .NET MAUI CheckBox control, its elements and more.
-platform: .NET MAUI
+title: Event in .NET MAUI CheckBox control | Syncfusion
+description: Learn about Event support in Syncfusion Essential Studio .NET MAUI CheckBox control, its elements and more.
+platform: Maui
 control: CheckBox
 documentation: ug
 ---
@@ -27,6 +27,7 @@ Occurs when the value(state) of the [`IsChecked`] property is changed by either 
     checkBox.Text = "Unchecked State";
     checkBox.IsThreeState = true;
     checkBox.StateChanged += CheckBox_StateChanged;
+    this.Content = checkBox;
 	
 {% endhighlight %}
 {% endtabs %}
@@ -54,7 +55,3 @@ Occurs when the value(state) of the [`IsChecked`] property is changed by either 
 {% endtabs %}
 
 ![.NET MAUI CheckBox](Images/GettingStarted/tristate.png)
-
-## See also
-
-[How to get the values of selected checkboxes in a group using Syncfusion.Maui.Buttons]

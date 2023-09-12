@@ -2,12 +2,12 @@
 layout: post
 title: Visual States in .NET MAUI CheckBox control | Syncfusion
 description: Learn here all about Visual States support in Syncfusion MAUI CheckBox (SfCheckBox) control and more.
-platform: xamarin
+platform: Maui
 control: SfCheckBox
 documentation: ug
 ---
 
-## Visual States in MAUI CheckBox (SfCheckBox)
+## Visual States in .NET MAUI CheckBox (SfCheckBox)
 
 The visual of CheckBox can be customized using `VisualStates`. The [`SfCheckBox`] control contains the following three visual states:
 
@@ -46,39 +46,40 @@ The visual of CheckBox can be customized using `VisualStates`. The [`SfCheckBox`
 {% endhighlight %}
 {% highlight c# %}
 
-    SfCheckBox checkBox = new SfCheckBox() { Text = "CheckBox", IsThreeState = "True" };
-    VisualStateGroupList visualStateGroupList = new VisualStateGroupList();
-    VisualStateGroup commonStateGroup = new VisualStateGroup();
+        SfCheckBox checkBox = new SfCheckBox() { Text = "CheckBox", IsThreeState = true };
+        VisualStateGroupList visualStateGroupList = new VisualStateGroupList();
+        VisualStateGroup commonStateGroup = new VisualStateGroup();
 
-    VisualState checkedState = new VisualState
-    {
-        Name = "Checked"
-    };
+        VisualState checkedState = new VisualState
+        {
+            Name = "Checked"
+        };
 
-    checkedState.Setters.Add(new Setter { Property = SfCheckBox.TextColorProperty, Value = Color.Blue });
-    checkedState.Setters.Add(new Setter { Property = SfCheckBox.CheckedColorProperty, Value = Color.Blue });
+        checkedState.Setters.Add(new Setter { Property = SfCheckBox.TextColorProperty, Value = Colors.Blue });
+        checkedState.Setters.Add(new Setter { Property = SfCheckBox.CheckedColorProperty, Value = Colors.Blue });
 
-    VisualState uncheckedState = new VisualState
-    {
-        Name = "Unchecked"
-    };
-    uncheckedState.Setters.Add(new Setter { Property = SfCheckBox.TextColorProperty, Value = Color.FromHex("#ea3737") });
-    uncheckedState.Setters.Add(new Setter { Property = SfCheckBox.UncheckedColorProperty, Value = Color.FromHex("#ea3737") });
+        VisualState uncheckedState = new VisualState
+        {
+            Name = "Unchecked"
+        };
+        uncheckedState.Setters.Add(new Setter { Property = SfCheckBox.TextColorProperty, Value = Color.FromHex("#ea3737") });
+        uncheckedState.Setters.Add(new Setter { Property = SfCheckBox.UncheckedColorProperty, Value = Color.FromHex("#ea3737") });
 
-    VisualState intermediateState = new VisualState
-    {
-        Name = "Intermediate"
-    };
+        VisualState intermediateState = new VisualState
+        {
+            Name = "Intermediate"
+        };
 
-    intermediateState.Setters.Add(new Setter { Property = SfCheckBox.TextProperty, Value = "Intermediate State") });
-    intermediateState.Setters.Add(new Setter { Property = SfCheckBox.CheckedColorProperty, Value = Color.Blue });
+        intermediateState.Setters.Add(new Setter { Property = SfCheckBox.TextProperty, Value = "Intermediate State" });
+        intermediateState.Setters.Add(new Setter { Property = SfCheckBox.CheckedColorProperty, Value = Colors.Blue});
 
-    commonStateGroup.States.Add(checkedState);
-    commonStateGroup.States.Add(uncheckedState);
-    commonStateGroup.States.Add(intermediateState);
+        commonStateGroup.States.Add(checkedState);
+        commonStateGroup.States.Add(uncheckedState);
+        commonStateGroup.States.Add(intermediateState);
 
-    visualStateGroupList.Add(commonStateGroup);
-    VisualStateManager.SetVisualStateGroups(checkBox, visualStateGroupList);
+        visualStateGroupList.Add(commonStateGroup);
+        VisualStateManager.SetVisualStateGroups(checkBox, visualStateGroupList);
+        this.Content = checkBox;
 
 {% endhighlight %}
 {% endtabs %}

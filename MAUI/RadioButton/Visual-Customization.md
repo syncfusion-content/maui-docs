@@ -2,7 +2,7 @@
 layout: post
 title: Visual Customization in .NET MAUI Radio Button control | Syncfusion
 description: Learn here all about Visual Customization support in Syncfusion .NET MAUI Radio Button (SfRadioButton) control and more.
-platform: .NET MAUI
+platform: Maui
 control: SfRadioButton
 documentation: ug 
 ---
@@ -17,8 +17,8 @@ The default state colors can be customized using the [`CheckedColor`] and [`Unch
 {% highlight xaml %}
 
 	<syncfusion:SfRadioGroup x:Name="radioGroup">
-	<syncfusion:SfRadioButton x:Name="check" Text="RadioButton" IsChecked="True" CheckedColor="Green"/>
-	<syncfusion:SfRadioButton x:Name="uncheck" Text="RadioButton" UncheckedColor="Violet"/>
+		<syncfusion:SfRadioButton x:Name="check" Text="Radio Button" IsChecked="True" CheckedColor="Green"/>
+		<syncfusion:SfRadioButton x:Name="uncheck" Text="Radio Button" UncheckedColor="Violet"/>
 	</syncfusion:SfRadioGroup>
 
 {% endhighlight %}
@@ -26,30 +26,31 @@ The default state colors can be customized using the [`CheckedColor`] and [`Unch
 
 	SfRadioGroup radioGroup = new SfRadioGroup();
 	SfRadioButton check = new SfRadioButton();
-	check.Text = "RadioButton";
+	check.Text = "Radio Button";
 	check.IsChecked = true;
 	check.CheckedColor = Color.Green;
 	SfRadioButton uncheck = new SfRadioButton();
-	uncheck.Text = "RadioButton";
-	uncheck.UncheckedColor = Color.Violet;
+	uncheck.Text = "Radio Button";
+	uncheck.UncheckedColor = Colors.Violet;
 	radioGroup.Children.Add(check);
 	radioGroup.Children.Add(uncheck);
+	this.Content = radioGroup;
 
 {% endhighlight %}
 {% endtabs %}
 
-![CheckedColor and UncheckedColor in RadioButton](Images/VisualCustomization/radiostatecolor.png)
+![CheckedColor and UncheckedColor in Radio Button](Images/VisualCustomization/radiostatecolor.png)
 
 ## StrokeThickness
 
-The stroke thickness of the circle in the RadioButton control can be customized using the [`StrokeThickness`] property.  
+The stroke thickness of the circle in the Radio Button control can be customized using the [`StrokeThickness`] property.  
 
 {% tabs %}
 {% highlight xaml %}
 
 	<syncfusion:SfRadioGroup>
-	<syncfusion:SfRadioButton Text="Checked State" IsChecked="True" StrokeThickness="3"/>
-	<syncfusion:SfRadioButton Text="UnChecked State" StrokeThickness="3"/>
+		<syncfusion:SfRadioButton Text="Checked State" IsChecked="True" StrokeThickness="3"/>
+		<syncfusion:SfRadioButton Text="UnChecked State" StrokeThickness="3"/>
 	</syncfusion:SfRadioGroup>
 
 {% endhighlight %}
@@ -65,11 +66,12 @@ The stroke thickness of the circle in the RadioButton control can be customized 
 	uncheck.StrokeThickness = 3;
 	radioGroup.Children.Add(check);
 	radioGroup.Children.Add(uncheck);
+	this.Content = radioGroup;
 
 {% endhighlight %}
 {% endtabs %}
 
-![RadioButton StrokeThickness](Images/VisualCustomization/radiostrokethickness.png)
+![.NET MAUI Radio Button StrokeThickness](Images/VisualCustomization/radiostrokethickness.png)
 
 N> StrokeThickness support has not been provided for Android Platform.
 
@@ -87,25 +89,22 @@ You can customize the display text appearance of the [`SfRadioButton`] control u
 {% tabs %}
 {% highlight xaml %}
 
-	<syncfusion:SfRadioButton x:Name="radioButton" Text="RadioButton" IsChecked="True" TextColor="Violet" HorizontalTextAlignment="Center" FontFamily="Arial" FontAttributes="Bold" FontSize="20"/>
+	<syncfusion:SfRadioButton x:Name="radioButton" Text="Radio Button" IsChecked="True" TextColor="Violet" HorizontalTextAlignment="Center" FontFamily="Arial" FontAttributes="Bold" FontSize="20"/>
 
 {% endhighlight %}
 {% highlight c# %}
 
 	SfRadioButton radioButton = new SfRadioButton();
-	radioButton.Text = "RadioButton";
+	radioButton.Text = "Radio Button";
 	radioButton.IsChecked = true;
-	radioButton.TextColor = Color.Violet;
+	radioButton.TextColor = Colors.Violet;
 	radioButton.HorizontalTextAlignment = TextAlignment.Center;
 	radioButton.FontFamily = "Arial";
 	radioButton.FontAttributes = FontAttributes.Bold;
 	radioButton.FontSize = 20;
+	this.Content = radioButton;
 
 {% endhighlight %}
 {% endtabs %}
 
-![RadioButton TextAppereance](Images/VisualCustomization/radioappearance.png)
-
-## See also
-
-[How to get the selected .NET MAUI radio button (SfRadioButton)]
+![.NET MAUI Radio Button TextAppereance](Images/VisualCustomization/radioappearance.png)
