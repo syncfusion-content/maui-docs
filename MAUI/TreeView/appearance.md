@@ -206,8 +206,6 @@ treeView.ItemTemplate = new ItemTemplateSelector();
 {% endhighlight %}
 <% endtabs %>
 
-Download the entire source code from GitHub here.
-
 Similarly, you can provide a `DataTemplateSelector` for the `ExpanderTemplate` property.
 
 ## Indentation
@@ -308,4 +306,3 @@ public class FontAttributeConverter : IValueConverter
 }
 {% endhighlight %}
 <% endtabs %>
-Download the entire source code from GitHub here.

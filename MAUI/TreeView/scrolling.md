@@ -26,8 +26,6 @@ private void BringIntoView_Clicked(object sender, EventArgs e)
 {% endhighlight %}
 {% endtabs %}
 
-Download the entire source code from GitHub here.
-
 The `BringIntoView` method comprises other optional parameters to decide on the way in which the child item should come into view.
 
 ### Scroll to the child item with animation
