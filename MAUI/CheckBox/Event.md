@@ -2,7 +2,7 @@
 layout: post
 title: Event in .NET MAUI CheckBox control | Syncfusion
 description: Learn about Event support in Syncfusion Essential Studio .NET MAUI CheckBox control, its elements and more.
-platform: Maui
+platform: .NET MAUI
 control: CheckBox
 documentation: ug
 ---

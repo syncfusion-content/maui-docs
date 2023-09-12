@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Overview | .NET MAUI CheckBox | Syncfusion
-platform: Maui
+platform: .NET MAUI
 description: Learn here about overall key features in Essential Studio for .NET MAUI SfCheckBox Control, its elements, and more.
 control: SfChekBox
 ---

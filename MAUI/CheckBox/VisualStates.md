@@ -2,7 +2,7 @@
 layout: post
 title: Visual States in .NET MAUI CheckBox control | Syncfusion
 description: Learn here all about Visual States support in Syncfusion MAUI CheckBox (SfCheckBox) control and more.
-platform: Maui
+platform: .NET MAUI
 control: SfCheckBox
 documentation: ug
 ---

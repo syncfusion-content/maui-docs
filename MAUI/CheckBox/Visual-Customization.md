@@ -2,7 +2,7 @@
 layout: post
 title: Customization in .NET MAUI CheckBox control | Syncfusion
 description: Learn about Customization support in Syncfusion Essential Studio .NET MAUI CheckBox control, its elements and more.
-platform: Maui
+platform: .NET MAUI
 control: CheckBox
 documentation: ug
 ---
