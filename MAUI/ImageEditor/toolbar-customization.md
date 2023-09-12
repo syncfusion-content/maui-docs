@@ -83,7 +83,7 @@ N> Remove the existing toolbar items `Name` from the image editor toolbarItems c
 
 ### Change the toolbar options
 
-#### Change the Crop toolbar options
+#### Change the crop toolbar options
 
 Show the required crop types alone in the crop types toolbar by using the `CropTypes` property in the `ImageEditorToolbarSettings` class.
 
@@ -109,7 +109,7 @@ imageEditor.ToolbarSettings.CropTypes = ImageCropType.Circle | ImageCropType.Squ
 
 {% endtabs %}
 
-#### Change the Effect toolbar options
+#### Change the effect toolbar options
 
 Show the required effect types alone in the effects toolbar by using the `EffectTypes` property in the `ImageEditorToolbarSettings` class.
 
@@ -135,7 +135,7 @@ imageEditor.ToolbarSettings.EffectTypes = ImageEffect.Hue | ImageEffect.Blur | I
 
 {% endtabs %}
 
-#### Change the Shapes toolbar options
+#### Change the shapes toolbar options
 
 Show the required shape types alone in the shapes toolbar by using the `Shapes` property in the `ImageEditorToolbarSettings` class.
 
@@ -161,7 +161,7 @@ imageEditor.ToolbarSettings.Shapes = AnnotationShape.Circle | AnnotationShape.Li
 
 {% endtabs %}
 
-#### Change the Color Palette toolbar options
+#### Change the color palette toolbar options
 
 Change the default colors of the `ColorPalette` in the toolbar.
 
