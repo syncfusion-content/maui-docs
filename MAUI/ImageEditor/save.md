@@ -217,10 +217,10 @@ The [`ImageSaved`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEdit
 
 ### Save picker opening event
 
-The `SavePickerOpening` event occurs while the save picker is opening on the save icon clicked in toolbar.
-`Cancel`: We can restrict the save picker opening by setting the `Cancel` argument to `true`. If the save picker is disabled, the image will be saved in the default location.
+The `SavePickerOpening` event occurs while the save picker opens on the save icon clicked in the toolbar.
+`Cancel`: Restrict the save picker opening by setting the `Cancel` argument to `true`. If the save picker is disabled, the image will be saved in the default location.
 
-Please refer [`here`](https://help.syncfusion.com/maui/imageeditor/save?cs-save-lang=1&cs-lang=csharp#save-method) to learn more about the default save location.
+Please refer to [`here`](https://help.syncfusion.com/maui/imageeditor/save?cs-save-lang=1&cs-lang=csharp#save-method) to learn more about the default save location.
 
 {% tabs %}
 
