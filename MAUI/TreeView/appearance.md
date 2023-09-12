@@ -240,7 +240,7 @@ treeView.ExpanderWidth = 40;
 
 ## ExpanderPosition
 
-The TreeView allows you to change the position of the expander view by setting the `ExpanderPosition` property. The default value of this property is Start.This property has the following two positions:
+The TreeView allows you to change the position of the expander view by setting the `ExpanderPosition` property. The default value of this property is `Start`.This property has the following two positions:
 
 * `Start`: Allows displaying the expander view at the start position.
 * `End`: Allows displaying the expander view at the end position.
@@ -257,7 +257,7 @@ treeView.ExpanderPosition = ExpanderPosition.End;
 
 ## Level based styling
 
-The TreeView allows you to customize the style of the TreeViewItem based on different levels by using the IValueConverter.
+The TreeView allows you to customize the style of the `TreeViewItem` based on different levels by using the `IValueConverter`.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}

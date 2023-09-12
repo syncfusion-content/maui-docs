@@ -92,7 +92,7 @@ private void BringIntoView_Clicked(object sender, EventArgs e)
 {
     var count = viewModel.ImageNodeInfo.Count;
     var data = viewModel.ImageNodeInfo[count-1];
-    // Scrolls to the data item to make visible in the view.
+    // Scrolls to the data item to make it visible in the view.
     treeView.BringIntoView(data, false, false, ScrollToPosition.MakeVisible);
 }
 {% endhighlight %}
