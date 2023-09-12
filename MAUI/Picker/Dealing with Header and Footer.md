@@ -37,7 +37,7 @@ SfPicker allows enabling or disabling the header section by setting  `SfPicker.H
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-  picker.HeaderView.Height= 50;
+    picker.HeaderView.Height= 50;
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
