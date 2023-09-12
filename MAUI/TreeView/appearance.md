@@ -208,7 +208,7 @@ treeView.ItemTemplate = new ItemTemplateSelector();
 
 Download the entire source code from GitHub [here](https://github.com/SyncfusionExamples/data-template-selector-demo-in-.net-maui-treeview).
 
-![.NET MAUI TreeView appearance-template selector](Images/appearance/maui-treeView-templateSelector.png)
+![.NET MAUI TreeView appearance TemplateSelector](Images/appearance/maui-treeView-templateSelector.png)
 
 Similarly, you can provide a `DataTemplateSelector` for the `ExpanderTemplate` property.
 
@@ -313,4 +313,4 @@ public class FontAttributeConverter : IValueConverter
 
 Download the entire source code from GitHub [here](https://github.com/SyncfusionExamples/node-level-based-styling-in-.net.maui-treeview).
 
-![.NET MAUI TreeView appearance- level based styling](Images/appearance/maui-treeView-levelBasedStyling.png)
+![.NET MAUI TreeView appearance LevelBasedStyling](Images/appearance/maui-treeView-levelBasedStyling.png)
