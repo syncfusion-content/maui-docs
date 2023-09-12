@@ -13,7 +13,7 @@ Customize the built-in toolbar appearance, visibility, position, and orientation
 
 ## Built-in Toolbar Items
 
-Customize each toolbar item using the `Name` and `View` properties. Get or set the names of the built-in toolbar and dynamically add toolbar items using the `Name` property.
+Customize each toolbar item using the `Name`. Get or set the names of the built-in toolbar and dynamically add toolbar items using the `Name` property.
 
 {% highlight C# %}
 
