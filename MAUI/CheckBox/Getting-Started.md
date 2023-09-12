@@ -134,7 +134,7 @@ The check box caption can be defined using the [`Text`] property of [`SfCheckBox
 {% endhighlight %}
 {% endtabs %}
 
-![.NET MAUI CheckBox](Images/GettingStarted/checkbox.png) 
+![.NET MAUI CheckBox](Images/Getting-Started/simplecheckbox.png) 
 
 ## Change the check box state
 
@@ -144,7 +144,7 @@ The three visual states of [`SfCheckBox`] are:
 * Unchecked
 * Indeterminate
 
-![.NET MAUI CheckBox](Images/GettingStarted/tristate.png) 
+![.NET MAUI CheckBox](Images/Getting-Started/tristate.png) 
 
 You can change the state of the check box using the [`IsChecked`] [`SfCheckBox`]. In checked state, a tick mark is added to the visualization of check box.
 
@@ -215,7 +215,7 @@ Check box can be used as a single or as a group. A single check box mostly used 
 {% endhighlight %}
 {% endtabs %}
 
-![.NET MAUI CheckBox](Images/GettingStarted/termsandconditions.png) 
+![.NET MAUI CheckBox](Images/Getting-Started/termsandconditions.png) 
 
 Multiple check boxes can be used as a group for multi-select scenarios in which a user chooses one or more items from the group of choices that are not mutually exclusive.
 
@@ -257,7 +257,7 @@ Multiple check boxes can be used as a group for multi-select scenarios in which 
 {% endhighlight %}
 {% endtabs %}
 
-![.NET MAUI CheckBox](Images/GettingStarted/pizzatoppings.png)
+![.NET MAUI CheckBox](Images/Getting-Started/pizzatoppings.png)
 
 ## Intermediate
 
@@ -351,6 +351,6 @@ The Intermediate state is used when a group of sub-choices has both checked and 
 {% endhighlight %}
 {% endtabs %}
 
-![.NET MAUI CheckBox](Images/GettingStarted/picktoppings.png)
+![.NET MAUI CheckBox](Images/Getting-Started/picktoppings.png)
 
-![.NET MAUI CheckBox](Images/GettingStarted/selectalltoppings.png)
+![.NET MAUI CheckBox](Images/Getting-Started/selectalltoppings.png)

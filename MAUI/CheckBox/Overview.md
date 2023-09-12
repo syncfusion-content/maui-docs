@@ -16,4 +16,4 @@ The .NET MAUI CheckBox is a selection control with UI customization.It enables t
  * Allow users to select and clear the control by tapping.
  * Supports check box color, shape and label text customization.
 
-![Overview image of SfCheckBox](Images/overview.png)
+![Overview image of SfCheckBox](Images/Getting-Started/overviewimage.jpg)

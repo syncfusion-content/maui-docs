@@ -126,7 +126,7 @@ You can customize the display text appearance of the [`SfCheckBox`] control usin
 {% tabs %}
 {% highlight xaml %}
 
-    <syncfusion:SfCheckBox x:Name="caption" Text="CheckBox" IsChecked="True" TextColor="Violet" HorizontalTextAlignment="Center" FontFamily="Arial" FontAttributes="Bold" FontSize="20"/>           
+    <syncfusion:SfCheckBox x:Name="caption" Text="CheckBox" IsChecked="True" TextColor="Violet" HorizontalTextAlignment="End" FontFamily="Arial" FontAttributes="Bold" FontSize="20"/>           
 
 {% endhighlight %}
 {% highlight c# %}
@@ -135,7 +135,7 @@ You can customize the display text appearance of the [`SfCheckBox`] control usin
     caption.IsChecked = true;
     caption.Text = "CheckBox";
     caption.TextColor = Color.Violet;
-    caption.HorizontalTextAlignment = TextAlignment.Center;
+    caption.HorizontalTextAlignment = TextAlignment.End;
     caption.FontFamily = "Arial";
     caption.FontAttributes = FontAttributes.Bold;
     caption.FontSize = 20;
