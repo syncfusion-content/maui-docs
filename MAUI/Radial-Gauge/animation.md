@@ -11,7 +11,7 @@ documentation: ug
 
 ## Initial animation
 
-The radial gauge allows all of its elements to be animated using the [`EnableLoadingAnimation`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialAxis.html#Syncfusion_Maui_Gauges_RadialAxis_EnableLoadingAnimation) property. The default value for this property is false. The duration of the animation can be controlled by using the [`AnimationDuration`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialAxis.html#Syncfusion_Maui_Gauges_RadialAxis_AnimationDuration) property of the gauge.
+The [.NET MAUI Radial Gauge](https://www.syncfusion.com/maui-controls/maui-radial-gauge) allows all of its elements to be animated using the [`EnableLoadingAnimation`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialAxis.html#Syncfusion_Maui_Gauges_RadialAxis_EnableLoadingAnimation) property. The default value for this property is false. The duration of the animation can be controlled by using the [`AnimationDuration`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialAxis.html#Syncfusion_Maui_Gauges_RadialAxis_AnimationDuration) property of the gauge.
 
 {% tabs %}
 
