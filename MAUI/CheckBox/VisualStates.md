@@ -18,7 +18,7 @@ The visual of CheckBox can be customized using `VisualStates`. The [`SfCheckBox`
 {% tabs %}
 {% highlight xaml %}
 
-    <buttons:SfCheckBox Text="CheckBox" IsThreeState="True">
+    <syncfusion:SfCheckBox Text="CheckBox" IsThreeState="True">
         <VisualStateManager.VisualStateGroups>
             <VisualStateGroup x:Name="CommonStates">
                 <VisualState x:Name="Checked">
@@ -41,7 +41,7 @@ The visual of CheckBox can be customized using `VisualStates`. The [`SfCheckBox`
                 </VisualState>
             </VisualStateGroup>
         </VisualStateManager.VisualStateGroups>
-    </buttons:SfCheckBox>
+    </syncfusion:SfCheckBox>
 
 {% endhighlight %}
 {% highlight c# %}

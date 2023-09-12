@@ -54,4 +54,4 @@ Occurs when the value(state) of the [`IsChecked`] property is changed by either 
 {% endhighlight %}
 {% endtabs %}
 
-![.NET MAUI CheckBox](Images/GettingStarted/tristate.png)
+![.NET MAUI CheckBox](Images/Getting-Started/tristate.png)

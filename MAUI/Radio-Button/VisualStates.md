@@ -18,7 +18,7 @@ The visual of Radio Button can be customized using `VisualStates`. The [`SfRadio
 {% tabs %}
 {% highlight xaml %}
 
-    <buttons:SfRadioButton Text="Radio Button">
+    <syncfusion:SfRadioButton Text="Radio Button">
         <VisualStateManager.VisualStateGroups>
             <VisualStateGroup x:Name="CommonStates">
                 <VisualState x:Name="Checked">
@@ -37,7 +37,7 @@ The visual of Radio Button can be customized using `VisualStates`. The [`SfRadio
                 </VisualState>
             </VisualStateGroup>
         </VisualStateManager.VisualStateGroups>
-    </buttons:SfRadioButton>
+    </syncfusion:SfRadioButton>
 
 {% endhighlight %}
 {% highlight c# %}
