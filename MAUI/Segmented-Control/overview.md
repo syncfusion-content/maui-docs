@@ -7,11 +7,11 @@ control: Segmented (SfSegmented) control
 documentation: ug
 ---
  
-# Overview of .NET MAUI Segmented control (SfSegmentedControl)
+# Overview of .NET MAUI Segmented Control (SfSegmentedControl)
 
 The Syncfusion .NET MAUI Segmented (SfSegmented) control provides options from a linear set of segments containing text, an icon, or both, each as a discrete button, which allows you to select choices in a user-friendly manner.
 
-## Key features 
+## Key Features 
 
 * Display the text, image, or combination as separate segment buttons.
 * Scroll the segment items to accommodate more items without occupying more space.

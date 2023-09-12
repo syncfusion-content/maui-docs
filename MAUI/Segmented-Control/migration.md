@@ -7,7 +7,7 @@ control: Segmented (SfSegmented) control
 documentation: ug
 ---
  
-# Migrate from Xamarin.Forms Segmented control to .NET MAUI Segmented control (SfSegmentedControl)
+# Migrate from Xamarin.Forms Segmented Control to .NET MAUI Segmented Control (SfSegmentedControl)
 
 To make the migration from the [Xamarin SfSegmented control](https://www.syncfusion.com/xamarin-ui-controls/xamarin-segmented-control) to the `.NET MAUI SfSegmented control` easier, most of the APIs from the `Xamarin SfSegmented control` were kept in the `.NET MAUI SfSegmented control`. However, to maintain the consistency of API naming in the `.NET MAUI SfSegmented control`, some of the APIs have been renamed. Please find the difference in the following topics.
 
@@ -22,7 +22,7 @@ To make the migration from the [Xamarin SfSegmented control](https://www.syncfus
 <td>Syncfusion.Maui.Buttons</td></tr>
 </table>
 
-## Initialize control
+## Initialize Control
 
 To initialize the control, import the segmented control namespace and initialize the `SfSegmentedControl` as shown in the following code sample.
 
@@ -144,7 +144,7 @@ ViewModel viewModel = new ViewModel();
 SfSegmentedControl segmentedControl = new SfSegmentedControl();
 segmentedControl.SelectedIndex = 1;
 segmentedControl.VisibleSegmentsCount = 4;
-segmentedControl.ItemsSource = viewModel.ItemCollection;
+segmentedControl.ItemsSource = viewModel.ItemsCollection;
 this.Content = segmentedControl;
 
 {% endhighlight %}
@@ -153,11 +153,11 @@ this.Content = segmentedControl;
 
 public class ViewModel
 {
-    private List<SfSegmentItem> itemCollection;
+    private List<SfSegmentItem> itemsCollection;
 
     public ViewModel()
     {
-        itemCollection = new List<SfSegmentItem>()
+        itemsCollection = new List<SfSegmentItem>()
         {
                 new SfSegmentItem() {Text="Day"},
                 new SfSegmentItem() {Text="Week"},
@@ -166,10 +166,10 @@ public class ViewModel
         };
     }
 
-    public List<SfSegmentItem> ItemCollection
+    public List<SfSegmentItem> ItemsCollection
     {
-        get { return itemCollection; }
-        set { itemCollection = value; }
+        get { return itemsCollection; }
+        set { itemsCollection = value; }
     }
 }
 
@@ -359,7 +359,7 @@ public class ViewModel
 ...
 xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons">
     <buttons:SfSegmentedControl x:Name="segmentedControl"
-                                ItemsSource="{Binding ItemCollection}">
+                                ItemsSource="{Binding ItemsCollection}">
         <buttons:SfSegmentedControl.SelectionIndicatorSettings>
             <buttons:SelectionIndicatorSettings SelectionIndicatorPlacement="Border" 
                                                         Background="#6200EE"/>
@@ -375,7 +375,7 @@ using Syncfusion.Maui.Buttons;
 
 ViewModel viewModel = new ViewModel();
 SfSegmentedControl segmentedControl = new SfSegmentedControl();
-segmentedControl.ItemsSource = viewModel.ItemCollection;
+segmentedControl.ItemsSource = viewModel.ItemsCollection;
 segmentedControl.SelectionIndicatorSettings = new SelectionIndicatorSettings() 
 {
     SelectionIndicatorPlacement = SelectionIndicatorPlacement.Border,
@@ -389,11 +389,11 @@ this.Content = segmentedControl;
 
 public class ViewModel
 {
-    private List<SfSegmentItem> itemCollection;
+    private List<SfSegmentItem> itemsCollection;
 
     public ViewModel()
     {
-        itemCollection = new List<SfSegmentItem>()
+        itemsCollection = new List<SfSegmentItem>()
         {
                 new SfSegmentItem() {Text="Day"},
                 new SfSegmentItem() {Text="Week"},
@@ -402,10 +402,10 @@ public class ViewModel
         };
     }
 
-    public List<SfSegmentItem> ItemCollection
+    public List<SfSegmentItem> ItemsCollection
     {
-        get { return itemCollection; }
-        set { itemCollection = value; }
+        get { return itemsCollection; }
+        set { itemsCollection = value; }
     }
 }
 
@@ -460,7 +460,7 @@ The `FontColor`, `FontSize`, `FontFamily`, `FontAttributes` properties of [SfSeg
 ...
 xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons">
     <buttons:SfSegmentedControl x:Name="segmentedControl"
-                                ItemsSource="{Binding ItemCollection}">
+                                ItemsSource="{Binding ItemsCollection}">
     <buttons:SfSegmentedControl.TextStyle>
         <buttons:SegmentTextStyle FontSize="14" FontFamily="Roboto" />
     </buttons:SfSegmentedControl.TextStyle>
@@ -475,7 +475,7 @@ using Syncfusion.Maui.Buttons;
 
 ViewModel viewModel = new ViewModel();
 SfSegmentedControl segmentedControl = new SfSegmentedControl();
-segmentedControl.ItemsSource = viewModel.ItemCollection;
+segmentedControl.ItemsSource = viewModel.ItemsCollection;
 segmentedControl.TextStyle = new SegmentTextStyle()
 {
     FontSize = 14,
@@ -489,11 +489,11 @@ this.Content = segmentedControl;
 
 public class ViewModel
 {
-    private List<SfSegmentItem> itemCollection;
+    private List<SfSegmentItem> itemsCollection;
 
     public ViewModel()
     {
-        itemCollection = new List<SfSegmentItem>()
+        itemsCollection = new List<SfSegmentItem>()
         {
                 new SfSegmentItem() {Text="Day"},
                 new SfSegmentItem() {Text="Week"},
@@ -502,10 +502,10 @@ public class ViewModel
         };
     }
 
-    public List<SfSegmentItem> ItemCollection
+    public List<SfSegmentItem> ItemsCollection
     {
-        get { return itemCollection; }
-        set { itemCollection = value; }
+        get { return itemsCollection; }
+        set { itemsCollection = value; }
     }
 }
 
@@ -600,4 +600,4 @@ public class ViewModel
 
 ## Upcoming Features
 
-## Known issues in .NET MAUI Segmented control
+## Known Issues in .NET MAUI Segmented Control

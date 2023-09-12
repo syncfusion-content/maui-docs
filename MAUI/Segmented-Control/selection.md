@@ -11,7 +11,7 @@ documentation: ug
 
 This section describes the features of the Segmented Control that help with item selection, customization of the selected item, and associated operations.
 
-## Programmatically set selected index
+## Programmatically Set Selected Index
 
 You can set the default value programmatically for the selection to be placed. The selection gets updated based on the index value given for the `SelectedIndex`.
 
@@ -45,11 +45,11 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-## Selection indicator placements
+## Selection Indicator Placements
 
 The Segmented control provides four types of selection indicator placement: Fill, border, top, and bottom border.
 
-#### Fill
+### Fill
 The selection indicator will fill the selected segment, if the `SelectionIndicatorPlacement` property of `SelectionIndicatorSettings` is set to `Fill`.
 
 {% tabs %}
@@ -88,7 +88,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-#### Border
+### Border
 The selection indicator will be highlighted with the border of the selected segment, if the `SelectionIndicatorPlacement` property of `SelectionIndicatorSettings` is set to `Border`,
 
 {% tabs %}
@@ -127,7 +127,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-#### Top border
+### Top Border
 The selection indicator will be placed at the top of the selected segment, if the `SelectionIndicatorPlacement` property of `SelectionIndicatorSettings` is set to `TopBorder`
 
 {% tabs %}
@@ -166,7 +166,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-#### Bottom border
+### Bottom Border
 The selection indicator will be placed at the bottom of the selected segment, if the `SelectionIndicatorPlacement` property of `SelectionIndicatorSettings` is set to `BottomBorder`
 
 {% tabs %}
@@ -205,11 +205,14 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-## Customize selected segment
+## Customize Selected Segment
 
 The selected segment of the Segmented control is customized by using `SelectionIndicatorSettings` property of `SfSegmentedControl`.
 
-#### Customize selected segment background
+### Customize Selected Segment Background
+
+#### Customize Selected Segment Background of Segmented Control
+
 You can customize the selected segment background, by using `Background` property of `SelectionIndicatorSettings`.
 
 {% tabs %}
@@ -248,7 +251,40 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-#### Customize selected segment text color
+#### Customize Selected Segment Background of Each Segment Item
+
+You can change the selected segment background of the each segment item by using `SelectedSegmentBackground` property of `SfSegmentItem`.
+
+{% tabs %}
+{% highlight C# tabtitle="MainPage.xaml.cs"%}
+
+using Syncfusion.Maui.Buttons;
+. . .
+
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        SfSegmentedControl segmentedControl = new SfSegmentedControl();
+        List<SfSegmentItem> itemsCollection = new List<SfSegmentItem>
+            {
+                new SfSegmentItem() {Text="Day", SelectedSegmentBackground = Colors.LightBlue},
+                new SfSegmentItem() {Text="Week", SelectedSegmentBackground = Colors.Blue},
+                new SfSegmentItem() {Text="Month", SelectedSegmentBackground = Colors.SkyBlue},
+                new SfSegmentItem() {Text="Year", SelectedSegmentBackground = Colors.DarkBlue},
+            };
+        segmentedControl.ItemsSource = itemsCollection;
+        this.Content = segmentedControl;
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+### Customize Selected Segment Text Color
+
+#### Customize Selected Segment Text Color of Segmented Control
 You can customize the selected segment text color, by using `TextColor` property of `SelectionIndicatorSettings`.
 
 {% tabs %}
@@ -287,7 +323,38 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-#### Customize selected segment border color
+#### Customize Selected Segment Text Color of Each Segment Item
+
+You can change the selected segment text color of the each segment item by using `SelectedSegmentTextColor` property of `SfSegmentItem`.
+
+{% tabs %}
+{% highlight C# tabtitle="MainPage.xaml.cs"%}
+
+using Syncfusion.Maui.Buttons;
+. . .
+
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        SfSegmentedControl segmentedControl = new SfSegmentedControl();
+        List<SfSegmentItem> itemsCollection = new List<SfSegmentItem>
+            {
+                new SfSegmentItem() {Text="Day", SelectedSegmentTextColor = Colors.LightBlue},
+                new SfSegmentItem() {Text="Week", SelectedSegmentTextColor = Colors.Blue},
+                new SfSegmentItem() {Text="Month", SelectedSegmentTextColor = Colors.SkyBlue},
+                new SfSegmentItem() {Text="Year", SelectedSegmentTextColor = Colors.DarkBlue},
+            };
+        segmentedControl.ItemsSource = itemsCollection;
+        this.Content = segmentedControl;
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+### Customize Selected Segment Border Color
 You can customize the selected segment border color, by using `Stroke` property of `SelectionIndicatorSettings`.
 
 {% tabs %}
@@ -326,7 +393,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-#### Customize selected segment border thickness
+### Customize Selected Segment Border Thickness
 You can customize the selected segment border thickness, by using `StrokeThickness` property of `SelectionIndicatorSettings`.
 
 {% tabs %}
@@ -365,7 +432,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-## Notifying segment selection changes
+## Notifying Segment Selection Changes
 The `SelectionChanged` event is triggered, once the segment is selected in the Segmented control. The `SelectionChangedEventArgs` has the following values, which provides information for `SelectionChanged` event:
 
 * OldIndex
@@ -401,7 +468,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-## Keyboard navigation
+## Keyboard Navigation
 
 <table>
 <tr>

@@ -7,11 +7,11 @@ control: Segmented (SfSegmented) control
 documentation: ug
 ---
 
-# Getting Started with .NET MAUI Segmented control (SfSegmentedControl)
+# Getting Started with .NET MAUI Segmented Control (SfSegmentedControl)
 
 This section provides a quick overview of how to get started with the `.NET MAUI Segmented control(SfSegmented)` for .NET MAUI and a walk-through to configure the .NET MAUI Segmented control in a real-time scenario.
 
-## Creating an application using the .NET MAUI Segmented control
+## Creating an Application Using the .NET MAUI Segmented Control
 
 1. Create a new .NET MAUI application in Visual Studio.
 
@@ -51,7 +51,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-## Register the handler
+## Register the Handler
 
 The [Syncfusion.Maui.Core](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.html) NuGet is a dependent package for all Syncfusion controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion core.
 
@@ -81,7 +81,7 @@ The [Syncfusion.Maui.Core](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.C
 {% endhighlight %}
 {% endtabs %}
 
-## Populating segmented items
+## Populating Segmented Items
 
 You can use `ItemsSource` property of `SfSegmentedControl` to populate the segmented items.
 

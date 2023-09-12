@@ -7,13 +7,107 @@ control: Segmented (SfSegmented) control
 documentation: ug
 ---
  
-# Disabled segmented item in .NET MAUI Segmented control (SfSegmentedControl)
+# Disabled Segmented Item in .NET MAUI Segmented Control (SfSegmentedControl)
 
-## Customizing disabled segment item
+## Enable or Disable Segment
 
 You can restrict selection and interaction of segment item by setting `IsEnabled` property of `SfSegmentItem` to `false`. The value `IsEnabled` property is `true` by default.
 
-#### Customizing the disabled segment text color
+{% tabs %}
+{% highlight C# tabtitle="MainPage.xaml.cs"%}
+
+using Syncfusion.Maui.Buttons;
+. . .
+
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        SfSegmentedControl segmentedControl = new SfSegmentedControl();
+        List<SfSegmentItem> itemsCollection = new List<SfSegmentItem>
+            {
+                new SfSegmentItem() {Text="Day", IsEnabled = false},
+                new SfSegmentItem() {Text="Week", IsEnabled = false},
+                new SfSegmentItem() {Text="Month", IsEnabled = false},
+                new SfSegmentItem() {Text="Year", IsEnabled = false},
+            };
+        segmentedControl.ItemsSource = itemsCollection;
+        this.Content = segmentedControl;
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+### Programmatically Enable or Disable Segment Using Method
+You can set the enabled state of a specific segment at the specified index by using `SetSegmentEnabled` method of `SfSegmentedControl`.
+
+{% tabs %}
+{% highlight XAML %}
+
+<ContentPage
+    xmlns:local="clr-namespace:SfSegmentSample"
+    xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons">
+    <ContentPage.BindingContext>
+        <local:ViewModel/>
+    </ContentPage.BindingContext>
+
+    <buttons:SfSegmentedControl x:Name="segmentedControl"
+                                ItemsSource="{Binding ItemsCollection}">
+    </buttons:SfSegmentedControl>
+</ContentPage>
+
+{% endhighlight %}
+{% highlight C# %}
+
+using Syncfusion.Maui.Buttons;
+. . .
+
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        ViewModel viewModel = new ViewModel();
+        SfSegmentedControl segmentedControl = new SfSegmentedControl();
+        segmentedControl.ItemsSource = viewModel.ItemsCollection;
+        this.segmentedControl.SetSegmentEnabled(1, true);
+        this.Content = segmentedControl;
+    }
+}
+
+{% endhighlight %}
+{% highlight C# tabtitle="ViewModel.cs" %}
+
+public class ViewModel
+{
+    private List<SfSegmentItem> itemsCollection;
+
+    public ViewModel()
+    {
+        itemsCollection = new List<SfSegmentItem>()
+        {
+                new SfSegmentItem() {Text="Day"},
+                new SfSegmentItem() {Text="Week", IsEnabled = false},
+                new SfSegmentItem() {Text="Month"},
+                new SfSegmentItem() {Text="Year"},
+        };
+    }
+
+    public List<SfSegmentItem> ItemsCollection
+    {
+        get { return itemsCollection; }
+        set { itemsCollection = value; }
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+## Customizing Disabled Segment Item
+
+### Customizing the Disabled Segment Text Color
 
 You can use `DisabledSegmentTextColor` property of `SfSegmentedControl`, to customize the disabled segment text color of the segmented control.
 
@@ -47,7 +141,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-#### Customizing the disabled segment background
+### Customizing the Disabled Segment Background
 
 You can use `DisabledSegmentBackground` property of `SfSegmentedControl`, to customize the disabled segment background of the segmented control.
 
@@ -75,72 +169,6 @@ public partial class MainPage : ContentPage
         SfSegmentedControl segmentedControl = new SfSegmentedControl();
         segmentedControl.DisabledSegmentBackground = Colors.LightGray;
         this.Content = segmentedControl;
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-## Set the enabled state of a specific segment
-
-You can set the enabled state of a specific segment at the specified index by using `SetSegmentEnabled` method of `SfSegmentedControl`.
-
-{% tabs %}
-{% highlight XAML %}
-
-<ContentPage
-    xmlns:local="clr-namespace:SfSegmentSample"
-    xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons">
-    <ContentPage.BindingContext>
-        <local:ViewModel/>
-    </ContentPage.BindingContext>
-
-    <buttons:SfSegmentedControl x:Name="segmentedControl"
-                                ItemsSource="{Binding ItemCollection}">
-    </buttons:SfSegmentedControl>
-</ContentPage>
-
-{% endhighlight %}
-{% highlight C# %}
-
-using Syncfusion.Maui.Buttons;
-. . .
-
-public partial class MainPage : ContentPage
-{
-    public MainPage()
-    {
-        InitializeComponent();
-        ViewModel viewModel = new ViewModel();
-        SfSegmentedControl segmentedControl = new SfSegmentedControl();
-        segmentedControl.ItemsSource = viewModel.ItemCollection;
-        this.segmentedControl.SetSegmentEnabled(1, true);
-        this.Content = segmentedControl;
-    }
-}
-
-{% endhighlight %}
-{% highlight C# tabtitle="ViewModel.cs" %}
-
-public class ViewModel
-{
-    private List<SfSegmentItem> itemCollection;
-
-    public ViewModel()
-    {
-        itemCollection = new List<SfSegmentItem>()
-        {
-                new SfSegmentItem() {Text="Day"},
-                new SfSegmentItem() {Text="Week", IsEnabled = false},
-                new SfSegmentItem() {Text="Month"},
-                new SfSegmentItem() {Text="Year"},
-        };
-    }
-
-    public List<SfSegmentItem> ItemCollection
-    {
-        get { return itemCollection; }
-        set { itemCollection = value; }
     }
 }
 
