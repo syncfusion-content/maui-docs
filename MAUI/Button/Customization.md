@@ -101,7 +101,7 @@ button.FontFamily = "Samantha-Demo";
 {% endhighlight %}
 {% endtabs %}
 
-![SfButton with fontfamily](images/Button_fontfamily.png)
+![SfButton with fontfamily](images/Button_fontfamily.jpg)
 
 ### TextAlignment
 
@@ -309,17 +309,16 @@ N> Enable the `ShowIcon` property to enable the `ImageSource` property.
 {% tabs %}
 {% highlight xaml %}
 
-   <buttons:SfButton  
-            Text="Shopping"
-            TextColor="Black"
-            HorizontalOptions="Center"
-            ImageSource="add_to_card.png"
-            ShowIcon="True" 
-            ImageWidth="50"
-            BorderWidth="2"
-            BorderColor="Black"
-            BackgroundColor="White"
-            ImageAlignment="End"/>
+       <buttons:SfButton  
+                Text="Shopping"
+                TextColor="Black"
+                HorizontalOptions="Center"
+                ImageSource="add_to_card.png"
+                ShowIcon="True" 
+                ImageSize="25"
+                Stroke="Black"
+                Background="White"
+                ImageAlignment="End"/>
 
 {% endhighlight %}
 
@@ -331,10 +330,9 @@ SfButton button = new SfButton()
     HorizontalOptions = LayoutOptions.Center,
     ImageSource = "add_to_card.png",
     ShowIcon = true,
-    ImageWidth = 50,
-    BorderWidth = 2,
-    BorderColor = Color.Black,
-    BackgroundColor = Color.White,
+    ImageSize = 25,
+    Stroke = Colors.Black,
+    Background = Colors.White,
     ImageAlignment = Alignment.End
 };
 
@@ -354,10 +352,9 @@ SfButton button = new SfButton()
             HorizontalOptions="Center"
             ImageSource="add_to_card.png"
             ShowIcon="True" 
-            ImageWidth="50"
-            BorderWidth="2"
-            BorderColor="Black"
-            BackgroundColor="White"
+            ImageSize="25"
+            Stroke="Black"
+            Background="White"
             ImageAlignment="Start"/>
 
 {% endhighlight %}
@@ -370,10 +367,9 @@ SfButton button = new SfButton()
     HorizontalOptions = LayoutOptions.Center,
     ImageSource = "add_to_card.png",
     ShowIcon = true,
-    ImageWidth = 50,
-    BorderWidth = 2,
-    BorderColor = Color.Black,
-    BackgroundColor = Color.White,
+    ImageSize = 25,
+    Stroke = Colors.Black,
+    Background = Colors.White,
     ImageAlignment = Alignment.Start
 };
 
@@ -394,10 +390,9 @@ SfButton button = new SfButton()
             HorizontalOptions="Center"
             ImageSource="add_to_card.png"
             ShowIcon="True" 
-            ImageWidth="50"
-            BorderWidth="2"
-            BorderColor="Black"
-            BackgroundColor="White"
+            ImageSize="25"
+            Stroke="Black"
+            Background="White"
             ImageAlignment="Top"/>
 
 {% endhighlight %}
@@ -410,10 +405,9 @@ SfButton button = new SfButton()
     HorizontalOptions = LayoutOptions.Center,
     ImageSource = "add_to_card.png",
     ShowIcon = true,
-    ImageWidth = 50,
-    BorderWidth = 2,
-    BorderColor = Color.Black,
-    BackgroundColor = Color.White,
+    ImageSize= 25,
+    Stroke = Colors.Black,
+    Background = Colors.White,
     ImageAlignment = Alignment.Top
 };
 
@@ -434,10 +428,9 @@ SfButton button = new SfButton()
             HorizontalOptions="Center"
             ImageSource="add_to_card.png"
             ShowIcon="True" 
-            ImageWidth="50"
-            BorderWidth="2"
-            BorderColor="Black"
-            BackgroundColor="White"
+            ImageSize="25"
+            Stroke="Black"
+            Background="White"
             ImageAlignment="Bottom"/>
 
 {% endhighlight %}
@@ -450,10 +443,9 @@ SfButton button = new SfButton()
     HorizontalOptions = LayoutOptions.Center,
     ImageSource = "add_to_card.png",
     ShowIcon = true,
-    ImageWidth = 50,
-    BorderWidth = 2,
-    BorderColor = Color.Black,
-    BackgroundColor = Color.White,
+    ImageSize = 25,
+    Stroke = Colors.Black,
+    Background = Colors.White,
     ImageAlignment = Alignment.Bottom
 };
 
@@ -465,7 +457,7 @@ SfButton button = new SfButton()
 
 **Left image alignment in `SfButton`**
 
-In RTL flow direction, image alignment with [`Start`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Buttons.Alignment.html#Syncfusion_XForms_Buttons_Alignment_Start) will change its direction of placing image to the right. To keep that in same left position, set [`Left`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Buttons.Alignment.html#Syncfusion_XForms_Buttons_Alignment_Left) alignment as shown in the following code sample.
+In RTL flow direction, image alignment with `Start` will change its direction of placing image to the right. To keep that in same left position, set `Left` alignment as shown in the following code sample.
 
 {% tabs %}
 {% highlight xaml %}
@@ -476,10 +468,9 @@ In RTL flow direction, image alignment with [`Start`](https://help.syncfusion.co
             HorizontalOptions="Center"
             ImageSource="add_to_card.png"
             ShowIcon="True" 
-            ImageWidth="50"
-            BorderWidth="2"
-            BorderColor="Black"
-            BackgroundColor="White"
+            ImageSize="25"
+            Stroke="Black"
+            Background="White"
             ImageAlignment="Left"/>
 
 {% endhighlight %}
@@ -493,10 +484,9 @@ SfButton button = new SfButton()
     HorizontalOptions = LayoutOptions.Center,
     ImageSource = "add_to_card.png",
     ShowIcon = true,
-    ImageWidth = 50,
-    BorderWidth = 2,
-    BorderColor = Color.Black,
-    BackgroundColor = Color.White,
+    ImageSize = 25,
+    Stroke= Colors.Black,
+    Background = Colors.White,
     ImageAlignment = Alignment.Left
 };
 
@@ -507,7 +497,7 @@ SfButton button = new SfButton()
 
 **Right image alignment in `SfButton`**
 
-In RTL flow direction, image alignment with [`End`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Buttons.Alignment.html#Syncfusion_XForms_Buttons_Alignment_End) will change its direction of placing image to the left. To keep that in same right position, set [`Right`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Buttons.Alignment.html#Syncfusion_XForms_Buttons_Alignment_Right) alignment as shown in the following code sample.
+In RTL flow direction, image alignment with `End` will change its direction of placing image to the left. To keep that in same right position, set `Right` alignment as shown in the following code sample.
 
 {% tabs %}
 {% highlight xaml %}
@@ -518,10 +508,9 @@ In RTL flow direction, image alignment with [`End`](https://help.syncfusion.com/
             HorizontalOptions="Center"
             ImageSource="add_to_card.png"
             ShowIcon="True" 
-            ImageWidth="50"
-            BorderWidth="2"
-            BorderColor="Black"
-            BackgroundColor="White"
+            ImageSize="25"
+            Stroke="Black"
+            Background="White"
             ImageAlignment="Right"/>
 
 {% endhighlight %}
@@ -534,10 +523,9 @@ SfButton button = new SfButton()
     HorizontalOptions = LayoutOptions.Center,
     ImageSource = "add_to_card.png",
     ShowIcon = true,
-    ImageWidth = 50,
-    BorderWidth = 2,
-    BorderColor = Color.Black,
-    BackgroundColor = Color.White,
+    ImageSize = 25,
+    Stroke= Colors.Black,
+    Background = Colors.White,
     ImageAlignment = Alignment.Right
 };
 
@@ -549,42 +537,40 @@ SfButton button = new SfButton()
 
 ## Gradient background
 
-You can set the gradient as background of SfButton using the [`BackgroundGradient`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Buttons.SfButton.html#Syncfusion_XForms_Buttons_SfButton_BackgroundGradient) property. It supports the following types of gradients:
+You can set the gradient as background of SfButton using the `Background` property. It supports the following types of gradients:
 
 * Linear gradient
 * Radial gradient
 
 N> UWP platform does not support radial gradient.
 
-Refer to this [documentation](https://help.syncfusion.com/xamarin/sfgradientview/customization) to learn more details about gradient.
+Refer to this `documentation` to learn more details about gradient.
 
 {% tabs %}
 {% highlight xaml %}
 
-xmlns:gradient ="clr-namespace:Syncfusion.XForms.Graphics;assembly=Syncfusion.Core.XForms"
-
 . . . 
 
 <button:SfButton Text="Linear Gradient" CornerRadius="20">
-    <button:SfButton.BackgroundGradient>
-        <gradient:SfLinearGradientBrush>
-            <gradient:SfLinearGradientBrush.GradientStops>
-                <gradient:SfGradientStop Color="#2F9BDF" Offset="0"/>
-                <gradient:SfGradientStop Color="#51F1F2" Offset="1"/>
+    <button:SfButton.Background>
+        <gradient:LinearGradientBrush>
+            <gradient:LinearGradientBrush.GradientStops>
+                <gradient:GradientStop Color="#2F9BDF" Offset="0"/>
+                <gradient:GradientStop Color="#51F1F2" Offset="1"/>
             </gradient:SfLinearGradientBrush.GradientStops>
-        </gradient:SfLinearGradientBrush>
-    </button:SfButton.BackgroundGradient>
+        </gradient:LinearGradientBrush>
+    </button:SfButton.Background>
 </button:SfButton>
 
 <button:SfButton Text="Radial Gradient" CornerRadius="20">
-    <button:SfButton.BackgroundGradient>
-        <gradient:SfRadialGradientBrush Radius="1.5">
-            <gradient:SfRadialGradientBrush.GradientStops>
-                <gradient:SfGradientStop Color="#FFB57B" Offset="0"/>
-                <gradient:SfGradientStop Color="#FF5361" Offset="1"/>
-            </gradient:SfRadialGradientBrush.GradientStops>
-        </gradient:SfRadialGradientBrush>
-    </button:SfButton.BackgroundGradient>
+    <button:SfButton.Background>
+        <gradient:RadialGradientBrush Radius="1.5">
+            <gradient:RadialGradientBrush.GradientStops>
+                <gradient:GradientStop Color="#FFB57B" Offset="0"/>
+                <gradient:GradientStop Color="#FF5361" Offset="1"/>
+            </gradient:RadialGradientBrush.GradientStops>
+        </gradient:RadialGradientBrush>
+    </button:SfButton.Background>
 </button:SfButton>
 
 {% endhighlight %}
@@ -620,7 +606,7 @@ radialButton.BackgroundGradient = radialGradientBrush;
 {% endhighlight %}
 {% endtabs %}
 
-![Xamarin.Forms gradient support](images/Button_gradient.png)
+![.NET MAUI gradient support](images/Button_gradient.png)
 
 ## Command
 
