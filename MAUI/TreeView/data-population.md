@@ -228,7 +228,7 @@ this.Content = treeView;
 
 Download the entire source code from GitHub [here](https://github.com/SyncfusionExamples/data-binding-in-.net-maui-treeview).
 
-![.NET MAUI TreeView Data Population-Bound Mode](Images/getting-started/maui-treeView-boundMode.png)
+![.NET MAUI TreeView data population BoundMode](Images/getting-started/maui-treeView-boundMode.png)
 
 ## Populating Nodes without data binding - Unbound Mode
 
@@ -311,4 +311,4 @@ namespace GettingStarted
 
 Download the entire source code from GitHub [here](https://github.com/SyncfusionExamples/populate-the-nodes-in-unbound-mode-in-.net-maui-treeview).
 
-![.NET MAUI TreeView DataPopuplation-Unbound Mode ](Images/getting-started/maui-treeView-unboundMode.png)
+![.NET MAUI TreeView data popuplation UnBoundMode ](Images/getting-started/maui-treeView-unboundMode.png)
