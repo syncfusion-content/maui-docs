@@ -178,6 +178,10 @@ The following table illustrates the API migration for the chart.
 <td>ShowTrackballLabel</td>
 </tr>
 <tr>
+<td>LabelExtent</td>
+<td><em>LabelExtent</em></td>
+</tr>
+<tr>
 <td>LabelClicked</td>
 <td><em>Upcoming</em></td>
 </tr>
@@ -203,10 +207,6 @@ The following table illustrates the API migration for the chart.
 </tr>
 <tr>
 <td>LabelsIntersectAction</td>
-<td><em>Upcoming</em></td>
-</tr>
-<tr>
-<td>LabelExtent</td>
 <td><em>Upcoming</em></td>
 </tr>
 <tr>
@@ -911,7 +911,6 @@ chart.ZoomPanBehavior = zooming;
 * Support for axis draw labels as multiple lines using /n.
 * Striplines for range base axis.
 * Support setting the maximum labels count for the chart axis.
-* Support to extent size between Axis title and axis label.
 
 **Legend** 
 
@@ -927,24 +926,19 @@ chart.ZoomPanBehavior = zooming;
 * DataTemplate support for data labels.
 * Connector lines and its customization support.
 
-**Tooltip**
-
-* Hide and Show method for tooltip.
-
 **Selection**
 
 * Cluster selection support.
 
 **Zooming**
 
-* Support for selection and directional zooming.
 * Support setting the maximum zoom level.
 * Event for zooming and panning.
 
 ## Known issue 
 
 * [iOS] [#9135](https://github.com/dotnet/maui/issues/9135) - The chart legend was taking up a huge amount of vertical space or becoming hidden. 
-* The trackball behavior is currently not supported with range and stacked column charts.
+* The trackball behavior is currently not supported with stacked column charts.
 
 ## Unsupported features from Xamarin.Forms
 

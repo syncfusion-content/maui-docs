@@ -31,11 +31,6 @@ You can draw and add ink annotations to a PDF document with UI interaction using
 The following code explains how to enable the ink annotation mode.
 
 {% tabs %}
-{% highlight XAML %}
-
-<syncfusion:SfPdfViewer x:Name="PdfViewer" AnnotationMode="Ink"/>
-
-{% endhighlight %}
 {% highlight C# %}
 // Enable or activate the ink drawing mode.
 void EnableInkDrawingMode()
@@ -49,11 +44,6 @@ void EnableInkDrawingMode()
 Similarly, refer to following code to disable the ink annotation mode.
 
 {% tabs %}
-{% highlight XAML %}
-
-<syncfusion:SfPdfViewer x:Name="PdfViewer" AnnotationMode="None"/>
-
-{% endhighlight %}
 {% highlight C# %}
 // Disable or deactivate the ink drawing mode.
 void DisableInkDrawingMode()

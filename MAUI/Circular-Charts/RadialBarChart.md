@@ -13,6 +13,10 @@ documentation: ug
 
 N> The circular chart has [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCircularChart.html#Syncfusion_Maui_Charts_SfCircularChart_Series) as its default content.
 
+To customize the .NET MAUI Radial Bar Chart, you can check the below video.
+
+{% youtube "https://www.youtube.com/watch?v=KO7LfFuIwHE" %}
+
 The following properties can be used to customize the appearance of the radial bar segment:
 
  * [Opacity](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_OpacityProperty) - To control the transparency of the chart segments.
