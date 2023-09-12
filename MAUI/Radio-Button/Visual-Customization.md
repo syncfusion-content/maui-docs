@@ -2,7 +2,7 @@
 layout: post
 title: Visual Customization in .NET MAUI Radio Button control | Syncfusion
 description: Learn here all about Visual Customization support in Syncfusion .NET MAUI Radio Button (SfRadioButton) control and more.
-platform: Maui
+platform: .NET MAUI
 control: SfRadioButton
 documentation: ug 
 ---
@@ -107,4 +107,4 @@ You can customize the display text appearance of the [`SfRadioButton`] control u
 {% endhighlight %}
 {% endtabs %}
 
-![.NET MAUI Radio Button TextAppereance](Images/VisualCustomization/radioappearance.png)
+![.NET MAUI Radio Button TextAppereance](Images/VisualCustomization/textappearance.png)

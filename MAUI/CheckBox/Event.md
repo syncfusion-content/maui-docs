@@ -2,7 +2,7 @@
 layout: post
 title: Event in .NET MAUI CheckBox control | Syncfusion
 description: Learn about Event support in Syncfusion Essential Studio .NET MAUI CheckBox control, its elements and more.
-platform: Maui
+platform: .NET MAUI
 control: CheckBox
 documentation: ug
 ---
@@ -54,4 +54,4 @@ Occurs when the value(state) of the [`IsChecked`] property is changed by either 
 {% endhighlight %}
 {% endtabs %}
 
-![.NET MAUI CheckBox](Images/GettingStarted/tristate.png)
+![.NET MAUI CheckBox](Images/Getting-Started/tristate.png)

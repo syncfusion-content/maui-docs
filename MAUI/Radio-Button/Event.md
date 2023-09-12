@@ -2,7 +2,7 @@
 layout: post
 title: Event in .NET MAUI Radio Button control | Syncfusion
 description: Learn about Event support in Syncfusion Essential Studio .NET MAUI Radio Button control, its elements and more.
-platform: Maui
+platform: .NET MAUI
 control: Radio Button
 documentation: ug
 ---
@@ -37,6 +37,12 @@ Occurs when the value(state) of the [`IsChecked`] property is changed by either 
     radioGroup.Children.Add(check);
     radioGroup.Children.Add(uncheck);
     this.Content = radioGroup;
+
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight c# %}
 
     private void RadioButton_StateChanged(object sender, Syncfusion.Maui.Buttons.StateChangedEventArgs e)
     {

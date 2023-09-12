@@ -2,7 +2,7 @@
 layout: post
 title: Getting Started with .NET MAUI Radio Button control | Syncfusion
 description: Learn here about getting started with Syncfusion Essential Studio .NET MAUI Radio Button control, its elements and more.
-platform: Maui
+platform: .NET MAUI
 control: Radio Button
 documentation: ug
 ---
@@ -129,7 +129,7 @@ The radio button caption can be defined using the [`Text`] property of [`SfRadio
 {% endhighlight %}
 {% endtabs %}
 
-![.NET MAUI Radio Button](Images/GettingStarted/radiobutton.png)
+![.NET MAUI Radio Button](Images/Getting-Started/radiobutton.png)
 
 This demo can be downloaded from this [link]
 
@@ -169,4 +169,4 @@ The radio buttons are used when there is a list of two or more options or group 
 
 N> [`SfRadioButtons`] are mutually exclusive among them when they are defined within [`SfRadioGroup`].
 
-![.NET MAUI Radio Button](Images/GettingStarted/statechange.png)
+![.NET MAUI Radio Button](Images/Getting-Started/statechange.png)

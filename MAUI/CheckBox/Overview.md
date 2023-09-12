@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Overview | .NET MAUI CheckBox | Syncfusion
-platform: Maui
+platform: .NET MAUI
 description: Learn here about overall key features in Essential Studio for .NET MAUI SfCheckBox Control, its elements, and more.
 control: SfChekBox
 ---
@@ -16,4 +16,4 @@ The .NET MAUI CheckBox is a selection control with UI customization.It enables t
  * Allow users to select and clear the control by tapping.
  * Supports check box color, shape and label text customization.
 
-![Overview image of SfCheckBox](Images/overview.png)
+![Overview image of SfCheckBox](Images/Getting-Started/overviewimage.jpg)

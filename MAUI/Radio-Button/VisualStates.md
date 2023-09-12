@@ -2,7 +2,7 @@
 layout: post
 title: Visual States in .NET MAUI Radio Button control | Syncfusion
 description: Learn here all about Visual States support in Syncfusion .NET MAUI Radio Button (SfRadioButton) control and more.
-platform: Maui
+platform: .NET MAUI
 control: SfRadioButton
 documentation: ug
 ---
@@ -18,7 +18,7 @@ The visual of Radio Button can be customized using `VisualStates`. The [`SfRadio
 {% tabs %}
 {% highlight xaml %}
 
-    <buttons:SfRadioButton Text="Radio Button">
+    <syncfusion:SfRadioButton Text="Radio Button">
         <VisualStateManager.VisualStateGroups>
             <VisualStateGroup x:Name="CommonStates">
                 <VisualState x:Name="Checked">
@@ -37,7 +37,7 @@ The visual of Radio Button can be customized using `VisualStates`. The [`SfRadio
                 </VisualState>
             </VisualStateGroup>
         </VisualStateManager.VisualStateGroups>
-    </buttons:SfRadioButton>
+    </syncfusion:SfRadioButton>
 
 {% endhighlight %}
 {% highlight c# %}
