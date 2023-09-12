@@ -112,7 +112,7 @@ button.ShowIcon = true;
 {% endhighlight %}
 {% endtabs %}
 
-![SfButton with button icon](images/ButtonWithIcon.png)
+![SfButton with button icon](images/getting-started/ButtonWithIcon.png)
 
 ## Button background image
 
@@ -135,4 +135,4 @@ button.CornerRadius = new Thickness(20);
 {% endhighlight %}
 {% endtabs %}
 
-![Button with background image](images/ButtonWithBackgroundImage.png)
+![Button with background image](images/getting-started/ButtonWithBackgroundImage.png)
