@@ -9,7 +9,7 @@ documentation: ug
 
 # Animation in .NET MAUI Linear Gauge (SfLinearGauge)
 
-All Linear Gauge elements including the scale, ticks and labels, range, bar pointer, shape marker pointer, and content marker pointer, can be animated separately. 
+All [.NET MAUI Linear Gauge](https://www.syncfusion.com/maui-controls/maui-linear-gauge) elements including the scale, ticks and labels, range, bar pointer, shape marker pointer, and content marker pointer, can be animated separately. 
 
 ## Animate axis
 
