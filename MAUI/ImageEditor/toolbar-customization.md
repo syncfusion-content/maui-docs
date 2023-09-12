@@ -81,7 +81,7 @@ ImageEditorToolbarItem arrowItem = (ImageEditorToolbarItem)subtoolbar.ToolbarIte
 
 N> Remove the existing toolbar items `Name` from the image editor toolbarItems collection based on the index value. Change the icon and text values dynamically for any already added toolbar items based on the index.
 
-### Change toolbar options
+### Change the toolbar options
 
 #### Change the Crop options
 
