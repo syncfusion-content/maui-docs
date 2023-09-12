@@ -1,0 +1,395 @@
+---
+layout: post
+title: Working with MVVM in .NET MAUI TreeView Control | Syncfusion
+description: Learn here all about Working with MVVM support in Syncfusion .NET MAUI TreeView (SfTreeView) Control and more.
+platform: MAUI
+control: SfTreeView
+documentation: ug
+---
+
+# Working with MVVM in .NET MAUI TreeView (SfTreeView)
+
+This section explains about how to work with MVVM pattern in TreeView.
+
+## Binding properties in MVVM pattern
+
+### Binding SelectedItem
+
+TreeView support to select the items through binding the `SelectedItem` property from view model by implementing the `INotifyPropertyChanged` interface that gives the call back notification to UI.
+
+{% tabs %}
+{% highlight xaml hl_lines="2" %}
+<syncfusion:SfTreeView x:Name="treeView" 
+                       SelectedItem="{Binding SelectedPlace}"
+                       ChildPropertyName="States"
+                       ItemsSource="{Binding CountriesInfo}"/>
+{% endhighlight %}
+{% highlight c# %}
+treeView.SetBinding(SfTreeView.SelectedItemProperty, new Binding("SelectedPlace", BindingMode.TwoWay));
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight c# tabtitle="CountriesViewModel.cs" %}
+
+public class CountriesViewModel
+{
+    public CountriesViewModel()
+    {
+        GenerateCountriesInfo();
+    }
+    public ObservableCollection<Countries> CountriesInfo { get; set; }
+
+    public object SelectedPlace { get; set; }
+
+    private void GenerateCountriesInfo()
+    {
+        var australia = new Countries() { Name = "Australia" };
+        var _NSW = new Countries() { Name = "New South Wales" };
+        var _Sydney = new Countries() { Name = "Sydney" };
+        australia.States = new ObservableCollection<Countries>();
+        australia.States.Add(_NSW);
+        _NSW.States = new ObservableCollection<Countries>();
+        _NSW.States.Add(_Sydney);
+        var usa = new Countries() { Name = "United States of America" };
+        var _California = new Countries() { Name = "California" };
+        var _LosAngeles = new Countries() { Name = "Los Angeles" };
+        usa.States = new ObservableCollection<Countries>();
+        usa.States.Add(_California);
+        _California.States = new ObservableCollection<Countries>();
+        _California.States.Add(_LosAngeles);
+         
+        this.CountriesInfo = new ObservableCollection<Countries>();
+        CountriesInfo.Add(australia);
+        CountriesInfo.Add(usa);
+
+        SelectedPlace=_NSW
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+### Binding SelectedItems
+
+TreeView support to select multiple items through binding the `SelectedItems` property from view model with `ObservableCollection<object>` type.
+
+{% tabs %}
+{% highlight xaml hl_lines="3" %}
+<syncfusion:SfTreeView x:Name="treeView"
+                       SelectionMode="Multiple"
+                       SelectedItems="{Binding SelectedCountries}"
+                       ChildPropertyName="States"
+                       ItemsSource="{Binding CountriesInfo}"/>
+{% endhighlight %}
+{% highlight c# hl_lines="2" %}
+treeView.SelectionMode = TreeViewSelectionMode.Multiple;
+treeView.SetBinding(SfTreeView.SelectedItemsProperty, new Binding("SelectedCountries", BindingMode.TwoWay));
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight c# tabtitle="CountriesViewModel.cs" %}
+
+public class CountriesViewModel
+{
+    public CountriesViewModel()
+    {
+        GenerateCountriesInfo();
+    }
+
+    public ObservableCollection<Countries> CountriesInfo { get; set; }
+
+    public ObservableCollection<object> SelectedCountries { get; set; }
+
+    private void GenerateCountriesInfo()
+    {
+        var australia = new Countries() { Name = "Australia" };
+        var _NSW = new Countries() { Name = "New South Wales" };
+        var _Sydney = new Countries() { Name = "Sydney" };
+        var _Victoria = new Countries() { Name = "Victoria" };
+        australia.States = new ObservableCollection<Countries>();
+        australia.States.Add(_NSW);
+        australia.States.Add(_Victoria);
+        _NSW.States = new ObservableCollection<Countries>();
+        _NSW.States.Add(_Sydney);
+        var usa = new Countries() { Name = "United States of America" };
+        var _California = new Countries() { Name = "California" };
+        usa.States = new ObservableCollection<Countries>();
+        usa.States.Add(_California);
+      
+        this.CountriesInfo = new ObservableCollection<Countries>();
+        CountriesInfo.Add(australia);
+        CountriesInfo.Add(usa);
+
+        SelectedCountries = new ObservableCollection<object>();
+        SelectedCountries.Add(_NSW);
+        SelectedCountries.Add(_Victoria);
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+## Commands
+
+### Tap command
+
+The `TapCommand` will be triggered whenever tapping the item and passing the `TreeViewNode` as command parameter.
+
+{% tabs %}
+{% highlight c# tabtitle="CommandViewModel.cs" %}
+
+treeView.TapCommand = viewModel.TappedCommand;
+
+public class CommandViewModel
+{
+    private Command<Object> tappedCommand;
+
+    public Command<object> TappedCommand
+    {
+        get { return tappedCommand; }
+        set { tappedCommand = value; }
+    }
+
+    public CommandViewModel()
+    {            
+        TappedCommand = new Command<object>(TappedCommandMethod);
+    }
+
+    private void TappedCommandMethod(object obj)
+    {
+        App.Current.MainPage.DisplayAlert("Alert", ((obj as Syncfusion.Maui.TreeView.ItemTappedEventArgs).Node.Content as Countries).Name + " is Tapped", "OK");
+    }   
+}
+{% endhighlight %}
+{% endtabs %}
+
+### LongPressCommand
+
+The `LongPressCommand` will be triggered whenever an item is long pressed and passing the `TreeViewNode` as command parameter.
+
+{% tabs %}
+{% highlight c# tabtitle="CommandViewModel.cs" %}
+
+treeView.LongPressCommand = viewModel.LongPressCommand;
+
+public class CommandViewModel
+{
+    private Command<Object> longPressCommand;
+
+    public Command<object> LongPressCommand
+    {
+        get { return longPressCommand; }
+        set { longPressCommand = value; }
+    }
+
+    public CommandViewModel()
+    {            
+        LongPressCommand = new Command<object>(LongPressCommandMethod);
+    }
+
+    private void LongPressCommandMethod(object obj)
+    {          
+        App.Current.MainPage.DisplayAlert("Alert", ((obj as Syncfusion.Maui.TreeView.ItemTappedEventArgs).Node.Content as Countries).Name + " is LongPressed", "OK");
+    }   
+}
+{% endhighlight %}
+{% endtabs %}
+
+### Expand command
+
+The `ExpandCommand` will be triggered while expanding the node and passing the `TreeViewNode` as command parameter. TreeView expands the node based on the return value of `CanExecute` method implementation of `ExpandCommand`. If you return false, then expand action will be canceled. Execute method implementation of `ExpandCommand` will get called after expanding of node.
+
+{% tabs %}
+{% highlight xaml hl_lines="11" %}
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.TreeView;assembly=Syncfusion.Maui.TreeView"
+             xmlns:local="clr-namespace:Selection"
+             x:Class="Selection.MainPage">
+    <ContentPage.BindingContext>
+        <local:CountriesViewModel x:Name="viewModel"/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <syncfusion:SfTreeView x:Name="treeView"
+                               ExpandCommand="ExpandingCommand"/> 
+    </ContentPage.Content>
+</ContentPage>  
+{% endhighlight %}  
+{% highlight c# %}
+/// <summary>
+/// CommandViewModel class that implements command. 
+/// </summary>
+
+public class CommandViewModel
+{
+    private Command<Object> expandingCommand;
+
+    public Command<object> ExpandingCommand
+    {
+        get { return expandingCommand; }
+        set { expandingCommand = value; }
+    }
+
+    public CommandViewModel()
+    {            
+        ExpandingCommand = new Command<object>(ExpandCommandAction, CanExecute);
+    }
+
+    /// <summary>
+    /// CanExecute method is called before expanding of node.
+    /// </summary>
+    /// <returns>Handle expand action by returning true or false. </returns>
+    /// <param name="obj">TreeViewNode is passed as command parameter. </param>
+    public bool CanExecute(object obj)
+    {
+        //You can also return false to cancel the expand action.
+        return true;
+    }
+
+    /// <summary>
+    /// Method gets called after expanding action performed.
+    /// </summary>
+    /// <param name="obj">TreeViewNode is passed as command parameter. </param>
+    private void ExpandCommandAction(object obj)
+    {
+        App.Current.MainPage.DisplayAlert("Alert", "TreeView node is expanded", "OK");
+    }   
+}
+{% endhighlight %}
+{% endtabs %}
+
+### Collapse command
+
+The `CollapseCommand` will be triggered while collapsing the node and passing the `TreeViewNode` as command parameter. TreeView collapses the node based on the return value of `CanExecute` method implementation of `CollapseCommand`. If you return false, then collapse action will be canceled. `Execute` method implementation of `CollapseCommand` will be called after the node has collapsed.
+
+{% tabs %}
+{% highlight xaml hl_lines="11" %}
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.TreeView;assembly=Syncfusion.Maui.TreeView"
+             xmlns:local="clr-namespace:Selection"
+             x:Class="Selection.MainPage">
+    <ContentPage.BindingContext>
+        <local:CountriesViewModel x:Name="viewModel"/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <syncfusion:SfTreeView x:Name="treeView"
+                               CollapseCommand="CollapsingCommand"/> 
+    </ContentPage.Content>
+</ContentPage>
+{% endhighlight %}
+{% highlight c# %}
+// <summary>
+/// CommandViewModel class that implements command.
+/// </summary>
+public class CommandViewModel
+{
+	private Command<object> collapsingCommand;
+	
+	public Command<object> CollapsingCommand
+	{
+		get { return collapsingCommand; }
+		set { collapsingCommand = value; }
+	}
+	
+	public CommandViewModel()
+	{
+		CollapsingCommand = new Command<object>(CollapseCommandAction, CanExecute);
+	}
+    
+	/// <summary>
+    /// CanExecute method is called before collapsing of node. 
+    /// </summary>
+    /// <returns>Handle collapse action by returning true or false. </returns>
+    /// <param name="obj">TreeViewNode is passed as command parameter. </param>
+    public bool CanExecute(object obj)
+    {
+        //You can also return false to cancel the collapse action.
+        return true;
+    }
+
+    /// <summary>
+    /// Method gets called after collapsing action performed.
+    /// </summary>
+    /// <param name="obj">TreeViewNode is passed as command parameter. </param>
+	private void CollapseCommandAction(object obj)
+	{
+		App.Current.MainPage.DisplayAlert("Alert", "TreeView node is collapsed", "OK");
+	}
+}
+{% endhighlight %}
+{% endtabs %}
+
+## Event to command
+
+The `TreeView` event can be converted into commands using `Behaviors`. To achieve this, create a command in the ViewModel class and associate it to the TreeView event using `Behaviors`.
+
+{% tabs %}
+{% highlight xaml hl_lines="6" %}
+<syncfusion:SfTreeView x:Name="treeView"
+                       SelectionMode="Multiple"
+                       SelectedItems="{Binding SelectedCountries}"
+                       ChildPropertyName="States"
+                       ItemsSource="{Binding CountriesInfo}">
+    <syncfusion:SfTreeView.Behaviors>
+        <local:EventToCommandBehavior EventName="SelectionChanged" 
+                                      Command="{Binding SelectionChangedCommand}"/>
+    </syncfusion:SfTreeView.Behaviors>
+</syncfusion:SfTreeView>
+{% endhighlight %}
+{% highlight c# %}
+public class CountriesViewModel : INotifyPropertyChanged
+{
+    public Command<ItemSelectionChangedEventArgs> selectionChangedCommand;
+
+    public CountriesViewModel()
+    {
+        SelectionChangedCommand = new Command<Syncfusion.Maui.TreeView.ItemSelectionChangedEventArgs>(OnSelectionChanged);
+        GenerateCountriesInfo();
+    }
+
+    public ObservableCollection<Countries> CountriesInfo { get; set; }
+
+    public ObservableCollection<object> SelectedCountries { get; set; }
+
+    public Command<ItemSelectionChangedEventArgs> SelectionChangedCommand
+    {
+        get { return selectionChangedCommand; }
+        protected set { selectionChangedCommand = value; }
+    }
+
+    private void OnSelectionChanged(ItemSelectionChangedEventArgs obj)
+    {
+        App.Current.MainPage.DisplayAlert("Alert", (obj.AddedItems[0] as Countries).Name + " is selected", "OK");
+    }
+
+    public event PropertyChangedEventHandler PropertyChanged;
+
+    public void OnPropertyChanged(string name)
+    {
+        if (this.PropertyChanged != null)
+            this.PropertyChanged(this, new PropertyChangedEventArgs(name));
+    }
+
+    private void GenerateCountriesInfo()
+    {
+        var australia = new Countries() { Name = "Australia" };
+        var _NSW = new Countries() { Name = "New South Wales" };
+        var _Victoria = new Countries() { Name = "Victoria" };
+        australia.States = new ObservableCollection<Countries>();
+        australia.States.Add(_NSW);
+        australia.States.Add(_Victoria);
+        var usa = new Countries() { Name = "United States of America" };
+        var _California = new Countries() { Name = "California" };
+        usa.States = new ObservableCollection<Countries>();
+        usa.States.Add(_California);
+      
+        this.CountriesInfo = new ObservableCollection<Countries>();
+        CountriesInfo.Add(australia);
+        CountriesInfo.Add(usa);
+    }
+}
+{% endhighlight %}
+{% endtabs %}
