@@ -9,13 +9,13 @@ documentation: ug
 
 # Ink Eraser in .NET MAUI PDF Viewer (SfPdfViewer)
 
-The [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) allows you to erase all or portions of an ink annotation. This will be useful in correcting mistakes in free hand drawings.
+The [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) allows you to erase all or portions of an ink annotation, which will help correct mistakes in freehand drawings.
 
 ![Ink eraser](Images/Annotations/ink-eraser.gif)
 
 ## Enabling the ink eraser
 
-The ink eraser can be enabled by setting the [AnnotationMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationMode) property of the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) to `InkEraser`. In ink eraser mode, you can drag the pointer over the portions of the ink annotations you want to erase.
+Enable the ink eraser by setting the [AnnotationMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationMode) property of the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) to `InkEraser`. In the ink eraser mode, drag the pointer over the portions of the ink annotations you want to erase.
 
 {% tabs %}
 {% highlight C# %}
@@ -31,7 +31,7 @@ void EnableInkEraserMode()
 
 ## Disabling the ink eraser
 
-Once the ink has been erased, the ink eraser can be disabled by setting the [AnnotationMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationMode) property of the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) to `None`.
+Once you have erased the ink, disable the ink eraser by setting the [AnnotationMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationMode) property of the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) to `None`.
 
 {% tabs %}
 {% highlight C# %}
