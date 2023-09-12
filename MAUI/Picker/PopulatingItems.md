@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting started with .NET MAUI Picker control | Syncfusion
+title: Populating with .NET MAUI Picker control | Syncfusion
 description: Learn here all about populating items with Syncfusion .NET MAUI Picker (SfPicker) control.
 platform: maui
 control: SfPicker
@@ -180,7 +180,7 @@ In picker control, the items can be customized with custom view of all item by `
     <Grid.Resources>
         <DataTemplate x:Key="customView">
             <Grid Background = "black" >
-                <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="Red" Text="{Binding Item}"/>
+                <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="Red" Text="{Binding Data}"/>
                 </Grid>
         </DataTemplate>
     </Grid.Resources>
