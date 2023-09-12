@@ -87,7 +87,7 @@ namespace GettingStarted
 
 The [Source](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_Source) property is used to load images from different sources:
 
-N> Image formats such as JPEG, PNG and BMP can be loaded to the image editor.
+N> You can load image formats such as JPEG, PNG, and BMP to the image editor.
 
 ### Loading a local file
 
@@ -224,7 +224,7 @@ public partial class MainPage : ContentPage
 
 ![GettingStarted in .NET Maui ImageEditor](images\getting-started\imageeditor-gettingstarted.png)
 
-N> If we set the Stream source with a local variable, the stream will be closed after it is used by the image, and we cannot process the stream again. So we recommend using stream images by creating a new stream instance inside Lamba function so that we can process them whenever needed.
+N> If you set the Stream source with a local variable, the stream will be closed after the image uses it, and you cannot process the stream again. So, we recommend using stream images by creating a new stream instance inside the Lamba function so that you can process them whenever needed.
 
 imageEditor.Source = ImageSource.FromStream(() => new MemoryStream(imageBytes))
 
@@ -265,7 +265,7 @@ public partial class MainPage : ContentPage
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-image-editor-examples/tree/master/GettingStarted)
 
 ## Get the image stream
-The [`GetImageStream`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_GetImageStream) method is used to get the edited image in the form of a image stream.
+The [`GetImageStream`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_GetImageStream) method is used to get the edited image in form of a image stream.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}

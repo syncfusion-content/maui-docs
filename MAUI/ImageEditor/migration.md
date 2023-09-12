@@ -527,4 +527,4 @@ Applicable for crop view selection, shape and text annotation selection.
 * Support to toolbar customization.
 
 ## Known issues in .Net MAUI ImageEditor
-* [Mac, iOS]Image is not loading properly from the stream or URI binding source.
+* [Mac, iOS]The image is not loading correctly from the stream or URI binding source.
