@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Getting Started with .NET MAUI RadioButton control | Syncfusion
-description: Learn here about getting started with Syncfusion Essential Studio .NET MAUI RadioButton control, its elements and more.
-platform: .NET MAUI
-control: RadioButton
+title: Getting Started with .NET MAUI Radio Button control | Syncfusion
+description: Learn here about getting started with Syncfusion Essential Studio .NET MAUI Radio Button control, its elements and more.
+platform: Maui
+control: Radio Button
 documentation: ug
 ---
 
-## Creating an application with .NET MAUI RadioButton
+## Creating an application with .NET MAUI Radio Button
 
 This section explains the steps required to work with the `SfRadioButton` control for .NET MAUI.
 
-## Adding a .NET MAUI RadioButton reference
+## Adding a .NET MAUI Radio Button reference
 
-Syncfusion .NET MAUI controls are available in [Nuget.org](https://www.nuget.org/). To add `.NET MAUI RadioButton` to your project, open the NuGet package manager in Visual Studio, search for `Syncfusion.Maui.Buttons`, and install it.
+Syncfusion .NET MAUI controls are available in [Nuget.org](https://www.nuget.org/). To add `.NET MAUI Radio Button` to your project, open the NuGet package manager in Visual Studio, search for `Syncfusion.Maui.Buttons`, and install it.
 
 ## Handler registration 
 
@@ -21,34 +21,34 @@ In the MauiProgram.cs file, register the handler for the Syncfusion core.
 
 {% highlight c# hl_lines="6 17" %}
 
-    using Microsoft.Maui;
-    using Microsoft.Maui.Hosting;
-    using Microsoft.Maui.Controls.Compatibility;
-    using Microsoft.Maui.Controls.Hosting;
-    using Microsoft.Maui.Controls.Xaml;
-    using Syncfusion.Maui.Core.Hosting;
+using Microsoft.Maui;
+using Microsoft.Maui.Hosting;
+using Microsoft.Maui.Controls.Compatibility;
+using Microsoft.Maui.Controls.Hosting;
+using Microsoft.Maui.Controls.Xaml;
+using Syncfusion.Maui.Core.Hosting;
 
-    namespace ButtonSample
+namespace ButtonSample
+{
+    public static class MauiProgram
     {
-        public static class MauiProgram
+        public static MauiApp CreateMauiApp()
         {
-            public static MauiApp CreateMauiApp()
+            var builder = MauiApp.CreateBuilder();
+            builder
+            .UseMauiApp<App>()
+            .ConfigureSyncfusionCore()
+            .ConfigureFonts(fonts =>
             {
-                var builder = MauiApp.CreateBuilder();
-                builder
-                .UseMauiApp<App>()
-                .ConfigureSyncfusionCore()
-                .ConfigureFonts(fonts =>
-                {
-                    fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-                });
+                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+            });
 
-                return builder.Build();
-            }      
-        }
-    }   
+            return builder.Build();
+        }      
+    }
+}   
 
-{% endhighlight %} 
+{% endhighlight %}
 
 ## Create a Simple SfRadioButton
 
@@ -117,17 +117,19 @@ The radio button caption can be defined using the [`Text`] property of [`SfRadio
 {% tabs %}
 {% highlight xaml %}
 
-    <syncfusion:SfRadioButton x:Name="radioButton" Text="RadioButton"/>
+    <syncfusion:SfRadioButton x:Name="radioButton" Text="Radio Button"/>
+
 {% endhighlight %}
 {% highlight c# %}
 
     SfRadioButton radioButton = new SfRadioButton();
-    radioButton.Text = "RadioButton";
+    radioButton.Text = "Radio Button";
+    this.Content = radioButton;
 
 {% endhighlight %}
 {% endtabs %}
 
-![.NET MAUI RadioButton](Images/GettingStarted/radiobutton.png)
+![.NET MAUI Radio Button](Images/GettingStarted/radiobutton.png)
 
 This demo can be downloaded from this [link]
 
@@ -160,16 +162,11 @@ The radio buttons are used when there is a list of two or more options or group 
     female.Text = "Female";
     radioGroup.Children.Add(male);
     radioGroup.Children.Add(female);
+    this.Content = radioGroup;
 
 {% endhighlight %}
 {% endtabs %}
 
 N> [`SfRadioButtons`] are mutually exclusive among them when they are defined within [`SfRadioGroup`].
 
-![.NET MAUI RadioButton](Images/GettingStarted/statechange.png)
-
-This demo can be downloaded from this [link].
-
-## See also
-
-[How to create a Xamarin.Forms radio button (SfRadioButton)]
+![.NET MAUI Radio Button](Images/GettingStarted/statechange.png)

@@ -2,7 +2,7 @@
 layout: post
 title: Grouping in .NET MAUI Radio Button control | Syncfusion
 description: Learn here all about Grouping support in Syncfusion .NET MAUI Radio Button (SfRadioButton) control and more.
-platform: .NET MAUI
+platform: Maui
 control: SfRadioButton
 documentation: ug 
 ---
@@ -19,39 +19,37 @@ The [`GroupKey`] in [`SfRadioButton`] allows you to group a set of radio buttons
 {% highlight xaml %}
 
     <ContentPage.Resources>
-        <syncfusion:SfRadioGroupKey x:Key="carBrand" />
+        <syncfusion:SfRadioGroupKey x:Key="carBrand"/>
+        <syncfusion:SfRadioGroupKey x:Key="bikeBrand"/>
     </ContentPage.Resources>
 
     <StackLayout>
         <syncfusion:SfRadioButton Text="Honda" GroupKey="{StaticResource carBrand}"/>
         <syncfusion:SfRadioButton Text="Hyundai" GroupKey="{StaticResource carBrand}"/>
         <syncfusion:SfRadioButton Text="Volkswagen" GroupKey="{StaticResource carBrand}"/>
-        <syncfusion:SfRadioButton Text="Toyota" GroupKey="{StaticResource carBrand}"/>
-        <syncfusion:SfRadioButton Text="Volvo" GroupKey="{StaticResource carBrand}"/>
+        <syncfusion:SfRadioButton Text="Yamaha" GroupKey="{StaticResource bikeBrand}"/>
+        <syncfusion:SfRadioButton Text="Bajaj" GroupKey="{StaticResource bikeBrand}"/>
     </StackLayout>
 
 {% endhighlight %}
 {% highlight c# %}
 
     SfRadioGroupKey carBrand = new SfRadioGroupKey();
+    SfRadioGroupKey bikeBrand = new SfRadioGroupKey();
 
-    SfRadioButton honda = new SfRadioButton(){Text = "Honda", GroupKey = carBrand};
-    SfRadioButton hyundai = new SfRadioButton(){Text = "Hyundai", GroupKey = carBrand};
-    SfRadioButton volkswagen = new SfRadioButton(){Text = "Volkswagen", GroupKey = carBrand};
-    SfRadioButton toyota = new SfRadioButton(){Text = "Toyota", GroupKey = carBrand};
-    SfRadioButton volvo = new SfRadioButton(){Text = "Volvo", GroupKey = carBrand};
+    SfRadioButton honda = new SfRadioButton() { Text = "Honda", GroupKey = carBrand };
+    SfRadioButton hyundai = new SfRadioButton() { Text = "Hyundai", GroupKey = carBrand };
+    SfRadioButton volkswagen = new SfRadioButton() { Text = "Volkswagen", GroupKey = carBrand };
+    SfRadioButton yamaha = new SfRadioButton() { Text = "Yamaha", GroupKey = bikeBrand };
+    SfRadioButton bajaj = new SfRadioButton() { Text = "Bajaj", GroupKey = bikeBrand };
 
-    StackLayout stackLayout = new StackLayout()
-    {
-        Wrap = FlexWrap.Wrap,
-        AlignContent = FlexAlignContent.Start,
-        AlignItems = FlexAlignItems.Start
-    };
+    StackLayout stackLayout = new StackLayout();
     stackLayout.Children.Add(honda);
     stackLayout.Children.Add(hyundai);
     stackLayout.Children.Add(volkswagen);
-    stackLayout.Children.Add(toyota);
-    stackLayoutayout.Children.Add(volvo);
+    stackLayout.Children.Add(yamaha);
+    stackLayout.Children.Add(bajaj);
+    this.Content = stackLayout;
 
 {% endhighlight %}
 {% endtabs %}
@@ -89,11 +87,12 @@ The [`CheckedChanged`] event of [`SfRadioGroupKey`] occurs when a checked item i
     radioGroup.Children.Add(netBanking);
     radioGroup.Children.Add(debitCard);
     radioGroup.Children.Add(creditCard);
+    this.Content = radioGroup;
 
 {% endhighlight %}
 {% endtabs %}
 
-![RadioGroup Image](Images/Grouping/radiogroup.png)
+![.NET MAUI RadioGroup Image](Images/Grouping/radiogroup.png)
 
 ### Orientation in SfRadioGroup
 
@@ -119,12 +118,10 @@ The [`CheckedChanged`] event of [`SfRadioGroupKey`] occurs when a checked item i
     radioGroup.Children.Add(netBanking);
     radioGroup.Children.Add(debitCard);
     radioGroup.Children.Add(creditCard);
+    this.Content = radioGroup;
 
 {% endhighlight %}
 {% endtabs %}
 
-![RadioGroup horizontal orientation](Images/Grouping/radiogrouporientation.png)
+![.NET MAUI RadioGroup horizontal orientation](Images/Grouping/radiogrouporientation.png)
 
-## See also
-
-[How to get the selected .NET MAUI radio button (SfRadioButton)]
