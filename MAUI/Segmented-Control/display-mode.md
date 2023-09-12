@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Display options in .NET MAUI Segmented control | Syncfusion
-description: Learn about the Display options in Syncfusion .NET MAUI Segmented(SfSegmented) control in mobile and desktop applications from a single shared codebase.
-platform: maui
-control: SfSegmentedControl
+title: Create segment content in .NET MAUI Segmented control | Syncfusion
+description: Learn about to manage the segment content in Syncfusion .NET MAUI Segmented control (SfSegmentedControl).
+platform: .NET MAUI
+control: Segmented (SfSegmented) control
 documentation: ug
 ---
  
-# Display options in .NET MAUI Segmented (SfSegmented) control
+# Create segment content in .NET MAUI Segmented control (SfSegmentedControl)
 
-Depending on the application, different scenarios may require icons, text, or a combination of both for effective communication. The segmented control supports these three options.
+Depending on the application, different scenarios may require icons, text, or a combination of both for effective communication.
 
 ## Text
-By default, the segmented items is diplayed as text
+Create segmented control with segments having the given text.
 
 {% tabs %}
 {% highlight XAML %}
@@ -20,13 +20,12 @@ By default, the segmented items is diplayed as text
 <ContentPage   
     xmlns:local="clr-namespace:SfSegmentSample"
     xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons">
-
     <ContentPage.BindingContext>
         <local:ViewModel/>
     </ContentPage.BindingContext>
 
-        <buttons:SfSegmentedControl x:Name="segmentedControl"
-                                    ItemsSource="{Binding ItemCollection}">
+    <buttons:SfSegmentedControl x:Name="segmentedControl"
+                                ItemsSource="{Binding ItemCollection}">
     </buttons:SfSegmentedControl>
 </ContentPage>
 
@@ -38,7 +37,7 @@ using Syncfusion.Maui.Buttons;
 
 public partial class MainPage : ContentPage
 {
-    ObservableCollection<SfSegmentItem> itemList = new ObservableCollection<SfSegmentItem>();
+    List<SfSegmentItem> itemList = new List<SfSegmentItem>();
 
     public MainPage()
     {
@@ -55,11 +54,11 @@ public partial class MainPage : ContentPage
 
 public class ViewModel
 {
-    private ObservableCollection<SfSegmentItem> itemCollection;
+    private List<SfSegmentItem> itemCollection;
 
     public ViewModel()
     {
-        itemCollection = new ObservableCollection<SfSegmentItem>()
+        itemCollection = new List<SfSegmentItem>()
         {
                 new SfSegmentItem() {Text="Day"},
                 new SfSegmentItem() {Text="Week"},
@@ -68,7 +67,7 @@ public class ViewModel
         };
     }
 
-    public ObservableCollection<SfSegmentItem> ItemCollection
+    public List<SfSegmentItem> ItemCollection
     {
         get { return itemCollection; }
         set { itemCollection = value; }
@@ -79,7 +78,7 @@ public class ViewModel
 {% endtabs %}
 
 ## Image
-You can display images in the segmented items of the control.
+Create segmented control with segments having the given images using `SfSegmentItem` collection bind to `Itemssource` property.
 
 {% tabs %}
 {% highlight XAML %}
@@ -105,7 +104,7 @@ using Syncfusion.Maui.Buttons;
 
 public partial class MainPage : ContentPage
 {
-    ObservableCollection<SfSegmentItem> itemList = new ObservableCollection<SfSegmentItem>();
+    List<SfSegmentItem> itemList = new List<SfSegmentItem>();
 
     public MainPage()
     {
@@ -122,11 +121,11 @@ public partial class MainPage : ContentPage
 
 public class ViewModel
 {
-    private ObservableCollection<SfSegmentItem> itemCollection;
+    private List<SfSegmentItem> itemCollection;
 
     public ViewModel()
     {
-        itemCollection = new ObservableCollection<SfSegmentItem>()
+        itemCollection = new List<SfSegmentItem>()
         {
                 new SfSegmentItem(){Text = "\ue700", TextStyle = new SegmentTextStyle{ FontSize = 20, FontFamily = "Date Picker Icon" } },
                 new SfSegmentItem(){Text = "\ue701", TextStyle = new SegmentTextStyle{ FontSize = 20, FontFamily = "Date Picker Icon" } },
@@ -135,7 +134,7 @@ public class ViewModel
         };
     }
 
-    public ObservableCollection<SfSegmentItem> ItemCollection
+    public List<SfSegmentItem> ItemCollection
     {
         get { return itemCollection; }
         set { itemCollection = value; }
@@ -172,7 +171,7 @@ using Syncfusion.Maui.Buttons;
 
 public partial class MainPage : ContentPage
 {
-    ObservableCollection<SfSegmentItem> itemList = new ObservableCollection<SfSegmentItem>();
+    List<SfSegmentItem> itemList = new List<SfSegmentItem>();
 
     public MainPage()
     {
@@ -189,11 +188,11 @@ public partial class MainPage : ContentPage
 
 public class ViewModel
 {
-    private ObservableCollection<SfSegmentItem> itemCollection;
+    private List<SfSegmentItem> itemCollection;
 
     public ViewModel()
     {
-        itemCollection = new ObservableCollection<SfSegmentItem>()
+        itemCollection = new List<SfSegmentItem>()
         {
             new SfSegmentItem() {  ImageSource="jackson.png", Text="Jackson" },
             new SfSegmentItem() { ImageSource ="gabriella.png" , Text="Gabriella"},
@@ -203,7 +202,74 @@ public class ViewModel
         };
     }
 
-    public ObservableCollection<SfSegmentItem> ItemCollection
+    public List<SfSegmentItem> ItemCollection
+    {
+        get { return itemCollection; }
+        set { itemCollection = value; }
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+## Custom font with text
+You can display custom font with text in the segmented items of the control.
+
+{% tabs %}
+{% highlight XAML %}
+
+<ContentPage   
+    xmlns:local="clr-namespace:SfSegmentSample"
+    xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons">
+
+    <ContentPage.BindingContext>
+        <local:ViewModel/>
+    </ContentPage.BindingContext>
+
+        <buttons:SfSegmentedControl x:Name="segmentedControl"
+                                    ItemsSource="{Binding ItemCollection}">
+    </buttons:SfSegmentedControl>
+</ContentPage>
+
+{% endhighlight %}
+{% highlight C# %}
+
+using Syncfusion.Maui.Buttons;
+. . .
+
+public partial class MainPage : ContentPage
+{
+    List<SfSegmentItem> itemList = new List<SfSegmentItem>();
+
+    public MainPage()
+    {
+        InitializeComponent();
+        ViewModel viewModel = new ViewModel();
+        SfSegmentedControl segmentedControl = new SfSegmentedControl();
+        segmentedControl.ItemsSource = viewModel.ItemCollection;
+        this.Content = segmentedControl;
+    }
+}
+
+{% endhighlight %}
+{% highlight C# tabtitle="ViewModel.cs" %}
+
+public class ViewModel
+{
+    private List<SfSegmentItem> itemCollection;
+
+    public ViewModel()
+    {
+        itemCollection = new List<SfSegmentItem>()
+        {
+            new SfSegmentItem() { ImageSource = new FontImageSource() { Glyph = "\ue700", Size = 20, FontFamily = "Date Picker Icon", Color = Colors.Black}, Text = "Day"},
+            new SfSegmentItem() { ImageSource = new FontImageSource() { Glyph = "\ue701", Size = 20, FontFamily = "Date Picker Icon",  Color = Colors.Black }, Text = "Week"},
+            new SfSegmentItem() { ImageSource = new FontImageSource() { Glyph = "\ue701", Size = 20, FontFamily = "Date Picker Icon",  Color = Colors.Black}, Text = "Month"},
+            new SfSegmentItem() { ImageSource = new FontImageSource() { Glyph = "\ue703", Size = 20, FontFamily = "Date Picker Icon",  Color = Colors.Black}, Text = "Year"},
+        };
+    }
+
+    public List<SfSegmentItem> ItemCollection
     {
         get { return itemCollection; }
         set { itemCollection = value; }

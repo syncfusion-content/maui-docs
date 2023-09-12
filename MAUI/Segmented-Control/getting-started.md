@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Getting Started with .NET MAUI Segmented control | Syncfusion
-description: Learn about getting started with Syncfusion .NET MAUI Segmented (SfSegmented) control in mobile and desktop applications from a single shared codebase.
-platform: maui
-control: SfSegmentedControl
+description: Learn about getting started with Syncfusion .NET MAUI Segmented control (SfSegmentedControl) in mobile and desktop applications from a single shared codebase.
+platform: .NET MAUI
+control: Segmented (SfSegmented) control
 documentation: ug
 ---
 
-# Getting Started with .NET MAUI Segmented (SfSegmented) control
+# Getting Started with .NET MAUI Segmented control (SfSegmentedControl)
 
 This section provides a quick overview of how to get started with the `.NET MAUI Segmented control(SfSegmented)` for .NET MAUI and a walk-through to configure the .NET MAUI Segmented control in a real-time scenario.
 
@@ -81,78 +81,24 @@ The [Syncfusion.Maui.Core](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.C
 {% endhighlight %}
 {% endtabs %}
 
-## Adding items to SfSegmentedControl
+## Populating segmented items
 
-You can add the data inside the segmented control in three different ways: 
-
-1. String data
-2. SfSegmentItem
-
-Items inside the segmented control can be added using the `ItemsSource` property of `SfSegmentedControl`, which holds the collection/list of items.
-
-#### Adding data as a String
-
-You can add string data as `ItemsSource` to `SfSegmentedControl`.
-
-{% tabs %}
-{% highlight XAML tabtitle="MainPage.xaml" %}
-
-<ContentPage   
-            
-    xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons"
-
-    <buttons:SfSegmentedControl x:Name="segmentedControl">
-    </buttons:SfSegmentedControl>
-</ContentPage>
-
-{% endhighlight %}
-{% highlight C# tabtitle="MainPage.xaml.cs" %}
-
-using Syncfusion.Maui.Buttons;
-. . .
-
-public partial class MainPage : ContentPage
-{
-    public MainPage()
-    {
-        InitializeComponent();
-        SfSegmentedControl segmentedControl = new SfSegmentedControl();
-        segmentedControl.Stroke = Colors.Black;
-        segmentedControl.SelectedIndex = 1;
-        segmentedControl.BackgroundColor = Colors.Transparent;
-        segmentedControl.VisibleSegmentsCount = 6;
-        List<string> list = new List<string>
-                {
-                    "1","2","3","4","5","6"
-                };
-        segmentedControl.ItemsSource = list;
-        this.Content = segmentedControl;
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-#### Adding data as SfSegmentItem
-
-You can add `SfSegmentItem` as `ItemsSource` to `SfSegmentedControl`.
+You can use `ItemsSource` property of `SfSegmentedControl` to populate the segmented items.
 
 {% tabs %}
 {% highlight XAML %}
 
 <ContentPage   
-    xmlns:local="clr-namespace:SfSegmentSample"
     xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons">
-
-    <ContentPage.BindingContext>
-        <local:ViewModel/>
-    </ContentPage.BindingContext>
-
-        <buttons:SfSegmentedControl x:Name="segmentedControl"
-                                    Stroke="Black"
-                                    SelectedIndex="1"
-                                    BackgroundColor="Transparent"
-                                    ItemsSource="{Binding ItemCollection}">
+    <buttons:SfSegmentedControl x:Name="segmentedControl">
+        <buttons:SfSegmentedControl.ItemsSource>
+            <x:Array Type="{x:Type x:String}">
+                <x:String>Day</x:String>
+                <x:String>Week</x:String>
+                <x:String>Month</x:String>
+                <x:String>Year</x:String>
+            </x:Array>
+        </buttons:SfSegmentedControl.ItemsSource>
     </buttons:SfSegmentedControl>
 </ContentPage>
 
@@ -164,44 +110,19 @@ using Syncfusion.Maui.Buttons;
 
 public partial class MainPage : ContentPage
 {
-    ObservableCollection<SfSegmentItem> itemList = new ObservableCollection<SfSegmentItem>();
-
     public MainPage()
     {
         InitializeComponent();
-        ViewModel viewModel = new ViewModel();
         SfSegmentedControl segmentedControl = new SfSegmentedControl();
-        segmentedControl.Stroke = Colors.Black;
-        segmentedControl.SelectedIndex = 1;
-        segmentedControl.BackgroundColor = Colors.Transparent;
-        segmentedControl.VisibleSegmentsCount = 6;
-        segmentedControl.ItemsSource = viewModel.ItemCollection;
-        this.Content = segmentedControl;
-    }
-}
-
-{% endhighlight %}
-{% highlight C# tabtitle="ViewModel.cs" %}
-
-public class ViewModel
-{
-    private ObservableCollection<SfSegmentItem> itemCollection;
-
-    public ViewModel()
-    {
-        itemCollection = new ObservableCollection<SfSegmentItem>()
+        List<SfSegmentItem> itemList = new List<SfSegmentItem>
         {
-                new SfSegmentItem() {Text="Day"},
-                new SfSegmentItem() {Text="Week"},
-                new SfSegmentItem() {Text="Month"},
-                new SfSegmentItem() {Text="Year"},
+            new SfSegmentItem() {Text = "Day"},
+            new SfSegmentItem() {Text = "Week"},
+            new SfSegmentItem() {Text = "Month"},
+            new SfSegmentItem() {Text = "Year"},
         };
-    }
-
-    public ObservableCollection<SfSegmentItem> ItemCollection
-    {
-        get { return itemCollection; }
-        set { itemCollection = value; }
+        segmentedControl.ItemsSource = itemList;
+        this.Content = segmentedControl;
     }
 }
 

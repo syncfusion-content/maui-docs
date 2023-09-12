@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Migrate from Xamarin to .NET MAUI Segmented (SfSegmented) control | Syncfusion
+title: Migrate from Xamarin to .NET MAUI Segmented control (SfSegmentedControl) | Syncfusion
 description: Learn about Migrating from Syncfusion Xamarin.Forms Segmented control to .NET MAUI Segmented control.
-platform: maui
-control: SfSegmentedControl
+platform: .NET MAUI
+control: Segmented (SfSegmented) control
 documentation: ug
 ---
  
-# Migrate from Xamarin.Forms Segmented control to .NET MAUI Segmented control
+# Migrate from Xamarin.Forms Segmented control to .NET MAUI Segmented control (SfSegmentedControl)
 
 To make the migration from the [Xamarin SfSegmented control](https://www.syncfusion.com/xamarin-ui-controls/xamarin-segmented-control) to the `.NET MAUI SfSegmented control` easier, most of the APIs from the `Xamarin SfSegmented control` were kept in the `.NET MAUI SfSegmented control`. However, to maintain the consistency of API naming in the `.NET MAUI SfSegmented control`, some of the APIs have been renamed. Please find the difference in the following topics.
 
@@ -153,11 +153,11 @@ this.Content = segmentedControl;
 
 public class ViewModel
 {
-    private ObservableCollection<SfSegmentItem> itemCollection;
+    private List<SfSegmentItem> itemCollection;
 
     public ViewModel()
     {
-        itemCollection = new ObservableCollection<SfSegmentItem>()
+        itemCollection = new List<SfSegmentItem>()
         {
                 new SfSegmentItem() {Text="Day"},
                 new SfSegmentItem() {Text="Week"},
@@ -166,7 +166,7 @@ public class ViewModel
         };
     }
 
-    public ObservableCollection<SfSegmentItem> ItemCollection
+    public List<SfSegmentItem> ItemCollection
     {
         get { return itemCollection; }
         set { itemCollection = value; }
@@ -389,11 +389,11 @@ this.Content = segmentedControl;
 
 public class ViewModel
 {
-    private ObservableCollection<SfSegmentItem> itemCollection;
+    private List<SfSegmentItem> itemCollection;
 
     public ViewModel()
     {
-        itemCollection = new ObservableCollection<SfSegmentItem>()
+        itemCollection = new List<SfSegmentItem>()
         {
                 new SfSegmentItem() {Text="Day"},
                 new SfSegmentItem() {Text="Week"},
@@ -402,7 +402,7 @@ public class ViewModel
         };
     }
 
-    public ObservableCollection<SfSegmentItem> ItemCollection
+    public List<SfSegmentItem> ItemCollection
     {
         get { return itemCollection; }
         set { itemCollection = value; }
@@ -489,11 +489,11 @@ this.Content = segmentedControl;
 
 public class ViewModel
 {
-    private ObservableCollection<SfSegmentItem> itemCollection;
+    private List<SfSegmentItem> itemCollection;
 
     public ViewModel()
     {
-        itemCollection = new ObservableCollection<SfSegmentItem>()
+        itemCollection = new List<SfSegmentItem>()
         {
                 new SfSegmentItem() {Text="Day"},
                 new SfSegmentItem() {Text="Week"},
@@ -502,7 +502,7 @@ public class ViewModel
         };
     }
 
-    public ObservableCollection<SfSegmentItem> ItemCollection
+    public List<SfSegmentItem> ItemCollection
     {
         get { return itemCollection; }
         set { itemCollection = value; }

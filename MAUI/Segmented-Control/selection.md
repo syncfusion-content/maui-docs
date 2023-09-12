@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Selection in .NET MAUI Segmented control | Syncfusion
-description: Learn about the Selection in Syncfusion .NET MAUI Segmented (SfSegmented) control in mobile and desktop applications from a single shared codebase.
-platform: maui
+title: Segment item selection in .NET MAUI Segmented control | Syncfusion
+description: Learn about the segment item selection in Syncfusion .NET MAUI Segmented Control (SfSegmentedControl).
+platform: .NET MAUI
 control: SfSegmentedControl
 documentation: ug
 ---
  
-# Selection in .NET MAUI Segmented (SfSegmented) control
+# Selection in .NET MAUI Segmented Control (SfSegmentedControl)
 
-This section explains about features that aid in the selection of items, customization of the selected item, and its related operations in the Segmented Control.
+This section describes the features of the Segmented Control that help with item selection, customization of the selected item, and associated operations.
 
-## Selected index
+## Programmatically set selected index
 
 You can set the default value programmatically for the selection to be placed. The selection gets updated based on the index value given for the `SelectedIndex`.
 
@@ -44,10 +44,6 @@ public partial class MainPage : ContentPage
 
 {% endhighlight %}
 {% endtabs %}
-
-## Ripple effect animation
-
-The Segmented Control supports ripple effect animation for selecting the item
 
 ## Selection indicator placements
 
@@ -209,11 +205,11 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-## Selected segment customization
+## Customize selected segment
 
 The selected segment of the Segmented control is customized by using `SelectionIndicatorSettings` property of `SfSegmentedControl`.
 
-#### Selected segment background customization
+#### Customize selected segment background
 You can customize the selected segment background, by using `Background` property of `SelectionIndicatorSettings`.
 
 {% tabs %}
@@ -252,7 +248,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-#### Selected segment text color customization
+#### Customize selected segment text color
 You can customize the selected segment text color, by using `TextColor` property of `SelectionIndicatorSettings`.
 
 {% tabs %}
@@ -291,7 +287,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-#### Selected segment border color customization
+#### Customize selected segment border color
 You can customize the selected segment border color, by using `Stroke` property of `SelectionIndicatorSettings`.
 
 {% tabs %}
@@ -330,7 +326,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-#### Selected segment border thickness customization
+#### Customize selected segment border thickness
 You can customize the selected segment border thickness, by using `StrokeThickness` property of `SelectionIndicatorSettings`.
 
 {% tabs %}
@@ -369,8 +365,8 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-## Selection changed event
-The `SelectionChanged` event is triggered, once the selection process has been completed for the selected item in the Segmented Control. The `SelectionChangedEventArgs` has the following values, which provides information for `SelectionChanged` event:
+## Notifying segment selection changes
+The `SelectionChanged` event is triggered, once the segment is selected in the Segmented control. The `SelectionChangedEventArgs` has the following values, which provides information for `SelectionChanged` event:
 
 * OldIndex
 * NewIndex
@@ -419,5 +415,8 @@ Right arrow<br/><br/></td><td>Moves to the next item on the segmented control's 
 <td>
 Left arrow<br/><br/></td><td>
 Moves to the previous item on the segmented control's left side. It does not make any selection and only navigates to the previous item. If the focus border is on the first item, pressing LeftArrow does nothing.<br/><br/></td></tr>
-
+<tr>
+<td>
+Enter<br/><br/></td><td>
+Pressing the Enter key when segment item in focus will make selection.<br/><br/></td></tr>
 </table>
