@@ -9,11 +9,11 @@ documentation: ug
 
 # Customizations in .NET MAUI Time Picker (SfTimePicker)
 
-In the [.NET MAUI Time Picker] of the header, column header, footer and selection views can be customized.
+The [.NET MAUI Time Picker] header, column header, footer and selection views can be customized.
 
 ## Header customization
 
-You can customize the Time picker header by using the `HeaderView` property of `SfTimePicker`.
+You can customize the time picker header by using the `HeaderView` property of `SfTimePicker`.
 
 ### Set header text
 
@@ -78,7 +78,7 @@ this.Content = timePicker;
 
 ### Customization of header
 
-*    **Header View** - You can customize the header text style and background of the `TimePicker` using the [TextStyle] and [Background] properties of the [HeaderView].
+You can customize the header text style and background color of the `Time picker` using the [TextStyle] and [Background] properties of the [HeaderView] in [PickerHeaderView].
 
 {% tabs %}
 
@@ -187,7 +187,7 @@ this.Content = timePicker;
 
 ### Customization of column header
 
-*    **Column Header View** - You can customize the column header view text style and background of the `TimePicker` using the [TextStyle] and [Background] properties of the [ColumnHeaderView].
+You can customize the column header view text style and background color of the `Time Picker` using the [TextStyle] and [Background] properties of the [TimePickerColumnHeaderView].
 
 {% tabs %}
 
@@ -294,7 +294,7 @@ this.Content = timePicker;
 
 ### Customization of footer
 
-*    **Footer View** - You can customize the footer text style and background of the `TimePicker` using the [TextStyle] and [Background] properties of the [FooterView].
+You can customize the footer text style and background color of the `Time Picker` using the [TextStyle] and [Background] properties of the [PickerFooterView].
 
 {% tabs %}
 
@@ -368,9 +368,9 @@ this.Content = timePicker;
 
 {% endtabs %}
 
-### Customization of selected intem
+### Customization of selected item
 
-*    **Selected Item** - You can customize the selected view text style of the `TimePicker` using the [SelectedTextStyle] property of the [SfTimePicker].
+You can customize the selected view text style of the `Time Picker` using the [SelectedTextStyle] property of the [SfTimePicker].
 
 {% tabs %}
 
