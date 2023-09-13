@@ -30,12 +30,11 @@ The `Closed` event was raised after the picker pop-up is closed.
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-        <sfPicker:SfPicker x:Name="picker" 
-                        Opened="picker_Opened" 
-                        Closed="picker_Closed"
-                        Closing="picker_Closing">
-        </sfPicker:SfPicker>
-
+    <sfPicker:SfPicker x:Name="picker" 
+                            Opened="picker_Opened" 
+                            Closed="picker_Closed"
+                            Closing="picker_Closing">
+    </sfPicker:SfPicker>
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 

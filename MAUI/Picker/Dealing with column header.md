@@ -53,7 +53,7 @@ Column header background color can be customized by setting `SfPicker.ColumnHead
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-  <?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
   <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
               xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
               xmlns:sfPicker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker"
@@ -64,8 +64,7 @@ Column header background color can be customized by setting `SfPicker.ColumnHead
               <sfPicker:PickerColumnHeaderView Background="Gray"/>
           </sfPicker:SfPicker.ColumnHeaderView>
       </sfPicker:SfPicker>
-  </ContentPage>
-
+</ContentPage>
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
@@ -84,8 +83,8 @@ The .NET MAUI Picker control, Column header text style such as text color, font 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-  <?xml version="1.0" encoding="utf-8" ?>
-  <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
               xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
               xmlns:sfPicker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker"
               xmlns:local ="clr-namespace:Picker_29"
@@ -102,7 +101,7 @@ The .NET MAUI Picker control, Column header text style such as text color, font 
               </sfPicker:PickerColumnHeaderView>
           </sfPicker:SfPicker.ColumnHeaderView>
       </sfPicker:SfPicker>
-  </ContentPage>
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
@@ -139,8 +138,8 @@ The .NET MAUI Picker control, Separator line background customized by setting `S
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-  <?xml version="1.0" encoding="utf-8" ?>
-  <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
               xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
               xmlns:sfPicker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker"
               xmlns:local ="clr-namespace:Picker_29"
@@ -151,8 +150,7 @@ The .NET MAUI Picker control, Separator line background customized by setting `S
               <sfPicker:PickerColumnHeaderView DividerColor="Gray"/>
           </sfPicker:SfPicker.ColumnHeaderView>
       </sfPicker:SfPicker>
-  </ContentPage>
-
+</ContentPage>
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
