@@ -23,7 +23,8 @@ documentation: ug
     </ContentPage.Content>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# %}
+{% highlight c# hl_lines="2" %}
+SfTreeView treeView = new SfTreeView();
 treeView.FlowDirection = FlowDirection.RightToLeft;
 {% endhighlight %}
 {% endtabs %}
