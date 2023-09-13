@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Create segment content in .NET MAUI Segmented control | Syncfusion
+title: Create Segment Content in .NET MAUI Segmented Control | Syncfusion
 description: Learn about to manage the segment content in Syncfusion .NET MAUI Segmented control (SfSegmentedControl).
 platform: .NET MAUI
 control: Segmented (SfSegmented) control
@@ -78,7 +78,7 @@ public class ViewModel
 {% endtabs %}
 
 ## Image
-Create segmented control with segments having the given images using `SfSegmentItem` collection bind to `Itemssource` property.
+Create a segmented control with segments that contain the provided images by using the `SfSegmentItem` collection, which is bound to the `Itemssource` property.
 
 {% tabs %}
 {% highlight XAML %}
@@ -145,7 +145,7 @@ public class ViewModel
 {% endtabs %}
 
 ## Image with Text
-You can display images and the text in the segmented items of the control.
+Display images and text in the segmented items of the control.
 
 {% tabs %}
 {% highlight XAML %}
@@ -213,7 +213,7 @@ public class ViewModel
 {% endtabs %}
 
 ## Custom Font with Text
-You can display custom font with text in the segmented items of the control.
+Display custom font with text in the segmented items of the control.
 
 {% tabs %}
 {% highlight XAML %}

@@ -8,10 +8,10 @@ documentation: ug
 ---
  
 # Appearance Customization of .NET MAUI Segmented Control (SfSegmentedControl)
-The .NET MAUI Segmented control allows you to customize the background, text color, selection style, and much more.
+The .NET MAUI Segmented control allows you to customize the background, text color, selection style, and more.
 
 ## Customize the Border Color
-You can use `Stroke` property of `SfSegmentedControl`, to customize the border color of the segmented control.
+You can use the `Stroke` property of `SfSegmentedControl` to customize the border color of the segmented control.
 
 {% tabs %}
 {% highlight XAML %}
@@ -45,7 +45,7 @@ public partial class MainPage : ContentPage
 
 ## Customize the Border Thickness
 
-You can use `StrokeThickness` property of `SfSegmentedControl`, to customize the border thickness of the segmented control.
+You can use the `StrokeThickness` property of `SfSegmentedControl` to customize the border thickness of the segmented control.
 
 {% tabs %}
 {% highlight XAML %}
@@ -79,7 +79,7 @@ public partial class MainPage : ContentPage
 
 ## Customize the Corner Radius
 
-You can use `CornerRadius` property of `SfSegmentedControl`, to customize the corner radius of the segmented control.
+Use the `CornerRadius` property of `SfSegmentedControl` to customize the corner radius of the segmented control.
 
 {% tabs %}
 {% highlight XAML %}
@@ -114,7 +114,7 @@ public partial class MainPage : ContentPage
 ## Customize the Text Style
 
 ### Customize the Text Style of Segmented Control
-You can use `TextStyle` property of `SfSegmentedControl`, to customize the text style of the segmented control.
+Use the `TextStyle` property of `SfSegmentedControl` to customize the text style of the segmented control.
 
 {% tabs %}
 {% highlight XAML %}
@@ -155,7 +155,7 @@ public partial class MainPage : ContentPage
 
 ### Customize the Text Style of Each Segment Item
 
-You can change the text style of the each segment item by using `TextStyle` property of `SfSegmentItem`.
+Customize the text style of each segment item using the `TextStyle` property of `SfSegmentItem`.
 
 {% tabs %}
 {% highlight C# tabtitle="MainPage.xaml.cs"%}
@@ -187,7 +187,7 @@ public partial class MainPage : ContentPage
 ## Customize the Segment Background
 
 ### Customize the Segment Background of Segemented Control
-You can use `SegmentBackground` property of `SfSegmentedControl`, to customize the segment background of the segmented control.
+Use the `SegmentBackground` property of `SfSegmentedControl` to customize the segmented background of the segmented control.
 
 {% tabs %}
 {% highlight XAML %}
@@ -221,7 +221,7 @@ public partial class MainPage : ContentPage
 
 ### Customize the Segment Background of Each Segment Item
 
-You can change the background of the each segment item by using `Background` property of `SfSegmentItem`.
+Customize the background of each segment item using the `Background` property of `SfSegmentItem`.
 
 {% tabs %}
 {% highlight C# tabtitle="MainPage.xaml.cs"%}
@@ -252,7 +252,7 @@ public partial class MainPage : ContentPage
 
 ## Customize the Segment Corner Radius
 
-You can use `SegmentCornerRadius` property of `SfSegmentedControl`, to customize the segment corner radius of the segmented control.
+Use the `SegmentCornerRadius` property of `SfSegmentedControl` to customize the segment corner radius of the segmented control.
 
 {% tabs %}
 {% highlight XAML %}
@@ -286,7 +286,7 @@ public partial class MainPage : ContentPage
 
 ## Custom Data template
 
-You can use `SegmentTemplate` property of `SfSegmentedControl` to create custom segmented control. The following example code shows how to create custom segmented control using data template.
+Use the `SegmentTemplate` property of `SfSegmentedControl` to create custom segmented control. The following example code shows how to create a custom segmented control using a data template.
 
 {% tabs %}
 {% highlight XAML %}

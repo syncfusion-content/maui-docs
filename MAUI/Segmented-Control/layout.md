@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Layout in .NET MAUI Segmented control | Syncfusion
+title: Layout in .NET MAUI Segmented Control | Syncfusion
 description: Learn about the Layout support Syncfusion .NET MAUI Segmented control (SfSegmentedControl).
 platform: .NET MAUI
 control: Segmented (SfSegmented) control
@@ -12,7 +12,7 @@ documentation: ug
 ## Change the Segment Width
 
 ### Change the Segment Width for Segmented Control
-You can use `SegmentWidth` property of `SfSegmentedControl`, to customize the segment width of the segmented control.
+Use the `SegmentWidth` property of `SfSegmentedControl` to customize the segment width of the segmented control.
 
 {% tabs %}
 {% highlight XAML %}
@@ -45,8 +45,7 @@ public partial class MainPage : ContentPage
 {% endtabs %}
 
 ### Change the Each Segment Item Width
-
-You can change the width of the each segment item by using `Width` property of `SfSegmentItem`.
+You can change the width of each segment item using the `Width` property of `SfSegmentItem`.
 
 {% tabs %}
 {% highlight C# tabtitle="MainPage.xaml.cs"%}
@@ -76,7 +75,7 @@ public partial class MainPage : ContentPage
 {% endtabs %}
 
 ## Change the Segment Height
-You can use `SegmentHeight` property of `SfSegmentedControl`, to customize the segment height of the segmented control.
+You can use the `SegmentHeight` property of `SfSegmentedControl` to customize the segment height of the segmented control.
 
 {% tabs %}
 {% highlight XAML %}
@@ -109,8 +108,7 @@ public partial class MainPage : ContentPage
 {% endtabs %}
 
 ## Visible Segment Count
-
-You can set the number of visible segments to be displayed in the `SfSegmentedControl` by using `VisibleSegmentsCount` property.
+Set the number of visible segments displayed in the `SfSegmentedControl` using `VisibleSegmentsCount` property.
 
 {% tabs %}
 {% highlight XAML %}
@@ -142,4 +140,4 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-N> The layout of segments adjusts automatically once `VisibleSegmentsCount` is set. This means that the `SegmentWidth` and `SfSegmentItem.Width` properties will not apply, and the `WidthRequest` value should be divided by the `VisibleSegmentsCount` to determine the width of each segment.
+N> The layout of segments adjusts automatically once `VisibleSegmentsCount` is set. This means that the `SegmentWidth` and `SfSegmentItem.Width` properties will not be applied, and the `WidthRequest` value should be divided by the `VisibleSegmentsCount` to determine the width of each segment.

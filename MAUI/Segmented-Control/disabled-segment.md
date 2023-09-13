@@ -11,7 +11,7 @@ documentation: ug
 
 ## Enable or Disable Segment
 
-You can restrict selection and interaction of segment item by setting `IsEnabled` property of `SfSegmentItem` to `false`. The value `IsEnabled` property is `true` by default.
+Restrict selection and interaction of segment items by setting the `IsEnabled` property of `SfSegmentItem` to `false`. The value of `IsEnabled` property is `true` by default.
 
 {% tabs %}
 {% highlight C# tabtitle="MainPage.xaml.cs"%}
@@ -41,7 +41,7 @@ public partial class MainPage : ContentPage
 {% endtabs %}
 
 ### Programmatically Enable or Disable Segment Using Method
-You can set the enabled state of a specific segment at the specified index by using `SetSegmentEnabled` method of `SfSegmentedControl`.
+Set the enabled state of a specific segment at the specified index using the `SetSegmentEnabled` method of `SfSegmentedControl`.
 
 {% tabs %}
 {% highlight XAML %}
@@ -109,7 +109,7 @@ public class ViewModel
 
 ### Customizing the Disabled Segment Text Color
 
-You can use `DisabledSegmentTextColor` property of `SfSegmentedControl`, to customize the disabled segment text color of the segmented control.
+Use the `DisabledSegmentTextColor` property of `SfSegmentedControl` to customize the disabled segment text color of the segmented control.
 
 {% tabs %}
 {% highlight XAML %}
@@ -143,7 +143,7 @@ public partial class MainPage : ContentPage
 
 ### Customizing the Disabled Segment Background
 
-You can use `DisabledSegmentBackground` property of `SfSegmentedControl`, to customize the disabled segment background of the segmented control.
+Use the `DisabledSegmentBackground` property of `SfSegmentedControl` to customize the disabled segment background of the segmented control.
 
 {% tabs %}
 {% highlight XAML %}

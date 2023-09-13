@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Migrate from Xamarin to .NET MAUI Segmented control (SfSegmentedControl) | Syncfusion
+title: Migrate from Xamarin to .NET MAUI Segmented Control (SfSegmentedControl) | Syncfusion
 description: Learn about Migrating from Syncfusion Xamarin.Forms Segmented control to .NET MAUI Segmented control.
 platform: .NET MAUI
 control: Segmented (SfSegmented) control
@@ -451,8 +451,7 @@ public class ViewModel
 </table>
 
 #### SegmentTextStyle
-
-The `FontColor`, `FontSize`, `FontFamily`, `FontAttributes` properties of [SfSegmentedControl](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Buttons.SfSegmentedControl.html) is grouped to `SegmentTextStyle`.
+The `FontColor`, `FontSize`, `FontFamily`, and `FontAttributes` properties of the [SfSegmentedControl](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Buttons.SfSegmentedControl.html) is grouped to `SegmentTextStyle`.
 
 {% tabs %}
 {% highlight XAML %}
@@ -587,7 +586,8 @@ public class ViewModel
 <tr>
 <td>{{'[ScrollTo](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Buttons.SfSegmentedControl.html#Syncfusion_XForms_Buttons_SfSegmentedControl_ScrollTo_System_Int32_Syncfusion_XForms_Buttons_ScrollToPosition_)'| markdownify }}</td>
 <td>ScrollTo</td>
-<td>Method to scrolls the scroll viewer to the specified index.</td>
+<td>Method to scroll the scroll viewer to the specified index.
+</td>
 </tr>
 
 <tr>
@@ -600,4 +600,4 @@ public class ViewModel
 
 ## Upcoming Features
 
-## Known Issues in .NET MAUI Segmented Control
+* Multi selection

@@ -13,7 +13,7 @@ This section describes the features of the Segmented Control that help with item
 
 ## Programmatically Set Selected Index
 
-You can set the default value programmatically for the selection to be placed. The selection gets updated based on the index value given for the `SelectedIndex`.
+Programmatically set the default value for the selection to be placed. The selection is updated based on the given index value for the `SelectedIndex`.
 
 {% tabs %}
 {% highlight XAML %}
@@ -206,14 +206,12 @@ public partial class MainPage : ContentPage
 {% endtabs %}
 
 ## Customize Selected Segment
-
-The selected segment of the Segmented control is customized by using `SelectionIndicatorSettings` property of `SfSegmentedControl`.
+The selected segment of the Segmented control is customized using the `SelectionIndicatorSettings` property of `SfSegmentedControl`.
 
 ### Customize Selected Segment Background
 
 #### Customize Selected Segment Background of Segmented Control
-
-You can customize the selected segment background, by using `Background` property of `SelectionIndicatorSettings`.
+Customize the selected segment background using the `Background` property of `SelectionIndicatorSettings`.
 
 {% tabs %}
 {% highlight XAML %}
@@ -252,8 +250,7 @@ public partial class MainPage : ContentPage
 {% endtabs %}
 
 #### Customize Selected Segment Background of Each Segment Item
-
-You can change the selected segment background of the each segment item by using `SelectedSegmentBackground` property of `SfSegmentItem`.
+Customize the selected segment background of each segment item using the `SelectedSegmentBackground` property of `SfSegmentItem`.
 
 {% tabs %}
 {% highlight C# tabtitle="MainPage.xaml.cs"%}
@@ -285,7 +282,7 @@ public partial class MainPage : ContentPage
 ### Customize Selected Segment Text Color
 
 #### Customize Selected Segment Text Color of Segmented Control
-You can customize the selected segment text color, by using `TextColor` property of `SelectionIndicatorSettings`.
+Customize the selected segment text color using the `TextColor` property of `SelectionIndicatorSettings`.
 
 {% tabs %}
 {% highlight XAML %}
@@ -324,8 +321,7 @@ public partial class MainPage : ContentPage
 {% endtabs %}
 
 #### Customize Selected Segment Text Color of Each Segment Item
-
-You can change the selected segment text color of the each segment item by using `SelectedSegmentTextColor` property of `SfSegmentItem`.
+Customize the selected segment text color of each segment item using the `SelectedSegmentTextColor` property of `SfSegmentItem`.
 
 {% tabs %}
 {% highlight C# tabtitle="MainPage.xaml.cs"%}
@@ -355,7 +351,7 @@ public partial class MainPage : ContentPage
 {% endtabs %}
 
 ### Customize Selected Segment Border Color
-You can customize the selected segment border color, by using `Stroke` property of `SelectionIndicatorSettings`.
+Customize the selected segment border color using the `Stroke` property of `SelectionIndicatorSettings`.
 
 {% tabs %}
 {% highlight XAML %}
@@ -394,7 +390,7 @@ public partial class MainPage : ContentPage
 {% endtabs %}
 
 ### Customize Selected Segment Border Thickness
-You can customize the selected segment border thickness, by using `StrokeThickness` property of `SelectionIndicatorSettings`.
+Customize the selected segment border thickness using the `StrokeThickness` property of `SelectionIndicatorSettings`.
 
 {% tabs %}
 {% highlight XAML %}
@@ -433,7 +429,7 @@ public partial class MainPage : ContentPage
 {% endtabs %}
 
 ## Notifying Segment Selection Changes
-The `SelectionChanged` event is triggered, once the segment is selected in the Segmented control. The `SelectionChangedEventArgs` has the following values, which provides information for `SelectionChanged` event:
+The `SelectionChanged` event is triggered once the segment is selected in the segmented control. The `SelectionChangedEventArgs` has the following values, which provide information for the `SelectionChanged` event.
 
 * OldIndex
 * NewIndex
@@ -477,11 +473,11 @@ public partial class MainPage : ContentPage
 <b> Descriptions </b> <br/><br/></td></tr>
 <tr>
 <td>
-Right arrow<br/><br/></td><td>Moves to the next item on the segmented control's right side. It does not make any selection and only navigates to the next item. If the focus border is on the last item, pressing RightArrow does nothing.<br/><br/></td></tr>
+Right arrow<br/><br/></td><td>Moves to the next item on the segmented control's right side. It does not make any selection and only navigates to the next item. If the focus border is on the last item, pressing the RightArrow does nothing.<br/><br/></td></tr>
 <tr>
 <td>
 Left arrow<br/><br/></td><td>
-Moves to the previous item on the segmented control's left side. It does not make any selection and only navigates to the previous item. If the focus border is on the first item, pressing LeftArrow does nothing.<br/><br/></td></tr>
+Moves to the previous item on the segmented control's left side. It does not make any selection and only navigates to the previous item. If the focus border is on the first item, pressing the LeftArrow does nothing.<br/><br/></td></tr>
 <tr>
 <td>
 Enter<br/><br/></td><td>
