@@ -165,7 +165,7 @@ The `BorderColor` property is used to customize the color of border in `SfButton
 
 SfButton button = new SfButton();
 button.Text = "Button";
-button.Stroke = Color.Red;
+button.Stroke = Colors.Red;
 
 {% endhighlight %}
 {% endtabs %}
@@ -188,7 +188,7 @@ The `BorderWidth` property is used to customize the thickness of border in `SfBu
 SfButton button = new SfButton();
 button.Text = "Button";
 button.StrokeThickness = 6;
-button.Stroke = Color.Red;
+button.Stroke = Colors.Red;
 
 {% endhighlight %}
 {% endtabs %}
