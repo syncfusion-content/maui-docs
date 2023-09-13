@@ -204,7 +204,7 @@ The following code example illustrates how to load different templates for treev
 SfTreeView treeView = new SfTreeView();
 treeView.ItemTemplate = new ItemTemplateSelector();
 {% endhighlight %}
-<% endtabs %>
+{% endtabs %}
 
 Download the entire source code from GitHub [here](https://github.com/SyncfusionExamples/data-template-selector-demo-in-.net-maui-treeview).
 
@@ -224,7 +224,7 @@ The TreeView allows for customization of the indent spacing of items by setting 
 SfTreeView treeView = new SfTreeView();
 treeView.Indentation = 40;
 {% endhighlight %}
-<% endtabs %>
+{% endtabs %}
 
 ## ExpanderWidth
 
@@ -238,7 +238,7 @@ The TreeView allows customization of the width of the expander view by setting t
 SfTreeView treeView = new SfTreeView();
 treeView.ExpanderWidth = 40;
 {% endhighlight %}
-<% endtabs %>
+{% endtabs %}
 
 ## ExpanderPosition
 
@@ -255,7 +255,7 @@ The TreeView allows you to change the position of the expander view by setting t
 SfTreeView treeView = new SfTreeView();
 treeView.ExpanderPosition = TreeViewExpanderPosition.End;
 {% endhighlight %}
-<% endtabs %>
+{% endtabs %}
 
 ## Level based styling
 
@@ -291,7 +291,7 @@ The TreeView allows you to customize the style of the `TreeViewItem` based on di
 </ContentPage.Content>
 </ContentPage>
 {% endhighlight %}
-<% endtabs %>
+{% endtabs %}
 
 {% tabs %}
 {% highlight c# tabtitle="Converter.cs" %}
@@ -309,7 +309,7 @@ public class FontAttributeConverter : IValueConverter
     }
 }
 {% endhighlight %}
-<% endtabs %>
+{% endtabs %}
 
 Download the entire source code from GitHub [here](https://github.com/SyncfusionExamples/node-level-based-styling-in-.net.maui-treeview).
 

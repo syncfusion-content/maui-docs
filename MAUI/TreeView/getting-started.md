@@ -808,7 +808,7 @@ N> the `AutoExpandMode` property is only applicable for bound mode. For Unbound 
                          ExpandActionTarget="Node"/>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# hl_line="12 13" %}
+{% highlight c# hl_lines="12 13" %}
 using Syncfusion.Maui.TreeView;
 using Syncfusion.TreeView.Engine;
 
