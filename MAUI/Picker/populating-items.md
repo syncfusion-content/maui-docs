@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Populating with .NET MAUI Picker control | Syncfusion
+title: Populating with .NET MAUI Picker Control | Syncfusion
 description: Learn here all about populating items with Syncfusion .NET MAUI Picker (SfPicker) control.
 platform: maui
 control: SfPicker
@@ -9,9 +9,9 @@ documentation: ug
 
 # Populating Items in MAUI Picker (SfPicker)
 
-In .NET MAUI, you can bind a Picker control to an external data source by setting its ItemsSource property to an ObservableCollection<object>. This allows the Picker to display and update data from the collection.
+In .NET MAUI, you can bind a Picker control to an external data source by setting its ItemsSource property to an ObservableCollection. This enables the Picker to display and update data from the collection.
 
-To bind the items source in picker, set the SfPicker.Columns.ItemSource property as shown in the following code.
+To bind the item source in the picker, set the `SfPicker.Columns.ItemSource` property as shown in the following code.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -119,7 +119,7 @@ The following code example encapsulate how to populate Country and Cityes in eac
 
 ## Set items text style customization
 
-The .NET MAUI Picker control, both selected and unselected items text color, font size, font family, font attributes can be customize as shown in the following code.
+The .NET MAUI Picker control, selected and unselected items, text color, font size, font family, and font attributes can be customized as shown in the following code.
 
 ### Selected item customization
 
@@ -171,7 +171,7 @@ Unselected item text style can be customized by setting `SfPicker.TextStyle` pro
 
 ## Adding custom view to items
 
-In picker control, the items can be customized with custom view of all item by `ItemTemplate`, and assign custom view to the `ItemTemplate`.
+In picker control, the items can be customized with a custom view of all items by ItemTemplate and assign a custom view to the `ItemTemplate`.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}

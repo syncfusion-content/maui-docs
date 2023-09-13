@@ -1,6 +1,6 @@
 ---
 layout: post
-title: DateTimePicker with .NET MAUI Picker control | Syncfusion
+title: DateTimePicker with .NET MAUI Picker Control | Syncfusion
 description: Learn here all about date time picker with Syncfusion .NET MAUI Picker (SfPicker) control.
 platform: maui
 control: SfDateTimePicker
@@ -13,7 +13,7 @@ This section explains about the time picker.
 
 ## DateTimePicker customization
 
-The `SfDateTimePicker` supports to customize [HourInterval], [MinuteInterval], [SecondInterval], [DateFormat], [TimeFormat], [MinimumDate], [MaximumDate], [DayInterval], [MonthInterval], [YearInterval], [SelectedDate] properties by the following code.
+The `SfDateTimePicker` supports customization of the following properties: [HourInterval], [MinuteInterval], [SecondInterval], [DateFormat], [TimeFormat], [MinimumDate], [MaximumDate], [DayInterval], [MonthInterval], [YearInterval], and [SelectedDate]. This can be achieved using the following code.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
