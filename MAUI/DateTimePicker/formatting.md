@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Formatting with .NET MAUI Date Time Picker control | Syncfusion
-description: Learn about formatting with Syncfusion .NET MAUI Date Time Picker (SfDateTimePicker) control and its basic features.
+title: Formatting in .NET MAUI Date Time Picker control | Syncfusion
+description: Learn about formatting in Syncfusion .NET MAUI Date Time Picker (SfDateTimePicker) control and its basic features.
 platform: maui
 control: SfDateTimePicker
 documentation: ug
 ---
 
-# Formatting with .NET MAUI Date Time Picker (SfDateTimePicker)
+# Formatting in .NET MAUI Date Time Picker (SfDateTimePicker)
 Format is a way to represent the value of the date and time in a different string format.
 
 ## Date format
@@ -60,9 +60,9 @@ The different types of formats are:
 
 [`H_mm_ss`] - Represents the hour minute second in H_mm_ss format.
 
-[`h_mm_ss_tt`] - Represents the hour minute second meridien in h_mm_ss_tt format.
+[`h_mm_ss_tt`] - Represents the hour minute second meridiem in h_mm_ss_tt format.
 
-[`h_mm_tt`] - Represents the hour minute time in h_mm_tt format.
+[`h_mm_tt`] - Represents the hour minute meridiem in h_mm_tt format.
 
 [`HH_mm`] - Represents the hour minute in HH_mm format.
 
@@ -70,9 +70,9 @@ The different types of formats are:
 
 [`hh_mm_ss_tt`] - Represents the hour minute second meridiem in hh_mm_ss_tt format.
 
-[`hh_mm_tt`] - Represents the hour minute time in hh_mm_tt format.
+[`hh_mm_tt`] - Represents the hour minute meridiem in hh_mm_tt format.
 
-[`hh_tt`] - Represents the hour time in hh_tt format.
+[`hh_tt`] - Represents the hour meridiem in hh_tt format.
 
 
 {% tabs %}
@@ -86,7 +86,7 @@ The different types of formats are:
 {% highlight c# tabtitle="C#" hl_lines="2" %}
 
 SfDateTimePicker picker = new SfDateTimePicker();
-picker.DateFormat = PickerTimeFormat.hh_mm_ss_tt;
+picker.TimeFormat = PickerTimeFormat.hh_mm_ss_tt;
 this.Content = picker;
 
 {% endhighlight %}  

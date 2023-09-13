@@ -32,16 +32,16 @@ this.Content = picker;
 {% endhighlight %}  
 {% endtabs %}
 
-The Date Time picker can be opened programmatically by setting the [`IsOpen`] property to true of [SfDateTimePicker]. By default, the `IsOpen` property is "false".
+The Date Time picker can be opened programmatically by setting the [`IsOpen`] property to `true` of [SfDateTimePicker]. By default, the `IsOpen` property is `false`.
 
-Note: This property is automatically changed to false when you close the dialog by clicking outside of the dialog.
+Note: This property is automatically changed to `false` when you close the dialog by clicking outside of the dialog.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml"%}
 
 <Grid>
     <picker:SfDateTimePicker x:Name="Picker" 
-                                Mode="Dialog">
+                             Mode="Dialog">
     </picker:SfDateTimePicker>
     <Button Text="Open Date Time picker" 
             x:Name="pickerButton"
@@ -55,10 +55,6 @@ Note: This property is automatically changed to false when you close the dialog 
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs"%}
-
-SfDateTimePicker picker = new SfDateTimePicker();
-picker.Mode = PickerMode.Dialog;
-this.Content = picker;
 
 private void Button_Clicked(object sender, EventArgs e)
 {
@@ -75,7 +71,7 @@ The relative dialog mode is used to show the date time picker in a pop up by set
 The [RelativePosition] is specified in the picker property enumeration, which is used to align the picker in a specific position. It provides eight position such as `AlignTop`, `AlignToLeftOf`, `AlignToRightOf`, `AlignBottom`, `AlignTopLeft`, `AlignTopRight`, `AlignBottomLeft` and `AlignBottomRight`. The default relative position is `AlignTop` in the [SfDateTimePicker].
 
 {% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="2" %}
+{% highlight xaml tabtitle="XAML" hl_lines="2 3" %}
 
 <picker:SfDateTimePicker x:Name="Picker"
                          Mode="RelativeDialog"
@@ -83,7 +79,7 @@ The [RelativePosition] is specified in the picker property enumeration, which is
 </picker:SfDateTimePicker>
 
 {% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="2" %}
+{% highlight c# tabtitle="C#" hl_lines="2 3" %}
 
 SfDateTimePicker picker = new SfDateTimePicker();
 picker.Mode = PickerMode.RelativeDialog;
@@ -93,9 +89,9 @@ this.Content = picker;
 {% endhighlight %}  
 {% endtabs %}
 
-The Date Time picker can be opened programmatically by setting the [`IsOpen`] property to true of [SfDateTimePicker]. By default, the `IsOpen` property is "false".
+The Date Time picker can be opened programmatically by setting the [`IsOpen`] property to true of [SfDateTimePicker]. By default, the `IsOpen` property is `false`.
 
-Note: This property is automatically changed to false when you close the dialog by clicking outside of the dialog.
+Note: This property is automatically changed to `false` when you close the dialog by clicking outside of the dialog.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml"%}
@@ -117,11 +113,6 @@ Note: This property is automatically changed to false when you close the dialog 
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs"%}
-
-SfDateTimePicker picker = new SfDateTimePicker();
-picker.Mode = PickerMode.RelativeDialog;
-this.Picker.RelativePosition = PickerRelativePosition.AlignTopLeft;
-this.Content = picker;
 
 private void Button_Clicked(object sender, EventArgs e)
 {

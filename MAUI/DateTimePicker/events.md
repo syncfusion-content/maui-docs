@@ -11,7 +11,7 @@ documentation: ug
 
 ## Selection changed event
 
-The [SelectionChanged] event is used to notify when the date selection or time selection is changed onto the view in the [SfDateTimePicker].
+The [SelectionChanged] event is used to notify when the date time selection is changed onto the view in the [SfDateTimePicker].
 
 * `Sender`: This contains the `SfDateTimePicker` object.
 
@@ -62,7 +62,7 @@ The [Opened] event occurs when the picker popup is opened in the [SfDateTimePick
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
 <picker:SfDateTimePicker x:Name="Picker"
-                         Closing="OnDateTimePickerPopUpOpened">
+                         Opened="OnDateTimePickerPopUpOpened">
 </picker:SfDateTimePicker>
 
 {% endhighlight %}
@@ -72,7 +72,7 @@ this.Picker.Opened += this.OnDateTimePickerPopUpOpened;
 
 private void OnDateTimePickerPopUpOpened(object sender, EventArgs e)
         {
-            // If you to open the picker, set IsOpen property to true.
+            // If you need to open the picker, set IsOpen property to true.
             this.Picker.IsOpen = true;
         }
 
@@ -85,7 +85,7 @@ The [Closing] event occurs when the picker popup is closing in the [SfDateTimePi
 
 * `Sender`: This contains the `SfDateTimePicker` object.
 
-* `EventArgs`: In SfDateTimePicker picker, [CancelEventArgs] is used to describe a cancel event which holds the bool value.
+* `EventArgs`: In SfDateTimePicker picker, [CancelEventArgs] is used to describe the cancel event which holds the bool value.
 
     * [Cancel] : Indicating whether we should cancel the operation or not.
 
@@ -132,7 +132,7 @@ this.Picker.Closed += this.OnDateTimePickerPopUpClosed;
 
 private void OnDateTimePickerPopUpClosed(object sender, EventArgs e)
         {
-            // If you to close the picker, set IsOpen property to false.
+            // If you need to close the picker, set IsOpen property to false.
             this.Picker.IsOpen = false;
         }
 
@@ -176,7 +176,7 @@ private void OnDateTimePickerOkButtonClicked(object sender, EventArgs e)
 
 ### CancelButtonClicked event
 
- The [CancelButtonClicked] event occurs when the cancel button is clicked in the [SfDateTimePicker] footer view. This event is not applicable when the footer view.
+ The [CancelButtonClicked] event occurs when the cancel button is clicked in the [SfDateTimePicker] footer view. This event is not applicable when the footer view is not visible.
 
 * `Sender`: This contains the `SfDateTimePicker` object.
 
