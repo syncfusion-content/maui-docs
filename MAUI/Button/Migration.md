@@ -30,20 +30,20 @@ To migrate easier from Xamarin SfButton to `.NET MAUI SfButton`, we kept most of
 <th>.NET MAUI SfButton</th>
 <th>Description</th></tr>
 <tr>
-<td> {{'[BorderThickness](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Border.SfBorder.html#Syncfusion_XForms_Border_SfBorder_BorderThickness)'| markdownify }}</td>
-<td> {{'[StrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfButton.html#Syncfusion_Maui_Buttons_SfButton_StrokeThickness)'| markdownify }}</td>
+<td> {{'BorderThickness'| markdownify }}</td>
+<td> {{'StrokeThickness'| markdownify }}</td>
 <td>Gets or sets the stroke thickness.</td></tr>
 <tr>
-<td> {{'[BorderColor]`| markdownify }}</td>
-<td> {{'[Stroke]`| markdownify }}</td>
+<td> {{'BorderColor`| markdownify }}</td>
+<td> {{'Stroke`| markdownify }}</td>
 <td>Gets or sets the color of the border.</td></tr>
 <tr>
-<td> {{'[BackgroundImage]`| markdownify }}</td>
-<td> {{'[BackgroundImageSource]`| markdownify }} </td>
+<td> {{'BackgroundImage`| markdownify }}</td>
+<td> {{'BackgroundImageSource`| markdownify }} </td>
 <td>Gets or sets the background image in Button.</td></tr>
 <tr>
-<td> {{'[ImageWidth]`| markdownify }}</td>
-<td> {{'[ImageSize]`| markdownify }}</td>
+<td> {{'ImageWidth`| markdownify }}</td>
+<td> {{'ImageSize`| markdownify }}</td>
 <td>Gets or sets the image size in Button.</td></tr>
 </table> 
 
