@@ -38,9 +38,6 @@ The `Closed` event was raised after the picker pop-up is closed.
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-{% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
-
     using Syncfusion.Maui.Picker;
     namespace Picker_29;
 
@@ -71,4 +68,4 @@ The `Closed` event was raised after the picker pop-up is closed.
     }
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% endtabs %}

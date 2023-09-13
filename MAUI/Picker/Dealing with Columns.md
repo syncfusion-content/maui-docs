@@ -25,12 +25,9 @@ You can customize various properties, including `DisplayMemberPath`, `Width`, `S
                 x:Class="Picker_29.MainPage">
     <sfPicker:SfPicker x:Name="picker">
     </sfPicker:SfPicker>
-</ContentPage>
+    </ContentPage>
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
-
-{% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
 
     picker.Columns[0].SelectedIndex = 5;
     picker.Columns[0].HeaderText = "Languages";
@@ -38,5 +35,5 @@ You can customize various properties, including `DisplayMemberPath`, `Width`, `S
     picker.Columns[0].ItemsSource = languages;
     picker.Columns[0].Width = 150;
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% endtabs %}
 

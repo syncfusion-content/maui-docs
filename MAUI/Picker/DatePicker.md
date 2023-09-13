@@ -36,9 +36,6 @@ The `SfDatePicker` supports to customize [DateFormat], [MinimumDate], [MaximumDa
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-{% tabs %}
-{% highlight xaml tabtitle="c#" %}
-
     datePicker.Format = PickerDateFormat.dd_MM_yyyy;
     datePicker.MinimumDate = new DateTime(01 / 09 / 2023);
     datePicker.MaximumDate = new DateTime(01 / 12 / 2023);
@@ -47,5 +44,5 @@ The `SfDatePicker` supports to customize [DateFormat], [MinimumDate], [MaximumDa
     datePicker.MonthInterval = 2;
     datePicker.YearInterval = 2;
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% endtabs %}
 

@@ -39,9 +39,6 @@ The `SfDateTimePicker` supports to customize [HourInterval], [MinuteInterval], [
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-{% tabs %}
-{% highlight xaml tabtitle="c#" %}
-
         dateTimePicker.HourInterval = 2;
         dateTimePicker.MinuteInterval = 2;
         dateTimePicker.SecondInterval = 2;
@@ -54,5 +51,5 @@ The `SfDateTimePicker` supports to customize [HourInterval], [MinuteInterval], [
         dateTimePicker.MonthInterval = 2;
         dateTimePicker.YearInterval = 2;
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% tabs %}
 
