@@ -9,7 +9,7 @@ documentation: ug
 
 # .NET MAUI Chart Overview
 
-Syncfusion .NET MAUI Charts (SfCircularChart) is used to create the chart with beautiful and enhanced UI visualization of data that are used in high-quality .NET MAUI applications.
+Syncfusion .NET MAUI Charts ([SfCircularChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCircularChart.html)) is used to create the chart with beautiful and enhanced UI visualization of data that are used in high-quality .NET MAUI applications.
 
 ## Key features
 

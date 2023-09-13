@@ -11,10 +11,10 @@ documentation: ug
 
 Cartesian chart supports the following types of chart axis.
 
-* NumericalAxis
-* CategoryAxis
-* DateTimeAxis
-* LogarithmicAxis
+* [NumericalAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.NumericalAxis.html)
+* [CategoryAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.CategoryAxis.html)
+* [DateTimeAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DateTimeAxis.html)
+* [LogarithmicAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.LogarithmicAxis.html)
 
 ## Numerical Axis
 

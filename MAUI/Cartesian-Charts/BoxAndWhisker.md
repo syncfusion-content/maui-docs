@@ -226,7 +226,6 @@ The Median values of given dataset is viewed by enabling the [ShowMedian](https:
 ![ShowMedian in MAUI chart](Chart-types_images/ShowMedian.png)
 
 N>
-
  * The middle number of data points is the median for the odd number of data points.
  * The average of the middle two numbers is a median for the even number of data points.
 
