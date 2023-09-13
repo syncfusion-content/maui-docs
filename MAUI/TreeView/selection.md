@@ -115,13 +115,15 @@ The `SelectionChanging` event is raised while selecting an item at the execution
 You can cancel the selection process within this event by setting the `ItemSelectionChangingEventArgs.Cancel` property to true.
 
 {% tabs %}
-{% highlight c# hl_lines="124" %}
+{% highlight c# hl_lines="7" %}
 treeView.SelectionChanging += TreeView_SelectionChanging;  
 
 private void TreeView_SelectionChanging(object sender, ItemSelectionChangingEventArgs e)
 {
    if (e.AddedItems.Count > 0 && e.AddedItems[0] == ViewModel.Items[0])
-       e.Cancel = true;
+   {
+      e.Cancel = true;
+   }
 }
 {% endhighlight %}
 {% endtabs %}
