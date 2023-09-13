@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Formatting in .NET MAUI Date Time Picker control | Syncfusion
+title: Formatting in .NET MAUI Date Time Picker Control | Syncfusion
 description: Learn about formatting in Syncfusion .NET MAUI Date Time Picker (SfDateTimePicker) control and its basic features.
 platform: maui
 control: SfDateTimePicker
@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 # Formatting in .NET MAUI Date Time Picker (SfDateTimePicker)
-Format is a way to represent the value of the date and time in a different string format.
+Format is a way to represent the date and time value in a different string format.
 
 ## Date format
 You can customize the date format of the date time picker by using the [DateFormat] property in [PickerDateFormat]. The default format is `yyyy_MM_dd`.
