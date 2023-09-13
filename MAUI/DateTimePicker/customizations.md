@@ -240,10 +240,9 @@ this.Content = picker;
 {% endtabs %}
 
 ### Customization of footer
-You can customize the footer text style and background color of the `Date Time Picker` using the [TextStyle] and [Background] properties of the [FooterView].
+You can customize the footer text style and background color of the `Date Time Picker` using the [TextStyle] and [Background] properties of the [PickerFooterView].
 
 {% tabs %}
-
 {% highlight xaml tabtitle="XAML" %}
 
 <picker:SfDateTimePicker x:Name="picker" >
