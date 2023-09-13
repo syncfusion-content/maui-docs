@@ -75,7 +75,7 @@ private void Button_Clicked(object sender, System.EventArgs e)
 
 The relative dialog mode is used to show the time picker in a pop up by setting the [Mode] property to [`RelativeDialog`]. It is used to align the picker in a specific position. You can set the position by setting the [RelativePosition] property in the [SfTimePicker].
 
-The [RelativePosition] is specified in the picker property enumeration, which is used to align the picker in a specific position. It provides eight position such as `AlignTop`, `AlignToLeftOf`, `AlignToRightOf`, `AlignBottom`, `AlignTopLeft`, `AlignTopRight`, `AlignBottomLeft` and `AlignBottomRight`. The default relative position is `AlignTop` in the [SfTimePicker].
+The [RelativePosition] is specified in the picker property enumeration, which is used to align the picker in a specific position. It provides eight position such as `AlignTop`, `AlignToLeftOf`, `AlignToRightOf`, `AlignBottom`, `AlignTopLeft`, `AlignTopRight`, `AlignBottomLeft`, and `AlignBottomRight`. The default relative position is `AlignTop` in the [SfTimePicker].
 
 {% tabs %}
 
