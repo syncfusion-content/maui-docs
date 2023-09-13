@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Customizations in .NET MAUI Date Picker control | Syncfusion
+title: Customizations in .NET MAUI Date Picker Control | Syncfusion
 description: Learn about customizations in Syncfusion .NET MAUI Date Picker (SfDatePicker) control and its basic features.
 platform: maui
 control: SfDatePicker

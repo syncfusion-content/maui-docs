@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Customizations in .NET MAUI Time Picker control | Syncfusion
+title: Customizations in .NET MAUI Time Picker Control | Syncfusion
 description: Learn about customizations in Syncfusion .NET MAUI Time Picker (SfTimePicker) control and its basic features.
 platform: maui
 control: SfTimePicker
