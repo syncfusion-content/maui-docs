@@ -1193,7 +1193,7 @@ this.Content = scheduler;
 <tr>
 <td>{{'[TextColorMapping](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.ScheduleAppointmentMapping.html#Syncfusion_SfSchedule_XForms_ScheduleAppointmentMapping_TextColorMapping)'| markdownify }}</td>
 <td>TextColorMapping</td>
-<td>Gets or sets the TextColor Mapping to map the custom appointment property with schedule appointments text color property.</td></tr>
+<td>Gets or sets the TextColor Mapping to map the custom appointment property with the scheduled appointment's text color property.</td></tr>
 
  </table> 
 

@@ -374,8 +374,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {% endtabs %}
 
 #### Numeric up-down editor
-
-The numeric up-down button will be displayed in the numeric editor, When `UpDownPlacementMode` property of `DataFormNumericItem` is set to `NumericEditorUpDownPlacementMode.Inline`. By defult, the `NumericEditorUpDownPlacementMode` is `Hidden`.
+The numeric up-down button will be displayed in the numeric editor when the `UpDownPlacementMode` property of `DataFormNumericItem` is set to `NumericEditorUpDownPlacementMode.Inline`. By default, the `NumericEditorUpDownPlacementMode` is `Hidden`.
 
 {% tabs %}
 {% highlight C# %}
