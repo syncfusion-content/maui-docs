@@ -228,40 +228,6 @@ N> If you set the Stream source with a local variable, the stream will be closed
 
 imageEditor.Source = ImageSource.FromStream(() => new MemoryStream(imageBytes))
 
-## Show or hide toolbar
-
-To show or hide the toolbar, set the [`ShowToolbar`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_ShowToolbar) property to either true or false. By default, the [`ShowToolbar`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_ShowToolbar) property is set to `true`.
-
-{% tabs %}
-{% highlight xaml %}
-
-<ContentPage 
-            . . .
-            <imageEditor:SfImageEditor Source="image.jpeg" ShowToolbar="True" />
-
-</ContentPage>
-
-{% endhighlight %}
-{% highlight C# %}
-
-using Syncfusion.Maui.ImageEditor;
-namespace SyncfusionImageEditor;
-
-public partial class MainPage : ContentPage
-{
-	public MainPage()
-	{
-        InitializeComponent();
-        SfImageEditor imageEditor = new SfImageEditor();
-        imageEditor.Source = "image.jpeg";
-        imageEditor.ShowToolbar = true;
-        this.content = imageEditor;
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-image-editor-examples/tree/master/GettingStarted)
 
 ## Get the image stream
