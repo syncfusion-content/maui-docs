@@ -141,7 +141,7 @@ private void OnDateTimePickerPopUpClosed(object sender, EventArgs e)
 
 ## Events in footer view
 
-In `SfDateTimePicker` footer view provides two events. These events are not applicable while the footer view is not visible.
+The `SfDateTimePicker` footer view provides two events. These events are not applicable while the footer view is not visible.
 
  * [`OkButtonClicked`]
  * [`CancelButtonClicked`]

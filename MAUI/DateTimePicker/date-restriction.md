@@ -31,7 +31,7 @@ this.Content = picker;
 
 
 ## Maximum date
-The Date time picker provides an option to restrict the selection of date and time by using the [MaximumDate] property in [SfDateTimePicker] and you cannot select the date and time beyond the maximumDate date range.
+The Date time picker provides an option to restrict the selection of date and time by using the [MaximumDate] property in [SfDateTimePicker] and you cannot select the date and time beyond the maximum date range.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="2" %}
