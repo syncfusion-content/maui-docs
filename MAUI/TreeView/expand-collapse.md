@@ -33,7 +33,7 @@ treeView.ExpandActionTarget = TreeViewExpandActionTarget.Node;
 
 By default, the items in the treeview will be in a collapsed state. You can define how the nodes should be expanded when loading the TreeView by using the `AutoExpandMode` property.
 
-The `AutoExpandMode` property is only applicable in bound mode. In the unbound mode, you need to set the `IsExpanded` property to `true` when creating the nodes in order for them to be in the expanded state when the TreeView is loaded
+The `AutoExpandMode` property is only applicable in bound mode. In the unbound mode, you need to set the `IsExpanded` property to `true` when creating the nodes in order for them to be in the expanded state when the TreeView is loaded.
 
 * `None` : All items are collapsed when loaded.
 * `RootNodesExpanded` : Expands only the root item when loaded.
