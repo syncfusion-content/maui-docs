@@ -247,12 +247,12 @@ The ImageEditor automatically generates the toolbars. To add the toolbars manual
                 <imageEditor:ImageEditorToolbarGroupItem Alignment="Start">
                     <imageEditor:ImageEditorToolbarGroupItem.Items>
                         <imageEditor:ImageEditorToolbarItem Name="Browse" />
-                        <imageEditor:ImageEditorToolbarItem Name="Save" />
+                        <imageEditor:ImageEditorToolbarItem Name="Reset" />
                     </imageEditor:ImageEditorToolbarGroupItem.Items>
                 </imageEditor:ImageEditorToolbarGroupItem>
                 <imageEditor:ImageEditorToolbarGroupItem Alignment="End">
                     <imageEditor:ImageEditorToolbarGroupItem.Items>
-                        <imageEditor:ImageEditorToolbarItem Name="Reset" />
+                        <imageEditor:ImageEditorToolbarItem Name="Save" />
                         <imageEditor:ImageEditorToolbarItem Name="SaveEdit" />
                     </imageEditor:ImageEditorToolbarGroupItem.Items>
                 </imageEditor:ImageEditorToolbarGroupItem>
@@ -441,7 +441,7 @@ Create `SubToolbars` within your toolbar items to organize related actions.
 {% highlight C# %}
 
 SfImageEditor imageEditor = new SfImageEditor();
-imageEditor.Source = ImageSource.FromFile("image4.png");
+imageEditor.Source = ImageSource.FromFile("image.png");
 ImageEditorToolbar footerToolbar = imageEditor.Toolbars[1];
 ImageEditorToolbarItem cropItem = (ImageEditorToolbarItem)footerToolbar.ToolbarItems.FirstOrDefault(i => i.Name == "Crop");
 cropItem.SubToolbarOverlay = false;
@@ -451,9 +451,9 @@ cropItem.SubToolbars = new List<ImageEditorToolbar>()
     {
         ToolbarItems = new List<IImageEditorToolbarItem>()
         {
-           new ImageEditorToolbarItem(){ Name = "Rectangle"},
-           new ImageEditorToolbarItem(){ Name = "Pen"},
-           new ImageEditorToolbarItem(){ Name = "AddText"}
+           new ImageEditorToolbarItem(){ Name = "original"},
+           new ImageEditorToolbarItem(){ Name = "circle"},
+           new ImageEditorToolbarItem(){ Name = "square"}
         },
     }
 };
@@ -551,9 +551,9 @@ Customize the appearance of the toolbar by using the `ToolbarSettings` property.
   
 <imageEditor:SfImageEditor Source="image.png">
     <imageEditor:SfImageEditor.ToolbarSettings>
-        <imageEditor:ImageEditorToolbarSettings Background="LightGreen"
-                                                IconColor="Tomato"
-                                                DisabledColor="Lavender"
+        <imageEditor:ImageEditorToolbarSettings Background="Pink"
+                                                IconColor="Black"
+                                                DisabledColor="Grey"
                                                 IconSize="50, 50" />
     </imageEditor:SfImageEditor.ToolbarSettings>
 </imageEditor:SfImageEditor>
@@ -565,7 +565,7 @@ Customize the appearance of the toolbar by using the `ToolbarSettings` property.
 SfImageEditor imageEditor = new SfImageEditor();
 imageEditor.Source = ImageSource.FromFile("image.png");
 imageEditor.ToolbarSettings.Background = Brush.pink;
-imageEditor.ToolbarSettings.IconColor = Colors.White;
+imageEditor.ToolbarSettings.IconColor = Colors.Black;
 imageEditor.ToolbarSettings.DisabledColor = Colors.Grey;
 imageEditor.ToolbarSettings.IconSize = new Size(50, 50);
 
