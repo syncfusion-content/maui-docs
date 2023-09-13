@@ -9,7 +9,7 @@ documentation: ug
 
 # Date Picker mode in .NET MAUI Date Picker (SfDatePicker)
 
-The date picker mode is specified in the picker property enumeration, which is used to show the date picker based on the modes. It provides three modes such as `Default`, `Dialog` and `RelativeDialog`. The default picker mode is `Default` in the [SfDatePicker].
+The date picker mode is specified in the picker property enumeration, which is used to show the date picker based on the modes. It provides three modes such as `Default`, `Dialog`, and `RelativeDialog`. The default picker mode is `Default` in the [SfDatePicker].
 
 ## Dialog Mode
 

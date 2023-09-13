@@ -9,7 +9,7 @@ documentation: ug
 
 # Time Picker mode in .NET MAUI Time Picker(SfTimePicker)
 
-The Time picker mode is specified in the picker property enumeration, which is used to show the time picker based on the modes. It provides three modes such as `Default`, `Dialog` and `RelativeDialog`. The default picker mode is `Default` in the [SfTimePicker].
+The Time picker mode is specified in the picker property enumeration, which is used to show the time picker based on the modes. It provides three modes such as `Default`, `Dialog`, and `RelativeDialog`. The default picker mode is `Default` in the [SfTimePicker].
 
 ## Dialog Mode
 
