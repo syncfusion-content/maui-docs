@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Working with TreeView in .NET MAUI TreeView control | Syncfusion
+title: Working with TreeView in .NET MAUI TreeView Control | Syncfusion
 description: Learn here all about Working with TreeView support in Syncfusion .NET MAUI TreeView (SfTreeView) control and more.
 platform: .NET MAUI
 control: SfTreeView
@@ -32,7 +32,7 @@ The `Loaded` event is used for the following use case:
 
 ### Tapped event
 
-The `ItemTapped` event will be triggered whenever tapping the item.  `ItemTappedEventArgs` has the following members which provides the information for `ItemTapped` event:
+The `ItemTapped` event will be triggered whenever tapping the item. `ItemTappedEventArgs` has the following members which provide the information for the `ItemTapped` event:
 
  * `Node`: Gets the `TreeViewNode` and data associated with the tapped item as its arguments.
  * `Position`: Gets the touch position in the tapped item.
@@ -58,7 +58,7 @@ private void TreeView_ItemTapped(object sender, ItemTappedEventArgs e)
 
 The `ItemDoubleTapped` event will be triggered whenever double tapping the item. The `ItemDoubleTappedEventArgs` has the following members providing information for the `ItemDoubleTapped` event:
 
- * `Node`: Gets the `TreeViewNode` and data associated with the double tapped item as its arguments.
+ * `Node`: Gets the `TreeViewNode` and data associated with the double-tapped item as its arguments.
  * `Position`: Gets the touch position in the double tapped item.
  * `Handled`: Gets or sets whether the event is handled or not.
 
@@ -78,10 +78,10 @@ private void TreeView_ItemDoubleTapped(object sender, ItemDoubleTappedEventArgs 
 {% endhighlight %}
 {% endtabs %}
 
-### ItemHolding event
+### ItemLongPress event
 
-The `ItemHolding` event will be triggered whenever the item is long pressed.
- `ItemHoldingEventArgs` has the following members which provides the information for `ItemHolding` event:
+The `ItemLongPress` event will be triggered whenever the item is long pressed.
+ `ItemLongPressEventArgs` has the following members which provides the information for the `ItemLongPress` event:
 
  * `Node`: Gets the `TreeViewNode` and data associated with the hold item as its arguments.
  * `Position`: Gets the touch position in the hold item.
@@ -89,14 +89,14 @@ The `ItemHolding` event will be triggered whenever the item is long pressed.
 
 {% tabs %}
 {% highlight xaml %}
-<syncfusion:SfTreeView x:Name="treeView" ItemHolding="TreeView_ItemHolding" />
+<syncfusion:SfTreeView x:Name="treeView" ItemLongPress="TreeView_ItemHolding" />
 {% endhighlight %}
 {% highlight c# %}
 
-treeView.ItemHolding += TreeView_ItemHolding;
-private void TreeView_ItemHolding(object sender, ItemHoldingEventArgs e)
+treeView.ItemLongPress += TreeView_ItemHolding;
+private void TreeView_ItemHolding(object sender, ItemLongPressEventArgs e)
 {
-    DisplayAlert("Item Hold", "TreeView item is holding","Close");   
+    DisplayAlert("Item LongPress", "TreeView item is Long Pressed","Close");   
 }
 
 {% endhighlight %}

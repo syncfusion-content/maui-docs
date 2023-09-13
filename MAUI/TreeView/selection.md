@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Selection in .NET MAUI TreeView control | Syncfusion
-description: Learn here all about Selection support in Syncfusion .NET MAUI TreeView (SfTreeView) control and more.
+title: Selection in .NET MAUI TreeView Control | Syncfusion
+description: Learn here about Selection support in Syncfusion .NET MAUI TreeView (SfTreeView) control and more.
 platform: .NET MAUI
 control: SfTreeView
 documentation: ug
@@ -15,17 +15,17 @@ This section explains how to perform selection and its related operations in the
 The TreeView allows selecting the items either programmatically or touch interactions by setting the `SelectionMode` property value to other than `None`. The control has different selection modes to perform selection operations as listed as follows.
 
 * `None`: Allows disabling the selection.
-* `Single`: Allows selecting the single item only. When clicking on the selected item, selection not will not be cleared. This is the default value for `SelectionMode`.
+* `Single`: Allows selecting the single item only. When clicking on the selected item, the selection will not be cleared. This is the default value for `SelectionMode`.
 * `SingleDeselect`: Allows selecting the single item only. When clicking on the selected item, selection gets cleared.
 * `Multiple`: Allows selecting more than one item. Selection is not cleared when selecting more than one items. When clicking on the selected item, selection gets cleared.
-* `Extended`: Allows to select the multiple items using the common key modifiers.
+* `Extended`: Allows to select multiple items using the common key modifiers.
 
 {% tabs %}
 {% highlight xaml %}
-<syncfusion:SfTreeView x:Name="TreeView" SelectionMode="Multiple"/>
+<syncfusion:SfTreeView x:Name="treeView" SelectionMode="Multiple"/>
 {% endhighlight %}
 {% highlight c# %}
-TreeView.SelectionMode = SelectionMode.Multiple;
+treeView.SelectionMode = SelectionMode.Multiple;
 {% endhighlight %}
 {% endtabs %}
 
@@ -74,7 +74,7 @@ treeView.SelectedItems.Clear();
  
 ### CurrentItem vs SelectedItem
 
-The TreeView gets the selected item by using the `SelectedItem` properties. Both `SelectedItem` and `CurrentItem` returns the same data object when selecting single item. When selecting more than one item, the `SelectedItem` property returns the first selected item, and the `CurrentItem` property returns the last selected item.
+The TreeView gets the selected item by using the `SelectedItem` properties. Both `SelectedItem` and `CurrentItem` return the same data object when selecting a single item. When selecting more than one item, the `SelectedItem` property returns the first selected item, and the `CurrentItem` property returns the last selected item.
 
 ## Select an entire row
 
@@ -95,19 +95,19 @@ TreeView.FullRowSelect = true;
 
 ### Selection background
 
-The TreeView allows changing the selection background color for the selected items by using the `SelectionBackgroundColor` property. You can also change the selection background color at runtime.
+The TreeView allows changing the selection background color for the selected items by using the `SelectionBackground` property. You can also change the selection background color at runtime.
 
 ### Selection foreground
 
-The TreeView allows changing the selection foreground color for the selected items by using the `SelectionForegroundColor` property. You can also change the selection foreground color at runtime.
+The TreeView allows changing the selection foreground color for the selected items by using the `SelectionForeground` property. You can also change the selection foreground color at runtime.
 
-N> `SelectionForegroundColor` is applicable only for unbound mode.
+N> `SelectionForeground` is applicable only for unbound mode.
 
 ## Events
 
 ### SelectionChanging Event
 
-The `SelectionChanging` event is raised while selecting an item at the execution time. The `ItemSelectionChangingEventArgs` has the following members which provides the information for `SelectionChanging` event:
+The `SelectionChanging` event is raised while selecting an item at the execution time. The `ItemSelectionChangingEventArgs` has the following members which provide the information for `SelectionChanging` event:
 
 * `AddedItems`: Gets collection of the underlying data objects where the selection is going to process.
 * `RemovedItems`: Gets collection of the underlying data objects where the selection is going to remove.
@@ -115,7 +115,7 @@ The `SelectionChanging` event is raised while selecting an item at the execution
 You can cancel the selection process within this event by setting the `ItemSelectionChangingEventArgs.Cancel` property to true.
 
 {% tabs %}
-{% highlight c# %}
+{% highlight c# hl_lines="124" %}
 treeView.SelectionChanging += TreeView_SelectionChanging;  
 
 private void TreeView_SelectionChanging(object sender, ItemSelectionChangingEventArgs e)
@@ -150,18 +150,11 @@ N> `SelectionChanging` and `SelectionChanged` events will be triggered only on U
 
 The TreeView allows to select the items through keyboard interactions. Behavior of key navigation is explained as follows:
 
-* When the `SelectionMode` is `Single` or `SingleDeselect`, the selected item is highlighted with `FocusBorderColor` around the item while key navigation.
+* When the `SelectionMode` is `Single` or `SingleDeselect`, the selected item is highlighted with focus border around the item while key navigation.
 
-* When the `SelectionMode` is `Multiple` or `Extended`, the `FocusBorderColor` will set to the `CurrentItem`.
-
-## FocusBorderColor
-
-The `FocusBorderColor` property is used to set the border color for the current focused item.The default color is `Color.FromArgb("#000000")`.
-
-## FocusBorderThickness
-The `FocusBorderThickness` property is used to set the border thickness for the current focused item. The default thickness is `1.2f`.
+* When the `SelectionMode` is `Multiple` or `Extended`, the focus border will set to the `CurrentItem`.
 
 ## Limitation
 
-* When a grid is loaded inside the `ItemTemplate` with background color, the `SelectionBackgroundColor` will not display. Because, it overlaps the `SelectionBackgroundColor`. In this case, set the background color for the TreeView instead of grid in the  `ItemTemplate`.
+* When a grid is loaded inside the `ItemTemplate` with a background color, the `SelectionBackground` will not displayed because it overlaps the `SelectionBackground`. In this case, set the background color for the TreeView instead of grid in the `ItemTemplate`.
 * When the `TreeView` contains duplicated items in the collection, only the first item whose instance was created initially will be selected or deselected.
