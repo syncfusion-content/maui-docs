@@ -26,6 +26,8 @@ private void BringIntoView_Clicked(object sender, EventArgs e)
 {% endhighlight %}
 {% endtabs %}
 
+Download the entire source code from GitHub [here](https://github.com/SyncfusionExamples/how-to-bring-specific-node-into-view-programmatically-in-.net-maui-treeview).
+
 The `BringIntoView` method comprises other optional parameters to decide on the way in which the child item should come into view.
 
 ### Scroll to the child item with animation
