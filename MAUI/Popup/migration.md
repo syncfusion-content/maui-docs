@@ -220,4 +220,3 @@ N> All the properties from the Xamarin.Forms PopupView class is moved to the MAU
 ## Upcoming Features
 
 * Popup position - ShowAtTouchPoint()
-* Animation 

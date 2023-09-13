@@ -520,11 +520,11 @@ Applicable for crop view selection, shape and text annotation selection.
 
 ## Upcoming features
 
-* Built in support to browse images from local device storage.
-* Built in support to save images using folder picker in device storage.
-* Localization support for the image editor toolbar, allowing you to use it in your preferred language.
 * Support for annotations Z ordering.
 * Support for serialize and deserialize the annotations.
 * Support to add custom shapes or views.
 * Support for pan and zoom improvements while performing the crop action on the images.
 * Support to toolbar customization.
+
+## Known issues in .Net MAUI ImageEditor
+* [Mac, iOS]The image is not loading correctly from the stream or URI binding source.
