@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Event in .NET MAUI CheckBox control | Syncfusion
+title: Event in .NET MAUI CheckBox Control | Syncfusion
 description: Learn about Event support in Syncfusion Essential Studio .NET MAUI CheckBox control, its elements and more.
 platform: .NET MAUI
 control: SfCheckBox
@@ -11,7 +11,7 @@ documentation: ug
 
 ## StateChanged event
 
-Occurs when the value(state) of the [`IsChecked`] property is changed by either touching the check box or setting the value to the [`IsChecked`] property using XAML or C# code. The event arguments are of type [`StateChangedEventArgs`] and expose the following property:
+This event occurs when the value or state of the [`IsChecked`] property is changed by touching the check box or setting the value to the [`IsChecked`] property using XAML or C# code. The event arguments are of type [`StateChangedEventArgs`] and expose the following property:
 
 * [`IsChecked`]: The new value(state) of the [`IsChecked`] property.
 

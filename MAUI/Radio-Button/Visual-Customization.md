@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Visual Customization in .NET MAUI Radio Button control | Syncfusion
+title: Visual Customization in .NET MAUI Radio Button Control | Syncfusion
 description: Learn here all about Visual Customization support in Syncfusion .NET MAUI Radio Button (SfRadioButton) control and more.
 platform: .NET MAUI
 control: SfRadioButton
@@ -11,7 +11,7 @@ documentation: ug
 
 ## Customizing a state color
 
-The default state colors can be customized using the [`CheckedColor`] and [`UncheckedColor`] properties. The checked state color is updated to the [`CheckedColor`] property value when the state is changed to the checked. The unchecked state color is updated to the [`UncheckedColor`] property value when the state is changed to unchecked.
+The default state colors can be customized using the CheckedColor and UncheckedColor properties. The checked state color is updated to the value of the CheckedColor property when the state changes to check. The unchecked state color is updated to the value of the UncheckedColor property when the state changes to unchecked.
 
 {% tabs %}
 {% highlight xaml %}
