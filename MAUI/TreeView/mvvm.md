@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Working with MVVM in .NET MAUI TreeView Control | Syncfusion
-description: Learn here all about Working with MVVM support in Syncfusion .NET MAUI TreeView (SfTreeView) Control and more.
+description: Learn here about Working with MVVM support in Syncfusion .NET MAUI TreeView (SfTreeView) Control and more.
 platform: MAUI
 control: SfTreeView
 documentation: ug
@@ -73,7 +73,7 @@ public class CountriesViewModel
 
 ### Binding SelectedItems
 
-TreeView support to select multiple items through binding the `SelectedItems` property from view model with `ObservableCollection<object>` type.
+The TreeView supports selecting multiple items by binding the `SelectedItems` property from the view model with the `ObservableCollection<object>` type.
 
 {% tabs %}
 {% highlight xaml hl_lines="3" %}
@@ -137,7 +137,7 @@ public class CountriesViewModel
 
 ### Tap command
 
-The `TapCommand` will be triggered whenever tapping the item and passing the `TreeViewNode` as command parameter.
+The `TapCommand` will be triggered whenever tapping the item and passing the `TreeViewNode` as command a parameter.
 
 {% tabs %}
 {% highlight c# tabtitle="CommandViewModel.cs" %}
@@ -201,7 +201,7 @@ public class CommandViewModel
 
 ### Expand command
 
-The `ExpandCommand` will be triggered while expanding the node and passing the `TreeViewNode` as command parameter. TreeView expands the node based on the return value of `CanExecute` method implementation of `ExpandCommand`. If you return false, then expand action will be canceled. Execute method implementation of `ExpandCommand` will get called after expanding of node.
+The `ExpandCommand` will be triggered while expanding the node and passing the `TreeViewNode` as a command parameter. TreeView expands the node based on the return value of the `CanExecute` method implementation of `ExpandCommand`. If you return false, then expand action will be canceled. Execute method implementation of `ExpandCommand` will get called after expanding the node.
 
 {% tabs %}
 {% highlight xaml hl_lines="11" %}
@@ -264,7 +264,7 @@ public class CommandViewModel
 
 ### Collapse command
 
-The `CollapseCommand` will be triggered while collapsing the node and passing the `TreeViewNode` as command parameter. TreeView collapses the node based on the return value of `CanExecute` method implementation of `CollapseCommand`. If you return false, then collapse action will be canceled. `Execute` method implementation of `CollapseCommand` will be called after the node has collapsed.
+The `CollapseCommand` will be triggered while collapsing the node and passing the `TreeViewNode` as a command parameter. TreeView collapses the node based on the return value of the `CanExecute` method implementation of `CollapseCommand`. If you return false, then collapse action will be canceled. Execute method implementation of `CollapseCommand` will be called after the node has collapsed.
 
 {% tabs %}
 {% highlight xaml hl_lines="11" %}
