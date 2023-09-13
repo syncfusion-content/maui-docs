@@ -30,7 +30,6 @@ SfPicker allows enabling or disabling the header section by setting  `SfPicker.H
         </sfPicker:SfPicker.HeaderView>
     </sfPicker:SfPicker>
 </ContentPage>
-
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
@@ -53,8 +52,8 @@ Header’s background color can be customized by setting `SfPicker.HeaderView.Ba
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-  <?xml version="1.0" encoding="utf-8" ?>
-  <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
               xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
               xmlns:sfPicker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker"
               x:Class="Picker_29.MainPage">
@@ -64,8 +63,7 @@ Header’s background color can be customized by setting `SfPicker.HeaderView.Ba
               <sfPicker:PickerHeaderView Background="Gray"/>
           </sfPicker:SfPicker.HeaderView>
       </sfPicker:SfPicker>
-  </ContentPage>
-
+</ContentPage>
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
@@ -84,26 +82,25 @@ The .NET MAUI Picker control, Header text style such as text color, font size, f
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-  <?xml version="1.0" encoding="utf-8" ?>
-  <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-              xmlns:sfPicker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker"
-              xmlns:local ="clr-namespace:Picker_29"
-              x:Class="Picker_29.MainPage">
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                xmlns:sfPicker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker"
+                xmlns:local ="clr-namespace:Picker_29"
+                x:Class="Picker_29.MainPage">
 
-      <sfPicker:SfPicker>
-          <sfPicker:SfPicker.HeaderView>
-              <sfPicker:PickerHeaderView>
-                  <sfPicker:PickerHeaderView.TextStyle>
-                      <sfPicker:PickerTextStyle TextColor="Gray" 
-                      FontSize="18" 
-                      FontAttributes="Italic"/>
-                  </sfPicker:PickerHeaderView.TextStyle>
-              </sfPicker:PickerHeaderView>
-          </sfPicker:SfPicker.HeaderView>
-      </sfPicker:SfPicker>
-  </ContentPage>
-
+        <sfPicker:SfPicker>
+            <sfPicker:SfPicker.HeaderView>
+                <sfPicker:PickerHeaderView>
+                    <sfPicker:PickerHeaderView.TextStyle>
+                        <sfPicker:PickerTextStyle TextColor="Gray" 
+                        FontSize="18" 
+                        FontAttributes="Italic"/>
+                    </sfPicker:PickerHeaderView.TextStyle>
+                </sfPicker:PickerHeaderView>
+            </sfPicker:SfPicker.HeaderView>
+        </sfPicker:SfPicker>
+</ContentPage>
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
@@ -173,18 +170,19 @@ Header’s background color can be customized by setting `SfPicker.HeaderView.Ba
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
-    <?xml version="1.0" encoding="utf-8" ?>
-    <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-                xmlns:sfPicker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker"
-                x:Class="Picker_29.MainPage">
 
-        <sfPicker:SfPicker x:Name="picker">
-            <sfPicker:SfPicker.FooterView>
-                <sfPicker:PickerFooterView Background="Gray"/>
-            </sfPicker:SfPicker.FooterView>
-        </sfPicker:SfPicker>
-  </ContentPage>
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:sfPicker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker"
+            x:Class="Picker_29.MainPage">
+
+    <sfPicker:SfPicker x:Name="picker">
+        <sfPicker:SfPicker.FooterView>
+            <sfPicker:PickerFooterView Background="Gray"/>
+        </sfPicker:SfPicker.FooterView>
+    </sfPicker:SfPicker>
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
@@ -204,11 +202,12 @@ SfPicker allows enabling or disabling the `ok` button by setting SfPicker.Footer
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-    <?xml version="1.0" encoding="utf-8" ?>
-    <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                 xmlns:sfPicker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker"
                 x:Class="Picker_29.MainPage">
+
         <sfPicker:SfPicker>
             <sfPicker:SfPicker.FooterView>
                 <sfPicker:PickerFooterView 
@@ -217,8 +216,7 @@ SfPicker allows enabling or disabling the `ok` button by setting SfPicker.Footer
                     CancelButtonText="Exit"/>
             </sfPicker:SfPicker.FooterView>
         </sfPicker:SfPicker>
-    </ContentPage>
-
+</ContentPage>
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
@@ -250,11 +248,12 @@ The .NET MAUI Picker control, Footer text style such as text color, font size, f
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-    <?xml version="1.0" encoding="utf-8" ?>
-    <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                 xmlns:sfPicker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker"
                 x:Class="Picker_29.MainPage">
+
         <sfPicker:SfPicker>
         <sfPicker:SfPicker.FooterView>
           <sfPicker:PickerFooterView>
@@ -264,7 +263,7 @@ The .NET MAUI Picker control, Footer text style such as text color, font size, f
           </sfPicker:PickerFooterView>
         </sfPicker:SfPicker.FooterView>
         </sfPicker:SfPicker>
-    </ContentPage>
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
@@ -306,6 +305,7 @@ Picker allows performing validation based on `OK` or `Cancel` button by hooking 
              xmlns:sfPicker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker"
              xmlns:local ="clr-namespace:Picker_29"
              x:Class="Picker_29.MainPage">
+
     <sfPicker:SfPicker x:Name="picker"
                        OkButtonClicked="SfPicker_OkButtonClicked"
                        CancelButtonClicked="SfPicker_CancelButtonClicked">

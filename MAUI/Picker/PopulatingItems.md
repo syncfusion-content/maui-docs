@@ -25,7 +25,6 @@ To bind the items source in picker, set the SfPicker.Columns.ItemSource property
     <sfPicker:SfPicker x:Name="Picker">
     </sfPicker:SfPicker>
 </ContentPage>
-
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
@@ -128,12 +127,12 @@ Selected item text style can be customized by setting `SfPicker.SelectedTextStyl
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<sfPicker:SfPicker>
-    <sfPicker:SfPicker.SelectedTextStyle>
-        <sfPicker:PickerTextStyle FontSize="16" FontAttributes="Bold" TextColor="Gray">
-        </sfPicker:PickerTextStyle>
-    </sfPicker:SfPicker.SelectedTextStyle>
-</sfPicker:SfPicker>
+    <sfPicker:SfPicker>
+        <sfPicker:SfPicker.SelectedTextStyle>
+            <sfPicker:PickerTextStyle FontSize="16" FontAttributes="Bold" TextColor="Gray">
+            </sfPicker:PickerTextStyle>
+        </sfPicker:SfPicker.SelectedTextStyle>
+    </sfPicker:SfPicker>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
@@ -152,12 +151,12 @@ Unselected item text style can be customized by setting `SfPicker.TextStyle` pro
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<sfPicker:SfPicker>
-    <sfPicker:SfPicker.TextStyle>
-        <sfPicker:PickerTextStyle FontSize="17" FontAttributes="Italic" TextColor="Green">
-        </sfPicker:PickerTextStyle>
-    </sfPicker:SfPicker.TextStyle>
-</sfPicker:SfPicker>
+    <sfPicker:SfPicker>
+        <sfPicker:SfPicker.TextStyle>
+            <sfPicker:PickerTextStyle FontSize="17" FontAttributes="Italic" TextColor="Green">
+            </sfPicker:PickerTextStyle>
+        </sfPicker:SfPicker.TextStyle>
+    </sfPicker:SfPicker>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
@@ -176,17 +175,17 @@ In picker control, the items can be customized with custom view of all item by `
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<Grid>
-    <Grid.Resources>
-        <DataTemplate x:Key="customView">
-            <Grid Background = "black" >
-                <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="Red" Text="{Binding Data}"/>
-                </Grid>
-        </DataTemplate>
-    </Grid.Resources>
-<sfPicker:SfPicker x:Name="picker" ItemTemplate="{StaticResource customView}">
-</sfPicker:SfPicker>
-</Grid>
+    <Grid>
+        <Grid.Resources>
+            <DataTemplate x:Key="customView">
+                <Grid Background = "black" >
+                    <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="Red" Text="{Binding Data}"/>
+                    </Grid>
+            </DataTemplate>
+        </Grid.Resources>
+    <sfPicker:SfPicker x:Name="picker" ItemTemplate="{StaticResource customView}">
+    </sfPicker:SfPicker>
+    </Grid>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
