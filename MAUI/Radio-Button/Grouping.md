@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Grouping in .NET MAUI Radio Button control | Syncfusion
+title: Grouping in .NET MAUI Radio Button Control | Syncfusion
 description: Learn here all about Grouping support in Syncfusion .NET MAUI Radio Button (SfRadioButton) control and more.
 platform: .NET MAUI
 control: SfRadioButton
@@ -65,7 +65,7 @@ The [`CheckedChanged`] event of [`SfRadioGroupKey`] occurs when a checked item i
 
 ## SfRadioGroup
 
-[`SfRadioGroup`] is a container that contains a set of radio buttons. When you select a radio button in a radio group, all other items will be deselected automatically. At a time, you can select only one radio button from the same radio group. It also contains the [`CheckedChanged`] event and the [`CheckedItem`] property.
+[`SfRadioGroup`] is a container that contains a set of radio buttons. When you select a radio button in a radio group, all other items will be automatically deselected. At any given time, you can only select one radio button from the same radio group. It also includes the [`CheckedChanged`] event and the [`CheckedItem`] property.
 
 {% tabs %}
 {% highlight xaml %}
@@ -96,7 +96,7 @@ The [`CheckedChanged`] event of [`SfRadioGroupKey`] occurs when a checked item i
 
 ### Orientation in SfRadioGroup
 
-[`SfRadioGroup`] supports horizontal and vertical orientations. By default, [`SfRadioGroup`] is rendered with vertical orientation. You can the change the orientation by using the [`Orientation`] property.
+[`SfRadioGroup`] supports horizontal and vertical orientations. By default, [`SfRadioGroup`] is rendered with vertical orientation. You can change the orientation using the [`Orientation`] property.
 
 {% tabs %}
 {% highlight xaml %}

@@ -8,7 +8,7 @@ control: SfRadioButton
 
 # Overview in .NET MAUI Radio Button
 
-The radio button is a selection control that allows users to select one option from a set. The two states of radio button are checked and unchecked.
+The radio button is a selection control that allows users to select one option from a set. The two states of the radio button are checked and unchecked.
 
 ##  Key features
 
