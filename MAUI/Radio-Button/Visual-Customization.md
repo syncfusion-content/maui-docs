@@ -39,7 +39,7 @@ The default state colors can be customized using the CheckedColor and UncheckedC
 {% endhighlight %}
 {% endtabs %}
 
-![CheckedColor and UncheckedColor in Radio Button](Images/VisualCustomization/radiostatecolor.png)
+![CheckedColor and UncheckedColor in Radio Button](Images/VisualCustomization/statecolor.png)
 
 ## StrokeThickness
 
@@ -49,8 +49,8 @@ The stroke thickness of the circle in the Radio Button control can be customized
 {% highlight xaml %}
 
 	<syncfusion:SfRadioGroup>
-		<syncfusion:SfRadioButton Text="Checked State" IsChecked="True" StrokeThickness="3"/>
-		<syncfusion:SfRadioButton Text="UnChecked State" StrokeThickness="3"/>
+		<syncfusion:SfRadioButton Text="Checked state" IsChecked="True" StrokeThickness="3"/>
+		<syncfusion:SfRadioButton Text="Unchecked state" StrokeThickness="3"/>
 	</syncfusion:SfRadioGroup>
 
 {% endhighlight %}
@@ -62,7 +62,7 @@ The stroke thickness of the circle in the Radio Button control can be customized
 	check.IsChecked = true;
 	check.StrokeThickness = 3;
 	SfRadioButton uncheck = new SfRadioButton();
-	uncheck.Text = "UnChecked State";
+	uncheck.Text = "Unchecked State";
 	uncheck.StrokeThickness = 3;
 	radioGroup.Children.Add(check);
 	radioGroup.Children.Add(uncheck);
@@ -89,7 +89,7 @@ You can customize the display text appearance of the [`SfRadioButton`] control u
 {% tabs %}
 {% highlight xaml %}
 
-	<syncfusion:SfRadioButton x:Name="radioButton" Text="Radio Button" IsChecked="True" TextColor="Violet" HorizontalTextAlignment="Center" FontFamily="Arial" FontAttributes="Bold" FontSize="20"/>
+	<syncfusion:SfRadioButton x:Name="radioButton" Text="Radio Button" IsChecked="True" TextColor="Blue" HorizontalTextAlignment="Center" FontFamily="Arial" FontAttributes="Bold" FontSize="20"/>
 
 {% endhighlight %}
 {% highlight c# %}
@@ -97,7 +97,7 @@ You can customize the display text appearance of the [`SfRadioButton`] control u
 	SfRadioButton radioButton = new SfRadioButton();
 	radioButton.Text = "Radio Button";
 	radioButton.IsChecked = true;
-	radioButton.TextColor = Colors.Violet;
+	radioButton.TextColor = Colors.Blue;
 	radioButton.HorizontalTextAlignment = TextAlignment.Center;
 	radioButton.FontFamily = "Arial";
 	radioButton.FontAttributes = FontAttributes.Bold;

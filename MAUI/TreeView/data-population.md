@@ -63,7 +63,7 @@ public class FileManager : INotifyPropertyChanged
          RaisedOnPropertyChanged("ItemName");
       }
    }
-   
+
    public ImageSource ImageIcon
    {
        get { return imageIcon; }
@@ -107,7 +107,7 @@ public class FileManagerViewModel
       get { return imageNodeInfo; }
       set { this.imageNodeInfo = value; }
    }
-   
+
    private void GenerateSource()
    {
       var nodeImageInfo = new ObservableCollection<FileManager>();
@@ -167,7 +167,7 @@ public class FileManagerViewModel
          stone,
          wind
       };
-      
+
       camera.SubFiles = new ObservableCollection<FileManager>
       {
          img0,
@@ -270,7 +270,7 @@ You can create and manage the `TreeViewNode` objects by yourself to display the 
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="C#" %}
+{% highlight c# %}
 
 using Microsoft.Maui.Controls;
 using Syncfusion.Maui.TreeView;

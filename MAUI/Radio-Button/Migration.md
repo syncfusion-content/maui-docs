@@ -34,7 +34,6 @@ To migrate easier from Xamarin Radio Button to [.NET MAUI Radio Button], we kept
 <td> {{'[StrokeThickness]'| markdownify }}</td>
 <td>Gets or sets the stroke thickness.</td></tr>
 <tr>
-
 </table> 
 
 

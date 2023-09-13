@@ -15,6 +15,7 @@ This event occurs when the value or state of the [`IsChecked`] property is chang
 
 * [`IsChecked`]: The new value(state) of the [`IsChecked`] property.
 
+
 {% tabs %}
 {% highlight xaml %}
 

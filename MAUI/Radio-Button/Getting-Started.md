@@ -50,11 +50,11 @@ namespace ButtonSample
 
 {% endhighlight %}
 
-## Create a Simple SfRadioButton
+## Create a Simple .NET MAUI SfRadioButton
 
-The [`SfRadioButton`] control can be configured entirely in C# code or XAML markup. The following steps explain how to create a [`SfRadioButton`] and configure its elements.
+Step 1: Add the NuGet to the project as discussed in the above reference section. 
 
-### Add namespace for referred assemblies
+Step 2: Add the namespace as shown in the following code sample.
 
 {% tabs %}
 {% highlight xaml %}
@@ -69,7 +69,7 @@ The [`SfRadioButton`] control can be configured entirely in C# code or XAML mark
 {% endhighlight %}
 {% endtabs %}
 
-### Refer SfRadioButton control with declared suffix name for Namespace
+Step 3: Set the control to content in `ContentPage`.
 
 {% tabs %}
 {% highlight xaml %}
@@ -131,9 +131,7 @@ The radio button caption can be defined using the [`Text`] property of [`SfRadio
 
 ![.NET MAUI Radio Button](Images/Getting-Started/radiobutton.png)
 
-This demo can be downloaded from this [link]
-
-## Change the radio button state
+## Change the Radio Button state
 
 The two different visual states of the [`SfRadioButton`] are:
 
