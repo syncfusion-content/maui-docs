@@ -39,9 +39,6 @@ The `SfTimePicker` supports to customize [HourInterval], [MinuteInterval], [Seco
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-{% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
-
     DateTime today = DateTime.Now;
     timePicker.SelectedTime = new TimeSpan(today.Hour, today.Minute, today.Second);
     dateTimePicker.HourInterval = 2;
@@ -56,5 +53,5 @@ The `SfTimePicker` supports to customize [HourInterval], [MinuteInterval], [Seco
     dateTimePicker.MonthInterval = 2;
     dateTimePicker.YearInterval = 2;
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% endtabs %}
 

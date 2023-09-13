@@ -190,9 +190,6 @@ In picker control, the items can be customized with custom view of all item by `
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-{% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
-
     SfPicker picker = new SfPicker();
     DataTemplate customView = new DataTemplate(() =>
     {
@@ -217,4 +214,4 @@ In picker control, the items can be customized with custom view of all item by `
     picker.ItemTemplate = customView;
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% endtabs %}

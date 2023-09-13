@@ -34,13 +34,10 @@ SfPicker allows enabling or disabling the column header section by setting  `SfP
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-{% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
-
     picker.ColumnHeaderView.Height= 50;
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% endtabs %}
 
 ## Column header customization
 
@@ -68,13 +65,10 @@ Column header background color can be customized by setting `SfPicker.ColumnHead
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-{% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
-
     picker.ColumnHeaderView.Background=Brush.Gray;
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% endtabs %}
 
 ### Column header text style
 
@@ -106,9 +100,6 @@ The .NET MAUI Picker control, Column header text style such as text color, font 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-{% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
-
     using Syncfusion.Maui.Picker;
     using System.Collections.ObjectModel;
     namespace Picker_29;
@@ -129,7 +120,7 @@ The .NET MAUI Picker control, Column header text style such as text color, font 
     }
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% endtabs %}
 
 ### Divider color
 
@@ -154,10 +145,7 @@ The .NET MAUI Picker control, Separator line background customized by setting `S
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-{% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
-
     picker.ColumnHeaderView.DividerColor= Colors.Gray;
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% endtabs %}

@@ -33,13 +33,10 @@ SfPicker allows enabling or disabling the header section by setting  `SfPicker.H
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-{% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
-
     picker.HeaderView.Height= 50;
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% endtabs %}
 
 ## Header customization
 
@@ -67,13 +64,10 @@ Header’s background color can be customized by setting `SfPicker.HeaderView.Ba
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-{% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
-
     picker.HeaderView.Background=Brush.Gray;
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% endtabs %}
 
 ### Header text style
 
@@ -104,9 +98,6 @@ The .NET MAUI Picker control, Header text style such as text color, font size, f
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-{% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
-
     using Syncfusion.Maui.Picker;
     using System.Collections.ObjectModel;
     namespace Picker_29;
@@ -127,7 +118,7 @@ The .NET MAUI Picker control, Header text style such as text color, font size, f
     }
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% endtabs %}
 
 ## Enable or disable footer
 
@@ -152,13 +143,10 @@ SfPicker allows enabling or disabling the footer section by setting  `SfPicker.F
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-{% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
-
     picker.FooterView.Height= 50;
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% endtabs %}
 
 ## Footer view customization
 
@@ -187,13 +175,10 @@ Header’s background color can be customized by setting `SfPicker.HeaderView.Ba
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-{% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
-
     picker.FooterView.Background=Brush.Gray;
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% endtabs %}
 
 ### Buttons customization
 
@@ -220,9 +205,6 @@ SfPicker allows enabling or disabling the `ok` button by setting SfPicker.Footer
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-{% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
-
     using Syncfusion.Maui.Picker;
     namespace Picker_29;
 
@@ -239,7 +221,7 @@ SfPicker allows enabling or disabling the `ok` button by setting SfPicker.Footer
     }
   
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% endtabs %}
 
 ### Footer text style
 
@@ -268,9 +250,6 @@ The .NET MAUI Picker control, Footer text style such as text color, font size, f
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-{% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
-
     using Syncfusion.Maui.Picker;
     namespace Picker_29;
 
@@ -290,7 +269,7 @@ The .NET MAUI Picker control, Footer text style such as text color, font size, f
     }
   
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% endtabs %}
 
 ## Perform validation with default validation button
 
@@ -315,9 +294,6 @@ Picker allows performing validation based on `OK` or `Cancel` button by hooking 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-{% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
-
     picker.OkButtonClicked += SfPicker_OkButtonClicked;
     picker.CancelButtonClicked += SfPicker_CancelButtonClicked;
     private void SfPicker_OkButtonClicked(object sender, EventArgs e)
@@ -331,4 +307,4 @@ Picker allows performing validation based on `OK` or `Cancel` button by hooking 
     }
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% endtabs %}
