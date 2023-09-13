@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Events with .NET MAUI Picker control | Syncfusion
+title: Events with .NET MAUI Picker Control | Syncfusion
 description: Learn here all about events with Syncfusion .NET MAUI Picker (SfPicker) control.
 platform: maui
 control: SfPicker
@@ -21,7 +21,7 @@ The `Opened` event occurs when the picker pop-up is opened.
 
 ## Closing event
 
-The `Closing` event raises when the picker pop-up gets closing. You can stop the picker pop-up close action by setting the e.cancel to true.
+The "Closing" event is raised when the picker pop-up is closing. You can prevent the picker pop-up from closing by setting "e.cancel" to true.
 
 ## Closed event
 

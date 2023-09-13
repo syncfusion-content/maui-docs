@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Header and footer with .NET MAUI Picker control | Syncfusion
+title: Header and footer with .NET MAUI Picker Control | Syncfusion
 description: Learn here all about header and footer with Syncfusion .NET MAUI Picker (SfPicker) control.
 platform: maui
 control: SfPicker
@@ -9,11 +9,11 @@ documentation: ug
 
 # Dealing with Header and Footer in .NET MAUI Picker (SfPicker)
 
-This section explains about the header and footer customization of picker control.
+This section explains the header and footer customization of picker control.
 
 ## Enable or disable header
 
-SfPicker allows enabling or disabling the header section by setting  `SfPicker.HeaderView.Height` property grater than 0. Default value of `SfPicker.HeaderView.Height` property is 0.
+SfPicker allows enabling or disabling the header section by setting the `SfPicker.HeaderView.Height` property greater than 0. The default value of the `SfPicker.HeaderView.Height` property is 0.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -45,7 +45,7 @@ SfPicker allows customizing background, text style.
 
 ### Background
 
-Header’s background color can be customized by setting `SfPicker.HeaderView.Background` property.
+Header’s background color can be customized by setting the `SfPicker.HeaderView.Background` property.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -73,7 +73,7 @@ Header’s background color can be customized by setting `SfPicker.HeaderView.Ba
 
 ### Header text style
 
-The .NET MAUI Picker control, Header text style such as text color, font size, font family, font attributes can be customize as shown in the following code.
+The .NET MAUI Picker control and header text style such as text color, font size, font family, and font attributes, can be customized as shown in the following code.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -125,7 +125,7 @@ The .NET MAUI Picker control, Header text style such as text color, font size, f
 
 ## Enable or disable footer
 
-SfPicker allows enabling or disabling the footer section by setting  `SfPicker.FooterView.Height` property grater than 0. Default value of `SfPicker.FooterView.Height` property is 0.
+SfPicker allows enabling or disabling the footer section by setting the `SfPicker.FooterView.Height` property greater than 0. The default value of the `SfPicker.FooterView.Height` property is 0.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -153,7 +153,7 @@ SfPicker allows enabling or disabling the footer section by setting  `SfPicker.F
 
 ## Footer view customization
 
-SfPicker allows customizing background, text and text style style of the `ok` and `cancel` button and also visibility of the the `ok` button.
+SfPicker allows customizing the background, text, and text style of the `ok` and `cancel` buttons and the visibility of the ok button.
 
 ### Background
 
@@ -185,7 +185,7 @@ Header’s background color can be customized by setting `SfPicker.HeaderView.Ba
 
 ### Buttons customization
 
-SfPicker allows enabling or disabling the `ok` button by setting SfPicker.FooterView.ShowOkButton property to True or False. Default value of SfPicker.FooterView.ShowOkButton property is True. We can customize the text of the `ok` and and `cancel` buttons.
+SfPicker allows enabling or disabling the `ok` button by setting `SfPicker.FooterView.ShowOkButton` property to True or False. Default value of `SfPicker.FooterView.ShowOkButton` property is True. We can customize the text of the `ok` and `cancel` buttons.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -229,7 +229,7 @@ SfPicker allows enabling or disabling the `ok` button by setting SfPicker.Footer
 
 ### Footer text style
 
-The .NET MAUI Picker control, Footer text style such as text color, font size, font family, font attributes can be customize as shown in the following code.
+The .NET MAUI Picker control and footer text style, such as text color, font size, font family, and font attributes, can be customized as shown in the following code.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -277,7 +277,7 @@ The .NET MAUI Picker control, Footer text style such as text color, font size, f
 
 ## Perform validation with default validation button
 
-Picker allows performing validation based on `OK` or `Cancel` button by hooking SfPicker.OkButtonClicked and SfPicker.CancelButtonClicked. In this event, from the SelectionChangedEvent argument, current selected items can be obtained.
+Picker allows validation based on the OK or Cancel button by hooking into the SfPicker.OkButtonClicked and SfPicker.CancelButtonClicked. In this event, from the SelectionChangedEvent argument, current selected items can be obtained.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}

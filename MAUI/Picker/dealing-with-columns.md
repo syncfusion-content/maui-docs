@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Columns with .NET MAUI Picker control | Syncfusion
+title: Columns with .NET MAUI Picker Control | Syncfusion
 description: Learn here all about columns with Syncfusion .NET MAUI Picker (SfPicker) control.
 platform: maui
 control: SfPicker
@@ -9,7 +9,7 @@ documentation: ug
 
 # Dealing with Columns in .NET MAUI Picker (SfPicker)
 
-This section explains about the customization of picker columns
+This section explains the customization of picker columns.
 
 ## Columns customization 
 

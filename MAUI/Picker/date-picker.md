@@ -13,7 +13,7 @@ This section explains about the date picker.
 
 ## DatePicker customization
 
-The `SfDatePicker` supports to customize [DateFormat], [MinimumDate], [MaximumDate], [DayInterval], [MonthInterval], [YearInterval], [SelectedDate] properties by the following code.
+The `SfDatePicker` supports customizing the [DateFormat], [MinimumDate], [MaximumDate], [DayInterval], [MonthInterval], [YearInterval], and [SelectedDate] properties using the following code.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
