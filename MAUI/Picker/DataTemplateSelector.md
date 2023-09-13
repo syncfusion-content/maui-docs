@@ -41,6 +41,7 @@ The DataTemplateSelector feature of SfPicker allows you to select a DataTemplate
         </sfPicker:SfPicker>
     </Grid>
 </ContentPage>
+
 {% endhighlight %}
 {% highlight c# tabtitle="c#" %}
 
@@ -82,5 +83,6 @@ The DataTemplateSelector feature of SfPicker allows you to select a DataTemplate
             }
         }
     }
+    
 {% endhighlight %}
 {% endtabs %}

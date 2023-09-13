@@ -33,6 +33,7 @@ The `SfDatePicker` supports to customize [DateFormat], [MinimumDate], [MaximumDa
                                      YearInterval="2">
     </datePicker:SfDatePicker>
 </ContentPage>
+
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
@@ -43,6 +44,7 @@ The `SfDatePicker` supports to customize [DateFormat], [MinimumDate], [MaximumDa
     datePicker.DayInterval = 2;
     datePicker.MonthInterval = 2;
     datePicker.YearInterval = 2;
+    
 {% endhighlight %}
 {% endtabs %}
 

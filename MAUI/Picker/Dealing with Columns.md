@@ -26,6 +26,7 @@ You can customize various properties, including `DisplayMemberPath`, `Width`, `S
     <sfPicker:SfPicker x:Name="picker">
     </sfPicker:SfPicker>
     </ContentPage>
+
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
@@ -34,6 +35,7 @@ You can customize various properties, including `DisplayMemberPath`, `Width`, `S
     ObservableCollection<string> languages = new ObservableCollection<string> { "Spanish", "French", "Tamil", "English", "German", "Chinese", "Telegu", "Japanese", "Arabic", "Russian", "Portuguese", "Italian" };
     picker.Columns[0].ItemsSource = languages;
     picker.Columns[0].Width = 150;
+    
 {% endhighlight %}
 {% endtabs %}
 

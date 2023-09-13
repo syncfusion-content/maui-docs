@@ -36,6 +36,7 @@ The `SfTimePicker` supports to customize [HourInterval], [MinuteInterval], [Seco
                                      YearInterval="2">
     </dateTimePicker:SfDateTimePicker>
 </ContentPage>
+
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
@@ -52,6 +53,7 @@ The `SfTimePicker` supports to customize [HourInterval], [MinuteInterval], [Seco
     dateTimePicker.DayInterval = 2;
     dateTimePicker.MonthInterval = 2;
     dateTimePicker.YearInterval = 2;
+    
 {% endhighlight %}
 {% endtabs %}
 
