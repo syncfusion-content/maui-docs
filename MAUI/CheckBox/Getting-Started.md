@@ -224,10 +224,10 @@ Multiple check boxes can be used as a group for multi-select scenarios in which 
 
     <StackLayout Padding="20">
         <Label x:Name="label" Text="Pizza Toppings" Margin="0,10"/>
-        <buttons:SfCheckBox x:Name="pepperoni" Text="Pepperoni"/>
-        <buttons:SfCheckBox x:Name="beef" Text="Beef" IsChecked="True"/>
-        <buttons:SfCheckBox x:Name="mushroom" Text="Mushrooms"/>
-        <buttons:SfCheckBox x:Name="onion" Text="Onions" IsChecked="True"/>
+        <syncfusion:SfCheckBox x:Name="pepperoni" Text="Pepperoni"/>
+        <syncfusion:SfCheckBox x:Name="beef" Text="Beef" IsChecked="True"/>
+        <syncfusion:SfCheckBox x:Name="mushroom" Text="Mushrooms"/>
+        <syncfusion:SfCheckBox x:Name="onion" Text="Onions" IsChecked="True"/>
     </StackLayout>
 
 {% endhighlight %}
@@ -272,11 +272,11 @@ The Intermediate state is used when a group of sub-choices has both checked and 
 
     <StackLayout Padding="20">
         <Label x:Name="label" Margin="10" Text="Pizza Toppings"/>
-        <buttons:SfCheckBox x:Name="selectAll" Text="Select All" StateChanged="SelectAll_StateChanged"/>
-        <buttons:SfCheckBox x:Name="pepperoni" Text="Pepperoni" StateChanged="CheckBox_StateChanged" Margin="30,0"/>
-        <buttons:SfCheckBox x:Name="beef" Text="Beef" IsChecked="True" StateChanged="CheckBox_StateChanged" Margin="30,0"/>
-        <buttons:SfCheckBox x:Name="mushroom" Text="Mushrooms" StateChanged="CheckBox_StateChanged" Margin="30,0"/>
-        <buttons:SfCheckBox x:Name="onion" Text="Onions" IsChecked="True" StateChanged="CheckBox_StateChanged" Margin="30,0"/>
+        <syncfusion:SfCheckBox x:Name="selectAll" Text="Select All" StateChanged="SelectAll_StateChanged"/>
+        <syncfusion:SfCheckBox x:Name="pepperoni" Text="Pepperoni" StateChanged="CheckBox_StateChanged" Margin="30,0"/>
+        <syncfusion:SfCheckBox x:Name="beef" Text="Beef" IsChecked="True" StateChanged="CheckBox_StateChanged" Margin="30,0"/>
+        <syncfusion:SfCheckBox x:Name="mushroom" Text="Mushrooms" StateChanged="CheckBox_StateChanged" Margin="30,0"/>
+        <syncfusion:SfCheckBox x:Name="onion" Text="Onions" IsChecked="True" StateChanged="CheckBox_StateChanged" Margin="30,0"/>
     </StackLayout>
 
 {% endhighlight %}

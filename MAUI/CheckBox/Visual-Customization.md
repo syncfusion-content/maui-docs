@@ -3,7 +3,7 @@ layout: post
 title: Customization in .NET MAUI CheckBox control | Syncfusion
 description: Learn about Customization support in Syncfusion Essential Studio .NET MAUI CheckBox control, its elements and more.
 platform: .NET MAUI
-control: CheckBox
+control: SfCheckBox
 documentation: ug
 ---
 
@@ -126,7 +126,7 @@ You can customize the display text appearance of the [`SfCheckBox`] control usin
 {% tabs %}
 {% highlight xaml %}
 
-    <syncfusion:SfCheckBox x:Name="caption" Text="CheckBox" IsChecked="True" TextColor="Violet" HorizontalTextAlignment="End" FontFamily="Arial" FontAttributes="Bold" FontSize="20"/>           
+    <syncfusion:SfCheckBox x:Name="caption" Text="CheckBox" IsChecked="True" TextColor="Violet" HorizontalTextAlignment="Center" FontFamily="Arial" FontAttributes="Bold" FontSize="20"/>           
 
 {% endhighlight %}
 {% highlight c# %}
@@ -135,7 +135,7 @@ You can customize the display text appearance of the [`SfCheckBox`] control usin
     caption.IsChecked = true;
     caption.Text = "CheckBox";
     caption.TextColor = Color.Violet;
-    caption.HorizontalTextAlignment = TextAlignment.End;
+    caption.HorizontalTextAlignment = TextAlignment.Center;
     caption.FontFamily = "Arial";
     caption.FontAttributes = FontAttributes.Bold;
     caption.FontSize = 20;
