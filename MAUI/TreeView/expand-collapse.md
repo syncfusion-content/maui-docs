@@ -9,11 +9,11 @@ documentation: ug
 
 # Expand and Collapse in Xamarin TreeView (SfTreeView)
 
-The TreeView allows you to expand and collapse the nodes either by user interaction on the nodes or by programmatically. 
+The TreeView allows you to expand and collapse the nodes through user interaction or programmatically. 
 
 ##  Expand Action Target
 
- Expanding and Collapsing of nodes can be performed either by tapping the expander view or in both expander view and content view by setting the `ExpandActionTarget` property.
+Expanding and collapsing of nodes can be performed by tapping the expander view or by setting the `ExpandActionTarget` property in both the expander view and content view.
 
 {% tabs %}
 {% highlight xaml %}
@@ -23,7 +23,7 @@ The TreeView allows you to expand and collapse the nodes either by user interact
 {% endhighlight %}
 {% highlight c# %}
 
-// Expands by tapping both expander view and content view.
+// Extends by tapping both the expander and content views.
 treeView.ExpandActionTarget = Syncfusion.Maui.TreeView.TreeViewExpandActionTarget.Node;
 
 {% endhighlight %}
@@ -31,9 +31,9 @@ treeView.ExpandActionTarget = Syncfusion.Maui.TreeView.TreeViewExpandActionTarge
 
 ## Auto Expand Mode
 
-By default, the treeview items will be in collapsed state. You can define how the nodes to be expanded while loading the TreeView by using `AutoExpandMode` property.
+By default, the items in the treeview will be in a collapsed state. You can define how the nodes should be expanded when loading the TreeView by using the `AutoExpandMode` property.
 
-The `AutoExpandMode` property is only applicable for bound mode. For Unbound mode you need to set `IsExpanded` property to `true` while creating the nodes, to be in expanded state while loading the TreeView.
+The `AutoExpandMode` property is only applicable in bound mode. In the unbound mode, you need to set the `IsExpanded` property to `true` when creating the nodes in order for them to be in the expanded state when the TreeView is loaded
 
 * None : All items are collapsed when loaded.
 * RootNodesExpanded : Expands only the root item when loaded.
@@ -41,7 +41,7 @@ The `AutoExpandMode` property is only applicable for bound mode. For Unbound mod
 
 ## Programmatic Expand and Collapse
 
-TreeView allows programmatic expand and collapse based on the `TreeViewNode` and level by using following methods.
+TreeView allows programmatic expansion and collapse based on the `TreeViewNode` and level using the following methods.
 
 * `ExpandNode(TreeViewNode item)` - Method to expand the particular `TreeViewNode` passed to it.
 * `CollapseNode(TreeViewNode item)` - Method to collapse the particular `TreeViewNode` passed to it.
@@ -51,10 +51,10 @@ TreeView allows programmatic expand and collapse based on the `TreeViewNode` and
 {% tabs %}
 {% highlight c# %}
 
-// Expands all the nodes of root level '0'
+// Expands all the nodes at root level '0'.
 treeView.ExpandNodes(0);
 
-// Collapses all the nodes of root level '0'
+// Collapses all the nodes at root level '0'.
 treeView.CollapseNodes(0);
 
 // Expand a particular node.
@@ -68,7 +68,7 @@ treeView.CollapseNode(node);
 
 ### Expand and Collapse all the nodes
 
-You can expand and collapse all the `TreeViewNode` programmatically at runtime by using the `SfTreeView.ExpandAll` method and `SfTreeView.CollapseAll` method.
+Programmatically expand and collapse all the `TreeViewNode` at runtime using the `SfTreeView.ExpandAll` and `SfTreeView.CollapseAll` methods.
 
 {% tabs %}
 {% highlight c# %}
@@ -76,7 +76,7 @@ You can expand and collapse all the `TreeViewNode` programmatically at runtime b
 //Expands all the nodes
 treeView.ExpandAll();
 
-//Collapses all the nodes
+//Collapses all the nodes.
 treeView.CollapseAll();
 
 {% endhighlight %}
@@ -84,17 +84,17 @@ treeView.CollapseAll();
 
 ## Expand and Collapse using Keyboard
 
-TreeView allows to expand and collapse the nodes by using right and left arrows keys. To expand a node, press the right arrow key and to collapse a node, press the left arrow key on the focused item.
+TreeView allows the expansion and collapse of the nodes using the right and left arrow keys. To expand a node, press the right arrow key; to collapse a node, press the left arrow key on the focused item.
 
 ## Events
 
-TreeView exposes following events to handle expanding and collapsing of items.
+TreeView exposes the following events to handle the expanding and collapsing of items.
 
 * `NodeCollapsing` - It occurs when a node is being collapsed.
 * `NodeExpanding` - It occurs when a node is being expanded.
 * `NodeCollapsed` - It occurs when a node is collapsed.
 * `NodeExpanded`  - It occurs when a node is expanded.
 
-The expanding and collapsing interactions can be handled with the help of `NodeCollapsing` and `NodeExpanding` events and expanded and collapsed interactions can be handled with help of `NodeCollapsed` and `NodeExpanded` events.
+The expanding and collapsing interactions can be handled with the help of the `NodeCollapsing` and `NodeExpanding` events, and the expanded and collapsed interactions can be handled with the help of the `NodeCollapsed` and `NodeExpanded` events.
 
-You can also achieve handle expand and collapse operation using `ExpandCommand` and `CollapseCommand`.
+You can also achieve handling of expand and collapse operations using the `ExpandCommand` and `CollapseCommand`.
