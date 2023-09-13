@@ -34,7 +34,6 @@ To migrate easier from Xamarin CheckBox to [.NET MAUI CheckBox], we kept most of
 <td> {{'[StrokeThickness]'| markdownify }}</td>
 <td>Gets or sets the stroke thickness.</td></tr>
 <tr>
-
 </table> 
 
 
