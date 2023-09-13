@@ -1,19 +1,19 @@
 ---
 layout: post
-title: TimePicker with .NET MAUI Picker control | Syncfusion
-description: Learn here all about time picker with Syncfusion .NET MAUI Picker (SfPicker) control.
+title: DateTimePicker with .NET MAUI Picker control | Syncfusion
+description: Learn here all about date time picker with Syncfusion .NET MAUI Picker (SfPicker) control.
 platform: maui
-control: SfTimePicker
+control: SfDateTimePicker
 documentation: ug
 ---
 
-# Time Picker in .NET MAUI Picker (SfTimePicker)
+# DateTime Picker in .NET MAUI Picker (SfDateTimePicker)
 
 This section explains about the time picker.
 
-## TimePicker customization
+## DateTimePicker customization
 
-The `SfTimePicker` supports to customize [HourInterval], [MinuteInterval], [SecondInterval], [DateFormat], [TimeFormat], [MinimumDate], [MaximumDate], [DayInterval], [MonthInterval], [YearInterval], [SelectedDate] properties by the following code.
+The `SfDateTimePicker` supports to customize [HourInterval], [MinuteInterval], [SecondInterval], [DateFormat], [TimeFormat], [MinimumDate], [MaximumDate], [DayInterval], [MonthInterval], [YearInterval], [SelectedDate] properties by the following code.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -40,21 +40,19 @@ The `SfTimePicker` supports to customize [HourInterval], [MinuteInterval], [Seco
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="c#" %}
 
-    DateTime today = DateTime.Now;
-    timePicker.SelectedTime = new TimeSpan(today.Hour, today.Minute, today.Second);
-    dateTimePicker.HourInterval = 2;
-    dateTimePicker.MinuteInterval = 2;
-    dateTimePicker.SecondInterval = 2;
-    dateTimePicker.TimeFormat = PickerTimeFormat.hh_mm_ss_tt;
-    dateTimePicker.DateFormat = PickerDateFormat.dd_MM_yyyy;
-    dateTimePicker.MinimumDate = new DateTime(01 / 09 / 2023);
-    dateTimePicker.MaximumDate = new DateTime(01 / 12 / 2023);
-    dateTimePicker.SelectedDate = DateTime.Now;
-    dateTimePicker.DayInterval = 2;
-    dateTimePicker.MonthInterval = 2;
-    dateTimePicker.YearInterval = 2;
+        dateTimePicker.HourInterval = 2;
+        dateTimePicker.MinuteInterval = 2;
+        dateTimePicker.SecondInterval = 2;
+        dateTimePicker.TimeFormat = PickerTimeFormat.hh_mm_ss_tt;
+        dateTimePicker.DateFormat = PickerDateFormat.dd_MM_yyyy;
+        dateTimePicker.MinimumDate = new DateTime(01 / 09 / 2023);
+        dateTimePicker.MaximumDate = new DateTime(01 / 12 / 2023);
+        dateTimePicker.SelectedDate = DateTime.Now;
+        dateTimePicker.DayInterval = 2;
+        dateTimePicker.MonthInterval = 2;
+        dateTimePicker.YearInterval = 2;
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
