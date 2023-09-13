@@ -30,6 +30,7 @@ SfPicker allows enabling or disabling the header section by setting  `SfPicker.H
         </sfPicker:SfPicker.HeaderView>
     </sfPicker:SfPicker>
 </ContentPage>
+
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
@@ -61,6 +62,7 @@ Header’s background color can be customized by setting `SfPicker.HeaderView.Ba
           </sfPicker:SfPicker.HeaderView>
       </sfPicker:SfPicker>
 </ContentPage>
+
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
@@ -95,6 +97,7 @@ The .NET MAUI Picker control, Header text style such as text color, font size, f
             </sfPicker:SfPicker.HeaderView>
         </sfPicker:SfPicker>
 </ContentPage>
+
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
@@ -202,6 +205,7 @@ SfPicker allows enabling or disabling the `ok` button by setting SfPicker.Footer
             </sfPicker:SfPicker.FooterView>
         </sfPicker:SfPicker>
 </ContentPage>
+
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 

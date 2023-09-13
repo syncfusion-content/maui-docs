@@ -25,6 +25,7 @@ To bind the items source in picker, set the SfPicker.Columns.ItemSource property
     <sfPicker:SfPicker x:Name="Picker">
     </sfPicker:SfPicker>
 </ContentPage>
+
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
