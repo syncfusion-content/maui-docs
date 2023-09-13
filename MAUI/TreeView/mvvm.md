@@ -68,6 +68,8 @@ public class CountriesViewModel
     }
 }
 
+![.NET MAUI TreeView with Binding selected item](Images/mvvm/maui-treeView-BindingSelectedItem.png)
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -132,6 +134,8 @@ public class CountriesViewModel
 
 {% endhighlight %}
 {% endtabs %}
+
+Download the entire source code from GitHub [here](https://github.com/SyncfusionExamples/binding-selected-items-in-.net-maui-treeview).
 
 ## Commands
 
@@ -395,5 +399,7 @@ public class CountriesViewModel : INotifyPropertyChanged
 }
 {% endhighlight %}
 {% endtabs %}
+
+Download the entire source code from GitHub [here](https://github.com/SyncfusionExamples/event-to-command-binding-in-.net-maui-treeview).
 
 For more information regarding the EventToCommand behavior in .NET MAUI, you can refer [this](https://learn.microsoft.com/en-us/dotnet/communitytoolkit/maui/behaviors/event-to-command-behavior) link.
