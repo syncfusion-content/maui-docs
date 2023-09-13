@@ -146,7 +146,7 @@ treeView.TapCommand = viewModel.TappedCommand;
 
 public class CommandViewModel
 {
-    private Command<Object> tappedCommand;
+    private Command<object> tappedCommand;
 
     public Command<object> TappedCommand
     {
