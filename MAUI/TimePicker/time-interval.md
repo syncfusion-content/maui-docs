@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Time interval in .NET MAUI Time Picker control | Syncfusion
+title: Time interval in .NET MAUI Time Picker Control | Syncfusion
 description: Learn about time interval in Syncfusion .NET MAUI Time Picker (SfTimePicker) control and its basic features.
 platform: maui
 control: SfTimePicker

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Date Picker events in .NET MAUI Date Picker control | Syncfusion
+title: Date Picker events in .NET MAUI Date Picker Control | Syncfusion
 description: Learn about date picker events in Syncfusion .NET MAUI Date Picker (SfDatePicker) control and its basic features.
 platform: maui
 control: SfDatePicker
@@ -15,7 +15,7 @@ The [SelectionChanged] event is used to notify when the date selection is change
 
 * `Sender`: This contains the `SfDatePicker` object.
 
-* `EventArgs`: In Date Picker, [DatePickerSelectionChangedEventArgs] is used for this event which holds the data of NewValue and OldValue.
+* `EventArgs`: In Date Picker, the [DatePickerSelectionChangedEventArgs] is used for this event which holds the data of NewValue and OldValue.
 
     * [NewValue] : Returns the new selected date.
     * [OldValue] : Returns the old selected date.

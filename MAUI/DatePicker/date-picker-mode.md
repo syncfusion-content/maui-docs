@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Date Picker mode in .NET MAUI Date Picker | Syncfusion
+title: Date Picker mode in .NET MAUI Date Picker Control | Syncfusion
 description: Learn about the date picker mode in Syncfusion .NET MAUI Date Picker (SfDatePicker) control and its basic features.
 platform: maui
 control: SfDatePicker
@@ -9,11 +9,11 @@ documentation: ug
 
 # Date Picker mode in .NET MAUI Date Picker (SfDatePicker)
 
-The date picker mode is specified in the picker property enumeration, which is used to show the date picker based on the modes. It provides three modes such as `Default`, `Dialog`, and `RelativeDialog`. The default picker mode is `Default` in the [SfDatePicker].
+The date picker mode is specified in the picker property enumeration, which is used to display the date picker based on the modes. It offers three modes: `Default`, `Dialog`, and `RelativeDialog`. The default picker mode is `Default` in the [SfDatePicker].
 
 ## Dialog Mode
 
-The dialog mode is used to show the date picker in a pop up by setting the [Mode] property to [`Dialog`] in [SfDatePicker].
+The dialog mode is used to display the date picker in a pop up by setting the [Mode] property to [`Dialog`] in [SfDatePicker].
 
 {% tabs %}
 
@@ -39,7 +39,7 @@ this.Content = datePicker;
 
 The Date Picker can be opened programmatically by setting the [IsOpen] property to `true` of [SfDatePicker]. By default, the `IsOpen` property is `false`.
 
-Note: This property is automatically changed to `false` when you close the dialog by clicking outside of the dialog.
+Note: This property is automatically changed to `false` when you close the dialog by clicking outside of the it.
 
 {% tabs %}
 
@@ -73,7 +73,7 @@ private void Button_Clicked(object sender, System.EventArgs e)
 
 ## Relative Dialog Mode
 
-The relative dialog mode is used to show the date picker in a pop up by setting the [Mode] property to [`RelativeDialog`]. It is used to align the picker in a specific position. You can set the position by setting the [RelativePosition] property in the [SfDatePicker].
+The relative dialog mode is used to display the date picker in a pop up by setting the [Mode] property to [`RelativeDialog`]. It is used to align the picker in a specific position. You can set the position by setting the [RelativePosition] property in the [SfDatePicker].
 
 The [RelativePosition] is specified in the picker property enumeration, which is used to align the picker in a specific position. It provides eight position such as `AlignTop`, `AlignToLeftOf`, `AlignToRightOf`, `AlignBottom`, `AlignTopLeft`, `AlignTopRight`, `AlignBottomLeft`, and `AlignBottomRight`. The default relative position is `AlignTop` in the [SfDatePicker].
 
@@ -103,7 +103,7 @@ this.Content = datePicker;
 
 The Date Picker can be opened programmatically by setting the [`IsOpen`] property to `true` of [SfDatePicker]. By default, the `IsOpen` property is `false`.
 
-Note: This property is automatically changed to `false` when you close the dialog by clicking outside of the dialog.
+Note: This property is automatically changed to `false` when you close the dialog by clicking outside of the it.
 
 {% tabs %}
 

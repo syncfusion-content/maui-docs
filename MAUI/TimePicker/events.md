@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Events in .NET MAUI Time Picker control | Syncfusion
+title: Events in .NET MAUI Time Picker Control | Syncfusion
 description: Learn about events in Syncfusion .NET MAUI Time Picker (SfTimePicker) control and its basic features.
 platform: maui
 control: SfTimePicker
@@ -15,7 +15,7 @@ The [SelectionChanged] event is used to notify when the time selection is change
 
 * `Sender`: This contains the `SfTimePicker` object.
 
-* `EventArgs`: In SfTimePicker picker, [TimePickerSelectionChangedEventArgs] is used for this event which holds the data of NewValue and OldValue.
+* `EventArgs`: In SfTimePicker picker, the [TimePickerSelectionChangedEventArgs] is used for this event which holds the data of NewValue and OldValue.
 
     * [NewValue] : Returns the new selected time.
     * [OldValue] : Returns the old selected time.
