@@ -204,7 +204,7 @@ public class CommandViewModel
 The `ExpandCommand` will be triggered while expanding the node and passing the `TreeViewNode` as a command parameter. TreeView expands the node based on the return value of the `CanExecute` method implementation of `ExpandCommand`. If you return false, then expand action will be canceled. Execute method implementation of `ExpandCommand` will get called after expanding the node.
 
 {% tabs %}
-{% highlight xaml hl_lines="11" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="11" %}
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:syncfusion="clr-namespace:Syncfusion.Maui.TreeView;assembly=Syncfusion.Maui.TreeView"
@@ -219,7 +219,7 @@ The `ExpandCommand` will be triggered while expanding the node and passing the `
     </ContentPage.Content>
 </ContentPage>  
 {% endhighlight %}  
-{% highlight c# %}
+{% highlight c# tabtitle="CommandViewModel.cs" %}
 /// <summary>
 /// CommandViewModel class that implements command. 
 /// </summary>
@@ -267,7 +267,7 @@ public class CommandViewModel
 The `CollapseCommand` will be triggered while collapsing the node and passing the `TreeViewNode` as a command parameter. TreeView collapses the node based on the return value of the `CanExecute` method implementation of `CollapseCommand`. If you return false, then collapse action will be canceled. Execute method implementation of `CollapseCommand` will be called after the node has collapsed.
 
 {% tabs %}
-{% highlight xaml hl_lines="11" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="11" %}
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:syncfusion="clr-namespace:Syncfusion.Maui.TreeView;assembly=Syncfusion.Maui.TreeView"
@@ -282,7 +282,7 @@ The `CollapseCommand` will be triggered while collapsing the node and passing th
     </ContentPage.Content>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# %}
+{% highlight c# tabtitle="CommandViewModel.cs" %}
 /// <summary>
 /// CommandViewModel class that implements command.
 /// </summary>
@@ -329,7 +329,7 @@ public class CommandViewModel
 The `TreeView` event can be converted into commands using `Behaviors`. To achieve this, create a command in the `ViewModel` class and associate it to the TreeView event using `Behaviors`.
 
 {% tabs %}
-{% highlight xaml hl_lines="6" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="6" %}
 <syncfusion:SfTreeView x:Name="treeView"
                        SelectionMode="Multiple"
                        SelectedItems="{Binding SelectedCountries}"
@@ -341,14 +341,14 @@ The `TreeView` event can be converted into commands using `Behaviors`. To achiev
     </syncfusion:SfTreeView.Behaviors>
 </syncfusion:SfTreeView>
 {% endhighlight %}
-{% highlight c# %}
+{% highlight c# tabtitle="CountriesViewModel.cs" %}
 public class CountriesViewModel : INotifyPropertyChanged
 {
-    public Command<ItemSelectionChangedEventArgs> selectionChangedCommand;
+     private Command<object> selectionChangedCommand;
 
     public CountriesViewModel()
     {
-        SelectionChangedCommand = new Command<Syncfusion.Maui.TreeView.ItemSelectionChangedEventArgs>(OnSelectionChanged);
+        SelectionChangedCommand = new Command<object>(OnSelectionChanged);
         GenerateCountriesInfo();
     }
 
@@ -356,15 +356,15 @@ public class CountriesViewModel : INotifyPropertyChanged
 
     public ObservableCollection<object> SelectedCountries { get; set; }
 
-    public Command<ItemSelectionChangedEventArgs> SelectionChangedCommand
+    public Command<object> SelectionChangedCommand
     {
         get { return selectionChangedCommand; }
         protected set { selectionChangedCommand = value; }
     }
 
-    private void OnSelectionChanged(ItemSelectionChangedEventArgs obj)
+    private void OnSelectionChanged(object obj)
     {
-        App.Current.MainPage.DisplayAlert("Alert", (obj.AddedItems[0] as Countries).Name + " is selected", "OK");
+        App.Current.MainPage.DisplayAlert("Alert", ((obj as ItemSelectionChangedEventArgs).AddedItems[0] as Countries).Name + " is selected", "OK");
     }
 
     public event PropertyChangedEventHandler PropertyChanged;
