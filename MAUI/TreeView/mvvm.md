@@ -68,10 +68,10 @@ public class CountriesViewModel
     }
 }
 
-![.NET MAUI TreeView with Binding selected item](Images/mvvm/maui-treeView-BindingSelectedItem.png)
-
 {% endhighlight %}
 {% endtabs %}
+
+![.NET MAUI TreeView with Binding selected item](Images/mvvm/maui-treeView-BindingSelectedItem.png)
 
 ### Binding SelectedItems
 
