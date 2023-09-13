@@ -16,10 +16,10 @@ The TreeView offers several options for customizing the height of items. To achi
 The TreeView allows for customization of item height by setting the `ItemHeight` property. The default value of this property is `48d`. This property can be customized at runtime.
 
 {% tabs %}
-{% highlight xaml hl_lines="24" %}
+{% highlight xaml %}
 <syncfusion:SfTreeView x:Name="treeView" ItemHeight="40">
 {% endhighlight %}
-{% highlight c# %}
+{% highlight c# hl_lines="2" %}
 SfTreeView treeView = new SfTreeView();
 treeView.ItemHeight = 40; 
 {% endhighlight %}
