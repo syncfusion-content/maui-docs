@@ -395,3 +395,5 @@ public class CountriesViewModel : INotifyPropertyChanged
 }
 {% endhighlight %}
 {% endtabs %}
+
+For more information regarding the EventToCommand behavior in .NET MAUI, you can refer [this](https://learn.microsoft.com/en-us/dotnet/communitytoolkit/maui/behaviors/event-to-command-behavior) link.
