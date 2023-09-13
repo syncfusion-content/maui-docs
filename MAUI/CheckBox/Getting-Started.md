@@ -17,7 +17,7 @@ This section explains the steps required to work with the `CheckBox` control for
 
 ## Adding a .NET MAUI CheckBox reference
 
-Syncfusion .NET MAUI controls are available in [Nuget.org](https://www.nuget.org/). To add `.NET MAUI CheckBox` to your project, open the NuGet package manager in Visual Studio, search for `Syncfusion.Maui.Buttons`, and install it.
+Syncfusion .NET MAUI controls are available on [Nuget.org](https://www.nuget.org/). To add the `.NET MAUI CheckBox` to your project, open the NuGet package manager in Visual Studio, search for `Syncfusion.Maui.Buttons`, and install it.
 
 ## Handler registration 
 
@@ -56,7 +56,7 @@ namespace ButtonSample
 
 ## Create a Simple .NET MAUI SfCheckBox
 
-The [.NET MAUI CheckBox] (SfCheckBox) control is configured entirely in C# code or by using XAML markup. The following steps explain how to create a [`SfCheckBox`] and configure its elements.
+The [.NET MAUI CheckBox] (SfCheckBox) control can be configured entirely in C# code using XAML markup. The following steps explain how to create a [`SfCheckBox`] and configure its elements.
 
 ## Add namespace for referred assemblies
 
@@ -116,7 +116,7 @@ The [.NET MAUI CheckBox] (SfCheckBox) control is configured entirely in C# code 
 
 ## Setting caption
 
-The check box caption can be defined using the [`Text`] property of [`SfCheckBox`]. This caption normally describes the meaning of the check box and it displays next to check box.
+The check box caption can be defined using the [`Text`] property of [`SfCheckBox`]. This caption typically describes the meaning of the check box and is displayed next to the check box.
 
 {% tabs %}
 {% highlight xaml %}
@@ -146,7 +146,7 @@ The three visual states of [`SfCheckBox`] are:
 
 ![.NET MAUI CheckBox](Images/Getting-Started/tristate.png) 
 
-You can change the state of the check box using the [`IsChecked`] [`SfCheckBox`]. In checked state, a tick mark is added to the visualization of check box.
+You can change the state of the check box using the [`IsChecked`] [`SfCheckBox`]. In the checked state, a tick mark is added to the visualization of the check box.
 
 <table>
 <tr>
@@ -215,9 +215,9 @@ Check box can be used as a single or as a group. A single check box mostly used 
 {% endhighlight %}
 {% endtabs %}
 
-![.NET MAUI CheckBox](Images/Getting-Started/termsandconditions.png) 
+![.NET MAUI CheckBox](Images/Getting-Started/termsandconditions.png)
 
-Multiple check boxes can be used as a group for multi-select scenarios in which a user chooses one or more items from the group of choices that are not mutually exclusive.
+Multiple checkboxes can be used as a group for multi-select scenarios in which a user selects one or more items from the choices that are not mutually exclusive.
 
 {% tabs %}
 {% highlight xaml %}

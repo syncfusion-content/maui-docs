@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Customization in .NET MAUI CheckBox control | Syncfusion
+title: Customization in .NET MAUI CheckBox Control | Syncfusion
 description: Learn about Customization support in Syncfusion Essential Studio .NET MAUI CheckBox control, its elements and more.
 platform: .NET MAUI
 control: SfCheckBox
@@ -11,7 +11,7 @@ documentation: ug
 
 ## Customizing a shape
 
-The check box shape can be customized using the [`CornerRadius`] property. This property specifies the uniform radius value to the every corner of the check box.
+The check box shape can be customized using the [`CornerRadius`] property. This property specifies a uniform radius value for every corner of the check box.
 
 {% tabs %}
 {% highlight xaml %}
@@ -34,7 +34,7 @@ The check box shape can be customized using the [`CornerRadius`] property. This 
 
 ## Customizing a state color
 
-The default state colors can be customized using the [`CheckedColor`] and [`UncheckedColor`] properties. The checked or indeterminate state color is updated to the [`CheckedColor`] property value when the state is changed to the checked or indeterminate.The unchecked state color is updated to [`UncheckedColor`] property value when the state is changed to unchecked. 
+The default state colors can be customized using the [`CheckedColor`] and [`UncheckedColor`] properties. The checked or indeterminate state color is updated to the value of the [`CheckedColor`] property when the state is changed to checked or indeterminate. The unchecked state color is updated to the value of the [`UncheckedColor`] property when the state is changed to unchecked.
 
 {% tabs %}
 {% highlight xaml %}
@@ -148,7 +148,7 @@ You can customize the display text appearance of the [`SfCheckBox`] control usin
  
 ## TickColor Customization
 
-The [`TickColor`] property customizes the color of the tick in [`SfCheckBox`] control using the following properties:
+The [`TickColor`] property customizes the color of the tick in the [`SfCheckBox`] control using the properties listed below.
 
 {% tabs %}
 {% highlight xaml %}
