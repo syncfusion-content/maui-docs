@@ -81,6 +81,12 @@ The .NET MAUI Scheduler supports collection that implements the object interface
 <td>This property maps the property name of a business object class to the property name of RecurrenceExceptionDates in SchedulerAppointment.</td></tr>
 <tr><td>{{'[IsReadOnly](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html#Syncfusion_Maui_Scheduler_SchedulerAppointment_IsReadOnly)'| markdownify}}</td>
 <td>This property maps the property name of a business object class to the property name of IsReadOnly in SchedulerAppointment.</td></tr>
+<tr><td></td>
+<td>This property maps the property name of a business object class to the property name of IsReadOnly in SchedulerAppointment.</td></tr>
+<tr><td>{{'[TextColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.ScheduleAppointment.html#Syncfusion_SfSchedule_XForms_ScheduleAppointment_TextColor)'| markdownify}}</td>
+<td>This property maps the property name of a business object class to the property name of IsReadOnly in SchedulerAppointment.</td></tr>
+<tr><td>TextColor</td>
+<td>This property maps the property name of a business object class to the property name of TextColor in SchedulerAppointment.</td></tr>
 </table>
 
 N> The business object class should contain two date time fields as mandatory.
@@ -104,6 +110,7 @@ public class Meeting
     public TimeZoneInfo StartTimeZone { get; set; }
     public TimeZoneInfo EndTimeZone { get; set; }
     public Brush Background { get; set; }
+    public Color TextColor { get; set; }
 }
 
 {% endhighlight %}
@@ -126,7 +133,8 @@ The [AppointmentMapping](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sch
                 Background="Background"
                 IsAllDay="IsAllDay"
                 StartTimeZone="StartTimeZone"
-                EndTimeZone="EndTimeZone"/>
+                EndTimeZone="EndTimeZone"
+                TextColorMapping="TextColor"/>
     </scheduler:SfScheduler.AppointmentMapping>
 </scheduler:SfScheduler>
 
@@ -143,6 +151,7 @@ appointmentMapping.Background = "Background";
 appointmentMapping.IsAllDay = "IsAllDay";
 appointmentMapping.StartTimeZone = "StartTimeZone";
 appointmentMapping.EndTimeZone = "EndTimeZone";
+appointmentMapping.TextColorMapping = "TextColor";
 scheduler.AppointmentMapping = appointmentMapping;
 this.Content = scheduler;
 
@@ -164,6 +173,8 @@ meeting.To = meeting.From.AddHours(2);
 meeting.EventName = "Meeting";
 // Setting the background color for an event.
 meeting.Background = Brush.Orange;
+// Setting the text color for an event.
+meeting.TextColor = Colors.Blue;
 // Creating an instance for the collection of business objects.
 var Meetings = new ObservableCollection<Meeting>();
 // Adding a business object to the business object Collection.
@@ -193,6 +204,7 @@ The spanned appointment is the one which lasts longer than 24 hours. The spanned
                 StartTime="From"
                 EndTime="To"
                 Background="Background"
+                TextColorMapping="TextColor"
                 IsAllDay="IsAllDay"
                 StartTimeZone="StartTimeZone"
                 EndTimeZone="EndTimeZone"/>
@@ -212,6 +224,8 @@ meeting.To = meeting.From.AddDays(2).AddHours(2);
 meeting.EventName = "Meeting";
 // Setting the background color for an event.
 meeting.Background = Brush.Orange;
+// Setting the text color for an event.
+meeting.TextColor = Colors.Blue;
 // Creating an instance for the collection of business objects.
 var Meetings = new ObservableCollection<Meeting>();
 // Adding a business object to the business object Collection.
@@ -283,6 +297,7 @@ appointment.Add(new SchedulerAppointment()
     EndTime = DateTime.Today.AddHours(10),
     Subject = "Client Meeting",
     Background = Brush.Orange,
+    TextColor = Colors.Blue,
     IsReadOnly = true,
 });
 
@@ -384,6 +399,7 @@ public class Meeting
     public object RecurrenceId { get; set; }
     public object Id { get; set; }
     public string RecurrenceRule { get; set; }
+    public Color TextColor { get; set; }
 }
 
 {% endhighlight %}
@@ -410,7 +426,8 @@ The [AppointmentMapping](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sch
                 EndTimeZone="EndTimeZone"
                 Id="Id"      
                 RecurrenceRule="RecurrenceRule"
-                RecurrenceId="RecurrenceId"/>
+                RecurrenceId="RecurrenceId"
+                TextColorMapping="TextColor"/>
     </scheduler:SfScheduler.AppointmentMapping>
 </scheduler:SfScheduler>
 
@@ -429,6 +446,7 @@ appointmentMapping.Background = "Background";
 appointmentMapping.IsAllDay = "IsAllDay";
 appointmentMapping.StartTimeZone = "StartTimeZone";
 appointmentMapping.EndTimeZone = "EndTimeZone";
+appointmentMapping.TextColorMapping = "TextColor";
 scheduler.AppointmentMapping = appointmentMapping;
 this.Content = scheduler;
 
@@ -450,6 +468,8 @@ meeting.To = meeting.From.AddHours(1);
 meeting.EventName = "Meeting";
 // Setting the background color for an event.
 meeting.Background = Brush.Orange;
+// Setting the text color for an event.
+meeting.TextColor = Colors.Blue;
 //Creating a recurrence rule.
 meeting.RecurrenceRule = "FREQ=DAILY;INTERVAL=2;COUNT=10";
 // Setting the Id of an event.
@@ -656,6 +676,7 @@ var exceptionAppointment = new SchedulerAppointment()
     StartTime = new DateTime(changedExceptionDate.Year, changedExceptionDate.Month, changedExceptionDate.Day, 11, 0, 0),
     EndTime = new DateTime(changedExceptionDate.Year, changedExceptionDate.Month, changedExceptionDate.Day, 12, 0, 0),
     Background = Brush.DeepPink,
+    TextColor = Colors.Blue,
     RecurrenceId = 1
 };
 
@@ -705,6 +726,7 @@ public class Meeting
     public TimeZoneInfo StartTimeZone { get; set; }
     public TimeZoneInfo EndTimeZone { get; set; }
     public Brush Background { get; set; }
+    public Color TextColor { get; set; }
     public object RecurrenceId { get; set; }
     public object Id { get; set; }
     public string RecurrenceRule { get; set; }
@@ -734,7 +756,8 @@ The property `RecurrenceExceptionDates` should map with the business object clas
                 Id="Id"        
                 RecurrenceExceptionDates="RecurrenceExceptions"
                 RecurrenceRule="RecurrenceRule"
-                RecurrenceId="RecurrenceId"/>
+                RecurrenceId="RecurrenceId"
+                TextColorMapping="TextColor"/>
     </scheduler:SfScheduler.AppointmentMapping>
 </scheduler:SfScheduler>
 
@@ -751,6 +774,8 @@ recurrenceAppointment.To = recurrenceAppointment.From.AddHours(1);
 recurrenceAppointment.EventName = "Occurs Daily";
 // Setting the background color for an event.
 recurrenceAppointment.Background = Brush.Orange;
+// Setting the text color for an event.
+meeting.TextColor = Colors.Blue;
 //Creating a recurrence rule.
 recurrenceAppointment.RecurrenceRule = "FREQ=DAILY;COUNT=20";
 // Setting the Id of an event.
@@ -795,6 +820,7 @@ Add the created exception recurrence appointment to the SfScheduler `Appointment
                 StartTime="From"
                 EndTime="To"
                 Background="Background"
+                TextColorMapping="TextColor"
                 IsAllDay="IsAllDay"
                 StartTimeZone="StartTimeZone"
                 EndTimeZone="EndTimeZone"
@@ -816,6 +842,7 @@ Meeting dailyEvent = new Meeting
     From = DateTime.Today.Date.AddHours(9),
     To = DateTime.Today.Date.AddHours(10),
     Background = Brush.Orange,
+    TextColor = Colors.Blue,
     RecurrenceRule = "FREQ=DAILY;INTERVAL=1;COUNT=10",
     Id = 1
 };
@@ -836,6 +863,7 @@ Meeting changedEvent = new Meeting
     From = new DateTime(changedExceptionDate.Year, changedExceptionDate.Month, changedExceptionDate.Day, 13, 0, 0),
     To = new DateTime(changedExceptionDate.Year, changedExceptionDate.Month, changedExceptionDate.Day, 14, 0, 0),
     Background = Brush.DeepPink,
+    TextColor = Colors.Gray,
     RecurrenceRule = "FREQ=DAILY;INTERVAL=1;COUNT=10",
     Id = 2,
     RecurrenceId = 1

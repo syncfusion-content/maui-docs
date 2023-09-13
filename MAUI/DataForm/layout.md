@@ -399,3 +399,28 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {% endtabs %}
 
 Here, the `Name` field will be hidden.
+
+## Change the editor height
+
+The .NET MAUI DataForm allows you to modify the height of each editor to fit the height of the data form or to customize the height based on text size by using the `EditorHeight` property of the [DataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html).
+
+{% tabs %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+
+private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+{
+    if (e.DataFormItem != null)
+    {
+        if (e.DataFormItem.FieldName == "Name")
+        {
+            e.DataFormItem.EditorHeight = 60;
+        }
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+N> The `EditorHeight` customization is applicable for both [Default](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormLayoutType.html#Syncfusion_Maui_DataForm_DataFormLayoutType_Default) and [TextInputLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormLayoutType.html#Syncfusion_Maui_DataForm_DataFormLayoutType_TextInputLayout) layout types.
