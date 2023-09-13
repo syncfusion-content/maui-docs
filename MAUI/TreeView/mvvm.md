@@ -71,8 +71,6 @@ public class CountriesViewModel
 {% endhighlight %}
 {% endtabs %}
 
-![.NET MAUI TreeView with Binding selected item](Images/mvvm/maui-treeView-BindingSelectedItem.png)
-
 ### Binding SelectedItems
 
 The TreeView supports selecting multiple items by binding the `SelectedItems` property from the view model with the `ObservableCollection<object>` type.
