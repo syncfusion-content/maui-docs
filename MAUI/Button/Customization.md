@@ -35,7 +35,7 @@ button.TextColor = Color.White;
 {% endhighlight %}
 {% endtabs %}
 
-![SfButton with text color](images/Button_textcolor.png)
+![SfButton with text color](images/customization-images/Button_textcolor.png)
 
 ### FontSize
 
@@ -57,7 +57,7 @@ button.FontSize = 18;
 {% endhighlight %}
 {% endtabs %}
 
-![SfButton with font size](images/Button_fontsize.png)
+![SfButton with font size](images/customization-images/Button_fontsize.png)
 
 ### FontAttributes
 
@@ -79,7 +79,7 @@ button.FontAttributes = FontAttributes.Italic;
 {% endhighlight %}
 {% endtabs %}
 
-![SfButton with fontattributes](images/Button_fontattributes.png)
+![SfButton with fontattributes](images/customization-images/Button_fontattributes.png)
 
 ### FontFamily
 
@@ -101,7 +101,7 @@ button.FontFamily = "Samantha-Demo";
 {% endhighlight %}
 {% endtabs %}
 
-![SfButton with fontfamily](images/Button_fontfamily.jpg)
+![SfButton with fontfamily](images/customization-images/Button_fontfamily.jpg)
 
 ### TextAlignment
 
@@ -148,7 +148,7 @@ button.Background = Colors.DeepSkyBlue;
 {% endhighlight %}
 {% endtabs %}
 
-![SfButton with background color](images/Button_backgroundcolor.png)
+![SfButton with background color](images/customization-images/Button_backgroundcolor.png)
 
 ### Stroke
 
@@ -170,7 +170,7 @@ button.Stroke = Color.Red;
 {% endhighlight %}
 {% endtabs %}
 
-![SfButton with stroke](images/Button_border.png)
+![SfButton with stroke](images/customization-images/Button_border.png)
 
 ### StrokeThickness
 
@@ -193,7 +193,7 @@ button.Stroke = Color.Red;
 {% endhighlight %}
 {% endtabs %}
 
-![SfButton with strokethickness](images/Button_borderthickness.png)
+![SfButton with strokethickness](images/customization-images/Button_borderthickness.png)
 
 ### CornerRadius
 
@@ -215,7 +215,7 @@ button.CornerRadius = 20;
 {% endhighlight %}
 {% endtabs %}
 
-![SfButton with cornerradius](images/Button_cornerradius.png)
+![SfButton with cornerradius](images/customization-images/Button_cornerradius.png)
 
 ## Image Customization
 
@@ -265,7 +265,7 @@ button.ShowIcon = True;
 {% endhighlight %}
 {% endtabs %}
 
-![SfButton with image with content](images/Button_icon.png)
+![SfButton with image with content](images/customization-images/Button_icon.png)
 
 ### ImageSize
 
@@ -339,7 +339,7 @@ SfButton button = new SfButton()
 {% endhighlight %}
 {% endtabs %}
 
-![SfButton with image with icon image with end alignment](images/Button_imagealignment_end.png)
+![SfButton with image with icon image with end alignment](images/customization-images/Button_imagealignment_end.png)
 
 **Start image alignment in `SfButton`**
 
@@ -377,7 +377,7 @@ SfButton button = new SfButton()
 {% endhighlight %}
 {% endtabs %}
 
-![SfButton with image with icon image with start alignment](images/Button_imagealignment_start.png)
+![SfButton with image with icon image with start alignment](images/customization-images/Button_imagealignment_start.png)
 
 **Top image alignment in `SfButton`**
 
@@ -415,7 +415,7 @@ SfButton button = new SfButton()
 {% endhighlight %}
 {% endtabs %}
 
-![SfButton with image with icon image with top alignment](images/Button_imagealignment_top.png)
+![SfButton with image with icon image with top alignment](images/customization-images/Button_imagealignment_top.png)
 
 **Bottom image alignment in `SfButton`**
 
@@ -453,7 +453,7 @@ SfButton button = new SfButton()
 {% endhighlight %}
 {% endtabs %}
 
-![SfButton with image with icon image with top alignment](images/Button_imagealignment_bottom.png)
+![SfButton with image with icon image with top alignment](images/customization-images/Button_imagealignment_bottom.png)
 
 **Left image alignment in `SfButton`**
 
@@ -493,7 +493,7 @@ SfButton button = new SfButton()
 {% endhighlight %}
 {% endtabs %}
 
-![SfButton with image with icon image with left alignment](images/Button_imagealignment_left.png)
+![SfButton with image with icon image with left alignment](images/customization-images/Button_imagealignment_left.png)
 
 **Right image alignment in `SfButton`**
 
@@ -533,7 +533,7 @@ SfButton button = new SfButton()
 {% endhighlight %}
 {% endtabs %}
 
-![SfButton with image with icon image with right alignment](images/Button_imagealignment_right.png)
+![SfButton with image with icon image with right alignment](images/customization-images/Button_imagealignment_right.png)
 
 ## Gradient background
 
@@ -541,8 +541,6 @@ You can set the gradient as background of SfButton using the `Background` proper
 
 * Linear gradient
 * Radial gradient
-
-N> UWP platform does not support radial gradient.
 
 Refer to this `documentation` to learn more details about gradient.
 
@@ -553,60 +551,57 @@ Refer to this `documentation` to learn more details about gradient.
 
 <button:SfButton Text="Linear Gradient" CornerRadius="20">
     <button:SfButton.Background>
-        <gradient:LinearGradientBrush>
-            <gradient:LinearGradientBrush.GradientStops>
-                <gradient:GradientStop Color="#2F9BDF" Offset="0"/>
-                <gradient:GradientStop Color="#51F1F2" Offset="1"/>
-            </gradient:SfLinearGradientBrush.GradientStops>
-        </gradient:LinearGradientBrush>
+        <LinearGradientBrush>
+            <LinearGradientBrush.GradientStops>
+                <GradientStop Color="#0D62D4" Offset="0"/>
+                <GradientStop Color="#9F3CDC" Offset="1"/>
+            </LinearGradientBrush.GradientStops>
+        </LinearGradientBrush>
     </button:SfButton.Background>
 </button:SfButton>
 
 <button:SfButton Text="Radial Gradient" CornerRadius="20">
     <button:SfButton.Background>
-        <gradient:RadialGradientBrush Radius="1.5">
-            <gradient:RadialGradientBrush.GradientStops>
-                <gradient:GradientStop Color="#FFB57B" Offset="0"/>
-                <gradient:GradientStop Color="#FF5361" Offset="1"/>
-            </gradient:RadialGradientBrush.GradientStops>
-        </gradient:RadialGradientBrush>
+        <RadialGradientBrush Radius="1.5">
+            <RadialGradientBrush.GradientStops>
+                <GradientStop Color="#0D62D4" Offset="0"/>
+                <GradientStop Color="#9F3CDC" Offset="1"/>
+            </RadialGradientBrush.GradientStops>
+        </RadialGradientBrush>
     </button:SfButton.Background>
 </button:SfButton>
 
 {% endhighlight %}
 {% highlight c# %}
 
-using Syncfusion.XForms.Graphics;
-
 . . .
 
 SfButton linearButton = new SfButton();
 linearButton.Text = "Linear Gradient";
 linearButton.CornerRadius = 20;
-SfLinearGradientBrush linearGradientBrush = new SfLinearGradientBrush();
+LinearGradientBrush linearGradientBrush = new LinearGradientBrush();
 linearGradientBrush.GradientStops = new GradientStopCollection()
 {
-    new SfGradientStop(){ Color = Color.FromHex("#2F9BDF"), Offset = 0 },
-    new SfGradientStop(){ Color = Color.FromHex("#51F1F2"), Offset = 1 }
-};     
-linearButton.BackgroundGradient = linearGradientBrush;
+    new GradientStop(){ Color = Color.FromHex("#0D62D4"), Offset = 0 },
+    new GradientStop(){ Color = Color.FromHex("#9F3CDC"), Offset = 1 }
+};
+linearButton.Background = linearGradientBrush;
 
 SfButton radialButton = new SfButton();
 radialButton.Text = "Radial Gradient";
 radialButton.CornerRadius = 20;
-SfRadialGradientBrush radialGradientBrush = new SfRadialGradientBrush();
-radialGradientBrush.Radius = 1.5;
+RadialGradientBrush radialGradientBrush = new RadialGradientBrush();
 radialGradientBrush.GradientStops = new GradientStopCollection()
 {
-    new SfGradientStop(){ Color = Color.FromHex("#FFB57B"), Offset = 0 },
-    new SfGradientStop(){ Color = Color.FromHex("#FF5361"), Offset = 1 }
+    new GradientStop(){ Color = Color.FromHex("#0D62D4"), Offset = 0 },
+    new GradientStop(){ Color = Color.FromHex("#9F3CDC"), Offset = 1 }
 };
-radialButton.BackgroundGradient = radialGradientBrush;
+radialButton.Background = radialGradientBrush;
 
 {% endhighlight %}
 {% endtabs %}
 
-![.NET MAUI gradient support](images/Button_gradient.png)
+![.NET MAUI gradient support](images/customization-images/Button_gradient.jpg)
 
 ## Command
 
