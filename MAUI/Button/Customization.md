@@ -553,8 +553,8 @@ Refer to this `documentation` to learn more details about gradient.
     <button:SfButton.Background>
         <LinearGradientBrush>
             <LinearGradientBrush.GradientStops>
-                <GradientStop Color="#2F9BDF" Offset="0"/>
-                <GradientStop Color="#51F1F2" Offset="1"/>
+                <GradientStop Color="#0D62D4" Offset="0"/>
+                <GradientStop Color="#9F3CDC" Offset="1"/>
             </LinearGradientBrush.GradientStops>
         </LinearGradientBrush>
     </button:SfButton.Background>
@@ -564,8 +564,8 @@ Refer to this `documentation` to learn more details about gradient.
     <button:SfButton.Background>
         <RadialGradientBrush Radius="1.5">
             <RadialGradientBrush.GradientStops>
-                <GradientStop Color="#FFB57B" Offset="0"/>
-                <GradientStop Color="#FF5361" Offset="1"/>
+                <GradientStop Color="#0D62D4" Offset="0"/>
+                <GradientStop Color="#9F3CDC" Offset="1"/>
             </RadialGradientBrush.GradientStops>
         </RadialGradientBrush>
     </button:SfButton.Background>
@@ -582,8 +582,8 @@ linearButton.CornerRadius = 20;
 LinearGradientBrush linearGradientBrush = new LinearGradientBrush();
 linearGradientBrush.GradientStops = new GradientStopCollection()
 {
-    new GradientStop(){ Color = Color.FromHex("#2F9BDF"), Offset = 0 },
-    new GradientStop(){ Color = Color.FromHex("#51F1F2"), Offset = 1 }
+    new GradientStop(){ Color = Color.FromHex("#0D62D4"), Offset = 0 },
+    new GradientStop(){ Color = Color.FromHex("#9F3CDC"), Offset = 1 }
 };
 linearButton.Background = linearGradientBrush;
 
@@ -593,8 +593,8 @@ radialButton.CornerRadius = 20;
 RadialGradientBrush radialGradientBrush = new RadialGradientBrush();
 radialGradientBrush.GradientStops = new GradientStopCollection()
 {
-    new GradientStop(){ Color = Color.FromHex("#FFB57B"), Offset = 0 },
-    new GradientStop(){ Color = Color.FromHex("#FF5361"), Offset = 1 }
+    new GradientStop(){ Color = Color.FromHex("#0D62D4"), Offset = 0 },
+    new GradientStop(){ Color = Color.FromHex("#9F3CDC"), Offset = 1 }
 };
 radialButton.Background = radialGradientBrush;
 
