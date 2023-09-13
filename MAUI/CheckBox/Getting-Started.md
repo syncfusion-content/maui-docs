@@ -60,8 +60,6 @@ Step 1: Add the NuGet to the project as discussed in the above reference section
 
 Step 2: Add the namespace as shown in the following code sample.
 
-## Add namespace for referred assemblies
-
 {% tabs %}
 {% highlight xaml %}
 
