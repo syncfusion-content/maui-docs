@@ -56,7 +56,9 @@ namespace ButtonSample
 
 ## Create a Simple .NET MAUI SfCheckBox
 
-The [.NET MAUI CheckBox] (SfCheckBox) control can be configured entirely in C# code using XAML markup. The following steps explain how to create a [`SfCheckBox`] and configure its elements.
+Step 1: Add the NuGet to the project as discussed in the above reference section. 
+
+Step 2: Add the namespace as shown in the following code sample.
 
 ## Add namespace for referred assemblies
 
@@ -197,7 +199,7 @@ null
 
 N> For the check box, to report the indeterminate state, set the [`IsThreeState`] property to true.
 
-Check box can be used as a single or as a group. A single check box mostly used for a binary yes/no choice, such as "Remember me?", login scenario, or a terms of service agreement.
+The check box can be used as a single or as a group. A single check box mostly used for a binary yes/no choice, such as "Remember me?", login scenario, or a terms of service agreement.
 
 {% tabs %}
 {% highlight xaml %}

@@ -9,7 +9,7 @@ documentation: ug
 
 ## Visual States in .NET MAUI CheckBox (SfCheckBox)
 
-The visual of the CheckBox can be customized using `VisualStates`. The [`SfCheckBox`] control contains the following three visual states
+The visual of the CheckBox can be customized using `VisualStates`. The [`SfCheckBox`] control contains the following three visual states:
 
 * Checked
 * Unchecked

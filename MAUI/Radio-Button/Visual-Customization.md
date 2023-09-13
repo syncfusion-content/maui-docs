@@ -89,7 +89,7 @@ You can customize the display text appearance of the [`SfRadioButton`] control u
 {% tabs %}
 {% highlight xaml %}
 
-	<syncfusion:SfRadioButton x:Name="radioButton" Text="Radio Button" IsChecked="True" TextColor="Violet" HorizontalTextAlignment="Center" FontFamily="Arial" FontAttributes="Bold" FontSize="20"/>
+	<syncfusion:SfRadioButton x:Name="radioButton" Text="Radio Button" IsChecked="True" TextColor="Blue" HorizontalTextAlignment="Center" FontFamily="Arial" FontAttributes="Bold" FontSize="20"/>
 
 {% endhighlight %}
 {% highlight c# %}
@@ -97,7 +97,7 @@ You can customize the display text appearance of the [`SfRadioButton`] control u
 	SfRadioButton radioButton = new SfRadioButton();
 	radioButton.Text = "Radio Button";
 	radioButton.IsChecked = true;
-	radioButton.TextColor = Colors.Violet;
+	radioButton.TextColor = Colors.Blue;
 	radioButton.HorizontalTextAlignment = TextAlignment.Center;
 	radioButton.FontFamily = "Arial";
 	radioButton.FontAttributes = FontAttributes.Bold;
