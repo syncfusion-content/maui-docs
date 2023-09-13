@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Date Picker Events in .NET MAUI Date Picker control | Syncfusion
+title: Date Picker events in .NET MAUI Date Picker control | Syncfusion
 description: Learn about date picker events in Syncfusion .NET MAUI Date Picker (SfDatePicker) control and its basic features.
 platform: maui
 control: SfDatePicker
@@ -11,21 +11,21 @@ documentation: ug
 
 ## SelectionChanged
 
-The [SelectionChanged]() event is used to notify when the date selection is changed onto the view in the [SfDatePicker]().
+The [SelectionChanged] event is used to notify when the date selection is changed onto the view in the [SfDatePicker].
 
 * `Sender`: This contains the `SfDatePicker` object.
 
-* `EventArgs`: In Date Picker, [DatePickerSelectionChangedEventArgs]() is used for this event which holds the data of NewValue and OldValue.
+* `EventArgs`: In Date Picker, [DatePickerSelectionChangedEventArgs] is used for this event which holds the data of NewValue and OldValue.
 
-    * [NewValue]() : Returns the new selected date.
-    * [OldValue]() : Returns the old selected date.
+    * [NewValue] : Returns the new selected date.
+    * [OldValue] : Returns the old selected date.
 
 {% tabs %}
 
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
 <picker:SfDatePicker x:Name="Picker"
-                         SelectionChanged="OnDatePickerSelectionChanged">
+                     SelectionChanged="OnDatePickerSelectionChanged">
 </picker:SfDatePicker>
 
 {% endhighlight %}
@@ -48,23 +48,23 @@ private void OnDatePickerSelectionChanged(object sender, DatePickerSelectionChan
 
 In `SfDatePicker`, three events are used while the date picker is in Dialog mode.
 
- * [`Opened`]()
- * [`Closing`]()
- * [`Closed`]()
+ * [`Opened`]
+ * [`Closing`]
+ * [`Closed`]
 
 ### Opened event
 
-The [Opened]() event occurs when the picker popup is opened in the [SfDatePicker]().
+The [Opened] event occurs when the picker popup is opened in the [SfDatePicker].
 
 * `Sender`: This contains the `SfDatePicker` object.
 
-* `EventArgs`: In SfDatePicker picker, [EventArgs]() is used for this event.
+* `EventArgs`: In SfDatePicker picker, [EventArgs] is used for this event.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
 <picker:SfDatePicker x:Name="Picker"
-                         Closing="OnDatePickerPopUpOpened">
+                     Opened="OnDatePickerPopUpOpened">
 </picker:SfDatePicker>
 
 {% endhighlight %}
@@ -75,7 +75,7 @@ this.Picker.Opened += this.OnDatePickerPopUpOpened;
 
 private void OnDatePickerPopUpOpened(object sender, EventArgs e)
 {
-    // If you to open the picker, set IsOpen property to true.
+    // If you need to open the picker, set IsOpen property to true.
     this.Picker.IsOpen = true;
 }
 
@@ -85,19 +85,19 @@ private void OnDatePickerPopUpOpened(object sender, EventArgs e)
 
 ### Closing event
 
-The [Closing]() event occurs when the picker popup is closing in the [SfDatePicker]().
+The [Closing] event occurs when the picker popup is closing in the [SfDatePicker].
 
 * `Sender`: This contains the `SfDatePicker` object.
 
-* `EventArgs`: In SfDatePicker picker, [CancelEventArgs]() is used to describe a cancel event which holds the bool value.
+* `EventArgs`: In SfDatePicker picker, [CancelEventArgs] is used to describe the cancel event which holds the bool value.
 
-    * [Cancel]() : Indicating whether we should cancel the operation or not.
+    * [Cancel] : Indicating whether we should cancel the operation or not.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
 <picker:SfDatePicker x:Name="Picker"
-                         Closing="OnDatePickerPopUpClosing">
+                     Closing="OnDatePickerPopUpClosing">
 </picker:SfDatePicker>
 
 {% endhighlight %}
@@ -108,7 +108,7 @@ this.Picker.Closing += this.OnDatePickerPopUpClosing;
 
 private void OnDatePickerPopUpClosing(object sender, CancelEventArgs e)
 {
-    //To restrict the date  picker get close, set e.Cancel to true.
+    //To restrict the date picker get close, set e.Cancel to true.
     e.Cancel = true;
 }
 
@@ -118,18 +118,18 @@ private void OnDatePickerPopUpClosing(object sender, CancelEventArgs e)
 
 ### Closed event
 
-The [Closed]() event occurs when the picker popup is closed in the [SfDatePicker]().
+The [Closed] event occurs when the picker popup is closed in the [SfDatePicker].
 
 * `Sender`: This contains the `SfDatePicker` object.
 
-* `EventArgs`: In SfDatePicker picker, [EventArgs]() is used for this event.
+* `EventArgs`: In SfDatePicker picker, [EventArgs] is used for this event.
 
 {% tabs %}
 
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
 <picker:SfDatePicker x:Name="Picker"
-                         Closed="OnDatePickerPopUpClosed">
+                     Closed="OnDatePickerPopUpClosed">
 </picker:SfDatePicker>
 
 {% endhighlight %}
@@ -140,7 +140,7 @@ this.Picker.Closed += this.OnDatePickerPopUpClosed;
 
 private void OnDatePickerPopUpClosed(object sender, EventArgs e)
 {
-    // If you to close the picker, set IsOpen property to false.
+    // If you need to close the picker, set IsOpen property to false.
     this.Picker.IsOpen = false;
 }
 
@@ -150,25 +150,25 @@ private void OnDatePickerPopUpClosed(object sender, EventArgs e)
 
 ## Events in footer view
 
-In `SfDatePicker` footer view provides two events. These events are not applicable while the footer view is not visible.
+The `SfDatePicker` footer view provides two events. These events are not applicable while the footer view is not visible.
 
- * [`OkButtonClicked`]()
- * [`CancelButtonClicked`]()
+ * [`OkButtonClicked`]
+ * [`CancelButtonClicked`]
 
 ### OkButtonClicked event
 
- The [OkButtonClicked]() event occurs when the ok button is clicked in the [SfDatePicker]() footer view. This event is not applicable when the footer view is not visible and the ok button is not visible.
+ The [OkButtonClicked] event occurs when the ok button is clicked in the [SfDatePicker] footer view. This event is not applicable when the footer view is not visible and the ok button is not visible.
 
 * `Sender`: This contains the `SfDatePicker` object.
 
-* `EventArgs`: In SfDatePicker picker, [EventArgs]() is used for this event.
+* `EventArgs`: In SfDatePicker picker, [EventArgs] is used for this event.
 
 {% tabs %}
 
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
 <picker:SfDatePicker x:Name="Picker"
-                         OkButtonClicked="OnDatePickerOkButtonClicked">
+                     OkButtonClicked="OnDatePickerOkButtonClicked">
 </picker:SfDatePicker>
 
 {% endhighlight %}
@@ -179,7 +179,7 @@ this.Picker.OkButtonClicked += this.OnDatePickerOkButtonClicked;
 
 private void OnDatePickerOkButtonClicked(object sender, EventArgs e)
 {
-    // This event is used to update the selected item in the Date  picker.
+    // This event is used to update the selected item in the Date picker.
 }
 
 {% endhighlight %}
@@ -188,18 +188,18 @@ private void OnDatePickerOkButtonClicked(object sender, EventArgs e)
 
 ### CancelButtonClicked event
 
- The [CancelButtonClicked]() event occurs when the cancel button is clicked in the [SfDatePicker]() footer view. This event is not applicable when the footer view  is not visible.
+ The [CancelButtonClicked] event occurs when the cancel button is clicked in the [SfDatePicker] footer view. This event is not applicable when the footer view is not visible.
 
 * `Sender`: This contains the `SfDatePicker` object.
 
-* `EventArgs`: In SfDatePicker picker, [EventArgs]() is used for this event.
+* `EventArgs`: In SfDatePicker picker, [EventArgs] is used for this event.
 
 {% tabs %}
 
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
 <picker:SfDatePicker x:Name="Picker"
-                         CancelButtonClicked="OnDatePickerCancelButtonClicked">
+                     CancelButtonClicked="OnDatePickerCancelButtonClicked">
 </picker:SfDatePicker>
 
 {% endhighlight %}
@@ -210,7 +210,7 @@ this.Picker.CancelButtonClicked += this.OnDatePickerCancelButtonClicked;
 
 private void OnDatePickerCancelButtonClicked(object sender, EventArgs e)
 {
-    // This event is used to cancel the selected item in the Date  picker.
+    // This event is used to cancel the selected item in the Date picker.
 }
 
 {% endhighlight %}

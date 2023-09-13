@@ -11,14 +11,14 @@ documentation: ug
 
 ## Selection changed event
 
-The [SelectionChanged]() event is used to notify when the time selection is changed onto the view in the [SfTimePicker]().
+The [SelectionChanged] event is used to notify when the time selection is changed onto the view in the [SfTimePicker].
 
 * `Sender`: This contains the `SfTimePicker` object.
 
-* `EventArgs`: In SfTimePicker picker, [TimePickerSelectionChangedEventArgs]() is used for this event which holds the data of NewValue and OldValue.
+* `EventArgs`: In SfTimePicker picker, [TimePickerSelectionChangedEventArgs] is used for this event which holds the data of NewValue and OldValue.
 
-    * [NewValue]() : Returns the new selected time.
-    * [OldValue]() : Returns the old selected time.
+    * [NewValue] : Returns the new selected time.
+    * [OldValue] : Returns the old selected time.
 
 
 {% tabs %}
@@ -26,7 +26,7 @@ The [SelectionChanged]() event is used to notify when the time selection is chan
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
 <picker:SfTimePicker x:Name="Picker"
-                         SelectionChanged="OnTimePickerSelectionChanged">
+                     SelectionChanged="OnTimePickerSelectionChanged">
 </picker:SfTimePicker>
 
 {% endhighlight %}
@@ -49,24 +49,24 @@ private void OnTimePickerSelectionChanged(object sender, TimePickerSelectionChan
 
 In `SfTimePicker`, three events are used while the time picker is in Dialog mode.
 
- * [`Opened`]()
- * [`Closing`]()
- * [`Closed`]()
+ * [`Opened`]
+ * [`Closing`]
+ * [`Closed`]
 
 ### Opened event
 
-The [Opened]() event occurs when the picker popup is opened in the [SfTimePicker]().
+The [Opened] event occurs when the picker popup is opened in the [SfTimePicker].
 
 * `Sender`: This contains the `SfTimePicker` object.
 
-* `EventArgs`: In SfTimePicker picker, [EventArgs]() is used for this event.
+* `EventArgs`: In SfTimePicker picker, [EventArgs] is used for this event.
 
 {% tabs %}
 
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
 <picker:SfTimePicker x:Name="Picker"
-                         Closing="OnTimePickerPopUpOpened">
+                     Opened="OnTimePickerPopUpOpened">
 </picker:SfTimePicker>
 
 {% endhighlight %}
@@ -77,7 +77,7 @@ this.Picker.Opened += this.OnTimePickerPopUpOpened;
 
 private void OnTimePickerPopUpOpened(object sender, EventArgs e)
 {
-    // If you to open the picker, set IsOpen property to true.
+    // If you need to open the picker, set IsOpen property to true.
     this.Picker.IsOpen = true;
 }
 
@@ -87,20 +87,20 @@ private void OnTimePickerPopUpOpened(object sender, EventArgs e)
 
 ### Closing event
 
-The [Closing]() event occurs when the picker popup is closing in the [SfTimePicker]().
+The [Closing] event occurs when the picker popup is closing in the [SfTimePicker].
 
 * `Sender`: This contains the `SfTimePicker` object.
 
-* `EventArgs`: In SfTimePicker picker, [CancelEventArgs]() is used to describe a cancel event which holds the bool value.
+* `EventArgs`: In SfTimePicker picker, [CancelEventArgs] is used to describe a cancel event which holds the bool value.
 
-    * [Cancel]() : Indicating whether we should cancel the operation or not.
+    * [Cancel] : Indicating whether we should cancel the operation or not.
 
 {% tabs %}
 
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
 <picker:SfTimePicker x:Name="Picker"
-                         Closing="OnTimePickerPopUpClosing">
+                     Closing="OnTimePickerPopUpClosing">
 </picker:SfTimePicker>
 
 {% endhighlight %}
@@ -111,7 +111,7 @@ this.Picker.Closing += this.OnTimePickerPopUpClosing;
 
 private void OnTimePickerPopUpClosing(object sender, CancelEventArgs e)
 {
-    //To restrict the  time picker get close, set e.Cancel to true.
+    //To restrict the time picker get close, set e.Cancel to true.
     e.Cancel = true;
 }
 
@@ -121,18 +121,18 @@ private void OnTimePickerPopUpClosing(object sender, CancelEventArgs e)
 
 ### Closed event
 
-The [Closed]() event occurs when the picker popup is closed in the [SfTimePicker]().
+The [Closed] event occurs when the picker popup is closed in the [SfTimePicker].
 
 * `Sender`: This contains the `SfTimePicker` object.
 
-* `EventArgs`: In SfTimePicker picker, [EventArgs]() is used for this event.
+* `EventArgs`: In SfTimePicker picker, [EventArgs] is used for this event.
 
 {% tabs %}
 
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
 <picker:SfTimePicker x:Name="Picker"
-                         Closed="OnTimePickerPopUpClosed">
+                     Closed="OnTimePickerPopUpClosed">
 </picker:SfTimePicker>
 
 {% endhighlight %}
@@ -143,7 +143,7 @@ this.Picker.Closed += this.OnTimePickerPopUpClosed;
 
 private void OnTimePickerPopUpClosed(object sender, EventArgs e)
 {
-    // If you to close the picker, set IsOpen property to false.
+    // If you need to close the picker, set IsOpen property to false.
     this.Picker.IsOpen = false;
 }
 
@@ -155,23 +155,23 @@ private void OnTimePickerPopUpClosed(object sender, EventArgs e)
 
 In `SfTimePicker` footer view provides two events. These events are not applicable while the footer view is not visible.
 
- * [`OkButtonClicked`]()
- * [`CancelButtonClicked`]()
+ * [`OkButtonClicked`]
+ * [`CancelButtonClicked`]
 
 ### OkButtonClicked event
 
- The [OkButtonClicked]() event occurs when the ok button is clicked in the [SfTimePicker]() footer view. This event is not applicable when the footer view is not visible and the ok button is not visible.
+ The [OkButtonClicked] event occurs when the ok button is clicked in the [SfTimePicker] footer view. This event is not applicable when the footer view is not visible and the ok button is not visible.
 
 * `Sender`: This contains the `SfTimePicker` object.
 
-* `EventArgs`: In SfTimePicker picker, [EventArgs]() is used for this event.
+* `EventArgs`: In SfTimePicker picker, [EventArgs] is used for this event.
 
 {% tabs %}
 
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
 <picker:SfTimePicker x:Name="Picker"
-                         OkButtonClicked="OnTimePickerOkButtonClicked">
+                     OkButtonClicked="OnTimePickerOkButtonClicked">
 </picker:SfTimePicker>
 
 {% endhighlight %}
@@ -182,7 +182,7 @@ this.Picker.OkButtonClicked += this.OnTimePickerOkButtonClicked;
 
 private void OnTimePickerOkButtonClicked(object sender, EventArgs e)
 {
-    // This event is used to up the selected item in the  time picker.
+    // This event is used to update the selected item in the time picker.
 }
 
 {% endhighlight %}
@@ -191,18 +191,18 @@ private void OnTimePickerOkButtonClicked(object sender, EventArgs e)
 
 ### CancelButtonClicked event
 
- The [CancelButtonClicked]() event occurs when the cancel button is clicked in the [SfTimePicker]() footer view. This event is not applicable when the footer view is not visible.
+ The [CancelButtonClicked] event occurs when the cancel button is clicked in the [SfTimePicker] footer view. This event is not applicable when the footer view is not visible.
 
 * `Sender`: This contains the `SfTimePicker` object.
 
-* `EventArgs`: In SfTimePicker picker, [EventArgs]() is used for this event.
+* `EventArgs`: In SfTimePicker picker, [EventArgs] is used for this event.
 
 {% tabs %}
 
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
 <picker:SfTimePicker x:Name="Picker"
-                         CancelButtonClicked="OnTimePickerCancelButtonClicked">
+                     CancelButtonClicked="OnTimePickerCancelButtonClicked">
 </picker:SfTimePicker>
 
 {% endhighlight %}
@@ -213,7 +213,7 @@ this.Picker.CancelButtonClicked += this.OnTimePickerCancelButtonClicked;
 
 private void OnTimePickerCancelButtonClicked(object sender, EventArgs e)
 {
-    // This event is used to cancel the selected item in the  time picker.
+    // This event is used to cancel the selected item in the time picker.
 }
 
 {% endhighlight %}
