@@ -2,18 +2,18 @@
 layout: post
 title: Item Height Customization in .NET MAUI TreeView | Syncfusion
 description: Learn here all about Item Height Customization support in Syncfusion .NET MAUI TreeView (SfTreeView) control and more.
-platform: .NET MAUI
+platform: MAUI
 control: SfTreeView
 documentation: ug
 ---
 
 # Item Height Customization in .NET MAUI TreeView (SfTreeView)
 
-The TreeView provides various options to customize the height of items. To achieve this customization, please walkthrough the below sections:
+The TreeView offers several options for customizing the height of items. To achieve this customization, please follow the steps outlined in the sections below.
 
 ## Customize Item Height
 
-The TreeView allows customizing the height of items by setting the `ItemHeight` property. The default value of this property is `40d`. This property can be customized at runtime.
+The TreeView allows for customization of item height by setting the `ItemHeight` property. The default value of this property is `40d`. This property can be customized at runtime.
 
 {% tabs %}
 {% highlight xaml %}
@@ -26,18 +26,18 @@ treeView.ItemHeight = 40;
 {% endtabs %}
 
 ## Customize Item height using `QueryNodeSize` event
- The TreeView allows customizing the height of the items using `QueryNodeSize` event. This event is raised whenever the item comes into view and triggered with `QueryNodeSizeEventArgs`.
+The TreeView allows customization of the height of the items using the `QueryNodeSize` event. This event is raised whenever the item comes into view and is triggered with `QueryNodeSizeEventArgs`.
 
 The `SfTreeView.QueryNodeSize` event provides the following arguments:
  
  * `Node` : This argument contains the `TreeViewNode` and data associated with it.
  * `Height` : This argument contains the default item height of the queried item and can be set with desired size.
  * `Handled` : Decides whether the specified or measured height can be set to the item or not. The default value is `false`. When this property is not set, the decided height will not set to the item.
- * `GetActualNodeHeight` : This method will return the measured height of the node item based on content loaded in it.
+ * `GetActualNodeHeight` : This method will return the measured height of the node item based on the content loaded in it.
 
 ### Customize specific item height using custom value
 
-The TreeView allows customizing the height of the specific item by setting the custom value directly to the `Height` argument which is available in `QueryNodeSizeEventArgs`.
+The TreeView allows customization of the height of a specific item by directly setting the custom value to the `Height` argument, which is available in `QueryNodeSizeEventArgs`.
 
 {% tabs %}
 {% highlight xaml %}
@@ -83,7 +83,7 @@ public class MainPage : ContentPage
 
 ### Customize specific item height based on the content size
 
-The TreeView allows adjusting height of items based on the content measured size while loaded by setting the `Height` argument with value returned from `QueryNodeSizeEventArgs.GetActualNodeHeight` method.
+The TreeView allows adjusting height of items based on the content measured size while loaded by setting the `Height` argument with the value returned from the `QueryNodeSizeEventArgs.GetActualNodeHeight` method.
                                              
 {% tabs %}
 {% highlight xaml %}
@@ -127,8 +127,12 @@ public class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
+Download the entire source code from GitHub here.
+
+![.NET MAUI TreeView Item Height Customization](Images/item-height-customization/maui-treeview-item-height.png)
+
 
 ## Limitations
 
- * Define the size of the image when loading image in the `SfTreeView.ItemTemplate`. Because, it does not return actual measured size when measuring before item layout.
+ * Define the size of the image when loading an image in the `SfTreeView.ItemTemplate`. Because it does not return the actual measured size when measuring before the item layout.
 
