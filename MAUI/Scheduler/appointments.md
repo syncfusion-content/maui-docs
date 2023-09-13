@@ -121,7 +121,7 @@ N> Inherit this class from the `INotifyPropertyChanged` for dynamic changes in c
 The [AppointmentMapping](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointmentMapping.html) property of the `Meeting` class maps those properties to the `.NET MAUI Scheduler` control.
 
 {% tabs %}
-{% highlight XAML hl_lines="3 4 5 6 7 8 9 10 11 12" %}
+{% highlight XAML hl_lines="3 4 5 6 7 8 9 10 11 12 13" %}
 
 <scheduler:SfScheduler x:Name="Scheduler" 
                        View="Week" >
@@ -174,7 +174,7 @@ meeting.EventName = "Meeting";
 // Setting the background color for an event.
 meeting.Background = Brush.Orange;
 // Setting the text color for an event.
-meeting.TextColor = Colors.Blue;
+meeting.TextColor = Colors.White;
 // Creating an instance for the collection of business objects.
 var Meetings = new ObservableCollection<Meeting>();
 // Adding a business object to the business object Collection.
@@ -297,7 +297,7 @@ appointment.Add(new SchedulerAppointment()
     EndTime = DateTime.Today.AddHours(10),
     Subject = "Client Meeting",
     Background = Brush.Orange,
-    TextColor = Colors.Blue,
+    TextColor = Colors.White,
     IsReadOnly = true,
 });
 
@@ -411,7 +411,7 @@ Inherit this class from the `INotifyPropertyChanged` for dynamic changes in cust
 The [AppointmentMapping](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointmentMapping.html) property of the `Meeting` class maps those properties to the  scheduler appointment of the `.NET MAUI Scheduler` control.
 
 {% tabs %}
-{% highlight XAML hl_lines="3 4 5 6 7 8 9 10 11 12 13 14 15" %}
+{% highlight XAML hl_lines="3 4 5 6 7 8 9 10 11 12 13 14 15 16" %}
 
 <scheduler:SfScheduler x:Name="Scheduler"
                        View="Week" >
@@ -469,7 +469,7 @@ meeting.EventName = "Meeting";
 // Setting the background color for an event.
 meeting.Background = Brush.Orange;
 // Setting the text color for an event.
-meeting.TextColor = Colors.Blue;
+meeting.TextColor = Colors.White;
 //Creating a recurrence rule.
 meeting.RecurrenceRule = "FREQ=DAILY;INTERVAL=2;COUNT=10";
 // Setting the Id of an event.
@@ -676,7 +676,7 @@ var exceptionAppointment = new SchedulerAppointment()
     StartTime = new DateTime(changedExceptionDate.Year, changedExceptionDate.Month, changedExceptionDate.Day, 11, 0, 0),
     EndTime = new DateTime(changedExceptionDate.Year, changedExceptionDate.Month, changedExceptionDate.Day, 12, 0, 0),
     Background = Brush.DeepPink,
-    TextColor = Colors.Blue,
+    TextColor = Colors.White,
     RecurrenceId = 1
 };
 
@@ -775,7 +775,7 @@ recurrenceAppointment.EventName = "Occurs Daily";
 // Setting the background color for an event.
 recurrenceAppointment.Background = Brush.Orange;
 // Setting the text color for an event.
-meeting.TextColor = Colors.Blue;
+meeting.TextColor = Colors.White;
 //Creating a recurrence rule.
 recurrenceAppointment.RecurrenceRule = "FREQ=DAILY;COUNT=20";
 // Setting the Id of an event.
@@ -842,7 +842,7 @@ Meeting dailyEvent = new Meeting
     From = DateTime.Today.Date.AddHours(9),
     To = DateTime.Today.Date.AddHours(10),
     Background = Brush.Orange,
-    TextColor = Colors.Blue,
+    TextColor = Colors.White,
     RecurrenceRule = "FREQ=DAILY;INTERVAL=1;COUNT=10",
     Id = 1
 };
@@ -863,7 +863,7 @@ Meeting changedEvent = new Meeting
     From = new DateTime(changedExceptionDate.Year, changedExceptionDate.Month, changedExceptionDate.Day, 13, 0, 0),
     To = new DateTime(changedExceptionDate.Year, changedExceptionDate.Month, changedExceptionDate.Day, 14, 0, 0),
     Background = Brush.DeepPink,
-    TextColor = Colors.Gray,
+    TextColor = Colors.White,
     RecurrenceRule = "FREQ=DAILY;INTERVAL=1;COUNT=10",
     Id = 2,
     RecurrenceId = 1

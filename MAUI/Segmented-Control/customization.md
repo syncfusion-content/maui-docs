@@ -169,14 +169,14 @@ public partial class MainPage : ContentPage
     {
         InitializeComponent();
         SfSegmentedControl segmentedControl = new SfSegmentedControl();
-        List<SfSegmentItem> itemsCollection = new List<SfSegmentItem>
+        List<SfSegmentItem> segmentItems = new List<SfSegmentItem>
             {
                 new SfSegmentItem() {Text="Day", TextStyle = new SegmentTextStyle(){TextColor = Colors.Green}},
                 new SfSegmentItem() {Text="Week", TextStyle = new SegmentTextStyle(){TextColor = Colors.Green}},
                 new SfSegmentItem() {Text="Month", TextStyle = new SegmentTextStyle(){TextColor = Colors.Green}},
                 new SfSegmentItem() {Text="Year", TextStyle = new SegmentTextStyle(){TextColor = Colors.Green}},
             };
-        segmentedControl.ItemsSource = itemsCollection;
+        segmentedControl.ItemsSource = segmentItems;
         this.Content = segmentedControl;
     }
 }
@@ -235,14 +235,14 @@ public partial class MainPage : ContentPage
     {
         InitializeComponent();
         SfSegmentedControl segmentedControl = new SfSegmentedControl();
-        List<SfSegmentItem> itemsCollection = new List<SfSegmentItem>
+        List<SfSegmentItem> segmentItems = new List<SfSegmentItem>
             {
                 new SfSegmentItem() {Text="Day", Background = Colors.LightBlue},
                 new SfSegmentItem() {Text="Week", Background = Colors.LightBlue},
                 new SfSegmentItem() {Text="Month", Background = Colors.LightBlue},
                 new SfSegmentItem() {Text="Year", Background = Colors.LightBlue},
             };
-        segmentedControl.ItemsSource = itemsCollection;
+        segmentedControl.ItemsSource = segmentItems;
         this.Content = segmentedControl;
     }
 }

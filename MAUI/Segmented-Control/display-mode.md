@@ -25,7 +25,7 @@ Create segmented control with segments having the given text.
     </ContentPage.BindingContext>
 
     <buttons:SfSegmentedControl x:Name="segmentedControl"
-                                ItemsSource="{Binding ItemsCollection}">
+                                ItemsSource="{Binding SegmentItems}">
     </buttons:SfSegmentedControl>
 </ContentPage>
 
@@ -44,7 +44,7 @@ public partial class MainPage : ContentPage
         InitializeComponent();
         ViewModel viewModel = new ViewModel();
         SfSegmentedControl segmentedControl = new SfSegmentedControl();
-        segmentedControl.ItemsSource = viewModel.ItemsCollection;
+        segmentedControl.ItemsSource = viewModel.SegmentItems;
         this.Content = segmentedControl;
     }
 }
@@ -54,11 +54,11 @@ public partial class MainPage : ContentPage
 
 public class ViewModel
 {
-    private List<SfSegmentItem> itemsCollection;
+    private List<SfSegmentItem> segmentItems;
 
     public ViewModel()
     {
-        itemsCollection = new List<SfSegmentItem>()
+        segmentItems = new List<SfSegmentItem>()
         {
                 new SfSegmentItem() {Text="Day"},
                 new SfSegmentItem() {Text="Week"},
@@ -67,10 +67,10 @@ public class ViewModel
         };
     }
 
-    public List<SfSegmentItem> ItemsCollection
+    public List<SfSegmentItem> SegmentItems
     {
-        get { return itemsCollection; }
-        set { itemsCollection = value; }
+        get { return segmentItems; }
+        set { segmentItems = value; }
     }
 }
 
@@ -92,7 +92,7 @@ Create a segmented control with segments that contain the provided images by usi
     </ContentPage.BindingContext>
 
         <buttons:SfSegmentedControl x:Name="segmentedControl"
-                                    ItemsSource="{Binding ItemsCollection}">
+                                    ItemsSource="{Binding SegmentItems}">
     </buttons:SfSegmentedControl>
 </ContentPage>
 
@@ -111,7 +111,7 @@ public partial class MainPage : ContentPage
         InitializeComponent();
         ViewModel viewModel = new ViewModel();
         SfSegmentedControl segmentedControl = new SfSegmentedControl();
-        segmentedControl.ItemsSource = viewModel.ItemsCollection;
+        segmentedControl.ItemsSource = viewModel.SegmentItems;
         this.Content = segmentedControl;
     }
 }
@@ -121,11 +121,11 @@ public partial class MainPage : ContentPage
 
 public class ViewModel
 {
-    private List<SfSegmentItem> itemsCollection;
+    private List<SfSegmentItem> segmentItems;
 
     public ViewModel()
     {
-        itemsCollection = new List<SfSegmentItem>()
+        segmentItems = new List<SfSegmentItem>()
         {
                 new SfSegmentItem(){Text = "\ue700", TextStyle = new SegmentTextStyle{ FontSize = 20, FontFamily = "Date Picker Icon" } },
                 new SfSegmentItem(){Text = "\ue701", TextStyle = new SegmentTextStyle{ FontSize = 20, FontFamily = "Date Picker Icon" } },
@@ -134,10 +134,10 @@ public class ViewModel
         };
     }
 
-    public List<SfSegmentItem> ItemsCollection
+    public List<SfSegmentItem> SegmentItems
     {
-        get { return itemsCollection; }
-        set { itemsCollection = value; }
+        get { return segmentItems; }
+        set { segmentItems = value; }
     }
 }
 
@@ -159,7 +159,7 @@ Display images and text in the segmented items of the control.
     </ContentPage.BindingContext>
 
         <buttons:SfSegmentedControl x:Name="segmentedControl"
-                                    ItemsSource="{Binding ItemsCollection}">
+                                    ItemsSource="{Binding SegmentItems}">
     </buttons:SfSegmentedControl>
 </ContentPage>
 
@@ -178,7 +178,7 @@ public partial class MainPage : ContentPage
         InitializeComponent();
         ViewModel viewModel = new ViewModel();
         SfSegmentedControl segmentedControl = new SfSegmentedControl();
-        segmentedControl.ItemsSource = viewModel.ItemsCollection;
+        segmentedControl.ItemsSource = viewModel.SegmentItems;
         this.Content = segmentedControl;
     }
 }
@@ -188,11 +188,11 @@ public partial class MainPage : ContentPage
 
 public class ViewModel
 {
-    private List<SfSegmentItem> itemsCollection;
+    private List<SfSegmentItem> segmentItems;
 
     public ViewModel()
     {
-        itemsCollection = new List<SfSegmentItem>()
+        segmentItems = new List<SfSegmentItem>()
         {
             new SfSegmentItem() {  ImageSource="jackson.png", Text="Jackson" },
             new SfSegmentItem() { ImageSource ="gabriella.png" , Text="Gabriella"},
@@ -202,10 +202,10 @@ public class ViewModel
         };
     }
 
-    public List<SfSegmentItem> ItemsCollection
+    public List<SfSegmentItem> SegmentItems
     {
-        get { return itemsCollection; }
-        set { itemsCollection = value; }
+        get { return segmentItems; }
+        set { segmentItems = value; }
     }
 }
 
@@ -227,7 +227,7 @@ Display custom font with text in the segmented items of the control.
     </ContentPage.BindingContext>
 
         <buttons:SfSegmentedControl x:Name="segmentedControl"
-                                    ItemsSource="{Binding ItemsCollection}">
+                                    ItemsSource="{Binding SegmentItems}">
     </buttons:SfSegmentedControl>
 </ContentPage>
 
@@ -239,14 +239,13 @@ using Syncfusion.Maui.Buttons;
 
 public partial class MainPage : ContentPage
 {
-    List<SfSegmentItem> itemList = new List<SfSegmentItem>();
 
     public MainPage()
     {
         InitializeComponent();
         ViewModel viewModel = new ViewModel();
         SfSegmentedControl segmentedControl = new SfSegmentedControl();
-        segmentedControl.ItemsSource = viewModel.ItemsCollection;
+        segmentedControl.ItemsSource = viewModel.SegmentItems;
         this.Content = segmentedControl;
     }
 }
@@ -256,11 +255,11 @@ public partial class MainPage : ContentPage
 
 public class ViewModel
 {
-    private List<SfSegmentItem> itemsCollection;
+    private List<SfSegmentItem> segmentItems;
 
     public ViewModel()
     {
-        itemsCollection = new List<SfSegmentItem>()
+        segmentItems = new List<SfSegmentItem>()
         {
             new SfSegmentItem() { ImageSource = new FontImageSource() { Glyph = "\ue700", Size = 20, FontFamily = "Date Picker Icon", Color = Colors.Black}, Text = "Day"},
             new SfSegmentItem() { ImageSource = new FontImageSource() { Glyph = "\ue701", Size = 20, FontFamily = "Date Picker Icon",  Color = Colors.Black }, Text = "Week"},
@@ -269,10 +268,10 @@ public class ViewModel
         };
     }
 
-    public List<SfSegmentItem> ItemsCollection
+    public List<SfSegmentItem> SegmentItems
     {
-        get { return itemsCollection; }
-        set { itemsCollection = value; }
+        get { return segmentItems; }
+        set { segmentItems = value; }
     }
 }
 

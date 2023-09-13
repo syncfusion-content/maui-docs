@@ -130,7 +130,7 @@ xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Bu
     <buttons:SfSegmentedControl x:Name="segmentedControl"
                                     SelectedIndex="1"
                                     VisibleSegmentsCount="4"
-                                    ItemsSource="{Binding ItemCollection}">
+                                    ItemsSource="{Binding SegmentItems}">
     </buttons:SfSegmentedControl>
 </ContentPage>
 {% endhighlight %}
@@ -144,7 +144,7 @@ ViewModel viewModel = new ViewModel();
 SfSegmentedControl segmentedControl = new SfSegmentedControl();
 segmentedControl.SelectedIndex = 1;
 segmentedControl.VisibleSegmentsCount = 4;
-segmentedControl.ItemsSource = viewModel.ItemsCollection;
+segmentedControl.ItemsSource = viewModel.SegmentItems;
 this.Content = segmentedControl;
 
 {% endhighlight %}
@@ -153,11 +153,11 @@ this.Content = segmentedControl;
 
 public class ViewModel
 {
-    private List<SfSegmentItem> itemsCollection;
+    private List<SfSegmentItem> segmentItems;
 
     public ViewModel()
     {
-        itemsCollection = new List<SfSegmentItem>()
+        segmentItems = new List<SfSegmentItem>()
         {
                 new SfSegmentItem() {Text="Day"},
                 new SfSegmentItem() {Text="Week"},
@@ -166,10 +166,10 @@ public class ViewModel
         };
     }
 
-    public List<SfSegmentItem> ItemsCollection
+    public List<SfSegmentItem> SegmentItems
     {
-        get { return itemsCollection; }
-        set { itemsCollection = value; }
+        get { return segmentItems; }
+        set { segmentItems = value; }
     }
 }
 
@@ -359,7 +359,7 @@ public class ViewModel
 ...
 xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons">
     <buttons:SfSegmentedControl x:Name="segmentedControl"
-                                ItemsSource="{Binding ItemsCollection}">
+                                ItemsSource="{Binding SegmentItems}">
         <buttons:SfSegmentedControl.SelectionIndicatorSettings>
             <buttons:SelectionIndicatorSettings SelectionIndicatorPlacement="Border" 
                                                         Background="#6200EE"/>
@@ -375,7 +375,7 @@ using Syncfusion.Maui.Buttons;
 
 ViewModel viewModel = new ViewModel();
 SfSegmentedControl segmentedControl = new SfSegmentedControl();
-segmentedControl.ItemsSource = viewModel.ItemsCollection;
+segmentedControl.ItemsSource = viewModel.SegmentItems;
 segmentedControl.SelectionIndicatorSettings = new SelectionIndicatorSettings() 
 {
     SelectionIndicatorPlacement = SelectionIndicatorPlacement.Border,
@@ -389,11 +389,11 @@ this.Content = segmentedControl;
 
 public class ViewModel
 {
-    private List<SfSegmentItem> itemsCollection;
+    private List<SfSegmentItem> segmentItems;
 
     public ViewModel()
     {
-        itemsCollection = new List<SfSegmentItem>()
+        segmentItems = new List<SfSegmentItem>()
         {
                 new SfSegmentItem() {Text="Day"},
                 new SfSegmentItem() {Text="Week"},
@@ -402,10 +402,10 @@ public class ViewModel
         };
     }
 
-    public List<SfSegmentItem> ItemsCollection
+    public List<SfSegmentItem> SegmentItems
     {
-        get { return itemsCollection; }
-        set { itemsCollection = value; }
+        get { return segmentItems; }
+        set { segmentItems = value; }
     }
 }
 
@@ -459,7 +459,7 @@ The `FontColor`, `FontSize`, `FontFamily`, and `FontAttributes` properties of th
 ...
 xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons">
     <buttons:SfSegmentedControl x:Name="segmentedControl"
-                                ItemsSource="{Binding ItemsCollection}">
+                                ItemsSource="{Binding SegmentItems}">
     <buttons:SfSegmentedControl.TextStyle>
         <buttons:SegmentTextStyle FontSize="14" FontFamily="Roboto" />
     </buttons:SfSegmentedControl.TextStyle>
@@ -474,7 +474,7 @@ using Syncfusion.Maui.Buttons;
 
 ViewModel viewModel = new ViewModel();
 SfSegmentedControl segmentedControl = new SfSegmentedControl();
-segmentedControl.ItemsSource = viewModel.ItemsCollection;
+segmentedControl.ItemsSource = viewModel.SegmentItems;
 segmentedControl.TextStyle = new SegmentTextStyle()
 {
     FontSize = 14,
@@ -488,11 +488,11 @@ this.Content = segmentedControl;
 
 public class ViewModel
 {
-    private List<SfSegmentItem> itemsCollection;
+    private List<SfSegmentItem> segmentItems;
 
     public ViewModel()
     {
-        itemsCollection = new List<SfSegmentItem>()
+        segmentItems = new List<SfSegmentItem>()
         {
                 new SfSegmentItem() {Text="Day"},
                 new SfSegmentItem() {Text="Week"},
@@ -501,10 +501,10 @@ public class ViewModel
         };
     }
 
-    public List<SfSegmentItem> ItemsCollection
+    public List<SfSegmentItem> SegmentItems
     {
-        get { return itemsCollection; }
-        set { itemsCollection = value; }
+        get { return segmentItems; }
+        set { segmentItems = value; }
     }
 }
 
