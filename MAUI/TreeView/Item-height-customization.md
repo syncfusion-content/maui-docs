@@ -13,10 +13,10 @@ The TreeView offers several options for customizing the height of items. To achi
 
 ## Customize Item Height
 
-The TreeView allows for customization of item height by setting the `ItemHeight` property. The default value of this property is `40d`. This property can be customized at runtime.
+The TreeView allows for customization of item height by setting the `ItemHeight` property. The default value of this property is `48d`. This property can be customized at runtime.
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight xaml hl_lines="24" %}
 <syncfusion:SfTreeView x:Name="treeView" ItemHeight="40">
 {% endhighlight %}
 {% highlight c# %}
@@ -127,7 +127,7 @@ public class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-Download the entire source code from GitHub here.
+Download the entire source code from GitHub [here](https://github.com/SyncfusionExamples/item-height-customization-in-.net-maui-treeview).
 
 ![.NET MAUI TreeView Item Height Customization](Images/item-height-customization/maui-treeview-item-height.png)
 
