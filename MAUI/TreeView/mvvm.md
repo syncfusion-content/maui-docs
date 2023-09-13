@@ -361,7 +361,7 @@ public class CountriesViewModel : INotifyPropertyChanged
     public Command<object> SelectionChangedCommand
     {
         get { return selectionChangedCommand; }
-        protected set { selectionChangedCommand = value; }
+        set { selectionChangedCommand = value; }
     }
 
     private void OnSelectionChanged(object obj)
