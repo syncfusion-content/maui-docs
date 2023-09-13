@@ -215,7 +215,7 @@ The `ExpandCommand` will be triggered while expanding the node and passing the `
     </ContentPage.BindingContext>
     <ContentPage.Content>
         <syncfusion:SfTreeView x:Name="treeView"
-                               ExpandCommand="ExpandingCommand"/> 
+                               ExpandCommand="{Binding ExpandingCommand}"/> 
     </ContentPage.Content>
 </ContentPage>  
 {% endhighlight %}  
@@ -278,7 +278,7 @@ The `CollapseCommand` will be triggered while collapsing the node and passing th
     </ContentPage.BindingContext>
     <ContentPage.Content>
         <syncfusion:SfTreeView x:Name="treeView"
-                               CollapseCommand="CollapsingCommand"/> 
+                               CollapseCommand="{Binding CollapsingCommand}"/> 
     </ContentPage.Content>
 </ContentPage>
 {% endhighlight %}
@@ -288,20 +288,20 @@ The `CollapseCommand` will be triggered while collapsing the node and passing th
 /// </summary>
 public class CommandViewModel
 {
-	private Command<object> collapsingCommand;
-	
-	public Command<object> CollapsingCommand
-	{
-		get { return collapsingCommand; }
-		set { collapsingCommand = value; }
-	}
-	
-	public CommandViewModel()
-	{
-		CollapsingCommand = new Command<object>(CollapseCommandAction, CanExecute);
-	}
+    private Command<object> collapsingCommand;
     
-	/// <summary>
+    public Command<object> CollapsingCommand
+    {
+        get { return collapsingCommand; }
+        set { collapsingCommand = value; }
+    }
+    
+    public CommandViewModel()
+    {
+        CollapsingCommand = new Command<object>(CollapseCommandAction, CanExecute);
+    }
+    
+    /// <summary>
     /// CanExecute method is called before collapsing of node. 
     /// </summary>
     /// <returns>Handle collapse action by returning true or false. </returns>
@@ -316,10 +316,10 @@ public class CommandViewModel
     /// Method gets called after collapsing action performed.
     /// </summary>
     /// <param name="obj">TreeViewNode is passed as command parameter. </param>
-	private void CollapseCommandAction(object obj)
-	{
-		App.Current.MainPage.DisplayAlert("Alert", ((obj as TreeViewNode).Content as FileManager).ItemName+ "  is Collapsed","OK");
-	}
+    private void CollapseCommandAction(object obj)
+    {
+        App.Current.MainPage.DisplayAlert("Alert", ((obj as TreeViewNode).Content as FileManager).ItemName+ "  is Collapsed","OK");
+    }
 }
 {% endhighlight %}
 {% endtabs %}

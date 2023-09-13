@@ -9,7 +9,7 @@ documentation: ug
 
 # Right To Left in .NET MAUI TreeView (SfTreeView)
 
-`SfTreeView` supports changing the flow of text to the right-to-left direction by setting the `FlowDirection` to RightToLeft. TreeView supports RTL when the flow direction of the device is changed.
+`SfTreeView` supports changing the flow of text to the right-to-left direction by setting the `FlowDirection` to `RightToLeft`. TreeView supports RTL when the flow direction of the device is changed.
 
 {% tabs %}
 {% highlight xaml hl_lines="7" %}
