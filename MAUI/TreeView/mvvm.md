@@ -24,7 +24,8 @@ TreeView support to select the items through binding the `SelectedItem` property
                        ChildPropertyName="States"
                        ItemsSource="{Binding CountriesInfo}"/>
 {% endhighlight %}
-{% highlight c# %}
+{% highlight c# hl_lines="2" %}
+SfTreeView treeView = new SfTreeView();
 treeView.SetBinding(SfTreeView.SelectedItemProperty, new Binding("SelectedPlace", BindingMode.TwoWay));
 {% endhighlight %}
 {% endtabs %}
@@ -45,25 +46,25 @@ public class CountriesViewModel
     private void GenerateCountriesInfo()
     {
         var australia = new Countries() { Name = "Australia" };
-        var _NSW = new Countries() { Name = "New South Wales" };
-        var _Sydney = new Countries() { Name = "Sydney" };
+        var nsw = new Countries() { Name = "New South Wales" };
+        var sydney = new Countries() { Name = "Sydney" };
         australia.States = new ObservableCollection<Countries>();
-        australia.States.Add(_NSW);
-        _NSW.States = new ObservableCollection<Countries>();
-        _NSW.States.Add(_Sydney);
+        australia.States.Add(nsw);
+        nsw.States = new ObservableCollection<Countries>();
+        nsw.States.Add(sydney);
         var usa = new Countries() { Name = "United States of America" };
-        var _California = new Countries() { Name = "California" };
-        var _LosAngeles = new Countries() { Name = "Los Angeles" };
+        var california = new Countries() { Name = "California" };
+        var losAngeles = new Countries() { Name = "Los Angeles" };
         usa.States = new ObservableCollection<Countries>();
-        usa.States.Add(_California);
-        _California.States = new ObservableCollection<Countries>();
-        _California.States.Add(_LosAngeles);
+        usa.States.Add(california);
+        california.States = new ObservableCollection<Countries>();
+        california.States.Add(losAngeles);
          
         this.CountriesInfo = new ObservableCollection<Countries>();
         CountriesInfo.Add(australia);
         CountriesInfo.Add(usa);
 
-        SelectedPlace=_NSW
+        SelectedPlace = nsw;
     }
 }
 
@@ -82,7 +83,8 @@ TreeView support to select multiple items through binding the `SelectedItems` pr
                        ChildPropertyName="States"
                        ItemsSource="{Binding CountriesInfo}"/>
 {% endhighlight %}
-{% highlight c# hl_lines="2" %}
+{% highlight c# hl_lines="3" %}
+SfTreeView treeView = new SfTreeView();
 treeView.SelectionMode = TreeViewSelectionMode.Multiple;
 treeView.SetBinding(SfTreeView.SelectedItemsProperty, new Binding("SelectedCountries", BindingMode.TwoWay));
 {% endhighlight %}
@@ -105,26 +107,26 @@ public class CountriesViewModel
     private void GenerateCountriesInfo()
     {
         var australia = new Countries() { Name = "Australia" };
-        var _NSW = new Countries() { Name = "New South Wales" };
-        var _Sydney = new Countries() { Name = "Sydney" };
-        var _Victoria = new Countries() { Name = "Victoria" };
+        var nsw = new Countries() { Name = "New South Wales" };
+        var sydney = new Countries() { Name = "Sydney" };
+        var victoria = new Countries() { Name = "Victoria" };
         australia.States = new ObservableCollection<Countries>();
-        australia.States.Add(_NSW);
-        australia.States.Add(_Victoria);
-        _NSW.States = new ObservableCollection<Countries>();
-        _NSW.States.Add(_Sydney);
+        australia.States.Add(nsw);
+        australia.States.Add(victoria);
+        nsw.States = new ObservableCollection<Countries>();
+        nsw.States.Add(sydney);
         var usa = new Countries() { Name = "United States of America" };
-        var _California = new Countries() { Name = "California" };
+        var california = new Countries() { Name = "California" };
         usa.States = new ObservableCollection<Countries>();
-        usa.States.Add(_California);
+        usa.States.Add(california);
       
         this.CountriesInfo = new ObservableCollection<Countries>();
         CountriesInfo.Add(australia);
         CountriesInfo.Add(usa);
 
         SelectedCountries = new ObservableCollection<object>();
-        SelectedCountries.Add(_NSW);
-        SelectedCountries.Add(_Victoria);
+        SelectedCountries.Add(nsw);
+        SelectedCountries.Add(victoria);
     }
 }
 
@@ -159,7 +161,7 @@ public class CommandViewModel
 
     private void TappedCommandMethod(object obj)
     {
-        App.Current.MainPage.DisplayAlert("Alert", ((obj as Syncfusion.Maui.TreeView.ItemTappedEventArgs).Node.Content as Countries).Name + " is Tapped", "OK");
+        App.Current.MainPage.DisplayAlert("Alert", ((obj as TreeViewNode).Content as FileManager).ItemName+ "  is Tapped","OK");
     }   
 }
 {% endhighlight %}
@@ -191,7 +193,7 @@ public class CommandViewModel
 
     private void LongPressCommandMethod(object obj)
     {          
-        App.Current.MainPage.DisplayAlert("Alert", ((obj as Syncfusion.Maui.TreeView.ItemTappedEventArgs).Node.Content as Countries).Name + " is LongPressed", "OK");
+        App.Current.MainPage.DisplayAlert("Alert", ((obj as TreeViewNode).Content as FileManager).ItemName+ "  is LongPressed","OK");
     }   
 }
 {% endhighlight %}
@@ -254,7 +256,7 @@ public class CommandViewModel
     /// <param name="obj">TreeViewNode is passed as command parameter. </param>
     private void ExpandCommandAction(object obj)
     {
-        App.Current.MainPage.DisplayAlert("Alert", "TreeView node is expanded", "OK");
+        App.Current.MainPage.DisplayAlert("Alert", ((obj as TreeViewNode).Content as FileManager).ItemName+ "  is Expanded","OK");
     }   
 }
 {% endhighlight %}
@@ -281,7 +283,7 @@ The `CollapseCommand` will be triggered while collapsing the node and passing th
 </ContentPage>
 {% endhighlight %}
 {% highlight c# %}
-// <summary>
+/// <summary>
 /// CommandViewModel class that implements command.
 /// </summary>
 public class CommandViewModel
@@ -316,7 +318,7 @@ public class CommandViewModel
     /// <param name="obj">TreeViewNode is passed as command parameter. </param>
 	private void CollapseCommandAction(object obj)
 	{
-		App.Current.MainPage.DisplayAlert("Alert", "TreeView node is collapsed", "OK");
+		App.Current.MainPage.DisplayAlert("Alert", ((obj as TreeViewNode).Content as FileManager).ItemName+ "  is Collapsed","OK");
 	}
 }
 {% endhighlight %}
@@ -324,7 +326,7 @@ public class CommandViewModel
 
 ## Event to command
 
-The `TreeView` event can be converted into commands using `Behaviors`. To achieve this, create a command in the ViewModel class and associate it to the TreeView event using `Behaviors`.
+The `TreeView` event can be converted into commands using `Behaviors`. To achieve this, create a command in the `ViewModel` class and associate it to the TreeView event using `Behaviors`.
 
 {% tabs %}
 {% highlight xaml hl_lines="6" %}
@@ -376,15 +378,15 @@ public class CountriesViewModel : INotifyPropertyChanged
     private void GenerateCountriesInfo()
     {
         var australia = new Countries() { Name = "Australia" };
-        var _NSW = new Countries() { Name = "New South Wales" };
-        var _Victoria = new Countries() { Name = "Victoria" };
+        var nsw = new Countries() { Name = "New South Wales" };
+        var victoria = new Countries() { Name = "Victoria" };
         australia.States = new ObservableCollection<Countries>();
-        australia.States.Add(_NSW);
-        australia.States.Add(_Victoria);
+        australia.States.Add(nsw);
+        australia.States.Add(victoria);
         var usa = new Countries() { Name = "United States of America" };
-        var _California = new Countries() { Name = "California" };
+        var california = new Countries() { Name = "California" };
         usa.States = new ObservableCollection<Countries>();
-        usa.States.Add(_California);
+        usa.States.Add(california);
       
         this.CountriesInfo = new ObservableCollection<Countries>();
         CountriesInfo.Add(australia);
