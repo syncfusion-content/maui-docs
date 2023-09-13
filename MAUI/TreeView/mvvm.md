@@ -211,7 +211,7 @@ The `ExpandCommand` will be triggered while expanding the node and passing the `
              xmlns:local="clr-namespace:Selection"
              x:Class="Selection.MainPage">
     <ContentPage.BindingContext>
-        <local:CountriesViewModel x:Name="viewModel"/>
+        <local:CommandViewModel x:Name="viewModel"/>
     </ContentPage.BindingContext>
     <ContentPage.Content>
         <syncfusion:SfTreeView x:Name="treeView"
@@ -274,7 +274,7 @@ The `CollapseCommand` will be triggered while collapsing the node and passing th
              xmlns:local="clr-namespace:Selection"
              x:Class="Selection.MainPage">
     <ContentPage.BindingContext>
-        <local:CountriesViewModel x:Name="viewModel"/>
+        <local:CommandViewModel x:Name="viewModel"/>
     </ContentPage.BindingContext>
     <ContentPage.Content>
         <syncfusion:SfTreeView x:Name="treeView"
