@@ -73,7 +73,7 @@ Step 2: Add the namespace as shown in the following code sample.
 {% endhighlight %}
 {% endtabs %}
 
-## Refer SfCheckBox control with declared suffix name for Namespace
+Step 3: Set the control to content in `ContentPage`.
 
 {% tabs %}
 {% highlight xaml %}
