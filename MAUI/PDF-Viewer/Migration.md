@@ -404,6 +404,11 @@ To make migration from [Xamarin SfPdfViewer](https://www.syncfusion.com/xamarin-
 <td>Represents an annotation that displays a shape on the page.</td>
 </tr>
 <tr>
+<td>{{'[PopupAnnotation](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.PopupAnnotation.html)'| markdownify }}</td>
+<td>StickyNoteAnnotation</td>
+<td>Represents the sticky note annotation on the text contents in the page.</td>
+</tr>
+<tr>
 <td>
 <div>{{'[AnnotationMovedOrResizedEventArgs](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.AnnotationMovedOrResizedEventArgs.html)'| markdownify }},</div>
 <div>{{'[InkAddedEventArgs](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.InkAddedEventArgs.html)'| markdownify }},</div>
@@ -438,8 +443,6 @@ To make migration from [Xamarin SfPdfViewer](https://www.syncfusion.com/xamarin-
 * Themes
 * Accessibility
 * Shape annotations (polygon and polylines)
-* Ink eraser tool
-* Sticky note annotation
 * Free text annotation
 * Handwritten signatures
 * Form Filling

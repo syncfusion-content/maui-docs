@@ -45,11 +45,6 @@ You can add text markup annotations to a PDF document by touch (or mouse down) a
 The following code explains how to enable the highlight annotation mode. Similarly, you can change the annotation mode for adding other text markups.
 
 {% tabs %}
-{% highlight XAML %}
-
-<syncfusion:SfPdfViewer x:Name="PdfViewer" AnnotationMode="Highlight"/>
-
-{% endhighlight %}
 {% highlight C# %}
 // Enable or activate the highlight annotation mode.
 void EnableHighlightAnnotationMode()
@@ -63,11 +58,6 @@ void EnableHighlightAnnotationMode()
 Similarly, refer to following code to disable the highlight annotation mode.
 
 {% tabs %}
-{% highlight XAML %}
-
-<syncfusion:SfPdfViewer x:Name="PdfViewer" AnnotationMode="None"/>
-
-{% endhighlight %}
 {% highlight C# %}
 // Disable or deactivate the highlight annotation mode.
 void DisableHighlightMode()
