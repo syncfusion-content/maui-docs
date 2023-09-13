@@ -2,12 +2,12 @@
 layout: post
 title: Expand and Collapse in .NET MAUI TreeView Control | Syncfusion
 description: Learn here all about Expand and Collapse support in the Syncfusion .NET MAUI TreeView (SfTreeView) control and more.
-platform: .NET MAUI
+platform: MAUI
 control: SfTreeView
 documentation: ug
 ---
 
-# Expand and Collapse in Xamarin TreeView (SfTreeView)
+# Expand and Collapse in .NET MAUI TreeView (SfTreeView)
 
 The TreeView allows you to expand and collapse the nodes through user interaction or programmatically. 
 
@@ -18,13 +18,13 @@ Expanding and collapsing of nodes can be performed by tapping the expander view 
 {% tabs %}
 {% highlight xaml %}
 
-<syncfusion:SfTreeView x:Name="TreeView" ExpandActionTarget="Node"/>
+<syncfusion:SfTreeView x:Name="treeView" ExpandActionTarget="Node"/>
 
 {% endhighlight %}
 {% highlight c# %}
 
 // Extends by tapping both the expander and content views.
-treeView.ExpandActionTarget = Syncfusion.Maui.TreeView.TreeViewExpandActionTarget.Node;
+treeView.ExpandActionTarget = TreeViewExpandActionTarget.Node;
 
 {% endhighlight %}
 {% endtabs %}
@@ -35,9 +35,9 @@ By default, the items in the treeview will be in a collapsed state. You can defi
 
 The `AutoExpandMode` property is only applicable in bound mode. In the unbound mode, you need to set the `IsExpanded` property to `true` when creating the nodes in order for them to be in the expanded state when the TreeView is loaded
 
-* None : All items are collapsed when loaded.
-* RootNodesExpanded : Expands only the root item when loaded.
-* AllNodesExpanded : Expands all the items when loaded.
+* `None` : All items are collapsed when loaded.
+* `RootNodesExpanded` : Expands only the root item when loaded.
+* `AllNodesExpanded` : Expands all the items when loaded.
 
 ## Programmatic Expand and Collapse
 
