@@ -332,7 +332,7 @@ saveGroup.Items.Add(new ImageEditorToolbarItem() { Name = "Share", View = image 
 
 The ImageEditor automatically generates the toolbars. To add the toolbars manually, you need to explicitly add them and change the `AutoGenerateToolbarItems` property to `false`.
 
-N> When you create a new toolbar item, you can use pre-existing built-in names for the item, which will automatically generate the icon view. If you want to introduce new icons or modify the current one, you can use the View property of the `ImageEditorToolbarItem` class to define the item view.
+N> When you create a new toolbar item, you can use the pre-existing built-in names for the item, which will automatically generate the icon view. If you want to introduce a new item view or modify the current one, you can use the `View` property of the `ImageEditorToolbarItem` class to define the item view.
 
 {% tabs %}
 
