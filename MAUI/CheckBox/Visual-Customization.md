@@ -117,11 +117,11 @@ The tick box stroke thickness of the checkbox control can be customized using th
 
 You can customize the display text appearance of the [`SfCheckBox`] control using the following properties:
 
-* [`TextColor`]: Changes the color of the text.
-* [`HorizontalTextAlignment`]: Changes the horizontal alignment of the caption text.
-* [`FontFamily`]: Changes the font family of the caption text.
-* [`FontAttributes`]: Sets font attributes(bold/italic/none) of the caption text.
-* [`FontSize`]: Sets font size of the caption text.
+* [`TextColor`] : Changes the color of the text.
+* [`HorizontalTextAlignment`] : Changes the horizontal alignment of the caption text.
+* [`FontFamily`] : Changes the font family of the caption text.
+* [`FontAttributes`] : Sets font attributes(bold/italic/none) of the caption text.
+* [`FontSize`] : Sets font size of the caption text.
 
 
 {% tabs %}
