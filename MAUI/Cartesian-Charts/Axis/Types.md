@@ -53,6 +53,10 @@ chart.YAxes.Add(secondaryAxis);
 
 ![NumericalAxis interval support in MAUI Chart](Axis_Images/maui_chart_axis_types.jpg)
 
+To customize the [NumericalAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.NumericalAxis.html) in .NET MAUI Cartesian Charts, you can check the below video.
+
+{% youtube "https://www.youtube.com/watch?v=BJAEtUZSK_c" %}
+
 ### Interval
 
 Axis interval can be customized by using the [Interval](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.NumericalAxis.html#Syncfusion_Maui_Charts_NumericalAxis_Interval) property. By default, interval will be calculated based on the minimum and maximum value of the provided data.
@@ -153,6 +157,10 @@ chart.XAxes.Add(primaryAxis);
 {% endtabs %}
 
 ![CategoryAxis support in MAUI Chart](Axis_Images/maui_chart_category_axis.jpg)
+
+To customize the [CategoryAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.CategoryAxis.html) in .NET MAUI Cartesian Charts, you can check the below video.
+
+{% youtube "https://www.youtube.com/watch?v=D_8MHoglBVI" %}
 
 ### Label placement
 
@@ -326,6 +334,10 @@ chart.XAxes.Add(primaryAxis);
 
 ![DateTimeCategoryAxis support in MAUI Chart](Axis_Images/maui_chart_datetime_axis.jpg)
 
+To customize the [DateTimeAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DateTimeAxis.html) in .NET MAUI Cartesian Charts, you can check the below video.
+
+{% youtube "https://www.youtube.com/watch?v=Z_ZIJ1zlVg0" %}
+
 ### Interval
 
 In [DateTimeAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DateTimeAxis.html), intervals can be customized by using the [Interval](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DateTimeAxis.html#Syncfusion_Maui_Charts_DateTimeAxis_Interval) and [IntervalType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DateTimeAxis.html#Syncfusion_Maui_Charts_DateTimeAxis_IntervalType) properties. For example, setting [Interval](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DateTimeAxis.html#Syncfusion_Maui_Charts_DateTimeAxis_Interval) as 6 and [IntervalType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DateTimeAxis.html#Syncfusion_Maui_Charts_DateTimeAxis_IntervalType) as [Months](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DateTimeIntervalType.html#Syncfusion_Maui_Charts_DateTimeIntervalType_Months) will consider 6 months as interval.
@@ -436,6 +448,10 @@ chart.YAxes.Add(secondaryAxis);
 
 ![LogarithmicAxis support in MAUI Chart](Axis_Images/maui_chart_logarithmic_axis.jpg)
 
+To customize the [LogarithmicAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.LogarithmicAxis.html) in .NET MAUI Cartesian Charts, you can check the below video.
+
+{% youtube "https://www.youtube.com/watch?v=HWPRuTYThDc" %}
+
 ### Interval
 
 Axis interval can be customized using the [Interval](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.LogarithmicAxis.html#Syncfusion_Maui_Charts_LogarithmicAxis_Interval) property of the axis. By default, interval will be calculated based on the minimum and maximum value of the provided data. And the default value of the interval is 1. 
@@ -513,6 +529,10 @@ chart.YAxes.Add(new LogarithmicAxis( ) { LogarithmicBase = 5 });
 {% endtabs %}
 
 ![LogarithmicAxis base customization in MAUI Chart](Axis_Images/maui_chart_logarithmic_axis_base.jpg)
+
+To customize the [ChartAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html) in .NET MAUI Cartesian Charts, you can check the below video.
+
+{% youtube "https://www.youtube.com/watch?v=IGLyuQS18iQ" %}
 
 ## Inversed
 

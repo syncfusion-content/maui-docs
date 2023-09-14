@@ -29,7 +29,7 @@ To apply column grouping, please refer to the following code example:
 {% tabs %}
 {% highlight xaml %}
 <syncfusion:SfDataGrid x:Name="dataGrid"
-                        ItemsSource="{Binding OrdersInfo}">
+                        ItemsSource="{Binding OrderInfoCollection}">
     <syncfusion:SfDataGrid.GroupColumnDescriptions>
         <syncfusion:GroupColumnDescription ColumnName="Name" />
     </syncfusion:SfDataGrid.GroupColumnDescriptions>
@@ -53,7 +53,7 @@ The SfDataGrid also allows to group the data against one or more columns using t
 {% tabs %}
 {% highlight xaml %}
 <syncfusion:SfDataGrid  x:Name="dataGrid"
-                        ItemsSource="{Binding Orders}"
+                        ItemsSource="{Binding OrderInfoCollection}"
                         GroupingMode="Multiple">
                         
     <syncfusion:SfDataGrid.GroupColumnDescriptions>
@@ -76,17 +76,15 @@ this.dataGrid.GroupingMode = GroupingMode.Multiple;
 The following screenshot shows the multi-grouping:
 ![DataGrid with multi-column grouping](Images\Grouping\maui-datagrid-multiple-grouping.png)
 
-## Indent column customization
+## Customize indent column width
 
-Indent columns are the columns present to the left of the `CaptionSummaryRows` when `GroupingMode` is set as multiple. The number of indent cells in each `CaptionSummaryRow` will be determined by the level of that `Group`. For example, the first group will have only one indent cell and the next immediate group will have an extra indent cell. It keeps on adding by one for each lower level groups to maintain the tree structure. Each data row will have indent cells count equal to the level of the last sub group in view. The following customizations can be done for indent cells:
-
-The width of indent column can be customized by the [IndentColumnWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_IndentColumnWidthProperty) property. The default width of the indent column is 35. 
+The width of indent column can be customized by the [IndentColumnWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_IndentColumnWidthProperty) property. The default width of the indent column is 35.
 
 {% tabs %}
 {% highlight xaml %}
 <syncfusion:SfDataGrid  x:Name="dataGrid"
                         AutoGenerateColumns="True"
-                        ItemsSource="{Binding Orders}"
+                        ItemsSource="{Binding OrderInfoCollection}"
                         IndentColumnWidth="60" />
 {% endhighlight %}
 
@@ -96,6 +94,59 @@ this.dataGrid.IndentColumnWidth = 60;
 
 {% endhighlight %}
 {% endtabs %}
+
+### Customize indent column background color
+
+The indent columns can be customized by writing the implicit style for the [DataGridIndentCell](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridIndentCell.html). 
+
+The following code snippet shows how to apply a background color to the indent cell based on the column index:
+
+{% tabs %}
+{% highlight xaml %}
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:CellStyleConverter x:Key="cellStyleConverter" />
+            <Style  TargetType="syncfusion:DataGridIndentCell">
+                <Setter Property="Background"
+                        Value="{Binding Source={RelativeSource Mode=Self}, 
+                        Converter={StaticResource 
+                        Key=cellStyleConverter}}" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <syncfusion:SfDataGrid  x:Name="dataGrid"
+                            AutoGenerateColumns="True"
+                            ItemsSource="{Binding Orders}" />
+
+    <syncfusion:SfDataGrid.GroupColumnDescriptions>
+        <syncfusion:GroupColumnDescription ColumnName="Name" />
+        <syncfusion:GroupColumnDescription ColumnName="ShipCity" />
+    </syncfusion:SfDataGrid.GroupColumnDescriptions>    
+{% endhighlight %}
+
+{% highlight c# %}
+public class CellStyleConverter : IValueConverter
+{
+    object IValueConverter.Convert(object value, Type targetType, object parameter, CultureInfo info)
+    {
+        var rowType = ((value as DataGridIndentCell)?.Parent as DataGridRow)?.DataRow?.RowType.ToString();
+        if (rowType == "HeaderRow")
+            return Colors.Bisque;
+        else if (rowType == "CaptionCoveredRow")
+            return Colors.LightBlue;
+        else
+            return Colors.PaleVioletRed;
+    }
+    public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+    {
+        return null;
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
+![SfDataGrid with IndentColumnBackgroundColor](Images\Grouping\maui-datagrid-indent-column-background-color.png)
 
 ## Custom grouping
 
@@ -126,7 +177,7 @@ To set a custom grouping converter for the group description that is added to gr
     </ContentPage.BindingContext>
 
     <syncfusion:SfDataGrid x:Name="dataGrid"
-                            ItemsSource="{Binding OrdersInfo}">
+                            ItemsSource="{Binding OrderInfoCollection}">
 
         <syncfusion:SfDataGrid.GroupColumnDescriptions>
             <syncfusion:GroupColumnDescription ColumnName="Freight"
@@ -237,7 +288,7 @@ In custom grouping, you can sort all the inner records of each group by setting 
     </ContentPage.BindingContext>
 
     <syncfusion:SfDataGrid x:Name="dataGrid"
-                            ItemsSource="{Binding OrdersInfo}">
+                            ItemsSource="{Binding OrderInfoCollection}">
         <Syncfusion:SfDataGrid.GroupColumnDescriptions>
             <Syncfusion:GroupColumnDescription ColumnName="OrderID"
                                                 Converter="{StaticResource groupOrderNoConverter}"
@@ -323,7 +374,7 @@ To expand all groups initially, set the [SfDataGrid.AutoExpandGroups](https://he
 <syncfusion:SfDataGrid  x:Name="dataGrid"
                         AutoExpandGroups="True"
                         AllowGroupExpandCollapse="True"
-                        ItemsSource="{Binding Orders}" />
+                        ItemsSource="{Binding OrderInfoCollection}" />
 {% endhighlight %}
 {% highlight c# %}
 this.dataGrid.AutoExpandGroups = true;
@@ -340,7 +391,7 @@ To expand and collapse the groups at runtime, you can simply set the [SfDataGrid
 
 <syncfusion:SfDataGrid  x:Name="dataGrid"
                         AllowGroupExpandCollapse="True"
-                        ItemsSource="{Binding Orders}" />
+                        ItemsSource="{Binding OrderInfoCollection}" />
                        
 {% endhighlight %}
 {% highlight c# %}
@@ -350,12 +401,12 @@ this.dataGrid.AllowGroupExpandCollapse = true;
 
 ### Expand or collapse all the groups
 
-To expand and collapse the groups programmatically, you can simply invoke the [SfDataGrid.ExpandAllGroup](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ExpandAllGroups) and [SfDataGrid.CollapseAllGroup]() methods.
+To expand and collapse the groups programmatically, you can simply invoke the [SfDataGrid.ExpandAllGroups](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ExpandAllGroups) and [SfDataGrid.CollapseAllGroups](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CollapseAllGroups) methods.
 
 {% tabs %}
 {% highlight c# %}
-this.dataGrid.ExpandAllGroup();
-this.dataGrid.CollapseAllGroup();
+this.dataGrid.ExpandAllGroups();
+this.dataGrid.CollapseAllGroups();
 {% endhighlight %}
 {% endtabs %}
 
@@ -491,7 +542,7 @@ The visibility of the grouped column can be customized by the [SfDataGrid.ShowCo
 {% highlight xaml %}
 <syncfusion:SfDataGrid  x:Name="dataGrid"
                         AutoGenerateColumns="True"
-                        ItemsSource="{Binding Orders}"
+                        ItemsSource="{Binding OrderInfoCollection}"
                         ShowColumnWhenGrouped="False" />
 {% endhighlight %}
 
