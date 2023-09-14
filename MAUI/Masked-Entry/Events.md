@@ -38,9 +38,6 @@ private void MaskedEntry_ValueChanging(object sender, MaskedEntryValueChangingEv
     {
         e.Cancel = true;
     }
-
-    // Perform additional actions based on the value changing
-    // ...
 }
 
 {% endhighlight %}
