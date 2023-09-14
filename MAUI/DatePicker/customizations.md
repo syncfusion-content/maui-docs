@@ -8,15 +8,15 @@ documentation: ug
 
 # Customizations in .NET MAUI Date Picker (SfDatePicker)
 
-The [.NET MAUI Date Picker] header, column header, footer and selection views can be customized.
+The [.NET MAUI Date Picker] header, column header, footer, and selection views can be customized.
 
-## Header customization
+## Header Customization
 
-You can customize the date picker header by using the `HeaderView` property of `SfDatePicker`.
+Customize the date picker header by using the `HeaderView` property of the `SfDatePicker`.
 
-### Set header text
+### Set the header text
 
-The SfDatePicker control allows you to add the header text by setting the [Text] property in the [PickerHeaderView]. To enable the header view by setting the [Height] property grater than 0 of [PickerHeaderView]. The default value of `Height` property is 0.
+The SfDatePicker control allows you to add the header text by setting the [Text] property in the [PickerHeaderView]. To enable the header view, set the [Height] property of [PickerHeaderView] to a value greater than 0. The default value of the Height property is 0.
 
 {% tabs %}
 
@@ -45,9 +45,9 @@ this.Content = datePicker;
 
 {% endtabs %}
 
-### Set divider color
+### Set the divider color
 
-The SfDatePicker control allows you to customize the header divider color by setting the [DividerColor] property of [PickerHeaderView].
+The SfDatePicker control allows you to customize the header divider color by setting the [DividerColor] property of the [PickerHeaderView].
 
 {% tabs %}
 
@@ -75,9 +75,9 @@ this.Content = datePicker;
 
 {% endtabs %}
 
-### Customization of header
+### Customization of the header
 
-You can customize the header text style and background color of the `Date picker` using the [TextStyle] and [Background] properties of the [HeaderView] in [PickerHeaderView].
+Customize the header text style and background color of the `Date picker` using the [TextStyle] and [Background] properties of the [HeaderView] in the [PickerHeaderView].
 
 {% tabs %}
 
@@ -114,13 +114,13 @@ this.Content = datePicker;
 
 {% endtabs %}
 
-## Column header customization
+## Column Header Customization
 
-You can customize the date picker column header by using the `ColumnHeaderView` property of `SfDatePicker`.
+Customize the date picker column header by using the `ColumnHeaderView` property of the `SfDatePicker`.
 
 ### Set custom column header 
 
-The [SfDatePicker] providing custom text to its column header by setting the [ColumnHeaderView] property of [SfDatePicker], which has [DayHeaderText], [MonthHeaderText], and [YearHeaderText] properties of [DatePickerColumnHeaderView]. The default value of [DayHeaderText] property is "Day", [MonthHeaderText] is "Month", and [YearHeaderText] is "Year".
+The [SfDatePicker] provides a custom text to its column header by setting the [ColumnHeaderView] property of the [SfDatePicker], which has [DayHeaderText], [MonthHeaderText], and [YearHeaderText] properties of the [DatePickerColumnHeaderView]. The default value of the [DayHeaderText] property is "Day", [MonthHeaderText] is "Month", and [YearHeaderText] is "Year".
 
 {% tabs %}
 
@@ -152,9 +152,9 @@ this.Content = datePicker;
 
 {% endtabs %}
 
-### Set divider color
+### Set the divider color
 
-The SfDatePicker control allows you to customize the column header divider color by setting the [DividerColor] property of [DatePickerColumnHeaderView].
+The SfDatePicker control allows you to customize the column header divider color by setting the [DividerColor] property of the [DatePickerColumnHeaderView].
 
 {% tabs %}
 
@@ -182,9 +182,9 @@ this.Content = datePicker;
 
 {% endtabs %}
 
-### Customization of column header
+### Customization of the column header
 
-You can customize the column header view text style and background color of the `Date Picker` using the [TextStyle] and [Background] properties of the [DatePickerColumnHeaderView].
+Customize the column header view text style and background color of the Date Picker using the [TextStyle] and [Background] properties of the [DatePickerColumnHeaderView].
 
 {% tabs %}
 
@@ -221,14 +221,14 @@ this.Content = datePicker;
 
 {% endtabs %}
 
-## Footer customization
+## Footer Customization
 
-You can customize the date picker footer view by using the `FooterView` property of `SfDatePicker`.
+Customize the date picker footer view by using the FooterView property of the SfDatePicker.
 
-### Set footer with ok and cancel button customizations
+### Set the footer with OK and Cancel button customizations
 
-In the SfDatePicker control, validation buttons (OK and Cancel) can be customized by setting the [OkButtonText] and [CancelButtonText] properties of [PickerFooterView]. It allows you to confirm or cancel the selected date. The `OkButtonText` can be enabled using the [ShowOkButton] property in the [PickerFooterView].
-The Default value of [OkButtonText] property is "OK", [CancelButtonText] is "Cancel". To enable the footer view by setting the [Height] property grater than 0 of [PickerFooterView]. The default value of `Height` property is 0.
+In the SfDatePicker control, validation buttons (OK and Cancel) can be customized by setting the [OkButtonText] and [CancelButtonText] properties of the [PickerFooterView]. It allows you to confirm or cancel the selected date. The OkButtonText can be enabled using the [ShowOkButton] property in the [PickerFooterView].
+The Default value of the [OkButtonText] property is "OK", and [CancelButtonText] is "Cancel". To enable the footer view, set the [Height] property of the [PickerFooterView] to a value greater than 0. The default value of the Height property is 0.
 
 {% tabs %}
 
@@ -259,9 +259,9 @@ this.Content = datePicker;
 
 {% endtabs %}
 
-### Set divider color
+### Set the divider color
 
-The SfDatePicker control allows you to customize the footer divider color by setting the [DividerColor] property of [PickerFooterView].
+The SfDatePicker control allows you to customize the footer divider color by setting the [DividerColor] property of the [PickerFooterView].
 
 {% tabs %}
 
@@ -289,9 +289,9 @@ this.Content = datePicker;
 
 {% endtabs %}
 
-### Customization of footer
+### Customization of the footer
 
-You can customize the footer text style and background color of the `Date Picker` using the [TextStyle] and [Background] properties of the [PickerFooterView].
+Customize the footer text style and background color of the Date Picker using the [TextStyle] and [Background] properties of the [PickerFooterView].
 
 {% tabs %}
 
@@ -330,11 +330,11 @@ this.Content = datePicker;
 
 ## Selection View Customization
 
-You can customize the date picker selection view by using the `SelectionView` property of `SfDatePicker`.
+Customize the date picker selection view by using the `SelectionView` property of the `SfDatePicker`.
 
 ### Set selection view
 
-In the SfDatePicker control, corner radius, stroke , and padding can be customized by setting the [CornerRadius], [Stroke] and [Padding] properties in the [PickerSelectionView].
+In the SfDatePicker control, the corner radius, stroke, and padding can be customized by setting the [CornerRadius], [Stroke], and [Padding] properties in the [PickerSelectionView].
 
 {% tabs %}
 
@@ -365,9 +365,9 @@ this.Content = datePicker;
 
 {% endtabs %}
 
-### Customization of selected item
+### Customization of the selected item
 
-You can customize the selected view text style of the `Date Picker` using the [SelectedTextStyle] property of the [SfDatePicker].
+Customize the selected view text style of the Date Picker using the [SelectedTextStyle] property of the [SfDatePicker].
 
 {% tabs %}
 

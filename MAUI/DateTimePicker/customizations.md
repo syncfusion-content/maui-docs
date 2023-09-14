@@ -9,14 +9,15 @@ documentation: ug
 
 # Customizations in .NET MAUI Date Time Picker (SfDateTimePicker)
 
-The [.NET MAUI Date Time Picker] header, column header, footer and selection views can be customized.
+The [.NET MAUI Date Time Picker] header, column header, footer, and selection views can be customized.
 
-## Header customization
-You can customize the Date Time Picker header by using the `HeaderView` property of `SfDateTimePicker`.
+## Header Customization
 
+Customize the Date Time Picker header by using the `HeaderView` property of the `SfDateTimePicker`.
 
-### Set divider color
-The SfDateTimePicker control allows you to customize the header divider color by setting the [DividerColor] property of [DateTimePickerHeaderView].
+### Set the divider color
+
+The SfDateTimePicker control allows you to customize the header divider color by setting the [DividerColor] property of the [DateTimePickerHeaderView].
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" %}
@@ -41,9 +42,9 @@ this.Content = picker;
 {% endhighlight %}
 {% endtabs %}
 
-### Customization of header
+### Customization of the header
 
-You can customize the header text style and background color of the `Date Time picker` using the [TextStyle] and [Background] properties of the [HeaderView] in [DateTimePickerHeaderView].
+Customize the header text style and background color of the `Date Time picker` using the [TextStyle] and [Background] properties of the [HeaderView] in the[DateTimePickerHeaderView].
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" %}
@@ -77,12 +78,13 @@ this.Content = picker;
 {% endhighlight %}
 {% endtabs %}
 
-## Column header customization
-You can customize the Date Time Picker column header by using the `ColumnHeaderView` property of `SfDateTimePicker`.
+## Column Header Customization
 
-### Set custom column header 
+Customize the Date Time Picker column header by using the `ColumnHeaderView` property of the `SfDateTimePicker`.
 
-The [SfDateTimePicker] providing custom text to its column header by setting the [ColumnHeaderView] property of [SfDateTimePicker], which has [DayHeaderText] [MonthHeaderText], [YearHeaderText], [HourHeaderText], [MinuteHeaderText], [SecondHeaderText], and [MeridiemHeaderText] properties in [DateTimePickerColumnHeaderView]. The default value of [DayHeaderText] is "Day", [MonthHeaderText] is "Month", [YearHeaderText] is "Year", [HourHeaderText] is "Hour", [MinuteHeaderText] is "Minute", [SecondHeaderText] is "Second", and [MeridiemHeaderText] is "string.Empty".
+### Set the custom column header
+
+The [SfDateTimePicker] provides a custom text to its column header by setting the [ColumnHeaderView] property of the [SfDateTimePicker], which has [DayHeaderText] [MonthHeaderText], [YearHeaderText], [HourHeaderText], [MinuteHeaderText], [SecondHeaderText], and [MeridiemHeaderText] properties in the [DateTimePickerColumnHeaderView]. The default value of [DayHeaderText] is "Day", [MonthHeaderText] is "Month", [YearHeaderText] is "Year", [HourHeaderText] is "Hour", [MinuteHeaderText] is "Minute", [SecondHeaderText] is "Second", and [MeridiemHeaderText] is "string.Empty".
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" %}
@@ -116,9 +118,9 @@ this.Content = picker;
 {% endhighlight %}
 {% endtabs %}
 
-### Set divider color
+### Set the divider color
 
-The SfDateTimePicker control allows you to customize the column header divider color by setting the [DividerColor] property of [DatePickerColumnHeaderView].
+The SfDateTimePicker control allows you to customize the column header divider color by setting the [DividerColor] property of the [DatePickerColumnHeaderView].
 
 {% tabs %}
 
@@ -145,9 +147,9 @@ this.Content = picker;
 {% endhighlight %}
 {% endtabs %}
 
-### Customization of column header
+### Customization of the column header
 
-You can customize the column header view text style and background color of the `Date Time Picker` using the [TextStyle] and [Background] properties of the [DateTimePickerColumnHeaderView].
+Customize the column header view text style and background color of the `Date Time Picker` using the [TextStyle] and [Background] properties of the [DateTimePickerColumnHeaderView].
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" %}
@@ -181,11 +183,13 @@ this.Content = picker;
 {% endhighlight %}
 {% endtabs %}
 
-## Footer customization
-You can customize the Date Time Picker footer view by using the `FooterView` property of `SfDateTimePicker`.
+## Footer Customization
 
-### Set footer text with ok and cancel button customizations
-In the SfDateTimePicker control, validation buttons (OK and Cancel) can be customized by setting the [OkButtonText] and [CancelButtonText] properties of [PickerFooterView]. It allows you to confirm or cancel the selected date and time. The `OkButtonText` can be enabled using the [ShowOkButton] property in the [PickerFooterView]. The default value of [OkButtonText] property is "OK", [CancelButtonText] is "Cancel". To enable the footer view by setting the [Height] property with greater than 0 of [PickerFooterView]. The default value of `Height` property is 0.
+Customize the Date Time Picker footer view by using the `FooterView` property of the `SfDateTimePicker`.
+
+### Set the footer text with Ok and Cancel button customizations
+
+In the SfDateTimePicker control, validation buttons (OK and Cancel) can be customized by setting the [OkButtonText] and [CancelButtonText] properties of the [PickerFooterView]. It allows you to confirm or cancel the selected date and time. The `OkButtonText` can be enabled using the [ShowOkButton] property in the [PickerFooterView]. The default value of the [OkButtonText] property is "OK", and [CancelButtonText] is "Cancel". To enable the footer view, set the [Height] property of the [PickerFooterView] to a value greater than 0. The default value of the `Height` property is 0.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" %}
@@ -213,8 +217,9 @@ this.Content = picker;
 {% endhighlight %}
 {% endtabs %}
 
-### Set divider color
-The SfDateTimePicker control allows you to customize the footer divider color by setting the [DividerColor] property of [PickerFooterView].
+### Set the divider color
+
+The SfDateTimePicker control allows you to customize the footer divider color by setting the [DividerColor] property of the [PickerFooterView].
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" %}
@@ -239,8 +244,9 @@ this.Content = picker;
 {% endhighlight %}
 {% endtabs %}
 
-### Customization of footer
-You can customize the footer text style and background color of the `Date Time Picker` using the [TextStyle] and [Background] properties of the [PickerFooterView].
+### Customization of the footer
+
+Customize the footer text style and background color of the `Date Time Picker` using the [TextStyle] and [Background] properties of the [PickerFooterView].
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" %}
@@ -275,10 +281,12 @@ this.Content = picker;
 {% endtabs %}
 
 ## Selection View Customization
-You can customize the Date Time Picker selection view by using the `SelectionView` property of `SfDateTimePicker`.
 
-### Set selection view
-In the SfDateTimePicker control, corner radius, stroke , and padding can be customized by setting the [CornerRadius], [Stroke] and [Padding] properties in the [PickerSelectionView].
+Customize the Date Time Picker selection view by using the `SelectionView` property of the `SfDateTimePicker`.
+
+### Set the selection view
+
+In the SfDateTimePicker control, the corner radius, stroke , and padding can be customized by setting the [CornerRadius], [Stroke], and [Padding] properties in the [PickerSelectionView].
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" %}
@@ -306,8 +314,9 @@ this.Content = picker;
 {% endhighlight %}
 {% endtabs %}
 
-### Customization of selected item
-You can customize the selected view text style of the `Date Time Picker` using the [SelectedTextStyle] property of the [SfDateTimePicker].
+### Customization of the selected item
+
+Customize the selected view text style of the `Date Time Picker` using the [SelectedTextStyle] property of the [SfDateTimePicker].
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" %}
