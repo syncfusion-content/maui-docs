@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Event in .NET MAUI Radio Button Control | Syncfusion
+title: Events in .NET MAUI Radio Button Control | Syncfusion
 description: Learn about Event support in Syncfusion Essential Studio .NET MAUI Radio Button control, its elements and more.
 platform: .NET MAUI
 control: SfRadioButton
 documentation: ug
 ---
 
-# Event in .NET MAUI Radio Button (SfRadioButton)
+# Events in .NET MAUI Radio Button (SfRadioButton)
 
 ## StateChanged event
 

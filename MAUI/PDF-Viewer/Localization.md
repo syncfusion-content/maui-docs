@@ -59,9 +59,7 @@ Follow the given steps to create and add the resource file to the application.
 
     ![Build action of resource file](Images/Localization/BuildAction.png)
 
-6. Double tap on the resource file to add the name and value details in the Resource Designer. You can refer to the default names and values in the following section:
- 
-    ![Localization name value pair in the .NET MAUI PDF Viewer application.](Images/Localization/NameValue.png)
+6. Double tap on the resource file to add the name and value details in the Resource Designer.
 	
 7. Set the `ResourceManager` as shown in the following code example, that looks up the resource file with the specified root name.
  
@@ -149,5 +147,29 @@ The following table contains the default name and value details used in the SfPd
 <tr>
 <td>RequestPassword</td>
 <td>This PDF file is protected. Please enter the password to open it.</td>
+</tr>
+<tr>
+<td>Copy</td>
+<td>Copy</td>
+</tr>
+<tr>
+<td>Highlight</td>
+<td>Highlight</td>
+</tr>
+<tr>
+<td>Save</td>
+<td>Save</td>
+</tr>
+<tr>
+<td>Squiggly</td>
+<td>Squiggly</td>
+</tr>
+<tr>
+<td>Strikeout</td>
+<td>Strikeout</td>
+</tr>
+<tr>
+<td>Underline</td>
+<td>Underline</td>
 </tr>
 </table>

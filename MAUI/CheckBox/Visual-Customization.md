@@ -117,16 +117,17 @@ The tick box stroke thickness of the checkbox control can be customized using th
 
 You can customize the display text appearance of the [`SfCheckBox`] control using the following properties:
 
-* [`TextColor`]: Changes the color of the text.
-* [`HorizontalTextAlignment`]: Changes the horizontal alignment of the caption text.
-* [`FontFamily`]: Changes the font family of the caption text.
-* [`FontAttributes`]: Sets font attributes(bold/italic/none) of the caption text.
-* [`FontSize`]: Sets font size of the caption text.
+* [`TextColor`] : Changes the color of the text.
+* [`HorizontalTextAlignment`] : Changes the horizontal alignment of the caption text.
+* [`FontFamily`] : Changes the font family of the caption text.
+* [`FontAttributes`] : Sets font attributes(bold/italic/none) of the caption text.
+* [`FontSize`] : Sets font size of the caption text.
+
 
 {% tabs %}
 {% highlight xaml %}
 
-    <syncfusion:SfCheckBox x:Name="caption" Text="CheckBox" IsChecked="True" TextColor="Violet" HorizontalTextAlignment="Center" FontFamily="Arial" FontAttributes="Bold" FontSize="20"/>           
+    <syncfusion:SfCheckBox x:Name="caption" Text="CheckBox" IsChecked="True" TextColor="Blue" HorizontalTextAlignment="Center" FontFamily="Arial" FontAttributes="Bold" FontSize="20"/>           
 
 {% endhighlight %}
 {% highlight c# %}
@@ -134,7 +135,7 @@ You can customize the display text appearance of the [`SfCheckBox`] control usin
     SfCheckBox caption = new SfCheckBox();
     caption.IsChecked = true;
     caption.Text = "CheckBox";
-    caption.TextColor = Color.Violet;
+    caption.TextColor = Colors.Blue;
     caption.HorizontalTextAlignment = TextAlignment.Center;
     caption.FontFamily = "Arial";
     caption.FontAttributes = FontAttributes.Bold;
@@ -156,7 +157,7 @@ The [`TickColor`] property customizes the color of the tick in the [`SfCheckBox`
     <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                  xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons" 
-                 x:Class="CheckBoxCustomization.checkbox">
+                 x:Class="CheckBoxCustomization.MainPage">
          <ContentPage.Content>
                 <StackLayout>
                     <syncfusion:SfCheckBox x:Name="checkBox" IsChecked="True" CheckedColor="Aqua" TickColor="Fuchsia" Text="CheckBox" />
@@ -181,8 +182,8 @@ The [`TickColor`] property customizes the color of the tick in the [`SfCheckBox`
                 SfCheckBox checkBox = new SfCheckBox();
                 checkBox.IsChecked = true;
                 checkBox.Text = "CheckBox";
-                checkBox.CheckedColor = Color.Aqua;
-                checkBox.TickColor = Color.Fuchsia;
+                checkBox.CheckedColor = Colors.Aqua;
+                checkBox.TickColor = Colors.Fuchsia;
                 stackLayout.Children.Add(checkBox);
                 this.Content = stackLayout;
             }
