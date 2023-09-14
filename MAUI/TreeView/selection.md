@@ -2,7 +2,7 @@
 layout: post
 title: Selection in .NET MAUI TreeView Control | Syncfusion
 description: Learn here about Selection support in Syncfusion .NET MAUI TreeView (SfTreeView) control and more.
-platform: .NET MAUI
+platform: MAUI
 control: SfTreeView
 documentation: ug
 ---
@@ -16,7 +16,7 @@ The TreeView allows selecting the items either programmatically or touch interac
 
 * `None`: Allows disabling the selection.
 * `Single`: Allows selecting the single item only. When clicking on the selected item, the selection will not be cleared. This is the default value for `SelectionMode`.
-* `SingleDeselect`: Allows selecting the single item only. When clicking on the selected item, selection gets cleared.
+* `SingleDeselect`: Allows selecting the single item only. When clicking on the selected item, the selection gets cleared.
 * `Multiple`: Allows selecting more than one item. Selection is not cleared when selecting more than one items. When clicking on the selected item, selection gets cleared.
 * `Extended`: Allows to select multiple items using the common key modifiers.
 

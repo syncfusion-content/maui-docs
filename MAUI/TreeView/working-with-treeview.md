@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Working with TreeView in .NET MAUI TreeView Control | Syncfusion
-description: Learn here all about Working with TreeView support in Syncfusion .NET MAUI TreeView (SfTreeView) control and more.
-platform: .NET MAUI
+description: Learn here about Working with TreeView support in Syncfusion .NET MAUI TreeView (SfTreeView) control and more.
+platform: MAUI
 control: SfTreeView
 documentation: ug
 ---
@@ -89,12 +89,12 @@ The `ItemLongPress` event will be triggered whenever the item is long pressed.
 
 {% tabs %}
 {% highlight xaml %}
-<syncfusion:SfTreeView x:Name="treeView" ItemLongPress="TreeView_ItemHolding" />
+<syncfusion:SfTreeView x:Name="treeView" ItemLongPress="TreeView_ItemLongPress" />
 {% endhighlight %}
 {% highlight c# %}
 
-treeView.ItemLongPress += TreeView_ItemHolding;
-private void TreeView_ItemHolding(object sender, ItemLongPressEventArgs e)
+treeView.ItemLongPress += TreeView_ItemLongPress;
+private void TreeView_ItemLongPress(object sender, ItemLongPressEventArgs e)
 {
     DisplayAlert("Item LongPress", "TreeView item is Long Pressed","Close");   
 }
