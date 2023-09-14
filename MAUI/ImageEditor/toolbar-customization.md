@@ -261,15 +261,15 @@ To customize the view of toolbar items, specify their icon names and set the vie
 
 {% highlight C# %}
 
-Image image = new Image();
-image.Source = ImageSource.FromResource("MyProject.Resources.Images.save.jpg");
-
 SfImageEditor imageEditor = new SfImageEditor();
 imageEditor.Source = ImageSource.FromFile("image.png");
 
 ImageEditorToolbar headerToolbar = imageEditor.Toolbars[0];
 ImageEditorToolbarGroupItem saveGroup = (ImageEditorToolbarGroupItem)headerToolbar.ToolbarItems[2];
 ImageEditorToolbarItem saveItem = saveGroup.Items.FirstOrDefault(i => i.Name == "Save");
+
+Image image = new Image();
+image.Source = ImageSource.FromFile("save.jpg");
 saveItem.View = image;
 
 {% endhighlight %}
@@ -306,7 +306,7 @@ cropItem.SubToolbars = new List<ImageEditorToolbar>()
 
 {% endtabs %}
 
-### Add an Toolbar Item with the Existing Toolbar
+### Add a Toolbar Item with the Existing Toolbar
 
 Explicitly add the `ImageEditorToolbarItem` to the `ImageEditorToolbar` manually.
 

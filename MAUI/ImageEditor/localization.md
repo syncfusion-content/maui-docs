@@ -39,7 +39,7 @@ public partial class App : Application
 
 ## Localize application level
 
-To localize the `ImageEditor` based on the CurrentUICulture using `resource` files, follow the steps below.
+To localize the `ImageEditor` based on the `CurrentUICulture` using `resource` files, follow the steps below.
 
    1. Add the default resource file of `ImageEditor` to the `Resources` folder of the application.
 
