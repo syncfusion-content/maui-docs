@@ -23,7 +23,6 @@ Create segmented control with segments having the given text.
     <ContentPage.BindingContext>
         <local:ViewModel/>
     </ContentPage.BindingContext>
-
     <buttons:SfSegmentedControl x:Name="segmentedControl"
                                 ItemsSource="{Binding SegmentItems}">
     </buttons:SfSegmentedControl>
@@ -86,11 +85,9 @@ Create a segmented control with segments that contain the provided images by usi
 <ContentPage   
     xmlns:local="clr-namespace:SfSegmentSample"
     xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons">
-
     <ContentPage.BindingContext>
         <local:ViewModel/>
     </ContentPage.BindingContext>
-
         <buttons:SfSegmentedControl x:Name="segmentedControl"
                                     ItemsSource="{Binding SegmentItems}">
     </buttons:SfSegmentedControl>
@@ -153,12 +150,10 @@ Display images and text in the segmented items of the control.
 <ContentPage   
     xmlns:local="clr-namespace:SfSegmentSample"
     xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons">
-
     <ContentPage.BindingContext>
         <local:ViewModel/>
     </ContentPage.BindingContext>
-
-        <buttons:SfSegmentedControl x:Name="segmentedControl"
+    <buttons:SfSegmentedControl x:Name="segmentedControl"
                                     ItemsSource="{Binding SegmentItems}">
     </buttons:SfSegmentedControl>
 </ContentPage>
@@ -221,12 +216,10 @@ Display custom font with text in the segmented items of the control.
 <ContentPage   
     xmlns:local="clr-namespace:SfSegmentSample"
     xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons">
-
     <ContentPage.BindingContext>
         <local:ViewModel/>
     </ContentPage.BindingContext>
-
-        <buttons:SfSegmentedControl x:Name="segmentedControl"
+    <buttons:SfSegmentedControl x:Name="segmentedControl"
                                     ItemsSource="{Binding SegmentItems}">
     </buttons:SfSegmentedControl>
 </ContentPage>

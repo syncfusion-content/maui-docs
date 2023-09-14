@@ -209,6 +209,7 @@ public partial class MainPage : ContentPage
 The selected segment of the Segmented control is customized using the `SelectionIndicatorSettings` property of `SfSegmentedControl`.
 
 ### Customize Selected Segment Background
+You can customize the selected segment background of the segmented control and each segment item.
 
 #### Customize Selected Segment Background of Segmented Control
 Customize the selected segment background using the `Background` property of `SelectionIndicatorSettings`.
@@ -280,6 +281,7 @@ public partial class MainPage : ContentPage
 {% endtabs %}
 
 ### Customize Selected Segment Text Color
+You can customize the selected segment text color of the segmented control and each segment item.
 
 #### Customize Selected Segment Text Color of Segmented Control
 Customize the selected segment text color using the `TextColor` property of `SelectionIndicatorSettings`.
