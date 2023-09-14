@@ -180,6 +180,7 @@ public class Meeting
     public TimeZoneInfo StartTimeZone { get; set; }
     public TimeZoneInfo EndTimeZone { get; set; }
     public Brush Background { get; set; }
+    public Color TextColor { get; set; }
     public object RecurrenceId { get; set; }
     public object Id { get; set; }
     public string RecurrenceRule { get; set; }
@@ -219,12 +220,18 @@ public class SchedulerViewModel
     private List<Brush> colorCollection;
 
     /// <summary>
+    /// The text color collection
+    /// </summary>
+    private List<Color> textColorCollection;
+
+    /// <summary>
     /// Initializes a new instance of the <see cref="SchedulerViewModel" /> class.
     /// </summary>
     public SchedulerViewModel()
     {
         this.CreateSubjectCollection();
         this.CreateColorCollection();
+        this.CreateTextColorCollection();
         this.CreateNoteCollection();
         this.IntializeAppoitments();
     }
@@ -275,6 +282,7 @@ public class SchedulerViewModel
                 meeting.To = meeting.From.AddHours(1);
                 meeting.EventName = this.subjectCollection[randomTime.Next(9)];
                 meeting.Background = this.colorCollection[randomTime.Next(10)];
+                meeting.TextColor = this.textColorCollection[randomTime.Next(5)];
                 meeting.IsAllDay = false;
                 meeting.Notes = this.noteCollection[randomTime.Next(10)];
                 meeting.StartTimeZone = TimeZoneInfo.Local;
@@ -335,6 +343,22 @@ public class SchedulerViewModel
         this.colorCollection.Add(new SolidColorBrush(Color.FromArgb("#FF0F8644")));
         this.colorCollection.Add(new SolidColorBrush(Color.FromArgb("#FF01A1EF")));
     }
+
+    /// <summary>
+    /// Method to  create the text color collection.
+    /// </summary>
+    private void CreateTextColorCollection()
+    {
+        this.textColorCollection = new List<Color>();
+        textColorCollection.Add(Color.FromRgb(133, 81, 22));
+        textColorCollection.Add(Color.FromRgb(140, 285, 219));
+        textColorCollection.Add(Color.FromRgb(265, 222, 133));
+        textColorCollection.Add(Color.FromRgb(198, 57, 113));
+        textColorCollection.Add(Color.FromRgb(245, 62, 133));
+        textColorCollection.Add(Color.FromRgb(23, 13, 165));
+        textColorCollection.Add(Color.FromRgb(293, 13, 15));
+    }
+    
 }
 
 {% endhighlight %}
@@ -345,7 +369,7 @@ public class SchedulerViewModel
 Map those properties of the `Meeting` class with our [.NET MAUI Scheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html) control by using the [AppointmentMapping](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointmentMapping.html) property.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2 4 5 6 7 8 9 10 11 12 13 14 15 16 17" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18" %}
 
 <scheduler:SfScheduler x:Name="Scheduler" 
                        AppointmentsSource="{Binding Events}"
@@ -356,6 +380,7 @@ Map those properties of the `Meeting` class with our [.NET MAUI Scheduler](https
                 StartTime="From"
                 EndTime="To"
                 Background="Background"
+                TextColorMapping="TextColor"
                 IsAllDay="IsAllDay"
                 StartTimeZone="StartTimeZone"
                 EndTimeZone="EndTimeZone"
@@ -378,6 +403,7 @@ appointmentMapping.Subject = "EventName";
 appointmentMapping.StartTime = "From";
 appointmentMapping.EndTime = "To";
 appointmentMapping.Background = "Background";
+appointmentMapping.TextColorMapping = "TextColor";
 appointmentMapping.IsAllDay = "IsAllDay";
 appointmentMapping.StartTimeZone = "StartTimeZone";
 appointmentMapping.EndTimeZone = "EndTimeZone";

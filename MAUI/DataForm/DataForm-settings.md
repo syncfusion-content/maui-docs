@@ -660,11 +660,14 @@ this.dataForm.ItemManager = new DataFormItemManagerEditorExt();
 
 public class DataFormItemManagerEditorExt : DataFormItemManager
 {
-    if (editor is Entry entry)
+    public override void InitializeDataEditor(DataFormItem dataFormItem, View editor)
     {
-        entry.SelectionLength = 5;
-        entry.TextTransform = TextTransform.Lowercase;
-        entry.VerticalTextAlignment = TextAlignment.Center;
+        if (editor is Entry entry)
+        {
+            entry.SelectionLength = 5;
+            entry.TextTransform = TextTransform.Lowercase;
+            entry.VerticalTextAlignment = TextAlignment.Center;
+        }
     }
 }
 
@@ -685,7 +688,7 @@ N> Use the [FieldName](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataF
    
 <ContentPage 
             . . . 
-            xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm">
+            xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm"
             x:Class="GettingStarted.MainPage">
     <ContentPage.BindingContext>
         <local:DataFormViewModel />

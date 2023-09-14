@@ -7,7 +7,7 @@ control: SfPdfViewer
 documentation: ug
 ---
 
-# Ink Annotation in .NET MAUI PDF Viewer (SfPdfViewer)
+# Ink or Freehand Drawing Annotation in .NET MAUI PDF Viewer (SfPdfViewer)
 
 The ink annotation feature of [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) allows you to add, remove and modify free hand drawings (ink) in the PDF document. This is useful for making corrections or emphasizing important points in the document. This section will go through the various functions available in the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) for working with ink annotations.
 
@@ -31,11 +31,6 @@ You can draw and add ink annotations to a PDF document with UI interaction using
 The following code explains how to enable the ink annotation mode.
 
 {% tabs %}
-{% highlight XAML %}
-
-<syncfusion:SfPdfViewer x:Name="PdfViewer" AnnotationMode="Ink"/>
-
-{% endhighlight %}
 {% highlight C# %}
 // Enable or activate the ink drawing mode.
 void EnableInkDrawingMode()
@@ -49,11 +44,6 @@ void EnableInkDrawingMode()
 Similarly, refer to following code to disable the ink annotation mode.
 
 {% tabs %}
-{% highlight XAML %}
-
-<syncfusion:SfPdfViewer x:Name="PdfViewer" AnnotationMode="None"/>
-
-{% endhighlight %}
 {% highlight C# %}
 // Disable or deactivate the ink drawing mode.
 void DisableInkDrawingMode()
