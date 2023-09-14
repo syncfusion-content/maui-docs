@@ -9,7 +9,7 @@ documentation: ug
  
 # Migrate from Xamarin.Forms Segmented Control to .NET MAUI Segmented Control (SfSegmentedControl)
 
-To make the migration from the [Xamarin SfSegmented control](https://www.syncfusion.com/xamarin-ui-controls/xamarin-segmented-control) to the `.NET MAUI SfSegmented control` easier, most of the APIs from the `Xamarin SfSegmented control` were kept in the `.NET MAUI SfSegmented control`. However, to maintain the consistency of API naming in the `.NET MAUI SfSegmented control`, some of the APIs have been renamed. Please find the difference in the following topics.
+To make the migration from the [Xamarin SfSegmented Control](https://www.syncfusion.com/xamarin-ui-controls/xamarin-segmented-control) to the `.NET MAUI SfSegmented Control` easier, most of the APIs from the `Xamarin SfSegmented Control` were kept in the `.NET MAUI SfSegmented Control`. However, to maintain the consistency of API naming in the `.NET MAUI SfSegmented Control`, some of the APIs have been renamed. Please find the difference in the following topics.
 
 ## Namespaces
 
@@ -83,8 +83,6 @@ this.Content = segmentedControl;
 ## Classes 
 
 <table>
-
-<tr>
 <tr>
 <th>Xamarin SfSegmented control</th>
 <th>.NET MAUI SfSegmented control</th>
@@ -110,7 +108,7 @@ this.Content = segmentedControl;
 </tr>
 
 <tr>
-<td>NA</td>
+<td>Nil</td>
 <td>SegmentTextStyle</td>
 <td>Gets or sets properties which allows to customize the segment item text style of the SfSegmentedControl.</td>
 </tr>
@@ -120,13 +118,22 @@ this.Content = segmentedControl;
 
 ## Properties
 
-#### SfSegmentedControl
+### SfSegmentedControl
+
+<table> 
+<tr>
+<th>Xamarin SfSegmented control</th>
+<th>.NET MAUI SfSegmented control</th>
+<th>Description</th></tr>
 
 {% tabs %}
 {% highlight XAML %}
-<ContentPage 
-...
-xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons">
+<ContentPage   
+    xmlns:local="clr-namespace:SfSegmentSample"
+    xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons">
+    <ContentPage.BindingContext>
+        <local:ViewModel/>
+    </ContentPage.BindingContext>
     <buttons:SfSegmentedControl x:Name="segmentedControl"
                                     SelectedIndex="1"
                                     VisibleSegmentsCount="4"
@@ -176,12 +183,6 @@ public class ViewModel
 {% endhighlight %}
 {% endtabs %}
 
-<table> 
-<tr>
-<th>Xamarin SfSegmented control</th>
-<th>.NET MAUI SfSegmented control</th>
-<th>Description</th></tr>
-
 <tr>
 <td>{{'[ItemsSource](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Buttons.SfSegmentedControl.html#Syncfusion_XForms_Buttons_SfSegmentedControl_ItemsSource)'| markdownify }}</td>
 <td>ItemsSource</td>
@@ -225,7 +226,7 @@ public class ViewModel
 </tr>
 
 <tr>
-<td>NA</td>
+<td>Nil</td>
 <td>DisabledSegmentBackground</td>
 <td>Gets or sets the background brush of the disabled segment items in the SfSegmentedControl.</td>
 </tr>
@@ -273,18 +274,16 @@ public class ViewModel
 </tr>
 
 <tr>
-<td>NA</td>
+<td>Nil</td>
 <td>SegmentTemplate</td>
 <td>Gets or sets the data template to use for customizing the appearance of individual segments in the SfSegmentedControl.</td>
 </tr>
 
 <tr>
-<td>NA</td>
+<td>Nil</td>
 <td>ShowSeparator</td>
 <td>Gets or sets a value indicating whether to show separators between segments in the SfSegmentedControl.</td>
 </tr>
-
-
 </table>
 
 #### SfSegmentItem
@@ -293,7 +292,8 @@ public class ViewModel
 <tr>
 <th>Xamarin SfSegmented control</th>
 <th>.NET MAUI SfSegmented control</th>
-<th>Description</th></tr>
+<th>Description</th>
+</tr>
 
 <tr>
 <td>{{'[BackgroundColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Buttons.SfSegmentItem.html#Syncfusion_XForms_Buttons_SfSegmentItem_BackgroundColor)'| markdownify }}</td>
@@ -302,13 +302,13 @@ public class ViewModel
 </tr>
 
 <tr>
-<td>NA</td>
+<td>Nil</td>
 <td>Width</td>
 <td>Gets or sets the width of the segment item.</td>
 </tr>
 
 <tr>
-<td>NA</td>
+<td>Nil</td>
 <td>ImageSource</td>
 <td>Gets or sets the image displayed in the segment item.</td>
 </tr>
@@ -332,7 +332,7 @@ public class ViewModel
 </tr>
 
 <tr>
-<td>NA</td>
+<td>Nil</td>
 <td>ImageSize</td>
 <td>Gets or sets the image size of the segment item.</td>
 </tr>
@@ -351,13 +351,16 @@ public class ViewModel
 
 </table>
 
-#### SelectionIndicatorSettings
+### SelectionIndicatorSettings
 
 {% tabs %}
 {% highlight XAML %}
-<ContentPage 
-...
-xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons">
+<ContentPage   
+    xmlns:local="clr-namespace:SfSegmentSample"
+    xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons">
+    <ContentPage.BindingContext>
+        <local:ViewModel/>
+    </ContentPage.BindingContext>
     <buttons:SfSegmentedControl x:Name="segmentedControl"
                                 ItemsSource="{Binding SegmentItems}">
         <buttons:SfSegmentedControl.SelectionIndicatorSettings>
@@ -425,13 +428,13 @@ public class ViewModel
 </tr>
 
 <tr>
-<td>NA</td>
+<td>Nil</td>
 <td>TextColor</td>
 <td>Gets or sets the text color for the selection indicator in the SfSegmentedControl.</td>
 </tr>
 
 <tr>
-<td>NA</td>
+<td>Nil</td>
 <td>Stroke</td>
 <td>Gets or sets the stroke color for the selection indicator in the SfSegmentedControl.</td>
 </tr>
@@ -450,14 +453,17 @@ public class ViewModel
 
 </table>
 
-#### SegmentTextStyle
+### SegmentTextStyle
 The `FontColor`, `FontSize`, `FontFamily`, and `FontAttributes` properties of the [SfSegmentedControl](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Buttons.SfSegmentedControl.html) is grouped to `SegmentTextStyle`.
 
 {% tabs %}
 {% highlight XAML %}
-<ContentPage 
-...
-xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons">
+<ContentPage   
+    xmlns:local="clr-namespace:SfSegmentSample"
+    xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons">
+    <ContentPage.BindingContext>
+        <local:ViewModel/>
+    </ContentPage.BindingContext>
     <buttons:SfSegmentedControl x:Name="segmentedControl"
                                 ItemsSource="{Binding SegmentItems}">
     <buttons:SfSegmentedControl.TextStyle>
@@ -515,7 +521,8 @@ public class ViewModel
 <tr>
 <th>Xamarin SfSegmented control</th>
 <th>.NET MAUI SfSegmented control</th>
-<th>Description</th></tr>
+<th>Description</th>
+</tr>
 
 <tr>
 <td>{{'[FontColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Buttons.SfSegmentedControl.html#Syncfusion_XForms_Buttons_SfSegmentedControl_FontColor)'| markdownify }}</td>
@@ -549,7 +556,8 @@ public class ViewModel
 <tr>
 <th>Xamarin SfSegmented control</th>
 <th>.NET MAUI SfSegmented control</th>
-<th>Description</th></tr>
+<th>Description</th>
+</tr>
 
 <tr>
 <td>{{'[SelectionIndicatorPosition](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Buttons.SelectionIndicatorPosition.html)'| markdownify }}</td>
@@ -565,14 +573,14 @@ public class ViewModel
 <tr>
 <th>Xamarin SfSegmented control</th>
 <th>.NET MAUI SfSegmented control</th>
-<th>Description</th></tr>
+<th>Description</th>
+</tr>
 
 <tr>
 <td>{{'[SelectionChanged](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Buttons.SfSegmentedControl.html#Syncfusion_XForms_Buttons_SfSegmentedControl_SelectionChanged)'| markdownify }}</td>
 <td>SelectionChanged</td>
 <td>Occurs when the selection within the segment item is changed.</td>
 </tr>
-
 </table>
 
 ## Methods
@@ -581,7 +589,8 @@ public class ViewModel
 <tr>
 <th>Xamarin SfSegmented control</th>
 <th>.NET MAUI SfSegmented control</th>
-<th>Description</th></tr>
+<th>Description</th>
+</tr>
 
 <tr>
 <td>{{'[ScrollTo](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Buttons.SfSegmentedControl.html#Syncfusion_XForms_Buttons_SfSegmentedControl_ScrollTo_System_Int32_Syncfusion_XForms_Buttons_ScrollToPosition_)'| markdownify }}</td>
@@ -591,11 +600,10 @@ public class ViewModel
 </tr>
 
 <tr>
-<td>NA</td>
+<td>Nil</td>
 <td>SetSegmentEnabled</td>
 <td>Sets the enabled state of a specific segment at the specified index.</td>
 </tr>
-
 </table>
 
 ## Upcoming Features

@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with .NET MAUI Segmented Control (SfSegmentedControl)
 
-This section provides a quick overview of how to get started with the `.NET MAUI Segmented control(SfSegmented)` for .NET MAUI and a walk-through to configure the .NET MAUI Segmented control in a real-time scenario.
+This section provides a quick overview of how to get started with the `.NET MAUI Segmented control (SfSegmentedControl)` for .NET MAUI and a walk-through to configure the .NET MAUI Segmented control in a real-time scenario.
 
 ## Creating an Application Using the .NET MAUI Segmented Control
 

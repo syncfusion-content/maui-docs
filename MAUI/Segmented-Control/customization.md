@@ -77,7 +77,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-## Customize the Corner Radius
+## Customize the Border Corner Radius
 
 Use the `CornerRadius` property of `SfSegmentedControl` to customize the corner radius of the segmented control.
 
@@ -111,7 +111,42 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
+## Customize the Segment Corner Radius
+
+Use the `SegmentCornerRadius` property of `SfSegmentedControl` to customize the segment corner radius of the segmented control.
+
+{% tabs %}
+{% highlight XAML %}
+
+<ContentPage
+    xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons">
+    <buttons:SfSegmentedControl x:Name="segmentedControl"
+                                SegmentCornerRadius="5">
+    </buttons:SfSegmentedControl>
+</ContentPage>
+
+{% endhighlight %}
+{% highlight C# %}
+
+using Syncfusion.Maui.Buttons;
+. . .
+
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        SfSegmentedControl segmentedControl = new SfSegmentedControl();
+        segmentedControl.SegmentCornerRadius = 5;
+        this.Content = segmentedControl;
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Customize the Text Style
+You can customize the text style of the segmented control and each segment item.
 
 ### Customize the Text Style of Segmented Control
 Use the `TextStyle` property of `SfSegmentedControl` to customize the text style of the segmented control.
@@ -185,6 +220,7 @@ public partial class MainPage : ContentPage
 {% endtabs %}
 
 ## Customize the Segment Background
+You can customize the segmented background of the segmented control and each segment item.
 
 ### Customize the Segment Background of Segemented Control
 Use the `SegmentBackground` property of `SfSegmentedControl` to customize the segmented background of the segmented control.
@@ -250,41 +286,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-## Customize the Segment Corner Radius
-
-Use the `SegmentCornerRadius` property of `SfSegmentedControl` to customize the segment corner radius of the segmented control.
-
-{% tabs %}
-{% highlight XAML %}
-
-<ContentPage
-    xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons">
-    <buttons:SfSegmentedControl x:Name="segmentedControl"
-                                SegmentCornerRadius="5">
-    </buttons:SfSegmentedControl>
-</ContentPage>
-
-{% endhighlight %}
-{% highlight C# %}
-
-using Syncfusion.Maui.Buttons;
-. . .
-
-public partial class MainPage : ContentPage
-{
-    public MainPage()
-    {
-        InitializeComponent();
-        SfSegmentedControl segmentedControl = new SfSegmentedControl();
-        segmentedControl.SegmentCornerRadius = 5;
-        this.Content = segmentedControl;
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-## Custom Data template
+## Custom Segment Data Template
 
 Use the `SegmentTemplate` property of `SfSegmentedControl` to create custom segmented control. The following example code shows how to create a custom segmented control using a data template.
 
