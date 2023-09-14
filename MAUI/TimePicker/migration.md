@@ -9,7 +9,7 @@ documentation: ug
 
 # Migrate from Xamarin.Forms SfTimePicker to .NET MAUI SfTimePicker 
 
-To make the migration from the [Xamarin SfTimePicker](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.SfTimePicker.html) to [.NET MAUI SfTimePicker] easier, most of the APIs from the Xamarin SfTimePicker were kept in the .NET MAUI SfTimePicker. However, to maintain the consistency of API naming in the .NET MAUI SfTimePicker, some of the APIs have been renamed. Please find the difference in the following topics.
+To make the migration from the [Xamarin SfTimePicker](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.SfTimePicker.html) to [.NET MAUI SfTimePicker] easier, most of the APIs from the Xamarin SfTimePicker are kept in the .NET MAUI SfTimePicker. However, to maintain the consistency of API naming in the .NET MAUI SfTimePicker, some of the APIs have been renamed. Please find the difference in the following topics.
 
 ## Namespaces 
 
@@ -96,27 +96,27 @@ this.Content = timePicker;
 <tr>
 <td>{{'[PickerBase](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.SfTimePicker.html)'| markdownify }}</td>
 <td>{{'[PickerBase]'| markdownify }}</td>
-<td>Represents a base used to achieve time picker custom view.</td>
+<td>Represents a base used to achieve the time picker custom view.</td>
 </tr>
 <tr>
 <td>{{'[Nill]'| markdownify }}</td>
 <td>{{'[TimePickerColumnHeaderView]'| markdownify }}</td>
-<td>Represents a column header view used to achieve time picker header custom view.</td>
+<td>Represents a column header view used to achieve the time picker header custom view.</td>
 </tr>
 <tr>
 <td>{{'[Nill]'| markdownify }}</td>
 <td>{{'[PickerHeaderView]'| markdownify }}</td>
-<td>Represents a header view used to achieve time picker header custom view.</td>
+<td>Represents a header view used to achieve the time picker header custom view.</td>
 </tr>
 <tr>
 <td>{{'[Nill]'| markdownify }}</td>
 <td>{{'[PickerFooterView]'| markdownify }}</td>
-<td>Represents a footer view used to achieve time picker footer custom view.</td>
+<td>Represents a footer view used to achieve the time picker footer custom view.</td>
 </tr>
 <tr>
 <td>{{'[Nill]'| markdownify }}</td>
 <td>{{'[PickerSelectionView]'| markdownify }}</td>
-<td>Represents a selection view used to achieve time picker selection custom view.</td>
+<td>Represents a selection view used to achieve the time picker selection custom view.</td>
 </tr>
 <tr>
 <td>{{'[TimeChangedEventArgs](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.TimeChangedEventArgs.html)' | markdownify }}</td>
@@ -212,7 +212,7 @@ timePicker.Format = PickerTimeFormat.h_mm_ss_tt;
 <tr>
 <td>{{'[Format](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.SfTimePicker.html#Syncfusion_XForms_Pickers_SfTimePicker_Format)'| markdownify }}</td>
 <td>{{'[Format]'| markdownify }}</td>
-<td>Get or set the format that is used to change the format of SfTimePicker.</td>
+<td>Gets or set the format that is used to change the format of SfTimePicker.</td>
 </tr>
 <tr>
 <td>{{'[HeaderText](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.SfTimePicker.html#Syncfusion_XForms_Pickers_SfTimePicker_HeaderText)'| markdownify }}</td>
@@ -337,7 +337,7 @@ timePicker.Format = PickerTimeFormat.h_mm_ss_tt;
 <tr>
 <td>{{'[FooterView](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_FooterViewProperty)'| markdownify }}</td>
 <td>{{'[FooterView]'| markdownify }}</td>
-<td>Gets or sets the value of footer view. This property can be used to customize the of Footer in TimePicker.</td>
+<td>Gets or sets the value of footer view. This property can be used to customize the Footer in Time Picker.</td>
 </tr>
 <tr>
 <td>{{'[HeaderBackgroundColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_HeaderBackgroundColorProperty)'| markdownify }}</td>
@@ -372,7 +372,7 @@ timePicker.Format = PickerTimeFormat.h_mm_ss_tt;
 <tr>
 <td>{{'[HeaderView](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_HeaderViewProperty)'| markdownify }}</td>
 <td>{{'[HeaderView]'| markdownify }}</td>
-<td>Gets or sets the value of header view. This property can be used to customize the of header in Time Picker.</td>
+<td>Gets or sets the value of header view. This property can be used to customize the header in Time Picker.</td>
 </tr>
 <tr>
 <td>{{'[IsOpen](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_IsOpenProperty)'| markdownify }}</td>
@@ -382,7 +382,7 @@ timePicker.Format = PickerTimeFormat.h_mm_ss_tt;
 <tr>
 <td>{{'[ItemHeight](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_ItemHeightProperty)'| markdownify }}</td>
 <td>{{'[ItemHeight]'| markdownify }}</td>
-<td>Gets or sets the item height of the each item source.</td>
+<td>Gets or sets the item height of each item source.</td>
 </tr>
 <tr>
 <td>{{'[OkButtonBackgroundColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_OKButtonBackgroundColorProperty)'| markdownify }}</td>
@@ -942,31 +942,31 @@ this.Content = timePicker;
 <tr>
 <td>{{'[Opened](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.SfTimePicker.html#Syncfusion_XForms_Pickers_SfTimePicker_Opened)'| markdownify }}</td>
 <td>{{'[Opened]'| markdownify }}</td>
-<td>Occurs whenever the opened on time picker. </td>
+<td>Occurs whenever the opened on the time picker. </td>
 </tr>
 <tr>
 <td>{{'[Closed](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.SfTimePicker.html#Syncfusion_XForms_Pickers_SfTimePicker_Closed)'| markdownify }}</td>
 <td>{{'[Closed]'| markdownify }}</td>
-<td>Occurs whenever the closed on time picker.</td>
+<td>Occurs whenever the closed on the time picker.</td>
 </tr>
 <tr>
 <td>{{'[Closing](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.SfTimePicker.html#Syncfusion_XForms_Pickers_SfTimePicker_Closing)'| markdownify }}</td>
 <td>{{'[Closing]'| markdownify }}</td>
-<td>Occurs whenever the closing on time picker.</td>
+<td>Occurs whenever the closing on the time picker.</td>
 </tr>
 <tr>
 <td>{{'[TimeSelected](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.SfTimePicker.html#Syncfusion_XForms_Pickers_SfTimePicker_TimeSelected)'| markdownify }}</td>
 <td>{{'[SelectionChanged]'| markdownify }}</td>
-<td>Occurs whenever the selection changed on time picker. </td>
+<td>Occurs whenever the selection changed on the time picker. </td>
 </tr>
 <tr>
 <td>{{'[OkButtonClicked](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.SfTimePicker.html#Syncfusion_XForms_Pickers_SfTimePicker_OkButtonClicked)'| markdownify }}</td>
 <td>{{'[OkButtonClicked]'| markdownify }}</td>
-<td>Occurs whenever the footer ok button is clicked in time picker.</td>
+<td>Occurs whenever the footer ok button is clicked in the time picker.</td>
 </tr>
 <tr>
 <td>{{'[CancelButtonClicked](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.SfTimePicker.html#Syncfusion_XForms_Pickers_SfTimePicker_CancelButtonClicked)'| markdownify }}</td>
 <td>{{'[CancelButtonClicked]'| markdownify }}</td>
-<td>Occurs whenever the footer cancel button is clicked in time picker.</td>
+<td>Occurs whenever the footer cancel button is clicked in the time picker.</td>
 </tr>
 </table>

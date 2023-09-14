@@ -9,7 +9,7 @@ documentation: ug
 
 # Formatting in .NET MAUI Date Picker (SfDatePicker)
 
-Format is a way to represent the date in a different string format. You can customize the date format by using the [Format] property in [PickerDateFormat]. The default format is `yyyy_MM_dd`.
+Format is a way to represent the date in a different string format. You can customize the date format using the [Format] property in [PickerDateFormat]. The default format is `yyyy_MM_dd`.
 
 The different types of formats are:
 

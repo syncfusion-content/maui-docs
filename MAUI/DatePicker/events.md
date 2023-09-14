@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Date Picker events in .NET MAUI Date Picker Control | Syncfusion
+title: Date Picker Events in .NET MAUI Date Picker Control | Syncfusion
 description: Learn about date picker events in Syncfusion .NET MAUI Date Picker (SfDatePicker) control and its basic features.
 platform: maui
 control: SfDatePicker
@@ -15,7 +15,7 @@ The [SelectionChanged] event is used to notify when the date selection is change
 
 * `Sender`: This contains the `SfDatePicker` object.
 
-* `EventArgs`: In Date Picker, the [DatePickerSelectionChangedEventArgs] is used for this event which holds the data of NewValue and OldValue.
+* `EventArgs`: In the SfDatePicker picker, the [DatePickerSelectionChangedEventArgs] is used for this event, which holds the data of NewValue and OldValue.
 
     * [NewValue] : Returns the new selected date.
     * [OldValue] : Returns the old selected date.
@@ -58,7 +58,7 @@ The [Opened] event occurs when the picker popup is opened in the [SfDatePicker].
 
 * `Sender`: This contains the `SfDatePicker` object.
 
-* `EventArgs`: In SfDatePicker picker, [EventArgs] is used for this event.
+* `EventArgs`: In the SfDatePicker picker, [EventArgs] is used for this event.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
@@ -89,9 +89,9 @@ The [Closing] event occurs when the picker popup is closing in the [SfDatePicker
 
 * `Sender`: This contains the `SfDatePicker` object.
 
-* `EventArgs`: In SfDatePicker picker, [CancelEventArgs] is used to describe the cancel event which holds the bool value.
+* `EventArgs`: In the SfDatePicker picker, [CancelEventArgs] is used to describe the cancel event which holds the bool value.
 
-    * [Cancel] : Indicating whether we should cancel the operation or not.
+    * [Cancel] : Indicating whether you should cancel the operation or not.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
@@ -122,7 +122,7 @@ The [Closed] event occurs when the picker popup is closed in the [SfDatePicker].
 
 * `Sender`: This contains the `SfDatePicker` object.
 
-* `EventArgs`: In SfDatePicker picker, [EventArgs] is used for this event.
+* `EventArgs`: In the SfDatePicker picker, [EventArgs] is used for this event.
 
 {% tabs %}
 
@@ -140,7 +140,7 @@ this.Picker.Closed += this.OnDatePickerPopUpClosed;
 
 private void OnDatePickerPopUpClosed(object sender, EventArgs e)
 {
-    // If you need to close the picker, set IsOpen property to false.
+    // If you need to close the picker, set the IsOpen property to false.
     this.Picker.IsOpen = false;
 }
 
@@ -161,7 +161,7 @@ The `SfDatePicker` footer view provides two events. These events are not applica
 
 * `Sender`: This contains the `SfDatePicker` object.
 
-* `EventArgs`: In SfDatePicker picker, [EventArgs] is used for this event.
+* `EventArgs`: In the SfDatePicker picker, [EventArgs] is used for this event.
 
 {% tabs %}
 
@@ -179,7 +179,7 @@ this.Picker.OkButtonClicked += this.OnDatePickerOkButtonClicked;
 
 private void OnDatePickerOkButtonClicked(object sender, EventArgs e)
 {
-    // This event is used to update the selected item in the Date picker.
+    // This event is used to updates the selected item in the Date picker.
 }
 
 {% endhighlight %}
@@ -192,7 +192,7 @@ private void OnDatePickerOkButtonClicked(object sender, EventArgs e)
 
 * `Sender`: This contains the `SfDatePicker` object.
 
-* `EventArgs`: In SfDatePicker picker, [EventArgs] is used for this event.
+* `EventArgs`: In the SfDatePicker picker, [EventArgs] is used for this event.
 
 {% tabs %}
 
@@ -210,7 +210,7 @@ this.Picker.CancelButtonClicked += this.OnDatePickerCancelButtonClicked;
 
 private void OnDatePickerCancelButtonClicked(object sender, EventArgs e)
 {
-    // This event is used to cancel the selected item in the Date picker.
+    // This event cancels the selected item in the Date picker.
 }
 
 {% endhighlight %}

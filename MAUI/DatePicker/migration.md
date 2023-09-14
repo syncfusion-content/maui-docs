@@ -9,7 +9,7 @@ documentation: ug
 
 # Migrate from Xamarin.Forms SfDatePicker to .NET MAUI SfDatePicker 
 
-To make the migration from the [Xamarin SfDatePicker](https://www.syncfusion.com/xamarin-ui-controls/xamarin-datepicker) to [.NET MAUI SfDatePicker] easier, most of the APIs from the Xamarin SfDatePicker were kept in the .NET MAUI SfDatePicker. However, to maintain the consistency of API naming in the .NET MAUI SfDatePicker, some of the APIs have been renamed. Please find the difference in the following topics.
+To make the migration from the [Xamarin SfDatePicker](https://www.syncfusion.com/xamarin-ui-controls/xamarin-datepicker) to [.NET MAUI SfDatePicker] easier, most of the APIs from the Xamarin SfDatePicker are kept in the .NET MAUI SfDatePicker. However, to maintain the consistency of API naming in the .NET MAUI SfDatePicker, some of the APIs have been renamed. Please find the difference in the following topics.
 
 ## Namespaces 
 
@@ -96,27 +96,27 @@ this.Content = datePicker;
 <tr>
 <td>{{'[PickerBase](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.SfDatePicker.html)'| markdownify }}</td>
 <td>{{'[PickerBase]'| markdownify }}</td>
-<td>Represents a base used to achieve date picker custom view.</td>
+<td>Represents a base used to achieve the date picker custom view.</td>
 </tr>
 <tr>
 <td>{{'[Nill]'| markdownify }}</td>
 <td>{{'[DatePickerColumnHeaderView]'| markdownify }}</td>
-<td>Represents a column header view used to achieve date picker column header custom view.</td>
+<td>Represents a column header view used to achieve the date picker column header custom view.</td>
 </tr>
 <tr>
 <td>{{'[Nill]'| markdownify }}</td>
 <td>{{'[PickerHeaderView]'| markdownify }}</td>
-<td>Represents a header view used to achieve date picker header custom view.</td>
+<td>Represents a header view used to achieve the date picker header custom view.</td>
 </tr>
 <tr>
 <td>{{'[Nill]'| markdownify }}</td>
 <td>{{'[PickerFooterView]'| markdownify }}</td>
-<td>Represents a footer view used to achieve date picker footer custom view.</td>
+<td>Represents a footer view used to achieve the date picker footer custom view.</td>
 </tr>
 <tr>
 <td>{{'[Nill]'| markdownify }}</td>
 <td>{{'[PickerSelectionView]'| markdownify }}</td>
-<td>Represents a selection view used to achieve date picker selection custom view.</td>
+<td>Represents a selection view used to achieve the date picker selection custom view.</td>
 </tr>
 <tr>
 <td>{{'[DateChangedEventArgs](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.DateChangedEventArgs.html)' | markdownify }}</td>
@@ -227,7 +227,7 @@ datePicker.Format = PickerDateFormat.MM_dd_yyyy;
 <tr>
 <td>{{'[Format](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.SfDatePicker.html#Syncfusion_XForms_Pickers_SfDatePicker_FormatProperty)'| markdownify }}</td>
 <td>{{'[Format]'| markdownify }}</td>
-<td>Get or set the format that is used to change the format of SfDatePicker.</td>
+<td>Gets or set the format that is used to change the format of SfDatePicker.</td>
 </tr>
 <tr>
 <td>{{'[MaximumDate](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.SfDatePicker.html#Syncfusion_XForms_Pickers_SfDatePicker_MaximumDateProperty)'| markdownify }}</td>
@@ -337,7 +337,7 @@ datePicker.Format = PickerDateFormat.MM_dd_yyyy;
 <tr>
 <td>{{'[FooterView](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_FooterViewProperty)'| markdownify }}</td>
 <td>{{'[FooterView]'| markdownify }}</td>
-<td>Gets or sets the value of footer view. This property can be used to customize the of Footer in DatePicker.</td>
+<td>Gets or sets the value of footer view. This property can be used to customize the Footer in DatePicker.</td>
 </tr>
 <tr>
 <td>{{'[HeaderBackgroundColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_HeaderBackgroundColorProperty)'| markdownify }}</td>
@@ -372,7 +372,7 @@ datePicker.Format = PickerDateFormat.MM_dd_yyyy;
 <tr>
 <td>{{'[HeaderView](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_HeaderViewProperty)'| markdownify }}</td>
 <td>{{'[HeaderView]'| markdownify }}</td>
-<td>Gets or sets the value of header view. This property can be used to customize the of header in DatePicker.</td>
+<td>Gets or sets the value of header view. This property can be used to customize the header in DatePicker.</td>
 </tr>
 <tr>
 <td>{{'[IsOpen](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_IsOpenProperty)'| markdownify }}</td>
@@ -382,7 +382,7 @@ datePicker.Format = PickerDateFormat.MM_dd_yyyy;
 <tr>
 <td>{{'[ItemHeight](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_ItemHeightProperty)'| markdownify }}</td>
 <td>{{'[ItemHeight]'| markdownify }}</td>
-<td>Gets or sets the item height of the each item source.</td>
+<td>Gets or sets the item height of each item source.</td>
 </tr>
 <tr>
 <td>{{'[OkButtonBackgroundColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_OKButtonBackgroundColorProperty)'| markdownify }}</td>
@@ -942,31 +942,31 @@ this.Content = datePicker;
 <tr>
 <td>{{'[Opened](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.SfDatePicker.html#Syncfusion_XForms_Pickers_SfDatePicker_Opened)'| markdownify }}</td>
 <td>{{'[Opened]'| markdownify }}</td>
-<td>Occurs whenever opened the date picker. </td>
+<td>Occurs whenever opened on the date picker. </td>
 </tr>
 <tr>
 <td>{{'[Closed](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.SfDatePicker.html#Syncfusion_XForms_Pickers_SfDatePicker_Closed)'| markdownify }}</td>
 <td>{{'[Closed]'| markdownify }}</td>
-<td>Occurs whenever closed the date picker.</td>
+<td>Occurs whenever closed on the date picker.</td>
 </tr>
 <tr>
 <td>{{'[Closing](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.SfDatePicker.html#Syncfusion_XForms_Pickers_SfDatePicker_Closing)'| markdownify }}</td>
 <td>{{'[Closing]'| markdownify }}</td>
-<td>Occurs whenever closing the date picker.</td>
+<td>Occurs whenever closing on the date picker.</td>
 </tr>
 <tr>
 <td>{{'[DateSelection](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.SfDatePicker.html#Syncfusion_XForms_Pickers_SfDatePicker_DateSelected)'| markdownify }}</td>
 <td>{{'[SelectionChanged]'| markdownify }}</td>
-<td>Occurs whenever selection changed the date picker. </td>
+<td>Occurs whenever selection changed on the the date picker. </td>
 </tr>
 <tr>
 <td>{{'[OkButtonClicked](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.SfDatePicker.html#Syncfusion_XForms_Pickers_SfDatePicker_OkButtonClicked)'| markdownify }}</td>
 <td>{{'[OkButtonClicked]'| markdownify }}</td>
-<td>Occurs whenever footer ok button is clicked in date picker.</td>
+<td>Occurs whenever footer ok button is clicked in the date picker.</td>
 </tr>
 <tr>
 <td>{{'[CancelButtonClicked](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.SfDatePicker.html#Syncfusion_XForms_Pickers_SfDatePicker_CancelButtonClicked)'| markdownify }}</td>
 <td>{{'[CancelButtonClicked]'| markdownify }}</td>
-<td>Occurs whenever footer cancel button is clicked in date picker.</td>
+<td>Occurs whenever footer cancel button is clicked in the date picker.</td>
 </tr>
 </table>

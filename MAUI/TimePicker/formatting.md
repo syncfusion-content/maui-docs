@@ -9,7 +9,7 @@ documentation: ug
 
 # Formatting in .NET MAUI Time Picker (SfTimePicker)
 
-Format is a way to represent the time in a different string format. You can customize the time format by using the [Format] property in [PickerTimeFormat]. The default format is `HH_mm_ss`.
+Format is a way to represent the time in a different string format. You can customize the time format using the [Format] property in [PickerTimeFormat]. The default format is `HH_mm_ss`.
 
 
 The different types of formats are:

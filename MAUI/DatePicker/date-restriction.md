@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Date restriction in .NET MAUI Date Picker Control | Syncfusion
+title: Date Restriction in .NET MAUI Date Picker Control | Syncfusion
 description: Learn about date restriction support in Syncfusion .NET MAUI Date Picker (SfDatePicker) control and its basic features.
 platform: maui
 control: SfDatePicker
