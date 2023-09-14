@@ -41,24 +41,22 @@ public partial class App : Application
 
 To localize the `ImageEditor` based on the CurrentUICulture using `resource` files, follow the steps below.
 
-   1. Create a new folder named `Resources` in the application.
-
-   2. Add the default resource file of `ImageEditor` to the `Resources` folder.
+   1. Add the default resource file of `ImageEditor` to the `Resources` folder of the application.
 
    ![addition-of-default-resource-file-of-maui-ImageEditor-into-resources-folder](images/localization/addition-of-default-resource-file-of-maui-ImageEditor-into-resources-folder.png)
 
-   3. Right-click on the `Resources` folder, select `Add`, and then choose `NewItem`.
+   2. Right-click on the `Resources` folder, select `Add`, and then choose `NewItem`.
 
-   4. In the Add New Item wizard, select the Resource File option and name the filename as `SfImageEditor.<culture name>.resx.` For example, name it `SfImageEditor.fr-FR.resx` for the French culture.
+   3. In the Add New Item wizard, select the Resource File option and name the filename as `SfImageEditor.<culture name>.resx.` For example, name it `SfImageEditor.fr-FR.resx` for the French culture.
 
-   5. The culture name indicates the name of the language and country.
+   4. The culture name indicates the name of the language and country.
 
    ![shows-the-name-of-resource-file-to-be-added-for-maui-ImageEditor](images/localization/shows-the-name-of-resource-file-to-be-added-for-maui-ImageEditor.png)
 
-   6. Now, select the `Add` option to add the resource file in the **Resources** folder.
+   5. Now, select the `Add` option to add the resource file in the **Resources** folder.
 
    ![shows-the-added-resource-file-for-french-language-in-maui-ImageEditor](images/localization/shows-the-added-resource-file-for-french-language-in-maui-ImageEditor.png)
 
-   7. Add the Name/Value pair in the Resource Designer of the `SfImageEditor.fr-FR.resx` file and change its corresponding value to the corresponding culture.
+   6. Add the Name/Value pair in the Resource Designer of the `SfImageEditor.fr-FR.resx` file and change its corresponding value to the corresponding culture.
 
    ![shows-the-added-resource-file-name-value-pair-in-the-resource-designer-in-maui-ImageEditor](images/localization/shows-the-added-resource-file-name-value-pair-in-the-resource-designer-in-maui-ImageEditor.png)

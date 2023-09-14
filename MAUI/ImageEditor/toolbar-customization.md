@@ -306,7 +306,7 @@ cropItem.SubToolbars = new List<ImageEditorToolbar>()
 
 {% endtabs %}
 
-### Add an Toolabr Item with the Existing Toolbar
+### Add an Toolbar Item with the Existing Toolbar
 
 Explicitly add the `ImageEditorToolbarItem` to the `ImageEditorToolbar` manually.
 
