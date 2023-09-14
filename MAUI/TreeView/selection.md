@@ -29,7 +29,7 @@ treeView.SelectionMode = SelectionMode.Multiple;
 {% endhighlight %}
 {% endtabs %}
 
-![.NET MAUI TreeView with Selection](Images/selection/MultipleSelection.png)
+![.NET MAUI TreeView with Selection](Images/selection/maui-treeView-multipleselection.png)
 
 ## Programmatic Selection
 
@@ -89,7 +89,7 @@ TreeView.FullRowSelect = true;
 {% endhighlight %}
 {% endtabs %}
 
-![.NET MAUI TreeView with FullRowSelect](Images/selection/FullRowSelect.png)
+![.NET MAUI TreeView with FullRowSelect](Images/selection/maui-treeView-fullrowselect.png)
 
 ## Selected item style
 
