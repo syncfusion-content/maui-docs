@@ -17,9 +17,9 @@ This section provides a quick overview for getting started with the TreeView wit
  2. The Syncfusion .NET MAUI components are available on [nuget.org](https://www.nuget.org/). To add SfTreeView to your project, open the NuGet package manager in Visual Studio, search for `Syncfusion.Maui.TreeView` and then install it.
  3. Import the control namespace `Syncfusion.Maui.TreeView` in XAML or C# code.
  4. Initialize the `SfTreeView` control.
- 
+
 {% tabs %}
-{% highlight xaml hl_lines= "4" %}
+{% highlight xaml hl_lines="5" %}
 
 <ContentPage   
     . . .
@@ -29,7 +29,7 @@ This section provides a quick overview for getting started with the TreeView wit
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# hl_lines= "6" %}
+{% highlight c# hl_lines="9" %}
 
 using Syncfusion.Maui.TreeView;
 . . .
@@ -84,19 +84,16 @@ namespace GettingStarted
 
 You can create and manage the `TreeViewNode` objects by yourself to display the data in a hierarchical view. To create a tree view, you can use a `TreeView` control and a hierarchy of `TreeViewNode` objects. You can create the node hierarchy by adding one or more root nodes to the TreeView control’s Nodes collection. Each `TreeViewNode` can then have more nodes added to its Children collection. You can nest the tree view nodes to any depth you need.
 
->**Important** 
-`ItemsSource` is an alternative mechanism to `Nodes` for putting content into the TreeView control. You cannot set both `ItemsSource` and `Nodes` at the same time. When you use `ItemsSource`, nodes created for you internally, but you cannot access them from `Nodes` property.
+I> `ItemsSource` is an alternative mechanism to `Nodes` for adding content into the TreeView control. You cannot set both `ItemsSource` and `Nodes` at the same time. When you use `ItemsSource`, nodes are created internally, but you cannot access them from the `Nodes` property.
 
 {% tabs %}
 {% highlight xaml %}
 
-<ContentPage   
-    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:syncfusion="clr-namespace:Syncfusion.Maui.TreeView;assembly=Syncfusion.Maui.TreeView"
              xmlns:treeviewengine="clr-namespace:Syncfusion.TreeView.Engine;assembly=Syncfusion.Maui.TreeView"
              x:Class="GettingStarted.MainPage">
-             <ContentPage.Content>
     <ContentPage.Content>
        <syncfusion:SfTreeView x:Name="treeView">
             <syncfusion:SfTreeView.Nodes>
@@ -168,7 +165,7 @@ namespace GettingStarted
 
 Download the entire source code from GitHub [here](https://github.com/SyncfusionExamples/populate-the-nodes-in-unbound-mode-in-.net-maui-treeview).
 
-![Adding nodes manually in .NET MAUI TreeView](Images/getting-started/maui-treeView-unboundMode.png)
+![.NET MAUI TreeView getting started UnBoundMode](Images/getting-started/maui-treeView-unboundMode.png)
 
 ## Creating data model for the tree view
 
@@ -203,7 +200,7 @@ public class FileManager : INotifyPropertyChanged
          RaisedOnPropertyChanged("ItemName");
       }
    }
-   
+ 
    public ImageSource ImageIcon
    {
        get { return imageIcon; }
@@ -224,7 +221,7 @@ public class FileManager : INotifyPropertyChanged
       }
    }
 }
- 
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -336,8 +333,7 @@ public class FileManagerViewModel
 
 You can create a tree view by binding the `ItemsSource` to a hierarchical data source. To create a tree view using data binding, set a hierarchical collection to the `ItemsSource` property. Then in the `ItemTemplate` and `ExpanderTemplate`, set the child items collection to the `ItemsSource` property.
 
->**Important** 
-`ItemsSource` is an alternative mechanism to Nodes for putting content into the TreeView control. You cannot set both `ItemsSource` and `Nodes` at the same time. When you use `ItemsSource`, nodes created for you internally, but you cannot access them from the `Nodes` property.
+I> ItemsSource is an alternative mechanism to Nodes for adding content into the TreeView control. You cannot set both ItemsSource and Nodes at the same time. When you use ItemsSource, nodes are created internally, but you cannot access them from the Nodes property.
 
 {% tabs %}
 {% highlight xaml hl_lines="11" %}
@@ -346,7 +342,7 @@ You can create a tree view by binding the `ItemsSource` to a hierarchical data s
              xmlns:syncfusion="clr-namespace:Syncfusion.Maui.TreeView;assembly=Syncfusion.Maui.TreeView"
              xmlns:local="clr-namespace:GettingStarted;assembly=GettingStarted"
              x:Class="GettingStarted.MainPage">
-             
+
   <ContentPage.BindingContext>
     <local:FileManagerViewModel x:Name="viewModel" />
   </ContentPage.BindingContext>
@@ -355,7 +351,7 @@ You can create a tree view by binding the `ItemsSource` to a hierarchical data s
                    ChildPropertyName="SubFiles"/>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# hl_lines="8" %}
+{% highlight c# hl_lines="12" %}
 using Syncfusion.Maui.TreeView;
 
 namespace GettingStarted;
@@ -370,18 +366,18 @@ public partial class MainPage : ContentPage
         treeView.ItemsSource = viewModel.ImageNodeInfo; 
         treeView.ChildPropertyName = "SubFiles";
         this.Content = treeView;
-    }    
+    }
 }
 
 {% endhighlight %}
 {% endtabs %}
 
 ## Creating hierarchical Data Model for tree view
- 
+
 Create an hierarchical data model to bind it to the control.
 
 Create a simple hierarchical data source as shown in the following code example in a new class file, and save it as `FileManager.cs` file. 
- 
+
 {% tabs %}
 {% highlight c# tabtitle="FileManager.cs" %}
 public class Folder : INotifyPropertyChanged
@@ -525,7 +521,7 @@ public class SubFile : INotifyPropertyChanged
         }
     }
 }
- 
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -559,7 +555,7 @@ public class FileManagerViewModel
         var sanitation = new File() { ItemName = "Sanitation.docx", ImageIcon = "word.png"};
         var socialNetwork = new File() { ItemName = "Social Network.pdf", ImageIcon ="pdfimage.png" };
         var youthEmpower = new File() { ItemName = "Youth Empowerment.pdf", ImageIcon = "pdfimage.png" };
-   
+
         var tutorials = new File() { ItemName = "Tutorials.zip", ImageIcon = "zip.png" };
         var typeScript = new File() { ItemName = "TypeScript.7z", ImageIcon ="zip.png" };
         var uiGuide = new File() { ItemName = "UI-Guide.pdf", ImageIcon = "pdfimage.png"};
@@ -633,18 +629,17 @@ public class FileManagerViewModel
 
 You can create a tree view by binding the `ItemsSource` to the hierarchy property descriptors data source. To create a tree view using hierarchical data binding, set a hierarchical collection to the `ItemsSource` property, and then set the `TargetType` and `ChildPropertyName` property values in `HirearchyPropertyDescriptors` .
 
->**Important** 
-`ItemsSource` is an alternative mechanism to `Nodes` for adding content into the TreeView control. You cannot set both `ItemsSource` and `Nodes` at the same time. When you use `ItemsSource`, nodes are created internally, but you cannot access them from the `Nodes` property.
+I> `ItemsSource` is an alternative mechanism to `Nodes` for adding content into the TreeView control. You cannot set both `ItemsSource` and `Nodes` at the same time. When you use `ItemsSource`, nodes are created internally, but you cannot access them from the `Nodes` property.
 
 {% tabs %}
-{% highlight xaml hl_lines="13" %}
+{% highlight xaml hl_lines="14" %}
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:syncfusion="clr-namespace:Syncfusion.Maui.TreeView;assembly=Syncfusion.Maui.TreeView"
              xmlns:treeviewengine="clr-namespace:Syncfusion.TreeView.Engine;assembly=Syncfusion.Maui.TreeView"
              xmlns:local="clr-namespace:GettingStarted;assembly=GettingStarted"
              x:Class="GettingStarted.MainPage">
-             
+
   <ContentPage.BindingContext>
     <local:FileManagerViewModel x:Name="viewModel" />
   </ContentPage.BindingContext>
@@ -655,10 +650,10 @@ You can create a tree view by binding the `ItemsSource` to the hierarchy propert
             <treeviewengine:HierarchyPropertyDescriptor TargetType="{x:Type local:File}" ChildPropertyName="SubFiles"/>
         </syncfusion:SfTreeView.HierarchyPropertyDescriptors>
     </syncfusion:SfTreeView>
-                  
+
 </ContentPage>
 {% endhighlight %}
-{% highlight c# hl_lines="12" %}
+{% highlight c# hl_lines="14" %}
 
 using Syncfusion.Maui.TreeView;
 using Syncfusion.TreeView.Engine;
@@ -693,13 +688,13 @@ N> By default, the binding context for each tree view item will be the data mode
 The following code example demonstrates how to customize your content view using the `ItemTemplate` and `ExpanderTemplate` property in both XAML and C#.
 
 {% tabs %}
-{% highlight xaml hl_lines="12 34" %}
+{% highlight xaml hl_lines="13 35" %}
 <ContentPage  xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:syncfusion="clr-namespace:Syncfusion.Maui.TreeView;assembly=Syncfusion.Maui.TreeView"
              xmlns:local="clr-namespace:GettingStarted.ViewModel"
              x:Class="GettingStarted.MainPage">
- <ContentPage.BindingContext>
+    <ContentPage.BindingContext>
        <local:FileManagerViewModel x:Name="viewModel"></local:FileManagerViewModel>
     </ContentPage.BindingContext>
     <ContentPage.Content>
@@ -740,7 +735,7 @@ The following code example demonstrates how to customize your content view using
     </ContentPage.Content>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# hl_lines="7 20" %}
+{% highlight c# hl_lines="12 26" %}
 using Syncfusion.Maui.TreeView;
 
 namespace GettingStarted
@@ -782,12 +777,12 @@ namespace GettingStarted
     }
 }
 
-{% endhighlight%}
+{% endhighlight %}
 {% endtabs %}
 
 Download the entire source code from GitHub [here](https://github.com/SyncfusionExamples/data-binding-in-.net-maui-treeview).
 
-![Data binding in .NET MAUI TreeView](Images/getting-started/maui-treeView-boundMode.png)
+![.NET MAUI TreeView getting started BoundMode](Images/getting-started/maui-treeView-boundMode.png)
 
 ## Interacting with a tree view
 
@@ -798,7 +793,7 @@ You can define how the nodes to be expanded while loading the TreeView by using 
 N> the `AutoExpandMode` property is only applicable for bound mode. For Unbound mode you need to set `IsExpanded` property to `true` while creating the nodes, to be in expanded state while loading the TreeView.
 
 {% tabs %}
-{% highlight xaml hl_lines= "8 9" %}
+{% highlight xaml hl_lines="8 9" %}
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
@@ -810,7 +805,7 @@ N> the `AutoExpandMode` property is only applicable for bound mode. For Unbound 
                          ExpandActionTarget="Node"/>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# hl_line= "12 13" %}
+{% highlight c# hl_lines="12 13" %}
 using Syncfusion.Maui.TreeView;
 using Syncfusion.TreeView.Engine;
 
@@ -845,15 +840,15 @@ The selection operations can be handled with the help of `SelectionChanging` and
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:syncfusion="clr-namespace:Syncfusion.Maui.TreeView;assembly=Syncfusion.Maui.TreeView"
              xmlns:local="clr-namespace:GettingStarted.ViewModel"
-             x:Class="GettingStarted.MainPage">             
-             
+             x:Class="GettingStarted.MainPage">
+
  <syncfusion:SfTreeView x:Name="treeView" 
                         SelectionMode="Single"
                         SelectionBackground="#EADDFF"
                         SelectionForeground="#1C1B1F"/>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# hl_lines=" 12 13 14" %}
+{% highlight c# hl_lines="11 12 13" %}
 using Syncfusion.Maui.TreeView;
 
 namespace GettingStarted
@@ -889,6 +884,6 @@ You can refresh the view by using the `RefreshView` method. It will be used to r
 
 {% tabs %}
 {% highlight c# %}
- treeView.RefreshView();
+treeView.RefreshView();
 {% endhighlight %}
 {% endtabs %}

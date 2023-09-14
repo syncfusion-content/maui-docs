@@ -675,6 +675,12 @@ public class DataModel
 <td>{{'[ShowTrailingView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html#Syncfusion_Maui_DataForm_DataFormItem_ShowTrailingView)'| markdownify }}</td>
 <td>Gets or sets a value that indicates whether to display the trailing view.</td>
 </tr>
+
+<tr>
+<td>{{'[Height](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.DataForm.DataFormItem.html#Syncfusion_XForms_DataForm_DataFormItem_Height)'| markdownify }}</td>
+<td>EditorHeight</td>
+<td>Gets or sets the height of the editor.</td>
+</tr>
 </table>
 
 #### DataFormDefaultLayoutSettings
@@ -1276,6 +1282,12 @@ The common properties of `Xamarin SfDataForm` list items ( [ DataFormPickerEdito
 <td>{{'[MaskedEditorClearButtonVisibility](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.MaskedEditorClearButtonVisibility.html)'| markdownify }}</td>
 <td>Defines the constants for ClearButtonVisibility that specifies when to show clear button.</td>
 </tr>
+
+<tr>
+<td>{{'[SpinButtonAlignment ](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfNumericUpDown.XForms.SpinButtonAlignment.html)'| markdownify }}</td>
+<td>NumericEditorUpDownPlacementMode</td>
+<td>Defines the constants for ClearButtonVisibility that specifies when to show clear button.</td>
+</tr>
 </table>
 
 ## Events
@@ -1341,7 +1353,6 @@ The common properties of `Xamarin SfDataForm` list items ( [ DataFormPickerEdito
 ## Upcoming Features
 
 * Support for group header view customization.
-* Support for DataFormViewItem's auto height.
 * Support for programmatic scrolling to a specific editor.
 * Support for dataform theming.
 

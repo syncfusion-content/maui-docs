@@ -217,7 +217,7 @@ public MainPage()
 The `SfPopup` allows you to customize the opening and closing animation duration of Popup view by using the `AnimationDuration` property. By default, the animation duration is set to `300 milliseconds`. 
 
 {% tabs %}
-{% highlight xaml}
+{% highlight xaml %}
 
 <sfPopup:SfPopup x:Name="popup"
                  AnimationDuration="150" />
