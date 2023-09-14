@@ -25,14 +25,14 @@ public partial class MainPage : ContentPage
     {
         InitializeComponent();
         SfSegmentedControl segmentedControl = new SfSegmentedControl();
-        List<SfSegmentItem> itemsCollection = new List<SfSegmentItem>
+        List<SfSegmentItem> segmentItems = new List<SfSegmentItem>
             {
                 new SfSegmentItem() {Text="Day", IsEnabled = false},
                 new SfSegmentItem() {Text="Week", IsEnabled = false},
                 new SfSegmentItem() {Text="Month", IsEnabled = false},
                 new SfSegmentItem() {Text="Year", IsEnabled = false},
             };
-        segmentedControl.ItemsSource = itemsCollection;
+        segmentedControl.ItemsSource = segmentItems;
         this.Content = segmentedControl;
     }
 }
@@ -54,7 +54,7 @@ Set the enabled state of a specific segment at the specified index using the `Se
     </ContentPage.BindingContext>
 
     <buttons:SfSegmentedControl x:Name="segmentedControl"
-                                ItemsSource="{Binding ItemsCollection}">
+                                ItemsSource="{Binding SegmentItems}">
     </buttons:SfSegmentedControl>
 </ContentPage>
 
@@ -71,7 +71,7 @@ public partial class MainPage : ContentPage
         InitializeComponent();
         ViewModel viewModel = new ViewModel();
         SfSegmentedControl segmentedControl = new SfSegmentedControl();
-        segmentedControl.ItemsSource = viewModel.ItemsCollection;
+        segmentedControl.ItemsSource = viewModel.SegmentItems;
         this.segmentedControl.SetSegmentEnabled(1, true);
         this.Content = segmentedControl;
     }
@@ -82,11 +82,11 @@ public partial class MainPage : ContentPage
 
 public class ViewModel
 {
-    private List<SfSegmentItem> itemsCollection;
+    private List<SfSegmentItem> segmentItems;
 
     public ViewModel()
     {
-        itemsCollection = new List<SfSegmentItem>()
+        segmentItems = new List<SfSegmentItem>()
         {
                 new SfSegmentItem() {Text="Day"},
                 new SfSegmentItem() {Text="Week", IsEnabled = false},
@@ -95,10 +95,10 @@ public class ViewModel
         };
     }
 
-    public List<SfSegmentItem> ItemsCollection
+    public List<SfSegmentItem> SegmentItems
     {
-        get { return itemsCollection; }
-        set { itemsCollection = value; }
+        get { return segmentItems; }
+        set { segmentItems = value; }
     }
 }
 
