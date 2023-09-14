@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Visual Customization in .NET MAUI Radio Button control | Syncfusion
+title: Visual Customization in .NET MAUI Radio Button Control | Syncfusion
 description: Learn here all about Visual Customization support in Syncfusion .NET MAUI Radio Button (SfRadioButton) control and more.
 platform: .NET MAUI
 control: SfRadioButton
@@ -11,7 +11,7 @@ documentation: ug
 
 ## Customizing a state color
 
-The default state colors can be customized using the [`CheckedColor`] and [`UncheckedColor`] properties. The checked state color is updated to the [`CheckedColor`] property value when the state is changed to the checked. The unchecked state color is updated to the [`UncheckedColor`] property value when the state is changed to unchecked.
+The default state colors can be customized using the CheckedColor and UncheckedColor properties. The checked state color is updated to the value of the CheckedColor property when the state changes to check. The unchecked state color is updated to the value of the UncheckedColor property when the state changes to unchecked.
 
 {% tabs %}
 {% highlight xaml %}
@@ -39,7 +39,7 @@ The default state colors can be customized using the [`CheckedColor`] and [`Unch
 {% endhighlight %}
 {% endtabs %}
 
-![CheckedColor and UncheckedColor in Radio Button](Images/VisualCustomization/radiostatecolor.png)
+![CheckedColor and UncheckedColor in Radio Button](Images/VisualCustomization/statecolor.png)
 
 ## StrokeThickness
 
@@ -49,8 +49,8 @@ The stroke thickness of the circle in the Radio Button control can be customized
 {% highlight xaml %}
 
 	<syncfusion:SfRadioGroup>
-		<syncfusion:SfRadioButton Text="Checked State" IsChecked="True" StrokeThickness="3"/>
-		<syncfusion:SfRadioButton Text="UnChecked State" StrokeThickness="3"/>
+		<syncfusion:SfRadioButton Text="Checked state" IsChecked="True" StrokeThickness="3"/>
+		<syncfusion:SfRadioButton Text="Unchecked state" StrokeThickness="3"/>
 	</syncfusion:SfRadioGroup>
 
 {% endhighlight %}
@@ -62,7 +62,7 @@ The stroke thickness of the circle in the Radio Button control can be customized
 	check.IsChecked = true;
 	check.StrokeThickness = 3;
 	SfRadioButton uncheck = new SfRadioButton();
-	uncheck.Text = "UnChecked State";
+	uncheck.Text = "Unchecked State";
 	uncheck.StrokeThickness = 3;
 	radioGroup.Children.Add(check);
 	radioGroup.Children.Add(uncheck);
@@ -89,7 +89,7 @@ You can customize the display text appearance of the [`SfRadioButton`] control u
 {% tabs %}
 {% highlight xaml %}
 
-	<syncfusion:SfRadioButton x:Name="radioButton" Text="Radio Button" IsChecked="True" TextColor="Violet" HorizontalTextAlignment="Center" FontFamily="Arial" FontAttributes="Bold" FontSize="20"/>
+	<syncfusion:SfRadioButton x:Name="radioButton" Text="Radio Button" IsChecked="True" TextColor="Blue" HorizontalTextAlignment="Center" FontFamily="Arial" FontAttributes="Bold" FontSize="20"/>
 
 {% endhighlight %}
 {% highlight c# %}
@@ -97,7 +97,7 @@ You can customize the display text appearance of the [`SfRadioButton`] control u
 	SfRadioButton radioButton = new SfRadioButton();
 	radioButton.Text = "Radio Button";
 	radioButton.IsChecked = true;
-	radioButton.TextColor = Colors.Violet;
+	radioButton.TextColor = Colors.Blue;
 	radioButton.HorizontalTextAlignment = TextAlignment.Center;
 	radioButton.FontFamily = "Arial";
 	radioButton.FontAttributes = FontAttributes.Bold;

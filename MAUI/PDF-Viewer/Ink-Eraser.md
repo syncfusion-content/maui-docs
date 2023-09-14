@@ -7,7 +7,7 @@ control: SfPdfViewer
 documentation: ug
 ---
 
-# Ink Eraser in .NET MAUI PDF Viewer (SfPdfViewer)
+# Ink or Freehand Drawing Eraser in .NET MAUI PDF Viewer (SfPdfViewer)
 
 The [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) allows you to erase all or portions of an ink annotation, which will help correct mistakes in freehand drawings.
 

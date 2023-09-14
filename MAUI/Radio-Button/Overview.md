@@ -6,9 +6,9 @@ description: Learn here about overall key features in Essential Studio for .NET 
 control: SfRadioButton
 ---
 
-# Overview in .NET MAUI Radio Button
+# .NET MAUI Radio Button (SfRadioButton) Overview
 
-The radio button is a selection control that allows users to select one option from a set. The two states of radio button are checked and unchecked.
+The .NET MAUI Radio Button is a selection control that allows users to select one option from a set. The two states of the radio button are checked and unchecked.
 
 ##  Key features
 
