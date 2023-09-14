@@ -271,8 +271,6 @@ button.ShowIcon = True;
 
 The `ImageSize` property is used to customize the width of icon image in `SfButton`.
 
-N> Enable the `ShowIcon` property to enable the `ImageSource` property. 
-
 {% tabs %}
 {% highlight xaml %}
 
@@ -301,8 +299,6 @@ The `ImageAlignment` property is used to customize the alignment of icon image i
 * `Bottom` - Places the image at the bottom of the text.
 * `Left` - Although the flow direction has been applied, it always places the image in the left part of `SfButton`. For example, in the direction of the RTL flow, the image setting will move to the right. Use `Left` alignment to show this in the same left position.
 * `Right` - Although flow direction has been applied, the image is always located in the right part of `SfButton`. For example, in the direction of the RTL flow, the image setting will move to the left. But use `Right` alignment to show this in the same right position.
-
-N> Enable the `ShowIcon` property to enable the `ImageSource` property. 
 
 **End image alignment in `SfButton`**
 
