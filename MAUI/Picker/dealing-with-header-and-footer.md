@@ -18,23 +18,16 @@ SfPicker allows enabling or disabling the header section by setting the `SfPicke
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:sfPicker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker"
-             x:Class="Picker_29.MainPage">
-
-    <sfPicker:SfPicker x:Name="picker">
+    <sfPicker:SfPicker x:Name="Picker">
         <sfPicker:SfPicker.HeaderView>
             <sfPicker:PickerHeaderView Height="50"/>
         </sfPicker:SfPicker.HeaderView>
     </sfPicker:SfPicker>
-</ContentPage>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-    picker.HeaderView.Height= 50;
+    this.Picker.HeaderView.Height= 50;
 
 {% endhighlight %}
 {% endtabs %}
@@ -50,75 +43,48 @@ Header’s background color can be customized by setting the `SfPicker.HeaderVie
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-              xmlns:sfPicker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker"
-              x:Class="Picker_29.MainPage">
-
-      <sfPicker:SfPicker x:Name="picker">
-          <sfPicker:SfPicker.HeaderView>
-              <sfPicker:PickerHeaderView Background="Gray"/>
-          </sfPicker:SfPicker.HeaderView>
-      </sfPicker:SfPicker>
-</ContentPage>
+    <sfPicker:SfPicker x:Name="Picker">
+        <sfPicker:SfPicker.HeaderView>
+            <sfPicker:PickerHeaderView Background="Gray"/>
+        </sfPicker:SfPicker.HeaderView>
+    </sfPicker:SfPicker>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-    picker.HeaderView.Background=Brush.Gray;
+    this.Picker.HeaderView.Background=Brush.Gray;
 
 {% endhighlight %}
 {% endtabs %}
 
 ### Header text style
 
-The .NET MAUI Picker control and header text style such as text color, font size, font family, and font attributes, can be customized as shown in the following code.
+The .NET MAUI Picker control and header text style such as [TextColor], [FontSize], [FontFamily], and [FontAttributes], can be customized as shown in the following code.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-                xmlns:sfPicker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker"
-                xmlns:local ="clr-namespace:Picker_29"
-                x:Class="Picker_29.MainPage">
-
-        <sfPicker:SfPicker>
-            <sfPicker:SfPicker.HeaderView>
-                <sfPicker:PickerHeaderView>
-                    <sfPicker:PickerHeaderView.TextStyle>
-                        <sfPicker:PickerTextStyle TextColor="Gray" 
-                        FontSize="18" 
-                        FontAttributes="Italic"/>
-                    </sfPicker:PickerHeaderView.TextStyle>
-                </sfPicker:PickerHeaderView>
-            </sfPicker:SfPicker.HeaderView>
-        </sfPicker:SfPicker>
-</ContentPage>
+    <sfPicker:SfPicker x:Name="Picker">
+        <sfPicker:SfPicker.HeaderView>
+            <sfPicker:PickerHeaderView>
+                <sfPicker:PickerHeaderView.TextStyle>
+                    <sfPicker:PickerTextStyle TextColor="Gray" 
+                    FontSize="18" 
+                    FontAttributes="Italic"/>
+                </sfPicker:PickerHeaderView.TextStyle>
+            </sfPicker:PickerHeaderView>
+        </sfPicker:SfPicker.HeaderView>
+    </sfPicker:SfPicker>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-    using Syncfusion.Maui.Picker;
-    using System.Collections.ObjectModel;
-    namespace Picker_29;
-    
-    public partial class MainPage : ContentPage
+    this.Picker.HeaderView.TextStyle = new PickerTextStyle()
     {
-        public MainPage()
-        {
-            InitializeComponent();
-            SfPicker picker = new SfPicker();
-            picker.HeaderView.TextStyle = new PickerTextStyle()
-            {
-                TextColor = Colors.Gray,
-                FontSize = 18,
-                FontAttributes = FontAttributes.Italic
-            };
-        }
-    }
+        TextColor = Colors.Gray,
+        FontSize = 18,
+        FontAttributes = FontAttributes.Italic
+    };
 
 {% endhighlight %}
 {% endtabs %}
@@ -130,23 +96,16 @@ SfPicker allows enabling or disabling the footer section by setting the `SfPicke
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:sfPicker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker"
-             x:Class="Picker_29.MainPage">
-
-    <sfPicker:SfPicker x:Name="picker">
+    <sfPicker:SfPicker x:Name="Picker">
         <sfPicker:SfPicker.FooterView>
             <sfPicker:PickerFooterView Height="50"/>
         </sfPicker:SfPicker.FooterView>
     </sfPicker:SfPicker>
-</ContentPage>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-    picker.FooterView.Height= 50;
+    this.Picker.FooterView.Height= 50;
 
 {% endhighlight %}
 {% endtabs %}
@@ -162,13 +121,7 @@ Header’s background color can be customized by setting `SfPicker.HeaderView.Ba
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-            xmlns:sfPicker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker"
-            x:Class="Picker_29.MainPage">
-
-    <sfPicker:SfPicker x:Name="picker">
+    <sfPicker:SfPicker x:Name="Picker">
         <sfPicker:SfPicker.FooterView>
             <sfPicker:PickerFooterView Background="Gray"/>
         </sfPicker:SfPicker.FooterView>
@@ -178,7 +131,7 @@ Header’s background color can be customized by setting `SfPicker.HeaderView.Ba
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-    picker.FooterView.Background=Brush.Gray;
+    this.Picker.FooterView.Background=Brush.Gray;
 
 {% endhighlight %}
 {% endtabs %}
@@ -190,116 +143,73 @@ SfPicker allows enabling or disabling the `ok` button by setting `SfPicker.Foote
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-                xmlns:sfPicker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker"
-                x:Class="Picker_29.MainPage">
-
-        <sfPicker:SfPicker>
-            <sfPicker:SfPicker.FooterView>
-                <sfPicker:PickerFooterView 
-                    ShowOkButton="False" 
-                    OkButtonText="Done" 
-                    CancelButtonText="Exit"/>
-            </sfPicker:SfPicker.FooterView>
-        </sfPicker:SfPicker>
-</ContentPage>
+    <sfPicker:SfPicker x:Name="Picker">
+        <sfPicker:SfPicker.FooterView>
+            <sfPicker:PickerFooterView 
+                ShowOkButton="False" 
+                OkButtonText="Done" 
+                CancelButtonText="Exit"/>
+        </sfPicker:SfPicker.FooterView>
+    </sfPicker:SfPicker>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-    using Syncfusion.Maui.Picker;
-    namespace Picker_29;
-
-    public partial class MainPage : ContentPage
-    {
-        public MainPage()
-        {
-            InitializeComponent();
-            SfPicker picker = new SfPicker();
-            picker.FooterView.OkButtonShow = false;
-            picker.FooterView.OkButtonText= "Done";
-            picker.FooterView.CancelButtonText= "Exit";
-        }
-    }
+    this.Picker.FooterView.OkButtonShow = false;
+    this.Picker.FooterView.OkButtonText= "Done";
+    this.Picker.FooterView.CancelButtonText= "Exit";
   
 {% endhighlight %}
 {% endtabs %}
 
 ### Footer text style
 
-The .NET MAUI Picker control and footer text style, such as text color, font size, font family, and font attributes, can be customized as shown in the following code.
+The .NET MAUI Picker control and footer text style, such as [TextColor], [FontSize], [FontFamily], and [FontAttributes], can be customized as shown in the following code.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-                xmlns:sfPicker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker"
-                x:Class="Picker_29.MainPage">
-
-        <sfPicker:SfPicker>
-        <sfPicker:SfPicker.FooterView>
-          <sfPicker:PickerFooterView>
-            <sfPicker:PickerFooterView.TextStyle>
-              <sfPicker:PickerTextStyle TextColor="Gray" FontSize="18" FontAttributes="Italic"/>
-            </sfPicker:PickerFooterView.TextStyle>
-          </sfPicker:PickerFooterView>
-        </sfPicker:SfPicker.FooterView>
-        </sfPicker:SfPicker>
-</ContentPage>
+    <sfPicker:SfPicker>
+    <sfPicker:SfPicker.FooterView>
+        <sfPicker:PickerFooterView>
+        <sfPicker:PickerFooterView.TextStyle>
+            <sfPicker:PickerTextStyle TextColor="Gray" FontSize="18" FontAttributes="Italic"/>
+        </sfPicker:PickerFooterView.TextStyle>
+        </sfPicker:PickerFooterView>
+    </sfPicker:SfPicker.FooterView>
+    </sfPicker:SfPicker>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-    using Syncfusion.Maui.Picker;
-    namespace Picker_29;
-
-    public partial class MainPage : ContentPage
+    this.Picker.FooterView.TextStyle = new PickerTextStyle()
     {
-        public MainPage()
-        {
-            InitializeComponent();
-            SfPicker picker = new SfPicker();
-            picker.FooterView.TextStyle = new PickerTextStyle()
-            {
-                TextColor = Colors.Gray,
-                FontSize = 18,
-                FontAttributes = FontAttributes.Italic
-            };
-        }
+        TextColor = Colors.Gray,
+        FontSize = 18,
+        FontAttributes = FontAttributes.Italic
+        };
     }
-  
+
 {% endhighlight %}
 {% endtabs %}
 
 ## Perform validation with default validation button
 
-Picker allows validation based on the OK or Cancel button by hooking into the SfPicker.OkButtonClicked and SfPicker.CancelButtonClicked. In this event, from the SelectionChangedEvent argument, current selected items can be obtained.
+Picker allows validation based on the OK or Cancel button by hooking into the `SfPicker.OkButtonClicked` and `SfPicker.CancelButtonClicked` In this event, from the `SelectionChangedEvent` argument, current selected items can be obtained.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:sfPicker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker"
-             xmlns:local ="clr-namespace:Picker_29"
-             x:Class="Picker_29.MainPage">
-
-    <sfPicker:SfPicker x:Name="picker"
+    <sfPicker:SfPicker x:Name="Picker"
                        OkButtonClicked="SfPicker_OkButtonClicked"
                        CancelButtonClicked="SfPicker_CancelButtonClicked">
     </sfPicker:SfPicker>
-</ContentPage>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-    picker.OkButtonClicked += SfPicker_OkButtonClicked;
-    picker.CancelButtonClicked += SfPicker_CancelButtonClicked;
+    this.Picker.OkButtonClicked += SfPicker_OkButtonClicked;
+    this.Picker.CancelButtonClicked += SfPicker_CancelButtonClicked;
     private void SfPicker_OkButtonClicked(object sender, EventArgs e)
     {
       //// Perform any operation.
@@ -309,6 +219,6 @@ Picker allows validation based on the OK or Cancel button by hooking into the Sf
     {
       //// Perform any operation.
     }
-
+    
 {% endhighlight %}
 {% endtabs %}

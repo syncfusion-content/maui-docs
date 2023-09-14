@@ -30,7 +30,7 @@ The `Closed` event was raised after the picker pop-up is closed.
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-    <sfPicker:SfPicker x:Name="picker" 
+    <sfPicker:SfPicker x:Name="Picker" 
                             Opened="picker_Opened" 
                             Closed="picker_Closed"
                             Closing="picker_Closing">
@@ -39,33 +39,23 @@ The `Closed` event was raised after the picker pop-up is closed.
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-    using Syncfusion.Maui.Picker;
-    namespace Picker_29;
+    this.Picker.Opened += picker_Opened;
+    this.Picker.Closing += picker_Closing;
+    this.Picker.Closed += picker_Closed;
 
-    public partial class MainPage : ContentPage
+    private void picker_Opened(object sender, EventArgs e)
     {
-        public MainPage()
-        {
-         InitializeComponent();
-         picker.Opened += picker_Opened;
-         picker.Closing += picker_Closing;
-         picker.Closed += picker_Closed;
-        }
+        // handle the open action
+    }
 
-        private void picker_Opened(object sender, EventArgs e)
-        {
-          // handle the open action
-        }
+    private void Picker_Closing(object sender, Syncfusion.XForms.Core.CancelEventArgs e)
+    {
+        // stop the close action by setting the `e.cancel` to true.
+    }
 
-        private void Picker_Closing(object sender, Syncfusion.XForms.Core.CancelEventArgs e)
-        {
-           // stop the close action by setting the `e.cancel` to true.
-        }
-
-        private void picker_Closed(object sender, EventArgs e)
-        {
-           // hit after the picker is closed.
-        }
+    private void picker_Closed(object sender, EventArgs e)
+    {
+        // hit after the picker is closed.
     }
 
 {% endhighlight %}

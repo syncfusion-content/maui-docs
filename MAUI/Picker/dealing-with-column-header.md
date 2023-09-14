@@ -18,23 +18,16 @@ SfPicker allows enabling or disabling the column header section by setting the `
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:sfPicker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker"
-             x:Class="Picker_29.MainPage">
-
-    <sfPicker:SfPicker x:Name="picker">
+    <sfPicker:SfPicker x:Name="Picker">
         <sfPicker:SfPicker.ColumnHeaderView>
             <sfPicker:PickerColumnHeaderView Height="50"/>
         </sfPicker:SfPicker.ColumnHeaderView>
     </sfPicker:SfPicker>
-</ContentPage>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-    picker.ColumnHeaderView.Height= 50;
+    this.Picker.ColumnHeaderView.Height= 50;
 
 {% endhighlight %}
 {% endtabs %}
@@ -50,22 +43,16 @@ Column header background color can be customized by setting `SfPicker.ColumnHead
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<?xml version="1.0" encoding="utf-8" ?>
-  <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-              xmlns:sfPicker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker"
-              x:Class="Picker_29.MainPage">
+    <sfPicker:SfPicker x:Name="Picker">
+        <sfPicker:SfPicker.ColumnHeaderView>
+            <sfPicker:PickerColumnHeaderView Background="Gray"/>
+        </sfPicker:SfPicker.ColumnHeaderView>
+    </sfPicker:SfPicker>
 
-      <sfPicker:SfPicker x:Name="picker">
-          <sfPicker:SfPicker.ColumnHeaderView>
-              <sfPicker:PickerColumnHeaderView Background="Gray"/>
-          </sfPicker:SfPicker.ColumnHeaderView>
-      </sfPicker:SfPicker>
-</ContentPage>
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-    picker.ColumnHeaderView.Background=Brush.Gray;
+    this.Picker.ColumnHeaderView.Background=Brush.Gray;
 
 {% endhighlight %}
 {% endtabs %}
@@ -77,47 +64,27 @@ The .NET MAUI Picker control, Column header text style such as text color, font 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-              xmlns:sfPicker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker"
-              xmlns:local ="clr-namespace:Picker_29"
-              x:Class="Picker_29.MainPage">
-
-      <sfPicker:SfPicker>
-          <sfPicker:SfPicker.ColumnHeaderView>
-              <sfPicker:PickerColumnHeaderView>
-                  <sfPicker:PickerColumnHeaderView.TextStyle>
-                      <sfPicker:PickerTextStyle TextColor="Gray" 
-                      FontSize="18" 
-                      FontAttributes="Italic"/>
-                  </sfPicker:PickerColumnHeaderView.TextStyle>
-              </sfPicker:PickerColumnHeaderView>
-          </sfPicker:SfPicker.ColumnHeaderView>
-      </sfPicker:SfPicker>
-</ContentPage>
+    <sfPicker:SfPicker x:Name="Picker">
+      <sfPicker:SfPicker.ColumnHeaderView>
+          <sfPicker:PickerColumnHeaderView>
+              <sfPicker:PickerColumnHeaderView.TextStyle>
+                  <sfPicker:PickerTextStyle TextColor="Gray" 
+                  FontSize="18" 
+                  FontAttributes="Italic"/>
+              </sfPicker:PickerColumnHeaderView.TextStyle>
+          </sfPicker:PickerColumnHeaderView>
+      </sfPicker:SfPicker.ColumnHeaderView>
+    </sfPicker:SfPicker>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-    using Syncfusion.Maui.Picker;
-    using System.Collections.ObjectModel;
-    namespace Picker_29;
-    
-    public partial class MainPage : ContentPage
+    this.Picker.ColumnHeaderView.TextStyle = new PickerTextStyle()
     {
-        public MainPage()
-        {
-            InitializeComponent();
-            SfPicker picker = new SfPicker();
-            picker.ColumnHeaderView.TextStyle = new PickerTextStyle()
-            {
-                TextColor = Colors.Gray,
-                FontSize = 18,
-                FontAttributes = FontAttributes.Italic
-            };
-        }
-    }
+        TextColor = Colors.Gray,
+        FontSize = 18,
+        FontAttributes = FontAttributes.Italic
+    };
 
 {% endhighlight %}
 {% endtabs %}
@@ -129,24 +96,16 @@ The .NET MAUI Picker control, Separator line background customized by setting `S
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-              xmlns:sfPicker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker"
-              xmlns:local ="clr-namespace:Picker_29"
-              x:Class="Picker_29.MainPage">
-
-      <sfPicker:SfPicker x:Name="picker">
-          <sfPicker:SfPicker.ColumnHeaderView>
-              <sfPicker:PickerColumnHeaderView DividerColor="Gray"/>
-          </sfPicker:SfPicker.ColumnHeaderView>
-      </sfPicker:SfPicker>
-</ContentPage>
+    <sfPicker:SfPicker x:Name="Picker">
+        <sfPicker:SfPicker.ColumnHeaderView>
+            <sfPicker:PickerColumnHeaderView DividerColor="Gray"/>
+        </sfPicker:SfPicker.ColumnHeaderView>
+    </sfPicker:SfPicker>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-    picker.ColumnHeaderView.DividerColor= Colors.Gray;
+    this.Picker.ColumnHeaderView.DividerColor= Colors.Gray;
 
 {% endhighlight %}
 {% endtabs %}

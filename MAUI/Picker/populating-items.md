@@ -16,15 +16,8 @@ To bind the item source in the picker, set the `SfPicker.Columns.ItemSource` pro
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:sfPicker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker"
-             x:Class="PickerSample.MainPage">
-
     <sfPicker:SfPicker x:Name="Picker">
     </sfPicker:SfPicker>
-</ContentPage>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
@@ -63,15 +56,8 @@ The following code example encapsulate how to populate Country and Cityes in eac
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:sfPicker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker"
-             x:Class="PickerSample.MainPage">
-
     <sfPicker:SfPicker x:Name="Picker">
     </sfPicker:SfPicker>
-</ContentPage>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
@@ -119,7 +105,7 @@ The following code example encapsulate how to populate Country and Cityes in eac
 
 ## Set items text style customization
 
-The .NET MAUI Picker control, selected and unselected items, text color, font size, font family, and font attributes can be customized as shown in the following code.
+The .NET MAUI Picker control, selected and unselected items, [TextColor], [FontSize], [FontFamily], and [FontAttributes] can be customized as shown in the following code.
 
 ### Selected item customization
 
@@ -128,7 +114,7 @@ Selected item text style can be customized by setting `SfPicker.SelectedTextStyl
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-    <sfPicker:SfPicker>
+    <sfPicker:SfPicker x:Name="Picker">
         <sfPicker:SfPicker.SelectedTextStyle>
             <sfPicker:PickerTextStyle FontSize="16" FontAttributes="Bold" TextColor="Gray">
             </sfPicker:PickerTextStyle>
@@ -152,7 +138,7 @@ Unselected item text style can be customized by setting `SfPicker.TextStyle` pro
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-    <sfPicker:SfPicker>
+    <sfPicker:SfPicker x:Name="Picker">
         <sfPicker:SfPicker.TextStyle>
             <sfPicker:PickerTextStyle FontSize="17" FontAttributes="Italic" TextColor="Green">
             </sfPicker:PickerTextStyle>
@@ -184,14 +170,13 @@ In picker control, the items can be customized with a custom view of all items b
                     </Grid>
             </DataTemplate>
         </Grid.Resources>
-    <sfPicker:SfPicker x:Name="picker" ItemTemplate="{StaticResource customView}">
+    <sfPicker:SfPicker x:Name="Picker" ItemTemplate="{StaticResource customView}">
     </sfPicker:SfPicker>
     </Grid>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-    SfPicker picker = new SfPicker();
     DataTemplate customView = new DataTemplate(() =>
     {
         Grid grid = new Grid
@@ -212,7 +197,7 @@ In picker control, the items can be customized with a custom view of all items b
         grid.Children.Add(label);
         return grid;
     });
-    picker.ItemTemplate = customView;
+    this.Picker.ItemTemplate = customView;
 
 {% endhighlight %}
 {% endtabs %}
