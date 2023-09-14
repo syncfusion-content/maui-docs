@@ -8,8 +8,10 @@ documentation: ug
 ---
  
 # Layout in .NET MAUI Segmented control (SfSegmentedControl)
+The `SfSegmentedControl` supports changing the layout width, height and the number of visible segments displayed.
 
 ## Change the Segment Width
+Change the width of the segmented control and each segment item.
 
 ### Change the Segment Width for Segmented Control
 Use the `SegmentWidth` property of `SfSegmentedControl` to customize the segment width of the segmented control.
@@ -59,14 +61,14 @@ public partial class MainPage : ContentPage
     {
         InitializeComponent();
         SfSegmentedControl segmentedControl = new SfSegmentedControl();
-        List<SfSegmentItem> itemsCollection = new List<SfSegmentItem>
+        List<SfSegmentItem> segmentItems = new List<SfSegmentItem>
             {
                 new SfSegmentItem() {Text="Day", Width = 50},
                 new SfSegmentItem() {Text="Week", Width = 50},
                 new SfSegmentItem() {Text="Month", Width = 50},
                 new SfSegmentItem() {Text="Year", Width = 50},
             };
-        segmentedControl.ItemsSource = itemsCollection;
+        segmentedControl.ItemsSource = segmentItems;
         this.Content = segmentedControl;
     }
 }

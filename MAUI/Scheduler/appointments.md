@@ -81,10 +81,6 @@ The .NET MAUI Scheduler supports collection that implements the object interface
 <td>This property maps the property name of a business object class to the property name of RecurrenceExceptionDates in SchedulerAppointment.</td></tr>
 <tr><td>{{'[IsReadOnly](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html#Syncfusion_Maui_Scheduler_SchedulerAppointment_IsReadOnly)'| markdownify}}</td>
 <td>This property maps the property name of a business object class to the property name of IsReadOnly in SchedulerAppointment.</td></tr>
-<tr><td></td>
-<td>This property maps the property name of a business object class to the property name of IsReadOnly in SchedulerAppointment.</td></tr>
-<tr><td>{{'[TextColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.ScheduleAppointment.html#Syncfusion_SfSchedule_XForms_ScheduleAppointment_TextColor)'| markdownify}}</td>
-<td>This property maps the property name of a business object class to the property name of IsReadOnly in SchedulerAppointment.</td></tr>
 <tr><td>TextColor</td>
 <td>This property maps the property name of a business object class to the property name of TextColor in SchedulerAppointment.</td></tr>
 </table>
