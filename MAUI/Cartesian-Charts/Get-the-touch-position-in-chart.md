@@ -23,7 +23,7 @@ ChartInteractiveBehavior provides the following override methods to get the x an
         .........
 
         <chart:SfCartesianChart.InteractiveBehavior>
-                <local:ChartInteractiveExt></local:ChartInteractiveExt>
+                <local:ChartInteractiveExt/>
         </chart:SfCartesianChart.InteractiveBehavior>
 
     </chart:SfCartesianChart>
@@ -70,3 +70,5 @@ ChartInteractiveBehavior provides the following override methods to get the x an
 
 {% endtabs %}
 
+To enhance your understanding, you can explore  
+[How to Add Data Points on Interactions in .NET MAUI Chart (SfCartesianChart)?](https://support.syncfusion.com/kb/article/13602/how-to-add-data-points-on-interactions-in-net-maui-chart-sfcartesianchart)

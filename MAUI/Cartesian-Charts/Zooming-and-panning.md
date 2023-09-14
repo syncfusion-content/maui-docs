@@ -90,8 +90,9 @@ The directional Zooming feature enhances your zooming experience by allowing you
     <chart:SfCartesianChart>
         ...
         <chart:SfCartesianChart.ZoomPanBehavior>
-            <chart:ChartZoomPanBehavior EnablePinchZooming="True"
-                                        EnableDirectionalZooming="True"/>
+            <chart:ChartZoomPanBehavior 
+                    EnablePinchZooming="True"
+                    EnableDirectionalZooming="True"/>
         </chart:SfCartesianChart.ZoomPanBehavior>
         ...
     </chart:SfCartesianChart>
@@ -262,7 +263,8 @@ N> To perform selection zooming on a desktop, hold the left mouse button, double
 
     <chart:SfCartesianChart>
         <chart:SfCartesianChart.ZoomPanBehavior>
-            <chart:ChartZoomPanBehavior EnableSelectionZooming ="True"/>
+            <chart:ChartZoomPanBehavior 
+                EnableSelectionZooming ="True"/>
         </chart:SfCartesianChart.ZoomPanBehavior>
         ...
     </chart:SfCartesianChart>
@@ -325,7 +327,8 @@ The following code sample illustrates how enable to axis trackball label while s
             <chart:SfCartesianChart.XAxes>
                 <chart:NumericalAxis ShowTrackballLabel="True">
                     <chart:NumericalAxis.TrackballLabelStyle>
-                        <chart:ChartLabelStyle Background="LightBlue"   
+                        <chart:ChartLabelStyle 
+                                Background="LightBlue"   
                                 FontSize="15" 
                                 CornerRadius="5"
                                 StrokeWidth="2" 
@@ -336,7 +339,8 @@ The following code sample illustrates how enable to axis trackball label while s
             <chart:SfCartesianChart.YAxes>
                 <chart:NumericalAxis ShowTrackballLabel="True">
                     <chart:NumericalAxis.TrackballLabelStyle>
-                        <chart:ChartLabelStyle Background="LightBlue"   
+                        <chart:ChartLabelStyle 
+                                Background="LightBlue"   
                                 FontSize="15" 
                                 CornerRadius="5"
                                 StrokeWidth="2" 

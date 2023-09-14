@@ -237,12 +237,52 @@ The [Show]() method is used to activate the tooltip at the specified location.
     <chart:SfCartesianChart>
         .....
         <chart:SfCartesianChart.TooltipBehavior>
-            <chart:ChartTooltipBehavior x:Name="tooltip"></chart:ChartTooltipBehavior>
+            <chart:ChartTooltipBehavior x:Name="tooltip"/>
         </chart:SfCartesianChart.TooltipBehavior>
         .....
     </chart:SfCartesianChart>
 
     <Button Text="Show tooltip" Clicked="Button_Clicked"></Button>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+    Stacklayout layout = new Stacklayout();
+    
+    SfCartesianChart chart = new SfCartesianChart();
+    ....
+    ChartTooltipBehavior tooltipBehavior = new ChartTooltipBehavior();
+    chart.TooltipBehavior = tooltipBehavior;
+    ...
+    ColumnSeries series1 = new ColumnSeries()
+    {
+        ItemsSource = new ViewModel().Data,
+        XBindingPath = "Demand",
+        YBindingPath = "Year2010",
+        EnableTooltip = true
+    };
+
+    ColumnSeries series2 = new ColumnSeries()
+    {
+        ItemsSource = new ViewModel().Data,
+        XBindingPath = "Demand",
+        YBindingPath = "Year2011",
+        EnableTooltip = true
+    };
+
+    chart.Series.Add(series1);
+    chart.Series.Add(series2);
+    ...
+    Button button = new Button()
+    {
+        Text = "Show Tooltip",         
+    };
+    button.Clicked += Button_Clicked;
+    
+    layout.Add(chart);
+    layout.Add(button);
+    
 
 {% endhighlight %}
 
