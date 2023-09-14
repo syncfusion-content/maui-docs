@@ -16,7 +16,7 @@ Localization is the process of translating the application resources into differ
 Application culture can be changed by setting `CurrentUICulture.` in `App.xaml.cs` file.
 
 {% tabs %}
-{% highlight c# tabtitle="App.xaml.cs" hl_lines="1 2 9 13" %}
+{% highlight c# tabtitle="App.xaml.cs" %}
 
 using Syncfusion.Maui.Picker;
 using System.Globalization;
