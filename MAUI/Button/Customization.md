@@ -152,7 +152,7 @@ button.Background = Colors.DeepSkyBlue;
 
 ### Stroke
 
-The `BorderColor` property is used to customize the color of border in `SfButton`.
+The `Stroke` property is used to customize the color of border in `SfButton`.
 
 {% tabs %}
 {% highlight xaml %}
@@ -305,7 +305,7 @@ The `ImageAlignment` property is used to customize the alignment of icon image i
 {% tabs %}
 {% highlight xaml %}
 
-       <buttons:SfButton  
+<buttons:SfButton x:Name="button" 
                 Text="Shopping"
                 TextColor="Black"
                 HorizontalOptions="Center"
@@ -342,16 +342,16 @@ SfButton button = new SfButton()
 {% tabs %}
 {% highlight xaml %}
 
-      <buttons:SfButton  
-            Text="Shopping"
-            TextColor="Black"
-            HorizontalOptions="Center"
-            ImageSource="add_to_card.png"
-            ShowIcon="True" 
-            ImageSize="25"
-            Stroke="Black"
-            Background="White"
-            ImageAlignment="Start"/>
+<buttons:SfButton  x:Name="button"
+                    Text="Shopping"
+                    TextColor="Black"
+                    HorizontalOptions="Center"
+                    ImageSource="add_to_card.png"
+                    ShowIcon="True" 
+                    ImageSize="25"
+                    Stroke="Black"
+                    Background="White"
+                    ImageAlignment="Start"/>
 
 {% endhighlight %}
 
@@ -380,16 +380,16 @@ SfButton button = new SfButton()
 {% tabs %}
 {% highlight xaml %}
 
-      <buttons:SfButton  
-            Text="Shopping"
-            TextColor="Black"
-            HorizontalOptions="Center"
-            ImageSource="add_to_card.png"
-            ShowIcon="True" 
-            ImageSize="25"
-            Stroke="Black"
-            Background="White"
-            ImageAlignment="Top"/>
+<buttons:SfButton x:Name="button" 
+                Text="Shopping"
+                TextColor="Black"
+                HorizontalOptions="Center"
+                ImageSource="add_to_card.png"
+                ShowIcon="True" 
+                ImageSize="25"
+                Stroke="Black"
+                Background="White"
+                ImageAlignment="Top"/>
 
 {% endhighlight %}
 
@@ -418,16 +418,16 @@ SfButton button = new SfButton()
 {% tabs %}
 {% highlight xaml %}
 
-      <buttons:SfButton  
-            Text="Shopping"
-            TextColor="Black"
-            HorizontalOptions="Center"
-            ImageSource="add_to_card.png"
-            ShowIcon="True" 
-            ImageSize="25"
-            Stroke="Black"
-            Background="White"
-            ImageAlignment="Bottom"/>
+<buttons:SfButton x:Name="button" 
+                Text="Shopping"
+                TextColor="Black"
+                HorizontalOptions="Center"
+                ImageSource="add_to_card.png"
+                ShowIcon="True" 
+                ImageSize="25"
+                Stroke="Black"
+                Background="White"
+                ImageAlignment="Bottom"/>
 
 {% endhighlight %}
 
@@ -458,16 +458,16 @@ In RTL flow direction, image alignment with `Start` will change its direction of
 {% tabs %}
 {% highlight xaml %}
 
-      <buttons:SfButton  
-            Text="Shopping"
-            TextColor="Black"
-            HorizontalOptions="Center"
-            ImageSource="add_to_card.png"
-            ShowIcon="True" 
-            ImageSize="25"
-            Stroke="Black"
-            Background="White"
-            ImageAlignment="Left"/>
+<buttons:SfButton x:Name="button" 
+                Text="Shopping"
+                TextColor="Black"
+                HorizontalOptions="Center"
+                ImageSource="add_to_card.png"
+                ShowIcon="True" 
+                ImageSize="25"
+                Stroke="Black"
+                Background="White"
+                ImageAlignment="Left"/>
 
 {% endhighlight %}
 
@@ -498,16 +498,16 @@ In RTL flow direction, image alignment with `End` will change its direction of p
 {% tabs %}
 {% highlight xaml %}
 
-      <buttons:SfButton  
-            Text="Shopping"
-            TextColor="Black"
-            HorizontalOptions="Center"
-            ImageSource="add_to_card.png"
-            ShowIcon="True" 
-            ImageSize="25"
-            Stroke="Black"
-            Background="White"
-            ImageAlignment="Right"/>
+<buttons:SfButton x:Name="button"
+                Text="Shopping"
+                TextColor="Black"
+                HorizontalOptions="Center"
+                ImageSource="add_to_card.png"
+                ShowIcon="True" 
+                ImageSize="25"
+                Stroke="Black"
+                Background="White"
+                ImageAlignment="Right"/>
 
 {% endhighlight %}
 
@@ -612,7 +612,10 @@ N> Default value is [`null`].
     <local:CommandDemoViewModel />
  </ContentPage.BindingContext>
 
-<button:SfButton x:Name="button" Text="Button" Background="{Binding Background}" Command="{Binding ButtonCommand}">
+<button:SfButton x:Name="button" 
+                Text="Button" 
+                Background="{Binding Background}" 
+                Command="{Binding ButtonCommand}">
 </button:SfButton>
 
 {% endhighlight %}
