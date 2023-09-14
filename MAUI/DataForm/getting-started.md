@@ -222,6 +222,34 @@ Password
 </tr>
 <tr>
 <td>
+{{'[DataFormNumericItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormNumericItem.html)'| markdownify }}
+</td>
+<td>
+Generated for int, double, float type properties.
+</td>
+<td>
+Numeric
+</td>
+<td>
+{{'[SfNumericEntry](https://help.syncfusion.com/maui/numericentry/overview)'| markdownify }}
+</td>
+</tr>
+<tr>
+<td>
+{{'[DataFormMaskedTextItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormMaskedTextItem.html)'| markdownify }}
+</td>
+<td>
+Generated for string type property with [DataType(DataType.PhoneNumber)] and [DataType(DataType.CreditCard)] attribute.
+</td>
+<td>
+MaskedText
+</td>
+<td>
+{{'[SfMaskedEntry](https://help.syncfusion.com/maui/masked-entry/overview)'| markdownify }}
+</td>
+</tr>
+<tr>
+<td>
 {{'[DataFormCheckBoxItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormCheckBoxItem.html)'| markdownify }}
 </td>
 <td>

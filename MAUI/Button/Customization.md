@@ -30,7 +30,7 @@ The `TextColor` property is used to customize the color of text in `SfButton`.
 
 SfButton button = new SfButton();
 button.Text = "Button";
-button.TextColor = Color.White;
+button.TextColor = Colors.White;
 
 {% endhighlight %}
 {% endtabs %}
@@ -165,7 +165,7 @@ The `BorderColor` property is used to customize the color of border in `SfButton
 
 SfButton button = new SfButton();
 button.Text = "Button";
-button.Stroke = Color.Red;
+button.Stroke = Colors.Red;
 
 {% endhighlight %}
 {% endtabs %}
@@ -188,7 +188,7 @@ The `BorderWidth` property is used to customize the thickness of border in `SfBu
 SfButton button = new SfButton();
 button.Text = "Button";
 button.StrokeThickness = 6;
-button.Stroke = Color.Red;
+button.Stroke = Colors.Red;
 
 {% endhighlight %}
 {% endtabs %}
@@ -326,7 +326,7 @@ N> Enable the `ShowIcon` property to enable the `ImageSource` property.
 SfButton button = new SfButton()
 {
     Text = "Shopping",
-    TextColor = Color.Black,
+    TextColor = Colors.Black,
     HorizontalOptions = LayoutOptions.Center,
     ImageSource = "add_to_card.png",
     ShowIcon = true,
@@ -363,7 +363,7 @@ SfButton button = new SfButton()
 SfButton button = new SfButton()
 {
     Text = "Shopping",
-    TextColor = Color.Black,
+    TextColor = Colors.Black,
     HorizontalOptions = LayoutOptions.Center,
     ImageSource = "add_to_card.png",
     ShowIcon = true,
@@ -401,7 +401,7 @@ SfButton button = new SfButton()
 SfButton button = new SfButton()
 {
     Text = "Shopping",
-    TextColor = Color.Black,
+    TextColor = Colors.Black,
     HorizontalOptions = LayoutOptions.Center,
     ImageSource = "add_to_card.png",
     ShowIcon = true,
@@ -439,7 +439,7 @@ SfButton button = new SfButton()
 SfButton button = new SfButton()
 {
     Text = "Shopping",
-    TextColor = Color.Black,
+    TextColor = Colors.Black,
     HorizontalOptions = LayoutOptions.Center,
     ImageSource = "add_to_card.png",
     ShowIcon = true,
@@ -480,7 +480,7 @@ In RTL flow direction, image alignment with `Start` will change its direction of
 SfButton button = new SfButton()
 {
     Text = "Shopping",
-    TextColor = Color.Black,
+    TextColor = Colors.Black,
     HorizontalOptions = LayoutOptions.Center,
     ImageSource = "add_to_card.png",
     ShowIcon = true,
@@ -519,7 +519,7 @@ In RTL flow direction, image alignment with `End` will change its direction of p
 SfButton button = new SfButton()
 {
     Text = "Shopping",
-    TextColor = Color.Black,
+    TextColor = Colors.Black,
     HorizontalOptions = LayoutOptions.Center,
     ImageSource = "add_to_card.png",
     ShowIcon = true,
