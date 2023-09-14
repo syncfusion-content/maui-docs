@@ -264,7 +264,6 @@ The [Show]() method is used to activate the tooltip at the specified location.
     layout.Add(chart);
     layout.Add(button);
     
-
 {% endhighlight %}
 
 {% endtabs %}
