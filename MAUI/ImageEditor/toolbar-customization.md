@@ -7,9 +7,43 @@ control: SfImageEditor
 documentation: ug
 ---
 
-# Toolbar Customization in .NET MAUI Image Editor (SfImageEditor)
+# Toolbar in .NET MAUI Image Editor (SfImageEditor)
 
 Customize the built-in toolbar appearance, visibility, position, and orientation of each toolbar and add new toolbars.
+
+## Show or hide toolbar
+
+To show or hide the toolbar, set the [`ShowToolbar`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_ShowToolbar) property to either true or false. By default, the [`ShowToolbar`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_ShowToolbar) property is set to `true`.
+
+{% tabs %}
+{% highlight xaml %}
+
+<ContentPage 
+            . . .
+            <imageEditor:SfImageEditor Source="image.jpeg" ShowToolbar="True" />
+
+</ContentPage>
+
+{% endhighlight %}
+{% highlight C# %}
+
+using Syncfusion.Maui.ImageEditor;
+namespace SyncfusionImageEditor;
+
+public partial class MainPage : ContentPage
+{
+	public MainPage()
+	{
+        InitializeComponent();
+        SfImageEditor imageEditor = new SfImageEditor();
+        imageEditor.Source = "image.jpeg";
+        imageEditor.ShowToolbar = true;
+        this.content = imageEditor;
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Built-in Toolbar Items
 
@@ -390,8 +424,8 @@ SfImageEditor imageEditor = new SfImageEditor();
 imageEditor.Source = ImageSource.FromFile("image.png");
 
 ImageEditorToolbar headerToolbar = imageEditor.Toolbars[0];
-ImageEditorToolbarGroupItem saveGroup = (ImageEditorToolbarGroupItem)headerToolbar.ToolbarItems[1];
-ImageEditorToolbarItem saveItem = zoomGroup.Items.FirstOrDefault(i => i.Name == "Save");
+ImageEditorToolbarGroupItem saveGroup = (ImageEditorToolbarGroupItem)headerToolbar.ToolbarItems[2];
+ImageEditorToolbarItem saveItem = saveGroup.Items.FirstOrDefault(i => i.Name == "Save");
 saveItem.View = image;
 
 {% endhighlight %}

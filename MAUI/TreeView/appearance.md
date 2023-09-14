@@ -44,7 +44,7 @@ The TreeView allows you to customize the appearance of the content view and expa
     </ContentPage.Content>
 </ContentPage>
 {% endhighlight %}
-{% highlight c#  hl_lines= "15" %}
+{% highlight c#  hl_lines="15" %}
 using Syncfusion.Maui.TreeView;
 
 namespace GettingStarted
@@ -81,7 +81,7 @@ By default, the binding context of the tree view item will be the data model obj
 For Bound Mode, you can change the binding context of the treeview items using the `ItemTemplateContextType` property.
 
 {% tabs %}
-{% highlight xaml hl_lines = "12" %}
+{% highlight xaml hl_lines="12" %}
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
@@ -108,7 +108,7 @@ For Bound Mode, you can change the binding context of the treeview items using t
     </ContentPage.Content>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# hl_lines = "14" %}
+{% highlight c# hl_lines="14" %}
 using Syncfusion.Maui.TreeView;
 
 namespace GettingStarted
@@ -204,11 +204,11 @@ The following code example illustrates how to load different templates for treev
 SfTreeView treeView = new SfTreeView();
 treeView.ItemTemplate = new ItemTemplateSelector();
 {% endhighlight %}
-<% endtabs %>
+{% endtabs %}
 
 Download the entire source code from GitHub [here](https://github.com/SyncfusionExamples/data-template-selector-demo-in-.net-maui-treeview).
 
-![.NET MAUI TreeView appearance TemplateSelector](Images/appearance/maui-treeView-templateSelector.png)
+![.NET MAUI TreeView with TemplateSelector](Images/appearance/maui-treeView-templateSelector.png)
 
 Similarly, you can provide a `DataTemplateSelector` for the `ExpanderTemplate` property.
 
@@ -220,11 +220,11 @@ The TreeView allows for customization of the indent spacing of items by setting 
 {% highlight xaml %}
 <syncfusion:SfTreeView x:Name="treeView" Indentation="40">
 {% endhighlight %}
-{% highlight c# hl_lines ="2" %}
+{% highlight c# hl_lines="2" %}
 SfTreeView treeView = new SfTreeView();
 treeView.Indentation = 40;
 {% endhighlight %}
-<% endtabs %>
+{% endtabs %}
 
 ## ExpanderWidth
 
@@ -234,11 +234,11 @@ The TreeView allows customization of the width of the expander view by setting t
 {% highlight xaml %}
 <syncfusion:SfTreeView x:Name="treeView" ExpanderWidth="40">
 {% endhighlight %}
-{% highlight c# hl_lines ="2" %}
+{% highlight c# hl_lines="2" %}
 SfTreeView treeView = new SfTreeView();
 treeView.ExpanderWidth = 40;
 {% endhighlight %}
-<% endtabs %>
+{% endtabs %}
 
 ## ExpanderPosition
 
@@ -251,11 +251,11 @@ The TreeView allows you to change the position of the expander view by setting t
 {% highlight xaml %}
 <syncfusion:SfTreeView x:Name="treeView" ExpanderPosition="End">
 {% endhighlight %}
-{% highlight c# hl_lines = "2" %}
+{% highlight c# hl_lines="2" %}
 SfTreeView treeView = new SfTreeView();
 treeView.ExpanderPosition = TreeViewExpanderPosition.End;
 {% endhighlight %}
-<% endtabs %>
+{% endtabs %}
 
 ## Level based styling
 
@@ -291,10 +291,10 @@ The TreeView allows you to customize the style of the `TreeViewItem` based on di
 </ContentPage.Content>
 </ContentPage>
 {% endhighlight %}
-<% endtabs %>
+{% endtabs %}
 
 {% tabs %}
-{% highlight c# tabtitle = "Converter.cs" %}
+{% highlight c# tabtitle="Converter.cs" %}
 public class FontAttributeConverter : IValueConverter
 {
     public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
@@ -309,8 +309,8 @@ public class FontAttributeConverter : IValueConverter
     }
 }
 {% endhighlight %}
-<% endtabs %>
+{% endtabs %}
 
 Download the entire source code from GitHub [here](https://github.com/SyncfusionExamples/node-level-based-styling-in-.net.maui-treeview).
 
-![.NET MAUI TreeView appearance LevelBasedStyling](Images/appearance/maui-treeView-levelBasedStyling.png)
+![.NET MAUI TreeView with LevelBasedStyling](Images/appearance/maui-treeView-levelBasedStyling.png)

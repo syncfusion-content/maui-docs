@@ -82,6 +82,10 @@ namespace GettingStarted
 {% endhighlight %}
 {% endtabs %}
 
+## Date Time Picker header
+
+The [SfDateTimePicker] control provides the default header which shows the current selected date and selected time.
+
 ## Set footer to the Date Time Picker
 
 In the SfDateTimePicker control, validation buttons (OK and Cancel) can be customized by setting the [OkButtonText] and [CancelButtonText] properties in the [PickerFooterView]. It allows you to confirm or cancel the selected date and time. The `OkButtonText` can be enabled using the [ShowOkButton] property in the [PickerFooterView].

@@ -30,7 +30,7 @@ The `TextColor` property is used to customize the color of text in `SfButton`.
 
 SfButton button = new SfButton();
 button.Text = "Button";
-button.TextColor = Color.White;
+button.TextColor = Colors.White;
 
 {% endhighlight %}
 {% endtabs %}
@@ -165,7 +165,7 @@ The `BorderColor` property is used to customize the color of border in `SfButton
 
 SfButton button = new SfButton();
 button.Text = "Button";
-button.Stroke = Color.Red;
+button.Stroke = Colors.Red;
 
 {% endhighlight %}
 {% endtabs %}
@@ -188,7 +188,7 @@ The `BorderWidth` property is used to customize the thickness of border in `SfBu
 SfButton button = new SfButton();
 button.Text = "Button";
 button.StrokeThickness = 6;
-button.Stroke = Color.Red;
+button.Stroke = Colors.Red;
 
 {% endhighlight %}
 {% endtabs %}
@@ -326,7 +326,7 @@ N> Enable the `ShowIcon` property to enable the `ImageSource` property.
 SfButton button = new SfButton()
 {
     Text = "Shopping",
-    TextColor = Color.Black,
+    TextColor = Colors.Black,
     HorizontalOptions = LayoutOptions.Center,
     ImageSource = "add_to_card.png",
     ShowIcon = true,
@@ -363,7 +363,7 @@ SfButton button = new SfButton()
 SfButton button = new SfButton()
 {
     Text = "Shopping",
-    TextColor = Color.Black,
+    TextColor = Colors.Black,
     HorizontalOptions = LayoutOptions.Center,
     ImageSource = "add_to_card.png",
     ShowIcon = true,
@@ -401,7 +401,7 @@ SfButton button = new SfButton()
 SfButton button = new SfButton()
 {
     Text = "Shopping",
-    TextColor = Color.Black,
+    TextColor = Colors.Black,
     HorizontalOptions = LayoutOptions.Center,
     ImageSource = "add_to_card.png",
     ShowIcon = true,
@@ -439,7 +439,7 @@ SfButton button = new SfButton()
 SfButton button = new SfButton()
 {
     Text = "Shopping",
-    TextColor = Color.Black,
+    TextColor = Colors.Black,
     HorizontalOptions = LayoutOptions.Center,
     ImageSource = "add_to_card.png",
     ShowIcon = true,
@@ -480,7 +480,7 @@ In RTL flow direction, image alignment with `Start` will change its direction of
 SfButton button = new SfButton()
 {
     Text = "Shopping",
-    TextColor = Color.Black,
+    TextColor = Colors.Black,
     HorizontalOptions = LayoutOptions.Center,
     ImageSource = "add_to_card.png",
     ShowIcon = true,
@@ -519,7 +519,7 @@ In RTL flow direction, image alignment with `End` will change its direction of p
 SfButton button = new SfButton()
 {
     Text = "Shopping",
-    TextColor = Color.Black,
+    TextColor = Colors.Black,
     HorizontalOptions = LayoutOptions.Center,
     ImageSource = "add_to_card.png",
     ShowIcon = true,
@@ -542,8 +542,6 @@ You can set the gradient as background of SfButton using the `Background` proper
 * Linear gradient
 * Radial gradient
 
-N> UWP platform does not support radial gradient.
-
 Refer to this `documentation` to learn more details about gradient.
 
 {% tabs %}
@@ -553,55 +551,52 @@ Refer to this `documentation` to learn more details about gradient.
 
 <button:SfButton Text="Linear Gradient" CornerRadius="20">
     <button:SfButton.Background>
-        <gradient:LinearGradientBrush>
-            <gradient:LinearGradientBrush.GradientStops>
-                <gradient:GradientStop Color="#2F9BDF" Offset="0"/>
-                <gradient:GradientStop Color="#51F1F2" Offset="1"/>
-            </gradient:SfLinearGradientBrush.GradientStops>
-        </gradient:LinearGradientBrush>
+        <LinearGradientBrush>
+            <LinearGradientBrush.GradientStops>
+                <GradientStop Color="#0D62D4" Offset="0"/>
+                <GradientStop Color="#9F3CDC" Offset="1"/>
+            </LinearGradientBrush.GradientStops>
+        </LinearGradientBrush>
     </button:SfButton.Background>
 </button:SfButton>
 
 <button:SfButton Text="Radial Gradient" CornerRadius="20">
     <button:SfButton.Background>
-        <gradient:RadialGradientBrush Radius="1.5">
-            <gradient:RadialGradientBrush.GradientStops>
-                <gradient:GradientStop Color="#FFB57B" Offset="0"/>
-                <gradient:GradientStop Color="#FF5361" Offset="1"/>
-            </gradient:RadialGradientBrush.GradientStops>
-        </gradient:RadialGradientBrush>
+        <RadialGradientBrush Radius="1.5">
+            <RadialGradientBrush.GradientStops>
+                <GradientStop Color="#0D62D4" Offset="0"/>
+                <GradientStop Color="#9F3CDC" Offset="1"/>
+            </RadialGradientBrush.GradientStops>
+        </RadialGradientBrush>
     </button:SfButton.Background>
 </button:SfButton>
 
 {% endhighlight %}
 {% highlight c# %}
 
-using Syncfusion.XForms.Graphics;
-
 . . .
 
 SfButton linearButton = new SfButton();
 linearButton.Text = "Linear Gradient";
 linearButton.CornerRadius = 20;
-SfLinearGradientBrush linearGradientBrush = new SfLinearGradientBrush();
+LinearGradientBrush linearGradientBrush = new LinearGradientBrush();
 linearGradientBrush.GradientStops = new GradientStopCollection()
 {
-    new SfGradientStop(){ Color = Color.FromHex("#2F9BDF"), Offset = 0 },
-    new SfGradientStop(){ Color = Color.FromHex("#51F1F2"), Offset = 1 }
-};     
-linearButton.BackgroundGradient = linearGradientBrush;
+    new GradientStop(){ Color = Color.FromHex("#0D62D4"), Offset = 0 },
+    new GradientStop(){ Color = Color.FromHex("#9F3CDC"), Offset = 1 }
+};
+linearButton.Background = linearGradientBrush;
 
 SfButton radialButton = new SfButton();
 radialButton.Text = "Radial Gradient";
 radialButton.CornerRadius = 20;
-SfRadialGradientBrush radialGradientBrush = new SfRadialGradientBrush();
-radialGradientBrush.Radius = 1.5;
+RadialGradientBrush radialGradientBrush = new RadialGradientBrush();
 radialGradientBrush.GradientStops = new GradientStopCollection()
 {
-    new SfGradientStop(){ Color = Color.FromHex("#FFB57B"), Offset = 0 },
-    new SfGradientStop(){ Color = Color.FromHex("#FF5361"), Offset = 1 }
+    new GradientStop(){ Color = Color.FromHex("#0D62D4"), Offset = 0 },
+    new GradientStop(){ Color = Color.FromHex("#9F3CDC"), Offset = 1 }
 };
-radialButton.BackgroundGradient = radialGradientBrush;
+radialButton.Background = radialGradientBrush;
 
 {% endhighlight %}
 {% endtabs %}
