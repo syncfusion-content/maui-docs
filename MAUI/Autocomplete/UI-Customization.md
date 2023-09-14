@@ -681,7 +681,7 @@ The `DropDownClosed` event occurs when the SfAutocomplete drop-down is closed.
     
     <autocomplete:SfAutocomplete HeightRequest="40"
                                  x:Name="autoComplete"
-                                 DataSource="{Binding EmployeeCollection}"
+                                 ItemSource="{Binding Employees}"
                                  DropDownClosed="SfAutocomplete_DropDownClosed"/>
 {% endhighlight %}
 {% highlight c# %}

@@ -709,7 +709,7 @@ The `DropDownClosed` event occurs when the SfComboBox drop-down is closed.
     
     <comboBox:SfComboBox HeightRequest="40"
                          x:Name="comboBox"
-                         DataSource="{Binding EmployeeCollection}"
+                         ItemSource="{Binding Employees}"
                          DropDownClosed="SfComboBox_DropDownClosed"/>
 {% endhighlight %}
 {% highlight c# %}
