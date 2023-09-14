@@ -128,7 +128,7 @@ button.VerticalTextAlignment = TextAlignment.Center;
 
 The background of the button can be customized by its background color, border color, border width and corner radius.
 
-### BackgroundColor
+### Background Color
 
 The `Background` property is used to customize the background color of `SfButton`.
 
@@ -147,6 +147,8 @@ button.Background = Colors.DeepSkyBlue;
 
 {% endhighlight %}
 {% endtabs %}
+
+N> When defining the background colors of the SfButton control, always use the `Background` property instead of the `BackgroundColor` property.
 
 ![SfButton with background color](images/customization-images/Button_backgroundcolor.png)
 
