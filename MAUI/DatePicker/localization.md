@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Localization in .NET MAUI Date Picker Control | Syncfusion
-description: Learn about localization support in Syncfusion .NET MAUI Date Picker (SfDatePicker) control and its basic features.
+description: Learn about localization support in Syncfusion .NET MAUI Date Picker (SfDatePicker) control.
 platform: maui
 control: SfDatePicker
 documentation: ug
@@ -19,8 +19,10 @@ Application culture can be changed by setting `CurrentUICulture.` in `App.xaml.c
 {% highlight c# tabtitle="App.xaml.cs" hl_lines="1 2 9 13" %}
 
 using Syncfusion.Maui.Picker;
+using System.Globalization;
 using System.Resources;
 
+namespace MauiDatePickerDemo;
 public partial class App : Application
 {
 	public App()
