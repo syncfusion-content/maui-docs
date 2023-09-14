@@ -73,7 +73,7 @@ Programmatically expand and collapse all the `TreeViewNode` at runtime using the
 {% tabs %}
 {% highlight c# %}
 
-//Expands all the nodes
+//Expands all the nodes.
 treeView.ExpandAll();
 
 //Collapses all the nodes.
