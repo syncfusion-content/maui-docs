@@ -25,7 +25,7 @@ The TreeView allows selecting the items either programmatically or touch interac
 <syncfusion:SfTreeView x:Name="treeView" SelectionMode="Multiple"/>
 {% endhighlight %}
 {% highlight c# %}
-treeView.SelectionMode = SelectionMode.Multiple;
+treeView.SelectionMode = TreeViewSelectionMode.Multiple;
 {% endhighlight %}
 {% endtabs %}
 

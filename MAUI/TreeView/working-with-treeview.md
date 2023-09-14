@@ -125,7 +125,7 @@ private void Treeviewnode_PropertyChanged(object sender, PropertyChangedEventArg
 
 ## Refresh layout
 
-You can refresh the TreeViewNode from the root node and update all layout by using the `SetDirty` method that notifies the tree view layout mechanism to invalidate nodes.
+You can refresh the `TreeViewNode` from the root node and update all layout by using the `SetDirty` method that notifies the tree view layout mechanism to invalidate nodes.
 
 {% tabs %}
 {% highlight c# %}
