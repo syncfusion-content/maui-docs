@@ -146,7 +146,7 @@ public partial class MainPage : ContentPage
 {% endtabs %}
 
 ## Customize the Text Style
-You can customize the text style of segmented control and each segment item.
+You can customize the text style of the segmented control and each segment item.
 
 ### Customize the Text Style of Segmented Control
 Use the `TextStyle` property of `SfSegmentedControl` to customize the text style of the segmented control.
@@ -220,7 +220,7 @@ public partial class MainPage : ContentPage
 {% endtabs %}
 
 ## Customize the Segment Background
-You can customize the segmented background of segmented control and each segment item.
+You can customize the segmented background of the segmented control and each segment item.
 
 ### Customize the Segment Background of Segemented Control
 Use the `SegmentBackground` property of `SfSegmentedControl` to customize the segmented background of the segmented control.
