@@ -46,30 +46,26 @@ private void MaskedEntry_ValueChanging(object sender, MaskedEntryValueChangingEv
 
 ## ValueChanged Event
 
-The `ValueChanged` event occurs when the `Value` property is changed in the MaskedTextBox control. The `MaskedEntryValueChangedEventArgs`provides the following properties:
+The `ValueChanged` event occurs when the `Value` property is changed in the MaskedEntry control. The `MaskedEntryValueChangedEventArgs`provides the following properties:
 
 * `IsMaskCompleted`: Gets a boolean value indicating whether all the required inputs for the mask are completed.
 * `NewValue`: Gets the current value of the MaskedEntry control.
 * `OldValue`: Gets the previous value of the MaskedEntry control.
 
 {% tabs %}
-
 {% highlight C# %}
 
 private void MaskedEntry_ValueChanged(object sender, MaskedEntryValueChangedEventArgs e)
 {
     // Access the new and old values
-    string newValue = e.NewValue;
-    string oldValue = e.OldValue;
-
-    // Check if the mask input is completed
-    bool isMaskCompleted = e.IsMaskCompleted;
-
-    // Perform actions based on the value change
-    // ...
+    string maskNewValue = e.NewValue?.ToString();
+    string maskOldValue = e.OldValue?.ToString();
+    if (e.IsMaskCompleted)
+    {
+        await DisplayAlert("Message", "Mask Completed", "close");
+    }
 }
 
 {% endhighlight %}
-
 {% endtabs %}
 
