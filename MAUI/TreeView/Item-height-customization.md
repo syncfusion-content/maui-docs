@@ -59,7 +59,7 @@ The TreeView allows customization of the height of a specific item by directly s
     </ContentPage.Content>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.cs" hl_lines="14" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="14" %}
 public class MainPage : ContentPage
 {
     public MainPage()
@@ -105,7 +105,7 @@ The TreeView allows adjusting height of items based on the content measured size
     </ContentPage.Content>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.cs" hl_lines="14" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="14" %}
 public class MainPage : ContentPage
 {
     public MainPage()
