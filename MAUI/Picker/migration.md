@@ -99,27 +99,27 @@ this.Content = picker;
 <td>Represents a base used to achieve picker custom view.</td>
 </tr>
 <tr>
-<td>{{'[Nill]'| markdownify }}</td>
+<td>{{'[Nil]'| markdownify }}</td>
 <td>{{'[PickerColumn]()'| markdownify }}</td>
 <td>Represents a class which is used to customize all the properties of picker column of the SfPicker.</td>
 </tr>
 <tr>
-<td>{{'[Nill]'| markdownify }}</td>
+<td>{{'[Nil]'| markdownify }}</td>
 <td>{{'[PickerColumnHeaderView]()'| markdownify }}</td>
 <td>Represents a column header view used to achieve picker column header custom view.</td>
 </tr>
 <tr>
-<td>{{'[Nill]'| markdownify }}</td>
+<td>{{'[Nil]'| markdownify }}</td>
 <td>{{'[PickerHeaderView]()'| markdownify }}</td>
 <td>Represents a header view used to achieve picker header custom view.</td>
 </tr>
 <tr>
-<td>{{'[Nill]'| markdownify }}</td>
+<td>{{'[Nil]'| markdownify }}</td>
 <td>{{'[PickerFooterView]()'| markdownify }}</td>
 <td>Represents a footer view used to achieve picker footer custom view.</td>
 </tr>
 <tr>
-<td>{{'[Nill]'| markdownify }}</td>
+<td>{{'[Nil]'| markdownify }}</td>
 <td>{{'[PickerSelectionView]()'| markdownify }}</td>
 <td>Represents a selection view used to achieve picker selection custom view.</td>
 </tr>
@@ -162,6 +162,7 @@ using Syncfusion.SfPicker.XForms;
 
 SfPicker picker = new SfPicker();
 this.Content = picker;
+
 {% endhighlight %}
 
 {% endtabs %}
@@ -224,27 +225,29 @@ this.Content = picker;
 <tr>
 <td>{{'[IsOpen](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_IsOpenProperty)'| markdownify }}</td>
 <td>{{'[IsOpen]()'| markdownify }}</td>
-<td> Gets or sets a value indicating whether the picker is open or not.</td>
+<td>Gets or sets a value indicating whether the picker is open or not.</td>
 </tr>
 <tr>
 <td>{{'[ItemHeight](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_ItemHeightProperty)'| markdownify }}</td>
-<td>{{'[ItemHeight]() of [PickerBase]())]'| markdownify }}</td>
+<td>{{'[ItemHeight]() of [PickerBase]()'| markdownify }}</td>
 <td>Gets or sets the value to specify the height of picker view on Picker.</td>
 </tr>
 <tr>
-<tr>
-<td>{{'[Nill]'| markdownify }}</td>
+<td>Nil</td>
 <td>{{'[SelectionView]()'| markdownify }}</td>
 <td>Gets or sets the value of selection view. This property can be used to customize the of selection in Picker.</td>
 </tr>
+<tr>
 <td>Nil</td>
 <td>{{'[SelectedTextStyle]()'| markdownify }}</td>
 <td>Gets or sets the picker selected text style in Picker.</td>
 </tr>
+<tr>
 <td>Nil</td>
 <td>{{'[TextStyle]()'| markdownify }}</td>
 <td>Gets or sets the picker item text style in Picker.</td>
 </tr>
+<tr>
 <td>{{'[PickerMode](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPicker.XForms.SfPicker.html#Syncfusion_SfPicker_XForms_SfPicker_PickerMode)'| markdownify }}</td>
 <td>{{'[Mode]()'| markdownify }}</td>
 <td>Gets or sets the mode of the picker.</td>
@@ -263,6 +266,7 @@ this.Content = picker;
 <td>Nil</td>
 <td>{{'[RelativePosition]()'| markdownify }}</td>
 <td>Gets or sets the relative position of the picker popup.</td>
+</tr>
 <tr>
 <td>{{'[CommandParameter](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.SfPicker.html#Syncfusion_XForms_Pickers_SfPicker_CommandParameterProperty)'| markdownify }}</td>
 <td>Nil</td>
