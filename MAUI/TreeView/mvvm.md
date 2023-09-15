@@ -335,15 +335,14 @@ public class CommandViewModel
 The `TreeView` event can be converted into commands using `Behaviors`. To achieve this, create a command in the `ViewModel` class and associate it to the TreeView event using `Behaviors`.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="6" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="7" %}
 <syncfusion:SfTreeView x:Name="treeView"
                        SelectionMode="Multiple"
                        SelectedItems="{Binding SelectedCountries}"
                        ChildPropertyName="States"
                        ItemsSource="{Binding CountriesInfo}">
     <syncfusion:SfTreeView.Behaviors>
-        <local:EventToCommandBehavior EventName="SelectionChanged" 
-                                      Command="{Binding SelectionChangedCommand}"/>
+        <local:EventToCommandBehavior EventName="SelectionChanged" Command="{Binding SelectionChangedCommand}"/>
     </syncfusion:SfTreeView.Behaviors>
 </syncfusion:SfTreeView>
 {% endhighlight %}

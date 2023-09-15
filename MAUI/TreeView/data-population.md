@@ -18,7 +18,7 @@ TreeView can be populated either with the data source by using a `ItemsSource` p
 * Create hierarchical data model
 * Bind data model to treeview
 
-To update the collection changes in UI, it is necessary to define `NotificationSubscriptionMode` to Treeview as CollectionChanged/PropertyChanged. 
+To update the collection changes in UI, it is necessary to define `NotificationSubscriptionMode` to Treeview as `CollectionChanged/PropertyChanged`. 
 `NotificationSubscriptionMode` enum has following members:
 * `CollectionChange` - Updates its tree structure when the child items collection is changed.
 * `PropertyChange` - Updates its ChildItems when the associated collection property is changed.
