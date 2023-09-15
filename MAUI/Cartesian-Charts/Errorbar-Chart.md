@@ -87,7 +87,7 @@ The following code examples illustrates how to create error bar series:
 The error bar mode specifies whether the error bar should be drawn horizontally, vertically or both. The [Mode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ErrorBarSeries.html#Syncfusion_Maui_Charts_ErrorBarSeries_Mode) property used to switch the error bar mode. By default, the Mode value is [Both](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ErrorBarMode.html#Syncfusion_Maui_Charts_ErrorBarMode_Both), which will display both horizontal and vertical error values.
 
 ### Both
-To view both the horizontal and vertical error value, you can set the Mode as Both as shown in the following code example.
+To view both the horizontal and vertical error value, you can set the Mode as [Both](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ErrorBarMode.html#Syncfusion_Maui_Charts_ErrorBarMode_Both) as shown in the following code example.
 
 {% tabs %}
 
@@ -126,7 +126,7 @@ To view both the horizontal and vertical error value, you can set the Mode as Bo
 
 ### Horizontal
 
-To view horizontal error value, you can set the Mode as Horizontal as shown in the following code example.
+To view horizontal error value, you can set the Mode as [Horizontal](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ErrorBarMode.html#Syncfusion_Maui_Charts_ErrorBarMode_Horizontal) as shown in the following code example.
 
 {% tabs %}
 
@@ -164,7 +164,7 @@ To view horizontal error value, you can set the Mode as Horizontal as shown in t
 
 ### Vertical
 
-To view vertical error value, you can set the Mode as Vertical, as shown in the below code example.
+To view vertical error value, you can set the Mode as [Vertical](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ErrorBarMode.html#Syncfusion_Maui_Charts_ErrorBarMode_Vertical), as shown in the below code example.
 
 {% tabs %}
 
@@ -207,11 +207,11 @@ The [HorizontalDirection](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Ch
 
 [ErrorBarDirection](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ErrorBarDirection.html) contains below values:
 
-*`Both` -  It indicates the actual data point value along with specific amount of positive and negative error values.
+* [`Both`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ErrorBarDirection.html#Syncfusion_Maui_Charts_ErrorBarDirection_Both) -  It indicates the actual data point value along with specific amount of positive and negative error values.
 
-*`Plus` -  It indicates the actual data point value along with specific amount of positive error value.
+* [`Plus`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ErrorBarDirection.html#Syncfusion_Maui_Charts_ErrorBarDirection_Plus) -  It indicates the actual data point value along with specific amount of positive error value.
 
-*`Minus`-  It indicates the actual data point value along with specific amount of negative error value.
+* [`Minus`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ErrorBarDirection.html#Syncfusion_Maui_Charts_ErrorBarDirection_Minus) -  It indicates the actual data point value along with specific amount of negative error value.
 
 The following code illustrates how to set the [HorizontalDirection](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ErrorBarSeries.html#Syncfusion_Maui_Charts_ErrorBarSeries_HorizontalDirection) and the [VerticalDirection](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ErrorBarSeries.html#Syncfusion_Maui_Charts_ErrorBarSeries_VerticalDirection) values to error bar chart.
 
@@ -253,7 +253,7 @@ The following code illustrates how to set the [HorizontalDirection](https://help
 
 ## Type
 
-The [Type](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ErrorBarSeries.html#Syncfusion_Maui_Charts_ErrorBarSeries_Type) property is used to define the error bar type value in [Fixed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ErrorBarType.html#Syncfusion_Maui_Charts_ErrorBarType_Fixed), [Custom](), [Percentage](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ErrorBarType.html#Syncfusion_Maui_Charts_ErrorBarType_Percentage), [StandardDeviation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ErrorBarType.html#Syncfusion_Maui_Charts_ErrorBarType_StandardDeviation), and [StandardErrors](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ErrorBarType.html#Syncfusion_Maui_Charts_ErrorBarType_StandardError). The default value of this property is [Fixed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ErrorBarType.html#Syncfusion_Maui_Charts_ErrorBarType_Fixed). For all types, You have to set the values for [HorizontalErrorValue](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ErrorBarSeries.html#Syncfusion_Maui_Charts_ErrorBarSeries_HorizontalErrorValue) and [VerticalErrorValue](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ErrorBarSeries.html#Syncfusion_Maui_Charts_ErrorBarSeries_VerticalErrorValue) except [Custom](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ErrorBarType.html#Syncfusion_Maui_Charts_ErrorBarType_Custom).
+The [Type](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ErrorBarSeries.html#Syncfusion_Maui_Charts_ErrorBarSeries_Type) property is used to define the error bar type value in [Fixed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ErrorBarType.html#Syncfusion_Maui_Charts_ErrorBarType_Fixed), [Custom](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ErrorBarType.html#Syncfusion_Maui_Charts_ErrorBarType_Custom), [Percentage](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ErrorBarType.html#Syncfusion_Maui_Charts_ErrorBarType_Percentage), [StandardDeviation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ErrorBarType.html#Syncfusion_Maui_Charts_ErrorBarType_StandardDeviation), and [StandardErrors](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ErrorBarType.html#Syncfusion_Maui_Charts_ErrorBarType_StandardError). The default value of this property is [Fixed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ErrorBarType.html#Syncfusion_Maui_Charts_ErrorBarType_Fixed). For all types, You have to set the values for [HorizontalErrorValue](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ErrorBarSeries.html#Syncfusion_Maui_Charts_ErrorBarSeries_HorizontalErrorValue) and [VerticalErrorValue](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ErrorBarSeries.html#Syncfusion_Maui_Charts_ErrorBarSeries_VerticalErrorValue) except [Custom](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ErrorBarType.html#Syncfusion_Maui_Charts_ErrorBarType_Custom).
 
 ### Fixed
 
@@ -401,7 +401,7 @@ The [Type](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ErrorBarSe
 
 ### Custom
 
-If the Type is Custom, you have to bind the [HorizontalErrorPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ErrorBarSeries.html#Syncfusion_Maui_Charts_ErrorBarSeries_HorizontalErrorPath) and the [VerticalErrorPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ErrorBarSeries.html#Syncfusion_Maui_Charts_ErrorBarSeries_VerticalErrorPath) as shown in the following code sample.
+If the Type is [Custom](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ErrorBarType.html#Syncfusion_Maui_Charts_ErrorBarType_Custom), you have to bind the [HorizontalErrorPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ErrorBarSeries.html#Syncfusion_Maui_Charts_ErrorBarSeries_HorizontalErrorPath) and the [VerticalErrorPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ErrorBarSeries.html#Syncfusion_Maui_Charts_ErrorBarSeries_VerticalErrorPath) as shown in the following code sample.
 
 {% tabs %}
 
