@@ -274,15 +274,16 @@ The [`OriginalImageSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Im
 
     private void OnGetImageOriginalSize(object sender, EventArgs e)
     {
-        this.imageEditor.OriginalImageSize;
+        Size originalSize = this.imageEditor.OriginalImageSize;
     }
 
 {% endhighlight %}
 {% endtabs %}
 
+N> The size value will be available only after image is loaded into view.
 
 ## Get the Image Rendered Size
-The [`ImageRenderedSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_ImageRenderedSize) property is used to get the current size of the edited image.
+The image editor utilizes the `AspectFit` image scaling of Image control, so that the entire image fits into the display area, with blank space added to the top or bottom sides depending on whether the image is wide or tall. The [`ImageRenderedSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_ImageRenderedSize) property is used to get the current rendered size of the image inside the display area.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -300,8 +301,10 @@ The [`ImageRenderedSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Im
 
     private void OnGetImageRenderedSize(object sender, EventArgs e)
     {
-        this.imageEditor.ImageRenderedSize;
+        Size imageSize = this.imageEditor.ImageRenderedSize;
     }
 
 {% endhighlight %}
 {% endtabs %}
+
+N> The size value will be available only after image is loaded into view.
