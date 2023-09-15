@@ -11,7 +11,7 @@ documentation: ug
 
 This section describes the features of the Segmented Control that help with disabling segmented item, customization of the disabled item, and associated operations.
 
-## Enable or Disable Segment
+## Enable or Disable segment
 
 Restrict selection and interaction of segment items by setting the `IsEnabled` property of `SfSegmentItem` to `false`. The value of `IsEnabled` property is `true` by default.
 
@@ -42,7 +42,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-### Programmatically Enable or Disable Segment Using `Method`
+### Programmatically Enable or Disable segment using Method
 Set the enabled state of a specific segment at the specified index using the `SetSegmentEnabled` method of `SfSegmentedControl`.
 
 {% tabs %}
@@ -107,10 +107,10 @@ public class ViewModel
 {% endhighlight %}
 {% endtabs %}
 
-## Customizing Disabled Segment Item
+## Customizing disabled segment item
 You can customize the disabled segment text color and background of the segmented control
 
-### Customizing the Disabled Segment Text Color
+### Customizing the disabled segment text color
 
 Use the `DisabledSegmentTextColor` property of `SfSegmentedControl` to customize the disabled segment text color of the segmented control.
 
@@ -144,7 +144,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-### Customizing the Disabled Segment Background
+### Customizing the disabled segment background
 
 Use the `DisabledSegmentBackground` property of `SfSegmentedControl` to customize the disabled segment background of the segmented control.
 

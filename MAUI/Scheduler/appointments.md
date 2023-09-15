@@ -157,7 +157,7 @@ this.Content = scheduler;
 Create meetings of type `ObservableCollection<Meeting>` and assign those appointments collection to the [AppointmentsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_AppointmentsSource) property of the `SfScheduler.`
 
 {% tabs %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="12" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="14" %}
 
 // Creating an instance for the business object class.
 Meeting meeting = new Meeting();
