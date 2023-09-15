@@ -254,3 +254,54 @@ The [`GetImageStream`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Image
 
 {% endhighlight %}
 {% endtabs %}
+
+## Get the Image Original Size
+The [`OriginalImageSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_OriginalImageSize) property is used to get the image original size.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+
+   <Grid RowDefinitions="0.9*, 0.1*">
+        <imageEditor:SfImageEditor x:Name="imageEditor"
+                                   Source="image.jpeg" />
+        <Button Grid.Row="1"
+                Text="Get Image Original Size"
+                Clicked="OnGetImageOriginalSize" />
+    </Grid>  
+
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+    private void OnGetImageOriginalSize(object sender, EventArgs e)
+    {
+        this.imageEditor.OriginalImageSize;
+    }
+
+{% endhighlight %}
+{% endtabs %}
+
+
+## Get the Image Rendered Size
+The [`ImageRenderedSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_ImageRenderedSize) property is used to get the current size of the edited image.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+
+   <Grid RowDefinitions="0.9*, 0.1*">
+        <imageEditor:SfImageEditor x:Name="imageEditor"
+                                   Source="image.jpeg" />
+        <Button Grid.Row="1"
+                Text="Get Image Rendered Size"
+                Clicked="OnGetImageRenderedSize" />
+    </Grid>  
+
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+    private void OnGetImageRenderedSize(object sender, EventArgs e)
+    {
+        this.imageEditor.ImageRenderedSize;
+    }
+
+{% endhighlight %}
+{% endtabs %}
