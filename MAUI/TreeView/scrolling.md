@@ -72,7 +72,7 @@ private void BringIntoView_Clicked(object sender, EventArgs e)
 {% endhighlight %}
 {% endtabs %}
 
-N> We need to set the `NodePopulationMode` API value as a `PopulationMode.Instant` for scrolling the collapsed item in addition to the additional parameter passed to the `BringIntoView` method.
+N> We need to set the `NodePopulationMode` API value as a `TreeNodePopulationMode.Instant` for scrolling the collapsed item in addition to the additional parameter passed to the `BringIntoView` method.
 
 ### Scroll the item into specified position
 
