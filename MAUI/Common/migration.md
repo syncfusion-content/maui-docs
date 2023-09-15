@@ -339,18 +339,10 @@ Currently working on delivering brand-new .NET MAUI controls that can be used in
 	</tr>
 	<tr>
 	    <td rowspan="1" valign="top">
-			<a href="https://help.syncfusion.com/xamarin/treeview/getting-started">SfTreeView</a><br/>
-		</td>
-		<td rowspan="1" valign="top">
-			Volume 3 2023<br/>
-		</td>
-	</tr>
-	<tr>
-	    <td rowspan="1" valign="top">
 			<a href="https://help.syncfusion.com/xamarin/button/gettingstarted">SfButton</a><br/>
 		</td>
 		<td rowspan="1" valign="top">
-			Volume 3 2023<br/>
+			<a href="https://help.syncfusion.com/maui/button/migration">SfButton</a><br/>
 		</td>
 	</tr>
 		<tr>
@@ -358,7 +350,7 @@ Currently working on delivering brand-new .NET MAUI controls that can be used in
 			<a href="https://help.syncfusion.com/xamarin/checkbox/getting-started">SfCheckBox</a><br/>
 		</td>
 		<td rowspan="1" valign="top">
-			Volume 3 2023<br/>
+			<a href="https://help.syncfusion.com/maui/checkbox/migration">SfCheckBox</a><br/>
 		</td>
 	</tr>
 	<tr>
@@ -366,7 +358,7 @@ Currently working on delivering brand-new .NET MAUI controls that can be used in
 			<a href="https://help.syncfusion.com/xamarin/datepicker/gettingstarted">SfDatePicker</a><br/>
 		</td>
 		<td rowspan="1" valign="top">
-			Volume 3 2023<br/>
+			<a href="https://help.syncfusion.com/maui/datepicker/migration">SfDatePicker</a><br/>
 		</td>
 	</tr>
 	<tr>
@@ -374,7 +366,7 @@ Currently working on delivering brand-new .NET MAUI controls that can be used in
 			<a href="https://help.syncfusion.com/xamarin/picker/gettingstarted">SfPicker</a><br/>
 		</td>
 		<td rowspan="1" valign="top">
-			Volume 3 2023<br/>
+			<a href="https://help.syncfusion.com/maui/picker/migration">SfPicker</a><br/>
 		</td>
 	</tr>
 	<tr>
@@ -382,7 +374,15 @@ Currently working on delivering brand-new .NET MAUI controls that can be used in
 			<a href="https://help.syncfusion.com/xamarin/radio-button/getting-started">SfRadioButton</a><br/>
 		</td>
 		<td rowspan="1" valign="top">
-			Volume 3 2023<br/>
+			<a href="https://help.syncfusion.com/maui/radio-button/migration">SfRadioButton</a><br/>
+		</td>
+	</tr>
+	<tr>
+	    <td rowspan="1" valign="top">
+			<a href="https://help.syncfusion.com/xamarin/segmented-control/getting-started">SfSegmentedControl</a><br/>
+		</td>
+		<td rowspan="1" valign="top">
+			<a href="https://help.syncfusion.com/maui/segmented-control/migration">SfSegmentedControl</a><br/>
 		</td>
 	</tr>
 	<tr>
@@ -390,36 +390,20 @@ Currently working on delivering brand-new .NET MAUI controls that can be used in
 			<a href="https://help.syncfusion.com/xamarin/timepicker/gettingstarted">SfTimePicker</a><br/>
 		</td>
 		<td rowspan="1" valign="top">
-			Volume 3 2023<br/>
+			<a href="https://help.syncfusion.com/maui/timepicker/migration">SfTimePicker</a><br/>
 		</td>
 	</tr>
 	<tr>
 	    <td rowspan="1" valign="top">
-			<a href="https://help.syncfusion.com/xamarin/switch/gettingstarted">SfSwitch</a><br/>
+			<a href="https://help.syncfusion.com/xamarin/treeview/getting-started">SfTreeView</a><br/>
 		</td>
 		<td rowspan="1" valign="top">
-			Volume 4 2023<br/>
+			<a href="https://help.syncfusion.com/maui/treeview/migration">SfTreeView</a><br/>
 		</td>
 	</tr>
 	<tr>
 	    <td rowspan="1" valign="top">
-			<a href="https://help.syncfusion.com/xamarin/chat/getting-started">SfChat</a><br/>
-		</td>
-		<td rowspan="1" valign="top">
-			Volume 4 2023<br/>
-		</td>
-	</tr>
-	<tr>
-	    <td rowspan="1" valign="top">
-			<a href="https://help.syncfusion.com/xamarin/pull-to-refresh/getting-started">SfPullToRefresh</a><br/>
-		</td>
-		<td rowspan="1" valign="top">
-			Volume 4 2023<br/>
-		</td>
-	</tr>
-	<tr>
-	    <td rowspan="1" valign="top">
-			<a href="https://help.syncfusion.com/xamarin/segmented-control/getting-started">SfSegmentedControl</a><br/>
+			<a href="https://help.syncfusion.com/xamarin/cards/getting-started">SfCardView</a><br/>
 		</td>
 		<td rowspan="1" valign="top">
 			Volume 4 2023<br/>
@@ -435,7 +419,23 @@ Currently working on delivering brand-new .NET MAUI controls that can be used in
 	</tr>
 	<tr>
 	    <td rowspan="1" valign="top">
-			<a href="https://help.syncfusion.com/xamarin/cards/getting-started">SfCardView</a><br/>
+			<a href="https://help.syncfusion.com/xamarin/pull-to-refresh/getting-started">SfPullToRefresh</a><br/>
+		</td>
+		<td rowspan="1" valign="top">
+			Volume 4 2023<br/>
+		</td>
+	</tr>
+	<tr>
+	    <td rowspan="1" valign="top">
+			<a href="https://help.syncfusion.com/xamarin/switch/gettingstarted">SfSwitch</a><br/>
+		</td>
+		<td rowspan="1" valign="top">
+			Volume 4 2023<br/>
+		</td>
+	</tr>
+	<tr>
+	    <td rowspan="1" valign="top">
+			<a href="https://help.syncfusion.com/xamarin/chat/getting-started">SfChat</a><br/>
 		</td>
 		<td rowspan="1" valign="top">
 			Underway<br/>
