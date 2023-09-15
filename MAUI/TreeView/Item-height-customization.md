@@ -40,7 +40,7 @@ The `SfTreeView.QueryNodeSize` event provides the following arguments:
 The TreeView allows customization of the height of a specific item by directly setting the custom value to the `Height` argument, which is available in `QueryNodeSizeEventArgs`.
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
@@ -59,7 +59,7 @@ The TreeView allows customization of the height of a specific item by directly s
     </ContentPage.Content>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# %}
+{% highlight c# tabtitle="MainPage.cs" hl_lines="14" %}
 public class MainPage : ContentPage
 {
     public MainPage()
@@ -86,7 +86,7 @@ public class MainPage : ContentPage
 The TreeView allows adjusting height of items based on the content measured size while loaded by setting the `Height` argument with the value returned from the `QueryNodeSizeEventArgs.GetActualNodeHeight` method.
                                              
 {% tabs %}
-{% highlight xaml %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
@@ -105,7 +105,7 @@ The TreeView allows adjusting height of items based on the content measured size
     </ContentPage.Content>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# %}
+{% highlight c# tabtitle="MainPage.cs" hl_lines="14" %}
 public class MainPage : ContentPage
 {
     public MainPage()
