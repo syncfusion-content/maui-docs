@@ -37,3 +37,7 @@ The [ItemRemoved](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChi
 
 N> The [ItemRemoved] event is supported only in the `Input` type.
 
+##  CloseButtonClicked
+
+The `CloseButtonClicked` event is triggered when the closed button is clicked. The event argument is type of `EventArgs`.
+
