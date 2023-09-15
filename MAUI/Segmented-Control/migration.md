@@ -308,7 +308,7 @@ public class ViewModel
 </tr>
 
 <tr>
-<td>Nil</td>
+<td>{{'[IconFont](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Buttons.SfSegmentItem.html#Syncfusion_XForms_Buttons_SfSegmentItem_IconFont)'| markdownify }}</td>
 <td>ImageSource</td>
 <td>Gets or sets the image displayed in the segment item.</td>
 </tr>
@@ -332,7 +332,7 @@ public class ViewModel
 </tr>
 
 <tr>
-<td>Nil</td>
+<td>{{'[FontIconFontSize](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Buttons.SfSegmentItem.html#Syncfusion_XForms_Buttons_SfSegmentItem_FontIconFontSize)'| markdownify }}</td>
 <td>ImageSize</td>
 <td>Gets or sets the image size of the segment item.</td>
 </tr>
@@ -606,6 +606,8 @@ public class ViewModel
 </tr>
 </table>
 
-## Upcoming Features
+## Upcoming features
 
-* Multi selection
+* Multi selection for segment items.
+* Theme support.
+* 

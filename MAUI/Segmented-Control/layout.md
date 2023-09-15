@@ -10,10 +10,10 @@ documentation: ug
 # Layout in .NET MAUI Segmented control (SfSegmentedControl)
 The `SfSegmentedControl` supports changing the layout width, height and the number of visible segments displayed.
 
-## Change the Segment Width
+## Change the segment width
 Change the width of the segmented control and each segment item.
 
-### Change the Segment Width for Segmented Control
+### Change the segment width for segmented control
 Use the `SegmentWidth` property of `SfSegmentedControl` to customize the segment width of the segmented control.
 
 {% tabs %}
@@ -46,7 +46,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-### Change the Each Segment Item Width
+### Change the each segment item width
 You can change the width of each segment item using the `Width` property of `SfSegmentItem`.
 
 {% tabs %}
@@ -76,7 +76,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-## Change the Segment Height
+## Change the segment height
 You can use the `SegmentHeight` property of `SfSegmentedControl` to customize the segment height of the segmented control.
 
 {% tabs %}
@@ -109,7 +109,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-## Visible Segment Count
+## Visible segment count
 Set the number of visible segments displayed in the `SfSegmentedControl` using `VisibleSegmentsCount` property.
 
 {% tabs %}

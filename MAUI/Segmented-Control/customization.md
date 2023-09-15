@@ -10,7 +10,7 @@ documentation: ug
 # Appearance Customization of .NET MAUI Segmented Control (SfSegmentedControl)
 The .NET MAUI Segmented control allows you to customize the background, text color, selection style, and more.
 
-## Customize the Border Color
+## Customize the border color
 You can use the `Stroke` property of `SfSegmentedControl` to customize the border color of the segmented control.
 
 {% tabs %}
@@ -43,7 +43,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-## Customize the Border Thickness
+## Customize the border thickness
 
 You can use the `StrokeThickness` property of `SfSegmentedControl` to customize the border thickness of the segmented control.
 
@@ -53,7 +53,7 @@ You can use the `StrokeThickness` property of `SfSegmentedControl` to customize 
 <ContentPage
     xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons">
     <buttons:SfSegmentedControl x:Name="segmentedControl"
-                                StrokeThickness="1">
+                                StrokeThickness="5">
     </buttons:SfSegmentedControl>
 </ContentPage>
 
@@ -69,7 +69,7 @@ public partial class MainPage : ContentPage
     {
         InitializeComponent();
         SfSegmentedControl segmentedControl = new SfSegmentedControl();
-        segmentedControl.StrokeThickness = 1;
+        segmentedControl.StrokeThickness = 5;
         this.Content = segmentedControl;
     }
 }
@@ -77,7 +77,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-## Customize the Border Corner Radius
+## Customize the border corner radius
 
 Use the `CornerRadius` property of `SfSegmentedControl` to customize the corner radius of the segmented control.
 
@@ -111,7 +111,9 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-## Customize the Segment Corner Radius
+N> The `CornerRadius` property will be applicable only for the first and last segment items. To set corner radius for all segments, use `SegmentCornerRadius`.
+
+## Customize the segment corner radius
 
 Use the `SegmentCornerRadius` property of `SfSegmentedControl` to customize the segment corner radius of the segmented control.
 
@@ -145,10 +147,10 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-## Customize the Text Style
+## Customize the text style
 You can customize the text style of the segmented control and each segment item.
 
-### Customize the Text Style of Segmented Control
+### Customize the text style of segmented Control
 Use the `TextStyle` property of `SfSegmentedControl` to customize the text style of the segmented control.
 
 {% tabs %}
@@ -188,7 +190,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-### Customize the Text Style of Each Segment Item
+### Customize the text style of each segment item
 
 Customize the text style of each segment item using the `TextStyle` property of `SfSegmentItem`.
 
@@ -219,10 +221,10 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-## Customize the Segment Background
+## Customize the segment background
 You can customize the segmented background of the segmented control and each segment item.
 
-### Customize the Segment Background of Segemented Control
+### Customize the Segment background of segemented control
 Use the `SegmentBackground` property of `SfSegmentedControl` to customize the segmented background of the segmented control.
 
 {% tabs %}
@@ -255,7 +257,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-### Customize the Segment Background of Each Segment Item
+### Customize the segment background of each segment item
 
 Customize the background of each segment item using the `Background` property of `SfSegmentItem`.
 
@@ -286,7 +288,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-## Custom Segment Data Template
+## Customize segment items appearance using DataTemplate
 
 Use the `SegmentTemplate` property of `SfSegmentedControl` to create custom segmented control. The following example code shows how to create a custom segmented control using a data template.
 
