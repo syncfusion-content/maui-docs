@@ -1314,7 +1314,7 @@ using Syncfusion.Maui.Core;
 
 ![SfChipGroup with ChipFontAttribute](images/customization-images/chipgroup_chipfontattribute_image.png)
 
-N> The default value of ChipFontAttribute is [`14d`].
+N> The default value of ChipFontAttribute is [`FontAttributes.None`].
 
 ## ChipFontFamily
 
@@ -1358,7 +1358,7 @@ using Syncfusion.Maui.Core;
 
 ![SfChipGroup with ChipFontFamily](images/customization-images/chipgroup_chipfontfamily-image.png)
 
-N> The default value of ChipFontFamily is [`14d`].
+N> The default value of ChipFontFamily is [`string.Empty`].
 
 ## ChipPadding
 
