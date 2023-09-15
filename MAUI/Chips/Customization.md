@@ -1270,6 +1270,96 @@ using Syncfusion.Maui.Core;
 
 N> The default value of ChipTextSize is [`14d`].
 
+## ChipFontAttribute
+
+The `ChipFontAttribute` property customizes the font style of text in SfChipGroup.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+ <ContentPage.BindingContext>
+    <local:ViewModel/>
+</ContentPage.BindingContext>
+<ContentPage.Content>
+    <StackLayout Margin="8,8,0,0">
+        <chip:SfChipGroup
+            ItemsSource="{Binding Employees}"
+            DisplayMemberPath="Name"
+            ChipFontAttributes="Bold"
+            ChipType="Choice">
+        </chip:SfChipGroup>
+    </StackLayout>  
+</ContentPage.Content>
+    
+{% endhighlight %}
+
+{% highlight c# %}
+
+using Syncfusion.Maui.Core;
+
+    StackLayout stack = new StackLayout();
+    SfChipGroup chipGroup = new SfChipGroup();
+    stack.Children.Add(chipGroup);
+    this.BindingContext = new ViewModel();
+    chipGroup.SetBinding(SfChipGroup.ItemsSourceProperty, "Employees");
+    chipGroup.DisplayMemberPath = "Name";
+    chipGroup.ChipType = SfChipsType.Choice;
+    chipGroup.ChipFontAttributes = FontAttributes.Bold;
+    this.Content = stack;
+        
+{% endhighlight %}
+
+{% endtabs %}
+
+![SfChipGroup with ChipFontAttribute](images/customization-images/chipgroup_chipfontattribute_image.png)
+
+N> The default value of ChipFontAttribute is [`14d`].
+
+## ChipFontFamily
+
+The [`ChipFontFamily`] property customizes the font family of text in SfChipGroup.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<ContentPage.BindingContext>
+    <local:ViewModel/>
+</ContentPage.BindingContext>
+<ContentPage.Content>
+    <StackLayout Margin="8,8,0,0">
+        <chip:SfChipGroup
+            ItemsSource="{Binding Employees}"
+            DisplayMemberPath="Name"
+            ChipFontFamily="OpenSans-Semibold">
+        </chip:SfChipGroup>
+    </StackLayout>  
+</ContentPage.Content>
+    
+{% endhighlight %}
+
+{% highlight c# %}
+
+using Syncfusion.Maui.Core;
+
+    StackLayout stack = new StackLayout();
+    SfChipGroup chipGroup = new SfChipGroup();
+    stack.Children.Add(chipGroup);
+    this.BindingContext = new ViewModel();
+    chipGroup.SetBinding(SfChipGroup.ItemsSourceProperty, "Employees");
+    chipGroup.DisplayMemberPath = "Name";
+    chipGroup..ChipFontFamily = "OpenSans-Semibold";
+    this.Content = stack;
+        
+{% endhighlight %}
+
+{% endtabs %}
+
+![SfChipGroup with ChipFontFamily](images/customization-images/chipgroup_chipfontfamily-image.png)
+
+N> The default value of ChipFontFamily is [`14d`].
+
 ## ChipPadding
 
 The [`ChipPadding`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html#Syncfusion_Maui_Core_SfChipGroup_ChipPadding) property sets spacing between each chip.
