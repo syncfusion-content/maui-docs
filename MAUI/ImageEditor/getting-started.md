@@ -256,7 +256,7 @@ The [`GetImageStream`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Image
 {% endtabs %}
 
 ## Get the Image Original Size
-The [`OriginalImageSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_OriginalImageSize) property is used to get the image original size.
+The [`OriginalImageSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_OriginalImageSize) property is used to get the image's original size.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
