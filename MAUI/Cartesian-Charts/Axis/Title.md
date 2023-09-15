@@ -70,4 +70,38 @@ The [Title](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis
 * `StrokeWidth` - Gets or sets the border thickness of the label.
 * `TextColor` - Gets or sets the color for the text of the label.
 
+## Label extent
 
+The [LabelExtent]() property allows to set the gap between axis labels and title. This is typically used to maintain the fixed gap between axis labels and title when the digits of the axis value changed in live update.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<chart:SfCartesianChart>
+    . . .
+    <chart:SfCartesianChart.XAxes>
+        <chart:CategoryAxis LabelExtent="60">
+            <chart:CategoryAxis.Title>
+                <chart:ChartAxisTitle Text="Category"/>
+            </chart:CategoryAxis.Title>
+        </chart:CategoryAxis>
+    </chart:SfCartesianChart.XAxes>
+
+</chart:SfCartesianChart>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+SfCartesianChart chart = new SfCartesianChart();
+. . .
+CategoryAxis primaryAxis = new CategoryAxis();
+primaryAxis.LabelExtent = 60;
+primaryAxis.Title = new ChartAxisTitle();
+primaryAxis.Title.Text = "Category";
+chart.XAxes.Add(primaryAxis);
+
+{% endhighlight %}
+
+{% endtabs %}

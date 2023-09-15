@@ -136,10 +136,13 @@ The `SfDataGrid` provides the support to apply the conditional style for specifi
     <ContentPage.Content>
         <syncfusion:SfDataGrid ItemsSource="{Binding OrderInfoCollection}">
             <syncfusion:SfDataGrid.Columns>
-                <syncfusion:DataGridNumericColumn MappingName="OrderID" HeaderText="Order ID"  Format="d">
+                <syncfusion:DataGridNumericColumn MappingName="OrderID"
+                                                HeaderText="Order ID"
+                                                Format="d">
                     <syncfusion:DataGridNumericColumn.CellStyle>
                         <Style TargetType="syncfusion:DataGridCell">
-                            <Setter Property="Background" Value="{Binding OrderID, Converter={StaticResource converter}}"/>
+                            <Setter Property="Background"
+                                    Value="{Binding OrderID, Converter={StaticResource converter}}" />
                         </Style>
                     </syncfusion:DataGridNumericColumn.CellStyle>
                 </syncfusion:DataGridNumericColumn>
@@ -383,3 +386,195 @@ public class ForeColorConverter : IValueConverter
 {% endtabs %}
 
 ![Conditional cell styling based on CellValue in .NET MAUI DataGrid](Images/conditional-styling/maui-datagrid-conditional-datagridcellstyle_basedon_cellvalue.png)
+
+## Caption summary cell style
+
+### Conditional styling of caption summary cells using converter
+
+The appearance of caption summary cell can be customized conditionally based on [SummaryValues]() by using a `converter`, where converter returns the value based on `SummaryValues`. 
+
+{% tabs %}
+{% highlight xaml %}
+    <ContentPage.Resources>
+        <local:ColorConverter x:Key="converter" />
+        <Style TargetType="syncfusion:DataGridCaptionSummaryCell">
+            <Setter Property="Background"
+                    Value="{Binding Converter={StaticResource converter}}" />
+        </Style>
+    </ContentPage.Resources>
+    <syncfusion:SfDataGrid x:Name="dataGrid" 
+                        ItemsSource="{Binding OrderInfoCollection}">
+            <syncfusion:SfDataGrid.CaptionSummaryRow>
+        <syncfusion:DataGridSummaryRow Name="CaptionSummary"
+                                ShowSummaryInRow="False"
+                                Title="Total Salary: {CaptionSummary}">
+            <syncfusion:DataGridSummaryRow.SummaryColumns>
+                <syncfusion:DataGridSummaryColumn Name="CaptionSummary"
+                                            Format="{}{Sum:C0}"
+                                            MappingName="Salary"
+                                            SummaryType="DoubleAggregate" />
+            </syncfusion:DataGridSummaryRow.SummaryColumns>
+        </syncfusion:DataGridSummaryRow>
+        </syncfusion:SfDataGrid.CaptionSummaryRow>
+    </syncfusion:SfDataGrid>
+{% endhighlight %}
+{% highlight c# %}
+public class ColorConverter : IValueConverter
+{
+    public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+    {
+        var summaryValue = (value as Group).SummaryDetails.SummaryValues[0];
+        var aggregateValue = summaryValue.AggregateValues.ElementAt(0);
+        var calculatedValue = aggregateValue.Value;
+
+        //custom condition is checked.
+
+        if ((double)calculatedValue < 45000)
+            return Colors.LightGreen;
+        return Colors.LightBlue;
+    }
+    public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+    {
+        return null;
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
+Here, caption summary cells are customized based on `Salary` summary value.
+
+![Conditional style of caption summary cell using converter](Images/conditional-styling/maui-datagrid-conditional-captionsummary.png)
+
+## Group summary cell style
+
+Group summary cells can be customized conditionally by getting particular summary value from `SummaryValues` through converter. Likewise, you can also customize the group summary cell based on various properties exposed in [DataGridSummaryRow](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSummaryRow.html) (example: [ShowSummaryInRow](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSummaryRow.html#Syncfusion_Maui_DataGrid_DataGridSummaryRow_ShowSummaryInRow) property).
+
+### Conditional styling of group summary cell using converter
+
+The appearance of group summary cell can be customized conditionally based on summary value by using `converter`, where converter returns the value based on summary value.
+
+{% tabs %}
+{% highlight xaml %}
+    <ContentPage.Resources>
+        <local:ColorConverter x:Key="converter" />
+        <Style TargetType="syncfusion:DataGridGroupSummaryCell">
+            <Setter Property="Background"
+                    Value="{Binding Converter={StaticResource converter}}" />
+        </Style>
+    </ContentPage.Resources>
+    <syncfusion:SfDataGrid x:Name="dataGrid" 
+                        ShowGroupDropArea="True"
+                        ItemsSource="{Binding OrderInfoCollection}">
+            <syncfusion:SfDataGrid.GroupSummaryRows>
+            <syncfusion:DataGridSummaryRow Title="salary {Salary}"
+                                            ShowSummaryInRow="True">
+                <syncfusion:DataGridSummaryRow.SummaryColumns>
+                    <syncfusion:DataGridSummaryColumn Name="Salary"
+                                                    MappingName="Salary"
+                                                    Format="{}{Sum:C0}"
+                                                    SummaryType="DoubleAggregate">
+                    </syncfusion:DataGridSummaryColumn>
+                </syncfusion:DataGridSummaryRow.SummaryColumns>
+            </syncfusion:DataGridSummaryRow>
+        </syncfusion:SfDataGrid.GroupSummaryRows>
+    </syncfusion:SfDataGrid>
+{% endhighlight %}
+{% highlight c# %}
+public class ColorConverter : IValueConverter
+{
+    public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+    {
+        var summaryValue = (value as SummaryRecordEntry).SummaryValues[0];
+        var aggregateValue = summaryValue.AggregateValues.ElementAt(0);
+        var calculatedValue = aggregateValue.Value;
+
+        //custom condition is checked.
+
+        if ((double)calculatedValue % 2 == 0)
+            return Colors.LightGreen;
+        return Colors.LightBlue;
+    }
+    public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+    {
+        return null;
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
+Here, group summary cells are customized based on `Salary` summary value.
+
+![Conditional style of group summary cell using converter](Images/conditional-styling/maui-datagrid-conditional-groupsummary.png)
+
+## Table summary cell
+
+Table summary cells can be customized conditionally by getting particular summary value from `SummaryValues` through `converter`. Likewise, you can also customize the table summary cell based on various properties exposed in [DataGridTableSummaryRow](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridTableSummaryRow.html) (example: `ShowSummaryInRow` property).
+
+### Conditional styling of table summary cells using converter
+
+The appearance of table summary cell can be customized conditionally based on summary value using `converter`, where converter returns the value based on summary value. 
+
+{% tabs %}
+{% highlight xaml %}
+    <ContentPage.Resources>
+        <local:ColorConverter x:Key="converter" />
+        <Style TargetType="syncfusion:DataGridTableSummaryCell">
+            <Setter Property="Background"
+                    Value="{Binding Converter={StaticResource converter}}" />
+        </Style>
+    </ContentPage.Resources>
+    <syncfusion:SfDataGrid x:Name="dataGrid"
+                        ShowRowHeader="True"
+                        ItemsSource="{Binding OrderInfoCollection}">
+                <syncfusion:SfDataGrid.TableSummaryRows>
+        <syncfusion:DataGridTableSummaryRow Title="Total Salary :{TotalSalary}"
+                                        Position="Bottom"
+                                        ShowSummaryInRow="True">
+            <syncfusion:DataGridTableSummaryRow.SummaryColumns >
+                <syncfusion:DataGridSummaryColumn Name="TotalSalary"
+                                                Format="{}{Sum:C0}"
+                                                MappingName="Salary"
+                                                SummaryType="DoubleAggregate">
+                </syncfusion:DataGridSummaryColumn>
+            </syncfusion:DataGridTableSummaryRow.SummaryColumns>
+        </syncfusion:DataGridTableSummaryRow>
+            <syncfusion:DataGridTableSummaryRow Title="Total Salary :{TotalSalary}"
+                                                Position="Top"
+                                                ShowSummaryInRow="False">
+                <syncfusion:DataGridTableSummaryRow.SummaryColumns>
+                    <syncfusion:DataGridSummaryColumn Name="TotalSalary"
+                                                    Format="{}{Sum:C0}"
+                                                    MappingName="OrderID"
+                                                    SummaryType="DoubleAggregate">
+                    </syncfusion:DataGridSummaryColumn>
+                </syncfusion:DataGridTableSummaryRow.SummaryColumns>
+            </syncfusion:DataGridTableSummaryRow>
+        </syncfusion:SfDataGrid.TableSummaryRows>
+    </syncfusion:SfDataGrid>
+{% endhighlight %}
+{% highlight c# %}
+public class ColorConverter : IValueConverter
+{
+    public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+    {
+        var summaryValue = (value as SummaryRecordEntry).SummaryValues[0];
+        var aggregateValue = summaryValue.AggregateValues.ElementAt(0);
+        var calculatedValue = aggregateValue.Value;
+
+        //custom condition is checked.
+
+        if ((double)calculatedValue % 2 == 0)
+            return Colors.LightGreen;
+        return Colors.LightBlue;
+    }
+    public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+    {
+        return null;
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
+Here, table summary cells are customized based on `Salary` summary value.
+
+![Conditional styling of table summary cell using converter](Images/conditional-styling/maui-datagrid-conditional-tablesummary.png)

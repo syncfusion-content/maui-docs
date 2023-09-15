@@ -18,7 +18,7 @@ To migrate easier from Xamarin SfButton to [.NET MAUI SfButton](https://www.sync
 <th>Xamarin SfButton</th>
 <th>.NET MAUI SfButton</th></tr>
 <tr>
-<td>Syncfusion.Xamarin.Buttons</td>
+<td>Syncfusion.XForms.Buttons</td>
 <td>Syncfusion.Maui.Buttons</td></tr>
 </table>
 

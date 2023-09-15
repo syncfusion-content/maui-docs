@@ -59,7 +59,7 @@ The following code snippets demonstrate how to hide the vertical and horizontal 
 {% tabs %}
 {% highlight xaml %}
     <sfgrid:SfDataGrid x:Name="dataGrid"                                       
-                       ItemsSource="{Binding OrdersInfo}"         
+                       ItemsSource="{Binding OrderInfoCollection}"         
                        HorizontalScrollBarVisibility="Never"
                        VerticalScrollBarVisibility="Never">   
     </sfgrid:SfDataGrid> 
