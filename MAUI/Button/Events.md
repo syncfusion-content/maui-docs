@@ -17,12 +17,15 @@ The click event occurs when the `SfButton` is clicked. The event argument is of 
 {% tabs %}
 {% highlight xaml %}
 
-    <buttons:SfButton x:Name="button" Text="Button" Clicked="Button_Clicked"/>
+<buttons:SfButton x:Name="button" 
+                Text="Button" 
+                Clicked="Button_Clicked" />
+
 {% endhighlight %}
 {% highlight c# %}
 
     SfButton button = new SfButton();
-    button.Text = "SfButton";
+    button.Text = "Button";
     button.Clicked += Button_Clicked;
 	
 {% endhighlight %}

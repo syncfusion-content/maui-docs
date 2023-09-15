@@ -671,6 +671,38 @@ The following image illustrates the result of the above code:
 
 ![.NET MAUI Autocomplete completed event](Images/UICustomization/CompletedEvent.png)
 
+## DropDownClosed Event
+
+The `DropDownClosed` event occurs when the SfAutocomplete drop-down is closed.
+
+{% tabs %}
+{% highlight xaml %}
+
+    
+    <autocomplete:SfAutocomplete HeightRequest="40"
+                                 x:Name="autoComplete"
+                                 ItemSource="{Binding Employees}"
+                                 DropDownClosed="SfAutocomplete_DropDownClosed"/>
+{% endhighlight %}
+{% highlight c# %}
+
+    SfAutoComplete autoComplete = new SfAutoComplete();
+    autoComplete.DropDownClosed+=autoComplete_DropDownClosed;
+
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight c# %}
+    
+    private void SfAutocomplete_DropDownClosed(object sender, EventArgs e)
+    {
+        await DisplayAlert("Message", "DropDown Closed", "close");
+    }
+
+{% endhighlight %}
+{% endtabs %}
+
 ## CursorPosition
 
 The cursor position in the input view can be obtained or updated using the [CursorPosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDropdownEntry.html#Syncfusion_Maui_Core_SfDropdownEntry_CursorPosition) property in the SfAutocomplete.
