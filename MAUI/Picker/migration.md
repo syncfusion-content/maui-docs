@@ -36,52 +36,47 @@ To initialize the control, import the picker namespace and initialize `SfPicker`
 
 {% highlight xaml %}
 
-<ContentPage
-xmlns:picker="clr-namespace:Syncfusion.XForms.Pickers;assembly=Syncfusion.SfPicker.XForms">
+    <ContentPage
+    xmlns:picker="clr-namespace:Syncfusion.XForms.Pickers;assembly=Syncfusion.SfPicker.XForms">
 
-    <picker:SfPicker />
+        <picker:SfPicker />
 
-</ContentPage>
+    </ContentPage>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-using Syncfusion.XForms.Pickers;
-...
+    using Syncfusion.XForms.Pickers;
+    ...
 
-SfPicker picker = new SfPicker();
-this.Content = picker;
+    SfPicker picker = new SfPicker();
+    this.Content = picker;
 
 {% endhighlight %}
-
 {% endtabs %}
-
 </td>
 <td>
 {% tabs %}
-
 {% highlight xaml %}
 
-<ContentPage
-xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <ContentPage
+    xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
 
-    <picker:SfPicker />
+        <picker:SfPicker />
 
-</ContentPage>
+    </ContentPage>
 
 {% endhighlight %}
-
 {% highlight C# %}
 
-using Syncfusion.Maui.Picker;
-...
+    using Syncfusion.Maui.Picker;
+    ...
 
-SfPicker picker = new SfPicker();
-this.Content = picker;
+    SfPicker picker = new SfPicker();
+    this.Content = picker;
 
 {% endhighlight %}
-
 {% endtabs %}
 </td></tr>
 </table>
@@ -143,55 +138,48 @@ The following code example, explains how to initialize the properties of the `Xa
 <tr>
 <td>
 {% tabs %}
-
 {% highlight xaml %}
 
-<ContentPage
-xmlns:picker="clr-namespace:Syncfusion.XForms.Pickers;assembly=Syncfusion.SfPicker.XForms">
-    
-    <picker:SfPicker/>
+    <ContentPage
+    xmlns:picker="clr-namespace:Syncfusion.XForms.Pickers;assembly=Syncfusion.SfPicker.XForms">
 
-</ContentPage>
+        <picker:SfPicker/>
+        
+    </ContentPage>
 
 {% endhighlight %}
-
 {% highlight C# %}
 
-using Syncfusion.SfPicker.XForms;
-...
+    using Syncfusion.SfPicker.XForms;
+    ...
 
-SfPicker picker = new SfPicker();
-this.Content = picker;
+    SfPicker picker = new SfPicker();
+    this.Content = picker;
 
 {% endhighlight %}
-
 {% endtabs %}
-
 </td>
 <td>
 {% tabs %}
-
 {% highlight xaml %}
 
-<ContentPage
-xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <ContentPage
+    xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
 
-    <picker:SfPicker/>
+        <picker:SfPicker/>
 
-</ContentPage>
+    </ContentPage>
 
 {% endhighlight %}
-
 {% highlight C# %}
 
-using Syncfusion.Maui.Picker;
-...
+    using Syncfusion.Maui.Picker;
+    ..
 
-SfPicker picker = new SfPicker();
-this.Content = picker;
+    SfPicker picker = new SfPicker();
+    this.Content = picker;
 
 {% endhighlight %}
-
 {% endtabs %}
 </td></tr>
 </table>
@@ -392,8 +380,6 @@ this.Content = picker;
 <td>Nil</td>
 <td>Not Supported.</td>
 </tr>
-
-
 <tr>
 <td>{{'[UnSelectedItemFontAttribute](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPicker.XForms.SfPicker.html#Syncfusion_SfPicker_XForms_SfPicker_UnSelectedItemFontAttribute)'| markdownify }}</td>
 <td>{{'[[FontAttributes]()(From [TextStyle]() of [PickerBase]())]'| markdownify }}</td>
@@ -414,6 +400,7 @@ this.Content = picker;
 <td>{{'[[TextColor]()(From [TextStyle]() of [PickerBase]())]'| markdownify }}</td>
 <td>Gets or sets the font text color of the text style.</td>
 </tr>
+<tr>
 <td>{{'[BorderColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPicker.XForms.SfPicker.html#Syncfusion_SfPicker_XForms_SfPicker_BorderColor)'| markdownify }}</td>
 <td>Nil</td>
 <td>Not Supported.</td>
@@ -426,7 +413,7 @@ this.Content = picker;
 <tr>
 <th>Xamarin SfPicker</th>
 <th>.NET MAUI SfPicker</th>
-<th>Description</th></tr>
+<th>Description</th>
 </tr>
 <tr>
 <td>Nil</td>
@@ -464,62 +451,57 @@ this.Content = picker;
 <tr>
 <td>
 {% tabs %}
-
 {% highlight xaml %}
 
-<ContentPage
-xmlns:picker="clr-namespace:Syncfusion.XForms.Pickers;assembly=Syncfusion.SfPicker.XForms">
-    
-    <picker:SfPicker SelectionBackgroundColor="Red"/>
+    <ContentPage
+    xmlns:picker="clr-namespace:Syncfusion.XForms.Pickers;assembly=Syncfusion.SfPicker.XForms">
+        
+        <picker:SfPicker SelectionBackgroundColor="Red"/>
 
-</ContentPage>
-
+    </ContentPage>
 {% endhighlight %}
-
 {% highlight C# %}
 
-using Syncfusion.SfPicker.XForms;
-...
+    using Syncfusion.SfPicker.XForms;
+    ...
 
-SfPicker picker = new SfPicker();
-picker.SelectionBackgroundColor = Colors.Red; 
-this.Content = picker;
+    SfPicker picker = new SfPicker();
+    picker.SelectionBackgroundColor = Colors.Red; 
+    this.Content = picker;
+
 {% endhighlight %}
-
 {% endtabs %}
-
 </td>
 <td>
 {% tabs %}
-
 {% highlight xaml %}
 
-<ContentPage
-xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <ContentPage
+    xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
 
-    <picker:SfPicker>
-        <picker:SfPicker.SelectionView>
-            <picker:PickerSelectionView Background="Red"/>
-        </picker:SfPicker.SelectionView>
-    </picker:SfPicker>
+        <picker:SfPicker>
+            <picker:SfPicker.SelectionView>
+                <picker:PickerSelectionView Background="Red"/>
+            </picker:SfPicker.SelectionView>
+        </picker:SfPicker>
 
-</ContentPage>
+    </ContentPage>
 
 {% endhighlight %}
-
 {% highlight C# %}
 
-using Syncfusion.Maui.Picker;
-...
+    using Syncfusion.Maui.Picker;
+    ...
 
-SfPicker picker = new SfPicker();
-picker.SelectionView.Background = Brush.Red;
-this.Content = picker;
+    SfPicker picker = new SfPicker();
+    picker.SelectionView.Background = Brush.Red;
+    this.Content = picker;
 
 {% endhighlight %}
-
 {% endtabs %}
 </td></tr>
+</table>
+
 <table>
 <tr>
 <th>Xamarin SfPicker</th>
@@ -553,67 +535,62 @@ this.Content = picker;
 <table>
 <tr>
 <th>Xamarin SfPicker</th>
-<th>.NET MAUI SfPicker</th></tr>
+<th>.NET MAUI SfPicker</th>
+</tr>
 <tr>
 <td>
 {% tabs %}
-
 {% highlight xaml %}
 
-<ContentPage
-xmlns:picker="clr-namespace:Syncfusion.XForms.Pickers;assembly=Syncfusion.SfPicker.XForms">
-    
-    <picker:SfPicker HeaderHeight="50"/>
+    <ContentPage
+    xmlns:picker="clr-namespace:Syncfusion.XForms.Pickers;assembly=Syncfusion.SfPicker.XForms">
+        
+        <picker:SfPicker HeaderHeight="50"/>
 
-</ContentPage>
+    </ContentPage>
 
 {% endhighlight %}
-
 {% highlight C# %}
 
-using Syncfusion.SfPicker.XForms;
-...
+    using Syncfusion.SfPicker.XForms;
+    ...
 
-SfPicker picker = new SfPicker();
-picker.HeaderHeight = 50; 
-this.Content = picker;
+    SfPicker picker = new SfPicker();
+    picker.HeaderHeight = 50; 
+    this.Content = picker;
+
 {% endhighlight %}
-
 {% endtabs %}
-
 </td>
 <td>
 {% tabs %}
-
 {% highlight xaml %}
 
-<ContentPage
-xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <ContentPage
+    xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
 
-    <picker:SfPicker>
-        <picker:SfPicker.HeaderView>
-            <picker:PickerHeaderView Height="50"/>
-        </picker:SfPicker.HeaderView>
-    </picker:SfPicker>
-
-</ContentPage>
+        <picker:SfPicker>
+            <picker:SfPicker.HeaderView>
+                <picker:PickerHeaderView Height="50"/>
+            </picker:SfPicker.HeaderView>
+        </picker:SfPicker>
+    </ContentPage>
 
 {% endhighlight %}
-
 {% highlight C# %}
 
-using Syncfusion.Maui.Picker;
-...
+    using Syncfusion.Maui.Picker;
+    ...
 
-SfPicker picker = new SfPicker();
-picker.HeaderView.Heigt = 50;
-this.Content = picker;
+    SfPicker picker = new SfPicker();
+    picker.HeaderView.Heigt = 50;
+    this.Content = picker;
 
 {% endhighlight %}
-
 {% endtabs %}
 </td></tr>
 </table>
+
 <table>
 <tr>
 <th>Xamarin SfPicker</th>
@@ -639,6 +616,7 @@ this.Content = picker;
 <td>{{'[[FontAttribute]()(From [TextStyle]() of [PickerHeaderView]())]'| markdownify }}</td>
 <td>Gets or sets the font attribute of the text style.</td>
 </tr>
+<tr>
 <td>{{'[HeaderHeight](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_HeaderHeightProperty)'| markdownify }}</td>
 <td>{{'[[Height]() '| markdownify }}</td>
 <td>Gets or sets the value to specify the height of header view on picker.</td>
@@ -648,6 +626,7 @@ this.Content = picker;
 <td>{{'[[Background]() '| markdownify }}</td>
 <td>Gets or sets the background of the header view in picker.</td>
 </tr>
+<tr>
 <td>Nil</td>
 <td>{{'[SelectionTextStyle]()'| markdownify }}</td>
 <td>Gets or sets the selection text style of the header text in picker.</td>
@@ -668,63 +647,58 @@ this.Content = picker;
 <tr>
 <td>
 {% tabs %}
-
 {% highlight xaml %}
 
-<ContentPage
-xmlns:picker="clr-namespace:Syncfusion.XForms.Pickers;assembly=Syncfusion.SfPicker.XForms">
-    
-    <picker:SfPicker ColumnHeaderHeight="50"/>
+    <ContentPage
+    xmlns:picker="clr-namespace:Syncfusion.XForms.Pickers;assembly=Syncfusion.SfPicker.XForms">
+        
+        <picker:SfPicker ColumnHeaderHeight="50"/>
 
-</ContentPage>
+    </ContentPage>
 
 {% endhighlight %}
-
 {% highlight C# %}
 
-using Syncfusion.SfPicker.XForms;
-...
+    using Syncfusion.SfPicker.XForms;
+    ...
 
-SfPicker picker = new SfPicker();
-picker.ColumnHeaderHeight = 50; 
-this.Content = picker;
+    SfPicker picker = new SfPicker();
+    picker.ColumnHeaderHeight = 50; 
+    this.Content = picker;
+
 {% endhighlight %}
-
 {% endtabs %}
-
 </td>
 <td>
 {% tabs %}
-
 {% highlight xaml %}
 
-<ContentPage
-xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <ContentPage
+    xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
 
-    <picker:SfPicker>
-        <picker:SfPicker.ColumnHeaderView>
-            <picker:PickerColumnHeaderView Height="50"/>
-        </picker:SfPicker.ColumnHeaderView>
-    </picker:SfPicker>
+        <picker:SfPicker>
+            <picker:SfPicker.ColumnHeaderView>
+                <picker:PickerColumnHeaderView Height="50"/>
+            </picker:SfPicker.ColumnHeaderView>
+        </picker:SfPicker>
 
-</ContentPage>
+    </ContentPage>
 
 {% endhighlight %}
-
 {% highlight C# %}
 
-using Syncfusion.Maui.Picker;
-...
+    using Syncfusion.Maui.Picker;
+    ...
 
-SfPicker picker = new SfPicker();
-picker.ColumnHeaderView.Heigt = 50;
-this.Content = picker;
+    SfPicker picker = new SfPicker();
+    picker.ColumnHeaderView.Heigt = 50;
+    this.Content = picker;
 
 {% endhighlight %}
-
 {% endtabs %}
 </td></tr>
 </table>
+
 <table>
 <tr>
 <th>Xamarin SfPicker</th>
@@ -766,7 +740,6 @@ this.Content = picker;
 <td>Gets or sets the background of the column header view in SfPicker.</td>
 </tr>
 <tr>
-<tr>
 <td>{{'[ColumnHeaderFontSize](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_ColumnHeaderFontSizeProperty)'| markdownify }}</td>
 <td>{{'[[FontSize]()(From [TextStyle]() of [PickerColumnHeaderView]())]'| markdownify }}</td>
 <td>Gets or sets the font size of the text style.</td>
@@ -787,63 +760,58 @@ this.Content = picker;
 <tr>
 <td>
 {% tabs %}
-
 {% highlight xaml %}
 
-<ContentPage
-xmlns:picker="clr-namespace:Syncfusion.XForms.Pickers;assembly=Syncfusion.SfPicker.XForms">
-    
-    <picker:SfPicker FooterHeight="50"/>
+    <ContentPage
+    xmlns:picker="clr-namespace:Syncfusion.XForms.Pickers;assembly=Syncfusion.SfPicker.XForms">
+        
+        <picker:SfPicker FooterHeight="50"/>
 
-</ContentPage>
+    </ContentPage>
 
 {% endhighlight %}
-
 {% highlight C# %}
 
-using Syncfusion.SfPicker.XForms;
-...
+    using Syncfusion.SfPicker.XForms;
+    ...
 
-SfPicker picker = new SfPicker();
-picker.FooterHeight = 50; 
-this.Content = picker;
+    SfPicker picker = new SfPicker();
+    picker.FooterHeight = 50; 
+    this.Content = picker;
+
 {% endhighlight %}
-
 {% endtabs %}
-
 </td>
 <td>
 {% tabs %}
-
 {% highlight xaml %}
 
-<ContentPage
-xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <ContentPage
+    xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
 
-    <picker:SfPicker>
-        <picker:SfPicker.FooterView>
-            <picker:PickerFooterView Height="50"/>
-        </picker:SfPicker.FooterView>
-    </picker:SfPicker>
+        <picker:SfPicker>
+            <picker:SfPicker.FooterView>
+                <picker:PickerFooterView Height="50"/>
+            </picker:SfPicker.FooterView>
+        </picker:SfPicker>
 
-</ContentPage>
+    </ContentPage>
 
 {% endhighlight %}
-
 {% highlight C# %}
 
-using Syncfusion.Maui.Picker;
-...
+    using Syncfusion.Maui.Picker;
+    ...
 
-SfPicker picker = new SfPicker();
-picker.FooterView.Heigt = 50;
-this.Content = picker;
+    SfPicker picker = new SfPicker();
+    picker.FooterView.Heigt = 50;
+    this.Content = picker;
 
 {% endhighlight %}
-
 {% endtabs %}
 </td></tr>
 </table>
+
 <table>
 <tr>
 <th>Xamarin SfPicker</th>
@@ -916,11 +884,11 @@ this.Content = picker;
 <th>Description</th>
 </tr>
 <tr>
-<tr>
 <td>{{'[SelectionChanged](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPicker.XForms.SfPicker.html#Syncfusion_SfPicker_XForms_SfPicker_SelectionChanged)'| markdownify }}</td>
 <td>{{'[SelectionChanged]()'| markdownify }}</td>
 <td>Occurs after the selected index changed on SfPicker.</td>
 </tr>
+<tr>
 <td>{{'[Opened](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.SfPicker.html#Syncfusion_XForms_Pickers_SfPicker_Opened)'| markdownify }}</td>
 <td>{{'[Opened]()'| markdownify }}</td>
 <td>Occurs whenever the opened on Picker. </td>
@@ -950,6 +918,7 @@ this.Content = picker;
 <td>{{'[PickerItemDetails]()'| markdownify }}</td>
 <td>Represents a class which contains picker item info.</td>
 </tr>
+<tr>
 <td>Nil</td>
 <td>{{'[PickerPropertyChanged]()'| markdownify }}</td>
 <td> Event Invokes on column header settings property changed and this includes old value of the changed property which is used to unwire events for nested classes.</td>
