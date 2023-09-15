@@ -148,4 +148,4 @@ button.WidthRequest = 150;
 
 ![Button with background image](images/getting-started/ButtonWithBackgroundImage.png)
 
-You can find the complete getting started sample of .NET MAUI Button from this [link.](https://github.com/SyncfusionExamples/maui-button-samples)
+Find the complete getting started sample of the .NET MAUI Button from this [link.](https://github.com/SyncfusionExamples/maui-button-samples)
