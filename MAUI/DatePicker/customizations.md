@@ -355,7 +355,7 @@ datePicker.SelectionView = new PickerSelectionView()
 {
     CornerRadius = 5,
     Stroke = Colors.Violet,
-    Pading = new Thickness(5, 10, 5, 10),
+    Pading = new Thickness(10, 5, 10, 5),
     Background = Color.FromArgb("#D3D3D3"),
 };
 
