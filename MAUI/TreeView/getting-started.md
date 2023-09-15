@@ -52,7 +52,7 @@ public partial class MainPage : ContentPage
 The `Syncfusion.Maui.Core` NuGet is a dependent package for all the Syncfusion controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion core.
 
 {% tabs %}
-{% highlight c#  tabtitle="MauiProgram.cs" hl_lines="4 20" %}
+{% highlight c# tabtitle="MauiProgram.cs" hl_lines="4 20" %}
 using Microsoft.Maui.Controls.Hosting;
 using Microsoft.Maui.Controls.Xaml;
 using Microsoft.Maui.Hosting;
@@ -880,6 +880,7 @@ treeView.ResetTreeViewItems();
 {% endtabs %}
 
 ## Refresh view
+
 You can refresh the view by using the `RefreshView` method. It will be used to refresh the items in the treeview at runtime while updating the view.
 
 {% tabs %}
