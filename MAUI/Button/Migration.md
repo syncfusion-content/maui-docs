@@ -9,7 +9,7 @@ documentation: ug
 
 # Migrating from Xamarin SfButton to .NET MAUI SfButton 
 
-To migrate easier from Xamarin SfButton to [.NET MAUI SfButton], we kept most of the APIs from Xamarin SfButton in MAUI SfButton. However, to maintain the consistency of the API naming in MAUI SfButton, we renamed some of the APIs. The APIs changed in MAUI SfButton from Xamarin SfButton are detailed as follows:
+To migrate easier from Xamarin SfButton to [.NET MAUI SfButton](https://www.syncfusion.com/maui-controls/maui-button), we kept most of the APIs from Xamarin SfButton in MAUI SfButton. However, to maintain the consistency of the API naming in MAUI SfButton, we renamed some of the APIs. The APIs changed in MAUI SfButton from Xamarin SfButton are detailed as follows:
 
 ## Namespaces 
 
