@@ -201,7 +201,7 @@ You can find the platforms supported by each .NET MAUI control as below.
 		</td>
 	</tr>
 	<tr>
-	    <td rowspan="1" valign="top">
+	    <td rowspan="2" valign="top">
 			NAVIGATION<br/>
 		</td>
 		<td>
@@ -220,12 +220,63 @@ You can find the platforms supported by each .NET MAUI control as below.
 		Yes<br/>
 		</td>
 	</tr>
+	<tr>
+		<td>
+			<a href="/maui/TreeView/overview">TreeView</a><br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+	</tr>
     <tr>
-	    <td rowspan="4" valign="top">
+	    <td rowspan="6" valign="top">
 			LAYOUT<br/>
 		</td>
 	    <td>
-			<a href="/maui/backdrop/overview">Backdrop Page</a><br/>
+			<a href="/maui/Accordion/overview">Accordion</a><br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<a href="/maui/Backdrop/overview">Backdrop</a><br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<a href="/maui/Expander/overview">Expander</a><br/>
 		</td>
 		<td>
 		Yes<br/>
@@ -397,7 +448,7 @@ You can find the platforms supported by each .NET MAUI control as below.
 		</td>
 	</tr>
 	<tr>
-	    <td rowspan="6" valign="top">
+	    <td rowspan="12" valign="top">
 		EDITORS<br/>
 		</td>
 		<td>
@@ -452,7 +503,75 @@ You can find the platforms supported by each .NET MAUI control as below.
 	</tr>
 	<tr>
 		<td>
+			<a href="/maui/DatePicker/overview">Date Picker</a><br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<a href="/maui/DateTimePicker/overview">Date Time Picker</a><br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+	</tr>
+	<tr>
+		<td>
 			<a href="/maui/masked-entry/overview">Masked Entry</a><br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<a href="/maui/NumericEntry/Overview">Numeric Entry</a><br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<a href="/maui/Picker/overview">Picker</a><br/>
 		</td>
 		<td>
 		Yes<br/>
@@ -487,6 +606,128 @@ You can find the platforms supported by each .NET MAUI control as below.
 	<tr>
 		<td>
 			<a href="/maui/SignaturePad/overview">Signature Pad</a><br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<a href="/maui/ImageEditor/overview">Image Editor</a><br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<a href="/maui/TimePicker/overview">Time Picker</a><br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+	</tr>
+	<tr>
+		<td rowspan="5" valign="top">
+				BUTTONS<br/>
+			</td>
+			<td>
+				<a href="/maui/Button/Overview">Button</a><br/>
+			</td>
+			<td>
+			Yes<br/>
+			</td>
+			<td>
+			Yes<br/>
+			</td>
+			<td>
+			Yes<br/>
+			</td>
+			<td>
+			Yes<br/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<a href="/maui/CheckBox/Overview">CheckBox</a><br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<a href="/maui/Chips/Overview">Chips</a><br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<a href="/maui/Radio-Button/Overview">Radio Button</a><br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<a href="/maui/Segmented-Control/overview">Segmented Control</a><br/>
 		</td>
 		<td>
 		Yes<br/>
