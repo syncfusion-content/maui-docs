@@ -9,15 +9,15 @@ documentation: ug
 
 # Getting Started with .NET MAUI CheckBox
 
-This section explains the steps required to work with the `.NET MAUI CheckBox` control.
+This section explains the steps required to work with the [.NET MAUI CheckBox](https://www.syncfusion.com/maui-controls/maui-checkbox) control.
 
 ## Creating an application with .NET MAUI CheckBox
 
-This section explains the steps required to work with the `CheckBox` control for .NET MAUI.
+This section explains the steps required to work with the [CheckBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html) control for .NET MAUI.
 
 ## Adding a .NET MAUI CheckBox reference
 
-Syncfusion .NET MAUI controls are available on [Nuget.org](https://www.nuget.org/). To add the `.NET MAUI CheckBox` to your project, open the NuGet package manager in Visual Studio, search for `Syncfusion.Maui.Buttons`, and install it.
+Syncfusion .NET MAUI controls are available on [Nuget.org](https://www.nuget.org/). To add the [.NET MAUI CheckBox](https://www.syncfusion.com/maui-controls/maui-checkbox) to your project, open the NuGet package manager in Visual Studio, search for [Syncfusion.Maui.Buttons](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.html), and install it.
 
 ## Handler registration 
 
@@ -116,7 +116,7 @@ Step 3: Set the control to content in `ContentPage`.
 
 ## Setting caption
 
-The check box caption can be defined using the [`Text`] property of [`SfCheckBox`]. This caption typically describes the meaning of the check box and is displayed next to the check box.
+The check box caption can be defined using the [`Text`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_Text) property of [`SfCheckBox`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html). This caption typically describes the meaning of the check box and is displayed next to the check box.
 
 {% tabs %}
 {% highlight xaml %}
@@ -138,7 +138,7 @@ The check box caption can be defined using the [`Text`] property of [`SfCheckBox
 
 ## Change the check box state
 
-The three visual states of [`SfCheckBox`] are: 
+The three visual states of [`SfCheckBox`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html) are: 
 
 * Checked
 * Unchecked
@@ -146,7 +146,7 @@ The three visual states of [`SfCheckBox`] are:
 
 ![.NET MAUI CheckBox](Images/Getting-Started/tristate.png) 
 
-You can change the state of the check box using the [`IsChecked`] [`SfCheckBox`]. In the checked state, a tick mark is added to the visualization of the check box.
+You can change the state of the check box using the [`IsChecked`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html#Syncfusion_Maui_Buttons_SfCheckBox_IsChecked) [`SfCheckBox`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html). In the checked state, a tick mark is added to the visualization of the check box.
 
 <table>
 <tr>
@@ -195,7 +195,7 @@ null
 </tr>
 </table>
 
-N> For the check box, to report the indeterminate state, set the [`IsThreeState`] property to true.
+N> For the check box, to report the indeterminate state, set the [`IsThreeState`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html#Syncfusion_Maui_Buttons_SfCheckBox_IsThreeState) property to true.
 
 The check box can be used as a single or as a group. A single check box mostly used for a binary yes/no choice, such as "Remember me?", login scenario, or a terms of service agreement.
 
@@ -261,11 +261,11 @@ Multiple checkboxes can be used as a group for multi-select scenarios in which a
 
 ## Intermediate
 
-The [`SfCheckBox`] allows an Intermediate state in addition to the checked and unchecked state. The Intermediate state of the check box is enabled by setting the [`IsThreeState`]property of the control to `True`.
+The [`SfCheckBox`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html) allows an Intermediate state in addition to the checked and unchecked state. The Intermediate state of the check box is enabled by setting the [`IsThreeState`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html#Syncfusion_Maui_Buttons_SfCheckBox_IsThreeState) property of the control to `True`.
 
-N> When the [`IsThreeState`] property is set to `False` and [`IsChecked`] property is set to `null` then the check box will be in unchecked state.
+N> When the [`IsThreeState`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html#Syncfusion_Maui_Buttons_SfCheckBox_IsThreeState) property is set to `False` and [`IsChecked`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html#Syncfusion_Maui_Buttons_SfCheckBox_IsChecked) property is set to `null` then the check box will be in unchecked state.
 
-The Intermediate state is used when a group of sub-choices has both checked and unchecked states. In the following example, the "Select all" checkbox has the [`IsThreeState`] property set to `true`. The "Select all" checkbox is checked if all child elements are checked, unchecked if all the child elements are unchecked, and Intermediate otherwise.
+The Intermediate state is used when a group of sub-choices has both checked and unchecked states. In the following example, the "Select all" checkbox has the `IsThreeState`(https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html#Syncfusion_Maui_Buttons_SfCheckBox_IsThreeState) property set to `true`. The "Select all" checkbox is checked if all child elements are checked, unchecked if all the child elements are unchecked, and Intermediate otherwise.
 
 {% tabs %}
 {% highlight xaml %}
