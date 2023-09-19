@@ -9,14 +9,14 @@ documentation: ug
 
 # Getting Started with .NET MAUI TreeView (SfTreeView)
 
-This section provides a quick overview for getting started with the TreeView with the .NET Maui TreeView(SfTreeView) for Maui. Walk through the entire process of creating real world of this control.
+This section provides a quick overview for getting started with the TreeView with the .NET Maui TreeView (SfTreeView) for Maui. Walk through the entire process of creating real world of this control.
 
 ## Creating an application using the .NET MAUI TreeView
 
  1. Create a new .NET MAUI application in Visual Studio.
  2. The Syncfusion .NET MAUI components are available on [nuget.org](https://www.nuget.org/). To add SfTreeView to your project, open the NuGet package manager in Visual Studio, search for `Syncfusion.Maui.TreeView` and then install it.
  3. Import the control namespace `Syncfusion.Maui.TreeView` in XAML or C# code.
- 4. Initialize the `SfTreeView` control.
+ 4. Initialize the [SfTreeView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.html) control.
 
 {% tabs %}
 {% highlight xaml hl_lines="5" %}
@@ -225,7 +225,7 @@ public class FileManager : INotifyPropertyChanged
 {% endhighlight %}
 {% endtabs %}
 
-N> If you want your data model to respond to property changes, then implement `INotifyPropertyChanged` interface in your model class.
+N> If you want your data model to respond to property changes, then implement [INotifyPropertyChanged](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.inotifypropertychanged?view=net-7.0) interface in your model class.
 
 Create a model repository class with `ImageNodeInfo` collection property initialized with required number of data objects in a new class file as shown in the following code example, and save it as `FileManagerViewModel.cs` file:
 
@@ -331,9 +331,9 @@ public class FileManagerViewModel
 
 ## Bind to a hierarchical data source - Bound Mode
 
-You can create a tree view by binding the `ItemsSource` to a hierarchical data source. To create a tree view using data binding, set a hierarchical collection to the `ItemsSource` property. Then in the `ItemTemplate` and `ExpanderTemplate`, set the child items collection to the `ItemsSource` property.
+You can create a tree view by binding the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ItemsSource) to a hierarchical data source. To create a tree view using data binding, set a hierarchical collection to the `ItemsSource` property. Then in the [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ItemTemplate) and [ExpanderTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ExpanderTemplate), set the child items collection to the `ItemsSource` property.
 
-I> ItemsSource is an alternative mechanism to Nodes for adding content into the TreeView control. You cannot set both ItemsSource and Nodes at the same time. When you use ItemsSource, nodes are created internally, but you cannot access them from the Nodes property.
+I> ItemsSource is an alternative mechanism to [Nodes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_Nodes) for adding content into the TreeView control. You cannot set both ItemsSource and Nodes at the same time. When you use ItemsSource, nodes are created internally, but you cannot access them from the Nodes property.
 
 {% tabs %}
 {% highlight xaml hl_lines="11" %}
@@ -627,12 +627,12 @@ public class FileManagerViewModel
 
 ## Bind to a Hierarchy Property Descriptors data source - Bound mode
 
-You can create a tree view by binding the `ItemsSource` to the hierarchy property descriptors data source. To create a tree view using hierarchical data binding, set a hierarchical collection to the `ItemsSource` property, and then set the `TargetType` and `ChildPropertyName` property values in `HirearchyPropertyDescriptors` .
+You can create a tree view by binding the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ItemsSource) to the hierarchy property descriptors data source. To create a tree view using hierarchical data binding, set a hierarchical collection to the `ItemsSource` property, and then set the `TargetType` and [ChildPropertyName](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ChildPropertyName) property values in [HirearchyPropertyDescriptors](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_HierarchyPropertyDescriptors) .
 
-I> `ItemsSource` is an alternative mechanism to `Nodes` for adding content into the TreeView control. You cannot set both `ItemsSource` and `Nodes` at the same time. When you use `ItemsSource`, nodes are created internally, but you cannot access them from the `Nodes` property.
+I> `ItemsSource` is an alternative mechanism to [Nodes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_Nodes) for adding content into the TreeView control. You cannot set both `ItemsSource` and `Nodes` at the same time. When you use `ItemsSource`, nodes are created internally, but you cannot access them from the `Nodes` property.
 
 {% tabs %}
-{% highlight xaml hl_lines="14" %}
+{% highlight xaml hl_lines="13 14 15 16" %}
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:syncfusion="clr-namespace:Syncfusion.Maui.TreeView;assembly=Syncfusion.Maui.TreeView"
@@ -681,9 +681,9 @@ namespace GettingStarted
 
 ## Defining a template to expander and content view
 
-By defining the `ExpanderTemplate` and `ItemTemplate` properties, a custom user interface (UI) can be created to display the data items for both expander and content view. It is applicable for both the Unbound and Bound mode data items.
+By defining the [ExpanderTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ExpanderTemplate) and [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ItemTemplate) properties, a custom user interface (UI) can be created to display the data items for both expander and content view. It is applicable for both the Unbound and Bound mode data items.
 
-N> By default, the binding context for each tree view item will be the data model object for Bound Mode and `TreeViewNode` for Unbound Mode. However, you can change the binding context for tree view items in Bound Mode as  `TreeViewNode` by defining the  `ItemTemplateContextType` enumeration to `Node`, which is applicable for both `ExpanderTemplate` and `ItemTemplate` properties.
+N> By default, the binding context for each tree view item will be the data model object for Bound Mode and [TreeViewNode](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.TreeViewNode.html) for Unbound Mode. However, you can change the binding context for tree view items in Bound Mode as  `TreeViewNode` by defining the [ItemTemplateContextType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.ItemTemplateContextType.html) enumeration to `Node`, which is applicable for both `ExpanderTemplate` and `ItemTemplate` properties.
 
 The following code example demonstrates how to customize your content view using the `ItemTemplate` and `ExpanderTemplate` property in both XAML and C#.
 
@@ -735,7 +735,7 @@ The following code example demonstrates how to customize your content view using
     </ContentPage.Content>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# hl_lines="12 26" %}
+{% highlight c# hl_lines="14 28" %}
 using Syncfusion.Maui.TreeView;
 
 namespace GettingStarted
@@ -786,9 +786,9 @@ Download the entire source code from GitHub [here](https://github.com/Syncfusion
 
 ## Interacting with a tree view
 
-The TreeView allows you to expand and collapse the nodes either by user interaction on the nodes or by programmatically. The expanding and collapsing interactions can be handled with the help of `NodeCollapsing` and `NodeExpanding` events.
+The TreeView allows you to expand and collapse the nodes either by user interaction on the nodes or by programmatically. The expanding and collapsing interactions can be handled with the help of [NodeCollapsing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_NodeCollapsing) and [NodeExpanding](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_NodeExpanding) events.
 
-You can define how the nodes to be expanded while loading the TreeView by using the AutoExpandMode property. Also, the TreeView allows you to set the restrictions whether expanding and collapsing of nodes can be performed only by tapping in expander view or in both expander view and content view by using the `ExpandActionTarget` property.
+You can define how the nodes to be expanded while loading the TreeView by using the [AutoExpandMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_AutoExpandMode) property. Also, the TreeView allows you to set the restrictions whether expanding and collapsing of nodes can be performed only by tapping in expander view or in both expander view and content view by using the [ExpandActionTarget](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ExpandActionTarget) property.
 
 N> the `AutoExpandMode` property is only applicable for bound mode. For Unbound mode you need to set `IsExpanded` property to `true` while creating the nodes, to be in expanded state while loading the TreeView.
 
@@ -828,11 +828,11 @@ namespace GettingStarted
 
 ## Selection
 
-The `TreeView` allows selecting the item by setting the `SelectionMode` property. Set the `SelectionMode` property to single, single-deselect, multiple, extended and none based on the requirements. Informations about the selected item can be tracked using the `SelectedItem`, `CurrentItem` and `SelectedItems` properties. Also, `TreeView` provides key board navigation support in WinUI and MacCatalyst platform.
+The `TreeView` allows selecting the item by setting the [SelectionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_SelectionMode) property. Set the `SelectionMode` property to single, single-deselect, multiple, extended and none based on the requirements. Informations about the selected item can be tracked using the [SelectedItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_SelectedItem), [CurrentItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_CurrentItem) and [SelectedItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_SelectedItems) properties. Also, `TreeView` provides key board navigation support in WinUI and MacCatalyst platform.
 
 It also allows changing the selection highlight color by using the `SelectionBackground` property. Additionally, for unbound mode, you can change the selection foreground color of the text by using the `SelectionForeground` property.
 
-The selection operations can be handled with the help of `SelectionChanging` and `SelectionChanged` events.
+The selection operations can be handled with the help of [SelectionChanging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_SelectionChanging) and [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_SelectionChanged) events.
  
 {% tabs %}
 {% highlight xaml hl_lines="8 9 10" %}
@@ -871,7 +871,7 @@ namespace GettingStarted
 
 ## Reset tree view items
 
-You can reset the visible treeview items by using the `ResetTreeViewItems` method. If the parameter is null, all the visible treeview items will reset. If you are passing the data object as a parameter, a particular treeview item will reset.
+You can reset the visible treeview items by using the [ResetTreeViewItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ResetTreeViewItems_System_Object_) method. If the parameter is null, all the visible treeview items will reset. If you are passing the data object as a parameter, a particular treeview item will reset.
  
 {% tabs %}
 {% highlight c# %}
@@ -881,7 +881,7 @@ treeView.ResetTreeViewItems();
 
 ## Refresh view
 
-You can refresh the view by using the `RefreshView` method. It will be used to refresh the items in the treeview at runtime while updating the view.
+You can refresh the view by using the [RefreshView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_RefreshView_System_Boolean_) method. It will be used to refresh the items in the treeview at runtime while updating the view.
 
 {% tabs %}
 {% highlight c# %}

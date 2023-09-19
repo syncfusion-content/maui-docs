@@ -15,7 +15,7 @@ The `SfTreeView` allows customizing the appearance of the underlying data and pr
  
 A template can be used to present the data in a way that makes sense for the application by using different controls.
 
-The TreeView allows you to customize the appearance of the content view and expander view by setting the `ItemTemplate` and `ExpanderTemplate` properties.
+The TreeView allows you to customize the appearance of the content view and expander view by setting the [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ItemTemplate) and [ExpanderTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ExpanderTemplate) properties.
 
 {% tabs %}
 {% highlight xaml hl_lines="14" %}
@@ -76,9 +76,9 @@ namespace GettingStarted
 
 ## BindingContext for ItemTemplate
 
-By default, the binding context of the tree view item will be the data model object for Bound Mode and `TreeViewNode` for Unbound Mode.
+By default, the binding context of the tree view item will be the data model object for Bound Mode and [TreeViewNode](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.TreeViewNode.html) for Unbound Mode.
 
-For Bound Mode, you can change the binding context of the treeview items using the `ItemTemplateContextType` property.
+For Bound Mode, you can change the binding context of the treeview items using the [ItemTemplateContextType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ItemTemplateContextType) property.
 
 {% tabs %}
 {% highlight xaml hl_lines="12" %}
@@ -142,11 +142,11 @@ Similarly, you can customize the expander view using the `ExpanderTemplate` prop
 
 ## ItemTemplate Selector
 
-The TreeView allows you to customize the appearance of each item with different templates based on specific constraints using the `DataTemplateSelector`. You can choose a `DataTemplate` for each item at runtime based on the value of the data-bound property using the `DataTemplateSelector`.
+The TreeView allows you to customize the appearance of each item with different templates based on specific constraints using the [DataTemplateSelector](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.datatemplateselector?view=net-maui-7.0). You can choose a [DataTemplate](https://learn.microsoft.com/en-us/dotnet/maui/fundamentals/datatemplate) for each item at runtime based on the value of the data-bound property using the `DataTemplateSelector`.
 
 ### Create a data template selector
 
-Create a custom class that inherits from the `DataTemplateSelector`, and overrides the `OnSelectTemplate` method to return the `DataTemplate` for that item. At runtime, the TreeView invokes the `OnSelectTemplate` method for each item and passes the data object as parameter.
+Create a custom class that inherits from the [DataTemplateSelector](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.datatemplateselector?view=net-maui-7.0), and overrides the `OnSelectTemplate` method to return the [DataTemplate](https://learn.microsoft.com/en-us/dotnet/maui/fundamentals/datatemplate) for that item. At runtime, the TreeView invokes the [OnSelectTemplate](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.datatemplateselector.onselecttemplate?view=net-maui-7.0) method for each item and passes the data object as parameter.
 
 Create different templates and load them using `DataTemplateSelector` in the `OnSelectTemplate` based on the requirements.
 
@@ -178,7 +178,7 @@ public class ItemTemplateSelector : DataTemplateSelector
 
 ### Applying a data template selector
 
-Assign a custom `DataTemplateSelector` to the ItemTemplate, either in XAML or C#.
+Assign a custom [DataTemplateSelector](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.datatemplateselector?view=net-maui-7.0) to the [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ItemTemplate), either in XAML or C#.
 
 The following code example illustrates how to load different templates for treeview items using the `DataTemplateSelector` based on different levels.
 
@@ -210,11 +210,11 @@ Download the entire source code from GitHub [here](https://github.com/Syncfusion
 
 ![.NET MAUI TreeView with TemplateSelector](Images/appearance/maui-treeView-templateSelector.png)
 
-Similarly, you can provide a `DataTemplateSelector` for the `ExpanderTemplate` property.
+Similarly, you can provide a `DataTemplateSelector` for the [ExpanderTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ExpanderTemplate) property.
 
 ## Indentation
 
-The TreeView allows for customization of the indent spacing of items by setting the `Indentation` property. The default value of this property is `30d`, but it can be customized at runtime.
+The TreeView allows for customization of the indent spacing of items by setting the [Indentation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_Indentation) property. The default value of this property is `30d`, but it can be customized at runtime.
 
 {% tabs %}
 {% highlight xaml %}
@@ -228,7 +228,7 @@ treeView.Indentation = 40;
 
 ## ExpanderWidth
 
-The TreeView allows customization of the width of the expander view by setting the `ExpanderWidth` property. The default value of this property is `32d`. This property can be customized at runtime.
+The TreeView allows customization of the width of the expander view by setting the [ExpanderWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ExpanderWidth) property. The default value of this property is `32d`. This property can be customized at runtime.
 
 {% tabs %}
 {% highlight xaml %}
@@ -242,7 +242,7 @@ treeView.ExpanderWidth = 40;
 
 ## ExpanderPosition
 
-The TreeView allows you to change the position of the expander view by setting the `ExpanderPosition` property. The default value of this property is `Start`.This property has the following two positions:
+The TreeView allows you to change the position of the expander view by setting the [ExpanderPosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ExpanderPosition) property. The default value of this property is `Start`.This property has the following two positions:
 
 * `Start`: Allows displaying the expander view at the start position.
 * `End`: Allows displaying the expander view at the end position.
@@ -259,7 +259,7 @@ treeView.ExpanderPosition = TreeViewExpanderPosition.End;
 
 ## Level based styling
 
-The TreeView allows you to customize the style of the `TreeViewItem` based on different levels by using the `IValueConverter`.
+The TreeView allows you to customize the style of the `TreeViewItem` based on different levels by using the [IValueConverter](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.ivalueconverter?view=net-maui-7.0).
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
