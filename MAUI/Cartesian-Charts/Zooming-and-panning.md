@@ -303,16 +303,16 @@ You can customize the selection rectangle using the following properties:
 ### Show trackball axis label
 The selection zooming trackball axis label is enabled by setting the [ShowTrackballLabel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_ShowTrackballLabel) property to `true`. The default value of the [ShowTrackballLabel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_ShowTrackballLabel) is `false`. The [TrackballLabelStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_TrackballLabelStyle) property provides to customize the trackball axis labels. These options are:
 
-* `Background`, of type `Brush`, describes the background color of the labels.
-* `CornerRadius`, of type `CornerRadius`, describes the corner radius of the label's border.
-* `FontAttributes`, of type `FontAttributes`, determines text style.
-* `FontFamily`, of type `string`, defines the font family of the label.
-* `FontSize`, of type `double`, defines the font size of the labels.
-* `Margin`, of type `Thickness`, used to change the margin of the labels. 
-* `Stroke`, of type `Brush`, describes the border stroke color of the labels.
-* `StrokeWidth`, of type `double`, defines the border thickness of the label.
-* `TextColor` of type `Color`, describes the color of the label's text.
-* `LabelFormat` of type `string`, defines the label format. This property is used to set numeric or date-time format to the chart axis label.
+* [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLabelStyle.html#Syncfusion_Maui_Charts_ChartLabelStyle_Background), of type `Brush`, describes the background color of the labels.
+* [CornerRadius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLabelStyle.html#Syncfusion_Maui_Charts_ChartLabelStyle_CornerRadius), of type `CornerRadius`, describes the corner radius of the label's border.
+* [FontAttributes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLabelStyle.html#Syncfusion_Maui_Charts_ChartLabelStyle_FontAttributes), of type `FontAttributes`, determines text style.
+* [FontFamily](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLabelStyle.html#Syncfusion_Maui_Charts_ChartLabelStyle_FontFamily), of type `string`, defines the font family of the label.
+* [FontSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLabelStyle.html#Syncfusion_Maui_Charts_ChartLabelStyle_FontSize), of type `double`, defines the font size of the labels.
+* [Margin](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLabelStyle.html#Syncfusion_Maui_Charts_ChartLabelStyle_Margin), of type `Thickness`, used to change the margin of the labels. 
+* [Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLabelStyle.html#Syncfusion_Maui_Charts_ChartLabelStyle_Stroke), of type `Brush`, describes the border stroke color of the labels.
+* [StrokeWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLabelStyle.html#Syncfusion_Maui_Charts_ChartLabelStyle_StrokeWidth), of type `double`, defines the border thickness of the label.
+* [TextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLabelStyle.html#Syncfusion_Maui_Charts_ChartLabelStyle_TextColor) of type `Color`, describes the color of the label's text.
+* [LabelFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLabelStyle.html#Syncfusion_Maui_Charts_ChartLabelStyle_LabelFormat) of type `string`, defines the label format. This property is used to set numeric or date-time format to the chart axis label.
 
 N> If the axis labels in the selection zooming trackball are cropped or hidden, you should use the [LabelExtent](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_LabelExtent) property to extend the space between the axis labels and the axis title accordingly.
 
