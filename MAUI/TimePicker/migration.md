@@ -505,3 +505,7 @@ this.Content = timePicker;
 <td>Occurs whenever the footer cancel button is clicked in the time picker.</td>
 </tr>
 </table>
+
+## Upcoming Features
+
+* Enable looping support.

@@ -505,3 +505,7 @@ this.Content = datePicker;
 <td>Occurs whenever footer cancel button is clicked in the date picker.</td>
 </tr>
 </table>
+
+## Upcoming Features
+
+* Enable looping support.
