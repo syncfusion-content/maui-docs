@@ -13,7 +13,7 @@ The TreeView allows you to expand and collapse the nodes through user interactio
 
 ##  Expand Action Target
 
-Expanding and collapsing of nodes can be performed by tapping the expander view or by setting the `ExpandActionTarget` property in both the expander view and content view.
+Expanding and collapsing of nodes can be performed by tapping the expander view or by setting the [ExpandActionTarget](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ExpandActionTarget) property in both the expander view and content view.
 
 {% tabs %}
 {% highlight xaml %}
@@ -31,7 +31,7 @@ treeView.ExpandActionTarget = TreeViewExpandActionTarget.Node;
 
 ## Auto Expand Mode
 
-By default, the items in the treeview will be in a collapsed state. You can define how the nodes should be expanded when loading the TreeView by using the `AutoExpandMode` property.
+By default, the items in the treeview will be in a collapsed state. You can define how the nodes should be expanded when loading the TreeView by using the [AutoExpandMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_AutoExpandMode) property.
 
 The `AutoExpandMode` property is only applicable in bound mode. In the unbound mode, you need to set the `IsExpanded` property to `true` when creating the nodes in order for them to be in the expanded state when the TreeView is loaded.
 
@@ -41,12 +41,12 @@ The `AutoExpandMode` property is only applicable in bound mode. In the unbound m
 
 ## Programmatic Expand and Collapse
 
-TreeView allows programmatic expansion and collapse based on the `TreeViewNode` and level using the following methods.
+TreeView allows programmatic expansion and collapse based on the [TreeViewNode](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.TreeViewNode.html) and level using the following methods.
 
-* `ExpandNode(TreeViewNode item)` - Method to expand the particular `TreeViewNode` passed to it.
-* `CollapseNode(TreeViewNode item)` - Method to collapse the particular `TreeViewNode` passed to it.
-* `ExpandNodes(int level)` - Method to expand the all items of level passed to it.
-* `CollapseNodes(int level)` - Method to expand the all items of level passed to it.
+* [ExpandNode(TreeViewNode item)](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ExpandNode_Syncfusion_TreeView_Engine_TreeViewNode_) - Method to expand the particular `TreeViewNode` passed to it.
+* [CollapseNode(TreeViewNode item)](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_CollapseNode_Syncfusion_TreeView_Engine_TreeViewNode_) - Method to collapse the particular `TreeViewNode` passed to it.
+* [ExpandNodes(int level)](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ExpandNodes_System_Int32_) - Method to expand the all items of level passed to it.
+* [CollapseNodes(int level)](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_CollapseNodes_System_Int32_) - Method to expand the all items of level passed to it.
 
 {% tabs %}
 {% highlight c# %}
@@ -68,7 +68,7 @@ treeView.CollapseNode(node);
 
 ### Expand and Collapse all the nodes
 
-Programmatically expand and collapse all the `TreeViewNode` at runtime using the `SfTreeView.ExpandAll` and `SfTreeView.CollapseAll` methods.
+Programmatically expand and collapse all the [TreeViewNode](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.TreeViewNode.html) at runtime using the [SfTreeView.ExpandAll](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ExpandAll) and [SfTreeView.CollapseAll](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_CollapseAll) methods.
 
 {% tabs %}
 {% highlight c# %}
@@ -90,11 +90,11 @@ TreeView allows the expansion and collapse of the nodes using the right and left
 
 TreeView exposes the following events to handle the expanding and collapsing of items.
 
-* `NodeCollapsing` - It occurs when a node is being collapsed.
-* `NodeExpanding` - It occurs when a node is being expanded.
-* `NodeCollapsed` - It occurs when a node is collapsed.
-* `NodeExpanded`  - It occurs when a node is expanded.
+* [NodeCollapsing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_NodeCollapsing) - It occurs when a node is being collapsed.
+* [NodeExpanding](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_NodeExpanding) - It occurs when a node is being expanded.
+* [NodeCollapsed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_NodeCollapsed) - It occurs when a node is collapsed.
+* [NodeExpanded](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_NodeExpanded)  - It occurs when a node is expanded.
 
 The expanding and collapsing interactions can be handled with the help of the `NodeCollapsing` and `NodeExpanding` events, and the expanded and collapsed interactions can be handled with the help of the `NodeCollapsed` and `NodeExpanded` events.
 
-You can also achieve handling of expand and collapse operations using the `ExpandCommand` and `CollapseCommand`.
+You can also achieve handling of expand and collapse operations using the [ExpandCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ExpandCommand) and [CollapseCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_CollapseCommand).

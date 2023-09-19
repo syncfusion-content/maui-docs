@@ -9,27 +9,27 @@ documentation: ug
 
 # Data Population in .NET MAUI TreeView (SfTreeView)
 
-TreeView can be populated either with the data source by using a `ItemsSource` property or by creating and adding the `TreeViewNode` in hierarchical structure to `Nodes` property.
+TreeView can be populated either with the data source by using a [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ItemsSource) property or by creating and adding the [TreeViewNode](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.TreeViewNode.html) in hierarchical structure to [Nodes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_Nodes) property.
 
 ## Populating Nodes by data binding - Bound Mode
 
-`Nodes` can be populated in bound mode includes following steps.
+[Nodes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_Nodes) can be populated in bound mode includes following steps.
 
-* Create hierarchical data model
-* Bind data model to treeview
+* [Create hierarchical data model](#create-data-model-for-treeview)
+* [Bind data model to treeview](#bind-to-hierarchical-datasource)
 
-To update the collection changes in UI, it is necessary to define `NotificationSubscriptionMode` to Treeview as `CollectionChanged/PropertyChanged`. 
+To update the collection changes in UI, it is necessary to define [NotificationSubscriptionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Data.NotificationSubscriptionMode.html) to Treeview as `CollectionChanged/PropertyChanged`. 
 `NotificationSubscriptionMode` enum has following members:
-* `CollectionChange` - Updates its tree structure when the child items collection is changed.
-* `PropertyChange` - Updates its ChildItems when the associated collection property is changed.
-* `None` - It is a default mode and it doesnot reflect collection or property changes in UI.
+* [CollectionChange](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Data.NotificationSubscriptionMode.html#Syncfusion_Maui_Data_NotificationSubscriptionMode_CollectionChange) - Updates its tree structure when the child items collection is changed.
+* [PropertyChange](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Data.NotificationSubscriptionMode.html#Syncfusion_Maui_Data_NotificationSubscriptionMode_PropertyChange) - Updates its ChildItems when the associated collection property is changed.
+* [None](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Data.NotificationSubscriptionMode.html#Syncfusion_Maui_Data_NotificationSubscriptionMode_None) - It is a default mode and it doesnot reflect collection or property changes in UI.
 
-To decide how to populate the nodes, it is necessary to set this `NodePopulationMode` API to Treeview. 
+To decide how to populate the nodes, it is necessary to set this [NodePopulationMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_NodePopulationMode) API to Treeview. 
 
 The `NodePopulationMode` API has following enum values:
 
-* `OnDemand` - Populate the child nodes only when the parent nodes is expanded. It is the default value.
-* `Instant` - Populates all the child nodes when Treeview control is initially loaded.
+* [OnDemand](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.TreeNodePopulationMode.html#Syncfusion_TreeView_Engine_TreeNodePopulationMode_OnDemand) - Populate the child nodes only when the parent nodes is expanded. It is the default value.
+* [Instant](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.TreeNodePopulationMode.html#Syncfusion_TreeView_Engine_TreeNodePopulationMode_Instant) - Populates all the child nodes when Treeview control is initially loaded.
 
 ### Create Data Model for treeview
 
@@ -194,10 +194,10 @@ public class FileManagerViewModel
 
 ### Bind to hierarchical datasource
 
-To create a tree view using data binding, set a hierarchical data collection to the `ItemsSource` property. And set the child object name to the `ChildPropertyName` property.
+To create a tree view using data binding, set a hierarchical data collection to the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ItemsSource) property. And set the child object name to the [ChildPropertyName](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ChildPropertyName) property.
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight xaml hl_lines="11 12" %}
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
@@ -215,8 +215,7 @@ To create a tree view using data binding, set a hierarchical data collection to 
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# %}
-
+{% highlight c# hl_lines="3 4" %}
 SfTreeView treeView = new SfTreeView();
 FileManagerViewModel viewModel = new FileManagerViewModel ();
 treeView.ChildPropertyName = "SubFiles";
@@ -232,7 +231,7 @@ Download the entire source code from GitHub [here](https://github.com/Syncfusion
 
 ## Populating Nodes without data binding - Unbound Mode
 
-You can create and manage the `TreeViewNode` objects by yourself to display the data in a hierarchical view. Create the node hierarchy by adding one or more root nodes to the `Nodes` collection. Each `TreeViewNode` can then have more nodes added to its Children collection. You can nest the tree view nodes to any depth you need. By using the `Content` property, you can get the data object associated with the tree view node. For the Bound node, you can bind the data object using the `Content` property by setting the `ItemTemplateContextType` to `Node`. For Unbound node, you can directly set the `Content` value. You can get the parent node of the treeview nodes by using the `ParentNode` property of the TreeViewNode. By using the Level property of the `TreeViewNode`, you can get the zero-based depth of the tree node in the TreeView control. For the `Level` property, the root node is considered the first level of nesting and returns 0.
+You can create and manage the [TreeViewNode](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.TreeViewNode.html) objects by yourself to display the data in a hierarchical view. Create the node hierarchy by adding one or more root nodes to the [Nodes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_Nodes) collection. Each `TreeViewNode` can then have more nodes added to its Children collection. You can nest the tree view nodes to any depth you need. By using the [Content](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.TreeViewNode.html#Syncfusion_TreeView_Engine_TreeViewNode_Content) property, you can get the data object associated with the tree view node. For the Bound node, you can bind the data object using the `Content` property by setting the `ItemTemplateContextType` to `Node`. For Unbound node, you can directly set the `Content` value. You can get the parent node of the treeview nodes by using the [ParentNode](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.TreeViewNode.html#Syncfusion_TreeView_Engine_TreeViewNode_ParentNode) property of the TreeViewNode. By using the Level property of the `TreeViewNode`, you can get the zero-based depth of the tree node in the TreeView control. For the [Level](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.TreeViewNode.html#Syncfusion_TreeView_Engine_TreeViewNode_Level) property, the root node is considered the first level of nesting and returns 0.
 
 {% tabs %}
 {% highlight xaml %}
