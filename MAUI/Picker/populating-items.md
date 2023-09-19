@@ -40,7 +40,7 @@ To bind the item source in the picker, set the `SfPicker.Columns.ItemSource` pro
         ItemsSource = cityName,
         SelectedIndex = 1,
     };
-    this.Picker.Add(pickerColumn);
+    this.Picker.Columns.Add(pickerColumn);
 
 {% endhighlight %}
 {% endtabs %}
@@ -63,9 +63,9 @@ The following code example encapsulate how to populate Country and Cityes in eac
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
     ObservableCollection<object> countryName = new ObservableCollection<object>();
-    countryName.Add("India");
-    countryName.Add("United States");
     countryName.Add("Canada");
+    countryName.Add("United States");
+    countryName.Add("India");
     countryName.Add("United Kingdom");
     countryName.Add("Australia");
     countryName.Add("Germany");
@@ -116,7 +116,7 @@ Selected item text style can be customized by setting `SfPicker.SelectedTextStyl
 
     <sfPicker:SfPicker x:Name="Picker">
         <sfPicker:SfPicker.SelectedTextStyle>
-            <sfPicker:PickerTextStyle FontSize="16" FontAttributes="Bold" TextColor="Gray">
+            <sfPicker:PickerTextStyle FontSize="16" FontAttributes="Bold" TextColor="White">
             </sfPicker:PickerTextStyle>
         </sfPicker:SfPicker.SelectedTextStyle>
     </sfPicker:SfPicker>
@@ -126,7 +126,7 @@ Selected item text style can be customized by setting `SfPicker.SelectedTextStyl
 
     this.Picker.SelectedTextStyle.FontSize = 16;
     this.Picker.SelectedTextStyle.FontAttributes = FontAttributes.Bold;
-    this.Picker.SelectedTextStyle.TextColor = Colors.Gray;
+    this.Picker.SelectedTextStyle.TextColor = Colors.White;
 
 {% endhighlight %}
 {% endtabs %}
@@ -140,7 +140,7 @@ Unselected item text style can be customized by setting `SfPicker.TextStyle` pro
 
     <sfPicker:SfPicker x:Name="Picker">
         <sfPicker:SfPicker.TextStyle>
-            <sfPicker:PickerTextStyle FontSize="17" FontAttributes="Italic" TextColor="Green">
+            <sfPicker:PickerTextStyle FontSize="16" FontAttributes="Italic" TextColor="Black">
             </sfPicker:PickerTextStyle>
         </sfPicker:SfPicker.TextStyle>
     </sfPicker:SfPicker>
@@ -148,9 +148,9 @@ Unselected item text style can be customized by setting `SfPicker.TextStyle` pro
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-    this.Picker.TextStyle.FontSize = 17;
+    this.Picker.TextStyle.FontSize = 16;
     this.Picker.TextStyle.FontAttributes = FontAttributes.Italic;
-    this.Picker.TextStyle.TextColor = Colors.green;
+    this.Picker.TextStyle.TextColor = Colors.Black;
 
 {% endhighlight %}
 {% endtabs %}
@@ -181,14 +181,12 @@ In picker control, the items can be customized with a custom view of all items b
     {
         Grid grid = new Grid
         {
-            Padding = new Thickness(0, 0, 5, 5),
-            BackgroundColor = Colors.Pink,
+            Padding = new Thickness(0, 1, 0, 1);
         };
         Label label = new Label
         {
             HorizontalOptions = LayoutOptions.Center,
             VerticalOptions = LayoutOptions.Center,
-            BackgroundColor = Colors.Red,
             HorizontalTextAlignment = TextAlignment.Center,
             VerticalTextAlignment = TextAlignment.Center,
             TextColor = Colors.Black,

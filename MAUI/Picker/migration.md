@@ -189,7 +189,7 @@ The following code example, explains how to initialize the properties of the `Xa
 <th>Description</th>
 </tr>
 <tr>
-<td>{{'[HeaderView](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_HeaderViewProperty)'| markdownify }}</td>
+<td>{{'[HeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfPicker.html#Syncfusion_Maui_Picker_SfPicker_HeaderView)'| markdownify }}</td>
 <td>{{'[HeaderView]https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfPicker.html#Syncfusion_Maui_Picker_SfPicker_HeaderView)'| markdownify }}</td>
 <td>Gets or sets the value of header view. This property can be used to customize the of header in SfPicker.</td>
 </tr>
@@ -237,11 +237,6 @@ The following code example, explains how to initialize the properties of the `Xa
 <td>{{'[PickerMode](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPicker.XForms.SfPicker.html#Syncfusion_SfPicker_XForms_SfPicker_PickerMode)'| markdownify }}</td>
 <td>{{'[Mode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_Mode)'| markdownify }}</td>
 <td>Gets or sets the mode of the picker.</td>
-</tr>
-<tr>
-<td>Nil</td>
-<td>{{'[ColumnDividerColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_ColumnDividerColor)'| markdownify }}</td>
-<td>Gets or sets the value of column divider color in SfPicker. This property can be used to customize the of column divider color in Picker.</td>
 </tr>
 <tr>
 <td>{{'[EnableLooping](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_EnableLoopingProperty)'| markdownify }}</td>
