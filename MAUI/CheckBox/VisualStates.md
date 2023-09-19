@@ -86,12 +86,12 @@ The visual of the CheckBox can be customized using `VisualStates`. The [`SfCheck
 
 **Checked visual state:**
 
-![.NET MAUI CheckBox](Images/VisualStates/checkboxchecked.png)
+![.NET MAUI CheckBox](Images/VisualStates/checkedvs.png)
 
 **Unchecked visual state:**
 
-![.NET MAUI CheckBox](Images/VisualStates/checkboxuncheck.png)
+![.NET MAUI CheckBox](Images/VisualStates/uncheckedvs.png)
 
 **Intermediate visual state:**
 
-![.NET MAUI CheckBox](Images/VisualStates/checkboxintermediate.png)
+![.NET MAUI CheckBox](Images/VisualStates/intermediatevs.png)
