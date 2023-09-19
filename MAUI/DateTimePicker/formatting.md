@@ -1,0 +1,93 @@
+---
+layout: post
+title: Formatting in .NET MAUI Date Time Picker Control | Syncfusion
+description: Learn about formatting in Syncfusion .NET MAUI Date Time Picker (SfDateTimePicker) control and its basic features.
+platform: maui
+control: SfDateTimePicker
+documentation: ug
+---
+
+# Formatting in .NET MAUI Date Time Picker (SfDateTimePicker)
+Format is a way to represent the date and time value in a different string format.
+
+## Date format
+You can customize the date format of the date time picker by using the [DateFormat] property in [PickerDateFormat]. The default format is `yyyy_MM_dd`.
+
+
+The different types of formats are:
+
+[`dd_MM`] - Represents the day month in dd/MM format.
+
+[`dd_MM_yyyy`] - Represents the day month year in dd/MM/yyyy format.
+
+[`dd_MMM_yyyy`] - Represents the day month year in dd/MMM/yyyy format.
+
+[`M_d_yyyy`] - Represents the month day year in M/d/yyyy format.
+
+[`MM_dd_yyyy`] - Represents the month day year in MM/dd/yyyy format.
+
+[`MM_yyyy`] - Represents the month year in MM/yyyy format.
+
+[`MMM_yyyy`] - Represents the month year in MMM/yyyy format.
+
+[`yyyy_MM_dd`] - Represents the year month day in yyyy/MM/dd format.
+
+
+{% tabs %}
+{% highlight xaml tabtitle="XAML" hl_lines="2" %}
+
+<picker:SfDateTimePicker x:Name="Picker"
+                         DateFormat="dd_MMM_yyyy">
+</picker:SfDateTimePicker>
+
+{% endhighlight %}
+{% highlight c# tabtitle="C#" hl_lines="2" %}
+
+SfDateTimePicker picker = new SfDateTimePicker();
+picker.DateFormat = PickerDateFormat.dd_MMM_yyyy;
+this.Content = picker;
+
+{% endhighlight %}  
+{% endtabs %}
+
+## Time format
+You can customize the time format of the date time picker by using the [TimeFormat] property in [PickerTimeFormat]. The default format is `HH_mm_ss`.
+
+
+The different types of formats are:
+
+[`H_mm`] - Represents the hour minute in H_mm format.
+
+[`H_mm_ss`] - Represents the hour minute second in H_mm_ss format.
+
+[`h_mm_ss_tt`] - Represents the hour minute second meridiem in h_mm_ss_tt format.
+
+[`h_mm_tt`] - Represents the hour minute meridiem in h_mm_tt format.
+
+[`HH_mm`] - Represents the hour minute in HH_mm format.
+
+[`HH_mm_ss`] - Represents the hour minute second in HH_mm_ss format.
+
+[`hh_mm_ss_tt`] - Represents the hour minute second meridiem in hh_mm_ss_tt format.
+
+[`hh_mm_tt`] - Represents the hour minute meridiem in hh_mm_tt format.
+
+[`hh_tt`] - Represents the hour meridiem in hh_tt format.
+
+
+{% tabs %}
+{% highlight xaml tabtitle="XAML" hl_lines="2" %}
+
+<picker:SfDateTimePicker x:Name="Picker"
+                         TimeFormat="hh_mm_ss_tt">
+</picker:SfDateTimePicker>
+
+{% endhighlight %}
+{% highlight c# tabtitle="C#" hl_lines="2" %}
+
+SfDateTimePicker picker = new SfDateTimePicker();
+picker.TimeFormat = PickerTimeFormat.hh_mm_ss_tt;
+this.Content = picker;
+
+{% endhighlight %}  
+{% endtabs %}

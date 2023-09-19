@@ -37,3 +37,35 @@ The [ItemRemoved](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChi
 
 N> The [ItemRemoved] event is supported only in the `Input` type.
 
+##  CloseButtonClicked
+
+The `CloseButtonClicked` event is triggered when the closed button is clicked. The event argument is type of `EventArgs`.
+
+{% tabs %}
+{% highlight xaml %}
+    
+   <chip:SfChip WidthRequest="100"
+                x:Name="chip"
+                CloseButtonClicked="SfChip_CloseButtonClicked"/>
+
+{% endhighlight %}
+{% highlight c# %}
+
+   SfChip chip = new SfChip();
+   chip.CloseButtonClicked+=chip_CloseButtonClicked;
+
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight c# %}
+    
+    private async void SfChip_CloseButtonClicked(object sender, EventArgs e)
+        {
+            await DisplayAlert("Message", "Chip CloseButton Clicked", "close");
+        }
+
+{% endhighlight %}
+{% endtabs %}
+
+
