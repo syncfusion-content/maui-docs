@@ -1123,7 +1123,3 @@ this.Content = calendar;
 <td>Not Supported.</td>
 </tr>
 </table>
-
-## Upcoming Features
-
-* Multi range selection support.

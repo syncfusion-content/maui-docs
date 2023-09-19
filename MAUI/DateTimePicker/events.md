@@ -11,14 +11,14 @@ documentation: ug
 
 ## Selection changed event
 
-The [SelectionChanged] event is used to notify when the date time selection is changed onto the view in the [SfDateTimePicker].
+The [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfPicker.html#Syncfusion_Maui_Picker_SfPicker_SelectionChanged) event is used to notify when the date time selection is changed onto the view in the [SfDateTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html).
 
 * `Sender`: This contains the `SfDateTimePicker` object.
 
-* `EventArgs`: In the SfDateTimePicker picker, the [DateTimePickerSelectionChangedEventArgs] is used for this event, which holds the data of NewValue and OldValue.
+* `EventArgs`: In the SfDateTimePicker picker, the [DateTimePickerSelectionChangedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerSelectionChangedEventArgs.html) is used for this event, which holds the data of NewValue and OldValue.
 
-    * [NewValue] : Returns the new selected date and time.
-    * [OldValue] : Returns the old selected date and time.
+    * [NewValue](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.DatePickerSelectionChangedEventArgs.html#Syncfusion_Maui_Picker_DatePickerSelectionChangedEventArgs_NewValue) : Returns the new selected date and time.
+    * [OldValue](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.DatePickerSelectionChangedEventArgs.html#Syncfusion_Maui_Picker_DatePickerSelectionChangedEventArgs_OldValue) : Returns the old selected date and time.
 
 
 {% tabs %}
@@ -46,17 +46,17 @@ private void OnDateTimePickerSelectionChanged(object sender, DateTimePickerSelec
 
 In `SfDateTimePicker`, three events are used while the date time picker is in Dialog mode.
 
- * [`Opened`]
- * [`Closing`]
- * [`Closed`]
+ * [`Opened`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_Opened)
+ * [`Closing`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_Closing)
+ * [`Closed`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_Closed)
 
 ### Opened event
 
-The [Opened] event occurs when the picker popup is opened in the [SfDateTimePicker].
+The [Opened](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_Opened) event occurs when the picker popup is opened in the [SfDateTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html).
 
 * `Sender`: This contains the `SfDateTimePicker` object.
 
-* `EventArgs`: In SfDateTimePicker picker, [EventArgs] is used for this event.
+* `EventArgs`: In SfDateTimePicker picker, `EventArgs` is used for this event.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
@@ -81,13 +81,13 @@ private void OnDateTimePickerPopUpOpened(object sender, EventArgs e)
 
 ### Closing event
 
-The [Closing] event occurs when the picker popup is closing in the [SfDateTimePicker].
+The [Closing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_Closing) event occurs when the picker popup is closing in the [SfDateTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html).
 
 * `Sender`: This contains the `SfDateTimePicker` object.
 
-* `EventArgs`: In SfDateTimePicker picker, [CancelEventArgs] is used to describe the cancel event which holds the bool value.
+* `EventArgs`: In SfDateTimePicker picker, `CancelEventArgs` is used to describe the cancel event which holds the bool value.
 
-    * [Cancel] : Indicating whether we should cancel the operation or not.
+    * `Cancel` : Indicating whether we should cancel the operation or not.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
@@ -112,11 +112,11 @@ private void OnDateTimePickerPopUpClosing(object sender, CancelEventArgs e)
 
 ### Closed event
 
-The [Closed] event occurs when the picker popup is closed in the [SfDateTimePicker].
+The [Closed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_Closed) event occurs when the picker popup is closed in the [SfDateTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html).
 
 * `Sender`: This contains the `SfDateTimePicker` object.
 
-* `EventArgs`: In SfDateTimePicker picker, [EventArgs] is used for this event.
+* `EventArgs`: In SfDateTimePicker picker, `EventArgs` is used for this event.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
@@ -143,16 +143,16 @@ private void OnDateTimePickerPopUpClosed(object sender, EventArgs e)
 
 The `SfDateTimePicker` footer view provides two events. These events are not applicable while the footer view is not visible.
 
- * [`OkButtonClicked`]
- * [`CancelButtonClicked`]
+ * [`OkButtonClicked`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_OkButtonClicked)
+ * [`CancelButtonClicked`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_CancelButtonClicked)
 
 ### OkButtonClicked event
 
- The [OkButtonClicked] event occurs when the ok button is clicked in the [SfDateTimePicker] footer view. This event is not applicable when the footer view is not visible and the ok button is not visible.
+ The [OkButtonClicked](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_OkButtonClicked) event occurs when the ok button is clicked in the Date Time Picker footer view. This event is not applicable when the footer view is not visible and the ok button is not visible.
 
 * `Sender`: This contains the `SfDateTimePicker` object.
 
-* `EventArgs`: In SfDateTimePicker picker, [EventArgs] is used for this event.
+* `EventArgs`: In SfDateTimePicker picker, `EventArgs` is used for this event.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
@@ -176,11 +176,11 @@ private void OnDateTimePickerOkButtonClicked(object sender, EventArgs e)
 
 ### CancelButtonClicked event
 
- The [CancelButtonClicked] event occurs when the cancel button is clicked in the [SfDateTimePicker] footer view. This event is not applicable when the footer view is not visible.
+ The [CancelButtonClicked](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_CancelButtonClicked) event occurs when the cancel button is clicked in the  Date Time Picker footer view. This event is not applicable when the footer view is not visible.
 
 * `Sender`: This contains the `SfDateTimePicker` object.
 
-* `EventArgs`: In SfDateTimePicker picker, [EventArgs] is used for this event.
+* `EventArgs`: In SfDateTimePicker picker, `EventArgs` is used for this event.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
