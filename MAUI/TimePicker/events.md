@@ -11,14 +11,14 @@ documentation: ug
 
 ## Selection changed event
 
-The [SelectionChanged] event is used to notify when the time selection is changed onto the view in the [SfTimePicker].
+The [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html#Syncfusion_Maui_Picker_SfTimePicker_SelectionChanged) event is used to notify when the time selection is changed onto the view in the [SfTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html).
 
 * `Sender`: This contains the `SfTimePicker` object.
 
-* `EventArgs`: In the SfTimePicker picker, the [TimePickerSelectionChangedEventArgs] is used for this event which holds the data of NewValue and OldValue.
+* `EventArgs`: In the SfTimePicker picker, the [TimePickerSelectionChangedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.TimePickerSelectionChangedEventArgs.html) is used for this event which holds the data of NewValue and OldValue.
 
-    * [NewValue] : Returns the new selected time.
-    * [OldValue] : Returns the old selected time.
+    * [NewValue](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.TimePickerSelectionChangedEventArgs.html#Syncfusion_Maui_Picker_TimePickerSelectionChangedEventArgs_NewValue) : Returns the new selected time.
+    * [OldValue](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.TimePickerSelectionChangedEventArgs.html#Syncfusion_Maui_Picker_TimePickerSelectionChangedEventArgs_OldValue) : Returns the old selected time.
 
 
 {% tabs %}
@@ -49,17 +49,17 @@ private void OnTimePickerSelectionChanged(object sender, TimePickerSelectionChan
 
 In `SfTimePicker`, three events are used while the time picker is in Dialog mode.
 
- * [`Opened`]
- * [`Closing`]
- * [`Closed`]
+ * [`Opened`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_Opened)
+ * [`Closing`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_Closing)
+ * [`Closed`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_Closed)
 
 ### Opened event
 
-The [Opened] event occurs when the picker popup is opened in the [SfTimePicker].
+The [Opened](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_Opened) event occurs when the picker popup is opened in the [SfTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html).
 
 * `Sender`: This contains the `SfTimePicker` object.
 
-* `EventArgs`: In the SfTimePicker picker, [EventArgs] is used for this event.
+* `EventArgs`: In the SfTimePicker picker, `EventArgs` is used for this event.
 
 {% tabs %}
 
@@ -87,13 +87,13 @@ private void OnTimePickerPopUpOpened(object sender, EventArgs e)
 
 ### Closing event
 
-The [Closing] event occurs when the picker popup is closing in the [SfTimePicker].
+The [Closing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_Closing) event occurs when the picker popup is closing in the [SfTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html).
 
 * `Sender`: This contains the `SfTimePicker` object.
 
-* `EventArgs`: In the SfTimePicker picker, [CancelEventArgs] is used to describe a cancel event which holds the bool value.
+* `EventArgs`: In the SfTimePicker picker, `CancelEventArgs` is used to describe a cancel event which holds the bool value.
 
-    * [Cancel] : Indicating whether you should cancel the operation or not.
+    * `Cancel` : Indicating whether you should cancel the operation or not.
 
 {% tabs %}
 
@@ -121,11 +121,11 @@ private void OnTimePickerPopUpClosing(object sender, CancelEventArgs e)
 
 ### Closed event
 
-The [Closed] event occurs when the picker popup is closed in the [SfTimePicker].
+The [Closed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_Closed) event occurs when the picker popup is closed in the [SfTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html).
 
 * `Sender`: This contains the `SfTimePicker` object.
 
-* `EventArgs`: In the SfTimePicker picker, [EventArgs] is used for this event.
+* `EventArgs`: In the SfTimePicker picker, `EventArgs` is used for this event.
 
 {% tabs %}
 
@@ -155,16 +155,16 @@ private void OnTimePickerPopUpClosed(object sender, EventArgs e)
 
 In the `SfTimePicker` footer view provides two events. These events are not applicable while the footer view is not visible.
 
- * [`OkButtonClicked`]
- * [`CancelButtonClicked`]
+ * [`OkButtonClicked`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_OkButtonClicked)
+ * [`CancelButtonClicked`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_CancelButtonClicked)
 
 ### OkButtonClicked event
 
- The [OkButtonClicked] event occurs when the ok button is clicked in the [SfTimePicker] footer view. This event is not applicable when the footer view is not visible and the ok button is not visible.
+ The [OkButtonClicked](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_OkButtonClicked) event occurs when the ok button is clicked in the [SfTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html) footer view. This event is not applicable when the footer view is not visible and the ok button is not visible.
 
 * `Sender`: This contains the `SfTimePicker` object.
 
-* `EventArgs`: In the SfTimePicker picker, [EventArgs] is used for this event.
+* `EventArgs`: In the SfTimePicker picker, `EventArgs` is used for this event.
 
 {% tabs %}
 
@@ -191,11 +191,11 @@ private void OnTimePickerOkButtonClicked(object sender, EventArgs e)
 
 ### CancelButtonClicked event
 
- The [CancelButtonClicked] event occurs when the cancel button is clicked in the [SfTimePicker] footer view. This event is not applicable when the footer view is not visible.
+ The [CancelButtonClicked](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_CancelButtonClicked) event occurs when the cancel button is clicked in the [SfTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html) footer view. This event is not applicable when the footer view is not visible.
 
 * `Sender`: This contains the `SfTimePicker` object.
 
-* `EventArgs`: In the SfTimePicker picker, [EventArgs] is used for this event.
+* `EventArgs`: In the SfTimePicker picker, `EventArgs` is used for this event.
 
 {% tabs %}
 
