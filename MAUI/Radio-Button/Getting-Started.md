@@ -170,4 +170,4 @@ N> [`SfRadioButtons`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Button
 
 ![.NET MAUI Radio Button](Images/Getting-Started/statechange.png)
 
-Find the complete getting started sample of the .NET MAUI Radio Button from this [link.](https://github.com/SyncfusionExamples/maui-radiobutton-samples)
+You can find the complete getting started sample of the .NET MAUI Radio Button from this [link.](https://github.com/SyncfusionExamples/maui-radiobutton-samples)
