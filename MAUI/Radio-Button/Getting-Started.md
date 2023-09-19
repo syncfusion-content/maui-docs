@@ -9,11 +9,11 @@ documentation: ug
 
 ## Creating an application with .NET MAUI Radio Button
 
-This section explains the steps required to work with the `SfRadioButton` control for .NET MAUI.
+This section explains the steps required to work with the [`SfRadioButton`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioButton.html) control for .NET MAUI.
 
 ## Adding a .NET MAUI Radio Button reference
 
-Syncfusion .NET MAUI controls are available on [Nuget.org](https://www.nuget.org/). To add the `.NET MAUI Radio Button` to your project, open the NuGet Package Manager in Visual Studio, search for Syncfusion.Maui.Buttons, and install it.
+Syncfusion .NET MAUI controls are available on [Nuget.org](https://www.nuget.org/). To add the [.NET MAUI Radio Button](https://www.syncfusion.com/maui-controls/maui-radio-button) to your project, open the NuGet Package Manager in Visual Studio, search for Syncfusion.Maui.Buttons, and install it.
 
 ## Handler registration 
 
@@ -112,7 +112,7 @@ Step 3: Set the control to content in `ContentPage`.
 
 ## Setting caption
 
-The radio button caption can be defined using the [`Text`] property of [`SfRadioButton`]. This caption typically describes the meaning of the radio button and is displayed next to the radio button.
+The radio button caption can be defined using the [`Text`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_Text) property of [`SfRadioButton`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioButton.html). This caption typically describes the meaning of the radio button and is displayed next to the radio button.
  
 {% tabs %}
 {% highlight xaml %}
@@ -133,12 +133,12 @@ The radio button caption can be defined using the [`Text`] property of [`SfRadio
 
 ## Change the Radio Button state
 
-The two different visual states of the [`SfRadioButton`] are:
+The two different visual states of the [`SfRadioButton`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioButton.html) are:
 
 * Checked
 * Unchecked
 
-To change the state of the radio button, you can utilize the [`IsChecked`] property of [`SfRadioButton`]. When the radio button is checked, an inner circle is added to its visualization.
+To change the state of the radio button, you can utilize the [`IsChecked`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioButton.html#Syncfusion_Maui_Buttons_SfRadioButton_IsChecked) property of [`SfRadioButton`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioButton.html). When the radio button is checked, an inner circle is added to its visualization.
 
 The radio buttons are used when there is a list of two or more options or groups that are mutually exclusive, and the user must select exactly one choice, such as “Select Gender” or “Choose the best option!”.
 
@@ -166,6 +166,6 @@ The radio buttons are used when there is a list of two or more options or groups
 {% endhighlight %}
 {% endtabs %}
 
-N> [`SfRadioButtons`] are mutually exclusive when they are defined within [`SfRadioGroup`].
+N> [`SfRadioButtons`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioButton.html) are mutually exclusive when they are defined within [`SfRadioGroup`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioGroup.html).
 
 ![.NET MAUI Radio Button](Images/Getting-Started/statechange.png)
