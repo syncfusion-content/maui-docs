@@ -158,7 +158,7 @@ The SfDatePicker control allows you to customize the column header divider color
 
 {% tabs %}
 
-{% highlight xaml tabtitle="XAML" hl_lines="3" %}
+{% highlight xaml tabtitle="XAML" %}
 
 <picker:SfDatePicker x:Name="datepicker" >
     <picker:SfDatePicker.ColumnHeaderView >
@@ -342,7 +342,7 @@ In the SfDatePicker control, the corner radius, stroke, and padding can be custo
 
 <picker:SfDatePicker x:Name="datepicker" >
     <picker:SfDatePicker.SelectionView >
-        <picker:PickerSelectionView CornerRadius="5" Stroke="Violet" Padding="10, 5, 10, 5" Background="#D3D3D3" />
+        <picker:PickerSelectionView CornerRadius="5" Stroke="#A9A9A9" Padding="10, 5, 10, 5" Background="#D3D3D3" />
     </picker:SfDatePicker.SelectionView>
 </picker:SfDatePicker>
 
@@ -354,7 +354,7 @@ SfDatePicker datePicker = new SfDatePicker();
 datePicker.SelectionView = new PickerSelectionView()
 {
     CornerRadius = 5,
-    Stroke = Colors.Violet,
+    Stroke = Color.FromArgb("#A9A9A9"),
     Pading = new Thickness(10, 5, 10, 5),
     Background = Color.FromArgb("#D3D3D3"),
 };

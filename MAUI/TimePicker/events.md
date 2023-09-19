@@ -59,7 +59,7 @@ The [Opened](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBa
 
 * `Sender`: This contains the `SfTimePicker` object.
 
-* `EventArgs`: In the SfTimePicker picker, [EventArgs] is used for this event.
+* `EventArgs`: In the SfTimePicker picker, `EventArgs` is used for this event.
 
 {% tabs %}
 
@@ -91,9 +91,9 @@ The [Closing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerB
 
 * `Sender`: This contains the `SfTimePicker` object.
 
-* `EventArgs`: In the SfTimePicker picker, [CancelEventArgs] is used to describe a cancel event which holds the bool value.
+* `EventArgs`: In the SfTimePicker picker, `CancelEventArgs` is used to describe a cancel event which holds the bool value.
 
-    * [Cancel] : Indicating whether you should cancel the operation or not.
+    * `Cancel` : Indicating whether you should cancel the operation or not.
 
 {% tabs %}
 
@@ -125,7 +125,7 @@ The [Closed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBa
 
 * `Sender`: This contains the `SfTimePicker` object.
 
-* `EventArgs`: In the SfTimePicker picker, [EventArgs] is used for this event.
+* `EventArgs`: In the SfTimePicker picker, `EventArgs` is used for this event.
 
 {% tabs %}
 
@@ -164,7 +164,7 @@ In the `SfTimePicker` footer view provides two events. These events are not appl
 
 * `Sender`: This contains the `SfTimePicker` object.
 
-* `EventArgs`: In the SfTimePicker picker, [EventArgs] is used for this event.
+* `EventArgs`: In the SfTimePicker picker, `EventArgs` is used for this event.
 
 {% tabs %}
 
@@ -195,7 +195,7 @@ private void OnTimePickerOkButtonClicked(object sender, EventArgs e)
 
 * `Sender`: This contains the `SfTimePicker` object.
 
-* `EventArgs`: In the SfTimePicker picker, [EventArgs] is used for this event.
+* `EventArgs`: In the SfTimePicker picker, `EventArgs` is used for this event.
 
 {% tabs %}
 

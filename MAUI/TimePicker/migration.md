@@ -99,22 +99,22 @@ this.Content = timePicker;
 <td>Represents a base used to achieve the time picker custom view.</td>
 </tr>
 <tr>
-<td>{{'[Nil]'| markdownify }}</td>
+<td>Nil</td>
 <td>{{'[TimePickerColumnHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.TimePickerColumnHeaderView.html)'| markdownify }}</td>
 <td>Represents a column header view used to achieve the time picker header custom view.</td>
 </tr>
 <tr>
-<td>{{'[Nil]'| markdownify }}</td>
+<td>Nil</td>
 <td>{{'[PickerHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerHeaderView.html)'| markdownify }}</td>
 <td>Represents a header view used to achieve the time picker header custom view.</td>
 </tr>
 <tr>
-<td>{{'[Nil]'| markdownify }}</td>
+<td>Nil</td>
 <td>{{'[PickerFooterView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html)'| markdownify }}</td>
 <td>Represents a footer view used to achieve the time picker footer custom view.</td>
 </tr>
 <tr>
-<td>{{'[Nil]'| markdownify }}</td>
+<td>Nil</td>
 <td>{{'[PickerSelectionView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerSelectionView.html)'| markdownify }}</td>
 <td>Represents a selection view used to achieve the time picker selection custom view.</td>
 </tr>
@@ -156,8 +156,8 @@ using Syncfusion.SfPicker.XForms;
 ...
 
 SfTimePicker timePicker = new SfTimePicker();
-this.Content = timePicker;
 timePicker.Format = TimeFormat.HH_mm_ss;
+this.Content = timePicker;
 
 {% endhighlight %}
 
@@ -184,8 +184,8 @@ using Syncfusion.Maui.Picker;
 ...
 
 SfTimePicker timePicker = new SfTimePicker();
-this.Content = timePicker;
 timePicker.Format = PickerTimeFormat.h_mm_ss_tt;
+this.Content = timePicker;
 
 {% endhighlight %}
 
@@ -276,8 +276,8 @@ timePicker.Format = PickerTimeFormat.h_mm_ss_tt;
 </tr>
 <tr>
 <td>{{'[BackgroundColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_BackgroundColorProperty)'| markdownify }}</td>
-<td>{{'[BackgroundColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html)'| markdownify }}</td>
-<td>Gets or sets the background color of the timePicker.</td>
+<td>Nil</td>
+<td>Not Supported.</td>
 </tr>
 <tr>
 <td>{{'[BorderColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_BorderColorProperty)'| markdownify }}</td>
@@ -463,11 +463,6 @@ timePicker.Format = PickerTimeFormat.h_mm_ss_tt;
 <td>{{'[UnSelectedItemTextColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_UnselectedItemTextColorProperty)'| markdownify }}</td>
 <td>{{'[TextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerTextStyle.html#Syncfusion_Maui_Picker_PickerTextStyle_TextColor)(From [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_TextStyle) of [PickerBase](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html))'| markdownify }}</td>
 <td>Gets or sets the text color of the unselected text style..</td>
-</tr>
-<tr>
-<td>Nil</td>
-<td>{{'[ColumnDividerColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_ColumnDividerColor)'| markdownify }}</td>
-<td>Gets or sets the divider color of the columns.</td>
 </tr>
 </table>
 

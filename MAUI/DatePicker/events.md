@@ -58,7 +58,7 @@ The [Opened](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBa
 
 * `Sender`: This contains the `SfDatePicker` object.
 
-* `EventArgs`: In the SfDatePicker picker, [EventArgs] is used for this event.
+* `EventArgs`: In the SfDatePicker picker, `EventArgs` is used for this event.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
@@ -89,9 +89,9 @@ The [Closing]https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBa
 
 * `Sender`: This contains the `SfDatePicker` object.
 
-* `EventArgs`: In the SfDatePicker picker, [CancelEventArgs] is used to describe the cancel event which holds the bool value.
+* `EventArgs`: In the SfDatePicker picker, `CancelEventArgs` is used to describe the cancel event which holds the bool value.
 
-    * [Cancel] : Indicating whether you should cancel the operation or not.
+    * `Cancel` : Indicating whether you should cancel the operation or not.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
@@ -122,7 +122,7 @@ The [Closed]https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBas
 
 * `Sender`: This contains the `SfDatePicker` object.
 
-* `EventArgs`: In the SfDatePicker picker, [EventArgs] is used for this event.
+* `EventArgs`: In the SfDatePicker picker, `EventArgs` is used for this event.
 
 {% tabs %}
 
@@ -161,7 +161,7 @@ The `SfDatePicker` footer view provides two events. These events are not applica
 
 * `Sender`: This contains the `SfDatePicker` object.
 
-* `EventArgs`: In the SfDatePicker picker, [EventArgs] is used for this event.
+* `EventArgs`: In the SfDatePicker picker, `EventArgs` is used for this event.
 
 {% tabs %}
 
@@ -192,7 +192,7 @@ private void OnDatePickerOkButtonClicked(object sender, EventArgs e)
 
 * `Sender`: This contains the `SfDatePicker` object.
 
-* `EventArgs`: In the SfDatePicker picker, [EventArgs] is used for this event.
+* `EventArgs`: In the SfDatePicker picker, `EventArgs` is used for this event.
 
 {% tabs %}
 

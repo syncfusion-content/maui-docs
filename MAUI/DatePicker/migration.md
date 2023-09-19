@@ -99,22 +99,22 @@ this.Content = datePicker;
 <td>Represents a base used to achieve the date picker custom view.</td>
 </tr>
 <tr>
-<td>{{'[Nil]'| markdownify }}</td>
+<td>Nil</td>
 <td>{{'[DatePickerColumnHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.DatePickerColumnHeaderView.html)'| markdownify }}</td>
 <td>Represents a column header view used to achieve the date picker column header custom view.</td>
 </tr>
 <tr>
-<td>{{'[Nil]'| markdownify }}</td>
+<td>Nil</td>
 <td>{{'[PickerHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerHeaderView.html)'| markdownify }}</td>
 <td>Represents a header view used to achieve the date picker header custom view.</td>
 </tr>
 <tr>
-<td>{{'[Nil]'| markdownify }}</td>
+<td>Nil</td>
 <td>{{'[PickerFooterView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html)'| markdownify }}</td>
 <td>Represents a footer view used to achieve the date picker footer custom view.</td>
 </tr>
 <tr>
-<td>{{'[Nil]'| markdownify }}</td>
+<td>Nil</td>
 <td>{{'[PickerSelectionView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerSelectionView.html)'| markdownify }}</td>
 <td>Represents a selection view used to achieve the date picker selection custom view.</td>
 </tr>
@@ -156,8 +156,8 @@ using Syncfusion.SfPicker.XForms;
 ...
 
 SfDatePicker datePicker = new SfDatePicker();
-this.Content = datePicker;
 datePicker.Format = DateFormat.yyyy_MM_dd;
+this.Content = datePicker;
 
 {% endhighlight %}
 
@@ -184,8 +184,8 @@ using Syncfusion.Maui.Picker;
 ...
 
 SfDatePicker datePicker = new SfDatePicker();
-this.Content = datePicker;
 datePicker.Format = PickerDateFormat.MM_dd_yyyy;
+this.Content = datePicker;
 
 {% endhighlight %}
 
@@ -276,8 +276,8 @@ datePicker.Format = PickerDateFormat.MM_dd_yyyy;
 </tr>
 <tr>
 <td>{{'[BackgroundColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_BackgroundColorProperty)'| markdownify }}</td>
-<td>{{'[BackgroundColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html)'| markdownify }}</td>
-<td>Gets or sets the background color of the datepicker.</td>
+<td>Nil</td>
+<td>Not Supported.</td>
 </tr>
 <tr>
 <td>{{'[BorderColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_BorderColorProperty)'| markdownify }}</td>
@@ -463,11 +463,6 @@ datePicker.Format = PickerDateFormat.MM_dd_yyyy;
 <td>{{'[UnSelectedItemTextColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_UnselectedItemTextColorProperty)'| markdownify }}</td>
 <td>{{'[TextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerTextStyle.html#Syncfusion_Maui_Picker_PickerTextStyle_TextColor)(From [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_TextStyle) of [PickerBase](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html))'| markdownify }}</td>
 <td>Gets or sets the text color of the unselected text style..</td>
-</tr>
-<tr>
-<td>Nil</td>
-<td>{{'[ColumnDividerColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_ColumnDividerColor)'| markdownify }}</td>
-<td>Gets or sets the divider color of the columns.</td>
 </tr>
 </table>
 
