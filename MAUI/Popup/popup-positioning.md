@@ -39,10 +39,10 @@ Following are the list of options available to show SfPopup at various positions
 <td>{{'[Show(bool)](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_Show_System_Boolean_)'| markdownify }}</td>
 <td>Similar as <code>SfPopup.IsFullScreen</code> property.</td></tr>
 <tr>
-<td><code>SfPopup.Show(string title, string message)</code></td>
+<td>{{'[SfPopup.Show(string title, string message)](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_Show_System_String_System_String_)'| markdownify }}</td>
 <td>Static method to show a popup with the title and message.</td></tr>
 <tr>
-<td><code>SfPopup.Show(string title, string message, string acceptText)</code></td>
+<td>{{'[SfPopup.Show(string title, string message, string acceptText)](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_Show_System_String_System_String_System_String_)'| markdownify }}</td>
 <td>Static method to show a popup with the title, message and acceptText.</td></tr>
 </table>
 
@@ -276,7 +276,7 @@ public class ViewModel : INotifyPropertyChanged
 
 ### Returning result
 
-The `ShowAsync()` method of the Popup allows you to display the popup and returns `true` if the user closes it using the accept button, or `false` otherwise.
+The [ShowAsync()](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_ShowAsync) method of the Popup allows you to display the popup and returns `true` if the user closes it using the accept button, or `false` otherwise.
 
 {% tabs %}
 {% highlight xaml %}
@@ -315,7 +315,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-The `Show(string title, string message, string acceptText, string declineText)` static method of the Popup allows you to display the popup and returns `true` if the user closes it using the accept button, or `false` otherwise.
+The [Show(string title, string message, string acceptText, string declineText)](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_Show_System_String_System_String_System_String_System_String_) static method of the Popup allows you to display the popup and returns `true` if the user closes it using the accept button, or `false` otherwise.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}

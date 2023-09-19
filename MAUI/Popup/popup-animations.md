@@ -14,13 +14,13 @@ documentation: ug
 Built-in animations are available in SfPopup, which is applied when the Popup view opens and closes in the screen. By default, the animation mode is set to `Fade`
 The SfPopup has different animation modes as listed below:
 
-* Zoom
-* Fade
-* SlideOnLeft
-* SlideOnRight
-* SlideOnTop
-* SlideOnBottom
-* None
+* [Zoom](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupAnimationMode.html#Syncfusion_Maui_Popup_PopupAnimationMode_Zoom)
+* [Fade](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupAnimationMode.html#Syncfusion_Maui_Popup_PopupAnimationMode_Fade)
+* [SlideOnLeft](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupAnimationMode.html#Syncfusion_Maui_Popup_PopupAnimationMode_SlideOnLeft)
+* [SlideOnRight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupAnimationMode.html#Syncfusion_Maui_Popup_PopupAnimationMode_SlideOnRight)
+* [SlideOnTop](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupAnimationMode.html#Syncfusion_Maui_Popup_PopupAnimationMode_SlideOnTop)
+* [SlideOnBottom](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupAnimationMode.html#Syncfusion_Maui_Popup_PopupAnimationMode_SlideOnBottom)
+* [None](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupAnimationMode.html#Syncfusion_Maui_Popup_PopupAnimationMode_None)
 
 N> Setting of the AnimationMode is same for both `Displaying popup when the SfPopup is set as root view` and `Displaying popup on the go`. 
 
@@ -237,7 +237,7 @@ public MainPage()
 
 ## Animation easing
 
-The `SfPopup` allows to show the Popup view with various easing effects for all the available `SfPopup.AnimationMode` using the `SfPopup.AnimationEasing` property.
+The `SfPopup` allows to show the Popup view with various easing effects for all the available `SfPopup.AnimationMode` using the [SfPopup.AnimationEasing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupAnimationEasing.html) property.
 
 {% tabs %}
 
