@@ -47,7 +47,7 @@ The DataTemplateSelector feature of SfPicker allows you to select a DataTemplate
     this.picker.Columns.Add(pickerColumn);
 
 {% endhighlight %}
-{% highlight PickerTemplate tabtitle="TemplateSelector.cs" %}
+{% highlight c# tabtitle="TemplateSelector.cs" %}
 
     public class PickerTemplate : DataTemplateSelector
     {

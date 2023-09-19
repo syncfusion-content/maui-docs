@@ -207,7 +207,7 @@ this.Calendar.SelectionMode = CalendarSelectionMode.MultiRange;
 {% endhighlight %}
 {% endtabs %}
 
-![Multiple selection in .NET MAUI Calendar.](images/selection/maui-multiple-selection.png)
+![Multiple range selection in .NET MAUI Calendar.](images/selection/maui-multiple-range-selection.png)
 
 ## Selection shape
 The Selected date will render based on the `SelectionShape` property. The default [SelectionShape](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_SelectionShape) is `Circle`. You can customize the selection shape either `Rectangle` or `Circle`.
