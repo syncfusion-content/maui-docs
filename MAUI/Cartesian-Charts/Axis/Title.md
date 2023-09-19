@@ -72,7 +72,7 @@ The [Title](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis
 
 ## Label extent
 
-The [LabelExtent]() property allows to set the gap between axis labels and title. This is typically used to maintain the fixed gap between axis labels and title when the digits of the axis value changed in live update.
+The [LabelExtent](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_LabelExtent) property allows to set the gap between axis labels and title. This is typically used to maintain the fixed gap between axis labels and title when the digits of the axis value changed in live update.
 
 {% tabs %}
 
