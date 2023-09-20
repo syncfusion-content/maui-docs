@@ -235,7 +235,7 @@ Change the default colors of the [`ColorPalette`](https://help.syncfusion.com/cr
 
 N> Color palette colors are common for Text, Shape and Pen.
 
-![Toolbar Color Palate in .NET Maui ImageEditor](images/toolbar/imageeditor-colorpalate.png)
+![Toolbar Color Palette in .NET Maui ImageEditor](images/toolbar/imageeditor-colorpalette.png)
 
 ### Change the Toolbar Item to Enable or Disable State
 
