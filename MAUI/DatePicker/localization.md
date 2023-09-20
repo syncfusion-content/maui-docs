@@ -9,13 +9,7 @@ documentation: ug
 
 # Localization in .NET MAUI Date Picker (SfDatePicker)
 
-Localization is the process of translating the application resources into different language for the specific cultures. The `SfDatePicker` can be localized by adding `resource` file. In `SfDatePicker`, provides the support to localize the below strings
-
-   * `Day`
-   * `Month`
-   * `Year`
-   * `OK`
-   * `Cancel`
+Localization is the process of translating the application resources into different language for the specific cultures. The `SfDatePicker` can be localized by adding `resource` file. 
 
 ## Setting CurrentUICulture to the application
 
