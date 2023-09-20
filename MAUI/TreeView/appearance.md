@@ -146,7 +146,7 @@ The TreeView allows you to customize the appearance of each item with different 
 
 ### Create a data template selector
 
-Create a custom class that inherits from the [DataTemplateSelector](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.datatemplateselector?view=net-maui-7.0), and overrides the `OnSelectTemplate` method to return the [DataTemplate](https://learn.microsoft.com/en-us/dotnet/maui/fundamentals/datatemplate) for that item. At runtime, the TreeView invokes the [OnSelectTemplate](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.datatemplateselector.onselecttemplate?view=net-maui-7.0) method for each item and passes the data object as parameter.
+Create a custom class that inherits from the `DataTemplateSelector`, and overrides the `OnSelectTemplate` method to return the `DataTemplate` for that item. At runtime, the TreeView invokes the [OnSelectTemplate](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.datatemplateselector.onselecttemplate?view=net-maui-7.0) method for each item and passes the data object as parameter.
 
 Create different templates and load them using `DataTemplateSelector` in the `OnSelectTemplate` based on the requirements.
 

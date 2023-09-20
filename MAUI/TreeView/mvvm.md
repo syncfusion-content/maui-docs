@@ -207,7 +207,7 @@ public class CommandViewModel
 
 ### Expand command
 
-The `ExpandCommand` will be triggered while expanding the node and passing the [TreeViewNode](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.TreeViewNode.html) as a command parameter. TreeView expands the node based on the return value of the `CanExecute` method implementation of `ExpandCommand`. If you return false, then expand action will be canceled. Execute method implementation of `ExpandCommand` will get called after expanding the node.
+The [ExpandCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ExpandCommand) will be triggered while expanding the node and passing the [TreeViewNode](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.TreeViewNode.html) as a command parameter. TreeView expands the node based on the return value of the `CanExecute` method implementation of `ExpandCommand`. If you return false, then expand action will be canceled. Execute method implementation of `ExpandCommand` will get called after expanding the node.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="11" %}
@@ -270,7 +270,7 @@ public class CommandViewModel
 
 ### Collapse command
 
-The `CollapseCommand` will be triggered while collapsing the node and passing the [TreeViewNode](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.TreeViewNode.html) as a command parameter. TreeView collapses the node based on the return value of the `CanExecute` method implementation of `CollapseCommand`. If you return false, then collapse action will be canceled. Execute method implementation of `CollapseCommand` will be called after the node has collapsed.
+The [CollapseCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_CollapseCommand) will be triggered while collapsing the node and passing the [TreeViewNode](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.TreeViewNode.html) as a command parameter. TreeView collapses the node based on the return value of the `CanExecute` method implementation of `CollapseCommand`. If you return false, then collapse action will be canceled. Execute method implementation of `CollapseCommand` will be called after the node has collapsed.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="11" %}

@@ -9,7 +9,7 @@ documentation: ug
 
 # Migrate from Xamarin.Forms SfTreeView to .NET MAUI SfTreeView 
 
-To migrate easier from [Xamarin SfTreeView](https://www.syncfusion.com/xamarin-ui-controls/xamarin-treeview) to [.NET MAUI SfTreeView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html), we kept most of the APIs from Xamarin SfTreeView in MAUI SfTreeView. However, to maintain the consistency of API naming in MAUI SfTreeView, we renamed some of the APIs. The APIs that have been changed in MAUI SfTreeView from Xamarin SfTreeView are detailed as follows.
+To migrate easier from [Xamarin SfTreeView](https://www.syncfusion.com/xamarin-ui-controls/xamarin-treeview) to [.NET MAUI SfTreeView](https://www.syncfusion.com/maui-controls/maui-treeview), we kept most of the APIs from Xamarin SfTreeView in MAUI SfTreeView. However, to maintain the consistency of API naming in MAUI SfTreeView, we renamed some of the APIs. The APIs that have been changed in MAUI SfTreeView from Xamarin SfTreeView are detailed as follows.
 
 ## Namespaces 
 
@@ -78,7 +78,7 @@ To migrate easier from [Xamarin SfTreeView](https://www.syncfusion.com/xamarin-u
 <tr>
 <td>{{'[NotificationSubscriptionMode](https://help.syncfusion.com/cr/xamarin/Syncfusion.TreeView.Engine.NotificationSubscriptionMode.html)'| markdownify }}</td>
 <td>{{[TreeViewNotificationSubscriptionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_NotificationSubscriptionMode)| markdownify }}</td>
-<td>Defines the constants that specify whether need to listen the PropertyChanging and `System.ComponentModel.INotifyPropertyChanged`.PropertyChanged events of data object and `System.Collections.Specialized`.INotifyCollectionChanged.CollectionChanged event of source collection.</td></tr>
+<td>Defines the constants that specify whether need to listen the PropertyChanging and `System.ComponentModel.INotifyPropertyChanged.PropertyChanged` events of data object and `System.Collections.Specialized.INotifyCollectionChanged.CollectionChanged` event of source collection.</td></tr>
 </table>
 
 ## Events
