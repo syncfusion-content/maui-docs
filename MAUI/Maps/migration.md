@@ -3532,10 +3532,6 @@ public MainPage()
 </td></tr>
 </table>
 
-## Upcoming features in .NET MAUI
-
-* Support for Center changed event.
-
 ## Unsupported features from Xamarin.Forms
 
 * Label support has not been provided in the marker. Instead, you can achieve it using the [MarkerTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLayer.html#Syncfusion_Maui_Maps_MapLayer_MarkerTemplate).

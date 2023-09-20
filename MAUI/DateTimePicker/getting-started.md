@@ -16,6 +16,8 @@ This section explains how to add the Date Time Picker control. It covers only th
 
 2. Syncfusion .NET MAUI components are available on [nuget.org](https://www.nuget.org/). To add `SfDateTimePicker` to your project, open the NuGet package manager in Visual Studio, search for [Syncfusion.Maui.Picker](https://www.nuget.org/packages/Syncfusion.Maui.Picker), then install it.
 
+N> [Syncfusion.Maui.Popup](https://www.nuget.org/packages/Syncfusion.Maui.Popup) is a dependent package for `SfDateTimePicker`. To add [SfPopup](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html) to your project, open the NuGet package manager in Visual Studio, search for `Syncfusion.Maui.Popup`, then install it.
+
 3. To initialize the control, import the control namespace `Syncfusion.Maui.Picker` in XAML or C# code.
 
 4. Initialize `SfDateTimePicker.`
@@ -84,11 +86,11 @@ namespace GettingStarted
 
 ## Date Time Picker header
 
-The [SfDateTimePicker] control provides the default header which shows the current selected date and selected time.
+The [SfDateTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html) control provides the default header which shows the current selected date and selected time.
 
 ## Set footer to the Date Time Picker
 
-In the SfDateTimePicker control, validation buttons (OK and Cancel) can be customized by setting the [OkButtonText] and [CancelButtonText] properties in the [PickerFooterView]. It allows you to confirm or cancel the selected date and time. The `OkButtonText` can be enabled using the [ShowOkButton] property in the [PickerFooterView].
+In the SfDateTimePicker control, validation buttons (OK and Cancel) can be customized by setting the [OkButtonText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_OkButtonText) and [CancelButtonText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_CancelButtonText) properties in the [PickerFooterView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html). It allows you to confirm or cancel the selected date and time. The `OkButtonText` can be enabled using the [ShowOkButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_ShowOkButton) property in the [PickerFooterView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html).
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="3" %}
@@ -116,7 +118,7 @@ this.Content = picker;
 
 ## Set height and width to the Date Time Picker
 
-The SfDateTimePicker control allows you to change the height and width by using the [HeightRequest] and [WidthRequest] properties in the [SfDateTimePicker].
+The SfDateTimePicker control allows you to change the height and width by using the `HeightRequest` and `WidthRequest` properties in the `SfDateTimePicker`.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="2 3" %}
@@ -142,7 +144,7 @@ this.Content = picker;
 
 ## Set selected date and selected time to the Date Time Picker
 
-The SfDateTimePicker control allows you to select the date and time by using the [SelectedDate] and [SelectedTime] properties in the [SfDateTimePicker]. The default value of the `SelectedDate` and `SelectedTime` is the current time.
+The SfDateTimePicker control allows you to select the date and time by using the [SelectedDate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html#Syncfusion_Maui_Picker_SfDateTimePicker_SelectedDate) property in the [SfDateTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html). The default value of the `SelectedDate` is the current date and time.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="2" %}
