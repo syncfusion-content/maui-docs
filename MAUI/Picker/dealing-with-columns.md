@@ -17,7 +17,7 @@ You can customize various properties, including `DisplayMemberPath`, `Width`, `S
 
 ### Width customization
 
-You can customize the [Width](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerColumn.html#Syncfusion_Maui_Picker_PickerColumn_Width) of every column by setting the `SfPicker.Columns[Column index value].Width` property. The default value of width is `-1`.
+You can customize the [Width](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerColumn.html#Syncfusion_Maui_Picker_PickerColumn_Width) of every column by setting the `Width` property in [PickerColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerColumn.html). The default value of width is `-1`.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -35,7 +35,7 @@ You can customize the [Width](https://help.syncfusion.com/cr/maui/Syncfusion.Mau
  
 ### SelectedIndex customization
 
-You can customize the SelectedIndex of every column by setting the `SfPicker.Columns[Column index value].SelectedIndex` property. The default value of the [SelectedIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerColumn.html#Syncfusion_Maui_Picker_PickerColumn_SelectedIndex) property is `0`.
+You can customize the SelectedIndex of every column by setting the `SelectedIndex` property in [PickerColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerColumn.html). The default value of the [SelectedIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerColumn.html#Syncfusion_Maui_Picker_PickerColumn_SelectedIndex) property is `0`.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -53,7 +53,7 @@ You can customize the SelectedIndex of every column by setting the `SfPicker.Col
 
 ### HeaderText customization
 
-You can customize the Header text of every column by setting the `SfPicker.Columns[Column index value].HeaderText` property. The default value of the [HeaderText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerColumn.html#Syncfusion_Maui_Picker_PickerColumn_HeaderText) property is `string.empty`.
+You can customize the Header text of every column by setting the `HeaderText` property in [PickerColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerColumn.html). The default value of the [HeaderText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerColumn.html#Syncfusion_Maui_Picker_PickerColumn_HeaderText) property is `string.empty`.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -71,7 +71,7 @@ You can customize the Header text of every column by setting the `SfPicker.Colum
 
 ### ItemsSource customization
 
-You can customize the ItemSource of every column by setting the `SfPicker.Columns[Column index value].ItemSource` property. The default value of the [ItemSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerColumn.html#Syncfusion_Maui_Picker_PickerColumn_ItemsSource) property is `null`.
+You can customize the ItemSource of every column by setting the `ItemSource` property in [PickerColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerColumn.html). The default value of the [ItemSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerColumn.html#Syncfusion_Maui_Picker_PickerColumn_ItemsSource) property is `null`.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
