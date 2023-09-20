@@ -39,9 +39,9 @@ public partial class App : Application
 
 ## Localize application level
 
-To localize the `ImageEditor` based on the `CurrentUICulture` using `resource` files, follow the steps below.
+To localize the [`ImageEditor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html) based on the `CurrentUICulture` using `resource` files, follow the steps below.
 
-   1. Add the default resource file of `ImageEditor` to the `Resources` folder of the application.
+   1. Add the default resource file of [`ImageEditor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html) to the `Resources` folder of the application.
 
    ![addition-of-default-resource-file-of-maui-ImageEditor-into-resources-folder](images/localization/addition-of-default-resource-file-of-maui-ImageEditor-into-resources-folder.png)
 
