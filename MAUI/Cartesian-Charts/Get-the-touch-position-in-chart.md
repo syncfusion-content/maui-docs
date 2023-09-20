@@ -23,7 +23,7 @@ documentation: ug
         .........
 
         <chart:SfCartesianChart.InteractiveBehavior>
-                <local:ChartInteractiveExt/>
+                <local:ChartInteractiveExt></local:ChartInteractiveExt>
         </chart:SfCartesianChart.InteractiveBehavior>
 
     </chart:SfCartesianChart>

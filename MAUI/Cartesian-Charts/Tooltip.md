@@ -237,7 +237,7 @@ The [Show](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartToolt
     <chart:SfCartesianChart>
         .....
         <chart:SfCartesianChart.TooltipBehavior>
-            <chart:ChartTooltipBehavior x:Name="tooltip"/>
+            <chart:ChartTooltipBehavior x:Name="tooltip"></chart:ChartTooltipBehavior>
         </chart:SfCartesianChart.TooltipBehavior>
         .....
     </chart:SfCartesianChart>
