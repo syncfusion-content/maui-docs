@@ -11,7 +11,7 @@ documentation: ug
 
 ## Minimum date
 
-The Date picker provides an option to restrict the selection of date items by using the [MinimumDate] property in [SfDatePicker], and you cannot select the dates beyond the minimum date range. The MinimumDate value has to be lesser than the MaximumDate value.
+The Date picker provides an option to restrict the selection of date items by using the [MinimumDate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html#Syncfusion_Maui_Picker_SfDatePicker_MinimumDate) property in [SfDatePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html), and you cannot select the dates beyond the minimum date range. The MinimumDate value has to be lesser than the MaximumDate value.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="2" %}
@@ -32,7 +32,7 @@ this.Content = picker;
 
 ## Maximum date
 
-The Date picker provides an option to restrict the selection of date items by using the [MaximumDate] property in [SfDatePicker], and you cannot select the dates beyond the maximum date range.
+The Date picker provides an option to restrict the selection of date items by using the [MaximumDate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html#Syncfusion_Maui_Picker_SfDatePicker_MaximumDate) property in [SfDatePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html), and you cannot select the dates beyond the maximum date range.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="2" %}

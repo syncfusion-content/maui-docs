@@ -9,7 +9,14 @@ documentation: ug
 
 # Localization in .NET MAUI Time Picker (SfTimePicker)
 
-Localization is the process of translating the application resources into different language for the specific cultures. The `SfTimePicker` can be localized by adding `resource` file. 
+Localization is the process of translating the application resources into different language for the specific cultures. The `SfTimePicker` can be localized by adding `resource` file. In `SfTimePicker`, provides the support to localize the below strings
+
+   * `Hour`
+   * `Minute`
+   * `Second`
+   * `Meridiem`
+   * `OK`
+   * `Cancel`
 
 ## Setting CurrentUICulture to the application
 
