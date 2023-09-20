@@ -13,7 +13,7 @@ The `SfTreeView` provides various options to achieve programmatic scrolling. Ple
 
 ## Bring Into View
 
-The TreeView allows programmatic scrolling based on the data model and `TreeViewNode` using the `BringIntoView` method.
+The TreeView allows programmatic scrolling based on the data model and [TreeViewNode](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.TreeViewNode.html) using the [BringIntoView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_BringIntoView_Syncfusion_TreeView_Engine_TreeViewNode_System_Boolean_System_Boolean_Microsoft_Maui_Controls_ScrollToPosition_) method.
 
 {% tabs %}
 {% highlight c# hl_lines="5" %}
@@ -100,7 +100,7 @@ private void BringIntoView_Clicked(object sender, EventArgs e)
 
 ## Scrollbar Visibility
 
-The TreeView provides an option to enable or disable the `Scrollbar` visibility by using the `ScrollBarVisibility` property. By default, the value will be `Default`.
+The TreeView provides an option to enable or disable the `Scrollbar` visibility by using the [ScrollBarVisibility](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ScrollBarVisibility) property. By default, the value will be `Default`.
 
 {% tabs %}
 {% highlight xaml%}
