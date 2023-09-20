@@ -653,7 +653,7 @@ I> `ItemsSource` is an alternative mechanism to [Nodes](https://help.syncfusion.
 
 </ContentPage>
 {% endhighlight %}
-{% highlight c# hl_lines="14" %}
+{% highlight c# hl_lines="14 15 16 17" %}
 
 using Syncfusion.Maui.TreeView;
 using Syncfusion.TreeView.Engine;
@@ -751,16 +751,16 @@ namespace GettingStarted
         treeView.ItemTemplateContextType = ItemTemplateContextType.Node;
         treeView.ItemTemplate = new DataTemplate(() => 
         {
-            var grid = new Grid();
-            var imageIcon = new Image();
+            HorizontalStackLayout stack = new HorizontalStackLayout();
+            var imageIcon = new Image { WidthRequest = 24, HeightRequest = 24 };
             imageIcon.SetBinding(Image.SourceProperty, new Binding("Content.ImageIcon"));
-            var itemName = new Label { FontSize = 15 };
+            var itemName = new Label { FontSize = 15, VerticalTextAlignment=TextAlignment.Center, Padding=5 };
             itemName.SetBinding(Label.TextProperty, new Binding("Content.ItemName"));
 
-            grid.Children.Add(imageIcon);
-            grid.Children.Add(itemName);
+            stack.Children.Add(imageIcon);
+            stack.Children.Add(itemName);
 
-            return grid;
+            return stack;
         });
 
         treeView.ExpanderTemplate = new DataTemplate(()=>

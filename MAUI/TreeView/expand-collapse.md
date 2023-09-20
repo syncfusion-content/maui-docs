@@ -31,7 +31,7 @@ treeView.ExpandActionTarget = TreeViewExpandActionTarget.Node;
 
 ## Auto Expand Mode
 
-By default, the items in the treeview will be in a collapsed state. You can define how the nodes should be expanded when loading the TreeView by using the [AutoExpandMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_AutoExpandMode) property.
+By default, the items in the treeview will be in a collapsed state. You can define how the nodes should be expanded when loading the TreeView by using the [AutoExpandMode](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.TreeViewAutoExpandMode.html) property.
 
 The `AutoExpandMode` property is only applicable in bound mode. In the unbound mode, you need to set the `IsExpanded` property to `true` when creating the nodes in order for them to be in the expanded state when the TreeView is loaded.
 

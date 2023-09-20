@@ -18,7 +18,7 @@ TreeView can be populated either with the data source by using a [ItemsSource](h
 * [Create hierarchical data model](#create-data-model-for-treeview)
 * [Bind data model to treeview](#bind-to-hierarchical-datasource)
 
-To update the collection changes in UI, it is necessary to define [NotificationSubscriptionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Data.NotificationSubscriptionMode.html) to Treeview as `CollectionChanged/PropertyChanged`. 
+To update the collection changes in UI, it is necessary to define [NotificationSubscriptionMode](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.TreeViewNotificationSubscriptionMode.html) to Treeview as `CollectionChanged/PropertyChanged`. 
 `NotificationSubscriptionMode` enum has following members:
 * [CollectionChange](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Data.NotificationSubscriptionMode.html#Syncfusion_Maui_Data_NotificationSubscriptionMode_CollectionChange) - Updates its tree structure when the child items collection is changed.
 * [PropertyChange](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Data.NotificationSubscriptionMode.html#Syncfusion_Maui_Data_NotificationSubscriptionMode_PropertyChange) - Updates its ChildItems when the associated collection property is changed.
