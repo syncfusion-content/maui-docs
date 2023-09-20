@@ -228,7 +228,7 @@ You can show or hide the chart tooltip programmatically by using the show or hid
 
 ### Show method
 
-The [Show]() method is used to activate the tooltip at the specified location.
+The [Show](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartTooltipBehavior.html#Syncfusion_Maui_Charts_ChartTooltipBehavior_Show_System_Single_System_Single_System_Boolean_) method is used to activate the tooltip at the specified location.
 
 {% tabs %}
 
@@ -244,6 +244,26 @@ The [Show]() method is used to activate the tooltip at the specified location.
 
     <Button Text="Show tooltip" Clicked="Button_Clicked"></Button>
 
+{% endhighlight %}
+
+{% highlight C# %}
+
+    Stacklayout layout = new Stacklayout();
+    
+    SfCartesianChart chart = new SfCartesianChart();
+    .....
+    ChartTooltipBehavior tooltipBehavior = new ChartTooltipBehavior();
+    chart.TooltipBehavior = tooltipBehavior;
+    .....
+    Button button = new Button()
+    {
+        Text = "Show Tooltip",         
+    };
+    button.Clicked += Button_Clicked;
+    
+    layout.Add(chart);
+    layout.Add(button);
+    
 {% endhighlight %}
 
 {% endtabs %}
@@ -267,7 +287,7 @@ N> The tooltip will be activated at the specified location only if there is any 
 
 ### Hide method
 
-The [Hide]() method is used to hide the tooltip programmatically.
+The [Hide](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartTooltipBehavior.html#Syncfusion_Maui_Charts_ChartTooltipBehavior_Hide) method is used to hide the tooltip programmatically.
 
 {% tabs %}
 
