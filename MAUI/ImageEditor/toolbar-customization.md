@@ -141,6 +141,8 @@ imageEditor.ToolbarSettings.CropTypes = ImageCropType.Circle | ImageCropType.Squ
 
 {% endtabs %}
 
+![Custom Crop Toolbar in .NET Maui ImageEditor](images/toolbar/imageeditor-croptypes.png)
+
 ### Change the effect toolbar options
 
 Show the required effect types alone in the effects toolbar by using the `EffectTypes` property in the `ImageEditorToolbarSettings` class.
@@ -167,6 +169,8 @@ imageEditor.ToolbarSettings.EffectTypes = ImageEffect.Hue | ImageEffect.Blur | I
 
 {% endtabs %}
 
+![Custom Effect Toolbar in .NET Maui ImageEditor](images/toolbar/imageeditor-effecttypes.png)
+
 ### Change the shapes toolbar options
 
 Show the required shape types alone in the shapes toolbar by using the `Shapes` property in the `ImageEditorToolbarSettings` class.
@@ -192,6 +196,8 @@ imageEditor.ToolbarSettings.Shapes = AnnotationShape.Circle | AnnotationShape.Li
 {% endhighlight %}
 
 {% endtabs %}
+
+![Custom Shape Toolbar in .NET Maui ImageEditor](images/toolbar/imageeditor-shapetypes.png)
 
 ### Change the color palette toolbar options
 
@@ -228,6 +234,8 @@ Change the default colors of the `ColorPalette` in the toolbar.
 {% endtabs %}
 
 N> Color palette colors are common for Text, Shape and Pen.
+
+![Toolbar Color Palate in .NET Maui ImageEditor](images/toolbar/imageeditor-colorpalate.png)
 
 ### Change the Toolbar Item to Enable or Disable State
 
@@ -276,6 +284,8 @@ saveItem.View = image;
 
 {% endtabs %}
 
+![Customize Toolbar Item View in .NET Maui ImageEditor](images/toolbar/imageeditor-custom-item-view.png)
+
 ### Add the SubToolbar
 
 Create `SubToolbars` within your toolbar items to organize related actions.
@@ -306,6 +316,8 @@ cropItem.SubToolbars = new List<ImageEditorToolbar>()
 
 {% endtabs %}
 
+![Add SubToolbar in .NET Maui ImageEditor](images/toolbar/imageeditor-subtoolbar.png)
+
 ### Add a Toolbar Item with the Existing Toolbar
 
 Explicitly add the `ImageEditorToolbarItem` to the `ImageEditorToolbar` manually.
@@ -327,6 +339,8 @@ saveGroup.Items.Add(new ImageEditorToolbarItem() { Name = "Share", View = image 
 {% endhighlight %}
 
 {% endtabs %}
+
+![Add Toolbar Item in .NET Maui ImageEditor](images/toolbar/imageeditor-add-item.png)
 
 ## Explicitly Create Toolbars
 
@@ -398,6 +412,8 @@ imageEditor.Toolbars.Add(editorToolbar);
 
 {% endtabs %}
 
+![Explicit Toolbar in .NET Maui ImageEditor](images/toolbar/imageeditor-explicit-create-toolbar.png)
+
 ### Create the sub-toolbar explicitly
 
 Create `SubToolbars` within our default toolbar items to organize related actions.
@@ -466,6 +482,8 @@ imageEditor.Toolbars.Add(editorToolbar);
 
 {% endtabs %}
 
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-image-editor-examples/tree/master/ExplicitToolbar)
+
 ## Change the Toolbar Item Visibility
 
 Hide or show the toolbar items by specifying their icon names and setting the boolean values to true or false.
@@ -502,6 +520,8 @@ footerToolbar.Orientaion = ToolbarOrientation.Vertical;
 {% endhighlight %}
 
 {% endtabs %}
+
+![Toolbar Orientation in .NET Maui ImageEditor](images/toolbar/imageeditor-orientation.png)
 
 ## Toolbar Position
 
@@ -572,6 +592,10 @@ imageEditor.ToolbarSettings.IconSize = new Size(50, 50);
 {% endhighlight %}
 
 {% endtabs %}
+
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-image-editor-examples/tree/master/ToolbarCustomization)
+
+![Toolbar Customization in .NET Maui ImageEditor](images/toolbar/imageeditor-toolbar-settings.png)
 
 ## Notifying the Toolbar Item Selected
 

@@ -60,3 +60,5 @@ To localize the `ImageEditor` based on the `CurrentUICulture` using `resource` f
    6. Add the Name/Value pair in the Resource Designer of the `SfImageEditor.fr-FR.resx` file and change its corresponding value to the corresponding culture.
 
    ![shows-the-added-resource-file-name-value-pair-in-the-resource-designer-in-maui-ImageEditor](images/localization/shows-the-added-resource-file-name-value-pair-in-the-resource-designer-in-maui-ImageEditor.png)
+
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-image-editor-examples/tree/master/ImageEditorLocalization)
