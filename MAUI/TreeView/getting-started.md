@@ -758,7 +758,7 @@ namespace GettingStarted
             itemName.SetBinding(Label.TextProperty, new Binding("Content.ItemName"));
 
             grid.Children.Add(imageIcon);
-            grid.Children.Add(itemName, 1, 0);
+            grid.Children.Add(itemName);
 
             return grid;
         });
@@ -769,7 +769,7 @@ namespace GettingStarted
             var expanderIcon = new Image();
             expanderIcon.SetBinding(Image.SourceProperty, new Binding("IsExpanded"));
             expanderIcon.SetBinding(Image.IsVisibleProperty, new Binding("HasChildNodes"));
-            grid.Children.Add(grid);
+            grid.Children.Add(expanderIcon);
             return grid;
         });
 
