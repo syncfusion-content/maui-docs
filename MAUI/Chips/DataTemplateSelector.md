@@ -9,7 +9,7 @@ documentation: ug
 
 # DataTemplateSelector in .NET MAUI Chips
 
-You can customize the appearance of each chip with different templates based on specific constraints using the `DataTemplateSelector`.
+You can customize the appearance of each [.NET MAUI Chips](https://www.syncfusion.com/maui-controls/maui-chips) with different templates based on specific constraints using the `DataTemplateSelector`.
 
 ## Create and initialize business models 
 
