@@ -747,7 +747,7 @@ namespace GettingStarted
         SfTreeView treeView = new SfTreeView();
         FileManagerViewModel viewModel = new FileManagerViewModel();
         treeView.ItemsSource = viewModel.ImageNodeInfo; 
-        treeview.ChildPropertyName = "SubFiles";
+        treeView.ChildPropertyName = "SubFiles";
         treeView.ItemTemplateContextType = ItemTemplateContextType.Node;
         treeView.ItemTemplate = new DataTemplate(() => 
         {
