@@ -767,8 +767,8 @@ namespace GettingStarted
         {
             var grid = new Grid();
             var expanderIcon = new Image();
-            imageIcon.SetBinding(Image.SourceProperty, new Binding("IsExpanded"));
-            imageIcon.SetBinding(Image.IsVisibleProperty, new Binding("HasChildNodes"));
+            expanderIcon.SetBinding(Image.SourceProperty, new Binding("IsExpanded"));
+            expanderIcon.SetBinding(Image.IsVisibleProperty, new Binding("HasChildNodes"));
             grid.Children.Add(grid);
             return grid;
         });
