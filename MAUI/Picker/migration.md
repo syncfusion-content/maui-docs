@@ -455,3 +455,13 @@ The following code example, explains how to initialize the properties of the `Xa
 </tr>
 <tr>
 </table>
+
+## Known issues:
+
+* Picker background color is not applied to the popup.
+* Picker dynamic items source does not render the picker item.
+
+## Upcomming features
+
+* Enable Looping.
+
