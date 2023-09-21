@@ -150,7 +150,7 @@ The SfDateTimePicker control allows you to select the date and time by using the
 {% highlight xaml tabtitle="XAML" hl_lines="2" %}
 
 <picker:SfDateTimePicker x:Name="Picker" 
-                         SelectedDate="9/7/2023 10:15:22">
+                         SelectedDate="9/7/2023" SelectedTime="07:22:01">
 </picker:SfDateTimePicker>
 
 {% endhighlight %}
@@ -158,7 +158,8 @@ The SfDateTimePicker control allows you to select the date and time by using the
 
 SfDateTimePicker picker = new SfDateTimePicker()
 {
-    SelectedDate = new DateTime(2023, 09, 07, 10, 15, 22),
+    SelectedDate = new DateTime(2023, 9, 7).Date,
+    SelectedTime = new TimeSpan(07, 22, 01),
 };
 
 this.Content = picker;

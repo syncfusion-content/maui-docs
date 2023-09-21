@@ -156,9 +156,9 @@ Customize the column header view text style and background color of the `Date Ti
 
 <picker:SfDateTimePicker>
     <picker:SfDateTimePicker.ColumnHeaderView>
-        <picker:DateTimePickerColumnHeaderView Background="#D3D3D3">
+        <picker:DateTimePickerColumnHeaderView Background="#6750A4">
             <picker:DateTimePickerColumnHeaderView.TextStyle>
-                <picker:PickerTextStyle FontSize="15" TextColor="Black" />
+                <picker:PickerTextStyle FontSize="15" TextColor="White" />
             </picker:DateTimePickerColumnHeaderView.TextStyle>
         </picker:DateTimePickerColumnHeaderView>
     </picker:SfDateTimePicker.ColumnHeaderView>
@@ -170,10 +170,10 @@ Customize the column header view text style and background color of the `Date Ti
 SfDateTimePicker picker = new SfDateTimePicker();
 picker.ColumnHeaderView = new DateTimePickerColumnHeaderView()
 {
-    Background = Color.FromArgb("#D3D3D3"),
+    Background = Color.FromArgb("#6750A4"),
     TextStyle = new PickerTextStyle()
     {
-        TextColor = Colors.Black,
+        TextColor = Colors.White,
         FontSize = 15,
     },
 };
@@ -196,8 +196,8 @@ In the SfDateTimePicker control, validation buttons (OK and Cancel) can be custo
 
 <picker:SfDateTimePicker x:Name="picker" >
     <picker:SfDateTimePicker.FooterView >
-        <picker:PickerFooterView Height="40" OkButtonText="Save"
-                                 CancelButtonText="Exit"/>
+        <picker:PickerFooterView Height="40" OkButtonText="Ok Button"
+                                 CancelButtonText="Cancel Button"/>
     </picker:SfDateTimePicker.FooterView>
 </picker:SfDateTimePicker>
 
@@ -208,8 +208,8 @@ SfDateTimePicker picker = new SfDateTimePicker();
 picker.FooterView = new PickerFooterView()
 {
     Height = 40,
-    OkButtonText = "Save",
-    CancelButtonText = "Exit",
+    OkButtonText = "Ok Button",
+    CancelButtonText = "Cancel Button",
 };
 
 this.Content = picker;
@@ -253,9 +253,9 @@ Customize the footer text style and background color of the `Date Time Picker` u
 
 <picker:SfDateTimePicker x:Name="picker" >
     <picker:SfDateTimePicker.FooterView >
-        <picker:PickerFooterView Background="#D3D3D3">
+        <picker:PickerFooterView Background="#6750A4">
             <picker:PickerFooterView.TextStyle >
-                <picker:PickerTextStyle FontSize="15" TextColor="Black" />
+                <picker:PickerTextStyle FontSize="15" TextColor="White" />
             </picker:PickerFooterView.TextStyle>
         </picker:PickerFooterView>
     </picker:SfDateTimePicker.FooterView>
@@ -267,10 +267,10 @@ Customize the footer text style and background color of the `Date Time Picker` u
 SfDateTimePicker picker = new SfDateTimePicker();
 picker.FooterView = new PickerFooterView()
 {
-    Background = Color.FromArgb("#D3D3D3"),
+    Background = Color.FromArgb("#6750A4"),
     TextStyle = new PickerTextStyle()
     {
-        TextColor = Colors.Black,
+        TextColor = Colors.White,
         FontSize = 15,
     }
 };
@@ -293,7 +293,7 @@ In the SfDateTimePicker control, the corner radius, stroke , and padding can be 
 
 <picker:SfDateTimePicker x:Name="picker" >
     <picker:SfDateTimePicker.SelectionView >
-        <picker:PickerSelectionView CornerRadius="5" Stroke="#A9A9A9" Padding="10, 5, 10, 5" Background="#D3D3D3" />
+        <picker:PickerSelectionView CornerRadius="5" Stroke="Violet" Padding="5, 10, 5, 10" Background="#6750A4" />
     </picker:SfDateTimePicker.SelectionView>
 </picker:SfDateTimePicker>
 
@@ -304,9 +304,9 @@ SfDateTimePicker picker = new SfDateTimePicker();
 picker.SelectionView = new PickerSelectionView()
 {
     CornerRadius = 5,
-    Stroke = Color.FromArgb("#A9A9A9"),
-    Pading = new Thickness(10, 5, 10, 5),
-    Background = Color.FromArgb("#D3D3D3"),
+    Stroke = Colors.Violet,
+    Pading = new Thickness(5, 10, 5, 10),
+    Background = Color.FromArgb("#6750A4"),
 };
 
 this.Content = picker;

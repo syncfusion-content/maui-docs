@@ -11,7 +11,7 @@ documentation: ug
 
 In .NET MAUI, you can bind a Picker control to an external data source by setting its ItemsSource property to an ObservableCollection. This enables the Picker to display and update data from the collection.
 
-To bind the item source in the picker, set the `SfPicker.Columns.ItemSource` property as shown in the following code.
+Set the [ItemSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerColumn.html#Syncfusion_Maui_Picker_PickerColumn_ItemsSource) property in the [PickerColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerColumn.html) class as shown in the following code to bind the item source in the picker.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -40,7 +40,7 @@ To bind the item source in the picker, set the `SfPicker.Columns.ItemSource` pro
         ItemsSource = cityName,
         SelectedIndex = 1,
     };
-    this.Picker.Add(pickerColumn);
+    this.Picker.Columns.Add(pickerColumn);
 
 {% endhighlight %}
 {% endtabs %}
@@ -63,9 +63,9 @@ The following code example encapsulate how to populate Country and Cityes in eac
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
     ObservableCollection<object> countryName = new ObservableCollection<object>();
-    countryName.Add("India");
-    countryName.Add("United States");
     countryName.Add("Canada");
+    countryName.Add("United States");
+    countryName.Add("India");
     countryName.Add("United Kingdom");
     countryName.Add("Australia");
     countryName.Add("Germany");
@@ -105,18 +105,20 @@ The following code example encapsulate how to populate Country and Cityes in eac
 
 ## Set items text style customization
 
-The .NET MAUI Picker control, selected and unselected items, [TextColor], [FontSize], [FontFamily], and [FontAttributes] can be customized as shown in the following code.
+The .NET MAUI Picker control, selected and unselected items, `TextColor`, `FontSize`, `FontFamily`, and `FontAttributes` can be customized as shown in the following code.
+
+The .NET MAUI Picker control, selected and unselected items, `TextColor`, `FontSize`, `FontFamily`, and `FontAttributes` can be customized as shown in the following code.
 
 ### Selected item customization
 
-Selected item text style can be customized by setting `SfPicker.SelectedTextStyle` property.
+The selected item [SelectedTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_SelectedTextStyle) can be customized by setting the `SfPicker.SelectedTextStyle` property.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
     <sfPicker:SfPicker x:Name="Picker">
         <sfPicker:SfPicker.SelectedTextStyle>
-            <sfPicker:PickerTextStyle FontSize="16" FontAttributes="Bold" TextColor="Gray">
+            <sfPicker:PickerTextStyle FontSize="16" FontAttributes="Bold" TextColor="White">
             </sfPicker:PickerTextStyle>
         </sfPicker:SfPicker.SelectedTextStyle>
     </sfPicker:SfPicker>
@@ -126,21 +128,21 @@ Selected item text style can be customized by setting `SfPicker.SelectedTextStyl
 
     this.Picker.SelectedTextStyle.FontSize = 16;
     this.Picker.SelectedTextStyle.FontAttributes = FontAttributes.Bold;
-    this.Picker.SelectedTextStyle.TextColor = Colors.Gray;
+    this.Picker.SelectedTextStyle.TextColor = Colors.White;
 
 {% endhighlight %}
 {% endtabs %}
 
 ### Unselected item customization
 
-Unselected item text style can be customized by setting `SfPicker.TextStyle` property.
+The unselected item [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_TextStyle) can be customized by setting the `SfPicker.TextStyle` property.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
     <sfPicker:SfPicker x:Name="Picker">
         <sfPicker:SfPicker.TextStyle>
-            <sfPicker:PickerTextStyle FontSize="17" FontAttributes="Italic" TextColor="Green">
+            <sfPicker:PickerTextStyle FontSize="16" FontAttributes="Italic" TextColor="Black">
             </sfPicker:PickerTextStyle>
         </sfPicker:SfPicker.TextStyle>
     </sfPicker:SfPicker>
@@ -148,16 +150,16 @@ Unselected item text style can be customized by setting `SfPicker.TextStyle` pro
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-    this.Picker.TextStyle.FontSize = 17;
+    this.Picker.TextStyle.FontSize = 16;
     this.Picker.TextStyle.FontAttributes = FontAttributes.Italic;
-    this.Picker.TextStyle.TextColor = Colors.green;
+    this.Picker.TextStyle.TextColor = Colors.Black;
 
 {% endhighlight %}
 {% endtabs %}
 
 ## Adding custom view to items
 
-In picker control, the items can be customized with a custom view of all items by ItemTemplate and assign a custom view to the `ItemTemplate`.
+In picker control, the items can be customized with a custom view of all items by the [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfPicker.html#Syncfusion_Maui_Picker_SfPicker_ItemTemplate) and assign a custom view to the `ItemTemplate`.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -181,14 +183,12 @@ In picker control, the items can be customized with a custom view of all items b
     {
         Grid grid = new Grid
         {
-            Padding = new Thickness(0, 0, 5, 5),
-            BackgroundColor = Colors.Pink,
+            Padding = new Thickness(0, 1, 0, 1);
         };
         Label label = new Label
         {
             HorizontalOptions = LayoutOptions.Center,
             VerticalOptions = LayoutOptions.Center,
-            BackgroundColor = Colors.Red,
             HorizontalTextAlignment = TextAlignment.Center,
             VerticalTextAlignment = TextAlignment.Center,
             TextColor = Colors.Black,
