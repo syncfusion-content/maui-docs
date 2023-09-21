@@ -678,7 +678,7 @@ public class DataModel
 
 <tr>
 <td>{{'[Height](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.DataForm.DataFormItem.html#Syncfusion_XForms_DataForm_DataFormItem_Height)'| markdownify }}</td>
-<td>EditorHeight</td>
+<td>{{'[EditorHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html#Syncfusion_Maui_DataForm_DataFormItem_EditorHeight)'| markdownify}}</td>
 <td>Gets or sets the height of the editor.</td>
 </tr>
 </table>
@@ -1285,7 +1285,7 @@ The common properties of `Xamarin SfDataForm` list items ( [ DataFormPickerEdito
 
 <tr>
 <td>{{'[SpinButtonAlignment ](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfNumericUpDown.XForms.SpinButtonAlignment.html)'| markdownify }}</td>
-<td>NumericEditorUpDownPlacementMode</td>
+<td>{{'[NumericEditorUpDownPlacementMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.NumericEditorUpDownPlacementMode.html)'| markdownify}}</td>
 <td>Defines the constants for ClearButtonVisibility that specifies when to show clear button.</td>
 </tr>
 </table>

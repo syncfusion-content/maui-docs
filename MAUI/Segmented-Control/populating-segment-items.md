@@ -76,8 +76,10 @@ public class ViewModel
 {% endhighlight %}
 {% endtabs %}
 
+![Display text in .NET MAUI Segmented control.](images/populating-segment-items/text.png)
+
 ## Image
-Create a segmented control with segments that contain the provided images by using the `SfSegmentItem` collection, which is bound to the `Itemssource` property.
+Create a segmented control with segments that contain the provided images by using the [SfSegmentItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentItem.html) collection, which is bound to the [Itemssource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentedControl.html#Syncfusion_Maui_Buttons_SfSegmentedControl_ItemsSource) property.
 
 {% tabs %}
 {% highlight XAML %}
@@ -140,6 +142,8 @@ public class ViewModel
 
 {% endhighlight %}
 {% endtabs %}
+
+![Display image in .NET MAUI Segmented control.](images/populating-segment-items/image.png)
 
 ## Image with Text
 Display images and text in the segmented items of the control.
@@ -271,3 +275,4 @@ public class ViewModel
 {% endhighlight %}
 {% endtabs %}
 
+![Display font with text in .NET MAUI Segmented control.](images/populating-segment-items/font-text.png)
