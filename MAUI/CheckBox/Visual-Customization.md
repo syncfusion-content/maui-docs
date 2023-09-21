@@ -11,7 +11,7 @@ documentation: ug
 
 ## Customizing a shape
 
-The check box shape can be customized using the [`CornerRadius`] property. This property specifies a uniform radius value for every corner of the check box.
+The check box shape can be customized using the [`CornerRadius`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html#Syncfusion_Maui_Buttons_SfCheckBox_CornerRadius) property. This property specifies a uniform radius value for every corner of the check box.
 
 {% tabs %}
 {% highlight xaml %}
@@ -34,7 +34,7 @@ The check box shape can be customized using the [`CornerRadius`] property. This 
 
 ## Customizing a state color
 
-The default state colors can be customized using the [`CheckedColor`] and [`UncheckedColor`] properties. The checked or indeterminate state color is updated to the value of the [`CheckedColor`] property when the state is changed to checked or indeterminate. The unchecked state color is updated to the value of the [`UncheckedColor`] property when the state is changed to unchecked.
+The default state colors can be customized using the [`CheckedColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_CheckedColor) and [`UncheckedColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_UncheckedColor) properties. The checked or indeterminate state color is updated to the value of the [`CheckedColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_CheckedColor) property when the state is changed to checked or indeterminate. The unchecked state color is updated to the value of the [`UncheckedColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_UncheckedColor) property when the state is changed to unchecked.
 
 {% tabs %}
 {% highlight xaml %}
@@ -73,7 +73,7 @@ The default state colors can be customized using the [`CheckedColor`] and [`Unch
 
 ## StrokeThickness
 
-The tick box stroke thickness of the checkbox control can be customized using the [`StrokeThickness`] property.  
+The tick box stroke thickness of the checkbox control can be customized using the [`StrokeThickness`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_StrokeThickness) property.  
 
 {% tabs %}
 {% highlight xaml %}
@@ -115,13 +115,13 @@ The tick box stroke thickness of the checkbox control can be customized using th
 
 ## Setting a caption text appearance
 
-You can customize the display text appearance of the [`SfCheckBox`] control using the following properties:
+You can customize the display text appearance of the [`SfCheckBox`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html) control using the following properties:
 
-* [`TextColor`] : Changes the color of the text.
-* [`HorizontalTextAlignment`] : Changes the horizontal alignment of the caption text.
-* [`FontFamily`] : Changes the font family of the caption text.
-* [`FontAttributes`] : Sets font attributes(bold/italic/none) of the caption text.
-* [`FontSize`] : Sets font size of the caption text.
+* [`TextColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_TextColor) : Changes the color of the text.
+* [`HorizontalTextAlignment`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_HorizontalTextAlignment) : Changes the horizontal alignment of the caption text.
+* [`FontFamily`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_FontFamily) : Changes the font family of the caption text.
+* [`FontAttributes`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_FontAttributes) : Sets font attributes(bold/italic/none) of the caption text.
+* [`FontSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_FontSize) : Sets font size of the caption text.
 
 
 {% tabs %}
@@ -149,7 +149,7 @@ You can customize the display text appearance of the [`SfCheckBox`] control usin
  
 ## TickColor Customization
 
-The [`TickColor`] property customizes the color of the tick in the [`SfCheckBox`] control using the properties listed below.
+The [`TickColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html#Syncfusion_Maui_Buttons_SfCheckBox_TickColor) property customizes the color of the tick in the [`SfCheckBox`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html) control using the properties listed below.
 
 {% tabs %}
 {% highlight xaml %}
