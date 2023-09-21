@@ -15,7 +15,7 @@ This section explains about how to work with MVVM pattern in TreeView.
 
 ### Binding SelectedItem
 
-TreeView support to select the items through binding the `SelectedItem` property from view model by implementing the `INotifyPropertyChanged` interface that gives the call back notification to UI.
+TreeView support to select the items through binding the [SelectedItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_SelectedItem) property from view model by implementing the `INotifyPropertyChanged` interface that gives the call back notification to UI.
 
 {% tabs %}
 {% highlight xaml hl_lines="2" %}
@@ -75,7 +75,7 @@ public class CountriesViewModel
 
 ### Binding SelectedItems
 
-The TreeView supports selecting multiple items by binding the `SelectedItems` property from the view model with the `ObservableCollection<object>` type.
+The TreeView supports selecting multiple items by binding the [SelectedItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_SelectedItems) property from the view model with the `ObservableCollection<object>` type.
 
 {% tabs %}
 {% highlight xaml hl_lines="3" %}
@@ -143,7 +143,7 @@ Download the entire source code from GitHub [here](https://github.com/Syncfusion
 
 ### Tap command
 
-The `TapCommand` will be triggered whenever tapping the item and passing the `TreeViewNode` as command a parameter.
+The [TapCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_TapCommand) will be triggered whenever tapping the item and passing the [TreeViewNode](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.TreeViewNode.html) as command a parameter.
 
 {% tabs %}
 {% highlight c# tabtitle="CommandViewModel.cs" %}
@@ -175,7 +175,7 @@ public class CommandViewModel
 
 ### LongPressCommand
 
-The `LongPressCommand` will be triggered whenever an item is long pressed and passing the `TreeViewNode` as command parameter.
+The [LongPressCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_LongPressCommand) will be triggered whenever an item is long pressed and passing the [TreeViewNode](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.TreeViewNode.html) as command parameter.
 
 {% tabs %}
 {% highlight c# tabtitle="CommandViewModel.cs" %}
@@ -207,7 +207,7 @@ public class CommandViewModel
 
 ### Expand command
 
-The `ExpandCommand` will be triggered while expanding the node and passing the `TreeViewNode` as a command parameter. TreeView expands the node based on the return value of the `CanExecute` method implementation of `ExpandCommand`. If you return false, then expand action will be canceled. Execute method implementation of `ExpandCommand` will get called after expanding the node.
+The [ExpandCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ExpandCommand) will be triggered while expanding the node and passing the [TreeViewNode](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.TreeViewNode.html) as a command parameter. TreeView expands the node based on the return value of the `CanExecute` method implementation of `ExpandCommand`. If you return false, then expand action will be canceled. Execute method implementation of `ExpandCommand` will get called after expanding the node.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="11" %}
@@ -270,7 +270,7 @@ public class CommandViewModel
 
 ### Collapse command
 
-The `CollapseCommand` will be triggered while collapsing the node and passing the `TreeViewNode` as a command parameter. TreeView collapses the node based on the return value of the `CanExecute` method implementation of `CollapseCommand`. If you return false, then collapse action will be canceled. Execute method implementation of `CollapseCommand` will be called after the node has collapsed.
+The [CollapseCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_CollapseCommand) will be triggered while collapsing the node and passing the [TreeViewNode](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.TreeViewNode.html) as a command parameter. TreeView collapses the node based on the return value of the `CanExecute` method implementation of `CollapseCommand`. If you return false, then collapse action will be canceled. Execute method implementation of `CollapseCommand` will be called after the node has collapsed.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="11" %}
@@ -332,7 +332,7 @@ public class CommandViewModel
 
 ## Event to command
 
-The `TreeView` event can be converted into commands using `Behaviors`. To achieve this, create a command in the `ViewModel` class and associate it to the TreeView event using `Behaviors`.
+The `TreeView` event can be converted into commands using [Behaviors](https://learn.microsoft.com/en-us/dotnet/maui/fundamentals/behaviors). To achieve this, create a command in the `ViewModel` class and associate it to the TreeView event using `Behaviors`.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="7" %}
