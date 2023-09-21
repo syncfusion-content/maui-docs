@@ -66,7 +66,7 @@ N> This is common for Shape and Text annotations.
 
 ## Browse image event
 
-The `BrowseImage` event occurs when you click the browse icon in the toolbar while browsing the image source.
+The [`BrowseImage`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_BrowseImage) event occurs when you click the browse icon in the toolbar while browsing the image source.
 `Cancel`: Restrict the default image browse picker opening by setting the `Cancel` argument `true`.
 
 {% tabs %}

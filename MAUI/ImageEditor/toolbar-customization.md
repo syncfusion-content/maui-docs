@@ -47,7 +47,7 @@ public partial class MainPage : ContentPage
 
 ## Built-in Toolbar
 
-Customize each toolbar item using the `Name`. Get or set the names of the built-in toolbar and dynamically add toolbar items using the `Name` property.
+Customize each toolbar item using the [`Name`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorToolbarItem.html#Syncfusion_Maui_ImageEditor_ImageEditorToolbarItem_Name). Get or set the names of the built-in toolbar and dynamically add toolbar items using the [`Name`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorToolbarItem.html#Syncfusion_Maui_ImageEditor_ImageEditorToolbarItem_Name) property.
 
 {% highlight C# %}
 
@@ -67,7 +67,7 @@ N> You cannot modify the names of existing built-in toolbar items or create tool
 
 #### Get an item from the default top toolbar
 
-The default top toolbar contains three groups, each containing its items. Get the `ImageEditorToolbarItem` and customize the properties.
+The default top toolbar contains three groups, each containing its items. Get the [`ImageEditorToolbarItem`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorToolbarItem.html) and customize the properties.
 {% highlight C# %}
 
 SfImageEditor imageEditor = new SfImageEditor();
@@ -83,7 +83,7 @@ ImageEditorToolbarItem saveItem = saveGroup.Items.FirstOrDefault(i => i.Name == 
 
 #### Get an item from the default bottom toolbar
 
-The default bottom toolbar contains `ToolbarItems`, and each item has `SubToolbars`. Get the required `ImageEditorToolbarItem` using the `Name` and customize the default settings.
+The default bottom toolbar contains [`ToolbarItems`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorToolbar.html#Syncfusion_Maui_ImageEditor_ImageEditorToolbar_ToolbarItems), and each item has [`SubToolbars`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorToolbarItem.html#Syncfusion_Maui_ImageEditor_ImageEditorToolbarItem_SubToolbars). Get the required [`ImageEditorToolbarItem`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorToolbarItem.html) using the [`Name`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorToolbarItem.html#Syncfusion_Maui_ImageEditor_ImageEditorToolbarItem_Name) and customize the default settings.
 
 Refer to the following code sample to customize the footer toolbar item.
 
@@ -113,11 +113,11 @@ ImageEditorToolbarItem arrowItem = (ImageEditorToolbarItem)subtoolbar.ToolbarIte
 
 {% endhighlight %}
 
-N> Remove the existing toolbar items `Name` from the image editor toolbarItems collection based on the index value. Change the icon and text values dynamically for any already added toolbar items based on the index.
+N> Remove the existing toolbar items [`Name`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorToolbarItem.html#Syncfusion_Maui_ImageEditor_ImageEditorToolbarItem_Name) from the image editor toolbarItems collection based on the index value. Change the icon and text values dynamically for any already added toolbar items based on the index.
 
 ### Change the crop toolbar options
 
-Show the required crop types alone in the crop types toolbar by using the `CropTypes` property in the `ImageEditorToolbarSettings` class.
+Show the required crop types alone in the crop types toolbar by using the [`CropTypes`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorToolbarSettings.html#Syncfusion_Maui_ImageEditor_ImageEditorToolbarSettings_CropTypes) property in the [`ImageEditorToolbarSettings`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorToolbarSettings.html) class.
 
 {% tabs %}
 
@@ -141,9 +141,11 @@ imageEditor.ToolbarSettings.CropTypes = ImageCropType.Circle | ImageCropType.Squ
 
 {% endtabs %}
 
+![Custom Crop Toolbar in .NET Maui ImageEditor](images/toolbar/imageeditor-croptypes.png)
+
 ### Change the effect toolbar options
 
-Show the required effect types alone in the effects toolbar by using the `EffectTypes` property in the `ImageEditorToolbarSettings` class.
+Show the required effect types alone in the effects toolbar by using the [`EffectTypes`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorToolbarSettings.html#Syncfusion_Maui_ImageEditor_ImageEditorToolbarSettings_EffectTypes) property in the [`ImageEditorToolbarSettings`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorToolbarSettings.html) class.
 
 {% tabs %}
 
@@ -167,9 +169,11 @@ imageEditor.ToolbarSettings.EffectTypes = ImageEffect.Hue | ImageEffect.Blur | I
 
 {% endtabs %}
 
+![Custom Effect Toolbar in .NET Maui ImageEditor](images/toolbar/imageeditor-effecttypes.png)
+
 ### Change the shapes toolbar options
 
-Show the required shape types alone in the shapes toolbar by using the `Shapes` property in the `ImageEditorToolbarSettings` class.
+Show the required shape types alone in the shapes toolbar by using the [`Shapes`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorToolbarSettings.html#Syncfusion_Maui_ImageEditor_ImageEditorToolbarSettings_Shapes) property in the [`ImageEditorToolbarSettings`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorToolbarSettings.html) class.
 
 {% tabs %}
 
@@ -193,9 +197,11 @@ imageEditor.ToolbarSettings.Shapes = AnnotationShape.Circle | AnnotationShape.Li
 
 {% endtabs %}
 
+![Custom Shape Toolbar in .NET Maui ImageEditor](images/toolbar/imageeditor-shapetypes.png)
+
 ### Change the color palette toolbar options
 
-Change the default colors of the `ColorPalette` in the toolbar.
+Change the default colors of the [`ColorPalette`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorToolbarSettings.html#Syncfusion_Maui_ImageEditor_ImageEditorToolbarSettings_ColorPalette) in the toolbar.
 
 {% tabs %}
 
@@ -229,9 +235,11 @@ Change the default colors of the `ColorPalette` in the toolbar.
 
 N> Color palette colors are common for Text, Shape and Pen.
 
+![Toolbar Color Palette in .NET Maui ImageEditor](images/toolbar/imageeditor-colorpalette.png)
+
 ### Change the Toolbar Item to Enable or Disable State
 
-Enable or disable the toolbar items by using the `IsEnabled` property in the `ImageEditorToolbarItem` class.
+Enable or disable the toolbar items by using the [`IsEnabled`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorToolbarItem.html#Syncfusion_Maui_ImageEditor_ImageEditorToolbarItem_IsEnabled) property in the [`ImageEditorToolbarItem`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorToolbarItem.html) class.
 
 {% tabs %}
 
@@ -255,7 +263,7 @@ saveItem.IsEnabled = false;
 
 ### Customize the Toolbar Item View
 
-To customize the view of toolbar items, specify their icon names and set the view using the `View` property in the `ImageEditorToolbarItem`.
+To customize the view of toolbar items, specify their icon names and set the view using the [`View`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorToolbarItem.html#Syncfusion_Maui_ImageEditor_ImageEditorToolbarItem_View) property in the [`ImageEditorToolbarItem`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorToolbarItem.html).
 
 {% tabs %}
 
@@ -276,9 +284,11 @@ saveItem.View = image;
 
 {% endtabs %}
 
+![Customize Toolbar Item View in .NET Maui ImageEditor](images/toolbar/imageeditor-custom-item-view.png)
+
 ### Add the SubToolbar
 
-Create `SubToolbars` within your toolbar items to organize related actions.
+Create [`SubToolbars`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorToolbarItem.html#Syncfusion_Maui_ImageEditor_ImageEditorToolbarItem_SubToolbars) within your toolbar items to organize related actions.
 
 {% tabs %}
 
@@ -306,9 +316,11 @@ cropItem.SubToolbars = new List<ImageEditorToolbar>()
 
 {% endtabs %}
 
+![Add SubToolbar in .NET Maui ImageEditor](images/toolbar/imageeditor-subtoolbar.png)
+
 ### Add a Toolbar Item with the Existing Toolbar
 
-Explicitly add the `ImageEditorToolbarItem` to the `ImageEditorToolbar` manually.
+Explicitly add the [`ImageEditorToolbarItem`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorToolbarItem.html) to the [`ImageEditorToolbar`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorToolbar.html) manually.
 
 {% tabs %}
 
@@ -328,11 +340,13 @@ saveGroup.Items.Add(new ImageEditorToolbarItem() { Name = "Share", View = image 
 
 {% endtabs %}
 
+![Add Toolbar Item in .NET Maui ImageEditor](images/toolbar/imageeditor-add-item.png)
+
 ## Explicitly Create Toolbars
 
-The ImageEditor automatically generates the toolbars. To add the toolbars manually, you need to explicitly add them and change the `AutoGenerateToolbarItems` property to `false`.
+The ImageEditor automatically generates the toolbars. To add the toolbars manually, you need to explicitly add them and change the [`AutoGenerateToolbarItems`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_AutoGenerateToolbarItems) property to `false`.
 
-N> When you create a new toolbar item, you can use the pre-existing built-in names for the item, which will automatically generate the icon view. If you want to introduce a new item view or modify the current one, you can use the `View` property of the `ImageEditorToolbarItem` class to define the item view.
+N> When you create a new toolbar item, you can use the pre-existing built-in names for the item, which will automatically generate the icon view. If you want to introduce a new item view or modify the current one, you can use the [`View`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorToolbarItem.html#Syncfusion_Maui_ImageEditor_ImageEditorToolbarItem_View) property of the [`ImageEditorToolbarItem`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorToolbarItem.html) class to define the item view.
 
 {% tabs %}
 
@@ -398,9 +412,11 @@ imageEditor.Toolbars.Add(editorToolbar);
 
 {% endtabs %}
 
+![Explicit Toolbar in .NET Maui ImageEditor](images/toolbar/imageeditor-explicit-create-toolbar.png)
+
 ### Create the sub-toolbar explicitly
 
-Create `SubToolbars` within our default toolbar items to organize related actions.
+Create [`SubToolbars`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorToolbarItem.html#Syncfusion_Maui_ImageEditor_ImageEditorToolbarItem_SubToolbars) within our default toolbar items to organize related actions.
 
 {% tabs %}
 
@@ -466,11 +482,13 @@ imageEditor.Toolbars.Add(editorToolbar);
 
 {% endtabs %}
 
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-image-editor-examples/tree/master/ExplicitToolbar)
+
 ## Change the Toolbar Item Visibility
 
 Hide or show the toolbar items by specifying their icon names and setting the boolean values to true or false.
 
-N> Customize an icon by specifying its `Name`.
+N> Customize an icon by specifying its [`Name`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorToolbarItem.html#Syncfusion_Maui_ImageEditor_ImageEditorToolbarItem_Name).
 
 {% tabs %}
 
@@ -486,7 +504,7 @@ N> Customize an icon by specifying its `Name`.
 
 ## Toolbar Orientation
 
-The toolbar orientation can be changed to achieve the desired design by using the `Orientation` property in the `ImageEditorToolbar` class. The default value is `ToolbarOrientation.Horizontal`.
+The toolbar orientation can be changed to achieve the desired design by using the [`Orientation`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorToolbar.html#Syncfusion_Maui_ImageEditor_ImageEditorToolbar_Orientaion) property in the [`ImageEditorToolbar`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorToolbar.html) class. The default value is [`ToolbarOrientation.Horizontal`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ToolbarOrientation.html#Syncfusion_Maui_ImageEditor_ToolbarOrientation_Horizontal).
 
 For example, set the toolbar to a vertical orientation:
 
@@ -503,9 +521,11 @@ footerToolbar.Orientaion = ToolbarOrientation.Vertical;
 
 {% endtabs %}
 
+![Toolbar Orientation in .NET Maui ImageEditor](images/toolbar/imageeditor-orientation.png)
+
 ## Toolbar Position
 
-The toolbar can be positioned before or after the image of the ImageEditor by using the `Position` property in the `ImageEditorToolbar` class. The default value is `ToolbarPosition.Start`.
+The toolbar can be positioned before or after the image of the ImageEditor by using the [`Position`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorToolbar.html#Syncfusion_Maui_ImageEditor_ImageEditorToolbar_Position) property in the [`ImageEditorToolbar`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorToolbar.html) class. The default value is [`ToolbarPosition.Start`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ToolbarPosition.html#Syncfusion_Maui_ImageEditor_ToolbarPosition_Start).
 
 {% tabs %}
 
@@ -522,7 +542,7 @@ footerToolbar.Position = ToolbarPosition.Start;
 
 ## Change the Toolbar Size 
 
-The size of the toolbar can be adjusted by using the `Size` property in the `ImageEditorToolbar` class.
+The size of the toolbar can be adjusted by using the [`Size`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorToolbar.html#Syncfusion_Maui_ImageEditor_ImageEditorToolbar_Size) property in the [`ImageEditorToolbar`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorToolbar.html) class.
 
 For horizontal orientation, the size will be considered as width, and for vertical orientation, it will be considered as height.
 
@@ -538,12 +558,12 @@ For horizontal orientation, the size will be considered as width, and for vertic
 
 ## Appearance Customization
 
-Customize the appearance of the toolbar by using the `ToolbarSettings` property. The following are some of the properties you can customize:
+Customize the appearance of the toolbar by using the [`ToolbarSettings`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_ToolbarSettings) property. The following are some of the properties you can customize:
 
-* `Background`: Specifies the background color of the toolbar.
-* `IconColor`: Specifies the color of the icons in the toolbar.
-* `IconSize`: Specifies the size of the icons in the toolbar. The default value is 48.
-* `DisabledColor`: Specifies the color of the disabled icons in the toolbar.
+* [`Background`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorToolbarSettings.html#Syncfusion_Maui_ImageEditor_ImageEditorToolbarSettings_Background): Specifies the background color of the toolbar.
+* [`IconColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorToolbarSettings.html#Syncfusion_Maui_ImageEditor_ImageEditorToolbarSettings_IconColor): Specifies the color of the icons in the toolbar.
+* [`IconSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorToolbarSettings.html#Syncfusion_Maui_ImageEditor_ImageEditorToolbarSettings_IconSize): Specifies the size of the icons in the toolbar. The default value is 48.
+* [`DisabledColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorToolbarSettings.html#Syncfusion_Maui_ImageEditor_ImageEditorToolbarSettings_DisabledColor): Specifies the color of the disabled icons in the toolbar.
 
 {% tabs %}
 
@@ -573,9 +593,13 @@ imageEditor.ToolbarSettings.IconSize = new Size(50, 50);
 
 {% endtabs %}
 
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-image-editor-examples/tree/master/ToolbarCustomization)
+
+![Toolbar Customization in .NET Maui ImageEditor](images/toolbar/imageeditor-toolbar-settings.png)
+
 ## Notifying the Toolbar Item Selected
 
-Whenever you tap the toolbar menu item, the `ToolbarItemSelected` event will be triggered, and you'll get the respective tapped toolbar item as an argument as shown in the following code sample.
+Whenever you tap the toolbar menu item, the [`ToolbarItemSelected`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_ToolbarItemSelected) event will be triggered, and you'll get the respective tapped toolbar item as an argument as shown in the following code sample.
 
 The default toolbar item action can be restricted by setting the `e.cancel` to `true`.
 
