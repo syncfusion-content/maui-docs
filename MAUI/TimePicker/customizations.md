@@ -56,7 +56,7 @@ The SfTimePicker control allows you to customize the header divider color by set
 
 <picker:SfTimePicker x:Name="Timepicker" >
     <picker:SfTimePicker.HeaderView >
-        <picker:PickerHeaderView DividerColor="#A9A9A9" />
+        <picker:PickerHeaderView Height="40" Text="Time Picker" DividerColor="#36454F" />
     </picker:SfTimePicker.HeaderView>
 </picker:SfTimePicker>
 
@@ -67,7 +67,9 @@ The SfTimePicker control allows you to customize the header divider color by set
 SfTimePicker timePicker = new SfTimePicker();
 timepicker.HeaderView = new PickerHeaderView()
 {
-    DividerColor = Color.FromArgb("#A9A9A9")
+    Height = 40,
+    Text = "Time Picker",
+    DividerColor = Color.FromArgb("#36454F")
 };
 
 this.Content = timePicker;
@@ -86,7 +88,7 @@ Customize the header text style and background color of the `Time picker` using 
 
 <picker:SfTimePicker x:Name="Timepicker" >
     <picker:SfTimePicker.HeaderView >
-        <picker:PickerHeaderView Background="#D3D3D3">
+        <picker:PickerHeaderView Height="40" Text="Time Picker" Background="#D3D3D3">
             <picker:PickerHeaderView.TextStyle >
                 <picker:PickerTextStyle FontSize="15" TextColor="Black" />
             </picker:PickerHeaderView.TextStyle>
@@ -101,10 +103,12 @@ Customize the header text style and background color of the `Time picker` using 
 SfTimePicker timePicker = new SfTimePicker();
 timePicker.HeaderView = new PickerHeaderView()
 {
-    Background = Color.FromArgb("#6750A4"),
+    Height = 40,
+    Text = "Time Picker",
+    Background = Color.FromArgb("#D3D3D3"),
     TextStyle = new PickerTextStyle()
     {
-        TextColor = Colors.White,
+        TextColor = Colors.Black,
         FontSize = 15,
     }
 };
@@ -165,7 +169,7 @@ The SfTimePicker control allows you to customize the column header divider color
 
 <picker:SfTimePicker x:Name="Timepicker" >
     <picker:SfTimePicker.ColumnHeaderView >
-        <picker:TimePickerColumnHeaderView DividerColor="#A9A9A9" />
+        <picker:TimePickerColumnHeaderView DividerColor="#36454F" />
     </picker:SfTimePicker.ColumnHeaderView>
 </picker:SfTimePicker>
 
@@ -176,7 +180,7 @@ The SfTimePicker control allows you to customize the column header divider color
 SfTimePicker timePicker = new SfTimePicker();
 timepicker.ColumnHeaderView = new TimePickerColumnHeaderView()
 {
-    DividerColor = Color.FromArgb("#A9A9A9")
+    DividerColor = Color.FromArgb("#36454F")
 };
 
 this.Content = timePicker;
@@ -195,9 +199,9 @@ Customize the column header view text style and background color of the `Time Pi
 
 <picker:SfTimePicker x:Name="Timepicker" >
     <picker:SfTimePicker.ColumnHeaderView >
-        <picker:TimePickerColumnHeaderView Background="#6750A4">
+        <picker:TimePickerColumnHeaderView Background="#E5E4E2">
             <picker:TimePickerColumnHeaderView.TextStyle >
-                <picker:PickerTextStyle FontSize="15" TextColor="White" />
+                <picker:PickerTextStyle FontSize="15" TextColor="Black" />
             </picker:TimePickerColumnHeaderView.TextStyle>
         </picker:TimePickerColumnHeaderView>
     </picker:SfTimePicker.ColumnHeaderView>
@@ -210,10 +214,10 @@ Customize the column header view text style and background color of the `Time Pi
 SfTimePicker timePicker = new SfTimePicker();
 timePicker.ColumnHeaderView = new TimePickerColumnHeaderView()
 {
-    Background = Color.FromArgb("#6750A4"),
+    Background = Color.FromArgb("#E5E4E2"),
     TextStyle = new PickerTextStyle()
     {
-        TextColor = Colors.White,
+        TextColor = Colors.Black,
         FontSize = 15,
     }
 };
@@ -239,8 +243,8 @@ The Default value of the [OkButtonText] property is "OK", and [CancelButtonText]
 
 <picker:SfTimePicker x:Name="Timepicker" >
     <picker:SfTimePicker.FooterView >
-        <picker:PickerFooterView Height="40" OkButtonText="Ok Button"
-                                 CancelButtonText="Cancel Button"/>
+        <picker:PickerFooterView Height="40" OkButtonText="Save"
+                                 CancelButtonText="Exit"/>
     </picker:SfTimePicker.FooterView>
 </picker:SfTimePicker>
 
@@ -252,8 +256,8 @@ SfTimePicker timePicker = new SfTimePicker();
 timePicker.FooterView = new PickerFooterView()
 {
     Height = 40,
-    OkButtonText = "Ok Button",
-    CancelButtonText = "Cancel Button",
+    OkButtonText = "Save",
+    CancelButtonText = "Exit",
 };
 
 this.Content = timePicker;
@@ -272,7 +276,7 @@ The SfTimePicker control allows you to customize the footer divider color by set
 
 <picker:SfTimePicker x:Name="Timepicker" >
     <picker:SfTimePicker.FooterView >
-        <picker:PickerFooterView DividerColor="#A9A9A9" />
+        <picker:PickerFooterView Height="40" DividerColor="#36454F" />
     </picker:SfTimePicker.FooterView>
 </picker:SfTimePicker>
 
@@ -283,7 +287,8 @@ The SfTimePicker control allows you to customize the footer divider color by set
 SfTimePicker timePicker = new SfTimePicker();
 timepicker.FooterView = new PickerFooterView()
 {
-    DividerColor = Color.FromArgb("#A9A9A9")
+    Height = 40,
+    DividerColor = Color.FromArgb("#36454F")
 };
 
 this.Content = timePicker;
@@ -302,9 +307,9 @@ Customize the footer text style and background color of the `Time Picker` using 
 
 <picker:SfTimePicker x:Name="Timepicker" >
     <picker:SfTimePicker.FooterView >
-        <picker:PickerFooterView Background="#6750A4">
+        <picker:PickerFooterView Height="40" Background="#D3D3D3">
             <picker:PickerFooterView.TextStyle >
-                <picker:PickerTextStyle FontSize="15" TextColor="White" />
+                <picker:PickerTextStyle FontSize="15" TextColor="Black" />
             </picker:PickerFooterView.TextStyle>
         </picker:PickerFooterView>
     </picker:SfTimePicker.FooterView>
@@ -317,10 +322,11 @@ Customize the footer text style and background color of the `Time Picker` using 
 SfTimePicker timePicker = new SfTimePicker();
 timePicker.FooterView = new PickerFooterView()
 {
-    Background = Color.FromArgb("#6750A4"),
+    Height = 40,
+    Background = Color.FromArgb("#D3D3D3"),
     TextStyle = new PickerTextStyle()
     {
-        TextColor = Colors.White,
+        TextColor = Colors.Black,
         FontSize = 15,
     }
 };
@@ -345,7 +351,7 @@ In the SfTimePicker control, the corner radius, stroke, and padding can be custo
 
 <picker:SfTimePicker x:Name="Timepicker" >
     <picker:SfTimePicker.SelectionView >
-        <picker:PickerSelectionView CornerRadius="5" Stroke="Violet" Padding="5, 10, 5, 10" Background="#6750A4" />
+        <picker:PickerSelectionView CornerRadius="10" Stroke="Black" Padding="10, 5, 10, 5" Background="#808080" />
     </picker:SfTimePicker.SelectionView>
 </picker:SfTimePicker>
 
@@ -356,10 +362,10 @@ In the SfTimePicker control, the corner radius, stroke, and padding can be custo
 SfTimePicker timePicker = new SfTimePicker();
 timePicker.SelectionView = new PickerSelectionView()
 {
-    CornerRadius = 5,
-    Stroke = Colors.Violet,
-    Pading = new Thickness(5, 10, 5, 10),
-    Background = Color.FromArgb("#6750A4"),
+    CornerRadius = 10,
+    Stroke = Colors.Black,
+    Pading = new Thickness(10, 5, 10, 5),
+    Background = Color.FromArgb("#808080"),
 };
 
 this.Content = timePicker;
@@ -380,6 +386,9 @@ Customize the selected view text style of the `Time Picker` using the [SelectedT
     <picker:SfTimePicker.SelectedTextStyle >
         <picker:PickerTextStyle FontSize="15" TextColor="White"/>
     </picker:SfTimePicker.SelectedTextStyle>
+    <picker:SfTimePicker.SelectionView>
+        <picker:PickerSelectionView Background="#808080" />
+    </picker:SfTimePicker.SelectionView>
 </picker:SfTimePicker>
 
 {% endhighlight %}
@@ -389,11 +398,13 @@ Customize the selected view text style of the `Time Picker` using the [SelectedT
 SfTimePicker timePicker = new SfTimePicker();
 timePicker.SelectedTextStyle = new PickerTextStyle()
 {
-    TextStyle = new PickerTextStyle()
-    {
-        TextColor = Colors.White,
-        FontSize = 15,
-    }
+    TextColor = Colors.White,
+    FontSize = 15,
+};
+
+timePicker.SelectionView = new PickerSelectionView()
+{
+    Background = Color.FromArgb("#808080"),
 };
 
 this.Content = timePicker;

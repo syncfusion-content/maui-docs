@@ -56,7 +56,7 @@ The SfDatePicker control allows you to customize the header divider color by set
 
 <picker:SfDatePicker x:Name="datepicker" >
     <picker:SfDatePicker.HeaderView >
-        <picker:PickerHeaderView DividerColor="#A9A9A9" />
+        <picker:PickerHeaderView Height="40" Text="Date Picker" DividerColor="#36454F" />
     </picker:SfDatePicker.HeaderView>
 </picker:SfDatePicker>
 
@@ -67,7 +67,9 @@ The SfDatePicker control allows you to customize the header divider color by set
 SfDatePicker datePicker = new SfDatePicker();
 datepicker.HeaderView = new PickerHeaderView()
 {
-    DividerColor = Color.FromArgb("#A9A9A9")
+    Height = 40,
+    Text = "Date Picker",
+    DividerColor = Color.FromArgb("#36454F")
 };
 
 this.Content = datePicker;
@@ -86,7 +88,7 @@ Customize the header text style and background color of the `Date picker` using 
 
 <picker:SfDatePicker x:Name="datepicker" >
     <picker:SfDatePicker.HeaderView >
-        <picker:PickerHeaderView Background="#D3D3D3">
+        <picker:PickerHeaderView Height="40" Text="Date Picker" Background="#D3D3D3">
             <picker:PickerHeaderView.TextStyle >
                 <picker:PickerTextStyle FontSize="15" TextColor="Black" />
             </picker:PickerHeaderView.TextStyle>
@@ -101,7 +103,9 @@ Customize the header text style and background color of the `Date picker` using 
 SfDatePicker datePicker = new SfDatePicker();
 datePicker.HeaderView = new PickerHeaderView()
 {
-    Background = Color.FromArgb("#6750A4"),
+    Height = 40,
+    Text = "Date Picker",
+    Background = Color.FromArgb("#D3D3D3"),
     TextStyle = new PickerTextStyle()
     {
         TextColor = Colors.White,
@@ -163,7 +167,7 @@ The SfDatePicker control allows you to customize the column header divider color
 
 <picker:SfDatePicker x:Name="datepicker" >
     <picker:SfDatePicker.ColumnHeaderView >
-        <picker:DatePickerColumnHeaderView DividerColor="#A9A9A9" />
+        <picker:DatePickerColumnHeaderView DividerColor="#36454F" />
     </picker:SfDatePicker.ColumnHeaderView>
 </picker:SfDatePicker>
 
@@ -174,7 +178,7 @@ The SfDatePicker control allows you to customize the column header divider color
 SfDatePicker datePicker = new SfDatePicker();
 datepicker.ColumnHeaderView = new DatePickerColumnHeaderView()
 {
-    DividerColor = Color.FromArgb("#A9A9A9")
+    DividerColor = Color.FromArgb("#36454F")
 };
 
 this.Content = datePicker;
@@ -193,9 +197,9 @@ Customize the column header view text style and background color of the Date Pic
 
 <picker:SfDatePicker x:Name="datepicker" >
     <picker:SfDatePicker.ColumnHeaderView >
-        <picker:DatePickerColumnHeaderView Background="#6750A4">
+        <picker:DatePickerColumnHeaderView Background="#E5E4E2">
             <picker:DatePickerColumnHeaderView.TextStyle >
-                <picker:PickerTextStyle FontSize="15" TextColor="White" />
+                <picker:PickerTextStyle FontSize="15" TextColor="Black" />
             </picker:DatePickerColumnHeaderView.TextStyle>
         </picker:DatePickerColumnHeaderView>
     </picker:SfDatePicker.ColumnHeaderView>
@@ -208,10 +212,10 @@ Customize the column header view text style and background color of the Date Pic
 SfDatePicker datePicker = new SfDatePicker();
 datePicker.ColumnHeaderView = new DatePickerColumnHeaderView()
 {
-    Background = Color.FromArgb("#6750A4"),
+    Background = Color.FromArgb("#E5E4E2"),
     TextStyle = new PickerTextStyle()
     {
-        TextColor = Colors.White,
+        TextColor = Colors.Black,
         FontSize = 15,
     }
 };
@@ -237,8 +241,8 @@ The Default value of the [OkButtonText] property is "OK", and [CancelButtonText]
 
 <picker:SfDatePicker x:Name="datepicker" >
     <picker:SfDatePicker.FooterView >
-        <picker:PickerFooterView Height="40" OkButtonText="Ok Button"
-                                 CancelButtonText="Cancel Button"/>
+        <picker:PickerFooterView Height="40" OkButtonText="Save"
+                                 CancelButtonText="Exit"/>
     </picker:SfDatePicker.FooterView>
 </picker:SfDatePicker>
 
@@ -250,8 +254,8 @@ SfDatePicker datePicker = new SfDatePicker();
 datePicker.FooterView = new PickerFooterView()
 {
     Height = 40,
-    OkButtonText = "Ok Button",
-    CancelButtonText = "Cancel Button",
+    OkButtonText = "Save",
+    CancelButtonText = "Exit",
 };
 
 this.Content = datePicker;
@@ -270,7 +274,7 @@ The SfDatePicker control allows you to customize the footer divider color by set
 
 <picker:SfDatePicker x:Name="datepicker" >
     <picker:SfDatePicker.FooterView >
-        <picker:PickerFooterView DividerColor="#A9A9A9" />
+        <picker:PickerFooterView Height="40" DividerColor="#36454F" />
     </picker:SfDatePicker.FooterView>
 </picker:SfDatePicker>
 
@@ -281,7 +285,8 @@ The SfDatePicker control allows you to customize the footer divider color by set
 SfDatePicker datePicker = new SfDatePicker();
 datepicker.FooterView = new PickerFooterView()
 {
-    DividerColor = Color.FromArgb("#A9A9A9")
+    Height = 40,
+    DividerColor = Color.FromArgb("#36454F")
 };
 
 this.Content = datePicker;
@@ -300,9 +305,9 @@ Customize the footer text style and background color of the Date Picker using th
 
 <picker:SfDatePicker x:Name="datepicker" >
     <picker:SfDatePicker.FooterView >
-        <picker:PickerFooterView Background="#6750A4">
+        <picker:PickerFooterView Height="40" Background="#D3D3D3">
             <picker:PickerFooterView.TextStyle >
-                <picker:PickerTextStyle FontSize="15" TextColor="White" />
+                <picker:PickerTextStyle FontSize="15" TextColor="Black" />
             </picker:PickerFooterView.TextStyle>
         </picker:PickerFooterView>
     </picker:SfDatePicker.FooterView>
@@ -315,10 +320,11 @@ Customize the footer text style and background color of the Date Picker using th
 SfDatePicker datePicker = new SfDatePicker();
 datePicker.FooterView = new PickerFooterView()
 {
-    Background = Color.FromArgb("#6750A4"),
+    Height = 40,
+    Background = Color.FromArgb("#D3D3D3"),
     TextStyle = new PickerTextStyle()
     {
-        TextColor = Colors.White,
+        TextColor = Colors.Black,
         FontSize = 15,
     }
 };
@@ -343,7 +349,7 @@ In the SfDatePicker control, the corner radius, stroke, and padding can be custo
 
 <picker:SfDatePicker x:Name="datepicker" >
     <picker:SfDatePicker.SelectionView >
-        <picker:PickerSelectionView CornerRadius="5" Stroke="Violet" Padding="5, 10, 5, 10" Background="#6750A4" />
+                <picker:PickerSelectionView CornerRadius="10" Stroke="Black" Padding="10, 5, 10, 5" Background="#808080" />
     </picker:SfDatePicker.SelectionView>
 </picker:SfDatePicker>
 
@@ -354,10 +360,10 @@ In the SfDatePicker control, the corner radius, stroke, and padding can be custo
 SfDatePicker datePicker = new SfDatePicker();
 datePicker.SelectionView = new PickerSelectionView()
 {
-    CornerRadius = 5,
-    Stroke = Colors.Violet,
-    Pading = new Thickness(5, 10, 5, 10),
-    Background = Color.FromArgb("#6750A4"),
+    CornerRadius = 10,
+    Stroke = Colors.Black,
+    Pading = new Thickness(10, 5, 10, 5),
+    Background = Color.FromArgb("#808080"),
 };
 
 this.Content = datePicker;
@@ -378,6 +384,9 @@ Customize the selected view text style of the Date Picker using the [SelectedTex
     <picker:SfDatePicker.SelectedTextStyle >
         <picker:PickerTextStyle FontSize="15" TextColor="White"/>
     </picker:SfDatePicker.SelectedTextStyle>
+    <picker:SfDatePicker.SelectionView>
+        <picker:PickerSelectionView Background="#808080" />
+    </picker:SfDatePicker.SelectionView>
 </picker:SfDatePicker>
 
 {% endhighlight %}
@@ -387,11 +396,13 @@ Customize the selected view text style of the Date Picker using the [SelectedTex
 SfDatePicker datePicker = new SfDatePicker();
 datePicker.SelectedTextStyle = new PickerTextStyle()
 {
-    TextStyle = new PickerTextStyle()
-    {
-        TextColor = Colors.White,
-        FontSize = 15,
-    }
+    TextColor = Colors.White,
+    FontSize = 15,
+};
+
+datePicker.SelectionView = new PickerSelectionView()
+{
+    Background = Color.FromArgb("#808080"),
 };
 
 this.Content = datePicker;

@@ -148,7 +148,7 @@ The SfTimePicker control allows you to change the height and width by using the 
 {% highlight xaml tabtitle="XAML" hl_lines="3 5" %}
 
 <picker:SfTimePicker x:Name="Picker" 
-                    HeightRequest="280" 
+                    HeightRequest="240" 
                     WidthRequest="300">
 </picker:SfTimePicker>
 
@@ -157,7 +157,7 @@ The SfTimePicker control allows you to change the height and width by using the 
 
 SfTimePicker picker = new SfTimePicker()
 {
-    HeightRequest = 280,
+    HeightRequest = 240,
     WidthRequest = 300,
 };
 

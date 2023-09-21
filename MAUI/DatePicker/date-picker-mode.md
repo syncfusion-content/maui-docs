@@ -48,13 +48,13 @@ Note: This property is automatically changed to `false` when you close the dialo
 <Grid>
     <picker:SfDatePicker x:Name="datepicker"
                          Mode="Dialog"/>
-    <Button Text="Open Picker" 
+    <Button Text="Open Date Picker" 
             x:Name="pickerButton"
             Clicked="Button_Clicked"
             HorizontalOptions="Center"
             VerticalOptions="Center"
             HeightRequest="50" 
-            WidthRequest="100">
+            WidthRequest="150">
     </Button>
 </Grid>
 
