@@ -374,7 +374,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {% endtabs %}
 
 #### Numeric up-down editor
-The numeric up-down button will be displayed in the numeric editor when the `UpDownPlacementMode` property of `DataFormNumericItem` is set to `NumericEditorUpDownPlacementMode.Inline`. By default, the `NumericEditorUpDownPlacementMode` is `Hidden`.
+The numeric up-down button will be displayed in the numeric editor when the [UpDownPlacementMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormNumericItem.html#Syncfusion_Maui_DataForm_DataFormNumericItem_UpDownPlacementMode) property of [DataFormNumericItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormNumericItem.html) is set to [NumericEditorUpDownPlacementMode.Inline](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.NumericEditorUpDownPlacementMode.html#Syncfusion_Maui_DataForm_NumericEditorUpDownPlacementMode_Inline). By default, the [NumericEditorUpDownPlacementMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.NumericEditorUpDownPlacementMode.html) is [Hidden](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.NumericEditorUpDownPlacementMode.html#Syncfusion_Maui_DataForm_NumericEditorUpDownPlacementMode_Hidden).
 
 {% tabs %}
 {% highlight C# %}

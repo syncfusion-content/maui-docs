@@ -30,8 +30,8 @@ To migrate easier from Xamarin Radio Button to [.NET MAUI Radio Button], we kept
 <th>.NET MAUI SfRadioButton</th>
 <th>Description</th></tr>
 <tr>
-<td> {{'[BorderWidth]'| markdownify }}</td>
-<td> {{'[StrokeThickness]'| markdownify }}</td>
+<td> {{'[BorderWidth]((https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Buttons.ToggleButton.html#Syncfusion_XForms_Buttons_ToggleButton_BorderWidth))'| markdownify }}</td>
+<td> {{'[StrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_StrokeThickness)'| markdownify }}</td>
 <td>Gets or sets the stroke thickness.</td></tr>
 </table> 
 
