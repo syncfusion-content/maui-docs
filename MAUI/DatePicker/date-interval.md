@@ -11,13 +11,13 @@ documentation: ug
 
 The `SfDatePicker` provides three intervals in [.NET MAUI Date Picker].
 
- * [`DayInterval`]
- * [`MonthInterval`]
- * [`YearInterval`]
+ * [`DayInterval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html#Syncfusion_Maui_Picker_SfDatePicker_DayInterval)
+ * [`MonthInterval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html#Syncfusion_Maui_Picker_SfDatePicker_MonthInterval)
+ * [`YearInterval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html#Syncfusion_Maui_Picker_SfDatePicker_YearInterval)
 
 ## Day interval
 
-Date Picker provides an option to give an interval between days using the [DayInterval] property of [SfDatePicker].
+Date Picker provides an option to give an interval between days using the [DayInterval](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html#Syncfusion_Maui_Picker_SfDatePicker_DayInterval) property of [SfDatePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html).
 
 {% tabs %}
 
@@ -43,7 +43,7 @@ this.Content = datePicker;
 
 ## Month interval
 
-Date Picker provides an option to give an interval between months using the [MonthInterval] property of [SfDatePicker].
+Date Picker provides an option to give an interval between months using the [MonthInterval](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html#Syncfusion_Maui_Picker_SfDatePicker_MonthInterval) property of [SfDatePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html).
 
 {% tabs %}
 
@@ -69,7 +69,7 @@ this.Content = datePicker;
 
 ## Year interval
 
-Date Picker provides an option to give an interval between years using the [YearInterval] property of [SfDatePicker].
+Date Picker provides an option to give an interval between years using the [YearInterval](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html#Syncfusion_Maui_Picker_SfDatePicker_YearInterval) property of [SfDatePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html).
 
 {% tabs %}
 

@@ -281,7 +281,7 @@ public partial class MainPage : ContentPage
 
 ## popup background
 
-The `SfPopup` allows to customize the background color of the popup view using the `PopupBackground` property.
+The `SfPopup` allows to customize the background color of the popup view using the [PopupBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupStyle.html#Syncfusion_Maui_Popup_PopupStyle_PopupBackground) property.
 
 {% tabs %}
 {% highlight xaml hl_lines="3" %}
