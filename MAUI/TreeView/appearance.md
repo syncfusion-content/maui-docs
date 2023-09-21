@@ -44,7 +44,7 @@ The TreeView allows you to customize the appearance of the content view and expa
     </ContentPage.Content>
 </ContentPage>
 {% endhighlight %}
-{% highlight c#  hl_lines="15" %}
+{% highlight c# hl_lines="15" %}
 using Syncfusion.Maui.TreeView;
 
 namespace GettingStarted
