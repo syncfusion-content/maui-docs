@@ -68,7 +68,7 @@ picker.HeaderView = new DateTimePickerHeaderView()
     Background = Color.FromArgb("#D3D3D3"),
     TextStyle = new PickerTextStyle()
     {
-        TextColor = Colors.White,
+        TextColor = Colors.Black,
         FontSize = 15,
     }
 };
