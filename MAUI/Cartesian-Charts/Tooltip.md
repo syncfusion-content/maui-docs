@@ -263,7 +263,7 @@ The [Show](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartToolt
 
 {% endtabs %}
 
-N> The tooltip will be activated at the specified location only if there is any data point under the specified location.
+N> The tooltip will be activated only when the specified location is within any of the chart segments.
 
 ### Hide method
 
