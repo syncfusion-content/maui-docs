@@ -155,7 +155,7 @@ By default, the column headers will be exported to Excel sheet. To export the Sf
 
 {% tabs %}
 {% highlight c# %}
-DataGridPdfExportingOption option = new DataGridPdfExportingOption();
+DataGridExcelExportingOption option = new DataGridExcelExportingOption();
         option.CanExportHeader = false;
 {% endhighlight %}
 {% endtabs %}
@@ -213,7 +213,7 @@ By default, all columns (including hidden columns) in the SfDataGrid are exporte
 
 {% tabs %}
 {% highlight c# %}
-DataGridPdfExportingOption option = new DataGridPdfExportingOption();
+DataGridExcelExportingOption option = new DataGridExcelExportingOption();
         var list = new List<string>();
         list.Add("OrderID");
         list.Add("Customer");
@@ -492,7 +492,7 @@ The SfDataGrid provides the following events when exporting to Excel:
 
 ### Row exporting
 
-The `DataGridRowExcelExportingEventHandler` delegate allows customizing the styles for record rows and group caption rows. The `RowExporting` event is triggered with [ataGridRowExcelExportingEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.Exporting.DataGridRowExcelExportingEventArgs.html) that contains the following properties:
+The `DataGridRowExcelExportingEventHandler` delegate allows customizing the styles for record rows and group caption rows. The `RowExporting` event is triggered with [DataGridRowExcelExportingEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.Exporting.DataGridRowExcelExportingEventArgs.html) that contains the following properties:
 
 * `Range`: Specifies the Excel range to be exported. It provides full access to the exporting cell in Excel.
 * `Record`: Gets the collection of the exported underlying data objects.
