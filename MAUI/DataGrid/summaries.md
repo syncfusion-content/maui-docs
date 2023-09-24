@@ -53,7 +53,7 @@ You can customize the group caption text format by setting the `SfDataGrid.Group
 
 {% highlight c# %}
 // Customized group caption text
-dataGrid.GroupCaptionTextFormat = "{ColumnName} : {Key}";
+dataGrid.GroupCaptionTextFormat = "{ColumnName}: {Key}";
 {% endhighlight %}
 {% endtabs %}
 

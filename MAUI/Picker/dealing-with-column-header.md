@@ -13,7 +13,7 @@ This section explains the column header customization of picker control.
 
 ## Column header view
 
-SfPicker allows enabling or disabling the column header section by setting the `SfPicker.ColumnHeaderView.Height` property greater than 0. The default value of the `SfPicker.ColumnHeaderView.Height` property is 0.
+The SfPicker enables or disables the column header section by setting the SfPicker.ColumnHeaderView.Height property to a value greater than 0. The default value of the [Height](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerColumnHeaderView.html#Syncfusion_Maui_Picker_PickerColumnHeaderView_Height) property is 0.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -38,7 +38,7 @@ Enhancing Column Header with `Height`, `Text Style`, `Background`, and `DividerC
 
 ### Background
 
-Column header background color can be customized by setting `SfPicker.ColumnHeaderView.Background` property.
+The column header [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerColumnHeaderView.html#Syncfusion_Maui_Picker_PickerColumnHeaderView_Background) color can be customized by setting the SfPicker.ColumnHeaderView.Background property.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -59,7 +59,7 @@ Column header background color can be customized by setting `SfPicker.ColumnHead
 
 ### Column header text style
 
-The .NET MAUI Picker control, Column header text style such as text color, font size, font family, and font attributes can be customized as shown in the following code.
+The .NET MAUI Picker control and column header [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerColumnHeaderView.html#Syncfusion_Maui_Picker_PickerColumnHeaderView_TextStyle) such as text color, font size, font family, and font attributes can be customized as shown in the following code.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
