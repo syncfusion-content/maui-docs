@@ -15,7 +15,7 @@ Syncfusion .NET MAUI Date Picker (SfDatePicker) control allows you to select a d
 
 * **Header view**: The Date Picker allows you to add the header text and customize it.
 
-* **Column header view**: The .NET MAUI Date Picker supports a customizable column header view to separate headings for each column.
+* **Column header view**: The .NET MAUI Date Picker provides pre-defined column header text and also you can customize it.
 
 * **Footer view**: Provides validation buttons (OK and Cancel) in the footer view. The footer text and background color can be customized.
 

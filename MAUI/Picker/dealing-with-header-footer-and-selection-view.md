@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Header and footer with .NET MAUI Picker Control | Syncfusion
-description: Learn here all about header and footer with Syncfusion .NET MAUI Picker (SfPicker) control.
+title: Header, footer and selection view with .NET MAUI Picker Control | Syncfusion
+description: Learn here all about header, footer and selection view with Syncfusion .NET MAUI Picker (SfPicker) control.
 platform: maui
 control: SfPicker
 documentation: ug
 ---
 
-# Dealing with Header and Footer in .NET MAUI Picker (SfPicker)
+# Dealing with Header, Footer and selection view in .NET MAUI Picker (SfPicker)
 
 This section explains the header and footer customization of picker control.
 
@@ -18,11 +18,11 @@ SfPicker enables or disables the header section by setting the `SfPicker.HeaderV
 {% tabs %}
 {% highlight xaml tabtitle="XAML" %}
 
-    <sfPicker:SfPicker x:Name="Picker">
-        <sfPicker:SfPicker.HeaderView>
-            <sfPicker:PickerHeaderView Height="40"/>
-        </sfPicker:SfPicker.HeaderView>
-    </sfPicker:SfPicker>
+<sfPicker:SfPicker x:Name="Picker">
+    <sfPicker:SfPicker.HeaderView>
+        <sfPicker:PickerHeaderView Height="40"/>
+    </sfPicker:SfPicker.HeaderView>
+</sfPicker:SfPicker>
 
 {% endhighlight %}
 {% highlight c# tabtitle="C#" %}
@@ -43,11 +43,11 @@ The Header’s [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.
 {% tabs %}
 {% highlight xaml tabtitle="XAML" %}
 
-    <sfPicker:SfPicker x:Name="Picker">
-        <sfPicker:SfPicker.HeaderView>
-            <sfPicker:PickerHeaderView Background="#D3D3D3"/>
-        </sfPicker:SfPicker.HeaderView>
-    </sfPicker:SfPicker>
+<sfPicker:SfPicker x:Name="Picker">
+    <sfPicker:SfPicker.HeaderView>
+        <sfPicker:PickerHeaderView Background="#D3D3D3"/>
+    </sfPicker:SfPicker.HeaderView>
+</sfPicker:SfPicker>
 
 {% endhighlight %}
 {% highlight c# tabtitle="C#" %}
@@ -64,17 +64,17 @@ The .NET MAUI Picker control and header [TextStyle](https://help.syncfusion.com/
 {% tabs %}
 {% highlight xaml tabtitle="XAML" %}
 
-    <sfPicker:SfPicker x:Name="Picker">
-        <sfPicker:SfPicker.HeaderView>
-            <sfPicker:PickerHeaderView>
-                <sfPicker:PickerHeaderView.TextStyle>
-                    <sfPicker:PickerTextStyle TextColor="Gray" 
-                    FontSize="18" 
-                    FontAttributes="Italic"/>
-                </sfPicker:PickerHeaderView.TextStyle>
-            </sfPicker:PickerHeaderView>
-        </sfPicker:SfPicker.HeaderView>
-    </sfPicker:SfPicker>
+<sfPicker:SfPicker x:Name="Picker">
+    <sfPicker:SfPicker.HeaderView>
+        <sfPicker:PickerHeaderView>
+            <sfPicker:PickerHeaderView.TextStyle>
+                <sfPicker:PickerTextStyle TextColor="Gray" 
+                FontSize="18" 
+                FontAttributes="Italic"/>
+            </sfPicker:PickerHeaderView.TextStyle>
+        </sfPicker:PickerHeaderView>
+    </sfPicker:SfPicker.HeaderView>
+</sfPicker:SfPicker>
 
 {% endhighlight %}
 {% highlight c# tabtitle="C#" %}
@@ -96,11 +96,11 @@ SfPicker enables or disables the footer section by setting the `SfPicker.FooterV
 {% tabs %}
 {% highlight xaml tabtitle="XAML" %}
 
-    <sfPicker:SfPicker x:Name="Picker">
-        <sfPicker:SfPicker.FooterView>
-            <sfPicker:PickerFooterView Height="40"/>
-        </sfPicker:SfPicker.FooterView>
-    </sfPicker:SfPicker>
+<sfPicker:SfPicker x:Name="Picker">
+    <sfPicker:SfPicker.FooterView>
+        <sfPicker:PickerFooterView Height="40"/>
+    </sfPicker:SfPicker.FooterView>
+</sfPicker:SfPicker>
 
 {% endhighlight %}
 {% highlight c# tabtitle="C#" %}
@@ -121,12 +121,11 @@ The Header’s [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.
 {% tabs %}
 {% highlight xaml tabtitle="XAML" %}
 
-    <sfPicker:SfPicker x:Name="Picker">
-        <sfPicker:SfPicker.FooterView>
-            <sfPicker:PickerFooterView Background="#D3D3D3"/>
-        </sfPicker:SfPicker.FooterView>
-    </sfPicker:SfPicker>
-</ContentPage>
+<sfPicker:SfPicker x:Name="Picker">
+    <sfPicker:SfPicker.FooterView>
+        <sfPicker:PickerFooterView Background="#D3D3D3"/>
+    </sfPicker:SfPicker.FooterView>
+</sfPicker:SfPicker>
 
 {% endhighlight %}
 {% highlight c# tabtitle="C#" %}
@@ -143,14 +142,14 @@ SfPicker enables or disables the `ok` button by setting the `SfPicker.FooterView
 {% tabs %}
 {% highlight xaml tabtitle="XAML" %}
 
-    <sfPicker:SfPicker x:Name="Picker">
-        <sfPicker:SfPicker.FooterView>
-            <sfPicker:PickerFooterView 
-                ShowOkButton="False" 
-                OkButtonText="Done" 
-                CancelButtonText="Exit"/>
-        </sfPicker:SfPicker.FooterView>
-    </sfPicker:SfPicker>
+<sfPicker:SfPicker x:Name="Picker">
+    <sfPicker:SfPicker.FooterView>
+        <sfPicker:PickerFooterView 
+            ShowOkButton="False" 
+            OkButtonText="Done" 
+            CancelButtonText="Exit"/>
+    </sfPicker:SfPicker.FooterView>
+</sfPicker:SfPicker>
 
 {% endhighlight %}
 {% highlight c# tabtitle="C#" %}
@@ -169,15 +168,15 @@ The .NET MAUI Picker control and footer [TextStyle](https://help.syncfusion.com/
 {% tabs %}
 {% highlight xaml tabtitle="XAML" %}
 
-    <sfPicker:SfPicker>
-    <sfPicker:SfPicker.FooterView>
-        <sfPicker:PickerFooterView>
-        <sfPicker:PickerFooterView.TextStyle>
-            <sfPicker:PickerTextStyle TextColor="Gray" FontSize="18" FontAttributes="Italic"/>
-        </sfPicker:PickerFooterView.TextStyle>
-        </sfPicker:PickerFooterView>
-    </sfPicker:SfPicker.FooterView>
-    </sfPicker:SfPicker>
+<sfPicker:SfPicker>
+<sfPicker:SfPicker.FooterView>
+    <sfPicker:PickerFooterView>
+    <sfPicker:PickerFooterView.TextStyle>
+        <sfPicker:PickerTextStyle TextColor="Gray" FontSize="18" FontAttributes="Italic"/>
+    </sfPicker:PickerFooterView.TextStyle>
+    </sfPicker:PickerFooterView>
+</sfPicker:SfPicker.FooterView>
+</sfPicker:SfPicker>
 
 {% endhighlight %}
 {% highlight c# tabtitle="C#" %}
@@ -222,3 +221,39 @@ Picker allows validation based on the OK or Cancel button by hooking into the `S
     
 {% endhighlight %}
 {% endtabs %}
+
+## Selection view customization
+
+Customize the picker selection view by using the SelectionView property of the SfPicker.
+
+### Background and selection shape customization
+
+In the SfPicker control, the corner radius, stroke, background and padding can be customized by setting the [CornerRadius], [Stroke], [Background] and [Padding] properties in the [PickerSelectionView].
+
+{% tabs %}
+{% highlight xaml tabtitle="XAML" %}
+
+<picker:SfPicker x:Name="picker" >
+    <picker:SfPicker.SelectionView >
+        <picker:PickerSelectionView CornerRadius="5" Stroke="Black" Padding="10, 5, 10, 5" Background="#808080" />
+    </picker:SfPicker.SelectionView>
+</picker:SfPicker>
+
+{% endhighlight %}
+{% highlight c# tabtitle="C#" %}
+
+SfPicker picker = new SfPicker();
+picker.SelectionView = new PickerSelectionView()
+{
+    CornerRadius = 5,
+    Stroke = Colors.Black,
+    Pading = new Thickness(10, 5, 10, 5),
+    Background = Color.FromArgb("#808080"),
+};
+
+this.Content = picker;
+
+{% endhighlight %}
+{% endtabs %}
+
+### 

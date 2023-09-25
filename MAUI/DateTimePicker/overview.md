@@ -13,7 +13,7 @@ The Syncfusion [.NET MAUI Date Time Picker](https://www.syncfusion.com/maui-cont
 
 ## Key features
 
-* **Header view**: The .NET MAUI Date Time Picker allows the user to add and customize the header text.
+* **Header view**: The .NET MAUI Date Time Picker provides pre-defined header text and allows the user to customize the header text with date and time format.
 
 * **Column header view**: The .NET MAUI Date Time Picker supports a customizable column header view to separate headings for each column.
 

@@ -15,7 +15,7 @@ Syncfusion .NET MAUI Time Picker (SfTimePicker) control allows you to select the
 
 * **Header view**: The Time Picker allows you to add and customize the header text.
 
-* **Column header view**: The .NET MAUI Time Picker supports a customizable column header view to separate headings for each column.
+* **Column header view**: The .NET MAUI Time Picker provides pre-defined column header text and also you can customize it.
 
 * **Footer view**: Provides validation buttons (OK and Cancel) in the footer view. The footer text and background color can be customized.
 
