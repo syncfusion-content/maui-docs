@@ -16,18 +16,18 @@ This section explains the header and footer customization of picker control.
 SfPicker enables or disables the header section by setting the `SfPicker.HeaderView.Height` property to a value greater than 0. The default value of the [Height](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerHeaderView.html#Syncfusion_Maui_Picker_PickerHeaderView_Height) property is 0.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="XAML" %}
 
     <sfPicker:SfPicker x:Name="Picker">
         <sfPicker:SfPicker.HeaderView>
-            <sfPicker:PickerHeaderView Height="50"/>
+            <sfPicker:PickerHeaderView Height="40"/>
         </sfPicker:SfPicker.HeaderView>
     </sfPicker:SfPicker>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
 
-    this.Picker.HeaderView.Height= 50;
+    this.Picker.HeaderView.Height= 40;
 
 {% endhighlight %}
 {% endtabs %}
@@ -41,18 +41,18 @@ SfPicker allows customizing background, text style.
 The Header’s [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerHeaderView.html#Syncfusion_Maui_Picker_PickerHeaderView_Background) color can be customized by setting the `SfPicker.HeaderView.Background` property.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="XAML" %}
 
     <sfPicker:SfPicker x:Name="Picker">
         <sfPicker:SfPicker.HeaderView>
-            <sfPicker:PickerHeaderView Background="Gray"/>
+            <sfPicker:PickerHeaderView Background="#D3D3D3"/>
         </sfPicker:SfPicker.HeaderView>
     </sfPicker:SfPicker>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
 
-    this.Picker.HeaderView.Background=Brush.Gray;
+    this.Picker.HeaderView.Background = Color.FromArgb("#6750A4");
 
 {% endhighlight %}
 {% endtabs %}
@@ -62,7 +62,7 @@ The Header’s [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.
 The .NET MAUI Picker control and header [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerHeaderView.html#Syncfusion_Maui_Picker_PickerHeaderView_TextStyle) such as `TextColor`, `FontSize`, `FontFamily`, and `FontAttributes` can be customized as shown in the following code.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="XAML" %}
 
     <sfPicker:SfPicker x:Name="Picker">
         <sfPicker:SfPicker.HeaderView>
@@ -77,7 +77,7 @@ The .NET MAUI Picker control and header [TextStyle](https://help.syncfusion.com/
     </sfPicker:SfPicker>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
 
     this.Picker.HeaderView.TextStyle = new PickerTextStyle()
     {
@@ -94,18 +94,18 @@ The .NET MAUI Picker control and header [TextStyle](https://help.syncfusion.com/
 SfPicker enables or disables the footer section by setting the `SfPicker.FooterView.Height` property to a value greater than 0. The default value of the [Height](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_Height) property is 0.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="XAML" %}
 
     <sfPicker:SfPicker x:Name="Picker">
         <sfPicker:SfPicker.FooterView>
-            <sfPicker:PickerFooterView Height="50"/>
+            <sfPicker:PickerFooterView Height="40"/>
         </sfPicker:SfPicker.FooterView>
     </sfPicker:SfPicker>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
 
-    this.Picker.FooterView.Height= 50;
+    this.Picker.FooterView.Height= 40;
 
 {% endhighlight %}
 {% endtabs %}
@@ -119,19 +119,19 @@ SfPicker allows customizing the background, text, and text style of the `ok` and
 The Header’s [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_Background) color can be customized by setting the `SfPicker.HeaderView.Background` property.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="XAML" %}
 
     <sfPicker:SfPicker x:Name="Picker">
         <sfPicker:SfPicker.FooterView>
-            <sfPicker:PickerFooterView Background="Gray"/>
+            <sfPicker:PickerFooterView Background="#D3D3D3"/>
         </sfPicker:SfPicker.FooterView>
     </sfPicker:SfPicker>
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
 
-    this.Picker.FooterView.Background=Brush.Gray;
+    this.Picker.FooterView.Background = Color.FromArgb("#6750A4");
 
 {% endhighlight %}
 {% endtabs %}
@@ -141,7 +141,7 @@ The Header’s [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.
 SfPicker enables or disables the `ok` button by setting the `SfPicker.FooterView.ShowOkButton` property to true or false. The default value of the [ShowOkButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_ShowOkButton) property is true. Customize the text of the `ok` and `cancel` buttons using the [OkButtonText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_OkButtonText) and [CancelButtonText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_CancelButtonText) property.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="XAML" %}
 
     <sfPicker:SfPicker x:Name="Picker">
         <sfPicker:SfPicker.FooterView>
@@ -153,7 +153,7 @@ SfPicker enables or disables the `ok` button by setting the `SfPicker.FooterView
     </sfPicker:SfPicker>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
 
     this.Picker.FooterView.OkButtonShow = false;
     this.Picker.FooterView.OkButtonText= "Done";
@@ -167,7 +167,7 @@ SfPicker enables or disables the `ok` button by setting the `SfPicker.FooterView
 The .NET MAUI Picker control and footer [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_TextStyle) such as `TextColor`, `FontSize`, `FontFamily`, and `FontAttributes` can be customized as shown in the following code.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="XAML" %}
 
     <sfPicker:SfPicker>
     <sfPicker:SfPicker.FooterView>
@@ -180,7 +180,7 @@ The .NET MAUI Picker control and footer [TextStyle](https://help.syncfusion.com/
     </sfPicker:SfPicker>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
 
     this.Picker.FooterView.TextStyle = new PickerTextStyle()
     {
