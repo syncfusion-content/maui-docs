@@ -180,12 +180,12 @@ The following code example, explains how to initialize the properties of the `Xa
 </tr>
 <tr>
 <td>{{'[CancelButtonTextColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_CancelButtonTextColorProperty)'| markdownify }}</td>
-<td>{{'[[TextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerTextStyle.html#Syncfusion_Maui_Picker_PickerTextStyle_TextColor)(From [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_TextStyle) of [PickerFooterView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html))]'| markdownify }}</td>
+<td>{{'[TextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerTextStyle.html#Syncfusion_Maui_Picker_PickerTextStyle_TextColor) From [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_TextStyle) of [PickerFooterView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html) '| markdownify }}</td>
 <td>Gets or sets the text color of the text style.</td>
 </tr>
 <tr>
 <td>{{'[ColumnHeaderBackgroundColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPicker.XForms.SfPicker.html#Syncfusion_SfPicker_XForms_SfPicker_ColumnHeaderBackgroundColor)'| markdownify }}</td>
-<td>{{'[[Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerColumnHeaderView.html#Syncfusion_Maui_Picker_PickerColumnHeaderView_Background) '| markdownify }}</td>
+<td>{{' [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerColumnHeaderView.html#Syncfusion_Maui_Picker_PickerColumnHeaderView_Background) '| markdownify }}</td>
 <td>Gets or sets the background of the column header view in SfPicker.</td>
 </tr>
 <tr>
@@ -275,7 +275,7 @@ The following code example, explains how to initialize the properties of the `Xa
 </tr>
 <tr>
 <td>{{'[HeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfPicker.html#Syncfusion_Maui_Picker_SfPicker_HeaderView)'| markdownify }}</td>
-<td>{{'[HeaderView]https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfPicker.html#Syncfusion_Maui_Picker_SfPicker_HeaderView)'| markdownify }}</td>
+<td>{{'[HeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfPicker.html#Syncfusion_Maui_Picker_SfPicker_HeaderView)'| markdownify }}</td>
 <td>Gets or sets the value of header view. This property can be used to customize the of header in SfPicker.</td>
 </tr>
 <tr>
@@ -325,7 +325,7 @@ The following code example, explains how to initialize the properties of the `Xa
 </tr>
 <tr>
 <td>{{'[PickerWidth](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_PickerWidthProperty)'| markdownify }}</td>
-<td>{{'[Width](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerColumn.html#Syncfusion_Maui_Picker_PickerColumn_Width)From [PickerColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerColumn.html)'| markdownify }}</td>
+<td>{{'[Width](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerColumn.html#Syncfusion_Maui_Picker_PickerColumn_Width) From [PickerColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerColumn.html)'| markdownify }}</td>
 <td>Gets or sets the width of the column.</td>
 </tr>
 <tr>
@@ -395,7 +395,7 @@ The following code example, explains how to initialize the properties of the `Xa
 </tr>
 <tr>
 <td>{{'[UnSelectedItemTextColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_UnselectedItemTextColorProperty)'| markdownify }}</td>
-<td>{{'[TextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerTextStyle.html#Syncfusion_Maui_Picker_PickerTextStyle_TextColor)(From [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_TextStyle)'| markdownify }}</td>
+<td>{{'[TextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerTextStyle.html#Syncfusion_Maui_Picker_PickerTextStyle_TextColor) From [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_TextStyle)'| markdownify }}</td>
 <td>Gets or sets the text color of the text style.</td>
 </tr>
 <tr>
@@ -456,12 +456,12 @@ The following code example, explains how to initialize the properties of the `Xa
 <tr>
 </table>
 
-## Known issues:
+## Known issues
 
-* Picker background color is not applied to the popup.
-* Picker dynamic items source does not render the picker item.
+ * Picker background color is not applied to the popup.
+ * Picker dynamic items source does not render the picker item.
 
 ## Upcomming features
 
-* Enable Looping.
+ * Looping support for picker items.
 
