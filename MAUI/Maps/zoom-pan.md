@@ -15,7 +15,8 @@ The procedure for zooming and panning for both layers is very similar.
 
 To learn more about the .NET MAUI Maps zoom and pan, you can check the following video.
 
-<style>#MAUIMapsVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUIMapsVideoTutorial' src="www.youtube.com/watch?v=uN9KUSpDMB0"></iframe>
+{% youtube
+"youtube:https://www.youtube.com/watch?v=uN9KUSpDMB0"%}
 
 
 **Shape layer**

@@ -214,3 +214,42 @@ tileLayer.DeleteTilesFromCache();
 You can add markers in the tile layer. The procedure is very similar to the shape layer. Kindly refer to the [markers](https://help.syncfusion.com/maui/maps/markers) section.
 
 N> You can refer to our [.NET MAUI Maps](https://www.syncfusion.com/maui-controls/maui-maps) feature tour page for its groundbreaking feature representations. You can also explore our [`.NET MAUI Maps Tile layer example`](https://github.com/syncfusion/maui-demos/) which shows how to configure a Maps in .NET MAUI.
+
+##  Event
+
+The [`CenterChanged`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapTileLayer.html#Syncfusion_Maui_Maps_MapTileLayer_CenterChanged) event is triggered while zooming and panning the maps.
+
+The following arguments can be obtained from the `MapTileLayer_CenterChanged` event.
+
+* [`Center`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.CenterChangedEventArgs.html#Syncfusion_Maui_Maps_CenterChangedEventArgs_Center): Returns the center Geo coordinate point of the visual tiles while zooming and panning.
+* [`TopLeft`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.CenterChangedEventArgs.html#Syncfusion_Maui_Maps_CenterChangedEventArgs_TopLeft):  Returns the top-left Geo coordinate point of the visual tiles while zooming and panning.
+* [`TopRight`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.CenterChangedEventArgs.html#Syncfusion_Maui_Maps_CenterChangedEventArgs_TopRight): Returns the top-right Geo coordinate point of the visual tiles while zooming and panning.
+* [`BottomLeft`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.CenterChangedEventArgs.html#Syncfusion_Maui_Maps_CenterChangedEventArgs_BottomLeft): Returns the bottom-left Geo coordinate point of the visual tiles while zooming and panning.
+* [`BottomRight`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.CenterChangedEventArgs.html#Syncfusion_Maui_Maps_CenterChangedEventArgs_BottomRight): Returns the bottom-right Geo coordinate point of the visual tiles while zooming and panning.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<maps:SfMaps>
+    <maps:SfMaps.Layer>
+        <maps:MapTileLayer CenterChanged="MapTileLayer_CenterChanged" />
+    </maps:SfMaps.Layer>
+</maps:SfMaps>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+private void MapTileLayer_CenterChanged(object sender, CenterChangedEventArgs e)
+{
+    var center = e.Center;
+    var topLeft = e.TopLeft;
+    var topRight = e.TopRight;
+    var bottomLeft = e.BottomLeft;
+    var bottomRight = e.BottomRight;
+}
+
+{% endhighlight %}
+
+{% endtabs %}
