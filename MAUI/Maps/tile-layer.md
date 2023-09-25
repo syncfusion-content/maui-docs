@@ -219,7 +219,7 @@ N> You can refer to our [.NET MAUI Maps](https://www.syncfusion.com/maui-control
 
 The [`CenterChanged`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapTileLayer.html#Syncfusion_Maui_Maps_MapTileLayer_CenterChanged) event is triggered while zooming and panning the maps.
 
-The following arguments can be obtained from the `MapTileLayer_CenterChanged` event: 
+The following arguments can be obtained from the `MapTileLayer_CenterChanged` event.
 
 * [`Center`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.CenterChangedEventArgs.html#Syncfusion_Maui_Maps_CenterChangedEventArgs_Center): Returns the center Geo coordinate point of the visual tiles while zooming and panning.
 * [`TopLeft`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.CenterChangedEventArgs.html#Syncfusion_Maui_Maps_CenterChangedEventArgs_TopLeft):  Returns the top-left Geo coordinate point of the visual tiles while zooming and panning.
