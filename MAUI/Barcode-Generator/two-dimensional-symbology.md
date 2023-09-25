@@ -9,7 +9,7 @@ documentation: ug
 
 # Two-dimensional symbology in .NET MAUI Barcodes (SfBarcodeGenerator)
 
-Two-dimensional barcode is a way to represent information by using the two-dimensional approach. It is similar to one-dimensional barcode, but it can represent more data per unit area. The barcode generator control supports the following two-dimensional symbology:
+Two-dimensional [.NET MAUI Barcode Generator](https://www.syncfusion.com/maui-controls/maui-barcodes) is a way to represent information by using the two-dimensional approach. It is similar to one-dimensional barcode, but it can represent more data per unit area. The barcode generator control supports the following two-dimensional symbology:
 
 * [`QR Code`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.QRCode.html)
 * [`Data Matrix`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.DataMatrix.html)
