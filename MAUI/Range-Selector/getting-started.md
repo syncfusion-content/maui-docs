@@ -376,3 +376,5 @@ rangeSelector.Content = chart;
 {% endtabs %}
 
 ![RangeSelector label format](images/getting-started/label-format.png)
+
+N> You can refer to our [.NET MAUI Range Selector](https://www.syncfusion.com/maui-controls/maui-range-selector) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Range Selector Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/Sliders/SampleBrowser.Maui.Sliders/Samples/RangeSelector) that shows you how to render the Range Selector in .NET MAUI.
