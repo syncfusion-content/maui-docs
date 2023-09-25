@@ -442,7 +442,7 @@ private void SfDataGrid_CellRightTapped(object sender, Syncfusion.Maui.DataGrid.
 {% endhighlight %}
 {% endtabs %}
 
-N> The [CellRightTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CellRightTapped) event is only applicable for Windows and macOS.
+N> The `CellRightTapped` event is only applicable for Windows and macOS.
 
 ## CurrentRow
 The [SfDataGrid.CurrentRow](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CurrentRow) property holds the underlying data of the last selected row in the datagrid.
