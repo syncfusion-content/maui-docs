@@ -255,5 +255,3 @@ this.Content = picker;
 
 {% endhighlight %}
 {% endtabs %}
-
-### 
