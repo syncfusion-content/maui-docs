@@ -46,6 +46,8 @@ this.Content = TimePicker;
 
 {% endtabs %}
 
+![Set header text in .NET MAUI Time picker.](images/customizations/maui-time-picker-set-header-text.png)
+
 ### Set the divider color
 
 The SfTimePicker control allows you to customize the header divider color by setting the [DividerColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerHeaderView.html#Syncfusion_Maui_Picker_PickerHeaderView_DividerColor) property of the [PickerHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerHeaderView.html).
@@ -56,7 +58,7 @@ The SfTimePicker control allows you to customize the header divider color by set
 
 <picker:SfTimePicker x:Name="Timepicker" >
     <picker:SfTimePicker.HeaderView >
-        <picker:PickerHeaderView DividerColor="#A9A9A9" />
+        <picker:PickerHeaderView DividerColor="#36454F" />
     </picker:SfTimePicker.HeaderView>
 </picker:SfTimePicker>
 
@@ -67,7 +69,7 @@ The SfTimePicker control allows you to customize the header divider color by set
 SfTimePicker timePicker = new SfTimePicker();
 timepicker.HeaderView = new PickerHeaderView()
 {
-    DividerColor = Color.FromArgb("#A9A9A9")
+    DividerColor = Color.FromArgb("#36454F")
 };
 
 this.Content = timePicker;
@@ -75,6 +77,8 @@ this.Content = timePicker;
 {% endhighlight %}
 
 {% endtabs %}
+
+![Set header divider color in .NET MAUI Time picker.](images/customizations/maui-time-picker-set-header-divider-color.png)
 
 ### Customization of the header
 
@@ -114,6 +118,8 @@ this.Content = timePicker;
 {% endhighlight %}
 
 {% endtabs %}
+
+![Custom header in .NET MAUI Time picker.](images/customizations/maui-time-picker-custom-header.png)
 
 ## Column Header Customization
 
@@ -155,6 +161,8 @@ this.Content = timePicker;
 
 {% endtabs %}
 
+![Set Column header text in .NET MAUI Time picker.](images/customizations/maui-time-picker-set-column-header-text.png)
+
 ### Set the divider color
 
 The SfTimePicker control allows you to customize the column header divider color by setting the [DividerColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.TimePickerColumnHeaderView.html#Syncfusion_Maui_Picker_TimePickerColumnHeaderView_DividerColor) property of the [TimePickerColumnHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.TimePickerColumnHeaderView.html).
@@ -165,7 +173,7 @@ The SfTimePicker control allows you to customize the column header divider color
 
 <picker:SfTimePicker x:Name="Timepicker" >
     <picker:SfTimePicker.ColumnHeaderView >
-        <picker:TimePickerColumnHeaderView DividerColor="#A9A9A9" />
+        <picker:TimePickerColumnHeaderView DividerColor="#36454F" />
     </picker:SfTimePicker.ColumnHeaderView>
 </picker:SfTimePicker>
 
@@ -176,7 +184,7 @@ The SfTimePicker control allows you to customize the column header divider color
 SfTimePicker timePicker = new SfTimePicker();
 timepicker.ColumnHeaderView = new TimePickerColumnHeaderView()
 {
-    DividerColor = Color.FromArgb("#A9A9A9")
+    DividerColor = Color.FromArgb("#36454F")
 };
 
 this.Content = timePicker;
@@ -184,6 +192,8 @@ this.Content = timePicker;
 {% endhighlight %}
 
 {% endtabs %}
+
+![Set column header divider in .NET MAUI Time picker.](images/customizations/maui-time-picker-set-column-header-divider-color.png)
 
 ### Customization of the column header
 
@@ -224,6 +234,8 @@ this.Content = timePicker;
 
 {% endtabs %}
 
+![Custom column header in .NET MAUI Time picker.](images/customizations/maui-time-picker-custom-column-header.png)
+
 ## Footer Customization
 
 Customize the time picker footer view by using the `FooterView` property of the`SfTimePicker`.
@@ -262,6 +274,8 @@ this.Content = timePicker;
 
 {% endtabs %}
 
+![Set footer text in .NET MAUI Time picker.](images/customizations/maui-time-picker-set-footer-text.png)
+
 ### Set the divider color
 
 The SfTimePicker control allows you to customize the footer divider color by setting the [DividerColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_DividerColor) property of the [PickerFooterView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html).
@@ -272,7 +286,7 @@ The SfTimePicker control allows you to customize the footer divider color by set
 
 <picker:SfTimePicker x:Name="Timepicker" >
     <picker:SfTimePicker.FooterView >
-        <picker:PickerFooterView DividerColor="#A9A9A9" />
+        <picker:PickerFooterView DividerColor="#36454F" />
     </picker:SfTimePicker.FooterView>
 </picker:SfTimePicker>
 
@@ -283,7 +297,7 @@ The SfTimePicker control allows you to customize the footer divider color by set
 SfTimePicker timePicker = new SfTimePicker();
 timepicker.FooterView = new PickerFooterView()
 {
-    DividerColor = Color.FromArgb("#A9A9A9")
+    DividerColor = Color.FromArgb("#36454F")
 };
 
 this.Content = timePicker;
@@ -291,6 +305,8 @@ this.Content = timePicker;
 {% endhighlight %}
 
 {% endtabs %}
+
+![Set divider color in .NET MAUI Time picker.](images/customizations/maui-time-picker-set-footer-divider-color.png)
 
 ### Customization of the footer
 
@@ -331,6 +347,8 @@ this.Content = timePicker;
 
 {% endtabs %}
 
+![Custom footer .NET MAUI Time picker.](images/customizations/maui-time-picker-custom-footer.png)
+
 ## Selection View Customization
 
 Customize the time picker selection view by using the `SelectionView` property of the `SfTimePicker`.
@@ -345,7 +363,7 @@ In the SfTimePicker control, the corner radius, stroke, and padding can be custo
 
 <picker:SfTimePicker x:Name="Timepicker" >
     <picker:SfTimePicker.SelectionView >
-        <picker:PickerSelectionView CornerRadius="5" Stroke="#A9A9A9" Padding="10, 5, 10, 5" Background="#D3D3D3" />
+        <picker:PickerSelectionView CornerRadius="10" Stroke="#36454F" Padding="5, 10, 5, 10" Background="#808080" />
     </picker:SfTimePicker.SelectionView>
 </picker:SfTimePicker>
 
@@ -356,10 +374,10 @@ In the SfTimePicker control, the corner radius, stroke, and padding can be custo
 SfTimePicker timePicker = new SfTimePicker();
 timePicker.SelectionView = new PickerSelectionView()
 {
-    CornerRadius = 5,
-    Stroke = Color.FromArgb("#A9A9A9"),
-    Pading = new Thickness(10, 5, 10, 5),
-    Background = Color.FromArgb("#D3D3D3"),
+    CornerRadius = 10,
+    Stroke = Color.FromArgb("#36454F"),
+    Pading = new Thickness(5, 10, 5, 10),
+    Background = Color.FromArgb("#808080"),
 };
 
 this.Content = timePicker;
@@ -367,6 +385,8 @@ this.Content = timePicker;
 {% endhighlight %}
 
 {% endtabs %}
+
+![Custom selection shape in .NET MAUI Time picker.](images/customizations/maui-time-picker-custom-selection-shape.png)
 
 ### Customization of the selected item
 
@@ -400,4 +420,27 @@ this.Content = timePicker;
 
 {% endhighlight %}
 
+{% endtabs %}
+
+![Custom Selection view in .NET MAUI Time picker.](images/customizations/maui-time-picker-custom-selection-view.png)
+
+## Column divider color
+
+Customize the column divider color using the [ColumnDividerColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_ColumnDividerColor) property in [SfPicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfPicker.html).
+
+{% tabs %}
+{% highlight xaml tabtitle="XAML" %}
+
+<picker:SfTimePicker x:Name="Timepicker"
+                     ColumnDividerColor="#36454F">
+</picker:SfTimePicker>
+
+{% endhighlight %}
+{% highlight c# tabtitle="C#" %}
+
+SfTimePicker timePicker = new SfTimePicker();
+timePicker.ColumnDividerColor = Color.FromArgb("#36454F");
+this.Content = picker;
+
+{% endhighlight %}
 {% endtabs %}

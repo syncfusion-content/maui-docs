@@ -52,3 +52,5 @@ this.Content = datePicker;
 {% endhighlight %}
 
 {% endtabs %}
+
+![Formatting in .NET MAUI Date picker.](images/formatting/maui-date-picker-formatting.png)
