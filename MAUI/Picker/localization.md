@@ -16,26 +16,26 @@ Localization is the process of translating the application resources into differ
 Application culture can be changed by setting CurrentUICulture. in App.xaml.cs file.
 
 {% tabs %}
-{% highlight c# tabtitle="App.xaml.cs" %}
+{% highlight c# tabtitle="App.xaml.cs" hl_lines="1 3 14 15 16" %}
 
-    using System.Resources;
-    using System.Globalization;
-    using Syncfusion.Maui.Picker;
+using System.Resources;
+using System.Globalization;
+using Syncfusion.Maui.Picker;
 
-    namespace PickerLocalizationDemo;
-    public partial class App : Application
+namespace Picker;
+public partial class App : Application
+{
+    public App()
     {
-        public App()
-        {
-            InitializeComponent();
+        InitializeComponent();
 
-            //// ResXPath => Full path of the resx file; For example : // SfPickerResources.ResourceManager = new ResourceManager
-    ("PickerLocalizationDemo.Resources.SfPicker", Application.Current.GetType().Assembly);
-            CultureInfo.CurrentUICulture = new CultureInfo("fr-FR");
-            SfPickerResources.ResourceManager = new ResourceManager("PickerLocalizationDemo.Resources.SfPicker", Application.Current.GetType().Assembly);
-            MainPage = new AppShell();
-        }
+        //// ResXPath => Full path of the resx file; For example : // SfPickerResources.ResourceManager = new ResourceManager
+("Picker.Resources.SfPicker", Application.Current.GetType().Assembly);
+        CultureInfo.CurrentUICulture = new CultureInfo("fr-FR");
+        SfPickerResources.ResourceManager = new ResourceManager("ResxPath", Application.Current.GetType().Assembly);
+        MainPage = new AppShell();
     }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -53,7 +53,7 @@ To localize the `Picker` based on `CurrentUICulture` using `resource` files, fol
 
    3. Right-click on the `Resources` folder, select `Add` and then `NewItem.`
 
-   4. In Add New Item wizard, select the Resource File option and name the filename as `SfSPicker.<culture name>.resx.` For example, give the name as `SfPicker.fr-FR.resx` for French culture.
+   4. In Add New Item wizard, select the Resource File option and name the filename as `SfPicker.<culture name>.resx.` For example, give the name as `SfPicker.fr-FR.resx` for French culture.
 
    5. The culture name indicates the name of the language and country.
 
