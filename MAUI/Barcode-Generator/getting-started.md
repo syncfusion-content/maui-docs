@@ -171,5 +171,4 @@ this.Content = barcode;
 
 ![.NET MAUI Barcode Generator Display Input Value](images/getting-started/maui-display-input-value.png)
 
-N> View [`sample`](https://github.com/SyncfusionExamples/.NET-MAUI-Barcode-Generator-Getting-Started) in GitHub
-
+N> You can refer to our [.NET MAUI Barcode Generator](https://www.syncfusion.com/maui-controls/maui-barcodes) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Barcode Generator example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/Barcode) that shows you how to render the Barcode Generator in .NET MAUI.

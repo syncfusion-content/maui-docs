@@ -43,7 +43,7 @@ The default state colors can be customized using the CheckedColor and UncheckedC
 
 ## StrokeThickness
 
-The stroke thickness of the circle in the Radio Button control can be customized using the [`StrokeThickness`] property.  
+The stroke thickness of the circle in the Radio Button control can be customized using the [`StrokeThickness`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_StrokeThickness) property.  
 
 {% tabs %}
 {% highlight xaml %}
@@ -77,13 +77,13 @@ N> StrokeThickness support has not been provided for Android Platform.
 
 ## Setting a caption text appearance 
 
-You can customize the display text appearance of the [`SfRadioButton`] control using the following properties:
+You can customize the display text appearance of the [`SfRadioButton`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioButton.html) control using the following properties:
 
-* [`TextColor`] : Changes the color of the text.
-* [`HorizontalTextAlignment`] : Changes the horizontal alignment of the caption text.
-* [`FontFamily`] : Changes the font family of the caption text.
-* [`FontAttributes`] : Sets font attributes(bold/italic/none) of the caption text.
-* [`FontSize`] : Sets font size of the caption text.
+* [`TextColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_TextColor) : Changes the color of the text.
+* [`HorizontalTextAlignment`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_HorizontalTextAlignment) : Changes the horizontal alignment of the caption text.
+* [`FontFamily`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_FontFamily) : Changes the font family of the caption text.
+* [`FontAttributes`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_FontAttributes) : Sets font attributes(bold/italic/none) of the caption text.
+* [`FontSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_FontSize) : Sets font size of the caption text.
 
 
 {% tabs %}

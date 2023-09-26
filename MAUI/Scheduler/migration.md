@@ -917,7 +917,7 @@ this.Content = scheduler;
 
 <tr>
 <td>{{'[TextColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.ScheduleAppointment.html#Syncfusion_SfSchedule_XForms_ScheduleAppointment_TextColor)'| markdownify }}</td>
-<td>TextColor</td>
+<td>{{'[TextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html#Syncfusion_Maui_Scheduler_SchedulerAppointment_TextColor)'| markdownify}}</td>
 <td>Gets or sets the text color for an appointment in the SfScheduler.</td></tr>
 
 <tr>
@@ -1192,7 +1192,7 @@ this.Content = scheduler;
 
 <tr>
 <td>{{'[TextColorMapping](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.ScheduleAppointmentMapping.html#Syncfusion_SfSchedule_XForms_ScheduleAppointmentMapping_TextColorMapping)'| markdownify }}</td>
-<td>TextColorMapping</td>
+<td>{{'[TextColorMapping](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointmentMapping.html#Syncfusion_Maui_Scheduler_SchedulerAppointmentMapping_TextColorMapping)'| markdownify}}</td>
 <td>Gets or sets the TextColor Mapping to map the custom appointment property with the scheduled appointment's text color property.</td></tr>
 
  </table> 

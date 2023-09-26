@@ -13,7 +13,7 @@ The TreeView offers several options for customizing the height of items. To achi
 
 ## Customize Item Height
 
-The TreeView allows for customization of item height by setting the `ItemHeight` property. The default value of this property is `48d`. This property can be customized at runtime.
+The TreeView allows for customization of item height by setting the [ItemHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ItemHeight) property. The default value of this property is `48d`. This property can be customized at runtime.
 
 {% tabs %}
 {% highlight xaml %}
@@ -26,18 +26,18 @@ treeView.ItemHeight = 40;
 {% endtabs %}
 
 ## Customize Item height using `QueryNodeSize` event
-The TreeView allows customization of the height of the items using the `QueryNodeSize` event. This event is raised whenever the item comes into view and is triggered with `QueryNodeSizeEventArgs`.
+The TreeView allows customization of the height of the items using the [QueryNodeSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_QueryNodeSize) event. This event is raised whenever the item comes into view and is triggered with [QueryNodeSizeEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.QueryNodeSizeEventArgs.html).
 
 The `SfTreeView.QueryNodeSize` event provides the following arguments:
  
- * `Node` : This argument contains the `TreeViewNode` and data associated with it.
- * `Height` : This argument contains the default item height of the queried item and can be set with desired size.
- * `Handled` : Decides whether the specified or measured height can be set to the item or not. The default value is `false`. When this property is not set, the decided height will not set to the item.
- * `GetActualNodeHeight` : This method will return the measured height of the node item based on the content loaded in it.
+ * [Node](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.QueryNodeSizeEventArgs.html#Syncfusion_Maui_TreeView_QueryNodeSizeEventArgs_Node) : This argument contains the [TreeViewNode](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.TreeViewNode.html) and data associated with it.
+ * [Height](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.QueryNodeSizeEventArgs.html#Syncfusion_Maui_TreeView_QueryNodeSizeEventArgs_Height) : This argument contains the default item height of the queried item and can be set with desired size.
+ * [Handled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.QueryNodeSizeEventArgs.html#Syncfusion_Maui_TreeView_QueryNodeSizeEventArgs_Handled) : Decides whether the specified or measured height can be set to the item or not. The default value is `false`. When this property is not set, the decided height will not set to the item.
+ * [GetActualNodeHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.QueryNodeSizeEventArgs.html#Syncfusion_Maui_TreeView_QueryNodeSizeEventArgs_GetActualNodeHeight) : This method will return the measured height of the node item based on the content loaded in it.
 
 ### Customize specific item height using custom value
 
-The TreeView allows customization of the height of a specific item by directly setting the custom value to the `Height` argument, which is available in `QueryNodeSizeEventArgs`.
+The TreeView allows customization of the height of a specific item by directly setting the custom value to the [Height](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.QueryNodeSizeEventArgs.html#Syncfusion_Maui_TreeView_QueryNodeSizeEventArgs_Height) argument, which is available in [QueryNodeSizeEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.QueryNodeSizeEventArgs.html).
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -83,7 +83,7 @@ public class MainPage : ContentPage
 
 ### Customize specific item height based on the content size
 
-The TreeView allows adjusting height of items based on the content measured size while loaded by setting the `Height` argument with the value returned from the `QueryNodeSizeEventArgs.GetActualNodeHeight` method.
+The TreeView allows adjusting height of items based on the content measured size while loaded by setting the `Height` argument with the value returned from the [QueryNodeSizeEventArgs.GetActualNodeHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.QueryNodeSizeEventArgs.html#Syncfusion_Maui_TreeView_QueryNodeSizeEventArgs_GetActualNodeHeight) method.
                                              
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -134,5 +134,5 @@ Download the entire source code from GitHub [here](https://github.com/Syncfusion
 
 ## Limitations
 
- * Define the size of the image when loading an image in the `SfTreeView.ItemTemplate`. Because it does not return the actual measured size when measuring before the item layout.
+ * Define the size of the image when loading an image in the [SfTreeView.ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ItemTemplate). Because it does not return the actual measured size when measuring before the item layout.
 

@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with .NET MAUI Segmented Control (SfSegmentedControl)
 
-This section provides a quick overview of how to get started with the `.NET MAUI Segmented control (SfSegmentedControl)` for .NET MAUI and a walk-through to configure the .NET MAUI Segmented control in a real-time scenario.
+This section provides a quick overview of how to get started with the [.NET MAUI Segmented control (SfSegmentedControl)](https://www.syncfusion.com/maui-controls/maui-segmented-control) for .NET MAUI and a walk-through to configure the .NET MAUI Segmented control in a real-time scenario.
 
 ## Creating an Application using the .NET MAUI Segmented Control
 
@@ -19,7 +19,7 @@ This section provides a quick overview of how to get started with the `.NET MAUI
 
 3. To initialize the control, import the control namespace `Syncfusion.Maui.Buttons` in XAML or C# code.
 
-4. Initialize `SfSegmentedControl`.
+4. Initialize [SfSegmentedControl](https://www.syncfusion.com/maui-controls/maui-segmented-control).
 
 
 {% tabs %}
@@ -83,7 +83,7 @@ The [Syncfusion.Maui.Core](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.C
 
 ## Populating segmented items
 
-You can use `ItemsSource` property of `SfSegmentedControl` to populate the segmented items.
+You can use [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentedControl.html#Syncfusion_Maui_Buttons_SfSegmentedControl_ItemsSource) property of [SfSegmentedControl](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentedControl.html) to populate the segmented items.
 
 {% tabs %}
 {% highlight XAML %}
@@ -128,3 +128,5 @@ public partial class MainPage : ContentPage
 
 {% endhighlight %}
 {% endtabs %}
+
+![Getting started in .NET MAUI Segmented control.](images/getting-started/getting-started.png)

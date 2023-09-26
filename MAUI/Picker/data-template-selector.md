@@ -9,7 +9,7 @@ documentation: ug
 
 # DataTemplateSelector in .NET MAUI Picker (SfPicker)
 
-The DataTemplateSelector feature of SfPicker allows you to select a DataTemplate based on the data object.
+The DataTemplateSelector feature of `SfPicker` allows you to select a DataTemplate based on the data object.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
