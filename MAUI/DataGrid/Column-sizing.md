@@ -9,7 +9,7 @@ documentation: ug
 
 # Column Sizing in .NET MAUI DataGrid (SfDataGrid)
 
-The DataGrid allows you to set the column widths based on certain logics using the [SfDataGrid.ColumnWidthMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ColumnWidthMode) or [DataGridColumn.ColumnWidthMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_ColumnWidthMode) property. 
+The [.NET MAUI DataGrid](https://www.syncfusion.com/maui-controls/maui-datagrid) allows you to set the column widths based on certain logics using the [SfDataGrid.ColumnWidthMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ColumnWidthMode) or [DataGridColumn.ColumnWidthMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_ColumnWidthMode) property. 
 
 To get start quickly with column sizing in .NET MAUI DataGrid, you can check on this video:
 
@@ -84,7 +84,7 @@ The code below applies the [ColumnWidthMode.Fill](https://help.syncfusion.com/cr
 {% highlight xaml %}
 <syncfusion:SfDataGrid  x:Name="dataGrid"
                         ColumnWidthMode="Fill"
-                        ItemsSource="{Binding Orders}" />
+                        ItemsSource="{Binding OrderInfoCollection}" />
 {% endhighlight %}
 {% endtabs %}
 
@@ -98,7 +98,7 @@ If you want to set the common width for all the columns, you can use the [Defaul
 {% highlight xaml tabtile="MainPage.xaml" %}
 <syncfusion:SfDataGrid  x:Name="dataGrid"
                         DefaultColumnWidth="120"
-                        ItemsSource="{Binding Orders}" />
+                        ItemsSource="{Binding OrderInfoCollection}" />
 {% endhighlight %}
 {% endtabs %}
 
@@ -109,8 +109,12 @@ You can retrieve the width of the columns when it is auto-calculated based on th
 {% tabs %}
 {% highlight xaml tabtile="MainPage.xaml" %}
 <StackLayout>
-    <Button Clicked="Button_Clicked" Text="Get Column Width"/>
-    <syncfusion:SfDataGrid x:Name="dataGrid" ItemsSource="{Binding Orders}" VerticalOptions="FillAndExpand" ColumnWidthMode="Auto"/>
+    <syncfusion:SfDataGrid x:Name="dataGrid"
+                       ItemsSource="{Binding OrderInfoCollection}"
+                       VerticalOptions="FillAndExpand"
+                       ColumnWidthMode="Auto" />
+    <Button Clicked="Button_Clicked"
+            Text="Get Column Width" />
 </StackLayout>
 {% endhighlight %}
 
@@ -133,11 +137,14 @@ To apply `ColumnWidthMode` for a particular column, follow the code example:
 {% tabs %}
 {% highlight xaml %}
 <syncfusion:SfDataGrid x:Name="dataGrid"
-                   ColumnWidthMode="None">
-<syncfusion:SfDataGrid.Columns>
-   <syncfusion:DataGridTextColumn MappingName="CustomerID" ColumnWidthMode="Auto" HeaderText="Customer"></syncfusion:DataGridTextColumn>
+                       ItemsSource="{Binding OrderInfoCollection}"
+                       ColumnWidthMode="None">
+    <syncfusion:SfDataGrid.Columns>
+        <syncfusion:DataGridTextColumn MappingName="CustomerID"
+                                       ColumnWidthMode="Auto"
+                                       HeaderText="Customer"></syncfusion:DataGridTextColumn>
     </syncfusion:SfDataGrid.Columns>
-    </syncfusion:SfDataGrid>
+</syncfusion:SfDataGrid>
 {% endhighlight %}
 {% highlight c# %}
 DataGridTextColumn textColumn = new DataGridTextColumn();
@@ -160,15 +167,15 @@ Consider that [ColumnWidthMode.Auto](https://help.syncfusion.com/cr/maui/Syncfus
 {% highlight xaml %}    
 <StackLayout HorizontalOptions="Center" 
              Orientation="Vertical">
+    <syncfusion:SfDataGrid x:Name="dataGrid"
+                       ColumnWidthMode="Auto"
+                       ItemsSource="{Binding OrderInfoCollection}">
+    </syncfusion:SfDataGrid>
     <Button x:Name="button"
             Text="Refresh ColumnSizer"
             HeightRequest="100"
             HorizontalOptions="Center"
-            Clicked="ColumnSizerChanged"/>
-<syncfusion:SfDataGrid x:Name="dataGrid"
-                   ColumnWidthMode="Auto"
-                   ItemsSource="{Binding OrdersInfo}">
-</syncfusion:SfDataGrid>
+            Clicked="ColumnSizerChanged" />
 </StackLayout>
 {% endhighlight %}
 {% highlight c# %}  
@@ -213,7 +220,7 @@ public class CustomColumnSizer : DataGridColumnSizer
 </ContentPage.Resources>
 
 <syncfusion:SfDataGrid x:Name="dataGrid"
-                        ItemsSource="{Binding OrdersInfo,Mode=TwoWay}"
+                        ItemsSource="{Binding OrderInfoCollection,Mode=TwoWay}"
                         ColumnWidthMode="Auto"
                         ColumnSizer="{x:StaticResource CustomColumnSizer}">
 </syncfusion:SfDataGrid>

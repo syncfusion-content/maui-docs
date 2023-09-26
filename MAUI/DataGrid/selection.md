@@ -356,7 +356,8 @@ The `Datagrid` provides the following Events to handle interactions to the cells
 
 * [CellTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CellTapped) : Called when a tap with a cell has occurred.
 * [CellDoubleTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CellDoubleTapped) : Called when the user has tapped a cell with a primary button at the same cell twice in quick succession.
-* [CellLongPress](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CellLongPress) : Called when a long-press gesture with a primary button has been recognized for a cell. 
+* [CellLongPress](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CellLongPress) : Called when a long-press gesture with a primary button has been recognized for a cell.
+* `CellRightTapped` : Called when a right-click mouse gesture has been recognized on a cell.
 
 ### CellTapped event
 This event will be triggered while tapping a cell in the DataGrid. This event has the [DataGridCellTappedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCellTappedEventArgs.html) as arguments.
@@ -419,6 +420,29 @@ private void dataGrid_CellLongPress(object sender,DataGridCellLongPressEventArgs
 }
 {% endhighlight %}
 {% endtabs %}
+
+### CellRightTapped event
+This event will be triggered when a right-click mouse gesture is recognized on a cell. This event has the [DataGridCellRightTappedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCellRightTappedEventArgs.html) as arguments.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                   CellRightTapped="SfDataGrid_CellRightTapped"
+                   ItemsSource="{Binding OrderInfoCollection}" />
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+private void SfDataGrid_CellRightTapped(object sender, Syncfusion.Maui.DataGrid.DataGridCellRightTappedEventArgs e)
+{
+    var rowIndex = e.RowColumnIndex.RowIndex;
+    var rowData = e.RowData;
+    var columnIndex = e.RowColumnIndex.ColumnIndex;
+    var column = e.Column;
+    var pointerDeviceType = e.PointerDeviceType;
+}
+{% endhighlight %}
+{% endtabs %}
+
+N> The `CellRightTapped` event is only applicable for Windows and macOS.
 
 ## CurrentRow
 The [SfDataGrid.CurrentRow](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CurrentRow) property holds the underlying data of the last selected row in the datagrid.
@@ -547,7 +571,3 @@ public class ViewModel : INotifyPropertyChanged
     }
 {% endhighlight %}
 {% endtabs %}
-
-
-
-
