@@ -20,6 +20,14 @@ You can use the [Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.But
     xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons">
     <buttons:SfSegmentedControl x:Name="segmentedControl"
                                 Stroke="Red">
+        <buttons:SfSegmentedControl.ItemsSource>
+            <x:Array Type="{x:Type x:String}">
+                <x:String>Day</x:String>
+                <x:String>Week</x:String>
+                <x:String>Month</x:String>
+                <x:String>Year</x:String>
+            </x:Array>
+        </buttons:SfSegmentedControl.ItemsSource>
     </buttons:SfSegmentedControl>
 </ContentPage>
 
@@ -43,6 +51,8 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
+![Border color customization in .NET MAUI Segmented control.](images/customization/stroke.png)
+
 ## Customize the border thickness
 
 You can use the [StrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentedControl.html#Syncfusion_Maui_Buttons_SfSegmentedControl_StrokeThickness) property of [SfSegmentedControl](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentedControl.html) to customize the border thickness of the segmented control.
@@ -53,7 +63,15 @@ You can use the [StrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion
 <ContentPage
     xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons">
     <buttons:SfSegmentedControl x:Name="segmentedControl"
-                                StrokeThickness="5">
+                                StrokeThickness="2">
+        <buttons:SfSegmentedControl.ItemsSource>
+            <x:Array Type="{x:Type x:String}">
+                <x:String>Day</x:String>
+                <x:String>Week</x:String>
+                <x:String>Month</x:String>
+                <x:String>Year</x:String>
+            </x:Array>
+        </buttons:SfSegmentedControl.ItemsSource>
     </buttons:SfSegmentedControl>
 </ContentPage>
 
@@ -69,13 +87,15 @@ public partial class MainPage : ContentPage
     {
         InitializeComponent();
         SfSegmentedControl segmentedControl = new SfSegmentedControl();
-        segmentedControl.StrokeThickness = 5;
+        segmentedControl.StrokeThickness = 2;
         this.Content = segmentedControl;
     }
 }
 
 {% endhighlight %}
 {% endtabs %}
+
+![Border thickness customization in .NET MAUI Segmented control.](images/customization/stroke-thickness.png)
 
 ## Customize the border corner radius
 
@@ -88,6 +108,14 @@ Use the [CornerRadius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Butto
     xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons">
     <buttons:SfSegmentedControl x:Name="segmentedControl"
                                 CornerRadius="5">
+        <buttons:SfSegmentedControl.ItemsSource>
+            <x:Array Type="{x:Type x:String}">
+                <x:String>Day</x:String>
+                <x:String>Week</x:String>
+                <x:String>Month</x:String>
+                <x:String>Year</x:String>
+            </x:Array>
+        </buttons:SfSegmentedControl.ItemsSource>                
     </buttons:SfSegmentedControl>
 </ContentPage>
 
@@ -111,6 +139,8 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
+![Corner radius customization in .NET MAUI Segmented control.](images/customization/corner-radius.png)
+
 N> The `CornerRadius` property will be applicable only for the first and last segment items. To set corner radius for all segments, use `SegmentCornerRadius`.
 
 ## Customize the segment corner radius
@@ -124,6 +154,14 @@ Use the [SegmentCornerRadius](https://help.syncfusion.com/cr/maui/Syncfusion.Mau
     xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons">
     <buttons:SfSegmentedControl x:Name="segmentedControl"
                                 SegmentCornerRadius="5">
+        <buttons:SfSegmentedControl.ItemsSource>
+            <x:Array Type="{x:Type x:String}">
+                <x:String>Day</x:String>
+                <x:String>Week</x:String>
+                <x:String>Month</x:String>
+                <x:String>Year</x:String>
+            </x:Array>
+        </buttons:SfSegmentedControl.ItemsSource>
     </buttons:SfSegmentedControl>
 </ContentPage>
 
@@ -147,6 +185,8 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
+![Segment corner radius customization in .NET MAUI Segmented control.](images/customization/segment-corner-radius.png)
+
 ## Customize the text style
 You can customize the text style of the segmented control and each segment item.
 
@@ -162,6 +202,14 @@ Use the [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.
         <buttons:SfSegmentedControl.TextStyle>
             <buttons:SegmentTextStyle TextColor="Red" FontAttributes="Italic" FontSize="20"/>
         </buttons:SfSegmentedControl.TextStyle>
+        <buttons:SfSegmentedControl.ItemsSource>
+            <x:Array Type="{x:Type x:String}">
+                <x:String>Day</x:String>
+                <x:String>Week</x:String>
+                <x:String>Month</x:String>
+                <x:String>Year</x:String>
+            </x:Array>
+        </buttons:SfSegmentedControl.ItemsSource>
     </buttons:SfSegmentedControl>
 </ContentPage>
 
@@ -190,6 +238,8 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
+![Text style customization in .NET MAUI Segmented control.](images/customization/segment-text-style.png)
+
 ### Customize the text style of each segment item
 
 Customize the text style of each segment item using the [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentItem.html#Syncfusion_Maui_Buttons_SfSegmentItem_TextStyle) property of [SfSegmentItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentItem.html).
@@ -209,9 +259,9 @@ public partial class MainPage : ContentPage
         List<SfSegmentItem> segmentItems = new List<SfSegmentItem>
             {
                 new SfSegmentItem() {Text="Day", TextStyle = new SegmentTextStyle(){TextColor = Colors.Green}},
-                new SfSegmentItem() {Text="Week", TextStyle = new SegmentTextStyle(){TextColor = Colors.Green}},
-                new SfSegmentItem() {Text="Month", TextStyle = new SegmentTextStyle(){TextColor = Colors.Green}},
-                new SfSegmentItem() {Text="Year", TextStyle = new SegmentTextStyle(){TextColor = Colors.Green}},
+                new SfSegmentItem() {Text="Week", TextStyle = new SegmentTextStyle(){TextColor = Colors.Red}},
+                new SfSegmentItem() {Text="Month", TextStyle = new SegmentTextStyle(){TextColor = Colors.Yellow}},
+                new SfSegmentItem() {Text="Year", TextStyle = new SegmentTextStyle(){TextColor = Colors.Blue}},
             };
         segmentedControl.ItemsSource = segmentItems;
         this.Content = segmentedControl;
@@ -220,6 +270,8 @@ public partial class MainPage : ContentPage
 
 {% endhighlight %}
 {% endtabs %}
+
+![Segment item text style customization in .NET MAUI Segmented control.](images/customization/segment-item-text-style.png)
 
 ## Customize the segment background
 You can customize the segmented background of the segmented control and each segment item.
@@ -234,6 +286,14 @@ Use the [SegmentBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.
     xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons">
     <buttons:SfSegmentedControl x:Name="segmentedControl"
                                 SegmentBackground="LightGray">
+        <buttons:SfSegmentedControl.ItemsSource>
+            <x:Array Type="{x:Type x:String}">
+                <x:String>Day</x:String>
+                <x:String>Week</x:String>
+                <x:String>Month</x:String>
+                <x:String>Year</x:String>
+            </x:Array>
+        </buttons:SfSegmentedControl.ItemsSource>
     </buttons:SfSegmentedControl>
 </ContentPage>
 
@@ -256,6 +316,8 @@ public partial class MainPage : ContentPage
 
 {% endhighlight %}
 {% endtabs %}
+
+![Background customization in .NET MAUI Segmented control.](images/customization/segment-background.png)
 
 ### Customize the segment background of each segment item
 
@@ -288,6 +350,8 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
+![Segment item background customization in .NET MAUI Segmented control.](images/customization/segment-item-background.png)
+
 ## Customize segment items appearance using DataTemplate
 
 Use the [SegmentTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentedControl.html#Syncfusion_Maui_Buttons_SfSegmentedControl_SegmentTemplate) property of [SfSegmentedControl](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentedControl.html) to create custom segmented control. The following example code shows how to create a custom segmented control using a data template.
@@ -308,9 +372,9 @@ Use the [SegmentTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Bu
         </buttons:SfSegmentedControl.ItemsSource>
         <buttons:SfSegmentedControl.SegmentTemplate>
             <DataTemplate>
-                <Grid Background="Orange">
+                <Grid Background="LightGray">
                     <Label Text="{Binding Text}"
-                           TextColor="Green"
+                           TextColor="Red"
                            Margin="6"/>
                 </Grid>
             </DataTemplate>
@@ -320,3 +384,5 @@ Use the [SegmentTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Bu
 
 {% endhighlight %}
 {% endtabs %}
+
+![Appearance customization using DataTemplate in .NET MAUI Segmented control.](images/customization/segment-template.png)
