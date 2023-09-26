@@ -386,4 +386,4 @@ namespace Chips
 
 ![ChipGroup sample with display member path and itemsSource demo](images/getting-started/action.png)
 
-
+You can find the getting started sample of .NET MAUI SfChipGroup from this [link.](https://github.com/SyncfusionExamples/Getting-Started-with-.NET-MAUI-Chips)
