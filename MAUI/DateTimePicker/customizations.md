@@ -297,7 +297,7 @@ In the SfDateTimePicker control, the corner radius, stroke , and padding can be 
 
 <picker:SfDateTimePicker x:Name="picker" >
     <picker:SfDateTimePicker.SelectionView >
-        <picker:PickerSelectionView CornerRadius="10" Stroke="#36454F" Padding="5, 10, 5, 10" Background="#808080" />
+        <picker:PickerSelectionView CornerRadius="10" Stroke="#36454F" Padding="10, 5, 10, 5" Background="#808080" />
     </picker:SfDateTimePicker.SelectionView>
 </picker:SfDateTimePicker>
 
@@ -309,7 +309,7 @@ picker.SelectionView = new PickerSelectionView()
 {
     CornerRadius = 10,
     Stroke = Color.FromArgb("#36454F"),
-    Pading = new Thickness(5, 10, 5, 10),
+    Pading = new Thickness(10, 5, 10, 5),
     Background = Color.FromArgb("#808080"),
 };
 

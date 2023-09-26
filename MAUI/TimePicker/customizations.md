@@ -363,7 +363,7 @@ In the SfTimePicker control, the corner radius, stroke, and padding can be custo
 
 <picker:SfTimePicker x:Name="Timepicker" >
     <picker:SfTimePicker.SelectionView >
-        <picker:PickerSelectionView CornerRadius="10" Stroke="#36454F" Padding="5, 10, 5, 10" Background="#808080" />
+        <picker:PickerSelectionView CornerRadius="10" Stroke="#36454F" Padding="10, 5, 10, 5" Background="#808080" />
     </picker:SfTimePicker.SelectionView>
 </picker:SfTimePicker>
 
@@ -376,7 +376,7 @@ timePicker.SelectionView = new PickerSelectionView()
 {
     CornerRadius = 10,
     Stroke = Color.FromArgb("#36454F"),
-    Pading = new Thickness(5, 10, 5, 10),
+    Pading = new Thickness(10, 5, 10, 5),
     Background = Color.FromArgb("#808080"),
 };
 

@@ -54,7 +54,7 @@ Note: This property is automatically changed to `false` when you close the dialo
             HorizontalOptions="Center"
             VerticalOptions="Center"
             HeightRequest="50" 
-            WidthRequest="100">
+            WidthRequest="150">
     </Button>
 </Grid>
 
