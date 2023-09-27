@@ -8,7 +8,7 @@ control: SfChip
 
 # Overview in .NET MAUI Chips
 
-The .NET MAUI Chip control is a versatile and feature-rich component that allows you to present information in an interactive and customizable layout. It enables you to arrange multiple chips in a layout and group them, making a selection and interaction seamless.
+The [.NET MAUI Chips](https://www.syncfusion.com/maui-controls/maui-chips) control is a versatile and feature-rich component that allows you to present information in an interactive and customizable layout. It enables you to arrange multiple chips in a layout and group them, making a selection and interaction seamless.
 
 ## Key features
 
