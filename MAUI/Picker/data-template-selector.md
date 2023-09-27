@@ -18,12 +18,12 @@ The DataTemplateSelector feature of `SfPicker` allows you to select a DataTempla
     <Grid.Resources>
         <DataTemplate x:Key="indianLanguage">
             <Grid>
-                <Label Grid.Column="1" HorizontalTextAlignment="Center" BackgroundColor="LightGray" VerticalTextAlignment="Center" Text="{Binding Data}"/>
+                <Label Grid.Column="1" HorizontalTextAlignment="Center" BackgroundColor="#808080" VerticalTextAlignment="Center" Text="{Binding Data}"/>
             </Grid>
         </DataTemplate>
         <DataTemplate x:Key="otherLanguage">
             <Grid>
-                <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Text="{Binding Data}"/>
+                <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" BackgroundColor="#D3D3D3" Text="{Binding Data}"/>
             </Grid>
         </DataTemplate>
         <local:PickerTemplate x:Key="pickerTemplate"
