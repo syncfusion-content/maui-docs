@@ -193,11 +193,10 @@ public class ViewModel
     {
         segmentItems = new List<SfSegmentItem>()
         {
-            new SfSegmentItem() {  ImageSource="jackson.png", Text="Jackson" },
-            new SfSegmentItem() { ImageSource ="gabriella.png" , Text="Gabriella"},
-            new SfSegmentItem() { ImageSource="liam.png", Text="Liam"},
+            new SfSegmentItem() {  ImageSource="jackson.png", Text="Jack" },
+            new SfSegmentItem() { ImageSource="liam.png", Text="Liam" },
             new SfSegmentItem() { ImageSource ="nora.png", Text="Nora" },
-            new SfSegmentItem() { ImageSource ="lita.png" , Text="Lita"},
+            new SfSegmentItem() { ImageSource ="lita.png" , Text="Lita" },
         };
     }
 
@@ -210,6 +209,8 @@ public class ViewModel
 
 {% endhighlight %}
 {% endtabs %}
+
+![Display image with text in .NET MAUI Segmented control.](images/populating-segment-items/image-text.png)
 
 ## Custom Font with Text
 Display custom font with text in the segmented items of the control.

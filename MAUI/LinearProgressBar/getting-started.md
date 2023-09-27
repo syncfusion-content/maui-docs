@@ -11,6 +11,11 @@ documentation: ug
 
 This section explains the steps required to add the linear progress bar control with the progress and its customizable elements such as indeterminate, segment, progress fill, and track fill. This section covers only the basic features needed to know and gets started with the Syncfusion linear progress bar.
 
+To get start quickly with our .NET MAUI Linear ProgressBar, check the following video.
+
+{% youtube
+"youtube:https://www.youtube.com/watch?v=DY29ko7PTXg&t"%}
+
 ## Creating an application using the .NET MAUI Linear Progress Bar
 
 * Create a new .NET MAUI application in the Visual Studio.

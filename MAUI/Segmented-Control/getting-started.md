@@ -128,3 +128,5 @@ public partial class MainPage : ContentPage
 
 {% endhighlight %}
 {% endtabs %}
+
+![Getting started in .NET MAUI Segmented control.](images/getting-started/getting-started.png)
