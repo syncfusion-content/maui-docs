@@ -293,3 +293,5 @@ SfSlider slider = new SfSlider()
 {% endtabs %}
 
 ![Slider label format](images/getting-started/label-format.png)
+
+N> You can refer to our [.NET MAUI Slider](https://www.syncfusion.com/maui-controls/maui-slider) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Slider Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/Sliders) that shows you how to render the Slider in .NET MAUI.
