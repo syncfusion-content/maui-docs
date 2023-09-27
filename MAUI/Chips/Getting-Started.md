@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with .NET MAUI Chips
 
-This section explains the steps required to create [.NET MAUI Chips](https://www.syncfusion.com/maui-controls/maui-chips) and arrange them in a layout for performing action. This section covers only the minimal features that you needed to know to get started with the chips.
+This section explains the steps required to create chips and arrange them in a layout for performing action. This section covers only the minimal features that you needed to know to get started with the chips.
 
 ## Adding .NET MAUI Chips reference
 
@@ -386,4 +386,4 @@ namespace Chips
 
 ![ChipGroup sample with display member path and itemsSource demo](images/getting-started/action.png)
 
-N> You can also explore our [.NET MAUI Chips Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/Chips) that shows you how to render the Chips in .NET MAUI.
+N> You can refer to our [.NET MAUI Chips](https://www.syncfusion.com/maui-controls/maui-chips) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Chips Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/Chips) that shows you how to render the Chips in .NET MAUI.
