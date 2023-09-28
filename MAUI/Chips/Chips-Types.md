@@ -11,7 +11,7 @@ documentation: ug
 
 ## Input
 
-Arranges the chips in a layout and enables the close button for each chip. Using the close button, a chip can be removed from children and layout as well. Additionally, it has support to add an option at the end of the layout, from which users can obtain the chip text for creating a chip at run time.
+Arranges the [.NET MAUI Chips](https://www.syncfusion.com/maui-controls/maui-chips) in a layout and enables the close button for each chip. Using the close button, a chip can be removed from children and layout as well. Additionally, it has support to add an option at the end of the layout, from which users can obtain the chip text for creating a chip at run time.
 
 The following code illustrates how to get an input type chip.
 

@@ -609,4 +609,5 @@ public class ViewModel
 ## Upcoming features
 
 * Multi selection for segment items.
+* Accessibility.
 * Theme support.
