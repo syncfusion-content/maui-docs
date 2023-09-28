@@ -9,7 +9,7 @@ documentation: ug
 
 # Customization in .NET MAUI Chips
 
-The chip control supports to customize the background color, border color, close button color, and more. The chip control can be customized using the following properties:
+The [.NET MAUI Chips](https://www.syncfusion.com/maui-controls/maui-chips) control supports to customize the background color, border color, close button color, and more. The chip control can be customized using the following properties:
 
 ## ShowCloseButton
 

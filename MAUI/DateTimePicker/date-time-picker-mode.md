@@ -49,7 +49,7 @@ Note: This property automatically changes to `false` when you close the dialog b
             HorizontalOptions="Center"
             VerticalOptions="Center"
             HeightRequest="50" 
-            WidthRequest="100">
+            WidthRequest="150">
     </Button>
 </Grid>
 
@@ -67,6 +67,8 @@ private void Button_Clicked(object sender, EventArgs e)
 ## Relative dialog mode
 
 The relative dialog mode is used to display the date time picker in a pop-up by setting the [Mode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_Mode) property to [RelativeDialog](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerMode.html#Syncfusion_Maui_Picker_PickerMode_RelativeDialog). It is used to align the picker in a specific position. You can set the position by setting the [RelativePosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_RelativePosition) property in the [SfDateTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html).
+
+### Relative position
 
 The relative position is specified in the picker property enumeration, which is used to align the picker in a specific position. It provides eight positions such as `AlignTop`, `AlignToLeftOf`, `AlignToRightOf`, `AlignBottom`, `AlignTopLeft`, `AlignTopRight`, `AlignBottomLeft`, and `AlignBottomRight`. The default relative position is `AlignTop` in the [SfDateTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html).
 
@@ -107,7 +109,7 @@ Note: This property is automatically changed to `false` when you close the dialo
             HorizontalOptions="Center"
             VerticalOptions="Center"
             HeightRequest="50" 
-            WidthRequest="100">
+            WidthRequest="150">
     </Button>
 </Grid>
 

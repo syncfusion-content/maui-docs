@@ -22,7 +22,7 @@ Localization is the process of translating the application resources into differ
 Application culture can be changed by setting `CurrentUICulture.` in `App.xaml.cs` file.
 
 {% tabs %}
-{% highlight c# tabtitle="App.xaml.cs" %}
+{% highlight c# tabtitle="App.xaml.cs" hl_lines="1 3 11 15" %}
 
 using Syncfusion.Maui.Picker;
 using System.Globalization;
@@ -38,7 +38,7 @@ public partial class App : Application
       //// ResXPath => Full path of the resx file; For example : //SfDatePickeresources.ResourceManager = new ResourceManager
       // ("DatePicker.Resources.SfDatePicker", Application.Current.GetType().Assembly);
 
-		SfDatePickeresources.ResourceManager = new ResourceManager(ResXPath, Application.Current.GetType().Assembly);
+		SfPickerResources.ResourceManager = new ResourceManager("ResxPath", Application.Current.GetType().Assembly);
 	   MainPage = new MainPage();
 	}
 }
