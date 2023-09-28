@@ -30,8 +30,8 @@ To migrate easier from Xamarin CheckBox to [.NET MAUI CheckBox], we kept most of
 <th>.NET MAUI SfCheckBox</th>
 <th>Description</th></tr>
 <tr>
-<td> {{'[BorderWidth](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Buttons.ToggleButton.html#Syncfusion_XForms_Buttons_ToggleButton_BorderWidth)'| markdownify }}</td>
-<td> {{'[StrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_StrokeThickness)'| markdownify }}</td>
+<td> {{'[BorderWidth](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Buttons.ToggleButton.html#Syncfusion_XForms_Buttons_ToggleButton_BorderWidth)' | markdownify }}</td>
+<td> {{'[StrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_StrokeThickness)' | markdownify }}</td>
 <td>Gets or sets the stroke thickness.</td></tr>
 </table> 
 
