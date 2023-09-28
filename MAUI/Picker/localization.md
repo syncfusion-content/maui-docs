@@ -49,14 +49,12 @@ To localize the `Picker` based on `CurrentUICulture` using `resource` files, fol
 
    1. Create new folder, named as `Resources` in the application.
 
-   2. Add the default resource file of `Picker` into `Resources` folder.
+   2. Right-click on the `Resources` folder, select `Add` and then `NewItem.`
 
-   3. Right-click on the `Resources` folder, select `Add` and then `NewItem.`
+   3. In Add New Item wizard, select the Resource File option and name the filename as `SfPicker.<culture name>.resx.` For example, give the name as `SfPicker.fr-FR.resx` for French culture.
 
-   4. In Add New Item wizard, select the Resource File option and name the filename as `SfPicker.<culture name>.resx.` For example, give the name as `SfPicker.fr-FR.resx` for French culture.
+   4. The culture name indicates the name of the language and country.
 
-   5. The culture name indicates the name of the language and country.
+   5. Now, select `Add` option to add the resource file in **Resources** folder.
 
-   6. Now, select `Add` option to add the resource file in **Resources** folder.
-
-   7. Add the Name/Value pair in Resource Designer of `SfPicker.fr-FR.resx` file and change its corresponding value to corresponding culture.
+   6. Add the Name/Value pair in Resource Designer of `SfPicker.fr-FR.resx` file and change its corresponding value to corresponding culture.
