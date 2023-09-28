@@ -9,7 +9,7 @@ documentation: ug
 
 # Migrating from Xamarin SfRadioButton to .NET MAUI SfRadioButton 
 
-To migrate easier from Xamarin Radio Button to [.NET MAUI Radio Button], we kept most of the APIs from Xamarin SfRadioButton in MAUI SfRadioButton. However, to maintain the consistency of API naming in MAUI SfRadioButton, we renamed some of the APIs. The APIs changed in MAUI SfRadioButton from Xamarin SfRadioButton are detailed as follows:
+To migrate easier from Xamarin Radio Button to [.NET MAUI Radio Button](https://www.syncfusion.com/maui-controls/maui-radio-button), we kept most of the APIs from Xamarin SfRadioButton in MAUI SfRadioButton. However, to maintain the consistency of API naming in MAUI SfRadioButton, we renamed some of the APIs. The APIs changed in MAUI SfRadioButton from Xamarin SfRadioButton are detailed as follows:
 
 ## Namespaces 
 
