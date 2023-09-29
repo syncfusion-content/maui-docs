@@ -27,10 +27,18 @@ The Syncfusion [.NET MAUI Date Time Picker](https://www.syncfusion.com/maui-cont
 
 * **Picker mode**: Show the picker in a Popup with a dialog mode. The relative dialog mode is used to align the picker in a specific position.
 
+   ![Picker mode in .NET MAUI Date Time picker.](images/overview/maui-date-time-picker-mode.gif)
+
 * **Date restriction**: Restrict the selection of date items beyond the specified minimum and maximum dates.
 
 * **Date intervals**: The date values can be populated individually with intervals for days, months, and years.
 
+   ![Date intervals in .NET MAUI Date Time picker.](images/overview/maui-date-time-picker-date-interval.gif)
+
 * **Time intervals**: The time values can be populated individually with intervals for hours, minutes, and seconds.
 
+   ![Time intervals in .NET MAUI Date Time picker.](images/overview/maui-date-time-picker-time-interval.gif)
+
 * **Picker interactions**: The .NET MAUI Picker allows you to select a date and time through tap and scroll interaction.
+
+   ![Picker interactions in .NET MAUI Date Time picker.](images/overview/maui-date-time-picker-interaction.gif)

@@ -42,12 +42,18 @@ Syncfusion .NET MAUI Date Picker (SfDatePicker) control allows you to select a d
 
 * **Picker mode**: Show the picker in a Popup with a dialog mode. The relative dialog mode is used to align the picker in a specific position.
 
+   ![Dialog mode in .NET MAUI Date picker.](images/overview/maui-date-picker-dialog-mode.gif)
+
 * **Date restriction**: Restrict the selection of date items beyond the specified minimum and maximum dates.
 
-![Minimum date in .NET MAUI Date picker.](images/overview/maui-date-picker-minimum-date.png)
+   ![Minimum date in .NET MAUI Date picker.](images/overview/maui-date-picker-minimum-date.png)
 
-![Maximum date in .NET MAUI Date picker.](images/overview/maui-date-picker-maximum-date.png)
+   ![Maximum date in .NET MAUI Date picker.](images/overview/maui-date-picker-maximum-date.png)
 
 * **Intervals**: The date values can be populated individually with intervals for days, months, and years.
 
+   ![Intervals in .NET MAUI Date picker.](images/overview/maui-date-picker-intervals.gif)
+
 * **Picker interactions**: The .NET MAUI Date Picker allows you to select dates through tap and scroll interaction.
+
+   ![Picker interactions in .NET MAUI Date picker.](images/overview/maui-date-picker-interactions.gif)

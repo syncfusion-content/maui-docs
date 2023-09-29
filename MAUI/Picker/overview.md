@@ -23,6 +23,10 @@ Syncfusion .NET MAUI Picker (SfPicker) control allows you to select an item and 
 
 * **Picker mode**: Show the picker in a Popup with a dialog mode. The relative dialog mode is used to align the picker in a specific position.
 
+   ![Picker mode in .NET MAUI Picker.](images/overview/maui-picker-mode.gif)
+
 * **Picker interactions**: The .NET MAUI Picker allows you to select an item through tap and scroll interaction.
+
+   ![Picker interactions in .NET MAUI Picker.](images/overview/maui-picker-interactions.gif)
 
 * **Item template**: Customize the picker using item template support.

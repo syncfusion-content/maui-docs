@@ -43,6 +43,12 @@ Syncfusion .NET MAUI Time Picker (SfTimePicker) control allows you to select the
 
 * **Picker mode**: Show the picker in a Popup with a dialog mode. The relative dialog mode is used to align the picker in a specific position.
 
+   ![Picker mode in .NET MAUI Time picker.](images/overview/maui-time-picker-mode.gif)
+
 * **Intervals**: The time values can be populated individually with intervals for hours, minutes, and seconds.
 
+   ![Intervals in .NET MAUI Time picker.](images/overview/maui-time-picker-intervals.gif)
+
 * **Picker interactions**: The .NET MAUI Time Picker allows you to select the times through tap and scroll interaction.
+
+   ![Interactions in .NET MAUI Time picker.](images/overview/maui-time-picker-interactions.gif)
