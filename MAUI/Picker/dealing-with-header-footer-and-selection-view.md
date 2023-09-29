@@ -7,9 +7,9 @@ control: SfPicker
 documentation: ug
 ---
 
-# Dealing with Header, Footer and selection view in .NET MAUI Picker (SfPicker)
+# Dealing with Header, Footer and Selection view in .NET MAUI Picker (SfPicker)
 
-This section explains the header and footer customization of picker control.
+This section explains the header, footer and selction view customization of picker control.
 
 ## Enable or disable header
 
