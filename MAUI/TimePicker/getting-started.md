@@ -112,6 +112,8 @@ this.Content = picker;
 {% endhighlight %}
 {% endtabs %}
 
+   ![Set header view in .NET MAUI Time picker.](images/getting-started/maui-time-picker-set-header-view.png)
+
 ## Set footer to the Time Picker
 
 In the SfTimePicker control, validation buttons (OK and Cancel) can be customized by setting the [OkButtonText] and [CancelButtonText] properties in the [PickerFooterView]. It allows you to confirm or cancel the selected time. The `OkButtonText` can be enabled using the [ShowOkButton] property in the [PickerFooterView].
@@ -140,6 +142,8 @@ this.Content = picker;
 {% endhighlight %}  
 {% endtabs %}
 
+   ![Set footer view in .NET MAUI Time picker.](images/getting-started/maui-time-picker-set-footer-view.png)
+
 ## Set height and width to the Time Picker
 
 The SfTimePicker control allows you to change the height and width by using the [HeightRequest] and [WidthRequest] properties in the [SfTimePicker].
@@ -166,6 +170,8 @@ this.Content = picker;
 {% endhighlight %}  
 {% endtabs %}
 
+   ![Set height and width in .NET MAUI Time picker.](images/getting-started/maui-time-picker-set-height-and-width.png)
+
 ## Set selected time to the Time Picker
 
 The SfTimePicker control allows you to select the time using the [SelectedTime] property in the [SfTimePicker]. The default value of the `SelectedTime` is the current time.
@@ -189,3 +195,5 @@ this.Content = picker;
 
 {% endhighlight %}  
 {% endtabs %}
+
+   ![Set Selected time in .NET MAUI Time picker.](images/getting-started/maui-time-picker-set-selected-time.png)

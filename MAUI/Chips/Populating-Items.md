@@ -9,7 +9,7 @@ documentation: ug
 
 # Populating Items in .NET MAUI Chips
 
-Chips can be populated with either business objects and SfChip. This section explain how to populate the chips control with business objects and SfChip.
+[.NET MAUI Chips](https://www.syncfusion.com/maui-controls/maui-chips) can be populated with either business objects and SfChip. This section explain how to populate the chips control with business objects and SfChip.
 
 ## Populating business objects as items
 
