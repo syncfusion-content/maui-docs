@@ -9,7 +9,7 @@ documentation: ug
 
 # Migrating from Xamarin SfRating to .NET MAUI SfRating 
 
-To migrate easier from Xamarin SfRating to [.NET MAUI SfRating], most of the APIs were kept from Xamarin SfRating in MAUI SfRating. However, to maintain the consistency of API naming in MAUI SfRating, we renamed some of the APIs. The APIs changed in MAUI SfRating from Xamarin SfRating are detailed as follows:
+To migrate easier from Xamarin SfRating to [.NET MAUI SfRating](https://www.syncfusion.com/maui-controls/maui-rating), most of the APIs were kept from Xamarin SfRating in MAUI SfRating. However, to maintain the consistency of API naming in MAUI SfRating, we renamed some of the APIs. The APIs changed in MAUI SfRating from Xamarin SfRating are detailed as follows:
 
 ## Namespaces 
 
