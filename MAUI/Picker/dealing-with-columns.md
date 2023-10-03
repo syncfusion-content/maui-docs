@@ -66,6 +66,8 @@ When you have a collection of objects, and you want to display a specific proper
 {% endhighlight %}
 {% endtabs %}
 
+   ![Picker display member path in .NET MAUI Picker.](images/dealing-with-columns/maui-picker-display-member-path.png)
+
 ### Width customization
 
 Customize the [Width](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerColumn.html#Syncfusion_Maui_Picker_PickerColumn_Width) of every column by setting the `Width` property in the [PickerColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerColumn.html). The default value of width is `-1`.
@@ -120,6 +122,8 @@ Customize the Header text of every column by setting the `HeaderText` property i
 {% endhighlight %}
 {% endtabs %}
 
+   ![Header text customization in .NET MAUI Picker.](images/dealing-with-columns/maui-picker-custom-headertext.png)
+
 ### ItemsSource customization
 
 Customize the ItemSource of every column by setting the `ItemSource` property in the [PickerColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerColumn.html). The default value of the [ItemSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerColumn.html#Syncfusion_Maui_Picker_PickerColumn_ItemsSource) property is `null`.
@@ -138,6 +142,8 @@ Customize the ItemSource of every column by setting the `ItemSource` property in
 
 {% endhighlight %}
 {% endtabs %}
+
+   ![Item souce customization in .NET MAUI Picker.](images/dealing-with-columns/maui-picker-custom-item-source.png)
 
 ### Column divider color
 
