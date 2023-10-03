@@ -70,3 +70,5 @@ The DataTemplateSelector feature of `SfPicker` allows you to select a DataTempla
 
 {% endhighlight %}
 {% endtabs %}
+
+   ![Picker template selector in .NET MAUI Picker.](images/data-template-selector/maui-picker-template-selector.png)

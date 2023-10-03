@@ -32,6 +32,8 @@ SfPicker enables or disables the header section by setting the `SfPicker.HeaderV
 {% endhighlight %}
 {% endtabs %}
 
+   ![Enable header in .NET MAUI Picker.](images/custom-views/maui-picker-enable-header.png)
+
 ## Header customization
 
 SfPicker allows customizing background, text style.
@@ -56,6 +58,8 @@ The Header’s [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.
 
 {% endhighlight %}
 {% endtabs %}
+
+   ![Picker header background in .NET MAUI Picker.](images/custom-views/maui-picker-header-background.png)
 
 ### Header text style
 
@@ -89,6 +93,8 @@ The .NET MAUI Picker control and header [TextStyle](https://help.syncfusion.com/
 {% endhighlight %}
 {% endtabs %}
 
+   ![Header text style in .NET MAUI Picker.](images/custom-views/maui-picker-header-text-style.png)
+
 ## Enable or disable footer
 
 SfPicker enables or disables the footer section by setting the `SfPicker.FooterView.Height` property to a value greater than 0. The default value of the [Height](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_Height) property is 0.
@@ -109,6 +115,8 @@ SfPicker enables or disables the footer section by setting the `SfPicker.FooterV
 
 {% endhighlight %}
 {% endtabs %}
+
+   ![Enable Footer in .NET MAUI Picker.](images/custom-views/maui-picker-enable-footer.png)
 
 ## Footer view customization
 
@@ -135,6 +143,8 @@ The Header’s [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.
 {% endhighlight %}
 {% endtabs %}
 
+   ![Footer background in .NET MAUI Picker.](images/custom-views/maui-picker-footer-background.png)
+
 ### Buttons customization
 
 SfPicker enables or disables the `ok` button by setting the `SfPicker.FooterView.ShowOkButton` property to true or false. The default value of the [ShowOkButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_ShowOkButton) property is true. Customize the text of the `ok` and `cancel` buttons using the [OkButtonText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_OkButtonText) and [CancelButtonText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_CancelButtonText) property.
@@ -160,6 +170,8 @@ SfPicker enables or disables the `ok` button by setting the `SfPicker.FooterView
   
 {% endhighlight %}
 {% endtabs %}
+
+   ![Footer button customization in .NET MAUI Picker.](images/custom-views/maui-picker-footer-custom-button.png)
 
 ### Footer text style
 
@@ -191,6 +203,8 @@ The .NET MAUI Picker control and footer [TextStyle](https://help.syncfusion.com/
 
 {% endhighlight %}
 {% endtabs %}
+
+   ![Footer text style in .NET MAUI Picker.](images/custom-views/maui-picker-footer-text-style.png)
 
 ## Perform validation with default validation button
 

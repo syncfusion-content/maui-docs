@@ -16,8 +16,6 @@ This section explains how to add the Picker control. It covers only the basic fe
 
 2. Syncfusion .NET MAUI components are available on [nuget.org](https://www.nuget.org/). To add `SfPicker` to your project, open the NuGet package manager in Visual Studio, search for [Syncfusion.Maui.Picker](https://www.nuget.org/packages/Syncfusion.Maui.Picker), then install it.
 
-N> [Syncfusion.Maui.Popup](https://www.nuget.org/packages/Syncfusion.Maui.Popup) is a dependent package for `SfPicker`. To add [SfPopup](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html) to your project, open the NuGet package manager in Visual Studio, search for `Syncfusion.Maui.Popup`, then install it.
-
 3. To initialize the control, import the control namespace `Syncfusion.Maui.Picker` in XAML or C# code.
 
 4. Initialize `SfPicker.`
@@ -112,6 +110,8 @@ this.Content = picker;
 {% endhighlight %}
 {% endtabs %}
 
+![Set Header view in .NET MAUI Picker.](images/getting-started/maui-picker-set-header-view.png)
+
 ## Add picker items to the picker
 
 The .NET MAUI Picker control is a data-bound control. Hence, you must create a data collection and bind it to the picker control.
@@ -189,6 +189,7 @@ this.Content = picker;
 {% endhighlight %}
 {% endtabs %}
 
+![Picker items in .NET MAUI picker.](images/getting-started/maui-picker-items.png)
 
 ## Set footer to the Picker
 
@@ -217,6 +218,8 @@ this.Content = picker;
 
 {% endhighlight %}  
 {% endtabs %}
+
+![Picker Footer view in .NET MAUI picker.](images/getting-started/maui-picker-footer-view.png)
 
 ## Set column header to the Picker items
 
@@ -272,6 +275,8 @@ this.Content = picker;
 {% endhighlight %}  
 {% endtabs %}
 
+![Picker Column header view in .NET MAUI picker.](images/getting-started/maui-picker-column-header-view.png)
+
 ## Set height and width to the Picker
 
 The SfPicker control allows you to change the height and width by using the [HeightRequest] and [WidthRequest] properties in the [SfPicker].
@@ -297,3 +302,5 @@ this.Content = picker;
 
 {% endhighlight %}  
 {% endtabs %}
+
+![Set Picker height and width in .NET MAUI picker.](images/getting-started/maui-picker-height-and-width.png)
