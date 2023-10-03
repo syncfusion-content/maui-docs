@@ -110,6 +110,8 @@ this.Content = picker;
 {% endhighlight %}
 {% endtabs %}
 
+![Set Header view in .NET MAUI Picker.](images/getting-started/maui-picker-set-header-view.png)
+
 ## Add picker items to the picker
 
 The .NET MAUI Picker control is a data-bound control. Hence, you must create a data collection and bind it to the picker control.
@@ -187,6 +189,7 @@ this.Content = picker;
 {% endhighlight %}
 {% endtabs %}
 
+![Picker items in .NET MAUI picker.](images/getting-started/maui-picker-items.png)
 
 ## Set footer to the Picker
 
@@ -215,6 +218,8 @@ this.Content = picker;
 
 {% endhighlight %}  
 {% endtabs %}
+
+![Picker Footer view in .NET MAUI picker.](images/getting-started/maui-picker-footer-view.png)
 
 ## Set column header to the Picker items
 
@@ -270,6 +275,8 @@ this.Content = picker;
 {% endhighlight %}  
 {% endtabs %}
 
+![Picker Column header view in .NET MAUI picker.](images/getting-started/maui-picker-column-header-view.png)
+
 ## Set height and width to the Picker
 
 The SfPicker control allows you to change the height and width by using the [HeightRequest] and [WidthRequest] properties in the [SfPicker].
@@ -295,3 +302,5 @@ this.Content = picker;
 
 {% endhighlight %}  
 {% endtabs %}
+
+![Set Picker height and width in .NET MAUI picker.](images/getting-started/maui-picker-height-and-width.png)

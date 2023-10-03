@@ -15,11 +15,19 @@ Syncfusion .NET MAUI Picker (SfPicker) control allows you to select an item and 
 
 * **Header view**: The .NET MAUI Picker allows users to add and customize the header text.
 
+   ![Header view in .NET MAUI Picker.](images/overview/maui-header-view.png)
+
 * **Column header view**: The .NET MAUI Picker supports a customizable column header view to separate headings for each column.
+
+   ![Column header view in .NET MAUI Picker.](images/overview/maui-column-header-view.png)
 
 * **Footer view**: Provides validation buttons (OK and Cancel) in the footer view. The footer text and background color can be customized.
 
+   ![Footer view in .NET MAUI Picker.](images/overview/maui-footer-view.png)
+
 * **Selection view**: The selection view is used to show the selected item, and it can be customized.
+
+   ![Selection view in .NET MAUI Picker.](images/overview/maui-selection-view.png)
 
 * **Picker mode**: Show the picker in a Popup with a dialog mode. The relative dialog mode is used to align the picker in a specific position.
 
@@ -30,3 +38,5 @@ Syncfusion .NET MAUI Picker (SfPicker) control allows you to select an item and 
    ![Picker interactions in .NET MAUI Picker.](images/overview/maui-picker-interactions.gif)
 
 * **Item template**: Customize the picker using item template support.
+
+   ![Item template in .NET MAUI Picker.](images/overview/maui-picker-item-template.png )
