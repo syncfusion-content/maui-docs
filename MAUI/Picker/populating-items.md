@@ -45,6 +45,8 @@ Set the [ItemSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.
 {% endhighlight %}
 {% endtabs %}
 
+   ![Picker column items in .NET MAUI Picker.](images/populating-items/maui-column-items.png)
+
 ## Multi-column items
 
 The picker populates the items as Multi-column based on the columns value.
@@ -103,6 +105,8 @@ The following code example encapsulate how to populate Country and Cityes in eac
 {% endhighlight %}
 {% endtabs %}
 
+   ![Picker multi column items in .NET MAUI Picker.](images/populating-items/maui-multi-column-items.png)
+
 ## Set items text style customization
 
 The .NET MAUI Picker control, selected and unselected items, `TextColor`, `FontSize`, `FontFamily`, and `FontAttributes` can be customized as shown in the following code.
@@ -133,6 +137,8 @@ The selected item [SelectedTextStyle](https://help.syncfusion.com/cr/maui/Syncfu
 {% endhighlight %}
 {% endtabs %}
 
+   ![Picker selected item customization in .NET MAUI Picker.](images/populating-items/maui-picker-selected-item-customization.png)
+
 ### Unselected item customization
 
 The unselected item [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_TextStyle) can be customized by setting the `SfPicker.TextStyle` property.
@@ -156,6 +162,8 @@ The unselected item [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.M
 
 {% endhighlight %}
 {% endtabs %}
+
+   ![Picker un selected item customization in .NET MAUI Picker.](images/populating-items/maui-picker-un-selected-item-customization.png)
 
 ## Adding custom view to items
 
@@ -204,3 +212,5 @@ In picker control, the items can be customized with a custom view of all items b
 
 {% endhighlight %}
 {% endtabs %}
+
+   ![Custom items in .NET MAUI Picker.](images/populating-items/maui-picker-custom-items.png)

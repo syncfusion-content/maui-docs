@@ -47,6 +47,8 @@ public partial class App : Application
 {% endhighlight %}
 {% endtabs %}
 
+   ![Time picker localization in .NET MAUI Date Picker.](images/localization/maui-time-picker-localization.png)
+
 N>
 The required `resx` files with `Build Action` as `EmbeddedResource` (File name should contain culture code) into the `Resources` folder.
 
@@ -62,6 +64,12 @@ To localize the `TimePicker` based on `CurrentUICulture` using `resource` files,
 
    4. The culture name indicates the name of the language and country.
 
+   ![shows-the-name-of-resource-file-to-be-added-for-maui-time-picker](images/localization/shows-the-name-of-resource-file-to-be-added-for-maui-time-picker.png)
+
    5. Now, select `Add` option to add the resource file in **Resources** folder.
 
+   ![shows-the-added-resource-file-for-french-language-in-maui-time-picker](images/localization/shows-the-added-resource-file-for-french-language-in-maui-time-picker.png)
+
    6. Add the Name/Value pair in Resource Designer of `SfTimePicker.fr-FR.resx` file and change its corresponding value to corresponding culture.
+
+   ![shows-the-added-resource-file-name-value-pair-in-the-resource-designer-in-maui-time-picker](images/localization/shows-the-added-resource-file-name-value-pair-in-the-resource-designer-in-maui-time-picker.png)

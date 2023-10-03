@@ -467,6 +467,14 @@ Currently working on delivering brand-new .NET MAUI controls that can be used in
 	</tr>
 	<tr>
 	    <td rowspan="1" valign="top">
+			<a href="https://help.syncfusion.com/xamarin/parallax-view/gettingstarted">SfParallaxView</a><br/>
+		</td>
+		<td rowspan="1" valign="top">
+			Volume 1 2024<br/>
+		</td>
+	</tr>
+	<tr>
+	    <td rowspan="1" valign="top">
 			<a href="https://help.syncfusion.com/xamarin/radial-menu/getting-started">SfRadialMenu</a><br/>
 		</td>
 		<td rowspan="1" valign="top">
@@ -508,14 +516,6 @@ Currently working on delivering brand-new .NET MAUI controls that can be used in
 	<tr>
 	    <td rowspan="1" valign="top">
 			<a href="https://help.syncfusion.com/xamarin/digital-gauge/getting-started">SfDigitalGauge</a><br/>
-		</td>
-		<td rowspan="1" valign="top">
-			Underway<br/>
-		</td>
-	</tr>
-	<tr>
-	    <td rowspan="1" valign="top">
-			<a href="https://help.syncfusion.com/xamarin/parallax-view/gettingstarted">SfParallaxView</a><br/>
 		</td>
 		<td rowspan="1" valign="top">
 			Underway<br/>

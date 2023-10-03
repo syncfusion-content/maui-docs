@@ -32,6 +32,8 @@ The SfPicker enables or disables the column header section by setting the SfPick
 {% endhighlight %}
 {% endtabs %}
 
+   ![Set Column header in .NET MAUI Picker.](images/dealing-with-column-header/maui-picker-column-header.png)
+
 ## Column header customization
 
 Enhancing Column Header with `Height`, `Text Style`, `Background`, and `DividerColor` Properties.
@@ -56,6 +58,8 @@ The column header [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Ma
 
 {% endhighlight %}
 {% endtabs %}
+
+   ![Column header background color in .NET MAUI Picker.](images/dealing-with-column-header/maui-picker-column-header-background.png)
 
 ### Column header text style
 
@@ -89,6 +93,8 @@ The .NET MAUI Picker control and column header [TextStyle](https://help.syncfusi
 {% endhighlight %}
 {% endtabs %}
 
+   ![Column header text style in .NET MAUI Picker.](images/dealing-with-column-header/maui-picker-column-header-text-style.png)
+
 ### Divider color
 
 The .NET MAUI Picker control, Separator line background customized by setting `SfPicker.ColumnHeaderView.DividerColor` property.
@@ -109,3 +115,5 @@ The .NET MAUI Picker control, Separator line background customized by setting `S
 
 {% endhighlight %}
 {% endtabs %}
+
+   ![Column header divider color in .NET MAUI Picker.](images/dealing-with-column-header/maui-picker-column-header-divider-color.png)
