@@ -42,3 +42,9 @@ Our controls will be compatible with any one of the below configurations.
 * iOS 11 or higher, using the latest release of Xcode.
 * macOS 10.15 or higher, using Mac Catalyst.
 * Windows 11 and Windows 10 version 1809 or higher, using [Windows UI Library (WinUI) 3](https://learn.microsoft.com/en-us/windows/apps/winui/winui3/).
+
+### .NET 8.0 Support
+
+The support for .NET 8.0 is scheduled for release in our upcoming Volume 4 2023 release, anticipated in mid-December 2023. This release will not only bring .NET 8.0 compatibility but also ensure our controls are fully compatible with the latest iOS 17 version when paired with Xcode 15.
+
+N> In terms of iOS 17 support, applications built with Xcode 14.X and published on the App Store can be seamlessly installed on iOS 17 devices. Furthermore, new applications can continue to be published with XCode 14.X until March 2024, ensuring compatibility with iOS 17 devices.
