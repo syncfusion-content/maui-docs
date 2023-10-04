@@ -31,14 +31,7 @@ Syncfusion .NET MAUI Date Picker (SfDatePicker) control allows you to select a d
 
 * **Date format**: Offers 8 predefined formats to represent the value of the date in different string formats.
 
-{% rotator %}
-
-![.NET MAUI Date Picker with format MMM_yyyy.](images/overview/maui-date-picker-format_MMM_yyyy.png)
-![.NET MAUI Date Picker with format dd_MM_yyyy.](images/overview/maui-date-picker-format_dd_MM_yyyy.png)
-![.NET MAUI Date Picker with format MM_dd_yyyy.](images/overview/maui-date-picker-format_MM_dd_yyyy.png)
-![.NET MAUI Date Picker with format yyyy_MM_dd.](images/overview/maui-date-picker-format_yyyy_MM_dd.png)
-
-{% endrotator %}
+   ![.NET MAUI Date Picker with format yyyy_MM_dd.](images/overview/maui-date-picker-format_yyyy_MM_dd.png)
 
 * **Picker mode**: Show the picker in a Popup with a dialog mode. The relative dialog mode is used to align the picker in a specific position.
 
