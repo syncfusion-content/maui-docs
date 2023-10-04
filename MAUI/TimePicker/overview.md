@@ -31,15 +31,7 @@ Syncfusion .NET MAUI Time Picker (SfTimePicker) control allows you to select the
 
 * **Time format**: Offers 9 predefined formats to represent the value of the time.
 
-{% rotator %}
-
-![.NET MAUI Time Picker with format H_mm.](images/overview/maui-time-picker-format_H_mm.png)
-![.NET MAUI Time Picker with format h_mm_ss_tt.](images/overview/maui-time-picker-format_h_mm_ss_tt.png)
-![.NET MAUI Time Picker with format HH_mm_ss.](images/overview/maui-time-picker-format_HH_mm_ss.png)
-![.NET MAUI Time Picker with format hh_mm_tt.](images/overview/maui-time-picker-format_hh_mm_tt.png)
-![.NET MAUI Time Picker with format hh_tt.](images/overview/maui-time-picker-format_hh_tt.png)
-
-{% endrotator %}
+   ![.NET MAUI Time Picker with format h_mm_ss_tt.](images/overview/maui-time-picker-format_h_mm_ss_tt.png)
 
 * **Picker mode**: Show the picker in a Popup with a dialog mode. The relative dialog mode is used to align the picker in a specific position.
 
