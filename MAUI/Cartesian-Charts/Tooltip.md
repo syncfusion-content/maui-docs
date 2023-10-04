@@ -246,6 +246,26 @@ The [Show](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartToolt
 
 {% endhighlight %}
 
+{% highlight C# %}
+
+    Stacklayout layout = new Stacklayout();
+    
+    SfCartesianChart chart = new SfCartesianChart();
+    .....
+    ChartTooltipBehavior tooltipBehavior = new ChartTooltipBehavior();
+    chart.TooltipBehavior = tooltipBehavior;
+    .....
+    Button button = new Button()
+    {
+        Text = "Show Tooltip",         
+    };
+    button.Clicked += Button_Clicked;
+    
+    layout.Add(chart);
+    layout.Add(button);
+    
+{% endhighlight %}
+
 {% endtabs %}
 
 {% tabs %}

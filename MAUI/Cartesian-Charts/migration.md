@@ -179,7 +179,7 @@ The following table illustrates the API migration for the chart.
 </tr>
 <tr>
 <td>LabelExtent</td>
-<td><em>LabelExtent</em></td>
+<td>LabelExtent</td>
 </tr>
 <tr>
 <td>LabelClicked</td>

@@ -124,7 +124,7 @@ this.Content = chart;
 
 ### Anti-aliasing
 
-There may be some jagged lines at the edges. This can be reduced by using the `EnableAntiAliasing` property.
+There may be some jagged lines at the edges. This can be reduced by using the [EnableAntiAliasing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.FastLineSeries.html#Syncfusion_Maui_Charts_FastLineSeries_EnableAntiAliasing) property.
 
 {% tabs %}
 
