@@ -46,6 +46,8 @@ this.Content = picker;
 {% endhighlight %}
 {% endtabs %}
 
+   ![Set header divider color in .NET MAUI Date Time picker.](images/customizations/maui-date-time-picker-set-header-divider-color.png)
+
 ### Customization of the header
 
 Customize the header text style and background color of the `Date Time picker` using the [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.DateTimePickerHeaderView.html#Syncfusion_Maui_Picker_DateTimePickerHeaderView_TextStyle) and [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.DateTimePickerHeaderView.html#Syncfusion_Maui_Picker_DateTimePickerHeaderView_Background) properties of the [HeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html#Syncfusion_Maui_Picker_SfDateTimePicker_HeaderView) in the[DateTimePickerHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.DateTimePickerHeaderView.html).
@@ -81,6 +83,8 @@ this.Content = picker;
 
 {% endhighlight %}
 {% endtabs %}
+
+   ![Custom header in .NET MAUI Date Time picker.](images/customizations/maui-date-time-picker-custom-header.png)
 
 ## Column Header Customization
 
@@ -122,6 +126,8 @@ this.Content = picker;
 {% endhighlight %}
 {% endtabs %}
 
+   ![Custom column header in .NET MAUI Date Time picker.](images/customizations/maui-date-time-picker-custom-column-header.png)
+
 ### Set the divider color
 
 The SfDateTimePicker control allows you to customize the column header divider color by setting the [DividerColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.DateTimePickerColumnHeaderView.html#Syncfusion_Maui_Picker_DateTimePickerColumnHeaderView_DividerColor) property of the [DatePickerColumnHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.DateTimePickerColumnHeaderView.html).
@@ -150,6 +156,8 @@ this.Content = picker;
 
 {% endhighlight %}
 {% endtabs %}
+
+   ![Set column header divider color in .NET MAUI Date Time picker.](images/customizations/maui-date-time-picker-set-column-header-divider-color.png)
 
 ### Customization of the column header
 
@@ -187,6 +195,8 @@ this.Content = picker;
 {% endhighlight %}
 {% endtabs %}
 
+   ![Column header customization in .NET MAUI Date Time picker.](images/customizations/maui-date-time-picker-column-header-customization.png)
+
 ## Footer Customization
 
 Customize the Date Time Picker footer view by using the `FooterView` property of the `SfDateTimePicker`.
@@ -221,6 +231,8 @@ this.Content = picker;
 {% endhighlight %}
 {% endtabs %}
 
+   ![Set Footer text in .NET MAUI Date Time picker.](images/customizations/maui-date-time-picker-footer-text.png)
+
 ### Set the divider color
 
 The SfDateTimePicker control allows you to customize the footer divider color by setting the [DividerColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_DividerColor) property of the [PickerFooterView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html).
@@ -247,6 +259,8 @@ this.Content = picker;
 
 {% endhighlight %}
 {% endtabs %}
+
+   ![Footer divider color in .NET MAUI Date Time picker.](images/customizations/maui-date-time-picker-footer-divider-color.png)
 
 ### Customization of the footer
 
@@ -284,6 +298,8 @@ this.Content = picker;
 {% endhighlight %}
 {% endtabs %}
 
+   ![Footer customization in .NET MAUI Date Time picker.](images/customizations/maui-date-time-picker-footer-customization.png)
+
 ## Selection View Customization
 
 Customize the Date Time Picker selection view by using the `SelectionView` property of the `SfDateTimePicker`.
@@ -318,6 +334,8 @@ this.Content = picker;
 {% endhighlight %}
 {% endtabs %}
 
+   ![Set selection shape in .NET MAUI Date Time picker.](images/customizations/maui-date-time-picker-set-selection-shape.png)
+
 ### Customization of the selected item
 
 Customize the selected view text style of the `Date Time Picker` using the [SelectedTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_SelectedTextStyle) property of the [SfDateTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_SelectedTextStyle).
@@ -348,6 +366,8 @@ this.Content = picker;
 
 {% endhighlight %}
 {% endtabs %}
+
+   ![Selected item customization in .NET MAUI Date Time picker.](images/customizations/maui-date-time-picker-selected-item-customization.png)
 
 ## Column divider color
 

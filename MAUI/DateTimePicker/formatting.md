@@ -50,6 +50,8 @@ this.Content = picker;
 {% endhighlight %}  
 {% endtabs %}
 
+   ![Date format in .NET MAUI Date Time picker.](images/formatting/maui-date-time-picker-date-format.png)
+
 ## Time format
 You can customize the time format of the date time picker by using the [TimeFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html#Syncfusion_Maui_Picker_SfDateTimePicker_TimeFormat) property of type [PickerTimeFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerTimeFormat.html) in [SfDateTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html). The default format is `HH_mm_ss`.
 
@@ -91,3 +93,5 @@ this.Content = picker;
 
 {% endhighlight %}  
 {% endtabs %}
+
+   ![Time format in .NET MAUI Date Time picker.](images/formatting/maui-date-time-picker-time-format.png)
