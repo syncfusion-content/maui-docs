@@ -81,29 +81,6 @@ The relative dialog mode displays the picker in a pop-up by setting the [Mode](h
 
 The [RelativePosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_RelativePosition) is specified in the picker property enumeration, which is used to align the picker in a specific position. It provides eight positions such as `AlignTop`, `AlignToLeftOf`, `AlignToRightOf`, `AlignBottom`, `AlignTopLeft`, `AlignTopRight`, `AlignBottomLeft`, and `AlignBottomRight`. The default relative position is `AlignTop` in the [SfPicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfPicker.html).
 
-{% tabs %}
-
-{% highlight xaml tabtitle="XAML" hl_lines="2 3" %}
-
-<picker:SfPicker x:Name="picker"
-                     Mode="RelativeDialog"
-                     RelativePosition="AlignBottom"/>
-
-{% endhighlight %}
-
-{% highlight c# tabtitle="C#" hl_lines="3 4" %}
-
-SfPicker picker = new SfPicker()
-{
-    Mode = PickerMode.RelativeDialog,
-    RelativePosition = PickerRelativePosition.AlignBottom,
-};
-
-this.Content = picker;
-
-{% endhighlight %}
-
-{% endtabs %}
 
 The Picker can be opened programmatically by setting the [`IsOpen`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_IsOpen) property to `true` of [SfPicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfPicker.html). By default, the `IsOpen` property is `false`.
 
@@ -139,3 +116,7 @@ private void Button_Clicked(object sender, System.EventArgs e)
 {% endhighlight %} 
 
 {% endtabs %}
+
+   ![Relative dialog mode in .NET MAUI Picker.](images/picker-mode/maui-picker-relative-dialog-mode1.png)
+
+   ![Relative dialog mode in .NET MAUI Picker.](images/picker-mode/maui-picker-relative-dialog-mode2.png)

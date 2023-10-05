@@ -64,11 +64,11 @@ To localize the `TimePicker` based on `CurrentUICulture` using `resource` files,
 
    4. The culture name indicates the name of the language and country.
 
-   ![shows-the-name-of-resource-file-to-be-added-for-maui-time-picker](images/localization/shows-the-name-of-resource-file-to-be-added-for-maui-time-picker.png)
+      ![shows-the-name-of-resource-file-to-be-added-for-maui-time-picker](images/localization/shows-the-name-of-resource-file-to-be-added-for-maui-time-picker.png)
 
    5. Now, select `Add` option to add the resource file in **Resources** folder.
 
-   ![shows-the-added-resource-file-for-french-language-in-maui-time-picker](images/localization/shows-the-added-resource-file-for-french-language-in-maui-time-picker.png)
+      ![shows-the-added-resource-file-for-french-language-in-maui-time-picker](images/localization/shows-the-added-resource-file-for-french-language-in-maui-time-picker.png)
 
    6. Add the Name/Value pair in Resource Designer of `SfTimePicker.fr-FR.resx` file and change its corresponding value to corresponding culture.
 
