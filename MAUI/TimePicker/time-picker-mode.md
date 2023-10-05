@@ -81,29 +81,6 @@ The relative dialog mode displays the time picker in a pop-up by setting the [Mo
 
 The [RelativePosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_RelativePosition) is specified in the picker property enumeration, which is used to align the picker in a specific position. It provides eight positions such as `AlignTop`, `AlignToLeftOf`, `AlignToRightOf`, `AlignBottom`, `AlignTopLeft`, `AlignTopRight`, `AlignBottomLeft`, and `AlignBottomRight`. The default relative position is `AlignTop` in the [SfTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html).
 
-{% tabs %}
-
-{% highlight xaml tabtitle="XAML" hl_lines="2 3" %}
-
-<picker:SfTimePicker x:Name="timePicker"
-                     Mode="RelativeDialog"
-                     RelativePosition="AlignBottom"/>
-
-{% endhighlight %}
-
-{% highlight c# tabtitle="C#" hl_lines="3 4" %}
-
-SfTimePicker timePicker = new SfTimePicker()
-{
-    Mode = PickerMode.RelativeDialog,
-    RelativePosition = PickerRelativePosition.AlignBottom,
-};
-
-this.Content = timePicker;
-
-{% endhighlight %}
-
-{% endtabs %}
 
 The Time Picker can be opened programmatically by setting the [`IsOpen`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_IsOpen) property to `true` of [SfTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html). By default, the `IsOpen` property is `false`.
 
@@ -140,3 +117,7 @@ private void Button_Clicked(object sender, System.EventArgs e)
 {% endhighlight %} 
  
 {% endtabs %}
+
+   ![Relative dialog mode in .NET MAUI Time picker.](images/time-picker-mode/maui-time-picker-relative-dialog-mode1.png)
+
+   ![Relative dialog mode in .NET MAUI Time picker.](images/time-picker-mode/maui-time-picker-relative-dialog-mode2.png)
