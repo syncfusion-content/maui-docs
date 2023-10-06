@@ -95,6 +95,27 @@ The .NET MAUI Picker control and header [TextStyle](https://help.syncfusion.com/
 
    ![Header text style in .NET MAUI Picker.](images/custom-views/maui-picker-header-text-style.png)
 
+### Divider color
+
+The Header’s [DividerColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerHeaderView.html#Syncfusion_Maui_Picker_PickerHeaderView_DividerColor) color can be customized by setting the `SfPicker.HeaderView.DividerColor` property.
+
+{% tabs %}
+{% highlight xaml tabtitle="XAML" %}
+
+<sfPicker:SfPicker x:Name="Picker">
+    <sfPicker:SfPicker.HeaderView>
+        <sfPicker:PickerHeaderView DividerColor="Red"/>
+    </sfPicker:SfPicker.HeaderView>
+</sfPicker:SfPicker>
+
+{% endhighlight %}
+{% highlight c# tabtitle="C#" %}
+
+    this.Picker.HeaderView.DividerColor = Colors.Red;
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Enable or disable footer
 
 SfPicker enables or disables the footer section by setting the `SfPicker.FooterView.Height` property to a value greater than 0. The default value of the [Height](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_Height) property is 0.
@@ -205,6 +226,28 @@ The .NET MAUI Picker control and footer [TextStyle](https://help.syncfusion.com/
 {% endtabs %}
 
    ![Footer text style in .NET MAUI Picker.](images/custom-views/maui-picker-footer-text-style.png)
+
+### Divider color
+
+The Footer’s [DividerColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_DividerColor) color can be customized by setting the `SfPicker.FooterView.DividerColor` property.
+
+{% tabs %}
+{% highlight xaml tabtitle="XAML" %}
+
+<sfPicker:SfPicker x:Name="Picker">
+    <sfPicker:SfPicker.FooterView>
+        <sfPicker:PickerFooterView DividerColor="Red"/>
+    </sfPicker:SfPicker.FooterView>
+</sfPicker:SfPicker>
+
+{% endhighlight %}
+{% highlight c# tabtitle="C#" %}
+
+    this.Picker.FooterView.DividerColor = Colors.Red;
+
+{% endhighlight %}
+{% endtabs %}
+
 
 ## Perform validation with default validation button
 

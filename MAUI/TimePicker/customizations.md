@@ -58,7 +58,7 @@ The SfTimePicker control allows you to customize the header divider color by set
 
 <picker:SfTimePicker x:Name="Timepicker" >
     <picker:SfTimePicker.HeaderView >
-        <picker:PickerHeaderView DividerColor="#36454F" />
+        <picker:PickerHeaderView DividerColor="Red" />
     </picker:SfTimePicker.HeaderView>
 </picker:SfTimePicker>
 
@@ -69,7 +69,7 @@ The SfTimePicker control allows you to customize the header divider color by set
 SfTimePicker timePicker = new SfTimePicker();
 timepicker.HeaderView = new PickerHeaderView()
 {
-    DividerColor = Color.FromArgb("#36454F")
+    DividerColor = Colors.Red,
 };
 
 this.Content = timePicker;
@@ -173,7 +173,7 @@ The SfTimePicker control allows you to customize the column header divider color
 
 <picker:SfTimePicker x:Name="Timepicker" >
     <picker:SfTimePicker.ColumnHeaderView >
-        <picker:TimePickerColumnHeaderView DividerColor="#36454F" />
+        <picker:TimePickerColumnHeaderView DividerColor="Red" />
     </picker:SfTimePicker.ColumnHeaderView>
 </picker:SfTimePicker>
 
@@ -184,7 +184,7 @@ The SfTimePicker control allows you to customize the column header divider color
 SfTimePicker timePicker = new SfTimePicker();
 timepicker.ColumnHeaderView = new TimePickerColumnHeaderView()
 {
-    DividerColor = Color.FromArgb("#36454F")
+    DividerColor = Colors.Red,
 };
 
 this.Content = timePicker;
@@ -286,7 +286,7 @@ The SfTimePicker control allows you to customize the footer divider color by set
 
 <picker:SfTimePicker x:Name="Timepicker" >
     <picker:SfTimePicker.FooterView >
-        <picker:PickerFooterView DividerColor="#36454F" />
+        <picker:PickerFooterView DividerColor="Red" />
     </picker:SfTimePicker.FooterView>
 </picker:SfTimePicker>
 
@@ -297,7 +297,7 @@ The SfTimePicker control allows you to customize the footer divider color by set
 SfTimePicker timePicker = new SfTimePicker();
 timepicker.FooterView = new PickerFooterView()
 {
-    DividerColor = Color.FromArgb("#36454F")
+    DividerColor = Colors.Red,
 };
 
 this.Content = timePicker;
@@ -432,14 +432,14 @@ Customize the column divider color using the [ColumnDividerColor](https://help.s
 {% highlight xaml tabtitle="XAML" %}
 
 <picker:SfTimePicker x:Name="Timepicker"
-                     ColumnDividerColor="#36454F">
+                     ColumnDividerColor="Red">
 </picker:SfTimePicker>
 
 {% endhighlight %}
 {% highlight c# tabtitle="C#" %}
 
 SfTimePicker timePicker = new SfTimePicker();
-timePicker.ColumnDividerColor = Color.FromArgb("#36454F");
+timePicker.ColumnDividerColor = Colors.Red;
 this.Content = picker;
 
 {% endhighlight %}

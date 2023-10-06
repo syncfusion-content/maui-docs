@@ -28,7 +28,7 @@ The SfDateTimePicker control allows you to customize the header divider color by
 
 <picker:SfDateTimePicker>
     <picker:SfDateTimePicker.HeaderView>
-        <picker:DateTimePickerHeaderView DividerColor="#36454F" />
+        <picker:DateTimePickerHeaderView DividerColor="Red" />
     </picker:SfDateTimePicker.HeaderView>
 </picker:SfDateTimePicker>
 
@@ -38,7 +38,7 @@ The SfDateTimePicker control allows you to customize the header divider color by
 SfDateTimePicker picker = new SfDateTimePicker();
 picker.HeaderView = new DateTimePickerHeaderView()
 {
-    DividerColor = Color.FromArgb("#36454F"),
+    DividerColor = Colors.Red,
 };
 
 this.Content = picker;
@@ -138,7 +138,7 @@ The SfDateTimePicker control allows you to customize the column header divider c
 
 <picker:SfDateTimePicker>
     <picker:SfDateTimePicker.ColumnHeaderView>
-        <picker:DateTimePickerColumnHeaderView DividerColor="#36454F" />
+        <picker:DateTimePickerColumnHeaderView DividerColor="Red" />
     </picker:SfDateTimePicker.ColumnHeaderView>
 </picker:SfDateTimePicker>
 
@@ -149,7 +149,7 @@ The SfDateTimePicker control allows you to customize the column header divider c
 SfDateTimePicker picker = new SfDateTimePicker();
 picker.ColumnHeaderView = new DateTimePickerColumnHeaderView()
 {
-    DividerColor = Color.FromArgb("#36454F"),
+    DividerColor = Colors.Red,
 };
 
 this.Content = picker;
@@ -242,7 +242,7 @@ The SfDateTimePicker control allows you to customize the footer divider color by
 
 <picker:SfDateTimePicker x:Name="picker" >
     <picker:SfDateTimePicker.FooterView >
-        <picker:PickerFooterView DividerColor="#36454F" />
+        <picker:PickerFooterView DividerColor="Red" />
     </picker:SfDateTimePicker.FooterView>
 </picker:SfDateTimePicker>
 
@@ -252,7 +252,7 @@ The SfDateTimePicker control allows you to customize the footer divider color by
 SfDateTimePicker picker = new SfDateTimePicker();
 picker.FooterView = new PickerFooterView()
 {
-    DividerColor = Color.FromArgb("#36454F")
+    DividerColor = Colors.Red,
 };
 
 this.Content = picker;
@@ -377,14 +377,14 @@ Customize the column divider color using the [ColumnDividerColor](https://help.s
 {% highlight xaml tabtitle="XAML" %}
 
 <picker:SfDateTimePicker x:Name="picker"
-                         ColumnDividerColor="#36454F">
+                         ColumnDividerColor="Red">
 </picker:SfDateTimePicker>
 
 {% endhighlight %}
 {% highlight c# tabtitle="C#" %}
 
 SfDateTimePicker picker = new SfDateTimePicker();
-picker.ColumnDividerColor = Color.FromArgb("#36454F");
+picker.ColumnDividerColor = Colors.Red;
 this.Content = picker;
 
 {% endhighlight %}
