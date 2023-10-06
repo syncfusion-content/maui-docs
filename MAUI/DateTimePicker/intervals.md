@@ -36,6 +36,8 @@ this.Content = picker;
 {% endhighlight %}
 {% endtabs %}
 
+   ![Day interval in .NET MAUI Date Time picker.](images/intervals/maui-date-time-picker-day-interval.png)
+
 ## Month interval
 Date Time picker provides an option to give an interval between months using the [MonthInterval](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html#Syncfusion_Maui_Picker_SfDateTimePicker_MonthInterval) property of [SfDateTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html).
 
@@ -54,6 +56,8 @@ this.Content = picker;
 
 {% endhighlight %}
 {% endtabs %}
+
+   ![Day interval in .NET MAUI Date Time picker.](images/intervals/maui-date-time-picker-month-interval.png)
 
 ## Year interval
 Date Time picker provides an option to give an interval between years using the [YearInterval](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html#Syncfusion_Maui_Picker_SfDateTimePicker_YearInterval) property of [SfDateTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html).
@@ -74,6 +78,8 @@ this.Content = picker;
 {% endhighlight %}
 {% endtabs %}
 
+   ![Year interval in .NET MAUI Date Time picker.](images/intervals/maui-date-time-picker-year-interval.png)
+
 ## Hour interval
 Date Time picker provides an option to give an interval between hours using the [HourInterval](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html#Syncfusion_Maui_Picker_SfDateTimePicker_HourInterval) property of [SfDateTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html).
 
@@ -92,6 +98,8 @@ this.Content = picker;
 
 {% endhighlight %}
 {% endtabs %}
+
+   ![Hour interval in .NET MAUI Date Time picker.](images/intervals/maui-date-time-picker-hour-interval.png)
 
 ## Minute interval
 Date Time picker provides an option to give an interval between minutes using the [MinuteInterval](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html#Syncfusion_Maui_Picker_SfDateTimePicker_MinuteInterval) property of [SfDateTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html).
@@ -112,6 +120,8 @@ this.Content = picker;
 {% endhighlight %}
 {% endtabs %}
 
+   ![Minute interval in .NET MAUI Date Time picker.](images/intervals/maui-date-time-picker-minute-interval.png)
+
 ## Second interval
 Date Time picker provides an option to give an interval between seconds using the [SecondInterval](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html#Syncfusion_Maui_Picker_SfDateTimePicker_SecondInterval) property of [SfDateTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html).
 
@@ -130,3 +140,5 @@ this.Content = picker;
 
 {% endhighlight %}
 {% endtabs %}
+
+   ![Second interval in .NET MAUI Date Time picker.](images/intervals/maui-date-time-picker-second-interval.png)
