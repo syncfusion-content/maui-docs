@@ -165,3 +165,5 @@ this.Content = picker;
 
 {% endhighlight %}
 {% endtabs %}
+
+   ![Column divider color in .NET MAUI Picker.](images/dealing-with-columns/maui-picker-column-divider-color.png)

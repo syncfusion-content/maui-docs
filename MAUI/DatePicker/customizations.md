@@ -443,3 +443,5 @@ this.Content = datepicker;
 
 {% endhighlight %}
 {% endtabs %}
+
+![Date picker coloumn divider color in .NET MAUI Date picker.](images/customizations/maui-date-picker-column-divider-color.png)

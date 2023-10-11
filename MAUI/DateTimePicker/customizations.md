@@ -389,3 +389,5 @@ this.Content = picker;
 
 {% endhighlight %}
 {% endtabs %}
+
+![Time picker coloumn divider color in .NET MAUI Time picker.](images/customizations/maui-time-picker-column-divider-color.png)

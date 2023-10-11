@@ -116,6 +116,8 @@ The Header’s [DividerColor](https://help.syncfusion.com/cr/maui/Syncfusion.Mau
 {% endhighlight %}
 {% endtabs %}
 
+   ![Header divider color in .NET MAUI Picker.](images/custom-views/maui-picker-header-divider-color.png)
+
 ## Enable or disable footer
 
 SfPicker enables or disables the footer section by setting the `SfPicker.FooterView.Height` property to a value greater than 0. The default value of the [Height](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_Height) property is 0.
@@ -248,6 +250,7 @@ The Footer’s [DividerColor](https://help.syncfusion.com/cr/maui/Syncfusion.Mau
 {% endhighlight %}
 {% endtabs %}
 
+   ![Footer divider color in .NET MAUI Picker.](images/custom-views/maui-picker-footer-divider-color.png)
 
 ## Perform validation with default validation button
 
@@ -312,3 +315,5 @@ this.Content = picker;
 
 {% endhighlight %}
 {% endtabs %}
+
+   ![Selected item customization in .NET MAUI Picker.](images/custom-views/maui-picker-selected-item-customization.png)
