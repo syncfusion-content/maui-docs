@@ -390,4 +390,4 @@ this.Content = picker;
 {% endhighlight %}
 {% endtabs %}
 
-![Time picker coloumn divider color in .NET MAUI Time picker.](images/customizations/maui-time-picker-column-divider-color.png)
+   ![Date Time picker coloumn divider color in .NET MAUI Date Time picker.](images/customizations/maui-date-time-picker-column-divider-color.png)
