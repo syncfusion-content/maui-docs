@@ -104,14 +104,14 @@ The .NET MAUI Picker control, Separator line background customized by setting `S
 
     <sfPicker:SfPicker x:Name="Picker">
         <sfPicker:SfPicker.ColumnHeaderView>
-            <sfPicker:PickerColumnHeaderView DividerColor="#36454F"/>
+            <sfPicker:PickerColumnHeaderView DividerColor="Red"/>
         </sfPicker:SfPicker.ColumnHeaderView>
     </sfPicker:SfPicker>
 
 {% endhighlight %}
 {% highlight c# tabtitle="C#" %}
 
-    this.Picker.ColumnHeaderView.DividerColor = Color.FromArgb("#36454F");
+    this.Picker.ColumnHeaderView.DividerColor = Colors.Red;
 
 {% endhighlight %}
 {% endtabs %}
