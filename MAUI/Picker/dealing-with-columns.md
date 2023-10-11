@@ -153,15 +153,17 @@ Customize the column divider color when the picker consists of more than one col
 {% highlight xaml tabtitle="XAML" %}
 
 <sfPicker:SfPicker x:Name="Picker"
-                   ColumnDividerColor="#36454F">
+                   ColumnDividerColor="Red">
 </sfPicker:SfPicker>
 
 {% endhighlight %}
 {% highlight c# tabtitle="C#" %}
 
 SfPicker picker = new SfPicker();
-picker.ColumnDividerColor = Color.FromArgb("#36454F");
+picker.ColumnDividerColor = Colors.Red;
 this.Content = picker;
 
 {% endhighlight %}
 {% endtabs %}
+
+   ![Column divider color in .NET MAUI Picker.](images/dealing-with-columns/maui-picker-column-divider-color.png)
