@@ -268,4 +268,4 @@ private void sfNumericEntry_ValueChanged(object sender, NumericEntryValueChanged
 {% endhighlight %}
 {% endtabs %}
 
-N> You can refer to our [.NET MAUI Numeric Entry](https://www.syncfusion.com/maui-controls/maui-numeric-entry) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Combobox Example](https://github.com/SyncfusionExamples/maui-numericentry-samples) that shows you how to render the Combobox in .NET MAUI.
+N> You can refer to our [.NET MAUI Numeric Entry](https://www.syncfusion.com/maui-controls/maui-numeric-entry) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Numeric Entry Example](https://github.com/SyncfusionExamples/maui-numericentry-samples) that shows you how to render the Numeric Entry in .NET MAUI.
