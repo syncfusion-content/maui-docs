@@ -249,6 +249,7 @@ The following code example gives you the complete code of above configurations.
 
 ![.NET MAUI Linear Gauge](images/getting-started/maui-linear-gauge.PNG)
 
+N> View [`sample`](https://github.com/SyncfusionExamples/MAUI-Linear-Gauge-Getting-started-) in GitHub
 N>
 * Get the complete getting started sample from [GitHub](https://github.com/SyncfusionExamples/getting-started-with-the-dotnet-maui-linear-gauge) link.
-* You can refer to our [.NET MAUI Linear Gauge](https://www.syncfusion.com/maui-controls/maui-linear-gauge) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Linear Gauge Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/Gauges/SampleBrowser.Maui.Gauges/Samples/LinearGauge) that shows you how to render the Scheduler in .NET MAUI
+* You can refer to our [.NET MAUI Linear Gauge](https://www.syncfusion.com/maui-controls/maui-linear-gauge) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Linear Gauge Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/Gauges/SampleBrowser.Maui.Gauges/Samples/LinearGauge) that shows you how to render the Linear Gauge in .NET MAUI
