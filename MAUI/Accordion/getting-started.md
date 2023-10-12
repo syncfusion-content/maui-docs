@@ -374,3 +374,5 @@ private void SfAccordion_Collapsed(object sender, Syncfusion.Maui.Accordion.Expa
 }
 {% endhighlight %}
 {% endtabs %}
+
+N> You can refer to our [.NET MAUI Accordion](https://www.syncfusion.com/maui-controls/maui-accordion) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Accordion Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/Accordion) that shows you how to render the Accordion in .NET MAUI.
