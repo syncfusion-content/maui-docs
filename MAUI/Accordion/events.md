@@ -25,7 +25,7 @@ The [Expanding](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.Sf
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="1"%}
-<syncfusion:SfAccordion x:Name="accordionExpanding" Expanding="SfAccordion_Expanding">
+<syncfusion:SfAccordion x:Name="accordion" Expanding="accordion_Expanding">
     <syncfusion:SfAccordion.Items>
         <syncfusion:AccordionItem>
             ...
@@ -36,7 +36,7 @@ The [Expanding](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.Sf
 {% endhighlight %}
 
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="3" %}
-private void SfAccordion_Expanding(object sender, Syncfusion.Maui.Accordion.ExpandingAndCollapsingEventArgs e)
+private void accordion_Expanding(object sender, Syncfusion.Maui.Accordion.ExpandingAndCollapsingEventArgs e)
 {
     if (e.Index == 2)
     {
@@ -52,7 +52,7 @@ The [Expanded](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.SfA
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="1" %}
-<syncfusion:SfAccordion x:Name="accordionExpanded" Expanded="SfAccordion_Expanded">
+<syncfusion:SfAccordion x:Name="accordion" Expanded="accordion_Expanded">
     <syncfusion:SfAccordion.Items>
         <syncfusion:AccordionItem>
             ...
@@ -63,7 +63,7 @@ The [Expanded](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.SfA
 {% endhighlight %}
 
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="4"%}
-private void SfAccordion_Expanded(object sender, Syncfusion.Maui.Accordion.ExpandedAndCollapsedEventArgs e)
+private void accordion_Expanded(object sender, Syncfusion.Maui.Accordion.ExpandedAndCollapsedEventArgs e)
 {
     // Get the index of current accordion item
     int index = e.Index;
@@ -80,7 +80,7 @@ The [Collapsing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.S
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="1"%}
-<syncfusion:SfAccordion x:Name="accordionCollapsing" Collapsing="SfAccordion_Collapsing">
+<syncfusion:SfAccordion x:Name="accordion" Collapsing="accordion_Collapsing">
     <syncfusion:SfAccordion.Items>
         <syncfusion:AccordionItem>
             ...
@@ -91,7 +91,7 @@ The [Collapsing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.S
 {% endhighlight %}
 
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="3" %}
-private void SfAccordion_Collapsing(object sender, Syncfusion.Maui.Accordion.ExpandingAndCollapsingEventArgs e)
+private void accordion_Collapsing(object sender, Syncfusion.Maui.Accordion.ExpandingAndCollapsingEventArgs e)
 {
     if (e.Index == 2)
     {
@@ -107,7 +107,7 @@ The [Collapsed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.Sf
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="1"%}
-<syncfusion:SfAccordion x:Name="accordionCollapsed" Collapsed="SfAccordion_Collapsed">
+<syncfusion:SfAccordion x:Name="accordion" Collapsed="accordion_Collapsed">
     <syncfusion:SfAccordion.Items>
         <syncfusion:AccordionItem>
             ...
@@ -118,7 +118,7 @@ The [Collapsed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.Sf
 {% endhighlight %}
 
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="4"%}
-private void SfAccordion_Collapsed(object sender, Syncfusion.Maui.Accordion.ExpandedAndCollapsedEventArgs e)
+private void accordion_Collapsed(object sender, Syncfusion.Maui.Accordion.ExpandedAndCollapsedEventArgs e)
 {
     // Get the index of current accordion item
     int index = e.Index;
