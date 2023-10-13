@@ -25,7 +25,7 @@ The [Expanding](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.Sf
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="1"%}
-<syncfusion:SfAccordion Expanding="SfAccordion_Expanding">
+<syncfusion:SfAccordion x:Name="accordionExpanding" Expanding="SfAccordion_Expanding">
     <syncfusion:SfAccordion.Items>
         <syncfusion:AccordionItem>
             ...
@@ -52,7 +52,7 @@ The [Expanded](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.SfA
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="1" %}
-<syncfusion:SfAccordion Expanded="SfAccordion_Expanded">
+<syncfusion:SfAccordion x:Name="accordionExpanded" Expanded="SfAccordion_Expanded">
     <syncfusion:SfAccordion.Items>
         <syncfusion:AccordionItem>
             ...
@@ -80,7 +80,7 @@ The [Collapsing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.S
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="1"%}
-<syncfusion:SfAccordion Collapsing="SfAccordion_Collapsing">
+<syncfusion:SfAccordion x:Name="accordionCollapsing" Collapsing="SfAccordion_Collapsing">
     <syncfusion:SfAccordion.Items>
         <syncfusion:AccordionItem>
             ...
@@ -107,7 +107,7 @@ The [Collapsed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.Sf
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="1"%}
-<syncfusion:SfAccordion Collapsed="SfAccordion_Collapsed">
+<syncfusion:SfAccordion x:Name="accordionCollapsed" Collapsed="SfAccordion_Collapsed">
     <syncfusion:SfAccordion.Items>
         <syncfusion:AccordionItem>
             ...
