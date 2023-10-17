@@ -369,7 +369,7 @@ public class SchedulerViewModel
 Map those properties of the `Meeting` class with our [.NET MAUI Scheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html) control by using the [AppointmentMapping](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointmentMapping.html) property.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml"In %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 
 <scheduler:SfScheduler x:Name="Scheduler" 
                        AppointmentsSource="{Binding Events}"
