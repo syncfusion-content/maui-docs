@@ -233,7 +233,7 @@ public class SchedulerViewModel
         this.CreateColorCollection();
         this.CreateTextColorCollection();
         this.CreateNoteCollection();
-        this.IntializeAppoitments();
+        this.InitializeAppoitments();
     }
 
     /// <summary>
@@ -262,7 +262,7 @@ public class SchedulerViewModel
     /// <summary>
     /// Method to initialize the appointments.
     /// </summary>
-    private void IntializeAppoitments()
+    private void InitializeAppoitments()
     {
         this.Events = new ObservableCollection<Meeting>();
         Random randomTime = new Random();
@@ -369,7 +369,7 @@ public class SchedulerViewModel
 Map those properties of the `Meeting` class with our [.NET MAUI Scheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html) control by using the [AppointmentMapping](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointmentMapping.html) property.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18" %}
+{% highlight xaml tabtitle="MainPage.xaml"In %}
 
 <scheduler:SfScheduler x:Name="Scheduler" 
                        AppointmentsSource="{Binding Events}"
