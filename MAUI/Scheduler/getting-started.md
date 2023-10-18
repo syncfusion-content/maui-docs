@@ -233,7 +233,7 @@ public class SchedulerViewModel
         this.CreateColorCollection();
         this.CreateTextColorCollection();
         this.CreateNoteCollection();
-        this.IntializeAppointments();
+        this.InitializeAppointments();
     }
 
     /// <summary>
@@ -262,7 +262,7 @@ public class SchedulerViewModel
     /// <summary>
     /// Method to initialize the appointments.
     /// </summary>
-    private void IntializeAppointments()
+    private void InitializeAppointments()
     {
         this.Events = new ObservableCollection<Meeting>();
         Random randomTime = new Random();
