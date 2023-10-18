@@ -671,7 +671,7 @@ The following image illustrates the result of the above code:
 
 ![.NET MAUI Autocomplete completed event](Images/UICustomization/CompletedEvent.png)
 
-N> `Completed` event is not supported in Android platform.
+N> The `Completed` event is not supported in the Android platform.
 
 ## DropDownClosed Event
 
