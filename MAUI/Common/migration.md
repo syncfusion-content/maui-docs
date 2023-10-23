@@ -507,14 +507,6 @@ Currently working on delivering brand-new .NET MAUI controls that can be used in
 	</tr>
 	<tr>
 	    <td rowspan="1" valign="top">
-			<a href="https://help.syncfusion.com/xamarin/diagram/getting-started">SfDiagram</a><br/>
-		</td>
-		<td rowspan="1" valign="top">
-			Underway<br/>
-		</td>
-	</tr>
-	<tr>
-	    <td rowspan="1" valign="top">
 			<a href="https://help.syncfusion.com/xamarin/digital-gauge/getting-started">SfDigitalGauge</a><br/>
 		</td>
 		<td rowspan="1" valign="top">
@@ -523,10 +515,18 @@ Currently working on delivering brand-new .NET MAUI controls that can be used in
 	</tr>
 	<tr>
 	    <td rowspan="1" valign="top">
+			<a href="https://help.syncfusion.com/xamarin/diagram/getting-started">SfDiagram</a><br/>
+		</td>
+		<td rowspan="1" valign="top">
+			Obsolete. Use <a href="https://blazor.syncfusion.com/documentation/diagram/overview"> Syncfusion Blazor Diagram.</a> To integrate Blazor Diagram component in .NET MAUI application refer to this <a href="https://support.syncfusion.com/kb/article/11346/how-to-create-diagram-builder-in-maui-platform?isInternalRefresh=False"> KB.</a> <br/>
+		</td>
+	</tr>
+	<tr>
+	    <td rowspan="1" valign="top">
 			<a href="https://help.syncfusion.com/xamarin/rich-text-editor/gettingstarted">SfRichTextEditor</a><br/>
 		</td>
 		<td rowspan="1" valign="top">
-			Underway<br/>
+			Obsolete. Use <a href="https://blazor.syncfusion.com/documentation/rich-text-editor/getting-started"> Syncfusion Blazor RichTextEditor.</a> To integrate Blazor RichTextEditor component in .NET MAUI application refer to this <a href="https://support.syncfusion.com/kb/article/13845/how-to-get-started-with-syncfusion-blazor-richtexteditor-with-maui-controls-in-net-maui-application"> KB.</a> <br/>
 		</td>
 	</tr>
 </table>
