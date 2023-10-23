@@ -268,4 +268,26 @@ private void sfNumericEntry_ValueChanged(object sender, NumericEntryValueChanged
 {% endhighlight %}
 {% endtabs %}
 
+## Stroke
+
+The NumericEntry border color can be changed by using the [Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_Stroke) property. The default `Stroke` color is **Black**.
+
+{% tabs %}
+{% highlight xaml %}
+
+<editors:SfNumericEntry HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        Stroke="Red" />
+
+{% endhighlight %}
+{% highlight C# %}
+
+SfNumericEntry sfNumericEntry = new SfNumericEntry();
+sfNumericEntry.HorizontalOptions = LayoutOptions.Center;
+sfNumericEntry.VerticalOptions = LayoutOptions.Center;
+sfNumericEntry.Stroke = Colors.Red;
+
+{% endhighlight %}
+{% endtabs %}
+
 You can find the complete getting started sample of .NET MAUI from this [link.](https://github.com/SyncfusionExamples/maui-numericentry-samples)
