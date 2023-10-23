@@ -671,6 +671,8 @@ The following image illustrates the result of the above code:
 
 ![.NET MAUI Autocomplete completed event](Images/UICustomization/CompletedEvent.png)
 
+N> The `Completed` event is not supported in the Android platform.
+
 ## DropDownClosed Event
 
 The `DropDownClosed` event occurs when the SfAutocomplete drop-down is closed.
