@@ -447,7 +447,6 @@ To make migration from [Xamarin SfPdfViewer](https://www.syncfusion.com/xamarin-
 * Handwritten signatures
 * Form Filling
 * Save – Form data
-* Undo/Redo – Form data
 * Export/Import – Form data
 * Thumbnail
 * Single page view mode
