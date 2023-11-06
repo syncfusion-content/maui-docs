@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Modal Window in .NET MAUI Popup control | Syncfusion
-description: Learn here all about Modal Window support in the Syncfusion .NET MAUI Popup (SfPopup) control, its elements, and more.
+title: Modal window in .NET MAUI Popup Control | Syncfusion
+description: Learn here all about modal window support in the Syncfusion .NET MAUI Popup (SfPopup) control, its elements, and more details.
 platform: MAUI
 control: SfPopup
 documentation: ug
