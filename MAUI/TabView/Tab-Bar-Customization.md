@@ -7,7 +7,7 @@ control: Tab View
 documentation: ug
 ---
 
-# Customize the tab bar in .NET MAUI Tab View (SfTabView)
+# Customize the Tab Bar in .NET MAUI Tab View (SfTabView)
 
 ## Tab Width options
 
