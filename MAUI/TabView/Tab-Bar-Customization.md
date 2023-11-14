@@ -11,7 +11,7 @@ documentation: ug
 
 ## Tab Width options
 
-The .NET MAUI Tab View provides two modes that determines how the width of the tab is calculated on the tab bar while it gets populated. The options are `Default` and `SizeToContent` and can be achieved using the [TabWidthMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.TabWidthMode.html) property.
+The [.NET MAUI Tab View](https://www.syncfusion.com/maui-controls/maui-tab-view) provides two modes that determines how the width of the tab is calculated on the tab bar while it gets populated. The options are `Default` and `SizeToContent` and can be achieved using the [TabWidthMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.TabWidthMode.html) property.
 
 ### Fixed bar
 
