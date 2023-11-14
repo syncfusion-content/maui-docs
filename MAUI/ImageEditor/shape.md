@@ -2,7 +2,7 @@
 layout: post
 title: Shape Annotations in .NET MAUI Image Editor Control | Syncfusion
 description: Learn about the shape annotations feature of Syncfusion .NET MAUI ImageEditor(SfImageEditor) control.
-platform: .NET MAUI
+platform: maui
 control: SfImageEditor
 documentation: ug
 ---

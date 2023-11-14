@@ -2,7 +2,7 @@
 layout: post
 title: Text Annotation in .NET MAUI Image Editor control | Syncfusion
 description: Learn about the text annotation feature of Syncfusion .NET MAUI Image Editor(SfImageEditor) control.
-platform: .NET MAUI
+platform: maui
 control: SfImageEditor
 documentation: ug
 ---
