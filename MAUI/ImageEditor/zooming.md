@@ -2,7 +2,7 @@
 layout: post
 title: Zoom image using .NET MAUI Image Editor Control | Syncfusion
 description: Learn here all about how to zoom image in the Syncfusion .NET MAUI Image Editor(SfImageEditor) control and more.
-platform: .NET MAUI
+platform: maui
 control: SfImageEditor
 documentation: ug
 ---
