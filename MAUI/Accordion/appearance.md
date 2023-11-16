@@ -103,6 +103,9 @@ The appearance of the [SfAccordion](https://help.syncfusion.com/cr/maui/Syncfusi
 
 * Expanded
 * Collapsed
+* Focused
+* PointerOver
+* Normal
 
 {% tabs %}
 {% highlight xaml hl_lines="2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21" %}
@@ -121,6 +124,24 @@ The appearance of the [SfAccordion](https://help.syncfusion.com/cr/maui/Syncfusi
                             <VisualState.Setters>
                                 <Setter Property="HeaderBackground" Value="#1F1C1B1F"/>
                                 <Setter Property="HeaderIconColor" Value="#49454F"/>
+                            </VisualState.Setters>
+                        </VisualState>
+						<VisualState Name="Focused">
+                            <VisualState.Setters>
+                                <Setter Property="HeaderBackground" Value="#f5a2a2"/>
+                                <Setter Property="HeaderIconColor" Value="#422626"/>
+                            </VisualState.Setters>
+                        </VisualState>
+						<VisualState Name="PointerOver">
+                            <VisualState.Setters>
+                                <Setter Property="HeaderBackground" Value="#ded6d5"/>
+                                <Setter Property="HeaderIconColor" Value="#524f4f"/>
+                            </VisualState.Setters>
+                        </VisualState>
+						<VisualState Name="Normal">
+                            <VisualState.Setters>
+                                <Setter Property="HeaderBackground" Value="#faf8f7"/>
+                                <Setter Property="HeaderIconColor" Value="#000000"/>
                             </VisualState.Setters>
                         </VisualState>
                     </VisualStateGroup>
