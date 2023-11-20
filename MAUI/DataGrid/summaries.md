@@ -1350,7 +1350,7 @@ public class DataGridTableSummaryCellRendererExt : DataGridTableSummaryCellRende
     {
         base.OnSetCellStyle(dataColumn);
 
-        if (dataColumn.ColumnElement != null && dataColumn.ColumnElement.Content is Label label)
+        if (dataColumn.ColumnElement != null && dataColumn.ColumnElement.Content is SfDataGridLabel label)
         {
             dataColumn.ColumnElement.Background = Colors.Green;
 
