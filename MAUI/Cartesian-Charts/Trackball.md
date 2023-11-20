@@ -306,4 +306,4 @@ The [`TrackballCreated`]() event occurs when the trackball moves from one data p
 * [LabelStyle](), of type `ChartLabelStyle`, used to customizes the appearance of trackball label.
 * [MarkerSettings](), of type `ChartMarkerSettings`, used to customize the trackball markers.
 * [Series](), of type `CartesianSeries`, used to gets the series of the data point in which trackball is activated.
-* [DataItem](), of type `object`, Gets the data associated with the specific point where the trackball was activated.
+* [DataItem](), of type `object`,used to gets the data associated with the specific point where the trackball was activated.
