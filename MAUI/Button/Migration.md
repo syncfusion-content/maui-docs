@@ -47,4 +47,6 @@ To migrate easier from Xamarin SfButton to [.NET MAUI SfButton](https://www.sync
 <td>Gets or sets the image size in Button.</td></tr>
 </table> 
 
+## Known Issues
 
+The gradient colors being used as a background are not functioning as expected because of a framework-level issue. This issue is specifically related to the incorrect rendering of gradient color on iOS and macOS when clipping a view.
