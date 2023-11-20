@@ -63,4 +63,6 @@ To migrate easier from Xamarin SfTextInputLayout to .NET MAUI SfTextInputLayout,
 </table>
 
 
+## Known Issues
 
+The Stroke Value isn't updated by manually input values due to an issue at the framework level. This problem arises because an implicit style isn't overridden by the manual value. However, you can resolve this by setting the Stroke Value using the Visual State Manager (VSM) through Style.
