@@ -49,4 +49,4 @@ To migrate easier from Xamarin SfButton to [.NET MAUI SfButton](https://www.sync
 
 ## Known Issues
 
-The gradient colors being used as a background are not functioning as expected because of a framework-level issue. This issue is specifically related to the incorrect rendering of gradient color on iOS and macOS when clipping a view.
+The gradient colors used as a background are not functioning as expected because of a framework-level issue. This issue is specifically related to the incorrect rendering of gradient color on iOS and macOS when clipping a view. Refer to this [link](https://github.com/dotnet/maui/issues/18671) for more details.
