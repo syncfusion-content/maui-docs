@@ -300,10 +300,10 @@ this.Content = chart;
 
 ### TrackballCreated
 
-The [`TrackballCreated`]() event occurs when the trackball moves from one data point to another. This argument contains object of ChartPointsInfo. The following properties are available in `ChartPointInfo` class to customize the appearance of trackball label based on condition.
+The [`TrackballCreated`]() event occurs when the trackball moves from one data point to another. This argument contains an object of the ChartPointsInfo. The following properties are available in the `ChartPointInfo` class to customize the appearance of the trackball label based on a condition.
 
-* [Label](), of type `string`, used to change the text of trackball label.
-* [LabelStyle](), of type `ChartLabelStyle`, used to customizes the appearance of trackball label.
-* [MarkerSettings](), of type `ChartMarkerSettings`, used to customize the trackball markers.
-* [Series](), of type `CartesianSeries`, used to gets the series of the data point in which trackball is activated.
-* [DataItem](), of type `object`,used to gets the data associated with the specific point where the trackball was activated.
+* [Label]() of type `string`: Used to change the text of the trackball label.
+* [LabelStyle]() of type `ChartLabelStyle`: Used to customize the appearance of the trackball label.
+* [MarkerSettings]() of type `ChartMarkerSettings`: Used to customize the trackball markers.
+* [Series]() of type `CartesianSeries`: Used to get the series of the data point in which the trackball is activated.
+* [DataItem]() of type `object`: Used to get the data associated with the specific point where the trackball is activated.
