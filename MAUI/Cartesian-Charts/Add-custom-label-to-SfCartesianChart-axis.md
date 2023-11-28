@@ -9,7 +9,13 @@ documentation: ug
 
 # Add custom label to SfCartesianChart axis
 
-ChartAxis provides the OnCreateLabels override method to add custom label to chart axis. [`OnCreateLabels`]() method called whenever new labels are generated in chart axis.
+ChartAxis provides the OnCreateLabels override method to add custom label to chart axis. [`OnCreateLabels`]() method called whenever new labels are generated in chart axis. The following properties are available in chart axis to customize the axis labels.
+
+* VisibleLabels - This property of the chart axis can be used to get Observable Collection of visible axis labels.
+
+* VisibleMaximum - This property of the chart axis can be used to get the double value that represents the maximum observable value of the axis range.
+
+* VisibleMinimum - This property of the chart axis can be used to get the double value that represents the minimum observable value of the axis range.
 
 {% tabs %}
 
@@ -47,16 +53,23 @@ ChartAxis provides the OnCreateLabels override method to add custom label to cha
         {
             base.OnCreateLabels();
 
+            if (VisibleLabels != null)
+            {
+                VisibleLabels.Clear();
+
+                //Considered that we need 5 labels. so divided by 5.
+                var interval = (VisibleMaximum - VisibleMinimum) / 5;
+
+                var start = VisibleMinimum;
+                while (start <= VisibleMaximum)
+                {
+                    VisibleLabels.Add(new ChartAxisLabel(start, start.ToString()));
+                    start += interval;
+                }
+            }
         }
     }
     
 {% endhighlight  %}
 
 {% endtabs %}
-
-## VisibleMaximum
-
-The VisibleMaximum property of the chart axis can be used only to get the double value that represents the maximum observable value of the axis range in runtime.
-
-## VisibleMinimum
-The VisibleMinimum property of the chart axis can be used only to get the double value that represents the minimum observable value of the axis range in runtime.
