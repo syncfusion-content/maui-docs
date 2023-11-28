@@ -9,7 +9,7 @@ documentation: ug
 
 # Stacked Area Chart in .NET MAUI Chart
 
-The stacked area chart enables users to visually represent data points as stacked areas. In this chart, the areas are stacked on top of each other to indicate the cumulative value of the data points.
+The stacked area chart enables users to visually represent data points on top of each other to indicate the cumulative value of the data points.
 
 To render a stacked area chart, create an instance of the [StackingAreaSeries]() and add it to the [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) collection property of the [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html?tabs=tabid-1).
 
@@ -29,14 +29,9 @@ N> The Cartesian chart has [Series](https://help.syncfusion.com/cr/maui/Syncfusi
         <chart:NumericalAxis />
     </chart:SfCartesianChart.YAxes>
 
-    <chart:StackingAreaSeries ItemsSource="{Binding Data}"
-                                XBindingPath="Year"
-                                YBindingPath="Value"        
-    </chart:StackingAreaSeries>
-
     <chart:StackingAreaSeries ItemsSource="{Binding Data1}"
                                 XBindingPath="Year"
-                                YBindingPath="Value"         
+                                YBindingPath="Value"        
     </chart:StackingAreaSeries>
 
     <chart:StackingAreaSeries ItemsSource="{Binding Data2}"
@@ -45,6 +40,11 @@ N> The Cartesian chart has [Series](https://help.syncfusion.com/cr/maui/Syncfusi
     </chart:StackingAreaSeries>
 
     <chart:StackingAreaSeries ItemsSource="{Binding Data3}"
+                                XBindingPath="Year"
+                                YBindingPath="Value"         
+    </chart:StackingAreaSeries>
+
+    <chart:StackingAreaSeries ItemsSource="{Binding Data4}"
                                 XBindingPath="Year"
                                 YBindingPath="Value"         
     </chart:StackingAreaSeries>
@@ -62,13 +62,7 @@ chart.XAxes.Add(primaryAxis);
 NumericalAxis secondaryAxis = new NumericalAxis();
 chart.YAxes.Add(secondaryAxis);
 
-StackingAreaSeries  series = new  StackingAreaSeries()
-{
-    XBindingPath = "Year",
-    YBindingPath = "Value",
-    ItemsSource = new ViewModel().Data
-};
-StackingAreaSeries series1 = new StackingAreaSeries()
+StackingAreaSeries  series1 = new  StackingAreaSeries()
 {
     XBindingPath = "Year",
     YBindingPath = "Value",
@@ -86,14 +80,20 @@ StackingAreaSeries series3 = new StackingAreaSeries()
     YBindingPath = "Value",
     ItemsSource = new ViewModel().Data3
 };
-chart.Series.Add(series);
-chart.Series.Add(series1);     
-chart.Series.Add(series2); 
+StackingAreaSeries series4 = new StackingAreaSeries()
+{
+    XBindingPath = "Year",
+    YBindingPath = "Value",
+    ItemsSource = new ViewModel().Data4
+};
+chart.Series.Add(series1);
+chart.Series.Add(series2);     
 chart.Series.Add(series3); 
+chart.Series.Add(series4); 
 this.Content = chart;
 
 {% endhighlight %}
 
 {% endtabs %}
 
-![Stacking Area Chart in MAUI](Chart-types_images\StackedAreaChart.png)
+![Stacking Area Chart in MAUI](Chart-types_images\StackingAreaChart.png)

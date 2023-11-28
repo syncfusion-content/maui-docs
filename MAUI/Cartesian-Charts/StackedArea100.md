@@ -9,7 +9,7 @@ documentation: ug
 
 # StackedArea100 Chart in .NET MAUI Chart
 
-The stacked area 100% chart enables users to visually represent data points as stacked areas. In this chart, the areas are stacked on top of each other to indicate the cumulative value of the data points to 100%.
+The stacked area 100% chart enables users to visually represent data points vertically one above other to indicate the cumulative value of the data points to 100%.
 
 ## StackedArea100 Chart
 
@@ -31,17 +31,22 @@ N> The cartesian chart has [Series](https://help.syncfusion.com/cr/maui/Syncfusi
         <chart:NumericalAxis/>
     </chart:SfCartesianChart.YAxes>   
 
-    <chart:StackingArea100Series ItemsSource="{Binding Data}"
+    <chart:StackingArea100Series ItemsSource="{Binding Data1}"
                                 XBindingPath="Year"
                                 YBindingPath="Value"        
     </chart:StackingArea100Series>
 
-    <chart:StackingArea100Series ItemsSource="{Binding Data1}"
+    <chart:StackingArea100Series ItemsSource="{Binding Data2}"
                                 XBindingPath="Year"
                                 YBindingPath="Value"         
     </chart:StackingArea100Series>
 
-    <chart:StackingArea100Series ItemsSource="{Binding Data2}"
+    <chart:StackingArea100Series ItemsSource="{Binding Data3}"
+                                XBindingPath="Year"
+                                YBindingPath="Value"         
+    </chart:StackingArea100Series>
+
+    <chart:StackingArea100Series ItemsSource="{Binding Data4}"
                                 XBindingPath="Year"
                                 YBindingPath="Value"         
     </chart:StackingArea100Series>
@@ -58,13 +63,7 @@ chart.XAxes.Add(primaryAxis);
 NumericalAxis secondaryAxis = new NumericalAxis();
 chart.YAxes.Add(secondaryAxis);
 
-StackingArea100Series  series = new  StackingArea100Series()
-{
-    XBindingPath = "Year",
-    YBindingPath = "Value",
-    ItemsSource = new ViewModel().Data
-};
-StackingArea100Series series1 = new StackingArea100Series()
+StackingArea100Series series1 = new  StackingArea100Series()
 {
     XBindingPath = "Year",
     YBindingPath = "Value",
@@ -76,13 +75,26 @@ StackingArea100Series series2 = new StackingArea100Series()
     YBindingPath = "Value",
     ItemsSource = new ViewModel().Data2
 };
-chart.Series.Add(series);
-chart.Series.Add(series1);     
-chart.Series.Add(series2); 
+StackingArea100Series series3 = new StackingArea100Series()
+{
+    XBindingPath = "Year",
+    YBindingPath = "Value",
+    ItemsSource = new ViewModel().Data3
+};
+StackingArea100Series series4 = new StackingArea100Series()
+{
+    XBindingPath = "Year",
+    YBindingPath = "Value",
+    ItemsSource = new ViewModel().Data4
+};
+chart.Series.Add(series1);
+chart.Series.Add(series2);     
+chart.Series.Add(series3); 
+chart.Series.Add(series4);
 this.Content = chart;
 
 {% endhighlight C# %}
 
 {% endtabs %}
 
-![Stacking Area 100 Chart in MAUI](Chart-types_images\StackedArea100Chart.png)
+![Stacking Area 100 Chart in MAUI](Chart-types_images\StackingArea100Chart.png)
