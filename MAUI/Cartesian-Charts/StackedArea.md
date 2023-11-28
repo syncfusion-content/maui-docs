@@ -22,11 +22,11 @@ N> The Cartesian chart has [Series](https://help.syncfusion.com/cr/maui/Syncfusi
 <chart:SfCartesianChart>
 
     <chart:SfCartesianChart.XAxes>
-    <chart:CategoryAxis />
+    <chart:CategoryAxis/>
     </chart:SfCartesianChart.XAxes>
 
     <chart:SfCartesianChart.YAxes>
-        <chart:NumericalAxis />
+        <chart:NumericalAxis/>
     </chart:SfCartesianChart.YAxes>
 
     <chart:StackingAreaSeries ItemsSource="{Binding Data1}"
@@ -62,12 +62,13 @@ chart.XAxes.Add(primaryAxis);
 NumericalAxis secondaryAxis = new NumericalAxis();
 chart.YAxes.Add(secondaryAxis);
 
-StackingAreaSeries  series1 = new  StackingAreaSeries()
+StackingAreaSeries series1 = new  StackingAreaSeries()
 {
     XBindingPath = "Year",
     YBindingPath = "Value",
     ItemsSource = new ViewModel().Data1
 };
+
 StackingAreaSeries series2 = new StackingAreaSeries()
 {
     XBindingPath = "Year",
@@ -80,12 +81,14 @@ StackingAreaSeries series3 = new StackingAreaSeries()
     YBindingPath = "Value",
     ItemsSource = new ViewModel().Data3
 };
+
 StackingAreaSeries series4 = new StackingAreaSeries()
 {
     XBindingPath = "Year",
     YBindingPath = "Value",
     ItemsSource = new ViewModel().Data4
 };
+
 chart.Series.Add(series1);
 chart.Series.Add(series2);     
 chart.Series.Add(series3); 
