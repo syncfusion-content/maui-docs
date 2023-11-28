@@ -9,7 +9,7 @@ documentation: ug
 
 # StackedArea100 Chart in .NET MAUI Chart
 
-The stacked area 100% chart enables users to visually represent data points as stacked areas. In this chart, the areas are stacked on top of each other to indicate the cumulative value of the data points.
+The stacked area 100% chart enables users to visually represent data points as stacked areas. In this chart, the areas are stacked on top of each other to indicate the cumulative value of the data points to 100%.
 
 ## StackedArea100 Chart
 
