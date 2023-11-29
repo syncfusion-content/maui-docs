@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Modify the visible axis labels range in the chart axis. | Syncfusion
-description: Learn here all about to add custom label to SfCartesianChart axis in Syncfusion .NET MAUI Chart (SfCartesianChart) control.
+title: Modify the visible axis labels count in the chart axis. | Syncfusion
+description: Learn here all about modify the visible axis labels count in the chart axis in Syncfusion .NET MAUI Chart (SfCartesianChart) control.
 platform: maui
 control: SfCartesianChart
 documentation: ug
 ---
 
-# Add custom label to SfCartesianChart axis
+# Modify the visible axis labels count in the chart axis
 
-ChartAxis provides the OnCreateLabels override method to modify the visible axis labels range in the chart axis. [`OnCreateLabels`]() method called whenever new labels are generated in chart axis. The following properties are available in chart axis to modify the visible axis labels range.
+ChartAxis provides the OnCreateLabels override method to modify the visible axis labels count in the chart axis. [`OnCreateLabels`]() method called whenever new labels are generated in chart axis. The following properties are available in chart axis to modify the visible axis labels count.
 
 * VisibleLabels - This property of the chart axis can be used to get Observable Collection of visible axis labels.
 
