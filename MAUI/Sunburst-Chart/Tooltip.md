@@ -36,7 +36,7 @@ To define the tooltip in the chart, set the [EnableTooltip]() property of [SfSun
 
 {% endtabs %}
 
-![Tooltip support in MAUI chart]()
+![Tooltip support in MAUI chart](Tooltip_images/maui_sunburst_tooltip.png)
 
 ## customization
 
@@ -59,8 +59,8 @@ The appearance of the tooltip can be customized using the following properties:
         <chart:SfSunburstChart.TooltipSettings>
             <chart:SunburstTooltipSettings  TextColor="Black" 
                                             Margin="10"
-                                            FontSize="10"
-                                            Background="Green" 
+                                            FontSize="15"
+                                            Background="Green"
                                             Duration="4" />
         </chart:SfSunburstChart.TooltipSettings>
     . . .
@@ -74,7 +74,9 @@ The appearance of the tooltip can be customized using the following properties:
     chart.EnableTooltip = true;
     SunburstTooltipSettings tooltipSettings = new SunburstTooltipSettings();
     tooltipSettings.TextColor = Colors.White;
-    tooltipSettings.Background = Brush.Green;          
+    tooltipSettings.Background = Brush.Green;
+    tooltipSettings.FontSize = 15;
+    tooltipSettings.Margin = 10;          
     tooltipSettings.Duration = 10;
     sunburstChart.TooltipSettings = tooltipSettings;
     . . .
@@ -83,4 +85,4 @@ The appearance of the tooltip can be customized using the following properties:
 
 {% endtabs %}
 
-
+![Tooltip customization support in MAUI chart](Tooltip_images/tooltip_customization.png)

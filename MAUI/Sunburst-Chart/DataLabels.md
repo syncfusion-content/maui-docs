@@ -70,7 +70,7 @@ The following code shows trimming the data labels.
 
 {% endtabs %} 
 
-![Overflow Mode Trim]()
+![Overflow Mode Trim](DataLabel_images/overflow_Mode_Trim.png)
 
 ## Hide
 
@@ -103,7 +103,7 @@ The following code shows hiding the data labels.
 
 {% endtabs %} 
 
-![Overflow Mode Hide]()
+![Overflow Mode Hide](DataLabel_images/overflow_Mode_Hide.png)
 
 ## Rotation Mode
 
@@ -140,7 +140,7 @@ The following code shows rotating a data label to an angle.
 
 {% endtabs %} 
 
-![Rotation Mode Angle]()
+![Rotation Mode Angle](DataLabel_images/rotationMode_Angle.png)
 
 ## Normal
 
@@ -173,7 +173,7 @@ The following code shows normal mode of data labels.
 
 {% endtabs %} 
 
-![Rotation Mode Normal]()
+![Rotation Mode Normal](DataLabel_images/RotationMode_Normal.png)
 
 ## Data label customization
 
@@ -191,9 +191,9 @@ The following code shows normal mode of data labels.
     <chart:SfSunburstChart ShowDataLabels="True">
     . . .
         <chart:SfSunburstChart.DataLabelSettings>
-            <chart:SunburstDataLabelSettings TextColor="Black"
-                                            FontSize="10"
-                                            FontAttributes="Bold"/>
+            <chart:SunburstDataLabelSettings TextColor="Red"
+                                             FontSize="10"
+                                             FontAttributes="Bold"/>
         </chart:SfSunburstChart.DataLabelSettings>
         <chart:SfSunburstChart.TooltipSettings>
     </chart:SfSunburstChart>
@@ -207,7 +207,7 @@ The following code shows normal mode of data labels.
     chart.ShowLabels = true;
     Chart.DataLabelSettings = new SunburstDataLabelSettings()
     {
-        TextColor = Colors.Black,
+        TextColor = Colors.Red,
         FontSize = 10,
         FontAttributes = FontAttributes.Bold
     };
@@ -216,4 +216,4 @@ The following code shows normal mode of data labels.
 
 {% endtabs %} 
 
-![Data label customization]()
+![Data label customization](DataLabel_images/DataLabel_customization.png)
