@@ -1,21 +1,21 @@
 ---
 layout: post
-title: Getting Started with .NET MAUI Chart control | Syncfusion
-description: Learn here all about getting started with Syncfusion .NET MAUI Chart (SfSunburstChart) control, its elements, and more.
+title: Getting Started with .NET MAUI Sunburst Chart control | Syncfusion
+description: Learn here all about getting started with Syncfusion .NET MAUI Sunburst Chart control, its elements, and more.
 platform: maui
 control: SfSunburstChart
 documentation: ug
 ---
 
-# Getting Started with .NET MAUI Chart(SfSunburstChart)
+# Getting Started with .NET MAUI Sunburst Chart
 
 This section explains how to populate the sunburst chart with data, a title, data labels, a legend, and tooltips, as well as the essential aspects for getting started with the sunburst chart.
 
-## Creating an application using the .NET MAUI chart(SfSunburstChart)
+## Creating an application using the .NET MAUI Sunburst Chart
 
 1. Create a new .NET MAUI application in Visual Studio.
-2. Syncfusion .NET MAUI components are available in [nuget.org](https://www.nuget.org/). To add SfSunburstChart to your project, open the NuGet package manager in Visual Studio, search for Syncfusion.Maui.Charts and then install it.
-3. To initialize the control, import the Chart namespace.
+2. Syncfusion .NET MAUI components are available in [nuget.org](https://www.nuget.org/). To add SfSunburstChart to your project, open the NuGet package manager in Visual Studio, search for Syncfusion.Maui.SunburstChart and then install it.
+3. To initialize the control, import the Sunburst Chart namespace.
 4. Initialize [SfSunburstChart]().
 
 {% tabs %} 
@@ -24,7 +24,7 @@ This section explains how to populate the sunburst chart with data, a title, dat
 
     <ContentPage   
         . . .
-        xmlns:chart="">
+        xmlns:sunburst="clr-namespace:Syncfusion.Maui.SunburstChart;assembly=Syncfusion.Maui.SunburstChart">
 
         <chart:SfSunburstChart/>
     </ContentPage>
@@ -33,17 +33,19 @@ This section explains how to populate the sunburst chart with data, a title, dat
 
 {% highlight C# %}
 
-using Syncfusion.Maui.Charts;
-. . .
-
-public partial class MainWindow : ContentPage
-{
-    public MainPage()
+    using Syncfusion.Maui.SunburstChart;
+    namespace ChartGettingStarted
     {
-        this.InitializeComponent();
-        SfSunburstChart chart = new SfSunburstChart();
+        public partial class MainPage : ContentPage
+        {
+            public MainPage()
+            {
+                InitializeComponent();           
+                SfSunburstChart sunburst = new SfSunburstChart();
+            }
+        }   
     }
-}   
+
 {% endhighlight %}
 
 {% endtabs %}
@@ -104,7 +106,7 @@ Now, let us define a simple data model that represents a data point in the chart
 
 {% endtabs %} 
 
-Next, create a view model class and initialize a list of `SunburstModel ` objects as follows.
+Next, create a view model class and initialize a list of `SunburstModel` objects as follows.
 
 {% tabs %}  
 
@@ -155,9 +157,9 @@ Next, create a view model class and initialize a list of `SunburstModel ` object
 
 {% endtabs %} 
 
-Create a `ViewModel` instance and set it as the chart's `BindingContext`. This enables property binding from `ViewModel` class.
+Set the `SunburstViewModel` instance as the `BindingContext` of your page to bind `SunburstViewModel` properties to the chart.
 
-N> Add the namespace of `ViewModel` class to your XAML Page, if you prefer to set `BindingContext` in XAML.
+N> Add the namespace of `SunburstViewModel` class to your XAML Page, if you prefer to set `BindingContext` in XAML.
 
 {% tabs %} 
 
@@ -165,22 +167,20 @@ N> Add the namespace of `ViewModel` class to your XAML Page, if you prefer to se
 
     <ContentPage
         . . .
-        xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts"
-        xmlns:model="clr-namespace:ChartGettingStarted">
+        xmlns:sunburst="clr-namespace:Syncfusion.Maui.SunburstChart;assembly=Syncfusion.Maui.SunburstChart"
+        xmlns:model="clr-namespace:SunburstGettingStarted">
 
-        <chart:SfSunburstChart>
-            <chart:SfSunburstChart.BindingContext>
-                <model:SunburstViewModel/>
-            </chart:SfSunburstChart.BindingContext>
-        </chart:SfSunburstChart>
+    <ContentPage.BindingContext>
+        <model:SunburstViewModel></model:SunburstViewModel>
+    </ContentPage.BindingContext>
+    
     </ContentPage>
 
 {% endhighlight %}
 
 {% highlight C# %} 
 
-    SunburstViewModel viewModel = new SunburstViewModel();
-    chart.BindingContext = viewModel;
+    this.BindingContext = new ViewModel();
 
 {% endhighlight %}
 
@@ -194,14 +194,14 @@ N> Add the namespace of `ViewModel` class to your XAML Page, if you prefer to se
 
 {% highlight xaml %}
 
-    <chart:SfSunburstChart x:Name="sunburstChart" ItemsSource="{Binding DataSource}" 
-                                                  ValueMemberPath="EmployeesCount">
+    <sunburst:SfSunburstChart x:Name="sunburst" ItemsSource="{Binding DataSource}" 
+                                                ValueMemberPath="EmployeesCount">
 
-        <chart:SfSunburstChart.Levels>
-            <chart:SunburstHierarchicalLevel GroupMemberPath="Country"/>
-            <chart:SunburstHierarchicalLevel GroupMemberPath="JobDescription"/>
-            <chart:SunburstHierarchicalLevel GroupMemberPath="JobGroup"/>
-            <chart:SunburstHierarchicalLevel GroupMemberPath="JobRole"/>
+        <sunburst:SfSunburstChart.Levels>
+            <sunburst:SunburstHierarchicalLevel GroupMemberPath="Country"/>
+            <sunburst:SunburstHierarchicalLevel GroupMemberPath="JobDescription"/>
+            <sunburst:SunburstHierarchicalLevel GroupMemberPath="JobGroup"/>
+            <sunburst:SunburstHierarchicalLevel GroupMemberPath="JobRole"/>
         </chart:SfSunburstChart.Levels>
 
     </chart:SfSunburstChart>
@@ -210,43 +210,40 @@ N> Add the namespace of `ViewModel` class to your XAML Page, if you prefer to se
 
 {% highlight C# %}
 
-    SfSunburstChart chart = new SfSunburstChart();
-    SunburstViewModel viewModel = new SunburstViewModel();
-    chart.BindingContext = viewModel;
-    chart.ItemsSource = viewModel.DataSource;
-    chart.ValueMemberPath = "EmployeesCount";
-    chart.Levels.Add(new SunburstHierarchicalLevel() { GroupMemberPath = "Country" });
-    chart.Levels.Add(new SunburstHierarchicalLevel() { GroupMemberPath = "Country" });
-    chart.Levels.Add(new SunburstHierarchicalLevel() { GroupMemberPath = "JobDescription" });
-    chart.Levels.Add(new SunburstHierarchicalLevel() { GroupMemberPath = "JobGroup" });
-    chart.Levels.Add(new SunburstHierarchicalLevel() { GroupMemberPath = "JobRole" });
-    this.Content = chart;
+    SfSunburstChart sunburst = new SfSunburstChart();
+    sunburst.ItemsSource = (new SunburstViewModel()).DataSource;
+    sunburst.ValueMemberPath = "EmployeesCount";
+    sunburst.Levels.Add(new SunburstHierarchicalLevel() { GroupMemberPath = "Country" });
+    sunburst.Levels.Add(new SunburstHierarchicalLevel() { GroupMemberPath = "Country" });
+    sunburst.Levels.Add(new SunburstHierarchicalLevel() { GroupMemberPath = "JobDescription" });
+    sunburst.Levels.Add(new SunburstHierarchicalLevel() { GroupMemberPath = "JobGroup" });
+    sunburst.Levels.Add(new SunburstHierarchicalLevel() { GroupMemberPath = "JobRole" });
+    this.Content = sunburst;
 
 {% endhighlight %}
 
 {% endtabs %} 
 
 ## Add a title
-
-The title of the chart acts as the title to provide quick information to the user about the data being plotted in the chart. You can set the title using the [Title]() property of the sunburst chart as follows.
+The title of the chart provide quick information to the user about the data being plotted in the chart. The [Title]() property is used to set title for the sunburst chart as follows.
 
 {% tabs %} 
 
 {% highlight xaml %}
 
-    <chart:SfSunburstChart>
-        <chart:SfSunburstChart.Title>
+    <sunburst:SfSunburstChart>
+        <sunburst:SfSunburstChart.Title>
             <Label Text="Employees Count"/>
-        </chart:SfSunburstChart.Title>
+        </sunburst:SfSunburstChart.Title>
         . . .
-    </chart:SfSunburstChart>
+    </sunburst:SfSunburstChart>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-SfSunburstChart chart = new SfSunburstChart();
-chart.Title = new Label
+SfSunburstChart sunburst = new SfSunburstChart();
+sunburst.Title = new Label
 {
     Text = "Employees Count"
 };
@@ -263,17 +260,17 @@ The [ShowLabels]() property of the chart can be used to enable data labels to im
 
 {% highlight xaml %}
 
-    <chart:SfSunburstChart ShowLabels="True">
+    <sunburst:SfSunburstChart ShowLabels="True">
         . . .
-    </chart:SfSunburstChart>
+    </sunburst:SfSunburstChart>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-    SfSunburstChart chart = new SfSunburstChart();
+    SfSunburstChart sunburst = new SfSunburstChart();
     . . .
-    chart.ShowLabels = true;
+    sunburst.ShowLabels = true;
 
 {% endhighlight %}
 
@@ -287,20 +284,20 @@ The legend provides information about the data point displayed in the sunburst c
 
 {% highlight xaml %}
 
-    <chart:SfSunburstChart>
+    <sunburst:SfSunburstChart>
         . . .
-        <chart:SfSunburstChart.Legend>
-            <chart:SunburstLegend/>
-        </chart:SfSunburstChart.Legend>
-    </chart:SfSunburstChart>
+        <sunburst:SfSunburstChart.Legend>
+            <sunburst:SunburstLegend/>
+        </sunburst:SfSunburstChart.Legend>
+    </sunburst:SfSunburstChart>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-    SfSunburstChart chart = new SfSunburstChart();
+    SfSunburstChart chsunburstart = new SfSunburstChart();
     . . .
-    chart.Legend = new SunburstLegend();
+    sunburst.Legend = new SunburstLegend();
 
 {% endhighlight %}
 
@@ -314,17 +311,17 @@ Tooltips are used to show information about the segment, when mouse over on it. 
 
 {% highlight xaml %}
 
-    <chart:SfSunburstChart EnableTooltip="True">
+    <sunburst:SfSunburstChart EnableTooltip="True">
         . . .
-    </chart:SfSunburstChart>
+    </sunburst:SfSunburstChart>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-    SfSunburstChart chart = new SfSunburstChart();
+    SfSunburstChart sunburst = new SfSunburstChart();
     . . .
-    chart.EnableTooltip = true;
+    sunburst.EnableTooltip = true;
 
 {% endhighlight %}
 
@@ -336,58 +333,56 @@ The following code example gives you the complete code of above configurations.
 
 {% highlight xaml %}
 
-    <chart:SfSunburstChart ItemsSource="{Binding DataSource}" 
-                        ShowLabels="True" 
-                        EnableTooltip="True"
-                        ValueMemberPath="EmployeesCount">
+    <sunburst:SfSunburstChart ItemsSource="{Binding DataSource}" 
+                              ShowLabels="True" 
+                              EnableTooltip="True"
+                              ValueMemberPath="EmployeesCount">
 
-            <chart:SfSunburstChart.Levels>
-                <chart:SunburstHierarchicalLevel GroupMemberPath="Country"/>
-                <chart:SunburstHierarchicalLevel GroupMemberPath="JobDescription"/>
-                <chart:SunburstHierarchicalLevel GroupMemberPath="JobGroup"/>
-                <chart:SunburstHierarchicalLevel GroupMemberPath="JobRole"/>
-            </chart:SfSunburstChart.Levels>
+            <sunburst:SfSunburstChart.Levels>
+                <sunburst:SunburstHierarchicalLevel GroupMemberPath="Country"/>
+                <sunburst:SunburstHierarchicalLevel GroupMemberPath="JobDescription"/>
+                <sunburst:SunburstHierarchicalLevel GroupMemberPath="JobGroup"/>
+                <sunburst:SunburstHierarchicalLevel GroupMemberPath="JobRole"/>
+            </sunburst:SfSunburstChart.Levels>
 
-            <chart:SfSunburstChart.BindingContext>
+            <sunburst:SfSunburstChart.BindingContext>
                 <model:SunburstViewModel/>
-            </chart:SfSunburstChart.BindingContext>
-            <chart:SfSunburstChart.Title>
+            </sunburst:SfSunburstChart.BindingContext>
+            <sunburst:SfSunburstChart.Title>
                 <Label Text="Employees Count"/>
-            </chart:SfSunburstChart.Title>
-            <chart:SfSunburstChart.Legend>
-                <chart:SunburstLegend/>
-            </chart:SfSunburstChart.Legend>
+            </sunburst:SfSunburstChart.Title>
+            <sunburst:SfSunburstChart.Legend>
+                <sunburst:SunburstLegend/>
+            </sunburst:SfSunburstChart.Legend>
 
-    </chart:SfSunburstChart>
+    </sunburst:SfSunburstChart>
  
 {% endhighlight %}
 
 {% highlight C# %}
 
-    using Syncfusion.Maui.Charts;
+    using Syncfusion.Maui.SunburstChart;
     . . .
     public partial class MainPage : ContentPage
     {   
         public MainPage()
         {
-            SfSunburstChart chart = new SfSunburstChart();
-            chart.Title = new Label
+            SfSunburstChart sunburst = new SfSunburstChart();
+            sunburst.Title = new Label
             {
                 Text = "Employees Count"
             };
-            chart.Legend = new SunburstLegend();
-            SunburstViewModel viewModel = new SunburstViewModel();
-            chart.BindingContext = viewModel;
-            chart.ItemsSource = viewModel.DataSource;
-            chart.ValueMemberPath = "EmployeesCount";
-            chart.Levels.Add(new SunburstHierarchicalLevel() { GroupMemberPath = "Country" });
-            chart.Levels.Add(new SunburstHierarchicalLevel() { GroupMemberPath = "Country" });
-            chart.Levels.Add(new SunburstHierarchicalLevel() { GroupMemberPath = "JobDescription" });
-            chart.Levels.Add(new SunburstHierarchicalLevel() { GroupMemberPath = "JobGroup" });
-            chart.Levels.Add(new SunburstHierarchicalLevel() { GroupMemberPath = "JobRole" });
-            chart.EnableTooltip = true;
-            chart.ShowLabels = true;
-            this.Content = chart;
+            sunburst.Legend = new SunburstLegend();
+            sunburst.ItemsSource = (new SunburstViewModel()).DataSource;
+            sunburst.ValueMemberPath = "EmployeesCount";
+            sunburst.Levels.Add(new SunburstHierarchicalLevel() { GroupMemberPath = "Country" });
+            sunburst.Levels.Add(new SunburstHierarchicalLevel() { GroupMemberPath = "Country" });
+            sunburst.Levels.Add(new SunburstHierarchicalLevel() { GroupMemberPath = "JobDescription" });
+            sunburst.Levels.Add(new SunburstHierarchicalLevel() { GroupMemberPath = "JobGroup" });
+            sunburst.Levels.Add(new SunburstHierarchicalLevel() { GroupMemberPath = "JobRole" });
+            sunburst.EnableTooltip = true;
+            sunburst.ShowLabels = true;
+            this.Content = sunburst;
         }
     }
 
