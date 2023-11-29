@@ -9,13 +9,13 @@ documentation: ug
 
 # Modify the visible axis labels count in the chart axis
 
-ChartAxis provides the OnCreateLabels override method to modify the visible axis labels count in the chart axis. [`OnCreateLabels`]() method called whenever new labels are generated in chart axis. The following properties are available in chart axis to modify the visible axis labels count.
+[ChartAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html) provides the [OnCreateLabels](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_OnLabelCreated_Syncfusion_Maui_Charts_ChartAxisLabel_) override method to modify the visible axis labels count in the chart axis. [OnCreateLabels](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_OnLabelCreated_Syncfusion_Maui_Charts_ChartAxisLabel_) method called whenever new labels are generated in chart axis. The following properties are available in chart axis to modify the visible axis labels count.
 
-* VisibleLabels - This property of the chart axis can be used to get Observable Collection of visible axis labels.
+* [VisibleLabels]() - This property of the chart axis can be used to get Observable Collection of visible axis labels.
 
-* VisibleMaximum - This property of the chart axis can be used to get the double value that represents the maximum observable value of the axis range.
+* [VisibleMaximum]() - This property of the chart axis can be used to get the double value that represents the maximum observable value of the axis range.
 
-* VisibleMinimum - This property of the chart axis can be used to get the double value that represents the minimum observable value of the axis range.
+* [VisibleMinimum]() - This property of the chart axis can be used to get the double value that represents the minimum observable value of the axis range.
 
 {% tabs %}
 

@@ -9,8 +9,8 @@ documentation: ug
 
 # Customize axis label style using labelCreated event
 
-The [`LabelCreated`]() event is triggered upon label creation in a chart axis, providing the option to customize axis labels style.
-The [LabelStyle]() property is available to customize the appearance of axis label based on condition.
+The [`LabelCreated`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_LabelCreated) event is triggered upon label creation in a chart axis, providing the option to customize axis labels style.
+The [LabelStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxisLabelEventArgs.html#Syncfusion_Maui_Charts_ChartAxisLabelEventArgs_LabelStyle) property is available to customize the appearance of axis label based on condition.
 
 {% tabs %}
 
