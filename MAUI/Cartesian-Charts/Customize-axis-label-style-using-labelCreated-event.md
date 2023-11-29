@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Customize axis label style using labelCreated event | Syncfusion
-description: Learn here all about to customize axis label style using labelCreated event in SfCartesianChart in Syncfusion .NET MAUI Chart (SfCartesianChart) control.
+description: Learn here all about to customize axis label style using labelCreated event in chart axis in Syncfusion .NET MAUI Chart (SfCartesianChart) control.
 platform: maui
 control: SfCartesianChart
 documentation: ug
@@ -17,12 +17,11 @@ The [LabelStyle]() property is available to customize the appearance of axis lab
 {% highlight xaml %}
 
     <chart:SfCartesianChart>
-        .........
-
+        . . .
         <chart:SfCartesianChart.XAxes>
             <chart:NumericalAxis LabelCreated="XAxes_LabelCreated"/>
         </chart:SfCartesianChart.XAxes>
-
+        . . .
     </chart:SfCartesianChart>
 
 {% endhighlight %}
@@ -31,6 +30,7 @@ The [LabelStyle]() property is available to customize the appearance of axis lab
 
 {% highlight c# %}
 
+        //Customize the style of chart axis labels and edit the axis labels using the labelCreated event.
         private void XAxes_LabelCreated(object sender, ChartAxisLabelEventArgs e)
         {
             e.LabelStyle.Background = Colors.LightBlue;

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Add custom label to SfCartesianChart axis | Syncfusion
+title: Modify the visible axis labels range in the chart axis. | Syncfusion
 description: Learn here all about to add custom label to SfCartesianChart axis in Syncfusion .NET MAUI Chart (SfCartesianChart) control.
 platform: maui
 control: SfCartesianChart
@@ -9,7 +9,7 @@ documentation: ug
 
 # Add custom label to SfCartesianChart axis
 
-ChartAxis provides the OnCreateLabels override method to add custom label to chart axis. [`OnCreateLabels`]() method called whenever new labels are generated in chart axis. The following properties are available in chart axis to customize the axis labels.
+ChartAxis provides the OnCreateLabels override method to modify the visible axis labels range in the chart axis. [`OnCreateLabels`]() method called whenever new labels are generated in chart axis. The following properties are available in chart axis to modify the visible axis labels range.
 
 * VisibleLabels - This property of the chart axis can be used to get Observable Collection of visible axis labels.
 
@@ -22,12 +22,11 @@ ChartAxis provides the OnCreateLabels override method to add custom label to cha
 {% highlight xaml %}
 
     <chart:SfCartesianChart>
-        .........
-
+       . . .
        <chart:SfCartesianChart.XAxes>
             <model:CustomNumericalAxis />
-        </chart:SfCartesianChart.XAxes>
-
+       </chart:SfCartesianChart.XAxes>
+       . . .
     </chart:SfCartesianChart>
 
 {% endhighlight %}
@@ -55,6 +54,7 @@ ChartAxis provides the OnCreateLabels override method to add custom label to cha
 
             if (VisibleLabels != null)
             {
+                //Clear labels in chart axis
                 VisibleLabels.Clear();
 
                 //Considered that we need 5 labels. so divided by 5.
@@ -63,6 +63,7 @@ ChartAxis provides the OnCreateLabels override method to add custom label to cha
                 var start = VisibleMinimum;
                 while (start <= VisibleMaximum)
                 {
+                    //Add labels to chart axis
                     VisibleLabels.Add(new ChartAxisLabel(start, start.ToString()));
                     start += interval;
                 }
