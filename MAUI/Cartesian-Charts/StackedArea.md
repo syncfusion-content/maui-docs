@@ -99,4 +99,4 @@ this.Content = chart;
 
 {% endtabs %}
 
-![Stacking Area Chart in MAUI](Chart-types_images\StackingAreaChart.png)
+![Stacking Area Chart in MAUI](Chart-types_images\StackedAreaChart.png)

@@ -101,4 +101,4 @@ this.Content = chart;
 
 {% endtabs %}
 
-![Stacking Area 100 Chart in MAUI](Chart-types_images\StackingArea100Chart.png)
+![Stacking Area 100 Chart in MAUI](Chart-types_images\StackedArea100Chart.png)
