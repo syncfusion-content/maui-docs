@@ -189,6 +189,7 @@ N> Add the namespace of `SunburstViewModel` class to your XAML Page, if you pref
 ## Populate chart with data
 
  Binding `DataSource` to the Sunburst chart [ItemsSource]() property from its BindingContext to create our own Sunburst chart.
+ Then, add the [SunburstHierarchicalLevel]() to [Levels]() collection. Each hierarchy level is formed based on the property specified in [GroupMemberPath]() property, and each arc segment size is calculated using the [ValueMemberPath]() property.
 
 {% tabs %}   
 
@@ -305,7 +306,7 @@ The legend provides information about the data point displayed in the sunburst c
 
 ## Enable Tooltip
 
-Tooltips are used to show information about the segment, when mouse over on it. Enable tooltip by setting the chart [EnableTooltip]() property as true.
+Tooltips are used to show information about the segment, when mouse hovers on it. Enable tooltip by setting the chart [EnableTooltip]() property as true.
 
 {% tabs %} 
 
@@ -338,22 +339,24 @@ The following code example gives you the complete code of above configurations.
                               EnableTooltip="True"
                               ValueMemberPath="EmployeesCount">
 
+            <sunburst:SfSunburstChart.BindingContext>
+                <model:SunburstViewModel/>
+            </sunburst:SfSunburstChart.BindingContext>
+
+            <sunburst:SfSunburstChart.Title>
+                <Label Text="Employees Count"/>
+            </sunburst:SfSunburstChart.Title>
+
+            <sunburst:SfSunburstChart.Legend>
+                <sunburst:SunburstLegend/>
+            </sunburst:SfSunburstChart.Legend>                  
+
             <sunburst:SfSunburstChart.Levels>
                 <sunburst:SunburstHierarchicalLevel GroupMemberPath="Country"/>
                 <sunburst:SunburstHierarchicalLevel GroupMemberPath="JobDescription"/>
                 <sunburst:SunburstHierarchicalLevel GroupMemberPath="JobGroup"/>
                 <sunburst:SunburstHierarchicalLevel GroupMemberPath="JobRole"/>
             </sunburst:SfSunburstChart.Levels>
-
-            <sunburst:SfSunburstChart.BindingContext>
-                <model:SunburstViewModel/>
-            </sunburst:SfSunburstChart.BindingContext>
-            <sunburst:SfSunburstChart.Title>
-                <Label Text="Employees Count"/>
-            </sunburst:SfSunburstChart.Title>
-            <sunburst:SfSunburstChart.Legend>
-                <sunburst:SunburstLegend/>
-            </sunburst:SfSunburstChart.Legend>
 
     </sunburst:SfSunburstChart>
  
@@ -368,12 +371,12 @@ The following code example gives you the complete code of above configurations.
         public MainPage()
         {
             SfSunburstChart sunburst = new SfSunburstChart();
+            sunburst.ItemsSource = (new SunburstViewModel()).DataSource;
             sunburst.Title = new Label
             {
                 Text = "Employees Count"
             };
             sunburst.Legend = new SunburstLegend();
-            sunburst.ItemsSource = (new SunburstViewModel()).DataSource;
             sunburst.ValueMemberPath = "EmployeesCount";
             sunburst.Levels.Add(new SunburstHierarchicalLevel() { GroupMemberPath = "Country" });
             sunburst.Levels.Add(new SunburstHierarchicalLevel() { GroupMemberPath = "Country" });
@@ -390,6 +393,6 @@ The following code example gives you the complete code of above configurations.
 
 {% endtabs %}
 
-![SunburstChart chart in .NET MAUI Chart](Getting-Started_Images/maui_sunburst_chart.png)
+![Sunburst Chart in .NET MAUI](Getting-Started_Images/maui_sunburst_chart.png)
 
 You can find the complete getting started sample from this [link]().
