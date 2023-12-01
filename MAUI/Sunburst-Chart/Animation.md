@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Animation in .NET MAUI Chart control | Syncfusion
-description: This section explains about how to enable animation in Syncfusion .NET MAUI Chart (SfSunburstChart) control
+title: Animation in .NET MAUI Sunburst Chart control | Syncfusion
+description: This section explains about how to enable animation in Syncfusion .NET MAUI Sunburst Chart control.
 platform: maui
 control: SfSunburstChart
 documentation: ug
 ---
 
-## Animation in .NET MAUI Chart
+## Animation in .NET MAUI Sunburst Chart
 
 The sunburst chart provides animation on loading and whenever the item source changes. Animation can be enabled by setting the EnableAnimation property to true.
 
@@ -17,23 +17,24 @@ The following code shows enabling animation.
 
 {% highlight xaml %}
 
-    <chart:SfSunburstChart  ItemsSource="{Binding DataSource}" 
-                            EnableAnimation="True"
-                            ValueMemberPath="EmployeesCount">
     . . .
-    </chart:SfSunburstChart>
+    <sunburst:SfSunburstChart ItemsSource="{Binding DataSource}" 
+                              EnableAnimation="True"
+                              ValueMemberPath="EmployeesCount">
+    . . .
+    </sunburst:SfSunburstChart>
  
 {% endhighlight %}
 
 {% highlight C# %}
 
     . . .
-    SfSunburstChart chart = new SfSunburstChart();
-    chart.ItemsSource = viewModel.DataSource;
-    chart.EnableAnimation = true;
-    chart.ValueMemberPath = "EmployeesCount";
+    SfSunburstChart sunburst = new SfSunburstChart();
+    sunburst.ItemsSource = viewModel.DataSource;
+    sunburst.EnableAnimation = true;
+    sunburst.ValueMemberPath = "EmployeesCount";
     . . .
-    this.Content = chart;
+    this.Content = sunburst;
 
 {% endhighlight %}
 
@@ -47,28 +48,28 @@ Animation duration can be controlled using the [AnimationDuration]() property.
 
 {% highlight xaml %}
 
-    <chart:SfSunburstChart  ItemsSource="{Binding DataSource}" 
-                            EnableAnimation="True"
-                            AnimationDuration="2"
-                            ValueMemberPath="EmployeesCount">
+    <sunburst:SfSunburstChart ItemsSource="{Binding DataSource}" 
+                              EnableAnimation="True"
+                              AnimationDuration="2"
+                              ValueMemberPath="EmployeesCount">
     . . .
-    </chart:SfSunburstChart>
+    </sunburst:SfSunburstChart>
  
 {% endhighlight %}
 
 {% highlight C# %}
 
     . . .
-    SfSunburstChart chart = new SfSunburstChart();
-    chart.ItemsSource = viewModel.DataSource;
-    chart.EnableAnimation = true;
-    chart.AnimationDuration = 2;
-    chart.ValueMemberPath = "EmployeesCount";
+    SfSunburstChart sunburst = new SfSunburstChart();
+    sunburst.ItemsSource = viewModel.DataSource;
+    sunburst.EnableAnimation = true;
+    sunburst.AnimationDuration = 2;
+    sunburst.ValueMemberPath = "EmployeesCount";
     . . .
-    this.Content = chart;
+    this.Content = sunburst;
           
 {% endhighlight %}
 
 {% endtabs %}
 
-![Animation support in MAUI chart]()
+![Animation support in .NET MAUI Sunburst Chart]()

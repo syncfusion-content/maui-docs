@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Customization in .NET MAUI Chart control | Syncfusion
-description: This section explains about customization in Syncfusion .NET MAUI Chart (SfSunburstChart) control
+title: Customization in .NET MAUI Sunburst Chart control | Syncfusion
+description: This section explains about customization in Syncfusion .NET MAUI Sunburst Chart control.
 platform: maui
 control: SfSunburstChart
 documentation: ug
 ---
 
-# Customization in .NET MAUI Chart
+# Customization in .NET MAUI Sunburst Chart
 
 The sunburst chart provides various customizing and styling options to enrich the application.
 
@@ -19,28 +19,28 @@ The start angle and end angle of the sunburst chart can be adjusted by using the
 
 {% highlight xaml %}
 
-    <chart:SfSunburstChart  ItemsSource="{Binding DataSource}" 
-                            StartAngle="180" 
-                            EndAngle="360"
-                            ValueMemberPath="EmployeesCount">
+    <sunburst:SfSunburstChart ItemsSource="{Binding DataSource}" 
+                              StartAngle="180" 
+                              EndAngle="360"
+                              ValueMemberPath="EmployeesCount">
     . . .
-    </chart:SfSunburstChart>
+    </sunburst:SfSunburstChart>
  
 {% endhighlight %}
 
 {% highlight C# %}
 
-    SfSunburstChart chart = new SfSunburstChart();
+    SfSunburstChart sunburst = new SfSunburstChart();
     . . .
-    chart.StartAngle = 180;
-    chart.EndAngle = 360;
+    sunburst.StartAngle = 180;
+    sunburst.EndAngle = 360;
     . . .
 
 {% endhighlight %}
 
 {% endtabs %}
 
-![Angle support in MAUI chart](Customization_images/sunburst_chart_Angle.png)
+![Angle support in Sunburst Chart](Customization_images/sunburst_chart_Angle.png)
 
 ## Radius
 
@@ -50,9 +50,9 @@ The sunburst chart allows you to customize the radius by using the [Radius]() pr
 
 {% highlight xaml %}
 
-    <chart:SfSunburstChart  ItemsSource="{Binding DataSource}" 
-                            Radius="0.5"
-                            ValueMemberPath="EmployeesCount">
+    <sunburst:SfSunburstChart ItemsSource="{Binding DataSource}" 
+                              Radius="0.5"
+                              ValueMemberPath="EmployeesCount">
     . . .
     </chart:SfSunburstChart>
  
@@ -60,16 +60,16 @@ The sunburst chart allows you to customize the radius by using the [Radius]() pr
 
 {% highlight C# %}
 
-    SfSunburstChart chart = new SfSunburstChart();
+    SfSunburstChart sunburst = new SfSunburstChart();
     . . .
-    chart.Radius = 0.5;
+    sunburst.Radius = 0.5;
     . . .
 
 {% endhighlight %}
 
 {% endtabs %}
 
-![Radius support in MAUI chart](Customization_images/sunburst_chart_Radius.png)
+![Radius support in Sunburst Chart](Customization_images/sunburst_chart_Radius.png)
 
 ## Inner radius
 
@@ -79,26 +79,26 @@ The sunburst chart allows you to customize the inner radius using the [InnerRadi
 
 {% highlight xaml %}
 
-    <chart:SfSunburstChart  ItemsSource="{Binding DataSource}" 
-                            InnerRadius="0.5"
-                            ValueMemberPath="EmployeesCount">
+    <sunburst:SfSunburstChart ItemsSource="{Binding DataSource}" 
+                              InnerRadius="0.5"
+                              ValueMemberPath="EmployeesCount">
     . . .
-    </chart:SfSunburstChart>
+    </sunburst:SfSunburstChart>
  
 {% endhighlight %}
 
 {% highlight C# %}
 
-    SfSunburstChart chart = new SfSunburstChart();
+    SfSunburstChart sunburst = new SfSunburstChart();
     . . .
-    chart.InnerRadius = 0.5;
+    sunburst.InnerRadius = 0.5;
     . . .
 
 {% endhighlight %}
 
 {% endtabs %}
 
-![InnerRadius support in MAUI chart](Customization_images/sunburst_chart_InnerRadius.png)
+![InnerRadius support in Sunburst Chart](Customization_images/sunburst_chart_InnerRadius.png)
 
 ## Stroke customization
 
@@ -108,10 +108,10 @@ Stroke color and stroke width of the sunburst chart can be customized using [Str
 
 {% highlight xaml %}
 
-    <chart:SfSunburstChart  ItemsSource="{Binding DataSource}" 
-                            Stroke="Black" 
-                            StrokeWidth="2"
-                            ValueMemberPath="EmployeesCount">
+    <sunburst:SfSunburstChart ItemsSource="{Binding DataSource}" 
+                              Stroke="Black" 
+                              StrokeWidth="2"
+                              ValueMemberPath="EmployeesCount">
     . . .
     </chart:SfSunburstChart>
  
@@ -119,14 +119,14 @@ Stroke color and stroke width of the sunburst chart can be customized using [Str
 
 {% highlight C# %}
 
-    SfSunburstChart chart = new SfSunburstChart();
+    SfSunburstChart sunburst = new SfSunburstChart();
     . . .
-    chart.Stroke = Colors.Black;
-    chart.StrokeWidth = 2;
+    sunburst.Stroke = Colors.Black;
+    sunburst.StrokeWidth = 2;
     . . .
 
 {% endhighlight %}
 
 {% endtabs %}
 
-![Stoke support in MAUI chart](Customization_images/sunburst_chart_stoke.png)
+![Stoke support in Sunburst Chart](Customization_images/sunburst_chart_stoke.png)

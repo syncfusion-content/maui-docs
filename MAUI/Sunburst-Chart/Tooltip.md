@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Tooltip in .NET MAUI Chart control | Syncfusion
-description: This section explains about how to enable tooltip in Syncfusion .NET MAUI Chart (SfSunburstChart) control
+title: Tooltip in .NET MAUI Sunburst Chart control | Syncfusion
+description: This section explains about how to enable tooltip in Syncfusion .NET MAUI Sunburst Chart control.
 platform: maui
 control: SfSunburstChart
 documentation: ug
 ---
 
-# Tooltip in .NET MAUI Chart
+# Tooltip in .NET MAUI Sunburst Chart 
 
 Tooltip provides additional information about the segments in the sunburst chart. Tooltip is displayed by tapping the segment. By default, tooltip displays the corresponding segment’s category and value. To enable the tooltip, set the [EnableTooltip]() property to true.
 
@@ -19,24 +19,23 @@ To define the tooltip in the chart, set the [EnableTooltip]() property of [SfSun
 
 {% highlight xaml %}
 
-    <chart:SfSunburstChart EnableTooltip="True">
+    <sunburst:SfSunburstChart EnableTooltip="True">
     . . .
-    </chart:SfSunburstChart>
-
+    </sunburst:SfSunburstChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfSunburstChart chart = new SfSunburstChart();
+    SfSunburstChart sunburst = new SfSunburstChart();
     . . .      
-    chart.EnableTooltip = true;
+    sunburst.EnableTooltip = true;
 
 {% endhighlight %}
 
 {% endtabs %}
 
-![Tooltip support in MAUI chart](Tooltip_images/maui_sunburst_tooltip.png)
+![Tooltip support .NET MAUI Sunburst Chart](Tooltip_images/maui_sunburst_tooltip.png)
 
 ## customization
 
@@ -54,35 +53,35 @@ The appearance of the tooltip can be customized using the following properties:
 
 {% highlight xml %}
 
-    <chart:SfSunburstChart EnableTooltip="True">
+    <sunburst:SfSunburstChart EnableTooltip="True">
     . . .
-        <chart:SfSunburstChart.TooltipSettings>
-            <chart:SunburstTooltipSettings  TextColor="Black" 
-                                            Margin="10"
-                                            FontSize="15"
-                                            Background="Green"
-                                            Duration="4" />
-        </chart:SfSunburstChart.TooltipSettings>
+        <sunburst:SfSunburstChart.TooltipSettings>
+            <sunburst:SunburstTooltipSettings TextColor="Black" 
+                                              Margin="10"
+                                              FontSize="15"
+                                              Background="Green"
+                                              Duration="4" />
+        </sunburst:SfSunburstChart.TooltipSettings>
     . . .
     
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfSunburstChart chart = new SfSunburstChart();
+    SfSunburstChart sunburst = new SfSunburstChart();
     . . .
-    chart.EnableTooltip = true;
+    sunburst.EnableTooltip = true;
     SunburstTooltipSettings tooltipSettings = new SunburstTooltipSettings();
     tooltipSettings.TextColor = Colors.White;
     tooltipSettings.Background = Brush.Green;
     tooltipSettings.FontSize = 15;
     tooltipSettings.Margin = 10;          
     tooltipSettings.Duration = 10;
-    sunburstChart.TooltipSettings = tooltipSettings;
+    sunburst.TooltipSettings = tooltipSettings;
     . . .
 
 {% endhighlight %}
 
 {% endtabs %}
 
-![Tooltip customization support in MAUI chart](Tooltip_images/tooltip_customization.png)
+![Tooltip customization support in .NET MAUI Sunburst Chart](Tooltip_images/tooltip_customization.png)

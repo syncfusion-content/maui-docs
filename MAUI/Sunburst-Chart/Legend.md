@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Legend in .NET MAUI Chart control | Syncfusion
-description: This section explains about how to enable legend in Syncfusion .NET MAUI Chart (SfSunburstChart) control
+title: Legend in .NET MAUI Sunburst Chart control | Syncfusion
+description: This section explains about how to enable legend in Syncfusion .NET MAUI Sunburst Chart control.
 platform: maui
 control: SfSunburstChart
 documentation: ug
 ---
 
-# Legend in .NET MAUI Chart
+# Legend in .NET MAUI Sunburst Chart
 
 Legends are used to represent the first level (i.e root level) of categories in the sunburst chart.
 
@@ -17,21 +17,21 @@ The following code explains how to initialize the legends.
 
 {% highlight xaml %}
 
-    <chart:SfSunburstChart>
+    <sunburst:SfSunburstChart>
         . . .
-        <chart:SfSunburstChart.Legend>
-            <chart:SunburstLegend/>
-        </chart:SfSunburstChart.Legend>
-    </chart:SfSunburstChart>
+        <sunburst:SfSunburstChart.Legend>
+            <sunburst:SunburstLegend/>
+        </sunburst:SfSunburstChart.Legend>
+    </sunburst:SfSunburstChart>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-    SfSunburstChart chart = new SfSunburstChart();
+    SfSunburstChart sunburst = new SfSunburstChart();
     . . .
     SunburstLegend legend = new SunburstLegend();
-    Chart.Legend = legend;
+    sunburst.Legend = legend;
 
 {% endhighlight %}
 
@@ -47,28 +47,29 @@ The following code shows how to control the visibility of legend.
 
 {% highlight xaml %}
 
-    <chart:SfSunburstChart>
+    <sunburst:SfSunburstChart>
         . . .
-        <chart:SfSunburstChart.Legend>
-            <chart:SunburstLegend IsVisible="True"/>
-        </chart:SfSunburstChart.Legend>
-    </chart:SfSunburstChart>
+        <sunburst:SfSunburstChart.Legend>
+            <sunburst:SunburstLegend IsVisible="True"/>
+        </sunburst:SfSunburstChart.Legend>
+    </sunburst:SfSunburstChart>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-    SfSunburstChart chart = new SfSunburstChart();
+    SfSunburstChart sunburst = new SfSunburstChart();
     . . .
     SunburstLegend legend = new SunburstLegend();
     legend.IsVisible = true;
-    Chart.Legend = legend;
+    sunburst.Legend = legend;
 
 {% endhighlight %}
 
 {% endtabs %} 
 
 ## Placement
+
 Legends can be docked at the top, right, left, or bottom position using the Placement property.
 
 The following code shows customizing the legend Placement.
@@ -77,25 +78,25 @@ The following code shows customizing the legend Placement.
 
 {% highlight xaml %}
 
-    <chart:SfSunburstChart>
+    <sunburst:SfSunburstChart>
         . . .
-        <chart:SfSunburstChart.Legend>
-            <chart:SunburstLegend Placement="Right"/>
-        </chart:SfSunburstChart.Legend>
-    </chart:SfSunburstChart>
+        <sunburst:SfSunburstChart.Legend>
+            <sunburst:SunburstLegend Placement="Right"/>
+        </sunburst:SfSunburstChart.Legend>
+    </sunburst:SfSunburstChart>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-    SfSunburstChart chart = new SfSunburstChart();
+    SfSunburstChart sunburst = new SfSunburstChart();
     . . .
     SunburstLegend legend = new SunburstLegend();
     legend.Placement = LegendPlacement.Right;
-    Chart.Legend = legend;
+    sunburst.Legend = legend;
 
 {% endhighlight %}
 
 {% endtabs %} 
 
-![Legend placement in MAUI chart](Legend_images/sunburst_chart_legend_placement.png)
+![Legend placement in Sunburst Chart](Legend_images/sunburst_chart_legend_placement.png)
