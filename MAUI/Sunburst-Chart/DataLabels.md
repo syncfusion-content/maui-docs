@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Data label in .NET MAUI Chart control | .NET MAUI | Syncfusion
-description: This section explains about how to configure the data labels and its features in .NET MAUI Chart (SfSunburstChart).
+title: Data label in .NET MAUI Sunburst Chart control | .NET MAUI | Syncfusion
+description: This section explains about how to configure the data labels and its features in .NET MAUI Sunburst Chart.
 platform: maui
 control: SfSunburstChart
 documentation: ug
 ---
 
-# Data Label in .NET MAUI Chart
+# Data label in .NET MAUI Sunburst Chart
 
 ## Enable Data Label 
 
@@ -19,17 +19,17 @@ The following code explains how to initialize data labels.
 
 {% highlight xaml %}
 
-    <chart:SfSunburstChart ShowLabels="True"/>
+    <sunburst:SfSunburstChart ShowLabels="True"/>
     . . .
-    </chart:SfSunburstChart>
+    </sunburst:SfSunburstChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfSunburstChart chart = new SfSunburstChart();
+    SfSunburstChart sunburst = new SfSunburstChart();
     . . .
-    chart.ShowLabels = true;
+    sunburst.ShowLabels = true;
 
 {% endhighlight %}
 
@@ -47,21 +47,21 @@ The following code shows trimming the data labels.
 
 {% highlight xaml %}
 
-    <chart:SfSunburstChart ShowLabels="True">
+    <sunburst:SfSunburstChart ShowLabels="True">
     . . .
-        <chart:SfSunburstChart.DataLabelSettings>
-            <chart:SunburstDataLabelSettings OverFlowMode="Trim"/>
-        </chart:SfSunburstChart.DataLabelSettings>
-    </chart:SfSunburstChart>
+        <sunburst:SfSunburstChart.DataLabelSettings>
+            <sunburst:SunburstDataLabelSettings OverFlowMode="Trim"/>
+        </sunburst:SfSunburstChart.DataLabelSettings>
+    </sunburst:SfSunburstChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfSunburstChart chart = new SfSunburstChart();
+    SfSunburstChart sunburst = new SfSunburstChart();
     . . .
-    chart.ShowLabels = true;
-    Chart.DataLabelSettings = new SunburstDataLabelSettings()
+    sunburst.ShowLabels = true;
+    sunburst.DataLabelSettings = new SunburstDataLabelSettings()
     {
         OverFlowMode = SunburstLabelOverflowMode.Trim
     };
@@ -80,21 +80,21 @@ The following code shows hiding the data labels.
 
 {% highlight xaml %}
 
-    <chart:SfSunburstChart ShowLabels="True">
+    <sunburst:SfSunburstChart ShowLabels="True">
     . . .
-        <chart:SfSunburstChart.DataLabelSettings>
-            <chart:SunburstDataLabelSettings OverFlowMode="Hide"/>
-        </chart:SfSunburstChart.DataLabelSettings>
-    </chart:SfSunburstChart>
+        <sunburst:SfSunburstChart.DataLabelSettings>
+            <sunburst:SunburstDataLabelSettings OverFlowMode="Hide"/>
+        </sunburst:SfSunburstChart.DataLabelSettings>
+    </sunburst:SfSunburstChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfSunburstChart chart = new SfSunburstChart();
+    SfSunburstChart sunburst = new SfSunburstChart();
     . . .
-    chart.ShowLabels = true;
-    Chart.DataLabelSettings = new SunburstDataLabelSettings()
+    sunburst.ShowLabels = true;
+    sunburst.DataLabelSettings = new SunburstDataLabelSettings()
     {
         OverFlowMode = SunburstLabelOverflowMode.Hide
     };
@@ -117,21 +117,21 @@ The following code shows rotating a data label to an angle.
 
 {% highlight xaml %}
 
-    <chart:SfSunburstChart ShowLabels="True">
+    <sunburst:SfSunburstChart ShowLabels="True">
     . . .
-        <chart:SfSunburstChart.DataLabelSettings>
-            <chart:SunburstDataLabelSettings RotationMode="Angle"/>
-        </chart:SfSunburstChart.DataLabelSettings>
-    </chart:SfSunburstChart>
+        <sunburst:SfSunburstChart.DataLabelSettings>
+            <sunburst:SunburstDataLabelSettings RotationMode="Angle"/>
+        </sunburst:SfSunburstChart.DataLabelSettings>
+    </sunburst:SfSunburstChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfSunburstChart chart = new SfSunburstChart();
+    SfSunburstChart sunburst = new SfSunburstChart();
     . . .
-    chart.ShowLabels = true;
-    Chart.DataLabelSettings = new SunburstDataLabelSettings()
+    sunburst.ShowLabels = true;
+    sunburst.DataLabelSettings = new SunburstDataLabelSettings()
     {
         RotationMode = SunburstLabelRotationMode.Angle     
     };
@@ -150,21 +150,21 @@ The following code shows normal mode of data labels.
 
 {% highlight xaml %}
 
-    <chart:SfSunburstChart ShowLabels="True">
+    <sunburst:SfSunburstChart ShowLabels="True">
     . . .
-        <chart:SfSunburstChart.DataLabelSettings>
-            <chart:SunburstDataLabelSettings RotationMode="Normal"/>
-        </chart:SfSunburstChart.DataLabelSettings>
-    </chart:SfSunburstChart>
+        <sunburst:SfSunburstChart.DataLabelSettings>
+            <sunburst:SunburstDataLabelSettings RotationMode="Normal"/>
+        </sunburst:SfSunburstChart.DataLabelSettings>
+    </sunburst:SfSunburstChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfSunburstChart chart = new SfSunburstChart();
+    SfSunburstChart sunburst = new SfSunburstChart();
     . . .
-    chart.ShowLabels = true;
-    Chart.DataLabelSettings = new SunburstDataLabelSettings()
+    sunburst.ShowLabels = true;
+    sunburst.DataLabelSettings = new SunburstDataLabelSettings()
     {
         RotationMode = SunburstLabelRotationMode.Normal     
     };
@@ -188,24 +188,23 @@ The following code shows normal mode of data labels.
 
 {% highlight xaml %}
 
-    <chart:SfSunburstChart ShowDataLabels="True">
+    <sunburst:SfSunburstChart ShowDataLabels="True">
     . . .
-        <chart:SfSunburstChart.DataLabelSettings>
-            <chart:SunburstDataLabelSettings TextColor="Red"
-                                             FontSize="10"
-                                             FontAttributes="Bold"/>
-        </chart:SfSunburstChart.DataLabelSettings>
-        <chart:SfSunburstChart.TooltipSettings>
-    </chart:SfSunburstChart>
+        <sunburst:SfSunburstChart.DataLabelSettings>
+            <sunburst:SunburstDataLabelSettings TextColor="Red"
+                                                FontSize="10"
+                                                FontAttributes="Bold"/>
+        </sunburst:SfSunburstChart.DataLabelSettings>
+    </sunburst:SfSunburstChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfSunburstChart chart = new SfSunburstChart();
+    SfSunburstChart sunburst = new SfSunburstChart();
     . . .
-    chart.ShowLabels = true;
-    Chart.DataLabelSettings = new SunburstDataLabelSettings()
+    sunburst.ShowLabels = true;
+    sunburst.DataLabelSettings = new SunburstDataLabelSettings()
     {
         TextColor = Colors.Red,
         FontSize = 10,
