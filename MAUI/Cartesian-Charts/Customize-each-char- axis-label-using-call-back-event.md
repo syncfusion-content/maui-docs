@@ -1,0 +1,54 @@
+---
+layout: post
+title: Customize each axis chart label using call back event | Syncfusion
+description: Learn here all about to customize each chart axis label using call back event in Syncfusion .NET MAUI Chart (SfCartesianChart) control.
+platform: maui
+control: SfCartesianChart
+documentation: ug
+---
+
+# Customize each chart axis label using call back event
+
+The [`LabelCreated`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_LabelCreated) event is triggered upon label creation in a chart axis, providing the option to customize chart axis labels.
+
+The following code sample demonstrates this.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+    <chart:SfCartesianChart>
+        . . .
+        <chart:SfCartesianChart.XAxes>
+            <chart:NumericalAxis LabelCreated="XAxes_LabelCreated"/>
+        </chart:SfCartesianChart.XAxes>
+        . . .
+    </chart:SfCartesianChart>
+
+{% endhighlight %}
+
+{% tabs %}
+
+{% highlight c# %}
+
+    int month = 0;
+
+    //The DateTimeAxis in a chart displays the first label of each month with a month format, while other labels within the same month are formatted with a day format.
+    private void XAxes_LabelCreated(object sender, ChartAxisLabelEventArgs e)
+    {
+        DateTime date = DateTime.Parse(e.Label);
+
+        if (month != date.Month)
+        {
+            e.Label = date.ToString("MMM");
+            month = date.Month;
+        }
+        else
+            e.Label = date.Day.ToString();
+    }
+    
+{% endhighlight  %}
+
+{% endtabs %}
+
+![Add custom labels to chart axis](How-to_images/Customize_each_chart_axis_label_using_call_back_event.png)
