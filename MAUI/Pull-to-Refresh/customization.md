@@ -62,13 +62,13 @@ The default transition is `SlideOnTop` that draws the RefreshView on top of the 
 The following code example shows how to set the `TransitionMode` as `Push` to PullToRefresh. This transition moves the refresh content and main content simultaneously.
 
 {% tabs %}
-{% highlight xaml tabtittle="MainPage.xaml" hl_lines="2" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
     <syncfusion:SfPullToRefresh x:Name=" pullToRefresh" 
                                 TransitionMode="Push" />
 
 {% endhighlight %}
-{% highlight c# tabtittle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
     pullToRefresh.TransitionMode = PullToRefreshTransitionType.Push;
 
@@ -82,13 +82,13 @@ The following code example shows how to set the `TransitionMode` as `Push` to Pu
 The threshold value for the refresh view, indicating the starting position of the progress indicator within the view.
 
 {% tabs %}
-{% highlight xaml tabtittle="MainPage.xaml" hl_lines="2" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
     <syncfusion:SfPullToRefresh x:Name="pullToRefresh" 
                                 RefreshViewThreshold="50"/>
 
 {% endhighlight %}
-{% highlight c# tabtittle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
     pullToRefresh.RefreshViewThreshold = 50d;
 
@@ -100,13 +100,13 @@ The threshold value for the refresh view, indicating the starting position of th
 The threshold value for the refresh view, indicating the progress indicator's maximum pulling position in view.
 
 {% tabs %}
-{% highlight xaml tabtittle="MainPage.xaml" hl_lines="2" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
     <syncfusion:SfPullToRefresh x:Name="pullToRefresh" 
                                 PullingThreshold="200"/>
 
 {% endhighlight %}
-{% highlight c# tabtittle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
     pullToRefresh.PullingThreshold = 200d;
 
@@ -119,13 +119,13 @@ The threshold value for the refresh view, indicating the progress indicator's ma
 The view will get refresh while the `IsRefreshing` property is set to `true,` and View refreshing will be stopped when you set the `IsRefreshing` to `false.`
  
 {% tabs %}
-{% highlight xaml tabtittle="MainPage.xaml" hl_lines="2" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
     <syncfusion:SfPullToRefresh x:Name="pullToRefresh" 
                                 IsRefreshing="True"/>
 
 {% endhighlight %}
-{% highlight c# tabtittle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
     pullToRefresh.IsRefreshing = true;
 
@@ -138,13 +138,13 @@ The view will get refresh while the `IsRefreshing` property is set to `true,` an
 The color to the progress indicator's background.
 
 {% tabs %}
-{% highlight xaml tabtittle="MainPage.xaml" hl_lines="2" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
     <syncfusion:SfPullToRefresh x:Name="pullToRefresh" 
                                 ProgressBackground = "White"/>
 
 {% endhighlight %}
-{% highlight c# tabtittle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
     pullToRefresh.ProgressBackground = Color.White;
 
@@ -157,13 +157,13 @@ The color to the progress indicator's background.
 The color to the progress indicator's arc. 
 
 {% tabs %}
-{% highlight xaml tabtittle="MainPage.xaml" hl_lines="2" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
     <syncfusion:SfPullToRefresh x:Name="pullToRefresh" 
                                 ProgressColor = "Blue"/>
 
 {% endhighlight %}
-{% highlight c# tabtittle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
     pullToRefresh.ProgressColor = Color.Blue;
 
@@ -177,13 +177,13 @@ The color to the progress indicator's arc.
 The width of the progress indicator's arc. 
 
 {% tabs %}
-{% highlight xaml tabtittle="MainPage.xaml" hl_lines="2" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
     <syncfusion:SfPullToRefresh x:Name="pullToRefresh" 
                                 ProgressThickness="5"/>
 
 {% endhighlight %}
-{% highlight c# tabtittle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
     pullToRefresh.ProgressThickness = 5d;
 
@@ -196,13 +196,13 @@ The width of the progress indicator's arc.
 The width of the refresh view.
 
 {% tabs %}
-{% highlight xaml tabtittle="MainPage.xaml" hl_lines="2" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
     <syncfusion:SfPullToRefresh x:Name="pullToRefresh" 
                                 RefreshViewWidth="50"/>
 
 {% endhighlight %}
-{% highlight c# tabtittle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
     pullToRefresh.RefreshViewWidth = 50d;
 
@@ -216,13 +216,13 @@ The width of the refresh view.
 The height to the refresh View.
 
 {% tabs %}
-{% highlight xaml tabtittle="MainPage.xaml" hl_lines="2" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
     <syncfusion:SfPullToRefresh x:Name="pullToRefresh" 
                                 RefreshViewHeight="50"/>
 
 {% endhighlight %}
-{% highlight c# tabtittle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
     pullToRefresh.RefreshViewHeight = 50d;
 
@@ -237,7 +237,7 @@ The height to the refresh View.
 The StartRefreshing method is used to refresh the content without interaction in pullable content. When you invoke this StartRefreshing() method,then the Progress indicator will be shown. 
 
 {% tabs %}
-{% highlight c# tabtittle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
     pullToRefresh.StartRefreshing();
 
@@ -249,7 +249,7 @@ The StartRefreshing method is used to refresh the content without interaction in
 The EndRefreshing method is used to end the progress animation of the `PullToRefresh`.
 
 {% tabs %}
-{% highlight c# tabtittle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
     pullToRefresh.EndRefreshing();
 
@@ -265,13 +265,13 @@ The `PullToRefresh` control provides support for loading any custom control as p
     <li> Import PullToRefresh and DataGrid control namespace as follows.</li>
     <br/>
 {% tabs %}
-{% highlight xaml tabtittle="MainPage.xaml" %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 
     xmlns:sfgrid="clr-namespace:Syncfusion.Maui.DataGrid;assembly=Syncfusion.Maui.DataGrid"
     xmlns:pulltoRefresh="clr-namespace:Syncfusion.Maui.PullToRefresh;assembly=Syncfusion.Maui.PullToRefresh"
 
 {% endhighlight %}
-{% highlight c# tabtittle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
     using Syncfusion.Maui.DataGrid;
     using Syncfusion.Maui.PullToRefresh;
@@ -289,7 +289,7 @@ This is how the final output will look like when hosting a Datagrid control as p
 ![.NET MAUI PullToRefresh with DataGrid hosted with slide on top transition mode](Images/customization/datagrid-slideontop.gif)
 
 {% tabs %}
-{% highlight xaml tabtittle="MainPage.xaml" hl_lines="23 24 36 37" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="23 24 36 37" %}
 
     <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
@@ -334,7 +334,7 @@ This is how the final output will look like when hosting a Datagrid control as p
     </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtittle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
     using Syncfusion.Maui.DataGrid;
     using Syncfusion.Maui.ProgressBar;
@@ -381,7 +381,7 @@ To host the .NET MAUI `ListView` inside the `PullToRefresh`, which is used to up
     <li>	Import the SfPullToRefresh control and SfListView control namespace as follows.</li>
     <br/>
 {% tabs %}
-{% highlight xaml tabtittle="MainPage.xaml" %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 
     xmlns:ListView="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView"
     xmlns:pulltoRefresh="clr-namespace:Syncfusion.Maui.PullToRefresh;assembly=Syncfusion.Maui.PullToRefresh"
@@ -405,7 +405,7 @@ This is how the final output will look like when hosting a SfListView control as
 ![.NET MAUI PullToRefresh with ListView hosted with slide on top transition mode](Images/customization/listview-slideontop.gif)
 
 {% tabs %}
-{% highlight xaml tabtittle="MainPage.xaml" hl_lines="21 23 33 35" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="21 23 33 35" %}
 
     <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
@@ -448,7 +448,7 @@ This is how the final output will look like when hosting a SfListView control as
     </ContentPage>
     
 {% endhighlight %}
-{% highlight c# tabtittle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
     using Syncfusion.Maui.DataSource;
     using Syncfusion.Maui.DataSource.Extensions;
@@ -492,7 +492,7 @@ The `PullToRefresh` allows you to set a template for pulling and refreshing the 
 Refer to the following code example in which a `SfCircularProgressBar` is loaded in the pulling view template and refreshing view template.
 
 {% tabs %}
-{% highlight xaml tabtittle="MainPage.xaml" hl_lines="23 24 36 37" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="23 24 36 37" %}
 
     <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
@@ -537,7 +537,7 @@ Refer to the following code example in which a `SfCircularProgressBar` is loaded
     </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtittle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
     public class PullToRefreshTemplateBehavior : Behavior<ContentPage>
     {        
