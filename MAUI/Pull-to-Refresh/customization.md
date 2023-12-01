@@ -487,7 +487,7 @@ If you run the above sample with the `TransitionMode` as Push, the output will l
 
 ## Pulling and refreshing template
 
-The `PullToRefresh` allows you to set a template for pulling and refreshing the view. The pulling and refreshing a template can be set using the [SfPullToRefresh.PullingViewTemplate](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPullToRefresh.XForms.SfPullToRefresh.html#Syncfusion_SfPullToRefresh_XForms_SfPullToRefresh_PullingViewTemplate) and [SfPullToRefresh.RefreshingViewTemplate](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPullToRefresh.XForms.SfPullToRefresh.html#Syncfusion_SfPullToRefresh_XForms_SfPullToRefresh_RefreshingViewTemplate) properties, respectively.
+The `PullToRefresh` allows you to set a template for pulling and refreshing the view. The pulling and refreshing a template can be set using the [SfPullToRefresh.PullingViewTemplate]() and [SfPullToRefresh.RefreshingViewTemplate]() properties, respectively.
 
 Refer to the following code example in which a `SfCircularProgressBar` is loaded in the pulling view template and refreshing view template.
 
