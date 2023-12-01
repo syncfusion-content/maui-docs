@@ -20,9 +20,9 @@ The `PullableContent` is the main view of the `PullToRefresh` control on which t
 
     <syncfusion:SfPullToRefresh x:Name="pullToRefresh"
                                 PullingThreshold="120"
-                                RefreshContentHeight="30"
-                                RefreshContentThreshold="30"
-                                RefreshContentWidth="30">
+                                RefreshViewHeight="30"
+                                RefreshViewThreshold="30"
+                                RefreshViewWidth="30">
         <syncfusion:SfPullToRefresh.PullableContent>
                 <Label x:Name="Monthlabel" 
                         TextColor="White" 
@@ -57,7 +57,7 @@ The default transition is `SlideOnTop` that draws the RefreshView on top of the 
 {% endhighlight %}
 {% endtabs %}
 
-![PullToRefresh with slide on top transition mode](Images/customization/maui-pulltorefresh-getting-started.png)
+![.NET MAUI PullToRefresh with slide on top transition mode](Images/customization/maui-pulltorefresh-getting-started.png)
 
 The following code example shows how to set the `TransitionMode` as `Push` to PullToRefresh. This transition moves the refresh content and main content simultaneously.
 
@@ -75,7 +75,7 @@ The following code example shows how to set the `TransitionMode` as `Push` to Pu
 {% endhighlight %}
 {% endtabs %}
 
-![PullToRefresh with push transition mode](Images/customization/maui-pulltorefresh-getting-started-push.png)
+![.NET MAUI PullToRefresh with push transition mode](Images/customization/maui-pulltorefresh-getting-started-push.png)
 
 ## RefreshViewThreshold
 
@@ -261,7 +261,7 @@ The EndRefreshing method is used to end the progress animation of the `PullToRef
 
 The `PullToRefresh` control provides support for loading any custom control as pullable content. To host the .NET MAUI Datagrid inside the PullToRefresh, follow these steps.
 <ol>
-    <li> Add the required assembly references to the pcl and renderer projects as discussed in the Assembly deployment section of <a href="https://help.syncfusion.com/maui/datagrid/getting-started">DataGrid </a> and <a href="https://help.syncfusion.com/maui/pulltorefresh/getting-started">PullToRefresh </a>.</li>
+    <li> Add the required assembly references as discussed in the <a href="https://help.syncfusion.com/maui/datagrid/getting-started">DataGrid</a> and PullToRefresh.</li>
     <li> Import PullToRefresh and DataGrid control namespace as follows.</li>
     <br/>
 {% tabs %}
@@ -286,7 +286,7 @@ The `PullToRefresh` control provides support for loading any custom control as p
 
 This is how the final output will look like when hosting a Datagrid control as pullable content.
 
-![PullToRefresh with DataGrid hosted with slide on top transition mode](Images/customization/datagrid-slideontop.gif)
+![.NET MAUI PullToRefresh with DataGrid hosted with slide on top transition mode](Images/customization/datagrid-slideontop.gif)
 
 {% tabs %}
 {% highlight xaml tabtittle="MainPage.xaml" hl_lines="23 24 36 37" %}
@@ -370,14 +370,14 @@ This is how the final output will look like when hosting a Datagrid control as p
 
 If you run the above sample with the TransitionMode as Push, the output will look as follows.
 
-![PullToRefresh with DataGrid hosted with push transition mode](Images/customization/datagrid-push.gif)
+![.NET MAUI PullToRefresh with DataGrid hosted with push transition mode](Images/customization/datagrid-push.gif)
 
 
 ## Host .NET MAUI ListView as pullable content
 
 To host the .NET MAUI `ListView` inside the `PullToRefresh`, which is used to update items in the list while performing the pull to refresh action.
 <ol>
-    <li>	Add the required assembly references to the pcl and renderer projects as discussed in the Assembly deployment section of <a href="https://help.syncfusion.com/maui/listview/getting-started">ListView </a> and <a href="https://help.syncfusion.com/maui/pulltorefresh/getting-started">PullToRefresh </a>.</li>
+    <li>	Add the required assembly references as discussed in the <a href="https://help.syncfusion.com/maui/listview/getting-started">ListView</a> and PullToRefresh.</li>
     <li>	Import the SfPullToRefresh control and SfListView control namespace as follows.</li>
     <br/>
 {% tabs %}
@@ -400,9 +400,9 @@ To host the .NET MAUI `ListView` inside the `PullToRefresh`, which is used to up
     <li>	Customize the required properties of ListView and PullToRefresh based on your requirement.</li>
 </ol>
 
-This is how the final output will look like on iOS, Android, and Windows Phone devices when hosting a SfListView control as pullable content.
+This is how the final output will look like when hosting a SfListView control as pullable content.
 
-![PullToRefresh with ListView hosted with slide on top transition mode](Images/customization/listview-slideontop.gif)
+![.NET MAUI PullToRefresh with ListView hosted with slide on top transition mode](Images/customization/listview-slideontop.gif)
 
 {% tabs %}
 {% highlight xaml tabtittle="MainPage.xaml" hl_lines="21 23 33 35" %}
@@ -479,11 +479,11 @@ This is how the final output will look like on iOS, Android, and Windows Phone d
 {% endhighlight %}
 {% endtabs %}
 
-You can download the sample code by clicking the following link: [Sample](https://github.com/SyncfusionExamples/load-listview-as-pullable-content-of-.net-maui-pull-to-refresh).
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/load-listview-as-pullable-content-of-.net-maui-pull-to-refresh).
 
 If you run the above sample with the `TransitionMode` as Push, the output will look as follows.
 
-![PullToRefresh with ListView hosted with push transition mode](Images/customization/listview-push.gif)
+![. NET MAUI PullToRefresh with ListView hosted with push transition mode](Images/customization/listview-push.gif)
 
 ## Pulling and refreshing template
 
@@ -635,6 +635,6 @@ Refer to the following code example in which a `SfCircularProgressBar` is loaded
 {% endhighlight %}
 {% endtabs %}
 
-![PullToRefresh view Template](Images/customization/template-slideontop.gif)
+![.NET MAUI PullToRefresh view Template](Images/customization/template-slideontop.gif)
 
-You can download the sample code by clicking the following link: [Sample](https://github.com/SyncfusionExamples/load-datagrid-as-pullable-content-of-.net-maui-pull-to-refresh).
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/load-datagrid-as-pullable-content-of-.net-maui-pull-to-refresh).
