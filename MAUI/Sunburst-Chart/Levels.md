@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Levels in .NET MAUI Sunburst Chart control | Syncfusion
-description: This section explains about levels in Syncfusion .NET MAUI Chart (SfSunburstChart) control
+description: This section explains about levels in Syncfusion .NET MAUI Sunburst Chart control
 platform: maui
 control: SfSunburstChart
 documentation: ug
@@ -17,18 +17,18 @@ The following code shows how to add hierarchical levels in the Levels collection
 
 {% highlight xaml %}
  
-    <chart:SfSunburstChart.Levels>
-        <chart:SunburstHierarchicalLevel/>
-    </chart:SfSunburstChart.Levels>
+    <sunburst:SfSunburstChart.Levels>
+        <sunburst:SunburstHierarchicalLevel/>
+    </sunburst:SfSunburstChart.Levels>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-    SfSunburstChart chart = new SfSunburstChart();
+    SfSunburstChart sunburst = new SfSunburstChart();
     . . . 
     SunburstHierarchicalLevel level = new SunburstHierarchicalLevel();
-    chart.Levels.Add(level);
+    sunburst.Levels.Add(level);
     . . .
 
 {% endhighlight %}
@@ -44,29 +44,22 @@ The [GroupMemberPath]() is a string property that is used to map the group categ
 {% highlight xaml %}
 
     . . .
-        <chart:SfSunburstChart.Levels>
-            <chart:SunburstHierarchicalLevel GroupMemberPath="Level1"/>
-            <chart:SunburstHierarchicalLevel GroupMemberPath="Level2"/>
-            <chart:SunburstHierarchicalLevel GroupMemberPath="Level2"/>
-        </chart:SfSunburstChart.Levels>
+        <sunburst:SfSunburstChart.Levels>
+            <sunburst:SunburstHierarchicalLevel GroupMemberPath="Level1"/>
+            <sunburst:SunburstHierarchicalLevel GroupMemberPath="Level2"/>
+            <sunburst:SunburstHierarchicalLevel GroupMemberPath="Level2"/>
+        </sunburst:SfSunburstChart.Levels>
     . . .
  
 {% endhighlight %}
 
 {% highlight C# %}
 
-    SunburstHierarchicalLevel level1 = new SunburstHierarchicalLevel();
-    level1.GroupMemberPath = "Level1";
-
-    SunburstHierarchicalLevel level2 = new SunburstHierarchicalLevel();
-    level2.GroupMemberPath = "Level2";
-
-    SunburstHierarchicalLevel level3 = new SunburstHierarchicalLevel();
-    level3.GroupMemberPath = "Level3";
-
-    Chart.Levels.Add(level1);
-    Chart.Levels.Add(level2);
-    Chart.Levels.Add(level3);
+    . . .
+    sunburst.Levels.Add(new SunburstHierarchicalLevel() { GroupMemberPath = "Level1" });
+    sunburst.Levels.Add(new SunburstHierarchicalLevel() { GroupMemberPath = "Level2" });
+    sunburst.Levels.Add(new SunburstHierarchicalLevel() { GroupMemberPath = "Level3" });
+    . . .
 
 {% endhighlight %}
 
@@ -78,36 +71,36 @@ The following code specifies the levels for data model specified in the getting 
 
 {% highlight xaml %}
 
-    <chart:SfSunburstChart ItemsSource="{Binding DataSource}" 
+    <sunburst:SfSunburstChart ItemsSource="{Binding DataSource}" 
                            ValueMemberPath="EmployeesCount">
 
-            <chart:SfSunburstChart.Levels>
-                <chart:SunburstHierarchicalLevel GroupMemberPath="Country"/>
-                <chart:SunburstHierarchicalLevel GroupMemberPath="JobDescription"/>
-                <chart:SunburstHierarchicalLevel GroupMemberPath="JobGroup"/>
-                <chart:SunburstHierarchicalLevel GroupMemberPath="JobRole"/>
-            </chart:SfSunburstChart.Levels>
+            <sunburst:SfSunburstChart.Levels>
+                <sunburst:SunburstHierarchicalLevel GroupMemberPath="Country"/>
+                <chasunburstrt:SunburstHierarchicalLevel GroupMemberPath="JobDescription"/>
+                <sunburst:SunburstHierarchicalLevel GroupMemberPath="JobGroup"/>
+                <sunburst:SunburstHierarchicalLevel GroupMemberPath="JobRole"/>
+            </sunburst:SfSunburstChart.Levels>
 
-    </chart:SfSunburstChart>
+    </sunburst:SfSunburstChart>
  
 {% endhighlight %}
 
 {% highlight C# %}
 
-    SfSunburstChart chart = new SfSunburstChart();
+    SfSunburstChart sunburst = new SfSunburstChart();
     SunburstViewModel viewModel = new SunburstViewModel();
-    chart.BindingContext = viewModel;
-    chart.ItemsSource = viewModel.DataSource;
-    chart.ValueMemberPath = "EmployeesCount";
-    chart.Levels.Add(new SunburstHierarchicalLevel() { GroupMemberPath = "Country" });
-    chart.Levels.Add(new SunburstHierarchicalLevel() { GroupMemberPath = "Country" });
-    chart.Levels.Add(new SunburstHierarchicalLevel() { GroupMemberPath = "JobDescription" });
-    chart.Levels.Add(new SunburstHierarchicalLevel() { GroupMemberPath = "JobGroup" });
-    chart.Levels.Add(new SunburstHierarchicalLevel() { GroupMemberPath = "JobRole" });
-    this.Content = chart;
+    sunburst.BindingContext = viewModel;
+    sunburst.ItemsSource = viewModel.DataSource;
+    sunburst.ValueMemberPath = "EmployeesCount";
+    sunburst.Levels.Add(new SunburstHierarchicalLevel() { GroupMemberPath = "Country" });
+    sunburst.Levels.Add(new SunburstHierarchicalLevel() { GroupMemberPath = "Country" });
+    sunburst.Levels.Add(new SunburstHierarchicalLevel() { GroupMemberPath = "JobDescription" });
+    sunburst.Levels.Add(new SunburstHierarchicalLevel() { GroupMemberPath = "JobGroup" });
+    sunburst.Levels.Add(new SunburstHierarchicalLevel() { GroupMemberPath = "JobRole" });
+    this.Content = sunburst;
 
 {% endhighlight %}
 
 {% endtabs %}
 
-![Levels in SunburstChart .NET MAUI Chart](Levels_images/sunburst_chart_levels.png)
+![Levels in .NET MAUI Sunburst Chart](Levels_images/sunburst_chart_levels.png)
