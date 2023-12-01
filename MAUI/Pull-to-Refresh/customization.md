@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Customization in .NET MAUI PullToRefresh control | Syncfusion
-description: Learn about Customization support in Syncfusion .NET MAUI PullToRefresh (SfPullToRefresh) control and more.
+title: Customization features in .NET MAUI PullToRefresh control | Syncfusion
+description: Learn about Customization features support in Syncfusion .NET MAUI PullToRefresh (SfPullToRefresh) control and more.
 platform: MAUI
 control: SfPullToRefresh
 documentation: ug
