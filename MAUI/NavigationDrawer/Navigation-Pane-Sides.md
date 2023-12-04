@@ -86,11 +86,8 @@ public partial class NavigationDrawerPosition : ContentPage
 	public NavigationDrawerPosition()
 	{
 		InitializeComponent();
-        navigationDrawer.DrawerSettings = new DrawerSettings()
-        {
-            Position = Position.Left,
-            DrawerHeaderHeight = 0,
-        };
+        navigationDrawer.DrawerSettings.Position = Position.Left;
+        navigationDrawer.DrawerSettings.DrawerHeaderHeight = 0;
         List<string> list = new List<string>();
         list.Add("Web");
         list.Add("Images");
@@ -184,11 +181,8 @@ public partial class NavigationDrawerPosition : ContentPage
 	public NavigationDrawerPosition()
 	{
 		InitializeComponent();
-        navigationDrawer.DrawerSettings = new DrawerSettings()
-        {
-            Position = Position.Right,
-            DrawerHeaderHeight = 0,
-        };
+         navigationDrawer.DrawerSettings.Position = Position.Right;
+         navigationDrawer.DrawerSettings.DrawerHeaderHeight = 0;
         List<string> list = new List<string>();
         list.Add("Web");
         list.Add("Images");
@@ -285,12 +279,9 @@ public partial class NavigationDrawerPosition : ContentPage
 	public NavigationDrawerPosition()
 	{
 		InitializeComponent();
-        navigationDrawer.DrawerSettings = new DrawerSettings()
-        {
-            Position = Position.Top,
-            DrawerHeaderHeight = 0,
-            DrawerHeight = 300,
-        };
+        navigationDrawer.DrawerSettings.Position = Position.Top;
+        navigationDrawer.DrawerSettings.DrawerHeaderHeight = 0;
+        navigationDrawer.DrawerSettings.DrawerHeight = 300;
         List<string> list = new List<string>();
         list.Add("Web");
         list.Add("Images");
@@ -385,12 +376,9 @@ public partial class NavigationDrawerPosition : ContentPage
 	public NavigationDrawerPosition()
 	{
 		InitializeComponent();
-        navigationDrawer.DrawerSettings = new DrawerSettings()
-        {
-            Position = Position.Bottom,
-            DrawerHeaderHeight = 0,
-            DrawerHeight = 300,
-        };
+        navigationDrawer.DrawerSettings.Position = Position.Bottom;
+        navigationDrawer.DrawerSettings.DrawerHeaderHeight = 0;
+        navigationDrawer.DrawerSettings.DrawerHeight = 300;
         List<string> list = new List<string>();
         list.Add("Web");
         list.Add("Images");

@@ -39,10 +39,7 @@ It can be enabled/disabled using the [`EnableSwipeGesture`]() property.
 	
 {% highlight c# %} 
 
-navigationDrawer.DrawerSettings = new DrawerSettings()
-{
-	EnableSwipeGesture = true,
-};
+navigationDrawer.DrawerSettings.EnableSwipeGesture = true;
 
 {% endhighlight %}
 

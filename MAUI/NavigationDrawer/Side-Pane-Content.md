@@ -73,10 +73,7 @@ public partial class NavigationDrawerView : ContentPage
 	public NavigationDrawerView()
 	{
 		InitializeComponent();
-		navigationDrawer.DrawerSettings = new DrawerSettings()
-		{
-			DrawerWidth = 250,
-		};
+		navigationDrawer.DrawerSettings.DrawerWidth = 250;
 	}
 
     void hamburgerButton_Clicked(object sender, EventArgs e)
@@ -89,7 +86,7 @@ public partial class NavigationDrawerView : ContentPage
 
 {% endtabs %}
 
-![Header](Images/Header.png)
+![Header]()
 
 ## Header Height
 
@@ -145,11 +142,8 @@ public partial class NavigationDrawerView : ContentPage
 	public NavigationDrawerView()
 	{
 		InitializeComponent();
-		navigationDrawer.DrawerSettings = new DrawerSettings()
-		{
-			DrawerWidth = 250,
-			DrawerHeaderHeight = 150,
-		};
+        navigationDrawer.DrawerSettings.DrawerWidth = 250;
+        navigationDrawer.DrawerSettings.DrawerHeaderHeight = 150;
 	}
 
     void hamburgerButton_Clicked(object sender, EventArgs e)
@@ -216,10 +210,7 @@ public partial class NavigationDrawerView : ContentPage
 	public NavigationDrawerView()
 	{
 		InitializeComponent();
-		navigationDrawer.DrawerSettings = new DrawerSettings()
-		{
-			DrawerWidth = 250,
-		};
+		navigationDrawer.DrawerSettings.DrawerWidth = 250;
 	}
 
     void hamburgerButton_Clicked(object sender, EventArgs e)
@@ -288,11 +279,8 @@ public partial class NavigationDrawerView : ContentPage
 	public NavigationDrawerView()
 	{
 		InitializeComponent();
-		navigationDrawer.DrawerSettings = new DrawerSettings()
-		{
-			DrawerWidth = 250,
-			DrawerFooterHeight = 150,
-		};
+        navigationDrawer.DrawerSettings.DrawerWidth = 250;
+        navigationDrawer.DrawerSettings.DrawerFooterHeight = 150;
 	}
 
     void hamburgerButton_Clicked(object sender, EventArgs e)
@@ -359,10 +347,7 @@ public partial class NavigationDrawerView : ContentPage
 	public NavigationDrawerView()
 	{
 		InitializeComponent();
-		navigationDrawer.DrawerSettings = new DrawerSettings()
-		{
-			DrawerWidth = 250,
-		};
+		navigationDrawer.DrawerSettings.DrawerWidth = 250;
 	}
 
     void hamburgerButton_Clicked(object sender, EventArgs e)
