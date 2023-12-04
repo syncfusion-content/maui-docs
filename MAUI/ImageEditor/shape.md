@@ -54,11 +54,9 @@ The [`AnnotationShape`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Imag
 * Polygon
 * Polyline
 
-## Path annotation
+## Polygon
 
-It draws a series of connected straight lines and used to create triangles, pentagons, and other shapes with multiple points.
-
-N> In a polygon shape, a line automatically connects the first and last points.
+A polygon is formed by connecting a series of straight lines, and in addition to the `Points` collection includes specific points, a line is automatically connects the first and last points. 
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -91,7 +89,46 @@ N> In a polygon shape, a line automatically connects the first and last points.
 {% endhighlight %}
 {% endtabs %}
 
-![Shape annotation in .NET Maui ImageEditor](images/shape/imageeditor-path-annotation.png)
+![Polygon annotation in .NET Maui ImageEditor](images/shape/imageeditor-polygon-annotation.png)
+
+## Polyline
+
+It draws a series of connected straight lines and used to create triangles, pentagons, and other shapes with multiple points.
+
+A polyline is similar to a polygon, except the last point in a polyline is not connected to the first point.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+
+   <Grid RowDefinitions="0.9*, 0.1*">
+        <imageEditor:SfImageEditor x:Name="imageEditor"
+                                   Source="image.jpeg" />
+        <Button Grid.Row="1"
+                Text="Polyline"
+                Clicked="OnPolylineClicked" />
+    </Grid>  
+
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+    private void OnPolylineClicked(object sender, EventArgs e)
+    {
+        this.imageEditor.AddShape(AnnotationShape.Polyline,
+            new ImageEditorShapeSettings()
+            {
+                Points = new PointCollection
+                {
+                   new Point(40, 10),
+                   new Point(70, 80),
+                   new Point(10, 50)
+                },
+            });
+    }
+
+{% endhighlight %}
+{% endtabs %}
+
+![Polyline annotation in .NET Maui ImageEditor](images/shape/imageeditor-polyline-annotation.png)
 
 ## Customize shape settings
 
@@ -104,7 +141,7 @@ Customize the appearance of each shape using the [`ImageEditorShapeSettings`](ht
 * [`IsFilled`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorShapeSettings.html#Syncfusion_Maui_ImageEditor_ImageEditorShapeSettings_IsFilled) - Enables or disables the fill color of the shapes. This is applicable only for [`AnnotationShape.Rectangle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.AnnotationShape.html#Syncfusion_Maui_ImageEditor_AnnotationShape_Rectangle) and [`AnnotationShape.Circle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.AnnotationShape.html#Syncfusion_Maui_ImageEditor_AnnotationShape_Circle) shape types.
 * [`StrokeThickness`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorShapeSettings.html#Syncfusion_Maui_ImageEditor_ImageEditorShapeSettings_StrokeThickness) - Specifies the stroke width of the shapes. It is not applicable for [`AnnotationShape.Rectangle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.AnnotationShape.html#Syncfusion_Maui_ImageEditor_AnnotationShape_Rectangle) and [`AnnotationShape.Circle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.AnnotationShape.html#Syncfusion_Maui_ImageEditor_AnnotationShape_Circle) in the filled state.
 * [`Opacity`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorAnnotationSettings.html#Syncfusion_Maui_ImageEditor_ImageEditorAnnotationSettings_Opacity): Specifies the opacity of shape annotation. This value ranges from 0 to 1.
-* `Points`: Specifies the vertex points of the shapes. Position the shapes wherever you want on the image.
+* `Points`: Specifies the vertex points of the shapes. Position the shapes wherever you want on the image. It is applicable for polygon and polyline.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
