@@ -70,8 +70,6 @@ The following code shows trimming the data labels.
 
 {% endtabs %} 
 
-![Overflow Mode Trim](DataLabel_images/overflow_Mode_Trim.png)
-
 ## Hide
 
 The following code shows hiding the data labels.
@@ -102,8 +100,6 @@ The following code shows hiding the data labels.
 {% endhighlight %}
 
 {% endtabs %} 
-
-![Overflow Mode Hide](DataLabel_images/overflow_Mode_Hide.png)
 
 ## Rotation Mode
 
@@ -140,8 +136,6 @@ The following code shows rotating a data label to an angle.
 
 {% endtabs %} 
 
-![Rotation Mode Angle](DataLabel_images/rotationMode_Angle.png)
-
 ## Normal
 
 The following code shows normal mode of data labels.
@@ -172,8 +166,6 @@ The following code shows normal mode of data labels.
 {% endhighlight %}
 
 {% endtabs %} 
-
-![Rotation Mode Normal](DataLabel_images/RotationMode_Normal.png)
 
 ## Data label customization
 
@@ -214,5 +206,3 @@ The following code shows normal mode of data labels.
 {% endhighlight %}
 
 {% endtabs %} 
-
-![Data label customization](DataLabel_images/DataLabel_customization.png)

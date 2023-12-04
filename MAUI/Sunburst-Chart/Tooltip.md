@@ -35,8 +35,6 @@ To define the tooltip in the chart, set the [EnableTooltip]() property of [SfSun
 
 {% endtabs %}
 
-![Tooltip support .NET MAUI Sunburst Chart](Tooltip_images/maui_sunburst_tooltip.png)
-
 ## customization
 
 The appearance of the tooltip can be customized using the following properties:
@@ -83,5 +81,3 @@ The appearance of the tooltip can be customized using the following properties:
 {% endhighlight %}
 
 {% endtabs %}
-
-![Tooltip customization support in .NET MAUI Sunburst Chart](Tooltip_images/tooltip_customization.png)

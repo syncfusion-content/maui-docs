@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with .NET MAUI Sunburst Chart
 
-This section explains how to populate the sunburst chart with data, a title, data labels, a legend, and tooltips, as well as the essential aspects for getting started with the sunburst chart.
+This section explains how to populate the sunburst chart with data, a title, data labels, legend, and tooltip, as well as the essential aspects for getting started with the sunburst chart.
 
 ## Creating an application using the .NET MAUI Sunburst Chart
 
@@ -392,7 +392,5 @@ The following code example gives you the complete code of above configurations.
 {% endhighlight %}
 
 {% endtabs %}
-
-![Sunburst Chart in .NET MAUI](Getting-Started_Images/maui_sunburst_chart.png)
 
 You can find the complete getting started sample from this [link]().

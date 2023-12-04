@@ -40,8 +40,6 @@ The start angle and end angle of the sunburst chart can be adjusted by using the
 
 {% endtabs %}
 
-![Angle support in Sunburst Chart](Customization_images/sunburst_chart_Angle.png)
-
 ## Radius
 
 The sunburst chart allows you to customize the radius by using the [Radius]() property. The default value of this property is 0.9, and the value ranges from 0 to 1.
@@ -69,8 +67,6 @@ The sunburst chart allows you to customize the radius by using the [Radius]() pr
 
 {% endtabs %}
 
-![Radius support in Sunburst Chart](Customization_images/sunburst_chart_Radius.png)
-
 ## Inner radius
 
 The sunburst chart allows you to customize the inner radius using the [InnerRadius]() property. The default value of this property is 0.2, and the value ranges from 0 to 1.
@@ -97,8 +93,6 @@ The sunburst chart allows you to customize the inner radius using the [InnerRadi
 {% endhighlight %}
 
 {% endtabs %}
-
-![InnerRadius support in Sunburst Chart](Customization_images/sunburst_chart_InnerRadius.png)
 
 ## Stroke customization
 
@@ -128,5 +122,3 @@ Stroke color and stroke width of the sunburst chart can be customized using [Str
 {% endhighlight %}
 
 {% endtabs %}
-
-![Stoke support in Sunburst Chart](Customization_images/sunburst_chart_stoke.png)

@@ -71,5 +71,3 @@ Animation duration can be controlled using the [AnimationDuration]() property.
 {% endhighlight %}
 
 {% endtabs %}
-
-![Animation support in .NET MAUI Sunburst Chart]()

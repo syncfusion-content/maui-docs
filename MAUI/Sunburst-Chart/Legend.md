@@ -98,5 +98,3 @@ The following code shows customizing the legend Placement.
 {% endhighlight %}
 
 {% endtabs %} 
-
-![Legend placement in Sunburst Chart](Legend_images/sunburst_chart_legend_placement.png)

@@ -102,5 +102,3 @@ The following code specifies the levels for data model specified in the getting 
 {% endhighlight %}
 
 {% endtabs %}
-
-![Levels in .NET MAUI Sunburst Chart](Levels_images/sunburst_chart_levels.png)
