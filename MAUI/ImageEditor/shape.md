@@ -51,6 +51,47 @@ The [`AnnotationShape`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Imag
 * DoubleArrow
 * DottedArrow
 * DottedDoubleArrow
+* Polygon
+* Polyline
+
+## Path annotation
+
+It draws a series of connected straight lines and used to create triangles, pentagons, and other shapes with multiple points.
+
+N> In a polygon shape, a line automatically connects the first and last points.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+
+   <Grid RowDefinitions="0.9*, 0.1*">
+        <imageEditor:SfImageEditor x:Name="imageEditor"
+                                   Source="image.jpeg" />
+        <Button Grid.Row="1"
+                Text="Polygon"
+                Clicked="OnPolygonClicked" />
+    </Grid>  
+
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+    private void OnPolygonClicked(object sender, EventArgs e)
+    {
+        this.imageEditor.AddShape(AnnotationShape.Polygon,
+            new ImageEditorShapeSettings()
+            {
+                Points = new PointCollection
+                {
+                   new Point(40, 10),
+                   new Point(70, 80),
+                   new Point(10, 50)
+                },
+            });
+    }
+
+{% endhighlight %}
+{% endtabs %}
+
+![Shape annotation in .NET Maui ImageEditor](images/shape/imageeditor-path-annotation.png)
 
 ## Customize shape settings
 
@@ -63,6 +104,7 @@ Customize the appearance of each shape using the [`ImageEditorShapeSettings`](ht
 * [`IsFilled`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorShapeSettings.html#Syncfusion_Maui_ImageEditor_ImageEditorShapeSettings_IsFilled) - Enables or disables the fill color of the shapes. This is applicable only for [`AnnotationShape.Rectangle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.AnnotationShape.html#Syncfusion_Maui_ImageEditor_AnnotationShape_Rectangle) and [`AnnotationShape.Circle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.AnnotationShape.html#Syncfusion_Maui_ImageEditor_AnnotationShape_Circle) shape types.
 * [`StrokeThickness`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorShapeSettings.html#Syncfusion_Maui_ImageEditor_ImageEditorShapeSettings_StrokeThickness) - Specifies the stroke width of the shapes. It is not applicable for [`AnnotationShape.Rectangle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.AnnotationShape.html#Syncfusion_Maui_ImageEditor_AnnotationShape_Rectangle) and [`AnnotationShape.Circle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.AnnotationShape.html#Syncfusion_Maui_ImageEditor_AnnotationShape_Circle) in the filled state.
 * [`Opacity`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorAnnotationSettings.html#Syncfusion_Maui_ImageEditor_ImageEditorAnnotationSettings_Opacity): Specifies the opacity of shape annotation. This value ranges from 0 to 1.
+* `Points`: Specifies the vertex points of the shapes. Position the shapes wherever you want on the image.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
