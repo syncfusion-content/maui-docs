@@ -203,7 +203,6 @@ public partial class NavigationDrawerPage : ContentPage
 	public NavigationDrawerPage()
 	{
 		InitializeComponent();
-        
     }
 
     private void hamburgerButton_Clicked(object sender, EventArgs e)
