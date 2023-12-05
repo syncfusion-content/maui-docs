@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with .NET MAUI Navigation Drawer (SfNavigationDrawer)
 
-This section explains the steps required to configure the `.NET MAUI NavigationDrawer` with a content area and a data-filled drawer. It covers only the minimal features that you need to know to get started with the NavigationDrawer in a short number of words.
+This section explains how to add the `.NET MAUI NavigationDrawer control.` This section covers only the basic features needed to get started with Syncfusion .NET MAUI NavigationDrawer.
 
 ## Adding a .NET MAUI SfNavigationDrawer reference
 
