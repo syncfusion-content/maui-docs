@@ -21,16 +21,6 @@ It can be enabled/disabled using the `EnableSwipeGesture` property.
 <navigationdrawer:SfNavigationDrawer x:Name="navigationDrawer">
     <navigationdrawer:SfNavigationDrawer.DrawerSettings>
         <navigationdrawer:DrawerSettings EnableSwipeGesture="True">
-            <navigationdrawer:DrawerSettings.DrawerHeaderView>
-                <Grid BackgroundColor="#1aa1d6"
-                      VerticalOptions="Center"
-                      HorizontalOptions="Center">
-                    <Label Text="Header view"
-                           FontSize="16"
-                           VerticalOptions="Center"
-                           HorizontalOptions="Center"/>
-                </Grid>
-            </navigationdrawer:DrawerSettings.DrawerHeaderView>
         </navigationdrawer:DrawerSettings>
     </navigationdrawer:SfNavigationDrawer.DrawerSettings>
 </navigationdrawer:SfNavigationDrawer>
@@ -39,7 +29,13 @@ It can be enabled/disabled using the `EnableSwipeGesture` property.
 	
 {% highlight c# %} 
 
-navigationDrawer.DrawerSettings.EnableSwipeGesture = true;
+SfNavigationDrawer navigationDrawer = new SfNavigationDrawer();
+DrawerSettings drawerSettings = new DrawerSettings()
+{
+    EnableSwipeGesture= true,
+};
+navigationDrawer.DrawerSettings = drawerSettings;
+this.Content = navigationDrawer;
 
 {% endhighlight %}
 

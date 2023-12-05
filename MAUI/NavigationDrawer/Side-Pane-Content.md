@@ -10,7 +10,7 @@ documentation: ug
 
 # Setting Sliding Panel Content in .NET MAUI Navigation Drawer
 
-The drawer pane content is viewable only if the drawer is in the open state. Its content can be set as
+The drawer pane content is only viewable when the drawer is in the open state. Its content can be set as
 
 *	Header Content
 
@@ -22,7 +22,7 @@ N> Header and Footer content are optional but Drawer content is mandatory to all
 		
 ## Header Content
 
-As the name suggests it is displayed at the top of drawer. [`DrawerHeaderView`]() property is used to set the header content of drawer. 
+As the name suggests it is displayed at the top of drawer. The `DrawerHeaderView` property is used to set the header content of drawer. 
 
 {% tabs %}
 
@@ -41,22 +41,6 @@ As the name suggests it is displayed at the top of drawer. [`DrawerHeaderView`](
             </navigationdrawer:DrawerSettings.DrawerHeaderView>
         </navigationdrawer:DrawerSettings>
     </navigationdrawer:SfNavigationDrawer.DrawerSettings>
-    <navigationdrawer:SfNavigationDrawer.ContentView>
-        <VerticalStackLayout>
-            <HorizontalStackLayout BackgroundColor="#1aa1d6" 
-                  HeightRequest="50" 
-                  VerticalOptions="Start"
-                  Padding="5,0,0,0">
-                <ImageButton x:Name="hamburgerButton"
-                             HeightRequest="50"
-                             WidthRequest="50"
-                             HorizontalOptions="Start"
-                             Source="hamburgericon.png"
-                             BackgroundColor="#1aa1d6"
-                             Clicked="hamburgerButton_Clicked"/>
-            </HorizontalStackLayout>
-        </VerticalStackLayout>
-    </navigationdrawer:SfNavigationDrawer.ContentView>
 </navigationdrawer:SfNavigationDrawer>
 
 
@@ -64,23 +48,13 @@ As the name suggests it is displayed at the top of drawer. [`DrawerHeaderView`](
 
 {% highlight c# %}
 
-using Syncfusion.Maui.NavigationDrawer;
-
-namespace NavigationSample;
-
-public partial class NavigationDrawerView : ContentPage
+SfNavigationDrawer navigationDrawer = new SfNavigationDrawer();
+DrawerSettings drawerSettings = new DrawerSettings()
 {
-	public NavigationDrawerView()
-	{
-		InitializeComponent();
-		navigationDrawer.DrawerSettings.DrawerWidth = 250;
-	}
-
-    void hamburgerButton_Clicked(object sender, EventArgs e)
-    {
-        navigationDrawer.ToggleDrawer();
-    }
-}
+    DrawerWidth = 250,
+};
+navigationDrawer.DrawerSettings = drawerSettings;
+this.Content = navigationDrawer;
   
 {% endhighlight %}
 
@@ -90,9 +64,9 @@ public partial class NavigationDrawerView : ContentPage
 
 ## Header Height
 
-The height of the drawer header content can be adjusted using the [`DrawerHeaderHeight`]() property.
+The height of the drawer header content can be adjusted using the `DrawerHeaderHeight` property.
 
-N> [`DrawerHeaderView`]() will be disabled by setting the [`DrawerHeaderHeight`]() to zero.
+N> `DrawerHeaderView` will be disabled by setting the `DrawerHeaderHeight` to zero.
 
 {% tabs %}
 
@@ -111,46 +85,20 @@ N> [`DrawerHeaderView`]() will be disabled by setting the [`DrawerHeaderHeight`]
             </navigationdrawer:DrawerSettings.DrawerHeaderView>
         </navigationdrawer:DrawerSettings>
     </navigationdrawer:SfNavigationDrawer.DrawerSettings>
-    <navigationdrawer:SfNavigationDrawer.ContentView>
-        <VerticalStackLayout>
-            <HorizontalStackLayout BackgroundColor="#1aa1d6" 
-                  HeightRequest="50" 
-                  VerticalOptions="Start"
-                  Padding="5,0,0,0">
-                <ImageButton x:Name="hamburgerButton"
-                             HeightRequest="50"
-                             WidthRequest="50"
-                             HorizontalOptions="Start"
-                             Source="hamburgericon.png"
-                             BackgroundColor="#1aa1d6"
-                             Clicked="hamburgerButton_Clicked"/>
-            </HorizontalStackLayout>
-        </VerticalStackLayout>
-    </navigationdrawer:SfNavigationDrawer.ContentView>
 </navigationdrawer:SfNavigationDrawer>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-using Syncfusion.Maui.NavigationDrawer;
-
-namespace NavigationSample;
-
-public partial class NavigationDrawerView : ContentPage
+SfNavigationDrawer navigationDrawer = new SfNavigationDrawer();
+DrawerSettings drawerSettings = new DrawerSettings()
 {
-	public NavigationDrawerView()
-	{
-		InitializeComponent();
-        navigationDrawer.DrawerSettings.DrawerWidth = 250;
-        navigationDrawer.DrawerSettings.DrawerHeaderHeight = 150;
-	}
-
-    void hamburgerButton_Clicked(object sender, EventArgs e)
-    {
-        navigationDrawer.ToggleDrawer();
-    }
-}
+    DrawerHeaderHeight = 150,
+    DrawerWidth = 250,
+};
+navigationDrawer.DrawerSettings = drawerSettings;
+this.Content = navigationDrawer;
 
 {% endhighlight %}
 
@@ -160,7 +108,7 @@ public partial class NavigationDrawerView : ContentPage
 
 ## Footer Content
 
-As the name suggests it is displayed at the bottom of the drawer. The  [`DrawerFooterView`]() property is used to set the footer content of the drawer. 
+As the name suggests it is displayed at the bottom of the drawer. The `DrawerFooterView` property is used to set the footer content of the drawer. 
 
 {% tabs %}
 
@@ -179,45 +127,19 @@ As the name suggests it is displayed at the bottom of the drawer. The  [`DrawerF
             </navigationdrawer:DrawerSettings.DrawerFooterView>
         </navigationdrawer:DrawerSettings>
     </navigationdrawer:SfNavigationDrawer.DrawerSettings>
-    <navigationdrawer:SfNavigationDrawer.ContentView>
-        <VerticalStackLayout>
-            <HorizontalStackLayout BackgroundColor="#1aa1d6" 
-                  HeightRequest="50" 
-                  VerticalOptions="Start"
-                  Padding="5,0,0,0">
-                <ImageButton x:Name="hamburgerButton"
-                             HeightRequest="50"
-                             WidthRequest="50"
-                             HorizontalOptions="Start"
-                             Source="hamburgericon.png"
-                             BackgroundColor="#1aa1d6"
-                             Clicked="hamburgerButton_Clicked"/>
-            </HorizontalStackLayout>
-        </VerticalStackLayout>
-    </navigationdrawer:SfNavigationDrawer.ContentView>
 </navigationdrawer:SfNavigationDrawer>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-using Syncfusion.Maui.NavigationDrawer;
-
-namespace NavigationSample;
-
-public partial class NavigationDrawerView : ContentPage
+SfNavigationDrawer navigationDrawer = new SfNavigationDrawer();
+DrawerSettings drawerSettings = new DrawerSettings()
 {
-	public NavigationDrawerView()
-	{
-		InitializeComponent();
-		navigationDrawer.DrawerSettings.DrawerWidth = 250;
-	}
-
-    void hamburgerButton_Clicked(object sender, EventArgs e)
-    {
-        navigationDrawer.ToggleDrawer();
-    }
-}
+    DrawerWidth = 250,
+};
+navigationDrawer.DrawerSettings = drawerSettings;
+this.Content = navigationDrawer;
 
 {% endhighlight %}
 
@@ -227,9 +149,9 @@ public partial class NavigationDrawerView : ContentPage
 
 ## Footer Height
 
-The height of the drawer footer content can be adjusted using the [`DrawerFooterHeight`]() property.
+The height of the drawer footer content can be adjusted using the `DrawerFooterHeight` property.
 
-N> [`DrawerFooterView`]() will be disabled by setting the [`DrawerFooterHeight`]() to zero 
+N> `DrawerFooterView` will be disabled by setting the `DrawerFooterHeight` to zero 
 
 {% tabs %}
 
@@ -248,46 +170,20 @@ N> [`DrawerFooterView`]() will be disabled by setting the [`DrawerFooterHeight`]
             </navigationdrawer:DrawerSettings.DrawerFooterView>
         </navigationdrawer:DrawerSettings>
     </navigationdrawer:SfNavigationDrawer.DrawerSettings>
-    <navigationdrawer:SfNavigationDrawer.ContentView>
-        <VerticalStackLayout>
-            <HorizontalStackLayout BackgroundColor="#1aa1d6" 
-                  HeightRequest="50" 
-                  VerticalOptions="Start"
-                  Padding="5,0,0,0">
-                <ImageButton x:Name="hamburgerButton"
-                             HeightRequest="50"
-                             WidthRequest="50"
-                             HorizontalOptions="Start"
-                             Source="hamburgericon.png"
-                             BackgroundColor="#1aa1d6"
-                             Clicked="hamburgerButton_Clicked"/>
-            </HorizontalStackLayout>
-        </VerticalStackLayout>
-    </navigationdrawer:SfNavigationDrawer.ContentView>
 </navigationdrawer:SfNavigationDrawer>
 	
 {% endhighlight %}
 
 {% highlight c# %}
         
-using Syncfusion.Maui.NavigationDrawer;
-
-namespace NavigationSample;
-
-public partial class NavigationDrawerView : ContentPage
+SfNavigationDrawer navigationDrawer = new SfNavigationDrawer();
+DrawerSettings drawerSettings = new DrawerSettings()
 {
-	public NavigationDrawerView()
-	{
-		InitializeComponent();
-        navigationDrawer.DrawerSettings.DrawerWidth = 250;
-        navigationDrawer.DrawerSettings.DrawerFooterHeight = 150;
-	}
-
-    void hamburgerButton_Clicked(object sender, EventArgs e)
-    {
-        navigationDrawer.ToggleDrawer();
-    }
-}
+    DrawerFooterHeight = 150,
+    DrawerWidth = 250,
+};  
+navigationDrawer.DrawerSettings = drawerSettings;
+this.Content = navigationDrawer;
   
 {% endhighlight %}
 
@@ -297,7 +193,7 @@ public partial class NavigationDrawerView : ContentPage
 
 ## Main Content
 
-Drawer main content is displayed in between header and footer content. It can be set using the [`DrawerContentView`]() property. Content view occupies the remaining space left by header and footer content.
+The main content of the drawer is displayed between the header and footer content. It can be set using the `DrawerContentView` property. The content view occupies the remaining space left by the header and footer content.
 
 {% tabs %}
 
@@ -316,45 +212,19 @@ Drawer main content is displayed in between header and footer content. It can be
             </navigationdrawer:DrawerSettings.DrawerContentView>
         </navigationdrawer:DrawerSettings>
     </navigationdrawer:SfNavigationDrawer.DrawerSettings>
-    <navigationdrawer:SfNavigationDrawer.ContentView>
-        <VerticalStackLayout>
-            <HorizontalStackLayout BackgroundColor="#1aa1d6" 
-                  HeightRequest="50" 
-                  VerticalOptions="Start"
-                  Padding="5,0,0,0">
-                <ImageButton x:Name="hamburgerButton"
-                             HeightRequest="50"
-                             WidthRequest="50"
-                             HorizontalOptions="Start"
-                             Source="hamburgericon.png"
-                             BackgroundColor="#1aa1d6"
-                             Clicked="hamburgerButton_Clicked"/>
-            </HorizontalStackLayout>
-        </VerticalStackLayout>
-    </navigationdrawer:SfNavigationDrawer.ContentView>
 </navigationdrawer:SfNavigationDrawer>
 	
 {% endhighlight %}
 
 {% highlight c# %}
         
-using Syncfusion.Maui.NavigationDrawer;
-
-namespace NavigationSample;
-
-public partial class NavigationDrawerView : ContentPage
+SfNavigationDrawer navigationDrawer = new SfNavigationDrawer();
+DrawerSettings drawerSettings = new DrawerSettings()
 {
-	public NavigationDrawerView()
-	{
-		InitializeComponent();
-		navigationDrawer.DrawerSettings.DrawerWidth = 250;
-	}
-
-    void hamburgerButton_Clicked(object sender, EventArgs e)
-    {
-        navigationDrawer.ToggleDrawer();
-    }
-}
+    DrawerWidth = 250,
+};
+navigationDrawer.DrawerSettings = drawerSettings;
+this.Content = navigationDrawer;
   
 {% endhighlight %}
 

@@ -329,4 +329,4 @@ public partial class NavigationDrawerPage : ContentPage
 
 {% endtabs %}
 
-You can find the Getting Started Sample from this `link.`
+You can find the Getting Started Sample from this [`link.`](https://github.com/SyncfusionExamples/Getting-started-sample-for-.NET-MAUI-NavigationDrawer)

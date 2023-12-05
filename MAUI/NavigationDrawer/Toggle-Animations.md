@@ -8,15 +8,15 @@ documentation: ug
 ---
 # Setting Toggle Animations in .NET MAUI Navigation Drawer
 
-The drawer toggling animation can be changed using [`Transition`]() property and it can be set to three different values. They are
+The drawer toggling animation can be changed using `Transition` property and it can be set to three different values. They are
 
-* [`SlideOnTop`]()
+* `SlideOnTop`
 
-* [`Push`]()
+* `Push`
 
-* [`Reveal`]()
+* `Reveal`
 
-N> The default animation is [`SlideOnTop`]().
+N> The default animation is `SlideOnTop`.
 
 ## SlideOnTop
 
@@ -28,56 +28,22 @@ The navigation pane overlays the main content area when it is opened. It can be 
 
 <navigationdrawer:SfNavigationDrawer x:Name="navigationDrawer">
     <navigationdrawer:SfNavigationDrawer.DrawerSettings>
-        <navigationdrawer:DrawerSettings DrawerWidth="250"
-                                         Transition="SlideOnTop">
-            <navigationdrawer:DrawerSettings.DrawerHeaderView>
-                <Grid BackgroundColor="#1aa1d6">
-                    <Label Text="Header View"
-                       HorizontalTextAlignment="Center"
-                       HorizontalOptions="Center"
-                       FontSize="20"
-                       TextColor="White"/>
-                </Grid>
-            </navigationdrawer:DrawerSettings.DrawerHeaderView>
+        <navigationdrawer:DrawerSettings Transition="SlideOnTop">
         </navigationdrawer:DrawerSettings>
     </navigationdrawer:SfNavigationDrawer.DrawerSettings>
-    <navigationdrawer:SfNavigationDrawer.ContentView>
-        <Grid x:Name="mainContentView" 
-      BackgroundColor="White" RowDefinitions="Auto,*">
-            <HorizontalStackLayout BackgroundColor="#1aa1d6" Spacing="10" Padding="5,0,0,0">
-                <ImageButton x:Name="hamburgerButton"
-                         HeightRequest="50"
-                         WidthRequest="50"
-                         HorizontalOptions="Start"
-                         Source="hamburgericon.png"
-                         BackgroundColor="#1aa1d6"
-                         Clicked="hamburgerButton_Clicked"/>
-            </HorizontalStackLayout>
-        </Grid>
-    </navigationdrawer:SfNavigationDrawer.ContentView>
 </navigationdrawer:SfNavigationDrawer>
 	
 {% endhighlight %}	
 	
 {% highlight c# %} 
 
-using Syncfusion.Maui.NavigationDrawer;
-
-namespace NavigationSample;
-
-public partial class NavigationDrawerAnimation : ContentPage
+SfNavigationDrawer navigationDrawer = new SfNavigationDrawer();
+DrawerSettings drawerSettings = new DrawerSettings()
 {
-	public NavigationDrawerAnimation()
-	{
-		InitializeComponent();
-        navigationDrawer.DrawerSettings.Transition = Transition.SlideOnTop;
-	}
-
-    private void hamburgerButton_Clicked(object sender, EventArgs e)
-    {
-        navigationDrawer.ToggleDrawer();
-    }
-}
+    Transition = Transition.SlideOnTop,
+};
+navigationDrawer.DrawerSettings = drawerSettings;
+this.Content = navigationDrawer;
 
 {% endhighlight %}
 
@@ -95,56 +61,22 @@ The navigation pane is hidden. When it is opened, it will push the main content 
 
 <navigationdrawer:SfNavigationDrawer x:Name="navigationDrawer">
     <navigationdrawer:SfNavigationDrawer.DrawerSettings>
-        <navigationdrawer:DrawerSettings DrawerWidth="250"
-                                         Transition="Push">
-            <navigationdrawer:DrawerSettings.DrawerHeaderView>
-                <Grid BackgroundColor="#1aa1d6">
-                    <Label Text="Header View"
-                       HorizontalTextAlignment="Center"
-                       HorizontalOptions="Center"
-                       FontSize="20"
-                       TextColor="White"/>
-                </Grid>
-            </navigationdrawer:DrawerSettings.DrawerHeaderView>
+        <navigationdrawer:DrawerSettings Transition="Push">
         </navigationdrawer:DrawerSettings>
     </navigationdrawer:SfNavigationDrawer.DrawerSettings>
-    <navigationdrawer:SfNavigationDrawer.ContentView>
-        <Grid x:Name="mainContentView" 
-      BackgroundColor="White" RowDefinitions="Auto,*">
-            <HorizontalStackLayout BackgroundColor="#1aa1d6" Spacing="10" Padding="5,0,0,0">
-                <ImageButton x:Name="hamburgerButton"
-                         HeightRequest="50"
-                         WidthRequest="50"
-                         HorizontalOptions="Start"
-                         Source="hamburgericon.png"
-                         BackgroundColor="#1aa1d6"
-                         Clicked="hamburgerButton_Clicked"/>
-            </HorizontalStackLayout>
-        </Grid>
-    </navigationdrawer:SfNavigationDrawer.ContentView>
 </navigationdrawer:SfNavigationDrawer>
 
 {% endhighlight %}
 	
 {% highlight c# %} 
 
-using Syncfusion.Maui.NavigationDrawer;
-
-namespace NavigationSample;
-
-public partial class NavigationDrawerAnimation : ContentPage
+SfNavigationDrawer navigationDrawer = new SfNavigationDrawer();
+DrawerSettings drawerSettings = new DrawerSettings()
 {
-	public NavigationDrawerAnimation()
-	{
-		InitializeComponent();
-        navigationDrawer.DrawerSettings.Transition = Transition.Push;
-	}
-
-    private void hamburgerButton_Clicked(object sender, EventArgs e)
-    {
-        navigationDrawer.ToggleDrawer();
-    }
-}
+    Transition = Transition.Push,
+};
+navigationDrawer.DrawerSettings = drawerSettings;
+this.Content = navigationDrawer;
 
 {% endhighlight %}
 
@@ -162,56 +94,22 @@ The navigation pane is hidden behind the main content. The main content moves aw
 
 <navigationdrawer:SfNavigationDrawer x:Name="navigationDrawer">
     <navigationdrawer:SfNavigationDrawer.DrawerSettings>
-        <navigationdrawer:DrawerSettings DrawerWidth="250"
-                                         Transition="Reveal">
-            <navigationdrawer:DrawerSettings.DrawerHeaderView>
-                <Grid BackgroundColor="#1aa1d6">
-                    <Label Text="Header View"
-                       HorizontalTextAlignment="Center"
-                       HorizontalOptions="Center"
-                       FontSize="20"
-                       TextColor="White"/>
-                </Grid>
-            </navigationdrawer:DrawerSettings.DrawerHeaderView>
+        <navigationdrawer:DrawerSettings Transition="Reveal">
         </navigationdrawer:DrawerSettings>
     </navigationdrawer:SfNavigationDrawer.DrawerSettings>
-    <navigationdrawer:SfNavigationDrawer.ContentView>
-        <Grid x:Name="mainContentView" 
-      BackgroundColor="White" RowDefinitions="Auto,*">
-            <HorizontalStackLayout BackgroundColor="#1aa1d6" Spacing="10" Padding="5,0,0,0">
-                <ImageButton x:Name="hamburgerButton"
-                         HeightRequest="50"
-                         WidthRequest="50"
-                         HorizontalOptions="Start"
-                         Source="hamburgericon.png"
-                         BackgroundColor="#1aa1d6"
-                         Clicked="hamburgerButton_Clicked"/>
-            </HorizontalStackLayout>
-        </Grid>
-    </navigationdrawer:SfNavigationDrawer.ContentView>
 </navigationdrawer:SfNavigationDrawer>
 	
 {% endhighlight %}	
 	
 {% highlight c# %} 
 
-using Syncfusion.Maui.NavigationDrawer;
-
-namespace NavigationSample;
-
-public partial class NavigationDrawerAnimation : ContentPage
+SfNavigationDrawer navigationDrawer = new SfNavigationDrawer();
+DrawerSettings drawerSettings = new DrawerSettings()
 {
-	public NavigationDrawerAnimation()
-	{
-		InitializeComponent();
-        navigationDrawer.DrawerSettings.Transition = Transition.Reveal;
-	}
-
-    private void hamburgerButton_Clicked(object sender, EventArgs e)
-    {
-        navigationDrawer.ToggleDrawer();
-    }
-}
+    Transition = Transition.Reveal,
+};
+navigationDrawer.DrawerSettings = drawerSettings;
+this.Content = navigationDrawer;
 
 {% endhighlight %}
 

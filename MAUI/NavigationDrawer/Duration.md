@@ -10,7 +10,7 @@ documentation: ug
 
 ## Animation Duration in SfNavigationDrawer
 
-The [`Duration`]() property of [`SfNavigationDrawer`]() indicates the timeline for completing one animation cycle. Setting a smaller duration value accelerates animation speed.
+The `Duration` property of `SfNavigationDrawer` indicates the timeline for completing one animation cycle. Setting a smaller duration value accelerates animation speed.
 
 {% tabs %}
 
@@ -18,9 +18,7 @@ The [`Duration`]() property of [`SfNavigationDrawer`]() indicates the timeline f
 
 <navigationdrawer:SfNavigationDrawer x:Name="navigationDrawer">
     <navigationdrawer:SfNavigationDrawer.DrawerSettings>
-        <navigationdrawer:DrawerSettings DrawerWidth="300"
-                                         Duration="1"
-                                         DrawerHeaderHeight="160"/>
+        <navigationdrawer:DrawerSettings  Duration="1"/>
     </navigationdrawer:SfNavigationDrawer.DrawerSettings>
 </navigationdrawer:SfNavigationDrawer>
 
@@ -28,34 +26,17 @@ The [`Duration`]() property of [`SfNavigationDrawer`]() indicates the timeline f
 
 {% highlight c# %}
 
-using Syncfusion.Maui.NavigationDrawer;
-
-namespace NavigationSample;
-
-public partial class NavigationDrawerPage : ContentPage
+SfNavigationDrawer navigationDrawer = new SfNavigationDrawer();
+navigationDrawer.DrawerSettings = new DrawerSettings()
 {
-	public NavigationDrawerPage()
-	{
-		InitializeComponent();
-        SfNavigationDrawer navigationDrawer = new SfNavigationDrawer();
-        navigationDrawer.DrawerSettings = new DrawerSettings()
-        {
-            DrawerWidth = 300,
-            Duration = 1,
-            DrawerHeaderHeight = 160,
-        };
-        this.Content = navigationDrawer;
-    }
-}
+    Duration = 1,
+};
+this.Content = navigationDrawer;
 
-    
 {% endhighlight %}
 
 {% endtabs %}
 
-
 The following screenshot illustrates the result of the above code.
 
 ![Maximum Duration]()
-
-
