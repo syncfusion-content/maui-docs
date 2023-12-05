@@ -106,7 +106,7 @@ N> It is mandatory to set `ContentView` for `SfNavigationDrawer` on initializing
 
 ## Adjust Drawer Size
 
-The default position of the navigation pane is on the left, so let's change the drawer width to 250 by using the `DrawerWidth` property.
+The default position of the navigation pane is on the left, so change the drawer width to 250 by using the `DrawerWidth` property.
 
 {% tabs %}	
 {% highlight xaml %}
@@ -152,7 +152,7 @@ N> To change the side of the navigation pane, utilize the `Position` property. A
 
 ## Add Hamburger Menu for Toggling Drawer
 
-Create an ImageButton and set the required image to the `Source` property. Subscribe Clicked event of the button and invoke the `ToggleDrawer()` method within it to toggle the drawer. Properly align the layout of `ContentView` to position the hamburger icon at the top left, as demonstrated in the following code,
+Create an ImageButton and set the required image to the `Source` property. Subscribe Clicked event of the button and invoke the `ToggleDrawer()` method to toggle the drawer. Properly align the layout of `ContentView` to position the hamburger icon at the top left, as demonstrated in the following code.
 
 {% tabs %}	
 

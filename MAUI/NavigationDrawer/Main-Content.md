@@ -10,7 +10,7 @@ documentation: ug
 
 # Setting Main Content in .NET MAUI Navigation Drawer (SfNavigationDrawer)
 
-The main content of the NavigationDrawer is always visible and can be set using the `ContentView` property. In the code example below, the `ContentView` is switched when the selection changes in the ListView. In short, this allows for easy navigation and switching of content.
+The main content of the NavigationDrawer is always visible and can be set using the `ContentView` property. In the following code example, the `ContentView` is switched when the selection changes in the ListView. In short, this allows for easy navigation and switching of content.
 
 {% tabs %}
 

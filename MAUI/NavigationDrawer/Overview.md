@@ -13,6 +13,6 @@ The NavigationDrawer for .NET MAUI is a simpler component to create a navigation
 
 ## Key Features
 
-* Pane positions – Supports pane position in all four directions such as Left, Right, Top and Bottom. 
+* Pane positions – Supports pane position in all four directions: Left, Right, Top, and Bottom.
 
-* Animated transitions – Supports opening/closing of pane due to the transition SlideOnTop, Push and Reveal.
+* Animated transitions – Supports opening/closing of pane due to the transition SlideOnTop, Push, and Reveal.

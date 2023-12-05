@@ -8,7 +8,7 @@ documentation: ug
 ---
 # Setting Toggle Animations in .NET MAUI Navigation Drawer
 
-The drawer toggling animation can be changed using `Transition` property and it can be set to three different values. They are
+The drawer toggling animation can be changed using the `Transition` property, and it can be set to three different values. Which are:
 
 * `SlideOnTop`
 
@@ -20,7 +20,7 @@ N> The default animation is `SlideOnTop`.
 
 ## SlideOnTop
 
-The navigation pane overlays the main content area when it is opened. It can be set as shown below:
+The navigation pane overlays the main content area when it is opened. It can be set as follows:
 
 {% tabs %}
 
@@ -53,7 +53,7 @@ this.Content = navigationDrawer;
 
 ## Push
 
-The navigation pane is hidden. When it is opened, it will push the main content area on the opposite side up to the width of the drawer. It can be set as shown below:
+The navigation pane is hidden. When opened, it will push the main content area on the opposite side up to the width of the drawer. It can be set as follows:
 
 {% tabs %}	
 
@@ -86,7 +86,7 @@ this.Content = navigationDrawer;
 
 ## Reveal
 
-The navigation pane is hidden behind the main content. The main content moves away on the opposite side up to the drawer width to show the drawer content. It can be set as shown below:
+The navigation pane is hidden behind the main content. The main content moves away on the opposite side up to the drawer width to show the drawer content. It can be set as follows:
 
 {% tabs %}
 

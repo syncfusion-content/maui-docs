@@ -8,21 +8,21 @@ documentation: ug
 ---
 # Configuring The Drawer In Different Sides in .NET MAUI Navigation Drawer
 
-The supplemental pane can be pulled in and out from all four sides. The `Position` property is used to change the side of the pane, and the options are,
+The supplemental pane can be pulled in and out from all four sides. The `Position` property is used to change the side of the pane, and the options are:
 
-*	[`Left`]()
+*	`Left`
 
-*	[`Right`]()
+*	`Right`
 
-*	[`Top`]()
+*	`Top`
 
-*	[`Bottom`]()
+*	`Bottom`
 
-N> The default position is [`Left`]().
+N> The default position is `Left`.
 
 ## Left
 
-The navigation pane pulled in and out from the `Left` side. It can be set as shown below:
+The navigation pane pulled in and out from the `Left` side can be set as follows:
 
 {% tabs %}	
 
@@ -55,7 +55,7 @@ The navigation pane pulled in and out from the `Left` side. It can be set as sho
 
 ## Right
 
-The navigation pane pulled in and out from the `Right` side. It can be set as shown below:
+The navigation pane pulled in and out from the `Right` side can be set as follows:
 
 {% tabs %}	
 
@@ -88,7 +88,7 @@ The navigation pane pulled in and out from the `Right` side. It can be set as sh
 	
 ## Top
 
-The navigation pane pulled in and out from the `Top` side. It can be set as shown below:
+The navigation pane pulled in and out from the `Top` side can be set as follows:
 
 {% tabs %}
 
@@ -122,7 +122,7 @@ The navigation pane pulled in and out from the `Top` side. It can be set as show
 
 ## Bottom
 
-The navigation pane pulled in and out from the `Bottom` side. It can be set as shown below:
+The navigation pane pulled in and out from the `Bottom` side can be set as follows:
 
 {% tabs %}	
 

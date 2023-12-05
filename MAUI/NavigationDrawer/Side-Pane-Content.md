@@ -10,7 +10,7 @@ documentation: ug
 
 # Setting Sliding Panel Content in .NET MAUI Navigation Drawer
 
-The drawer pane content is only viewable when the drawer is in the open state. Its content can be set as
+The drawer pane content is only viewable when the drawer is in the open state. Its content can be set as:
 
 *	Header Content
 
@@ -18,11 +18,11 @@ The drawer pane content is only viewable when the drawer is in the open state. I
 
 *	Footer Content
 
-N> Header and Footer content are optional but Drawer content is mandatory to allocate space for the drawer.
+N> Header and Footer content is optional, but the Drawer content is mandatory to allocate space for the drawer.
 		
 ## Header Content
 
-As the name suggests it is displayed at the top of drawer. The `DrawerHeaderView` property is used to set the header content of drawer. 
+As the name suggests, it is displayed at the top of the drawer. The `DrawerHeaderView` property is used to set the header content of the drawer.
 
 {% tabs %}
 
@@ -66,7 +66,7 @@ this.Content = navigationDrawer;
 
 The height of the drawer header content can be adjusted using the `DrawerHeaderHeight` property.
 
-N> `DrawerHeaderView` will be disabled by setting the `DrawerHeaderHeight` to zero.
+N> The `DrawerHeaderView` can be disabled by setting the `DrawerHeaderHeight` to zero.
 
 {% tabs %}
 
@@ -108,7 +108,7 @@ this.Content = navigationDrawer;
 
 ## Footer Content
 
-As the name suggests it is displayed at the bottom of the drawer. The `DrawerFooterView` property is used to set the footer content of the drawer. 
+As the name suggests, it is displayed at the bottom of the drawer. The `DrawerFooterView` property is used to set the footer content of the drawer.
 
 {% tabs %}
 
@@ -151,7 +151,7 @@ this.Content = navigationDrawer;
 
 The height of the drawer footer content can be adjusted using the `DrawerFooterHeight` property.
 
-N> `DrawerFooterView` will be disabled by setting the `DrawerFooterHeight` to zero 
+N> The `DrawerFooterView` can be disabled by setting the `DrawerFooterHeight` to zero.
 
 {% tabs %}
 

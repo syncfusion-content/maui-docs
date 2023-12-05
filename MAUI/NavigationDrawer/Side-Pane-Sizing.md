@@ -12,7 +12,7 @@ The size of the side pane can be adjusted using the `DrawerHeight` and `DrawerWi
 
 ## Drawer Height
 
-The `DrawerHeight` property is used to change the height of the side pane when the `Position` is set to `Top` or `Bottom`.
+The `DrawerHeight` property changes the height of the side pane when the `Position` is set to `Top` or `Bottom`.
 
 {% tabs %}
 
@@ -50,7 +50,7 @@ The `DrawerHeight` property is used to change the height of the side pane when t
 
 ## Drawer Width
 
-The `DrawerWidth` property is used to change the width of the side pane when the `Position` is set to `Left` or `Right`.
+The `DrawerWidth` property changes the width of the side pane when the `Position` is set to `Left` or `Right`.
 
 {% tabs %}
 
