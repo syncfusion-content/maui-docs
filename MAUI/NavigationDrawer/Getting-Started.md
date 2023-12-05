@@ -9,11 +9,11 @@ documentation: ug
 
 # Getting Started with .NET MAUI Navigation Drawer (SfNavigationDrawer)
 
-This section explains the steps required to configure the [.NET MAUI NavigationDrawer]() with a content area and a data-filled drawer. It covers only the minimal features that you need to know to get started with the NavigationDrawer.
+This section explains the steps required to configure the `.NET MAUI NavigationDrawer` with a content area and a data-filled drawer. It covers only the minimal features that you need to know to get started with the NavigationDrawer in a short number of words.
 
 ## Adding a .NET MAUI SfNavigationDrawer reference
 
-Syncfusion .NET MAUI controls are available in [Nuget.org](https://www.nuget.org/). To add [.NET MAUI NavigationDrawer]() to your project, open the NuGet package manager in Visual Studio, search for [Syncfusion.Maui.NavigationDrawer]() and then install it.
+Syncfusion .NET MAUI controls are available in [Nuget.org](https://www.nuget.org/). To add `.NET MAUI NavigationDrawer` to your project, open the NuGet package manager in Visual Studio, search for `Syncfusion.Maui.NavigationDrawer` and then install it.
 
 ## Handler registration 
 
@@ -25,7 +25,7 @@ using Microsoft.Maui.Hosting;
 using Microsoft.Maui.Controls.Compatibility;
 using Microsoft.Maui.Controls.Hosting;
 using Microsoft.Maui.Controls.Xaml;
-using Syncfusion.Maui.Core.Hosting;
+using `Syncfusion.Maui.Core.Hosting;`
 
 namespace NavigationDrawerSample
 {
@@ -36,7 +36,7 @@ namespace NavigationDrawerSample
         var builder = MauiApp.CreateBuilder();
         builder
         .UseMauiApp<App>()
-        .ConfigureSyncfusionCore() 
+        `.ConfigureSyncfusionCore()`
         .ConfigureFonts(fonts =>
         {
             fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
@@ -102,11 +102,11 @@ this.Content = navigationDrawer;
 
 {% endtabs %}
 
-N> It is mandatory to set [`ContentView`]() for [`SfNavigationDrawer`]() on initializing.
+N> It is mandatory to set `ContentView` for `SfNavigationDrawer` on initializing.
 
 ## Adjust Drawer Size
 
-The default position of the navigation pane is on the left, so let's change the drawer width to 250.
+The default position of the navigation pane is on the left, so let's change the drawer width to 250 by using the `DrawerWidth` property.
 
 {% tabs %}	
 {% highlight xaml %}
@@ -148,11 +148,11 @@ public partial class NavigationDrawerPage : ContentPage
 {% endtabs %}
 
 
-N> To change the side of the navigation pane, use the [`Position`]() property. Use the [`DrawerHeight`]() property to change the drawer height in the Top and Bottom positions.
+N> To change the side of the navigation pane, utilize the `Position` property. Adjust the drawer height in the Top and Bottom positions using the `DrawerHeight` property.
 
 ## Add Hamburger Menu for Toggling Drawer
 
-Create a image button and set required image to the [`Image`](https://help.syncfusion.com/maui/button/customization#imagesource) property of Button. Subscribe Clicked event of the button and invoke ToggleDrawer() method in it to toggle the drawer. Properly align the layout of ['ContentView']() to position the hamburger icon at the top left, as shown in the following code:
+Create an ImageButton and set the required image to the `Source` property. Subscribe Clicked event of the button and invoke the `ToggleDrawer()` method within it to toggle the drawer. Properly align the layout of `ContentView` to position the hamburger icon at the top left, as demonstrated in the following code,
 
 {% tabs %}	
 
@@ -217,7 +217,7 @@ public partial class NavigationDrawerPage : ContentPage
 
 ## Set ListView as Drawer Content
 
-Create a ListView with items and set it as [`DrawerContentView`](). 
+Create a ListView with items and set it as `DrawerContentView.` 
 
 {% tabs %}	
 
@@ -329,4 +329,4 @@ public partial class NavigationDrawerPage : ContentPage
 
 {% endtabs %}
 
-You can find the Getting Started Sample from this [link.]()
+You can find the Getting Started Sample from this `link.`

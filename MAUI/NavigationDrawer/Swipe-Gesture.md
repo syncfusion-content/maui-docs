@@ -12,7 +12,7 @@ The NavigationDrawer supports the swipe gesture for both opening and closing the
 
 ## Enabling Swipe Gesture
 
-It can be enabled/disabled using the [`EnableSwipeGesture`]() property.
+It can be enabled/disabled using the `EnableSwipeGesture` property.
 
 {% tabs %}
 

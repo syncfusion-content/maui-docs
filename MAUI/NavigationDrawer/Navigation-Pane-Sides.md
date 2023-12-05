@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Configuring The Drawer In .NET MAUI Navigation Drawer | Syncfusion
-description: Learn here all about Configuring The Drawer In Different Sides support in Syncfusion .NET MAUI Navigation Drawer (SfNavigationDrawer) control and more.
+title: Configuring the Drawer in .NET MAUI Navigation Drawer | Syncfusion
+description: Learn here all about configuring the drawer in different sides support in Syncfusion .NET MAUI Navigation Drawer (SfNavigationDrawer) control and more.
 platform: maui
 control: NavigationDrawer
 documentation: ug
 ---
 # Configuring The Drawer In Different Sides in .NET MAUI Navigation Drawer
 
-The supplemental pane can be drawn in and out from all four sides. [`Position`]() property is used to change the side of the pane and the values are
+The supplemental pane can be pulled in and out from all four sides. The `Position` property is used to change the side of the pane, and the options are,
 
 *	[`Left`]()
 
@@ -22,7 +22,7 @@ N> The default position is [`Left`]().
 
 ## Left
 
-The navigation pane draws in and out from the [`Left`]() side. It can be set as shown below:
+The navigation pane pulled in and out from the `Left` side. It can be set as shown below:
 
 {% tabs %}	
 
@@ -117,7 +117,7 @@ public partial class NavigationDrawerPosition : ContentPage
 
 ## Right
 
-The navigation pane draws in and out from the [`Right`]() side. It can be set as shown below:
+The navigation pane pulled in and out from the `Right` side. It can be set as shown below:
 
 {% tabs %}	
 
@@ -213,7 +213,7 @@ public partial class NavigationDrawerPosition : ContentPage
 	
 ## Top
 
-The navigation pane draws in and out from the [`Top`]() side. It can be set as shown below:
+The navigation pane pulled in and out from the `Top` side. It can be set as shown below:
 
 {% tabs %}
 
@@ -311,7 +311,7 @@ public partial class NavigationDrawerPosition : ContentPage
 
 ## Bottom
 
-The navigation pane draws in and out from the [`Bottom`]() side. It can be set as shown below:
+The navigation pane pulled in and out from the `Bottom` side. It can be set as shown below:
 
 {% tabs %}	
 
