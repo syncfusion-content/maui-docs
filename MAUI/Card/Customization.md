@@ -35,9 +35,9 @@ SfCardLayout cardLayout = new SfCardLayout()
 
 ![ShowSwipedCard in MAUI.Forms SfCardLayout](cardlayout-customization_images/showswipedcard.png)
 
-### VisibleCardIndex
+### VisibleIndex
 
-VisibleCardIndex is used when given index of the card to be displayed in front of the card layout.
+VisibleIndex is used when given index of the card to be displayed in front of the card layout.
 
 {% tabs %} 
 
