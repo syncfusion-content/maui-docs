@@ -37,7 +37,7 @@ The following code explains how to initialize data labels.
 
 ## Overflow Mode
 
-When the data labels are large in size, they will overlap each other. To avoid overlapping, trim or hide the data labels using the OverflowMode property.
+When the data labels are large in size, they will overlap each other. To avoid overlapping, trim or hide the data labels using the OverflowMode property. By default, the OverFlow mode is `Trim`.
 
 ## Trim
 
@@ -50,7 +50,7 @@ The following code shows trimming the data labels.
     <sunburst:SfSunburstChart ShowLabels="True">
     . . .
         <sunburst:SfSunburstChart.DataLabelSettings>
-            <sunburst:SunburstDataLabelSettings OverFlowMode="Trim"/>
+            <sunburst:SunburstDataLabelSettings     OverFlowMode="Trim"/>
         </sunburst:SfSunburstChart.DataLabelSettings>
     </sunburst:SfSunburstChart>
 
@@ -103,7 +103,7 @@ The following code shows hiding the data labels.
 
 ## Rotation Mode
 
-The view of data labels can be customized using the [RotationMode]() property. Data labels can be rotated to a angle for better readability. By default, the rotation mode is angle
+The view of data labels can be customized using the [RotationMode]() property. Data labels can be rotated to a angle for better readability. By default, the rotation mode is `Angle`.
 
 ## Angle
 
@@ -183,9 +183,10 @@ The following code shows normal mode of data labels.
     <sunburst:SfSunburstChart ShowDataLabels="True">
     . . .
         <sunburst:SfSunburstChart.DataLabelSettings>
-            <sunburst:SunburstDataLabelSettings TextColor="Red"
-                                                FontSize="10"
-                                                FontAttributes="Bold"/>
+            <sunburst:SunburstDataLabelSettings     
+                TextColor="Red"   
+                FontSize="10"    
+                FontAttributes="Bold"/>
         </sunburst:SfSunburstChart.DataLabelSettings>
     </sunburst:SfSunburstChart>
 
