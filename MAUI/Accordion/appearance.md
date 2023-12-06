@@ -99,7 +99,7 @@ public AccordionItem GenerateAccordionItem()
 
 ## Visual State Manager
 
-The appearance of the [SfAccordion](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.SfAccordion.html) can be customized using the following two `VisualStates`:
+The appearance of the [SfAccordion](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.SfAccordion.html) can be customized using the following `VisualStates`:
 
 * Expanded
 * Collapsed
