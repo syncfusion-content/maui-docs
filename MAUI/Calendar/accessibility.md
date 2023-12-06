@@ -30,6 +30,31 @@ Enhance .NET MAUI Calendar's accessibility with user-friendly design, ensuring i
 <td>November – December 2023</td>
 </tr>
 <tr>
+<td>Left arrow</td>
+<td>string</td>
+<td>Backward</td>
+</tr>
+<tr>
+<td>Right arrow</td>
+<td>string</td>
+<td>Forward</td>
+</tr>
+<tr>
+<td>Today button</td>
+<td>string</td>
+<td>Today</td>
+</tr>
+<tr>
+<td>Ok button</td>
+<td>string</td>
+<td>Ok</td>
+</tr>
+<tr>
+<td>Cancel button</td>
+<td>string</td>
+<td>Cancel</td>
+</tr>
+<tr>
 <td>Month Header</td>
 <td>EEE</td>
 <td>Monday</td>
