@@ -20,17 +20,17 @@ Enhance .NET MAUI Calendar's accessibility with user-friendly design, ensuring i
 <th>Example</th>
 </tr>
 <tr>
-<td>Month Header</td>
+<td>Header</td>
 <td>MMMM yyyy</td>
 <td>May 2023</td>
 </tr>
 <tr>
-<td>Month Header – More than one month in view</td>
+<td>Header – More than one month in view while number week lesser than 6</td>
 <td>MMMM – MMMM yyyy</td>
 <td>November – December 2023</td>
 </tr>
 <tr>
-<td>View Header</td>
+<td>Month Header</td>
 <td>EEE</td>
 <td>Monday</td>
 </tr>
@@ -53,6 +53,11 @@ Enhance .NET MAUI Calendar's accessibility with user-friendly design, ensuring i
 <td>Blackout date</td>
 <td>EEE, dd/MMMM/yyyy, Blackout date</td>
 <td>Monday, 13 May 2023, Blackout date</td>
+</tr>
+<tr>
+<td>Special date</td>
+<td>EEE, dd/MMMM/yyyy, Special date</td>
+<td>Monday, 25 May 2023, Special date</td>
 </tr>
 </table>
 
