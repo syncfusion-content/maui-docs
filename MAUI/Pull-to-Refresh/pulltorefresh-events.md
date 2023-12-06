@@ -1,13 +1,13 @@
 ---
 layout: post
-title: PullToRefresh Events and Commands in .NET MAUI PullToRefresh control | Syncfusion
-description: Learn about PullToRefresh Events And Commands support in the Syncfusion .NET MAUI PullToRefresh (SfPullToRefresh) control and more.
+title: Events and Commands in .NET MAUI PullToRefresh control | Syncfusion
+description: Learn about Events And Commands support in the Syncfusion .NET MAUI PullToRefresh (SfPullToRefresh) control and more.
 platform: MAUI
 control: SfPullToRefresh
 documentation: ug
 --- 
 
-# PullToRefresh Events in .NET MAUI SfPullToRefresh (SfPullToRefresh)
+# Events in .NET MAUI SfPullToRefresh (SfPullToRefresh)
 
 There are three built-in events in the PullToRefresh control, namely:
 
@@ -21,21 +21,21 @@ The `Pulling` event will be notified whenever the swipe gesture is started. This
 
 The `Pulling` event is triggered whenever you start pulling down on the `PullableContent` with `PullingEventArgs` that contains the following properties.
 
-* **Cancel** - You can cancel the pulling action based on the `Progress` value.
-* **Progress** - Gets the progress completion value.
+* `Cancel` - You can cancel the pulling action based on the `Progress` value.
+* `Progress` - Gets the progress completion value.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
     <syncfusion:SfPullToRefresh x:Name="pullToRefresh" 
-                                PullingEvent="PullToRefresh_Pulling" />
+                                PullingEvent="OnPullToRefreshPulling" />
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
 
-    pullToRefresh.Pulling += PullToRefresh_Pulling;
+    pullToRefresh.Pulling += OnPullToRefreshPulling;
 
-    private void PullToRefresh_Pulling(object sender, PullingEventArgs args)
+    private void OnPullToRefreshPulling(object sender, PullingEventArgs args)
     {
         args.Cancel = false;
         var progress = args.Progress;
@@ -52,14 +52,14 @@ The `Refreshing` event is triggered once the pointer is released. This event wil
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
     <syncfusion:SfPullToRefresh x:Name="pullToRefresh" 
-                                Refreshing="PullToRefresh_Refreshing" />
+                                Refreshing="OnPullToRefreshRefreshing" />
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
 
-    pullToRefresh.Refreshing += PullToRefresh_Refreshing;
+    pullToRefresh.Refreshing += OnPullToRefreshRefreshing;
    
-    private async void PullToRefresh_Refreshing(object sender, EventArgs args)
+    private async void OnPullToRefreshRefreshing(object sender, EventArgs args)
     {
         pullToRefresh.IsRefreshing = true;
         await Task.Delay(2000);
@@ -77,14 +77,14 @@ The `Refreshed` event is triggered once the `Refreshing` event is completed.
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
     <syncfusion:SfPullToRefresh x:Name=" pullToRefresh" 
-                                Refreshed="PullToRefresh_Refreshed" />
+                                Refreshed="OnPullToRefreshRefreshed" />
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
 
-    pullToRefresh.Refreshed += PullToRefresh_Refreshed;
+    pullToRefresh.Refreshed += OnPullToRefreshRefreshed;
     
-    private void PullToRefresh_Refreshed(object sender , EventArgs args)
+    private void OnPullToRefreshRefreshed(object sender , EventArgs args)
     {
     }
 

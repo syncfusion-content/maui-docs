@@ -10,8 +10,8 @@ documentation: ug
 # How to refresh the .NET MAUI SfPullToRefresh from ViewModel
 
 `SfPullToRefresh` is fully MVVM compatible and can be refreshed by binding a property in the view model to the `SfPullToRefresh.IsRefreshing` property.
-`SfPullToRefresh` also provides support for `SfPullToRefresh.RefreshCommand` that will be executed when the pulling is completed and the pointer is released.  You can also pass a desired object as parameter to the `SfPullToRefresh.RefreshCommand` using the `SfPullToRefresh.RefreshCommandParameter`.
-The `SfPullToRefresh.RefreshCommand's` `CanExecute()` will be fired when the pulling action is performed. Returning `false` in the command's `CanExecute()` will cancel the pulling and the `SfPullToRefresh.RefreshCommand` will not be executed.
+`SfPullToRefresh` also provides support for `SfPullToRefresh.RefreshCommand` that will be executed when the pulling is completed and the pointer is released.  You can also pass a desired object as parameter to the SfPullToRefresh.RefreshCommand using the `SfPullToRefresh.RefreshCommandParameter`.
+The `CanExecute()` method of `SfPullToRefresh.RefreshCommand` will be fired when the pulling action is performed. Returning `false` in the command's CanExecute() will cancel the pulling and the SfPullToRefresh.RefreshCommand will not be executed.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="13 15" %}
