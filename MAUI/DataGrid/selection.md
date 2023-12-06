@@ -444,6 +444,75 @@ private void SfDataGrid_CellRightTapped(object sender, Syncfusion.Maui.DataGrid.
 
 N> The `CellRightTapped` event is only applicable for Windows and macOS.
 
+## Cell Pointer Events
+
+The `Datagrid` provides the following Events to handle mouse pointer interactions to the cells.
+
+* [CellEntered]() : Called when the mouse pointer enters the cell.
+* [CellHovered]() : Called when the mouse pointer is hovered over the cell.
+* [CellExited]()  : Called when the mouse pointer exits the cell.
+
+### CellEntered event
+This event will be triggered when the mouse pointer enters a cell in the DataGrid. It uses [DataGridCellEnteredEventArgs]() as its argument.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                   CellEntered="dataGrid_CellEntered"
+                   ItemsSource="{Binding OrderInfoCollection}" />
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+private void dataGrid_CellEntered(object sender, DataGridCellEnteredEventArgs e)
+{
+    var rowIndex = e.RowColumnIndex.RowIndex;
+    var rowData = e.RowData;
+    var columnIndex = e.RowColumnIndex.ColumnIndex;
+    var column = e.Column;
+}
+{% endhighlight %}
+{% endtabs %}
+
+### CellHovered event
+This event will be triggered when the mouse pointer hovers over a cell in the DataGrid. It uses [DataGridCellHoveredEventArgs]() as its argument.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                   CellHovered="dataGrid_CellHovered"
+                   ItemsSource="{Binding OrderInfoCollection}" />
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+private void dataGrid_CellHovered(object sender, DataGridCellHoveredEventArgs e)
+{
+    var rowIndex = e.RowColumnIndex.RowIndex;
+    var rowData = e.RowData;
+    var columnIndex = e.RowColumnIndex.ColumnIndex;
+    var column = e.Column;
+    var point = e.Point;
+}
+{% endhighlight %}
+{% endtabs %}
+
+### CellExcited event
+This event will be triggered when the mouse pointer exits a cell in the DataGrid. It uses [DataGridCellExitedEventArgs]() as its argument.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                   CellExited="dataGrid_CellExited"
+                   ItemsSource="{Binding OrderInfoCollection}" />
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+private void dataGrid_CellExited(object sender, DataGridCellExitedEventArgs e)
+{
+    var rowIndex = e.RowColumnIndex.RowIndex;
+    var rowData = e.RowData;
+    var columnIndex = e.RowColumnIndex.ColumnIndex;
+    var column = e.Column;
+}
+{% endhighlight %}
+{% endtabs %}
+
 ## CurrentRow
 The [SfDataGrid.CurrentRow](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CurrentRow) property holds the underlying data of the last selected row in the datagrid.
 
