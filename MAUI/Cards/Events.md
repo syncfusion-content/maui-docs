@@ -56,7 +56,7 @@ cardLayout.Children.Add(new SfCardView() { Content = new Label() { Text = "Yello
 cardLayout.Children.Add(new SfCardView() { Content = new Label() { Text="Orange", BackgroundColor = Color.Orange }});
 ...
 
-private void VisibleCardIndexChanging(object sender, Syncfusion.XForms.Cards.VisibleCardIndexChangingEventArgs e)
+private void VisibleIndexChanging(System.Object sender, Syncfusion.Maui.Cards.CardVisibleIndexChangingEventArgs e)
 {
 // handle event action.
 }
@@ -100,9 +100,9 @@ SfCardLayout cardLayout = new SfCardLayout();
 cardLayout.VisibleIndexChanged += VisibleIndexChanged;
 ...
 
-private void VisibleCardIndexChanged(object sender Syncfusion.XForms.Cards.VisibleCardIndexChangedEventArgs e)
+private void VisibleIndexChanged(System.Object sender, Syncfusion.Maui.Cards.CardVisibleIndexChangedEventArgs e)
 {
-    // handle event action.
+// handle event action.
 }
 ...
 

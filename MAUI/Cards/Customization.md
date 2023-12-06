@@ -33,7 +33,7 @@ SfCardLayout cardLayout = new SfCardLayout()
 
 {% endtabs %}
 
-![ShowSwipedCard in MAUI.Forms SfCardLayout](cardlayout-customization_images/showswipedcard.png)
+![ShowSwipedCard in MAUI SfCardLayout](cardlayout-customization_images/showswipedcard.png)
 
 ### VisibleIndex
 
@@ -63,7 +63,7 @@ SfCardLayout cardLayout = new SfCardLayout()
 
 ### SwipeDirection
 
-The `SwipeDirection` property specifies the direction of swiping, which can be left, right, top, or bottom.
+The `SwipeDirection` property specifies the direction of swiping, which can be left, right, top, or bottom. Default value of swipr direction is right.
 
 {% tabs %} 
 

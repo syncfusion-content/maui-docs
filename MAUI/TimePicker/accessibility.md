@@ -12,9 +12,6 @@ documentation: UG
 ## Keyboard
 `SfTimePicker` supports selection using keyboard interactions.
 
->**NOTE**
-Keyboard interaction is applicable only for UWP platform.
-
 <table>
 <tr>
 <th>

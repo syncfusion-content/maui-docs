@@ -10,10 +10,6 @@ documentation: ug
 # Getting started with .NET MAUI Card (SfCard)
 This section details the process of integrating the Card control and focuses solely on the fundamental features required for initiating your exploration of Syncfusion Card.
 
-To get start quickly with our .NET MAUI Card, you can check the below video.
-
-{% youtube
-"youtube:https://www.youtube.com/watch?v=kfQjKiD9Xas"%}
 
 ## Creating an application using the .NET MAUI Card
 
@@ -32,7 +28,9 @@ To get start quickly with our .NET MAUI Card, you can check the below video.
     . . .
     xmlns:card="clr-namespace:Syncfusion.Maui.Cards;assembly=Syncfusion.Maui.Cards">
 
-    <card:SfCardView />
+<card:SfCardView>
+	<Label Text="SfCardView"/>
+</card:SfCardView>
 </ContentPage>
 
 {% endhighlight %}
@@ -47,6 +45,7 @@ public partial class MainPage : ContentPage
     {
         InitializeComponent();
         SfCardView cardView = new SfCardView();
+        cardView.Content = new Label(){ Text="SfCardView" };
         this.Content = cardView;
     }
 }
