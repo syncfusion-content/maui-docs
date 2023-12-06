@@ -66,27 +66,27 @@ StackingAreaSeries series1 = new  StackingAreaSeries()
 {
     XBindingPath = "Year",
     YBindingPath = "Value",
-    ItemsSource = new ViewModel().Data1
+    ItemsSource = Data1
 };
 
 StackingAreaSeries series2 = new StackingAreaSeries()
 {
     XBindingPath = "Year",
     YBindingPath = "Value",
-    ItemsSource = new ViewModel().Data2
+    ItemsSource = Data2
 };
 StackingAreaSeries series3 = new StackingAreaSeries()
 {
     XBindingPath = "Year",
     YBindingPath = "Value",
-    ItemsSource = new ViewModel().Data3
+    ItemsSource = Data3
 };
 
 StackingAreaSeries series4 = new StackingAreaSeries()
 {
     XBindingPath = "Year",
     YBindingPath = "Value",
-    ItemsSource = new ViewModel().Data4
+    ItemsSource = Data4
 };
 
 chart.Series.Add(series1);
