@@ -57,7 +57,7 @@ The [SfExpander](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Expander.Sf
 
 ## Visual State Manager
 
-The appearance of the [SfExpander](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Expander.SfExpander.html) can be customized using the following two `VisualStates`:
+The appearance of the [SfExpander](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Expander.SfExpander.html) can be customized using the following `VisualStates`:
 
 * Expanded
 * Collapsed
