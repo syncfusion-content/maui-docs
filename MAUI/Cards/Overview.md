@@ -13,13 +13,13 @@ The new Cards control empowers you to generate either a dismissible card or a st
 
 ## Key features
 
-* Allows you to create dismissible cards.
-* Allows you to dismiss cards in the left and right directions.
-* Allows you to customize the background, border width, border color, corner radius, indicator thickness, and indicator position.
-* Allows you to restrict the dismissal of the card.
-* Allows you to create a stack of cards.
-* Allows you to dismiss and retrieve the card in the left, right, top, and bottom directions.
-* Allows you to show the swiped card.
+* This feature enables you to create dismissible cards.
+* This feature allows you to dismiss cards in both the left and right directions.
+* This functionality allows you to customize the background, border width, border color, corner radius, indicator thickness, and indicator position.
+* This functionality allows you to limit or restrict the dismissal of the card.
+* This functionality permits you to create a stack of cards.
+* This capability allows you to dismiss and retrieve the card in the left, right, top, and bottom directions.
+* This feature enables you to display the swiped card.
 
 ![MAUI Cards]()
 

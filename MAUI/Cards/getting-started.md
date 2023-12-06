@@ -22,7 +22,7 @@ This section details the process of integrating the Card control and focuses sol
 4. Initialize `SfCard.`
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3 5" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="1 5 6 7" %}
 
 <ContentPage   
     . . .
@@ -34,7 +34,7 @@ This section details the process of integrating the Card control and focuses sol
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1 9 10" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1 9 10 11" %}
 
 using Syncfusion.Maui.Cards;
 . . .
@@ -91,14 +91,14 @@ namespace GettingStarted
 The `SwipeToDismiss` property enables or disables the swiping feature in the SfCardView.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3 5" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="1" %}
 
 <card:SfCardView SwipeToDismiss="True">
 	<Label Text="SfCardView"/>
 </card:SfCardView>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1 9 10" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1 9 10 11" %}
 
 using Syncfusion.Maui.Cards;
 . . .
@@ -123,14 +123,14 @@ public partial class MainPage : ContentPage
 The `IsDismissed` property enables us to retrieve the view state of the card, and it also provides the capability for the user to programmatically modify the card's view state.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3 5" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="1" %}
 
 <card:SfCardView IsDismissed="true">
      <Label Text="SfCardView"/>
 </card:SfCardView>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1 9 10" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1 9 10 11" %}
 
 using Syncfusion.Maui.Cards;
 . . .
@@ -155,7 +155,7 @@ public partial class MainPage : ContentPage
 Initialize a card layout with a card view using the provided code snippet below.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3 5" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="1 3 4 5 15" %}
 
 <cards:SfCardLayout SwipeDirection="Left" HeightRequest="500" BackgroundColor="#F0F0F0">
 
@@ -174,7 +174,7 @@ Initialize a card layout with a card view using the provided code snippet below.
 </cards:SfCardLayout>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1 9 10" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1 9 12" %}
 
 using Syncfusion.Maui.Cards;
 . . .
