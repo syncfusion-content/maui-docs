@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Accessibility in MAUI Picker control | Syncfusion
-description: Learn here all about Accessibility support in Syncfusion MAUI Picker (SfPicker) control and more.
+title: Accessibility in MAUI Time Picker control | Syncfusion
+description: Learn here all about Accessibility support in Syncfusion MAUI Time Picker (SfTimePicker) control and more.
 platform: MAUI
-control: SfPicker
+control: SfTimePicker
 documentation: UG
 ---
 
-# Accessibility in MAUI Picker (SfPicker)
+# Accessibility in MAUI Time Picker (SfTimePicker)
 
 ## Keyboard
-`SfPicker` supports selection using keyboard interactions.
+`SfTimePicker` supports selection using keyboard interactions.
 
 >**NOTE**
 Keyboard interaction is applicable only for UWP platform.

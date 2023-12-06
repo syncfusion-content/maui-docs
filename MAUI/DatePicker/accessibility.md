@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Accessibility in MAUI Picker control | Syncfusion
-description: Learn here all about Accessibility support in Syncfusion MAUI Picker (SfPicker) control and more.
+title: Accessibility in MAUI Date Picker control | Syncfusion
+description: Learn here all about Accessibility support in Syncfusion MAUI Date Picker (SfDatePicker) control and more.
 platform: MAUI
-control: SfPicker
+control: SfDatePicker
 documentation: UG
 ---
 
-# Accessibility in MAUI Picker (SfPicker)
+# Accessibility in MAUI Date Picker (SfDatePicker)
 
 ## Keyboard
-`SfPicker` supports selection using keyboard interactions.
+`SfDatePicker` supports selection using keyboard interactions.
 
 >**NOTE**
 Keyboard interaction is applicable only for UWP platform.
