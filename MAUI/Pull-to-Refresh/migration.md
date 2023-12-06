@@ -1,22 +1,22 @@
 ---
 layout: post
-title: Migrate from Xamarin SfPullToRefresh to .NET MAUI PullToRefresh | Syncfusion 
-description: Learn here all about Migrating from Syncfusion Xamarin PullToRefresh to Syncfusion .NET MAUI PullToRefresh control and more.
+title: Migrate from Xamarin SfPullToRefresh to .NET MAUI SfPullToRefresh | Syncfusion 
+description: Learn here all about Migrating from Syncfusion Xamarin PullToRefresh to Syncfusion .NET MAUI SfPullToRefresh control and more.
 platform: MAUI
 control: SfPullToRefresh
 documentation: ug
 ---  
 
-# Migrate from Xamarin.Forms SfPullToRefresh to .NET MAUI PullToRefresh
+# Migrate from Xamarin.Forms SfPullToRefresh to .NET MAUI SfPullToRefresh
 
-To migrate easier from Xamarin.Forms SfPullToRefresh to .NET MAUI PullToRefresh, we kept most of the APIs from Xamarin SfPullToRefresh in MAUI PullToRefresh. However, to maintain the consistency of API naming in .NET MAUI PullToRefresh, we renamed some of the APIs. The APIs that have been changed in MAUI PullToRefresh from Xamarin SfPullToRefresh are detailed as follows.
+To migrate easier from Xamarin.Forms SfPullToRefresh to .NET MAUI SfPullToRefresh, we kept most of the APIs from Xamarin SfPullToRefresh in .NET MAUI SfPullToRefresh. However, to maintain the consistency of API naming in .NET MAUI SfPullToRefresh, we renamed some of the APIs. The APIs that have been changed in .NET MAUI SfPullToRefresh from Xamarin SfPullToRefresh are detailed as follows.
 
 ## Namespaces 
 
 <table>
 <tr>
 <th>Xamarin SfPullToRefresh </th>
-<th>.NET MAUI PullToRefresh</th></tr>
+<th>.NET .NET MAUI SfPullToRefresh</th></tr>
 <tr>
 <td>Syncfusion.SfPullToRefresh.XForms</td>
 <td>Syncfusion.Maui.PullToRefresh</td></tr>
@@ -27,7 +27,7 @@ To migrate easier from Xamarin.Forms SfPullToRefresh to .NET MAUI PullToRefresh,
 <table>
 <tr>
 <th>Xamarin SfPullToRefresh</th>
-<th>.NET MAUI PullToRefresh</th>
+<th>.NET MAUI SfPullToRefresh</th>
 <th>Description</th></tr>
 <tr>
 <td>{{'[ProgressStrokeColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPullToRefresh.XForms.SfPullToRefresh.html#Syncfusion_SfPullToRefresh_XForms_SfPullToRefresh_ProgressStrokeColor)'| markdownify }}</td>
@@ -71,7 +71,7 @@ To migrate easier from Xamarin.Forms SfPullToRefresh to .NET MAUI PullToRefresh,
 <table>
 <tr>
 <th>Xamarin SfPullToRefresh</th>
-<th>.NET MAUI PullToRefresh</th>
+<th>.NET MAUI SfPullToRefresh</th>
 <th>Description</th></tr>
 <tr>
 <td>{{'[TransitionType](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPullToRefresh.XForms.TransitionType.html)'| markdownify }}</td>
