@@ -2,7 +2,7 @@
 layout: post
 title: Disabled segmented item in .NET MAUI Segmented control | Syncfusion
 description: Learn about the Disabled segmented item in Syncfusion .NET MAUI Segmented control (SfSegmentedControl).
-platform: .NET MAUI
+platform: maui
 control: Segmented (SfSegmented) control
 documentation: ug
 ---
