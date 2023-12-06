@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 # Getting started with .NET MAUI Card (SfCard)
-This section explains how to add the Card control. This section covers only the basic features needed to get started with Syncfusion Card.
+This section details the process of integrating the Card control and focuses solely on the fundamental features required for initiating your exploration of Syncfusion Card.
 
 To get start quickly with our .NET MAUI Card, you can check the below video.
 
@@ -19,7 +19,7 @@ To get start quickly with our .NET MAUI Card, you can check the below video.
 
 1. Create a new .NET MAUI application in Visual Studio.
 
-2. Syncfusion .NET MAUI components are available on [nuget.org](https://www.nuget.org/). To add `SfCalendar` to your project, open the NuGet package manager in Visual Studio, search for [Syncfusion.Maui.Card](), and then install it.
+2. Syncfusion .NET MAUI components are available on [nuget.org](https://www.nuget.org/). To add `SfCard` to your project, open the NuGet package manager in Visual Studio, search for [Syncfusion.Maui.Card](), and then install it.
 
 3. To initialize the control, import the control namespace `Syncfusion.Maui.Card` in XAML or C# code.
 
@@ -89,7 +89,7 @@ namespace GettingStarted
 
 ## SwipeToDismiss
 
-The `SwipeToDismiss` property is used to enable or disable swiping in SfCardView.
+The `SwipeToDismiss` property enables or disables the swiping feature in the SfCardView.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="3 5" %}
@@ -121,7 +121,7 @@ public partial class MainPage : ContentPage
 
 ## Dismiss the card programmatically
 
-We can get a view state of the card using the `IsDismissed` property, which also allows the user to programmatically alter the view state of the card.
+The `IsDismissed` property enables us to retrieve the view state of the card, and it also provides the capability for the user to programmatically modify the card's view state.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="3 5" %}
@@ -153,7 +153,7 @@ public partial class MainPage : ContentPage
 
 ### SfCardLayout
 
-Initialize a card layout with card view as shown in the following code.
+Initialize a card layout with a card view using the provided code snippet below.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="3 5" %}

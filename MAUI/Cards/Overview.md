@@ -9,7 +9,7 @@ documentation : ug
 
 # MAUI Cards Overview
 
-The new Cards control allows you to create a dismissible card or a stack of cards where one card is visible at a time until you swipe to see the next card.
+The new Cards control empowers you to generate either a dismissible card or a stack of cards, with only one card being visible initially, requiring a swipe to reveal the subsequent card.
 
 ## Key features
 

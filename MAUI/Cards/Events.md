@@ -11,13 +11,13 @@ documentation: ug
 
 ## Tapped
 
-The [`CardTapped`]() event occurs when any card view is tapped. The argument contains the following information:
+The [`CardTapped`]() event is triggered when any card view is tapped. The associated argument contains the following information.
 
 * [`CardView`]() - Gets the details of a particular card view.
 
 ## VisibleIndexChanging
 
-The [`VisibleIndexChanging`]() event occurs when the visible card index is changing. The argument contains the following information:
+The [`VisibleIndexChanging`]()  event is triggered when the visible card index is changing. The associated argument contains the following information.
 
 * [`OldCard`]() - Gets the details of the previous index card.
 
@@ -68,7 +68,7 @@ private void VisibleCardIndexChanging(object sender, Syncfusion.XForms.Cards.Vis
 
 ## VisibleIndexChanged
 
-The [`VisibleIndexChanged`]() event occurs when the visible card index is changed. The argument contains the following information:
+The [`VisibleIndexChanged`]() event is triggered when the visible card index is changed. The associated argument contains the following information.
 
 * [`OldCard`]() - Gets the details of the previous card.
 
@@ -112,7 +112,7 @@ private void VisibleCardIndexChanged(object sender Syncfusion.XForms.Cards.Visib
 
 ## Dismissing event
 
-The [`Dismissing`]() event fires when dismissing the card by swiping with enables `SwipeToDismiss` property. The argument contains the following information:
+The [`Dismissing`]() event fires when dismissing the card by swiping, with the `SwipeToDismiss` property enabled. The associated argument contains the following information.
 
 * [`DismissDirection`]() - Gets a dismissing direction of the card view.
 
@@ -149,7 +149,7 @@ N> This event will not work when adding the `SfCardView` as a child of `SfCardLa
 
 ## Dismissed event
 
-The [`Dismissed`]() event fires when dismisses the card by swiping with enables `SwipeToDismiss` property. The argument contains the following information.
+The [`Dismissed`]() event fires when dismisses the card by swiping, with enables `SwipeToDismiss` property. The argument contains the following information.
 
 * [`DismissDirection`]() - Gets a dismissed direction of the card view.
 

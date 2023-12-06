@@ -11,7 +11,7 @@ documentation: ug
 
 ### ShowSwipedCard
 
-ShowSwipedCard can be enabled to show the swiped cards at the edge of card layout.
+Enabling the `ShowSwipedCard` option allows the swiped cards to be displayed at the edge of the card layout.
 
 {% tabs %} 
 
@@ -37,7 +37,7 @@ SfCardLayout cardLayout = new SfCardLayout()
 
 ### VisibleIndex
 
-VisibleIndex is used when given index of the card to be displayed in front of the card layout.
+The `VisibleIndex` is utilized when providing the index of the card that is intended to be displayed at the front of the card layout.
 
 {% tabs %} 
 
@@ -63,7 +63,7 @@ SfCardLayout cardLayout = new SfCardLayout()
 
 ### SwipeDirection
 
-The SwipeDirection property indicates the swiping direction (left,right,top and bottom).
+The `SwipeDirection` property specifies the direction of swiping, which can be left, right, top, or bottom.
 
 {% tabs %} 
 
@@ -88,11 +88,9 @@ SfCardLayout cardLayout = new SfCardLayout()
 
 ![SwipeDirection in MAUI SfCardLayout](cardlayout-customization_images/swipedirection.png)
 
-You can find the complete getting started sample from this [link](https://github.com/SyncfusionExamples/Getting-started-sample-of-cards).
-
 ## Customization in CardView
 
-You can customize the border color, thickness, and card corner radius by using the following properties:
+Customization of the border color, thickness, and card corner radius can be achieved by the following properties.
 
 [BorderColor]() - Used to customize the card view border color.
 
@@ -162,7 +160,7 @@ You can customize the border color, thickness, and card corner radius by using t
 
 ### Indicator customization
 
-Indicators are used to indicate the state or level of something.
+Indicators are used to signify or communicate the state or level of something.
 
 {% tabs %} 
 
@@ -199,7 +197,7 @@ SfCardView cardView = new SfCardView()
 
 ### FadeOutOnSwiping
 
-FadeOutOnSwiping can be enabled when the card view needs to be faded with respect to swiping.
+The `FadeOutOnSwiping` option can be enabled when the card view is intended to fade in response to swiping.
 
 {% tabs %} 
 
