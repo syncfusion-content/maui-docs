@@ -15,6 +15,10 @@ This section explains the steps required to work with the [.NET MAUI CheckBox](h
 
 This section explains the steps required to work with the [CheckBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html) control for .NET MAUI.
 
+To get start quickly with our .NET MAUI CheckBox, you can check the below video.
+
+{% youtube "https://www.youtube.com/watch?v=dgekGX8eYMo" %}
+
 ## Adding a .NET MAUI CheckBox reference
 
 Syncfusion .NET MAUI controls are available on [Nuget.org](https://www.nuget.org/). To add the [.NET MAUI CheckBox](https://www.syncfusion.com/maui-controls/maui-checkbox) to your project, open the NuGet package manager in Visual Studio, search for [Syncfusion.Maui.Buttons](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.html), and install it.
