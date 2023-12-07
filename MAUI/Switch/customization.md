@@ -91,5 +91,54 @@ In the switch control, sizing of the thumb and the track can be controlled by us
 
 The following code example demonstrates how to customize the size of the track and thumb.
 
+{% tabs %}
+
+{% highlight xaml %}
+
+<syncfusion:SfSwitch> 
+    <VisualStateManager.VisualStateGroups>
+        <VisualStateGroup  x:Name="CommonStates">
+            <VisualState x:Name="On">
+                <VisualState.Setters>
+                    <Setter Property="SwitchSettings">
+                        <Setter.Value>
+                            <syncfusion:SwitchSettings
+                                ThumbStrokeThickness="2"
+                                TrackStrokeThickness="2"  
+                                TrackHeightRequest="25" 
+                                TrackWidthRequest="75" 
+                                TrackCornerRadius="4"
+                                ThumbCornerRadius="4" 
+                                ThumbHeightRequest="10" 
+                                ThumbWidthRequest="10"/>
+                        </Setter.Value>
+                    </Setter>
+                </VisualState.Setters>
+            </VisualState>
+            <VisualState x:Name="Off">
+                <VisualState.Setters>
+                    <Setter Property="SwitchSettings">
+                        <Setter.Value>
+                            <syncfusion:SwitchSettings
+                                ThumbStrokeThickness="2"
+                                TrackStrokeThickness="2"  
+                                TrackHeightRequest="25" 
+                                TrackWidthRequest="75" 
+                                TrackCornerRadius="4"
+                                ThumbCornerRadius="4" 
+                                ThumbHeightRequest="10" 
+                                ThumbWidthRequest="10"/>
+                        </Setter.Value>
+                    </Setter>
+                </VisualState.Setters>
+            </VisualState>
+        </VisualStateGroup>
+    </VisualStateManager.VisualStateGroups>
+</syncfusion:SfSwitch>
+
+{% endhighlight %}
+
+{% endtabs %}
+
 ![switch conrol with sizing](images/customization/Sizing.png)
 

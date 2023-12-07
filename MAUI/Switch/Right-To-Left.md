@@ -11,4 +11,22 @@ documentation: ug
 
 SfSwitch supports to change the layout direction of the control in the right-to-left direction by setting the FlowDirection to RightToLeft or by changing the device language.
 
-![SfSwitch with RTL flowdirection]
+{% tabs %}
+
+{% highlight xaml %}
+
+<syncfusion:SfSwitch FlowDirection="RightToLeft" />
+	
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfSwitch sfSwitch = new SfSwitch();
+sfSwitch.FlowDirection = FlowDirection.RightToLeft;
+this.Content = sfSwitch;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![SfSwitch with RTL flowdirection](images/RTL/RTL_Switch.png)

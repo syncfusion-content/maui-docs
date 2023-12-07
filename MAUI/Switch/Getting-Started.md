@@ -62,7 +62,7 @@ Step 2: Add the namespace as shown in the following code sample.
 {% tabs %}
 {% highlight xaml %}
 
-	xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons"
+	xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons"
 
 {% endhighlight %}
 {% highlight c# %}
@@ -80,7 +80,7 @@ Now, add the [`SfSwitch`] control with a required optimal name using the include
 
 {% highlight xaml %}
 
-<buttons:SfSwitch />
+<syncfusion:SfSwitch />
 	
 {% endhighlight %}
 
