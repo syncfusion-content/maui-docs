@@ -15,13 +15,19 @@ The [.NET MAUI Time Picker](https://www.syncfusion.com/maui-controls/maui-timepi
 
 The SfTimePicker control has interact [Header Text](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerHeaderView.html#Syncfusion_Maui_Picker_PickerHeaderView_Text) with localization of header layout.
 
+![Header Layout in .NET MAUI Time Picker.](images/accessibility/maui-sample-timepicker.png)
+
 ## Column Header Layout
 
 The SfTimePicker control has interact column header text with localization of column header layout. It contains [HourHeaderText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.TimePickerColumnHeaderView.html#Syncfusion_Maui_Picker_TimePickerColumnHeaderView_HourHeaderText), [MinuteHeaderText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.TimePickerColumnHeaderView.html#Syncfusion_Maui_Picker_TimePickerColumnHeaderView_MinuteHeaderText), [SecondHeaderText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.TimePickerColumnHeaderView.html#Syncfusion_Maui_Picker_TimePickerColumnHeaderView_SecondHeaderText), and [MeridiemHeaderText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.TimePickerColumnHeaderView.html#Syncfusion_Maui_Picker_TimePickerColumnHeaderView_MeridiemHeaderText) properties of the [TimePickerColumnHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.TimePickerColumnHeaderView.html).. The default value of the `HourHeaderText` property is "Hour", `MinuteHeaderText` is "Minute", `SecondHeaderText` is "Second", and `MerdiemHeaderText` is "string.Empty".
 
+![Column Header Layout in .NET MAUI Time Picker.](images/accessibility/maui-sample-timepicker.png)
+
 ## Footer Layout
 
 The SfTimePicker control has interact validation buttons (OK and Cancel) with localization of footer layout. The Default value of the [OkButtonText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_OkButtonText) property is "OK", and [CancelButtonText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_CancelButtonText) is "Cancel".
+
+![Footer Layout in .NET MAUI Time Picker.](images/accessibility/maui-sample-timepicker.png)
 
 ## Picker Items
 
@@ -48,3 +54,5 @@ The SfTimePicker control has interact with the item source in picker items. The 
 <td>AM/PM</td>
 </tr> 
 </table>
+
+![Picker Items in .NET MAUI Time Picker.](images/accessibility/maui-sample-timepicker.png)

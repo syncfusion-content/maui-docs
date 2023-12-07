@@ -15,13 +15,19 @@ The [.NET MAUI Date Picker](https://www.syncfusion.com/maui-controls/maui-datepi
 
 The SfDatePicker control has interact [Header Text](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerHeaderView.html#Syncfusion_Maui_Picker_PickerHeaderView_Text) with localization of header layout.
 
+![Header Layout in .NET MAUI Date Picker.](images/accessibility/maui-sample-datepicker.png)
+
 ## Column Header Layout
 
 The SfDatePicker control has interact column header text with localization of column header layout. It contains [DayHeaderText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.DatePickerColumnHeaderView.html#Syncfusion_Maui_Picker_DatePickerColumnHeaderView_DayHeaderText), [MonthHeaderText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.DatePickerColumnHeaderView.html#Syncfusion_Maui_Picker_DatePickerColumnHeaderView_MonthHeaderText), and [YearHeaderText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.DatePickerColumnHeaderView.html#Syncfusion_Maui_Picker_DatePickerColumnHeaderView_YearHeaderText) properties of the [DatePickerColumnHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.DatePickerColumnHeaderView.html). The default value of the `DayHeaderText` property is "Day", `MonthHeaderText` is "Month", and `YearHeaderText` is "Year".
 
+![Column Header Layout in .NET MAUI Date Picker.](images/accessibility/maui-sample-datepicker.png)
+
 ## Footer Layout
 
 The SfDatePicker control has interact validation buttons (OK and Cancel) with localization of footer layout. The Default value of the [OkButtonText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_OkButtonText) property is "OK", and [CancelButtonText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_CancelButtonText) is "Cancel".
+
+![Footer Layout in .NET MAUI Date Picker.](images/accessibility/maui-sample-datepicker.png)
 
 ## Picker Items
 
@@ -48,3 +54,5 @@ The SfDatePicker control has interact with the item source in picker items. The 
 <td>2023</td>
 </tr> 
 </table>
+
+![Picker Items in .NET MAUI Date Picker.](images/accessibility/maui-sample-datepicker.png)
