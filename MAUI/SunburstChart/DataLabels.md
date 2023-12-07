@@ -7,7 +7,7 @@ control: SfSunburstChart
 documentation: ug
 ---
 
-# Data label in .NET MAUI Sunburst Chart
+# Data labels in .NET MAUI Sunburst Chart
 Data labels are used to display information about segments at the (X, Y) point.
 
 ## Enable Data Label 
