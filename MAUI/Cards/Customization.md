@@ -52,7 +52,7 @@ The `VisibleIndex` is utilized when providing the index of the card that is inte
 
 SfCardLayout cardLayout = new SfCardLayout()
 {
-  VisibleCardIndex = 1
+  VisibleIndex = 1
 };
 
 {% endhighlight %}
@@ -63,13 +63,13 @@ SfCardLayout cardLayout = new SfCardLayout()
 
 ### SwipeDirection
 
-The `SwipeDirection` property specifies the direction of swiping, which can be left, right, top, or bottom. Default value of swipr direction is right.
+The `SwipeDirection` property specifies the direction of swiping, which can be left, right, top, or bottom. Default value of swipe direction is right.
 
 {% tabs %} 
 
 {% highlight xaml %}
 
-<cards:SfCardLayout SwipeDirection="Right">
+<cards:SfCardLayout SwipeDirection="Left">
 </cards:SfCardLayout>
  
 {% endhighlight %}
@@ -78,7 +78,7 @@ The `SwipeDirection` property specifies the direction of swiping, which can be l
 
 SfCardLayout cardLayout = new SfCardLayout()
 {
-    SwipeDirection = CardSwipeDirection.Right
+    SwipeDirection = CardSwipeDirection.Left
 };
 
 
@@ -102,55 +102,56 @@ Customization of the border color, thickness, and card corner radius can be achi
 
 {% highlight xaml %}
 
-    <StackLayout  HorizontalOptions="Center" VerticalOptions="Center">
-        <cards:SfCardView BorderColor="Black" BorderWidth="5" CornerRadius="30,0,30,0" BackgroundColor="LightPink"  >
-            <StackLayout Padding="10, 10, 0, 0" >
-             <Label  Text="New York" FontSize="25" />
-            <Label Text="Mon 3.00PM, Sunny" TextColor="Gray"/>
-            <StackLayout Orientation="Horizontal">
-                <Label Text="31°" FontSize="70" Padding="0, 0, 10,0"/>
-                <Image  Source="Sun.png" HeightRequest="100" WidthRequest="100"/>
-            </StackLayout>
-        </StackLayout>
-     </cards:SfCardView>
-  </StackLayout>
+<cards:SfCardView Background="#472902">
+    <Grid Padding="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Label Text="Wells Fargo" HorizontalOptions="Start" TextColor="White" FontSize="20" FontAttributes="Bold"/>
+        <Grid Grid.Row="1" Padding="0,20,0,15">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="60"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Image Source="cardchip.png" WidthRequest="60" HeightRequest="30" HorizontalOptions="Center" VerticalOptions="Center"/>
+            <Label Grid.Column="1" Text="Business Elite" FontAttributes="Bold" TextColor="White" FontSize="17" HorizontalOptions="Start" VerticalOptions="Center" Padding="30,0,0,0"/>
+        </Grid>
+        <Label Grid.Row="2" HorizontalOptions="Start" VerticalOptions="End" Text="Rick Sanchez" FontSize="17" FontAttributes="Bold" TextColor="White"/>
+        <Label Grid.Row="3" HorizontalOptions="Start" VerticalOptions="End" Text="9 0 5 7    4 0 8 1    2 1 7 5    0 0 5 6" TextColor="White" Padding="0,10,0,0"/>
+    </Grid>
+</cards:SfCardView>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-        StackLayout mainStack = new StackLayout()
-            {
-                HorizontalOptions = LayoutOptions.Center,
-                VerticalOptions = LayoutOptions.Center,
-                Children =
-                {
-                    new SfCardView(){
-                    Content =  new StackLayout()
-                    {
-                        Padding = new Thickness(10, 10, 0, 0),
-                        Children =
-                        {
-                            new Label(){Text = "New York" , FontSize = 25},
-                            new Label(){Text = "Mon 3.00PM, Sunny" , TextColor = Color.Gray},
-                            new StackLayout()
-                            {
-                                Orientation  = StackOrientation.Horizontal,
-                                Children =
-                                {
-                                    new Label(){Text = "31°" , FontSize = 70, Padding = new Thickness(0,0,10,0) },
-                                    new Image(){Source = "Sun.png", HeightRequest = 100, WidthRequest = 100}
-                                }
-                            }
-                        }
-                    },
-                    BorderColor = Color.Black,
-                    BorderWidth = 5,
-                    CornerRadius = new Thickness(30, 0, 30, 0),
-                    BackgroundColor = Color.LightPink
-                    }
-                }
-            };
+	Grid mainStack = new Grid()
+	{
+		Children =
+		{
+			new SfCardView(){
+			Content =  new Grid()
+			{
+				Padding = 20,
+				Children =
+				{
+					new Label(){Text="Wells Fargo", HorizontalOptions=LayoutOptions.Start, TextColor=Colors.White, FontSize=20, FontAttributes=FontAttributes.Bold},
+					new Grid(){
+						Children=
+						{
+							new Image(){Source="cardchip.png", WidthRequest=60, HeightRequest=30, HorizontalOptions=LayoutOptions.Center, VerticalOptions=LayoutOptions.Center},
+							new Label(){Text="Business Elite", FontAttributes=FontAttributes.Bold, TextColor=Colors.White, FontSize=17, HorizontalOptions=LayoutOptions.Center,VerticalOptions=LayoutOptions.Center ,Padding=30 }
+						} },
+					new Label(){HorizontalOptions=LayoutOptions.Start ,VerticalOptions=LayoutOptions.End, Text="Rick Sanchez", FontSize=17, FontAttributes=FontAttributes.Bold, TextColor=Colors.White},
+					new Label(){HorizontalOptions=LayoutOptions.Start,  VerticalOptions=LayoutOptions.End, Text="9 0 5 7    4 0 8 1    2 1 7 5    0 0 5 6", TextColor=Colors.White, Padding=10},
+				}
+			},
+			BackgroundColor = Colors.Brown
+			}
+		}
            
 {% endhighlight %}
 
@@ -166,9 +167,9 @@ Indicators are used to signify or communicate the state or level of something.
 
 {% highlight xaml %}
 
-    <cards:SfCardView IndicatorColor="Cyan" HeightRequest="300" IndicatorThickness="12" IndicatorPosition="Left" >
-            <Label  Text="SfCardView" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
-        </cards:SfCardView>
+<cards:SfCardView IndicatorColor="LightGreen" BackgroundColor="LightGoldenrodYellow" HeightRequest="300" IndicatorThickness="12" IndicatorPosition="Left" >
+    <Label  Text="SfCardView" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+</cards:SfCardView>
 
 {% endhighlight %}
 
@@ -185,7 +186,8 @@ SfCardView cardView = new SfCardView()
     IndicatorThickness = 12,
     HeightRequest = 300,
     IndicatorPosition = IndicatorPosition.Left,
-    IndicatorColor = Color.Cyan
+    IndicatorColor = Colors.LightGreen,
+	BackgroundColor = Colors.LightGoldenrodYellow
 };
            
 

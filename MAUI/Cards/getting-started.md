@@ -28,9 +28,10 @@ This section details the process of integrating the Card control and focuses sol
     . . .
     xmlns:card="clr-namespace:Syncfusion.Maui.Cards;assembly=Syncfusion.Maui.Cards">
 
-<card:SfCardView>
-	<Label Text="SfCardView"/>
-</card:SfCardView>
+<cards:SfCardView>
+    <Label Text="Label" Background="LightGoldenrodYellow" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+</cards:SfCardView>
+
 </ContentPage>
 
 {% endhighlight %}
@@ -45,7 +46,14 @@ public partial class MainPage : ContentPage
     {
         InitializeComponent();
         SfCardView cardView = new SfCardView();
-        cardView.Content = new Label(){ Text="SfCardView" };
+
+        cardView.Content = new Label()
+        {
+            Text = "Label",
+            HorizontalTextAlignment = TextAlignment.Center,
+            VerticalTextAlignment = TextAlignment.Center,
+            BackgroundColor = Colors.LightGoldenrodYellow
+        };
         this.Content = cardView;
     }
 }
@@ -93,9 +101,9 @@ The `SwipeToDismiss` property enables or disables the swiping feature in the SfC
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="1" %}
 
-<card:SfCardView SwipeToDismiss="True">
-	<Label Text="SfCardView"/>
-</card:SfCardView>
+<cards:SfCardView SwipeToDismiss="true">
+    <Label Text="SfCardView" Background="LightGoldenrodYellow" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+</cards:SfCardView>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1 9 10 11" %}
@@ -157,19 +165,19 @@ Initialize a card layout with a card view using the provided code snippet below.
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="1 3 4 5 15" %}
 
-<cards:SfCardLayout SwipeDirection="Left" HeightRequest="500" BackgroundColor="#F0F0F0">
+<cards:SfCardLayout HeightRequest="500" BackgroundColor="#F0F0F0">
 
-	<cards:SfCardView>
-		<Label  Text="Cyan" BackgroundColor="Cyan"/>
-	</cards:SfCardView>
+    <cards:SfCardView CornerRadius="10">
+        <Label  Text="Cyan" BackgroundColor="Cyan" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+    </cards:SfCardView>
 
-	<cards:SfCardView>
-		<Label  Text="Yellow" BackgroundColor="Yellow"/>
-	</cards:SfCardView>
+    <cards:SfCardView CornerRadius="10">
+        <Label  Text="LightPink" BackgroundColor="LightPink" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+    </cards:SfCardView>
 
-	<cards:SfCardView>
-		<Label  Text="Orange" BackgroundColor="Orange"/>
-	</cards:SfCardView>  
+    <cards:SfCardView CornerRadius="10" >
+        <Label  Text="LightGreen" BackgroundColor="LightGreen" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+    </cards:SfCardView>
 
 </cards:SfCardLayout>
 
@@ -181,20 +189,20 @@ using Syncfusion.Maui.Cards;
 
 public partial class MainPage : ContentPage
 {
-    public MainPage()
-    {
-        InitializeComponent();
-        SfCardLayout cardLayout = new SfCardLayout();
+	public MainPage()
+	{
+		InitializeComponent();
+		SfCardLayout cardLayout = new SfCardLayout();
 
-        //Add children for card layout 
-        cardLayout.Children.Add(new SfCardView(){Content = new Label(){ Text="Cyan", BackgroundColor=Colors.Cyan }});
+		//Add children for card layout 
+		cardLayout.Children.Add(new SfCardView() { Content = new Label() { Text = "Cyan", BackgroundColor = Colors.Cyan, HorizontalTextAlignment = TextAlignment.Center, VerticalTextAlignment = TextAlignment.Center }, CornerRadius = 15 });
 
-        cardLayout.Children.Add(new SfCardView(){Content = new Label(){ Text="Yellow", BackgroundColor=Colors.Yellow }});
-     
-        cardLayout.Children.Add(new SfCardView(){Content = new Label(){ Text="Orange", BackgroundColor=Colors.Orange }});
+		cardLayout.Children.Add(new SfCardView() { Content = new Label() { Text = "Yellow", BackgroundColor = Colors.LightPink, HorizontalTextAlignment = TextAlignment.Center, VerticalTextAlignment = TextAlignment.Center },CornerRadius = 15 });
 
-        this.Content = cardLayout;
-    }
+		cardLayout.Children.Add(new SfCardView() { Content = new Label() { Text = "Orange", BackgroundColor = Colors.LightGreen, HorizontalTextAlignment = TextAlignment.Center, VerticalTextAlignment = TextAlignment.Center },CornerRadius = 15 });
+
+		this.Content = cardLayout;
+	}
 }
 
 {% endhighlight %}
