@@ -12,6 +12,7 @@ documentation: UG
 ## Keyboard
 `SfCalendar` supports selection using keyboard interactions.
 
+### Selection
 <table>
 <tr>
 <th>
@@ -55,7 +56,7 @@ Moves the selection to the previous date of the date currently selected.
 </tr>
 </table>
 
-### Shift key combinations
+### Selection with shift key combinations
 <table>
 <tr>
 <th>
