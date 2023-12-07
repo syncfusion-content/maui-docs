@@ -575,7 +575,7 @@ To customize the tooltip appearance, create an instance of the SunburstTooltipSe
 
 * Drill down to explore each level of the hierarchy in detail.
 * Selection allows you to highlight or choose segments within the hierarchy.
-* Legend customization support.
+* Support to customize legend items.
 
 ## Support and feedback
 

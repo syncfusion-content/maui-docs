@@ -15,5 +15,5 @@ Syncfusion .NET MAUI Sunburst Chart is used to represent the hierarchical data s
 
 * Supports data labels and legends for better readability.
 * Supports tooltip to provide more information about the segments.
-* Can customize appearance with own palette brushes.
+* Can customize appearance with custom palette brushes.
 * Add the additional information with CenterView elevation.
