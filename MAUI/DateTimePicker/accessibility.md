@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility with .NET MAUI Date Time Picker Control | Syncfusion
-description: Learn here all about accessibility with Syncfusion .NET MAUI Date Time Picker (SfDateTimePicker) control.
+description: Learn here about accessibility with Syncfusion .NET MAUI Date Time Picker (SfDateTimePicker) control.
 platform: maui
 control: SfDateTimePicker
 documentation: ug
@@ -13,7 +13,7 @@ The .NET MAUI Date Time Picker control has interact with the `Header`, `Column H
 
 ## Header Layout
 
-The SfDateTimePicker control has intract header text with localization of header layout. It contains DateFormat and TimeFormat property of the DateTimePickerHeaderView. For example,
+The SfDateTimePicker control has interact header text with localization of header layout. It contains DateFormat and TimeFormat property of the DateTimePickerHeaderView. For example,
 
 <table>
 <tr>
@@ -32,15 +32,15 @@ The SfDateTimePicker control has intract header text with localization of header
 
 ## Column Header Layout
 
-The SfDateTimePicker control has intract column header text with localization of column header layout. It contains DayHeaderText, MonthHeaderText, YearHeaderText, HourHeaderText, MinuteHeaderText, SecondHeaderText, and MeridiemHeaderText properties of the DateTimePickerColumnHeaderView. The default value of the DayHeaderText property is "Day", MonthHeaderText is "Month", YearHeaderText is "Year", HourHeaderText property is "Hour", MinuteHeaderText is "Minute", SecondHeaderText is "Second", and MerdiemHeaderText is "string.Empty".
+The SfDateTimePicker control has interact column header text with localization of column header layout. It contains DayHeaderText, MonthHeaderText, YearHeaderText, HourHeaderText, MinuteHeaderText, SecondHeaderText, and the MeridiemHeaderText properties of the DateTimePickerColumnHeaderView. The default value of the DayHeaderText property is "Day", MonthHeaderText is "Month", YearHeaderText is "Year", HourHeaderText property is "Hour", MinuteHeaderText is "Minute", SecondHeaderText is "Second", and MerdiemHeaderText is "string.Empty".
 
 ## Footer Layout
 
-The SfDateTimePicker control has intract validation buttons (OK and Cancel) with localization of footer layout. The Default value of the OkButtonText property is "OK", and CancelButtonText is "Cancel".
+The SfDateTimePicker control has interact validation buttons (OK and Cancel) with localization of footer layout. The Default value of the OkButtonText property is "OK", and CancelButtonText is "Cancel".
 
 ## Picker Items
 
-The SfDateTimePicker control has intract with item source in picker items. The item source contains based on Date format. For example, 
+The SfDateTimePicker control has interact with the item source in picker items. The item source contains based on the Date and Time format. For example, 
 
 <table>
 <tr>

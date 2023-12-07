@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility with .NET MAUI Date Picker Control | Syncfusion
-description: Learn here all about accessibility with Syncfusion .NET MAUI Date Picker (SfDatePicker) control.
+description: Learn here about accessibility with Syncfusion .NET MAUI Date Picker (SfDatePicker) control.
 platform: maui
 control: SfDatePicker
 documentation: ug
@@ -13,19 +13,19 @@ The .NET MAUI Date Picker control has interact with the `Header`, `Column Header
 
 ## Header Layout
 
-The SfDatePicker control has intract header text with localization of header layout.
+The SfDatePicker control has interact header text with localization of header layout.
 
 ## Column Header Layout
 
-The SfDatePicker control has intract column header text with localization of column header layout. It contains DayHeaderText, MonthHeaderText, and YearHeaderText properties of the DatePickerColumnHeaderView. The default value of the DayHeaderText property is "Day", MonthHeaderText is "Month", and YearHeaderText is "Year".
+The SfDatePicker control has interact column header text with localization of column header layout. It contains DayHeaderText, MonthHeaderText, and YearHeaderText properties of the DatePickerColumnHeaderView. The default value of the DayHeaderText property is "Day", MonthHeaderText is "Month", and YearHeaderText is "Year".
 
 ## Footer Layout
 
-The SfDatePicker control has intract validation buttons (OK and Cancel) with localization of footer layout. The Default value of the OkButtonText property is "OK", and CancelButtonText is "Cancel".
+The SfDatePicker control has interact validation buttons (OK and Cancel) with localization of footer layout. The Default value of the OkButtonText property is "OK", and CancelButtonText is "Cancel".
 
 ## Picker Items
 
-The SfDatePicker control has intract with item source in picker items. The item source contains based on Date format. For example, 
+The SfDatePicker control has interact with the item source in picker items. The item source contains based on the Date format. For example, 
 
 <table>
 <tr>

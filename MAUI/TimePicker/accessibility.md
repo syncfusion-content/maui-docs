@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility with .NET MAUI Time Picker Control | Syncfusion
-description: Learn here all about accessibility with Syncfusion .NET MAUI Time Picker (SfTimePicker) control.
+description: Learn here about accessibility with Syncfusion .NET MAUI Time Picker (SfTimePicker) control.
 platform: maui
 control: SfTimePicker
 documentation: ug
@@ -13,19 +13,19 @@ The .NET MAUI Time Picker control has interact with the `Header`, `Column Header
 
 ## Header Layout
 
-The SfTimePicker control has intract header text with localization of header layout.
+The SfTimePicker control has interact header text with localization of header layout.
 
 ## Column Header Layout
 
-The SfTimePicker control has intract column header text with localization of column header layout. It contains HourHeaderText, MinuteHeaderText, SecondHeaderText, and MeridiemHeaderText properties of the TimePickerColumnHeaderView. The default value of the HourHeaderText property is "Hour", MinuteHeaderText is "Minute", SecondHeaderText is "Second", and MerdiemHeaderText is "string.Empty".
+The SfTimePicker control has interact column header text with localization of column header layout. It contains HourHeaderText, MinuteHeaderText, SecondHeaderText, and MeridiemHeaderText properties of the TimePickerColumnHeaderView. The default value of the HourHeaderText property is "Hour", MinuteHeaderText is "Minute", SecondHeaderText is "Second", and MerdiemHeaderText is "string.Empty".
 
 ## Footer Layout
 
-The SfTimePicker control has intract validation buttons (OK and Cancel) with localization of footer layout. The Default value of the OkButtonText property is "OK", and CancelButtonText is "Cancel".
+The SfTimePicker control has interact validation buttons (OK and Cancel) with localization of footer layout. The Default value of the OkButtonText property is "OK", and CancelButtonText is "Cancel".
 
 ## Picker Items
 
-The SfTimePicker control has intract with item source in picker items. The item source contains based on time format. For example, 
+The SfTimePicker control has interact with the item source in picker items. The item source contains based on the Time format. For example, 
 
 <table>
 <tr>
