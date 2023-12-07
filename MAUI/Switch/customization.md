@@ -20,7 +20,21 @@ The following properties are used to apply solid colors to the thumb, track, and
 * [`TrackStroke`]: Represents the color for the border of the track.
 * [`ThumbStroke`]: Represents the border color for the thumb.
 
-![switch conrol with visual state customization]
+{% tabs %}
+
+{% highlight xaml %}
+
+
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![switch conrol with visual state customization](images/customization/Colors.png)
 
 ## Sizing
 
@@ -37,5 +51,5 @@ In the switch control, sizing of the thumb and the track can be controlled by us
 
 The following code example demonstrates how to customize the size of the track and thumb.
 
-![switch conrol with sizing]
+![switch conrol with sizing](images/customization/Sizing.png)
 
