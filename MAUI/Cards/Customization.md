@@ -152,6 +152,7 @@ Customization of the border color, thickness, and card corner radius can be achi
 			BackgroundColor = Colors.Brown
 			}
 		}
+	};
            
 {% endhighlight %}
 
