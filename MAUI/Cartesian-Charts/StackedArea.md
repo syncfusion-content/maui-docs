@@ -62,31 +62,33 @@ chart.XAxes.Add(primaryAxis);
 NumericalAxis secondaryAxis = new NumericalAxis();
 chart.YAxes.Add(secondaryAxis);
 
+ViewModel viewModel = new ViewModel();
+
 StackingAreaSeries series1 = new  StackingAreaSeries()
 {
     XBindingPath = "Year",
     YBindingPath = "Value",
-    ItemsSource = Data1
+    ItemsSource = viewModel.Data1
 };
 
 StackingAreaSeries series2 = new StackingAreaSeries()
 {
     XBindingPath = "Year",
     YBindingPath = "Value",
-    ItemsSource = Data2
+    ItemsSource = viewModel.Data2
 };
 StackingAreaSeries series3 = new StackingAreaSeries()
 {
     XBindingPath = "Year",
     YBindingPath = "Value",
-    ItemsSource = Data3
+    ItemsSource = viewModel.Data3
 };
 
 StackingAreaSeries series4 = new StackingAreaSeries()
 {
     XBindingPath = "Year",
     YBindingPath = "Value",
-    ItemsSource = Data4
+    ItemsSource = viewModel.Data4
 };
 
 chart.Series.Add(series1);
