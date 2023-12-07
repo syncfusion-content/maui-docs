@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Accessibility in .NET MAUI Calendar control | Syncfusion
-description: Learn here all about accessibility features of Syncfusion .NET MAUI Calendar (SfCalendar) control. 
+title: Accessibility in .NET MAUI Calendar Control | Syncfusion
+description: Learn here all about the accessibility features of Syncfusion .NET MAUI Calendar (SfCalendar) control.
 platform: maui
 control: SfCalendar
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Accessibility in .NET Maui SfCalendar
 
-Enhance .NET MAUI Calendar's accessibility with user-friendly design, ensuring inclusive features for seamless navigation and usability for all users. Please find the table of elements along with their formats and examples.
+Enhance .NET MAUI Calendar's accessibility with a user-friendly design, ensuring inclusive features for seamless navigation and usability for all users. Please find the table of elements along with their formats and examples.
 
 ## Month View
 
