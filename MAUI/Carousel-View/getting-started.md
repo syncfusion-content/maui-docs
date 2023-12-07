@@ -520,4 +520,4 @@ N> The `SelectedIndex` property will be 0 by default.
 
 ![OverView image for Carousel](images/gettingstarted.png)
 
-You can find the complete getting started sample from this `link.`
+You can find the complete getting started sample from this [link.](https://github.com/SyncfusionExamples/Getting-Started-with-.NET-MAUI-SfCarousel)
