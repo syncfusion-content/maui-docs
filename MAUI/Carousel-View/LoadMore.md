@@ -1,38 +1,38 @@
 ---
 layout : post
-title: Load More in Xamarin Carousel View control | Syncfusion
-description: Learn here all about Load More support in Syncfusion Xamarin Carousel View (SfCarousel) control and more.
-platform : Xamarin
+title: Load More in .NET MAUI Carousel View control | Syncfusion
+description: Learn here all about Load More support in Syncfusion .NET MAUI Carousel View (SfCarousel) control and more.
+platform : maui
 control : Carousel
 documentation : ug
 ---
 
-# Load More in Xamarin Carousel View (SfCarousel)
+# Load More in .NET MAUI Carousel View (SfCarousel)
 
-Virtualization can be achieved by using the Load more concept. This support is used to handle the numerous items in the carousel control. A particular items are maintained in the view port based on the [`LoadMoreItemsCount`](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCarousel.XForms.SfCarousel.html#Syncfusion_SfCarousel_XForms_SfCarousel_LoadMoreItemsCount) property. The LoadMore view is added after the last item in the collection of carousel view. When tapping the LoadMore view, the next set of items in the collection can be added to the carousel.
+Virtualization can be achieved by using the Load more concept. This support is used to handle the numerous items in the carousel control. A particular items are maintained in the view port based on the `LoadMoreItemsCount` property. The LoadMore view is added after the last item in the collection of carousel view. When tapping the LoadMore view, the next set of items in the collection can be added to the carousel.
 
 The following properties are used to achieve this support:
 
-*	[`AllowLoadMore`](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCarousel.XForms.SfCarousel.html#Syncfusion_SfCarousel_XForms_SfCarousel_AllowLoadMore)
+*	`AllowLoadMore`
 
-*	[`LoadMoreItemsCount`](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCarousel.XForms.SfCarousel.html#Syncfusion_SfCarousel_XForms_SfCarousel_LoadMoreItemsCount)
+*	`LoadMoreItemsCount`
 
-*	[`LoadMoreView`](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCarousel.XForms.SfCarousel.html#Syncfusion_SfCarousel_XForms_SfCarousel_LoadMoreView)
+*	`LoadMoreView`
 
 ## AllowLoadMore
 
-By enabling the [`AllowLoadMore`](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCarousel.XForms.SfCarousel.html#Syncfusion_SfCarousel_XForms_SfCarousel_AllowLoadMore) property, the LoadMore support works in the carousel view. 
+By enabling the `AllowLoadMore` property, the LoadMore support works in the carousel view. 
 
-N>The default value of the [`AllowLoadMore`](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCarousel.XForms.SfCarousel.html#Syncfusion_SfCarousel_XForms_SfCarousel_AllowLoadMore) property is false.
+N>The default value of the `AllowLoadMore` property is false.
 
 {% tabs %}
 
 {% highlight xaml %}
 
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:carousel="clr-namespace:Syncfusion.SfCarousel.XForms;assembly=Syncfusion.SfCarousel.XForms"
+             xmlns:carousel="clr-namespace:Syncfusion.Maui.Carousel;assembly=Syncfusion.Maui.Carousel"
              xmlns:local="clr-namespace:CarouselSample"
              x:Class="CarouselSample.MainPage">
     <ContentPage.BindingContext>
@@ -65,9 +65,8 @@ N>The default value of the [`AllowLoadMore`](https://help.syncfusion.com/cr/xama
 
 {% highlight c# %}
 
-using Syncfusion.SfCarousel.XForms;
+using Syncfusion.Maui.Carousel;
 using System.Collections.Generic;
-using Xamarin.Forms;
 
 namespace CarouselSample
 {
@@ -148,17 +147,11 @@ N>The default value of the `LoadMoreItemsCount` property is 3.
 
 {% highlight xaml %}
 
-<?xml version="1.0" encoding="utf-8" ?>
-	<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-	xmlns:local="clr-namespace:LoadMore"
-	x:Class="LoadMore.MainPage"
-	xmlns:carousel="clr-namespace:Syncfusion.SfCarousel.XForms;assembly=Syncfusion.SfCarousel.XForms">
 
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:carousel="clr-namespace:Syncfusion.SfCarousel.XForms;assembly=Syncfusion.SfCarousel.XForms"
+             xmlns:carousel="clr-namespace:Syncfusion.Maui.Carousel;assembly=Syncfusion.Maui.Carousel"
              xmlns:local="clr-namespace:CarouselSample"
              x:Class="CarouselSample.MainPage">
     <ContentPage.BindingContext>
@@ -192,9 +185,8 @@ N>The default value of the `LoadMoreItemsCount` property is 3.
 
 {% highlight c# %}
 
-using Syncfusion.SfCarousel.XForms;
+using Syncfusion.Maui.Carousel;
 using System.Collections.Generic;
-using Xamarin.Forms;
 
 namespace CarouselSample
 {
@@ -275,9 +267,9 @@ Custom view can be passed instead of the `LoadMore` label by using the `LoadMore
 {% highlight xaml %}
 
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:carousel="clr-namespace:Syncfusion.SfCarousel.XForms;assembly=Syncfusion.SfCarousel.XForms"
+             xmlns:carousel="clr-namespace:Syncfusion.Maui.Carousel;assembly=Syncfusion.Maui.Carousel"
              xmlns:local="clr-namespace:CarouselSample"
              x:Class="CarouselSample.MainPage">
     <ContentPage.BindingContext>
@@ -324,9 +316,8 @@ Custom view can be passed instead of the `LoadMore` label by using the `LoadMore
 
 {% highlight c# %}
 
-using Syncfusion.SfCarousel.XForms;
+using Syncfusion.Maui.Carousel;
 using System.Collections.Generic;
-using Xamarin.Forms;
 
 namespace CarouselSample
 {
@@ -433,10 +424,10 @@ To load more items programmatically, `LoadMore` method can be called which loads
 {% highlight xaml %}
 
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:CarouselSample"
-             xmlns:carousel="clr-namespace:Syncfusion.SfCarousel.XForms;assembly=Syncfusion.SfCarousel.XForms"
+             xmlns:carousel="clr-namespace:Syncfusion.Maui.Carousel;assembly=Syncfusion.Maui.Carousel"
              x:Class="CarouselSample.MainPage">
     <ContentPage.BindingContext>
         <local:CarouselViewModel/>
@@ -471,7 +462,6 @@ To load more items programmatically, `LoadMore` method can be called which loads
 
 using System;
 using System.Collections.Generic;
-using Xamarin.Forms;
 
 namespace CarouselSample
 {

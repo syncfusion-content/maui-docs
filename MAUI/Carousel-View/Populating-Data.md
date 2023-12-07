@@ -84,9 +84,9 @@ N> Images can also be referred in PCL and from website URL as `instructed`
 {% highlight xaml %}
 
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:carousel="clr-namespace:Syncfusion.SfCarousel.XForms;assembly=Syncfusion.SfCarousel.XForms"
+             xmlns:carousel="clr-namespace:Syncfusion.Maui.Carousel;assembly=Syncfusion.Maui.Carousel"
              xmlns:local="clr-namespace:CarouselSample"
              x:Class="CarouselSample.MainPage">
     <ContentPage.BindingContext>
@@ -200,9 +200,8 @@ Different set of views can be provided to every items through `ItemContent` prop
 
 {% highlight C# %}
 
-using Syncfusion.SfCarousel.XForms;
+using Syncfusion.Maui.Carousel;
 using System.Collections.ObjectModel;
-using Xamarin.Forms;
 
 namespace CarouselSample
 {
@@ -234,13 +233,12 @@ namespace CarouselSample
 
 {% endhighlight %}
 
-and also carousel provides a support to display only the Image data with [`Image`](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCarousel.XForms.SfCarouselItem.html#Syncfusion_SfCarousel_XForms_SfCarouselItem_ImageName) property in [`SfCarouselItem`](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCarousel.XForms.SfCarouselItem.html) class.
+and also carousel provides a support to display only the Image data with `Image` property in `SfCarouselItem` class.
 
 {% highlight C# %}
 
-using Syncfusion.SfCarousel.XForms;
+using Syncfusion.Maui.Carousel;
 using System.Collections.ObjectModel;
-using Xamarin.Forms;
 
 namespace CarouselSample
 {

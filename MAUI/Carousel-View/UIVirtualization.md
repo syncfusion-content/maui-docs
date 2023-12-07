@@ -26,9 +26,9 @@ N> The default value of the `EnableVirtualization` property is false.
 {% highlight xaml %}
 
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:carousel="clr-namespace:Syncfusion.SfCarousel.XForms;assembly=Syncfusion.SfCarousel.XForms"
+             xmlns:carousel="clr-namespace:Syncfusion.Maui.Carousel;assembly=Syncfusion.Maui.Carousel"
              xmlns:local="clr-namespace:CarouselSample"
              x:Class="CarouselSample.MainPage">
      <ContentPage.BindingContext>
@@ -61,9 +61,8 @@ N> The default value of the `EnableVirtualization` property is false.
 
 {% highlight c# %}
 
-using Syncfusion.SfCarousel.XForms;
+using Syncfusion.Maui.Carousel;
 using System.Collections.Generic;
-using Xamarin.Forms;
 
 namespace CarouselSample
 {

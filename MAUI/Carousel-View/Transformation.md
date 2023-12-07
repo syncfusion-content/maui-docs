@@ -22,9 +22,9 @@ N> If the angle value is positive, then the rotation is in the clockwise directi
 {% highlight xaml %}
 
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:carousel="clr-namespace:Syncfusion.SfCarousel.XForms;assembly=Syncfusion.SfCarousel.XForms"
+             xmlns:carousel="clr-namespace:Syncfusion.Maui.Carousel;assembly=Syncfusion.Maui.Carousel"
              xmlns:local="clr-namespace:CarouselSample"
              x:Class="CarouselSample.MainPage">
     <carousel:SfCarousel x:Name="carousel"
@@ -37,9 +37,8 @@ N> If the angle value is positive, then the rotation is in the clockwise directi
 
 {% highlight C# %}
 
-using Syncfusion.SfCarousel.XForms;
+using Syncfusion.Maui.Carousel;
 using System.Collections.ObjectModel;
-using Xamarin.Forms;
 
 namespace CarouselSample
 {
@@ -87,9 +86,9 @@ N> The default value is 20.
 {% highlight xaml %}
 
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:carousel="clr-namespace:Syncfusion.SfCarousel.XForms;assembly=Syncfusion.SfCarousel.XForms"
+             xmlns:carousel="clr-namespace:Syncfusion.Maui.Carousel;assembly=Syncfusion.Maui.Carousel"
              xmlns:local="clr-namespace:CarouselSample"
              x:Class="CarouselSample.MainPage">
     <carousel:SfCarousel x:Name="carousel"
@@ -103,9 +102,8 @@ N> The default value is 20.
 
 {% highlight C# %}
 
-using Syncfusion.SfCarousel.XForms;
+using Syncfusion.Maui.Carousel;
 using System.Collections.ObjectModel;
-using Xamarin.Forms;
 
 namespace CarouselSample
 {
@@ -150,9 +148,9 @@ Distance between the selected item and other items can be customized by using `S
 {% highlight xaml %}
 
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:carousel="clr-namespace:Syncfusion.SfCarousel.XForms;assembly=Syncfusion.SfCarousel.XForms"
+             xmlns:carousel="clr-namespace:Syncfusion.Maui.Carousel;assembly=Syncfusion.Maui.Carousel"
              xmlns:local="clr-namespace:CarouselSample"
              x:Class="CarouselSample.MainPage">
     <carousel:SfCarousel x:Name="carousel"
@@ -166,9 +164,8 @@ Distance between the selected item and other items can be customized by using `S
 
 {% highlight C# %}
 
-using Syncfusion.SfCarousel.XForms;
+using Syncfusion.Maui.Carousel;
 using System.Collections.ObjectModel;
-using Xamarin.Forms;
 
 namespace CarouselSample
 {
@@ -211,9 +208,9 @@ The `ScaleOffset` property in the  `SfCarousel` control is used to scale all the
 {% highlight xaml %}
 
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:carousel="clr-namespace:Syncfusion.SfCarousel.XForms;assembly=Syncfusion.SfCarousel.XForms"
+             xmlns:carousel="clr-namespace:Syncfusion.Maui.Carousel;assembly=Syncfusion.Maui.Carousel"
              xmlns:local="clr-namespace:CarouselSample"
              x:Class="CarouselSample.MainPage">
     <ContentPage.BindingContext>
@@ -242,9 +239,8 @@ The `ScaleOffset` property in the  `SfCarousel` control is used to scale all the
 
 {% highlight C# %}
 
-using Syncfusion.SfCarousel.XForms;
+using Syncfusion.Maui.Carousel;
 using System.Collections.Generic;
-using Xamarin.Forms;
 
 namespace CarouselSample
 {
@@ -324,9 +320,9 @@ Spacing of all the items in Linear mode can be determined by using `ItemSpacing`
 {% highlight xaml %}
 
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:carousel="clr-namespace:Syncfusion.SfCarousel.XForms;assembly=Syncfusion.SfCarousel.XForms"
+             xmlns:carousel="clr-namespace:Syncfusion.Maui.Carousel;assembly=Syncfusion.Maui.Carousel"
              xmlns:local="clr-namespace:CarouselSample"
              x:Class="CarouselSample.MainPage">
     <ContentPage.BindingContext>
@@ -356,9 +352,8 @@ Spacing of all the items in Linear mode can be determined by using `ItemSpacing`
 
 {% highlight C# %}
 
-using Syncfusion.SfCarousel.XForms;
+using Syncfusion.Maui.Carousel;
 using System.Collections.Generic;
-using Xamarin.Forms;
 
 namespace CarouselSample
 {
