@@ -54,7 +54,7 @@ private async void SfSwitch_StateChanged(object sender, SwitchStateChangedEventA
 {% endhighlight %}
 {% endtabs %}
 
-![.NET MAUI Switch]
+![SwitchStateChangedEventArgs](images/Events/Event.gif)
 
 ## StateChanging event
 
@@ -101,5 +101,3 @@ private void SfSwitch_StateChanging(object sender, SwitchStateChangingEventArgs 
 
 {% endhighlight %}
 {% endtabs %}
-
-![.NET MAUI Switch]
