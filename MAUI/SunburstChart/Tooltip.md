@@ -9,11 +9,11 @@ documentation: ug
 
 # Tooltip in .NET MAUI Sunburst Chart 
 
-Tooltip provides additional information about the segments in the sunburst chart. Tooltip is displayed by tapping the segment. By default, tooltip displays the corresponding segment’s category and value. To enable the tooltip, set the [EnableTooltip]() property to true.
+Tooltip provides additional information about the segments in the sunburst chart. Tooltip is displayed by tapping the segment. By default, tooltip displays the corresponding segment’s category and value.
 
 ## Enable Tooltip
 
-To define the tooltip in the chart, set the [EnableTooltip]() property of [SfSunburstChart]() to true.
+To define the tooltip in the chart, set the [EnableTooltip]() property of [SfSunburstChart]() to true. The default value of the EnableTooltip property is `False`.
 
 {% tabs %}
 

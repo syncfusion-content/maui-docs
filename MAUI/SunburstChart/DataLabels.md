@@ -11,7 +11,7 @@ documentation: ug
 Data labels are used to display information about segments at the (X, Y) point.
 
 ## Enable Data Label 
-Data labels are enabled and disabled using the [ShowLabels]() property. The default value of the ShowLabel property is `False`.
+Data labels are enabled and disabled using the [ShowLabels]() property. The default value of the ShowLabels property is `False`.
 
 The following code explains how to initialize data labels. 
 
