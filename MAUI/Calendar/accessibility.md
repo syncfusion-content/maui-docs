@@ -86,6 +86,8 @@ Enhance .NET MAUI Calendar's accessibility with a user-friendly design, ensuring
 </tr>
 </table>
 
+![Month view accessibility in .NET MAUI Calendar.](images/accessibility/maui-month-view-accessibility.png)
+
 ## Year View
 
 <table>
@@ -110,6 +112,8 @@ Enhance .NET MAUI Calendar's accessibility with a user-friendly design, ensuring
 <td>December 2019, Disabled cell</td>
 </tr>
 </table>
+
+![Year view accessibility in .NET MAUI Calendar.](images/accessibility/maui-year-view-accessibility.png)
 
 ## Decade View
 
@@ -136,6 +140,8 @@ Enhance .NET MAUI Calendar's accessibility with a user-friendly design, ensuring
 </tr>
 </table>
 
+![Decade view accessibility in .NET MAUI Calendar.](images/accessibility/maui-decade-view-accessibility.png)
+
 ## Century View
 
 <table>
@@ -160,3 +166,5 @@ Enhance .NET MAUI Calendar's accessibility with a user-friendly design, ensuring
 <td>2010 to 2019, Disabled cell</td>
 </tr>
 </table>
+
+![Century view accessibility in .NET MAUI Calendar.](images/accessibility/maui-century-view-accessibility.png)
