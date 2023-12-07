@@ -24,11 +24,51 @@ The following properties are used to apply solid colors to the thumb, track, and
 
 {% highlight xaml %}
 
-
-
-{% endhighlight %}
-
-{% highlight c# %}
+<syncfusion:SfSwitch IsOn="False" AllowIndeterminateState="false"> 
+    <VisualStateManager.VisualStateGroups>
+        <VisualStateGroup  x:Name="CommonStates">
+            <VisualState x:Name="On">
+                <VisualState.Setters>
+                    <Setter Property="SwitchSettings">
+                        <Setter.Value>
+                            <syncfusion:SwitchSettings
+                                 ThumbBackground="#FF029BFF"
+                                 ThumbStroke="#FF029BFF"
+                                 TrackBackground="#22029BFF"
+                                 TrackStroke="#FF029BFF"/>
+                        </Setter.Value>
+                    </Setter>
+                </VisualState.Setters>
+            </VisualState>
+            <VisualState x:Name="Off">
+                <VisualState.Setters>
+                    <Setter Property="SwitchSettings">
+                        <Setter.Value>
+                            <syncfusion:SwitchSettings
+                                ThumbBackground="#FFFF0199"
+                                ThumbStroke="#FFFF0199"
+                                TrackBackground="#22FF0199"
+                                TrackStroke="#FFFF0199"/>
+                        </Setter.Value>
+                    </Setter>
+                </VisualState.Setters>
+            </VisualState>
+            <VisualState x:Name="Indeterminate">
+                <VisualState.Setters>
+                    <Setter Property="SwitchSettings">
+                        <Setter.Value>
+                            <syncfusion:SwitchSettings
+                                 ThumbBackground="#9ACB0D"
+                                 ThumbStroke="#9ACB0D"
+                                 TrackBackground="#DEF991"
+                                 TrackStroke="#9ACB0D"/>
+                        </Setter.Value>
+                    </Setter>
+                </VisualState.Setters>
+            </VisualState>
+        </VisualStateGroup>
+    </VisualStateManager.VisualStateGroups>
+</syncfusion:SfSwitch>
 
 {% endhighlight %}
 
