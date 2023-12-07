@@ -35,7 +35,7 @@ To define the tooltip in the chart, set the [EnableTooltip]() property of [SfSun
 
 {% endtabs %}
 
-## customization
+## Customization
 
 The appearance of the tooltip can be customized using the following properties:
 

@@ -125,6 +125,14 @@ The following table illustrates the API migration for the sunburst chart.
 <td>Stroke</td>
 </tr>
 <tr>
+<td>SunburstChartDataLabel.ShowLabel</td>
+<td>SfSunburstChart.ShowLabels</td>
+</tr>
+<tr>
+<td>SunburstTooltipSettings.ShowTooltip</td>
+<td>SfSunburstChart.EnableTooltip</td>
+</tr>
+<tr>
 <td>DataLabel</td>
 <td>DataLabelSettings</td>
 </tr>
@@ -348,7 +356,7 @@ The following code example shows how to enable legend in the sunburst chart.
 </table>
 
 ### Data Label
-
+To enable data labels, use the [ShowLabel]() property in the [SunburstChartDataLabel]() class and the [ShowLabels]() property in the [SfSunburstChart]() class, respectively, in Xamarin and MAUI.
 To customize the data label appearance, create an instance of the [SunburstDataLabelSettings]() class and add it to the [DataLabelSettings]() of [SfSunburstChart](). The following code explains how to initialize data labels. 
 
 <table>
@@ -455,7 +463,7 @@ To customize the data label appearance, create an instance of the [SunburstDataL
 </table>
 
 ### Tooltip
-
+To enable the tooltip, use the [ShowTooltip]() property in the [SunburstTooltipSettings]() class and the [EnableTooltip]() property in the [SfSunburstChart]() class, respectively, in Xamarin and MAUI.
 To customize the tooltip appearance, create an instance of the SunburstTooltipSettings class and add it to the TooltipSettings of SfSunburstChart. 
 
 <table>
@@ -565,8 +573,9 @@ To customize the tooltip appearance, create an instance of the SunburstTooltipSe
 
 ## Upcoming features in .NET MAUI Sunburst chart
 
-* Drill Down support.
-* Selection support.
+* Drill down to explore each level of the hierarchy in detail.
+* Selection allows you to highlight or choose segments within the hierarchy.
+* Legend customization support.
 
 ## Support and feedback
 
