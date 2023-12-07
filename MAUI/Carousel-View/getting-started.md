@@ -82,9 +82,9 @@ The .NET MAUI Carousel View (SfCarousel) control is configured entirely in C# co
 {% highlight xaml %}
 
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:carousel="clr-namespace:Syncfusion.SfCarousel.XForms;assembly=Syncfusion.SfCarousel.XForms"
+             xmlns:carousel="clr-namespace:Syncfusion.Maui.Carousel;assembly=Syncfusion.Maui.Carousel"
              xmlns:local="clr-namespace:CarouselSample"
              x:Class="CarouselSample.MainPage">
     <carousel:SfCarousel x:Name="carousel" />
@@ -94,8 +94,7 @@ The .NET MAUI Carousel View (SfCarousel) control is configured entirely in C# co
 
 {% highlight C# %}
 
-using Syncfusion.SfCarousel.XForms;
-using Xamarin.Forms;
+using Syncfusion.Maui.Carousel;
 
 namespace CarouselSample
 {
@@ -131,7 +130,7 @@ The following code example illustrates to add list of Images in Carousel ,
 
 {% highlight C# %}
 
-using Syncfusion.SfCarousel.XForms;
+using Syncfusion.Maui.Carousel;
 using System.Collections.ObjectModel;
 using Xamarin.Forms;
 
