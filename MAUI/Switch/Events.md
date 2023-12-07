@@ -18,6 +18,44 @@ The StateChanged event occurs when the value or state of [`IsOn`] property is ch
 * [`NewValue`] : Gets the current value of the Switch control.
 * [`OldValue`] : Gets the previous value of the Switch control.
 
+{% tabs %}
+
+{% highlight xaml %}
+
+<syncfusion:SfSwitch StateChanged="SfSwitch_StateChanged"/>
+	
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfSwitch sfSwitch = new SfSwitch();
+sfSwitch.StateChanged+= SfSwitch_StateChanged;
+this.Content = sfSwitch;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+{% tabs %}
+{% highlight c# %}
+    
+private async void SfSwitch_StateChanged(object sender, SwitchStateChangedEventArgs e)
+{
+    // Access the new and old values
+    bool? newValue = e.NewValue;
+    bool? oldValue = e.OldValue?;
+
+    await DisplayAlert("Alert", "Switch State Changed", "close");
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% endhighlight %}
+{% endtabs %}
+
+![.NET MAUI Switch]
+
 ## StateChanging event
 
 The StateChanging event occurs when the state of [`IsOn`] property is about to change in the Switch control. The [`SwitchStateChangingEventArgs`] provides the following properties:
@@ -25,5 +63,43 @@ The StateChanging event occurs when the state of [`IsOn`] property is about to c
 * [`NewValue`] : Gets the current value of the Switch control.
 * [`OldValue`] : Gets the previous value of the Switch control.
 * [`Cancel`] : Gets or sets a value indicating whether the event should be canceled.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<syncfusion:SfSwitch StateChanged="SfSwitch_StateChanged" StateChanging="SfSwitch_StateChanging"/>
+	
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfSwitch sfSwitch = new SfSwitch();
+sfSwitch.StateChanged += SfSwitch_StateChanged;
+sfSwitch.StateChanging += SfSwitch_StateChanging;
+this.Content = sfSwitch;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+{% tabs %}
+{% highlight c# %}
+    
+private void SfSwitch_StateChanging(object sender, SwitchStateChangingEventArgs e)
+{
+    // Access the new and old values
+    bool? newValue = e.NewValue;
+    bool? oldValue = e.OldValue;
+
+    // Cancel the event if needed
+    if (newValue == null)
+    {
+        e.Cancel = true;
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
 
 ![.NET MAUI Switch]

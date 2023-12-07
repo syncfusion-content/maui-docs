@@ -87,6 +87,7 @@ Now, add the [`SfSwitch`] control with a required optimal name using the include
 {% highlight C# %}
 
 SfSwitch sfSwitch = new SfSwitch();
+this.Content = sfSwitch;
 
 {% endhighlight %}
 

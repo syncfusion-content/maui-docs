@@ -26,8 +26,8 @@ You can switch to on state by tapping the switch button or by setting a value as
 {% highlight c# %}
 
 SfSwitch sfSwitch=new SfSwitch();
-
 sfSwitch.IsOn=true;
+this.Content = sfSwitch;
 
 {% endhighlight %}
 
@@ -50,8 +50,8 @@ This is the default state. You can switch to Off state by tapping the switch but
 {% highlight c# %}
 
 SfSwitch sfSwitch = new SfSwitch();
-
 sfSwitch.IsOn = false;
+this.Content = sfSwitch;
 
 {% endhighlight %}
 
@@ -74,8 +74,8 @@ The indeterminate state can be enabled when you need to display the work progres
 {% highlight c# %}
 
 SfSwitch sfSwitch = new SfSwitch();
-
 sfSwitch.IsOn = null;
+this.Content = sfSwitch;
 
 sfSwitch.AllowIndeterminateState = true;
 
@@ -104,6 +104,7 @@ You can switch to disabled on state by setting the [`IsOn`] property as true and
 SfSwitch sfSwitch = new SfSwitch();
 sfSwitch.IsOn = true;
 sfSwitch.IsEnabled = false;
+this.Content = sfSwitch;
 
 {% endhighlight %}
 
@@ -128,6 +129,7 @@ You can switch to disabled off state by setting the [`IsOn`] property as false a
 SfSwitch sfSwitch = new SfSwitch();
 sfSwitch.IsOn = false;
 sfSwitch.IsEnabled = false;
+this.Content = sfSwitch;
 
 {% endhighlight %}
 
@@ -153,6 +155,7 @@ SfSwitch sfSwitch = new SfSwitch();
 sfSwitch.AllowIndeterminateState = true;
 sfSwitch.IsOn = null;          
 sfSwitch.IsEnabled = false;
+this.Content = sfSwitch;
 
 {% endhighlight %}
 
