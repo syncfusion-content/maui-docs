@@ -28,7 +28,7 @@ Syncfusion.SfSunburstChart.XForms
 </tr>
 </table>
 
-To make the migration easier, the majority of the APIs from the Xamarin [SfSunburstChart](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSunburstChart.XForms.SfSunburstChart.html) were kept in the .NET MAUI [SfSunburstChart](). Currently, most of the features have been added in the [SfSunburstChart](), but only a few are pending in the .NET MAUI along with some limitations. Please refer to the following details and the API migration information available below.
+To make the migration easier, the most of the APIs from the Xamarin [SfSunburstChart](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSunburstChart.XForms.SfSunburstChart.html) were kept in the .NET MAUI [SfSunburstChart](). Currently, most of the features have been added in the [SfSunburstChart](), but only a few are pending in the .NET MAUI along with some limitations. Please refer to the following details and the API migration information available below.
 
 ## Initialize control
 
@@ -131,6 +131,10 @@ The following table illustrates the API migration for the sunburst chart.
 <tr>
 <td>SunburstTooltipSettings.ShowTooltip</td>
 <td>SfSunburstChart.EnableTooltip</td>
+</tr>
+<tr>
+<td>SunburstTooltipSettings.TooltipTemplate</td>
+<td>SfSunburstChart.TooltipTemplate</td>
 </tr>
 <tr>
 <td>DataLabel</td>
@@ -356,7 +360,7 @@ The following code example shows how to enable legend in the sunburst chart.
 </table>
 
 ### Data Label
-To enable data labels, use the [ShowLabel]() property in the [SunburstChartDataLabel]() class and the [ShowLabels]() property in the [SfSunburstChart]() class, respectively, in Xamarin and MAUI.
+To enable data labels, use the [ShowLabel]() property in the [SunburstChartDataLabel]() class and the [ShowLabels]() property in the [SfSunburstChart]() class, in Xamarin and MAUI respectively.
 To customize the data label appearance, create an instance of the [SunburstDataLabelSettings]() class and add it to the [DataLabelSettings]() of [SfSunburstChart](). The following code explains how to initialize data labels. 
 
 <table>
@@ -463,7 +467,7 @@ To customize the data label appearance, create an instance of the [SunburstDataL
 </table>
 
 ### Tooltip
-To enable the tooltip, use the [ShowTooltip]() property in the [SunburstTooltipSettings]() class and the [EnableTooltip]() property in the [SfSunburstChart]() class, respectively, in Xamarin and MAUI.
+To enable the tooltip, use the [ShowTooltip]() property in the [SunburstTooltipSettings]() class and the [EnableTooltip]() property in the [SfSunburstChart]() class, in Xamarin and MAUI respectively.
 To customize the tooltip appearance, create an instance of the SunburstTooltipSettings class and add it to the TooltipSettings of SfSunburstChart. 
 
 <table>
@@ -579,4 +583,4 @@ To customize the tooltip appearance, create an instance of the SunburstTooltipSe
 
 ## Support and feedback
 
-If you are unable to find the migration information you require in the self-help resources listed above, please contact us by creating a [support ticket](https://internalsupport.bolddesk.com/agent/tickets/create). Do not see what you need? Please request it in our [feedback portal](https://www.syncfusion.com/feedback/maui). 
+If you are unable to find the migration information you require in the self-help resources listed above, please contact us by creating a [support ticket](https://internalsupport.bolddesk.com/agent/tickets/create). If you do not see what you need, Please request it in our [feedback portal](https://www.syncfusion.com/feedback/maui). 

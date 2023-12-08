@@ -7,7 +7,7 @@ control: SfSunburstChart
 documentation: ug
 ---
 
-# Sunburst Chart Appearance
+# Appearance in .NET MAUI Sunburst Chart
 
 The following code example gives you to customize the appearance of the sunburst chart.
 
@@ -40,6 +40,8 @@ The start angle and end angle of the sunburst chart can be adjusted by using the
 
 {% endtabs %}
 
+![Angle customization in MAUI Sunburst Chart]()
+
 ## Radius
 
 The sunburst chart allows you to customize the radius by using the [Radius]() property. The default value of this property is 0.9, and the value ranges from 0 to 1.
@@ -67,6 +69,8 @@ The sunburst chart allows you to customize the radius by using the [Radius]() pr
 
 {% endtabs %}
 
+![Radius in MAUI Sunburst Chart]()
+
 ## Inner radius
 
 The sunburst chart allows you to customize the inner radius using the [InnerRadius]() property. The default value of this property is `0.25`, and the value ranges from 0 to 1.
@@ -76,7 +80,7 @@ The sunburst chart allows you to customize the inner radius using the [InnerRadi
 {% highlight xaml %}
 
     <sunburst:SfSunburstChart ItemsSource="{Binding DataSource}" 
-                              InnerRadius="0.5"
+                              InnerRadius="0.4"
                               ValueMemberPath="EmployeesCount">
     . . .
     </sunburst:SfSunburstChart>
@@ -87,12 +91,14 @@ The sunburst chart allows you to customize the inner radius using the [InnerRadi
 
     SfSunburstChart sunburst = new SfSunburstChart();
     . . .
-    sunburst.InnerRadius = 0.5;
+    sunburst.InnerRadius = 0.4;
     . . .
 
 {% endhighlight %}
 
 {% endtabs %}
+
+![Inner radius in MAUI Sunburst Chart]()
 
 ## Stroke
 
@@ -122,3 +128,5 @@ Stroke color and stroke width of the sunburst chart can be customized using [Str
 {% endhighlight %}
 
 {% endtabs %}
+
+![Stroke and stroke width in MAUI Sunburst Chart]()

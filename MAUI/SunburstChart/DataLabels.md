@@ -13,7 +13,7 @@ Data labels are used to display information about segments at the (X, Y) point.
 ## Enable Data Label 
 Data labels are enabled and disabled using the [ShowLabels]() property. The default value of the ShowLabels property is `False`.
 
-The following code explains how to initialize data labels. 
+The following code explains how to initialize data labels.
 
 {% tabs %}
 
@@ -39,7 +39,7 @@ The following code explains how to initialize data labels.
 
 When the data labels are large in text size, they will overlap each other. To avoid overlapping, trim or hide the data labels using the OverflowMode property. By default, the OverFlow mode is `Trim`.
 
-The following code shows hide the data labels.
+The following code shows how to hide the data labels.
 
 {% tabs %}
 
@@ -68,9 +68,11 @@ The following code shows hide the data labels.
 
 {% endtabs %} 
 
+![](Over flow mode as hide in MAUI Sunburst Chart)
+
 ## Rotation Mode
 
-The view of data labels can be customized using the [RotationMode]() property. Data labels can be rotated to a angle for better readability. By default, the rotation mode is `Angle`.
+The view of data labels can be customized using the [RotationMode]() property. Data labels can be rotated to an angle for better readability. By default, the rotation mode is `Angle`.
 
 The following code shows normal mode of data labels.
 
@@ -101,9 +103,11 @@ The following code shows normal mode of data labels.
 
 {% endtabs %} 
 
+![Rotation mode as normal in MAUI Sunburst Chart]()
+
 ## Customization
 
- Data labels can be customized by using the [DataLabelSettings]() property of the chart. For customizing, need to create an instance of [SunburstDataLabelSettings]() and set to the [DataLabelSettings]() property.The following properties, which are available in [SunburstDataLabelSettings](), are used to customise the data labels. 
+ Data labels can be customized using the [DataLabelSettings]() property of the chart. For customizing, you need to create an instance of [SunburstDataLabelSettings]() and set it to the [DataLabelSettings]() property.The following properties, available in [SunburstDataLabelSettings](), are used to customize the data labels: 
 
 * [FontAttributes]() of type `FontAttributes`, indicates the font style of * the label.
 * [FontFamily]() of type `string`, indicates the font family for the label.
@@ -141,3 +145,5 @@ The following code shows normal mode of data labels.
 {% endhighlight %}
 
 {% endtabs %} 
+
+![Data label customization in MAUI Sunburst Chart]()
