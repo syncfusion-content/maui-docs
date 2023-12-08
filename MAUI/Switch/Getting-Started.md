@@ -95,4 +95,4 @@ this.Content = sfSwitch;
 
 ![SfSwitch](images/getting-started/SfSwitch.png)
 
-Find the complete getting started sample of the .NET MAUI Switch from this [link.]
+Find the complete getting started sample of the .NET MAUI Switch from this [link.](https://github.com/SyncfusionExamples/Getting-Started-with-.NET-MAUI-SfSwitch)
