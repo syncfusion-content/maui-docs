@@ -21,5 +21,5 @@ The new Cards control empowers you to generate either a dismissible card or a st
 * This capability allows you to dismiss and retrieve the card in the left, right, top, and bottom directions.
 * This feature enables you to display the swiped card.
 
-![MAUI Cards]()
+![overview in MAUI SfCardLayout](images/maui-card-overview.gif)
 
