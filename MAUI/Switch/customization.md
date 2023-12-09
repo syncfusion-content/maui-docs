@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Customization in .NET MAUI Switch control | Syncfusion
-description: Learn here all about Customization support in Syncfusion .NET MAUI Switch (SfSwitch) control and more.
+title: Customization in .NET MAUI Switch Control | Syncfusion
+description: Learn here all about Customization support in Syncfusion .NET MAUI Switch (SfSwitch) control, and more.
 platform: .NET MAUI
 control: SfSwitch
 documentation: ug
