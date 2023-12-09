@@ -34,3 +34,73 @@ The SfPicker control has interact validation buttons (OK and Cancel) with locali
 The SfPicker control has interact with the [Item Source](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerColumn.html#Syncfusion_Maui_Picker_PickerColumn_ItemsSourceProperty) in picker items.
 
 ![Picker Items in .NET MAUI Picker.](images/accessibility/maui-accessibility-pickeritems.png)
+
+## Keyboard
+`SfPicker` supports selection using keyboard interactions.
+
+<table>
+<tr>
+<th>
+Key
+</th>
+<th>
+Description
+</th>
+</tr>
+<tr>
+<td>
+Tab
+</td>
+<td>
+Focus the picker.
+</td>
+</tr>
+<tr>
+<td>
+Enter
+</td>
+<td>
+Opens the selected picker.
+</td>
+</tr>
+<tr>
+<td>
+DownArrow
+</td>
+<td>
+Selects an item from the currently expanded list by moving downwards.
+</td>
+</tr>
+<tr>
+<td>
+UpArrow
+</td>
+<td>
+Selects an item from the currently expanded list by moving upwards.
+</td>
+</tr>
+<tr>
+<td>
+RightArrow/Tab
+</td>
+<td>
+Navigates through the selected item in the right direction.
+</td>
+</tr>
+<tr>
+<td>
+LeftArrow/Shift+Tab
+</td>
+<td>
+Navigates through the selected item in the left direction.
+</td>
+</tr>
+<tr>
+<td>
+Esc/Enter
+</td>
+<td>
+Exit and commit selection.
+</td>
+</tr>
+</table>
