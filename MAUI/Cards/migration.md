@@ -73,9 +73,7 @@ this.Content = cardView;
 <ContentPage  xmlns:card="clr-namespace:Syncfusion.Maui.Cards;assembly=Syncfusion.Maui.Cards">
 
 <card:SfCardView x:Name="sfCardView">
- 
-     <Label Text="SfCardView"/>
-	 
+	<Label Text="SfCardView"/>	 
 </card:SfCardView>
 
 </ContentPage>
@@ -120,16 +118,14 @@ The following code example, explains how to initialize the properties of the `Xa
 xmlns:cards="clr-namespace:Syncfusion.XForms.Cards;assembly=Syncfusion.Cards.XForms">
 
 <cards:SfCardView>
-
 	<Label Text="SfCardView"/>
-
 </cards:SfCardView>
 
 </ContentPage>
 
 {% endhighlight %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 using Syncfusion.Cards.XForms;
 ...
@@ -142,6 +138,35 @@ this.Content = cardView;
 
 {% endtabs %}
 
+</td>
+<td>
+{% tabs %}
+
+{% highlight xaml %}
+
+<ContentPage
+xmlns:cards="clr-namespace:Syncfusion.Maui.Cards;assembly=Syncfusion.Maui.Cards">
+
+<cards:SfCardView>
+	<Label Text="SfCardView"/>
+</cards:SfCardView>
+
+</ContentPage>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+using Syncfusion.Maui.Cards;
+...
+
+SfCardView cardView = new SfCardView();
+cardView.Content = new Label(){ Text="SfCardView" };
+this.Content = cardView;
+
+{% endhighlight %}
+
+{% endtabs %}
 </td></tr>
 </table>
 
