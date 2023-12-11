@@ -148,9 +148,7 @@ this.Content = cardView;
 xmlns:cards="clr-namespace:Syncfusion.Maui.Cards;assembly=Syncfusion.Maui.Cards">
 
 <cards:SfCardView>
-
 	<Label Text="SfCardView"/>
-
 </cards:SfCardView>
 
 </ContentPage>
