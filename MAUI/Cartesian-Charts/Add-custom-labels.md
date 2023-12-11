@@ -9,13 +9,13 @@ documentation: ug
 
 # Add custom labels to chart axis
 
-[ChartAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html) provides the [OnCreateLabels](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_OnLabelCreated_Syncfusion_Maui_Charts_ChartAxisLabel_) override method to add custom labels to chart axis. [OnCreateLabels](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_OnLabelCreated_Syncfusion_Maui_Charts_ChartAxisLabel_) method called whenever new labels are generated. The following properties are available to add custom labels in chart axis.
+[ChartAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html) provides the [OnCreateLabels](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_OnLabelCreated_Syncfusion_Maui_Charts_ChartAxisLabel_) override method to add custom labels. [OnCreateLabels](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_OnLabelCreated_Syncfusion_Maui_Charts_ChartAxisLabel_) method called whenever new labels are generated. The following properties are available to add custom labels.
 
-* [VisibleLabels]() - This property of the chart axis can be used to get Observable Collection of visible axis labels.
+* [VisibleLabels]() - This property is used to get Observable Collection of visible axis labels.
 
-* [VisibleMaximum]() - This property of the chart axis can be used to get the double value that represents the maximum observable value of the axis range.
+* [VisibleMaximum]() - This property is used to get the double value that represents the maximum observable value of the axis range.
 
-* [VisibleMinimum]() - This property of the chart axis can be used to get the double value that represents the minimum observable value of the axis range.
+* [VisibleMinimum]() - This property is used to get the double value that represents the minimum observable value of the axis range.
 
 {% tabs %}
 
@@ -48,7 +48,8 @@ documentation: ug
 
     public class CustomNumericalAxis : NumericalAxis
     {
-        //The CustomNumericalAxis in a chart displays the axis label only on the x-axis values.       
+        //Adding a custom label is achieved by displaying the axis label only on the x-axis values in the CustomNumericalAxis of the chart.
+        
         protected override void OnCreateLabels()
         {
             base.OnCreateLabels();

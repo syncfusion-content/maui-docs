@@ -32,8 +32,9 @@ The following code sample demonstrates this.
 {% highlight c# %}
 
     int month = 0;
-
-    //The DateTimeAxis in a chart displays the first label of each month with a month format, while other labels within the same month are formatted with a day format.
+ 
+    //Customize each axis label achieved by displays the first label of each month with a month format, while other labels within the same month are formatted with a day format in DateTimeAxis of the chart.
+    
     private void XAxes_LabelCreated(object sender, ChartAxisLabelEventArgs e)
     {
         DateTime date = DateTime.Parse(e.Label);
