@@ -56,7 +56,6 @@ documentation: ug
             {
                 VisibleLabels.Clear();
 
-                VisibleLabels.Clear();
                 ViewModel viewModel = BindingContext as ViewModel;
 
                 for (int i = 0; i < viewModel.Data2.Count; i++)
