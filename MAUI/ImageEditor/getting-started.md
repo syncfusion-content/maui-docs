@@ -309,6 +309,35 @@ The image editor utilizes the `AspectFit` image scaling of Image control to fit 
 
 N> The size value will only be available after the image has been loaded into view.
 
+### Image is edited or not.
+
+The [`IsImageEdited`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_IsImageEdited) property is used to determine whether any editing action has been performed on the image.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+
+   <Grid RowDefinitions="0.9*, 0.1*">
+        <imageEditor:SfImageEditor x:Name="imageEditor"
+                                   Source="image.jpeg" />
+        <Button Grid.Row="1"
+                Text="IsImageEdited"
+                Clicked="OnIsImageEditedClicked" />
+    </Grid>  
+
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+private void OnIsImageEditedClicked(object sender, EventArgs e)
+{
+    if (this.imageEditor.IsImageEdited)
+    {
+        this.imageEditor.Save();
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
 ## ImageEditor inside stack layout
 
 #### Vertical StackLayout
@@ -368,35 +397,6 @@ public MainPage()
     imageEditor.MinimumWidthRequest = 400;
     horizontalLayout.Add(imageEditor);
     this.Content = horizontalLayout;
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-### Image is edited or not.
-
-The [`IsImageEdited`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_IsImageEdited) property is used to determine whether any editing action has been performed on the image.
-
-{% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
-
-   <Grid RowDefinitions="0.9*, 0.1*">
-        <imageEditor:SfImageEditor x:Name="imageEditor"
-                                   Source="image.jpeg" />
-        <Button Grid.Row="1"
-                Text="IsImageEdited"
-                Clicked="OnIsImageEditedClicked" />
-    </Grid>  
-
-{% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
-
-private void OnIsImageEditedClicked(object sender, EventArgs e)
-{
-    if (this.imageEditor.IsImageEdited)
-    {
-        this.imageEditor.Save();
-    }
 }
 
 {% endhighlight %}
