@@ -225,7 +225,7 @@ To make migration from [Xamarin SfDataGrid](https://www.syncfusion.com/xamarin-u
 <tr>
 <td>{{'[EnableGridPaging()](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.DataPager.SfDataPager.html#Syncfusion_SfDataGrid_XForms_DataPager_SfDataPager_EnableGridPaging)'| markdownify }}</td>
 <td>-</td>
-<td>This property is not available in MAUI DataGrid. Even this property is working based on UseOnDemandPaging property. So, we can use that properly directly.</td>
+<td>This property isn't available because the [UseOnDemandPaging]() property alone is sufficient to enable on-demand paging in the MAUI DataGrid.</td>
 </tr>
 
 </table>
