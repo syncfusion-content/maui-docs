@@ -9,7 +9,7 @@ documentation : ug
 
 # Load More in .NET MAUI Carousel View (SfCarousel)
 
-Virtualization can be achieved by using the Load more concept. This support is used to handle the numerous items in the carousel control. A particular items are maintained in the view port based on the `LoadMoreItemsCount` property. The LoadMore view is added after the last item in the collection of carousel view. When tapping the LoadMore view, the next set of items in the collection can be added to the carousel.
+Virtualization can be achieved by using the Load More concept. This support is used to handle the numerous items in the carousel control. Items are maintained in the viewport based on the `LoadMoreItemsCount` property. The LoadMore view is added after the last item in the collection of the carousel view. When tapping the LoadMore view, the next set of items in the collection can be added to the carousel.
 
 The following properties are used to achieve this support:
 
@@ -139,7 +139,7 @@ namespace CarouselSample
 
 ## LoadMoreItemsCount
 
-Number of items can be maintained in the carousel control by using the `LoadMoreItemsCount` property. By using the `LoadMoreItemsCount` property, numerous items can be separated. 
+Number of items can be maintained in the carousel control using the `LoadMoreItemsCount` property. By using the `LoadMoreItemsCount` property, numerous items can be separated. 
 
 N>The default value of the `LoadMoreItemsCount` property is 3.
 
@@ -260,7 +260,7 @@ namespace CarouselSample
 
 ## LoadMoreView
 
-Custom view can be passed instead of the `LoadMore` label by using the `LoadMoreView` property. 
+Custom view can be passed instead of the `LoadMore` label using the `LoadMoreView` property.
 
 {% tabs %}
 
@@ -417,7 +417,7 @@ You can find the complete Load More sample from this `link.`
 
 ## LoadMore method
 
-To load more items programmatically, `LoadMore` method can be called which loads the items dynamically to the UI based on the `LoadMoreItemsCount` API value.
+To load more items programmatically, the `LoadMore` method can be called, which loads the items dynamically to the UI based on the `LoadMoreItemsCount` API value.
 
 {% tabs %}
 
