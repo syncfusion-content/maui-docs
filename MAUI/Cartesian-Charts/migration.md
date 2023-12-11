@@ -197,7 +197,6 @@ The following table illustrates the API migration for the chart.
 <td>LabelClicked</td>
 <td><em>Upcoming</em></td>
 </tr>
-
 <tr>
 <td>TickPosition</td>
 <td><em>Upcoming</em></td>
