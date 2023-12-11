@@ -119,7 +119,7 @@ The background color of the text annotations can be customized by using the `Bac
 {% endhighlight %}
 {% endtabs %}
 
-![Text annotation customization in .NET Maui ImageEditor](images/text/imageeditor-text-customization.png)
+![Text annotation customization in .NET Maui ImageEditor](images/text/ imageeditor_background.png)
 
 ## Delete the text
 
