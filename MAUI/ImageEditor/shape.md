@@ -62,8 +62,7 @@ A polygon is formed by connecting a series of straight lines, and in addition to
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
    <Grid RowDefinitions="0.9*, 0.1*">
-        <imageEditor:SfImageEditor x:Name="imageEditor"
-                                   Source="image.jpeg" />
+        <imageEditor:SfImageEditor x:Name="imageEditor" />
         <Button Grid.Row="1"
                 Text="Polygon"
                 Clicked="OnPolygonClicked" />
@@ -80,9 +79,12 @@ A polygon is formed by connecting a series of straight lines, and in addition to
                 StrokeThickness = 5,
                 Points = new PointCollection
                 {
-                   new Point(40, 10),
-                   new Point(70, 80),
-                   new Point(10, 50)
+                    new Point(50, 0),
+                    new Point(150, 0),
+                    new Point(200, 100),
+                    new Point(150, 200),
+                    new Point(50, 200),
+                    new Point(0, 100)
                 },
             });
     }
@@ -100,8 +102,7 @@ It draws a series of connected straight lines. It is similar to a polygon, excep
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
    <Grid RowDefinitions="0.9*, 0.1*">
-        <imageEditor:SfImageEditor x:Name="imageEditor"
-                                   Source="image.jpeg" />
+        <imageEditor:SfImageEditor x:Name="imageEditor" />
         <Button Grid.Row="1"
                 Text="Polyline"
                 Clicked="OnPolylineClicked" />
@@ -117,9 +118,16 @@ It draws a series of connected straight lines. It is similar to a polygon, excep
             {
                 Points = new PointCollection
                 {
-                   new Point(40, 10),
-                   new Point(70, 80),
-                   new Point(10, 50)
+                    new Point(0, 100),
+                    new Point(50, 250), 
+                    new Point(75, 100),   
+                    new Point(90, 400),  
+                    new Point(115, 250), 
+                    new Point(175, 250), 
+                    new Point(200, 100),
+                    new Point(215, 400), 
+                    new Point(240, 250),
+                    new Point(500, 250)
                 },
             });
     }
