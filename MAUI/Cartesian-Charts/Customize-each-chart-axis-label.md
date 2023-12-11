@@ -51,4 +51,4 @@ The following code sample demonstrates this.
 
 {% endtabs %}
 
-![Add custom labels to chart axis](How-to_images/Customize_each_chart_axis_label_using_call_back_event.png)
+![Customize each chart axis label](How-to_images/MAUI_Customize_each_chart_axis_label.png)

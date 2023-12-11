@@ -48,6 +48,7 @@ documentation: ug
 
     public class CustomNumericalAxis : NumericalAxis
     {
+        //The CustomNumericalAxis in a chart displays the axis label only on the x-axis values.       
         protected override void OnCreateLabels()
         {
             base.OnCreateLabels();
@@ -58,9 +59,9 @@ documentation: ug
 
                 ViewModel viewModel = BindingContext as ViewModel;
 
-                for (int i = 0; i < viewModel.Data2.Count; i++)
+                for (int i = 0; i < viewModel.Data.Count; i++)
                 {
-                    var data = viewModel.Data2[i];
+                    var data = viewModel.Data[i];
                     VisibleLabels.Add(new ChartAxisLabel(data.XValue, data.XValue.ToString()));
                 }
             }
@@ -71,6 +72,6 @@ documentation: ug
 
 {% endtabs %}
 
-![Add custom labels to chart axis](How-to_images/Add_custom_labels_to_chartAxis.png)
+![Add custom labels to chart axis](How-to_images/MAUI_Add_custom_labels.png)
 
 N> This is applicable for all types of axis. Labels are rendered only if the label position presents within the visible range. The labels should be created only if users call the base of OnCreateLabels.
