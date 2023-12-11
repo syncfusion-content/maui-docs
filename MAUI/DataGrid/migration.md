@@ -222,6 +222,11 @@ To make migration from [Xamarin SfDataGrid](https://www.syncfusion.com/xamarin-u
 <td>{{'[NumericButtonSelectionTextColor]()'| markdownify }}</td>
 <td>This enables users to customize the text color of the currently selected numeric button in the view.</td>
 </tr>
+<tr>
+<td>{{'[EnableGridPaging()](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.DataPager.SfDataPager.html#Syncfusion_SfDataGrid_XForms_DataPager_SfDataPager_EnableGridPaging)'| markdownify }}</td>
+<td>-</td>
+<td>This property is not available in MAUI DataGrid. Even this property is working based on UseOnDemandPaging property. So, we can use that properly directly.</td>
+</tr>
 
 </table>
 

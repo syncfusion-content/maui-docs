@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Grid Events in MAUI DataGrid control | Syncfusion
-description: Learn here all about Grid Events support in Syncfusion MAUI DataGrid (SfDataGrid) control and more about it.
+description: Learn here all about data grid events that help identify interactions on the cell, and listen to cell value changes in the Syncfusion MAUI DataGrid (SfDataGrid) control, and learn more about it.
 platform: MAUI
 control: SfDataGrid
 documentation: UG
@@ -11,9 +11,9 @@ documentation: UG
 
 ## Cell Tap Events
 
-The `Datagrid` provides the following Events to handle interactions to the cells.
+The `Datagrid` provides the following events for handling interactions with the cells.
 
-* [CellTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CellTapped) : Called when a tap with a cell has occurred.
+* [CellTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CellTapped) : Called when a tap on a cell has occurred.
 * [CellDoubleTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CellDoubleTapped) : Called when the user has tapped a cell with a primary button at the same cell twice in quick succession.
 * [CellLongPress](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CellLongPress) : Called when a long-press gesture with a primary button has been recognized for a cell.
 * [CellRightTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CellRightTapped) : Called when a right-click mouse gesture has been recognized on a cell.
@@ -28,7 +28,7 @@ This event will be triggered while tapping a cell in the DataGrid. This event ha
                    ItemsSource="{Binding OrderInfoCollection}" />
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
-private void dataGrid_CellTapped(object sender,DataGridCellTappedEventArgs e)
+private void dataGrid_CellTapped(object sender, DataGridCellTappedEventArgs e)
 {
     var rowIndex = e.RowColumnIndex.RowIndex;
     var rowData = e.RowData;
@@ -70,7 +70,7 @@ This event will be triggered while long pressing a cell in the DataGrid. This ev
                    ItemsSource="{Binding OrderInfoCollection}" />
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
-private void dataGrid_CellLongPress(object sender,DataGridCellLongPressEventArgs e)
+private void dataGrid_CellLongPress(object sender, DataGridCellLongPressEventArgs e)
 {
     var rowIndex = e.RowColumnIndex.RowIndex;
     var rowData = e.RowData;
@@ -90,7 +90,7 @@ This event will be triggered when a right-click mouse gesture is recognized on a
                    ItemsSource="{Binding OrderInfoCollection}" />
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
-private void SfDataGrid_CellRightTapped(object sender, Syncfusion.Maui.DataGrid.DataGridCellRightTappedEventArgs e)
+private void SfDataGrid_CellRightTapped(object sender, DataGridCellRightTappedEventArgs e)
 {
     var rowIndex = e.RowColumnIndex.RowIndex;
     var rowData = e.RowData;
@@ -105,10 +105,10 @@ N> The `CellRightTapped` event is only applicable for Windows and macOS.
 
 ## Cell Pointer Events
 
-The `Datagrid` provides the following Events to handle mouse pointer interactions to the cells.
+The `Datagrid` provides the following events for handling mouse pointer interactions with the cells.
 
 * [CellEntered]() : Called when the mouse pointer enters the cell.
-* [CellHovered]() : Called when the mouse pointer is hovered over the cell.
+* [CellHovered]() : Called when the mouse pointer hovers over the cell.
 * [CellExited]()  : Called when the mouse pointer exits the cell.
 
 ### CellEntered event
@@ -152,7 +152,7 @@ private void dataGrid_CellHovered(object sender, DataGridCellHoveredEventArgs e)
 {% endhighlight %}
 {% endtabs %}
 
-### CellExcited event
+### CellExited event
 This event will be triggered when the mouse pointer exits a cell in the DataGrid. It uses [DataGridCellExitedEventArgs]() as its argument.
 
 {% tabs %}
