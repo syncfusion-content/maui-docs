@@ -311,16 +311,16 @@ N> The size value will only be available after the image has been loaded into vi
 
 ## ImageEditor inside stack layout
 
-### VerticalStackLayout
+#### VerticalStackLayout
 
-The image editor is placed inside vertical stack layout, and users can specify a minimum height request, with the default value already predefined as 100.
+When the image editor is placed inside a vertical stack layout, users must define the required `MinimumHeightRequest` value. By default, this `MinimumHeightRequest` is set to 100.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
 <VerticalStackLayout>
     <imageEditor:SfImageEditor x:Name="imageEditor"
-                               HeightRequest="400"
+                               MinimumHeightRequest="400"
                                Source="image.jpeg">
     </imageEditor:SfImageEditor>
 </VerticalStackLayout>
@@ -334,7 +334,7 @@ public MainPage()
     VerticalStackLayout verticalLayout = new VerticalStackLayout();
     SfImageEditor imageEditor = new SfImageEditor();
     imageEditor.Source = ImageSource.FromResource("MyProject.Resources.Images.image.jpeg");
-    imageEditor.HeightRequest = 400;
+    imageEditor.MinimumHeightRequest = 400;
     verticalLayout.Add(imageEditor);
     this.Content = verticalLayout;
 }
@@ -342,18 +342,17 @@ public MainPage()
 {% endhighlight %}
 {% endtabs %}
 
-### HorizontalStackLayout
+#### HorizontalStackLayout
 
-The image editor is placed inside horizontal stack layout, and users can specify a minimum width request, with the default value already predefined as 100.
+When the image editor is placed inside a horizontal stack layout, users must define the required `MinimumWidthRequest` value. By default, this `MinimumWidthRequest` is set to 100.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
 <HorizontalStackLayout>
     <imageEditor:SfImageEditor x:Name="imageEditor"
-                               WidthRequest="400"
+                               MinimumWidthRequest="400"
                                Source="image.jpeg">
-
     </imageEditor:SfImageEditor>
 </HorizontalStackLayout>
 
@@ -366,7 +365,7 @@ public MainPage()
     HorizontalStackLayout horizontalLayout = new HorizontalStackLayout();
     SfImageEditor imageEditor = new SfImageEditor();
     imageEditor.Source = ImageSource.FromResource("MyProject.Resources.Images.image.jpeg");
-    imageEditor.WidthRequest = 400;
+    imageEditor.MinimumWidthRequest = 400;
     horizontalLayout.Add(imageEditor);
     this.Content = horizontalLayout;
 }
@@ -376,7 +375,7 @@ public MainPage()
 
 ### Image is edited or not.
 
-The `IsImageEdited` property is used to determine whether any editing action has been performed on the image.
+The [`IsImageEdited`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_IsImageEdited) property is used to determine whether any editing action has been performed on the image.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -396,7 +395,7 @@ private void OnIsImageEditedClicked(object sender, EventArgs e)
 {
     if (this.imageEditor.IsImageEdited)
     {
-        this.imageEditor.ImageEffect(ImageEffect.Brightness, -0.6);
+        this.imageEditor.Save();
     }
 }
 
