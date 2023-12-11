@@ -311,7 +311,7 @@ N> The size value will only be available after the image has been loaded into vi
 
 ## ImageEditor inside stack layout
 
-#### VerticalStackLayout
+#### Vertical StackLayout
 
 When the image editor is placed inside a vertical stack layout, users must define the required `MinimumHeightRequest` value. By default, this `MinimumHeightRequest` is set to 100.
 
@@ -342,7 +342,7 @@ public MainPage()
 {% endhighlight %}
 {% endtabs %}
 
-#### HorizontalStackLayout
+#### Horizontal StackLayout
 
 When the image editor is placed inside a horizontal stack layout, users must define the required `MinimumWidthRequest` value. By default, this `MinimumWidthRequest` is set to 100.
 
