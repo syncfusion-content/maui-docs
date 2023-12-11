@@ -9,7 +9,7 @@ documentation: ug
 
 # Add custom labels to chart axis
 
-[ChartAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html) provides the [OnCreateLabels](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_OnLabelCreated_Syncfusion_Maui_Charts_ChartAxisLabel_) override method to add custom labels. [OnCreateLabels](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_OnLabelCreated_Syncfusion_Maui_Charts_ChartAxisLabel_) method called whenever new labels are generated. The following properties are available to add custom labels.
+[ChartAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html) provides the [OnCreateLabels](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_OnLabelCreated_Syncfusion_Maui_Charts_ChartAxisLabel_) override method to add custom axis labels. [OnCreateLabels](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_OnLabelCreated_Syncfusion_Maui_Charts_ChartAxisLabel_) method called whenever new labels are generated. The following properties are available to add custom labels.
 
 * [VisibleLabels]() - This property is used to get Observable Collection of visible axis labels.
 
@@ -48,7 +48,7 @@ documentation: ug
 
     public class CustomNumericalAxis : NumericalAxis
     {
-        //Adding a custom label is achieved by displaying the axis label only on the x-axis values in the CustomNumericalAxis of the chart.
+        //Adding a custom axis label is achieved by displaying the axis label only on the x-axis values in the CustomNumericalAxis of the chart.
         
         protected override void OnCreateLabels()
         {
