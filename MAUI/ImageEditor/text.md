@@ -216,3 +216,5 @@ The text can be added with user-defined view bounds. The [`Bounds`](https://help
 
 {% endhighlight %}
 {% endtabs %}
+
+N> To edit text annotation you have to double tap inside the text view.

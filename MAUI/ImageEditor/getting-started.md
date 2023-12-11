@@ -308,3 +308,97 @@ The image editor utilizes the `AspectFit` image scaling of Image control to fit 
 {% endtabs %}
 
 N> The size value will only be available after the image has been loaded into view.
+
+## ImageEditor inside stack layout
+
+### VerticalStackLayout
+
+The image editor is placed inside vertical stack layout, and users can specify a minimum height request, with the default value already predefined as 100.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+
+<VerticalStackLayout>
+    <imageEditor:SfImageEditor x:Name="imageEditor"
+                               HeightRequest="400"
+                               Source="image.jpeg">
+    </imageEditor:SfImageEditor>
+</VerticalStackLayout>
+
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+public MainPage()
+{
+    InitializeComponent();
+    VerticalStackLayout verticalLayout = new VerticalStackLayout();
+    SfImageEditor imageEditor = new SfImageEditor();
+    imageEditor.Source = ImageSource.FromResource("MyProject.Resources.Images.image.jpeg");
+    imageEditor.HeightRequest = 400;
+    verticalLayout.Add(imageEditor);
+    this.Content = verticalLayout;
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+### HorizontalStackLayout
+
+The image editor is placed inside horizontal stack layout, and users can specify a minimum width request, with the default value already predefined as 100.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+
+<HorizontalStackLayout>
+    <imageEditor:SfImageEditor x:Name="imageEditor"
+                               WidthRequest="400"
+                               Source="image.jpeg">
+
+    </imageEditor:SfImageEditor>
+</HorizontalStackLayout>
+
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+public MainPage()
+{
+    InitializeComponent();
+    HorizontalStackLayout horizontalLayout = new HorizontalStackLayout();
+    SfImageEditor imageEditor = new SfImageEditor();
+    imageEditor.Source = ImageSource.FromResource("MyProject.Resources.Images.image.jpeg");
+    imageEditor.WidthRequest = 400;
+    horizontalLayout.Add(imageEditor);
+    this.Content = horizontalLayout;
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+### Image is edited or not.
+
+The `IsImageEdited` property is used to determine whether any editing action has been performed on the image.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+
+   <Grid RowDefinitions="0.9*, 0.1*">
+        <imageEditor:SfImageEditor x:Name="imageEditor"
+                                   Source="image.jpeg" />
+        <Button Grid.Row="1"
+                Text="IsImageEdited"
+                Clicked="OnIsImageEditedClicked" />
+    </Grid>  
+
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+private void OnIsImageEditedClicked(object sender, EventArgs e)
+{
+    if (this.imageEditor.IsImageEdited)
+    {
+        this.imageEditor.ImageEffect(ImageEffect.Brightness, -0.6);
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
