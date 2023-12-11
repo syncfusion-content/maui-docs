@@ -35,7 +35,7 @@ To define the tooltip in the chart, set the [EnableTooltip]() property of [SfSun
 
 {% endtabs %}
 
-![Default tooltip in MAUI Sunburst Chart]()
+![Default tooltip in MAUI Sunburst Chart](Tooltip_images/maui_default_tooltip_image.png)
 
 ## Customization
 
@@ -82,7 +82,7 @@ The appearance of the tooltip can be customized using the following properties:
 
 {% endtabs %}
 
-![Tooltip customization in MAUI Sunburst Chart]()
+![Tooltip customization in MAUI Sunburst Chart](Tooltip_images/maui_custom_tooltip_image.png)
 
 ## Custom template
 
@@ -130,4 +130,4 @@ The sunburst chart provides support to customize the appearance of the tooltip b
 
 {% endtabs %}
 
-![Tooltip template in MAUI Sunburst Chart]()
+![Tooltip template in MAUI Sunburst Chart](Tooltip_images/maui_tooltip_template_image.png)

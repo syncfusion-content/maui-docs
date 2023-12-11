@@ -94,4 +94,4 @@ The [CenterHoleSize]() property of SfSunburstChart is used to get the diameter v
 
 {% endtabs %}
 
-![Center view in MAUI Sunburst Chart]()
+![Center view in MAUI Sunburst Chart](Center_view_images/maui_centre_view_ouput_image.png)
