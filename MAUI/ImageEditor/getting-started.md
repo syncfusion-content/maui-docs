@@ -309,7 +309,7 @@ The image editor utilizes the `AspectFit` image scaling of Image control to fit 
 
 N> The size value will only be available after the image has been loaded into view.
 
-### Image is edited or not.
+### Check Image edited
 
 The [`IsImageEdited`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_IsImageEdited) property is used to determine whether any editing action has been performed on the image.
 
