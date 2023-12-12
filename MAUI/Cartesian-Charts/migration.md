@@ -895,7 +895,6 @@ chart.ZoomPanBehavior = zooming;
 **Series**
 
 * Listen to property change support for series.
-* Get data point index based on value.
 * Get data points by passing rect.
 * Notify event or method when series are rendering.
 * Suspend and resume notification.
