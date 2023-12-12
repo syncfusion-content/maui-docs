@@ -19,6 +19,8 @@ The following shape annotation types are now available in the PDF Viewer.
 2.	Circle.
 3.	Line.
 4.	Square.
+5.	Polygon.
+6.	Polyline.
 
 ## Add shapes to a PDF document
 
