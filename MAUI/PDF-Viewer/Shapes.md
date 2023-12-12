@@ -51,7 +51,7 @@ Adding polygon and polyline shapes with touch or mouse will vary slightly from a
 7.	Once you have done, set the `AnnotationMode` to `None` to disable the drawing mode.
 8.	You can later move, resize, or edit the annotation.
 
-The following code explains how to enable and disable the `circle` annotation mode. Similarly, you can do the same for other annotations.
+The following code explains how to enable the `circle` annotation mode. Similarly, you can do the same for other annotations.
 
 {% tabs %}
 {% highlight C# %}
