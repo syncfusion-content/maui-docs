@@ -441,13 +441,7 @@ To make migration from [Xamarin SfPdfViewer](https://www.syncfusion.com/xamarin-
 
 * Built-in toolbar
 * Themes
-* Accessibility
-* Shape annotations (polygon and polylines)
-* Free text annotation
 * Handwritten signatures
-* Form Filling
-* Save – Form data
-* Export/Import – Form data
 * Thumbnail
 * Single page view mode
 * Print
