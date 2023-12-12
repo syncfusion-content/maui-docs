@@ -48,7 +48,7 @@ Adding polygon and polyline shapes with touch or mouse will vary slightly from a
 4.	To create multiple connected line segments, repeat the step 3 at the necessary locations.
 5.	Double tap to finish drawing the shape. The shape will be added to the PDF page. 
 6.	To create multiple shapes on other areas during the drawing mode, repeat the steps 2-5.
-7.	Once you have done, set the `AnnotationMode` to None to disable the drawing mode.
+7.	Once you have done, set the `AnnotationMode` to `None` to disable the drawing mode.
 8.	You can later move, resize, or edit the annotation.
 
 The following code explains how to enable and disable the `circle` annotation mode. Similarly, you can do the same for other annotations.
