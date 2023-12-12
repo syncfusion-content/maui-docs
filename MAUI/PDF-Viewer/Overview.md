@@ -28,6 +28,6 @@ The [.NET MAUI PDF Viewer](https://www.syncfusion.com/maui-controls/maui-pdf-vie
 * **Stamp annotation** - Add, remove, modify, import, and export stamp annotations in PDF files. Stamps are predefined graphical text that can be used to mark or signify certain aspects of documents, like that they have undergone quality checks or audits. This feature also allows adding personalized images or text to PDF documents.
 * **Sticky note annotation** - Add, remove, modify, import, and export sticky note annotations in PDF files. This feature will help add comments or notes to a specific part a document to clarify complex concepts, terms, or ideas.
 * **Text markup annotations** - Add, remove, modify, import, and export text markup annotations in PDF files. The available text markups are highlight, underline, strikeout and squiggly. This feature will help mark important passages, emphasize specific words or phrases, indicate that certain content should be removed or indicate that text contains possible errors.
-* **Free text annotations** - Add, remove, modify, import, and export free text annotations in PDF files. This feature will help adding text notes, comments, or feedback to PDF documents.
+* **Free text annotation** - Add, remove, modify, import, and export free text annotations in PDF files. This feature will help adding text notes, comments, or feedback to PDF documents.
 * **Save** - Save the modified PDF files.
 * **Localization** - All static text within the PDF Viewer can be localized to any supported language.
