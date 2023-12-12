@@ -17,7 +17,7 @@ This section will go through how to add free text annotations to a PDF page inte
 
 ### Add free text annotation with UI interaction
 
-You can a add free text annotation to a PDF document by tapping with touch (or mouse down) on a PDF page. The following steps explains how to add text markup annotation on a text in a PDF.
+You can a add free text annotation to a PDF document by tapping with touch (or mouse down) on a PDF page. The following steps explains how to add free text annotation in a PDF.
 
 1.	Set the `AnnotationMode` property of the SfPdfViewer to `FreeText`. It activates the free  annotation mode.
 2.	Tap (or mouse down) on a PDF page, where you want to add the free text annotation. This will add a text box with a default style and allows you to write your text inline in the Desktop platforms. In mobile, a popup will be displayed to write and submit the text.
@@ -127,7 +127,7 @@ You can edit the properties of the selected free text annotation programmaticall
 {% tabs %}
 {% highlight C# %}
 /// <summary>
-/// Edit the selected highlight annotation.
+/// Edit the selected free text annotation.
 /// </summary>
 /// <param name="selectedAnnotation">The selected annotation instance that may be obtained from the annotation selected event</param>
 void EditSelectedFreeTextAnnotation(Annotation selectedAnnotation) 
