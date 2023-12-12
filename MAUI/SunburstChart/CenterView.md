@@ -7,7 +7,7 @@ control: SfSunburstChart
 documentation: ug
 ---
 
-# Center view in .NET MAUI Sunburst Chart 
+# Center View in .NET MAUI Sunburst Chart 
 
 Any view can be added to the center of the sunburst chart using the [CenterView]() property of [SfSunburstChart](). The view placed in the center of the chart is useful for sharing additional information about the sunburst chart.The binding context of the CenterView will be the SfSunburstChart class.
 
@@ -94,4 +94,4 @@ The [CenterHoleSize]() property of SfSunburstChart is used to get the diameter v
 
 {% endtabs %}
 
-![Center view in MAUI Sunburst Chart](Center_view_images/maui_centre_view_ouput_image.png)
+![Center view in MAUI Sunburst Chart.](Center_view_images/maui_centre_view_ouput_image.png)

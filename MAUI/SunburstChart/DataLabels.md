@@ -7,7 +7,7 @@ control: SfSunburstChart
 documentation: ug
 ---
 
-# Data labels in .NET MAUI Sunburst Chart
+# Data Labels in .NET MAUI Sunburst Chart
 Data labels are used to display information about segments at the (X, Y) point.
 
 ## Enable Data Label 
@@ -68,7 +68,7 @@ The following code shows how to hide the data labels.
 
 {% endtabs %} 
 
-![Over flow mode as hide in MAUI Sunburst Chart](Data_label_images/maui_overflow_mode_hide.png)
+![Overflow mode as hide in MAUI Sunburst Chart.](Data_label_images/maui_overflow_mode_hide.png)
 
 ## Rotation Mode
 
@@ -103,7 +103,7 @@ The following code shows normal mode of data labels.
 
 {% endtabs %} 
 
-![Rotation mode as normal in MAUI Sunburst Chart](Data_label_images/maui_rotation_mode_normal.png)
+![Rotation mode as normal in MAUI Sunburst Chart.](Data_label_images/maui_rotation_mode_normal.png)
 
 ## Customization
 
@@ -146,4 +146,4 @@ The following code shows normal mode of data labels.
 
 {% endtabs %} 
 
-![Data label customization in MAUI Sunburst Chart](Data_label_images/maui_customization_output.png)
+![Data label customization in MAUI Sunburst Chart.](Data_label_images/maui_customization_output.png)

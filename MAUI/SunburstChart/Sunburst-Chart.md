@@ -40,7 +40,7 @@ The start angle and end angle of the sunburst chart can be adjusted by using the
 
 {% endtabs %}
 
-![Angle customization in MAUI Sunburst Chart](Appearance_images/maui_angle_customization.png)
+![Angle customization in MAUI Sunburst Chart.](Appearance_images/maui_angle_customization.png)
 
 ## Radius
 
@@ -69,7 +69,7 @@ The sunburst chart allows you to customize the radius by using the [Radius]() pr
 
 {% endtabs %}
 
-![Radius in MAUI Sunburst Chart](Appearance_images/maui_radius_output.png)
+![Radius in MAUI Sunburst Chart.](Appearance_images/maui_radius_output.png)
 
 ## Inner radius
 
@@ -98,7 +98,7 @@ The sunburst chart allows you to customize the inner radius using the [InnerRadi
 
 {% endtabs %}
 
-![Inner radius in MAUI Sunburst Chart](Appearance_images/maui_inner_radius_output.png)
+![Inner radius in MAUI Sunburst Chart.](Appearance_images/maui_inner_radius_output.png)
 
 ## Stroke
 
@@ -129,4 +129,4 @@ Stroke color and stroke width of the sunburst chart can be customized using [Str
 
 {% endtabs %}
 
-![Stroke and stroke width in MAUI Sunburst Chart](Appearance_images/maui_stroke_output.png)
+![Stroke and stroke width in MAUI Sunburst Chart.](Appearance_images/maui_stroke_output.png)
