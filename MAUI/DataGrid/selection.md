@@ -355,6 +355,35 @@ The [SfDataGrid.CurrentRow](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.
 
 Get the current row in the `SfDataGrid.SelectionChanged` event by setting the `SfDataGrid.SelectionMode` as Multiple or SingleDeselect. If the SelectionMode is Single, the current item and selected item are same.
 
+## CurrentRowHighlight
+The MAUI DataGrid `SfDataGrid` enables row highlighting functionality when the `SfDataGrid.SelectionMode` is set to Multiple and the  `SfDataGrid.NavigationMode` is set to Row. The highlighted row can be customized by using [CurrentRowHighlightColor]() property in `SfDataGrid.DefaultStyle`.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml"%}
+<ContentPage xmlns:syncfusion="http://schemas.syncfusion.com/maui">
+    <ContentPage.Content>
+        <syncfusion:SfDataGrid ItemsSource="{Binding OrderInfoCollection}">
+            <syncfusion:SfDataGrid.DefaultStyle>
+                <syncfusion:DataGridStyle CurrentRowHighlightColor="Red"/>
+            </syncfusion:SfDataGrid.DefaultStyle>
+        </syncfusion:SfDataGrid>
+    </ContentPage.Content>
+</ContentPage>
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        this.dataGrid.DefaultStyle.CurrentRowHighlightColor = Colors.Red;
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
+![Changing the Highlighted Row Color in .NET MAUI DataGrid](Images/Selection/maui-datagrid-currentrowhighlight.png)
+
 ## 	Customizing Selection Appearance
 Change the selection back color and text color by using the  [SelectionBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_SelectionBackground) and [SelectedRowTextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_SelectedRowTextColor) in `SfDataGrid.DefaultStyle`.
 
