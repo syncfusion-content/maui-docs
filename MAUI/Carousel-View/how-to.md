@@ -9,7 +9,7 @@ documentation : ug
 
 # How to perform an operation while changing the carouselItem?
 
-We can perform the operation while changing the carouselItem using the `SelectionChanged` event. The `SelectionChanged` event returns the index and selected carouselItem.
+We can perform the operation while changing the carouselItem using the `SelectionChanged` event. The `SelectionChanged` event returns the OldItem and selected NewItem.
 
 {% tabs %}
 

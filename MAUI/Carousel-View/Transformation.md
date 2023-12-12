@@ -13,7 +13,7 @@ The `Offset` between selected and unselected item can be customized in  `SfCarou
 
 ## Tilt Non Selected Items
 
-The `RotationAngle` property in the  `SfCarousel` control is used to tilt all the unselected items in a specified angle. 
+The `RotationAngle` property in the `SfCarousel` control is utilized to tilt all unselected items at a specified angle in Default mode.
 
 N> If the angle value is positive, then the rotation is in the clockwise direction. If the angle value is negative, the rotation is in the counterclockwise direction. 
 
@@ -77,7 +77,8 @@ namespace CarouselSample
 
 ## Set Gap between Items
 
-The `Offset` property is used to specify the accurate distance between unselected items in  `SfCarousel` panel.  
+
+The `Offset` property is used to define the accurate distance between unselected items in the `SfCarousel` panel in Default mode.
 
 N> The default value is 20.
 
@@ -141,7 +142,7 @@ namespace CarouselSample
 
 ## Set Gap between Selected and unselected Item
 
-Distance between the selected item and other items can be customized by using `SelectedItemOffset` property of the  `SfCarousel` control.
+Distance between the selected item and other items can be customized by using `SelectedItemOffset` property of the  `SfCarousel` control in Default mode.
 
 {% tabs %}
 
@@ -201,7 +202,7 @@ namespace CarouselSample
 
 ## Set Scaling for Carousel Items
 
-The `ScaleOffset` property in the  `SfCarousel` control is used to scale all the items to the specified scale value.
+The `ScaleOffset` property in the  `SfCarousel` control is used to scale all the items to the specified scale value in Default mode.
 
 {% tabs %}
 

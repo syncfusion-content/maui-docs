@@ -17,7 +17,7 @@ The following property has been used in UIVirtualization support:
 
 ## EnableVirtualization
 
-UI Virtualization concept is achieved by enabling the `EnableVirtualization` property.
+The UI virtualization concept is implemented by enabling the `EnableVirtualization` property in SfCarousel Linear mode.
 
 N> The default value of the `EnableVirtualization` property is false.
 
