@@ -165,6 +165,78 @@ this.Content = dataForm;
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-dataform/tree/master/GettingStarted)
 
+## DataForm inside stack layout
+
+#### Vertical StackLayout
+
+When the data form is placed inside a vertical stack layout, users must define the required `MinimumHeightRequest` value. By default, this `MinimumHeightRequest` is set to 300.
+
+{% tabs %}
+{% highlight XAML %}
+
+<ContentPage 
+    . . .
+            xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm"
+                x:Class="GettingStarted.MainPage">
+
+            <ContentPage.BindingContext>
+                <local:DataFormViewModel/>
+            </ContentPage.BindingContext>
+
+            <dataForm:SfDataForm x:Name="dataForm" 
+            MinimumHeightRequest="400"
+            DataObject="{Binding ContactsInfo}"/>    
+</ContentPage>
+
+{% endhighlight %}
+{% highlight C# %}
+
+this.BindingContext = new DataFormViewModel();
+SfDataForm dataForm = new SfDataForm()
+{
+    DataObject = new ContactsInfo(),
+    MinimumHeightRequest = 400
+};
+this.Content = dataForm;
+
+{% endhighlight %}
+{% endtabs %}
+
+#### Horizontal StackLayout
+
+When the data form is placed inside a horizontal stack layout, users must define the required `MinimumWidthRequest` value. By default, this `MinimumWidthRequest` is set to 300.
+
+{% tabs %}
+{% highlight XAML %}
+
+<ContentPage 
+    . . .
+            xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm"
+                x:Class="GettingStarted.MainPage">
+
+            <ContentPage.BindingContext>
+                <local:DataFormViewModel/>
+            </ContentPage.BindingContext>
+
+            <dataForm:SfDataForm x:Name="dataForm" 
+            MinimumWidthRequest="400"
+            DataObject="{Binding ContactsInfo}"/>    
+</ContentPage>
+
+{% endhighlight %}
+{% highlight C# %}
+
+this.BindingContext = new DataFormViewModel();
+SfDataForm dataForm = new SfDataForm()
+{
+    DataObject = new ContactsInfo(),
+    MinimumWidthRequest = 400
+};
+this.Content = dataForm;
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Defining editors
 
 The data form control automatically generates the [SfDataForm.Items](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_ItemsProperty) (which has UI settings of data field) based on the data type in the [SfDataForm.DataObject](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_DataObjectProperty) property. The [SfDataForm.Items](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_ItemsProperty) summarizes the layout of the label and editor setting for the data field appearing in the dataform. 
