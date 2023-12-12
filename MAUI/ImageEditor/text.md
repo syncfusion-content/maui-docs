@@ -77,7 +77,7 @@ Customize the appearance of text annotation using the [`ImageEditorTextSettings`
                TextStyle = new ImageEditorTextStyle()
                {
                    FontSize = 14,
-                   TextColor = Colors.Black,
+                   TextColor = Colors.Black.WithAlpha(0.5f),
                    FontFamily = "Arial",
                    FontAttributes = FontAttributes.Italic
                }
@@ -112,7 +112,7 @@ The background color of the text annotations can be customized using the `Backgr
         this.imageEditor.AddText("Good Day",
            new ImageEditorTextSettings()
            {
-               Background = Colors.white
+               Background = Colors.White.WithAlpha(0.5f)
            });
     }
 
