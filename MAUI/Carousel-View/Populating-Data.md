@@ -9,15 +9,15 @@ documentation : ug
 
 # Populating Data in .NET MAUI Carousel View (SfCarousel)
 
-`SfCarousel` control, supports binding to different data sources such as IList Data Source, Observable Collection Data Source.
+`SfCarousel` control supports binding to different data sources such as IList Data Source and Observable Collection Data Source.
 
 ## Through Binding
 
-Items can be populated in `SfCarousel` control through data source and applying custom template as explained below. 
+Items can be populated in the `SfCarousel` control through data source and applying a custom template, as explained in the following.
 
 ### Create a Model with Data
 
-`SfCarousel` items can be populated with a collection of image data. For example, a user may wants to create a `SfCarousel` control which will display a list of images.
+`SfCarousel` items can be populated with a collection of image data. For example, a user may want to create a `SfCarousel` control, which will display a list of images.
 
 The `SfCarousel` model looks as follows.
 
@@ -72,12 +72,12 @@ namespace CarouselSample
 
 {% endhighlight %}
 
-N> Images can also be referred in PCL and from website URL as `instructed`
+N> Images can also be referred to in PCL and from the website URL as `instructed`.
 
 
 ### Binding the Data with Custom Template
 
-`SfCarousel` provides support to add a custom view as carousel items by designing a view inside its `ItemTemplate`. This template will be applied for all its items and its data will be binded.
+`SfCarousel` provides support to add a custom view as carousel items by designing a view inside its `ItemTemplate`. This template will be applied for all its items, and its data will be bound.
 
 {% tabs %}
 
@@ -186,7 +186,7 @@ namespace CarouselSample
 {% endhighlight %}
 {% endtabs %}
 
-* Now set the `BindingContext` for the items collection in code behind.
+* Now, set the `BindingContext` for the items collection in the code behind.
 
 {% highlight C# %}
 
@@ -196,7 +196,7 @@ namespace CarouselSample
 
 ## Through Carousel Item
 
-Different set of views can be provided to every items through `ItemContent` property available in `SfCarouselItem` class.
+Different views can be provided to every item through the `ItemContent` property in the `SfCarouselItem` class.
 
 {% highlight C# %}
 
@@ -270,6 +270,6 @@ namespace CarouselSample
 {% endhighlight %}
 
 
-Similar way every item can be created and customized in case of different carousel item view is needed.
+Similarly, every item can be created and customized in case a different carousel item view is needed.
 
 

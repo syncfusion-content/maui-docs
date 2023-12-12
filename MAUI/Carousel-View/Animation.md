@@ -9,7 +9,7 @@ documentation : ug
 
 # Animation in .NET MAUI Carousel View (SfCarousel)
 
-The `Duration` property of the `SfCarousel` control is used to specify the time taken to move an item to the selected item position. The duration is specified in seconds.  The default value is 600 ms.
+The `Duration` property of the `SfCarousel` control specifies the time taken to move an item to the selected item position. The duration is specified in seconds. The default value is 600 ms.
 
 {% tabs %}
 

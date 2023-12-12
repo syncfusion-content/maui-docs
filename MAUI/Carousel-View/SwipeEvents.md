@@ -11,13 +11,13 @@ documentation: ug
 
 ## Swipe Start
 
-The `SwipeStarted` event will be triggered when swipe gesture is started.
+The `SwipeStarted` event will be triggered when the swipe gesture is started.
 
-`SwipeStartedEventArgs` contains `IsSwipeLeft` value, which denotes whether the swipe direction is from left side or not.
+`SwipeStartedEventArgs` contains the `IsSwipeLeft` value, which denotes whether the swipe direction is from the left side or not.
 
 ## Swipe End
 
-The `SwipeEnded` event can be triggered after the swiping completed in the carousel items.
+The `SwipeEnded` event can be triggered after the swiping is completed in the carousel items.
 
 {% tabs %}
 
