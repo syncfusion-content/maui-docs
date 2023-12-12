@@ -68,14 +68,13 @@ The StateChanging event occurs when the state of `IsOn` property is about to cha
 
 {% highlight xaml %}
 
-<syncfusion:SfSwitch StateChanged="SfSwitch_StateChanged" StateChanging="SfSwitch_StateChanging"/>
+<syncfusion:SfSwitch StateChanging="SfSwitch_StateChanging"/>
 	
 {% endhighlight %}
 
 {% highlight C# %}
 
 SfSwitch sfSwitch = new SfSwitch();
-sfSwitch.StateChanged += SfSwitch_StateChanged;
 sfSwitch.StateChanging += SfSwitch_StateChanging;
 this.Content = sfSwitch;
 
