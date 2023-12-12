@@ -96,7 +96,7 @@ A polygon is formed by connecting a series of straight lines, and in addition to
 
 ## Polyline
 
-It draws a series of connected straight lines. It is similar to a polygon, except the last point in a polyline is not connected to the first point.
+A `Polyline` draws a series of connected straight lines. It is similar to a `Polygon`, except the last point in a polyline is not connected to the first point.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -127,7 +127,7 @@ It draws a series of connected straight lines. It is similar to a polygon, excep
                     new Point(200, 100),
                     new Point(215, 400), 
                     new Point(240, 250),
-                    new Point(500, 250)
+                    new Point(300, 250)
                 },
             });
     }
