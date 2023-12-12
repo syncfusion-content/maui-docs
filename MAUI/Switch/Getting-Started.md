@@ -9,15 +9,15 @@ documentation: ug
 
 # Getting Started with .NET MAUI Switch
 
-This section explains the steps required to work with the [`.NET MAUI Switch`] control.
+This section explains the steps required to work with the `.NET MAUI Switch` control.
 
 ## Creating an application with .NET MAUI Switch
 
-This section explains the steps required to work with the [`SfSwitch`] control for .NET MAUI.
+This section explains the steps required to work with the `SfSwitch` control for .NET MAUI.
 
 ## Adding a .NET MAUI Switch reference
 
-The Syncfusion .NET MAUI controls are available in [Nuget.org](https://www.nuget.org/). To add [`.NET MAUI Switch`] to your project, open the NuGet package manager in Visual Studio, search for [`Syncfusion.Maui.Buttons`](https://www.nuget.org/packages/Syncfusion.Maui.Buttons), and install it.
+The Syncfusion .NET MAUI controls are available in [Nuget.org](https://www.nuget.org/). To add `.NET MAUI Switch` to your project, open the NuGet package manager in Visual Studio, search for [`Syncfusion.Maui.Buttons`](https://www.nuget.org/packages/Syncfusion.Maui.Buttons), and install it.
 
 ## Handler registration 
 
@@ -74,7 +74,7 @@ Step 2: Add the namespace as shown in the following code sample.
 
 ## Initialize Switch
 
-Now, add the [`SfSwitch`] control with a required optimal name using the included namespace.
+Now, add the `SfSwitch` control with a required optimal name using the included namespace.
 
 {% tabs %}
 

@@ -30,27 +30,27 @@ To migrate easier from Xamarin SfSwitch to [.NET MAUI SfSwitch], we kept most of
 <th>.NET MAUI SfSwitch</th>
 <th>Description</th></tr>
 <tr>
-<td> {{'[TrackBorderWidth]'| markdownify }}</td>
-<td> {{'[TrackStrokeThickness]'| markdownify }}</td>
+<td> {{'[TrackBorderWidth](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Buttons.ISwitchSettings.html#Syncfusion_XForms_Buttons_ISwitchSettings_TrackBorderWidth)'| markdownify }}</td>
+<td>TrackStrokeThickness</td>
 <td>Gets or sets the track stroke thickness.</td></tr>
 <tr>
-<td> {{'[ThumbBorderWidth]'| markdownify }}</td>
-<td> {{'[ThumbStrokeThickness]'| markdownify }}</td>
+<td> {{'[ThumbBorderWidth](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Buttons.ISwitchSettings.html#Syncfusion_XForms_Buttons_ISwitchSettings_ThumbBorderWidth)'| markdownify }}</td>
+<td>ThumbStrokeThickness</td>
 <td>Gets or sets the thumb stroke thickness.</td></tr>
 <tr>
-<td> {{'[TrackBorderColor]'| markdownify }}</td>
-<td> {{'[TrackStroke]'| markdownify }} </td>
+<td> {{'[TrackBorderColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Buttons.ISwitchSettings.html#Syncfusion_XForms_Buttons_ISwitchSettings_TrackBorderColor)'| markdownify }}</td>
+<td>TrackStroke</td>
 <td>Gets or sets the color of the track border.</td></tr>
 <tr>
-<td> {{'[ThumbBorderColor]'| markdownify }}</td>
-<td> {{'[ThumbStroke]'| markdownify }}</td>
+<td> {{'[ThumbBorderColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Buttons.ISwitchSettings.html#Syncfusion_XForms_Buttons_ISwitchSettings_ThumbBorderColor)'| markdownify }}</td>
+<td>ThumbStroke</td>
 <td>Gets or sets the color of the thumb border.</td></tr>
 <tr>
-<td> {{'[TrackColor]'| markdownify }}</td>
-<td> {{'[TrackBackground]'| markdownify }}</td>
+<td> {{'[TrackColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Buttons.ISwitchSettings.html#Syncfusion_XForms_Buttons_ISwitchSettings_TrackColor)'| markdownify }}</td>
+<td>TrackBackground</td>
 <td>Gets or sets the color of the track.</td></tr>
 <tr>
-<td> {{'[ThumbColor]'| markdownify }}</td>
-<td> {{'[ThumbBackground]'| markdownify }}</td>
+<td> {{'[ThumbColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Buttons.ISwitchSettings.html#Syncfusion_XForms_Buttons_ISwitchSettings_ThumbColor)'| markdownify }}</td>
+<td>ThumbBackground</td>
 <td>Gets or sets the color of the thumb.</td></tr>
 </table>
