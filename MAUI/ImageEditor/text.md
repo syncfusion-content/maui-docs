@@ -91,7 +91,7 @@ Customize the appearance of text annotation using the [`ImageEditorTextSettings`
 
 ## Customize the background color of text annotations
 
-The background color of the text annotations can be customized by using the `Background` property.
+The background color of the text annotations can be customized using the `Background` property.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -119,7 +119,7 @@ The background color of the text annotations can be customized by using the `Bac
 {% endhighlight %}
 {% endtabs %}
 
-![Text annotation customization in .NET Maui ImageEditor](images/text/ imageeditor_background.png)
+![Text annotation customization in .NET Maui ImageEditor](images/text/imageeditor_background.png)
 
 ## Delete the text
 

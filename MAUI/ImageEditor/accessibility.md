@@ -9,11 +9,11 @@ documentation: ug
 
 ## Accessibility in .NET MAUI Image Editor (SfImageEditor)
 
-The Image Editor is designed to work effectively with the icons and sliders on its toolbar, providing voice descriptions of their names and functions.
+The Image Editor is designed to work effectively with the icons and sliders on its toolbar, providing voice descriptions of their names, and functions.
 
 ## Keyboard shortcuts in .NET MAUI Image Editor (SfImageEditor)
 
-The [Syncfusion .NET MAUI Image Editor](https://www.syncfusion.com/maui-controls/maui-image-editor) supports keyboard shortcuts for user interaction. The table provided outlines the various shortcuts and their associated functions.
+The [Syncfusion .NET MAUI Image Editor](https://www.syncfusion.com/maui-controls/maui-image-editor) supports keyboard shortcuts for user interaction. The table provided outlines various shortcuts and their associated functions.
 
 N> [ToolbarItemSelected](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_ToolbarItemSelected) event triggers for toolbar item tapped.
 
