@@ -391,11 +391,11 @@ namespace CarouselSample
     {
         public CarouselViewModel()
         {
-            ImageCollection.Add(new CarouselModel("cart.png"));
-            ImageCollection.Add(new CarouselModel("cart.png"));
-            ImageCollection.Add(new CarouselModel("cart.png"));
-            ImageCollection.Add(new CarouselModel("cart.png"));
-            ImageCollection.Add(new CarouselModel("cart.png"));
+           ImageCollection.Add(new CarouselModel("carousel_person1.png"));
+           ImageCollection.Add(new CarouselModel("carousel_person2.png"));
+           ImageCollection.Add(new CarouselModel("carousel_person3.png"));
+           ImageCollection.Add(new CarouselModel("carousel_person4.png"));
+           ImageCollection.Add(new CarouselModel("carousel_person5.png"));
         }
 
         private List<CarouselModel> imageCollection = new List<CarouselModel>();
