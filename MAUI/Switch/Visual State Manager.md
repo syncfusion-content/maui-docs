@@ -9,7 +9,7 @@ documentation: ug
 
 # Visual State Manager in .NET MAUI Switch (SfSwitch)
 
-Use the visual state manager to change the .NET MAUI Switch properties based on the visual states set from code. The applicable visual states are,
+Use the visual state manager to change the .NET MAUI Switch properties based on the visual states, set from code. The applicable visual states are,
 
 * On
 * Off

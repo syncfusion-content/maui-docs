@@ -15,5 +15,7 @@ The Switch control in .NET MAUI provides an efficient way to select between the 
 
  * Visualize an indeterminate state.
  * Customize the visuals with themes like Material, Cupertino, and Fluent.
+ * Visual State Manager powers the control.
+ * Enables customization of the path inside the Thumb.
 
 ![Overview image of SfSwitch](Images/overview/Overview.png)
