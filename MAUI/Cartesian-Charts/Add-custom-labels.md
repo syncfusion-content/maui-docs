@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Add custom labels to chart axis. | Syncfusion
-description: Learn here all about how to add custom labels to chart axis in Syncfusion .NET MAUI Chart (SfCartesianChart) control.
+title: Add custom labels to the chart axis. | Syncfusion
+description: Learn here all about how to add custom labels to the chart axis in Syncfusion .NET MAUI Chart (SfCartesianChart) control.
 platform: maui
 control: SfCartesianChart
 documentation: ug
 ---
 
-# Add custom labels to chart axis
+# Add custom labels to the chart axis
 
-[ChartAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html) provides the [OnCreateLabels](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_OnLabelCreated_Syncfusion_Maui_Charts_ChartAxisLabel_) override method to add custom axis labels. [OnCreateLabels](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_OnLabelCreated_Syncfusion_Maui_Charts_ChartAxisLabel_) method called whenever new labels are generated. The following properties are available to add custom labels.
+[ChartAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html) provides the [OnCreateLabels](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_OnLabelCreated_Syncfusion_Maui_Charts_ChartAxisLabel_) override method to add custom axis labels. The [OnCreateLabels](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_OnLabelCreated_Syncfusion_Maui_Charts_ChartAxisLabel_) method is called whenever new labels are generated. The following properties are available to add custom labels.
 
-* [VisibleLabels]() - This property is used to get Observable Collection of visible axis labels.
+* [VisibleLabels]() - This property is used to get an Observable Collection of visible axis labels.
 
 * [VisibleMaximum]() - This property is used to get the double value that represents the maximum observable value of the axis range.
 
@@ -75,4 +75,4 @@ documentation: ug
 
 ![Add custom labels to chart axis](How-to_images/MAUI_Add_custom_labels.png)
 
-N> This is applicable for all types of axis. Labels are rendered only if the label position presents within the visible range. The labels should be created only if users call the base of OnCreateLabels.
+N> This applies to all types of axes. Labels are rendered only if the label position presents within the visible range. The labels should be created only if users call the base of OnCreateLabels.
