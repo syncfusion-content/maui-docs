@@ -112,7 +112,8 @@ The background color of the text annotations can be customized using the `Backgr
         this.imageEditor.AddText("Good Day",
            new ImageEditorTextSettings()
            {
-               Background = Colors.White.WithAlpha(0.5f)
+               Background = Colors.White,
+               Opacity = 0.5f
            });
     }
 
