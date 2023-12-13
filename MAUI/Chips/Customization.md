@@ -1049,7 +1049,7 @@ public MainPage()
 
 ## SelectedChipBackground
 
-The `SelectedChipBackground` property customizes the background color of the selected chip.
+The `SelectedChipBackground` property customizes the background color of the selected chips.
 
 {% tabs %}
 
@@ -1222,9 +1222,9 @@ public MainPage()
 
 N> The default value of SelectedChipTextColor is [`Color.White`].
 
-## SelectedChipBackground
+## SelectedChipTextColor
 
-The `SelectedChipBackground` property customizes the text color of the selected chip.
+The `SelectedChipTextColor` property customizes the text color of the selected chips.
 
 {% tabs %}
 
