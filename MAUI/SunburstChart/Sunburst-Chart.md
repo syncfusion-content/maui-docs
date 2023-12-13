@@ -9,7 +9,7 @@ documentation: ug
 
 # Appearance in .NET MAUI Sunburst Chart
 
-The following code example gives you to customize the appearance of the sunburst chart.
+The appearance of the [SfSunburstChart]() can be customized by using Angle, Radius, Inner radius and Stroke, which allows for enriching the application.
 
 ## Angle
 

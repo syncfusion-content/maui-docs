@@ -11,6 +11,8 @@ documentation: ug
 
 The Syncfusion .NET MAUI Sunburst Chart is used to represent the hierarchical data structures. Each level represents a different category or subcategory, allowing users to understand the relationships and dependencies within the data and making it user-friendly.
 
+![Overview in MAUI Sunburst Chart.](Overview_image/Overview_Image.png)
+
 ## Key features
 
 * Supports data labels and legends for better readability.

@@ -338,36 +338,36 @@ The following code example gives you the complete code of above configurations.
 
 {% highlight xaml %}
 
-<ContentPage
-    . . .
-    xmlns:sunburst="clr-namespace:Syncfusion.Maui.SunburstChart;assembly=Syncfusion.Maui.SunburstChart"
-    xmlns:model="clr-namespace:SunburstGettingStarted>
+    <ContentPage
+        . . .
+        xmlns:sunburst="clr-namespace:Syncfusion.Maui.SunburstChart;assembly=Syncfusion.Maui.SunburstChart"
+        xmlns:model="clr-namespace:SunburstGettingStarted>
 
-    <sunburst:SfSunburstChart 
-                ItemsSource="{Binding DataSource}" 
-                ShowLabels="True"  EnableTooltip="True"
-                ValueMemberPath="EmployeesCount">
+        <sunburst:SfSunburstChart 
+                    ItemsSource="{Binding DataSource}" 
+                    ShowLabels="True"  EnableTooltip="True"
+                    ValueMemberPath="EmployeesCount">
 
-        <sunburst:SfSunburstChart.BindingContext>
-            <model:SunburstViewModel/>
-        </sunburst:SfSunburstChart.BindingContext>
+            <sunburst:SfSunburstChart.BindingContext>
+                <model:SunburstViewModel/>
+            </sunburst:SfSunburstChart.BindingContext>
 
-        <sunburst:SfSunburstChart.Title>
-            <Label Text="Employees Count"/>
-        </sunburst:SfSunburstChart.Title>
+            <sunburst:SfSunburstChart.Title>
+                <Label Text="Employees Count"/>
+            </sunburst:SfSunburstChart.Title>
 
-        <sunburst:SfSunburstChart.Legend>
-            <sunburst:SunburstLegend/>
-        </sunburst:SfSunburstChart.Legend> 
+            <sunburst:SfSunburstChart.Legend>
+                <sunburst:SunburstLegend/>
+            </sunburst:SfSunburstChart.Legend> 
 
-        <sunburst:SfSunburstChart.Levels>
-            <sunburst:SunburstHierarchicalLevel GroupMemberPath="Country"/>
-            <sunburst:SunburstHierarchicalLevel GroupMemberPath="JobDescription"/>
-            <sunburst:SunburstHierarchicalLevel GroupMemberPath="JobGroup"/>
-        </sunburst:SfSunburstChart.Levels>
-    </sunburst:SfSunburstChart>
+            <sunburst:SfSunburstChart.Levels>
+                <sunburst:SunburstHierarchicalLevel GroupMemberPath="Country"/>
+                <sunburst:SunburstHierarchicalLevel GroupMemberPath="JobDescription"/>
+                <sunburst:SunburstHierarchicalLevel GroupMemberPath="JobGroup"/>
+            </sunburst:SfSunburstChart.Levels>
+        </sunburst:SfSunburstChart>
 
-</ContentPage>
+    </ContentPage>
  
 {% endhighlight %}
 

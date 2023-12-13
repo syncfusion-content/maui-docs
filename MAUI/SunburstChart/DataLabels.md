@@ -81,7 +81,7 @@ The following code shows normal mode of data labels.
 {% highlight xaml %}
 
     <sunburst:SfSunburstChart ShowLabels="True">
-    . . .
+        . . .
         <sunburst:SfSunburstChart.DataLabelSettings>
             <sunburst:SunburstDataLabelSettings RotationMode="Normal"/>
         </sunburst:SfSunburstChart.DataLabelSettings>
