@@ -19,6 +19,8 @@ The following shape annotation types are now available in the PDF Viewer.
 2.	Circle.
 3.	Line.
 4.	Square.
+5.	Polygon.
+6.	Polyline.
 
 ## Add shapes to a PDF document
 
@@ -26,7 +28,7 @@ This section will go through how to add shape annotations to a PDF document inte
 
 ### Add shapes with UI interaction
 
-You can draw and add shape annotations to a PDF document interactively by touch (or mouse down) and drag. The following steps explains how to draw shape annotation on a PDF.
+You can interactively draw and add shape annotations to a PDF document by touch pointer or dragging the mouse down. The following steps explain how to draw a circle-shaped annotation on a PDF. Similarly, you can draw other shapes like arrows, lines, and rectangles.
 
 1.	Set the [AnnotationMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationMode) property of the SfPdfViewer to any shape (say [Circle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.AnnotationMode.html#Syncfusion_Maui_PdfViewer_AnnotationMode_Circle)). It activates the circle drawing mode on the control.
 2.	Place your finger (or mouse) on the screen, where you want to start drawing the circle.
@@ -36,8 +38,20 @@ You can draw and add shape annotations to a PDF document interactively by touch 
 6.	Once you have done, set the `AnnotationMode` to [None](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.AnnotationMode.html#Syncfusion_Maui_PdfViewer_AnnotationMode_None). It will disable the circle drawing mode and save the drawn circles to the PDF pages as circle annotations. 
 7.	You can later move, resize, or edit the annotation.
 
+### Add Polygon and Polyline shapes
 
-The following code explains how to enable the circle annotation mode. Similarly, you can change the annotation mode for drawing other shapes.
+Adding polygon and polyline shapes with touch or mouse will vary slightly from adding other shape types. To add it interactively, refer to the following steps.
+
+1.	Set the `AnnotationMode` property of the `SfPdfViewer` to `Polygon` or `Polyline`. It sets the control’s drawing mode to polygon or polyline respectively.
+2.	To begin drawing the shape, tap the desired location on the screen (using touch or mouse).
+3.	Drag the mouse pointer to a different location or just tap there. This will complete the first line segment.
+4.	To create multiple connected line segments, repeat the step 3 at the necessary locations.
+5.	Double tap to finish drawing the shape. The shape will be added to the PDF page. 
+6.	To create multiple shapes on other areas during the drawing mode, repeat the steps 2-5.
+7.	Once you have done, set the `AnnotationMode` to `None` to disable the drawing mode.
+8.	You can later move, resize, or edit the annotation.
+
+The following code explains how to enable the `circle` annotation mode. Similarly, you can do the same for other annotations.
 
 {% tabs %}
 {% highlight C# %}
