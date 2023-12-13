@@ -69,9 +69,9 @@ sfNumericEntry.UpDownPlacementMode = NumericEntryUpDownPlacementMode.Inline;
 
 ![UpDown Placement in .NET MAUI NumericEntry](UpDownButton_images/UpDownButtonPlacement.gif)
 
-## UpDown button customization
+# UpDown button customization
 
-# UpDown button color
+## UpDown button color
 
 You can customize the `NumericEntry` control button color by using the `UpDownButtonColor` property.
 
@@ -97,7 +97,7 @@ sfNumericEntry.UpDownButtonColor = Colors.Aqua;
 {% endhighlight %}
 {% endtabs %}
 
-# UpDown button template
+## UpDown button template
 
 The `NumericEntry` control supports customization of the UpDownButton's appearance through the use of the `UpButtonTemplate` and `DownButtonTemplate` properties.
 {% tabs %}
