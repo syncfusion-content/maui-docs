@@ -1,0 +1,344 @@
+---
+layout: post
+title: Paging in MAUI DataGrid control | Syncfusion
+description: Learn here all about Paging support in Syncfusion MAUI DataGrid (SfDataGrid) control, its elements and more.
+platform: MAUI
+control: SfDataGrid
+documentation: UG
+---
+
+# Paging in MAUI DataGrid (SfDataGrid)
+
+The data grid interactively supports data manipulation through the `SfDataPager` control, providing built-in options to page data on demand when dealing with large volumes. The `SfDataPager` can be placed above or below as needed to easily manage data paging.
+
+To use paging functionality into the data grid, include the following namespace in your project:
+`Syncfusion.Maui.DataGrid.DataPager`
+
+There are two different modes in paging:
+
+ * NormalPaging: It loads the entire data collection to the `SfDataPager`.
+ * OnDemandPaging: It loads data to the current page dynamically in `SfDataPager`.
+
+## Normal paging
+
+The data grid performs data paging using the `SfDataPager`. To enable paging, follow these steps::
+
+ * Create a new instance of `SfDataPager`, and bind the data collection to the `SfDataPager.Source` property. This will internally create `SfDataPager.PagedSource`. 
+ * Bind the `PagedSource` property to the `ItemsSource` of the data grid. 
+ * Set the `SfDataPager.PageSize` property to determine the number of rows to be displayed on each page.
+ * Set the `SfDataPager.NumericButtonCount` property to specify the number of buttons that should be displayed in view."
+
+N> The `SfDataPager.PageSize` property should not be assigned with value 0.
+
+The following code example illustrates using `SfDataPager` with the data grid control:
+
+{% tabs %}
+{% highlight xaml %}
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PagerSample.MainPage"
+             Title="MainPage"
+             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.DataGrid;assembly=Syncfusion.Maui.DataGrid"
+             xmlns:pager="clr-namespace:Syncfusion.Maui.DataGrid.DataPager;assembly=Syncfusion.Maui.DataGrid"
+             xmlns:local="clr-namespace:PagerSample">
+
+<ContentPage.BindingContext>
+    <local:DataPagerViewModel x:Name="viewModel" />
+</ContentPage.BindingContext>
+  
+<ContentPage.Content>
+    <Grid> 
+      <Grid.RowDefinitions>
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="*" />
+      </Grid.RowDefinitions>
+      <pager:SfDataPager x:Name ="dataPager"
+                           Grid.Row="0"           
+                           PageSize="15" 
+                           NumericButtonCount="10"
+                           Source="{Binding OrdersInfo}">
+      </pager:SfDataPager>      
+      <syncfusion:SfDataGrid x:Name="dataGrid"
+                         Grid.Row="1"
+                         AutoGenerateColumns="true"
+                         SelectionMode="Single"
+                         ItemsSource="{Binding Source={x:Reference dataPager}, Path=PagedSource }"  
+                         >
+      </syncfusion:SfDataGrid>
+    </Grid> 
+      </ContentPage.Content>
+</ContentPage>
+
+{% endhighlight %}
+{% highlight c# %}
+
+public partial class MainPage : ContentPage
+{
+  DataPagerViewModel viewModel;
+	SfDataGrid dataGrid;
+	SfDataPager pager;
+	public NormalPage()
+	{
+		InitializeComponent();
+    viewModel = new DataPagerViewModel();
+    pager = new SfDataPager();
+		pager.PageSize = 15;
+		pager.NumericButtonCount = 10;
+		pager.Source = viewModel.OrdersInfo;
+    dataGrid = new SfDataGrid();
+		dataGrid.ItemsSource = pager.PagedSource;
+		Grid grid = new Grid();
+		grid.RowDefinitions.Add(new RowDefinition() { Height = GridLength.Star });
+		grid.RowDefinitions.Add(new RowDefinition() { Height = 50 });
+		grid.Children.Add(dataGrid);
+		grid.Children.Add(pager);
+		grid.SetRow(dataGrid, 0);
+		grid.SetRow(pager, 1);
+		this.Content = grid;
+	}
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+The following screenshot shows the outcome upon execution of the above code:
+
+![Normal paging .NET MAUI DataGrid](Images\paging\maui-datagrid-normal-paging.png)
+
+N> The `SfDataPager` provides scrolling animation while tapping the `FirstPageButton` or `LastPageButton`.
+
+## OnDemandPaging	
+
+In normal Paging, data collection is entirely loaded initially into the `SfDataPager`. However, the control also allows for dynamically loading the data for the current page by setting `SfDataPager.UseOnDemandPaging` to `true`.
+
+To load the current page item dynamically, hook into the `OnDemandLoading` event. In the `OnDemandLoading` event, use the `LoadDynamicItems` method to load data for the corresponding page in the `SfDataPager`.
+
+The `OnDemandLoading` event is triggered when the pager moves to the corresponding page. It contains the following event arguments:
+
+ * `StartIndex`: Displays the corresponding page start index.
+ * `PageSize`: Displays the number of items to be loaded for that page.
+
+To load data for the DataPager control dynamically, follow the code example:
+
+{% tabs %}
+{% highlight xaml %}
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PagerSample.MainPage"
+             Title="MainPage"
+             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.DataGrid;assembly=Syncfusion.Maui.DataGrid"
+             xmlns:pager="clr-namespace:Syncfusion.Maui.DataGrid.DataPager;assembly=Syncfusion.Maui.DataGrid"
+             xmlns:local="clr-namespace:PagerSample">
+
+<ContentPage.BindingContext>
+    <local:DataPagerViewModel x:Name="viewModel" />
+</ContentPage.BindingContext>
+  
+<ContentPage.Content>
+    <Grid> 
+      <Grid.RowDefinitions>
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="*" />
+      </Grid.RowDefinitions>
+      <pager:SfDataPager x:Name ="dataPager"
+                           Grid.Row="0"           
+                           PageSize="15" 
+                           NumericButtonCount="10"
+                           PageCount="10"
+                           OnDemandLoading="dataPager_OnDemandLoading"
+                           UseOnDemandPaging="True">
+      </pager:SfDataPager>      
+      <syncfusion:SfDataGrid x:Name="dataGrid"
+                         Grid.Row="1"
+                         AutoGenerateColumns="true"
+                         SelectionMode="Single"
+                         ItemsSource="{Binding Source={x:Reference dataPager}, Path=PagedSource }"  
+                         >
+      </syncfusion:SfDataGrid>
+    </Grid> 
+      </ContentPage.Content>
+</ContentPage>
+
+{% endhighlight %}
+{% highlight c# %}
+
+public partial class MainPage : ContentPage
+{
+  DataPagerViewModel viewModel;
+	SfDataGrid dataGrid;
+	SfDataPager pager;
+	public NormalPage()
+	{
+		InitializeComponent();
+    viewModel = new DataPagerViewModel();
+    pager = new SfDataPager();
+		pager.PageSize = 15;
+		pager.NumericButtonCount = 10;
+		pager.PageCount = 10;
+    pager.UseOnDemandPaging = true
+    pager.OnDemandLoading += dataPager_OnDemandLoading;
+    dataGrid = new SfDataGrid();
+		dataGrid.ItemsSource = pager.PagedSource;
+		Grid grid = new Grid();
+		grid.RowDefinitions.Add(new RowDefinition() { Height = GridLength.Star });
+		grid.RowDefinitions.Add(new RowDefinition() { Height = 50 });
+		grid.Children.Add(dataGrid);
+		grid.Children.Add(pager);
+		grid.SetRow(dataGrid, 0);
+		grid.SetRow(pager, 1);
+		this.Content = grid;
+	}
+
+  private void dataPager_OnDemandLoading(object sender, OnDemandLoadingEventArgs e)
+  {
+     pager.LoadDynamicItems(e.StartIndex, viewModel.OrdersInfo.Skip(e.StartIndex).Take(e.PageSize));
+  }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+
+N>In on-demand paging, you should not assign a value to the `Source` property. Additionally, you have to define an integer value for the `PageCount` property to generate the required numeric buttons in the view.
+
+When using `OnDemandPaging`, `SfDataPager.PagedSource` loads only the current page data. Upon navigation to another page, `OnDemandLoading` event is fired which loads another set of data, but maintains the previous page data also. When you navigate to the previous page again, OnDemandLoading event is not fired, and the required data maintained in the cache is loaded. However, for further performance enhancement if you do not want to maintain the previous page data, call `Syncfusion.Data.PagedCollectionView.ResetCache()` in the `OnDemandLoading` event. ResetCache method call resets the cache except the current page.
+
+To use ResetCache method, follow the code example:
+
+{% highlight c# %}
+
+private void dataPager_OnDemandLoading(object sender, OnDemandLoadingEventArgs e)
+{
+     pager.LoadDynamicItems(e.StartIndex, viewModel.OrdersInfo.Skip(e.StartIndex).Take(e.PageSize));
+     (pager.PagedSource as PagedCollectionView).ResetCache();
+}
+
+{% endhighlight %}
+
+## Numeric button shapes
+
+The `SfDataPager` allows you to change the shape of the buttons using the `SfDataPager.ButtonShape` property. 
+
+{% tabs %}
+{% highlight xaml %}
+<pager:SfDataPager x:Name="dataPager"
+                         ButtonShape="Rectangle"
+                         PageSize="15"
+                         Source="{Binding OrdersInfo}">
+</pager:SfDataPager>
+{% endhighlight %}
+{% highlight c# %}
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        dataPager.ButtonShape = DataPagerButtonShape.Rectangle;
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
+![Numeric button shape .NET MAUI DataGrid](Images\paging\maui-datagrid-button-shape.png)
+
+## Generating numeric buttons
+
+The `SfDataPager` allows you to choose the generation mode of numeric buttons using the `SfDataPager.NumericButtonsGenerateMode` property. The numeric buttons can be generated either automatically in view or by specifying the count directly in the `SfDataPager.NumericButtonCount` property.
+
+{% tabs %}
+{% highlight xaml %}
+<pager:SfDataPager x:Name="dataPager"
+                         NumericButtonsGenerateMode="Auto"
+                         PageSize="15"
+                         Source="{Binding OrdersInfo}">
+</pager:SfDataPager>
+{% endhighlight %}
+{% highlight c# %}
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        dataPager.NumericButtonsGenerateMode = DataPagerNumericButtonsGenerateMode.Auto;
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
+N> The size of the `SfDataPager` is automatically adjusted based on the available screen size if the view cannot accommodate the numeric buttons specified in the `NumericButtonCount` property.
+
+## Customizing button size and font size of pager buttons
+
+The `SfDataPager` button is loaded with a default width and height of 40. The default button font size of `SfDataPager` is 14. You can customize the button size and font size by setting the desired values for the `SfDataPager.ButtonSize` and `SfDataPager.ButtonFontSize` properties, respectively.
+
+{% tabs %}
+{% highlight xaml %}
+<pager:SfDataPager x:Name="dataPager"
+                   PageSize="15"
+                   ButtonSize="60"
+                   ButtonFontSize="21"
+                   Source="{Binding OrdersInfo}"/>
+</pager:SfDataPager>
+{% endhighlight %}
+{% highlight c# %}
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        dataPager.ButtonSize = 60;
+        dataPager.ButtonFontSize = 21;
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
+![Button size and Font size of .NET MAUI DataGrid](Images\paging\maui-datagrid-buttonsize-and-fontsize.png)
+
+## DataPagerStyle
+
+The data grid allows you to change its appearance by creating a style class that overrides the `DataPagerStyle` and then assigning it to the `SfDataPager.DefaultStyle` property.
+  
+To apply custom style, follow the code example:
+
+{% tabs %}
+{% highlight xaml %}
+<pager:SfDataPager x:Name="dataPager"
+                         PageSize="15"
+                         Source="{Binding OrdersInfo}">
+                <pager:SfDataPager.DefaultStyle >
+                    <pager:DataPagerStyle NumericButtonSelectionBackgroundColor="Red"
+                                          NumericButtonBackgroundColor="GreenYellow"
+                                          NavigationButtonBackgroundColor="Black"
+                                          NavigationButtonIconColor="White">
+                    </pager:DataPagerStyle>
+                </pager:SfDataPager.DefaultStyle>
+</pager:SfDataPager>
+{% endhighlight %}
+{% highlight c# %}
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        dataPager.DefaultStyle.NumericButtonSelectionBackgroundColor = Colors.Red;
+        dataPager.DefaultStyle.NumericButtonBackgroundColor = Colors.GreenYellow;
+        dataPager.DefaultStyle.NavigationButtonBackgroundColor = Colors.Black;
+        dataPager.DefaultStyle.NavigationButtonIconColor = Colors.White;
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
+The following picture shows the customize styles of data pager:
+
+![DataPager style .NET MAUI DataGrid](Images\paging\maui-datagrid-pager-style.png)
+
+### Limitations
+1. UI Filtering is not supported. You can code at the application level to filter the data.
+2. Data processing operations (Sorting, Grouping) are performed only on the current page. 
+3. Deleting is not supported. You can code to delete a row at the application level. 
+4. Only the navigated pages are exported when 'OnDemandPaging' is enabled. If the cache of the navigated page is cleared, then the corresponding page will not be exported.
+
