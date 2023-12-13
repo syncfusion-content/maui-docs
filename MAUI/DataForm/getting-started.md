@@ -169,7 +169,7 @@ N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-dataform/t
 
 #### Vertical StackLayout
 
-When the data form is placed inside a vertical stack layout, users must define the required `MinimumHeightRequest` value. By default, this `MinimumHeightRequest` is set to 300.
+When the data form is placed inside a vertical stack layout, you must define the required `MinimumHeightRequest` value. By default, this `MinimumHeightRequest` is set to 300.
 
 {% tabs %}
 {% highlight XAML %}
@@ -204,7 +204,7 @@ this.Content = dataForm;
 
 #### Horizontal StackLayout
 
-When the data form is placed inside a horizontal stack layout, users must define the required `MinimumWidthRequest` value. By default, this `MinimumWidthRequest` is set to 300.
+When the data form is placed inside a horizontal stack layout, you must define the required `MinimumWidthRequest` value. By default, this `MinimumWidthRequest` is set to 300.
 
 {% tabs %}
 {% highlight XAML %}
