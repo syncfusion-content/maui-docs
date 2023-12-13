@@ -40,7 +40,7 @@ The form fields in a PDF document can be accessed using the FormFields property 
 
 public void WireDocumentLoadedEvent()
 {
-    // Wire the document loaded event of the `SfPdfViewer` to occur when a PDF document is loaded.
+    // Wire the document loaded event of the "SfPdfViewer" to occur when a PDF document is loaded.
     PdfViewer.DocumentLoaded += OnDocumentLoaded;
 }
 
