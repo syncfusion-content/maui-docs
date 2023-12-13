@@ -115,14 +115,14 @@ void CustomizeDefaultFreeTextSettings()
 
 ### Edit the text with UI interaction
 
-Double tapping the free text annotation will allow you to edit its text content.
+Double tapping the selected free text annotation will allow you to edit its text content.
 
-* In the desktop platforms (Windows and macOS), double tapping the annotation will activate editing mode, which lets you type text directly into the annotation.
-* In the mobile platforms (Android and iOS), double tapping the annotation will open a text editor where you can make changes to the text and save it.
+* In the desktop platforms (Windows and macOS), double tapping the selected annotation will activate editing mode, which lets you type text directly into the annotation.
+* In the mobile platforms (Android and iOS), double tapping the selected annotation will open a text editor where you can make changes to the text and save it.
 
 ### Edit free text annotation properties programmatically
 
-You can edit the properties of the selected free text annotation programmatically by accessing the selected annotation instance. The selected annotation instance may be obtained from the [AnnotationSelected](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationSelected) event. The following example shows how to edit some of the properties of the selected free text annotation. Similarly, you can modify the other free text properties.
+You can also edit the properties of the selected free text annotation programmatically by accessing the selected annotation instance. The selected annotation instance may be obtained from the [AnnotationSelected](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationSelected) event. The following example shows how to edit some of the properties of the selected free text annotation. Similarly, you can modify the other free text properties.
 
 {% tabs %}
 {% highlight C# %}
