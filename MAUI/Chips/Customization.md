@@ -1222,6 +1222,48 @@ public MainPage()
 
 N> The default value of SelectedChipTextColor is [`Color.White`].
 
+## SelectedChipBackground
+
+The `SelectedChipBackground` property customizes the text color of the selected chip.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<ContentPage.BindingContext>
+    <local:EmployeeViewModel/>
+</ContentPage.BindingContext>
+<StackLayout Margin="10,10,10,10" VerticalOptions="Center" HorizontalOptions="Center">
+    <core:SfChipGroup ItemsSource="{Binding Employees}"
+                      DisplayMemberPath="Name"
+                      ChipBackground="#512dcd"
+                      ChipType="Filter"
+                      SelectedChipBackground="#E8DEF8"
+                      SelectedChipTextColor="Yellow"/>
+</StackLayout>
+    
+{% endhighlight %}
+
+{% highlight c# %}
+
+using Syncfusion.Maui.Core;
+
+    StackLayout stack = new StackLayout();
+    SfChipGroup chipGroup = new SfChipGroup();
+    stack.Children.Add(chipGroup);
+    this.BindingContext = new ViewModel();
+    chipGroup.SetBinding(SfChipGroup.ItemsSourceProperty, "Employees");
+    chipGroup.DisplayMemberPath = "Name";
+    chipGroup.ChipBackground = Colors.Violet;
+    chipGroup.ChipType = SfChipsType.Filter;
+    chipGroup.SelectedChipBackground = Colors.Aqua;
+    chipGroup.SelectedChipTextColor = Colors.Yellow;
+    this.Content = stack;
+        
+{% endhighlight %}
+
+{% endtabs %}
+
 ## ChipStroke
 
 The [`ChipStroke`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html#Syncfusion_Maui_Core_SfChipGroup_ChipStroke) property customizes the border color of the SfChipGroup.
