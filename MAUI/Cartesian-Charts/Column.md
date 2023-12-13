@@ -114,3 +114,66 @@ this.Content = chart;
 {% endtabs %}
 
 ![Column segment spacing in MAUI Chart](Chart-Types_images/maui_column_chart_with_segment_spacing.png)
+
+## OverlappedPlacement
+
+By default, all the column series which has the same x and y axes are placed side by side in a chart. If you want place the series one over the other (overlapped), set the [EnableSideBySideSeriesPlacement]() property of SfChart to false. The following code snippet and screenshot illustrate the overlapped placement of column series.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<chart:SfCartesianChart EnableSideBySideSeriesPlacement="False">
+
+    <chart:SfCartesianChart.XAxes>
+        <chart:CategoryAxis />
+    </chart:SfCartesianChart.XAxes>
+
+    <chart:SfCartesianChart.YAxes>
+        <chart:NumericalAxis />
+    </chart:SfCartesianChart.YAxes>   
+
+    <chart:ColumnSeries ItemsSource="{Binding Data}"
+						XBindingPath="XValue"
+						YBindingPath="YValue"/>
+                        
+    <chart:ColumnSeries ItemsSource="{Binding Data}"
+						XBindingPath="XValue"
+						YBindingPath="YValue1"/>                    
+
+</chart:SfCartesianChart>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+    SfCartesianChart chart = new SfCartesianChart();
+    chart.EnableSideBySideSeriesPlacement = false;
+    CategoryAxis primaryAxis = new CategoryAxis();
+    chart.XAxes.Add(primaryAxis);
+    NumericalAxis secondaryAxis = new NumericalAxis();
+    chart.YAxes.Add(secondaryAxis);
+
+    ColumnSeries series = new ColumnSeries()
+    {
+        ItemsSource = new ViewModel().Data,
+        XBindingPath = "XValue",
+        YBindingPath = "YValue",
+    };
+
+    ColumnSeries series1 = new ColumnSeries()
+    {
+        ItemsSource = new ViewModel().Data,
+        XBindingPath = "XValue",
+        YBindingPath = "YValue1",
+    };
+
+    chart.Series.Add(series);
+    chart.Series.Add(series1);
+    this.Content = chart;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Column segment enableSideBySideSeriesPlacement in Maui Chart](Chart-Types_images/EnableSidebySidePlacement_Outptu.png)
