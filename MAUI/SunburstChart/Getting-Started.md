@@ -196,15 +196,15 @@ N> Add the namespace of the `SunburstViewModel` class to your XAML Page, if you 
             xmlns:sunburst="clr-namespace:Syncfusion.Maui.SunburstChart;assembly=Syncfusion.Maui.SunburstChart"
             xmlns:model="clr-namespace:SunburstGettingStarted>
 
-    <sunburst:SfSunburstChart x:Name="sunburst" 
+        <sunburst:SfSunburstChart x:Name="sunburst" 
             ItemsSource="{Binding DataSource}" 
             ValueMemberPath="EmployeesCount">
 
-        <sunburst:SfSunburstChart.Levels>
-            <sunburst:SunburstHierarchicalLevel GroupMemberPath="Country"/>
-            <sunburst:SunburstHierarchicalLevel GroupMemberPath="JobDescription"/>
-            <sunburst:SunburstHierarchicalLevel GroupMemberPath="JobGroup"/>
-        </sunburst:SfSunburstChart.Levels>
+            <sunburst:SfSunburstChart.Levels>
+                <sunburst:SunburstHierarchicalLevel GroupMemberPath="Country"/>
+                <sunburst:SunburstHierarchicalLevel GroupMemberPath="JobDescription"/>
+                <sunburst:SunburstHierarchicalLevel GroupMemberPath="JobGroup"/>
+            </sunburst:SfSunburstChart.Levels>
 
         </sunburst:SfSunburstChart>
     </ContentPage>
