@@ -45,13 +45,14 @@ To initialize the control, import the sunburst chart namespace and Initialize [S
 
 {% highlight xaml %}
 
-    <ContentPage
-            . . .
-            xmlns:sunburst="clr-namespace:Syncfusion.SfSunburstChart.XForms;assembly=Syncfusion.SfSunburstChart.XForms">
+	<ContentPage
+	    . . .
+	    xmlns:sunburst="clr-namespace:Syncfusion.SfSunburstChart.XForms;assembly=Syncfusion.SfSunburstChart.XForms">
 
-        <chart:SfSunburstChart/>
+	    <chart:SfSunburstChart/>
 
-    </ContentPage>
+	</ContentPage>
+
 {% endhighlight %}
 {% highlight C# %}
 
@@ -75,13 +76,13 @@ To initialize the control, import the sunburst chart namespace and Initialize [S
 
 {% highlight xaml %}
 
-    <ContentPage
-    . . .    
-     xmlns:sunburst="clr-namespace:Syncfusion.Maui.SunburstChart;assembly=Syncfusion.Maui.SunburstChart">
-   
-        <sunburst:SfSunburstChart/>
-   
-    </ContentPage>
+	<ContentPage
+	    . . .    
+	    xmlns:sunburst="clr-namespace:Syncfusion.Maui.SunburstChart;assembly=Syncfusion.Maui.SunburstChart">
+
+	    <sunburst:SfSunburstChart/>
+
+	</ContentPage>
  
 {% endhighlight %}
 {% highlight C# %}
@@ -163,13 +164,13 @@ The following code example explains how to migrate Xamarin SfSunburstChart to th
 
 {% highlight xaml %}
 
-    <ContentPage
-            . . .
-            xmlns:sunburst="clr-namespace:Syncfusion.SfSunburstChart.XForms;assembly=Syncfusion.SfSunburstChart.XForms">
+	<ContentPage
+	    . . .
+	    xmlns:sunburst="clr-namespace:Syncfusion.SfSunburstChart.XForms;assembly=Syncfusion.SfSunburstChart.XForms">
 
-        <chart:SfSunburstChart/>
+	    <chart:SfSunburstChart/>
 
-    </ContentPage>
+	</ContentPage>
 {% endhighlight %}
 
 {% highlight C# %}
@@ -194,39 +195,37 @@ The following code example explains how to migrate Xamarin SfSunburstChart to th
 
 {% highlight xaml %}
 
-     <ContentPage
-            . . .
-           xmlns:sunburst="clr-namespace:Syncfusion.Maui.SunburstChart;assembly=Syncfusion.Maui.SunburstChart" >
+<ContentPage
+    . . .
+    xmlns:sunburst="clr-namespace:Syncfusion.Maui.SunburstChart;assembly=Syncfusion.Maui.SunburstChart" >
 
-        <sunburst:SfSunburstChart ItemsSource="{Binding DataSource}"
-            ValueMemberPath="EmployeesCount">
-             <sunburst:SfSunburstChart.Levels>
-
-          <sunburst:SunburstHierarchicalLevel GroupMemberPath="Country"/>
-          <sunburst:SunburstHierarchicalLevel GroupMemberPath="JobDescription"/>
-          <sunburst:SunburstHierarchicalLevel GroupMemberPath="JobGroup"/>
-          <sunburst:SunburstHierarchicalLevel GroupMemberPath="JobRole"/>
+    <sunburst:SfSunburstChart ItemsSource="{Binding DataSource}"
+        ValueMemberPath="EmployeesCount">
+        <sunburst:SfSunburstChart.Levels>
+            <sunburst:SunburstHierarchicalLevel GroupMemberPath="Country"/>
+            <sunburst:SunburstHierarchicalLevel GroupMemberPath="JobDescription"/>
+            <sunburst:SunburstHierarchicalLevel GroupMemberPath="JobGroup"/>
+            <sunburst:SunburstHierarchicalLevel GroupMemberPath="JobRole"/>
         </sunburst:SfSunburstChart.Levels>
-
-        </sunburst:SfSunburstChart>
-     </ContentPage>
+    </sunburst:SfSunburstChart>
+</ContentPage>
  
 {% endhighlight %}
 
 {% highlight C# %}
 
     using Syncfusion.Maui.SunburstChart;
-    
-        SfSunburstChart sunburstChart = new SfSunburstChart();
 
-        sunburstChart.SetBinding(SfSunburstChart.ItemsSourceProperty, "DataSource");
-        sunburstChart.ValueMemberPath = "EmployeesCount";
-        sunburstChart.Levels.Add(new SunburstHierarchicalLevel() { GroupMemberPath = "Country" });
-        sunburstChart.Levels.Add(new SunburstHierarchicalLevel() { GroupMemberPath = "JobDescription" });
-        sunburstChart.Levels.Add(new SunburstHierarchicalLevel() { GroupMemberPath = "JobGroup" });
-        sunburstChart.Levels.Add(new SunburstHierarchicalLevel() { GroupMemberPath = "JobRole" });
+    SfSunburstChart sunburstChart = new SfSunburstChart();
 
-        this.Content = sunburstChart;
+    sunburstChart.SetBinding(SfSunburstChart.ItemsSourceProperty, "DataSource");
+    sunburstChart.ValueMemberPath = "EmployeesCount";
+    sunburstChart.Levels.Add(new SunburstHierarchicalLevel() { GroupMemberPath = "Country" });
+    sunburstChart.Levels.Add(new SunburstHierarchicalLevel() { GroupMemberPath = "JobDescription" });
+    sunburstChart.Levels.Add(new SunburstHierarchicalLevel() { GroupMemberPath = "JobGroup" });
+    sunburstChart.Levels.Add(new SunburstHierarchicalLevel() { GroupMemberPath = "JobRole" });
+
+    this.Content = sunburstChart;
                        
 
 {% endhighlight %}
@@ -286,31 +285,31 @@ The following code example shows how to enable legend in the sunburst chart.
 
 {% highlight xaml %}
 
-    <ContentPage
-            . . .
-            xmlns:sunburst="clr-namespace:Syncfusion.SfSunburstChart.XForms;assembly=Syncfusion.SfSunburstChart.XForms">
+	<ContentPage
+        . . .
+        xmlns:sunburst="clr-namespace:Syncfusion.SfSunburstChart.XForms;assembly=Syncfusion.SfSunburstChart.XForms">
 
-        <sunburst:SfSunburstChart.Legend>
-            <sunburst:SunburstChartLegend x:Name="legend" IsVisible="True"  
-                      LegendPosition="Left" >
-        </sunburst:SunburstChartLegend>
-    </sunburst:SfSunburstChart.Legend>
-
-    </ContentPage>
+	    <sunburst:SfSunburstChart.Legend>
+	        <sunburst:SunburstChartLegend x:Name="legend" IsVisible="True"  
+	                    LegendPosition="Left" >
+	        </sunburst:SunburstChartLegend>
+	    </sunburst:SfSunburstChart.Legend>
+		. . .
+	</ContentPage>
 {% endhighlight %}
 
 {% highlight C# %}
 
     using Syncfusion.SfSunburstChart.XForms;
     ...
-        SfSunburstChart sunburstChart = new SfSunburstChart();
+    SfSunburstChart sunburstChart = new SfSunburstChart();
 
-        SunburstChartLegend legend = new SunburstChartLegend();
-        legend.IsVisible = true;
-        legend.LegendPosition = SunburstDockPosition.Left;
-        sunburstChart.Legend = legend;
+    SunburstChartLegend legend = new SunburstChartLegend();
+    legend.IsVisible = true;
+    legend.LegendPosition = SunburstDockPosition.Left;
+    sunburstChart.Legend = legend;
 
-        this.Content = sunburstChart;
+    this.Content = sunburstChart;
 
 {% endhighlight %}
 
@@ -326,30 +325,30 @@ The following code example shows how to enable legend in the sunburst chart.
 
 {% highlight xaml %}
 
-     <ContentPage
-            . . .
-           xmlns:sunburst="clr-namespace:Syncfusion.Maui.SunburstChart;assembly=Syncfusion.Maui.SunburstChart" >
+	<ContentPage
+	    . . .
+	    xmlns:sunburst="clr-namespace:Syncfusion.Maui.SunburstChart;assembly=Syncfusion.Maui.SunburstChart" >
 
-        <sunburst:SfSunburstChart.Legend>
-            <sunburst:SunburstLegend Placement="Top" IsVisible="True" />
-        </sunburst:SfSunburstChart.Legend>
-           
-     </ContentPage>
+	    <sunburst:SfSunburstChart.Legend>
+	        <sunburst:SunburstLegend Placement="Top" IsVisible="True" />
+	    </sunburst:SfSunburstChart.Legend>
+
+	</ContentPage>
  
 {% endhighlight %}
 {% highlight C# %}
 
     using Syncfusion.Maui.SunburstChart;
-    
-         SfSunburstChart sunburstChart = new SfSunburstChart();
 
-         sunburstChart.Legend = new SunburstLegend()
-         {
-            Placement = LegendPlacement.Top,
-            IsVisible = true
-         };
+    SfSunburstChart sunburstChart = new SfSunburstChart();
 
-        this.Content = sunburstChart;
+    sunburstChart.Legend = new SunburstLegend()
+    {
+    Placement = LegendPlacement.Top,
+    IsVisible = true
+    };
+
+    this.Content = sunburstChart;
                        
 
 {% endhighlight %}
@@ -373,32 +372,32 @@ To customize the data label appearance, create an instance of the [SunburstDataL
 {% tabs %} 
 {% highlight xaml %}
 
-    <ContentPage
-            . . .
-            xmlns:sunburst="clr-namespace:Syncfusion.SfSunburstChart.XForms;assembly=Syncfusion.SfSunburstChart.XForms">
+<ContentPage
+    . . .
+    xmlns:sunburst="clr-namespace:Syncfusion.SfSunburstChart.XForms;assembly=Syncfusion.SfSunburstChart.XForms">
 
-        <sunburst:SfSunburstChart.DataLabel>
-            <sunburst:SunburstChartDataLabel  ShowLabel="True" FontAttributes="Bold" 
-                        FontSize="10" TextColor="Red" >
-            </sunburst:SunburstChartDataLabel>
-        </sunburst:SfSunburstChart.DataLabel>
+    <sunburst:SfSunburstChart.DataLabel>
+        <sunburst:SunburstChartDataLabel  ShowLabel="True" FontAttributes="Bold" 
+                    FontSize="10" TextColor="Red" >
+        </sunburst:SunburstChartDataLabel>
+    </sunburst:SfSunburstChart.DataLabel>
 
-    </ContentPage>
+</ContentPage>
 {% endhighlight %}
 {% highlight C# %}
 
     using Syncfusion.SfSunburstChart.XForms;
     ...
-        SfSunburstChart sunburstChart = new SfSunburstChart();
-        SunburstChartDataLabel label = new SunburstChartDataLabel();
-        label.ShowLabel = true;
-        label.TextColor = Color.Red;
-        label.FontSize = 10;
-        label.FontAttributes = FontAttributes.Bold;
-        label.FontFamily = "ArialMT";
-        sunburstChart.DataLabel = label;
+    SfSunburstChart sunburstChart = new SfSunburstChart();
+    SunburstChartDataLabel label = new SunburstChartDataLabel();
+    label.ShowLabel = true;
+    label.TextColor = Color.Red;
+    label.FontSize = 10;
+    label.FontAttributes = FontAttributes.Bold;
+    label.FontFamily = "ArialMT";
+    sunburstChart.DataLabel = label;
 
-        this.Content = sunburstChart;
+    this.Content = sunburstChart;
 
 {% endhighlight %}
 {% endtabs %}
@@ -412,51 +411,50 @@ To customize the data label appearance, create an instance of the [SunburstDataL
 {% tabs %} 
 {% highlight xaml %}
 
-     <ContentPage
-            . . .
-           xmlns:sunburst="clr-namespace:Syncfusion.Maui.SunburstChart;assembly=Syncfusion.Maui.SunburstChart" >
-        
-        <sunburst:SfSunburstChart ItemsSource="{Binding DataSource}" ShowLabels="True" 
-            ValueMemberPath="EmployeesCount">
-             <sunburst:SfSunburstChart.Levels>
+<ContentPage
+    . . .
+    xmlns:sunburst="clr-namespace:Syncfusion.Maui.SunburstChart;assembly=Syncfusion.Maui.SunburstChart" >
 
-            <sunburst:SfSunburstChart.DataLabelSettings>
-               <sunburst:SunburstDataLabelSettings FontSize="13" FontAttributes="Italic"
-                       RotationMode="Angle" OverFlowMode="Trim" />
+    <sunburst:SfSunburstChart ItemsSource="{Binding DataSource}" ShowLabels="True" 
+        ValueMemberPath="EmployeesCount">
+
+        <sunburst:SfSunburstChart.DataLabelSettings>
+                <sunburst:SunburstDataLabelSettings FontSize="13" FontAttributes="Italic"
+                        RotationMode="Angle" OverFlowMode="Trim" />
             </sunburst:SfSunburstChart.DataLabelSettings>
 
-          <sunburst:SunburstHierarchicalLevel GroupMemberPath="Country"/>
-          <sunburst:SunburstHierarchicalLevel GroupMemberPath="JobDescription"/>
-          <sunburst:SunburstHierarchicalLevel GroupMemberPath="JobGroup"/>
-          <sunburst:SunburstHierarchicalLevel GroupMemberPath="JobRole"/>
+        <sunburst:SfSunburstChart.Levels>
+            <sunburst:SunburstHierarchicalLevel GroupMemberPath="Country"/>
+            <sunburst:SunburstHierarchicalLevel GroupMemberPath="JobDescription"/>
+            <sunburst:SunburstHierarchicalLevel GroupMemberPath="JobGroup"/>
+            <sunburst:SunburstHierarchicalLevel GroupMemberPath="JobRole"/>
         </sunburst:SfSunburstChart.Levels>
+    </sunburst:SfSunburstChart>
 
-       ShowLabels="True"
-           
-     </ContentPage>
+</ContentPage>
  
 {% endhighlight %}
 {% highlight C# %}
 
     using Syncfusion.Maui.SunburstChart;
-    
-       sunburstChart.ShowLabels = true;
-       sunburstChart.DataLabelSettings = new SunburstDataLabelSettings()
-       {
-            OverFlowMode = SunburstLabelOverflowMode.Trim,
-            RotationMode = SunburstLabelRotationMode.Angle,
-            FontAttributes = FontAttributes.Italic,
-            FontSize = 13
-       };
 
-       sunburstChart.SetBinding(SfSunburstChart.ItemsSourceProperty, "DataSource");
-       sunburstChart.ValueMemberPath = "EmployeesCount";
-       sunburstChart.Levels.Add(new SunburstHierarchicalLevel() { GroupMemberPath = "Country" });
-       sunburstChart.Levels.Add(new SunburstHierarchicalLevel() { GroupMemberPath = "JobDescription" });
-       sunburstChart.Levels.Add(new SunburstHierarchicalLevel() { GroupMemberPath = "JobGroup" });
-       sunburstChart.Levels.Add(new SunburstHierarchicalLevel() { GroupMemberPath = "JobRole" });
+    sunburstChart.ShowLabels = true;
+    sunburstChart.DataLabelSettings = new SunburstDataLabelSettings()
+    {
+        OverFlowMode = SunburstLabelOverflowMode.Trim,
+        RotationMode = SunburstLabelRotationMode.Angle,
+        FontAttributes = FontAttributes.Italic,
+        FontSize = 13
+    };
 
-        this.Content = sunburstChart;
+    sunburstChart.SetBinding(SfSunburstChart.ItemsSourceProperty, "DataSource");
+    sunburstChart.ValueMemberPath = "EmployeesCount";
+    sunburstChart.Levels.Add(new SunburstHierarchicalLevel() { GroupMemberPath = "Country" });
+    sunburstChart.Levels.Add(new SunburstHierarchicalLevel() { GroupMemberPath = "JobDescription" });
+    sunburstChart.Levels.Add(new SunburstHierarchicalLevel() { GroupMemberPath = "JobGroup" });
+    sunburstChart.Levels.Add(new SunburstHierarchicalLevel() { GroupMemberPath = "JobRole" });
+
+    this.Content = sunburstChart;
                        
 
 {% endhighlight %}
@@ -480,35 +478,35 @@ To customize the tooltip appearance, create an instance of the SunburstTooltipSe
 {% tabs %} 
 {% highlight xaml %}
 
-    <ContentPage
-            . . .
-            xmlns:sunburst="clr-namespace:Syncfusion.SfSunburstChart.XForms;assembly=Syncfusion.SfSunburstChart.XForms">
+	<ContentPage
+	    . . .
+	    xmlns:sunburst="clr-namespace:Syncfusion.SfSunburstChart.XForms;assembly=Syncfusion.SfSunburstChart.XForms">
 
-    <sunburst:SfSunburstChart.TooltipSettings>
-       <sunburst:SunburstTooltipSettings  ShowTooltip="True"    TextColor="White"
-             BackgroundColor="Green"  BorderColor="Black" BorderWidth="1" 
-             Duration="2000" >
-       </sunburst:SunburstTooltipSettings>
-    </sunburst:SfSunburstChart.TooltipSettings>
+	    <sunburst:SfSunburstChart.TooltipSettings>
+	        <sunburst:SunburstTooltipSettings  ShowTooltip="True"    TextColor="White"
+	                BackgroundColor="Green"  BorderColor="Black" BorderWidth="1" 
+	                Duration="2000" >
+	        </sunburst:SunburstTooltipSettings>
+	    </sunburst:SfSunburstChart.TooltipSettings>
 
-    </ContentPage>
+	</ContentPage>
 {% endhighlight %}
 {% highlight C# %}
 
     using Syncfusion.SfSunburstChart.XForms;
     ...
-        SfSunburstChart sunburstChart = new SfSunburstChart();
+    SfSunburstChart sunburstChart = new SfSunburstChart();
 
-        SunburstTooltipSettings tooltipSettings = new SunburstTooltipSettings();
-        tooltipSettings.ShowTooltip = true;
-        tooltipSettings.TextColor = Color.White;
-        tooltipSettings.BackgroundColor = Color.Green;
-        tooltipSettings.BorderColor = Color.Black;
-        tooltipSettings.BorderWidth = 1;
-        tooltipSettings.Duration = 2000;
-        sunburstChart.TooltipSettings = tooltipSettings;
+    SunburstTooltipSettings tooltipSettings = new SunburstTooltipSettings();
+    tooltipSettings.ShowTooltip = true;
+    tooltipSettings.TextColor = Color.White;
+    tooltipSettings.BackgroundColor = Color.Green;
+    tooltipSettings.BorderColor = Color.Black;
+    tooltipSettings.BorderWidth = 1;
+    tooltipSettings.Duration = 2000;
+    sunburstChart.TooltipSettings = tooltipSettings;
 
-        this.Content = sunburstChart;
+    this.Content = sunburstChart;
 
 {% endhighlight %}
 {% endtabs %}
@@ -522,50 +520,51 @@ To customize the tooltip appearance, create an instance of the SunburstTooltipSe
 {% tabs %} 
 {% highlight xaml %}
 
-    <ContentPage
-            . . .
-           xmlns:sunburst="clr-namespace:Syncfusion.Maui.SunburstChart;assembly=Syncfusion.Maui.SunburstChart" >
+<ContentPage
+    . . .
+    xmlns:sunburst="clr-namespace:Syncfusion.Maui.SunburstChart;assembly=Syncfusion.Maui.SunburstChart" >
+    
+    <sunburst:SfSunburstChart ItemsSource="{Binding DataSource}"  EnableTooltip="True" 
+        ValueMemberPath="EmployeesCount">
+
+        <sunburst:SfSunburstChart.TooltipSettings>
+            <sunburst:SunburstTooltipSettings  TextColor="Black"
+                FontSize="14" Duration="4"
+                Background="Gray" />
+        </sunburst:SfSunburstChart.TooltipSettings>
+
+        <sunburst:SfSunburstChart.Levels>
+            <sunburst:SunburstHierarchicalLevel GroupMemberPath="Country"/>
+            <sunburst:SunburstHierarchicalLevel GroupMemberPath="JobDescription"/>
+            <sunburst:SunburstHierarchicalLevel GroupMemberPath="JobGroup"/>
+            <sunburst:SunburstHierarchicalLevel GroupMemberPath="JobRole"/>
+        </sunburst:SfSunburstChart.Levels>
+    </sunburst:SfSunburstChart>
         
-        <sunburst:SfSunburstChart ItemsSource="{Binding DataSource}"  EnableTooltip="True" 
-            ValueMemberPath="EmployeesCount">
-
-            <sunburst:SfSunburstChart.TooltipSettings>
-              <sunburst:SunburstTooltipSettings  TextColor="Black"
-                    FontSize="14" Duration="4"
-                    Background="Gray" />
-            </sunburst:SfSunburstChart.TooltipSettings>
-
-            <sunburst:SfSunburstChart.Levels>
-              <sunburst:SunburstHierarchicalLevel GroupMemberPath="Country"/>
-              <sunburst:SunburstHierarchicalLevel GroupMemberPath="JobDescription"/>
-              <sunburst:SunburstHierarchicalLevel GroupMemberPath="JobGroup"/>
-              <sunburst:SunburstHierarchicalLevel GroupMemberPath="JobRole"/>
-            </sunburst:SfSunburstChart.Levels>
-           
-    </ContentPage>
+</ContentPage>
  
 {% endhighlight %}
 {% highlight C# %}
 
     using Syncfusion.Maui.SunburstChart;
-    
-        sunburstChart.EnableTooltip = true;
-        sunburstChart.TooltipSettings = new SunburstTooltipSettings()
-        {
-            Background = Brush.Gray,
-            TextColor = Colors.Black,
-            Duration = 4,
-            FontSize = 14
-        };
 
-       sunburstChart.SetBinding(SfSunburstChart.ItemsSourceProperty, "DataSource");
-       sunburstChart.ValueMemberPath = "EmployeesCount";
-       sunburstChart.Levels.Add(new SunburstHierarchicalLevel() { GroupMemberPath = "Country" });
-       sunburstChart.Levels.Add(new SunburstHierarchicalLevel() { GroupMemberPath = "JobDescription" });
-       sunburstChart.Levels.Add(new SunburstHierarchicalLevel() { GroupMemberPath = "JobGroup" });
-       sunburstChart.Levels.Add(new SunburstHierarchicalLevel() { GroupMemberPath = "JobRole" });
+    sunburstChart.EnableTooltip = true;
+    sunburstChart.TooltipSettings = new SunburstTooltipSettings()
+    {
+        Background = Brush.Gray,
+        TextColor = Colors.Black,
+        Duration = 4,
+        FontSize = 14
+    };
 
-        this.Content = sunburstChart;
+    sunburstChart.SetBinding(SfSunburstChart.ItemsSourceProperty, "DataSource");
+    sunburstChart.ValueMemberPath = "EmployeesCount";
+    sunburstChart.Levels.Add(new SunburstHierarchicalLevel() { GroupMemberPath = "Country" });
+    sunburstChart.Levels.Add(new SunburstHierarchicalLevel() { GroupMemberPath = "JobDescription" });
+    sunburstChart.Levels.Add(new SunburstHierarchicalLevel() { GroupMemberPath = "JobGroup" });
+    sunburstChart.Levels.Add(new SunburstHierarchicalLevel() { GroupMemberPath = "JobRole" });
+
+    this.Content = sunburstChart;
                        
 
 {% endhighlight %}

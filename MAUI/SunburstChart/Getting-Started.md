@@ -114,39 +114,39 @@ Next, create a view model class and initialize a list of `SunburstModel` objects
 
     public class SunburstViewModel
     {
-            public ObservableCollection<SunburstModel> DataSource { get; set; }
+        public ObservableCollection<SunburstModel> DataSource { get; set; }
 
-            public SunburstViewModel()
+        public SunburstViewModel()
+        {
+            this.DataSource = new ObservableCollection<SunburstModel>
             {
-                this.DataSource = new ObservableCollection<SunburstModel>
-                {
-                    new SunburstModel ( "USA", "Sales", "Executive",  50 ),
-                    new SunburstModel ( "USA", "Sales", "Analyst",  40 ),
-                    new SunburstModel ( "USA", "Marketing",  40 ),
-                    new SunburstModel ( "USA", "Technical", "Testers",  35 ),
-                    new SunburstModel ( "USA", "Technical", "Developers",  175 ),
-                    new SunburstModel ( "USA", "Technical", "Developers",  70 ),
-                    new SunburstModel ( "USA", "Management",  40 ),
-                    new SunburstModel ( "USA", "Accounts",  60 ),
-                    new SunburstModel ( "India", "Technical", "Testers",  33 ),
-                    new SunburstModel ( "India", "Technical", "Developers",  125 ),
-                    new SunburstModel ( "India", "Technical", "Developers",  60 ),
-                    new SunburstModel ( "India", "HR Executives",  70 ),
-                    new SunburstModel ( "India", "Accounts",  45 ),
-                    new SunburstModel ( "Germany", "Sales", "Executive",  30 ),
-                    new SunburstModel ( "Germany", "Sales", "Analyst",  40 ),
-                    new SunburstModel ( "Germany", "Marketing",  50 ),
-                    new SunburstModel ( "Germany", "Technical", "Testers",  40 ),
-                    new SunburstModel ( "Germany", "Technical", "Developers",  60 ),
-                    new SunburstModel ( "Germany", "Technical", "Developers",  27 ),
-                    new SunburstModel ( "Germany", "Management",  40 ),
-                    new SunburstModel ( "Germany", "Accounts",  55 ),
-                    new SunburstModel ( "UK", "Technical", "Testers",  96 ),
-                    new SunburstModel ( "UK", "Technical", "Developers",  55 ),
-                    new SunburstModel ( "UK", "HR Executives",  60 ),
-                    new SunburstModel ( "UK", "Accounts",  45 )
-                };
-            }    
+                new SunburstModel ( "USA", "Sales", "Executive",  50 ),
+                new SunburstModel ( "USA", "Sales", "Analyst",  40 ),
+                new SunburstModel ( "USA", "Marketing",  40 ),
+                new SunburstModel ( "USA", "Technical", "Testers",  35 ),
+                new SunburstModel ( "USA", "Technical", "Developers",  175 ),
+                new SunburstModel ( "USA", "Technical", "Developers",  70 ),
+                new SunburstModel ( "USA", "Management",  40 ),
+                new SunburstModel ( "USA", "Accounts",  60 ),
+                new SunburstModel ( "India", "Technical", "Testers",  33 ),
+                new SunburstModel ( "India", "Technical", "Developers",  125 ),
+                new SunburstModel ( "India", "Technical", "Developers",  60 ),
+                new SunburstModel ( "India", "HR Executives",  70 ),
+                new SunburstModel ( "India", "Accounts",  45 ),
+                new SunburstModel ( "Germany", "Sales", "Executive",  30 ),
+                new SunburstModel ( "Germany", "Sales", "Analyst",  40 ),
+                new SunburstModel ( "Germany", "Marketing",  50 ),
+                new SunburstModel ( "Germany", "Technical", "Testers",  40 ),
+                new SunburstModel ( "Germany", "Technical", "Developers",  60 ),
+                new SunburstModel ( "Germany", "Technical", "Developers",  27 ),
+                new SunburstModel ( "Germany", "Management",  40 ),
+                new SunburstModel ( "Germany", "Accounts",  55 ),
+                new SunburstModel ( "UK", "Technical", "Testers",  96 ),
+                new SunburstModel ( "UK", "Technical", "Developers",  55 ),
+                new SunburstModel ( "UK", "HR Executives",  60 ),
+                new SunburstModel ( "UK", "Accounts",  45 )
+            };
+        }    
     }
 
 {% endhighlight %} 
@@ -161,16 +161,16 @@ N> Add the namespace of the `SunburstViewModel` class to your XAML Page, if you 
 
 {% highlight xaml %} 
 
-    <ContentPage
-        . . .
-        xmlns:sunburst="clr-namespace:Syncfusion.Maui.SunburstChart;assembly=Syncfusion.Maui.SunburstChart"
-        xmlns:model="clr-namespace:SunburstGettingStarted">
+	<ContentPage
+	    . . .
+	    xmlns:sunburst="clr-namespace:Syncfusion.Maui.SunburstChart;assembly=Syncfusion.Maui.SunburstChart"
+	    xmlns:model="clr-namespace:SunburstGettingStarted">
 
-    <ContentPage.BindingContext>
-        <model:SunburstViewModel></model:SunburstViewModel>
-    </ContentPage.BindingContext>
-    
-    </ContentPage>
+	    <ContentPage.BindingContext>
+	        <model:SunburstViewModel></model:SunburstViewModel>
+	    </ContentPage.BindingContext>
+
+	</ContentPage>
 
 {% endhighlight %}
 
@@ -197,8 +197,8 @@ N> Add the namespace of the `SunburstViewModel` class to your XAML Page, if you 
             xmlns:model="clr-namespace:SunburstGettingStarted>
 
     <sunburst:SfSunburstChart x:Name="sunburst" 
-              ItemsSource="{Binding DataSource}" 
-              ValueMemberPath="EmployeesCount">
+            ItemsSource="{Binding DataSource}" 
+            ValueMemberPath="EmployeesCount">
 
         <sunburst:SfSunburstChart.Levels>
             <sunburst:SunburstHierarchicalLevel GroupMemberPath="Country"/>
@@ -338,36 +338,36 @@ The following code example gives you the complete code of above configurations.
 
 {% highlight xaml %}
 
-    <ContentPage
-                . . .
-        xmlns:sunburst="clr-namespace:Syncfusion.Maui.SunburstChart;assembly=Syncfusion.Maui.SunburstChart"
-        xmlns:model="clr-namespace:SunburstGettingStarted>
+<ContentPage
+    . . .
+    xmlns:sunburst="clr-namespace:Syncfusion.Maui.SunburstChart;assembly=Syncfusion.Maui.SunburstChart"
+    xmlns:model="clr-namespace:SunburstGettingStarted>
 
-        <sunburst:SfSunburstChart 
-                  ItemsSource="{Binding DataSource}" 
-                  ShowLabels="True"  EnableTooltip="True"
-                  ValueMemberPath="EmployeesCount">
+    <sunburst:SfSunburstChart 
+                ItemsSource="{Binding DataSource}" 
+                ShowLabels="True"  EnableTooltip="True"
+                ValueMemberPath="EmployeesCount">
 
-            <sunburst:SfSunburstChart.BindingContext>
-                <model:SunburstViewModel/>
-            </sunburst:SfSunburstChart.BindingContext>
+        <sunburst:SfSunburstChart.BindingContext>
+            <model:SunburstViewModel/>
+        </sunburst:SfSunburstChart.BindingContext>
 
-            <sunburst:SfSunburstChart.Title>
-                <Label Text="Employees Count"/>
-            </sunburst:SfSunburstChart.Title>
+        <sunburst:SfSunburstChart.Title>
+            <Label Text="Employees Count"/>
+        </sunburst:SfSunburstChart.Title>
 
-            <sunburst:SfSunburstChart.Legend>
-                <sunburst:SunburstLegend/>
-            </sunburst:SfSunburstChart.Legend>                  
+        <sunburst:SfSunburstChart.Legend>
+            <sunburst:SunburstLegend/>
+        </sunburst:SfSunburstChart.Legend> 
 
-            <sunburst:SfSunburstChart.Levels>
-                <sunburst:SunburstHierarchicalLevel GroupMemberPath="Country"/>
-                <sunburst:SunburstHierarchicalLevel GroupMemberPath="JobDescription"/>
-                <sunburst:SunburstHierarchicalLevel GroupMemberPath="JobGroup"/>
-            </sunburst:SfSunburstChart.Levels>
+        <sunburst:SfSunburstChart.Levels>
+            <sunburst:SunburstHierarchicalLevel GroupMemberPath="Country"/>
+            <sunburst:SunburstHierarchicalLevel GroupMemberPath="JobDescription"/>
+            <sunburst:SunburstHierarchicalLevel GroupMemberPath="JobGroup"/>
+        </sunburst:SfSunburstChart.Levels>
+    </sunburst:SfSunburstChart>
 
-        </sunburst:SfSunburstChart>
-    </ContentPage>
+</ContentPage>
  
 {% endhighlight %}
 

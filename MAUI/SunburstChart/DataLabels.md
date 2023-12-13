@@ -46,7 +46,7 @@ The following code shows how to hide the data labels.
 {% highlight xaml %}
 
     <sunburst:SfSunburstChart ShowLabels="True">
-    . . .
+        . . .
         <sunburst:SfSunburstChart.DataLabelSettings>
             <sunburst:SunburstDataLabelSettings OverFlowMode="Hide"/>
         </sunburst:SfSunburstChart.DataLabelSettings>
@@ -119,7 +119,7 @@ The following code shows normal mode of data labels.
 {% highlight xaml %}
 
     <sunburst:SfSunburstChart ShowDataLabels="True">
-    . . .
+        . . .
         <sunburst:SfSunburstChart.DataLabelSettings>
             <sunburst:SunburstDataLabelSettings     
                 TextColor="Red"   

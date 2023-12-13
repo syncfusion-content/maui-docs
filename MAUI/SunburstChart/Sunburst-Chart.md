@@ -23,7 +23,7 @@ The start angle and end angle of the sunburst chart can be adjusted by using the
                               StartAngle="180" 
                               EndAngle="360"
                               ValueMemberPath="EmployeesCount">
-    . . .
+        . . .
     </sunburst:SfSunburstChart>
  
 {% endhighlight %}
@@ -53,7 +53,7 @@ The sunburst chart allows you to customize the radius by using the [Radius]() pr
     <sunburst:SfSunburstChart ItemsSource="{Binding DataSource}" 
                               Radius="0.7"
                               ValueMemberPath="EmployeesCount">
-    . . .
+        . . .
     </chart:SfSunburstChart>
  
 {% endhighlight %}
@@ -82,7 +82,7 @@ The sunburst chart allows you to customize the inner radius using the [InnerRadi
     <sunburst:SfSunburstChart ItemsSource="{Binding DataSource}" 
                               InnerRadius="0.4"
                               ValueMemberPath="EmployeesCount">
-    . . .
+        . . .
     </sunburst:SfSunburstChart>
  
 {% endhighlight %}
@@ -112,7 +112,7 @@ Stroke color and stroke width of the sunburst chart can be customized using [Str
                               Stroke="Black" 
                               StrokeWidth="2"
                               ValueMemberPath="EmployeesCount">
-    . . .
+        . . .
     </chart:SfSunburstChart>
  
 {% endhighlight %}
