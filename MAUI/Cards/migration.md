@@ -3,7 +3,7 @@ layout: post
 title: Migrate from Syncfusion Xamarin SfCards to .NET MAUI SfCards
 description: Learn here about Migrating from Syncfusion Xamarin Card to Syncfusion .NET MAUI Card control.
 platform: maui
-control: SfCalendar
+control: SfCards
 documentation: ug
 ---  
 
@@ -183,17 +183,17 @@ this.Content = cardView;
 </tr>
 <tr>
 <td>Nil</td>
-<td>{{'[StrokeSize]()'| markdownify }}</td>
+<td>{{'[BorderWidth]()'| markdownify }}</td>
 <td>Gets or sets the stroke size in SfCardView</td>
 </tr>
 <tr>
 <td>Nil</td>
-<td>{{'[Stroke]()'| markdownify }}</td>
+<td>{{'[BorderColor]()'| markdownify }}</td>
 <td>Gets or sets the stroke in SfCardView.</td>
 </tr>
 <tr>
 <td>{{'[HasShadow](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Cards.SfCardView.html#Syncfusion_XForms_Cards_SfCardView_HasShadow)'| markdownify }}</td>
-<td>{{'[HasShadow]()'| markdownify }}</td>
+<td>Nil</td>
 <td>Gets or sets the has shdow value in SfCardView.</td>
 </tr>
 <tr>
@@ -203,7 +203,7 @@ this.Content = cardView;
 </tr>
 <tr>
 <td>{{'[ShadowColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Cards.SfCardView.html#Syncfusion_XForms_Cards_SfCardView_ShadowColor)'| markdownify }}</td>
-<td>{{'[ShadowColor]()'| markdownify }}</td>
+<td>Nil</td>
 <td>Gets or sets the shdow color value in SfCardView.</td>
 </tr>
 <tr>
