@@ -9,7 +9,7 @@ documentation: ug
 
 # Customizations in .NET MAUI Date Time Picker (SfDateTimePicker)
 
-The [.NET MAUI Date Time Picker] header, column header, footer, and selection views can be customized.
+The [.NET MAUI Date Time Picker](https://www.syncfusion.com/maui-controls/maui-datetimepicker) header, column header, footer, and selection views can be customized.
 
 ## Header Customization
 
@@ -390,4 +390,4 @@ this.Content = picker;
 {% endhighlight %}
 {% endtabs %}
 
-   ![Date Time picker coloumn divider color in .NET MAUI Date Time picker.](images/customizations/maui-date-time-picker-column-divider-color.png)
+   ![Date Time picker coloumn divider color in .NET MAUI Date Time picker.](images/customizations/maui-time-picker-column-divider-color.png)

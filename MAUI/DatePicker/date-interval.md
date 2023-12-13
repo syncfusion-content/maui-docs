@@ -9,7 +9,7 @@ documentation: ug
 
 # Date Interval in .NET MAUI Date Picker(SfDatePicker)
 
-The `SfDatePicker` provides three intervals in [.NET MAUI Date Picker].
+The `SfDatePicker` provides three intervals in [.NET MAUI Date Picker](https://www.syncfusion.com/maui-controls/maui-datepicker).
 
  * [`DayInterval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html#Syncfusion_Maui_Picker_SfDatePicker_DayInterval)
  * [`MonthInterval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html#Syncfusion_Maui_Picker_SfDatePicker_MonthInterval)

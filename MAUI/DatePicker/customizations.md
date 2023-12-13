@@ -9,7 +9,7 @@ documentation: ug
 
 # Customizations in .NET MAUI Date Picker (SfDatePicker)
 
-The [.NET MAUI Date Picker] header, column header, footer, and selection views can be customized.
+The [.NET MAUI Date Picker](https://www.syncfusion.com/maui-controls/maui-datepicker) header, column header, footer, and selection views can be customized.
 
 ## Header Customization
 

@@ -15,6 +15,10 @@ This section explains the steps required to work with the [`.NET MAUI Button`](h
 
 This section explains the steps required to work with the [`SfButton`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfButton.html) control for .NET MAUI.
 
+To get start quickly with our .NET MAUI Button, you can check the below video.
+
+{% youtube "https://www.youtube.com/watch?v=KTGkYShi1YE" %}
+
 ## Adding a .NET MAUI Button reference
 
 The Syncfusion .NET MAUI controls are available in [Nuget.org](https://www.nuget.org/). To add [`.NET MAUI Button`](https://www.syncfusion.com/maui-controls/maui-button) to your project, open the NuGet package manager in Visual Studio, search for [`Syncfusion.Maui.Buttons`](https://www.nuget.org/packages/Syncfusion.Maui.Buttons), and install it.

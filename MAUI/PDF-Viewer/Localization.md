@@ -172,4 +172,16 @@ The following table contains the default name and value details used in the SfPd
 <td>Underline</td>
 <td>Underline</td>
 </tr>
+<tr>
+<td>StickyNoteEditorPlaceholder</td>
+<td>Write Your Note...</td>
+</tr>
+<tr>
+<td>FreeTextEditorPlaceHolder</td>
+<td>Text...</td>
+</tr>
+<tr>
+<td>AddFreeTextToastMessage</td>
+<td>Tap on the page to add the free text annotation</td>
+</tr>
 </table>

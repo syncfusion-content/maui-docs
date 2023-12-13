@@ -9,7 +9,7 @@ documentation: ug
 
 # Time Interval in .NET MAUI Time Picker(SfTimePicker)
 
-The `SfTimePicker` provides three intervals in [.NET MAUI Time Picker].
+The `SfTimePicker` provides three intervals in [.NET MAUI Time Picker](https://www.syncfusion.com/maui-controls/maui-timepicker).
 
  * [`HourInterval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html#Syncfusion_Maui_Picker_SfTimePicker_HourInterval)
  * [`MinuteInterval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html#Syncfusion_Maui_Picker_SfTimePicker_MinuteInterval)

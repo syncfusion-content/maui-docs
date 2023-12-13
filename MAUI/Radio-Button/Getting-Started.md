@@ -11,6 +11,10 @@ documentation: ug
 
 This section explains the steps required to work with the [`SfRadioButton`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioButton.html) control for .NET MAUI.
 
+To get start quickly with our .NET MAUI Radio Button, you can check the below video.
+
+{% youtube "https://www.youtube.com/watch?v=z5EwGpw0KTI" %}
+
 ## Adding a .NET MAUI Radio Button reference
 
 Syncfusion .NET MAUI controls are available on [Nuget.org](https://www.nuget.org/). To add the [.NET MAUI Radio Button](https://www.syncfusion.com/maui-controls/maui-radio-button) to your project, open the NuGet Package Manager in Visual Studio, search for Syncfusion.Maui.Buttons, and install it.

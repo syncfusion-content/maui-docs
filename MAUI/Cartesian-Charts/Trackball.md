@@ -295,3 +295,15 @@ this.Content = chart;
 
 * `Show(x, y)` - The [Show](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartTrackballBehavior.html#Syncfusion_Maui_Charts_ChartTrackballBehavior_Show_System_Single_System_Single_) method is used to activate the trackball at the specified location.
 * `Hide()` - The [Hide](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartTrackballBehavior.html#Syncfusion_Maui_Charts_ChartTrackballBehavior_Hide) method hides the trackball that is visible in the chart.
+
+## Events
+
+### TrackballCreated
+
+The [`TrackballCreated`]() event occurs when the trackball moves from one data point to another. This argument contains an object of the ChartPointsInfo. The following properties are available in the `ChartPointInfo` class to customize the appearance of the trackball label based on a condition.
+
+* [Label]() of type `string`: Used to change the text of the trackball label.
+* [LabelStyle]() of type `ChartLabelStyle`: Used to customize the appearance of the trackball label.
+* [MarkerSettings]() of type `ChartMarkerSettings`: Used to customize the trackball markers.
+* [Series]() of type `CartesianSeries`: Used to get the series of the data point in which the trackball is activated.
+* [DataItem]() of type `object`: Used to get the data associated with the specific point where the trackball is activated.

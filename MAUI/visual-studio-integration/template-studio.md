@@ -55,7 +55,7 @@ N> Before use the Syncfusion .NET MAUI Project Template, check whether the Syncf
 
     By unchecking the features checkboxes, you can unselect the features from the selected controls.
 
-6. The Configuration section will load if you choose to click the **Next** button or the **Configuration tab**. You can select the required .NET Core Version (.NET 6.0 or .NET 7.0)
+6. The Configuration section will load if you choose to click the **Next** button or the **Configuration tab**. You can select the required .NET Core Version (.NET 7.0 or .NET 8.0)
 
      ![Choose required Project Configuration](images/ConfigurationsTab.png)
 

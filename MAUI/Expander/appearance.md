@@ -57,10 +57,12 @@ The [SfExpander](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Expander.Sf
 
 ## Visual State Manager
 
-The appearance of the [SfExpander](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Expander.SfExpander.html) can be customized using the following two `VisualStates`:
+The appearance of the [SfExpander](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Expander.SfExpander.html) can be customized using the following `VisualStates`:
 
 * Expanded
 * Collapsed
+* PointerOver
+* Normal
 
 {% tabs %}
 {% highlight xaml hl_lines="23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40" %}
@@ -99,6 +101,18 @@ The appearance of the [SfExpander](https://help.syncfusion.com/cr/maui/Syncfusio
                     <VisualState.Setters>
                             <Setter Property="HeaderBackground" Value="#141C1B1F"/>
                             <Setter Property="HeaderIconColor" Value="#49454F"/>
+                        </VisualState.Setters>
+                </VisualState>
+				<VisualState Name="PointerOver">
+                    <VisualState.Setters>
+                            <Setter Property="HeaderBackground" Value="#ded6d5"/>
+                            <Setter Property="HeaderIconColor" Value="#524f4f"/>
+                        </VisualState.Setters>
+                </VisualState>
+				<VisualState Name="Normal">
+                    <VisualState.Setters>
+                            <Setter Property="HeaderBackground" Value="#faf8f7"/>
+                            <Setter Property="HeaderIconColor" Value="#000000"/>
                         </VisualState.Setters>
                 </VisualState>
             </VisualStateGroup>
