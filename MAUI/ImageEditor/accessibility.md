@@ -17,7 +17,7 @@ The [Syncfusion .NET MAUI Image Editor](https://www.syncfusion.com/maui-controls
 
 N> [ToolbarItemSelected](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_ToolbarItemSelected) event triggers for toolbar item tapped.
 
-### Toolbar
+#### Toolbar
 
 <table>
 <tr>
