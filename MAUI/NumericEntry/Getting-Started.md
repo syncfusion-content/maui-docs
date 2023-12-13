@@ -268,6 +268,88 @@ private void sfNumericEntry_ValueChanged(object sender, NumericEntryValueChanged
 {% endhighlight %}
 {% endtabs %}
 
+## Value Change Mode
+
+The `ValueChangeMode` property determine when the values are updated.
+
+The supported value change modes are as follows:
+    * `OnLostFocus` - The value will be updated when the editor loses its focus or the focus moved to the next control. By default, the `ValueChangeMode` is `OnLostFocus`.
+    * `OnKeyFocus` - The value will be updated with each key press.
+
+{% tabs %}
+{% highlight xaml %}
+
+<VerticalStackLayout Spacing="10" VerticalOptions="Center">
+    <editors:SfNumericEntry x:Name="numericEntry"
+                            WidthRequest="200"
+                            HeightRequest="40" 
+                            VerticalOptions="Center"
+                            ValueChangeMode="OnKeyFocus"
+                            Value="50">
+    </editors:SfNumericEntry>
+    <HorizontalStackLayout Spacing="2" HeightRequest="40" WidthRequest="200">
+        <Label Text="Dollar:"  />
+        <Label x:Name="valueDisplay" 
+               TextColor="Green" 
+               Text="{Binding Path=Value, Source={x:Reference numericEntry}, StringFormat='${0:F2}'}" 
+               HeightRequest="40" />
+    </HorizontalStackLayout>
+</VerticalStackLayout>
+
+{% endhighlight %}
+{% highlight C# %}
+
+public partial class MainPage : ContentPage
+{
+    public Label valueDisplay;
+    public MainPage()
+    {
+        InitializeComponent();
+        var verticalStackLayout = new StackLayout
+        {
+            Spacing = 10,
+            VerticalOptions = LayoutOptions.Center
+        };
+        var numericEntry = new SfNumericEntry
+        {
+            WidthRequest = 200,
+            HeightRequest = 40,
+            VerticalOptions = LayoutOptions.Center,
+            ValueChangeMode = ValueChangeMode.OnKeyFocus,
+            Value = 50
+        };
+        var horizontalStackLayout = new StackLayout
+        {
+            Spacing = 2,
+            HeightRequest = 40,
+            WidthRequest = 200
+        };
+        var labelDollar = new Label
+        {
+            Text = "Dollar:"
+        };
+        valueDisplay = new Label
+        {
+            Text="$50",
+            TextColor = Colors.Green
+        };
+        numericEntry.ValueChanged += NumericEntry_ValueChanged;
+        horizontalStackLayout.Children.Add(labelDollar);
+        horizontalStackLayout.Children.Add(valueDisplay);
+        verticalStackLayout.Children.Add(numericEntry);
+        verticalStackLayout.Children.Add(horizontalStackLayout);
+        Content = verticalStackLayout;
+    }
+
+    private void NumericEntry_ValueChanged(object sender, NumericEntryValueChangedEventArgs e)
+    {
+        valueDisplay.Text="$"+e.NewValue.ToString();
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Stroke
 
 The NumericEntry border color can be changed by using the [Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_Stroke) property. The default `Stroke` color is **Black**.

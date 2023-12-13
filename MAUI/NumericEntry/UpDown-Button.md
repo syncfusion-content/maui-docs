@@ -69,7 +69,7 @@ sfNumericEntry.UpDownPlacementMode = NumericEntryUpDownPlacementMode.Inline;
 
 ![UpDown Placement in .NET MAUI NumericEntry](UpDownButton_images/UpDownButtonPlacement.gif)
 
-## UpDown button color
+## UpDown button color customization
 
 You can customize the `NumericEntry` control button color by using the `UpDownButtonColor` property.
 
@@ -95,27 +95,111 @@ sfNumericEntry.UpDownButtonColor = Colors.Aqua;
 {% endhighlight %}
 {% endtabs %}
 
-## UpDown button template
+## UpDown button template customization
 
 The `NumericEntry` control supports customization of the UpDownButton's appearance through the use of the `UpButtonTemplate` and `DownButtonTemplate` properties.
 {% tabs %}
 {% highlight XAML %}
 
-<editors:SfNumericEntry HorizontalOptions="Center"
-                        VerticalOptions="Center"
-                        Value="360"
-                        UpDownPlacementMode="Inline"
-                        UpDownButtonColor="Aqua"/>
+<VerticalStackLayout Spacing="10" VerticalOptions="Center">
+    <editors:SfNumericEntry x:Name="numericEntry"
+                            WidthRequest="200"
+                            HeightRequest="40" 
+                            VerticalOptions="Center"
+                            UpDownPlacementMode="Inline"
+                            Value="50">
+        <editors:SfNumericEntry.UpButtonTemplate>
+            <DataTemplate>
+                <Grid>
+                    <Label Padding="0,6.5,0,0" 
+                           Rotation="90"
+                           FontFamily="FontIcons"
+                           HorizontalOptions="Center"
+                           Text="&#xe74a;"
+                           TextColor="Green"
+                           FontSize="20"/>
+                </Grid>
+            </DataTemplate>
+        </editors:SfNumericEntry.UpButtonTemplate>
+        <editors:SfNumericEntry.DownButtonTemplate>
+            <DataTemplate>
+                <Grid>
+                    <Label Padding="0,5,0,0" 
+                           Rotation="270"
+                           FontFamily="FontIcons"
+                           HorizontalOptions="Center"
+                           Text="&#xe74a;"
+                           TextColor="Red"
+                           FontSize="20"/>
+                </Grid>
+            </DataTemplate>
+        </editors:SfNumericEntry.DownButtonTemplate>
+    </editors:SfNumericEntry>
+</VerticalStackLayout>
                      
 {% endhighlight %}
 {% highlight c# %}
 
-SfNumericEntry sfNumericEntry = new SfNumericEntry();
-sfNumericEntry.HorizontalOptions = LayoutOptions.Center;
-sfNumericEntry.VerticalOptions = LayoutOptions.Center;
-sfNumericEntry.Value = 360;
-sfNumericEntry.UpDownPlacementMode = NumericEntryUpDownPlacementMode.Inline;
-sfNumericEntry.UpDownButtonColor = Colors.Aqua;
+ public partial class MainPage : ContentPage
+ {
+     public MainPage()
+     {
+         InitializeComponent();
+         var verticalStackLayout = new StackLayout
+         {
+             Spacing = 10,
+             VerticalOptions = LayoutOptions.Center
+         };
+         var numericEntry = new SfNumericEntry
+         {
+             WidthRequest = 200,
+             HeightRequest = 40,
+             VerticalOptions = LayoutOptions.Center,
+             UpDownPlacementMode = NumericEntryUpDownPlacementMode.Inline,
+             Value = 50
+         };
+         var upButtonTemplate = new DataTemplate(() =>
+         {
+             var grid = new Grid();
+             var label = new Label
+             {
+                 Padding = new Thickness(0, 6.5, 0, 0),
+                 Rotation = 90,
+                 FontFamily = "FontIcons",
+                 HorizontalOptions = LayoutOptions.Center,
+                 Text = "\ue74a", // Use Unicode directly for the icon
+                 TextColor = Colors.Green,
+                 FontSize = 20
+             };
+             grid.Children.Add(label);
+             return grid;
+         });
+         var downButtonTemplate = new DataTemplate(() =>
+         {
+             var grid = new Grid();
+             var label = new Label
+             {
+                 Padding = new Thickness(0, 5, 0, 0),
+                 Rotation = 270,
+                 FontFamily = "FontIcons",
+                 HorizontalOptions = LayoutOptions.Center,
+                 Text = "\ue74a",
+                 TextColor = Colors.Red,
+                 FontSize = 20
+             };
+
+             // Add the Label to the Grid
+             grid.Children.Add(label);
+
+             // Return the Grid as the root of the DataTemplate
+             return grid;
+         });
+         numericEntry.UpButtonTemplate = upButtonTemplate;
+         numericEntry.DownButtonTemplate = downButtonTemplate;
+         verticalStackLayout.Children.Add(numericEntry);
+         Content = verticalStackLayout;
+     }
+ }
 
 {% endhighlight %}
 {% endtabs %}
@@ -148,11 +232,3 @@ sfNumericEntry.Maximum=10;
 
 ![AutoReverse support in .NET MAUI NumericEntry](UpDownButton_images/AutoReverseSupport.gif)
 
-## Value Change Mode
-
-The `ValueChangeMode` property determine when the values are updated.
-
-The supported value change modes are as follows:
-    
-    * OnLostFocus - The value will be updated when the editor loses its focus. By default, the `ValueChangeMode` is `OnKeyFocus`.
-    * OnKeyFocus - The value will be updated when the editor is in focus.
