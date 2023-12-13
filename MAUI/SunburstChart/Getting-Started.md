@@ -192,9 +192,9 @@ N> Add the namespace of the `SunburstViewModel` class to your XAML Page, if you 
 {% highlight xaml %}
         
     <ContentPage
-            . . .
-            xmlns:sunburst="clr-namespace:Syncfusion.Maui.SunburstChart;assembly=Syncfusion.Maui.SunburstChart"
-            xmlns:model="clr-namespace:SunburstGettingStarted>
+        . . .
+        xmlns:sunburst="clr-namespace:Syncfusion.Maui.SunburstChart;assembly=Syncfusion.Maui.SunburstChart"
+        xmlns:model="clr-namespace:SunburstGettingStarted>
 
         <sunburst:SfSunburstChart x:Name="sunburst" 
             ItemsSource="{Binding DataSource}" 
