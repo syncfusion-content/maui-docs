@@ -50,8 +50,8 @@ this.Content = chart;
 
 The [DisplayMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartTrackballBehavior.html#Syncfusion_Maui_Charts_ChartTrackballBehavior_DisplayMode) property specifies whether a label should be displayed for all data points along the trackball line or only the nearest data point label. The following choices are available for this property.
 
-* `FloatAllPoints` – Displays labels for all the data points along the vertical line.
-* `NearestPoint` – Displays label for a single data point nearer to the touch point on the chart area.
+* [FloatAllPoints](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.LabelDisplayMode.html#Syncfusion_Maui_Charts_LabelDisplayMode_FloatAllPoints) – Displays labels for all the data points along the vertical line.
+* [NearestPoint](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.LabelDisplayMode.html#Syncfusion_Maui_Charts_LabelDisplayMode_NearestPoint) – Displays label for a single data point nearer to the touch point on the chart area.
 
 {% tabs %}
 
@@ -87,16 +87,16 @@ The [DisplayMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Cha
 
 The [LabelStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartTrackballBehavior.html#Syncfusion_Maui_Charts_ChartTrackballBehavior_LabelStyle) property provides to customize the trackball labels. These options are:
 
-* `Background`, of type `Brush`, used to change the label background color.
-* `Margin`, of type `Thickness`, used to change the margin of the label.
-* `TextColor`, of type `Color`, used to change the text color.
-* `StrokeWidth`, of type `double`, used to change the stroke thickness of the label.
-* `Stroke`, of type `Brush`, used to customize the border of the label.
-* `LabelFormat`, of type `string`, used to change the format of the label.
-* `FontFamily`, of type `string`, used to change the font family for the trackball label.
-* `FontAttributes`, of type `FontAttributes`, used to change the font style for the trackball label.
-* `FontSize`, of type `double`, used to change the font size for the trackball label.
-* `CornerRadius`, of type `CornerRadius`, used to set the rounded corners for labels.
+* [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLabelStyle.html#Syncfusion_Maui_Charts_ChartLabelStyle_Background), of type `Brush`, used to change the label background color.
+* [Margin](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLabelStyle.html#Syncfusion_Maui_Charts_ChartLabelStyle_Margin), of type `Thickness`, used to change the margin of the label.
+* [TextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLabelStyle.html#Syncfusion_Maui_Charts_ChartLabelStyle_TextColor), of type `Color`, used to change the text color.
+* [StrokeWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLabelStyle.html#Syncfusion_Maui_Charts_ChartLabelStyle_StrokeWidth), of type `double`, used to change the stroke thickness of the label.
+* [Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLabelStyle.html#Syncfusion_Maui_Charts_ChartLabelStyle_Stroke), of type `Brush`, used to customize the border of the label.
+* [LabelFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLabelStyle.html#Syncfusion_Maui_Charts_ChartLabelStyle_LabelFormat), of type `string`, used to change the format of the label.
+* [FontFamily](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLabelStyle.html#Syncfusion_Maui_Charts_ChartLabelStyle_FontFamily), of type `string`, used to change the font family for the trackball label.
+* [FontAttributes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLabelStyle.html#Syncfusion_Maui_Charts_ChartLabelStyle_FontAttributes), of type `FontAttributes`, used to change the font style for the trackball label.
+* [FontSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLabelStyle.html#Syncfusion_Maui_Charts_ChartLabelStyle_FontSize), of type `double`, used to change the font size for the trackball label.
+* [CornerRadius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLabelStyle.html#Syncfusion_Maui_Charts_ChartLabelStyle_CornerRadius), of type `CornerRadius`, used to set the rounded corners for labels.
 
 
 {% tabs %}
@@ -138,9 +138,9 @@ this.Content = chart;
 
  The [LineStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartTrackballBehavior.html#Syncfusion_Maui_Charts_ChartTrackballBehavior_LineStyle) property provides to customize the trackball line. These options are:
 
-* `StrokeWidth`, of type `double`, used to change the stroke width of the line.
-* `Stroke`, of type `Brush`, used to change the stroke color of the line.
-* `StrokeDashArray`, of type `DoubleCollection`, specifies the dashes to be applied on the line.
+* [StrokeWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLineStyle.html#Syncfusion_Maui_Charts_ChartLineStyle_StrokeWidth), of type `double`, used to change the stroke width of the line.
+* [Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLineStyle.html#Syncfusion_Maui_Charts_ChartLineStyle_Stroke), of type `Brush`, used to change the stroke color of the line.
+* [StrokeDashArray](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLineStyle.html#Syncfusion_Maui_Charts_ChartLineStyle_StrokeDashArray), of type `DoubleCollection`, specifies the dashes to be applied on the line.
 
 {% tabs %}
 
@@ -175,12 +175,12 @@ this.Content = chart;
 
 The [MarkerSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartTrackballBehavior.html#Syncfusion_Maui_Charts_ChartTrackballBehavior_MarkerSettings) property provides to customize the trackball markers. The trackball marker can be customised using the following properties.
 
-* `Type`, of type `ShapeType`, used to set the marker shape type.
-* `Stroke`, of type `Brush`, used to change the marker border color.
-* `Fill`, of type `Brush`, used to change the marker background color.
-* `StrokeWidth`, of type `double`, used to change the width of the marker border.
-* `Width`, of type `double`, used to change the width of the marker.
-* `Height`, of type `double`, used to change the height of the marker.
+* [Type](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartMarkerSettings.html#Syncfusion_Maui_Charts_ChartMarkerSettings_Type), of type `ShapeType`, used to set the marker shape type.
+* [Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartMarkerSettings.html#Syncfusion_Maui_Charts_ChartMarkerSettings_Stroke), of type `Brush`, used to change the marker border color.
+* [Fill](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartMarkerSettings.html#Syncfusion_Maui_Charts_ChartMarkerSettings_Fill), of type `Brush`, used to change the marker background color.
+* [StrokeWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartMarkerSettings.html#Syncfusion_Maui_Charts_ChartMarkerSettings_StrokeWidth), of type `double`, used to change the width of the marker border.
+* [Width](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartMarkerSettings.html#Syncfusion_Maui_Charts_ChartMarkerSettings_Width), of type `double`, used to change the width of the marker.
+* [Height](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartMarkerSettings.html#Syncfusion_Maui_Charts_ChartMarkerSettings_Height), of type `double`, used to change the height of the marker.
 
 {% tabs %}
 

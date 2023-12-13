@@ -115,10 +115,10 @@ The following properties are used to customize the [ChartSelectionBehavior](http
 
 * [Type](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSelectionBehavior.html#Syncfusion_Maui_Charts_ChartSelectionBehavior_Type) - Gets or sets the [ChartSelectionType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSelectionType.html) for the selection behavior.     
 Chart selection types:
-    * `Single` - The user can select only one item at a time
-    * `SingleDeselect` - The user can select and deselect only one item at a time.
-    * `Multiple` - The user can select and deselect multiple items at a time.
-    * `None` - The user can't select any item.
+    * [Single](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSelectionType.html#Syncfusion_Maui_Charts_ChartSelectionType_Single) - The user can select only one item at a time
+    * [SingleDeselect](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSelectionType.html#Syncfusion_Maui_Charts_ChartSelectionType_SingleDeselect) - The user can select and deselect only one item at a time.
+    * [Multiple](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSelectionType.html#Syncfusion_Maui_Charts_ChartSelectionType_Multiple) - The user can select and deselect multiple items at a time.
+    * [None](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSelectionType.html#Syncfusion_Maui_Charts_ChartSelectionType_None) - The user can't select any item.
 * [SelectionBrush](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSelectionBehavior.html#Syncfusion_Maui_Charts_ChartSelectionBehavior_SelectionBrush) - Gets or sets the brush color for the selection.
 * [SelectedIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSelectionBehavior.html#Syncfusion_Maui_Charts_ChartSelectionBehavior_SelectedIndex) - Gets or sets the value of the index to be selected.
 * [SelectedIndexes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSelectionBehavior.html#Syncfusion_Maui_Charts_ChartSelectionBehavior_SelectedIndexes) - Gets or sets the list of indexes to be selected.
