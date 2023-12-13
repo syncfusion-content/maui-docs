@@ -15,12 +15,47 @@ The [SfAvatarView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAv
 
 ## Aspect
 
-The `Aspect` property in `AvatarView` controls how the picture is adjusted to fit the display. By default, its set to `AspectFill`
+The `Aspect` property in [SfAvatarView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html?tabs=tabid-1) controls how the picture is adjusted to fit the display. By default, its set to `AspectFill`
 
 * AspectFit: Ensures the entire picture fits, adding space if needed.
 * AspectFill: Clips the image to fill the display while keeping its shape.
 * Fill: Stretches the image to fill the entire display, but it may look distorted.
 * Center: Places the image in the center, maintaining its original shape.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<Grid>
+   <sfavatar:SfAvatarView  ContentType="Default"  
+                           AvatarShape="Circle"
+                           AvatarSize="Large"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"
+                           ImageSource="ellanaa.png"
+                           Aspect="AspectFit">
+   </sfavatar:SfAvatarView>
+</Grid>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+Grid mainGrid = new Grid();
+SfAvatarView avatarview = new SfAvatarView();
+avatarview.ContentType = ContentType.Default;
+avatarview.AvatarShape = AvatarShape.Circle;
+avatarview.AvatarSize = AvatarSize.Large;
+avatarview.VerticalOptions = LayoutOptions.Center;
+avatarview.HorizontalOptions = LayoutOptions.Center;
+avatarview.ImageSource = "ellanaa.png";
+avatarview.Aspect = Aspect.AspectFit;
+mainGrid.Children.Add(avatarview);
+this.Content = mainGrid;
+
+{% endhighlight %}
+
+{% endtabs %}
 
 ## Colors
 
