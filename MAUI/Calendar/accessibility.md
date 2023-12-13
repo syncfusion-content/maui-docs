@@ -290,7 +290,6 @@ Ctrl + DownArrow
 View mode changes in the order of Month, Century, Decade, and Year.
 </td>
 </tr>
-</table>
 <tr>
 <td>
 Ctrl + LeftArrow
@@ -307,3 +306,4 @@ Ctrl + RightArrow
 Navigate to the next view.
 </td>
 </tr>
+</table>

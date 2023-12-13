@@ -88,7 +88,7 @@ SfCardLayout cardLayout = new SfCardLayout()
 
 ![SwipeDirection in MAUI SfCardLayout](images/maui-card-swipedirection.png)
 
-## Customization in CardView
+### Customization in CardView
 
 Customization of the border color, thickness, and card corner radius can be achieved by the following properties.
 
@@ -160,7 +160,7 @@ Customization of the border color, thickness, and card corner radius can be achi
 
 ![Card customization in MAUI SfCardLayout](images/maui-card-customization.png)
 
-### Indicator customization
+## Indicator customization
 
 Indicators are used to signify or communicate the state or level of something.
 
@@ -198,7 +198,7 @@ SfCardView cardView = new SfCardView()
 
 ![Indicator in MAUI SfCardLayout](images/maui-card-indicatorcolor.png)
 
-### FadeOutOnSwiping
+## FadeOutOnSwiping
 
 The `FadeOutOnSwiping` option can be enabled when the card view is intended to fade in response to swiping.
 

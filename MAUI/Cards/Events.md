@@ -11,7 +11,7 @@ documentation: ug
 
 ## Tapped
 
-The [`CardTapped`]() event is triggered when any card view is tapped. The associated argument contains the following information.
+The [`Tapped`]() event is triggered when any card view is tapped. The associated argument contains the following information.
 
 * [`CardView`]() - Gets the details of a particular card view.
 
@@ -19,9 +19,9 @@ The [`CardTapped`]() event is triggered when any card view is tapped. The associ
 
 The [`VisibleIndexChanging`]()  event is triggered when the visible card index is changing. The associated argument contains the following information.
 
-* [`OldCard`]() - Gets the details of the previous index card.
+* [`OldIndex]() - Gets the details of the previous index card.
 
-* [`NewCard`]() - Gets the details of the next possible index card.
+* [`NewIndex`]() - Gets the details of the next possible index card.
 
 * [`Cancel`]() - Gets or sets a value indicating whether the event should be canceled.
 
@@ -70,9 +70,9 @@ private void VisibleIndexChanging(System.Object sender, Syncfusion.Maui.Cards.Ca
 
 The [`VisibleIndexChanged`]() event is triggered when the visible card index is changed. The associated argument contains the following information.
 
-* [`OldCard`]() - Gets the details of the previous card.
+* [`OldIndex`]() - Gets the details of the previous card.
 
-* [`NewCard`]() - Gets the details of the current card.
+* [`NewIndex`]() - Gets the details of the current card.
 
 {% tabs %}
 {% highlight xaml %}

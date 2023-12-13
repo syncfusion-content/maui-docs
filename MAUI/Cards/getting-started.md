@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with MAUI Card Control | Syncfusion
-description:  Learn here about getting started with Syncfusion .NET MAUI Card (SfCalendar) control and its basic features.
+description:  Learn here about getting started with Syncfusion .NET MAUI Cards (SfCards) control and its basic features.
 platform: maui
 control: SfCard
 documentation: ug
@@ -15,11 +15,11 @@ This section details the process of integrating the Card control and focuses sol
 
 1. Create a new .NET MAUI application in Visual Studio.
 
-2. Syncfusion .NET MAUI components are available on [nuget.org](https://www.nuget.org/). To add `SfCard` to your project, open the NuGet package manager in Visual Studio, search for [Syncfusion.Maui.Card](), and then install.
+2. Syncfusion .NET MAUI components are available on [nuget.org](https://www.nuget.org/). To add `SfCards` to your project, open the NuGet package manager in Visual Studio, search for [Syncfusion.Maui.Card](), and then install.
 
-3. To initialize the control, import the control namespace `Syncfusion.Maui.Card` in XAML or C# code.
+3. To initialize the control, import the control namespace `Syncfusion.Maui.Cards` in XAML or C# code.
 
-4. Initialize `SfCard.`
+4. Initialize `SfCards.`
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="1 5 6 7" %}
@@ -128,7 +128,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}	
 
-![MAUI SfCardView image](images/maui-card-initial.png)
+![MAUI SfCardView image](images/maui-card-swiptodismiss.gif)
 
 ## Dismiss the card programmatically
 
@@ -212,4 +212,4 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}	
 
-![MAUI SfCardView image](images/maui-card-initial.png)
+![MAUI SfCardView image](images/maui-card-cardlayout.gif)
