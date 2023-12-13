@@ -33,4 +33,36 @@ To migrate easier from Xamarin SfNavigationDrawer to .NET MAUI SfNavigationDrawe
 <td>{{'[DefaultDrawerSettings](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfNavigationDrawer.XForms.SfNavigationDrawer.html#Syncfusion_SfNavigationDrawer_XForms_SfNavigationDrawer_DefaultDrawerSettings)'| markdownify }}</td>
 <td>{{'[DrawerSettings]()'| markdownify }}</td>
 <td>Gets or sets the DrawerSettings, which is a container for various customization options, allowing the appearance of the navigation drawer to be customized.</td></tr>
-</table> 
+</table>
+
+N> In the Xamarin Forms SfNavigationDrawer, the obsolete properties are removed in the .NET MAUI. We can exclusively set using the `DrawerSettings` properties.
+
+## Events
+
+<table>
+<tr>
+<th>Xamarin SfNavigationDrawer</th>
+<th>.NET MAUI SfNavigationDrawer</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>{{'[Closed](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfNavigationDrawer.XForms.SfNavigationDrawer.html#Syncfusion_SfNavigationDrawer_XForms_SfNavigationDrawer_Closed)'| markdownify }}</td>
+<td>{{'[DrawerClosed]()'| markdownify }}</td>
+<td>Occurs whenever the drawer is closed.</td>
+</tr>
+<tr>
+<td>{{'[Closing](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfNavigationDrawer.XForms.SfNavigationDrawer.html#Syncfusion_SfNavigationDrawer_XForms_SfNavigationDrawer_Closing)'| markdownify }}</td>
+<td>{{'[DrawerClosing]()'| markdownify }}</td>
+<td>Occurs before whenever the drawer is closing.</td>
+</tr>
+<tr>
+<td>{{'[Opening](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfNavigationDrawer.XForms.SfNavigationDrawer.html#Syncfusion_SfNavigationDrawer_XForms_SfNavigationDrawer_Opening)'| markdownify }}</td>
+<td>{{'[DrawerOpening]()'| markdownify }}</td>
+<td>Occurs before whenever the drawer is opening.</td>
+</tr>
+<tr>
+<td>{{'[Toggled](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfNavigationDrawer.XForms.SfNavigationDrawer.html#Syncfusion_SfNavigationDrawer_XForms_SfNavigationDrawer_Toggled)'| markdownify }}</td>
+<td>{{'[DrawerToggled]()'| markdownify }}</td>
+<td>Occurs whenever the drawer is opened or closed.</td>
+</tr>
+</table>

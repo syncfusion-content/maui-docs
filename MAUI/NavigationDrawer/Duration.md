@@ -18,7 +18,7 @@ The `Duration` property of the `SfNavigationDrawer` indicates the timeline for c
 
 <navigationdrawer:SfNavigationDrawer x:Name="navigationDrawer">
     <navigationdrawer:SfNavigationDrawer.DrawerSettings>
-        <navigationdrawer:DrawerSettings  Duration="1"/>
+        <navigationdrawer:DrawerSettings  Duration="200"/>
     </navigationdrawer:SfNavigationDrawer.DrawerSettings>
 </navigationdrawer:SfNavigationDrawer>
 
@@ -29,13 +29,15 @@ The `Duration` property of the `SfNavigationDrawer` indicates the timeline for c
 SfNavigationDrawer navigationDrawer = new SfNavigationDrawer();
 navigationDrawer.DrawerSettings = new DrawerSettings()
 {
-    Duration = 1,
+    Duration = 200,
 };
 this.Content = navigationDrawer;
 
 {% endhighlight %}
 
 {% endtabs %}
+
+N> The `Duration` property for the `SfNavigationDrawer` is measured in milliseconds.
 
 The following screenshot illustrates the result of the above code.
 

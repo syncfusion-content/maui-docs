@@ -32,7 +32,7 @@ As the name suggests, it is displayed at the top of the drawer. The `DrawerHeade
     <navigationdrawer:SfNavigationDrawer.DrawerSettings>
         <navigationdrawer:DrawerSettings>
             <navigationdrawer:DrawerSettings.DrawerHeaderView>
-                <Grid BackgroundColor="#1aa1d6">
+                <Grid BackgroundColor="#6750A4">
                     <VerticalStackLayout VerticalOptions="Center"
                                          HorizontalOptions="Center">
                         <Label Text="Header View"/>
@@ -66,7 +66,7 @@ this.Content = navigationDrawer;
 
 The height of the drawer header content can be adjusted using the `DrawerHeaderHeight` property.
 
-N> The `DrawerHeaderView` can be disabled by setting the `DrawerHeaderHeight` to zero.
+N> The `DrawerHeaderView` can be removed by setting the `DrawerHeaderHeight` to zero.
 
 {% tabs %}
 
@@ -76,7 +76,7 @@ N> The `DrawerHeaderView` can be disabled by setting the `DrawerHeaderHeight` to
     <navigationdrawer:SfNavigationDrawer.DrawerSettings>
         <navigationdrawer:DrawerSettings DrawerHeaderHeight="150">
             <navigationdrawer:DrawerSettings.DrawerHeaderView>
-                <Grid BackgroundColor="#1aa1d6">
+                <Grid BackgroundColor="#6750A4">
                     <VerticalStackLayout VerticalOptions="Center"
                                          HorizontalOptions="Center">
                         <Label Text="Header View"/>
@@ -118,7 +118,7 @@ As the name suggests, it is displayed at the bottom of the drawer. The `DrawerFo
     <navigationdrawer:SfNavigationDrawer.DrawerSettings>
         <navigationdrawer:DrawerSettings>
             <navigationdrawer:DrawerSettings.DrawerFooterView>
-                <Grid BackgroundColor="#1aa1d6">
+                <Grid BackgroundColor="#6750A4">
                     <VerticalStackLayout VerticalOptions="Center"
                                          HorizontalOptions="Center">
                         <Label Text="Footer View"/>
@@ -151,7 +151,7 @@ this.Content = navigationDrawer;
 
 The height of the drawer footer content can be adjusted using the `DrawerFooterHeight` property.
 
-N> The `DrawerFooterView` can be disabled by setting the `DrawerFooterHeight` to zero.
+N> The `DrawerFooterView` can be removed by setting the `DrawerFooterHeight` to zero.
 
 {% tabs %}
 
@@ -161,7 +161,7 @@ N> The `DrawerFooterView` can be disabled by setting the `DrawerFooterHeight` to
     <navigationdrawer:SfNavigationDrawer.DrawerSettings>
         <navigationdrawer:DrawerSettings DrawerFooterHeight="150">
             <navigationdrawer:DrawerSettings.DrawerFooterView>
-                <Grid BackgroundColor="#1aa1d6">
+                <Grid BackgroundColor="#6750A4">
                     <VerticalStackLayout VerticalOptions="Center"
                                          HorizontalOptions="Center">
                         <Label Text="Footer View"/>
@@ -189,9 +189,9 @@ this.Content = navigationDrawer;
 
 {% endtabs %}
 
-![Footer hight]()
+![Footer height]()
 
-## Main Content
+## Drawer Content
 
 The main content of the drawer is displayed between the header and footer content. It can be set using the `DrawerContentView` property. The content view occupies the remaining space left by the header and footer content.
 
@@ -203,10 +203,10 @@ The main content of the drawer is displayed between the header and footer conten
     <navigationdrawer:SfNavigationDrawer.DrawerSettings>
         <navigationdrawer:DrawerSettings>
             <navigationdrawer:DrawerSettings.DrawerContentView>
-                <Grid BackgroundColor="#1aa1d6">
+                <Grid BackgroundColor="#6750A4">
                     <VerticalStackLayout VerticalOptions="Center"
                      HorizontalOptions="Center">
-                        <Label Text="Content View"/>
+                        <Label Text="Drawer Content"/>
                     </VerticalStackLayout>
                 </Grid>
             </navigationdrawer:DrawerSettings.DrawerContentView>

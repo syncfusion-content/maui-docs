@@ -165,13 +165,13 @@ Create an ImageButton and set the required image to the `Source` property. Subsc
     <navigationdrawer:SfNavigationDrawer.ContentView>
         <Grid x:Name="mainContentView" 
           BackgroundColor="White" RowDefinitions="Auto,*">
-            <HorizontalStackLayout BackgroundColor="#1aa1d6" Spacing="10" Padding="5,0,0,0">
+            <HorizontalStackLayout BackgroundColor="#6750A4" Spacing="10" Padding="5,0,0,0">
                 <ImageButton x:Name="hamburgerButton"
                              HeightRequest="50"
                              WidthRequest="50"
                              HorizontalOptions="Start"
                              Source="hamburgericon.png"
-                             BackgroundColor="#1aa1d6"
+                             BackgroundColor="#6750A4"
                              Clicked="hamburgerButton_Clicked"/>
                 <Label x:Name="headerLabel" 
                    HeightRequest="50" 
@@ -179,7 +179,7 @@ Create an ImageButton and set the required image to the `Source` property. Subsc
                    VerticalTextAlignment="Center" 
                    Text="Home" FontSize="16" 
                    TextColor="White" 
-                   BackgroundColor="#1aa1d6"/>
+                   BackgroundColor="#6750A4"/>
             </HorizontalStackLayout>
             <Label Grid.Row="1" 
               x:Name="contentLabel" 
@@ -200,19 +200,87 @@ namespace NavigationSample;
 
 public partial class NavigationDrawerPage : ContentPage
 {
+    SfNavigationDrawer navigationDrawer;
+    Label contentLabel;
 	public NavigationDrawerPage()
 	{
 		InitializeComponent();
-    }
+        navigationDrawer = new SfNavigationDrawer();
+        Grid grid = new Grid()
+        {
+            RowDefinitions =
+            {
+                new RowDefinition {Height=new GridLength(1,GridUnitType.Auto)},
+                new RowDefinition(),
+            },
+            BackgroundColor = Colors.White,
+        };
 
-    private void hamburgerButton_Clicked(object sender, EventArgs e)
-    {
-        navigationDrawer.ToggleDrawer();
+        HorizontalStackLayout layout = new HorizontalStackLayout()
+        { 
+            BackgroundColor = Color.FromArgb("#6750A4"),
+            Spacing = 10,
+            Padding = new Thickness(5,0,0,0),
+        };
+
+        var hamburgerButton = new ImageButton
+        {
+            HeightRequest = 50,
+            WidthRequest = 50,
+            HorizontalOptions = LayoutOptions.Start,
+            BackgroundColor = Color.FromArgb("#6750A4"),
+            Source = "hamburgericon.png",
+        };
+        hamburgerButton.Clicked += hamburgerButton_Clicked;
+
+        var label = new Label
+        {
+            HeightRequest = 50,
+            HorizontalTextAlignment = TextAlignment.Center,
+            VerticalTextAlignment = TextAlignment.Center,
+            Text = "Home",
+            FontSize = 16,
+            TextColor = Colors.White,
+            BackgroundColor = Color.FromArgb("#6750A4")
+        };
+        layout.Children.Add(hamburgerButton);
+        layout.Children.Add(label);
+
+        contentLabel = new Label
+        {
+            HorizontalOptions = LayoutOptions.Center,
+            VerticalOptions = LayoutOptions.Center,
+            Text = "Content View",
+            FontSize = 14,
+            TextColor = Colors.Black
+        };
+        grid.SetRow(layout, 0);
+        grid.SetRow(contentLabel, 1);
+        grid.Children.Add(layout);
+        grid.Children.Add(contentLabel);
+        navigationDrawer.ContentView = grid;
+
+        navigationDrawer.DrawerSettings = new DrawerSettings()
+        {
+            DrawerWidth = 250,
+        };
+        this.Content = navigationDrawer;
     }
 }
 
 {% endhighlight %}
 
+{% endtabs %}
+
+{% tabs %}
+{% highlight c# %}
+    
+    private void hamburgerButton_Clicked(object sender, EventArgs e)
+    {
+        navigationDrawer.ToggleDrawer();
+    }
+
+{% endhighlight %}
 {% endtabs %}
 
 ## Set ListView as Drawer Content
@@ -226,33 +294,34 @@ Create a ListView with items and set it as `DrawerContentView.`
 <navigationdrawer:SfNavigationDrawer x:Name="navigationDrawer">
     <navigationdrawer:SfNavigationDrawer.DrawerSettings>
         <navigationdrawer:DrawerSettings DrawerWidth="250"
-                                         DrawerHeaderHeight="160">
+                                     DrawerHeaderHeight="160">
             <navigationdrawer:DrawerSettings.DrawerHeaderView>
-                <Grid BackgroundColor="#1aa1d6" RowDefinitions="120,40">
+                <Grid BackgroundColor="#6750A4" RowDefinitions="120,40">
                     <Image Source="user.png"
-                           HeightRequest="110"
-                           Margin="0,10,0,0"
-                           BackgroundColor="#1aa1d6"
-                           VerticalOptions="Center"
-                           HorizontalOptions="Center"/>
+                       HeightRequest="110"
+                       Margin="0,10,0,0"
+                       BackgroundColor="#6750A4"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Center"/>
                     <Label Text="James Pollock"
-                           Grid.Row="1"
-                           HorizontalTextAlignment="Center"
-                           HorizontalOptions="Center"
-                           FontSize="20"
-                           TextColor="White"/>
+                       Grid.Row="1"
+                       HorizontalTextAlignment="Center"
+                       HorizontalOptions="Center"
+                       FontSize="20"
+                       TextColor="White"/>
                 </Grid>
             </navigationdrawer:DrawerSettings.DrawerHeaderView>
             <navigationdrawer:DrawerSettings.DrawerContentView>
                 <ListView x:Name="listView"
-                          ItemSelected="listView_ItemSelected">
+                      ItemSelected="listView_ItemSelected">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
                                 <VerticalStackLayout HeightRequest="40">
                                     <Label Margin="10,7,0,0"
-                                           Text="{Binding}"
-                                           FontSize="16"/>
+                                       Text="{Binding}"
+                                       FontSize="16"
+                                       TextColor="Black"/>
                                 </VerticalStackLayout>
                             </ViewCell>
                         </DataTemplate>
@@ -263,30 +332,30 @@ Create a ListView with items and set it as `DrawerContentView.`
     </navigationdrawer:SfNavigationDrawer.DrawerSettings>
     <navigationdrawer:SfNavigationDrawer.ContentView>
         <Grid x:Name="mainContentView" 
-          BackgroundColor="White" RowDefinitions="Auto,*">
-            <HorizontalStackLayout BackgroundColor="#1aa1d6" Spacing="10" Padding="5,0,0,0">
+      BackgroundColor="White" RowDefinitions="Auto,*">
+            <HorizontalStackLayout BackgroundColor="#6750A4" Spacing="10" Padding="5,0,0,0">
                 <ImageButton x:Name="hamburgerButton"
-                             HeightRequest="50"
-                             WidthRequest="50"
-                             HorizontalOptions="Start"
-                             Source="hamburgericon.png"
-                             BackgroundColor="#1aa1d6"
-                             Clicked="hamburgerButton_Clicked"/>
+                         HeightRequest="50"
+                         WidthRequest="50"
+                         HorizontalOptions="Start"
+                         Source="hamburgericon.png"
+                         BackgroundColor="#6750A4"
+                         Clicked="hamburgerButton_Clicked"/>
                 <Label x:Name="headerLabel" 
-                   HeightRequest="50" 
-                   HorizontalTextAlignment="Center" 
-                   VerticalTextAlignment="Center" 
-                   Text="Home" FontSize="16" 
-                   TextColor="White" 
-                   BackgroundColor="#1aa1d6"/>
+               HeightRequest="50" 
+               HorizontalTextAlignment="Center" 
+               VerticalTextAlignment="Center" 
+               Text="Home" FontSize="16" 
+               TextColor="White" 
+               BackgroundColor="#6750A4"/>
             </HorizontalStackLayout>
             <Label Grid.Row="1" 
-              x:Name="contentLabel" 
-              VerticalOptions="Center" 
-              HorizontalOptions="Center" 
-              Text="Content View" 
-              FontSize="14" 
-              TextColor="Black"/>
+          x:Name="contentLabel" 
+          VerticalOptions="Center" 
+          HorizontalOptions="Center" 
+          Text="Content View" 
+          FontSize="14" 
+          TextColor="Black"/>
         </Grid>
     </navigationdrawer:SfNavigationDrawer.ContentView>
 </navigationdrawer:SfNavigationDrawer>
@@ -300,9 +369,45 @@ namespace NavigationSample;
 
 public partial class NavigationDrawerPage : ContentPage
 {
+    SfNavigationDrawer navigationDrawer;
 	public NavigationDrawerPage()
 	{
 		InitializeComponent();
+        Grid headerGrid = new Grid()
+        {
+            RowDefinitions =
+            {
+                new RowDefinition { Height = 120 },
+                new RowDefinition { Height = 40 },
+            },
+            BackgroundColor = Color.FromArgb("#6750A4"),
+        };
+
+        var image = new Image
+        {
+            Source = "user.png",
+            HeightRequest = 110,
+            Margin = new Thickness(0, 10, 0, 0),
+            BackgroundColor = Color.FromArgb("#6750A4"),
+            HorizontalOptions = LayoutOptions.Center,
+            VerticalOptions = LayoutOptions.Center
+        };
+
+        var headerlabel = new Label
+        {
+            Text = "James Pollock",
+            HorizontalTextAlignment = TextAlignment.Center,
+            HorizontalOptions = LayoutOptions.Center,
+            FontSize = 20,
+            TextColor = Colors.White
+        };
+        headerGrid.SetRow(image, 0);
+        headerGrid.SetRow(headerlabel, 1);
+        headerGrid.Children.Add(image);
+        headerGrid.Children.Add(headerlabel);
+
+        ListView listView = new ListView();
+        listView.ItemSelected += listView_ItemSelected;
         List<string> list = new List<string>();
         list.Add("Home");
         list.Add("Profile");
@@ -311,8 +416,25 @@ public partial class NavigationDrawerPage : ContentPage
         list.Add("Sent");
         list.Add("Draft");
         listView.ItemsSource = list;
-    }
 
+        navigationDrawer.DrawerSettings = new DrawerSettings()
+        {
+            DrawerHeaderView = headerGrid,
+            DrawerContentView = listView,
+            DrawerHeaderHeight = 160,
+            DrawerWidth = 250,
+        };
+        this.Content = navigationDrawer;
+    }
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
+{% tabs %}
+{% highlight c# %}
+    
     private void hamburgerButton_Clicked(object sender, EventArgs e)
     {
         navigationDrawer.ToggleDrawer();
@@ -320,13 +442,22 @@ public partial class NavigationDrawerPage : ContentPage
 
     private void listView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
     {
-        // Your codes here
+        if (e.SelectedItem.ToString() == "Home")
+            contentLabel.Text = "Home";
+        else if (e.SelectedItem.ToString() == "Profile")
+            contentLabel.Text = "Profile";
+        else if (e.SelectedItem.ToString() == "Inbox")
+            contentLabel.Text = "Inbox";
+        else if (e.SelectedItem.ToString() == "Out box")
+            contentLabel.Text = "Out box";
+        else if (e.SelectedItem.ToString() == "Sent")
+            contentLabel.Text = "Sent";
+        else if (e.SelectedItem.ToString() == "Draft")
+            contentLabel.Text = "The folder is empty";
         navigationDrawer.ToggleDrawer();
     }
-}
 
 {% endhighlight %}
-
 {% endtabs %}
 
 You can find the Getting Started Sample from this [`link.`](https://github.com/SyncfusionExamples/Getting-started-sample-for-.NET-MAUI-NavigationDrawer)

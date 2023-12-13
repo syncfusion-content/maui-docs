@@ -12,7 +12,7 @@ The NavigationDrawer supports the swipe gesture for both opening and closing the
 
 ## Enabling Swipe Gesture
 
-It can be enabled/disabled using the `EnableSwipeGesture` property.
+The `EnableSwipeGesture` property can be utilized to activate or deactivate the swipe functionality in `SfNavigationDrawer`.
 
 {% tabs %}
 
