@@ -28,7 +28,7 @@ This section will go through how to add shape annotations to a PDF document inte
 
 ### Add shapes with UI interaction
 
-You can draw and add shape annotations to a PDF document interactively by touch (or mouse down) and drag. The following steps explains how to draw circle shape annotation on a PDF. Similarly, you can draw other shapes like Arrow, Line and Rectangle.  
+You can interactively draw and add shape annotations to a PDF document by touch pointer or dragging the mouse down. The following steps explain how to draw a circle-shaped annotation on a PDF. Similarly, you can draw other shapes like arrows, lines, and rectangles.
 
 1.	Set the [AnnotationMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationMode) property of the SfPdfViewer to any shape (say [Circle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.AnnotationMode.html#Syncfusion_Maui_PdfViewer_AnnotationMode_Circle)). It activates the circle drawing mode on the control.
 2.	Place your finger (or mouse) on the screen, where you want to start drawing the circle.
