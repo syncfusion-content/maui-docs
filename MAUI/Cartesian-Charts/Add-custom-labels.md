@@ -1,0 +1,78 @@
+---
+layout: post
+title: Add custom labels to the chart axis. | Syncfusion
+description: Learn here all about how to add custom labels to the chart axis in Syncfusion .NET MAUI Chart (SfCartesianChart) control.
+platform: maui
+control: SfCartesianChart
+documentation: ug
+---
+
+# Add custom labels to the chart axis
+
+[ChartAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html) provides the [OnCreateLabels](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_OnLabelCreated_Syncfusion_Maui_Charts_ChartAxisLabel_) override method to add custom axis labels. The [OnCreateLabels](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_OnLabelCreated_Syncfusion_Maui_Charts_ChartAxisLabel_) method is called whenever new labels are generated. The following properties are available to add custom labels.
+
+* [VisibleLabels]() - This property is used to get an Observable Collection of visible axis labels.
+
+* [VisibleMaximum]() - This property is used to get the double value that represents the maximum observable value of the axis range.
+
+* [VisibleMinimum]() - This property is used to get the double value that represents the minimum observable value of the axis range.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+    <chart:SfCartesianChart>
+       . . .
+       <chart:SfCartesianChart.XAxes>
+            <model:CustomNumericalAxis />
+       </chart:SfCartesianChart.XAxes>
+       . . .
+    </chart:SfCartesianChart>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+    SfCartesianChart chart = new SfCartesianChart();
+    .......
+    CustomNumericalAxis primaryAxis = new CustomNumericalAxis();
+    chart.XAxes.Add(primaryAxis);
+    
+{% endhighlight %}
+
+{% endtabs %}
+
+{% tabs %}
+
+{% highlight c# %}
+
+    public class CustomNumericalAxis : NumericalAxis
+    {
+        //Adding a custom axis label is achieved by displaying the axis label only on the x-axis values in the CustomNumericalAxis of the chart.
+        
+        protected override void OnCreateLabels()
+        {
+            base.OnCreateLabels();
+
+            if (VisibleLabels != null)
+            {
+                VisibleLabels.Clear();
+
+                ViewModel viewModel = BindingContext as ViewModel;
+
+                for (int i = 0; i < viewModel.Data.Count; i++)
+                {
+                    var data = viewModel.Data[i];
+                    VisibleLabels.Add(new ChartAxisLabel(data.XValue, data.XValue.ToString()));
+                }
+            }
+        }
+    }
+    
+{% endhighlight  %}
+
+{% endtabs %}
+
+![Add custom labels to chart axis](How-to_images/MAUI_Add_custom_labels.png)
+
+N> This applies to all types of axes. Labels are rendered only if the label position presents within the visible range. The labels should be created only if users call the base of OnCreateLabels.
