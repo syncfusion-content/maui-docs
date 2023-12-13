@@ -294,9 +294,9 @@ private void PdfViewer_FormFieldFocusChanged(object? sender, FormFieldFocusChang
 
 N> * This event will be raised only for the text and signature form fields
 
-### Imports and Exports the form data
+## Imports and Exports the form data
 
-## Imports form data
+### Imports form data
 
 You can add values of form fields to a PDF document by importing by using the `ImportFormData` method. You need to provide the stream of the file containing the form values and the data format information as parameters to the method. The following example explains how to import form data from an XFDF file, assuming that the file is in the application’s data directory.
 
@@ -329,7 +329,7 @@ PdfViewer.ImportFormData(inputFileStream, Syncfusion.Pdf.Parsing.DataFormat.XFdf
 * Similarly, you may import form fields from an FDF file also.
 * To import the form data’s asynchronously, you may use the `ImportFormDataAsync` method.
 
-## Exports form data
+### Exports form data
 
 The [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) allows you to export form data from a PDF document. This will help you to save the form field information in a separate file rather than the complete PDF file. You need to provide the supported file stream as a parameter to the ExportFormData method to achieve the same. The form fields information will be exported to the given file stream. The following code explains how to export form field data from a PDF document into an XFDF file in the application’s data directory.
 
@@ -350,7 +350,7 @@ void ExportFormData()
 
 * Similarly, you may export form field data into an FDF file also. To export the form fields asynchronously, you may use the `ExportFormDataAsync` method.
 
-## Supported file type for imports and exports
+### Supported file type for imports and exports
 
 * XFDF
 * FDF
