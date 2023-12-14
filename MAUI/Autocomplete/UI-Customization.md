@@ -739,16 +739,26 @@ x:Name="autoComplete" >
 
 {% highlight c# %}
 
- autoComplete.DropdownOpening += AutoComplete_DropdownOpening;
-
-  private void AutoComplete_DropdownOpening(object sender, CancelEventArgs e)
- {
-     e.Cancel = true;
- }
+    SfAutoComplete autoComplete = new SfAutoComplete();
+    autoComplete.DropdownOpening += AutoComplete_DropdownOpening;
 
 {% endhighlight %}
 
 {% endtabs %}
+
+{% tabs %}
+
+{% highlight c# %}
+    
+ private void AutoComplete_DropdownOpening(object sender, CancelEventArgs e)
+ {
+     e.Cancel = true;
+ }
+ 
+{% endhighlight %}
+
+{% endtabs %}
+
 
 ## DropDownOpened Event
 
@@ -772,13 +782,24 @@ The `DropDownOpened` event occurs when the SfAutocomplete drop-down is opened.
 
 {% highlight c# %}
 
+  SfAutoComplete autoComplete = new SfAutoComplete();
+
   autoComplete.DropdownOpened += autoComplete_DropdownOpened;
 
+
+{% endhighlight %}
+
+{% endtabs %}
+
+{% tabs %}
+
+{% highlight c# %}
+    
   private void autoComplete_DropdownOpened(object sender, EventArgs e)
  {
     
  }
-
+   
 {% endhighlight %}
 
 {% endtabs %}
