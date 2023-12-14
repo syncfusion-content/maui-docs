@@ -769,11 +769,20 @@ The `DropDownOpening` event will be fired whenever opening the dropdown menu in 
 
 {% highlight c# %}
 
- comboBox.DropdownOpening += comboBox_DropdownOpening;
+  SfComboBox comboBox = new SfComboBox();
+  comboBox.DropdownOpening += comboBox_DropdownOpening;
 
+{% endhighlight %}
+
+{% endtabs %}
+
+{% tabs %}
+
+{% highlight c# %}
+    
  private void comboBox_DropdownOpening(object sender, CancelEventArgs e)
  {
-     e.Cancel = true;
+     e.Cancel = true; // If you want to restrict the dropdown open then set the e.Cancel is true. 
  }
 
 {% endhighlight %}
@@ -802,7 +811,16 @@ x:Name="comboBox" >
 
 {% highlight c# %}
 
+  SfComboBox comboBox = new SfComboBox();
   comboBox.DropdownOpened += comboBox_DropdownOpened;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+{% tabs %}
+
+{% highlight c# %}
 
   private void comboBox_DropdownOpened(object sender, EventArgs e)
   {
@@ -812,7 +830,6 @@ x:Name="comboBox" >
 {% endhighlight %}
 
 {% endtabs %}
-
 
 ## DropDownClosed Event
 
