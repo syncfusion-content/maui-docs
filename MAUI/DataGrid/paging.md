@@ -106,7 +106,7 @@ The following screenshot shows the outcome upon execution of the above code:
 
 ![Normal paging .NET MAUI DataGrid](Images\paging\maui-datagrid-normal-paging.png)
 
-## On-DemandPaging	
+## On-Demand Paging	
 
 In normal Paging, data collection is entirely loaded initially into the `SfDataPager`. However, the control also allows for dynamically loading the data for the current page by setting `SfDataPager.UseOnDemandPaging` to `true`.
 
