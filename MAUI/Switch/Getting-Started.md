@@ -96,3 +96,41 @@ this.Content = sfSwitch;
 ![SfSwitch](images/getting-started/SfSwitch.png)
 
 Find the complete getting started sample of the .NET MAUI Switch from this [link.](https://github.com/SyncfusionExamples/Getting-Started-with-.NET-MAUI-SfSwitch)
+
+
+## Performing an action based on state
+
+You can switch between the states. When the state is changed the `StateChanging` and `StateChanged` event will be triggered where you can perform an action based on the current state. The `StateChanging` event allows you to cancel moving to a new state.
+
+The following code example displays a message box when switched to off state when work is completed.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<syncfusion:SfSwitch StateChanged="SfSwitch_StateChanged"/>
+	
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfSwitch sfSwitch = new SfSwitch();
+sfSwitch.StateChanged+= SfSwitch_StateChanged;
+this.Content = sfSwitch;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+{% tabs %}
+
+{% highlight c# %}
+    
+private void SfSwitch_StateChanged(object sender, SwitchStateChangedEventArgs e)
+{
+     DisplayAlert("Message", "SUCCESS", "OK");
+}
+
+{% endhighlight %}
+
+{% endtabs %}

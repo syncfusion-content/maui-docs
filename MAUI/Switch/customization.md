@@ -187,7 +187,7 @@ The following code example demonstrates how to customize the size of the track a
 SfSwitch sfSwitch = new SfSwitch();
 SwitchSettings onStyle = new SwitchSettings();
 onStyle.TrackWidthRequest = 75;
-nStyle.TrackHeightRequest = 25;
+onStyle.TrackHeightRequest = 25;
 onStyle.ThumbWidthRequest = 10;
 onStyle.ThumbHeightRequest = 10;
 onStyle.TrackStrokeThickness = 2;
@@ -203,7 +203,7 @@ offStyle.ThumbHeightRequest = 10;
 offStyle.TrackStrokeThickness = 2;
 offStyle.ThumbStrokeThickness = 2;
 offStyle.TrackCornerRadius = 4;
- offStyle.ThumbCornerRadius = 4;
+offStyle.ThumbCornerRadius = 4;
 
 VisualStateGroupList visualStateGroupList = new VisualStateGroupList();
 VisualStateGroup commonStateGroup = new VisualStateGroup();
@@ -291,7 +291,7 @@ In the switch control, you can customize the thumb's icon by providing a custom 
 SfSwitch sfSwitch = new SfSwitch();
 SwitchSettings onStyle = new SwitchSettings();
 onStyle.TrackWidthRequest = 80;
-nStyle.TrackHeightRequest = 40;
+onStyle.TrackHeightRequest = 40;
 onStyle.ThumbWidthRequest = 30;
 onStyle.ThumbHeightRequest = 30;
 onStyle.CustomPath = "M17.2558 12.7442L15.8333 11.3217V8.33341C15.8333 5.65258 14.0125 3.39425 11.5458 2.71508C11.3017 2.10008 10.705 1.66675 10 1.66675C9.295 1.66675 8.69833 2.10008 8.45417 2.71508C5.9875 3.39508 4.16667 5.65258 4.16667 8.33341V11.3217L2.74417 12.7442C2.66663 12.8215 2.60514 12.9133 2.56324 13.0144C2.52133 13.1156 2.49984 13.224 2.5 13.3334V15.0001C2.5 15.2211 2.5878 15.4331 2.74408 15.5893C2.90036 15.7456 3.11232 15.8334 3.33333 15.8334H16.6667C16.8877 15.8334 17.0996 15.7456 17.2559 15.5893C17.4122 15.4331 17.5 15.2211 17.5 15.0001V13.3334C17.5002 13.224 17.4787 13.1156 17.4368 13.0144C17.3949 12.9133 17.3334 12.8215 17.2558 12.7442V12.7442ZM15.8333 14.1667H4.16667V13.6784L5.58917 12.2559C5.6667 12.1787 5.72819 12.0868 5.7701 11.9857C5.812 11.8846 5.83349 11.7762 5.83333 11.6667V8.33341C5.83333 6.03591 7.7025 4.16675 10 4.16675C12.2975 4.16675 14.1667 6.03591 14.1667 8.33341V11.6667C14.1667 11.8884 14.2542 12.1001 14.4108 12.2559L15.8333 13.6784V14.1667ZM10 18.3334C10.5161 18.3341 11.0195 18.1739 11.4404 17.8752C11.8613 17.5765 12.1786 17.1541 12.3483 16.6667H7.65167C7.82139 17.1541 8.13873 17.5765 8.55959 17.8752C8.98045 18.1739 9.48392 18.3341 10 18.3334V18.3334Z";
