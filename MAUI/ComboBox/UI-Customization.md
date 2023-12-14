@@ -782,7 +782,7 @@ The `DropDownOpening` event will be fired whenever opening the dropdown menu in 
     
  private void comboBox_DropdownOpening(object sender, CancelEventArgs e)
  {
-     e.Cancel = true;
+     e.Cancel = true; // If you want to restrict the dropdown open then set the e.Cancel is true. 
  }
 
 {% endhighlight %}
