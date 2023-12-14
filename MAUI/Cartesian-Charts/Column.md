@@ -117,7 +117,7 @@ this.Content = chart;
 
 ## OverlappedPlacement
 
-By default, all the column series which has the same x and y axes are placed side by side in a chart. If you want place the series one over the other (overlapped), set the [EnableSideBySideSeriesPlacement]() property of SfChart to false. The following code snippet and screenshot illustrate the overlapped placement of column series.
+By default, all the column series which has the same x and y axes are placed side by side in a chart. If you want place the series one over the other (overlapped), set the [EnableSideBySideSeriesPlacement]() property of SfCartesianChart to false and configure the Width property to differentiate the series. The following code snippet and screenshot illustrate the overlapped placement of column series.
 
 {% tabs %}
 
@@ -133,20 +133,21 @@ By default, all the column series which has the same x and y axes are placed sid
         <chart:NumericalAxis />
     </chart:SfCartesianChart.YAxes>   
 
-    <chart:ColumnSeries ItemsSource="{Binding Data}"
+    <chart:ColumnSeries ItemsSource="{Binding Data1}"
                         XBindingPath="XValue"
                         YBindingPath="YValue"/>
                         
-    <chart:ColumnSeries ItemsSource="{Binding Data}"
+    <chart:ColumnSeries ItemsSource="{Binding Data2}"
                         XBindingPath="XValue"
-                        YBindingPath="YValue1"/>                    
+                        YBindingPath="YValue"
+                        Width="0.2"/>                    
 
 </chart:SfCartesianChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
-
+    ViewModel viewModel = new ViewModel();
     SfCartesianChart chart = new SfCartesianChart();
     chart.EnableSideBySideSeriesPlacement = false;
     CategoryAxis primaryAxis = new CategoryAxis();
@@ -154,22 +155,23 @@ By default, all the column series which has the same x and y axes are placed sid
     NumericalAxis secondaryAxis = new NumericalAxis();
     chart.YAxes.Add(secondaryAxis);
 
-    ColumnSeries series = new ColumnSeries()
+    ColumnSeries series1 = new ColumnSeries()
     {
-        ItemsSource = new ViewModel().Data,
+        ItemsSource = viewModel.Data1,
         XBindingPath = "XValue",
         YBindingPath = "YValue",
     };
 
-    ColumnSeries series1 = new ColumnSeries()
+    ColumnSeries series2 = new ColumnSeries()
     {
-        ItemsSource = new ViewModel().Data,
+        ItemsSource = viewModel.Data2,
         XBindingPath = "XValue",
-        YBindingPath = "YValue1",
+        YBindingPath = "YValue",
+        Width = 0.2;
     };
 
-    chart.Series.Add(series);
     chart.Series.Add(series1);
+    chart.Series.Add(series2);
     this.Content = chart;
 
 {% endhighlight %}
