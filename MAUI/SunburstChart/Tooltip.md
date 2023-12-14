@@ -54,14 +54,15 @@ The appearance of the tooltip can be customized using the following properties:
 {% highlight xml %}
 
     <sunburst:SfSunburstChart EnableTooltip="True">
-    . . .
+        . . .
         <sunburst:SfSunburstChart.TooltipSettings>
             <sunburst:SunburstTooltipSettings   
                 Background="White"  TextColor="Black"  
                 FontSize="14" FontAttributes="Bold" 
                 Duration="5"/>
         </sunburst:SfSunburstChart.TooltipSettings>
-    . . .
+        . . .
+    </sunburst:SfSunburstChart>
     
 {% endhighlight %}
 
@@ -92,29 +93,30 @@ The sunburst chart provides support for customizing the appearance of the toolti
 
 {% highlight xml %}
 
-    <sunburst:SfSunburstChart EnableTooltip="True" 
-              TooltipTemplate="{StaticResource template1}">
+<sunburst:SfSunburstChart EnableTooltip="True" 
+            TooltipTemplate="{StaticResource template1}">
     . . .
-        <sunburst:SfSunburstChart.Resources>
-            <ResourceDictionary>
-                <DataTemplate x:Key="template1">
-                    <StackLayout Orientation="Horizontal">
-                        <Rectangle HeightRequest="30" WidthRequest="8" Fill="{Binding Fill}"/>
-                        <StackLayout Orientation="Vertical">
-                            <Label Text="{Binding Item[0]}" 
-                                TextColor="White" FontFamily="Helvetica" 
-                                FontSize="12.5" Padding="5,0,0,0"
-                                FontAttributes="Bold"/>
-                            <Label Text="{Binding Item[1],StringFormat='Count : {0}M'}" 
-                                TextColor="White" FontFamily="Helvetica" 
-                                FontSize="12" Padding="5,0,0,0" Margin="0,2,0,0"/>
-                        </StackLayout>
+    <sunburst:SfSunburstChart.Resources>
+        <ResourceDictionary>
+            <DataTemplate x:Key="template1">
+                <StackLayout Orientation="Horizontal">
+                    <Rectangle HeightRequest="30" WidthRequest="8" Fill="{Binding Fill}"/>
+                    <StackLayout Orientation="Vertical">
+                        <Label Text="{Binding Item[0]}" 
+                            TextColor="White" FontFamily="Helvetica" 
+                            FontSize="12.5" Padding="5,0,0,0"
+                            FontAttributes="Bold"/>
+                        <Label Text="{Binding Item[1],StringFormat='Count : {0}M'}" 
+                            TextColor="White" FontFamily="Helvetica" 
+                            FontSize="12" Padding="5,0,0,0" Margin="0,2,0,0"/>
                     </StackLayout>
-                </DataTemplate>
-            </ResourceDictionary>
-        </sunburst:SfSunburstChart.Resources>
-    </chart:SfSunburstChart>
+                </StackLayout>
+            </DataTemplate>
+        </ResourceDictionary>
+    </sunburst:SfSunburstChart.Resources>
     . . .
+
+</chart:SfSunburstChart>
     
 {% endhighlight %}
 
