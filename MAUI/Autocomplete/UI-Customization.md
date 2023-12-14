@@ -634,6 +634,48 @@ The following image illustrates the result of the above code:
 
 ![.NET MAUI Autocomplete ItemTemplateSelector](Images/UICustomization/TemplateSelector.png)
 
+## Styling token items
+
+The AutoComplete control allows you to customize the style of the TokenItem generated in the selection area by using the TokenItemStyle property.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+ ...
+  xmlns:core="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
+  xmlns:editors="clr-namespace:Syncfusion.Maui.Inputs;assembly=Syncfusion.Maui.Inputs"
+ ...
+
+  <editors:SfAutocomplete
+   SelectionMode="Multiple"
+   WidthRequest="350"
+   HeightRequest="50"
+   ItemsSource="{Binding SocialMedias}"
+   DisplayMemberPath="Name"
+   TextMemberPath="Name"    
+   x:Name="autoComplete" >
+       <editors:SfAutocomplete.TokenItemStyle>
+           <Style TargetType="core:SfChipGroup">
+               <Setter Property="ChipTextColor" Value="White"/>
+               <Setter Property="ChipFontAttributes" Value="Bold"/>
+               <Setter Property="CloseButtonColor" Value="White"/>
+               <Setter Property="ChipBackground" Value="#d3a7ff"/>
+               <Setter Property="ChipStroke" Value="#5118e3"/>
+               <Setter Property="ChipStrokeThickness" Value="6"/>
+               <Setter Property="ChipCornerRadius" Value="18"/>
+           </Style>
+       </editors:SfAutocomplete.TokenItemStyle>
+   </editors:SfAutocomplete>
+
+{% endhighlight %}
+
+{% endtabs %}
+
+The following image illustrates the result of the above code:
+
+![.NET MAUI Autocomplete with tokenitemstyle](Images/UICustomization/TokenItemStyle.png)
+
 ## Completed Event
 
 The [Completed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_Completed) event is raised when the user finalizes the text in the [SfAutoComplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) by pressing return key on the keyboard.The handler for the event is a generic event handler, taking the `sender` and `EventArgs`(the `EventArgs` value is `string.Empty`):
@@ -672,6 +714,74 @@ The following image illustrates the result of the above code:
 ![.NET MAUI Autocomplete completed event](Images/UICustomization/CompletedEvent.png)
 
 N> The `Completed` event is not supported in the Android platform.
+
+## DropDownOpening Event
+
+The `DropDownOpening` event will be fired whenever opening the dropdown menu in the SfAutocomplete. It can cancel dropdown opening with CancelEventArgs that contains the following property:
+
+ * Cancel: Dropdown opening is based on this value.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<editors:SfAutocomplete 
+DropdownOpening="AutoComplete_DropdownOpening"
+WidthRequest="350"
+HeightRequest="50"
+ItemsSource="{Binding SocialMedias}"
+DisplayMemberPath="Name"
+TextMemberPath="Name"    
+x:Name="autoComplete" >
+</editors:SfAutocomplete>
+    
+{% endhighlight %}
+
+{% highlight c# %}
+
+ autoComplete.DropdownOpening += AutoComplete_DropdownOpening;
+
+  private void AutoComplete_DropdownOpening(object sender, CancelEventArgs e)
+ {
+     e.Cancel = true;
+ }
+
+{% endhighlight %}
+
+{% endtabs %}
+
+## DropDownOpened Event
+
+The `DropDownOpened` event occurs when the SfAutocomplete drop-down is opened.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+ <editors:SfAutocomplete 
+ DropdownOpened="autoComplete_DropdownOpened"
+ WidthRequest="350"
+ HeightRequest="50"
+ ItemsSource="{Binding SocialMedias}"
+ DisplayMemberPath="Name"
+ TextMemberPath="Name"    
+ x:Name="autoComplete" >
+ </editors:SfAutocomplete>
+ 
+{% endhighlight %}
+
+{% highlight c# %}
+
+  autoComplete.DropdownOpened += autoComplete_DropdownOpened;
+
+  private void autoComplete_DropdownOpened(object sender, EventArgs e)
+ {
+    
+ }
+
+{% endhighlight %}
+
+{% endtabs %}
 
 ## DropDownClosed Event
 
