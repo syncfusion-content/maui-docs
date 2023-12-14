@@ -40,7 +40,6 @@ To migrate easier from the Xamarin SfMaskedEdit to [.NET MAUI SfMaskedEntry](htt
 
 ## Upcoming features
 
-  * Placeholder and its customization
   * Border customization
   * HasError and Validation mode
   * MaskFormat for clipboard operations
