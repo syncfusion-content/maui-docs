@@ -54,7 +54,7 @@ private async void SfSwitch_StateChanged(object sender, SwitchStateChangedEventA
 {% endhighlight %}
 {% endtabs %}
 
-![SwitchStateChangedEventArgs](images/Events/Event.gif)
+![SwitchStateChangedEventArgs](images/Events/Events.gif)
 
 ## StateChanging event
 
