@@ -27,6 +27,8 @@ The following code sample demonstrates this:
 
 {% endhighlight %}
 
+{% endtabs %}
+
 {% tabs %}
 
 {% highlight c# %}
