@@ -179,4 +179,4 @@ By default, all the column series which have the same x and y axes are placed si
 
 {% endtabs %}
 
-![Column segment enableSideBySideSeriesPlacement in Maui Chart](Chart-Types_images/EnableSidebySidePlacement.png)
+![Column segment side by side placement in MAUI Chart](Chart-Types_images/EnableSidebySidePlacement.png)
