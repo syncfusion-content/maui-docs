@@ -134,12 +134,12 @@ By default, all the column series which has the same x and y axes are placed sid
     </chart:SfCartesianChart.YAxes>   
 
     <chart:ColumnSeries ItemsSource="{Binding Data}"
-						XBindingPath="XValue"
-						YBindingPath="YValue"/>
+                        XBindingPath="XValue"
+                        YBindingPath="YValue"/>
                         
     <chart:ColumnSeries ItemsSource="{Binding Data}"
-						XBindingPath="XValue"
-						YBindingPath="YValue1"/>                    
+                        XBindingPath="XValue"
+                        YBindingPath="YValue1"/>                    
 
 </chart:SfCartesianChart>
 
