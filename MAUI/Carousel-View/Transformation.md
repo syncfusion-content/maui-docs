@@ -21,52 +21,23 @@ N> If the angle value is positive, then the rotation is in the clockwise directi
 
 {% highlight xaml %}
 
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:carousel="clr-namespace:Syncfusion.Maui.Carousel;assembly=Syncfusion.Maui.Carousel"
-             xmlns:local="clr-namespace:CarouselSample"
-             x:Class="CarouselSample.MainPage">
-    <carousel:SfCarousel x:Name="carousel"
-                         ItemHeight="170"
-                         ItemWidth="270"
-                         RotationAngle="90"/>
-</ContentPage>
+<carousel:SfCarousel x:Name="carousel"
+                     ItemHeight="300"
+                     ItemWidth="200"
+                     RotationAngle="30"/>
 	
 {% endhighlight %}
 
 {% highlight C# %}
 
-using Syncfusion.Maui.Carousel;
-using System.Collections.ObjectModel;
-
-namespace CarouselSample
+SfCarousel carousel = new SfCarousel()
 {
-    public partial class MainPage : ContentPage
-    {
-        public MainPage()
-        {
-            InitializeComponent();
-            SfCarousel carousel = new SfCarousel()
-            {
-                ItemWidth = 170,
-                ItemHeight = 250,
-                RotationAngle = 90
-            };
+    ItemWidth = 200,
+    ItemHeight = 300,
+    RotationAngle = 30
+};
 
-            ObservableCollection<SfCarouselItem> carouselItems = new ObservableCollection<SfCarouselItem>();
-            carouselItems.Add(new SfCarouselItem() { ImageName = "carousel_person1.png" });
-            carouselItems.Add(new SfCarouselItem() { ImageName = "carousel_person2.png" });
-            carouselItems.Add(new SfCarouselItem() { ImageName = "carousel_person3.png" });
-            carouselItems.Add(new SfCarouselItem() { ImageName = "carousel_person4.png" });
-            carouselItems.Add(new SfCarouselItem() { ImageName = "carousel_person5.png" });
-
-            carousel.ItemsSource = carouselItems;
-
-            this.Content = carousel;
-        }
-    }
-}
+carousel.SetBinding(SfCarousel.ItemsSourceProperty, "ImageCollection");
 
 {% endhighlight %}
 
@@ -86,53 +57,24 @@ N> The default value is 20.
 
 {% highlight xaml %}
 
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:carousel="clr-namespace:Syncfusion.Maui.Carousel;assembly=Syncfusion.Maui.Carousel"
-             xmlns:local="clr-namespace:CarouselSample"
-             x:Class="CarouselSample.MainPage">
-    <carousel:SfCarousel x:Name="carousel"
-                         ItemHeight="170"
-                         ItemWidth="270"
-                         Offset="30"/>
-</ContentPage>
+<carousel:SfCarousel x:Name="carousel"
+                     ItemHeight="170"
+                     ItemWidth="270"
+                     Offset="60"/>
 
 	
 {% endhighlight %}
 
 {% highlight C# %}
 
-using Syncfusion.Maui.Carousel;
-using System.Collections.ObjectModel;
-
-namespace CarouselSample
+SfCarousel carousel = new SfCarousel()
 {
-    public partial class MainPage : ContentPage
-    {
-        public MainPage()
-        {
-            InitializeComponent();
-            SfCarousel carousel = new SfCarousel()
-            {
-                ItemWidth = 170,
-                ItemHeight = 250,
-                Offset = 30
-            };
+    ItemWidth = 170,
+    ItemHeight = 250,
+    Offset = 60
+};
 
-            ObservableCollection<SfCarouselItem> carouselItems = new ObservableCollection<SfCarouselItem>();
-            carouselItems.Add(new SfCarouselItem() { ImageName = "carousel_person1.png" });
-            carouselItems.Add(new SfCarouselItem() { ImageName = "carousel_person2.png" });
-            carouselItems.Add(new SfCarouselItem() { ImageName = "carousel_person3.png" });
-            carouselItems.Add(new SfCarouselItem() { ImageName = "carousel_person4.png" });
-            carouselItems.Add(new SfCarouselItem() { ImageName = "carousel_person5.png" });
-
-            carousel.ItemsSource = carouselItems;
-
-            this.Content = carousel;
-        }
-    }
-}
+carousel.SetBinding(SfCarousel.ItemsSourceProperty, "ImageCollection");
 
 {% endhighlight %}
 
@@ -148,57 +90,30 @@ Distance between the selected item and other items can be customized by using `S
 
 {% highlight xaml %}
 
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:carousel="clr-namespace:Syncfusion.Maui.Carousel;assembly=Syncfusion.Maui.Carousel"
-             xmlns:local="clr-namespace:CarouselSample"
-             x:Class="CarouselSample.MainPage">
-    <carousel:SfCarousel x:Name="carousel"
-                         ItemHeight="170"
-                         ItemWidth="270"
-                         SelectedItemOffset="5"/>
-</ContentPage>
+<carousel:SfCarousel x:Name="carousel"
+                     ItemHeight="170"
+                     ItemWidth="270"
+                     SelectedItemOffset="60"/>
 
 	
 {% endhighlight %}
 
 {% highlight C# %}
 
-using Syncfusion.Maui.Carousel;
-using System.Collections.ObjectModel;
-
-namespace CarouselSample
+SfCarousel carousel = new SfCarousel()
 {
-    public partial class MainPage : ContentPage
-    {
-        public MainPage()
-        {
-            InitializeComponent();
-            SfCarousel carousel = new SfCarousel()
-            {
-                ItemWidth = 170,
-                ItemHeight = 250,
-                SelectedItemOffset = 5
-            };
+    ItemWidth = 170,
+    ItemHeight = 250,
+    SelectedItemOffset = 60,
+};
 
-            ObservableCollection<SfCarouselItem> carouselItems = new ObservableCollection<SfCarouselItem>();
-            carouselItems.Add(new SfCarouselItem() { ImageName = "carousel_person1.png" });
-            carouselItems.Add(new SfCarouselItem() { ImageName = "carousel_person2.png" });
-            carouselItems.Add(new SfCarouselItem() { ImageName = "carousel_person3.png" });
-            carouselItems.Add(new SfCarouselItem() { ImageName = "carousel_person4.png" });
-            carouselItems.Add(new SfCarouselItem() { ImageName = "carousel_person5.png" });
-
-            carousel.ItemsSource = carouselItems;
-
-            this.Content = carousel;
-        }
-    }
-}
+carousel.SetBinding(SfCarousel.ItemsSourceProperty, "ImageCollection");
 
 {% endhighlight %}
 
 {% endtabs %}
+
+![SelectedItemOffset](images/selectedoffset.png)
 
 ## Set Scaling for Carousel Items
 
@@ -208,103 +123,24 @@ The `ScaleOffset` property in the  `SfCarousel` control is used to scale all the
 
 {% highlight xaml %}
 
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:carousel="clr-namespace:Syncfusion.Maui.Carousel;assembly=Syncfusion.Maui.Carousel"
-             xmlns:local="clr-namespace:CarouselSample"
-             x:Class="CarouselSample.MainPage">
-    <ContentPage.BindingContext>
-        <local:CarouselViewModel />
-    </ContentPage.BindingContext>
-    <ContentPage.Resources>
-        <ResourceDictionary>
-            <DataTemplate x:Key="itemTemplate">
-                <Image Source="{Binding Image}"
-				Aspect="AspectFit"/>
-            </DataTemplate>
-        </ResourceDictionary>
-    </ContentPage.Resources>
-
-    <ContentPage.Content>
-        <carousel:SfCarousel x:Name="carousel"
-			ItemTemplate="{StaticResource itemTemplate}"
-			ItemsSource="{Binding ImageCollection}"
-			ItemHeight="200"
-			ItemWidth="200"
-            ScaleOffset="0.7"/>
-    </ContentPage.Content>
-</ContentPage>
+<carousel:SfCarousel x:Name="carousel"
+                     ItemsSource="{Binding ImageCollection}"
+                     ItemHeight="200"
+                     ItemWidth="200"
+                     ScaleOffset="0.5"/>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-using Syncfusion.Maui.Carousel;
-using System.Collections.Generic;
-
-namespace CarouselSample
+SfCarousel carousel = new SfCarousel()
 {
-    public partial class MainPage : ContentPage
-    {
-        public MainPage()
-        {
-            InitializeComponent();
-            this.BindingContext = new CarouselViewModel();
-            SfCarousel carousel = new SfCarousel()
-            {
-                ItemHeight = 200,
-                ItemWidth = 200,
-                ScaleOffset = 0.7f
-            };
+    ItemHeight = 200,
+    ItemWidth = 200,
+    ScaleOffset = 0.5f
+};
 
-            carousel.ItemTemplate = new DataTemplate(() =>
-            {
-                Image image = new Image();
-                image.SetBinding(Image.SourceProperty, "Image");
-                image.Aspect = Aspect.AspectFit;
-                return image;
-            });
-
-            carousel.SetBinding(SfCarousel.ItemsSourceProperty, "ImageCollection");
-            this.Content = carousel;
-        }
-    }
-
-    public class CarouselModel
-    {
-        public CarouselModel(string imageString)
-        {
-            Image = imageString;
-        }
-        private string _image;
-
-        public string Image
-        {
-            get { return _image; }
-            set { _image = value; }
-        }
-    }
-
-    public class CarouselViewModel
-    {
-        public CarouselViewModel()
-        {
-            ImageCollection.Add(new CarouselModel("carousel_person1.png"));
-            ImageCollection.Add(new CarouselModel("carousel_person2.png"));
-            ImageCollection.Add(new CarouselModel("carousel_person3.png"));
-            ImageCollection.Add(new CarouselModel("carousel_person4.png"));
-            ImageCollection.Add(new CarouselModel("carousel_person5.png"));
-        }
-
-        private List<CarouselModel> imageCollection = new List<CarouselModel>();
-        public List<CarouselModel> ImageCollection
-        {
-            get { return imageCollection; }
-            set { imageCollection = value; }
-        }
-    }
-}
+carousel.SetBinding(SfCarousel.ItemsSourceProperty, "ImageCollection");
 
 {% endhighlight %}
 
@@ -320,107 +156,29 @@ Spacing of all the items in Linear mode can be determined by using `ItemSpacing`
 
 {% highlight xaml %}
 
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:carousel="clr-namespace:Syncfusion.Maui.Carousel;assembly=Syncfusion.Maui.Carousel"
-             xmlns:local="clr-namespace:CarouselSample"
-             x:Class="CarouselSample.MainPage">
-    <ContentPage.BindingContext>
-        <local:CarouselViewModel />
-    </ContentPage.BindingContext>
-    <ContentPage.Resources>
-        <ResourceDictionary>
-            <DataTemplate x:Key="itemTemplate">
-                <Image Source="{Binding Image}"
-				Aspect="AspectFit"/>
-            </DataTemplate>
-        </ResourceDictionary>
-    </ContentPage.Resources>
-
-    <ContentPage.Content>
-        <carousel:SfCarousel x:Name="carousel"
-			ItemTemplate="{StaticResource itemTemplate}"
-			ItemsSource="{Binding ImageCollection}"
-			ItemHeight="200"
-			ItemWidth="200"
-			ItemSpacing="10"
-			ViewMode="Linear"/>
-    </ContentPage.Content>
-</ContentPage>
+<carousel:SfCarousel x:Name="carousel"
+                     ItemsSource="{Binding ImageCollection}"
+                     ItemHeight="200"
+                     ItemWidth="200"
+                     ItemSpacing="60"
+                     ViewMode="Linear"/>
 	
 {% endhighlight %}
 
 {% highlight C# %}
 
-using Syncfusion.Maui.Carousel;
-using System.Collections.Generic;
-
-namespace CarouselSample
+SfCarousel carousel = new SfCarousel()
 {
-    public partial class MainPage : ContentPage
-    {
-        public MainPage()
-        {
-            InitializeComponent();
-            this.BindingContext = new CarouselViewModel();
-            SfCarousel carousel = new SfCarousel()
-            {
-                ItemHeight = 200,
-                ItemWidth = 200,
-                ItemSpacing = 10,
-                ViewMode = ViewMode.Linear
-            };
+    ItemHeight = 200,
+    ItemWidth = 200,
+    ItemSpacing = 60,
+    ViewMode = ViewMode.Linear
+};
 
-            carousel.ItemTemplate = new DataTemplate(() =>
-            {
-                Image image = new Image();
-                image.SetBinding(Image.SourceProperty, "Image");
-                image.Aspect = Aspect.AspectFit;
-                return image;
-            });
-
-            carousel.SetBinding(SfCarousel.ItemsSourceProperty, "ImageCollection");
-            this.Content = carousel;
-        }
-    }
-
-    public class CarouselModel
-    {
-        public CarouselModel(string imageString)
-        {
-            Image = imageString;
-        }
-        private string _image;
-
-        public string Image
-        {
-            get { return _image; }
-            set { _image = value; }
-        }
-    }
-
-    public class CarouselViewModel
-    {
-        public CarouselViewModel()
-        {
-            ImageCollection.Add(new CarouselModel("carousel_person1.png"));
-            ImageCollection.Add(new CarouselModel("carousel_person2.png"));
-            ImageCollection.Add(new CarouselModel("carousel_person3.png"));
-            ImageCollection.Add(new CarouselModel("carousel_person4.png"));
-            ImageCollection.Add(new CarouselModel("carousel_person5.png"));
-        }
-
-        private List<CarouselModel> imageCollection = new List<CarouselModel>();
-        public List<CarouselModel> ImageCollection
-        {
-            get { return imageCollection; }
-            set { imageCollection = value; }
-        }
-    }
-}
+carousel.SetBinding(SfCarousel.ItemsSourceProperty, "ImageCollection");
 
 {% endhighlight %}
 
 {% endtabs %}
 
+![ItemSpacing](images/itemspacing.png)

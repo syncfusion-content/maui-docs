@@ -9,7 +9,7 @@ documentation: ug
 
 # Migrating from Xamarin Carousel View to .NET MAUI Carousel View 
 
-To migrate easier from Xamarin `SfCarousel` to .NET MAUI Carousel View, we kept most of the APIs from Xamarin Carousel View in MAUI `SfCarousel`. However, to maintain the consistency of API naming in MAUI `SfCarousel`, we renamed some of the APIs. The APIs that have been changed in MAUI Carousel View from Xamarin Carousel View are detailed as follows.
+To migrate easier from `Xamarin SfCarousel` to `.NET MAUI SfCarousel`, we kept all the APIs from Xamarin SfCarousel in MAUI SfCarousel. We have renamed the namespace as follows.
 
 ## Namespaces 
 
@@ -21,3 +21,7 @@ To migrate easier from Xamarin `SfCarousel` to .NET MAUI Carousel View, we kept 
 <td>Syncfusion.SfCarousel.XForms</td>
 <td>Syncfusion.Maui.Carousel</td></tr>
 </table>
+
+## Upcoming features
+
+  * Scroll support in the default mode for mac and iOS platforms.
