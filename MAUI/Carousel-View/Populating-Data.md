@@ -9,11 +9,11 @@ documentation : ug
 
 # Populating Data in .NET MAUI Carousel View (SfCarousel)
 
-`SfCarousel` control supports binding to different data sources such as IList Data Source and Observable Collection Data Source.
+`SfCarousel` control supports binding to different items sources such as IList items Source and Observable Collection items Source.
 
 ## Through Binding
 
-Items can be populated in the `SfCarousel` control through data source and applying a custom template, as explained in the following.
+Items can be populated in the `SfCarousel` control through item source and applying a custom template, as explained in the following.
 
 ### Create a Model with Data
 
@@ -71,9 +71,6 @@ namespace CarouselSample
 }
 
 {% endhighlight %}
-
-N> Images can also be referred to in PCL and from the website URL as `instructed`.
-
 
 ### Binding the Data with Custom Template
 
@@ -141,58 +138,17 @@ namespace CarouselSample
                 return grid;
             });
 
+            carousel.BindingContext = carouselViewModel;
             carousel.ItemTemplate = itemTemplate;
             carousel.ItemsSource = carouselViewModel.ImageCollection;
 
             this.Content = carousel;
         }
     }
-
-    public class CarouselModel
-    {
-        public CarouselModel(string imageString)
-        {
-            Image = imageString;
-        }
-        private string _image;
-
-        public string Image
-        {
-            get { return _image; }
-            set { _image = value; }
-        }
-    }
-
-    public class CarouselViewModel
-    {
-        public CarouselViewModel()
-        {
-            ImageCollection.Add(new CarouselModel("carousel_person1.png"));
-            ImageCollection.Add(new CarouselModel("carousel_person2.png"));
-            ImageCollection.Add(new CarouselModel("carousel_person3.png"));
-            ImageCollection.Add(new CarouselModel("carousel_person4.png"));
-            ImageCollection.Add(new CarouselModel("carousel_person5.png"));
-        }
-
-        private List<CarouselModel> imageCollection = new List<CarouselModel>();
-        public List<CarouselModel> ImageCollection
-        {
-            get { return imageCollection; }
-            set { imageCollection = value; }
-        }
-    }
 }
 
 {% endhighlight %}
 {% endtabs %}
-
-* Now, set the `BindingContext` for the items collection in the code behind.
-
-{% highlight C# %}
-
-	carousel.BindingContext = new CarouselViewModel();
-
-{% endhighlight %}
 
 ## Through Carousel Item
 

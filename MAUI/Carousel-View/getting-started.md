@@ -7,112 +7,78 @@ control: Carousel
 documentation: ug
 ---
 
-# Getting Started with .NET MAUI Carousel
+# Getting Started with .NET MAUI Carousel (SfCarousel)
 
-This section explains the steps required to work with the `.NET MAUI Carousel`control.
+This section provides a quick overview of how to get started with the `.NET Maui Carousel` (SfCarousel) for Maui.
 
-## Creating an application with .NET MAUI Carousel
+## Creating an application using the .NET MAUI Carousel
 
-This section explains the steps required to work with the `SfCarousel` control for .NET MAUI.
+ 1. Create a new .NET MAUI application in Visual Studio.
+ 2. Syncfusion .NET MAUI components are available on [nuget.org](https://www.nuget.org/). To add SfCarousel to your project, open the NuGet package manager in Visual Studio, search for Syncfusion.Maui.Carousel and then install it.
+ 3. Import the control namespace `Syncfusion.Maui.Carousel` in XAML or C# code.
+ 4. Initialize the [SfCarousel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.html) control.
+ 
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 
-## Adding a .NET MAUI Carousel reference
+<ContentPage   
+    . . .
+    xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Carousel;assembly=Syncfusion.Maui.Carousel">
 
-The Syncfusion .NET MAUI controls are available in [Nuget.org](https://www.nuget.org/). To add `.NET MAUI Carousel` to your project, open the NuGet package manager in Visual Studio, search for `Syncfusion.Maui.Carousel`, and install it.
+    <syncfusion:SfCarousel />
+</ContentPage>
 
-## Handler registration 
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-In the MauiProgram.cs file, register the handler for the Syncfusion core.
+using Syncfusion.Maui.Carousel;
+. . .
 
-{% highlight c# hl_lines="6 17" %}
-using Microsoft.Maui;
-using Microsoft.Maui.Hosting;
-using Microsoft.Maui.Controls.Compatibility;
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        SfCarousel carousel = new SfCarousel();
+        this.Content = carousel;
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+## Register the handler
+
+The `Syncfusion.Maui.Core` NuGet is a dependent package for all Syncfusion controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion core.
+
+{% tabs %}
+{% highlight c# tabtitle="MauiProgram.cs" hl_lines="4 20" %}
 using Microsoft.Maui.Controls.Hosting;
 using Microsoft.Maui.Controls.Xaml;
+using Microsoft.Maui.Hosting;
 using Syncfusion.Maui.Core.Hosting;
 
-namespace ButtonSample
+namespace GettingStarted
 {
-    public static class MauiProgram
+    public class MauiProgram 
     {
         public static MauiApp CreateMauiApp()
         {
             var builder = MauiApp.CreateBuilder();
             builder
-            .UseMauiApp<App>()
-            .ConfigureSyncfusionCore()
-            .ConfigureFonts(fonts =>
-            {
-                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-            });
+                .UseMauiApp<App>()
+                .ConfigureFonts(fonts =>
+                {
+                    fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+                });
 
+            builder.ConfigureSyncfusionCore();
             return builder.Build();
-        }      
-    }
-}   
-
-{% endhighlight %} 
-
-## Create a Simple SfCarousel 
-
-The .NET MAUI Carousel View (SfCarousel) control is configured entirely in C# code or by using XAML markup. The following steps explain on how to create a `SfCarousel` and configure its elements,
-
-* Adding namespace for the added assemblies. 
-
-{% tabs %}
-
-{% highlight xaml %}
-
-	xmlns:carousel="clr-namespace:Syncfusion.Maui.Carousel;assembly=Syncfusion.Maui.Carousel"
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-	using Syncfusion.Maui.Carousel;
-
-{% endhighlight %}
-
-{% endtabs %}
-
-* Now add the `SfCarousel` control with a required optimal name by using the included namespace.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:carousel="clr-namespace:Syncfusion.Maui.Carousel;assembly=Syncfusion.Maui.Carousel"
-             xmlns:local="clr-namespace:CarouselSample"
-             x:Class="CarouselSample.MainPage">
-    <carousel:SfCarousel x:Name="carousel" />
-</ContentPage>
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-using Syncfusion.Maui.Carousel;
-
-namespace CarouselSample
-{
-    public partial class MainPage : ContentPage
-    {
-        public MainPage()
-        {
-            InitializeComponent();
-            SfCarousel carousel = new SfCarousel();
-            this.Content = carousel;
         }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
-
+{% endhighlight %} 
+{% endtabs %} 
 
 ## Add Carousel Items
 
@@ -122,291 +88,47 @@ We can populate the carousel's items by using any one of the following ways,
 
 * Through `ItemTemplate`
 
-### Through SfCarouselItem
+The below is an simple example for adding Carousel items using SfCarouselItem, for more details on Populating data click [Here](https://help.syncfusion.com/maui/carousel-view/populating-data)
 
-By passing the list of `SfCarouselItem` , we can get the view of `SfCarousel` control. In that we can pass Images as well as Item content.
-
-The following code example illustrates to add list of Images in Carousel ,
+The following code example illustrates how to create a list of Images in Carousel,
 
 {% highlight C# %}
 
-using Syncfusion.Maui.Carousel;
-using System.Collections.ObjectModel;
-
-namespace CarouselSample
+public class CarouselViewModel
 {
-    public partial class MainPage : ContentPage
+    public ObservableCollection<SfCarouselItem> carouselItems;
+    public CarouselViewModel()
     {
-        public MainPage()
-        {
-            InitializeComponent();
-            SfCarousel carousel = new SfCarousel()
-            {
-                ItemWidth = 170,
-                ItemHeight = 250
-            };
-            ObservableCollection<SfCarouselItem> carouselItems = new ObservableCollection<SfCarouselItem>();
-            carouselItems.Add(new SfCarouselItem() { ImageName = "carousel_person1.png" });
-            carouselItems.Add(new SfCarouselItem() { ImageName = "carousel_person2.png" });
-            carouselItems.Add(new SfCarouselItem() { ImageName = "carousel_person3.png" });
-            carouselItems.Add(new SfCarouselItem() { ImageName = "carousel_person4.png" });
-            carouselItems.Add(new SfCarouselItem() { ImageName = "carousel_person5.png" });
-
-            carousel.ItemsSource = carouselItems;
-
-            this.Content = carousel;
-        }
+        carouselItems = new ObservableCollection<SfCarouselItem>();
+        carouselItems.Add(new SfCarouselItem() { ImageName = "carousel_person1.png" });
+        carouselItems.Add(new SfCarouselItem() { ImageName = "carousel_person2.png" });
+        carouselItems.Add(new SfCarouselItem() { ImageName = "carousel_person3.png" });
+        carouselItems.Add(new SfCarouselItem() { ImageName = "carousel_person4.png" });
+        carouselItems.Add(new SfCarouselItem() { ImageName = "carousel_person5.png" });
     }
 }
 
 {% endhighlight %}
 
-The following code example illustrates to add list of Item in Carousel ,
+The following code example illustrates how to add the collection in Carousel,
 
-{% highlight C# %}
-
-using Syncfusion.Maui.Carousel;
-using System.Collections.ObjectModel;
-
-namespace CarouselSample
-{
-    public partial class MainPage : ContentPage
-    {
-        public MainPage()
-        {
-            InitializeComponent();
-            SfCarousel carousel = new SfCarousel()
-            {
-                ItemWidth = 170,
-                ItemHeight = 250
-            };
-
-            ObservableCollection<SfCarouselItem> carouselItems = new ObservableCollection<SfCarouselItem>();
-
-            carouselItems.Add(new SfCarouselItem()
-            {
-                ItemContent = new Button()
-                {
-                    Text = "ItemContent1",
-                    TextColor = Color.White,
-                    BackgroundColor = Color.FromHex("#7E6E6B"),
-                    FontSize = 12
-                }
-            });
-            carouselItems.Add(new SfCarouselItem()
-            {
-                ItemContent = new Label()
-                {
-                    Text = "ItemContent2",
-                    BackgroundColor = Color.FromHex("#7E6E6B"),
-                    HorizontalTextAlignment = TextAlignment.Center,
-                    VerticalTextAlignment = TextAlignment.Center,
-                    FontSize = 12
-                }
-            });
-            carouselItems.Add(new SfCarouselItem()
-            {
-                ItemContent = new Image()
-                {
-                    Source = "carousel_person1.png",
-                    Aspect = Aspect.AspectFit
-                }
-            });
-
-            carousel.ItemsSource = carouselItems;
-
-            this.Content = carousel;
-        }
-    }
-}
-
-
-{% endhighlight %}
-
-### Through ItemTemplate
-
-`ItemTemplate` property of Xamarin Carousel View (SfCarousel) control is used to customize the contents of `SfCarousel` items.
-
-* Create a model view which holds image data
-
-{% highlight C# %}
-
-namespace CarouselSample
-{
-    public class CarouselModel
-    {
-        public CarouselModel(string imageString)
-        {
-            Image = imageString;
-        }
-        private string _image;
-
-        public string Image
-        {
-            get { return _image; }
-            set { _image = value; }
-        }
-    }
-}
-
-{% endhighlight %}
-
-* Populate carousel items collection in View model with the image data. 
-
-{% highlight C# %}
-
-using System.Collections.Generic;
-
-namespace CarouselSample
-{
-    public class CarouselViewModel
-    {
-        public CarouselViewModel()
-        {
-            ImageCollection.Add(new CarouselModel("carousel_person1.png"));
-            ImageCollection.Add(new CarouselModel("carousel_person2.png"));
-            ImageCollection.Add(new CarouselModel("carousel_person3.png"));
-            ImageCollection.Add(new CarouselModel("carousel_person4.png"));
-            ImageCollection.Add(new CarouselModel("carousel_person5.png"));
-        }
-        private List<CarouselModel> imageCollection = new List<CarouselModel>();
-        public List<CarouselModel> ImageCollection
-        {
-            get { return imageCollection; }
-            set { imageCollection = value; }
-        }
-    }
-}
-
-{% endhighlight %}
-
-The following code illustrates the way to use `ItemTemplate` in both XAML as well as C#
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:carousel="clr-namespace:Syncfusion.Maui.Carousel;assembly=Syncfusion.Maui.Carousel"
              xmlns:local="clr-namespace:CarouselSample"
              x:Class="CarouselSample.MainPage">
+             
     <ContentPage.BindingContext>
         <local:CarouselViewModel/>
     </ContentPage.BindingContext>
-    <ContentPage.Resources>
-        <ResourceDictionary>
-            <DataTemplate x:Key="itemTemplate">
-                <Image Source="{Binding Image}" 
-                       Aspect="AspectFit"/>
-            </DataTemplate>
-        </ResourceDictionary>
-    </ContentPage.Resources>
-    <ContentPage.Content>
-        <carousel:SfCarousel x:Name="carousel"  
-                             ItemTemplate="{StaticResource itemTemplate}" 
-                             ItemsSource="{Binding ImageCollection}" 
-                             HeightRequest="400" 
-                             WidthRequest="800" />
-    </ContentPage.Content>
-</ContentPage>
 
-{% endhighlight %}
-
-{% highlight C# %}
-
-using Syncfusion.Maui.Carousel;
-using System.Collections.Generic;
-
-namespace CarouselSample
-{
-    public partial class MainPage : ContentPage
-    {
-        public MainPage()
-        {
-            InitializeComponent();
-            CarouselViewModel carouselViewModel = new CarouselViewModel();
-
-            SfCarousel carousel = new SfCarousel()
-            {
-                HeightRequest = 400,
-                WidthRequest = 800
-            };
-
-            var itemTemplate = new DataTemplate(() =>
-            {
-                var grid = new Grid();
-                var nameLabel = new Image();
-                nameLabel.SetBinding(Image.SourceProperty, "Image");
-                grid.Children.Add(nameLabel);
-                return grid;
-            });
-
-            carousel.ItemTemplate = itemTemplate;
-            carousel.ItemsSource = carouselViewModel.ImageCollection;
-
-            this.Content = carousel;
-        }
-    }
-
-    public class CarouselModel
-    {
-        public CarouselModel(string imageString)
-        {
-            Image = imageString;
-        }
-        private string _image;
-
-        public string Image
-        {
-            get { return _image; }
-            set { _image = value; }
-        }
-    }
-
-    public class CarouselViewModel
-    {
-        public CarouselViewModel()
-        {
-            ImageCollection.Add(new CarouselModel("carousel_person1.png"));
-            ImageCollection.Add(new CarouselModel("carousel_person2.png"));
-            ImageCollection.Add(new CarouselModel("carousel_person3.png"));
-            ImageCollection.Add(new CarouselModel("carousel_person4.png"));
-            ImageCollection.Add(new CarouselModel("carousel_person5.png"));
-        }
-
-        private List<CarouselModel> imageCollection = new List<CarouselModel>();
-        public List<CarouselModel> ImageCollection
-        {
-            get { return imageCollection; }
-            set { imageCollection = value; }
-        }
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-I> Carousel's Images are placed within the application folder for Android, iOS and UWP with build action Android Resource, Bundled Resource and Content respectively. 
-
-N> In addition, carousel provides a support to load the Images from `URL` and `SD Card` location.
-
-## Setting the height and width of the carousel item
-
-`ItemHeight` and `ItemWidth` properties are used to change the height and width of carouselItem in carousel panel.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:carousel="clr-namespace:Syncfusion.Maui.Carousel;assembly=Syncfusion.Maui.Carousel"
-             xmlns:local="clr-namespace:CarouselSample"
-             x:Class="CarouselSample.MainPage">
     <carousel:SfCarousel x:Name="carousel"
+                         ItemsSource="carouselItems"
                          ItemHeight="170"
                          ItemWidth="270"/>
 </ContentPage>
@@ -425,20 +147,16 @@ namespace CarouselSample
         public MainPage()
         {
             InitializeComponent();
+
+            CarouselViewModel carouselViewModel = new CarouselViewModel();
             SfCarousel carousel = new SfCarousel()
             {
                 ItemWidth = 170,
                 ItemHeight = 250
             };
 
-            ObservableCollection<SfCarouselItem> carouselItems = new ObservableCollection<SfCarouselItem>();
-            carouselItems.Add(new SfCarouselItem() { ImageName = "carousel_person1.png" });
-            carouselItems.Add(new SfCarouselItem() { ImageName = "carousel_person2.png" });
-            carouselItems.Add(new SfCarouselItem() { ImageName = "carousel_person3.png" });
-            carouselItems.Add(new SfCarouselItem() { ImageName = "carousel_person4.png" });
-            carouselItems.Add(new SfCarouselItem() { ImageName = "carousel_person5.png" });
-
-            carousel.ItemsSource = carouselItems;
+            carousel.BindingContext = carouselViewModel;
+            carousel.ItemsSource = carouselViewModel.ImageCollection;
 
             this.Content = carousel;
         }
@@ -449,62 +167,62 @@ namespace CarouselSample
 
 {% endtabs %}
 
-## Set Desire Item to be Selected
 
-We can bring particular item to the center of the screen using `SelectedIndex` property in `SfCarousel` control.
+## Setting the height and width of the carousel item
 
-The items can be populated as described [above](#add-carousel-items)
+`ItemHeight` and `ItemWidth` properties are used to change the height and width of carouselItem in carousel panel.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:carousel="clr-namespace:Syncfusion.Maui.Carousel;assembly=Syncfusion.Maui.Carousel"
-             xmlns:local="clr-namespace:CarouselSample"
-             x:Class="CarouselSample.MainPage">
-    <carousel:SfCarousel x:Name="carousel"
-                         ItemHeight="170"
-                         ItemWidth="270"
-                         SelectedIndex="2"/>
-</ContentPage>
+<carousel:SfCarousel x:Name="carousel"
+                     ItemsSource="carouselItems"
+                     ItemHeight="170"
+                     ItemWidth="270"/>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfCarousel carousel = new SfCarousel()
+{
+    ItemWidth = 170,
+    ItemHeight = 250
+};
+
+carousel.ItemsSource = carouselViewModel.ImageCollection;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+## Set Desire Item to be Selected
+
+We can bring particular item to the center of the screen using `SelectedIndex` property in `SfCarousel` control.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<carousel:SfCarousel x:Name="carousel"
+                     ItemsSource="carouselItems"
+                     ItemHeight="170"
+                     ItemWidth="270"
+                     SelectedIndex="2"/>
 	
 {% endhighlight %}
 
 {% highlight C# %}
 
-using Syncfusion.Maui.Carousel;
-using System.Collections.ObjectModel;
-
-namespace CarouselSample
+SfCarousel carousel = new SfCarousel()
 {
-    public partial class MainPage : ContentPage
-    {
-        public MainPage()
-        {
-            InitializeComponent();
-            SfCarousel carousel = new SfCarousel()
-            {
-                ItemWidth = 170,
-                ItemHeight = 250,
-                SelectedIndex = 2
-            };
+    ItemWidth = 170,
+    ItemHeight = 250,
+    SelectedIndex = 2
+};
 
-            ObservableCollection<SfCarouselItem> carouselItems = new ObservableCollection<SfCarouselItem>();
-            carouselItems.Add(new SfCarouselItem() { ImageName = "carousel_person1.png" });
-            carouselItems.Add(new SfCarouselItem() { ImageName = "carousel_person2.png" });
-            carouselItems.Add(new SfCarouselItem() { ImageName = "carousel_person3.png" });
-            carouselItems.Add(new SfCarouselItem() { ImageName = "carousel_person4.png" });
-            carouselItems.Add(new SfCarouselItem() { ImageName = "carousel_person5.png" });
-
-            carousel.ItemsSource = carouselItems;
-
-            this.Content = carousel;
-        }
-    }
-}
+carousel.ItemsSource = carouselViewModel.ImageCollection;
 
 {% endhighlight %}
 
