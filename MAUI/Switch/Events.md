@@ -37,6 +37,7 @@ this.Content = sfSwitch;
 {% endtabs %}
 
 {% tabs %}
+
 {% highlight c# %}
     
 private async void SfSwitch_StateChanged(object sender, SwitchStateChangedEventArgs e)
@@ -49,9 +50,7 @@ private async void SfSwitch_StateChanged(object sender, SwitchStateChangedEventA
 }
 
 {% endhighlight %}
-{% endtabs %}
 
-{% endhighlight %}
 {% endtabs %}
 
 ![SwitchStateChangedEventArgs](images/Events/Events.gif)
@@ -83,6 +82,7 @@ this.Content = sfSwitch;
 {% endtabs %}
 
 {% tabs %}
+
 {% highlight c# %}
     
 private void SfSwitch_StateChanging(object sender, SwitchStateChangingEventArgs e)
@@ -99,4 +99,5 @@ private void SfSwitch_StateChanging(object sender, SwitchStateChangingEventArgs 
 }
 
 {% endhighlight %}
+
 {% endtabs %}
