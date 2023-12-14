@@ -106,7 +106,7 @@ The following screenshot shows the outcome upon execution of the above code:
 
 ![Normal paging .NET MAUI DataGrid](Images\paging\maui-datagrid-normal-paging.png)
 
-## OnDemandPaging	
+## On-DemandPaging	
 
 In normal Paging, data collection is entirely loaded initially into the `SfDataPager`. However, the control also allows for dynamically loading the data for the current page by setting `SfDataPager.UseOnDemandPaging` to `true`.
 
@@ -295,9 +295,64 @@ public partial class MainPage : ContentPage
 
 ![Button size and Font size of .NET MAUI DataGrid](Images\paging\maui-datagrid-buttonsize-and-fontsize.png)
 
-## DisplayMode
+## Display mode
 
-The `SfDataPager.DisplayMode` property enables the user to personalize the buttons displayed on the datapager. By default, all buttons (including first, last, next, previous, and numeric buttons) are visible.
+The visibility of the numeric and navigation buttons can be personalized by using the `SfDataPager.DisplayMode` property. All the buttons will be visible by default.
+
+<table>
+<tr>
+<th> Property Value </th>
+<th> Description </th>
+</tr>
+<tr>
+<td> {{'`None`'| markdownify }} </td>
+<td> Do not display any page buttons.</td>
+</tr>
+<tr>
+<td> {{'`First`'| markdownify }} </td>
+<td> Displays only the first page button.</td>
+</tr>
+<tr>
+<td> {{'`Last`'| markdownify }} </td>
+<td> Displays only the last page button.</td>
+</tr>
+<tr>
+<td> {{'`Previous`'| markdownify }} </td>
+<td> Displays only the previous page button.</td>
+</tr>
+<tr>
+<td> {{'`Next`'| markdownify }} </td>
+<td> Displays only the next page button.</td>
+</tr>
+<tr>
+<td> {{'`Numeric`'| markdownify }} </td>
+<td> Displays only the numeric page buttons.</td>
+</tr>
+<tr>
+<td> {{'`FirstLast`'| markdownify }} </td>
+<td> Displays the first and last page buttons.</td>
+</tr>
+<tr>
+<td> {{'`PreviousNext`'| markdownify }} </td>
+<td> Displays the previous and next page buttons.</td>
+</tr>
+<tr>
+<td> {{'`FirstLastNumeric`'| markdownify }} </td>
+<td> Displays the first, last and numeric page buttons.</td>
+</tr>
+<tr>
+<td> {{'`PreviousNextNumeric`'| markdownify }} </td>
+<td> Displays the previous, next and numeric page buttons.</td>
+</tr>
+<tr>
+<td> {{'`FirstLastPreviousNext`'| markdownify }} </td>
+<td> Displays the first, last, previous and next page buttons.</td>
+</tr>
+<tr>
+<td> {{'`FirstLastPreviousNextNumeric`'| markdownify }} </td>
+<td> Displays the first, last, numeric, previous and next page buttons.</td>
+</tr>
+</table>
 
 {% tabs %}
 {% highlight xaml %}
@@ -319,9 +374,9 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-## AutoElipsisMode
+## Auto-ellipsis mode
 
-The `AutoEllipsisMode` is a feature that determines the ellipsis mode for the numeric buttons within the scrollable panel of the SfDataPager. By default, all numeric buttons on the page are visible. However, you have the option to adjust the auto ellipsis mode using the `SfDataPager.AutoEllipsisMode` property.
+The `SfDataPager` offers support for displaying an ellipsis button at the beginning and end of the numeric buttons when the scroll view contains additional numeric buttons before or after the currently selected numeric button. It can be customized by using the `SfDataPager.AutoEllipsisMode` property.
 
 {% tabs %}
 {% highlight xaml %}
@@ -345,9 +400,9 @@ public partial class MainPage : ContentPage
 
 ![AutoEllipsisMode .NET MAUI DataGrid](Images\paging\maui-datagrid-autoelipsismode.png)
 
-## AutoEllipsisText
+## Customize the auto-ellipsis text
 
-The data pager allows the user to customize the text to be displayed in the auto ellipsis mode by using `SfDataPager.AutoEllipsisText` property. The default value of `AutoEllipsisText` is set to `…`.
+The auto-ellipsis text can be customized by using the `SfDataPager.AutoEllipsisText` property. The default value of `AutoEllipsisText` is set to `…`.
 
 {% tabs %}
 {% highlight xaml %}
@@ -371,35 +426,31 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-## Move to pages programmatically
+## Programmatically switch pages
 
-### MoveToFirstPage
+### Move to the first page
 
 The data pager allows the users to programmatically navigate to the first page using the `MoveToFirstPage()` method.
 
-### MoveToLastPage
+### Move to the last page
 
 The data pager allows the users to programmatically navigate to the last page using the `MoveToLastPage()` method.
 
-### MoveToNextPage
+### Move to to the next page
 
 The data pager allows the users to programmatically navigate to the next page using the `MoveToNextPage()` method.
 
-### MoveToPreviousPage
+### Move to to the previous page
 
 The data pager allows the users to programmatically navigate to the previous page using the `MoveToPreviousPage()` method.
 
-### MoveToPage(Int32)
+### Move to page
 
-The data pager allows the users to programmatically navigate to the desired page using the `MoveToPage(Int32)` method.
-
-### MoveToPage(Int32, Int32, Boolean)
-
-The data pager allows the users to programmatically navigate to the desired page from the current page using the `MoveToPage(Int32, Int32, Boolean)` method.
+The data pager allows the users to programmatically navigate to the desired page using the `MoveToPage(Int32)` method. Users can also able to navigate to the page with animation using the `MoveToPage(Int32, Int32, Boolean)` method.
 
 ## Orientation
 
-By default, `SfDataPager` scrolls horizontally. However, `SfDataPager.Orientation` property allows users to customize the pager to scroll vertically or horizontally according to their preferences.
+By default, `SfDataPager` displays the button in the horizontal direction. However, the `SfDataPager.Orientation` property allows users to customize the data pager to display the buttons vertically or horizontally according to their preferences.
 
 {% tabs %}
 {% highlight xaml %}
@@ -422,31 +473,6 @@ public partial class MainPage : ContentPage
 {% endtabs %}
 
 ## Events
-
-### PageChanged
-
-The `PageChanged` event is triggered when the user navigates form one page to another page. `SfDataPager.PageChangedEventArgs` contains the following members, which provide the information for `PageChanged` event:
-
-* **OldPageIndex** - Gets the current page index from which the page is navigated.
-* **NewPageIndex** - Gets the new page index to which the page is navigated.
-
-{% tabs %}
-{% highlight c# %}
-public partial class MainPage : ContentPage
-{
-    public MainPage()
-    {
-        InitializeComponent();
-        dataPager.PageChanged += DataPager_PageChanged;
-    }
-
-    private void DataPager_PageChanged(object sender, Syncfusion.Maui.DataGrid.DataPager.PageChangedEventArgs e)
-    {
-        // you can get the old page index and new page index here.
-    }
-}
-{% endhighlight %}
-{% endtabs %}
 
 ### PageChanging
 
@@ -474,11 +500,36 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-## DataPagerStyle
+### PageChanged
 
-The data pager allows you to change its appearance by changing the properties of `DataPagerStyle` and then assigning it to the `SfDataPager.DefaultStyle` property.
+The `PageChanged` event is triggered when the user navigates form one page to another page. `SfDataPager.PageChangedEventArgs` contains the following members, which provide the information for `PageChanged` event:
 
-The `SfDataPager` allows customizing the appearance using the following properties.
+* **OldPageIndex** - Gets the current page index from which the page is navigated.
+* **NewPageIndex** - Gets the new page index to which the page is navigated.
+
+{% tabs %}
+{% highlight c# %}
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        dataPager.PageChanged += DataPager_PageChanged;
+    }
+
+    private void DataPager_PageChanged(object sender, Syncfusion.Maui.DataGrid.DataPager.PageChangedEventArgs e)
+    {
+        // you can get the old page index and new page index here.
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
+## Customize the appearance
+
+The data pager allows you to change its appearance by modifying the properties of `DataPagerStyle` and then assigning it to the `SfDataPager.DefaultStyle` property.
+
+The `SfDataPager` enables customization of its appearance using the following properties:
 
 <table>
 <tr>
@@ -491,15 +542,15 @@ The `SfDataPager` allows customizing the appearance using the following properti
 </tr>
 <tr>
 <td> {{'`NavigationButtonBackgroundColor`'| markdownify }} </td>
-<td> Gets or sets the background color of the navigation button.</td>
+<td> Gets or sets the background color of the navigation buttons.</td>
 </tr>
 <tr>
 <td> {{'`NavigationButtonDisableBackgroundColor`'| markdownify }} </td>
-<td> Gets or sets the background color of the navigation button when it is in a disabled state.</td>
+<td> Gets or sets the background color of the navigation buttons when it is disabled.</td>
 </tr>
 <tr>
 <td> {{'`NavigationButtonDisableIconColor`'| markdownify }} </td>
-<td> Gets or sets the icon color of the navigation button when it is in a disabled state.</td>
+<td> Gets or sets the icon color of the navigation buttons when it is disabled.</td>
 </tr>
 <tr>
 <td> {{'`NavigationButtonIconColor`'| markdownify }} </td>
@@ -507,35 +558,35 @@ The `SfDataPager` allows customizing the appearance using the following properti
 </tr>
 <tr>
 <td> {{'`NumericButtonBackgroundColor`'| markdownify }} </td>
-<td> Gets or sets the background color for numeric button.</td>
+<td> Gets or sets the background color for the numeric buttons.</td>
 </tr>
 <tr>
 <td> {{'`NumericButtonSelectionBackgroundColor`'| markdownify }} </td>
-<td> Gets or sets background color of the selection numeric button.</td>
+<td> Gets or sets the background color of the numeric button that is currently selected.</td>
 </tr>
 <tr>
 <td> {{'`NumericButtonSelectionTextColor`'| markdownify }} </td>
-<td> Gets or sets the foreground color of the selection numeric button.</td>
+<td> Gets or sets the text color of the numeric button that is currently selected.</td>
 </tr>
 <tr>
 <td> {{'`NumericButtonTextColor`'| markdownify }} </td>
-<td> Gets or sets the foreground color of the numeric button.</td>
+<td> Gets or sets the text color of the numeric buttons.</td>
 </tr>
 <tr>
 <td> {{'`FirstPageButtonTemplate`'| markdownify }} </td>
-<td> Gets or sets the template of the first page button template.</td>
+<td> Gets or sets the template for the first page navigation button.</td>
 </tr>
 <tr>
 <td> {{'`LastPageButtonTemplate`'| markdownify }} </td>
-<td> Gets or sets the template of the last page button template.</td>
+<td> Gets or sets the template for the last page navigation button.</td>
 </tr>
 <tr>
 <td> {{'`NextPageButtonTemplate`'| markdownify }} </td>
-<td> Gets or sets the template of the next page button template.</td>
+<td> Gets or sets the template for the next page navigation button.</td>
 </tr>
 <tr>
 <td> {{'`PreviousPageButtonTemplate`'| markdownify }} </td>
-<td> Gets or sets the template of the previous page button template.</td>
+<td> Gets or sets the template for the previous page navigation button.</td>
 </tr>
 </table>
   
