@@ -745,6 +745,75 @@ The following image illustrates the result of the above code:
 
 N> The `Completed` event is not supported in the Android platform.
 
+## DropDownOpening Event
+
+The `DropDownOpening` event will be fired whenever opening the dropdown menu in the SfComboBox. It can cancel dropdown opening with CancelEventArgs that contains the following property:
+
+ * Cancel: Dropdown opening is based on this value.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+ <editors:SfComboBox 
+ DropdownOpening="comboBox_DropdownOpening"
+ WidthRequest="350"
+ HeightRequest="50"
+ ItemsSource="{Binding SocialMedias}"
+ DisplayMemberPath="Name"
+ TextMemberPath="Name"    
+ x:Name="comboBox" >
+ </editors:SfComboBox>
+    
+{% endhighlight %}
+
+{% highlight c# %}
+
+ comboBox.DropdownOpening += comboBox_DropdownOpening;
+
+ private void comboBox_DropdownOpening(object sender, CancelEventArgs e)
+ {
+     e.Cancel = true;
+ }
+
+{% endhighlight %}
+
+{% endtabs %}
+
+## DropDownOpened Event
+
+The `DropDownOpened` event occurs when the SfComboBox drop-down is opened.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<editors:SfComboBox 
+DropdownOpened="comboBox_DropdownOpened"
+WidthRequest="350"
+HeightRequest="50"
+ItemsSource="{Binding SocialMedias}"
+DisplayMemberPath="Name"
+TextMemberPath="Name"    
+x:Name="comboBox" >
+</editors:SfComboBox>
+ 
+{% endhighlight %}
+
+{% highlight c# %}
+
+  comboBox.DropdownOpened += comboBox_DropdownOpened;
+
+  private void comboBox_DropdownOpened(object sender, EventArgs e)
+  {
+
+  }
+
+{% endhighlight %}
+
+{% endtabs %}
+
+
 ## DropDownClosed Event
 
 The `DropDownClosed` event occurs when the SfComboBox drop-down is closed.
