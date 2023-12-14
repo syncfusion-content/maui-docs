@@ -661,6 +661,50 @@ The following image illustrates the result of the above code:
 
 ![.NET MAUI ComboBox ItemTemplateSelector](Images/UICustomization/TemplateSelector.png)
 
+## Styling token items
+
+The ComboBox control allows you to customize the style of TokenItem generated in the selection area by using the `TokenItemStyle` property. 
+
+{% tabs %}
+
+{% highlight xaml %}
+ ...
+
+  xmlns:core="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
+  xmlns:editors="clr-namespace:Syncfusion.Maui.Inputs;assembly=Syncfusion.Maui.Inputs"
+
+ ...
+
+  <editors:SfComboBox SelectionMode="Multiple" 
+             x:Name="comboBox" 
+             ItemsSource="{Binding SocialMedias}" 
+             HeightRequest="50"
+             MaxDropDownHeight="250"
+             WidthRequest="350"
+             DisplayMemberPath="Name"
+             TextMemberPath="Name">
+     <editors:SfComboBox.TokenItemStyle>
+         <Style TargetType="core:SfChipGroup">
+             <Setter Property="ChipTextColor" Value="White"/>
+             <Setter Property="ChipFontAttributes" Value="Bold"/>
+             <Setter Property="CloseButtonColor" Value="White"/>
+             <Setter Property="ChipBackground" Value="#d3a7ff"/>
+             <Setter Property="ChipStroke" Value="#5118e3"/>
+             <Setter Property="ChipStrokeThickness" Value="6"/>
+             <Setter Property="ChipCornerRadius" Value="18"/>
+         </Style>
+     </editors:SfComboBox.TokenItemStyle>
+ </editors:SfComboBox>
+
+{% endhighlight %}
+
+{% endtabs %}
+
+The following image illustrates the result of the above code.
+
+![.NET MAUI ComboBox token item style](Images/UICustomization/Tokenitemstyle.png)
+
+
 ## Completed Event
 
 The [Completed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_Completed) event is raised when the user finalizes the text in the [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) editable mode by pressing return key on the keyboard.The handler for the event is a generic event handler, taking the `sender` and `EventArgs`(the `EventArgs` value is `string.Empty`):
