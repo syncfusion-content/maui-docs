@@ -9,7 +9,7 @@ documentation: ug
 
 # Selection in .NET MAUI Autocomplete (SfAutocomplete)
 
-The [.NET MAUI Autocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) allows user to select a single item from dropdown list.
+The [.NET MAUI Autocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) allows user to select single or multiple items. The selection mode can be set by using the `SelectionMode` property. There are two different selection modes: `Single` and `Multiple`.
 
 ## Single selection
 
@@ -78,12 +78,76 @@ The following gif image illustrates the result of the above code:
 
 ![.NET MAUI Autocomplete with single selection mode](Images/Selection/SingleSelection.png)
 
+## Multiple selection
+
+The AutoComplete allows user to select multiple values by beginning to enter the input and selecting items from the drop-down list. The multi-select AutoComplete mode can be enabled by setting the `SelectionMode` property as `Multiple`. 
+
+Selected items will be displayed with a  token representation and each tokenized items can be removed by clicking their close button. The selected items can be retrieved from the `SelectedItems` property.
+
+{% tabs %}
+
+{% highlight XAML %}
+
+ <editors:SfAutocomplete
+ SelectionMode="Multiple"
+ WidthRequest="350"
+ HeightRequest="50"
+ ItemsSource="{Binding SocialMedias}"
+ DisplayMemberPath="Name"
+ TextMemberPath="Name"    
+ Width="250"
+ x:Name="autoComplete" />
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+autoComplete.SelectionMode = Syncfusion.Maui.Inputs.AutocompleteSelectionMode.Multiple;
+
+{% endhighlight %}
+{% endtabs %}
+
+The following gif image illustrates the result of the above code:
+
+![.NET MAUI Autocomplete with multi selection mode](Images/Selection/Multiselection.gif)
+
+### Programmatic selection
+
+The selected items can be changed programmatically by using the `SelectedItems` property of Autocomplete control.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+  <editors:SfAutocomplete
+  SelectionMode="Multiple"
+  WidthRequest="350"
+  HeightRequest="50"
+  ItemsSource="{Binding SocialMedias}"
+  DisplayMemberPath="Name"
+  TextMemberPath="Name"    
+  x:Name="autoComplete" />
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+ SocialMediaViewModel socialMediaViewModel = (this.autoComplete.BindingContext as SocialMediaViewModel);
+ ObservableCollection<SocialMedia> socialMediasList = socialMediaViewModel.SocialMedias;
+ this.autoComplete.SelectedItems.Add(socialMediasList[0]);
+ this.autoComplete.SelectedItems.Add(socialMediasList[2]);
+
+{% endhighlight %}
+
+{% endtabs %}
+
+ 
 ## Selection changed notification
 
-When an item is selected from the drop-down list, the [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_SelectionChanged) event is triggered. The SelectionChanged event contains the newly selected and previously selected items in the `CurrentSelection` and `PreviousSelection` properties. The SelectionChanged contains the following properties:
+When an item is selected from the drop-down list, the [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_SelectionChanged) event is triggered. The SelectionChanged event contains the newly selected and removed items in the `AddedItems` and `RemovedItems` properties. The SelectionChanged Event contains the following properties:
 
- * CurrentSelection - Contains the item that were currently selected.
- * PreviousSelection - Contains the item that were previously selected.
+ * `AddedItems` - Contains the item that were currently selected.
+ * `RemovedItems` - Contains the item that were unselected.
 
 {% tabs %}
 {% highlight xaml %}
@@ -120,6 +184,8 @@ private async void OnSelectionChanged(object sender, Syncfusion.Maui.Inputs.Sele
 The following gif image illustrates the result of the above code:
 
 ![.NET MAUI Autocomplete](Images/Selection/SelectionChangedEventNotification.png)
+
+N> SelectionChanged event arguments `CurrentSelection` and `PreviousSelection` marked as "Obsolete". You can use the `AddedItems` and `RemovedItems` event arguments.
 
 ## Get the selected value
 
