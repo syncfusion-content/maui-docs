@@ -73,29 +73,35 @@ sfNumericEntry.UpDownPlacementMode = NumericEntryUpDownPlacementMode.Inline;
 
 ## UpDown button color
 
-You can customize the `NumericEntry` control button color by using the `UpDownButtonColor` property.
+Customize the `NumericEntry` control button color by using the `UpDownButtonColor` property.
 
 {% tabs %}
 {% highlight XAML %}
 
-<editors:SfNumericEntry HorizontalOptions="Center"
+<editors:SfNumericEntry HeightRequest="50"
+                        WidthRequest="200"
+                        HorizontalOptions="Center"
                         VerticalOptions="Center"
                         Value="360"
                         UpDownPlacementMode="Inline"
-                        UpDownButtonColor="Aqua"/>
+                        UpDownButtonColor="Blue"/>
                      
 {% endhighlight %}
 {% highlight c# %}
 
 SfNumericEntry sfNumericEntry = new SfNumericEntry();
-sfNumericEntry.HorizontalOptions = LayoutOptions.Center;
+sfNumericEntry.HeightRequest= 50;
+sfNumericEntry.WidthRequest = 200;
+sfNumericEntry.HorizontalOptions = LayoutOptions.Center
 sfNumericEntry.VerticalOptions = LayoutOptions.Center;
 sfNumericEntry.Value = 360;
 sfNumericEntry.UpDownPlacementMode = NumericEntryUpDownPlacementMode.Inline;
-sfNumericEntry.UpDownButtonColor = Colors.Aqua;
+sfNumericEntry.UpDownButtonColor = Colors.Blue;
 
 {% endhighlight %}
 {% endtabs %}
+
+![UpDownButtonColor support in .NET MAUI NumericEntry](UpDownButton_images/UpDownButtonColor.png)
 
 ## UpDown button template
 
@@ -189,11 +195,7 @@ The `NumericEntry` control supports customization of the UpDownButton's appearan
                  TextColor = Colors.Red,
                  FontSize = 20
              };
-
-             // Add the Label to the Grid
              grid.Children.Add(label);
-
-             // Return the Grid as the root of the DataTemplate
              return grid;
          });
          numericEntry.UpButtonTemplate = upButtonTemplate;
@@ -205,6 +207,8 @@ The `NumericEntry` control supports customization of the UpDownButton's appearan
 
 {% endhighlight %}
 {% endtabs %}
+
+![UpDownButtonTemplate support in .NET MAUI NumericEntry](UpDownButton_images/UpDownButtonTemplate.png)
 
 ## Auto reverse in SfNumericEntry
 
