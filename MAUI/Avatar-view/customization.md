@@ -15,7 +15,7 @@ The [SfAvatarView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAv
 
 ## Aspect
 
-The `Aspect` property in [SfAvatarView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html?tabs=tabid-1) controls how the picture is adjusted to fit the display. By default, its set to `AspectFill`
+The `Aspect` property in [SfAvatarView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html?tabs=tabid-1) controls how the picture is adjusted to fit the display. By default, its set to `AspectFill`.
 
 * AspectFit: Ensures the entire picture fits, adding space if needed.
 * AspectFill: Clips the image to fill the display while keeping its shape.
@@ -32,7 +32,7 @@ The `Aspect` property in [SfAvatarView](https://help.syncfusion.com/cr/maui/Sync
                            AvatarSize="Large"
                            HorizontalOptions="Center"
                            VerticalOptions="Center"
-                           ImageSource="ellanaa.png"
+                           ImageSource="person.png"
                            Aspect="AspectFit">
    </sfavatar:SfAvatarView>
 </Grid>
@@ -48,7 +48,7 @@ avatarview.AvatarShape = AvatarShape.Circle;
 avatarview.AvatarSize = AvatarSize.Large;
 avatarview.VerticalOptions = LayoutOptions.Center;
 avatarview.HorizontalOptions = LayoutOptions.Center;
-avatarview.ImageSource = "ellanaa.png";
+avatarview.ImageSource = "person.png";
 avatarview.Aspect = Aspect.AspectFit;
 mainGrid.Children.Add(avatarview);
 this.Content = mainGrid;
@@ -56,6 +56,8 @@ this.Content = mainGrid;
 {% endhighlight %}
 
 {% endtabs %}
+
+![AvatarControl Aspect](Customization_Images/Aspect_AvatarView.png)
 
 ## Colors
 
