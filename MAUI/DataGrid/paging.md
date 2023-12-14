@@ -21,7 +21,7 @@ There are two different modes in paging:
 
 ## Normal paging
 
-The data grid performs data paging using the `SfDataPager`. To enable paging, follow these steps::
+The data grid performs data paging using the `SfDataPager`. To enable paging, follow these steps:
 
  * Create a new instance of `SfDataPager`, and bind the data collection to the `SfDataPager.Source` property. This will internally create `SfDataPager.PagedSource`. 
  * Bind the `PagedSource` property to the `ItemsSource` of the data grid. 
@@ -50,17 +50,17 @@ The following code example illustrates using `SfDataPager` with the data grid co
 <ContentPage.Content>
     <Grid> 
       <Grid.RowDefinitions>
-        <RowDefinition Height="Auto" />
         <RowDefinition Height="*" />
+        <RowDefinition Height="Auto" />
       </Grid.RowDefinitions>
       <pager:SfDataPager x:Name ="dataPager"
-                           Grid.Row="0"           
+                           Grid.Row="1"
                            PageSize="15" 
                            NumericButtonCount="10"
                            Source="{Binding OrdersInfo}">
       </pager:SfDataPager>      
       <syncfusion:SfDataGrid x:Name="dataGrid"
-                         Grid.Row="1"
+                         Grid.Row="0"
                          AutoGenerateColumns="true"
                          SelectionMode="Single"
                          ItemsSource="{Binding Source={x:Reference dataPager}, Path=PagedSource }"  
@@ -75,18 +75,18 @@ The following code example illustrates using `SfDataPager` with the data grid co
 
 public partial class MainPage : ContentPage
 {
-  DataPagerViewModel viewModel;
+    DataPagerViewModel viewModel;
 	SfDataGrid dataGrid;
 	SfDataPager pager;
 	public NormalPage()
 	{
 		InitializeComponent();
-    viewModel = new DataPagerViewModel();
-    pager = new SfDataPager();
+        viewModel = new DataPagerViewModel();
+        pager = new SfDataPager();
 		pager.PageSize = 15;
 		pager.NumericButtonCount = 10;
 		pager.Source = viewModel.OrdersInfo;
-    dataGrid = new SfDataGrid();
+        dataGrid = new SfDataGrid();
 		dataGrid.ItemsSource = pager.PagedSource;
 		Grid grid = new Grid();
 		grid.RowDefinitions.Add(new RowDefinition() { Height = GridLength.Star });
@@ -106,8 +106,6 @@ The following screenshot shows the outcome upon execution of the above code:
 
 ![Normal paging .NET MAUI DataGrid](Images\paging\maui-datagrid-normal-paging.png)
 
-N> The `SfDataPager` provides scrolling animation while tapping the `FirstPageButton` or `LastPageButton`.
-
 ## OnDemandPaging	
 
 In normal Paging, data collection is entirely loaded initially into the `SfDataPager`. However, the control also allows for dynamically loading the data for the current page by setting `SfDataPager.UseOnDemandPaging` to `true`.
@@ -116,7 +114,7 @@ To load the current page item dynamically, hook into the `OnDemandLoading` event
 
 The `OnDemandLoading` event is triggered when the pager moves to the corresponding page. It contains the following event arguments:
 
- * `StartIndex`: Displays the corresponding page start index.
+ * `StartIndex`: Displays start index of the corresponding page.
  * `PageSize`: Displays the number of items to be loaded for that page.
 
 To load data for the DataPager control dynamically, follow the code example:
@@ -139,11 +137,11 @@ To load data for the DataPager control dynamically, follow the code example:
 <ContentPage.Content>
     <Grid> 
       <Grid.RowDefinitions>
-        <RowDefinition Height="Auto" />
         <RowDefinition Height="*" />
+        <RowDefinition Height="Auto" />
       </Grid.RowDefinitions>
       <pager:SfDataPager x:Name ="dataPager"
-                           Grid.Row="0"           
+                           Grid.Row="1"
                            PageSize="15" 
                            NumericButtonCount="10"
                            PageCount="10"
@@ -151,7 +149,7 @@ To load data for the DataPager control dynamically, follow the code example:
                            UseOnDemandPaging="True">
       </pager:SfDataPager>      
       <syncfusion:SfDataGrid x:Name="dataGrid"
-                         Grid.Row="1"
+                         Grid.Row="0"
                          AutoGenerateColumns="true"
                          SelectionMode="Single"
                          ItemsSource="{Binding Source={x:Reference dataPager}, Path=PagedSource }"  
@@ -166,20 +164,20 @@ To load data for the DataPager control dynamically, follow the code example:
 
 public partial class MainPage : ContentPage
 {
-  DataPagerViewModel viewModel;
+    DataPagerViewModel viewModel;
 	SfDataGrid dataGrid;
 	SfDataPager pager;
 	public NormalPage()
 	{
 		InitializeComponent();
-    viewModel = new DataPagerViewModel();
-    pager = new SfDataPager();
+        viewModel = new DataPagerViewModel();
+        pager = new SfDataPager();
 		pager.PageSize = 15;
 		pager.NumericButtonCount = 10;
 		pager.PageCount = 10;
-    pager.UseOnDemandPaging = true
-    pager.OnDemandLoading += dataPager_OnDemandLoading;
-    dataGrid = new SfDataGrid();
+        pager.UseOnDemandPaging = true
+        pager.OnDemandLoading += dataPager_OnDemandLoading;
+        dataGrid = new SfDataGrid();
 		dataGrid.ItemsSource = pager.PagedSource;
 		Grid grid = new Grid();
 		grid.RowDefinitions.Add(new RowDefinition() { Height = GridLength.Star });
@@ -279,7 +277,7 @@ The `SfDataPager` button is loaded with a default width and height of 40. The de
                    PageSize="15"
                    ButtonSize="60"
                    ButtonFontSize="21"
-                   Source="{Binding OrdersInfo}"/>
+                   Source="{Binding OrdersInfo}">
 </pager:SfDataPager>
 {% endhighlight %}
 {% highlight c# %}
@@ -297,9 +295,249 @@ public partial class MainPage : ContentPage
 
 ![Button size and Font size of .NET MAUI DataGrid](Images\paging\maui-datagrid-buttonsize-and-fontsize.png)
 
+## DisplayMode
+
+The `SfDataPager.DisplayMode` property enables the user to personalize the buttons displayed on the datapager. By default, all buttons (including first, last, next, previous, and numeric buttons) are visible.
+
+{% tabs %}
+{% highlight xaml %}
+<pager:SfDataPager x:Name="dataPager"
+                   PageSize="15"
+                   DisplayMode="FirstLastNumeric"
+                   Source="{Binding OrdersInfo}">
+</pager:SfDataPager>
+{% endhighlight %}
+{% highlight c# %}
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        dataPager.DisplayMode = DataPagerDisplayMode.FirstLastNumeric;
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
+## AutoElipsisMode
+
+The `AutoEllipsisMode` is a feature that determines the ellipsis mode for the numeric buttons within the scrollable panel of the SfDataPager. By default, all numeric buttons on the page are visible. However, you have the option to adjust the auto ellipsis mode using the `SfDataPager.AutoEllipsisMode` property.
+
+{% tabs %}
+{% highlight xaml %}
+<pager:SfDataPager x:Name="dataPager"
+                   PageSize="15"
+                   AutoEllipsisMode="After"
+                   Source="{Binding OrdersInfo}">
+</pager:SfDataPager>
+{% endhighlight %}
+{% highlight c# %}
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        dataPager.AutoEllipsisMode = DataPagerEllipsisMode.After;
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
+![AutoEllipsisMode .NET MAUI DataGrid](Images\paging\maui-datagrid-autoelipsismode.png)
+
+## AutoEllipsisText
+
+The data pager allows the user to customize the text to be displayed in the auto ellipsis mode by using `SfDataPager.AutoEllipsisText` property. The default value of `AutoEllipsisText` is set to `…`.
+
+{% tabs %}
+{% highlight xaml %}
+<pager:SfDataPager x:Name="dataPager"
+                   PageSize="15"
+                   AutoEllipsisMode="After"
+                   AutoEllipsisText="***"
+                   Source="{Binding OrdersInfo}">
+</pager:SfDataPager>
+{% endhighlight %}
+{% highlight c# %}
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        dataPager.AutoEllipsisMode = DataPagerEllipsisMode.After;
+        dataPager.AutoEllipsisText = "***";
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
+## Move to pages programmatically
+
+### MoveToFirstPage
+
+The data pager allows the users to programmatically navigate to the first page using the `MoveToFirstPage()` method.
+
+### MoveToLastPage
+
+The data pager allows the users to programmatically navigate to the last page using the `MoveToLastPage()` method.
+
+### MoveToNextPage
+
+The data pager allows the users to programmatically navigate to the next page using the `MoveToNextPage()` method.
+
+### MoveToPreviousPage
+
+The data pager allows the users to programmatically navigate to the previous page using the `MoveToPreviousPage()` method.
+
+### MoveToPage(Int32)
+
+The data pager allows the users to programmatically navigate to the desired page using the `MoveToPage(Int32)` method.
+
+### MoveToPage(Int32, Int32, Boolean)
+
+The data pager allows the users to programmatically navigate to the desired page from the current page using the `MoveToPage(Int32, Int32, Boolean)` method.
+
+## Orientation
+
+By default, `SfDataPager` scrolls horizontally. However, `SfDataPager.Orientation` property allows users to customize the pager to scroll vertically or horizontally according to their preferences.
+
+{% tabs %}
+{% highlight xaml %}
+<pager:SfDataPager x:Name="dataPager"
+                   PageSize="15"
+                   Orientation="Vertical"
+                   Source="{Binding OrdersInfo}">
+</pager:SfDataPager>
+{% endhighlight %}
+{% highlight c# %}
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        dataPager.Orientation = DataPagerScrollOrientation.Vertical;
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
+## Events
+
+### PageChanged
+
+The `PageChanged` event is triggered when the user navigates form one page to another page. `SfDataPager.PageChangedEventArgs` contains the following members, which provide the information for `PageChanged` event:
+
+* **OldPageIndex** - Gets the current page index from which the page is navigated.
+* **NewPageIndex** - Gets the new page index to which the page is navigated.
+
+{% tabs %}
+{% highlight c# %}
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        dataPager.PageChanged += DataPager_PageChanged;
+    }
+
+    private void DataPager_PageChanged(object sender, Syncfusion.Maui.DataGrid.DataPager.PageChangedEventArgs e)
+    {
+        // you can get the old page index and new page index here.
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
+### PageChanging
+
+The `PageChanging` event is triggered when the user navigation form one page to another page begins. `SfDataPager.PageChangingEventArgs` contains the following members, which provide the information for `PageChanging` event:
+
+* **OldPageIndex** - Gets the current page index from which the page is navigating
+.
+* **NewPageIndex** - Gets the new page index to which the page is navigating.
+
+{% tabs %}
+{% highlight c# %}
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        dataPager.PageChanging += DataPager_PageChanging;
+    }
+
+    private void DataPager_PageChanging(object sender, Syncfusion.Maui.DataGrid.DataPager.PageChangingEventArgs e)
+    {
+        // you can get the old page index and new page index here.
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
 ## DataPagerStyle
 
-The data grid allows you to change its appearance by creating a style class that overrides the `DataPagerStyle` and then assigning it to the `SfDataPager.DefaultStyle` property.
+The data pager allows you to change its appearance by changing the properties of `DataPagerStyle` and then assigning it to the `SfDataPager.DefaultStyle` property.
+
+The `SfDataPager` allows customizing the appearance using the following properties.
+
+<table>
+<tr>
+<th> Property </th>
+<th> Description </th>
+</tr>
+<tr>
+<td> {{'`DataPagerBackgroundColor`'| markdownify }} </td>
+<td> Gets or sets the background color of the SfDataPager.</td>
+</tr>
+<tr>
+<td> {{'`NavigationButtonBackgroundColor`'| markdownify }} </td>
+<td> Gets or sets the background color of the navigation button.</td>
+</tr>
+<tr>
+<td> {{'`NavigationButtonDisableBackgroundColor`'| markdownify }} </td>
+<td> Gets or sets the background color of the navigation button when it is in a disabled state.</td>
+</tr>
+<tr>
+<td> {{'`NavigationButtonDisableIconColor`'| markdownify }} </td>
+<td> Gets or sets the icon color of the navigation button when it is in a disabled state.</td>
+</tr>
+<tr>
+<td> {{'`NavigationButtonIconColor`'| markdownify }} </td>
+<td> Gets or sets the icon color of the navigation buttons.</td>
+</tr>
+<tr>
+<td> {{'`NumericButtonBackgroundColor`'| markdownify }} </td>
+<td> Gets or sets the background color for numeric button.</td>
+</tr>
+<tr>
+<td> {{'`NumericButtonSelectionBackgroundColor`'| markdownify }} </td>
+<td> Gets or sets background color of the selection numeric button.</td>
+</tr>
+<tr>
+<td> {{'`NumericButtonSelectionTextColor`'| markdownify }} </td>
+<td> Gets or sets the foreground color of the selection numeric button.</td>
+</tr>
+<tr>
+<td> {{'`NumericButtonTextColor`'| markdownify }} </td>
+<td> Gets or sets the foreground color of the numeric button.</td>
+</tr>
+<tr>
+<td> {{'`FirstPageButtonTemplate`'| markdownify }} </td>
+<td> Gets or sets the template of the first page button template.</td>
+</tr>
+<tr>
+<td> {{'`LastPageButtonTemplate`'| markdownify }} </td>
+<td> Gets or sets the template of the last page button template.</td>
+</tr>
+<tr>
+<td> {{'`NextPageButtonTemplate`'| markdownify }} </td>
+<td> Gets or sets the template of the next page button template.</td>
+</tr>
+<tr>
+<td> {{'`PreviousPageButtonTemplate`'| markdownify }} </td>
+<td> Gets or sets the template of the previous page button template.</td>
+</tr>
+</table>
   
 To apply custom style, follow the code example:
 
