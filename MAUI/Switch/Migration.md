@@ -54,3 +54,10 @@ To migrate easier from Xamarin SfSwitch to [.NET MAUI SfSwitch], we kept most of
 <td>ThumbBackground</td>
 <td>Gets or sets the color of the thumb.</td></tr>
 </table>
+
+## Upcoming features
+
+  * Vertical orientation support.
+  * BusyIndicator and its customization.
+  * Background image support for both Track and Thumb.
+  * Gradient color customization for both Track and Thumb.
