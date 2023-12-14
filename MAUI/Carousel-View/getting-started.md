@@ -7,78 +7,91 @@ control: Carousel
 documentation: ug
 ---
 
-# Getting Started with .NET MAUI Carousel (SfCarousel)
+# Getting Started with .NET MAUI Carousel
 
-This section provides a quick overview of how to get started with the `.NET Maui Carousel` (SfCarousel) for Maui.
+This section provides a quick overview of how to get started with the `.NET MAUI Carousel` control.
 
-## Creating an application using the .NET MAUI Carousel
+## Creating an application with .NET MAUI Carousel
 
- 1. Create a new .NET MAUI application in Visual Studio.
- 2. Syncfusion .NET MAUI components are available on [nuget.org](https://www.nuget.org/). To add SfCarousel to your project, open the NuGet package manager in Visual Studio, search for Syncfusion.Maui.Carousel and then install it.
- 3. Import the control namespace `Syncfusion.Maui.Carousel` in XAML or C# code.
- 4. Initialize the [SfCarousel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.html) control.
- 
-{% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+This section explains the steps required to work with the `SfCarousel` control for .NET MAUI.
 
-<ContentPage   
-    . . .
-    xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Carousel;assembly=Syncfusion.Maui.Carousel">
+## Adding a .NET MAUI Carousel reference
 
-    <syncfusion:SfCarousel />
-</ContentPage>
+The Syncfusion .NET MAUI controls are available in [Nuget.org](https://www.nuget.org/). To add `.NET MAUI Carousel` to your project, open the NuGet package manager in Visual Studio, search for [`Syncfusion.Maui.Carousel`](https://www.nuget.org/packages/Syncfusion.Maui.Carousel), and install it.
 
-{% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+## Handler registration 
 
-using Syncfusion.Maui.Carousel;
-. . .
+In the MauiProgram.cs file, register the handler for the Syncfusion core.
 
-public partial class MainPage : ContentPage
-{
-    public MainPage()
-    {
-        InitializeComponent();
-        SfCarousel carousel = new SfCarousel();
-        this.Content = carousel;
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-## Register the handler
-
-The `Syncfusion.Maui.Core` NuGet is a dependent package for all Syncfusion controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion core.
-
-{% tabs %}
-{% highlight c# tabtitle="MauiProgram.cs" hl_lines="4 20" %}
+{% highlight c# hl_lines="6 17" %}
+using Microsoft.Maui;
+using Microsoft.Maui.Hosting;
+using Microsoft.Maui.Controls.Compatibility;
 using Microsoft.Maui.Controls.Hosting;
 using Microsoft.Maui.Controls.Xaml;
-using Microsoft.Maui.Hosting;
 using Syncfusion.Maui.Core.Hosting;
 
-namespace GettingStarted
+namespace CarouselSample
 {
-    public class MauiProgram 
+    public static class MauiProgram
     {
         public static MauiApp CreateMauiApp()
         {
             var builder = MauiApp.CreateBuilder();
             builder
-                .UseMauiApp<App>()
-                .ConfigureFonts(fonts =>
-                {
-                    fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-                });
+            .UseMauiApp<App>()
+            .ConfigureSyncfusionCore()
+            .ConfigureFonts(fonts =>
+            {
+                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+            });
 
-            builder.ConfigureSyncfusionCore();
             return builder.Build();
-        }
+        }      
     }
-}
+}   
+
 {% endhighlight %} 
-{% endtabs %} 
+
+## Adding the .NET MAUI Carousel control
+
+Step 1: Add the NuGet to the project as discussed in the above reference section. 
+
+Step 2: Add the namespace as shown in the following code sample.
+
+{% tabs %}
+{% highlight xaml %}
+
+	xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Carousel;assembly=Syncfusion.Maui.Carousel"
+
+{% endhighlight %}
+{% highlight c# %}
+
+	using Syncfusion.Maui.Carousel;
+
+{% endhighlight %}
+{% endtabs %}
+
+## Initialize Carousel
+
+Now, add the `SfCarousel` control with a required optimal name using the included namespace.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<syncfusion:SfCarousel />
+	
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfCarousel carousel = new SfCarousel();
+this.Content = carousel;
+
+{% endhighlight %}
+
+{% endtabs %}
 
 ## Add Carousel Items
 
@@ -112,7 +125,6 @@ public class CarouselViewModel
 
 The following code example illustrates how to add the collection in Carousel,
 
-
 {% tabs %}
 
 {% highlight xaml %}
@@ -128,9 +140,7 @@ The following code example illustrates how to add the collection in Carousel,
     </ContentPage.BindingContext>
 
     <carousel:SfCarousel x:Name="carousel"
-                         ItemsSource="carouselItems"
-                         ItemHeight="170"
-                         ItemWidth="270"/>
+                         ItemsSource="carouselItems"/>
 </ContentPage>
 
 {% endhighlight %}
@@ -149,14 +159,10 @@ namespace CarouselSample
             InitializeComponent();
 
             CarouselViewModel carouselViewModel = new CarouselViewModel();
-            SfCarousel carousel = new SfCarousel()
-            {
-                ItemWidth = 170,
-                ItemHeight = 250
-            };
+            SfCarousel carousel = new SfCarousel();
 
             carousel.BindingContext = carouselViewModel;
-            carousel.ItemsSource = carouselViewModel.ImageCollection;
+            carousel.SetBinding(SfCarousel.ItemsSourceProperty, "ImageCollection");
 
             this.Content = carousel;
         }
@@ -166,7 +172,6 @@ namespace CarouselSample
 {% endhighlight %}
 
 {% endtabs %}
-
 
 ## Setting the height and width of the carousel item
 
@@ -191,7 +196,7 @@ SfCarousel carousel = new SfCarousel()
     ItemHeight = 250
 };
 
-carousel.ItemsSource = carouselViewModel.ImageCollection;
+carousel.SetBinding(SfCarousel.ItemsSourceProperty, "ImageCollection");
 
 {% endhighlight %}
 
@@ -209,7 +214,7 @@ We can bring particular item to the center of the screen using `SelectedIndex` p
                      ItemsSource="carouselItems"
                      ItemHeight="170"
                      ItemWidth="270"
-                     SelectedIndex="2"/>
+                     SelectedIndex="4"/>
 	
 {% endhighlight %}
 
@@ -219,10 +224,10 @@ SfCarousel carousel = new SfCarousel()
 {
     ItemWidth = 170,
     ItemHeight = 250,
-    SelectedIndex = 2
+    SelectedIndex = 4,
 };
 
-carousel.ItemsSource = carouselViewModel.ImageCollection;
+carousel.SetBinding(SfCarousel.ItemsSourceProperty, "ImageCollection");
 
 {% endhighlight %}
 
