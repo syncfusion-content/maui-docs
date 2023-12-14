@@ -9,7 +9,7 @@ documentation: ug
 
 # Selection in .NET MAUI Autocomplete (SfAutocomplete)
 
-The [.NET MAUI Autocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) allows user to select a single item from dropdown list.
+The [.NET MAUI Autocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) allows user to select single or multiple items. The selection mode can be set by using the `SelectionMode` property. There are two different selection modes: Single and Multiple.
 
 ## Single selection
 
