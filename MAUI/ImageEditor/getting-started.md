@@ -308,3 +308,16 @@ The image editor utilizes the `AspectFit` image scaling of Image control to fit 
 {% endtabs %}
 
 N> The size value will only be available after the image has been loaded into view.
+
+## Set the Background to the ImageEditor
+The background of the ImageEditor can be customized by setting the Background property of the SfImageEditor.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+
+   <imageEditor:SfImageEditor x:Name="imageEditor"
+                              Source="imageeditordesktop.png"
+                              Background="LightGreen">
+   </imageEditor:SfImageEditor>
+
+{% endhighlight %}
