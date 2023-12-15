@@ -2,7 +2,7 @@
 layout: post
 title: Setting Main Content in .NET MAUI Navigation Drawer control | Syncfusion
 description: Learn here all about Setting Main Content support in Syncfusion .NET MAUI Navigation Drawer (SfNavigationDrawer) control and more.
-platform: maui
+platform: .NET MAUI
 control: NavigationDrawer
 documentation: ug
 ---
@@ -147,6 +147,6 @@ public partial class NavigationDrawerPage : ContentPage
 
 N> It is mandatory to set `ContentView` for `SfNavigationDrawer` when initializing.
 
-![contentview]()
+![contentview](Images/main-content/getting_main_content.png)
 
 You can find the complete Sample from this [`link.`](https://github.com/SyncfusionExamples/.NET-MAUI-NavigationDrawer-MainContent)

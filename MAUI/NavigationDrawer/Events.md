@@ -1,15 +1,15 @@
 ---
 layout: post
 title: Events in .NET MAUI Navigation Drawer control | Syncfusion
-description: Learn about Events support in Syncfusion Essential Studio .NET MAUI Navigation Drawer (SfNavigationDrawer) control, its elements and more.
-platform: maui
+description: Learn about Events support in Syncfusion Essential Studio .NET MAUI Navigation Drawer (SfNavigationDrawer) control, its elements, and more.
+platform: .NET MAUI
 control: NavigationDrawer
 documentation: ug
 ---
 
 # Events in .NET MAUI Navigation Drawer
 
-There are four built-in events in the `SfNavigationDrawer` control namely:
+There are five built-in events in the `SfNavigationDrawer` control namely:
 
 * DrawerOpening
 * DrawerOpened
@@ -19,7 +19,7 @@ There are four built-in events in the `SfNavigationDrawer` control namely:
 
 ## DrawerOpening Event
 
-The `DrawerOpening` event is triggered before the drawer pane is opening. You can restrict the drawer from opening, by canceling this event, by setting the `Cancel` property in the event argument to true. The event arguments are of type `CancelEventArgs` and expose the following property:
+The `DrawerOpening` event is triggered before the drawer pane is opening. Restrict the drawer from opening by canceling this event by setting the `Cancel` property in the event argument to true. The event arguments are of type `CancelEventArgs`. Expose the following property:
 
  * `Cancel`: Drawer opening is based on this value.
 
@@ -78,7 +78,7 @@ private void navigationDrawer_DrawerOpened(object sender, EventArgs e)
 
 ## DrawerClosing Event
 
-The `DrawerClosing` event is triggered before the drawer pane is closing. You can restrict the drawer from closing, by canceling this event, by setting the `Cancel` property in the event argument to true. The event arguments are of type `CancelEventArgs` and expose the following property:
+The `DrawerClosing` event is triggered before the drawer pane closes. Restrict the drawer from closing by canceling this event by setting the `Cancel` property in the event argument to true. The event arguments are of type `CancelEventArgs`. Expose the following property:
 
  * `Cancel`: Drawer closing is based on this value.
 
@@ -137,7 +137,7 @@ private void navigationDrawer_DrawerClosed(object sender, EventArgs e)
 
 ## DrawerToggled Event
 
-The `DrawerToggled` event triggered after a drawer is opened or closed. The event arguments are of type `ToggledEventArgs` and expose the following property:
+The `DrawerToggled` event is triggered after a drawer is opened or closed. The event arguments are of type `ToggledEventArgs`. Expose the following property:
 
 * `IsOpen`: This property indicates whether the drawer is opened or closed.
 

@@ -2,7 +2,7 @@
 layout: post
 title: Setting Sliding Panel Content in .NET MAUI NavigationDrawer | Syncfusion
 description: Learn here all about Setting Sliding Panel Content support in Syncfusion .NET MAUI Navigation Drawer (SfNavigationDrawer) control and more.
-platform: maui
+platform: .NET MAUI
 control: NavigationDrawer
 documentation: ug
 ---
@@ -60,7 +60,7 @@ this.Content = navigationDrawer;
 
 {% endtabs %}
 
-![Header]()
+![Header](Images/panel-content/navigation_drawer_header.png)
 
 ## Header Height
 
@@ -104,7 +104,7 @@ this.Content = navigationDrawer;
 
 {% endtabs %}
 
-![Header height]()
+![Header height](Images/panel-content/navigation_drawer_header_height.png)
 
 ## Footer Content
 
@@ -145,7 +145,7 @@ this.Content = navigationDrawer;
 
 {% endtabs %}
 
-![Footer]()
+![Footer](Images/panel-content/navigation_drawer_footer.png)
 
 ## Footer Height
 
@@ -189,7 +189,7 @@ this.Content = navigationDrawer;
 
 {% endtabs %}
 
-![Footer height]()
+![Footer height](Images/panel-content/navigation_drawer_footer_height.png)
 
 ## Drawer Content
 
@@ -230,4 +230,4 @@ this.Content = navigationDrawer;
 
 {% endtabs %}
 
-![content]()
+![content](Images/panel-content/navigation_drawer_content.png)

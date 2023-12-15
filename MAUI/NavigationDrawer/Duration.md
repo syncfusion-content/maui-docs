@@ -2,7 +2,7 @@
 layout: post
 title: Animation Duration in .NET MAUI Navigation Drawer control | Syncfusion
 description: Learn about Animation Duration support in Syncfusion .NET MAUI Navigation Drawer (SfNavigationDrawer) control and more.
-platform: maui
+platform: .NET MAUI
 control: SfNavigationDrawer
 documentation: ug
 ---
@@ -41,4 +41,4 @@ N> The `Duration` property for the `SfNavigationDrawer` is measured in milliseco
 
 The following screenshot illustrates the result of the above code.
 
-![Maximum Duration]()
+![Duration](Images/animation-duration/navigation_duration.gif)
