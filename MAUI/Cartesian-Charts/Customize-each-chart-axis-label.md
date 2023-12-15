@@ -17,14 +17,25 @@ The following code sample demonstrates this:
 
 {% highlight xaml %}
 
-    <chart:SfCartesianChart>
-        . . .
-        <chart:SfCartesianChart.XAxes>
-            <chart:NumericalAxis LabelCreated="XAxes_LabelCreated"/>
-        </chart:SfCartesianChart.XAxes>
-        . . .
-    </chart:SfCartesianChart>
+<chart:SfCartesianChart>
+    . . .
+    <chart:SfCartesianChart.XAxes>
+        <chart:NumericalAxis LabelCreated="XAxes_LabelCreated"/>
+    </chart:SfCartesianChart.XAxes>
+    . . .
+</chart:SfCartesianChart>
 
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfCartesianChart chart = new SfCartesianChart();
+. . .
+NumericalAxis primaryAxis = new NumericalAxis();
+primaryAxis.LabelCreated += XAxes_LabelCreated;
+chart.XAxes.Add(primaryAxis);
+. . .
+    
 {% endhighlight %}
 
 {% endtabs %}
@@ -33,22 +44,22 @@ The following code sample demonstrates this:
 
 {% highlight c# %}
 
-    int month = 0;
- 
-    //Customize each axis label achieved by displaying the first label of each month with a month format, while other labels within the same month are formatted with a day format in the DateTimeAxis of the chart.
-    
-    private void XAxes_LabelCreated(object sender, ChartAxisLabelEventArgs e)
-    {
-        DateTime date = DateTime.Parse(e.Label);
+int month = 0;
 
-        if (month != date.Month)
-        {
-            e.Label = date.ToString("MMM");
-            month = date.Month;
-        }
-        else
-            e.Label = date.Day.ToString();
+//Customize each axis label achieved by displaying the first label of each month with a month format, while other labels within the same month are formatted with a day format in the DateTimeAxis of the chart.
+
+private void XAxes_LabelCreated(object sender, ChartAxisLabelEventArgs e)
+{
+    DateTime date = DateTime.Parse(e.Label);
+
+    if (month != date.Month)
+    {
+        e.Label = date.ToString("MMM");
+        month = date.Month;
     }
+    else
+        e.Label = date.Day.ToString();
+}
     
 {% endhighlight  %}
 

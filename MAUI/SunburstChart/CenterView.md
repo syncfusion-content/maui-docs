@@ -51,45 +51,45 @@ The [CenterHoleSize]() property of SfSunburstChart is used to get the diameter v
 
 {% highlight c# %}
 
-    SfSunburstChart sunburst = new SfSunburstChart();
-    . . .      
-    RoundRectangle roundRectangle = new RoundRectangle();
-    roundRectangle.SetBinding(RoundRectangle.CornerRadiusProperty, "CenterHoleSize", converter: sunburstChart.Resources["cornerRadius"] as IValueConverter);
+SfSunburstChart sunburst = new SfSunburstChart();
+. . .      
+RoundRectangle roundRectangle = new RoundRectangle();
+roundRectangle.SetBinding(RoundRectangle.CornerRadiusProperty, "CenterHoleSize", converter: sunburstChart.Resources["cornerRadius"] as IValueConverter);
 
-    Label label = new Label();
-    label.Text = "Behind the Bricks";
-    label.LineBreakMode = LineBreakMode.WordWrap;
-    label.HorizontalTextAlignment = TextAlignment.Center;
-    label.VerticalTextAlignment = TextAlignment.Center;
-    label.FontSize = 12;
-    label.Padding = new Thickness(0, 5, 0, 0);
-    label.FontFamily = "Verdana";
-    label.TextColor = Colors.Black;
+Label label = new Label();
+label.Text = "Behind the Bricks";
+label.LineBreakMode = LineBreakMode.WordWrap;
+label.HorizontalTextAlignment = TextAlignment.Center;
+label.VerticalTextAlignment = TextAlignment.Center;
+label.FontSize = 12;
+label.Padding = new Thickness(0, 5, 0, 0);
+label.FontFamily = "Verdana";
+label.TextColor = Colors.Black;
 
-    Path path = new Path();
-    path.Data = viewModel.Data;
-    path.Fill = Brush.Black;
+Path path = new Path();
+path.Data = viewModel.Data;
+path.Fill = Brush.Black;
 
-    Grid grid = new Grid();
-    grid.HorizontalOptions = LayoutOptions.Center;
-    grid.Children.Add(path);
+Grid grid = new Grid();
+grid.HorizontalOptions = LayoutOptions.Center;
+grid.Children.Add(path);
 
-    VerticalStackLayout views = new VerticalStackLayout();
-    views.HorizontalOptions = LayoutOptions.Center;
-    views.VerticalOptions = LayoutOptions.Center;
-    views.SetBinding(WidthRequestProperty, "CenterHoleSize", converter: sunburstChart.Resources["cornerRadius"] as IValueConverter);
-    views.Children.Add(grid);
-    views.Children.Add(label);
+VerticalStackLayout views = new VerticalStackLayout();
+views.HorizontalOptions = LayoutOptions.Center;
+views.VerticalOptions = LayoutOptions.Center;
+views.SetBinding(WidthRequestProperty, "CenterHoleSize", converter: sunburstChart.Resources["cornerRadius"] as IValueConverter);
+views.Children.Add(grid);
+views.Children.Add(label);
 
-    Border border = new Border();
-    border.SetBinding(HeightRequestProperty, "CenterHoleSize");
-    border.SetBinding(WidthRequestProperty, "CenterHoleSize");
-    border.BackgroundColor = Colors.GhostWhite;
-    border.StrokeShape = roundRectangle;
-    border.Shadow = new Shadow() { Radius = 50, Brush = Brush.Black, Opacity = 0.5f };
+Border border = new Border();
+border.SetBinding(HeightRequestProperty, "CenterHoleSize");
+border.SetBinding(WidthRequestProperty, "CenterHoleSize");
+border.BackgroundColor = Colors.GhostWhite;
+border.StrokeShape = roundRectangle;
+border.Shadow = new Shadow() { Radius = 50, Brush = Brush.Black, Opacity = 0.5f };
 
-    border.Content = views;
-    sunburst.CenterView = border;
+border.Content = views;
+sunburst.CenterView = border;
 
 {% endhighlight %}
 
