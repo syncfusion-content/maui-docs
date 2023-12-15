@@ -19,17 +19,17 @@ The following code explains how to initialize data labels.
 
 {% highlight xaml %}
 
-    <sunburst:SfSunburstChart ShowLabels="True"/>
+<sunburst:SfSunburstChart ShowLabels="True"/>
     . . .
-    </sunburst:SfSunburstChart>
+</sunburst:SfSunburstChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfSunburstChart sunburst = new SfSunburstChart();
+SfSunburstChart sunburst = new SfSunburstChart();
     . . .
-    sunburst.ShowLabels = true;
+sunburst.ShowLabels = true;
 
 {% endhighlight %}
 
@@ -45,24 +45,24 @@ The following code shows how to hide the data labels.
 
 {% highlight xaml %}
 
-    <sunburst:SfSunburstChart ShowLabels="True">
-        . . .
-        <sunburst:SfSunburstChart.DataLabelSettings>
-            <sunburst:SunburstDataLabelSettings OverFlowMode="Hide"/>
-        </sunburst:SfSunburstChart.DataLabelSettings>
-    </sunburst:SfSunburstChart>
+<sunburst:SfSunburstChart ShowLabels="True">
+    . . .
+    <sunburst:SfSunburstChart.DataLabelSettings>
+        <sunburst:SunburstDataLabelSettings OverFlowMode="Hide"/>
+    </sunburst:SfSunburstChart.DataLabelSettings>
+</sunburst:SfSunburstChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfSunburstChart sunburst = new SfSunburstChart();
-    . . .
-    sunburst.ShowLabels = true;
-    sunburst.DataLabelSettings = new SunburstDataLabelSettings()
-    {
-        OverFlowMode = SunburstLabelOverflowMode.Hide
-    };
+SfSunburstChart sunburst = new SfSunburstChart();
+. . .
+sunburst.ShowLabels = true;
+sunburst.DataLabelSettings = new SunburstDataLabelSettings()
+{
+    OverFlowMode = SunburstLabelOverflowMode.Hide
+};
 
 {% endhighlight %}
 
@@ -80,24 +80,24 @@ The following code shows normal mode of data labels.
 
 {% highlight xaml %}
 
-    <sunburst:SfSunburstChart ShowLabels="True">
-        . . .
-        <sunburst:SfSunburstChart.DataLabelSettings>
-            <sunburst:SunburstDataLabelSettings RotationMode="Normal"/>
-        </sunburst:SfSunburstChart.DataLabelSettings>
-    </sunburst:SfSunburstChart>
+<sunburst:SfSunburstChart ShowLabels="True">
+    . . .
+    <sunburst:SfSunburstChart.DataLabelSettings>
+        <sunburst:SunburstDataLabelSettings RotationMode="Normal"/>
+    </sunburst:SfSunburstChart.DataLabelSettings>
+</sunburst:SfSunburstChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfSunburstChart sunburst = new SfSunburstChart();
-    . . .
-    sunburst.ShowLabels = true;
-    sunburst.DataLabelSettings = new SunburstDataLabelSettings()
-    {
-        RotationMode = SunburstLabelRotationMode.Normal     
-    };
+SfSunburstChart sunburst = new SfSunburstChart();
+. . .
+sunburst.ShowLabels = true;
+sunburst.DataLabelSettings = new SunburstDataLabelSettings()
+{
+    RotationMode = SunburstLabelRotationMode.Normal     
+};
 
 {% endhighlight %}
 
@@ -118,29 +118,29 @@ The following code shows normal mode of data labels.
 
 {% highlight xaml %}
 
-    <sunburst:SfSunburstChart ShowDataLabels="True">
-        . . .
-        <sunburst:SfSunburstChart.DataLabelSettings>
-            <sunburst:SunburstDataLabelSettings     
-                TextColor="Red"   
-                FontSize="10"    
-                FontAttributes="Bold"/>
-        </sunburst:SfSunburstChart.DataLabelSettings>
-    </sunburst:SfSunburstChart>
+<sunburst:SfSunburstChart ShowDataLabels="True">
+    . . .
+    <sunburst:SfSunburstChart.DataLabelSettings>
+        <sunburst:SunburstDataLabelSettings     
+            TextColor="Red"   
+            FontSize="10"    
+            FontAttributes="Bold"/>
+    </sunburst:SfSunburstChart.DataLabelSettings>
+</sunburst:SfSunburstChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfSunburstChart sunburst = new SfSunburstChart();
-    . . .
-    sunburst.ShowLabels = true;
-    sunburst.DataLabelSettings = new SunburstDataLabelSettings()
-    {
-        TextColor = Colors.Red,
-        FontSize = 10,
-        FontAttributes = FontAttributes.Bold
-    };
+SfSunburstChart sunburst = new SfSunburstChart();
+. . .
+sunburst.ShowLabels = true;
+sunburst.DataLabelSettings = new SunburstDataLabelSettings()
+{
+    TextColor = Colors.Red,
+    FontSize = 10,
+    FontAttributes = FontAttributes.Bold
+};
 
 {% endhighlight %}
 

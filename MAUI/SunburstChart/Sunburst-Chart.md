@@ -19,22 +19,22 @@ The start angle and end angle of the sunburst chart can be adjusted by using the
 
 {% highlight xaml %}
 
-    <sunburst:SfSunburstChart ItemsSource="{Binding DataSource}" 
-                              StartAngle="180" 
-                              EndAngle="360"
-                              ValueMemberPath="EmployeesCount">
-        . . .
-    </sunburst:SfSunburstChart>
+<sunburst:SfSunburstChart ItemsSource="{Binding DataSource}" 
+                            StartAngle="180" 
+                            EndAngle="360"
+                            ValueMemberPath="EmployeesCount">
+    . . .
+</sunburst:SfSunburstChart>
  
 {% endhighlight %}
 
 {% highlight C# %}
 
-    SfSunburstChart sunburst = new SfSunburstChart();
-    . . .
-    sunburst.StartAngle = 180;
-    sunburst.EndAngle = 360;
-    . . .
+SfSunburstChart sunburst = new SfSunburstChart();
+. . .
+sunburst.StartAngle = 180;
+sunburst.EndAngle = 360;
+. . .
 
 {% endhighlight %}
 
@@ -50,20 +50,20 @@ The sunburst chart allows you to customize the radius by using the [Radius]() pr
 
 {% highlight xaml %}
 
-    <sunburst:SfSunburstChart ItemsSource="{Binding DataSource}" 
-                              Radius="0.7"
-                              ValueMemberPath="EmployeesCount">
-        . . .
-    </chart:SfSunburstChart>
+<sunburst:SfSunburstChart ItemsSource="{Binding DataSource}" 
+                            Radius="0.7"
+                            ValueMemberPath="EmployeesCount">
+    . . .
+</sunburst:SfSunburstChart>
  
 {% endhighlight %}
 
 {% highlight C# %}
 
-    SfSunburstChart sunburst = new SfSunburstChart();
-    . . .
-    sunburst.Radius = 0.7;
-    . . .
+SfSunburstChart sunburst = new SfSunburstChart();
+. . .
+sunburst.Radius = 0.7;
+. . .
 
 {% endhighlight %}
 
@@ -79,20 +79,20 @@ The sunburst chart allows you to customize the inner radius using the [InnerRadi
 
 {% highlight xaml %}
 
-    <sunburst:SfSunburstChart ItemsSource="{Binding DataSource}" 
-                              InnerRadius="0.4"
-                              ValueMemberPath="EmployeesCount">
-        . . .
-    </sunburst:SfSunburstChart>
+<sunburst:SfSunburstChart ItemsSource="{Binding DataSource}" 
+                            InnerRadius="0.4"
+                            ValueMemberPath="EmployeesCount">
+    . . .
+</sunburst:SfSunburstChart>
  
 {% endhighlight %}
 
 {% highlight C# %}
 
-    SfSunburstChart sunburst = new SfSunburstChart();
-    . . .
-    sunburst.InnerRadius = 0.4;
-    . . .
+SfSunburstChart sunburst = new SfSunburstChart();
+. . .
+sunburst.InnerRadius = 0.4;
+. . .
 
 {% endhighlight %}
 
@@ -108,22 +108,22 @@ Stroke color and stroke width of the sunburst chart can be customized using [Str
 
 {% highlight xaml %}
 
-    <sunburst:SfSunburstChart ItemsSource="{Binding DataSource}" 
-                              Stroke="Black" 
-                              StrokeWidth="2"
-                              ValueMemberPath="EmployeesCount">
-        . . .
-    </chart:SfSunburstChart>
+<sunburst:SfSunburstChart ItemsSource="{Binding DataSource}" 
+                            Stroke="Black" 
+                            StrokeWidth="2"
+                            ValueMemberPath="EmployeesCount">
+    . . .
+</sunburst:SfSunburstChart>
  
 {% endhighlight %}
 
 {% highlight C# %}
 
-    SfSunburstChart sunburst = new SfSunburstChart();
-    . . .
-    sunburst.Stroke = Colors.Black;
-    sunburst.StrokeWidth = 2;
-    . . .
+SfSunburstChart sunburst = new SfSunburstChart();
+. . .
+sunburst.Stroke = Colors.Black;
+sunburst.StrokeWidth = 2;
+. . .
 
 {% endhighlight %}
 

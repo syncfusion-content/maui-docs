@@ -22,30 +22,30 @@ This section explains how to populate the sunburst chart with data, a title, dat
 
 {% highlight xaml %}
 
-    <ContentPage   
-        . . .
-        xmlns:sunburst="clr-namespace:Syncfusion.Maui.SunburstChart;assembly=Syncfusion.Maui.SunburstChart">
+<ContentPage   
+    . . .
+    xmlns:sunburst="clr-namespace:Syncfusion.Maui.SunburstChart;assembly=Syncfusion.Maui.SunburstChart">
 
-        <chart:SfSunburstChart/>
-    </ContentPage>
+    <sunburst:SfSunburstChart/>
+</ContentPage>
  
 {% endhighlight %}
 
 {% highlight C# %}
 
-    using Syncfusion.Maui.SunburstChart;
+using Syncfusion.Maui.SunburstChart;
 
-    namespace SunburstGettingStarted
+namespace SunburstGettingStarted
+{
+    public partial class MainPage : ContentPage
     {
-        public partial class MainPage : ContentPage
+        public MainPage()
         {
-            public MainPage()
-            {
-                InitializeComponent();           
-                SfSunburstChart sunburst = new SfSunburstChart();
-            }
-        }   
-    }
+            InitializeComponent();           
+            SfSunburstChart sunburst = new SfSunburstChart();
+        }
+    }   
+}
 
 {% endhighlight %}
 
@@ -57,32 +57,32 @@ Syncfusion.Maui.Core NuGet is a dependent package for all Syncfusion controls of
 
 {% highlight C# %}
 
-    using Microsoft.Maui;
-    using Microsoft.Maui.Hosting;
-    using Microsoft.Maui.Controls.Compatibility;
-    using Microsoft.Maui.Controls.Hosting;
-    using Microsoft.Maui.Controls.Xaml;
-    using Syncfusion.Maui.Core.Hosting;
+using Microsoft.Maui;
+using Microsoft.Maui.Hosting;
+using Microsoft.Maui.Controls.Compatibility;
+using Microsoft.Maui.Controls.Hosting;
+using Microsoft.Maui.Controls.Xaml;
+using Syncfusion.Maui.Core.Hosting;
 
-    namespace SunburstGettingStarted
+namespace SunburstGettingStarted
+{
+    public static class MauiProgram
     {
-        public static class MauiProgram
+        public static MauiApp CreateMauiApp()
         {
-            public static MauiApp CreateMauiApp()
+            var builder = MauiApp.CreateBuilder();
+            builder
+            .UseMauiApp<App>()
+            .ConfigureSyncfusionCore()
+            .ConfigureFonts(fonts =>
             {
-                var builder = MauiApp.CreateBuilder();
-                builder
-                .UseMauiApp<App>()
-                .ConfigureSyncfusionCore()
-                .ConfigureFonts(fonts =>
-                {
-                    fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-                });
+                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+            });
 
-                return builder.Build();
-            }
+            return builder.Build();
         }
     }
+}
 
 {% endhighlight %} 
 
@@ -94,13 +94,13 @@ Now, let us define a simple data model that represents a data point in the sunbu
 
 {% highlight c# %}
 
-    public class SunburstModel
-    {
-        public string JobDescription { get; set; }
-        public string JobGroup { get; set; }
-        public double EmployeesCount { get; set; }
-        public string Country { get; set; }
-    }
+public class SunburstModel
+{
+    public string JobDescription { get; set; }
+    public string JobGroup { get; set; }
+    public double EmployeesCount { get; set; }
+    public string Country { get; set; }
+}
 
 {% endhighlight %} 
 
@@ -112,42 +112,42 @@ Next, create a view model class and initialize a list of `SunburstModel` objects
 
 {% highlight c# %}
 
-    public class SunburstViewModel
-    {
-        public ObservableCollection<SunburstModel> DataSource { get; set; }
+public class SunburstViewModel
+{
+    public ObservableCollection<SunburstModel> DataSource { get; set; }
 
-        public SunburstViewModel()
+    public SunburstViewModel()
+    {
+        this.DataSource = new ObservableCollection<SunburstModel>
         {
-            this.DataSource = new ObservableCollection<SunburstModel>
-            {
-                new SunburstModel ( "USA", "Sales", "Executive",  50 ),
-                new SunburstModel ( "USA", "Sales", "Analyst",  40 ),
-                new SunburstModel ( "USA", "Marketing",  40 ),
-                new SunburstModel ( "USA", "Technical", "Testers",  35 ),
-                new SunburstModel ( "USA", "Technical", "Developers",  175 ),
-                new SunburstModel ( "USA", "Technical", "Developers",  70 ),
-                new SunburstModel ( "USA", "Management",  40 ),
-                new SunburstModel ( "USA", "Accounts",  60 ),
-                new SunburstModel ( "India", "Technical", "Testers",  33 ),
-                new SunburstModel ( "India", "Technical", "Developers",  125 ),
-                new SunburstModel ( "India", "Technical", "Developers",  60 ),
-                new SunburstModel ( "India", "HR Executives",  70 ),
-                new SunburstModel ( "India", "Accounts",  45 ),
-                new SunburstModel ( "Germany", "Sales", "Executive",  30 ),
-                new SunburstModel ( "Germany", "Sales", "Analyst",  40 ),
-                new SunburstModel ( "Germany", "Marketing",  50 ),
-                new SunburstModel ( "Germany", "Technical", "Testers",  40 ),
-                new SunburstModel ( "Germany", "Technical", "Developers",  60 ),
-                new SunburstModel ( "Germany", "Technical", "Developers",  27 ),
-                new SunburstModel ( "Germany", "Management",  40 ),
-                new SunburstModel ( "Germany", "Accounts",  55 ),
-                new SunburstModel ( "UK", "Technical", "Testers",  96 ),
-                new SunburstModel ( "UK", "Technical", "Developers",  55 ),
-                new SunburstModel ( "UK", "HR Executives",  60 ),
-                new SunburstModel ( "UK", "Accounts",  45 )
-            };
-        }    
-    }
+            new SunburstModel ( "USA", "Sales", "Executive",  50 ),
+            new SunburstModel ( "USA", "Sales", "Analyst",  40 ),
+            new SunburstModel ( "USA", "Marketing",  40 ),
+            new SunburstModel ( "USA", "Technical", "Testers",  35 ),
+            new SunburstModel ( "USA", "Technical", "Developers",  175 ),
+            new SunburstModel ( "USA", "Technical", "Developers",  70 ),
+            new SunburstModel ( "USA", "Management",  40 ),
+            new SunburstModel ( "USA", "Accounts",  60 ),
+            new SunburstModel ( "India", "Technical", "Testers",  33 ),
+            new SunburstModel ( "India", "Technical", "Developers",  125 ),
+            new SunburstModel ( "India", "Technical", "Developers",  60 ),
+            new SunburstModel ( "India", "HR Executives",  70 ),
+            new SunburstModel ( "India", "Accounts",  45 ),
+            new SunburstModel ( "Germany", "Sales", "Executive",  30 ),
+            new SunburstModel ( "Germany", "Sales", "Analyst",  40 ),
+            new SunburstModel ( "Germany", "Marketing",  50 ),
+            new SunburstModel ( "Germany", "Technical", "Testers",  40 ),
+            new SunburstModel ( "Germany", "Technical", "Developers",  60 ),
+            new SunburstModel ( "Germany", "Technical", "Developers",  27 ),
+            new SunburstModel ( "Germany", "Management",  40 ),
+            new SunburstModel ( "Germany", "Accounts",  55 ),
+            new SunburstModel ( "UK", "Technical", "Testers",  96 ),
+            new SunburstModel ( "UK", "Technical", "Developers",  55 ),
+            new SunburstModel ( "UK", "HR Executives",  60 ),
+            new SunburstModel ( "UK", "Accounts",  45 )
+        };
+    }    
+}
 
 {% endhighlight %} 
 
@@ -161,22 +161,22 @@ N> Add the namespace of the `SunburstViewModel` class to your XAML Page, if you 
 
 {% highlight xaml %} 
 
-	<ContentPage
-	    . . .
-	    xmlns:sunburst="clr-namespace:Syncfusion.Maui.SunburstChart;assembly=Syncfusion.Maui.SunburstChart"
-	    xmlns:model="clr-namespace:SunburstGettingStarted">
+<ContentPage
+    . . .
+    xmlns:sunburst="clr-namespace:Syncfusion.Maui.SunburstChart;assembly=Syncfusion.Maui.SunburstChart"
+    xmlns:model="clr-namespace:SunburstGettingStarted">
 
-	    <ContentPage.BindingContext>
-	        <model:SunburstViewModel></model:SunburstViewModel>
-	    </ContentPage.BindingContext>
+    <ContentPage.BindingContext>
+        <model:SunburstViewModel></model:SunburstViewModel>
+    </ContentPage.BindingContext>
 
-	</ContentPage>
+</ContentPage>
 
 {% endhighlight %}
 
 {% highlight C# %} 
 
-    this.BindingContext = new ViewModel();
+this.BindingContext = new ViewModel();
 
 {% endhighlight %}
 
@@ -191,39 +191,39 @@ N> Add the namespace of the `SunburstViewModel` class to your XAML Page, if you 
 
 {% highlight xaml %}
         
-    <ContentPage
-        . . .
-        xmlns:sunburst="clr-namespace:Syncfusion.Maui.SunburstChart;assembly=Syncfusion.Maui.SunburstChart"
-        xmlns:model="clr-namespace:SunburstGettingStarted>
+<ContentPage
+    . . .
+    xmlns:sunburst="clr-namespace:Syncfusion.Maui.SunburstChart;assembly=Syncfusion.Maui.SunburstChart"
+    xmlns:model="clr-namespace:SunburstGettingStarted>
 
-        <sunburst:SfSunburstChart x:Name="sunburst" 
-            ItemsSource="{Binding DataSource}" 
-            ValueMemberPath="EmployeesCount">
+    <sunburst:SfSunburstChart x:Name="sunburst" 
+        ItemsSource="{Binding DataSource}" 
+        ValueMemberPath="EmployeesCount">
 
-            <sunburst:SfSunburstChart.Levels>
-                <sunburst:SunburstHierarchicalLevel GroupMemberPath="Country"/>
-                <sunburst:SunburstHierarchicalLevel GroupMemberPath="JobDescription"/>
-                <sunburst:SunburstHierarchicalLevel GroupMemberPath="JobGroup"/>
-            </sunburst:SfSunburstChart.Levels>
+        <sunburst:SfSunburstChart.Levels>
+            <sunburst:SunburstHierarchicalLevel GroupMemberPath="Country"/>
+            <sunburst:SunburstHierarchicalLevel GroupMemberPath="JobDescription"/>
+            <sunburst:SunburstHierarchicalLevel GroupMemberPath="JobGroup"/>
+        </sunburst:SfSunburstChart.Levels>
 
-        </sunburst:SfSunburstChart>
-    </ContentPage>
+    </sunburst:SfSunburstChart>
+</ContentPage>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-    SfSunburstChart sunburst = new SfSunburstChart();
+SfSunburstChart sunburst = new SfSunburstChart();
 
-    sunburst.ItemsSource = (new SunburstViewModel()).DataSource;
-    sunburst.ValueMemberPath = "EmployeesCount";
+sunburst.ItemsSource = (new SunburstViewModel()).DataSource;
+sunburst.ValueMemberPath = "EmployeesCount";
 
-    sunburst.Levels.Add(new SunburstHierarchicalLevel() { GroupMemberPath = "Country" });
-    sunburst.Levels.Add(new SunburstHierarchicalLevel() { GroupMemberPath = "Country" });
-    sunburst.Levels.Add(new SunburstHierarchicalLevel() { GroupMemberPath = "JobDescription" });
-    sunburst.Levels.Add(new SunburstHierarchicalLevel() { GroupMemberPath = "JobGroup" });
+sunburst.Levels.Add(new SunburstHierarchicalLevel() { GroupMemberPath = "Country" });
+sunburst.Levels.Add(new SunburstHierarchicalLevel() { GroupMemberPath = "Country" });
+sunburst.Levels.Add(new SunburstHierarchicalLevel() { GroupMemberPath = "JobDescription" });
+sunburst.Levels.Add(new SunburstHierarchicalLevel() { GroupMemberPath = "JobGroup" });
 
-    this.Content = sunburst;
+this.Content = sunburst;
 
 {% endhighlight %}
 
@@ -236,22 +236,22 @@ The title of the sunburst chart provides quick information to the user about the
 
 {% highlight xaml %}
 
-    <sunburst:SfSunburstChart>
-        <sunburst:SfSunburstChart.Title>
-            <Label Text="Employees Count"/>
-        </sunburst:SfSunburstChart.Title>
-        . . .
-    </sunburst:SfSunburstChart>
+<sunburst:SfSunburstChart>
+    <sunburst:SfSunburstChart.Title>
+        <Label Text="Employees Count"/>
+    </sunburst:SfSunburstChart.Title>
+    . . .
+</sunburst:SfSunburstChart>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-    SfSunburstChart sunburst = new SfSunburstChart();
-    sunburst.Title = new Label
-    {
-        Text = "Employees Count"
-    };
+SfSunburstChart sunburst = new SfSunburstChart();
+sunburst.Title = new Label
+{
+    Text = "Employees Count"
+};
 
 {% endhighlight %}
 
@@ -265,17 +265,17 @@ The [ShowLabels]() property of the chart can be used to enable data labels to im
 
 {% highlight xaml %}
 
-    <sunburst:SfSunburstChart ShowLabels="True">
-        . . .
-    </sunburst:SfSunburstChart>
+<sunburst:SfSunburstChart ShowLabels="True">
+    . . .
+</sunburst:SfSunburstChart>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-    SfSunburstChart sunburst = new SfSunburstChart();
-    . . .
-    sunburst.ShowLabels = true;
+SfSunburstChart sunburst = new SfSunburstChart();
+. . .
+sunburst.ShowLabels = true;
 
 {% endhighlight %}
 
@@ -289,20 +289,20 @@ The legend provides information about the data points displayed in the sunburst 
 
 {% highlight xaml %}
 
-    <sunburst:SfSunburstChart>
-        . . .
-        <sunburst:SfSunburstChart.Legend>
-            <sunburst:SunburstLegend/>
-        </sunburst:SfSunburstChart.Legend>
-    </sunburst:SfSunburstChart>
+<sunburst:SfSunburstChart>
+    . . .
+    <sunburst:SfSunburstChart.Legend>
+        <sunburst:SunburstLegend/>
+    </sunburst:SfSunburstChart.Legend>
+</sunburst:SfSunburstChart>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-    SfSunburstChart sunburst = new SfSunburstChart();
-    . . .
-    sunburst.Legend = new SunburstLegend();
+SfSunburstChart sunburst = new SfSunburstChart();
+. . .
+sunburst.Legend = new SunburstLegend();
 
 {% endhighlight %}
 
@@ -316,17 +316,17 @@ Tooltips are used to display information about a segment when the mouse hovers o
 
 {% highlight xaml %}
 
-    <sunburst:SfSunburstChart EnableTooltip="True">
-        . . .
-    </sunburst:SfSunburstChart>
+<sunburst:SfSunburstChart EnableTooltip="True">
+    . . .
+</sunburst:SfSunburstChart>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-    SfSunburstChart sunburst = new SfSunburstChart();
-    . . .
-    sunburst.EnableTooltip = true;
+SfSunburstChart sunburst = new SfSunburstChart();
+. . .
+sunburst.EnableTooltip = true;
 
 {% endhighlight %}
 
@@ -338,70 +338,70 @@ The following code example gives you the complete code of above configurations.
 
 {% highlight xaml %}
 
-    <ContentPage
-        . . .
-        xmlns:sunburst="clr-namespace:Syncfusion.Maui.SunburstChart;assembly=Syncfusion.Maui.SunburstChart"
-        xmlns:model="clr-namespace:SunburstGettingStarted>
+<ContentPage
+    . . .
+    xmlns:sunburst="clr-namespace:Syncfusion.Maui.SunburstChart;assembly=Syncfusion.Maui.SunburstChart"
+    xmlns:model="clr-namespace:SunburstGettingStarted>
 
-        <sunburst:SfSunburstChart 
-                    ItemsSource="{Binding DataSource}" 
-                    ShowLabels="True"  EnableTooltip="True"
-                    ValueMemberPath="EmployeesCount">
+    <sunburst:SfSunburstChart 
+                ItemsSource="{Binding DataSource}" 
+                ShowLabels="True"  EnableTooltip="True"
+                ValueMemberPath="EmployeesCount">
 
-            <sunburst:SfSunburstChart.BindingContext>
-                <model:SunburstViewModel/>
-            </sunburst:SfSunburstChart.BindingContext>
+        <sunburst:SfSunburstChart.BindingContext>
+            <model:SunburstViewModel/>
+        </sunburst:SfSunburstChart.BindingContext>
 
-            <sunburst:SfSunburstChart.Title>
-                <Label Text="Employees Count"/>
-            </sunburst:SfSunburstChart.Title>
+        <sunburst:SfSunburstChart.Title>
+            <Label Text="Employees Count"/>
+        </sunburst:SfSunburstChart.Title>
 
-            <sunburst:SfSunburstChart.Legend>
-                <sunburst:SunburstLegend/>
-            </sunburst:SfSunburstChart.Legend> 
+        <sunburst:SfSunburstChart.Legend>
+            <sunburst:SunburstLegend/>
+        </sunburst:SfSunburstChart.Legend> 
 
-            <sunburst:SfSunburstChart.Levels>
-                <sunburst:SunburstHierarchicalLevel GroupMemberPath="Country"/>
-                <sunburst:SunburstHierarchicalLevel GroupMemberPath="JobDescription"/>
-                <sunburst:SunburstHierarchicalLevel GroupMemberPath="JobGroup"/>
-            </sunburst:SfSunburstChart.Levels>
-        </sunburst:SfSunburstChart>
+        <sunburst:SfSunburstChart.Levels>
+            <sunburst:SunburstHierarchicalLevel GroupMemberPath="Country"/>
+            <sunburst:SunburstHierarchicalLevel GroupMemberPath="JobDescription"/>
+            <sunburst:SunburstHierarchicalLevel GroupMemberPath="JobGroup"/>
+        </sunburst:SfSunburstChart.Levels>
+    </sunburst:SfSunburstChart>
 
-    </ContentPage>
+</ContentPage>
  
 {% endhighlight %}
 
 {% highlight C# %}
 
-    using Syncfusion.Maui.SunburstChart;
-    . . .
-    public partial class MainPage : ContentPage
-    {   
-        public MainPage()
+using Syncfusion.Maui.SunburstChart;
+. . .
+public partial class MainPage : ContentPage
+{   
+    public MainPage()
+    {
+        SfSunburstChart sunburst = new SfSunburstChart();
+
+        sunburst.ItemsSource = (new SunburstViewModel()).DataSource;
+        sunburst.ValueMemberPath = "EmployeesCount";
+
+        sunburst.Title = new Label
         {
-            SfSunburstChart sunburst = new SfSunburstChart();
+            Text = "Employees Count"
+        };
 
-            sunburst.ItemsSource = (new SunburstViewModel()).DataSource;
-            sunburst.ValueMemberPath = "EmployeesCount";
+        sunburst.Legend = new SunburstLegend();
 
-            sunburst.Title = new Label
-            {
-                Text = "Employees Count"
-            };
+        sunburst.Levels.Add(new SunburstHierarchicalLevel() { GroupMemberPath = "Country" });
+        sunburst.Levels.Add(new SunburstHierarchicalLevel() { GroupMemberPath = "Country" });
+        sunburst.Levels.Add(new SunburstHierarchicalLevel() { GroupMemberPath = "JobDescription" });
+        sunburst.Levels.Add(new SunburstHierarchicalLevel() { GroupMemberPath = "JobGroup" });
 
-            sunburst.Legend = new SunburstLegend();
-
-            sunburst.Levels.Add(new SunburstHierarchicalLevel() { GroupMemberPath = "Country" });
-            sunburst.Levels.Add(new SunburstHierarchicalLevel() { GroupMemberPath = "Country" });
-            sunburst.Levels.Add(new SunburstHierarchicalLevel() { GroupMemberPath = "JobDescription" });
-            sunburst.Levels.Add(new SunburstHierarchicalLevel() { GroupMemberPath = "JobGroup" });
-
-            sunburst.EnableTooltip = true;
-            sunburst.ShowLabels = true;
-            
-            this.Content = sunburst;
-        }
+        sunburst.EnableTooltip = true;
+        sunburst.ShowLabels = true;
+        
+        this.Content = sunburst;
     }
+}
 
 {% endhighlight %}
 

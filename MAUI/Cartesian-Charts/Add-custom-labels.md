@@ -21,22 +21,22 @@ documentation: ug
 
 {% highlight xaml %}
 
-    <chart:SfCartesianChart>
-       . . .
-       <chart:SfCartesianChart.XAxes>
-            <model:CustomNumericalAxis />
-       </chart:SfCartesianChart.XAxes>
-       . . .
-    </chart:SfCartesianChart>
+<chart:SfCartesianChart>
+    . . .
+    <chart:SfCartesianChart.XAxes>
+        <model:CustomNumericalAxis />
+    </chart:SfCartesianChart.XAxes>
+    . . .
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
-    .......
-    CustomNumericalAxis primaryAxis = new CustomNumericalAxis();
-    chart.XAxes.Add(primaryAxis);
+SfCartesianChart chart = new SfCartesianChart();
+.......
+CustomNumericalAxis primaryAxis = new CustomNumericalAxis();
+chart.XAxes.Add(primaryAxis);
     
 {% endhighlight %}
 
@@ -46,28 +46,28 @@ documentation: ug
 
 {% highlight c# %}
 
-    public class CustomNumericalAxis : NumericalAxis
+public class CustomNumericalAxis : NumericalAxis
+{
+    //Adding a custom axis label is achieved by displaying the axis label only on the x-axis values in the CustomNumericalAxis of the chart.
+    
+    protected override void OnCreateLabels()
     {
-        //Adding a custom axis label is achieved by displaying the axis label only on the x-axis values in the CustomNumericalAxis of the chart.
-        
-        protected override void OnCreateLabels()
+        base.OnCreateLabels();
+
+        if (VisibleLabels != null)
         {
-            base.OnCreateLabels();
+            VisibleLabels.Clear();
 
-            if (VisibleLabels != null)
+            ViewModel viewModel = BindingContext as ViewModel;
+
+            for (int i = 0; i < viewModel.Data.Count; i++)
             {
-                VisibleLabels.Clear();
-
-                ViewModel viewModel = BindingContext as ViewModel;
-
-                for (int i = 0; i < viewModel.Data.Count; i++)
-                {
-                    var data = viewModel.Data[i];
-                    VisibleLabels.Add(new ChartAxisLabel(data.XValue, data.XValue.ToString()));
-                }
+                var data = viewModel.Data[i];
+                VisibleLabels.Add(new ChartAxisLabel(data.XValue, data.XValue.ToString()));
             }
         }
     }
+}
     
 {% endhighlight  %}
 

@@ -27,9 +27,9 @@ To define the tooltip in the chart, set the [EnableTooltip]() property of [SfSun
 
 {% highlight c# %}
 
-    SfSunburstChart sunburst = new SfSunburstChart();
-    . . .      
-    sunburst.EnableTooltip = true;
+SfSunburstChart sunburst = new SfSunburstChart();
+. . .      
+sunburst.EnableTooltip = true;
 
 {% endhighlight %}
 
@@ -53,31 +53,31 @@ The appearance of the tooltip can be customized using the following properties:
 
 {% highlight xml %}
 
-    <sunburst:SfSunburstChart EnableTooltip="True">
-        . . .
-        <sunburst:SfSunburstChart.TooltipSettings>
-            <sunburst:SunburstTooltipSettings   
-                Background="White"  TextColor="Black"  
-                FontSize="14" FontAttributes="Bold" 
-                Duration="5"/>
-        </sunburst:SfSunburstChart.TooltipSettings>
-        . . .
-    </sunburst:SfSunburstChart>
+<sunburst:SfSunburstChart EnableTooltip="True">
+    . . .
+    <sunburst:SfSunburstChart.TooltipSettings>
+        <sunburst:SunburstTooltipSettings   
+            Background="White"  TextColor="Black"  
+            FontSize="14" FontAttributes="Bold" 
+            Duration="5"/>
+    </sunburst:SfSunburstChart.TooltipSettings>
+    . . .
+</sunburst:SfSunburstChart>
     
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfSunburstChart sunburst = new SfSunburstChart();
-    . . .
-    sunburst.EnableTooltip = true;
-    SunburstTooltipSettings tooltipSettings = new SunburstTooltipSettings();
-    tooltipSettings.TextColor = Colors.Black;
-    tooltipSettings.Background = Brush.White;
-    tooltipSettings.FontSize = 14;     
-    tooltipSettings.Duration = 5;
-    sunburst.TooltipSettings = tooltipSettings;
-    . . .
+SfSunburstChart sunburst = new SfSunburstChart();
+. . .
+sunburst.EnableTooltip = true;
+SunburstTooltipSettings tooltipSettings = new SunburstTooltipSettings();
+tooltipSettings.TextColor = Colors.Black;
+tooltipSettings.Background = Brush.White;
+tooltipSettings.FontSize = 14;     
+tooltipSettings.Duration = 5;
+sunburst.TooltipSettings = tooltipSettings;
+. . .
 
 {% endhighlight %}
 
@@ -116,17 +116,17 @@ The sunburst chart provides support for customizing the appearance of the toolti
     </sunburst:SfSunburstChart.Resources>
     . . .
 
-</chart:SfSunburstChart>
+</sunburst:SfSunburstChart>
     
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfSunburstChart sunburst = new SfSunburstChart();
-    . . .
-    sunburst.EnableTooltip = true;
-    sunburst.TooltipTemplate = (DataTemplate)sunburstChart.Resources["template1"];
-    . . .
+SfSunburstChart sunburst = new SfSunburstChart();
+. . .
+sunburst.EnableTooltip = true;
+sunburst.TooltipTemplate = (DataTemplate)sunburstChart.Resources["template1"];
+. . .
 
 {% endhighlight %}
 

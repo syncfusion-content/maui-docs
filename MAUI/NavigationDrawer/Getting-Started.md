@@ -2,7 +2,7 @@
 layout: post
 title: Getting Started with .NET MAUI Navigation Drawer control | Syncfusion
 description: Learn here about getting started with Syncfusion .NET MAUI Navigation Drawer (SfNavigationDrawer) control, its elements and more.
-platform: maui
+platform: .NET MAUI
 control: NavigationDrawer
 documentation: ug
 ---
@@ -49,11 +49,11 @@ namespace NavigationDrawerSample
 
 {% endhighlight %} 
 
-## Create a Simple .NET MAUI NaviagtionDrawer
+## Create a Simple .NET MAUI NavigationDrawer
 
-The .NET MAUI NaviagtionDrawer control is configured entirely in C# code or by using XAML markup. The following steps explain how to create a .NET MAUI NaviagtionDrawer (SfNaviagtionDrawer) and configure its elements:
+The .NET MAUI NavigationDrawer control is configured entirely in C# code or by using XAML markup. The following steps explain how to create a .NET MAUI NavigationDrawer (SfNavigationDrawer) and configure its elements:
 
-### Adding the .NET MAUI NaviagtionDrawer control
+### Adding the .NET MAUI NavigationDrawer control
 
 Step 1: Add the NuGet to the project as discussed in the above reference section. 
 
@@ -283,6 +283,8 @@ public partial class NavigationDrawerPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
+![CustomView Image](Images/getting-started/getting_main_content.png)
+
 ## Set ListView as Drawer Content
 
 Create a ListView with items and set it as `DrawerContentView.` 
@@ -459,5 +461,7 @@ public partial class NavigationDrawerPage : ContentPage
 
 {% endhighlight %}
 {% endtabs %}
+
+![OverView Image for NavigationDrawer](Images/getting-started/gettingstarted.png)
 
 You can find the Getting Started Sample from this [`link.`](https://github.com/SyncfusionExamples/Getting-started-sample-for-.NET-MAUI-NavigationDrawer)
