@@ -116,7 +116,7 @@ The sunburst chart provides support for customizing the appearance of the toolti
     </sunburst:SfSunburstChart.Resources>
     . . .
 
-</chart:SfSunburstChart>
+</sunburst:SfSunburstChart>
     
 {% endhighlight %}
 

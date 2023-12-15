@@ -45,7 +45,7 @@ The [CenterHoleSize]() property of SfSunburstChart is used to get the diameter v
                     HorizontalOptions="CenterAndExpand"/>
         </VerticalStackLayout>
     </Border>
-</chart:SfSunburstChart.CenterView>
+</sunburst:SfSunburstChart.CenterView>
 
 {% endhighlight %}
 

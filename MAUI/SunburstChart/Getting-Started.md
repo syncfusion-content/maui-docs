@@ -26,7 +26,7 @@ This section explains how to populate the sunburst chart with data, a title, dat
     . . .
     xmlns:sunburst="clr-namespace:Syncfusion.Maui.SunburstChart;assembly=Syncfusion.Maui.SunburstChart">
 
-    <chart:SfSunburstChart/>
+    <sunburst:SfSunburstChart/>
 </ContentPage>
  
 {% endhighlight %}

@@ -46,7 +46,8 @@ chart.XAxes.Add(primaryAxis);
 
 int month = 0;
 
-//Customize each axis label achieved by displaying the first label of each month with a month format, while other labels within the same month are formatted with a day format in the DateTimeAxis of the chart.
+//Customize each axis label achieved by displaying the first label of each month with a month format,
+//while other labels within the same month are formatted with a day format in the DateTimeAxis of the chart.
 
 private void XAxes_LabelCreated(object sender, ChartAxisLabelEventArgs e)
 {

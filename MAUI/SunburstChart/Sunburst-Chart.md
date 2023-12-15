@@ -54,7 +54,7 @@ The sunburst chart allows you to customize the radius by using the [Radius]() pr
                             Radius="0.7"
                             ValueMemberPath="EmployeesCount">
     . . .
-</chart:SfSunburstChart>
+</sunburst:SfSunburstChart>
  
 {% endhighlight %}
 
@@ -113,7 +113,7 @@ Stroke color and stroke width of the sunburst chart can be customized using [Str
                             StrokeWidth="2"
                             ValueMemberPath="EmployeesCount">
     . . .
-</chart:SfSunburstChart>
+</sunburst:SfSunburstChart>
  
 {% endhighlight %}
 
