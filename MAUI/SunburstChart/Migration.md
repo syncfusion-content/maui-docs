@@ -49,7 +49,7 @@ To initialize the control, import the sunburst chart namespace and Initialize [S
     . . .
     xmlns:sunburst="clr-namespace:Syncfusion.SfSunburstChart.XForms;assembly=Syncfusion.SfSunburstChart.XForms">
 
-    <chart:SfSunburstChart/>
+    <sunburst:SfSunburstChart/>
 
 </ContentPage>
 
@@ -59,8 +59,8 @@ To initialize the control, import the sunburst chart namespace and Initialize [S
 using Syncfusion.SfSunburstChart.XForms;
 ...
 
-SfSunburstChart chart = new SfSunburstChart(); 
-this.Content = chart;
+SfSunburstChart sunburstChart = new SfSunburstChart(); 
+this.Content = sunburstChart;
 
 {% endhighlight %}
 
@@ -89,8 +89,8 @@ this.Content = chart;
 
 using Syncfusion.Maui.SunburstChart;
 . . .
-SfSunburstChart chart = new SfSunburstChart(); 
-this.Content = chart;
+SfSunburstChart sunburstChart = new SfSunburstChart(); 
+this.Content = sunburstChart;
 
 {% endhighlight %}
 
@@ -168,7 +168,7 @@ The following code example explains how to migrate Xamarin SfSunburstChart to th
     . . .
     xmlns:sunburst="clr-namespace:Syncfusion.SfSunburstChart.XForms;assembly=Syncfusion.SfSunburstChart.XForms">
 
-    <chart:SfSunburstChart/>
+    <sunburst:SfSunburstChart/>
 
 </ContentPage>
 {% endhighlight %}
@@ -178,8 +178,8 @@ The following code example explains how to migrate Xamarin SfSunburstChart to th
 using Syncfusion.SfSunburstChart.XForms;
 ...
 
-SfSunburstChart chart = new SfSunburstChart(); 
-this.Content = chart;
+SfSunburstChart sunburstChart = new SfSunburstChart(); 
+this.Content = sunburstChart;
 
 {% endhighlight %}
 
