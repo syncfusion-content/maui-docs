@@ -387,7 +387,7 @@ To host the .NET MAUI `ListView` inside the `PullToRefresh`, which is used to up
     xmlns:pulltoRefresh="clr-namespace:Syncfusion.Maui.PullToRefresh;assembly=Syncfusion.Maui.PullToRefresh"
 
 {% endhighlight %}
-{% highlight c# "MainPage.xaml.cs" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
     using Syncfusion.Maui.ListView;
     using Syncfusion.Maui.PullToRefresh;
