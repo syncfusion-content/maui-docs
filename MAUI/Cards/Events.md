@@ -19,7 +19,7 @@ The [`Tapped`]() event is triggered when any card view is tapped. The associated
 
 The [`VisibleIndexChanging`]()  event is triggered when the visible card index is changing. The associated argument contains the following information.
 
-* [`OldIndex]() - Gets the details of the previous index card.
+* [`OldIndex`]() - Gets the details of the previous index card.
 
 * [`NewIndex`]() - Gets the details of the next possible index card.
 

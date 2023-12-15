@@ -9,7 +9,7 @@ documentation: ug
 
 # Customization in MAUI Cards
 
-### ShowSwipedCard
+## ShowSwipedCard
 
 Enabling the `ShowSwipedCard` option allows the swiped cards to be displayed at the edge of the card layout.
 
@@ -35,7 +35,7 @@ SfCardLayout cardLayout = new SfCardLayout()
 
 ![ShowSwipedCard in MAUI SfCardLayout](images/maui-card-showswipecard.png)
 
-### VisibleIndex
+## VisibleIndex
 
 The `VisibleIndex` is utilized when providing the index of the card that is intended to be displayed at the front of the card layout.
 
@@ -61,7 +61,7 @@ SfCardLayout cardLayout = new SfCardLayout()
 
 ![VisibleCardIndex in MAUI SfCardLayout](images/maui-card-index.png)
 
-### SwipeDirection
+## SwipeDirection
 
 The `SwipeDirection` property specifies the direction of swiping, which can be left, right, top, or bottom. Default value of swipe direction is right.
 
@@ -88,7 +88,7 @@ SfCardLayout cardLayout = new SfCardLayout()
 
 ![SwipeDirection in MAUI SfCardLayout](images/maui-card-swipedirection.png)
 
-### Customization in CardView
+## Customization in CardView
 
 Customization of the border color, thickness, and card corner radius can be achieved by the following properties.
 
@@ -160,7 +160,7 @@ Customization of the border color, thickness, and card corner radius can be achi
 
 ![Card customization in MAUI SfCardLayout](images/maui-card-customization.png)
 
-## Indicator customization
+### Indicator customization
 
 Indicators are used to signify or communicate the state or level of something.
 
@@ -198,7 +198,7 @@ SfCardView cardView = new SfCardView()
 
 ![Indicator in MAUI SfCardLayout](images/maui-card-indicatorcolor.png)
 
-## FadeOutOnSwiping
+### FadeOutOnSwiping
 
 The `FadeOutOnSwiping` option can be enabled when the card view is intended to fade in response to swiping.
 
