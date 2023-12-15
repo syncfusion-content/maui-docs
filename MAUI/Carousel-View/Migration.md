@@ -24,4 +24,4 @@ To migrate easier from `Xamarin SfCarousel` to `.NET MAUI SfCarousel`, we kept a
 
 ## Upcoming features
 
-  * Scroll support in the default mode for mac and iOS platforms.
+  * Scroll support in the default mode for Mac Catalyst platform.

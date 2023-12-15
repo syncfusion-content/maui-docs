@@ -140,7 +140,7 @@ namespace CarouselSample
 
             carousel.BindingContext = carouselViewModel;
             carousel.ItemTemplate = itemTemplate;
-            carousel.ItemsSource = carouselViewModel.ImageCollection;
+            carousel.SetBinding(SfCarousel.ItemsSourceProperty, "ImageCollection");
 
             this.Content = carousel;
         }
