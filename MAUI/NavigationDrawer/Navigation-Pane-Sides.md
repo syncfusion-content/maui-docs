@@ -2,7 +2,7 @@
 layout: post
 title: Configuring the Drawer in .NET MAUI Navigation Drawer | Syncfusion
 description: Learn here all about configuring the drawer in different sides support in Syncfusion .NET MAUI Navigation Drawer (SfNavigationDrawer) control and more.
-platform: maui
+platform: .NET MAUI
 control: NavigationDrawer
 documentation: ug
 ---
@@ -51,7 +51,7 @@ The navigation pane pulled in and out from the `Left` side can be set as follows
 
 {% endtabs %}
 
-![Left]()
+![Left](Images/drawer-sides/navigation_drawer_left.png)
 
 ## Right
 
@@ -84,7 +84,7 @@ The navigation pane pulled in and out from the `Right` side can be set as follow
 
 {% endtabs %}
 
-![Right]()
+![Right](Images/drawer-sides/navigation_drawer_right.png)
 	
 ## Top
 
@@ -118,7 +118,7 @@ The navigation pane pulled in and out from the `Top` side can be set as follows:
 
 {% endtabs %}
 
-![Top]()
+![Top](Images/drawer-sides/navigation_drawer_top.png)
 
 ## Bottom
 
@@ -151,4 +151,4 @@ this.Content = navigationDrawer;
 
 {% endtabs %}
 
-![Bottom]()
+![Bottom](Images/drawer-sides/navigation_drawer_bottom.png)
