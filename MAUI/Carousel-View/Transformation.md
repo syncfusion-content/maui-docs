@@ -51,7 +51,7 @@ carousel.SetBinding(SfCarousel.ItemsSourceProperty, "ImageCollection");
 
 The `Offset` property is used to define the accurate distance between unselected items in the `SfCarousel` panel in the Default mode.
 
-N> The default value is 20.
+N> The default offset value is 40 for desktop platforms and 18 for mobile platforms.
 
 {% tabs %}
 

@@ -197,4 +197,4 @@ private void Button_Clicked(object sender, EventArgs e)
 
 {% endtabs %}
 
-
+Find the complete Load More sample from this [link](https://github.com/SyncfusionExamples/maui-carousel-samples/tree/master/LoadMore/LoadMoreSample).
