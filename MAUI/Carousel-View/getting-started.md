@@ -7,13 +7,9 @@ control: Carousel
 documentation: ug
 ---
 
-# Getting Started with .NET MAUI Carousel
+# Getting Started with .NET MAUI Carousel (SfCarousel)
 
-This section provides a quick overview of how to get started with the `.NET MAUI Carousel` control.
-
-## Creating an application with .NET MAUI Carousel
-
-This section explains the steps required to work with the `SfCarousel` control for .NET MAUI.
+This section explains how to add the Carousel control and bind data to it. This section covers only the basic features needed to get started with the Syncfusion `.NET MAUI Carousel` control.
 
 ## Adding a .NET MAUI Carousel reference
 
@@ -101,7 +97,7 @@ We can populate the carousel's items by using any one of the following ways,
 
 * Through `ItemTemplate`
 
-The below is an simple example for adding Carousel items using SfCarouselItem, for more details on Populating data click [Here](https://help.syncfusion.com/maui/carousel-view/populating-data)
+The below is an simple example for adding Carousel items using SfCarouselItem, for more details on populating data click [Here](https://help.syncfusion.com/maui/carousel-view/populating-data)
 
 The following code example illustrates how to create a list of Images in Carousel,
 
@@ -109,15 +105,15 @@ The following code example illustrates how to create a list of Images in Carouse
 
 public class CarouselViewModel
 {
-    public ObservableCollection<SfCarouselItem> carouselItems;
+    public ObservableCollection<SfCarouselItem> CarouselItems;
     public CarouselViewModel()
     {
-        carouselItems = new ObservableCollection<SfCarouselItem>();
-        carouselItems.Add(new SfCarouselItem() { ImageName = "carousel_person1.png" });
-        carouselItems.Add(new SfCarouselItem() { ImageName = "carousel_person2.png" });
-        carouselItems.Add(new SfCarouselItem() { ImageName = "carousel_person3.png" });
-        carouselItems.Add(new SfCarouselItem() { ImageName = "carousel_person4.png" });
-        carouselItems.Add(new SfCarouselItem() { ImageName = "carousel_person5.png" });
+        CarouselItems = new ObservableCollection<SfCarouselItem>();
+        CarouselItems.Add(new SfCarouselItem() { ImageName = "carousel_person1.png" });
+        CarouselItems.Add(new SfCarouselItem() { ImageName = "carousel_person2.png" });
+        CarouselItems.Add(new SfCarouselItem() { ImageName = "carousel_person3.png" });
+        CarouselItems.Add(new SfCarouselItem() { ImageName = "carousel_person4.png" });
+        CarouselItems.Add(new SfCarouselItem() { ImageName = "carousel_person5.png" });
     }
 }
 
@@ -140,7 +136,7 @@ The following code example illustrates how to add the collection in Carousel,
     </ContentPage.BindingContext>
 
     <carousel:SfCarousel x:Name="carousel"
-                         ItemsSource="carouselItems"/>
+                         ItemsSource="{Binding CarouselItems}"/>
 </ContentPage>
 
 {% endhighlight %}
@@ -162,7 +158,7 @@ namespace CarouselSample
             SfCarousel carousel = new SfCarousel();
 
             carousel.BindingContext = carouselViewModel;
-            carousel.SetBinding(SfCarousel.ItemsSourceProperty, "ImageCollection");
+            carousel.SetBinding(SfCarousel.ItemsSourceProperty, "CarouselItems");
 
             this.Content = carousel;
         }
@@ -182,7 +178,7 @@ namespace CarouselSample
 {% highlight xaml %}
 
 <carousel:SfCarousel x:Name="carousel"
-                     ItemsSource="carouselItems"
+                     ItemsSource="{Binding CarouselItems}"
                      ItemHeight="170"
                      ItemWidth="270"/>
 
@@ -196,7 +192,7 @@ SfCarousel carousel = new SfCarousel()
     ItemHeight = 250
 };
 
-carousel.SetBinding(SfCarousel.ItemsSourceProperty, "ImageCollection");
+carousel.SetBinding(SfCarousel.ItemsSourceProperty, "CarouselItems");
 
 {% endhighlight %}
 
@@ -211,7 +207,7 @@ We can bring particular item to the center of the screen using `SelectedIndex` p
 {% highlight xaml %}
 
 <carousel:SfCarousel x:Name="carousel"
-                     ItemsSource="carouselItems"
+                     ItemsSource="{Binding CarouselItems}"
                      ItemHeight="170"
                      ItemWidth="270"
                      SelectedIndex="4"/>
@@ -227,7 +223,7 @@ SfCarousel carousel = new SfCarousel()
     SelectedIndex = 4,
 };
 
-carousel.SetBinding(SfCarousel.ItemsSourceProperty, "ImageCollection");
+carousel.SetBinding(SfCarousel.ItemsSourceProperty, "CarouselItems");
 
 {% endhighlight %}
 
@@ -237,4 +233,4 @@ N> The `SelectedIndex` property will be 0 by default.
 
 ![OverView image for Carousel](images/gettingstarted.png)
 
-You can find the complete getting started sample from this [link.](https://github.com/SyncfusionExamples/Getting-Started-with-.NET-MAUI-SfCarousel)
+N> You can find the complete getting started sample from this [link.](https://github.com/SyncfusionExamples/Getting-Started-with-.NET-MAUI-SfCarousel)

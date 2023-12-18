@@ -9,7 +9,7 @@ documentation : ug
 
 # Populating Data in .NET MAUI Carousel View (SfCarousel)
 
-`SfCarousel` control supports binding to different items sources such as IList items Source and Observable Collection items Source.
+`SfCarousel` control supports binding to different items sources such as IList and ObservableCollection type of  items sources.
 
 ## Through Binding
 

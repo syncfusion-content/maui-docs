@@ -38,12 +38,12 @@ The `SwipeEnded` event can be triggered after the swiping is completed in the ca
 
 {% highlight c# %}
 
-private async void carousel_SwipeStarted(object sender, Syncfusion.SfCarousel.XForms.SwipeStartedEventArgs e)
+private async void carousel_SwipeStarted(object sender, Syncfusion.Maui.Core.Carousel.SwipeStartedEventArgs e)
 {
     // Trigger when swipe starts in the carousel item.
 }
 
-private async void carousel_SwipeEnded(object sender, EventArgs e)
+private async void carousel_SwipeEnded(object sender, System.EventArgs e)
 {
     // Trigger before swipe ends in the carousel item.
 }

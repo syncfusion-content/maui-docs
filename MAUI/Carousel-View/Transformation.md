@@ -13,7 +13,7 @@ The `Offset` between selected and unselected item can be customized in  `SfCarou
 
 ## Tilt Non Selected Items
 
-The `RotationAngle` property in the `SfCarousel` control is utilized to tilt all unselected items at a specified angle in the Default mode.
+The `RotationAngle` property in the `SfCarousel` control is utilized to tilt all unselected items at a specified angle in the `Default` mode.
 
 N> If the angle value is positive, then the rotation is in the clockwise direction. If the angle value is negative, the rotation is in the counterclockwise direction. 
 
