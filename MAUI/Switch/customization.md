@@ -229,7 +229,7 @@ this.Content = sfSwitch;
 
 ## Custom Path
 
-In the switch control, you can customize the thumb's icon by using the following properties:
+In the switch control, customize the thumb's icon by using the following properties:
 
 * `CustomPath`: Represents a Path value for defining the thumb's icon.
 * `IconColor`: Represents the color for the thumb's icon.
