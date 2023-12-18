@@ -39,9 +39,7 @@ To initialize the control, import the calendar namespace and initialize `SfCalen
 <ContentPage xmlns:cards="clr-namespace:Syncfusion.XForms.Cards;assembly=Syncfusion.Cards.XForms">
 
 <cards:SfCardView>
-
 	<Label Text="SfCardView"/>
-
 </cards:SfCardView>
 
 </ContentPage>
@@ -107,79 +105,8 @@ The following code example, explains how to initialize the properties of the `Xa
 <table>
 <tr>
 <th>Xamarin SfCards</th>
-<th>.NET MAUI SfCards</th></tr>
-<tr>
-<td>
-{% tabs %}
-
-{% highlight xaml %}
-
-<ContentPage
-xmlns:cards="clr-namespace:Syncfusion.XForms.Cards;assembly=Syncfusion.Cards.XForms">
-
-<cards:SfCardView>
-	<Label Text="SfCardView"/>
-</cards:SfCardView>
-
-</ContentPage>
-
-{% endhighlight %}
-
-{% highlight c# %}
-
-using Syncfusion.Cards.XForms;
-...
-
-SfCardView cardView = new SfCardView();
-cardView.Content = new Label(){ Text="SfCardView" };
-this.Content = cardView;
-
-{% endhighlight %}
-
-{% endtabs %}
-
-</td>
-<td>
-{% tabs %}
-
-{% highlight xaml %}
-
-<ContentPage
-xmlns:cards="clr-namespace:Syncfusion.Maui.Cards;assembly=Syncfusion.Maui.Cards">
-
-<cards:SfCardView>
-	<Label Text="SfCardView"/>
-</cards:SfCardView>
-
-</ContentPage>
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-using Syncfusion.Maui.Cards;
-...
-
-SfCardView cardView = new SfCardView();
-cardView.Content = new Label(){ Text="SfCardView" };
-this.Content = cardView;
-
-{% endhighlight %}
-
-{% endtabs %}
-</td></tr>
-</table>
-
-<table>
-<tr>
-<th>Xamarin SfCards</th>
 <th>.NET MAUI SfCards</th>
 <th>Description</th>
-</tr>
-<tr>
-<td>{{'[Content](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Cards.SfCardView.html#Syncfusion_XForms_Cards_SfCardView_Content)'| markdownify }}</td>
-<td>{{'[Content]()'| markdownify }}</td>
-<td>Not Supported.</td>
 </tr>
 <tr>
 <td>Nil</td>
@@ -192,19 +119,9 @@ this.Content = cardView;
 <td>Gets or sets the stroke in SfCardView.</td>
 </tr>
 <tr>
-<td>{{'[HasShadow](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Cards.SfCardView.html#Syncfusion_XForms_Cards_SfCardView_HasShadow)'| markdownify }}</td>
-<td>Nil</td>
-<td>Gets or sets the has shdow value in SfCardView.</td>
-</tr>
-<tr>
 <td>{{'[IsDismissed](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Cards.SfCardView.html#Syncfusion_XForms_Cards_SfCardView_IsDismissed)'| markdownify }}</td>
 <td>{{'[IsDismissed]()'| markdownify }}</td>
 <td>Gets or sets a card is dismissed or not.</td>
-</tr>
-<tr>
-<td>{{'[ShadowColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Cards.SfCardView.html#Syncfusion_XForms_Cards_SfCardView_ShadowColor)'| markdownify }}</td>
-<td>Nil</td>
-<td>Gets or sets the shdow color value in SfCardView.</td>
 </tr>
 <tr>
 <td>{{'[CornerRadius](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Cards.SfCardView.html#Syncfusion_XForms_Cards_SfCardView_CornerRadius)'| markdownify }}</td>
@@ -254,12 +171,12 @@ this.Content = cardView;
 <tr>
 <td>Nil</td>
 <td>{{'[VerticalCardSpacing]()'| markdownify }}</td>
-<td>Gets or sets the space value in SfCardLayout.</td>
+<td>Gets or sets the vertical space value in SfCardLayout.</td>
 </tr>
 <tr>
 <td>Nil</td>
 <td>{{'[HorizontalCardSpacing]()'| markdownify }}</td>
-<td>Gets or sets the visible index value in SfCardLayout.</td>
+<td>Gets or sets the horizontal space value in SfCardLayout.</td>
 </tr>
 </table>
 
@@ -284,17 +201,17 @@ this.Content = cardView;
 <tr>
 <td>{{'[VisibleCardIndexChanging](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Cards.SfCardLayout.html#Syncfusion_XForms_Cards_SfCardLayout_VisibleCardIndexChanging)'| markdownify }}</td>
 <td>{{'[VisibleIndexChanging]()'| markdownify }}</td>
-<td>Occurs whenever the card visible index chaning on SfCardLayout. </td>
+<td>Occurs whenever the card visible index changing on SfCardLayout. </td>
 </tr>
 <tr>
 <td>{{'[Dismissed](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Cards.SfCardView.html#Syncfusion_XForms_Cards_SfCardView_Dismissed)'| markdownify }}</td>
 <td>{{'[Dismissed]()'| markdownify }}</td>
-<td>Occurs whenever the card visible index chaning on SfCardView. </td>
+<td>Occurs whenever the card dismissed on SfCardView. </td>
 </tr>
 <tr>
 <td>{{'[Dismissing](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Cards.SfCardView.html#Syncfusion_XForms_Cards_SfCardView_Dismissing)'| markdownify }}</td>
 <td>{{'[Dismissing]()'| markdownify }}</td>
-<td>Occurs whenever the card visible index chaning on SfCardView. </td>
+<td>Occurs whenever the card dismissing on SfCardView. </td>
 </tr>
 </table>
 
@@ -317,3 +234,8 @@ this.Content = cardView;
 <td>Move to previous card.</td>
 </tr>
 </table>
+
+## Upcoming Features
+
+* Shadow effect support.
+* Content support.

@@ -15,7 +15,7 @@ This section details the process of integrating the Card control and focuses sol
 
 1. Create a new .NET MAUI application in Visual Studio.
 
-2. Syncfusion .NET MAUI components are available on [nuget.org](https://www.nuget.org/). To add `SfCards` to your project, open the NuGet package manager in Visual Studio, search for [Syncfusion.Maui.Card](), and then install.
+2. Syncfusion .NET MAUI components are available on [nuget.org](https://www.nuget.org/). To add `SfCards` to your project, open the NuGet package manager in Visual Studio, search for [Syncfusion.Maui.Cards](), and then install.
 
 3. To initialize the control, import the control namespace `Syncfusion.Maui.Cards` in XAML or C# code.
 
@@ -29,7 +29,7 @@ This section details the process of integrating the Card control and focuses sol
     xmlns:card="clr-namespace:Syncfusion.Maui.Cards;assembly=Syncfusion.Maui.Cards">
 
 <cards:SfCardView>
-    <Label Text="Label" Background="LightGoldenrodYellow" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+    <Label Text="CardView" Background="PeachPuff" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
 </cards:SfCardView>
 
 </ContentPage>
@@ -49,10 +49,10 @@ public partial class MainPage : ContentPage
 
         cardView.Content = new Label()
         {
-            Text = "Label",
+            Text = "CardView",
             HorizontalTextAlignment = TextAlignment.Center,
             VerticalTextAlignment = TextAlignment.Center,
-            BackgroundColor = Colors.LightGoldenrodYellow
+            BackgroundColor = Colors.PeachPuff
         };
         this.Content = cardView;
     }
@@ -104,7 +104,7 @@ The `SwipeToDismiss` property enables or disables the swiping feature in SfCardV
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="1" %}
 
 <cards:SfCardView SwipeToDismiss="true">
-    <Label Text="SfCardView" Background="LightGoldenrodYellow" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+    <Label Text="SfCardView" Background="MediumPurple" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
 </cards:SfCardView>
 
 {% endhighlight %}
@@ -120,7 +120,14 @@ public partial class MainPage : ContentPage
         InitializeComponent();
         SfCardView cardView = new SfCardView();
         cardView.SwipeToDismiss = true;
-        cardView.Content = new Label(){ Text="SfCardView" };
+
+        cardView.Content = new Label()
+        {
+            Text="SfCardView",
+            HorizontalTextAlignment = TextAlignment.Center,
+            VerticalTextAlignment = TextAlignment.Center,
+            BackgroundColor = Colors.MediumPurple
+        };
         this.Content = cardView;
     }
 }
@@ -153,7 +160,7 @@ public partial class MainPage : ContentPage
     {
         InitializeComponent();
         SfCardView cardView = new SfCardView();
-        cardView.SwipeToDismiss = true;
+        cardView.IsDismissed = true;
         cardView.Content = new Label(){ Text="SfCardView" };
         this.Content = cardView;
     }
@@ -172,15 +179,15 @@ Initialize a card layout with a card view using the provided code sample below.
 <cards:SfCardLayout HeightRequest="500" BackgroundColor="#F0F0F0">
 
     <cards:SfCardView CornerRadius="10">
-        <Label  Text="Cyan" BackgroundColor="Cyan" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+        <Label  Text="Peach" BackgroundColor="PeachPuff" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
     </cards:SfCardView>
 
     <cards:SfCardView CornerRadius="10">
-        <Label  Text="LightPink" BackgroundColor="LightPink" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+        <Label  Text="MediumPurple" BackgroundColor="MediumPurple" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
     </cards:SfCardView>
 
     <cards:SfCardView CornerRadius="10" >
-        <Label  Text="LightGreen" BackgroundColor="LightGreen" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+        <Label  Text="LightPink" BackgroundColor="LightPink" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
     </cards:SfCardView>
 
 </cards:SfCardLayout>
@@ -199,11 +206,11 @@ public partial class MainPage : ContentPage
 		SfCardLayout cardLayout = new SfCardLayout();
 
 		//Add children for card layout 
-		cardLayout.Children.Add(new SfCardView() { Content = new Label() { Text = "Cyan", BackgroundColor = Colors.Cyan, HorizontalTextAlignment = TextAlignment.Center, VerticalTextAlignment = TextAlignment.Center }, CornerRadius = 15 });
+		cardLayout.Children.Add(new SfCardView() { Content = new Label() { Text = "Peach", BackgroundColor = Colors.PeachPuff, HorizontalTextAlignment = TextAlignment.Center, VerticalTextAlignment = TextAlignment.Center }, CornerRadius = 15 });
 
-		cardLayout.Children.Add(new SfCardView() { Content = new Label() { Text = "Yellow", BackgroundColor = Colors.LightPink, HorizontalTextAlignment = TextAlignment.Center, VerticalTextAlignment = TextAlignment.Center },CornerRadius = 15 });
+		cardLayout.Children.Add(new SfCardView() { Content = new Label() { Text = "MediumPurple", BackgroundColor = Colors.MediumPurple, HorizontalTextAlignment = TextAlignment.Center, VerticalTextAlignment = TextAlignment.Center },CornerRadius = 15 });
 
-		cardLayout.Children.Add(new SfCardView() { Content = new Label() { Text = "Orange", BackgroundColor = Colors.LightGreen, HorizontalTextAlignment = TextAlignment.Center, VerticalTextAlignment = TextAlignment.Center },CornerRadius = 15 });
+		cardLayout.Children.Add(new SfCardView() { Content = new Label() { Text = "LightPink", BackgroundColor = Colors.LightPink, HorizontalTextAlignment = TextAlignment.Center, VerticalTextAlignment = TextAlignment.Center },CornerRadius = 15 });
 
 		this.Content = cardLayout;
 	}

@@ -149,7 +149,7 @@ N> This event will not work when adding the `SfCardView` as a child of `SfCardLa
 
 ## Dismissed event
 
-The [`Dismissed`]() event fires when dismisses the card by swiping, with enables `SwipeToDismiss` property. The argument contains the following information.
+The [`Dismissed`]() event fires when dismissed the card by swiping, with enables `SwipeToDismiss` property. The argument contains the following information.
 
 * [`DismissDirection`]() - Gets a dismissed direction of the card view.
 
