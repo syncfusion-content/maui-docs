@@ -345,4 +345,4 @@ this.Content = sfSwitch;
 
 ![switch conrol with custom path](images/Path/Path.gif)
 
-N> Keep the size of the `Path` within the dimensions of the thumb.
+N> Keep the size of the `CustomPath` within the dimensions of the thumb.
