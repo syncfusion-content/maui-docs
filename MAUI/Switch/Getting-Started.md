@@ -7,13 +7,9 @@ control: SfSwitch
 documentation: ug
 ---
 
-# Getting Started with .NET MAUI Switch
+# Getting Started with .NET MAUI Switch (SfSwitch)
 
-This section explains the steps required to work with the `.NET MAUI Switch` control.
-
-## Creating an application with .NET MAUI Switch
-
-This section explains the steps required to work with the `SfSwitch` control for .NET MAUI.
+This section explains the steps to configure the .NET MAUI Switch control in a real-time scenario and provides a walk-through on some of the customization features available in the control.
 
 ## Adding a .NET MAUI Switch reference
 
@@ -95,9 +91,6 @@ this.Content = sfSwitch;
 
 ![SfSwitch](images/getting-started/SfSwitch.png)
 
-Find the complete getting started sample of the .NET MAUI Switch from this [link.](https://github.com/SyncfusionExamples/Getting-Started-with-.NET-MAUI-SfSwitch)
-
-
 ## Performing an action based on state
 
 You can switch between the states. When the state is changed the `StateChanging` and `StateChanged` event will be triggered where you can perform an action based on the current state. The `StateChanging` event allows you to cancel moving to a new state.
@@ -134,3 +127,5 @@ private void SfSwitch_StateChanged(object sender, SwitchStateChangedEventArgs e)
 {% endhighlight %}
 
 {% endtabs %}
+
+N> Find the complete getting started sample of the .NET MAUI Switch from this [link.](https://github.com/SyncfusionExamples/Getting-Started-with-.NET-MAUI-SfSwitch)

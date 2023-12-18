@@ -19,7 +19,7 @@ The following properties are used to achieve this support:
 
 *	`LoadMoreView`
 
-## AllowLoadMore
+## Allow Load More
 
 By enabling the `AllowLoadMore` property, the LoadMore support works in the carousel view. 
 
@@ -52,7 +52,7 @@ carousel.SetBinding(SfCarousel.ItemsSourceProperty, "ImageCollection");
 
 {% endtabs %}
 
-## LoadMoreItemsCount
+## Load More Items Count
 
 Number of items can be maintained in the carousel control using the `LoadMoreItemsCount` property. By using the `LoadMoreItemsCount` property, numerous items can be separated. 
 
@@ -89,7 +89,7 @@ carousel.SetBinding(SfCarousel.ItemsSourceProperty, "ImageCollection");
 
 {% endtabs %}
 
-## LoadMoreView
+## Load More View
 
 Custom view can be passed instead of the `LoadMore` label using the `LoadMoreView` property.
 
@@ -164,7 +164,7 @@ carousel.LoadMoreView = grid;
 
 ![Load more](images/LoadMore.png)
 
-## LoadMore method
+## Load More method
 
 To load more items programmatically, the `LoadMore` method can be called, which loads the items dynamically to the UI based on the `LoadMoreItemsCount` API value.
 
@@ -184,9 +184,6 @@ To load more items programmatically, the `LoadMore` method can be called, which 
 {% endhighlight %}
 
 {% highlight c# %}
-
-using System;
-using System.Collections.Generic;
 
 private void Button_Clicked(object sender, EventArgs e)
 {
