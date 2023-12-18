@@ -6,7 +6,7 @@ platform: .NET MAUI
 control: NavigationDrawer
 documentation: ug
 ---
-# SwipeGesture in .NET MAUI Navigation Drawer
+# Swipe Gesture in .NET MAUI Navigation Drawer (SfNavigationDrawer)
 
 The NavigationDrawer supports the swipe gesture for both opening and closing the drawer. 
 

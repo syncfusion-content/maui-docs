@@ -7,7 +7,7 @@ control: NavigationDrawer
 documentation: ug
 ---
 
-# Events in .NET MAUI Navigation Drawer
+# Events in .NET MAUI Navigation Drawer (SfNavigationDrawer)
 
 There are five built-in events in the `SfNavigationDrawer` control namely:
 
@@ -124,7 +124,7 @@ You can execute your own set of codes once the drawer is closed.
 public MainPage()
 {
     InitializeComponent();
-    navigationDrawer.DrawerClosing += navigationDrawer_DrawerClosed;
+    navigationDrawer.DrawerClosed += navigationDrawer_DrawerClosed;
 }
 
 private void navigationDrawer_DrawerClosed(object sender, EventArgs e)

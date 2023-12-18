@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 
-# Setting Sliding Panel Content in .NET MAUI Navigation Drawer
+# Setting Sliding Panel Content in .NET MAUI Navigation Drawer (SfNavigationDrawer)
 
 The drawer pane content is only viewable when the drawer is in the open state. Its content can be set as:
 

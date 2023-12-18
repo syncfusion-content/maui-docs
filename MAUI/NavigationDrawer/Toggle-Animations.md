@@ -6,7 +6,7 @@ platform: .NET MAUI
 control: NavigationDrawer
 documentation: ug
 ---
-# Setting Toggle Animations in .NET MAUI Navigation Drawer
+# Setting Toggle Animations in .NET MAUI Navigation Drawer (SfNavigationDrawer)
 
 The drawer toggling animation can be changed using the `Transition` property, and it can be set to three different values. Which are:
 

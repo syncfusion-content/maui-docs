@@ -464,4 +464,4 @@ public partial class NavigationDrawerPage : ContentPage
 
 ![OverView Image for NavigationDrawer](Images/getting-started/gettingstarted.png)
 
-You can find the Getting Started Sample from this [`link.`](https://github.com/SyncfusionExamples/Getting-started-sample-for-.NET-MAUI-NavigationDrawer)
+You can find the getting started sample from the [`GitHub`](https://github.com/SyncfusionExamples/Getting-started-sample-for-.NET-MAUI-NavigationDrawer) link.

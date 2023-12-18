@@ -149,4 +149,4 @@ N> It is mandatory to set `ContentView` for `SfNavigationDrawer` when initializi
 
 ![contentview](Images/main-content/getting_main_content.png)
 
-You can find the complete Sample from this [`link.`](https://github.com/SyncfusionExamples/.NET-MAUI-NavigationDrawer-MainContent)
+You can find the complete sample from the [`GitHub`](https://github.com/SyncfusionExamples/.NET-MAUI-NavigationDrawer-MainContent) link.
