@@ -92,11 +92,11 @@ SfCardLayout cardLayout = new SfCardLayout()
 
 Customization of the border color, thickness, and card corner radius can be achieved by the following properties.
 
-[BorderColor]() - Used to customize the card view border color.
+* [BorderColor]() - Used to customize the card view border color.
 
-[BorderWidth]() - Used to customize the card view border thickness.
+* [BorderWidth]() - Used to customize the card view border thickness.
 
-[CornerRadius]() - Used to customize the card view corner radius.
+* [CornerRadius]() - Used to customize the card view corner radius.
 
 {% tabs %} 
 
