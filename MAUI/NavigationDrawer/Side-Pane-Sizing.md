@@ -6,7 +6,7 @@ platform: .NET MAUI
 control: NavigationDrawer
 documentation: ug
 ---
-# Setting Sliding Panel size in .NET MAUI Navigation Drawer (SfNavigationDrawer)
+# Setting Sliding Panel Size in .NET MAUI Navigation Drawer (SfNavigationDrawer)
 
 The size of the side pane can be adjusted using the `DrawerHeight` and `DrawerWidth` properties.
 

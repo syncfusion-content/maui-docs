@@ -6,7 +6,7 @@ platform: .NET MAUI
 control: NavigationDrawer
 documentation: ug
 ---
-# Configuring the Drawer In Different Sides in .NET MAUI Navigation Drawer (SfNavigationDrawer)
+# Configuring the Drawer in Different Sides in .NET MAUI Navigation Drawer (SfNavigationDrawer)
 
 The supplemental pane can be pulled in and out from all four sides. The `Position` property is used to change the side of the pane, and the options are:
 
