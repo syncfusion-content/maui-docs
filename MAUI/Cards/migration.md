@@ -317,3 +317,7 @@ this.Content = cardView;
 <td>Move to previous card.</td>
 </tr>
 </table>
+
+## Upcoming Features
+
+* Shadow effect support.
