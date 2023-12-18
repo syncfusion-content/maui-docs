@@ -63,7 +63,7 @@ SfCardLayout cardLayout = new SfCardLayout()
 
 ## SwipeDirection
 
-The `SwipeDirection` property specifies the direction of swiping, which can be left, right, top, or bottom. Default value of swipe direction is right.
+The [SwipeDirection]() property specifies the direction of swiping, which can be `Left`, `Right`, `Top`, or `Bottom`. Default value of `SwipeDirection` is "Right".
 
 {% tabs %} 
 
@@ -92,11 +92,11 @@ SfCardLayout cardLayout = new SfCardLayout()
 
 Customization of the border color, thickness, and card corner radius can be achieved by the following properties.
 
-[BorderColor]() - Used to customize the card view border color.
+* [BorderColor]() - Used to customize the card view border color.
 
-[BorderWidth]() - Used to customize the card view border thickness.
+* [BorderWidth]() - Used to customize the card view border thickness.
 
-[CornerRadius]() - Used to customize the card view corner radius.
+* [CornerRadius]() - Used to customize the card view corner radius.
 
 {% tabs %} 
 
@@ -168,7 +168,7 @@ Indicators are used to signify or communicate the state or level of something.
 
 {% highlight xaml %}
 
-<cards:SfCardView IndicatorColor="LightGreen" BackgroundColor="LightGoldenrodYellow" HeightRequest="300" IndicatorThickness="12" IndicatorPosition="Left" >
+<cards:SfCardView IndicatorColor="MediumPurple" BackgroundColor="PeachPuff" HeightRequest="300" IndicatorThickness="12" IndicatorPosition="Left" >
     <Label  Text="SfCardView" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
 </cards:SfCardView>
 
@@ -187,8 +187,8 @@ SfCardView cardView = new SfCardView()
     IndicatorThickness = 12,
     HeightRequest = 300,
     IndicatorPosition = IndicatorPosition.Left,
-    IndicatorColor = Colors.LightGreen,
-	BackgroundColor = Colors.LightGoldenrodYellow
+    IndicatorColor = Colors.MediumPurple,
+	BackgroundColor = Colors.PeachPuff
 };
            
 
