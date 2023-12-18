@@ -299,8 +299,6 @@ The supported value change modes are as follows:
 {% endhighlight %}
 {% highlight C# %}
 
-![.NET MAUI NumericEntry with ValueChange Mode](GettingStarted_images/valuechangemode.gif)
-
 public partial class MainPage : ContentPage
 {
     public Label valueDisplay;
@@ -351,6 +349,8 @@ public partial class MainPage : ContentPage
 
 {% endhighlight %}
 {% endtabs %}
+
+![.NET MAUI NumericEntry with ValueChange Mode](GettingStarted_images/valuechangemode.gif)
 
 ## Stroke
 
