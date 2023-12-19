@@ -9,11 +9,11 @@ documentation: ug
 
 # Appearance in .NET MAUI Sunburst Chart
 
-The appearance of the [SfSunburstChart]() can be customized by using Angle, Radius, Inner radius and Stroke, which allows for enriching the application.
+The appearance of the [SfSunburstChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SfSunburstChart.html) can be customized by using Angle, Radius, Inner radius and Stroke, which allows for enriching the application.
 
 ## Angle
 
-The start angle and end angle of the sunburst chart can be adjusted by using the [StartAngle]() and [EndAngle]() properties.
+The start angle and end angle of the sunburst chart can be adjusted by using the [StartAngle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SfSunburstChart.html#Syncfusion_Maui_SunburstChart_SfSunburstChart_StartAngle) and [EndAngle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SfSunburstChart.html#Syncfusion_Maui_SunburstChart_SfSunburstChart_EndAngle) properties.
 
 {% tabs %} 
 
@@ -44,7 +44,7 @@ sunburst.EndAngle = 360;
 
 ## Radius
 
-The sunburst chart allows you to customize the radius by using the [Radius]() property. The default value of this property is 0.9, and the value ranges from 0 to 1.
+The sunburst chart allows you to customize the radius by using the [Radius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SfSunburstChart.html#Syncfusion_Maui_SunburstChart_SfSunburstChart_Radius) property. The default value of this property is 0.9, and the value ranges from 0 to 1.
 
 {% tabs %} 
 
@@ -73,7 +73,7 @@ sunburst.Radius = 0.7;
 
 ## Inner radius
 
-The sunburst chart allows you to customize the inner radius using the [InnerRadius]() property. The default value of this property is `0.25`, and the value ranges from 0 to 1.
+The sunburst chart allows you to customize the inner radius using the [InnerRadius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SfSunburstChart.html#Syncfusion_Maui_SunburstChart_SfSunburstChart_InnerRadius) property. The default value of this property is `0.25`, and the value ranges from 0 to 1.
 
 {% tabs %} 
 
@@ -102,7 +102,7 @@ sunburst.InnerRadius = 0.4;
 
 ## Stroke
 
-Stroke color and stroke width of the sunburst chart can be customized using [Stroke]() and [StrokeWidth]() properties respectively.
+Stroke color and stroke width of the sunburst chart can be customized using [Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SfSunburstChart.html#Syncfusion_Maui_SunburstChart_SfSunburstChart_Stroke) and [StrokeWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SfSunburstChart.html#Syncfusion_Maui_SunburstChart_SfSunburstChart_StrokeWidth) properties respectively.
 
 {% tabs %} 
 
