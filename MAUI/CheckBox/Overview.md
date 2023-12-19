@@ -6,7 +6,7 @@ description: Learn here about overall key features in Essential Studio for .NET 
 control: SfChekBox
 ---
 
-## .NET MAUI CheckBox (SfCheckBox) Overview
+# .NET MAUI CheckBox (SfCheckBox) Overview
 
 The .NET MAUI CheckBox is a selection control with UI customization. It allows you to choose one or more options from a set and customize the appearance for different visual states using the visual state manager.
 
