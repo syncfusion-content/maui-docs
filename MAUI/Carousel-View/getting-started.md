@@ -9,11 +9,11 @@ documentation: ug
 
 # Getting Started with .NET MAUI Carousel (SfCarousel)
 
-This section explains how to add the Carousel control and bind data to it. This section covers only the basic features needed to get started with the Syncfusion [.NET MAUI Carousel](https://www.syncfusion.com/maui-controls/maui-carousel) control.
+This section explains how to add the Carousel control and bind data to it. This section covers only the basic features needed to get started with the Syncfusion `.NET MAUI Carousel` control.
 
 ## Adding a .NET MAUI Carousel reference
 
-The Syncfusion .NET MAUI controls are available in [Nuget.org](https://www.nuget.org/). To add [.NET MAUI Carousel](https://www.syncfusion.com/maui-controls/maui-carousel) to your project, open the NuGet package manager in Visual Studio, search for [`Syncfusion.Maui.Carousel`](https://www.nuget.org/packages/Syncfusion.Maui.Carousel), and install it.
+The Syncfusion .NET MAUI controls are available in [Nuget.org](https://www.nuget.org/). To add `.NET MAUI Carousel` to your project, open the NuGet package manager in Visual Studio, search for [`Syncfusion.Maui.Carousel`](https://www.nuget.org/packages/Syncfusion.Maui.Carousel), and install it.
 
 ## Handler registration 
 
@@ -70,7 +70,7 @@ Step 2: Add the namespace as shown in the following code sample.
 
 ## Initialize Carousel
 
-Now, add the [SfCarousel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html) control with a required optimal name using the included namespace.
+Now, add the `SfCarousel` control with a required optimal name using the included namespace.
 
 {% tabs %}
 
@@ -93,9 +93,9 @@ this.Content = carousel;
 
 We can populate the carousel's items by using any one of the following ways,
 
-* Through [SfCarouselItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarouselItem.html)
+* Through `SfCarouselItem`
 
-* Through [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_ItemTemplate)
+* Through `ItemTemplate`
 
 The below is an simple example for adding Carousel items using SfCarouselItem, for more details on populating data click [Here](https://help.syncfusion.com/maui/carousel-view/populating-data)
 
@@ -171,7 +171,7 @@ namespace CarouselSample
 
 ## Setting the height and width of the carousel item
 
-[ItemHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_ItemHeight) and [ItemWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_ItemWidth) properties are used to change the height and width of carouselItem in carousel panel.
+`ItemHeight` and `ItemWidth` properties are used to change the height and width of carouselItem in carousel panel.
 
 {% tabs %}
 
@@ -200,7 +200,7 @@ carousel.SetBinding(SfCarousel.ItemsSourceProperty, "CarouselItems");
 
 ## Set Desire Item to be Selected
 
-We can bring particular item to the center of the screen using [SelectedIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_SelectedIndex) property in [SfCarousel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html) control.
+We can bring particular item to the center of the screen using `SelectedIndex` property in `SfCarousel` control.
 
 {% tabs %}
 
@@ -229,7 +229,7 @@ carousel.SetBinding(SfCarousel.ItemsSourceProperty, "CarouselItems");
 
 {% endtabs %}
 
-N> The [SelectedIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_SelectedIndex) property will be 0 by default.
+N> The `SelectedIndex` property will be 0 by default.
 
 ![OverView image for Carousel](images/gettingstarted.png)
 

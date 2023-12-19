@@ -9,7 +9,7 @@ documentation: ug
 
 # Migrating from Xamarin Carousel View to .NET MAUI Carousel View 
 
-To migrate easier from [Xamarin SfCarousel](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCarousel.XForms.SfCarousel.html) to [.NET MAUI SfCarousel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html), we kept all the APIs from Xamarin SfCarousel in MAUI SfCarousel. We have renamed the namespace as follows.
+To migrate easier from `Xamarin SfCarousel` to `.NET MAUI SfCarousel`, we kept all the APIs from Xamarin SfCarousel in MAUI SfCarousel. We have renamed the namespace as follows.
 
 ## Namespaces 
 

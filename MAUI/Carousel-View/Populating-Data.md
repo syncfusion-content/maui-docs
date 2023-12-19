@@ -9,17 +9,17 @@ documentation : ug
 
 # Populating Data in .NET MAUI Carousel View (SfCarousel)
 
-[SfCarousel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html) control supports binding to different items sources such as IList and ObservableCollection type of  items sources.
+`SfCarousel` control supports binding to different items sources such as IList and ObservableCollection type of  items sources.
 
 ## Through Binding
 
-Items can be populated in the [SfCarousel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html) control through item source and applying a custom template, as explained in the following.
+Items can be populated in the `SfCarousel` control through item source and applying a custom template, as explained in the following.
 
 ### Create a Model with Data
 
-[SfCarousel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html) items can be populated with a collection of image data. For example, a user may want to create a [SfCarousel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html) control, which will display a list of images.
+`SfCarousel` items can be populated with a collection of image data. For example, a user may want to create a `SfCarousel` control, which will display a list of images.
 
-The [SfCarousel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html) model looks as follows.
+The `SfCarousel` model looks as follows.
 
 {% highlight C# %}
 
@@ -74,7 +74,7 @@ namespace CarouselSample
 
 ### Binding the Data with Custom Template
 
-[SfCarousel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html) provides support to add a custom view as carousel items by designing a view inside its [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_ItemTemplate). This template will be applied for all its items, and its data will be bound.
+`SfCarousel` provides support to add a custom view as carousel items by designing a view inside its `ItemTemplate`. This template will be applied for all its items, and its data will be bound.
 
 {% tabs %}
 
@@ -152,7 +152,7 @@ namespace CarouselSample
 
 ## Through Carousel Item
 
-Different views can be provided to every item through the [ItemContent](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarouselItem.html#Syncfusion_Maui_Carousel_SfCarouselItem_ItemContent) property in the [SfCarouselItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarouselItem.html) class.
+Different views can be provided to every item through the `ItemContent` property in the `SfCarouselItem` class.
 
 {% highlight C# %}
 
@@ -189,7 +189,7 @@ namespace CarouselSample
 
 {% endhighlight %}
 
-and also carousel provides a support to display only the Image data with [ImageName](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarouselItem.html#Syncfusion_Maui_Carousel_SfCarouselItem_ImageName) property in [SfCarouselItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarouselItem.html) class.
+and also carousel provides a support to display only the Image data with `Image` property in `SfCarouselItem` class.
 
 {% highlight C# %}
 

@@ -9,7 +9,7 @@ documentation : ug
 
 # Linear Arrangement in .NET MAUI Carousel View (SfCarousel)
 
-The Carousel items can be populated in the view in a stacked linear layout by setting the [ViewMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_ViewMode) property to [Linear](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Carousel.ViewMode.html#Syncfusion_Maui_Core_Carousel_ViewMode_Linear). The present option is [Default](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Carousel.ViewMode.html#Syncfusion_Maui_Core_Carousel_ViewMode_Default).
+The Carousel items can be populated in the view in a stacked linear layout by setting the `ViewMode` property to `Linear`. The present option is `Default`.
 
 {% tabs %}
 

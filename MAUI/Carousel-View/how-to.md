@@ -9,7 +9,7 @@ documentation : ug
 
 # How to perform an operation while changing the CarouselItem?
 
-We can perform the operation while changing the CarouselItem using the [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_SelectionChanged) event. The [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_SelectionChanged) event returns the OldItem and selected NewItem.
+We can perform the operation while changing the CarouselItem using the `SelectionChanged` event. The `SelectionChanged` event returns the OldItem and selected NewItem.
 
 {% tabs %}
 

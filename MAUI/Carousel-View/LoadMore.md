@@ -9,21 +9,21 @@ documentation : ug
 
 # Load More in .NET MAUI Carousel View (SfCarousel)
 
-Virtualization can be achieved by using the Load More concept. This support is used to handle the numerous items in the carousel control. Items are maintained in the viewport based on the [LoadMoreItemsCount](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_LoadMoreItemsCount) property. The LoadMore view is added after the last item in the collection of the carousel view. When tapping the LoadMore view, the next set of items in the collection can be added to the carousel.
+Virtualization can be achieved by using the Load More concept. This support is used to handle the numerous items in the carousel control. Items are maintained in the viewport based on the `LoadMoreItemsCount` property. The LoadMore view is added after the last item in the collection of the carousel view. When tapping the LoadMore view, the next set of items in the collection can be added to the carousel.
 
 The following properties are used to achieve this support:
 
-*	[AllowLoadMore](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_AllowLoadMore)
+*	`AllowLoadMore`
 
-*	[LoadMoreItemsCount](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_LoadMoreItemsCount)
+*	`LoadMoreItemsCount`
 
-*	[LoadMoreView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_LoadMoreView)
+*	`LoadMoreView`
 
 ## Allow Load More
 
-By enabling the [AllowLoadMore](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_AllowLoadMore) property, the LoadMore support works in the carousel view. 
+By enabling the `AllowLoadMore` property, the LoadMore support works in the carousel view. 
 
-N>The default value of the [AllowLoadMore](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_AllowLoadMore) property is false.
+N>The default value of the `AllowLoadMore` property is false.
 
 {% tabs %}
 
@@ -54,9 +54,9 @@ carousel.SetBinding(SfCarousel.ItemsSourceProperty, "ImageCollection");
 
 ## Load More Items Count
 
-Number of items can be maintained in the carousel control using the [LoadMoreItemsCount](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_LoadMoreItemsCount) property. By using the [LoadMoreItemsCount](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_LoadMoreItemsCount) property, numerous items can be separated. 
+Number of items can be maintained in the carousel control using the `LoadMoreItemsCount` property. By using the `LoadMoreItemsCount` property, numerous items can be separated. 
 
-N>The default value of the [LoadMoreItemsCount](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_LoadMoreItemsCount) property is 3.
+N>The default value of the `LoadMoreItemsCount` property is 3.
 
 {% tabs %}
 
@@ -91,7 +91,7 @@ carousel.SetBinding(SfCarousel.ItemsSourceProperty, "ImageCollection");
 
 ## Load More View
 
-Custom view can be passed instead of the [LoadMore](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_LoadMore) label using the [LoadMoreView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_LoadMoreView) property.
+Custom view can be passed instead of the `LoadMore` label using the `LoadMoreView` property.
 
 {% tabs %}
 
@@ -166,7 +166,7 @@ carousel.LoadMoreView = grid;
 
 ## Load More method
 
-To load more items programmatically, the [LoadMore](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_LoadMore) method can be called, which loads the items dynamically to the UI based on the [LoadMoreItemsCount](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_LoadMoreItemsCount) API value.
+To load more items programmatically, the `LoadMore` method can be called, which loads the items dynamically to the UI based on the `LoadMoreItemsCount` API value.
 
 {% tabs %}
 

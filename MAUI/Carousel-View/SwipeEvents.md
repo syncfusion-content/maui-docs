@@ -11,13 +11,13 @@ documentation: ug
 
 ## SwipeStarted Event
 
-The [SwipeStarted](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_SwipeStarted) event will be triggered when the swipe gesture is started.
+The `SwipeStarted` event will be triggered when the swipe gesture is started.
 
-[SwipeStartedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Carousel.SwipeStartedEventArgs.html#Syncfusion_Maui_Core_Carousel_SwipeStartedEventArgs__ctor) contains the [IsSwipeLeft](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Carousel.SwipeStartedEventArgs.html#Syncfusion_Maui_Core_Carousel_SwipeStartedEventArgs_IsSwipedLeft) value, which denotes whether the swipe direction is from the left side or not.
+`SwipeStartedEventArgs` contains the `IsSwipeLeft` value, which denotes whether the swipe direction is from the left side or not.
 
 ## SwipeEnded Event
 
-The [SwipeEnded](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_SwipeEnded) event can be triggered after the swiping is completed in the carousel items.
+The `SwipeEnded` event can be triggered after the swiping is completed in the carousel items.
 
 {% tabs %}
 
