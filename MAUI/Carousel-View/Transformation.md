@@ -80,7 +80,7 @@ carousel.SetBinding(SfCarousel.ItemsSourceProperty, "ImageCollection");
 
 ## Set Gap between unselected Items
 
-The `Offset` property is used to define the accurate distance between unselected items in the [SfCarousel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html) panel in the Default mode.
+The [Offset](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_Offset) property is used to define the accurate distance between unselected items in the [SfCarousel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html) panel in the Default mode.
 
 N> The default offset value is 40 for desktop platforms and 18 for mobile platforms.
 
