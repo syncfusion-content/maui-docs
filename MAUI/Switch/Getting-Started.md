@@ -2,7 +2,7 @@
 layout: post
 title: Getting Started with .NET MAUI Switch | Syncfusion
 description: Learn here about getting started with the Syncfusion .NET MAUI Switch (SfSwitch) control, its elements, and more.
-platform: .NET MAUI
+platform: maui
 control: SfSwitch
 documentation: ug
 ---
@@ -13,7 +13,7 @@ This section explains the steps to configure the .NET MAUI Switch control in a r
 
 ## Adding a .NET MAUI Switch reference
 
-The Syncfusion .NET MAUI controls are available in [Nuget.org](https://www.nuget.org/). To add `.NET MAUI Switch` to your project, open the NuGet package manager in Visual Studio, search for [`Syncfusion.Maui.Buttons`](https://www.nuget.org/packages/Syncfusion.Maui.Buttons), and install it.
+The Syncfusion .NET MAUI controls are available in [Nuget.org](https://www.nuget.org/). To add [`.NET MAUI Switch`](https://www.syncfusion.com/maui-controls/maui-switch) to your project, open the NuGet package manager in Visual Studio, search for [`Syncfusion.Maui.Buttons`](https://www.nuget.org/packages/Syncfusion.Maui.Buttons), and install it.
 
 ## Handler registration 
 
@@ -70,7 +70,7 @@ Step 2: Add the namespace as shown in the following code sample.
 
 ## Initialize Switch
 
-Now, add the `SfSwitch` control with a required optimal name using the included namespace.
+Now, add the [`SfSwitch`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSwitch.html) control with a required optimal name using the included namespace.
 
 {% tabs %}
 
@@ -93,7 +93,7 @@ this.Content = sfSwitch;
 
 ## Performing an action based on state
 
-You can switch between the states. When the state is changed the `StateChanging` and `StateChanged` event will be triggered where you can perform an action based on the current state. The `StateChanging` event allows you to cancel moving to a new state.
+You can switch between the states. When the state is changed the [`StateChanging`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SwitchStateChangingEventArgs.html) and [`StateChanged`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SwitchStateChangedEventArgs.html) event will be triggered where you can perform an action based on the current state. The [`StateChanging`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SwitchStateChangingEventArgs.html) event allows you to cancel moving to a new state.
 
 The following code example displays a message box when switched to off state when work is completed.
 
