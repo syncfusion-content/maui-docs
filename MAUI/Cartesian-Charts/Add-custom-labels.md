@@ -9,7 +9,7 @@ documentation: ug
 
 # Add custom labels to the chart axis
 
-[ChartAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html) provides the [OnCreateLabels](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_OnLabelCreated_Syncfusion_Maui_Charts_ChartAxisLabel_) override method to add custom axis labels. The [OnCreateLabels](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_OnLabelCreated_Syncfusion_Maui_Charts_ChartAxisLabel_) method is called whenever new labels are generated. The following properties are available to add custom labels.
+[ChartAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html) provides the [OnCreateLabels](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_OnCreateLabels) override method to add custom axis labels. The [OnCreateLabels](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_OnCreateLabels) method is called whenever new labels are generated. The following properties are available to add custom labels.
 
 * [VisibleLabels](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_VisibleLabels) - This property is used to get an Observable Collection of visible axis labels.
 
