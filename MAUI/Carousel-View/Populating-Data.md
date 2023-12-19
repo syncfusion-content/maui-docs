@@ -152,7 +152,6 @@ namespace CarouselSample
 
 ## Through Carousel Item
 
-
 Different views can be provided to every item through the [ItemContent](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarouselItem.html#Syncfusion_Maui_Carousel_SfCarouselItem_ItemContent) property in the [SfCarouselItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarouselItem.html) class.
 
 {% highlight C# %}
