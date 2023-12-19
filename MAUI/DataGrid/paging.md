@@ -446,7 +446,7 @@ The data pager allows the users to programmatically navigate to the previous pag
 
 ### Move to page
 
-The data pager allows the users to programmatically navigate to the desired page using the [MoveToPage(Int32)](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataPager.SfDataPager.html#Syncfusion_Maui_DataGrid_DataPager_SfDataPager_MoveToPage_System_Int32_) method. Users can also able to navigate to the page with animation using the `MoveToPage(Int32, Int32, Boolean)` method.
+The data pager allows the users to programmatically navigate to the desired page using the [MoveToPage(Int32)](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataPager.SfDataPager.html#Syncfusion_Maui_DataGrid_DataPager_SfDataPager_MoveToPage_System_Int32_) method. Users can also able to navigate to the page with animation using the [MoveToPage(Int32, Int32, Boolean)](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataPager.SfDataPager.html#Syncfusion_Maui_DataGrid_DataPager_SfDataPager_MoveToPage_System_Int32_System_Int32_System_Boolean_) method.
 
 ## Orientation
 
@@ -476,7 +476,7 @@ public partial class MainPage : ContentPage
 
 ### PageChanging
 
-The `PageChanging` event is triggered when the user navigation form one page to another page begins. [SfDataPager.PageChangingEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataPager.PageChangedEventArgs.html) contains the following members, which provide the information for `PageChanging` event:
+The `PageChanging` event is triggered when the user navigation form one page to another page begins. [SfDataPager.PageChangingEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataPager.PageChangingEventArgs.html) contains the following members, which provide the information for `PageChanging` event:
 
 * **OldPageIndex** - Gets the current page index from which the page is navigating
 .
@@ -502,7 +502,7 @@ public partial class MainPage : ContentPage
 
 ### PageChanged
 
-The `PageChanged` event is triggered when the user navigates form one page to another page. `SfDataPager.PageChangedEventArgs` contains the following members, which provide the information for `PageChanged` event:
+The `PageChanged` event is triggered when the user navigates form one page to another page. [SfDataPager.PageChangedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataPager.PageChangedEventArgs.html) contains the following members, which provide the information for `PageChanged` event:
 
 * **OldPageIndex** - Gets the current page index from which the page is navigated.
 * **NewPageIndex** - Gets the new page index to which the page is navigated.
