@@ -9,11 +9,11 @@ documentation : ug
 
 # Transformation in .NET MAUI Carousel View (SfCarousel)
 
-The `Offset` between selected and unselected item can be customized in  `SfCarousel` control. And also the items can be scaled to the specified value.
+The [Offset](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_Offset) between selected and unselected item can be customized in  [SfCarousel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html) control. And also the items can be scaled to the specified value.
 
 ## Tilt Non Selected Items
 
-The `RotationAngle` property in the `SfCarousel` control is utilized to tilt all unselected items at a specified angle in the `Default` mode.
+The [RotationAngle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_RotationAngle) property in the [SfCarousel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html) control is utilized to tilt all unselected items at a specified angle in the [Default](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Carousel.ViewMode.html#Syncfusion_Maui_Core_Carousel_ViewMode_Default) mode.
 
 N> If the angle value is positive, then the rotation is in the clockwise direction. If the angle value is negative, the rotation is in the counterclockwise direction. 
 
