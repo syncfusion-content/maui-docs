@@ -51,22 +51,22 @@ To make migration from [Xamarin SfDataGrid](https://www.syncfusion.com/xamarin-u
 </tr>
 <tr>
 <td>{{'[AutoEllipsisMode](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.DataPager.AutoEllipsisMode.html)'| markdownify }}</td>
-<td>{{'[DataPagerEllipsisMode]()'| markdownify }}</td>
+<td>{{'[DataPagerEllipsisMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataPager.DataPagerEllipsisMode.html)'| markdownify }}</td>
 <td>Defines the constants that describes the possible ellipsis modes for the NumericButton.</td>
 </tr>
 <tr>
 <td>{{'[ButtonShape](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.DataPager.ButtonShape.html)'| markdownify }}</td>
-<td>{{'[DataPagerButtonShape]()'| markdownify }}</td>
+<td>{{'[DataPagerButtonShape](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataPager.DataPagerButtonShape.html)'| markdownify }}</td>
 <td>Defines the constant that specify the shape of the buttons in the data pager.</td>
 </tr>
 <tr>
 <td>{{'[NumericButtonsGenerateMode](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.NumericButtonsGenerateMode.html)'| markdownify }}</td>
-<td>{{'[DataPagerNumericButtonsGenerateMode]()'| markdownify }}</td>
+<td>{{'[DataPagerNumericButtonsGenerateMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataPager.DataPagerNumericButtonsGenerateMode.html)'| markdownify }}</td>
 <td>Defines the constants that specify whether the numeric buttons should be generated automatically based on parent size or manually using the specified NumericButtonCount value.</td>
 </tr>
 <tr>
 <td>{{'[PagerDisplayMode](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.DataPager.PagerDisplayMode.html)'| markdownify }}</td>
-<td>{{'[DataPagerDisplayMode]()'| markdownify }}</td>
+<td>{{'[DataPagerDisplayMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataPager.DataPagerDisplayMode.html)'| markdownify }}</td>
 <td>Defines the possible display mode of SfDataPager.</td>
 </tr>
 </table>
@@ -194,38 +194,38 @@ To make migration from [Xamarin SfDataGrid](https://www.syncfusion.com/xamarin-u
 </tr>
 <tr>
 <td>{{'[AppearanceManager](https://help.syncfusion.com/xamarin/sfdatagrid/paging#appearancemanager)'| markdownify }}</td>
-<td>{{'[DefaultStyle]()'| markdownify }}</td>
+<td>{{'[DefaultStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataPager.SfDataPager.html#Syncfusion_Maui_DataGrid_DataPager_SfDataPager_DefaultStyle)'| markdownify }}</td>
 <td>This enables users to customize the appearance of the data pager.</td>
 </tr>
 <tr>
-<td>{{'[NumericButtonSelectionBackground]()'| markdownify }}</td>
-<td>{{'[NumericButtonSelectionBackgroundColor]()'| markdownify }}</td>
+<td>{{'[GetNumericButtonSelectionBackgroundColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.DataPager.AppearanceManager.html#Syncfusion_SfDataGrid_XForms_DataPager_AppearanceManager_GetNumericButtonSelectionBackgroundColor)'| markdownify }}</td>
+<td>{{'[NumericButtonSelectionBackgroundColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataPager.DataPagerStyle.html#Syncfusion_Maui_DataGrid_DataPager_DataPagerStyle_NumericButtonSelectionBackgroundColor)'| markdownify }}</td>
 <td>This enables users to customize the selection background color for numeric button.</td>
 </tr>
 <tr>
 <td>{{'[GetDataPagerBackgroundColor()](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.DataPager.AppearanceManager.html#Syncfusion_SfDataGrid_XForms_DataPager_AppearanceManager_GetDataPagerBackgroundColor)'| markdownify }}</td>
-<td>{{'[DataPagerBackgroundColor]()'| markdownify }}</td>
+<td>{{'[DataPagerBackgroundColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataPager.DataPagerStyle.html#Syncfusion_Maui_DataGrid_DataPager_DataPagerStyle_DataPagerBackgroundColor)'| markdownify }}</td>
 <td>This enables users to customize the background color of the SfDataPager.</td>
 </tr>
 <tr>
 <td>{{'[GetNavigationButtonIconColor()](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.DataPager.AppearanceManager.html#Syncfusion_SfDataGrid_XForms_DataPager_AppearanceManager_GetNavigationButtonIconColor)'| markdownify }}</td>
-<td>{{'[NavigationButtonIconColor]()'| markdownify }}</td>
+<td>{{'[NavigationButtonIconColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataPager.DataPagerStyle.html#Syncfusion_Maui_DataGrid_DataPager_DataPagerStyle_NavigationButtonIconColor)'| markdownify }}</td>
 <td>This enables users to customize the icon color of the navigation buttons.</td>
 </tr>
 <tr>
 <td>{{'[GetNumericButtonForegroundColor()](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.DataPager.AppearanceManager.html#Syncfusion_SfDataGrid_XForms_DataPager_AppearanceManager_GetNumericButtonForegroundColor)'| markdownify }}</td>
-<td>{{'[NumericButtonTextColor]()'| markdownify }}</td>
+<td>{{'[NumericButtonTextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataPager.DataPagerStyle.html#Syncfusion_Maui_DataGrid_DataPager_DataPagerStyle_NumericButtonTextColor)'| markdownify }}</td>
 <td>This enables users to customize the text color of the numeric values in the navigation buttons.</td>
 </tr>
 <tr>
 <td>{{'[GetNumericButtonSelectionForegroundColor()](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.DataPager.AppearanceManager.html#Syncfusion_SfDataGrid_XForms_DataPager_AppearanceManager_GetNumericButtonSelectionForegroundColor)'| markdownify }}</td>
-<td>{{'[NumericButtonSelectionTextColor]()'| markdownify }}</td>
+<td>{{'[NumericButtonSelectionTextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataPager.DataPagerStyle.html#Syncfusion_Maui_DataGrid_DataPager_DataPagerStyle_NumericButtonSelectionTextColor)'| markdownify }}</td>
 <td>This enables users to customize the text color of the currently selected numeric button in the view.</td>
 </tr>
 <tr>
 <td>{{'[EnableGridPaging()](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.DataPager.SfDataPager.html#Syncfusion_SfDataGrid_XForms_DataPager_SfDataPager_EnableGridPaging)'| markdownify }}</td>
 <td>-</td>
-<td>This property isn't available because the [UseOnDemandPaging]() property alone is sufficient to enable on-demand paging in the MAUI DataGrid.</td>
+<td>This property isn't available because the [UseOnDemandPaging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataPager.SfDataPager.html#Syncfusion_Maui_DataGrid_DataPager_SfDataPager_UseOnDemandPaging) property alone is sufficient to enable on-demand paging in the MAUI DataGrid.</td>
 </tr>
 
 </table>
