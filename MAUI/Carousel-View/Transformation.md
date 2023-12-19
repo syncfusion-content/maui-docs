@@ -48,7 +48,7 @@ carousel.SetBinding(SfCarousel.ItemsSourceProperty, "ImageCollection");
 
 ## Set Gap between unselected Items
 
-The `Offset` property is used to define the accurate distance between unselected items in the `SfCarousel` panel in the Default mode.
+The [Offset](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_Offset) property is used to define the accurate distance between unselected items in the [SfCarousel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html) panel in the Default mode.
 
 N> The default offset value is 40 for desktop platforms and 18 for mobile platforms.
 
@@ -83,7 +83,7 @@ carousel.SetBinding(SfCarousel.ItemsSourceProperty, "ImageCollection");
 
 ## Set Gap between Selected Item
 
-Distance between the selected item and other items can be customized by using `SelectedItemOffset` property of the  `SfCarousel` control in the Default mode.
+Distance between the selected item and other items can be customized by using [SelectedItemOffset](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_SelectedItemOffset) property of the  [SfCarousel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html) control in the Default mode.
 
 {% tabs %}
 
@@ -116,7 +116,7 @@ carousel.SetBinding(SfCarousel.ItemsSourceProperty, "ImageCollection");
 
 ## Set Scaling for Carousel Items
 
-The `ScaleOffset` property in the  `SfCarousel` control is used to scale all the items to the specified scale value in the Default mode.
+The [ScaleOffset](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_ScaleOffset) property in the  [SfCarousel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html) control is used to scale all the items to the specified scale value in the Default mode.
 
 {% tabs %}
 
@@ -149,7 +149,7 @@ carousel.SetBinding(SfCarousel.ItemsSourceProperty, "ImageCollection");
 
 ## Spacing between the Items in Linear mode
 
-Spacing of all the items in Linear mode can be determined by using `ItemSpacing` property.
+Spacing of all the items in Linear mode can be determined by using [ItemSpacing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_ItemSpacing) property.
 
 {% tabs %}
 
