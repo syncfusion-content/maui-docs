@@ -113,7 +113,7 @@ carousel.SetBinding(SfCarousel.ItemsSourceProperty, "ImageCollection");
 
 {% endtabs %}
 
-![SelectedItemOffset](images/selectedoffset.png)
+![SelectedItemOffset](images/selectedoffset.png) 
 
 ## Set Scaling for Carousel Items
 
