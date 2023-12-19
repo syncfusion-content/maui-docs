@@ -2,8 +2,8 @@
 layout: post
 title: Visual state manager in .NET MAUI Switch (SfSwitch) | Syncfusion
 description: Learn here all about handling of visual state manager in Syncfusion .NET MAUI Switch (SfSwitch) control, and more.
-platform: maui
-control: SfSwitch
+platform: .NET MAUI
+control: Switch
 documentation: ug
 ---
 

@@ -2,7 +2,7 @@
 layout: post
 title: States in .NET MAUI Switch control | Syncfusion
 description: Learn here all about States support in Syncfusion .NET MAUI Switch (SfSwitch) control, its elements, and more.
-platform: maui
+platform: .NET MAUI
 control: SfSwitch
 documentation: ug
 ---
