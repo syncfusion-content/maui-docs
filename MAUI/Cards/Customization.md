@@ -15,7 +15,7 @@ Enabling the `ShowSwipedCard` option allows the swiped cards to be displayed at 
 
 {% tabs %} 
 
-{% highlight xaml %}
+{% highlight xaml hl_lines="1" %}
 
 <cards:SfCardLayout ShowSwipedCard="true">
 </cards:SfCardLayout>
@@ -41,7 +41,7 @@ The `VisibleIndex` is utilized when providing the index of the card that is inte
 
 {% tabs %} 
 
-{% highlight xaml %}
+{% highlight xaml hl_lines="1" %}
 
 <cards:SfCardLayout VisibleIndex="1">
 </cards:SfCardLayout>
@@ -67,7 +67,7 @@ The `SwipeDirection` property specifies the direction of swiping, which can be l
 
 {% tabs %} 
 
-{% highlight xaml %}
+{% highlight xaml hl_lines="1" %}
 
 <cards:SfCardLayout SwipeDirection="Left">
 </cards:SfCardLayout>
@@ -166,7 +166,7 @@ Indicators are used to signify or communicate the state or level of something.
 
 {% tabs %} 
 
-{% highlight xaml %}
+{% highlight xaml hl_lines="1" %}
 
 <cards:SfCardView IndicatorColor="LightGreen" BackgroundColor="LightGoldenrodYellow" HeightRequest="300" IndicatorThickness="12" IndicatorPosition="Left" >
     <Label  Text="SfCardView" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
@@ -204,7 +204,7 @@ The `FadeOutOnSwiping` option can be enabled when the card view is intended to f
 
 {% tabs %} 
 
-{% highlight xaml %}
+{% highlight xaml hl_lines="1" %}
 
     <cards:SfCardView FadeOutOnSwiping="true"/>
  

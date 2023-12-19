@@ -22,7 +22,7 @@ This section details the process of integrating the Card control and focuses sol
 4. Initialize `SfCards.`
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="1 5 6 7" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3 5 6 7" %}
 
 <ContentPage   
     . . .
@@ -35,7 +35,7 @@ This section details the process of integrating the Card control and focuses sol
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1 9 10 11" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1 9 11 18" %}
 
 using Syncfusion.Maui.Cards;
 . . .
