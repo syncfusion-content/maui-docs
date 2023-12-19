@@ -45,7 +45,7 @@ carousel.SetBinding(SfCarousel.ItemsSourceProperty, "ImageCollection");
 
 ![Rotation angle](images/rotationangle.png)
 
-## Set Gap between Selected Item
+## Set Gap between selected Item
 
 Distance between the selected item and other items can be customized by using `SelectedItemOffset` property of the  `SfCarousel` control in the Default mode.
 
