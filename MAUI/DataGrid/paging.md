@@ -9,7 +9,7 @@ documentation: UG
 
 # Paging in MAUI DataGrid (SfDataGrid)
 
-The data grid interactively supports data manipulation through the `SfDataPager` control, providing built-in options to page data on demand when dealing with large volumes. The `SfDataPager` can be placed above or below as needed to easily manage data paging.
+The data grid interactively supports data manipulation through the [SfDataPager](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataPager.SfDataPager.html) control, providing built-in options to page data on demand when dealing with large volumes. The `SfDataPager` can be placed above or below as needed to easily manage data paging.
 
 To use paging functionality into the data grid, include the following namespace in your project:
 `Syncfusion.Maui.DataGrid.DataPager`
@@ -28,7 +28,7 @@ The data grid performs data paging using the `SfDataPager`. To enable paging, fo
  * Set the `SfDataPager.PageSize` property to determine the number of rows to be displayed on each page.
  * Set the `SfDataPager.NumericButtonCount` property to specify the number of buttons that should be displayed in view."
 
-N> The `SfDataPager.PageSize` property should not be assigned with value 0.
+N> The [SfDataPager.PageSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataPager.SfDataPager.html#Syncfusion_Maui_DataGrid_DataPager_SfDataPager_PageSize) property should not be assigned with value 0.
 
 The following code example illustrates using `SfDataPager` with the data grid control:
 
@@ -108,7 +108,7 @@ The following screenshot shows the outcome upon execution of the above code:
 
 ## On-Demand Paging	
 
-In normal Paging, data collection is entirely loaded initially into the `SfDataPager`. However, the control also allows for dynamically loading the data for the current page by setting `SfDataPager.UseOnDemandPaging` to `true`.
+In normal Paging, data collection is entirely loaded initially into the `SfDataPager`. However, the control also allows for dynamically loading the data for the current page by setting [SfDataPager.UseOnDemandPaging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataPager.SfDataPager.html#Syncfusion_Maui_DataGrid_DataPager_SfDataPager_UseOnDemandPaging) to `true`.
 
 To load the current page item dynamically, hook into the `OnDemandLoading` event. In the `OnDemandLoading` event, use the `LoadDynamicItems` method to load data for the corresponding page in the `SfDataPager`.
 
@@ -217,7 +217,7 @@ private void dataPager_OnDemandLoading(object sender, OnDemandLoadingEventArgs e
 
 ## Numeric button shapes
 
-The `SfDataPager` allows you to change the shape of the buttons using the `SfDataPager.ButtonShape` property. 
+The `SfDataPager` allows you to change the shape of the buttons using the [SfDataPager.ButtonShape](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataPager.SfDataPager.html#Syncfusion_Maui_DataGrid_DataPager_SfDataPager_ButtonShape) property. 
 
 {% tabs %}
 {% highlight xaml %}
@@ -243,7 +243,7 @@ public partial class MainPage : ContentPage
 
 ## Generating numeric buttons
 
-The `SfDataPager` allows you to choose the generation mode of numeric buttons using the `SfDataPager.NumericButtonsGenerateMode` property. The numeric buttons can be generated either automatically in view or by specifying the count directly in the `SfDataPager.NumericButtonCount` property.
+The `SfDataPager` allows you to choose the generation mode of numeric buttons using the [SfDataPager.NumericButtonsGenerateMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataPager.SfDataPager.html#Syncfusion_Maui_DataGrid_DataPager_SfDataPager_NumericButtonsGenerateMode) property. The numeric buttons can be generated either automatically in view or by specifying the count directly in the [SfDataPager.NumericButtonCount](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataPager.SfDataPager.html#Syncfusion_Maui_DataGrid_DataPager_SfDataPager_NumericButtonCount) property.
 
 {% tabs %}
 {% highlight xaml %}
@@ -269,7 +269,7 @@ N> The size of the `SfDataPager` is automatically adjusted based on the availabl
 
 ## Customizing button size and font size of pager buttons
 
-The `SfDataPager` button is loaded with a default width and height of 40. The default button font size of `SfDataPager` is 14. You can customize the button size and font size by setting the desired values for the `SfDataPager.ButtonSize` and `SfDataPager.ButtonFontSize` properties, respectively.
+The `SfDataPager` button is loaded with a default width and height of 40. The default button font size of `SfDataPager` is 14. You can customize the button size and font size by setting the desired values for the [SfDataPager.ButtonSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataPager.SfDataPager.html#Syncfusion_Maui_DataGrid_DataPager_SfDataPager_ButtonSize) and [SfDataPager.ButtonFontSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataPager.SfDataPager.html#Syncfusion_Maui_DataGrid_DataPager_SfDataPager_ButtonFontSize) properties, respectively.
 
 {% tabs %}
 {% highlight xaml %}
@@ -297,7 +297,7 @@ public partial class MainPage : ContentPage
 
 ## Display mode
 
-The visibility of the numeric and navigation buttons can be personalized by using the `SfDataPager.DisplayMode` property. All the buttons will be visible by default.
+The visibility of the numeric and navigation buttons can be personalized by using the [SfDataPager.DisplayMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataPager.SfDataPager.html#Syncfusion_Maui_DataGrid_DataPager_SfDataPager_DisplayMode) property. All the buttons will be visible by default.
 
 <table>
 <tr>
@@ -376,7 +376,7 @@ public partial class MainPage : ContentPage
 
 ## Auto-ellipsis mode
 
-The `SfDataPager` offers support for displaying an ellipsis button at the beginning and end of the numeric buttons when the scroll view contains additional numeric buttons before or after the currently selected numeric button. It can be customized by using the `SfDataPager.AutoEllipsisMode` property.
+The `SfDataPager` offers support for displaying an ellipsis button at the beginning and end of the numeric buttons when the scroll view contains additional numeric buttons before or after the currently selected numeric button. It can be customized by using the [SfDataPager.AutoEllipsisMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataPager.SfDataPager.html#Syncfusion_Maui_DataGrid_DataPager_SfDataPager_AutoEllipsisMode) property.
 
 {% tabs %}
 {% highlight xaml %}
@@ -402,7 +402,7 @@ public partial class MainPage : ContentPage
 
 ## Customize the auto-ellipsis text
 
-The auto-ellipsis text can be customized by using the `SfDataPager.AutoEllipsisText` property. The default value of `AutoEllipsisText` is set to `…`.
+The auto-ellipsis text can be customized by using the [SfDataPager.AutoEllipsisText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataPager.SfDataPager.html#Syncfusion_Maui_DataGrid_DataPager_SfDataPager_AutoEllipsisText) property. The default value of `AutoEllipsisText` is set to `…`.
 
 {% tabs %}
 {% highlight xaml %}
@@ -430,27 +430,27 @@ public partial class MainPage : ContentPage
 
 ### Move to the first page
 
-The data pager allows the users to programmatically navigate to the first page using the `MoveToFirstPage()` method.
+The data pager allows the users to programmatically navigate to the first page using the [MoveToFirstPage()](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataPager.SfDataPager.html#Syncfusion_Maui_DataGrid_DataPager_SfDataPager_MoveToFirstPage) method.
 
 ### Move to the last page
 
-The data pager allows the users to programmatically navigate to the last page using the `MoveToLastPage()` method.
+The data pager allows the users to programmatically navigate to the last page using the [MoveToLastPage()](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataPager.SfDataPager.html#Syncfusion_Maui_DataGrid_DataPager_SfDataPager_MoveToLastPage) method.
 
 ### Move to to the next page
 
-The data pager allows the users to programmatically navigate to the next page using the `MoveToNextPage()` method.
+The data pager allows the users to programmatically navigate to the next page using the [MoveToNextPage()](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataPager.SfDataPager.html#Syncfusion_Maui_DataGrid_DataPager_SfDataPager_MoveToNextPage) method.
 
 ### Move to to the previous page
 
-The data pager allows the users to programmatically navigate to the previous page using the `MoveToPreviousPage()` method.
+The data pager allows the users to programmatically navigate to the previous page using the [MoveToPreviousPage()](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataPager.SfDataPager.html#Syncfusion_Maui_DataGrid_DataPager_SfDataPager_MoveToPreviousPage) method.
 
 ### Move to page
 
-The data pager allows the users to programmatically navigate to the desired page using the `MoveToPage(Int32)` method. Users can also able to navigate to the page with animation using the `MoveToPage(Int32, Int32, Boolean)` method.
+The data pager allows the users to programmatically navigate to the desired page using the [MoveToPage(Int32)](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataPager.SfDataPager.html#Syncfusion_Maui_DataGrid_DataPager_SfDataPager_MoveToPage_System_Int32_) method. Users can also able to navigate to the page with animation using the `MoveToPage(Int32, Int32, Boolean)` method.
 
 ## Orientation
 
-By default, `SfDataPager` displays the button in the horizontal direction. However, the `SfDataPager.Orientation` property allows users to customize the data pager to display the buttons vertically or horizontally according to their preferences.
+By default, `SfDataPager` displays the button in the horizontal direction. However, the [SfDataPager.Orientation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataPager.SfDataPager.html#Syncfusion_Maui_DataGrid_DataPager_SfDataPager_Orientation) property allows users to customize the data pager to display the buttons vertically or horizontally according to their preferences.
 
 {% tabs %}
 {% highlight xaml %}
@@ -476,7 +476,7 @@ public partial class MainPage : ContentPage
 
 ### PageChanging
 
-The `PageChanging` event is triggered when the user navigation form one page to another page begins. `SfDataPager.PageChangingEventArgs` contains the following members, which provide the information for `PageChanging` event:
+The `PageChanging` event is triggered when the user navigation form one page to another page begins. [SfDataPager.PageChangingEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataPager.PageChangedEventArgs.html) contains the following members, which provide the information for `PageChanging` event:
 
 * **OldPageIndex** - Gets the current page index from which the page is navigating
 .
@@ -527,7 +527,7 @@ public partial class MainPage : ContentPage
 
 ## Customize the appearance
 
-The data pager allows you to change its appearance by modifying the properties of `DataPagerStyle` and then assigning it to the `SfDataPager.DefaultStyle` property.
+The data pager allows you to change its appearance by modifying the properties of [DataPagerStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataPager.DataPagerStyle.html) and then assigning it to the `SfDataPager.DefaultStyle` property.
 
 The `SfDataPager` enables customization of its appearance using the following properties:
 

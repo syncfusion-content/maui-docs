@@ -107,12 +107,12 @@ N> The `CellRightTapped` event is only applicable for Windows and macOS.
 
 The `Datagrid` provides the following events for handling mouse pointer interactions with the cells.
 
-* [CellEntered]() : Called when the mouse pointer enters the cell.
-* [CellHovered]() : Called when the mouse pointer hovers over the cell.
-* [CellExited]()  : Called when the mouse pointer exits the cell.
+* [CellEntered](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CellEntered) : Called when the mouse pointer enters the cell.
+* [CellHovered](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CellHovered) : Called when the mouse pointer hovers over the cell.
+* [CellExited](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CellExited)  : Called when the mouse pointer exits the cell.
 
 ### CellEntered event
-This event will be triggered when the mouse pointer enters a cell in the DataGrid. It uses [DataGridCellEnteredEventArgs]() as its argument.
+This event will be triggered when the mouse pointer enters a cell in the DataGrid. It uses [DataGridCellEnteredEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCellEnteredEventArgs.html) as its argument.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -132,7 +132,7 @@ private void dataGrid_CellEntered(object sender, DataGridCellEnteredEventArgs e)
 {% endtabs %}
 
 ### CellHovered event
-This event will be triggered when the mouse pointer hovers over a cell in the DataGrid. It uses [DataGridCellHoveredEventArgs]() as its argument.
+This event will be triggered when the mouse pointer hovers over a cell in the DataGrid. It uses [DataGridCellHoveredEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCellHoveredEventArgs.html) as its argument.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -153,7 +153,7 @@ private void dataGrid_CellHovered(object sender, DataGridCellHoveredEventArgs e)
 {% endtabs %}
 
 ### CellExited event
-This event will be triggered when the mouse pointer exits a cell in the DataGrid. It uses [DataGridCellExitedEventArgs]() as its argument.
+This event will be triggered when the mouse pointer exits a cell in the DataGrid. It uses [DataGridCellExitedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCellExitedEventArgs.html) as its argument.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -186,15 +186,15 @@ The [SfDataGrid.CellValueChanged](https://help.syncfusion.com/cr/maui/Syncfusion
 
 {% highlight c# %}
 
-        dataGrid.CellValueChanged += SfDataGrid_CellValueChanged;
+dataGrid.CellValueChanged += SfDataGrid_CellValueChanged;
 
-        private void SfDataGrid_CellValueChanged(object sender, ValueChangedEventArgs e)
-        {
-            var column = e.Column;
-            var newValue = e.NewValue;
-            var rowColIndex = e.RowColIndex;
-            var rowData = e.RowData;
-        }
+private void SfDataGrid_CellValueChanged(object sender, ValueChangedEventArgs e)
+{
+    var column = e.Column;
+    var newValue = e.NewValue;
+    var rowColIndex = e.RowColIndex;
+    var rowData = e.RowData;
+}
 
 {% endhighlight %}
 
