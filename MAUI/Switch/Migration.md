@@ -9,7 +9,7 @@ documentation: ug
 
 # Migrating from Xamarin SfSwitch to .NET MAUI SfSwitch 
 
-To migrate easier from Xamarin SfSwitch to [.NET MAUI SfSwitch], we kept most of the APIs from Xamarin SfSwitch in MAUI SfSwitch. However, to maintain the consistency of the API naming in MAUI SfSwitch, we renamed some of the APIs. The APIs changed in MAUI SfSwitch from Xamarin SfSwitch are detailed as follows:
+To migrate easier from Xamarin SfSwitch to .NET MAUI SfSwitch, we kept most of the APIs from Xamarin SfSwitch in MAUI SfSwitch. However, to maintain the consistency of the API naming in MAUI SfSwitch, we renamed some of the APIs. The APIs changed in MAUI SfSwitch from Xamarin SfSwitch are detailed as follows:
 
 ## Namespaces 
 

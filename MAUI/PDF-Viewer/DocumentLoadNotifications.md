@@ -53,9 +53,10 @@ When a document fails to load in the `SfPdfViewer`, the users will be notified w
 ### Document load failed event
 
 The `DocumentLoadFailed` event triggers when the document loading fails in the `SfPdfViewer`. That is,
-* When any corrupted document is loaded
-* When any password-protected document is loaded with an invalid or empty password
-* When any non-PDF document is loaded
+* When any corrupted document is loaded.
+* When any password-protected document is loaded with an invalid or empty password.
+* When any non-PDF document is loaded.
+* When a PDF containing XFA form is loaded.
 
 The [DocumentLoadFailedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.DocumentLoadFailedEventArgs.html) will return the error [Message](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.DocumentLoadFailedEventArgs.html#Syncfusion_Maui_PdfViewer_DocumentLoadFailedEventArgs_Message) and [Exception](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.DocumentLoadFailedEventArgs.html#Syncfusion_Maui_PdfViewer_DocumentLoadFailedEventArgs_Exception) details for the failure. The following code example explains the same.
 
