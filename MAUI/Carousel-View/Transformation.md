@@ -9,11 +9,11 @@ documentation : ug
 
 # Transformation in .NET MAUI Carousel View (SfCarousel)
 
-The [`Offset`]() between selected and unselected item can be customized in [`SfCarousel`]() control. And also the items can be scaled to the specified value.
+The `Offset` between selected and unselected item can be customized in  `SfCarousel` control. And also the items can be scaled to the specified value.
 
 ## Tilt Non Selected Items
 
-The [`RotationAngle`]() property in the [`SfCarousel`]() control is utilized to tilt all unselected items at a specified angle in the [`Default`]() mode.
+The `RotationAngle` property in the `SfCarousel` control is utilized to tilt all unselected items at a specified angle in the `Default` mode.
 
 N> If the angle value is positive, then the rotation is in the clockwise direction. If the angle value is negative, the rotation is in the counterclockwise direction. 
 
@@ -47,7 +47,7 @@ carousel.SetBinding(SfCarousel.ItemsSourceProperty, "ImageCollection");
 
 ## Set Gap between selected Item
 
-Distance between the selected item and other items can be customized by using [`SelectedItemOffset`]() property of the  [`SfCarousel`]() control in the Default mode.
+Distance between the selected item and other items can be customized by using `SelectedItemOffset` property of the  `SfCarousel` control in the Default mode.
 
 {% tabs %}
 
@@ -80,7 +80,7 @@ carousel.SetBinding(SfCarousel.ItemsSourceProperty, "ImageCollection");
 
 ## Set Gap between unselected Items
 
-The [`Offset`]() property is used to define the accurate distance between unselected items in the [`SfCarousel`]() panel in the Default mode.
+The `Offset` property is used to define the accurate distance between unselected items in the `SfCarousel` panel in the Default mode.
 
 N> The default offset value is 40 for desktop platforms and 18 for mobile platforms.
 
@@ -115,7 +115,7 @@ carousel.SetBinding(SfCarousel.ItemsSourceProperty, "ImageCollection");
 
 ## Set Scaling for Carousel Items
 
-The [`ScaleOffset`]() property in the  [`SfCarousel`]() control is used to scale all the items to the specified scale value in the Default mode.
+The `ScaleOffset` property in the  `SfCarousel` control is used to scale all the items to the specified scale value in the Default mode.
 
 {% tabs %}
 
@@ -148,7 +148,7 @@ carousel.SetBinding(SfCarousel.ItemsSourceProperty, "ImageCollection");
 
 ## Spacing between the Items in Linear mode
 
-Spacing of all the items in Linear mode can be determined by using [`ItemSpacing`]() property.
+Spacing of all the items in Linear mode can be determined by using `ItemSpacing` property.
 
 {% tabs %}
 
