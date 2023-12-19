@@ -17,9 +17,9 @@ The following property has been used in UIVirtualization support:
 
 ## EnableVirtualization
 
-The UI virtualization concept is implemented by enabling the `EnableVirtualization` property in SfCarousel Linear mode.
+The UI virtualization concept is implemented by enabling the [EnableVirtualization](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_EnableVirtualization) property in SfCarousel Linear mode.
 
-N> The default value of the `EnableVirtualization` property is false.
+N> The default value of the [EnableVirtualization](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_EnableVirtualization) property is false.
 
 {% tabs %}
 
