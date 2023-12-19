@@ -308,7 +308,8 @@ this.Scheduler.AppointmentTextStyle = appointmentTextStyle;
 
 ![appointment-text-appearence-customization-in-maui-scheduler](images/agenda-view/appointment-text-appearence-customization-in-maui-scheduler.png)
 
-## Appointment time format customization
+## Change the appointment time format
+
 You can customize the appointment time format of scheduler by using the `AppointmentTimeFormat`property of [AgendaView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAgendaView.html).
 
 {% tabs %}
@@ -316,10 +317,9 @@ You can customize the appointment time format of scheduler by using the `Appoint
 
  <scheduler:SfScheduler x:Name="Scheduler" 
                         View="Agenda">
-    <scheduler:SfScheduler.TimelineView>
-        <scheduler:SchedulerTimelineView 
-                        AppointmentTimeFormat="HH:mm:tt"/>
-    </scheduler:SfScheduler.TimelineView>
+    <scheduler:SfScheduler.AgendaView>
+        <scheduler:SchedulerAgendaView AppointmentTimeFormat="HH:mm:tt"/>
+    </scheduler:SfScheduler.AgendaView>
  </scheduler:SfScheduler>
 
 {% endhighlight %}
