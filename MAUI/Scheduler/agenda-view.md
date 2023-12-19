@@ -310,7 +310,7 @@ this.Scheduler.AppointmentTextStyle = appointmentTextStyle;
 
 ## Change the appointment time format
 
-You can customize the appointment time format of scheduler by using the `AppointmentTimeFormat` property of [AgendaView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAgendaView.html).
+You can customize the appointment time format of the scheduler by using the `AppointmentTimeFormat` property of [AgendaView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAgendaView.html).
 
 {% tabs %}
 {% highlight XAML hl_lines="5" %}

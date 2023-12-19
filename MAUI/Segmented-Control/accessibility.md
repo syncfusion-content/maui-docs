@@ -28,7 +28,7 @@ Moves to the previous item on the segmented control's left side. It does not mak
 <tr>
 <td>
 Enter<br/><br/></td><td>
-Pressing the Enter key when segment item in focus will make selection.<br/><br/></td></tr>
+Pressing the Enter key when the segment item is in focus will make a selection.<br/><br/></td></tr>
 </table>
 
 
