@@ -1,8 +1,8 @@
 ---
 layout: post
-title: About .NET MAUI Control | Syncfusion
+title: About .NET MAUI Switch Control | Syncfusion
 description: Learn here about introduction of the Syncfusion .NET MAUI Switch (SfSwitch) control, its elements, and more.
-platform: .NET MAUI
+platform: maui
 control: SfSwitch
 documentation: ug
 ---
