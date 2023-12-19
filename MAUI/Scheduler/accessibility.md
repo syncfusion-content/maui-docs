@@ -7,9 +7,11 @@ control: SfScheduler
 documentation: ug
 ---
 
-# Accessibility Support in .NET MAUI Scheduler (SfScheduler)
+## Accessibility Support in .NET MAUI Scheduler (SfScheduler)
 
-## Keyboard navigation
+Accessibility support in `SfScheduler` is designed to provide voice descriptions of scheduler elements and scheduled events.
+
+## Keyboard shortcuts in .NET MAUI Scheduler (SfScheduler)
 
 The `SfScheduler` supports selecting the scheduler date time, appointments, and view navigation using keyboard interactions in WinUI, macOS, and iOS platforms.
 
