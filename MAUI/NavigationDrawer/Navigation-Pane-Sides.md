@@ -8,21 +8,21 @@ documentation: ug
 ---
 # Configuring the Drawer in Different Sides in .NET MAUI Navigation Drawer (SfNavigationDrawer)
 
-The supplemental pane can be pulled in and out from all four sides. The `Position` property is used to change the side of the pane, and the options are:
+The supplemental pane can be pulled in and out from all four sides. The [Position](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.DrawerSettings.html#Syncfusion_Maui_NavigationDrawer_DrawerSettings_Position) property is used to change the side of the pane, and the options are:
 
-*	`Left`
+*	[Left](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.Position.html#Syncfusion_Maui_NavigationDrawer_Position_Left)
 
-*	`Right`
+*	[Right](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.Position.html#Syncfusion_Maui_NavigationDrawer_Position_Right)
 
-*	`Top`
+*	[Top](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.Position.html#Syncfusion_Maui_NavigationDrawer_Position_Top)
 
-*	`Bottom`
+*	[Bottom](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.Position.html#Syncfusion_Maui_NavigationDrawer_Position_Bottom)
 
-N> The default position is `Left`.
+N> The default position is [Left](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.Position.html#Syncfusion_Maui_NavigationDrawer_Position_Left).
 
 ## Left
 
-The navigation pane pulled in and out from the `Left` side can be set as follows:
+The navigation pane pulled in and out from the [Left](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.Position.html#Syncfusion_Maui_NavigationDrawer_Position_Left) side can be set as follows:
 
 {% tabs %}	
 
@@ -55,7 +55,7 @@ The navigation pane pulled in and out from the `Left` side can be set as follows
 
 ## Right
 
-The navigation pane pulled in and out from the `Right` side can be set as follows:
+The navigation pane pulled in and out from the [Right](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.Position.html#Syncfusion_Maui_NavigationDrawer_Position_Right) side can be set as follows:
 
 {% tabs %}	
 
@@ -88,7 +88,7 @@ The navigation pane pulled in and out from the `Right` side can be set as follow
 	
 ## Top
 
-The navigation pane pulled in and out from the `Top` side can be set as follows:
+The navigation pane pulled in and out from the [Top](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.Position.html#Syncfusion_Maui_NavigationDrawer_Position_Top) side can be set as follows:
 
 {% tabs %}
 
@@ -122,7 +122,7 @@ The navigation pane pulled in and out from the `Top` side can be set as follows:
 
 ## Bottom
 
-The navigation pane pulled in and out from the `Bottom` side can be set as follows:
+The navigation pane pulled in and out from the [Bottom](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.Position.html#Syncfusion_Maui_NavigationDrawer_Position_Bottom) side can be set as follows:
 
 {% tabs %}	
 

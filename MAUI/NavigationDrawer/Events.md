@@ -9,17 +9,17 @@ documentation: ug
 
 # Events in .NET MAUI Navigation Drawer (SfNavigationDrawer)
 
-There are five built-in events in the `SfNavigationDrawer` control namely:
+There are five built-in events in the [SfNavigationDrawer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.html) control namely:
 
-* DrawerOpening
-* DrawerOpened
-* DrawerClosing
-* DrawerClosed
-* DrawerToggled
+* [DrawerOpening](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html#Syncfusion_Maui_NavigationDrawer_SfNavigationDrawer_DrawerOpening)
+* [DrawerOpened](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html#Syncfusion_Maui_NavigationDrawer_SfNavigationDrawer_DrawerOpened)
+* [DrawerClosing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html#Syncfusion_Maui_NavigationDrawer_SfNavigationDrawer_DrawerClosing)
+* [DrawerClosed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html#Syncfusion_Maui_NavigationDrawer_SfNavigationDrawer_DrawerClosed)
+* [DrawerToggled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html#Syncfusion_Maui_NavigationDrawer_SfNavigationDrawer_DrawerToggled)
 
 ## DrawerOpening Event
 
-The `DrawerOpening` event is triggered before the drawer pane is opening. Restrict the drawer from opening by canceling this event by setting the `Cancel` property in the event argument to true. The event arguments are of type `CancelEventArgs`. Expose the following property:
+The [DrawerOpening](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html#Syncfusion_Maui_NavigationDrawer_SfNavigationDrawer_DrawerOpening) event is triggered before the drawer pane is opening. Restrict the drawer from opening by canceling this event by setting the `Cancel` property in the event argument to true. The event arguments are of type `CancelEventArgs`. Expose the following property:
 
  * `Cancel`: Drawer opening is based on this value.
 
@@ -48,7 +48,7 @@ private void navigationDrawer_DrawerOpening(object sender, System.ComponentModel
 
 ## DrawerOpened Event
 
-The `DrawerOpened` event triggered after a drawer is opened.
+The [DrawerOpened](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html#Syncfusion_Maui_NavigationDrawer_SfNavigationDrawer_DrawerOpened) event triggered after a drawer is opened.
 
 You can execute your own set of codes once the drawer is opened.
 
@@ -78,7 +78,7 @@ private void navigationDrawer_DrawerOpened(object sender, EventArgs e)
 
 ## DrawerClosing Event
 
-The `DrawerClosing` event is triggered before the drawer pane closes. Restrict the drawer from closing by canceling this event by setting the `Cancel` property in the event argument to true. The event arguments are of type `CancelEventArgs`. Expose the following property:
+The [DrawerClosing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html#Syncfusion_Maui_NavigationDrawer_SfNavigationDrawer_DrawerClosing) event is triggered before the drawer pane closes. Restrict the drawer from closing by canceling this event by setting the `Cancel` property in the event argument to true. The event arguments are of type `CancelEventArgs`. Expose the following property:
 
  * `Cancel`: Drawer closing is based on this value.
 
@@ -107,7 +107,7 @@ private void navigationDrawer_DrawerClosing(object sender, System.ComponentModel
 
 ## DrawerClosed Event
 
-The `DrawerClosed` event triggered after a drawer is closed.
+The [DrawerClosed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html#Syncfusion_Maui_NavigationDrawer_SfNavigationDrawer_DrawerClosed) event triggered after a drawer is closed.
 
 You can execute your own set of codes once the drawer is closed.
 
@@ -137,9 +137,9 @@ private void navigationDrawer_DrawerClosed(object sender, EventArgs e)
 
 ## DrawerToggled Event
 
-The `DrawerToggled` event is triggered after a drawer is opened or closed. The event arguments are of type `ToggledEventArgs`. Expose the following property:
+The [DrawerToggled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html#Syncfusion_Maui_NavigationDrawer_SfNavigationDrawer_DrawerToggled) event is triggered after a drawer is opened or closed. The event arguments are of type [ToggledEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.ToggledEventArgs.html). Expose the following property:
 
-* `IsOpen`: This property indicates whether the drawer is opened or closed.
+* [IsOpen](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.ToggledEventArgs.html#Syncfusion_Maui_NavigationDrawer_ToggledEventArgs_IsOpen): This property indicates whether the drawer is opened or closed.
 
 {% tabs %}
 

@@ -10,7 +10,7 @@ documentation: ug
 
 # Setting Main Content in .NET MAUI Navigation Drawer (SfNavigationDrawer)
 
-The main content of the NavigationDrawer is always visible and can be set using the `ContentView` property. In the following code example, the `ContentView` is switched when the selection changes in the ListView. In short, this allows for easy navigation and switching of content.
+The main content of the NavigationDrawer is always visible and can be set using the [ContentView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html#Syncfusion_Maui_NavigationDrawer_SfNavigationDrawer_ContentView) property. In the following code example, the [ContentView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html#Syncfusion_Maui_NavigationDrawer_SfNavigationDrawer_ContentView) is switched when the selection changes in the ListView. In short, this allows for easy navigation and switching of content.
 
 {% tabs %}
 
@@ -145,7 +145,7 @@ public partial class NavigationDrawerPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-N> It is mandatory to set `ContentView` for `SfNavigationDrawer` when initializing.
+N> It is mandatory to set [ContentView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html#Syncfusion_Maui_NavigationDrawer_SfNavigationDrawer_ContentView) for [SfNavigationDrawer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html) when initializing.
 
 ![contentview](Images/main-content/getting_main_content.png)
 
