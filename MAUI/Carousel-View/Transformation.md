@@ -45,38 +45,6 @@ carousel.SetBinding(SfCarousel.ItemsSourceProperty, "ImageCollection");
 
 ![Rotation angle](images/rotationangle.png)
 
-## Set Gap between Selected Item
-
-Distance between the selected item and other items can be customized by using `SelectedItemOffset` property of the  `SfCarousel` control in the Default mode.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<carousel:SfCarousel x:Name="carousel"
-                     ItemHeight="170"
-                     ItemWidth="270"
-                     SelectedItemOffset="60"/>
-
-	
-{% endhighlight %}
-
-{% highlight C# %}
-
-SfCarousel carousel = new SfCarousel()
-{
-    ItemWidth = 170,
-    ItemHeight = 250,
-    SelectedItemOffset = 60,
-};
-
-carousel.SetBinding(SfCarousel.ItemsSourceProperty, "ImageCollection");
-
-{% endhighlight %}
-
-{% endtabs %}
-
-![SelectedItemOffset](images/selectedoffset.png)
 
 ## Set Gap between unselected Items
 
@@ -112,6 +80,39 @@ carousel.SetBinding(SfCarousel.ItemsSourceProperty, "ImageCollection");
 {% endtabs %}
 
 ![offset](images/offset.png)
+
+## Set Gap between Selected Item
+
+Distance between the selected item and other items can be customized by using `SelectedItemOffset` property of the  `SfCarousel` control in the Default mode.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<carousel:SfCarousel x:Name="carousel"
+                     ItemHeight="170"
+                     ItemWidth="270"
+                     SelectedItemOffset="60"/>
+
+	
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfCarousel carousel = new SfCarousel()
+{
+    ItemWidth = 170,
+    ItemHeight = 250,
+    SelectedItemOffset = 60,
+};
+
+carousel.SetBinding(SfCarousel.ItemsSourceProperty, "ImageCollection");
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![SelectedItemOffset](images/selectedoffset.png)
 
 ## Set Scaling for Carousel Items
 
