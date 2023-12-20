@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 
-# Setting Sliding Panel Content in .NET MAUI Navigation Drawer
+# Setting Sliding Panel Content in .NET MAUI Navigation Drawer (SfNavigationDrawer)
 
 The drawer pane content is only viewable when the drawer is in the open state. Its content can be set as:
 
@@ -22,7 +22,7 @@ N> Header and Footer content is optional, but the Drawer content is mandatory to
 		
 ## Header Content
 
-As the name suggests, it is displayed at the top of the drawer. The `DrawerHeaderView` property is used to set the header content of the drawer.
+As the name suggests, it is displayed at the top of the drawer. The [DrawerHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.DrawerSettings.html#Syncfusion_Maui_NavigationDrawer_DrawerSettings_DrawerHeaderView) property is used to set the header content of the drawer.
 
 {% tabs %}
 
@@ -64,9 +64,9 @@ this.Content = navigationDrawer;
 
 ## Header Height
 
-The height of the drawer header content can be adjusted using the `DrawerHeaderHeight` property.
+The height of the drawer header content can be adjusted using the [DrawerHeaderHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.DrawerSettings.html#Syncfusion_Maui_NavigationDrawer_DrawerSettings_DrawerHeaderHeight) property.
 
-N> The `DrawerHeaderView` can be removed by setting the `DrawerHeaderHeight` to zero.
+N> The [DrawerHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.DrawerSettings.html#Syncfusion_Maui_NavigationDrawer_DrawerSettings_DrawerHeaderView) can be removed by setting the [DrawerHeaderHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.DrawerSettings.html#Syncfusion_Maui_NavigationDrawer_DrawerSettings_DrawerHeaderHeight) to zero.
 
 {% tabs %}
 
@@ -108,7 +108,7 @@ this.Content = navigationDrawer;
 
 ## Footer Content
 
-As the name suggests, it is displayed at the bottom of the drawer. The `DrawerFooterView` property is used to set the footer content of the drawer.
+As the name suggests, it is displayed at the bottom of the drawer. The [DrawerFooterView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.DrawerSettings.html#Syncfusion_Maui_NavigationDrawer_DrawerSettings_DrawerFooterView) property is used to set the footer content of the drawer.
 
 {% tabs %}
 
@@ -149,9 +149,9 @@ this.Content = navigationDrawer;
 
 ## Footer Height
 
-The height of the drawer footer content can be adjusted using the `DrawerFooterHeight` property.
+The height of the drawer footer content can be adjusted using the [DrawerFooterHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.DrawerSettings.html#Syncfusion_Maui_NavigationDrawer_DrawerSettings_DrawerFooterHeight) property.
 
-N> The `DrawerFooterView` can be removed by setting the `DrawerFooterHeight` to zero.
+N> The [DrawerFooterView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.DrawerSettings.html#Syncfusion_Maui_NavigationDrawer_DrawerSettings_DrawerFooterView) can be removed by setting the [DrawerFooterHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.DrawerSettings.html#Syncfusion_Maui_NavigationDrawer_DrawerSettings_DrawerFooterHeight) to zero.
 
 {% tabs %}
 
@@ -193,7 +193,7 @@ this.Content = navigationDrawer;
 
 ## Drawer Content
 
-The main content of the drawer is displayed between the header and footer content. It can be set using the `DrawerContentView` property. The content view occupies the remaining space left by the header and footer content.
+The main content of the drawer is displayed between the header and footer content. It can be set using the [DrawerContentView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.DrawerSettings.html#Syncfusion_Maui_NavigationDrawer_DrawerSettings_DrawerContentView) property. The content view occupies the remaining space left by the header and footer content.
 
 {% tabs %}
 
