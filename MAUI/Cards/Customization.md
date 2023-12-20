@@ -15,7 +15,7 @@ Enabling the `ShowSwipedCard` option allows the swiped cards to be displayed at 
 
 {% tabs %} 
 
-{% highlight xaml %}
+{% highlight xaml hl_lines="1" %}
 
 <cards:SfCardLayout ShowSwipedCard="true">
 </cards:SfCardLayout>
@@ -41,7 +41,7 @@ The `VisibleIndex` is utilized when providing the index of the card that is inte
 
 {% tabs %} 
 
-{% highlight xaml %}
+{% highlight xaml hl_lines="1" %}
 
 <cards:SfCardLayout VisibleIndex="1">
 </cards:SfCardLayout>
@@ -67,7 +67,7 @@ The [SwipeDirection]() property specifies the direction of swiping, which can be
 
 {% tabs %} 
 
-{% highlight xaml %}
+{% highlight xaml hl_lines="1" %}
 
 <cards:SfCardLayout SwipeDirection="Left">
 </cards:SfCardLayout>

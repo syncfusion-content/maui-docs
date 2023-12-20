@@ -11,22 +11,22 @@ documentation: ug
 
 ## Tapped
 
-The [`Tapped`]() event is triggered when any card view is tapped. The associated argument contains the following information.
+The [`Tapped`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cards.SfCardLayout.html#Syncfusion_Maui_Cards_SfCardLayout_Tapped) event is triggered when any card view is tapped. The associated argument contains the following information.
 
 * [`CardView`]() - Gets the details of a particular card view.
 
 ## VisibleIndexChanging
 
-The [`VisibleIndexChanging`]()  event is triggered when the visible card index is changing. The associated argument contains the following information.
+The [`VisibleIndexChanging`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cards.SfCardLayout.html#Syncfusion_Maui_Cards_SfCardLayout_VisibleIndexChanging)  event is triggered when the visible card index is changing. The associated argument contains the following information.
 
-* [`OldIndex`]() - Gets the details of the previous index card.
+* [`OldIndex`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cards.CardVisibleIndexChangingEventArgs.html#Syncfusion_Maui_Cards_CardVisibleIndexChangingEventArgs_OldIndex) - Gets the details of the previous index card.
 
-* [`NewIndex`]() - Gets the details of the next possible index card.
+* [`NewIndex`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cards.CardVisibleIndexChangingEventArgs.html#Syncfusion_Maui_Cards_CardVisibleIndexChangingEventArgs_NewIndex) - Gets the details of the next possible index card.
 
 * [`Cancel`]() - Gets or sets a value indicating whether the event should be canceled.
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight xaml hl_lines="1" %}
 
 <cards:SfCardLayout VisibleIndexChanging="VisibleIndexChanging" >
 		<cards:SfCardView>
@@ -68,14 +68,14 @@ private void VisibleIndexChanging(System.Object sender, Syncfusion.Maui.Cards.Ca
 
 ## VisibleIndexChanged
 
-The [`VisibleIndexChanged`]() event is triggered when the visible card index is changed. The associated argument contains the following information.
+The [`VisibleIndexChanged`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cards.SfCardLayout.html#Syncfusion_Maui_Cards_SfCardLayout_VisibleIndexChanged) event is triggered when the visible card index is changed. The associated argument contains the following information.
 
-* [`OldIndex`]() - Gets the details of the previous card.
+* [`OldIndex`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cards.CardVisibleIndexChangedEventArgs.html#Syncfusion_Maui_Cards_CardVisibleIndexChangedEventArgs_OldIndex) - Gets the details of the previous card.
 
-* [`NewIndex`]() - Gets the details of the current card.
+* [`NewIndex`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cards.CardVisibleIndexChangedEventArgs.html#Syncfusion_Maui_Cards_CardVisibleIndexChangedEventArgs_NewIndex) - Gets the details of the current card.
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight xaml hl_lines="1" %}
 
 <cards:SfCardLayout VisibleIndexChanged="VisibleIndexChanged" >
 		<cards:SfCardView>
@@ -112,14 +112,14 @@ private void VisibleIndexChanged(System.Object sender, Syncfusion.Maui.Cards.Car
 
 ## Dismissing event
 
-The [`Dismissing`]() event fires when dismissing the card by swiping, with the `SwipeToDismiss` property enabled. The associated argument contains the following information.
+The [`Dismissing`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cards.SfCardView.html#Syncfusion_Maui_Cards_SfCardView_Dismissing) event fires when dismissing the card by swiping, with the `SwipeToDismiss` property enabled. The associated argument contains the following information.
 
-* [`DismissDirection`]() - Gets a dismissing direction of the card view.
+* [`DismissDirection`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cards.CardDismissingEventArgs.html#Syncfusion_Maui_Cards_CardDismissingEventArgs_DismissDirection) - Gets a dismissing direction of the card view.
 
 * [`Cancel`]() - Gets or sets a value indicating whether the event should be canceled.
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight xaml hl_lines="1" %}
 
 <cards:SfCardView Dismissing="SfCardView_Dismissing" SwipeToDismiss="True">
     <Label Text="SfCardView" />
@@ -149,12 +149,12 @@ N> This event will not work when adding the `SfCardView` as a child of `SfCardLa
 
 ## Dismissed event
 
-The [`Dismissed`]() event fires when dismissed the card by swiping, with enables `SwipeToDismiss` property. The argument contains the following information.
+The [`Dismissed`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cards.SfCardView.html#Syncfusion_Maui_Cards_SfCardView_Dismissed) event fires when dismisses the card by swiping, with enables `SwipeToDismiss` property. The argument contains the following information.
 
-* [`DismissDirection`]() - Gets a dismissed direction of the card view.
+* [`DismissDirection`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cards.CardDismissedEventArgs.html#Syncfusion_Maui_Cards_CardDismissedEventArgs_DismissDirection) - Gets a dismissed direction of the card view.
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight xaml hl_lines="1" %}
 
  <cards:SfCardView Dismissed="SfCardView_Dismissed" SwipeToDismiss="True">
     <Label Text="SfCardView" />
