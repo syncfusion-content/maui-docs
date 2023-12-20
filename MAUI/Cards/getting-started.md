@@ -98,7 +98,7 @@ namespace GettingStarted
 
 ## SwipeToDismiss
 
-The `SwipeToDismiss` property enables or disables the swiping feature in SfCardView.
+The [SwipeToDismiss](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cards.SfCardView.html#Syncfusion_Maui_Cards_SfCardView_SwipeToDismiss) property enables or disables the swiping feature in SfCardView.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="1" %}
@@ -139,7 +139,7 @@ public partial class MainPage : ContentPage
 
 ## Dismiss the card programmatically
 
-The `IsDismissed` property enables you to retrieve the view state of the card, and also provides the capability for the user to programmatically modify the card's view state.
+The [IsDismissed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cards.SfCardView.html#Syncfusion_Maui_Cards_SfCardView_IsDismissed) property enables you to retrieve the view state of the card, and also provides the capability for the user to programmatically modify the card's view state.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="1" %}
