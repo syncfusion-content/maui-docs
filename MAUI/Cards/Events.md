@@ -13,7 +13,7 @@ documentation: ug
 
 The [`Tapped`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cards.SfCardLayout.html#Syncfusion_Maui_Cards_SfCardLayout_Tapped) event is triggered when any card view is tapped. The associated argument contains the following information.
 
-* [`CardView`]() - Gets the details of a particular card view.
+* [`CardView`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cards.SfCardView.html) - Gets the details of a particular card view.
 
 ## VisibleIndexChanging
 
