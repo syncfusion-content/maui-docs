@@ -13,15 +13,15 @@ Tooltip provides additional information about the segments in the sunburst chart
 
 ## Enable Tooltip
 
-To define the tooltip in the chart, set the [EnableTooltip]() property of [SfSunburstChart]() to true. The default value of the EnableTooltip property is `False`.
+To define the tooltip in the chart, set the [EnableTooltip](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SfSunburstChart.html#Syncfusion_Maui_SunburstChart_SfSunburstChart_EnableTooltip) property of [SfSunburstChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SfSunburstChart.html) to true. The default value of the EnableTooltip property is `False`.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-    <sunburst:SfSunburstChart EnableTooltip="True">
-    . . .
-    </sunburst:SfSunburstChart>
+<sunburst:SfSunburstChart EnableTooltip="True">
+. . .
+</sunburst:SfSunburstChart>
 
 {% endhighlight %}
 
@@ -41,13 +41,13 @@ sunburst.EnableTooltip = true;
 
 The appearance of the tooltip can be customized using the following properties:
 
-* [Background]() of type `Brush`, indicates background color to the tooltip label.
-* [FontAttributes]() of type `FontAttributes`, indicates the font style of * the label.
-* [FontFamily]() of type `string`, indicates the font family for the label.
-* [FontSize]() of type `float`, indicates the font size.
-* [Duration]() of type `int`, indicates the duration for displaying the tooltip.
-* [Margin]() of type `Thickness`, indicates the label’s margin.
-* [TextColor]() of type `Color`, indicates the color of the displayed text.
+* [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SunburstTooltipSettings.html#Syncfusion_Maui_SunburstChart_SunburstTooltipSettings_Background) of type `Brush`, indicates background color to the tooltip label.
+* [FontAttributes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SunburstTooltipSettings.html#Syncfusion_Maui_SunburstChart_SunburstTooltipSettings_FontAttributes) of type `FontAttributes`, indicates the font style of * the label.
+* [FontFamily](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SunburstTooltipSettings.html#Syncfusion_Maui_SunburstChart_SunburstTooltipSettings_FontFamily) of type `string`, indicates the font family for the label.
+* [FontSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SunburstTooltipSettings.html#Syncfusion_Maui_SunburstChart_SunburstTooltipSettings_FontSize) of type `float`, indicates the font size.
+* [Duration](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SunburstTooltipSettings.html#Syncfusion_Maui_SunburstChart_SunburstTooltipSettings_Duration) of type `int`, indicates the duration for displaying the tooltip.
+* [Margin](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SunburstTooltipSettings.html#Syncfusion_Maui_SunburstChart_SunburstTooltipSettings_Margin) of type `Thickness`, indicates the label’s margin.
+* [TextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SunburstTooltipSettings.html#Syncfusion_Maui_SunburstChart_SunburstTooltipSettings_TextColor) of type `Color`, indicates the color of the displayed text.
 
 {% tabs %}
 
@@ -87,7 +87,7 @@ sunburst.TooltipSettings = tooltipSettings;
 
 ## Custom Template
 
-The sunburst chart provides support for customizing the appearance of the tooltip by using the [TooltipTemplate]() property.
+The sunburst chart provides support for customizing the appearance of the tooltip by using the [TooltipTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SfSunburstChart.html#Syncfusion_Maui_SunburstChart_SfSunburstChart_TooltipTemplate) property.
 
 {% tabs %}
 

@@ -9,11 +9,11 @@ documentation: ug
 
 # Center View in .NET MAUI Sunburst Chart 
 
-Any view can be added to the center of the sunburst chart using the [CenterView]() property of [SfSunburstChart](). The view placed in the center of the chart is useful for sharing additional information about the sunburst chart.The binding context of the CenterView will be the SfSunburstChart class.
+Any view can be added to the center of the sunburst chart using the [CenterView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SfSunburstChart.html#Syncfusion_Maui_SunburstChart_SfSunburstChart_CenterView) property of [SfSunburstChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SfSunburstChart.html). The view placed in the center of the chart is useful for sharing additional information about the sunburst chart.The binding context of the CenterView will be the SfSunburstChart class.
 
 ## CenterHoleSize
 
-The [CenterHoleSize]() property of SfSunburstChart is used to get the diameter value of the center hole. Using the CenterHoleSize, we can protect the view in the sunburst chart center from overlapping with the segments.
+The [CenterHoleSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SfSunburstChart.html#Syncfusion_Maui_SunburstChart_SfSunburstChart_CenterHoleSize) property of SfSunburstChart is used to get the diameter value of the center hole. Using the CenterHoleSize, we can protect the view in the sunburst chart center from overlapping with the segments.
 
 {% tabs %}
 

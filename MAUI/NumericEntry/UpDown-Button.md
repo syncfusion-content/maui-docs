@@ -73,7 +73,7 @@ sfNumericEntry.UpDownPlacementMode = NumericEntryUpDownPlacementMode.Inline;
 
 ## UpDown button color
 
-Customize the `NumericEntry` control button color by using the `UpDownButtonColor` property.
+Customize the `NumericEntry` control button color by using the [UpDownButtonColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_UpDownButtonColor) property.
 
 {% tabs %}
 {% highlight XAML %}
@@ -105,7 +105,7 @@ sfNumericEntry.UpDownButtonColor = Colors.Blue;
 
 ## UpDown button template
 
-The `NumericEntry` control supports customization of the UpDownButton's appearance through the use of the `UpButtonTemplate` and `DownButtonTemplate` properties.
+The `NumericEntry` control supports customization of the UpDownButton's appearance through the use of the [UpButtonTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_UpButtonTemplate) and [DownButtonTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_DownButtonTemplate) properties.
 {% tabs %}
 {% highlight XAML %}
 
@@ -212,7 +212,7 @@ The `NumericEntry` control supports customization of the UpDownButton's appearan
 
 ## Auto reverse in SfNumericEntry
 
-Auto-reverse in `NumericEntry` allows the control to automatically switch direction when reaching its `minimum` or `maximum` value. When incrementing, it starts at the `minimum` and progresses to the `maximum,` and conversely.
+Auto-reverse in `NumericEntry` allows the control to automatically switch direction when reaching its [Minimum](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_Minimum) or [Maximum](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_Maximum) value. When incrementing, it starts at the [Minimum](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_Minimum) and progresses to the [Maximum](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_Maximum), and conversely.
 
 N> The default value of this property is `false.`
 {% tabs %}
