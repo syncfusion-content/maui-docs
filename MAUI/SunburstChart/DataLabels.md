@@ -11,7 +11,7 @@ documentation: ug
 Data labels are used to display information about segments at the (X, Y) point.
 
 ## Enable Data Label 
-Data labels are enabled and disabled using the [ShowLabels]() property. The default value of the ShowLabels property is `False`.
+Data labels are enabled and disabled using the [ShowLabels](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SfSunburstChart.html#Syncfusion_Maui_SunburstChart_SfSunburstChart_ShowLabels) property. The default value of the ShowLabels property is `False`.
 
 The following code explains how to initialize data labels.
 
@@ -72,7 +72,7 @@ sunburst.DataLabelSettings = new SunburstDataLabelSettings()
 
 ## Rotation Mode
 
-The view of data labels can be customized using the [RotationMode]() property. Data labels can be rotated to an angle for better readability. By default, the rotation mode is `Angle`.
+The view of data labels can be customized using the [RotationMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SunburstDataLabelSettings.html#Syncfusion_Maui_SunburstChart_SunburstDataLabelSettings_RotationMode) property. Data labels can be rotated to an angle for better readability. By default, the rotation mode is `Angle`.
 
 The following code shows normal mode of data labels.
 
@@ -107,12 +107,12 @@ sunburst.DataLabelSettings = new SunburstDataLabelSettings()
 
 ## Customization
 
- Data labels can be customized using the [DataLabelSettings]() property of the chart. For customizing, you need to create an instance of [SunburstDataLabelSettings]() and set it to the [DataLabelSettings]() property.The following properties, available in [SunburstDataLabelSettings](), are used to customize the data labels: 
+ Data labels can be customized using the [DataLabelSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SfSunburstChart.html#Syncfusion_Maui_SunburstChart_SfSunburstChart_DataLabelSettings) property of the chart. For customizing, you need to create an instance of [SunburstDataLabelSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SunburstDataLabelSettings.html) and set it to the [DataLabelSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SfSunburstChart.html#Syncfusion_Maui_SunburstChart_SfSunburstChart_DataLabelSettings) property.The following properties, available in [SunburstDataLabelSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SunburstDataLabelSettings.html), are used to customize the data labels: 
 
-* [FontAttributes]() of type `FontAttributes`, indicates the font style of * the label.
-* [FontFamily]() of type `string`, indicates the font family for the label.
-* [FontSize]() of type `float`, indicates the font size.
-* [TextColor]() of type `Color`, indicates the color of the displayed text.
+* [FontAttributes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SunburstDataLabelSettings.html#Syncfusion_Maui_SunburstChart_SunburstDataLabelSettings_FontAttributes) of type `FontAttributes`, indicates the font style of * the label.
+* [FontFamily](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SunburstDataLabelSettings.html#Syncfusion_Maui_SunburstChart_SunburstDataLabelSettings_FontFamily) of type `string`, indicates the font family for the label.
+* [FontSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SunburstDataLabelSettings.html#Syncfusion_Maui_SunburstChart_SunburstDataLabelSettings_FontSize) of type `float`, indicates the font size.
+* [TextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SunburstDataLabelSettings.html#Syncfusion_Maui_SunburstChart_SunburstDataLabelSettings_TextColor) of type `Color`, indicates the color of the displayed text.
 
 {% tabs %}
 
