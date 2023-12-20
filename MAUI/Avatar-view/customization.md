@@ -15,7 +15,7 @@ The [SfAvatarView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAv
 
 ## Aspect
 
-The `Aspect` property in [SfAvatarView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html?tabs=tabid-1) controls how the picture is adjusted to fit the display. By default, its set to `AspectFill`.
+The [Aspect](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html#Syncfusion_Maui_Core_SfAvatarView_Aspect) property in [SfAvatarView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html?tabs=tabid-1) controls how the picture is adjusted to fit the display. By default, its set to `AspectFill`.
 
 * AspectFit: Ensures the entire picture fits, adding space if needed.
 * AspectFill: Clips the image to fill the display while keeping its shape.
