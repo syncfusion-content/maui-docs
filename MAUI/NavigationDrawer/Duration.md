@@ -10,7 +10,7 @@ documentation: ug
 
 ## Animation Duration in SfNavigationDrawer
 
-The `Duration` property of the `SfNavigationDrawer` indicates the timeline for completing one animation cycle. Setting a smaller duration value accelerates animation speed.
+The [Duration](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.DrawerSettings.html#Syncfusion_Maui_NavigationDrawer_DrawerSettings_Duration) property of the [SfNavigationDrawer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html) indicates the timeline for completing one animation cycle. Setting a smaller duration value accelerates animation speed.
 
 {% tabs %}
 
@@ -37,7 +37,7 @@ this.Content = navigationDrawer;
 
 {% endtabs %}
 
-N> The `Duration` property for the `SfNavigationDrawer` is measured in milliseconds.
+N> The [Duration](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.DrawerSettings.html#Syncfusion_Maui_NavigationDrawer_DrawerSettings_Duration) property for the [SfNavigationDrawer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html) is measured in milliseconds.
 
 The following screenshot illustrates the result of the above code.
 
