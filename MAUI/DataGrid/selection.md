@@ -350,104 +350,29 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-## Cell Tap Events
-
-The `Datagrid` provides the following Events to handle interactions to the cells.
-
-* [CellTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CellTapped) : Called when a tap with a cell has occurred.
-* [CellDoubleTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CellDoubleTapped) : Called when the user has tapped a cell with a primary button at the same cell twice in quick succession.
-* [CellLongPress](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CellLongPress) : Called when a long-press gesture with a primary button has been recognized for a cell.
-* [CellRightTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CellRightTapped) : Called when a right-click mouse gesture has been recognized on a cell.
-
-### CellTapped event
-This event will be triggered while tapping a cell in the DataGrid. This event has the [DataGridCellTappedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCellTappedEventArgs.html) as arguments.
-
-{% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
-<syncfusion:SfDataGrid x:Name="dataGrid"
-                   CellTapped="dataGrid_CellTapped"
-                   ItemsSource="{Binding OrderInfoCollection}" />
-{% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
-private void dataGrid_CellTapped(object sender,DataGridCellTappedEventArgs e)
-{
-    var rowIndex = e.RowColumnIndex.RowIndex;
-    var rowData = e.RowData;
-    var columnIndex = e.RowColumnIndex.ColumnIndex;
-    var column = e.Column;
-}
-{% endhighlight %}
-{% endtabs %}
-
-### CellDoubleTapped event
-
-This event will be triggered while double tapping a cell in the DataGrid. This event has the [DataGridCellDoubleTappedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCellDoubleTappedEventArgs.html) as arguments. 
-
-{% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
-<syncfusion:SfDataGrid x:Name="dataGrid"
-                   CellDoubleTapped="dataGrid_CellDoubleTapped"
-                   ItemsSource="{Binding OrderInfoCollection}" />
-{% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
-private void dataGrid_CellDoubleTapped(object sender, DataGridCellDoubleTappedEventArgs e)
-{
-    var rowIndex = e.RowColumnIndex.RowIndex;
-    var rowData = e.RowData;
-    var columnIndex = e.RowColumnIndex.ColumnIndex;
-    var column = e.Column;
-}
-{% endhighlight %}
-{% endtabs %}
-
-### CellLongPress event
-
-This event will be triggered while long pressing a cell in the DataGrid. This event has the [DataGridCellLongPressEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCellLongPressEventArgs.html) as arguments. 
-
-{% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
-<syncfusion:SfDataGrid x:Name="dataGrid"
-                   CellLongPress="dataGrid_CellLongPress"
-                   ItemsSource="{Binding OrderInfoCollection}" />
-{% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
-private void dataGrid_CellLongPress(object sender,DataGridCellLongPressEventArgs e)
-{
-    var rowIndex = e.RowColumnIndex.RowIndex;
-    var rowData = e.RowData;
-    var columnIndex = e.RowColumnIndex.ColumnIndex;
-    var column = e.Column;
-}
-{% endhighlight %}
-{% endtabs %}
-
-### CellRightTapped event
-This event will be triggered when a right-click mouse gesture is recognized on a cell. This event has the [DataGridCellRightTappedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCellRightTappedEventArgs.html) as arguments.
-
-{% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
-<syncfusion:SfDataGrid x:Name="dataGrid"
-                   CellRightTapped="SfDataGrid_CellRightTapped"
-                   ItemsSource="{Binding OrderInfoCollection}" />
-{% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
-private void SfDataGrid_CellRightTapped(object sender, Syncfusion.Maui.DataGrid.DataGridCellRightTappedEventArgs e)
-{
-    var rowIndex = e.RowColumnIndex.RowIndex;
-    var rowData = e.RowData;
-    var columnIndex = e.RowColumnIndex.ColumnIndex;
-    var column = e.Column;
-    var pointerDeviceType = e.PointerDeviceType;
-}
-{% endhighlight %}
-{% endtabs %}
-
-N> The `CellRightTapped` event is only applicable for Windows and macOS.
-
 ## CurrentRow
 The [SfDataGrid.CurrentRow](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CurrentRow) property holds the underlying data of the last selected row in the datagrid.
 
 Get the current row in the `SfDataGrid.SelectionChanged` event by setting the `SfDataGrid.SelectionMode` as Multiple or SingleDeselect. If the SelectionMode is Single, the current item and selected item are same.
+
+## Customize the current row highlight color
+The `SfDataGrid` supports highlighting the current row when the `SelectionMode` is set to `Multiple`, and the `NavigationMode` is set to `Row`. The color of the currently highlighted row can be customized using the [CurrentRowHighlightColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_CurrentRowHighlightColor) property in the `DataGridStyle`.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml"%}
+<ContentPage xmlns:syncfusion="http://schemas.syncfusion.com/maui">
+    <ContentPage.Content>
+        <syncfusion:SfDataGrid ItemsSource="{Binding OrderInfoCollection}">
+            <syncfusion:SfDataGrid.DefaultStyle>
+                <syncfusion:DataGridStyle CurrentRowHighlightColor="Red"/>
+            </syncfusion:SfDataGrid.DefaultStyle>
+        </syncfusion:SfDataGrid>
+    </ContentPage.Content>
+</ContentPage>
+{% endhighlight %}
+{% endtabs %}
+
+![Customize the current row highlight color in .NET MAUI DataGrid](Images/Selection/maui-datagrid-currentrowhighlight.png)
 
 ## 	Customizing Selection Appearance
 Change the selection back color and text color by using the  [SelectionBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_SelectionBackground) and [SelectedRowTextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_SelectedRowTextColor) in `SfDataGrid.DefaultStyle`.

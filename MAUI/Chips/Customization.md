@@ -1047,6 +1047,47 @@ public MainPage()
 
 ![SfChipGroup with SelectedChipBackgroundColor](images/customization-images/chipgroup_chipbackground_image.png)
 
+## SelectedChipBackground
+
+The [SelectedChipBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html#Syncfusion_Maui_Core_SfChipGroup_SelectedChipBackground) property customizes the background color of the selected chips.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<ContentPage.BindingContext>
+    <local:EmployeeViewModel/>
+</ContentPage.BindingContext>
+<StackLayout Margin="10,10,10,10" VerticalOptions="Center" HorizontalOptions="Center">
+    <chip:SfChipGroup ItemsSource="{Binding Employees}"
+                      DisplayMemberPath="Name"
+                      ChipTextColor="White"
+                      ChipBackground="#512dcd"
+                      ChipType="Filter"
+                      SelectedChipBackground="#E8DEF8"/>
+</StackLayout>
+    
+{% endhighlight %}
+
+{% highlight c# %}
+
+using Syncfusion.Maui.Core;
+
+    SfChipGroup chipGroup = new SfChipGroup();
+    this.BindingContext = new ViewModel();
+    chipGroup.SetBinding(SfChipGroup.ItemsSourceProperty, "Employees");
+    chipGroup.DisplayMemberPath = "Name";
+    chipGroup.ChipBackground = Color.FromHex("#512dcd");
+    chipGroup.ChipTextColor = Colors.White;
+    chipGroup.ChipType = SfChipsType.Filter;
+    chipGroup.SelectedChipBackground = Color.FromHex("#E8DEF8");
+        
+{% endhighlight %}
+
+{% endtabs %}
+
+![SfChipGroup with SelectedChipBackground](images/customization-images/chipgroup_selectedchipbackgroundcolor_image.png)
+
 ## ChipTextColor
 
 The [`ChipTextColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html#Syncfusion_Maui_Core_SfChipGroup_ChipTextColor) property customizes the text color of the SfChipGroup.
@@ -1179,6 +1220,48 @@ public MainPage()
 ![SfChipGroup with SelectedChipTextColor](images/customization-images/chipgroup_selectedchiptextcolor_image.png)
 
 N> The default value of SelectedChipTextColor is [`Color.White`].
+
+## SelectedChipTextColor
+
+The [SelectedChipTextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html#Syncfusion_Maui_Core_SfChipGroup_SelectedChipTextColor) property customizes the text color of the selected chips.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<ContentPage.BindingContext>
+    <local:EmployeeViewModel/>
+</ContentPage.BindingContext>
+<chip:SfChipGroup ItemsSource="{Binding Employees}"
+                  DisplayMemberPath="Name"
+                  ChipBackground="LightGray"
+                  ChipType="Filter"
+                  SelectionIndicatorColor="White"
+                  SelectedChipBackground="#512dcd"
+                  SelectedChipTextColor="White"/>
+    
+{% endhighlight %}
+
+{% highlight c# %}
+
+using Syncfusion.Maui.Core;
+
+    SfChipGroup chipGroup = new SfChipGroup();
+    this.BindingContext = new ViewModel();
+    chipGroup.SetBinding(SfChipGroup.ItemsSourceProperty, "Employees");
+    chipGroup.DisplayMemberPath = "Name";
+    chipGroup.ChipBackground = Colors.LightGray;
+    chipGroup.ChipType = SfChipsType.Filter;
+    chipGroup.SelectionIndicatorColor = Colors.White;
+    chipGroup.SelectedChipBackground = Color.FromHex("#512dcd");
+    chipGroup.SelectedChipTextColor = Colors.White;
+    this.Content = chipGroup;
+        
+{% endhighlight %}
+
+{% endtabs %}
+
+![SfChipGroup with SelectedChipTextColor](images/customization-images/chipgroup_selectedchiptextcolorproperty_image.png)
 
 ## ChipStroke
 
