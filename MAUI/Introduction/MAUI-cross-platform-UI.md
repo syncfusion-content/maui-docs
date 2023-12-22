@@ -62,7 +62,7 @@ You can find the platforms supported by each .NET MAUI control as below.
 	</td>
 	</tr>
 	<tr>
-		<td rowspan="8" valign="top">
+		<td rowspan="9" valign="top">
 			DATA VISUALIZATION<br/>
 		</td>
 		<td>
@@ -201,9 +201,43 @@ You can find the platforms supported by each .NET MAUI control as below.
 		</td>
 	</tr>
 	<tr>
-	    <td rowspan="2" valign="top">
+		<td>
+			<a href="/maui/SunburstChart/Overview">SunburstChart</a><br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+	</tr>
+	<tr>
+	    <td rowspan="3" valign="top">
 			NAVIGATION<br/>
 		</td>
+		<td>
+			<a href="/maui/NavigationDrawer/Overview">NavigationDrawer</a><br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+	</tr>
+	<tr>
 		<td>
 			<a href="/maui/tabview/overview">Tab View</a><br/>
 		</td>
@@ -238,7 +272,7 @@ You can find the platforms supported by each .NET MAUI control as below.
 		</td>
 	</tr>
     <tr>
-	    <td rowspan="6" valign="top">
+	    <td rowspan="8" valign="top">
 			LAYOUT<br/>
 		</td>
 	    <td>
@@ -260,6 +294,40 @@ You can find the platforms supported by each .NET MAUI control as below.
 	<tr>
 		<td>
 			<a href="/maui/Backdrop/overview">Backdrop</a><br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<a href="/maui/Cards/Overview">Cards</a><br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<a href="/maui/Carousel-View/overview">Carousel</a><br/>
 		</td>
 		<td>
 		Yes<br/>
@@ -655,7 +723,7 @@ You can find the platforms supported by each .NET MAUI control as below.
 		</td>
 	</tr>
 	<tr>
-		<td rowspan="5" valign="top">
+		<td rowspan="6" valign="top">
 				BUTTONS<br/>
 			</td>
 			<td>
@@ -742,6 +810,23 @@ You can find the platforms supported by each .NET MAUI control as below.
 		Yes<br/>
 		</td>
 	</tr>
+	<tr>
+		<td>
+			<a href="/maui/Switch/Overview">Switch</a><br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+	</tr>
     <tr>
 	    <td rowspan="2" valign="top">
 		CALENDAR<br/>
@@ -780,7 +865,7 @@ You can find the platforms supported by each .NET MAUI control as below.
 		</td>
 	</tr>	
     <tr>
-	    <td rowspan="4" valign="top">
+	    <td rowspan="5" valign="top">
 		NOTIFICATION<br/>
 		</td>
 		<td>
@@ -836,6 +921,23 @@ You can find the platforms supported by each .NET MAUI control as below.
 	<tr>
 		<td>
 			<a href="/maui/linearprogressbar/overview">Linear Progress Bar</a><br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<a href="/maui/Pull-to-Refresh/overview">Pull to Refresh</a><br/>
 		</td>
 		<td>
 		Yes<br/>
