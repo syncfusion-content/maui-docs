@@ -414,7 +414,7 @@ Currently working on delivering brand-new .NET MAUI controls that can be used in
 			<a href="https://help.syncfusion.com/xamarin/carousel-view/getting-started">SfCarousel</a><br/>
 		</td>
 		<td rowspan="1" valign="top">
-			<a href="https://help.syncfusion.com/xamarin/carousel-view/getting-started">SfCarousel</a><br/>
+			<a href="https://help.syncfusion.com/maui/carousel-view/migration">SfCarousel</a><br/>
 		</td>
 	</tr>
 	<tr>
