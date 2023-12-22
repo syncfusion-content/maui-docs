@@ -1049,7 +1049,7 @@ public MainPage()
 
 ## SelectedChipBackground
 
-The `SelectedChipBackground` property customizes the background color of the selected chips.
+The [SelectedChipBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html#Syncfusion_Maui_Core_SfChipGroup_SelectedChipBackground) property customizes the background color of the selected chips.
 
 {% tabs %}
 
@@ -1223,7 +1223,7 @@ N> The default value of SelectedChipTextColor is [`Color.White`].
 
 ## SelectedChipTextColor
 
-The `SelectedChipTextColor` property customizes the text color of the selected chips.
+The [SelectedChipTextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html#Syncfusion_Maui_Core_SfChipGroup_SelectedChipTextColor) property customizes the text color of the selected chips.
 
 {% tabs %}
 
