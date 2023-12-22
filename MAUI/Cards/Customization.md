@@ -11,11 +11,11 @@ documentation: ug
 
 ## ShowSwipedCard
 
-Enabling the `ShowSwipedCard` option allows the swiped cards to be displayed at the edge of the card layout.
+Enabling the [ShowSwipedCard](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cards.SfCardLayout.html#Syncfusion_Maui_Cards_SfCardLayout_ShowSwipedCard) option allows the swiped cards to be displayed at the edge of the card layout.
 
 {% tabs %} 
 
-{% highlight xaml %}
+{% highlight xaml hl_lines="1" %}
 
 <cards:SfCardLayout ShowSwipedCard="true">
 </cards:SfCardLayout>
@@ -37,11 +37,11 @@ SfCardLayout cardLayout = new SfCardLayout()
 
 ## VisibleIndex
 
-The `VisibleIndex` is utilized when providing the index of the card that is intended to be displayed at the front of the card layout.
+The [VisibleIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cards.SfCardLayout.html#Syncfusion_Maui_Cards_SfCardLayout_VisibleIndex) is utilized when providing the index of the card that is intended to be displayed at the front of the card layout.
 
 {% tabs %} 
 
-{% highlight xaml %}
+{% highlight xaml hl_lines="1" %}
 
 <cards:SfCardLayout VisibleIndex="1">
 </cards:SfCardLayout>
@@ -63,11 +63,11 @@ SfCardLayout cardLayout = new SfCardLayout()
 
 ## SwipeDirection
 
-The [SwipeDirection]() property specifies the direction of swiping, which can be `Left`, `Right`, `Top`, or `Bottom`. Default value of `SwipeDirection` is "Right".
+The [SwipeDirection](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cards.SfCardLayout.html#Syncfusion_Maui_Cards_SfCardLayout_SwipeDirection) property specifies the direction of swiping, which can be `Left`, `Right`, `Top`, or `Bottom`. Default value of `SwipeDirection` is "Right".
 
 {% tabs %} 
 
-{% highlight xaml %}
+{% highlight xaml hl_lines="1" %}
 
 <cards:SfCardLayout SwipeDirection="Left">
 </cards:SfCardLayout>
@@ -92,11 +92,11 @@ SfCardLayout cardLayout = new SfCardLayout()
 
 Customization of the border color, thickness, and card corner radius can be achieved by the following properties.
 
-* [BorderColor]() - Used to customize the card view border color.
+* [BorderColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cards.SfCardView.html#Syncfusion_Maui_Cards_SfCardView_BorderColor) - Used to customize the card view border color.
 
-* [BorderWidth]() - Used to customize the card view border thickness.
+* [BorderWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cards.SfCardView.html#Syncfusion_Maui_Cards_SfCardView_BorderWidth) - Used to customize the card view border thickness.
 
-* [CornerRadius]() - Used to customize the card view corner radius.
+* [CornerRadius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cards.SfCardView.html#Syncfusion_Maui_Cards_SfCardView_CornerRadius) - Used to customize the card view corner radius.
 
 {% tabs %} 
 
@@ -200,7 +200,7 @@ SfCardView cardView = new SfCardView()
 
 ### FadeOutOnSwiping
 
-The `FadeOutOnSwiping` option can be enabled when the card view is intended to fade in response to swiping.
+The [FadeOutOnSwiping](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cards.SfCardView.html#Syncfusion_Maui_Cards_SfCardView_FadeOutOnSwiping) option can be enabled when the card view is intended to fade in response to swiping.
 
 {% tabs %} 
 
