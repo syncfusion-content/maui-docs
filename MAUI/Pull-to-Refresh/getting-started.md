@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with .NET MAUI PullToRefresh (SfPullToRefresh)
 
-This section provides a quick overview of how to get started with the .NET MAUI PullToRefresh (SfPullToRefresh) for MAUI and a walk-through to configure the .NET MAUI PullToRefresh control in a real-time scenario.
+This section provides a quick overview of how to get started with the [.NET MAUI PullToRefresh (SfPullToRefresh)](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PullToRefresh.SfPullToRefresh.html) for MAUI and a walk-through to configure the .NET MAUI PullToRefresh control in a real-time scenario.
 
 ## Creating an application using the .NET MAUI PullToRefresh
 
@@ -82,7 +82,7 @@ The `Syncfusion.Maui.Core` NuGet is a dependent package for all Syncfusion contr
 
 ## Defining PullableConent
 
-`SfPullToRefresh.PullableContent` view serves as the designated area where users can initiate the pull-to-refresh action, enabling them to refresh and update the content within the view.
+[SfPullToRefresh.PullableContent](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PullToRefresh.SfPullToRefresh.html#Syncfusion_Maui_PullToRefresh_SfPullToRefresh_PullableContent) view serves as the designated area where users can initiate the pull-to-refresh action, enabling them to refresh and update the content within the view.
 
 Refer to the following code example for PulltoRefresh.
 
@@ -132,7 +132,7 @@ Refer to the following code example for PulltoRefresh.
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/getting-started-with-.net-maui-pull-to-refresh/tree/master).
 
-If we run the above sample with `TransitionMode` set to `Push`, the output will be as shown in the following.
+If we run the above sample with [TransitionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PullToRefresh.SfPullToRefresh.html#Syncfusion_Maui_PullToRefresh_SfPullToRefresh_TransitionMode) set to [Push](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PullToRefresh.PullToRefreshTransitionType.html#Syncfusion_Maui_PullToRefresh_PullToRefreshTransitionType_Push), the output will be as shown in the following.
 
 ![.NET MAUI PullToRefresh with slide on top transition mode](Images/getting-started//maui-pull-to-refresh-push-mode.gif).
 
