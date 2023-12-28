@@ -13,7 +13,7 @@ PullToRefresh is a refresh control that allows you to interact and refresh the v
 
 ## Use Case Scenarios
 
-`PullToRefresh` controls are mainly used in applications where users need to refresh the content on demand. The main applications that use the PullToRefresh are listed below:
+[PullToRefresh](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PullToRefresh.SfPullToRefresh.html) controls are mainly used in applications where users need to refresh the content on demand. The main applications that use the PullToRefresh are listed below:
 
 1. Facebook
 2. Weather

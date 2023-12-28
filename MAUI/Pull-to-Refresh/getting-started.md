@@ -15,8 +15,8 @@ This section provides a quick overview of how to get started with the .NET MAUI 
 
  1. Create a new .NET MAUI application in Visual Studio.
  2. Syncfusion .NET MAUI components are available on [nuget.org](https://www.nuget.org/). To add SfPullToRefresh to your project, open the NuGet package manager in Visual Studio, search for Syncfusion.Maui.PullToRefresh and install it.
- 3. Import the control namespace `Syncfusion.Maui.PullToRefresh` in XAML or C# code.
- 4. Initialize the `SfPullToRefresh` control.
+ 3. Import the control namespace [Syncfusion.Maui.PullToRefresh](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PullToRefresh.html) in XAML or C# code.
+ 4. Initialize the [SfPullToRefresh](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PullToRefresh.SfPullToRefresh.html) control.
  
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="3" %}
@@ -82,7 +82,7 @@ The `Syncfusion.Maui.Core` NuGet is a dependent package for all Syncfusion contr
 
 ## Defining PullableConent
 
-`SfPullToRefresh.PullableContent` view serves as the designated area where users can initiate the pull-to-refresh action, enabling them to refresh and update the content within the view.
+[SfPullToRefresh.PullableContent](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PullToRefresh.SfPullToRefresh.html) view serves as the designated area where users can initiate the pull-to-refresh action, enabling them to refresh and update the content within the view.
 
 Refer to the following code example for PulltoRefresh.
 
@@ -132,7 +132,7 @@ Refer to the following code example for PulltoRefresh.
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/getting-started-with-.net-maui-pull-to-refresh/tree/master).
 
-If we run the above sample with `TransitionMode` set to `Push`, the output will be as shown in the following.
+If we run the above sample with [TransitionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PullToRefresh.SfPullToRefresh.html#Syncfusion_Maui_PullToRefresh_SfPullToRefresh_TransitionMode) set to [Push](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PullToRefresh.PullToRefreshTransitionType.html#Syncfusion_Maui_PullToRefresh_PullToRefreshTransitionType_Push), the output will be as shown in the following.
 
 ![.NET MAUI PullToRefresh with slide on top transition mode](Images/getting-started//maui-pull-to-refresh-push-mode.gif).
 

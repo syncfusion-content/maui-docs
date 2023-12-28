@@ -31,37 +31,37 @@ To migrate easier from Xamarin.Forms SfPullToRefresh to .NET MAUI SfPullToRefres
 <th>Description</th></tr>
 <tr>
 <td>{{'[ProgressStrokeColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPullToRefresh.XForms.SfPullToRefresh.html#Syncfusion_SfPullToRefresh_XForms_SfPullToRefresh_ProgressStrokeColor)'| markdownify }}</td>
-<td>ProgressColor</td>
+<td>{{'[ProgressColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PullToRefresh.SfPullToRefresh.html#Syncfusion_Maui_PullToRefresh_SfPullToRefresh_ProgressColor)'| markdownify }}</td>
 <td>Gets or sets the progress stroke color of SfPullToRefresh.</td>
 </tr>
 
 <tr>
 <td>{{'[ProgressBackgroundColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPullToRefresh.XForms.SfPullToRefresh.html#Syncfusion_SfPullToRefresh_XForms_SfPullToRefresh_ProgressBackgroundColor)'| markdownify }}</td>
-<td>ProgressBackground</td>
+<td>{{'[ProgressBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PullToRefresh.SfPullToRefresh.html#Syncfusion_Maui_PullToRefresh_SfPullToRefresh_ProgressBackground)'| markdownify }}</td>
 <td>Gets or sets the progress background color of SfPullToRefresh.</td>
 </tr>
 
 <tr>
 <td>{{'[ProgressStrokeWidth](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPullToRefresh.XForms.SfPullToRefresh.html#Syncfusion_SfPullToRefresh_XForms_SfPullToRefresh_ProgressStrokeWidth)'| markdownify }}</td>
-<td>ProgressThickness</td>
+<td>{{'[ProgressThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PullToRefresh.SfPullToRefresh.html#Syncfusion_Maui_PullToRefresh_SfPullToRefresh_ProgressThickness)'| markdownify }}</td>
 <td>Gets or sets the progress indicator stroke width. </td>
 </tr>
 
 <tr>
 <td>{{'[RefreshContentHeight](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPullToRefresh.XForms.SfPullToRefresh.html#Syncfusion_SfPullToRefresh_XForms_SfPullToRefresh_RefreshContentHeight)'| markdownify }}</td>
-<td>RefreshViewHeight</td>
+<td>{{'[RefreshViewHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PullToRefresh.SfPullToRefresh.html#Syncfusion_Maui_PullToRefresh_SfPullToRefresh_RefreshViewHeight)'| markdownify }}</td>
 <td>Gets or sets the value for the refresh content height.</td>
 </tr>
 
 <tr>
 <td>{{'[RefreshContentWidth](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPullToRefresh.XForms.SfPullToRefresh.html#Syncfusion_SfPullToRefresh_XForms_SfPullToRefresh_RefreshContentWidth)'| markdownify }}</td>
-<td>RefreshViewWidth</td>
+<td>{{'[RefreshViewWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PullToRefresh.SfPullToRefresh.html#Syncfusion_Maui_PullToRefresh_SfPullToRefresh_RefreshViewWidth)'| markdownify }}</td>
 <td>Gets or sets the value for the refresh content width.</td>
 </tr>
 
 <tr>
 <td>{{'[RefreshContentThreshold](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPullToRefresh.XForms.SfPullToRefresh.html#Syncfusion_SfPullToRefresh_XForms_SfPullToRefresh_RefreshContentThreshold)'| markdownify }}</td>
-<td>RefreshViewThreshold</td>
+<td>{{'[RefreshViewThreshold](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PullToRefresh.SfPullToRefresh.html#Syncfusion_Maui_PullToRefresh_SfPullToRefresh_RefreshViewThreshold)'| markdownify }}</td>
 <td>Gets or sets the refresh content threshold value that indicates progress indicator starting position in view.</td>
 </tr>
 </table>
@@ -75,6 +75,6 @@ To migrate easier from Xamarin.Forms SfPullToRefresh to .NET MAUI SfPullToRefres
 <th>Description</th></tr>
 <tr>
 <td>{{'[TransitionType](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPullToRefresh.XForms.TransitionType.html)'| markdownify }}</td>
-<td>PullToRefreshTransitionType</td>
+<td>{{'[PullToRefreshTransitionType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PullToRefresh.PullToRefreshTransitionType.html)'| markdownify }}</td>
 <td>Defines type of pulling animation can be perfomed.</td></tr>
 </table>
