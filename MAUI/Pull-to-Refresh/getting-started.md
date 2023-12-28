@@ -82,7 +82,7 @@ The `Syncfusion.Maui.Core` NuGet is a dependent package for all Syncfusion contr
 
 ## Defining PullableConent
 
-[SfPullToRefresh.PullableContent](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PullToRefresh.SfPullToRefresh.html) view serves as the designated area where users can initiate the pull-to-refresh action, enabling them to refresh and update the content within the view.
+[SfPullToRefresh.PullableContent](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PullToRefresh.SfPullToRefresh.html#Syncfusion_Maui_PullToRefresh_SfPullToRefresh_PullableContent) view serves as the designated area where users can initiate the pull-to-refresh action, enabling them to refresh and update the content within the view.
 
 Refer to the following code example for PulltoRefresh.
 
