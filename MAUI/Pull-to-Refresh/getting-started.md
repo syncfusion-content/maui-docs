@@ -9,14 +9,14 @@ documentation: ug
 
 # Getting Started with .NET MAUI PullToRefresh (SfPullToRefresh)
 
-This section provides a quick overview of how to get started with the .NET MAUI PullToRefresh (SfPullToRefresh) for MAUI and a walk-through to configure the .NET MAUI PullToRefresh control in a real-time scenario.
+This section provides a quick overview of how to get started with the [.NET MAUI PullToRefresh (SfPullToRefresh)](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PullToRefresh.SfPullToRefresh.html) for MAUI and a walk-through to configure the .NET MAUI PullToRefresh control in a real-time scenario.
 
 ## Creating an application using the .NET MAUI PullToRefresh
 
  1. Create a new .NET MAUI application in Visual Studio.
  2. Syncfusion .NET MAUI components are available on [nuget.org](https://www.nuget.org/). To add SfPullToRefresh to your project, open the NuGet package manager in Visual Studio, search for Syncfusion.Maui.PullToRefresh and install it.
- 3. Import the control namespace [Syncfusion.Maui.PullToRefresh](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PullToRefresh.html) in XAML or C# code.
- 4. Initialize the [SfPullToRefresh](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PullToRefresh.SfPullToRefresh.html) control.
+ 3. Import the control namespace `Syncfusion.Maui.PullToRefresh` in XAML or C# code.
+ 4. Initialize the `SfPullToRefresh` control.
  
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="3" %}
