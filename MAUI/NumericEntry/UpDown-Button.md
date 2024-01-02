@@ -7,7 +7,7 @@ control:  SfNumericEntry
 documentation: ug
 ---
 
-# UpDown Button in .NET MAUI NumericEntry
+# UpDown Button in .NET MAUI NumericEntry Control
 
 This section describes how to change the value in the [NumericEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html) control using keys, mouse scrolling, and the up-down button
 
