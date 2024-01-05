@@ -16,7 +16,7 @@ This section explains how to populate the sunburst chart with data, a title, dat
 1. Create a new .NET MAUI application in Visual Studio.
 2. The Syncfusion .NET MAUI components are available in [nuget.org](https://www.nuget.org/). To add SfSunburstChart to your project, open the NuGet package manager in Visual Studio, search for Syncfusion.Maui.SunburstChart and then install it.
 3. To initialize the control, import the Sunburst Chart namespace.
-4. Initialize [SfSunburstChart]().
+4. Initialize [SfSunburstChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SfSunburstChart.html).
 
 {% tabs %} 
 
@@ -184,8 +184,8 @@ this.BindingContext = new ViewModel();
 
 ## Populate sunburst chart with data
 
- Bind `DataSource` to the Sunburst chart [ItemsSource]() property from its BindingContext to create your Sunburst chart.
- Then, add the [SunburstHierarchicalLevel]() to [Levels]() collection. Each hierarchy level is formed based on the property specified in the [GroupMemberPath]() property, and each arc segment size is calculated using the [ValueMemberPath]() property.
+ Bind `DataSource` to the Sunburst chart [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SfSunburstChart.html#Syncfusion_Maui_SunburstChart_SfSunburstChart_ItemsSource) property from its BindingContext to create your Sunburst chart.
+ Then, add the [SunburstHierarchicalLevel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SunburstHierarchicalLevel.html) to [Levels](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SfSunburstChart.html#Syncfusion_Maui_SunburstChart_SfSunburstChart_Levels) collection. Each hierarchy level is formed based on the property specified in the [GroupMemberPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SunburstHierarchicalLevel.html#Syncfusion_Maui_SunburstChart_SunburstHierarchicalLevel_GroupMemberPath) property, and each arc segment size is calculated using the [ValueMemberPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SfSunburstChart.html#Syncfusion_Maui_SunburstChart_SfSunburstChart_ValueMemberPath) property.
 
 {% tabs %}   
 
@@ -230,7 +230,7 @@ this.Content = sunburst;
 {% endtabs %} 
 
 ## Add a title
-The title of the sunburst chart provides quick information to the user about the data being plotted in the    chart. The [Title]() property is used to set title for the sunburst chart as follows.
+The title of the sunburst chart provides quick information to the user about the data being plotted in the    chart. The [Title](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SfSunburstChart.html#Syncfusion_Maui_SunburstChart_SfSunburstChart_Title) property is used to set title for the sunburst chart as follows.
 
 {% tabs %} 
 
@@ -259,7 +259,7 @@ sunburst.Title = new Label
 
 ## Enable the data labels
 
-The [ShowLabels]() property of the chart can be used to enable data labels to improve the readability of the sunburst chart. The label visibility is set to `False` by default.
+The [ShowLabels](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SfSunburstChart.html#Syncfusion_Maui_SunburstChart_SfSunburstChart_ShowLabels) property of the chart can be used to enable data labels to improve the readability of the sunburst chart. The label visibility is set to `False` by default.
 
 {% tabs %} 
 
@@ -283,7 +283,7 @@ sunburst.ShowLabels = true;
 
 ## Enable a legend
 
-The legend provides information about the data points displayed in the sunburst chart. The [Legend]() property of the chart enables the [SunburstLegend]().
+The legend provides information about the data points displayed in the sunburst chart. The [Legend](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SfSunburstChart.html#Syncfusion_Maui_SunburstChart_SfSunburstChart_Legend) property of the chart enables the [SunburstLegend](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SunburstLegend.html).
 
 {% tabs %} 
 
@@ -310,7 +310,7 @@ sunburst.Legend = new SunburstLegend();
 
 ## Enable Tooltip
 
-Tooltips are used to display information about a segment when the mouse hovers over it. Enable the tooltips by setting the chart's [EnableTooltip]() property to `True`.
+Tooltips are used to display information about a segment when the mouse hovers over it. Enable the tooltips by setting the chart's [EnableTooltip](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SfSunburstChart.html#Syncfusion_Maui_SunburstChart_SfSunburstChart_EnableTooltip) property to `True`.
 
 {% tabs %} 
 

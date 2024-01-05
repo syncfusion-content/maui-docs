@@ -401,3 +401,17 @@ public MainPage()
 
 {% endhighlight %}
 {% endtabs %}
+
+## Change the image editor background
+The background of the Image Editor can be customized by setting the `Background` property of the SfImageEditor.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+
+   <imageEditor:SfImageEditor x:Name="imageEditor"
+                              Source="imageeditordesktop.png"
+                              Background="LightGreen">
+   </imageEditor:SfImageEditor>
+
+{% endhighlight %}
+{% endtabs %}

@@ -70,7 +70,7 @@ Step 2: Add the namespace as shown in the following code sample.
 
 ## Initialize Switch
 
-Now, add the [`SfSwitch`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSwitch.html?tabs=tabid-1) control with a required optimal name using the included namespace.
+Now, add the [`SfSwitch`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSwitch.html) control with a required optimal name using the included namespace.
 
 {% tabs %}
 

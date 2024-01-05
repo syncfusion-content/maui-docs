@@ -13,7 +13,7 @@ The .NET MAUI PullToRefresh control supports customization of various features, 
 
 ## PullableContent
 
-The `PullableContent` is the main view of the `PullToRefresh` control on which the desired items can be placed.
+The [PullableContent](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PullToRefresh.SfPullToRefresh.html#Syncfusion_Maui_PullToRefresh_SfPullToRefresh_PullableContent) is the main view of the [PullToRefresh](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PullToRefresh.SfPullToRefresh.html) control on which the desired items can be placed.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="6 11" %}
@@ -36,10 +36,10 @@ The `PullableContent` is the main view of the `PullToRefresh` control on which t
 
 ## TransitionMode
 
-The `TransitionMode` property specifies the mode of the animations. It has the following two modes:
+The [TransitionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PullToRefresh.SfPullToRefresh.html#Syncfusion_Maui_PullToRefresh_SfPullToRefresh_TransitionMode) property specifies the mode of the animations. It has the following two modes:
 
-* `SlideOnTop`
-* `Push`
+* [SlideOnTop](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PullToRefresh.PullToRefreshTransitionType.html#Syncfusion_Maui_PullToRefresh_PullToRefreshTransitionType_SlideOnTop)
+* [Push](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PullToRefresh.PullToRefreshTransitionType.html#Syncfusion_Maui_PullToRefresh_PullToRefreshTransitionType_Push)
 
 The default transition is `SlideOnTop` that draws the RefreshView on top of the `PullableContent`.
 
@@ -116,7 +116,7 @@ The threshold value for the refresh view, indicating the progress indicator's ma
 
 ## IsRefreshing
 
-The view will get refresh while the `IsRefreshing` property is set to `true,` and View refreshing will be stopped when you set the `IsRefreshing` to `false.`
+The view will get refresh while the [IsRefreshing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PullToRefresh.SfPullToRefresh.html#Syncfusion_Maui_PullToRefresh_SfPullToRefresh_IsRefreshing) property is set to `true,` and View refreshing will be stopped when you set the `IsRefreshing` to `false.`
  
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
@@ -234,7 +234,7 @@ The height to the refresh View.
 
 ### StartRefreshing()
 
-The StartRefreshing method is used to refresh the content without interaction in pullable content. When you invoke this StartRefreshing() method,then the Progress indicator will be shown. 
+The [StartRefreshing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PullToRefresh.SfPullToRefresh.html#Syncfusion_Maui_PullToRefresh_SfPullToRefresh_StartRefreshing) method is used to refresh the content without interaction in pullable content. When you invoke this StartRefreshing() method,then the Progress indicator will be shown. 
 
 {% tabs %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
@@ -246,7 +246,7 @@ The StartRefreshing method is used to refresh the content without interaction in
 
 ### EndRefreshing()
 
-The EndRefreshing method is used to end the progress animation of the `PullToRefresh`.
+The [EndRefreshing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PullToRefresh.SfPullToRefresh.html#Syncfusion_Maui_PullToRefresh_SfPullToRefresh_EndRefreshing) method is used to end the progress animation of the `PullToRefresh`.
 
 {% tabs %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
@@ -481,15 +481,15 @@ This is how the final output will look like when hosting a SfListView control as
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/load-listview-as-pullable-content-of-.net-maui-pull-to-refresh).
 
-If you run the above sample with the `TransitionMode` as Push, the output will look as follows.
+If you run the above sample with the [TransitionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PullToRefresh.SfPullToRefresh.html#Syncfusion_Maui_PullToRefresh_SfPullToRefresh_TransitionMode) as Push, the output will look as follows.
 
 ![. NET MAUI PullToRefresh with ListView hosted with push transition mode](Images/customization/listview-push.gif)
 
 ## Pulling and refreshing template
 
-The `PullToRefresh` allows you to set a template for pulling and refreshing the view. The pulling and refreshing a template can be set using the [SfPullToRefresh.PullingViewTemplate]() and [SfPullToRefresh.RefreshingViewTemplate]() properties, respectively.
+The `PullToRefresh` allows you to set a template for pulling and refreshing the view. The pulling and refreshing a template can be set using the [SfPullToRefresh.PullingViewTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PullToRefresh.SfPullToRefresh.html#Syncfusion_Maui_PullToRefresh_SfPullToRefresh_PullingViewTemplate) and [SfPullToRefresh.RefreshingViewTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PullToRefresh.SfPullToRefresh.html#Syncfusion_Maui_PullToRefresh_SfPullToRefresh_RefreshingViewTemplate) properties, respectively.
 
-Refer to the following code example in which a `SfCircularProgressBar` is loaded in the pulling view template and refreshing view template.
+Refer to the following code example in which a [SfCircularProgressBar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfCircularProgressBar.html?tabs=tabid-1) is loaded in the pulling view template and refreshing view template.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="23 24 36 37" %}
