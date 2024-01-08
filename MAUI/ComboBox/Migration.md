@@ -96,7 +96,7 @@ To migrate easier from Xamarin SfComboBox to [.NET MAUI SfComboBox](https://help
 
 ## Upcoming features
 
-  * Multiple Selection with Delimiter
+  * Multiple Selection with Token Wrap mode and Delimiter
   * Diacritic Sensitivity
   * Header and Footer
   * Highlighting Text
