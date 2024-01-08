@@ -17,11 +17,16 @@ The `SfPdfViewer` supports the following annotation types.
 
 1. Arrow
 2. Circle
-3. Highlight
-4. Ink
-5. Line
-6. Square
-7. Squiggly
-8. Stamp
-9. Strikeout
-10. Underline
+3. Free text
+4. Highlight
+5. Ink
+6. Ink eraser
+7. Line
+8. Polygon
+9. Polyline
+10. Square
+11. Squiggly
+12. Stamp
+13. Sticky notes
+14. Strikeout
+15. Underline
