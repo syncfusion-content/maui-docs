@@ -91,8 +91,7 @@ To migrate easier from Xamarin SfAutoComplete to [.NET MAUI SfAutocomplete](http
 
 ## Upcoming features
 
-  * Item Template
-  * Multiple Selection with Tokens and Delimiter
+  * Multiple Selection with Delimiter
   * Diacritic Sensitivity
   * Header and Footer
   * Highlighting Text
