@@ -72,8 +72,6 @@ To migrate easier from the Xamarin SfNumericTextBox and SfNumericUpDown to [.NET
 
 ## Upcoming features
 
-  * UpdownButton customizations
   * ReturnCommand and ReturnCommandParameter support
   * SelectAllOnFocus boolean support
   * GroupSeparatorMode support
-  * ValueChangeMode support
