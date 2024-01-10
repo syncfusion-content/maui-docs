@@ -15,7 +15,7 @@ documentation: ug
 
 ## Installation using Package Manager UI
 
-The NuGet **Package Manager UI** allows you to search, install, uninstall, and update Syncfusion Blazor NuGet packages in your applications and solutions. You can find and install the Syncfusion Blazor NuGet packages in your Visual Studio Blazor application and this process is easy with the steps below:
+The NuGet **Package Manager UI** allows you to search, install, uninstall, and update Syncfusion Maui NuGet packages in your applications and solutions. You can find and install the Syncfusion Maui NuGet packages in your Visual Studio Maui application and this process is easy with the steps below:
 
 1. Right-click on the Maui application or solution in the Solution Explorer, and choose **Manage NuGet Packages...**
 
@@ -51,15 +51,13 @@ Follow the below instructions to use the dotnet CLI command to install the Syncf
     **For Example:**
     dotnet add package Syncfusion.Maui.Core
 
-    N> If you don’t provide a version flag, this command will be upgrading to the latest version by default. To specify a version, add the -v parameter: dotnet add package Syncfusion.Maui.Core -v 20.2.36.
+    N> If you don’t provide a version flag, this command will be upgrading to the latest version by default. To specify a version, add the -v parameter: dotnet add package Syncfusion.Maui.Core -v 24.1.45.
 
 3. Examine the Maui application file after the command has completed to ensure that the Syncfusion Maui package was installed. To see the added reference, open the .csproj file.
 
     ![Maui Package Entry ](images/packageentry.png)
 
 4. Then, run  [dotnet restore](https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-restore?tabs=netcore2x) command to restore all the packages listed in the application file.
-
-    N> Restoring is done automatically with **dotnet build** and **dotnet run** in .NET Core 2.0 and later.
 
 5. At this point, your application has all the required Syncfusion assemblies, and you will be ready to start building high-performance, responsive app with [Syncfusion Maui components](https://www.syncfusion.com/maui-controls). Also, you can refer to the [Maui help document](https://help.syncfusion.com/maui/introduction/overview) for development.
 
@@ -93,7 +91,7 @@ The **Package Manager Console** saves NuGet packages installation time since you
 
 3. By default, the package will be installed with latest version. You can give the required version with the -Version term like below to install the Syncfusion Maui NuGet packages in the appropriate version.
 
-    ```Install-Package Syncfusion.Maui.Core -Version 20.2.36```
+    ```Install-Package Syncfusion.Maui.Core -Version 24.1.45```
 
     ![Package Manager Console Output ](images/ConsoleInstallationOutput.png)
 
