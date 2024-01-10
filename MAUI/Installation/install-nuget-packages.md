@@ -73,7 +73,7 @@ The **Package Manager Console** saves NuGet packages installation time since you
 
     ***Install specified Syncfusion Maui NuGet package.***
 
-    The following command will install the Syncfusion Maui NuGet package in the default Blazor application.
+    The following command will install the Syncfusion Maui NuGet package in the default Maui application.
 
     ```Install-Package <Package Name>```
 
@@ -81,9 +81,9 @@ The **Package Manager Console** saves NuGet packages installation time since you
 
     N> You can find the list of Syncfusion Maui NuGet packages which are published in nuget.org from [here](https://www.nuget.org/packages?q=Tags%3A%22Maui%22+syncfusion)
 
-    ***Install specified Syncfusion Maui NuGet package in specified Blazor application***
+    ***Install specified Syncfusion Maui NuGet package in specified Maui application***
 
-    The following command will install the Syncfusion Maui NuGet package in the given Blazor application.
+    The following command will install the Syncfusion Maui NuGet package in the given Maui application.
 
     ```Install-Package <Package Name> - ProjectName <Project Name>```
 
