@@ -2,7 +2,7 @@
 layout: post
 title: Install Syncfusion Maui NuGet packages - Syncfusion
 description: Learn here about the how to install Syncfusion Maui NuGet packages from Package manager and NuGet manager.
-platform: Blazor
+platform: maui
 component: Common
 documentation: ug
 ---
@@ -35,7 +35,7 @@ The NuGet **Package Manager UI** allows you to search, install, uninstall, and u
 
     ![Maui NuGet Packages Install](images/InstallNuGet.png)
 
-5. At this point, your application has all the required Syncfusion assemblies, and you will be ready to start building high-performance, responsive app with [Syncfusion Maui components](https://www.syncfusion.com/maui-controls). Also, you can refer to the [Blazor help document](https://help.syncfusion.com/maui/introduction/overview) for development.
+5. At this point, your application has all the required Syncfusion assemblies, and you will be ready to start building high-performance, responsive app with [Syncfusion Maui components](https://www.syncfusion.com/maui-controls). Also, you can refer to the [Maui help document](https://help.syncfusion.com/maui/introduction/overview) for development.
 
 ## Installation using Dotnet (.NET) CLI
 
