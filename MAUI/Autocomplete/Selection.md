@@ -76,7 +76,7 @@ autocomplete.TextMemberPath = "Name";
 
 The following gif image illustrates the result of the above code:
 
-![.NET MAUI Autocomplete with single selection mode](Images/Selection/SingleSelection.png)
+![.NET MAUI Autocomplete with single selection mode.](Images/Selection/net-maui-autocomplete-single-selection.png)
 
 ## Multiple selection
 
@@ -109,7 +109,7 @@ autoComplete.SelectionMode = Syncfusion.Maui.Inputs.AutocompleteSelectionMode.Mu
 
 The following gif image illustrates the result of the above code:
 
-![.NET MAUI Autocomplete with multi selection mode](Images/Selection/Multiselection.gif)
+![.NET MAUI Autocomplete with multi selection mode.](Images/Selection/net-maui-autocomplete-multiselection.gif)
 
 ### Programmatic selection
 
@@ -183,7 +183,7 @@ private async void OnSelectionChanged(object sender, Syncfusion.Maui.Inputs.Sele
 
 The following gif image illustrates the result of the above code:
 
-![.NET MAUI Autocomplete](Images/Selection/SelectionChangedEventNotification.png)
+![.NET MAUI Autocomplete selection changed event notification.](Images/Selection/net-maui-autocomplete-selection-changed.png)
 
 N> SelectionChanged event arguments `CurrentSelection` and `PreviousSelection` marked as "Obsolete". You can use the `AddedItems` and `RemovedItems` event arguments.
 
@@ -230,7 +230,7 @@ private void OnSelectionChanged(object sender, Syncfusion.Maui.Inputs.SelectionC
 
 The following gif image illustrates the result of the above code:
 
-![.NET MAUI Autocomplete selected value](Images/Selection/SelectedValuePath.png)
+![.NET MAUI Autocomplete selected value.](Images/Selection/net-maui-autocomplete-selected-value-path.png)
 
 ## Hide clear button in the Autocomplete
 
@@ -257,7 +257,7 @@ autocomplete.IsClearButtonVisible = false;
 
 The following image illustrates the result of the above code:
 
-![.NET MAUI Autocomplete](Images/Selection/IsClearButtonVisible.png)
+![.NET MAUI Autocomplete is clear button visible.](Images/Selection/net-maui-autocompete-is-clear-button-visible.png)
 
 ## Is Drop-Down Open
 
