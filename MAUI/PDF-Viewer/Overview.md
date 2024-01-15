@@ -9,7 +9,7 @@ documentation: ug
 
 # .NET MAUI PDF Viewer (SfPdfViewer) Overview
 
-The [.NET MAUI PDF Viewer](https://www.syncfusion.com/maui-controls/maui-pdf-viewer) control lets you view the PDF documents seamlessly and efficiently. It has highly interactive and customizable features such as magnification and page navigation.
+The [.NET MAUI PDF Viewer](https://www.syncfusion.com/maui-controls/maui-pdf-viewer) control lets you view the PDF documents seamlessly and efficiently. It has highly interactive and customizable features such as magnification, page navigation, text selection, text search, document link navigation, hyperlink navigation, outline view, form filling, and the ability to review PDF files with annotations.
 
 **Key Features**
 
