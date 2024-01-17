@@ -88,4 +88,4 @@ PdfViewer.ScrollToOffset(100, 1000);
 
 The example project with the page navigation functionalities can be downloaded [here](https://github.com/SyncfusionExamples/maui-pdf-viewer-examples).
 
-N> Please note that the PDF Viewer has built-in scrolling capability. Therefore, it is advised avoid placing the PDF Viewer inside other controls that also offer scrolling, such as [ScrollView](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/scrollview?view=net-maui-8.0). Nesting within such controls may cause unexpected issues.
+W> Please note that the PDF Viewer has built-in scrolling capability. Therefore, it is advised avoid placing the PDF Viewer inside other controls that also offer scrolling, such as [ScrollView](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/scrollview?view=net-maui-8.0). Nesting within such controls may cause unexpected issues.
