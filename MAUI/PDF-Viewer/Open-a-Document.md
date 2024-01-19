@@ -13,6 +13,15 @@ The [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.
 
 This section walks you through the loading and unloading of documents in `SfPdfViewer` and handling the load-specific events.
 
+## Document and page loading indications
+
+The `SfPdfViewer` displays a built-in [ActivityIndicator](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/activityindicator) (loading indicator) under the following scenarios to indicate if there are any lengthy loadings.
+
+1.	`At the document` – To indicate that the document is loading
+2.	`At the pages` – To indicate that the page content is loading.
+
+To customize the appearance of the loading indicators, please refer to this [section](https://help.syncfusion.com/maui/pdf-viewer/ui-customization#customize-the-loading-indicator).
+
 ## Document source types
 
 The document source types accepted by the `SfPdfViewer` are `Stream` and `byte[]`. You can load the PDF document from a specified stream or bytes.
