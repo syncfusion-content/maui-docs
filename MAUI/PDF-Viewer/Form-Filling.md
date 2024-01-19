@@ -307,16 +307,20 @@ private void PdfViewer_FormFieldFocusChanged(object? sender, FormFieldFocusChang
 
 N> * This event will be raised only for the text and signature form fields.
 
-## Import and export form data
+## Import and Export form data
 
-The [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) allows importing and exporting form data in the below file formats. 
+The [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) allows you to import and export form data to and from PDF documents. The import and export of form data support the following file data formats:
 
 * XFDF
 * FDF
 * JSON
 * XML
 
-### Importing
+The required file format can be chosen from the [DataFormat](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Parsing.DataFormat.html) enumeration. In the following sections, only the `XFDF` file format is explained for brevity.
+
+N> The XFDF and FDF are the standard file data formats that can be used across global PDF viewers. Whereas, JSON and XML are the custom formats that can only be used across the Syncfusion PDF Viewers supported on other platforms like WPF, Flutter, JavaScript, etc.
+
+### Import form data
 
 The form data can be imported into a PDF document using the `ImportFormData` method. The stream of the file to be imported and the data format should be passed as parameters to the method. The following example explains how to import form data from an XFDF file, assuming that the file is in the application’s data directory.
 
@@ -345,7 +349,7 @@ PdfViewer.ImportFormData(inputFileStream, Syncfusion.Pdf.Parsing.DataFormat.XFdf
 {% endhighlight %}
 {% endtabs %}
 
-### Exporting
+### Export form data
 
 The form data can be exported from a PDF document using the `ExportFormData` method. The empty stream to write the exported data and the data format should be passed as parameters to the method. The following code explains how to export form field data from a PDF document into an XFDF file in the application’s data directory.
 

@@ -18,4 +18,4 @@ The Switch control in .NET MAUI provides an efficient way to select between the 
  * Visual state manager powers the control.
  * Customize the path inside the thumb.
 
-![Overview image of SfSwitch](Images/overview/Overview.png)
+![Overview image of SfSwitch in .NET MAUI](Images/overview/net-maui-overview.png)

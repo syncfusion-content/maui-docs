@@ -103,4 +103,4 @@ this.Content = chart;
 
 {% endtabs %}
 
-![Stacking Area 100 Chart in MAUI](Chart-types_images\StackedArea100Chart.png)
+![Stacking Area 100 Chart in .NET MAUI Cartesian Charts](chart-types_images\net-maui-cartesian-charts-stacked-area-100-chart.png)
