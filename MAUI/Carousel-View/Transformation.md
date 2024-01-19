@@ -1,7 +1,7 @@
 ---
 layout : post
 title: Transformation in .NET MAUI Carousel View control | Syncfusion
-description: Learn here all about transformation support in Syncfusion .NET MAUI Carousel View (SfCarousel) control, its elements and more.
+description: Learn here all about Transformation support in Syncfusion .NET MAUI Carousel View (SfCarousel) control, its elements and more.
 platform : maui
 control : Carousel
 documentation : ug
