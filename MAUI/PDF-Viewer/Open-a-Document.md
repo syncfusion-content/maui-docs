@@ -13,7 +13,7 @@ The [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.
 
 This section walks you through the loading and unloading of documents in `SfPdfViewer` and handling the load-specific events.
 
-## Loading indicator
+## Document and page loading indications
 
 The `SfPdfViewer` displays a built-in [ActivityIndicator](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/activityindicator) (loading indicator) under the following scenarios to indicate if there are any lengthy loadings.
 
