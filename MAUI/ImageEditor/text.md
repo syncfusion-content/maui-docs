@@ -33,7 +33,7 @@ The ImageEditor control in .NET MAUI allows you to add text using the [`AddText`
 {% endhighlight %}
 {% endtabs %}
 
-![Text annotation in .NET Maui ImageEditor](images/text/imageeditor-text-annotation.png)
+![Text annotation in .NET MAUI Image Editor.](images/text/net-maui-image-editor-text-annotation.png)
 
 ## Customize text appearance
 
@@ -87,7 +87,7 @@ Customize the appearance of text annotation using the [`ImageEditorTextSettings`
 {% endhighlight %}
 {% endtabs %}
 
-![Text annotation customization in .NET Maui ImageEditor](images/text/imageeditor-text-customization.png)
+![Text annotation customization in .NET MAUI Image Editor](images/text/net-maui-image-editor-text-customization.png)
 
 ## Customize the background
 
@@ -120,7 +120,7 @@ The background color of the text annotations can be customized using the [`Backg
 {% endhighlight %}
 {% endtabs %}
 
-![Text annotation customization in .NET Maui ImageEditor](images/text/imageeditor_background.png)
+![Text annotation customization in .NET MAUI Image Editor](images/text/net-maui-image-editor-background.png)
 
 ## Delete the text
 

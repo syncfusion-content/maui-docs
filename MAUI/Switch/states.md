@@ -33,7 +33,7 @@ this.Content = sfSwitch;
 
 {% endtabs %}
 
-![switch control is displaying on state](images/States/On.png)
+![.NET MAUI Switch control is displaying on state.](images/States/net-maui-switch-state-on.png)
 
 ## Off State
 
@@ -57,7 +57,7 @@ this.Content = sfSwitch;
 
 {% endtabs %}
 
-![switch control displaying off state](images/States/Off.png)
+![.NET MAUI Switch control displaying off state.](images/States/net-maui-switch-state-off.png)
 
 ## Indeterminate State
 
@@ -83,7 +83,7 @@ sfSwitch.AllowIndeterminateState = true;
 
 {% endtabs %}
 
-![switch conrol is displaying indeterminate state](images/States/Indeterminate.png)
+![.NET MAUI Switch conrol is displaying indeterminate state.](images/States/net-maui-switch-indeterminate.png)
 
 N> By default, the switch control has only two states: on and off.
 
@@ -110,7 +110,7 @@ this.Content = sfSwitch;
 
 {% endtabs %}
 
-![switch control displaying disabled on state](images/States/Disabled-On.png)
+![.NET MAUI Switch control displaying disabled on state.](images/States/net-maui-switch-disabled-on.png)
 
 ## Disabled Off
 
@@ -135,7 +135,7 @@ this.Content = sfSwitch;
 
 {% endtabs %}
 
-![switch control displaying disabled off state](images/States/Disabled-Off.png)
+![.NET MAUI Switch control displaying disabled off state.](images/States/net-maui-switch-disabled-off.png)
 
 ## Disabled Indeterminate
 
@@ -161,4 +161,4 @@ this.Content = sfSwitch;
 
 {% endtabs %}
 
-![switch conrol displaying disabled indeterminate state](images/States/Disabled-Indeterminate.png)
+![.NET MAUI Switch conrol displaying disabled indeterminate state.](images/States/net-maui-switch-disabled-indeterminate.png)
