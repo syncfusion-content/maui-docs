@@ -11,7 +11,7 @@ documentation: ug
 
 The NavigationDrawer for .NET MAUI is a simpler component to create a navigation pane in the application. It consists of a content area and a sliding pane that slides out from the edge of the page. The pane can be opened by swiping the edges of the screen or programmatically.
 
-![.NET MAUI Navigation Drawer](Images/overview/navigationdrawer.png)
+![.NET MAUI Navigation Drawer.](Images/overview/net-maui-navigationdrawer.png)
 
 ## Key Features
 

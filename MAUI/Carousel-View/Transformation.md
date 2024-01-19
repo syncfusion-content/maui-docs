@@ -1,7 +1,7 @@
 ---
 layout : post
 title: Transformation in .NET MAUI Carousel View control | Syncfusion
-description: Learn here all about Transformation support in Syncfusion .NET MAUI Carousel View (SfCarousel) control and more.
+description: Learn here all about Transformation support in Syncfusion .NET MAUI Carousel View (SfCarousel) control, its elements and more.
 platform : maui
 control : Carousel
 documentation : ug
@@ -43,7 +43,7 @@ carousel.SetBinding(SfCarousel.ItemsSourceProperty, "ImageCollection");
 
 {% endtabs %}
 
-![Rotation angle](images/rotationangle.png)
+![Rotation angle in .NET MAUI Carousel View.](images/net-maui-carousel-view-rotationangle.png)
 
 ## Set Gap between Selected Item
 
@@ -76,7 +76,7 @@ carousel.SetBinding(SfCarousel.ItemsSourceProperty, "ImageCollection");
 
 {% endtabs %}
 
-![SelectedItemOffset](images/selectedoffset.png)
+![SelectedItemOffset in .NET MAUI Carousel View.](images/net-maui-carousel-view-selectedoffset.png)
 
 ## Set Gap between unselected Items
 
@@ -111,7 +111,7 @@ carousel.SetBinding(SfCarousel.ItemsSourceProperty, "ImageCollection");
 
 {% endtabs %}
 
-![offset](images/offset.png)
+![Offset in .NET MAUI Carousel View.](images/net-maui-carousel-view-offset.png)
 
 ## Set Scaling for Carousel Items
 
@@ -144,7 +144,7 @@ carousel.SetBinding(SfCarousel.ItemsSourceProperty, "ImageCollection");
 
 {% endtabs %}
 
-![Scale offset](images/scaleoffset.png)
+![Scale offset in .NET MAUI Carousel View.](images/net-maui-carousel-view-scaleoffset.png)
 
 ## Spacing between the Items in Linear mode
 
@@ -179,4 +179,4 @@ carousel.SetBinding(SfCarousel.ItemsSourceProperty, "ImageCollection");
 
 {% endtabs %}
 
-![ItemSpacing](images/itemspacing.png)
+![ItemSpacing in .NET MAUI Carousel View.](images/net-maui-carousel-view-itemspacing.png)
