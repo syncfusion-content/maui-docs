@@ -385,4 +385,4 @@ private void SfExpander_Collapsed(object sender, ExpandedAndCollapsedEventArgs e
 {% endhighlight %}
 {% endtabs %}
 
-N> You can refer to our [.NET MAUI Expander](https://www.syncfusion.com/maui-controls/maui-expander) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Expander Example](https://github.com/syncfusion/maui-demos/) that shows you how to render and configure the Expander in .NET MAUI.
+N> You can refer to our [.NET MAUI Expander](https://www.syncfusion.com/maui-controls/maui-expander) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Expander Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/Expander) that shows you how to render and configure the Expander in .NET MAUI.
