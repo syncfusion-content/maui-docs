@@ -76,3 +76,5 @@ namespace PdfViewerExample
 {% endtabs %}
 
 The example project to open a PDF document from a given URL can be downloaded [here](https://github.com/SyncfusionExamples/maui-pdf-viewer-examples). 
+
+N>If you experience issues loading a document into the PDF viewer from a URL, it may not be an issue with the PDF viewer itself. If you face issues, please ensure the PDF file is accessible by checking the URL validity, network connectivity, authentication, and try opening the URL in a web browser.
