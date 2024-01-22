@@ -188,3 +188,5 @@ public MainPage()
 ![SfRating Getting Started ](images/getting-started.png)
 
 The complete Getting Started sample is available in this [link.](https://github.com/SyncfusionExamples/maui-rating-samples)
+
+N> You can refer to our [.NET MAUI Rating](https://www.syncfusion.com/maui-controls/maui-rating) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Rating Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/Inputs/SampleBrowser.Maui.Inputs/Samples/Rating) that shows you how to render the Rating in .NET MAUI.
