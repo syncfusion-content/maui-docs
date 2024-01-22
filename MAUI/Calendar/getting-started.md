@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 # Getting started with .NET MAUI Calendar (SfCalendar)
-This section explains how to add the Calendar control. This section covers only the basic features needed to get started with Syncfusion Calendar.
+This section explains how to add the [.NET MAUI Calendar](https://www.syncfusion.com/maui-controls/maui-calendar) control. This section covers only the basic features needed to get started with Syncfusion Calendar.
 
 To get start quickly with our .NET MAUI Calendar, you can check the below video.
 
@@ -201,3 +201,5 @@ this.Calendar.ShowTodayButton = true;
 {% endtabs %}
 
 ![Today button in .NET MAUI Calendar.](images/getting-started/maui-today-button.png)
+
+N> You can also explore our [.NET MAUI Calendar Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/Calendar) that shows you how to render the Calendar in .NET MAUI.
