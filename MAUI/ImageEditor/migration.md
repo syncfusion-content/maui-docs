@@ -528,3 +528,4 @@ Applicable for crop view selection, shape and text annotation selection.
 ## Known issues in .Net MAUI ImageEditor
 * [Mac, iOS]The image is not loading correctly from the stream or URI binding source.
 * Rotation not working for text annotation.
+* [Mac, iOS]FontAttributes and FontFamily will not work for text annotation.
