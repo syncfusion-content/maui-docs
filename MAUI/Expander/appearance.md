@@ -9,7 +9,7 @@ documentation: ug
 
 # Appearance in .NET MAUI Expander (SfExpander)
 
-The [.NET MAUI SfExpander](https://www.syncfusion.com/maui-controls/maui-expander) comes with built-in support for customizing the appearance of the header.
+The [.NET MAUI Expander](https://www.syncfusion.com/maui-controls/maui-expander) comes with built-in support for customizing the appearance of the header.
 
 ## Header icon position 
 
