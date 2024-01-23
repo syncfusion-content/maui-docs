@@ -9,7 +9,7 @@ documentation: ug
 
 # Events in .NET MAUI Calendar (SfCalendar)
 
-The Calendar has the events `ViewChanged`, `SelectionChanged`, `Tapped`, `DoubleTapped`, and `LongPressed` for notifying after user interactions in [.NET MAUI Calendar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html).
+The [.NET MAUI Calendar](https://www.syncfusion.com/maui-controls/maui-calendar) has the events `ViewChanged`, `SelectionChanged`, `Tapped`, `DoubleTapped`, and `LongPressed` for notifying after user interactions in [.NET MAUI Calendar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html).
 
 ## ViewChanged
 
