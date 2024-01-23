@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with .NET MAUI Badge View (SfBadgeView)
 
-This section explains the steps required to configure the .NET MAUI Badge View control for .NET MAUI Badge Notifications and customize its elements.
+This section explains the steps required to configure the [.NET MAUI Badge View Control](https://www.syncfusion.com/maui-controls/maui-badge-view) for .NET MAUI Badge Notifications and customize its elements.
 
 To get start quickly with our .NET MAUI Badge View, you can check the below video.
 
