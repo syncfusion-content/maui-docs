@@ -137,3 +137,5 @@ The following screenshot illustrates the result of the above code.
 
 The Getting Started sample of .NET MAUI Avatar View is available in this following link: [Getting Started](https://github.com/SyncfusionExamples/maui-avatarview-samples). 
 
+N> You can refer to our [.NET MAUI Avatar View](https://www.syncfusion.com/maui-controls/maui-avatarview) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Avatar View Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/AvatarView) that shows you how to render the Avatar View in .NET MAUI.
+
