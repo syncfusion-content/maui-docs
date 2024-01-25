@@ -7,7 +7,7 @@ control: SfSegmentedControl
 documentation: ug
 ---
 
-## Accessibility in .NET MAUI Segmented Control (SfSegmentedControl)
+# Accessibility in .NET MAUI Segmented Control (SfSegmentedControl)
 
 The Segmented Control is designed to work effectively with the segment elements, providing voice descriptions of their segment items.
 
