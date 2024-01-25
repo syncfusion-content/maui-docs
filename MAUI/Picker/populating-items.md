@@ -45,6 +45,8 @@ Set the [ItemSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.
 {% endhighlight %}
 {% endtabs %}
 
+   ![Picker column items in .NET MAUI Picker.](images/populating-items/maui-column-items.png)
+
 ## Multi-column items
 
 The picker populates the items as Multi-column based on the columns value.
@@ -103,6 +105,8 @@ The following code example encapsulate how to populate Country and Cityes in eac
 {% endhighlight %}
 {% endtabs %}
 
+   ![Picker multi column items in .NET MAUI Picker.](images/populating-items/maui-multi-column-items.png)
+
 ## Set items text style customization
 
 The .NET MAUI Picker control, selected and unselected items, `TextColor`, `FontSize`, `FontFamily`, and `FontAttributes` can be customized as shown in the following code.
@@ -114,7 +118,7 @@ The .NET MAUI Picker control, selected and unselected items, `TextColor`, `FontS
 The selected item [SelectedTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_SelectedTextStyle) can be customized by setting the `SfPicker.SelectedTextStyle` property.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="XAML" %}
 
     <sfPicker:SfPicker x:Name="Picker">
         <sfPicker:SfPicker.SelectedTextStyle>
@@ -124,7 +128,7 @@ The selected item [SelectedTextStyle](https://help.syncfusion.com/cr/maui/Syncfu
     </sfPicker:SfPicker>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
 
     this.Picker.SelectedTextStyle.FontSize = 16;
     this.Picker.SelectedTextStyle.FontAttributes = FontAttributes.Bold;
@@ -133,12 +137,14 @@ The selected item [SelectedTextStyle](https://help.syncfusion.com/cr/maui/Syncfu
 {% endhighlight %}
 {% endtabs %}
 
+   ![Picker selected item customization in .NET MAUI Picker.](images/populating-items/maui-picker-selected-item-customization.png)
+
 ### Unselected item customization
 
 The unselected item [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_TextStyle) can be customized by setting the `SfPicker.TextStyle` property.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="XAML" %}
 
     <sfPicker:SfPicker x:Name="Picker">
         <sfPicker:SfPicker.TextStyle>
@@ -148,7 +154,7 @@ The unselected item [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.M
     </sfPicker:SfPicker>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
 
     this.Picker.TextStyle.FontSize = 16;
     this.Picker.TextStyle.FontAttributes = FontAttributes.Italic;
@@ -156,6 +162,8 @@ The unselected item [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.M
 
 {% endhighlight %}
 {% endtabs %}
+
+   ![Picker un selected item customization in .NET MAUI Picker.](images/populating-items/maui-picker-un-selected-item-customization.png)
 
 ## Adding custom view to items
 
@@ -167,9 +175,9 @@ In picker control, the items can be customized with a custom view of all items b
     <Grid>
         <Grid.Resources>
             <DataTemplate x:Key="customView">
-                <Grid Background = "black" >
-                    <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="Red" Text="{Binding Data}"/>
-                    </Grid>
+                <Grid>
+                    <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="Red" Text="{Binding Data}"/>    
+                </Grid>
             </DataTemplate>
         </Grid.Resources>
     <sfPicker:SfPicker x:Name="Picker" ItemTemplate="{StaticResource customView}">
@@ -183,8 +191,9 @@ In picker control, the items can be customized with a custom view of all items b
     {
         Grid grid = new Grid
         {
-            Padding = new Thickness(0, 1, 0, 1);
+            Padding = new Thickness(0, 1, 0, 1),
         };
+
         Label label = new Label
         {
             HorizontalOptions = LayoutOptions.Center,
@@ -193,11 +202,15 @@ In picker control, the items can be customized with a custom view of all items b
             VerticalTextAlignment = TextAlignment.Center,
             TextColor = Colors.Black,
         };
+
         label.SetBinding(Label.TextProperty, new Binding("Data"));
         grid.Children.Add(label);
         return grid;
     });
+    
     this.Picker.ItemTemplate = customView;
 
 {% endhighlight %}
 {% endtabs %}
+
+   ![Custom items in .NET MAUI Picker.](images/populating-items/maui-picker-custom-items.png)

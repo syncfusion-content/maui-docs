@@ -54,7 +54,7 @@ Note: This property is automatically changed to `false` when you close the dialo
             HorizontalOptions="Center"
             VerticalOptions="Center"
             HeightRequest="50" 
-            WidthRequest="100">
+            WidthRequest="150">
     </Button>
 </Grid>
 
@@ -71,35 +71,16 @@ private void Button_Clicked(object sender, System.EventArgs e)
 
 {% endtabs %}
 
+  ![Dialog mode in .NET MAUI Date picker.](images/date-picker-mode/maui-date-picker-dialog-mode.gif)
+
 ## Relative Dialog Mode
 
 The relative dialog mode displays the date picker in a pop-up by setting the [Mode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_Mode) property to [`RelativeDialog`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerMode.html#Syncfusion_Maui_Picker_PickerMode_RelativeDialog). It is used to align the picker in a specific position. You can set the position by setting the [RelativePosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_RelativePosition) property in the [SfDatePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html).
 
+### Relative position
+
 The [RelativePosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_RelativePosition) is specified in the picker property enumeration, which is used to align the picker in a specific position. It provides eight positions such as `AlignTop`, `AlignToLeftOf`, `AlignToRightOf`, `AlignBottom`, `AlignTopLeft`, `AlignTopRight`, `AlignBottomLeft`, and `AlignBottomRight`. The default relative position is `AlignTop` in the [SfDatePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html).
 
-{% tabs %}
-
-{% highlight xaml tabtitle="XAML" hl_lines="2 3" %}
-
-<picker:SfDatePicker x:Name="datePicker"
-                     Mode="RelativeDialog"
-                     RelativePosition="AlignBottom"/>
-
-{% endhighlight %}
-
-{% highlight c# tabtitle="C#" hl_lines="3 4" %}
-
-SfDatePicker datePicker = new SfDatePicker()
-{
-    Mode = PickerMode.RelativeDialog,
-    RelativePosition = PickerRelativePosition.AlignBottom,
-};
-
-this.Content = datePicker;
-
-{% endhighlight %}
-
-{% endtabs %}
 
 The Date Picker can be opened programmatically by setting the [`IsOpen`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_IsOpen) property to `true` of [SfDatePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html). By default, the `IsOpen` property is `false`.
 
@@ -120,7 +101,7 @@ Note: This property is automatically changed to `false` when you close the dialo
             HorizontalOptions="Center"
             VerticalOptions="Center"
             HeightRequest="50" 
-            WidthRequest="100">
+            WidthRequest="150">
     </Button>
 </Grid>
 
@@ -136,3 +117,7 @@ private void Button_Clicked(object sender, System.EventArgs e)
 {% endhighlight %} 
 
 {% endtabs %}
+
+   ![Relative dialog mode in .NET MAUI Date picker.](images/date-picker-mode/maui-date-picker-relative-dialog-mode1.png)
+
+   ![Relative dialog mode in .NET MAUI Date picker.](images/date-picker-mode/maui-date-picker-relative-dialog-mode2.png)

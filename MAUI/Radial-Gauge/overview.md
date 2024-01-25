@@ -9,7 +9,7 @@ documentation: ug
 
 # .NET MAUI Radial Gauge Overview
 
-The Syncfusion .NET MAUI Radial Gauge is a multi-purpose data visualization control, that displays numerical values on a circular scale. It has a rich set of features such as axes, ranges, pointers, and annotations that are fully customizable and extendable. Use it to create speedometers, temperature monitors, dashboards, meter gauges, multi axis clocks, watches, progress indicators, compasses, and more.
+The Syncfusion [.NET MAUI Radial Gauge](https://www.syncfusion.com/maui-controls/maui-radial-gauge) is a multi-purpose data visualization control, that displays numerical values on a circular scale. It has a rich set of features such as axes, ranges, pointers, and annotations that are fully customizable and extendable. Use it to create speedometers, temperature monitors, dashboards, meter gauges, multi axis clocks, watches, progress indicators, compasses, and more.
 
 ![MAUI Radial Gauge Control](images/overview/maui-radial-gauge-control.png)
 

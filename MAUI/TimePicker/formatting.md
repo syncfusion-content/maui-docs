@@ -55,3 +55,5 @@ this.Content = timePicker;
 {% endhighlight %}
 
 {% endtabs %}
+
+![Formatting in .NET MAUI Time picker.](images/formatting/maui-time-picker-formatting.png)

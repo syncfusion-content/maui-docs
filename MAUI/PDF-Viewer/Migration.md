@@ -201,6 +201,16 @@ To make migration from [Xamarin SfPdfViewer](https://www.syncfusion.com/xamarin-
 <td>{{'[AnnotationSettings.Selector](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.AnnotationSettings.html#Syncfusion_Maui_PdfViewer_AnnotationSettings_Selector)'| markdownify}}</td>
 <td>Gets or sets the default settings for the annotation selector.</td>
 </tr>
+<tr>
+<td>{{'[FormField.CanEdit](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.FormField.html#Syncfusion_SfPdfViewer_XForms_FormField_CanEdit)'| markdownify}}</td>
+<td>{{'FormField.ReadOnly'| markdownify}}</td>
+<td>Gets or sets a value that indicates whether the form field can be edited or not.</td>
+</tr>
+<tr>
+<td>{{'[SignatureFormField.HandwrittenSignature](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.SignatureFormField.html#Syncfusion_SfPdfViewer_XForms_SignatureFormField_HandwrittenSignature)'| markdownify}}</td>
+<td>{{'SignatureFormField.Signature'| markdownify}}</td>
+<td>Gets or sets the ink annotation signature in the signature field.</td>
+</tr>
 </table>
 
 ## Events
@@ -441,14 +451,7 @@ To make migration from [Xamarin SfPdfViewer](https://www.syncfusion.com/xamarin-
 
 * Built-in toolbar
 * Themes
-* Accessibility
-* Shape annotations (polygon and polylines)
-* Free text annotation
 * Handwritten signatures
-* Form Filling
-* Save – Form data
-* Undo/Redo – Form data
-* Export/Import – Form data
 * Thumbnail
 * Single page view mode
 * Print

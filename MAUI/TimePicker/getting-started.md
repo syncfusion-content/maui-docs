@@ -16,8 +16,6 @@ This section explains how to add the Time Picker control. It covers only the bas
 
 2. Syncfusion .NET MAUI components are available on [nuget.org](https://www.nuget.org/). To add `SfTimePicker` to your project, open the NuGet package manager in Visual Studio, search for [Syncfusion.Maui.Picker](https://www.nuget.org/packages/Syncfusion.Maui.Picker), then install it.
 
-N> [Syncfusion.Maui.Popup](https://www.nuget.org/packages/Syncfusion.Maui.Popup) is a dependent package for `SfTimePicker`. To add [SfPopup](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html) to your project, open the NuGet package manager in Visual Studio, search for `Syncfusion.Maui.Popup`, then install it.
-
 3. To initialize the control, import the control namespace `Syncfusion.Maui.Picker` in XAML or C# code.
 
 4. Initialize `SfTimePicker.`
@@ -86,7 +84,7 @@ namespace GettingStarted
 
 ## Set header to the Time Picker
 
-The SfTimePicker control allows you to add the header text by setting the [Text] property in the [PickerHeaderView]. Enable the header view by setting the [Height] property in the [PickerHeaderView].
+The SfTimePicker control allows you to add the header text by setting the [Text](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerHeaderView.html#Syncfusion_Maui_Picker_PickerHeaderView_Text) property in the [PickerHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerHeaderView.html). Enable the header view by setting the [Height](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerHeaderView.html#Syncfusion_Maui_Picker_PickerHeaderView_HeightProperty) property in the [PickerHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerHeaderView.html).
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="3" %}
@@ -112,9 +110,11 @@ this.Content = picker;
 {% endhighlight %}
 {% endtabs %}
 
+   ![Set header view in .NET MAUI Time picker.](images/getting-started/maui-time-picker-set-header-view.png)
+
 ## Set footer to the Time Picker
 
-In the SfTimePicker control, validation buttons (OK and Cancel) can be customized by setting the [OkButtonText] and [CancelButtonText] properties in the [PickerFooterView]. It allows you to confirm or cancel the selected time. The `OkButtonText` can be enabled using the [ShowOkButton] property in the [PickerFooterView].
+In the SfTimePicker control, validation buttons (OK and Cancel) can be customized by setting the [OkButtonText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_OkButtonText) and [CancelButtonText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_CancelButtonText) properties in the [PickerFooterView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html). It allows you to confirm or cancel the selected time. The `OkButtonText` can be enabled using the [ShowOkButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_ShowOkButton) property in the [PickerFooterView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html).
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="3" %}
@@ -140,9 +140,11 @@ this.Content = picker;
 {% endhighlight %}  
 {% endtabs %}
 
+   ![Set footer view in .NET MAUI Time picker.](images/getting-started/maui-time-picker-set-footer-view.png)
+
 ## Set height and width to the Time Picker
 
-The SfTimePicker control allows you to change the height and width by using the [HeightRequest] and [WidthRequest] properties in the [SfTimePicker].
+The SfTimePicker control allows you to change the height and width by using the [HeightRequest] and [WidthRequest] properties in the [SfTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html).
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="3 5" %}
@@ -166,9 +168,11 @@ this.Content = picker;
 {% endhighlight %}  
 {% endtabs %}
 
+   ![Set height and width in .NET MAUI Time picker.](images/getting-started/maui-time-picker-set-height-and-width.png)
+
 ## Set selected time to the Time Picker
 
-The SfTimePicker control allows you to select the time using the [SelectedTime] property in the [SfTimePicker]. The default value of the `SelectedTime` is the current time.
+The SfTimePicker control allows you to select the time using the [SelectedTime](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html#Syncfusion_Maui_Picker_SfTimePicker_SelectedTime) property in the [SfTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html). The default value of the `SelectedTime` is the current time.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="2" %}
@@ -189,3 +193,5 @@ this.Content = picker;
 
 {% endhighlight %}  
 {% endtabs %}
+
+   ![Set Selected time in .NET MAUI Time picker.](images/getting-started/maui-time-picker-set-selected-time.png)

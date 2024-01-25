@@ -16,8 +16,6 @@ This section explains how to add the Picker control. It covers only the basic fe
 
 2. Syncfusion .NET MAUI components are available on [nuget.org](https://www.nuget.org/). To add `SfPicker` to your project, open the NuGet package manager in Visual Studio, search for [Syncfusion.Maui.Picker](https://www.nuget.org/packages/Syncfusion.Maui.Picker), then install it.
 
-N> [Syncfusion.Maui.Popup](https://www.nuget.org/packages/Syncfusion.Maui.Popup) is a dependent package for `SfPicker`. To add [SfPopup](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html) to your project, open the NuGet package manager in Visual Studio, search for `Syncfusion.Maui.Popup`, then install it.
-
 3. To initialize the control, import the control namespace `Syncfusion.Maui.Picker` in XAML or C# code.
 
 4. Initialize `SfPicker.`
@@ -86,7 +84,7 @@ namespace GettingStarted
 
 ## Set header to the Picker
 
-The SfPicker control allows you to add the header text by setting the [Text] property in the [PickerHeaderView]. To enable the header view by setting the [Height] property in the [PickerHeaderView].
+The SfPicker control allows you to add the header text by setting the [Text](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerHeaderView.html#Syncfusion_Maui_Picker_PickerHeaderView_Text) property in the [PickerHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerHeaderView.html). To enable the header view by setting the [Height](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerHeaderView.html#Syncfusion_Maui_Picker_PickerHeaderView_HeightProperty) property in the [PickerHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerHeaderView.html).
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="3" %}
@@ -111,6 +109,8 @@ this.Content = picker;
 
 {% endhighlight %}
 {% endtabs %}
+
+![Set Header view in .NET MAUI Picker.](images/getting-started/maui-picker-set-header-view.png)
 
 ## Add picker items to the picker
 
@@ -151,7 +151,7 @@ public class ItemInfo
 
 * Bind the Collection to picker
 
-The Picker control allows you to bind data collection by setting the [ItemsSource] property from the [PickerColumn]. Bind data collection in both XAML and C#.
+The Picker control allows you to bind data collection by setting the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerColumn.html#Syncfusion_Maui_Picker_PickerColumn_ItemsSourceProperty) property from the [PickerColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerColumn.html). Bind data collection in both XAML and C#.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="6 10 11 12" %}
@@ -189,10 +189,11 @@ this.Content = picker;
 {% endhighlight %}
 {% endtabs %}
 
+![Picker items in .NET MAUI picker.](images/getting-started/maui-picker-items.png)
 
 ## Set footer to the Picker
 
-In SfPicker control, validation buttons (OK and Cancel) can be customized by setting the [OkButtonText] and [CancelButtonText] properties in the [PickerFooterView]. It allows you to confirm or cancel the selected item. The `OkButtonText` can be enabled using the [ShowOkButton] property in the [PickerFooterView].
+In SfPicker control, validation buttons (OK and Cancel) can be customized by setting the [OkButtonText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_OkButtonText) and [CancelButtonText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_CancelButtonText) properties in the [PickerFooterView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html). It allows you to confirm or cancel the selected item. The `OkButtonText` can be enabled using the [ShowOkButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_ShowOkButton) property in the [PickerFooterView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html).
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="3" %}
@@ -218,12 +219,14 @@ this.Content = picker;
 {% endhighlight %}  
 {% endtabs %}
 
+![Picker Footer view in .NET MAUI picker.](images/getting-started/maui-picker-footer-view.png)
+
 ## Set column header to the Picker items
 
-The SfPicker control allows you to add the column header text by setting the [HeaderText] property in the [PickerColumn], and you need to add the column header height by setting the [Height] property in the [PickerColumnHeaderView]. Its text style and background color are customizable.
+The SfPicker control allows you to add the column header text by setting the [HeaderText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerColumn.html#Syncfusion_Maui_Picker_PickerColumn_HeaderText) property in the [PickerColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerColumn.html), and you need to add the column header height by setting the [Height](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerColumnHeaderView.html#Syncfusion_Maui_Picker_PickerColumnHeaderView_Height) property in the [PickerColumnHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerColumnHeaderView.html). Its text style and background color are customizable.
 
 {% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="7 12" %}
+{% highlight xaml tabtitle="XAML" hl_lines="3 7" %}
 
 <picker:SfPicker x:Name="picker">
 <picker:SfPicker.HeaderView>
@@ -236,12 +239,7 @@ The SfPicker control allows you to add the column header text by setting the [He
 </picker:SfPicker.Columns>
 
 <picker:SfPicker.ColumnHeaderView>
-    <picker:PickerColumnHeaderView Height="40"
-                                   Background="#6750A4">
-        <picker:PickerColumnHeaderView.TextStyle>
-            <picker:PickerTextStyle TextColor="White" FontSize="15" />
-        </picker:PickerColumnHeaderView.TextStyle>
-    </picker:PickerColumnHeaderView>
+    <picker:PickerColumnHeaderView Height="40" />
 </picker:SfPicker.ColumnHeaderView>
 </picker:SfPicker>
 
@@ -254,7 +252,7 @@ SfPicker picker = new SfPicker()
     HeaderView = new PickerHeaderView()
     {
         Text = "Select a color",
-        Height = 50,
+        Height = 40,
     },
 
     Columns = new ObservableCollection<PickerColumn>()
@@ -269,12 +267,6 @@ SfPicker picker = new SfPicker()
     ColumnHeaderView = new PickerColumnHeaderView()
     {
         Height = 40,
-        Background = Color.FromRgba("#6750A4"),
-        TextStyle = new PickerTextStyle()
-        {
-            TextColor = Colors.White,
-            FontSize = 15,
-        },
     },
 };
 
@@ -283,9 +275,11 @@ this.Content = picker;
 {% endhighlight %}  
 {% endtabs %}
 
+![Picker Column header view in .NET MAUI picker.](images/getting-started/maui-picker-column-header-view.png)
+
 ## Set height and width to the Picker
 
-The SfPicker control allows you to change the height and width by using the [HeightRequest] and [WidthRequest] properties in the [SfPicker].
+The SfPicker control allows you to change the height and width by using the [HeightRequest] and [WidthRequest] properties in the [SfPicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfPicker.html).
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="2 3" %}
@@ -308,3 +302,5 @@ this.Content = picker;
 
 {% endhighlight %}  
 {% endtabs %}
+
+![Set Picker height and width in .NET MAUI picker.](images/getting-started/maui-picker-height-and-width.png)

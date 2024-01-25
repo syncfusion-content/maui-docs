@@ -268,4 +268,110 @@ private void sfNumericEntry_ValueChanged(object sender, NumericEntryValueChanged
 {% endhighlight %}
 {% endtabs %}
 
+## Value Change Mode
+
+The [ValueChangeMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_ValueChangeMode) property determine when the values are updated.
+
+The supported value change modes are as follows:
+    * [OnLostFocus](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ValueChangeMode.html#Syncfusion_Maui_Inputs_ValueChangeMode_OnLostFocus) - The value will be updated when the editor loses its focus or the focus moved to the next control. By default, the [ValueChangeMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_ValueChangeMode) is `OnLostFocus`.
+    * [OnKeyFocus](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ValueChangeMode.html#Syncfusion_Maui_Inputs_ValueChangeMode_OnKeyFocus) - The value will be updated with each key press.
+
+{% tabs %}
+{% highlight xaml %}
+
+<VerticalStackLayout Spacing="10" VerticalOptions="Center">
+    <editors:SfNumericEntry x:Name="numericEntry"
+                            WidthRequest="200"
+                            HeightRequest="40" 
+                            VerticalOptions="Center"
+                            ValueChangeMode="OnKeyFocus"
+                            Value="50">
+    </editors:SfNumericEntry>
+    <HorizontalStackLayout Spacing="2" HeightRequest="40" WidthRequest="200">
+        <Label Text="Dollar:"  />
+        <Label x:Name="valueDisplay" 
+               TextColor="Green" 
+               Text="{Binding Path=Value, Source={x:Reference numericEntry}, StringFormat='${0:F2}'}" 
+               HeightRequest="40" />
+    </HorizontalStackLayout>
+</VerticalStackLayout>
+
+{% endhighlight %}
+{% highlight C# %}
+
+public partial class MainPage : ContentPage
+{
+    public Label valueDisplay;
+    public MainPage()
+    {
+        InitializeComponent();
+        var verticalStackLayout = new StackLayout
+        {
+            Spacing = 10,
+            VerticalOptions = LayoutOptions.Center
+        };
+        var numericEntry = new SfNumericEntry
+        {
+            WidthRequest = 200,
+            HeightRequest = 40,
+            VerticalOptions = LayoutOptions.Center,
+            ValueChangeMode = ValueChangeMode.OnKeyFocus,
+            Value = 50
+        };
+        var horizontalStackLayout = new StackLayout
+        {
+            Spacing = 2,
+            HeightRequest = 40,
+            WidthRequest = 200
+        };
+        var labelDollar = new Label
+        {
+            Text = "Dollar:"
+        };
+        valueDisplay = new Label
+        {
+            Text="$50",
+            TextColor = Colors.Green
+        };
+        numericEntry.ValueChanged += NumericEntry_ValueChanged;
+        horizontalStackLayout.Children.Add(labelDollar);
+        horizontalStackLayout.Children.Add(valueDisplay);
+        verticalStackLayout.Children.Add(numericEntry);
+        verticalStackLayout.Children.Add(horizontalStackLayout);
+        Content = verticalStackLayout;
+    }
+
+    private void NumericEntry_ValueChanged(object sender, NumericEntryValueChangedEventArgs e)
+    {
+        valueDisplay.Text="$"+e.NewValue.ToString();
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![.NET MAUI NumericEntry with ValueChange Mode](GettingStarted_images/valuechangemode.gif)
+
+## Stroke
+
+The NumericEntry border color can be changed by using the [Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_Stroke) property. The default `Stroke` color is **Black**.
+
+{% tabs %}
+{% highlight xaml %}
+
+<editors:SfNumericEntry HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        Stroke="Red" />
+
+{% endhighlight %}
+{% highlight C# %}
+
+SfNumericEntry sfNumericEntry = new SfNumericEntry();
+sfNumericEntry.HorizontalOptions = LayoutOptions.Center;
+sfNumericEntry.VerticalOptions = LayoutOptions.Center;
+sfNumericEntry.Stroke = Colors.Red;
+
+{% endhighlight %}
+{% endtabs %}
+
 You can find the complete getting started sample of .NET MAUI from this [link.](https://github.com/SyncfusionExamples/maui-numericentry-samples)

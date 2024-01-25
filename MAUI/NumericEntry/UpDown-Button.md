@@ -69,9 +69,150 @@ sfNumericEntry.UpDownPlacementMode = NumericEntryUpDownPlacementMode.Inline;
 
 ![UpDown Placement in .NET MAUI NumericEntry](UpDownButton_images/UpDownButtonPlacement.gif)
 
+## UpDown button customization
+
+## UpDown button color
+
+Customize the `NumericEntry` control button color by using the [UpDownButtonColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_UpDownButtonColor) property.
+
+{% tabs %}
+{% highlight XAML %}
+
+<editors:SfNumericEntry HeightRequest="50"
+                        WidthRequest="200"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        Value="360"
+                        UpDownPlacementMode="Inline"
+                        UpDownButtonColor="Blue"/>
+                     
+{% endhighlight %}
+{% highlight c# %}
+
+SfNumericEntry sfNumericEntry = new SfNumericEntry();
+sfNumericEntry.HeightRequest= 50;
+sfNumericEntry.WidthRequest = 200;
+sfNumericEntry.HorizontalOptions = LayoutOptions.Center
+sfNumericEntry.VerticalOptions = LayoutOptions.Center;
+sfNumericEntry.Value = 360;
+sfNumericEntry.UpDownPlacementMode = NumericEntryUpDownPlacementMode.Inline;
+sfNumericEntry.UpDownButtonColor = Colors.Blue;
+
+{% endhighlight %}
+{% endtabs %}
+
+![UpDownButtonColor support in .NET MAUI NumericEntry](UpDownButton_images/UpDownButtonColor.png)
+
+## UpDown button template
+
+The `NumericEntry` control supports customization of the UpDownButton's appearance through the use of the [UpButtonTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_UpButtonTemplate) and [DownButtonTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_DownButtonTemplate) properties.
+{% tabs %}
+{% highlight XAML %}
+
+<VerticalStackLayout Spacing="10" VerticalOptions="Center">
+    <editors:SfNumericEntry x:Name="numericEntry"
+                            WidthRequest="200"
+                            HeightRequest="40" 
+                            VerticalOptions="Center"
+                            UpDownPlacementMode="Inline"
+                            Value="50">
+        <editors:SfNumericEntry.UpButtonTemplate>
+            <DataTemplate>
+                <Grid>
+                    <Label Padding="0,6.5,0,0" 
+                           Rotation="90"
+                           FontFamily="FontIcons"
+                           HorizontalOptions="Center"
+                           Text="&#xe74a;"
+                           TextColor="Green"
+                           FontSize="20"/>
+                </Grid>
+            </DataTemplate>
+        </editors:SfNumericEntry.UpButtonTemplate>
+        <editors:SfNumericEntry.DownButtonTemplate>
+            <DataTemplate>
+                <Grid>
+                    <Label Padding="0,5,0,0" 
+                           Rotation="270"
+                           FontFamily="FontIcons"
+                           HorizontalOptions="Center"
+                           Text="&#xe74a;"
+                           TextColor="Red"
+                           FontSize="20"/>
+                </Grid>
+            </DataTemplate>
+        </editors:SfNumericEntry.DownButtonTemplate>
+    </editors:SfNumericEntry>
+</VerticalStackLayout>
+                     
+{% endhighlight %}
+{% highlight c# %}
+
+ public partial class MainPage : ContentPage
+ {
+     public MainPage()
+     {
+         InitializeComponent();
+         var verticalStackLayout = new StackLayout
+         {
+             Spacing = 10,
+             VerticalOptions = LayoutOptions.Center
+         };
+         var numericEntry = new SfNumericEntry
+         {
+             WidthRequest = 200,
+             HeightRequest = 40,
+             VerticalOptions = LayoutOptions.Center,
+             UpDownPlacementMode = NumericEntryUpDownPlacementMode.Inline,
+             Value = 50
+         };
+         var upButtonTemplate = new DataTemplate(() =>
+         {
+             var grid = new Grid();
+             var label = new Label
+             {
+                 Padding = new Thickness(0, 6.5, 0, 0),
+                 Rotation = 90,
+                 FontFamily = "FontIcons",
+                 HorizontalOptions = LayoutOptions.Center,
+                 Text = "\ue74a", // Use Unicode directly for the icon
+                 TextColor = Colors.Green,
+                 FontSize = 20
+             };
+             grid.Children.Add(label);
+             return grid;
+         });
+         var downButtonTemplate = new DataTemplate(() =>
+         {
+             var grid = new Grid();
+             var label = new Label
+             {
+                 Padding = new Thickness(0, 5, 0, 0),
+                 Rotation = 270,
+                 FontFamily = "FontIcons",
+                 HorizontalOptions = LayoutOptions.Center,
+                 Text = "\ue74a",
+                 TextColor = Colors.Red,
+                 FontSize = 20
+             };
+             grid.Children.Add(label);
+             return grid;
+         });
+         numericEntry.UpButtonTemplate = upButtonTemplate;
+         numericEntry.DownButtonTemplate = downButtonTemplate;
+         verticalStackLayout.Children.Add(numericEntry);
+         Content = verticalStackLayout;
+     }
+ }
+
+{% endhighlight %}
+{% endtabs %}
+
+![UpDownButtonTemplate support in .NET MAUI NumericEntry](UpDownButton_images/UpDownButtonTemplate.png)
+
 ## Auto reverse in SfNumericEntry
 
-Auto-reverse in `NumericEntry` allows the control to automatically switch direction when reaching its `minimum` or `maximum` value. When incrementing, it starts at the `minimum` and progresses to the `maximum,` and conversely.
+[Auto-reverse](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_AutoReverse) in NumericEntry allows the control to automatically switch direction when reaching its [Minimum](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_Minimum) or [Maximum](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_Maximum) value. When incrementing, it starts at the `Minimum` and progresses to the `Maximum`, and conversely.
 
 N> The default value of this property is `false.`
 {% tabs %}
@@ -96,3 +237,4 @@ sfNumericEntry.Maximum=10;
 {% endtabs %}
 
 ![AutoReverse support in .NET MAUI NumericEntry](UpDownButton_images/AutoReverseSupport.gif)
+

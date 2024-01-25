@@ -16,21 +16,23 @@ This section explains the column header customization of picker control.
 The SfPicker enables or disables the column header section by setting the SfPicker.ColumnHeaderView.Height property to a value greater than 0. The default value of the [Height](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerColumnHeaderView.html#Syncfusion_Maui_Picker_PickerColumnHeaderView_Height) property is 0.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="XAML" %}
 
     <sfPicker:SfPicker x:Name="Picker">
         <sfPicker:SfPicker.ColumnHeaderView>
-            <sfPicker:PickerColumnHeaderView Height="50"/>
+            <sfPicker:PickerColumnHeaderView Height="40"/>
         </sfPicker:SfPicker.ColumnHeaderView>
     </sfPicker:SfPicker>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
 
-    this.Picker.ColumnHeaderView.Height= 50;
+    this.Picker.ColumnHeaderView.Height= 40;
 
 {% endhighlight %}
 {% endtabs %}
+
+   ![Set Column header in .NET MAUI Picker.](images/dealing-with-column-header/maui-picker-column-header.png)
 
 ## Column header customization
 
@@ -41,28 +43,30 @@ Enhancing Column Header with `Height`, `Text Style`, `Background`, and `DividerC
 The column header [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerColumnHeaderView.html#Syncfusion_Maui_Picker_PickerColumnHeaderView_Background) color can be customized by setting the SfPicker.ColumnHeaderView.Background property.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="XAML" %}
 
     <sfPicker:SfPicker x:Name="Picker">
         <sfPicker:SfPicker.ColumnHeaderView>
-            <sfPicker:PickerColumnHeaderView Background="Gray"/>
+            <sfPicker:PickerColumnHeaderView Background="#E5E4E2"/>
         </sfPicker:SfPicker.ColumnHeaderView>
     </sfPicker:SfPicker>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
 
-    this.Picker.ColumnHeaderView.Background=Brush.Gray;
+    this.Picker.ColumnHeaderView.Background = Color.FromArgb("#E5E4E2"),
 
 {% endhighlight %}
 {% endtabs %}
+
+   ![Column header background color in .NET MAUI Picker.](images/dealing-with-column-header/maui-picker-column-header-background.png)
 
 ### Column header text style
 
 The .NET MAUI Picker control and column header [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerColumnHeaderView.html#Syncfusion_Maui_Picker_PickerColumnHeaderView_TextStyle) such as text color, font size, font family, and font attributes can be customized as shown in the following code.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="XAML" %}
 
     <sfPicker:SfPicker x:Name="Picker">
       <sfPicker:SfPicker.ColumnHeaderView>
@@ -77,7 +81,7 @@ The .NET MAUI Picker control and column header [TextStyle](https://help.syncfusi
     </sfPicker:SfPicker>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
 
     this.Picker.ColumnHeaderView.TextStyle = new PickerTextStyle()
     {
@@ -89,23 +93,27 @@ The .NET MAUI Picker control and column header [TextStyle](https://help.syncfusi
 {% endhighlight %}
 {% endtabs %}
 
+   ![Column header text style in .NET MAUI Picker.](images/dealing-with-column-header/maui-picker-column-header-text-style.png)
+
 ### Divider color
 
 The .NET MAUI Picker control, Separator line background customized by setting `SfPicker.ColumnHeaderView.DividerColor` property.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="XAML" %}
 
     <sfPicker:SfPicker x:Name="Picker">
         <sfPicker:SfPicker.ColumnHeaderView>
-            <sfPicker:PickerColumnHeaderView DividerColor="Gray"/>
+            <sfPicker:PickerColumnHeaderView DividerColor="Red"/>
         </sfPicker:SfPicker.ColumnHeaderView>
     </sfPicker:SfPicker>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
 
-    this.Picker.ColumnHeaderView.DividerColor= Colors.Gray;
+    this.Picker.ColumnHeaderView.DividerColor = Colors.Red;
 
 {% endhighlight %}
 {% endtabs %}
+
+   ![Column header divider color in .NET MAUI Picker.](images/dealing-with-column-header/maui-picker-column-header-divider-color.png)

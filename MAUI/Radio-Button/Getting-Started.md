@@ -7,9 +7,13 @@ control: SfRadioButton
 documentation: ug
 ---
 
-## Creating an application with .NET MAUI Radio Button
+# Creating an application with .NET MAUI Radio Button
 
 This section explains the steps required to work with the [`SfRadioButton`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioButton.html) control for .NET MAUI.
+
+To get start quickly with our .NET MAUI Radio Button, you can check the below video.
+
+{% youtube "https://www.youtube.com/watch?v=z5EwGpw0KTI" %}
 
 ## Adding a .NET MAUI Radio Button reference
 

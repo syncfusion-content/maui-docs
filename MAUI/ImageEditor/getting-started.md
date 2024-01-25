@@ -2,7 +2,7 @@
 layout: post
 title: Getting Started with .NET MAUI Image Editor control | Syncfusion
 description: Learn about getting started with Syncfusion .NET MAUI ImageEditor(SfImageEditor) control.
-platform: .NET MAUI
+platform: maui
 control: SfImageEditor
 documentation: ug
 ---
@@ -226,7 +226,7 @@ public partial class MainPage : ContentPage
 
 N> If you set the Stream source with a local variable, the stream will be closed after the image uses it, and you cannot process the stream again. So, we recommend using stream images by creating a new stream instance inside the Lamba function so that you can process them whenever needed.
 
-imageEditor.Source = ImageSource.FromStream(() => new MemoryStream(imageBytes))
+N> imageEditor.Source = ImageSource.FromStream(() => new MemoryStream(imageBytes))
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-image-editor-examples/tree/master/GettingStarted)
 
@@ -308,3 +308,110 @@ The image editor utilizes the `AspectFit` image scaling of Image control to fit 
 {% endtabs %}
 
 N> The size value will only be available after the image has been loaded into view.
+
+## Check image edited status
+
+The [`IsImageEdited`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_IsImageEdited) property is used to determine whether any editing action has been performed on the image.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+
+   <Grid RowDefinitions="0.9*, 0.1*">
+        <imageEditor:SfImageEditor x:Name="imageEditor"
+                                   Source="image.jpeg" />
+        <Button Grid.Row="1"
+                Text="IsImageEdited"
+                Clicked="OnIsImageEditedClicked" />
+    </Grid>  
+
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+private void OnIsImageEditedClicked(object sender, EventArgs e)
+{
+    if (this.imageEditor.IsImageEdited)
+    {
+        this.imageEditor.Save();
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+## ImageEditor inside stack layout
+
+#### Vertical StackLayout
+
+When the image editor is placed inside a vertical stack layout, users must define the required `MinimumHeightRequest` value. By default, this `MinimumHeightRequest` is set to 100.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+
+<VerticalStackLayout>
+    <imageEditor:SfImageEditor x:Name="imageEditor"
+                               MinimumHeightRequest="400"
+                               Source="image.jpeg">
+    </imageEditor:SfImageEditor>
+</VerticalStackLayout>
+
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+public MainPage()
+{
+    InitializeComponent();
+    VerticalStackLayout verticalLayout = new VerticalStackLayout();
+    SfImageEditor imageEditor = new SfImageEditor();
+    imageEditor.Source = ImageSource.FromResource("MyProject.Resources.Images.image.jpeg");
+    imageEditor.MinimumHeightRequest = 400;
+    verticalLayout.Add(imageEditor);
+    this.Content = verticalLayout;
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+#### Horizontal StackLayout
+
+When the image editor is placed inside a horizontal stack layout, users must define the required `MinimumWidthRequest` value. By default, this `MinimumWidthRequest` is set to 100.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+
+<HorizontalStackLayout>
+    <imageEditor:SfImageEditor x:Name="imageEditor"
+                               MinimumWidthRequest="400"
+                               Source="image.jpeg">
+    </imageEditor:SfImageEditor>
+</HorizontalStackLayout>
+
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+public MainPage()
+{
+    InitializeComponent();
+    HorizontalStackLayout horizontalLayout = new HorizontalStackLayout();
+    SfImageEditor imageEditor = new SfImageEditor();
+    imageEditor.Source = ImageSource.FromResource("MyProject.Resources.Images.image.jpeg");
+    imageEditor.MinimumWidthRequest = 400;
+    horizontalLayout.Add(imageEditor);
+    this.Content = horizontalLayout;
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+## Change the image editor background
+The background of the Image Editor can be customized by setting the `Background` property of the SfImageEditor.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+
+   <imageEditor:SfImageEditor x:Name="imageEditor"
+                              Source="imageeditordesktop.png"
+                              Background="LightGreen">
+   </imageEditor:SfImageEditor>
+
+{% endhighlight %}
+{% endtabs %}

@@ -16,8 +16,6 @@ This section explains how to add the Date Time Picker control. It covers only th
 
 2. Syncfusion .NET MAUI components are available on [nuget.org](https://www.nuget.org/). To add `SfDateTimePicker` to your project, open the NuGet package manager in Visual Studio, search for [Syncfusion.Maui.Picker](https://www.nuget.org/packages/Syncfusion.Maui.Picker), then install it.
 
-N> [Syncfusion.Maui.Popup](https://www.nuget.org/packages/Syncfusion.Maui.Popup) is a dependent package for `SfDateTimePicker`. To add [SfPopup](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html) to your project, open the NuGet package manager in Visual Studio, search for `Syncfusion.Maui.Popup`, then install it.
-
 3. To initialize the control, import the control namespace `Syncfusion.Maui.Picker` in XAML or C# code.
 
 4. Initialize `SfDateTimePicker.`
@@ -116,6 +114,8 @@ this.Content = picker;
 {% endhighlight %}  
 {% endtabs %}
 
+   ![Set Footer view in .NET MAUI Date Time picker.](images/getting-started/maui-date-time-picker-footer-view.png)
+
 ## Set height and width to the Date Time Picker
 
 The SfDateTimePicker control allows you to change the height and width by using the `HeightRequest` and `WidthRequest` properties in the `SfDateTimePicker`.
@@ -142,6 +142,8 @@ this.Content = picker;
 {% endhighlight %}  
 {% endtabs %}
 
+   ![Set Height and Width in .NET MAUI Date Time picker.](images/getting-started/maui-date-time-picker-set-height-and-width.png)
+
 ## Set selected date and selected time to the Date Time Picker
 
 The SfDateTimePicker control allows you to select the date and time by using the [SelectedDate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html#Syncfusion_Maui_Picker_SfDateTimePicker_SelectedDate) property in the [SfDateTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html). The default value of the `SelectedDate` is the current date and time.
@@ -165,3 +167,5 @@ this.Content = picker;
 
 {% endhighlight %}  
 {% endtabs %}
+
+   ![Set selected date in .NET MAUI Date Time picker.](images/getting-started/maui-date-time-picker-set-selected-date.png)

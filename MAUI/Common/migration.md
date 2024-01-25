@@ -406,7 +406,7 @@ Currently working on delivering brand-new .NET MAUI controls that can be used in
 			<a href="https://help.syncfusion.com/xamarin/cards/getting-started">SfCardView</a><br/>
 		</td>
 		<td rowspan="1" valign="top">
-			Volume 4 2023<br/>
+			<a href="https://help.syncfusion.com/maui/cards/migration">SfCardView</a><br/>
 		</td>
 	</tr>
 	<tr>
@@ -414,7 +414,15 @@ Currently working on delivering brand-new .NET MAUI controls that can be used in
 			<a href="https://help.syncfusion.com/xamarin/carousel-view/getting-started">SfCarousel</a><br/>
 		</td>
 		<td rowspan="1" valign="top">
-			Volume 4 2023<br/>
+			<a href="https://help.syncfusion.com/maui/carousel-view/migration">SfCarousel</a><br/>
+		</td>
+	</tr>
+	<tr>
+	    <td rowspan="1" valign="top">
+			<a href="https://help.syncfusion.com/xamarin/navigation-drawer/getting-started">SfNavigationDrawer</a><br/>
+		</td>
+		<td rowspan="1" valign="top">
+			<a href="https://help.syncfusion.com/maui/navigationdrawer/migration">SfNavigationDrawer</a><br/>
 		</td>
 	</tr>
 	<tr>
@@ -422,7 +430,23 @@ Currently working on delivering brand-new .NET MAUI controls that can be used in
 			<a href="https://help.syncfusion.com/xamarin/pull-to-refresh/getting-started">SfPullToRefresh</a><br/>
 		</td>
 		<td rowspan="1" valign="top">
-			Volume 4 2023<br/>
+			<a href="https://help.syncfusion.com/maui/pull-to-refresh/migration">SfPullToRefresh</a><br/>
+		</td>
+	</tr>
+	<tr>
+	    <td rowspan="1" valign="top">
+			<a href="https://help.syncfusion.com/xamarin/sunburst-chart/getting-started">SfSunburstChart</a><br/>
+		</td>
+		<td rowspan="1" valign="top">
+			<a href="https://help.syncfusion.com/maui/sunburstchart/migration">SfSunburstChart</a><br/>
+		</td>
+	</tr>
+	<tr>
+	    <td rowspan="1" valign="top">
+			<a href="https://help.syncfusion.com/xamarin/switch/gettingstarted">SfSwitch</a><br/>
+		</td>
+		<td rowspan="1" valign="top">
+			<a href="https://help.syncfusion.com/maui/switch/migration">SfSwitch</a><br/>
 		</td>
 	</tr>
 	<tr>
@@ -430,15 +454,55 @@ Currently working on delivering brand-new .NET MAUI controls that can be used in
 			<a href="https://help.syncfusion.com/xamarin/chat/getting-started">SfChat</a><br/>
 		</td>
 		<td rowspan="1" valign="top">
-			Underway<br/>
+			Volume 1 2024<br/>
 		</td>
 	</tr>
 	<tr>
 	    <td rowspan="1" valign="top">
-			<a href="https://help.syncfusion.com/xamarin/diagram/getting-started">SfDiagram</a><br/>
+			<a href="https://help.syncfusion.com/xamarin/kanban-board/getting-started">SfKanban</a><br/>
 		</td>
 		<td rowspan="1" valign="top">
-			Underway<br/>
+			Volume 1 2024<br/>
+		</td>
+	</tr>
+	<tr>
+	    <td rowspan="1" valign="top">
+			<a href="https://help.syncfusion.com/xamarin/parallax-view/gettingstarted">SfParallaxView</a><br/>
+		</td>
+		<td rowspan="1" valign="top">
+			Volume 1 2024<br/>
+		</td>
+	</tr>
+	<tr>
+	    <td rowspan="1" valign="top">
+			<a href="https://help.syncfusion.com/xamarin/radial-menu/getting-started">SfRadialMenu</a><br/>
+		</td>
+		<td rowspan="1" valign="top">
+			Volume 1 2024<br/>
+		</td>
+	</tr>
+	<tr>
+	    <td rowspan="1" valign="top">
+			<a href="https://help.syncfusion.com/xamarin/rotator/getting-started">SfRotator</a><br/>
+		</td>
+		<td rowspan="1" valign="top">
+			Volume 1 2024<br/>
+		</td>
+	</tr>
+	<tr>
+	    <td rowspan="1" valign="top">
+			<a href="https://help.syncfusion.com/xamarin/stepprogressbar/gettingstarted">SfStepProgressBar</a><br/>
+		</td>
+		<td rowspan="1" valign="top">
+			Volume 1 2024<br/>
+		</td>
+	</tr>
+	<tr>
+	    <td rowspan="1" valign="top">
+			<a href="https://help.syncfusion.com/xamarin/treemap/getting-started">SfTreemap</a><br/>
+		</td>
+		<td rowspan="1" valign="top">
+			Volume 1 2024<br/>
 		</td>
 	</tr>
 	<tr>
@@ -451,34 +515,10 @@ Currently working on delivering brand-new .NET MAUI controls that can be used in
 	</tr>
 	<tr>
 	    <td rowspan="1" valign="top">
-			<a href="https://help.syncfusion.com/xamarin/kanban-board/getting-started">SfKanban</a><br/>
+			<a href="https://help.syncfusion.com/xamarin/diagram/getting-started">SfDiagram</a><br/>
 		</td>
 		<td rowspan="1" valign="top">
-			Underway<br/>
-		</td>
-	</tr>
-	<tr>
-	    <td rowspan="1" valign="top">
-			<a href="https://help.syncfusion.com/xamarin/navigation-drawer/getting-started">SfNavigationDrawer</a><br/>
-		</td>
-		<td rowspan="1" valign="top">
-			Underway<br/>
-		</td>
-	</tr>
-	<tr>
-	    <td rowspan="1" valign="top">
-			<a href="https://help.syncfusion.com/xamarin/parallax-view/gettingstarted">SfParallaxView</a><br/>
-		</td>
-		<td rowspan="1" valign="top">
-			Underway<br/>
-		</td>
-	</tr>
-	<tr>
-	    <td rowspan="1" valign="top">
-			<a href="https://help.syncfusion.com/xamarin/radial-menu/getting-started">SfRadialMenu</a><br/>
-		</td>
-		<td rowspan="1" valign="top">
-			Underway<br/>
+			Obsolete. Use <a href="https://blazor.syncfusion.com/documentation/diagram/overview"> Syncfusion Blazor Diagram.</a> To integrate Blazor Diagram component in .NET MAUI application refer to this <a href="https://support.syncfusion.com/kb/article/11346/how-to-create-diagram-builder-in-maui-platform?isInternalRefresh=False"> KB.</a> <br/>
 		</td>
 	</tr>
 	<tr>
@@ -486,47 +526,7 @@ Currently working on delivering brand-new .NET MAUI controls that can be used in
 			<a href="https://help.syncfusion.com/xamarin/rich-text-editor/gettingstarted">SfRichTextEditor</a><br/>
 		</td>
 		<td rowspan="1" valign="top">
-			Underway<br/>
-		</td>
-	</tr>
-	<tr>
-	    <td rowspan="1" valign="top">
-			<a href="https://help.syncfusion.com/xamarin/rotator/getting-started">SfRotator</a><br/>
-		</td>
-		<td rowspan="1" valign="top">
-			Underway<br/>
-		</td>
-	</tr>
-	<tr>
-	    <td rowspan="1" valign="top">
-			<a href="https://help.syncfusion.com/xamarin/stepprogressbar/gettingstarted">SfStepProgressBar</a><br/>
-		</td>
-		<td rowspan="1" valign="top">
-			Underway<br/>
-		</td>
-	</tr>
-	<tr>
-	    <td rowspan="1" valign="top">
-			<a href="https://help.syncfusion.com/xamarin/sunburst-chart/getting-started">SfSunburstChart</a><br/>
-		</td>
-		<td rowspan="1" valign="top">
-			Underway<br/>
-		</td>
-	</tr>
-	<tr>
-	    <td rowspan="1" valign="top">
-			<a href="https://help.syncfusion.com/xamarin/switch/gettingstarted">SfSwitch</a><br/>
-		</td>
-		<td rowspan="1" valign="top">
-			Underway<br/>
-		</td>
-	</tr>
-	<tr>
-	    <td rowspan="1" valign="top">
-			<a href="https://help.syncfusion.com/xamarin/treemap/getting-started">SfTreemap</a><br/>
-		</td>
-		<td rowspan="1" valign="top">
-			Underway<br/>
+			Obsolete. Use <a href="https://blazor.syncfusion.com/documentation/rich-text-editor/getting-started"> Syncfusion Blazor RichTextEditor.</a> To integrate Blazor RichTextEditor component in .NET MAUI application refer to this <a href="https://support.syncfusion.com/kb/article/13845/how-to-get-started-with-syncfusion-blazor-richtexteditor-with-maui-controls-in-net-maui-application"> KB.</a> <br/>
 		</td>
 	</tr>
 </table>

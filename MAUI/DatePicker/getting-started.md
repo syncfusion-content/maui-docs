@@ -16,8 +16,6 @@ This section explains how to add the Date Picker control. It covers only the bas
 
 2. Syncfusion .NET MAUI components are available on [nuget.org](https://www.nuget.org/). To add the `SfDatePicker` to your project, open the NuGet package manager in Visual Studio, search for [Syncfusion.Maui.Picker](https://www.nuget.org/packages/Syncfusion.Maui.Picker), then install it.
 
-N> [Syncfusion.Maui.Popup](https://www.nuget.org/packages/Syncfusion.Maui.Popup) is a dependent package for `SfDatePicker`. To add [SfPopup](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html) to your project, open the NuGet package manager in Visual Studio, search for `Syncfusion.Maui.Popup`, then install it.
-
 3. To initialize the control, import the control namespace `Syncfusion.Maui.Picker` in XAML or C# code.
 
 4. Initialize `SfDatePicker.`
@@ -112,6 +110,8 @@ this.Content = picker;
 {% endhighlight %}
 {% endtabs %}
 
+![Set Header view in .NET MAUI Date picker.](images/getting-started/maui-date-picker-set-header-view.png)
+
 ## Set footer to the Date Picker
 
 In the SfDatePicker control, validation buttons (OK and Cancel) can be customized by setting the [OkButtonText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_OkButtonText) and [CancelButtonText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_CancelButtonText) properties in the [PickerFooterView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html). It allows you to confirm or cancel the selected date. The `OkButtonText` can be enabled using the [ShowOkButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_ShowOkButton) property in the [PickerFooterView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html).
@@ -140,6 +140,8 @@ this.Content = picker;
 {% endhighlight %}  
 {% endtabs %}
 
+![Set Footer view in .NET MAUI Date picker.](images/getting-started/maui-date-picker-set-footer-view.png)
+
 ## Set height and width to the Date Picker
 
 The SfDatePicker control allows you to change the height and the width using the [HeightRequest] and [WidthRequest] properties in the [SfDatePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html).
@@ -166,6 +168,8 @@ this.Content = picker;
 {% endhighlight %}  
 {% endtabs %}
 
+![Set Height and width in .NET MAUI Date picker.](images/getting-started/maui-date-picker-set-height-and-width.png)
+
 ## Set selected date to the Date Picker
 
 The SfDatePicker control allows you to select the date using the [SelectedDate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html#Syncfusion_Maui_Picker_SfDatePicker_SelectedDate) property in the [SfDatePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html). The default value of the `SelectedDate` is the current date.
@@ -189,3 +193,5 @@ this.Content = picker;
 
 {% endhighlight %}  
 {% endtabs %}
+
+![Set Selected date in .NET MAUI Date picker.](images/getting-started/maui-date-picker-selected-date.png)

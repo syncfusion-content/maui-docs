@@ -9,7 +9,7 @@ documentation: ug
 
 # Time Interval in .NET MAUI Time Picker(SfTimePicker)
 
-The `SfTimePicker` provides three intervals in [.NET MAUI Time Picker].
+The `SfTimePicker` provides three intervals in [.NET MAUI Time Picker](https://www.syncfusion.com/maui-controls/maui-timepicker).
 
  * [`HourInterval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html#Syncfusion_Maui_Picker_SfTimePicker_HourInterval)
  * [`MinuteInterval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html#Syncfusion_Maui_Picker_SfTimePicker_MinuteInterval)
@@ -41,6 +41,8 @@ this.Content = timePicker;
 
 {% endtabs %}
 
+![Hour interval in .NET MAUI Date picker.](images/intervals/maui-time-picker-hour-interval.png)
+
 ## Minute interval
 
 Time Picker provides an option to give an interval between minutes using the [MinuteInterval](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html#Syncfusion_Maui_Picker_SfTimePicker_MinuteInterval) property of [SfTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html).
@@ -67,6 +69,8 @@ this.Content = timePicker;
 
 {% endtabs %}
 
+![Minute interval in .NET MAUI Date picker.](images/intervals/maui-time-picker-minute-interval.png)
+
 ## Second interval
 
 Time Picker provides an option to give an interval between seconds using the [SecondInterval](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html#Syncfusion_Maui_Picker_SfTimePicker_SecondInterval) property of [SfTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html).
@@ -92,3 +96,5 @@ this.Content = timePicker;
 {% endhighlight %}
 
 {% endtabs %}
+
+![Second interval in .NET MAUI Date picker.](images/intervals/maui-time-picker-second-interval.png)

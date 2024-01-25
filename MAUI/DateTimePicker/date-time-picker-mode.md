@@ -49,7 +49,7 @@ Note: This property automatically changes to `false` when you close the dialog b
             HorizontalOptions="Center"
             VerticalOptions="Center"
             HeightRequest="50" 
-            WidthRequest="100">
+            WidthRequest="150">
     </Button>
 </Grid>
 
@@ -64,30 +64,16 @@ private void Button_Clicked(object sender, EventArgs e)
 {% endhighlight %}  
 {% endtabs %}
 
+   ![Dialog mode in .NET MAUI Date Time picker.](images/date-time-picker-mode/maui-date-time-picker-dialog-mode.gif)
+
 ## Relative dialog mode
 
 The relative dialog mode is used to display the date time picker in a pop-up by setting the [Mode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_Mode) property to [RelativeDialog](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerMode.html#Syncfusion_Maui_Picker_PickerMode_RelativeDialog). It is used to align the picker in a specific position. You can set the position by setting the [RelativePosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_RelativePosition) property in the [SfDateTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html).
 
+### Relative position
+
 The relative position is specified in the picker property enumeration, which is used to align the picker in a specific position. It provides eight positions such as `AlignTop`, `AlignToLeftOf`, `AlignToRightOf`, `AlignBottom`, `AlignTopLeft`, `AlignTopRight`, `AlignBottomLeft`, and `AlignBottomRight`. The default relative position is `AlignTop` in the [SfDateTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html).
 
-{% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="2 3" %}
-
-<picker:SfDateTimePicker x:Name="Picker"
-                         Mode="RelativeDialog"
-                         RelativePosition="AlignTopLeft">
-</picker:SfDateTimePicker>
-
-{% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="2 3" %}
-
-SfDateTimePicker picker = new SfDateTimePicker();
-picker.Mode = PickerMode.RelativeDialog;
-this.Picker.RelativePosition = PickerRelativePosition.AlignTopLeft;
-this.Content = picker;
-
-{% endhighlight %}  
-{% endtabs %}
 
 The Date Time picker can be opened programmatically by setting the [`IsOpen`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_IsOpen) property to `true` of [SfDateTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html). By default, the `IsOpen` property is `false`.
 
@@ -107,7 +93,7 @@ Note: This property is automatically changed to `false` when you close the dialo
             HorizontalOptions="Center"
             VerticalOptions="Center"
             HeightRequest="50" 
-            WidthRequest="100">
+            WidthRequest="150">
     </Button>
 </Grid>
 
@@ -121,3 +107,7 @@ private void Button_Clicked(object sender, EventArgs e)
 
 {% endhighlight %}  
 {% endtabs %}
+
+   ![Relative dialog mode in .NET MAUI Date Time picker.](images/date-time-picker-mode/maui-date-time-picker-relative-dialog-mode1.png)
+
+   ![Relative dialog mode in .NET MAUI Date Time picker.](images/date-time-picker-mode/maui-date-time-picker-relative-dialog-mode2.png)

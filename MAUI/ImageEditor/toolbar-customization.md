@@ -2,7 +2,7 @@
 layout: post
 title: Toolbar Customization in .NET MAUI Image Editor Control | Syncfusion
 description: Learn about toolbar customization support in the Syncfusion .NET MAUI ImageEditor (SfImageEditor) control.
-platform: .NET MAUI
+platform: maui
 control: SfImageEditor
 documentation: ug
 ---

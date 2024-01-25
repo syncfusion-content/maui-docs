@@ -1,13 +1,15 @@
 ---
 layout: post
 title: Selection in .NET MAUI ComboBox control | Syncfusion
-description: Learn all about Selection modes support in Syncfusion .NET MAUI ComboBox (SfComboBox) control and more here.
+description: Learn all about selection modes support in Syncfusion .NET MAUI ComboBox (SfComboBox) control and more here.
 platform: maui
 control: SfComboBox
 documentation: ug
 ---
 
 # Selection in .NET MAUI ComboBox (SfComboBox)
+
+The ComboBox allows user to select single or multiple items from the drop-down list. The selection mode can be set by using the [SelectionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_SelectionMode) property. There are two different selection modes: [Single](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ComboBoxSelectionMode.html#Syncfusion_Maui_Inputs_ComboBoxSelectionMode_Single), and [Multiple](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ComboBoxSelectionMode.html#Syncfusion_Maui_Inputs_ComboBoxSelectionMode_Multiple).
 
 ## Single selection
 
@@ -32,7 +34,7 @@ The selected item can be changed interactively by selecting from the drop-down l
 
 The following gif image illustrates the result of the above code:
 
-![.NET MAUI ComboBox UI selection](Images/Selection/UISelection.png)
+![.NET MAUI ComboBox UI selection.](Images/selection/net-maui-combobox-ui-selection.png)
 
 
 ### Programmatic selection 
@@ -62,20 +64,83 @@ comboBox.SelectedIndex = 2;
 
 The following gif image illustrates the result of the above code:
 
-![.NET MAUI ComboBox programmatic selection](Images/Selection/ProgramaticSelection.png)
+![.NET MAUI ComboBox programmatic selection.](Images/selection/net-maui-combobox-programatic-selection.png)
+
+## Multiple selection
+
+The ComboBox allows user to select multiple values from the drop-down list. Selected items will be displayed with a customizable token representation and the users can remove each tokenized item by clicking the close button. 
+
+Token mode supports both editable and non-editable text boxes for selecting items from a data source. The multi-select ComboBox mode can be enabled by setting the [SelectionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_SelectionMode) property as [Multiple](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ComboBoxSelectionMode.html#Syncfusion_Maui_Inputs_ComboBoxSelectionMode_Multiple).
+
+### Programmatic selection
+
+The selected items can be changed programmatically by using the [SelectedItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_SelectedItems) property of ComboBox control.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+ <editors:SfComboBox x:Name="comboBox" 
+             HeightRequest="50"
+             WidthRequest="350"
+             ItemsSource="{Binding SocialMedias}"
+             SelectionMode="Multiple"
+             MaxDropDownHeight="250"
+             DisplayMemberPath="Name"
+             TextMemberPath="Name" />
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+  SocialMediaViewModel socialMediaViewModel = (this.comboBox.BindingContext as SocialMediaViewModel);
+  ObservableCollection<SocialMedia> socialMediasList = socialMediaViewModel.SocialMedias;
+  this.comboBox.SelectedItems.Add(socialMediasList[0]);
+  this.comboBox.SelectedItems.Add(socialMediasList[2]);
+
+{% endhighlight %}
+
+{% endtabs %}
+
+The following image illustrates the result of the above code.
+
+![.NET MAUI ComboBox Multiple selection.](Images/selection/net-maui-combobox-multiple-selection.png)
+
+### UI selection
+
+The selected items can be changed interactively by using keyboard or by selecting from a drop-down list. The selected items can be retrieved from the [SelectedItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_SelectedItems) property of ComboBox control.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+ <editors:SfComboBox x:Name="comboBox" 
+             HeightRequest="50"
+             WidthRequest="350"
+             ItemsSource="{Binding SocialMedias}"
+             SelectionMode="Multiple"
+             MaxDropDownHeight="250"
+             DisplayMemberPath="Name"
+             TextMemberPath="Name" />
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![.NET MAUI ComboBox UI Multiselection.](Images/selection/net-maui-combobox-ui-multiselection.gif)
 
 
 ## Selection changed notification
 
-When an item is selected from the drop-down list, the [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_SelectionChanged) event is triggered. The SelectionChanged event contains the newly selected and previously selected items in the `CurrentSelection` and `PreviousSelection` properties. The SelectionChanged contains the following properties:
+When an item is selected from the drop-down list, the [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_SelectionChanged) event is triggered. The SelectionChanged event contains the newly selected and previously selected items in the `AddedItems` and `RemovedItems` properties. The SelectionChanged contains the following properties:
 
- * CurrentSelection - Contains the item that were currently selected.
- * PreviousSelection - Contains the item that were previously selected.
+ * AddedItems - Contains the item that were currently selected.
+ * RemovedItems - Contains the item that were unselected.
 
 {% tabs %}
 {% highlight xaml %}
 
-<editors:SfComboBox x:Name="comboBox"
+<editors:SfComboBox x:Name="comboBox" 
                     WidthRequest="250"
                     TextMemberPath="Name"
                     DisplayMemberPath="Name"
@@ -104,10 +169,11 @@ private async void OnSelectionChanged(object sender, Syncfusion.Maui.Inputs.Sele
 {% endhighlight %}
 {% endtabs %}
 
-The following gif image illustrates the result of the above code:
+The following image illustrates the result of the above code:
 
-![.NET MAUI ComboBox SelectedChangedEvent](Images/Selection/SelectionChangedEventNotification.png)
+![.NET MAUI ComboBox SelectedChangedEvent.](Images/selection/net-maui-combobox-selection-changed-event.png)
 
+N> SelectionChanged event arguments `CurrentSelection` and `PreviousSelection` marked as "Obsolete". You can use the `AddedItems` and `RemovedItems` event arguments.
 
 ## Get the selected value
 
@@ -152,7 +218,7 @@ private void OnSelectionChanged(object sender, Syncfusion.Maui.Inputs.SelectionC
 
 The following gif image illustrates the result of the above code:
 
-![.NET MAUI ComboBox selected value](Images/Selection/SelectedValuePath.png)
+![.NET MAUI ComboBox selected value.](Images/selection/net-maui-combobox-selected-value-path.png)
 
 ## Open a drop-down programmatically
 

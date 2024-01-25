@@ -661,6 +661,50 @@ The following image illustrates the result of the above code:
 
 ![.NET MAUI ComboBox ItemTemplateSelector](Images/UICustomization/TemplateSelector.png)
 
+## Styling token items
+
+The ComboBox control allows you to customize the style of TokenItem generated in the selection area by using the `TokenItemStyle` property. 
+
+{% tabs %}
+
+{% highlight xaml %}
+ ...
+
+  xmlns:core="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
+  xmlns:editors="clr-namespace:Syncfusion.Maui.Inputs;assembly=Syncfusion.Maui.Inputs"
+
+ ...
+
+  <editors:SfComboBox SelectionMode="Multiple" 
+             x:Name="comboBox" 
+             ItemsSource="{Binding SocialMedias}" 
+             HeightRequest="50"
+             MaxDropDownHeight="250"
+             WidthRequest="350"
+             DisplayMemberPath="Name"
+             TextMemberPath="Name">
+     <editors:SfComboBox.TokenItemStyle>
+         <Style TargetType="core:SfChipGroup">
+             <Setter Property="ChipTextColor" Value="White"/>
+             <Setter Property="ChipFontAttributes" Value="Bold"/>
+             <Setter Property="CloseButtonColor" Value="White"/>
+             <Setter Property="ChipBackground" Value="#d3a7ff"/>
+             <Setter Property="ChipStroke" Value="#5118e3"/>
+             <Setter Property="ChipStrokeThickness" Value="6"/>
+             <Setter Property="ChipCornerRadius" Value="18"/>
+         </Style>
+     </editors:SfComboBox.TokenItemStyle>
+ </editors:SfComboBox>
+
+{% endhighlight %}
+
+{% endtabs %}
+
+The following image illustrates the result of the above code.
+
+![.NET MAUI ComboBox token item style](Images/UICustomization/Tokenitemstyle.png)
+
+
 ## Completed Event
 
 The [Completed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_Completed) event is raised when the user finalizes the text in the [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) editable mode by pressing return key on the keyboard.The handler for the event is a generic event handler, taking the `sender` and `EventArgs`(the `EventArgs` value is `string.Empty`):
@@ -698,6 +742,94 @@ Completed event can be subscribed in C# also:
 The following image illustrates the result of the above code:
 
 ![.NET MAUI ComboBox completed event](Images/UICustomization/CompletedEvent.png)
+
+N> The `Completed` event is not supported in the Android platform.
+
+## DropDownOpening Event
+
+The `DropDownOpening` event will be fired whenever opening the dropdown menu in the SfComboBox. It can cancel dropdown opening with CancelEventArgs that contains the following property:
+
+ * Cancel: Dropdown opening is based on this value.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+ <editors:SfComboBox 
+ DropdownOpening="comboBox_DropdownOpening"
+ WidthRequest="350"
+ HeightRequest="50"
+ ItemsSource="{Binding SocialMedias}"
+ DisplayMemberPath="Name"
+ TextMemberPath="Name"    
+ x:Name="comboBox" >
+ </editors:SfComboBox>
+    
+{% endhighlight %}
+
+{% highlight c# %}
+
+  SfComboBox comboBox = new SfComboBox();
+  comboBox.DropdownOpening += comboBox_DropdownOpening;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+{% tabs %}
+
+{% highlight c# %}
+    
+ private void comboBox_DropdownOpening(object sender, CancelEventArgs e)
+ {
+     e.Cancel = true; // If you want to restrict the dropdown open then set the e.Cancel is true. 
+ }
+
+{% endhighlight %}
+
+{% endtabs %}
+
+## DropDownOpened Event
+
+The `DropDownOpened` event occurs when the SfComboBox drop-down is opened.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<editors:SfComboBox 
+DropdownOpened="comboBox_DropdownOpened"
+WidthRequest="350"
+HeightRequest="50"
+ItemsSource="{Binding SocialMedias}"
+DisplayMemberPath="Name"
+TextMemberPath="Name"    
+x:Name="comboBox" >
+</editors:SfComboBox>
+ 
+{% endhighlight %}
+
+{% highlight c# %}
+
+  SfComboBox comboBox = new SfComboBox();
+  comboBox.DropdownOpened += comboBox_DropdownOpened;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+{% tabs %}
+
+{% highlight c# %}
+
+  private void comboBox_DropdownOpened(object sender, EventArgs e)
+  {
+
+  }
+
+{% endhighlight %}
+
+{% endtabs %}
 
 ## DropDownClosed Event
 

@@ -22,8 +22,8 @@ When you have a collection of objects, and you want to display a specific proper
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-    <sfPicker:SfPicker x:Name="Picker">
-    </sfPicker:SfPicker>
+<sfPicker:SfPicker x:Name="Picker">
+</sfPicker:SfPicker>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
@@ -66,6 +66,8 @@ When you have a collection of objects, and you want to display a specific proper
 {% endhighlight %}
 {% endtabs %}
 
+   ![Picker display member path in .NET MAUI Picker.](images/dealing-with-columns/maui-picker-display-member-path.png)
+
 ### Width customization
 
 Customize the [Width](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerColumn.html#Syncfusion_Maui_Picker_PickerColumn_Width) of every column by setting the `Width` property in the [PickerColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerColumn.html). The default value of width is `-1`.
@@ -73,8 +75,8 @@ Customize the [Width](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-    <sfPicker:SfPicker x:Name="Picker">
-    </sfPicker:SfPicker>
+<sfPicker:SfPicker x:Name="Picker">
+</sfPicker:SfPicker>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
@@ -91,8 +93,8 @@ Customize the SelectedIndex of every column by setting the `SelectedIndex` prope
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-    <sfPicker:SfPicker x:Name="Picker">
-    </sfPicker:SfPicker>
+<sfPicker:SfPicker x:Name="Picker">
+</sfPicker:SfPicker>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
@@ -109,8 +111,8 @@ Customize the Header text of every column by setting the `HeaderText` property i
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-    <sfPicker:SfPicker x:Name="Picker">
-    </sfPicker:SfPicker>
+<sfPicker:SfPicker x:Name="Picker">
+</sfPicker:SfPicker>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
@@ -120,6 +122,8 @@ Customize the Header text of every column by setting the `HeaderText` property i
 {% endhighlight %}
 {% endtabs %}
 
+   ![Header text customization in .NET MAUI Picker.](images/dealing-with-columns/maui-picker-custom-headertext.png)
+
 ### ItemsSource customization
 
 Customize the ItemSource of every column by setting the `ItemSource` property in the [PickerColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerColumn.html). The default value of the [ItemSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerColumn.html#Syncfusion_Maui_Picker_PickerColumn_ItemsSource) property is `null`.
@@ -127,8 +131,8 @@ Customize the ItemSource of every column by setting the `ItemSource` property in
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-    <sfPicker:SfPicker x:Name="Picker">
-    </sfPicker:SfPicker>
+<sfPicker:SfPicker x:Name="Picker">
+</sfPicker:SfPicker>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
@@ -139,3 +143,27 @@ Customize the ItemSource of every column by setting the `ItemSource` property in
 {% endhighlight %}
 {% endtabs %}
 
+   ![Item souce customization in .NET MAUI Picker.](images/dealing-with-columns/maui-picker-custom-item-source.png)
+
+### Column divider color
+
+Customize the column divider color when the picker consists of more than one column using the [ColumnDividerColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_ColumnDividerColor) property in [SfPicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfPicker.html).
+
+{% tabs %}
+{% highlight xaml tabtitle="XAML" %}
+
+<sfPicker:SfPicker x:Name="Picker"
+                   ColumnDividerColor="Red">
+</sfPicker:SfPicker>
+
+{% endhighlight %}
+{% highlight c# tabtitle="C#" %}
+
+SfPicker picker = new SfPicker();
+picker.ColumnDividerColor = Colors.Red;
+this.Content = picker;
+
+{% endhighlight %}
+{% endtabs %}
+
+   ![Column divider color in .NET MAUI Picker.](images/dealing-with-columns/maui-picker-column-divider-color.png)

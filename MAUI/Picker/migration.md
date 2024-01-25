@@ -453,7 +453,6 @@ The following code example, explains how to initialize the properties of the `Xa
 <td>{{'[CancelButtonClicked](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_CancelButtonClicked)'| markdownify }}</td>
 <td>Occurs whenever the footer cancel button is clicked in Picker.</td>
 </tr>
-<tr>
 </table>
 
 ## Known issues
@@ -464,4 +463,3 @@ The following code example, explains how to initialize the properties of the `Xa
 ## Upcomming features
 
  * Looping support for picker items.
-
