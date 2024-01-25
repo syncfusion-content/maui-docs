@@ -69,7 +69,7 @@ sfNumericEntry.UpDownPlacementMode = NumericEntryUpDownPlacementMode.Inline;
 
 ![UpDown Placement in .NET MAUI NumericEntry](UpDownButton_images/UpDownButtonPlacement.gif)
 
-# UpDown button customization
+## UpDown button customization
 
 ## UpDown button color
 
