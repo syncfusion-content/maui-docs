@@ -9,7 +9,7 @@ documentation: ug
 
 # Overview of Expander (SfExpander)
 
-The [.NET MAUI Expander (SfExpander)](https://www.syncfusion.com/maui-controls/maui-expander) is a layout control capable of loading any UI view in both header and content sections. By simply tapping the header, users can effortlessly expand or collapse the control.
+The .NET MAUI Expander (SfExpander) is a layout control capable of loading any UI view in both header and content sections. By simply tapping the header, users can effortlessly expand or collapse the control.
 
 ## Key features
 
