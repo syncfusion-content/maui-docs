@@ -436,4 +436,4 @@ RadioGroup
 </tr>
 </table>
 
-N> You can refer to our [.NET MAUI DataForm](https://www.syncfusion.com/maui-controls/maui-dataform) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI DataForm Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/DataForm/SampleBrowser.Maui.DataForm) that shows you how to render the DataForm in .NET MAUI.
+N> You can refer to our [.NET MAUI DataForm](https://www.syncfusion.com/maui-controls/maui-dataform) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI DataForm Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/DataForm) that shows you how to render the DataForm in .NET MAUI.
