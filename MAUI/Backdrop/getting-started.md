@@ -228,3 +228,5 @@ public BackdropSamplePage()
 N> 
 * Get the complete getting started sample from GitHub [link](https://github.com/SyncfusionExamples/Getting-started-with-.NET-MAUI-Backdrop-).
 * Refer to Syncfusion [.NET MAUI Backdrop](https://www.syncfusion.com/maui-controls/maui-backdrop) feature tour page for its groundbreaking feature representations.
+
+N> You can also explore our [.NET MAUI Backdrop Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/Backdrop) that shows you how to render the Backdrop in .NET MAUI.
