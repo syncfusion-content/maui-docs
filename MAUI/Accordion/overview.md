@@ -9,7 +9,7 @@ documentation: ug
 
 # Overview of .NET MAUI Accordion (SfAccordion)
 
-The [.NET MAUI Accordion (SfAccordion)](https://www.syncfusion.com/maui-controls/maui-accordion) offers a vertically collapsible panel with stacked headers, allowing the expansion or collapse of one or multiple items simultaneously.
+The .NET MAUI Accordion (SfAccordion) offers a vertically collapsible panel with stacked headers, allowing the expansion or collapse of one or multiple items simultaneously.
 
 ## Key features
 
