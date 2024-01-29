@@ -22,8 +22,6 @@ PdfViewer.ScrollToOffset(100, 1000);
 {% endhighlight %}
 {% endtabs %}
 
-W> Please note that the PDF Viewer has built-in scrolling capability. Therefore, it is advised avoid placing the PDF Viewer inside other controls that also offer scrolling, such as [ScrollView](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/scrollview?view=net-maui-8.0). Nesting within such controls may cause unexpected issues.
-
 ## Scroll changes detection
 
 The `PropertyChanged` event can be used to effectively identify the scroll changes in the PDF Viewer. By monitoring the [HorizontalOffset](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_HorizontalOffset) and [VerticalOffset](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_VerticalOffset) property changes, you can respond to both the horizontal and vertical scroll movements respectively. 
@@ -105,3 +103,5 @@ Similarly for horizontal end detection, refer to the below code example.
         }
 {% endhighlight %}
 {% endtabs %}
+
+W> Please note that since the PDF Viewer has built-in scrolling capability, it is advised avoid placing the PDF Viewer inside other controls that also offer scrolling, such as [ScrollView](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/scrollview?view=net-maui-8.0). Nesting within such controls may cause unexpected issues.
