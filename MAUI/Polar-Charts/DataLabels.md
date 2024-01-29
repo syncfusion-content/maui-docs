@@ -51,6 +51,8 @@ chart.Series.Add(series);
 
 {% endtabs %}
 
+![Data label in MAUI chart](DataLabel_images/MAUI_polar_line_datalabel.png)
+
 Data labels can be customized by using the [DataLabelSettings]() property of chart series. For customizing, need to create an instance of [PolarDataLabelSettings]() and set to the [DataLabelSettings]() property. Following properties are used to customize the data labels which are available in [PolarDataLabelSettings]().
 
 * [BarAlignment]() - Gets or sets the data label alignment top, middle or bottom.

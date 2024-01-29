@@ -27,10 +27,6 @@ To define the tooltip in the series, set the [EnableTooltip]() property to true.
                         YBindingPath="Tree" 
                         EnableTooltip="True"/>
 
-    <chart:PolarAreaSeries ItemsSource="{Binding PlantDetails}" 
-                        XBindingPath="Direction"
-                        YBindingPath="Flower"
-                        EnableTooltip="True"/>
 </chart:SfPolarChart>
 
 {% endhighlight %}
@@ -40,7 +36,7 @@ To define the tooltip in the series, set the [EnableTooltip]() property to true.
 SfPolarChart chart = new SfPolarChart();
 . . .
 
-PolarAreaSeries series1 = new PolarAreaSeries()
+PolarAreaSeries series = new PolarAreaSeries()
 {
     ItemsSource = new ViewModel().PlantDetails,
     XBindingPath = "Direction",
@@ -48,21 +44,14 @@ PolarAreaSeries series1 = new PolarAreaSeries()
     EnableTooltip = true
 };
 
-PolarAreaSeries series2 = new PolarAreaSeries()
-{
-    ItemsSource = new ViewModel().PlantDetails,
-    XBindingPath = "Direction",
-    YBindingPath = "Flower",
-    EnableTooltip = true
-};
-
-chart.Series.Add(series1);
-chart.Series.Add(series2);
+chart.Series.Add(series);
 this.Content = chart;
 
 {% endhighlight %}
 
 {% endtabs %}
+
+![Tooltip template in MAUI Chart](Tooltip_images/MAUI_polar_chart_tooltip.png)
 
 The [ChartTooltipBehavior]() is used to customize the tooltip. For customizing the tooltip, create an instance [ChartTooltipBehavior]() and set it to the [TooltipBehavior]() property of [SfPolarChart](). The following properties are used to customize the tooltip:
 
@@ -114,10 +103,6 @@ The [Duration]() property is used to specify the duration time in milliseconds f
                         YBindingPath="Tree" 
                         EnableTooltip="True"/>
                 
-    <chart:PolarAreaSeries ItemsSource="{Binding PlantDetails}" 
-                        XBindingPath="Direction"
-                        YBindingPath="Flower"
-                        EnableTooltip="True"/>
 </chart:SfPolarChart>
 
 {% endhighlight %}
@@ -129,7 +114,7 @@ SfPolarChart chart = new SfPolarChart();
 chart.TooltipBehavior = new ChartTooltipBehavior();
 chart.TooltipBehavior.Duration = 5000;
 
-PolarAreaSeries series1 = new PolarAreaSeries()
+PolarAreaSeries series = new PolarAreaSeries()
 {
     ItemsSource = new ViewModel().PlantDetails,
     XBindingPath = "Direction",
@@ -137,16 +122,7 @@ PolarAreaSeries series1 = new PolarAreaSeries()
     EnableTooltip = true
 };
 
-PolarAreaSeries series2 = new PolarAreaSeries()
-{
-    ItemsSource = new ViewModel().PlantDetails,
-    XBindingPath = "Direction",
-    YBindingPath = "Flower",
-    EnableTooltip = true
-};
-
-chart.Series.Add(series1);
-chart.Series.Add(series2);
+chart.Series.Add(series);
 this.Content = chart;
 
 {% endhighlight %}
@@ -163,28 +139,17 @@ The [SfPolarChart]() provides support to customize the appearance of the tooltip
 
 <chart:SfPolarChart >
     <chart:SfPolarChart.Resources>
-        <DataTemplate x:Key="tooltipTemplate1">
-            <StackLayout Orientation="Horizontal">
-                <Label Text="{Binding Item.Category}"
-					   TextColor="Black"
-					   FontAttributes="Bold"
-					   FontSize="12"
-					   HorizontalOptions="Center"
-					   VerticalOptions="Center"/>
-                <Label Text=" : "
-					   TextColor="Black"
-					   FontAttributes="Bold"
-					   FontSize="12"
-					   HorizontalOptions="Center"
-					   VerticalOptions="Center"/>
-                <Label Text="{Binding Item.Value}"
-					   TextColor="Black"
-					   FontAttributes="Bold"
-					   FontSize="12"
-					   HorizontalOptions="Center"
-					   VerticalOptions="Center"/>
-            </StackLayout>
-        </DataTemplate>
+         <DataTemplate x:Key="template1" x:Name="temp">
+     <StackLayout>
+         <Label Text="{Binding Item.Direction}" HorizontalTextAlignment="Center" HorizontalOptions="Center" VerticalTextAlignment="Center" TextColor="White" FontAttributes="Bold" FontFamily="Helvetica" Margin="0,2,0,2" FontSize="12.5"/>
+         <BoxView Color="Gray" HeightRequest="1" WidthRequest="90"/>
+         <StackLayout Orientation="Horizontal" VerticalOptions="Fill" Spacing="0" Padding="3" Margin="0" HorizontalOptions="Center">
+            <Ellipse Stroke="White" StrokeThickness="2" HeightRequest="10" WidthRequest="10" Fill="#48988B" Margin="0,1,3,0"/>
+            <Label Text="Tree"  VerticalTextAlignment="Center" HorizontalOptions="Start" TextColor="White" FontFamily="Helvetica" FontSize="12" Margin="3,0,3,0"/>
+            <Label Text="{Binding Item.Tree,StringFormat=' :  {0}'}" VerticalTextAlignment="Center" HorizontalOptions="End" TextColor="White" FontFamily="Helvetica" Margin="0,0,3,0" FontSize="12"/>
+         </StackLayout>
+     </StackLayout>
+ </DataTemplate>
         . . .          
     </chart:SfPolarChart.Resources>
     . . .
@@ -205,7 +170,7 @@ The [SfPolarChart]() provides support to customize the appearance of the tooltip
 
 SfPolarChart chart = new SfPolarChart();
 . . .
-PolarAreaSeries series1 = new PolarAreaSeries()
+PolarAreaSeries series = new PolarAreaSeries()
 {
     ItemsSource = new ViewModel().PlantDetails,
     XBindingPath = "Direction",
@@ -214,12 +179,14 @@ PolarAreaSeries series1 = new PolarAreaSeries()
     TooltipTemplate = chart.Resources["tooltipTemplate1"] as DataTemplate
 };
 
-chart.Series.Add(series1);
+chart.Series.Add(series);
 this.Content = chart;
         
 {% endhighlight %}
 
 {% endtabs %}
+
+![Tooltip template in MAUI Chart](Tooltip_images/MAUI_chart_tooltip_template.png)
 
 ## Methods
 
@@ -278,4 +245,4 @@ The [Hide]() method is used to hide the tooltip programmatically.
 
 {% endhighlight %}
 
-{% endtabs %}s
+{% endtabs %}

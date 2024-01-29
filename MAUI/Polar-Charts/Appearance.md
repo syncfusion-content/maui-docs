@@ -10,9 +10,67 @@ documentation: ug
 # Appearance in .NET MAUI Polar Chart
 The appearance of [SfPolarChart]() can be customized by using the predefined brushes, custom brushes and gradient, which allows to enrich the application.
 
-## Applying PaletteBrushes for Chart
+## Default PaletteBrushes for Chart
 
 By default, chart applies a set of predefined brushes to the series in a predefined order. [SfPolarChart]() provides [PaletteBrushes]() property for applying various kinds of custom palettes brushes.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<chart:SfPolarChart> 
+. . .
+    <chart:PolarLineSeries ItemsSource="{Binding PlantDetails}"
+					  XBindingPath="Direction"
+					  YBindingPath="Tree"/> 
+
+	<chart:PolarLineSeries ItemsSource="{Binding PlantDetails}"
+					  XBindingPath="Direction"
+					  YBindingPath="Weed"/> 
+
+	<chart:PolarLineSeries ItemsSource="{Binding PlantDetails}"
+					  XBindingPath="Direction"
+					  YBindingPath="Flower"/> 
+
+</chart:SfPolarChart>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+SfPolarChart chart = new SfPolarChart();
+. . .
+PolarLineSeries series1 = new PolarLineSeries()
+{
+    ItemsSource = new ViewModel().PlantDetails,
+    XBindingPath = "Direction",
+    YBindingPath = "Tree",
+};
+
+PolarLineSeries series2 = new PolarLineSeries()
+{
+    ItemsSource = new ViewModel().PlantDetails,
+    XBindingPath = "Direction",
+    YBindingPath = "Weed",
+};
+
+PolarLineSeries series3 = new PolarLineSeries()
+{
+    ItemsSource = new ViewModel().PlantDetails,
+    XBindingPath = "Direction",
+    YBindingPath = "Flower",
+};
+
+chart.Series.Add(series1);
+chart.Series.Add(series2);
+chart.Series.Add(series3);
+this.Content = chart;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Default PaletteBrushes in MAUI Chart](Appearance_images/MAUI_default_chart.png)
 
 ### Custom PaletteBrushes
 
@@ -31,11 +89,12 @@ By default, chart applies a set of predefined brushes to the series in a predefi
 {% highlight c# %}
 
 SfPolarChart chart = new SfPolarChart();
-List<Brush> CustomBrushes = new List<Brush>();
-CustomBrushes.Add(new SolidColorBrush(Color.FromRgb(38, 198, 218)));
-CustomBrushes.Add(new SolidColorBrush(Color.FromRgb(0, 172, 193)));
-CustomBrushes.Add(new SolidColorBrush(Color.FromRgb(0, 151, 167)));
-CustomBrushes.Add(new SolidColorBrush(Color.FromRgb(0, 131, 143)));
+List<Brush> CustomBrushes = new List<Brush>()
+{
+ new SolidColorBrush(Color.FromArgb("#25E739")),
+ new SolidColorBrush(Color.FromArgb("#F4890B")),
+ new SolidColorBrush(Color.FromArgb("#E2227E"))
+};
 
 this.chart.PaletteBrushes = CustomBrushes;
 . . .
@@ -45,47 +104,7 @@ this.Content = chart;
 
 {% endtabs %}
 
-## Applying PaletteBrushes for Series
-
-Polar chart provides support to set the palette to series for applying predefined brushes to the segment. The following code example shows you how to set the [PaletteBrushes]() for the series.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<chart:SfPolarChart>
-. . .
-    <chart:PolarAreaSeries ItemsSource="{Binding Data}"  
-                        XBindingPath="XValue" 
-                        YBindingPath="YValue" 
-                        PaletteBrushes="{Binding CustomBrushes}"/>
-</chart:SfPolarChart>
-
-{% endhighlight %}
-
-{% highlight c# %}
-
-public class ViewModel
-{
-	public ObservableCollection<Model> Data { get; set; }
-
-	public List<Brush> CustomBrushes { get; set; }
-	public ViewModel()
-	{
-		CustomBrushes = new List<Brush>();
-		CustomBrushes.Add(new SolidColorBrush(Color.FromRgb(38, 198, 218)));
-		CustomBrushes.Add(new SolidColorBrush(Color.FromRgb(0, 188, 212)));
-		CustomBrushes.Add(new SolidColorBrush(Color.FromRgb(0, 172, 193)));
-		CustomBrushes.Add(new SolidColorBrush(Color.FromRgb(0, 151, 167)));
-		CustomBrushes.Add(new SolidColorBrush(Color.FromRgb(0, 131, 143)));
-	}
-
-. . .
-}
-
-{% endhighlight %}
-
-{% endtabs %}
+![Custom PaletteBrushes in MAUI Chart](Appearance_images/MAUI_polar_chart_custom_palette.png)
 
 ## Applying Gradient
 
@@ -97,12 +116,20 @@ The following code sample and screenshot illustrates how to apply the gradient b
 
 {% highlight xaml %}
 
-<chart:SfPolarChart>
+<chart:SfPolarChart PaletteBrushes="{Binding CustomBrushes}">
 . . .
-    <chart:PolarAreaSeries ItemsSource="{Binding Data}"  
-                        XBindingPath="XValue" 
-                        YBindingPath="YValue" 
-                        PaletteBrushes="{Binding CustomBrushes}"/>
+    <chart:PolarAreaSeries ItemsSource="{Binding PlantDetails}"  
+                        XBindingPath="Direction" 
+                        YBindingPath="Tree"/>
+
+	 <chart:PolarAreaSeries ItemsSource="{Binding PlantDetails}"  
+                        XBindingPath="Direction" 
+                        YBindingPath="Weed"/>
+
+	 <chart:PolarAreaSeries ItemsSource="{Binding PlantDetails}"  
+                        XBindingPath="Direction" 
+                        YBindingPath="Flowers"/>
+
 </chart:SfPolarChart>
 
 {% endhighlight %}
@@ -117,39 +144,40 @@ public class ViewModel
 	public ViewModel()
 	{
 		CustomBrushes = new List<Brush>();
+
 		LinearGradientBrush gradientColor1 = new LinearGradientBrush();
 			gradientColor1.GradientStops = new GradientStopCollection()
 			{
-				new GradientStop() { Offset = 1, Color = Color.FromRgb(255, 231, 199) },
-				new GradientStop() { Offset = 0, Color = Color.FromRgb(252, 182, 159) }
+				new GradientStop() { Offset = 1, Color = Color.FromRgb(168, 234, 238) },
+				new GradientStop() { Offset = 0, Color = Color.FromRgb(123, 176, 249) }
 			};
 
-			LinearGradientBrush gradientColor2 = new LinearGradientBrush();
-			gradientColor2.GradientStops = new GradientStopCollection()
-			{
-				new GradientStop() { Offset = 1, Color = Color.FromRgb(250, 221, 125) },
-				new GradientStop() { Offset = 0, Color = Color.FromRgb(252, 204, 45) }
-			};
+		LinearGradientBrush gradientColor2 = new LinearGradientBrush();
+		gradientColor2.GradientStops = new GradientStopCollection()
+		{
+			new GradientStop() { Offset = 1, Color = Color.FromRgb(221, 214, 243) },
+			new GradientStop() { Offset = 0, Color = Color.FromRgb(250, 172, 168) }
+		};
 
-			LinearGradientBrush gradientColor3 = new LinearGradientBrush();
+		LinearGradientBrush gradientColor3 = new LinearGradientBrush();
 			gradientColor3.GradientStops = new GradientStopCollection()
 			{
 				new GradientStop() { Offset = 1, Color = Color.FromRgb(255, 231, 199) },
 				new GradientStop() { Offset = 0, Color = Color.FromRgb(252, 182, 159) }
 			};
 
-			LinearGradientBrush gradientColor4 = new LinearGradientBrush();
+		LinearGradientBrush gradientColor4 = new LinearGradientBrush();
 			gradientColor4.GradientStops = new GradientStopCollection()
 			{
-				new GradientStop() { Offset = 1, Color = Color.FromRgb(221, 214, 243) },
-				new GradientStop() { Offset = 0, Color = Color.FromRgb(250, 172, 168) }
+				new GradientStop() { Offset = 1, Color = Color.FromRgb(255, 231, 199) },
+				new GradientStop() { Offset = 0, Color = Color.FromRgb(252, 182, 159) }
 			};
 
 			LinearGradientBrush gradientColor5 = new LinearGradientBrush();
 			gradientColor5.GradientStops = new GradientStopCollection()
 			{
-				new GradientStop() { Offset = 1, Color = Color.FromRgb(168, 234, 238) },
-				new GradientStop() { Offset = 0, Color = Color.FromRgb(123, 176, 249) }
+				new GradientStop() { Offset = 1, Color = Color.FromRgb(250, 221, 125) },
+				new GradientStop() { Offset = 0, Color = Color.FromRgb(252, 204, 45) }
 			};
 
 			CustomBrushes.Add(gradientColor1);
@@ -158,13 +186,14 @@ public class ViewModel
 			CustomBrushes.Add(gradientColor4);
 			CustomBrushes.Add(gradientColor5);
 	}
-
 . . .
 }
 
 {% endhighlight %}
 
 {% endtabs %}
+
+![Gradient in MAUI Chart](Appearance_images/MAUI_polar_chart_gradient.png)
 
 ## Plotting Area Customization:
 
@@ -214,3 +243,5 @@ this.Content = chart;
 {% endhighlight %}
 
 {% endtabs %}
+
+![Watermark in .NET MAUI Charts](Appearance_images/polar_water_mark.png)

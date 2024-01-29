@@ -57,6 +57,8 @@ this.Content = chart;
 
 {% endtabs %}
 
+![Polar area chart type in MAUI Chart](Chart-types_images/MAUI_polar_area_chart.png)
+
 ## Grid line Type
 
 The [GridLineType]() property used to modify the rendering style of axis grid lines. The default [GridLineType]() is [Circle](). Switching to the [Polygon]() grid line type transforms the polar chart appearance, resembling a spider or web chart.
@@ -93,6 +95,8 @@ this.Content = chart;
 {% endhighlight %}
 
 {% endtabs %}
+
+![Polar gridline type in MAUI Chart](Chart-types_images/MAUI_polar_area_gridline.png)
 
 ## Closed Series
 
@@ -132,3 +136,5 @@ this.Content = chart;
 {% endhighlight %}
 
 {% endtabs %}
+
+![Polar open series in MAUI Chart](Chart-types_images/MAUI_polar_area_IsClosed.png)

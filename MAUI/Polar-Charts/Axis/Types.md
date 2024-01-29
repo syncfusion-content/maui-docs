@@ -50,6 +50,8 @@ chart.SecondaryAxis.Add(secondaryAxis);
 
 {% endtabs %}
 
+![NumericalAxis interval support in MAUI Chart](Axis_Images/MAUI_numerical_axis.png)
+
 ### Interval
 
 Axis interval can be customized by using the [Interval]() property. By default, interval will be calculated based on the minimum and maximum value of the provided data.
@@ -146,6 +148,8 @@ chart.PrimaryAxis.Add(primaryAxis);
 {% endhighlight %}
 
 {% endtabs %}
+
+![CategoryAxis support in MAUI Chart](Axis_Images/MAUI_category_axis.png)
 
 ### Label placement
 
@@ -310,6 +314,8 @@ chart.PrimaryAxis.Add(primaryAxis);
 {% endhighlight %}
 
 {% endtabs %}
+
+![DateTimeCategoryAxis support in MAUI Chart](Axis_Images/MAUI_datetime_axis.png)
 
 ### Interval
 
