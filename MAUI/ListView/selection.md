@@ -297,9 +297,9 @@ listView.SelectionBackground = Colors.Khaki;
 
 ![MAUI ListView selection background](Images/selection/maui-listview-selection-background.jpg)
 
-### Programatic animation
+### Programmatic animation
 
-The SfListView allows programmatic animation in selection at runtime by using the virtual method [AnimateSelectedItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_SelectionBackground) of [SelectionController] (https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html) class.
+The SfListView allows programmatic animation in selection at runtime by using the virtual method `AnimateSelectedItem` of `SelectionController` class.
 
 
 {% tabs %}
@@ -326,7 +326,7 @@ public class SelectionControllerExt : SelectionController
 {% endhighlight %}
 {% endtabs %}
 
-![MAUI ListView programatic animation](Images/selection/maui-listview-programatic-animation.gif)
+![MAUI ListView programmatic animation](Images/selection/maui-listview-programatic-animation.gif)
 
 ## Events
 
