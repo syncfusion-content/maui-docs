@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with .NET MAUI Badge View (SfBadgeView)
 
-This section explains the steps required to configure the .NET MAUI Badge View control for .NET MAUI Badge Notifications and customize its elements. This section covers only basic features needed to get started with Syncfusion badge view control.
+This section explains the steps required to configure the .NET MAUI Badge View control for .NET MAUI Badge Notifications and customize its elements.
 
 To get start quickly with our .NET MAUI Badge View, you can check the below video.
 
@@ -203,4 +203,4 @@ The following screenshot illustrates the result of the above code.
 
 ![.NET MAUI Badge View Getting Started](getting-started_images/net_maui_badge_view_getting_started.png) 
 
-N> You can refer to our [.NET MAUI Badge View](https://www.syncfusion.com/maui-controls/maui-badge-view) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Badge View Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/BadgeView/SampleBrowser.Maui.BadgeView/Samples/BadgeView) that shows you how to render the Badge View in .NET MAUI.
+You can refer to our [.NET MAUI Badge View](https://www.syncfusion.com/maui-controls/maui-badge-view) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Badge View Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/BadgeView/SampleBrowser.Maui.BadgeView/Samples/BadgeView) that shows you how to render the Badge View in .NET MAUI.
