@@ -12,7 +12,7 @@ The appearance of [SfPolarChart]() can be customized by using the predefined bru
 
 ## Default PaletteBrushes for Chart
 
-By default, chart applies a set of predefined brushes to the series in a predefined order. [SfPolarChart]() provides [PaletteBrushes]() property for applying various kinds of custom palettes brushes.
+By default, chart applies a set of predefined brushes to the series in a predefined order. The following screenshot shows the default appearance of multiple series.
 
 {% tabs %}
 

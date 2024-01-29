@@ -756,7 +756,7 @@ chart.TooltipBehavior = tooltip;
 
 ## Known issue 
 
-* Based on this ticket - https://www.syncfusion.com/feedback/49487/gradient-support-for-line-based-series-in-net-maui-chart, gradient is not working for Polar line series.
+* According to this ticket - https://www.syncfusion.com/feedback/49487/gradient-support-for-line-based-series-in-net-maui-chart, the gradient feature is not functioning properly for Polar line series in .NET MAUI Chart.
 
 ## Unsupported features from Xamarin.Forms
 
