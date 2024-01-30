@@ -9,7 +9,7 @@ documentation: UG
 
 # Load More in MAUI DataGrid (SfDataGrid)
 
-TThe DataGrid enables the "Load More" option when the `SfDataGrid.AllowLoadMore` property is set to true. When the "Load More" feature is enabled, an interactive load more view will be displayed on the SfDataGrid only when the grid reaches the maximum scroll offset while scrolling down. It loads a subset of data into its data source at runtime when users tap the `DataGridLoadMoreView`.
+TThe DataGrid enables the Load more option when the `SfDataGrid.AllowLoadMore` property is set to true. When the Load more feature is enabled, an interactive load more view will be displayed on the SfDataGrid only when the grid reaches the maximum scroll offset while scrolling down. It loads a subset of data into its data source at runtime when users tap the `DataGridLoadMoreView`.
 
 ## Load more command
 The DataGrid loads a subset of data to its data source at runtime by triggering an ICommand bound to the `SfDataGrid.LoadMoreCommand` property. It will be executed when the user taps the load more view.
@@ -18,7 +18,9 @@ Set the `SfDataGrid.IsBusy` property to true before loading items to notify the 
 
 To enable and load items at runtime, follow the code example:
 
-```C# 
+{% tabs %}
+{% highlight c# %}
+
 //Enable load more in SfDataGrid
 dataGrid.AllowLoadMore = true;
 dataGrid.LoadMoreCommand = new Command(ExecuteLoadMoreCommand);
@@ -30,31 +32,43 @@ private async void ExecuteLoadMoreCommand()
     viewModel.LoadMoreItems();
     this.dataGrid.IsBusy = false;
 } 
-```
+
+{% endhighlight %}
+{% endtabs %}
+
 <img alt="DataGridLoadMoreView" src="Images\loadmore\maui-datagrid-loadmoreview.gif" width="404"/>
 
-## Customize DataGridLoadMoreView
+## Customization
 
-### Customize load more view display text
+### Display text
 Customize the text displayed in the LoadMoreView by setting the `SfDataGrid.LoadMoreText` property as follows:
 
-```C#
+{% tabs %}
+{% highlight c# %}
+
 //setting load more text in SfDataGrid
 dataGrid.LoadMoreText = "LOAD MORE";
-```
 
-### Customize load more view position
+{% endhighlight %}
+{% endtabs %}
+
+### Position
 The position of load more view can be customized by using the `SfDataGrid.LoadMorePosition` property. By default, the load more view is displayed in the bottom position.
 
-```C#
+{% tabs %}
+{% highlight c# %}
+
 //Enable load more in SfDataGrid
 dataGrid.LoadMorePosition = DataGridLoadMorePosition.Top;
-```
+
+{% endhighlight %}
+{% endtabs %}
+
 **Top**
 
 <img alt="DataGridLoadMore with LoadMorePosition Top" src="Images\loadmore\maui-datagrid-loadmoreview-loadmoreposition-top.png" width="404"/>
 
-### Appearance customization
+### Appearance
 The appearance of the built-in load more view can be personalized through the following properties:
 
 <table>
@@ -90,7 +104,9 @@ The data grid offers built-in support for configuring a custom load more view to
 
 The following code snippets demonstrate how to enable a custom load more view in the data grid:
 
-```C#
+{% tabs %}
+{% highlight c# %}
+
 public class CustomLoadMoreView : DataGridLoadMoreView
 {
     private Label? loadMoreView;
@@ -131,6 +147,8 @@ public class CustomLoadMoreView : DataGridLoadMoreView
         return bounds.Size;
     }
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 <img alt="DataGrid with CustomLoadMoreView" src="Images\loadmore\maui-datagrid-custom-loadmoreview.png" width="404"/>
