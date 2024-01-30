@@ -11,6 +11,8 @@ documentation: ug
 
 The NET MAUI PDF Viewer has scrolling capabilities that allow users to navigate through content seamlessly. This section will walk you through various aspects of scrolling, including programmatically setting scroll positions and detecting scroll changes.
 
+W> Please note that since the PDF Viewer has built-in scrolling capability, it is advised to avoid placing the PDF Viewer inside other controls that also offer scrolling, such as [ScrollView](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/scrollview?view=net-maui-8.0). Nesting within such controls may cause unexpected issues.
+
 ## Navigate to the desired offset programmatically
 
 The [ScrollToOffset](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_ScrollToOffset_System_Double_System_Double_) method moves the scroll position of the SfPdfViewer to the specified horizontal and vertical offsets. If the specified offset value is wrong, the scroll will not happen, and the older position will be retained.
@@ -103,5 +105,3 @@ Similarly, for horizontal end detection, refer to the following code example.
         }
 {% endhighlight %}
 {% endtabs %}
-
-W> Please note that since the PDF Viewer has built-in scrolling capability, it is advised to avoid placing the PDF Viewer inside other controls that also offer scrolling, such as [ScrollView](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/scrollview?view=net-maui-8.0). Nesting within such controls may cause unexpected issues.
