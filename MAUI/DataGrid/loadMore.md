@@ -98,7 +98,7 @@ The appearance of the built-in load more view can be personalized through the fo
 <img alt="DataGridLoadMore with customized appearance" src="Images\loadmore\maui-datagrid-loadmoreview-loadmore-custom-appearance.png" width="404"/>
 
 
-## Custom LoadMore View
+## Custom load more View
 
 The data grid offers built-in support for configuring a custom load more view to meet your specific requirements.
 
