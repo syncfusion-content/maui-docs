@@ -31,9 +31,17 @@ private async void ExecuteLoadMoreCommand()
     this.dataGrid.IsBusy = false;
 } 
 ```
-![DataGridLoadMoreView](Images\loadmore\maui-datagrid-loadmoreview.gif)
+<img alt="DataGridLoadMoreView" src="Images\loadmore\maui-datagrid-loadmoreview.gif" width="404"/>
 
 ## Customize DataGridLoadMoreView
+
+### Customize load more view display text
+Customize the text displayed in the LoadMoreView by setting the `SfDataGrid.LoadMoreText` property as follows:
+
+```C#
+//setting load more text in SfDataGrid
+dataGrid.LoadMoreText = "LOAD MORE";
+```
 
 ### Customize load more view position
 The position of load more view can be customized by using the `SfDataGrid.LoadMorePosition` property. By default, the load more view is displayed in the bottom position.
@@ -44,20 +52,40 @@ dataGrid.LoadMorePosition = DataGridLoadMorePosition.Top;
 ```
 **Top**
 
-![DataGridLoadMore with LoadMorePosition Top](Images\loadmore\maui-datagrid-loadmoreview-loadmoreposition-top.png)
+<img alt="DataGridLoadMore with LoadMorePosition Top" src="Images\loadmore\maui-datagrid-loadmoreview-loadmoreposition-top.png" width="404"/>
 
 ### Appearance customization
 The appearance of the built-in load more view can be personalized through the following properties:
 
-* LoadMoreBackground
-* LoadMoreButtonBackground
-* LoadMoreButtonTextColor
-* LoadMoreIndicatorColor
+<table>
+<tr>
+<th> Property</th>
+<th> Description </th>
+</tr>
+<tr>
+<td> {{'`LoadMoreBackground`'| markdownify }} </td>
+<td> Sets the Background of the `DataGridLoadMoreView`.</td>
+</tr>
+<tr>
+<td> {{'`LoadMoreButtonBackground`'| markdownify }} </td>
+<td> Sets the Background of the `DataGridLoadMoreView` button.</td>
+</tr>
+<tr>
+<td> {{'`LoadMoreButtonTextColor`'| markdownify }} </td>
+<td> Sets the Text color of the `DataGridLoadMoreView` button.</td>
+</tr>
+<tr>
+<td> {{'`LoadMoreIndicatorColor`'| markdownify }} </td>
+<td>  Sets the Background of the `DataGridLoadMoreView` indicator.</td>
+</tr>
+</table>
 
-![DataGridLoadMore with customized appearance](Images\loadmore\maui-datagrid-loadmoreview-loadmore-custom-appearance.png)
+
+<img alt="DataGridLoadMore with customized appearance" src="Images\loadmore\maui-datagrid-loadmoreview-loadmore-custom-appearance.png" width="404"/>
 
 
 ## Custom LoadMore View
+
 The data grid offers built-in support for configuring a custom load more view to meet your specific requirements.
 
 The following code snippets demonstrate how to enable a custom load more view in the data grid:
@@ -104,4 +132,5 @@ public class CustomLoadMoreView : DataGridLoadMoreView
     }
 }
 ```
-![DataGrid with CustomLoadMoreView](Images\loadmore\maui-datagrid-custom-loadmoreview.png)
+
+<img alt="DataGrid with CustomLoadMoreView" src="Images\loadmore\maui-datagrid-custom-loadmoreview.png" width="404"/>
