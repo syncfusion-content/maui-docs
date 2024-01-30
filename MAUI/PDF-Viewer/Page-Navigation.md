@@ -75,17 +75,4 @@ private void LastPageButton_Clicked(object sender, EventArgs e)
 {% endhighlight %}
 {% endtabs %}
 
-## Navigate to the desired offset programmatically
-
-The [ScrollToOffset](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_ScrollToOffset_System_Double_System_Double_) method moves the scroll position of the SfPdfViewer to the specified horizontal and vertical offsets. If the specified offset value is wrong, then the scroll will not happen, and the older position will be retained.
-
-{% tabs %}
-{% highlight c# %}
-// Navigate to the scroll offset position (100,1000)
-PdfViewer.ScrollToOffset(100, 1000);
-{% endhighlight %}
-{% endtabs %}
-
 The example project with the page navigation functionalities can be downloaded [here](https://github.com/SyncfusionExamples/maui-pdf-viewer-examples).
-
-W> Please note that the PDF Viewer has built-in scrolling capability. Therefore, it is advised avoid placing the PDF Viewer inside other controls that also offer scrolling, such as [ScrollView](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/scrollview?view=net-maui-8.0). Nesting within such controls may cause unexpected issues.
