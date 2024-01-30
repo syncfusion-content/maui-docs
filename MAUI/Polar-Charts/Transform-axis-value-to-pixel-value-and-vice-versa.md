@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Transform axis value to pixel value and vice-versa | Syncfusion
-description: Learn here all about to transform axis value to pixel value and vice-versa in SfPolarChart in Syncfusion .NET MAUI Chart (SfPolarChart) control.
+description: Learn here all about how to transform axis value to pixel value and vice versa in SfPolarChart in Syncfusion .NET MAUI Chart.
 platform: maui
 control: SfPolarChart
 documentation: ug

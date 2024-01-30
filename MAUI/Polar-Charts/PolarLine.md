@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Polar Line Chart in .NET MAUI Chart control | Syncfusion
-description: Learn here all about the Polar Line chart types and its features in Syncfusion .NET MAUI Chart (SfPolarChart) control.
+description: Learn here all about the Polar chart type and its features in the Syncfusion .NET MAUI Chart (SfPolarChart) control.
 platform: maui
 control: SfPolarChart
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 ## Polar Line Chart
 
-To display an Line series in a polar chart, instantiate the [PolarLineSeries]() and include it in the [Series]() collection property of [SfPolarChart]().
+To display an line series in a polar chart, instantiate the [PolarLineSeries]() and include it in the [Series]() collection property of [SfPolarChart]().
 
 {% tabs %}
 

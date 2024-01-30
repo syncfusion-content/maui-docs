@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Axis labels in .NET MAUI Chart control | Syncfusion
-description: Learn here all about axis labels and its customization in Syncfusion .NET MAUI Chart (SfPolarChart) control.
+description: Learn here all about axis labels and their customization in the Syncfusion .NET MAUI Chart (SfPolarChart) control.
 platform: maui
 control: SfPolarChart
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Axis labels in .NET MAUI Chart
 
-Axis labels are used to show the units or measures or category value of axis to visualize the data user friendly. It will be generated based on the range and the values binded to [XBindingPath]() or [YBindingPath]() properties of series.
+Axis labels are used to display the units, measures, or category values of an axis in a user-friendly way. They are generated based on the range and the values bound to the [XBindingPath]() or [YBindingPath]() properties of the series.
 
 ## Label Rotation
 
@@ -35,11 +35,11 @@ The [LabelRotation]() property is used to define the angle for the label content
 SfPolarChart chart = new SfPolarChart();
 . . .
 
-NumericalAxis SecondaryAxis = new NumericalAxis()
+NumericalAxis secondaryAxis = new NumericalAxis()
 {
     LabelRotation = 90
 };
-chart.SecondaryAxis.Add(SecondaryAxis);
+chart.SecondaryAxis.Add(secondaryAxis);
 
 {% endhighlight %}
 
@@ -47,7 +47,7 @@ chart.SecondaryAxis.Add(SecondaryAxis);
 
 ## Label customization
 
-The [LabelStyle]() property of axis provides options to customize the font-family, font-size, font-attributes and text color of axis labels. The axis labels can be customized using following properties:
+The [LabelStyle]() property of the axis provides options to customize the font family, font size, font attributes, and text color of axis labels. The axis labels can be customized using the following properties:
 
 * `Background` - Gets or sets the background color of the labels.
 * `CornerRadius` - Gets or sets a value that defines the rounded corners for labels.
@@ -63,7 +63,7 @@ The [LabelStyle]() property of axis provides options to customize the font-famil
 
 ## Edge Labels Drawing Mode
 
-Chart axis provides support to customize the rendering position of the edge labels using the [EdgeLabelsDrawingMode]() property. [EdgeLabelsDrawingMode]() property default value is `Shift`.
+The chart axis provides support for customizing the rendering position of the edge labels using the [EdgeLabelsDrawingMode]() property. The default value of the [EdgeLabelsDrawingMode]() property is `Shift`.
 
 | Action | Description |
 |--|--|
@@ -90,11 +90,11 @@ Chart axis provides support to customize the rendering position of the edge labe
 
 SfPolarChart chart = new SfPolarChart();
 . . . 
-DateTimeAxis SecondaryAxis = new DateTimeAxis()
+DateTimeAxis secondaryAxis = new DateTimeAxis()
 {
     EdgeLabelsDrawingMode = EdgeLabelsDrawingMode.Center
 };
-chart.SecondaryAxis.Add(SecondaryAxis);
+chart.SecondaryAxis.Add(secondaryAxis);
 
 {% endhighlight %}
 
@@ -128,11 +128,11 @@ The visibility of the edge labels of the axis can be controlled using the [EdgeL
 
 SfPolarChart chart = new SfPolarChart();
 . . .
-NumericalAxis SecondaryAxis = new NumericalAxis()
+NumericalAxis secondaryAxis = new NumericalAxis()
 {
     EdgeLabelsVisibilityMode = EdgeLabelsVisibilityMode.AlwaysVisible
 };
-chart.SecondaryAxis.Add(SecondaryAxis);
+chart.SecondaryAxis.Add(secondaryAxis);
 
 {% endhighlight %}
 
@@ -161,11 +161,11 @@ chart.SecondaryAxis.Add(SecondaryAxis);
 
 SfPolarChart chart = new SfPolarChart();
 . . .
-NumericalAxis SecondaryAxis = new NumericalAxis()
+NumericalAxis secondaryAxis = new NumericalAxis()
 {
     EdgeLabelsVisibilityMode = EdgeLabelsVisibilityMode.Visible
 };
-chart.SecondaryAxis.Add(SecondaryAxis);
+chart.SecondaryAxis.Add(secondaryAxis);
 
 {% endhighlight %}
 

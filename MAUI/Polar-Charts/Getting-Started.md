@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting started with .NET MAUI Chart control | Syncfusion
-description: This section explains about the getting started with Syncfusion MAUI Chart (SfPolarChart) control.
+description: Learn here all about getting started with Syncfusion MAUI Chart (SfPolarChart) control.
 platform: maui
 control: SfPolarChart
 documentation: ug
@@ -9,14 +9,14 @@ documentation: ug
 
 # Getting Started with .NET MAUI Chart
 
-This section explains how to populate the Polar chart with data, a title, data labels, a legend, and tooltips, as well as the essential aspects for getting started with the chart.
+This section explains how to populate the Polar chart with data, a title, data labels, a legend, and tooltips. It also covers the essential aspects for getting started with the chart.
 
 ## Creating an application with .NET MAUI chart
 
 1. Create a new .NET MAUI application in Visual Studio.
-2. Syncfusion .NET MAUI components are available in [nuget.org](https://www.nuget.org/). To add SfPolarChart to your project, open the NuGet package manager in Visual Studio, search for Syncfusion.Maui.Charts and then install it.
+2. Syncfusion .NET MAUI components are available on [nuget.org](https://www.nuget.org/). To add SfPolarChart to your project, open the NuGet package manager in Visual Studio, search for Syncfusion.Maui.Charts, and then install it.
 3. To initialize the control, import the Chart namespace.
-4. Initialize [SfPolarChart]().
+4. Initialize the SfPolarChart.
 
 {% tabs %} 
 
@@ -198,9 +198,9 @@ this.BindingContext = new ViewModel();
 
 ## Populate Chart with data
 
-Adding [PolarAreaSeries]() to the polar chart [Series]() collection and binding `Data` to the series [ItemsSource]() property from its `DataContext` for creating polar chart.
+To create a polar chart, you can add a [PolarAreaSeries]() to the polar chart [Series]() collection. Then, bind the `Data` to the series [ItemsSource]() property from its `DataContext`.
 
-N> To plot the series, the [XBindingPath]() and [YBindingPath]() properties must be configured so that the chart may get values from the respective properties in the data model.
+N> In order to plot the series, the [XBindingPath]() and [YBindingPath]() properties need to be configured correctly. These properties allow the chart to retrieve values from the corresponding properties in the data model.
 
 {% tabs %}   
 
@@ -234,7 +234,6 @@ NumericalAxis secondaryAxis = new NumericalAxis();
 chart.SecondaryAxis.Add(secondaryAxis);
 
 PolarAreaSeries series = new PolarAreaSeries();
-series.ShowDataLabels = true;
 series.ItemsSource = (new ViewModel()).PlantDetails;
 series.XBindingPath = "Direction";
 series.YBindingPath = "Tree";
@@ -330,7 +329,7 @@ The legend provides information about the data point displayed in the chart. The
 
 {% endtabs %}  
 
-N> Additionally, set label for each series using the `Label` property of chart series, which will be displayed in corresponding legend.
+N> Additionally, set a label for each series using the `Label` property of the chart series, which will be displayed in the corresponding legend.
 
 {% tabs %} 
 
@@ -361,7 +360,7 @@ series.Label = "Tree";
 
 ## Enable tooltip
 
-Tooltips are used to show information about the segment, when a user hovers over a segment. Enable tooltip by setting series [EnableTooltip]() property to true.
+Tooltips are used to display information about a segment when a user hovers over it. Enable the tooltip by setting the series' [EnableTooltip]() property to true.
 
 {% tabs %} 
 
@@ -435,7 +434,7 @@ The following code example gives you the complete code of above configurations.
                     XBindingPath="Direction" 
                     YBindingPath="Tree">
                 <chart:PolarAreaSeries.DataLabelSettings>
-                    <chart:PolarDataLabelSettings LabelPlacement="Inner"/>
+                    <chart:PolarDataLabelSettings LabelPlacement="Auto"/>
                 </chart:PolarAreaSeries.DataLabelSettings>
             </chart:PolarAreaSeries>
             </chart:SfPolarChart>
@@ -477,7 +476,7 @@ namespace ChartGettingStarted
                 YBindingPath = "Tree",
                 DataLabelSettings = new PolarDataLabelSettings
                 {
-                    LabelPlacement = DataLabelPlacement.Inner
+                    LabelPlacement = DataLabelPlacement.Auto
                 }              
             };  
 

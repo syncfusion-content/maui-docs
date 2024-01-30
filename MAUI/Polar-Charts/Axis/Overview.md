@@ -1,7 +1,7 @@
 ---
 layout: post
 title: About Axis in .NET MAUI Chart control | Syncfusion
-description: Learn here all about chart axis and its keys features of Syncfusion .NET MAUI Chart (SfPolarChart) control.
+description: Learn here all about the chart axis and its key features in the Syncfusion .NET MAUI Chart (SfPolarChart) control.
 platform: maui
 control: SfPolarChart
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Axis in .NET MAUI Chart
 
-[ChartAxis]() is used to locate a data point inside the chart area. Charts typically have two axes that are used to measure and categorize data: a primary axis, and a secondary axis.
+The [ChartAxis]() is used to locate a data point within the chart area. Charts usually consist of two axes, which are used to measure and categorize data: a primary axis and a secondary axis.
 
 Polar chart supports the following types of chart axis.
 

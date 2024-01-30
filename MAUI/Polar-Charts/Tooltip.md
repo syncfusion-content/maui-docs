@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Tooltip in .NET MAUI Chart control | Syncfusion
-description: This section explains about how to enable tooltip and its customization in Syncfusion .NET MAUI Chart (SfPolarChart) control.
+description: Learn here all about how to enable tooltips and their customization in the Syncfusion .NET MAUI Chart (SfPolarChart) control.
 platform: maui
 control: SfPolarChart
 documentation: ug
@@ -139,7 +139,7 @@ The [SfPolarChart]() provides support to customize the appearance of the tooltip
 
 <chart:SfPolarChart >
     <chart:SfPolarChart.Resources>
-         <DataTemplate x:Key="template1" x:Name="temp">
+         <DataTemplate x:Key="tooltipTemplate1" x:Name="temp">
      <StackLayout>
          <Label Text="{Binding Item.Direction}" HorizontalTextAlignment="Center" HorizontalOptions="Center" VerticalTextAlignment="Center" TextColor="White" FontAttributes="Bold" FontFamily="Helvetica" Margin="0,2,0,2" FontSize="12.5"/>
          <BoxView Color="Gray" HeightRequest="1" WidthRequest="90"/>

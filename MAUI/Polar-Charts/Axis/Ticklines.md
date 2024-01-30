@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Axis Tick Line in .NET MAUI Chart control | Syncfusion
-description: Learn here all about chart axis tick line and its customization in Syncfusion .NET MAUI Chart (SfPolarChart) control.
+description: Learn here all about the chart axis tick line and its customization in the Syncfusion .NET MAUI Chart (SfPolarChart) control.
 platform: maui
 control: SfPolarChart
 documentation: ug

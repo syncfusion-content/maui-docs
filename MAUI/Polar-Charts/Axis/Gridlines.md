@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Axis grid lines in .NET MAUI Chart control | Syncfusion
-description: Learn here all about the chart axis grid lines and its customization in syncfusion .NET MAUI Chart(SfPolarChart).
+description: Learn here all about the chart axis grid lines and their customization in Syncfusion .NET MAUI Chart (SfPolarChart).
 platform: maui
 control: SfPolarChart
 documentation: ug

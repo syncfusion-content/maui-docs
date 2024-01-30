@@ -11,7 +11,7 @@ documentation: ug
 
 ## Export as an image
 
-You can export the chart view as an image in the desired file format using the [SaveAsImage]() method of [SfPolarChart](). The supported image formats are **JPEG and PNG**. By default, i.e., if you didn’t mention any image format with the filename, the chart view will be exported as an image in the PNG format.
+You can export the chart view as an image in the desired file format using the [SaveAsImage]() method of [SfPolarChart](). The supported image formats are **JPEG and PNG**. By default, if you don't mention any image format with the filename, the chart view will be exported as an image in the PNG format.
 
 N> The chart view can be exported as an image only when the chart view is added to the visual tree.
 
@@ -31,7 +31,7 @@ this.Content = chart;
 
 {% endtabs %}
 
-T> We can change the image formats in above code by changing its extension as .jpg, .png.
+T> We can change the image formats in the above code by changing their extensions to .jpg or .png.
 
 The exported image will be saved in the different location across the platforms.
 

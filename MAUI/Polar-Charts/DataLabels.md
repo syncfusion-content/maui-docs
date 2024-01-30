@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Data label in .NET MAUI Chart control | Syncfusion
-description: This section explains about how to configure the data labels and its features in .NET MAUI Chart (SfPolarChart).
+description: Learn here all about how to configure the data labels and their features in Syncfusion .NET MAUI Chart (SfPolarChart).
 platform: maui
 control: SfPolarChart
 documentation: ug
@@ -103,7 +103,7 @@ chart.Series.Add(series);
 
 ## LabelPlacement
 
-Other than the above alignment options, Chart providing additional customization option to position the data labels. 
+In addition to the alignment options mentioned above, the Chart provides additional customization options for positioning the data labels.
 
 The [LabelPlacement]() property is used to position the data labels at [Center](), [Inner]() and [Outer]() position of the actual data point position. By default, labels are positioned based on the series types for better readability.
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Axis padding in .NET MAUI Chart control | Syncfusion
-description: Learn here all about how to set padding for chart axis in Syncfusion .NET MAUI Chart (SfPolarChart) control.
+description: Learn here all about how to set padding for the chart axis in the Syncfusion .NET MAUI Chart (SfPolarChart) control.
 platform: maui
 control: SfPolarChart
 documentation: ug

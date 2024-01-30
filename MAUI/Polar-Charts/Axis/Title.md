@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Title for axis in .NET MAUI Chart control | Syncfusion
-description: This section explains about chart axis title, title style, title template and its customization in .NET MAUI chart (SfPolarChart).
+description: Learn here all about chart axis title, title style, title template, and its customization in the Syncfusion .NET MAUI chart (SfPolarChart).
 platform: maui
 control: SfPolarChart
 documentation: ug
@@ -20,9 +20,6 @@ The [Title]() property is used to set the title for the chart axis.
 
     <chart:SfPolarChart.PrimaryAxis>
         <chart:CategoryAxis>
-            <chart:CategoryAxis.Title>
-                <chart:ChartAxisTitle Text="Category"/>
-            </chart:CategoryAxis.Title>
         </chart:CategoryAxis>
     </chart:SfPolarChart.PrimaryAxis>
     <chart:SfPolarChart.SecondaryAxis>
@@ -42,7 +39,6 @@ SfPolarChart chart = new SfPolarChart();
 . . .
 CategoryAxis primaryAxis = new CategoryAxis();
 primaryAxis.Title = new ChartAxisTitle();
-primaryAxis.Title.Text = "Category";
 chart.PrimaryAxis.Add(primaryAxis);
 
 NumericalAxis secondaryAxis = new NumericalAxis();
