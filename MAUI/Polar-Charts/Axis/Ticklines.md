@@ -1,0 +1,102 @@
+---
+layout: post
+title: Axis Tick Line in .NET MAUI Chart control | Syncfusion
+description: Learn here all about the chart axis tick line and its customization in the Syncfusion .NET MAUI Chart (SfPolarChart) control.
+platform: maui
+control: SfPolarChart
+documentation: ug
+---
+
+# Tick Lines in .NET MAUI Chart
+
+Tick lines are the small lines which is drawn on the axis line representing the axis labels. Tick lines will be drawn outside of the axis by default. 
+
+Minor tick lines can be added to the axis by defining the [MinorTicksPerInterval]() property. This property will add the minor tick lines to every interval based on value.
+
+N> For category axis, minor tick lines are not applicable. Since it is rendered based on index positions.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<chart:SfPolarChart>
+. . .
+<chart:SfPolarChart.PrimaryAxis>
+    <chart:NumericalAxis MinorTicksPerInterval="4"/>
+</chart:SfPolarChart.PrimaryAxis>
+
+<chart:SfPolarChart.SecondaryAxis>
+    <chart:NumericalAxis />
+</chart:SfPolarChart.SecondaryAxis>
+
+</chart:SfPolarChart>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+SfPolarChart chart = new SfPolarChart();
+. . .
+NumericalAxis primaryAxis = new NumericalAxis()
+{
+    MinorTicksPerInterval = 4 
+};
+chart.PrimaryAxis.Add(primaryAxis);
+
+NumericalAxis secondaryAxis = new NumericalAxis();
+chart.SecondaryAxis.Add(secondaryAxis);
+
+{% endhighlight %}
+
+{% endtabs %}
+
+## Customization
+
+Both major and minor tick lines can be customized by using the [MajorTickStyle]() and [MinorTickStyle]() properties respectively. They provide options to change the [StrokeWidth](), [TickSize](), [Stroke]() of tick lines. By default minor tick lines will not be visible.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<chart:SfPolarChart>
+. . .
+<chart:SfPolarChart.PrimaryAxis>
+    <chart:NumericalAxis MinorTicksPerInterval="4">
+        <chart:NumericalAxis.MajorTickStyle>
+            <chart:ChartAxisTickStyle Stroke="Red"
+									  StrokeWidth="1"
+									  TickSize="10"/>
+        </chart:NumericalAxis.MajorTickStyle>
+        
+        <chart:NumericalAxis.MinorTickStyle>
+            <chart:ChartAxisTickStyle Stroke="Red" StrokeWidth="1"/>
+        </chart:NumericalAxis.MinorTickStyle>
+    </chart:NumericalAxis>
+</chart:SfPolarChart.PrimaryAxis>
+
+<chart:SfPolarChart.SecondaryAxis>
+    <chart:NumericalAxis />
+</chart:SfPolarChart.SecondaryAxis>
+
+</chart:SfPolarChart>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+SfPolarChart chart = new SfPolarChart();
+. . .
+NumericalAxis numerical = new NumericalAxis();
+numerical.MajorTickStyle.StrokeWidth = 1;
+numerical.MajorTickStyle.Stroke = Colors.Red;
+numerical.MinorTicksPerInterval = 4;
+numerical.MinorTickStyle.StrokeWidth = 1;
+numerical.MinorTickStyle.Stroke = Colors.Red;
+chart.PrimaryAxis.Add(numerical);
+
+NumericalAxis secondaryAxis = new NumericalAxis();
+chart.SecondaryAxis.Add(secondaryAxis);
+
+{% endhighlight %}
+
+{% endtabs %}
