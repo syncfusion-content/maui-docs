@@ -70,7 +70,7 @@ You can customize intervals using the [HistogramInterval]() property and collaps
 
 {% endtabs %}
 
-![Histogram Chart in MAUI]()
+![Histogram Chart in MAUI](Chart-Types_images/maui_Histogram_chart)
 
 ## Customization of distribution curve
 
@@ -128,4 +128,4 @@ You can define the [CurveStyle]() of the distribution curve using the [ChartLine
 
 {% endtabs %}
 
-
+![Customized distribution curve of Histogram chart](Chart-Types_images/maui_Histogram_chart_distribution_curve)
