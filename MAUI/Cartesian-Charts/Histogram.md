@@ -7,9 +7,9 @@ control: SfCartesianChart
 documentation: ug
 ---
 
-# Histogarm Chart in .NET MAUI Chart
+# Histogram Chart in .NET MAUI Chart
 
-## Histogarm Chart
+## Histogram Chart
 
 Histogram chart provides a visual display of large amount of data that are difficult to understand in a tabular or data grid form.
 
