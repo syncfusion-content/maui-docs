@@ -9,19 +9,18 @@ documentation: UG
 
 # Load More in MAUI DataGrid (SfDataGrid)
 
-TThe DataGrid enables the Load more option when the [SfDataGrid.AllowLoadMore](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AllowLoadMore) property is set to true. When the Load more feature is enabled, an interactive load more view will be displayed on the SfDataGrid only when the grid reaches the maximum scroll offset while scrolling down. It loads a subset of data into its data source at runtime when users tap the [DataGridLoadMoreView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridLoadMoreView.html).
+The DataGrid enables the Load more option when the [SfDataGrid.AllowLoadMore](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AllowLoadMore) property is set to true. When the load more feature is enabled, an interactive load more view will be displayed on the DataGrid only when the DataGrid reaches the maximum scroll offset while scrolling down. It loads a subset of data into its data source at runtime when users tap the [DataGridLoadMoreView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridLoadMoreView.html).
 
 ## Load more command
 The DataGrid loads a subset of data to its data source at runtime by triggering an ICommand bound to the [SfDataGrid.LoadMoreCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_LoadMoreCommand) property. It will be executed when the user taps the load more view.
 
-Set the [SfDataGrid.IsBusy](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_IsBusy ) property to true before loading items to notify the grid that more items are about to be loaded. Set the property to false after successfully loading items into the grid. When loading items, customize the duration for displaying the activity indicator by introducing a delay based on specific requirements.
+Set the [SfDataGrid.IsBusy](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_IsBusy ) property to true before loading items to notify the DataGrid that more items are about to be loaded. Set the property to false after successfully loading items into the DataGrid. When loading items, customize the duration for displaying the activity indicator by introducing a delay based on specific requirements.
 
 To enable and load items at runtime, follow the code example:
 
 {% tabs %}
 {% highlight c# %}
 
-//Enable load more in SfDataGrid
 dataGrid.AllowLoadMore = true;
 dataGrid.LoadMoreCommand = new Command(ExecuteLoadMoreCommand);
  
@@ -46,7 +45,6 @@ Customize the text displayed in the LoadMoreView by setting the [SfDataGrid.Load
 {% tabs %}
 {% highlight c# %}
 
-//setting load more text in SfDataGrid
 dataGrid.LoadMoreText = "LOAD MORE";
 
 {% endhighlight %}
@@ -58,7 +56,6 @@ The position of load more view can be customized by using the [SfDataGrid.LoadMo
 {% tabs %}
 {% highlight c# %}
 
-//Enable load more in SfDataGrid
 dataGrid.LoadMorePosition = DataGridLoadMorePosition.Top;
 
 {% endhighlight %}
@@ -78,19 +75,19 @@ The appearance of the built-in load more view can be personalized through the fo
 </tr>
 <tr>
 <td> {{'[LoadMoreBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_LoadMoreBackground)'| markdownify }} </td>
-<td> Sets the Background of the `DataGridLoadMoreView`.</td>
+<td> Sets the Background of the load more view.</td>
 </tr>
 <tr>
 <td> {{'[LoadMoreButtonBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_LoadMoreButtonBackground)'| markdownify }} </td>
-<td> Sets the Background of the `DataGridLoadMoreView` button.</td>
+<td> Sets the Background of the load more view button.</td>
 </tr>
 <tr>
 <td> {{'[LoadMoreButtonTextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_LoadMoreButtonTextColor)'| markdownify }} </td>
-<td> Sets the Text color of the `DataGridLoadMoreView` button.</td>
+<td> Sets the Text color of the load more view button.</td>
 </tr>
 <tr>
 <td> {{'[LoadMoreIndicatorColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_LoadMoreIndicatorColor)'| markdownify }} </td>
-<td>  Sets the Background of the `DataGridLoadMoreView` indicator.</td>
+<td>  Sets the Background of the load more view indicator.</td>
 </tr>
 </table>
 
@@ -100,9 +97,9 @@ The appearance of the built-in load more view can be personalized through the fo
 
 ## Custom load more View
 
-The data grid offers built-in support for configuring a custom load more view to meet your specific requirements.
+The DataGrid offers built-in support for configuring a custom load more view to meet your specific requirements.
 
-The following code snippets demonstrate how to enable a custom load more view in the data grid:
+The following code snippets demonstrate how to enable a custom load more view in the DataGrid:
 
 {% tabs %}
 {% highlight c# %}
