@@ -33,7 +33,8 @@ The following is the code example for subscribing to the `PropertyChanged` event
 {% tabs %}
 {% highlight XAML %}
 
-<syncfusion:SfPdfViewer x:Name="PdfViewer" PropertyChanged="PdfViewer_PropertyChanged"/>
+<syncfusion:SfPdfViewer 
+    x:Name = "PdfViewer" PropertyChanged = "PdfViewer_PropertyChanged"/>
 
 {% endhighlight %}
 {% highlight C# %}
@@ -52,7 +53,8 @@ Handle scroll changes by implementing the event handler method. The following co
 
 {% tabs %}
 {% highlight c# %}
-private void PdfViewer_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
+private void PdfViewer_PropertyChanged(object sender, 
+    System.ComponentModel.PropertyChangedEventArgs e)
 {
     if (e.PropertyName == nameof(SfPdfViewer.HorizontalOffset))
     {
@@ -80,12 +82,14 @@ Below is the code example to detect whether the control has reached the vertical
 
 {% tabs %}
 {% highlight c# %}
-private void PdfViewer_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
+private void PdfViewer_PropertyChanged(object sender, 
+    System.ComponentModel.PropertyChangedEventArgs e)
 {
     if (e.PropertyName == nameof(SfPdfViewer.VerticalOffset))
     {
         // Determine if the control has reached the vertical end of the document.
-        bool isVerticalEndReached = (PdfViewer.VerticalOffset + PdfViewer.ClientRectangle.Height >= PdfViewer.ExtentHeight);
+        bool isVerticalEndReached = (PdfViewer.VerticalOffset + 
+            PdfViewer.ClientRectangle.Height >= PdfViewer.ExtentHeight);
     }
 }
 {% endhighlight %}
@@ -95,12 +99,14 @@ Similarly, for horizontal end detection, refer to the following code example.
 
 {% tabs %}
 {% highlight c# %}
-private void PdfViewer_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
+private void PdfViewer_PropertyChanged(object sender, 
+    System.ComponentModel.PropertyChangedEventArgs e)
 {
     if (e.PropertyName == nameof(SfPdfViewer.HorizontalOffset))
     {
         // Determine if the control has reached the horizontal end of the document.
-        bool isHorizontalEndReached = (PdfViewer.HorizontalOffset + PdfViewer.ClientRectangle.Width >= PdfViewer.ExtentWidth);
+        bool isHorizontalEndReached = (PdfViewer.HorizontalOffset + 
+            PdfViewer.ClientRectangle.Width >= PdfViewer.ExtentWidth);
     }
 }
 {% endhighlight %}
