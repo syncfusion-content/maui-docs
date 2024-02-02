@@ -27,7 +27,7 @@ Plot band can be added to the category axis by specifying index values to the [S
             <chart:CategoryAxis >
                 <chart:CategoryAxis.PlotBands>
                     <chart:NumericalPlotBand Start="2" Width="2" 
-                                             Fill="Orange" IsPixelWidth="True"/>
+                                             Fill="Orange"/>
                 </chart:CategoryAxis.PlotBands>
             </chart:CategoryAxis>
         </chart:SfCartesianChart.XAxes>
@@ -48,8 +48,7 @@ Plot band can be added to the category axis by specifying index values to the [S
     {
         Start = 2,
         Width = 2,
-        Fill = Color.Orange,
-        IsPixelWidth = true
+        Fill = Color.Orange
     };
 
     categoryAxis.PlotBands.Add(plotBand);
@@ -62,7 +61,7 @@ Plot band can be added to the category axis by specifying index values to the [S
 
 {% endtabs %}
 
-![Strip line in category axis in MAUI Chart]()
+![Strip line in category axis in MAUI Chart](StripLines_Images/Category.png)
 
 
 ## Plot Band in Numerical axis
@@ -112,7 +111,7 @@ Plot band can be added to the numerical axis by specifying numerical values to t
 
 {% endtabs %}
 
-![Strip line in numerical axis in MAUI Chart]()
+![Strip line in numerical axis in MAUI Chart](StripLines_Images/Numerical.png)
 
 ## Plot Band in DateTime axis
 
@@ -163,7 +162,7 @@ A plot band can be applied to a date-time axis by specifying [Start]() date and 
 
 {% endtabs %}
 
-![Strip line in DateTime axis in MAUI Chart]()
+![Strip line in DateTime axis in MAUI Chart](StripLines_Images/Numerical.png)
 
 
 ## Plot Band Recurrence
@@ -220,7 +219,7 @@ The Plot band recurrence is used to enable the plot bands to be drawn repeatedly
 
 {% endtabs %}
 
-![plot band recurrence]()
+![plot band recurrence](StripLines_Images/Reaccurence.png)
 
 ## Segmented Plot Band
 
@@ -276,7 +275,7 @@ If you need to draw a plot band that should not stretch along its associated axi
 
 {% endtabs %}
 
-![segmented plot band]()
+![segmented plot band](StripLines_Images/segmented.png)
 
 ## Customized Text
 
@@ -340,4 +339,4 @@ You can able to add a text in the plot band using the [Text]() property.Also the
 
 {% endtabs %}
 
-![segmented plot band]()
+![segmented plot band](StripLines_Images/Text.png)
