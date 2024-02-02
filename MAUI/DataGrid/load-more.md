@@ -32,28 +32,12 @@ private async void ExecuteLoadMoreCommand()
     this.dataGrid.IsBusy = false;
 } 
 
-
-public void LoadMoreItems()
-{
-    for (int i = 0; i < 10; i++)
-        this.OrderInfoCollection.Add(this.GenerateOrderInfo(OrderInfoCollection.Count));
-}
-
-public OrderInfo GenerateOrderInfo(int count)
-{
-    var order = new OrderInfo(
-        count + 1000, CustomerID[random.Next(7)],
-        Country[random.Next(7)],
-        Customer[random.Next(7)],
-        ShipCity[random.Next(7)]);
-
-    return order;
-}
-
 {% endhighlight %}
 {% endtabs %}
 
 <img alt="DataGridLoadMoreView" src="Images\loadmore\maui-datagrid-loadmoreview.gif" width="404"/>
+
+You can download the complete project of this demo from [GitHub](https://github.com/SyncfusionExamples/Load-More-.net-maui-datagrid/tree/master).
 
 ## Customization
 
@@ -110,18 +94,21 @@ The appearance of the built-in load more view can be personalized through the fo
 
 <img alt="DataGridLoadMore with customized appearance" src="Images\loadmore\maui-datagrid-loadmoreview-loadmore-custom-appearance.png" width="404"/>
 
-## Size
+## Change load more view Size
 
 The data grid allows to customize the size of the load more view by setting the `HeightRequest` and `WidthRequest` properties. Refer the below code example to customize the width and height of the load more view.
 
 {% tabs %}
 {% highlight c# %}
 
+dataGrid.LoadMoreText = "Load More Items";
 dataGrid.LoadMoreView.HeightRequest = 50;
-dataGrid.LoadMoreView.Children.OfType<Button>().ToList()[0].WidthRequest = 150;
+dataGrid.LoadMoreView.Children.OfType<Button>().First().WidthRequest = 150;
 
 {% endhighlight %}
 {% endtabs %}
+
+<img alt="DataGridLoadMore with customized text and size" src="Images\loadmore\maui-datagrid-loadmoreview-loadmore-custom-text-and-size.png" width="404"/>
 
 ## Custom load more View
 
@@ -177,5 +164,3 @@ public class CustomLoadMoreView : DataGridLoadMoreView
 {% endtabs %}
 
 <img alt="DataGrid with CustomLoadMoreView" src="Images\loadmore\maui-datagrid-custom-loadmoreview.png" width="404"/>
-
-You can download the complete project of this demo from [GitHub](https://github.com/SyncfusionExamples/Load-More-.net-maui-datagrid/tree/master).
