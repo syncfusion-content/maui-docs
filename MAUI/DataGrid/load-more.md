@@ -9,12 +9,12 @@ documentation: UG
 
 # Load More in MAUI DataGrid (SfDataGrid)
 
-The DataGrid enables the Load more option when the [SfDataGrid.AllowLoadMore](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AllowLoadMore) property is set to true. When the load more feature is enabled, an interactive load more view will be displayed on the DataGrid only when the DataGrid reaches the maximum scroll offset while scrolling down. It loads a subset of data into its data source at runtime when users tap the [DataGridLoadMoreView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridLoadMoreView.html).
+The SfDataGrid enables the load more option when the [SfDataGrid.AllowLoadMore](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AllowLoadMore) property is set to true. When the load more feature is enabled, an interactive load more view will be displayed on the datagrid only when the datagrid reaches the maximum scroll offset while scrolling down. It loads a subset of data into its data source at runtime when users tap the [DataGridLoadMoreView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridLoadMoreView.html).
 
 ## Load more command
-The DataGrid loads a subset of data to its data source at runtime by triggering an ICommand bound to the [SfDataGrid.LoadMoreCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_LoadMoreCommand) property. It will be executed when the user taps the load more view.
+The datagrid loads a subset of data to its data source at runtime by triggering an ICommand bound to the [SfDataGrid.LoadMoreCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_LoadMoreCommand) property. It will be executed when the user taps the load more view.
 
-Set the [SfDataGrid.IsBusy](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_IsBusy ) property to true before loading items to notify the DataGrid that more items are about to be loaded. Set the property to false after successfully loading items into the DataGrid. When loading items, customize the duration for displaying the activity indicator by introducing a delay based on specific requirements.
+Set the [SfDataGrid.IsBusy](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_IsBusy ) property to true before loading items to notify the datagrid that more items are about to be loaded. Set the property to false after successfully loading items into the datagrid. When loading items, customize the duration for displaying the activity indicator by introducing a delay based on specific requirements.
 
 To enable and load items at runtime, follow the code example:
 
@@ -32,6 +32,24 @@ private async void ExecuteLoadMoreCommand()
     this.dataGrid.IsBusy = false;
 } 
 
+
+public void LoadMoreItems()
+{
+    for (int i = 0; i < 10; i++)
+        this.OrderInfoCollection.Add(this.GenerateOrderInfo(OrderInfoCollection.Count));
+}
+
+public OrderInfo GenerateOrderInfo(int count)
+{
+    var order = new OrderInfo(
+        count + 1000, CustomerID[random.Next(7)],
+        Country[random.Next(7)],
+        Customer[random.Next(7)],
+        ShipCity[random.Next(7)]);
+
+    return order;
+}
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -40,7 +58,7 @@ private async void ExecuteLoadMoreCommand()
 ## Customization
 
 ### Display text
-Customize the text displayed in the LoadMoreView by setting the [SfDataGrid.LoadMoreText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_LoadMoreText) property as follows:
+Customize the text displayed in the load more view by setting the [SfDataGrid.LoadMoreText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_LoadMoreText) property as follows:
 
 {% tabs %}
 {% highlight c# %}
@@ -60,8 +78,6 @@ dataGrid.LoadMorePosition = DataGridLoadMorePosition.Top;
 
 {% endhighlight %}
 {% endtabs %}
-
-**Top**
 
 <img alt="DataGridLoadMore with LoadMorePosition Top" src="Images\loadmore\maui-datagrid-loadmoreview-loadmoreposition-top.png" width="404"/>
 
@@ -94,12 +110,24 @@ The appearance of the built-in load more view can be personalized through the fo
 
 <img alt="DataGridLoadMore with customized appearance" src="Images\loadmore\maui-datagrid-loadmoreview-loadmore-custom-appearance.png" width="404"/>
 
+## Size
+
+The data grid allows to customize the size of the load more view by setting the `HeightRequest` and `WidthRequest` properties. Refer the below code example to customize the width and height of the load more view.
+
+{% tabs %}
+{% highlight c# %}
+
+dataGrid.LoadMoreView.HeightRequest = 50;
+dataGrid.LoadMoreView.Children.OfType<Button>().ToList()[0].WidthRequest = 150;
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Custom load more View
 
-The DataGrid offers built-in support for configuring a custom load more view to meet your specific requirements.
+The datagrid offers built-in support for configuring a custom load more view to meet your specific requirements.
 
-The following code snippets demonstrate how to enable a custom load more view in the DataGrid:
+The following code snippets demonstrate how to enable a custom load more view in the datagrid:
 
 {% tabs %}
 {% highlight c# %}
@@ -149,3 +177,5 @@ public class CustomLoadMoreView : DataGridLoadMoreView
 {% endtabs %}
 
 <img alt="DataGrid with CustomLoadMoreView" src="Images\loadmore\maui-datagrid-custom-loadmoreview.png" width="404"/>
+
+You can download the complete project of this demo from [GitHub](https://github.com/SyncfusionExamples/Load-More-.net-maui-datagrid/tree/master).
