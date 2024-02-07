@@ -9,7 +9,7 @@ documentation: UG
 
 # Unbound column in MAUI DataGrid (SfDataGrid)
 
-An "unbound column" typically refers to a column in a datagrid or table that is not directly bound to a data source. In other words, the data displayed in this column is not sourced from the underlying dataset but is rather calculated or manually entered. The unbound column can be added by using the SfDataGrid.DataGridUnboundColumn class.
+An "Unbound column" typically refers to a column in a datagrid or table that is not directly bound to a data source. In other words, the data displayed in this column is not sourced from the underlying dataset but is rather calculated or manually entered. The unbound column can be added by using the SfDataGrid.DataGridUnboundColumn class.
 
 {% tabs %}
 {% highlight xaml %}
