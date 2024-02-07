@@ -41,8 +41,6 @@ To enable or disable the zooming functionality, set the value of the [`AllowZoom
 
 Programmatically, you can zoom the loaded image without any interaction by setting a value to the [`ZoomLevel`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_ZoomLevel) property. 
 
-N> The [`ZoomLevel`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_ZoomLevel) property of the image editor will be updated based on the image zoomed status.
-
 {% tabs %}
 
 {% highlight XAML %}
