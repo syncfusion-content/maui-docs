@@ -194,7 +194,7 @@ Assign custom `DataTemplateSelector` to the [`CardTemplate`]() of the SfKanban i
 
 {% highlight xaml %}
 
-    <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+    <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                 x:Class="SimpleSample.MainPage"
                 xmlns:kanban="clr-namespace:Syncfusion.SfKanban.XForms;assembly=Syncfusion.SfKanban.XForms""
