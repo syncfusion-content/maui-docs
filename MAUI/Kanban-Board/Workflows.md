@@ -9,10 +9,10 @@ documentation: ug
 
 # Workflows in .NET MAUI Kanban Board (SfKanban)
 
-This feature is used to define the flow of the card transitions from one state to another state. You need to create an instance of [`KanbanWorkflow`]() class and add it to [`SfKanban.Workflows`]() property to define the workflow for each column.  The [`KanbanWorkflow`]() contains the following properties to define the source category and target categories.
+This feature is used to define the flow of the card transitions from one state to another state. You need to create an instance of [`KanbanWorkflow`]() class and add it to [`Workflows`]() property of [`SfKanban`]() to define the workflow for each column.  The [`KanbanWorkflow`]() contains the following properties to define the source category and target categories.
 
-* [`Category`]()            - Used to define the source category/state.
-* [`AllowedTransitions`]()  - Used to define the list of categories/states, the card with the state specified in KanbanWorkflow.Category is allowed to transit.
+* [`Category`]() - Used to define the source category/state.
+* [`AllowedTransitions`]() - Used to define the list of categories/states, the card with the state specified in KanbanWorkflow. Category is allowed to transit.
 
 The following code example describes the workflow functionality.
 

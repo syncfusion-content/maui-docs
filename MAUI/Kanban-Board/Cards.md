@@ -11,13 +11,13 @@ documentation: ug
 
 The default elements of a card can be customized using the below properties of [`KanbanModel`]().
 
-* [`Title`]()         - Used to set the title of a card.
-* [`ImageURL`]()      - Used to set the image URL of a card. The image will be displayed at right side in default card template.
-* [`Category`]()      - Used to set the category of a card. Based on the category the cards will be added to the respective columns. 
-* [`Description`]()   - Used to set the description text of a card.
-* [`ColorKey`]()      - Used to specify the indicator color key. The [`Color`]() value of the corresponding [`Key`]() should be added in [`ColorModel`]() collection of [`SfKanban`]().
-* [`Tags`]()          - Used to specify the tags of a card. The tags will be displayed at bottom in default card template.
-* [`ID`]()            - Used to set the ID of a card.
+* [`Title`]() - Used to set the title of a card.
+* [`ImageURL`]() - Used to set the image URL of a card. The image will be displayed at right side in default card template.
+* [`Category`]() - Used to set the category of a card. Based on the category the cards will be added to the respective columns. 
+* [`Description`]() - Used to set the description text of a card.
+* [`ColorKey`]() - Used to specify the indicator color key. The [`Color`]() value of the corresponding [`Key`]() should be added in [`ColorModel`]() collection of [`SfKanban`]().
+* [`Tags`]() - Used to specify the tags of a card. The tags will be displayed at bottom in default card template.
+* [`ID`]() - Used to set the ID of a card.
 
 {% highlight C# %}
 
@@ -51,7 +51,7 @@ Following code snippet is used to define the colors for each key.
 
 ## Template
 
-You can replace the entire card template with your own design using [`SfKanban.CardTemplate`]() property. The following code snippet and screenshot illustrates this.
+You can replace the entire card template with your own design using [`CardTemplate`]() property of [`SfKanban`](). The following code snippet and screenshot illustrates this.
 
 {% tabs %}
 

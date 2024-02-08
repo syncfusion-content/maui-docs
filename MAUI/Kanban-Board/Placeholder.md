@@ -15,21 +15,21 @@ The placeholder is to denote a card's new position in the [`KanbanColumn`](). It
 
 [`PlaceholderStyle`]() property is used to customize the placeholder. Following [`KanbanPlaceholderStyle`]() properties are used to customize its appearance.
 
-* [`BackgroundColor`]()  	 - This property is used to change the background color of the placeholder.
-* [`BorderColor`]() 	 	 - This property is used to change the border color of the placeholder.
-* [`BorderThickness`]()  	 - This property is used to change the border width of the placeholder.
-* [`StrokeDashArray`]()     - This property is used to change the dashes of the placeholder border.
-* [`FontSize`]()            - This is used to change the text size of the placeholder.
-* [`TextColor`]()           - This property is used to change the text color of the placeholder.
+* [`BackgroundColor`]() - This property is used to change the background color of the placeholder.
+* [`BorderColor`]() - This property is used to change the border color of the placeholder.
+* [`BorderThickness`]() - This property is used to change the border width of the placeholder.
+* [`StrokeDashArray`]() - This property is used to change the dashes of the placeholder border.
+* [`FontSize`]() - This is used to change the text size of the placeholder.
+* [`TextColor`]() - This property is used to change the text color of the placeholder.
 
 Following properties are used to customize the selected category when you have more than one category in a column.
 
-* [`SelectedBackgroundColor`]() 	- This property is used to change the background color of the selected placeholder.
-* [`SelectedBorderColor`]() 		- This property is used to change the border color of the selected placeholder.
-* [`SelectedBorderThickness`]() 	- This property is used to change the border width of the selected placeholder.
-* [`SelectedStrokeDashArray`]()     - This property is used to change the dashes of the selected placeholder.
-* [`SelectedFontSize`]()            - This is used to change the font size of the text in selected placeholder.
-* [`SelectedTextColor`]()           - This property is used to change the color of the text in selected placeholder.
+* [`SelectedBackgroundColor`]() - This property is used to change the background color of the selected placeholder.
+* [`SelectedBorderColor`]() - This property is used to change the border color of the selected placeholder.
+* [`SelectedBorderThickness`]() - This property is used to change the border width of the selected placeholder.
+* [`SelectedStrokeDashArray`]() - This property is used to change the dashes of the selected placeholder.
+* [`SelectedFontSize`]() - This is used to change the font size of the text in selected placeholder.
+* [`SelectedTextColor`]() - This property is used to change the color of the text in selected placeholder.
 
 The following code example describes the above behavior.
 

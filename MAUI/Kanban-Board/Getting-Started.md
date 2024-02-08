@@ -11,7 +11,7 @@ documentation: ug
 
 This section provides a quick overview for working with Essential Kanban for .NET MAUI. It is an efficient way to visualize the workflow at each stage along its path to completion.
 
-## Creating an application .NET MAUI Kanban Board control
+## Creating an application using .NET MAUI Kanban Board control
 
 1. Create a new .NET MAUI application in Visual studio.
 2. Syncfusion .NET MAUI components are available in [nuget.org](https://www.nuget.org/). To add SfKanban to your project, open the NuGet package manager in Visual Studio, search for Syncfusion.Maui.Kanban and then install it.
@@ -152,17 +152,17 @@ N> Add namespace of ViewModel class in your XAML page if you prefer to set Bindi
 
 {% highlight xaml %}
 
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    x:Class="KanbanGettingStarted.MainPage"
-    xmlns:chart="clr-namespace:Syncfusion.Maui.Kanban;assembly=Syncfusion.Maui.Kanban"
-    xmlns:model="clr-namespace:KanbanGettingStarted"> 
+    <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                x:Class="KanbanGettingStarted.MainPage"
+                xmlns:chart="clr-namespace:Syncfusion.Maui.Kanban;assembly=Syncfusion.Maui.Kanban"
+                xmlns:model="clr-namespace:KanbanGettingStarted"> 
 
-	<ContentPage.BindingContext>
-		<local:ViewModel>
-		</local:ViewModel>   
-	</ContentPage.BindingContext>
-</ContentPage>
+	    <ContentPage.BindingContext>
+            <local:ViewModel>
+            </local:ViewModel>   
+        </ContentPage.BindingContext>
+    </ContentPage>
 
 {% endhighlight %}
 
@@ -197,7 +197,7 @@ Bind the above data to [`SfKanban`]() using [`ItemsSource`]() property.
 
 ## Defining columns
 
-The columns are generated automatically based on the distinct values of ['KanbanModel.Category']() from ['ItemsSource'](). But, you can also define the columns by setting ['AutoGenerateColumns']() property to false and adding ['KanbanColumn']() instance to ['Columns']() property of ['SfKanban']().
+The columns are generated automatically based on the different values of [`Category`]() in the [`KanbanModel`]() class from [`ItemsSource`](). But, you can also define the columns by setting [`AutoGenerateColumns`]() property to false and adding [`KanbanColumn`]() instance to [`Columns`]() property of [`SfKanban`]().
 
 {% tabs %}
 

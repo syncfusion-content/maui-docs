@@ -11,7 +11,7 @@ documentation: ug
 
 ## Customizing Column Size
 
-By default, columns are sized smartly to arrange the default elements of the cards with better readability. However, you can define the minimum and maximum width for the columns in [`SfKanban`]() using [`SfKanban.MinimumColumnWidth`]() and [`SfKanban.MaximumColumnWidth`]() properties respectively. 
+By default, columns are sized smartly to arrange the default elements of the cards with better readability. However, you can define the minimum and maximum width for the columns in [`SfKanban`]() using [`MinimumColumnWidth`]() and [`MaximumColumnWidth`]() properties respectively. 
 
 {% tabs %}
 
@@ -32,7 +32,7 @@ By default, columns are sized smartly to arrange the default elements of the car
 {% endtabs %}
 
 
-You can also define the exact column width using [`SfKanban.ColumnWidth`]() property.
+You can also define the exact column width using [`ColumnWidth`]() property of [`SfKanban`]().
 
 {% tabs %}
 
@@ -53,7 +53,7 @@ You can also define the exact column width using [`SfKanban.ColumnWidth`]() prop
 
 ## Categorizing Columns
 
-If [`ItemsSource`]() contains custom objects, the path of the property which can be used to categorize the card should be explicitly defined using [`ColumnMappingPath`]() property. By default, [`SfKanban`]() will automatically categorize the items using [`KanbanModel.Category`]() property.
+If [`ItemsSource`]() contains custom objects, the path of the property which can be used to categorize the card should be explicitly defined using [`ColumnMappingPath`]() property. By default, [`SfKanban`]() will automatically categorize the items using [`Category`]() property of [`KanbanModel`]().
 
 {% tabs %}
 
@@ -74,7 +74,7 @@ If [`ItemsSource`]() contains custom objects, the path of the property which can
 
 ### Multiple category for a column
 
-More than one category can be mapped to a column by assigning multiple values to Categories collection of [`KanbanColumn`](). For e.g., you can map In progress, Validate types under “In progress” column.
+More than one category can be mapped to a column by assigning multiple values to Categories collection of [`KanbanColumn`](). For e.g., you can map "In progress, Validate" types under In progress column.
 
 {% highlight C# %} 
 
@@ -86,7 +86,7 @@ More than one category can be mapped to a column by assigning multiple values to
 
 ## Headers
 
-Header shows the category [`Title`](), items count, min and max informations of a column. The UI of the header can be replaced entirely using [`SfKanban.HeaderTemplate`]() property. The following code snippet and screenshot illustrates this.
+Header shows the category [`Title`](), items count, min and max informations of a column. The UI of the header can be replaced entirely using [`HeaderTemplate`]() property of [`SfKanban`](). The following code snippet and screenshot illustrates this.
 
 {% tabs %}
 
@@ -130,7 +130,7 @@ The following output is displayed as a result of the above code example.
 
 ## Expand/Collapse Column
 
-Columns can be expanded/collapsed by tapping the toggle button which is placed at top right corner of the Kanban header. [`KanbanColumn.IsExpanded`]() property is used to programmatically expand/collapse the Kanban column. The following code example describes the above behavior.   
+Columns can be expanded/collapsed by tapping the toggle button which is placed at top right corner of the Kanban header. [`IsExpanded`]() property of [`KanbanColumn`]() is used to programmatically expand/collapse the Kanban column. The following code example describes the above behavior.   
 
 {% tabs %}
 
@@ -164,7 +164,7 @@ The following output is displayed as a result of the above code example.
 
 ## Enable/Disable Drag & Drop 
 
-You can enable and disable the drag and drop operation of the cards for particular column using [`KanbanColumn.AllowDrag`]() and [`KanbanColumn.AllowDrop`]() properties.
+You can enable and disable the drag and drop operation of the cards for particular column using [`AllowDrag`]() and [`AllowDrop`]() properties of [`KanbanColumn`]().
 
 The following code is used to disable the drag operation from progress column.
 
@@ -250,8 +250,6 @@ The following output demonstrates the above example code.
 {% endhighlight %}
 
 {% endtabs %}
-
-
 
 {% tabs %}
 
