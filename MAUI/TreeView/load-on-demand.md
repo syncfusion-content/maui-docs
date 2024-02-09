@@ -13,7 +13,7 @@ TreeView enables loading child items only upon request through Lazy Loading. Thi
 
 {% tabs %}
 {% highlight xaml %}
-
+    
     <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:sfTreeView="clr-namespace:Syncfusion.Maui.TreeView;assembly=Syncfusion.Maui.TreeView"
@@ -250,7 +250,6 @@ The TreeView displays the expander icon for a specific node based on the return 
 {% tabs %}
 {% highlight c# %}
 
-       
     /// <summary>
     /// CanExecute method is called before expanding and initialization of node. Returns whether the node has child nodes or not.
     /// Based on the return value of the expander, the visibility of the node is handled.  
@@ -282,9 +281,6 @@ For on-demand loading of child items, the [Execute](https://learn.microsoft.com/
 {% tabs %}
 {% highlight c# %}
 
-  
-  
-  
     /// <summary>
     /// Execute method is called when any item is requested for load-on-demand items.
     /// </summary>
