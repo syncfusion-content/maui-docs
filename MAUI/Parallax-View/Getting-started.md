@@ -266,6 +266,6 @@ The following code sample demonstrates how to bind the SfListView to the `Source
 
 N> The size of the `Content` view will automatically be stretched to the size of the `Source` view.
 
-![SfParallaxView]()
+![SfParallaxView](ParallaxView_Images/parallaxview.gif)
 
 You can find the complete getting started sample from this link: [Sample]()
