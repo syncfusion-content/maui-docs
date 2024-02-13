@@ -263,4 +263,4 @@ Define the categories of column using [`Categories`]() property of [`KanbanColum
 
 This is how the final output will look like. You can download the entire source code of this demo from [here]().
 
-
+![Final output of SfKanban](Kanban_images/SfKanban-gettingstartedImage.jpg)

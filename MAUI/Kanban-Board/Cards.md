@@ -47,7 +47,7 @@ Following code snippet is used to define the colors for each key.
     
 {% endhighlight %}
 
-![Customization of cards in .NET MAUI Kanban]()
+![Customization of cards in .NET MAUI Kanban](Kanban_images/CardCustomization.png)
 
 ## Template
 
@@ -139,7 +139,7 @@ You can replace the entire card template with your own design using [`CardTempla
 
 {% endtabs %}
 
-![Template support for cards in .NET MAUI Kanban]()
+![Template support for cards in .NET MAUI Kanban](Kanban_images/CardTemplate.png)
 
 ## Data template selector
 
@@ -232,5 +232,5 @@ Assign custom `DataTemplateSelector` to the [`CardTemplate`]() of the SfKanban i
 
 {% endtabs %}
 
-![DataTemplateSelector support for cards in .NET MAUI Kanban]()
+![DataTemplateSelector support for cards in .NET MAUI Kanban](Kanban_images/CardTemplateSelector.png)
 

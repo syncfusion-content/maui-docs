@@ -19,4 +19,4 @@ The Kanban control is an efficient way to visualize a workflow at each stage of 
 * Customize at a high level.
 * Transition smoothly within processes.
 
-![Overview_img]()
+![Overview_img](Kanban_images/Overview_img.png)
