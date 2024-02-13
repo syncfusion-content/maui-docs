@@ -9,7 +9,7 @@ documentation: ug
 
 # Migrate from Xamarin.Forms SfParallaxView to .NET MAUI SfParallaxView
 
-The SfParallaxView was created from the scratch using the upgraded APIs and performance of the .NET MAUI graphics library and framework layouts. However, to maintain the consistency of the API naming in MAUI SfParallaxView, we renamed some of the APIs. The APIs changed in MAUI SfParallaxView from Xamarin SfParallaxView are detailed as follows:
+The [SfParallaxView]() was created from the scratch using the upgraded APIs and performance of the .NET MAUI graphics library and framework layouts. However, to maintain the consistency of the API naming in MAUI [SfParallaxView](), we renamed some of the APIs. The APIs changed in MAUI [SfParallaxView]() from Xamarin [SfParallaxView]() are detailed as follows:
 
 ## Namespaces
 
@@ -28,7 +28,7 @@ Syncfusion.XForms.ParallaxView
 </tr>
 </table>
 
-To make the migration easier, the most of the APIs from the Xamarin [SfParallaxView](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ParallaxView.SfParallaxView.html) were kept in the .NET MAUI [SfParallaxView](). Currently, most of the features have been added in the [SfParallaxView](), but only a few are pending in the .NET MAUI along with some limitations. Please refer to the following details and the API migration information available below.
+To make the migration easier, the most of the APIs from the Xamarin [SfParallaxView](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ParallaxView.SfParallaxView.html) were kept in the .NET MAUI [SfParallaxView](). Please refer to the following details and the API migration information available below.
 
 ## Initialize control
 
@@ -111,7 +111,7 @@ this.Content = parallax;
 <tr>
 <td>SfParallaxView</td>
 <td>SfParallaxView</td>
-<td>SfParallaxView control provides scrolling for any control that implements the IParallaxVie.</td>
+<td>SfParallaxView control provides scrolling for any control that implements the IParallaxView.</td>
 </tr>
 <tr>
 <td>ParallaxScrollingEventArgs</td>
@@ -196,73 +196,6 @@ The following table illustrates the API migration for the parallax view.
 <td>ScrollContentSize</td>
 </tr>
 </table>
-
-The following code example explains how to migrate Xamarin SfParallaxView to the .NET MAUI SfParallaxView.
-
-<table>
-<tr>
-<th>Xamarin</th>
-</tr>
-<tr>
-<td>
-
-{% tabs %} 
-
-{% highlight xaml %}
-
-    <ContentPage
-        . . .
-        xmlns:parallax="clr-namespace:Syncfusion.XForms.ParallaxView;Syncfusion.XForms.ParallaxView">
-
-        <parallax:SfParallaxView/>
-
-    </ContentPage>
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-    using Syncfusion.XForms.ParallaxView;
-    ...
-
-    SfParallaxView parallaxView = new SfParallaxView();
-    this.Content = parallaxView;
-
-{% endhighlight %}
-
-{% endtabs %}
-</td>
-</tr>
-<tr>
-<th>.NET MAUI</th>
-</tr>
-<tr>
-<td>
-{% tabs %} 
-
-{% highlight xaml %}
-
-    <ContentPage
-        . . .
-        xmlns:parallax="clr-namespace:Syncfusion.Maui.ParallaxView;assembly=Syncfusion.Maui.ParallaxView">
-
-        <parallax:SfParallaxView/>
-        
-    </ContentPage>
- 
-{% endhighlight %}
-
-{% highlight C# %}
-
-    using Syncfusion.Maui.ParallaxView;
-    ...
-
-    SfParallaxView parallaxView = new SfParallaxView();
-    this.Content = parallaxView;                   
-
-{% endhighlight %}
-
-{% endtabs %}
 
 ## Support and feedback
 

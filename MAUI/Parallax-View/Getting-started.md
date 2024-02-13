@@ -14,8 +14,8 @@ This section explains the steps required to configure the [`SfParallaxView`]() c
 ## Creating an application using .NET MAUI Parallax View control
 
 1. Create a new .NET MAUI application in Visual studio.
-2. Syncfusion .NET MAUI components are available in [nuget.org](https://www.nuget.org/). To add SfKanban to your project, open the NuGet package manager in Visual Studio, search for Syncfusion.Maui.Kanban and then install it.
-3. To initialize the control, import the Kanban namespace.
+2. Syncfusion .NET MAUI components are available in [nuget.org](https://www.nuget.org/). To add SfParallaxView to your project, open the NuGet package manager in Visual Studio, search for Syncfusion.Maui.ParallaxView and then install it.
+3. To initialize the control, import the Parallax View namespace.
 4. Initialize [SfParallaxView]().
 
 {% tabs %} 
@@ -92,7 +92,7 @@ Syncfusion.Maui.Core nuget is a dependent package for all Syncfusion controls of
 
 ### Content
 
-The `Content` represents the background view of a parallax view. You can set any kind of view to the `Content` property such as Image and StackLayout.
+The [`Content`]() represents the background view of a parallax view. You can set any kind of view to the [`Content`]() property such as Image and StackLayout.
 
 The following code sample demonstrates how to set the content property to the parallax view.
 
@@ -153,14 +153,14 @@ The following code sample demonstrates how to set the content property to the pa
 
 ### Source
 
-The `Source` represents the foreground view of the parallax view. The value of `Source` should be a scrollable content or the view which implements IParallaxView interface.
+The [`Source`]() represents the foreground view of the parallax view. The value of [`Source`]() should be a scrollable content or the view which implements [IParallaxView]() interface.
 
-As of now, the SfParallaxView supports the following controls directly. You can simply bind the control to the `Source` property.
+As of now, the [SfParallaxView]() supports the following controls directly. You can simply bind the control to the [`Source`]() property.
 
     1. ScrollView
     2. ListView
 
-The following code sample demonstrates how to bind the SfListView to the `Source` property.
+The following code sample demonstrates how to bind the ListView to the [`Source`]() property.
 
 {% tabs %}
 
@@ -264,8 +264,8 @@ The following code sample demonstrates how to bind the SfListView to the `Source
 
 {% endtabs %}
 
-N> The size of the `Content` view will automatically be stretched to the size of the `Source` view.
+N> The size of the [`Content`]() view will automatically be stretched to the size of the [`Source`]() view.
 
-![SfParallaxView](ParallaxView_Images/parallaxview.gif)
+![Output of Parallax View](ParallaxView_Images/maui_parallaxview.gif)
 
 You can find the complete getting started sample from this link: [Sample]()

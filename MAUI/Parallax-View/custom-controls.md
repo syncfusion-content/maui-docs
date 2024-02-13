@@ -9,11 +9,11 @@ documentation: ug
 
 # Scrolling support for custom controls in .NET MAUI Parallax View
 
-The Parallax view supports custom scrollable controls using the `IParallaxView` interface. This interface implements the `ScrollableContentSize` property and the `Scrolling` event. 
+The Parallax view supports custom scrollable controls using the [`IParallaxView`]() interface. This interface implements the [`ScrollableContentSize`]() property and the [`Scrolling`]() event. 
 
 {% highlight c# %}
 
-   public class CustomListView : ListView, IParallaxView
+        public class CustomListView : ListView, IParallaxView
         {
 
             public Size ScrollableContentSize { get ; set ; }
@@ -26,11 +26,11 @@ The Parallax view supports custom scrollable controls using the `IParallaxView` 
 
 ## Scrollable ContentSize
 
-The `ScrollableContentSize` is the total content size of the scrollable custom control.
+The [`ScrollableContentSize`]() is the total content size of the scrollable custom control.
 
 {% highlight c# %}
 
-  public class CustomListView : ListView, IParallaxView
+    public class CustomListView : ListView, IParallaxView
 
     {
         public Size ScrollableContentSize { get; set; }
@@ -45,15 +45,15 @@ The `ScrollableContentSize` is the total content size of the scrollable custom c
 
 ## Scrolling event
 
-The `Scrolling` event occurs whenever the `ParallaxScrollingEventArgs` value is set through the scrollable custom control scrolled event.
+The [`Scrolling`]() event occurs whenever the [`ParallaxScrollingEventArgs`]() value is set through the scrollable custom control scrolled event.
 
-The `ParallaxScrollingEventArgs` has the following three arguments:
+The [`ParallaxScrollingEventArgs`]() has the following three arguments:
 
-* `ScrollX`: Denotes X position of the finished scroll.
+* [`ScrollX`](): Denotes X position of the finished scroll.
 
-* `ScrollY`: Denotes Y position of the finished scroll.
+* [`ScrollY`](): Denotes Y position of the finished scroll.
 
-* `CanAnimate`: Defines whether to animate the scroll or not.
+* [`CanAnimate`](): Defines whether to animate the scroll or not.
 
 {% tabs %}
 
@@ -140,6 +140,6 @@ The `ParallaxScrollingEventArgs` has the following three arguments:
 
 {% endtabs %}
 
-By default, ParallaxView control supports `.NET MAUI ScrollView`. For custom controls you need to implement the `IParallaxView` interface.
+By default, ParallaxView control supports [`.NET MAUI ScrollView`](). For custom controls you need to implement the [`IParallaxView`]() interface.
 
 You can achieve the parallax scroll support to the custom controls using the native renderers to calculate the total size of the scrollable content. Refer to this [KB article]() for more details.
