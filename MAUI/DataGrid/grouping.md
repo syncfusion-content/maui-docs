@@ -83,7 +83,6 @@ The width of indent column can be customized by the [IndentColumnWidth](https://
 {% tabs %}
 {% highlight xaml %}
 <syncfusion:SfDataGrid  x:Name="dataGrid"
-                        AutoGenerateColumns="True"
                         ItemsSource="{Binding OrderInfoCollection}"
                         IndentColumnWidth="60" />
 {% endhighlight %}
@@ -114,11 +113,8 @@ The following code snippet shows how to apply a background color to the indent c
             </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
-
     <syncfusion:SfDataGrid  x:Name="dataGrid"
-                            AutoGenerateColumns="True"
                             ItemsSource="{Binding Orders}" />
-
     <syncfusion:SfDataGrid.GroupColumnDescriptions>
         <syncfusion:GroupColumnDescription ColumnName="Name" />
         <syncfusion:GroupColumnDescription ColumnName="ShipCity" />
