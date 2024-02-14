@@ -37,7 +37,7 @@ private async void ExecuteLoadMoreCommand()
 
 <img alt="DataGridLoadMoreView" src="Images\loadmore\maui-datagrid-loadmoreview.gif" width="404"/>
 
-You can download the complete project of this demo from [GitHub](https://github.com/SyncfusionExamples/Load-More-.net-maui-datagrid/tree/master).
+You can download the complete project from [GitHub](https://github.com/SyncfusionExamples/Load-More-.net-maui-datagrid/tree/master).
 
 ## Customization
 
@@ -63,7 +63,7 @@ dataGrid.LoadMorePosition = DataGridLoadMorePosition.Top;
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="DataGridLoadMore with LoadMorePosition Top" src="Images\loadmore\maui-datagrid-loadmoreview-loadmoreposition-top.png" width="404"/>
+<img alt="DataGridLoadMore with top position" src="Images\loadmore\maui-datagrid-loadmoreview-loadmoreposition-top.png" width="404"/>
 
 ### Appearance
 The appearance of the built-in load more view can be personalized through the following properties:
@@ -75,28 +75,28 @@ The appearance of the built-in load more view can be personalized through the fo
 </tr>
 <tr>
 <td> {{'[LoadMoreBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_LoadMoreBackground)'| markdownify }} </td>
-<td> Sets the Background of the load more view.</td>
+<td> Sets the background of the load more view.</td>
 </tr>
 <tr>
 <td> {{'[LoadMoreButtonBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_LoadMoreButtonBackground)'| markdownify }} </td>
-<td> Sets the Background of the load more view button.</td>
+<td> Sets the background of the load more view button.</td>
 </tr>
 <tr>
 <td> {{'[LoadMoreButtonTextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_LoadMoreButtonTextColor)'| markdownify }} </td>
-<td> Sets the Text color of the load more view button.</td>
+<td> Sets the text color of the load more view button.</td>
 </tr>
 <tr>
 <td> {{'[LoadMoreIndicatorColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_LoadMoreIndicatorColor)'| markdownify }} </td>
-<td>  Sets the Background of the load more view indicator.</td>
+<td>  Sets the background of the load more view indicator.</td>
 </tr>
 </table>
 
 
 <img alt="DataGridLoadMore with customized appearance" src="Images\loadmore\maui-datagrid-loadmoreview-loadmore-custom-appearance.png" width="404"/>
 
-## Change load more view Size
+## Change load more view size
 
-The data grid allows to customize the size of the load more view by setting the `HeightRequest` and `WidthRequest` properties. Refer the below code example to customize the width and height of the load more view.
+The data grid allows to customize the size of the load more view by setting the `HeightRequest` and `WidthRequest` properties. Refer the below code example to customize the width and height of the load more view and its button.
 
 {% tabs %}
 {% highlight c# %}
@@ -110,7 +110,7 @@ dataGrid.LoadMoreView.Children.OfType<Button>().First().WidthRequest = 150;
 
 <img alt="DataGridLoadMore with customized text and size" src="Images\loadmore\maui-datagrid-loadmoreview-loadmore-custom-text-and-size.png" width="404"/>
 
-## Custom load more View
+## Custom load more view
 
 The datagrid offers built-in support for configuring a custom load more view to meet your specific requirements.
 
@@ -163,4 +163,4 @@ public class CustomLoadMoreView : DataGridLoadMoreView
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="DataGrid with CustomLoadMoreView" src="Images\loadmore\maui-datagrid-custom-loadmoreview.png" width="404"/>
+<img alt="DataGrid with custom load more view" src="Images\loadmore\maui-datagrid-custom-loadmoreview.png" width="404"/>
