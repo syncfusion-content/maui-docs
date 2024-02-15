@@ -43,6 +43,8 @@ The .NET MAUI DataGrid control is used to display and manipulate data in a tabul
 
 * **Stacked Headers** - Extensive support to show multiple headers called stacked headers.
 
+* **Load More** -  This control loads a subset of data to its data source at runtime using LoadMoreView.
+
 * **Exporting** - Support to export the data to Excel and PDF.
 
 N> You can refer to our [MAUI DataGrid](https://www.syncfusion.com/maui-controls/maui-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [MAUI DataGrid example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/DataGrid) to learn about various features and how to easily configure them, with built-in support for creating stunning visual effects.
