@@ -19,14 +19,14 @@ documentation: ug
 
 ### Command
 
-The `CardTappedCommand` property is used to associate a command with an instance of SfKanban. This property is most often set with MVVM pattern to bind callbacks back into the ViewModel.
+The [`CardTappedCommand`]() property is used to associate a command with an instance of [SfKanban](). This property is most often set with MVVM pattern to bind callbacks back into the ViewModel.
 
 ### CommandParameter
 
-The `CardTappedCommandParameter` property is used to set the parameter reference, based on which the event argument is shown.
+The [`CardTappedCommandParameter`]() property is used to set the parameter reference, based on which the event argument is shown.
 
 >**NOTE**
-The default value of the `CardTappedCommandParameter` is `null`.
+The default value of the [CardTappedCommandParameter]() is `null`.
 
 {% tabs %}
 
@@ -77,9 +77,9 @@ The default value of the `CardTappedCommandParameter` is `null`.
 * [`Data`]() - Used to get the underlying model of the card.
 * [`SourceColumn`]() - Used to get the source column of the card.
 * [`SourceIndex`]() - Used to get the index of the card in source column.
-* [`TargetCategory`]()	- Used to get the category of the column where the card is going to be dropped.
+* [`TargetCategory`]() - Used to get the category of the column where the card is going to be dropped.
 * [`TargetColumn`]() - Used to get the current column which is the drop target for the card.
-* [`TargetIndex`]()	- Used to get the index of the card in target column.
+* [`TargetIndex`]() - Used to get the index of the card in target column.
 
 ## DragEnter 
 
@@ -87,18 +87,18 @@ The default value of the `CardTappedCommandParameter` is `null`.
 
 * [`Cancel`]() - Used to cancel the drag action.
 * [`Data`]() - Used to get the underlying model of the card.
-* [`IsAboveMaximumLimit`]()	- Used to know whether the total cards count of the target column will be above the maximum limit if you drop the card in target column. You can define the maximum limit of the cards using KanbanColumn.MaximumLimit. 
+* [`IsAboveMaximumLimit`]() - Used to know whether the total cards count of the target column will be above the maximum limit if you drop the card in target column. You can define the maximum limit of the cards using [MaximumLimit]() property of [KanbanColumn](). 
 * [`SourceColumn`]() - Used to get the source column of the card.
-* [`SourceIndex`]()	- Used to get the index of the card in source column.
+* [`SourceIndex`]() - Used to get the index of the card in source column.
 * [`TargetColumn`]() - Used to get the column upon which the card enters.
-* [`TargetIndex`]()	- Used to get the index of the card in target column.
+* [`TargetIndex`]() - Used to get the index of the card in target column.
 
 ## DragLeave 
 
 [`DragLeave`]() event is triggered when a card leaves a column while dragging. The argument contains the following information.
 
 * [`Data`]() - Used to get the underlying model of the card.
-* [`IsBelowMinimumLimit`]() - Used to know whether the total cards count of the target column will be below the minimum limit if you remove the card from target column. You can define the minimum limit of the cards using KanbanColumn.MinimumLimit.
+* [`IsBelowMinimumLimit`]() - Used to know whether the total cards count of the target column will be below the minimum limit if you remove the card from target column. You can define the minimum limit of the cards using [MinimumLimit]() property of [KanbanColumn]().
 * [`SourceColumn`]() - Used to get the source column of the card.
 * [`SourceIndex`]() - Used to get the index of the card in source column.
 * [`TargetColumn`]() - Used to get the column from which the card leaves.
@@ -110,9 +110,9 @@ The default value of the `CardTappedCommandParameter` is `null`.
 * [`Cancel`]() - Used to cancel the drag action.
 * [`Data`]() - Used to get the underlying model of the card.
 * [`SourceColumn`]() - Used to get the source column of the card.
-* [`SourceIndex`]()	- Used to get the index of the card in source column.
+* [`SourceIndex`]() - Used to get the index of the card in source column.
 * [`TargetColumn`]() - Used to get the current column which is the drop target for the card.
-* [`TargetIndex`]()	- Used to get the new index of the card in target column.
+* [`TargetIndex`]() - Used to get the new index of the card in target column.
 
 ## ColumnsGenerated 
 

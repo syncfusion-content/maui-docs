@@ -40,4 +40,4 @@ The following code example describes the workflow functionality.
 In the below output, you can see the card which was picked from Open state is not allowed to drop on “Code Review” and "Done" state, because we have defined to move the card from Open to “In Progress” state only and not to any other states.
 
 
-![Workflows](Kanban_images/Workflows.png)
+![Workflows]()

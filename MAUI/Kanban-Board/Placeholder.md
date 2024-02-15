@@ -81,5 +81,5 @@ The following code example describes the above behavior.
 
 The following output demonstrates the above code example.
 
-![PlaceholderStyle support for .NET MAUI Kanban](Kanban_images/PlaceholderStyle.png)
+![PlaceholderStyle support for .NET MAUI Kanban]()
 

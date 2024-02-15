@@ -74,7 +74,7 @@ If [`ItemsSource`]() contains custom objects, the path of the property which can
 
 ### Multiple category for a column
 
-More than one category can be mapped to a column by assigning multiple values to Categories collection of [`KanbanColumn`](). For e.g., you can map "In progress, Validate" types under In progress column.
+More than one category can be mapped to a column by assigning multiple values to [Categories]() collection of [`KanbanColumn`](). For e.g., you can map "In progress, Validate" types under "In progress" column.
 
 {% highlight C# %} 
 
@@ -82,7 +82,7 @@ More than one category can be mapped to a column by assigning multiple values to
 
 {% endhighlight %}
 
-![Multiple category support for a column in .NET MAUI Kanban](Kanban_images/MultipleCategoryMapping.png)
+![Multiple category support for a column in .NET MAUI Kanban]()
 
 ## Headers
 
@@ -126,7 +126,7 @@ Header shows the category [`Title`](), items count, min and max informations of 
 
 The following output is displayed as a result of the above code example.
 
-![Headers in .NET MAUI kanban](Kanban_images/HeaderTemplate.png)
+![Headers in .NET MAUI kanban]()
 
 ## Expand/Collapse Column
 
@@ -159,7 +159,7 @@ Columns can be expanded/collapsed by tapping the toggle button which is placed a
 
 The following output is displayed as a result of the above code example.
 
-![Expand and Collapse column support in .NET MAUI Kanban](Kanban_images/ExpandColumn.png)
+![Expand and Collapse column support in .NET MAUI Kanban]()
 
 
 ## Enable/Disable Drag & Drop 
@@ -210,7 +210,7 @@ The following code is used to disable the drop operation of the cards into the p
 
 The following output demonstrates the above example code.
  
-![DragAndDrop support in .NET MAUI Kanban](Kanban_images/DragAndDrop.png)
+![DragAndDrop support in .NET MAUI Kanban]()
 
 
 ## Items Count
@@ -274,6 +274,6 @@ The following output demonstrates the above example code.
 
 {% endtabs %}
 
-![Work in progress limit for column in .NET MAUI Kanban](Kanban_images/ErrorbarSettings.png)
+![Work in progress limit for column in .NET MAUI Kanban]()
 
 

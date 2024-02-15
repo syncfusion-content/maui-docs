@@ -156,7 +156,7 @@ N> Add namespace of ViewModel class in your XAML page if you prefer to set Bindi
                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                 x:Class="KanbanGettingStarted.MainPage"
                 xmlns:chart="clr-namespace:Syncfusion.Maui.Kanban;assembly=Syncfusion.Maui.Kanban"
-                xmlns:model="clr-namespace:KanbanGettingStarted"> 
+                xmlns:local="clr-namespace:KanbanGettingStarted"> 
 
 	    <ContentPage.BindingContext>
             <local:ViewModel>
@@ -263,4 +263,4 @@ Define the categories of column using [`Categories`]() property of [`KanbanColum
 
 This is how the final output will look like. You can download the entire source code of this demo from [here]().
 
-![Final output of SfKanban](Kanban_images/SfKanban-gettingstartedImage.jpg)
+![Final output of SfKanban]()

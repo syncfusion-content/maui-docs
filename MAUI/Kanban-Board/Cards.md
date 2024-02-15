@@ -47,7 +47,7 @@ Following code snippet is used to define the colors for each key.
     
 {% endhighlight %}
 
-![Customization of cards in .NET MAUI Kanban](Kanban_images/CardCustomization.png)
+![Customization of cards in .NET MAUI Kanban]()
 
 ## Template
 
@@ -139,7 +139,7 @@ You can replace the entire card template with your own design using [`CardTempla
 
 {% endtabs %}
 
-![Template support for cards in .NET MAUI Kanban](Kanban_images/CardTemplate.png)
+![Template support for cards in .NET MAUI Kanban]()
 
 ## Data template selector
 
@@ -147,7 +147,7 @@ You can customize the appearance of each card with different templates based on 
 
 ### Create a data template selector
 
-Create a custom class by inheriting `DataTemplateSelector`, and override the `OnSelectTemplate` method to return the `DataTemplate` for that item. At runtime, the SfKanban invokes the `OnSelectTemplate` method for each item and passes the data object as parameter.
+Create a custom class by inheriting [`DataTemplateSelector`](), and override the [`OnSelectTemplate`]() method to return the [`DataTemplate`]() for that item. At runtime, the SfKanban invokes the [`OnSelectTemplate`]() method for each item and passes the data object as parameter.
 
 {% tabs %}
 
@@ -188,7 +188,7 @@ Create a custom class by inheriting `DataTemplateSelector`, and override the `On
 
 ### Applying the data template selector
 
-Assign custom `DataTemplateSelector` to the [`CardTemplate`]() of the SfKanban in either XAML or C#.
+Assign custom [`DataTemplateSelector`]() to the [`CardTemplate`]() of the SfKanban in either XAML or C#.
 
 {% tabs %}
 
@@ -197,7 +197,7 @@ Assign custom `DataTemplateSelector` to the [`CardTemplate`]() of the SfKanban i
     <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                 x:Class="SimpleSample.MainPage"
-                xmlns:kanban="clr-namespace:Syncfusion.SfKanban.XForms;assembly=Syncfusion.SfKanban.XForms""
+                xmlns:kanban="clr-namespace:Syncfusion.Maui.Kanban;assembly=Syncfusion.Maui.Kanban"
                 xmlns:local="clr-namespace:SimpleSample;assembly=SimpleSample">
                 
         <ContentPage.Resources>
@@ -232,5 +232,5 @@ Assign custom `DataTemplateSelector` to the [`CardTemplate`]() of the SfKanban i
 
 {% endtabs %}
 
-![DataTemplateSelector support for cards in .NET MAUI Kanban](Kanban_images/CardTemplateSelector.png)
+![DataTemplateSelector support for cards in .NET MAUI Kanban]()
 
