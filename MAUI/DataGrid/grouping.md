@@ -83,7 +83,6 @@ The width of indent column can be customized by the [IndentColumnWidth](https://
 {% tabs %}
 {% highlight xaml %}
 <syncfusion:SfDataGrid  x:Name="dataGrid"
-                        AutoGenerateColumns="True"
                         ItemsSource="{Binding OrderInfoCollection}"
                         IndentColumnWidth="60" />
 {% endhighlight %}
@@ -114,11 +113,8 @@ The following code snippet shows how to apply a background color to the indent c
             </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
-
     <syncfusion:SfDataGrid  x:Name="dataGrid"
-                            AutoGenerateColumns="True"
                             ItemsSource="{Binding Orders}" />
-
     <syncfusion:SfDataGrid.GroupColumnDescriptions>
         <syncfusion:GroupColumnDescription ColumnName="Name" />
         <syncfusion:GroupColumnDescription ColumnName="ShipCity" />
@@ -473,13 +469,13 @@ dataGrid.GroupColumnDescriptions.RemoveAt(0);
 
 The GroupExpanding event occurs when a group is being expanded.
  
-The [DataGriddColumnGroupChangingEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumnGroupChangingEventArgs.html) of the `GroupExpanding` event provides information about the expanding group and has the following members:
+The [DataGridColumnGroupChangingEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumnGroupChangingEventArgs.html) of the `GroupExpanding` event provides information about the expanding group and has the following members:
 
  `Syncfusion.Data.Group`: Gets the expanded group.
 
  `Cancel`: Determines whether to cancel group expansion.
  
-Cancel the group expansion by setting [DataGriddColumnGroupChangingEventArgs.Cancel](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.canceleventargs.cancel?view=net-6.0) to `true`.
+Cancel the group expansion by setting [DataGridColumnGroupChangingEventArgs.Cancel](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.canceleventargs.cancel?view=net-6.0) to `true`.
 
 {% tabs %}
 {% highlight c# %}
