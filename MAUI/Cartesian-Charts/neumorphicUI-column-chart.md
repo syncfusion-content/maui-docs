@@ -22,6 +22,8 @@ Implements the `IDrawable` interface method `Draw`. This method is responsible f
 
 {% tabs %}
 
+{% highlight SfShadowDrawer %}
+
     public void Draw(ICanvas canvas, RectF dirtyRect)
     {
         double radius = CornerRadius > dirtyRect.Width / 2 ? dirtyRect.Width / 2 : CornerRadius;
@@ -32,13 +34,17 @@ Implements the `IDrawable` interface method `Draw`. This method is responsible f
         canvas.RestoreState();
     }
 
+{% endhighlight SfShadowDrawer %}
+
 {% endtabs %}
 
-## Step 3: Implement to Apply shadow Method
+## Step 3: Implement a Method to Apply shadow
 
 Applies the shadow effect to the canvas based on the provided parameters.
 
 {% tabs %}
+
+{% highlight SfShadowDrawer %}
 
     internal void ApplyShadow(ICanvas canvas, RectF dirtyRect, SizeF offset, Color shadowColor, float opacity, double cornerRadius)
     {
@@ -48,6 +54,8 @@ Applies the shadow effect to the canvas based on the provided parameters.
         canvas.FillRoundedRectangle(dirtyRect, cornerRadius);
         canvas.RestoreState();
     }
+
+{% endhighlight SfShadowDrawer %}
 
 {% endtabs %}
  
@@ -59,34 +67,38 @@ It overrides the `DrawShadow` method from the base class `SfShadowDrawer` to imp
 
 {% tabs %}
 
-protected override void DrawShadow(ICanvas canvas, RectF dirtyRect)
-{
-    if (IsPressedState)
-    {
-        double radius = CornerRadius > dirtyRect.Width / 2 ? dirtyRect.Width / 2 : CornerRadius;
-        if (dirtyRect.Width / 3 < radius)
-        {
-            ApplyShadow(canvas, new RectF(dirtyRect.Left, dirtyRect.Top, -dirtyRect.Width, dirtyRect.Height), Offset, ShadowColor, Opacity, radius);
-            ApplyShadow(canvas, new RectF(dirtyRect.Right, dirtyRect.Top, dirtyRect.Width, dirtyRect.Height), LightOffSet, lightShadowColor, LightOpacity, radius);
-        }
+{% highlight SfNeumorphismDrawer %}
 
+    protected override void DrawShadow(ICanvas canvas, RectF dirtyRect)
+    {
+        if (IsPressedState)
+        {
+            double radius = CornerRadius > dirtyRect.Width / 2 ? dirtyRect.Width / 2 : CornerRadius;
+            if (dirtyRect.Width / 3 < radius)
+            {
+                ApplyShadow(canvas, new RectF(dirtyRect.Left, dirtyRect.Top, -dirtyRect.Width, dirtyRect.Height), Offset, ShadowColor, Opacity, radius);
+                ApplyShadow(canvas, new RectF(dirtyRect.Right, dirtyRect.Top, dirtyRect.Width, dirtyRect.Height), LightOffSet, lightShadowColor, LightOpacity, radius);
+            }
+
+            else
+            {
+                ApplyShadow(canvas, new RectF(dirtyRect.Left, dirtyRect.Top, -dirtyRect.Width, dirtyRect.Height), Offset, ShadowColor, Opacity, radius);
+                ApplyShadow(canvas, new RectF(dirtyRect.Left - 10, dirtyRect.Top, dirtyRect.Width + 10, -dirtyRect.Height), Offset, ShadowColor, Opacity, radius);
+                ApplyShadow(canvas, new RectF(dirtyRect.Right, dirtyRect.Top, dirtyRect.Width, dirtyRect.Height), LightOffSet, lightShadowColor, LightOpacity, radius);
+                ApplyShadow(canvas, new RectF(dirtyRect.Left, dirtyRect.Bottom, dirtyRect.Width, dirtyRect.Height), LightOffSet, lightShadowColor, LightOpacity, radius);
+            }
+        }
         else
         {
-            ApplyShadow(canvas, new RectF(dirtyRect.Left, dirtyRect.Top, -dirtyRect.Width, dirtyRect.Height), Offset, ShadowColor, Opacity, radius);
-            ApplyShadow(canvas, new RectF(dirtyRect.Left - 10, dirtyRect.Top, dirtyRect.Width + 10, -dirtyRect.Height), Offset, ShadowColor, Opacity, radius);
-            ApplyShadow(canvas, new RectF(dirtyRect.Right, dirtyRect.Top, dirtyRect.Width, dirtyRect.Height), LightOffSet, lightShadowColor, LightOpacity, radius);
-            ApplyShadow(canvas, new RectF(dirtyRect.Left, dirtyRect.Bottom, dirtyRect.Width, dirtyRect.Height), LightOffSet, lightShadowColor, LightOpacity, radius);
+
+            var paddingRect = new RectF() { Left = dirtyRect.Left + Padding, Top = dirtyRect.Top + Padding, Right = dirtyRect.Right - Padding, Bottom = dirtyRect.Bottom - Padding };
+            double radius = CornerRadius > paddingRect.Width / 2 ? paddingRect.Width / 2 : CornerRadius;
+            ApplyShadow(canvas, paddingRect, Offset, ShadowColor, Opacity, radius);
+            ApplyShadow(canvas, paddingRect, LightOffSet, lightShadowColor, LightOpacity, radius);
         }
     }
-    else
-    {
 
-        var paddingRect = new RectF() { Left = dirtyRect.Left + Padding, Top = dirtyRect.Top + Padding, Right = dirtyRect.Right - Padding, Bottom = dirtyRect.Bottom - Padding };
-        double radius = CornerRadius > paddingRect.Width / 2 ? paddingRect.Width / 2 : CornerRadius;
-        ApplyShadow(canvas, paddingRect, Offset, ShadowColor, Opacity, radius);
-        ApplyShadow(canvas, paddingRect, LightOffSet, lightShadowColor, LightOpacity, radius);
-    }
-}
+{% endhighlight SfNeumorphismDrawer %}
 
 {% endtabs %}
 
@@ -95,6 +107,8 @@ protected override void DrawShadow(ICanvas canvas, RectF dirtyRect)
 The `SfNeumorphismView` class extends `ContentView` and provides a container for displaying a neumorphic (soft shadow) effect. It includes a `Grid` and a `GraphicsView` for rendering the neumorphic shadow based on the provided `SfNeumorphismDrawer`. Additionally, it exposes properties and methods to manage the drawable content and handle property changes.
 
 {% tabs %}
+
+{% highlight SfNeumorphismView %}
 
     public SfNeumorphismView()
     {
@@ -116,6 +130,8 @@ The `SfNeumorphismView` class extends `ContentView` and provides a container for
         graphicsView.Invalidate();
     }
 
+{% endhighlight SfNeumorphismView %}
+
 {% endtabs %}
 
 ## Step 6: Implementing the SfNeumorphismColumnSeries and SfNeumorphismColumnSegment Classes
@@ -126,6 +142,8 @@ This class overrides the base method to create a custom `SfNeumorphismColumnSegm
 
 {% tabs %}
 
+{% highlight SfNeumorphismColumnSeries %}
+
     public class SfNeumorphismColumnSeries : ColumnSeries
     {
     protected override ChartSegment CreateSegment()
@@ -133,6 +151,8 @@ This class overrides the base method to create a custom `SfNeumorphismColumnSegm
         return new SfNeumorphismColumnSegment(Drawable);
     }
     }
+
+{% endhighlight SfNeumorphismColumnSeries %}
 
 {% endtabs %}
 
@@ -142,6 +162,8 @@ The `SfNeumorphismColumnSegment` class is a custom implementation of the `Column
 It Overrides the base method to implement custom drawing logic. Draws the neumorphic shadow using the `SfNeumorphismDrawer` associated with the segment.
 
 {% tabs %}
+
+{% highlight SfNeumorphismColumnSegment %}
 
     public class SfNeumorphismColumnSegment : ColumnSegment
     {
@@ -158,12 +180,17 @@ It Overrides the base method to implement custom drawing logic. Draws the neumor
     }
     }
 
+{% endhighlight SfNeumorphismColumnSegment %}
+
 {% endtabs %}
 
 ## Step 7: Define Different styles for the Neumorphic Drawer
 
 Defines styles for neumorphic drawers with varying configurations such as outer view, normal, and pressed states. These styles are then referenced throughout the UI for consistent appearance.
+
 {% tabs %}
+
+{% highlight MainPage.xaml}
 
     <ContentPage.Resources>
         <control:SfNeumorphismDrawer BackgroundColor="#F5F5F5" Padding="20" LightOpacity="0.8" CornerRadius="20" x:Key="outerViewDrawable">
@@ -179,11 +206,15 @@ Defines styles for neumorphic drawers with varying configurations such as outer 
                                 BackgroundColor="#F5F5F5" x:Key="pressedDrawable" />
     </ContentPage.Resources>
 
+{% endhighlight MainPage.xaml}
+
 {% endtabs %}
 
 ## Step 8: Applying the styles.
 
 {% tabs %}
+
+{% highlight MainPage.xaml}
 
     <control:SfNeumorphismView Drawable="{StaticResource outerViewDrawable}">
         <chart:SfCartesianChart>
@@ -205,4 +236,10 @@ Defines styles for neumorphic drawers with varying configurations such as outer 
         </chart:SfCartesianChart>
     </control:SfNeumorphismView>
 
+{% endhighlight MainPage.xaml}
+
 {% endtabs %}
+
+Here is the final output of the Syncfusion .NET MAUI Neumorphic Column Chart.
+
+![Final Output of Syncfusion .NET MAUI Neumorphic Column Chart](Neumorphic_Chart_Image/maui-neumorphic_ui_chart_image.png)
