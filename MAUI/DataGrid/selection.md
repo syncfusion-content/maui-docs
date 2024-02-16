@@ -299,6 +299,24 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
+## Allow Focus
+With DataGridColumn.AllowFocus, you can effortlessly customize your grid view by disabling columns that are not relevant to your current tasks or objectives.
+
+{% tabs %}
+{% highlight XAML}
+<syncfusion:SfDataGrid.Columns>
+   <syncfusion:DataGridTextColumn MappingName="OrderID"
+                 Format="D"
+                 AllowFocus="False"
+                 HeaderText="Order ID" />
+   <syncfusion:DataGridTextColumn MappingName="CustomerID"
+                 HeaderText="Customer ID" />
+   <syncfusion:DataGridTextColumn MappingName="ShipCountry "
+                 HeaderText="Ship Country " />
+</syncfusion:SfDataGrid.Columns>
+{% endhighlight %}
+{% endtabs %}
+
 ## Events in selection
 The DataGrid provides the following events for selection:
 

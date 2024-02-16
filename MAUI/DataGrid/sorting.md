@@ -244,6 +244,20 @@ public class CustomSortComparer : IComparer<object>, ISortDirection
 }
 {% endhighlight %}
 {% endtabs %}
+## Sort Icon Customization
+The Sort Icon Customization feature allows you to personalize the appearance of sorting icons in the application according to your preferences. You can customize the colors of the sorting icons to match your preferred color scheme or visual preferences, enhancing the overall look and feel of your user interface.
+
+{% tabs %}
+
+{% highlight xaml %}
+<syncfusion:SfDataGrid.DefaultStyle>
+    <syncfusion:DataGridStyle SortIconColor="DodgerBlue" />
+</syncfusion:SfDataGrid.DefaultStyle>
+{% endhighlight %}
+{% endtabs %}
+
+![DataGrid with sort template selector](Images\sorting\maui-Sort-Icon-Color.png)
+
 
 ## Load sort icon through template
 
