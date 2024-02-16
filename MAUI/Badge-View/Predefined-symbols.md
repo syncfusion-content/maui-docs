@@ -11,7 +11,7 @@ documentation: ug
 
 # Predefined symbols in .NET MAUI Badge View (SfBadgeView)
 
-The badge icon has been changed using the `Icon` property. Badge icons will be visible when you do not set the badge text. The badge supports the following types of `Icon`.
+The [.NET MAUI Badge View](https://www.syncfusion.com/maui-controls/maui-badge-view) icon has been changed using the `Icon` property. Badge icons will be visible when you do not set the badge text. The badge supports the following types of `Icon`.
 
 * Add
 * Available
