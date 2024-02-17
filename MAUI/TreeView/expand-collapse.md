@@ -88,11 +88,10 @@ TreeView allows the expansion and collapse of the nodes using the right and left
 
 ## Binding IsExpanded property in unbound mode
 
-In unbound mode, the TreeView incorporates the IsExpanded bindable property, enabling dynamic expansion and collapse of nodes for a more interactive user experience.
+In unbound mode, the `TreeView` enables the binding of the [IsExpanded](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.TreeViewNode.html#Syncfusion_TreeView_Engine_TreeViewNode_IsExpanded) property to `TreeViewNode`.
 
 {% tabs %}
-{% highlight xaml %}
-
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="16 19" %}
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:syncfusion="clr-namespace:Syncfusion.Maui.TreeView;assembly=Syncfusion.Maui.TreeView"
@@ -107,9 +106,11 @@ In unbound mode, the TreeView incorporates the IsExpanded bindable property, ena
     <ContentPage.Content>
         <syncfusion:SfTreeView x:Name="treeview">
             <syncfusion:SfTreeView.Nodes>
-                <treeviewengine:TreeViewNode Content="Flower" IsExpanded="{Binding Path=IsExpanded,Source={x:Reference viewmodel}}">
+                <treeviewengine:TreeViewNode Content="United States of America" 
+                                             IsExpanded="{Binding Path=IsExpanded,Source={x:Reference viewmodel}}">
                     <treeviewengine:TreeViewNode.ChildNodes>
-                        <treeviewengine:TreeViewNode Content="Rose" IsExpanded="{Binding Path=IsExpanded,Source={x:Reference viewmodel}}"/>
+                        <treeviewengine:TreeViewNode Content="New York" 
+                                                     IsExpanded="{Binding Path=IsExpanded,Source={x:Reference viewmodel}}"/>
                     </treeviewengine:TreeViewNode.ChildNodes>
                 </treeviewengine:TreeViewNode>
             </syncfusion:SfTreeView.Nodes>
@@ -118,8 +119,7 @@ In unbound mode, the TreeView incorporates the IsExpanded bindable property, ena
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# %}
-
+{% highlight c# tabtitle="ViewModel.cs" %}
 public class ViewModel : INotifyPropertyChanged
 {  
     private bool isExpanded;
