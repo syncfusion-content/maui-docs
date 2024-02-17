@@ -9,21 +9,20 @@ documentation: ug
 
 # Checkbox in .NET MAUI TreeView (SfTreeView)
 
-SfTreeView provides support for loading [CheckBox]() in each node and enables users to check/uncheck the corresponding node. So, you should add a checkbox in the [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ItemTemplate) of the `SfTreeView` and bind the [IsChecked]() property of the [TreeViewNode](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.TreeViewNode.html).
+The `SfTreeView` provides support for loading `CheckBox` in each node and enables users to check/uncheck the corresponding node. So, you should add a CheckBox in the [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ItemTemplate) of the `SfTreeView` and bind the `IsChecked` property of the [TreeViewNode](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.TreeViewNode.html).
 
-## Working with Checkbox in BoundMode
+## Working with CheckBox in BoundMode
 
-When populating treeview nodes from [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ItemsSource), accessing or modifying checked items can be achieved using [CheckedItems]() property.
+When populating treeview nodes from [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ItemsSource), accessing or modifying checked items can be achieved using `CheckedItems` property.
 
-SfTreeView facilitates the checking of multiple items by binding the [CheckedItems]() property from view model with `ObservableCollection<object>` type.
+The SfTreeView facilitates the checking of multiple items by binding the `CheckedItems` property from view model with `ObservableCollection<object>` type.
 
 N> Set the [ItemTemplateContextType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ItemTemplateContextType) as `Node` in order to bind the `TreeViewNode.IsChecked` property to `CheckBox` within the `ItemTemplate`. To know more about `ItemTemplateContextType` click [here](https://help.syncfusion.com/maui/treeview/appearance#bindingcontext-for-itemtemplate). 
 
-N> TreeView process and sets [TreeViewNode.IsChecked](()) based on `CheckedItems` only during the binding of `ItemsSource`.
+N> TreeView process and sets `TreeViewNode.IsChecked` based on `CheckedItems` only during the binding of `ItemsSource`.
 
 {% tabs %}
-{% highlight xaml %}
-         
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="17 19 36 37 38" %}
     <?xml version="1.0" encoding="utf-8" ?>
     <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
@@ -87,195 +86,20 @@ N> TreeView process and sets [TreeViewNode.IsChecked](()) based on `CheckedItems
 
     </ContentPage>
 {% endhighlight %}
-{% endtabs %}
-
-{% tabs %}
-{% highlight Model.cs %}
-
-    public class Folder : INotifyPropertyChanged
-    {
-        private string? folderName;
-        private string? imageIcon;
-        private ObservableCollection<File>? filesInfo;
-
-        public Folder()
-        {
-        }
-
-        public string? FolderName
-        {
-            get
-            {
-                return folderName;
-            }
-
-            set
-            {
-                folderName = value;
-                RaisedOnPropertyChanged("FolderName");
-            }
-        }
-
-        public string? ImageIcon
-        {
-            get
-            {
-                return imageIcon;
-            }
-
-            set
-            {
-                imageIcon = value;
-                RaisedOnPropertyChanged("Icon");
-            }
-        }
-
-        public ObservableCollection<File>? FilesInfo
-        {
-            get
-            {
-                return filesInfo;
-            }
-            set
-            {
-                filesInfo = value;
-                RaisedOnPropertyChanged("FilesInfo");
-
-            }
-        }
-
-        private void RaisedOnPropertyChanged(string propertyName)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-            }
-        }
-
-        public event PropertyChangedEventHandler? PropertyChanged;
-    }
-    public class File : INotifyPropertyChanged
-    {
-        private string? folderName;
-        private string? imageIcon;
-        private ObservableCollection<SubFiles>? subFiles;
-
-        public string? FolderName
-        {
-            get
-            {
-                return folderName;
-            }
-
-            set
-            {
-                folderName = value;
-                RaiseOnPropertyChanged("FolderName");
-
-            }
-        }
-        public string? ImageIcon
-        {
-            get
-            {
-                return imageIcon;
-            }
-
-            set
-            {
-                imageIcon = value;
-                RaiseOnPropertyChanged("Icon");
-            }
-        }
-        public ObservableCollection<SubFiles>? SubFiles
-        {
-            get
-            {
-                return subFiles;
-            }
-
-            set
-            {
-                subFiles = value;
-                RaiseOnPropertyChanged("SubFiles");
-
-            }
-        }
-
-        private void RaiseOnPropertyChanged(string propertyName)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-            }
-        }
-        public event PropertyChangedEventHandler? PropertyChanged;
-    }
-
-    public class SubFiles : INotifyPropertyChanged
-    {
-        private string? folderName;
-        private string? imageIcon;
-        public SubFiles()
-        {
-        }
-
-        public string? FolderName
-        {
-            get
-            {
-                return folderName;
-            }
-
-            set
-            {
-                folderName = value;
-                RaiseOnPropertyChanged("FolderName");
-
-            }
-        }
-        public string? ImageIcon
-        {
-            get
-            {
-                return imageIcon;
-            }
-
-            set
-            {
-                imageIcon = value;
-                RaiseOnPropertyChanged("Icon");
-            }
-        }
-
-        private void RaiseOnPropertyChanged(string propertyName)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-            }
-        }
-
-        public event PropertyChangedEventHandler? PropertyChanged;
-    }
-
-{% endhighlight %}
-{% endtabs %}
-
-{% tabs %}
-{% highlight ViewModel.cs %}
-
-    internal class FileManagerViewModel
+{% highlight c# tabtitle="ViewModel.cs" %}
+    public class FileManagerViewModel
     {
         private ObservableCollection<object>? checkedItems;
-        public ObservableCollection<Folder> Folders { get; set; }
+			
         public ObservableCollection<object>? CheckedItems
         {
             get { return checkedItems; }
             set { this.checkedItems = value; }
         }
-
-        public FileManagerViewModel()
+		
+		public ObservableCollection<Folder> Folders { get; set; }
+        
+		public FileManagerViewModel()
         {
             this.Folders = GenerateItem();
         }
@@ -358,17 +182,16 @@ N> TreeView process and sets [TreeViewNode.IsChecked](()) based on `CheckedItems
 {% endhighlight %}
 {% endtabs %}
 
-Download the entire source code from GitHub [here]().
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/load-checkbox-in-each-nodes-in-.net-maui-treeview)
 
-![.Net MAUI BoundMode TreeView with CheckBox](Images/checkbox/maui-treeView-checkboxBoundMode.png)
+![CheckBox nodes in .NET MAUI TreeView in bound mode](Images/checkbox/maui-treeView-checkboxBoundMode.png)
 
 ## Working with Checkbox in UnboundMode
 
-You can directly set the checkbox state by setting the [TreeViewNode.IsChecked]() property value while creating nodes.
+You can directly set the CheckBox state by setting the `TreeViewNode.IsChecked` property value while creating nodes.
 
 {% tabs %}
-{% highlight xaml %}
-
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="19 24 36" %}
     <?xml version="1.0" encoding="utf-8" ?>
     <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
@@ -396,39 +219,9 @@ You can directly set the checkbox state by setting the [TreeViewNode.IsChecked](
                             <treeviewengine:TreeViewNode Content="Egypt"/>
                             <treeviewengine:TreeViewNode Content="South Africa"/>
                         </treeviewengine:TreeViewNode.ChildNodes>
-                    </treeviewengine:TreeViewNode>
-                    <treeviewengine:TreeViewNode Content="Asia" IsExpanded="True">
-                        <treeviewengine:TreeViewNode.ChildNodes>
-                            <treeviewengine:TreeViewNode Content="China"/>
-                            <treeviewengine:TreeViewNode Content="India"/>
-                            <treeviewengine:TreeViewNode Content="Japan"/>
-                        </treeviewengine:TreeViewNode.ChildNodes>
-                    </treeviewengine:TreeViewNode>
-                    <treeviewengine:TreeViewNode Content="Europe" IsExpanded="True">
-                        <treeviewengine:TreeViewNode.ChildNodes>
-                            <treeviewengine:TreeViewNode Content="Denmark" IsChecked="True"/>
-                            <treeviewengine:TreeViewNode Content="Finland"/>
-                            <treeviewengine:TreeViewNode Content="Austria" IsChecked="True"/>
-                        </treeviewengine:TreeViewNode.ChildNodes>
-                    </treeviewengine:TreeViewNode>
-                    <treeviewengine:TreeViewNode Content="South America" IsExpanded="True">
-                        <treeviewengine:TreeViewNode.ChildNodes>
-                            <treeviewengine:TreeViewNode Content="Brazil"/>
-                            <treeviewengine:TreeViewNode Content="Colombia"/>
-                            <treeviewengine:TreeViewNode Content="Argentina"/>
-                            <treeviewengine:TreeViewNode Content="Peru"/>
-                            <treeviewengine:TreeViewNode Content="Chile"/>
-                        </treeviewengine:TreeViewNode.ChildNodes>
-                    </treeviewengine:TreeViewNode>
-                    <treeviewengine:TreeViewNode Content="Oceania" IsExpanded="True">
-                        <treeviewengine:TreeViewNode.ChildNodes>
-                            <treeviewengine:TreeViewNode Content="Australia"/>
-                            <treeviewengine:TreeViewNode Content="New Zealand"/>
-                            <treeviewengine:TreeViewNode Content="Samoa"/>
-                            <treeviewengine:TreeViewNode Content="Tonga"/>
-                            <treeviewengine:TreeViewNode Content="Vanuatu"/>
-                        </treeviewengine:TreeViewNode.ChildNodes>
-                    </treeviewengine:TreeViewNode>
+						.....
+						.....
+						.....
                 </treeview:SfTreeView.Nodes>
 
                 <treeview:SfTreeView.ItemTemplate>
@@ -445,25 +238,24 @@ You can directly set the checkbox state by setting the [TreeViewNode.IsChecked](
 {% endhighlight %}
 {% endtabs %}
 
-Download the entire source code from GitHub [here]().
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/load-checkbox-in-each-nodes-with-unbound-mode-in-.net-maui-treeview)
 
-![.Net MAUI UnboundMode TreeView with CheckBox](Images/checkbox/maui-treeView-checkboxUnboundMode.png)
+![Checkbox nodes in .NET MAUI TreeView in unbound mode](Images/checkbox/maui-treeView-checkboxUnboundMode.png)
 
 ## CheckBox State
 
-The SfTreeView handles the [IsChecked](()) property (checkbox state) of `TreeViewNode` based on [CheckBoxMode]() property. `CheckBoxMode` property determines the behavior of parent and child node's checkbox states when users check or uncheck a node. Its default value is None. Checkbox contains the  following three states:
+The `SfTreeView` handles the `IsChecked` property (checkbox state) of `TreeViewNode` based on `CheckBoxMode` property. `CheckBoxMode` property determines the behavior of parent and child node's CheckBox states when users check or uncheck a node. Its default value is `None`. Checkbox contains the  following three states:
 
-* `None`: Checking and unchecking are only reflected in the view and do not impact the CheckedItems collection.
-* `Individual`: The state of the checkbox only affects the individual node and does not alter the checkbox state or IsChecked property value of parent or child nodes.
-* `Recursive`: When a node's checkbox is checked or unchecked, it influences the checkbox states of both parent and child nodes checkbox state. For instance, if a parent node's checkbox is checked or unchecked, all its child node's checkboxes will follow suit. Similarly, if all child nodes within a parent node are either checked or unchecked, the parent node's checkbox will reflect this state accordingly. Additionally, if any of the child nodes are checked, the parent node's checkbox will enter an intermediate state.
+* `None`: Checking and unchecking are only reflected in the view and do not impact the `CheckedItems` collection.
+* `Individual`: The state of the CheckBox only affects the individual node and does not alter the checkbox state or `IsChecked` property value of parent or child nodes.
+* `Recursive`: When a node's checkbox is checked or unchecked, it influences the checkbox states of both parent and child nodes checkbox state. For instance, if a parent node's checkbox is checked or unchecked, all its child node's checkbox will follow suit. Similarly, if all child nodes within a parent node are either checked or unchecked, the parent node's checkbox will reflect this state accordingly. Additionally, if any of the child nodes are checked, the parent node's checkbox will enter an intermediate state.
 
 {% tabs %}
-{% highlight xaml %}
-     
-    <syncfusion:SfTreeView x:Name="TreeView" CheckBoxMode="Recursive"/>
+{% highlight xaml hl_lines="2" %}
+    <syncfusion:SfTreeView x:Name="TreeView" 
+	                       CheckBoxMode="Recursive"/>
 {% endhighlight %}
 {% highlight c# %}
-     
     TreeView.CheckBoxMode = CheckBoxMode.Recursive;
 {% endhighlight %}
 {% endtabs %}
@@ -472,13 +264,13 @@ N> In recursive mode, the parent nodes checkbox state or `IsChecked` property va
 
 N> When the `CheckBoxMode` is enabled, the `ItemTapped` and `ItemDoubleTapped` events will not be triggered in `SfTreeView` since the `CheckBox` will handle the touch interaction, only the `NodeChecked` event is triggered.
 
-## Get or Set Checked Items
+## Get or set checked items
 
-### Get or Set Checked Items in Bound Mode
+### Get or set checked items in bound mode
 
-You can get or set a list of items to be checked or un-checked using [CheckedItems]() property.
+You can get or set a list of items to be checked or un-checked using `CheckedItems` property.
 
-When the [CheckBoxMode]() is set to a value other than `None`, the individual `TreeViewNode` or collection of `TreeViewNode` can be programmatically checked by manipulating the  `CheckedItems`property or adding items to the `CheckedItems` property based on the `CheckBoxMode`.
+When the `CheckBoxMode` is set to a value other than `None`, the individual `TreeViewNode` or collection of `TreeViewNode` can be programmatically checked by manipulating the `CheckedItems` property or adding items to the `CheckedItems` property based on the `CheckBoxMode`.
 
 N> Programmatically adding or removing the node value does not impact the checkbox states of their parent and child nodes.
 
@@ -491,9 +283,9 @@ N> Programmatically adding or removing the node value does not impact the checkb
 {% endhighlight %}
 {% endtabs %}
 
-### Get or Set Checked Nodes in Unbound Mode
+### Get or set checked nodes in unbound mode
 
-You can get the list of checked nodes using the [GetCheckedNodes]() method. You can set the checkbox state by setting [TreeViewNode.IsChecked]() property.
+You can get the list of checked nodes using the `GetCheckedNodes` method and set the checkbox state by setting `TreeViewNode.IsChecked` property.
 
 {% tabs %}
 {% highlight c# %}
@@ -506,16 +298,16 @@ You can get the list of checked nodes using the [GetCheckedNodes]() method. You 
 
 ### NodeChecked event
 
-The [NodeChecked]() event is raised when checking and unchecking the checkbox at run time. The [NodeCheckedEventArgs]() has the following members, which provide information for the `NodeChecked` event.
+The `NodeChecked` event is raised when checking and unchecking the CheckBox at run time. The `NodeCheckedEventArgs` has the following members, which provide information for the `NodeChecked` event.
 
 * `Node`: Gets the `TreeViewNode` and data associated with the checked item as its arguments.
 
 {% tabs %}
 {% highlight c# %}
      
-    treeView.NodeChecked += TreeView_NodeChecked;
+    treeView.NodeChecked += OnTreeViewNodeChecked;
 
-    private void TreeView_NodeChecked(object sender, Syncfusion.Maui.TreeView.NodeCheckedEventArgs e)
+    private void OnTreeViewNodeChecked(object sender, Syncfusion.Maui.TreeView.NodeCheckedEventArgs e)
     {
      
     }
