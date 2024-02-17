@@ -9,11 +9,12 @@ documentation: ug
 
 # Load on Demand in .NET MAUI TreeView (SfTreeView)
 
-TreeView enables loading child items only upon request through Lazy Loading. This feature allows loading child items from services when users expand the node. Initially, populate the root [Nodes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_Nodes) by assigning [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ItemsSource), and subsequently, load child items when a node is expanded using [LoadOnDemandCommand](). Load on-demand is applicable for bound mode only.
+The `SfTreeView` enables loading child items only upon request through Lazy loading(load-on-demand). This feature allows loading child items from services when users expand the node. Initially, populate the root [Nodes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_Nodes) by assigning [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ItemsSource), and subsequently, load child items when a node is expanded using `LoadOnDemandCommand`.
+
+N> Load on-demand is applicable for bound mode only.
 
 {% tabs %}
-{% highlight xaml %}
-    
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="12" %}
     <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:sfTreeView="clr-namespace:Syncfusion.Maui.TreeView;assembly=Syncfusion.Maui.TreeView"
@@ -33,14 +34,9 @@ TreeView enables loading child items only upon request through Lazy Loading. Thi
 {% endtabs %}
 
 {% tabs %}
-{% highlight ViewModel.cs %}
-/// <summary>
-/// ViewModel class with <see cref="Command"/> for load on demand. 
-/// </summary>
-      
+{% highlight c# tabtitle="ViewModel.cs" hl_lines="13 32 41 45" %}
     public class ViewModel
-    {
-    
+    { 
      public ObservableCollection<Model> Menu { get; set; }
 
      public ICommand? TreeViewOnDemandCommand
@@ -82,9 +78,9 @@ TreeView enables loading child items only upon request through Lazy Loading. Thi
              //Fetching child items to add.
              var items = GetSubMenu(Info!.ID);
              // Populating child items for the node in on-demand.
-             node.PopulateChildNodes(items);
+             node.PopulateChildNodes(items);			 
+             // Expand the node after child items are added.
              if (items.Any())
-                 //Expand the node after child items are added.
                  node.IsExpanded = true;
              node.ShowExpanderAnimation = false;
          });
@@ -174,19 +170,13 @@ TreeView enables loading child items only upon request through Lazy Loading. Thi
      }
  }
 {% endhighlight %}
-{% endtabs %}
-{% tabs %}
-{% highlight Model.cs %}
-/// <summary>
-/// Model
-/// </summary>
-      
+{% highlight c# tabtitle="Model.cs" %}
     public class Model : INotifyPropertyChanged
     {
 
-    public string? itemName;
-    public int id;
-    public bool hasChildNodes;
+    private string? itemName;
+    private int id;
+    private bool hasChildNodes;
 
     public string? ItemName
     {
@@ -245,7 +235,7 @@ N> `LoadOnDemandCommand` receives [TreeViewNode](https://help.syncfusion.com/cr/
 
 ## Handling expander visibility
 
-The TreeView displays the expander icon for a specific node based on the return value of the [CanExecute](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.command.canexecute?view=net-maui-8.0) method within the LoadOnDemandCommand. When `CanExecute` returns `true`, the expander icon appears for that node; if `false`, the expander icon is not displayed. `CanExecute` is invoked to determine the visibility of the expander icon before executing [LoadOnDemandCommand](). 
+The TreeView displays the expander icon for a specific node based on the return value of the [CanExecute](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.command.canexecute?view=net-maui-8.0) method within the `LoadOnDemandCommand`. When `CanExecute` returns `true`, the expander icon appears for that node. If returns `false`, the expander icon is not displayed for that node. `CanExecute` is invoked to determine the visibility of the expander icon before executing `LoadOnDemandCommand`. 
 
 {% tabs %}
 {% highlight c# %}
@@ -269,33 +259,23 @@ The TreeView displays the expander icon for a specific node based on the return 
 
 ## On-demand loading of child items
 
-For on-demand loading of child items, the [Execute](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.command.execute?view=net-maui-8.0) method of `LoadOnDemandCommand` is where you can load child items for the node. This method is triggered when the user expands the tree node. Within `LoadOnDemand.Execute`, you can perform the following operations.
+To achieve on-demand loading of child items, utilize the [Execute](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.command.execute?view=net-maui-8.0) method of `LoadOnDemandCommand` where you can initiate the loading of child items for the respective node. This method is triggered when the user expands the tree node.
+Within `LoadOnDemand.Execute`, you can perform the following operations.
 
-* Manage the visibility of the expander by adjusting [TreeViewNode.ShowExpanderAnimation]() until the data is fetched.
-* Once the data is retrieved, populate the child nodes by invoking [TreeViewNode.PopulateChildNodes](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.TreeViewNode.html#Syncfusion_TreeView_Engine_TreeViewNode_PopulateChildNodes_System_Collections_IEnumerable_) and passing the collection of child items. 
+* Manage the visibility of the busy indicator by using `TreeViewNode.ShowExpanderAnimation` until the data is fetched.
+
+* Once the data is retrieved, populate the child nodes by invoking [TreeViewNode.PopulateChildNodes](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.TreeViewNode.html#Syncfusion_TreeView_Engine_TreeViewNode_PopulateChildNodes_System_Collections_IEnumerable_) by passing the collection of child items.
+
 * As the expanding operation is not handled by the `TreeView` during the execution of the load-on-demand command, you need to set [TreeViewNode.IsExpanded](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.TreeViewNode.html#Syncfusion_TreeView_Engine_TreeViewNode_IsExpanded) to `true` to expand the tree node after populating the child nodes.
+
 * To avoid repeatedly populating child items each time the node expands, you can skip this step based on the count of [TreeViewNode.ChildNodes](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.TreeViewNode.html#Syncfusion_TreeView_Engine_TreeViewNode_ChildNodes).
+
 * Utilize the [TreeViewNode.VisibleNodesCount](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.TreeViewNode.html#Syncfusion_TreeView_Engine_TreeViewNode_VisibleNodesCount) property to determine the number of child nodes displayed in the view.
-* The presence of child nodes for a TreeView node can be determined by the return value of the [HasChildNodes](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.TreeViewNode.html#Syncfusion_TreeView_Engine_TreeViewNode_HasChildNodes) property. It returns `true` if the node has child nodes, otherwise `false`.
+
+* The presence of child nodes for a TreeViewNode can be determined by the return value of the [HasChildNodes](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.TreeViewNode.html#Syncfusion_TreeView_Engine_TreeViewNode_HasChildNodes) property. It returns `true` if the node has child nodes, otherwise `false`.
 
 {% tabs %}
-{% highlight c# %}
-
-    /// <summary>
-    /// Execute method is called when any item is requested for load-on-demand items.
-    /// </summary>
-    /// <param name="obj">TreeViewNode is passed as default parameter </param>
-    private void ExecuteOnDemandLoading(object obj)
-    {
-      var node = obj as TreeViewNode;
-        
-    // Skip the repeated population of child items when every time the node expands.
-    if (node.ChildNodes.Count > 0)
-    {
-        node.IsExpanded = true;
-        return;
-    }
-
+{% highlight c# hl_lines="9 32 42 51" %}
     /// <summary>
     /// CanExecute method is called before expanding and initialization of node. Returns whether the node has child nodes or not.
     /// Based on the return value, the expander visibility of the node is handled.  
@@ -309,6 +289,21 @@ For on-demand loading of child items, the [Execute](https://learn.microsoft.com/
             return true;
         else
             return false;
+    }
+	
+	/// <summary>
+    /// Execute method is called when any item is requested for load-on-demand items.
+    /// </summary>
+    /// <param name="obj">TreeViewNode is passed as default parameter </param>
+    private void ExecuteOnDemandLoading(object obj)
+    {
+      var node = obj as TreeViewNode;
+        
+    // Skip the repeated population of child items when every time the node expands.
+    if (node.ChildNodes.Count > 0)
+    {
+        node.IsExpanded = true;
+        return;
     }
 
     //Animation starts for the expander to show the progress of load on demand.
@@ -337,6 +332,6 @@ For on-demand loading of child items, the [Execute](https://learn.microsoft.com/
 {% endhighlight %}
 {% endtabs %}
 
-Download the entire source code from GitHub [here](https://github.com/SyncfusionExamples/perform-load-on-demand-item-population-in-.net-maui-treeview/tree/master).
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/perform-load-on-demand-item-population-in-.net-maui-treeview)
 
-![.NET MAUI TreeView Load on Demand](Images/LoadonDemand/maui-treeView-Loadondemand.gif)
+![Load-on-demand in .NET MAUI TreeView](Images/loadondemand/maui-treeView-Loadondemand.gif)
