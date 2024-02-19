@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Stacked Line Chart in .NET MAUI Chart control | Syncfusion
-description: Learn here all about stacked line chart support in Syncfusion .NET MAUI Chart (SfCartesianChart) control.
+title: Stacked Line 100 Chart in .NET MAUI Chart control | Syncfusion
+description: Learn here all about stacked line 100 chart support in Syncfusion .NET MAUI Chart (SfCartesianChart) control.
 platform: maui
 control: SfCartesianChart
 documentation: ug
 ---
 
-# Stacked Line Chart in .NET MAUI Chart
+# Stacked Line 100 Chart in .NET MAUI Chart
 
 
-The stacked line chart is a type of chart that displays multiple line series stacked on top of each other, with the values of each series combined to show a cumulative value of the data points
+The stacked line 100 chart is a type of chart that displays multiple line series stacked on top of each other, to indicate the cumulative value of the data points at 100%.
 
-To render a stacked line chart, create an instance of the [StackingLineSeries]() and add it to the [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) collection property of the [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html?tabs=tabid-1).
+To render a stacked line 100 chart, create an instance of the [StackingLine100Series]() and add it to the [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) collection property of the [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html?tabs=tabid-1).
 
 N> The Cartesian chart has a [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) as its default content.
 
@@ -30,25 +30,25 @@ N> The Cartesian chart has a [Series](https://help.syncfusion.com/cr/maui/Syncfu
         <chart:NumericalAxis/>
     </chart:SfCartesianChart.YAxes>
 
-    <chart:StackingLineSeries ItemsSource="{Binding Data1}"
+    <chart:StackingLine100Series ItemsSource="{Binding Data1}"
                                 XBindingPath="Year"
                                 YBindingPath="Value"        
-    </chart:StackingLineSeries>
+    </chart:StackingLine100Series>
 
-    <chart:StackingLineSeries ItemsSource="{Binding Data2}"
+    <chart:StackingLine100Series ItemsSource="{Binding Data2}"
                                 XBindingPath="Year"
                                 YBindingPath="Value"         
-    </chart:StackingLineSeries>
+    </chart:StackingLine100Series>
 
-    <chart:StackingLineSeries ItemsSource="{Binding Data3}"
+    <chart:StackingLine100Series ItemsSource="{Binding Data3}"
                                 XBindingPath="Year"
                                 YBindingPath="Value"         
-    </chart:StackingLineSeries>
+    </chart:StackingLine100Series>
 
-    <chart:StackingLineSeries ItemsSource="{Binding Data4}"
+    <chart:StackingLine100Series ItemsSource="{Binding Data4}"
                                 XBindingPath="Year"
                                 YBindingPath="Value"         
-    </chart:StackingLineSeries>
+    </chart:StackingLine100Series>
 
 </chart:SfCartesianChart>
 
@@ -65,27 +65,27 @@ chart.YAxes.Add(secondaryAxis);
 
 ViewModel viewModel = new ViewModel();
 
-StackingLineSeries series1 = new  StackingLineSeries()
+StackingLine100Series series1 = new  StackingLine100Series()
 {
     XBindingPath = "Year",
     YBindingPath = "Value",
     ItemsSource = viewModel.Data1
 };
 
-StackingLineSeries series2 = new StackingLineSeries()
+StackingLine100Series series2 = new StackingLine100Series()
 {
     XBindingPath = "Year",
     YBindingPath = "Value",
     ItemsSource = viewModel.Data2
 };
-StackingLineSeries series3 = new StackingLineSeries()
+StackingLine100Series series3 = new StackingLine100Series()
 {
     XBindingPath = "Year",
     YBindingPath = "Value",
     ItemsSource = viewModel.Data3
 };
 
-StackingLineSeries series4 = new StackingLineSeries()
+StackingLine100Series series4 = new StackingLine100Series()
 {
     XBindingPath = "Year",
     YBindingPath = "Value",
@@ -102,4 +102,4 @@ this.Content = chart;
 
 {% endtabs %}
 
-![Stacking Line Chart in .NET MAUI Cartesian Charts.]
+![Stacking Line 100 Chart in .NET MAUI Cartesian Charts.]
