@@ -195,3 +195,5 @@ this.Content = picker;
 {% endtabs %}
 
 ![Set Selected date in .NET MAUI Date picker.](images/getting-started/maui-date-picker-selected-date.png)
+
+N> You can refer to our [.NET MAUI Date Picker](https://www.syncfusion.com/maui-controls/maui-datepicker) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Date Picker Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/Picker/SampleBrowser.Maui.Picker/Samples/DatePicker) that shows you how to render the Date Picker in .NET MAUI.
