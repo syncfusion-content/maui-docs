@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Export to Excel in MAUI DataGrid control | Syncfusion
+title: Export to PDF in MAUI DataGrid control | Syncfusion
 description: Learn here all about PDF Exporting support in Syncfusion MAUI DataGrid (SfDataGrid) control and more about it.
 platform: MAUI
 control: SfDataGrid
@@ -99,9 +99,382 @@ private void ExportToPDF_Clicked(object sender, EventArgs e)
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="Export DataGrid to Excel format" src="Images\export-to-pdf\maui-datagrid-export-datagrid-to-pdf.png" width="689"/>
+<img alt="Export DataGrid to PDF format" src="Images\export-to-pdf\maui-datagrid-export-datagrid-to-pdf.png" width="689"/>
 
 N> SfDataGrid cannot export the DataGridTemplateColumn to PDF or Excel due to the inability to access the loaded views and accurately capture their content and layout in a specific range and value from the DataGridTemplateColumn.
+
+## Save Service class in portable project.
+
+Add the new class file with name as SaveService to the project and add below code in it. This is the helper class used and view the PDF file in windows, android, IOS and MAc devices.
+
+{% tabs %}
+{% highlight c# %}
+namespace MAUISample.Services
+{
+  public partial class SaveService
+  {
+    //Method to save document as a file and view the saved document.
+    public partial void SaveAndView(string filename, string contentType, MemoryStream stream);
+  }
+}
+{% endhighlight %}
+{% endtabs %}
+
+## Save and View the PDF documents in windows
+
+Add the new class file with name SaveWindows file under Project-> Platforms-> Windows directory to save and view the PDF document in the windows machine and use the below code in it.
+
+{% tabs %}
+{% highlight c# %}
+using Microsoft.Maui.Controls;
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Threading.Tasks;
+using Windows.Storage;
+using Windows.Storage.Pickers;
+using Windows.Storage.Streams;
+using Windows.UI.Popups;
+
+namespace SampleBrowser.Maui.Services
+{
+    public partial class SaveService
+    {
+        public async partial void SaveAndView(string filename, string contentType, MemoryStream stream)
+        {
+            StorageFile stFile;
+            string extension = Path.GetExtension(filename);
+            //Gets process windows handle to open the dialog in application process. 
+            IntPtr windowHandle = System.Diagnostics.Process.GetCurrentProcess().MainWindowHandle;
+            if (!Windows.Foundation.Metadata.ApiInformation.IsTypePresent("Windows.Phone.UI.Input.HardwareButtons"))
+            {
+                //Creates file save picker to save a file. 
+                FileSavePicker savePicker = new();
+                if (extension == ".pdf")
+                {
+                    savePicker.DefaultFileExtension = ".xlsx";
+                    savePicker.SuggestedFileName = filename;
+                    //Saves the file as xlsx file.
+                    savePicker.FileTypeChoices.Add("XLSX", new List<string>() { ".xlsx" });
+                }
+                WinRT.Interop.InitializeWithWindow.Initialize(savePicker, windowHandle);
+                stFile = await savePicker.PickSaveFileAsync();
+            }
+            else
+            {
+                StorageFolder local = ApplicationData.Current.LocalFolder;
+                stFile = await local.CreateFileAsync(filename, CreationCollisionOption.ReplaceExisting);
+            }
+            if (stFile != null)
+            {
+                using (IRandomAccessStream zipStream = await stFile.OpenAsync(FileAccessMode.ReadWrite))
+                {
+                    //Writes compressed data from memory to file.
+                    using Stream outstream = zipStream.AsStreamForWrite();
+                    outstream.SetLength(0);
+                    //Saves the stream as file.
+                    byte[] buffer = stream.ToArray();
+                    outstream.Write(buffer, 0, buffer.Length);
+                    outstream.Flush();
+                }
+                //Create message dialog box. 
+                MessageDialog msgDialog = new("Do you want to view the document?", "File has been created successfully");
+                UICommand yesCmd = new("Yes");
+                msgDialog.Commands.Add(yesCmd);
+                UICommand noCmd = new("No");
+                msgDialog.Commands.Add(noCmd);
+
+                WinRT.Interop.InitializeWithWindow.Initialize(msgDialog, windowHandle);
+
+                //Showing a dialog box. 
+                IUICommand cmd = await msgDialog.ShowAsync();
+                if (cmd.Label == yesCmd.Label)
+                {
+                    //Launch the saved file. 
+                    await Windows.System.Launcher.LaunchFileAsync(stFile);
+                }
+            }
+        }
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
+
+## Save and View the PDF document in Android
+
+Add the new class file with name SaveAndroid file under Project-> Platforms-> Android directory to save and view the PDF document in the Android Device and use the below in it.
+
+{% tabs %}
+{% highlight c# %}
+using Android.Content;
+using Android.OS;
+using Java.IO;
+using System;
+using System.IO;
+using System.Threading.Tasks;
+
+namespace SampleBrowser.Maui.Services
+{
+    public partial class SaveService
+    {
+        public partial void SaveAndView(string filename, string contentType, MemoryStream stream)
+        {
+            string exception = string.Empty;
+            string? root = System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments);
+
+            Java.IO.File myDir = new(root + "/Syncfusion");
+            myDir.Mkdir();
+
+            Java.IO.File file = new(myDir, filename);
+
+            if (file.Exists())
+            {
+                file.Delete();
+            }
+
+            try
+            {
+                FileOutputStream outs = new(file);
+                outs.Write(stream.ToArray());
+
+                outs.Flush();
+                outs.Close();
+            }
+            catch (Exception e)
+            {
+                exception = e.ToString();
+            }
+            if (file.Exists())
+            {
+
+                if (Build.VERSION.SdkInt >= Android.OS.BuildVersionCodes.N)
+                {
+                    var fileUri = AndroidX.Core.Content.FileProvider.GetUriForFile(Android.App.Application.Context, Android.App.Application.Context.PackageName + ".provider", file);
+                    var intent = new Intent(Intent.ActionView);
+                    intent.SetData(fileUri);
+                    intent.AddFlags(ActivityFlags.NewTask);
+                    intent.AddFlags(ActivityFlags.GrantReadUriPermission);
+                    Android.App.Application.Context.StartActivity(intent);
+                }
+                else
+                {
+                    var fileUri = Android.Net.Uri.Parse(file.AbsolutePath);
+                    var intent = new Intent(Intent.ActionView);
+                    intent.SetDataAndType(fileUri, contentType);
+                    intent = Intent.CreateChooser(intent, "Open File");
+                    intent!.AddFlags(ActivityFlags.NewTask);
+                    Android.App.Application.Context.StartActivity(intent);
+                }
+
+            }
+        }
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
+Create a new XML file with the name of provider_path.xml under the Resources-> xml folder of Android project and add the following code in it. Eg: Resources/xml/provider_path.xml
+
+{% tabs %}
+{% highlight XAML %}
+<?xml version="1.0" encoding="UTF-8" ?>
+<paths xmlns:android="http://schemas.android.com/apk/res/android">
+   <external-path name="external_files" path="."/>
+</paths>
+{% endhighlight %}
+{% endtabs %}
+
+Add the following code to the AndroidManifest.xml file located under Properties folder.
+
+{% tabs %}
+{% highlight XAML %}
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+	<application android:allowBackup="true" android:icon="@mipmap/appicon" android:roundIcon="@mipmap/appicon_round" android:supportsRtl="true">
+		<provider
+        android:name="androidx.core.content.FileProvider"
+        android:authorities="${applicationId}.provider"
+        android:exported="false"
+        android:grantUriPermissions="true">
+			<meta-data
+				android:name="android.support.FILE_PROVIDER_PATHS"
+				android:resource="@xml/file_paths" />
+		</provider>
+	</application>
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.INTERNET" />
+</manifest>
+{% endhighlight %}
+{% endtabs %}
+
+## Save and View the PDF document in IOS
+
+Add the new class file with name SAveIOS file under Project-> Platform-> IOS directory to save and view the PDF document in the IOS device and use the below code in it.
+
+{% tabs %}
+{% highlight c# %}
+using QuickLook;
+using System;
+using System.IO;
+using System.Threading.Tasks;
+using UIKit;
+
+namespace SampleBrowser.Maui.Services
+{
+    public partial class SaveService
+    {
+        public partial void SaveAndView(string filename, string contentType, MemoryStream stream)
+        {
+            string exception = string.Empty;
+            string path = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
+            string filePath = Path.Combine(path, filename);
+            try
+            {
+                FileStream fileStream = File.Open(filePath, FileMode.Create);
+                stream.Position = 0;
+                stream.CopyTo(fileStream);
+                fileStream.Flush();
+                fileStream.Close();
+            }
+            catch (Exception e)
+            {
+                exception = e.ToString();
+            }
+            if (contentType != "application/html" || exception == string.Empty)
+            {
+                //Added this code to resolve the warning thrown when CI compiles.
+                UIViewController? currentController = UIApplication.SharedApplication.ConnectedScenes.OfType<UIWindowScene>().SelectMany(scene => scene.Windows).FirstOrDefault(window => window.IsKeyWindow)!.RootViewController;
+                while (currentController!.PresentedViewController != null)
+                    currentController = currentController.PresentedViewController;
+
+                QLPreviewController qlPreview = new();
+                QLPreviewItem item = new QLPreviewItemBundle(filename, filePath);
+                qlPreview.DataSource = new PreviewControllerDS(item);
+                currentController.PresentViewController((UIViewController)qlPreview, true, null);
+            }
+        }
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
+## Save and View the PDF document in MacCatalyst
+
+Add the new class file with name SaveMAC file under Project-> Platforms-> MacCatylyst directory to save and view the PDF document in the MAC Device and use the below code in it.
+
+{% tabs %}
+{% highlight %}
+using Foundation;
+using QuickLook;
+using System;
+using System.IO;
+using System.Threading.Tasks;
+using UIKit;
+
+namespace SampleBrowser.Maui.Services
+{
+    public partial class SaveService
+    {
+        public partial void SaveAndView(string filename, string contentType, MemoryStream stream)
+        {
+            string path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+            string filePath = Path.Combine(path, filename);
+            stream.Position = 0;
+            //Saves the document
+            using FileStream fileStream = new(filePath, FileMode.Create, FileAccess.ReadWrite);
+            stream.CopyTo(fileStream);
+            fileStream.Flush();
+            fileStream.Dispose();
+            //Launch the file
+            //Added this code to resolve the warning thrown when CI compiles.
+            UIViewController? currentController = UIApplication.SharedApplication.ConnectedScenes.OfType<UIWindowScene>().SelectMany(scene => scene.Windows).FirstOrDefault(window => window.IsKeyWindow)!.RootViewController;
+            while (currentController!.PresentedViewController != null)
+                currentController = currentController.PresentedViewController;
+            UIView? currentView = currentController.View;
+
+            QLPreviewController qlPreview = new();
+            QLPreviewItem item = new QLPreviewItemBundle(filename, filePath);
+            qlPreview.DataSource = new PreviewControllerDS(item);
+            currentController.PresentViewController((UIViewController)qlPreview, true, null);
+        }
+    }
+}
+public class QLPreviewItemFileSystem : QLPreviewItem
+{
+    readonly string _fileName, _filePath;
+
+    public QLPreviewItemFileSystem(string fileName, string filePath)
+    {
+        _fileName = fileName;
+        _filePath = filePath;
+    }
+
+    public override string PreviewItemTitle
+    {
+        get
+        {
+            return _fileName;
+        }
+    }
+    public override NSUrl PreviewItemUrl
+    {
+        get
+        {
+            return NSUrl.FromFilename(_filePath);
+        }
+    }
+}
+
+public class QLPreviewItemBundle : QLPreviewItem
+{
+    readonly string _fileName, _filePath;
+    public QLPreviewItemBundle(string fileName, string filePath)
+    {
+        _fileName = fileName;
+        _filePath = filePath;
+    }
+
+    public override string PreviewItemTitle
+    {
+        get
+        {
+            return _fileName;
+        }
+    }
+    public override NSUrl PreviewItemUrl
+    {
+        get
+        {
+            var documents = NSBundle.MainBundle.BundlePath;
+            var lib = Path.Combine(documents, _filePath);
+            var url = NSUrl.FromFilename(lib);
+            return url;
+        }
+    }
+}
+
+public class PreviewControllerDS : QLPreviewControllerDataSource
+{
+    private readonly QLPreviewItem _item;
+
+    public PreviewControllerDS(QLPreviewItem item)
+    {
+        _item = item;
+    }
+
+    public override nint PreviewItemCount(QLPreviewController controller)
+    {
+        return (nint)1;
+    }
+
+    public override IQLPreviewItem GetPreviewItem(QLPreviewController controller, nint index)
+    {
+        return _item;
+    }
+}
+{% endhighlight %}
+{% endtabs %}
 
 ## Exporting options
 
