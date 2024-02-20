@@ -23,93 +23,13 @@ If you are utilizing a NuGet package to facilitate the process, please ensure th
 </tr>
 </table>
 
-You can export the SfDataGrid to PDF by using the extension methods provided in the Syncfusion.Maui.DataGrid.Exporting namespace.
-
-* `ExportToPdf`
-* `ExportToPdfGrid`
-
-The following code illustrates how to create and display a SfDataGrid in view.
-
-{% tabs %}
-{% highlight xaml %}
-<StackLayout>
-    <Button Text="Export" Clicked="ExportToPDF_Clicked"/>
-    <syncfusion:SfDataGrid  x:Name="dataGrid"
-                            AutoGenerateColumnsMode="None"
-                            VerticalOptions="FillAndExpand"
-                            ColumnWidthMode="Auto"
-                            ItemsSource="{Binding OrderInfoCollection}" >
-        <syncfusion:SfDataGrid.Columns>
-            <syncfusion:DataGridNumericColumn MappingName="OrderID" HeaderText="Order ID" Format="d"/>
-            <syncfusion:DataGridTextColumn MappingName="CustomerID" HeaderText="Customer ID"/>
-            <syncfusion:DataGridTextColumn MappingName="Customer" HeaderText="Customer"/>
-            <syncfusion:DataGridTextColumn MappingName="ShipCountry" HeaderText="Ship Country"/>
-            <syncfusion:DataGridTextColumn MappingName="ShipCity" HeaderText="Ship City"/>
-        </syncfusion:SfDataGrid.Columns>
-    </syncfusion:SfDataGrid>
-</StackLayout>
-{% endhighlight %}
-{% endtabs %}
-
-## ExportToPdf
-
-To export the data to PDF, you can use the [DataGridPdfExportingController.ExportToPdf](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.Exporting.DataGridPdfExportingController.html#Syncfusion_Maui_DataGrid_Exporting_DataGridPdfExportingController_ExportToPdf_Syncfusion_Maui_DataGrid_SfDataGrid_) method, which requires passing the SfDataGrid as an argument.
-
-{% tabs %}
-{% highlight c# %}
-
-private void ExportToPDF_Clicked(object sender, EventArgs e)
-{
-    MemoryStream stream = new MemoryStream();
-    DataGridPdfExportingController pdfExport = new DataGridPdfExportingController();
-    DataGridPdfExportingOption option = new DataGridPdfExportingOption();
-    pdfDoc = pdfExport.ExportToPdf(this.dataGrid, option);
-    pdfDoc.Save(stream);
-    pdfDoc.Close(true);
-    SaveService saveService = new();
-    saveService.SaveAndView("ExportFeature.pdf", "application/pdf", stream);
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-## ExportToPdfGrid
-
-To export the data to PDF, you can also use the [DataGridPdfExportingController.ExportToPdfGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.Exporting.DataGridPdfExportingController.html#Syncfusion_Maui_DataGrid_Exporting_DataGridPdfExportingController_ExportToPdfGrid_Syncfusion_Maui_DataGrid_SfDataGrid_Syncfusion_Maui_Data_ICollectionViewAdv_Syncfusion_Maui_DataGrid_Exporting_DataGridPdfExportingOption_Syncfusion_Pdf_PdfDocument_) method, which requires passing the SfDataGrid as an argument.
-
-{% tabs %}
-{% highlight c# %}
-private void ExportToPDF_Clicked(object sender, EventArgs e)
-{
-    DataGridPdfExportingController pdfExport = new DataGridPdfExportingController();
-    MemoryStream stream = new MemoryStream();
-    var pdfDoc = new PdfDocument();
-    PdfPage page = pdfDoc.Pages.Add();
-    var exportToPdfGrid = pdfExport.ExportToPdfGrid(this.dataGrid, this.dataGrid.View, new DataGridPdfExportingOption()
-    {
-        CanFitAllColumnsInOnePage = false,
-
-    }, pdfDoc);
-    exportToPdfGrid.Draw(page, new Syncfusion.Drawing.PointF(10, 10));
-    pdfDoc.Save(stream);
-    pdfDoc.Close(true);
-    SaveService saveService = new();
-    saveService.SaveAndView("ExportFeature.pdf", "application/pdf", stream);
-}
-{% endhighlight %}
-{% endtabs %}
-
-<img alt="Export DataGrid to PDF format" src="Images\export-to-pdf\maui-datagrid-export-datagrid-to-pdf.png" width="689"/>
-
-N> SfDataGrid cannot export the DataGridTemplateColumn to PDF or Excel due to the inability to access the loaded views and accurately capture their content and layout in a specific range and value from the DataGridTemplateColumn.
-
 ## Save Service class in portable project.
 
 Add the new class file with name as SaveService to the project and add below code in it. This is the helper class used and view the PDF file in windows, android, IOS and MAc devices.
 
 {% tabs %}
 {% highlight c# %}
-namespace MAUISample.Services
+namespace GettingStarted
 {
   public partial class SaveService
   {
@@ -120,7 +40,7 @@ namespace MAUISample.Services
 {% endhighlight %}
 {% endtabs %}
 
-## Save and View the PDF documents in windows
+### Save and View the PDF documents in windows
 
 Add the new class file with name SaveWindows file under Project-> Platforms-> Windows directory to save and view the PDF document in the windows machine and use the below code in it.
 
@@ -136,7 +56,7 @@ using Windows.Storage.Pickers;
 using Windows.Storage.Streams;
 using Windows.UI.Popups;
 
-namespace SampleBrowser.Maui.Services
+namespace GettingStarted
 {
     public partial class SaveService
     {
@@ -201,7 +121,7 @@ namespace SampleBrowser.Maui.Services
 {% endtabs %}
 
 
-## Save and View the PDF document in Android
+### Save and View the PDF document in Android
 
 Add the new class file with name SaveAndroid file under Project-> Platforms-> Android directory to save and view the PDF document in the Android Device and use the below in it.
 
@@ -214,7 +134,7 @@ using System;
 using System.IO;
 using System.Threading.Tasks;
 
-namespace SampleBrowser.Maui.Services
+namespace GettingStarted
 {
     public partial class SaveService
     {
@@ -308,9 +228,9 @@ Add the following code to the AndroidManifest.xml file located under Properties 
 {% endhighlight %}
 {% endtabs %}
 
-## Save and View the PDF document in IOS
+### Save and View the PDF document in IOS
 
-Add the new class file with name SAveIOS file under Project-> Platform-> IOS directory to save and view the PDF document in the IOS device and use the below code in it.
+Add the new class file with name SaveIOS file under Platform-> IOS directory to save and view the PDF document in the IOS device and use the below code in it.
 
 {% tabs %}
 {% highlight c# %}
@@ -320,7 +240,7 @@ using System.IO;
 using System.Threading.Tasks;
 using UIKit;
 
-namespace SampleBrowser.Maui.Services
+namespace GettingStarted
 {
     public partial class SaveService
     {
@@ -355,13 +275,87 @@ namespace SampleBrowser.Maui.Services
             }
         }
     }
+    public class QLPreviewItemFileSystem : QLPreviewItem
+    {
+        readonly string _fileName, _filePath;
+
+        public QLPreviewItemFileSystem(string fileName, string filePath)
+        {
+            _fileName = fileName;
+            _filePath = filePath;
+        }
+
+        public override string PreviewItemTitle
+        {
+            get
+            {
+                return _fileName;
+            }
+        }
+        public override NSUrl PreviewItemUrl
+        {
+            get
+            {
+                return NSUrl.FromFilename(_filePath);
+            }
+        }
+    }
+
+    public class QLPreviewItemBundle : QLPreviewItem
+    {
+        readonly string _fileName, _filePath;
+        public QLPreviewItemBundle(string fileName, string filePath)
+        {
+            _fileName = fileName;
+            _filePath = filePath;
+        }
+
+        public override string PreviewItemTitle
+        {
+            get
+            {
+                return _fileName;
+            }
+        }
+        public override NSUrl PreviewItemUrl
+        {
+            get
+            {
+                var documents = NSBundle.MainBundle.BundlePath;
+                var lib = Path.Combine(documents, _filePath);
+                var url = NSUrl.FromFilename(lib);
+                return url;
+            }
+        }
+    }
+
+
+    public class PreviewControllerDS : QLPreviewControllerDataSource
+    {
+        private readonly QLPreviewItem _item;
+
+        public PreviewControllerDS(QLPreviewItem item)
+        {
+            _item = item;
+        }
+
+        public override nint PreviewItemCount(QLPreviewController controller)
+        {
+            return (nint)1;
+        }
+
+        public override IQLPreviewItem GetPreviewItem(QLPreviewController controller, nint index)
+        {
+            return _item;
+        }
+    }
 }
 {% endhighlight %}
 {% endtabs %}
 
-## Save and View the PDF document in MacCatalyst
+### Save and View the PDF document in MacCatalyst
 
-Add the new class file with name SaveMAC file under Project-> Platforms-> MacCatylyst directory to save and view the PDF document in the MAC Device and use the below code in it.
+Add the new class file with name SaveMAC file under Platforms-> MacCatylyst directory to save and view the PDF document in the MAC Device and use the below code in it.
 
 {% tabs %}
 {% highlight %}
@@ -372,7 +366,7 @@ using System.IO;
 using System.Threading.Tasks;
 using UIKit;
 
-namespace SampleBrowser.Maui.Services
+namespace GettingStarted
 {
     public partial class SaveService
     {
@@ -475,6 +469,86 @@ public class PreviewControllerDS : QLPreviewControllerDataSource
 }
 {% endhighlight %}
 {% endtabs %}
+
+You can export the SfDataGrid to PDF by using the extension methods provided in the Syncfusion.Maui.DataGrid.Exporting namespace.
+
+* `ExportToPdf`
+* `ExportToPdfGrid`
+
+The following code illustrates how to create and display a SfDataGrid in view.
+
+{% tabs %}
+{% highlight xaml %}
+<StackLayout>
+    <Button Text="Export" Clicked="ExportToPDF_Clicked"/>
+    <syncfusion:SfDataGrid  x:Name="dataGrid"
+                            AutoGenerateColumnsMode="None"
+                            VerticalOptions="FillAndExpand"
+                            ColumnWidthMode="Auto"
+                            ItemsSource="{Binding OrderInfoCollection}" >
+        <syncfusion:SfDataGrid.Columns>
+            <syncfusion:DataGridNumericColumn MappingName="OrderID" HeaderText="Order ID" Format="d"/>
+            <syncfusion:DataGridTextColumn MappingName="CustomerID" HeaderText="Customer ID"/>
+            <syncfusion:DataGridTextColumn MappingName="Customer" HeaderText="Customer"/>
+            <syncfusion:DataGridTextColumn MappingName="ShipCountry" HeaderText="Ship Country"/>
+            <syncfusion:DataGridTextColumn MappingName="ShipCity" HeaderText="Ship City"/>
+        </syncfusion:SfDataGrid.Columns>
+    </syncfusion:SfDataGrid>
+</StackLayout>
+{% endhighlight %}
+{% endtabs %}
+
+## ExportToPdf
+
+To export the data to PDF, you can use the [DataGridPdfExportingController.ExportToPdf](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.Exporting.DataGridPdfExportingController.html#Syncfusion_Maui_DataGrid_Exporting_DataGridPdfExportingController_ExportToPdf_Syncfusion_Maui_DataGrid_SfDataGrid_) method, which requires passing the SfDataGrid as an argument.
+
+{% tabs %}
+{% highlight c# %}
+
+private void ExportToPDF_Clicked(object sender, EventArgs e)
+{
+    MemoryStream stream = new MemoryStream();
+    DataGridPdfExportingController pdfExport = new DataGridPdfExportingController();
+    DataGridPdfExportingOption option = new DataGridPdfExportingOption();
+    pdfDoc = pdfExport.ExportToPdf(this.dataGrid, option);
+    pdfDoc.Save(stream);
+    pdfDoc.Close(true);
+    SaveService saveService = new();
+    saveService.SaveAndView("ExportFeature.pdf", "application/pdf", stream);
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+## ExportToPdfGrid
+
+To export the data to PDF, you can also use the [DataGridPdfExportingController.ExportToPdfGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.Exporting.DataGridPdfExportingController.html#Syncfusion_Maui_DataGrid_Exporting_DataGridPdfExportingController_ExportToPdfGrid_Syncfusion_Maui_DataGrid_SfDataGrid_Syncfusion_Maui_Data_ICollectionViewAdv_Syncfusion_Maui_DataGrid_Exporting_DataGridPdfExportingOption_Syncfusion_Pdf_PdfDocument_) method, which requires passing the SfDataGrid as an argument.
+
+{% tabs %}
+{% highlight c# %}
+private void ExportToPDF_Clicked(object sender, EventArgs e)
+{
+    DataGridPdfExportingController pdfExport = new DataGridPdfExportingController();
+    MemoryStream stream = new MemoryStream();
+    var pdfDoc = new PdfDocument();
+    PdfPage page = pdfDoc.Pages.Add();
+    var exportToPdfGrid = pdfExport.ExportToPdfGrid(this.dataGrid, this.dataGrid.View, new DataGridPdfExportingOption()
+    {
+        CanFitAllColumnsInOnePage = false,
+
+    }, pdfDoc);
+    exportToPdfGrid.Draw(page, new Syncfusion.Drawing.PointF(10, 10));
+    pdfDoc.Save(stream);
+    pdfDoc.Close(true);
+    SaveService saveService = new();
+    saveService.SaveAndView("ExportFeature.pdf", "application/pdf", stream);
+}
+{% endhighlight %}
+{% endtabs %}
+
+<img alt="Export DataGrid to PDF format" src="Images\export-to-pdf\maui-datagrid-export-datagrid-to-pdf.png" width="689"/>
+
+N> SfDataGrid cannot export the DataGridTemplateColumn to PDF or Excel due to the inability to access the loaded views and accurately capture their content and layout in a specific range and value from the DataGridTemplateColumn.
 
 ## Exporting options
 

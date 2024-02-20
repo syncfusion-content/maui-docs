@@ -24,71 +24,12 @@ To export the SfDataGrid to an Excel file, the following NuGet package should be
 </tr>
 </table>
 
-The following code sample illustrates the process of exporting data to Excel. It utilizes the [DataGridExcelExportingController.ExportToExcel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.Exporting.DataGridExcelExportingController.html#Syncfusion_Maui_DataGrid_Exporting_DataGridExcelExportingController_ExportToExcel_Syncfusion_Maui_DataGrid_SfDataGrid_) method, with the SfDataGrid passed as an argument.
-
-{% tabs %}
-{% highlight xaml %}
-    <StackLayout>
-        <Button Text="Export"
-                Clicked="ExportToExcel_Clicked" />
-        <syncfusion:SfDataGrid x:Name="dataGrid"
-                               Margin="20"
-                               VerticalOptions="FillAndExpand"
-                               ItemsSource="{Binding OrderInfoCollection}"
-                               GridLinesVisibility="Both"
-                               HeaderGridLinesVisibility="Both"
-                               AutoGenerateColumnsMode="None"
-                               ColumnWidthMode="Auto">
-            <syncfusion:SfDataGrid.Columns>
-                <syncfusion:DataGridNumericColumn Format="D"
-                                                  HeaderText="Order ID"
-                                                  MappingName="OrderID">
-                </syncfusion:DataGridNumericColumn>
-                <syncfusion:DataGridTextColumn HeaderText="Customer ID"
-                                               MappingName="CustomerID">
-                </syncfusion:DataGridTextColumn>
-                <syncfusion:DataGridTextColumn MappingName="Customer"
-                                               HeaderText="Customer">
-                </syncfusion:DataGridTextColumn>
-                <syncfusion:DataGridTextColumn HeaderText="Ship City"
-                                               MappingName="ShipCity">
-                </syncfusion:DataGridTextColumn>
-                <syncfusion:DataGridTextColumn HeaderText="Ship Country"
-                                               MappingName="ShipCountry">
-                </syncfusion:DataGridTextColumn>
-            </syncfusion:SfDataGrid.Columns>
-        </syncfusion:SfDataGrid>
-    </StackLayout>
-{% endhighlight %}
-{% highlight c# %}
-private void ExportToExcel_Clicked(object sender, EventArgs e)
-{
-    // Perform exporting to Excel sheet operations here.
-    DataGridExcelExportingController excelExport = new DataGridExcelExportingController();
-    var excelEngine = excelExport.ExportToExcel(this.dataGrid);
-    var workbook = excelEngine.Excel.Workbooks[0];
-    MemoryStream stream = new MemoryStream();
-    workbook.SaveAs(stream);
-    workbook.Close();
-    excelEngine.Dispose();
-
-    string OutputFilename = "DefaultDataGrid.xlsx";
-    SaveService saveService = new();
-    saveService.SaveAndView(OutputFilename, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", stream);
-}
-{% endhighlight %}
-{% endtabs %}
-
-<img alt="Export DataGrid to Excel format" src="Images\export-to-excel\maui-datagrid-datagrid-to-excel.png" width="689"/>
-
-N> The SfDataGrid is unable to export the DataGridTemplateColumn to PDF or Excel because it is not possible to access to the loaded views necessary for drawing them with specific range, values, and so on from the DataGridTemplateColumn.
-
 ## Save Service class in portable project.
-Add the new class file with name as SaveService to the Project and add below codev in it. This is the helper class used to save and view the excell file in windows, android, IOS and MAC devices.
+Add the new class file with name as SaveService to the Project and add below code in it. This is the helper class used to save and view the excell file in Windows, Android, IOS and MAC devices.
 
 {% tabs %}
 {% highlight c# %}
-namespace MAUISample.Services
+namespace GettingStarted
 {
   public partial class SaveService
   {
@@ -99,8 +40,8 @@ namespace MAUISample.Services
 {% endhighlight %}
 {% endtabs %}
 
-## Save and View the excel documents in windows.
-Add the new class file with name SaveWindows file under Project-> Platforms-> Windows directory to save and view the Excel document in the windows machine and use the below code in it.
+### Save and View the excel documents in windows.
+Add the new class file with name SaveWindows file under Platforms-> Windows directory to save and view the Excel document in the windows machine and use the below code in it.
 
 {% tabs %}
 {% highlight c# %}
@@ -114,7 +55,7 @@ using Windows.Storage.Pickers;
 using Windows.Storage.Streams;
 using Windows.UI.Popups;
 
-namespace SampleBrowser.Maui.Services
+namespace GettingStarted
 {
     public partial class SaveService
     {
@@ -179,8 +120,8 @@ namespace SampleBrowser.Maui.Services
 {% endhighlight %}
 {% endtabs %}
 
-## Save and View the Excel document in Android.
-Add the new class file with name SaveAndroid file under Project-> Platforms->Android directory to save and view the Excel document in the Android Device and use the below code in it.
+### Save and View the Excel document in Android.
+Add the new class file with name SaveAndroid file under Platforms->Android directory to save and view the Excel document in the Android Device and use the below code in it.
 
 {% tabs %}
 {% highlight c# %}
@@ -191,7 +132,7 @@ using System;
 using System.IO;
 using System.Threading.Tasks;
 
-namespace SampleBrowser.Maui.Services
+namespace GettingStarted
 {
     public partial class SaveService
     {
@@ -286,9 +227,9 @@ Add the following code to the AndroidManifest.xml file located under Properties 
 {% endhighlight %}
 {% endtabs %}
 
-## Save and View the Excel document in IOS
+### Save and View the Excel document in IOS
 
-Add the new class file with name SAveIOS file under Project-> Platform-> IOS directory to save and view the Excell document in the IOS device and use the below code in it.
+Add the new class file with name SaveIOS file under Platforms -> IOS directory to save and view the Excell document in the IOS device and use the below code in it.
 
 {% tabs %}
 {% highlight c# %}
@@ -298,7 +239,7 @@ using System.IO;
 using System.Threading.Tasks;
 using UIKit;
 
-namespace SampleBrowser.Maui.Services
+namespace GettingStarted
 {
     public partial class SaveService
     {
@@ -333,13 +274,88 @@ namespace SampleBrowser.Maui.Services
             }
         }
     }
+
+    public class QLPreviewItemFileSystem : QLPreviewItem
+    {
+        readonly string _fileName, _filePath;
+
+        public QLPreviewItemFileSystem(string fileName, string filePath)
+        {
+            _fileName = fileName;
+            _filePath = filePath;
+        }
+
+        public override string PreviewItemTitle
+        {
+            get
+            {
+                return _fileName;
+            }
+        }
+        public override NSUrl PreviewItemUrl
+        {
+            get
+            {
+                return NSUrl.FromFilename(_filePath);
+            }
+        }
+    }
+
+    public class QLPreviewItemBundle : QLPreviewItem
+    {
+        readonly string _fileName, _filePath;
+        public QLPreviewItemBundle(string fileName, string filePath)
+        {
+            _fileName = fileName;
+            _filePath = filePath;
+        }
+
+        public override string PreviewItemTitle
+        {
+            get
+            {
+                return _fileName;
+            }
+        }
+        public override NSUrl PreviewItemUrl
+        {
+            get
+            {
+                var documents = NSBundle.MainBundle.BundlePath;
+                var lib = Path.Combine(documents, _filePath);
+                var url = NSUrl.FromFilename(lib);
+                return url;
+            }
+        }
+    }
+
+
+    public class PreviewControllerDS : QLPreviewControllerDataSource
+    {
+        private readonly QLPreviewItem _item;
+
+        public PreviewControllerDS(QLPreviewItem item)
+        {
+            _item = item;
+        }
+
+        public override nint PreviewItemCount(QLPreviewController controller)
+        {
+            return (nint)1;
+        }
+
+        public override IQLPreviewItem GetPreviewItem(QLPreviewController controller, nint index)
+        {
+            return _item;
+        }
+    }
 }
 {% endhighlight %}
 {% endtabs %}
 
-## Save and View the Excel document in MacCatalyst
+### Save and View the Excel document in MacCatalyst
 
-Add the new class file with name SaveMAC file under Project-> Platforms-> MacCatylyst directory to save and view the Excel document in the MAC Device and use the below code in it.
+Add the new class file with name SaveMAC file under Platforms -> MacCatylyst directory to save and view the Excel document in the MAC Device and use the below code in it.
 
 {% tabs %}
 {% highlight %}
@@ -350,7 +366,7 @@ using System.IO;
 using System.Threading.Tasks;
 using UIKit;
 
-namespace SampleBrowser.Maui.Services
+namespace GettingStarted
 {
     public partial class SaveService
     {
@@ -453,6 +469,66 @@ public class PreviewControllerDS : QLPreviewControllerDataSource
 }
 {% endhighlight %}
 {% endtabs %}
+
+
+The following code sample illustrates the process of exporting data to Excel. It utilizes the [DataGridExcelExportingController.ExportToExcel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.Exporting.DataGridExcelExportingController.html#Syncfusion_Maui_DataGrid_Exporting_DataGridExcelExportingController_ExportToExcel_Syncfusion_Maui_DataGrid_SfDataGrid_) method, with the SfDataGrid passed as an argument.
+
+{% tabs %}
+{% highlight xaml %}
+    <StackLayout>
+        <Button Text="Export"
+                Clicked="ExportToExcel_Clicked" />
+        <syncfusion:SfDataGrid x:Name="dataGrid"
+                               Margin="20"
+                               VerticalOptions="FillAndExpand"
+                               ItemsSource="{Binding OrderInfoCollection}"
+                               GridLinesVisibility="Both"
+                               HeaderGridLinesVisibility="Both"
+                               AutoGenerateColumnsMode="None"
+                               ColumnWidthMode="Auto">
+            <syncfusion:SfDataGrid.Columns>
+                <syncfusion:DataGridNumericColumn Format="D"
+                                                  HeaderText="Order ID"
+                                                  MappingName="OrderID">
+                </syncfusion:DataGridNumericColumn>
+                <syncfusion:DataGridTextColumn HeaderText="Customer ID"
+                                               MappingName="CustomerID">
+                </syncfusion:DataGridTextColumn>
+                <syncfusion:DataGridTextColumn MappingName="Customer"
+                                               HeaderText="Customer">
+                </syncfusion:DataGridTextColumn>
+                <syncfusion:DataGridTextColumn HeaderText="Ship City"
+                                               MappingName="ShipCity">
+                </syncfusion:DataGridTextColumn>
+                <syncfusion:DataGridTextColumn HeaderText="Ship Country"
+                                               MappingName="ShipCountry">
+                </syncfusion:DataGridTextColumn>
+            </syncfusion:SfDataGrid.Columns>
+        </syncfusion:SfDataGrid>
+    </StackLayout>
+{% endhighlight %}
+{% highlight c# %}
+private void ExportToExcel_Clicked(object sender, EventArgs e)
+{
+    // Perform exporting to Excel sheet operations here.
+    DataGridExcelExportingController excelExport = new DataGridExcelExportingController();
+    var excelEngine = excelExport.ExportToExcel(this.dataGrid);
+    var workbook = excelEngine.Excel.Workbooks[0];
+    MemoryStream stream = new MemoryStream();
+    workbook.SaveAs(stream);
+    workbook.Close();
+    excelEngine.Dispose();
+
+    string OutputFilename = "DefaultDataGrid.xlsx";
+    SaveService saveService = new();
+    saveService.SaveAndView(OutputFilename, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", stream);
+}
+{% endhighlight %}
+{% endtabs %}
+
+<img alt="Export DataGrid to Excel format" src="Images\export-to-excel\maui-datagrid-datagrid-to-excel.png" width="689"/>
+
+N> The SfDataGrid is unable to export the DataGridTemplateColumn to PDF or Excel because it is not possible to access to the loaded views necessary for drawing them with specific range, values, and so on from the DataGridTemplateColumn.
 
 ## Exporting Options
 
