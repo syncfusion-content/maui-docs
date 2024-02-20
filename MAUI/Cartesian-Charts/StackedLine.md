@@ -20,7 +20,7 @@ N> The Cartesian chart has a [Series](https://help.syncfusion.com/cr/maui/Syncfu
 
 {% highlight xaml %}
 
-<chart:SfCartesianChart>
+    <chart:SfCartesianChart>
 
     <chart:SfCartesianChart.XAxes>
     <chart:CategoryAxis/>
@@ -50,56 +50,56 @@ N> The Cartesian chart has a [Series](https://help.syncfusion.com/cr/maui/Syncfu
                                 YBindingPath="Value"         
     </chart:StackingLineSeries>
 
-</chart:SfCartesianChart>
+    </chart:SfCartesianChart>
 
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-SfCartesianChart chart = new SfCartesianChart();
-CategoryAxis primaryAxis = new CategoryAxis();
-chart.XAxes.Add(primaryAxis);
-NumericalAxis secondaryAxis = new NumericalAxis();
-chart.YAxes.Add(secondaryAxis);
+    SfCartesianChart chart = new SfCartesianChart();
+    CategoryAxis primaryAxis = new CategoryAxis();
+    chart.XAxes.Add(primaryAxis);
+    NumericalAxis secondaryAxis = new NumericalAxis();
+    chart.YAxes.Add(secondaryAxis);
 
-ViewModel viewModel = new ViewModel();
+    ViewModel viewModel = new ViewModel();
 
-StackingLineSeries series1 = new  StackingLineSeries()
-{
-    XBindingPath = "Year",
-    YBindingPath = "Value",
-    ItemsSource = viewModel.Data1
-};
+    StackingLineSeries series1 = new  StackingLineSeries()
+    {
+        XBindingPath = "Year",
+        YBindingPath = "Value",
+        ItemsSource = viewModel.Data1
+    };
 
-StackingLineSeries series2 = new StackingLineSeries()
-{
-    XBindingPath = "Year",
-    YBindingPath = "Value",
-    ItemsSource = viewModel.Data2
-};
-StackingLineSeries series3 = new StackingLineSeries()
-{
-    XBindingPath = "Year",
-    YBindingPath = "Value",
-    ItemsSource = viewModel.Data3
-};
+    StackingLineSeries series2 = new StackingLineSeries()
+    {
+        XBindingPath = "Year",
+        YBindingPath = "Value",
+        ItemsSource = viewModel.Data2
+    };
+    StackingLineSeries series3 = new StackingLineSeries()       
+    {
+        XBindingPath = "Year",
+        YBindingPath = "Value",
+        ItemsSource = viewModel.Data3
+    };
 
-StackingLineSeries series4 = new StackingLineSeries()
-{
-    XBindingPath = "Year",
-    YBindingPath = "Value",
-    ItemsSource = viewModel.Data4
-};
+    StackingLineSeries series4 = new StackingLineSeries()
+    {
+        XBindingPath = "Year",
+        YBindingPath = "Value",
+        ItemsSource = viewModel.Data4   
+    };
 
-chart.Series.Add(series1);
-chart.Series.Add(series2);     
-chart.Series.Add(series3); 
-chart.Series.Add(series4); 
-this.Content = chart;
+    chart.Series.Add(series1);
+    chart.Series.Add(series2);     
+    chart.Series.Add(series3); 
+    chart.Series.Add(series4); 
+    this.Content = chart;
 
 {% endhighlight %}
 
 {% endtabs %}
 
-![Stacking Line Chart in .NET MAUI Cartesian Charts.]
+![Stacking Line Chart in .NET MAUI Cartesian Charts.](chart-types-images\net-maui-cartesian-charts-stacked-line-chart.png)
