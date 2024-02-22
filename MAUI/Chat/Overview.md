@@ -19,4 +19,4 @@ The Syncfusion chat control for Maui offers a contemporary conversational chatbo
 * **Typing indicator:** Indicates the users of, who are currently typing with an animation.
 * **Suggestions :** Add a set of suggestions to be chosen from, as a reply to a user message.
 
-![maui chat ui](images/maui-chat.png)
+![overview in MAUI SfChat](images/maui-chat-overview.png)
