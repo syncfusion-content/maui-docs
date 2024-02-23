@@ -97,6 +97,12 @@ To migrate easier from [Xamarin SfListView](https://www.syncfusion.com/xamarin-u
 <td>{{'[CanAdjustDragItemAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.DragDropController.html#Syncfusion_Maui_ListView_DragDropController_CanAdjustDragItemAxis)'| markdownify }}</td>
 <td>A property that Gets or sets a value that determines whether to adjust the X position of the drag item for vertical orientation and the Y position for horizontal orientation.</td>
 </tr>
+
+<tr>
+<td>{{'[LayoutManager](https://help.syncfusion.com/cr/xamarin/Syncfusion.ListView.XForms.SfListView.html#Syncfusion_ListView_XForms_SfListView_LayoutManager)'| markdownify }}</td>
+<td>{{'[ItemsLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemsLayout)'| markdownify }}</td>
+<td>A property that Gets or sets the layout definition for SfListView. The default layout is LinearLayout.</td>
+</tr>
 </table> 
 
 ## Enums
