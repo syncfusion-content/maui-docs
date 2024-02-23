@@ -43,7 +43,7 @@ The `SfListView` supports refreshing the data in view when performing the pull-t
 
 This is how the final output will look like when hosting a SfListView control as pullable content.
 
-![.NET MAUI PullToRefresh with ListView hosted with slide on top transition mode.](Images/customization/net-maui-listview-slideontop.gif)
+![.NET MAUI PullToRefresh with ListView hosted with slide on top transition mode.](Images/pulltorefresh/net-maui-listview-slideontop.gif)
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="21 23 33 35" %}
@@ -124,7 +124,7 @@ N> [View sample in GitHub](https://github.com/SyncfusionExamples/load-listview-a
 
 If you run the above sample with the [TransitionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PullToRefresh.SfPullToRefresh.html#Syncfusion_Maui_PullToRefresh_SfPullToRefresh_TransitionMode) as Push, the output will look as follows.
 
-![. NET MAUI PullToRefresh with ListView hosted with push transition mode.](Images/customization/net-maui-listview-push.gif)
+![. NET MAUI PullToRefresh with ListView hosted with push transition mode.](Images/pulltorefresh/net-maui-listview-push.gif)
 
 ## Limitation
 
