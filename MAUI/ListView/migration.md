@@ -182,7 +182,3 @@ To migrate easier from [Xamarin SfListView](https://www.syncfusion.com/xamarin-u
 <td>{{'[InvertedBoolConverter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Converters.InvertedBoolConverter.html)'| markdownify }}</td>
 <td>Converter to reverse the boolean value.</td></tr>
 </table> 
-
-## Upcoming features
-
-  * Pull to refresh
