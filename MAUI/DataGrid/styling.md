@@ -471,3 +471,31 @@ public partial class MainPage : ContentPage
 {% endtabs %}
 
 ![Changing the border width in .NET MAUI DataGrid](Images/styling/maui-datagrid-border-width.png)
+
+## Changing the border color.
+
+You can change the border color by using [GridLineColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_GridLineColorProperty) property in `SfDataGrid.DefaultStyle`.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml"%}
+    <syncfusion:SfDataGrid x:Name="dataGrid"   
+                            GridLinesVisibility="Both"
+                            ColumnWidthMode="Fill"
+                        HeaderGridLinesVisibility="Both"
+                            ItemsSource="{Binding OrderInfoCollection}">
+        <syncfusion:SfDataGrid.DefaultStyle>
+            <syncfusion:DataGridStyle GridLineStrokeThickness="3"  GridLineColor="MediumPurple"/>
+        </syncfusion:SfDataGrid.DefaultStyle>
+    </syncfusion:SfDataGrid>
+{% endhighlight %}
+
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+    public MainPage()
+    {
+        InitializeComponent();
+        this.dataGrid.DefaultStyle.GridLineColor = Color.FromRgb(147, 112, 219) ;
+    }
+{% endhighlight %}
+{% endtabs %}
+
+![Changing the border color in .NET MAUI DataGrid](Images/styling/maui-datagrid-grid-line-color.png)
