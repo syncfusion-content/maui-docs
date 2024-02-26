@@ -358,7 +358,7 @@ namespace GettingStarted
 Add the new class file with name SaveMAC file under Platforms -> MacCatylyst directory to save and view the Excel document in the MAC Device and use the below code in it.
 
 {% tabs %}
-{% highlight %}
+{% highlight c# %}
 using Foundation;
 using QuickLook;
 using System;
