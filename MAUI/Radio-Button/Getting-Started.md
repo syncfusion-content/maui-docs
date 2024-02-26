@@ -2,7 +2,7 @@
 layout: post
 title: Getting Started with .NET MAUI Radio Button Control | Syncfusion
 description: Learn here about getting started with Syncfusion Essential Studio .NET MAUI Radio Button control, its elements and more.
-platform: .NET MAUI
+platform: maui
 control: SfRadioButton
 documentation: ug
 ---
