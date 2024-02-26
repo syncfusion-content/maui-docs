@@ -2,7 +2,7 @@
 layout: post
 title: Getting Started with .NET MAUI Radio Button Control | Syncfusion
 description: Learn here about getting started with Syncfusion Essential Studio .NET MAUI Radio Button control, its elements and more.
-platform: .NET MAUI
+platform: maui
 control: SfRadioButton
 documentation: ug
 ---
@@ -82,7 +82,7 @@ Step 3: Set the control to content in `ContentPage`.
     <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
                     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                     xmlns:local="clr-namespace:GettingStarted"
-	                xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Butons;assembly=Syncfusion.Maui.Buttons" 
+	                xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons" 
 	                x:Class="GettingStarted.MainPage">
         <ContentPage.Content>
             <StackLayout>
