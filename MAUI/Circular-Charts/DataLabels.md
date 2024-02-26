@@ -113,7 +113,7 @@ You can customize the content of the label using [LabelContext]() property. Foll
                      LabelContext="Percentage"
                      ShowDataLabels="True"
                      XBindingPath="Product" 
-                    YBindingPath="SalesRate"/>  
+                     YBindingPath="SalesRate"/>  
     
 </chart:SfCircularChart>
 

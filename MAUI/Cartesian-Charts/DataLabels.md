@@ -165,7 +165,7 @@ You can customize the content of the label using [LabelContext]() property. Foll
                             ShowDataLabels="True"
                             XBindingPath="Name"
                             YBindingPath="Height" 
-                            LabelContext="YValue"/>
+                            LabelContext="Percentage"/>
 
     </chart:SfCartesianChart>
 
@@ -211,7 +211,6 @@ The [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chart
             </DataTemplate>
         </chart:SfCartesianChart.Resources>
         . . .
-
         <chart:ColumnSeries ItemsSource="{Binding Data}" 
                             LabelTemplate="{StaticResource LabelTemplate1}"
                             XBindingPath="Name"
