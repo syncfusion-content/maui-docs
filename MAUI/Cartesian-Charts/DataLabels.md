@@ -146,3 +146,101 @@ chart.Series.Add(series);
 {% endtabs %}
 
 ![Applying series interior for data label in MAUI chart](DataLabel_images/maui_chart_data_label_with_series_brush.jpg)
+
+## Formatting label context
+
+You can customize the content of the label using [LabelContext]() property. Following are the two options that are supported now,
+
+* [Percentage]() - This will show the percentage value of corresponding data point Y value
+
+* [YValue]() - This will show the corresponding Y value.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+    <chart:SfCartesianChart >
+
+        <chart:ColumnSeries ItemsSource="{Binding Data}" 
+                            ShowDataLabels="True"
+                            XBindingPath="Name"
+                            YBindingPath="Height" 
+                            LabelContext="YValue"/>
+
+    </chart:SfCartesianChart>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+    SfCartesianChart chart = new SfCartesianChart();
+    . . .
+    ColumnSeries series1 = new ColumnSeries()
+    {
+        ItemsSource = new ViewModel().Data,
+        XBindingPath = "Name",
+        YBindingPath = "Height",
+        ShowDataLabels = true,
+        LabelContext = LabelContext.Percentage
+    };
+
+    chart.Series.Add(series1);
+    this.Content = chart;
+        
+{% endhighlight %}
+
+{% endtabs %}
+
+![DataLabel context in MAUI Chart](DataLabel_images/maui_chart_data_label_context.png)
+
+## Template
+
+The [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html?tabs=tabid-1) provides support to customize the appearance of the datalabel by using the [LabelTemplate]() property.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+    <chart:SfCartesianChart IsTransposed="True" >
+        <chart:SfCartesianChart.Resources>
+            <DataTemplate x:Key="LabelTemplate1">
+                <HorizontalStackLayout Spacing="5">
+                    <Label Text="{Binding Item.Values}" VerticalOptions="Center" FontSize = "15"/>
+                    <Image Source="arrow.png" WidthRequest="15" HeightRequest="15"/>
+                </HorizontalStackLayout>
+            </DataTemplate>
+        </chart:SfCartesianChart.Resources>
+        . . .
+
+        <chart:ColumnSeries ItemsSource="{Binding Data}" 
+                            LabelTemplate="{StaticResource LabelTemplate1}"
+                            XBindingPath="Name"
+                            YBindingPath="Values" 
+                            ShowDataLabels="True"/>
+
+    </chart:SfCartesianChart>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+    SfCartesianChart chart = new SfCartesianChart();
+    chart.IsTransposed = true;
+    . . .
+    ColumnSeries series1 = new ColumnSeries()
+    {
+        ItemsSource = new ViewModel().Data,
+        XBindingPath = "Name",
+        YBindingPath = "Values",
+        ShowDataLabels = true,
+        LabelTemplate = chart.Resources["LabelTemplate1"] as DataTemplate
+    };
+
+    chart.Series.Add(series1);
+    this.Content = chart;
+        
+{% endhighlight %}
+
+{% endtabs %}
+
+![Label template in MAUI Chart](DataLabel_images/maui_chart_data_label_template.png)
