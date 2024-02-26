@@ -490,11 +490,11 @@ You can change the border color by using [GridLineColor](https://help.syncfusion
 {% endhighlight %}
 
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
-    public MainPage()
-    {
-        InitializeComponent();
-        this.dataGrid.DefaultStyle.GridLineColor = Colors.MediumPurple;
-    }
+public MainPage()
+{
+    InitializeComponent();
+    this.dataGrid.DefaultStyle.GridLineColor = Colors.MediumPurple;
+}
 {% endhighlight %}
 {% endtabs %}
 
