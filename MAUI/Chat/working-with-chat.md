@@ -22,8 +22,8 @@ The 'SfChat' control is equipped with both the 'SfChat.MessageTapped' event and 
     <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                  xmlns:sfChat="clr-namespace:Syncfusion.Maui.Chat;assembly=Syncfusion.Maui.Chat"
-                 xmlns:local="clr-namespace:ChatInteraction"
-                 x:Class="ChatInteraction.MainPage">
+                 xmlns:local="clr-namespace:MauiChat"
+                 x:Class="MauiChat.MainPage">
 
         <ContentPage.Content>
             <sfChat:SfChat x:Name="sfChat"
@@ -39,7 +39,7 @@ The 'SfChat' control is equipped with both the 'SfChat.MessageTapped' event and 
       
     using Syncfusion.Maui.Chat;
 
-    namespace ChatInteraction
+    namespace MauiChat
     {
         public partial class MainPage : ContentPage
         { 
@@ -72,11 +72,11 @@ The 'SfChat' control is equipped with both the 'SfChat.MessageTapped' event and 
 
     //ViewModel.cs
 
-    public class GettingStartedViewModel : INotifyPropertyChanged
+    public class ViewModel : INotifyPropertyChanged
     {
         public Command<object> tappedCommand;
 
-        public GettingStartedViewModel()
+        public ViewModel()
         {
             // assigning command action to ICommand type property
             TappedCommand = new Command<object>(MessageTapped);
@@ -111,8 +111,8 @@ The 'SfChat' control is equipped with both the 'SfChat.MessageDoubleTapped' even
     <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                  xmlns:sfChat="clr-namespace:Syncfusion.Maui.Chat;assembly=Syncfusion.Maui.Chat"
-                 xmlns:local="clr-namespace:ChatInteraction"
-                 x:Class="ChatInteraction.MainPage">
+                 xmlns:local="clr-namespace:MauiChat"
+                 x:Class="MauiChat.MainPage">
 
         <ContentPage.Content>
             <sfChat:SfChat x:Name="sfChat"
@@ -129,7 +129,7 @@ The 'SfChat' control is equipped with both the 'SfChat.MessageDoubleTapped' even
     
     using Syncfusion.Maui.Chat;
 
-    namespace ChatInteraction
+    namespace MauiChat
     {
         public partial class MainPage : ContentPage
         {        
@@ -162,11 +162,11 @@ The 'SfChat' control is equipped with both the 'SfChat.MessageDoubleTapped' even
 
     //ViewModel.cs
 
-    public class GettingStartedViewModel : INotifyPropertyChanged
+    public class ViewModel : INotifyPropertyChanged
     {
         public Command<object> doubleTappedCommand;
 
-        public GettingStartedViewModel()
+        public ViewModel()
         {
             // assigning command action to ICommand type property
             DoubleTappedCommand = new Command<object>(MessageDoubleTapped);
@@ -201,8 +201,8 @@ The 'SfChat' control is equipped with both the 'SfChat.MessageLongPressed' event
     <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                  xmlns:sfChat="clr-namespace:Syncfusion.Maui.Chat;assembly=Syncfusion.Maui.Chat"
-                 xmlns:local="clr-namespace:ChatInteraction"
-                 x:Class="ChatInteraction.MainPage">
+                 xmlns:local="clr-namespace:MauiChat"
+                 x:Class="MauiChat.MainPage">
 
         <ContentPage.Content>
             <sfChat:SfChat x:Name="sfChat"
@@ -218,7 +218,7 @@ The 'SfChat' control is equipped with both the 'SfChat.MessageLongPressed' event
     
     using Syncfusion.Maui.Chat;
 
-    namespace ChatInteraction
+    namespace MauiChat
     {
         public partial class MainPage : ContentPage
         {        
@@ -251,11 +251,11 @@ The 'SfChat' control is equipped with both the 'SfChat.MessageLongPressed' event
     
     //ViewModel.cs
 
-    public class GettingStartedViewModel : INotifyPropertyChanged
+    public class ViewModel : INotifyPropertyChanged
     {
         public Command<object> longPressedCommand;
 
-        public GettingStartedViewModel()
+        public ViewModel()
         {
             // assigning command action to ICommand type property
             LongPressedCommand = new Command<object>(MessageLongPressed);
