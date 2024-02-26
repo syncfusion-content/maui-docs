@@ -17,6 +17,6 @@ The Syncfusion .NET MAUI Chat control offers a contemporary conversational chatb
 * **Message input area:** Send messages to users by interacting with the built-in editor and button at the bottom of the chat control.
 * **Time break:** Organizes chat messages into groups according to the timestamp denoted by `System.DateTime` indicating when each message was generated.
 * **Typing indicator:** Utilizes animation to signify users currently engaged in typing activity.
-* **Suggestions :** Include a selection of options for users to choose from as a response to their message.
+* **Suggestions :** Includes a selection of options for users to choose from as a response to their message.
 
 ![overview in MAUI SfChat](images/maui-chat-overview.png)
