@@ -478,22 +478,22 @@ You can change the border color by using [GridLineColor](https://help.syncfusion
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml"%}
-    <syncfusion:SfDataGrid x:Name="dataGrid"   
-                            GridLinesVisibility="Both"
-                            ColumnWidthMode="Fill"
+<syncfusion:SfDataGrid x:Name="dataGrid"   
+                        GridLinesVisibility="Both"
+                        ColumnWidthMode="Fill"
                         HeaderGridLinesVisibility="Both"
-                            ItemsSource="{Binding OrderInfoCollection}">
+                        ItemsSource="{Binding OrderInfoCollection}">
         <syncfusion:SfDataGrid.DefaultStyle>
             <syncfusion:DataGridStyle GridLineStrokeThickness="3"  GridLineColor="MediumPurple"/>
         </syncfusion:SfDataGrid.DefaultStyle>
-    </syncfusion:SfDataGrid>
+</syncfusion:SfDataGrid>
 {% endhighlight %}
 
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
     public MainPage()
     {
         InitializeComponent();
-        this.dataGrid.DefaultStyle.GridLineColor = Color.FromRgb(147, 112, 219) ;
+        this.dataGrid.DefaultStyle.GridLineColor = Colors.MediumPurple;
     }
 {% endhighlight %}
 {% endtabs %}
