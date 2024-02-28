@@ -162,7 +162,7 @@ The most commonly used series type with [LabelContext]() are [ColumnSeries](http
 {% highlight xaml %}
 
     <chart:SfCartesianChart >
-
+        . . .
         <chart:ColumnSeries ItemsSource="{Binding Data}" 
                             ShowDataLabels="True"
                             XBindingPath="Name"
@@ -177,7 +177,7 @@ The most commonly used series type with [LabelContext]() are [ColumnSeries](http
 
     SfCartesianChart chart = new SfCartesianChart();
     . . .
-    ColumnSeries series1 = new ColumnSeries()
+    ColumnSeries series = new ColumnSeries()
     {
         ItemsSource = new ViewModel().Data,
         XBindingPath = "Name",
@@ -186,7 +186,7 @@ The most commonly used series type with [LabelContext]() are [ColumnSeries](http
         LabelContext = LabelContext.Percentage
     };
 
-    chart.Series.Add(series1);
+    chart.Series.Add(series);
     this.Content = chart;
         
 {% endhighlight %}

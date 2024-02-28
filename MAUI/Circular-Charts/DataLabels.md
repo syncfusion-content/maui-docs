@@ -133,6 +133,7 @@ The content of the label can be customized using the [LabelContext]() property. 
     };
 
     chart.Series.Add(series);
+    this.Content = chart;
         
 {% endhighlight %}
 
