@@ -15,7 +15,7 @@ Strip lines are also konwn as plot band. They are used to shade the different ra
 
 ## Plot Band in Category axis
 
-Plot band can be added to the category axis by specifying index values to the [Start]() which determines the beginning of the plot band, and with the specified [Width]()
+Plot band can be added to the category axis by specifying index values to the [Start]() which determines the beginning of the plot band, and with the specified [Size]()
 
 {% tabs %}
 
@@ -26,8 +26,10 @@ Plot band can be added to the category axis by specifying index values to the [S
         <chart:SfCartesianChart.XAxes>
             <chart:CategoryAxis >
                 <chart:CategoryAxis.PlotBands>
-                    <chart:NumericalPlotBand Start="2" Width="2" 
-                                             Fill="Orange"/>
+                    <chart:NumericalPlotBandCollection>
+                        <chart:NumericalPlotBand Start="2" Size="2" 
+                                                Fill="Orange"/>
+                    </chart:NumericalPlotBandCollection>
                 </chart:CategoryAxis.PlotBands>
             </chart:CategoryAxis>
         </chart:SfCartesianChart.XAxes>
@@ -44,14 +46,18 @@ Plot band can be added to the category axis by specifying index values to the [S
     SfCartesianChart chart = new SfCartesianChart();
     . . .
     CategoryAxis categoryAxis = new CategoryAxis();
+    NumericalPlotBandCollection numericalPlotBandCollection=new NumericalPlotBandCollection();
+
     NumericalPlotBand plotBand = new NumericalPlotBand
     {
         Start = 2,
-        Width = 2,
+        Size = 2,
         Fill = Color.Orange
     };
 
-    categoryAxis.PlotBands.Add(plotBand);
+    numericalPlotBandCollection.Add(plotBand);
+
+    categoryAxis.PlotBands= numericalPlotBandCollection;
     chart.XAxes.Add(categoryAxis);
 
     NumericalAxis secondaryAxis = new NumericalAxis();
@@ -66,7 +72,7 @@ Plot band can be added to the category axis by specifying index values to the [S
 
 ## Plot Band in Numerical axis
 
-Plot band can be added to the numerical axis by specifying numerical values to the [Start]() which determines the beginning of the plot band, and with the specified [Width]()
+Plot band can be added to the numerical axis by specifying numerical values to the [Start]() which determines the beginning of the plot band, and with the specified [Size]()
 
 {% tabs %}
 
@@ -79,9 +85,11 @@ Plot band can be added to the numerical axis by specifying numerical values to t
         </chart:SfCartesianChart.XAxes>
         <chart:SfCartesianChart.YAxes>
             <chart:NumericalAxis>
-                <chart:NumericalAxis.PlotBands>
-                    <chart:NumericalPlotBand Start="28" Width="10" Fill="Orange"/>
-                </chart:NumericalAxis.PlotBands>
+                <chart:NumericalPlotBandCollection>
+                    <chart:NumericalAxis.PlotBands>
+                        <chart:NumericalPlotBand Start="28" Size="10" Fill="Orange"/>
+                    </chart:NumericalAxis.PlotBands>
+                </chart:NumericalPlotBandCollection>
             </chart:NumericalAxis>
         </chart:SfCartesianChart.YAxes>
         . . .
@@ -96,15 +104,18 @@ Plot band can be added to the numerical axis by specifying numerical values to t
     CategoryAxis primaryAxis = new CategoryAxis();
     chart.XAxes.Add(primaryAxis);
 
+    
     NumericalAxis numericalAxis = new NumericalAxis();
+    NumericalPlotBandCollection numericalPlotBandCollection=new NumericalPlotBandCollection();
     NumericalPlotBand plotBand = new NumericalPlotBand
     {
         Start = 28,
-        Width = 10,
+        Size = 10,
         Fill = Color.Orange
     };
 
-    numericalAxis.PlotBands.Add(plotBand);
+    numericalPlotBandCollection.Add(plotBand);
+    numericalAxis.PlotBands = numericalPlotBandCollection;
     chart.YAxes.Add(numericalAxis);
 
 {% endhighlight %}
@@ -115,7 +126,7 @@ Plot band can be added to the numerical axis by specifying numerical values to t
 
 ## Plot Band in DateTime axis
 
-A plot band can be applied to a date-time axis by specifying [Start]() date and [Width]() values. The start value determines the beginning of the plot band , along with the specified width and WidthType, determines the duration and appearance of the plot band on the date-time axis.
+A plot band can be applied to a date-time axis by specifying [Start]() date and [Size]() values. The start value determines the beginning of the plot band , along with the specified width and WidthType, determines the duration and appearance of the plot band on the date-time axis.
 
 {% tabs %}
 
@@ -126,8 +137,10 @@ A plot band can be applied to a date-time axis by specifying [Start]() date and 
         <chart:SfCartesianChart.XAxes>
             <chart:DateTimeAxis>
                 <chart:DateTimeAxis.PlotBands>
-                        <chart:DateTimePlotBand Start="2024-01-24" Width="2" 
-                                                WidthType="Days" Fill="Orange"/>
+                    <chart:DateTimePlotBandCollection >
+                            <chart:DateTimePlotBand Start="2024-01-24" Size="2" SizeType="Days"
+                                                 Fill="Orange"/>
+                    </chart:DateTimePlotBandCollection >
                 </chart:DateTimeAxis.PlotBands>
             </chart:DateTimeAxis>
         </chart:SfCartesianChart.XAxes>
@@ -144,15 +157,17 @@ A plot band can be applied to a date-time axis by specifying [Start]() date and 
     SfCartesianChart chart = new SfCartesianChart();
     . . .
     DateTimeAxis dateTimeAxis = new DateTimeAxis();
+    DateTimePlotBandCollection dateTimePlotBandCollection = new DateTimePlotBandCollection();
     DateTimePlotBand plotBand = new DateTimePlotBand
     {
         Start = new DateTime(2024, 1, 24),
-        Width = 2,
+        Size = 2,
         WidthType = DateTimeUnits.Days,
         Fill = Color.Orange
     };
 
-    dateTimeAxis.PlotBands.Add(plotBand);
+    dateTimePlotBandCollection.Add(plotBand);
+    dateTimeAxis.PlotBands = dateTimePlotBandCollection;
     chart.XAxes.Add(dateTimeAxis);
 
     NumericalAxis secondaryAxis = new NumericalAxis();
@@ -184,9 +199,11 @@ The Plot band recurrence is used to enable the plot bands to be drawn repeatedly
         </chart:SfCartesianChart.XAxes>
         <chart:SfCartesianChart.YAxes>
             <chart:NumericalAxis>
-                <chart:NumericalAxis.PlotBands>
-                    <chart:NumericalPlotBand Start="28" Width="2" Fill="Orange"
-                                             RepeatEvery="10" RepeatUntil="55"/>
+            <chart:NumericalAxis.PlotBands>
+                    <chart:NumericalPlotBandCollection>
+                        <chart:NumericalPlotBand Start="28" Size="2" Fill="Orange"
+                                                RepeatEvery="10" RepeatUntil="55"/>
+                    </chart:NumericalPlotBandCollection>
                 </chart:NumericalAxis.PlotBands>
             </chart:NumericalAxis>
         </chart:SfCartesianChart.YAxes>
@@ -203,16 +220,18 @@ The Plot band recurrence is used to enable the plot bands to be drawn repeatedly
     chart.XAxes.Add(primaryAxis);
 
     NumericalAxis numericalAxis = new NumericalAxis();
+    NumericalPlotBandCollection numericalPlotBandCollection=new NumericalPlotBandCollection();
     NumericalPlotBand plotBand = new NumericalPlotBand
     {
         Start = 28,
-        Width = 2,
+        Size = 2,
         Fill = Color.Orange,
         RepeatEvery = 10,
         RepeatUntil = 55
     };
 
-    numericalAxis.PlotBands.Add(plotBand);
+    numericalPlotBandCollection.Add(plotBand);
+    numericalAxis.PlotBands = numericalPlotBandCollection;
     chart.YAxes.Add(numericalAxis);
 
 {% endhighlight %}
@@ -223,7 +242,7 @@ The Plot band recurrence is used to enable the plot bands to be drawn repeatedly
 
 ## Segmented Plot Band
 
-If you need to draw a plot band that should not stretch along its associated axis, you have to set the [SegmentStart]() and [SegmentEnd]() properties.
+If you need to draw a plot band that should not stretch along its associated axis, you have to set the [AssociatedAxisStart]() and [AssociatedAxisEnd]() properties.
 
 {% tabs %}
 
@@ -237,9 +256,11 @@ If you need to draw a plot band that should not stretch along its associated axi
         <chart:SfCartesianChart.YAxes>
             <chart:NumericalAxis>
                 <chart:NumericalAxis.PlotBands>
-                    <chart:NumericalPlotBand Start="28" Width="2" RepeatEvery="10" 
+                    <chart:NumericalPlotBandCollection>
+                        <chart:NumericalPlotBand Start="28" Size="2" RepeatEvery="10" 
                                             RepeatUntil="55" Fill="Orange" IsSegmented="True" 
-                                            SegmentStart="0" SegmentEnd="1"/>
+                                            AssociatedAxisStart="0" AssociatedAxisEnd="1"/>
+                    </chart:NumericalPlotBandCollection>
                 </chart:NumericalAxis.PlotBands>
             </chart:NumericalAxis>
         </chart:SfCartesianChart.YAxes>
@@ -256,19 +277,21 @@ If you need to draw a plot band that should not stretch along its associated axi
     chart.XAxes.Add(primaryAxis);
 
     NumericalAxis numericalAxis = new NumericalAxis();
+    NumericalPlotBandCollection numericalPlotBandCollection=new NumericalPlotBandCollection();
     NumericalPlotBand plotBand = new NumericalPlotBand
     {
         Start = 28,
-        Width = 2,
+        Size = 2,
         RepeatEvery = 10,
         RepeatUntil = 55,
         Fill = Color.Orange,
         IsSegmented = true,
-        SegmentStart = 0,
-        SegmentEnd = 1
+        AssociatedAxisStart = 0,
+        AssociatedAxisEnd = 1
     };
 
-    numericalAxis.PlotBands.Add(plotBand);
+    numericalPlotBandCollection.Add(plotBand);
+    numericalAxis.PlotBands = numericalPlotBandCollection;
     chart.YAxes.Add(numericalAxis);
 
 {% endhighlight %}
@@ -294,11 +317,13 @@ You can able to add a text in the plot band using the [Text]() property.Also the
         <chart:SfCartesianChart.YAxes>
             <chart:NumericalAxis>
                 <chart:NumericalAxis.PlotBands>
-                    <chart:NumericalPlotBand Start="28" Width="10" Fill="Orange" Text="Plot Band">
-                        <chart:NumericalPlotBand.LabelStyle>
-                            <chart:ChartPlotBandLabelStyle TextColor="Blue" FontSize="12" 
-                                                           FontAttributes="Bold"/>
-                        </chart:NumericalPlotBand.LabelStyle>
+                <chart:NumericalPlotBandCollection>
+                        <chart:NumericalPlotBand Start="28" Size="10" Fill="Orange" Text="Plot Band">
+                            <chart:NumericalPlotBand.LabelStyle>
+                                <chart:ChartPlotBandLabelStyle TextColor="Blue" FontSize="12" 
+                                                            FontAttributes="Bold"/>
+                            </chart:NumericalPlotBand.LabelStyle>
+                        </chart:NumericalPlotBandCollection>
                     </chart:NumericalPlotBand>
                 </chart:NumericalAxis.PlotBands>
             </chart:NumericalAxis>
@@ -316,6 +341,7 @@ You can able to add a text in the plot band using the [Text]() property.Also the
     chart.XAxes.Add(primaryAxis);
 
     NumericalAxis numericalAxis = new NumericalAxis();
+    NumericalPlotBandCollection numericalPlotBandCollection=new NumericalPlotBandCollection();
     NumericalPlotBand plotBand = new NumericalPlotBand
     {
         Start = 28,
@@ -332,7 +358,9 @@ You can able to add a text in the plot band using the [Text]() property.Also the
     };
 
     plotBand.LabelStyle = labelStyle;
-    numericalAxis.PlotBands.Add(plotBand);
+
+    numericalPlotBandCollection.Add(plotBand);
+    numericalAxis.PlotBands= numericalPlotBandCollection;
     chart.YAxes.Add(numericalAxis);
 
 {% endhighlight %}
