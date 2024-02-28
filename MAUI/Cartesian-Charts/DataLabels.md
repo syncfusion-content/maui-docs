@@ -147,13 +147,15 @@ chart.Series.Add(series);
 
 ![Applying series interior for data label in MAUI chart](DataLabel_images/maui_chart_data_label_with_series_brush.jpg)
 
-## Formatting label context
+## Formatting Label Context
 
-You can customize the content of the label using [LabelContext]() property. Following are the two options that are supported now,
+The content of the label can be customized using the [LabelContext]() property. Following are the two options that are supported now,
 
 * [Percentage]() - This will show the percentage value of corresponding data point Y value
 
 * [YValue]() - This will show the corresponding Y value.
+
+The most commonly used series type with [LabelContext]() are [ColumnSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ColumnSeries.html), [StackingColumnSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.StackingColumnSeries.html), BarSeries and StackedBarSeries
 
 {% tabs %}
 
@@ -193,9 +195,9 @@ You can customize the content of the label using [LabelContext]() property. Foll
 
 ![DataLabel context in MAUI Chart](DataLabel_images/maui_chart_data_label_context.png)
 
-## Template
+## LabelTemplate
 
-The [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html?tabs=tabid-1) provides support to customize the appearance of the datalabel by using the [LabelTemplate]() property.
+The [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html) provides support to customize the appearance of the datalabel by using the [LabelTemplate]() property.
 
 {% tabs %}
 
@@ -226,16 +228,34 @@ The [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chart
     SfCartesianChart chart = new SfCartesianChart();
     chart.IsTransposed = true;
     . . .
-    ColumnSeries series1 = new ColumnSeries()
-    {
-        ItemsSource = new ViewModel().Data,
-        XBindingPath = "Name",
-        YBindingPath = "Values",
-        ShowDataLabels = true,
-        LabelTemplate = chart.Resources["LabelTemplate1"] as DataTemplate
-    };
+    ColumnSeries series = new ColumnSeries();
+    series.ShowDataLabels = true;
+    series.ItemsSource = (new ViewModel()).Data;
+    series.XBindingPath = "Name";
+    series.YBindingPath = "Height";
 
-    chart.Series.Add(series1);
+    DataTemplate LabelTemplate1 = new DataTemplate(() =>
+    {
+        HorizontalStackLayout horizontalStackLayout = new HorizontalStackLayout { Spacing = 5 };
+        var label = new Label
+        {
+            VerticalOptions = LayoutOptions.Center,
+            FontSize = 15
+        };
+        label.SetBinding(Label.TextProperty, new Binding("Item.Height"));
+        var image = new Image
+        {
+            Source = "arrow.png",
+            WidthRequest = 15,
+            HeightRequest = 15
+        };
+        horizontalStackLayout.Children.Add(label);
+        horizontalStackLayout.Children.Add(image);
+        return horizontalStackLayout;
+    });
+
+    series.LabelTemplate = LabelTemplate1;
+    chart.Series.Add(series);
     this.Content = chart;
         
 {% endhighlight %}

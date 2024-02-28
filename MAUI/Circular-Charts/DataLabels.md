@@ -95,9 +95,9 @@ chart.Series.Add(series);
 
 ![Applying series interior for data label in MAUI chart](DataLabel_images/maui_chart_datalabels_useseriespalette.png)
 
-## Formatting label context
+## Formatting Label Context
 
-You can customize the content of the label using [LabelContext]() property. Following are the two options that are supported now,
+The content of the label can be customized using the [LabelContext]() property. Following are the two options that are supported now,
 
 * [Percentage]() - This will show the percentage value of corresponding data point Y value
 
@@ -109,7 +109,7 @@ You can customize the content of the label using [LabelContext]() property. Foll
 
 <chart:SfCircularChart>
     
-    <chart:PieSeries ItemsSource="{Binding Data1}" 
+    <chart:PieSeries ItemsSource="{Binding Data}" 
                      LabelContext="Percentage"
                      ShowDataLabels="True"
                      XBindingPath="Product" 
@@ -122,14 +122,16 @@ You can customize the content of the label using [LabelContext]() property. Foll
 {% highlight c# %}
 
     SfCircularChart chart = new SfCircularChart();
-    ChartViewModel viewModel = new ChartViewModel();
-    chart.BindingContext = viewModel;
-    PieSeries series = new PieSeries();
-    series.ItemsSource = viewModel.Data;
-    ShowDataLabels = true;
-    LabelContext = LabelContext.Percentage;
-    series.XBindingPath = "Product";
-    series.YBindingPath = "SalesRate";
+    . . .
+    PieSeries series = new PieSeries()
+    {
+        ItemsSource = new ViewModel().Data,
+        XBindingPath = "Product";
+        YBindingPath = "SalesRate";
+        ShowDataLabels = true,
+        LabelContext = LabelContext.Percentage
+    };
+
     chart.Series.Add(series);
         
 {% endhighlight %}
@@ -138,9 +140,9 @@ You can customize the content of the label using [LabelContext]() property. Foll
 
 ![DataLabel context in MAUI Chart](DataLabel_images/maui_chart_datalabel_context.png)
 
-## Template
+## LabelTemplate
 
-The [SfCircularChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCircularChart.html?tabs=tabid-1) provides support to customize the appearance of the datalabel by using the [LabelTemplate]() property.
+The [SfCircularChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCircularChart.html) provides support to customize the appearance of the datalabel by using the [LabelTemplate]() property.
 
 {% tabs %}
 
@@ -191,8 +193,46 @@ The [SfCircularChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts
     PieSeries series = new PieSeries();
     series.ItemsSource = viewModel.Data;
     series.ShowDataLabels = true;
-    series.LabelTemplate1 = chart.Resources["LabelTemplate1"] as DataTemplate
-    . . .
+
+    DataTemplate LabelTemplate1 = new DataTemplate(() =>
+    {
+        var horizontalStackLayout = new HorizontalStackLayout { Spacing = 5 };
+        var productLabel = new Label
+        {
+            TextColor = Color.White,
+            FontAttributes = FontAttributes.Bold,
+            FontSize = 13,
+            HorizontalOptions = LayoutOptions.Center,
+            VerticalOptions = LayoutOptions.Center
+        };
+        productLabel.SetBinding(Label.TextProperty, "Item.Product");
+        var separatorLabel = new Label
+        {
+            Text = " : ",
+            TextColor = Color.White,
+            FontAttributes = FontAttributes.Bold,
+            FontSize = 13,
+            HorizontalOptions = LayoutOptions.Center,
+            VerticalOptions = LayoutOptions.Center
+        };
+        var salesRateLabel = new Label
+        {
+            TextColor = Color.White,
+            FontAttributes = FontAttributes.Bold,
+            FontSize = 13,
+            HorizontalOptions = LayoutOptions.Center,
+            VerticalOptions = LayoutOptions.Center
+        };
+        salesRateLabel.SetBinding(Label.TextProperty, "Item.SalesRate");
+        horizontalStackLayout.Children.Add(productLabel);
+        horizontalStackLayout.Children.Add(separatorLabel);
+        horizontalStackLayout.Children.Add(salesRateLabel);
+        return horizontalStackLayout;
+    });
+
+    series.LabelTemplate1 = LabelTemplate1;
+    chart.Series.Add(series);
+    this.Content = chart;
         
 {% endhighlight %}
 

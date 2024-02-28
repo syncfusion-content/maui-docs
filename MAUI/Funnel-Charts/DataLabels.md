@@ -92,3 +92,65 @@ chart.DataLabelSettings.LabelStyle = new ChartDataLabelStyle()
 {% endtabs %} 
 
 ![Data label for .NET MAUI Funnel chart](DataLabel_images/MAUI_data_label.png)
+
+## Template
+
+The [SfFunnelChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfFunnelChart.html?tabs=tabid-1) provides support to customize the appearance of the datalabel by using the [LabelTemplate]() property.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+    <Grid x:Name="grid">
+        <Grid.Resources>
+            <DataTemplate x:Key="LabelTemplate1">
+                    <HorizontalStackLayout Spacing="5">
+                        <Label Text="{Binding Item.Value}" VerticalOptions="Center" FontSize = "15"/>
+                        <Image Source="arrow.png" WidthRequest="15" HeightRequest="15"/>
+                    </HorizontalStackLayout>
+            </DataTemplate>
+        </Grid.Resources>
+
+        <chart:SfFunnelChart ItemsSource="{Binding Data}" 
+                             LabelTemplate="{StaticResource LabelTemplate1}"
+                             XBindingPath="Name" 
+                             YBindingPath="Value"
+                             ShowDataLabels="True"/>
+
+    </Grid>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+    SfFunnelChart chart = new SfFunnelChart();
+    . . .
+    chart.ShowDataLabels = true;
+    DataTemplate LabelTemplate1 = new DataTemplate(() =>
+    {
+        HorizontalStackLayout horizontalStackLayout = new HorizontalStackLayout { Spacing = 5 };
+        var label = new Label
+        {
+            VerticalOptions = LayoutOptions.Center,
+            FontSize = 15
+        };
+        label.SetBinding(Label.TextProperty, new Binding("Item.Value"));
+        var image = new Image
+        {
+            Source = "arrow.png",
+            WidthRequest = 15,
+            HeightRequest = 15
+        };
+        horizontalStackLayout.Children.Add(label);
+        horizontalStackLayout.Children.Add(image);
+        return horizontalStackLayout;
+    });
+
+    chart.LabelTemplate = LabelTemplate1;
+    this.Content = chart;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Label template in MAUI Chart](DataLabel_images/)
