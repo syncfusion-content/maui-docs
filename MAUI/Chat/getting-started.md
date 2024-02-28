@@ -198,7 +198,7 @@ Create a simple message collection as shown in the following code example in a n
   ## Binding Messages to Chat 
 
   
-To bind the messages to SfChat, configure the SfChat.Messages property accordingly. You have the option to bind the message collection of the SfChat either through XAML or programmatically in code.
+To bind the messages to SfChat, configure the [SfChat.Messages]() property accordingly. You have the option to bind the message collection of the SfChat either through XAML or programmatically in code.
 
 {% tabs %} {% highlight xaml %}
 
@@ -243,7 +243,7 @@ Download the entire source code from GitHub [here]().
 ## Showing time break between messages
 
 
-To display time breaks between messages, you can segregate messages based on the specified date within each message. This can be accomplished by enabling the `SfChat.ShowTimeBreak` property, which can be configured both in XAML and programmatically. Below is an example code snippet illustrating this.
+To display time breaks between messages, you can segregate messages based on the specified date within each message. This can be accomplished by enabling the [SfChat.ShowTimeBreak]() property, which can be configured both in XAML and programmatically. Below is an example code snippet illustrating this.
 
 {% tabs %}
 {% highlight xaml %}
