@@ -93,9 +93,9 @@ chart.DataLabelSettings.LabelStyle = new ChartDataLabelStyle()
 
 ![Data label for .NET MAUI Pyramid chart](DataLabel_images/MAUI_data_label.png)
 
-## Template
+## LabelTemplate
 
-The [SfPyramidChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPyramidChart.html?tabs=tabid-1) provides support to customize the appearance of the datalabel by using the [LabelTemplate]() property.
+The [SfPyramidChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPyramidChart.html) provides support to customize the appearance of the datalabel by using the [LabelTemplate]() property.
 
 {% tabs %}
 

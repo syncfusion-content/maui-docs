@@ -93,9 +93,9 @@ chart.DataLabelSettings.LabelStyle = new ChartDataLabelStyle()
 
 ![Data label for .NET MAUI Funnel chart](DataLabel_images/MAUI_data_label.png)
 
-## Template
+## LabelTemplate
 
-The [SfFunnelChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfFunnelChart.html?tabs=tabid-1) provides support to customize the appearance of the datalabel by using the [LabelTemplate]() property.
+The [SfFunnelChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfFunnelChart.html) provides support to customize the appearance of the datalabel by using the [LabelTemplate]() property.
 
 {% tabs %}
 
