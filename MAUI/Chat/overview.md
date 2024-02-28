@@ -13,10 +13,10 @@ The Syncfusion .NET MAUI Chat control offers a contemporary conversational chatb
 
 ## Key features
 
-* **Message types:** Incorporated functionality for diverse message formats, including text, calendar, date picker, time picker, and clickable hyperlinks to display a range of message types.
+* **Message types:** Built-in support for various message types such as text, calendar, date picker, time picker, and hyperlink to show different types of messages.
 * **Message input area:** Send messages to users by interacting with the built-in editor and button at the bottom of the chat control.
 * **Time break:** Organizes chat messages into groups according to the timestamp denoted by `System.DateTime` indicating when each message was generated.
 * **Typing indicator:** Utilizes animation to signify users currently engaged in typing activity.
 * **Suggestions:** Includes a selection of options for users to choose from as a response to their message.
 
-![overview in MAUI SfChat](Images/maui-chat-overview.png)
+![overview in .NET MAUI SfChat](Images/maui-chat-overview.png)
