@@ -358,7 +358,7 @@ namespace GettingStarted
 Add the new class file with name SaveMAC file under Platforms-> MacCatylyst directory to save and view the PDF document in the MAC Device and use the below code in it.
 
 {% tabs %}
-{% highlight %}
+{% highlight c# %}
 using Foundation;
 using QuickLook;
 using System;
@@ -510,7 +510,7 @@ private void ExportToPDF_Clicked(object sender, EventArgs e)
     MemoryStream stream = new MemoryStream();
     DataGridPdfExportingController pdfExport = new DataGridPdfExportingController();
     DataGridPdfExportingOption option = new DataGridPdfExportingOption();
-    pdfDoc = pdfExport.ExportToPdf(this.dataGrid, option);
+    var pdfDoc = pdfExport.ExportToPdf(this.dataGrid, option);
     pdfDoc.Save(stream);
     pdfDoc.Close(true);
     SaveService saveService = new();
