@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting started with .NET MAUI Chart control | Syncfusion
-description: Learn here all about getting started with Syncfusion MAUI Chart (SfPolarChart) control.
+description: Learn here all about getting started with Syncfusion .NET MAUI Chart (SfPolarChart) control.
 platform: maui
 control: SfPolarChart
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with .NET MAUI Chart
 
-This section explains how to populate the Polar chart with data, a title, data labels, a legend, and tooltips. It also covers the essential aspects for getting started with the chart.
+This section explains how to populate the Polar chart with data, a title, data labels, a legend, and tooltips. It also covers the essential aspects of getting started with the chart.
 
 ## Creating an application with .NET MAUI chart
 
@@ -53,7 +53,7 @@ namespace ChartGettingStarted
 
 ## Register the handler
 
-Syncfusion.Maui.Core nuget is a dependent package for all Syncfusion controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion core.
+The Syncfusion.Maui.Core nuget package is a dependent package for all Syncfusion controls in .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion Core.
 
 {% highlight C# %}
 
@@ -89,7 +89,7 @@ namespace ChartGettingStarted
 
 ## Initialize view model
 
-Now, let us define a simple data model that represents a data point in the chart.
+Now, let us define a simple data model that represents a data point on the chart.
 
 {% tabs %}  
 
@@ -135,9 +135,9 @@ public class ViewModel
 
 {% endtabs %} 
 
-Set the `ViewModel` instance as the `BindingContext` of your page to bind `ViewModel` properties to the chart. 
+Set the `ViewModel` instance as the `BindingContext` of your page in order to bind the `ViewModel` properties to the chart. 
  
-N> Add namespace of `ViewModel` class to your XAML Page, if you prefer to set `BindingContext` in XAML.
+N> Add the namespace of the `ViewModel` class to your XAML page if you prefer to set the `BindingContext` in XAML.
 
 {% tabs %} 
 
@@ -167,7 +167,7 @@ this.BindingContext = new ViewModel();
 
 ## Initialize Chart axis
 
-[ChartAxis]() is used to locate the data points inside the chart area. The [PrimaryAxis]() and [SecondaryAxis]() properties of the chart is used to initialize the axis for the chart.
+[ChartAxis]() is used to locate the data points inside the chart area. The [PrimaryAxis]() and [SecondaryAxis]() properties of the chart are used to initialize the axis for the chart.
 
 {% tabs %} 
 
@@ -227,17 +227,21 @@ N> In order to plot the series, the [XBindingPath]() and [YBindingPath]() proper
 
 SfPolarChart chart = new SfPolarChart();
 
+// Initializing primary axis
 CategoryAxis primaryAxis = new CategoryAxis();
 chart.PrimaryAxis.Add(primaryAxis);
 
+//Initializing secondary Axis
 NumericalAxis secondaryAxis = new NumericalAxis();
 chart.SecondaryAxis.Add(secondaryAxis);
 
+//Initialize the series
 PolarAreaSeries series = new PolarAreaSeries();
 series.ItemsSource = (new ViewModel()).PlantDetails;
 series.XBindingPath = "Direction";
 series.YBindingPath = "Tree";
 
+//Adding Series to the Chart Series Collection
 chart.Series.Add(series);
 
 {% endhighlight %}
@@ -246,7 +250,7 @@ chart.Series.Add(series);
 
 ## Add a title
 
-The title of the chart provide quick information to the user about the data being plotted in the chart. The [Title]() property is used to set title for the chart as follows.
+The title of the chart provides quick information to the user about the data being plotted in the chart. The [Title]() property is used to set the title for the chart as follows.
 
 {% tabs %} 
 
@@ -255,7 +259,7 @@ The title of the chart provide quick information to the user about the data bein
 <Grid>
     <chart:SfPolarChart>
         <chart:SfPolarChart.Title>
-            <Label Text="Plant Data" />
+            <Label Text="Plant Analysis" />
         </chart:SfPolarChart.Title> 
     </chart:SfPolarChart>
 </Grid>
@@ -267,7 +271,7 @@ The title of the chart provide quick information to the user about the data bein
 SfPolarChart chart = new SfPolarChart();
 chart.Title = new Label
 {
-    Text = "Plant Data"
+    Text = "Plant Analysis"
 };
 
 {% endhighlight %}
@@ -276,7 +280,7 @@ chart.Title = new Label
 
 ## Enable the data labels
 
-The [ShowDataLabels]() property of series can be used to enable the data labels to improve the readability of the chart. The label visibility is set to `False` by default.
+The [ShowDataLabels]() property of series can be used to enable the data labels to enhance the readability of the chart. The label visibility is set to `False` by default.
 
 {% tabs %} 
 
@@ -410,7 +414,7 @@ The following code example gives you the complete code of above configurations.
         <Grid>
             <chart:SfPolarChart>
                 <chart:SfPolarChart.Title>
-                    <Label Text="Plant Data"/>
+                    <Label Text="Plant Analysis"/>
                 </chart:SfPolarChart.Title>
 
                 <chart:SfPolarChart.Legend>
@@ -458,7 +462,7 @@ namespace ChartGettingStarted
 
             chart.Title = new Label
             {
-                Text = "Plant Data"
+                Text = "Plant Analysis"
             };
 
             CategoryAxis primaryAxis = new CategoryAxis();

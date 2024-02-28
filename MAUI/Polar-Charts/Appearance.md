@@ -1,18 +1,18 @@
 ---
 layout: post
 title: Appearance in .NET MAUI Chart control  Syncfusion
-description: Learn here all about appearance customization in Syncfusion .NET MAUI Chart (SfPolarChart), its elements, and more.
+description: Learn here all about appearance customization in Syncfusion .NET MAUI Chart (SfPolarChart), including its elements and more.
 platform: maui
 control: SfPolarChart
 documentation: ug
 ---
 
 # Appearance in .NET MAUI Polar Chart
-The appearance of [SfPolarChart]() can be customized by using the predefined brushes, custom brushes and gradient, which allows to enrich the application.
+The appearance of [SfPolarChart]() can be customized by using the predefined brushes, custom brushes and gradient, which allows for the enrichment of the application.
 
 ## Default PaletteBrushes for Chart
 
-By default, chart applies a set of predefined brushes to the series in a predefined order. The following screenshot shows the default appearance of multiple series.
+By default, the chart applies a set of predefined brushes to the series in a specific order. The following screenshot displays the default appearance of multiple series.
 
 {% tabs %}
 
@@ -74,7 +74,7 @@ this.Content = chart;
 
 ### Custom PaletteBrushes
 
-[SfPolarChart]() provides support to define own brushes for the chart with preferred order by using the [PaletteBrushes]() property, as shown in the following code example.
+The [SfPolarChart]() provides support for defining custom brushes for the chart in a preferred order using the [PaletteBrushes]() property, as illustrated in the following code example.
 
 {% tabs %}
 
@@ -108,7 +108,7 @@ this.Content = chart;
 
 ## Applying Gradient
 
-Gradient for the chart can be set by using the [PaletteBrushes]() property with the help of `LinearGradientBrush` or `RadialGradientBrush`.
+The gradient for the chart can be set by using the [PaletteBrushes]() property with the help of `LinearGradientBrush` or `RadialGradientBrush`.
 
 The following code sample and screenshot illustrates how to apply the gradient brushes for the series using the [PaletteBrushes]() property.
 
@@ -206,7 +206,7 @@ public class ViewModel
 <chart:SfPolarChart>
    <chart:SfPolarChart.PlotAreaBackgroundView>
     <AbsoluteLayout>
-      <Label Text="Copyright @ 2001 - 2022 Syncfusion Inc"
+      <Label Text="Copyright @ 2001 - 2024 Syncfusion Inc"
 			 FontSize="18" AbsoluteLayout.LayoutBounds="1,1,-1,-1"
 			 AbsoluteLayout.LayoutFlags="PositionProportional"
 			 Opacity="0.4"/>
@@ -229,7 +229,7 @@ public class ViewModel
 
 SfPolarChart chart = new SfPolarChart();
 AbsoluteLayout absoluteLayout = new AbsoluteLayout();
-var copyRight = new Label() {Text = "Copyright @ 2001 - 2022 Syncfusion Inc",FontSize = 18,Opacity = 0.4};
+var copyRight = new Label() {Text = "Copyright @ 2001 - 2024 Syncfusion Inc",FontSize = 18,Opacity = 0.4};
 AbsoluteLayout.SetLayoutBounds(copyRight, new Rect(1, 1, -1, -1));
 AbsoluteLayout.SetLayoutFlags(copyRight, Microsoft.Maui.Layouts.AbsoluteLayoutFlags.PositionProportional);
 absoluteLayout.Children.Add(copyRight);

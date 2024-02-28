@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Tooltip in .NET MAUI Chart control | Syncfusion
-description: Learn here all about how to enable tooltips and their customization in the Syncfusion .NET MAUI Chart (SfPolarChart) control.
+description: Learn here all about how to enable tooltips and customize them in the Syncfusion .NET MAUI Chart (SfPolarChart) control.
 platform: maui
 control: SfPolarChart
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Tooltip in .NET MAUI Chart
 
-Tooltip is used to display any information or metadata of the tapped segment. The Polar chart provides tooltip support for all series. 
+A tooltip is used to display information or metadata of the tapped segment. The Polar chart provides tooltip support for all series.
 
 ## Define Tooltip
 
@@ -131,7 +131,7 @@ this.Content = chart;
 
 ## Template
 
-The [SfPolarChart]() provides support to customize the appearance of the tooltip by using the [TooltipTemplate]() property.
+The [SfPolarChart]() provides support for customizing the appearance of the tooltip by using the [TooltipTemplate]() property.
 
 {% tabs %}
 
@@ -190,7 +190,7 @@ this.Content = chart;
 
 ## Methods
 
-You can show or hide the chart tooltip programmatically by using the show or hide method.
+You can programmatically show or hide the chart tooltip by using the show or hide method.
 
 ### Show method
 
@@ -220,7 +220,7 @@ The [Show]() method is used to activate the tooltip at the specified location.
 
         private void Button_Clicked(object sender, EventArgs e)
         {
-            //pointX - determines the x position of the tooltip, pointY - determines the y position of the tooltip and the bool value determines whether the tooltip should be animated while displaying.
+            //pointX - determines the x position of the tooltip, pointY - determines the y position of the tooltip and the boolean value determines whether the tooltip should be animated while displaying.
             
             tooltip.Show(pointX, pointY, true);
         }
@@ -229,7 +229,7 @@ The [Show]() method is used to activate the tooltip at the specified location.
 
 {% endtabs %}
 
-N> The tooltip will be activated at the specified location only if there is any data point under the specified location.
+N> The tooltip will only be activated at the specified location if there is a data point under that location.
 
 ### Hide method
 

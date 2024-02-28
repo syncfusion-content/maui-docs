@@ -11,7 +11,7 @@ documentation: ug
 
 ## PlotOffsetStart
 
-The [PlotOffsetStart]() property is used to add padding to the axis at the start position. The following code sample demonstrates the padding applied to the start position for both the primary and secondary axis.
+The [PlotOffsetStart]() property is used to add padding to the axis at the start position. The following code sample demonstrates the padding applied to the start position for the secondary axis.
 
 {% tabs %}
 
@@ -43,7 +43,7 @@ chart.SecondaryAxis.Add(secondaryAxis);
 
 ## PlotOffsetEnd
 
-The [PlotOffsetEnd]() property is used to add padding to the axis at the end position. The following code sample demonstrates how padding is applied to the end position for both the primary and secondary axis.
+The [PlotOffsetEnd]() property is used to add padding to the axis at the end position. The following code sample demonstrates how padding is applied to the end position for the secondary axis.
 
 {% tabs %}
 

@@ -9,11 +9,11 @@ documentation: ug
 
 # Tick Lines in .NET MAUI Chart
 
-Tick lines are the small lines which is drawn on the axis line representing the axis labels. Tick lines will be drawn outside of the axis by default. 
+Tick lines are the small lines which is drawn on the axis line representing the axis labels. By default, tick lines are drawn outside of the axis.
 
 Minor tick lines can be added to the axis by defining the [MinorTicksPerInterval]() property. This property will add the minor tick lines to every interval based on value.
 
-N> For category axis, minor tick lines are not applicable. Since it is rendered based on index positions.
+N> For category axis, minor tick lines are not applicable as it is rendered based on index positions.
 
 {% tabs %}
 
@@ -22,11 +22,11 @@ N> For category axis, minor tick lines are not applicable. Since it is rendered 
 <chart:SfPolarChart>
 . . .
 <chart:SfPolarChart.PrimaryAxis>
-    <chart:NumericalAxis MinorTicksPerInterval="4"/>
+    <chart:NumericalAxis />
 </chart:SfPolarChart.PrimaryAxis>
 
 <chart:SfPolarChart.SecondaryAxis>
-    <chart:NumericalAxis />
+    <chart:NumericalAxis MinorTicksPerInterval="4"/>
 </chart:SfPolarChart.SecondaryAxis>
 
 </chart:SfPolarChart>
@@ -38,12 +38,12 @@ N> For category axis, minor tick lines are not applicable. Since it is rendered 
 SfPolarChart chart = new SfPolarChart();
 . . .
 NumericalAxis primaryAxis = new NumericalAxis()
+chart.PrimaryAxis.Add(primaryAxis);
+
+NumericalAxis secondaryAxis = new NumericalAxis()
 {
     MinorTicksPerInterval = 4 
 };
-chart.PrimaryAxis.Add(primaryAxis);
-
-NumericalAxis secondaryAxis = new NumericalAxis();
 chart.SecondaryAxis.Add(secondaryAxis);
 
 {% endhighlight %}
@@ -61,6 +61,10 @@ Both major and minor tick lines can be customized by using the [MajorTickStyle](
 <chart:SfPolarChart>
 . . .
 <chart:SfPolarChart.PrimaryAxis>
+    <chart:NumericalAxis />
+</chart:SfPolarChart.PrimaryAxis>
+
+<chart:SfPolarChart.SecondaryAxis>
     <chart:NumericalAxis MinorTicksPerInterval="4">
         <chart:NumericalAxis.MajorTickStyle>
             <chart:ChartAxisTickStyle Stroke="Red"
@@ -72,10 +76,6 @@ Both major and minor tick lines can be customized by using the [MajorTickStyle](
             <chart:ChartAxisTickStyle Stroke="Red" StrokeWidth="1"/>
         </chart:NumericalAxis.MinorTickStyle>
     </chart:NumericalAxis>
-</chart:SfPolarChart.PrimaryAxis>
-
-<chart:SfPolarChart.SecondaryAxis>
-    <chart:NumericalAxis />
 </chart:SfPolarChart.SecondaryAxis>
 
 </chart:SfPolarChart>
@@ -86,15 +86,16 @@ Both major and minor tick lines can be customized by using the [MajorTickStyle](
 
 SfPolarChart chart = new SfPolarChart();
 . . .
-NumericalAxis numerical = new NumericalAxis();
+NumericalAxis primaryAxis = new NumericalAxis();
+chart.PrimaryAxis.Add(primaryAxis);
+
+NumericalAxis secondaryAxis = new NumericalAxis();
 numerical.MajorTickStyle.StrokeWidth = 1;
 numerical.MajorTickStyle.Stroke = Colors.Red;
+numerical.MajorTickStyle.TickSize = 10;
 numerical.MinorTicksPerInterval = 4;
 numerical.MinorTickStyle.StrokeWidth = 1;
 numerical.MinorTickStyle.Stroke = Colors.Red;
-chart.PrimaryAxis.Add(numerical);
-
-NumericalAxis secondaryAxis = new NumericalAxis();
 chart.SecondaryAxis.Add(secondaryAxis);
 
 {% endhighlight %}

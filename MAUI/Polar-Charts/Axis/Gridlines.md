@@ -102,7 +102,7 @@ chart.SecondaryAxis.Add(secondaryAxis);
 
 ## Minor Grid Lines
 
-Minor gridlines will be added automatically when the small tick lines is defined and using the [MinorTicksPerInterval]() property of chart axis. The visibility of the minor gridlines can be controlled using the [ShowMinorGridLines]() property. The default value of [ShowMinorGridLines]() is `true`.
+Minor gridlines will be added automatically when the small tick lines is defined and using the [MinorTicksPerInterval]() property of the chart axis. The visibility of the minor gridlines can be controlled using the [ShowMinorGridLines]() property. The default value of [ShowMinorGridLines]() is `true`.
 
 {% tabs %}
 

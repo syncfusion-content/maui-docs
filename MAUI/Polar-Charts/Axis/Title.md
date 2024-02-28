@@ -11,6 +11,8 @@ documentation: ug
 
 The [Title]() property is used to set the title for the chart axis.
 
+N> Polar chart supports title for secondary axis only.
+
 {% tabs %}
 
 {% highlight xaml %}
@@ -38,7 +40,6 @@ The [Title]() property is used to set the title for the chart axis.
 SfPolarChart chart = new SfPolarChart();
 . . .
 CategoryAxis primaryAxis = new CategoryAxis();
-primaryAxis.Title = new ChartAxisTitle();
 chart.PrimaryAxis.Add(primaryAxis);
 
 NumericalAxis secondaryAxis = new NumericalAxis();
@@ -52,7 +53,7 @@ chart.SecondaryAxis.Add(secondaryAxis);
 
 ## Customization
 
-The [Title]() property in axis provides options to customize the text and font of axis title. Axis does not display title by default. The title can be customized using following properties,
+The [Title]() property in axis provides options to customize the text and font of the axis title. The axis does not display the title by default. The title can be customized using following properties,
 
 * `Text` - Gets or sets the title for axis.
 * `Background` - Gets or sets the background color of the labels.
@@ -60,14 +61,14 @@ The [Title]() property in axis provides options to customize the text and font o
 * `FontAttributes` - Gets or sets the font style for the label.
 * `FontFamily` - Gets or sets the font family name for the label.
 * `FontSize` - Gets or sets the font size for the label.
-* `Margin` - Gets or sets the margin of the label to customize the appearance of label. 
+* `Margin` - Gets or sets the margin of the label to customize the appearance of the label. 
 * `Stroke` - Gets or sets the border stroke color of the labels.
 * `StrokeWidth` - Gets or sets the border thickness of the label.
 * `TextColor` - Gets or sets the color for the text of the label.
 
 ## Label extent
 
-The [LabelExtent]() property allows to set the gap between axis labels and title. This is typically used to maintain the fixed gap between axis labels and title when the digits of the axis value changed in live update.
+The [LabelExtent]() property allows you to set the gap between axis labels and the title. This is typically used to maintain the fixed gap between axis labels and title when the digits of the axis value changed in live update.
 
 {% tabs %}
 
@@ -76,13 +77,13 @@ The [LabelExtent]() property allows to set the gap between axis labels and title
 <chart:SfPolarChart>
     . . .
     
-    <chart:SfPolarChart.PrimaryAxis>
-        <chart:CategoryAxis LabelExtent="60">
-            <chart:CategoryAxis.Title>
-                <chart:ChartAxisTitle Text="Category"/>
-            </chart:CategoryAxis.Title>
-        </chart:CategoryAxis>
-    </chart:SfPolarChart.PrimaryAxis>
+    <chart:SfPolarChart.SecondaryAxis>
+        <chart:NumericalAxis LabelExtent="60">
+            <chart:NumericalAxis.Title>
+                <chart:ChartAxisTitle Text="Numeric"/>
+            </chart:NumericalAxis.Title>
+        </chart:NumericalAxis>
+    </chart:SfPolarChart.SecondaryAxis>
 
 </chart:SfPolarChart>
 
@@ -92,11 +93,11 @@ The [LabelExtent]() property allows to set the gap between axis labels and title
 
 SfPolarChart chart = new SfPolarChart();
 . . .
-CategoryAxis primaryAxis = new CategoryAxis();
-primaryAxis.LabelExtent = 60;
-primaryAxis.Title = new ChartAxisTitle();
-primaryAxis.Title.Text = "Category";
-chart.PrimaryAxis.Add(primaryAxis);
+NumericalAxis secondaryAxis = new NumericalAxis();
+secondaryAxis.LabelExtent = 60;
+secondaryAxis.Title = new ChartAxisTitle();
+secondaryAxis.Title.Text = "Numeric";
+chart.SecondaryAxis.Add(secondaryAxis);
 
 {% endhighlight %}
 

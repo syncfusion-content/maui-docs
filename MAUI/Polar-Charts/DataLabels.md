@@ -9,7 +9,7 @@ documentation: ug
 
 # Data Label in .NET MAUI Chart
 
-Data labels are used to display values related to a chart segment. Values from data point(x, y) or other custom properties from a data source can be displayed. 
+Data labels are used to display values related to a chart segment. Values from a data point(x, y) or other custom properties from a data source can be displayed. 
 
 Each data label can be represented by the following:
 
@@ -17,7 +17,7 @@ Each data label can be represented by the following:
 
 ## Enable Data Label 
 
-The [ShowDataLabels]() property of series is used to enable the data labels.
+The [ShowDataLabels]() property of a series is used to enable the data labels.
 
 {% tabs %}
 
@@ -53,7 +53,7 @@ chart.Series.Add(series);
 
 ![Data label in MAUI chart](DataLabel_images/MAUI_polar_line_datalabel.png)
 
-Data labels can be customized by using the [DataLabelSettings]() property of chart series. For customizing, need to create an instance of [PolarDataLabelSettings]() and set to the [DataLabelSettings]() property. Following properties are used to customize the data labels which are available in [PolarDataLabelSettings]().
+Data labels can be customized by using the [DataLabelSettings]() property of chart series. To customize them, you need to create an instance of [PolarDataLabelSettings]() and set it to the [DataLabelSettings]() property. The following properties available in [PolarDataLabelSettings]() can be used to customize the data labels.
 
 * [BarAlignment]() - Gets or sets the data label alignment top, middle or bottom.
 * [LabelPlacement]() - Gets or sets the data label position inside, outside or default.
@@ -105,11 +105,11 @@ chart.Series.Add(series);
 
 In addition to the alignment options mentioned above, the Chart provides additional customization options for positioning the data labels.
 
-The [LabelPlacement]() property is used to position the data labels at [Center](), [Inner]() and [Outer]() position of the actual data point position. By default, labels are positioned based on the series types for better readability.
+The [LabelPlacement]() property is used to position the data labels at [Center](), [Inner]() and [Outer]() positions relative to the actual data point position. By default, labels are positioned based on the series types for better readability.
 
 ## Applying Series Brush
 
-[UseSeriesPalette]() property is used to set the interior of the series to the data marker background. 
+The [UseSeriesPalette]() property is used to set the interior of the series to the data marker background.
 
 {% tabs %}
 

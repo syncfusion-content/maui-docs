@@ -9,7 +9,7 @@ documentation: ug
 
 # Rendering Position
 
-## Polar Angle
+## Start Angle
 
 Adjust the rendering position of series on polar chart by leveraging the [StartAngle]() property, offering four degree values: 0, 90, 180, and 270. The default setting for the [StartAngle]() property is [Rotate270]().
 
@@ -17,14 +17,14 @@ Adjust the rendering position of series on polar chart by leveraging the [StartA
 
 {% highlight xaml %}
 
-<chart:SfPolarChart>
+<chart:SfPolarChart StartAngle="Rotate0">
     
     <chart:SfPolarChart.PrimaryAxis>
         <chart:CategoryAxis />
     </chart:SfPolarChart.PrimaryAxis>
 
     <chart:SfPolarChart.SecondaryAxis>
-        <chart:NumericalAxis PolarAngle="Rotate0"/>
+        <chart:NumericalAxis/>
     </chart:SfPolarChart.SecondaryAxis>   
 
     <chart:PolarAreaSeries ItemsSource="{Binding PlantDetails}"
@@ -38,10 +38,10 @@ Adjust the rendering position of series on polar chart by leveraging the [StartA
 {% highlight c# %}
 
 SfPolarChart chart = new SfPolarChart();
+chart.StartAngle = ChartPolarAngle.Rotate0;
 CategoryAxis primaryAxis = new CategoryAxis();
 chart.PrimaryAxis.Add(primaryAxis);
 NumericalAxis secondaryAxis = new NumericalAxis();
-secondaryAxis.PolarAngle = ChartPolarAngle.Rotate0;
 chart.SecondaryAxis.Add(secondaryAxis);
 
 PolarAreaSeries series = new PolarAreaSeries()
@@ -58,4 +58,4 @@ this.Content = chart;
 
 {% endtabs %}
 
-![Polar Axis Angle](Rendering-Position_Images\Polar_Angle.png)
+![Polar Start Angle](Rendering-Position_Images\Start_Angle.png)

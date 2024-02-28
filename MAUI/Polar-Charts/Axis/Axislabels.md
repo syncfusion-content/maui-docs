@@ -63,7 +63,7 @@ The [LabelStyle]() property of the axis provides options to customize the font f
 
 ## Edge Labels Drawing Mode
 
-The chart axis provides support for customizing the rendering position of the edge labels using the [EdgeLabelsDrawingMode]() property. The default value of the [EdgeLabelsDrawingMode]() property is `Shift`.
+The chart axis supports customizing the rendering position of the edge labels using the [EdgeLabelsDrawingMode]() property. The default value of the [EdgeLabelsDrawingMode]() property is `Shift`.
 
 | Action | Description |
 |--|--|
@@ -107,7 +107,7 @@ The visibility of the edge labels of the axis can be controlled using the [EdgeL
 
 **Always Visible**
 
-`AlwaysVisible` option in [EdgeLabelsVisibilityMode]() is used to view the edge labels even in chart area zoomed state.
+The `AlwaysVisible` option in [EdgeLabelsVisibilityMode]() is used to display the edge labels even when the chart area is zoomed state.
 
 {% tabs %}
 
@@ -140,7 +140,7 @@ chart.SecondaryAxis.Add(secondaryAxis);
 
 **Visible**
 
-`Visible` option is used to display the edge labels irrespective of the auto interval calculation until zooming (i.e., in normal state).
+The `Visible` option is used to display the edge labels irrespective of the auto interval calculation until zooming (i.e., in the normal state).
 
 {% tabs %}
 

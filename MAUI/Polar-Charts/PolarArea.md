@@ -138,3 +138,105 @@ this.Content = chart;
 {% endtabs %}
 
 ![Polar open series in MAUI Chart](Chart-types_images/MAUI_polar_area_IsClosed.png)
+
+## Enable Marker
+
+A marker, also known as a symbol, is used to determine or highlight the position of the data point. To enable markers in the series, set the [ShowMarkers]() property to true.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<chart:SfPolarChart>
+...
+ <chart:PolarAreaSeries XBindingPath="Direction"
+                   YBindingPath="Tree"
+                   ItemsSource="{Binding PlantDetails}"
+                   ShowMarkers="True"/>
+
+</chart:SfPolarChart>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+SfPolarChart chart = new SfPolarChart();
+
+...
+PolarAreaSeries series = new PolarAreaSeries()
+{
+    XBindingPath = "Direction",
+    YBindingPath = "Tree",
+    ItemsSource = new ViewModel().PlantDetails,
+    ShowMarkers= true
+ };
+
+chart.Series.Add(series);
+this.Content= chart;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+### Marker customization
+
+In order to change the series markers appearance, create an instance of the [MarkerSettings]() property. The following properties are used to customize marker appearance.
+
+* [Type](), of type `ShapeType`, describes the shape of the series marker. The default value of this property is [ShapeType.Circle]().
+* [Stroke](), of type `Brush`, indicates the brush used to paint the marker border.
+* [StrokeWidth](), of type `double`, indicates the width of the marker border.
+* [Fill](), of type `Brush`, indicates the color of the marker.
+* [Width](), of type `double`, indicates the width of the marker.
+* [Height](), of type `double`, indicates the height of the marker.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<chart:SfPolarChart>
+...
+ <chart:PolarAreaSeries XBindingPath="Direction"
+                   YBindingPath="Tree"
+                   ItemsSource="{Binding PlantDetails}"
+                   ShowMarkers="True">
+    <chart:PolarAreaSeries.MarkerSettings>
+        <chart:ChartMarkerSettings Type="Diamond"
+                                   Fill="Brown"
+                                   Stroke="Black"
+                                   StrokeWidth="1"
+                                   Height="8"
+                                   Width="8"/>
+    </chart:PolarAreaSeries.MarkerSettings>
+ </chart:PolarAreaSeries>
+
+</chart:SfPolarChart>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+SfPolarChart chart = new SfPolarChart();
+
+...
+ChartMarkerSettings chartMarker= new ChartMarkerSettings();
+        chartMarker.Type = ShapeType.Diamond;
+        chartMarker.Fill = Colors.Brown;
+        chartMarker.Stroke = Colors.Black;
+        chartMarker.StrokeWidth= 1;
+        chartMarker.Height = 8;
+        chartMarker.Width = 8;
+
+PolarAreaSeries series = new PolarAreaSeries()
+{
+   XBindingPath = "Direction",
+   YBindingPath = "Tree",
+   ItemsSource = new ViewModel().PlantDetails,
+   ShowMarkers = true,
+ };
+
+chart.Series.Add(series);
+this.Content = chart;
+
+{% endhighlight %}
+
+{% endtabs %}
