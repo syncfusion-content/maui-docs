@@ -19,4 +19,4 @@ The Syncfusion .NET MAUI Chat control offers a contemporary conversational chatb
 * **Typing indicator:** Utilizes animation to signify users currently engaged in typing activity.
 * **Suggestions:** Includes a selection of options for users to choose from as a response to their message.
 
-![overview in MAUI SfChat](images/maui-chat-overview.png)
+![overview in MAUI SfChat](Images/maui-chat-overview.png)
