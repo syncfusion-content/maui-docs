@@ -238,7 +238,7 @@ To bind the messages to SfChat, configure the [SfChat.Messages]() property accor
 
 Download the entire source code from GitHub [here]().
 
-![.NET MAUI Chat getting started](Images/getting-started/maui-chat-getting-started.png)
+![.NET MAUI Chat getting started](images/getting-started/maui-chat-getting-started.png)
 
 ## Showing time break between messages
 
@@ -295,6 +295,6 @@ To display time breaks between messages, you can segregate messages based on the
 {% endhighlight %}
 {% endtabs %}
 
-![.NET MAUI Chat time break](Images/getting-started/maui-chat-timebreak.png)
+![.NET MAUI Chat time break](images/getting-started/maui-chat-timebreak.png)
 
 Download the entire source code from GitHub [here]().
