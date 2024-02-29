@@ -141,3 +141,145 @@ chart.Series.Add(series);
 {% endhighlight %}
 
 {% endtabs %}
+
+## LabelTemplate
+
+The [SfPolarChart]() provides support to customize the appearance of the datalabel by using the [LabelTemplate]() property.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+    <chart:SfPolarChart>
+        
+        <chart:SfPolarChart.Resources>
+            <DataTemplate x:Key="LabelTemplate1">
+                <HorizontalStackLayout BackgroundColor="Pink" Spacing="5">
+                    <Label Text="{Binding Item.Direction}"
+                    FontAttributes="Bold"
+                    FontSize="13"      
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"/>
+                    <Label Text=" : " 				
+                    FontAttributes="Bold"
+                    FontSize="13"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"/>
+                    <Label Text="{Binding Item.Tree}"
+                    FontAttributes="Bold"
+                    FontSize="13"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"/>
+                </HorizontalStackLayout>
+            </DataTemplate>
+        </chart:SfPolarChart.Resources>
+        . . .
+        <chart:PolarAreaSeries ItemsSource="{Binding PlantDetails}" 
+                               LabelTemplate="{StaticResource LabelTemplate1}"
+                               ShowDataLabels="True"
+                               XBindingPath="Direction"                               
+                               YBindingPath="Tree" />
+    </chart:SfPolarChart>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+    SfPolarChart chart = new SfPolarChart();
+    . . .
+    PolarAreaSeries series = new PolarAreaSeries();
+    series.ItemsSource = viewModel.Data;
+    series.ShowDataLabels = true;
+    series.XBindingPath="Direction"                               
+    series.YBindingPath="Tree"
+
+    DataTemplate LabelTemplate1 = new DataTemplate(() =>
+    {
+        var horizontalStackLayout = new HorizontalStackLayout { Spacing = 5 };
+        var productLabel = new Label
+        {
+            TextColor = Color.White,
+            FontAttributes = FontAttributes.Bold,
+            FontSize = 13,
+            HorizontalOptions = LayoutOptions.Center,
+            VerticalOptions = LayoutOptions.Center
+        };
+        productLabel.SetBinding(Label.TextProperty, "Item.Direction");
+        var separatorLabel = new Label
+        {
+            Text = " : ",
+            TextColor = Color.White,
+            FontAttributes = FontAttributes.Bold,
+            FontSize = 13,
+            HorizontalOptions = LayoutOptions.Center,
+            VerticalOptions = LayoutOptions.Center
+        };
+        var salesRateLabel = new Label
+        {
+            TextColor = Color.White,
+            FontAttributes = FontAttributes.Bold,
+            FontSize = 13,
+            HorizontalOptions = LayoutOptions.Center,
+            VerticalOptions = LayoutOptions.Center
+        };
+        salesRateLabel.SetBinding(Label.TextProperty, "Item.Tree");
+        horizontalStackLayout.Children.Add(productLabel);
+        horizontalStackLayout.Children.Add(separatorLabel);
+        horizontalStackLayout.Children.Add(salesRateLabel);
+        return horizontalStackLayout;
+    });
+
+    series.LabelTemplate1 = LabelTemplate1;
+    chart.Series.Add(series);
+    this.Content = chart;
+        
+{% endhighlight %}
+
+{% endtabs %}
+
+![Label template in MAUI Chart](DataLabel_images/)
+
+## Formatting Label Context
+
+The content of the label can be customized using the [LabelContext]() property. Following are the two options that are supported now,
+
+* [Percentage]() - This will show the percentage value of corresponding data point Y value
+
+* [YValue]() - This will show the corresponding Y value.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+    <chart:SfPolarChart>
+        . . .
+        <chart:PolarAreaSeries ItemsSource="{Binding PlantDetails}" 
+                               LabelContext="Percentage"
+                               ShowDataLabels="True"
+                               XBindingPath="Direction"                               
+                               YBindingPath="Tree" />
+    </chart:SfPolarChart>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+    SfPolarChart chart = new SfPolarChart();
+    . . .
+    PolarAreaSeries series = new PolarAreaSeries()
+    {
+        ItemsSource = new ViewModel().Data,
+        XBindingPath="Direction",                              
+        YBindingPath="Tree",
+        ShowDataLabels = true,
+        LabelContext = LabelContext.Percentage
+    };
+
+    chart.Series.Add(series);
+    this.Content = chart;
+        
+{% endhighlight %}
+
+{% endtabs %}
+
+![DataLabel context in MAUI Chart](DataLabel_images/)
