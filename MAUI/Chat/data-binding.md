@@ -106,7 +106,7 @@ Now, bind the existing collection of data objects to the 'SfChat.ItemsSource' pr
     </ContentPage>
 
 {% endhighlight %}
-{% highlight xaml tabtitle="MainPage.xaml.cs" hl_lines=" 18 19" %}
+{% highlight xaml tabtitle="MainPage.xaml.cs" hl_lines=" 19 20" %}
     
     using MauiChat.ViewModel;
     using Syncfusion.Maui.Chat;
