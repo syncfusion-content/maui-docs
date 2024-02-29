@@ -104,10 +104,14 @@ The TreeView provides an option to enable or disable the `Scrollbar` visibility 
 
 {% tabs %}
 {% highlight xaml%}
+
 <syncfusion:SfTreeView x:Name="treeView" ScrollBarVisibility="Always" />
+
 {% endhighlight %}
 {% highlight c# hl_lines="2" %}
+
 SfTreeView treeView = new SfTreeView();
 treeView.ScrollBarVisibility = ScrollBarVisibility.Always;
+
 {% endhighlight %}
 {% endtabs %}
