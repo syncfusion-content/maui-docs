@@ -69,6 +69,7 @@ To make migration from [Xamarin SfDataGrid](https://www.syncfusion.com/xamarin-u
 <td>{{'[DataPagerDisplayMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataPager.DataPagerDisplayMode.html)'| markdownify }}</td>
 <td>Defines the possible display mode of SfDataPager.</td>
 </tr>
+<tr>
 <td>{{'[LoadMoreViewPosition](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.LoadMoreViewPosition.html)'| markdownify }}</td>
 <td>{{'[DataGridLoadMorePosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridLoadMorePosition.html)'| markdownify }}</td>
 <td>Defines the position of DataGridLoadMoreView.</td>
@@ -225,11 +226,6 @@ To make migration from [Xamarin SfDataGrid](https://www.syncfusion.com/xamarin-u
 <td>{{'[GetNumericButtonSelectionForegroundColor()](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.DataPager.AppearanceManager.html#Syncfusion_SfDataGrid_XForms_DataPager_AppearanceManager_GetNumericButtonSelectionForegroundColor)'| markdownify }}</td>
 <td>{{'[NumericButtonSelectionTextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataPager.DataPagerStyle.html#Syncfusion_Maui_DataGrid_DataPager_DataPagerStyle_NumericButtonSelectionTextColor)'| markdownify }}</td>
 <td>This enables users to customize the text color of the currently selected numeric button in the view.</td>
-</tr>
-<tr>
-<td>{{'[EnableGridPaging()](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.DataPager.SfDataPager.html#Syncfusion_SfDataGrid_XForms_DataPager_SfDataPager_EnableGridPaging)'| markdownify }}</td>
-<td>-</td>
-<td>This property isn't available because the [UseOnDemandPaging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataPager.SfDataPager.html#Syncfusion_Maui_DataGrid_DataPager_SfDataPager_UseOnDemandPaging) property alone is sufficient to enable on-demand paging in the MAUI DataGrid.</td>
 </tr>
 <tr>
 <td>{{'[EnableGridPaging()](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.DataPager.SfDataPager.html#Syncfusion_SfDataGrid_XForms_DataPager_SfDataPager_EnableGridPaging)'| markdownify }}</td>
