@@ -180,7 +180,6 @@ The 'SfChat' control is equipped with both the 'SfChat.MessageLongPressed' event
         <ContentPage.Content>
             <sfChat:SfChat x:Name="sfChat"
                     MessageLongPressed="sfChat_MessageLongPressed" />
-            </sfChat:SfChat>
         </ContentPage.Content>
     </ContentPage>
 
