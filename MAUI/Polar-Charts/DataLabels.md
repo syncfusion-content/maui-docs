@@ -154,23 +154,12 @@ The [SfPolarChart]() provides support to customize the appearance of the datalab
         
         <chart:SfPolarChart.Resources>
             <DataTemplate x:Key="LabelTemplate1">
-                <HorizontalStackLayout BackgroundColor="Pink" Spacing="5">
-                    <Label Text="{Binding Item.Direction}"
-                    FontAttributes="Bold"
-                    FontSize="13"      
-                    HorizontalOptions="Center"
-                    VerticalOptions="Center"/>
-                    <Label Text=" : " 				
-                    FontAttributes="Bold"
-                    FontSize="13"
-                    HorizontalOptions="Center"
-                    VerticalOptions="Center"/>
-                    <Label Text="{Binding Item.Tree}"
-                    FontAttributes="Bold"
-                    FontSize="13"
-                    HorizontalOptions="Center"
-                    VerticalOptions="Center"/>
-                </HorizontalStackLayout>
+                <StackLayout>
+                    <Frame CornerRadius="50" BorderColor="Black" BackgroundColor="White"
+                           WidthRequest="40" HeightRequest="40" Padding="10">
+                        <Label Text="{Binding Item.Tree}" HorizontalOptions="Center" VerticalOptions="Center" />
+                    </Frame>
+                </StackLayout>
             </DataTemplate>
         </chart:SfPolarChart.Resources>
         . . .
@@ -195,38 +184,27 @@ The [SfPolarChart]() provides support to customize the appearance of the datalab
 
     DataTemplate LabelTemplate1 = new DataTemplate(() =>
     {
-        var horizontalStackLayout = new HorizontalStackLayout { Spacing = 5 };
-        var productLabel = new Label
+        StackLayout stackLayout = new StackLayout();
+        var frame = new Frame
         {
-            TextColor = Color.White,
-            FontAttributes = FontAttributes.Bold,
-            FontSize = 13,
+            CornerRadius = 50,
+            BorderColor = Color.Black,
+            BackgroundColor = Color.White,
+            WidthRequest = 40,
+            HeightRequest = 40,
+            Padding = new Thickness(10)
+        };
+
+        var label = new Label
+        {
             HorizontalOptions = LayoutOptions.Center,
             VerticalOptions = LayoutOptions.Center
         };
-        productLabel.SetBinding(Label.TextProperty, "Item.Direction");
-        var separatorLabel = new Label
-        {
-            Text = " : ",
-            TextColor = Color.White,
-            FontAttributes = FontAttributes.Bold,
-            FontSize = 13,
-            HorizontalOptions = LayoutOptions.Center,
-            VerticalOptions = LayoutOptions.Center
-        };
-        var salesRateLabel = new Label
-        {
-            TextColor = Color.White,
-            FontAttributes = FontAttributes.Bold,
-            FontSize = 13,
-            HorizontalOptions = LayoutOptions.Center,
-            VerticalOptions = LayoutOptions.Center
-        };
-        salesRateLabel.SetBinding(Label.TextProperty, "Item.Tree");
-        horizontalStackLayout.Children.Add(productLabel);
-        horizontalStackLayout.Children.Add(separatorLabel);
-        horizontalStackLayout.Children.Add(salesRateLabel);
-        return horizontalStackLayout;
+        label.SetBinding(Label.TextProperty, "Tree"); // Assuming "Tree" is a property in your binding context
+
+        frame.Content = label;
+        stackLayout.Children.Add(frame);
+        return stackLayout;
     });
 
     series.LabelTemplate1 = LabelTemplate1;
@@ -237,7 +215,7 @@ The [SfPolarChart]() provides support to customize the appearance of the datalab
 
 {% endtabs %}
 
-![Label template in MAUI Chart](DataLabel_images/)
+![Label template in MAUI Chart](DataLabel_images/MAUI_polar_datalabel_template.png)
 
 ## Formatting Label Context
 
