@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Working with Chat in .NET MAUI Chat Control | Syncfusion
-description: Learn here all about Working with Chat support in Syncfusion .NET MAUI Chat control and more.
+description: Learn here all about Working with Chat support in Syncfusion .NET MAUI Chat (SfChat) control and more.
 platform: MAUI
 control: SfChat
 documentation: ug
