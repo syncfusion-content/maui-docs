@@ -153,4 +153,4 @@ The [SfFunnelChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.S
 
 {% endtabs %}
 
-![Label template in MAUI Chart](DataLabel_images/)
+![Label template in .NET MAUI Funnel chart](DataLabel_images/MAUI_data_label_template.png)

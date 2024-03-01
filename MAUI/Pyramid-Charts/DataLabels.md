@@ -153,4 +153,4 @@ The [SfPyramidChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.
 
 {% endtabs %}
 
-![Label template in MAUI Chart](DataLabel_images/)
+![Label template in .NET MAUI Pyramid chart](DataLabel_images/MAUI_data_label_template.png)
