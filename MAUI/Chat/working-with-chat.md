@@ -27,45 +27,33 @@ The 'SfChat' control is equipped with both the 'SfChat.MessageTapped' event and 
 
         <ContentPage.Content>
             <sfChat:SfChat x:Name="sfChat"
-                    MessageTapped="sfChat_MessageTapped"
-                    Messages="{Binding Messages}"
-                    CurrentUser="{Binding CurrentUser}" >
-            </sfChat:SfChat>
+                    MessageTapped="sfChat_MessageTapped" />
         </ContentPage.Content>
     </ContentPage>
+
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="11" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="2" %}
       
-    using Syncfusion.Maui.Chat;
+    sfChat.MessageTapped += SfChat_MessageTapped;
 
-    namespace MauiChat
-    {
-        public partial class MainPage : ContentPage
-        { 
-            public MainPage()
-            {
-                InitializeComponent();
-                sfChat.MessageTapped += SfChat_MessageTapped;
-            }
-
-            private void sfChat_MessageTapped(object sender, MessageTappedEventArgs e)
-            {                    
-                App.Current.MainPage.DisplayAlert("Message", " Tapped on message :" + e.Message.Author.Name, "Ok");
-            }
-        }
+    private void sfChat_MessageTapped(object sender, MessageTappedEventArgs e)
+    {                    
+        App.Current.MainPage.DisplayAlert("Message", " Tapped on message :" + e.Message.Author.Name, "Ok");
     }
+
 {% endhighlight %}
 {% endtabs %}
 
 ### MessageTapped Command
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="4" %}   
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="4 19" %}   
 
     <ContentPage.Content>
             <sfChat:SfChat x:Name="sfChat"  
                         MessageTappedCommand="{Binding TappedCommand}" />
     </ContentPage.Content>
+
 {% endhighlight %}
 {% highlight c# %}
 
@@ -115,46 +103,33 @@ The 'SfChat' control is equipped with both the 'SfChat.MessageDoubleTapped' even
 
         <ContentPage.Content>
             <sfChat:SfChat x:Name="sfChat"
-                        MessageDoubleTapped="sfChat_MessageDoubleTapped"
-                        Messages="{Binding Messages}"
-                        CurrentUser="{Binding CurrentUser}" >
-            </sfChat:SfChat>
+                        MessageDoubleTapped="sfChat_MessageDoubleTapped" />
         </ContentPage.Content>
     </ContentPage>
         
 {% endhighlight %}
 {% highlight xaml tabtitle="MainPage.xaml.cs" hl_lines="11" %}
-    
-    using Syncfusion.Maui.Chat;
 
-    namespace MauiChat
+    sfChat.MessageDoubleTapped += SfChat_MessageDoubleTapped;            
+
+    private void sfChat_MessageDoubleTapped(object? sender, MessageDoubleTappedEventArgs e)
     {
-        public partial class MainPage : ContentPage
-        {        
-            public MainPage()
-            {
-                InitializeComponent();
-                sfChat.MessageDoubleTapped += SfChat_MessageDoubleTapped;
-            }
-
-            private void sfChat_MessageDoubleTapped(object? sender, MessageDoubleTappedEventArgs e)
-            {
-                App.Current.MainPage.DisplayAlert("Message", " DoubleTapped on message :" + e.Message.Author.Name, "Ok");
-            }
-        }
+        App.Current.MainPage.DisplayAlert("Message", " DoubleTapped on message :" + e.Message.Author.Name, "Ok");
     }
+
 {% endhighlight %}
 {% endtabs %}
 
 ### MessageDoubleTapped Command
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="4" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="4 19" %}
     
     <ContentPage.Content>
                 <sfChat:SfChat x:Name="sfChat"  
                             MessageDoubleTappedCommand="{Binding DoubleTappedCommand}" />
     </ContentPage.Content>
+
 {% endhighlight %}
 {% highlight C# %}
 
@@ -204,45 +179,34 @@ The 'SfChat' control is equipped with both the 'SfChat.MessageLongPressed' event
 
         <ContentPage.Content>
             <sfChat:SfChat x:Name="sfChat"
-                    MessageLongPressed="sfChat_MessageLongPressed"
-                    Messages="{Binding Messages}"
-                    CurrentUser="{Binding CurrentUser}">
+                    MessageLongPressed="sfChat_MessageLongPressed" />
             </sfChat:SfChat>
         </ContentPage.Content>
     </ContentPage>
+
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="11" %}
     
-    using Syncfusion.Maui.Chat;
+    sfChat.MessageLongPressed += sfChat_MessageLongPressed;
 
-    namespace MauiChat
+    private void sfChat_MessageLongPressed(object sender, MessageLongPressedEventArgs e)
     {
-        public partial class MainPage : ContentPage
-        {        
-            public MainPage()
-            {
-                InitializeComponent();
-                sfChat.MessageLongPressed += sfChat_MessageLongPressed;
-            }
-
-            private void sfChat_MessageLongPressed(object sender, MessageLongPressedEventArgs e)
-            {
-                App.Current.MainPage.DisplayAlert("Message", " LongPressed on message :" + e.Message.Author.Name, "Ok");
-            }
-        }
+        App.Current.MainPage.DisplayAlert("Message", " LongPressed on message :" + e.Message.Author.Name, "Ok");
     }
+
 {% endhighlight %}
 {% endtabs %}
 
 ### MessageLongPressed Command
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="4" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="4 19" %}
     
     <ContentPage.Content>
                 <sfChat:SfChat x:Name="sfChat"  
                             MessageLongPressedCommand ="{Binding LongPressedCommand }" />
     </ContentPage.Content>
+
 {% endhighlight %}
 {% highlight C# %}
     
@@ -270,6 +234,6 @@ The 'SfChat' control is equipped with both the 'SfChat.MessageLongPressed' event
             var MessageLongPressedArgs = obj as MessageLongPressedEventArgs;
             App.Current.MainPage.DisplayAlert("Message", "LongPressed on Message :" + MessageLongPressedArgs.Message.Author.Name, "Ok");
         }
-    }
+    }       
 {% endhighlight %}
 {% endtabs %}
