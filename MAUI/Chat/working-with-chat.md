@@ -11,7 +11,7 @@ documentation: ug
 
 ## Message Tapped Event and Command
 
-The 'SfChat' control is equipped with both the 'SfChat.MessageTapped' event and 'SfChat.MessageTappedCommand'. These are triggered when a message is tapped. You can retrieve the tapped Message and the interaction point using the 'MessageTappedEventArgs', Accessible as 'MessageTappedEventArgs.Message' and 'MessageTappedEventArgs.Point', in both the event handler for 'MessageTapped' and the action of 'MessageTappedCommand' .
+The `SfChat` control is equipped with both the `SfChat.MessageTapped` event and `SfChat.MessageTappedCommand`. These are triggered when a message is tapped. You can retrieve the tapped Message and the interaction point using the `MessageTappedEventArgs`, Accessible as `MessageTappedEventArgs.Message` and `MessageTappedEventArgs.Point`, in both the event handler for `MessageTapped` and the action of `MessageTappedCommand` .
 
 ### MessageTapped Event
 
@@ -87,7 +87,7 @@ The 'SfChat' control is equipped with both the 'SfChat.MessageTapped' event and 
 
 ## Message DoubleTapped Event and Command
 
-The 'SfChat' control is equipped with both the 'SfChat.MessageDoubleTapped' event and 'SfChat.MessageDoubleTappedCommand'. These are triggered when a message is double tapped. You can retrieve the double tapped Message and the interaction point using the 'MessageDoubleTappedEventArgs',Accessible as 'MessageDoubleTappedEventArgs.Message' and 'MessageDoubleTappedEventArgs.Point', in both the event handler for 'MessageDoubleTapped' and the action of 'MessageDoubleTappedCommand' .
+The `SfChat` control is equipped with both the `SfChat.MessageDoubleTapped` event and `SfChat.MessageDoubleTappedCommand`. These are triggered when a message is double tapped. You can retrieve the double tapped Message and the interaction point using the `MessageDoubleTappedEventArgs`,Accessible as `MessageDoubleTappedEventArgs.Message` and `MessageDoubleTappedEventArgs.Point`, in both the event handler for `MessageDoubleTapped` and the action of `MessageDoubleTappedCommand` .
 
 ### MessageDoubleTapped Event
 
@@ -163,7 +163,7 @@ The 'SfChat' control is equipped with both the 'SfChat.MessageDoubleTapped' even
 
 ## Message LongPressed Event and Command
 
-The 'SfChat' control is equipped with both the 'SfChat.MessageLongPressed' event and 'SfChat.MessageLongPressedCommand'. These are triggered when a message is long pressed. You can retrieve the long pressed Message and the interaction point using the 'MessageLongPressedEventArgs',Accessible as 'MessageLongPressedEventArgs.Message' and 'MessageLongPressedEventArgs.Point', in both the event handler for 'MessageLongPressed' and the action of 'MessageLongPressedCommand' .
+The `SfChat` control is equipped with both the `SfChat.MessageLongPressed` event and `SfChat.MessageLongPressedCommand`. These are triggered when a message is long pressed. You can retrieve the long pressed Message and the interaction point using the `MessageLongPressedEventArgs`,Accessible as `MessageLongPressedEventArgs.Message` and `MessageLongPressedEventArgs.Point`, in both the event handler for `MessageLongPressed` and the action of `MessageLongPressedCommand`.
 
 ### MessageLongPressed Event
 
