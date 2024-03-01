@@ -260,4 +260,4 @@ The content of the label can be customized using the [LabelContext]() property. 
 
 {% endtabs %}
 
-![DataLabel context in MAUI Chart](DataLabel_images/)
+![DataLabel context in MAUI Chart](DataLabel_images/MAUI_polar_datalabel_context.png)
