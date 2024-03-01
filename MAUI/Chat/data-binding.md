@@ -15,7 +15,10 @@ Consider/create the below collection of objects that has to be converted to mess
 
 {% tabs %}
 {% highlight c# %}
-    
+
+    /// <summary>
+    ///  Model class for chat view.
+    /// </summary>  
     public class MessageModel
     {
         public MessageModel()
@@ -27,6 +30,9 @@ Consider/create the below collection of objects that has to be converted to mess
         public string Text { get; set; }
     }
 
+    /// <summary>
+    /// View model class for chat view.
+    /// </summary>
     public class ViewModel : INotifyPropertyChanged
     {
         ObservableCollection<MessageModel> messageCollection;
@@ -64,13 +70,13 @@ Consider/create the below collection of objects that has to be converted to mess
 
             this.messageCollection.Add(new MessageModel()
             {
-                User = new Author() { Name = "Andrea", Avatar = "peoplecircle7.png" },
+                User = new Author() { Name = "Andrea", Avatar = "peoplecircle16.png" },
                 Text = "Oh! That's great.",
             });
 
             this.messageCollection.Add(new MessageModel()
             {
-                User = new Author() { Name = "Harrison", Avatar = "peoplecircle5.png" },
+                User = new Author() { Name = "Harrison", Avatar = "peoplecircle14.png" },
                 Text = "That is good news.",
             });
         }
@@ -87,15 +93,18 @@ Now, bind the existing collection of data objects to the 'SfChat.ItemsSource' pr
     <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                 xmlns:sfChat="clr-namespace:Syncfusion.Maui.Chat;assembly=Syncfusion.Maui.Chat"
-                xmlns:converter="clr-namespace:MauiChat.ViewModel"
-                xmlns:local="clr-namespace:MauiChat.ViewModel"
+                xmlns:local="clr-namespace:MauiChat"
                 x:Class="MauiChat.MainPage">
 
         <ContentPage.Resources>
             <ResourceDictionary>
-                <converter:MessageConverter x:Key="MessageConverter"/>
+                <local:MessageConverter x:Key="MessageConverter"/>
             </ResourceDictionary>
         </ContentPage.Resources>
+
+        <ContentPage.BindingContext>
+            <local:ChatViewModel/>
+        </ContentPage.BindingContext>
 
         <ContentPage.Content>
             <sfChat:SfChat x:Name="sfChat"
@@ -104,7 +113,6 @@ Now, bind the existing collection of data objects to the 'SfChat.ItemsSource' pr
                         ItemsSourceConverter="{StaticResource MessageConverter }"/>
         </ContentPage.Content>
     </ContentPage>
-
 {% endhighlight %}
 {% highlight xaml tabtitle="MainPage.xaml.cs" hl_lines=" 19 20" %}
     
@@ -134,13 +142,12 @@ Now, bind the existing collection of data objects to the 'SfChat.ItemsSource' pr
 {% endhighlight %}
 {% endtabs %}
 
-Next, create a class derived from 'IChatMessageConverter' interface and set it to the 'SfChat.ItemsSourceConverter' property as shown below. The 'IChatMessageConverter' interface provides the methods 'ConvertToChatMessage' and 'ConvertToData' to convert an item of an existing collection to a chat message and to convert a chat message to an item of the existing data collection respectively. Similarly these two methods 'ConvertToChatMessag' and 'ConvertToData' will be fired whenever a new item is added/removed/replaced in the existing data collection or in the chat message collection respectively.
+Next, implement a class that inherits from the 'IChatMessageConverter' interface, and then assign an instance of this class to the 'SfChat.ItemsSourceConverter' property. The 'IChatMessageConverter' interface stipulates methods like 'ConvertToChatMessage' and 'ConvertToData', responsible for translating items between the chat message collection and the existing data collection. These conversion functions are invoked whenever an item is added, removed, or replaced in either collection.
 
 Implementation of a custom message converter class with conversion logics to convert from data to message and vice versa.
 {% tabs %}
 {% highlight c# %}
 
-    
     /// <summary>
     /// Defines methods that can be used to convert data objects to chat messages and vice versa.
     /// </summary>
@@ -190,5 +197,4 @@ Implementation of a custom message converter class with conversion logics to con
 {% endhighlight %}
 {% endtabs %}
 
-You can download the entire working sample from [here].
-
+You can download the entire working sample from [here](https://github.com/SyncfusionExamples/convert-data-objects-to-messages-in-mvvm-in-.net-maui.chat).
