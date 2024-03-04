@@ -398,7 +398,7 @@ By default, the suggestions list in the `SfChat` closes automatically after the 
         public void Execute(object parameter)
         {
            var args = parameter as SuggestionItemSelectedEventArgs;
-           // Suggestion list not closed after selection.
+           // Suggestion list not closed after the selection.
            args.HideAfterSelection = false;
         }
     }
