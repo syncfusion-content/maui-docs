@@ -19,7 +19,7 @@ This section provides a quick overview for getting started with the .NET MAUI Ch
  4. Initialize the `SfChat` control.
 
 {% tabs %}
-{% highlight xaml hl_lines="3" %}
+{% highlight xaml hl_lines="5" %}
 
     <ContentPage   
       . . .
