@@ -19,10 +19,10 @@ This section provides a quick overview for getting started with the .NET MAUI Ch
  4. Initialize the `SfChat` control.
 
 {% tabs %}
-{% highlight xaml hl_lines="6" %}
+{% highlight xaml hl_lines="3" %}
 
     <ContentPage   
-       . . .
+      . . .
       xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Chat;assembly=Syncfusion.Maui.Chat">
 
       <syncfusion:SfChat />
@@ -31,7 +31,7 @@ This section provides a quick overview for getting started with the .NET MAUI Ch
 {% endhighlight %}
 {% highlight c# hl_lines="9" %}
     using Syncfusion.Maui.Chat;
-        . . .
+    . . .
 
     public partial class MainPage : ContentPage
     {
@@ -80,6 +80,7 @@ The `Syncfusion.Maui.Core` NuGet is a dependent package for all the Syncfusion c
 {% endtabs %}
 
 ## Creating View model for the Chat
+
 The `SfChat` functions as a data-bound control that presents a collection of messages exchanged between users. Therefore, messages must be generated and bound to the control.
 Create a simple message collection as shown in the following code example in a new class file. Save it as `GettingStartedViewModel.cs` file.
 
@@ -100,7 +101,7 @@ Create a simple message collection as shown in the following code example in a n
       public GettingStartedViewModel()
       {
           this.messages = new ObservableCollection<object>();
-          this.currentUser = new Author() { Name = "Nancy", Avatar = "Nancy.png" };
+          this.currentUser = new Author() { Name = "Nancy" };
           this.GenerateMessages();
       }
 
@@ -193,8 +194,7 @@ Create a simple message collection as shown in the following code example in a n
 
 To bind the messages to SfChat, configure the `SfChat.Messages` property accordingly. You have the option to bind the message collection of the SfChat either through XAML or programmatically in code.
 
-{% tabs %} {% highlight xaml %}
-
+{% tabs %} {% highlight xaml hl_lines="7"%}
     <ContentPage.BindingContext>
       <local:GettingStartedViewModel/>
     </ContentPage.BindingContext>
@@ -205,7 +205,7 @@ To bind the messages to SfChat, configure the `SfChat.Messages` property accordi
                                CurrentUser="{Binding CurrentUser}"/>
     <ContentPage.Content>	
 
-{% endhighlight %} {% highlight c# %} 
+{% endhighlight %} {% highlight c# hl_lines="12" %} 
 
     namespace GettingStarted
     { 
@@ -231,17 +231,16 @@ To bind the messages to SfChat, configure the `SfChat.Messages` property accordi
 
 ## Showing time break between messages
 
-To display time breaks between messages, you can segregate messages based on the specified date within each message. This can be accomplished by enabling the `SfChat`.ShowTimeBreak property, which can be configured both in XAML and programmatically. Below is an example code snippet illustrating this.
+To display time breaks between messages, you can segregate messages based on the specified date within each message. This can be accomplished by enabling the `ShowTimeBreak` property. Below is an example code snippet illustrating this.
 
 {% tabs %}
-{% highlight xaml %}
-
-         <sfChat:SfChat x:Name="sfChat"
-                       ShowTimeBreak="True" />
+{% highlight xaml hl_lines="2" %}
+ <sfChat:SfChat x:Name="sfChat"
+                 ShowTimeBreak="True" />
 
 {% endhighlight %}
 
-{% highlight c# %}
+{% highlight c# hl_lines="1"%}
 
  this.sfChat.ShowTimeBreak = true;
          
