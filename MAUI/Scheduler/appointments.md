@@ -967,7 +967,7 @@ this.Scheduler.AppointmentsSource = appointments;
 
 N>
 * By default, the `SchedulerAppointment` is set as the `BindingContext` for `AppointmentTemplate` for both `SchedulerAppointment` and custom data object in `AppointmentsSource.`
-* The Custom data object can be bound in `AppointmentTemplate` by using `SchedulerAppointment.Data.`
+* The Custom data object can be bound in `AppointmentTemplate` by using `SchedulerAppointment.DataItem.`
 
 #### Customize appointment appearance using DataTemplateSelector
 
@@ -1047,7 +1047,7 @@ this.Scheduler.AppointmentsSource = appointments;
 {% endtabs %}
 
 N>
-* The `BindingContext` for `AppointmentTemplate` for both `SchedulerAppointment` and `SchedulerAppointment.Data` in `AppointmentsSource.`
+* The `BindingContext` for `AppointmentTemplate` for both `SchedulerAppointment` and `SchedulerAppointment.DataItem` in `AppointmentsSource.`
 * When using data template selector, performance issues occur as the conversion template views take time within the framework.
 
 ## Appointment selection background
