@@ -29,6 +29,7 @@ This section provides a quick overview for getting started with the .NET MAUI Ch
     </ContentPage>
 
 {% endhighlight %}
+
 {% highlight c# hl_lines="9" %}
     using Syncfusion.Maui.Chat;
     . . .
@@ -79,13 +80,16 @@ The `Syncfusion.Maui.Core` NuGet is a dependent package for all the Syncfusion c
 {% endhighlight %} 
 {% endtabs %}
 
-## Creating View model for the Chat
+## Creating ViewModel for the Chat
 
 The `SfChat` functions as a data-bound control that presents a collection of messages exchanged between users. Therefore, messages must be generated and bound to the control.
+
 Create a simple message collection as shown in the following code example in a new class file. Save it as `GettingStartedViewModel.cs` file.
 
-{% highlight c# %}
+{% tabs %}
+{% highlight c# tabtitle="GettingStartedViewModel.cs" %}
 
+  using Syncfusion.Maui.Chat;
   public class GettingStartedViewModel : INotifyPropertyChanged
   {
       /// <summary>
@@ -189,54 +193,63 @@ Create a simple message collection as shown in the following code example in a n
   }
 
   {% endhighlight %}
+  {% endtabs %}
 
 ## Binding Messages to Chat 
 
 To bind the messages to SfChat, configure the `SfChat.Messages` property accordingly. You have the option to bind the message collection of the SfChat either through XAML or programmatically in code.
 
-{% tabs %} {% highlight xaml hl_lines="7"%}
+{% tabs %} {% highlight xaml hl_lines="14"%}
+
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:sfChat="clr-namespace:Syncfusion.Maui.Chat;assembly=Syncfusion.Maui.Chat"
+             xmlns:local="clr-namespace:GettingStarted.ViewModel"
+             x:Class="GettingStarted.MainPage">
+
     <ContentPage.BindingContext>
       <local:GettingStartedViewModel/>
     </ContentPage.BindingContext>
 
     <ContentPage.Content>
-                <sfChat:SfChat x:Name="sfChat"
-                               Messages="{Binding Messages}"
-                               CurrentUser="{Binding CurrentUser}"/>
-    <ContentPage.Content>	
+        <sfChat:SfChat x:Name="sfChat"
+                       Messages="{Binding Messages}"
+                       CurrentUser="{Binding CurrentUser}"/>
+    </ContentPage.Content>	
+</Content>
 
-{% endhighlight %} {% highlight c# hl_lines="12" %} 
+{% endhighlight %} 
 
-    namespace GettingStarted
+{% highlight c# hl_lines="10" %} 
+
+ public partial class MainPage : ContentPage 
+ {
+    SfChat sfChat; 
+    GettingStartedViewModel viewModel; 
+    public MainPage() 
     { 
-       public partial class MainPage : ContentPage 
-       {
-           SfChat sfChat; 
-           GettingStartedViewModel viewModel; 
-           public MainPage() 
-           { 
-              InitializeComponent(); 
-              this.sfChat = new SfChat();
-              this.viewModel = new GettingStartedViewModel(); 
-              this.sfChat.Messages = viewModel.Messages; 
-              this.sfChat.CurrentUser = viewModel.CurrentUser; 
-              this.Content = sfChat; 
-           } 
-       } 
-    }
-
+        InitializeComponent(); 
+        this.sfChat = new SfChat();
+        this.viewModel = new GettingStartedViewModel(); 
+        this.sfChat.Messages = viewModel.Messages; 
+        this.sfChat.CurrentUser = viewModel.CurrentUser; 
+        this.Content = sfChat; 
+    } 
+  } 
+    
 {% endhighlight %} {% endtabs %}
 
 ![.NET MAUI Chat getting started](images/getting-started/maui-chat-getting-started.png)
 
 ## Showing time break between messages
 
-To display time breaks between messages, you can segregate messages based on the specified date within each message. This can be accomplished by enabling the `ShowTimeBreak` property. Below is an example code snippet illustrating this.
+Messages can be separated based on their date and time of creation and this can be done by setting the `ShowTimeBreak` property to `true`.
 
 {% tabs %}
 {% highlight xaml hl_lines="2" %}
  <sfChat:SfChat x:Name="sfChat"
-                 ShowTimeBreak="True" />
+                ShowTimeBreak="True" />
 
 {% endhighlight %}
 
@@ -249,4 +262,4 @@ To display time breaks between messages, you can segregate messages based on the
 
 ![.NET MAUI Chat time break](images/getting-started/maui-chat-timebreak.png)
 
-Download the entire source code from GitHub [here](https://github.com/SyncfusionExamples/getting-started-with-.net-maui.chat).
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/getting-started-with-.net-maui.chat).
