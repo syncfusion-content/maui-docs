@@ -162,3 +162,39 @@ N> Password visibility toggle can be enabled only for [Entry](https://learn.micr
 You can find the complete getting started sample from this [link.](https://github.com/SyncfusionExamples/maui-textinputlayout-samples)
 
 N> You can refer to our [.NET MAUI Text Input Layout](https://www.syncfusion.com/maui-controls/maui-textinputlayout) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Text Input Layout Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/TextInputLayout) that shows you how to render the Text Input Layout in .NET MAUI.
+
+## PasswordVisibilityToggled Event
+
+The `PasswordVisibilityToggled` event will be fired whenever toggle the EnablePasswordVisibilityToggle icon in the SfTextInputLayout. It can defines visibility of the password based on the icon clicked. If the icon shows, the value of `IsPasswordVisible` will be **true**.
+
+* IsPasswordVisible: Its value is defined based on the password visibility.
+
+{% tabs %} 
+{% highlight xaml %} 
+
+<inputLayout:SfTextInputLayout  Hint="Password" 
+                                PasswordVisibilityToggled="SfTextInputLayout_PasswordVisibilityToggled">
+    <Entry Text="1234"/>
+</inputLayout:SfTextInputLayout>  
+ 
+{% endhighlight %}
+
+{% highlight C# %} 
+
+var inputLayout = new SfTextInputLayout();
+inputLayout.Hint = "Password";
+inputLayout.PasswordVisibilityToggled += InputLayout_PasswordVisibilityToggled;
+inputLayout.Content = new Entry() { Text = "1234" }; 
+
+{% endhighlight %}
+
+{% tabs %}
+{% highlight c# %}
+    
+    private void SfTextInputLayout_PasswordVisibilityToggled(object sender, PasswordVisibilityToggledEventArgs e)
+	{
+    	bool passwordVisbility = e.IsPasswordVisible;
+	}
+
+{% endhighlight %}
+{% endtabs %}

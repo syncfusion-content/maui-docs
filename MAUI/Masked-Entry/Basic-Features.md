@@ -200,5 +200,88 @@ maskedEntry.TextColor =  Colors.Green;
 
 ![TextColor](MaskedEntry_Images/MaskedEntry_TextColor.png)
 
+## Setting Stroke
+
+The [`Stroke`]() property is used to modify the visibility of border. The following code example demonstrates how to change the border visibility in [`SfMaskedEntry`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html).
+
+{% tabs %}
+{% highlight XAML %}
+
+<syncfusion:SfMaskedEntry WidthRequest="200"
+                          MaskType="Simple"
+                          Mask="(000) 000-0000"
+                          Stroke="Red"/>
+                                            
+
+{% endhighlight %}
+{% highlight C# %}
+
+SfMaskedEntry maskedEntry = new SfMaskedEntry();
+maskedEntry.WidthRequest = "200";
+maskedEntry.MaskType = MaskedEntryMaskType.Simple;
+maskedEntry.Mask = "(000) 000-0000";
+maskedEntry.Stroke = Colors.Red;
+
+{% endhighlight %}
+{% endtabs %}
+
+![ShowBorder](MaskedEntry_Images/MaskedEntry_Stroke.png)
+
+## Setting ShowBorder
+
+The `ShowBorder` property is used to modify the visibility of border. The following code example demonstrates how to change the border visibility in [`SfMaskedEntry`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html). The default value of the `ShowBorder` property is **true**.
+
+{% tabs %}
+{% highlight XAML %}
+
+<syncfusion:SfMaskedEntry WidthRequest="200"
+                          MaskType="Simple"
+                          Mask="(000) 000-0000"
+                          ShowBorder="False"/>
+                                            
+
+{% endhighlight %}
+{% highlight C# %}
+
+SfMaskedEntry maskedEntry = new SfMaskedEntry();
+maskedEntry.WidthRequest = 200;
+maskedEntry.MaskType = MaskedEntryMaskType.Simple;
+maskedEntry.Mask = "(000) 000-0000";
+maskedEntry.ShowBorder = false;
+
+{% endhighlight %}
+{% endtabs %}
+
+![ShowBorder](MaskedEntry_Images/MaskedEntry_ShowBorder.png)
+
+### TextAlignment
+
+The `HorizontalTextAlignment` and `VerticalTextAlignment` properties are used to customize the alignment of text in [`SfMaskedEntry`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html). This property accepts values from the TextAlignment enumeration, which includes options like `Start`, `Center`, and `End`.
+
+{% tabs %}
+{% highlight xaml %}
+
+<syncfusion:SfMaskedEntry WidthRequest="200"
+                          HeightRequest="50"
+                          HorizontalTextAlignment="End" 
+                          VerticalTextAlignment="Start"/>
+
+{% endhighlight %}
+{% highlight c# %}
+
+SfMaskedEntry maskedEntry = new SfMaskedEntry();
+maskedEntry.WidthRequest = 200;
+maskedEntry.HeightRequest = 50;
+maskedEntry.HorizontalTextAlignment = TextAlignment.End;
+maskedEntry.VerticalTextAlignment = TextAlignment.Start;
+
+{% endhighlight %}
+{% endtabs %}
+
+### TextAlignment
+
+![TextAlignment](MaskedEntry_Images/MaskedEntry_TextAlignment.png)
+
+
 
 

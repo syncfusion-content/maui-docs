@@ -669,3 +669,37 @@ public class CommandDemoViewModel : INotifyPropertyChanged
 
 {% endhighlight %}
 {% endtabs %}
+
+## RTL support
+
+`SfButton` supports changing the layout direction of the control in the right-to-left direction by setting the FlowDirection to `RightToLeft` or by changing the device language.
+
+{% tabs %}
+{% highlight xaml %}
+
+<buttons:SfButton x:Name="button"
+                FlowDirection="RightToLeft"
+                HorizontalTextAlignment="Start"
+                ImageSource="add_to_card.png"
+                ShowIcon="True" 
+                ImageAlignment="Left"
+                Text="Add to cart"/>
+
+{% endhighlight %}
+
+{% highlight c# %}
+SfButton button = new SfButton()
+{
+    Text = "Add to cart",
+    TextColor = Colors.Black,
+    HorizontalTextAlignment = LayoutOptions.Start,
+    ImageSource = "add_to_card.png",
+    ShowIcon = true,
+    ImageAlignment = Alignment.Left
+};
+
+
+{% endhighlight %}
+{% endtabs %}
+
+![.NET MAUI RTL support](images/customization-images/Button_RTL.png)
