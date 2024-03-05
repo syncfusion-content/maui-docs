@@ -235,7 +235,7 @@ To bind the messages to SfChat, configure the `SfChat.Messages` property accordi
         this.sfChat.Messages = viewModel.Messages; 
         this.sfChat.CurrentUser = viewModel.CurrentUser; 
         this.Content = sfChat; 
-    } 
+     } 
   } 
     
 {% endhighlight %} {% endtabs %}
@@ -262,4 +262,4 @@ Messages can be separated based on their date and time of creation and this can 
 
 ![.NET MAUI Chat time break](images/getting-started/maui-chat-timebreak.png)
 
-N> [View Sample in GitHub](https://github.com/SyncfusionExamples/getting-started-with-.net-maui.chat).
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/getting-started-with-.net-maui-chat).
