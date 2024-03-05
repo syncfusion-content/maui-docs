@@ -8,12 +8,9 @@ documentation: ug
 ---
 
 # Histogram Chart in .NET MAUI Chart
+The Histogram chart offers a visual representation of a large number of data points distributed across a continuous range, presented in column format.
 
-## Histogram Chart
-
-Histogram chart provides a visual display of large amount of data that are difficult to understand in a tabular or data grid form.
-
-You can customize intervals using the [HistogramInterval]() property and collapse the normal distribution curve using the [ShowNormalDistributionCurve]() property. 
+Customize histogram intervals using the [HistogramInterval]() property and normal distribution curve can be collapsed using[ShowNormalDistributionCurve]() property. 
 
 
 {% tabs %}
@@ -22,15 +19,15 @@ You can customize intervals using the [HistogramInterval]() property and collaps
 
     <chart:SfCartesianChart>
         <chart:SfCartesianChart.XAxes>
-            <chart:NumericalAxis>
-            </chart:NumericalAxis>
+            <chart:NumericalAxis />
         </chart:SfCartesianChart.XAxes>
 
         <chart:SfCartesianChart.YAxes>
-            <chart:NumericalAxis x:Name="yAxis"/>
+            <chart:NumericalAxis />
         </chart:SfCartesianChart.YAxes>
 
-        <chart:HistogramSeries ItemsSource="{Binding HistogramData}" 
+        <chart:HistogramSeries ItemsSource="{Binding      
+                                             HistogramData}"
                                XBindingPath="Value" 
                                YBindingPath="Size"
                                HistogramInterval="20" 
@@ -51,11 +48,9 @@ You can customize intervals using the [HistogramInterval]() property and collaps
     NumericalAxis yAxis = new NumericalAxis();
     chart.YAxes.Add(yAxis);
 
-    ViewModel viewModel = new ViewModel();
-
     HistogramSeries histogramSeries = new HistogramSeries
     {
-        ItemsSource = new viewModel().HistogramData, 
+        ItemsSource = new ViewModel().HistogramData, 
         XBindingPath = "Value",
         YBindingPath = "Size",
         HistogramInterval = 20,
@@ -63,19 +58,17 @@ You can customize intervals using the [HistogramInterval]() property and collaps
     };
 
     chart.Series.Add(histogramSeries);
-
     this.Content = chart;
 
 {% endhighlight %}
 
 {% endtabs %}
 
-![Histogram Chart in MAUI](Chart-Types_images/maui_Histogram_chart)
+![Histogram Chart in MAUI](chart-types-images/maui_Histogram_chart.png)
 
 ## Customization of distribution curve
 
-You can define the [CurveStyle]() of the distribution curve using the [ChartLineStyle]() property as in the following code example.
-
+Customize the normal distribution curve by using the [CurveLineStyle]() property.
 
 {% tabs %}
 
@@ -84,19 +77,19 @@ You can define the [CurveStyle]() of the distribution curve using the [ChartLine
     <chart:SfCartesianChart>
         ....
 
-        <chart:HistogramSeries ItemsSource="{Binding HistogramData}" 
+      <chart:HistogramSeries ItemsSource="{Binding 
+                                            HistogramData}" 
                                XBindingPath="Value" 
                                YBindingPath="Size"
                                HistogramInterval="20">
-                               <chart:HistogramSeries.CurveStyle>
-                                    <chart:ChartLineStyle Stroke="Blue"
-                                                          StrokeWidth="2"
-                                                          StrokeDashArray="5,6,3">
-                                    </chart:ChartLineStyle>
-                                </chart:HistogramSeries.CurveStyle>
+         <chart:HistogramSeries.CurveStyle>
+             <chart:ChartLineStyle Stroke="Blue"
+                                   StrokeWidth="2"
+                                   StrokeDashArray="5,6,3">
+             </chart:ChartLineStyle>
+         </chart:HistogramSeries.CurveStyle>
         </chart:HistogramSeries>
     </chart:SfCartesianChart>
-
 
 {% endhighlight %}
 
@@ -104,11 +97,10 @@ You can define the [CurveStyle]() of the distribution curve using the [ChartLine
 
     SfCartesianChart chart = new SfCartesianChart();
     ....
-    ViewModel viewModel = new ViewModel();
-
+  
     HistogramSeries histogramSeries = new HistogramSeries
     {
-        ItemsSource = new viewModel().HistogramData, 
+        ItemsSource = new ViewModel().HistogramData, 
         XBindingPath = "Value",
         YBindingPath = "Size",
         HistogramInterval = 20,
@@ -121,11 +113,10 @@ You can define the [CurveStyle]() of the distribution curve using the [ChartLine
     };
 
     chart.Series.Add(histogramSeries);
-
     this.Content = chart;
 
 {% endhighlight %}
 
 {% endtabs %}
 
-![Customized distribution curve of Histogram chart](Chart-Types_images/maui_Histogram_chart_distribution_curve)
+![Customized distribution curve of Histogram chart](chart-types-images/maui_Histogram_chart_distribution_curve.png)

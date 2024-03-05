@@ -30,7 +30,6 @@ N> The cartesian chart has [Series](https://help.syncfusion.com/cr/maui/Syncfusi
     <chart:ColumnSeries ItemsSource="{Binding Data}"
 						XBindingPath="XValue"
 						YBindingPath="YValue"/>
-
 </chart:SfCartesianChart>
 
 {% endhighlight %}
@@ -122,33 +121,32 @@ By default, all the column series which have the same x and y axes are placed si
 
 {% tabs %}
 
-{% highlight xaml %}
+ {% highlight xaml %}
 
-<chart:SfCartesianChart EnableSideBySideSeriesPlacement="False">
+    <chart:SfCartesianChart  
+          EnableSideBySideSeriesPlacement="False">
+     <chart:SfCartesianChart.XAxes>
+         <chart:CategoryAxis />
+     </chart:SfCartesianChart.XAxes>
 
-    <chart:SfCartesianChart.XAxes>
-        <chart:CategoryAxis />
-    </chart:SfCartesianChart.XAxes>
+     <chart:SfCartesianChart.YAxes>
+         <chart:NumericalAxis />
+     </chart:SfCartesianChart.YAxes>  
 
-    <chart:SfCartesianChart.YAxes>
-        <chart:NumericalAxis />
-    </chart:SfCartesianChart.YAxes>   
+     <chart:ColumnSeries ItemsSource="{Binding Data1}"
+                         XBindingPath="XValue"
+                         YBindingPath="YValue"/>
+                         
+     <chart:ColumnSeries ItemsSource="{Binding Data2}"
+                         XBindingPath="XValue"
+                         YBindingPath="YValue"
+                         Width="0.2"/>                    
+    </chart:SfCartesianChart>
 
-    <chart:ColumnSeries ItemsSource="{Binding Data1}"
-                        XBindingPath="XValue"
-                        YBindingPath="YValue"/>
-                        
-    <chart:ColumnSeries ItemsSource="{Binding Data2}"
-                        XBindingPath="XValue"
-                        YBindingPath="YValue"
-                        Width="0.2"/>                    
-
-</chart:SfCartesianChart>
-
-{% endhighlight %}
+  {% endhighlight %}
 
 {% highlight c# %}
-    ViewModel viewModel = new ViewModel();
+    
     SfCartesianChart chart = new SfCartesianChart();
     chart.EnableSideBySideSeriesPlacement = false;
     CategoryAxis primaryAxis = new CategoryAxis();
@@ -158,14 +156,14 @@ By default, all the column series which have the same x and y axes are placed si
 
     ColumnSeries series1 = new ColumnSeries()
     {
-        ItemsSource = viewModel.Data1,
+        ItemsSource = new ViewModel().Data1,
         XBindingPath = "XValue",
         YBindingPath = "YValue",
     };
 
     ColumnSeries series2 = new ColumnSeries()
     {
-        ItemsSource = viewModel.Data2,
+        ItemsSource = new ViewModel().Data2,
         XBindingPath = "XValue",
         YBindingPath = "YValue",
         Width = 0.2;
@@ -179,4 +177,4 @@ By default, all the column series which have the same x and y axes are placed si
 
 {% endtabs %}
 
-![Column segment side by side placement in MAUI Chart](Chart-Types_images/EnableSidebySidePlacement.png)
+![Visualize column overlapped in .NET MAUI](chart-types-images/EnableSidebySidePlacement.png)
