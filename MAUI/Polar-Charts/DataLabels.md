@@ -171,7 +171,7 @@ The content of the label can be customized using the [LabelContext]() property. 
     . . .
     PolarAreaSeries series = new PolarAreaSeries()
     {
-        ItemsSource = new ViewModel().Data,
+        ItemsSource = new ViewModel().PlantDetails,
         XBindingPath="Direction",                              
         YBindingPath="Tree",
         ShowDataLabels = true,
@@ -222,7 +222,7 @@ The [SfPolarChart]() provides support to customize the appearance of the datalab
     SfPolarChart chart = new SfPolarChart();
     . . .
     PolarAreaSeries series = new PolarAreaSeries();
-    series.ItemsSource = new ViewModel().Data;
+    series.ItemsSource = new ViewModel().PlantDetails;
     series.ShowDataLabels = true;
     series.XBindingPath="Direction"                               
     series.YBindingPath="Tree"
@@ -245,7 +245,7 @@ The [SfPolarChart]() provides support to customize the appearance of the datalab
             HorizontalOptions = LayoutOptions.Center,
             VerticalOptions = LayoutOptions.Center
         };
-        label.SetBinding(Label.TextProperty, "Tree");
+        label.SetBinding(Label.TextProperty, new Binding("Item.Tree"));
 
         frame.Content = label;
         stackLayout.Children.Add(frame);
