@@ -7,11 +7,11 @@ control: SfDataGrid
 documentation: ug
 ---
 
-## Resizing columns
+# Resizing columns in MAUI DataGrid (SfDataGrid)
 
 The `SfDataGrid` allows you to resize the columns by tapping and dragging the right border of the column headers. Resizing can be enabled or disabled by setting the `SfDataGrid.AllowResizingColumns` property. A resizing indicator is displayed while resizing a column.
 
-N> Resizing considers [DataGridColumn.MinimumWidth] and [DataGridColumn.MaximumWidth] of the column and will not exceed the minimum and maximum width constraints.
+N> Resizing considers `DataGridColumn.MinimumWidth` and `DataGridColumn.MaximumWidth` of the column and will not exceed the minimum and maximum width constraints.
 
 {% tabs %}
 {% highlight xaml %}
@@ -36,7 +36,7 @@ N> The resizing indicator appears when tapping the right corner of the column he
 
 To hide a column interactively, set the `DataGridColumn.MinimumWidth` property to zero. Then, resize the column to a width less than zero.
 
-### Resizing events
+## Resizing events
 
 Based on the requirements, resizing operations can be handled using the `SfDataGrid.ColumnResizing` event. The `SfDataGrid.ColumnResizing` event is triggered while resizing a column and will continue to be triggered until the resizing operation is complete.
 
@@ -49,7 +49,7 @@ The `SfDataGrid.ColumnResizing` event provides the following properties through 
 * `ResizingState` - Returns the current state of the user interaction through a value from the `DataGridProgressState` enum.
 * `Cancel` - A Boolean property to cancel the resizing operation.
 
-### Cancel resizing for a column
+## Cancel resizing for a column
 
 To cancel resizing a specific column, use the `SfDataGrid.ColumnResizing` event. Based on the various arguments provided in the `DataGridColumnResizingEventArgs`, the resizing operation of a column can be canceled.
 
@@ -95,7 +95,7 @@ To cancel resizing a column using the `SfDataGrid.ColumnResizing` event and the 
 
 {% endhighlight %}
 
-### Customize the appearance
+## Customize the appearance
 
 The SfDataGrid allows you to change the resizing indicator color using `SfDataGrid.DefaultStyle.ColumnResizingIndicatorColor`.
 
