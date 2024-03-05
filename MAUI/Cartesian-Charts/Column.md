@@ -114,3 +114,69 @@ this.Content = chart;
 {% endtabs %}
 
 ![Column segment spacing in MAUI Chart](Chart-Types_images/maui_column_chart_with_segment_spacing.png)
+
+## Overlapped Placement
+
+By default, all the column series which have the same x and y axes are placed side by side in a chart. If you want to place the series one over the other (overlapped), set the [EnableSideBySideSeriesPlacement]( https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_EnableSideBySideSeriesPlacement) property of SfCartesianChart to false and configure the Width property to differentiate the series. The following code sample and screenshot illustrate the overlapped placement of column series.
+
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<chart:SfCartesianChart EnableSideBySideSeriesPlacement="False">
+
+    <chart:SfCartesianChart.XAxes>
+        <chart:CategoryAxis />
+    </chart:SfCartesianChart.XAxes>
+
+    <chart:SfCartesianChart.YAxes>
+        <chart:NumericalAxis />
+    </chart:SfCartesianChart.YAxes>   
+
+    <chart:ColumnSeries ItemsSource="{Binding Data1}"
+                        XBindingPath="XValue"
+                        YBindingPath="YValue"/>
+                        
+    <chart:ColumnSeries ItemsSource="{Binding Data2}"
+                        XBindingPath="XValue"
+                        YBindingPath="YValue"
+                        Width="0.2"/>                    
+
+</chart:SfCartesianChart>
+
+{% endhighlight %}
+
+{% highlight c# %}
+    ViewModel viewModel = new ViewModel();
+    SfCartesianChart chart = new SfCartesianChart();
+    chart.EnableSideBySideSeriesPlacement = false;
+    CategoryAxis primaryAxis = new CategoryAxis();
+    chart.XAxes.Add(primaryAxis);
+    NumericalAxis secondaryAxis = new NumericalAxis();
+    chart.YAxes.Add(secondaryAxis);
+
+    ColumnSeries series1 = new ColumnSeries()
+    {
+        ItemsSource = viewModel.Data1,
+        XBindingPath = "XValue",
+        YBindingPath = "YValue",
+    };
+
+    ColumnSeries series2 = new ColumnSeries()
+    {
+        ItemsSource = viewModel.Data2,
+        XBindingPath = "XValue",
+        YBindingPath = "YValue",
+        Width = 0.2;
+    };
+
+    chart.Series.Add(series1);
+    chart.Series.Add(series2);
+    this.Content = chart;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Column segment side by side placement in MAUI Chart](Chart-Types_images/EnableSidebySidePlacement.png)
