@@ -126,8 +126,8 @@ The content of the label can be customized using the [LabelContext]() property. 
     PieSeries series = new PieSeries()
     {
         ItemsSource = new ViewModel().Data,
-        XBindingPath = "Product";
-        YBindingPath = "SalesRate";
+        XBindingPath = "Product",
+        YBindingPath = "SalesRate",
         ShowDataLabels = true,
         LabelContext = LabelContext.Percentage
     };
@@ -158,20 +158,20 @@ The [SfCircularChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts
                 TextColor="White" 
                 FontAttributes="Bold"
                 FontSize="13"      
-				HorizontalOptions="Center"
-				VerticalOptions="Center"/>
+                HorizontalOptions="Center"
+                VerticalOptions="Center"/>
                 <Label Text=" : " 
-				TextColor="White"
-				FontAttributes="Bold"
-				FontSize="13"
-				HorizontalOptions="Center"
-				VerticalOptions="Center"/>
+                TextColor="White"
+                FontAttributes="Bold"
+                FontSize="13"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"/>
                 <Label Text="{Binding Item.SalesRate}"
-				TextColor="White"
-				FontAttributes="Bold"
-				FontSize="13"
-				HorizontalOptions="Center"
-				VerticalOptions="Center"/>
+                TextColor="White"
+                FontAttributes="Bold"
+                FontSize="13"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"/>
             </HorizontalStackLayout>
         </DataTemplate>
     </chart:SfCircularChart.Resources>
@@ -193,6 +193,8 @@ The [SfCircularChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts
     . . .
     PieSeries series = new PieSeries();
     series.ItemsSource = new ViewModel().Data;
+    series.XBindingPath = "Product";
+    series.YBindingPath = "SalesRate";
     series.ShowDataLabels = true;
 
     DataTemplate LabelTemplate1 = new DataTemplate(() =>

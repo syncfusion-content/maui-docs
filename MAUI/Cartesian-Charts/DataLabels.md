@@ -243,7 +243,7 @@ The [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chart
             VerticalOptions = LayoutOptions.Center,
             FontSize = 15
         };
-        label.SetBinding(Label.TextProperty, new Binding("Item.Height"));
+        label.SetBinding(Label.TextProperty, new Binding("Item.Values"));
         var image = new Image
         {
             Source = "arrow.png",
