@@ -9,7 +9,7 @@ documentation: ug
 
 # States in .NET MAUI Circular ProgressBar (SfCircularProgressBar)
 
-Configure the states of the circular progress bar control depending on the usage.
+Configure the states of the [circular progress bar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfCircularProgressBar.html?tabs=tabid-1) control depending on the usage.
 
 ## Determinate
 
