@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Column Resizing in .NET MAUI DataGrid control | Syncfusion
-description: Learn here all about column resizing support in Syncfusion .NET MAUI DataGrid (SfDataGrid) control.
+description: Learn about column resizing with Syncfusion .NET MAUI DataGrid (SfDataGrid) control.
 platform: MAUI
 control: SfDataGrid
 documentation: UG
@@ -9,7 +9,7 @@ documentation: UG
 
 ## Resizing columns
 
-The SfDataGrid allows you to resize the columns by tapping and dragging the right border of the column headers. Resizing can be enabled or disabled by setting the `SfDataGrid.AllowResizingColumns` property. A resizing indicator is displayed while resizing a column.
+The `SfDataGrid` allows you to resize the columns by tapping and dragging the right border of the column headers. Resizing can be enabled or disabled by setting the `SfDataGrid.AllowResizingColumns` property. A resizing indicator is displayed while resizing a column.
 
 N> Resizing considers [DataGridColumn.MinimumWidth] and [DataGridColumn.MaximumWidth] of the column and will not exceed the minimum and maximum width constraints.
 
@@ -22,7 +22,9 @@ N> Resizing considers [DataGridColumn.MinimumWidth] and [DataGridColumn.MaximumW
 
 {% endhighlight %}
 {% highlight c# %}
-dataGrid.AllowResizingColumns = true;
+
+        dataGrid.AllowResizingColumns = true;
+
 {% endhighlight %}
 {% endtabs %}
 
