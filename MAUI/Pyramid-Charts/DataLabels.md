@@ -125,6 +125,9 @@ The [SfPyramidChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.
 
     SfPyramidChart chart = new SfPyramidChart();
     . . .
+    chart.ItemsSource = new ViewModel().Data;
+    chart.XBindingPath = "Name";
+    chart.YBindingPath = "Values";
     chart.ShowDataLabels = true;
     DataTemplate LabelTemplate1 = new DataTemplate(() =>
     {

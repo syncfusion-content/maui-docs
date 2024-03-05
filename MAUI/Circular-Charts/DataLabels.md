@@ -192,7 +192,7 @@ The [SfCircularChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts
     SfCircularChart chart = new SfCircularChart();
     . . .
     PieSeries series = new PieSeries();
-    series.ItemsSource = viewModel.Data;
+    series.ItemsSource = new ViewModel().Data;
     series.ShowDataLabels = true;
 
     DataTemplate LabelTemplate1 = new DataTemplate(() =>

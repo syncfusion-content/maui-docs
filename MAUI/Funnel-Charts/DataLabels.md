@@ -125,6 +125,9 @@ The [SfFunnelChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.S
 
     SfFunnelChart chart = new SfFunnelChart();
     . . .
+    chart.ItemsSource = new ViewModel().Data;
+    chart.XBindingPath = "Name";
+    chart.YBindingPath = "Values";
     chart.ShowDataLabels = true;
     DataTemplate LabelTemplate1 = new DataTemplate(() =>
     {

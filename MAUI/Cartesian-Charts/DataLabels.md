@@ -155,13 +155,13 @@ The content of the label can be customized using the [LabelContext]() property. 
 
 * [YValue]() - This will show the corresponding Y value.
 
-The most commonly used series type with [LabelContext]() are [ColumnSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ColumnSeries.html), [StackingColumnSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.StackingColumnSeries.html), BarSeries and StackedBarSeries
+The most commonly used series type with [LabelContext]() are BarSeries and [ColumnSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ColumnSeries.html).
 
 {% tabs %}
 
 {% highlight xaml %}
 
-    <chart:SfCartesianChart >
+    <chart:SfCartesianChart IsTransposed="True">
         . . .
         <chart:ColumnSeries ItemsSource="{Binding Data}" 
                             ShowDataLabels="True"
@@ -176,6 +176,7 @@ The most commonly used series type with [LabelContext]() are [ColumnSeries](http
 {% highlight c# %}
 
     SfCartesianChart chart = new SfCartesianChart();
+    chart.IsTransposed = true;
     . . .
     ColumnSeries series = new ColumnSeries()
     {
@@ -230,9 +231,9 @@ The [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chart
     . . .
     ColumnSeries series = new ColumnSeries();
     series.ShowDataLabels = true;
-    series.ItemsSource = (new ViewModel()).Data;
+    series.ItemsSource = new ViewModel().Data;
     series.XBindingPath = "Name";
-    series.YBindingPath = "Height";
+    series.YBindingPath = "Values";
 
     DataTemplate LabelTemplate1 = new DataTemplate(() =>
     {
