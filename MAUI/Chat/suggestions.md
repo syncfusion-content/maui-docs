@@ -346,7 +346,7 @@ By default, the suggestions list in the `SfChat` closes automatically after the 
 **SuggestionItemSelectedCommand command**
 
 {% tabs %}
-{% highlight xaml hl_lines="12"%}
+{% highlight xaml hl_lines="11"%}
 
  <?xml version="1.0" encoding="utf-8" ?>
  <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
@@ -395,7 +395,7 @@ By default, the suggestions list in the `SfChat` closes automatically after the 
             }
         }
 
-        public void Execute(object parameter)
+        public void ExecuteSuggestion(object parameter)
         {
            var args = parameter as SuggestionItemSelectedEventArgs;
            // Suggestion list not closed after selection.
