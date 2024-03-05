@@ -107,15 +107,15 @@ The content of the label can be customized using the [LabelContext]() property. 
 
 {% highlight xaml %}
 
-<chart:SfCircularChart>
-    
-    <chart:PieSeries ItemsSource="{Binding Data}" 
-                     LabelContext="Percentage"
-                     ShowDataLabels="True"
-                     XBindingPath="Product" 
-                     YBindingPath="SalesRate"/>  
-    
-</chart:SfCircularChart>
+    <chart:SfCircularChart>
+        
+        <chart:PieSeries ItemsSource="{Binding Data}" 
+                         LabelContext="Percentage"
+                         ShowDataLabels="True"
+                         XBindingPath="Product" 
+                         YBindingPath="SalesRate"/>  
+        
+    </chart:SfCircularChart>
 
 {% endhighlight %}
 
