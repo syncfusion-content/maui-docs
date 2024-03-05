@@ -177,7 +177,7 @@ The [SfPolarChart]() provides support to customize the appearance of the datalab
     SfPolarChart chart = new SfPolarChart();
     . . .
     PolarAreaSeries series = new PolarAreaSeries();
-    series.ItemsSource = viewModel.Data;
+    series.ItemsSource = new ViewModel().Data;
     series.ShowDataLabels = true;
     series.XBindingPath="Direction"                               
     series.YBindingPath="Tree"
@@ -200,7 +200,7 @@ The [SfPolarChart]() provides support to customize the appearance of the datalab
             HorizontalOptions = LayoutOptions.Center,
             VerticalOptions = LayoutOptions.Center
         };
-        label.SetBinding(Label.TextProperty, "Tree"); // Assuming "Tree" is a property in your binding context
+        label.SetBinding(Label.TextProperty, "Tree");
 
         frame.Content = label;
         stackLayout.Children.Add(frame);
