@@ -4,7 +4,7 @@ title: Column Resizing in .NET MAUI DataGrid control | Syncfusion
 description: Learn about column resizing with Syncfusion .NET MAUI DataGrid (SfDataGrid) control.
 platform: MAUI
 control: SfDataGrid
-documentation: UG
+documentation: ug
 ---
 
 ## Resizing columns
