@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Column Resizing in .NET MAUI DataGrid control | Syncfusion
-description: Learn about column resizing with Syncfusion .NET MAUI DataGrid (SfDataGrid) control.
+description: Learn all about column reizing support in Syncfusion MAUI DataGrid (SfDataGrid) control and more here.
 platform: MAUI
 control: SfDataGrid
 documentation: ug
