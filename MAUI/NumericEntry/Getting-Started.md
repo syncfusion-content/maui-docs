@@ -376,9 +376,9 @@ sfNumericEntry.Stroke = Colors.Red;
 
 You can find the complete getting started sample of .NET MAUI from this [link.](https://github.com/SyncfusionExamples/maui-numericentry-samples)
 
-## ShowBorder
+## Border visibility
 
-The `ShowBorder` property is used to modify the visibility of border. The following code example demonstrates how to change the border visibility in [`SfNumericEntry`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html). The default value of the `ShowBorder` property is **true**.
+The [`SfNumericEntry`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html) ShowBorder property is used to modify the visibility of border and its default value is **true**. The following code example demonstrates how to change the border visibility,
 
 {% tabs %}
 {% highlight xaml %}
@@ -398,18 +398,20 @@ sfNumericEntry.ShowBorder = false;
 {% endhighlight %}
 {% endtabs %}
 
+The following image illustrates the result of the above code:
+
 ![.NET MAUI NumericEntry ShowBorder](GettingStarted_images/showborder.png)
 
 ### TextAlignment
 
-The `HorizontalTextAlignment` and `VerticalTextAlignment` properties are used to customize the alignment of text in [`SfNumericEntry`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html). This property accepts values from the TextAlignment enumeration, which includes options like `Start`, `Center`, and `End`.
+The [`SfNumericEntry`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html) provides support to customize the text alignment by using the `HorizontalTextAlignment` and `VerticalTextAlignment` properties.
 
 {% tabs %}
 {% highlight xaml %}
 
 <editors:SfNumericEntry WidthRequest="200"
                         HeightRequest="50"
-                        HorizontalTextAlignment="End" 
+                        HorizontalTextAlignment="Center" 
                         VerticalTextAlignment="Start"/>
 
 {% endhighlight %}
@@ -418,12 +420,12 @@ The `HorizontalTextAlignment` and `VerticalTextAlignment` properties are used to
 SfNumericEntry sfNumericEntry= new SfNumericEntry();
 sfNumericEntry.WidthRequest = 200;
 sfNumericEntry.HeightRequest = 50;
-sfNumericEntry.HorizontalTextAlignment = TextAlignment.End;
+sfNumericEntry.HorizontalTextAlignment = TextAlignment.Center;
 sfNumericEntry.VerticalTextAlignment = TextAlignment.Start;
 
 {% endhighlight %}
 {% endtabs %}
 
-### HorizontalTextAlignment
+The following image illustrates the result of the above code:
 
 ![HorizontalTextAlignment](GettingStarted_images/textalignment.png)
