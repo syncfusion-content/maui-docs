@@ -375,3 +375,55 @@ sfNumericEntry.Stroke = Colors.Red;
 {% endtabs %}
 
 You can find the complete getting started sample of .NET MAUI from this [link.](https://github.com/SyncfusionExamples/maui-numericentry-samples)
+
+## ShowBorder
+
+The `ShowBorder` property is used to modify the visibility of border. The following code example demonstrates how to change the border visibility in [`SfNumericEntry`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html). The default value of the `ShowBorder` property is **true**.
+
+{% tabs %}
+{% highlight xaml %}
+
+<editors:SfNumericEntry WidthRequest="200"
+                        HeightRequest="40"
+                        ShowBorder="False"/>
+
+{% endhighlight %}
+{% highlight C# %}
+
+SfNumericEntry sfNumericEntry= new SfNumericEntry();
+sfNumericEntry.WidthRequest = 200;
+sfNumericEntry.HeightRequest = 40;
+sfNumericEntry.ShowBorder = false;
+
+{% endhighlight %}
+{% endtabs %}
+
+![.NET MAUI NumericEntry ShowBorder](GettingStarted_images/showborder.png)
+
+### TextAlignment
+
+The `HorizontalTextAlignment` and `VerticalTextAlignment` properties are used to customize the alignment of text in [`SfNumericEntry`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html). This property accepts values from the TextAlignment enumeration, which includes options like `Start`, `Center`, and `End`.
+
+{% tabs %}
+{% highlight xaml %}
+
+<editors:SfNumericEntry WidthRequest="200"
+                        HeightRequest="50"
+                        HorizontalTextAlignment="End" 
+                        VerticalTextAlignment="Start"/>
+
+{% endhighlight %}
+{% highlight C# %}
+
+SfNumericEntry sfNumericEntry= new SfNumericEntry();
+sfNumericEntry.WidthRequest = 200;
+sfNumericEntry.HeightRequest = 50;
+sfNumericEntry.HorizontalTextAlignment = TextAlignment.End;
+sfNumericEntry.VerticalTextAlignment = TextAlignment.Start;
+
+{% endhighlight %}
+{% endtabs %}
+
+### HorizontalTextAlignment
+
+![HorizontalTextAlignment](GettingStarted_images/textalignment.png)

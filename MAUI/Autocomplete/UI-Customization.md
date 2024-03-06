@@ -859,3 +859,58 @@ autocomplete.CursorPosition = 4;
 {% endtabs %}
 
 N> Two way binding not supported in Android platform.
+
+## ShowBorder
+
+The `ShowBorder` property is used to modify the visibility of border. The following code example demonstrates how to change the border visibility in [`SfAutocomplete`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html). The default value of the `ShowBorder` property is **true**.
+
+{% tabs %}
+{% highlight xaml %}
+
+<editors:SfAutocomplete x:Name="autoComplete"
+                        WidthRequest="250" 
+                        HeightRequest="35"
+                        ShowBorder = "False" />
+{% endhighlight %}
+{% highlight C# %}
+
+using Syncfusion.Maui.Inputs;
+
+SfAutocomplete autocomplete = new SfAutocomplete();
+autocomplete.WidthRequest = 250;
+autocomplete.HeightRequest = 50;
+autocomplete.ShowBorder = false;
+
+{% endhighlight %}
+{% endtabs %}
+
+![ShowBorder](Images/UICustomization/ShowBorder.png)
+
+### TextAlignment
+
+The `HorizontalTextAlignment` and `VerticalTextAlignment` properties are used to customize the alignment of text in [`SfAutocomplete`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html). This property accepts values from the TextAlignment enumeration, which includes options like `Start`, `Center`, and `End`.
+
+{% tabs %}
+{% highlight xaml %}
+
+<editors:SfAutocomplete x:Name="autoComplete"
+                        WidthRequest="250" 
+                        HeightRequest="50"
+                        HorizontalTextAlignment="End" 
+                        VerticalTextAlignment="Start"/>
+
+{% endhighlight %}
+{% highlight c# %}
+
+SfAutocomplete autocomplete = new SfAutocomplete();
+autocomplete.WidthRequest = 250;
+autocomplete.HeightRequest = 50;
+autocomplete.HorizontalTextAlignment = TextAlignment.End;
+autocomplete.VerticalTextAlignment = TextAlignment.Start;
+
+{% endhighlight %}
+{% endtabs %}
+
+### TextAlignment
+
+![TextAlignment](Images/UICustomization/TextAlignment.png)

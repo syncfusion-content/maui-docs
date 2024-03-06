@@ -888,3 +888,56 @@ comboBox.CursorPosition = 4;
 {% endtabs %}
 
 N> The cursor position support is available for editable mode only, and two-way binding is not supported in the Android platform.
+
+## ShowBorder
+
+The `ShowBorder` property is used to modify the visibility of border. The following code example demonstrates how to change the border visibility in [`SfComboBox`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html). The default value of the `ShowBorder` property is **true**.
+
+{% tabs %}
+{% highlight xaml %}
+
+<editors:SfComboBox x:Name="comboBox"
+                            WidthRequest="250" 
+                            HeightRequest="35"
+                            ShowBorder="False"/>
+{% endhighlight %}
+{% highlight C# %}
+
+using Syncfusion.Maui.Inputs;
+
+SfComboBox comboBox = new SfComboBox();
+comboBox.ShowBorder = false;
+
+{% endhighlight %}
+{% endtabs %}
+
+![.NET MAUI ComboBox showborder](Images/UICustomization/ShowBorder.png)
+
+### TextAlignment
+
+The `HorizontalTextAlignment` and `VerticalTextAlignment` properties are used to customize the alignment of text in [`SfComboBox`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html). This property accepts values from the TextAlignment enumeration, which includes options like `Start`, `Center`, and `End`.
+
+{% tabs %}
+{% highlight xaml %}
+
+<editors:SfComboBox x:Name="comboBox"
+                    WidthRequest="250" 
+                    HeightRequest="50"
+                    HorizontalTextAlignment="End" 
+                    VerticalTextAlignment="Start"/>
+
+{% endhighlight %}
+{% highlight c# %}
+
+SfComboBox comboBox = new SfComboBox();
+comboBox.WidthRequest = 250;
+comboBox.HeightRequest = 50;
+comboBox.HorizontalTextAlignment = TextAlignment.End;
+comboBox.VerticalTextAlignment = TextAlignment.Start;
+
+{% endhighlight %}
+{% endtabs %}
+
+### TextAlignment
+
+![TextAlignment](Images/UICustomization/TextAlignment.png)
