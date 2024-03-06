@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Neumorphic UI Column Chart in .NET MAUI Chart control | Syncfusion
-description: Learn here about how to create the Neumorphic UI chart types using Syncfusion .NET MAUI Chart (SfCartesianChart) control.
+title: Neumorphic UI Chart in .NET MAUI Chart control | Syncfusion
+description: Learn here about how to create the Neumorphic UI column chart types using Syncfusion .NET MAUI Chart (SfCartesianChart) control.
 platform: maui
 control: SfCartesianChart
 documentation: ug
@@ -9,16 +9,16 @@ documentation: ug
 
 # Neumorphic UI Chart using Syncfusion .NET MAUI Column Chart
 
-Learn to create visually stunning Neumorphic charts in using Syncfusion [.NET MAUI Column Chart](). Follow a step-by-step tutorial utilizing a custom class that inherits from `IDrawable` and `Graphics view` for a seamless blend of design and data representation in your application.
+Learn to create visually stunning Neumorphism UI charts using Syncfusion [.NET MAUI Column Chart](https://help.syncfusion.com/maui/cartesian-charts/column). Follow a step-by-step tutorial utilizing a custom class that inherits from `IDrawable` and `Graphics view` for a seamless blend of design and data representation in your application.
 
 
 ## Step 1: Implementing SfShadowDrawer Class
 
 The `SfShadowDrawer` class is a base class that implements the `IDrawable` interface. It serves as a foundation for creating drawable elements with shadow effects. This class provides properties and methods to control shadow properties, such as offset, blur, color, and opacity.
 
-## Step 2: Implementing Draw Method
+## Step 2: Implements a Method to Draw and ApplyShadow
 
-Implements the `IDrawable` interface method `Draw`. This method is responsible for drawing the shadow by applying the shadow effect and filling the rounded rectangle.
+Implement the `Draw` method for the `IDrawable` interface in the custom SfShadowDrawer class. This method is responsible for drawing the shadow by applying the shadow effect and filling the rounded rectangle. Applies the shadow effect to the canvas based on the provided parameters.
 
 {% tabs %}
 
@@ -38,10 +38,6 @@ Implements the `IDrawable` interface method `Draw`. This method is responsible f
 
 {% endtabs %}
 
-## Step 3: Implement a Method to Apply shadow
-
-Applies the shadow effect to the canvas based on the provided parameters.
-
 {% tabs %}
 
 {% highlight SfShadowDrawer %}
@@ -59,9 +55,9 @@ Applies the shadow effect to the canvas based on the provided parameters.
 
 {% endtabs %}
  
-## Step 4: Implementing SfNeumorphismDrawer Class
+## Step 3: Implementing SfNeumorphismDrawer Class
 
-The `SfNeumorphismDrawer` class is a custom drawable class that extends `SfShadowDrawer` and implements the `IDrawable` interface. It is specifically designed for creating a neumorphic (soft shadow) effect in user interfaces. This class provides properties and methods to control various aspects of the neumorphic shadow, such as color, offset, and opacity.
+The `SfNeumorphismDrawer` class is a custom drawable class that extends `SfShadowDrawer`. It is specifically designed for creating a neumorphic (soft shadow) effect in user interfaces. This class provides properties and methods to control various aspects of the neumorphic shadow, such as color, offset, and opacity.
 
 It overrides the `DrawShadow` method from the base class `SfShadowDrawer` to implement the neumorphic shadow drawing logic. The shadow is drawn based on the pressed state, adjusting the offset and shadow positions accordingly.
 
@@ -102,7 +98,7 @@ It overrides the `DrawShadow` method from the base class `SfShadowDrawer` to imp
 
 {% endtabs %}
 
-## Step 5: Implementing a SfNeumorphismView Class
+## Step 4: Implementing a SfNeumorphismView Class
 
 The `SfNeumorphismView` class extends `ContentView` and provides a container for displaying a neumorphic (soft shadow) effect. It includes a `Grid` and a `GraphicsView` for rendering the neumorphic shadow based on the provided `SfNeumorphismDrawer`. Additionally, it exposes properties and methods to manage the drawable content and handle property changes.
 
@@ -125,20 +121,16 @@ The `SfNeumorphismView` class extends `ContentView` and provides a container for
         grid.Children.Add(graphicsView);
         base.Content = grid;
     }
-    public void Invalidate()
-    {
-        graphicsView.Invalidate();
-    }
 
 {% endhighlight SfNeumorphismView %}
 
 {% endtabs %}
 
-## Step 6: Implementing the SfNeumorphismColumnSeries and SfNeumorphismColumnSegment Classes
+## Step 5: Implementing the SfNeumorphismColumnSeries and SfNeumorphismColumnSegment Classes
 
 The `SfNeumorphismColumnSeries` class is a custom implementation of the `ColumnSeries` in the Syncfusion.Maui.Charts library. It introduces a neumorphic (soft shadow) effect to column series by associating a `SfNeumorphismDrawer` with each column segment.
 
-This class overrides the base method to create a custom `SfNeumorphismColumnSegment` instead of the default `ColumnSegment`. Associates the `Drawable` property with the newly created segment.
+This class overrides the `CreateSegment` method to create a custom `SfNeumorphismColumnSegment` instead of the default `ColumnSegment`. Associates the `Drawable` property with the newly created segment.
 
 {% tabs %}
 
@@ -146,10 +138,10 @@ This class overrides the base method to create a custom `SfNeumorphismColumnSegm
 
     public class SfNeumorphismColumnSeries : ColumnSeries
     {
-    protected override ChartSegment CreateSegment()
-    {
-        return new SfNeumorphismColumnSegment(Drawable);
-    }
+        protected override ChartSegment CreateSegment()
+        {
+            return new SfNeumorphismColumnSegment(Drawable);
+        }
     }
 
 {% endhighlight SfNeumorphismColumnSeries %}
@@ -167,24 +159,24 @@ It Overrides the base method to implement custom drawing logic. Draws the neumor
 
     public class SfNeumorphismColumnSegment : ColumnSegment
     {
-    protected override void Draw(ICanvas canvas)
-    {
-        if (Series is ColumnSeries series && series.ActualYAxis is NumericalAxis yAxis)
+        protected override void Draw(ICanvas canvas)
         {
-            var top = yAxis.ValueToPoint(Convert.ToDouble(yAxis.Maximum ?? double.NaN));
-    
-            var trackRect = new RectF() { Left = Left, Top = top, Right = Right, Bottom = Bottom };
-    
-            Drawable.Draw(canvas, trackRect);
+            if (Series is ColumnSeries series && series.ActualYAxis is NumericalAxis yAxis)
+            {
+                var top = yAxis.ValueToPoint(Convert.ToDouble(yAxis.Maximum ?? double.NaN));
+        
+                var trackRect = new RectF() { Left = Left, Top = top, Right = Right, Bottom = Bottom };
+        
+                Drawable.Draw(canvas, trackRect);
+            }
         }
-    }
     }
 
 {% endhighlight SfNeumorphismColumnSegment %}
 
 {% endtabs %}
 
-## Step 7: Define Different styles for the Neumorphic Drawer
+## Step 6: Define and Applying styles for the Neumorphic Drawer
 
 Defines styles for neumorphic drawers with varying configurations such as outer view, normal, and pressed states. These styles are then referenced throughout the UI for consistent appearance.
 
@@ -209,8 +201,6 @@ Defines styles for neumorphic drawers with varying configurations such as outer 
 {% endhighlight MainPage.xaml}
 
 {% endtabs %}
-
-## Step 8: Applying the styles.
 
 {% tabs %}
 
@@ -243,3 +233,5 @@ Defines styles for neumorphic drawers with varying configurations such as outer 
 Here is the final output of the Syncfusion .NET MAUI Neumorphic Column Chart.
 
 ![Final Output of Syncfusion .NET MAUI Neumorphic Column Chart](Neumorphic_Chart_Image/maui-neumorphic_ui_chart_image.png)
+
+You can find the complete sample from this [link]().
