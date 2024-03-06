@@ -202,7 +202,7 @@ maskedEntry.TextColor =  Colors.Green;
 
 ## Setting Stroke
 
-The [`Stroke`]() property is used to modify the visibility of border. The following code example demonstrates how to change the border visibility in [`SfMaskedEntry`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html).
+The `Stroke` property is used to modify the visibility of border. The following code example demonstrates how to change the border visibility in [`SfMaskedEntry`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html).
 
 {% tabs %}
 {% highlight XAML %}
