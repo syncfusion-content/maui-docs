@@ -1,7 +1,7 @@
 ---
 layout: post
 title: About .NET MAUI Step ProgressBar control | Syncfusion
-description: Learn about the overview of Syncfusion .NET MAUI Step ProgressBar (SfStepProgressBar) control, its basic features and step progressBar functionalities.
+description: Learn about the overview of Syncfusion .NET MAUI Step ProgressBar (SfStepProgressBar) control, its basic features, and step progressBar functionalities.
 platform: maui
 control: SfStepProgressBar
 documentation: ug
@@ -13,13 +13,13 @@ Syncfusion .NET MAUI Step ProgressBar (SfStepProgressBar) control allows you to 
 
 ## Key features
 
-* **Orientation options**: The Step ProgressBar allows you to change the orientation to Horizontal or Vertical direction.
+* **Orientation options**: The Step ProgressBar allows you to change the orientation to horizontal or vertical direction.
 
-* **Progress indication status**: Supports three status of progress indications are Completed, In Progress, and Not Started.
+* **Progress indication status**: Supports three statuses of progress indications: Completed, In Progress, and Not Started.
 
 * **Status representation**: Represent step progress bar status using Primary and Secondary text.
 
-* **Formatted text**: Provided support to add the Primary and Secondary formatted text.
+* **Formatted text**: Provided support to add Primary and Secondary formatted text.
 
 * **Label positioning**: You can change the label position to Start, End, Top, or Bottom.
 
