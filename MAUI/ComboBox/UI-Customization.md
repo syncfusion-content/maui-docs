@@ -889,15 +889,15 @@ comboBox.CursorPosition = 4;
 
 N> The cursor position support is available for editable mode only, and two-way binding is not supported in the Android platform.
 
-## ShowBorder
+## Border visibility
 
-The `ShowBorder` property is used to modify the visibility of border. The following code example demonstrates how to change the border visibility in [`SfComboBox`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html). The default value of the `ShowBorder` property is **true**.
+The [`SfComboBox`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) ShowBorder property is used to modify the visibility of border and its default value is **true**. The following code example demonstrates how to change the border visibility,
 
 {% tabs %}
 {% highlight xaml %}
 
 <editors:SfComboBox x:Name="comboBox"
-                            WidthRequest="250" 
+                            WidthRequest="200" 
                             HeightRequest="35"
                             ShowBorder="False"/>
 {% endhighlight %}
@@ -906,16 +906,20 @@ The `ShowBorder` property is used to modify the visibility of border. The follow
 using Syncfusion.Maui.Inputs;
 
 SfComboBox comboBox = new SfComboBox();
+comboBox.WidthRequest = 200;
+comboBox.HeightRequest = 35;
 comboBox.ShowBorder = false;
 
 {% endhighlight %}
 {% endtabs %}
 
+The following image illustrates the result of the above code:
+
 ![.NET MAUI ComboBox showborder](Images/UICustomization/ShowBorder.png)
 
 ### TextAlignment
 
-The `HorizontalTextAlignment` and `VerticalTextAlignment` properties are used to customize the alignment of text in [`SfComboBox`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html). This property accepts values from the TextAlignment enumeration, which includes options like `Start`, `Center`, and `End`.
+The [`SfComboBox`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) provides support to customize the text alignment by using the `HorizontalTextAlignment` and `VerticalTextAlignment` properties.
 
 {% tabs %}
 {% highlight xaml %}
@@ -923,21 +927,20 @@ The `HorizontalTextAlignment` and `VerticalTextAlignment` properties are used to
 <editors:SfComboBox x:Name="comboBox"
                     WidthRequest="250" 
                     HeightRequest="50"
-                    HorizontalTextAlignment="End" 
+                    HorizontalTextAlignment="Center" 
                     VerticalTextAlignment="Start"/>
-
 {% endhighlight %}
 {% highlight c# %}
 
 SfComboBox comboBox = new SfComboBox();
 comboBox.WidthRequest = 250;
 comboBox.HeightRequest = 50;
-comboBox.HorizontalTextAlignment = TextAlignment.End;
+comboBox.HorizontalTextAlignment = TextAlignment.Center;
 comboBox.VerticalTextAlignment = TextAlignment.Start;
 
 {% endhighlight %}
 {% endtabs %}
 
-### TextAlignment
+The following image illustrates the result of the above code:
 
 ![TextAlignment](Images/UICustomization/TextAlignment.png)
