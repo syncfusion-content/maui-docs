@@ -53,7 +53,7 @@ This section explains how to populate the Polar chart with data, a title, data l
 
 ## Register the handler
 
-The Syncfusion.Maui.Core NuGet package is a dependent package for all Syncfusion controls in .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion Core.
+Syncfusion.Maui.Core NuGet package is a dependent package for all Syncfusion controls in .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion core.
 
 {% highlight C# %}
 
@@ -135,9 +135,9 @@ Next, create a view model class and initialize a list of `PlantData` objects as 
 
 {% endtabs %} 
 
-Set the `ViewModel` instance as the `BindingContext` of your page to bind the `ViewModel` properties to the chart.
+Create a `ViewModel` instance and set it as the chart's `BindingContext`. This enables property binding from `ViewModel` class.
  
-N> Add the namespace of the `ViewModel` class to your XAML page if you prefer to set the `BindingContext` in XAML.
+N> Add the namespace of the `ViewModel` class to your XAML page, if you prefer to set the `BindingContext` in XAML.
 
 {% tabs %} 
 
@@ -198,7 +198,7 @@ N> Add the namespace of the `ViewModel` class to your XAML page if you prefer to
 
 ## Populate Chart with data
 
-To create a polar chart, you can add a [PolarAreaSeries]() to the polar chart [Series]() collection. Then, bind the `Data` to the series [ItemsSource]() property from its `DataContext`.
+To create a polar chart, you can add a [PolarAreaSeries]() to the polar chart [Series]() property of the chart, and  then bind the `PlantData` property of the above `ViewModel` to the `PolarAreaSeries.ItemsSource` as follows.
 
 N> In order to plot the series, the [XBindingPath]() and [YBindingPath]() properties need to be configured correctly. These properties allow the chart to retrieve values from the corresponding properties in the data model.
 
