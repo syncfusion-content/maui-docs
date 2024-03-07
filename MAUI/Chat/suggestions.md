@@ -118,7 +118,7 @@ Suggestions can be shown in a message by creating a `ChatSuggestion` instance an
 {% endhighlight %}
 {% endtabs %}
 
-![.NET MAUI Chat suggestion with text](images/suggestions/maui-chat-suggestion-text.png)
+![Suggestions support in .NET MAUI Chat](images/suggestions/maui-chat-suggestion-text.png)
 
 ### Add an image in suggestion item
 
@@ -178,7 +178,7 @@ In the SfChat control, you can include an image in the suggestion list by assign
 {% endhighlight %}
 {% endtabs %}
 
-![.NET MAUI Chat suggestion with image](images/suggestions/maui-chat-suggestion-image.png)
+![Suggestions with image in .NET MAUI Chat](images/suggestions/maui-chat-suggestion-image.png)
 
 ### Change the orientation of suggestions
 
@@ -207,7 +207,7 @@ You can choose to show the suggestion items in horizontal or vertical orientatio
 {% endhighlight %}
 {% endtabs %}
 
-![.NET MAUI Chat suggestion orientation](images/suggestions/maui-chat-suggestion-verticalorientation.png)
+![Suggestions orientation support in .NET MAUI Chat](images/suggestions/maui-chat-suggestion-verticalorientation.png)
 
 ## Showing suggestions at bottom of chat control
 
@@ -310,7 +310,7 @@ The SfChat allows to show a list of options as suggestions at the bottom of chat
 {% endhighlight %}
 {% endtabs %}
 
-![.NET MAUI Chat suggestion at bottom of control](images/suggestions/maui-chat-suggestion-at-bottom.png)
+![Suggestion at bottom of control in .NET MAUI Chat](images/suggestions/maui-chat-suggestion-at-bottom.png)
 
 ## Cancel the suggestions from closing
 
