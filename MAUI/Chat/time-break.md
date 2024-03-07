@@ -11,7 +11,7 @@ documentation: ug
 The SfChat provides a simple way to organize messages by their date and time of creation, allowing users to easily identify messages in the order they were created. To display the time break view in SfChat, set the `ShowTimeBreak` property to `true`.
 
 {% tabs %}
-{% highlight xaml hl_lines="2"%}
+{% highlight xaml hl_lines="2" %}
   <sfChat:SfChat x:Name="sfChat"
                  ShowTimeBreak="True"
                  Messages="{Binding Messages}"
@@ -20,7 +20,8 @@ The SfChat provides a simple way to organize messages by their date and time of 
 {% endhighlight %}
 
 {% highlight c# hl_lines="1"%}
- this.sfChat.ShowTimeBreak = true;;
+ this.sfChat.ShowTimeBreak = true;
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -39,7 +40,6 @@ To stick the time break view, enable the `StickyTimeBreak` property. When `Stick
 {% endhighlight %}
 
 {% highlight c# hl_lines="2" %}
-
  this.sfChat.ShowTimeBreak = true;
  this.sfChat.StickyTimeBreak = true;
    
@@ -97,15 +97,15 @@ The `SfChat` allows to load custom template for time break view using the `TimeB
               this.sfChat.ShowTimeBreak="True";
               this.sfChat.TimeBreakTemplate = new TimeBreakTemplateSelector();
               this.Content = sfChat;
-          }
-       }
-    }
+           }
+        }
+     }
 
 {% endhighlight %}
 {% endtabs %}
 
 {% tabs %}
-{% highlight c# tabtitle="TimeBreakTemplateSelector.cs" %}
+{% highlight c# tabtitle="TemplateSelector.cs" %}
 
     internal class TimeBreakTemplateSelector : DataTemplateSelector
     {
