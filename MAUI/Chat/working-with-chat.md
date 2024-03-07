@@ -16,13 +16,13 @@ The `SfChat` control includes a built-in event called `SfChat.MessageTapped` and
 ### MessageTapped Event
 
 {% tabs %}
-{% highlight tabtitle="MainPage.xaml" hl_lines="3" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3" %}
 
     <sfChat:SfChat x:Name="sfChat"
             MessageTapped="sfChat_MessageTapped" />
 
 {% endhighlight %}
-{% highlight tabtitle="MainPage.xaml.cs" hl_lines="2" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="2" %}
       
     sfChat.MessageTapped += SfChat_MessageTapped;
 
@@ -37,7 +37,7 @@ The `SfChat` control includes a built-in event called `SfChat.MessageTapped` and
 ### MessageTapped Command
 
 {% tabs %}
-{% highlight tabtitle="MainPage.xaml" hl_lines="3" %}   
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3" %}   
 
     <sfChat:SfChat x:Name="sfChat"  
             MessageTappedCommand="{Binding TappedCommand}" />
@@ -78,13 +78,13 @@ The `SfChat` control includes built-in features like the `SfChat.MessageDoubleTa
 ### MessageDoubleTapped Event
 
 {% tabs %}
-{% highlight tabtitle="MainPage.xaml" hl_lines="3" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3" %}
     
     <sfChat:SfChat x:Name="sfChat"
             MessageDoubleTapped="sfChat_MessageDoubleTapped" />
         
 {% endhighlight %}
-{% highlight tabtitle="MainPage.xaml.cs" hl_lines="2" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="2" %}
 
     sfChat.MessageDoubleTapped += SfChat_MessageDoubleTapped;            
 
@@ -98,13 +98,13 @@ The `SfChat` control includes built-in features like the `SfChat.MessageDoubleTa
 ### MessageDoubleTapped Command
 
 {% tabs %}
-{% highlight tabtitle="MainPage.xaml" hl_lines="3" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3" %}
     
     <sfChat:SfChat x:Name="sfChat"  
             MessageDoubleTappedCommand="{Binding DoubleTappedCommand}" />
 
 {% endhighlight %}
-{% highlight tabtitle="ViewModel.cs" hl_lines="19" %}
+{% highlight c# tabtitle="ViewModel.cs" hl_lines="19" %}
 
     public class ViewModel : INotifyPropertyChanged
     {
@@ -139,13 +139,13 @@ The `SfChat` control has built-in features like the `SfChat.MessageLongPressed` 
 ### MessageLongPressed Event
 
 {% tabs %}
-{% highlight tabtitle="MainPage.xaml" hl_lines="3" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3" %}
 
     <sfChat:SfChat x:Name="sfChat"
             MessageLongPressed="sfChat_MessageLongPressed" />
 
 {% endhighlight %}
-{% highlight tabtitle="MainPage.xaml.cs" hl_lines="2" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="2" %}
     
     sfChat.MessageLongPressed += sfChat_MessageLongPressed;
 
@@ -159,13 +159,13 @@ The `SfChat` control has built-in features like the `SfChat.MessageLongPressed` 
 ### MessageLongPressed Command
 
 {% tabs %}
-{% highlight tabtitle="MainPage.xaml" hl_lines="3" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3" %}
     
     <sfChat:SfChat x:Name="sfChat"  
             MessageLongPressedCommand ="{Binding LongPressedCommand }" />
 
 {% endhighlight %}
-{% highlight tabtitle="ViewModel.cs" hl_lines="19" %}
+{% highlight c# tabtitle="ViewModel.cs" hl_lines="19" %}
 
     public class ViewModel : INotifyPropertyChanged
     {
