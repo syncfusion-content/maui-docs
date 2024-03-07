@@ -10,8 +10,7 @@ documentation: ug
 # Histogram Chart in .NET MAUI Chart
 The Histogram chart offers a visual representation of a large number of data points distributed across a continuous range, presented in column format.
 
-Customize histogram intervals using the [HistogramInterval]() property and normal distribution curve can be collapsed using[ShowNormalDistributionCurve]() property. 
-
+Customize histogram intervals using the [HistogramInterval]() property and normal distribution curve can be collapsed using [ShowNormalDistributionCurve]() property. 
 
 {% tabs %}
 
@@ -26,8 +25,7 @@ Customize histogram intervals using the [HistogramInterval]() property and norma
             <chart:NumericalAxis />
         </chart:SfCartesianChart.YAxes>
 
-        <chart:HistogramSeries ItemsSource="{Binding      
-                                             HistogramData}"
+        <chart:HistogramSeries ItemsSource="{Binding HistogramData}"
                                XBindingPath="Value" 
                                YBindingPath="Size"
                                HistogramInterval="20" 
@@ -77,11 +75,11 @@ Customize the normal distribution curve by using the [CurveLineStyle]() property
     <chart:SfCartesianChart>
         ....
 
-      <chart:HistogramSeries ItemsSource="{Binding 
-                                            HistogramData}" 
-                               XBindingPath="Value" 
-                               YBindingPath="Size"
-                               HistogramInterval="20">
+      <chart:HistogramSeries ItemsSource="{Binding HistogramData}" 
+                             XBindingPath="Value" 
+                             YBindingPath="Size"
+                             HistogramInterval="20"
+                             ShowNormalDistributionCurve="True">
          <chart:HistogramSeries.CurveStyle>
              <chart:ChartLineStyle Stroke="Blue"
                                    StrokeWidth="2"

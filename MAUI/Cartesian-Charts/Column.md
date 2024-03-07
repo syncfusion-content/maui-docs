@@ -116,8 +116,7 @@ this.Content = chart;
 
 ## Overlapped Placement
 
-By default, all the column series which have the same x and y axes are placed side by side in a chart. If you want to place the series one over the other (overlapped), set the [EnableSideBySideSeriesPlacement]( https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_EnableSideBySideSeriesPlacement) property of SfCartesianChart to false and configure the Width property to differentiate the series. The following code sample and screenshot illustrate the overlapped placement of column series.
-
+By default, all the column series which have the same x and y axes are placed side by side in a chart. To place the series one over the other (overlapped), set the [EnableSideBySideSeriesPlacement]( https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_EnableSideBySideSeriesPlacement) property of SfCartesianChart to false and configure the Width property to differentiate the series. The following code sample and screenshot illustrate the overlapped placement of column series.
 
 {% tabs %}
 
