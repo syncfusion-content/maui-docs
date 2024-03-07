@@ -14,7 +14,7 @@ The `SfChat` control allows to bind any existing collection of data objects as m
 Create the below collection of objects that must be converted to message collection and displayed as messages in SfChat.
 
 {% tabs %}
-{% highlight tabtitle="MessageModel.cs" %}
+{% highlight c# tabtitle="MessageModel.cs" %}
 
     public class MessageModel
     {
@@ -28,7 +28,7 @@ Create the below collection of objects that must be converted to message collect
 
     }
 {% endhighlight %}
-{% highlight tabtitle="ViewModel.cs" %}
+{% highlight c# tabtitle="ViewModel.cs" %}
 
     public class ViewModel : INotifyPropertyChanged
     {
@@ -108,7 +108,7 @@ Create the below collection of objects that must be converted to message collect
 Now, bind the existing collection of data objects to the 'SfChat.ItemsSource' property, in our case it is 'viewModel.MessageCollection'. 
 
 {% tabs %}
-{% highlight tabtitle="MainPage.xaml" hl_lines="22 23" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="22 23" %}
     
     <?xml version="1.0" encoding="utf-8" ?>
     <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
@@ -136,7 +136,7 @@ Now, bind the existing collection of data objects to the 'SfChat.ItemsSource' pr
     </ContentPage>
 
 {% endhighlight %}
-{% highlight tabtitle="MainPage.xaml.cs" hl_lines=" 19 20" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines=" 19 20" %}
     
     using MauiChat.ViewModel;
     using Syncfusion.Maui.Chat;
@@ -169,7 +169,7 @@ Next, create a class derived from `IChatMessageConverter` interface and set it t
 Implementation of a custom message converter class with conversion logic to convert from data to message and vice versa.
 
 {% tabs %}
-{% highlight tabtitle="MessageConverter.cs" %}
+{% highlight c# tabtitle="MessageConverter.cs" %}
 
     public class MessageConverter : IChatMessageConverter
     {
@@ -204,5 +204,3 @@ Implementation of a custom message converter class with conversion logic to conv
     }
 {% endhighlight %}
 {% endtabs %}
-
-View Sample in GitHub [here](https://github.com/SyncfusionExamples/convert-data-objects-to-messages-in-mvvm-in-.net-maui.chat)
