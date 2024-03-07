@@ -52,7 +52,6 @@ The `SfChat` allows to load custom template for time break view using the `TimeB
 
 {% tabs %}
 {% highlight xaml hl_lines="9 21" %}
-
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
@@ -80,7 +79,6 @@ The `SfChat` allows to load custom template for time break view using the `TimeB
 {% endhighlight %}
 
 {% highlight c# hl_lines="15" %}
-
     namespace GettingStarted
     {
       public partial class MainPage : ContentPage
