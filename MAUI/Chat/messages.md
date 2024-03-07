@@ -135,7 +135,7 @@ The `SfChat.CurrentUser` helps differentiate between the sender and receiver of 
 {% endhighlight %}
 {% endtabs %}
 
-![.NET MAUI Chat current user](images/messages/maui-chat-current-user.png)
+![.NET MAUI Chat with current user name](images/messages/maui-chat-current-user.png)
 
 ## Text message
 
@@ -222,7 +222,7 @@ The `SfChat.CurrentUser` helps differentiate between the sender and receiver of 
 {% endhighlight %}
 {% endtabs %}
 
-![.NET MAUI Chat text message](images/messages/maui-chat-text-message.png)
+![Text message type in .NET MAUI Chat](images/messages/maui-chat-text-message.png)
 
 ## Date picker message
 
@@ -308,7 +308,7 @@ The `SfChat.CurrentUser` helps differentiate between the sender and receiver of 
 {% endhighlight %}
 {% endtabs %}
 
-![.NET MAUI Chat date picker message](images/messages/maui-chat-date-picker-message.png)
+![Date picker message type in .NET MAUI Chat](images/messages/maui-chat-date-picker-message.png)
 
 ## Time picker message
 
@@ -396,7 +396,7 @@ The `SfChat.CurrentUser` helps differentiate between the sender and receiver of 
 {% endhighlight %}
 {% endtabs %}
 
-![.NET MAUI Chat time picker message](images/messages/maui-chat-timepicker-message.png)
+![Time picker message type in .NET MAUI Chat](images/messages/maui-chat-timepicker-message.png)
 
 ## Calendar message
 
@@ -483,7 +483,7 @@ The `SfChat.CurrentUser` helps differentiate between the sender and receiver of 
 {% endhighlight %}
 {% endtabs %}
 
-![.NET MAUI Chat calendar message](images/messages/maui-chat-calender-message.png)
+![Calendar message type in .NET MAUI Chat](images/messages/maui-chat-calender-message.png)
 
 ## Hyperlink message
 
@@ -570,13 +570,13 @@ The `SfChat.CurrentUser` helps differentiate between the sender and receiver of 
 {% endhighlight %}
 {% endtabs %}
 
-![.NET MAUI Chat hyper link message](images/messages/maui-chat-hyperlink-message.png)
+![Hyperlink message type in .NET MAUI Chat](images/messages/maui-chat-hyperlink-message.png)
 
 ### Adding hyperlink message as an outgoing message
 
 `HyperlinkMessage` is used to share URLs as a message. Along with the link, the thumbnail, title, and description of the URL are automatically fetched and displayed. The following code example illustrates how to add a hyperlink message.
 
-![Send hyper link message](images/messages/maui-chat-outgoing-hyperlink-message.png)
+![Send hyperlink message type in .NET MAUI Chat](images/messages/maui-chat-outgoing-hyperlink-message.png)
 
 ## Image message
 
@@ -663,7 +663,7 @@ The `SfChat.CurrentUser` helps differentiate between the sender and receiver of 
 {% endhighlight %}
 {% endtabs %}
 
-![.NET MAUI Chat image message](images/messages/maui-chat-image-message.png)
+![Image message type in .NET MAUI Chat](images/messages/maui-chat-image-message.png)
 
 ### Event and command
 
@@ -763,7 +763,7 @@ The `ImageMessage` comes with in-built SfChat.ImageTapped event and `SfChat.Imag
 
 Unlike the other messages, the `ImageMessage` can also be shown as an outgoing message. To add an ImageMessage as an outgoing message, just set the `ImageMessage.Author` as `SfChat.CurrentUser`. You can also add an image message when clicking the attachment button, as shown here.
 
-![Send image message](images/messages/maui-chat-outgoing-image-message.png)
+![Send Image message type in .NET MAUI Chat](images/messages/maui-chat-outgoing-image-message.png)
 
 ## Card Message
 
@@ -889,10 +889,10 @@ If you don’t want to display images, buttons, or text(title, subtitle, descrip
 {% endtabs %}
 
 **Card message with button**
-![.NET MAUI Chat card message](images/messages/maui-chat-card-message.png)
+![Card message type in .NET MAUI Chat](images/messages/maui-chat-card-message.png)
 
 **Card message without button**
-![.NET MAUI Chat card message](images/messages/maui-chat-card-message-without-button.png)
+![Card message type without button in .NET MAUI Chat](images/messages/maui-chat-card-message-without-button.png)
 
 ### Event and Command
 
@@ -1063,7 +1063,7 @@ We have loaded a custom template if the message's text contains a particular tex
 {% endhighlight %}
 {% endtabs %}
 
-![.NET MAUI Chat message template](images/messages/maui-chat-message-template.png)
+![Message Template in .NET MAUI Chat](images/messages/maui-chat-message-template.png)
 
 
 ## Spacing between messages
@@ -1118,7 +1118,7 @@ We have loaded a custom template if the message's text contains a particular tex
 {% endhighlight %}
 {% endtabs %}
 
-![.NET MAUI Chat message spacing](images/messages/maui-chat-message-spacing.png)
+![Message spacing in .NET MAUI Chat](images/messages/maui-chat-message-spacing.png)
 
 ## Sending message
 
@@ -1373,7 +1373,7 @@ To customize `MessageShape` in the SfChat, refer to the below code example:
 {% endhighlight %}
 {% endtabs %}
 
-![.NET MAUI Chat message shape](images/messages/maui-chat-message-shape.png)
+![Message shape in .NET MAUI Chat](images/messages/maui-chat-message-shape.png)
 
 ## Hide the message input view
 
@@ -1458,7 +1458,7 @@ By default, the author’s name and avatar are displayed for the incoming messag
 {% endhighlight %}
 {% endtabs %}
 
-![.NET MAUI Chat hiding avatar and author visibility](images/messages/maui-chat-hide-avatar.png)
+![Hiding avatar and author visibility in .NET MAUI Chat](images/messages/maui-chat-hide-avatar.png)
 
 ## Messages without author (System Generated Messages / Admin messages) in maui chat
 
@@ -1523,5 +1523,5 @@ In the provided code example, we've set up a custom template to display a securi
 {% endhighlight %}
 {% endtabs %}
 
-![.NET MAUI Chat message template](images/messages/maui-chat-system-generated-custom-message-template.png)
+![Message Template in .NET MAUI Chat without author](images/messages/maui-chat-system-generated-custom-message-template.png)
 
