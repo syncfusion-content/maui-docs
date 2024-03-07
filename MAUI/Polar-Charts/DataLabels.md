@@ -198,7 +198,7 @@ The [SfPolarChart]() provides support to customize the appearance of the datalab
     <chart:SfPolarChart>
         
         <chart:SfPolarChart.Resources>
-            <DataTemplate x:Key="LabelTemplate1">
+            <DataTemplate x:Key="labelTemplate">
                 <StackLayout>
                     <Frame CornerRadius="50" BorderColor="Black" BackgroundColor="White"
                            WidthRequest="40" HeightRequest="40" Padding="10">
@@ -209,7 +209,7 @@ The [SfPolarChart]() provides support to customize the appearance of the datalab
         </chart:SfPolarChart.Resources>
         . . .
         <chart:PolarAreaSeries ItemsSource="{Binding PlantDetails}" 
-                               LabelTemplate="{StaticResource LabelTemplate1}"
+                               LabelTemplate="{StaticResource labelTemplate}"
                                ShowDataLabels="True"
                                XBindingPath="Direction"                               
                                YBindingPath="Tree" />
@@ -227,9 +227,10 @@ The [SfPolarChart]() provides support to customize the appearance of the datalab
     series.XBindingPath="Direction"                               
     series.YBindingPath="Tree"
 
-    DataTemplate LabelTemplate1 = new DataTemplate(() =>
+    DataTemplate labelTemplate = new DataTemplate(() =>
     {
         StackLayout stackLayout = new StackLayout();
+        
         var frame = new Frame
         {
             CornerRadius = 50,
@@ -249,10 +250,11 @@ The [SfPolarChart]() provides support to customize the appearance of the datalab
 
         frame.Content = label;
         stackLayout.Children.Add(frame);
+        
         return stackLayout;
     });
 
-    series.LabelTemplate1 = LabelTemplate1;
+    series.LabelTemplate = labelTemplate;
     chart.Series.Add(series);
     this.Content = chart;
         
