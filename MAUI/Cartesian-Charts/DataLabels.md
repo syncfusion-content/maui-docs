@@ -155,8 +155,6 @@ The content of the label can be customized using the [LabelContext]() property. 
 
 * [YValue]() - This will show the corresponding Y value.
 
-The most commonly used series type with [LabelContext]() are BarSeries and [ColumnSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ColumnSeries.html).
-
 {% tabs %}
 
 {% highlight xaml %}
@@ -206,7 +204,7 @@ The [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chart
 
     <chart:SfCartesianChart IsTransposed="True" >
         <chart:SfCartesianChart.Resources>
-            <DataTemplate x:Key="LabelTemplate1">
+            <DataTemplate x:Key="labelTemplate">
                 <HorizontalStackLayout Spacing="5">
                     <Label Text="{Binding Item.Values}" VerticalOptions="Center" FontSize = "15"/>
                     <Image Source="arrow.png" WidthRequest="15" HeightRequest="15"/>
@@ -215,7 +213,7 @@ The [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chart
         </chart:SfCartesianChart.Resources>
         . . .
         <chart:ColumnSeries ItemsSource="{Binding Data}" 
-                            LabelTemplate="{StaticResource LabelTemplate1}"
+                            LabelTemplate="{StaticResource labelTemplate}"
                             XBindingPath="Name"
                             YBindingPath="Values" 
                             ShowDataLabels="True"/>
@@ -235,7 +233,7 @@ The [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chart
     series.XBindingPath = "Name";
     series.YBindingPath = "Values";
 
-    DataTemplate LabelTemplate1 = new DataTemplate(() =>
+    DataTemplate labelTemplate = new DataTemplate(() =>
     {
         HorizontalStackLayout horizontalStackLayout = new HorizontalStackLayout { Spacing = 5 };
         var label = new Label
@@ -255,7 +253,7 @@ The [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chart
         return horizontalStackLayout;
     });
 
-    series.LabelTemplate = LabelTemplate1;
+    series.LabelTemplate = labelTemplate;
     chart.Series.Add(series);
     this.Content = chart;
         

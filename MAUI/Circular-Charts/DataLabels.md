@@ -152,7 +152,7 @@ The [SfCircularChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts
     <chart:SfCircularChart>
 
     <chart:SfCircularChart.Resources>
-        <DataTemplate x:Key="LabelTemplate1">
+        <DataTemplate x:Key="labelTemplate">
             <HorizontalStackLayout Spacing="5">
                 <Label Text="{Binding Item.Product}"
                 TextColor="White" 
@@ -178,7 +178,7 @@ The [SfCircularChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts
 
     <chart:PieSeries ItemsSource="{Binding Data}" 
                      ShowDataLabels="True"
-                     LabelTemplate="{StaticResource LabelTemplate1}"
+                     LabelTemplate="{StaticResource labelTemplate}"
                      XBindingPath="Product" 
                      YBindingPath="SalesRate">
     </chart:PieSeries>
@@ -197,7 +197,7 @@ The [SfCircularChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts
     series.YBindingPath = "SalesRate";
     series.ShowDataLabels = true;
 
-    DataTemplate LabelTemplate1 = new DataTemplate(() =>
+    DataTemplate labelTemplate = new DataTemplate(() =>
     {
         var horizontalStackLayout = new HorizontalStackLayout { Spacing = 5 };
         var productLabel = new Label
@@ -233,7 +233,7 @@ The [SfCircularChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts
         return horizontalStackLayout;
     });
 
-    series.LabelTemplate1 = LabelTemplate1;
+    series.LabelTemplate = labelTemplate;
     chart.Series.Add(series);
     this.Content = chart;
         

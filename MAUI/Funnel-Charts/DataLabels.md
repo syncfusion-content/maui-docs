@@ -103,7 +103,7 @@ The [SfFunnelChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.S
 
     <Grid x:Name="grid">
         <Grid.Resources>
-            <DataTemplate x:Key="LabelTemplate1">
+            <DataTemplate x:Key="labelTemplate">
                     <HorizontalStackLayout Spacing="5">
                         <Label Text="{Binding Item.Value}" VerticalOptions="Center" FontSize = "15"/>
                         <Image Source="arrow.png" WidthRequest="15" HeightRequest="15"/>
@@ -112,7 +112,7 @@ The [SfFunnelChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.S
         </Grid.Resources>
 
         <chart:SfFunnelChart ItemsSource="{Binding Data}" 
-                             LabelTemplate="{StaticResource LabelTemplate1}"
+                             LabelTemplate="{StaticResource labelTemplate}"
                              XBindingPath="Name" 
                              YBindingPath="Value"
                              ShowDataLabels="True"/>
@@ -129,7 +129,7 @@ The [SfFunnelChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.S
     chart.XBindingPath = "Name";
     chart.YBindingPath = "Value";
     chart.ShowDataLabels = true;
-    DataTemplate LabelTemplate1 = new DataTemplate(() =>
+    DataTemplate labelTemplate = new DataTemplate(() =>
     {
         HorizontalStackLayout horizontalStackLayout = new HorizontalStackLayout { Spacing = 5 };
         var label = new Label
@@ -149,7 +149,7 @@ The [SfFunnelChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.S
         return horizontalStackLayout;
     });
 
-    chart.LabelTemplate = LabelTemplate1;
+    chart.LabelTemplate = labelTemplate;
     this.Content = chart;
 
 {% endhighlight %}
