@@ -75,15 +75,15 @@ The `Syncfusion.Maui.Core` NuGet is a dependent package for all the Syncfusion c
          }
        }
     }
-    
+
 {% endhighlight %} 
 {% endtabs %}
 
 ## Creating ViewModel for the Chat
 
-The `SfChat` control is data-bound and displays a collection of messages exchanged between users. Hence, messages should be created and binded to the control.
+The `SfChat` control is data-bound and displays a collection of messages exchanged between users. Hence, messages should be created and bound to the control.
 
-Create a simple message collection as shown in the following code example in a new class file. Save it as `GettingStartedViewModel.cs` file.
+Create a simple message collection as shown in the following code example in a new class file. Save it as `ViewModel.cs` file.
 
 {% tabs %}
 {% highlight c# tabtitle="ViewModel.cs" %}
