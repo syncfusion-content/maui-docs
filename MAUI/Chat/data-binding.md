@@ -14,7 +14,7 @@ The `SfChat` control allows to bind any existing collection of data objects as m
 Create the below collection of objects that must be converted to message collection and displayed as messages in SfChat.
 
 {% tabs %}
-{% highlight c# tabtitle="MessageModel.cs" %}
+{% highlight c# tabtitle="Model.cs" %}
 
     public class MessageModel
     {
@@ -28,6 +28,9 @@ Create the below collection of objects that must be converted to message collect
 
     }
 {% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
 {% highlight c# tabtitle="ViewModel.cs" %}
 
     public class ViewModel : INotifyPropertyChanged
@@ -105,10 +108,10 @@ Create the below collection of objects that must be converted to message collect
 {% endhighlight %}
 {% endtabs %}
 
-Now, bind the existing collection of data objects to the 'SfChat.ItemsSource' property, in our case it is 'viewModel.MessageCollection'. 
+Now, bind the existing collection of data objects to the `SfChat.ItemsSource` property, in our case it is `viewModel.MessageCollection`. 
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="22 23" %}
+{% highlight xaml hl_lines="22 23" %}
     
     <?xml version="1.0" encoding="utf-8" ?>
     <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
@@ -136,7 +139,7 @@ Now, bind the existing collection of data objects to the 'SfChat.ItemsSource' pr
     </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines=" 19 20" %}
+{% highlight c# hl_lines="19 20" %}
     
     using MauiChat.ViewModel;
     using Syncfusion.Maui.Chat;
@@ -169,7 +172,7 @@ Next, create a class derived from `IChatMessageConverter` interface and set it t
 Implementation of a custom message converter class with conversion logic to convert from data to message and vice versa.
 
 {% tabs %}
-{% highlight c# tabtitle="MessageConverter.cs" %}
+{% highlight c# tabtitle="Converter.cs" %}
 
     public class MessageConverter : IChatMessageConverter
     {
