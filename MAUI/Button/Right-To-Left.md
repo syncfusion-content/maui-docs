@@ -35,4 +35,4 @@ SfButton button = new SfButton()
 
 The following image illustrates the result of the above code:
 
-![.NET MAUI RTL support](images/customization-images/Button_RTL.png)
+![.NET MAUI RTL support](images/right-to-left/RTL.png)
