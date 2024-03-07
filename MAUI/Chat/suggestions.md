@@ -64,8 +64,7 @@ Suggestions can be shown in a message by creating a `ChatSuggestion` instance an
 {% endtabs %}
 
 {% tabs %}
-{% highlight c# tabtitle="SuggestionsViewModel.cs" hl_lines="46" %}
-
+{% highlight c# tabtitle="ViewModel.cs" hl_lines="46" %}
  public class SuggestionsViewModel : INotifyPropertyChanged
  {
       
@@ -95,7 +94,7 @@ Suggestions can be shown in a message by creating a `ChatSuggestion` instance an
         suggestions.Add(new Suggestion() { Text = "Airways 6" });
         chatSuggestions.Items = suggestions;
         this.GenerateMessages();
-    }
+     }
 
     ...
 
@@ -113,8 +112,8 @@ Suggestions can be shown in a message by creating a `ChatSuggestion` instance an
             Text = "Here's my suggestion",
             Suggestions = chatSuggestions,
         });   
-    }
-}
+     }
+ }
 
 {% endhighlight %}
 {% endtabs %}
@@ -126,8 +125,7 @@ Suggestions can be shown in a message by creating a `ChatSuggestion` instance an
 In the SfChat control, you can include an image in the suggestion list by assigning an image source to the `Suggestion.Image` property
 
 {% tabs %}
-{% highlight c# tabtitle="SuggestionsViewModel.cs" hl_lines="21 22 23 24 25 26" %}
-
+{% highlight c# tabtitle="ViewModel.cs" hl_lines="21 22 23 24 25 26" %}
     public class SuggestionsViewViewModel :INotifyPropertyChanged
     {
 
@@ -187,8 +185,7 @@ In the SfChat control, you can include an image in the suggestion list by assign
 You can choose to show the suggestion items in horizontal or vertical orientation using the `ChatSuggestions.Orientation` property.
 
 {% tabs %}
-{% highlight c# tabtitle="SuggestionsViewModel.cs" hl_lines="15" %}
- 
+{% highlight c# tabtitle="ViewModel.cs" hl_lines="15" %}
      public SuggestionsViewModel()
      {
 
@@ -210,7 +207,6 @@ You can choose to show the suggestion items in horizontal or vertical orientatio
 {% endhighlight %}
 {% endtabs %}
 
-
 ![.NET MAUI Chat suggestion orientation](images/suggestions/maui-chat-suggestion-verticalorientation.png)
 
 ## Showing suggestions at bottom of chat control
@@ -218,8 +214,7 @@ You can choose to show the suggestion items in horizontal or vertical orientatio
 The SfChat allows to show a list of options as suggestions at the bottom of chat control by creating a `ChatSuggestion` instance and setting it to the `SfChat.Suggestions` property.
 
 {% tabs %}
-{% highlight xaml hl_lines="11" %}
-     
+{% highlight xaml hl_lines="11" %}   
  ?xml version="1.0" encoding="utf-8" ?>
  <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
               xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
@@ -237,7 +232,6 @@ The SfChat allows to show a list of options as suggestions at the bottom of chat
 {% endhighlight %}
 
 {% highlight c# hl_lines="14" %}
-
    namespace GettingStarted
    {
        public partial class MainPage : ContentPage
@@ -261,7 +255,7 @@ The SfChat allows to show a list of options as suggestions at the bottom of chat
 {% endtabs %}
 
 {% tabs %}
-{% highlight c# tabtitle="SuggestionsViewModel.cs" %}
+{% highlight c# tabtitle="ViewModel.cs" %}
 
     public class SuggestionsViewModel : INotifyPropertyChanged
     {
@@ -325,8 +319,7 @@ By default, the suggestions list in the `SfChat` closes automatically after the 
 **SuggestionItemSelected event**
 
 {% tabs %}
-{% highlight c# hl_lines="11"%}
- 
+{% highlight c# hl_lines="1 11" %}
     this.sfChat.SuggestionItemSelected += this.SfChat_SuggestionItemSelected;
 
     /// <summary>
@@ -346,8 +339,7 @@ By default, the suggestions list in the `SfChat` closes automatically after the 
 **SuggestionItemSelectedCommand command**
 
 {% tabs %}
-{% highlight xaml hl_lines="12"%}
-
+{% highlight xaml hl_lines="11" %}
  <?xml version="1.0" encoding="utf-8" ?>
  <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
               xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
@@ -366,11 +358,7 @@ By default, the suggestions list in the `SfChat` closes automatically after the 
 {% endtabs %}
 
 {% tabs %}
-{% highlight c# tabtitle="SuggestionsViewModel.cs" hl_lines="32" %}
-
-    /// <summary>
-    /// View model class for chat view.
-    /// </summary>
+{% highlight c# tabtitle="ViewModel.cs" hl_lines="29" %}
     public class SuggestionsViewMOdel : INotifyPropertyChanged
     {
         private ICommand suggestionItemSelectedCommand;
