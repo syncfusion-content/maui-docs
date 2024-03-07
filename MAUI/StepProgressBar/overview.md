@@ -9,7 +9,7 @@ documentation: ug
 
 # Overview of .NET MAUI Step ProgressBar (SfStepProgressBar)
 
-Syncfusion .NET MAUI Step ProgressBar (SfStepProgressBar) control allows you to visualize progress through a series of steps. This control helps you show the progress as you move through different steps in a process or workflow. You can customize its appearance by changing the step shape, step content, progress bar color, and more.
+Syncfusion .NET MAUI Step ProgressBar (SfStepProgressBar) control allows you to displays progress through multiple steps in a process, such as order tracking or a user registration form. It's customizable, with options for step shape, content, progress bar color, and more.
 
 ## Key features
 
@@ -17,9 +17,9 @@ Syncfusion .NET MAUI Step ProgressBar (SfStepProgressBar) control allows you to 
 
 * **Progress indication status**: Supports three statuses of progress indications: Completed, In Progress, and Not Started.
 
-* **Status representation**: Represent step progress bar status using Primary and Secondary text.
+* **Status representation**: To display information about a step's status using Primary and Secondary text.
 
-* **Formatted text**: Provided support to add Primary and Secondary formatted text.
+* **Formatted text**: Primary and Secondary formatted text used to Customize the description.
 
 * **Label positioning**: You can change the label position to Start, End, Top, or Bottom.
 
@@ -29,6 +29,6 @@ Syncfusion .NET MAUI Step ProgressBar (SfStepProgressBar) control allows you to 
 
 * **Shape customization**: Customize the step progress bar shape type to Circle or Square.
 
-* **Image support**: You can represent the step progress bar status with images inside the marker.
+* **Image support**: You can represent the step progress bar status with images inside the step.
 
-* **Customization**: Customize step styles, backgrounds, labels, and animations for the series of steps.
+* **Customization**: Supports customization of the step progress bar background color, step size, content size, animations, and more.
