@@ -25,7 +25,7 @@ The SfChat provides a simple way to organize messages by their date and time of 
 {% endhighlight %}
 {% endtabs %}
 
-![.NET MAUI Chat time break](images/time-break/maui-chat-time-break.png)
+![Time break support in .NET MAUI Chat](images/time-break/maui-chat-time-break.png)
 
 ## Stick time break view
 
@@ -195,5 +195,5 @@ The `SfChat` allows to load custom template for time break view using the `TimeB
 {% endhighlight %}
 {% endtabs %}
 
-![.NET MAUI Chat time break template](images/time-break/maui-chat-time-break-template.png)
+![Time break template in .NET MAUI Chat](images/time-break/maui-chat-time-break-template.png)
       
