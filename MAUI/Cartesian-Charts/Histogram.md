@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 # Histogram Chart in .NET MAUI Chart
-Histogram chart is a graphical representation that organizes a group of data points into user-specified ranges. It is similar in appearance to a column chart.
+[Histogram chart]() is a graphical representation that organizes a group of data points into user-specified ranges. It is similar in appearance to a column chart.
 
 Customize histogram intervals using the [HistogramInterval]() property and normal distribution curve can be collapsed using [ShowNormalDistributionCurve]() property. 
 
