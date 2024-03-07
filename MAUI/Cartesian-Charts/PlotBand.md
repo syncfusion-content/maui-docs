@@ -10,66 +10,17 @@ documentation: ug
 # Plot band in .NET MAUI Chart
 A plot band, also known as a stripline, allows for shading specific regions or ranges in the plot area background at regular or custom intervals. It also provides options to customize the size of these bands. Text can be added to plot band and indicate the significance of each particular region.
 
-## Plot band in category axis
+Plot bands are classified into NumericalPlotBand and DateTimePlotBand. Based on the axis, plot bands are drawn using these classifications. The following properties are used to configure the plot band:
 
-Plot bands can be added to the category axis by specifying index values for the [Start]() parameter, which determines the beginning of the plot band, along with the specified [Size]().
+Start 
+Size 
+SizeType
+End
+RepeatUntil
+RepeatEveryType
 
-{% tabs %}
-
-{% highlight xaml %}
-
-    <chart:SfCartesianChart>
-        . . .
-        <chart:SfCartesianChart.XAxes>
-            <chart:CategoryAxis >
-                <chart:CategoryAxis.PlotBands>
-                    <chart:NumericalPlotBandCollection>
-                        <chart:NumericalPlotBand Start="2" 
-                                                 Size="2" 
-                                                 Fill="Gray"/>
-                    </chart:NumericalPlotBandCollection>
-                </chart:CategoryAxis.PlotBands>
-            </chart:CategoryAxis>
-        </chart:SfCartesianChart.XAxes>
-
-        <chart:SfCartesianChart.YAxes>
-            <chart:NumericalAxis/>
-        </chart:SfCartesianChart.YAxes>
-        . . .
-    </chart:SfCartesianChart>
-
-{% endhighlight %}
-
-{% highlight c# %}
-
-    SfCartesianChart chart = new SfCartesianChart();
-    . . .
-    CategoryAxis categoryAxis = new CategoryAxis();
-    NumericalPlotBandCollection numericalPlotBandCollection = new NumericalPlotBandCollection();
-    NumericalPlotBand plotBand = new NumericalPlotBand
-    {
-        Start = 2,
-        Size = 2,
-        Fill = Color.Orange
-    };
-    numericalPlotBandCollection.Add(plotBand);
-    categoryAxis.PlotBands= numericalPlotBandCollection;
-    chart.XAxes.Add(categoryAxis);
-
-    NumericalAxis secondaryAxis = new NumericalAxis();
-    chart.YAxes.Add(secondaryAxis);
-    ...
-
-{% endhighlight %}
-
-{% endtabs %}
-
-![Plot band with category axis in MAUI Cartesian chart](Plotband_images/Category.png)
-
-
-## Plot Band in Numerical axis
-
-A plot band can be added to the numerical axis by specifying numerical values for the [Start]() parameter, determining the beginning of the plot band, along with the specified [Size]().
+## Numerical PlotBand 
+[NumericalPlotBands]() are used to draw plot bands for [NumericalAxis]() and [CategoryAxis](). To add a plot band, create an instance of [NumericalPlotBandCollection]() and specify numerical values for the [Start]() parameter. This parameter determines the beginning of the plot band, along with the specified [Size]().
 
 {% tabs %}
 
@@ -77,10 +28,6 @@ A plot band can be added to the numerical axis by specifying numerical values fo
 
     <chart:SfCartesianChart>
         . . .
-        <chart:SfCartesianChart.XAxes>
-            <chart:CategoryAxis/>
-        </chart:SfCartesianChart.XAxes>
-
         <chart:SfCartesianChart.YAxes>
             <chart:NumericalAxis>
                 <chart:NumericalPlotBandCollection>
@@ -101,9 +48,7 @@ A plot band can be added to the numerical axis by specifying numerical values fo
 
     SfCartesianChart chart = new SfCartesianChart();
     . . .
-    CategoryAxis primaryAxis = new CategoryAxis();
-    chart.XAxes.Add(primaryAxis);
-
+    
     NumericalAxis numericalAxis = new NumericalAxis();
     NumericalPlotBandCollection numericalPlotBandCollection = new NumericalPlotBandCollection();
     NumericalPlotBand plotBand = new NumericalPlotBand
@@ -124,8 +69,9 @@ A plot band can be added to the numerical axis by specifying numerical values fo
 
 ![Plot band with numerical axis in MAUI Cartesian chart](Plotband_images/Numerical.png)
 
-## Plot band in DateTime axis
+## DateTime PlotBand
 
+[DateTimePlotBands]() are used to draw plot bands for [DateTimeAxis](). 
 A plot band can be applied to a date-time axis by specifying the [Start]() date and [Size]() values. The start value determines the beginning of the plot band, along with the specified size. The [SizeType]() parameter determines which unit of measurement to use on the date-time axis.
 
 {% tabs %}
