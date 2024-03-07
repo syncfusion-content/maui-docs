@@ -19,12 +19,10 @@ This section provides a quick overview for getting started with the .NET MAUI Ch
  4. Initialize the `SfChat` control.
 
 {% tabs %}
-{% highlight xaml hl_lines="5" %}
-
+{% highlight xaml hl_lines="4" %}
     <ContentPage   
       . . .
       xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Chat;assembly=Syncfusion.Maui.Chat">
-
       <syncfusion:SfChat />
     </ContentPage>
 
@@ -77,6 +75,7 @@ The `Syncfusion.Maui.Core` NuGet is a dependent package for all the Syncfusion c
          }
        }
     }
+    
 {% endhighlight %} 
 {% endtabs %}
 
@@ -87,7 +86,7 @@ The `SfChat` control is data-bound and displays a collection of messages exchang
 Create a simple message collection as shown in the following code example in a new class file. Save it as `GettingStartedViewModel.cs` file.
 
 {% tabs %}
-{% highlight c# tabtitle="GettingStartedViewModel.cs" %}
+{% highlight c# tabtitle="ViewModel.cs" %}
 
   using Syncfusion.Maui.Chat;
   public class GettingStartedViewModel : INotifyPropertyChanged
@@ -190,17 +189,17 @@ Create a simple message collection as shown in the following code example in a n
               Text = "We should develop this app in .NET MAUI, since it provides native experience and performance.\",",
           });
       }
-  }
+   }
 
-  {% endhighlight %}
-  {% endtabs %}
+{% endhighlight %}
+{% endtabs %}
 
 ## Binding Messages to Chat 
 
 To bind the messages to SfChat, configure the `SfChat.Messages` property accordingly. You have the option to bind the message collection of the SfChat either through XAML or programmatically in code.
 
-{% tabs %} {% highlight xaml hl_lines="14"%}
-
+{% tabs %} 
+{% highlight xaml hl_lines="14" %}
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
@@ -222,7 +221,6 @@ To bind the messages to SfChat, configure the `SfChat.Messages` property accordi
 {% endhighlight %} 
 
 {% highlight c# hl_lines="10" %} 
-
  public partial class MainPage : ContentPage 
  {
     SfChat sfChat; 
@@ -238,7 +236,8 @@ To bind the messages to SfChat, configure the `SfChat.Messages` property accordi
      } 
   } 
     
-{% endhighlight %} {% endtabs %}
+{% endhighlight %} 
+{% endtabs %}
 
 ![.NET MAUI Chat getting started](images/getting-started/maui-chat-getting-started.png)
 
@@ -254,7 +253,6 @@ Messages can be separated based on their date and time of creation and this can 
 {% endhighlight %}
 
 {% highlight c# hl_lines="1"%}
-
  this.sfChat.ShowTimeBreak = true;
          
 {% endhighlight %}
