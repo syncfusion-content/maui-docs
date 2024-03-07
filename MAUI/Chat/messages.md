@@ -135,7 +135,7 @@ The `SfChat.CurrentUser` helps differentiate between the sender and receiver of 
 {% endhighlight %}
 {% endtabs %}
 
-![Maui chat current user](images/messages/maui-chat-current-user.png)
+![.NET MAUI Chat current user](images/messages/maui-chat-current-user.png)
 
 ## Text message
 
@@ -222,7 +222,7 @@ The `SfChat.CurrentUser` helps differentiate between the sender and receiver of 
 {% endhighlight %}
 {% endtabs %}
 
-![Maui chat text message](images/messages/maui-chat-text-message.png)
+![.NET MAUI Chat text message](images/messages/maui-chat-text-message.png)
 
 ## Date picker message
 
@@ -308,7 +308,7 @@ The `SfChat.CurrentUser` helps differentiate between the sender and receiver of 
 {% endhighlight %}
 {% endtabs %}
 
-![Maui chat date picker message](images/messages/maui-chat-date-picker-message.png)
+![.NET MAUI Chat date picker message](images/messages/maui-chat-date-picker-message.png)
 
 ## Time picker message
 
@@ -396,7 +396,7 @@ The `SfChat.CurrentUser` helps differentiate between the sender and receiver of 
 {% endhighlight %}
 {% endtabs %}
 
-![Maui chat time picker message](images/messages/maui-chat-timepicker-message.png)
+![.NET MAUI Chat time picker message](images/messages/maui-chat-timepicker-message.png)
 
 ## Calendar message
 
@@ -483,7 +483,7 @@ The `SfChat.CurrentUser` helps differentiate between the sender and receiver of 
 {% endhighlight %}
 {% endtabs %}
 
-![Maui chat calendar message](images/messages/maui-chat-calender-message.png)
+![.NET MAUI Chat calendar message](images/messages/maui-chat-calender-message.png)
 
 ## Hyperlink message
 
@@ -570,7 +570,7 @@ The `SfChat.CurrentUser` helps differentiate between the sender and receiver of 
 {% endhighlight %}
 {% endtabs %}
 
-![Maui chat hyper link message](images/messages/maui-chat-hyperlink-message.png)
+![.NET MAUI Chat hyper link message](images/messages/maui-chat-hyperlink-message.png)
 
 ### Adding hyperlink message as an outgoing message
 
@@ -663,7 +663,7 @@ The `SfChat.CurrentUser` helps differentiate between the sender and receiver of 
 {% endhighlight %}
 {% endtabs %}
 
-![Maui chat image message](images/messages/maui-chat-image-message.png)
+![.NET MAUI Chat image message](images/messages/maui-chat-image-message.png)
 
 ### Event and command
 
@@ -889,10 +889,10 @@ If you don’t want to display images, buttons, or text(title, subtitle, descrip
 {% endtabs %}
 
 **Card message with button**
-![Maui chat card message](images/messages/maui-chat-card-message.png)
+![.NET MAUI Chat card message](images/messages/maui-chat-card-message.png)
 
 **Card message without button**
-![Maui chat card message](images/messages/maui-chat-card-message-without-button.png)
+![.NET MAUI Chat card message](images/messages/maui-chat-card-message-without-button.png)
 
 ### Event and Command
 
@@ -1063,7 +1063,7 @@ We have loaded a custom template if the message's text contains a particular tex
 {% endhighlight %}
 {% endtabs %}
 
-![Maui chat message template](images/messages/maui-chat-message-template.png)
+![.NET MAUI Chat message template](images/messages/maui-chat-message-template.png)
 
 
 ## Spacing between messages
@@ -1118,7 +1118,7 @@ We have loaded a custom template if the message's text contains a particular tex
 {% endhighlight %}
 {% endtabs %}
 
-![Maui chat message spacing](images/messages/maui-chat-message-spacing.png)
+![.NET MAUI Chat message spacing](images/messages/maui-chat-message-spacing.png)
 
 ## Sending message
 
@@ -1373,7 +1373,7 @@ To customize `MessageShape` in the SfChat, refer to the below code example:
 {% endhighlight %}
 {% endtabs %}
 
-![Maui chat message shape](images/messages/maui-chat-message-shape.png)
+![.NET MAUI Chat message shape](images/messages/maui-chat-message-shape.png)
 
 ## Hide the message input view
 
@@ -1458,7 +1458,7 @@ By default, the author’s name and avatar are displayed for the incoming messag
 {% endhighlight %}
 {% endtabs %}
 
-![Maui chat hiding avatar and author visibility](images/messages/maui-chat-hide-avatar.png)
+![.NET MAUI Chat hiding avatar and author visibility](images/messages/maui-chat-hide-avatar.png)
 
 ## Messages without author (System Generated Messages / Admin messages) in maui chat
 
@@ -1523,5 +1523,5 @@ In the provided code example, we've set up a custom template to display a securi
 {% endhighlight %}
 {% endtabs %}
 
-![Maui chat message template](images/messages/maui-chat-system-generated-custom-message-template.png)
+![.NET MAUI Chat message template](images/messages/maui-chat-system-generated-custom-message-template.png)
 
