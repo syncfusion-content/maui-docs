@@ -154,24 +154,9 @@ The [SfCircularChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts
     <chart:SfCircularChart.Resources>
         <DataTemplate x:Key="labelTemplate">
             <HorizontalStackLayout Spacing="5">
-                <Label Text="{Binding Item.Product}"
-                TextColor="White" 
-                FontAttributes="Bold"
-                FontSize="13"      
-                HorizontalOptions="Center"
-                VerticalOptions="Center"/>
-                <Label Text=" : " 
-                TextColor="White"
-                FontAttributes="Bold"
-                FontSize="13"
-                HorizontalOptions="Center"
-                VerticalOptions="Center"/>
-                <Label Text="{Binding Item.SalesRate}"
-                TextColor="White"
-                FontAttributes="Bold"
-                FontSize="13"
-                HorizontalOptions="Center"
-                VerticalOptions="Center"/>
+                <Label Text="{Binding Item.Product}" TextColor="White" FontSize="13"/>
+                <Label Text=" : " TextColor="White" FontSize="13"/>
+                <Label Text="{Binding Item.SalesRate}" TextColor="White" FontSize="13"/>
             </HorizontalStackLayout>
         </DataTemplate>
     </chart:SfCircularChart.Resources>
@@ -200,36 +185,32 @@ The [SfCircularChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts
     DataTemplate labelTemplate = new DataTemplate(() =>
     {
         var horizontalStackLayout = new HorizontalStackLayout { Spacing = 5 };
+
         var productLabel = new Label
         {
             TextColor = Color.White,
-            FontAttributes = FontAttributes.Bold,
-            FontSize = 13,
-            HorizontalOptions = LayoutOptions.Center,
-            VerticalOptions = LayoutOptions.Center
+            FontSize = 13
         };
         productLabel.SetBinding(Label.TextProperty, "Item.Product");
+
         var separatorLabel = new Label
         {
             Text = " : ",
             TextColor = Color.White,
-            FontAttributes = FontAttributes.Bold,
             FontSize = 13,
-            HorizontalOptions = LayoutOptions.Center,
-            VerticalOptions = LayoutOptions.Center
         };
+
         var salesRateLabel = new Label
         {
             TextColor = Color.White,
-            FontAttributes = FontAttributes.Bold,
             FontSize = 13,
-            HorizontalOptions = LayoutOptions.Center,
-            VerticalOptions = LayoutOptions.Center
         };
         salesRateLabel.SetBinding(Label.TextProperty, "Item.SalesRate");
+
         horizontalStackLayout.Children.Add(productLabel);
         horizontalStackLayout.Children.Add(separatorLabel);
         horizontalStackLayout.Children.Add(salesRateLabel);
+
         return horizontalStackLayout;
     });
 

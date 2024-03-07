@@ -132,20 +132,24 @@ The [SfFunnelChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.S
     DataTemplate labelTemplate = new DataTemplate(() =>
     {
         HorizontalStackLayout horizontalStackLayout = new HorizontalStackLayout { Spacing = 5 };
+
         var label = new Label
         {
             VerticalOptions = LayoutOptions.Center,
             FontSize = 15
         };
         label.SetBinding(Label.TextProperty, new Binding("Item.Value"));
+
         var image = new Image
         {
             Source = "arrow.png",
             WidthRequest = 15,
             HeightRequest = 15
         };
+
         horizontalStackLayout.Children.Add(label);
         horizontalStackLayout.Children.Add(image);
+        
         return horizontalStackLayout;
     });
 
