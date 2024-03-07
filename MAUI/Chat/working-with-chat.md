@@ -9,36 +9,26 @@ documentation: ug
 
 # Working with Chat in .NET MAUI Chat (SfChat)
 
-## Message Tapped Event and Command
+## MessageTapped Event and Command
 
-The `SfChat` control is equipped with both the `SfChat.MessageTapped` event and `SfChat.MessageTappedCommand`. These are triggered when a message is tapped. You can retrieve the tapped Message and the interaction point using the `MessageTappedEventArgs`, Accessible as `MessageTappedEventArgs.Message` and `MessageTappedEventArgs.Point`, in both the event handler for `MessageTapped` and the action of `MessageTappedCommand` .
+The `SfChat` control includes a built-in event called `SfChat.MessageTapped` and a command named `SfChat.MessageTappedCommand`. These are triggered when a message is tapped. You can access the tapped message and the point of interaction through the `MessageTappedEventArgs`. 
 
 ### MessageTapped Event
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="11" %}
-    
-    <?xml version="1.0" encoding="utf-8" ?>
-    <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-                 xmlns:sfChat="clr-namespace:Syncfusion.Maui.Chat;assembly=Syncfusion.Maui.Chat"
-                 xmlns:local="clr-namespace:MauiChat"
-                 x:Class="MauiChat.MainPage">
+{% highlight tabtitle="MainPage.xaml" hl_lines="3" %}
 
-        <ContentPage.Content>
-            <sfChat:SfChat x:Name="sfChat"
-                    MessageTapped="sfChat_MessageTapped" />
-        </ContentPage.Content>
-    </ContentPage>
+    <sfChat:SfChat x:Name="sfChat"
+            MessageTapped="sfChat_MessageTapped" />
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="2" %}
+{% highlight tabtitle="MainPage.xaml.cs" hl_lines="2" %}
       
     sfChat.MessageTapped += SfChat_MessageTapped;
 
     private void sfChat_MessageTapped(object sender, MessageTappedEventArgs e)
     {                    
-        App.Current.MainPage.DisplayAlert("Message", " Tapped on message :" + e.Message.Author.Name, "Ok");
+        DisplayAlert("Message", " Tapped on message :" + e.Message.Author.Name, "Ok");
     }
 
 {% endhighlight %}
@@ -47,17 +37,13 @@ The `SfChat` control is equipped with both the `SfChat.MessageTapped` event and 
 ### MessageTapped Command
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="4 19" %}   
+{% highlight tabtitle="MainPage.xaml" hl_lines="3" %}   
 
-    <ContentPage.Content>
-            <sfChat:SfChat x:Name="sfChat"  
-                        MessageTappedCommand="{Binding TappedCommand}" />
-    </ContentPage.Content>
+    <sfChat:SfChat x:Name="sfChat"  
+            MessageTappedCommand="{Binding TappedCommand}" />
 
 {% endhighlight %}
-{% highlight c# %}
-
-    //ViewModel.cs
+{% highlight c# tabtitle="ViewModel.cs" hl_lines="19" %}
 
     public class ViewModel : INotifyPropertyChanged
     {
@@ -65,7 +51,7 @@ The `SfChat` control is equipped with both the `SfChat.MessageTapped` event and 
 
         public ViewModel()
         {
-            // assigning command action to ICommand type property
+            // Assigning command action to ICommand type property
             TappedCommand = new Command<object>(MessageTapped);
         }
         
@@ -79,61 +65,46 @@ The `SfChat` control is equipped with both the `SfChat.MessageTapped` event and 
         private void MessageTapped(object args)
         {
             var MessageTappedArgs = obj as MessageTappedEventArgs;
-    App.Current.MainPage.DisplayAlert("Message", "Tapped on Message :" + MessageTappedArgs.Message.Author.Name, "Ok");
+            DisplayAlert("Message", "Tapped on Message :" + MessageTappedArgs.Message.Author.Name, "Ok");
         }
     }
 {% endhighlight %}
 {% endtabs %}
 
-## Message DoubleTapped Event and Command
+## MessageDoubleTapped Event and Command
 
-The `SfChat` control is equipped with both the `SfChat.MessageDoubleTapped` event and `SfChat.MessageDoubleTappedCommand`. These are triggered when a message is double tapped. You can retrieve the double tapped Message and the interaction point using the `MessageDoubleTappedEventArgs`,Accessible as `MessageDoubleTappedEventArgs.Message` and `MessageDoubleTappedEventArgs.Point`, in both the event handler for `MessageDoubleTapped` and the action of `MessageDoubleTappedCommand` .
+The `SfChat` control includes built-in features like the `SfChat.MessageDoubleTapped` event and `SfChat.MessageDoubleTappedCommand`. These are activated when a message is double-tapped. You can access the message that was double-tapped and the point of interaction through the `MessageDoubleTappedEventArgs`.
 
 ### MessageDoubleTapped Event
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="11" %}
+{% highlight tabtitle="MainPage.xaml" hl_lines="3" %}
     
-    <?xml version="1.0" encoding="utf-8" ?>
-    <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-                 xmlns:sfChat="clr-namespace:Syncfusion.Maui.Chat;assembly=Syncfusion.Maui.Chat"
-                 xmlns:local="clr-namespace:MauiChat"
-                 x:Class="MauiChat.MainPage">
-
-        <ContentPage.Content>
-            <sfChat:SfChat x:Name="sfChat"
-                        MessageDoubleTapped="sfChat_MessageDoubleTapped" />
-        </ContentPage.Content>
-    </ContentPage>
+    <sfChat:SfChat x:Name="sfChat"
+            MessageDoubleTapped="sfChat_MessageDoubleTapped" />
         
 {% endhighlight %}
-{% highlight xaml tabtitle="MainPage.xaml.cs" hl_lines="11" %}
+{% highlight tabtitle="MainPage.xaml.cs" hl_lines="2" %}
 
     sfChat.MessageDoubleTapped += SfChat_MessageDoubleTapped;            
 
     private void sfChat_MessageDoubleTapped(object? sender, MessageDoubleTappedEventArgs e)
     {
-        App.Current.MainPage.DisplayAlert("Message", " DoubleTapped on message :" + e.Message.Author.Name, "Ok");
+        DisplayAlert("Message", " DoubleTapped on message :" + e.Message.Author.Name, "Ok");
     }
-
 {% endhighlight %}
 {% endtabs %}
 
 ### MessageDoubleTapped Command
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="4 19" %}
+{% highlight tabtitle="MainPage.xaml" hl_lines="3" %}
     
-    <ContentPage.Content>
-                <sfChat:SfChat x:Name="sfChat"  
-                            MessageDoubleTappedCommand="{Binding DoubleTappedCommand}" />
-    </ContentPage.Content>
+    <sfChat:SfChat x:Name="sfChat"  
+            MessageDoubleTappedCommand="{Binding DoubleTappedCommand}" />
 
 {% endhighlight %}
-{% highlight C# %}
-
-    //ViewModel.cs
+{% highlight tabtitle="ViewModel.cs" hl_lines="19" %}
 
     public class ViewModel : INotifyPropertyChanged
     {
@@ -141,7 +112,7 @@ The `SfChat` control is equipped with both the `SfChat.MessageDoubleTapped` even
 
         public ViewModel()
         {
-            // assigning command action to ICommand type property
+            // Assigning command action to ICommand type property
             DoubleTappedCommand = new Command<object>(MessageDoubleTapped);
         }
         
@@ -155,61 +126,46 @@ The `SfChat` control is equipped with both the `SfChat.MessageDoubleTapped` even
         private void MessageDoubleTapped(object obj)
         {
             var MessageDoubleTappedArgs= obj as MessageDoubleTappedEventArgs;
-            App.Current.MainPage.DisplayAlert("Message", "DoubleTapped on Message :" + MessageDoubleTappedArgs.Message.Author.Name, "Ok");
+            DisplayAlert("Message", "DoubleTapped on Message :" + MessageDoubleTappedArgs.Message.Author.Name, "Ok");
         }
     }
 {% endhighlight %}
 {% endtabs %}
 
-## Message LongPressed Event and Command
+## MessageLongPressed Event and Command
 
-The `SfChat` control is equipped with both the `SfChat.MessageLongPressed` event and `SfChat.MessageLongPressedCommand`. These are triggered when a message is long pressed. You can retrieve the long pressed Message and the interaction point using the `MessageLongPressedEventArgs`,Accessible as `MessageLongPressedEventArgs.Message` and `MessageLongPressedEventArgs.Point`, in both the event handler for `MessageLongPressed` and the action of `MessageLongPressedCommand`.
+The `SfChat` control has built-in features like the `SfChat.MessageLongPressed` event and `SfChat.MessageLongPressedCommand`. These are activated when a message is long-pressed. You can access the message that was long-pressed and the point of interaction through the `MessageLongPressedEventArgs`. 
 
 ### MessageLongPressed Event
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="11" %}
+{% highlight tabtitle="MainPage.xaml" hl_lines="3" %}
 
-    <?xml version="1.0" encoding="utf-8" ?>
-    <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-                 xmlns:sfChat="clr-namespace:Syncfusion.Maui.Chat;assembly=Syncfusion.Maui.Chat"
-                 xmlns:local="clr-namespace:MauiChat"
-                 x:Class="MauiChat.MainPage">
-
-        <ContentPage.Content>
-            <sfChat:SfChat x:Name="sfChat"
-                    MessageLongPressed="sfChat_MessageLongPressed" />
-        </ContentPage.Content>
-    </ContentPage>
+    <sfChat:SfChat x:Name="sfChat"
+            MessageLongPressed="sfChat_MessageLongPressed" />
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="11" %}
+{% highlight tabtitle="MainPage.xaml.cs" hl_lines="2" %}
     
     sfChat.MessageLongPressed += sfChat_MessageLongPressed;
 
     private void sfChat_MessageLongPressed(object sender, MessageLongPressedEventArgs e)
     {
-        App.Current.MainPage.DisplayAlert("Message", " LongPressed on message :" + e.Message.Author.Name, "Ok");
+        DisplayAlert("Message", " LongPressed on message :" + e.Message.Author.Name, "Ok");
     }
-
 {% endhighlight %}
 {% endtabs %}
 
 ### MessageLongPressed Command
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="4 19" %}
+{% highlight tabtitle="MainPage.xaml" hl_lines="3" %}
     
-    <ContentPage.Content>
-                <sfChat:SfChat x:Name="sfChat"  
-                            MessageLongPressedCommand ="{Binding LongPressedCommand }" />
-    </ContentPage.Content>
+    <sfChat:SfChat x:Name="sfChat"  
+            MessageLongPressedCommand ="{Binding LongPressedCommand }" />
 
 {% endhighlight %}
-{% highlight C# %}
-    
-    //ViewModel.cs
+{% highlight tabtitle="ViewModel.cs" hl_lines="19" %}
 
     public class ViewModel : INotifyPropertyChanged
     {
@@ -217,7 +173,7 @@ The `SfChat` control is equipped with both the `SfChat.MessageLongPressed` event
 
         public ViewModel()
         {
-            // assigning command action to ICommand type property
+            // Assigning command action to ICommand type property
             LongPressedCommand = new Command<object>(MessageLongPressed);
         }
 
@@ -231,7 +187,7 @@ The `SfChat` control is equipped with both the `SfChat.MessageLongPressed` event
         private void MessageLongPressed(object obj)
         {
             var MessageLongPressedArgs = obj as MessageLongPressedEventArgs;
-            App.Current.MainPage.DisplayAlert("Message", "LongPressed on Message :" + MessageLongPressedArgs.Message.Author.Name, "Ok");
+            DisplayAlert("Message", "LongPressed on Message :" + MessageLongPressedArgs.Message.Author.Name, "Ok");
         }
     }       
 {% endhighlight %}
