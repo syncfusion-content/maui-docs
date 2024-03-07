@@ -307,7 +307,7 @@ The `SfChat.CurrentUser` helps differentiate between the sender and receiver of 
 {% endhighlight %}
 {% endtabs %}
 
-![Maui chat date picker message](images/messages/maui-chat-datepicker-message.png)
+![Maui chat date picker message](images/messages/maui-chat-date-picker-message.png)
 
 ## Time picker message
 
@@ -575,7 +575,7 @@ The `SfChat.CurrentUser` helps differentiate between the sender and receiver of 
 
 `HyperlinkMessage` is used to share URLs as a message. Along with the link, the thumbnail, title, and description of the URL are automatically fetched and displayed. The following code example illustrates how to add a hyperlink message.
 
-![Send hyper link message](messages/maui-chat-outgoing-hyperlink-message.png)
+![Send hyper link message](images/messages/maui-chat-outgoing-hyperlink-message.png)
 
 ## Image message
 
