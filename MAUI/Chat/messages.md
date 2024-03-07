@@ -27,7 +27,7 @@ documentation: ug
 The `SfChat.CurrentUser` helps differentiate between the sender and receiver of the messages. On any given chat window, the `SfChat.CurrentUser` is meant to be the sender (author of outgoing messages). Refer to the below code example to set up a current user in a chat.
 
 {% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="16" %}
+{% highlight xaml hl_lines="16" %}
     
     <?xml version="1.0" encoding="utf-8" ?>
     <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
@@ -48,7 +48,7 @@ The `SfChat.CurrentUser` helps differentiate between the sender and receiver of 
     </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="15" %}
+{% highlight c# hl_lines="16" %}
 
     using Syncfusion.Maui.Chat;
 
@@ -142,7 +142,7 @@ The `SfChat.CurrentUser` helps differentiate between the sender and receiver of 
 `TextMessage` is used to display plain text as a message. The following code example explains how to add a simple text message.
 
 {% tabs %}
-{% highlight xaml tabtitle="XAML" %}
+{% highlight xaml %}
     
     <?xml version="1.0" encoding="utf-8" ?>
     <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
@@ -161,8 +161,9 @@ The `SfChat.CurrentUser` helps differentiate between the sender and receiver of 
                         CurrentUser="{Binding CurrentUser}" />
         </ContentPage.Content>
     </ContentPage>
+
 {% endhighlight %}
-{% highlight c# tabtitle="C#" %}
+{% highlight c# %}
 
     using Syncfusion.Maui.Chat;
 
@@ -189,7 +190,7 @@ The `SfChat.CurrentUser` helps differentiate between the sender and receiver of 
 {% tabs %}
 {% highlight c# tabtitle="ViewModel.cs" %}
     
-    public class ViewModel : INotifyPropertyChanged
+        public class ViewModel : INotifyPropertyChanged
         {
             ...
             private void GenerateMessages()
@@ -228,7 +229,7 @@ The `SfChat.CurrentUser` helps differentiate between the sender and receiver of 
 `DatePickerMessage` is used to display a date picker as a message, allowing users to select a date. When a date is selected, it will be added as a `TextMessage` to the chat window. When you select a date from the date picker, the `SfChat.SendMessage` event and `SfChat.SendMessageCommand` will be executed.
 
 {% tabs %}
-{% highlight xaml tabtitle="XAML" %}
+{% highlight xaml %}
     
     <?xml version="1.0" encoding="utf-8" ?>
     <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
@@ -250,7 +251,7 @@ The `SfChat.CurrentUser` helps differentiate between the sender and receiver of 
     </ContentPage>                        
 
 {% endhighlight %}
-{% highlight c# tabtitle="C#" %}
+{% highlight c# %}
 
     using Syncfusion.Maui.Chat;
 
@@ -286,7 +287,7 @@ The `SfChat.CurrentUser` helps differentiate between the sender and receiver of 
 
     public class ViewModel : INotifyPropertyChanged
     {
-    ...
+        ...
         private void GenerateMessages()
         {
             this.Messages.Add(new TextMessage()
@@ -301,7 +302,7 @@ The `SfChat.CurrentUser` helps differentiate between the sender and receiver of 
                 SelectedDate = DateTime.Now
             });
         }
-    ...
+        ...
     }
 
 {% endhighlight %}
@@ -314,7 +315,7 @@ The `SfChat.CurrentUser` helps differentiate between the sender and receiver of 
 `TimePickerMessage` is used to display a time picker as a message, allowing users to select a time. Once a time has been specified, it will be added as a `TextMessage`. When you select a time from the time picker, the `SfChat.SendMessage` event and `SfChat.SendMessageCommand` will be executed.
 
 {% tabs %}
-{% highlight xaml tabtitle="XAML" %}
+{% highlight xaml %}
     
     <?xml version="1.0" encoding="utf-8" ?>
     <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
@@ -336,7 +337,7 @@ The `SfChat.CurrentUser` helps differentiate between the sender and receiver of 
     </ContentPage>                                                 
 
 {% endhighlight %}
-{% highlight c# tabtitle="C#" %}
+{% highlight c# %}
 
     using Syncfusion.Maui.Chat;
 
@@ -402,7 +403,7 @@ The `SfChat.CurrentUser` helps differentiate between the sender and receiver of 
 `CalendarMessage` is used to display a calendar as a message, allowing users to choose a date. The date chosen from the calendar will be added as a `TextMessage`. When you select a date from the calendar, the `SfChat.SendMessage` event and `SfChat.SendMessageCommand` will be executed.
 
 {% tabs %}
-{% highlight xaml tabtitle="XAML" %}
+{% highlight xaml %}
     
     <?xml version="1.0" encoding="utf-8" ?>
     <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
@@ -424,7 +425,7 @@ The `SfChat.CurrentUser` helps differentiate between the sender and receiver of 
     </ContentPage> 
 
 {% endhighlight %}
-{% highlight c# tabtitle="C#" %}
+{% highlight c# %}
 
     using Syncfusion.Maui.Chat;
 
@@ -489,7 +490,7 @@ The `SfChat.CurrentUser` helps differentiate between the sender and receiver of 
 `HyperlinkMessage` is used to send a URL as a message. Along with the link, the thumbnail, title, and description of the URL are automatically fetched and displayed. The code example below illustrates how to add a hyperlink message.
 
 {% tabs %}
-{% highlight xaml tabtitle="XAML" %}
+{% highlight xaml %}
     
     <?xml version="1.0" encoding="utf-8" ?>
     <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
@@ -510,7 +511,7 @@ The `SfChat.CurrentUser` helps differentiate between the sender and receiver of 
     </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="C#" %}
+{% highlight c# %}
 
     using Syncfusion.Maui.Chat;
 
@@ -582,7 +583,7 @@ The `SfChat.CurrentUser` helps differentiate between the sender and receiver of 
 `ImageMessage` is used to display an image as a message. Using the `ImageMessage.Source`, `ImageMessage.Size`, and `ImageMessage.Aspect` properties, you can display the desired image in the desired height and width as a message in the chat control.
 
 {% tabs %}
-{% highlight xaml tabtitle="XAML" %}
+{% highlight xaml %}
     
     <?xml version="1.0" encoding="utf-8" ?>
     <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
@@ -603,7 +604,7 @@ The `SfChat.CurrentUser` helps differentiate between the sender and receiver of 
     </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="C#" %}
+{% highlight c# %}
 
     using Syncfusion.Maui.Chat;
 
@@ -731,6 +732,7 @@ The `ImageMessage` comes with in-built SfChat.ImageTapped event and `SfChat.Imag
         </ContentPage.Content>
     </ContentPage>
 {% endhighlight %}
+
 {% highlight c# tabtitle="ViewModel.cs" %}
 
     public class ViewModel : INotifyPropertyChanged
@@ -774,7 +776,7 @@ Upon creating the individual cards, add them to a Card typed collection and assi
 If you don’t want to display images, buttons, or text(title, subtitle, description) in a card simply do not set values to the required properties. For example, if you don’t want to display the image on a card, do not set any value to the `Card.Image` property.
 
 {% tabs %}
-{% highlight xaml tabtitle="XAML" %}
+{% highlight xaml %}
     
     <?xml version="1.0" encoding="utf-8" ?>
     <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
@@ -795,7 +797,7 @@ If you don’t want to display images, buttons, or text(title, subtitle, descrip
     </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="C#" %}
+{% highlight c# %}
 
     using Syncfusion.Maui.Chat;
 
@@ -934,7 +936,7 @@ N> The Action argument in `CardTappedEventArgs` holds a valid value only when cl
 
 **Card Command**
 {% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="17" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="17" %}
     
     <?xml version="1.0" encoding="utf-8" ?>
     <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
@@ -986,7 +988,7 @@ N> The Action argument in `CardTappedEventArgs` holds a valid value only when cl
 We have loaded a custom template if the message's text contains a particular text value in the below code example.
 
 {% tabs %}
-{% highlight c# tabtitle="MyCustomMessageTemplateSelector.cs" %}
+{% highlight c# tabtitle="TemplateSelector.cs" %}
 
     using Syncfusion.Maui.Chat;
 
@@ -1069,7 +1071,7 @@ We have loaded a custom template if the message's text contains a particular tex
 `SfChat` allows to change the vertical spacing between the messages in view using `SfChat.MessageSpacing` property. The default value is 8.
 
 {% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="17" %}
+{% highlight xaml hl_lines="17" %}
     
     <?xml version="1.0" encoding="utf-8" ?>
     <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
@@ -1091,7 +1093,7 @@ We have loaded a custom template if the message's text contains a particular tex
     </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="17" %}
+{% highlight c# hl_lines="17" %}
 
     using Syncfusion.Maui.Chat;
 
@@ -1129,7 +1131,7 @@ The newly added message can be canceled from sending in the `SfChat.SendMessage`
 **SendMessage Event handler**
 
 {% tabs %}
-{% highlight c# tabtitle="C#" hl_lines="17 26" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="17" %}
  
     using Syncfusion.Maui.Chat;
 
@@ -1162,7 +1164,7 @@ The newly added message can be canceled from sending in the `SfChat.SendMessage`
 **SendMessage command**
 
 {% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="17" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="17" %}
     
     <?xml version="1.0" encoding="utf-8" ?>
     <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
@@ -1262,7 +1264,7 @@ By default, the keyboard will be open in view, even after a message is sent or f
 By default, users can input multi-line messages by adding new lines in the editor within the chat control for outgoing messages. However, if you wish to limit multi-line input and display a send button on the keyboard instead, you can achieve this by setting the `SfChat.AllowMultilineInput` property to `false`.
 
 {% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="17" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="17" %}
     
     <?xml version="1.0" encoding="utf-8" ?>
     <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
@@ -1325,7 +1327,7 @@ The `SfChat` allows to change the shape of the messages by using the `SfChat.Mes
 To customize `MessageShape` in the SfChat, refer to the below code example:
 
 {% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="17" %}
+{% highlight xaml hl_lines="17" %}
     <?xml version="1.0" encoding="utf-8" ?>
     <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
@@ -1346,7 +1348,7 @@ To customize `MessageShape` in the SfChat, refer to the below code example:
     </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="17" %}
+{% highlight c# hl_lines="17" %}
 
     using Syncfusion.Maui.Chat;
 
@@ -1380,7 +1382,7 @@ The `SfChat` allows to hide the message input view (editor) by setting `false` t
 To hide `ShowMessageInputView` in the SfChat, refer the below code example:
 
 {% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="17" %}
+{% highlight xaml hl_lines="17" %}
     <?xml version="1.0" encoding="utf-8" ?>
     <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
@@ -1399,8 +1401,9 @@ To hide `ShowMessageInputView` in the SfChat, refer the below code example:
                             ShowMessageInputView="False" />
         </ContentPage.Content>
     </ContentPage>
+
 {% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="17" %}
+{% highlight c# hl_lines="17" %}
 
     using Syncfusion.Maui.Chat;
 
@@ -1431,7 +1434,7 @@ To hide `ShowMessageInputView` in the SfChat, refer the below code example:
 By default, the author’s name and avatar are displayed for the incoming messages sent by users other than the `SfChat.CurrentUser`. You can choose to either show or hide the avatar and name for all incoming messages using the `SfChat.ShowIncomingMessageAvatar` and `SfChat.ShowIncomingMessageAuthorName` properties, respectively.
 
 {% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="17 18" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="17 18" %}
     
     <?xml version="1.0" encoding="utf-8" ?>
     <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
@@ -1463,7 +1466,7 @@ Using templates, you can show messages with any information, similar to security
 In the provided code example, we've set up a custom template to display a security message from an admin when the author of the message is not specified.
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
     using Syncfusion.Maui.Chat;
 
