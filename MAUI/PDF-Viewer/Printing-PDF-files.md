@@ -9,16 +9,13 @@ documentation: ug
 
 # Printing PDF Files in .NET MAUI PDF Viewer (SfPdfViewer)
 
-![Printing PDF Files in .NET MAUI PDF Viewer](Images\Print\print.png)
+The print feature of [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) allows you to  effortlessly print PDF documents directly from your application code. 
 
-![Print Preview Window](Images\Print\print-preview-window.png)
+![Printing PDF Files in .NET MAUI PDF Viewer](Images\Print\print.jpg)
 
+Moreover, when performing a print operation, the default device print dialog opens, providing users with familiar options and settings to customize their printing experience. Within this dialog, users can adjust settings such as printer selection, the number of copies, page orientation, and more, ensuring that their printed documents meet their specific requirements.
 
-Using [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html), you can effortlessly print PDF documents directly from your application code. This feature enables users to conveniently fill PDF form fields and print the document with the updated values incorporated.
-
-Moreover, when performing a print operation, the default system print dialog opens, providing users with familiar options and settings to customize their printing experience. Within this dialog, users can adjust settings such as printer selection, the number of copies, page orientation, and more, ensuring that their printed documents meet their specific requirements.
-
-To print a PDF programmatically, you can use the `PrintDocument()` method provided by SfPdfViewer. This method enables you to trigger the printing action seamlessly within your application.
+To print a PDF programmatically, you can use the `PrintDocument` method provided by SfPdfViewer. This method enables you to trigger the printing action seamlessly within your application.
 
 {% tabs %}
 {% highlight c# %}
@@ -27,7 +24,7 @@ PdfViewer. PrintDocument();
 {% endhighlight %}
 {% endtabs %}
 
-Also, SfPdfViewer provides another way to print using the `PrintDocumentCommand`. This makes printing easier, especially when used with buttons.
+Also, SfPdfViewer provides another way to printing through command binding using the `PrintDocumentCommand`. This makes printing easier, especially when used with buttons.
 
 {% tabs %}
 {% highlight xaml %}
@@ -38,4 +35,4 @@ Also, SfPdfViewer provides another way to print using the `PrintDocumentCommand`
 
 ## Limitations
 
-When printing a document that contains sticky note annotations, the sticky note icon appears as a [comment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.StickyNoteIcon.html#Syncfusion_Maui_PdfViewer_StickyNoteIcon_Comment) icon appearance in the printed document.
+Currently, when printing a document that contains sticky note annotations, the sticky note icon always appears as the default [comment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.StickyNoteIcon.html#Syncfusion_Maui_PdfViewer_StickyNoteIcon_Comment) icon appearance in the printed document.
