@@ -6,9 +6,9 @@ platform: MAUI
 control: Chat
 documentation: ug
 ---
-# Time break in .Net MAUI Chat (SfChat)
+# Time break in .NET MAUI Chat (SfChat)
 
-The SfChat provides a simple way to organize messages by their date and time of creation, allowing users to easily identify messages in the order they were created. To display the time break view in SfChat, set the `ShowTimeBreak` property to `true`.
+The `Chat` control provides a simple way to organize messages by their date and time of creation, allowing users to easily identify messages in the order they were created. To display the time break view in Chat, set the `ShowTimeBreak` property to `true`.
 
 {% tabs %}
 {% highlight xaml hl_lines="2" %}
@@ -19,9 +19,8 @@ The SfChat provides a simple way to organize messages by their date and time of 
     
 {% endhighlight %}
 
-{% highlight c# hl_lines="1"%}
+{% highlight c# hl_lines="1" %}
  this.sfChat.ShowTimeBreak = true;
-
 {% endhighlight %}
 {% endtabs %}
 
@@ -48,7 +47,7 @@ To stick the time break view, enable the `StickyTimeBreak` property. When `Stick
 
 ## Template for time break view
 
-The `SfChat` allows to load custom template for time break view using the `TimeBreakTemplate` property.
+The `Chat` control allows to load custom template for time break view using the `TimeBreakTemplate` property.
 
 {% tabs %}
 {% highlight xaml hl_lines="9 21" %}
