@@ -51,6 +51,7 @@ The `Syncfusion.Maui.Core` NuGet is a dependent package for all Syncfusion contr
 
 {% tabs %}
 {% highlight c# tabtitle="MauiProgram.cs" hl_lines="4 20" %}
+
     using Microsoft.Maui.Controls.Hosting;
     using Microsoft.Maui.Controls.Xaml;
     using Microsoft.Maui.Hosting;
