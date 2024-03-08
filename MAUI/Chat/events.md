@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Working with Chat in .NET MAUI Chat Control | Syncfusion
-description: Learn here all about Working with Chat support in Syncfusion .NET MAUI Chat (SfChat) control and more.
+title: Events and Commands in .NET MAUI Chat Control | Syncfusion
+description: Learn here all about Events and Commands support in Syncfusion .NET MAUI Chat (SfChat) control and more.
 platform: MAUI
 control: SfChat
 documentation: ug
 ---
 
-# Working with Chat in .NET MAUI Chat (SfChat)
+# Events and Commands in .NET MAUI Chat (SfChat)
 
 ## MessageTapped Event and Command
 
