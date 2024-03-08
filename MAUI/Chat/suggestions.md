@@ -16,8 +16,6 @@ The `SfChat` control allows to display a list of options, as suggestions, either
 * `SelectedItem`: Gets the item that was selected from the suggestion control.
 * `SuggestionType`: Gets a value that indicates whether the selected item is from an inline suggestion box or from an outline suggestion.
 
-Declaration
-
 ## Showing suggestions in message
 
 Suggestions can be shown in a message by creating a `ChatSuggestion` instance and setting it to the desired message's `Message.Suggestions` property.
