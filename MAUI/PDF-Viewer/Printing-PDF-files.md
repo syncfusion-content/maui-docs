@@ -9,7 +9,7 @@ documentation: ug
 
 # Printing PDF Files in .NET MAUI PDF Viewer (SfPdfViewer)
 
-![Printing PDF Files in .NET MAUI PDF Viewer](Images\Print\text-selection.gif)
+![Printing PDF Files in .NET MAUI PDF Viewer](Images\Print\print.png)
 
 ![Print Preview Window](Images\Print\print-preview-window.png)
 
