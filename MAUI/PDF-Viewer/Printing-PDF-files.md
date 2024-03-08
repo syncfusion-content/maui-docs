@@ -9,7 +9,7 @@ documentation: ug
 
 # Printing PDF Files in .NET MAUI PDF Viewer (SfPdfViewer)
 
-The print feature of [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) allows you to  effortlessly print PDF documents directly from your application code. 
+The print feature of [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) allows you to effortlessly print PDF documents directly from your application code. Also, the modified form fields and annotations in SfPdfViewer will be preserved properly in the printed document.
 
 ![Printing PDF Files in .NET MAUI PDF Viewer](Images\Print\print.jpg)
 
