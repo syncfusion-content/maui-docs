@@ -31,15 +31,23 @@ The Serialize() method is used to serialize the current edits of shapes. It allo
 
     private void OnSerializeClicked(object sender, EventArgs e)
     {
-        this.imageEditor.AddShape(AnnotationShape.Arrow)
+        MemoryStream memoryStream = new MemoryStream();
+        this.imageEditor.Serialize(memoryStream);
+        string filePath = Path.Combine("D:\\", "yourfile.xml");
+        if (!File.Exists(filePath))
+        {
+            using (FileStream fs = File.Create(filePath))
+            {
+            }
+        }
+        using (var fileStream = new FileStream(filePath, FileMode.Create, FileAccess.Write))
+        {
+            memoryStream.CopyTo(fileStream);
+        }
     }
 
 {% endhighlight %}
 {% endtabs %}
-
-You can save stream into .txt format file. If you save stream as .txt format file to deserialize the shapes, then set the Build action to `Embedded resource` in project.
-
-Sample text file: [ImageEditor.txt](https://s3.amazonaws.com/files2.syncfusion.com/dtsupport/directtrac/general/txt/Chart677841499.txt?AWSAccessKeyId=AKIAWH6GYCX3TZ4I4YVB&Expires=1695709055&Signature=9L6xHfsas4aolVJk5ps3IkVEdBk%3D).
 
 ## Deserialization
 
@@ -61,15 +69,26 @@ The Deserialize() method is used to deserialize the edits over an image. It allo
 
     private void OnDeserializeClicked(object sender, EventArgs e)
     {
-        this.imageEditor.AddShape(AnnotationShape.Arrow)
+        var result = await FilePicker.PickAsync(new PickOptions
+        {
+            PickerTitle = "Select an XML file"
+        });
+        
+        if (result != null)
+        {
+            MemoryStream memoryStream = new MemoryStream();
+            using (Stream stream = await result.OpenReadAsync())
+            {
+                await stream.CopyToAsync(memoryStream);
+            }
+        
+            this.imageEditor.Deserialize(memoryStream);
+        }
     }
 
 {% endhighlight %}
 {% endtabs %}
 
-
 {% endhighlight %}
 
 {% endtabs %}
-
-N> [View sample in GitHub]()
