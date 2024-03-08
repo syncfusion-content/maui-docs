@@ -9,13 +9,11 @@ documentation: ug
 
 # Printing PDF Files in .NET MAUI PDF Viewer (SfPdfViewer)
 
-The print feature of [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) allows you to effortlessly print PDF documents directly from your application code. Also, the modified form fields and annotations in SfPdfViewer will be preserved properly in the printed document.
+The print feature of [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) allows you to effortlessly print PDF documents directly from your application code.
 
-![Printing PDF Files in .NET MAUI PDF Viewer](Images\Print\print.jpg)
+Moreover, when performing a print operation, the default device print dialog opens, providing users with familiar options and settings to customize their printing experience.
 
-Moreover, when performing a print operation, the default device print dialog opens, providing users with familiar options and settings to customize their printing experience. Within this dialog, users can adjust settings such as printer selection, the number of copies, page orientation, and more, ensuring that their printed documents meet their specific requirements.
-
-To print a PDF programmatically, you can use the `PrintDocument` method provided by SfPdfViewer. This method enables you to trigger the printing action seamlessly within your application.
+To print a PDF programmatically, you can use the `PrintDocument` method provided by [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html).Refer to the following code example.
 
 {% tabs %}
 {% highlight c# %}
@@ -24,7 +22,7 @@ PdfViewer. PrintDocument();
 {% endhighlight %}
 {% endtabs %}
 
-Also, SfPdfViewer provides another way to printing through command binding using the `PrintDocumentCommand`. This makes printing easier, especially when used with buttons.
+Also, SfPdfViewer provides another way to print through command binding using the `PrintDocumentCommand`. This makes printing easier, especially when used with buttons.
 
 {% tabs %}
 {% highlight xaml %}
@@ -32,6 +30,10 @@ Also, SfPdfViewer provides another way to printing through command binding using
 <Button Text="&#xe77f;" Command="{Binding Source={x:Reference PdfViewer},Path=PrintDocumentCommand}"/>
 {% endhighlight %} 
 {% endtabs %}
+
+The following image represents the print preview dialogue.
+
+![Printing PDF Files in .NET MAUI PDF Viewer](Images\Print\print.png)
 
 ## Limitations
 
