@@ -62,6 +62,23 @@ private void OnAnnotationAdded(object sender, AnnotationEventArgs e)
 {% endhighlight %}
 {% endtabs %}
 
+## Adding custom information to a annotation
+
+he [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) allows you to assign custom information to annotations. The `CustomData` property is utilized to store additional information about each annotation instance for reference. However, it's essential to note that these data are solely intended for reference purposes and will not be displayed in the PdfViewer interface.
+
+The provided code sample illustrates how to set the `CustomData` property for an annotation. Within this code snippet, we assign custom data to represent the author's name who added the annotation.
+
+{% tabs %}
+{% highlight C# %}
+
+private void OnAnnotationAdded(object sender, AnnotationEventArgs e)
+{
+    e.Annotation.CustomData="Annotation added author: John";
+}
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Remove annotations from the PDF document
 
 This section will go through different methods of removing annotations from a PDF document.

@@ -529,3 +529,20 @@ async void ValidateAndSaveForm()
 
 {% endhighlight %}
 {% endtabs %}
+
+## Adding custom information to a form field
+
+The [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) allows you to assign custom information to form fields. The `CustomData` property is utilized to store additional information about each form field instance for reference. However, it's essential to note that these data are solely intended for reference purposes and will not be displayed in the PdfViewer interface.
+
+The following code sample demonstrates how to set the `CustomData` property for a form field. In this code snippet, we set the custom data to represent the modification time of the form field.
+
+{% tabs %}
+{% highlight C# %}
+
+private void PdfViewer_FormFieldValueChanged(object sender, FormFieldValueChangedEventArgs e)
+{
+        e.FormField.CustomData=DateTime.Now.ToString();
+}
+
+{% endhighlight %}
+{% endtabs %}
