@@ -202,7 +202,7 @@ This feature is used to enable the plot bands to be drawn repeatedly at the regu
 
 ## Segmented Plot Band
 
-Typically, if you draw a plot band for a vertical axis, the height of the plot band is determined by the [Start]() and [Size]() properties, and the end of the plot band is equivalent to the end of its associated horizontal axis, i.e., plot band is drawn horizontally to the entire stretch of its associated horizontal axis. Similarly, for horizontal axis, width is determined by the [Start]() and [Size]() properties, and vertically, it is drawn to the entire stretch of the associated vertical axis.
+Typically, if you draw a plot band for a vertical axis, the height of the plot band is determined by the [Start]() and [End]() properties, and the end of the plot band is equivalent to the end of its associated horizontal axis, i.e., plot band is drawn horizontally to the entire stretch of its associated horizontal axis. Similarly, for horizontal axis, width is determined by the [Start]() and [Size]() properties, and vertically, it is drawn to the entire stretch of the associated vertical axis.
 
 Suppose, you need to draw a plot band that should not stretch along its associated axis, you have to set the [AssociatedAxisStart]() and [AssociatedAxisEnd]() properties. The values provided in these two properties correspond to its associated axis specified by the [AssociatedAxisName]() property in the axis.
 
@@ -220,14 +220,11 @@ Suppose, you need to draw a plot band that should not stretch along its associat
       <chart:NumericalAxis>
          <chart:NumericalAxis.PlotBands>
              <chart:NumericalPlotBandCollection>
-                  <chart:NumericalPlotBand Start="28" 
-                                           Size="2"
-                                           RepeatEvery="10" 
-                                           RepeatUntil="55" 
-                                           Fill="Orange"
-                                           IsSegmented="True" 
-                                     AssociatedAxisStart="0"
-                                     AssociatedAxisEnd="1"/>
+                  <chart:NumericalPlotBand Start="20" 
+                                           End="30" 
+                                           Fill="Orange" 
+                                           AssociatedAxisStart="0"
+                                           AssociatedAxisEnd="1"/>
                     </chart:NumericalPlotBandCollection>
                 </chart:NumericalAxis.PlotBands>
             </chart:NumericalAxis>
@@ -248,12 +245,9 @@ Suppose, you need to draw a plot band that should not stretch along its associat
     NumericalPlotBandCollection numericalPlotBandCollection =  new NumericalPlotBandCollection();
     NumericalPlotBand plotBand = new NumericalPlotBand
     {
-        Start = 28,
-        Size = 2,
-        RepeatEvery = 10,
-        RepeatUntil = 55,
+        Start = 20,
+        End = 30,
         Fill = Color.Orange,
-        IsSegmented = true,
         AssociatedAxisStart = 0,
         AssociatedAxisEnd = 1
     };
