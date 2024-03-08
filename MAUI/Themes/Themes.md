@@ -17,7 +17,7 @@ Syncfusion themes allow you apply colors across all the Syncfusion controls with
 
 ## Applying light and dark themes
 
-By default, Syncfusion offers support for both light and dark themes through the inclusion of a Syncfusion Theme dictionary. As names suggest, these themes will have colors with light and dark color contrasts, respectively.
+By default, Syncfusion offers support for both light and dark themes through the inclusion of a `SyncfusionThemeDictionary`. As names suggest, these themes will have colors with light and dark color contrasts, respectively.
 
 To apply themes to your application, merge the following items:
 
@@ -32,7 +32,7 @@ This resource dictionary includes keys and their corresponding color codes for a
 
 #### Automatic merging
 
-When using more number of Syncfusion controls in an application, to make the process easier for merging the control style dictionaries of the controls, the SyncfusionThemeDictionary class has been provided for automatic merging.
+When using more number of Syncfusion controls in an application, to make the process easier for merging the control style dictionaries of the controls, the `SyncfusionThemeDictionary` class has been provided for automatic merging.
 
 {% highlight xaml %}
 
