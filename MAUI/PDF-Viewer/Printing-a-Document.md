@@ -33,7 +33,7 @@ Also, SfPdfViewer provides another way to print through command binding using th
 
 The following image represents the print preview dialogue.
 
-![Printing PDF Files in .NET MAUI PDF Viewer](Images\Print\print.png)
+![Printing PDF Files in .NET MAUI PDF Viewer](Images/Print/print.png)
 
 ## Limitations
 
