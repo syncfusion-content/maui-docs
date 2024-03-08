@@ -96,79 +96,79 @@ this.Content = treeMap;
 </tr>
 
 <tr>
-<td>{{'[]()'| markdownify }}</td>
+<td>Nil</td>
 <td>TreeMapItemInfo</td>
 <td>Contains item info for the selected item.</td>
 </tr>
 
 <tr>
-<td>{{'[]()'| markdownify }}</td>
+<td>{{'[LeafItemSettings](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.LeafItemSettings.html)'| markdownify }}</td>
 <td>TreeMapLeafItemSettings</td>
 <td>Represents settings for customizing the appearance of leaf items in the SfTreeMap.</td>
 </tr>
 
 <tr>
-<td>{{'[]()'| markdownify }}</td>
+<td>{{'[LegendSettings](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.LegendSettings.html)'| markdownify }}</td>
 <td>TreeMapLegendSettings</td>
 <td>Represents settings for customizing the appearance of legend items in the SfTreeMap.</td>
 </tr>
 
 <tr>
-<td>{{'[]()'| markdownify }}</td>
+<td>{{'[ColorMapping](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.ColorMapping.html)'| markdownify }}</td>
 <td>TreeMapBrushSettings</td>
 <td>Provides base settings for brushes used in the SfTreeMap./></td>
 </tr>
 
 <tr>
-<td>{{'[]()'| markdownify }}</td>
+<td>{{'[UniColorMapping](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.UniColorMapping.html)'| markdownify }}</td>
 <td>TreeMapUniformBrushSettings</td>
 <td>Provides settings for assigning a single color to represent data uniformly in the SfTreeMap.</td>
 </tr>
 
 <tr>
-<td>{{'[]()'| markdownify }}</td>
+<td>{{'[DesaturationColorMapping](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.DesaturationColorMapping.html)'| markdownify }}</td>
 <td>TreeMapDesaturationBrushSettings</td>
 <td>Represents the settings for desaturation in the SfTreeMap control, allowing customization of the background brush and desaturation range.</td>
 </tr>
 
 <tr>
-<td>{{'[]()'| markdownify }}</td>
+<td>{{'[PaletteColorMapping](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.PaletteColorMapping.html)'| markdownify }}</td>
 <td>TreeMapPaletteBrushSettings</td>
 <td>Provides settings for customizing the palette brushes in the SfTreeMap.</td>
 </tr>
 
 <tr>
-<td>{{'[]()'| markdownify }}</td>
+<td>{{'[RangeColorMapping](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.RangeColorMapping.html)'| markdownify }}</td>
 <td>TreeMapRangeBrushSettings</td>
 <td>Provides settings for defining range based brushes in the SfTreeMap.</td>
 </tr>
 
 <tr>
-<td>{{'[]()'| markdownify }}</td>
+<td>{{'[Range](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.Range.html)'| markdownify }}</td>
 <td>TreeMapRangeBrush</td>
 <td>Represents the settings for defining a range brush in the SfTreeMap.</td>
 </tr>
 
 <tr>
-<td>{{'[]()'| markdownify }}</td>
+<td>{{'[TooltipSetting](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.TooltipSetting.html)'| markdownify }}</td>
 <td>TreeMapToolTipSettings</td>
 <td>Provides settings for configuring tool tips in the SfTreeMap./></td>
 </tr>
 
 <tr>
-<td>{{'[]()'| markdownify }}</td>
+<td>{{'[TreeMapLevel](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.TreeMapLevel.html)'| markdownify }}</td>
 <td>TreeMapLevel</td>
 <td>Represents a level in the hierarchical structure of the SfTreeMap.</td>
 </tr>
 
 <tr>
-<td>{{'[]()'| markdownify }}</td>
+<td>Nil</td>
 <td>TreeMapGroupBrushSettings</td>
 <td>Provides settings for customizing brush colors used in the SfTreeMap for group items.</td>
 </tr>
 
 <tr>
-<td>{{'[]()'| markdownify }}</td>
+<td>{{'[Style](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.Style.html)'| markdownify }}</td>
 <td>TreeMapTextStyle</td>
 <td> Gets or sets the style of SfTreeMap text, that used to customize the text color, font, font size, font family and font attributes.</td>
 </tr>
@@ -255,103 +255,103 @@ public class PopulationDetails
 {% endtabs %}
 
 <tr>
-<td>{{'[]()'| markdownify }}</td>
+<td>{{'[DataSource](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.SfTreeMap.html#Syncfusion_SfTreeMap_XForms_SfTreeMap_DataSource)'| markdownify }}</td>
 <td>DataSource</td>
 <td>Gets or sets the DataSource property. This property is used to retrieving data.</td>
 </tr>
 
 <tr>
-<td>{{'[]()'| markdownify }}</td>
+<td>{{'[WeightValuePath](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.SfTreeMap.html#Syncfusion_SfTreeMap_XForms_SfTreeMap_WeightValuePath)'| markdownify }}</td>
 <td>PrimaryValuePath</td>
 <td>Gets or sets the PrimaryValuePath property. This property is used to set the value path based on data item.</td>
 </tr>
 
 <tr>
-<td>{{'[]()'| markdownify }}</td>
+<td>{{'[ColorValuePath](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.SfTreeMap.html#Syncfusion_SfTreeMap_XForms_SfTreeMap_ColorValuePath)'| markdownify }}</td>
 <td>RangeColorValuePath</td>
 <td>Gets or sets the RangeColorValuePath property. This property is used to set the value path based on color value.</td>
 </tr>
 
 <tr>
-<td>{{'[]()'| markdownify }}</td>
+<td>{{'[HightlightColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.SfTreeMap.html#Syncfusion_SfTreeMap_XForms_SfTreeMap_HightlightColor)'| markdownify }}</td>
 <td>SelectedItemStroke</td>
 <td>Gets or sets the Selected Item Stroke property. This property is used to set the color to highlight the items.</td>
 </tr>
 
 <tr>
-<td>{{'[]()'| markdownify }}</td>
+<td>{{'[HightlightBorderWidth](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.SfTreeMap.html#Syncfusion_SfTreeMap_XForms_SfTreeMap_HightlightBorderWidth)'| markdownify }}</td>
 <td>SelectedItemStrokeWidth</td>
 <td>Gets or sets the Selected ItemStrokeThickness property. This property is used to customize the width of highlighted stroke.</td>
 </tr>
 
 <tr>
-<td>{{'[]()'| markdownify }}</td>
+<td>{{'[LayoutType](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.SfTreeMap.html#Syncfusion_SfTreeMap_XForms_SfTreeMap_LayoutType)'| markdownify }}</td>
 <td>LayoutType</td>
 <td>Gets or sets the layoutType property. This property is used to customize the layout for tree map.</td>
 </tr>
 
 <tr>
-<td>{{'[]()'| markdownify }}</td>
+<td>{{'[ItemTemplate](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.SfTreeMap.html#Syncfusion_SfTreeMap_XForms_SfTreeMap_ItemTemplate)'| markdownify }}</td>
 <td>LeafItemTemplate</td>
 <td>Gets or sets the LeafItemtemplate property. This property is used to set data template.</td>
 </tr>
 
 <tr>
-<td>{{'[]()'| markdownify }}</td>
+<td>{{'[LeafItemSettings](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.SfTreeMap.html#Syncfusion_SfTreeMap_XForms_SfTreeMap_LeafItemSettings)'| markdownify }}</td>
 <td>LeafItemSettings</td>
 <td>Gets or sets the LeafItemSettings property. This property is used to customize the settings for leaf level.</td>
 </tr>
 
 <tr>
-<td>{{'[]()'| markdownify }}</td>
+<td>{{'[LeafItemColorMapping](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.SfTreeMap.html#Syncfusion_SfTreeMap_XForms_SfTreeMap_LeafItemColorMapping)'| markdownify }}</td>
 <td>LeafItemBrushSettings</td>
 <td>Gets or sets the LeafItemColorSettings property. This property is used to set color settings for leaf items.</td>
 </tr>
 
 <tr>
-<td>{{'[]()'| markdownify }}</td>
+<td>{{'[LegendSettings](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.SfTreeMap.html#Syncfusion_SfTreeMap_XForms_SfTreeMap_LegendSettings)'| markdownify }}</td>
 <td>LegendSettings</td>
 <td>Gets or sets the Legendsettings property. This property is used to customize the settings for legend.</td>
 </tr>
 
 <tr>
-<td>{{'[]()'| markdownify }}</td>
+<td>{{'[Levels](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.SfTreeMap.html#Syncfusion_SfTreeMap_XForms_SfTreeMap_Levels)'| markdownify }}</td>
 <td>Levels</td>
 <td>Gets or sets the levels property. This property is an list collection of TreeMapleve.</td>
 </tr>
 
 <tr>
-<td>{{'[]()'| markdownify }}</td>
+<td>{{'[SelectedItems](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.SfTreeMap.html#Syncfusion_SfTreeMap_XForms_SfTreeMap_SelectedItems)'| markdownify }}</td>
 <td>SelectedItems</td>
 <td>Gets the selected items property. This property is an collection of object.</td>
 </tr>
 
 <tr>
-<td>{{'[]()'| markdownify }}</td>
+<td>{{'[SelectionMode](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.SfTreeMap.html#Syncfusion_SfTreeMap_XForms_SfTreeMap_SelectionMode)'| markdownify }}</td>
 <td>SelectionMode</td>
 <td>Gets or sets the selection mode property. This property is used to customize the selection for tree map.</td>
 </tr>
 
 <tr>
-<td>{{'[]()'| markdownify }}</td>
+<td>{{'[ShowTooltip](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.SfTreeMap.html#Syncfusion_SfTreeMap_XForms_SfTreeMap_ShowTooltip)'| markdownify }}</td>
 <td>ShowToolTip</td>
 <td>Gets or sets a value indicating whether the tooltip should be enabled for tree map.</td>
 </tr>
 
 <tr>
-<td>{{'[]()'| markdownify }}</td>
+<td>{{'[TooltipSettings](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.SfTreeMap.html#Syncfusion_SfTreeMap_XForms_SfTreeMap_TooltipSettings)'| markdownify }}</td>
 <td>ToolTipSettings</td>
 <td>Gets or sets the tooltipsettings value to treemap.</td>
 </tr>
 
 <tr>
-<td>{{'[]()'| markdownify }}</td>
+<td>{{'[TooltipTemplate](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.TooltipSetting.html#Syncfusion_SfTreeMap_XForms_TooltipSetting_TooltipTemplate)'| markdownify }}</td>
 <td>ToolTipTemplate</td>
 <td>Gets or sets the tooltip template.</td>
 </tr>
 
 <tr>
-<td>{{'[]()'| markdownify }}</td>
+<td>Nil</td>
 <td>GroupItemBrushSettings</td>
 <td>Gets or sets the settings for the group item brush, which is used to customize the group items in the SfTreeMap.</td>
 </tr>
@@ -368,25 +368,25 @@ public class PopulationDetails
 </tr>
 
 <tr>
-<td>{{'[]()'| markdownify }}</td>
+<td>Nil</td>
 <td>Item</td>
 <td>Gets or sets the item associated with the TreeMapItemInfo.</td>
 </tr>
 
 <tr>
-<td>{{'[]()'| markdownify }}</td>
+<td>Nil</td>
 <td>GroupLevel</td>
 <td>Gets or sets the group level of the item.</td>
 </tr>
 
 <tr>
-<td>{{'[]()'| markdownify }}</td>
+<td>Nil</td>
 <td>Background</td>
 <td>Gets the background brush for the item.</td>
 </tr>
 
 <tr>
-<td>{{'[]()'| markdownify }}</td>
+<td>Nil</td>
 <td>PrimaryValueText</td>
 <td>Gets the primary value text of the item.</td>
 </tr>
@@ -429,6 +429,7 @@ public partial class MainPage : ContentPage
         SfTreeMap treeMap = new SfTreeMap();
         PopulationViewModel viewModel = new PopulationViewModel();
         treeMap.DataSource = viewModel.PopulationDetails;
+        this.treeMap.LeafItemSettings = new TreeMapLeafItemSettings() { LabelPath = "JobDescription", Stroke = Brush.Black };
         this.Content = treeMap;
     }
 }
@@ -478,37 +479,37 @@ public class PopulationDetails
 <th>Description</th></tr>
 
 <tr>
-<td>{{'[]()'| markdownify }}</td>
+<td>{{'[BorderColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.LeafItemSettings.html#Syncfusion_SfTreeMap_XForms_LeafItemSettings_BorderColor)'| markdownify }}</td>
 <td>Stroke</td>
 <td>Gets or sets the stroke property. This property is used to set the leaf level item border color.</td>
 </tr>
 
 <tr>
-<td>{{'[]()'| markdownify }}</td>
+<td>{{'[BorderWidth](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.LeafItemSettings.html#Syncfusion_SfTreeMap_XForms_LeafItemSettings_BorderWidth)'| markdownify }}</td>
 <td>StrokeWidth</td>
 <td>Gets or sets the StrokeThickness property. This property is used to customize the width of tree map item.</td>
 </tr>
 
 <tr>
-<td>{{'[]()'| markdownify }}</td>
+<td>{{'[Gap](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.LeafItemSettings.html#Syncfusion_SfTreeMap_XForms_LeafItemSettings_Gap)'| markdownify }}</td>
 <td>Spacing</td>
 <td>Gets or sets the Gap property. This property is used to set padding between leaf level items.</td>
 </tr>
 
 <tr>
-<td>{{'[]()'| markdownify }}</td>
+<td>{{'[LabelPath](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.LeafItemSettings.html#Syncfusion_SfTreeMap_XForms_LeafItemSettings_LabelPath)'| markdownify }}</td>
 <td>LabelPath</td>
 <td>Gets or sets the data label path property. This property is used to set in which path label should be applied</td>
 </tr>
 
 <tr>
-<td>{{'[]()'| markdownify }}</td>
+<td>{{'[LabelStyle](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.LeafItemSettings.html#Syncfusion_SfTreeMap_XForms_LeafItemSettings_LabelStyle)'| markdownify }}</td>
 <td>TextStyle</td>
 <td>Gets or sets the text style property. This is used to set different style labels.</td>
 </tr>
 
 <tr>
-<td>{{'[]()'| markdownify }}</td>
+<td>{{'[OverflowMode](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.LeafItemSettings.html#Syncfusion_SfTreeMap_XForms_LeafItemSettings_OverflowMode)'| markdownify }}</td>
 <td>TextFormatOption</td>
 <td>Gets or sets the TextFormatOption.</td>
 </tr>
@@ -555,6 +556,7 @@ public partial class MainPage : ContentPage
         SfTreeMap treeMap = new SfTreeMap();
         PopulationViewModel viewModel = new PopulationViewModel();
         treeMap.DataSource = viewModel.PopulationDetails;
+        this.treeMap.LegendSettings = new TreeMapLegendSettings() { ShowLegend = true };
         this.Content = treeMap;
     }
 }
@@ -604,37 +606,37 @@ public class PopulationDetails
 <th>Description</th></tr>
 
 <tr>
-<td>{{'[]()'| markdownify }}</td>
+<td>{{'[ShowLegend](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.LegendSettings.html#Syncfusion_SfTreeMap_XForms_LegendSettings_ShowLegend)'| markdownify }}</td>
 <td>ShowLegend</td>
 <td>Gets or sets a value indicating whether the legend should be visible for tree map.</td>
 </tr>
 
 <tr>
-<td>{{'[]()'| markdownify }}</td>
+<td>{{'[IconSize](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.LegendSettings.html#Syncfusion_SfTreeMap_XForms_LegendSettings_IconSize)'| markdownify }}</td>
 <td>IconSize</td>
 <td>Gets or sets the IconSize property. This property is used to set size for the legend Icons.</td>
 </tr>
 
 <tr>
-<td>{{'[]()'| markdownify }}</td>
+<td>{{'[LegendIcon](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.LegendSettings.html#Syncfusion_SfTreeMap_XForms_LegendSettings_LegendIcon)'| markdownify }}</td>
 <td>IconType</td>
 <td>Gets or sets the icon type property. This property is used to customize the icons.</td>
 </tr>
 
 <tr>
-<td>{{'[]()'| markdownify }}</td>
+<td>{{'[LegendPosition](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.LegendSettings.html#Syncfusion_SfTreeMap_XForms_LegendSettings_LegendPosition)'| markdownify }}</td>
 <td>Placement</td>
 <td>Gets or sets the LegendPlacement property. This property is used to customize the position for legends.</td>
 </tr>
 
 <tr>
-<td>{{'[]()'| markdownify }}</td>
+<td>{{'[Size](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.LegendSettings.html#Syncfusion_SfTreeMap_XForms_LegendSettings_Size)'| markdownify }}</td>
 <td>Size</td>
 <td>Gets or sets the size property. This method is used to set the legend size.</td>
 </tr>
 
 <tr>
-<td>{{'[]()'| markdownify }}</td>
+<td>{{'[LabelStyle](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.LegendSettings.html#Syncfusion_SfTreeMap_XForms_LegendSettings_LabelStyle)'| markdownify }}</td>
 <td>TextStyle</td>
 <td>Gets or sets the text style property. This is used to set different style labels.</td>
 </tr>
@@ -729,7 +731,7 @@ public class PopulationDetails
 <th>Description</th></tr>
 
 <tr>
-<td>{{'[]()'| markdownify }}</td>
+<td>{{'[Color](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.UniColorMapping.html#Syncfusion_SfTreeMap_XForms_UniColorMapping_Color)'| markdownify }}</td>
 <td>Brush</td>
 <td>Gets or sets the color value for tree map item. This is used to set color for each tree map item.</td>
 </tr>
@@ -824,19 +826,19 @@ public class PopulationDetails
 <th>Description</th></tr>
 
 <tr>
-<td>{{'[]()'| markdownify }}</td>
+<td>{{'[Color](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.DesaturationColorMapping.html#Syncfusion_SfTreeMap_XForms_DesaturationColorMapping_Color)'| markdownify }}</td>
 <td>Brush</td>
 <td>Gets or sets the color value for the tree map item. This is used to set color for each tree map item.</td>
 </tr>
 
 <tr>
-<td>{{'[]()'| markdownify }}</td>
+<td>{{'[From](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.DesaturationColorMapping.html#Syncfusion_SfTreeMap_XForms_DesaturationColorMapping_From)'| markdownify }}</td>
 <td>From</td>
 <td>Gets or sets the from value for desaturation. The From value is used to point where the desaturation starts.</td>
 </tr>
 
 <tr>
-<td>{{'[]()'| markdownify }}</td>
+<td>{{'[To](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.DesaturationColorMapping.html#Syncfusion_SfTreeMap_XForms_DesaturationColorMapping_To)'| markdownify }}</td>
 <td>To</td>
 <td>Gets or sets the two values for desaturation. The To value is used to point where the desaturation ends.</td>
 </tr>
@@ -951,7 +953,7 @@ public class PopulationDetails
 <th>Description</th></tr>
 
 <tr>
-<td>{{'[]()'| markdownify }}</td>
+<td>{{'[Colors](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.PaletteColorMapping.html#Syncfusion_SfTreeMap_XForms_PaletteColorMapping_Colors)'| markdownify }}</td>
 <td>Brushes</td>
 <td>Gets or sets the color value for the tree map item. The Colors is a collection of colors.</td>
 </tr>
@@ -1073,25 +1075,25 @@ public class PopulationDetails
 <th>Description</th></tr>
 
 <tr>
-<td>{{'[]()'| markdownify }}</td>
+<td>{{'[LegendLabel](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.Range.html#Syncfusion_SfTreeMap_XForms_Range_LegendLabel)'| markdownify }}</td>
 <td>LegendLabel</td>
 <td>Gets or sets the legend label for the tree map. This is used to describe the range of values.</td>
 </tr>
 
 <tr>
-<td>{{'[]()'| markdownify }}</td>
+<td>{{'[Color](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.Range.html#Syncfusion_SfTreeMap_XForms_Range_Color)'| markdownify }}</td>
 <td>Brush</td>
 <td>Gets or sets the Color value for range. This is used to set color for each range.</td>
 </tr>
 
 <tr>
-<td>{{'[]()'| markdownify }}</td>
+<td>{{'[From](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.Range.html#Syncfusion_SfTreeMap_XForms_Range_From)'| markdownify }}</td>
 <td>From</td>
 <td>Gets or sets the from value for Range. The From value is used to point where the range starts.</td>
 </tr>
 
 <tr>
-<td>{{'[]()'| markdownify }}</td>
+<td>{{'[To](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.Range.html#Syncfusion_SfTreeMap_XForms_Range_To)'| markdownify }}</td>
 <td>To</td>
 <td>Gets or sets the to value for Range. The To value is used to point where the range ends.</td>
 </tr>
@@ -1191,25 +1193,25 @@ public class PopulationDetails
 <th>Description</th></tr>
 
 <tr>
-<td>{{'[]()'| markdownify }}</td>
+<td>{{'[BackgroundColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.TooltipSetting.html#Syncfusion_SfTreeMap_XForms_TooltipSetting_BackgroundColor)'| markdownify }}</td>
 <td>Background</td>
 <td>Gets or sets the background color.</td>
 </tr>
 
 <tr>
-<td>{{'[]()'| markdownify }}</td>
+<td>{{'[Duration](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.TooltipSetting.html#Syncfusion_SfTreeMap_XForms_TooltipSetting_Duration)'| markdownify }}</td>
 <td>Duration</td>
 <td>Gets or sets a value to specify the duration time in seconds for which tooltip will be displayed.</td>
 </tr>
 
 <tr>
-<td>{{'[]()'| markdownify }}</td>
+<td>{{'[TextColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.TooltipSetting.html#Syncfusion_SfTreeMap_XForms_TooltipSetting_TextColor)'| markdownify }}</td>
 <td>TextStyle</td>
 <td>Gets or sets to customize the text style.</td>
 </tr>
 
 <tr>
-<td>{{'[]()'| markdownify }}</td>
+<td>{{'[StrokeColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.TooltipSetting.html#Syncfusion_SfTreeMap_XForms_TooltipSetting_StrokeColor)'| markdownify }}</td>
 <td>Stroke</td>
 <td>Gets or sets the stroke color.</td>
 </tr>
@@ -1307,43 +1309,43 @@ public class PopulationDetails
 <th>Description</th></tr>
 
 <tr>
-<td>{{'[]()'| markdownify }}</td>
+<td>{{'[LabelPath](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.TreeMapLevel.html#Syncfusion_SfTreeMap_XForms_TreeMapLevel_LabelPath)'| markdownify }}</td>
 <td>GroupPath</td>
 <td>Gets or sets the Header path property. This property is used to set the path for header of the tree map.</td>
 </tr>
 
 <tr>
-<td>{{'[]()'| markdownify }}</td>
+<td>Nil</td>
 <td>Background</td>
 <td>Gets or sets the Group Background color property. This property is used to set the backround</td>
 </tr>
 
 <tr>
-<td>{{'[]()'| markdownify }}</td>
+<td>Nil</td>
 <td>Stroke</td>
 <td>Gets or sets the Group Border Color property. This property is used to set color for the group of the tree map. This is a bindable property.</td>
 </tr>
 
 <tr>
-<td>{{'[]()'| markdownify }}</td>
+<td>Nil</td>
 <td>StrokeWidth</td>
 <td>Gets or sets the Group Border Thickness property. This property is used to set thickness for the groups of the tree map.</td>
 </tr>
 
 <tr>
-<td>{{'[]()'| markdownify }}</td>
+<td>Nil</td>
 <td>Spacing</td>
 <td>Gets or sets the Group Gap property. This property is used to customize the gap between the groups of the tree map.</td>
 </tr>
 
 <tr>
-<td>{{'[]()'| markdownify }}</td>
+<td>{{'[HeaderStyle](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.TreeMapLevel.html#Syncfusion_SfTreeMap_XForms_TreeMapLevel_HeaderStyle)'| markdownify }}</td>
 <td>TextStyle</td>
 <td>Gets or sets the customize the text property.</td>
 </tr>
 
 <tr>
-<td>{{'[]()'| markdownify }}</td>
+<td>{{'[HeaderHeight](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.TreeMapLevel.html#Syncfusion_SfTreeMap_XForms_TreeMapLevel_HeaderHeight)'| markdownify }}</td>
 <td>HeaderHeight</td>
 <td>Gets or sets the HeaderHeight property. This property is used to set the height of the header for the tree map.</td>
 </tr>
@@ -1361,25 +1363,25 @@ The `FontColor`, `FontSize`, `FontFamily`, and `FontAttributes` properties of th
 </tr>
 
 <tr>
-<td>{{'[FontColor]()'| markdownify }}</td>
+<td>{{'[Color](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.Style.html#Syncfusion_SfTreeMap_XForms_Style_Color)'| markdownify }}</td>
 <td>TextColor</td>
 <td>Gets or sets the text color for the SfTreeMap control.</td>
 </tr>
 
 <tr>
-<td>{{'[FontSize]()'| markdownify }}</td>
+<td>{{'[FontSize](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.Style.html#Syncfusion_SfTreeMap_XForms_Style_FontSize)'| markdownify }}</td>
 <td>FontSize</td>
 <td>Gets or sets the double value that represents the font size of the SfTreeMap control.</td>
 </tr>
 
 <tr>
-<td>{{'[FontFamily]()'| markdownify }}</td>
+<td>{{'[FontFamily](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.Style.html#Syncfusion_SfTreeMap_XForms_Style_FontFamily)'| markdownify }}</td>
 <td>FontFamily</td>
 <td>Gets or sets the string, that represents font family of the SfTreeMap control.</td>
 </tr>
 
 <tr>
-<td>{{'[FontAttributes]()'| markdownify }}</td>
+<td>{{'[FontAttributes](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.Style.html#Syncfusion_SfTreeMap_XForms_Style_FontAttributes)'| markdownify }}</td>
 <td>FontAttributes</td>
 <td>Gets or sets the FontAttributes of the SfTreeMap control.</td>
 </tr>
@@ -1396,31 +1398,31 @@ The `FontColor`, `FontSize`, `FontFamily`, and `FontAttributes` properties of th
 </tr>
 
 <tr>
-<td>{{'[]()'| markdownify }}</td>
+<td>{{'[LabelOverflowMode](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.LabelOverflowMode.html)'| markdownify }}</td>
 <td>TextFormatOption</td>
 <td>Specifies text formatting options for tree map leaf items in the SfTreeMap.</td>
 </tr>
 
 <tr>
-<td>{{'[]()'| markdownify }}</td>
+<td>{{'[LayoutTypes](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.LayoutTypes.html)'| markdownify }}</td>
 <td>LayoutType</td>
 <td>Specifies the layout type of algorithm used to arrange the items in the SfTreeMap.</td>
 </tr>
 
 <tr>
-<td>{{'[]()'| markdownify }}</td>
+<td>{{'[LegendPositions](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.LegendPositions.html)'| markdownify }}</td>
 <td>LegendPlacement</td>
 <td>Represents the legend placement to customize the legend position.</td>
 </tr>
 
 <tr>
-<td>{{'[]()'| markdownify }}</td>
+<td>{{'[LegendIcons](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.LegendIcons.html)'| markdownify }}</td>
 <td>LegendIconType</td>
 <td>Specifies the shape of icons used in legends for the SfTreeMap.</td>
 </tr>
 
 <tr>
-<td>{{'[]()'| markdownify }}</td>
+<td>{{'[SelectionMode](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.SelectionMode.html)'| markdownify }}</td>
 <td>SelectionMode</td>
 <td>Specifies the selection mode for the tree map items in the SfTreeMap.</td>
 </tr>
@@ -1437,7 +1439,7 @@ The `FontColor`, `FontSize`, `FontFamily`, and `FontAttributes` properties of th
 </tr>
 
 <tr>
-<td>{{'[]()'| markdownify }}</td>
+<td>Nil</td>
 <td>SelectionChanged</td>
 <td>Provides data for the event when the selection is changed in the SfTreeMap.</td>
 </tr>
