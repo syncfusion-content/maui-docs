@@ -28,7 +28,7 @@ The following properties are used to configure the plot bands:
 * [`RepeatEvery`]() - changes the frequency of the plot band being repeated.
 * [`RepeatUntil`]() - Specifies the end value at which the strip line stops repeating.
 
-## Add PlotBand for numerical axis
+## Add plot band for numerical axis
 
 Plot band can be added to the numerical axis by specifying index values to the [Start]() and [Size]() properties.
 
@@ -200,7 +200,7 @@ This feature is used to enable the plot bands to be drawn repeatedly at the regu
 
 ![Visualize plot band recurrence in .NET MAUI](StripLines_Images/Reaccurence.png)
 
-## Segmented Plot Band
+## Segmented plot band
 
 Typically, if you draw a plot band for a vertical axis, the height of the plot band is determined by the [Start]() and [End]() properties, and the end of the plot band is equivalent to the end of its associated horizontal axis, i.e., plot band is drawn horizontally to the entire stretch of its associated horizontal axis. Similarly, for horizontal axis, width is determined by the [Start]() and [Size]() properties, and vertically, it is drawn to the entire stretch of the associated vertical axis.
 
@@ -263,7 +263,7 @@ Suppose, you need to draw a plot band that should not stretch along its associat
 
 ![Visualize segmented plot band in .NET MAUI](StripLines_Images/segmented.png)
 
-## Customized Text
+## Customized label
 
 [Text]() can be added to plot bands to indicate the significance of each particular region. The [LabelStyle]() property provides options to customize plot band text.
 
