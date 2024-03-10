@@ -21,7 +21,7 @@ The Polar Chart was created from the scratch using the upgraded APIs and perform
 SfChart
 </td>
 <td>
-<div> SfPolarChart </div>
+<div> SfCartesianChart </div>
 <div> SfCircularChart </div>
 <div> SfFunnelChart</div>
 <div> SfPyramidChart </div>
@@ -34,7 +34,7 @@ To make the migration easier, the majority of the APIs from the Xamarin [SfChart
 
 ## API migration
 
-To initialize the control, import the Chart Directionspace and Initialize [SfPolarChart]() as shown in the following code sample. 
+To initialize the control, import the Chart namespace and Initialize [SfPolarChart]() as shown in the following code sample. 
 
 <table>
 <tr>
@@ -46,7 +46,7 @@ To initialize the control, import the Chart Directionspace and Initialize [SfPol
 {% highlight xaml %}
 <ContentPage
     . . .
-    xmlns:chart="clr-Directionspace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms">
+    xmlns:chart="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms">
 
         <chart:SfChart/>
 
@@ -75,7 +75,7 @@ using Syncfusion.SfChart.XForms;
 
 <ContentPage
     . . .    
-    xmlns:chart="clr-Directionspace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
+    xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
    
         <chart:SfPolarChart/>
    
@@ -146,14 +146,6 @@ The following table illustrates the API migration for the chart.
 <td>LabelRotation</td>
 </tr>
 <tr>
-<td>OpposedPosition</td>
-<td>CrossesAt</td>
-</tr>
-<tr>
-<td>-</td>
-<td>CrossAxisDirection</td>
-</tr>
-<tr>
 <td>PlotOffset</td>
 <td>PlotOffsetStart, PlotOffsetEnd</td>
 </tr>
@@ -206,7 +198,7 @@ The following code example explains how to migrate the axis of Xamarin [SfChart]
 
 <chart:SfChart>  
     <chart:SfChart.PrimaryAxis>
-	     <chart:NumericalAxis/>
+	     <chart:CategoryAxis/>
     </chart:SfChart.PrimaryAxis>
 
     <chart:SfChart.SecondaryAxis>
@@ -221,7 +213,7 @@ SfChart chart = new SfChart();
 CategoryAxis primaryAxis = new CategoryAxis();
 chart.PrimaryAxis = primaryAxis;
 
-NumericalAxis secondaryAxis  =  new NumericalAxis  ();
+NumericalAxis secondaryAxis  =  new NumericalAxis();
 chart.SecondaryAxis = secondaryAxis;
 
 this.Content = chart;
@@ -241,7 +233,7 @@ this.Content = chart;
 
 <chart:SfPolarChart>                            
     <chart:SfPolarChart.PrimaryAxis>
-        <chart:NumericalAxis/>
+        <chart:CategoryAxis/>
     </chart:SfPolarChart.PrimaryAxis>
     
     <chart:SfPolarChart.SecondaryAxis>
@@ -284,6 +276,10 @@ this.Content = chart;
 <tr>
 <td>DataMarker</td>
 <td>ShowDataLabels, DataLabelSettings</td>
+</tr>
+<tr>
+<td>IsClosed</td>
+<td>IsClosed</td>
 </tr>
 </table>
 
@@ -525,9 +521,9 @@ To customize the data label appearance, create an instance of the [ChartDataMark
 
 <chart:SfChart>  
      . . .
-    <chart:PolarAreaSeries ItemsSource="{Binding Data}" 
-                        XBindingPath="Category"
-                        YBindingPath="Value">
+    <chart:PolarAreaSeries ItemsSource="{Binding PlantDetails}" 
+                        XBindingPath="Direction"
+                        YBindingPath="Tree">
 	    <chart:PolarAreaSeries.DataMarker>
 	        <chart:ChartDataMarker ShowLabel="True">
 		        <chart:ChartDataMarker.LabelStyle>
@@ -579,8 +575,8 @@ chart.Series.Add(series);
 
 <chart:SfPolarChart>
     . . .
-    <chart:PolarAreaSeries ItemsSource="{Binding Data}" XBindingPath="Category" 
-    YBindingPath="Value" ShowDataLabels="True">
+    <chart:PolarAreaSeries ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" 
+    YBindingPath="Tree" ShowDataLabels="True">
         <chart:PolarAreaSeries.DataLabelSettings>
             <chart:PolarDataLabelSettings>
                 <chart:PolarDataLabelSettings.LabelStyle>

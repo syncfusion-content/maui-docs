@@ -203,12 +203,14 @@ The [Show]() method is used to activate the tooltip at the specified location.
     <chart:SfPolarChart>
         .....
         <chart:SfPolarChart.TooltipBehavior>
-            <chart:ChartTooltipBehavior x:Name="tooltip"></chart:ChartTooltipBehavior>
+            <chart:ChartTooltipBehavior x:Name="tooltip">
+            </chart:ChartTooltipBehavior>
         </chart:SfPolarChart.TooltipBehavior>
         .....
     </chart:SfPolarChart>
 
-    <Button Text="Show tooltip" Clicked="Button_Clicked"></Button>
+    <Button Text="Show tooltip" Clicked="Button_Clicked">
+    </Button>
 
 {% endhighlight %}
 

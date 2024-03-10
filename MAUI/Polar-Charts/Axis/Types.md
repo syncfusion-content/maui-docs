@@ -271,7 +271,7 @@ The following code illustrates how to define the property [ArrangeByIndex]() in 
     chart.SecondaryAxis.Add(secondaryAxis);  
 
     PolarAreaSeries series1 = new PolarAreaSeries();
-    series1.ItemsSource = ItePlantDetailsms; 
+    series1.ItemsSource = PlantDetails; 
     series1.XBindingPath = "Direction";
     series1.YBindingPath = "Tree";
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Data label in .NET MAUI Chart control | Syncfusion
+title: Data labels in .NET MAUI Chart control | Syncfusion
 description: Learn here all about how to configure the data labels and their features in Syncfusion .NET MAUI Chart (SfPolarChart).
 platform: maui
 control: SfPolarChart
 documentation: ug
 ---
 
-# Data Label in .NET MAUI Chart
+# Data Labels in .NET MAUI Chart
 
 Data labels are used to display values related to a chart segment. Values from a data point(x, y) or other custom properties from a data source can be displayed. 
 
@@ -138,6 +138,120 @@ series.DataLabelSettings = new PolarDataLabelSettings()
 
 chart.Series.Add(series);
 
+{% endhighlight %}
+
+{% endtabs %}
+
+## Formatting Label Context
+
+The content of the label can be customized using the [LabelContext]() property. Following are the two options that are supported now,
+
+* [Percentage]() - This will show the percentage value of corresponding data point Y value
+
+* [YValue]() - This will show the corresponding Y value.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+    <chart:SfPolarChart>
+        . . .
+        <chart:PolarAreaSeries ItemsSource="{Binding PlantDetails}" 
+                            ShowDataLabels="True"
+                            XBindingPath="Direction"
+                            YBindingPath="Tree" 
+                            LabelContext="Percentage"/>
+
+    </chart:SfPolarChart>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+    SfPolarChart chart = new SfPolarChart();
+    . . .
+    PolarAreaSeries series = new PolarAreaSeries()
+    {
+        ItemsSource = new ViewModel().PlantDetails,
+        XBindingPath = "Direction",
+        YBindingPath = "Tree",
+        ShowDataLabels = true,
+        LabelContext = LabelContext.Percentage
+    };
+
+    chart.Series.Add(series);
+    this.Content = chart;
+        
+{% endhighlight %}
+
+{% endtabs %}
+
+## LabelTemplate
+
+The [SfPolarChart]() provides support to customize the appearance of the datalabel by using the [LabelTemplate]() property.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+    <chart:SfPolarChart >
+        <chart:SfPolarChart.Resources>
+            <DataTemplate x:Key="labelTemplate">
+                <HorizontalStackLayout Spacing="5">
+                    <Label Text="{Binding Item.Tree}" VerticalOptions="Center" FontSize = "15"/>
+                    <Image Source="arrow.png" WidthRequest="15" HeightRequest="15"/>
+                </HorizontalStackLayout>
+            </DataTemplate>
+        </chart:SfPolarChart.Resources>
+        . . .
+        <chart:PolarAreaSeries ItemsSource="{Binding PlantDetails}" 
+                            LabelTemplate="{StaticResource labelTemplate}"
+                            XBindingPath="Direction"
+                            YBindingPath="Tree" 
+                            ShowDataLabels="True"/>
+
+    </chart:SfPolarChart>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+    SfPolarChart chart = new SfPolarChart();
+    . . .
+    PolarAreaSeries series = new PolarAreaSeries();
+    series.ShowDataLabels = true;
+    series.ItemsSource = new ViewModel().PlantDetails;
+    series.XBindingPath = "Direction";
+    series.YBindingPath = "Tree";
+
+    DataTemplate labelTemplate = new DataTemplate(() =>
+    {
+        HorizontalStackLayout horizontalStackLayout = new HorizontalStackLayout { Spacing = 5 };
+
+        var label = new Label
+        {
+            VerticalOptions = LayoutOptions.Center,
+            FontSize = 15
+        };
+        label.SetBinding(Label.TextProperty, new Binding("Item.Tree"));
+
+        var image = new Image
+        {
+            Source = "arrow.png",
+            WidthRequest = 15,
+            HeightRequest = 15
+        };
+        
+        horizontalStackLayout.Children.Add(label);
+        horizontalStackLayout.Children.Add(image);
+        
+        return horizontalStackLayout;
+    });
+
+    series.LabelTemplate = labelTemplate;
+    chart.Series.Add(series);
+    this.Content = chart;
+        
 {% endhighlight %}
 
 {% endtabs %}

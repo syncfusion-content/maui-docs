@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Polar Area Chart in .NET MAUI Chart control | Syncfusion
-description: Learn here all about the Polar chart type and its features in the Syncfusion .NET MAUI Chart (SfPolarChart) control.
+description: Learn here all about the Polar area chart type and its features in the Syncfusion .NET MAUI Chart (SfPolarChart) control.
 platform: maui
 control: SfPolarChart
 documentation: ug
@@ -106,7 +106,7 @@ The [IsClosed]() property used to render the series with or without closed path.
 
 {% highlight xaml %}
 
-<chart:SfPolarChart GridLineType="Polygon"> 
+<chart:SfPolarChart> 
 . . .
     <chart:PolarAreaSeries ItemsSource="{Binding PlantDetails}"
 					  XBindingPath="Direction"
@@ -120,7 +120,6 @@ The [IsClosed]() property used to render the series with or without closed path.
 {% highlight c# %}
 
 SfPolarChart chart = new SfPolarChart();
-chart.GridLineType = PolarChartGridLineType.Polygon;
 . . .
 PolarAreaSeries series = new PolarAreaSeries()
 {
@@ -218,14 +217,6 @@ In order to change the series markers appearance, create an instance of the [Mar
 SfPolarChart chart = new SfPolarChart();
 
 ...
-ChartMarkerSettings chartMarker= new ChartMarkerSettings();
-        chartMarker.Type = ShapeType.Diamond;
-        chartMarker.Fill = Colors.Brown;
-        chartMarker.Stroke = Colors.Black;
-        chartMarker.StrokeWidth= 1;
-        chartMarker.Height = 8;
-        chartMarker.Width = 8;
-
 PolarAreaSeries series = new PolarAreaSeries()
 {
    XBindingPath = "Direction",
@@ -233,6 +224,14 @@ PolarAreaSeries series = new PolarAreaSeries()
    ItemsSource = new ViewModel().PlantDetails,
    ShowMarkers = true,
  };
+
+ChartMarkerSettings chartMarker= new ChartMarkerSettings();
+        chartMarker.Type = ShapeType.Diamond;
+        chartMarker.Fill = Colors.Brown;
+        chartMarker.Stroke = Colors.Black;
+        chartMarker.StrokeWidth= 1;
+        chartMarker.Height = 8;
+        chartMarker.Width = 8;
 
 chart.Series.Add(series);
 this.Content = chart;
