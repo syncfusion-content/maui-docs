@@ -9,11 +9,11 @@ documentation: ug
 
 # Serialization in .NET MAUI Image Editor (SfImageEditor)
 
-The Image Editor control provides support to serialize and deserialize the annotations, free hand drawing, text and toolbar settings. You can save the current state of the image editor and load it back when it is needed.
+The Image Editor control provides support to serialize and deserialize the shape, text and pen annotations along with their settings. You can save the current state of the image editor annotations and load it back when it is needed.
 
 ## Serialization
 
-The `Serialize()` method is used to serialize the current edits of shapes. It allows you to store the SfImageEditor annotation settings by passing the stream as a parameter to the `Serialize` method.
+The `Serialize` method is used to serialize the current edits of shapes. It allows you to store the `SfImageEditor` annotations to the stream by passing the stream as a parameter to the `Serialize` method.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -29,11 +29,19 @@ The `Serialize()` method is used to serialize the current edits of shapes. It al
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
     
-    MemoryStream memoryStream;
     private void OnSerializeClicked(object sender, EventArgs e)
     {
-        this.memoryStream = new MemoryStream();
-        this.imageEditor.Serialize(memoryStream);
+        string filePath = Path.Combine(FileSystem.Current.CacheDirectory, "ImageEditor.xml");
+        if (!File.Exists(filePath))
+        {
+            using (FileStream fs = File.Create(filePath))
+            {
+            }
+        }
+        using (var fileStream = new FileStream(filePath, FileMode.Create, FileAccess.Write))
+        {
+            this.imageEditor.Serialize(fileStream);
+        }
     }
 
 {% endhighlight %}
@@ -41,7 +49,7 @@ The `Serialize()` method is used to serialize the current edits of shapes. It al
 
 ## Deserialization
 
-The Deserialize() method is used to deserialize the edits over an image. It allows you to reload the SfImageEditor control with the settings available in the stream.
+The `Deserialize` method is used to deserialize the annotations over an image. It allows you to reload the `SfImageEditor` control with the annotations available in the stream.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -59,9 +67,20 @@ The Deserialize() method is used to deserialize the edits over an image. It allo
 
     private void OnDeserializeClicked(object sender, EventArgs e)
     {
-        if (this.memoryStream != null)
+        var result = await FilePicker.PickAsync(new PickOptions
         {
-            this.imageEditor.Deserialize(this.memoryStream);
+            PickerTitle = "Select an XML file"
+        });
+        
+        if (result != null)
+        {
+            MemoryStream memoryStream = new MemoryStream();
+            using (Stream stream = await result.OpenReadAsync())
+            {
+                await stream.CopyToAsync(memoryStream);
+            }
+        
+            this.imageEditor.Deserialize(memoryStream);
         }
     }
 
