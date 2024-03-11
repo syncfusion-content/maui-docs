@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Change the editor settings in .NET MAUI DataForm control | Syncfusion
-description: Learn about to change the Syncfusion .NET MAUI DataForm (SfDataForm) settings in mobile and desktop applications from a single shared codebase.
+description: Learn how to change the Syncfusion .NET MAUI DataForm (SfDataForm) settings in mobile and desktop applications from a single shared codebase.
 platform: maui
 control: SfDataForm
 documentation: UG
@@ -677,7 +677,7 @@ public class DataFormItemManagerEditorExt : DataFormItemManager
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-dataform/tree/master/EditorViewCustomizationSample)
 
 ## Label view customization
-You can customize the label view by using the `InitializeDataLabel` method of [DataFormItemManager](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItemManager.html).
+Customize the label view by using the `InitializeDataLabel` method of the  [DataFormItemManager](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItemManager.html).
 
 {% tabs %}
 {% highlight c# %}
