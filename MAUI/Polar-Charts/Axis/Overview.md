@@ -16,11 +16,10 @@ Polar chart supports the following types of chart axis.
 * Category
 * Numeric
 * Date time
-* Logarithm
 
 ## Key features
 
-* Axis supports different types of axes such as Category, Numeric, Date Time and Logarithm.
+* Axis supports different types of axes such as Category, Numeric, and Date Time.
 * It allows you to customize the chart axis line, including grid lines and tick lines. You can also customize the style of the axis line by defining the [AxisLineStyle]().
 * Axis allows you to customize the origin of the chart axis.
 * It provides options to set padding for the axis.

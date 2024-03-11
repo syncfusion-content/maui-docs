@@ -151,38 +151,6 @@ chart.PrimaryAxis.Add(primaryAxis);
 
 ![CategoryAxis support in MAUI Chart](Axis_Images/MAUI_category_axis.png)
 
-### Label placement
-
-The [LabelPlacement]() property in [CategoryAxis]() is used to placed the axis labels based on ticks and between ticks. The default value of [LabelPlacement]() is [OnTicks]().
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<chart:SfPolarChart>
-    . . .
-    <chart:SfPolarChart.PrimaryAxis>
-        <chart:CategoryAxis LabelPlacement="BetweenTicks"/>
-    </chart:SfPolarChart.PrimaryAxis>
-
-</chart:SfPolarChart>
-
-{% endhighlight %}
-
-{% highlight c# %}
-
-SfPolarChart chart = new SfPolarChart();
-. . .
-CategoryAxis primaryAxis = new CategoryAxis()
-{
-    LabelPlacement = LabelPlacement.BetweenTicks
-};
-chart.PrimaryAxis.Add(primaryAxis);
-
-{% endhighlight %}
-
-{% endtabs %}
-
 ### Interval
 
 By default, the [CategoryAxis]() axis labels are display with fixed interval 1. It can customized by using the [Interval]() property of axis.
@@ -220,71 +188,6 @@ chart.SecondaryAxis.Add(secondaryAxis);
 {% endhighlight %}
 
 {% endtabs %}
-
-### Indexed category axis
-
-In Polar Charts, the [ArrangeByIndex]() property is used to determine how the items in a category axis are arranged. 
-
-If [ArrangeByIndex]() is set to true, then the items in the category axis will be arranged according to their index values.
-
-If [ArrangeByIndex]() is set to false, then the items in the category axis will be arranged according to their values. By default, [ArrangeByIndex]() is true.
-
-The following code illustrates how to define the property [ArrangeByIndex]() in chart.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-    <chart:SfPolarChart>
-        . . .
-        <chart:SfPolarChart.PrimaryAxis>
-            <chart:CategoryAxis ArrangeByIndex="False" />
-        </chart:SfPolarChart.PrimaryAxis>
-        <chart:SfPolarChart.SecondaryAxis>
-            <chart:NumericalAxis/>
-        </chart:SfPolarChart.SecondaryAxis>
-
-        <chart:PolarAreaSeries ItemsSource="{Binding PlantDetails}"
-                            XBindingPath="Direction"
-                            YBindingPath="Tree"/>
-
-        <chart:PolarAreaSeries ItemsSource="{Binding PlantDetails}"
-                            XBindingPath="Direction"
-                            YBindingPath="Flower"/>
-
-        </chart:SfPolarChart>
-
-{% endhighlight %}
-
-{% highlight c# %}
-
-    SfPolarChart chart = new SfPolarChart();
-    . . .
-    CategoryAxis primaryAxis = new CategoryAxis()
-    {
-        ArrangeByIndex = false, 
-    };
-    chart.PrimaryAxis.Add(primaryAxis);
-
-    NumericalAxis secondaryAxis = new NumericalAxis();
-    chart.SecondaryAxis.Add(secondaryAxis);  
-
-    PolarAreaSeries series1 = new PolarAreaSeries();
-    series1.ItemsSource = PlantDetails; 
-    series1.XBindingPath = "Direction";
-    series1.YBindingPath = "Tree";
-
-    PolarAreaSeries series2 = new PolarAreaSeries();
-    series2.ItemsSource = PlantDetails;  
-    series2.XBindingPath = "Direction";
-    series2.YBindingPath = "Flower";
-
-    chart.Series.Add(series1);
-    chart.Series.Add(series2);  
-
-{% endhighlight %}
-
-{% endtabs %}    
 
 ## DateTime Axis
 
@@ -419,31 +322,6 @@ chart.SecondaryAxis.Add(secondaryAxis);
 
 {% endtabs %}
 
-## Axis Visibility
-
-Axis visibility can be controlled using the [IsVisible]() property of axis. Default value of [IsVisible]() property is `True`.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<chart:SfPolarChart.SecondaryAxis>
-    <chart:NumericalAxis IsVisible="False"/>
-</chart:SfPolarChart.SecondaryAxis>
-
-{% endhighlight %}
-
-{% highlight c# %}
-
-SfPolarChart chart = new SfPolarChart();
-. . .
-NumericalAxis secondaryAxis = new NumericalAxis() { IsVisible = false };
-chart.SecondaryAxis.Add(secondaryAxis);
-
-{% endhighlight %}
-
-{% endtabs %}
-
 ## Events
 
 ### ActualRangeChanged
@@ -452,8 +330,6 @@ The [ActualRangeChanged]() event is triggered when the actual range of the axis 
 
 * [ActualMinimum]() - used to get the actual minimum value of the axis.
 * [ActualMaximum]() - used to get the actual maximum value of the axis.
-
-N> The actual range is changed by specifying the [ZoomPosition]() and [ZoomFactor]() properties or zooming the chart interactively.
 
 ### LabelCreated
 

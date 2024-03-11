@@ -11,40 +11,6 @@ documentation: ug
 
 Axis labels are used to display the units, measures, or category values of an axis in a user-friendly way. They are generated based on the range and the values bound to the [XBindingPath]() or [YBindingPath]() properties of the series.
 
-## Label Rotation
-
-The [LabelRotation]() property is used to define the angle for the label content.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<chart:SfPolarChart>
-    . . .
-    
-    <chart:SfPolarChart.SecondaryAxis>
-        <chart:NumericalAxis LabelRotation="90"/>
-    </chart:SfPolarChart.SecondaryAxis>
-
-</chart:SfPolarChart>
-
-{% endhighlight %}
-
-{% highlight c# %}
-
-SfPolarChart chart = new SfPolarChart();
-. . .
-
-NumericalAxis secondaryAxis = new NumericalAxis()
-{
-    LabelRotation = 90
-};
-chart.SecondaryAxis.Add(secondaryAxis);
-
-{% endhighlight %}
-
-{% endtabs %}
-
 ## Label customization
 
 The [LabelStyle]() property of the axis provides options to customize the font family, font size, font attributes, and text color of axis labels. The axis labels can be customized using the following properties:
@@ -100,10 +66,11 @@ chart.SecondaryAxis.Add(secondaryAxis);
 
 {% endtabs %}
 
-
 ## Edge Labels Visibility
  
 The visibility of the edge labels of the axis can be controlled using the [EdgeLabelsVisibilityMode]() property. The default value of [EdgeLabelsVisibilityMode]() is `Default`, which displays the edge label based on auto interval calculations.
+
+N> EdgeLabelsDrawingMode and EdgeLabelsVisibilityMode can only be customized for the secondary axis.
 
 **Always Visible**
 
