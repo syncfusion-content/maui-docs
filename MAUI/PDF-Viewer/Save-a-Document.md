@@ -65,4 +65,4 @@ formField.FlattenOnSave = true;
 
 ### Limitation
 
-The flattening process does not preserve existing sticky note annotations in the saved document specifically in Maccatalyst and IOS platforms.
+Currently, when saving a document by Flatten that contains sticky note annotations, the sticky note icon always appears as the default [comment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.StickyNoteIcon.html#Syncfusion_Maui_PdfViewer_StickyNoteIcon_Comment) icon appearance in the saved document.
