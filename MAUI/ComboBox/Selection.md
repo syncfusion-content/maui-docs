@@ -129,6 +129,60 @@ The selected items can be changed interactively by using keyboard or by selectin
 
 ![.NET MAUI ComboBox UI Multiselection.](Images/selection/net-maui-combobox-ui-multiselection.gif)
 
+### TokensWrapMode
+
+There are two ways to display multi selection items in the combo box control. They are
+
+* [Wrap]
+* [None]
+
+#### Wrap Mode
+
+When the [TokensWrapMode] is set to [Wrap] the selected items will be wrapped to the next line of the SfComboBox.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+ <editors:SfComboBox x:Name="comboBox" 
+             HeightRequest="50"
+             WidthRequest="350"
+             ItemsSource="{Binding SocialMedias}"
+             SelectionMode="Multiple"
+             MaxDropDownHeight="250"
+             DisplayMemberPath="Name"
+             TextMemberPath="Name"
+             TokensWrapMode="Wrap" />
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![.NET MAUI ComboBox Multiple selection.](Images/selection/net-maui-combobox-wrapmode.gif)
+
+#### None Mode
+
+When the [TokensWrapMode] is set to [None] the selected item will be wrapped in horizontal orientation.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+ <editors:SfComboBox x:Name="comboBox" 
+             HeightRequest="50"
+             WidthRequest="350"
+             ItemsSource="{Binding SocialMedias}"
+             SelectionMode="Multiple"
+             MaxDropDownHeight="250"
+             DisplayMemberPath="Name"
+             TextMemberPath="Name"
+             TokensWrapMode="None" />
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![.NET MAUI ComboBox Multiple selection.](Images/selection/net-maui-combobox-nonemode.gif)
 
 ## Selection changed notification
 
