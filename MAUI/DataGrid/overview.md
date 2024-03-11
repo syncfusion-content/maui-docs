@@ -39,7 +39,11 @@ The .NET MAUI DataGrid control is used to display and manipulate data in a tabul
 
 * **Styling** - Customize the appearance of cells and headers. Conditional styling is supported.
 
+* **Paging** - Support for loading data in segments when dealing with large volumes of data.
+
 * **Stacked Headers** - Extensive support to show multiple headers called stacked headers.
+
+* **Load More** -  Display an interactive view when the grid reaches its maximum or minimum offset while scrolling down or up. Tapping the interactive view triggers a command to add more data to the item source of the grid at runtime.
 
 * **Exporting** - Support to export the data to Excel and PDF.
 

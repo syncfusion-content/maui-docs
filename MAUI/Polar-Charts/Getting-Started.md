@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting started with .NET MAUI Chart control | Syncfusion
-description: Learn here all about getting started with Syncfusion .NET MAUI Chart (SfPolarChart) control.
+description: This section explains about the getting started with Syncfusion .NET MAUI Chart (SfPolarChart) control.
 platform: maui
 control: SfPolarChart
 documentation: ug
@@ -9,43 +9,43 @@ documentation: ug
 
 # Getting Started with .NET MAUI Chart
 
-This section explains how to populate the Polar chart with data, a title, data labels, a legend, and tooltips. It also covers the essential aspects of getting started with the chart.
+This section explains how to populate the Polar chart with data, a title, data labels, a legend, tooltips and markers. It also covers the essential aspects of getting started with the chart.
 
 ## Creating an application with .NET MAUI chart
 
 1. Create a new .NET MAUI application in Visual Studio.
 2. Syncfusion .NET MAUI components are available on [nuget.org](https://www.nuget.org/). To add SfPolarChart to your project, open the NuGet package manager in Visual Studio, search for Syncfusion.Maui.Charts, and then install it.
 3. To initialize the control, import the Chart namespace.
-4. Initialize the SfPolarChart.
+4. Initialize the [SfPolarChart]().
 
 {% tabs %} 
 
 {% highlight xaml %}
 
-<ContentPage
-    . . .    
-    xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
-    <Grid>
-        <chart:SfPolarChart/>
-    </Grid>
-</ContentPage>
- 
+    <ContentPage
+        . . .    
+        xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
+        <Grid>
+            <chart:SfPolarChart/>
+        </Grid>
+    </ContentPage>
+    
 {% endhighlight %}
 
 {% highlight C# %}
 
-using Syncfusion.Maui.Charts;
-namespace ChartGettingStarted
-{
-    public partial class MainPage : ContentPage
+    using Syncfusion.Maui.Charts;
+    namespace ChartGettingStarted
     {
-        public MainPage()
+        public partial class MainPage : ContentPage
         {
-            InitializeComponent();           
-            SfPolarChart chart = new SfPolarChart(); 
-        }
-    }   
-}
+            public MainPage()
+            {
+                InitializeComponent();           
+                SfPolarChart chart = new SfPolarChart(); 
+            }
+        }   
+    }
 
 {% endhighlight %}
 
@@ -53,36 +53,36 @@ namespace ChartGettingStarted
 
 ## Register the handler
 
-The Syncfusion.Maui.Core nuget package is a dependent package for all Syncfusion controls in .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion Core.
+Syncfusion.Maui.Core NuGet package is a dependent package for all Syncfusion controls in .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion core.
 
 {% highlight C# %}
 
-using Microsoft.Maui;
-using Microsoft.Maui.Hosting;
-using Microsoft.Maui.Controls.Compatibility;
-using Microsoft.Maui.Controls.Hosting;
-using Microsoft.Maui.Controls.Xaml;
-using Syncfusion.Maui.Core.Hosting;
+    using Microsoft.Maui;
+    using Microsoft.Maui.Hosting;
+    using Microsoft.Maui.Controls.Compatibility;
+    using Microsoft.Maui.Controls.Hosting;
+    using Microsoft.Maui.Controls.Xaml;
+    using Syncfusion.Maui.Core.Hosting;
 
-namespace ChartGettingStarted
-{
-    public static class MauiProgram
+    namespace ChartGettingStarted
     {
-        public static MauiApp CreateMauiApp()
+        public static class MauiProgram
         {
-            var builder = MauiApp.CreateBuilder();
-            builder
-            .UseMauiApp<App>()
-            .ConfigureSyncfusionCore()
-            .ConfigureFonts(fonts =>
+            public static MauiApp CreateMauiApp()
             {
-                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-            });
+                var builder = MauiApp.CreateBuilder();
+                builder
+                .UseMauiApp<App>()
+                .ConfigureSyncfusionCore()
+                .ConfigureFonts(fonts =>
+                {
+                    fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+                });
 
-            return builder.Build();
+                return builder.Build();
+            }
         }
     }
-}
 
 
 {% endhighlight %} 
@@ -95,11 +95,11 @@ Now, let us define a simple data model that represents a data point on the chart
 
 {% highlight c# %}
 
-public class PlantData   
-{   
-    public string Direction  { get; set; }
-    public double Tree  { get; set; }
-}
+    public class PlantData   
+    {   
+        public string Direction  { get; set; }
+        public double Tree  { get; set; }
+    }
 
 {% endhighlight %} 
 
@@ -111,33 +111,33 @@ Next, create a view model class and initialize a list of `PlantData` objects as 
 
 {% highlight c# %}
 
-public class ViewModel  
-{
-    public List<PlantData> PlantDetails { get; set; }      
-
-    public ViewModel()       
+    public class ViewModel  
     {
-        PlantDetails  = new List<PlantData>()
+        public List<PlantData> PlantDetails { get; set; }      
+
+        public ViewModel()       
         {
-            new PlantData { Direction = "North", Tree = 80 },
-            new PlantData { Direction = "NorthWest", Tree = 87 },
-            new PlantData { Direction = "West", Tree = 78 },
-            new PlantData { Direction = "SouthWest", Tree = 85 },
-            new PlantData { Direction = "South", Tree = 81 },
-            new PlantData { Direction = "SouthEast", Tree = 88},
-            new PlantData { Direction = "East", Tree = 80},
-            new PlantData { Direction = "NorthEast", Tree = 85}
-        }; 
+            PlantDetails  = new List<PlantData>()
+            {
+                new PlantData { Direction = "North", Tree = 80 },
+                new PlantData { Direction = "NorthWest", Tree = 87 },
+                new PlantData { Direction = "West", Tree = 78 },
+                new PlantData { Direction = "SouthWest", Tree = 85 },
+                new PlantData { Direction = "South", Tree = 81 },
+                new PlantData { Direction = "SouthEast", Tree = 88},
+                new PlantData { Direction = "East", Tree = 80},
+                new PlantData { Direction = "NorthEast", Tree = 85}
+            }; 
+        }
     }
- }
 
 {% endhighlight %} 
 
 {% endtabs %} 
 
-Set the `ViewModel` instance as the `BindingContext` of your page in order to bind the `ViewModel` properties to the chart. 
+Create a `ViewModel` instance and set it as the chart's `BindingContext`. This enables property binding from `ViewModel` class.
  
-N> Add the namespace of the `ViewModel` class to your XAML page if you prefer to set the `BindingContext` in XAML.
+N> Add the namespace of the `ViewModel` class to your XAML page, if you prefer to set the `BindingContext` in XAML.
 
 {% tabs %} 
 
@@ -159,7 +159,7 @@ N> Add the namespace of the `ViewModel` class to your XAML page if you prefer to
 
 {% highlight C# %} 
 
-this.BindingContext = new ViewModel();
+    this.BindingContext = new ViewModel();
 
 {% endhighlight %}
 
@@ -173,14 +173,14 @@ this.BindingContext = new ViewModel();
 
 {% highlight xaml %} 
 
-<chart:SfPolarChart>                            
-    <chart:SfPolarChart.PrimaryAxis>
-        <chart:CategoryAxis/>
-    </chart:SfPolarChart.PrimaryAxis>
-    <chart:SfPolarChart.SecondaryAxis>
-        <chart:NumericalAxis/>
-    </chart:SfPolarChart.SecondaryAxis>                       
-</chart:SfPolarChart>
+    <chart:SfPolarChart>                            
+        <chart:SfPolarChart.PrimaryAxis>
+            <chart:CategoryAxis/>
+        </chart:SfPolarChart.PrimaryAxis>
+        <chart:SfPolarChart.SecondaryAxis>
+            <chart:NumericalAxis/>
+        </chart:SfPolarChart.SecondaryAxis>                       
+    </chart:SfPolarChart>
 
 {% endhighlight %}
 
@@ -188,9 +188,9 @@ this.BindingContext = new ViewModel();
 
     SfPolarChart chart = new SfPolarChart();
     CategoryAxis primaryAxis = new CategoryAxis();
-    chart.PrimaryAxis.Add(primaryAxis);
+    chart.PrimaryAxis = primaryAxis;
     NumericalAxis secondaryAxis = new NumericalAxis();
-    chart.SecondaryAxis.Add(secondaryAxis);
+    chart.SecondaryAxis = secondaryAxis;
 
 {% endhighlight %}
 
@@ -198,7 +198,7 @@ this.BindingContext = new ViewModel();
 
 ## Populate Chart with data
 
-To create a polar chart, you can add a [PolarAreaSeries]() to the polar chart [Series]() collection. Then, bind the `Data` to the series [ItemsSource]() property from its `DataContext`.
+To create a polar chart, you can add a [PolarAreaSeries]() to the polar chart [Series]() property of the chart, and  then bind the `PlantData` property of the above `ViewModel` to the `PolarAreaSeries.ItemsSource` as follows.
 
 N> In order to plot the series, the [XBindingPath]() and [YBindingPath]() properties need to be configured correctly. These properties allow the chart to retrieve values from the corresponding properties in the data model.
 
@@ -206,43 +206,43 @@ N> In order to plot the series, the [XBindingPath]() and [YBindingPath]() proper
 
 {% highlight xaml %}
 
-<chart:SfPolarChart>
-    <chart:SfPolarChart.PrimaryAxis>
-        <chart:CategoryAxis>
-        </chart:CategoryAxis>
-    </chart:SfPolarChart.PrimaryAxis>
-    <chart:SfPolarChart.SecondaryAxis>
-        <chart:NumericalAxis>
-        </chart:NumericalAxis>
-    </chart:SfPolarChart.SecondaryAxis>
+    <chart:SfPolarChart>
+        <chart:SfPolarChart.PrimaryAxis>
+            <chart:CategoryAxis>
+            </chart:CategoryAxis>
+        </chart:SfPolarChart.PrimaryAxis>
+        <chart:SfPolarChart.SecondaryAxis>
+            <chart:NumericalAxis>
+            </chart:NumericalAxis>
+        </chart:SfPolarChart.SecondaryAxis>
 
-    <chart:PolarAreaSeries ItemsSource="{Binding PlantDetails}" 
-                        XBindingPath="Direction" 
-                        YBindingPath="Tree" />
-</chart:SfPolarChart>
+        <chart:PolarAreaSeries ItemsSource="{Binding PlantDetails}" 
+                               XBindingPath="Direction" 
+                               YBindingPath="Tree" />
+    </chart:SfPolarChart>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-SfPolarChart chart = new SfPolarChart();
+    SfPolarChart chart = new SfPolarChart();
 
-// Initializing primary axis
-CategoryAxis primaryAxis = new CategoryAxis();
-chart.PrimaryAxis.Add(primaryAxis);
+    // Initializing primary axis
+    CategoryAxis primaryAxis = new CategoryAxis();
+    chart.PrimaryAxis = primaryAxis;
 
-//Initializing secondary Axis
-NumericalAxis secondaryAxis = new NumericalAxis();
-chart.SecondaryAxis.Add(secondaryAxis);
+    //Initializing secondary Axis
+    NumericalAxis secondaryAxis = new NumericalAxis();
+    chart.SecondaryAxis = secondaryAxis;
 
-//Initialize the series
-PolarAreaSeries series = new PolarAreaSeries();
-series.ItemsSource = (new ViewModel()).PlantDetails;
-series.XBindingPath = "Direction";
-series.YBindingPath = "Tree";
+    //Initialize the series
+    PolarAreaSeries series = new PolarAreaSeries();
+    series.ItemsSource = (new ViewModel()).PlantDetails;
+    series.XBindingPath = "Direction";
+    series.YBindingPath = "Tree";
 
-//Adding Series to the Chart Series Collection
-chart.Series.Add(series);
+    //Adding Series to the Chart Series Collection
+    chart.Series.Add(series);
 
 {% endhighlight %}
 
@@ -256,23 +256,23 @@ The title of the chart provides quick information to the user about the data bei
 
 {% highlight xaml %}
 
-<Grid>
-    <chart:SfPolarChart>
-        <chart:SfPolarChart.Title>
-            <Label Text="Plant Analysis" />
-        </chart:SfPolarChart.Title> 
-    </chart:SfPolarChart>
-</Grid>
+    <Grid>
+        <chart:SfPolarChart>
+            <chart:SfPolarChart.Title>
+                <Label Text="Plant Analysis" />
+            </chart:SfPolarChart.Title> 
+        </chart:SfPolarChart>
+    </Grid>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-SfPolarChart chart = new SfPolarChart();
-chart.Title = new Label
-{
-    Text = "Plant Analysis"
-};
+    SfPolarChart chart = new SfPolarChart();
+    chart.Title = new Label
+    {
+        Text = "Plant Analysis"
+    };
 
 {% endhighlight %}
 
@@ -286,21 +286,21 @@ The [ShowDataLabels]() property of series can be used to enable the data labels 
 
 {% highlight xaml %}
 
-<chart:SfPolarChart>
-    . . . 
-    <chart:PolarAreaSeries ShowDataLabels="True">
-    </chart:PolarAreaSeries>
-</chart:SfPolarChart>
+    <chart:SfPolarChart>
+        . . . 
+        <chart:PolarAreaSeries ShowDataLabels="True">
+        </chart:PolarAreaSeries>
+    </chart:SfPolarChart>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-SfPolarChart chart = new SfPolarChart()
-. . .
-PolarAreaSeries series = new PolarAreaSeries();
-series.ShowDataLabels = true;
-chart.Series.Add(series);
+    SfPolarChart chart = new SfPolarChart()
+    . . .
+    PolarAreaSeries series = new PolarAreaSeries();
+    series.ShowDataLabels = true;
+    chart.Series.Add(series);
 
 {% endhighlight %}
 
@@ -314,20 +314,20 @@ The legend provides information about the data point displayed in the chart. The
 
 {% highlight xaml %}
 
-<chart:SfPolarChart >
-    . . .
-    <chart:SfPolarChart.Legend>
-        <chart:ChartLegend/>
-    </chart:SfPolarChart.Legend>
-    . . .
-</chart:SfPolarChart>
+    <chart:SfPolarChart >
+        . . .
+        <chart:SfPolarChart.Legend>
+            <chart:ChartLegend/>
+        </chart:SfPolarChart.Legend>
+        . . .
+    </chart:SfPolarChart>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
     SfPolarChart chart = new SfPolarChart();
-    chart.Legend = new ChartLegend (); 
+    chart.Legend = new ChartLegend(); 
 
 {% endhighlight %}
 
@@ -339,24 +339,23 @@ N> Additionally, set a label for each series using the `Label` property of the c
 
 {% highlight xaml %}
 
-<chart:SfPolarChart>
-    . . .
-    <chart:PolarAreaSeries Label="Tree"
-                    ItemsSource="{Binding PlantDetails}"
-                    XBindingPath="Direction" 
-                    YBindingPath="Tree">
-    </chart:PolarAreaSeries>
-</chart:SfPolarChart>
+    <chart:SfPolarChart>
+        . . .
+        <chart:PolarAreaSeries Label="Tree"
+                               ItemsSource="{Binding PlantDetails}"
+                               XBindingPath="Direction"
+                               YBindingPath="Tree"/>
+    </chart:SfPolarChart>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-PolarAreaSeries series = new PolarAreaSeries (); 
-series.ItemsSource = (new ViewModel()).PlantDetails;
-series.XBindingPath = "Direction"; 
-series.YBindingPath = "Tree"; 
-series.Label = "Tree";
+    PolarAreaSeries series = new PolarAreaSeries (); 
+    series.ItemsSource = (new ViewModel()).PlantDetails;
+    series.XBindingPath = "Direction"; 
+    series.YBindingPath = "Tree"; 
+    series.Label = "Tree";
 
 {% endhighlight %}
 
@@ -364,30 +363,30 @@ series.Label = "Tree";
 
 ## Enable tooltip
 
-Tooltips are used to display information about a segment when a user hovers over it. Enable the tooltip by setting the series' [EnableTooltip]() property to true.
+Tooltips are used to display information about a segment when a user hovers over it. Enable the tooltip by setting the series [EnableTooltip]() property to true.
 
 {% tabs %} 
 
 {% highlight xaml %}
 
-<chart:SfPolarChart>
-    ...
-    <chart:PolarAreaSeries EnableTooltip="True"
-						ItemsSource="{Binding PlantDetails}"
-						XBindingPath="Direction"
-						YBindingPath="Tree"/>
-    ...
-</chart:SfPolarChart> 
+    <chart:SfPolarChart>
+        ...
+        <chart:PolarAreaSeries EnableTooltip="True"
+                               ItemsSource="{Binding PlantDetails}"
+                               XBindingPath="Direction"
+                               YBindingPath="Tree"/>
+        ...
+    </chart:SfPolarChart> 
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-PolarAreaSeries series = new PolarAreaSeries();
-series.ItemsSource = (new ViewModel()).PlantDetails;
-series.XBindingPath = "Direction";          
-series.YBindingPath = "Tree";
-series.EnableTooltip = true;
+    PolarAreaSeries series = new PolarAreaSeries();
+    series.ItemsSource = (new ViewModel()).PlantDetails;
+    series.XBindingPath = "Direction";          
+    series.YBindingPath = "Tree";
+    series.EnableTooltip = true;
 
 {% endhighlight %}
 
@@ -422,21 +421,18 @@ The following code example gives you the complete code of above configurations.
                 </chart:SfPolarChart.Legend>
     
                 <chart:SfPolarChart.PrimaryAxis>
-                    <chart:CategoryAxis>
-                    </chart:CategoryAxis>
+                    <chart:CategoryAxis/>                    
                 </chart:SfPolarChart.PrimaryAxis>
 
                 <chart:SfPolarChart.SecondaryAxis>
-                    <chart:NumericalAxis>
-                    </chart:NumericalAxis>
+                    <chart:NumericalAxis/>                   
                 </chart:SfPolarChart.SecondaryAxis>
 
             <chart:PolarAreaSeries Label="Tree" 
-                    EnableTooltip="True"
-                    ShowDataLabels="True"
-                    ItemsSource="{Binding PlantDetails}"
-                    XBindingPath="Direction" 
-                    YBindingPath="Tree">
+                                   EnableTooltip="True"
+                                   ShowDataLabels="True"
+                                   ItemsSource="{Binding PlantDetails}"
+                                   XBindingPath="Direction" YBindingPath="Tree">
                 <chart:PolarAreaSeries.DataLabelSettings>
                     <chart:PolarDataLabelSettings LabelPlacement="Auto"/>
                 </chart:PolarAreaSeries.DataLabelSettings>
@@ -450,45 +446,45 @@ The following code example gives you the complete code of above configurations.
 
 {% highlight C# %}
 
-using Syncfusion.Maui.Charts;
-namespace ChartGettingStarted
-{
-    public partial class MainPage : ContentPage
+    using Syncfusion.Maui.Charts;
+    namespace ChartGettingStarted
     {
-        public MainPage()
+        public partial class MainPage : ContentPage
         {
-            InitializeComponent();            
-            SfPolarChart chart = new SfPolarChart();
-
-            chart.Title = new Label
+            public MainPage()
             {
-                Text = "Plant Analysis"
-            };
+                InitializeComponent();            
+                SfPolarChart chart = new SfPolarChart();
 
-            CategoryAxis primaryAxis = new CategoryAxis();
-            chart.PrimaryAxis.Add(primaryAxis);
-
-            NumericalAxis secondaryAxis = new NumericalAxis();
-            chart.SecondaryAxis.Add(secondaryAxis);
-
-            PolarAreaSeries series = new PolarAreaSeries()
-            {
-                Label = "Tree",
-                ShowDataLabels = true,
-                ItemsSource = (new ViewModel()).PlantDetails,
-                XBindingPath = "Direction",
-                YBindingPath = "Tree",
-                DataLabelSettings = new PolarDataLabelSettings
+                chart.Title = new Label
                 {
-                    LabelPlacement = DataLabelPlacement.Auto
-                }              
-            };  
+                    Text = "Plant Analysis"
+                };
 
-            chart.Series.Add(series);
-            this.Content = chart;
-        }
-    }   
-}
+                CategoryAxis primaryAxis = new CategoryAxis();
+                chart.PrimaryAxis = primaryAxis;
+
+                NumericalAxis secondaryAxis = new NumericalAxis();
+                chart.SecondaryAxis = secondaryAxis;
+
+                PolarAreaSeries series = new PolarAreaSeries()
+                {
+                    Label = "Tree",
+                    ShowDataLabels = true,
+                    ItemsSource = (new ViewModel()).PlantDetails,
+                    XBindingPath = "Direction",
+                    YBindingPath = "Tree",
+                    DataLabelSettings = new PolarDataLabelSettings
+                    {
+                        LabelPlacement = DataLabelPlacement.Auto
+                    }              
+                };  
+
+                chart.Series.Add(series);
+                this.Content = chart;
+            }
+        }   
+    }
 
 {% endhighlight %}
 
@@ -498,4 +494,4 @@ The following chart is created as a result of the previous codes.
 
 ![Getting started for .NET MAUI Chart](Getting-Started_Images/MAUI_polar_chart.png)
 
-You can find the complete getting started sample from this [link]().
+You can find the complete getting started sample from this [link](https://github.com/SyncfusionExamples/Creating-a-Getting-Started-application-for-NET-MAUI-Polar-Chart).

@@ -425,7 +425,6 @@ We have passed the optional parameters such as {{'[canIncludeHiddenColumns](http
 *	Right to left (Mac and iOS)
 *	Accessibility
 *	Custom selection
-*	Load more
 *	Swiping
 *	Unbound row
 *	Unbound column

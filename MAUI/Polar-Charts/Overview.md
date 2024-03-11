@@ -19,6 +19,6 @@ Syncfusion .NET MAUI Chart (SfPolarChart) creates visually appealing circular vi
 
 * Enables rendering position adjustments, such as polar angles, allowing users to alter the axis to different angles like 0, 90, 180, and 270.
 
-* Offers gridline customization allowing users to switch between circle or polygon shapes, adapting to polar or radar chart types.
+* Offers gridline customization, allowing users to switch between circle or polygon shapes, adapting to polar or radar chart types.
 
 * It is user-friendly, offering customization options for features like axis, title, data labels, and tooltip.
