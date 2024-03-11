@@ -35,7 +35,7 @@ Flattening refers to the process of converting interactive elements, such as ann
 
 ### Flatten annotation on save
 
-The FlattenOnSave API helps you to flatten the specified annotation in a PDF document. Refer to the following code example:
+The `FlattenOnSave` API helps you to flatten the specified annotation in a PDF document. The following code sample explains how to flatten the first annotation from the annotation collection.
 
 {% tabs %}
 {% highlight c# %}
@@ -50,7 +50,7 @@ annotation.FlattenOnSave = true;
 
 ### Flatten form field on save
 
-The FlattenOnSave API helps you to flatten the specified formfield in a PDF document. Refer to the following code example:
+The `FlattenOnSave` API helps you to flatten the specified form field in a PDF document. The following code sample explains how to flatten the first form field from the form field collection.
 
 {% tabs %}
 {% highlight c# %}
@@ -62,3 +62,7 @@ FormField formField = formFields[0];
 formField.FlattenOnSave = true;
 {% endhighlight %}
 {% endtabs %}
+
+### Limitation
+
+The flattening process does not preserve existing sticky note annotations in the saved document specifically in Maccatalyst and IOS platforms.
