@@ -108,6 +108,18 @@ this.Content = treeMap;
 </tr>
 
 <tr>
+<td>Nil</td>
+<td>LeafItemTemplate</td>
+<td>Represents Leaf item template, for creating custom view for treemap leaf item.</td>
+</tr>
+
+<tr>
+<td>Nil</td>
+<td>ToolTipTemplate</td>
+<td>Represents the tooltip template, for creating custom treemap tool tip template view.</td>
+</tr>
+
+<tr>
 <td>{{'[LegendSettings](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.LegendSettings.html)'| markdownify }}</td>
 <td>TreeMapLegendSettings</td>
 <td>Represents settings for customizing the appearance of legend items in the SfTreeMap.</td>
@@ -181,7 +193,7 @@ this.Content = treeMap;
 <th>Description</th></tr>
 
 {% tabs %}
-{% highlight XAML %}
+{% highlight XAML hl_lines="5 6 7" %}
 <ContentPage 
     xmlns:local="clr-namespace:SfTreeMapSample"
     xmlns:treemap="clr-namespace:Syncfusion.Maui.TreeMap;assembly=Syncfusion.Maui.TreeMap">
@@ -196,7 +208,7 @@ this.Content = treeMap;
 </ContentPage>
 {% endhighlight %}
 
-{% highlight C# %}
+{% highlight C# hl_lines="10" %}
 
 using Syncfusion.Maui.TreeMap;
 . . .
@@ -215,7 +227,7 @@ public partial class MainPage : ContentPage
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="ViewModel.cs" %}
+{% highlight c# tabtitle="PopulationViewModel.cs" %}
 
 public class PopulationViewModel
 {
@@ -250,7 +262,7 @@ public class PopulationViewModel
     }
 }
 {% endhighlight %}
-{% highlight C# %}
+{% highlight C# tabtitle="PopulationDetails.cs"%}
 public class PopulationDetails
 {
     public string Country { get; set; }
@@ -323,7 +335,7 @@ public class PopulationDetails
 <tr>
 <td>{{'[Levels](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.SfTreeMap.html#Syncfusion_SfTreeMap_XForms_SfTreeMap_Levels)'| markdownify }}</td>
 <td>Levels</td>
-<td>Gets or sets the levels property. This property is an list collection of TreeMapleve.</td>
+<td>Gets or sets the levels property. This property is an list collection of TreeMaplevel.</td>
 </tr>
 
 <tr>
@@ -402,7 +414,7 @@ public class PopulationDetails
 ### TreeMapLeafItemSettings
 
 {% tabs %}
-{% highlight XAML %}
+{% highlight XAML hl_lines="11 12 13" %}
 <ContentPage   
     xmlns:local="clr-namespace:SfTreeMapSample"
     xmlns:treemap="clr-namespace:Syncfusion.Maui.TreeMap;assembly=Syncfusion.Maui.TreeMap">
@@ -422,7 +434,7 @@ public class PopulationDetails
 </ContentPage>
 {% endhighlight %}
 
-{% highlight C# %}
+{% highlight C# hl_lines="11" %}
 
 using Syncfusion.Maui.TreeMap;
 . . .
@@ -435,14 +447,14 @@ public partial class MainPage : ContentPage
         SfTreeMap treeMap = new SfTreeMap();
         PopulationViewModel viewModel = new PopulationViewModel();
         treeMap.DataSource = viewModel.PopulationDetails;
-        this.treeMap.LeafItemSettings = new TreeMapLeafItemSettings() { LabelPath = "JobDescription", Stroke = Brush.Black };
+        this.treeMap.LeafItemSettings = new TreeMapLeafItemSettings() { LabelPath = "Country", Stroke = Brush.Black };
         this.Content = treeMap;
     }
 }
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="ViewModel.cs" %}
+{% highlight c# tabtitle="PopulationViewModel.cs" %}
 
 public class PopulationViewModel
 {
@@ -478,7 +490,7 @@ public class PopulationViewModel
 }
 
 {% endhighlight %}
-{% highlight c# tabtitle="Model.cs" %}
+{% highlight c# tabtitle="PopulationDetails.cs" %}
 
 public class PopulationDetails
 {
@@ -537,7 +549,7 @@ public class PopulationDetails
 ### TreeMapLegendSettings
 
 {% tabs %}
-{% highlight XAML %}
+{% highlight XAML hl_lines="15 16" %}
 <ContentPage   
     xmlns:local="clr-namespace:SfTreeMapSample"
     xmlns:treemap="clr-namespace:Syncfusion.Maui.TreeMap;assembly=Syncfusion.Maui.TreeMap">
@@ -561,7 +573,7 @@ public class PopulationDetails
 </ContentPage>
 {% endhighlight %}
 
-{% highlight C# %}
+{% highlight C# hl_lines="11" %}
 
 using Syncfusion.Maui.TreeMap;
 . . .
@@ -581,7 +593,7 @@ public partial class MainPage : ContentPage
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="ViewModel.cs" %}
+{% highlight c# tabtitle="PopulationViewModel.cs" %}
 
 public class PopulationViewModel
 {
@@ -617,7 +629,7 @@ public class PopulationViewModel
 }
 
 {% endhighlight %}
-{% highlight c# tabtitle="Model.cs" %}
+{% highlight c# tabtitle="PopulationDetails.cs" %}
 
 public class PopulationDetails
 {
@@ -676,7 +688,7 @@ public class PopulationDetails
 ### TreeMapUniformBrushSettings
 
 {% tabs %}
-{% highlight XAML %}
+{% highlight XAML hl_lines="13 14" %}
 <ContentPage   
     xmlns:local="clr-namespace:SfTreeMapSample"
     xmlns:treemap="clr-namespace:Syncfusion.Maui.TreeMap;assembly=Syncfusion.Maui.TreeMap">
@@ -698,7 +710,7 @@ public class PopulationDetails
 </ContentPage>
 {% endhighlight %}
 
-{% highlight C# %}
+{% highlight C# hl_lines="11" %}
 
 using Syncfusion.Maui.TreeMap;
 . . .
@@ -718,7 +730,7 @@ public partial class MainPage : ContentPage
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="ViewModel.cs" %}
+{% highlight c# tabtitle="PopulationViewModel.cs" %}
 
 public class PopulationViewModel
 {
@@ -754,7 +766,7 @@ public class PopulationViewModel
 }
 
 {% endhighlight %}
-{% highlight c# tabtitle="Model.cs" %}
+{% highlight c# tabtitle="PopulationDetails.cs" %}
 
 public class PopulationDetails
 {
@@ -783,7 +795,7 @@ public class PopulationDetails
 ### TreeMapDesaturationBrushSettings
 
 {% tabs %}
-{% highlight XAML %}
+{% highlight XAML hl_lines="13 14" %}
 <ContentPage   
     xmlns:local="clr-namespace:SfTreeMapSample"
     xmlns:treemap="clr-namespace:Syncfusion.Maui.TreeMap;assembly=Syncfusion.Maui.TreeMap">
@@ -805,7 +817,7 @@ public class PopulationDetails
 </ContentPage>
 {% endhighlight %}
 
-{% highlight C# %}
+{% highlight C# hl_lines="11" %}
 
 using Syncfusion.Maui.TreeMap;
 . . .
@@ -825,7 +837,7 @@ public partial class MainPage : ContentPage
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="ViewModel.cs" %}
+{% highlight c# tabtitle="PopulationViewModel.cs" %}
 
 public class PopulationViewModel
 {
@@ -861,7 +873,7 @@ public class PopulationViewModel
 }
 
 {% endhighlight %}
-{% highlight c# tabtitle="Model.cs" %}
+{% highlight c# tabtitle="PopulationDetails.cs" %}
 
 public class PopulationDetails
 {
@@ -902,7 +914,7 @@ public class PopulationDetails
 ### TreeMapPaletteBrushSettings
 
 {% tabs %}
-{% highlight XAML %}
+{% highlight XAML hl_lines="14 15 16 17 18 19 20 21" %}
 <ContentPage   
     xmlns:local="clr-namespace:SfTreeMapSample"
     xmlns:treemap="clr-namespace:Syncfusion.Maui.TreeMap;assembly=Syncfusion.Maui.TreeMap">
@@ -933,7 +945,7 @@ public class PopulationDetails
 </ContentPage>
 {% endhighlight %}
 
-{% highlight C# %}
+{% highlight C# hl_lines="11" %}
 
 using Syncfusion.Maui.TreeMap;
 . . .
@@ -964,7 +976,7 @@ public partial class MainPage : ContentPage
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="ViewModel.cs" %}
+{% highlight c# tabtitle="PopulationViewModel.cs" %}
 
 public class PopulationViewModel
 {
@@ -1000,7 +1012,7 @@ public class PopulationViewModel
 }
 
 {% endhighlight %}
-{% highlight c# tabtitle="Model.cs" %}
+{% highlight c# tabtitle="PopulationDetails.cs" %}
 
 public class PopulationDetails
 {
@@ -1027,9 +1039,11 @@ public class PopulationDetails
 </table>
 
 ### TreeMapRangeBrushSettings
+To categorize leaf nodes in a TreeMap according to different ranges of background color values, use `TreeMapRangeBrushSettings`. Define the upper and lower limits of each range using the `To` and `From` properties of `TreeMapRangeBrush`.
+
 #### TreeMapRangeBrush
 {% tabs %}
-{% highlight XAML %}
+{% highlight XAML hl_lines="14 15 16" %}
 <ContentPage   
     xmlns:local="clr-namespace:SfTreeMapSample"
     xmlns:treemap="clr-namespace:Syncfusion.Maui.TreeMap;assembly=Syncfusion.Maui.TreeMap">
@@ -1070,7 +1084,7 @@ public class PopulationDetails
 </ContentPage>
 {% endhighlight %}
 
-{% highlight C# %}
+{% highlight C# hl_lines="11" %}
 
 using Syncfusion.Maui.TreeMap;
 . . .
@@ -1098,7 +1112,7 @@ public partial class MainPage : ContentPage
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="ViewModel.cs" %}
+{% highlight c# tabtitle="PopulationViewModel.cs" %}
 
 public class PopulationViewModel
 {
@@ -1134,7 +1148,7 @@ public class PopulationViewModel
 }
 
 {% endhighlight %}
-{% highlight c# tabtitle="Model.cs" %}
+{% highlight c# tabtitle="PopulationDetails.cs" %}
 
 public class PopulationDetails
 {
@@ -1182,7 +1196,7 @@ public class PopulationDetails
 ### TreeMapToolTipSettings
 
 {% tabs %}
-{% highlight XAML %}
+{% highlight XAML hl_lines="14 15" %}
 <ContentPage   
     xmlns:local="clr-namespace:SfTreeMapSample"
     xmlns:treemap="clr-namespace:Syncfusion.Maui.TreeMap;assembly=Syncfusion.Maui.TreeMap">
@@ -1208,7 +1222,7 @@ public class PopulationDetails
 </ContentPage>
 {% endhighlight %}
 
-{% highlight C# %}
+{% highlight C# hl_lines="11" %}
 
 using Syncfusion.Maui.TreeMap;
 . . .
@@ -1228,7 +1242,7 @@ public partial class MainPage : ContentPage
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="ViewModel.cs" %}
+{% highlight c# tabtitle="PopulationViewModel.cs" %}
 
 public class PopulationViewModel
 {
@@ -1264,7 +1278,7 @@ public class PopulationViewModel
 }
 
 {% endhighlight %}
-{% highlight c# tabtitle="Model.cs" %}
+{% highlight c# tabtitle="PopulationDetails.cs" %}
 
 public class PopulationDetails
 {
@@ -1311,7 +1325,7 @@ public class PopulationDetails
 ### TreeMapLevel
 
 {% tabs %}
-{% highlight XAML %}
+{% highlight XAML hl_lines="18 19" %}
 <ContentPage   
     xmlns:local="clr-namespace:SfTreeMapSample"
     xmlns:treemap="clr-namespace:Syncfusion.Maui.TreeMap;assembly=Syncfusion.Maui.TreeMap">
@@ -1336,7 +1350,7 @@ public class PopulationDetails
 </ContentPage>
 {% endhighlight %}
 
-{% highlight C# %}
+{% highlight C# hl_lines="11" %}
 
 using Syncfusion.Maui.TreeMap;
 . . .
@@ -1356,7 +1370,7 @@ public partial class MainPage : ContentPage
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="ViewModel.cs" %}
+{% highlight c# tabtitle="PopulationViewModel.cs" %}
 
 public class PopulationViewModel
 {
@@ -1392,7 +1406,7 @@ public class PopulationViewModel
 }
 
 {% endhighlight %}
-{% highlight c# tabtitle="Model.cs" %}
+{% highlight c# tabtitle="PopulationDetails.cs" %}
 
 public class PopulationDetails
 {
@@ -1417,25 +1431,25 @@ public class PopulationDetails
 </tr>
 
 <tr>
-<td>Nil</td>
+<td>{{'[GroupBackground](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.TreeMapFlatLevel.html#Syncfusion_SfTreeMap_XForms_TreeMapFlatLevel_GroupBackground)'| markdownify }}</td>
 <td>Background</td>
 <td>Gets or sets the Group Background color property. This property is used to set the backround</td>
 </tr>
 
 <tr>
-<td>Nil</td>
+<td>{{'[GroupBorderColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.TreeMapFlatLevel.html#Syncfusion_SfTreeMap_XForms_TreeMapFlatLevel_GroupBorderColor)'| markdownify }}</td>
 <td>Stroke</td>
 <td>Gets or sets the Group Border Color property. This property is used to set color for the group of the tree map. This is a bindable property.</td>
 </tr>
 
 <tr>
-<td>Nil</td>
+<td>{{'[GroupBorderThickness](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.TreeMapFlatLevel.html#Syncfusion_SfTreeMap_XForms_TreeMapFlatLevel_GroupBorderThickness)'| markdownify }}</td>
 <td>StrokeWidth</td>
 <td>Gets or sets the Group Border Thickness property. This property is used to set thickness for the groups of the tree map.</td>
 </tr>
 
 <tr>
-<td>Nil</td>
+<td>{{'[GroupGap](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.TreeMapFlatLevel.html#Syncfusion_SfTreeMap_XForms_TreeMapFlatLevel_GroupGap)'| markdownify }}</td>
 <td>Spacing</td>
 <td>Gets or sets the Group Gap property. This property is used to customize the gap between the groups of the tree map.</td>
 </tr>
@@ -1541,7 +1555,7 @@ The `FontColor`, `FontSize`, `FontFamily`, and `FontAttributes` properties of th
 </tr>
 
 <tr>
-<td>Nil</td>
+<td>{{'[TreeMapItemSelectedEventHandler](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.SfTreeMap.TreeMapItemSelectedEventHandler.html)'| markdownify }}</td>
 <td>SelectionChanged</td>
 <td>Provides data for the event when the selection is changed in the SfTreeMap.</td>
 </tr>
@@ -1550,3 +1564,5 @@ The `FontColor`, `FontSize`, `FontFamily`, and `FontAttributes` properties of th
 ## Upcoming features
 
 * Drill down support.
+* RTL support.
+* Legend template support.

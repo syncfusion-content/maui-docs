@@ -23,7 +23,7 @@ This section provides a quick overview of how to get started with the `.NET MAUI
 
 
 {% tabs %}
-{% highlight XAML %}
+{% highlight XAML hl_lines="2" %}
 
 <ContentPage
         xmlns:treemap="clr-namespace:Syncfusion.Maui.TreeMap;assembly=Syncfusion.Maui.TreeMap">
@@ -31,7 +31,7 @@ This section provides a quick overview of how to get started with the `.NET MAUI
 </ContentPage>
 
 {% endhighlight %}
-{% highlight C# %}
+{% highlight C# hl_lines="8 9" %}
 
 using Syncfusion.Maui.TreeMap;
 . . .
@@ -81,12 +81,18 @@ The [Syncfusion.Maui.Core](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.C
 
 ## Populating treemap items
 
+Here are the steps to render treemap items using the .NET MAUI TreeMap control with respective data properties created in a data model class.
+
+* Create a data model for treemap.
+* Create view model.
+* Bind data source for TreeMap.
+
 #### Create a data model for treemap 
 
 Create a simple data model in a new class file as shown in the following example code.
 
 {% tabs %}
-{% highlight C# %}
+{% highlight C# tabtitle="PopulationDetails.cs" %}
 public class PopulationDetails
 {
     public string Country { get; set; }
@@ -101,7 +107,7 @@ public class PopulationDetails
 Create a view model class to set values for the properties listed in the model class as shown in the following example code.
 
 {% tabs %}
-{% highlight C# %}
+{% highlight C# tabtitle="PopulationViewModel.cs" %}
 public class PopulationViewModel
 {
     public PopulationViewModel()
@@ -142,7 +148,7 @@ public class PopulationViewModel
 You can use `DataSource` property of SfTreeMap to populate the treemap items. The `PrimaryValuePath` specifies the name of the property in the data object that provides the primary value used to determine the size of each item in the tree map. The primary value typically represents the main quantitative data associated with each item.
 
 {% tabs %}
-{% highlight XAML %}
+{% highlight XAML hl_lines="3 5 6 7" %}
 
 <ContentPage 
     xmlns:local="clr-namespace:SfTreeMapSample"
@@ -158,7 +164,7 @@ You can use `DataSource` property of SfTreeMap to populate the treemap items. Th
 </ContentPage>
 
 {% endhighlight %}
-{% highlight C# %}
+{% highlight C# hl_lines="10 11" %}
 
 using Syncfusion.Maui.TreeMap;
 . . .
@@ -183,7 +189,7 @@ public partial class MainPage : ContentPage
 You can use `LabelPath` property of SfTreeMap `LeafItemSettings` to display text for the leaf items.
 
 {% tabs %}
-{% highlight XAML %}
+{% highlight XAML hl_lines="12" %}
 
 <ContentPage   
     xmlns:local="clr-namespace:SfTreeMapSample"
@@ -204,7 +210,7 @@ You can use `LabelPath` property of SfTreeMap `LeafItemSettings` to display text
 </ContentPage>
 
 {% endhighlight %}
-{% highlight C# %}
+{% highlight C# hl_lines="11" %}
 
 using Syncfusion.Maui.TreeMap;
 . . .
@@ -217,12 +223,13 @@ public partial class MainPage : ContentPage
         SfTreeMap treeMap = new SfTreeMap();
         PopulationViewModel viewModel = new PopulationViewModel();
         treeMap.DataSource = viewModel.PopulationDetails;
+        this.treeMap.LeafItemSettings = new TreeMapLeafItemSettings() { LabelPath = "Country", Stroke = Brush.Black };
         this.Content = treeMap;
     }
 }
 
 {% endhighlight %}
-{% highlight C# %}
+{% highlight C# tabtitle="PopulationViewModel.cs" %}
 public class PopulationViewModel
 {
     public PopulationViewModel()
@@ -256,7 +263,7 @@ public class PopulationViewModel
     }
 }
 {% endhighlight %}
-{% highlight C# %}
+{% highlight C# tabtitle="PopulationDetails.cs" %}
 public class PopulationDetails
 {
     public string Country { get; set; }
@@ -268,11 +275,10 @@ public class PopulationDetails
 
 ## Apply brush settings
 
-You can use `LeafItemBrushSettings` property of SfTreeMap to customize fill colors for leaf items based on ranges or values. The TreeMap control offers four distinct brush settings: `TreeMapUniformBrushSettings`, `TreeMapRangeBrushSettings`, `TreeMapDesaturationBrushSettings`, and `TreeMapPaletteBrushSettings`. 
+You can use `LeafItemBrushSettings` property of SfTreeMap to customize fill colors for leaf items based on ranges or values. The TreeMap control offers four distinct brush settings: `TreeMapUniformBrushSettings`, `TreeMapRangeBrushSettings`, `TreeMapDesaturationBrushSettings`, and `TreeMapPaletteBrushSettings`.
 
 {% tabs %}
-{% highlight XAML %}
-
+{% highlight XAML hl_lines="13 14" %}
 <ContentPage   
     xmlns:local="clr-namespace:SfTreeMapSample"
     xmlns:treemap="clr-namespace:Syncfusion.Maui.TreeMap;assembly=Syncfusion.Maui.TreeMap">
@@ -284,15 +290,17 @@ You can use `LeafItemBrushSettings` property of SfTreeMap to customize fill colo
             <local:PopulationViewModel />
         </treemap:SfTreeMap.BindingContext>
             <treemap:SfTreeMap.LeafItemSettings>
-                <treemap:TreeMapLeafItemSettings LabelPath="Country" 
-                                                 Stroke="Black">
-                </treemap:TreeMapLeafItemSettings>
-            </treemap:SfTreeMap.LeafItemSettings>
+                <treemap:TreeMapLeafItemSettings LabelPath="Country">
+                    <treemap:SfTreeMap.LeafItemBrushSettings>
+                    <treemap:TreeMapUniformBrushSettings Brush="Orange"/>
+                    </treemap:SfTreeMap.LeafItemBrushSettings>
+        </treemap:TreeMapLeafItemSettings>
+        </treemap:SfTreeMap.LeafItemSettings>
     </treemap:SfTreeMap>
 </ContentPage>
-
 {% endhighlight %}
-{% highlight C# %}
+
+{% highlight C# hl_lines="11" %}
 
 using Syncfusion.Maui.TreeMap;
 . . .
@@ -305,12 +313,15 @@ public partial class MainPage : ContentPage
         SfTreeMap treeMap = new SfTreeMap();
         PopulationViewModel viewModel = new PopulationViewModel();
         treeMap.DataSource = viewModel.PopulationDetails;
+        this.treeMap.LeafItemBrushSettings = new TreeMapUniformBrushSettings() { Brush = Brush.Orange };
         this.Content = treeMap;
     }
 }
 
 {% endhighlight %}
-{% highlight C# %}
+
+{% highlight c# tabtitle="PopulationViewModel.cs" %}
+
 public class PopulationViewModel
 {
     public PopulationViewModel()
@@ -343,14 +354,17 @@ public class PopulationViewModel
         set;
     }
 }
+
 {% endhighlight %}
-{% highlight C# %}
+{% highlight c# tabtitle="PopulationDetails.cs" %}
+
 public class PopulationDetails
 {
     public string Country { get; set; }
     public string Continent { get; set; }
     public int Population { get; set; }
 }
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -360,7 +374,7 @@ public class PopulationDetails
 You can use `ShowToolTip` property of SfTreeMap to enable tooltip for the treemap control. The default value of `ShowToolTip` is `false`.
 
 {% tabs %}
-{% highlight XAML %}
+{% highlight XAML hl_lines="8" %}
 
 <ContentPage   
     xmlns:local="clr-namespace:SfTreeMapSample"
@@ -385,7 +399,7 @@ You can use `ShowToolTip` property of SfTreeMap to enable tooltip for the treema
 </ContentPage>
 
 {% endhighlight %}
-{% highlight C# %}
+{% highlight C# hl_lines="11" %}
 
 using Syncfusion.Maui.TreeMap;
 . . .
@@ -398,12 +412,13 @@ public partial class MainPage : ContentPage
         SfTreeMap treeMap = new SfTreeMap();
         PopulationViewModel viewModel = new PopulationViewModel();
         treeMap.DataSource = viewModel.PopulationDetails;
+        treeMap.ShowToolTip = true;
         this.Content = treeMap;
     }
 }
 
 {% endhighlight %}
-{% highlight C# %}
+{% highlight C# tabtitle="PopulationViewModel.cs" %}
 public class PopulationViewModel
 {
     public PopulationViewModel()
@@ -437,7 +452,7 @@ public class PopulationViewModel
     }
 }
 {% endhighlight %}
-{% highlight C# %}
+{% highlight C# tabtitle="PopulationDetails.cs" %}
 public class PopulationDetails
 {
     public string Country { get; set; }
@@ -447,12 +462,12 @@ public class PopulationDetails
 {% endhighlight %}
 {% endtabs %}
 
-## Add legend
+## Enable legend
 
 You can use `ShowLegend` property of `TreeMapLegendSettings` to enable legend for the treemap control.  However, legend support is specifically applicable to `TreeMapRangeBrushSettings` of SfTreeMap. You can customize legend label text using the `LegendLabel` property within `RangeBrushes` of `TreeMapRangeBrushSettings`.
 
 {% tabs %}
-{% highlight XAML %}
+{% highlight XAML hl_lines="18 22 26 34" %}
 
 <ContentPage   
     xmlns:local="clr-namespace:SfTreeMapSample"
@@ -511,7 +526,7 @@ public partial class MainPage : ContentPage
 }
 
 {% endhighlight %}
-{% highlight C# %}
+{% highlight C# tabtitle="PopulationViewModel.cs" %}
 public class PopulationViewModel
 {
     public PopulationViewModel()
@@ -545,7 +560,7 @@ public class PopulationViewModel
     }
 }
 {% endhighlight %}
-{% highlight C# %}
+{% highlight C# tabtitle="PopulationDetails.cs" %}
 public class PopulationDetails
 {
     public string Country { get; set; }
