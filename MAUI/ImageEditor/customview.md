@@ -60,7 +60,16 @@ Customize the appearance of Custom view annotation using the [`ImageEditorAnnota
 
     private void OnAddCustomAnnotationViewClicked(object sender, EventArgs e)
     {
-        
+        Image customImage = new Image() { HeightRequest = 100, WidthRequest = 100, Aspect= Aspect.Fill};
+        customImage.Source = ImageSource.FromFile("emoji.png");
+        this.imageEditor.AddCustomAnnotationView(customImage, 
+            new Syncfusion.Maui.ImageEditor.ImageEditorAnnotationSettings 
+            { 
+                Bounds = new Rect(0.2, 0.2, 0.5, 0.1), 
+                RotationAngle = 45,
+                AllowResize = true,
+                AllowDrag = false
+            });
     }
 
 {% endhighlight %}
@@ -95,8 +104,6 @@ Delete the selected custom view using the [`DeleteAnnotation`](https://help.sync
 ## Clear all custom view
 
 Remove all the custom view annotations using the [`ClearAnnotations`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_ClearAnnotations) method.
-
-N> This removes shape and pen annotations as well.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -164,7 +171,7 @@ Add a custom view on image loading using the [`Imageloaded`](https://help.syncfu
 
     private void OnImageLoaded(object sender, EventArgs e)
     {
-        
+        this.imageEditor.AddCustomAnnotationView(new Label { Text = "Hello Syncfusion", WidthRequest = 150, HeightRequest = 40 });
     }
 
 {% endhighlight %}
@@ -188,7 +195,13 @@ The custom view can be added with user-defined view bounds. The [`Bounds`](https
 
     private void OnImageLoaded(object sender, EventArgs e)
     {
-
+        Image image = new Image() { HeightRequest = 50, WidthRequest = 50, Aspect = Aspect.Fill };
+        customImage.Source = ImageSource.FromFile("images.jpg");
+        this.imageEditor.AddCustomAnnotationView(image, 
+            new Syncfusion.Maui.ImageEditor.ImageEditorAnnotationSettings 
+            { 
+                Bounds = new Rect(0.2, 0.2, 0.5, 0.5) 
+            });
     }
 
 {% endhighlight %}
