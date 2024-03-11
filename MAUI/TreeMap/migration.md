@@ -34,7 +34,7 @@ To initialize the control, import the treeMap control namespace and initialize t
 <td>
 
 {% tabs %}
-{% highlight XAML %}
+{% highlight XAML hl_lines="3 4" %}
 <ContentPage 
 ...
 xmlns:treemap="clr-namespace:Syncfusion.SfTreeMap.XForms;assembly=Syncfusion.SfTreeMap.XForms">
@@ -57,7 +57,7 @@ this.Content = treeMap;
 <td>
 
 {% tabs %}
-{% highlight XAML %}
+{% highlight XAML hl_lines="3 4" %}
 
 <ContentPage 
 ...
@@ -193,42 +193,38 @@ this.Content = treeMap;
 <th>Description</th></tr>
 
 {% tabs %}
-{% highlight XAML hl_lines="5 6 7" %}
-<ContentPage 
-    xmlns:local="clr-namespace:SfTreeMapSample"
-    xmlns:treemap="clr-namespace:Syncfusion.Maui.TreeMap;assembly=Syncfusion.Maui.TreeMap">
-    <treemap:SfTreeMap x:Name="treeMap"
-                    DataSource="{Binding PopulationDetails}"
-                    PrimaryValuePath="Population"
-                    RangeColorValuePath="Population">
-        <treemap:SfTreeMap.BindingContext>
-            <local:PopulationViewModel />
-        </treemap:SfTreeMap.BindingContext>
-    </treemap:SfTreeMap>
-</ContentPage>
+{% highlight XAML hl_lines="2 3 4" %}
+<treemap:SfTreeMap x:Name="treeMap"
+                DataSource="{Binding PopulationDetails}"
+                PrimaryValuePath="Population"
+                RangeColorValuePath="Population">
+    <treemap:SfTreeMap.BindingContext>
+        <local:PopulationViewModel />
+    </treemap:SfTreeMap.BindingContext>
+</treemap:SfTreeMap>
 {% endhighlight %}
 
-{% highlight C# hl_lines="10" %}
+{% highlight C# hl_lines="4" %}
 
-using Syncfusion.Maui.TreeMap;
-. . .
+SfTreeMap treeMap = new SfTreeMap();
+PopulationViewModel viewModel = new PopulationViewModel();
+treeMap.DataSource = viewModel.PopulationDetails;
+this.Content = treeMap;
 
-public partial class MainPage : ContentPage
+{% endhighlight %}
+{% highlight C# tabtitle="PopulationDetails.cs" %}
+
+// Represents demographic information for a specific country.
+public class PopulationDetails
 {
-    public MainPage()
-    {
-        InitializeComponent();
-        SfTreeMap treeMap = new SfTreeMap();
-        PopulationViewModel viewModel = new PopulationViewModel();
-        treeMap.DataSource = viewModel.PopulationDetails;
-        this.Content = treeMap;
-    }
+    public string Country { get; set; }
+    public string Continent { get; set; }
+    public int Population { get; set; }
 }
-
 {% endhighlight %}
-
 {% highlight c# tabtitle="PopulationViewModel.cs" %}
 
+// Presents demographic information for countries in the Americas for the year 2023.
 public class PopulationViewModel
 {
     public PopulationViewModel()
@@ -260,14 +256,6 @@ public class PopulationViewModel
         get;
         set;
     }
-}
-{% endhighlight %}
-{% highlight C# tabtitle="PopulationDetails.cs"%}
-public class PopulationDetails
-{
-    public string Country { get; set; }
-    public string Continent { get; set; }
-    public int Population { get; set; }
 }
 {% endhighlight %}
 {% endtabs %}
@@ -414,48 +402,44 @@ public class PopulationDetails
 ### TreeMapLeafItemSettings
 
 {% tabs %}
-{% highlight XAML hl_lines="11 12 13" %}
-<ContentPage   
-    xmlns:local="clr-namespace:SfTreeMapSample"
-    xmlns:treemap="clr-namespace:Syncfusion.Maui.TreeMap;assembly=Syncfusion.Maui.TreeMap">
-    <treemap:SfTreeMap x:Name="treeMap"
-                    DataSource="{Binding PopulationDetails}"
-                    PrimaryValuePath="Population"
-                    RangeColorValuePath="Population">
-        <treemap:SfTreeMap.BindingContext>
-            <local:PopulationViewModel />
-        </treemap:SfTreeMap.BindingContext>
-            <treemap:SfTreeMap.LeafItemSettings>
-                <treemap:TreeMapLeafItemSettings LabelPath="Country" 
-                                                 Stroke="Black">
-                </treemap:TreeMapLeafItemSettings>
-            </treemap:SfTreeMap.LeafItemSettings>
-    </treemap:SfTreeMap>
-</ContentPage>
+{% highlight XAML hl_lines="9 10" %}
+<treemap:SfTreeMap x:Name="treeMap"
+                DataSource="{Binding PopulationDetails}"
+                PrimaryValuePath="Population"
+                RangeColorValuePath="Population">
+    <treemap:SfTreeMap.BindingContext>
+        <local:PopulationViewModel />
+    </treemap:SfTreeMap.BindingContext>
+        <treemap:SfTreeMap.LeafItemSettings>
+            <treemap:TreeMapLeafItemSettings LabelPath="Country"
+                                                Stroke="Black">
+            </treemap:TreeMapLeafItemSettings>
+        </treemap:SfTreeMap.LeafItemSettings>
+</treemap:SfTreeMap>
 {% endhighlight %}
 
-{% highlight C# hl_lines="11" %}
+{% highlight C# hl_lines="4" %}
 
-using Syncfusion.Maui.TreeMap;
-. . .
+SfTreeMap treeMap = new SfTreeMap();
+PopulationViewModel viewModel = new PopulationViewModel();
+treeMap.DataSource = viewModel.PopulationDetails;
+this.treeMap.LeafItemSettings = new TreeMapLeafItemSettings() { LabelPath = "Country", Stroke = Brush.Black };
+this.Content = treeMap;
 
-public partial class MainPage : ContentPage
+{% endhighlight %}
+{% highlight C# tabtitle="PopulationDetails.cs" %}
+
+// Represents demographic information for a specific country.
+public class PopulationDetails
 {
-    public MainPage()
-    {
-        InitializeComponent();
-        SfTreeMap treeMap = new SfTreeMap();
-        PopulationViewModel viewModel = new PopulationViewModel();
-        treeMap.DataSource = viewModel.PopulationDetails;
-        this.treeMap.LeafItemSettings = new TreeMapLeafItemSettings() { LabelPath = "Country", Stroke = Brush.Black };
-        this.Content = treeMap;
-    }
+    public string Country { get; set; }
+    public string Continent { get; set; }
+    public int Population { get; set; }
 }
-
 {% endhighlight %}
-
 {% highlight c# tabtitle="PopulationViewModel.cs" %}
 
+// Presents demographic information for countries in the Americas for the year 2023.
 public class PopulationViewModel
 {
     public PopulationViewModel()
@@ -487,16 +471,6 @@ public class PopulationViewModel
         get;
         set;
     }
-}
-
-{% endhighlight %}
-{% highlight c# tabtitle="PopulationDetails.cs" %}
-
-public class PopulationDetails
-{
-    public string Country { get; set; }
-    public string Continent { get; set; }
-    public int Population { get; set; }
 }
 
 {% endhighlight %}
@@ -549,52 +523,48 @@ public class PopulationDetails
 ### TreeMapLegendSettings
 
 {% tabs %}
-{% highlight XAML hl_lines="15 16" %}
-<ContentPage   
-    xmlns:local="clr-namespace:SfTreeMapSample"
-    xmlns:treemap="clr-namespace:Syncfusion.Maui.TreeMap;assembly=Syncfusion.Maui.TreeMap">
-    <treemap:SfTreeMap x:Name="treeMap"
-                    DataSource="{Binding PopulationDetails}"
-                    PrimaryValuePath="Population"
-                    RangeColorValuePath="Population">
-        <treemap:SfTreeMap.BindingContext>
-            <local:PopulationViewModel />
-        </treemap:SfTreeMap.BindingContext>
-            <treemap:SfTreeMap.LeafItemSettings>
-                <treemap:TreeMapLeafItemSettings LabelPath="Country" 
-                                                 Stroke="Black">
-        </treemap:TreeMapLeafItemSettings>
-        </treemap:SfTreeMap.LeafItemSettings>
-        <treemap:SfTreeMap.LegendSettings>
-            <treemap:TreeMapLegendSettings ShowLegend="True">
-            </treemap:TreeMapLegendSettings>
-        </treemap:SfTreeMap.LegendSettings>
-    </treemap:SfTreeMap>
-</ContentPage>
+{% highlight XAML hl_lines="13 14" %}
+<treemap:SfTreeMap x:Name="treeMap"
+                DataSource="{Binding PopulationDetails}"
+                PrimaryValuePath="Population"
+                RangeColorValuePath="Population">
+    <treemap:SfTreeMap.BindingContext>
+        <local:PopulationViewModel />
+    </treemap:SfTreeMap.BindingContext>
+        <treemap:SfTreeMap.LeafItemSettings>
+            <treemap:TreeMapLeafItemSettings LabelPath="Country" 
+                                                Stroke="Black">
+    </treemap:TreeMapLeafItemSettings>
+    </treemap:SfTreeMap.LeafItemSettings>
+    <treemap:SfTreeMap.LegendSettings>
+        <treemap:TreeMapLegendSettings ShowLegend="True">
+        </treemap:TreeMapLegendSettings>
+    </treemap:SfTreeMap.LegendSettings>
+</treemap:SfTreeMap>
 {% endhighlight %}
 
-{% highlight C# hl_lines="11" %}
+{% highlight C# hl_lines="4" %}
 
-using Syncfusion.Maui.TreeMap;
-. . .
+SfTreeMap treeMap = new SfTreeMap();
+PopulationViewModel viewModel = new PopulationViewModel();
+treeMap.DataSource = viewModel.PopulationDetails;
+this.treeMap.LegendSettings = new TreeMapLegendSettings() { ShowLegend = true };
+this.Content = treeMap;
 
-public partial class MainPage : ContentPage
+{% endhighlight %}
+{% highlight C# tabtitle="PopulationDetails.cs" %}
+
+// Represents demographic information for a specific country.
+public class PopulationDetails
 {
-    public MainPage()
-    {
-        InitializeComponent();
-        SfTreeMap treeMap = new SfTreeMap();
-        PopulationViewModel viewModel = new PopulationViewModel();
-        treeMap.DataSource = viewModel.PopulationDetails;
-        this.treeMap.LegendSettings = new TreeMapLegendSettings() { ShowLegend = true };
-        this.Content = treeMap;
-    }
+    public string Country { get; set; }
+    public string Continent { get; set; }
+    public int Population { get; set; }
 }
-
 {% endhighlight %}
-
 {% highlight c# tabtitle="PopulationViewModel.cs" %}
 
+// Presents demographic information for countries in the Americas for the year 2023.
 public class PopulationViewModel
 {
     public PopulationViewModel()
@@ -626,16 +596,6 @@ public class PopulationViewModel
         get;
         set;
     }
-}
-
-{% endhighlight %}
-{% highlight c# tabtitle="PopulationDetails.cs" %}
-
-public class PopulationDetails
-{
-    public string Country { get; set; }
-    public string Continent { get; set; }
-    public int Population { get; set; }
 }
 
 {% endhighlight %}
@@ -688,50 +648,48 @@ public class PopulationDetails
 ### TreeMapUniformBrushSettings
 
 {% tabs %}
-{% highlight XAML hl_lines="13 14" %}
-<ContentPage   
-    xmlns:local="clr-namespace:SfTreeMapSample"
-    xmlns:treemap="clr-namespace:Syncfusion.Maui.TreeMap;assembly=Syncfusion.Maui.TreeMap">
-    <treemap:SfTreeMap x:Name="treeMap"
-                    DataSource="{Binding PopulationDetails}"
-                    PrimaryValuePath="Population"
-                    RangeColorValuePath="Population">
-        <treemap:SfTreeMap.BindingContext>
-            <local:PopulationViewModel />
-        </treemap:SfTreeMap.BindingContext>
-            <treemap:SfTreeMap.LeafItemSettings>
-                <treemap:TreeMapLeafItemSettings LabelPath="Country">
-                    <treemap:SfTreeMap.LeafItemBrushSettings>
-                    <treemap:TreeMapUniformBrushSettings Brush="Orange"/>
-                    </treemap:SfTreeMap.LeafItemBrushSettings>
-        </treemap:TreeMapLeafItemSettings>
-        </treemap:SfTreeMap.LeafItemSettings>
-    </treemap:SfTreeMap>
-</ContentPage>
+{% highlight XAML hl_lines="10 11" %}
+
+<treemap:SfTreeMap x:Name="treeMap"
+                DataSource="{Binding PopulationDetails}"
+                PrimaryValuePath="Population"
+                RangeColorValuePath="Population">
+    <treemap:SfTreeMap.BindingContext>
+        <local:PopulationViewModel />
+    </treemap:SfTreeMap.BindingContext>
+        <treemap:SfTreeMap.LeafItemSettings>
+            <treemap:TreeMapLeafItemSettings LabelPath="Country">
+                <treemap:SfTreeMap.LeafItemBrushSettings>
+                <treemap:TreeMapUniformBrushSettings Brush="Orange"/>
+                </treemap:SfTreeMap.LeafItemBrushSettings>
+    </treemap:TreeMapLeafItemSettings>
+    </treemap:SfTreeMap.LeafItemSettings>
+</treemap:SfTreeMap>
+
 {% endhighlight %}
 
-{% highlight C# hl_lines="11" %}
+{% highlight C# hl_lines="4" %}
 
-using Syncfusion.Maui.TreeMap;
-. . .
+SfTreeMap treeMap = new SfTreeMap();
+PopulationViewModel viewModel = new PopulationViewModel();
+treeMap.DataSource = viewModel.PopulationDetails;
+this.treeMap.LeafItemBrushSettings = new TreeMapUniformBrushSettings() { Brush = Brush.Orange };
+this.Content = treeMap;
 
-public partial class MainPage : ContentPage
+{% endhighlight %}
+{% highlight C# tabtitle="PopulationDetails.cs" %}
+
+// Represents demographic information for a specific country.
+public class PopulationDetails
 {
-    public MainPage()
-    {
-        InitializeComponent();
-        SfTreeMap treeMap = new SfTreeMap();
-        PopulationViewModel viewModel = new PopulationViewModel();
-        treeMap.DataSource = viewModel.PopulationDetails;
-        this.treeMap.LeafItemBrushSettings = new TreeMapUniformBrushSettings() { Brush = Brush.Orange };
-        this.Content = treeMap;
-    }
+    public string Country { get; set; }
+    public string Continent { get; set; }
+    public int Population { get; set; }
 }
-
 {% endhighlight %}
-
 {% highlight c# tabtitle="PopulationViewModel.cs" %}
 
+// Presents demographic information for countries in the Americas for the year 2023.
 public class PopulationViewModel
 {
     public PopulationViewModel()
@@ -763,16 +721,6 @@ public class PopulationViewModel
         get;
         set;
     }
-}
-
-{% endhighlight %}
-{% highlight c# tabtitle="PopulationDetails.cs" %}
-
-public class PopulationDetails
-{
-    public string Country { get; set; }
-    public string Continent { get; set; }
-    public int Population { get; set; }
 }
 
 {% endhighlight %}
@@ -795,50 +743,48 @@ public class PopulationDetails
 ### TreeMapDesaturationBrushSettings
 
 {% tabs %}
-{% highlight XAML hl_lines="13 14" %}
-<ContentPage   
-    xmlns:local="clr-namespace:SfTreeMapSample"
-    xmlns:treemap="clr-namespace:Syncfusion.Maui.TreeMap;assembly=Syncfusion.Maui.TreeMap">
-    <treemap:SfTreeMap x:Name="treeMap"
-                    DataSource="{Binding PopulationDetails}"
-                    PrimaryValuePath="Population"
-                    RangeColorValuePath="Population">
-        <treemap:SfTreeMap.BindingContext>
-            <local:PopulationViewModel />
-        </treemap:SfTreeMap.BindingContext>
-            <treemap:SfTreeMap.LeafItemSettings>
-                <treemap:TreeMapLeafItemSettings LabelPath="Country">
-                    <treemap:SfTreeMap.LeafItemBrushSettings>
-                        <treemap:TreeMapDesaturationBrushSettings Brush="BlueViolet" From="1" To="0.2"/>
-                    </treemap:SfTreeMap.LeafItemBrushSettings>
-        </treemap:TreeMapLeafItemSettings>
-        </treemap:SfTreeMap.LeafItemSettings>
-    </treemap:SfTreeMap>
-</ContentPage>
+{% highlight XAML hl_lines="10 11" %}
+
+<treemap:SfTreeMap x:Name="treeMap"
+                DataSource="{Binding PopulationDetails}"
+                PrimaryValuePath="Population"
+                RangeColorValuePath="Population">
+    <treemap:SfTreeMap.BindingContext>
+        <local:PopulationViewModel />
+    </treemap:SfTreeMap.BindingContext>
+        <treemap:SfTreeMap.LeafItemSettings>
+            <treemap:TreeMapLeafItemSettings LabelPath="Country">
+                <treemap:SfTreeMap.LeafItemBrushSettings>
+                    <treemap:TreeMapDesaturationBrushSettings Brush="BlueViolet" From="1" To="0.2"/>
+                </treemap:SfTreeMap.LeafItemBrushSettings>
+    </treemap:TreeMapLeafItemSettings>
+    </treemap:SfTreeMap.LeafItemSettings>
+</treemap:SfTreeMap>
+
 {% endhighlight %}
 
-{% highlight C# hl_lines="11" %}
+{% highlight C# hl_lines="4" %}
 
-using Syncfusion.Maui.TreeMap;
-. . .
+SfTreeMap treeMap = new SfTreeMap();
+PopulationViewModel viewModel = new PopulationViewModel();
+treeMap.DataSource = viewModel.PopulationDetails;
+this.treeMap.LeafItemBrushSettings = new TreeMapDesaturationBrushSettings() { Brush = Brush.BlueViolet, From = 1, To = 0.2 };
+this.Content = treeMap;
 
-public partial class MainPage : ContentPage
+{% endhighlight %}
+{% highlight C# tabtitle="PopulationDetails.cs" %}
+
+// Represents demographic information for a specific country.
+public class PopulationDetails
 {
-    public MainPage()
-    {
-        InitializeComponent();
-        SfTreeMap treeMap = new SfTreeMap();
-        PopulationViewModel viewModel = new PopulationViewModel();
-        treeMap.DataSource = viewModel.PopulationDetails;
-        this.treeMap.LeafItemBrushSettings = new TreeMapDesaturationBrushSettings() { Brush = Brush.BlueViolet, From = 1, To = 0.2 };
-        this.Content = treeMap;
-    }
+    public string Country { get; set; }
+    public string Continent { get; set; }
+    public int Population { get; set; }
 }
-
 {% endhighlight %}
-
 {% highlight c# tabtitle="PopulationViewModel.cs" %}
 
+// Presents demographic information for countries in the Americas for the year 2023.
 public class PopulationViewModel
 {
     public PopulationViewModel()
@@ -870,16 +816,6 @@ public class PopulationViewModel
         get;
         set;
     }
-}
-
-{% endhighlight %}
-{% highlight c# tabtitle="PopulationDetails.cs" %}
-
-public class PopulationDetails
-{
-    public string Country { get; set; }
-    public string Continent { get; set; }
-    public int Population { get; set; }
 }
 
 {% endhighlight %}
@@ -914,70 +850,68 @@ public class PopulationDetails
 ### TreeMapPaletteBrushSettings
 
 {% tabs %}
-{% highlight XAML hl_lines="14 15 16 17 18 19 20 21" %}
-<ContentPage   
-    xmlns:local="clr-namespace:SfTreeMapSample"
-    xmlns:treemap="clr-namespace:Syncfusion.Maui.TreeMap;assembly=Syncfusion.Maui.TreeMap">
-    <treemap:SfTreeMap x:Name="treeMap"
-                    DataSource="{Binding PopulationDetails}"
-                    PrimaryValuePath="Population"
-                    RangeColorValuePath="Population">
-        <treemap:SfTreeMap.BindingContext>
-            <local:PopulationViewModel />
-        </treemap:SfTreeMap.BindingContext>
-            <treemap:SfTreeMap.LeafItemSettings>
-                <treemap:TreeMapLeafItemSettings LabelPath="Country">
-                    <treemap:SfTreeMap.LeafItemBrushSettings>
-                        <treemap:TreeMapPaletteBrushSettings>
-                            <treemap:TreeMapPaletteBrushSettings.Brushes>
-                                <SolidColorBrush>#116DF9</SolidColorBrush>
-                                <SolidColorBrush>#9215F3</SolidColorBrush>
-                                <SolidColorBrush>#F4890B</SolidColorBrush>
-                                <SolidColorBrush>#D21243</SolidColorBrush>
-                                <SolidColorBrush>#E2227E</SolidColorBrush>
-                                <SolidColorBrush>#9215F3</SolidColorBrush>
-                        </treemap:TreeMapPaletteBrushSettings.Brushes>
-                    </treemap:TreeMapPaletteBrushSettings>
-                </treemap:SfTreeMap.LeafItemBrushSettings>
-        </treemap:TreeMapLeafItemSettings>
-        </treemap:SfTreeMap.LeafItemSettings>
-    </treemap:SfTreeMap>
-</ContentPage>
+{% highlight XAML hl_lines="10 11 12 13 14 15 16 17 18" %}
+
+<treemap:SfTreeMap x:Name="treeMap"
+                DataSource="{Binding PopulationDetails}"
+                PrimaryValuePath="Population"
+                RangeColorValuePath="Population">
+    <treemap:SfTreeMap.BindingContext>
+        <local:PopulationViewModel />
+    </treemap:SfTreeMap.BindingContext>
+        <treemap:SfTreeMap.LeafItemSettings>
+            <treemap:TreeMapLeafItemSettings LabelPath="Country">
+                <treemap:SfTreeMap.LeafItemBrushSettings>
+                    <treemap:TreeMapPaletteBrushSettings>
+                        <treemap:TreeMapPaletteBrushSettings.Brushes>
+                            <SolidColorBrush>#116DF9</SolidColorBrush>
+                            <SolidColorBrush>#9215F3</SolidColorBrush>
+                            <SolidColorBrush>#F4890B</SolidColorBrush>
+                            <SolidColorBrush>#D21243</SolidColorBrush>
+                            <SolidColorBrush>#E2227E</SolidColorBrush>
+                            <SolidColorBrush>#9215F3</SolidColorBrush>
+                    </treemap:TreeMapPaletteBrushSettings.Brushes>
+                </treemap:TreeMapPaletteBrushSettings>
+            </treemap:SfTreeMap.LeafItemBrushSettings>
+    </treemap:TreeMapLeafItemSettings>
+    </treemap:SfTreeMap.LeafItemSettings>
+</treemap:SfTreeMap>
+
 {% endhighlight %}
 
-{% highlight C# hl_lines="11" %}
+{% highlight C# hl_lines="1 9 11 12 13" %}
 
-using Syncfusion.Maui.TreeMap;
-. . .
-
-public partial class MainPage : ContentPage
+SfTreeMap treeMap = new SfTreeMap();
+PopulationViewModel viewModel = new PopulationViewModel();
+treeMap.DataSource = viewModel.PopulationDetails;
+this.treeMap.LeafItemBrushSettings = new TreeMapPaletteBrushSettings()
 {
-    public MainPage()
-    {
-        InitializeComponent();
-        SfTreeMap treeMap = new SfTreeMap();
-        PopulationViewModel viewModel = new PopulationViewModel();
-        treeMap.DataSource = viewModel.PopulationDetails;
-        this.treeMap.LeafItemBrushSettings = new TreeMapPaletteBrushSettings()
-        {
-            Brushes = new List<Brush>()
-                {
-                new SolidColorBrush(Color.FromArgb("#116DF9")),
-                new SolidColorBrush(Color.FromArgb("#9215F3")),
-                new SolidColorBrush(Color.FromArgb("#F4890B")),
-                new SolidColorBrush(Color.FromArgb("#D21243")),
-                new SolidColorBrush(Color.FromArgb("#E2227E")),
-                new SolidColorBrush(Color.FromArgb("#9215F3")),
-            }
-        };
-        this.Content = treeMap;
-    }
+Brushes = new List<Brush>()
+{
+new SolidColorBrush(Color.FromArgb("#116DF9")),
+new SolidColorBrush(Color.FromArgb("#9215F3")),
+new SolidColorBrush(Color.FromArgb("#F4890B")),
+new SolidColorBrush(Color.FromArgb("#D21243")),
+new SolidColorBrush(Color.FromArgb("#E2227E")),
+new SolidColorBrush(Color.FromArgb("#9215F3")),
 }
+};
+this.Content = treeMap;
 
 {% endhighlight %}
+{% highlight C# tabtitle="PopulationDetails.cs" %}
 
+// Represents demographic information for a specific country.
+public class PopulationDetails
+{
+    public string Country { get; set; }
+    public string Continent { get; set; }
+    public int Population { get; set; }
+}
+{% endhighlight %}
 {% highlight c# tabtitle="PopulationViewModel.cs" %}
 
+// Presents demographic information for countries in the Americas for the year 2023.
 public class PopulationViewModel
 {
     public PopulationViewModel()
@@ -1009,16 +943,6 @@ public class PopulationViewModel
         get;
         set;
     }
-}
-
-{% endhighlight %}
-{% highlight c# tabtitle="PopulationDetails.cs" %}
-
-public class PopulationDetails
-{
-    public string Country { get; set; }
-    public string Continent { get; set; }
-    public int Population { get; set; }
 }
 
 {% endhighlight %}
@@ -1043,77 +967,75 @@ To categorize leaf nodes in a TreeMap according to different ranges of backgroun
 
 #### TreeMapRangeBrush
 {% tabs %}
-{% highlight XAML hl_lines="14 15 16" %}
-<ContentPage   
-    xmlns:local="clr-namespace:SfTreeMapSample"
-    xmlns:treemap="clr-namespace:Syncfusion.Maui.TreeMap;assembly=Syncfusion.Maui.TreeMap">
-    <treemap:SfTreeMap x:Name="treeMap"
-                    DataSource="{Binding PopulationDetails}"
-                    PrimaryValuePath="Population"
-                    RangeColorValuePath="Population">
-        <treemap:SfTreeMap.BindingContext>
-            <local:PopulationViewModel />
-        </treemap:SfTreeMap.BindingContext>
-        <treemap:SfTreeMap.LeafItemSettings>
-            <treemap:TreeMapLeafItemSettings LabelPath="Country">
-                <treemap:SfTreeMap.LeafItemBrushSettings>
-                    <treemap:TreeMapRangeBrushSettings>
-                        <treemap:TreeMapRangeBrushSettings.RangeBrushes>
-                            <treemap:TreeMapRangeBrush LegendLabel="50M - 1B"
-                                                            From="50000000"
-                                                            To="1000000000" 
-                                                            Brush ="#F0A868" />
-                            <treemap:TreeMapRangeBrush LegendLabel="10M - 50M"
-                                                            From="10000000"
-                                                            To="50000000" 
-                                                            Brush ="#F3BC8B" />
-                            <treemap:TreeMapRangeBrush LegendLabel="0.1M - 10M"
-                                                            From="100000" 
-                                                            To="10000000"  
-                                                            Brush= "#F8D7B9" />
-                        </treemap:TreeMapRangeBrushSettings.RangeBrushes>
-                    </treemap:TreeMapRangeBrushSettings>
-                </treemap:SfTreeMap.LeafItemBrushSettings>
-            </treemap:TreeMapLeafItemSettings>
-        </treemap:SfTreeMap.LeafItemSettings>
-        <treemap:SfTreeMap.LegendSettings>
-            <treemap:TreeMapLegendSettings ShowLegend="True">
-            </treemap:TreeMapLegendSettings>
-        </treemap:SfTreeMap.LegendSettings>
-    </treemap:SfTreeMap>
-</ContentPage>
+{% highlight XAML hl_lines="11 12" %}
+
+<treemap:SfTreeMap x:Name="treeMap"
+                DataSource="{Binding PopulationDetails}"
+                PrimaryValuePath="Population"
+                RangeColorValuePath="Population">
+    <treemap:SfTreeMap.BindingContext>
+        <local:PopulationViewModel />
+    </treemap:SfTreeMap.BindingContext>
+    <treemap:SfTreeMap.LeafItemSettings>
+        <treemap:TreeMapLeafItemSettings LabelPath="Country">
+            <treemap:SfTreeMap.LeafItemBrushSettings>
+                <treemap:TreeMapRangeBrushSettings>
+                    <treemap:TreeMapRangeBrushSettings.RangeBrushes>
+                        <treemap:TreeMapRangeBrush LegendLabel="50M - 1B"
+                                                        From="50000000"
+                                                        To="1000000000" 
+                                                        Brush ="#F0A868" />
+                        <treemap:TreeMapRangeBrush LegendLabel="10M - 50M"
+                                                        From="10000000"
+                                                        To="50000000" 
+                                                        Brush ="#F3BC8B" />
+                        <treemap:TreeMapRangeBrush LegendLabel="0.1M - 10M"
+                                                        From="100000" 
+                                                        To="10000000"  
+                                                        Brush= "#F8D7B9" />
+                    </treemap:TreeMapRangeBrushSettings.RangeBrushes>
+                </treemap:TreeMapRangeBrushSettings>
+            </treemap:SfTreeMap.LeafItemBrushSettings>
+        </treemap:TreeMapLeafItemSettings>
+    </treemap:SfTreeMap.LeafItemSettings>
+    <treemap:SfTreeMap.LegendSettings>
+        <treemap:TreeMapLegendSettings ShowLegend="True">
+        </treemap:TreeMapLegendSettings>
+    </treemap:SfTreeMap.LegendSettings>
+</treemap:SfTreeMap>
+
 {% endhighlight %}
 
-{% highlight C# hl_lines="11" %}
+{% highlight C# hl_lines="4" %}
 
-using Syncfusion.Maui.TreeMap;
-. . .
-
-public partial class MainPage : ContentPage
+SfTreeMap treeMap = new SfTreeMap();
+PopulationViewModel viewModel = new PopulationViewModel();
+treeMap.DataSource = viewModel.PopulationDetails;
+this.treeMap.LeafItemBrushSettings = new TreeMapRangeBrushSettings()
 {
-    public MainPage()
-    {
-        InitializeComponent();
-        SfTreeMap treeMap = new SfTreeMap();
-        PopulationViewModel viewModel = new PopulationViewModel();
-        treeMap.DataSource = viewModel.PopulationDetails;
-        this.treeMap.LeafItemBrushSettings = new TreeMapRangeBrushSettings()
-        {
-            RangeBrushes = new List<TreeMapRangeBrush>()
-                {
-                new TreeMapRangeBrush() { LegendLabel="50M - 1B", From=50000000, To=1000000000, Brush = new SolidColorBrush(Color.FromArgb("#F0A868")) },
-                new TreeMapRangeBrush() { LegendLabel="10M - 50M", From=10000000, To=50000000, Brush = new SolidColorBrush(Color.FromArgb("#F3BC8B")) },
-                new TreeMapRangeBrush() { LegendLabel="0.1M - 10M", From=100000, To=10000000, Brush = new SolidColorBrush(Color.FromArgb("#F8D7B9")) },
-                }
-        };
-        this.Content = treeMap;
-    }
+RangeBrushes = new List<TreeMapRangeBrush>()
+{
+new TreeMapRangeBrush() { LegendLabel="50M - 1B", From=50000000, To=1000000000, Brush = new SolidColorBrush(Color.FromArgb("#F0A868")) },
+new TreeMapRangeBrush() { LegendLabel="10M - 50M", From=10000000, To=50000000, Brush = new SolidColorBrush(Color.FromArgb("#F3BC8B")) },
+new TreeMapRangeBrush() { LegendLabel="0.1M - 10M", From=100000, To=10000000, Brush = new SolidColorBrush(Color.FromArgb("#F8D7B9")) },
 }
+};
+this.Content = treeMap;
 
 {% endhighlight %}
+{% highlight C# tabtitle="PopulationDetails.cs" %}
 
+// Represents demographic information for a specific country.
+public class PopulationDetails
+{
+    public string Country { get; set; }
+    public string Continent { get; set; }
+    public int Population { get; set; }
+}
+{% endhighlight %}
 {% highlight c# tabtitle="PopulationViewModel.cs" %}
 
+// Presents demographic information for countries in the Americas for the year 2023.
 public class PopulationViewModel
 {
     public PopulationViewModel()
@@ -1145,16 +1067,6 @@ public class PopulationViewModel
         get;
         set;
     }
-}
-
-{% endhighlight %}
-{% highlight c# tabtitle="PopulationDetails.cs" %}
-
-public class PopulationDetails
-{
-    public string Country { get; set; }
-    public string Continent { get; set; }
-    public int Population { get; set; }
 }
 
 {% endhighlight %}
@@ -1196,54 +1108,52 @@ public class PopulationDetails
 ### TreeMapToolTipSettings
 
 {% tabs %}
-{% highlight XAML hl_lines="14 15" %}
-<ContentPage   
-    xmlns:local="clr-namespace:SfTreeMapSample"
-    xmlns:treemap="clr-namespace:Syncfusion.Maui.TreeMap;assembly=Syncfusion.Maui.TreeMap">
-    <treemap:SfTreeMap x:Name="treeMap"
+{% highlight XAML hl_lines="10 11" %}
+
+<treemap:SfTreeMap x:Name="treeMap"
                     DataSource="{Binding PopulationDetails}"
                     PrimaryValuePath="Population"
                     ShowToolTip="True"
                     RangeColorValuePath="Population">
-        <treemap:SfTreeMap.BindingContext>
-            <local:PopulationViewModel />
-        </treemap:SfTreeMap.BindingContext>
-            <treemap:SfTreeMap.LeafItemSettings>
-                <treemap:TreeMapLeafItemSettings LabelPath="Country">
-                    <treemap:SfTreeMap.LeafItemBrushSettings>
-                    <treemap:TreeMapUniformBrushSettings Brush="#F8D7B9"/>
-                    </treemap:SfTreeMap.LeafItemBrushSettings>
-        </treemap:TreeMapLeafItemSettings>
-        </treemap:SfTreeMap.LeafItemSettings>
-        <treemap:SfTreeMap.ToolTipSettings >
-            <treemap:TreeMapToolTipSettings Background = "Red" />
-        </treemap:SfTreeMap.ToolTipSettings >
-    </treemap:SfTreeMap>
-</ContentPage>
+    <treemap:SfTreeMap.BindingContext>
+        <local:PopulationViewModel />
+    </treemap:SfTreeMap.BindingContext>
+        <treemap:SfTreeMap.LeafItemSettings>
+            <treemap:TreeMapLeafItemSettings LabelPath="Country">
+                <treemap:SfTreeMap.LeafItemBrushSettings>
+                <treemap:TreeMapUniformBrushSettings Brush="#F8D7B9"/>
+                </treemap:SfTreeMap.LeafItemBrushSettings>
+    </treemap:TreeMapLeafItemSettings>
+    </treemap:SfTreeMap.LeafItemSettings>
+    <treemap:SfTreeMap.ToolTipSettings >
+        <treemap:TreeMapToolTipSettings Background = "Red" />
+    </treemap:SfTreeMap.ToolTipSettings >
+</treemap:SfTreeMap>
+
 {% endhighlight %}
 
-{% highlight C# hl_lines="11" %}
+{% highlight C# hl_lines="4" %}
 
-using Syncfusion.Maui.TreeMap;
-. . .
+SfTreeMap treeMap = new SfTreeMap();
+PopulationViewModel viewModel = new PopulationViewModel();
+treeMap.DataSource = viewModel.PopulationDetails;
+this.treeMap.ToolTipSettings = new TreeMapToolTipSettings() { Background = Brush.Red };
+this.Content = treeMap;
 
-public partial class MainPage : ContentPage
+{% endhighlight %}
+{% highlight C# tabtitle="PopulationDetails.cs" %}
+
+// Represents demographic information for a specific country.
+public class PopulationDetails
 {
-    public MainPage()
-    {
-        InitializeComponent();
-        SfTreeMap treeMap = new SfTreeMap();
-        PopulationViewModel viewModel = new PopulationViewModel();
-        treeMap.DataSource = viewModel.PopulationDetails;
-        this.treeMap.ToolTipSettings = new TreeMapToolTipSettings() { Background = Brush.Red };
-        this.Content = treeMap;
-    }
+    public string Country { get; set; }
+    public string Continent { get; set; }
+    public int Population { get; set; }
 }
-
 {% endhighlight %}
-
 {% highlight c# tabtitle="PopulationViewModel.cs" %}
 
+// Presents demographic information for countries in the Americas for the year 2023.
 public class PopulationViewModel
 {
     public PopulationViewModel()
@@ -1275,16 +1185,6 @@ public class PopulationViewModel
         get;
         set;
     }
-}
-
-{% endhighlight %}
-{% highlight c# tabtitle="PopulationDetails.cs" %}
-
-public class PopulationDetails
-{
-    public string Country { get; set; }
-    public string Continent { get; set; }
-    public int Population { get; set; }
 }
 
 {% endhighlight %}
@@ -1325,53 +1225,51 @@ public class PopulationDetails
 ### TreeMapLevel
 
 {% tabs %}
-{% highlight XAML hl_lines="18 19" %}
-<ContentPage   
-    xmlns:local="clr-namespace:SfTreeMapSample"
-    xmlns:treemap="clr-namespace:Syncfusion.Maui.TreeMap;assembly=Syncfusion.Maui.TreeMap">
-    <treemap:SfTreeMap x:Name="treeMap"
-                    DataSource="{Binding PopulationDetails}"
-                    PrimaryValuePath="Population"
-                    RangeColorValuePath="Population">
-        <treemap:SfTreeMap.BindingContext>
-            <local:PopulationViewModel />
-        </treemap:SfTreeMap.BindingContext>
-            <treemap:SfTreeMap.LeafItemSettings>
-                <treemap:TreeMapLeafItemSettings LabelPath="Country">
-                    <treemap:SfTreeMap.LeafItemBrushSettings>
-                    <treemap:TreeMapUniformBrushSettings Brush="#F8D7B9"/>
-                    </treemap:SfTreeMap.LeafItemBrushSettings>
-            </treemap:TreeMapLeafItemSettings>
-        </treemap:SfTreeMap.LeafItemSettings>
-        <treemap:SfTreeMap.Levels>
-            <treemap:TreeMapLevel GroupPath="Continent"/>
-        </treemap:SfTreeMap.Levels>
-    </treemap:SfTreeMap>
-</ContentPage>
+{% highlight XAML hl_lines="10 11" %}
+
+<treemap:SfTreeMap x:Name="treeMap"
+                DataSource="{Binding PopulationDetails}"
+                PrimaryValuePath="Population"
+                RangeColorValuePath="Population">
+    <treemap:SfTreeMap.BindingContext>
+        <local:PopulationViewModel />
+    </treemap:SfTreeMap.BindingContext>
+        <treemap:SfTreeMap.LeafItemSettings>
+            <treemap:TreeMapLeafItemSettings LabelPath="Country">
+                <treemap:SfTreeMap.LeafItemBrushSettings>
+                <treemap:TreeMapUniformBrushSettings Brush="#F8D7B9"/>
+                </treemap:SfTreeMap.LeafItemBrushSettings>
+        </treemap:TreeMapLeafItemSettings>
+    </treemap:SfTreeMap.LeafItemSettings>
+    <treemap:SfTreeMap.Levels>
+        <treemap:TreeMapLevel GroupPath="Continent"/>
+    </treemap:SfTreeMap.Levels>
+</treemap:SfTreeMap>
+
 {% endhighlight %}
 
-{% highlight C# hl_lines="11" %}
+{% highlight C# hl_lines="4" %}
 
-using Syncfusion.Maui.TreeMap;
-. . .
+SfTreeMap treeMap = new SfTreeMap();
+PopulationViewModel viewModel = new PopulationViewModel();
+treeMap.DataSource = viewModel.PopulationDetails;
+this.treeMap.Levels.Add(new TreeMapLevel() { GroupPath = "Continent"});
+this.Content = treeMap;
 
-public partial class MainPage : ContentPage
+{% endhighlight %}
+{% highlight C# tabtitle="PopulationDetails.cs" %}
+
+// Represents demographic information for a specific country.
+public class PopulationDetails
 {
-    public MainPage()
-    {
-        InitializeComponent();
-        SfTreeMap treeMap = new SfTreeMap();
-        PopulationViewModel viewModel = new PopulationViewModel();
-        treeMap.DataSource = viewModel.PopulationDetails;
-        this.treeMap.Levels.Add(new TreeMapLevel() { GroupPath = "Continent"});
-        this.Content = treeMap;
-    }
+    public string Country { get; set; }
+    public string Continent { get; set; }
+    public int Population { get; set; }
 }
-
 {% endhighlight %}
-
 {% highlight c# tabtitle="PopulationViewModel.cs" %}
 
+// Presents demographic information for countries in the Americas for the year 2023.
 public class PopulationViewModel
 {
     public PopulationViewModel()
@@ -1403,16 +1301,6 @@ public class PopulationViewModel
         get;
         set;
     }
-}
-
-{% endhighlight %}
-{% highlight c# tabtitle="PopulationDetails.cs" %}
-
-public class PopulationDetails
-{
-    public string Country { get; set; }
-    public string Continent { get; set; }
-    public int Population { get; set; }
 }
 
 {% endhighlight %}
