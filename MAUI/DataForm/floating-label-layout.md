@@ -2,7 +2,7 @@
 Layout: Post
 Title: Floating label layout in .NET MAUI DataForm control | Syncfusion
 Description: Learn about the Floating label layout support in Syncfusion .NET MAUI DataForm (SfDataForm) control.
-Platform: Maui
+Platform: maui
 Control: SfDataForm
 Documentation: UG
 ---
