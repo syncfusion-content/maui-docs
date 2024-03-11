@@ -9,11 +9,11 @@ documentation: ug
 
 # Getting Started with .NET MAUI Rotator (SfRotator)
 
-This section explains how to add the Rotator control and bind data to it. This section covers only the basic features needed to get started with the Syncfusion [.NET MAUI Rotator](https://www.syncfusion.com/maui-controls/maui-rotator) control.
+This section explains how to add the Rotator control and bind data to it. This section covers only the basic features needed to get started with the Syncfusion [.NET MAUI Rotator](link) control.
 
 ## Adding a .NET MAUI Rotator reference
 
-The Syncfusion .NET MAUI controls are available in [Nuget.org](https://www.nuget.org/). To add [.NET MAUI Rotator](https://www.syncfusion.com/maui-controls/maui-rotator) to your project, open the NuGet package manager in Visual Studio, search for [`Syncfusion.Maui.Rotator`](link), and install it.
+The Syncfusion .NET MAUI controls are available in [Nuget.org](https://www.nuget.org/). To add [.NET MAUI Rotator](link) to your project, open the NuGet package manager in Visual Studio, search for [`Syncfusion.Maui.Rotator`](link), and install it.
 
 ## Handler registration 
 
