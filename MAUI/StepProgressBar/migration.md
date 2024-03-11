@@ -360,7 +360,7 @@ this.Content = stepProgressBar ;
 <tr>
 <td>{{'[Status]()'| markdownify }}</td>
 <td>Nil</td>
-<td>Not Supported.</td>
+<td>By using '[ActiveStepIndex]()' and '[ActiveStepProgressValue]()' property, we can acheive the desired step status.</td>
 </tr>
 </table>
 
