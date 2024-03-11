@@ -311,9 +311,9 @@ You can use the `IsLazyLoading` property to determine whether to display the cus
         <sfChat:SfChat x:Name="sfChat" 
                        Messages="{Binding Messages}" 
                        CurrentUser="{Binding CurrentUser}"
-                        LoadMoreCommand="{Binding LoadMoreCommand}"  
-                        LoadMoreBehavior="{Binding LoadMoreBehavior}" 
-                        IsLazyLoading="{Binding IsBusy}" >
+                       LoadMoreCommand="{Binding LoadMoreCommand}"  
+                       LoadMoreBehavior="{Binding LoadMoreBehavior}" 
+                       IsLazyLoading="{Binding IsBusy}" >
             <sfChat:SfChat.LoadMoreTemplate>
                 <DataTemplate>
                     <Grid  HeightRequest="50" HorizontalOptions="Center" VerticalOptions="Center">
