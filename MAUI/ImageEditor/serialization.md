@@ -13,7 +13,7 @@ The Image Editor control provides support to serialize and deserialize the annot
 
 ## Serialization
 
-The Serialize() method is used to serialize the current edits of shapes. It allows you to store the SfImageEditor annotation settings with the help of `Serialize` method by passing the stream as parameter.
+The `Serialize()` method is used to serialize the current edits of shapes. It allows you to store the SfImageEditor annotation settings by passing the stream as a parameter to the `Serialize` method.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -28,22 +28,12 @@ The Serialize() method is used to serialize the current edits of shapes. It allo
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
-
+    
+    MemoryStream memoryStream;
     private void OnSerializeClicked(object sender, EventArgs e)
     {
-        MemoryStream memoryStream = new MemoryStream();
+        this.memoryStream = new MemoryStream();
         this.imageEditor.Serialize(memoryStream);
-        string filePath = Path.Combine("D:\\", "yourfile.xml");
-        if (!File.Exists(filePath))
-        {
-            using (FileStream fs = File.Create(filePath))
-            {
-            }
-        }
-        using (var fileStream = new FileStream(filePath, FileMode.Create, FileAccess.Write))
-        {
-            memoryStream.CopyTo(fileStream);
-        }
     }
 
 {% endhighlight %}
@@ -51,7 +41,7 @@ The Serialize() method is used to serialize the current edits of shapes. It allo
 
 ## Deserialization
 
-The Deserialize() method is used to deserialize the edits over an image. It allows you to reload the SfPivotGrid control with the settings available in the stream.
+The Deserialize() method is used to deserialize the edits over an image. It allows you to reload the SfImageEditor control with the settings available in the stream.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -69,20 +59,9 @@ The Deserialize() method is used to deserialize the edits over an image. It allo
 
     private void OnDeserializeClicked(object sender, EventArgs e)
     {
-        var result = await FilePicker.PickAsync(new PickOptions
+        if (this.memoryStream != null)
         {
-            PickerTitle = "Select an XML file"
-        });
-        
-        if (result != null)
-        {
-            MemoryStream memoryStream = new MemoryStream();
-            using (Stream stream = await result.OpenReadAsync())
-            {
-                await stream.CopyToAsync(memoryStream);
-            }
-        
-            this.imageEditor.Deserialize(memoryStream);
+            this.imageEditor.Deserialize(this.memoryStream);
         }
     }
 
