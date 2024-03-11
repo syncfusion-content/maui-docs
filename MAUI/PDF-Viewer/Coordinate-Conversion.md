@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Working with PDF coordinates systems in MAUI PDF Viewer control | Syncfusion
+title: Working with PDF coordinates systems in MAUI PDF Viewer control
 description: Learn here all about coordinates conversion in Syncfusion .NET MAUI PDF Viewer (SfPdfViewer) control. 
 platform: MAUI
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Working with PDF coordinates systems in .NET MAUI PDF Viewer (SfPdfViewer)
+# Working with PDF coordinates systems in .NET MAUI PDF Viewer
 
 PDF Viewer allows users to obtain the PDF page coordinates relative to the PDF Viewer’s client coordinates and vice versa. It also allows you to obtain the scroll point relative to the PDF page coordinates and bring the given region into view.
 
