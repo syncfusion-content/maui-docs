@@ -22,12 +22,12 @@ PdfViewer. PrintDocument();
 {% endhighlight %}
 {% endtabs %}
 
-Also, SfPdfViewer provides another way to print through command binding using the `PrintDocumentCommand`. This makes printing easier, especially when used with buttons.
+Also, [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) provides another way to print through command binding using the `PrintDocumentCommand`. This makes printing easier, especially when used with buttons.
 
 {% tabs %}
 {% highlight xaml %}
 <!-- Prints the PDF document. -->
-<Button Text="&#xe77f;" Command="{Binding Source={x:Reference PdfViewer},Path=PrintDocumentCommand}"/>
+<Button Text="Print" Command="{Binding Source={x:Reference PdfViewer},Path=PrintDocumentCommand}"/>
 {% endhighlight %} 
 {% endtabs %}
 
