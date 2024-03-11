@@ -1,7 +1,7 @@
 ---
 layout: cell-selection
 title: Cell selection in the .NET MAUI Scheduler | Syncfusion
-description: Learn here all about how to customize the cell selection in Syncfusion .NET MAUI Scheduler (SfScheduler) control.
+description: Learn how to customize the cell selection in Syncfusion .NET MAUI Scheduler (SfScheduler) control here.
 platform: maui
 control: SfScheduler
 documentation: ug
@@ -35,7 +35,7 @@ this.Scheduler.CellSelectionView.Stroke = Brush.Green;
 The cell selection background color can be customized by using the `Background` property in the `CellSelectionView`.
 The default value is Brush.Transparent.
 
-Note: As default `stroke` will have value, if background alone required, you can set stroke property to Transparent.
+Note: As default, `stroke` will have value; if background alone is required, you can set the stroke property to transparent.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="3" %}

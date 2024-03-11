@@ -57,7 +57,7 @@ N>
 
 ## Appointment indicator count
 
-The scheduler month view appointment indicator count allows you to customize the count of the appointment indicator by using `AppointmentIndicatorCount` property of [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html). By default, `AppointmentIndicatorCount` is set to 5.
+The scheduler month view appointment indicator count allows you to customize the count of the appointment indicator by using the `AppointmentIndicatorCount` property of the [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html). By default, the `AppointmentIndicatorCount` is set to 5.
 
 
 
