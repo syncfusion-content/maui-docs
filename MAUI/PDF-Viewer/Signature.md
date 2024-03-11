@@ -62,6 +62,8 @@ void DisableSignatureMode()
 
 This section will go through how to add signature programmatically to a PDF document.
 
+Note: Currently, there is no support for add a text signature programmatically.
+
 ### Add handwritten signature 
 
 To add a handwritten signature, You can create and add an ink annotation to a PDF document programmatically using the AddAnnotation method of the SfPdfViewer. Additionally in the case of signature you should set the `IsSignature` API of the ink annotation true. The following example explains how to create an ink annotation and add it as a signature to the first page of a PDF document.
