@@ -122,6 +122,7 @@ public class SocialMedia
 public class SocialMediaViewModel
 {
     public ObservableCollection<SocialMedia> SocialMedias { get; set; }
+    
     public SocialMediaViewModel()
     {
         this.SocialMedias = new ObservableCollection<SocialMedia>();
