@@ -41,18 +41,10 @@ This section describes how to load the online images in [`SfRotator`](https://he
 {% endhighlight %}
 {% highlight c# %}
 
-    using Syncfusion.SfRotator.XForms;
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
-    using Xamarin.Forms;
-    using Xamarin.Forms.Xaml;
-
+    using Syncfusion.Maui.Core.Rotator;
+    using Syncfusion.Maui.Rotator;
     namespace Rotator
     {
-        [XamlCompilation(XamlCompilationOptions.Compile)]
         public partial class Rotator : ContentPage
         {
             public Rotator()

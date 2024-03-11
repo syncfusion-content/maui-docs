@@ -38,7 +38,9 @@ The Display Type of Rotator can be modified using the [`DotsPlacement`](https://
                                 SelectedIndex="2"
                                 BackgroundColor="#ececec"
                                 NavigationStripPosition="Bottom"
-                                DotPlacement="None" >
+                                DotPlacement="None"
+                                WidthRequest="550"
+                                HeightRequest="550" >
                 <syncfusion:SfRotator.ItemTemplate>
                     <DataTemplate>
                         <Image  Source="{Binding Image}"/>

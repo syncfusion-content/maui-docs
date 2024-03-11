@@ -290,7 +290,9 @@ Create and populate Rotator collection as follows
                             SelectedIndex="2"
                             NavigationDirection="Horizontal"
                             NavigationStripMode="Dots" 
-                            BackgroundColor="#ececec">
+                            BackgroundColor="#ececec"
+                            WidthRequest="550"
+                            HeightRequest="550">
                 <syncfusion:SfRotator.ItemTemplate>
                     <DataTemplate>
                         <Image  Source="{Binding Image}"/>
@@ -403,7 +405,9 @@ N> In addition, rotator provides a support to load the Images from `URL` and `SD
                             SelectedIndex="2"
                             NavigationDirection="Horizontal"
                             NavigationStripMode="Thumbnail" 
-                            BackgroundColor="#ececec">
+                            BackgroundColor="#ececec"
+                            WidthRequest="550"
+                            HeightRequest="550">
                 <syncfusion:SfRotator.ItemTemplate>
                     <DataTemplate>
                         <Image  Source="{Binding Image}"/>
@@ -495,7 +499,9 @@ The placement position of navigation strip items such as [`Thumbnail`](https://h
                             NavigationDirection="Horizontal"
                             NavigationStripMode="Dots" 
                             BackgroundColor="#ececec"
-                            NavigationStripPosition="Top">
+                            NavigationStripPosition="Top"
+                            WidthRequest="550"
+                            HeightRequest="550">
                 <syncfusion:SfRotator.ItemTemplate>
                     <DataTemplate>
                         <Image  Source="{Binding Image}"/>
@@ -538,6 +544,8 @@ The placement position of navigation strip items such as [`Thumbnail`](https://h
                 rotator.ItemTemplate = itemTemplate;
                 rotator.NavigationStripMode = NavigationStripMode.Dots;
                 rotator.NavigationStripPosition = NavigationStripPosition.Top;
+                rotator.WidthRequest=550;
+                rotator.HeightRequest=550;
                 rotator.ItemsSource = ImageCollection;
                 this.Content = rotator;
             }

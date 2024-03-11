@@ -67,6 +67,8 @@ N> By default, the property value is false.
                 rotator.ItemsSource = collectionOfItems;
                 rotator.IsTextVisible = true;
                 rotator.DotPlacement = DotsPlacement.OutSide;
+                rotator.HeightRequest = 300;
+                rotator.WidthRequest = 300;
                 stackLayout.Children.Add(rotator);
                 this.Content = stackLayout;
             }

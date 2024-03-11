@@ -155,6 +155,8 @@ documentation: ug
                 new RotatorModel ("image4.png"),
                 new RotatorModel ("image5.png")
                 };
+            rotator.HeightRequest = 550;
+            rotator.WidthRequest = 550;
             rotator.NavigationDirection = NavigationDirection.Horizontal;
             rotator.NavigationStripMode = NavigationStripMode.Thumbnail;
             rotator.BackgroundColor = Colors.White;

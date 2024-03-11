@@ -33,7 +33,9 @@ The [`DotsBorderColor`](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRota
                                 SelectedIndex="2"
                                 BackgroundColor="#ececec"
                                 NavigationStripPosition="Bottom"
-                                DotsBorderColor="Aqua" >
+                                DotsBorderColor="Aqua"
+                                WidthRequest="550"
+                                HeightRequest="550">
                 <syncfusion:SfRotator.ItemTemplate>
                     <DataTemplate>
                         <Image  Source="{Binding Image}"/>
@@ -75,6 +77,8 @@ The [`DotsBorderColor`](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRota
                 rotator.ItemTemplate = itemTemplate;
                 rotator.DotsBorderColor = Colors.Aqua;
                 rotator.ItemsSource = ImageCollection;
+                rotator.WidthRequest=550;
+                rotator.HeightRequest=550;
                 this.Content = rotator;
             }
         }
@@ -121,7 +125,9 @@ The [`SelectedDotColor`](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRot
                                 BackgroundColor="#ececec"
                                 NavigationStripPosition="Bottom"
                                 DotsBorderColor="Aqua" 
-                                SelectedDotColor="Blue">
+                                SelectedDotColor="Blue"
+                                WidthRequest="550"
+                                HeightRequest="550">
                 <syncfusion:SfRotator.ItemTemplate>
                     <DataTemplate>
                         <Image  Source="{Binding Image}"/>
@@ -164,6 +170,8 @@ The [`SelectedDotColor`](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRot
                 rotator.DotsBorderColor = Color.Aqua;
                 rotator.SelectedDotColor = Color.Blue;
                 rotator.ItemsSource = ImageCollection;
+                rotator.WidthRequest=550;
+                rotator.HeightRequest=550;
                 this.Content = rotator;
             }
         }
@@ -211,7 +219,9 @@ The [`UnselectedDotColor`](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfR
                                 NavigationStripPosition="Bottom"
                                 DotsBorderColor="Aqua" 
                                 SelectedDotColor="Blue"
-                                UnselectedDotColor="Gray">
+                                UnselectedDotColor="Gray"
+                                WidthRequest="550"
+                                HeightRequest="550">
                 <syncfusion:SfRotator.ItemTemplate>
                     <DataTemplate>
                         <Image  Source="{Binding Image}"/>
@@ -255,6 +265,8 @@ The [`UnselectedDotColor`](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfR
                 rotator.SelectedDotColor = Color.Blue;
                 rotator.UnselectedDotColor = Color.Gray;
                 rotator.ItemsSource = ImageCollection;
+                rotator.WidthRequest=550;
+                rotator.HeightRequest=550;
                 this.Content = rotator;
             }
         }
