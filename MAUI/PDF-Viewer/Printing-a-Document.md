@@ -18,7 +18,7 @@ To print a PDF programmatically, you can use the `PrintDocument` method provided
 {% tabs %}
 {% highlight c# %}
 // Prints the PDF document.
-PdfViewer. PrintDocument();
+PdfViewer.PrintDocument();
 {% endhighlight %}
 {% endtabs %}
 
