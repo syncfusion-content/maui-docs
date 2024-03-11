@@ -133,4 +133,5 @@ this.Content = radialMenuControl;
 * LayoutType.
 * VisibleSegmentCount.
 * Selection.
+* CenterButtonPlacement.
 * Accessibility.

@@ -40,7 +40,6 @@ In radial menu, you can perform an action while navigating from one level to ano
 {% highlight C# %}
 
 using Syncfusion.Maui.RadialMenu;
-using System.Collections.ObjectModel;
 
 namespace RadialSample
 {
@@ -51,12 +50,15 @@ namespace RadialSample
             InitializeComponent();
             SfRadialMenu radialMenu = new SfRadialMenu();
 
-            RadialMenuItemsCollection<SfRadialMenuItem> itemCollection = new ObservableCollection<SfRadialMenuItem>();
-            itemCollection.Add(new SfRadialMenuItem() { Text = "Bold", FontSize = 12 });
-            itemCollection.Add(new SfRadialMenuItem() { Text = "Copy", FontSize = 12 });
-            itemCollection.Add(new SfRadialMenuItem() { Text = "Paste", FontSize = 12 });
-            itemCollection.Add(new SfRadialMenuItem() { Text = "Undo", FontSize = 12 });
-            itemCollection.Add(new SfRadialMenuItem() { Text = "Color", FontSize = 12 });
+            RadialMenuItemsCollection itemCollection = new RadialMenuItemsCollection()
+            {
+                new SfRadialMenuItem() { Text = "Bold", FontSize = 12 },
+                new SfRadialMenuItem() { Text = "Copy", FontSize = 12 },
+                new SfRadialMenuItem() { Text = "Paste", FontSize = 12 },
+                new SfRadialMenuItem() { Text = "Undo", FontSize = 12 },
+                new SfRadialMenuItem() { Text = "Color", FontSize = 12 },
+            };
+            
             radialMenu.Items = itemCollection;
 
             radialMenu.Navigating += SfRadialMenu_Navigating;
@@ -65,14 +67,14 @@ namespace RadialSample
             this.Content = radialMenu;
         }
 
-        private void SfRadialMenu_Navigating(object sender, NavigatingEventArgs e)
+        private async void SfRadialMenu_Navigating(object sender, NavigatingEventArgs e)
         {
-            DisplayAlert("Alert", "ItemNavigating", "Ok");
+           await DisplayAlert("Alert", "ItemNavigating", "Ok");
         }
 
-        private void SfRadialMenu_Navigated(object sender, NavigatedEventArgs e)
+        private async void SfRadialMenu_Navigated(object sender, NavigatedEventArgs e)
         {
-            DisplayAlert("Alert", "ItemNavigated", "Ok");
+           await DisplayAlert("Alert", "ItemNavigated", "Ok");
         }
     }
 }
@@ -114,7 +116,6 @@ You can perform an action while opening the radial menu. The [`Opening`](https:/
 {% highlight C# %}
 
 using Syncfusion.Maui.RadialMenu;
-using System.Collections.ObjectModel;
 
 namespace RadialSample
 {
@@ -125,12 +126,15 @@ namespace RadialSample
             InitializeComponent();
             SfRadialMenu radialMenu = new SfRadialMenu();
 
-            RadialMenuItemsCollection<SfRadialMenuItem> itemCollection = new ObservableCollection<SfRadialMenuItem>();
-            itemCollection.Add(new SfRadialMenuItem() { Text = "Bold", FontSize = 12 });
-            itemCollection.Add(new SfRadialMenuItem() { Text = "Copy", FontSize = 12 });
-            itemCollection.Add(new SfRadialMenuItem() { Text = "Paste", FontSize = 12 });
-            itemCollection.Add(new SfRadialMenuItem() { Text = "Undo", FontSize = 12 });
-            itemCollection.Add(new SfRadialMenuItem() { Text = "Color", FontSize = 12 });
+            RadialMenuItemsCollection itemCollection = new RadialMenuItemsCollection()
+            {
+                new SfRadialMenuItem() { Text = "Bold", FontSize = 12 },
+                new SfRadialMenuItem() { Text = "Copy", FontSize = 12 },
+                new SfRadialMenuItem() { Text = "Paste", FontSize = 12 },
+                new SfRadialMenuItem() { Text = "Undo", FontSize = 12 },
+                new SfRadialMenuItem() { Text = "Color", FontSize = 12 },
+            };
+            
             radialMenu.Items = itemCollection;
             
             radialMenu.Opening += SfRadialMenu_Opening;
@@ -139,14 +143,14 @@ namespace RadialSample
             this.Content = radialMenu;
         }
 
-        private void SfRadialMenu_Opening(object sender, OpeningEventArgs e)
+        private async void SfRadialMenu_Opening(object sender, OpeningEventArgs e)
         {
-            DisplayAlert("Alert", "ItemOpening", "Ok");
+           await DisplayAlert("Alert", "ItemOpening", "Ok");
         }
 
-        private void SfRadialMenu_Opened(object sender, OpenedEventArgs e)
+        private async void SfRadialMenu_Opened(object sender, OpenedEventArgs e)
         {
-            DisplayAlert("Alert", "ItemOpened", "Ok");
+           await DisplayAlert("Alert", "ItemOpened", "Ok");
         }
     }
 }
@@ -187,7 +191,6 @@ You can perform an action when closing the radial menu. The [`Closing`](https://
 {% highlight C# %}
 
 using Syncfusion.Maui.RadialMenu;
-using System.Collections.ObjectModel;
 
 namespace RadialSample
 {
@@ -198,12 +201,15 @@ namespace RadialSample
             InitializeComponent();
             SfRadialMenu radialMenu = new SfRadialMenu();
 
-            RadialMenuItemsCollection<SfRadialMenuItem> itemCollection = new ObservableCollection<SfRadialMenuItem>();
-            itemCollection.Add(new SfRadialMenuItem() { Text = "Bold", FontSize = 12 });
-            itemCollection.Add(new SfRadialMenuItem() { Text = "Copy", FontSize = 12 });
-            itemCollection.Add(new SfRadialMenuItem() { Text = "Paste", FontSize = 12 });
-            itemCollection.Add(new SfRadialMenuItem() { Text = "Undo", FontSize = 12 });
-            itemCollection.Add(new SfRadialMenuItem() { Text = "Color", FontSize = 12 });
+            RadialMenuItemsCollection itemCollection = RadialMenuItemsCollection()
+            {
+                new SfRadialMenuItem() { Text = "Bold", FontSize = 12 },
+                new SfRadialMenuItem() { Text = "Copy", FontSize = 12 },
+                new SfRadialMenuItem() { Text = "Paste", FontSize = 12 },
+                new SfRadialMenuItem() { Text = "Undo", FontSize = 12 },
+                new SfRadialMenuItem() { Text = "Color", FontSize = 12 },
+            };
+            
             radialMenu.Items = itemCollection;
 
             radialMenu.Closing += SfRadialMenu_Closing;
@@ -212,14 +218,14 @@ namespace RadialSample
             this.Content = radialMenu;
         }
 
-        private void SfRadialMenu_Closing(object sender, ClosingEventArgs e)
+        private async void SfRadialMenu_Closing(object sender, ClosingEventArgs e)
         {
-            DisplayAlert("Alert", "ItemClosing", "Ok");
+           await DisplayAlert("Alert", "ItemClosing", "Ok");
         }
 
-        private void SfRadialMenu_Closed(object sender, ClosedEventArgs e)
+        private async void SfRadialMenu_Closed(object sender, ClosedEventArgs e)
         {
-            DisplayAlert("Alert", "ItemClosed", "Ok");
+           await DisplayAlert("Alert", "ItemClosed", "Ok");
         }
     }
 }
@@ -258,7 +264,6 @@ You can perform an action when tapping the center back button of the radial menu
 {% highlight C# %}
 
 using Syncfusion.Maui.RadialMenu;
-using System.Collections.ObjectModel;
 
 namespace RadialSample
 {
@@ -269,21 +274,24 @@ namespace RadialSample
             InitializeComponent();
             SfRadialMenu radialMenu = new SfRadialMenu();
 
-            RadialMenuItemsCollection<SfRadialMenuItem> itemCollection = new ObservableCollection<SfRadialMenuItem>();
-            itemCollection.Add(new SfRadialMenuItem() { Text = "Bold", FontSize = 12 });
-            itemCollection.Add(new SfRadialMenuItem() { Text = "Copy", FontSize = 12 });
-            itemCollection.Add(new SfRadialMenuItem() { Text = "Paste", FontSize = 12 });
-            itemCollection.Add(new SfRadialMenuItem() { Text = "Undo", FontSize = 12 });
-            itemCollection.Add(new SfRadialMenuItem() { Text = "Color", FontSize = 12 });
+            RadialMenuItemsCollection itemCollection = RadialMenuItemsCollection()
+            {
+                new SfRadialMenuItem() { Text = "Bold", FontSize = 12 },
+                new SfRadialMenuItem() { Text = "Copy", FontSize = 12 },
+                new SfRadialMenuItem() { Text = "Paste", FontSize = 12 },
+                new SfRadialMenuItem() { Text = "Undo", FontSize = 12 },
+                new SfRadialMenuItem() { Text = "Color", FontSize = 12 },
+            };
+            
             radialMenu.Items = itemCollection;
 
             radialMenu.CenterButtonBackTapped += SfRadialMenu_CenterButtonBackTapped;
             this.Content = radialMenu;
         }
 
-        private void SfRadialMenu_CenterButtonBackTapped(object sender, CenterButtonBackTappedEventArgs e)
+        private async void SfRadialMenu_CenterButtonBackTapped(object sender, CenterButtonBackTappedEventArgs e)
         {
-            DisplayAlert("Alert", "CenterButtonTapped", "Ok");
+           await DisplayAlert("Alert", "CenterButtonTapped", "Ok");
         }
     }
 }
@@ -333,21 +341,24 @@ namespace RadialSample
             InitializeComponent();
             SfRadialMenu radialMenu = new SfRadialMenu();
 
-            RadialMenuItemsCollection<SfRadialMenuItem> itemCollection = new ObservableCollection<SfRadialMenuItem>();
-            itemCollection.Add(new SfRadialMenuItem() { Text = "Bold", FontSize = 12 });
-            itemCollection.Add(new SfRadialMenuItem() { Text = "Copy", FontSize = 12 });
-            itemCollection.Add(new SfRadialMenuItem() { Text = "Paste", FontSize = 12 });
-            itemCollection.Add(new SfRadialMenuItem() { Text = "Undo", FontSize = 12 });
-            itemCollection.Add(new SfRadialMenuItem() { Text = "Color", FontSize = 12 });
+            RadialMenuItemsCollection itemCollection = new RadialMenuItemsCollection()
+            {
+                new SfRadialMenuItem() { Text = "Bold", FontSize = 12 },
+                new SfRadialMenuItem() { Text = "Copy", FontSize = 12 },
+                new SfRadialMenuItem() { Text = "Paste", FontSize = 12 },
+                new SfRadialMenuItem() { Text = "Undo", FontSize = 12 },
+                new SfRadialMenuItem() { Text = "Color", FontSize = 12 },
+            };
+            
             radialMenu.Items = itemCollection;
 
             radialMenu.Items[0].ItemTapped += SfRadialMenuItem_ItemTapped;
             this.Content = radialMenu;
         }
 
-        private void SfRadialMenuItem_ItemTapped(object sender, ItemTappedEventArgs e)
+        private async void SfRadialMenuItem_ItemTapped(object sender, ItemTappedEventArgs e)
         {
-            DisplayAlert("Alert", "ItemTapped", "Ok");
+           await DisplayAlert("Alert", "ItemTapped", "Ok");
         }
     }
 }

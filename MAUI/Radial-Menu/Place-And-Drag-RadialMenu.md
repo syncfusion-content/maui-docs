@@ -42,7 +42,6 @@ You can enable/disable dragging by using the [`IsDragEnabled`](https://help.sync
 {% highlight c# %}
 
 using Syncfusion.Maui.RadialMenu;
-using System.Collections.ObjectModel;
 
 namespace RadialSample
 {
@@ -51,6 +50,7 @@ namespace RadialSample
         public MainPage()
         {
             InitializeComponent();
+
             SfRadialMenu radialMenu = new SfRadialMenu()
             {
                 IsDragEnabled = true,
@@ -111,7 +111,6 @@ To hook the [`DragBegin`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sf
 {% highlight c# %}
 
 using Syncfusion.Maui.RadialMenu;
-using System.Collections.ObjectModel;
 
 namespace RadialSample
 {
@@ -184,7 +183,6 @@ To hook the [`DragEnd`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SfRa
 {% highlight c# %}
 
 using Syncfusion.Maui.RadialMenu;
-using System.Collections.ObjectModel;
 
 namespace RadialSample
 {
@@ -248,7 +246,6 @@ You can place radial menu anywhere on its parent layout. Radial Menu's position 
 {% highlight c# %}
 
 using Syncfusion.Maui.RadialMenu;
-using System.Collections.ObjectModel;
 
 namespace RadialSample
 {

@@ -45,7 +45,6 @@ The following code snippet demonstrates how to Create a RadialMenu control with 
 {% highlight c# %}
 
 using Syncfusion.Maui.RadialMenu;
-using System.Collections.ObjectModel;
 
 namespace RadialSample
 {
@@ -54,13 +53,17 @@ namespace RadialSample
         public MainPage()
         {
             InitializeComponent();
+
             SfRadialMenu radialMenu = new SfRadialMenu();
-            RadialMenuItemsCollection<SfRadialMenuItem> itemCollection = new ObservableCollection<SfRadialMenuItem>();
-            itemCollection.Add(new SfRadialMenuItem() { Text = "Bold", FontSize = 12 });
-            itemCollection.Add(new SfRadialMenuItem() { Text = "Copy", FontSize = 12 });
-            itemCollection.Add(new SfRadialMenuItem() { Text = "Paste", FontSize = 12 });
-            itemCollection.Add(new SfRadialMenuItem() { Text = "Undo", FontSize = 12 });
-            itemCollection.Add(new SfRadialMenuItem() { Text = "Color", FontSize = 12 });
+
+            RadialMenuItemsCollection itemCollection = new RadialMenuItemsCollection() 
+            {
+               new SfRadialMenuItem() { Text = "Bold", FontSize = 12 },
+               new SfRadialMenuItem() { Text = "Copy", FontSize = 12 },
+               new SfRadialMenuItem() { Text = "Paste", FontSize = 12 },
+               new SfRadialMenuItem() { Text = "Undo", FontSize = 12 },
+               new SfRadialMenuItem() { Text = "Color", FontSize = 12 },
+            };
             radialMenu.Items = itemCollection;
             this.Content = radialMenu;
         }
@@ -101,7 +104,6 @@ The following code snippet demonstrates how to Display images and text in the Ra
 {% highlight c# %}
 
 using Syncfusion.Maui.RadialMenu;
-using System.Collections.ObjectModel;
 
 namespace RadialSample
 {
@@ -112,12 +114,15 @@ namespace RadialSample
             InitializeComponent();
 
             SfRadialMenu radialMenu = new SfRadialMenu();
-            RadialMenuItemsCollection<SfRadialMenuItem> itemCollection = new ObservableCollection<SfRadialMenuItem>();
-            itemCollection.Add(new SfRadialMenuItem() { Text="John",  Image="johnson.png" });
-            itemCollection.Add(new SfRadialMenuItem() { Text="Krish", Image="krish.png" });
-            itemCollection.Add(new SfRadialMenuItem() { Text="Ram",   Image="ram.png" });
-            itemCollection.Add(new SfRadialMenuItem() { Text="Kather",  Image="kather.png" });
-            itemCollection.Add(new SfRadialMenuItem() { Text="Joe",  Image="joe.png" });
+            RadialMenuItemsCollection itemCollection = new RadialMenuItemsCollection()
+            {
+                new SfRadialMenuItem() { Text = "John", Image = "johnson.png" },
+                new SfRadialMenuItem() { Text = "Krish", Image = "krish.png" },
+                new SfRadialMenuItem() { Text = "Ram", Image = "ram.png" },
+                new SfRadialMenuItem() { Text = "Kather", Image = "kather.png" },
+                new SfRadialMenuItem() { Text = "Joe", Image = "joe.png" }
+            };
+
             radialMenu.Items = itemCollection;
             this.Content = radialMenu;
         }
@@ -174,7 +179,6 @@ The following code snippet demonstrates how to Display custom font with text in 
 {% highlight c# %}
 
 using Syncfusion.Maui.RadialMenu;
-using System.Collections.ObjectModel;
 
 namespace RadialSample
 {
@@ -185,12 +189,15 @@ namespace RadialSample
             InitializeComponent();
 
             SfRadialMenu radialMenu = new SfRadialMenu();
-            RadialMenuItemsCollection<SfRadialMenuItem> itemCollection = new ObservableCollection<SfRadialMenuItem>();
-            itemCollection.Add(new SfRadialMenuItem() { FontFamily="Maui Material Assets" FontSize="20" Text="&#xe72e;" });
-            itemCollection.Add(new SfRadialMenuItem() { FontFamily="Maui Material Assets" FontSize="20" Text="&#xe744;" });
-            itemCollection.Add(new SfRadialMenuItem() { FontFamily="Maui Material Assets" FontSize="20" Text="&#xe745;" });
-            itemCollection.Add(new SfRadialMenuItem() { FontFamily="Maui Material Assets" FontSize="20" Text="&#xe73b;" });
-            itemCollection.Add(new SfRadialMenuItem() { FontFamily="Maui Material Assets" FontSize="20" Text="&#xe762;" });
+            RadialMenuItemsCollection itemCollection = new RadialMenuItemsCollection()
+            {
+                new SfRadialMenuItem() { FontFamily="Maui Material Assets" FontSize="20" Text="&#xe72e;" },
+                new SfRadialMenuItem() { FontFamily="Maui Material Assets" FontSize="20" Text="&#xe744;" },
+                new SfRadialMenuItem() { FontFamily="Maui Material Assets" FontSize="20" Text="&#xe745;" },
+                new SfRadialMenuItem() { FontFamily="Maui Material Assets" FontSize="20" Text="&#xe73b;" },
+                new SfRadialMenuItem() { FontFamily="Maui Material Assets" FontSize="20" Text="&#xe762;" },
+            };
+            
             radialMenu.Items = itemCollection;
             this.Content = radialMenu;
         }
@@ -250,7 +257,6 @@ The following code snippet demonstrates how to add the nested items of radial me
 {% highlight c# %} 
 
 using Syncfusion.Maui.RadialMenu;
-using System.Collections.ObjectModel;
 
 namespace RadialSample
 {
@@ -271,7 +277,7 @@ namespace RadialSample
                 SfRadialMenuItem mainMenuItems = new SfRadialMenuItem();
                 mainMenuItems.Text = mainItem[i];
                 mainMenuItems.FontSize = 12;
-                syncfusion.Items.Add(mainMenuItems);
+                radialMenu.Items.Add(mainMenuItems);
             }
 
             // Adding inner rim items.
@@ -284,6 +290,8 @@ namespace RadialSample
                 colorSubMenuItem.ItemWidth = 50;
                 radialMenu.Items[4].Items.Add(colorSubMenuItem);
             }
+
+            this.Content = radialMenu;
         }
     }
 }
@@ -336,7 +344,6 @@ Using [`ItemsSource`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SfRadi
 {% highlight C# %}
 
 using Syncfusion.Maui.RadialMenu;
-using System.Collections.ObjectModel;
 
 namespace RadialSample
 {
@@ -415,7 +422,6 @@ Duration of animation in radial menu can be changed using the [`AnimationDuratio
 {% highlight c# %}
 
 using Syncfusion.Maui.RadialMenu;
-using System.Collections.ObjectModel;
 
 namespace RadialSample
 {
@@ -429,12 +435,14 @@ namespace RadialSample
                 AnimationDuration = 1000
             };
 
-            RadialMenuItemsCollection<SfRadialMenuItem> itemCollection = new ObservableCollection<SfRadialMenuItem>();
-            itemCollection.Add(new SfRadialMenuItem() { Text = "Bold", FontSize = 12 });
-            itemCollection.Add(new SfRadialMenuItem() { Text = "Copy", FontSize = 12 });
-            itemCollection.Add(new SfRadialMenuItem() { Text = "Paste", FontSize = 12 });
-            itemCollection.Add(new SfRadialMenuItem() { Text = "Undo", FontSize = 12 });
-            itemCollection.Add(new SfRadialMenuItem() { Text = "Color", FontSize = 12 });
+            RadialMenuItemsCollection itemCollection = new RadialMenuItemsCollection()
+            {
+                new SfRadialMenuItem() { Text = "Bold", FontSize = 12 },
+                new SfRadialMenuItem() { Text = "Copy", FontSize = 12 },
+                new SfRadialMenuItem() { Text = "Paste", FontSize = 12 },
+                new SfRadialMenuItem() { Text = "Undo", FontSize = 12 },
+                new SfRadialMenuItem() { Text = "Color", FontSize = 12 },
+            };
             radialMenu.Items = itemCollection;
             this.Content = radialMenu;
         }
@@ -474,7 +482,6 @@ The [`IsOpen`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SfRadialMenu.
 {% highlight c# %}
 
 using Syncfusion.Maui.RadialMenu;
-using System.Collections.ObjectModel;
 
 namespace RadialSample
 {
@@ -488,12 +495,14 @@ namespace RadialSample
                 IsOpen = true
             };
 
-            RadialMenuItemsCollection<SfRadialMenuItem> itemCollection = new ObservableCollection<SfRadialMenuItem>();
-            itemCollection.Add(new SfRadialMenuItem() { Text = "Bold", FontSize = 12 });
-            itemCollection.Add(new SfRadialMenuItem() { Text = "Copy", FontSize = 12 });
-            itemCollection.Add(new SfRadialMenuItem() { Text = "Paste", FontSize = 12 });
-            itemCollection.Add(new SfRadialMenuItem() { Text = "Undo", FontSize = 12 });
-            itemCollection.Add(new SfRadialMenuItem() { Text = "Color", FontSize = 12 });
+            RadialMenuItemsCollection itemCollection = new RadialMenuItemsCollection()
+            {
+                new SfRadialMenuItem() { Text = "Bold", FontSize = 12 },
+                new SfRadialMenuItem() { Text = "Copy", FontSize = 12 },
+                new SfRadialMenuItem() { Text = "Paste", FontSize = 12 },
+                new SfRadialMenuItem() { Text = "Undo", FontSize = 12 },
+                new SfRadialMenuItem() { Text = "Color", FontSize = 12 },
+            };
             radialMenu.Items = itemCollection;
             this.Content = radialMenu;
         }
@@ -534,7 +543,6 @@ Thickness of strip between the two items can be changed using the [`SeparatorThi
 {% highlight c# %}
 
 using Syncfusion.Maui.RadialMenu;
-using System.Collections.ObjectModel;
 
 namespace RadialSample
 {
@@ -550,12 +558,14 @@ namespace RadialSample
 
             };
 
-            RadialMenuItemsCollection<SfRadialMenuItem> itemCollection = new ObservableCollection<SfRadialMenuItem>();
-            itemCollection.Add(new SfRadialMenuItem() { Text = "Bold", FontSize = 12 });
-            itemCollection.Add(new SfRadialMenuItem() { Text = "Copy", FontSize = 12 });
-            itemCollection.Add(new SfRadialMenuItem() { Text = "Paste", FontSize = 12 });
-            itemCollection.Add(new SfRadialMenuItem() { Text = "Undo", FontSize = 12 });
-            itemCollection.Add(new SfRadialMenuItem() { Text = "Color", FontSize = 12 });
+            RadialMenuItemsCollection itemCollection = new RadialMenuItemsCollection()
+            {
+                new SfRadialMenuItem() { Text = "Bold", FontSize = 12 },
+                new SfRadialMenuItem() { Text = "Copy", FontSize = 12 },
+                new SfRadialMenuItem() { Text = "Paste", FontSize = 12 },
+                new SfRadialMenuItem() { Text = "Undo", FontSize = 12 },
+                new SfRadialMenuItem() { Text = "Color", FontSize = 12 },
+            };
             radialMenu.Items = itemCollection;
             this.Content = radialMenu;
         }
@@ -596,7 +606,6 @@ The radius of rim can be changed using the [`RimRadius`](https://help.syncfusion
 {% highlight c# %}
 
 using Syncfusion.Maui.RadialMenu;
-using System.Collections.ObjectModel;
 
 namespace RadialSample
 {
@@ -605,19 +614,21 @@ namespace RadialSample
         public MainPage()
         {
             InitializeComponent();
+
             SfRadialMenu radialMenu = new SfRadialMenu()
             {
                 RimRadius = 150,
                 RimColor = Color.FromHex("#FF1493")
-
             };
 
-            RadialMenuItemsCollection<SfRadialMenuItem> itemCollection = new ObservableCollection<SfRadialMenuItem>();
-            itemCollection.Add(new SfRadialMenuItem() { Text = "Bold", FontSize = 12 });
-            itemCollection.Add(new SfRadialMenuItem() { Text = "Copy", FontSize = 12 });
-            itemCollection.Add(new SfRadialMenuItem() { Text = "Paste", FontSize = 12 });
-            itemCollection.Add(new SfRadialMenuItem() { Text = "Undo", FontSize = 12 });
-            itemCollection.Add(new SfRadialMenuItem() { Text = "Color", FontSize = 12 });
+            RadialMenuItemsCollection itemCollection = new RadialMenuItemsCollection()
+            {
+                new SfRadialMenuItem() { Text = "Bold", FontSize = 12 },
+                new SfRadialMenuItem() { Text = "Copy", FontSize = 12 },
+                new SfRadialMenuItem() { Text = "Paste", FontSize = 12 },
+                new SfRadialMenuItem() { Text = "Undo", FontSize = 12 },
+                new SfRadialMenuItem() { Text = "Color", FontSize = 12 },
+            };
             radialMenu.Items = itemCollection;
             this.Content = radialMenu;
         }
@@ -654,7 +665,6 @@ The control is populated with a list of employees, and the employee model contai
 {% highlight c# %}
 
 using Syncfusion.Maui.RadialMenu;
-using System.Collections.ObjectModel;
 
 namespace RadialSample
 {

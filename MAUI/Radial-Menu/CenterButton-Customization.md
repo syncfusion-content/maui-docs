@@ -59,7 +59,6 @@ The [`CenterButtonText`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SfR
 {% highlight C# %}
 
 using Syncfusion.Maui.RadialMenu;
-using System.Collections.ObjectModel;
 
 namespace RadialSample
 {
@@ -152,7 +151,6 @@ The [`CenterButtonTextColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Mau
 {% highlight C# %}
 
 using Syncfusion.Maui.RadialMenu;
-using System.Collections.ObjectModel;
 
 namespace RadialSample
 {
@@ -226,7 +224,6 @@ The [`CenterButtonBackgroundColor`](https://help.syncfusion.com/cr/xamarin/Syncf
 {% highlight C# %}
 
 using Syncfusion.Maui.RadialMenu;
-using System.Collections.ObjectModel;
 
 namespace RadialSample
 {
@@ -240,12 +237,15 @@ namespace RadialSample
                 CenterButtonBackgroundColor = Color.FromArgb("#000000")
             };
 
-            RadialMenuItemsCollection<SfRadialMenuItem> itemCollection = new ObservableCollection<SfRadialMenuItem>();
-            itemCollection.Add(new SfRadialMenuItem() { Text = "Bold", FontSize = 12 });
-            itemCollection.Add(new SfRadialMenuItem() { Text = "Copy", FontSize = 12 });
-            itemCollection.Add(new SfRadialMenuItem() { Text = "Paste", FontSize = 12 });
-            itemCollection.Add(new SfRadialMenuItem() { Text = "Undo", FontSize = 12 });
-            itemCollection.Add(new SfRadialMenuItem() { Text = "Color", FontSize = 12 });
+            RadialMenuItemsCollection itemCollection =  new RadialMenuItemsCollection()
+            {
+                new SfRadialMenuItem() { Text = "Bold", FontSize = 12 },
+                new SfRadialMenuItem() { Text = "Copy", FontSize = 12 },
+                new SfRadialMenuItem() { Text = "Paste", FontSize = 12 },
+                new SfRadialMenuItem() { Text = "Undo", FontSize = 12 },
+                new SfRadialMenuItem() { Text = "Color", FontSize = 12 },
+            };
+           
             radialMenu.Items = itemCollection;
             this.Content = radialMenu;
         }
@@ -286,7 +286,6 @@ The [`CenterButtonRadius`](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfR
 {% highlight C# %}
 
 using Syncfusion.Maui.RadialMenu;
-using System.Collections.ObjectModel;
 
 namespace RadialSample
 {
@@ -300,12 +299,12 @@ namespace RadialSample
                 CenterButtonRadius = 5
             };
 
-            RadialMenuItemsCollection<SfRadialMenuItem> itemCollection = new ObservableCollection<SfRadialMenuItem>();
-            itemCollection.Add(new SfRadialMenuItem() { Text = "Bold", FontSize = 12 });
-            itemCollection.Add(new SfRadialMenuItem() { Text = "Copy", FontSize = 12 });
-            itemCollection.Add(new SfRadialMenuItem() { Text = "Paste", FontSize = 12 });
-            itemCollection.Add(new SfRadialMenuItem() { Text = "Undo", FontSize = 12 });
-            itemCollection.Add(new SfRadialMenuItem() { Text = "Color", FontSize = 12 });
+            RadialMenuItemsCollection itemCollection =  new RadialMenuItemsCollection()
+            new SfRadialMenuItem() { Text = "Bold", FontSize = 12 },
+            new SfRadialMenuItem() { Text = "Copy", FontSize = 12 },
+            new SfRadialMenuItem() { Text = "Paste", FontSize = 12 },
+            new SfRadialMenuItem() { Text = "Undo", FontSize = 12 },
+            new SfRadialMenuItem() { Text = "Color", FontSize = 12 },
             radialMenu.Items = itemCollection;
             this.Content = radialMenu;
         }
@@ -365,7 +364,6 @@ The [`CenterButtonFontFamily`](https://help.syncfusion.com/cr/xamarin/Syncfusion
 {% highlight C# %}
 
 using Syncfusion.Maui.RadialMenu;
-using System.Collections.ObjectModel;
 
 namespace RadialSample
 {
@@ -459,7 +457,6 @@ The [`CenterButtonFontSize`](https://help.syncfusion.com/cr/xamarin/Syncfusion.S
 {% highlight C# %}
 
 using Syncfusion.Maui.RadialMenu;
-using System.Collections.ObjectModel;
 
 namespace RadialSample
 {
@@ -553,7 +550,6 @@ The [`CenterButtonFontAttributes`](https://help.syncfusion.com/cr/xamarin/Syncfu
 {% highlight C# %}
 
 using Syncfusion.Maui.RadialMenu;
-using System.Collections.ObjectModel;
 
 namespace RadialSample
 {
@@ -626,7 +622,6 @@ The [`CenterButtonBorderColor`](https://help.syncfusion.com/cr/xamarin/Syncfusio
 {% highlight C# %}
 
 using Syncfusion.Maui.RadialMenu;
-using System.Collections.ObjectModel;
 
 namespace RadialSample
 {
@@ -640,12 +635,12 @@ namespace RadialSample
                 CenterButtonBorderColor = Color.Black
             };
 
-            RadialMenuItemsCollection<SfRadialMenuItem> itemCollection = new ObservableCollection<SfRadialMenuItem>();
-            itemCollection.Add(new SfRadialMenuItem() { Text = "Bold", FontSize = 12 });
-            itemCollection.Add(new SfRadialMenuItem() { Text = "Copy", FontSize = 12 });
-            itemCollection.Add(new SfRadialMenuItem() { Text = "Paste", FontSize = 12 });
-            itemCollection.Add(new SfRadialMenuItem() { Text = "Undo", FontSize = 12 });
-            itemCollection.Add(new SfRadialMenuItem() { Text = "Color", FontSize = 12 });
+            RadialMenuItemsCollection itemCollection =  new RadialMenuItemsCollection()
+            new SfRadialMenuItem() { Text = "Bold", FontSize = 12 },
+            new SfRadialMenuItem() { Text = "Copy", FontSize = 12 },
+            new SfRadialMenuItem() { Text = "Paste", FontSize = 12 },
+            new SfRadialMenuItem() { Text = "Undo", FontSize = 12 },
+            new SfRadialMenuItem() { Text = "Color", FontSize = 12 },
             radialMenu.Items = itemCollection;
             this.Content = radialMenu;
         }
@@ -687,9 +682,7 @@ The [`CenterButtonBorderThickness`](https://help.syncfusion.com/cr/xamarin/Syncf
 
 {% highlight C# %}
 
-using Syncfusion.SfRadialMenu.XForms;
-using System.Collections.ObjectModel;
-using MAUI.Forms;
+using Syncfusion.Maui.RadialMenu;
 
 namespace RadialSample
 {
@@ -704,12 +697,12 @@ namespace RadialSample
                 CenterButtonBorderThickness = 5,
             };
 
-            RadialMenuItemsCollection<SfRadialMenuItem> itemCollection = new ObservableCollection<SfRadialMenuItem>();
-            itemCollection.Add(new SfRadialMenuItem() { Text = "Bold", FontSize = 12 });
-            itemCollection.Add(new SfRadialMenuItem() { Text = "Copy", FontSize = 12 });
-            itemCollection.Add(new SfRadialMenuItem() { Text = "Paste", FontSize = 12 });
-            itemCollection.Add(new SfRadialMenuItem() { Text = "Undo", FontSize = 12 });
-            itemCollection.Add(new SfRadialMenuItem() { Text = "Color", FontSize = 12 });
+            RadialMenuItemsCollection itemCollection =  new RadialMenuItemsCollection()
+            new SfRadialMenuItem() { Text = "Bold", FontSize = 12 },
+            new SfRadialMenuItem() { Text = "Copy", FontSize = 12 },
+            new SfRadialMenuItem() { Text = "Paste", FontSize = 12 },
+            new SfRadialMenuItem() { Text = "Undo", FontSize = 12 },
+            new SfRadialMenuItem() { Text = "Color", FontSize = 12 },
             radialMenu.Items = itemCollection;
             this.Content = radialMenu;
         }
@@ -787,6 +780,8 @@ namespace RadialSample
                 CenterButtonView = centerButtonGrid,
                 CenterButtonBackView = centerButtonBackGrid
             };
+
+            this.Content = radialMenu;
         }
     }
 }
@@ -839,12 +834,12 @@ namespace RadialSample
                 EnableCenterButtonAnimation = true
             };
 
-            RadialMenuItemsCollection<SfRadialMenuItem> itemCollection = new ObservableCollection<SfRadialMenuItem>();
-            itemCollection.Add(new SfRadialMenuItem() { Text = "Bold", FontSize = 12 });
-            itemCollection.Add(new SfRadialMenuItem() { Text = "Copy", FontSize = 12 });
-            itemCollection.Add(new SfRadialMenuItem() { Text = "Paste", FontSize = 12 });
-            itemCollection.Add(new SfRadialMenuItem() { Text = "Undo", FontSize = 12 });
-            itemCollection.Add(new SfRadialMenuItem() { Text = "Color", FontSize = 12 });
+            RadialMenuItemsCollection itemCollection =  new RadialMenuItemsCollection()
+            new SfRadialMenuItem() { Text = "Bold", FontSize = 12 },
+            new SfRadialMenuItem() { Text = "Copy", FontSize = 12 },
+            new SfRadialMenuItem() { Text = "Paste", FontSize = 12 },
+            new SfRadialMenuItem() { Text = "Undo", FontSize = 12 },
+            new SfRadialMenuItem() { Text = "Color", FontSize = 12 },
             radialMenu.Items = itemCollection;
             this.Content = radialMenu;
         }

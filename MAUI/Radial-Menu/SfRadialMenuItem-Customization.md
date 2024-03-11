@@ -141,12 +141,15 @@ namespace RadialSample
             InitializeComponent();
 
             SfRadialMenu radialMenu = new SfRadialMenu();
-            RadialMenuItemsCollection<SfRadialMenuItem> itemCollection = new ObservableCollection<SfRadialMenuItem>();
-            itemCollection.Add(new SfRadialMenuItem() { Text = "Bold", FontSize = 12 });
-            itemCollection.Add(new SfRadialMenuItem() { Text = "Copy", FontSize = 12 });
-            itemCollection.Add(new SfRadialMenuItem() { Text = "Paste", FontSize = 12 });
-            itemCollection.Add(new SfRadialMenuItem() { Text = "Undo", FontSize = 12 });
-            itemCollection.Add(new SfRadialMenuItem() { Text = "Color", FontSize = 12 });
+            RadialMenuItemsCollection itemCollection = new RadialMenuItemsCollection()
+            {
+                new SfRadialMenuItem() { Text = "Bold", FontSize = 12 },
+                new SfRadialMenuItem() { Text = "Copy", FontSize = 12 },
+                new SfRadialMenuItem() { Text = "Paste", FontSize = 12 },
+                new SfRadialMenuItem() { Text = "Undo", FontSize = 12 },
+                new SfRadialMenuItem() { Text = "Color", FontSize = 12 },
+            };
+            
             radialMenu.Items = itemCollection;
             this.Content = radialMenu;
         }
@@ -197,12 +200,14 @@ namespace RadialSample
             InitializeComponent();
 
             SfRadialMenu radialMenu = new SfRadialMenu();
-            RadialMenuItemsCollection<SfRadialMenuItem> itemCollection = new ObservableCollection<SfRadialMenuItem>();
-            itemCollection.Add(new SfRadialMenuItem() { Text="John",  Image="johnson.png", ItemHeight=60, ItemWidth=60 });
-            itemCollection.Add(new SfRadialMenuItem() { Text="Krish", Image="krish.png", ItemHeight=60, ItemWidth=60 });
-            itemCollection.Add(new SfRadialMenuItem() { Text="Ram",   Image="ram.png", ItemHeight=60, ItemWidth=60 });
-            itemCollection.Add(new SfRadialMenuItem() { Text="Kather",  Image="kather.png", ItemHeight=60, ItemWidth=60 });
-            itemCollection.Add(new SfRadialMenuItem() { Text="Joe",  Image="joe.png", ItemHeight=60, ItemWidth=60 });
+            RadialMenuItemsCollection itemCollection = new RadialMenuItemsCollection()
+            {
+                new SfRadialMenuItem() { Text="John",  Image="johnson.png", ItemHeight=60, ItemWidth=60 },
+                new SfRadialMenuItem() { Text="Krish", Image="krish.png", ItemHeight=60, ItemWidth=60 },
+                new SfRadialMenuItem() { Text="Ram",   Image="ram.png", ItemHeight=60, ItemWidth=60 },
+                new SfRadialMenuItem() { Text="Kather",  Image="kather.png", ItemHeight=60, ItemWidth=60 },
+                new SfRadialMenuItem() { Text="Joe",  Image="joe.png", ItemHeight=60, ItemWidth=60 },
+            };
             radialMenu.Items = itemCollection;
             this.Content = radialMenu;
         }
@@ -253,12 +258,14 @@ namespace RadialSample
             InitializeComponent();
 
             SfRadialMenu radialMenu = new SfRadialMenu();
-            RadialMenuItemsCollection<SfRadialMenuItem> itemCollection = new ObservableCollection<SfRadialMenuItem>();
-            itemCollection.Add(new SfRadialMenuItem() { BackgroundColor= Color.FromArgb("#00cc1d") });
-            itemCollection.Add(new SfRadialMenuItem() { BackgroundColor= Color.FromArgb("#c65619") });
-            itemCollection.Add(new SfRadialMenuItem() { BackgroundColor= Color.FromArgb("#F17525") });
-            itemCollection.Add(new SfRadialMenuItem() { BackgroundColor= Color.FromArgb("#0bb4c3") });
-            itemCollection.Add(new SfRadialMenuItem() { BackgroundColor= Color.FromArgb("#0051d4") });
+            RadialMenuItemsCollection itemCollection = new RadialMenuItemsCollection()
+            {
+                new SfRadialMenuItem() { BackgroundColor= Color.FromArgb("#00cc1d") },
+                new SfRadialMenuItem() { BackgroundColor= Color.FromArgb("#c65619") },
+                new SfRadialMenuItem() { BackgroundColor= Color.FromArgb("#F17525") },
+                new SfRadialMenuItem() { BackgroundColor= Color.FromArgb("#0bb4c3") },
+                new SfRadialMenuItem() { BackgroundColor= Color.FromArgb("#0051d4") },
+            };
             radialMenu.Items = itemCollection;
             this.Content = radialMenu;
         }
@@ -309,12 +316,14 @@ namespace RadialSample
             InitializeComponent();
 
             SfRadialMenu radialMenu = new SfRadialMenu();
-            RadialMenuItemsCollection<SfRadialMenuItem> itemCollection = new ObservableCollection<SfRadialMenuItem>();
-            itemCollection.Add(new SfRadialMenuItem() { Text = "Bold", FontFamily="Times New Roman" });
-            itemCollection.Add(new SfRadialMenuItem() { Text = "Copy", FontFamily="Times New Roman" });
-            itemCollection.Add(new SfRadialMenuItem() { Text = "Paste", FontFamily="Times New Roman" });
-            itemCollection.Add(new SfRadialMenuItem() { Text = "Undo", FontFamily="Times New Roman" });
-            itemCollection.Add(new SfRadialMenuItem() { Text = "Color", FontFamily="Times New Roman" });
+            RadialMenuItemsCollection itemCollection = new RadialMenuItemsCollection()
+            {
+                new SfRadialMenuItem() { Text = "Bold", FontFamily="Times New Roman" },
+                new SfRadialMenuItem() { Text = "Copy", FontFamily="Times New Roman" },
+                new SfRadialMenuItem() { Text = "Paste", FontFamily="Times New Roman" },
+                new SfRadialMenuItem() { Text = "Undo", FontFamily="Times New Roman" },
+                new SfRadialMenuItem() { Text = "Color", FontFamily="Times New Roman" },
+            };
             radialMenu.Items = itemCollection;
             this.Content = radialMenu;
         }
@@ -366,12 +375,14 @@ namespace RadialSample
             InitializeComponent();
 
             SfRadialMenu radialMenu = new SfRadialMenu();
-            RadialMenuItemsCollection<SfRadialMenuItem> itemCollection = new ObservableCollection<SfRadialMenuItem>();
-            itemCollection.Add(new SfRadialMenuItem() { Text = "Bold",  FontSize=16 });
-            itemCollection.Add(new SfRadialMenuItem() { Text = "Copy", FontSize=18 });
-            itemCollection.Add(new SfRadialMenuItem() { Text = "Paste", FontSize=20 });
-            itemCollection.Add(new SfRadialMenuItem() { Text = "Undo", FontSize=22 });
-            itemCollection.Add(new SfRadialMenuItem() { Text = "Color", FontSize=24 });
+            RadialMenuItemsCollection itemCollection = new RadialMenuItemsCollection()
+            {
+                new SfRadialMenuItem() { Text = "Bold",  FontSize=16 },
+                new SfRadialMenuItem() { Text = "Copy", FontSize=18 },
+                new SfRadialMenuItem() { Text = "Paste", FontSize=20 },
+                new SfRadialMenuItem() { Text = "Undo", FontSize=22 },
+                new SfRadialMenuItem() { Text = "Color", FontSize=24 },
+            };
             radialMenu.Items = itemCollection;
             this.Content = radialMenu;
         }
@@ -420,10 +431,12 @@ namespace RadialSample
             InitializeComponent();
 
             SfRadialMenu radialMenu = new SfRadialMenu();
-            RadialMenuItemsCollection<SfRadialMenuItem> itemCollection = new ObservableCollection<SfRadialMenuItem>();
-            itemCollection.Add(new SfRadialMenuItem() { Text = "Bold",  FontAttributes = FontAttributes.None });
-            itemCollection.Add(new SfRadialMenuItem() { Text = "Copy", FontAttributes = FontAttributes.Bold });
-            itemCollection.Add(new SfRadialMenuItem() { Text = "Paste", FontAttributes = FontAttributes.Italic });
+            RadialMenuItemsCollection itemCollection = new RadialMenuItemsCollection()
+            {
+                new SfRadialMenuItem() { Text = "Bold",  FontAttributes = FontAttributes.None },
+                new SfRadialMenuItem() { Text = "Copy", FontAttributes = FontAttributes.Bold },
+                new SfRadialMenuItem() { Text = "Paste", FontAttributes = FontAttributes.Italic },
+            };
             radialMenu.Items = itemCollection;
             this.Content = radialMenu;
         }
@@ -474,12 +487,14 @@ namespace RadialSample
             InitializeComponent();
 
             SfRadialMenu radialMenu = new SfRadialMenu();
-            RadialMenuItemsCollection<SfRadialMenuItem> itemCollection = new ObservableCollection<SfRadialMenuItem>();
-            itemCollection.Add(new SfRadialMenuItem() { Image="johnson.png" });
-            itemCollection.Add(new SfRadialMenuItem() { Image="krish.png" });
-            itemCollection.Add(new SfRadialMenuItem() { Image="ram.png" });
-            itemCollection.Add(new SfRadialMenuItem() { Image="kather.png" });
-            itemCollection.Add(new SfRadialMenuItem() { Image="joe.png" });
+            RadialMenuItemsCollection itemCollection = new RadialMenuItemsCollection()
+            {
+                new SfRadialMenuItem() { Image="johnson.png" },
+                new SfRadialMenuItem() { Image="krish.png" },
+                new SfRadialMenuItem() { Image="ram.png" },
+                new SfRadialMenuItem() { Image="kather.png" },
+                new SfRadialMenuItem() { Image="joe.png" },
+            };
             radialMenu.Items = itemCollection;
             this.Content = radialMenu;
         }
@@ -582,7 +597,7 @@ namespace RadialSample
 
 {% endtabs %}
 
-### Command for SfRadialMenuItem
+### Command and CommandParameter for SfRadialMenuItem
 
 The [`Command`](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRadialMenu.XForms.SfRadialMenu.html#Syncfusion_SfRadialMenu_XForms_SfRadialMenu_Command) property is used to associate a command with an instance of [`SfRadialMenuItem`](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRadialMenu.XForms.SfRadialMenuItem.html). This property is most often set with MVVM pattern to bind callbacks back into the ViewModel.
 
@@ -598,59 +613,52 @@ When clicking the [`SfRadialMenuItem`](https://help.syncfusion.com/cr/xamarin/Sy
              x:Class="RadialSample.MainPage"
              mc:Ignorable="d"
              x:Class="RadialCommandSample.MainPage">
-    <ContentPage.Content>
-        <Grid>
-            <radialMenu:SfRadialMenu x:Name="radialMenu"                              
+     <ContentPage.Content>
+        <radialMenu:SfRadialMenu                        
                              CenterButtonText="Edit"
                              CenterButtonFontSize="15">
-                <radialMenu:SfRadialMenu.Items>
-                    <radialMenu:SfRadialMenuItem  Command="{Binding Item1Command}" CommandParameter="Bold is tapped"  Text="Bold"
+            <radialMenu:SfRadialMenu.Items>
+                <radialMenu:SfRadialMenuItem  Command="{Binding CutItemCommand}" CommandParameter="Cut is tapped"  Text="Cut"
                                          FontSize="15"/>
-                    <radialMenu:SfRadialMenuItem Command="{Binding Item2Command}" CommandParameter="Copy is tapped"  Text="Copy"
+                <radialMenu:SfRadialMenuItem Command="{Binding CopyItemCommand}" CommandParameter="Copy is tapped"  Text="Copy"
                                          FontSize="15"/>
-                    <radialMenu:SfRadialMenuItem Command="{Binding Item3Command}" CommandParameter="Paste is tapped" Text="Paste"
+                <radialMenu:SfRadialMenuItem Command="{Binding PasteItemCommand}" CommandParameter="Paste is tapped" Text="Paste"
                                          FontSize="15"/>
-                    <radialMenu:SfRadialMenuItem Command="{Binding Item4Command}" CommandParameter="Crop is tapped" Text="Crop"
+                <radialMenu:SfRadialMenuItem Command="{Binding CropItemCommand}" CommandParameter="Crop is tapped" Text="Crop"
                                          FontSize="15"/>
-                    <radialMenu:SfRadialMenuItem Command="{Binding Item5Command}" CommandParameter="Paint is tapped" Text="Paint"
+                <radialMenu:SfRadialMenuItem Command="{Binding PaintItemCommand}" CommandParameter="Paint is tapped" Text="Paint"
                                          FontSize="15"/>
-                </radialMenu:SfRadialMenu.Items>
-            </radialMenu:SfRadialMenu>
-        </Grid>
+            </radialMenu:SfRadialMenu.Items>
+        </radialMenu:SfRadialMenu>
     </ContentPage.Content>
+
 </ContentPage>
 
 {% endhighlight %}
 {% highlight c#%}
 
 using Syncfusion.Maui.RadialMenu;
-using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Input;
 
-namespace RadialCommandSample
+namespace RadialMenuCommandSample
 {
-
-    [DesignTimeVisible(false)]
     public partial class MainPage : ContentPage
     {
         ViewModel viewModel;
         public MainPage()
         {
             InitializeComponent();
-            viewModel= new ViewModel(this);
+            viewModel = new ViewModel(this);
+            this.BindingContext = viewModel;
+
             SfRadialMenu radialMenu = new SfRadialMenu();
-            ObservableCollection<SfRadialMenuItem> itemCollection = new ObservableCollection<SfRadialMenuItem>();
-            itemCollection.Add(new SfRadialMenuItem() { Text = "Bold", FontSize = 12 , Command = viewModel.Item1Command , CommandParameter = "Bold is tapped"});
-            itemCollection.Add(new SfRadialMenuItem() { Text = "Copy", FontSize = 12 , Command =viewModel.Item2Command, CommandParameter = "Copy is tapped" });
-            itemCollection.Add(new SfRadialMenuItem() { Text = "Paste", FontSize = 12, Command = viewModel.Item3Command , CommandParameter = "Paste is tapped" });
-            itemCollection.Add(new SfRadialMenuItem() { Text = "Crop", FontSize = 12, Command = viewModel.Item4Command, CommandParameter = "Crop is tapped" });
-            itemCollection.Add(new SfRadialMenuItem() { Text = "Paint", FontSize = 12, Command = viewModel.Item5Command, CommandParameter = "Paint is tapped" });
+            RadialMenuItemsCollection itemCollection = new RadialMenuItemsCollection()
+            {
+                new SfRadialMenuItem() { Text = "Cut", FontSize = 12 , Command = viewModel.CutItemCommand , CommandParameter = "Bold is tapped"},
+                new SfRadialMenuItem() { Text = "Copy", FontSize = 12 , Command =viewModel.CopyItemCommand, CommandParameter = "Copy is tapped" },
+                new SfRadialMenuItem() { Text = "Paste", FontSize = 12, Command = viewModel.PasteItemCommand , CommandParameter = "Paste is tapped" },
+                new SfRadialMenuItem() { Text = "Crop", FontSize = 12, Command = viewModel.CropItemCommand, CommandParameter = "Crop is tapped" },
+                new SfRadialMenuItem() { Text = "Paint", FontSize = 12, Command = viewModel.PaintItemCommand, CommandParameter = "Paint is tapped" },
+            };
             radialMenu.Items = itemCollection;
             this.Content = radialMenu;
         }
@@ -664,101 +672,44 @@ Define the [`Command`](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRadia
 
 {% highlight c#%}
 
-using Syncfusion.Maui.RadialMenu;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Text;
+using CommunityToolkit.Mvvm.ComponentModel;
 using System.Windows.Input;
 
-namespace RadialCommandSample
+namespace RadialMenuCommandSample
 {
+    partial class ViewModel : ObservableObject
+    {
+        [ObservableProperty]
+        ICommand cutItemCommand;
 
-     // View Model
- public  class ViewModel : INotifyPropertyChanged
-    { 
-        private ICommand item1Command;
-        public ICommand Item1Command
-        {
-            get { return item1Command; }
-            set
-            {
-                item1Command = value;
-                OnPropertyRaised("Item1Command");
-            }
-        }
+        [ObservableProperty]
+        private ICommand copyItemCommand;
 
-        private ICommand item2Command;
-        public ICommand Item2Command
-        {
-            get { return item2Command; }
-            set
-            {
-                item2Command = value;
-                OnPropertyRaised("Item2Command");
-            }
-        }
+        [ObservableProperty]
+        private ICommand pasteItemCommand;
 
-        private ICommand item3Command;
-        public ICommand Item3Command
-        {
-            get { return item3Command; }
-            set
-            {
-                item3Command = value;
-                OnPropertyRaised("Item3Command");
-            }
-        }
+        [ObservableProperty]
+        private ICommand cropItemCommand;
 
-        private ICommand item4Command;
-        public ICommand Item4Command
-        {
-            get { return item4Command; }
-            set
-            {
-                item4Command = value;
-                OnPropertyRaised("Item4Command");
-            }
-        }
-
-        private ICommand item5Command;
-        public ICommand Item5Command
-        {
-            get { return item5Command; }
-            set
-            {
-                item5Command = value;
-                OnPropertyRaised("Item5Command");
-            }
-        }
+        [ObservableProperty]
+        private ICommand paintItemCommand;
 
         Page page;
 
         public ViewModel(Page page)
         {
             this.page = page;
-            Item1Command = new Command(ButtonClicked);
-            Item2Command = new Command(ButtonClicked);
-            Item3Command = new Command(ButtonClicked);
-            Item4Command = new Command(ButtonClicked);
-            Item5Command = new Command(ButtonClicked);
+            CutItemCommand = new Command(ButtonClicked);
+            CopyItemCommand = new Command(ButtonClicked);
+            PasteItemCommand = new Command(ButtonClicked);
+            CropItemCommand = new Command(ButtonClicked);
+            PaintItemCommand = new Command(ButtonClicked);
         }
 
         private async void ButtonClicked(object sender)
         {
             var text = (sender as string).ToString();
             await page.DisplayAlert("Alert", text, "OK");
-        }
-
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        private void OnPropertyRaised(string propertyname)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(propertyname));
-            }
-
         }
     }
 }
