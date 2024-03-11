@@ -214,7 +214,7 @@ The [StrokeDashArray](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts
 
 {% endtabs %}
 
-![Dashed Stacked Line chart in MAUI](Chart-types_images/maui_dashed_stacked_line_chart.png)
+![Dashed Stacked Line chart in MAUI](Chart-types-images/maui_dashed_stacked_line_chart.png)
 
 ## Enable Marker
 
@@ -303,7 +303,7 @@ A marker, also known as a symbol, is used to determine or highlight the position
 
 {% endtabs %}
 
-![Stacked Line Marker support in MAUI Chart](Chart-types_images/stacked_line_marker_support.png)
+![Stacked Line Marker support in MAUI Chart](Chart-types-images/stacked_line_marker_support.png)
 
 ### Marker customization
 
@@ -442,4 +442,4 @@ In order to change the series markers appearance, create an instance of the [Mar
 
 {% endtabs %}
 
-![Stacked Line Custom Marker support in MAUI Chart](Chart-types_images/stacked_line_custom_marker_support.png)
+![Stacked Line Custom Marker support in MAUI Chart](Chart-types-images/stacked_line_custom_marker_support.png)
