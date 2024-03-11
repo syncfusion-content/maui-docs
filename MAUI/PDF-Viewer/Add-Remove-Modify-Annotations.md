@@ -175,16 +175,16 @@ private void OnAnnotationEdited(object sender, AnnotationEventArgs e)
 
 ### Adding custom information to a annotation
 
-The [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) allows you to assign custom information to annotations. The `CustomData` property is utilized to store additional information about each annotation instance for reference. However, it's essential to note that these data are solely intended for reference purposes and will not be displayed in the PdfViewer interface.
+The [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) allows you to assign custom information to annotations. The `CustomData` property is utilized to store additional information about each annotation instance for reference. However, it's essential to note that these data are solely intended for reference purposes and will not be displayed in the `SfPdfViewer` interface.
 
-The provided code sample illustrates how to set the `CustomData` property for an annotation. Within this code snippet, we set the custom data to represent the modification time of the annotation.
+The provided code sample illustrates how to set the `CustomData` property for an annotation. Within this code snippet, we set the custom data to represent the created date of the annotation.
 
 {% tabs %}
 {% highlight C# %}
 
 private void OnAnnotationAdded(object sender, AnnotationEventArgs e)
 {
-    e.Annotation.CustomData="Modified Date is: " +DateTime.Now.ToString();
+    e.Annotation.CustomData="Created Date is: " +DateTime.Now.ToString();
 }
 
 {% endhighlight %}
