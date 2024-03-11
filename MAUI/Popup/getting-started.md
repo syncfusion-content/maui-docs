@@ -277,5 +277,3 @@ namespace GettingStarted
 {% endtabs %}
 
 ![Popup with custom content](Images/getting-started//maui-popup-with-custom-content.png)
-
-N> You can refer to our [.NET MAUI Popup](https://www.syncfusion.com/maui-controls/maui-popup) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Popup Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/Popup) that shows you how to render the Popup in .NET MAUI.
