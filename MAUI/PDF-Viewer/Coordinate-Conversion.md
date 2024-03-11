@@ -1,19 +1,19 @@
 ---
 layout: post
 title: Working with PDF coordinates systems in MAUI PDF Viewer control | Syncfusion
-description: Learn here all about coordinates conversion in Syncfusion .NET MAUI PDF Viewer (SfPdfViewer) control for precise positioning and enhanced interaction. 
+description: Learn here all about coordinates conversion in Syncfusion .NET MAUI PDF Viewer (SfPdfViewer) control. 
 platform: MAUI
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Working with PDF coordinate systems in .NET MAUI PDF Viewer (SfPdfViewer)
+# Working with PDF coordinates systems in .NET MAUI PDF Viewer (SfPdfViewer)
 
 PDF Viewer allows users to obtain the PDF page coordinates relative to the PDF Viewer’s client coordinates and vice versa. It also allows you to obtain the scroll point relative to the PDF page coordinates and bring the given region into view.
 
 ## Client rectangle
 
-The `ClientRectangle` in the MAUI PdfViewer control is  a rectangular area that represents the dimensions of the client area or viewport. The client area denotes the visible portion of the PDF document within the control. In MAUI PDF Viewer, this client rectangle is illustrated by the red rectangle in the following figure.
+The `ClientRectangle` in MAUI PdfViewer control is  a rectangular area that represents the dimensions of the client area or viewport. The client area denotes the visible portion of the PDF document within the control. In the MAUI PDF Viewer, this client rectangle is illustrated by the red rectangle in the following figure.
 
 ![Client rectangle in .NET MAUI PDF Viewer](Images\Coordinates-Conversion\Client-Rectangle.jpg)
 
@@ -30,7 +30,7 @@ Rect clientRectangle = PdfViewer.ClientRectangle;
 
 The MAUI PDF Viewer specifies the position of points in the client area(viewport) using client coordinates. The upper-left corner of the client area (viewport) of the control is the origin for client coordinates. The client coordinates in the MAUI PDF Viewer is shown in the following figure.
 
-![client coordinates in .NET MAUI PDF Viewer](Images\Coordinates-Conversion\Client-Coordinates.jpg)
+![Client coordinates in .NET MAUI PDF Viewer](Images\Coordinates-Conversion\Client-Coordinates.jpg)
 
 ### Get page number from client point
 
