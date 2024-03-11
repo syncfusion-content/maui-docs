@@ -124,3 +124,5 @@ SfShimmer shimmer = new SfShimmer()
 {% endtabs %}
 
 ![Circle persona shimmer view in .NET MAUI.](images/overview/maui-circle-persona.gif)
+
+N> You can refer to our [.NET MAUI Shimmer](https://www.syncfusion.com/maui-controls/maui-shimmer) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Shimmer Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/Shimmer) that shows you how to render the Shimmer in .NET MAUI.

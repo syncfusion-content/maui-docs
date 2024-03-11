@@ -101,7 +101,7 @@ listView.SelectedItems.Add (viewModel.MusicInfo[5]);
 {% endhighlight %}
 {% endtabs %}
 
-N> The `SfListView.SelectedItems` property type is a type of ObservableCollection<Object>. So, you should use generic type as an object for the ViewModel collection property type.
+N> The `SfListView.SelectedItems` property is of type `ObservableCollection<Object>`. Therefore, it is recommended to utilize a ViewModel collection property with the same type, `ObservableCollection<Object>`, to ensure proper functioning of the `SelectedItems` property.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -473,7 +473,7 @@ public partial class MainPage : ContentPage
        var selectedItemIndex = listView.DataSource.DisplayItems.IndexOf(listView.SelectedItem);
        selectedItemIndex += (listView.HeaderTemplate != null && !listView.IsStickyHeader || !listView.IsStickyGroupHeader) ? 1 : 0;
        selectedItemIndex -= (listView.GroupHeaderTemplate != null && listView.IsStickyGroupHeader) ? 1 : 0;
-       (listView.LayoutManager as LinearLayout).ScrollToRowIndex(selectedItemIndex);
+       (listView.ItemsLayout as LinearLayout).ScrollToRowIndex(selectedItemIndex);
     }
   }
 }

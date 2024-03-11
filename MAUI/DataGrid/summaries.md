@@ -46,9 +46,12 @@ You can customize the group caption text format by setting the `SfDataGrid.Group
 {% highlight xaml %}
     <sfGrid:SfDataGrid x:Name="dataGrid"
                        ItemsSource="{Binding OrderInfoCollection}"
-                       AutoGenerateColumns="True"
-                       ColumnSizer="Star"
+                       ColumnWidthMode="Fill"
                        GroupCaptionTextFormat="{}{ColumnName}: {Key}">
+    <sfgrid:SfDataGrid.GroupColumnDescriptions>
+            <sfgrid:GroupColumnDescription ColumnName="Salary" />
+        </sfgrid:SfDataGrid.GroupColumnDescriptions>
+    </sfGrid:SfDataGrid>
 {% endhighlight %}
 
 {% highlight c# %}
@@ -262,8 +265,8 @@ Here's an example code snippet that demonstrates how to load a label in the temp
      <sfgrid:SfDataGrid x:Name="dataGrid"
                        ItemsSource="{Binding OrderInfoCollection}"
                        AllowResizingColumn="True"
-                       AutoGenerateColumns="False"
-                       ColumnSizer="Star">
+                       ColumnWidthMode="Fill"
+                       >
         <sfgrid:SfDataGrid.Columns>
             <sfgrid:DataGridTextColumn MappingName="OrderID" />
             <sfgrid:DataGridTextColumn MappingName="Salary" />
@@ -352,10 +355,9 @@ Please refer to the [Formatting Summary](#formatting-summary)  section to learn 
 {% highlight xaml %}
     <sfgrid:SfDataGrid x:Name="dataGrid"
                        ItemsSource="{Binding OrderInfoCollection}"
-                       AllowResizingColumn="True"
+                       ColumnWidthMode="Fill"
                        AllowGroupExpandCollapse="True"
-                       AutoGenerateColumns="True"
-                       ColumnSizer="Star">
+                       >
         <sfgrid:SfDataGrid.GroupColumnDescriptions>
             <sfgrid:GroupColumnDescription ColumnName="Salary" />
         </sfgrid:SfDataGrid.GroupColumnDescriptions>
@@ -423,9 +425,8 @@ In the following code snippet, a summary is defined for the `Salary` and `Custom
 {% highlight xaml %}
     <sfgrid:SfDataGrid x:Name="dataGrid"
                        ItemsSource="{Binding OrderInfoCollection}"
-                       AllowResizingColumn="True"
-                       AutoGenerateColumns="True"
-                       ColumnSizer="Star">
+                       ColumnWidthMode="Fill"
+                       AllowGroupExpandCollapse="True">
         <sfgrid:SfDataGrid.GroupSummaryRows>
             <sfgrid:DataGridSummaryRow ShowSummaryInRow="False">
                 <sfgrid:DataGridSummaryRow.SummaryColumns>
@@ -559,9 +560,8 @@ Please refer to the code example below, which demonstrates how to load a label i
     </ContentPage.Resources>
     <sfgrid:SfDataGrid x:Name="dataGrid"
                        ItemsSource="{Binding OrderInfoCollection}"
-                       AllowResizingColumn="True"
-                       AutoGenerateColumns="False"
-                       ColumnSizer="Star">
+                        ColumnWidthMode="Fill"
+                       >
         <sfgrid:SfDataGrid.Columns>
             <sfgrid:DataGridTextColumn MappingName="OrderID" />
             <sfgrid:DataGridTextColumn MappingName="Salary" />
@@ -905,16 +905,17 @@ Refer the below code example in which a label is loaded in the table summary tem
     <StackLayout>
         <sfgrid:SfDataGrid x:Name="dataGrid"
                            ItemsSource="{Binding OrderInfoCollection}"
-                           AutoGenerateColumns="False"
+                           AutoGenerateColumnsMode="None"
+                           ColumnWidthMode="Fill"
                            AllowEditing="True"
                            NavigationMode="Cell"
                            SelectionMode="Single"
-                           ColumnSizer="Star">
+                           >
             <sfgrid:SfDataGrid.Columns>
-                <sfgrid:GridNumericColumn MappingName="OrderID" />
-                <sfgrid:GridTextColumn MappingName="EmployeeID" />
-                <sfgrid:GridTextColumn MappingName="FirstName" />
-                <sfgrid:GridTextColumn MappingName="LastName" />
+                <sfgrid:DataGridNumericColumn MappingName="OrderID" />
+                <sfgrid:DataGridTextColumn MappingName="EmployeeID" />
+                <sfgrid:DataGridTextColumn MappingName="FirstName" />
+                <sfgrid:DataGridTextColumn MappingName="LastName" />
             </sfgrid:SfDataGrid.Columns>
             <sfgrid:SfDataGrid.TableSummaryTemplate>
                 <DataTemplate>
@@ -998,16 +999,16 @@ Refer the below code example in which a label is loaded in the template of table
     <StackLayout>
         <sfgrid:SfDataGrid x:Name="dataGrid"
                            ItemsSource="{Binding OrderInfoCollection}"
-                           AutoGenerateColumns="False"
-                           AllowEditing="True"
-                           NavigationMode="Cell"
-                           SelectionMode="Single"
-                           ColumnSizer="Star">
+                           AutoGenerateColumnsMode="None"
+                            AllowEditing="True"
+                            NavigationMode="Cell"
+                            SelectionMode="Single"
+                            ColumnWidthMode="Fill">
             <sfgrid:SfDataGrid.Columns>
-                <sfgrid:GridNumericColumn MappingName="OrderID" />
-                <sfgrid:GridTextColumn MappingName="EmployeeID" />
-                <sfgrid:GridTextColumn MappingName="FirstName" />
-                <sfgrid:GridTextColumn MappingName="LastName" />
+                <sfgrid:DataGridNumericColumn MappingName="OrderID" />
+                <sfgrid:DataGridTextColumn MappingName="EmployeeID" />
+                <sfgrid:DataGridTextColumn MappingName="FirstName" />
+                <sfgrid:DataGridTextColumn MappingName="LastName" />
             </sfgrid:SfDataGrid.Columns>
             <sfgrid:SfDataGrid.TableSummaryRows>
                 <sfgrid:DataGridTableSummaryRow Title="Total Salary :{TotalSalary} for {ProductCount} members"
