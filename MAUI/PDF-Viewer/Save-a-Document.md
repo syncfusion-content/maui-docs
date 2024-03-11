@@ -29,11 +29,11 @@ private void SaveDocument()
 
 To save a document asynchronously, you may use the [SaveDocumentAsync](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_SaveDocumentAsync_System_IO_Stream_System_Threading_CancellationToken_) method  of the `SfPdfViewer`.
 
-# Flatten annotation and formfield on save in .NET MAUI PDF Viewer
+## Flatten annotation and formfield on save in .NET MAUI PDF Viewer
 
 Flattening refers to the process of converting interactive elements, such as annotations and form fields, into a static, uneditable format within a PDF document.The SfPdfViewer allows you to save a document to the specified file stream after flattened the specific annotations and formfields.
 
-## Flatten annotation on save
+### Flatten annotation on save
 
 The FlattenOnSave API helps you to flatten the specified annotation in a PDF document. Refer to the following code example:
 
@@ -44,7 +44,7 @@ annotation.FlattenOnSave = true;
 {% endhighlight %}
 {% endtabs %}
 
-## Flatten formfield on save
+### Flatten formfield on save
 
 The FlattenOnSave API helps you to flatten the specified formfield in a PDF document. Refer to the following code example:
 
