@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Accessibility in .NET MAUI Calendar Control | Syncfusion
-description: Learn here all about the accessibility features of Syncfusion .NET MAUI Calendar (SfCalendar) control.
+title: Accessibility in .NET MAUI StepProgressBar Control | Syncfusion
+description: Learn here all about the accessibility features of Syncfusion .NET MAUI StepProgressBar (SfStepProgressBar) control.
 platform: maui
-control: SfCalendar
+control: SfStepProgressBar
 documentation: ug
 ---
 
-# Accessibility in .NET Maui SfCalendar
+# Accessibility in .NET Maui SfStepProgressBar
 
-Enhance .NET MAUI Calendar's accessibility with a user-friendly design, ensuring inclusive features for seamless navigation and usability for all users. Please find the table of elements along with their formats and examples.
+Enhance .NET MAUI StepProgressBar's accessibility with a user-friendly design, ensuring inclusive features for seamless navigation and usability for all users. Please find the table of elements along with their formats and examples.
 
 <table>
 <tr>
@@ -24,5 +24,5 @@ Enhance .NET MAUI Calendar's accessibility with a user-friendly design, ensuring
 </tr>
 </table>
 
-![Ste accessibility in .NET MAUI Calendar.](images/accessibility/)
+![StepProgressBar accessibility in .NET MAUI Calendar.](images/accessibility/)
 
