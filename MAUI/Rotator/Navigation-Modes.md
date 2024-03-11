@@ -11,9 +11,9 @@ documentation: ug
 
 # Navigation Modes in .NET MAUI Rotator (SfRotator)
 
-The [`NavigationStripMode`](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRotator.XForms.SfRotator.html#Syncfusion_SfRotator_XForms_SfRotator_NavigationStripMode) property specifies the appearance of navigation bar items. The image data can be selected either by [`Thumbnail`](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRotator.XForms.NavigationStripMode.html#Syncfusion_SfRotator_XForms_NavigationStripMode_Thumbnail) or by [`Dots`](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRotator.XForms.NavigationStripMode.html#Syncfusion_SfRotator_XForms_NavigationStripMode_Dots) navigation modes.
+The [`NavigationStripMode`](link) property specifies the appearance of navigation bar items. The image data can be selected either by [`Thumbnail`](link) or by [`Dots`](link) navigation modes.
 
-* [`Thumbnail`](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRotator.XForms.NavigationStripMode.html#Syncfusion_SfRotator_XForms_NavigationStripMode_Thumbnail) - The slider items will be loaded in thumbnail view additionally. When a thumbnail item is clicked, the slider will switch to the corresponding image data.
+* [`Thumbnail`](link) - The slider items will be loaded in thumbnail view additionally. When a thumbnail item is clicked, the slider will switch to the corresponding image data.
 
 {% tabs %}
 
@@ -102,7 +102,7 @@ The [`NavigationStripMode`](https://help.syncfusion.com/cr/xamarin/Syncfusion.Sf
 
 ![Thumbnail Mode Image](images/NavigationStripMode.png)
 
-* [`Dots`](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRotator.XForms.NavigationStripMode.html#Syncfusion_SfRotator_XForms_NavigationStripMode_Dots) - The slider items will be loaded in dots view additionally. When a dots item is clicked, the slider will switch to the corresponding image data.
+* [`Dots`](link) - The slider items will be loaded in dots view additionally. When a dots item is clicked, the slider will switch to the corresponding image data.
 
 {% tabs %}
 
@@ -192,14 +192,14 @@ The [`NavigationStripMode`](https://help.syncfusion.com/cr/xamarin/Syncfusion.Sf
 
 ## Items / Dot Strip Positions
 
-The [`NavigationStripPosition`](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRotator.XForms.SfRotator.html#Syncfusion_SfRotator_XForms_SfRotator_NavigationStripPosition) specifies the placement position of the navigation bar items such as thumbnail or dots relative to the slider area. 
+The [`NavigationStripPosition`](link) specifies the placement position of the navigation bar items such as thumbnail or dots relative to the slider area. 
 
 There are four available positions,
 
-* [`Bottom`](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRotator.XForms.NavigationStripPosition.html#Syncfusion_SfRotator_XForms_NavigationStripPosition_Bottom) - Sets the position of the navigation bar items to the bottom.
-* [`Left`](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRotator.XForms.NavigationStripPosition.html#Syncfusion_SfRotator_XForms_NavigationStripPosition_Left) - Sets the position of the navigation bar items to the left.
-* [`Top`](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRotator.XForms.NavigationStripPosition.html#Syncfusion_SfRotator_XForms_NavigationStripPosition_Top) - Sets the position of the navigation bar items to the top.
-* [`Right`](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRotator.XForms.NavigationStripPosition.html#Syncfusion_SfRotator_XForms_NavigationStripPosition_Right) - Sets the position of the navigation bar items to the right.
+* [`Bottom`](link) - Sets the position of the navigation bar items to the bottom.
+* [`Left`](link) - Sets the position of the navigation bar items to the left.
+* [`Top`](link) - Sets the position of the navigation bar items to the top.
+* [`Right`](link) - Sets the position of the navigation bar items to the right.
 
 {% tabs %}
 

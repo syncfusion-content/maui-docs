@@ -9,7 +9,7 @@ documentation: ug
 
 # Sliding Direction in .NET MAUI Rotator (SfRotator)
 
-The [`NavigationDirection`](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRotator.XForms.SfRotator.html#Syncfusion_SfRotator_XForms_SfRotator_NavigationDirection) property specifies the direction in which items should be navigated in [`SfRotator`](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRotator.XForms.SfRotator.html) control.
+The [`NavigationDirection`](link) property specifies the direction in which items should be navigated in [`SfRotator`](link) control.
 
 ## Horizontal
 

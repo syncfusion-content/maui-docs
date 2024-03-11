@@ -9,7 +9,7 @@ documentation: ug
 
 # .NET MAUI Rotator (SfRotator) Overview
 
-The Rotator is a data control used to display image data and navigate through them. The images can be selected either by [`Thumbnail`](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRotator.XForms.NavigationStripMode.html#Syncfusion_SfRotator_XForms_NavigationStripMode_Thumbnail) or by [`Dots`](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRotator.XForms.NavigationStripMode.html#Syncfusion_SfRotator_XForms_NavigationStripMode_Dots) support.
+The Rotator is a data control used to display image data and navigate through them. The images can be selected either by [`Thumbnail`](link) or by [`Dots`](link) support.
 
 ![Rotator OverView](images/overview.png)
  

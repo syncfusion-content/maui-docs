@@ -9,7 +9,7 @@ documentation : ug
 
 # Populating Data in .NET MAUI Rotator (SfRotator)
 
-[`SfRotator`](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRotator.XForms.SfRotator.html) control supports binding to different data sources such as IList Data Source, Observable Collection Data Source.
+[`SfRotator`](link) control supports binding to different data sources such as IList Data Source, Observable Collection Data Source.
 
 ## Through Binding
 
@@ -17,7 +17,7 @@ This section explains about setting Item Source and applying custom template to 
 
 ### Create a Model with Data
 
-[`SfRotator`](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRotator.XForms.SfRotator.html) items can be populated with a collection of image data. You can assign a collection to it. Collections include arrays, Lists and DataTables. For example you may wants to create a Rotator model with Image as follows.
+[`SfRotator`](link) items can be populated with a collection of image data. You can assign a collection to it. Collections include arrays, Lists and DataTables. For example you may wants to create a Rotator model with Image as follows.
 
 {% tabs %}
 
@@ -40,7 +40,7 @@ public String Image
 
 {% endtabs %}
 
-Create and populate [`SfRotator`](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRotator.XForms.SfRotator.html) collection as follows
+Create and populate [`SfRotator`](link) collection as follows
 
 {% tabs %}
 
@@ -89,7 +89,7 @@ Assigning collection to ItemSource ,
 
 ### Binding the Data with Custom Template
 
-[`SfRotator`](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRotator.XForms.SfRotator.html) provides support to add a custom view as RotatorItems by designing a view inside its ItemTemplate. This template will be applied for all its items and its data will be binded.
+[`SfRotator`](link) provides support to add a custom view as RotatorItems by designing a view inside its ItemTemplate. This template will be applied for all its items and its data will be binded.
 
 {% tabs %}
 
@@ -176,7 +176,7 @@ Assigning collection to ItemSource ,
 
 ## Through Rotator Item
 
-The [`ItemTemplate`](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRotator.XForms.SfRotator.html#Syncfusion_SfRotator_XForms_SfRotator_ItemTemplate) provides common template with different data, whereas if different views for every items is needed, it can also be provided using [`ItemContent`](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRotator.XForms.SfRotatorItem.html#Syncfusion_SfRotator_XForms_SfRotatorItem_ItemContent) property  in [`SfRotatorItem`](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRotator.XForms.SfRotatorItem.html) class.
+The [`ItemTemplate`](link) provides common template with different data, whereas if different views for every items is needed, it can also be provided using [`ItemContent`](link) property  in [`SfRotatorItem`](link) class.
 
 {% tabs %}
 
@@ -228,7 +228,7 @@ The [`ItemTemplate`](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRotator
 
 ![RotatorItem](images/RotatorItem.png)
 
-And also rotator provides a support to display only the Image data with [`Image`](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRotator.XForms.SfRotatorItem.html#Syncfusion_SfRotator_XForms_SfRotatorItem_Image) property in [`SfRotatorItem`](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRotator.XForms.SfRotatorItem.html) class.
+And also rotator provides a support to display only the Image data with [`Image`](link) property in [`SfRotatorItem`](link) class.
 
 {% tabs %}
 

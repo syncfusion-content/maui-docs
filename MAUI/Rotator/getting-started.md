@@ -9,11 +9,11 @@ documentation: ug
 
 # Getting Started with .NET MAUI Rotator (SfRotator)
 
-This section explains how to add the Rotator control and bind data to it. This section covers only the basic features needed to get started with the Syncfusion [.NET MAUI Rotator](https://www.syncfusion.com/maui-controls/maui-carousel) control.
+This section explains how to add the Rotator control and bind data to it. This section covers only the basic features needed to get started with the Syncfusion [.NET MAUI Rotator](https://www.syncfusion.com/maui-controls/maui-rotator) control.
 
 ## Adding a .NET MAUI Rotator reference
 
-The Syncfusion .NET MAUI controls are available in [Nuget.org](https://www.nuget.org/). To add [.NET MAUI Rotator](https://www.syncfusion.com/maui-controls/maui-carousel) to your project, open the NuGet package manager in Visual Studio, search for [`Syncfusion.Maui.Rotator`](https://www.nuget.org/packages/Syncfusion.Maui.Carousel), and install it.
+The Syncfusion .NET MAUI controls are available in [Nuget.org](https://www.nuget.org/). To add [.NET MAUI Rotator](https://www.syncfusion.com/maui-controls/maui-rotator) to your project, open the NuGet package manager in Visual Studio, search for [`Syncfusion.Maui.Rotator`](link), and install it.
 
 ## Handler registration 
 
@@ -72,7 +72,7 @@ Step 2: Add the namespace as shown in the following code sample.
 
 ## Create a Simple SfRotator 
 
-The [`SfRotator`](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRotator.XForms.SfRotator.html) control is configured entirely in C# code or by using XAML markup. The following steps explain on how to create a [`SfRotator`](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRotator.XForms.SfRotator.html) and configure its elements,
+The [`SfRotator`](link) control is configured entirely in C# code or by using XAML markup. The following steps explain on how to create a [`SfRotator`](link) and configure its elements,
 
 * Adding namespace for the added assemblies. 
 
@@ -92,7 +92,7 @@ The [`SfRotator`](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRotator.XF
 
 {% endtabs %}
 
-* Now add the [`SfRotator`](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRotator.XForms.SfRotator.html) control with a required optimal name by using the included namespace.
+* Now add the [`SfRotator`](link) control with a required optimal name by using the included namespace.
 
 {% tabs %}
 
@@ -100,10 +100,10 @@ The [`SfRotator`](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRotator.XF
 
     <?xml version="1.0" encoding="utf-8" ?>
     <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-        xmlns:local="clr-namespace:GettingStarted" 
-        xmlns:syncfusion="clr-namespace:Syncfusion.SfRotator.XForms;assembly=Syncfusion.SfRotator.XForms"
-        x:Class="GettingStarted.Rotator">
+                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Rotator;assembly=Syncfusion.Maui.Rotator"
+                xmlns:local="clr-namespace:Rotator"
+                x:Class="GettingStarted.Rotator">
     <ContentPage.Content>
     <syncfusion:SfRotator x:Name="rotator" />	
     </ContentPage.Content>
@@ -138,13 +138,13 @@ The [`SfRotator`](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRotator.XF
 
 We can populate the rotator's items by using any one of the following ways,
 
-* Through [`SfRotatorItem`](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRotator.XForms.SfRotatorItem.html)
+* Through [`SfRotatorItem`](link)
 
-* Through [`ItemTemplate`](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRotator.XForms.SfRotator.html#Syncfusion_SfRotator_XForms_SfRotator_ItemTemplate)
+* Through [`ItemTemplate`](link)
 
 ### Through SfRotatorItem
 
-By passing the list of [`SfRotatorItem`](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRotator.XForms.SfRotatorItem.html) , we can get the view of [`SfRotator`](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRotator.XForms.SfRotator.html) control. In that we can pass Images as well as Item content.
+By passing the list of [`SfRotatorItem`](link) , we can get the view of [`SfRotator`](link) control. In that we can pass Images as well as Item content.
 
 The following code example illustrates to add list of Images in Rotator ,
 
@@ -218,7 +218,7 @@ The following code example illustrates to add list of items through ItemContent 
 
 ### Through ItemTemplate
 
-[`ItemTemplate`](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRotator.XForms.SfRotator.html#Syncfusion_SfRotator_XForms_SfRotator_ItemTemplate) property of [`SfRotator`](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRotator.XForms.SfRotator.html) control is used to customize the contents of [`SfRotator`](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRotator.XForms.SfRotator.html) items. [`ItemTemplate`](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRotator.XForms.SfRotator.html#Syncfusion_SfRotator_XForms_SfRotator_ItemTemplate) provides common template with different data. [`SfRotator`](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRotator.XForms.SfRotator.html) items can be populated with a collection of image data. This collection includes Arrays, Lists and DataTables. 
+[`ItemTemplate`](link) property of [`SfRotator`](link) control is used to customize the contents of [`SfRotator`](link) items. [`ItemTemplate`](link) provides common template with different data. [`SfRotator`](link) items can be populated with a collection of image data. This collection includes Arrays, Lists and DataTables. 
 
 {% tabs %}
 
@@ -383,7 +383,7 @@ N> In addition, rotator provides a support to load the Images from `URL` and `SD
  
 ## Setting Navigation Mode
 
-[`SfRotator`](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRotator.XForms.SfRotator.html) provides option to display the navigating items either in Thumbnail or Dots mode. The navigation mode for navigating the items can be decided using [`NavigationStripMode`](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRotator.XForms.SfRotator.html#Syncfusion_SfRotator_XForms_SfRotator_NavigationStripMode) property.
+[`SfRotator`](link) provides option to display the navigating items either in Thumbnail or Dots mode. The navigation mode for navigating the items can be decided using [`NavigationStripMode`](link) property.
 
 {% tabs %}
 
@@ -476,7 +476,7 @@ N> In addition, rotator provides a support to load the Images from `URL` and `SD
 
 ## Customizing Position
 
-The placement position of navigation strip items such as [`Thumbnail`](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRotator.XForms.NavigationStripMode.html#Syncfusion_SfRotator_XForms_NavigationStripMode_Thumbnail) or [`Dots`](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRotator.XForms.NavigationStripMode.html#Syncfusion_SfRotator_XForms_NavigationStripMode_Dots) can be customized in [`SfRotator`](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRotator.XForms.SfRotator.html). This can be specified using [`NavigationStripPosition`](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRotator.XForms.SfRotator.html#Syncfusion_SfRotator_XForms_SfRotator_NavigationStripPosition) property.   
+The placement position of navigation strip items such as [`Thumbnail`](link) or [`Dots`](link) can be customized in [`SfRotator`](link). This can be specified using [`NavigationStripPosition`](link) property.   
 
 {% tabs %}
 

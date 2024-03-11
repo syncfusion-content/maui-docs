@@ -9,11 +9,11 @@ documentation: ug
 
 # Adding Looping and Delays in .NET MAUI Rotator (SfRotator)
 
-Looping and delay can be enabled in [`SfRotator`](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRotator.XForms.SfRotator.html) control and also we can customize the Text and Navigation direction.
+Looping and delay can be enabled in [`SfRotator`](link) control and also we can customize the Text and Navigation direction.
 
 ## Toggle AutoPlay
 
-The [`EnableAutoPlay`](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRotator.XForms.SfRotator.html#Syncfusion_SfRotator_XForms_SfRotator_EnableAutoPlay) property specifies whether the items should navigate automatically based on [`NavigationDelay`](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRotator.XForms.SfRotator.html#Syncfusion_SfRotator_XForms_SfRotator_NavigationDelay) property, when the property value is set to true.
+The [`EnableAutoPlay`](link) property specifies whether the items should navigate automatically based on [`NavigationDelay`](link) property, when the property value is set to true.
 
 N> By default, the property value is set to false.
 
@@ -106,7 +106,7 @@ N> By default, the property value is set to false.
 
 ## Setting Navigation Delay
 
-The [`NavigationDelay`](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRotator.XForms.SfRotator.html#Syncfusion_SfRotator_XForms_SfRotator_NavigationDelay) property specifies the delay duration while switching to next navigation item, when [`EnableAutoPlay`](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRotator.XForms.SfRotator.html#Syncfusion_SfRotator_XForms_SfRotator_EnableAutoPlay) property is enabled.
+The [`NavigationDelay`](link) property specifies the delay duration while switching to next navigation item, when [`EnableAutoPlay`](link) property is enabled.
 
 N> The property value should be in milliseconds.
 
@@ -199,7 +199,7 @@ N> The property value should be in milliseconds.
 
 ## Looping Items
 
-The [`EnableLooping`](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRotator.XForms.SfRotator.html#Syncfusion_SfRotator_XForms_SfRotator_EnableLooping) property specifies whether the items should navigate to first item once it reaches the last item and vice-versa.
+The [`EnableLooping`](link) property specifies whether the items should navigate to first item once it reaches the last item and vice-versa.
 
 {% tabs %}
 
@@ -292,7 +292,7 @@ The [`EnableLooping`](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRotato
 
 ## Enable swiping
 
-To restrict the user interaction, the [`EnableSwiping`](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRotator.XForms.SfRotator.html#Syncfusion_SfRotator_XForms_SfRotator_EnableSwiping) property of [`SfRotator`](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRotator.XForms.SfRotator.html) can be set to `false`.
+To restrict the user interaction, the [`EnableSwiping`](link) property of [`SfRotator`](link) can be set to `false`.
 
 {% tabs %}
 

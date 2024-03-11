@@ -13,7 +13,7 @@ The Rotator control supports to customize the dots border color, selected dots c
 
 ## DotsBorder Color
 
-The [`DotsBorderColor`](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRotator.XForms.SfRotator.html#Syncfusion_SfRotator_XForms_SfRotator_DotsBorderColor) property is used to customize the color of dots border in [`SfRotator`](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRotator.XForms.SfRotator.html).
+The [`DotsBorderColor`](link) property is used to customize the color of dots border in [`SfRotator`](link).
 
 {% tabs %}
 {% highlight xaml %}
@@ -104,7 +104,7 @@ The [`DotsBorderColor`](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRota
 
 ## Selected Dot Color
 
-The [`SelectedDotColor`](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRotator.XForms.SfRotator.html#Syncfusion_SfRotator_XForms_SfRotator_SelectedDotColor) property is used to customize the color of selected dots in [`SfRotator`](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRotator.XForms.SfRotator.html).
+The [`SelectedDotColor`](link) property is used to customize the color of selected dots in [`SfRotator`](link).
 
 {% tabs %}
 {% highlight xaml %}
@@ -197,7 +197,7 @@ The [`SelectedDotColor`](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRot
 
 ## Unselected Dot Color
 
-The [`UnselectedDotColor`](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRotator.XForms.SfRotator.html#Syncfusion_SfRotator_XForms_SfRotator_UnselectedDotColor) property is used to customize the color of unselected dots in [`SfRotator`](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRotator.XForms.SfRotator.html).
+The [`UnselectedDotColor`](link) property is used to customize the color of unselected dots in [`SfRotator`](link).
 
 {% tabs %}
 {% highlight xaml %}
