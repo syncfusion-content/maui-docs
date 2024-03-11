@@ -15,7 +15,7 @@ PDF Viewer allows users to obtain the PDF page coordinates relative to the PDF V
 
 The `ClientRectangle` in MAUI PdfViewer control is  a rectangular area that represents the dimensions of the client area or viewport. The client area denotes the visible portion of the PDF document within the control. In the MAUI PDF Viewer, this client rectangle is illustrated by the red rectangle in the following figure.
 
-![Client rectangle in .NET MAUI PDF Viewer](Images\Coordinates-Conversion\Client-Rectangle.jpg)
+![Client rectangle in .NET MAUI PDF Viewer](Images\Coordinates-Conversion\Client-Rectangle.png)
 
 The client rectangle can be obtained by the `ClientRectangle` property of the PDF Viewer. The following code sample explains the same.
 
@@ -30,7 +30,7 @@ Rect clientRectangle = PdfViewer.ClientRectangle;
 
 The MAUI PDF Viewer specifies the position of points in the client area(viewport) using client coordinates. The upper-left corner of the client area (viewport) of the control is the origin for client coordinates. The client coordinates in the MAUI PDF Viewer is shown in the following figure.
 
-![Client coordinates in .NET MAUI PDF Viewer](Images\Coordinates-Conversion\Client-Coordinates.jpg)
+![Client coordinates in .NET MAUI PDF Viewer](Images\Coordinates-Conversion\Client-Coordinates.png)
 
 ### Get page number from client point
 
@@ -56,7 +56,7 @@ private void PdfViewer_Tapped(object sender, GestureEventArgs e)
 
 PDF page coordinates are represented in terms of device-independent coordinates system called user space, which is independent of the output device that will be used for printing or display. The user space coordinates system is initialized to a default state for each page of a PDF document. The length of a unit is 1/72 inch, which is approximately the same as a unit of point(pt). As an example, the dimensions of a letter-sized paper in PDF page coordinates are shown in the diagram below.
 
-![Page coordinates in .NET MAUI PDF Viewer](Images\Coordinates-Conversion\Page-Coordinates.jpg)
+![Page coordinates in .NET MAUI PDF Viewer](Images\Coordinates-Conversion\Page-Coordinates.png)
 
 ## PDF scroll coordinates
 
