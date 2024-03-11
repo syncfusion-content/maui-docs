@@ -74,6 +74,8 @@ namespace RadialSample
 
 {% endtabs %}
 
+![Display text in .NET MAUI RadialMenu](images/populating-items/maui-radialmenu-populating-only-text.png)
+
 ### ImageWithText
 
 The following code snippet demonstrates how to Display images and text in the RadialMenu items of the control.
@@ -102,6 +104,8 @@ The following code snippet demonstrates how to Display images and text in the Ra
 {% endhighlight %}
 
 {% highlight c# %}
+
+![Display image with text in .NET MAUI RadialMenu.](images/populating-items/maui-radialmenu-populating-text-with-images.png)
 
 using Syncfusion.Maui.RadialMenu;
 
@@ -208,6 +212,8 @@ namespace RadialSample
 
 {% endtabs %}
 
+![Display font with text in .NET MAUI RadialMenu.](images/populating-items/maui-radialmenu-populating-text-icons.png)
+
 ### Adding nested items of radial menu
 
 You can populate the nested levels of items within a menu to group similar actions based on their result. For example, you can group the clipboard operations by adding a clipboard as a main menu and cut, copy, and paste as its children.
@@ -300,7 +306,7 @@ namespace RadialSample
 
 {% endtabs %}
 
-![SfRadialMenu with Items](images/gettingStarted2.png)
+![Display RadialMenu with Items.](images/populating-items/maui-radialmenu-populating-nested-items.png)
 
 ## Through ItemsSource and ItemTemplate
 

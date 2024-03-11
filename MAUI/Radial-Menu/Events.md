@@ -330,7 +330,6 @@ You can perform an action when tapping the radial menu item of the radial menu. 
  {% highlight C# %}
 
 using Syncfusion.Maui.RadialMenu;
-using System.Collections.ObjectModel;
 
 namespace RadialSample
 {

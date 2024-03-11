@@ -69,7 +69,7 @@ namespace RadialSample
 
 {% endtabs %}
 
-![Image for dragging](images/dragging.png)
+![Image for dragging](images/maui-radialmenu-dragging.png)
 
 ## DragEvents
 
@@ -271,5 +271,3 @@ namespace RadialSample
             
 {% endhighlight %}
 {% endtabs %}
-
-![Image for position](images/position.png)

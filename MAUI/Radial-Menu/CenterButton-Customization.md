@@ -849,5 +849,3 @@ namespace RadialSample
 {% endhighlight %}
 
 {% endtabs %}
-
-![Image for center button](images/centerButtonIconFont.png)

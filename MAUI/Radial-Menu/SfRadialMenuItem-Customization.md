@@ -715,5 +715,3 @@ namespace RadialMenuCommandSample
 }
 
 {% endhighlight %}
-
-N> View [sample](https://github.com/SyncfusionExamples/xamarin-sfradialmenu-examples/tree/main/Samples/CommandSample)  in GitHub
