@@ -17,18 +17,16 @@ Syncfusion themes allow you apply colors across all the Syncfusion controls with
 
 ## Applying light and dark themes
 
-By default, Syncfusion offers support for both light and dark themes through the inclusion of a `SyncfusionThemeDictionary`. As names suggest, these themes will have colors with light and dark color contrasts, respectively.
+By default, Syncfusion offers support for both light and dark themes through the inclusion of a `SyncfusionThemeDictionary`.
 
-To apply themes to your application, merge the following items:
-
-* Theme resource dictionary
+To apply themes to your application, merge the `SyncfusionThemeDictionary` item.
 
 #### Theme resource dictionary
 
-This resource dictionary includes keys and their corresponding color codes for all Syncfusion controls. Additionally, it contains the SfVisualTheme property where we can declare the following two theme color values:
+This resource dictionary includes keys and their corresponding color codes for all Syncfusion controls. Additionally, it contains the `SfVisualTheme` property where we can declare the following two theme color values:
 
-1. LightDefault
-2. DarkDefault
+1. MaterialLight
+2. MaterialDark
 
 #### Automatic merging
 

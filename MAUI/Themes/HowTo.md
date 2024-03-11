@@ -9,7 +9,6 @@ documentation: ug
 
 # Switching between light theme and dark theme
 
-
 To switch between light and dark themes in Syncfusion Maui controls, refer to the following example code.
 
 {% highlight C# %} 
@@ -21,13 +20,13 @@ void UpdateTheme(object sender, System.EventArgs e)
         var theme = mergedDictionaries.OfType<SyncfusionThemeResourceDictionary>().FirstOrDefault();
         if (theme != null)
         {
-            if (theme.SfVisualTheme is SfVisuals.DarkDefault)
+            if (theme.SfVisualTheme is SfVisuals.MaterialDark)
             {
-                theme.SfVisualTheme = SfVisuals.LightDefault;
+                theme.SfVisualTheme = SfVisuals.MaterialLight;
             }
             else
             {
-                theme.SfVisualTheme = SfVisuals.DarkDefault;
+                theme.SfVisualTheme = SfVisuals.MaterialDark;
             }
         }
      }
