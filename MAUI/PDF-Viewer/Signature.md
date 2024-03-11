@@ -15,9 +15,9 @@ The electronic signature feature of [SfPdfViewer](https://help.syncfusion.com/cr
 
 The following signature types are now available in the PDF Viewer.
 
-1.	Handwritten signature (ink annotation).
-2.	Text signature (stamp annotation).
-3.  Image signature (stamp annotation).
+1.	Handwritten signature.
+2.	Text signature.
+3.  Image signature.
 
 ## Add signature by UI interaction
 
