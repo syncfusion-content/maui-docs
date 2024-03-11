@@ -81,7 +81,65 @@ The [Syncfusion.Maui.Core](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.C
 
 ## Populating treemap items
 
-You can use `DataSource` property of SfTreeMap to populate the treemap items.
+#### Create a data model for treemap 
+
+Create a simple data model in a new class file as shown in the following example code.
+
+{% tabs %}
+{% highlight C# %}
+public class PopulationDetails
+{
+    public string Country { get; set; }
+    public string Continent { get; set; }
+    public int Population { get; set; }
+}
+{% endhighlight %}
+{% endtabs %}
+
+#### Create view model
+
+Create a view model class to set values for the properties listed in the model class as shown in the following example code.
+
+{% tabs %}
+{% highlight C# %}
+public class PopulationViewModel
+{
+    public PopulationViewModel()
+    {
+        this.PopulationDetails = new ObservableCollection<PopulationDetails>()
+            {
+                new PopulationDetails() { Continent ="North America", Country = "United States of America", Population = 339996564 },
+                new PopulationDetails() { Continent ="South America", Country = "Brazil", Population = 216422446 },
+                new PopulationDetails() { Continent ="North America", Country = "Mexico", Population = 128455567 },
+                new PopulationDetails() { Continent ="South America", Country = "Colombia", Population = 52085168 },
+                new PopulationDetails() { Continent ="South America", Country = "Argentina", Population = 45773884 },
+                new PopulationDetails() { Continent ="North America", Country = "Canada", Population = 38781292 },
+                new PopulationDetails() { Continent ="South America", Country = "Peru", Population = 34352719 },
+                new PopulationDetails() { Continent ="South America", Country = "Venezuela", Population = 28838499 },
+                new PopulationDetails() { Continent ="South America", Country = "Chile", Population = 19629590 },
+                new PopulationDetails() { Continent ="South America", Country = "Ecuador", Population = 18190484 },
+                new PopulationDetails() { Continent ="North America", Country = "Guatemala", Population = 18092026 },
+                new PopulationDetails() { Continent ="South America", Country = "Bolivia", Population = 12388571 },
+                new PopulationDetails() { Continent ="North America", Country = "Honduras", Population = 10593798 },
+                new PopulationDetails() { Continent ="North America", Country = "Nicaragua", Population = 7046311 },
+                new PopulationDetails() { Continent ="South America", Country = "Paraguay", Population = 6861524 },
+                new PopulationDetails() { Continent ="North America", Country = "El Salvador", Population = 6364943 },
+                new PopulationDetails() { Continent ="North America", Country = "Costa Rica", Population = 5212173 },
+                new PopulationDetails() { Continent ="South America", Country = "Uruguay", Population = 3423109 },
+            };
+    }
+    public ObservableCollection<PopulationDetails> PopulationDetails
+    {
+        get;
+        set;
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
+#### Bind data source for TreeMap
+
+You can use `DataSource` property of SfTreeMap to populate the treemap items. The `PrimaryValuePath` specifies the name of the property in the data object that provides the primary value used to determine the size of each item in the tree map. The primary value typically represents the main quantitative data associated with each item.
 
 {% tabs %}
 {% highlight XAML %}
@@ -117,36 +175,6 @@ public partial class MainPage : ContentPage
     }
 }
 
-{% endhighlight %}
-{% highlight C# %}
-public class PopulationViewModel
-{
-    public PopulationViewModel()
-    {
-        this.PopulationDetails = new ObservableCollection<PopulationDetails>()
-            {
-                new PopulationDetails() { Continent ="North America", Country = "United States of America", Population = 339996564 },
-                new PopulationDetails() { Continent ="North America", Country = "Mexico", Population = 128455567 },
-                new PopulationDetails() { Continent ="North America", Country = "Canada", Population = 38781292 },
-                new PopulationDetails() { Continent ="South America", Country = "Bolivia", Population = 12388571 },
-                new PopulationDetails() { Continent ="North America", Country = "Costa Rica", Population = 5212173 },
-                new PopulationDetails() { Continent ="South America", Country = "Uruguay", Population = 3423109 },
-            };
-    }
-    public ObservableCollection<PopulationDetails> PopulationDetails
-    {
-        get;
-        set;
-    }
-}
-{% endhighlight %}
-{% highlight C# %}
-public class PopulationDetails
-{
-    public string Country { get; set; }
-    public string Continent { get; set; }
-    public int Population { get; set; }
-}
 {% endhighlight %}
 {% endtabs %}
 
@@ -202,9 +230,21 @@ public class PopulationViewModel
         this.PopulationDetails = new ObservableCollection<PopulationDetails>()
             {
                 new PopulationDetails() { Continent ="North America", Country = "United States of America", Population = 339996564 },
+                new PopulationDetails() { Continent ="South America", Country = "Brazil", Population = 216422446 },
                 new PopulationDetails() { Continent ="North America", Country = "Mexico", Population = 128455567 },
+                new PopulationDetails() { Continent ="South America", Country = "Colombia", Population = 52085168 },
+                new PopulationDetails() { Continent ="South America", Country = "Argentina", Population = 45773884 },
                 new PopulationDetails() { Continent ="North America", Country = "Canada", Population = 38781292 },
+                new PopulationDetails() { Continent ="South America", Country = "Peru", Population = 34352719 },
+                new PopulationDetails() { Continent ="South America", Country = "Venezuela", Population = 28838499 },
+                new PopulationDetails() { Continent ="South America", Country = "Chile", Population = 19629590 },
+                new PopulationDetails() { Continent ="South America", Country = "Ecuador", Population = 18190484 },
+                new PopulationDetails() { Continent ="North America", Country = "Guatemala", Population = 18092026 },
                 new PopulationDetails() { Continent ="South America", Country = "Bolivia", Population = 12388571 },
+                new PopulationDetails() { Continent ="North America", Country = "Honduras", Population = 10593798 },
+                new PopulationDetails() { Continent ="North America", Country = "Nicaragua", Population = 7046311 },
+                new PopulationDetails() { Continent ="South America", Country = "Paraguay", Population = 6861524 },
+                new PopulationDetails() { Continent ="North America", Country = "El Salvador", Population = 6364943 },
                 new PopulationDetails() { Continent ="North America", Country = "Costa Rica", Population = 5212173 },
                 new PopulationDetails() { Continent ="South America", Country = "Uruguay", Population = 3423109 },
             };
@@ -226,7 +266,96 @@ public class PopulationDetails
 {% endhighlight %}
 {% endtabs %}
 
-## Add tooltip
+## Apply brush settings
+
+You can use `LeafItemBrushSettings` property of SfTreeMap to customize fill colors for leaf items based on ranges or values. The TreeMap control offers four distinct brush settings: `TreeMapUniformBrushSettings`, `TreeMapRangeBrushSettings`, `TreeMapDesaturationBrushSettings`, and `TreeMapPaletteBrushSettings`. 
+
+{% tabs %}
+{% highlight XAML %}
+
+<ContentPage   
+    xmlns:local="clr-namespace:SfTreeMapSample"
+    xmlns:treemap="clr-namespace:Syncfusion.Maui.TreeMap;assembly=Syncfusion.Maui.TreeMap">
+    <treemap:SfTreeMap x:Name="treeMap"
+                    DataSource="{Binding PopulationDetails}"
+                    PrimaryValuePath="Population"
+                    RangeColorValuePath="Population">
+        <treemap:SfTreeMap.BindingContext>
+            <local:PopulationViewModel />
+        </treemap:SfTreeMap.BindingContext>
+            <treemap:SfTreeMap.LeafItemSettings>
+                <treemap:TreeMapLeafItemSettings LabelPath="Country" 
+                                                 Stroke="Black">
+                </treemap:TreeMapLeafItemSettings>
+            </treemap:SfTreeMap.LeafItemSettings>
+    </treemap:SfTreeMap>
+</ContentPage>
+
+{% endhighlight %}
+{% highlight C# %}
+
+using Syncfusion.Maui.TreeMap;
+. . .
+
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        SfTreeMap treeMap = new SfTreeMap();
+        PopulationViewModel viewModel = new PopulationViewModel();
+        treeMap.DataSource = viewModel.PopulationDetails;
+        this.Content = treeMap;
+    }
+}
+
+{% endhighlight %}
+{% highlight C# %}
+public class PopulationViewModel
+{
+    public PopulationViewModel()
+    {
+        this.PopulationDetails = new ObservableCollection<PopulationDetails>()
+            {
+                new PopulationDetails() { Continent ="North America", Country = "United States of America", Population = 339996564 },
+                new PopulationDetails() { Continent ="South America", Country = "Brazil", Population = 216422446 },
+                new PopulationDetails() { Continent ="North America", Country = "Mexico", Population = 128455567 },
+                new PopulationDetails() { Continent ="South America", Country = "Colombia", Population = 52085168 },
+                new PopulationDetails() { Continent ="South America", Country = "Argentina", Population = 45773884 },
+                new PopulationDetails() { Continent ="North America", Country = "Canada", Population = 38781292 },
+                new PopulationDetails() { Continent ="South America", Country = "Peru", Population = 34352719 },
+                new PopulationDetails() { Continent ="South America", Country = "Venezuela", Population = 28838499 },
+                new PopulationDetails() { Continent ="South America", Country = "Chile", Population = 19629590 },
+                new PopulationDetails() { Continent ="South America", Country = "Ecuador", Population = 18190484 },
+                new PopulationDetails() { Continent ="North America", Country = "Guatemala", Population = 18092026 },
+                new PopulationDetails() { Continent ="South America", Country = "Bolivia", Population = 12388571 },
+                new PopulationDetails() { Continent ="North America", Country = "Honduras", Population = 10593798 },
+                new PopulationDetails() { Continent ="North America", Country = "Nicaragua", Population = 7046311 },
+                new PopulationDetails() { Continent ="South America", Country = "Paraguay", Population = 6861524 },
+                new PopulationDetails() { Continent ="North America", Country = "El Salvador", Population = 6364943 },
+                new PopulationDetails() { Continent ="North America", Country = "Costa Rica", Population = 5212173 },
+                new PopulationDetails() { Continent ="South America", Country = "Uruguay", Population = 3423109 },
+            };
+    }
+    public ObservableCollection<PopulationDetails> PopulationDetails
+    {
+        get;
+        set;
+    }
+}
+{% endhighlight %}
+{% highlight C# %}
+public class PopulationDetails
+{
+    public string Country { get; set; }
+    public string Continent { get; set; }
+    public int Population { get; set; }
+}
+{% endhighlight %}
+{% endtabs %}
+
+
+## Enable tooltip
 
 You can use `ShowToolTip` property of SfTreeMap to enable tooltip for the treemap control. The default value of `ShowToolTip` is `false`.
 
@@ -282,9 +411,21 @@ public class PopulationViewModel
         this.PopulationDetails = new ObservableCollection<PopulationDetails>()
             {
                 new PopulationDetails() { Continent ="North America", Country = "United States of America", Population = 339996564 },
+                new PopulationDetails() { Continent ="South America", Country = "Brazil", Population = 216422446 },
                 new PopulationDetails() { Continent ="North America", Country = "Mexico", Population = 128455567 },
+                new PopulationDetails() { Continent ="South America", Country = "Colombia", Population = 52085168 },
+                new PopulationDetails() { Continent ="South America", Country = "Argentina", Population = 45773884 },
                 new PopulationDetails() { Continent ="North America", Country = "Canada", Population = 38781292 },
+                new PopulationDetails() { Continent ="South America", Country = "Peru", Population = 34352719 },
+                new PopulationDetails() { Continent ="South America", Country = "Venezuela", Population = 28838499 },
+                new PopulationDetails() { Continent ="South America", Country = "Chile", Population = 19629590 },
+                new PopulationDetails() { Continent ="South America", Country = "Ecuador", Population = 18190484 },
+                new PopulationDetails() { Continent ="North America", Country = "Guatemala", Population = 18092026 },
                 new PopulationDetails() { Continent ="South America", Country = "Bolivia", Population = 12388571 },
+                new PopulationDetails() { Continent ="North America", Country = "Honduras", Population = 10593798 },
+                new PopulationDetails() { Continent ="North America", Country = "Nicaragua", Population = 7046311 },
+                new PopulationDetails() { Continent ="South America", Country = "Paraguay", Population = 6861524 },
+                new PopulationDetails() { Continent ="North America", Country = "El Salvador", Population = 6364943 },
                 new PopulationDetails() { Continent ="North America", Country = "Costa Rica", Population = 5212173 },
                 new PopulationDetails() { Continent ="South America", Country = "Uruguay", Population = 3423109 },
             };
@@ -378,9 +519,21 @@ public class PopulationViewModel
         this.PopulationDetails = new ObservableCollection<PopulationDetails>()
             {
                 new PopulationDetails() { Continent ="North America", Country = "United States of America", Population = 339996564 },
+                new PopulationDetails() { Continent ="South America", Country = "Brazil", Population = 216422446 },
                 new PopulationDetails() { Continent ="North America", Country = "Mexico", Population = 128455567 },
+                new PopulationDetails() { Continent ="South America", Country = "Colombia", Population = 52085168 },
+                new PopulationDetails() { Continent ="South America", Country = "Argentina", Population = 45773884 },
                 new PopulationDetails() { Continent ="North America", Country = "Canada", Population = 38781292 },
+                new PopulationDetails() { Continent ="South America", Country = "Peru", Population = 34352719 },
+                new PopulationDetails() { Continent ="South America", Country = "Venezuela", Population = 28838499 },
+                new PopulationDetails() { Continent ="South America", Country = "Chile", Population = 19629590 },
+                new PopulationDetails() { Continent ="South America", Country = "Ecuador", Population = 18190484 },
+                new PopulationDetails() { Continent ="North America", Country = "Guatemala", Population = 18092026 },
                 new PopulationDetails() { Continent ="South America", Country = "Bolivia", Population = 12388571 },
+                new PopulationDetails() { Continent ="North America", Country = "Honduras", Population = 10593798 },
+                new PopulationDetails() { Continent ="North America", Country = "Nicaragua", Population = 7046311 },
+                new PopulationDetails() { Continent ="South America", Country = "Paraguay", Population = 6861524 },
+                new PopulationDetails() { Continent ="North America", Country = "El Salvador", Population = 6364943 },
                 new PopulationDetails() { Continent ="North America", Country = "Costa Rica", Population = 5212173 },
                 new PopulationDetails() { Continent ="South America", Country = "Uruguay", Population = 3423109 },
             };

@@ -153,5 +153,3 @@ The ListView (SfListView) allows loading as a [SfPullToRefresh.PullableContent](
 		
 {% endhighlight %}
 {% endtabs %}
-
-N> The `Horizontal` ListView does not support the `Pull-to-Refresh` feature.
