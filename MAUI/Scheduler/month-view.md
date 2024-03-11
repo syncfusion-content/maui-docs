@@ -57,7 +57,8 @@ N>
 
 ## Appointment indicator count
 
-The scheduler month view appointment indicator count allows you to customize the count of the indicator based on the cell width by using `AppointmentIndicatorCount` property of [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html). By default, `AppointmentIndicatorCount` is set to 5. using the `AppointmentIndicatorCount`.
+The scheduler month view appointment indicator count allows you to customize the count of the appointment indicator by using `AppointmentIndicatorCount` property of [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html). By default, `AppointmentIndicatorCount` is set to 5.
+
 
 
 {% tabs %}  
@@ -80,10 +81,6 @@ this.Scheduler.MonthView.AppointmentIndicatorCount = 1;
 
 {% endhighlight %}  
 {% endtabs %}
-
-
-
-
 
 ## Hide leading and trailing dates
 
