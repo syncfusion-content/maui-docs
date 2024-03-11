@@ -21,7 +21,7 @@ This section explains how to add the [.NET MAUI Step ProgressBar]() control. Thi
 4. Initialize `SfStepProgressBar.`
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3 5" %}
+{% highlight xaml tabtitle="XAML" hl_lines="3 5" %}
 
 <ContentPage   
     . . .
@@ -31,7 +31,7 @@ This section explains how to add the [.NET MAUI Step ProgressBar]() control. Thi
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1 9 10" %}
+{% highlight c# tabtitle="C#" hl_lines="1 9 10" %}
 
 using Syncfusion.Maui.ProgressBar;
 . . .
@@ -165,3 +165,45 @@ this.Content = stepProgressBar;
 
 {% endhighlight %}
 {% endtabs %}
+
+## Active step index value and Active progress value
+The [ActiveStepIndex]() property is used to represent index of the currently active step within the sequence of steps. The [ActiveStepProgressValue]() property is used to add the progress value of the currently active step within a sequence.
+
+{% tabs %}
+{% highlight xaml tabtitle="XAML" hl_lines="8" %}
+
+<stepProgressBar:SfStepProgressBar
+                    x:Name="stepProgressBar"
+                    Margin="24,10,0,0"
+                    ActiveStepIndex="2"
+                    ActiveStepProgressValue="60"
+                    LabelSpacing="12"
+                    Orientation="Horizontal"  
+                    ItemsSource="{Binding StepProgressItem}">
+</stepProgressBar:SfStepProgressBar>                                                                                              
+                
+
+<ContentPage.BindingContext>
+    <local:ViewModel />
+</ContentPage.BindingContext>
+
+{% endhighlight %}
+{% highlight c# tabtitle="C#" hl_lines="9" %}
+
+ViewModel viewModel = new ViewModel();
+SfStepProgressBar stepProgressBar = new SfStepProgressBar()
+{
+    Margin = new Thickness(24, 10, 0, 0),
+    ActiveStepIndex = 2,
+    ActiveStepProgressValue = 60,
+    LabelSpacing = 12,
+    Orientation = StepProgressBarOrientation.Horizontal,
+    ItemsSource = viewModel.StepProgressItem,
+};
+
+this.Content = stepProgressBar;
+
+{% endhighlight %}
+{% endtabs %}
+
+N> If `ActiveStepIndex` value is less than 0, first step will be marked as `NotStarted` step status. If `ActiveStepIndex` value is greater than the step count, all the steps will be marked as `Completed` step status.
