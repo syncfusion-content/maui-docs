@@ -14,7 +14,6 @@ Polar chart supports the following types of chart axis.
 * NumericalAxis
 * CategoryAxis
 * DateTimeAxis
-* LogarithmicAxis
 
 ## Numerical Axis
 
@@ -389,118 +388,6 @@ chart.PrimaryAxis.Add(primaryAxis);
 {% endhighlight %}
 
 {% endtabs %}
-
-## Logarithmic Axis
-
-The [LogarithmicAxis]() uses a logarithmic scale, and it is very useful in visualizing data when the given data range has a big difference. It can be used either on the x-axis or the chart's y-axis.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<chart:SfPolarChart>
-
-   . . .
-    <chart:SfPolarChart.SecondaryAxis>
-        <chart:LogarithmicAxis/>
-    </chart:SfPolarChart.SecondaryAxis>
-    
-</chart:SfPolarChart>
-
-{% endhighlight %}
-
-{% highlight c# %}
-
-SfPolarChart chart = new SfPolarChart();
-
-. . .
-
-LogarithmicAxis secondaryAxis = new LogarithmicAxis();
-chart.SecondaryAxis.Add(secondaryAxis);
-
-{% endhighlight %}
-
-{% endtabs %}
-
-![LogarithmicAxis support in MAUI Chart]()
-
-### Interval
-
-Axis interval can be customized using the [Interval]() property of the axis. By default, interval will be calculated based on the minimum and maximum value of the provided data. And the default value of the interval is 1. 
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<chart:SfPolarChart.SecondaryAxis>
-
-    <chart:LogarithmicAxis Interval="2"/>
-
-</chart:SfPolarChart.SecondaryAxis>
-
-{% endhighlight %}
-
-{% highlight c# %}
-
-chart.SecondaryAxis.Add(new LogarithmicAxis( ) { Interval = 2 });
-
-{% endhighlight %}
-
-{% endtabs %}
-
-### Range customization
-
-To customize the range of the log axis, you can use the [Minimum](), [Maximum]() properties of the [LogarithmicAxis](). By default, an excellent range will be calculated automatically based on the provided data. 
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<chart:SfPolarChart.SecondaryAxis>
-
-    <chart:LogarithmicAxis Minimum="100" Maximum="10000"/>
-
-</chart:SfPolarChart.SecondaryAxis>
-
-
-{% endhighlight %}
-
-{% highlight c# %}
-
-chart.SecondaryAxis.Add(new LogarithmicAxis() { 
-	Minimum = 100, 
-	Maximum = 10000 
-});
-
-{% endhighlight %}
-
-{% endtabs %}
-
-### Base customization
-
-The logarithmic axis base can be customized using the [LogarithmicBase]() property of the axis. By default, the base value is 10.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<chart:SfPolarChart.SecondaryAxis>
-
-    <chart:LogarithmicAxis LogarithmicBase="5"/>
-
-</chart:SfPolarChart.SecondaryAxis>
-
-{% endhighlight %}
-
-{% highlight c# %}
-
-chart.SecondaryAxis.Add(new LogarithmicAxis( ) { LogarithmicBase = 5 });
-
-{% endhighlight %}
-
-{% endtabs %}
-
-![LogarithmicAxis base customization in MAUI Chart]()
 
 ## Inversed
 
