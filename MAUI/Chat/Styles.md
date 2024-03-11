@@ -1017,7 +1017,7 @@ You can style the elements of the suggestion view by setting values to the in-bu
 <td> Font size of an item in the list of suggestions. </td>
 </tr>
 <tr>
-<td> SuggestionListItemBorderColor </td>
+<td> SfChatSuggestionListItemStroke </td>
 <td> Border color of an item in the list of suggestions. </td>
 </tr>
 </table>
