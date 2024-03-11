@@ -42,7 +42,7 @@ When using more number of Syncfusion controls in an application, to make the pro
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <!-- Theme resource dictionary -->
-                <syncTheme:SyncfusionThemeResourceDictionary SfVisualTheme="LightDefault"/>
+                <syncTheme:SyncfusionThemeResourceDictionary SfVisualTheme="MaterialDark"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
 </Application.Resources>
@@ -72,7 +72,7 @@ In addition to the primary keys, the theme resource dictionary also contains the
 <Application.Resources>
     <ResourceDictionary>
         <ResourceDictionary.MergedDictionaries>
-            <syncTheme:SyncfusionThemeResourceDictionary SfVisualTheme="DarkDefault"/>
+            <syncTheme:SyncfusionThemeResourceDictionary SfVisualTheme="MaterialDark"/>
             <ResourceDictionary>
                 <Color x:Key="SfRadialGaugeNeedlePointerNeedleFillColor">LimeGreen</Color>
                 <Color x:Key="SfRadialGaugeNeedlePointerKnobFillColor">LimeGreen</Color>
@@ -104,7 +104,7 @@ Using this approach, you can create your own theme to all the controls or for sp
  <Application.Resources>
     <ResourceDictionary>
         <ResourceDictionary.MergedDictionaries>
-            <syncTheme:SyncfusionThemeResourceDictionary SfVisualTheme="DarkDefault"/>
+            <syncTheme:SyncfusionThemeResourceDictionary SfVisualTheme="MaterialDark"/>
             <ResourceDictionary>
                 <x:String x:Key="SfRadialGaugeTheme">CommonTheme</x:String>
                 <Color x:Key="SfRadialGaugeNeedlePointerNeedleFillColor">LimeGreen</Color>
