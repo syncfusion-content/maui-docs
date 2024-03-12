@@ -295,3 +295,107 @@ This page lists the keys for each control and the element to which it is mapped 
         <td> Color of header icon when it is in pressed state.<br/><br/></td>
     </tr>
 </table>
+
+## SfTreeView
+
+<table>
+    <tr>
+        <th>Theme Dictionary<br/>
+            <br/></th>        
+        <th>
+          Keys
+            <br/>
+            <br/>
+        </th>
+        <th>
+            Description
+            <br/>
+            <br/>
+        </th>
+    </tr>
+
+    <tr>
+        <td rowspan="7">
+            SfTreeViewStyles
+            <br/>
+            <br/>
+        </td>
+        <td>
+           SfTreeViewTheme 
+            <br/>
+            <br/>
+        </td>
+        <td>    
+            By merging this key in application resources, you can customize the appearance of SfTreeView without merging common theme resource and control style resource dictionaries.
+			
+{% highlight xaml %}
+
+<Application xmlns:syncTheme="clr-namespace:Syncfusion.Maui.Themes;assembly=Syncfusion.Maui.Core"
+             ...>
+ <Application.Resources>
+    <ResourceDictionary>
+        <ResourceDictionary.MergedDictionaries>
+            <syncTheme:SyncfusionThemeResourceDictionary />
+            <ResourceDictionary>
+                <x:String x:Key="SfTreeViewTheme">CommonTheme</x:String>
+                <Color x:Key="SfTreeViewNormalTreeViewItemBackground">LightBlue</Color>
+                <Color x:Key="SfTreeViewHoverTreeViewItemBackground">Green</Color>
+            </ResourceDictionary>
+        </ResourceDictionary.MergedDictionaries>
+    </ResourceDictionary>
+ </Application.Resources>
+
+....
+
+</Application>
+
+{% endhighlight %}
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td> SfTreeViewNormalTreeViewItemBackground <br/><br/></td>
+        <td> Background color of TreeViewItem.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfTreeViewHoverTreeViewItemBackground  <br/><br/></td> 
+        <td> Background color of TreeViewItem when it is in hover state.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfTreeViewFocusedTreeViewItemBackground <br/><br/></td> 
+        <td> Background color of TreeViewItem when it is in focused state.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfTreeViewPressedTreeViewItemBackground <br/><br/></td>
+        <td> Background color of TreeViewItem when it is in pressed state.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfTreeViewFocusedTreeViewItemTextColor <br/><br/></td>
+        <td> Text color of the TreeViewItem when it is in focused state.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfTreeViewNormalTreeViewItemTextColor  <br/><br/></td> 
+        <td> Text color of the TreeViewItem.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfTreeViewNormalExpanderBackground  <br/><br/></td> 
+        <td> Background color of Expander View.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfTreeViewNormalExpanderColor  <br/><br/></td> 
+        <td> Color of the expander icon.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfTreeViewFocusedTreeViewItemStroke <br/><br/></td> 
+        <td> Stroke color of the TreeViewItem when it is in focused state during key navigation.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfTreeViewFocusedTreeViewItemStrokeThickness <br/><br/></td> 
+        <td> Stroke thickness of the TreeViewItem when it is in focused state during key navigation.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfTreeViewNormalLoadMoreIndicatorColor <br/><br/></td> 
+        <td> Color of the load more indicator.<br/><br/></td>
+    </tr>
+</table>
