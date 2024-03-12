@@ -47,6 +47,6 @@ The .NET MAUI DataGrid control is used to display and manipulate data in a tabul
 
 * **Exporting** - Support to export the data to Excel and PDF.
 
- **Unbound Row** - It allows to add additional rows at top and also bottom of the SfDataGrid which are not bound with data object from underlying data source.
+ **Unbound Row** - It allows adding rows at the top and bottom of the DataGrid which are not bound with data objects from the underlying data source.
 
 N> You can refer to our [MAUI DataGrid](https://www.syncfusion.com/maui-controls/maui-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [MAUI DataGrid example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/DataGrid) to learn about various features and how to easily configure them, with built-in support for creating stunning visual effects.
