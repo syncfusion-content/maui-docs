@@ -1765,7 +1765,7 @@ This page lists the keys for each control and the element to which it is mapped 
     </tr>
     <tr>
         <td> SfPullToRefreshProgressColor <br/><br/></td>
-        <td> Color of the progress indicator when the indicator is in the progressed state.<br/><br/></td>
+        <td> Color of the progress indicator.<br/><br/></td>
     </tr>
     <tr>
         <td> SfPullToRefreshProgressThickness <br/><br/></td>
