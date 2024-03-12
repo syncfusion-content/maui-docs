@@ -161,7 +161,6 @@ private void Datagrid_SelectionChanged(object? sender, DataGridSelectionChangedE
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="Populating data for unbound rows" src="Images\unboundRow\maui-datagrid-unbound-row-refreshing.png" width="404"/>
 
 ## Editing in unbound rows
 
@@ -224,7 +223,7 @@ private void DataGrid_QueryRowHeight(object? sender, DataGridQueryRowHeightEvent
 
 ## Get unbound rows
 
-You can get the unbound row at the specified row index using [GetUnboundRow]() method.
+The unbound row can be obtained by using the [GetUnboundRowAtRowIndex]() method.
 
 {% tabs %}
 {% highlight c# %}
