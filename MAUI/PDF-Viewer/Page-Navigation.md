@@ -11,6 +11,51 @@ documentation: ug
 
 After loading a document, you can navigate or scroll to different pages using the page navigation options, either programmatically or by dragging the scroll head in the UI. This section walks through the page navigation functionalities supported in the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html).
 
+## Page layout modes
+
+The page layout modes of [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) allow users to change the layout of pages while viewing PDF documents. These modes provide flexibility in viewing and navigating PDF pages, responding to various reading styles and document structures. The [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) supports the following Page layout modes:
+
+1. Continuous
+2. Single page
+
+### Continuous layout mode
+
+The [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html)’s default page layout mode is `Continuous`. In this mode, the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) displays pages in a continuous vertical scroll, is useful for documents containing a continuous flow of content. It enables users to scroll through the document with ease, providing a more fluid reading experience. 
+To enable the continuous page layout mode, use the following code sample.
+
+{% tabs %}
+{% highlight XAML %}
+
+<syncfusion:SfPdfViewer x:Name="PdfViewer" PageLayoutMode = PageLayoutMode.Continuous/>
+
+{% endhighlight %}
+{% highlight c# %}
+
+SfPdfViewer PdfViewer = new SfPdfViewer ();
+PdfViewer.PageLayoutMode = PageLayoutMode.Continuous;
+
+{% endhighlight %}
+{% endtabs %}
+
+### Singe page layout mode
+
+In single page layout mode, the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) shows one page at a time and allows users to swipe or scroll horizontally through the document. It provides a focused view, allowing readers to concentrate on a single page at a time without being distracted. 
+To enable the single page layout mode, use the following code sample.
+
+{% tabs %}
+{% highlight XAML %}
+
+<syncfusion:SfPdfViewer x:Name="PdfViewer" PageLayoutMode = PageLayoutMode.Single/>
+
+{% endhighlight %}
+{% highlight c# %}
+
+SfPdfViewer PdfViewer = new SfPdfViewer ();
+PdfViewer.PageLayoutMode = PageLayoutMode.Single;
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Obtain total page count and current page number
 
 The [PageCount](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_PageCount) property returns the total number of pages in a PDF document. And the [PageNumber](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_PageNumber) property returns the current page number displayed in the PDF Viewer.
