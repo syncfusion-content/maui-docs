@@ -202,13 +202,13 @@ This page lists the keys for each control and the element to which it is mapped 
         <td> Stroke color of expanded accordion item.<br/><br/></td>
     </tr>
     <tr>
-        <td> SfAccordionFocusedItemStroke <br/><br/></td> 
-        <td> Stroke color of the header when it is in the focused state while using key navigation.<br/><br/></td>
-    </tr>
-    <tr>
         <td> SfAccordionExpandedItemStrokeThickness <br/><br/></td> 
         <td> Stroke thickness of expanded accordion item.<br/><br/>
         </td>
+    </tr>
+    <tr>
+        <td> SfAccordionFocusedItemStroke <br/><br/></td> 
+        <td> Stroke color of the header when it is in the focused state while using key navigation.<br/><br/></td>
     </tr>
 </table>
 
