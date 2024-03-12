@@ -159,6 +159,7 @@ To populate the treemap items, utilize the `DataSource` property of `SfTreeMap`.
 
 {% tabs %}
 {% highlight XAML hl_lines="2 5 6 7" %}
+
 <treemap:SfTreeMap x:Name="treeMap"
                    DataSource="{Binding PopulationDetails}"
                    PrimaryValuePath="Population"
@@ -167,6 +168,7 @@ To populate the treemap items, utilize the `DataSource` property of `SfTreeMap`.
         <local:PopulationViewModel />
     </treemap:SfTreeMap.BindingContext>
 </treemap:SfTreeMap>
+
 {% endhighlight %}
 {% highlight C# hl_lines="2 3"  %}
 
@@ -268,7 +270,7 @@ public class PopulationViewModel
 To customize fill colors for leaf items based on ranges or values, utilize the `LeafItemBrushSettings` property within `SfTreeMap`. This property offers four distinct brush settings: `TreeMapUniformBrushSettings`, `TreeMapRangeBrushSettings`, `TreeMapDesaturationBrushSettings`, and `TreeMapPaletteBrushSettings`. Each setting provides unique options for defining and applying color schemes to enhance your TreeMap visualization.
 
 {% tabs %}
-{% highlight XAML hl_lines="14 15" %}
+{% highlight XAML hl_lines="12 13 14" %}
 
 <treemap:SfTreeMap x:Name="treeMap"
                    DataSource="{Binding PopulationDetails}"
@@ -445,7 +447,7 @@ public class PopulationViewModel
 
 ## Enable legend
 
-To incorporate a legend for the TreeMap control, utilize the `ShowLegend` property within `LegendSettings.` It is possible to customize the legend item’s color and text using the `LeafItemBrushSettings` and `LeafItemSettings` properties of `SfTreemap.`
+To incorporate a legend for the TreeMap control, utilize the `ShowLegend` property within `LegendSettings.` It is possible to customize the legend item’s color and text using the `LeafItemBrushSettings` and `LegendSettings` properties of `SfTreemap.`
 
 {% tabs %}
 {% highlight XAML hl_lines="9" %}
