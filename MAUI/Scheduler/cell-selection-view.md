@@ -7,16 +7,13 @@ control: SfScheduler
 documentation: ug
 ---
 
-# Getting Started with .NET MAUI Scheduler (SfScheduler)
+# Cell Selection View in .NET MAUI Scheduler (SfScheduler)
 
-This section explains how to populate the appointments to the Scheduler as well as the essential aspects for getting started with the Scheduler and also provides a walk-through to configure the [.NET MAUI Scheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html) control in a real-time scenario.
+The Scheduler provides the capability to customize the selection view using Cell Selection View.
 
 
-To get start quickly with our .NET MAUI Scheduler, you can check the below video.
 
-{% youtube "https://www.youtube.com/watch?v=Io2ElO8ORSQ" %}
-
-## Creating an application using the .NET MAUI Scheduler
+## Selection using stroke
 
 1. Create a new .NET MAUI application in Visual Studio.
 
