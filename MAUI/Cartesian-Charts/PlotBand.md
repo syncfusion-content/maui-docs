@@ -77,7 +77,7 @@ Plot band can be added to the numerical axis by specifying index values to the [
 
 {% endtabs %}
 
-![Plot band with numerical axis in MAUI Cartesian chart](Plotband_images/Numerical.png)
+![Plot band with numerical axis in MAUI Cartesian chart](chart-types-images/Horizontal-Plotband.png)
 
 ## Add plot band for dateTime axis
 
@@ -135,7 +135,7 @@ Plot band can be added to the date-time axis by specifying date values to the [S
 
 {% endtabs %}
 
-![Plot band with numerical axis in MAUI Cartesian chart](Plotband_images/)
+![Plot band with datetime axis in MAUI Cartesian chart](chart-types-images/Vertical-Plotband.png)
 
 ## Recursive plot band
 
@@ -198,7 +198,7 @@ This feature is used to enable the plot bands to be drawn repeatedly at regular 
 
 {% endtabs %}
 
-![Visualize plot band recurrence in .NET MAUI](StripLines_Images/Reaccurence.png)
+![Visualize plot band recurrence in .NET MAUI](chart-types-images/Band-Recurrence.png)
 
 ## Segmented plot band
 
@@ -261,7 +261,7 @@ Suppose, you need to draw a plot band that should not stretch along its associat
 
 {% endtabs %}
 
-![Visualize segmented plot band in .NET MAUI](StripLines_Images/segmented.png)
+![Visualize segmented plot band in .NET MAUI](chart-types-images/Band-Recurrence.png)
 
 ## Customized label
 
