@@ -9,7 +9,7 @@ documentation: UG
 
 # Unbound column in MAUI DataGrid (SfDataGrid)
 
-The data grid allows adding additional columns that are not bound with data objects from the underlying data source. The unbound column can be added using the [SfDataGrid.DataGridUnboundColumn] class.
+The data grid allows adding additional columns that are not bound with data objects from the underlying data source.The unbound column can be added using the [SfDataGrid.DataGridUnboundColumn] class.
 
 {% tabs %}
 {% highlight xaml %}
