@@ -316,7 +316,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of tooltip.     
+            Background Color of tooltip in Image editor toolbar    
             <br/>
             <br/>
         </td>
@@ -329,7 +329,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of tooltip text.      
+            Color of tooltip text in image editor     
             <br/>
             <br/>
         </td>
@@ -407,7 +407,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Size of toolbar text.     
+            Font size on toolbar text in image editor.    
             <br/>
             <br/>
         </td>
@@ -420,7 +420,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Size of tooltip text.      
+            Font size on tooltip text in image editor      
             <br/>
             <br/>
         </td>
@@ -572,7 +572,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of text when it is selected. 
+            Color of segmented items text when it is selected. 
             <br/>
             <br/>
         </td>
@@ -585,7 +585,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of border when it is selected.   
+            Color of segmented item border when it is selected.   
             <br/>
             <br/>
         </td>
@@ -611,7 +611,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of border when it is keyboard pressed.    
+            Segmented controls border color when it is focused using the keyboard navigation keys.    
             <br/>
             <br/>
         </td>
@@ -624,7 +624,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Thickness of the stroke in the in segmented control.    
+            Thickness of the border stroke in the in segmented control.    
             <br/>
             <br/>
         </td>
@@ -637,7 +637,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Size of corner radius in segmented control.     
+            Corner radius of the segmented control.     
             <br/>
             <br/>
         </td>
@@ -650,7 +650,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Size of segment corner radius.      
+            Corner radius of segment in segmented control.      
             <br/>
             <br/>
         </td>
@@ -663,7 +663,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Size of text in segmented control.   
+            Font size of the segment item in segmented control.   
             <br/>
             <br/>
         </td>
@@ -676,7 +676,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Size of border stroke thickness when it is selected.     
+            Thickness of the border stroke in segmented control, when it is selected.     
             <br/>
             <br/>
         </td>
@@ -971,7 +971,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Size of editor text in dataform.     
+            Font size of editor text in dataform.
             <br/>
             <br/>
         </td>
@@ -984,7 +984,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Size of label's in dataform.     
+            Font size of label in dataform.     
             <br/>
             <br/>
         </td>
@@ -997,7 +997,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Size of error label's in dataform.      
+            Font size of error label's in dataform. 
             <br/>
             <br/>
         </td>
@@ -1010,7 +1010,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Size of valid message label's in dataform.      
+            Font size of valid message label's in dataform.
             <br/>
             <br/>
         </td>
@@ -1023,7 +1023,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Size of group header text in dataform.      
+            Font size of group header text in dataform.
             <br/>
             <br/>
         </td>
@@ -1123,7 +1123,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of bubbles border. 
+            Color of bubbles border in maps. 
             <br/>
             <br/>
         </td>
@@ -1162,7 +1162,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of tooltip in maps.   
+            Background Color of tooltip in maps.   
             <br/>
             <br/>
         </td>
@@ -1175,7 +1175,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of tooltip text.  
+            Color of tooltip text in maps.  
             <br/>
             <br/>
         </td>
@@ -1188,7 +1188,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of selected shape.   
+            Color of selected shape in maps.   
             <br/>
             <br/>
         </td>
@@ -1305,7 +1305,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-             Color of sublayer stroke.      
+             Color of sublayer stroke in maps.      
             <br/>
             <br/>
         </td>
@@ -1454,7 +1454,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Size of tooltip text in maps.      
+            Font size of tooltip text in maps.      
             <br/>
             <br/>
         </td>
@@ -1466,7 +1466,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Size of data label text.      
+            Font size on data label in maps.      
             <br/>
             <br/>
         </td>
@@ -1593,7 +1593,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of selected cell in scheduler.  
+            Background Color of selected cell in scheduler.  
             <br/>
             <br/>
         </td>
@@ -1619,7 +1619,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of appointment layout while select week and work week view.  
+            Background Color of appointment layout while select week and work week view.  
             <br/>
             <br/>
         </td>
@@ -1684,7 +1684,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of appointment layout in day, week and work week view.    
+            Background Color of appointment layout in day, week and work week view.    
             <br/>
             <br/>
         </td>
@@ -1710,7 +1710,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of week number in scheduler.      
+            Background Color of week number in scheduler.      
             <br/>
             <br/>
         </td>
@@ -1736,7 +1736,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of header layout in scheduler.     
+            Background Color of header layout in scheduler.     
             <br/>
             <br/>
         </td>
@@ -1762,7 +1762,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of view header layout.     
+            Background Color of view header layout.     
             <br/>
             <br/>
         </td>
@@ -1814,7 +1814,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-           Color of allowed view button.      
+           Background Color of allowed view button.      
             <br/>
             <br/>
         </td>
@@ -1826,7 +1826,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of allowed view more icon button.      
+            Background Color of allowed view more icon button.      
             <br/>
             <br/>
         </td>
@@ -1838,7 +1838,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Size of today text in scheduler.      
+            Font size of today text in scheduler.      
             <br/>
             <br/>
         </td>
@@ -1850,7 +1850,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Size of disabled date text.     
+            Font size of disabled date text.     
             <br/>
             <br/>
         </td>
@@ -1862,7 +1862,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Size of appointment text in scheduler.      
+            Font size of appointment text in scheduler.      
             <br/>
             <br/>
         </td>
@@ -1874,7 +1874,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Size of week number text.      
+            Font size of week number text.      
             <br/>
             <br/>
         </td>
@@ -1886,7 +1886,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-             Size of header text in scheduler.                 
+             Font size of header text in scheduler.                 
             <br/>
             <br/>
         </td>
@@ -1898,7 +1898,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Size of view header day text.      
+            Font size of view header day text.      
             <br/>
             <br/>
         </td>
@@ -1910,7 +1910,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Size of view header date text.      
+            Font size of view header date text.      
             <br/>
             <br/>
         </td>
@@ -2152,7 +2152,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Size of group item in treemap.     
+            Stroke width of group item in treemap.     
             <br/>
             <br/>
         </td>
@@ -2165,7 +2165,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Size of tooltip text in treemap.    
+            Font size of tooltip text in treemap.    
             <br/>
             <br/>
         </td>
@@ -2178,7 +2178,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Size of group item text.     
+            Font size of group item text.     
             <br/>
             <br/>
         </td>
@@ -2191,7 +2191,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Size of legend text in treemap.      
+            Font size of legend text in treemap.      
             <br/>
             <br/>
         </td>
