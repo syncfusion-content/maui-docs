@@ -315,7 +315,7 @@ This page lists the keys for each control and the element to which it is mapped 
     </tr>
 
     <tr>
-        <td rowspan="7">
+        <td rowspan="12">
             SfTreeViewStyles
             <br/>
             <br/>
