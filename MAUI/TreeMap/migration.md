@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Migrate from Syncfusion Xamarin.Forms to .NET MAUI TreeMap (SfTreeMap) | Syncfusion
+title: Migrate from Xamarin to .NET MAUI TreeMap (SfTreeMap) | Syncfusion
 description: Learn about Migrating from Syncfusion Xamarin.Forms TreeMap control to .NET MAUI TreeMap (SfTreeMap) control.
 platform: maui
 control: TreeMap (SfTreeMap)
@@ -167,6 +167,8 @@ this.Content = treeMap;
 ## Properties
 
 ### SfTreeMap
+
+The following code example, explains how to initialize the properties of the .NET MAUI SfTreeMap class.
 
 <table> 
 <tr>
@@ -391,6 +393,8 @@ public class PopulationViewModel
 
 ### TreeMapLeafItemSettings
 
+The following code example, explains how to configure the leaf item settings in .NET MAUI SfTreeMap class.
+
 {% tabs %}
 {% highlight XAML hl_lines="8 9 10 11 12" %}
 <treemap:SfTreeMap x:Name="treeMap"
@@ -516,6 +520,8 @@ public class PopulationViewModel
 </table>
 
 ### TreeMapLegendSettings
+
+The following code example, explains how to configure the legend settings in .NET MAUI SfTreeMap class.
 
 {% tabs %}
 {% highlight XAML hl_lines="13 14 15 16" %}
@@ -650,6 +656,8 @@ public class PopulationViewModel
 
 ### TreeMapUniformBrushSettings
 
+The following code example, explains how to configure the uniform brush settings in .NET MAUI SfTreeMap class.
+
 {% tabs %}
 {% highlight XAML hl_lines="12 13 14" %}
 
@@ -750,6 +758,8 @@ public class PopulationViewModel
 </table>
 
 ### TreeMapDesaturationBrushSettings
+
+The following code example, explains how to configure the desaturation brush settings in .NET MAUI SfTreeMap class.
 
 {% tabs %}
 {% highlight XAML hl_lines="12 13 14" %}
@@ -862,6 +872,8 @@ public class PopulationViewModel
 </table>
 
 ### TreeMapPaletteBrushSettings
+
+The following code example, explains how to configure the palette brush settings in .NET MAUI SfTreeMap class.
 
 {% tabs %}
 {% highlight XAML hl_lines="12 13 14 15 16 17 18 19 20 21 22 23" %}
@@ -1136,6 +1148,8 @@ public class PopulationViewModel
 
 ### TreeMapToolTipSettings
 
+The following code example, explains how to configure the tooltip setting in .NET MAUI SfTreeMap class.
+
 {% tabs %}
 {% highlight XAML hl_lines="16 17 18" %}
 
@@ -1258,6 +1272,8 @@ public class PopulationViewModel
 </table>
 
 ### TreeMapLevel
+
+The following code example, explains how to configure the tree map level in .NET MAUI SfTreeMap class.
 
 {% tabs %}
 {% highlight XAML hl_lines="15 16 17" %}
@@ -1399,7 +1415,7 @@ public class PopulationViewModel
 
 ### TreeMapTextStyle
 
-The `FontColor`, `FontSize`, `FontFamily`, and `FontAttributes` properties of the `SfTreeMap` is grouped to `TreeMapTextStyle`.
+The following code example, explains how to configure the text style .NET MAUI SfTreeMap class. The `FontColor`, `FontSize`, `FontFamily`, and `FontAttributes` properties of the `SfTreeMap` is grouped to `TreeMapTextStyle`.
 
 <table>
 <tr>
