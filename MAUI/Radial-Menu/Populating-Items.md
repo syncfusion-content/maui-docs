@@ -74,6 +74,8 @@ namespace RadialSample
 
 {% endtabs %}
 
+N> Instead of using ObservableCollection, use `RadialMenuItemsCollection` for the RadialMenu Items list and `SubMenuItemsCollection` for the list of items within each RadialMenuItem.
+
 ![Display text in .NET MAUI RadialMenu](images/populating-items/maui-radialmenu-populating-only-text.png)
 
 ### ImageWithText
