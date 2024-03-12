@@ -864,7 +864,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>    
-            By merging this key in application resources, you can customize the appearance of SfBackdrop without merging common theme resource and control style resource dictionaries.
+            By merging this key in application resources, you can customize the appearance of SfBackdrop without merging common theme resources and control style resource dictionaries.
 			
 {% highlight xaml %}
 
@@ -897,7 +897,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-           The background color of the foreground layer on the backdrop page
+		   The background color of the foreground layer on the backdrop page.
             <br/>
             <br/>
         </td>
@@ -934,7 +934,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>    
-            By merging this key in application resources, you can customize the appearance of SfBarcodeGenerator without merging common theme resource and control style resource dictionaries.
+            By merging this key in application resources, you can customize the appearance of SfBarcodeGenerator without merging common theme resources and control style resource dictionaries.
 			
 {% highlight xaml %}
 
@@ -968,7 +968,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the background in the barcode generator
+            Color of the background in the barcode generator.
             <br/>
             <br/>
         </td>
@@ -980,7 +980,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the foreground in the barcode generator
+            Color of the foreground in the barcode generator.
             <br/>
             <br/>
         </td>
@@ -992,7 +992,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the text in the barcode generator
+            Color of the text in the barcode generator.
             <br/>
             <br/>
         </td>
@@ -1029,7 +1029,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>    
-            By merging this key in application resources, you can customize the appearance of SfCardView without merging common theme resource and control style resource dictionaries.
+            By merging this key in application resources, you can customize the appearance of SfCardView without merging common theme resources and control style resource dictionaries.
 			
 {% highlight xaml %}
 
@@ -1124,7 +1124,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>    
-            By merging this key in application resources, you can customize the appearance of SfRadialGauge without merging common theme resource and control style resource dictionaries.
+            By merging this key in application resources, you can customize the appearance of SfRadialGauge without merging common theme resources and control style resource dictionaries.
 			
 {% highlight xaml %}
 
@@ -1399,7 +1399,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>    
-            By merging this key in application resources, you can customize the appearance of SfLinearGauge without merging common theme resource and control style resource dictionaries.
+            By merging this key in application resources, you can customize the appearance of SfLinearGauge without merging common theme resources and control style resource dictionaries.
 			
 {% highlight xaml %}
 
@@ -1567,7 +1567,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>    
-            By merging this key in application resources, you can customize the appearance of SfStepProgressBar without merging common theme resource and control style resource dictionaries.
+            By merging this key in application resources, you can customize the appearance of SfStepProgressBar without merging common theme resources and control style resource dictionaries.
 			
 {% highlight xaml %}
 
@@ -1685,7 +1685,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Fill color of the in progress step. 
+			Fill color of the in-progress step.
             <br/>
             <br/>
         </td>
@@ -1697,7 +1697,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Background of the in progress step.
+            Background of the in-progress step.
             <br/>
             <br/>
         </td>
@@ -1709,7 +1709,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Step progress color of the in progress step.
+            Step progress color of the in-progress step.
             <br/>
             <br/>
         </td>
@@ -1721,7 +1721,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Text color of the in progress step.
+            Text color of the in-progress step.
             <br/>
             <br/>
         </td>
