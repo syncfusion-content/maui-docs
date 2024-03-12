@@ -47,7 +47,7 @@ The .NET MAUI DataGrid control is used to display and manipulate data in a tabul
 
 * **Load More** -  Display an interactive view when the grid reaches its maximum or minimum offset while scrolling down or up. Tapping the interactive view triggers a command to add more data to the item source of the grid at runtime.
 
-* **Pull To Refresh** - Support enhances the user experience by enabling data refreshing through a pull-down gesture. This feature is particularly useful when dealing with large datasets or real-time data updates in mobile or desktop applications.
+* **Pull To Refresh** - Support allows users to load a subset of data when the DataGrid is pulled down.
 
 * **Exporting** - Support to export the data to Excel and PDF.
 
