@@ -862,7 +862,7 @@ N> Two way binding not supported in Android platform.
 
 ## Border visibility
 
-The [`SfAutocomplete`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) ShowBorder property is used to modify the visibility of border and its default value is **true**. The following code example demonstrates how to change the border visibility,
+The `ShowBorder` property of [`SfAutocomplete`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) is used to modify the visibility of the border and its default value is **true**. The following code example demonstrates how to change the border visibility,
 
 {% tabs %}
 {% highlight xaml %}

@@ -11,15 +11,15 @@ documentation: ug
 
 ## PasswordVisibilityToggled Event
 
-The `PasswordVisibilityToggled` event will be triggered whenever toggle the EnablePasswordVisibilityToggle icon in the SfTextInputLayout. It can defines visibility of the password based on the icon clicked. If the icon shows, the value of `IsPasswordVisible` will be **true**. The event arguments are of type `PasswordVisibilityToggledEventArgs` and expose the following property:
+The `PasswordVisibilityToggled` event will be triggered whenever you toggle the password toggle icon in the SfTextInputLayout. The event arguments are of type `PasswordVisibilityToggledEventArgs` and expose the following property:
 
-* `IsPasswordVisible`: Its value is defined based on the password visibility.
+* `IsPasswordVisible`: Its value is defined based on the visibility of the password.
 
 {% tabs %} 
 {% highlight xaml %} 
 
 <inputLayout:SfTextInputLayout  Hint="Password" 
-                                PasswordVisibilityToggled="SfTextInputLayout_PasswordVisibilityToggled">
+                                PasswordVisibilityToggled="OnPasswordVisibilityToggled">
     <Entry Text="1234"/>
 </inputLayout:SfTextInputLayout>  
  
@@ -29,7 +29,7 @@ The `PasswordVisibilityToggled` event will be triggered whenever toggle the Enab
 
 var inputLayout = new SfTextInputLayout();
 inputLayout.Hint = "Password";
-inputLayout.PasswordVisibilityToggled += InputLayout_PasswordVisibilityToggled;
+inputLayout.PasswordVisibilityToggled += OnPasswordVisibilityToggled;
 inputLayout.Content = new Entry() { Text = "1234" }; 
 
 {% endhighlight %}
@@ -37,7 +37,7 @@ inputLayout.Content = new Entry() { Text = "1234" };
 {% tabs %}
 {% highlight c# %}
     
-    private void SfTextInputLayout_PasswordVisibilityToggled(object sender, PasswordVisibilityToggledEventArgs e)
+    private void OnPasswordVisibilityToggled(object sender, PasswordVisibilityToggledEventArgs e)
 	{
     	bool passwordVisbility = e.IsPasswordVisible;
 	}

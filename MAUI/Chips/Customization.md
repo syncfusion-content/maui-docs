@@ -1808,4 +1808,4 @@ N> The default value of ChipImageSize is [`18d`].
 
 ## IsSelected
 
-The `IsSelected` property is a public property available in the [`SfChip`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChip.html). This property indicates whether a chip has been selected in choice and filter types.
+The `IsSelected` property in the [`SfChip`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChip.html) is used to indicate whether a chip has been selected in choice and filter types.
