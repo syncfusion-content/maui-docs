@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Migrating from Xamarin to .NET MAUI Rotator | Syncfusion 
-description: Learn here all about Migrating from Syncfusion Xamarin Rotator to Syncfusion .NET MAUI Rotator control and more.
+description: Learn about Migrating from Syncfusion Xamarin Rotator to Syncfusion .NET MAUI Rotator control and more.
 platform: maui
 control: Rotator
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Migrating from Xamarin Carousel View to .NET MAUI Carousel View 
 
-To migrate easier from [Xamarin SfRotator](link) to [.NET MAUI SfRotator](link), we kept all the APIs from Xamarin SfCarousel in MAUI SfCarousel. We have renamed the namespace as follows.
+To migrate easily from `Xamarin SfRotator` to `.NET MAUI SfRotator`, we kept all the APIs from Xamarin SfCarousel in MAUI SfCarousel. We have renamed the namespace as follows.
 
 ## Namespaces 
 

@@ -1,7 +1,7 @@
 ---
 layout : post
 title: Populating Data in .NET MAUI Rotator control | Syncfusion
-description: Learn here all about Populating Data support in Syncfusion .NET MAUI Rotator (SfRotator) control and more.
+description: Learn about Populating Data support in Syncfusion .NET MAUI Rotator (SfRotator) control and more..
 platform : maui
 control : Rotator 
 documentation : ug
@@ -9,7 +9,7 @@ documentation : ug
 
 # Populating Data in .NET MAUI Rotator (SfRotator)
 
-[`SfRotator`](link) control supports binding to different data sources such as IList Data Source, Observable Collection Data Source.
+The `SfRotator` control supports binding to different data sources such as IList Data Source and Observable Collection Data Source.
 
 ## Through Binding
 
@@ -17,51 +17,51 @@ This section explains about setting Item Source and applying custom template to 
 
 ### Create a Model with Data
 
-[`SfRotator`](link) items can be populated with a collection of image data. You can assign a collection to it. Collections include arrays, Lists and DataTables. For example you may wants to create a Rotator model with Image as follows.
+The `SfRotator` items can be populated with a collection of image data. Assign a collection to it. Collections include arrays, Lists, and DataTables. For example, you may want to create a Rotator model with an Image as follows.
 
 {% tabs %}
 
 {% highlight C# %}
 	
-// Model Class for Rotator.
+    // Model Class for Rotator.
 
-public RotatorModel(string imageString)
-{
-    Image = imageString;
-}
-private String _image;
-public String Image
-{
-    get { return _image; }
-    set { _image = value; }
-}      
+    public RotatorModel(string imageString)
+    {
+        Image = imageString;
+    }
+    private String _image;
+    public String Image
+    {
+        get { return _image; }
+        set { _image = value; }
+    }      
 
 {% endhighlight %}
 
 {% endtabs %}
 
-Create and populate [`SfRotator`](link) collection as follows
+Create and populate the `SfRotator` collection as follows.
 
 {% tabs %}
 
 {% highlight C# %}
 
-// ViewModel class for Rotator.
+    // ViewModel class for Rotator.
 
-public RotatorViewModel()
-{
-    ImageCollection.Add(new RotatorModel("movie1.png"));
-    ImageCollection.Add(new RotatorModel("movie2.png"));
-    ImageCollection.Add(new RotatorModel("movie3.png"));
-    ImageCollection.Add(new RotatorModel("movie4.png"));
-    ImageCollection.Add(new RotatorModel("movie5.png"));
-}
-private List<RotatorModel> imageCollection = new List<RotatorModel>();
-public List<RotatorModel> ImageCollection
-{
-    get { return imageCollection; }
-    set { imageCollection = value; }
-}
+    public RotatorViewModel()
+    {
+        ImageCollection.Add(new RotatorModel("movie1.png"));
+        ImageCollection.Add(new RotatorModel("movie2.png"));
+        ImageCollection.Add(new RotatorModel("movie3.png"));
+        ImageCollection.Add(new RotatorModel("movie4.png"));
+        ImageCollection.Add(new RotatorModel("movie5.png"));
+    }
+    private List<RotatorModel> imageCollection = new List<RotatorModel>();
+    public List<RotatorModel> ImageCollection
+    {
+        get { return imageCollection; }
+        set { imageCollection = value; }
+    }
 
 {% endhighlight %}
 
@@ -89,7 +89,7 @@ Assigning collection to ItemSource ,
 
 ### Binding the Data with Custom Template
 
-[`SfRotator`](link) provides support to add a custom view as RotatorItems by designing a view inside its ItemTemplate. This template will be applied for all its items and its data will be binded.
+The `SfRotator` provides support to add a custom view as RotatorItems by designing a view inside its ItemTemplate. This template will be applied for all its items, and its data will be bound.
 
 {% tabs %}
 
@@ -176,7 +176,7 @@ Assigning collection to ItemSource ,
 
 ## Through Rotator Item
 
-The [`ItemTemplate`](link) provides common template with different data, whereas if different views for every items is needed, it can also be provided using [`ItemContent`](link) property  in [`SfRotatorItem`](link) class.
+The `ItemTemplate` provides a common template with different data, whereas if different views for every item are needed, it can also be provided using the `ItemContent` property in the `SfRotatorItem` class.
 
 {% tabs %}
 
@@ -228,7 +228,7 @@ The [`ItemTemplate`](link) provides common template with different data, whereas
 
 ![RotatorItem](images/RotatorItem.png)
 
-And also rotator provides a support to display only the Image data with [`Image`](link) property in [`SfRotatorItem`](link) class.
+Also, the rotator provides support to display only the image data with the `Image` property in the `SfRotatorItem` class.
 
 {% tabs %}
 

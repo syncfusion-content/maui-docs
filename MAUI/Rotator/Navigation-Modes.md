@@ -2,7 +2,7 @@
 
 layout: post
 title: Navigation Modes in .NET MAUI Rotator control | Syncfusion
-description: Learn here all about Navigation Modes support in Syncfusion .NET MAUI Rotator (SfRotator) control and more.
+description: Learn about Navigation Modes support in Syncfusion .NET MAUI Rotator (SfRotator) control and more
 platform: maui 
 control: Rotator
 documentation: ug
@@ -11,9 +11,9 @@ documentation: ug
 
 # Navigation Modes in .NET MAUI Rotator (SfRotator)
 
-The [`NavigationStripMode`](link) property specifies the appearance of navigation bar items. The image data can be selected either by [`Thumbnail`](link) or by [`Dots`](link) navigation modes.
+The `NavigationStripMode` property specifies the appearance of navigation bar items. The image data can be selected either by `Thumbnail` or by `Dots`navigation modes.
 
-* [`Thumbnail`](link) - The slider items will be loaded in thumbnail view additionally. When a thumbnail item is clicked, the slider will switch to the corresponding image data.
+* `Thumbnail` - The slider items will also be loaded in the thumbnail view. When a thumbnail item is clicked, the slider will switch to the corresponding image data.
 
 {% tabs %}
 
@@ -102,7 +102,7 @@ The [`NavigationStripMode`](link) property specifies the appearance of navigatio
 
 ![Thumbnail Mode Image](images/NavigationStripMode.png)
 
-* [`Dots`](link) - The slider items will be loaded in dots view additionally. When a dots item is clicked, the slider will switch to the corresponding image data.
+* `Dots` - The slider items will also be loaded in dots view. When a dot item is clicked, the slider will switch to the corresponding image data.
 
 {% tabs %}
 
@@ -192,7 +192,7 @@ The [`NavigationStripMode`](link) property specifies the appearance of navigatio
 
 ## Items / Dot Strip Positions
 
-The [`NavigationStripPosition`](link) specifies the placement position of the navigation bar items such as thumbnail or dots relative to the slider area. 
+The `NavigationStripPosition` specifies the placement position of the navigation bar items, such as thumbnails or dots relative to the slider area.
 
 There are four available positions,
 

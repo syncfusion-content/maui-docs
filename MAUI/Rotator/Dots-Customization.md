@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Dots Customization in .NET MAUI Rotator control | Syncfusion
-description: Learn here all about Dots Customization support in Syncfusion .NET MAUI Rotator (SfRotator) control and more.
+description: Learn about Dots Customization support in Syncfusion .NET MAUI Rotator (SfRotator) control and more.
 platform: maui 
 control: Rotator 
 documentation: ug
@@ -9,11 +9,11 @@ documentation: ug
 
 # Dots Customization in .NET MAUI Rotator (SfRotator)
 
-The Rotator control supports to customize the dots border color, selected dots color and unselected dots color.
+The Rotator control supports customizing dots' border color, selected dots' color, and unselected dots' color.
 
 ## DotsBorder Color
 
-The [`DotsBorderColor`](link) property is used to customize the color of dots border in [`SfRotator`](link).
+The `DotsBorderColor` property is used to customize the color of the dots border in the `SfRotator`.
 
 {% tabs %}
 {% highlight xaml %}
@@ -104,7 +104,7 @@ The [`DotsBorderColor`](link) property is used to customize the color of dots bo
 
 ## Selected Dot Color
 
-The [`SelectedDotColor`](link) property is used to customize the color of selected dots in [`SfRotator`](link).
+The `SelectedDotColor` property is used to customize the color of selected dots in the `SfRotator`.
 
 {% tabs %}
 {% highlight xaml %}
@@ -197,7 +197,7 @@ The [`SelectedDotColor`](link) property is used to customize the color of select
 
 ## Unselected Dot Color
 
-The [`UnselectedDotColor`](link) property is used to customize the color of unselected dots in [`SfRotator`](link).
+The `UnselectedDotColor` property is used to customize the color of unselected dots in the `SfRotator`.
 
 {% tabs %}
 {% highlight xaml %}

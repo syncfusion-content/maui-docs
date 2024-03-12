@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Header Visibility in .NET MAUI Rotator control | Syncfusion
-description: Learn here all about Header Visibility support in Syncfusion .NET MAUI Rotator (SfRotator) control and more.
+description: Learn about Header Visibility support in Syncfusion .NET MAUI Rotator (SfRotator) control and more.
 platform: maui 
 control: Rotator
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Header Visibility in .NET MAUI Rotator (SfRotator)
 
-The [`IsTextVisible`](link) property can be used to enable the text area visibility in bottom area of [`SfRotator`](linkl) for providing additional information of items. [`IsTextVisible`](link) property is used to change the visibility of the Text panel that is displayed when [`SfRotatorItem`](link) collection is set and will have no effect when setting Item template.
+The `IsTextVisible` property can be used to enable the text area visibility in the bottom area of the `SfRotator` for providing additional information of items. The `IsTextVisible` property is used to change the visibility of the Text panel that is displayed when the `SfRotatorItem` collection is set and will have no effect when setting the Item template.
 
 N> By default, the property value is false.
 

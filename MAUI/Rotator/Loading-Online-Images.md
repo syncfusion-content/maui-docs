@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Loading Online Images in .NET MAUI Rotator control | Syncfusion
-description: Learn here all about Loading Online Images support in Syncfusion .NET MAUI Rotator (SfRotator) control and more.
+description: Learn about Loading Online Images support in Syncfusion .NET MAUI Rotator (SfRotator) control and more.
 platform: maui 
 control: Rotator 
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Loading Online Images in .NET MAUI Rotator (SfRotator)
 
-This section describes how to load the online images in [`SfRotator`](link) Control.
+This section describes loading the online images in the `SfRotator` Control.
 
 {% tabs %}
 {% highlight xaml %}

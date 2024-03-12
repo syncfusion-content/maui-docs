@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Adding Looping and Delays in .NET MAUI Rotator control | Syncfusion
-description: Learn here all about Adding Looping and Delays support in Syncfusion .NET MAUI Rotator (SfRotator) control and more.
+description: Learn about Adding Looping and Delay support in Syncfusion .NET MAUI Rotator (SfRotator) control and more.
 platform: maui 
 control: Rotator
 documentation: ug
@@ -9,11 +9,11 @@ documentation: ug
 
 # Adding Looping and Delays in .NET MAUI Rotator (SfRotator)
 
-Looping and delay can be enabled in [`SfRotator`](link) control and also we can customize the Text and Navigation direction.
+Looping and delay can be enabled in the `SfRotator` control, and you can customize the Text and Navigation direction.
 
 ## Toggle AutoPlay
 
-The [`EnableAutoPlay`](link) property specifies whether the items should navigate automatically based on [`NavigationDelay`](link) property, when the property value is set to true.
+The `EnableAutoPlay` property specifies whether the items should navigate automatically based on the `NavigationDelay` property when the property value is set to true.
 
 N> By default, the property value is set to false.
 
@@ -106,7 +106,7 @@ N> By default, the property value is set to false.
 
 ## Setting Navigation Delay
 
-The [`NavigationDelay`](link) property specifies the delay duration while switching to next navigation item, when [`EnableAutoPlay`](link) property is enabled.
+The `NavigationDelay` property specifies the delay duration while switching to the next navigation item when the `EnableAutoPlay` property is enabled.
 
 N> The property value should be in milliseconds.
 
@@ -199,7 +199,7 @@ N> The property value should be in milliseconds.
 
 ## Looping Items
 
-The [`EnableLooping`](link) property specifies whether the items should navigate to first item once it reaches the last item and vice-versa.
+The `EnableLooping` property specifies whether the items should navigate to the first item once they reach the last item and vice-versa..
 
 {% tabs %}
 
@@ -292,7 +292,7 @@ The [`EnableLooping`](link) property specifies whether the items should navigate
 
 ## Enable swiping
 
-To restrict the user interaction, the [`EnableSwiping`](link) property of [`SfRotator`](link) can be set to `false`.
+To restrict the user interaction, the `EnableSwiping` property of `SfRotator` can be set to false.
 
 {% tabs %}
 

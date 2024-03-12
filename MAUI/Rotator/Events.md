@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Events in .NET MAUI Rotator control | Syncfusion
-description: Learn here all about Events support in Syncfusion .NET MAUI Rotator (SfRotator) control, its elements and more.
+description: Learn about Events support in Syncfusion .NET MAUI Rotator (SfRotator) control, its elements, and more.
 platform: maui 
 control: Rotator 
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 ## Selection Changed
 
-The SelectionChanged event is used to notify when the selection is changed by swiping or dynamically setting the [`SelectedIndex`](link) property of [`SfRotator`](link).
+The SelectionChanged event is used to notify when the selection is changed by swiping or dynamically setting the `SelectedIndex` property of the `SfRotator`.
 
 ## ItemTapped
 
