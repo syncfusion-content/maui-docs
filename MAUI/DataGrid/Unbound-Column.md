@@ -14,19 +14,19 @@ The data grid allows adding additional columns that are not bound with data obje
 {% tabs %}
 {% highlight xaml %}
 
-     <syncfusion:SfDataGrid 
-                    x:Name="datagrid"    
-                    ColumnWidthMode="Fill"
-                    AutoGenerateColumnsMode="None"
-                    ItemsSource="{Binding OrderInfoCollection}">
-     <syncfusion:SfDataGrid.Columns>
+<syncfusion:SfDataGrid 
+            x:Name="datagrid"    
+            ColumnWidthMode="Fill"
+            AutoGenerateColumnsMode="None"
+            ItemsSource="{Binding OrderInfoCollection}">
+    <syncfusion:SfDataGrid.Columns>
          <syncfusion:DataGridUnboundColumn 
                         MappingName="DiscountPrice"
                         HeaderText="SUM"
                         Expression="Price1+Price2"
                         Format="C" />
-         </syncfusion:SfDataGrid.Columns>
-    </syncfusion:SfDataGrid>
+    </syncfusion:SfDataGrid.Columns>
+</syncfusion:SfDataGrid>
 
 {% endhighlight %}
 
@@ -49,14 +49,14 @@ The data grid allows adding additional columns that are not bound with data obje
 {% endtabs %}
 
 
-<img alt="" src="Images\unbound-column\maui-datagrid-sample-example.png" width="404" />
+<img alt="Unbound-column" src="Images\unbound-column\maui-datagrid-unbound-column.png" width="404" />
 
 N> It is mandatory to specify the `DataGridColumn.MappingName` for `SfDataGrid.DataGridUnboundColumn` with some name to identify the column. It is not necessary to define name of the field in the data object.
 
 ## Populating data for the unbound column
-Data for the unbound column can be configured by setting the `Expression` property..
+Data for the unbound column can be configured by setting the `Expression` property.
 
-# Using Expression
+### Using Expression
 The arithmetic or logic expression can be specified by using the expression property to compute the display value. By default, `DataGridUnboundColumn` evaluates the expression with casing. The casing will be disabled while evaluating the expression by setting the `CaseSensitive` property to false
 
 List of supported arithmetic and logical operations are as follows:
@@ -112,8 +112,6 @@ List of supported arithmetic and logical operations are as follows:
 </tr>
 </table>
 
-Logical operation
-
 <table>
 <tr>
 <th> Logical operations </th>
@@ -137,25 +135,25 @@ Logical operation
 {% tabs %}
 {% highlight xaml %}
 
- <syncfusion:SfDataGrid x:Name="datagrid"    
-                  ColumnWidthMode="Fill"
-                  AutoGenerateColumnsMode="None"
-                  ItemsSource="{Binding OrderInfoCollection1}">
-     <syncfusion:SfDataGrid.Columns>
+<syncfusion:SfDataGrid x:Name="datagrid"    
+        ColumnWidthMode="Fill"
+        AutoGenerateColumnsMode="None"
+        ItemsSource="{Binding OrderInfoCollection1}">
+    <syncfusion:SfDataGrid.Columns>
          <syncfusion:DataGridUnboundColumn 
-                            MappingName="DiscountPrice"
-                            Expression="Price1+Price2"
-                            HeaderText="SUM"/>
-     </syncfusion:SfDataGrid.Columns>
- </syncfusion:SfDataGrid>
+                MappingName="DiscountPrice"
+                Expression="Price1+Price2"
+                HeaderText="SUM"/>
+    </syncfusion:SfDataGrid.Columns>
+</syncfusion:SfDataGrid>
 {% endhighlight %}
 {% endtabs %}
 
-# Using QueryUnboundColumnValue event
+## Using QueryUnboundColumnValue event
 
-The QueryUnboundColumnValue event is fired when value for the unbound column is quired. It provides information about the cell that triggered this event. So, you can set the desired value for the grid cells of the unbound column. This event is triggered with the DataGridUnboundEventArgs.
+The `QueryUnboundColumnValue` event is fired when value for the unbound column is quired. It provides information about the cell that triggered this event. So, you can set the desired value for the grid cells of the unbound column. This event is triggered with the `DataGridUnboundEventArgs`.
 
-The DataGridUnboundColumnEventArgs provides the following properties:
+The `DataGridUnboundColumnEventArgs` provides the following properties:
 
 ***Column:*** Gets DataGridColumn of the cell that triggers this event.
 ***OriginalSender:*** Gets the data grid raising event.
