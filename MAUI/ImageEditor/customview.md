@@ -35,9 +35,9 @@ The ImageEditor control in .NET MAUI allows you to add custom view using the `Ad
 {% endtabs %}
 
 
-## Customize the custom view appearance
+## Customize the appearance
 
-Customize the appearance of Custom view annotation using the [`ImageEditorAnnotationSettings`].
+Customize the appearance of Custom view annotation using the [`ImageEditorAnnotationSettings`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorAnnotationSettings.html).
 
 * [`AllowDrag`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorAnnotationSettings.html#Syncfusion_Maui_ImageEditor_ImageEditorAnnotationSettings_AllowDrag): Enables or disables the dragging of custom view annotation. The default value is `true`.
 * [`AllowResize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorAnnotationSettings.html#Syncfusion_Maui_ImageEditor_ImageEditorAnnotationSettings_AllowResize): Enables or disables the resizing of custom view annotation. The default value is `true`.
@@ -105,6 +105,8 @@ Delete the selected custom view using the [`DeleteAnnotation`](https://help.sync
 
 Remove all the custom view annotations using the [`ClearAnnotations`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_ClearAnnotations) method.
 
+N> This is common for Shape, Text and CustomView annotations.
+
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
@@ -149,6 +151,31 @@ N> This is common for Shape, Text and CustomView annotations.
         {
             annotationSettings.RotationAngle = 90;
         }
+    }
+
+{% endhighlight %}
+
+{% endtabs %}
+
+## Annotation unselected event
+
+This [`AnnotationUnselected`] event occurs when the annotation is unselected.
+
+N> This is common for Shape, Text and CustomView annotations.
+
+{% tabs %}
+
+{% highlight xaml tabtitle="MainPage.xaml" %}
+
+    <imageEditor:SfImageEditor Source="image.png" AnnotationUnselected="OnAnnotationUnSelected" />
+
+{% endhighlight %}
+
+{% highlight C# tabtitle="MainPage.xaml.cs" %}
+
+    private void OnAnnotationUnSelected(object sender, AnnotationUnselectedEventArgs e)
+    {
+        
     }
 
 {% endhighlight %}
