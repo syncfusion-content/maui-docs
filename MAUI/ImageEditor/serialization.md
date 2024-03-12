@@ -13,7 +13,7 @@ The Image Editor control provides support to serialize and deserialize the shape
 
 ## Serialization
 
-The `Serialize` method is used to serialize the current edits of shapes. It allows you to store the `SfImageEditor` annotations to the stream by passing the stream as a parameter to the `Serialize` method.
+The `Serialize` method is used to serialize the current edits of annotations. It allows you to store the `SfImageEditor` annotations to the stream by passing the stream as a parameter to the `Serialize` method.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -32,12 +32,6 @@ The `Serialize` method is used to serialize the current edits of shapes. It allo
     private void OnSerializeClicked(object sender, EventArgs e)
     {
         string filePath = Path.Combine(FileSystem.Current.CacheDirectory, "ImageEditor.xml");
-        if (!File.Exists(filePath))
-        {
-            using (FileStream fs = File.Create(filePath))
-            {
-            }
-        }
         using (var fileStream = new FileStream(filePath, FileMode.Create, FileAccess.Write))
         {
             this.imageEditor.Serialize(fileStream);
@@ -65,22 +59,16 @@ The `Deserialize` method is used to deserialize the annotations over an image. I
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-    private void OnDeserializeClicked(object sender, EventArgs e)
+    private async void OnDeserializeClicked(object sender, EventArgs e)
     {
-        var result = await FilePicker.PickAsync(new PickOptions
-        {
-            PickerTitle = "Select an XML file"
-        });
-        
+        var result = await FilePicker.PickAsync();
+    
         if (result != null)
         {
-            MemoryStream memoryStream = new MemoryStream();
             using (Stream stream = await result.OpenReadAsync())
             {
-                await stream.CopyToAsync(memoryStream);
+                this.imageEditor.Deserialize(stream);
             }
-        
-            this.imageEditor.Deserialize(memoryStream);
         }
     }
 
@@ -90,3 +78,5 @@ The `Deserialize` method is used to deserialize the annotations over an image. I
 {% endhighlight %}
 
 {% endtabs %}
+
+N> Serialization is not applicable to custom annotations.
