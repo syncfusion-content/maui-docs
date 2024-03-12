@@ -44,7 +44,7 @@ var customBookmarks = pdfViewer.CustomBookmarks;
 
 To add, edit, or remove custom bookmarks in a PDF viewer, you can use the `CustomBookmarks` collection. This property provides access to the collection of custom bookmarks that can be manipulated to modify the bookmarks displayed in the viewer's bookmark view.
 
-## Adding a Custom Bookmark
+### Adding a Custom Bookmark
 
 To add a custom bookmark, you can create a new instance of Bookmark and add it to the `CustomBookmarks` collection:
 
@@ -63,7 +63,7 @@ pdfViewer.CustomBookmarks.Add(newBookmark);
 {% endhighlight %}
 {% endtabs %}
 
-## Editing a Custom Bookmark
+### Editing a Custom Bookmark
 
 To edit an existing custom bookmark, you can retrieve the bookmark from the `CustomBookmarks` collection and modify its properties:
 
@@ -80,7 +80,7 @@ if (bookmarkToEdit != null)
 {% endhighlight %}
 {% endtabs %}
 
-## Removing a Custom Bookmark
+### Removing a Custom Bookmark
 
 To remove a custom bookmark, you can remove it directly from the `CustomBookmarks` collection:
 
