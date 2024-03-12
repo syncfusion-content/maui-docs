@@ -2,7 +2,7 @@
 layout: post
 title: Getting Started with MAUI Radial Menu control | Syncfusion
 description: Learn here about getting started with Syncfusion MAUI Radial Menu (SfRadialMenu) control, its elements and more.
-platform: .NET MAUI
+platform: MAUI
 control: RadialMenu (SfRadialMenu)
 documentation: ug
 ---

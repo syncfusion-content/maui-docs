@@ -2,7 +2,7 @@
 layout: post
 title: Placing and Dragging RadialMenu in MAUI Radial Menu | Syncfusion
 description: Learn here all about Placing and Dragging RadialMenu support in Syncfusion MAUI Radial Menu (SfRadialMenu) control and more.
-platform: .NET MAUI
+platform: MAUI
 control: RadialMenu (SfRadialMenu)
 documentation: ug
 ---
