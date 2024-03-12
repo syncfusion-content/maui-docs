@@ -1,10 +1,10 @@
 ---
-layout : post
+layout: post
 title: Populating Items in MAUI Radial Menu control | Syncfusion
 description: Learn here all about Populating Items support in Syncfusion MAUI Radial Menu (SfRadialMenu) control and more.
-platform : xamarin
-control : RadialMenu (SfRadialMenu)
-documentation : ug
+platform: .NET MAUI
+control: RadialMenu (SfRadialMenu)
+documentation: ug
 ---
 
 # Populating Items in MAUI Radial Menu (SfRadialMenu)

@@ -1,10 +1,10 @@
 ---
-layout : post
+layout: post
 title: Events in MAUI Radial Menu control | Syncfusion
 description: Learn here all about Events support in Syncfusion MAUI Radial Menu (SfRadialMenu) control and more.
-platform : .NET MAUI
-control : RadialMenu (SfRadialMenu)
-documentation : ug
+platform: .NET MAUI
+control: RadialMenu (SfRadialMenu)
+documentation: ug
 ---
 
 # Events in MAUI Radial Menu (SfRadialMenu)
