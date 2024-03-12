@@ -131,7 +131,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
             <br/>
         </td>
-		<td>
+        <td>
            SfAccordionTheme 
             <br/>
             <br/>
@@ -330,7 +330,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>    
-            By merging this key in application resources, you can customize the appearance of SfAccordion without merging common theme resource and control style resource dictionaries.
+            By merging this key in application resources, you can customize the appearance of SfExpander without merging common theme resource and control style resource dictionaries.
 			
 {% highlight xaml %}
 
