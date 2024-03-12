@@ -21,3 +21,18 @@ To migrate easily from `Xamarin SfRotator` to `.NET MAUI SfRotator`, we kept all
 <td>Syncfusion.SfRotator.XForms</td>
 <td>Syncfusion.Maui.Rotator</td></tr>
 </table>
+
+## Properties
+
+<table> 
+<tr>
+<th>Xamarin SfRotator</th>
+<th>.NET MAUI SfRotator</th>
+<th>Description</th></tr>
+<tr>
+<td>{{'[DotsBorderColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Buttons.ISwitchSettings.html#Syncfusion_XForms_Buttons_ISwitchSettings_TrackBorderWidth)'| markdownify }}</td>
+<td>{{'[DotsStroke](link)'| markdownify }}</td>
+<td>Gets or sets the value of DotsStroke.
+</td></tr>
+<tr>
+</table>

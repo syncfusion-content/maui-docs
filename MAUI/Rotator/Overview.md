@@ -9,7 +9,7 @@ documentation: ug
 
 # .NET MAUI Rotator (SfRotator) Overview
 
-The Rotator is a data control used to display image data and navigate through them. The images can be selected either by [`Thumbnail`](link) or by [`Dots`](link) support.
+The Rotator is a data control used to display image data and navigate through them. The images can be selected either by `Thumbnail` or by `Dots` support.
 
 ![Rotator OverView](images/overview.png)
  

@@ -9,11 +9,11 @@ documentation: ug
 
 # Getting Started with .NET MAUI Rotator (SfRotator)
 
-This section explains how to add the Rotator control and bind data to it. This section covers only the basic features needed to get started with the Syncfusion [.NET MAUI Rotator](link) control.
+This section explains how to add the Rotator control and bind data to it. This section covers only the basic features needed to get started with the Syncfusion `.NET MAUI Rotator` control.
 
 ## Adding a .NET MAUI Rotator reference
 
-The Syncfusion .NET MAUI controls are available in [Nuget.org](https://www.nuget.org/). To add [.NET MAUI Rotator](link) to your project, open the NuGet package manager in Visual Studio, search for [`Syncfusion.Maui.Rotator`](link), and install it.
+The Syncfusion .NET MAUI controls are available in [Nuget.org](https://www.nuget.org/). To add `.NET MAUI Rotator` to your project, open the NuGet package manager in Visual Studio, search for `Syncfusion.Maui.Rotator`, and install it.
 
 ## Handler registration 
 
@@ -72,7 +72,7 @@ Step 2: Add the namespace as shown in the following code sample.
 
 ## Create a Simple SfRotator 
 
-The [`SfRotator`](link) control is configured entirely in C# code or by using XAML markup. The following steps explain on how to create a [`SfRotator`](link) and configure its elements,
+The `SfRotator` control is configured entirely in C# code or by using XAML markup. The following steps explain on how to create a `SfRotator` and configure its elements,
 
 * Adding namespace for the added assemblies. 
 
@@ -92,7 +92,7 @@ The [`SfRotator`](link) control is configured entirely in C# code or by using XA
 
 {% endtabs %}
 
-* Now add the [`SfRotator`](link) control with a required optimal name by using the included namespace.
+* Now add the `SfRotator` control with a required optimal name by using the included namespace.
 
 {% tabs %}
 
@@ -138,13 +138,13 @@ The [`SfRotator`](link) control is configured entirely in C# code or by using XA
 
 We can populate the rotator's items by using any one of the following ways,
 
-* Through [`SfRotatorItem`](link)
+* Through `SfRotatorItem`
 
-* Through [`ItemTemplate`](link)
+* Through `ItemTemplate`
 
 ### Through SfRotatorItem
 
-By passing the list of [`SfRotatorItem`](link) , we can get the view of [`SfRotator`](link) control. In that we can pass Images as well as Item content.
+By passing the list of `SfRotatorItem` , we can get the view of `SfRotator` control. In that we can pass Images as well as Item content.
 
 The following code example illustrates to add list of Images in Rotator ,
 
@@ -165,11 +165,11 @@ The following code example illustrates to add list of Images in Rotator ,
                 InitializeComponent ();
                 stackLayout.HeightRequest = 300;
                 List<SfRotatorItem> collectionOfItems = new List<SfRotatorItem>();
-                collectionOfItems.Add(new SfRotatorItem() { Image = "movie1.png" });
-                collectionOfItems.Add(new SfRotatorItem() { Image = "movie2.png" });
-                collectionOfItems.Add(new SfRotatorItem() { Image = "movie3.png" });
-                collectionOfItems.Add(new SfRotatorItem() { Image = "movie4.png" });
-                collectionOfItems.Add(new SfRotatorItem() { Image = "movie5.png" });
+                collectionOfItems.Add(new SfRotatorItem() { Image = "image1.png" });
+                collectionOfItems.Add(new SfRotatorItem() { Image = "image2.png" });
+                collectionOfItems.Add(new SfRotatorItem() { Image = "image3.png" });
+                collectionOfItems.Add(new SfRotatorItem() { Image = "image4.png" });
+                collectionOfItems.Add(new SfRotatorItem() { Image = "image5.png" });
                 rotator.ItemsSource = collectionOfItems;
                 stackLayout.Children.Add(rotator);
                 this.Content = stackLayout;
@@ -218,7 +218,7 @@ The following code example illustrates to add list of items through ItemContent 
 
 ### Through ItemTemplate
 
-[`ItemTemplate`](link) property of [`SfRotator`](link) control is used to customize the contents of [`SfRotator`](link) items. [`ItemTemplate`](link) provides common template with different data. [`SfRotator`](link) items can be populated with a collection of image data. This collection includes Arrays, Lists and DataTables. 
+`ItemTemplate` property of `SfRotator` control is used to customize the contents of `SfRotator` items. `ItemTemplate` provides common template with different data. `SfRotator` items can be populated with a collection of image data. This collection includes Arrays, Lists and DataTables. 
 
 {% tabs %}
 
@@ -383,7 +383,7 @@ N> In addition, rotator provides a support to load the Images from `URL` and `SD
  
 ## Setting Navigation Mode
 
-[`SfRotator`](link) provides option to display the navigating items either in Thumbnail or Dots mode. The navigation mode for navigating the items can be decided using [`NavigationStripMode`](link) property.
+`SfRotator` provides option to display the navigating items either in Thumbnail or Dots mode. The navigation mode for navigating the items can be decided using `NavigationStripMode` property.
 
 {% tabs %}
 
@@ -476,7 +476,7 @@ N> In addition, rotator provides a support to load the Images from `URL` and `SD
 
 ## Customizing Position
 
-The placement position of navigation strip items such as [`Thumbnail`](link) or [`Dots`](link) can be customized in [`SfRotator`](link). This can be specified using [`NavigationStripPosition`](link) property.   
+The placement position of navigation strip items such as `Thumbnail` or `Dots` can be customized in `SfRotator`. This can be specified using `NavigationStripPosition` property.   
 
 {% tabs %}
 
