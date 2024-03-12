@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Plot band in .NET MAUI Chart control | Syncfusion
+title: Plot Band in .NET MAUI Chart Control | Syncfusion
 description: Learn here all about plot band and its features in Syncfusion .NET MAUI Chart (SfCartesianChart) control and more.
 platform: maui
 control: SfCartesianChart
@@ -21,8 +21,8 @@ The following properties are used to configure the plot bands:
 * [`SizeType`]() - changes the date-time unit of the value specified in the size property. The values can be year, month, day, hour, minute, second, and millisecond.
 * [`Text`]()- changes the text of the plot band.
 * [`Fill`]() - changes the fill of the plot band.
-* [`Stroke`]() - changes the stroke color of the plot band
-* [`StStrokeWidthart`]() - changes the stroke width of the plot band
+* [`Stroke`]() - changes the stroke color of the plot band.
+* [`StrokeWidth`]() - changes the stroke width of the plot band.
 * [`IsVisible`]() - hanges the visibility of the plot band in chart axis.
 * [`IsRepeatable`]()- specifies the plot band need to be repeated in specified interval.
 * [`RepeatEvery`]() - changes the frequency of the plot band being repeated.
@@ -139,7 +139,7 @@ Plot band can be added to the date-time axis by specifying date values to the [S
 
 ## Recursive plot band
 
-This feature is used to enable the plot bands to be drawn repeatedly at the regular intervals. This will be useful when you need to mark an event that occurs recursively along the timeline of the chart. The following properties are used to configure this feature:
+This feature is used to enable the plot bands to be drawn repeatedly at regular intervals. This will be useful when you need to mark an event that occurs recursively along the timeline of the chart. The following properties are used to configure this feature:
 
 * [`RepeatEvery`]() - changes the frequency of the plot band being repeated.
 * [`RepeatUntil`]() - Specifies the end value at which the strip line stops repeating.
