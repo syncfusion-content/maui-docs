@@ -401,12 +401,12 @@ This page lists the keys for each control and the element to which it is mapped 
     </tr>
     <tr>
         <td> SfListViewNormalLoadMoreItemTextColor <br/><br/></td> 
-        <td> Text color of the LoadMoreItem when it is in the default state.<br/><br/></td>
+        <td> Text color of the load more button.<br/><br/></td>
     </tr>
     </tr>
     <tr>
         <td> SfListViewNormalLoadMoreItemFontSize <br/><br/></td> 
-        <td> FontSize of the LoadMoreItem.<br/><br/></td>
+        <td> FontSize of the load more button.<br/><br/></td>
     </tr>
     <tr>
         <td> SfListViewNormalLoadMoreIndicatorIconColor <br/><br/></td> 
