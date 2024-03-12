@@ -86,6 +86,75 @@ treeView.CollapseAll();
 
 TreeView allows the expansion and collapse of the nodes using the right and left arrow keys. To expand a node, press the right arrow key; to collapse a node, press the left arrow key on the focused item.
 
+## Binding IsExpanded property in unbound mode
+
+In unbound mode, the `TreeView` enables the binding of the [IsExpanded](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.TreeViewNode.html#Syncfusion_TreeView_Engine_TreeViewNode_IsExpanded) property to `TreeViewNode`.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="16 19" %}
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.TreeView;assembly=Syncfusion.Maui.TreeView"
+             xmlns:treeviewengine="clr-namespace:Syncfusion.TreeView.Engine;assembly=Syncfusion.Maui.TreeView"
+             xmlns:local="clr-namespace:IsExpanded"
+             x:Class="IsExpanded.MainPage">
+    
+    <ContentPage.BindingContext>
+        <local:ViewModel x:Name="viewmodel"/>
+    </ContentPage.BindingContext>
+
+    <ContentPage.Content>
+        <syncfusion:SfTreeView x:Name="treeview">
+            <syncfusion:SfTreeView.Nodes>
+                <treeviewengine:TreeViewNode Content="United States of America" 
+                                             IsExpanded="{Binding Path=IsExpanded,Source={x:Reference viewmodel}}">
+                    <treeviewengine:TreeViewNode.ChildNodes>
+                        <treeviewengine:TreeViewNode Content="New York" 
+                                                     IsExpanded="{Binding Path=IsExpanded,Source={x:Reference viewmodel}}"/>
+                    </treeviewengine:TreeViewNode.ChildNodes>
+                </treeviewengine:TreeViewNode>
+            </syncfusion:SfTreeView.Nodes>
+        </syncfusion:SfTreeView>
+    </ContentPage.Content>
+</ContentPage>
+
+{% endhighlight %}
+{% highlight c# tabtitle="ViewModel.cs" %}
+public class ViewModel : INotifyPropertyChanged
+{  
+    private bool isExpanded;
+
+    //Implementation of IsExpanded property 
+    public bool IsExpanded
+    {
+        get { return isExpanded; }
+        set
+        {
+            isExpanded = value;
+            OnPropertyChanged("IsExpanded");
+        }
+    }
+
+    public ViewModel()
+    {
+        IsExpanded = true;
+    }        
+  
+    public event PropertyChangedEventHandler PropertyChanged;
+
+    //Provide mechanisms for automatic updates when a property changes
+    protected void OnPropertyChanged(string propertyName)
+    {
+        if (PropertyChanged != null)
+        {
+            PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+        }
+    }        
+}
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Events
 
 TreeView exposes the following events to handle the expanding and collapsing of items.
