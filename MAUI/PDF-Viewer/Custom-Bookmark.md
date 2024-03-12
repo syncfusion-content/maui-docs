@@ -63,9 +63,15 @@ pdfViewer.CustomBookmarks.Add(newBookmark);
 {% endhighlight %}
 {% endtabs %}
 
-### Editing a Custom Bookmark
+### Rename custom bookmarks using the bookmark context menu
 
-To edit an existing custom bookmark, you can retrieve the bookmark from the `CustomBookmarks` collection and modify its properties:
+Tap the context menu button on the custom bookmark to be edited and choose Rename and enter the desired name.
+
+![Custom bookmark context menu](Images\custom-bookmark-contextmenu.png)
+
+### Rename a Custom Bookmark programmatically
+
+To rename an existing custom bookmark, you can retrieve the bookmark from the `CustomBookmarks` collection and modify its properties:
 
 {% tabs %}
 {% highlight c# %}
