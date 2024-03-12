@@ -295,6 +295,7 @@ This page lists the keys for each control and the element to which it is mapped 
         <td> Color of header icon when it is in pressed state.<br/><br/></td>
     </tr>
 </table>
+
 ## SfChat
 
 <table>
@@ -355,23 +356,23 @@ This page lists the keys for each control and the element to which it is mapped 
     <!--Incoming message-->
     <tr>
         <td> SfChatIncomingMessageBackground <br/><br/></td>
-        <td> Background color of the incoming message.<br/><br/></td>
+        <td> Background color of an incoming message.<br/><br/></td>
     </tr>
     <tr>
         <td> SfChatIncomingMessageTextColor <br/><br/></td>
-        <td> Text color of the incoming message.<br/><br/></td>
+        <td> Text color of an incoming message.<br/><br/></td>
     </tr>
      <tr>
         <td> SfChatIncomingMessageFontFamily <br/><br/></td>
-        <td> Font family of the incoming message.<br/><br/></td>
+        <td> Font family of an incoming message.<br/><br/></td>
     </tr>
      <tr>
         <td> SfChatIncomingMessageFontAttributes <br/><br/></td>
-        <td> Font attributes of the incoming message.<br/><br/></td>
+        <td> Font attributes of an incoming message.<br/><br/></td>
     </tr>
     <tr>
         <td> SfChatIncomingMessageFontSize <br/><br/></td>
-        <td> Font size of the incoming message.<br/><br/></td>
+        <td> Font size of an incoming message.<br/><br/></td>
     </tr>
     <tr>
         <td> SfChatIncomingMessageAuthorTextColor <br/><br/></td>
@@ -408,23 +409,23 @@ This page lists the keys for each control and the element to which it is mapped 
     <!--Outgoing message-->
     <tr>
         <td> SfChatOutgoingMessageBackground <br/><br/></td>
-        <td> Background color of the outgoing message.<br/><br/></td>
+        <td> Background color of an outgoing message.<br/><br/></td>
     </tr>
     <tr>
         <td> SfChatOutgoingMessageTextColor <br/><br/></td>
-        <td> Text color of the outgoing message.<br/><br/></td>
+        <td> Text color of an outgoing message.<br/><br/></td>
     </tr>
      <tr>
         <td> SfChatOutgoingMessageFontFamily <br/><br/></td>
-        <td> Font family of the outgoing message.<br/><br/></td>
+        <td> Font family of an outgoing message.<br/><br/></td>
     </tr>
      <tr>
         <td> SfChatOutgoingMessageFontAttributes <br/><br/></td>
-        <td> Font attributes of the outgoing message.<br/><br/></td>
+        <td> Font attributes of an outgoing message.<br/><br/></td>
     </tr>
     <tr>
         <td> SfChatOutgoingMessageFontSize <br/><br/></td>
-        <td> Font size of the outgoing message.<br/><br/></td>
+        <td> Font size of an outgoing message.<br/><br/></td>
     </tr>
     <tr>
         <td> SfChatOutgoingMessageAuthorTextColor <br/><br/></td>
@@ -639,59 +640,27 @@ This page lists the keys for each control and the element to which it is mapped 
     </tr>
     <tr>
         <td> SfChatEditorFontFamily <br/><br/></td>
-        <td> Font family of editor.<br/><br/></td>
+        <td> Font family of editor text.<br/><br/></td>
     </tr>
     <tr>
         <td> SfChatEditorFontSize <br/><br/></td>
-        <td> Font size of editor.<br/><br/></td>
+        <td> Font size of editor text.<br/><br/></td>
     </tr>
     <tr>
         <td> SfChatEditorFontAttributes <br/><br/></td>
-        <td> Font attributes of editor.<br/><br/></td>
+        <td> Font attributes of editor text.<br/><br/></td>
     </tr>
     <tr>
         <td> SfChatSendButtonColor <br/><br/></td>
-        <td> Color of enabled send button.<br/><br/></td>
-    </tr>
-    <tr>
-        <td> SfChatSendButtonDisabledColor <br/><br/></td>
-        <td> Color of disabled send button..<br/><br/></td>
+        <td> Color of send button.<br/><br/></td>
     </tr>
     <tr>
         <td> SfChatSendButtonBackground <br/><br/></td>
-        <td> Background Color of enabled send button.<br/><br/></td>
-    </tr>
-    <tr>
-        <td> SfChatDisabledSendButtonBackground <br/><br/></td>
-        <td> Background Color of disabled send button.<br/><br/></td>
-    </tr>
-    <tr>
-        <td> SfChatHoveredSendButtonBackground <br/><br/></td>
-        <td> Background Color of hovered send button.<br/><br/></td>
-    </tr>
-    <tr>
-        <td> SfChatPressedSendButtonBackground <br/><br/></td>
-        <td> Background Color of pressed send button.<br/><br/></td>
+        <td> Background Color of send button.<br/><br/></td>
     </tr>
     <tr>
         <td> SfChatAttachmentButtonColor <br/><br/></td>
         <td> Color for attachment button.<br/><br/></td>
-    </tr>
-    <tr>
-        <td> SfChatHoveredAttachmentButtonColor <br/><br/></td>
-        <td> Color for hovered attachment button.<br/><br/></td>
-    </tr>
-    <tr>
-        <td> SfChatAttachmentBackground <br/><br/></td>
-        <td> Background Color for attachment button.<br/><br/></td>
-    </tr>
-    <tr>
-        <td> SfChatHoveredAttachmentBackground <br/><br/></td>
-        <td> Background Color for hovered attachment button.<br/><br/></td>
-    </tr>
-    <tr>
-        <td> SfChatPressedAttachmentBackground <br/><br/></td>
-        <td> Background Color for pressed attachment button.<br/><br/></td>
     </tr>
     <!--Time break view-->
     <tr>
