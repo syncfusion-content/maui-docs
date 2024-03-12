@@ -164,138 +164,50 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
             <br/>
         </td>
-        <tr>
-        <td>
-            SfAccordionNormalHeaderBackground  
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Background color of header in SfAccordion.
-            <br/>
-            <br/>
-        </td>
-    </tr>
     </tr>
     <tr>
-        <td>
-            SfAccordionNormalHeaderIconColor 
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color of the SfAccordion Header Icon.
-        <br/>
-        <br/>
-        </td>
+        <td> SfAccordionNormalHeaderBackground <br/><br/></td>
+        <td> Background color of header in SfAccordion.<br/><br/></td>
     </tr>
     <tr>
-        <td>
-            SfAccordionHoverHeaderBackground  
-            <br/>
-            <br/>
-        </td> 
-        <td>
-             Background color of header when it is in hover state.
-            <br/>
-            <br/>
-        </td>
+        <td> SfAccordionHoverHeaderBackground <br/><br/></td> 
+        <td> Background color of header when it is in hover state.<br/><br/></td>
     </tr>
     <tr>
-        <td>
-            SfAccordionHoverHeaderIconColor  
-            <br/>
-            <br/>
-        </td> 
-        <td>
-             Color of header icon when it is in hover state.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-        <tr>
-        <td>
-            SfAccordionPressedHeaderIconColor  
-            <br/>
-            <br/>
-        </td> 
-        <td>
-             Color of header icon when it is in pressed state.
-            <br/>
-            <br/>
-        </td>
-    </tr>
+        <td> SfAccordionFocusedHeaderBackground <br/><br/></td> 
+        <td> Background color of header when it is in focused state.<br/><br/></td>
     </tr>
     <tr>
-        <td>
-            SfAccordionFocusedHeaderIconColor  
-            <br/>
-            <br/>
-        </td> 
-        <td>
-             Color of header icon when it is in focused state.
-            <br/>
-            <br/>
-        </td>
+        <td> SfAccordionHeaderRippleBackground <br/><br/></td> 
+        <td> Background color of header when it is in pressed state.<br/><br/></td>
     </tr>
     <tr>
-        <td>
-            SfAccordionExpandedItemStroke  
-            <br/>
-            <br/>
-        </td> 
-        <td>
-             Stroke color of expanded accordion item.
-            <br/>
-            <br/>
-        </td>
+        <td> SfAccordionNormalHeaderIconColor <br/><br/></td>
+        <td> Color of the SfAccordion Header Icon.<br/><br/></td>
     </tr>
     <tr>
-        <td>
-            SfAccordionFocusedHeaderBackground  
-            <br/>
-            <br/>
-        </td> 
-        <td>
-             Background color of header when it is in focused state.
-            <br/>
-            <br/>
-        </td>
+        <td> SfAccordionHoverHeaderIconColor <br/><br/></td> 
+        <td> Color of header icon when it is in hover state.<br/><br/></td>
     </tr>
     <tr>
-        <td>
-            SfAccordionHeaderRippleBackground  
-            <br/>
-            <br/>
-        </td> 
-        <td>
-             Background color of header when it is in pressed state.
-            <br/>
-            <br/>
-        </td>
+        <td> SfAccordionPressedHeaderIconColor <br/><br/></td> 
+        <td> Color of header icon when it is in pressed state.<br/><br/></td>
     </tr>
     <tr>
-        <td>
-            SfAccordionFocusedItemStroke
-            <br/>
-            <br/>
-        </td> 
-        <td>
-             Stroke color of header when it is in focused state.
-            <br/>
-            <br/>
-        </td>
+        <td> SfAccordionFocusedHeaderIconColor <br/><br/></td> 
+        <td> Color of header icon when it is in focused state.<br/><br/></td>
     </tr>
     <tr>
-        <td>
-            SfAccordionExpandedItemStrokeThickness
-            <br/>
-            <br/>
-        </td> 
-        <td>
-             Stroke thickness of expanded accordion item.
-            <br/>
-            <br/>
+        <td> SfAccordionExpandedItemStroke <br/><br/></td> 
+        <td> Stroke color of expanded accordion item.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfAccordionFocusedItemStroke <br/><br/></td> 
+        <td> Stroke color of the header when it is in the focused state while using key navigation.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfAccordionExpandedItemStrokeThickness <br/><br/></td> 
+        <td> Stroke thickness of expanded accordion item.<br/><br/>
         </td>
     </tr>
 </table>
@@ -357,78 +269,29 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
             <br/>
         </td>
-        <tr>
-        <td>
-            SfExpanderNormalHeaderBackground  
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Background color of header in SfExpander.
-            <br/>
-            <br/>
-        </td>
-    </tr>
     </tr>
     <tr>
-        <td>
-            SfExpanderNormalHeaderIconColor 
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color of the SfExpander header icon.
-        <br/>
-        <br/>
-        </td>
+        <td> SfExpanderNormalHeaderBackground <br/><br/></td>
+        <td> Background color of header in SfExpander.<br/><br/></td>
     </tr>
     <tr>
-        <td>
-            SfExpanderHoverHeaderBackground  
-            <br/>
-            <br/>
-        </td> 
-        <td>
-             Background color of header when it is in hover state.
-            <br/>
-            <br/>
-        </td>
+        <td> SfExpanderHoverHeaderBackground  <br/><br/></td> 
+        <td> Background color of header when it is in hover state.<br/><br/></td>
     </tr>
     <tr>
-        <td>
-            SfExpanderHoverHeaderIconColor  
-            <br/>
-            <br/>
-        </td> 
-        <td>
-             Color of header icon when it is in hover state.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-        <tr>
-        <td>
-            SfExpanderPressedHeaderIconColor  
-            <br/>
-            <br/>
-        </td> 
-        <td>
-             Color of header icon when it is in pressed state.
-            <br/>
-            <br/>
-        </td>
-    </tr>
+        <td> SfExpanderHeaderRippleBackground <br/><br/></td> 
+        <td> Background color of header when it is in pressed state.<br/><br/></td>
     </tr>
     <tr>
-        <td>
-            SfExpanderHeaderRippleBackground  
-            <br/>
-            <br/>
-        </td> 
-        <td>
-             Background color of header when it is in pressed state.
-            <br/>
-            <br/>
-        </td>
+        <td> SfExpanderNormalHeaderIconColor <br/><br/></td>
+        <td> Color of the SfExpander header icon.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfExpanderHoverHeaderIconColor  <br/><br/></td> 
+        <td> Color of header icon when it is in hover state.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfExpanderPressedHeaderIconColor <br/><br/></td> 
+        <td> Color of header icon when it is in pressed state.<br/><br/></td>
     </tr>
 </table>
