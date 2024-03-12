@@ -243,8 +243,8 @@ This page lists the keys for each control and the element to which it is mapped 
             <syncTheme:SyncfusionThemeResourceDictionary />
             <ResourceDictionary>
                 <x:String x:Key="SfLinearProgressBarTheme">CommonTheme</x:String>
-                <Color x:Key="SfLinearProgressBarTrackColor">Pink</Color>
-                <Color x:Key="SfLinearProgressBarProgressColor">Purple</Color>
+                <Color x:Key="SfLinearProgressBarTrackColor">Red</Color>
+                <Color x:Key="SfLinearProgressBarProgressColor">Green</Color>
             </ResourceDictionary>
         </ResourceDictionary.MergedDictionaries>
     </ResourceDictionary>
@@ -278,7 +278,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Background of the linear progress bar.
+            Background color of the linear progress bar.
         <br/>
         <br/>
         </td>
@@ -302,7 +302,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the Secondary progress in linear progress bar.
+            Color of the secondary progress in linear progress bar.
         <br/>
         <br/>
         </td>
@@ -362,8 +362,8 @@ This page lists the keys for each control and the element to which it is mapped 
             <syncTheme:SyncfusionThemeResourceDictionary />
             <ResourceDictionary>
                 <x:String x:Key="SfCircularProgressBarTheme">CommonTheme</x:String>
-                <Color x:Key="SfCircularProgressBarTrackColor">Pink</Color>
-                <Color x:Key="SfCircularProgressBarProgressColor">Purple</Color>
+                <Color x:Key="SfCircularProgressBarTrackColor">Yellow</Color>
+                <Color x:Key="SfCircularProgressBarProgressColor">Orange</Color>
             </ResourceDictionary>
         </ResourceDictionary.MergedDictionaries>
     </ResourceDictionary>
@@ -409,7 +409,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Background of the circular progress bar.
+            Background color of the circular progress bar.
         <br/>
         <br/>
         </td>
@@ -470,7 +470,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <ResourceDictionary>
                 <x:String x:Key="SfPickerTheme">CommonTheme</x:String>
                 <Color x:Key="SfPickerNormalHeaderTextColor">Purple</Color>
-                <Color x:Key="SfPickerNormalHeaderBackground">Pink</Color>
+                <Color x:Key="SfPickerNormalHeaderBackground">Blue</Color>
             </ResourceDictionary>
         </ResourceDictionary.MergedDictionaries>
     </ResourceDictionary>
@@ -708,8 +708,8 @@ This page lists the keys for each control and the element to which it is mapped 
             <syncTheme:SyncfusionThemeResourceDictionary />
             <ResourceDictionary>
                 <x:String x:Key="SfDatePickerTheme">CommonTheme</x:String>
-                <Color x:Key="SfDatePickerNormalHeaderTextColor">Purple</Color>
-                <Color x:Key="SfDatePickerNormalHeaderBackground">Pink</Color>
+                <Color x:Key="SfDatePickerNormalHeaderTextColor">Green</Color>
+                <Color x:Key="SfDatePickerNormalHeaderBackground">Yellow</Color>
             </ResourceDictionary>
         </ResourceDictionary.MergedDictionaries>
     </ResourceDictionary>
@@ -947,8 +947,8 @@ This page lists the keys for each control and the element to which it is mapped 
             <syncTheme:SyncfusionThemeResourceDictionary />
             <ResourceDictionary>
                 <x:String x:Key="SfTimePickerTheme">CommonTheme</x:String>
-                <Color x:Key="SfTimePickerNormalHeaderTextColor">Purple</Color>
-                <Color x:Key="SfTimePickerNormalHeaderBackground">Pink</Color>
+                <Color x:Key="SfTimePickerNormalHeaderTextColor">Blue</Color>
+                <Color x:Key="SfTimePickerNormalHeaderBackground">Orange</Color>
             </ResourceDictionary>
         </ResourceDictionary.MergedDictionaries>
     </ResourceDictionary>
@@ -1186,8 +1186,8 @@ This page lists the keys for each control and the element to which it is mapped 
             <syncTheme:SyncfusionThemeResourceDictionary />
             <ResourceDictionary>
                 <x:String x:Key="SfDateTimePickerTheme">CommonTheme</x:String>
-                <Color x:Key="SfDateTimePickerNormalHeaderTextColor">Purple</Color>
-                <Color x:Key="SfDateTimePickerNormalHeaderBackground">Pink</Color>
+                <Color x:Key="SfDateTimePickerNormalHeaderTextColor">White</Color>
+                <Color x:Key="SfDateTimePickerNormalHeaderBackground">Blue</Color>
             </ResourceDictionary>
         </ResourceDictionary.MergedDictionaries>
     </ResourceDictionary>
