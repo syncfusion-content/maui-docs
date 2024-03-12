@@ -124,7 +124,6 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </th>
     </tr>
-
     <tr>
         <td rowspan="14">
             SfCalendarStyles
@@ -165,25 +164,19 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
 	</tr>
-    
     <tr>
-	<td>
-	</td>
     <td>
             SfCalendarHeaderTextColor    
             <br/>
             <br/>
         </td>
         <td>
-            Color of calendar header text.
+            Color of the calendar header text.
             <br/>
             <br/>
         </td>
     </tr>
-
     <tr>
-     <td>
-	</td>
     <td>
             SfCalendarHeaderBackgroundColor     
             <br/>
@@ -195,10 +188,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
     </tr>
-
     <tr>
-    <td>
-	</td>
     <td>
             SfCalendarViewHeaderTextColor      
             <br/>
@@ -210,10 +200,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
     </tr>
-
     <tr>
-	<td>
-	</td>
     <td>
             SfCalendarWeekNumberTextColor       
             <br/>
@@ -225,10 +212,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
     </tr>
-
     <tr>
-	<td>
-	</td>
     <td>
             SfCalendarWeekNumberBackgroundColor       
             <br/>
@@ -240,10 +224,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
     </tr>
-    
     <tr>
-	<td>
-	</td>
     <td>
             SfCalendarMonthDatesTextColor        
             <br/>
@@ -255,10 +236,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
     </tr>
-
     <tr>
-	<td>
-	</td>
     <td>
             SfCalendarMonthDatesBackgroundColor         
             <br/>
@@ -270,40 +248,31 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
     </tr>
-    
     <tr>
-	<td>
-	</td>
     <td>
             SfCalendarMonthTodayTextColor          
             <br/>
             <br/>
         </td>
         <td>
-            Color of today text of month.
+           The color of today's text for the month.
             <br/>
             <br/>
         </td>
     </tr>
-    
     <tr>
-	<td>
-	</td>
     <td>
             SfCalendarMonthTodayBackgroundColor          
             <br/>
             <br/>
         </td>
         <td>
-            Color of today background of month.
+            Color of today background for the month.
             <br/>
             <br/>
         </td>
     </tr>
-    
     <tr>
-	<td>
-	</td>
     <td>
             SfCalendarMonthTrailingLeadingDatesTextColor          
             <br/>
@@ -315,10 +284,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
     </tr>      
-
     <tr>
-		<td>
-	</td>
     <td>
             SfCalendarMonthTrailingLeadingDatesBackgroundColor          
             <br/>
@@ -330,10 +296,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
     </tr>      
-
-     <tr>
-	 <td>
-	</td>
+    <tr>
     <td>
             SfCalendarMonthDisabledDatesTextColor          
             <br/>
@@ -345,10 +308,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
     </tr>    
-
      <tr>
-	 	<td>
-	</td>
     <td>
             SfCalendarMonthDisabledDatesBackgroundColor          
             <br/>
@@ -360,10 +320,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
     </tr>    	
-	
 	<tr>
-		<td>
-	</td>
     <td>
             SfCalendarWeekendDatesTextColor          
             <br/>
@@ -375,10 +332,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
     </tr>    
-	
 	<tr>
-		<td>
-	</td>
     <td>
             SfCalendarWeekendDatesBackgroundColor          
             <br/>
@@ -390,10 +344,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
     </tr>    
-	
 	<tr>
-		<td>
-	</td>
     <td>
             SfCalendarSpecialDatesTextColor          
             <br/>
@@ -405,10 +356,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
     </tr>    
-	
     <tr>
-		<td>
-	</td>
     <td>
             SfCalendarSpecialDatesBackgroundColor          
             <br/>
@@ -420,40 +368,31 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
     </tr>    
-	
 	<tr>
-		<td>
-	</td>
     <td>
             SfCalendarMonthRangeTextColor          
             <br/>
             <br/>
         </td>
         <td>
-            Color of range text color.
+            Color of range text.
             <br/>
             <br/>
         </td>
     </tr>    
-	
     <tr>
-		<td>
-	</td>
     <td>
             SfCalendarMonthSelectionTextColor          
             <br/>
             <br/>
         </td>
         <td>
-            Color of selected text color.
+            Color of selected text in month.
             <br/>
             <br/>
         </td>
     </tr>    
-	
 	<tr>
-		<td>
-	</td>
     <td>
             SfCalendarYearDatesTextColor          
             <br/>
@@ -465,10 +404,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
     </tr>    
-	
 	<tr>
-		<td>
-	</td>
     <td>
             SfCalendarYearDatesBackgroundColor          
             <br/>
@@ -480,10 +416,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
     </tr>    
-	
    <tr>
-   	<td>
-	</td>
     <td>
             SfCalendarYearDisabledDatesTextColor          
             <br/>
@@ -495,10 +428,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
     </tr>    
-	
 	<tr>
-		<td>
-	</td>
     <td>
             SfCalendarYearDisabledDatesBackgroundColor          
             <br/>
@@ -510,10 +440,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
     </tr>    
-	
 	<tr>
-		<td>
-	</td>
     <td>
             SfCalendarYearLeadingDatesTextColor          
             <br/>
@@ -525,10 +452,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
     </tr>    
-	
 	<tr>
-		<td>
-	</td>
     <td>
             SfCalendarYearLeadingDatesBackgroundColor          
             <br/>
@@ -540,10 +464,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
     </tr>    
-	
 	<tr>
-		<td>
-	</td>
     <td>
             SfCalendarYearTodayTextColor          
             <br/>
@@ -555,10 +476,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
     </tr>    
-	
 	<tr>
-		<td>
-	</td>
     <td>
             SfCalendarYearTodayBackgroundColor          
             <br/>
@@ -570,25 +488,19 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
     </tr>    
-	
     <tr>
-		<td>
-	</td>
     <td>
             SfCalendarYearRangeTextColor          
             <br/>
             <br/>
         </td>
         <td>
-            Color of year range text color.
+            Color of year range text.
             <br/>
             <br/>
         </td>
     </tr>    
-	
 	<tr>
-		<td>
-	</td>
     <td>
             SfCalendarYearSelectionTextColor          
             <br/>
@@ -600,10 +512,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
     </tr>    
-	
 	<tr>
-		<td>
-	</td>
     <td>
             SfCalendarTodayHighlightColor          
             <br/>
@@ -615,10 +524,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
     </tr>    
-	
 	<tr>
-		<td>
-	</td>
     <td>
             SfCalendarSelectionColor          
             <br/>
@@ -630,10 +536,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
     </tr>  
-
 	<tr>
-		<td>
-	</td>
     <td>
             SfCalendarStartRangeSelectionColor          
             <br/>
@@ -645,10 +548,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
     </tr>  
-
 	<tr>
-		<td>
-	</td>
     <td>
             SfCalendarEndRangeSelectionColor          
             <br/>
@@ -660,10 +560,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
     </tr>  
-
 	<tr>
-		<td>
-	</td>
     <td>
             SfCalendarRangeSelectionColor          
             <br/>
@@ -675,25 +572,19 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
     </tr>  
-
 	<tr>
-		<td>
-	</td>
     <td>
             SfCalendarHeaderHoverTextColor          
             <br/>
             <br/>
         </td>
         <td>
-            Color of hovering text color of the header.
+            Color of text when hovering over the header
             <br/>
             <br/>
         </td>
     </tr>  
-
 	<tr>
-		<td>
-	</td>
     <td>
             SfCalendarButtonTextColor          
             <br/>
@@ -705,10 +596,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
     </tr>  
-
 	<tr>
-		<td>
-	</td>
     <td>
             SfCalendarNavigationArrowColor          
             <br/>
@@ -720,10 +608,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
     </tr>  
-
 	<tr>
-		<td>
-	</td>
     <td>
             SfCalendarDisabledNavigationArrowColor          
             <br/>
@@ -735,10 +620,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
     </tr>  
-
 	<tr>
-		<td>
-	</td>
     <td>
             SfCalendarHoverColor          
             <br/>
@@ -750,10 +632,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
     </tr>  
-
     <tr>
-		<td>
-	</td>
     <td>
             SfCalendarSpecialDayIconColor          
             <br/>
@@ -765,22 +644,18 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
     </tr>  	
-	
     <tr>
-		<td>
-	</td>
     <td>
             SfCalendarNormalBackground          
             <br/>
             <br/>
         </td>
         <td>
-            Color of calendar background.
+            Color of calendar normal background.
             <br/>
             <br/>
         </td>
     </tr>  	
-
 </table>
 
 ## SfBackdrop
@@ -800,7 +675,6 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </th>
     </tr>
-
     <tr>
         <td rowspan="14">
             SfBackdropStyles  
@@ -841,14 +715,12 @@ This page lists the keys for each control and the element to which it is mapped 
         </td>
         <tr>
         <td>
-        </td>
-        <td>
             SfBackdropPageFrontLayerBackgroundColor  
             <br/>
             <br/>
         </td>
         <td>
-            Color of the front layer background in the backdrop page.
+           The background color of the foreground layer on the backdrop page
             <br/>
             <br/>
         </td>
@@ -873,7 +745,6 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </th>
     </tr>
-
     <tr>
         <td rowspan="14">
             SfBarcodeGeneratorStyles
@@ -915,8 +786,6 @@ This page lists the keys for each control and the element to which it is mapped 
         </td>
         <tr>
         <td>
-        </td>
-        <td>
             SfBarcodeGeneratorBackgroundColor  
             <br/>
             <br/>
@@ -927,10 +796,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
     </tr>
-	
 	  <tr>
-        <td>
-        </td>
         <td>
             SfBarcodeGeneratorForegroundColor  
             <br/>
@@ -942,10 +808,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
     </tr>
-	
 	       <tr>
-        <td>
-        </td>
         <td>
             SfBarcodeGeneratorTextColor  
             <br/>
@@ -957,7 +820,6 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
     </tr>
-	
 	</tr>
 </table>
 
@@ -978,7 +840,6 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </th>
     </tr>
-
     <tr>
         <td rowspan="14">
             SfCardViewStyles
@@ -1020,22 +881,17 @@ This page lists the keys for each control and the element to which it is mapped 
         </td>
         <tr>
         <td>
-        </td>
-        <td>
             SfCardViewBorderColor  
             <br/>
             <br/>
         </td>
         <td>
-            Color of the border of card view.
+            Color of the border in the card view.
             <br/>
             <br/>
         </td>
     </tr>
-	
 	  <tr>
-        <td>
-        </td>
         <td>
             SfCardViewIndicatorColor  
             <br/>
@@ -1047,22 +903,18 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
     </tr>
-	
 	       <tr>
-        <td>
-        </td>
         <td>
             SfCardViewNormalBackround  
             <br/>
             <br/>
         </td>
         <td>
-            Color of the card Background.
+            Background color of the card.
             <br/>
             <br/>
         </td>
     </tr>
-	
 	</tr>
 </table>
 
@@ -1083,7 +935,6 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </th>
     </tr>
-
     <tr>
         <td rowspan="14">
             SfRadialGaugeStyles
@@ -1125,8 +976,6 @@ This page lists the keys for each control and the element to which it is mapped 
         </td>
         <tr>
         <td>
-        </td>
-        <td>
             SfRadialGaugeAxisLabelTextColor  
             <br/>
             <br/>
@@ -1137,10 +986,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
     </tr>
-	
 	  <tr>
-        <td>
-        </td>
         <td>
             SfRadialGaugeAxisLineFillColor  
             <br/>
@@ -1152,25 +998,19 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
     </tr>
-	
 	       <tr>
-        <td>
-        </td>
         <td>
             SfRadialGaugeAxisLineGradientColor  
             <br/>
             <br/>
         </td>
         <td>
-            Color of the gradient of the axis line.
+            Color of the gradient in the axis line.
             <br/>
             <br/>
         </td>
     </tr>
-	
 		    <tr>
-        <td>
-        </td>
         <td>
             SfRadialGaugeMajorTickStroke  
             <br/>
@@ -1182,10 +1022,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
     </tr>
-	
 		 <tr>
-        <td>
-        </td>
         <td>
             SfRadialGaugeMinorTickStroke  
             <br/>
@@ -1197,10 +1034,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
     </tr>
-	
 	 <tr>
-        <td>
-        </td>
         <td>
             SfRadialGaugeShapePointerFillColor  
             <br/>
@@ -1212,10 +1046,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
     </tr>
-	
 	<tr>
-        <td>
-        </td>
         <td>
             SfRadialGaugeShapePointerOverlayFillColor  
             <br/>
@@ -1227,10 +1058,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
     </tr>
-	
 	 <tr>
-        <td>
-        </td>
         <td>
             SfRadialGaugeShapePointerStroke  
             <br/>
@@ -1242,10 +1070,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
     </tr>
-	
-		       <tr>
-        <td>
-        </td>
+	<tr>
         <td>
             SfRadialGaugeNeedlePointerKnobFillColor  
             <br/>
@@ -1257,10 +1082,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
     </tr>
-	
     <tr>
-        <td>
-        </td>
         <td>
             SfRadialGaugeNeedlePointerKnobStroke  
             <br/>
@@ -1272,10 +1094,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
     </tr>
-	
     <tr>
-        <td>
-        </td>
         <td>
             SfRadialGaugeNeedlePointerNeedleFillColor  
             <br/>
@@ -1287,10 +1106,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
     </tr>
-	
 	    <tr>
-        <td>
-        </td>
         <td>
             SfRadialGaugeNeedlePointerTailFillColor  
             <br/>
@@ -1302,10 +1118,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
     </tr>
-	
 	    <tr>
-        <td>
-        </td>
         <td>
             SfRadialGaugeRangePointerFillColor  
             <br/>
@@ -1317,25 +1130,19 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
     </tr>
-	
 	    <tr>
-        <td>
-        </td>
         <td>
             SfRadialGaugeRangePointerGradientColor  
             <br/>
             <br/>
         </td>
         <td>
-            Color of the gradient of the radial gauge.
+            Color of the range point gradient in the radial gauge.
             <br/>
             <br/>
         </td>
     </tr>
-	
 	    <tr>
-        <td>
-        </td>
         <td>
             SfRadialGaugeRadialRangeFillColor  
             <br/>
@@ -1347,10 +1154,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
     </tr>
-	
 	    <tr>
-        <td>
-        </td>
         <td>
             SfRadialGaugeRadialRangeGradientColor  
             <br/>
@@ -1362,10 +1166,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
     </tr>
-	
 	    <tr>
-        <td>
-        </td>
         <td>
             SfRadialGaugeRadialRangeLabelTextColor  
             <br/>
@@ -1377,10 +1178,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
     </tr>
-	
 	    <tr>
-        <td>
-        </td>
         <td>
             SfRadialGaugeShapeShadowColor  
             <br/>
@@ -1392,7 +1190,6 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
     </tr>
-	
 	</tr>
 </table>
 
@@ -1413,7 +1210,6 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </th>
     </tr>
-
     <tr>
         <td rowspan="14">
             SfLinearGaugeThemeStyles
@@ -1437,7 +1233,7 @@ This page lists the keys for each control and the element to which it is mapped 
         <ResourceDictionary.MergedDictionaries>
             <syncTheme:SyncfusionThemeResourceDictionary />
             <ResourceDictionary>
-                <x:String x:Key="SfBarcodeGeneratorTheme">CommonTheme</x:String>
+                <x:String x:Key="SfLinearGaugeTheme">CommonTheme</x:String>
                 <Color x:Key="SfLinearGaugeBarPointerFillColor">Red</Color>
 				 <Color x:Key="SfLinearGaugeLabelTextColor">Green</Color>
             </ResourceDictionary>
@@ -1455,8 +1251,6 @@ This page lists the keys for each control and the element to which it is mapped 
         </td>
         <tr>
         <td>
-        </td>
-        <td>
             SfLinearGaugeBarPointerFillColor  
             <br/>
             <br/>
@@ -1467,10 +1261,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
     </tr>
-	
 	  <tr>
-        <td>
-        </td>
         <td>
             SfLinearGaugeLabelTextColor  
             <br/>
@@ -1482,40 +1273,31 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
     </tr>
-	
 	       <tr>
-        <td>
-        </td>
         <td>
             SfLinearGaugeMajorTickStroke  
             <br/>
             <br/>
         </td>
         <td>
-            Color of the major tick Stroke.
+            Color of the major tick stroke.
             <br/>
             <br/>
         </td>
     </tr>
-	
 		       <tr>
-        <td>
-        </td>
         <td>
             SfLinearGaugeMinorTickStroke  
             <br/>
             <br/>
         </td>
         <td>
-            Color of the minor tick Stroke.
+            Color of the minor tick stroke.
             <br/>
             <br/>
         </td>
     </tr>
-	
 		       <tr>
-        <td>
-        </td>
         <td>
             SfLinearGaugeAxisLineFillColor  
             <br/>
@@ -1527,10 +1309,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
     </tr>
-	
 		       <tr>
-        <td>
-        </td>
         <td>
             SfLinearGaugeRangeFillColor  
             <br/>
@@ -1542,10 +1321,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
     </tr>
-	
 		       <tr>
-        <td>
-        </td>
         <td>
             SfLinearGaugeShapePointerFillColor  
             <br/>
@@ -1557,10 +1333,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
     </tr>
-	
     <tr>
-        <td>
-        </td>
         <td>
             SfLinearGaugeShapePointerStroke  
             <br/>
@@ -1572,10 +1345,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
     </tr>
-	
 	 <tr>
-        <td>
-        </td>
         <td>
             SfLinearGaugeNormalBackground  
             <br/>
@@ -1587,7 +1357,6 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
     </tr>
-	
 	</tr>
 </table>
 
@@ -1609,7 +1378,6 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </th>
     </tr>
-
     <tr>
         <td rowspan="14">
            SfStepProgressBarThemeStyles
@@ -1651,8 +1419,6 @@ This page lists the keys for each control and the element to which it is mapped 
         </td>
         <tr>
         <td>
-        </td>
-        <td>
             SfStepProgressBarNormalBackground  
             <br/>
             <br/>
@@ -1663,10 +1429,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
     </tr>
-	
 	  <tr>
-        <td>
-        </td>
         <td>
             SfStepProgressBarNormalProgressBarBackground  
             <br/>
@@ -1678,10 +1441,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
     </tr>
-	
-	       <tr>
-        <td>
-        </td>
+	 <tr>
         <td>
             SfStepProgressBarNormalCompletedStepContentFillColor  
             <br/>
@@ -1693,10 +1453,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
     </tr>
-	
    <tr>
-        <td>
-        </td>
         <td>
             SfStepProgressBarNormalCompletedStepBackground  
             <br/>
@@ -1708,10 +1465,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
     </tr>
-	
    <tr>
-        <td>
-        </td>
         <td>
             SfStepProgressBarNormalCompletedStepStroke  
             <br/>
@@ -1723,10 +1477,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
     </tr>
-	
      <tr>
-        <td>
-        </td>
         <td>
             SfStepProgressBarNormalCompletedStepProgressColor  
             <br/>
@@ -1738,10 +1489,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
     </tr>
-	
     <tr>
-        <td>
-        </td>
         <td>
             SfStepProgressBarNormalCompletedStepTextColor  
             <br/>
@@ -1753,40 +1501,31 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
     </tr>
-	
     <tr>
-        <td>
-        </td>
         <td>
             SfStepProgressBarNormalInProgressStepContentFillColor  
             <br/>
             <br/>
         </td>
         <td>
-            Fill color of the in Progress step. 
+            Fill color of the in progress step. 
             <br/>
             <br/>
         </td>
     </tr>
-	
 	 <tr>
-        <td>
-        </td>
         <td>
             SfStepProgressBarNormalInProgressStepBackground  
             <br/>
             <br/>
         </td>
         <td>
-            Background of the in Progress step.
+            Background of the in progress step.
             <br/>
             <br/>
         </td>
     </tr>
-	
 		 <tr>
-        <td>
-        </td>
         <td>
             SfStepProgressBarNormalInProgressStepProgressColor  
             <br/>
@@ -1798,10 +1537,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
     </tr>
-	
 		 <tr>
-        <td>
-        </td>
         <td>
             SfStepProgressBarNormalInProgressStepTextColor  
             <br/>
@@ -1813,10 +1549,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
     </tr>
-	
 		 <tr>
-        <td>
-        </td>
         <td>
             SfStepProgressBarNormalNotStartedStepContentFillColor  
             <br/>
@@ -1828,10 +1561,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
     </tr>
-	
 		 <tr>
-        <td>
-        </td>
         <td>
             SfStepProgressBarNormalNotStartedStepBackground  
             <br/>
@@ -1843,51 +1573,41 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
     </tr>
-	
-		 <tr>
-        <td>
-        </td>
+			 <tr>
         <td>
             SfStepProgressBarNormalNotStartedStepStroke  
             <br/>
             <br/>
         </td>
         <td>
-            Step stroke of th not started step.
+            Stroke of the normal not started step in step progress bar.
             <br/>
             <br/>
         </td>
     </tr>
-	
-		 <tr>
-        <td>
-        </td>
+	<tr>
         <td>
             SfStepProgressBarNormalNotStartedStepProgressColor  
             <br/>
             <br/>
         </td>
         <td>
-            Progress color of the not started step.
+              Color of the normal not started step in step progress bar.
             <br/>
             <br/>
         </td>
     </tr>
-	
-		 <tr>
-        <td>
-        </td>
+		<tr>
         <td>
             SfStepProgressBarNormalNotStartedStepTextColor  
             <br/>
             <br/>
         </td>
         <td>
-            Text color of the not started text.
+              Color of the normal not started step text in step progress bar.
             <br/>
             <br/>
         </td>
     </tr>
-	
 	</tr>
 </table>
