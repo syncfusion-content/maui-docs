@@ -32,24 +32,23 @@ The data grid allows adding additional columns that are not bound with data obje
 
 {% highlight c# %}
 
-            SfDataGrid dataGrid = new SfDataGrid();
-            OrderInforRepo orderInforRepo = new OrderInforRepo();
-            dataGrid.ItemsSource = orderInforRepo;
-            DataGridUnboundColumn DiscountColumn = new DataGridUnboundColumn()
+SfDataGrid dataGrid = new SfDataGrid();
+OrderInforRepo orderInforRepo = new OrderInforRepo();
+dataGrid.ItemsSource = orderInforRepo;
+DataGridUnboundColumn DiscountColumn = new DataGridUnboundColumn()
             {
                 MappingName = "DiscountPrice",
                 HeaderText = "SUM",
                 Expression = "Price1+Price2",
                 Format = "C"
             };
-            this.datagrid.Columns.Add(DiscountColumn);
-            
-
+this.datagrid.Columns.Add(DiscountColumn);
+    
 {% endhighlight %}
 {% endtabs %}
 
 
-<img alt="Unbound-column" src="Images\unbound-column\maui-datagrid-unbound-column.png" width="404" />
+<img alt="Unbound column in MAUI DataGrid" src="Images\unbound-column\maui-datagrid-unbound-column.png" width="404" />
 
 N> It is mandatory to specify the `DataGridColumn.MappingName` for `SfDataGrid.DataGridUnboundColumn` with some name to identify the column. It is not necessary to define name of the field in the data object.
 
@@ -168,15 +167,14 @@ Refer to the following code example in which data for the unbound column is popu
 {% tabs %}
 {% highlight C# %}
 
-    datagrid.QueryUnboundColumnValue += DataGrid_QueryUnboundColumnValue;
-    private void DataGrid_QueryUnboundColumnValue(object? sender, DataGridUnboundColumnEventArgs e)
+datagrid.QueryUnboundColumnValue += DataGrid_QueryUnboundColumnValue;
+private void DataGrid_QueryUnboundColumnValue(object? sender, DataGridUnboundColumnEventArgs e)
     {
         if (e.UnboundAction == DataGridUnboundActions.QueryData)
         {
             var Price1 = Convert.ToInt16(e.Record.GetType().GetProperty("Price1").GetValue(e.Record));
             var Price2 = Convert.ToInt16(e.Record.GetType().GetProperty("Price2").GetValue(e.Record));
-            var amount = Price1 - Price2;
-            e.Value = amount;
+            e.Value = Price1 - Price2;
         }
     }
   

@@ -256,7 +256,7 @@ The default sort icon color can be customized by setting the `DataGridStyle.Sort
         <syncfusion:SfDataGrid.DefaultStyle>
                 <syncfusion:DataGridStyle SortIconColor="DodgerBlue" />
         </syncfusion:SfDataGrid.DefaultStyle>
-            <syncfusion:SfDataGrid.Columns>
+        <syncfusion:SfDataGrid.Columns>
                     <syncfusion:DataGridTextColumn MappingName="OrderID"
                               AllowSorting="True"
                               HeaderText="Order ID" />
@@ -264,13 +264,13 @@ The default sort icon color can be customized by setting the `DataGridStyle.Sort
                               HeaderText="Customer ID" />
                     <syncfusion:DataGridTextColumn MappingName="ShipCountry "
                               HeaderText="Ship Country " />
-            </syncfusion:SfDataGrid.Columns>
+        </syncfusion:SfDataGrid.Columns>
 </syncfusion:SfDataGrid>
 {% endhighlight %}
 {% endtabs %}
 
 
-<img alt="DataGrid with sort template selector" src="Images\sorting\maui-datagrid-sort-icon-color.png" width="404">
+<img alt="Sort icon customization in MAUI DataGrid" src="Images\sorting\maui-datagrid-sort-icon-color.png" width="404">
 
 
 ## Load sort icon through template
