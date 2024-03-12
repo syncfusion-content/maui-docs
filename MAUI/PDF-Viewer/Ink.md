@@ -133,6 +133,12 @@ void DisableAggregateInkStrokes()
 {% endhighlight %}
 {% endtabs %}
 
+### How to draw the ink annotation using a stylus and scroll or zoom PDF page with the touch
+
+The ink annotation operation can be customized so that the ink strokes can be added only using a stylus by setting the AnnotationSettings.Ink.TouchMode API to TouchMode.Stylus. When the TouchMode is set to the stylus, the PDF can be zoomed and scrolled using a finger. The default value of the TouchMode property is TouchMode.FingerAndStylus in which the zooming will be disabled and scrolling can be performed using the scroll head or two-fingers to add ink strokes on pages, and all other touch interactions will be considered as ink operations.
+
+N> * At present, this feature is available only in iOS and Android.
+
 ## Edit the selected ink annotation
 
 You can edit the properties of the selected ink annotation programmatically by accessing the selected annotation instance. The selected annotation instance may be obtained from the [AnnotationSelected](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationSelected) event. The following example shows how to edit some of the properties of the selected ink annotation. Similar you can modify the other properties.
