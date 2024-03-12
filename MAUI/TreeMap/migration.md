@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Migrate from Xamarin to .NET MAUI TreeMap (SfTreeMap) | Syncfusion
+title: Migrate from Syncfusion Xamarin.Forms to .NET MAUI TreeMap (SfTreeMap) | Syncfusion
 description: Learn about Migrating from Syncfusion Xamarin.Forms TreeMap control to .NET MAUI TreeMap (SfTreeMap) control.
 platform: maui
 control: TreeMap (SfTreeMap)
@@ -34,15 +34,17 @@ To initialize the control, import the treeMap control namespace and initialize t
 <td>
 
 {% tabs %}
-{% highlight XAML hl_lines="3 4" %}
+{% highlight XAML hl_lines="3 5" %}
 <ContentPage 
-...
-xmlns:treemap="clr-namespace:Syncfusion.SfTreeMap.XForms;assembly=Syncfusion.SfTreeMap.XForms">
-     <treemap:SfTreeMap x:Name="treeMap"/>
+    ...
+    xmlns:treemap="clr-namespace:Syncfusion.SfTreeMap.XForms;assembly=Syncfusion.SfTreeMap.XForms">
+
+    <treemap:SfTreeMap x:Name="treeMap"/>
 </ContentPage>
+
 {% endhighlight %}
 
-{% highlight C# %}
+{% highlight C# hl_lines="1 4 5" %}
 
 using Syncfusion.XForms.TreeMap;
 ...
@@ -57,20 +59,21 @@ this.Content = treeMap;
 <td>
 
 {% tabs %}
-{% highlight XAML hl_lines="3 4" %}
+{% highlight XAML hl_lines="3 5" %}
 
 <ContentPage 
-...
-xmlns:treemap="clr-namespace:Syncfusion.Maui.TreeMap;assembly=Syncfusion.Maui.TreeMap">
+    ...
+    xmlns:treemap="clr-namespace:Syncfusion.Maui.TreeMap;assembly=Syncfusion.Maui.TreeMap">
+
     <treemap:SfTreeMap x:Name="treeMap"/>
 </ContentPage>
 
 {% endhighlight %}
 
-{% highlight C# %}
+{% highlight C# hl_lines="1 4 5" %}
 
 using Syncfusion.Maui.TreeMap;
-…
+...
 
 SfTreeMap treeMap = new SfTreeMap();
 this.Content = treeMap;
@@ -87,36 +90,11 @@ this.Content = treeMap;
 <th>Xamarin SfTreeMap control</th>
 <th>.NET MAUI SfTreeMap control</th>
 <th>Description</th>
-</tr>
-
-<tr>
-<td>{{'[SfTreeMap](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.SfTreeMap.html)'| markdownify }}</td>
-<td>SfTreeMap</td>
-<td>The SfTreeMap control that allows you to visually represent hierarchical data with nested rectangles, conveying quantitative information through variations in size and color.</td>
-</tr>
-
-<tr>
-<td>Nil</td>
-<td>TreeMapItemInfo</td>
-<td>Contains item info for the selected item.</td>
-</tr>
 
 <tr>
 <td>{{'[LeafItemSettings](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.LeafItemSettings.html)'| markdownify }}</td>
 <td>TreeMapLeafItemSettings</td>
 <td>Represents settings for customizing the appearance of leaf items in the SfTreeMap.</td>
-</tr>
-
-<tr>
-<td>Nil</td>
-<td>LeafItemTemplate</td>
-<td>Represents Leaf item template, for creating custom view for treemap leaf item.</td>
-</tr>
-
-<tr>
-<td>Nil</td>
-<td>ToolTipTemplate</td>
-<td>Represents the tooltip template, for creating custom treemap tool tip template view.</td>
 </tr>
 
 <tr>
@@ -128,7 +106,7 @@ this.Content = treeMap;
 <tr>
 <td>{{'[ColorMapping](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.ColorMapping.html)'| markdownify }}</td>
 <td>TreeMapBrushSettings</td>
-<td>Provides base settings for brushes used in the SfTreeMap./></td>
+<td>Provides base settings for brushes used in the SfTreeMap.</td>
 </tr>
 
 <tr>
@@ -164,7 +142,7 @@ this.Content = treeMap;
 <tr>
 <td>{{'[TooltipSetting](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.TooltipSetting.html)'| markdownify }}</td>
 <td>TreeMapToolTipSettings</td>
-<td>Provides settings for configuring tool tips in the SfTreeMap./></td>
+<td>Provides settings for configuring tool tips in the SfTreeMap.</td>
 </tr>
 
 <tr>
@@ -174,13 +152,17 @@ this.Content = treeMap;
 </tr>
 
 <tr>
+<td>Nil</td>
+<td>TreeMapItemInfo</td>
+<td>Represents the collection of tree map items representing the currently selected items in the SfTreeMap control, the TreeMapItemInfo property is set as the binding context for tooltips and leaf item templates.</td>
+</tr>
+
+<tr>
 <td>{{'[Style](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.Style.html)'| markdownify }}</td>
 <td>TreeMapTextStyle</td>
 <td> Gets or sets the style of SfTreeMap text, that used to customize the text color, font, font size, font family and font attributes.</td>
 </tr>
-
-</table> 
-
+</table>
 
 ## Properties
 
@@ -194,14 +176,16 @@ this.Content = treeMap;
 
 {% tabs %}
 {% highlight XAML hl_lines="2 3 4" %}
+
 <treemap:SfTreeMap x:Name="treeMap"
-                DataSource="{Binding PopulationDetails}"
-                PrimaryValuePath="Population"
-                RangeColorValuePath="Population">
+                   DataSource="{Binding PopulationDetails}"
+                   PrimaryValuePath="Population"
+                   RangeColorValuePath="Population">
     <treemap:SfTreeMap.BindingContext>
         <local:PopulationViewModel />
     </treemap:SfTreeMap.BindingContext>
 </treemap:SfTreeMap>
+
 {% endhighlight %}
 
 {% highlight C# hl_lines="4" %}
@@ -214,7 +198,9 @@ this.Content = treeMap;
 {% endhighlight %}
 {% highlight C# tabtitle="PopulationDetails.cs" %}
 
-// Represents demographic information for a specific country.
+/// <summary>    
+/// Represents the custom data properties.
+/// </summary>
 public class PopulationDetails
 {
     public string Country { get; set; }
@@ -224,142 +210,146 @@ public class PopulationDetails
 {% endhighlight %}
 {% highlight c# tabtitle="PopulationViewModel.cs" %}
 
-// Presents demographic information for countries in the Americas for the year 2023.
+/// <summary>    
+/// Represents demographic information for countries in the Americas for the year 2023.
+/// </summary>
 public class PopulationViewModel
 {
     public PopulationViewModel()
     {
         this.PopulationDetails = new ObservableCollection<PopulationDetails>()
-            {
-                new PopulationDetails() { Continent ="North America", Country = "United States of America", Population = 339996564 },
-                new PopulationDetails() { Continent ="South America", Country = "Brazil", Population = 216422446 },
-                new PopulationDetails() { Continent ="North America", Country = "Mexico", Population = 128455567 },
-                new PopulationDetails() { Continent ="South America", Country = "Colombia", Population = 52085168 },
-                new PopulationDetails() { Continent ="South America", Country = "Argentina", Population = 45773884 },
-                new PopulationDetails() { Continent ="North America", Country = "Canada", Population = 38781292 },
-                new PopulationDetails() { Continent ="South America", Country = "Peru", Population = 34352719 },
-                new PopulationDetails() { Continent ="South America", Country = "Venezuela", Population = 28838499 },
-                new PopulationDetails() { Continent ="South America", Country = "Chile", Population = 19629590 },
-                new PopulationDetails() { Continent ="South America", Country = "Ecuador", Population = 18190484 },
-                new PopulationDetails() { Continent ="North America", Country = "Guatemala", Population = 18092026 },
-                new PopulationDetails() { Continent ="South America", Country = "Bolivia", Population = 12388571 },
-                new PopulationDetails() { Continent ="North America", Country = "Honduras", Population = 10593798 },
-                new PopulationDetails() { Continent ="North America", Country = "Nicaragua", Population = 7046311 },
-                new PopulationDetails() { Continent ="South America", Country = "Paraguay", Population = 6861524 },
-                new PopulationDetails() { Continent ="North America", Country = "El Salvador", Population = 6364943 },
-                new PopulationDetails() { Continent ="North America", Country = "Costa Rica", Population = 5212173 },
-                new PopulationDetails() { Continent ="South America", Country = "Uruguay", Population = 3423109 },
-            };
+        {
+            new PopulationDetails() { Continent ="North America", Country = "United States of America", Population = 339996564 },
+            new PopulationDetails() { Continent ="South America", Country = "Brazil", Population = 216422446 },
+            new PopulationDetails() { Continent ="North America", Country = "Mexico", Population = 128455567 },
+            new PopulationDetails() { Continent ="South America", Country = "Colombia", Population = 52085168 },
+            new PopulationDetails() { Continent ="South America", Country = "Argentina", Population = 45773884 },
+            new PopulationDetails() { Continent ="North America", Country = "Canada", Population = 38781292 },
+            new PopulationDetails() { Continent ="South America", Country = "Peru", Population = 34352719 },
+            new PopulationDetails() { Continent ="South America", Country = "Venezuela", Population = 28838499 },
+            new PopulationDetails() { Continent ="South America", Country = "Chile", Population = 19629590 },
+            new PopulationDetails() { Continent ="South America", Country = "Ecuador", Population = 18190484 },
+            new PopulationDetails() { Continent ="North America", Country = "Guatemala", Population = 18092026 },
+            new PopulationDetails() { Continent ="South America", Country = "Bolivia", Population = 12388571 },
+            new PopulationDetails() { Continent ="North America", Country = "Honduras", Population = 10593798 },
+            new PopulationDetails() { Continent ="North America", Country = "Nicaragua", Population = 7046311 },
+            new PopulationDetails() { Continent ="South America", Country = "Paraguay", Population = 6861524 },
+            new PopulationDetails() { Continent ="North America", Country = "El Salvador", Population = 6364943 },
+            new PopulationDetails() { Continent ="North America", Country = "Costa Rica", Population = 5212173 },
+            new PopulationDetails() { Continent ="South America", Country = "Uruguay", Population = 3423109 },
+        };
     }
+
     public ObservableCollection<PopulationDetails> PopulationDetails
     {
         get;
         set;
     }
 }
+
 {% endhighlight %}
 {% endtabs %}
 
 <tr>
 <td>{{'[DataSource](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.SfTreeMap.html#Syncfusion_SfTreeMap_XForms_SfTreeMap_DataSource)'| markdownify }}</td>
 <td>DataSource</td>
-<td>Gets or sets the DataSource property. This property is used to retrieving data.</td>
+<td>Gets or sets a collection used to generate the item in the SfTreeMap.</td>
 </tr>
 
 <tr>
 <td>{{'[WeightValuePath](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.SfTreeMap.html#Syncfusion_SfTreeMap_XForms_SfTreeMap_WeightValuePath)'| markdownify }}</td>
 <td>PrimaryValuePath</td>
-<td>Gets or sets the PrimaryValuePath property. This property is used to set the value path based on data item.</td>
+<td>Gets or sets the name of the property in the data object that provides the primary value for each item in the SfTreeMap.</td>
 </tr>
 
 <tr>
 <td>{{'[ColorValuePath](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.SfTreeMap.html#Syncfusion_SfTreeMap_XForms_SfTreeMap_ColorValuePath)'| markdownify }}</td>
 <td>RangeColorValuePath</td>
-<td>Gets or sets the RangeColorValuePath property. This property is used to set the value path based on color value.</td>
+<td>Gets or sets the name of the property in the data object that provides the range color value for each item in the SfTreeMap control.</td>
 </tr>
 
 <tr>
 <td>{{'[HightlightColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.SfTreeMap.html#Syncfusion_SfTreeMap_XForms_SfTreeMap_HightlightColor)'| markdownify }}</td>
 <td>SelectedItemStroke</td>
-<td>Gets or sets the Selected Item Stroke property. This property is used to set the color to highlight the items.</td>
+<td>Gets or sets the stroke color for the selected item in the SfTreeMap.</td>
 </tr>
 
 <tr>
 <td>{{'[HightlightBorderWidth](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.SfTreeMap.html#Syncfusion_SfTreeMap_XForms_SfTreeMap_HightlightBorderWidth)'| markdownify }}</td>
 <td>SelectedItemStrokeWidth</td>
-<td>Gets or sets the Selected ItemStrokeThickness property. This property is used to customize the width of highlighted stroke.</td>
+<td>Gets or sets the stroke width for the selected item in the SfTreeMap.</td>
 </tr>
 
 <tr>
 <td>{{'[LayoutType](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.SfTreeMap.html#Syncfusion_SfTreeMap_XForms_SfTreeMap_LayoutType)'| markdownify }}</td>
 <td>LayoutType</td>
-<td>Gets or sets the layoutType property. This property is used to customize the layout for tree map.</td>
+<td>Gets or sets the layout type used to arrange items using a specific layout algorithm.</td>
 </tr>
 
 <tr>
 <td>{{'[ItemTemplate](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.SfTreeMap.html#Syncfusion_SfTreeMap_XForms_SfTreeMap_ItemTemplate)'| markdownify }}</td>
 <td>LeafItemTemplate</td>
-<td>Gets or sets the LeafItemtemplate property. This property is used to set data template.</td>
+<td>Gets or sets the data template to use for customizing the appearance of individual leaf items in the SfTreeMap.</td>
 </tr>
 
 <tr>
 <td>{{'[LeafItemSettings](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.SfTreeMap.html#Syncfusion_SfTreeMap_XForms_SfTreeMap_LeafItemSettings)'| markdownify }}</td>
 <td>LeafItemSettings</td>
-<td>Gets or sets the LeafItemSettings property. This property is used to customize the settings for leaf level.</td>
+<td>Gets or sets the settings for the leaf item, which is used to customize the stroke color, stroke width, text style, spacing between items, and text format option in the SfTreeMap.</td>
 </tr>
 
 <tr>
 <td>{{'[LeafItemColorMapping](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.SfTreeMap.html#Syncfusion_SfTreeMap_XForms_SfTreeMap_LeafItemColorMapping)'| markdownify }}</td>
 <td>LeafItemBrushSettings</td>
-<td>Gets or sets the LeafItemColorSettings property. This property is used to set color settings for leaf items.</td>
+<td>Gets or sets the settings for the leaf item brush, which is used to customize the leaf items in the SfTreeMap.</td>
 </tr>
 
 <tr>
 <td>{{'[LegendSettings](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.SfTreeMap.html#Syncfusion_SfTreeMap_XForms_SfTreeMap_LegendSettings)'| markdownify }}</td>
 <td>LegendSettings</td>
-<td>Gets or sets the Legendsettings property. This property is used to customize the settings for legend.</td>
+<td>Gets or sets the settings for the legend, which is used to customize the icon size, text style, icon type, placement, show legend and legend size in the SfTreeMap.</td>
 </tr>
 
 <tr>
 <td>{{'[Levels](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.SfTreeMap.html#Syncfusion_SfTreeMap_XForms_SfTreeMap_Levels)'| markdownify }}</td>
 <td>Levels</td>
-<td>Gets or sets the levels property. This property is an list collection of TreeMaplevel.</td>
+<td>Gets or sets the collection of levels defining the hierarchical structure for grouped visualization of data in the SfTreeMap.</td>
 </tr>
 
 <tr>
 <td>{{'[SelectedItems](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.SfTreeMap.html#Syncfusion_SfTreeMap_XForms_SfTreeMap_SelectedItems)'| markdownify }}</td>
 <td>SelectedItems</td>
-<td>Gets the selected items property. This property is an collection of object.</td>
+<td>Gets or sets the collection of tree map item representing the currently selected items in the SfTreeMap.</td>
 </tr>
 
 <tr>
 <td>{{'[SelectionMode](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.SfTreeMap.html#Syncfusion_SfTreeMap_XForms_SfTreeMap_SelectionMode)'| markdownify }}</td>
 <td>SelectionMode</td>
-<td>Gets or sets the selection mode property. This property is used to customize the selection for tree map.</td>
+<td>Gets or sets the selection mode for the SfTreeMap. This property is used to customize the selection for tree map.</td>
 </tr>
 
 <tr>
 <td>{{'[ShowTooltip](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.SfTreeMap.html#Syncfusion_SfTreeMap_XForms_SfTreeMap_ShowTooltip)'| markdownify }}</td>
 <td>ShowToolTip</td>
-<td>Gets or sets a value indicating whether the tooltip should be enabled for tree map.</td>
+<td>Gets or sets a value indicating whether tool tips are displayed for items in the SfTreeMap.</td>
 </tr>
 
 <tr>
 <td>{{'[TooltipSettings](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.SfTreeMap.html#Syncfusion_SfTreeMap_XForms_SfTreeMap_TooltipSettings)'| markdownify }}</td>
 <td>ToolTipSettings</td>
-<td>Gets or sets the tooltipsettings value to treemap.</td>
+<td>Gets or sets the settings for the tool tips, which is used to customize the background, duration, stroke, and text style in the SfTreeMap.</td>
 </tr>
 
 <tr>
 <td>{{'[TooltipTemplate](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.TooltipSetting.html#Syncfusion_SfTreeMap_XForms_TooltipSetting_TooltipTemplate)'| markdownify }}</td>
 <td>ToolTipTemplate</td>
-<td>Gets or sets the tooltip template.</td>
+<td>Gets or sets the data template to use for customizing the appearance of tool tips for items in the SfTreeMap.</td>
 </tr>
 
 <tr>
 <td>Nil</td>
 <td>GroupItemBrushSettings</td>
-<td>Gets or sets the settings for the group item brush, which is used to customize the group items in the SfTreeMap.</td>
+<td> Gets or sets the settings for the group item brush, which is used to customize the group items in the SfTreeMap.</td>
 </tr>
 
 </table>
@@ -402,19 +392,19 @@ public class PopulationViewModel
 ### TreeMapLeafItemSettings
 
 {% tabs %}
-{% highlight XAML hl_lines="9 10" %}
+{% highlight XAML hl_lines="8 9 10 11 12" %}
 <treemap:SfTreeMap x:Name="treeMap"
-                DataSource="{Binding PopulationDetails}"
-                PrimaryValuePath="Population"
-                RangeColorValuePath="Population">
+                   DataSource="{Binding PopulationDetails}"
+                   PrimaryValuePath="Population"
+                   RangeColorValuePath="Population">
     <treemap:SfTreeMap.BindingContext>
         <local:PopulationViewModel />
     </treemap:SfTreeMap.BindingContext>
-        <treemap:SfTreeMap.LeafItemSettings>
-            <treemap:TreeMapLeafItemSettings LabelPath="Country"
-                                                Stroke="Black">
-            </treemap:TreeMapLeafItemSettings>
-        </treemap:SfTreeMap.LeafItemSettings>
+    <treemap:SfTreeMap.LeafItemSettings>
+        <treemap:TreeMapLeafItemSettings LabelPath="Country"
+                                         Stroke="Black">
+        </treemap:TreeMapLeafItemSettings>
+    </treemap:SfTreeMap.LeafItemSettings>
 </treemap:SfTreeMap>
 {% endhighlight %}
 
@@ -429,7 +419,9 @@ this.Content = treeMap;
 {% endhighlight %}
 {% highlight C# tabtitle="PopulationDetails.cs" %}
 
-// Represents demographic information for a specific country.
+/// <summary>    
+/// Represents the custom data properties.
+/// </summary>
 public class PopulationDetails
 {
     public string Country { get; set; }
@@ -439,33 +431,36 @@ public class PopulationDetails
 {% endhighlight %}
 {% highlight c# tabtitle="PopulationViewModel.cs" %}
 
-// Presents demographic information for countries in the Americas for the year 2023.
+/// <summary>    
+/// Represents demographic information for countries in the Americas for the year 2023.
+/// </summary>
 public class PopulationViewModel
 {
     public PopulationViewModel()
     {
         this.PopulationDetails = new ObservableCollection<PopulationDetails>()
-            {
-                new PopulationDetails() { Continent ="North America", Country = "United States of America", Population = 339996564 },
-                new PopulationDetails() { Continent ="South America", Country = "Brazil", Population = 216422446 },
-                new PopulationDetails() { Continent ="North America", Country = "Mexico", Population = 128455567 },
-                new PopulationDetails() { Continent ="South America", Country = "Colombia", Population = 52085168 },
-                new PopulationDetails() { Continent ="South America", Country = "Argentina", Population = 45773884 },
-                new PopulationDetails() { Continent ="North America", Country = "Canada", Population = 38781292 },
-                new PopulationDetails() { Continent ="South America", Country = "Peru", Population = 34352719 },
-                new PopulationDetails() { Continent ="South America", Country = "Venezuela", Population = 28838499 },
-                new PopulationDetails() { Continent ="South America", Country = "Chile", Population = 19629590 },
-                new PopulationDetails() { Continent ="South America", Country = "Ecuador", Population = 18190484 },
-                new PopulationDetails() { Continent ="North America", Country = "Guatemala", Population = 18092026 },
-                new PopulationDetails() { Continent ="South America", Country = "Bolivia", Population = 12388571 },
-                new PopulationDetails() { Continent ="North America", Country = "Honduras", Population = 10593798 },
-                new PopulationDetails() { Continent ="North America", Country = "Nicaragua", Population = 7046311 },
-                new PopulationDetails() { Continent ="South America", Country = "Paraguay", Population = 6861524 },
-                new PopulationDetails() { Continent ="North America", Country = "El Salvador", Population = 6364943 },
-                new PopulationDetails() { Continent ="North America", Country = "Costa Rica", Population = 5212173 },
-                new PopulationDetails() { Continent ="South America", Country = "Uruguay", Population = 3423109 },
-            };
+        {
+            new PopulationDetails() { Continent ="North America", Country = "United States of America", Population = 339996564 },
+            new PopulationDetails() { Continent ="South America", Country = "Brazil", Population = 216422446 },
+            new PopulationDetails() { Continent ="North America", Country = "Mexico", Population = 128455567 },
+            new PopulationDetails() { Continent ="South America", Country = "Colombia", Population = 52085168 },
+            new PopulationDetails() { Continent ="South America", Country = "Argentina", Population = 45773884 },
+            new PopulationDetails() { Continent ="North America", Country = "Canada", Population = 38781292 },
+            new PopulationDetails() { Continent ="South America", Country = "Peru", Population = 34352719 },
+            new PopulationDetails() { Continent ="South America", Country = "Venezuela", Population = 28838499 },
+            new PopulationDetails() { Continent ="South America", Country = "Chile", Population = 19629590 },
+            new PopulationDetails() { Continent ="South America", Country = "Ecuador", Population = 18190484 },
+            new PopulationDetails() { Continent ="North America", Country = "Guatemala", Population = 18092026 },
+            new PopulationDetails() { Continent ="South America", Country = "Bolivia", Population = 12388571 },
+            new PopulationDetails() { Continent ="North America", Country = "Honduras", Population = 10593798 },
+            new PopulationDetails() { Continent ="North America", Country = "Nicaragua", Population = 7046311 },
+            new PopulationDetails() { Continent ="South America", Country = "Paraguay", Population = 6861524 },
+            new PopulationDetails() { Continent ="North America", Country = "El Salvador", Population = 6364943 },
+            new PopulationDetails() { Continent ="North America", Country = "Costa Rica", Population = 5212173 },
+            new PopulationDetails() { Continent ="South America", Country = "Uruguay", Population = 3423109 },
+        };
     }
+
     public ObservableCollection<PopulationDetails> PopulationDetails
     {
         get;
@@ -485,37 +480,37 @@ public class PopulationViewModel
 <tr>
 <td>{{'[BorderColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.LeafItemSettings.html#Syncfusion_SfTreeMap_XForms_LeafItemSettings_BorderColor)'| markdownify }}</td>
 <td>Stroke</td>
-<td>Gets or sets the stroke property. This property is used to set the leaf level item border color.</td>
+<td>Gets or sets the stroke color for the leaf items in the SfTreeMap.</td>
 </tr>
 
 <tr>
 <td>{{'[BorderWidth](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.LeafItemSettings.html#Syncfusion_SfTreeMap_XForms_LeafItemSettings_BorderWidth)'| markdownify }}</td>
 <td>StrokeWidth</td>
-<td>Gets or sets the StrokeThickness property. This property is used to customize the width of tree map item.</td>
+<td>Gets or sets the width of the stroke for the leaf items in the SfTreeMap.</td>
 </tr>
 
 <tr>
 <td>{{'[Gap](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.LeafItemSettings.html#Syncfusion_SfTreeMap_XForms_LeafItemSettings_Gap)'| markdownify }}</td>
 <td>Spacing</td>
-<td>Gets or sets the Gap property. This property is used to set padding between leaf level items.</td>
+<td>Gets or sets the spacing between the leaf items in the SfTreeMap.</td>
 </tr>
 
 <tr>
 <td>{{'[LabelPath](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.LeafItemSettings.html#Syncfusion_SfTreeMap_XForms_LeafItemSettings_LabelPath)'| markdownify }}</td>
 <td>LabelPath</td>
-<td>Gets or sets the data label path property. This property is used to set in which path label should be applied</td>
+<td>Gets or sets the path of the label for the leaf items in the SfTreeMap.</td>
 </tr>
 
 <tr>
 <td>{{'[LabelStyle](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.LeafItemSettings.html#Syncfusion_SfTreeMap_XForms_LeafItemSettings_LabelStyle)'| markdownify }}</td>
 <td>TextStyle</td>
-<td>Gets or sets the text style property. This is used to set different style labels.</td>
+<td>Gets or sets the style of leaf item text, that used to customize the text color, font, font size, font family and font attributes.</td>
 </tr>
 
 <tr>
 <td>{{'[OverflowMode](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.LeafItemSettings.html#Syncfusion_SfTreeMap_XForms_LeafItemSettings_OverflowMode)'| markdownify }}</td>
 <td>TextFormatOption</td>
-<td>Gets or sets the TextFormatOption.</td>
+<td>Gets or sets the text format option for the leaf items in the SfTreeMap.</td>
 </tr>
 
 </table>
@@ -523,24 +518,26 @@ public class PopulationViewModel
 ### TreeMapLegendSettings
 
 {% tabs %}
-{% highlight XAML hl_lines="13 14" %}
+{% highlight XAML hl_lines="13 14 15 16" %}
+
 <treemap:SfTreeMap x:Name="treeMap"
-                DataSource="{Binding PopulationDetails}"
-                PrimaryValuePath="Population"
-                RangeColorValuePath="Population">
+                   DataSource="{Binding PopulationDetails}"
+                   PrimaryValuePath="Population"
+                   RangeColorValuePath="Population">
     <treemap:SfTreeMap.BindingContext>
         <local:PopulationViewModel />
     </treemap:SfTreeMap.BindingContext>
-        <treemap:SfTreeMap.LeafItemSettings>
-            <treemap:TreeMapLeafItemSettings LabelPath="Country" 
-                                                Stroke="Black">
-    </treemap:TreeMapLeafItemSettings>
+    <treemap:SfTreeMap.LeafItemSettings>
+        <treemap:TreeMapLeafItemSettings LabelPath="Country" 
+                                         Stroke="Black">
+        </treemap:TreeMapLeafItemSettings>
     </treemap:SfTreeMap.LeafItemSettings>
     <treemap:SfTreeMap.LegendSettings>
         <treemap:TreeMapLegendSettings ShowLegend="True">
-        </treemap:TreeMapLegendSettings>
+    </treemap:TreeMapLegendSettings>
     </treemap:SfTreeMap.LegendSettings>
 </treemap:SfTreeMap>
+
 {% endhighlight %}
 
 {% highlight C# hl_lines="4" %}
@@ -554,43 +551,49 @@ this.Content = treeMap;
 {% endhighlight %}
 {% highlight C# tabtitle="PopulationDetails.cs" %}
 
-// Represents demographic information for a specific country.
+/// <summary>    
+/// Represents the custom data properties.
+/// </summary>
 public class PopulationDetails
 {
     public string Country { get; set; }
     public string Continent { get; set; }
     public int Population { get; set; }
 }
+
 {% endhighlight %}
 {% highlight c# tabtitle="PopulationViewModel.cs" %}
 
-// Presents demographic information for countries in the Americas for the year 2023.
+/// <summary>    
+/// Represents demographic information for countries in the Americas for the year 2023.
+/// </summary>
 public class PopulationViewModel
 {
     public PopulationViewModel()
     {
         this.PopulationDetails = new ObservableCollection<PopulationDetails>()
-            {
-                new PopulationDetails() { Continent ="North America", Country = "United States of America", Population = 339996564 },
-                new PopulationDetails() { Continent ="South America", Country = "Brazil", Population = 216422446 },
-                new PopulationDetails() { Continent ="North America", Country = "Mexico", Population = 128455567 },
-                new PopulationDetails() { Continent ="South America", Country = "Colombia", Population = 52085168 },
-                new PopulationDetails() { Continent ="South America", Country = "Argentina", Population = 45773884 },
-                new PopulationDetails() { Continent ="North America", Country = "Canada", Population = 38781292 },
-                new PopulationDetails() { Continent ="South America", Country = "Peru", Population = 34352719 },
-                new PopulationDetails() { Continent ="South America", Country = "Venezuela", Population = 28838499 },
-                new PopulationDetails() { Continent ="South America", Country = "Chile", Population = 19629590 },
-                new PopulationDetails() { Continent ="South America", Country = "Ecuador", Population = 18190484 },
-                new PopulationDetails() { Continent ="North America", Country = "Guatemala", Population = 18092026 },
-                new PopulationDetails() { Continent ="South America", Country = "Bolivia", Population = 12388571 },
-                new PopulationDetails() { Continent ="North America", Country = "Honduras", Population = 10593798 },
-                new PopulationDetails() { Continent ="North America", Country = "Nicaragua", Population = 7046311 },
-                new PopulationDetails() { Continent ="South America", Country = "Paraguay", Population = 6861524 },
-                new PopulationDetails() { Continent ="North America", Country = "El Salvador", Population = 6364943 },
-                new PopulationDetails() { Continent ="North America", Country = "Costa Rica", Population = 5212173 },
-                new PopulationDetails() { Continent ="South America", Country = "Uruguay", Population = 3423109 },
-            };
+        {
+            new PopulationDetails() { Continent ="North America", Country = "United States of America", Population = 339996564 },
+            new PopulationDetails() { Continent ="South America", Country = "Brazil", Population = 216422446 },
+            new PopulationDetails() { Continent ="North America", Country = "Mexico", Population = 128455567 },
+            new PopulationDetails() { Continent ="South America", Country = "Colombia", Population = 52085168 },
+            new PopulationDetails() { Continent ="South America", Country = "Argentina", Population = 45773884 },
+            new PopulationDetails() { Continent ="North America", Country = "Canada", Population = 38781292 },
+            new PopulationDetails() { Continent ="South America", Country = "Peru", Population = 34352719 },
+            new PopulationDetails() { Continent ="South America", Country = "Venezuela", Population = 28838499 },
+            new PopulationDetails() { Continent ="South America", Country = "Chile", Population = 19629590 },
+            new PopulationDetails() { Continent ="South America", Country = "Ecuador", Population = 18190484 },
+            new PopulationDetails() { Continent ="North America", Country = "Guatemala", Population = 18092026 },
+            new PopulationDetails() { Continent ="South America", Country = "Bolivia", Population = 12388571 },
+            new PopulationDetails() { Continent ="North America", Country = "Honduras", Population = 10593798 },
+            new PopulationDetails() { Continent ="North America", Country = "Nicaragua", Population = 7046311 },
+            new PopulationDetails() { Continent ="South America", Country = "Paraguay", Population = 6861524 },
+            new PopulationDetails() { Continent ="North America", Country = "El Salvador", Population = 6364943 },
+            new PopulationDetails() { Continent ="North America", Country = "Costa Rica", Population = 5212173 },
+            new PopulationDetails() { Continent ="South America", Country = "Uruguay", Population = 3423109 },
+        };
     }
+
     public ObservableCollection<PopulationDetails> PopulationDetails
     {
         get;
@@ -610,37 +613,37 @@ public class PopulationViewModel
 <tr>
 <td>{{'[ShowLegend](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.LegendSettings.html#Syncfusion_SfTreeMap_XForms_LegendSettings_ShowLegend)'| markdownify }}</td>
 <td>ShowLegend</td>
-<td>Gets or sets a value indicating whether the legend should be visible for tree map.</td>
+<td>Gets or sets a value indicating whether the legend is enabled in the SfTreeMap.</td>
 </tr>
 
 <tr>
 <td>{{'[IconSize](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.LegendSettings.html#Syncfusion_SfTreeMap_XForms_LegendSettings_IconSize)'| markdownify }}</td>
 <td>IconSize</td>
-<td>Gets or sets the IconSize property. This property is used to set size for the legend Icons.</td>
+<td>Gets or sets the size of the legend icons in the SfTreeMap.</td>
 </tr>
 
 <tr>
 <td>{{'[LegendIcon](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.LegendSettings.html#Syncfusion_SfTreeMap_XForms_LegendSettings_LegendIcon)'| markdownify }}</td>
 <td>IconType</td>
-<td>Gets or sets the icon type property. This property is used to customize the icons.</td>
+<td>Gets or sets the type of icons to be used for the legend in the SfTreeMap.</td>
 </tr>
 
 <tr>
 <td>{{'[LegendPosition](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.LegendSettings.html#Syncfusion_SfTreeMap_XForms_LegendSettings_LegendPosition)'| markdownify }}</td>
 <td>Placement</td>
-<td>Gets or sets the LegendPlacement property. This property is used to customize the position for legends.</td>
+<td>Gets or sets the placement of the legend with in the SfTreeMap.</td>
 </tr>
 
 <tr>
 <td>{{'[Size](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.LegendSettings.html#Syncfusion_SfTreeMap_XForms_LegendSettings_Size)'| markdownify }}</td>
 <td>Size</td>
-<td>Gets or sets the size property. This method is used to set the legend size.</td>
+<td>Gets or sets the size of the legend layout in the SfTreeMap.</td>
 </tr>
 
 <tr>
 <td>{{'[LabelStyle](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.LegendSettings.html#Syncfusion_SfTreeMap_XForms_LegendSettings_LabelStyle)'| markdownify }}</td>
 <td>TextStyle</td>
-<td>Gets or sets the text style property. This is used to set different style labels.</td>
+<td>Gets or sets the style of legend item text, that used to customize the text color, font, font size, font family and font attributes.</td>
 </tr>
 
 </table>
@@ -648,22 +651,22 @@ public class PopulationViewModel
 ### TreeMapUniformBrushSettings
 
 {% tabs %}
-{% highlight XAML hl_lines="10 11" %}
+{% highlight XAML hl_lines="12 13 14" %}
 
 <treemap:SfTreeMap x:Name="treeMap"
-                DataSource="{Binding PopulationDetails}"
-                PrimaryValuePath="Population"
-                RangeColorValuePath="Population">
+                   DataSource="{Binding PopulationDetails}"
+                   PrimaryValuePath="Population"
+                   RangeColorValuePath="Population">
     <treemap:SfTreeMap.BindingContext>
         <local:PopulationViewModel />
     </treemap:SfTreeMap.BindingContext>
-        <treemap:SfTreeMap.LeafItemSettings>
-            <treemap:TreeMapLeafItemSettings LabelPath="Country">
-                <treemap:SfTreeMap.LeafItemBrushSettings>
-                <treemap:TreeMapUniformBrushSettings Brush="Orange"/>
-                </treemap:SfTreeMap.LeafItemBrushSettings>
-    </treemap:TreeMapLeafItemSettings>
+    <treemap:SfTreeMap.LeafItemSettings>
+        <treemap:TreeMapLeafItemSettings LabelPath="Country">
+        </treemap:TreeMapLeafItemSettings>
     </treemap:SfTreeMap.LeafItemSettings>
+    <treemap:SfTreeMap.LeafItemBrushSettings>
+        <treemap:TreeMapUniformBrushSettings Brush="Orange"/>
+    </treemap:SfTreeMap.LeafItemBrushSettings>
 </treemap:SfTreeMap>
 
 {% endhighlight %}
@@ -679,43 +682,49 @@ this.Content = treeMap;
 {% endhighlight %}
 {% highlight C# tabtitle="PopulationDetails.cs" %}
 
-// Represents demographic information for a specific country.
+/// <summary>    
+/// Represents the custom data properties.
+/// </summary>
 public class PopulationDetails
 {
     public string Country { get; set; }
     public string Continent { get; set; }
     public int Population { get; set; }
 }
+
 {% endhighlight %}
 {% highlight c# tabtitle="PopulationViewModel.cs" %}
 
-// Presents demographic information for countries in the Americas for the year 2023.
+/// <summary>    
+/// Represents demographic information for countries in the Americas for the year 2023.
+/// </summary>
 public class PopulationViewModel
 {
     public PopulationViewModel()
     {
         this.PopulationDetails = new ObservableCollection<PopulationDetails>()
-            {
-                new PopulationDetails() { Continent ="North America", Country = "United States of America", Population = 339996564 },
-                new PopulationDetails() { Continent ="South America", Country = "Brazil", Population = 216422446 },
-                new PopulationDetails() { Continent ="North America", Country = "Mexico", Population = 128455567 },
-                new PopulationDetails() { Continent ="South America", Country = "Colombia", Population = 52085168 },
-                new PopulationDetails() { Continent ="South America", Country = "Argentina", Population = 45773884 },
-                new PopulationDetails() { Continent ="North America", Country = "Canada", Population = 38781292 },
-                new PopulationDetails() { Continent ="South America", Country = "Peru", Population = 34352719 },
-                new PopulationDetails() { Continent ="South America", Country = "Venezuela", Population = 28838499 },
-                new PopulationDetails() { Continent ="South America", Country = "Chile", Population = 19629590 },
-                new PopulationDetails() { Continent ="South America", Country = "Ecuador", Population = 18190484 },
-                new PopulationDetails() { Continent ="North America", Country = "Guatemala", Population = 18092026 },
-                new PopulationDetails() { Continent ="South America", Country = "Bolivia", Population = 12388571 },
-                new PopulationDetails() { Continent ="North America", Country = "Honduras", Population = 10593798 },
-                new PopulationDetails() { Continent ="North America", Country = "Nicaragua", Population = 7046311 },
-                new PopulationDetails() { Continent ="South America", Country = "Paraguay", Population = 6861524 },
-                new PopulationDetails() { Continent ="North America", Country = "El Salvador", Population = 6364943 },
-                new PopulationDetails() { Continent ="North America", Country = "Costa Rica", Population = 5212173 },
-                new PopulationDetails() { Continent ="South America", Country = "Uruguay", Population = 3423109 },
-            };
+        {
+            new PopulationDetails() { Continent ="North America", Country = "United States of America", Population = 339996564 },
+            new PopulationDetails() { Continent ="South America", Country = "Brazil", Population = 216422446 },
+            new PopulationDetails() { Continent ="North America", Country = "Mexico", Population = 128455567 },
+            new PopulationDetails() { Continent ="South America", Country = "Colombia", Population = 52085168 },
+            new PopulationDetails() { Continent ="South America", Country = "Argentina", Population = 45773884 },
+            new PopulationDetails() { Continent ="North America", Country = "Canada", Population = 38781292 },
+            new PopulationDetails() { Continent ="South America", Country = "Peru", Population = 34352719 },
+            new PopulationDetails() { Continent ="South America", Country = "Venezuela", Population = 28838499 },
+            new PopulationDetails() { Continent ="South America", Country = "Chile", Population = 19629590 },
+            new PopulationDetails() { Continent ="South America", Country = "Ecuador", Population = 18190484 },
+            new PopulationDetails() { Continent ="North America", Country = "Guatemala", Population = 18092026 },
+            new PopulationDetails() { Continent ="South America", Country = "Bolivia", Population = 12388571 },
+            new PopulationDetails() { Continent ="North America", Country = "Honduras", Population = 10593798 },
+            new PopulationDetails() { Continent ="North America", Country = "Nicaragua", Population = 7046311 },
+            new PopulationDetails() { Continent ="South America", Country = "Paraguay", Population = 6861524 },
+            new PopulationDetails() { Continent ="North America", Country = "El Salvador", Population = 6364943 },
+            new PopulationDetails() { Continent ="North America", Country = "Costa Rica", Population = 5212173 },
+            new PopulationDetails() { Continent ="South America", Country = "Uruguay", Population = 3423109 },
+        };
     }
+
     public ObservableCollection<PopulationDetails> PopulationDetails
     {
         get;
@@ -735,7 +744,7 @@ public class PopulationViewModel
 <tr>
 <td>{{'[Color](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.UniColorMapping.html#Syncfusion_SfTreeMap_XForms_UniColorMapping_Color)'| markdownify }}</td>
 <td>Brush</td>
-<td>Gets or sets the color value for tree map item. This is used to set color for each tree map item.</td>
+<td>Gets or sets the background brush for the tree map leaf items in the SfTreeMap.</td>
 </tr>
 
 </table>
@@ -743,22 +752,22 @@ public class PopulationViewModel
 ### TreeMapDesaturationBrushSettings
 
 {% tabs %}
-{% highlight XAML hl_lines="10 11" %}
+{% highlight XAML hl_lines="12 13 14" %}
 
 <treemap:SfTreeMap x:Name="treeMap"
-                DataSource="{Binding PopulationDetails}"
-                PrimaryValuePath="Population"
-                RangeColorValuePath="Population">
+                   DataSource="{Binding PopulationDetails}"
+                   PrimaryValuePath="Population"
+                   RangeColorValuePath="Population">
     <treemap:SfTreeMap.BindingContext>
         <local:PopulationViewModel />
     </treemap:SfTreeMap.BindingContext>
         <treemap:SfTreeMap.LeafItemSettings>
             <treemap:TreeMapLeafItemSettings LabelPath="Country">
-                <treemap:SfTreeMap.LeafItemBrushSettings>
-                    <treemap:TreeMapDesaturationBrushSettings Brush="BlueViolet" From="1" To="0.2"/>
-                </treemap:SfTreeMap.LeafItemBrushSettings>
-    </treemap:TreeMapLeafItemSettings>
+        </treemap:TreeMapLeafItemSettings>
     </treemap:SfTreeMap.LeafItemSettings>
+    <treemap:SfTreeMap.LeafItemBrushSettings>
+        <treemap:TreeMapDesaturationBrushSettings Brush="BlueViolet" From="1" To="0.2"/>
+    </treemap:SfTreeMap.LeafItemBrushSettings>
 </treemap:SfTreeMap>
 
 {% endhighlight %}
@@ -774,7 +783,9 @@ this.Content = treeMap;
 {% endhighlight %}
 {% highlight C# tabtitle="PopulationDetails.cs" %}
 
-// Represents demographic information for a specific country.
+/// <summary>    
+/// Represents the custom data properties.
+/// </summary>
 public class PopulationDetails
 {
     public string Country { get; set; }
@@ -784,33 +795,36 @@ public class PopulationDetails
 {% endhighlight %}
 {% highlight c# tabtitle="PopulationViewModel.cs" %}
 
-// Presents demographic information for countries in the Americas for the year 2023.
+/// <summary>    
+/// Represents demographic information for countries in the Americas for the year 2023.
+/// </summary>
 public class PopulationViewModel
 {
     public PopulationViewModel()
     {
         this.PopulationDetails = new ObservableCollection<PopulationDetails>()
-            {
-                new PopulationDetails() { Continent ="North America", Country = "United States of America", Population = 339996564 },
-                new PopulationDetails() { Continent ="South America", Country = "Brazil", Population = 216422446 },
-                new PopulationDetails() { Continent ="North America", Country = "Mexico", Population = 128455567 },
-                new PopulationDetails() { Continent ="South America", Country = "Colombia", Population = 52085168 },
-                new PopulationDetails() { Continent ="South America", Country = "Argentina", Population = 45773884 },
-                new PopulationDetails() { Continent ="North America", Country = "Canada", Population = 38781292 },
-                new PopulationDetails() { Continent ="South America", Country = "Peru", Population = 34352719 },
-                new PopulationDetails() { Continent ="South America", Country = "Venezuela", Population = 28838499 },
-                new PopulationDetails() { Continent ="South America", Country = "Chile", Population = 19629590 },
-                new PopulationDetails() { Continent ="South America", Country = "Ecuador", Population = 18190484 },
-                new PopulationDetails() { Continent ="North America", Country = "Guatemala", Population = 18092026 },
-                new PopulationDetails() { Continent ="South America", Country = "Bolivia", Population = 12388571 },
-                new PopulationDetails() { Continent ="North America", Country = "Honduras", Population = 10593798 },
-                new PopulationDetails() { Continent ="North America", Country = "Nicaragua", Population = 7046311 },
-                new PopulationDetails() { Continent ="South America", Country = "Paraguay", Population = 6861524 },
-                new PopulationDetails() { Continent ="North America", Country = "El Salvador", Population = 6364943 },
-                new PopulationDetails() { Continent ="North America", Country = "Costa Rica", Population = 5212173 },
-                new PopulationDetails() { Continent ="South America", Country = "Uruguay", Population = 3423109 },
-            };
+        {
+            new PopulationDetails() { Continent ="North America", Country = "United States of America", Population = 339996564 },
+            new PopulationDetails() { Continent ="South America", Country = "Brazil", Population = 216422446 },
+            new PopulationDetails() { Continent ="North America", Country = "Mexico", Population = 128455567 },
+            new PopulationDetails() { Continent ="South America", Country = "Colombia", Population = 52085168 },
+            new PopulationDetails() { Continent ="South America", Country = "Argentina", Population = 45773884 },
+            new PopulationDetails() { Continent ="North America", Country = "Canada", Population = 38781292 },
+            new PopulationDetails() { Continent ="South America", Country = "Peru", Population = 34352719 },
+            new PopulationDetails() { Continent ="South America", Country = "Venezuela", Population = 28838499 },
+            new PopulationDetails() { Continent ="South America", Country = "Chile", Population = 19629590 },
+            new PopulationDetails() { Continent ="South America", Country = "Ecuador", Population = 18190484 },
+            new PopulationDetails() { Continent ="North America", Country = "Guatemala", Population = 18092026 },
+            new PopulationDetails() { Continent ="South America", Country = "Bolivia", Population = 12388571 },
+            new PopulationDetails() { Continent ="North America", Country = "Honduras", Population = 10593798 },
+            new PopulationDetails() { Continent ="North America", Country = "Nicaragua", Population = 7046311 },
+            new PopulationDetails() { Continent ="South America", Country = "Paraguay", Population = 6861524 },
+            new PopulationDetails() { Continent ="North America", Country = "El Salvador", Population = 6364943 },
+            new PopulationDetails() { Continent ="North America", Country = "Costa Rica", Population = 5212173 },
+            new PopulationDetails() { Continent ="South America", Country = "Uruguay", Population = 3423109 },
+        };
     }
+
     public ObservableCollection<PopulationDetails> PopulationDetails
     {
         get;
@@ -830,19 +844,19 @@ public class PopulationViewModel
 <tr>
 <td>{{'[Color](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.DesaturationColorMapping.html#Syncfusion_SfTreeMap_XForms_DesaturationColorMapping_Color)'| markdownify }}</td>
 <td>Brush</td>
-<td>Gets or sets the color value for the tree map item. This is used to set color for each tree map item.</td>
+<td>Gets or sets the background brush for the desaturation in the SfTreeMap.</td>
 </tr>
 
 <tr>
 <td>{{'[From](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.DesaturationColorMapping.html#Syncfusion_SfTreeMap_XForms_DesaturationColorMapping_From)'| markdownify }}</td>
 <td>From</td>
-<td>Gets or sets the from value for desaturation. The From value is used to point where the desaturation starts.</td>
+<td>Gets or sets the starting value for the desaturation range in the SfTreeMap.</td>
 </tr>
 
 <tr>
 <td>{{'[To](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.DesaturationColorMapping.html#Syncfusion_SfTreeMap_XForms_DesaturationColorMapping_To)'| markdownify }}</td>
 <td>To</td>
-<td>Gets or sets the two values for desaturation. The To value is used to point where the desaturation ends.</td>
+<td>Gets or sets the ending value for the desaturation range in the SfTreeMap.</td>
 </tr>
 
 </table>
@@ -850,94 +864,101 @@ public class PopulationViewModel
 ### TreeMapPaletteBrushSettings
 
 {% tabs %}
-{% highlight XAML hl_lines="10 11 12 13 14 15 16 17 18" %}
+{% highlight XAML hl_lines="12 13 14 15 16 17 18 19 20 21 22 23" %}
 
 <treemap:SfTreeMap x:Name="treeMap"
-                DataSource="{Binding PopulationDetails}"
-                PrimaryValuePath="Population"
-                RangeColorValuePath="Population">
+                   DataSource="{Binding PopulationDetails}"
+                   PrimaryValuePath="Population"
+                   RangeColorValuePath="Population">
     <treemap:SfTreeMap.BindingContext>
         <local:PopulationViewModel />
     </treemap:SfTreeMap.BindingContext>
-        <treemap:SfTreeMap.LeafItemSettings>
-            <treemap:TreeMapLeafItemSettings LabelPath="Country">
-                <treemap:SfTreeMap.LeafItemBrushSettings>
-                    <treemap:TreeMapPaletteBrushSettings>
-                        <treemap:TreeMapPaletteBrushSettings.Brushes>
-                            <SolidColorBrush>#116DF9</SolidColorBrush>
-                            <SolidColorBrush>#9215F3</SolidColorBrush>
-                            <SolidColorBrush>#F4890B</SolidColorBrush>
-                            <SolidColorBrush>#D21243</SolidColorBrush>
-                            <SolidColorBrush>#E2227E</SolidColorBrush>
-                            <SolidColorBrush>#9215F3</SolidColorBrush>
-                    </treemap:TreeMapPaletteBrushSettings.Brushes>
-                </treemap:TreeMapPaletteBrushSettings>
-            </treemap:SfTreeMap.LeafItemBrushSettings>
-    </treemap:TreeMapLeafItemSettings>
+    <treemap:SfTreeMap.LeafItemSettings>
+        <treemap:TreeMapLeafItemSettings LabelPath="Country">
+        </treemap:TreeMapLeafItemSettings>
     </treemap:SfTreeMap.LeafItemSettings>
+    <treemap:SfTreeMap.LeafItemBrushSettings>
+        <treemap:TreeMapPaletteBrushSettings>
+            <treemap:TreeMapPaletteBrushSettings.Brushes>
+                <SolidColorBrush>#116DF9</SolidColorBrush>
+                <SolidColorBrush>#9215F3</SolidColorBrush>
+                <SolidColorBrush>#F4890B</SolidColorBrush>
+                <SolidColorBrush>#D21243</SolidColorBrush>
+                <SolidColorBrush>#E2227E</SolidColorBrush>
+                <SolidColorBrush>#9215F3</SolidColorBrush>
+            </treemap:TreeMapPaletteBrushSettings.Brushes>
+        </treemap:TreeMapPaletteBrushSettings>
+    </treemap:SfTreeMap.LeafItemBrushSettings>
 </treemap:SfTreeMap>
 
 {% endhighlight %}
 
-{% highlight C# hl_lines="1 9 11 12 13" %}
+{% highlight C# hl_lines="4 5 6 7 8 9 10 11 12 13 14 15" %}
 
 SfTreeMap treeMap = new SfTreeMap();
 PopulationViewModel viewModel = new PopulationViewModel();
 treeMap.DataSource = viewModel.PopulationDetails;
 this.treeMap.LeafItemBrushSettings = new TreeMapPaletteBrushSettings()
 {
-Brushes = new List<Brush>()
-{
-new SolidColorBrush(Color.FromArgb("#116DF9")),
-new SolidColorBrush(Color.FromArgb("#9215F3")),
-new SolidColorBrush(Color.FromArgb("#F4890B")),
-new SolidColorBrush(Color.FromArgb("#D21243")),
-new SolidColorBrush(Color.FromArgb("#E2227E")),
-new SolidColorBrush(Color.FromArgb("#9215F3")),
-}
+    Brushes = new List<Brush>()
+    {
+        new SolidColorBrush(Color.FromArgb("#116DF9")),
+        new SolidColorBrush(Color.FromArgb("#9215F3")),
+        new SolidColorBrush(Color.FromArgb("#F4890B")),
+        new SolidColorBrush(Color.FromArgb("#D21243")),
+        new SolidColorBrush(Color.FromArgb("#E2227E")),
+        new SolidColorBrush(Color.FromArgb("#9215F3")),
+    }
 };
+
 this.Content = treeMap;
 
 {% endhighlight %}
 {% highlight C# tabtitle="PopulationDetails.cs" %}
 
-// Represents demographic information for a specific country.
+/// <summary>    
+/// Represents the custom data properties.
+/// </summary>
 public class PopulationDetails
 {
     public string Country { get; set; }
     public string Continent { get; set; }
     public int Population { get; set; }
 }
+
 {% endhighlight %}
 {% highlight c# tabtitle="PopulationViewModel.cs" %}
 
-// Presents demographic information for countries in the Americas for the year 2023.
+/// <summary>    
+/// Represents demographic information for countries in the Americas for the year 2023.
+/// </summary>
 public class PopulationViewModel
 {
     public PopulationViewModel()
     {
         this.PopulationDetails = new ObservableCollection<PopulationDetails>()
-            {
-                new PopulationDetails() { Continent ="North America", Country = "United States of America", Population = 339996564 },
-                new PopulationDetails() { Continent ="South America", Country = "Brazil", Population = 216422446 },
-                new PopulationDetails() { Continent ="North America", Country = "Mexico", Population = 128455567 },
-                new PopulationDetails() { Continent ="South America", Country = "Colombia", Population = 52085168 },
-                new PopulationDetails() { Continent ="South America", Country = "Argentina", Population = 45773884 },
-                new PopulationDetails() { Continent ="North America", Country = "Canada", Population = 38781292 },
-                new PopulationDetails() { Continent ="South America", Country = "Peru", Population = 34352719 },
-                new PopulationDetails() { Continent ="South America", Country = "Venezuela", Population = 28838499 },
-                new PopulationDetails() { Continent ="South America", Country = "Chile", Population = 19629590 },
-                new PopulationDetails() { Continent ="South America", Country = "Ecuador", Population = 18190484 },
-                new PopulationDetails() { Continent ="North America", Country = "Guatemala", Population = 18092026 },
-                new PopulationDetails() { Continent ="South America", Country = "Bolivia", Population = 12388571 },
-                new PopulationDetails() { Continent ="North America", Country = "Honduras", Population = 10593798 },
-                new PopulationDetails() { Continent ="North America", Country = "Nicaragua", Population = 7046311 },
-                new PopulationDetails() { Continent ="South America", Country = "Paraguay", Population = 6861524 },
-                new PopulationDetails() { Continent ="North America", Country = "El Salvador", Population = 6364943 },
-                new PopulationDetails() { Continent ="North America", Country = "Costa Rica", Population = 5212173 },
-                new PopulationDetails() { Continent ="South America", Country = "Uruguay", Population = 3423109 },
-            };
+        {
+            new PopulationDetails() { Continent ="North America", Country = "United States of America", Population = 339996564 },
+            new PopulationDetails() { Continent ="South America", Country = "Brazil", Population = 216422446 },
+            new PopulationDetails() { Continent ="North America", Country = "Mexico", Population = 128455567 },
+            new PopulationDetails() { Continent ="South America", Country = "Colombia", Population = 52085168 },
+            new PopulationDetails() { Continent ="South America", Country = "Argentina", Population = 45773884 },
+            new PopulationDetails() { Continent ="North America", Country = "Canada", Population = 38781292 },
+            new PopulationDetails() { Continent ="South America", Country = "Peru", Population = 34352719 },
+            new PopulationDetails() { Continent ="South America", Country = "Venezuela", Population = 28838499 },
+            new PopulationDetails() { Continent ="South America", Country = "Chile", Population = 19629590 },
+            new PopulationDetails() { Continent ="South America", Country = "Ecuador", Population = 18190484 },
+            new PopulationDetails() { Continent ="North America", Country = "Guatemala", Population = 18092026 },
+            new PopulationDetails() { Continent ="South America", Country = "Bolivia", Population = 12388571 },
+            new PopulationDetails() { Continent ="North America", Country = "Honduras", Population = 10593798 },
+            new PopulationDetails() { Continent ="North America", Country = "Nicaragua", Population = 7046311 },
+            new PopulationDetails() { Continent ="South America", Country = "Paraguay", Population = 6861524 },
+            new PopulationDetails() { Continent ="North America", Country = "El Salvador", Population = 6364943 },
+            new PopulationDetails() { Continent ="North America", Country = "Costa Rica", Population = 5212173 },
+            new PopulationDetails() { Continent ="South America", Country = "Uruguay", Population = 3423109 },
+        };
     }
+
     public ObservableCollection<PopulationDetails> PopulationDetails
     {
         get;
@@ -957,47 +978,49 @@ public class PopulationViewModel
 <tr>
 <td>{{'[Colors](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.PaletteColorMapping.html#Syncfusion_SfTreeMap_XForms_PaletteColorMapping_Colors)'| markdownify }}</td>
 <td>Brushes</td>
-<td>Gets or sets the color value for the tree map item. The Colors is a collection of colors.</td>
+<td>Gets or sets the list of brushes used for the palette in the SfTreeMap.</td>
 </tr>
 
 </table>
 
 ### TreeMapRangeBrushSettings
+
 To categorize leaf nodes in a TreeMap according to different ranges of background color values, use `TreeMapRangeBrushSettings`. Define the upper and lower limits of each range using the `To` and `From` properties of `TreeMapRangeBrush`.
 
 #### TreeMapRangeBrush
+
 {% tabs %}
-{% highlight XAML hl_lines="11 12" %}
+{% highlight XAML hl_lines="12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28" %}
 
 <treemap:SfTreeMap x:Name="treeMap"
-                DataSource="{Binding PopulationDetails}"
-                PrimaryValuePath="Population"
-                RangeColorValuePath="Population">
+                   DataSource="{Binding PopulationDetails}"
+                   PrimaryValuePath="Population"
+                   RangeColorValuePath="Population">
     <treemap:SfTreeMap.BindingContext>
         <local:PopulationViewModel />
     </treemap:SfTreeMap.BindingContext>
     <treemap:SfTreeMap.LeafItemSettings>
         <treemap:TreeMapLeafItemSettings LabelPath="Country">
-            <treemap:SfTreeMap.LeafItemBrushSettings>
-                <treemap:TreeMapRangeBrushSettings>
-                    <treemap:TreeMapRangeBrushSettings.RangeBrushes>
-                        <treemap:TreeMapRangeBrush LegendLabel="50M - 1B"
-                                                        From="50000000"
-                                                        To="1000000000" 
-                                                        Brush ="#F0A868" />
-                        <treemap:TreeMapRangeBrush LegendLabel="10M - 50M"
-                                                        From="10000000"
-                                                        To="50000000" 
-                                                        Brush ="#F3BC8B" />
-                        <treemap:TreeMapRangeBrush LegendLabel="0.1M - 10M"
-                                                        From="100000" 
-                                                        To="10000000"  
-                                                        Brush= "#F8D7B9" />
-                    </treemap:TreeMapRangeBrushSettings.RangeBrushes>
-                </treemap:TreeMapRangeBrushSettings>
-            </treemap:SfTreeMap.LeafItemBrushSettings>
         </treemap:TreeMapLeafItemSettings>
     </treemap:SfTreeMap.LeafItemSettings>
+    <treemap:SfTreeMap.LeafItemBrushSettings>
+        <treemap:TreeMapRangeBrushSettings>
+            <treemap:TreeMapRangeBrushSettings.RangeBrushes>
+                <treemap:TreeMapRangeBrush LegendLabel="50M - 1B"
+                                           From="50000000"
+                                           To="1000000000" 
+                                           Brush ="#F0A868" />
+                <treemap:TreeMapRangeBrush LegendLabel="10M - 50M"
+                                           From="10000000"
+                                           To="50000000" 
+                                           Brush ="#F3BC8B" />
+                <treemap:TreeMapRangeBrush LegendLabel="0.1M - 10M"
+                                           From="100000" 
+                                           To="10000000"  
+                                           Brush= "#F8D7B9" />
+            </treemap:TreeMapRangeBrushSettings.RangeBrushes>
+        </treemap:TreeMapRangeBrushSettings>
+    </treemap:SfTreeMap.LeafItemBrushSettings>
     <treemap:SfTreeMap.LegendSettings>
         <treemap:TreeMapLegendSettings ShowLegend="True">
         </treemap:TreeMapLegendSettings>
@@ -1013,55 +1036,62 @@ PopulationViewModel viewModel = new PopulationViewModel();
 treeMap.DataSource = viewModel.PopulationDetails;
 this.treeMap.LeafItemBrushSettings = new TreeMapRangeBrushSettings()
 {
-RangeBrushes = new List<TreeMapRangeBrush>()
-{
-new TreeMapRangeBrush() { LegendLabel="50M - 1B", From=50000000, To=1000000000, Brush = new SolidColorBrush(Color.FromArgb("#F0A868")) },
-new TreeMapRangeBrush() { LegendLabel="10M - 50M", From=10000000, To=50000000, Brush = new SolidColorBrush(Color.FromArgb("#F3BC8B")) },
-new TreeMapRangeBrush() { LegendLabel="0.1M - 10M", From=100000, To=10000000, Brush = new SolidColorBrush(Color.FromArgb("#F8D7B9")) },
-}
+    RangeBrushes = new List<TreeMapRangeBrush>()
+    {
+        new TreeMapRangeBrush() { LegendLabel="50M - 1B", From=50000000, To=1000000000, Brush = new SolidColorBrush(Color.FromArgb("#F0A868")) },
+        new TreeMapRangeBrush() { LegendLabel="10M - 50M", From=10000000, To=50000000, Brush = new SolidColorBrush(Color.FromArgb("#F3BC8B")) },
+        new TreeMapRangeBrush() { LegendLabel="0.1M - 10M", From=100000, To=10000000, Brush = new SolidColorBrush(Color.FromArgb("#F8D7B9")) },
+    }
 };
+
 this.Content = treeMap;
 
 {% endhighlight %}
 {% highlight C# tabtitle="PopulationDetails.cs" %}
 
-// Represents demographic information for a specific country.
+/// <summary>    
+/// Represents the custom data properties.
+/// </summary>
 public class PopulationDetails
 {
     public string Country { get; set; }
     public string Continent { get; set; }
     public int Population { get; set; }
 }
+
 {% endhighlight %}
 {% highlight c# tabtitle="PopulationViewModel.cs" %}
 
-// Presents demographic information for countries in the Americas for the year 2023.
+/// <summary>    
+/// Represents demographic information for countries in the Americas for the year 2023.
+/// </summary>
 public class PopulationViewModel
 {
     public PopulationViewModel()
     {
         this.PopulationDetails = new ObservableCollection<PopulationDetails>()
-            {
-                new PopulationDetails() { Continent ="North America", Country = "United States of America", Population = 339996564 },
-                new PopulationDetails() { Continent ="South America", Country = "Brazil", Population = 216422446 },
-                new PopulationDetails() { Continent ="North America", Country = "Mexico", Population = 128455567 },
-                new PopulationDetails() { Continent ="South America", Country = "Colombia", Population = 52085168 },
-                new PopulationDetails() { Continent ="South America", Country = "Argentina", Population = 45773884 },
-                new PopulationDetails() { Continent ="North America", Country = "Canada", Population = 38781292 },
-                new PopulationDetails() { Continent ="South America", Country = "Peru", Population = 34352719 },
-                new PopulationDetails() { Continent ="South America", Country = "Venezuela", Population = 28838499 },
-                new PopulationDetails() { Continent ="South America", Country = "Chile", Population = 19629590 },
-                new PopulationDetails() { Continent ="South America", Country = "Ecuador", Population = 18190484 },
-                new PopulationDetails() { Continent ="North America", Country = "Guatemala", Population = 18092026 },
-                new PopulationDetails() { Continent ="South America", Country = "Bolivia", Population = 12388571 },
-                new PopulationDetails() { Continent ="North America", Country = "Honduras", Population = 10593798 },
-                new PopulationDetails() { Continent ="North America", Country = "Nicaragua", Population = 7046311 },
-                new PopulationDetails() { Continent ="South America", Country = "Paraguay", Population = 6861524 },
-                new PopulationDetails() { Continent ="North America", Country = "El Salvador", Population = 6364943 },
-                new PopulationDetails() { Continent ="North America", Country = "Costa Rica", Population = 5212173 },
-                new PopulationDetails() { Continent ="South America", Country = "Uruguay", Population = 3423109 },
-            };
+        {
+            new PopulationDetails() { Continent ="North America", Country = "United States of America", Population = 339996564 },
+            new PopulationDetails() { Continent ="South America", Country = "Brazil", Population = 216422446 },
+            new PopulationDetails() { Continent ="North America", Country = "Mexico", Population = 128455567 },
+            new PopulationDetails() { Continent ="South America", Country = "Colombia", Population = 52085168 },
+            new PopulationDetails() { Continent ="South America", Country = "Argentina", Population = 45773884 },
+            new PopulationDetails() { Continent ="North America", Country = "Canada", Population = 38781292 },
+            new PopulationDetails() { Continent ="South America", Country = "Peru", Population = 34352719 },
+            new PopulationDetails() { Continent ="South America", Country = "Venezuela", Population = 28838499 },
+            new PopulationDetails() { Continent ="South America", Country = "Chile", Population = 19629590 },
+            new PopulationDetails() { Continent ="South America", Country = "Ecuador", Population = 18190484 },
+            new PopulationDetails() { Continent ="North America", Country = "Guatemala", Population = 18092026 },
+            new PopulationDetails() { Continent ="South America", Country = "Bolivia", Population = 12388571 },
+            new PopulationDetails() { Continent ="North America", Country = "Honduras", Population = 10593798 },
+            new PopulationDetails() { Continent ="North America", Country = "Nicaragua", Population = 7046311 },
+            new PopulationDetails() { Continent ="South America", Country = "Paraguay", Population = 6861524 },
+            new PopulationDetails() { Continent ="North America", Country = "El Salvador", Population = 6364943 },
+            new PopulationDetails() { Continent ="North America", Country = "Costa Rica", Population = 5212173 },
+            new PopulationDetails() { Continent ="South America", Country = "Uruguay", Population = 3423109 },
+        };
     }
+
     public ObservableCollection<PopulationDetails> PopulationDetails
     {
         get;
@@ -1081,50 +1111,49 @@ public class PopulationViewModel
 <tr>
 <td>{{'[LegendLabel](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.Range.html#Syncfusion_SfTreeMap_XForms_Range_LegendLabel)'| markdownify }}</td>
 <td>LegendLabel</td>
-<td>Gets or sets the legend label for the tree map. This is used to describe the range of values.</td>
+<td>Gets or sets the text for the legend item associated with the range in the SfTreeMap.</td>
 </tr>
 
 <tr>
 <td>{{'[Color](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.Range.html#Syncfusion_SfTreeMap_XForms_Range_Color)'| markdownify }}</td>
 <td>Brush</td>
-<td>Gets or sets the Color value for range. This is used to set color for each range.</td>
+<td>Gets or sets the background brush for the range in the SfTreeMap.</td>
 </tr>
 
 <tr>
 <td>{{'[From](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.Range.html#Syncfusion_SfTreeMap_XForms_Range_From)'| markdownify }}</td>
 <td>From</td>
-<td>Gets or sets the from value for Range. The From value is used to point where the range starts.</td>
+<td>Gets or sets the starting value of the range for the background brush in the SfTreeMap.</td>
 </tr>
 
 <tr>
 <td>{{'[To](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.Range.html#Syncfusion_SfTreeMap_XForms_Range_To)'| markdownify }}</td>
 <td>To</td>
-<td>Gets or sets the to value for Range. The To value is used to point where the range ends.</td>
+<td>Gets or sets the ending value of the range for the background brush in the SfTreeMap.</td>
 </tr>
 
 </table>
 
-
 ### TreeMapToolTipSettings
 
 {% tabs %}
-{% highlight XAML hl_lines="10 11" %}
+{% highlight XAML hl_lines="16 17 18" %}
 
 <treemap:SfTreeMap x:Name="treeMap"
-                    DataSource="{Binding PopulationDetails}"
-                    PrimaryValuePath="Population"
-                    ShowToolTip="True"
-                    RangeColorValuePath="Population">
+                   DataSource="{Binding PopulationDetails}"
+                   PrimaryValuePath="Population"
+                   ShowToolTip="True"
+                   RangeColorValuePath="Population">
     <treemap:SfTreeMap.BindingContext>
         <local:PopulationViewModel />
     </treemap:SfTreeMap.BindingContext>
-        <treemap:SfTreeMap.LeafItemSettings>
-            <treemap:TreeMapLeafItemSettings LabelPath="Country">
-                <treemap:SfTreeMap.LeafItemBrushSettings>
-                <treemap:TreeMapUniformBrushSettings Brush="#F8D7B9"/>
-                </treemap:SfTreeMap.LeafItemBrushSettings>
+    <treemap:SfTreeMap.LeafItemSettings>
+        <treemap:TreeMapLeafItemSettings LabelPath="Country">
     </treemap:TreeMapLeafItemSettings>
     </treemap:SfTreeMap.LeafItemSettings>
+    <treemap:SfTreeMap.LeafItemBrushSettings>
+        <treemap:TreeMapUniformBrushSettings Brush="#F8D7B9"/>
+    </treemap:SfTreeMap.LeafItemBrushSettings>
     <treemap:SfTreeMap.ToolTipSettings >
         <treemap:TreeMapToolTipSettings Background = "Red" />
     </treemap:SfTreeMap.ToolTipSettings >
@@ -1143,43 +1172,49 @@ this.Content = treeMap;
 {% endhighlight %}
 {% highlight C# tabtitle="PopulationDetails.cs" %}
 
-// Represents demographic information for a specific country.
+/// <summary>    
+/// Represents the custom data properties.
+/// </summary>
 public class PopulationDetails
 {
     public string Country { get; set; }
     public string Continent { get; set; }
     public int Population { get; set; }
 }
+
 {% endhighlight %}
 {% highlight c# tabtitle="PopulationViewModel.cs" %}
 
-// Presents demographic information for countries in the Americas for the year 2023.
+/// <summary>    
+/// Represents demographic information for countries in the Americas for the year 2023.
+/// </summary>
 public class PopulationViewModel
 {
     public PopulationViewModel()
     {
         this.PopulationDetails = new ObservableCollection<PopulationDetails>()
-            {
-                new PopulationDetails() { Continent ="North America", Country = "United States of America", Population = 339996564 },
-                new PopulationDetails() { Continent ="South America", Country = "Brazil", Population = 216422446 },
-                new PopulationDetails() { Continent ="North America", Country = "Mexico", Population = 128455567 },
-                new PopulationDetails() { Continent ="South America", Country = "Colombia", Population = 52085168 },
-                new PopulationDetails() { Continent ="South America", Country = "Argentina", Population = 45773884 },
-                new PopulationDetails() { Continent ="North America", Country = "Canada", Population = 38781292 },
-                new PopulationDetails() { Continent ="South America", Country = "Peru", Population = 34352719 },
-                new PopulationDetails() { Continent ="South America", Country = "Venezuela", Population = 28838499 },
-                new PopulationDetails() { Continent ="South America", Country = "Chile", Population = 19629590 },
-                new PopulationDetails() { Continent ="South America", Country = "Ecuador", Population = 18190484 },
-                new PopulationDetails() { Continent ="North America", Country = "Guatemala", Population = 18092026 },
-                new PopulationDetails() { Continent ="South America", Country = "Bolivia", Population = 12388571 },
-                new PopulationDetails() { Continent ="North America", Country = "Honduras", Population = 10593798 },
-                new PopulationDetails() { Continent ="North America", Country = "Nicaragua", Population = 7046311 },
-                new PopulationDetails() { Continent ="South America", Country = "Paraguay", Population = 6861524 },
-                new PopulationDetails() { Continent ="North America", Country = "El Salvador", Population = 6364943 },
-                new PopulationDetails() { Continent ="North America", Country = "Costa Rica", Population = 5212173 },
-                new PopulationDetails() { Continent ="South America", Country = "Uruguay", Population = 3423109 },
-            };
+        {
+            new PopulationDetails() { Continent ="North America", Country = "United States of America", Population = 339996564 },
+            new PopulationDetails() { Continent ="South America", Country = "Brazil", Population = 216422446 },
+            new PopulationDetails() { Continent ="North America", Country = "Mexico", Population = 128455567 },
+            new PopulationDetails() { Continent ="South America", Country = "Colombia", Population = 52085168 },
+            new PopulationDetails() { Continent ="South America", Country = "Argentina", Population = 45773884 },
+            new PopulationDetails() { Continent ="North America", Country = "Canada", Population = 38781292 },
+            new PopulationDetails() { Continent ="South America", Country = "Peru", Population = 34352719 },
+            new PopulationDetails() { Continent ="South America", Country = "Venezuela", Population = 28838499 },
+            new PopulationDetails() { Continent ="South America", Country = "Chile", Population = 19629590 },
+            new PopulationDetails() { Continent ="South America", Country = "Ecuador", Population = 18190484 },
+            new PopulationDetails() { Continent ="North America", Country = "Guatemala", Population = 18092026 },
+            new PopulationDetails() { Continent ="South America", Country = "Bolivia", Population = 12388571 },
+            new PopulationDetails() { Continent ="North America", Country = "Honduras", Population = 10593798 },
+            new PopulationDetails() { Continent ="North America", Country = "Nicaragua", Population = 7046311 },
+            new PopulationDetails() { Continent ="South America", Country = "Paraguay", Population = 6861524 },
+            new PopulationDetails() { Continent ="North America", Country = "El Salvador", Population = 6364943 },
+            new PopulationDetails() { Continent ="North America", Country = "Costa Rica", Population = 5212173 },
+            new PopulationDetails() { Continent ="South America", Country = "Uruguay", Population = 3423109 },
+        };
     }
+
     public ObservableCollection<PopulationDetails> PopulationDetails
     {
         get;
@@ -1199,25 +1234,25 @@ public class PopulationViewModel
 <tr>
 <td>{{'[BackgroundColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.TooltipSetting.html#Syncfusion_SfTreeMap_XForms_TooltipSetting_BackgroundColor)'| markdownify }}</td>
 <td>Background</td>
-<td>Gets or sets the background color.</td>
+<td>Gets or sets the background brush for tool tips in the SfTreeMap.</td>
 </tr>
 
 <tr>
 <td>{{'[Duration](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.TooltipSetting.html#Syncfusion_SfTreeMap_XForms_TooltipSetting_Duration)'| markdownify }}</td>
 <td>Duration</td>
-<td>Gets or sets a value to specify the duration time in seconds for which tooltip will be displayed.</td>
+<td>Gets or sets the duration for which tool tips are displayed in the SfTreeMap.</td>
 </tr>
 
 <tr>
 <td>{{'[TextColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.TooltipSetting.html#Syncfusion_SfTreeMap_XForms_TooltipSetting_TextColor)'| markdownify }}</td>
-<td>TextStyle</td>
-<td>Gets or sets to customize the text style.</td>
+<td>TextColor(From TextStyle of ToolTipSettings class)</td>
+<td>Gets or sets the style of tool tips text, that used to customize the text color, font, font size, font family and font attributes.</td>
 </tr>
 
 <tr>
 <td>{{'[StrokeColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.TooltipSetting.html#Syncfusion_SfTreeMap_XForms_TooltipSetting_StrokeColor)'| markdownify }}</td>
 <td>Stroke</td>
-<td>Gets or sets the stroke color.</td>
+<td>Gets or sets the stroke color for the tool tips in the SfTreeMap.</td>
 </tr>
 
 </table>
@@ -1225,24 +1260,24 @@ public class PopulationViewModel
 ### TreeMapLevel
 
 {% tabs %}
-{% highlight XAML hl_lines="10 11" %}
+{% highlight XAML hl_lines="15 16 17" %}
 
 <treemap:SfTreeMap x:Name="treeMap"
-                DataSource="{Binding PopulationDetails}"
-                PrimaryValuePath="Population"
-                RangeColorValuePath="Population">
+                   DataSource="{Binding PopulationDetails}"
+                   PrimaryValuePath="Population"
+                   RangeColorValuePath="Population">
     <treemap:SfTreeMap.BindingContext>
         <local:PopulationViewModel />
     </treemap:SfTreeMap.BindingContext>
-        <treemap:SfTreeMap.LeafItemSettings>
-            <treemap:TreeMapLeafItemSettings LabelPath="Country">
-                <treemap:SfTreeMap.LeafItemBrushSettings>
-                <treemap:TreeMapUniformBrushSettings Brush="#F8D7B9"/>
-                </treemap:SfTreeMap.LeafItemBrushSettings>
+    <treemap:SfTreeMap.LeafItemSettings>
+        <treemap:TreeMapLeafItemSettings LabelPath="Country">
         </treemap:TreeMapLeafItemSettings>
     </treemap:SfTreeMap.LeafItemSettings>
+    <treemap:SfTreeMap.LeafItemBrushSettings>
+        <treemap:TreeMapUniformBrushSettings Brush="#F8D7B9"/>
+    </treemap:SfTreeMap.LeafItemBrushSettings>
     <treemap:SfTreeMap.Levels>
-        <treemap:TreeMapLevel GroupPath="Continent"/>
+       <treemap:TreeMapLevel GroupPath="Continent"/>
     </treemap:SfTreeMap.Levels>
 </treemap:SfTreeMap>
 
@@ -1259,43 +1294,49 @@ this.Content = treeMap;
 {% endhighlight %}
 {% highlight C# tabtitle="PopulationDetails.cs" %}
 
-// Represents demographic information for a specific country.
+/// <summary>    
+/// Represents the custom data properties.
+/// </summary>
 public class PopulationDetails
 {
     public string Country { get; set; }
     public string Continent { get; set; }
     public int Population { get; set; }
 }
+
 {% endhighlight %}
 {% highlight c# tabtitle="PopulationViewModel.cs" %}
 
-// Presents demographic information for countries in the Americas for the year 2023.
+/// <summary>    
+/// Represents demographic information for countries in the Americas for the year 2023.
+/// </summary>
 public class PopulationViewModel
 {
     public PopulationViewModel()
     {
         this.PopulationDetails = new ObservableCollection<PopulationDetails>()
-            {
-                new PopulationDetails() { Continent ="North America", Country = "United States of America", Population = 339996564 },
-                new PopulationDetails() { Continent ="South America", Country = "Brazil", Population = 216422446 },
-                new PopulationDetails() { Continent ="North America", Country = "Mexico", Population = 128455567 },
-                new PopulationDetails() { Continent ="South America", Country = "Colombia", Population = 52085168 },
-                new PopulationDetails() { Continent ="South America", Country = "Argentina", Population = 45773884 },
-                new PopulationDetails() { Continent ="North America", Country = "Canada", Population = 38781292 },
-                new PopulationDetails() { Continent ="South America", Country = "Peru", Population = 34352719 },
-                new PopulationDetails() { Continent ="South America", Country = "Venezuela", Population = 28838499 },
-                new PopulationDetails() { Continent ="South America", Country = "Chile", Population = 19629590 },
-                new PopulationDetails() { Continent ="South America", Country = "Ecuador", Population = 18190484 },
-                new PopulationDetails() { Continent ="North America", Country = "Guatemala", Population = 18092026 },
-                new PopulationDetails() { Continent ="South America", Country = "Bolivia", Population = 12388571 },
-                new PopulationDetails() { Continent ="North America", Country = "Honduras", Population = 10593798 },
-                new PopulationDetails() { Continent ="North America", Country = "Nicaragua", Population = 7046311 },
-                new PopulationDetails() { Continent ="South America", Country = "Paraguay", Population = 6861524 },
-                new PopulationDetails() { Continent ="North America", Country = "El Salvador", Population = 6364943 },
-                new PopulationDetails() { Continent ="North America", Country = "Costa Rica", Population = 5212173 },
-                new PopulationDetails() { Continent ="South America", Country = "Uruguay", Population = 3423109 },
-            };
+        {
+            new PopulationDetails() { Continent ="North America", Country = "United States of America", Population = 339996564 },
+            new PopulationDetails() { Continent ="South America", Country = "Brazil", Population = 216422446 },
+            new PopulationDetails() { Continent ="North America", Country = "Mexico", Population = 128455567 },
+            new PopulationDetails() { Continent ="South America", Country = "Colombia", Population = 52085168 },
+            new PopulationDetails() { Continent ="South America", Country = "Argentina", Population = 45773884 },
+            new PopulationDetails() { Continent ="North America", Country = "Canada", Population = 38781292 },
+            new PopulationDetails() { Continent ="South America", Country = "Peru", Population = 34352719 },
+            new PopulationDetails() { Continent ="South America", Country = "Venezuela", Population = 28838499 },
+            new PopulationDetails() { Continent ="South America", Country = "Chile", Population = 19629590 },
+            new PopulationDetails() { Continent ="South America", Country = "Ecuador", Population = 18190484 },
+            new PopulationDetails() { Continent ="North America", Country = "Guatemala", Population = 18092026 },
+            new PopulationDetails() { Continent ="South America", Country = "Bolivia", Population = 12388571 },
+            new PopulationDetails() { Continent ="North America", Country = "Honduras", Population = 10593798 },
+            new PopulationDetails() { Continent ="North America", Country = "Nicaragua", Population = 7046311 },
+            new PopulationDetails() { Continent ="South America", Country = "Paraguay", Population = 6861524 },
+            new PopulationDetails() { Continent ="North America", Country = "El Salvador", Population = 6364943 },
+            new PopulationDetails() { Continent ="North America", Country = "Costa Rica", Population = 5212173 },
+            new PopulationDetails() { Continent ="South America", Country = "Uruguay", Population = 3423109 },
+        };
     }
+
     public ObservableCollection<PopulationDetails> PopulationDetails
     {
         get;
@@ -1315,48 +1356,49 @@ public class PopulationViewModel
 <tr>
 <td>{{'[LabelPath](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.TreeMapLevel.html#Syncfusion_SfTreeMap_XForms_TreeMapLevel_LabelPath)'| markdownify }}</td>
 <td>GroupPath</td>
-<td>Gets or sets the Header path property. This property is used to set the path for header of the tree map.</td>
+<td>Gets or sets the property path used for grouping tree map items in the SfTreeMap.</td>
 </tr>
 
 <tr>
 <td>{{'[GroupBackground](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.TreeMapFlatLevel.html#Syncfusion_SfTreeMap_XForms_TreeMapFlatLevel_GroupBackground)'| markdownify }}</td>
 <td>Background</td>
-<td>Gets or sets the Group Background color property. This property is used to set the backround</td>
+<td>Gets or sets the background brush for the tree map header items in the SfTreeMap.</td>
 </tr>
 
 <tr>
 <td>{{'[GroupBorderColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.TreeMapFlatLevel.html#Syncfusion_SfTreeMap_XForms_TreeMapFlatLevel_GroupBorderColor)'| markdownify }}</td>
 <td>Stroke</td>
-<td>Gets or sets the Group Border Color property. This property is used to set color for the group of the tree map. This is a bindable property.</td>
+<td>Gets or sets the stroke color for the tree map header items in the SfTreeMap.</td>
 </tr>
 
 <tr>
 <td>{{'[GroupBorderThickness](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.TreeMapFlatLevel.html#Syncfusion_SfTreeMap_XForms_TreeMapFlatLevel_GroupBorderThickness)'| markdownify }}</td>
 <td>StrokeWidth</td>
-<td>Gets or sets the Group Border Thickness property. This property is used to set thickness for the groups of the tree map.</td>
+<td>Gets or sets the width of the stroke for the tree map header items in the SfTreeMap.</td>
 </tr>
 
 <tr>
 <td>{{'[GroupGap](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.TreeMapFlatLevel.html#Syncfusion_SfTreeMap_XForms_TreeMapFlatLevel_GroupGap)'| markdownify }}</td>
 <td>Spacing</td>
-<td>Gets or sets the Group Gap property. This property is used to customize the gap between the groups of the tree map.</td>
+<td>Gets or sets the spacing between the tree map header items in the SfTreeMap.</td>
 </tr>
 
 <tr>
 <td>{{'[HeaderStyle](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.TreeMapLevel.html#Syncfusion_SfTreeMap_XForms_TreeMapLevel_HeaderStyle)'| markdownify }}</td>
 <td>TextStyle</td>
-<td>Gets or sets the customize the text property.</td>
+<td>Gets or sets the style of header item text, that used to customize the text color, font, font size, font family and font attributes.</td>
 </tr>
 
 <tr>
 <td>{{'[HeaderHeight](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.TreeMapLevel.html#Syncfusion_SfTreeMap_XForms_TreeMapLevel_HeaderHeight)'| markdownify }}</td>
 <td>HeaderHeight</td>
-<td>Gets or sets the HeaderHeight property. This property is used to set the height of the header for the tree map.</td>
+<td>Gets or sets the height of the header for each level in the SfTreeMap.</td>
 </tr>
 
 </table>
 
 ### TreeMapTextStyle
+
 The `FontColor`, `FontSize`, `FontFamily`, and `FontAttributes` properties of the `SfTreeMap` is grouped to `TreeMapTextStyle`.
 
 <table>
@@ -1369,25 +1411,25 @@ The `FontColor`, `FontSize`, `FontFamily`, and `FontAttributes` properties of th
 <tr>
 <td>{{'[Color](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.Style.html#Syncfusion_SfTreeMap_XForms_Style_Color)'| markdownify }}</td>
 <td>TextColor</td>
-<td>Gets or sets the text color for the SfTreeMap control.</td>
+<td>Gets or sets the text color for the SfTreeMap.</td>
 </tr>
 
 <tr>
 <td>{{'[FontSize](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.Style.html#Syncfusion_SfTreeMap_XForms_Style_FontSize)'| markdownify }}</td>
 <td>FontSize</td>
-<td>Gets or sets the double value that represents the font size of the SfTreeMap control.</td>
+<td>Gets or sets the double value that represents the font size of the SfTreeMap.</td>
 </tr>
 
 <tr>
 <td>{{'[FontFamily](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.Style.html#Syncfusion_SfTreeMap_XForms_Style_FontFamily)'| markdownify }}</td>
 <td>FontFamily</td>
-<td>Gets or sets the string, that represents font family of the SfTreeMap control.</td>
+<td>Gets or sets the string, that represents font family of the SfTreeMap.</td>
 </tr>
 
 <tr>
 <td>{{'[FontAttributes](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.Style.html#Syncfusion_SfTreeMap_XForms_Style_FontAttributes)'| markdownify }}</td>
 <td>FontAttributes</td>
-<td>Gets or sets the FontAttributes of the SfTreeMap control.</td>
+<td>Gets or sets the FontAttributes of the SfTreeMap.</td>
 </tr>
 
 </table>
@@ -1422,7 +1464,7 @@ The `FontColor`, `FontSize`, `FontFamily`, and `FontAttributes` properties of th
 <tr>
 <td>{{'[LegendIcons](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.LegendIcons.html)'| markdownify }}</td>
 <td>LegendIconType</td>
-<td>Specifies the shape of icons used in legends for the SfTreeMap.</td>
+<td>Specifies the shape of icons used in legends for the SfTreeMap control.</td>
 </tr>
 
 <tr>
@@ -1443,7 +1485,7 @@ The `FontColor`, `FontSize`, `FontFamily`, and `FontAttributes` properties of th
 </tr>
 
 <tr>
-<td>{{'[TreeMapItemSelectedEventHandler](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.SfTreeMap.TreeMapItemSelectedEventHandler.html)'| markdownify }}</td>
+<td>{{'[ItemSelected](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.SfTreeMap.TreeMapItemSelectedEventHandler.html)'| markdownify }}</td>
 <td>SelectionChanged</td>
 <td>Provides data for the event when the selection is changed in the SfTreeMap.</td>
 </tr>
@@ -1451,6 +1493,6 @@ The `FontColor`, `FontSize`, `FontFamily`, and `FontAttributes` properties of th
 
 ## Upcoming features
 
+* Legend template support.
 * Drill down support.
 * RTL support.
-* Legend template support.
