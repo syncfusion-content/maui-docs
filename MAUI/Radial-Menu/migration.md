@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Migrate from Xamarin to .NET MAUI RadialMenu Control (SfRadialMenu) | Syncfusion
+title: Migrate from Xamarin SfRadialMenu to .NET MAUI SfRadialMenu | Syncfusion
 description: Learn about Migrating from Syncfusion Xamarin.Forms RadialMenu control to .NET MAUI RadialMenu control.
 platform: maui
 control: RadialMenu (SfRadialMenu) control
 documentation: ug
 ---
  
-# Migrate from Xamarin.Forms RadialMenu Control to .NET MAUI RadialMenu Control (SfRadialMenuControl)
+# Migrate from Xamarin.Forms RadialMenu to .NET MAUI RadialMenu Control
 
 To make the migration from the [Xamarin SfRadialMenu Control](https://www.syncfusion.com/xamarin-ui-controls/xamarin-radialMenu-control) to the [.NET MAUI SfRadialMenu Control](https://www.syncfusion.com/maui-controls/maui-radialMenu-control) easier, most of the APIs from the `Xamarin SfRadialMenu Control` were kept in the `.NET MAUI SfRadialMenu Control`. However, to maintain the consistency of API naming in the `.NET MAUI SfRadialMenu Control`, some of the APIs have been renamed. Please find the difference in the following topics.
 
