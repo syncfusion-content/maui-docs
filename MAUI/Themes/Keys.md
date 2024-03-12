@@ -1701,8 +1701,6 @@ This page lists the keys for each control and the element to which it is mapped 
     </tr>
 </table>
 
-</table>
-
 ## SfPullToRefresh
 
 <table>
