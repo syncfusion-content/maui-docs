@@ -510,8 +510,6 @@ This page lists the keys for each control and the element to which it is mapped 
         </td>
     </tr>
     <tr>
-    <td>
-        </td>
         <td>
             SfPickerNormalHeaderBackground 
             <br/>
@@ -524,8 +522,6 @@ This page lists the keys for each control and the element to which it is mapped 
         </td>
     </tr>
     <tr>
-    <td>
-        </td>
         <td>
             SfPickerNormalHeaderDividerColor 
             <br/>
@@ -538,8 +534,6 @@ This page lists the keys for each control and the element to which it is mapped 
         </td>
     </tr>
     <tr>
-    <td>
-        </td>
         <td>
             SfPickerNormalFooterTextColor 
             <br/>
@@ -552,8 +546,6 @@ This page lists the keys for each control and the element to which it is mapped 
         </td>
     </tr>
     <tr>
-    <td>
-        </td>
         <td>
             SfPickerNormalFooterBackground 
             <br/>
@@ -566,8 +558,6 @@ This page lists the keys for each control and the element to which it is mapped 
         </td>
     </tr>
     <tr>
-    <td>
-        </td>
         <td>
             SfPickerNormalFooterDividerColor 
             <br/>
@@ -580,8 +570,6 @@ This page lists the keys for each control and the element to which it is mapped 
         </td>
     </tr>
     <tr>
-    <td>
-        </td>
         <td>
             SfPickerSelectionBackground 
             <br/>
@@ -594,8 +582,6 @@ This page lists the keys for each control and the element to which it is mapped 
         </td>
     </tr>
     <tr>
-    <td>
-        </td>
         <td>
             SfPickerSelectionStroke 
             <br/>
@@ -608,8 +594,6 @@ This page lists the keys for each control and the element to which it is mapped 
         </td>
     </tr>
     <tr>
-    <td>
-        </td>
         <td>
             SfPickerNormalColumnHeaderTextColor 
             <br/>
@@ -622,8 +606,6 @@ This page lists the keys for each control and the element to which it is mapped 
         </td>
     </tr>
     <tr>
-    <td>
-        </td>
         <td>
             SfPickerNormalColumnHeaderBackground 
             <br/>
@@ -636,8 +618,6 @@ This page lists the keys for each control and the element to which it is mapped 
         </td>
     </tr>
     <tr>
-    <td>
-        </td>
         <td>
             SfPickerNormalColumnHeaderDividerColor 
             <br/>
@@ -650,8 +630,6 @@ This page lists the keys for each control and the element to which it is mapped 
         </td>
     </tr>
     <tr>
-    <td>
-        </td>
         <td>
             SfPickerNormalColumnDividerColor 
             <br/>
@@ -664,8 +642,6 @@ This page lists the keys for each control and the element to which it is mapped 
         </td>
     </tr>
     <tr>
-    <td>
-        </td>
         <td>
             SfPickerSelectedTextColor 
             <br/>
@@ -678,8 +654,6 @@ This page lists the keys for each control and the element to which it is mapped 
         </td>
     </tr>
     <tr>
-    <td>
-        </td>
         <td>
             SfPickerNormalTextColor 
             <br/>
@@ -710,7 +684,6 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </th>
     </tr>
-
     <tr>
         <td rowspan="14">
             SfDatePickerStyles  
@@ -766,8 +739,6 @@ This page lists the keys for each control and the element to which it is mapped 
     </tr>
 	</tr>
     <tr>
-    <td>
-        </td>
         <td>
             SfDatePickerNormalHeaderTextColor 
             <br/>
@@ -780,8 +751,6 @@ This page lists the keys for each control and the element to which it is mapped 
         </td>
     </tr>
     <tr>
-    <td>
-        </td>
         <td>
             SfDatePickerNormalHeaderBackground 
             <br/>
@@ -794,8 +763,6 @@ This page lists the keys for each control and the element to which it is mapped 
         </td>
     </tr>
     <tr>
-    <td>
-        </td>
         <td>
             SfDatePickerNormalHeaderDividerColor 
             <br/>
@@ -808,8 +775,6 @@ This page lists the keys for each control and the element to which it is mapped 
         </td>
     </tr>
     <tr>
-    <td>
-        </td>
         <td>
             SfDatePickerNormalFooterTextColor 
             <br/>
@@ -822,8 +787,6 @@ This page lists the keys for each control and the element to which it is mapped 
         </td>
     </tr>
     <tr>
-    <td>
-        </td>
         <td>
             SfDatePickerNormalFooterBackground 
             <br/>
@@ -836,8 +799,6 @@ This page lists the keys for each control and the element to which it is mapped 
         </td>
     </tr>
     <tr>
-    <td>
-        </td>
         <td>
             SfDatePickerNormalFooterDividerColor 
             <br/>
@@ -850,8 +811,6 @@ This page lists the keys for each control and the element to which it is mapped 
         </td>
     </tr>
     <tr>
-    <td>
-        </td>
         <td>
             SfDatePickerNormalColumnHeaderTextColor 
             <br/>
@@ -864,8 +823,6 @@ This page lists the keys for each control and the element to which it is mapped 
         </td>
     </tr>
     <tr>
-    <td>
-        </td>
         <td>
             SfDatePickerNormalColumnHeaderBackground 
             <br/>
@@ -878,8 +835,6 @@ This page lists the keys for each control and the element to which it is mapped 
         </td>
     </tr>
     <tr>
-    <td>
-        </td>
         <td>
             SfDatePickerNormalColumnHeaderDividerColor 
             <br/>
@@ -892,8 +847,6 @@ This page lists the keys for each control and the element to which it is mapped 
         </td>
     </tr>
     <tr>
-    <td>
-        </td>
         <td>
             SfDatePickerSelectedTextColor 
             <br/>
@@ -906,8 +859,6 @@ This page lists the keys for each control and the element to which it is mapped 
         </td>
     </tr>
     <tr>
-    <td>
-        </td>
         <td>
             SfDatePickerSelectionBackground 
             <br/>
@@ -920,8 +871,6 @@ This page lists the keys for each control and the element to which it is mapped 
         </td>
     </tr>
     <tr>
-    <td>
-        </td>
         <td>
             SfDatePickerSelectionStroke 
             <br/>
@@ -934,8 +883,6 @@ This page lists the keys for each control and the element to which it is mapped 
         </td>
     </tr>
     <tr>
-    <td>
-        </td>
         <td>
             SfDatePickerNormalColumnDividerColor 
             <br/>
@@ -948,8 +895,6 @@ This page lists the keys for each control and the element to which it is mapped 
         </td>
     </tr>
     <tr>
-    <td>
-        </td>
         <td>
             SfDatePickerNormalTextColor 
             <br/>
@@ -980,7 +925,6 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </th>
     </tr>
-
     <tr>
         <td rowspan="14">
             SfTimePickerStyles  
@@ -1022,8 +966,6 @@ This page lists the keys for each control and the element to which it is mapped 
         </td>
         <tr>
         <td>
-        </td>
-        <td>
             SfTimePickerNormalBackground  
             <br/>
             <br/>
@@ -1036,8 +978,6 @@ This page lists the keys for each control and the element to which it is mapped 
     </tr>
 	</tr>
     <tr>
-    <td>
-        </td>
         <td>
             SfTimePickerNormalHeaderTextColor 
             <br/>
@@ -1050,8 +990,6 @@ This page lists the keys for each control and the element to which it is mapped 
         </td>
     </tr>
     <tr>
-    <td>
-        </td>
         <td>
             SfTimePickerNormalHeaderBackground 
             <br/>
@@ -1064,8 +1002,6 @@ This page lists the keys for each control and the element to which it is mapped 
         </td>
     </tr>
     <tr>
-    <td>
-        </td>
         <td>
             SfTimePickerNormalHeaderDividerColor 
             <br/>
@@ -1078,8 +1014,6 @@ This page lists the keys for each control and the element to which it is mapped 
         </td>
     </tr>
     <tr>
-    <td>
-        </td>
         <td>
             SfTimePickerNormalFooterTextColor 
             <br/>
@@ -1092,8 +1026,6 @@ This page lists the keys for each control and the element to which it is mapped 
         </td>
     </tr>
     <tr>
-    <td>
-        </td>
         <td>
             SfTimePickerNormalFooterBackground 
             <br/>
@@ -1106,8 +1038,6 @@ This page lists the keys for each control and the element to which it is mapped 
         </td>
     </tr>
     <tr>
-    <td>
-        </td>
         <td>
             SfTimePickerNormalFooterDividerColor 
             <br/>
@@ -1120,8 +1050,6 @@ This page lists the keys for each control and the element to which it is mapped 
         </td>
     </tr>
     <tr>
-    <td>
-        </td>
         <td>
             SfTimePickerNormalColumnHeaderTextColor 
             <br/>
@@ -1134,8 +1062,6 @@ This page lists the keys for each control and the element to which it is mapped 
         </td>
     </tr>
     <tr>
-    <td>
-        </td>
         <td>
             SfTimePickerNormalColumnHeaderBackground 
             <br/>
@@ -1148,8 +1074,6 @@ This page lists the keys for each control and the element to which it is mapped 
         </td>
     </tr>
     <tr>
-    <td>
-        </td>
         <td>
             SfTimePickerNormalColumnHeaderDividerColor 
             <br/>
@@ -1162,8 +1086,6 @@ This page lists the keys for each control and the element to which it is mapped 
         </td>
     </tr>
     <tr>
-    <td>
-        </td>
         <td>
             SfTimePickerSelectedTextColor 
             <br/>
@@ -1176,8 +1098,6 @@ This page lists the keys for each control and the element to which it is mapped 
         </td>
     </tr>
     <tr>
-    <td>
-        </td>
         <td>
             SfTimePickerSelectionBackground 
             <br/>
@@ -1190,8 +1110,6 @@ This page lists the keys for each control and the element to which it is mapped 
         </td>
     </tr>
     <tr>
-    <td>
-        </td>
         <td>
             SfTimePickerSelectionStroke 
             <br/>
@@ -1204,8 +1122,6 @@ This page lists the keys for each control and the element to which it is mapped 
         </td>
     </tr>
     <tr>
-    <td>
-        </td>
         <td>
             SfTimePickerNormalColumnDividerColor 
             <br/>
@@ -1218,8 +1134,6 @@ This page lists the keys for each control and the element to which it is mapped 
         </td>
     </tr>
     <tr>
-    <td>
-        </td>
         <td>
             SfTimePickerNormalTextColor 
             <br/>
@@ -1250,7 +1164,6 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </th>
     </tr>
-
     <tr>
         <td rowspan="14">
             SfDateTimePickerStyles  
@@ -1292,8 +1205,6 @@ This page lists the keys for each control and the element to which it is mapped 
         </td>
         <tr>
         <td>
-        </td>
-        <td>
             SfDateTimePickerNormalBackground  
             <br/>
             <br/>
@@ -1306,8 +1217,6 @@ This page lists the keys for each control and the element to which it is mapped 
     </tr>
 	</tr>
     <tr>
-    <td>
-        </td>
         <td>
             SfDateTimePickerNormalHeaderTextColor 
             <br/>
@@ -1320,8 +1229,6 @@ This page lists the keys for each control and the element to which it is mapped 
         </td>
     </tr>
     <tr>
-    <td>
-        </td>
         <td>
             SfDateTimePickerNormalHeaderBackground 
             <br/>
@@ -1334,8 +1241,6 @@ This page lists the keys for each control and the element to which it is mapped 
         </td>
     </tr>
     <tr>
-    <td>
-        </td>
         <td>
             SfDateTimePickerNormalHeaderDividerColor 
             <br/>
@@ -1348,8 +1253,6 @@ This page lists the keys for each control and the element to which it is mapped 
         </td>
     </tr>
     <tr>
-    <td>
-        </td>
         <td>
             SfDateTimePickerHeaderSelectionTextColor 
             <br/>
@@ -1362,8 +1265,6 @@ This page lists the keys for each control and the element to which it is mapped 
         </td>
     </tr>
     <tr>
-    <td>
-        </td>
         <td>
             SfDateTimePickerNormalFooterTextColor 
             <br/>
@@ -1376,8 +1277,6 @@ This page lists the keys for each control and the element to which it is mapped 
         </td>
     </tr>
     <tr>
-    <td>
-        </td>
         <td>
             SfDateTimePickerNormalFooterBackground 
             <br/>
@@ -1390,8 +1289,6 @@ This page lists the keys for each control and the element to which it is mapped 
         </td>
     </tr>
     <tr>
-    <td>
-        </td>
         <td>
             SfDateTimePickerNormalFooterDividerColor 
             <br/>
@@ -1404,8 +1301,6 @@ This page lists the keys for each control and the element to which it is mapped 
         </td>
     </tr>
     <tr>
-    <td>
-        </td>
         <td>
             SfDateTimePickerNormalColumnHeaderTextColor 
             <br/>
@@ -1418,8 +1313,6 @@ This page lists the keys for each control and the element to which it is mapped 
         </td>
     </tr>
     <tr>
-    <td>
-        </td>
         <td>
             SfDateTimePickerNormalColumnHeaderBackground 
             <br/>
@@ -1432,8 +1325,6 @@ This page lists the keys for each control and the element to which it is mapped 
         </td>
     </tr>
     <tr>
-    <td>
-        </td>
         <td>
             SfDateTimePickerNormalColumnHeaderDividerColor 
             <br/>
@@ -1446,8 +1337,6 @@ This page lists the keys for each control and the element to which it is mapped 
         </td>
     </tr>
     <tr>
-    <td>
-        </td>
         <td>
             SfDateTimePickerSelectedTextColor 
             <br/>
@@ -1460,8 +1349,6 @@ This page lists the keys for each control and the element to which it is mapped 
         </td>
     </tr>
     <tr>
-    <td>
-        </td>
         <td>
             SfDateTimePickerSelectionBackground 
             <br/>
@@ -1474,8 +1361,6 @@ This page lists the keys for each control and the element to which it is mapped 
         </td>
     </tr>
     <tr>
-    <td>
-        </td>
         <td>
             SfDateTimePickerSelectionStroke 
             <br/>
@@ -1488,8 +1373,6 @@ This page lists the keys for each control and the element to which it is mapped 
         </td>
     </tr>
     <tr>
-    <td>
-        </td>
         <td>
             SfDateTimePickerNormalColumnDividerColor 
             <br/>
@@ -1502,8 +1385,6 @@ This page lists the keys for each control and the element to which it is mapped 
         </td>
     </tr>
     <tr>
-    <td>
-        </td>
         <td>
             SfDateTimePickerNormalTextColor 
             <br/>
