@@ -11,13 +11,12 @@ documentation: ug
 
 AutoSizing can be enabled in [SfAutocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) control so that the control will extend its layout based on the input content.
 
-[EnableAutoSize] property is used to enable the autoSizing in SfAutocomplete control. To enable the API, you need to set the SelectMode as Multiple and TokensWrapMode as Wrap. The default value of EnableAutoSize is false.
+EnableAutoSize property is used to enable the autoSizing in SfAutocomplete control. To enable the API, you need to set the SelectionMode as Multiple and TokensWrapMode as Wrap. The default value of EnableAutoSize is false.
 
 {% tabs %}
 {% highlight xaml %}
 
-<editors:SfAutocomplete x:Name="autocomplete" 
-             HeightRequest="50"
+<editors:SfAutocomplete x:Name="autocomplete"
              WidthRequest="350"
              ItemsSource="{Binding SocialMedias}"
              SelectionMode="Multiple"
@@ -30,5 +29,5 @@ AutoSizing can be enabled in [SfAutocomplete](https://help.syncfusion.com/cr/mau
 {% endhighlight %}
 {% endtabs %}
 
-![.NET MAUI Autocomplete AutoSize.]
+![.NET MAUI Autocomplete AutoSize.](Images/Selection/net-maui-autocomplete-autosize.png){:width="444" height="393" .lazy .shadow-effect .section-padding .img-padding loading="lazy"}
 

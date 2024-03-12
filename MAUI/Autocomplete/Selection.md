@@ -145,12 +145,12 @@ The selected items can be changed programmatically by using the [SelectedItems](
 
 There are two ways to display multi selection items in the AutoComplete control. They are
 
-* [Wrap]
-* [None]
+* Wrap
+* None
 
-#### Wrap Mode
+#### Wrap mode
 
-When the [TokensWrapMode] is set to [Wrap] the selected items will be wrapped to the next line of the SfAutoComplete.
+When the TokensWrapMode is set to Wrap the selected items will be wrapped to the next line of the SfAutoComplete.
 
 {% tabs %}
 
@@ -170,11 +170,11 @@ When the [TokensWrapMode] is set to [Wrap] the selected items will be wrapped to
 
 {% endtabs %}
 
-![.NET MAUI AutoComplete Multiple selection.]
+![.NET MAUI AutoComplete TokensWrapMode Wrap.](Images/Selection/net-maui-autocomplete-wrapmode.png)
 
 #### None Mode
 
-When the [TokensWrapMode] is set to [None] the selected item will be wrapped in horizontal orientation.
+When the TokensWrapMode is set to None the selected item will be wrapped in horizontal orientation.
 
 {% tabs %}
 
@@ -194,7 +194,7 @@ When the [TokensWrapMode] is set to [None] the selected item will be wrapped in 
 
 {% endtabs %}
 
-![.NET MAUI AutoComplete Multiple selection.]
+![.NET MAUI AutoComplete TokensWrapMode None.](Images/Selection/net-maui-autocomplete-nonemode.png)
  
 ## Selection changed notification
 

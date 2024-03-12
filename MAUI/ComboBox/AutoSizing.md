@@ -11,13 +11,12 @@ documentation: ug
 
 AutoSizing can be enabled in [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) control so that the control will extend its layout based on the input content.
 
-[EnableAutoSize] property is used to enable the autoSizing in SfComboBox control. To enable the API, you need to set the SelectMode as Multiple and TokensWrapMode as Wrap. The default value of EnableAutoSize is false.
+EnableAutoSize property is used to enable the autoSizing in SfComboBox control. To enable the API, you need to set the SelectionMode as Multiple and TokensWrapMode as Wrap. The default value of EnableAutoSize is false.
 
 {% tabs %}
 {% highlight xaml %}
 
-<editors:SfComboBox x:Name="comboBox" 
-             HeightRequest="50"
+<editors:SfComboBox x:Name="comboBox"
              WidthRequest="350"
              ItemsSource="{Binding SocialMedias}"
              SelectionMode="Multiple"
@@ -30,5 +29,5 @@ AutoSizing can be enabled in [SfComboBox](https://help.syncfusion.com/cr/maui/Sy
 {% endhighlight %}
 {% endtabs %}
 
-![.NET MAUI ComboBox AutoSize.]
+![.NET MAUI ComboBox AutoSize.](Images/selection/net-maui-combobox-autosize.png){:width="444" height="393" .lazy .shadow-effect .section-padding .img-padding loading="lazy"}
 

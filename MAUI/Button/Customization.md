@@ -301,6 +301,7 @@ The [`ImageAlignment`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.
 * [`End`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Alignment.html#Syncfusion_Maui_Core_Alignment_End) - Places the image at the right most of [`SfButton`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfButton.html).
 * [`Top`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Alignment.html#Syncfusion_Maui_Core_Alignment_Top) - Places the image at the top of the text.
 * [`Bottom`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Alignment.html#Syncfusion_Maui_Core_Alignment_Bottom) - Places the image at the bottom of the text.
+* Center - Places the image at the center of the text.
 * [`Left`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Alignment.html#Syncfusion_Maui_Core_Alignment_Left) - Although the flow direction has been applied, it always places the image in the left part of [`SfButton`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfButton.html). For example, in the direction of the RTL flow, the image setting will move to the right. Use [`Left`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Alignment.html#Syncfusion_Maui_Core_Alignment_Left) alignment to show this in the same left position.
 * [`Right`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Alignment.html#Syncfusion_Maui_Core_Alignment_Right) - Although flow direction has been applied, the image is always located in the right part of [`SfButton`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfButton.html). For example, in the direction of the RTL flow, the image setting will move to the left. But use [`Right`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Alignment.html#Syncfusion_Maui_Core_Alignment_Right) alignment to show this in the same right position.
 
@@ -457,6 +458,42 @@ SfButton button = new SfButton()
 
 ![SfButton with image with icon image with top alignment](images/customization-images/Button_imagealignment_bottom.png)
 
+**Center image alignment in `SfButton`**
+
+{% tabs %}
+{% highlight xaml %}
+
+<buttons:SfButton x:Name="button" 
+                Text="Shopping"
+                TextColor="Black"
+                HorizontalOptions="Center"
+                ImageSource="add_to_card.png"
+                ShowIcon="True" 
+                ImageSize="25"
+                Stroke="Black"
+                Background="White"
+                ImageAlignment="Center"/>
+
+{% endhighlight %}
+
+{% highlight c# %}
+SfButton button = new SfButton()
+{
+    Text = "Shopping",
+    TextColor = Colors.Black,
+    HorizontalOptions = LayoutOptions.Center,
+    ImageSource = "add_to_card.png",
+    ShowIcon = true,
+    ImageSize = 25,
+    Stroke = Colors.Black,
+    Background = Colors.White,
+    ImageAlignment = Alignment.Center
+};
+
+
+{% endhighlight %}
+{% endtabs %}
+
 **Left image alignment in `SfButton`**
 
 In RTL flow direction, image alignment with [`Start`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Alignment.html#Syncfusion_Maui_Core_Alignment_Start) will change its direction of placing image to the right. To keep that in same left position, set [`Left`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Alignment.html#Syncfusion_Maui_Core_Alignment_Left) alignment as shown in the following code sample.
@@ -536,6 +573,25 @@ SfButton button = new SfButton()
 {% endtabs %}
 
 ![SfButton with image with icon image with right alignment](images/customization-images/Button_imagealignment_right.png)
+
+## EnableRippleEffect
+
+The EnableRippleEffect property is used to control the presence of the ripple effects.
+
+{% tabs %}
+{% highlight xaml %}
+
+<button:SfButton x:Name="button" Text="Button" EnableRippleEffect="True" />
+
+{% endhighlight %}
+{% highlight c# %}
+
+SfButton button = new SfButton();
+button.Text = "Button";
+button.EnableRippleEffect = True;
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Gradient background
 

@@ -133,12 +133,12 @@ The selected items can be changed interactively by using keyboard or by selectin
 
 There are two ways to display multi selection items in the combo box control. They are
 
-* [Wrap]
-* [None]
+* Wrap
+* None
 
-#### Wrap Mode
+#### Wrap mode
 
-When the [TokensWrapMode] is set to [Wrap] the selected items will be wrapped to the next line of the SfComboBox.
+When the TokensWrapMode is set to Wrap the selected items will be wrapped to the next line of the SfComboBox.
 
 {% tabs %}
 
@@ -158,11 +158,11 @@ When the [TokensWrapMode] is set to [Wrap] the selected items will be wrapped to
 
 {% endtabs %}
 
-![.NET MAUI ComboBox Multiple selection.](Images/selection/net-maui-combobox-wrapmode.gif)
+![.NET MAUI ComboBox TokensWrapMode Wrap.](Images/selection/net-maui-combobox-wrapmode.gif)
 
-#### None Mode
+#### None mode
 
-When the [TokensWrapMode] is set to [None] the selected item will be wrapped in horizontal orientation.
+When the TokensWrapMode is set to None the selected item will be wrapped in horizontal orientation.
 
 {% tabs %}
 
@@ -182,7 +182,7 @@ When the [TokensWrapMode] is set to [None] the selected item will be wrapped in 
 
 {% endtabs %}
 
-![.NET MAUI ComboBox Multiple selection.](Images/selection/net-maui-combobox-nonemode.gif)
+![.NET MAUI ComboBox TokensWrapMode None.](Images/selection/net-maui-combobox-nonemode.gif)
 
 ## Selection changed notification
 
