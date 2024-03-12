@@ -787,18 +787,6 @@ This page lists the keys for each control and the element to which it is mapped 
     </tr>  
 	<tr>
     <td>
-            SfCalendarNavigationArrowColor          
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color of navigation arrow.
-            <br/>
-            <br/>
-        </td>
-    </tr>  
-	<tr>
-    <td>
             SfCalendarDisabledNavigationArrowColor          
             <br/>
             <br/>
