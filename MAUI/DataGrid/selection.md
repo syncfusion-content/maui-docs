@@ -299,8 +299,9 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-## Allow Focus
-With DataGridColumn.AllowFocus, you can effortlessly customize your grid view by disabling columns that are not relevant to your current tasks or objectives.
+## Disable focus for a column
+
+By default, the current cell is focusable for all the columns. To disable current cell focus for a particular column, you can simply set `DataGridColumn.AllowFocus` property to `false`.
 
 {% tabs %}
 {% highlight XAML}

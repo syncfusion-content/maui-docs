@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Unbound Columns in MAUI DataGrid control | Syncfusion
-description: Learn here all about Unbound columns support in Syncfusion MAUI DataGrid (SfDataGrid) control and more about it.
+description: Learn here all about unbound columns support in Syncfusion MAUI DataGrid (SfDataGrid) control and more about it.
 platform: MAUI
 control: SfDataGrid
 documentation: UG
@@ -9,7 +9,7 @@ documentation: UG
 
 # Unbound column in MAUI DataGrid (SfDataGrid)
 
-An "Unbound column" typically refers to a column in a datagrid or table that is not directly bound to a data source. In other words, the data displayed in this column is not sourced from the underlying dataset but is rather calculated or manually entered. The unbound column can be added by using the SfDataGrid.DataGridUnboundColumn class.
+The data grid allows adding additional columns that are not bound with data objects from the underlying data source. The unbound column can be added using the [SfDataGrid.DataGridUnboundColumn] class.
 
 {% tabs %}
 {% highlight xaml %}
@@ -18,7 +18,7 @@ An "Unbound column" typically refers to a column in a datagrid or table that is 
                     x:Name="datagrid"    
                     ColumnWidthMode="Fill"
                     AutoGenerateColumnsMode="None"
-                    ItemsSource="{Binding OrderInfoCollection1}">
+                    ItemsSource="{Binding OrderInfoCollection}">
      <syncfusion:SfDataGrid.Columns>
          <syncfusion:DataGridUnboundColumn 
                         MappingName="DiscountPrice"
@@ -43,21 +43,21 @@ An "Unbound column" typically refers to a column in a datagrid or table that is 
                 Format = "C"
             };
             this.datagrid.Columns.Add(DiscountColumn);
-            this.dataGrid.Columns.Add(DiscountColumn);
+            
 
 {% endhighlight %}
 {% endtabs %}
 
-The following screenshot shows the outcome of the previous code:
 
-<img alt="" src="Images\unbound-column\maui-datagrid-sample-example.png" width="404" Height = 396/>
+<img alt="" src="Images\unbound-column\maui-datagrid-sample-example.png" width="404" Height = "396" />
 
+N> It is mandatory to specify the GridColumn.MappingName for SfDataGrid.GridUnboundColumn with some name to identify the column. It is not necessary to define name of the field in the data object.
 
-# Populating data for the unbound column.
-Data can be configured using the Expression or Format properties to provide data for the unbound column.
+# Populating data for the unbound column
+Data for the unbound column can be configured by setting the `Expression` or `Format` property..
 
-# Using Expression.
-The arithmetic or logic expression can be specified by using the expression properly to compute the display value. By default, DataGridUnboundColumn evaluates the expression with casing. The casing will be disabled while evaluating the expression by setting the CaseSensitive property to false.
+# Using Expression
+The arithmetic or logic expression can be specified by using the expression property to compute the display value. By default, `DataGridUnboundColumn` evaluates the expression with casing. The casing will be disabled while evaluating the expression by setting the `CaseSensitive` property to false
 
 List of supported arithmetic and logical operations are as follows:
 
@@ -144,6 +144,7 @@ Logical operation
      <syncfusion:SfDataGrid.Columns>
          <syncfusion:DataGridUnboundColumn 
                             MappingName="DiscountPrice"
+                            Expression="Price1+Price2"
                             HeaderText="SUM"/>
      </syncfusion:SfDataGrid.Columns>
  </syncfusion:SfDataGrid>
@@ -176,11 +177,11 @@ The DataGridUnboundColumnEventArgs provides the following properties:
 ***UnboundAction:*** Defines the action for triggering event.
 ***Value:*** Gets or Sets the value for DataGridUnboundCOlumn cell based on unboundAction.
 
-# Populate the data for the unbound column by handling.
+# Populate the data for the unbound column by handling
 
-QureyUnboundColumnValue event which allows customizing the value of the DataGridUnboundColumn. DataGridUnboundCOlumnEventArgs exposes Value property, by which you can set the value for the grid cells of the unbound column based on the UnboundAction.
+Populate the data for the unbound column by handling `QueryUnboundColumnValue` event which allows customizing the value of the `DataGridUnboundColumn`. `DataGridUnboundColumnEventArgs` exposes `Value` property, by which you can set the value for the grid cells of the unbound column based on the `UnboundAction`.
 
-Refer to the following code example in which data for the unbound column is populated by handling the queryUnboundColumnValue event:
+Refer to the following code example in which data for the unbound column is populated by handling the `QueryUnboundColumnValue` event:
 
 {% tabs %}
 {% highlight C# %}
