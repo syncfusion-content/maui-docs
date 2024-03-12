@@ -265,7 +265,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Trach color of the linear progress bar.
+            Track color of the linear progress bar.
             <br/>
             <br/>
         </td>
@@ -278,7 +278,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Progress bar background of the linear progress bar.
+            Background of the linear progress bar.
         <br/>
         <br/>
         </td>
@@ -290,7 +290,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Progress bar color of the linear progress bar.
+            Color of the progress in linear progress bar.
         <br/>
         <br/>
         </td>
@@ -302,7 +302,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Progress bar secondary progress color of the linear progress bar.
+            Color of the Secondary progress in linear progress bar.
         <br/>
         <br/>
         </td>
@@ -314,7 +314,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Progress bar gradient stop color of the linear progress bar.
+            Gradient stop color of the linear progress bar.
         <br/>
         <br/>
         </td>
@@ -397,7 +397,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Progress color of the circular progress bar.
+            Color of the progress in circular progress bar.
         <br/>
         <br/>
         </td>
@@ -409,7 +409,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Progress bar background of the circular progress bar.
+            Background of the circular progress bar.
         <br/>
         <br/>
         </td>
@@ -421,7 +421,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Progress bar gradient stop color of the circular progress bar.
+            Gradient stop color of the circular progress bar.
         <br/>
         <br/>
         </td>
@@ -446,7 +446,7 @@ This page lists the keys for each control and the element to which it is mapped 
         </th>
     </tr>
     <tr>
-        <td rowspan="14">
+        <td rowspan="55">
             SfPickerStyles  
             <br/>
             <br/>
@@ -516,7 +516,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Normal text color of the picker.
+            Header background color of the picker.
         <br/>
         <br/>
         </td>
@@ -685,7 +685,7 @@ This page lists the keys for each control and the element to which it is mapped 
         </th>
     </tr>
     <tr>
-        <td rowspan="14">
+        <td rowspan="55">
             SfDatePickerStyles  
             <br/>
             <br/>
@@ -926,7 +926,7 @@ This page lists the keys for each control and the element to which it is mapped 
         </th>
     </tr>
     <tr>
-        <td rowspan="14">
+        <td rowspan="55">
             SfTimePickerStyles  
             <br/>
             <br/>
@@ -1165,7 +1165,7 @@ This page lists the keys for each control and the element to which it is mapped 
         </th>
     </tr>
     <tr>
-        <td rowspan="14">
+        <td rowspan="55">
             SfDateTimePickerStyles  
             <br/>
             <br/>
