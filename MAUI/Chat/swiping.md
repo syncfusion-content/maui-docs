@@ -17,7 +17,6 @@ The Swiping can be customized by using the `SfChat.StartSwipeTemplate` when swip
 
 {% tabs %}
 {% highlight xaml hl_lines="17 40" %}
-
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
@@ -275,7 +274,6 @@ The `SwipeEnded` event provides the following properties in their arguments:
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="6" %}
-
     <sfchat:SfChat x:Name="sfChat"                
                    Messages="{Binding Messages}"     
                    CurrentUser="{Binding CurrentUser}"
@@ -318,7 +316,6 @@ The `SfChat` allows you to cancel the swipe programmatically by calling the `SfC
 
 {% tabs %}
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="7" %}
-
  sfChat.SwipeEnded += sfChat_SwipeEnded;
 
  private void sfChat_SwipeEnded(object sender, MessageSwipeEndedEventArgs e)
