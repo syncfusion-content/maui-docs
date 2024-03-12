@@ -170,7 +170,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Fill color of the shimmer
+            Fill color of the shimmer.
             <br/>
             <br/>
         </td>
@@ -183,7 +183,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Wave color of the shimmer
+            Wave color of the shimmer.
         <br/>
         <br/>
         </td>
@@ -195,7 +195,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td> 
         <td>
-            Background color of the shimmer
+            Background color of the shimmer.
             <br/>
             <br/>
         </td>
@@ -265,7 +265,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Trach color of the linear progress bar
+            Trach color of the linear progress bar.
             <br/>
             <br/>
         </td>
@@ -278,7 +278,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Progress bar background of the linear progress bar
+            Progress bar background of the linear progress bar.
         <br/>
         <br/>
         </td>
@@ -290,7 +290,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Progress bar color of the linear progress bar
+            Progress bar color of the linear progress bar.
         <br/>
         <br/>
         </td>
@@ -302,7 +302,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Progress bar secondary progress color of the linear progress bar
+            Progress bar secondary progress color of the linear progress bar.
         <br/>
         <br/>
         </td>
@@ -314,7 +314,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Progress bar gradient stop color of the linear progress bar
+            Progress bar gradient stop color of the linear progress bar.
         <br/>
         <br/>
         </td>
@@ -384,7 +384,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Track color of the circular progress bar
+            Track color of the circular progress bar.
             <br/>
             <br/>
         </td>
@@ -397,7 +397,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Progress bar background of the circular progress bar
+            Progress color of the circular progress bar.
         <br/>
         <br/>
         </td>
@@ -409,7 +409,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Progress bar background of the circular progress bar
+            Progress bar background of the circular progress bar.
         <br/>
         <br/>
         </td>
@@ -421,7 +421,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Progress bar gradient stop color of the circular progress bar
+            Progress bar gradient stop color of the circular progress bar.
         <br/>
         <br/>
         </td>
@@ -445,7 +445,6 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </th>
     </tr>
-
     <tr>
         <td rowspan="14">
             SfPickerStyles  
@@ -487,29 +486,25 @@ This page lists the keys for each control and the element to which it is mapped 
         </td>
         <tr>
         <td>
-        </td>
-        <td>
             SfPickerNormalBackground  
             <br/>
             <br/>
         </td>
         <td>
-            Background color for the SfPicker.
+            Background color of the picker.
             <br/>
             <br/>
         </td>
     </tr>
 	</tr>
     <tr>
-    <td>
-        </td>
         <td>
             SfPickerNormalHeaderTextColor 
             <br/>
             <br/>
         </td>
         <td>
-            Header text color for the SfPicker.
+            Header text color of the picker.
         <br/>
         <br/>
         </td>
@@ -523,7 +518,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Normal text color for the SfPicker.
+            Normal text color of the picker.
         <br/>
         <br/>
         </td>
@@ -537,7 +532,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Header divider color for the SfPicker.
+            Header divider color of the picker.
         <br/>
         <br/>
         </td>
@@ -551,7 +546,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Footer text color for the SfPicker.
+            Footer text color of the picker.
         <br/>
         <br/>
         </td>
@@ -565,7 +560,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Footer background color for the SfPicker.
+            Footer background color of the picker.
         <br/>
         <br/>
         </td>
@@ -579,7 +574,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Footer divider color for the SfPicker.
+            Footer divider color of the picker.
         <br/>
         <br/>
         </td>
@@ -593,7 +588,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Selection background color for the SfPicker.
+            Selection background color of the picker.
         <br/>
         <br/>
         </td>
@@ -607,7 +602,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Selection stoke color for the SfPicker.
+            Selection stoke color of the picker.
         <br/>
         <br/>
         </td>
@@ -621,7 +616,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Column header text color for the SfPicker.
+            Column header text color of the picker.
         <br/>
         <br/>
         </td>
@@ -635,7 +630,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Column header background color for the SfPicker.
+            Column header background color of the picker.
         <br/>
         <br/>
         </td>
@@ -649,7 +644,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Column header divider color for the SfPicker.
+            Column header divider color of the picker.
         <br/>
         <br/>
         </td>
@@ -663,7 +658,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Column divider color for the SfPicker.
+            Column divider color of the picker.
         <br/>
         <br/>
         </td>
@@ -677,7 +672,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Selected text color for the SfPicker.
+            Selected text color of the picker.
         <br/>
         <br/>
         </td>
@@ -691,7 +686,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Normal text color for the SfPicker.
+            Normal text color of the picker.
         <br/>
         <br/>
         </td>
@@ -764,7 +759,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Background color for the SfDatePicker.
+            Background color of the date picker.
             <br/>
             <br/>
         </td>
@@ -779,7 +774,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Header text color for the SfDatePicker.
+            Header text color of the date picker.
         <br/>
         <br/>
         </td>
@@ -793,7 +788,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Header background for the SfDatePicker.
+            Header background color of the date picker.
         <br/>
         <br/>
         </td>
@@ -807,7 +802,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Header divider color for the SfDatePicker.
+            Header divider color of the date picker.
         <br/>
         <br/>
         </td>
@@ -821,7 +816,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Footer text color for the SfDatePicker.
+            Footer text color of the date picker.
         <br/>
         <br/>
         </td>
@@ -835,7 +830,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Footer background color for the SfDatePicker.
+            Footer background color of the date picker.
         <br/>
         <br/>
         </td>
@@ -849,7 +844,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Footer divider color for the SfDatePicker.
+            Footer divider color of the date picker.
         <br/>
         <br/>
         </td>
@@ -863,7 +858,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Column header text color for the SfDatePicker.
+            Column header text color of the date picker.
         <br/>
         <br/>
         </td>
@@ -877,7 +872,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Column header divider color for the SfDatePicker.
+            Column header background color of the date picker.
         <br/>
         <br/>
         </td>
@@ -891,7 +886,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Column header divider color for the SfDatePicker.
+            Column header divider color of the date picker.
         <br/>
         <br/>
         </td>
@@ -905,7 +900,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Selected text color for the SfDatePicker.
+            Selected text color of the date picker.
         <br/>
         <br/>
         </td>
@@ -919,7 +914,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Selection background color for the SfDatePicker.
+            Selection background color of the date picker.
         <br/>
         <br/>
         </td>
@@ -933,7 +928,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Selection stroke color for the SfDatePicker.
+            Selection stroke color of the date picker.
         <br/>
         <br/>
         </td>
@@ -947,7 +942,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Column divider color for the SfDatePicker.
+            Column divider color of the date picker.
         <br/>
         <br/>
         </td>
@@ -961,7 +956,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Normal text color for the SfDatePicker.
+            Normal text color of the date picker.
         <br/>
         <br/>
         </td>
@@ -1034,7 +1029,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Background color for the SfTimePicker.
+            Background color of the time picker.
             <br/>
             <br/>
         </td>
@@ -1049,7 +1044,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Header text color for the SfTimePicker.
+            Header text color of the time picker.
         <br/>
         <br/>
         </td>
@@ -1063,7 +1058,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Header background for the SfTimePicker.
+            Header background color of the time picker.
         <br/>
         <br/>
         </td>
@@ -1077,7 +1072,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Header divider color for the SfTimePicker.
+            Header divider color of the time picker.
         <br/>
         <br/>
         </td>
@@ -1091,7 +1086,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Footer text color for the SfTimePicker.
+            Footer text color of the time picker.
         <br/>
         <br/>
         </td>
@@ -1105,7 +1100,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Footer background color for the SfTimePicker.
+            Footer background color of the time picker.
         <br/>
         <br/>
         </td>
@@ -1119,7 +1114,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Footer divider color for the SfTimePicker.
+            Footer divider color of the time picker.
         <br/>
         <br/>
         </td>
@@ -1133,7 +1128,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Column header text color for the SfTimePicker.
+            Column header text color of the time picker.
         <br/>
         <br/>
         </td>
@@ -1147,7 +1142,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Column header divider color for the SfTimePicker.
+            Column header background color of the time picker.
         <br/>
         <br/>
         </td>
@@ -1161,7 +1156,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Column header divider color for the SfTimePicker.
+            Column header divider color of the time picker.
         <br/>
         <br/>
         </td>
@@ -1175,7 +1170,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Selected text color for the SfTimePicker.
+            Selected text color of the time picker.
         <br/>
         <br/>
         </td>
@@ -1189,7 +1184,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Selection background color for the SfTimePicker.
+            Selection background color of the time picker.
         <br/>
         <br/>
         </td>
@@ -1203,7 +1198,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Selection stroke color for the SfTimePicker.
+            Selection stroke color of the time picker.
         <br/>
         <br/>
         </td>
@@ -1217,7 +1212,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Column divider color for the SfTimePicker.
+            Column divider color of the time picker.
         <br/>
         <br/>
         </td>
@@ -1231,7 +1226,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Normal text color for the SfTimePicker.
+            Normal text color of the time picker.
         <br/>
         <br/>
         </td>
@@ -1304,7 +1299,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Background color for the SfDateTimePicker.
+            Background color of the date time picker.
             <br/>
             <br/>
         </td>
@@ -1319,7 +1314,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Header text color for the SfDateTimePicker.
+            Header text color of the date time picker.
         <br/>
         <br/>
         </td>
@@ -1333,7 +1328,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Header background for the SfDateTimePicker.
+            Header background color of the date time picker.
         <br/>
         <br/>
         </td>
@@ -1347,7 +1342,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Header divider color for the SfDateTimePicker.
+            Header divider color of the date time picker.
         <br/>
         <br/>
         </td>
@@ -1361,7 +1356,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Header selection text color for the SfDateTimePicker.
+            Selected header text color of the date time picker.
         <br/>
         <br/>
         </td>
@@ -1375,7 +1370,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Footer text color for the SfDateTimePicker.
+            Footer text color of the date time picker.
         <br/>
         <br/>
         </td>
@@ -1389,7 +1384,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Footer background color for the SfDateTimePicker.
+            Footer background color of the date time picker.
         <br/>
         <br/>
         </td>
@@ -1403,7 +1398,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Footer divider color for the SfDateTimePicker.
+            Footer divider color of the date time picker.
         <br/>
         <br/>
         </td>
@@ -1417,7 +1412,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Column header text color for the SfDateTimePicker.
+            Column header text color of the date time picker.
         <br/>
         <br/>
         </td>
@@ -1431,7 +1426,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Column header background color for the SfDateTimePicker.
+            Column header background color of the date time picker.
         <br/>
         <br/>
         </td>
@@ -1445,7 +1440,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Column header divider color for the SfDateTimePicker.
+            Column header divider color of the date time picker.
         <br/>
         <br/>
         </td>
@@ -1459,7 +1454,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Selection text color for the SfDateTimePicker.
+            Selection text color of the date time picker.
         <br/>
         <br/>
         </td>
@@ -1473,7 +1468,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Selection background color for the SfDateTimePicker.
+            Selection background color of the date time picker.
         <br/>
         <br/>
         </td>
@@ -1487,7 +1482,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Selection stroke color for the SfDateTimePicker.
+            Selection stroke color of the date time picker.
         <br/>
         <br/>
         </td>
@@ -1501,7 +1496,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Column divider color for the SfDateTimePicker.
+            Column divider color of the date time picker.
         <br/>
         <br/>
         </td>
@@ -1515,7 +1510,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Normal text color for the SfDateTimePicker.
+            Normal text color of the date time picker.
         <br/>
         <br/>
         </td>
