@@ -107,3 +107,139 @@ This page lists the keys for each control and the element to which it is mapped 
     </tr>
 </table>
 
+## SfListView
+
+<table>
+    <tr>
+        <th>Theme Dictionary<br/>
+            <br/></th>        
+        <th>
+          Keys
+            <br/>
+            <br/>
+        </th>
+        <th>
+            Description
+            <br/>
+            <br/>
+        </th>
+    </tr>
+
+    <tr>
+        <td rowspan="19">
+            SfListViewStyles  
+            <br/>
+            <br/>
+        </td>
+        <td>
+           SfListViewTheme 
+            <br/>
+            <br/>
+        </td>
+        <td>    
+            By merging this key in application resources, you can customize the appearance of SfListView without merging common theme resource and control style resource dictionaries.
+			
+{% highlight xaml %}
+
+<Application xmlns:syncTheme="clr-namespace:Syncfusion.Maui.Themes;assembly=Syncfusion.Maui.Core"
+             ...>
+ <Application.Resources>
+    <ResourceDictionary>
+        <ResourceDictionary.MergedDictionaries>
+            <syncTheme:SyncfusionThemeResourceDictionary />
+            <ResourceDictionary>
+                <x:String x:Key="SfListViewTheme">CommonTheme</x:String>
+                <Color x:Key="SfListViewNormalListViewItemBackground">LightBlue</Color>
+                <Color x:Key="SfListViewHoverListViewItemBackground">Green</Color>
+            </ResourceDictionary>
+        </ResourceDictionary.MergedDictionaries>
+    </ResourceDictionary>
+ </Application.Resources>
+
+....
+
+</Application>
+
+{% endhighlight %}
+            <br/>
+            <br/>
+        </td>
+    <tr>
+    <tr>
+        <td> SfListViewNormalListViewItemBackground <br/><br/></td>
+        <td> Background color of ListViewItem. <br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfListViewHoverListViewItemBackground <br/><br/></td>
+        <td> Background color of ListViewItem when it is in hover state.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfListViewFocusedListViewItemBackground <br/><br/></td>
+        <td> Background color of ListViewItem when it is in focused state.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfListViewItemRippleBackground <br/><br/></td> 
+        <td> Background color of the ListViewItem when it is in pressed state.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfListViewFocusedListViewItemStroke <br/><br/></td> 
+        <td> Stroke color of the ListViewItem when it is in focused state.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfListViewFocusedListViewItemStrokeThickness <br/><br/></td> 
+        <td> Stroke thickness of the ListViewItem when it is in focused state.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfListViewNormalListViewItemTextColor <br/><br/></td> 
+        <td> Text color of the ListViewItem when it is in default state.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfListViewNormalListViewItemFontSize  <br/><br/></td> 
+        <td> Fontsize of the ListViewItem when it is in default state.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfListViewNormalGroupHeaderItemBackground <br/><br/></td> 
+        <td> Backgroundcolor of the group header.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfListViewNormalGroupHeaderItemTextColor <br/><br/></td> 
+        <td> Text color of the group header.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfListViewNormalGroupHeaderItemFontSize <br/><br/></td> 
+        <td> FontSize of the group header.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfListViewNormalLoadMoreButtonBackground <br/><br/></td> 
+        <td> Background color of the LoadMoreItem when it is in the default state.<br/><br/></td>
+    </tr>
+    </tr>
+    <tr>
+        <td> SfListViewNormalLoadMoreItemTextColor <br/><br/></td> 
+        <td> Text color of the LoadMoreItem when it is in the default state.<br/><br/></td>
+    </tr>
+    </tr>
+    <tr>
+        <td> SfListViewNormalLoadMoreItemFontSize <br/><br/></td> 
+        <td> FontSize of the LoadMoreItem.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfListViewNormalLoadMoreIndicatorIconColor <br/><br/></td> 
+        <td> Color of the LoadMoreIndicator when the indicator is in the progressed state.<br/><br/></td>
+    </tr>
+    </tr>
+    <tr>
+        <td> SfListViewNormalEmptyViewItemBackground <br/><br/></td> 
+        <td> Background color of the EmptyViewItem.<br/><br/></td>
+    </tr>
+    </tr>
+    <tr>
+        <td> SfListViewNormalEmptyViewItemTextColor <br/><br/></td> 
+        <td> Text color of the EmptyViewItem.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfListViewNormalEmptyViewItemFontSize <br/><br/></td> 
+        <td> Font size of the EmptyViewItem.<br/><br/></td>
+    </tr>
+</table>
+
