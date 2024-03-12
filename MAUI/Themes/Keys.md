@@ -3192,7 +3192,9 @@ This page lists the keys for each control and the element to which it is mapped 
         </td>
     </tr>
 	</tr>
-</table>## SfPullToRefresh
+</table>
+
+## SfPullToRefresh
 
 <table>
     <tr>
