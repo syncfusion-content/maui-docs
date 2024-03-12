@@ -862,7 +862,7 @@ N> Two way binding not supported in Android platform.
 
 ## Border visibility
 
-The [`SfAutocomplete`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) ShowBorder property is used to modify the visibility of border and its default value is **true**. The following code example demonstrates how to change the border visibility,
+The `ShowBorder` property of [`SfAutocomplete`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) is used to modify the visibility of the border and its default value is **true**. The following code example demonstrates how to change the border visibility,
 
 {% tabs %}
 {% highlight xaml %}
@@ -891,6 +891,8 @@ The following image illustrates the result of the above code:
 ### TextAlignment
 
 The [`SfAutocomplete`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) provides support to customize the text alignment by using the `HorizontalTextAlignment` and `VerticalTextAlignment` properties.
+
+N> Dynamic changes to the `HorizontalTextAlignment` property may not be functioning as expected on Android platform.
 
 {% tabs %}
 {% highlight xaml %}
