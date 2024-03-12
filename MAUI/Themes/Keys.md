@@ -1761,7 +1761,7 @@ This page lists the keys for each control and the element to which it is mapped 
     </tr>
     <tr>
         <td> SfPullToRefreshProgressBackground <br/><br/></td>
-        <td> Background color of the circle view in SfPullToRefresh. <br/><br/></td>
+        <td> Background color of the progress circle view.<br/><br/></td>
     </tr>
     <tr>
         <td> SfPullToRefreshProgressColor <br/><br/></td>
