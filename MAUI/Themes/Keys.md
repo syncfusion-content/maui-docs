@@ -379,20 +379,12 @@ This page lists the keys for each control and the element to which it is mapped 
         <td> Text color of the ListViewItem when it is in default state.<br/><br/></td>
     </tr>
     <tr>
-        <td> SfListViewNormalListViewItemFontSize  <br/><br/></td> 
-        <td> Fontsize of the ListViewItem when it is in default state.<br/><br/></td>
-    </tr>
-    <tr>
         <td> SfListViewNormalGroupHeaderItemBackground <br/><br/></td> 
         <td> Backgroundcolor of the group header.<br/><br/></td>
     </tr>
     <tr>
         <td> SfListViewNormalGroupHeaderItemTextColor <br/><br/></td> 
         <td> Text color of the group header.<br/><br/></td>
-    </tr>
-    <tr>
-        <td> SfListViewNormalGroupHeaderItemFontSize <br/><br/></td> 
-        <td> FontSize of the group header.<br/><br/></td>
     </tr>
     <tr>
         <td> SfListViewNormalLoadMoreButtonBackground <br/><br/></td> 
@@ -403,10 +395,6 @@ This page lists the keys for each control and the element to which it is mapped 
         <td> SfListViewNormalLoadMoreItemTextColor <br/><br/></td> 
         <td> Text color of the load more button.<br/><br/></td>
     </tr>
-    </tr>
-    <tr>
-        <td> SfListViewNormalLoadMoreItemFontSize <br/><br/></td> 
-        <td> FontSize of the load more button.<br/><br/></td>
     </tr>
     <tr>
         <td> SfListViewNormalLoadMoreIndicatorIconColor <br/><br/></td> 
@@ -421,10 +409,6 @@ This page lists the keys for each control and the element to which it is mapped 
     <tr>
         <td> SfListViewNormalEmptyViewItemTextColor <br/><br/></td> 
         <td> Text color of the EmptyViewItem.<br/><br/></td>
-    </tr>
-    <tr>
-        <td> SfListViewNormalEmptyViewItemFontSize <br/><br/></td> 
-        <td> Font size of the EmptyViewItem.<br/><br/></td>
     </tr>
 </table>
 
