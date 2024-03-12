@@ -9,7 +9,7 @@ documentation: ug
 
 # Custom bookmark in .NET MAUI PDF Viewer
 
-A PDF document may optionally have custom bookmarks that allow the user to bookmark pages and navigate them. The PDF viewer control displays these custom bookmarks in a list of page elements.
+A PDF document may optionally have custom bookmarks that allow the user to bookmark pages and navigate to them. The PDF viewer control displays these custom bookmarks in outline view.
 
 ## Showing/hiding the custom bookmark
 
@@ -30,7 +30,7 @@ pdfViewer.IsOutlineViewVisible = true;
 
 ## Accessing custom bookmarks collection
 
-To access the custom bookmarks, you can use the `CustomBookmarks` collection. This property provides a list of custom booknarks. 
+To access the custom bookmarks, you can use the `CustomBookmarks` collection. This property provides the list of custom bookmarks in the PDF. 
 
 {% tabs %}
 {% highlight c# %}
@@ -42,7 +42,7 @@ var customBookmarks = pdfViewer.CustomBookmarks;
 
 ## Add , Edit and Remove custom bookmark
 
-To add, edit, or remove custom bookmarks in a PDF viewer, you can use the `CustomBookmarks` collection. This property provides access to a collection of custom bookmarks that can be manipulated to modify the bookmarks displayed in the viewer's bookmark view.
+To add, edit, or remove custom bookmarks in a PDF viewer, you can use the `CustomBookmarks` collection. This property provides access to the collection of custom bookmarks that can be manipulated to modify the bookmarks displayed in the viewer's bookmark view.
 
 ## Adding a Custom Bookmark
 
@@ -54,7 +54,7 @@ To add a custom bookmark, you can create a new instance of PdfBookmark and add i
 Bookmark newBookmark = new Bookmark()
 {
     Name = "New Bookmark",
-    PageNumber = 0, // Page index where the bookmark should navigate
+    PageNumber = 1, // Page number where the bookmark should navigate
 };
 
 pdfViewer.CustomBookmarks.Add(newBookmark);
@@ -70,11 +70,10 @@ To edit an existing custom bookmark, you can retrieve the bookmark from the `Cus
 {% tabs %}
 {% highlight c# %}
 
-Bookmark bookmarkToEdit = pdfViewer.CustomBookmarks.FirstOrDefault(b => b.Title == "Bookmark to Edit");
+Bookmark bookmarkToEdit = pdfViewer.CustomBookmarks.FirstOrDefault(b => b.Title == "Chapter 2");
 if (bookmarkToEdit != null)
 {
     bookmarkToEdit.Name = "Edited Bookmark Title";
-    bookmarkToEdit.PageNumber = 1; // Change the page index
 }
 
 
@@ -102,7 +101,7 @@ if (bookmarkToRemove != null)
 
 ### Navigating using UI
 
-As mentioned above, you can show the outline view by setting the `IsOultineViewVisible` property to `true`. When the outline view is showing, you can tap on any bookmark to navigate to the destination pointed by that bookmark. 
+As mentioned above, you can show the outline view by setting the `IsOultineViewVisible` property to `true`. When the outline view is showing, you can tap on any bookmark to navigate to the destination pointed to that bookmark. 
 
 ![Custom bookmark in .NET MAUI PDF Viewer](Images\custom-bookmark.png)
 
