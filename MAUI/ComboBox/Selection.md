@@ -158,8 +158,6 @@ When the TokensWrapMode is set to Wrap the selected items will be wrapped to the
 
 {% endtabs %}
 
-![.NET MAUI ComboBox TokensWrapMode Wrap.](Images/selection/net-maui-combobox-wrapmode.gif)
-
 #### None mode
 
 When the TokensWrapMode is set to None the selected item will be wrapped in horizontal orientation.
@@ -181,8 +179,6 @@ When the TokensWrapMode is set to None the selected item will be wrapped in hori
 {% endhighlight %}
 
 {% endtabs %}
-
-![.NET MAUI ComboBox TokensWrapMode None.](Images/selection/net-maui-combobox-nonemode.gif)
 
 ## Selection changed notification
 
