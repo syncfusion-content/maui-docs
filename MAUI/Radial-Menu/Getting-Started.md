@@ -200,7 +200,7 @@ namespace RadialSample
 
 ![Getting started in .NET MAUI RadialMenu control.](images/getting-started/maui-radialmenu-getting-started.png)
 
-N> You can find the getting started sample of .NET MAUI SfRadialMenu from this [link.](https://github.com/SyncfusionExamples/Getting-Started-with-.NET-MAUI-Radial-Menu)
+N> You can find the getting started sample of .NET MAUI SfRadialMenu from this [link.]
 
 
 
