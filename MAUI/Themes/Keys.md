@@ -264,7 +264,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of toolbar text.   
+            Color of toolbar text in image editor.   
             <br/>
             <br/>
         </td>
@@ -533,7 +533,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of segment when it is disabled. 
+            Background Color of segment when it is disabled. 
             <br/>
             <br/>
         </td>
@@ -546,7 +546,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of segment text when it is disabled.  
+            Color of segment item text when it is disabled.  
             <br/>
             <br/>
         </td>
@@ -559,7 +559,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of segment when it is selected.   
+            Background color of segment when it is selected.   
             <br/>
             <br/>
         </td>
@@ -598,7 +598,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of segment when it is hovered.   
+            Background color of segment when it is hovered.   
             <br/>
             <br/>
         </td>
@@ -624,7 +624,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Size of stroke thickness in segemented control.    
+            Thickness of the stroke in the in segmented control.    
             <br/>
             <br/>
         </td>
@@ -637,7 +637,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Size of corner radius in segemented control.     
+            Size of corner radius in segmented control.     
             <br/>
             <br/>
         </td>
@@ -1996,7 +1996,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of treemap item when it is selected.
+            Color of a treemap item's border when it is selected.
             <br/>
             <br/>
         </td>
@@ -2009,7 +2009,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of treemap item when it is hovered. 
+            Color of a treemap item's border when it is hovered. 
             <br/>
             <br/>
         </td>
@@ -2035,7 +2035,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of tooltip in treemap. 
+            Background color of tooltip in treemap. 
             <br/>
             <br/>
         </td>
@@ -2074,7 +2074,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of group item in treemap. 
+            Background color of group item in treemap. 
             <br/>
             <br/>
         </td>
