@@ -892,6 +892,8 @@ The following image illustrates the result of the above code:
 
 The [`SfAutocomplete`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) provides support to customize the text alignment by using the `HorizontalTextAlignment` and `VerticalTextAlignment` properties.
 
+N> `HorizontalTextAlignment` dynamic changes is not working in Android platforms.
+
 {% tabs %}
 {% highlight xaml %}
 
