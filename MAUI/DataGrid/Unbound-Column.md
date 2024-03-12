@@ -38,10 +38,10 @@ dataGrid.ItemsSource = orderInforRepo;
 
 DataGridUnboundColumn DiscountColumn = new DataGridUnboundColumn()
 {
-        MappingName = "DiscountPrice",
-        HeaderText = "SUM",
-        Expression = "Price1+Price2",
-        Format = "C"
+    MappingName = "DiscountPrice",
+    HeaderText = "SUM",
+    Expression = "Price1+Price2",
+    Format = "C"
 };
 
 this.datagrid.Columns.Add(DiscountColumn);
