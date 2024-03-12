@@ -46,7 +46,7 @@ To add, edit, or remove custom bookmarks in a PDF viewer, you can use the `Custo
 
 ## Adding a Custom Bookmark
 
-To add a custom bookmark, you can create a new instance of PdfBookmark and add it to the `CustomBookmarks` collection:
+To add a custom bookmark, you can create a new instance of Bookmark and add it to the `CustomBookmarks` collection:
 
 {% tabs %}
 {% highlight c# %}
@@ -54,7 +54,7 @@ To add a custom bookmark, you can create a new instance of PdfBookmark and add i
 Bookmark newBookmark = new Bookmark()
 {
     Name = "New Bookmark",
-    PageNumber = 1, // Page number where the bookmark should navigate
+    PageNumber = 1, // Page number where the bookmark should to navigate
 };
 
 pdfViewer.CustomBookmarks.Add(newBookmark);
@@ -87,7 +87,7 @@ To remove a custom bookmark, you can remove it directly from the `CustomBookmark
 {% tabs %}
 {% highlight c# %}
 
-Bookmark bookmarkToRemove = pdfViewer.CustomBookmarks.FirstOrDefault(b => b.Title == "Bookmark to Remove");
+Bookmark bookmarkToRemove = pdfViewer.CustomBookmarks.FirstOrDefault(b => b.Title == "Chapter 2");
 if (bookmarkToRemove != null)
 {
     pdfViewer.CustomBookmarks.Remove(bookmarkToRemove);
@@ -113,7 +113,7 @@ The PDF viewer allows the users to navigate to an custom bookmark using the `GoT
 {% highlight c# %}
 
 //Get the required custom bookmark
-Bookmark customBookmark = pdfViewer.CustomBookmarks.Where(x => x.Name.Contains("Page 2")).FirstOrDefault();
+Bookmark customBookmark = pdfViewer.CustomBookmarks.Where(x => x.Name.Contains("Chapter 2")).FirstOrDefault();
 
 if (customBookmark != null)
    pdfViewer.GoToBookmark(customBookmark);
