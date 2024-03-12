@@ -400,7 +400,7 @@ This page lists the keys for each control and the element to which it is mapped 
     </tr>
     <tr>
         <td> SfListViewNormalLoadMoreButtonBackground <br/><br/></td> 
-        <td> Background color of the LoadMoreItem when it is in the default state.<br/><br/></td>
+        <td> Background color of the load more button when it is in the default state.<br/><br/></td>
     </tr>
     </tr>
     <tr>
