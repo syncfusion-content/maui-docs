@@ -287,7 +287,7 @@ The group summary row can be customized by the writing style for [DataGridGroupS
 
 ![Group summary row styling in .NET MAUI DataGrid](Images/styling/maui-datagrid-group-summary-row-style.png)
 
-### Styling Unbound row cell
+### Styling unbound row cell
 The unbound row cell can be customized by the writing style for [DataGridUnboundRowCell]() TargetType.
 
 {% tabs %}
@@ -306,9 +306,9 @@ The unbound row cell can be customized by the writing style for [DataGridUnbound
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="Unbound row cell styling in .NET MAUI DataGrid" src="Images\styling\maui-datagrid-unboundRowCellStyling.png" width="404"/>
+<img alt="Unbound row cell styling in .NET MAUI DataGrid" src="Images\styling\maui-datagrid-unbound-row-cell-styling.png" width="404"/>
 
-### Styling Unbound row
+### Styling unbound row
 The unbound row can be customized by the writing style for [DataGridUnboundRowView]() TargetType.
 
 {% tabs %}
@@ -323,7 +323,7 @@ The unbound row can be customized by the writing style for [DataGridUnboundRowVi
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="Unbound row styling in .NET MAUI DataGrid" src="Images\styling\maui-datagrid-unboundRowStyling.png" width="404"/>
+<img alt="Unbound row styling in .NET MAUI DataGrid" src="Images\styling\maui-datagrid-unbound-row-styling.png" width="404"/>
 
 ### Column Styling 
 You can apply the style for a particular column by using [DataGridColumn.CellStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_CellStyleProperty) and [DataGridColumn.HeaderStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_HeaderStyleProperty) property.
