@@ -410,7 +410,7 @@ This page lists the keys for each control and the element to which it is mapped 
     </tr>
     <tr>
         <td> SfListViewNormalLoadMoreIndicatorIconColor <br/><br/></td> 
-        <td> Color of the LoadMoreIndicator when the indicator is in the progressed state.<br/><br/></td>
+        <td> Color of the Load More Indicator.<br/><br/></td>
     </tr>
     </tr>
     <tr>
