@@ -367,10 +367,6 @@ This page lists the keys for each control and the element to which it is mapped 
         <td> Background color of ListViewItem when it is in focused state.<br/><br/></td>
     </tr>
     <tr>
-        <td> SfListViewItemRippleBackground <br/><br/></td> 
-        <td> Background color of the ListViewItem when it is in pressed state.<br/><br/></td>
-    </tr>
-    <tr>
         <td> SfListViewFocusedListViewItemStroke <br/><br/></td> 
         <td> Stroke color of the ListViewItem when it is in focused state.<br/><br/></td>
     </tr>
