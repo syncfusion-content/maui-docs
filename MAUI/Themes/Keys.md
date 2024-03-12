@@ -725,8 +725,6 @@ This page lists the keys for each control and the element to which it is mapped 
         </td>
         <tr>
         <td>
-        </td>
-        <td>
             SfDatePickerNormalBackground  
             <br/>
             <br/>
