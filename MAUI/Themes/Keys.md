@@ -407,7 +407,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Font size on toolbar text in image editor.    
+            Font size of toolbar text in image editor.    
             <br/>
             <br/>
         </td>
@@ -420,7 +420,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Font size on tooltip text in image editor      
+            Font size of tooltip text in image editor      
             <br/>
             <br/>
         </td>
@@ -624,7 +624,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Thickness of the border stroke in the in segmented control.    
+            Thickness of the border stroke in the segmented control.    
             <br/>
             <br/>
         </td>
@@ -875,19 +875,6 @@ This page lists the keys for each control and the element to which it is mapped 
 
 	<tr>
     <td>
-            SfDataFormDisabledLabelTextColor              
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Disabled label`s text color.    
-            <br/>
-            <br/>
-        </td>
-    </tr>
-
-	<tr>
-    <td>
             SfDataFormNormalErrorLabelTextColor               
             <br/>
             <br/>
@@ -1110,7 +1097,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of bubbles in maps.
+            Color of bubble in maps.
             <br/>
             <br/>
         </td>
@@ -1123,7 +1110,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of bubbles border in maps. 
+            Color of bubble border in maps. 
             <br/>
             <br/>
         </td>
@@ -1188,7 +1175,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of selected shape in maps.   
+            Color of shape layer shape when it is selected.   
             <br/>
             <br/>
         </td>
@@ -1201,7 +1188,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of selected shape stroke.   
+            Color of shape layer shape stroke when it is selected.   
             <br/>
             <br/>
         </td>
@@ -1240,7 +1227,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of shape when it is hovered.     
+            Color of shape layer shape when it is hovered.    
             <br/>
             <br/>
         </td>
@@ -1253,7 +1240,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of shape stroke when it is hovered.      
+            Color of shape layer shape stroke when it is hovered.      
             <br/>
             <br/>
         </td>
@@ -1292,7 +1279,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of sublayer in maps.     
+            Color of shape sublayer in maps.     
             <br/>
             <br/>
         </td>
@@ -1305,7 +1292,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-             Color of sublayer stroke in maps.      
+             Color of shape sublayer stroke in maps.      
             <br/>
             <br/>
         </td>
@@ -1466,7 +1453,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Font size on data label in maps.      
+            Font size of data label in maps.      
             <br/>
             <br/>
         </td>
@@ -1541,7 +1528,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of scheduler when it is hovered.
+            Color of scheduler cells when it is hovered
             <br/>
             <br/>
         </td>
@@ -1580,7 +1567,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of appointment indicator day, week and work week view. 
+            Color of the more appointment indicator icons. 
             <br/>
             <br/>
         </td>
@@ -1606,7 +1593,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of today hightlight.  
+            Color of today highlight circle.  
             <br/>
             <br/>
         </td>
@@ -1619,7 +1606,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Background Color of appointment layout while select week and work week view.  
+            Color of appointment border when it is selected.
             <br/>
             <br/>
         </td>
@@ -1645,7 +1632,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Current date text color of month cell.   
+            Color of today text in scheduler.   
             <br/>
             <br/>
         </td>
@@ -1692,19 +1679,6 @@ This page lists the keys for each control and the element to which it is mapped 
 
 	<tr>
     <td>
-            SfSchedulerNormalAppointmentTextColor                
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color of appointment text in day, week and work week view.      
-            <br/>
-            <br/>
-        </td>
-    </tr>
-
-	<tr>
-    <td>
             SfSchedulerNormalWeekNumberBackground                 
             <br/>
             <br/>
@@ -1736,7 +1710,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Background Color of header layout in scheduler.     
+            Background Color of header in scheduler.     
             <br/>
             <br/>
         </td>
@@ -1762,7 +1736,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Background Color of view header layout.     
+            Background Color of view header.     
             <br/>
             <br/>
         </td>
@@ -1775,7 +1749,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of view header day text(Sunday,Monday,etc).     
+            Color of view header day text.     
             <br/>
             <br/>
         </td>
@@ -1788,7 +1762,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of view header date text(10,11,etc).     
+            Color of view header date text.     
             <br/>
             <br/>
         </td>
@@ -1801,7 +1775,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of allowed view drop down shadow.      
+            Color of allowed view drop-down shadow.      
             <br/>
             <br/>
         </td>
@@ -1826,7 +1800,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Background Color of allowed view more icon button.      
+            Background Color of allowed view more icon button when it is selected.      
             <br/>
             <br/>
         </td>
@@ -2022,7 +1996,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of selected item hovered in treemap.  
+            Color of a treemap selected item when it is hovered.
             <br/>
             <br/>
         </td>
@@ -2139,7 +2113,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Size of selected item in treemap.      
+            Size of selected item border in treemap.      
             <br/>
             <br/>
         </td>
