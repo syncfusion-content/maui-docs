@@ -1,6 +1,6 @@
 ---
 layout: post
-title: CenterButton Customization in MAUI Radial Menu control | Syncfusion
+title: CenterButton Customization in MAUI Radial Menu Control | Syncfusion
 description: Learn here all about CenterButton Customization support in Syncfusion MAUI Radial Menu (SfRadialMenu) control and more.
 platform: MAUI
 control: RadialMenu (SfRadialMenu)
@@ -9,7 +9,7 @@ documentation: ug
 
 # CenterButton Customization in MAUI Radial Menu (SfRadialMenu)
 
-The CenterButton or BackButton in radial menu is a view in the center of the radial menu. It performs the operations such as opening and closing the rim and navigating to next level items. The radial menu allows you customize the CenterButton/BackButton with `FontIcon`, `Custom View`, and `Caption`.
+The CenterButton or BackButton in radial menu is a view in the center of the radial menu. It performs the operations such as opening and closing the rim and navigating to the next level items. The radial menu allows you customize the CenterButton/BackButton with `FontIcon`, `Custom View`, and `Caption`.
 
 ## CenterButtonText and CenterButtonBackText
 

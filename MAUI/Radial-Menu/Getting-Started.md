@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with MAUI Radial Menu control | Syncfusion
+title: Getting Started with MAUI Radial Menu Control | Syncfusion
 description: Learn here about getting started with Syncfusion MAUI Radial Menu (SfRadialMenu) control, its elements and more.
 platform: MAUI
 control: RadialMenu (SfRadialMenu)
@@ -15,7 +15,7 @@ This section provides a quick overview of how to get started with the [.NET MAUI
 
 1. Create a new .NET MAUI application in Visual Studio.
 
-2. Syncfusion .NET MAUI components are available in [nuget.org](https://www.nuget.org/). To add the SfDataForm to your project, open the NuGet package manager in Visual Studio, search for `Syncfusion.Maui.RadialMenu`, then install it.
+2. Syncfusion .NET MAUI components are available in [nuget.org](https://www.nuget.org/). To add the SfDataForm to your project, open the NuGet package manager in Visual Studio, search for `Syncfusion.Maui.RadialMenu`, and then install it.
 
 3. To initialize the control, import the control namespace `Syncfusion.Maui.RadialMenu` in XAML or C# code.
 

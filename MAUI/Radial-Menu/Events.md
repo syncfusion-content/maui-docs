@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Events in MAUI Radial Menu control | Syncfusion
+title: Events in MAUI Radial Menu Control | Syncfusion
 description: Learn here all about Events support in Syncfusion MAUI Radial Menu (SfRadialMenu) control and more.
 platform: MAUI
 control: RadialMenu (SfRadialMenu)

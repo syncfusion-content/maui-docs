@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Populating Items in MAUI Radial Menu control | Syncfusion
+title: Populating Items in MAUI Radial Menu Control | Syncfusion
 description: Learn here all about Populating Items support in Syncfusion MAUI Radial Menu (SfRadialMenu) control and more.
 platform: MAUI
 control: RadialMenu (SfRadialMenu)
@@ -17,7 +17,7 @@ By passing a collection of [`SfRadialMenuItem`](https://help.syncfusion.com/cr/m
 
 ### Text
 
-The following code snippet demonstrates how to Create a RadialMenu control with Items having the given text.
+The following code sample demonstrates how to Create a RadialMenu control with Items having the given text.
 
 {% tabs %}
 
@@ -80,7 +80,7 @@ N> Instead of using ObservableCollection, use `RadialMenuItemsCollection` for th
 
 ### ImageWithText
 
-The following code snippet demonstrates how to Display images and text in the RadialMenu items of the control.
+The following code sample demonstrates how to Display images and text in the RadialMenu items of the control.
 
 {% tabs %}
 
@@ -141,7 +141,7 @@ namespace RadialSample
 
 ## Custom Font with Text
 
-The following code snippet demonstrates how to Display custom font with text in the RadialMenu items of the control.
+The following code sample demonstrates how to Display custom font with text in the RadialMenu items of the control.
 
 {% tabs %}
 
@@ -220,7 +220,7 @@ namespace RadialSample
 
 You can populate the nested levels of items within a menu to group similar actions based on their result. For example, you can group the clipboard operations by adding a clipboard as a main menu and cut, copy, and paste as its children.
 
-The following code snippet demonstrates how to add the nested items of radial menu.
+The following code sample demonstrates how to add the nested items of radial menu.
 
 {% tabs %}
 

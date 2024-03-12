@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Placing and Dragging RadialMenu in MAUI Radial Menu | Syncfusion
+title: Placing and Dragging RadialMenu in MAUI Radial Menu Control | Syncfusion
 description: Learn here all about Placing and Dragging RadialMenu support in Syncfusion MAUI Radial Menu (SfRadialMenu) control and more.
 platform: MAUI
 control: RadialMenu (SfRadialMenu)
@@ -79,7 +79,7 @@ namespace RadialSample
 
 This event get triggered when RadialMenu is start to drag with [`DragBeginEventArgs`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SfRadialMenu.DragBeginEventArgs.html).
 
-* [`Position`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SfRadialMenu.DragBeginEventArgs.html#Syncfusion_Maui__SfRadialMenu_DragBeginEventArgs_Position) - Gets the Start position of the RadialMenu
+* [`Position`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SfRadialMenu.DragBeginEventArgs.html#Syncfusion_Maui__SfRadialMenu_DragBeginEventArgs_Position) - Gets the Start position of the RadialMenu.
 
 * [`Handled`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SfRadialMenu.DragBeginEventArgs.html#Syncfusion_Maui_SfRadialMenu_DragBeginEventArgs_Handled) - Gets and Sets the boolean value for enabling and disabling the dragging of RadialMenu.
 
@@ -147,9 +147,9 @@ namespace RadialSample
 
 This event get triggered when dragging is ended in RadialMenu with [`DragEndEventArgs`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SfRadialMenu.DragEndEventArgs.html).
 
-* [`OldValue`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SfRadialMenu.DragEndEventArgs.html#Syncfusion_Maui_SfRadialMenu_DragEndEventArgs_OldValue) - Gets the Start position of the RadialMenu
+* [`OldValue`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SfRadialMenu.DragEndEventArgs.html#Syncfusion_Maui_SfRadialMenu_DragEndEventArgs_OldValue) - Gets the Start position of the RadialMenu.
 
-* [`NewValue`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SfRadialMenu.DragEndEventArgs.html#Syncfusion_Maui_SfRadialMenu_DragEndEventArgs_NewValue) - Gets the ens position of the RadialMenu
+* [`NewValue`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SfRadialMenu.DragEndEventArgs.html#Syncfusion_Maui_SfRadialMenu_DragEndEventArgs_NewValue) - Gets the end position of the RadialMenu.
 
 * [`Handled`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SfRadialMenu.DragEndEventArgs.html#Syncfusion_Maui_SfRadialMenu_DragEndEventArgs_Handled) - Gets and Sets the boolean value for restricting the RadialMenu to move another position.
 
