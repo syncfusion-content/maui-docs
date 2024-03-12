@@ -295,3 +295,75 @@ This page lists the keys for each control and the element to which it is mapped 
         <td> Color of header icon when it is in pressed state.<br/><br/></td>
     </tr>
 </table>
+
+## SfPullToRefresh
+
+<table>
+    <tr>
+        <th>Theme Dictionary<br/>
+            <br/></th>        
+        <th>
+          Keys
+            <br/>
+            <br/>
+        </th>
+        <th>
+            Description
+            <br/>
+            <br/>
+        </th>
+    </tr>
+
+    <tr>
+        <td rowspan="4">
+            SfPullToRefreshStyles  
+            <br/>
+            <br/>
+        </td>
+        <td>
+           SfPullToRefreshTheme 
+            <br/>
+            <br/>
+        </td>
+        <td>    
+            By merging this key in application resources, you can customize the appearance of SfPullToRefresh without merging common theme resource and control style resource dictionaries.
+			
+{% highlight xaml %}
+
+<Application xmlns:syncTheme="clr-namespace:Syncfusion.Maui.Themes;assembly=Syncfusion.Maui.Core"
+             ...>
+ <Application.Resources>
+    <ResourceDictionary>
+        <ResourceDictionary.MergedDictionaries>
+            <syncTheme:SyncfusionThemeResourceDictionary />
+            <ResourceDictionary>
+                <x:String x:Key="SfPullToRefreshTheme">CommonTheme</x:String>
+                <Color x:Key="SfPullToRefreshProgressBackground">Black</Color>
+                <Color x:Key="SfPullToRefreshProgressColor">White</Color>
+            </ResourceDictionary>
+        </ResourceDictionary.MergedDictionaries>
+    </ResourceDictionary>
+ </Application.Resources>
+
+....
+
+</Application>
+
+{% endhighlight %}
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td> SfPullToRefreshProgressBackground <br/><br/></td>
+        <td> Background color of the circle view in SfPullToRefresh. <br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfPullToRefreshProgressColor <br/><br/></td>
+        <td> Color of the progress indicator when the indicator is in the progressed state.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfPullToRefreshProgressThickness <br/><br/></td>
+        <td> Thickness of the progress indicator.<br/><br/></td>
+    </tr>
+</table>
