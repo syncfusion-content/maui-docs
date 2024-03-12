@@ -463,3 +463,4 @@ The following code example, explains how to initialize the properties of the `Xa
 ## Upcomming features
 
  * Looping support for picker items.
+ * SelectedItem support for picker.

@@ -69,6 +69,16 @@ To make migration from [Xamarin SfDataGrid](https://www.syncfusion.com/xamarin-u
 <td>{{'[DataPagerDisplayMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataPager.DataPagerDisplayMode.html)'| markdownify }}</td>
 <td>Defines the possible display mode of SfDataPager.</td>
 </tr>
+<tr>
+<td>{{'[ResizingMode](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.ResizingMode.html)'| markdownify }}</td>
+<td>{{'[DataGridColumnResizeMode]()'| markdownify }}</td>
+<td>Defines the constants that specify whether to resize the column on touch-up or touch moved action.</td>
+</tr>
+<tr>
+<td>{{'[ProgressStates](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.ProgressStates.html)'| markdownify }}</td>
+<td>{{'[DataGridProgressState]()'| markdownify }}</td>
+<td>Defines constants that specify the possible progressing states of resizing operation.</td>
+</tr>
 </table>
 
 ## Properties
@@ -226,6 +236,18 @@ To make migration from [Xamarin SfDataGrid](https://www.syncfusion.com/xamarin-u
 <td>{{'[EnableGridPaging()](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.DataPager.SfDataPager.html#Syncfusion_SfDataGrid_XForms_DataPager_SfDataPager_EnableGridPaging)'| markdownify }}</td>
 <td>-</td>
 <td>This property isn't available because the [UseOnDemandPaging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataPager.SfDataPager.html#Syncfusion_Maui_DataGrid_DataPager_SfDataPager_UseOnDemandPaging) property alone is sufficient to enable on-demand paging in the MAUI DataGrid.</td>
+</tr>
+<tr>
+<td>{{'[AllowResizingColumn](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.SfDataGrid.html#Syncfusion_SfDataGrid_XForms_SfDataGrid_AllowResizingColumn)'| markdownify }}</td>
+<td>{{'[AllowResizingColumns]()'| markdownify }}</td>
+<td>This enables users to resize the columns by tapping and dragging the right border of the column headers. 
+</td>
+</tr>
+<tr>
+<td>{{'[ResizingMode](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.SfDataGrid.html#Syncfusion_SfDataGrid_XForms_SfDataGrid_ResizingMode)'| markdownify }}</td>
+<td>{{'[ColumnResizeMode]()'| markdownify }}</td>
+<td>This enables users to resize the columns either on touch-up or on-move.
+</td>
 </tr>
 
 </table>
@@ -414,6 +436,11 @@ We have passed the optional parameters such as {{'[canIncludeHiddenColumns](http
 <td>Represents a class that enables users to customize the appearance of the data pager.</td>
 </tr>
 
+<tr>
+<td>{{'[GridResizingEventArgs](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.GridResizingEventArgs.html)'| markdownify }}</td>
+<td>{{'[DataGridColumnResizingEventArgs]()'| markdownify }}</td>
+<td>Represents a datagrid column resizing event args.</td>
+</tr>
 </table>
 
 ## Known issues 

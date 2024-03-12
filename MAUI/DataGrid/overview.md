@@ -19,6 +19,8 @@ The .NET MAUI DataGrid control is used to display and manipulate data in a tabul
 
 * **Column Types** - Show different data types in different types of columns. The following column types are supported: numeric, text, date, checkbox, image, combobox and template. The template column is used to load any control in a column.
 
+* **Column Resizing** - Interactive support to adjust the width of columns.
+
 * **Editing** - Interactive support to edit with different column types.
 
 * **Sorting** - Interactively sort one or more columns.
