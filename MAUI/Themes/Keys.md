@@ -125,7 +125,7 @@ This page lists the keys for each control and the element to which it is mapped 
         </th>
     </tr>
     <tr>
-        <td rowspan="14">
+        <td rowspan="55">
             SfCalendarStyles
             <br/>
             <br/>
@@ -936,7 +936,7 @@ This page lists the keys for each control and the element to which it is mapped 
         </th>
     </tr>
     <tr>
-        <td rowspan="14">
+        <td rowspan="55">
             SfRadialGaugeStyles
             <br/>
             <br/>
@@ -1379,7 +1379,7 @@ This page lists the keys for each control and the element to which it is mapped 
         </th>
     </tr>
     <tr>
-        <td rowspan="14">
+        <td rowspan="55">
            SfStepProgressBarThemeStyles
             <br/>
             <br/>
