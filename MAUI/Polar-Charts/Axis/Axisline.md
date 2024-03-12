@@ -11,7 +11,7 @@ documentation: ug
 
 ## Customization
 
-The polar chart axis provides support for customizing the style of the axis line by defining the [AxisLineStyle]()property, as shown in the code snippet below.
+The polar chart axis provides support for customizing the style of the axis line by defining the [AxisLineStyle]() property, as shown in the code sample below.
 
 N> The customization of axis lines using the AxisLineStyle property can only be applied to the secondary axis.
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Axis Tick Line in .NET MAUI Chart control | Syncfusion
+title: Axis Tick Line in .NET MAUI Chart Control | Syncfusion
 description: Learn here all about the chart axis tick lines and their customization in the Syncfusion .NET MAUI Chart (SfPolarChart) control.
 platform: maui
 control: SfPolarChart
@@ -52,7 +52,7 @@ chart.SecondaryAxis.Add(secondaryAxis);
 
 ## Customization
 
-Both major and minor tick lines can be customized by using the [MajorTickStyle]() and [MinorTickStyle]() properties respectively. They provide options to change the [StrokeWidth](), [TickSize](), [Stroke]() of tick lines. By default minor tick lines will not be visible.
+Both major and minor tick lines can be customized using the [MajorTickStyle]() and [MinorTickStyle]() properties respectively. They provide options to change the [StrokeWidth](), [TickSize](), [Stroke]() of tick lines. By default, minor tick lines will not be visible.
 
 {% tabs %}
 

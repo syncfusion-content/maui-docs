@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Data labels in .NET MAUI Chart control | Syncfusion
+title: Data Labels in .NET MAUI Chart Control | Syncfusion
 description: Learn here all about how to configure the data labels and their features in Syncfusion .NET MAUI Chart (SfPolarChart).
 platform: maui
 control: SfPolarChart
@@ -53,16 +53,16 @@ chart.Series.Add(series);
 
 ![Data label in MAUI chart](DataLabel_images/MAUI_polar_line_datalabel.png)
 
-Data labels can be customized by using the [DataLabelSettings]() property of chart series. To customize them, you need to create an instance of [PolarDataLabelSettings]() and set it to the [DataLabelSettings]() property. The following properties available in [PolarDataLabelSettings]() can be used to customize the data labels.
+Data labels can be customized using the [DataLabelSettings]() property of chart series. To customize them, you need to create an instance of [PolarDataLabelSettings]() and set it to the [DataLabelSettings]() property. The following properties available in [PolarDataLabelSettings]() can be used to customize the data labels.
 
-* [BarAlignment]() - Gets or sets the data label alignment top, middle or bottom.
-* [LabelPlacement]() - Gets or sets the data label position inside, outside or default.
+* [BarAlignment]() - Gets or sets the data label alignment top, middle, or bottom.
+* [LabelPlacement]() - Gets or sets the data label position inside, outside, or default.
 * [LabelStyle]() - Gets or sets the options for customizing the data labels. 
 * [UseSeriesPalette]() - Gets or sets a value indicating whether the data label should reflect the series interior.
 
 ## Data Label Alignment
 
-The alignment of data labels inside the series is defined by using the [BarAlignment]() property. 
+The alignment of data labels inside the series is defined using the [BarAlignment]() property.
 
 * [Top]() - Positions the data label at the top edge point of a chart segment.
 * [Middle]() - Positions the data label at the center point of a chart segment.
@@ -105,7 +105,7 @@ chart.Series.Add(series);
 
 In addition to the alignment options mentioned above, the Chart provides additional customization options for positioning the data labels.
 
-The [LabelPlacement]() property is used to position the data labels at [Center](), [Inner]() and [Outer]() positions relative to the actual data point position. By default, labels are positioned based on the series types for better readability.
+The [LabelPlacement]() property is used to position the data labels at [Center](), [Inner](), and [Outer]() positions relative to the actual data point position. By default, labels are positioned based on the series types for better readability.
 
 ## Applying Series Brush
 
@@ -188,7 +188,7 @@ The content of the label can be customized using the [LabelContext]() property. 
 
 ## LabelTemplate
 
-The [SfPolarChart]() provides support to customize the appearance of the datalabel by using the [LabelTemplate]() property.
+The [SfPolarChart]() provides support to customize the appearance of the datalabel using the [LabelTemplate]() property.
 
 {% tabs %}
 

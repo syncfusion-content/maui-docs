@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Appearance in .NET MAUI Chart control  Syncfusion
-description: Learn here all about appearance customization in Syncfusion .NET MAUI Chart (SfPolarChart), including its elements and more.
+description: Learn here all about appearance customization in Syncfusion .NET MAUI Chart (SfPolarChart), including its elements, and more.
 platform: maui
 control: SfPolarChart
 documentation: ug
 ---
 
 # Appearance in .NET MAUI Polar Chart
-The appearance of [SfPolarChart]() can be customized by using the predefined brushes, custom brushes and gradient, which allows for the enrichment of the application.
+The appearance of [SfPolarChart]() can be customized using the predefined brushes, custom brushes, and gradient, which allows for the enrichment of the application.
 
 ## Default PaletteBrushes for Chart
 
@@ -108,7 +108,7 @@ this.Content = chart;
 
 ## Applying Gradient
 
-The gradient for the chart can be set by using the [PaletteBrushes]() property with the help of `LinearGradientBrush` or `RadialGradientBrush`.
+The gradient for the chart can be set using the [PaletteBrushes]() property with the help of `LinearGradientBrush` or `RadialGradientBrush`.
 
 The following code sample and screenshot illustrates how to apply the gradient brushes for the series using the [PaletteBrushes]() property.
 

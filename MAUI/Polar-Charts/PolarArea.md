@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Polar Area Chart in .NET MAUI Chart control | Syncfusion
+title: Polar Area Chart in .NET MAUI Chart Control | Syncfusion
 description: Learn here all about the Polar area chart type and its features in the Syncfusion .NET MAUI Chart (SfPolarChart) control.
 platform: maui
 control: SfPolarChart
@@ -61,7 +61,7 @@ this.Content = chart;
 
 ## Grid line Type
 
-The [GridLineType]() property used to modify the rendering style of axis grid lines. The default [GridLineType]() is [Circle](). Switching to the [Polygon]() grid line type transforms the polar chart appearance, resembling a spider or web chart.
+The [GridLineType]() property used to modify the rendering style of axis grid lines. The default [GridLineType]() is [Circle](). Switching to the [Polygon]() grid line type transforms the polar chart appearance, resembling a spider, or web chart.
 
 {% tabs %}
 
@@ -100,7 +100,7 @@ this.Content = chart;
 
 ## Closed Series
 
-The [IsClosed]() property used to render the series with or without closed path. The default value of [IsClosed]() is true.
+The [IsClosed]() property is used to render the series with or without closed path. The default value of [IsClosed]() is true.
 
 {% tabs %}
 

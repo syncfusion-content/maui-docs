@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Exporting in .NET MAUI Chart control | Syncfusion
+title: Exporting in .NET MAUI Chart Control | Syncfusion
 description: Learn here how to export the chart view as an image and stream in the Syncfusion .NET MAUI Chart (SfPolarChart) control.
 platform: maui
 control: SfPolarChart
@@ -15,7 +15,7 @@ You can export the chart view as an image in the desired file format using the [
 
 N> The chart view can be exported as an image only when the chart view is added to the visual tree.
 
-The following code snippet demonstrates the usage of this method:
+The following code sample demonstrates the usage of this method:
 
 {% tabs %}
 
@@ -35,7 +35,7 @@ T> We can change the image formats in the above code by changing their extension
 
 The exported image will be saved in the different location across the platforms.
 
-**Windows Phone, Android and MAC** – The image will be saved inside the 'Pictures' directory of the file system.
+**Windows Phone, Android, and MAC** – The image will be saved inside the 'Pictures' directory of the file system.
 
 **iOS** – The image will be saved inside the 'Photos/Album' directory of the file system.
 
@@ -68,7 +68,7 @@ The [GetStreamAsync]() method of [SfPolarChart]() is used to asynchronously get 
 
 N> The charts stream can only be rendered when the chart view is added to the visual tree.
 
-The following code snippet demonstrates the usage of this method:
+The following code sample demonstrates the usage of this method:
 
 {% tabs %}
 

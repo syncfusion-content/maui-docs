@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Axis types in .NET MAUI Chart control | Syncfusion
+title: Axis types in .NET MAUI Chart Control | Syncfusion
 description: Learn here all about axis types and their features in Syncfusion .NET MAUI Chart (SfPolarChart) control and more.
 platform: maui
 control: SfPolarChart
@@ -222,7 +222,7 @@ chart.PrimaryAxis.Add(primaryAxis);
 
 ### Interval
 
-In [DateTimeAxis](), intervals can be customized by using the [Interval]() and [IntervalType]() properties. For example, setting [Interval]() as 6 and [IntervalType]() as [Months]() will consider 6 months as interval.
+In DateTimeAxis, intervals can be customized using the [Interval]() and [IntervalType]() properties. For example, setting [Interval]() as 6 and [IntervalType]() as [Months]() will consider 6 months as interval.
 
 {% tabs %}
 
@@ -294,7 +294,7 @@ chart.PrimaryAxis.Add(primaryAxis);
 
 ## Inversed
 
-Axis can be inverted by using the [IsInversed]() property. The default value of this property is `False`.
+Axis can be inverted using the [IsInversed]() property. The default value of this property is `False`.
 
 {% tabs %}
 
