@@ -1470,8 +1470,6 @@ This page lists the keys for each control and the element to which it is mapped 
 </table>
 
 
-
-
 ## SfSchedule
 
 <table>
@@ -1908,6 +1906,286 @@ This page lists the keys for each control and the element to which it is mapped 
         </td>
         <td>
             Size of view header date text in scheduler.      
+            <br/>
+            <br/>
+        </td>
+    </tr>
+</table>
+
+## SfTreeMap
+
+<table>
+    <tr>
+        <th>Theme Dictionary<br/>
+            <br/></th>        
+        <th>
+          Keys
+            <br/>
+            <br/>
+        </th>
+        <th>
+            Description
+            <br/>
+            <br/>
+        </th>
+    </tr>
+
+    <tr>
+        <td rowspan="18">
+            SfTreeMapStyles  
+            <br/>
+            <br/>
+        </td>
+		<td>
+           SfTreeMapTheme 
+            <br/>
+            <br/>
+        </td>
+        <td>    
+            By merging this key in application resources, it is possible to customize the appearance of the SfTreeMap without merging common theme resource and control style resource dictionaries.
+			
+{% highlight xaml %}
+
+<Application xmlns:syncTheme="clr-namespace:Syncfusion.XForms.Themes;assembly=Syncfusion.Core.XForms"
+             ...>
+<Application.Resources>
+    <syncCore:SyncfusionThemeDictionary>
+        <syncCore:SyncfusionThemeDictionary.MergedDictionaries>
+            <ResourceDictionary>
+                <x:String x:Key="SfTreeMapTheme">CommonTheme</x:String> 
+                <Color x:Key="SfTreeMapNormalBackground">Blue</Color> 
+                <Color x:Key="SfTreeMapGroupItemNormalBackground">Green</Color> 
+            </ResourceDictionary>
+        </syncCore:SyncfusionThemeDictionary.MergedDictionaries>
+    </syncCore:SyncfusionThemeDictionary>
+</Application.Resources>
+
+....
+
+</Application>
+
+{% endhighlight %}
+            <br/>
+            <br/>
+        </td>
+	</tr>
+    
+    <tr>
+    <td>
+            SfTreeMapNormalBackground    
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of treemap background.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+    <tr>
+    <td>
+            SfTreeMapSelectedItemStroke     
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of selected item in treemap.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfTreeMapItemHoverStroke      
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of hovered item in treemap. 
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfTreeMapSelectedItemHoverStroke       
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of selected item hovered in treemap.  
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfTreeMapToolTipNormalBackground        
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of tooltip background in treemap. 
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfTreeMapToolTipNormalStroke         
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of tooltip stroke in treemap.  
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfTreeMapToolTipNormalTextColor          
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of tooltip text in treemap.  
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfTreeMapGroupItemNormalBackground           
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of group background in treemap. 
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfTreeMapGroupItemNormalStroke           
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of group item stroke in treemap.   
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfTreeMapGroupItemNormalTextColor             
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of group item text in treemap.  
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfTreeMapLegendNormalTextColor              
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of legend text in treemap.     
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfTreeMapItemKeyboardFocusedStroke               
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of keyboard focused stroke in treemap.     
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfTreeMapSelectedItemStrokeWidth                
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Size of selected item width in treemap.      
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfTreeMapGroupItemNormalStrokeWidth                 
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Size of group item width in treemap.     
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfTreeMapToolTipNormalFontSize                  
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Size of tooltip text in treemap.    
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfTreeMapGroupItemNormalFontSize                   
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Size of group item text in treemap.     
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfTreeMapLegendNormalFontSize                    
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Size of legend text in treemap.      
             <br/>
             <br/>
         </td>
