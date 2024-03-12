@@ -11,9 +11,7 @@ documentation: ug
 Drawer can be toggled using
 
 * IsOpen property
-
 * ToggleDrawer method
-
 * Swipe gesture
 
 ## Opening Drawer Programmatically
