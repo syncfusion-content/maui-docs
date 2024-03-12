@@ -141,19 +141,20 @@ This page lists the keys for each control and the element to which it is mapped 
 			
 {% highlight xaml %}
 
-<Application xmlns:syncTheme="clr-namespace:Syncfusion.XForms.Themes;assembly=Syncfusion.Core.XForms"
+<Application xmlns:syncTheme="clr-namespace:Syncfusion.Maui.Themes;assembly=Syncfusion.Maui.Core"
              ...>
-<Application.Resources>
-    <syncCore:SyncfusionThemeDictionary>
-        <syncCore:SyncfusionThemeDictionary.MergedDictionaries>
+ <Application.Resources>
+    <ResourceDictionary>
+        <ResourceDictionary.MergedDictionaries>
+            <syncTheme:SyncfusionThemeResourceDictionary />
             <ResourceDictionary>
-                <x:String x:Key="SfImageEditorTheme">CommonTheme</x:String> 
-                <Color x:Key="SfImageEditorNormalToolbarBackgroundColor">Blue</Color> 
-                <Color x:Key="SfImageEditorNormalToolbarTextColor">Green</Color> 
+                <x:String x:Key="SfImageEditorTheme">CommonTheme</x:String>
+                <Color x:Key="SfImageEditorNormalToolbarBackgroundColor">Red</Color>
+                <Color x:Key="SfImageEditorNormalToolbarTextColor">Green</Color>
             </ResourceDictionary>
-        </syncCore:SyncfusionThemeDictionary.MergedDictionaries>
-    </syncCore:SyncfusionThemeDictionary>
-</Application.Resources>
+        </ResourceDictionary.MergedDictionaries>
+    </ResourceDictionary>
+ </Application.Resources>
 
 ....
 
@@ -461,19 +462,20 @@ This page lists the keys for each control and the element to which it is mapped 
 			
 {% highlight xaml %}
 
-<Application xmlns:syncTheme="clr-namespace:Syncfusion.XForms.Themes;assembly=Syncfusion.Core.XForms"
+<Application xmlns:syncTheme="clr-namespace:Syncfusion.Maui.Themes;assembly=Syncfusion.Maui.Core"
              ...>
-<Application.Resources>
-    <syncCore:SyncfusionThemeDictionary>
-        <syncCore:SyncfusionThemeDictionary.MergedDictionaries>
+ <Application.Resources>
+    <ResourceDictionary>
+        <ResourceDictionary.MergedDictionaries>
+            <syncTheme:SyncfusionThemeResourceDictionary />
             <ResourceDictionary>
-                <x:String x:Key="SfSegmentedControlTheme">CommonTheme</x:String> 
-                <Color x:Key="SfSegmentedControlNormalStroke">Gray</Color> 
-                <Color x:Key="SfSegmentedControlNormalBackground">White</Color> 
+                <x:String x:Key="SfSegmentedControlTheme">CommonTheme</x:String>
+                <Color x:Key="SfSegmentedControlNormalStroke">Red</Color>
+                <Color x:Key="SfSegmentedControlNormalBackground">Green</Color>
             </ResourceDictionary>
-        </syncCore:SyncfusionThemeDictionary.MergedDictionaries>
-    </syncCore:SyncfusionThemeDictionary>
-</Application.Resources>
+        </ResourceDictionary.MergedDictionaries>
+    </ResourceDictionary>
+ </Application.Resources>
 
 ....
 
@@ -716,19 +718,20 @@ This page lists the keys for each control and the element to which it is mapped 
 			
 {% highlight xaml %}
 
-<Application xmlns:syncTheme="clr-namespace:Syncfusion.XForms.Themes;assembly=Syncfusion.Core.XForms"
+<Application xmlns:syncTheme="clr-namespace:Syncfusion.Maui.Themes;assembly=Syncfusion.Maui.Core"
              ...>
-<Application.Resources>
-    <syncCore:SyncfusionThemeDictionary>
-        <syncCore:SyncfusionThemeDictionary.MergedDictionaries>
+ <Application.Resources>
+    <ResourceDictionary>
+        <ResourceDictionary.MergedDictionaries>
+            <syncTheme:SyncfusionThemeResourceDictionary />
             <ResourceDictionary>
                 <x:String x:Key="SfDataFormTheme">CommonTheme</x:String>
                 <Color x:Key="SfDataFormNormalEditorTextColor">Red</Color>
-                <Color x:Key="SfDataFormNormalLabelTextColor">Pink</Color>
+                <Color x:Key="SfDataFormNormalLabelTextColor">Green</Color>
             </ResourceDictionary>
-        </syncCore:SyncfusionThemeDictionary.MergedDictionaries>
-    </syncCore:SyncfusionThemeDictionary>
-</Application.Resources>
+        </ResourceDictionary.MergedDictionaries>
+    </ResourceDictionary>
+ </Application.Resources>
 
 ....
 
@@ -1062,19 +1065,20 @@ This page lists the keys for each control and the element to which it is mapped 
 			
 {% highlight xaml %}
 
-<Application xmlns:syncTheme="clr-namespace:Syncfusion.XForms.Themes;assembly=Syncfusion.Core.XForms"
+<Application xmlns:syncTheme="clr-namespace:Syncfusion.Maui.Themes;assembly=Syncfusion.Maui.Core"
              ...>
-<Application.Resources>
-    <syncCore:SyncfusionThemeDictionary>
-        <syncCore:SyncfusionThemeDictionary.MergedDictionaries>
+ <Application.Resources>
+    <ResourceDictionary>
+        <ResourceDictionary.MergedDictionaries>
+            <syncTheme:SyncfusionThemeResourceDictionary />
             <ResourceDictionary>
-                <x:String x:Key="SfMapsTheme">CommonTheme</x:String> 
-                <Color x:Key="SfMapsShapeLayerNormalShapeFillColor">Blue</Color> 
-                <Color x:Key="SfMapsShapeLayerNormalShapeStroke">Green</Color> 
+                <x:String x:Key="SfMapsTheme">CommonTheme</x:String>
+                <Color x:Key="SfMapsShapeLayerNormalShapeFillColor">Red</Color>
+                <Color x:Key="SfMapsShapeLayerNormalShapeStroke">Green</Color>
             </ResourceDictionary>
-        </syncCore:SyncfusionThemeDictionary.MergedDictionaries>
-    </syncCore:SyncfusionThemeDictionary>
-</Application.Resources>
+        </ResourceDictionary.MergedDictionaries>
+    </ResourceDictionary>
+ </Application.Resources>
 
 ....
 
@@ -1504,20 +1508,21 @@ This page lists the keys for each control and the element to which it is mapped 
 			
 {% highlight xaml %}
 
-<Application xmlns:syncTheme="clr-namespace:Syncfusion.XForms.Themes;assembly=Syncfusion.Core.XForms"
+<Application xmlns:syncTheme="clr-namespace:Syncfusion.Maui.Themes;assembly=Syncfusion.Maui.Core"
              ...>
-<Application.Resources>
-    <syncCore:SyncfusionThemeDictionary>
-        <syncCore:SyncfusionThemeDictionary.MergedDictionaries>
+ <Application.Resources>
+    <ResourceDictionary>
+        <ResourceDictionary.MergedDictionaries>
+            <syncTheme:SyncfusionThemeResourceDictionary />
             <ResourceDictionary>
                 <x:String x:Key="SfSchedulerTheme">CommonTheme</x:String> 
                 <Color x:Key="SfSchedulerNormalHeaderTextColor">Red</Color>
                 <Color x:Key="SfSchedulerNormalViewHeaderDayTextColor">Blue</Color>
                 <Color x:Key="SfSchedulerNormalViewHeaderDateTextColor">Blue</Color> 
             </ResourceDictionary>
-        </syncCore:SyncfusionThemeDictionary.MergedDictionaries>
-    </syncCore:SyncfusionThemeDictionary>
-</Application.Resources>
+        </ResourceDictionary.MergedDictionaries>
+    </ResourceDictionary>
+ </Application.Resources>
 
 ....
 
@@ -1946,19 +1951,20 @@ This page lists the keys for each control and the element to which it is mapped 
 			
 {% highlight xaml %}
 
-<Application xmlns:syncTheme="clr-namespace:Syncfusion.XForms.Themes;assembly=Syncfusion.Core.XForms"
+<Application xmlns:syncTheme="clr-namespace:Syncfusion.Maui.Themes;assembly=Syncfusion.Maui.Core"
              ...>
-<Application.Resources>
-    <syncCore:SyncfusionThemeDictionary>
-        <syncCore:SyncfusionThemeDictionary.MergedDictionaries>
+ <Application.Resources>
+    <ResourceDictionary>
+        <ResourceDictionary.MergedDictionaries>
+            <syncTheme:SyncfusionThemeResourceDictionary />
             <ResourceDictionary>
                 <x:String x:Key="SfTreeMapTheme">CommonTheme</x:String> 
                 <Color x:Key="SfTreeMapNormalBackground">Blue</Color> 
                 <Color x:Key="SfTreeMapGroupItemNormalBackground">Green</Color> 
             </ResourceDictionary>
-        </syncCore:SyncfusionThemeDictionary.MergedDictionaries>
-    </syncCore:SyncfusionThemeDictionary>
-</Application.Resources>
+        </ResourceDictionary.MergedDictionaries>
+    </ResourceDictionary>
+ </Application.Resources>
 
 ....
 
