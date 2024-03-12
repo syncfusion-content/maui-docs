@@ -280,7 +280,10 @@ N> This is common for Shape, Text and CustomView annotations.
 
     private void OnAnnotationUnSelected(object sender, AnnotationUnselectedEventArgs e)
     {
-        
+        if(e.AnnotationSettings is ImageEditorShapeSettings shapeSettings)
+        {
+            shapeSettings.IsFilled = true;
+        }
     }
 
 {% endhighlight %}
