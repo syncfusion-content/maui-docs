@@ -124,7 +124,6 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </th>
     </tr>
-
     <tr>
         <td rowspan="14">
             SfShimmerStyles  
@@ -166,43 +165,37 @@ This page lists the keys for each control and the element to which it is mapped 
         </td>
         <tr>
         <td>
-        </td>
-        <td>
             SfShimmerFillColor  
             <br/>
             <br/>
         </td>
         <td>
-            Fill color of SfShimmer
+            Fill color of the shimmer
             <br/>
             <br/>
         </td>
     </tr>
 	</tr>
     <tr>
-    <td>
-        </td>
         <td>
             SfShimmerWaveColor 
             <br/>
             <br/>
         </td>
         <td>
-            Wave color of SfShimmer
+            Wave color of the shimmer
         <br/>
         <br/>
         </td>
     </tr>
     <tr>
-    <td>
-        </td>
         <td>
             SfShimmerNormalBackground  
             <br/>
             <br/>
         </td> 
         <td>
-            Background color for the SfShimmer
+            Background color of the shimmer
             <br/>
             <br/>
         </td>
@@ -226,7 +219,6 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </th>
     </tr>
-
     <tr>
         <td rowspan="14">
             SfLinearProgressBarStyles  
@@ -268,71 +260,61 @@ This page lists the keys for each control and the element to which it is mapped 
         </td>
         <tr>
         <td>
-        </td>
-        <td>
             SfLinearProgressBarTrackColor  
             <br/>
             <br/>
         </td>
         <td>
-            Color of the track in the linear progress bar.
+            Trach color of the linear progress bar
             <br/>
             <br/>
         </td>
     </tr>
 	</tr>
     <tr>
-    <td>
-        </td>
         <td>
             SfLinearProgressBarBackground 
             <br/>
             <br/>
         </td>
         <td>
-            Progress bar background in the linear progress bar.
+            Progress bar background of the linear progress bar
         <br/>
         <br/>
         </td>
     </tr>
     <tr>
-    <td>
-        </td>
         <td>
             SfLinearProgressBarProgressColor 
             <br/>
             <br/>
         </td>
         <td>
-            Progress bar color in the linear progress bar.
+            Progress bar color of the linear progress bar
         <br/>
         <br/>
         </td>
     </tr>
     <tr>
-    <td>
-        </td>
         <td>
             SfLinearProgressBarSecondaryProgressColor 
             <br/>
             <br/>
         </td>
         <td>
-            Progress bar secondary progress color in the linear progress bar.
+            Progress bar secondary progress color of the linear progress bar
         <br/>
         <br/>
         </td>
     </tr>
     <tr>
-    <td>
-        </td>
         <td>
             SfProgressBarProgressGradientStopColor 
             <br/>
             <br/>
         </td>
         <td>
-            Progress bar gradient stop color in the linear progress bar.
+            Progress bar gradient stop color of the linear progress bar
         <br/>
         <br/>
         </td>
@@ -356,7 +338,6 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </th>
     </tr>
-
     <tr>
         <td rowspan="14">
             SfCircularProgressBarStyles  
@@ -398,57 +379,49 @@ This page lists the keys for each control and the element to which it is mapped 
         </td>
         <tr>
         <td>
-        </td>
-        <td>
             SfCircularProgressBarTrackColor  
             <br/>
             <br/>
         </td>
         <td>
-            Color of the track in the circular progress bar.
+            Track color of the circular progress bar
             <br/>
             <br/>
         </td>
     </tr>
 	</tr>
     <tr>
-    <td>
-        </td>
         <td>
             SfCircularProgressBarProgressColor 
             <br/>
             <br/>
         </td>
         <td>
-            Progress bar background in the circular progress bar.
+            Progress bar background of the circular progress bar
         <br/>
         <br/>
         </td>
     </tr>
     <tr>
-    <td>
-        </td>
         <td>
             SfCircularProgressBarBackground 
             <br/>
             <br/>
         </td>
         <td>
-            Progress bar background in the circular progress bar.
+            Progress bar background of the circular progress bar
         <br/>
         <br/>
         </td>
     </tr>
     <tr>
-    <td>
-        </td>
         <td>
             SfProgressBarProgressGradientStopColor 
             <br/>
             <br/>
         </td>
         <td>
-            Progress bar gradient stop color in the linear progress bar.
+            Progress bar gradient stop color of the circular progress bar
         <br/>
         <br/>
         </td>
