@@ -221,7 +221,7 @@ private void DataGrid_QueryRowHeight(object? sender, DataGridQueryRowHeightEvent
 
 <img alt="Changing unbound row height" src="Images\unboundRow\maui-datagrid-unbound-row-height.png" width="404"/>
 
-## Get unbound rows
+## Get unbound row
 
 The unbound row can be obtained by using the [GetUnboundRowAtRowIndex]() method.
 
