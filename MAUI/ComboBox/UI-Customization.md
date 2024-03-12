@@ -145,6 +145,29 @@ The following gif image illustrates the result of the above code:
 
 ![.NET MAUI ComboBox border color](Images/UICustomization/BorderColor.png)
 
+## Customize the selection text highlightColor 
+
+The SelectionTextHighlightColor property is used to modify the background color of selected item text in the combobox control.
+
+{% tabs %}
+{% highlight xaml %}
+
+<editors:SfCombobox x:Name="combobox"
+                        WidthRequest="250"
+                        ItemsSource="{Binding SocialMedias}"
+                        DisplayMemberPath="Name"
+                        TextMemberPath="Name"
+                        Placeholder="Select a social media"
+                        SelectionTextHighlightColor="Aqua" />
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+combobox.SelectionTextHighlightColor = Colors.Aqua;
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Maximum DropDown Height
 
@@ -341,6 +364,156 @@ The [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.Dr
 The following image illustrates the result of the above code:
 
 ![.NET MAUI ComboBox ItemTemplate](Images/UICustomization/ItemTemplate.png)
+
+### Customize DropDown item text
+
+DropDown items can be customized using the [DropDownItemFontAttributes], [DropDownItemFontFamily], [DropDownItemFontSize] and [DropDownItemTextColor] properties.
+
+{% tabs %}
+{% highlight xaml %}
+
+<editors:SfCombobox x:Name="combobox"
+                        WidthRequest="250"
+                        ItemsSource="{Binding SocialMedias}"
+                        DisplayMemberPath="Name"
+                        TextMemberPath="Name"
+                        Placeholder="Select a social media"
+                        DropDownItemFontAttributes="Bold"
+                        DropDownItemFontFamily="OpenSansSemibold"
+                        DropDownItemFontSize="20"
+                        DropDownItemTextColor="White" />
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+combobox.DropDownItemFontAttributes = FontAttributes.Bold;
+combobox.DropDownItemFontFamily = "OpenSansSemibold";
+combobox.DropDownItemFontSize = 20;
+combobox.DropDownItemTextColor = Colors.White;
+
+{% endhighlight %}
+{% endtabs %}
+
+### Customize DropDown background color
+
+The DropDownBackground property is used to modify the background color of dropdown.
+
+{% tabs %}
+{% highlight xaml %}
+
+<editors:SfCombobox x:Name="combobox"
+                        WidthRequest="250"
+                        ItemsSource="{Binding SocialMedias}"
+                        DisplayMemberPath="Name"
+                        TextMemberPath="Name"
+                        Placeholder="Select a social media"
+                        DropDownBackground="Yellow" />
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+combobox.DropDownBackground = Colors.Yellow;
+
+{% endhighlight %}
+{% endtabs %}
+
+### Customize the DropDown selected item backgroundcolor
+
+The SelectedDropDownItemBackground property is used to modify the backgroundcolor of selected item in dropdown.
+
+{% tabs %}
+{% highlight xaml %}
+
+<editors:SfCombobox x:Name="combobox"
+                        WidthRequest="250"
+                        ItemsSource="{Binding SocialMedias}"
+                        DisplayMemberPath="Name"
+                        TextMemberPath="Name"
+                        Placeholder="Select a social media"
+                        SelectedDropDownItemBackground="YellowGreen" />
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+combobox.SelectedDropDownItemBackground = Colors.YellowGreen;
+
+{% endhighlight %}
+{% endtabs %}
+
+### Customize DropDown Border Color
+
+The DropDownStroke property is used to modify the border color of dropdown.
+
+{% tabs %}
+{% highlight xaml %}
+
+<editors:SfCombobox x:Name="combobox"
+                        WidthRequest="250"
+                        ItemsSource="{Binding SocialMedias}"
+                        DisplayMemberPath="Name"
+                        TextMemberPath="Name"
+                        Placeholder="Select a social media"
+                        DropDownStroke="Red" />
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+combobox.DropDownStroke = Colors.Red;
+
+{% endhighlight %}
+{% endtabs %}
+
+### Customize DropDown Border Thickness
+
+The DropDownStrokeThickness property is used to modify the thickness of dropdown border.
+
+{% tabs %}
+{% highlight xaml %}
+
+<editors:SfCombobox x:Name="combobox"
+                        WidthRequest="250"
+                        ItemsSource="{Binding SocialMedias}"
+                        DisplayMemberPath="Name"
+                        TextMemberPath="Name"
+                        Placeholder="Select a social media"
+                        DropDownStrokeThickness="5" />
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+combobox.DropDownStrokeThickness = 5;
+
+{% endhighlight %}
+{% endtabs %}
+
+### Customize DropDown Item Height
+
+The DropDownItemHeight property is used to modify the height of dropdown items.
+
+{% tabs %}
+{% highlight xaml %}
+
+<editors:SfCombobox x:Name="combobox"
+                        WidthRequest="250"
+                        ItemsSource="{Binding SocialMedias}"
+                        DisplayMemberPath="Name"
+                        TextMemberPath="Name"
+                        Placeholder="Select a social media"
+                        DropDownItemHeight="50" />
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+combobox.DropDownItemHeight = 50;
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Customize the DropDown (suggestion) item based on condition
 
