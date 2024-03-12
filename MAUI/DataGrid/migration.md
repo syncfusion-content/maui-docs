@@ -428,6 +428,5 @@ We have passed the optional parameters such as {{'[canIncludeHiddenColumns](http
 *	Swiping
 *	Unbound row
 *	Unbound column
-*	Pull To Refresh
 *	Column drag and drop
 *	Row drag and drop
