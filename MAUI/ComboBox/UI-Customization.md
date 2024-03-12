@@ -921,7 +921,7 @@ The following image illustrates the result of the above code:
 
 The [`SfComboBox`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) provides support to customize the text alignment by using the `HorizontalTextAlignment` and `VerticalTextAlignment` properties.
 
-N> `HorizontalTextAlignment` dynamic changes is not working in Android platforms.
+N> Dynamic changes to the `HorizontalTextAlignment` property may not be functioning as expected on Android platform.
 
 {% tabs %}
 {% highlight xaml %}
