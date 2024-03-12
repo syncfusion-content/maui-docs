@@ -208,7 +208,7 @@ This page lists the keys for each control and the element to which it is mapped 
     </tr>
     <tr>
         <td> SfAccordionFocusedItemStroke <br/><br/></td> 
-        <td> Stroke color of the header when it is in the focused state while using key navigation.<br/><br/></td>
+        <td> Stroke color of the header when it is in focused state during keyboard navigation.<br/><br/></td>
     </tr>
 </table>
 
