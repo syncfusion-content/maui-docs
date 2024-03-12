@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Right To Left in .NET MAUI Button Control | Syncfusion
-description: Learn here all about Right To Left support in Syncfusion .NET MAUI Button (SfButton) control, and more.
+description: Learn about Right-to-left support in Syncfusion .NET MAUI Button (SfButton) control and more.
 platform: maui
 control: SfButton
 documentation: ug
