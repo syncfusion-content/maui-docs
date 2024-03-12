@@ -498,4 +498,4 @@ public MainPage()
 {% endhighlight %}
 {% endtabs %}
 
-<img src="Images/styling/maui-datagrid-grid-line-color.png" width="404" height="392">
+<img src="Images/styling/maui-datagrid-grid-line-color.png" width="404">
