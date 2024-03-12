@@ -164,7 +164,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
             <br/>
         </td>
-    <tr>
+    </tr>
     <tr>
         <td> SfListViewNormalListViewItemBackground <br/><br/></td>
         <td> Background color of ListViewItem. <br/><br/></td>
