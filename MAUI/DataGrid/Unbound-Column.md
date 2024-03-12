@@ -35,13 +35,15 @@ The data grid allows adding additional columns that are not bound with data obje
 SfDataGrid dataGrid = new SfDataGrid();
 OrderInforRepo orderInforRepo = new OrderInforRepo();
 dataGrid.ItemsSource = orderInforRepo;
+
 DataGridUnboundColumn DiscountColumn = new DataGridUnboundColumn()
-            {
-                MappingName = "DiscountPrice",
-                HeaderText = "SUM",
-                Expression = "Price1+Price2",
-                Format = "C"
-            };
+    {
+        MappingName = "DiscountPrice",
+        HeaderText = "SUM",
+        Expression = "Price1+Price2",
+        Format = "C"
+    };
+
 this.datagrid.Columns.Add(DiscountColumn);
     
 {% endhighlight %}
@@ -168,15 +170,16 @@ Refer to the following code example in which data for the unbound column is popu
 {% highlight C# %}
 
 datagrid.QueryUnboundColumnValue += DataGrid_QueryUnboundColumnValue;
+
 private void DataGrid_QueryUnboundColumnValue(object? sender, DataGridUnboundColumnEventArgs e)
+{
+    if (e.UnboundAction == DataGridUnboundActions.QueryData)
     {
-        if (e.UnboundAction == DataGridUnboundActions.QueryData)
-        {
-            var Price1 = Convert.ToInt16(e.Record.GetType().GetProperty("Price1").GetValue(e.Record));
-            var Price2 = Convert.ToInt16(e.Record.GetType().GetProperty("Price2").GetValue(e.Record));
-            e.Value = Price1 - Price2;
-        }
+        var Price1 = Convert.ToInt16(e.Record.GetType().GetProperty("Price1").GetValue(e.Record));
+        var Price2 = Convert.ToInt16(e.Record.GetType().GetProperty("Price2").GetValue(e.Record));
+        e.Value = Price1 - Price2;
     }
+}
   
 {% endhighlight %}
 {% endtabs %}
