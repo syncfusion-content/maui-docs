@@ -315,7 +315,7 @@ This page lists the keys for each control and the element to which it is mapped 
     </tr>
 
     <tr>
-        <td rowspan="19">
+        <td rowspan="14">
             SfListViewStyles  
             <br/>
             <br/>
