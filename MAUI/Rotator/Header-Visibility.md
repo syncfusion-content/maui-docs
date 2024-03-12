@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Header Visibility in .NET MAUI Rotator control | Syncfusion
-description: Learn about Header Visibility support in Syncfusion .NET MAUI Rotator (SfRotator) control and more.
+description: Learn about the Header Visibility support in Syncfusion .NET MAUI Rotator (SfRotator) control and more.
 platform: maui 
 control: Rotator
 documentation: ug

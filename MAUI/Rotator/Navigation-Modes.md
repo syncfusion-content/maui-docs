@@ -2,7 +2,7 @@
 
 layout: post
 title: Navigation Modes in .NET MAUI Rotator control | Syncfusion
-description: Learn about Navigation Modes support in Syncfusion .NET MAUI Rotator (SfRotator) control and more
+description: Learn about the Navigation Modes support in Syncfusion .NET MAUI Rotator (SfRotator) control and more
 platform: maui 
 control: Rotator
 documentation: ug
