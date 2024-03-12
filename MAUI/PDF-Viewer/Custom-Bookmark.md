@@ -92,7 +92,11 @@ if (bookmarkToEdit != null)
 {% endhighlight %}
 {% endtabs %}
 
-### Removing a Custom Bookmark
+### Remove custom bookmarks using the bookmark context menu
+
+Tap the context menu button on the custom bookmark to be removed and tap `Delete`.
+
+### Removing a Custom Bookmark programmatically
 
 To remove a custom bookmark, you can remove it directly from the `CustomBookmarks` collection:
 
