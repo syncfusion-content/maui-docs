@@ -472,7 +472,7 @@ public partial class MainPage : ContentPage
 
 ![Changing the border width in .NET MAUI DataGrid](Images/styling/maui-datagrid-border-width.png)
 
-## Changing the border color.
+## Changing the border color
 
 The grid line color can be customized by setting the `DataGridStyle.GridLineColor` property.
 
