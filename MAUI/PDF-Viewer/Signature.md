@@ -112,5 +112,5 @@ PdfViewer.AddAnnotation(customStamp);
 {% endhighlight %}
 {% endtabs %}
 
-N> To add a text signature, you can use an image containing text, and you can add it in the same manner as an image signature.
+N> To add a text signature, you can use an image containing the signature text . You can then add it in the same manner as an image signature.
 
