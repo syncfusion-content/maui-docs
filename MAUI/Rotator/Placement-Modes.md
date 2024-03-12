@@ -11,13 +11,13 @@ documentation: ug
 
 By default, the rotator control displays the dots of each rotator item. It can be changed to any of the following types:
 
-* [`Default`](link)
-* [`None`](link)
-* [`Outside`](link)
+* `Default`
+* `None`
+* `Outside`
  
 ## DotsPlacement
 
-The Display Type of Rotator can be modified using the [`DotsPlacement`](link) Mode. The [`“None”`](link) type can be used when the dots are not needed for the rotator control.
+The Display Type of Rotator can be modified using the `DotsPlacement` Mode. The `“None”` type can be used when the dots are not needed for the rotator control.
 
 {% tabs %}
 

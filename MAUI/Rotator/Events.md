@@ -15,7 +15,7 @@ The SelectionChanged event is used to notify when the selection is changed by sw
 
 ## ItemTapped
 
-The [`ItemTapped`](link) event will be triggered whenever tapping the item.
+The `ItemTapped` event will be triggered whenever tapping the item.
 
 {% tabs %}
 

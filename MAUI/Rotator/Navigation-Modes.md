@@ -196,10 +196,10 @@ The `NavigationStripPosition` specifies the placement position of the navigation
 
 There are four available positions,
 
-* [`Bottom`](link) - Sets the position of the navigation bar items to the bottom.
-* [`Left`](link) - Sets the position of the navigation bar items to the left.
-* [`Top`](link) - Sets the position of the navigation bar items to the top.
-* [`Right`](link) - Sets the position of the navigation bar items to the right.
+* `Bottom` - Sets the position of the navigation bar items to the bottom.
+* `Left` - Sets the position of the navigation bar items to the left.
+* `Top` - Sets the position of the navigation bar items to the top.
+* `Right` - Sets the position of the navigation bar items to the right.
 
 {% tabs %}
 
