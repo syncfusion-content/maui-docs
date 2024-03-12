@@ -368,7 +368,7 @@ This page lists the keys for each control and the element to which it is mapped 
     </tr>
     <tr>
         <td> SfListViewFocusedListViewItemStroke <br/><br/></td> 
-        <td> Stroke color of the ListViewItem when it is in focused state.<br/><br/></td>
+        <td> Stroke color of the ListViewItem when it is in focused state during key navigation.<br/><br/></td>
     </tr>
     <tr>
         <td> SfListViewFocusedListViewItemStrokeThickness <br/><br/></td> 
