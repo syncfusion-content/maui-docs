@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Form filling in .NET MAUI PDF Viewer control | Syncfusion
-description: Learn here all about PDF form filling using Syncfusion .NET MAUI PDF Viewer (SfPdfViewer).
+description: Learn here all about PDF form filling feature of Syncfusion .NET MAUI PDF Viewer (SfPdfViewer) control and more.
 platform: MAUI
 control: SfPdfViewer
 documentation: ug
@@ -198,6 +198,23 @@ The `Signature` property is of type [InkAnnotation](https://help.syncfusion.com/
 ### Button form fields
 
 Button form fields will be rendered in the PDF viewer. But the PDF viewer supports only the `GoTo` actions that navigates to a particular location in the PDF document alone. Other types of button actions are not supported.
+
+### Adding custom information to a form field
+
+The [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) allows you to assign custom information to form fields. The `CustomData` property is utilized to store additional information about each form field instance for reference. However, it's essential to note that these data are solely intended for reference purposes and will not be displayed in the `SfPdfViewer` interface.
+
+The following code sample demonstrates how to set the `CustomData` property for a form field. In this code snippet, we set the custom data to represent the modification time of the form field.
+
+{% tabs %}
+{% highlight C# %}
+
+private void PdfViewer_FormFieldValueChanged(object sender, FormFieldValueChangedEventArgs e)
+{
+        e.FormField.CustomData="Modified Date is: " +DateTime.Now.ToString();
+}
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Restrict form field editing
 
