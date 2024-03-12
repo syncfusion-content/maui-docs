@@ -258,7 +258,7 @@ The default sort icon color can be customized by setting the `DataGridStyle.Sort
 {% endtabs %}
 
 ![DataGrid with sort template selector]
-<img src="Images\sorting\maui-Sort-Icon-Color.png" width="404">
+<img src="Images\sorting\maui-datagrid-Sort-Icon-Color.png" width="404">
 
 
 ## Load sort icon through template

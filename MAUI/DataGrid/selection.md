@@ -305,6 +305,11 @@ By default, the current cell is focusable for all the columns. To disable curren
 
 {% tabs %}
 {% highlight XAML}
+<syncfusion:SfDataGrid x:Name="sfDataGrid"
+                    SelectionMode="Single"
+                    NavigationMode="Cell"
+                    ColumnWidthMode="Auto"
+                    ItemsSource="{Binding OrderInfoCollection}" >
 <syncfusion:SfDataGrid.Columns>
    <syncfusion:DataGridTextColumn MappingName="OrderID"
                  Format="D"
@@ -315,6 +320,7 @@ By default, the current cell is focusable for all the columns. To disable curren
    <syncfusion:DataGridTextColumn MappingName="ShipCountry "
                  HeaderText="Ship Country " />
 </syncfusion:SfDataGrid.Columns>
+</syncfusion:SfDataGrid>
 {% endhighlight %}
 {% endtabs %}
 

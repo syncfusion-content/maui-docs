@@ -51,7 +51,7 @@ The .NET MAUI DataGrid control is used to display and manipulate data in a tabul
 
 * **Exporting** - Support to export the data to Excel and PDF.
 
-* **Unbound column** - The data grid allows adding additional columns that are not bound with data objects from the underlying data source.
+* **Unbound column** - It allows adding additional columns that are not bound with data objects from the underlying data source.
 
 * **Unbound Row** - It allows adding rows at the top and bottom of the DataGrid which are not bound with data objects from the underlying data source.
 

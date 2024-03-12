@@ -9,7 +9,7 @@ documentation: UG
 
 # Unbound column in MAUI DataGrid (SfDataGrid)
 
-The data grid allows adding additional columns that are not bound with data objects from the underlying data source.The unbound column can be added using the [SfDataGrid.DataGridUnboundColumn] class.
+The data grid allows adding additional columns that are not bound with data objects from the underlying data source.The unbound column can be added using the [SfDataGrid.DataGridUnboundColumn]() class.
 
 {% tabs %}
 {% highlight xaml %}
@@ -49,12 +49,12 @@ The data grid allows adding additional columns that are not bound with data obje
 {% endtabs %}
 
 
-<img alt="" src="Images\unbound-column\maui-datagrid-sample-example.png" width="404" Height = "396" />
+<img alt="" src="Images\unbound-column\maui-datagrid-sample-example.png" width="404" />
 
-N> It is mandatory to specify the GridColumn.MappingName for SfDataGrid.GridUnboundColumn with some name to identify the column. It is not necessary to define name of the field in the data object.
+N> It is mandatory to specify the `DataGridColumn.MappingName` for `SfDataGrid.DataGridUnboundColumn` with some name to identify the column. It is not necessary to define name of the field in the data object.
 
-# Populating data for the unbound column
-Data for the unbound column can be configured by setting the `Expression` or `Format` property..
+## Populating data for the unbound column
+Data for the unbound column can be configured by setting the `Expression` property..
 
 # Using Expression
 The arithmetic or logic expression can be specified by using the expression property to compute the display value. By default, `DataGridUnboundColumn` evaluates the expression with casing. The casing will be disabled while evaluating the expression by setting the `CaseSensitive` property to false
@@ -149,20 +149,6 @@ Logical operation
      </syncfusion:SfDataGrid.Columns>
  </syncfusion:SfDataGrid>
 {% endhighlight %}
-{% highlight C# %}
-    datagrid.QueryUnboundColumnValue += DataGrid_QueryUnboundColumnValue;
-    
-    private void DataGrid_QueryUnboundColumnValue(object? sender, DataGridUnboundColumnEventArgs e)
-    {
-        if (e.UnboundAction == DataGridUnboundActions.QueryData)
-            {
-                var Price1 = Convert.ToInt16(e.Record!.GetType().GetProperty("Price1")?.GetValue(e.Record));
-                var Price2 = Convert.ToInt16(e.Record!.GetType().GetProperty("Price2")?.GetValue(e.Record));
-                var amount = Price1 * Price2;
-                e.Value = amount;
-            }
-    }
-{% endhighlight %}
 {% endtabs %}
 
 # Using QueryUnboundColumnValue event
@@ -176,8 +162,6 @@ The DataGridUnboundColumnEventArgs provides the following properties:
 ***Record:*** Gets the underlying row data
 ***UnboundAction:*** Defines the action for triggering event.
 ***Value:*** Gets or Sets the value for DataGridUnboundCOlumn cell based on unboundAction.
-
-# Populate the data for the unbound column by handling
 
 Populate the data for the unbound column by handling `QueryUnboundColumnValue` event which allows customizing the value of the `DataGridUnboundColumn`. `DataGridUnboundColumnEventArgs` exposes `Value` property, by which you can set the value for the grid cells of the unbound column based on the `UnboundAction`.
 
