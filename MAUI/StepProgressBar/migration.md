@@ -195,17 +195,17 @@ this.Content = stepProgressBar ;
 <tr>
 <td>{{'[CompletedStepStyle]()'| markdownify }}</td>
 <td>{{'[CompletedStepSettings]()'| markdownify }}</td>
-<td>Gets or sets the completed step style for the step progressbar.</td>
+<td>Gets or sets the completed step settings for the step progressbar.</td>
 </tr>
 <tr>
 <td>{{'[InProgressStepStyle]()'| markdownify }}</td>
 <td>{{'[InProgressStepSettings]()'| markdownify }}</td>
-<td>Gets or sets the in progress step style for the step progressbar.</td>
+<td>Gets or sets the in progress step settings for the step progressbar.</td>
 </tr>
 <tr>
 <td>{{'[NotStartedStepStyle]()'| markdownify }}</td>
 <td>{{'[NotStartedStepSettings]()'| markdownify }}</td>
-<td>Gets or sets the not started step style for the step progressbar.</td>
+<td>Gets or sets the not started step settings for the step progressbar.</td>
 </tr>
 <tr>
 <td>{{'[Orientation]()'| markdownify }}</td>
@@ -220,7 +220,7 @@ this.Content = stepProgressBar ;
 <tr>
 <td>{{'[TitleAlignment]()'| markdownify }}</td>
 <td>{{'[LabelPosition]()'| markdownify }}</td>
-<td> Gets or sets the label position or tile alignment.</td>
+<td> Gets or sets the label position for the step progress bar.</td>
 </tr>
 <tr>
 <td>{{'[TitleSpace]()'| markdownify }}</td>
@@ -255,22 +255,22 @@ this.Content = stepProgressBar ;
 <tr>
 <td>{{'[FontAttributes]()'| markdownify }}</td>
 <td>{{'[[FontAttributes]()(From [TextStyle]() property of [StepSettings]() class)]()'| markdownify }}</td>
-<td>Gets or sets the font attributes of the text style.</td>
+<td>Gets or sets the font attributes of the text style which is used to customize the primary and secondary text.</td>
 </tr>
 <tr>
 <td>{{'[FontColor]()'| markdownify }}</td>
 <td>{{'[[TextColor]()(From [TextStyle]() property of [StepSettings]() class)]()'| markdownify }}</td>
-<td>Gets or sets the text color of the text style.</td>
+<td>Gets or sets the text color of the text style which is used to customize the primary and secondary text.</td>
 </tr>
 <tr>
 <td>{{'[FontFamily]()'| markdownify }}</td>
 <td>{{'[[FontFamily]()(From [TextStyle]() property of [StepSettings]() class)]()'| markdownify }}</td>
-<td>Gets or sets the font family of the text style.</td>
+<td>Gets or sets the font family of the text style which is used to customize the primary and secondary text.</td>
 </tr>
 <tr>
 <td>{{'[FontSize]()'| markdownify }}</td>
 <td>{{'[[FontSize]()(From [TextStyle]() property of [StepSettings]() class)]()'| markdownify }}</td>
-<td>Gets or sets the font size of the text style.</td>
+<td>Gets or sets the font size of the text style which is used to customize the primary and secondary text.</td>
 </tr>
 <tr>
 <td>{{'[GapWidth]()'| markdownify }}</td>
@@ -300,7 +300,7 @@ this.Content = stepProgressBar ;
 <tr>
 <td>{{'[MarkerShapeType]()'| markdownify }}</td>
 <td>{{'[ShapeType]()'| markdownify }}</td>
-<td>.</td>
+<td>Gets or sets the shape type of the step.</td>
 </tr>
 <tr>
 <td>{{'[MarkerStrokeColor]()'| markdownify }}</td>

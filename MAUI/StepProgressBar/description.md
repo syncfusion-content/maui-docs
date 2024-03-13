@@ -10,9 +10,6 @@ documentation: ug
 # Description in .NET MAUI StepProgressBar (Step Progress Bar)
 Each step in a multi-step process has a different operation. To display information about a step's status can be shown on either side. A primary description will be on the right or bottom of the step, and a secondary description will be on the left or top of the step.
 
-## StepProgressBar overview
-The following overview image illustrates the major elements presented in StepProgressBar.
-
 ## Text 
 The primary and secondary description for a step view can be set using the [PrimaryText]() and [SecondaryText]() properties as demonstrated in the following code example.
 
@@ -56,9 +53,7 @@ public class ViewModel
 {% endhighlight %}
 {% endtabs %}
 
-* Bind the Collection to step progressbar
-
-The Step progressbar control allows you to bind item collection by setting the [ItemsSource]() property from the [SfStepProgressBar](). Bind item collection in both XAML and C#.
+* Bind the Collection to the step progressbar
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="6" %}
