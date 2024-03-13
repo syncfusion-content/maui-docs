@@ -1,7 +1,7 @@
 ---
 layout: post
 title: AutoSizing in .NET MAUI Autocomplete control | Syncfusion
-description: Learn all about autosizing support in Syncfusion .NET MAUI Autocomplete (SfAutocomplete) control and more here.
+description: Learn about autosizing support in Syncfusion .NET MAUI Autocomplete (SfAutocomplete) control and more.
 platform: maui
 control: SfAutocomplete
 documentation: ug
@@ -9,9 +9,9 @@ documentation: ug
 
 # AutoSizing in .NET MAUI AutoComplete (SfAutocomplete)
 
-AutoSizing can be enabled in [SfAutocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) control so that the control will extend its layout based on the input content.
+AutoSizing can be enabled in the [SfAutocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) control so that the control will extend its layout based on the input content.
 
-EnableAutoSize property is used to enable the autoSizing in SfAutocomplete control. To enable the API, you need to set the SelectionMode as Multiple and TokensWrapMode as Wrap. The default value of EnableAutoSize is false.
+The EnableAutoSize property is used to enable the auto sizing in the SfAutocomplete control. To enable the API, set the SelectionMode as Multiple and TokensWrapMode as Wrap. The default value of EnableAutoSize is false.
 
 {% tabs %}
 {% highlight xaml %}
