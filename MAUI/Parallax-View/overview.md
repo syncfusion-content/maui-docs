@@ -18,4 +18,4 @@ The [SfParallaxView]() for .NET MAUI provides a perfect way for scrolling any co
 * Provides built-in integration with MAUI Scroll View and Syncfusion ListView.
 * Bind any control which implements IParallaxView interface.
 
-![Overview image of Parallax View](ParallaxView_Images/maui_parallaxview.gif)
+![Overview image of Parallax View](ParallaxView_Images/maui_parallaxview_overview.gif)
