@@ -377,7 +377,7 @@ To make migration from [Xamarin SfPdfViewer](https://www.syncfusion.com/xamarin-
 </tr>
 <tr>
 <td>{{'[Print](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.SfPdfViewer.html#Syncfusion_SfPdfViewer_XForms_SfPdfViewer_Print)'| markdownify }}</td>
-<td>{{'[PrintDocument]()'| markdownify }}</td>
+<td>{{'PrintDocument'| markdownify }}</td>
 <td>Prints the PDF document.</td>
 </tr>
 </table>
