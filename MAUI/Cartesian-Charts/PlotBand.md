@@ -13,8 +13,6 @@ A plot band, also known as a stripline, allows for shading specific regions or r
 
 Plot bands are classified into [NumericalPlotBand]() and [DateTimePlotBand](). Based on the axis, plot bands are drawn using these classifications. The following properties are used to configure the plot band:
 
-* [`Start`]() - change the start position of the plot bands.
-* [`End`]() - change the end position of the plot bands.
 * [`Size`]() - changes how long plot band should be expanded. This is applicable only when end is not specified.
 * [`SizeType`]() - changes the date-time unit of the value specified in the `Size` property. The values can be year, month, day, hour, minute, second, and millisecond.
 * [`Text`]()- changes the text of the plot band.
@@ -27,7 +25,7 @@ Plot bands are classified into [NumericalPlotBand]() and [DateTimePlotBand](). B
 
 ## Numerical PlotBand 
 
-[NumericalPlotBands]() are used to draw plot bands for [NumericalAxis]() and [CategoryAxis](). To add a plot band, create an instance of [NumericalPlotBandCollection]() and specify numerical value for the [Start]() parameter. This parameter determines the beginning of the plot band, along with the specified [Size]().
+[NumericalPlotBands]() are used to draw plot bands for [NumericalAxis]() and [CategoryAxis](). To add a plot band, create an instance of [NumericalPlotBandCollection]() and specify numerical value for the [Start]() and [End]() parameter. These parameters determine the beginning and end of the plot band.
 
 {% tabs %}
 
@@ -39,7 +37,7 @@ Plot bands are classified into [NumericalPlotBand]() and [DateTimePlotBand](). B
             <chart:NumericalAxis>
                 <chart:NumericalAxis.PlotBands>
                     <chart:NumericalPlotBandCollection>
-                        <chart:NumericalPlotBand Start="24" Size="4" 
+                        <chart:NumericalPlotBand Start="24" End="28" 
                                                  Fill="Orange"/>
                     </chart:NumericalPlotBandCollection>
                 </chart:NumericalAxis.PlotBands>
@@ -60,7 +58,7 @@ Plot bands are classified into [NumericalPlotBand]() and [DateTimePlotBand](). B
     NumericalPlotBand plotBand = new NumericalPlotBand
     {
         Start = 24,
-        Size = 4,
+        End = 28,
         Fill = Colors.Orange
     };
 
@@ -77,7 +75,7 @@ Plot bands are classified into [NumericalPlotBand]() and [DateTimePlotBand](). B
 
 ## DateTime PlotBand
 
-[DateTimePlotBands]() are used to draw plot bands for [DateTimeAxis](). To add a plot band, create an instance of [DateTimePlotBandCollection]() and specifying the [Start]() date and [Size]() values. The start value determines the beginning of the plot band, along with the specified size. The [SizeType]() parameter determines which unit of measurement to use on the date-time axis.
+[DateTimePlotBands]() are used to draw plot bands for [DateTimeAxis](). To add a plot band, create an instance of [DateTimePlotBandCollection]() and specifying the [Start]() date and [End]() date. These parameters determine the beginning and end of the plot band.
 
 {% tabs %}
 
@@ -90,7 +88,7 @@ Plot bands are classified into [NumericalPlotBand]() and [DateTimePlotBand](). B
           <chart:DateTimeAxis.PlotBands>
              <chart:DateTimePlotBandCollection >
                  <chart:DateTimePlotBand Start="2023-04-01"
-                                         Size="2" SizeType="Months"
+                                         End="2023-06-01"
                                          Fill="Orange"/>
                     </chart:DateTimePlotBandCollection >
                 </chart:DateTimeAxis.PlotBands>
@@ -113,8 +111,7 @@ Plot bands are classified into [NumericalPlotBand]() and [DateTimePlotBand](). B
     DateTimePlotBand plotBand = new DateTimePlotBand
     {
         Start = new DateTime(2023, 04, 01),
-        Size = 2,
-        WidthType = DateTimeUnits.Months,
+        End = new DateTime(2023,06,01),
         Fill = Color.Orange
     };
 
