@@ -216,6 +216,16 @@ To make migration from [Xamarin SfPdfViewer](https://www.syncfusion.com/xamarin-
 <td>{{'PageLayoutMode'| markdownify}}</td>
 <td>Gets or sets the layout mode in which the pages will be displayed.</td>
 </tr>
+<tr>
+<td>{{'[InkAnnotationSettings.TouchMode](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.InkAnnotationSettings.html#Syncfusion_SfPdfViewer_XForms_InkAnnotationSettings_TouchMode)'| markdownify}}</td>
+<td>InkAnnotationSettings.TouchScreenInputMode</td>
+<td>Gets or sets a value that indicates the input mode in which the ink strokes should be allowed to be drawn.</td>
+</tr>
+<tr>
+<td>{{'[TouchMode.Direct](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.TouchMode.html#Syncfusion_SfPdfViewer_XForms_TouchMode_Direct)'| markdownify}}</td>
+<td>TouchScreenInputMode.FingerAndStylus</td>
+<td>Allows drawing ink using both finger and stylus.</td>
+</tr>
 </table>
 
 ## Events
@@ -399,6 +409,16 @@ To make migration from [Xamarin SfPdfViewer](https://www.syncfusion.com/xamarin-
 <th>Xamarin SfPdfViewer</th>
 <th>.NET MAUI SfPdfViewer</th>
 <th>Description</th></tr>
+<tr>
+<td>{{'[CustomBookmark](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.CustomBookmark.html)'| markdownify }}</td>
+<td>Bookmark</td>
+<td>Represents a custom bookmark with a name and associated page number.</td>
+</tr>
+<tr>
+<td>{{'[TouchMode](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.TouchMode.html)'| markdownify }}</td>
+<td>TouchScreenInputMode</td>
+<td>Represents a custom bookmark with a name and associated page number.</td>
+</tr>
 <tr>
 <td>{{'[TextSelectionCompletedEventArgs](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.TextSelectionCompletedEventArgs.html)'| markdownify }}</td>
 <td>{{'[TextSelectionChangedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.TextSelectionChangedEventArgs.html)'| markdownify}}</td>
