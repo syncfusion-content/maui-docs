@@ -624,7 +624,7 @@ By default, the column headers will be exported to PDF document. To export the S
 {% tabs %}
 {% highlight c# %}
 DataGridPdfExportingOption option = new DataGridPdfExportingOption();
-option.CanExportHeader = true;
+option.CanExportHeader = false;
 {% endhighlight %}
 {% endtabs %}
 

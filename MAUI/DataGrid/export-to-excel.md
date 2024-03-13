@@ -603,7 +603,7 @@ By default, the column headers will be exported to Excel sheet. To export the Sf
 {% tabs %}
 {% highlight c# %}
 DataGridExcelExportingOption option = new DataGridExcelExportingOption();
-        option.CanExportHeader = true;
+        option.CanExportHeader = false;
 {% endhighlight %}
 {% endtabs %}
 
