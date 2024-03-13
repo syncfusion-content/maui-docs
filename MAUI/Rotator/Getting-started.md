@@ -348,5 +348,3 @@ The placement position of navigation strip items such as `Thumbnail` or `Dots` c
 {% endtabs %}
 
 ![NavigationStripPosition](images/NavigationStripPosition.png)
-
-You can find the complete getting started sample from this [link.](https://github.com/SyncfusionExamples/Getting-Started-with-.NET-MAUI-Rotator)
