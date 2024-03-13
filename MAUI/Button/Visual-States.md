@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Visual states in .NET MAUI Button Control | Syncfusion
-description: Learn here about visual states support in the Syncfusion .NET MAUI Button (SfButton) control, its elements and more.
+description: Learn about visual states support in the Syncfusion .NET MAUI Button (SfButton) control, its elements, and more.
 platform: maui
 control: SfButton
 documentation: ug 
@@ -17,7 +17,7 @@ The visual of the Button can be customized using `VisualStates`. The `SfButton `
 * Checked
 * Diabled
 
-N> The visual states Checked and Unchecked are only updated when enabling the IsCheckable property in SfButton.
+N> The visual states Checked and Unchecked are only updated when enabling the IsCheckable property in the SfButton.
 
 {% tabs %}
 {% highlight xaml %}

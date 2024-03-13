@@ -147,7 +147,7 @@ The following gif image illustrates the result of the above code:
 
 ## Customize the selection text highlightColor 
 
-The SelectionTextHighlightColor property is used to modify the background color of selected item text in the combobox control.
+The SelectionTextHighlightColor property is used to modify the background color of the selected item text in the combobox control.
 
 {% tabs %}
 {% highlight xaml %}
@@ -367,7 +367,7 @@ The following image illustrates the result of the above code:
 
 ### Customize the DropDown item text
 
-DropDown items can be customized using the [DropDownItemFontAttributes], [DropDownItemFontFamily], [DropDownItemFontSize] and [DropDownItemTextColor] properties.
+DropDown items can be customized using the [DropDownItemFontAttributes], [DropDownItemFontFamily], [DropDownItemFontSize], and [DropDownItemTextColor] properties.
 
 {% tabs %}
 {% highlight xaml %}
@@ -397,7 +397,7 @@ combobox.DropDownItemTextColor = Colors.White;
 
 ### Customize the DropDown background color
 
-The DropDownBackground property is used to modify the background color of dropdown.
+The DropDownBackground property is used to modify the background color of the dropdown.
 
 {% tabs %}
 {% highlight xaml %}
@@ -421,7 +421,7 @@ combobox.DropDownBackground = Colors.Yellow;
 
 ### Customize the DropDown selected item backgroundcolor
 
-The SelectedDropDownItemBackground property is used to modify the backgroundcolor of selected item in dropdown.
+The SelectedDropDownItemBackground property is used to modify the backgroundcolor of selected item in the dropdown.
 
 {% tabs %}
 {% highlight xaml %}
@@ -445,7 +445,7 @@ combobox.SelectedDropDownItemBackground = Colors.YellowGreen;
 
 ### Customize the DropDown Border Color
 
-The DropDownStroke property is used to modify the border color of dropdown.
+The DropDownStroke property is used to modify the border color of the dropdown.
 
 {% tabs %}
 {% highlight xaml %}
@@ -469,7 +469,7 @@ combobox.DropDownStroke = Colors.Red;
 
 ### Customize the DropDown Border Thickness
 
-The DropDownStrokeThickness property is used to modify the thickness of dropdown border.
+The DropDownStrokeThickness property is used to modify the thickness of the dropdown border.
 
 {% tabs %}
 {% highlight xaml %}
@@ -493,7 +493,7 @@ combobox.DropDownStrokeThickness = 5;
 
 ### Customize the DropDown Item Height
 
-The DropDownItemHeight property is used to modify the height of dropdown items.
+The DropDownItemHeight property is used to modify the height of the dropdown items.
 
 {% tabs %}
 {% highlight xaml %}

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: AutoSizing in .NET MAUI ComboBox control | Syncfusion
-description: Learn all about autosizing support in Syncfusion .NET MAUI ComboBox (SfComboBox) control and more here.
+description: Learn about autosizing support in Syncfusion .NET MAUI ComboBox (SfComboBox) control and more.
 platform: maui
 control: SfComboBox
 documentation: ug
@@ -9,9 +9,9 @@ documentation: ug
 
 # AutoSizing in .NET MAUI ComboBox (SfComboBox)
 
-AutoSizing can be enabled in [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) control so that the control will extend its layout based on the input content.
+AutoSizing can be enabled in the [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) control so that the control will extend its layout based on the input content.
 
-EnableAutoSize property is used to enable the autoSizing in SfComboBox control. To enable the API, you need to set the SelectionMode as Multiple and TokensWrapMode as Wrap. The default value of EnableAutoSize is false.
+The EnableAutoSize property is used to enable the auto sizing in the SfComboBox control. To enable the API, set the SelectionMode as Multiple and TokensWrapMode as Wrap. The default value of EnableAutoSize is false.
 
 {% tabs %}
 {% highlight xaml %}

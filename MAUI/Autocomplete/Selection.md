@@ -143,14 +143,14 @@ The selected items can be changed programmatically by using the [SelectedItems](
 
 ### TokensWrapMode
 
-There are two ways to display multi selection items in the AutoComplete control. They are
+There are two ways to display multi-selection items in the AutoComplete control. They are:
 
 * Wrap
 * None
 
 #### Wrap mode
 
-When the TokensWrapMode is set to Wrap the selected items will be wrapped to the next line of the SfAutoComplete.
+When the TokensWrapMode is set to Wrap, the selected items will be wrapped to the next line of the SfAutoComplete.
 
 {% tabs %}
 
@@ -172,7 +172,7 @@ When the TokensWrapMode is set to Wrap the selected items will be wrapped to the
 
 #### None Mode
 
-When the TokensWrapMode is set to None the selected item will be wrapped in horizontal orientation.
+When the TokensWrapMode is set to None, the selected item will be wrapped in a horizontal orientation.
 
 {% tabs %}
 
