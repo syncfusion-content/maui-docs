@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 # Download and Installation
-Syncfusion publishes the Visual Studio Code extension on the [Visual Studio Code marketplace](https://marketplace.visualstudio.com/items?itemName=SyncfusionInc.MAUIVSCodeExtension). You can install it directly from Visual Studio Code or download and install it from the Visual Studio Code marketplace.
+Syncfusion publishes the Visual Studio Code extension on the [Visual Studio Code marketplace](https://marketplace.visualstudio.com/items?itemName=SyncfusionInc.MAUI-VSCode-Extensions). You can install it directly from Visual Studio Code or download and install it from the Visual Studio Code marketplace.
 
 **Prerequisites**
 The following software prerequisites must be installed to install the Syncfusion .NET MAUI extension, as well as for creating and adding snippets in Syncfusion .NET MAUI applications.
@@ -42,7 +42,7 @@ The following instructions outline the process of installing the Syncfusion .NET
 
 The following instructions outline the process of downloading and installing Syncfusion .NET MAUI applications from the Visual Studio Code Marketplace.
 
-1.	Open [Syncfusion .NET MAUI Code Extensions](https://marketplace.visualstudio.com/items?itemName=SyncfusionInc.MAUIVSCodeExtension) in Visual Studio Code Marketplace.
+1.	Open [Syncfusion .NET MAUI Code Extensions](https://marketplace.visualstudio.com/items?itemName=SyncfusionInc.MAUI-VSCode-Extensions) in Visual Studio Code Marketplace.
 
 2.	Select **Install** from the Visual Studio Code Marketplace. A popup window appears in your browser with information like **Open Visual Studio Code**. Clicking **Open Visual Studio Code** will launch the Syncfusion .NET MAUI Extension in Visual Studio Code.
 
@@ -59,7 +59,7 @@ The following instructions outline the process of downloading and installing Syn
 
 The following instructions detail the manual installation process of the Syncfusion .NET MAUI extensions in Visual Studio Code.
 
-1.	To install the extension manually, download the **SyncfusionInc..NET-MAUI-VSCode-Extensions.vsix** file from the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=SyncfusionInc.MAUIVSCodeExtension). Then, install it from a local file within VS Code.
+1.	To install the extension manually, download the **SyncfusionInc..NET-MAUI-VSCode-Extensions.vsix** file from the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=SyncfusionInc.MAUI-VSCode-Extensions). Then, install it from a local file within VS Code.
 
 2.	In VS Code, navigate to the Extensions view by clicking on the Extensions icon located in the Activity Bar.
 
