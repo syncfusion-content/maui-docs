@@ -1725,12 +1725,12 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
 		<td>
-           SfCalendarViewTheme 
+           SfCalendarTheme 
             <br/>
             <br/>
         </td>
         <td>    
-            By merging this key in application resources, it is possible to customize the appearance of the SfCalendarTheme without merging common theme resource and control style resource dictionaries.
+            By merging this key in application resources, it is possible to customize the appearance of the SfCalendar without merging common theme resource and control style resource dictionaries.
 			
 {% highlight xaml %}
 
@@ -1741,7 +1741,7 @@ This page lists the keys for each control and the element to which it is mapped 
         <ResourceDictionary.MergedDictionaries>
             <syncTheme:SyncfusionThemeResourceDictionary />
             <ResourceDictionary>
-                <x:String x:Key="SfCalendarViewTheme">CommonTheme</x:String>
+                <x:String x:Key="SfCalendarTheme">CommonTheme</x:String>
                 <Color x:Key="SfCalendarHeaderTextColor">Red</Color>
                 <Color x:Key="SfCalendarHeaderBackgroundColor">Green</Color>
             </ResourceDictionary>
