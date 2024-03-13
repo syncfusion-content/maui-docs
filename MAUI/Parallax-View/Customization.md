@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Customization in .NET MAUI Parallax View control | Syncfusion
-description: Learn about Customization support in Syncfusion .NET MAUI Parallax View (SfParallaxView) control.
+description: Learn about Customization support in Syncfusion .NET MAUI Parallax View (SfParallaxView) control and more.
 platform: MAUI
 control: SfParallaxView
 documentation: ug
