@@ -369,7 +369,7 @@ autocomplete.DropDownItemTextColor = Colors.White;
 {% endhighlight %}
 {% endtabs %}
 
-### Customize DropDown background color
+### Customize the DropDown background color
 
 The DropDownBackground property is used to modify the background color of dropdown.
 
@@ -417,7 +417,7 @@ autocomplete.SelectedDropDownItemBackground = Colors.YellowGreen;
 {% endhighlight %}
 {% endtabs %}
 
-### Customize DropDown Border Color
+### Customize the DropDown Border Color
 
 The DropDownStroke property is used to modify the border color of dropdown.
 
@@ -441,7 +441,7 @@ autocomplete.DropDownStroke = Colors.Red;
 {% endhighlight %}
 {% endtabs %}
 
-### Customize DropDown Border Thickness
+### Customize the DropDown Border Thickness
 
 The DropDownStrokeThickness property is used to modify the thickness of dropdown border.
 
@@ -465,7 +465,7 @@ autocomplete.DropDownStrokeThickness = 5;
 {% endhighlight %}
 {% endtabs %}
 
-### Customize DropDown Item Height
+### Customize the DropDown Item Height
 
 The DropDownItemHeight property is used to modify the height of dropdown items.
 

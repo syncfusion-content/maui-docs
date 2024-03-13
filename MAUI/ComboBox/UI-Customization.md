@@ -365,7 +365,7 @@ The following image illustrates the result of the above code:
 
 ![.NET MAUI ComboBox ItemTemplate](Images/UICustomization/ItemTemplate.png)
 
-### Customize DropDown item text
+### Customize the DropDown item text
 
 DropDown items can be customized using the [DropDownItemFontAttributes], [DropDownItemFontFamily], [DropDownItemFontSize] and [DropDownItemTextColor] properties.
 
@@ -395,7 +395,7 @@ combobox.DropDownItemTextColor = Colors.White;
 {% endhighlight %}
 {% endtabs %}
 
-### Customize DropDown background color
+### Customize the DropDown background color
 
 The DropDownBackground property is used to modify the background color of dropdown.
 
@@ -443,7 +443,7 @@ combobox.SelectedDropDownItemBackground = Colors.YellowGreen;
 {% endhighlight %}
 {% endtabs %}
 
-### Customize DropDown Border Color
+### Customize the DropDown Border Color
 
 The DropDownStroke property is used to modify the border color of dropdown.
 
@@ -467,7 +467,7 @@ combobox.DropDownStroke = Colors.Red;
 {% endhighlight %}
 {% endtabs %}
 
-### Customize DropDown Border Thickness
+### Customize the DropDown Border Thickness
 
 The DropDownStrokeThickness property is used to modify the thickness of dropdown border.
 
@@ -491,7 +491,7 @@ combobox.DropDownStrokeThickness = 5;
 {% endhighlight %}
 {% endtabs %}
 
-### Customize DropDown Item Height
+### Customize the DropDown Item Height
 
 The DropDownItemHeight property is used to modify the height of dropdown items.
 
