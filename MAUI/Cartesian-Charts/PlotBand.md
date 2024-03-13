@@ -9,28 +9,24 @@ documentation: ug
 
 # Plot band in .NET MAUI Chart
 
-Plot bands are also known as strip lines, which are used to shade the different ranges in plot area with different colors to improve the readability of the chart. You can also add a text to indicate what that particular region indicates. You can enable the plot bands to be drawn repeatedly at regular intervals. This will be useful when you need to mark an event that occurs recursively along the timeline of the chart.
+A plot band, also known as a stripline, allows for shading specific regions or ranges in the plot area background at regular or custom intervals. It also provides options to customize the size of these bands. Text can be added to plot band and indicate the significance of each particular region.
 
-Since plot bands are drawn based on the axis, you have to add plot bands using the [PlotBands]() property of the respective axis. You can also add multiple plot bands to an axis.
-
-The following properties are used to configure the plot bands:
+Plot bands are classified into [NumericalPlotBand]() and [DateTimePlotBand](). Based on the axis, plot bands are drawn using these classifications. The following properties are used to configure the plot band:
 
 * [`Start`]() - change the start position of the plot bands.
 * [`End`]() - change the end position of the plot bands.
 * [`Size`]() - changes how long plot band should be expanded. This is applicable only when end is not specified.
-* [`SizeType`]() - changes the date-time unit of the value specified in the size property. The values can be year, month, day, hour, minute, second, and millisecond.
+* [`SizeType`]() - changes the date-time unit of the value specified in the `Size` property. The values can be year, month, day, hour, minute, second, and millisecond.
 * [`Text`]()- changes the text of the plot band.
 * [`Fill`]() - changes the fill of the plot band.
 * [`Stroke`]() - changes the stroke color of the plot band.
 * [`StrokeWidth`]() - changes the stroke width of the plot band.
-* [`IsVisible`]() - hanges the visibility of the plot band in chart axis.
+* [`IsVisible`]() - changes the visibility of the plot band in chart axis.
 * [`IsRepeatable`]()- specifies the plot band need to be repeated in specified interval.
-* [`RepeatEvery`]() - changes the frequency of the plot band being repeated.
-* [`RepeatUntil`]() - Specifies the end value at which the strip line stops repeating.
 
-## Add plot band for numerical axis
+## Numerical PlotBand 
 
-Plot band can be added to the numerical axis by specifying index values to the [Start]() and [Size]() properties.
+[NumericalPlotBands]() are used to draw plot bands for [NumericalAxis]() and [CategoryAxis](). To add a plot band, create an instance of [NumericalPlotBandCollection]() and specify numerical value for the [Start]() parameter. This parameter determines the beginning of the plot band, along with the specified [Size]().
 
 {% tabs %}
 
@@ -42,8 +38,7 @@ Plot band can be added to the numerical axis by specifying index values to the [
             <chart:NumericalAxis>
                 <chart:NumericalAxis.PlotBands>
                     <chart:NumericalPlotBandCollection>
-                        <chart:NumericalPlotBand Start="28" 
-                                                 Size="10" 
+                        <chart:NumericalPlotBand Start="24" Size="4" 
                                                  Fill="Orange"/>
                     </chart:NumericalPlotBandCollection>
                 </chart:NumericalAxis.PlotBands>
@@ -63,8 +58,8 @@ Plot band can be added to the numerical axis by specifying index values to the [
     NumericalPlotBandCollection numericalPlotBandCollection = new NumericalPlotBandCollection();
     NumericalPlotBand plotBand = new NumericalPlotBand
     {
-        Start = 28,
-        Size = 10,
+        Start = 24,
+        Size = 4,
         Fill = Colors.Orange
     };
 
@@ -77,11 +72,11 @@ Plot band can be added to the numerical axis by specifying index values to the [
 
 {% endtabs %}
 
-![Plot band with numerical axis in MAUI Cartesian chart](chart-types-images/Horizontal-Plotband.png)
+![Plot band with category axis in MAUI Cartesian chart](Plot_band_images/category_plotband.png)
 
-## Add plot band for dateTime axis
+## DateTime PlotBand
 
-Plot band can be added to the date-time axis by specifying date values to the [Start]() and [Size]() properties.
+[DateTimePlotBands]() are used to draw plot bands for [DateTimeAxis](). To add a plot band, create an instance of [DateTimePlotBandCollection]() and specifying the [Start]() date and [Size]() values. The start value determines the beginning of the plot band, along with the specified size. The [SizeType]() parameter determines which unit of measurement to use on the date-time axis.
 
 {% tabs %}
 
@@ -93,9 +88,8 @@ Plot band can be added to the date-time axis by specifying date values to the [S
          <chart:DateTimeAxis>
           <chart:DateTimeAxis.PlotBands>
              <chart:DateTimePlotBandCollection >
-                 <chart:DateTimePlotBand Start="2024-01-24"
-                                         Size="2"
-                                         SizeType="Days"
+                 <chart:DateTimePlotBand Start="2023-04-01"
+                                         Size="2" SizeType="Months"
                                          Fill="Orange"/>
                     </chart:DateTimePlotBandCollection >
                 </chart:DateTimeAxis.PlotBands>
@@ -117,9 +111,9 @@ Plot band can be added to the date-time axis by specifying date values to the [S
     DateTimePlotBandCollection dateTimePlotBandCollection = new DateTimePlotBandCollection();
     DateTimePlotBand plotBand = new DateTimePlotBand
     {
-        Start = new DateTime(2024, 1, 24),
+        Start = new DateTime(2023, 04, 01),
         Size = 2,
-        WidthType = DateTimeUnits.Days,
+        WidthType = DateTimeUnits.Months,
         Fill = Color.Orange
     };
 
@@ -135,13 +129,13 @@ Plot band can be added to the date-time axis by specifying date values to the [S
 
 {% endtabs %}
 
-![Plot band with datetime axis in MAUI Cartesian chart](chart-types-images/Vertical-Plotband.png)
+![Plot band with datetime axis in MAUI Cartesian chart](Plot_band_images/datetime_plotband.png)
 
 ## Recursive plot band
 
-This feature is used to enable the plot bands to be drawn repeatedly at regular intervals. This will be useful when you need to mark an event that occurs recursively along the timeline of the chart. The following properties are used to configure this feature:
+The Plot band recurrence feature enables plot bands to be drawn repeatedly at regular intervals. This functionality is particularly useful when you need to mark events that occur recursively along the timeline of the chart.
 
-* [`RepeatEvery`]() - changes the frequency of the plot band being repeated.
+* [`RepeatEvery`]() - Specifies the frequency at which the plot band is repeated.
 * [`RepeatUntil`]() - Specifies the end value at which the strip line stops repeating.
 
 {% tabs %}
@@ -158,11 +152,11 @@ This feature is used to enable the plot bands to be drawn repeatedly at regular 
           <chart:NumericalAxis>
            <chart:NumericalAxis.PlotBands>
                <chart:NumericalPlotBandCollection>
-                   <chart:NumericalPlotBand Start="28"  
-                                            Size="2" 
-                                            Fill="Orange"
-                                            RepeatEvery="10" 
-                                            RepeatUntil="55"/>
+                    <chart:NumericalPlotBand Start="20"  End="22"
+                                             IsRepeatable="True"
+                                             RepeatUntil="32"
+                                             RepeatEvery="4"
+                                             Fill="LightGray" />
                     </chart:NumericalPlotBandCollection>
                 </chart:NumericalAxis.PlotBands>
             </chart:NumericalAxis>
@@ -182,11 +176,12 @@ This feature is used to enable the plot bands to be drawn repeatedly at regular 
     NumericalPlotBandCollection numericalPlotBandCollection = new NumericalPlotBandCollection();
     NumericalPlotBand plotBand = new NumericalPlotBand
     {
-        Start = 28,
-        Size = 2,
-        Fill = Color.Orange,
-        RepeatEvery = 10,
-        RepeatUntil = 55
+        Start = 20,
+        End = 22,
+        IsRepeatable = True
+        RepeatUntil = 32
+        RepeatEvery = 4                                  
+        Fill = Colors.LightGray
     };
 
     numericalPlotBandCollection.Add(plotBand);
@@ -198,13 +193,13 @@ This feature is used to enable the plot bands to be drawn repeatedly at regular 
 
 {% endtabs %}
 
-![Visualize plot band recurrence in .NET MAUI](chart-types-images/Band-Recurrence.png)
+![Visualization of plot band recurrence](Plot_band_images/recurrence_plotband.png)
 
 ## Segmented plot band
 
-Typically, if you draw a plot band for a vertical axis, the height of the plot band is determined by the [Start]() and [End]() properties, and the end of the plot band is equivalent to the end of its associated horizontal axis, i.e., plot band is drawn horizontally to the entire stretch of its associated horizontal axis. Similarly, for horizontal axis, width is determined by the [Start]() and [Size]() properties, and vertically, it is drawn to the entire stretch of the associated vertical axis.
+Typically, if you draw a plot band for a vertical axis, the height of the plot band is determined by the start and end properties. The end of the plot band is equivalent to the end of its associated horizontal axis, meaning the plot band is drawn horizontally across the entire stretch of its associated horizontal axis. Similarly, for a horizontal axis, the width is determined by the start and width properties. Vertically, it is drawn across the entire stretch of the associated vertical axis
 
-Suppose, you need to draw a plot band that should not stretch along its associated axis, you have to set the [AssociatedAxisStart]() and [AssociatedAxisEnd]() properties. The values provided in these two properties correspond to its associated axis specified by the [AssociatedAxisName]() property in the axis.
+Suppose, you want to draw a plot band that should not stretch along its associated axis, you have to set [AssociatedAxisStart]() and [AssociatedAxisEnd]() properties. The values provided in these two properties correspond to its associated axis specified by [AssociatedAxisName]() property. 
 
 {% tabs %}
 
@@ -221,10 +216,24 @@ Suppose, you need to draw a plot band that should not stretch along its associat
          <chart:NumericalAxis.PlotBands>
              <chart:NumericalPlotBandCollection>
                   <chart:NumericalPlotBand Start="20" 
-                                           End="30" 
-                                           Fill="Orange" 
-                                           AssociatedAxisStart="0"
-                                           AssociatedAxisEnd="1"/>
+                                           End="22" 
+                                           AssociatedAxisEnd="2"
+                                           Fill="#B300E190"
+                                           Text="Low"/>
+
+                 <chart:NumericalPlotBand Start="25" 
+                                           End="27" 
+                                           AssociatedAxisStart = 4.3,
+                                           AssociatedAxisEnd="6.8"
+                                           Fill="#B3FCD404"
+                                           Text="Average"/>
+
+                 <chart:NumericalPlotBand Start="30" 
+                                          End="32" 
+                                          AssociatedAxisStart="9"
+                                          Fill="#B3FF4E4E"
+                                          Text="High"/>                       
+
                     </chart:NumericalPlotBandCollection>
                 </chart:NumericalAxis.PlotBands>
             </chart:NumericalAxis>
@@ -243,29 +252,54 @@ Suppose, you need to draw a plot band that should not stretch along its associat
 
     NumericalAxis numericalAxis = new NumericalAxis();
     NumericalPlotBandCollection numericalPlotBandCollection =  new NumericalPlotBandCollection();
-    NumericalPlotBand plotBand = new NumericalPlotBand
+    NumericalPlotBand plotBand1 = new NumericalPlotBand()
     {
         Start = 20,
-        End = 30,
-        Fill = Color.Orange,
-        AssociatedAxisStart = 0,
-        AssociatedAxisEnd = 1
+        End = 22,
+        AssociatedAxisEnd = 2,
+        Text = "Low",
+        Fill = new SolidColorBrush(Color.FromArgb("#B300E190"))
     };
 
-    numericalPlotBandCollection.Add(plotBand);
-    numericalAxis.PlotBands = numericalPlotBandCollection;
-    chart.YAxes.Add(numericalAxis);
+   NumericalPlotBand plotBand2 = new NumericalPlotBand()
+   {
+       Start = 25,
+       End = 27,
+       AssociatedAxisStart = 4.3,
+       AssociatedAxisEnd = 6.8,
+       Text = "Average",
+       Fill = new SolidColorBrush(Color.FromArgb("#B3FCD404"))
+   };
+
+   NumericalPlotBand plotBand3 = new NumericalPlotBand()
+   {
+       Start = 30,
+       End = 32,
+       AssociatedAxisStart = 9,
+       Text = "High",
+       Fill = new SolidColorBrush(Color.FromArgb("#B3FF4E4E"))
+   };
+
+     numericalPlotBandCollection.Add(plotBand1);
+     numericalPlotBandCollection.Add(plotBand2);
+     numericalPlotBandCollection.Add(plotBand3); 
+     numericalAxis.PlotBands = numericalPlotBandCollection;
+     chart.YAxes.Add(numericalAxis);
     ...
 
 {% endhighlight %}
 
 {% endtabs %}
 
-![Visualize segmented plot band in .NET MAUI](chart-types-images/Band-Recurrence.png)
+![Visualize segmented plot band in .NET MAUI](Plot_band_images/segmented_plotband.png)
 
-## Customized label
+## Plot Line
+When you specify the same value for both start and end, it will draw a line.
+
+## Text Customization 
 
 [Text]() can be added to plot bands to indicate the significance of each particular region. The [LabelStyle]() property provides options to customize plot band text.
+
 
 {% tabs %}
 
