@@ -43,7 +43,7 @@ sfNumericEntry.VerticalOptions = LayoutOptions.Center;
 
 ## UpDown button placement
 
-You can increase or decrease the value of the `NumericEntry` control using the up-down button. By default, the value of the [UpDownPlacementMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_UpDownPlacementMode) property is **Hidden**. You can adjust the position of the up-down buttons by setting the `UpDownPlacementMode` property to **Inline** for horizontal orientation and **InlineVertical** for vertical orientation.
+You can increase or decrease the value of the `NumericEntry` control using the up-down button. By default, the value of the [UpDownPlacementMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_UpDownPlacementMode) property is **Hidden**. You can change the up-down button position by assigning the value `UpDownPlacementMode` property as **Inline**.
 
 N> When using the up-down button, the `NumericEntry` control value changes based on the value of the `SmallChange` property.
 
@@ -68,28 +68,6 @@ sfNumericEntry.UpDownPlacementMode = NumericEntryUpDownPlacementMode.Inline;
 {% endtabs %}
 
 ![UpDown Placement in .NET MAUI NumericEntry](UpDownButton_images/UpDownButtonPlacement.gif)
-
-{% tabs %}
-{% highlight XAML %}
-
-<editors:SfNumericEntry Value="360"
-                        VerticalOptions="Center"
-                        HorizontalOptions="Center"
-                        UpDownPlacementMode="InlineVertical"/>
-                     
-{% endhighlight %}
-{% highlight c# %}
-
-SfNumericEntry sfNumericEntry = new SfNumericEntry();
-sfNumericEntry.HorizontalOptions = LayoutOptions.Center;
-sfNumericEntry.VerticalOptions = LayoutOptions.Center;
-sfNumericEntry.Value=360;
-sfNumericEntry.UpDownPlacementMode = NumericEntryUpDownPlacementMode.InlineVertical;
-
-{% endhighlight %}
-{% endtabs %}
-
-![UpDown Vertical Placement in .NET MAUI NumericEntry](UpDownButton_images/UpDownButtonPlacementVertical.png)
 
 ## UpDown button customization
 
