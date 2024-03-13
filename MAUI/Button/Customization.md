@@ -494,6 +494,8 @@ SfButton button = new SfButton()
 {% endhighlight %}
 {% endtabs %}
 
+![SfButton with image with icon image with default alignment](images/customization-images/Button_imagealignment_default.png)
+
 **Left image alignment in `SfButton`**
 
 In RTL flow direction, image alignment with [`Start`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Alignment.html#Syncfusion_Maui_Core_Alignment_Start) will change its direction of placing image to the right. To keep that in same left position, set [`Left`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Alignment.html#Syncfusion_Maui_Core_Alignment_Left) alignment as shown in the following code sample.
