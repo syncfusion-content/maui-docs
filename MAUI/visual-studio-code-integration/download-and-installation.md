@@ -19,7 +19,7 @@ The following software prerequisites must be installed to install the Syncfusion
 
 * [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit)
 
-# Install through the Visual Studio Code Extensions
+## Install through the Visual Studio Code Extensions
 The following instructions outline the process of installing the Syncfusion .NET MAUI extensions from Visual Studio Code Extensions.
 
 1.	Open Visual Studio Code.
@@ -38,7 +38,7 @@ The following instructions outline the process of installing the Syncfusion .NET
 
    ![CreateProjectPalette](images/CreateProjectPalette.png)
 
-# Install from the Visual Studio Code Marketplace
+## Install from the Visual Studio Code Marketplace
 
 The following instructions outline the process of downloading and installing Syncfusion .NET MAUI applications from the Visual Studio Code Marketplace.
 
@@ -55,7 +55,7 @@ The following instructions outline the process of downloading and installing Syn
 
   ![CreateProjectPalette](images/CreateProjectPalette.png)
 
-# Manually Installing an Extension in Visual Studio Code
+## Manually Installing an Extension in Visual Studio Code
 
 The following instructions detail the manual installation process of the Syncfusion .NET MAUI extensions in Visual Studio Code.
 
