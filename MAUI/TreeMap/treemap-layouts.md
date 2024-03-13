@@ -1,76 +1,46 @@
 ---
 layout: post
-title: TreeMap Layout in .NET MAUI TreeMap | Syncfusion
-description: Learn about TreeMap Layout support of Syncfusion .NET MAUI TreeMap(STreeMap) control, its elements and more.
+title: Layout types in .NET MAUI TreeMap | Syncfusion
+description: Learn here all about adding different layouts of the Syncfusion .NET MAUI TreeMap(STreeMap) control and more.
 platform: maui
 control: TreeMap (SfTreeMap)
 documentation: ug
 ---
  
-# TreeMap Layout .NET MAUI TreeMap (SfTreeMap)
+# Layouts in .NET MAUI TreeMap (SfTreeMap)
 
-Determine the visual representation of nodes belonging to all the TreeMap levels using the `LayoutType` property.
-
-There are four different types of layouts available in TreeMap:
-
-* Squarified
-* SliceAndDiceAuto
-* SliceAndDiceHorizontal
-* SliceAndDiceVertical
+The Tree Map control provides multiple layout types for organizing hierarchical data effectively. You can utilize the `LayoutType` property within the SfTreeMap to switch between four distinct layouts: `Squarified,` `SliceAndDiceAuto,` `SliceAndDiceHorizontal,` and `SliceAndDiceVertical.`
 
 ## Squarified
 
-The `Squarified` layout visualizes data in square-like rectangles with an optimal aspect ratio.
-
+The `Squarified` layout visualizes data in square-like rectangles with an optimal aspect ratio. It divides rectangles considering both the height and width of the parent view. This layout is the default rendering type for TreeMap.
 
 {% tabs %}
-{% highlight XAML hl_lines="5" %}
+{% highlight XAML hl_lines="3" %}
 
 <treemap:SfTreeMap x:Name="treeMap"
                    DataSource="{Binding PopulationDetails}"
+                   LayoutType="Squarified"
                    RangeColorValuePath="Population"
                    PrimaryValuePath="Population"
-                   LayoutType="Squarified"
                    ShowToolTip="True">
     <treemap:SfTreeMap.LeafItemSettings>
         <treemap:TreeMapLeafItemSettings LabelPath="Country">
-            <treemap:TreeMapLeafItemSettings.TextStyle>
-                <treemap:TreeMapTextStyle TextColor="#000000" />
-            </treemap:TreeMapLeafItemSettings.TextStyle>
         </treemap:TreeMapLeafItemSettings>
     </treemap:SfTreeMap.LeafItemSettings>
     <treemap:SfTreeMap.LeafItemBrushSettings>
-        <treemap:TreeMapRangeBrushSettings>
-            <treemap:TreeMapRangeBrushSettings.RangeBrushes>
-                <treemap:TreeMapRangeBrush LegendLabel="50M - 1B"
-                                           From="50000000"
-                                           To="1000000000" 
-                                           Brush ="#3F8D71" />
-                <treemap:TreeMapRangeBrush LegendLabel="10M - 50M"
-                                           From="10000000"
-                                           To="50000000" 
-                                           Brush ="#5BA985" />
-                <treemap:TreeMapRangeBrush LegendLabel="0.1M - 10M"
-                                           From="100000" 
-                                           To="10000000"  
-                                           Brush= "#7DC59D" />
-            </treemap:TreeMapRangeBrushSettings.RangeBrushes>
-        </treemap:TreeMapRangeBrushSettings>
+        <treemap:TreeMapUniformBrushSettings Brush="#D21243" />
     </treemap:SfTreeMap.LeafItemBrushSettings>
-    <treemap:SfTreeMap.LegendSettings>
-        <treemap:TreeMapLegendSettings ShowLegend="True"/>
-    </treemap:SfTreeMap.LegendSettings>
 </treemap:SfTreeMap>
 
-
 {% endhighlight %}
-{% highlight C# hl_lines="5" %}
+{% highlight C# hl_lines="4" %}
 
 SfTreeMap treeMap = new SfTreeMap();
 PopulationViewModel viewModel = new PopulationViewModel();
 treeMap.DataSource = viewModel.PopulationDetails;
-treeMap.LegendSettings.ShowLegend = true;
 treeMap.LayoutType = LayoutType.Squarified;
+treeMap.LegendSettings.ShowLegend = true;
 this.Content = treeMap;
 
 {% endhighlight %}
@@ -131,56 +101,34 @@ public class PopulationViewModel
 
 ## SliceAndDiceAuto
 
-The `SliceAndDiceAuto` layout visualizes long, thin rectangles vertically or horizontally with a high aspect ratio.
+The `SliceAndDiceAuto` layout visualizes data using long, thin rectangles arranged vertically or horizontally with a high aspect ratio, thereby offering a comprehensive view of the data.
 
 {% tabs %}
-{% highlight XAML hl_lines="5" %}
+{% highlight XAML hl_lines="3" %}
 
 <treemap:SfTreeMap x:Name="treeMap"
                    DataSource="{Binding PopulationDetails}"
+                   LayoutType="SliceAndDiceAuto"
                    RangeColorValuePath="Population"
                    PrimaryValuePath="Population"
-                   LayoutType="SliceAndDiceAuto"
                    ShowToolTip="True">
     <treemap:SfTreeMap.LeafItemSettings>
         <treemap:TreeMapLeafItemSettings LabelPath="Country">
-            <treemap:TreeMapLeafItemSettings.TextStyle>
-                <treemap:TreeMapTextStyle TextColor="#000000" />
-            </treemap:TreeMapLeafItemSettings.TextStyle>
         </treemap:TreeMapLeafItemSettings>
     </treemap:SfTreeMap.LeafItemSettings>
     <treemap:SfTreeMap.LeafItemBrushSettings>
-        <treemap:TreeMapRangeBrushSettings>
-            <treemap:TreeMapRangeBrushSettings.RangeBrushes>
-                <treemap:TreeMapRangeBrush LegendLabel="50M - 1B"
-                                           From="50000000"
-                                           To="1000000000" 
-                                           Brush ="#3F8D71" />
-                <treemap:TreeMapRangeBrush LegendLabel="10M - 50M"
-                                           From="10000000"
-                                           To="50000000" 
-                                           Brush ="#5BA985" />
-                <treemap:TreeMapRangeBrush LegendLabel="0.1M - 10M"
-                                           From="100000" 
-                                           To="10000000"  
-                                           Brush= "#7DC59D" />
-            </treemap:TreeMapRangeBrushSettings.RangeBrushes>
-        </treemap:TreeMapRangeBrushSettings>
+        <treemap:TreeMapUniformBrushSettings Brush="#D21243" />
     </treemap:SfTreeMap.LeafItemBrushSettings>
-    <treemap:SfTreeMap.LegendSettings>
-        <treemap:TreeMapLegendSettings ShowLegend="True"/>
-    </treemap:SfTreeMap.LegendSettings>
 </treemap:SfTreeMap>
 
-
 {% endhighlight %}
-{% highlight C# hl_lines="5" %}
+{% highlight C# hl_lines="4" %}
 
 SfTreeMap treeMap = new SfTreeMap();
 PopulationViewModel viewModel = new PopulationViewModel();
 treeMap.DataSource = viewModel.PopulationDetails;
-treeMap.LegendSettings.ShowLegend = true;
 treeMap.LayoutType = LayoutType.SliceAndDiceAuto;
+treeMap.LegendSettings.ShowLegend = true;
 this.Content = treeMap;
 
 {% endhighlight %}
@@ -241,56 +189,34 @@ public class PopulationViewModel
 
 ## SliceAndDiceHorizontal
 
-The `SliceAndDiceHorizontal` layout creates horizontal rectangles with a high aspect ratio and displays them sorted horizontally.
+The `SliceAndDiceHorizontal` layout arranges data into horizontal rectangles with a high aspect ratio and displays them sorted horizontally.
 
 {% tabs %}
-{% highlight XAML hl_lines="5" %}
+{% highlight XAML hl_lines="3" %}
 
 <treemap:SfTreeMap x:Name="treeMap"
                    DataSource="{Binding PopulationDetails}"
+                   LayoutType="SliceAndDiceHorizontal"
                    RangeColorValuePath="Population"
                    PrimaryValuePath="Population"
-                   LayoutType="SliceAndDiceHorizontal"
                    ShowToolTip="True">
-    <treemap:SfTreeMap.LeafItemSettings>
-        <treemap:TreeMapLeafItemSettings LabelPath="Country">
-            <treemap:TreeMapLeafItemSettings.TextStyle>
-                <treemap:TreeMapTextStyle TextColor="#000000" />
-            </treemap:TreeMapLeafItemSettings.TextStyle>
-        </treemap:TreeMapLeafItemSettings>
-    </treemap:SfTreeMap.LeafItemSettings>
-    <treemap:SfTreeMap.LeafItemBrushSettings>
-        <treemap:TreeMapRangeBrushSettings>
-            <treemap:TreeMapRangeBrushSettings.RangeBrushes>
-                <treemap:TreeMapRangeBrush LegendLabel="50M - 1B"
-                                           From="50000000"
-                                           To="1000000000" 
-                                           Brush ="#3F8D71" />
-                <treemap:TreeMapRangeBrush LegendLabel="10M - 50M"
-                                           From="10000000"
-                                           To="50000000" 
-                                           Brush ="#5BA985" />
-                <treemap:TreeMapRangeBrush LegendLabel="0.1M - 10M"
-                                           From="100000" 
-                                           To="10000000"  
-                                           Brush= "#7DC59D" />
-            </treemap:TreeMapRangeBrushSettings.RangeBrushes>
-        </treemap:TreeMapRangeBrushSettings>
-    </treemap:SfTreeMap.LeafItemBrushSettings>
-    <treemap:SfTreeMap.LegendSettings>
-        <treemap:TreeMapLegendSettings ShowLegend="True"/>
-    </treemap:SfTreeMap.LegendSettings>
+     <treemap:SfTreeMap.LeafItemSettings>
+         <treemap:TreeMapLeafItemSettings LabelPath="Country">
+         </treemap:TreeMapLeafItemSettings>
+     </treemap:SfTreeMap.LeafItemSettings>
+     <treemap:SfTreeMap.LeafItemBrushSettings>
+         <treemap:TreeMapUniformBrushSettings Brush="#D21243" />
+     </treemap:SfTreeMap.LeafItemBrushSettings>
 </treemap:SfTreeMap>
 
-
 {% endhighlight %}
-{% highlight C# hl_lines="5" %}
+{% highlight C# hl_lines="4" %}
 
 SfTreeMap treeMap = new SfTreeMap();
 PopulationViewModel viewModel = new PopulationViewModel();
 treeMap.DataSource = viewModel.PopulationDetails;
-treeMap.LegendSettings.ShowLegend = true;
 treeMap.LayoutType = LayoutType.SliceAndDiceHorizontal;
+treeMap.LegendSettings.ShowLegend = true;
 this.Content = treeMap;
 
 {% endhighlight %}
@@ -351,56 +277,34 @@ public class PopulationViewModel
 
 ## SliceAndDiceVertical
 
-The `SliceAndDiceVertical` layout creates vertical rectangles with a high aspect ratio and displays them sorted vertically.
+The `SliceAndDiceVertical` layout organizes data into vertical rectangles with a high aspect ratio and displays them sorted vertically.
 
 {% tabs %}
-{% highlight XAML hl_lines="5" %}
+{% highlight XAML hl_lines="3" %}
 
 <treemap:SfTreeMap x:Name="treeMap"
                    DataSource="{Binding PopulationDetails}"
+                   LayoutType="SliceAndDiceVertical"
                    RangeColorValuePath="Population"
                    PrimaryValuePath="Population"
-                   LayoutType="SliceAndDiceVertical"
                    ShowToolTip="True">
-    <treemap:SfTreeMap.LeafItemSettings>
-        <treemap:TreeMapLeafItemSettings LabelPath="Country">
-            <treemap:TreeMapLeafItemSettings.TextStyle>
-                <treemap:TreeMapTextStyle TextColor="#000000" />
-            </treemap:TreeMapLeafItemSettings.TextStyle>
-        </treemap:TreeMapLeafItemSettings>
-    </treemap:SfTreeMap.LeafItemSettings>
-    <treemap:SfTreeMap.LeafItemBrushSettings>
-        <treemap:TreeMapRangeBrushSettings>
-            <treemap:TreeMapRangeBrushSettings.RangeBrushes>
-                <treemap:TreeMapRangeBrush LegendLabel="50M - 1B"
-                                           From="50000000"
-                                           To="1000000000" 
-                                           Brush ="#3F8D71" />
-                <treemap:TreeMapRangeBrush LegendLabel="10M - 50M"
-                                           From="10000000"
-                                           To="50000000" 
-                                           Brush ="#5BA985" />
-                <treemap:TreeMapRangeBrush LegendLabel="0.1M - 10M"
-                                           From="100000" 
-                                           To="10000000"  
-                                           Brush= "#7DC59D" />
-            </treemap:TreeMapRangeBrushSettings.RangeBrushes>
-        </treemap:TreeMapRangeBrushSettings>
-    </treemap:SfTreeMap.LeafItemBrushSettings>
-    <treemap:SfTreeMap.LegendSettings>
-        <treemap:TreeMapLegendSettings ShowLegend="True"/>
-    </treemap:SfTreeMap.LegendSettings>
+     <treemap:SfTreeMap.LeafItemSettings>
+         <treemap:TreeMapLeafItemSettings LabelPath="Country">
+         </treemap:TreeMapLeafItemSettings>
+     </treemap:SfTreeMap.LeafItemSettings>
+     <treemap:SfTreeMap.LeafItemBrushSettings>
+         <treemap:TreeMapUniformBrushSettings Brush="#D21243" />
+     </treemap:SfTreeMap.LeafItemBrushSettings>
 </treemap:SfTreeMap>
 
-
 {% endhighlight %}
-{% highlight C# hl_lines="5" %}
+{% highlight C# hl_lines="4" %}
 
 SfTreeMap treeMap = new SfTreeMap();
 PopulationViewModel viewModel = new PopulationViewModel();
 treeMap.DataSource = viewModel.PopulationDetails;
-treeMap.LegendSettings.ShowLegend = true;
 treeMap.LayoutType = LayoutType.SliceAndDiceVertical;
+treeMap.LegendSettings.ShowLegend = true;
 this.Content = treeMap;
 
 {% endhighlight %}
