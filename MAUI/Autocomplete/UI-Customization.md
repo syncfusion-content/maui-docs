@@ -120,6 +120,30 @@ The following gif image illustrates the result of the above code.
 
 ![.NET MAUI Autocomplete border color](Images/UICustomization/BorderColor.png)
 
+## Customize the selection text highlightColor 
+
+The SelectionTextHighlightColor property is used to modify the background color of the selected item text in the autocomplete control.
+
+{% tabs %}
+{% highlight xaml %}
+
+<editors:SfAutocomplete x:Name="autocomplete"
+                        WidthRequest="250"
+                        ItemsSource="{Binding SocialMedias}"
+                        DisplayMemberPath="Name"
+                        TextMemberPath="Name"
+                        Placeholder="Select a social media"
+                        SelectionTextHighlightColor="Aqua" />
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+autocomplete.SelectionTextHighlightColor = Colors.Aqua;
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Maximum DropDown Height
 
 The maximum height of the drop-down can be changed by using the [MaxDropDownHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDropdownEntry.html#Syncfusion_Maui_Core_SfDropdownEntry_MaxDropDownHeight) property of the `Autocomplete` control. The default value of the MaxDropDownHeight property is `400d`. 
@@ -314,6 +338,156 @@ The [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.Dr
 The following image illustrates the result of the above code:
 
 ![.NET MAUI Autocomplete ItemTemplate](Images/UICustomization/ItemTemplate.png)
+
+### Customize the DropDown item text
+
+DropDown items can be customized using the [DropDownItemFontAttributes], [DropDownItemFontFamily], [DropDownItemFontSize], and [DropDownItemTextColor] properties.
+
+{% tabs %}
+{% highlight xaml %}
+
+<editors:SfAutocomplete x:Name="autocomplete"
+                        WidthRequest="250"
+                        ItemsSource="{Binding SocialMedias}"
+                        DisplayMemberPath="Name"
+                        TextMemberPath="Name"
+                        Placeholder="Select a social media"
+                        DropDownItemFontAttributes="Bold"
+                        DropDownItemFontFamily="OpenSansSemibold"
+                        DropDownItemFontSize="20"
+                        DropDownItemTextColor="White" />
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+autocomplete.DropDownItemFontAttributes = FontAttributes.Bold;
+autocomplete.DropDownItemFontFamily = "OpenSansSemibold";
+autocomplete.DropDownItemFontSize = 20;
+autocomplete.DropDownItemTextColor = Colors.White;
+
+{% endhighlight %}
+{% endtabs %}
+
+### Customize the DropDown background color
+
+The DropDownBackground property is used to modify the background color of the dropdown.
+
+{% tabs %}
+{% highlight xaml %}
+
+<editors:SfAutocomplete x:Name="autocomplete"
+                        WidthRequest="250"
+                        ItemsSource="{Binding SocialMedias}"
+                        DisplayMemberPath="Name"
+                        TextMemberPath="Name"
+                        Placeholder="Select a social media"
+                        DropDownBackground="Yellow" />
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+autocomplete.DropDownBackground = Colors.Yellow;
+
+{% endhighlight %}
+{% endtabs %}
+
+### Customize the DropDown selected item backgroundcolor
+
+The SelectedDropDownItemBackground property is used to modify the background color of the selected item in the dropdown.
+
+{% tabs %}
+{% highlight xaml %}
+
+<editors:SfAutocomplete x:Name="autocomplete"
+                        WidthRequest="250"
+                        ItemsSource="{Binding SocialMedias}"
+                        DisplayMemberPath="Name"
+                        TextMemberPath="Name"
+                        Placeholder="Select a social media"
+                        SelectedDropDownItemBackground="YellowGreen" />
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+autocomplete.SelectedDropDownItemBackground = Colors.YellowGreen;
+
+{% endhighlight %}
+{% endtabs %}
+
+### Customize the DropDown Border Color
+
+The DropDownStroke property is used to modify the border color of the dropdown.
+
+{% tabs %}
+{% highlight xaml %}
+
+<editors:SfAutocomplete x:Name="autocomplete"
+                        WidthRequest="250"
+                        ItemsSource="{Binding SocialMedias}"
+                        DisplayMemberPath="Name"
+                        TextMemberPath="Name"
+                        Placeholder="Select a social media"
+                        DropDownStroke="Red" />
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+autocomplete.DropDownStroke = Colors.Red;
+
+{% endhighlight %}
+{% endtabs %}
+
+### Customize the DropDown Border Thickness
+
+The DropDownStrokeThickness property is used to modify the thickness of the dropdown border.
+
+{% tabs %}
+{% highlight xaml %}
+
+<editors:SfAutocomplete x:Name="autocomplete"
+                        WidthRequest="250"
+                        ItemsSource="{Binding SocialMedias}"
+                        DisplayMemberPath="Name"
+                        TextMemberPath="Name"
+                        Placeholder="Select a social media"
+                        DropDownStrokeThickness="5" />
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+autocomplete.DropDownStrokeThickness = 5;
+
+{% endhighlight %}
+{% endtabs %}
+
+### Customize the DropDown Item Height
+
+The DropDownItemHeight property is used to modify the height of the dropdown items.
+
+{% tabs %}
+{% highlight xaml %}
+
+<editors:SfAutocomplete x:Name="autocomplete"
+                        WidthRequest="250"
+                        ItemsSource="{Binding SocialMedias}"
+                        DisplayMemberPath="Name"
+                        TextMemberPath="Name"
+                        Placeholder="Select a social media"
+                        DropDownItemHeight="50" />
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+autocomplete.DropDownItemHeight = 50;
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Customize DropDown (suggestion) items based on condition
 
