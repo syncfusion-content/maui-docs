@@ -100,7 +100,6 @@ The selected items can be changed programmatically by using the [SelectedItems](
   SelectedItemsList = new ObservableCollection<SocialMedia>();
   SelectedItemsList.Add(socialMediasList[0]);
   SelectedItemsList.Add(socialMediasList[2]);
-  SelectedItemsList.Add(socialMediasList[4]);
 
 {% endhighlight %}
 
@@ -153,7 +152,7 @@ When the TokensWrapMode is set to Wrap, the selected items will be wrapped to th
              WidthRequest="350"
              ItemsSource="{Binding SocialMedias}"
              SelectionMode="Multiple"
-             MaxDropDownHeight="250"
+             Placeholder="Enter Media"
              DisplayMemberPath="Name"
              TextMemberPath="Name"
              TokensWrapMode="Wrap" />
@@ -162,7 +161,7 @@ When the TokensWrapMode is set to Wrap, the selected items will be wrapped to th
 
 {% endtabs %}
 
-![.NET MAUI ComboBox Wrap mode.](Images/selection)
+![.NET MAUI ComboBox Wrap mode.](Images/selection/net-maui-combobox-wrapmode.png)
 
 #### None mode
 
@@ -177,7 +176,7 @@ When the TokensWrapMode is set to None, the selected item will be wrapped in a h
              WidthRequest="350"
              ItemsSource="{Binding SocialMedias}"
              SelectionMode="Multiple"
-             MaxDropDownHeight="250"
+             Placeholder="Enter Media"
              DisplayMemberPath="Name"
              TextMemberPath="Name"
              TokensWrapMode="None" />
@@ -185,6 +184,8 @@ When the TokensWrapMode is set to None, the selected item will be wrapped in a h
 {% endhighlight %}
 
 {% endtabs %}
+
+![.NET MAUI ComboBox None mode.](Images/selection/net-maui-combobox-nonemode.png)
 
 ## Selection changed notification
 
