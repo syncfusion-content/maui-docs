@@ -16,7 +16,7 @@ You can style the elements of the `SfChat` control by creating resource dictiona
 You can set any solid color as background for `SfChat` by setting any color to the `SfChat.Background` property. However, if you want the solid color to be applied to the message input view area, also, set the background color of the message input view as transparent, as shown in the below code sample.
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight xaml hl_lines="18 28" %}
     
     <?xml version="1.0" encoding="utf-8" ?>
     <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
@@ -50,7 +50,7 @@ You can set any solid color as background for `SfChat` by setting any color to t
     </ContentPage>
 
 {% endhighlight %}
-{% highlight c# %}
+{% highlight c# hl_lines="12" %}
 
     public partial class MainPage : ContentPage
     {
@@ -78,15 +78,14 @@ You can set any solid color as background for `SfChat` by setting any color to t
 You can set any image as the background for the `SfChat` by setting the `SfChat.Background` as `Colors.Transparent` and adding an image below the `SfChat` control. However, if you want the image to be applied to the message input view area as well, set the background color of the message input view as transparent, as shown in the code sample below.
 
 {% tabs %}
-
-{% highlight xaml %}
+{% highlight xaml hl_lines="26" %}
     
     <?xml version="1.0" encoding="utf-8" ?>
     <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                 xmlns:sfChat="clr-namespace:Syncfusion.Maui.Chat;assembly=Syncfusion.Maui.Chat"
                 xmlns:syncTheme="clr-namespace:Syncfusion.Maui.Themes;assembly=Syncfusion.Maui.Core"
-                xmlns:local="clr-namespace:MauiApp1"             
+                xmlns:local="clr-namespace:MauiChat"             
                 x:Class="MauiApp1.MainPage">
 
         <ContentPage.BindingContext>
@@ -116,7 +115,7 @@ You can set any image as the background for the `SfChat` by setting the `SfChat.
     </ContentPage>
 
 {% endhighlight %}
-{% highlight c# %}
+{% highlight c# hl_lines="10 11 12" %}
 
     public partial class MainPage : ContentPage
     {
@@ -147,10 +146,10 @@ You can set any image as the background for the `SfChat` by setting the `SfChat.
 
 ### Set gradient background
 
-You can set the gradient view as a background for a chat by setting the `SfChat.Background` property as `Color.Transparent` and adding the gradient view below the `SfChat` control. However, if you want the gradient view to be applied to the message input view area, also, set the background color of the message input view as transparent as shown in the below code sample.
+You can set the gradient view as a background for a chat by setting the `SfChat.Background` property to the gradient colors. However, if you want the gradient view to be applied to the message input view area, also, set the background color of the message input view as transparent as shown in the below code sample.
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight xaml hl_lines="29 30" %}
     
     <?xml version="1.0" encoding="utf-8" ?>
     <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
@@ -189,17 +188,16 @@ You can set the gradient view as a background for a chat by setting the `SfChat.
                         <GradientStop Color="LightGray" Offset="1.0" />
                     </LinearGradientBrush>
                 </sfChat:SfChat.Background>
-                                    
             </sfChat:SfChat>
         </ContentPage.Content>
     </ContentPage>
 
 {% endhighlight %}
-{% highlight c# %}
+{% highlight c# hl_lines="12 18" %}
 
     public partial class MainPage : ContentPage
-    {   
-        SfChat sfChat;   
+    {
+        SfChat sfChat;
         ViewModel viewModel;
         public MainPage()
         {
@@ -214,7 +212,7 @@ You can set the gradient view as a background for a chat by setting the `SfChat.
             linearGradientBrush.GradientStops.Add(new GradientStop(Colors.SteelBlue, 0.5f));
             linearGradientBrush.GradientStops.Add(new GradientStop(Colors.LightSkyBlue, 0.75f));
             linearGradientBrush.GradientStops.Add(new GradientStop(Colors.LightGray, 1.0f));
-            this.sfChat.Background = linearGradientBrush;                
+            this.sfChat.Background = linearGradientBrush;
             this.Content = sfChat;
         }
     }
@@ -224,7 +222,7 @@ You can set the gradient view as a background for a chat by setting the `SfChat.
 
 ![.NET MAUI Chat with Gradient Background](images/styles/maui-chat-gradient-background-style.png)
 
-## Incoming Message Styling
+## Incoming message styling
 
 You can style the elements of an incoming message by setting values to the in-built keys of an incoming message in the resource dictionary.
 
@@ -325,13 +323,13 @@ You can style the elements of an incoming message by setting values to the in-bu
         dictionary.Add("SfChatIncomingMessageTimestampTextColor", Colors.Gray);
         dictionary.Add("SfChatIncomingMessageAuthorTextColor", Colors.Gray);
         dictionary.Add("SfChatIncomingMessageBackground", Color.FromHex("#eee479"));
-        dictionary.Add("SfChatIncomingMessageFontFamily", "Roboto-Regular");
+        dictionary.Add("SfChatIncomingMessageFontFamily", "Roboto-Medium");
         dictionary.Add("SfChatIncomingMessageFontAttributes", FontAttributes.Italic);
         dictionary.Add("SfChatIncomingMessageFontSize", 16);
-        dictionary.Add("SfChatIncomingMessageAuthorFontFamily", "Roboto-Regular");
+        dictionary.Add("SfChatIncomingMessageAuthorFontFamily", "Roboto-Medium");
         dictionary.Add("SfChatIncomingMessageAuthorFontAttributes", FontAttributes.Italic);
         dictionary.Add("SfChatIncomingMessageAuthorFontSize", 16);
-        dictionary.Add("SfChatIncomingMessageTimestampFontFamily", "Roboto-Regular");
+        dictionary.Add("SfChatIncomingMessageTimestampFontFamily", "Roboto-Medium");
         dictionary.Add("SfChatIncomingMessageTimestampFontAttributes", FontAttributes.Italic);
         dictionary.Add("SfChatIncomingMessageTimestampFontSize", 16);
         this.Resources.Add(dictionary);
@@ -431,13 +429,13 @@ You can style the elements of an outgoing message by setting values to the in-bu
         dictionary.Add("SfChatOutgoingMessageTimestampTextColor", Colors.Gray);
         dictionary.Add("SfChatOutgoingMessageAuthorTextColor", Colors.Gray);
         dictionary.Add("SfChatOutgoingMessageBackground", Color.FromHex("#eee479"));
-        dictionary.Add("SfChatOutgoingMessageFontFamily", "Roboto-Regular");
+        dictionary.Add("SfChatOutgoingMessageFontFamily", "Roboto-Medium");
         dictionary.Add("SfChatOutgoingMessageFontAttributes", FontAttributes.Italic);
         dictionary.Add("SfChatOutgoingMessageFontSize", 16);
-        dictionary.Add("SfChatOutgoingMessageAuthorFontFamily", "Roboto-Regular");
+        dictionary.Add("SfChatOutgoingMessageAuthorFontFamily", "Roboto-Medium");
         dictionary.Add("SfChatOutgoingMessageAuthorFontAttributes", FontAttributes.Italic);
         dictionary.Add("SfChatOutgoingMessageAuthorFontSize", 16);
-        dictionary.Add("SfChatOutgoingMessageTimestampFontFamily", "Roboto-Regular");
+        dictionary.Add("SfChatOutgoingMessageTimestampFontFamily", "Roboto-Medium");
         dictionary.Add("SfChatOutgoingMessageTimestampFontAttributes", FontAttributes.Italic);
         dictionary.Add("SfChatOutgoingMessageTimestampFontSize", 16);
         this.Resources.Add(dictionary);
@@ -448,7 +446,7 @@ You can style the elements of an outgoing message by setting values to the in-bu
 
 ![.NET MAUI Chat Outgoing message with style](images/styles/maui-chat-outgoing-message-style.png)
 
-## Calendar Message styling
+## Calendar message styling
 
 You can style the elements of a calendar message by setting values to the in-built keys of a calendar message in the resource dictionary.
 
@@ -500,11 +498,11 @@ You can style the elements of a calendar message by setting values to the in-bui
 {% endhighlight %}
 {% endtabs %}
 
-In addition to this, you can write the target style to the `SfCalendar` control to style the inner elements of the calendar, like the selection of background color, foreground color, etc.
+N> In addition to this, you can write the target style to the `SfCalendar` control to style the inner elements of the calendar, like the selection of background color, foreground color, etc.
 
 ## Hyperlink message styling
 
-You can style the elements of a hyperlinked message by setting values to the in-built keys of a hyperlinked message in the resource dictionary.
+You can style the elements of a hyperlink message by setting values to the in-built keys of a hyperlink message in the resource dictionary.
 
 <table>
 <tr>
@@ -569,7 +567,7 @@ You can style the elements of a hyperlinked message by setting values to the in-
 
 ![.NET MAUI Chat Hyperlink message with style](images/styles/maui-chat-hyperlink-message-style.png)
 
-## Date Picker message styling
+## Date picker message styling
 
 You can style the elements of a date picker message by setting values to the in-built keys of a date picker message in the resource dictionary.
 
@@ -635,7 +633,7 @@ You can style the elements of a date picker message by setting values to the in-
 
 ![.NET MAUI Chat Date Picker message with style](images/styles/maui-chat-datepicker-message-style.png)
 
-## Time Picker message styling
+## Time picker message styling
 
 You can style the elements of a time picker message by setting values to the in-built keys of a time picker message in the resource dictionary.
 
@@ -737,6 +735,7 @@ You can style the elements of the message input view by setting values to the in
         ResourceDictionary dictionary = new ResourceDictionary();
         dictionary.Add("SfChatTheme", "CustomTheme");
         dictionary.Add("SfChatMessageInputViewBackground", Colors.SkyBlue);
+        this.Resources.Add(dictionary);
         ....
     }
 
@@ -831,7 +830,7 @@ You can style the elements of the editor view by setting values to the in-built 
 
 ![.NET MAUI Chat editor with style](images/styles/maui-chat-editor-withtext-style.png)
 
-## Typing Indicator styling
+## Typing indicator styling
 
 You can style the elements of the typing indicator view by setting values to the in-built keys of the typing indicator view in the resource dictionary.
 
@@ -969,7 +968,7 @@ You can style the elements of the time break view by setting values to the in-bu
         dictionary.Add("SfChatTimeBreakViewTextColor", Colors.Blue);
         dictionary.Add("SfChatTimeBreakViewStroke", Colors.LimeGreen);
         dictionary.Add("SfChatTimeBreakViewBackground", Color.FromHex("#e2f9cd"));
-        dictionary.Add("SfChatTimeBreakViewFontFamily", "Roboto-Regular");
+        dictionary.Add("SfChatTimeBreakViewFontFamily", "Roboto-Medium");
         dictionary.Add("SfChatTimeBreakViewFontAttributes", FontAttributes.Italic);
         dictionary.Add("SfChatTimeBreakViewFontSize", 16);
         this.Resources.Add(dictionary);
@@ -978,8 +977,6 @@ You can style the elements of the time break view by setting values to the in-bu
 
 {% endhighlight %}
 {% endtabs %}
-
-Executing the above code renders the following output.
 
 ![.NET MAUI Chat Time break view with style](images/styles/maui-chat-time-break-style.png)
 
@@ -1065,7 +1062,7 @@ You can style the elements of the suggestion view by setting values to the in-bu
 
 ![NET MAUI Chat suggestion with style](images/styles/maui-chat-suggestion-style.png)
 
-## Send Button styling
+## Send button styling
 
 You can style the send message button based on its state by setting values to the in-built keys of the send message button in the resource dictionary.
 
@@ -1145,7 +1142,7 @@ You can style the send message button based on its state by setting values to th
 
 ![NET MAUI Chat send button Enable with style](images/styles/maui-chat-sendicon-enable-style.png)
 
-## Attachment Button styling
+## Attachment button styling
 
 You can style the attachment button by setting values to the in-built keys of the attachment button in the resource dictionary.
 
@@ -1199,9 +1196,6 @@ You can style the attachment button by setting values to the in-built keys of th
         ResourceDictionary dictionary = new ResourceDictionary();
         dictionary.Add("SfChatTheme", "CustomTheme");
         dictionary.Add("SfChatAttachmentButtonColor", Colors.Orange);
-        dictionary.Add("SfChatHoveredAttachmentButtonColor", Colors.Violet);
-        dictionary.Add("SfChatHoveredAttachmentBackground", Colors.Pink);
-        dictionary.Add("SfChatPressedAttachmentBackground", Color.FromHex("#d9d9d9"));
         this.Resources.Add(dictionary);
         ....
     }
