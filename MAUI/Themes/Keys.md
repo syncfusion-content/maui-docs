@@ -5570,6 +5570,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
     </tr>
+</table>
 
 ## SfChat
 
@@ -5589,7 +5590,7 @@ This page lists the keys for each control and the element to which it is mapped 
         </th>
     </tr>
     <tr>
-    <td rowspan="106">
+    <td rowspan="99">
             SfChatStyles
             <br/>
             <br/>
@@ -5637,11 +5638,11 @@ This page lists the keys for each control and the element to which it is mapped 
         <td> SfChatIncomingMessageTextColor <br/><br/></td>
         <td> Text color of an incoming message.<br/><br/></td>
     </tr>
-     <tr>
+    <tr>
         <td> SfChatIncomingMessageFontFamily <br/><br/></td>
         <td> Font family of an incoming message.<br/><br/></td>
     </tr>
-     <tr>
+    <tr>
         <td> SfChatIncomingMessageFontAttributes <br/><br/></td>
         <td> Font attributes of an incoming message.<br/><br/></td>
     </tr>
@@ -5657,7 +5658,7 @@ This page lists the keys for each control and the element to which it is mapped 
         <td> SfChatIncomingMessageAuthorFontFamily <br/><br/></td>
         <td> Font family of the author name in an incoming message.<br/><br/></td>
     </tr>
-     <tr>
+    <tr>
         <td> SfChatIncomingMessageAuthorFontAttributes <br/><br/></td>
         <td> Font attributes of the author name in an incoming message.<br/><br/></td>
     </tr>
@@ -5669,11 +5670,11 @@ This page lists the keys for each control and the element to which it is mapped 
         <td> SfChatIncomingMessageTimestampTextColor <br/><br/></td>
         <td> Text color of the timestamp in an incoming message.<br/><br/></td>
     </tr>
-     <tr>
+    <tr>
         <td> SfChatIncomingMessageTimestampFontFamily <br/><br/></td>
         <td> Font family of the timestamp in an incoming message.<br/><br/></td>
     </tr>
-     <tr>
+    <tr>
         <td> SfChatIncomingMessageTimestampFontAttributes <br/><br/></td>
         <td> Font attributes of the timestamp in an incoming message.<br/><br/></td>
     </tr>
@@ -5690,11 +5691,11 @@ This page lists the keys for each control and the element to which it is mapped 
         <td> SfChatOutgoingMessageTextColor <br/><br/></td>
         <td> Text color of an outgoing message.<br/><br/></td>
     </tr>
-     <tr>
+    <tr>
         <td> SfChatOutgoingMessageFontFamily <br/><br/></td>
         <td> Font family of an outgoing message.<br/><br/></td>
     </tr>
-     <tr>
+    <tr>
         <td> SfChatOutgoingMessageFontAttributes <br/><br/></td>
         <td> Font attributes of an outgoing message.<br/><br/></td>
     </tr>
@@ -5706,11 +5707,11 @@ This page lists the keys for each control and the element to which it is mapped 
         <td> SfChatOutgoingMessageAuthorTextColor <br/><br/></td>
         <td> Text color of the author name in an outgoing message.<br/><br/></td>
     </tr>
-     <tr>
+    <tr>
         <td> SfChatOutgoingMessageAuthorFontFamily <br/><br/></td>
         <td> Font family of the author name in an outgoing message.<br/><br/></td>
     </tr>
-     <tr>
+    <tr>
         <td> SfChatOutgoingMessageAuthorFontAttributes <br/><br/></td>
         <td> Font attributes of the author name in an outgoing message.<br/><br/></td>
     </tr>
@@ -5722,11 +5723,11 @@ This page lists the keys for each control and the element to which it is mapped 
         <td> SfChatOutgoingMessageTimestampTextColor <br/><br/></td>
         <td> Text color of the timestamp in an outgoing message.<br/><br/></td>
     </tr>
-     <tr>
+    <tr>
         <td> SfChatOutgoingMessageTimestampFontFamily <br/><br/></td>
         <td> Font family of the timestamp in an outgoing message.<br/><br/></td>
     </tr>
-     <tr>
+    <tr>
         <td> SfChatOutgoingMessageTimestampFontAttributes <br/><br/></td>
         <td> Font attributes of the timestamp in an outgoing message.<br/><br/></td>
     </tr>
@@ -5743,11 +5744,11 @@ This page lists the keys for each control and the element to which it is mapped 
         <td> SfChatDatePickerTextColor <br/><br/></td>
         <td> Text color of date picker.<br/><br/></td>
     </tr>
-     <tr>
+    <tr>
         <td> SfChatDatePickerStroke <br/><br/></td>
         <td> Border color of date picker.<br/><br/></td>
     </tr>
-     <tr>
+    <tr>
         <td> SfChatDatePickerBackground <br/><br/></td>
         <td> Background color of date picker.<br/><br/></td>
     </tr>
@@ -5760,11 +5761,11 @@ This page lists the keys for each control and the element to which it is mapped 
         <td> SfChatTimePickerTextColor <br/><br/></td>
         <td> Text color of time picker.<br/><br/></td>
     </tr>
-     <tr>
+    <tr>
         <td> SfChatTimePickerStroke <br/><br/></td>
         <td> Border color of time picker.<br/><br/></td>
     </tr>
-     <tr>
+    <tr>
         <td> SfChatTimePickerBackground <br/><br/></td>
         <td> Background color of time picker.<br/><br/></td>
     </tr>
@@ -5777,15 +5778,15 @@ This page lists the keys for each control and the element to which it is mapped 
         <td> SfChatHyperlinkMetaTitleTextColor <br/><br/></td>
         <td> Text color of the URL's meta title in a hyper link message.<br/><br/></td>
     </tr>
-     <tr>
+    <tr>
         <td> SfChatHyperlinkDescriptionTextColor <br/><br/></td>
         <td> Text color of the URL's meta description in a hyper link message.<br/><br/></td>
     </tr>
-     <tr>
+    <tr>
         <td> SfChatHyperlinkDescriptionBackground <br/><br/></td>
         <td> Background color of the URL description area in a hyper link message.<br/><br/></td>
     </tr>
-     <tr>
+    <tr>
         <td> SfChatOutgoingHyperlinkColor <br/><br/></td>
         <td> Text color of the URL in an outgoing hyper link message.<br/><br/></td>
     </tr>
@@ -5971,15 +5972,15 @@ This page lists the keys for each control and the element to which it is mapped 
         <td> SfChatTypingIndicatorBackground <br/><br/></td>
         <td> Background Color of typing indicator.<br/><br/></td>
     </tr>
-     <tr>
+    <tr>
         <td> SfChatTypingIndicatorFontFamily <br/><br/></td>
         <td> Font family of typing indicator.<br/><br/></td>
     </tr>
-     <tr>
+    <tr>
         <td> SfChatTypingIndicatorFontSize <br/><br/></td>
         <td> Font size of typing indicator.<br/><br/></td>
     </tr>
-     <tr>
+    <tr>
         <td> SfChatTypingIndicatorFontAttributes <br/><br/></td>
         <td> Font attributes of typing indicator.<br/><br/></td>
     </tr>
@@ -5988,7 +5989,7 @@ This page lists the keys for each control and the element to which it is mapped 
         <td> SfChatSuggestionListItemTextColor <br/><br/></td>
         <td> Text color of an item in the list of suggestions. <br/><br/></td>
     </tr>
-     <tr>
+    <tr>
         <td> SfChatSuggestionListItemBackground <br/><br/></td>
         <td> Background color of an item in the list of suggestions.<br/><br/></td>
     </tr>
@@ -5996,7 +5997,7 @@ This page lists the keys for each control and the element to which it is mapped 
         <td> SfChatSuggestionListItemStroke <br/><br/></td>
         <td> Border color of an item in the list of suggestions.<br/><br/></td>
     </tr>
-     <tr>
+    <tr>
         <td> SfChatSuggestionListItemFontFamily <br/><br/></td>
         <td> Font family of an item in the list of suggestions.<br/><br/></td>
     </tr>
@@ -6021,7 +6022,7 @@ This page lists the keys for each control and the element to which it is mapped 
         <td> SfChatLoadMoreTextColor <br/><br/></td>
         <td> Text color of the load more.<br/><br/></td>
     </tr>
-     <tr>
+    <tr>
         <td> SfChatLoadMoreBackground <br/><br/></td>
         <td> Background color of the load more.<br/><br/></td>
     </tr>
