@@ -211,6 +211,11 @@ To make migration from [Xamarin SfPdfViewer](https://www.syncfusion.com/xamarin-
 <td>{{'SignatureFormField.Signature'| markdownify}}</td>
 <td>Gets or sets the ink annotation signature in the signature field.</td>
 </tr>
+<tr>
+<td>{{'[ClientRectangle](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.SfPdfViewer.html#Syncfusion_SfPdfViewer_XForms_SfPdfViewer_ClientRectangle)'| markdownify}}</td>
+<td>`ClientRectangle`</td>
+<td>Gets the rectangle that represents the client area (viewport) of the control.</td>
+</tr>
 </table>
 
 ## Events
@@ -379,6 +384,21 @@ To make migration from [Xamarin SfPdfViewer](https://www.syncfusion.com/xamarin-
 <td>{{'[Print](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.SfPdfViewer.html#Syncfusion_SfPdfViewer_XForms_SfPdfViewer_Print)'| markdownify }}</td>
 <td>{{'PrintDocument'| markdownify }}</td>
 <td>Prints the PDF document.</td>
+</tr>
+<tr>
+<td>{{'[ConvertClientPointToPagePoint](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.SfPdfViewer.html#Syncfusion_SfPdfViewer_XForms_SfPdfViewer_ConvertClientPointToPagePoint_Xamarin_Forms_Point_System_Int32_)'| markdownify}}</td>
+<td>`ConvertClientPointToPagePoint`</td>
+<td>Converts a point from the client area coordinates to PDF page coordinates.</td>
+</tr>
+<tr>
+<td>{{'[ConvertPagePointToClientPoint](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.SfPdfViewer.html#Syncfusion_SfPdfViewer_XForms_SfPdfViewer_ConvertPagePointToClientPoint_Xamarin_Forms_Point_System_Int32_)'| markdownify}}</td>
+<td>`ConvertPagePointToClientPoint`</td>
+<td>Converts a point from PDF page coordinates to client area coordinates.</td>
+</tr>
+<tr>
+<td>{{'[ConvertPagePointToScrollPoint](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.SfPdfViewer.html#Syncfusion_SfPdfViewer_XForms_SfPdfViewer_ConvertPagePointToScrollPoint_Xamarin_Forms_Point_System_Int32_)'| markdownify}}</td>
+<td>`ConvertPagePointToScrollPoint`</td>
+<td>Converts a point from the PDF page coordinates to the scroll area coordinates.</td>
 </tr>
 </table>
 
