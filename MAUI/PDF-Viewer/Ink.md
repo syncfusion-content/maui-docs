@@ -135,7 +135,7 @@ void DisableAggregateInkStrokes()
 
 ### How to draw ink annotation only using stylus
 
-The ink annotation operation can be customized so that the ink strokes can be added only using a stylus by setting the AnnotationSettings.Ink.TouchScreenInputMode property to TouchMode.Stylus. When TouchScreenInputMode is set to TouchScreenInputMode.Stylus, users can easily draw ink strokes using a stylus. However, zooming and scrolling functionality will still be available using their fingers.
+The ink annotation operation can be customized so that the ink strokes can be added only using a stylus by setting the `AnnotationSettings.Ink.TouchScreenInputMode` property to TouchScreenInputMode.Stylus. When TouchScreenInputMode is set to TouchScreenInputMode.Stylus, users can easily draw ink strokes using a stylus. However, zooming and scrolling functionality will still be available using their fingers.
 
 By default, the TouchScreenInputMode property is set to TouchScreenInputMode.FingerAndStylus, where both finger and stylus inputs are recognized as ink operations.
 
