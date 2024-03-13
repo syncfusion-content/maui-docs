@@ -2,7 +2,7 @@
 layout: post
 title: Getting started with .NET MAUI Parallax View control | Syncfusion
 description: Learn about getting started with Syncfusion .NET MAUI Parallax View (SfParallaxView) control.
-platform: .NET MAUI
+platform: MAUI
 control: SfParallaxView
 documentation: ug
 ---
@@ -41,9 +41,11 @@ This section explains the steps required to configure the [`SfParallaxView`]() c
         {
             public MainPage()
             {
-                InitializeComponent();           
+                InitializeComponent();  
+                Grid grid = new Grid();         
                 SfParallaxView parallaxView = new SfParallaxView(); 
-                this.Content = parallaxView;
+                grid.Children.Add(parallaxView);
+                this.Content = grid;
             }
         }   
     }
@@ -102,17 +104,17 @@ The following code sample demonstrates how to set the content property to the pa
              xmlns:parallax="clr-namespace:Syncfusion.Maui.ParallaxView;assembly=Syncfusion.Maui.ParallaxView"
              x:Class="ParallaxView_GettingStarted.MainPage">
       
-    <ContentPage.Content>
-        <Grid>            
-        <parallax:SfParallaxView x:Name="parallaxview">
-            <parallax:SfParallaxView.Content>
-                <Image Source="{Binding Image}" BackgroundColor="Transparent" HorizontalOptions="Fill" VerticalOptions="Fill" Aspect="AspectFill" />
-            </parallax:SfParallaxView.Content>
-        </parallax:SfParallaxView>       
-        </Grid>
-    </ContentPage.Content>
+        <ContentPage.Content>
+            <Grid>            
+            	<parallax:SfParallaxView x:Name="parallaxview">
+                	<parallax:SfParallaxView.Content>
+                    	<Image Source="{Binding Image}" BackgroundColor="Transparent" HorizontalOptions="Fill" VerticalOptions="Fill" Aspect="AspectFill" />
+                	</parallax:SfParallaxView.Content>
+            	</parallax:SfParallaxView>       
+            </Grid>
+        </ContentPage.Content>
 	
-    </ContentPage>
+   </ContentPage>
 
 {% endhighlight %}
 

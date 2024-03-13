@@ -104,6 +104,21 @@ this.Content = parallax;
 
 <table>
 <tr>
+<th>Namespace</th>
+<th>Class</th>
+</tr>
+<tr>
+<td>Syncfusion.Maui.ParallaxView</td>
+<td>SfParallaxView</td>
+</tr>
+<tr>
+<td>Syncfusion.Maui.Core</td>
+<td>ParallaxScrollingEventArg</td>
+</tr>
+</table>
+
+<table>
+<tr>
 <th>Xamarin</th>
 <th>.NET MAUI</th>
 <th>Description</th>
@@ -124,6 +139,17 @@ this.Content = parallax;
 
 <table>
 <tr>
+<th>Namespace</th>
+<th>Interface</th>
+</tr>
+<tr>
+<td>Syncfusion.Maui.Core</td>
+<td>IParallaxView</td>
+</tr>
+</table>
+
+<table>
+<tr>
 <th>Xamarin</th>
 <th>.NET MAUI</th>
 <th>Description</th>
@@ -135,6 +161,17 @@ this.Content = parallax;
 </table>
 
 ## Enums
+
+<table>
+<tr>
+<th>Namespace</th>
+<th>Enums</th>
+</tr>
+<tr>
+<td>Syncfusion.Maui.ParallaxView</td>
+<td>Orientation</td>
+</tr>
+</table>
 
 <table>
 <tr>
@@ -150,9 +187,10 @@ this.Content = parallax;
 </table>
 
 ## API Migration
-The following table illustrates the API migration for the parallax view.
 
 ### Parallax View
+
+The following table illustrates the API migration for the parallax view.
 
 <table>
 <tr>
