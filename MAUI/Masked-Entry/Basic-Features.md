@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Basic Features in .NET MAUI Masked Entry control | Syncfusion
-Description: Learn about Basic Features support in Syncfusion .NET MAUI Masked Entry (SfMaskedEntry) control and more.
+description: Learn about Basic Features support in Syncfusion .NET MAUI Masked Entry (SfMaskedEntry) control and more.
 platform: maui
 control: SfMaskedEntry
 documentation: ug
@@ -199,6 +199,84 @@ maskedEntry.TextColor =  Colors.Green;
 {% endtabs %}
 
 ![TextColor](MaskedEntry_Images/MaskedEntry_TextColor.png)
+
+## Stroke
+
+The [`MaskedEntry`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html) border color can be changed by using the `Stroke` property.
+
+{% tabs %}
+{% highlight XAML %}
+
+<syncfusion:SfMaskedEntry WidthRequest="200"
+                          Mask="(000) 000-0000"
+                          Stroke="Red"/>                                           
+{% endhighlight %}
+{% highlight C# %}
+
+SfMaskedEntry maskedEntry = new SfMaskedEntry();
+maskedEntry.WidthRequest = "200";
+maskedEntry.Mask = "(000) 000-0000";
+maskedEntry.Stroke = Colors.Red;
+
+{% endhighlight %}
+{% endtabs %}
+
+The following image illustrates the result of the above code:
+
+![ShowBorder](MaskedEntry_Images/MaskedEntry_Stroke.png)
+
+## Border visibility
+
+The `ShowBorder` property of [`SfMaskedEntry`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html) is used to modify the visibility of the border and its default value is **true**. The following code example demonstrates how to change the border visibility,
+
+{% tabs %}
+{% highlight XAML %}
+
+<syncfusion:SfMaskedEntry WidthRequest="200"
+                          Mask="(000) 000-0000"
+                          ShowBorder="False"/>                                           
+{% endhighlight %}
+{% highlight C# %}
+
+SfMaskedEntry maskedEntry = new SfMaskedEntry();
+maskedEntry.WidthRequest = 200;
+maskedEntry.Mask = "(000) 000-0000";
+maskedEntry.ShowBorder = false;
+
+{% endhighlight %}
+{% endtabs %}
+
+The following image illustrates the result of the above code:
+
+![ShowBorder](MaskedEntry_Images/MaskedEntry_ShowBorder.png)
+
+### TextAlignment
+
+The [`SfMaskedEntry`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html) provides support to customize the text alignment by using the `HorizontalTextAlignment` and `VerticalTextAlignment` properties.
+
+{% tabs %}
+{% highlight xaml %}
+
+<syncfusion:SfMaskedEntry WidthRequest="200"
+                          HeightRequest="50"
+                          HorizontalTextAlignment="Center" 
+                          VerticalTextAlignment="Start"/>
+{% endhighlight %}
+{% highlight c# %}
+
+SfMaskedEntry maskedEntry = new SfMaskedEntry();
+maskedEntry.WidthRequest = 200;
+maskedEntry.HeightRequest = 50;
+maskedEntry.HorizontalTextAlignment = TextAlignment.Center;
+maskedEntry.VerticalTextAlignment = TextAlignment.Start;
+
+{% endhighlight %}
+{% endtabs %}
+
+The following image illustrates the result of the above code:
+
+![TextAlignment](MaskedEntry_Images/MaskedEntry_TextAlignment.png)
+
 
 
 

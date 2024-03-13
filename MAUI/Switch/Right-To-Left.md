@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Right To Left in .NET MAUI Switch Control | Syncfusion
-description: Learn here all about Right To Left support in Syncfusion .NET MAUI Switch (SfSwitch) control, and more.
+description: Learn about the comprehensive support for right-to-left (RTL) directionality within the Syncfusion .NET MAUI Button, also known as the SfButton control.
 platform: maui
 control: SfSwitch
 documentation: ug
