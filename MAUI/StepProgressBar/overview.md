@@ -1,6 +1,6 @@
 ---
 layout: post
-title: About .NET MAUI Step ProgressBar control | Syncfusion
+title: About .NET MAUI Step ProgressBar Control | Syncfusion
 description: Learn about the overview of Syncfusion .NET MAUI Step ProgressBar (SfStepProgressBar) control, its basic features, and step progressBar functionalities.
 platform: maui
 control: SfStepProgressBar
@@ -32,5 +32,3 @@ Syncfusion .NET MAUI Step ProgressBar (SfStepProgressBar) control allows you to 
 * **Image support**: You can represent the step progress bar status with images inside the step.
 
 * **Customization**: Supports customization of the step progress bar background color, step size, content size, animations, and more.
-
-    ![Overview of .NET MAUI StepProgressBar.](images/maui--stepprogressbar-overview.gif)
