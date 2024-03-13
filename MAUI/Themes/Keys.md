@@ -254,8 +254,12 @@ This page lists the keys for each control and the element to which it is mapped 
 <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <base:SampleBrowserStyles />
-                <syncTheme:SyncfusionThemeResourceDictionary SfVisualTheme="LightDefault" />
+                <syncTheme:SyncfusionThemeResourceDictionary />
+                <ResourceDictionary>
+                    <x:String x:Key="SfDataGridTheme">CommonTheme</x:String>
+                    <Color x:Key="SfDataGridHeaderRowTextColor">Red</Color>
+                    <Color x:Key="SfDataGridRowTextColor">LightBlue</Color>
+                </ResourceDictionary>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>
@@ -641,7 +645,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>    
-            By merging this key in application resources, it is possible to customize the appearance of the SfDataGrid without merging common theme resource and control style resource dictionaries.
+            By merging this key in application resources, it is possible to customize the appearance of the SfDataPager without merging common theme resource and control style resource dictionaries.
 			
 {% highlight xaml %}
 
@@ -650,8 +654,12 @@ This page lists the keys for each control and the element to which it is mapped 
 <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <base:SampleBrowserStyles />
-                <syncTheme:SyncfusionThemeResourceDictionary SfVisualTheme="LightDefault" />
+                <syncTheme:SyncfusionThemeResourceDictionary />
+                <ResourceDictionary>
+                    <x:String x:Key="SfDataPagerTheme">CommonTheme</x:String>
+                    <Color x:Key="SfDataPagerNumericButtonTextColor">Red</Color>
+                    <Color x:Key="SfDataPagerNumericButtonSelectionTextColor">LightBlue</Color>
+                </ResourceDictionary>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>
