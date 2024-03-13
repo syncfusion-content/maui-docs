@@ -193,7 +193,7 @@ The slider items will also be loaded in the thumbnail view. When a thumbnail ite
 
 ![Dot Mode Image](images/RotatorImages.png)
 
-## Items / Dot Strip Positions
+## Navigation Strip Positions
 
 The `NavigationStripPosition` specifies the placement position of the navigation bar items, such as thumbnails or dots relative to the slider area.
 
