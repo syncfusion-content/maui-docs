@@ -1,7 +1,7 @@
 ---
 layout: post
 title: About Keys for Syncfusion Controls | Syncfusion
-description: This section provides an extensive overview of the specific keys that have been assigned to correspond with the user interface components associated with each control mechanism.
+description: Use this for keys: This section provides an extensive overview of the specific keys mapped to the UI elements of all the Syncfusion Maui controls.
 platform: maui
 control: General
 documentation: ug
