@@ -5664,11 +5664,11 @@ This page lists the keys for each control and the element to which it is mapped 
     </tr>
     <tr>
         <td> SfTreeViewFocusedTreeViewItemStroke <br/><br/></td> 
-        <td> Stroke color of the TreeViewItem when it is in focused state during key navigation.<br/><br/></td>
+        <td> Stroke color of the TreeViewItem when it is in focused state during keyboard navigation.<br/><br/></td>
     </tr>
     <tr>
         <td> SfTreeViewFocusedTreeViewItemStrokeThickness <br/><br/></td> 
-        <td> Stroke thickness of the TreeViewItem when it is in focused state during key navigation.<br/><br/></td>
+        <td> Stroke thickness of the TreeViewItem when it is in focused state during keyboard navigation.<br/><br/></td>
     </tr>
     <tr>
         <td> SfTreeViewNormalLoadMoreIndicatorColor <br/><br/></td> 
