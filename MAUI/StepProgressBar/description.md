@@ -43,10 +43,11 @@ public class ViewModel
     public ViewModel()
     {
         stepProgressItem = new ObservableCollection<StepProgressBarItem>();
-        stepProgressItem.Add(new StepProgressBarItem() { PrimaryText = "Ordered", SecondaryText = "December 1, 2023" });
-        stepProgressItem.Add(new StepProgressBarItem() { PrimaryText = "Packed", SecondaryText = "December 4, 2023" });
-        stepProgressItem.Add(new StepProgressBarItem() { PrimaryText = "Shipped", SecondaryText = "December 6, 2023" });
-        stepProgressItem.Add(new StepProgressBarItem() { PrimaryText = "Delivered", SecondaryText = "December 8, 2023" });
+        stepProgressItem.Add(new StepProgressBarItem() { PrimaryText = "Requirement Gathering", SecondaryText = "Jan 10, 2024" });
+        stepProgressItem.Add(new StepProgressBarItem() { PrimaryText = "Design Phase", SecondaryText = "Jan 20, 2024" });
+        stepProgressItem.Add(new StepProgressBarItem() { PrimaryText = "Development", SecondaryText = "Feb 5, 2024" });
+        stepProgressItem.Add(new StepProgressBarItem() { PrimaryText = "Testing", SecondaryText = "Feb 20, 2024" });
+        stepProgressItem.Add(new StepProgressBarItem() { PrimaryText = "Deployment", SecondaryText = "Mar 5, 2024" });
     }
 }
 
@@ -56,16 +57,16 @@ public class ViewModel
 * Bind the Collection to the step progressbar
 
 {% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="6" %}
+{% highlight xaml tabtitle="XAML" hl_lines="9" %}
 
 <stepProgressBar:SfStepProgressBar
-                    x:Name="stepProgressBar"
+                    x:Name="stepProgress"
                     VerticalOptions="Center"
-                    HorizontalOptions="Center"
+                    HorizontalOptions="Center"                                        
+                    Orientation="Vertical"                                                                                       
                     LabelSpacing="12"
-                    Orientation="Horizontal"
-                    ActiveStepIndex="2"
-                    ActiveStepProgressValue="60" 
+                    ActiveStepIndex="3"
+                    ActiveStepProgressValue="50"
                     ItemsSource="{Binding StepProgressItem}">
 </stepProgressBar:SfStepProgressBar>
 
@@ -74,13 +75,17 @@ public class ViewModel
 </ContentPage.BindingContext>
 
 {% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="7" %}
+{% highlight c# tabtitle="C#" hl_lines="10" %}
 
 ViewModel viewModel = new ViewModel();
 SfStepProgressBar stepProgressBar = new SfStepProgressBar()
-{f
-    LabelSpacing = 12,
+{
+    VerticalOptions = LayoutOptions.Center,
+    HorizontalOptions = LayoutOptions.Center,
     Orientation = StepProgressBarOrientation.Horizontal,
+    LabelSpacing = 12,
+    ActiveStepIndex = 3,
+    ActiveStepProgressValue = 50,
     ItemsSource = viewModel.StepProgressItem,
 };
 
@@ -119,37 +124,37 @@ public class ViewModel
         }
     }
 
-    public ViewModel()
-    {
-        FormattedString primaryFormattedText1 = new FormattedString();
-        primaryFormattedText1.Spans.Add(new Span { Text = "Ordered Confirmed", FontSize = 13 });
-        primaryFormattedText1.Spans.Add(new Span { Text = "\nYour Order has been placed", FontSize = 12 });
+            public ViewModel()
+        {
+            FormattedString primaryFormattedText1 = new FormattedString();
+            primaryFormattedText1.Spans.Add(new Span { Text = "Step 1: Introduction", FontSize = 14, FontAttributes = FontAttributes.Bold });
+            primaryFormattedText1.Spans.Add(new Span { Text = "\nWelcome to our", FontSize = 12, TextColor = Colors.Gray });
+            primaryFormattedText1.Spans.Add(new Span { Text = "\nplatform!", FontSize = 12, TextColor = Colors.Gray });
 
-        FormattedString primaryFormattedText2 = new FormattedString();
-        primaryFormattedText2.Spans.Add(new Span { Text = "Shipped", FontSize = 13 });
-        primaryFormattedText2.Spans.Add(new Span { Text = "\nYour item has been shipped", FontSize = 12 });
+            FormattedString primaryFormattedText2 = new FormattedString();
+            primaryFormattedText2.Spans.Add(new Span { Text = "Step 2: Registration", FontSize = 14, FontAttributes = FontAttributes.Bold });
+            primaryFormattedText2.Spans.Add(new Span { Text = "\nCreate your account", FontSize = 12, TextColor = Colors.Gray });
+            primaryFormattedText2.Spans.Add(new Span { Text = "\nto access exclusive features", FontSize = 12, TextColor = Colors.Gray });
 
-        FormattedString primaryFormattedText3 = new FormattedString();
-        primaryFormattedText3.Spans.Add(new Span { Text = "Delivered", FontSize = 13 });
-        primaryFormattedText3.Spans.Add(new Span { Text = "\nYour item has been delivered", FontSize = 12 });
+            FormattedString primaryFormattedText3 = new FormattedString();
+            primaryFormattedText3.Spans.Add(new Span { Text = "Step 3: Profile Setup", FontSize = 14, FontAttributes = FontAttributes.Bold });
+            primaryFormattedText3.Spans.Add(new Span { Text = "\nComplete your profile", FontSize = 12, TextColor = Colors.Gray });
+            primaryFormattedText3.Spans.Add(new Span { Text = "\nto personalize your experience", FontSize = 12, TextColor = Colors.Gray });
 
-        FormattedString secondaryFormattedText1 = new FormattedString();
-        secondaryFormattedText1.Spans.Add(new Span { Text = "Sunday", FontSize = 13 });
-        secondaryFormattedText1.Spans.Add(new Span { Text = "\nMarch 03, 2024 ", FontSize = 12 });
+            FormattedString secondaryFormattedText1 = new FormattedString();
+            secondaryFormattedText1.Spans.Add(new Span { Text = "Join us and explore!", FontSize = 12, TextColor = Colors.Gray });
 
-        FormattedString secondaryFormattedText2 = new FormattedString();
-        secondaryFormattedText2.Spans.Add(new Span { Text = "Monday", FontSize = 13 });
-        secondaryFormattedText2.Spans.Add(new Span { Text = "\nMarch 4, 2024 ", FontSize = 12 });
+            FormattedString secondaryFormattedText2 = new FormattedString();
+            secondaryFormattedText2.Spans.Add(new Span { Text = "Unlock all features", FontSize = 12, TextColor = Colors.Gray });
 
-        FormattedString secondaryFormattedText3 = new FormattedString();
-        secondaryFormattedText3.Spans.Add(new Span { Text = "Wednesday", FontSize = 13 });
-        secondaryFormattedText3.Spans.Add(new Span { Text = "\nMarch 6, 2023 ", FontSize = 12 });
+            FormattedString secondaryFormattedText3 = new FormattedString();
+            secondaryFormattedText3.Spans.Add(new Span { Text = "Personalize your journey", FontSize = 12, TextColor = Colors.Gray });
 
-        stepProgressItem = new ObservableCollection<StepProgressBarItem>();
-        stepProgressItem.Add(new StepProgressBarItem() { PrimaryFormattedText = primaryFormattedText1, SecondaryFormattedText = secondaryFormattedText1 });
-        stepProgressItem.Add(new StepProgressBarItem() { PrimaryFormattedText = primaryFormattedText2, SecondaryFormattedText = secondaryFormattedText2 });
-        stepProgressItem.Add(new StepProgressBarItem() { PrimaryFormattedText = primaryFormattedText3, SecondaryFormattedText = secondaryFormattedText3 });
-    }
+            stepProgressItem = new ObservableCollection<StepProgressBarItem>();
+            stepProgressItem.Add(new StepProgressBarItem() { PrimaryFormattedText = primaryFormattedText1, SecondaryFormattedText = secondaryFormattedText1 });
+            stepProgressItem.Add(new StepProgressBarItem() { PrimaryFormattedText = primaryFormattedText2, SecondaryFormattedText = secondaryFormattedText2 });
+            stepProgressItem.Add(new StepProgressBarItem() { PrimaryFormattedText = primaryFormattedText3, SecondaryFormattedText = secondaryFormattedText3 });
+        }
 }
 
 {% endhighlight %}
@@ -160,18 +165,18 @@ public class ViewModel
 The Step progressbar control allows you to bind item collection by setting the [ItemsSource]() property from the [SfStepProgressBar](). Bind item collection in both XAML and C#.
 
 {% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="6" %}
+{% highlight xaml tabtitle="XAML" hl_lines="9" %}
 
 <stepProgressBar:SfStepProgressBar
-                    x:Name="stepProgressBar"
+                    x:Name="stepProgress"
                     VerticalOptions="Center"
-                    HorizontalOptions="Center"
-                    ActiveStepIndex="1"
-                    ActiveStepProgressValue="60"
+                    HorizontalOptions="Center"                                        
+                    Orientation="Vertical"                                                                                       
                     LabelSpacing="12"
-                    Orientation="Vertical"  
+                    ActiveStepIndex="1"
+                    ActiveStepProgressValue="50"
                     ItemsSource="{Binding StepProgressItem}">
-</stepProgressBar:SfStepProgressBar>                                                                                              
+</stepProgressBar:SfStepProgressBar>                                                                                             
 
 <ContentPage.BindingContext>
     <local:ViewModel />
@@ -183,8 +188,12 @@ The Step progressbar control allows you to bind item collection by setting the [
 ViewModel viewModel = new ViewModel();
 SfStepProgressBar stepProgressBar = new SfStepProgressBar()
 {
+    VerticalOptions = LayoutOptions.Center,
+    HorizontalOptions = LayoutOptions.Center,
+    Orientation = StepProgressBarOrientation.Horizontal,
     LabelSpacing = 12,
-    Orientation = StepProgressBarOrientation.Vertical,
+    ActiveStepIndex = 3,
+    ActiveStepProgressValue = 50,
     ItemsSource = viewModel.StepProgressItem,
 };
 
@@ -206,11 +215,9 @@ Using [LabelPosition]() and [LabelSpacing]() property, the description alignment
                         x:Name="stepProgress"
                         VerticalOptions="Center"
                         HorizontalOptions="Center"                                        
-                        Orientation="Vertical"
-                        ActiveStepIndex="1"
-                        ActiveStepProgressValue="60"                                                                                     
+                        Orientation="Vertical"                                                                                   
                         LabelSpacing="28"
-                        LabelPosition="Start">
+                        LabelPosition="Bottom">
 </stepProgressBar:SfStepProgressBar> 
 
 {% endhighlight %}
@@ -218,9 +225,11 @@ Using [LabelPosition]() and [LabelSpacing]() property, the description alignment
 
 SfStepProgressBar stepProgressBar = new SfStepProgressBar()
 {
-    Orientation = StepProgressBarOrientation.Vertical,
-    LabelSpacing = 25,
-    LabelPosition = LabelPosition.Start,   
+    VerticalOptions = LayoutOptions.Center,
+    HorizontalOptions = LayoutOptions.Center,
+    Orientation = StepProgressBarOrientation.Horizontal,
+    LabelSpacing = 12,
+    LabelPosition = LabelPosition.Bottom,
 };
 
 this.Content = stepProgressBar;
@@ -229,9 +238,14 @@ this.Content = stepProgressBar;
 {% endtabs %}
 
 ## StepProgressBar Image Customization
-The [StepProgressBar]() control provides support for customizing the image in [StepView](). The following code example explains how to set an image in step view.
 
-### Initialize view model
+The [StepProgressBar]() control provides support for customizing the image in [StepView]().
+
+### Customization using Image
+
+You can add the images by giving image path to the [ImageSource]() property in `SfStepProgressBar`. The following code example explains how to set an image in step view.
+
+#### Initialize view model
 
 * Create a simple Observable Collection of item with image source for the step progressbar,
 
@@ -241,12 +255,12 @@ The [StepProgressBar]() control provides support for customizing the image in [S
  public class ViewModel
  {
     /// <summary>
-    /// The shiffement collection
+    /// The Step progress bar item collection.
     /// </summary>
     private ObservableCollection<StepProgressBarItem> stepProgressItem;
 
     /// <summary>
-    /// The shiffement collection
+    /// The Step progress bar item collection.
     /// </summary>
     public ObservableCollection<StepProgressBarItem> StepProgressItem
     {
@@ -263,9 +277,10 @@ The [StepProgressBar]() control provides support for customizing the image in [S
     public ViewModel()
     {
         stepProgressItem = new ObservableCollection<StepProgressBarItem>();
-        stepProgressItem.Add(new StepProgressBarItem() { PrimaryText = "Ordered", ImageSource = "ordered.png" });
-        stepProgressItem.Add(new StepProgressBarItem() { PrimaryText = "Packed", ImageSource = "packed.png" });
-        stepProgressItem.Add(new StepProgressBarItem() { PrimaryText = "Shipped", ImageSource = "delivered.png" });
+        stepProgressItem.Add(new StepProgressBarItem() { PrimaryText = "Enter Email", ImageSource = "email.png" });
+        stepProgressItem.Add(new StepProgressBarItem() { PrimaryText = "Create Password", ImageSource = "password.png" });
+        stepProgressItem.Add(new StepProgressBarItem() { PrimaryText = "Verify Email", ImageSource = "verified.png" });
+        stepProgressItem.Add(new StepProgressBarItem() { PrimaryText = "Complete Profile", ImageSource = "profile.png" });
     }
  }
 
@@ -274,19 +289,18 @@ The [StepProgressBar]() control provides support for customizing the image in [S
 
 * Bind the Collection to step progressbar
 
-The Step progressbar control allows you to bind item collection by setting the [ItemsSource]() property from the [SfStepProgressBar](). Bind item collection in both XAML and C#.
-
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="8" %}
 
 <stepProgressBar:SfStepProgressBar
-                    x:Name="stepProgressBar"
+                    x:Name="stepProgress"
                     VerticalOptions="Center"
-                    HorizontalOptions="Center"
+                    HorizontalOptions="Center"                                        
+                    Orientation="Horizontal"                                                                                       
                     LabelSpacing="12"
-                    Orientation="Horizontal"
+                    LabelPosition="Bottom"
                     ActiveStepIndex="2"
-                    ActiveStepProgressValue="60" 
+                    ActiveStepProgressValue="50"    
                     ItemsSource="{Binding StepProgressItem}">
 </stepProgressBar:SfStepProgressBar>                                                                                              
 
@@ -300,10 +314,96 @@ The Step progressbar control allows you to bind item collection by setting the [
 ViewModel viewModel = new ViewModel();
 SfStepProgressBar stepProgressBar = new SfStepProgressBar()
 {
+    VerticalOptions = LayoutOptions.Center,
+    HorizontalOptions = LayoutOptions.Center,
+    Orientation = StepProgressBarOrientation.Horizontal,
     LabelSpacing = 12,
+    LabelPosition = LabelPosition.Bottom,
+    ActiveStepIndex = 2,
+    ActiveStepProgressValue = 50,
+    ItemsSource = viewModel.StepProgressItem,
+};
+
+this.Content = stepProgressBar;
+
+{% endhighlight %}
+{% endtabs %}
+
+### Customization using Font icon
+
+You can add the images by giving font icons to the [ImageSource]() property in `SfStepProgressBar`. The following code example explains how to set an image in step view.
+
+#### Initialize view model
+
+* Create a simple Observable Collection of item with font icons for the step progressbar,
+
+{% tabs %}
+{% highlight c# tabtitle="ViewModel.cs" hl_lines="26 27 28" %}
+
+ public class ViewModel
+ {
+    /// <summary>
+    /// The Step progress bar item collection.
+    /// </summary>
+    private ObservableCollection<StepProgressBarItem> stepProgressItem;
+
+    /// <summary>
+    /// The Step progress bar item collection.
+    /// </summary>
+    public ObservableCollection<StepProgressBarItem> StepProgressItem
+    {
+        get
+        {
+            return stepProgressItem;
+        }
+        set
+        {
+            stepProgressItem = value;
+        }
+    }
+
+    public ViewModel()
+    {
+        stepProgressItem = new ObservableCollection<StepProgressBarItem>();
+        stepProgressItem.Add(new StepProgressBarItem() { ImageSource = new FontImageSource() { Glyph = "\ue760", Size = 32, FontFamily = "IconFont", Color = Colors.White } });
+        stepProgressItem.Add(new StepProgressBarItem() { ImageSource = new FontImageSource() { Glyph = "\ue77f", Size = 32, FontFamily = "IconFont", Color = Colors.White } });
+        stepProgressItem.Add(new StepProgressBarItem() { ImageSource = new FontImageSource() { Glyph = "\ue786", Size = 32, FontFamily = "IconFont", Color = Colors.White } });
+    }
+ }
+
+{% endhighlight %}
+{% endtabs %}
+
+* Bind the Collection to step progressbar
+
+{% tabs %}
+{% highlight xaml tabtitle="XAML" hl_lines="8" %}
+
+<stepProgressBar:SfStepProgressBar
+                    x:Name="stepProgress"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"                                        
+                    Orientation="Horizontal"
+                    ActiveStepIndex="2"
+                    ActiveStepProgressValue="50"    
+                    ItemsSource="{Binding StepProgressItem}">
+</stepProgressBar:SfStepProgressBar>                                                                                            
+
+<ContentPage.BindingContext>
+    <local:ViewModel />
+</ContentPage.BindingContext>
+
+{% endhighlight %}
+{% highlight c# tabtitle="C#" hl_lines="9" %}
+
+ViewModel viewModel = new ViewModel();
+SfStepProgressBar stepProgressBar = new SfStepProgressBar()
+{
+    VerticalOptions = LayoutOptions.Center,
+    HorizontalOptions = LayoutOptions.Center,
     Orientation = StepProgressBarOrientation.Horizontal,
     ActiveStepIndex = 2,
-    ActiveStepProgressValue = 60,
+    ActiveStepProgressValue = 50,
     ItemsSource = viewModel.StepProgressItem,
 };
 

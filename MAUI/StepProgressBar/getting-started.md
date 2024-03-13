@@ -116,9 +116,10 @@ public class ViewModel
     public ViewModel()
     {
         stepProgressItem = new ObservableCollection<StepProgressBarItem>();
-        stepProgressItem.Add(new StepProgressBarItem() { PrimaryText = "Completed" });
-        stepProgressItem.Add(new StepProgressBarItem() { PrimaryText = "In Progress" });
-        stepProgressItem.Add(new StepProgressBarItem() { PrimaryText = "Not Started" });
+        stepProgressItem.Add(new StepProgressBarItem() { PrimaryText = "Cart" });
+        stepProgressItem.Add(new StepProgressBarItem() { PrimaryText = "Address" });
+        stepProgressItem.Add(new StepProgressBarItem() { PrimaryText = "Delivery" });
+        stepProgressItem.Add(new StepProgressBarItem() { PrimaryText = "Ordered" });
     }
 }
 
@@ -130,34 +131,37 @@ public class ViewModel
 The Step progressbar control allows you to bind item collection by setting the [ItemsSource]() property from the [SfStepProgressBar](). Bind item collection in both XAML and C#.
 
 {% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="7" %}
+{% highlight xaml tabtitle="XAML" hl_lines="10" %}
 
 <stepProgressBar:SfStepProgressBar
-                    x:Name="stepProgressBar"
+                    x:Name="stepProgress"
                     VerticalOptions="Center"
-                    HorizontalOptions="Center"
-                    ActiveStepIndex="1"
-                    ActiveStepProgressValue="60"
+                    HorizontalOptions="Center"                                        
+                    Orientation="Horizontal"                                                                                       
                     LabelSpacing="12"
-                    Orientation="Vertical"  
+                    ActiveStepIndex="2"
+                    ActiveStepProgressValue="60"
+                    ProgressAnimationDuration="2500"
                     ItemsSource="{Binding StepProgressItem}">
-</stepProgressBar:SfStepProgressBar>                                                                                              
-                
+</stepProgressBar:SfStepProgressBar>                                                                                             
 
 <ContentPage.BindingContext>
     <local:ViewModel />
 </ContentPage.BindingContext>
 
 {% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="9" %}
+{% highlight c# tabtitle="C#" hl_lines="11" %}
 
 ViewModel viewModel = new ViewModel();
 SfStepProgressBar stepProgressBar = new SfStepProgressBar()
 {
-    ActiveStepIndex = 1,
-    ActiveStepProgressValue = 60,
+    VerticalOptions = LayoutOptions.Center,
+    HorizontalOptions = LayoutOptions.Center,
+    Orientation = StepProgressBarOrientation.Horizontal,
     LabelSpacing = 12,
-    Orientation = StepProgressBarOrientation.Vertical,
+    ActiveStepIndex = 2,
+    ActiveStepProgressValue = 60,
+    ProgressAnimationDuration = 2500,               
     ItemsSource = viewModel.StepProgressItem,
 };
 
@@ -170,37 +174,22 @@ this.Content = stepProgressBar;
 The [ActiveStepIndex]() property is used to represent index of the currently active step within the sequence of steps. The [ActiveStepProgressValue]() property is used to add the progress value of the currently active step within a sequence.
 
 {% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="8" %}
+{% highlight xaml tabtitle="XAML" hl_lines="3 4" %}
 
 <stepProgressBar:SfStepProgressBar
-                    x:Name="stepProgressBar"
-                    VerticalOptions="Center"
-                    HorizontalOptions="Center"
-                    ActiveStepIndex="2"
-                    ActiveStepProgressValue="60"
-                    LabelSpacing="12"
-                    Orientation="Vertical"  
-                    ItemsSource="{Binding StepProgressItem}">
+                    x:Name="stepProgress"
+                    ActiveStepIndex="3"
+                    ActiveStepProgressValue="40">
 </stepProgressBar:SfStepProgressBar>
-                
-<ContentPage.BindingContext>
-    <local:ViewModel />
-</ContentPage.BindingContext>
 
 {% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="9" %}
+{% highlight c# tabtitle="C#" hl_lines="3 4" %}
 
-ViewModel viewModel = new ViewModel();
 SfStepProgressBar stepProgressBar = new SfStepProgressBar()
 {
-    ActiveStepIndex = 2,
-    ActiveStepProgressValue = 60,
-    LabelSpacing = 12,
-    Orientation = StepProgressBarOrientation.Vertical,
-    ItemsSource = viewModel.StepProgressItem,
+    ActiveStepIndex = 3,
+    ActiveStepProgressValue = 40,
 };
-
-this.Content = stepProgressBar;
 
 {% endhighlight %}
 {% endtabs %}
