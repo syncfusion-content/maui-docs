@@ -212,11 +212,6 @@ To make migration from [Xamarin SfPdfViewer](https://www.syncfusion.com/xamarin-
 <td>Gets or sets the ink annotation signature in the signature field.</td>
 </tr>
 <tr>
-<td>{{'[ClientRectangle](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.SfPdfViewer.html#Syncfusion_SfPdfViewer_XForms_SfPdfViewer_ClientRectangle)'| markdownify}}</td>
-<td>`ClientRectangle`</td>
-<td>Gets the rectangle that represents the client area (viewport) of the control.</td>
-</tr>
-<tr>
 <td>{{'[PageViewMode](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.SfPdfViewer.html#Syncfusion_SfPdfViewer_XForms_SfPdfViewer_PageViewMode)'| markdownify}}</td>
 <td>{{'PageLayoutMode'| markdownify}}</td>
 <td>Gets or sets the layout mode in which the pages will be displayed.</td>
@@ -391,19 +386,9 @@ To make migration from [Xamarin SfPdfViewer](https://www.syncfusion.com/xamarin-
 <td>Prints the PDF document.</td>
 </tr>
 <tr>
-<td>{{'[ConvertClientPointToPagePoint](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.SfPdfViewer.html#Syncfusion_SfPdfViewer_XForms_SfPdfViewer_ConvertClientPointToPagePoint_Xamarin_Forms_Point_System_Int32_)'| markdownify}}</td>
-<td>`ConvertClientPointToPagePoint`</td>
-<td>Converts a point from the client area coordinates to PDF page coordinates.</td>
-</tr>
-<tr>
-<td>{{'[ConvertPagePointToClientPoint](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.SfPdfViewer.html#Syncfusion_SfPdfViewer_XForms_SfPdfViewer_ConvertPagePointToClientPoint_Xamarin_Forms_Point_System_Int32_)'| markdownify}}</td>
-<td>`ConvertPagePointToClientPoint`</td>
-<td>Converts a point from PDF page coordinates to client area coordinates.</td>
-</tr>
-<tr>
-<td>{{'[ConvertPagePointToScrollPoint](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.SfPdfViewer.html#Syncfusion_SfPdfViewer_XForms_SfPdfViewer_ConvertPagePointToScrollPoint_Xamarin_Forms_Point_System_Int32_)'| markdownify}}</td>
-<td>`ConvertPagePointToScrollPoint`</td>
-<td>Converts a point from the PDF page coordinates to the scroll area coordinates.</td>
+<td>{{'[SaveDocument](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.SfPdfViewer.html#Syncfusion_SfPdfViewer_XForms_SfPdfViewer_SaveDocument)'| markdownify }}</td>
+<td>{{`FlattenOnSave`| markdownify }}</td>
+<td>Saves the document and returns the stream.</td>
 </tr>
 </table>
 
