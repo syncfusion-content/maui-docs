@@ -7,7 +7,7 @@ control: SfParallaxView
 documentation: ug
 ---
 
-# Customization 
+# Customization
 
 ## Speed Customization
 
