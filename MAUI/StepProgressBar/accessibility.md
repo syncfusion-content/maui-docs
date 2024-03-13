@@ -27,26 +27,6 @@ Enhance .NET MAUI StepProgressBar's accessibility with a user-friendly design, e
 <td>Step Number PrimaryFormattedText/SecondaryFormattedText Stepstatus</td>
 <td>Step 1 Ordered Completed </td>
 </tr>
-<tr>
-<td>Step</td>
-<td>Step Number PrimaryText+SecondaryText Stepstatus</td>
-<td>Step 1 Ordered+Ordered status Completed </td>
-</tr>
-<tr>
-<td>Step</td>
-<td>Step Number PrimaryFormattedText+SecondaryFormattedText Stepstatus</td>
-<td>Step 1 Ordered+Ordered status Completed </td>
-</tr>
-<tr>
-<td>Step</td>
-<td>Step Number PrimaryText+SecondaryFormattedText Stepstatus</td>
-<td>Step 1 Ordered+Ordered status Completed </td>
-</tr>
-<tr>
-<td>Step</td>
-<td>Step Number PrimaryFormattedText+SecondaryText Stepstatus</td>
-<td>Step 1 Ordered+Ordered status Completed </td>
-</tr>
 </table>
 
 ![ProgressBar accessibility in .NET MAUI StepProgressBar.](images/accessibility/)
