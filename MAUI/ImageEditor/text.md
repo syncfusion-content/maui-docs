@@ -120,7 +120,7 @@ The background color of the text annotations can be customized using the [`Backg
 {% endhighlight %}
 {% endtabs %}
 
-![Text annotation customization in .NET MAUI Image Editor](images/text/net-maui-image-editor-background.png)
+![Text annotation customization in .NET MAUI Image Editor](images/text/net-maui-image-editor-background.jpg)
 
 ## Delete the text
 
