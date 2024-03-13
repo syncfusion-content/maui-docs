@@ -7,14 +7,14 @@ control: SfStepProgressBar
 documentation: ug
 ---
 
-# Customization in MAUI StepProgressBar
+# Customizations in .NET MAUI StepProgressBar (SfStepProgressBar)
 You can highly customize the appearance of the Step progress bar background color, step size, content size, animations, and more.
 
 ## Customize step shape
 Customize the shape of the step by using the [ShapeType]() property from `StepSettings`. By default the value of `ShapeType` is `Circle`. 
 
 {% tabs %}
-{% highlight xaml hl_lines="2 3 4 5 6 9 12 15" %}
+{% highlight xaml hl_lines="4 7 10" %}
 
 <progressBar:SfStepProgressBar x:Name = "stepProgressBar" ItemsSource="{Binding ShipmentInfoCollection}"
                 ActiveStepIndex="2" ActiveStepProgressValue="50">
@@ -71,10 +71,10 @@ public MainPage()
 {% endtabs %}
 
 ## Customize step content 
-Customize the step content type, size, active step index, stroke width, and active step progress value by using these properties, [ContentType]() with [Numbering](), [Tick](), [Cross](), [Dot]() and [Images](), [StepSize](), [StepContentSize](), [ActiveStepIndex](), [StepStrokeWidth](), [ActiveStepProgressValue](). 
+Customize the step content type, size, active step index, stroke width, and active step progress value by using these properties, [ContentType]() with [Numbering](), [Tick](), [Cross](), [Dot]() and [Images](). 
 
 {% tabs %}
-{% highlight xaml hl_lines="2 3 4 5 6 9 12 15" %}
+{% highlight xaml hl_lines="9 12 15" %}
 
 <progressBar:SfStepProgressBar x:Name = "stepProgressBar"
                             StepSize="40"
@@ -191,7 +191,7 @@ public MainPage()
 {% endtabs %}
 
 ## Label spacing
-You can change value of the label space in the step progress bar by using the [LabelSpacing]() property in `SfStepProgressBar`.
+You can customize the space between the step and primary or secondary text of the step progress bar by using the [LabelSpacing]() property in `SfStepProgressBar`.
 
 {% tabs %}
 {% highlight xaml hl_lines="2" %}
@@ -219,29 +219,29 @@ public MainPage()
 {% endtabs %}
 
 ## Customize step appearance
-You can customize the appearance of the steps by using the [ShapeType](), [Background](), [ContentType](), [ContentFillColor](), [stroke]() and [TextStyle]() properties from `StepSettings`.
+You can customize the appearance of the steps by using the [ShapeType](), [Background](), [ContentType](), [ContentFillColor](), [ProgressColor](), [Stroke](), and [TextStyle] properties from the InProgressStepSettings for the in-progress state, CompletedStepSettings for the completed state, and NotStartedStepSettings for the not-started state. 
 
 {% tabs %}
-{% highlight xaml hl_lines="2 3 4 5 6 9 12 15" %}
+{% highlight xaml hl_lines="4 5 6 7 9 11 12 13 14 19 20 21 22" %}
 
 <progressBar:SfStepProgressBar x:Name = "stepProgressBar" ItemsSource="{Binding ShipmentInfoCollection}"
                 ActiveStepIndex="2" ActiveStepProgressValue="50">
     <progressBar:SfStepProgressBar.InProgressStepSettings>
-            <progressBar:StepSettings Background="#ff67579c" ContentType="Dot" ShapeType="Circle" ContentFillColor="White" Stroke="DarkViolet">
+            <progressBar:StepSettings Background="#ff67579c" ContentType="Dot" ShapeType="Circle" ProgressColor="Orange" ContentFillColor="White" Stroke="DarkViolet">
                 <progressBar:StepSettings.TextStyle>
                     <progressBar:StepTextStyle TextColor="CadetBlue" FontAttributes="Bold"/>
                 </progressBar:StepSettings.TextStyle>
             </progressBar:StepSettings>
         </progressBar:SfStepProgressBar.InProgressStepSettings>
     <progressBar:SfStepProgressBar.CompletedStepSettings>
-            <progressBar:StepSettings Background="#ff67579c" ContentType="Tick" ShapeType="Circle" ContentFillColor="White" Stroke="DarkViolet">
+            <progressBar:StepSettings Background="#ff67579c" ContentType="Tick" ShapeType="Circle" ProgressColor="Orange" ContentFillColor="White" Stroke="DarkViolet">
                 <progressBar:StepSettings.TextStyle>
                     <progressBar:StepTextStyle TextColor="CadetBlue" FontAttributes="Bold"/>
                 </progressBar:StepSettings.TextStyle>
             </progressBar:StepSettings>
         </progressBar:SfStepProgressBar.CompletedStepSettings>
     <progressBar:SfStepProgressBar.NotStartedStepSettings>
-            <progressBar:StepSettings Background="#ff67579c" ContentType="Cross" ShapeType="Circle" ContentFillColor="White"  Stroke="DarkViolet">
+            <progressBar:StepSettings Background="#ff67579c" ContentType="Cross" ShapeType="Circle" ProgressColor="Orange" ContentFillColor="White"  Stroke="DarkViolet">
                 <progressBar:StepSettings.TextStyle>
                     <progressBar:StepTextStyle TextColor="CadetBlue" FontAttributes="Bold"/>
                 </progressBar:StepSettings.TextStyle>
