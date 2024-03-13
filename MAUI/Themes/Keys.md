@@ -6124,14 +6124,14 @@ This page lists the keys for each control and the element to which it is mapped 
     </tr>
     <tr>
         <td> SfChatLoadMoreTextColor <br/><br/></td>
-        <td> Text color of the load more.<br/><br/></td>
+        <td> Text color of the load more button.<br/><br/></td>
     </tr>
     <tr>
         <td> SfChatLoadMoreBackground <br/><br/></td>
-        <td> Background color of the load more.<br/><br/></td>
+        <td> Background color of the load more button.<br/><br/></td>
     </tr>
     <tr>
         <td> SfChatLoadMoreStroke <br/><br/></td>
-        <td> Border color of the load more.<br/><br/></td>
+        <td> Border color of the load more button.<br/><br/></td>
     </tr>
 </table>
