@@ -69,7 +69,7 @@ N> The visual states Checked and Unchecked are only updated when enabling the Is
     {
         Text = "SfButton",
         HeightRequest = 50,
-        WidthRequest = 100,
+        WidthRequest = 200,
         TextColor = Colors.White,
         IsEnabled = true,
         IsCheckable = true,
