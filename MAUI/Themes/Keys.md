@@ -5675,3 +5675,131 @@ This page lists the keys for each control and the element to which it is mapped 
         <td> Color of the load more indicator.<br/><br/></td>
     </tr>
 </table>
+
+## SfPopup
+
+<table>
+    <tr>
+        <th>Theme Dictionary<br/>
+            <br/></th>        
+        <th>
+          Keys
+            <br/>
+            <br/>
+        </th>
+        <th>
+            Description
+            <br/>
+            <br/>
+        </th>
+    </tr>
+
+    <tr>
+        <td rowspan="18">
+            SfPopupStyles
+            <br/>
+            <br/>
+        </td>
+        <td>
+           SfPopupTheme 
+            <br/>
+            <br/>
+        </td>
+        <td>    
+            By merging this key in application resources, you can customize the appearance of SfPopup without merging common theme resource and control style resource dictionaries.
+			
+{% highlight xaml %}
+
+<Application xmlns:syncTheme="clr-namespace:Syncfusion.Maui.Themes;assembly=Syncfusion.Maui.Core"
+             ...>
+ <Application.Resources>
+    <ResourceDictionary>
+        <ResourceDictionary.MergedDictionaries>
+            <syncTheme:SyncfusionThemeResourceDictionary />
+            <ResourceDictionary>
+                <x:String x:Key="SfPopupTheme">CommonTheme</x:String>
+                <Color x:Key="SfPopupNormalHeaderBackground">Yellow</Color>
+                <Color x:Key="SfPopupNormalFooterBackground">LightBlue</Color>
+            </ResourceDictionary>
+        </ResourceDictionary.MergedDictionaries>
+    </ResourceDictionary>
+ </Application.Resources>
+
+....
+
+</Application>
+
+{% endhighlight %}
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td> SfPopupNormalBackground <br/><br/></td>
+        <td> Background color of the SfPopup.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfPopupNormalStroke <br/><br/></td>
+        <td> Stroke color of the SfPopup.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfPopupNormalStrokeThickness <br/><br/></td>
+        <td> Stroke thickness of the SfPopup.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfPopupNormalHeaderBackground <br/><br/></td>
+        <td> Background color of the header view in SfPopup.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfPopupNormalHeaderTextColor  <br/><br/></td> 
+        <td> Text Color of the header view in SfPopup.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfPopupNormalMessageBackground <br/><br/></td> 
+        <td> Background color of message view in SfPopup.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfpopupNormalMessageTextColor <br/><br/></td>
+        <td> Text color of the message view in SfPopup.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfPopupNormalFooterBackground  <br/><br/></td> 
+        <td> Background color of the footer view in SfPopup.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfPopupNormalAcceptButtonBackground <br/><br/></td> 
+        <td> Background color of the accept button.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfPopupNormalAcceptButtonTextColor <br/><br/></td> 
+        <td> Text color of the accept button.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfPopupNormalDeclineButtonBackground <br/><br/></td> 
+        <td> Background color of the decline button.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfPopupNormalDeclineButtonTextColor <br/><br/></td> 
+        <td> Text color of the decline button.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfPopupNormalCloseButtonIconStroke <br/><br/></td> 
+        <td> Color of the close button icon.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfPopupNormalCloseButtonIconStrokeThickness <br/><br/></td> 
+        <td> Stroke thickness of the close button.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfPopupHoverCloseButtonIconBackground <br/><br/></td> 
+        <td> Color of the close button icon when it is in hover state.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfPopupPressedCloseButtonIconBackground <br/><br/></td> 
+        <td> Color of the close button icon when it is in pressed state.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfPopupNormalOverlayBackground <br/><br/></td> 
+        <td> Background color of the popup overlay.<br/><br/></td>
+    </tr>
+</table>
