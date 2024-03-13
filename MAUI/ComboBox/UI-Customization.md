@@ -412,13 +412,13 @@ The DropDownBackground property is used to modify the background color of the dr
                         DisplayMemberPath="Name"
                         TextMemberPath="Name"
                         Placeholder="Select a social media"
-                        DropDownBackground="Aqua" />
+                        DropDownBackground="YellowGreen" />
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-combobox.DropDownBackground = Colors.Aqua;
+combobox.DropDownBackground = Colors.YellowGreen;
 
 {% endhighlight %}
 {% endtabs %}

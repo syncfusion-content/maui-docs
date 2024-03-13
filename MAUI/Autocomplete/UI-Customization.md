@@ -133,16 +133,18 @@ The SelectionTextHighlightColor property is used to modify the background color 
                         DisplayMemberPath="Name"
                         TextMemberPath="Name"
                         Placeholder="Select a social media"
-                        SelectionTextHighlightColor="Aqua" />
+                        SelectionTextHighlightColor="Green" />
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-autocomplete.SelectionTextHighlightColor = Colors.Aqua;
+autocomplete.SelectionTextHighlightColor = Colors.Green;
 
 {% endhighlight %}
 {% endtabs %}
+
+![.NET MAUI Autocomplete Selection Text Highlight Color](Images/UICustomization/SelectionTextHighlightColor.png)
 
 ## Maximum DropDown Height
 
@@ -352,22 +354,24 @@ DropDown items can be customized using the [DropDownItemFontAttributes], [DropDo
                         DisplayMemberPath="Name"
                         TextMemberPath="Name"
                         Placeholder="Select a social media"
-                        DropDownItemFontAttributes="Bold"
+                        DropDownItemFontAttributes="Italic"
                         DropDownItemFontFamily="OpenSansSemibold"
-                        DropDownItemFontSize="20"
-                        DropDownItemTextColor="White" />
+                        DropDownItemFontSize="16"
+                        DropDownItemTextColor="DarkViolet" />
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-autocomplete.DropDownItemFontAttributes = FontAttributes.Bold;
+autocomplete.DropDownItemFontAttributes = FontAttributes.Italic;
 autocomplete.DropDownItemFontFamily = "OpenSansSemibold";
-autocomplete.DropDownItemFontSize = 20;
-autocomplete.DropDownItemTextColor = Colors.White;
+autocomplete.DropDownItemFontSize = 16;
+autocomplete.DropDownItemTextColor = Colors.DarkViolet;
 
 {% endhighlight %}
 {% endtabs %}
+
+![.NET MAUI Autocomplete DropDown Item Text](Images/UICustomization/DropDownItemText.png)
 
 ### Customize the DropDown background color
 
@@ -382,16 +386,18 @@ The DropDownBackground property is used to modify the background color of the dr
                         DisplayMemberPath="Name"
                         TextMemberPath="Name"
                         Placeholder="Select a social media"
-                        DropDownBackground="Yellow" />
+                        DropDownBackground="YellowGreen" />
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-autocomplete.DropDownBackground = Colors.Yellow;
+autocomplete.DropDownBackground = Colors.YellowGreen;
 
 {% endhighlight %}
 {% endtabs %}
+
+![.NET MAUI Autocomplete DropDown Background](Images/UICustomization/DropDownBackground.png)
 
 ### Customize the DropDown selected item backgroundcolor
 
@@ -406,7 +412,7 @@ The SelectedDropDownItemBackground property is used to modify the background col
                         DisplayMemberPath="Name"
                         TextMemberPath="Name"
                         Placeholder="Select a social media"
-                        SelectedDropDownItemBackground="YellowGreen" />
+                        SelectedDropDownItemBackground="LightSeaGreen" />
 
 {% endhighlight %}
 
@@ -416,6 +422,8 @@ autocomplete.SelectedDropDownItemBackground = Colors.YellowGreen;
 
 {% endhighlight %}
 {% endtabs %}
+
+![.NET MAUI Autocomplete Selected DropDown Item Background](Images/UICustomization/SelectedDropDownItemBackground.png)
 
 ### Customize the DropDown Border Color
 
@@ -430,16 +438,18 @@ The DropDownStroke property is used to modify the border color of the dropdown.
                         DisplayMemberPath="Name"
                         TextMemberPath="Name"
                         Placeholder="Select a social media"
-                        DropDownStroke="Red" />
+                        DropDownStroke="DarkOrange" />
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-autocomplete.DropDownStroke = Colors.Red;
+autocomplete.DropDownStroke = Colors.DarkOrange;
 
 {% endhighlight %}
 {% endtabs %}
+
+![.NET MAUI Autocomplete DropDown Stroke](Images/UICustomization/DropDownStroke.png)
 
 ### Customize the DropDown Border Thickness
 
@@ -454,6 +464,7 @@ The DropDownStrokeThickness property is used to modify the thickness of the drop
                         DisplayMemberPath="Name"
                         TextMemberPath="Name"
                         Placeholder="Select a social media"
+                        DropDownStroke="DarkOrange"
                         DropDownStrokeThickness="5" />
 
 {% endhighlight %}
@@ -464,6 +475,8 @@ autocomplete.DropDownStrokeThickness = 5;
 
 {% endhighlight %}
 {% endtabs %}
+
+![.NET MAUI Autocomplete DropDown Stroke Thickness](Images/UICustomization/DropDownStrokeThickness.png)
 
 ### Customize the DropDown Item Height
 
@@ -478,16 +491,18 @@ The DropDownItemHeight property is used to modify the height of the dropdown ite
                         DisplayMemberPath="Name"
                         TextMemberPath="Name"
                         Placeholder="Select a social media"
-                        DropDownItemHeight="50" />
+                        DropDownItemHeight="80" />
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-autocomplete.DropDownItemHeight = 50;
+autocomplete.DropDownItemHeight = 80;
 
 {% endhighlight %}
 {% endtabs %}
+
+![.NET MAUI Autocomplete DropDown Item Height](Images/UICustomization/DropDownItemHeight.png)
 
 ## Customize DropDown (suggestion) items based on condition
 

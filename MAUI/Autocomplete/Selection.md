@@ -166,12 +166,15 @@ When the TokensWrapMode is set to Wrap, the selected items will be wrapped to th
              SelectionMode="Multiple"
              MaxDropDownHeight="250"
              DisplayMemberPath="Name"
+             Placeholder="Enter Media"
              TextMemberPath="Name"
              TokensWrapMode="Wrap" />
 
 {% endhighlight %}
 
 {% endtabs %}
+
+![.NET MAUI Autocomplete with TokensWrapMode as wrap.](Images/Selection/net-maui-autocomplete-wrapmode.png)
 
 #### None Mode
 
@@ -194,6 +197,8 @@ When the TokensWrapMode is set to None, the selected item will be wrapped in a h
 {% endhighlight %}
 
 {% endtabs %}
+
+![.NET MAUI Autocomplete with TokensWrapMode as none.](Images/Selection/net-maui-autocomplete-nonemode.png)
  
 ## Selection changed notification
 
