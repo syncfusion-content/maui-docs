@@ -55,7 +55,7 @@ public partial class MainPage : ContentPage
 
 ## Event and command
 
-The `SfChat.AttachmentButtonClicked` event and `SfChat.AttachmentButtonCommand` will be executed upon tapping the attachment button. You can pass parameter to the `SfChat.AttachmentButtonCommand` using the `SfChat.AttachmentButtonCommandParameter. You can provide options for the users to upload files, images, pdf and other media as messages in SfChat from the event handler and action of the `SfChat.AttachmentButtonClicked` event and `SfChat.AttachmentButtonCommand` respectively.
+The `SfChat.AttachmentButtonClicked` event and `SfChat.AttachmentButtonCommand` will be executed upon tapping the attachment button. You can pass parameter to the `SfChat.AttachmentButtonCommand` using the `SfChat.AttachmentButtonCommandParameter`. You can provide options for the users to upload files, images, pdf and other media as messages in SfChat from the event handler and action of the `AttachmentButtonClicked` event and `AttachmentButtonCommand` respectively.
 
 **AttachmentButtonClicked Event**
 
@@ -96,10 +96,9 @@ The `SfChat.AttachmentButtonClicked` event and `SfChat.AttachmentButtonCommand` 
      {
          this.chat.Messages.Add(new ImageMessage()
          {
-             Source = "Car1.jpeg
+             Source = "Car1.jpg",
              Author = new Author() { Name = "Andrea", Avatar = "People_Circle23.png" },
              Text = "Sports Car Type-1",
-             DateTime = new DateTime(2020, 10, 02),
          }) ;
      }
  }
@@ -110,7 +109,7 @@ The `SfChat.AttachmentButtonClicked` event and `SfChat.AttachmentButtonCommand` 
 **AttachmentButtonCommand**
 
 {% tabs %}
-{% highlight xaml hl_lines="15" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="15" %}
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
@@ -125,8 +124,7 @@ The `SfChat.AttachmentButtonClicked` event and `SfChat.AttachmentButtonCommand` 
                            Messages="{Binding Messages}"
                            CurrentUser="{Binding CurrentUser}"
                            ShowAttachmentButton="True"
-                           AttachmentButtonCommand="{Binding Command}"
-                           AttachmentButtonCommandParameter="{x:Reference chat}">
+                           AttachmentButtonCommand="{Binding AttachmentButtonCommand}">
         </sfChat:SfChat>
     </ContentPage.Content>
 </ContentPage>
@@ -136,12 +134,13 @@ The `SfChat.AttachmentButtonClicked` event and `SfChat.AttachmentButtonCommand` 
 {% tabs %}
 {% highlight c# tabtitle="ViewModel.cs" hl_lines="7" %}
 ...
+public ICommand AttachmentButtonCommand { get; set; }
 
 public ViewModel()
 {
     this.messages = new ObservableCollection<object>();
     this.CurrentUser = new Author() { Name = "Nancy" };
-    Command = new Command(Tapped);
+    AttachmentButtonCommand = new Command(Tapped);
     this.GenerateMessages();
 }
 
@@ -150,10 +149,9 @@ private void Tapped(object args)
     //Adding an image message to the chat.
     this.Messages.Add(new ImageMessage()
     {
-        Source = "Car1.jpeg",
+        Source = "Car1.jpg",
         Author = new Author() { Name = "Andrea", Avatar = "People_Circle23.png" },
         Text = "Sports Car Type-1",
-        DateTime = new DateTime(2020, 10, 02),
     });
 }
 ...
