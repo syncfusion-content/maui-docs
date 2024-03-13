@@ -84,6 +84,7 @@ The selected items can be changed programmatically by using the [SelectedItems](
              HeightRequest="50"
              WidthRequest="350"
              ItemsSource="{Binding SocialMedias}"
+             SelectedItems="{Binding SelectedItemsList}"
              SelectionMode="Multiple"
              MaxDropDownHeight="250"
              DisplayMemberPath="Name"
@@ -93,10 +94,13 @@ The selected items can be changed programmatically by using the [SelectedItems](
 
 {% highlight C# %}
 
+  public ObservableCollection<SocialMedia> SelectedItemsList { get; set; }
   SocialMediaViewModel socialMediaViewModel = (this.comboBox.BindingContext as SocialMediaViewModel);
   ObservableCollection<SocialMedia> socialMediasList = socialMediaViewModel.SocialMedias;
-  this.comboBox.SelectedItems.Add(socialMediasList[0]);
-  this.comboBox.SelectedItems.Add(socialMediasList[2]);
+  SelectedItemsList = new ObservableCollection<SocialMedia>();
+  SelectedItemsList.Add(socialMediasList[0]);
+  SelectedItemsList.Add(socialMediasList[2]);
+  SelectedItemsList.Add(socialMediasList[4]);
 
 {% endhighlight %}
 
@@ -157,6 +161,8 @@ When the TokensWrapMode is set to Wrap, the selected items will be wrapped to th
 {% endhighlight %}
 
 {% endtabs %}
+
+![.NET MAUI ComboBox Wrap mode.](Images/selection)
 
 #### None mode
 

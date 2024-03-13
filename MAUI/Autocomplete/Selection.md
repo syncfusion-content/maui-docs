@@ -119,23 +119,26 @@ The selected items can be changed programmatically by using the [SelectedItems](
 
 {% highlight xaml %}
 
-  <editors:SfAutocomplete
-  SelectionMode="Multiple"
-  WidthRequest="350"
-  HeightRequest="50"
-  ItemsSource="{Binding SocialMedias}"
-  DisplayMemberPath="Name"
-  TextMemberPath="Name"    
-  x:Name="autoComplete" />
+  <editors:SfAutocomplete x:Name="autoComplete"
+                SelectionMode="Multiple"
+                WidthRequest="350"
+                HeightRequest="50"
+                ItemsSource="{Binding SocialMedias}"
+                SelectedItems="{Binding SelectedItemsList}"
+                DisplayMemberPath="Name"
+                TextMemberPath="Name" />
 
 {% endhighlight %}
 
 {% highlight C# %}
 
- SocialMediaViewModel socialMediaViewModel = (this.autoComplete.BindingContext as SocialMediaViewModel);
- ObservableCollection<SocialMedia> socialMediasList = socialMediaViewModel.SocialMedias;
- this.autoComplete.SelectedItems.Add(socialMediasList[0]);
- this.autoComplete.SelectedItems.Add(socialMediasList[2]);
+  public ObservableCollection<SocialMedia> SelectedItemsList { get; set; }
+  SocialMediaViewModel socialMediaViewModel = (this.autoComplete.BindingContext as SocialMediaViewModel);
+  ObservableCollection<SocialMedia> socialMediasList = socialMediaViewModel.SocialMedias;
+  SelectedItemsList = new ObservableCollection<SocialMedia>();
+  SelectedItemsList.Add(socialMediasList[0]);
+  SelectedItemsList.Add(socialMediasList[2]);
+  SelectedItemsList.Add(socialMediasList[4]);
 
 {% endhighlight %}
 
