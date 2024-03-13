@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Load More in .NET MAUI Chat control  | Syncfusion
+title: Swiping in .NET MAUI Chat control  | Syncfusion
 description: Learn here all about Swiping support in Syncfusion .NET MAUI Chat (SfChat) control, its elements, and more.
 platform: MAUI
 control: SfChat
@@ -13,7 +13,7 @@ In `SfChat`, you can enable swiping by setting the `SfChat.AllowSwiping` propert
 
 ### Swipe templates
 
-The Swiping can be customized by using the `SfChat.StartSwipeTemplate` when swiping towards the `right` and `SfListView.EndSwipeTemplate` when swiping towards the `left`. The content inside the swipe template is arranged based on the offset values when swiping a message. 
+The Swiping can be customized by using the `SfChat.StartSwipeTemplate` when swiping towards the `right` and `SfListView.EndSwipeTemplate` when swiping towards the `left`. The content inside the swipe template is arranged based on the offset values when swiping a message.
 
 {% tabs %}
 {% highlight xaml hl_lines="17 40" %}
@@ -193,7 +193,7 @@ The `SwipeStarted` event provides the following properties in their arguments:
 
 * `Message`: Defines the underlying data associated with the swiped message.
 * `SwipeDirection`: Defines the swipe direction of the message being swiped.
-* `Cancel`: Defines that the swipe action can be canceled by setting the `Cancel` property of the `MessageSwipeStartedEventArgs` to `true`.
+* `Cancel`: Defines that the swipe action can be canceled by setting the `Cancel` property to `true`.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="5" %}
