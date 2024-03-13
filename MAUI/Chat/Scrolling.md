@@ -54,7 +54,7 @@ You can scroll to a particular message programmatically using the `SfChat.Scroll
 By default, the `SfChat` control is scrolled to the bottom to show the newly added message. If you want to disable this auto scroll, set `SfChat.CanAutoScrollToBottom` as `false`.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="17" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="16" %}
     
     <?xml version="1.0" encoding="utf-8" ?>     
     <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
@@ -83,7 +83,7 @@ By default, the `SfChat` control is scrolled to the bottom to show the newly add
 The `SfChat` control comes with a built-in `SfChat.Scrolled` event that will be fired whenever the chat control is scrolled. You can get the current scroll offset, whether scrolling has reached the top or bottom of the message list in the `ChatScrolledEventArgs`. You can handle this event to restrict the auto-scroll in chat for newly added messages, if the user had already scrolled up manually and was currently not at the bottom of the chat when the new message was added. 
 
 {% tabs %}
-{% highlight xaml hl_lines="17" %}
+{% highlight xaml hl_lines="16" %}
     
     <?xml version="1.0" encoding="utf-8" ?>     
     <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
@@ -105,7 +105,7 @@ The `SfChat` control comes with a built-in `SfChat.Scrolled` event that will be 
     </ContentPage>
 
 {% endhighlight %}  
-{% highlight c# hl_lines="17" %}
+{% highlight c# hl_lines="16" %}
     
     using Syncfusion.Maui.Chat;
 
