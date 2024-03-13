@@ -9,11 +9,11 @@ documentation: ug
 
 # SfRadialMenuItems Customization in MAUI Radial Menu (SfRadialMenu)
 
-The [`SfRadialMenuItem`]() class provides various options to customize the items by giving `Custom Views`, `FontIcons`, and `Images`. You can add radial menu items by hierarchy. To add a [`SfRadialMenuItem`]() with [`SfRadialMenu`](), create an instance of [`SfRadialMenuItem`](), and add it to the [`Items`]() property, which is available in [`SfRadialMenu`]().
+The [`SfRadialMenuItem`] class provides various options to customize the items by giving `Custom Views`, `FontIcons`, and `Images`. You can add radial menu items by hierarchy. To add a [`SfRadialMenuItem`] with [`SfRadialMenu`], create an instance of [`SfRadialMenuItem`], and add it to the [`Items`] property, which is available in [`SfRadialMenu`].
 
 ## Items
 
-The [`Items`]() property populates the items to the inner rim of [`SfRadialMenu`]() when tapping the items of outer rim.
+The [`Items`] property populates the items to the inner rim of [`SfRadialMenu`] when tapping the items of outer rim.
 
 {% tabs %}
 
@@ -103,7 +103,7 @@ namespace RadialSample
 
 ## Text
 
-The [`Text`]() property provides text to the [`SfRadialMenuItem`]().
+The [`Text`] property provides text to the [`SfRadialMenuItem`].
 
 {% tabs %}
 
@@ -162,7 +162,7 @@ namespace RadialSample
 
 ## ItemHeight and ItemWidth
 
-The [`ItemHeight`]() changes the height of the [`SfRadialMenuItem`]() and The [`ItemWidth`]() property changes the width of the [`SfRadialMenuItem`]().
+The [`ItemHeight`] changes the height of the [`SfRadialMenuItem`] and The [`ItemWidth`] property changes the width of the [`SfRadialMenuItem`].
 
 {% tabs %}
 
@@ -220,7 +220,7 @@ namespace RadialSample
 
 ## BackgroundColor
 
-The [`BackgroundColor`]() property changes the background color of the [`SfRadialMenuItem`]().
+The [`BackgroundColor`] property changes the background color of the [`SfRadialMenuItem`].
 
 {% tabs %}
 
@@ -278,7 +278,7 @@ namespace RadialSample
 
 ## FontFamily
 
-The [`FontFamily`]() property changes the font family of text in [`SfRadialMenuItem`]().
+The [`FontFamily`] property changes the font family of text in [`SfRadialMenuItem`].
 
 {% tabs %}
 
@@ -336,7 +336,7 @@ namespace RadialSample
 
 ## FontSize
 
-The [`FontSize`]() property changes the text size in the [`SfRadialMenuItem`]().
+The [`FontSize`] property changes the text size in the [`SfRadialMenuItem`].
 
 {% tabs %}
 
@@ -395,7 +395,7 @@ namespace RadialSample
 
 ## FontAttributes
 
-The [`FontAttributes`]() property changes the font attributes of text in [`SfRadialMenuItem`]().
+The [`FontAttributes`] property changes the font attributes of text in [`SfRadialMenuItem`].
 
 {% tabs %}
 
@@ -449,7 +449,7 @@ namespace RadialSample
 
 ## Image
 
-The [`Image`]() property provides image to the [`SfRadialMenuItem`]().
+The [`Image`] property provides image to the [`SfRadialMenuItem`].
 
 {% tabs %}
 
@@ -507,7 +507,7 @@ namespace RadialSample
 
 ## View
 
-The [`View`]() provides custom view to the [`SfRadialMenuItem`]().
+The [`View`] provides custom view to the [`SfRadialMenuItem`].
 
 {% tabs %}
 
@@ -599,9 +599,9 @@ namespace RadialSample
 
 ### Command and CommandParameter for SfRadialMenuItem
 
-The [`Command`]() property is used to associate a command with an instance of [`SfRadialMenuItem`](). This property is most often set with MVVM pattern to bind callbacks back into the ViewModel.
+The [`Command`] property is used to associate a command with an instance of [`SfRadialMenuItem`]. This property is most often set with MVVM pattern to bind callbacks back into the ViewModel.
 
-When clicking the [`SfRadialMenuItem`](), the tapped item will be displayed. The following example shows how the command should be used.
+When clicking the [`SfRadialMenuItem`], the tapped item will be displayed. The following example shows how the command should be used.
 
 {% tabs %}
 {% highlight xaml %}
@@ -668,7 +668,7 @@ namespace RadialMenuCommandSample
 {% endhighlight %}
 {% endtabs %}
 
-Define the [`Command`]() in the RadialMenuItem, and then populate the action in ViewModel.
+Define the [`Command`] in the RadialMenuItem, and then populate the action in ViewModel.
 
 {% highlight c#%}
 

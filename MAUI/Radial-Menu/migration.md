@@ -100,14 +100,14 @@ this.Content = radialMenu;
 </tr>
 
 <tr>
-<td>{{'[SfRadialMenu]()'| markdownify }}</td>
-<td>{{'[SfRadialMenu]()'| markdownify}}</td>
+<td>{{'[SfRadialMenu]'}}</td>
+<td>{{'[SfRadialMenu]'}}</td>
 <td>The SfRadialMenu displays a hierarchical menu in a circular layout, which is optimized for touch enabled devices. Typically, it is used as a context menu, and it can expose more menu items in the same space than traditional menus.</td>
 </tr>
 
 <tr>
-<td>{{'[SfRadialMenuItem]()'| markdownify }}</td>
-<td>{{'[SfRadialMenuItem]()'| markdownify}}</td>
+<td>{{'[SfRadialMenuItem]'}}</td>
+<td>{{'[SfRadialMenuItem]'}}</td>
 <td>Represents an item that can be added as children in SfRadialMenu.Any object can be added as SfRadialMenuItem and that can be populated as menus.</td>
 </tr>
 
@@ -125,14 +125,14 @@ this.Content = radialMenu;
 <th>Description</th></tr>
 
 <tr>
-<td>{{'[CenterButtonBorderColor]()'| markdownify }}</td>
-<td>{{'[CenterButtonStroke]()'| markdownify}}</td>
+<td>{{'[CenterButtonBorderColor]'}}</td>
+<td>{{'[CenterButtonStroke]'}}</td>
 <td>Gets or sets a value of the stroke brush for the centerbuttonstroke in the SfRadialMenu.</td>
 </tr>
 
 <tr>
-<td>{{'[CenterButtonBorderThickness]()'| markdownify }}</td>
-<td>{{'[CenterButtonStrokeThickness]()'| markdownify}}</td>
+<td>{{'[CenterButtonBorderThickness]'}}</td>
+<td>{{'[CenterButtonStrokeThickness]'}}</td>
 <td>Gets or sets a value of the the strokethickness for the centerbuttonstrokethickness in the SfRadialMenu.</td>
 </tr>
 

@@ -13,7 +13,7 @@ The CenterButton or BackButton in radial menu is a view in the center of the rad
 
 ## CenterButtonText and CenterButtonBackText
 
-The [`CenterButtonText`]() changes the text of the center button in [`SfRadialMenu`](), and the [`CenterButtonBackText`]() changes the text of the center back button in [`SfRadialMenu`]().
+The [`CenterButtonText`] changes the text of the center button in [`SfRadialMenu`], and the [`CenterButtonBackText`] changes the text of the center back button in [`SfRadialMenu`].
 
 {% tabs %}
 
@@ -102,7 +102,7 @@ namespace RadialSample
 
 ## CenterButtonTextColor and CenterButtonBackTextColor
 
-The [`CenterButtonTextColor`]() changes the text color of the center button in [`SfRadialMenu`](), and the [`CenterButtonBackTextColor`]() changes the text color of the center back button in [`SfRadialMenu`]().
+The [`CenterButtonTextColor`] changes the text color of the center button in [`SfRadialMenu`], and the [`CenterButtonBackTextColor`] changes the text color of the center back button in [`SfRadialMenu`].
 
 {% tabs %}
 
@@ -196,7 +196,7 @@ namespace RadialSample
 
 ## CenterButtonBackgroundColor
 
-The [`CenterButtonBackgroundColor`]() changes the background color of the center button in [`SfRadialMenu`]().
+The [`CenterButtonBackgroundColor`] changes the background color of the center button in [`SfRadialMenu`].
 
 {% tabs %}
 
@@ -258,7 +258,7 @@ namespace RadialSample
 
 ## CenterButtonRadius
 
-The [`CenterButtonRadius`]() changes the radius of the center button in [`SfRadialMenu`]().
+The [`CenterButtonRadius`] changes the radius of the center button in [`SfRadialMenu`].
 
 {% tabs %}
 
@@ -317,7 +317,7 @@ namespace RadialSample
 
 ## CenterButtonFontFamily and CenterButtonBackFontFamily
 
-The [`CenterButtonFontFamily`]() changes the font family of the center button in [`SfRadialMenu`](), and the [`CenterButtonBackFontFamily`]() changes the font family of the center back button in [`SfRadialMenu`]().
+The [`CenterButtonFontFamily`] changes the font family of the center button in [`SfRadialMenu`], and the [`CenterButtonBackFontFamily`] changes the font family of the center back button in [`SfRadialMenu`].
 
 {% tabs %}
 
@@ -408,7 +408,7 @@ namespace RadialSample
 
 ## CenterButtonFontSize and CenterButtonBackFontSize
 
-The [`CenterButtonFontSize`]() changes the font size of the center button in [`SfRadialMenu`](), and the [`CenterButtonBackFontSize`]() changes the font size of the center back button in [`SfRadialMenu`]().
+The [`CenterButtonFontSize`] changes the font size of the center button in [`SfRadialMenu`], and the [`CenterButtonBackFontSize`] changes the font size of the center back button in [`SfRadialMenu`].
 
 {% tabs %}
 
@@ -503,7 +503,7 @@ namespace RadialSample
 
 ## CenterButtonFontAttributes and CenterButtonBackFontAttributes
 
-The [`CenterButtonFontAttributes`]() changes the font attributes of the center button in [`SfRadialMenu`]().
+The [`CenterButtonFontAttributes`] changes the font attributes of the center button in [`SfRadialMenu`].
 
 {% tabs %}
 
@@ -594,7 +594,7 @@ namespace RadialSample
 
 ## CenterButtonBorderColor
 
-The [`CenterButtonBorderColor`]() changes the border color of the center button in [`SfRadialMenu`]().
+The [`CenterButtonBorderColor`] changes the border color of the center button in [`SfRadialMenu`].
 
 {% tabs %}
 
@@ -653,7 +653,7 @@ namespace RadialSample
 
 ## CenterButtonBorderThickness
 
-The [`CenterButtonBorderThickness`]() changes the border thickness of the center button in [`SfRadialMenu`]().
+The [`CenterButtonBorderThickness`] changes the border thickness of the center button in [`SfRadialMenu`].
 
 {% tabs %}
 
@@ -715,7 +715,7 @@ namespace RadialSample
 
 ## Center button view and center back button view
 
-You can customize the center button using [`CenterButtonView`]() and center back button using [`CenterButtonBackView`]() in  [`SfRadialMenu`]().
+You can customize the center button using [`CenterButtonView`] and center back button using [`CenterButtonBackView`] in  [`SfRadialMenu`].
 
 {% tabs %}
 
@@ -792,7 +792,7 @@ namespace RadialSample
 
 ## EnableCenterButtonAnimation
 
-The [`EnableCenterButtonAnimation`]() is used to either enable or disable animation of the center button in [`SfRadialMenu`]().
+The [`EnableCenterButtonAnimation`] is used to either enable or disable animation of the center button in [`SfRadialMenu`].
 
 {% tabs %}
 
@@ -820,7 +820,6 @@ The [`EnableCenterButtonAnimation`]() is used to either enable or disable animat
 {% highlight C# %}
 
 using Syncfusion.Maui.RadialMenu;
-using System.Collections.ObjectModel;
 
 namespace RadialSample
 {
