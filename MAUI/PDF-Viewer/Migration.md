@@ -485,8 +485,4 @@ To make migration from [Xamarin SfPdfViewer](https://www.syncfusion.com/xamarin-
 ## Upcoming Features   
 
 * Built-in toolbar
-* Themes
-* Handwritten signatures
 * Thumbnail
-* Single page view mode
-* Print

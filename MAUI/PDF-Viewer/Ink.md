@@ -7,7 +7,7 @@ control: SfPdfViewer
 documentation: ug
 ---
 
-# Ink or Freehand Drawing Annotation in .NET MAUI PDF Viewer (SfPdfViewer)
+# Ink annotation in .NET MAUI PDF Viewer (SfPdfViewer)
 
 The ink annotation feature of [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) allows you to add, remove and modify free hand drawings (ink) in the PDF document. This is useful for making corrections or emphasizing important points in the document. This section will go through the various functions available in the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) for working with ink annotations.
 
