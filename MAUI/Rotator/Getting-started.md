@@ -72,29 +72,7 @@ Step 2: Add the namespace as shown in the following code sample.
 
 ## Create a Simple SfRotator 
 
-The `SfRotator` control is configured entirely in C# code or by using XAML markup. The following steps explain on how to create a `SfRotator` and configure its elements,
-
-* Adding namespace for the added assemblies. 
-
-{% tabs %}
-
-{% highlight xaml %}
-
-	xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Rotator;assembly=Syncfusion.Maui.Rotator"
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-	using Syncfusion.Maui.Rotator; 
-	
-{% endhighlight %}
-
-{% endtabs %}
-
-* Now add the `SfRotator` control with a required optimal name by using the included namespace.
-
-{% tabs %}
+The `SfRotator` control is configured entirely in C# code or by using XAML markup.
 
 {% highlight xaml %}
 
@@ -136,15 +114,13 @@ The `SfRotator` control is configured entirely in C# code or by using XAML marku
 
 ## Add Rotator Items
 
-We can populate the rotator's items by using any one of the following ways,
+We can populate the rotator’s items by using any one of the following ways,
 
 * Through `SfRotatorItem`
 
 * Through `ItemTemplate`
 
-### Through SfRotatorItem
-
-By passing the list of `SfRotatorItem` , we can get the view of `SfRotator` control. In that we can pass Images as well as Item content.
+The below is an simple example for adding rotator items using SfRotatorItem, for more details on populating data click [Here](https://help.syncfusion.com/maui/rotator/Populating-data)
 
 The following code example illustrates to add list of Images in Rotator ,
 
@@ -182,204 +158,6 @@ The following code example illustrates to add list of Images in Rotator ,
 {% endtabs %}
 
 ![Rotator Items](images/RotatorItems.png)
-
-The following code example illustrates to add list of items through ItemContent API in Rotator ,
-
-{% tabs %}
-
-{% highlight C# %}
-
-    using Syncfusion.Maui.Rotator;
-
-    namespace Rotator
-    {
-        public partial class Rotator : ContentPage
-        {
-            SfRotator rotator;
-            public Rotator()
-            {
-                InitializeComponent();
-                SfRotator rotator = new SfRotator();
-                List<SfRotatorItem> collectionOfItems = new List<SfRotatorItem>();
-                collectionOfItems.Add(new SfRotatorItem() { ItemContent = new Button() { Text = "RotatorButton", TextColor = Colors.White, BackgroundColor = Color.FromArgb("#7E6E6B"), FontSize = 12 } });
-                collectionOfItems.Add(new SfRotatorItem() { ItemContent = new Label() { Text = "RotatorLabel", BackgroundColor = Color.FromArgb("#7E6E6B"), FontSize = 12 } });
-                collectionOfItems.Add(new SfRotatorItem() { ItemContent = new Image() { Source = "image1.png", Aspect = Aspect.AspectFit } });
-                rotator.ItemsSource = collectionOfItems;
-                this.Content = rotator;
-            }
-        }
-    }
-
-{% endhighlight %}
-
-{% endtabs %}
-
-![ItemContent](images/ItemContent.png)
-
-### Through ItemTemplate
-
-`ItemTemplate` property of `SfRotator` control is used to customize the contents of `SfRotator` items. `ItemTemplate` provides common template with different data. `SfRotator` items can be populated with a collection of image data. This collection includes Arrays, Lists and DataTables. 
-
-{% tabs %}
-
-{% highlight C# %}
-
-    // Model Class for Rotator.
-
-    public RotatorModel(string imageString)
-    {
-        Image = imageString;
-    }
-    private String _image;
-    public String Image
-    {
-        get { return _image; }
-        set { _image = value; }
-    }
-
-{% endhighlight %}
-
-{% endtabs %}
-
-
-Create and populate Rotator collection as follows
-
-{% tabs %}
-
-{% highlight C# %}
-
-    // ViewModel class for Rotator.
-
-    public RotatorViewModel()
-    {
-        ImageCollection.Add(new RotatorModel("image1.png"));
-        ImageCollection.Add(new RotatorModel("image2.png"));
-        ImageCollection.Add(new RotatorModel("image3.png"));
-        ImageCollection.Add(new RotatorModel("image4.png"));
-        ImageCollection.Add(new RotatorModel("image5.png"));
-    }
-    private List<RotatorModel> imageCollection = new List<RotatorModel>();
-    public List<RotatorModel> ImageCollection
-    {
-        get { return imageCollection; }
-        set { imageCollection = value; }
-    }
-
-{% endhighlight %}
-
-{% endtabs %}
-
-
-{% tabs %}
-
-{% highlight xaml %}
-
-    <?xml version="1.0" encoding="utf-8" ?>
-    <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-                xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Rotator;assembly=Syncfusion.Maui.Rotator"
-                xmlns:local="clr-namespace:Rotator"
-                x:Class="Rotator.Rotator">
-        <ContentPage.BindingContext>
-            <local:RotatorViewModel/>
-        </ContentPage.BindingContext>
-        <ContentPage.Content>
-            <syncfusion:SfRotator x:Name="rotator" 
-                            NavigationDelay="2000" 
-                            ItemsSource="{Binding ImageCollection}" 
-                            SelectedIndex="2"
-                            NavigationDirection="Horizontal"
-                            NavigationStripMode="Dots" 
-                            BackgroundColor="#ececec"
-                            WidthRequest="550"
-                            HeightRequest="550">
-                <syncfusion:SfRotator.ItemTemplate>
-                    <DataTemplate>
-                        <Image  Source="{Binding Image}"/>
-                    </DataTemplate>
-                </syncfusion:SfRotator.ItemTemplate>
-            </syncfusion:SfRotator>
-        </ContentPage.Content>
-    </ContentPage>
-	  
-{% endhighlight %}
-
-{% highlight c# %}
-
-    using Syncfusion.Maui.Core.Rotator;
-
-    namespace Rotator
-    {
-        public partial class Rotator : ContentPage
-        {
-            public Rotator()
-            {
-                InitializeComponent ();
-                SfRotator rotator = new SfRotator();
-                var ImageCollection = new List<RotatorModel> {
-                new RotatorModel ("image1.png"),
-                new RotatorModel ("image2.png"),
-                new RotatorModel ("image3.png"),
-                new RotatorModel ("image4.png"),
-                new RotatorModel ("image5.png")
-                };
-                var itemTemplate = new DataTemplate(() =>
-                {
-                    var grid = new Grid();
-                    var nameLabel = new Image();
-                    nameLabel.SetBinding(Image.SourceProperty, "Image");
-                    grid.Children.Add(nameLabel);
-                    return grid;
-                });
-                rotator.ItemTemplate = itemTemplate;
-                rotator.ItemsSource = ImageCollection;
-                this.Content = rotator;
-            }
-        }
-        public class RotatorModel
-        {
-            public RotatorModel(string imageString)
-            {
-                Image = imageString;
-            }
-            private String _image;
-            public String Image
-            {
-                get { return _image; }
-                set { _image = value; }
-            }
-        }
-    }
-
-{% endhighlight %}
-
-{% endtabs %}
-
-* Set the `BindingContext` for the items collection.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-    <ContentPage.BindingContext>
-        <local:RotatorViewModel/>
-	</ContentPage.BindingContext>
-
-{% endhighlight %}
-
-{% highlight c# %}
-
-	rotator.BindingContext = new RotatorViewModel();
-
-{% endhighlight %}
-
-{% endtabs %}
-
-![RotatorImages](images/RotatorImages.png)
-
-I> Rotator's Images are placed within the application folder for Android, iOS and UWP with build action Android Resource, Bundled Resource and Content respectively. 
-
-N> In addition, rotator provides a support to load the Images from `URL` and `SD Card` location.
  
 ## Setting Navigation Mode
 
@@ -571,4 +349,4 @@ The placement position of navigation strip items such as `Thumbnail` or `Dots` c
 
 ![NavigationStripPosition](images/NavigationStripPosition.png)
 
-You can find the complete getting started sample from this [link.](page)
+You can find the complete getting started sample from this [link.](https://github.com/SyncfusionExamples/Getting-Started-with-.NET-MAUI-Rotator)

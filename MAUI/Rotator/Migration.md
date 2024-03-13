@@ -30,7 +30,7 @@ To migrate easily from `Xamarin SfRotator` to `.NET MAUI SfRotator`, we kept all
 <th>.NET MAUI SfRotator</th>
 <th>Description</th></tr>
 <tr>
-<td>{{'[DotsBorderColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Buttons.ISwitchSettings.html#Syncfusion_XForms_Buttons_ISwitchSettings_TrackBorderWidth)'| markdownify }}</td>
+<td>{{'[DotsBorderColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRotator.XForms.SfRotator.html#Syncfusion_SfRotator_XForms_SfRotator_DotsBorderColor)'| markdownify }}</td>
 <td>{{'[DotsStroke](link)'| markdownify }}</td>
 <td>Gets or sets the value of DotsStroke.
 </td></tr>

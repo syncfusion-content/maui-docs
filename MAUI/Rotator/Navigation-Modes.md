@@ -13,7 +13,9 @@ documentation: ug
 
 The `NavigationStripMode` property specifies the appearance of navigation bar items. The image data can be selected either by `Thumbnail` or by `Dots`navigation modes.
 
-* `Thumbnail` - The slider items will also be loaded in the thumbnail view. When a thumbnail item is clicked, the slider will switch to the corresponding image data.
+## Thumbnail
+
+The slider items will also be loaded in the thumbnail view. When a thumbnail item is clicked, the slider will switch to the corresponding image data.
 
 {% tabs %}
 
@@ -102,7 +104,8 @@ The `NavigationStripMode` property specifies the appearance of navigation bar it
 
 ![Thumbnail Mode Image](images/NavigationStripMode.png)
 
-* `Dots` - The slider items will also be loaded in dots view. When a dot item is clicked, the slider will switch to the corresponding image data.
+## Dots
+ The slider items will also be loaded in dots view. When a dot item is clicked, the slider will switch to the corresponding image data.
 
 {% tabs %}
 

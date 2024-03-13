@@ -9,7 +9,7 @@ documentation: ug
 
 # Adding Looping and Delays in .NET MAUI Rotator (SfRotator)
 
-Looping and delay can be enabled in the `SfRotator` control, and you can customize the Text and Navigation direction.
+Looping and delay can be enabled in the `SfRotator` control in .NET MAUI.
 
 ## Toggle AutoPlay
 

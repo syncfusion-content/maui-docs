@@ -6,7 +6,7 @@ platform: maui
 control: NavigationDrawer
 documentation: ug
 ---
-# Configuring the Drawer in Different Sides in .NET MAUI Navigation Drawer (SfNavigationDrawer)
+# Configure the Drawer in Different Sides in .NET MAUI Navigation Drawer
 
 The supplemental pane can be pulled in and out from all four sides. The [Position](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.DrawerSettings.html#Syncfusion_Maui_NavigationDrawer_DrawerSettings_Position) property is used to change the side of the pane, and the options are:
 

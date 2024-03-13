@@ -7,7 +7,7 @@ control: SfNavigationDrawer
 documentation: ug
 ---  
 
-# Migrating from Xamarin SfNavigationDrawer to .NET MAUI SfNavigationDrawer 
+# Migrate from Xamarin SfNavigationDrawer to .NET MAUI SfNavigationDrawer 
 
 To migrate easier from Xamarin SfNavigationDrawer to .NET MAUI SfNavigationDrawer, keep most of the APIs from Xamarin SfNavigationDrawer in MAUI SfNavigationDrawer. However, to maintain the consistency of API naming in MAUI SfNavigationDrawer, rename some of the APIs. The APIs changed in MAUI SfNavigationDrawer from Xamarin SfNavigationDrawer are detailed as follows.
 

@@ -9,11 +9,11 @@ documentation: ug
 
 # Dots Customization in .NET MAUI Rotator (SfRotator)
 
-The Rotator control supports customizing dots' border color, selected dots' color, and unselected dots' color.
+The Rotator control supports customizing dots' stroke color, selected dots' color, and unselected dots' color.
 
-## DotsBorder Color
+## DotsStroke Color
 
-The `DotsBorderColor` property is used to customize the color of the dots border in the `SfRotator`.
+The `DotsStroke` property is used to customize the color of the dots stroke in the `SfRotator`.
 
 {% tabs %}
 {% highlight xaml %}
@@ -33,7 +33,7 @@ The `DotsBorderColor` property is used to customize the color of the dots border
                                 SelectedIndex="2"
                                 BackgroundColor="#ececec"
                                 NavigationStripPosition="Bottom"
-                                DotsBorderColor="Aqua"
+                                DotsStroke="Aqua"
                                 WidthRequest="550"
                                 HeightRequest="550">
                 <syncfusion:SfRotator.ItemTemplate>
@@ -75,7 +75,7 @@ The `DotsBorderColor` property is used to customize the color of the dots border
                     return grid;
                 });
                 rotator.ItemTemplate = itemTemplate;
-                rotator.DotsBorderColor = Colors.Aqua;
+                rotator.DotsStroke = Colors.Aqua;
                 rotator.ItemsSource = ImageCollection;
                 rotator.WidthRequest=550;
                 rotator.HeightRequest=550;
@@ -100,11 +100,11 @@ The `DotsBorderColor` property is used to customize the color of the dots border
 {% endhighlight %}
 {% endtabs %}
 
-![SfRotator with dots border color](images/DotsBorderColor.png)
+![SfRotator with dots stroke color](images/DotsStroke.png)
 
 ## Selected Dot Color
 
-The `SelectedDotColor` property is used to customize the color of selected dots in the `SfRotator`.
+The `SelectedDotColor` property is used to customize the color of selected dot in the `SfRotator`.
 
 {% tabs %}
 {% highlight xaml %}
@@ -124,7 +124,7 @@ The `SelectedDotColor` property is used to customize the color of selected dots 
                                 SelectedIndex="2"
                                 BackgroundColor="#ececec"
                                 NavigationStripPosition="Bottom"
-                                DotsBorderColor="Aqua" 
+                                DotsStroke="Aqua" 
                                 SelectedDotColor="Blue"
                                 WidthRequest="550"
                                 HeightRequest="550">
@@ -167,7 +167,7 @@ The `SelectedDotColor` property is used to customize the color of selected dots 
                     return grid;
                 });
                 rotator.ItemTemplate = itemTemplate;
-                rotator.DotsBorderColor = Color.Aqua;
+                rotator.DotsStroke = Color.Aqua;
                 rotator.SelectedDotColor = Color.Blue;
                 rotator.ItemsSource = ImageCollection;
                 rotator.WidthRequest=550;
@@ -217,7 +217,7 @@ The `UnselectedDotColor` property is used to customize the color of unselected d
                                 SelectedIndex="2"
                                 BackgroundColor="#ececec"
                                 NavigationStripPosition="Bottom"
-                                DotsBorderColor="Aqua" 
+                                DotsStroke="Aqua" 
                                 SelectedDotColor="Blue"
                                 UnselectedDotColor="Gray"
                                 WidthRequest="550"
@@ -261,7 +261,7 @@ The `UnselectedDotColor` property is used to customize the color of unselected d
                     return grid;
                 });
                 rotator.ItemTemplate = itemTemplate;
-                rotator.DotsBorderColor = Color.Aqua;
+                rotator.DotsStroke = Color.Aqua;
                 rotator.SelectedDotColor = Color.Blue;
                 rotator.UnselectedDotColor = Color.Gray;
                 rotator.ItemsSource = ImageCollection;

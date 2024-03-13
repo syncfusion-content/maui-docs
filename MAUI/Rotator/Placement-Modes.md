@@ -11,9 +11,9 @@ documentation: ug
 
 By default, the rotator control displays the dots of each rotator item. It can be changed to any of the following types:
 
-* `Default`
-* `None`
-* `Outside`
+* `Default` - Shows dots for each item in the .NET MAUI Rotator (SfRotator) by default.
+* `None`- Hides the dots, creating a clean appearance with no navigation indicators.
+* `Outside` - Puts the dots around the rotator, offering a different style for navigation.
  
 ## DotsPlacement
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Setting Sliding Panel Content in .NET MAUI NavigationDrawer | Syncfusion
+title: Set Sliding Panel Content in .NET MAUI Navigation Drawer | Syncfusion
 description: Learn here all about Setting Sliding Panel Content support in Syncfusion .NET MAUI Navigation Drawer (SfNavigationDrawer) control and more.
 platform: maui
 control: NavigationDrawer
@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 
-# Setting Sliding Panel Content in .NET MAUI Navigation Drawer (SfNavigationDrawer)
+# Set Sliding Panel Content in .NET MAUI Navigation Drawer
 
 The drawer pane content is only viewable when the drawer is in the open state. Its content can be set as:
 

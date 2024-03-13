@@ -50,11 +50,11 @@ Create and populate the `SfRotator` collection as follows.
 
     public RotatorViewModel()
     {
-        ImageCollection.Add(new RotatorModel("movie1.png"));
-        ImageCollection.Add(new RotatorModel("movie2.png"));
-        ImageCollection.Add(new RotatorModel("movie3.png"));
-        ImageCollection.Add(new RotatorModel("movie4.png"));
-        ImageCollection.Add(new RotatorModel("movie5.png"));
+        ImageCollection.Add(new RotatorModel("image1.png"));
+        ImageCollection.Add(new RotatorModel("image2.png"));
+        ImageCollection.Add(new RotatorModel("image3.png"));
+        ImageCollection.Add(new RotatorModel("image4.png"));
+        ImageCollection.Add(new RotatorModel("image5.png"));
     }
     private List<RotatorModel> imageCollection = new List<RotatorModel>();
     public List<RotatorModel> ImageCollection
@@ -87,7 +87,7 @@ Assigning collection to ItemSource ,
 
 {% endtabs %}
 
-### Binding the Data with Custom Template
+### Binding the Data with ItemT Template
 
 The `SfRotator` provides support to add a custom view as RotatorItems by designing a view inside its ItemTemplate. This template will be applied for all its items, and its data will be bound.
 

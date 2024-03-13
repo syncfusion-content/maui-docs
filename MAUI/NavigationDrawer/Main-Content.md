@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Setting Main Content in .NET MAUI Navigation Drawer control | Syncfusion
+title: Set Main Content in .NET MAUI Navigation Drawer control | Syncfusion
 description: Learn here all about Setting Main Content support in Syncfusion .NET MAUI Navigation Drawer (SfNavigationDrawer) control and more.
 platform: maui
 control: NavigationDrawer
@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 
-# Setting Main Content in .NET MAUI Navigation Drawer (SfNavigationDrawer)
+# Setting Main Content in .NET MAUI Navigation Drawer
 
 The main content of the NavigationDrawer is always visible and can be set using the [ContentView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html#Syncfusion_Maui_NavigationDrawer_SfNavigationDrawer_ContentView) property. In the following code example, the [ContentView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html#Syncfusion_Maui_NavigationDrawer_SfNavigationDrawer_ContentView) is switched when the selection changes in the ListView. In short, this allows for easy navigation and switching of content.
 

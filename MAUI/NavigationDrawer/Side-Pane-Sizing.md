@@ -6,7 +6,7 @@ platform: maui
 control: NavigationDrawer
 documentation: ug
 ---
-# Setting Sliding Panel Size in .NET MAUI Navigation Drawer (SfNavigationDrawer)
+# Setting Sliding Panel Size in .NET MAUI Navigation Drawer
 
 The size of the side pane can be adjusted using the [DrawerHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.DrawerSettings.html#Syncfusion_Maui_NavigationDrawer_DrawerSettings_DrawerHeight) and [DrawerWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.DrawerSettings.html#Syncfusion_Maui_NavigationDrawer_DrawerSettings_DrawerWidth) properties.
 
