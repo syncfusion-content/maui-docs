@@ -634,13 +634,14 @@ SfImageEditor imageEditor = new SfImageEditor();
 imageEditor.Source = ImageSource.FromFile("image.png");
 
 ImageEditorToolbar headerToolbar = imageEditor.Toolbars[0];
-ImageEditorToolbarGroupItem browseGroup = (ImageEditorToolbarGroupItem) headerToolbar.ToolbarItems[0];
-ImageEditorToolbarItem browseItem = browseGroup.Items.FirstOrDefault();
-browseItem.ShowTooltip = false;
-
-ImageEditorToolbarGroupItem saveGroup = (ImageEditorToolbarGroupItem) headerToolbar.ToolbarItems[2];
-ImageEditorToolbarItem saveItem = saveGroup.Items.FirstOrDefault(i => i.Name == "Save");
-saveItem.ShowTooltip = false;
+if (headerToolbar.ToolbarItems.FirstOrDefault() is ImageEditorToolbarGroupItem browseGroup)
+{
+    ImageEditorToolbarItem? browseItem = browseGroup.Items.FirstOrDefault();
+    if (browseItem != null)
+    {
+        browseItem.ShowTooltip = false;
+    }
+}
 
 {% endhighlight %}
 
