@@ -46,7 +46,9 @@ void DisableInkEraserMode()
 
 ## How to erase ink annotation only using stylus
 
-The ink eraser operation can be customized so that the ink strokes can be erased only using a stylus by setting the AnnotationSettings.Ink.TouchScreenInputMode API to TouchScreenInputMode.Stylus. When the TouchScreenInputMode is set to the stylus, the PDF can be zoomed and scrolled using a finger. By default, the TouchScreenInputMode property is set to TouchScreenInputMode.FingerAndStylus, where both finger and stylus inputs are recognized for ink erasing operation. When TouchScreenInputMode is set to TouchScreenInputMode.Stylus, users can easily erase ink strokes using a stylus. However, zooming and scrolling functionality will still be available using their fingers.
+The ink eraser operation can be customized so that the ink strokes can be erased only using a stylus by setting the AnnotationSettings.Ink.TouchScreenInputMode API to TouchScreenInputMode.Stylus. When the TouchScreenInputMode is set to the stylus, the PDF can be zoomed and scrolled using a finger. 
+
+By default, the TouchScreenInputMode property is set to TouchScreenInputMode.FingerAndStylus, where both finger and stylus inputs are recognized for ink erasing operation. When TouchScreenInputMode is set to TouchScreenInputMode.Stylus, users can easily erase ink strokes using a stylus. However, zooming and scrolling functionality will still be available using their fingers.
 
 {% tabs %}
 {% highlight C# %}
