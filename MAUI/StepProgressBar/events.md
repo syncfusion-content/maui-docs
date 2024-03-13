@@ -37,7 +37,7 @@ private void SfStepProgressBar_StepTapped(object sender, Syncfusion.Maui.Progres
 
 ## StepChanged
 
-The [`StepStatusChanged`]() event is triggered when changing the step view status. The associated argument contains the following information.
+The [`StepStatusChanged`]() event is triggered when changed the step view status. The associated argument contains the following information.
 
 * [`sender`]() - Gets the details of a sender.
 * [`StepStatusChangedEventArgs`]() - Hold the step status changed event arguments.
