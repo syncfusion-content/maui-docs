@@ -65,13 +65,6 @@ namespace GettingStarted
 
     public class TypeIndicatorViewModel : INotifyPropertyChanged
     {
-        private ObservableCollection<object> messages;
-
-        /// <summary>
-        /// Current user of chat.
-        /// </summary>
-        private Author currentUser;
-
         /// <summary>
         /// Indicates the typing indicator visibility. 
         /// </summary>
@@ -111,21 +104,6 @@ namespace GettingStarted
         }
 
         /// <summary>
-        /// Gets or sets the message conversation.
-        /// </summary>
-        public ObservableCollection<object> Messages
-        {
-            get
-            {
-                return this.messages;
-            }
-            set
-            {
-                this.messages = value;
-            }
-        }
-
-        /// <summary>
         /// Gets or sets the value indicating whether the typing indicator is visible or not.
         /// </summary>
         public bool ShowTypingIndicator
@@ -141,67 +119,8 @@ namespace GettingStarted
             }
         }
 
-        /// <summary>
-        /// Gets or sets the current user.
-        /// </summary>
-        public Author CurrentUser
-        {
-            get
-            {
-                return this.currentUser;
-            }
-            set
-            {
-                this.currentUser = value;
-                RaisePropertyChanged("CurrentUser");
-            }
-        }
+        ...
 
-        /// <summary>
-        /// Property changed handler.
-        /// </summary>
-        public event PropertyChangedEventHandler? PropertyChanged;
-
-        /// <summary>
-        /// Occurs when property is changed.
-        /// </summary>
-        /// <param name="propName">changed property name</m>
-        public void RaisePropertyChanged(string propName)
-        {
-            if (this.PropertyChanged != null)
-            {
-                this.PropertyChanged(this, new PropertyChangedEventArgs(propName));
-            }
-        }
-
-        private void GenerateMessages()
-        {
-            this.Messages.Add(new TextMessage()
-            {
-                Author = CurrentUser,
-                Text = "Hi guys, good morning! I'm very delighted to share with you the news that our team is going to launch a new mobile application.",
-            });
-            this.Messages.Add(new TextMessage()
-            {
-                Author = new Author() { Name = "Andrea", Avatar = "peoplecircle7.png" },
-                Text = "Oh! That's great.",
-            });
-            this.Messages.Add(new TextMessage()
-            {
-                Author = new Author() { Name = "Harrison", Avatar = "peoplecircle1.png" },
-                Text = "That is good news.",
-            });
-            this.Messages.Add(new TextMessage()
-            {
-                Author = new Author() { Name = "Stevan", Avatar = "peoplecircle2.png" },
-                Text = "What kind of application is it and when are we going to launch?",
-            });
-            this.Messages.Add(new TextMessage()
-            {
-                Author = CurrentUser,
-                Text = "A kind of Emergency Broadcast App.",
-            });
-        }
     }
 
 {% endhighlight %}
@@ -214,18 +133,11 @@ namespace GettingStarted
 The avatar view in the typing indicator can be customized to show only starting alphabet of the username or only image of the user as avatar by using `TypingIndicator.AvatarViewType` property.
 
 {% tabs %}
-{% highlight c# tabtitle="ViewModel.cs" hl_lines="18" %}
+{% highlight c# tabtitle="ViewModel.cs" hl_lines="11" %}
 public class TypingIndicatorViewModel : INotifyPropertyChanged
 {
-    /// <summary>
-    /// Indicates the typing indicator visibility. 
-    /// </summary>
-    private bool showTypingIndicator;
 
-    /// <summary>
-    /// Chat typing indicator.
-    /// </summary>
-    private ChatTypingIndicator typingIndicator;
+    ...
     
     public GettingStattedViewModel()
     {
@@ -238,38 +150,9 @@ public class TypingIndicatorViewModel : INotifyPropertyChanged
         this.ShowTypingIndicator = true;
     }
 
-    /// <summary>
-    /// Gets or sets the Chat typing indicator value.
-    /// </summary>
-    public ChatTypingIndicator TypingIndicator
-    {
-        get
-        {
-            return this.typingIndicator;
-        }
-        private set
-        {
-            this.typingIndicator = value;
-            RaisePropertyChanged("TypingIndicator");
-        }
-    }
+    ...
 
-    /// <summary>
-    /// Gets or sets the value indicating whether the typing indicator is visible or not.
-    /// </summary>
-    public bool ShowTypingIndicator
-    {
-        get
-        {
-            return this.showTypingIndicator;
-        }
-        private set
-        {
-            this.showTypingIndicator = value;
-            RaisePropertyChanged("ShowTypingIndicator");
-        }
-    }
-}
+ }
 
 {% endhighlight %}
 {% endtabs %}
@@ -311,41 +194,3 @@ namespace GettingStarted
 
 {% endhighlight %}
 {% endtabs %} 
-
-## Customize height of the typing indicator view area
-
-SfChat provides the flexibility to adjust the height or completely remove the static area above the message editor, where the typing indicator is displayed. You can achieve this by using the `SfChat.TypingIndicatorViewHeight` property.
-
-{% tabs %}
-{% highlight xaml hl_lines="2" %}
- <sfChat:SfChat x:Name="sfChat"
-                TypingIndicatorViewHeight="0"
-                Messages="{Binding Messages}"
-                CurrentUser="{Binding CurrentUser}" >
- </sfChat:SfChat>
-        
-{% endhighlight %}
-
-{% highlight c# hl_lines="10" %}
-    public partial class MainPage : ContentPage
-    {
-        SfChat sfChat;
-        TypingIndicatorViewModel viewModel;
-        public MainPage()
-        {
-            InitializeComponent();
-            sfChat = new SfChat();
-            viewModel = new TypingIndicatorViewModel();
-            sfChat.TypingIndicatorViewHeight = 0;
-            sfChat.Messages = viewModel.Messages;
-            sfChat.CurrentUser = viewModel.CurrentUser;
-            this.Content = sfChat;
-        }
-    }
-
-{% endhighlight %}
-{% endtabs %} 
-
-![Customize height of the typing indicator view area in .NET MAUI Chat](images/typing-indicator/maui-chat-typing-indicator-height.png)
-
-
