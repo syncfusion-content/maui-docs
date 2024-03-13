@@ -7,9 +7,9 @@ control: Rotator
 documentation: ug
 ---  
 
-# Migrating from Xamarin Carousel View to .NET MAUI Carousel View 
+# Migrating from Xamarin Rotator to .NET MAUI Rotator
 
-To migrate easily from `Xamarin SfRotator` to `.NET MAUI SfRotator`, we kept all the APIs from Xamarin SfCarousel in MAUI SfCarousel. We have renamed the namespace as follows.
+To migrate easily from `Xamarin SfRotator` to `.NET MAUI SfRotator`, we kept all the APIs from Xamarin SfRotator in MAUI SfRotator. We have renamed the namespace as follows.
 
 ## Namespaces 
 
