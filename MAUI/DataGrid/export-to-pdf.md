@@ -248,7 +248,7 @@ namespace GettingStarted
         {
             string exception = string.Empty;
             string path = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
-            string filePath = Path.Combine(path, filename);
+            string filePath = Path.Combine(path,filename);
             try
             {
                 FileStream fileStream = File.Open(filePath, FileMode.Create);
