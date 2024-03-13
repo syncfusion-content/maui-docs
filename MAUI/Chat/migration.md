@@ -49,3 +49,5 @@ To migrate easier from Xamarin.Forms SfChat to .NET MAUI SfChat, we kept most of
 <td>Gets or sets the template shown when a user swipes an item to the left.</td>
 </tr>
 </table>
+
+N> For information on style key changes in .NET MAUI Chat, you can refer to the styles
