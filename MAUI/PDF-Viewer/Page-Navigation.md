@@ -13,7 +13,7 @@ After loading a document, you can navigate or scroll to different pages using th
 
 ## Page layout modes
 
-The page layout modes of [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) allow users to change the layout of pages while viewing PDF documents. These modes provide flexibility in viewing and navigating PDF pages, responding to various reading styles and document structures. The [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) supports the following Page layout modes:
+The page layout modes of [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) allow users to change the layout of the pages while viewing PDF documents. These modes provide flexibility in viewing and navigating PDF pages, responding to various reading styles and document structures. The [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) supports the following Page layout modes:
 
 1. Continuous
 2. Single page

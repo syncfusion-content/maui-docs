@@ -145,6 +145,31 @@ The following gif image illustrates the result of the above code:
 
 ![.NET MAUI ComboBox border color](Images/UICustomization/BorderColor.png)
 
+## Customize the selection text highlightColor 
+
+The SelectionTextHighlightColor property is used to modify the background color of the selected item text in the combobox control.
+
+{% tabs %}
+{% highlight xaml %}
+
+<editors:SfCombobox x:Name="combobox"
+                        WidthRequest="250"
+                        ItemsSource="{Binding SocialMedias}"
+                        DisplayMemberPath="Name"
+                        TextMemberPath="Name"
+                        Placeholder="Enter Media"
+                        SelectionTextHighlightColor="Green" />
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+combobox.SelectionTextHighlightColor = Colors.Green;
+
+{% endhighlight %}
+{% endtabs %}
+
+![.NET MAUI ComboBox Selection Text Highlight Color](Images/UICustomization/SelectionTextHighlightColor.png)
 
 ## Maximum DropDown Height
 
@@ -341,6 +366,169 @@ The [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.Dr
 The following image illustrates the result of the above code:
 
 ![.NET MAUI ComboBox ItemTemplate](Images/UICustomization/ItemTemplate.png)
+
+### Customize the DropDown item text
+
+DropDown items can be customized using the [DropDownItemFontAttributes], [DropDownItemFontFamily], [DropDownItemFontSize], and [DropDownItemTextColor] properties.
+
+{% tabs %}
+{% highlight xaml %}
+
+<editors:SfCombobox x:Name="combobox"
+                        WidthRequest="250"
+                        ItemsSource="{Binding SocialMedias}"
+                        DisplayMemberPath="Name"
+                        TextMemberPath="Name"
+                        Placeholder="Enter Media"
+                        DropDownItemFontAttributes="Italic"
+                        DropDownItemFontFamily="OpenSansSemibold"
+                        DropDownItemFontSize="16"
+                        DropDownItemTextColor="DarkViolet" />
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+combobox.DropDownItemFontAttributes = FontAttributes.Italic;
+combobox.DropDownItemFontFamily = "OpenSansSemibold";
+combobox.DropDownItemFontSize = 16;
+combobox.DropDownItemTextColor = Colors.DarkViolet;
+
+{% endhighlight %}
+{% endtabs %}
+
+![.NET MAUI ComboBox DropDown Item Text](Images/UICustomization/DropDownItemText.png)
+
+### Customize the DropDown background color
+
+The DropDownBackground property is used to modify the background color of the dropdown.
+
+{% tabs %}
+{% highlight xaml %}
+
+<editors:SfCombobox x:Name="combobox"
+                        WidthRequest="250"
+                        ItemsSource="{Binding SocialMedias}"
+                        DisplayMemberPath="Name"
+                        TextMemberPath="Name"
+                        Placeholder="Enter Media"
+                        DropDownBackground="YellowGreen" />
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+combobox.DropDownBackground = Colors.YellowGreen;
+
+{% endhighlight %}
+{% endtabs %}
+
+![.NET MAUI ComboBox DropDown Background](Images/UICustomization/DropDownBackground.png)
+
+### Customize the DropDown selected item backgroundcolor
+
+The SelectedDropDownItemBackground property is used to modify the backgroundcolor of selected item in the dropdown.
+
+{% tabs %}
+{% highlight xaml %}
+
+<editors:SfCombobox x:Name="combobox"
+                        WidthRequest="250"
+                        ItemsSource="{Binding SocialMedias}"
+                        DisplayMemberPath="Name"
+                        TextMemberPath="Name"
+                        Placeholder="Enter Media"
+                        SelectedDropDownItemBackground="LightSeaGreen" />
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+combobox.SelectedDropDownItemBackground = Colors.LightSeaGreen;
+
+{% endhighlight %}
+{% endtabs %}
+
+![.NET MAUI ComboBox Selected DropDown Item Background](Images/UICustomization/SelectedDropDownItemBackground.png)
+
+### Customize the DropDown Border Color
+
+The DropDownStroke property is used to modify the border color of the dropdown.
+
+{% tabs %}
+{% highlight xaml %}
+
+<editors:SfCombobox x:Name="combobox"
+                        WidthRequest="250"
+                        ItemsSource="{Binding SocialMedias}"
+                        DisplayMemberPath="Name"
+                        TextMemberPath="Name"
+                        Placeholder="Enter Media"
+                        DropDownStroke="DarkOrange" />
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+combobox.DropDownStroke = Colors.DarkOrange;
+
+{% endhighlight %}
+{% endtabs %}
+
+![.NET MAUI ComboBox DropDown Stroke](Images/UICustomization/DropDownStroke.png)
+
+### Customize the DropDown Border Thickness
+
+The DropDownStrokeThickness property is used to modify the thickness of the dropdown border.
+
+{% tabs %}
+{% highlight xaml %}
+
+<editors:SfCombobox x:Name="combobox"
+                        WidthRequest="250"
+                        ItemsSource="{Binding SocialMedias}"
+                        DisplayMemberPath="Name"
+                        TextMemberPath="Name"
+                        Placeholder="Enter Media"
+                        DropDownStroke="DarkOrange"
+                        DropDownStrokeThickness="5" />
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+combobox.DropDownStrokeThickness = 5;
+
+{% endhighlight %}
+{% endtabs %}
+
+![.NET MAUI ComboBox DropDown StrokeThickness](Images/UICustomization/DropDownStrokeThickness.png)
+
+### Customize the DropDown Item Height
+
+The DropDownItemHeight property is used to modify the height of the dropdown items.
+
+{% tabs %}
+{% highlight xaml %}
+
+<editors:SfCombobox x:Name="combobox"
+                        WidthRequest="250"
+                        ItemsSource="{Binding SocialMedias}"
+                        DisplayMemberPath="Name"
+                        TextMemberPath="Name"
+                        Placeholder="Enter Media"
+                        DropDownItemHeight="25" />
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+combobox.DropDownItemHeight = 25;
+
+{% endhighlight %}
+{% endtabs %}
+
+![.NET MAUI ComboBox DropDown Item Height](Images/UICustomization/DropDownItemHeight.png)
 
 ## Customize the DropDown (suggestion) item based on condition
 
