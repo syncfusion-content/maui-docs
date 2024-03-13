@@ -25,7 +25,7 @@ SfChart
 <div> SfCircularChart </div>
 <div> SfFunnelChart </div>
 <div> SfPyramidChart </div>
-<div> SfPolarChart (Upcoming) </div>
+<div> SfPolarChart </div>
 </td>
 </tr>
 </table>
@@ -229,38 +229,6 @@ this.Content = chart;
 </tr>
 <tr>
 <td>ToggleSeriesVisibility</td>
-<td><em>Upcoming</em></td>
-</tr>
-<tr>
-<td>Series</td>
-<td><em>Upcoming</em></td>
-</tr>
-<tr>
-<td>BackgroundColor</td>
-<td><em>Upcoming</em></td>
-</tr>
-<tr>
-<td>StrokeColor</td>
-<td><em>Upcoming</em></td>
-</tr>
-<tr>
-<td>StrokeWidth</td>
-<td><em>Upcoming</em></td>
-</tr>
-<tr>
-<td>StrokeDashArray</td>
-<td><em>Upcoming</em></td>
-</tr>
-<tr>
-<td>CornerRadius</td>
-<td><em>Upcoming</em></td>
-</tr>
-<tr>
-<td>Margin</td>
-<td><em>Upcoming</em></td>
-</tr>
-<tr>
-<td>LabelStyle</td>
 <td><em>Upcoming</em></td>
 </tr>
 <tr>
@@ -643,14 +611,9 @@ N> For more information about selection check [here](https://help.syncfusion.com
 
 ## Upcoming features in .NET MAUI
 
-**Chart** 
-
-* Support for chart localization. 
-
 **Series**
 
 * Listen to property change support for series.
-* Get data point index based on value.
 * Notify event or method when series are rendering.
 * Suspend and resume notification.
 
@@ -660,13 +623,11 @@ N> For more information about selection check [here](https://help.syncfusion.com
 * Support to enable or disable the legend icon visibility.
 * Legend items wrap and floating support.
 * Maximum width support for Legend.
-* Individual legend items based on the data point count.
 * Event or method to notify the legend click and the creation of a legend item.
 * The ability to show/hide corresponding data points by legend item toggle.
 
 **Data label**
 
-* DataTemplate support for data labels.
 * Connector lines customization support.
 
 ## Known issue 

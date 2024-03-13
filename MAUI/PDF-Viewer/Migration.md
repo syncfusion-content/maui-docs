@@ -211,6 +211,11 @@ To make migration from [Xamarin SfPdfViewer](https://www.syncfusion.com/xamarin-
 <td>{{'SignatureFormField.Signature'| markdownify}}</td>
 <td>Gets or sets the ink annotation signature in the signature field.</td>
 </tr>
+<tr>
+<td>{{'[PageViewMode](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.SfPdfViewer.html#Syncfusion_SfPdfViewer_XForms_SfPdfViewer_PageViewMode)'| markdownify}}</td>
+<td>{{'PageLayoutMode'| markdownify}}</td>
+<td>Gets or sets the layout mode in which the pages will be displayed.</td>
+</tr>
 </table>
 
 ## Events
@@ -374,6 +379,16 @@ To make migration from [Xamarin SfPdfViewer](https://www.syncfusion.com/xamarin-
 <td>{{'[SelectAnnotation](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.SfPdfViewer.html#Syncfusion_SfPdfViewer_XForms_SfPdfViewer_SelectAnnotation_Syncfusion_SfPdfViewer_XForms_IAnnotation_)'| markdownify}}</td>
 <td>{{'[SelectAnnotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_SelectAnnotation_Syncfusion_Maui_PdfViewer_Annotation_)'| markdownify}}</td>
 <td>Selects the given annotation.</td>
+</tr>
+<tr>
+<td>{{'[Print](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.SfPdfViewer.html#Syncfusion_SfPdfViewer_XForms_SfPdfViewer_Print)'| markdownify }}</td>
+<td>{{'PrintDocument'| markdownify }}</td>
+<td>Prints the PDF document.</td>
+</tr>
+<tr>
+<td>{{'[SaveDocument](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.SfPdfViewer.html#Syncfusion_SfPdfViewer_XForms_SfPdfViewer_SaveDocument)'| markdownify }}</td>
+<td>{{`FlattenOnSave`| markdownify }}</td>
+<td>Saves the document and returns the stream.</td>
 </tr>
 </table>
 
