@@ -113,7 +113,7 @@ The following gif image illustrates the result of the above code:
 
 ### Programmatic selection
 
-The selected items can be changed programmatically by using the [SelectedItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_SelectedItems) property of Autocomplete control.
+The selected items can be changed programmatically by using the [SelectedItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_SelectedItems) property of Autocomplete control. This property allows both getting and setting of the selected items in the Autocomplete control.
 
 {% tabs %}
 

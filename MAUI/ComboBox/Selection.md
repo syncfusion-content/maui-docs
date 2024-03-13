@@ -74,7 +74,7 @@ Token mode supports both editable and non-editable text boxes for selecting item
 
 ### Programmatic selection
 
-The selected items can be changed programmatically by using the [SelectedItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_SelectedItems) property of ComboBox control.
+The selected items can be changed programmatically by using the [SelectedItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_SelectedItems) property of ComboBox control. This property allows both getting and setting of the selected items in the ComboBox control.
 
 {% tabs %}
 
