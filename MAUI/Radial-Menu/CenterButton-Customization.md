@@ -1,7 +1,7 @@
 ---
 layout: post
 title: CenterButton Customization in MAUI Radial Menu Control | Syncfusion
-description: Learn CenterButton Customization in Syncfusion MAUI Radial Menu & more.
+description: Learn here all about CenterButton Customization support in Syncfusion Maui Radial Menu(SfRadialMenu) control and more.
 platform: MAUI
 control: RadialMenu (SfRadialMenu)
 documentation: ug
