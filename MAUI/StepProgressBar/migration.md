@@ -9,7 +9,7 @@ documentation: ug
 
 # Migrate from Xamarin.Forms SfStepProgressBar to MAUI SfStepProgressBar
 
-To make the migration from the [Xamarin SfStepProgressBar](https://www.syncfusion.com/xamarin-ui-controls/xamarin-stepprogressbar) to [.NET MAUI SfStepProgressBar]() easier, most of the APIs from the Xamarin SfStepProgressBar were kept in the.NET MAUI SfStepProgressBar. However, to maintain the consistency of API naming in the .NET MAUI SfStepProgressBar, some of the APIs have been renamed. Please find the difference in the following topics.
+To make the migration from the [Xamarin SfStepProgressBar](https://www.syncfusion.com/xamarin-ui-controls/xamarin-stepprogressbar) to [.NET MAUI SfStepProgressBar]() easier, most of the APIs from the Xamarin SfStepProgressBar were kept in the.NET MAUI SfStepProgressBar. However, to maintain the consistency of API naming in the .NET MAUI SfStepProgressBar, some of the APIs have been renamed. Find the difference in the following topics.
 
 ## Namespaces 
 

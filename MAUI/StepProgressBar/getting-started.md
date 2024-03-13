@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting started with .NET MAUI Step ProgressBar control | Syncfusion
+title: Getting Started with .NET MAUI Step ProgressBar Control | Syncfusion
 description: Learn here all about getting started with Syncfusion .NET MAUI Step ProgressBar (SfStepProgressBar) control and its basic features.
 platform: maui
 control: SfStepProgressBar
@@ -84,7 +84,7 @@ namespace GettingStarted
 
 ## Populating step progressbar items
 
-You can use ItemsSource property of SfStepProgressBar to populate the step progressbar items. Hence, you must create a item collection and bind it to the progressbar control.
+You can use the ItemsSource property of SfStepProgressBar to populate the step progressbar items. Hence, you must create an item collection and bind it to the progressbar control.
 
 * Create a simple Observable Collection of item for the step progressbar,
 
@@ -166,7 +166,7 @@ this.Content = stepProgressBar;
 {% endhighlight %}
 {% endtabs %}
 
-## Active step progression
+## ActiveStepIndex
 The [ActiveStepIndex]() property is used to represent index of the currently active step within the sequence of steps. The [ActiveStepProgressValue]() property is used to add the progress value of the currently active step within a sequence.
 
 {% tabs %}
