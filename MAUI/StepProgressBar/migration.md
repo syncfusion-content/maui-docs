@@ -423,3 +423,9 @@ this.Content = stepProgressBar ;
 <td>Occurs whenever the step status is changed.</td>
 </tr>
 </table>
+
+## Upcoming Features
+
+* Enable looping support
+* Mapping support
+* RTL support
