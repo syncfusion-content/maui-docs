@@ -113,34 +113,87 @@ The following gif image illustrates the result of the above code:
 
 ### Programmatic selection
 
-The selected items can be changed programmatically by using the [SelectedItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_SelectedItems) property of Autocomplete control.
+The selected items can be changed programmatically by using the [SelectedItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_SelectedItems) property of Autocomplete control. This property allows both getting and setting of the selected items in the Autocomplete control.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-  <editors:SfAutocomplete
-  SelectionMode="Multiple"
-  WidthRequest="350"
-  HeightRequest="50"
-  ItemsSource="{Binding SocialMedias}"
-  DisplayMemberPath="Name"
-  TextMemberPath="Name"    
-  x:Name="autoComplete" />
+  <editors:SfAutocomplete x:Name="autoComplete"
+                SelectionMode="Multiple"
+                WidthRequest="350"
+                HeightRequest="50"
+                ItemsSource="{Binding SocialMedias}"
+                SelectedItems="{Binding SelectedItemsList}"
+                DisplayMemberPath="Name"
+                TextMemberPath="Name" />
 
 {% endhighlight %}
 
 {% highlight C# %}
 
- SocialMediaViewModel socialMediaViewModel = (this.autoComplete.BindingContext as SocialMediaViewModel);
- ObservableCollection<SocialMedia> socialMediasList = socialMediaViewModel.SocialMedias;
- this.autoComplete.SelectedItems.Add(socialMediasList[0]);
- this.autoComplete.SelectedItems.Add(socialMediasList[2]);
+  public ObservableCollection<SocialMedia> SelectedItemsList { get; set; }
+  SocialMediaViewModel socialMediaViewModel = (this.autoComplete.BindingContext as SocialMediaViewModel);
+  ObservableCollection<SocialMedia> socialMediasList = socialMediaViewModel.SocialMedias;
+  SelectedItemsList = new ObservableCollection<SocialMedia>();
+  SelectedItemsList.Add(socialMediasList[0]);
+  SelectedItemsList.Add(socialMediasList[2]);
+  SelectedItemsList.Add(socialMediasList[4]);
 
 {% endhighlight %}
 
 {% endtabs %}
 
+### TokensWrapMode
+
+There are two ways to display multi-selection items in the AutoComplete control. They are:
+
+* Wrap
+* None
+
+#### Wrap mode
+
+When the TokensWrapMode is set to Wrap, the selected items will be wrapped to the next line of the SfAutoComplete.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+ <editors:SfAutoComplete x:Name="autoComplete" 
+             HeightRequest="50"
+             WidthRequest="350"
+             ItemsSource="{Binding SocialMedias}"
+             SelectionMode="Multiple"
+             MaxDropDownHeight="250"
+             DisplayMemberPath="Name"
+             TextMemberPath="Name"
+             TokensWrapMode="Wrap" />
+
+{% endhighlight %}
+
+{% endtabs %}
+
+#### None Mode
+
+When the TokensWrapMode is set to None, the selected item will be wrapped in a horizontal orientation.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+ <editors:SfAutoComplete x:Name="autoComplete" 
+             HeightRequest="50"
+             WidthRequest="350"
+             ItemsSource="{Binding SocialMedias}"
+             SelectionMode="Multiple"
+             MaxDropDownHeight="250"
+             DisplayMemberPath="Name"
+             TextMemberPath="Name"
+             TokensWrapMode="None" />
+
+{% endhighlight %}
+
+{% endtabs %}
  
 ## Selection changed notification
 

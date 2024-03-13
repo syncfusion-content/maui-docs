@@ -145,6 +145,29 @@ The following gif image illustrates the result of the above code:
 
 ![.NET MAUI ComboBox border color](Images/UICustomization/BorderColor.png)
 
+## Customize the selection text highlightColor 
+
+The SelectionTextHighlightColor property is used to modify the background color of the selected item text in the combobox control.
+
+{% tabs %}
+{% highlight xaml %}
+
+<editors:SfCombobox x:Name="combobox"
+                        WidthRequest="250"
+                        ItemsSource="{Binding SocialMedias}"
+                        DisplayMemberPath="Name"
+                        TextMemberPath="Name"
+                        Placeholder="Select a social media"
+                        SelectionTextHighlightColor="Aqua" />
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+combobox.SelectionTextHighlightColor = Colors.Aqua;
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Maximum DropDown Height
 
@@ -341,6 +364,156 @@ The [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.Dr
 The following image illustrates the result of the above code:
 
 ![.NET MAUI ComboBox ItemTemplate](Images/UICustomization/ItemTemplate.png)
+
+### Customize the DropDown item text
+
+DropDown items can be customized using the [DropDownItemFontAttributes], [DropDownItemFontFamily], [DropDownItemFontSize], and [DropDownItemTextColor] properties.
+
+{% tabs %}
+{% highlight xaml %}
+
+<editors:SfCombobox x:Name="combobox"
+                        WidthRequest="250"
+                        ItemsSource="{Binding SocialMedias}"
+                        DisplayMemberPath="Name"
+                        TextMemberPath="Name"
+                        Placeholder="Select a social media"
+                        DropDownItemFontAttributes="Bold"
+                        DropDownItemFontFamily="OpenSansSemibold"
+                        DropDownItemFontSize="20"
+                        DropDownItemTextColor="White" />
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+combobox.DropDownItemFontAttributes = FontAttributes.Bold;
+combobox.DropDownItemFontFamily = "OpenSansSemibold";
+combobox.DropDownItemFontSize = 20;
+combobox.DropDownItemTextColor = Colors.White;
+
+{% endhighlight %}
+{% endtabs %}
+
+### Customize the DropDown background color
+
+The DropDownBackground property is used to modify the background color of the dropdown.
+
+{% tabs %}
+{% highlight xaml %}
+
+<editors:SfCombobox x:Name="combobox"
+                        WidthRequest="250"
+                        ItemsSource="{Binding SocialMedias}"
+                        DisplayMemberPath="Name"
+                        TextMemberPath="Name"
+                        Placeholder="Select a social media"
+                        DropDownBackground="Yellow" />
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+combobox.DropDownBackground = Colors.Yellow;
+
+{% endhighlight %}
+{% endtabs %}
+
+### Customize the DropDown selected item backgroundcolor
+
+The SelectedDropDownItemBackground property is used to modify the backgroundcolor of selected item in the dropdown.
+
+{% tabs %}
+{% highlight xaml %}
+
+<editors:SfCombobox x:Name="combobox"
+                        WidthRequest="250"
+                        ItemsSource="{Binding SocialMedias}"
+                        DisplayMemberPath="Name"
+                        TextMemberPath="Name"
+                        Placeholder="Select a social media"
+                        SelectedDropDownItemBackground="YellowGreen" />
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+combobox.SelectedDropDownItemBackground = Colors.YellowGreen;
+
+{% endhighlight %}
+{% endtabs %}
+
+### Customize the DropDown Border Color
+
+The DropDownStroke property is used to modify the border color of the dropdown.
+
+{% tabs %}
+{% highlight xaml %}
+
+<editors:SfCombobox x:Name="combobox"
+                        WidthRequest="250"
+                        ItemsSource="{Binding SocialMedias}"
+                        DisplayMemberPath="Name"
+                        TextMemberPath="Name"
+                        Placeholder="Select a social media"
+                        DropDownStroke="Red" />
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+combobox.DropDownStroke = Colors.Red;
+
+{% endhighlight %}
+{% endtabs %}
+
+### Customize the DropDown Border Thickness
+
+The DropDownStrokeThickness property is used to modify the thickness of the dropdown border.
+
+{% tabs %}
+{% highlight xaml %}
+
+<editors:SfCombobox x:Name="combobox"
+                        WidthRequest="250"
+                        ItemsSource="{Binding SocialMedias}"
+                        DisplayMemberPath="Name"
+                        TextMemberPath="Name"
+                        Placeholder="Select a social media"
+                        DropDownStrokeThickness="5" />
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+combobox.DropDownStrokeThickness = 5;
+
+{% endhighlight %}
+{% endtabs %}
+
+### Customize the DropDown Item Height
+
+The DropDownItemHeight property is used to modify the height of the dropdown items.
+
+{% tabs %}
+{% highlight xaml %}
+
+<editors:SfCombobox x:Name="combobox"
+                        WidthRequest="250"
+                        ItemsSource="{Binding SocialMedias}"
+                        DisplayMemberPath="Name"
+                        TextMemberPath="Name"
+                        Placeholder="Select a social media"
+                        DropDownItemHeight="50" />
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+combobox.DropDownItemHeight = 50;
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Customize the DropDown (suggestion) item based on condition
 
@@ -888,3 +1061,61 @@ comboBox.CursorPosition = 4;
 {% endtabs %}
 
 N> The cursor position support is available for editable mode only, and two-way binding is not supported in the Android platform.
+
+## Border visibility
+
+The `ShowBorder` property of [`SfComboBox`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) is used to modify the visibility of the border and its default value is **true**. The following code example demonstrates how to change the border visibility,
+
+{% tabs %}
+{% highlight xaml %}
+
+<editors:SfComboBox x:Name="comboBox"
+                            WidthRequest="200" 
+                            HeightRequest="35"
+                            ShowBorder="False"/>
+{% endhighlight %}
+{% highlight C# %}
+
+using Syncfusion.Maui.Inputs;
+
+SfComboBox comboBox = new SfComboBox();
+comboBox.WidthRequest = 200;
+comboBox.HeightRequest = 35;
+comboBox.ShowBorder = false;
+
+{% endhighlight %}
+{% endtabs %}
+
+The following image illustrates the result of the above code:
+
+![.NET MAUI ComboBox showborder](Images/UICustomization/ShowBorder.png)
+
+### TextAlignment
+
+The [`SfComboBox`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) provides support to customize the text alignment by using the `HorizontalTextAlignment` and `VerticalTextAlignment` properties.
+
+N> Dynamic changes to the `HorizontalTextAlignment` property may not be functioning as expected on Android platform.
+
+{% tabs %}
+{% highlight xaml %}
+
+<editors:SfComboBox x:Name="comboBox"
+                    WidthRequest="250" 
+                    HeightRequest="50"
+                    HorizontalTextAlignment="Center" 
+                    VerticalTextAlignment="Start"/>
+{% endhighlight %}
+{% highlight c# %}
+
+SfComboBox comboBox = new SfComboBox();
+comboBox.WidthRequest = 250;
+comboBox.HeightRequest = 50;
+comboBox.HorizontalTextAlignment = TextAlignment.Center;
+comboBox.VerticalTextAlignment = TextAlignment.Start;
+
+{% endhighlight %}
+{% endtabs %}
+
+The following image illustrates the result of the above code:
+
+![TextAlignment](Images/UICustomization/TextAlignment.png)
