@@ -120,3 +120,4 @@ The `SendBackward` method is used to send the selected annotation one step backw
 {% endhighlight %}
 {% endtabs %}
 
+![Z-Ordering in .NET MAUI Image Editor.](images/z-ordering/imageeditor-z-ordering.gif)

@@ -34,6 +34,7 @@ The ImageEditor control in .NET MAUI allows you to add custom view using the `Ad
 {% endhighlight %}
 {% endtabs %}
 
+![Custom view annotation in .NET MAUI Image Editor.](images/custom-view/imageeditor-customview.gif)
 
 ## Customize the appearance
 
