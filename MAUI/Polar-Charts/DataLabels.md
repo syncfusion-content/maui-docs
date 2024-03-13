@@ -186,6 +186,8 @@ The content of the label can be customized using the [LabelContext]() property. 
 
 {% endtabs %}
 
+![Data label in MAUI chart](DataLabel_images/MAUI_polar_datalabel_context.png)
+
 ## LabelTemplate
 
 The [SfPolarChart]() provides support to customize the appearance of the datalabel using the [LabelTemplate]() property.
@@ -255,3 +257,4 @@ The [SfPolarChart]() provides support to customize the appearance of the datalab
 {% endhighlight %}
 
 {% endtabs %}
+![Data label in MAUI chart](DataLabel_images/MAUI_polar_datalabel_template.png)

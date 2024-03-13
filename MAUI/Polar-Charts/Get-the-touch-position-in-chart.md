@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Get the Touch Position in Syncfusion SfPolarChart
-description: Learn here all about how to get the touch position in SfPolarChart.
+description: Learn here about how to get the touch position in SfPolarChart.
 platform: maui
 control: SfPolarChart
 documentation: ug
