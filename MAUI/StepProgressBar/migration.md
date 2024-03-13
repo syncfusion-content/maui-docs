@@ -426,6 +426,6 @@ this.Content = stepProgressBar ;
 
 ## Upcoming Features
 
-* Enable looping support
 * Mapping support
 * RTL support
+* Template support
