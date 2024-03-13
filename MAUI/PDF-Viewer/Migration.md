@@ -375,6 +375,11 @@ To make migration from [Xamarin SfPdfViewer](https://www.syncfusion.com/xamarin-
 <td>{{'[SelectAnnotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_SelectAnnotation_Syncfusion_Maui_PdfViewer_Annotation_)'| markdownify}}</td>
 <td>Selects the given annotation.</td>
 </tr>
+<tr>
+<td>{{'[Print](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.SfPdfViewer.html#Syncfusion_SfPdfViewer_XForms_SfPdfViewer_Print)'| markdownify }}</td>
+<td>{{'[PrintDocument]()'| markdownify }}</td>
+<td>Prints the PDF document.</td>
+</tr>
 </table>
 
 ## Classes
