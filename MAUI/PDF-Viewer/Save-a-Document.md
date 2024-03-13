@@ -28,3 +28,41 @@ private void SaveDocument()
 {% endtabs %}
 
 To save a document asynchronously, you may use the [SaveDocumentAsync](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_SaveDocumentAsync_System_IO_Stream_System_Threading_CancellationToken_) method  of the `SfPdfViewer`.
+
+## Flatten annotations and form fields on save
+
+Flattening refers to the process of converting interactive elements, such as annotations and form fields, into a static, non-editable format within a PDF document. The SfPdfViewer allows you to save the annotations and form fields by Flatten using `FlattenOnSave` API.
+
+### Flatten annotation on save
+
+The `FlattenOnSave` API helps you to flatten the specified annotation in a PDF document. The following code sample explains how to flatten the first annotation from the annotation collection.
+
+{% tabs %}
+{% highlight c# %}
+// Obtain the annotation collection using `SfPdfViewer` instance.
+ReadOnlyObservableCollection<Annotation> annotations = PdfViewer.Annotations;
+// Obtain the first annotation in the annotation collection.
+Annotation annotation = annotations[0];
+// set the FlattenOnSave true to flatten the annotation on save
+annotation.FlattenOnSave = true;
+{% endhighlight %}
+{% endtabs %}
+
+### Flatten form field on save
+
+The `FlattenOnSave` API helps you to flatten the specified form field in a PDF document. The following code sample explains how to flatten the first form field from the form field collection.
+
+{% tabs %}
+{% highlight c# %}
+// Obtain the form field collection using `SfPdfViewer` instance.
+ReadOnlyObservableCollection<FormField> formFields = PdfViewer.FormFields;
+// Obtain the first form field in the form fields collection.
+FormField formField = formFields[0];
+// set the FlattenOnSave true to flatten the formfield on save
+formField.FlattenOnSave = true;
+{% endhighlight %}
+{% endtabs %}
+
+### Limitation
+
+Currently, when saving a document by Flatten that contains sticky note annotations, the sticky note icon always appears as the default [comment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.StickyNoteIcon.html#Syncfusion_Maui_PdfViewer_StickyNoteIcon_Comment) icon appearance in the saved document.
