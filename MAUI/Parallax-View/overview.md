@@ -1,8 +1,8 @@
 ---
 layout: post
 title: About .NET MAUI Parallax View control | Syncfusion
-description: Learn about the introduction of Syncfusion .NET MAUI Parallax View (SfParallaxView) control, its elements, and more.
-platform: .NET MAUI
+description: Learn about the introduction of Syncfusion .NET MAUI Parallax View (SfParallaxView) control.
+platform: MAUI
 control: SfParallaxView
 documentation: ug
 ---
@@ -15,7 +15,7 @@ The [SfParallaxView]() for .NET MAUI provides a perfect way for scrolling any co
 
 * Customizes the speed of the parallax scroll.
 * Supports horizontal and vertical orientation.
-* Provides built-in integration with Scroll View and Syncfusion ListView.
+* Provides built-in integration with MAUI Scroll View and Syncfusion ListView.
 * Bind any control which implements IParallaxView interface.
 
 ![Overview image of Parallax View](ParallaxView_Images/maui_parallaxview.gif)
