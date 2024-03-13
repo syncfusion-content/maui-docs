@@ -5612,7 +5612,7 @@ This page lists the keys for each control and the element to which it is mapped 
         <ResourceDictionary.MergedDictionaries>
             <syncTheme:SyncfusionThemeResourceDictionary />
             <ResourceDictionary>
-                <x:String x:Key="SfChatheme">CustomTheme</x:String>
+                <x:String x:Key="SfChatheme">CommonTheme</x:String>
                 <Color x:Key="SfChatIncomingMessageBackground">Red</Color>
                 <Color x:Key="SfChatOutgoingMessageBackground">Green</Color>
             </ResourceDictionary>
