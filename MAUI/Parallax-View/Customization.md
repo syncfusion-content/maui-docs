@@ -29,7 +29,7 @@ The [`Speed`]() value denotes the scrolling speed of the [`Content`]() added as 
 
 using Syncfusion.Maui.ParallaxView;
 
-namespace ParallaxView_GettingStarted
+namespace ParallaxViewGettingStarted
 {
     public partial class MainPage : ContentPage
     {
@@ -43,7 +43,7 @@ namespace ParallaxView_GettingStarted
             SfListView listview = new SfListView();
             Image image = new Image();
             Assembly assembly = typeof(MainPage).GetTypeInfo().Assembly;
-            image.Source = ImageSource.FromResource("ParallaxView_GettingStarted.ParallaxWallpaper.png", assembly);
+            image.Source = ImageSource.FromResource("ParallaxViewGettingStarted.parallax.jpg", assembly);
             parallax.Content = image;
             parallax.Speed = 0.5;
             listview.ItemsSource = view.Items;
@@ -88,7 +88,7 @@ The orientation of the content scrolling can be customized to vertical or horizo
 
 using Syncfusion.Maui.ParallaxView;
 
-namespace ParallaxView_GettingStarted
+namespace ParallaxViewGettingStarted
 {
     public partial class MainPage : ContentPage
     {
@@ -102,7 +102,7 @@ namespace ParallaxView_GettingStarted
             ListView listview = new ListView();
             Image image = new Image();
             Assembly assembly = typeof(MainPage).GetTypeInfo().Assembly;
-            image.Source = ImageSource.FromResource("ParallaxView_GettingStarted.Images.ParallaxWallpaper.png", assembly);
+            image.Source = ImageSource.FromResource("ParallaxViewGettingStarted.parallax.jpg", assembly);
             parallax.Content = image;
             parallax.Orientation = Syncfusion.Maui.ParallaxView.Orientation.Horizontal;
             listview.ItemsSource = view.Items;

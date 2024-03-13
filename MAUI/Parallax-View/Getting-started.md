@@ -35,7 +35,7 @@ This section explains the steps required to configure the [`SfParallaxView`]() c
 {% highlight C# %}
 
     using Syncfusion.Maui.ParallaxView;
-    namespace ParallaxView_GettingStarted
+    namespace ParallaxViewGettingStarted
     {
         public partial class MainPage : ContentPage
         {
@@ -63,7 +63,7 @@ Syncfusion.Maui.Core Nuget is a dependent package for all Syncfusion controls of
     using Microsoft.Extensions.Logging;
     using Syncfusion.Maui.Core.Hosting;
 
-    namespace ParallaxView_GettingStarted
+    namespace ParallaxViewGettingStarted
     {
         public static class MauiProgram
         {
@@ -100,9 +100,9 @@ The following code sample demonstrates how to set the content property to the pa
 
    <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:ParallaxSample"
+             xmlns:local="clr-namespace:ParallaxViewGettingStarted"
              xmlns:parallax="clr-namespace:Syncfusion.Maui.ParallaxView;assembly=Syncfusion.Maui.ParallaxView"
-             x:Class="ParallaxView_GettingStarted.MainPage">
+             x:Class="ParallaxViewGettingStarted.MainPage">
       
         <ContentPage.Content>
             <Grid>            
@@ -122,7 +122,7 @@ The following code sample demonstrates how to set the content property to the pa
 
     using Syncfusion.Maui.ParallaxView;
 
-    namespace ParallaxView_GettingStarted
+    namespace ParallaxViewGettingStarted
     {
         public partial class MainPage : ContentPage
         {
@@ -139,7 +139,7 @@ The following code sample demonstrates how to set the content property to the pa
 
             public ParallaxViewModel()
             {
-                Image = ImageSource.FromResource("ParallaxView_GettingStarted.ParallaxGuitar1.png", typeof(MainPage).GetTypeInfo().Assembly);
+                Image = ImageSource.FromResource("ParallaxViewGettingStarted.parallax.jpg", typeof(MainPage).GetTypeInfo().Assembly);
             }
         }  
     }  
@@ -166,10 +166,10 @@ The following code sample demonstrates how to bind the Syncfusion ListView to th
 
   <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:ParallaxSample"
+             xmlns:local="clr-namespace:ParallaxViewGettingStarted"
              xmlns:parallax="clr-namespace:Syncfusion.Maui.ParallaxView;assembly=Syncfusion.Maui.ParallaxView"
              xmlns:list="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView"
-             x:Class="ParallaxView_GettingStarted.MainPage">
+             x:Class="ParallaxViewGettingStarted.MainPage">
       
     <ContentPage.Content>
         <Grid>
@@ -190,10 +190,10 @@ The following code sample demonstrates how to bind the Syncfusion ListView to th
                                 </Grid.ColumnDefinitions>
                                 <Image BackgroundColor="Transparent" HeightRequest="90" HorizontalOptions="CenterAndExpand" 
                                     WidthRequest="90" Source="{Binding ItemImage}" Grid.Column="0" VerticalOptions="CenterAndExpand" Aspect="AspectFit" />
-                                <StackLayout BackgroundColor="Transparent" Grid.Column="1" VerticalOptions="Center" 
-                                    HorizontalOptions="StartAndExpand" Orientation="Vertical">
-                                    <Label HorizontalOptions="Start" TextColor="White" Text="{Binding Name}"/>
-                                    <Label HorizontalOptions="Start" Text="{Binding Author}" TextColor="White"/>
+                                <StackLayout BackgroundColor="Transparent" Grid.Column="1" VerticalOptions="CenterAndExpand" 
+                                    HorizontalOptions="FillAndExpand" Orientation="Vertical">
+                                    <Label HorizontalOptions="FillAndExpand" TextColor="White" Text="{Binding Name}"/>
+                                    <Label HorizontalOptions="FillAndExpand" Text="{Binding Author}" TextColor="White"/>
                                 </StackLayout>
                             </Grid>
                         </ViewCell>
@@ -225,7 +225,8 @@ The following code sample demonstrates how to bind the Syncfusion ListView to th
         public ObservableCollection<Contacts> Items { get; set; }
         public ParallaxViewModel()
         {
-            Image = ImageSource.FromResource("ParallaxView_GettingStarted.ParallaxGuitar1.png", typeof(MainPage).GetTypeInfo().Assembly);
+            Assembly assembly = typeof(ParallaxViewModel).GetTypeInfo().Assembly;
+            Image = ImageSource.FromResource("ParallaxViewGettingStarted.parallax.jpg", assembly);
             Items = new ObservableCollection<Contacts>()
             {
                 new Contacts() { Name = "Thriller", Author = "Michael Jackson" },
@@ -248,11 +249,9 @@ The following code sample demonstrates how to bind the Syncfusion ListView to th
                 new Contacts() { Name = "Don’t Stop Believing", Author = "Journey"},
             };
 
-            Assembly assembly = typeof(ParallaxViewModel).GetTypeInfo().Assembly;
-
             for (int i = 0; i < Items.Count; i++)
             {
-                Items[i].Image = ImageSource.FromResource("ParallaxView_GettingStarted.ParallaxGuitar" + i + ".png", assembly);
+                Items[i].ItemImage = ImageSource.FromResource("ParallaxViewGettingStarted.parallax" + i + ".png", assembly);
             }
         }
     }
@@ -270,7 +269,7 @@ The following code sample demonstrates how to bind the Syncfusion ListView to th
             set;
         }
 
-        public ImageSource Image
+        public ImageSource ItemImage
         {       
             get;
             set;

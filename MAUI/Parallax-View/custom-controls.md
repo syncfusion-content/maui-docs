@@ -15,7 +15,7 @@ The Parallax view supports custom scrollable controls using the [`IParallaxView`
 
     using Syncfusion.Maui.Core;
 
-    namespace ParallaxView_GettingStarted
+    namespace ParallaxViewCustomControl
     {
         public class CustomListView : ListView, IParallaxView
         {
@@ -35,7 +35,7 @@ The [`ScrollableContentSize`]() is the total content size of the scrollable cust
 
     using Syncfusion.Maui.Core;
 
-    namespace ParallaxView_GettingStarted
+    namespace ParallaxViewCustomControl
     {
         public class CustomListView : ListView, IParallaxView
         {
@@ -83,7 +83,7 @@ The [`ParallaxScrollingEventArgs`]() has the following three arguments:
 
     using Syncfusion.Maui.Core;
 
-    namespace ParallaxView_GettingStarted
+    namespace ParallaxViewCustomControl
     {
         public class CustomListView : ListView, IParallaxView
         {
