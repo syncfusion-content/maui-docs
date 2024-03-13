@@ -287,6 +287,44 @@ The group summary row can be customized by the writing style for [DataGridGroupS
 
 ![Group summary row styling in .NET MAUI DataGrid](Images/styling/maui-datagrid-group-summary-row-style.png)
 
+### Styling unbound row cell
+The unbound row cell can be customized by the writing style for [DataGridUnboundRowCell]() TargetType.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml"%}
+<ContentPage xmlns:syncfusion="http://schemas.syncfusion.com/maui">
+    <ContentPage.Resources>
+        <Style TargetType="syncfusion:DataGridUnboundRowCell">
+            <Setter Property="Background" Value="#0074E3"/>
+            <Setter Property="TextColor" Value="White"/>
+            <Setter Property="FontAttributes" Value="Bold"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="FontFamily" Value="TimesNewRoman"/>
+        </Style>
+    </ContentPage.Resources>
+</ContentPage>
+{% endhighlight %}
+{% endtabs %}
+
+<img alt="Unbound row cell styling in .NET MAUI DataGrid" src="Images\styling\maui-datagrid-unbound-row-cell-styling.png" width="404"/>
+
+### Styling unbound row
+The unbound row can be customized by the writing style for [DataGridUnboundRowView]() TargetType.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml"%}
+<ContentPage xmlns:syncfusion="http://schemas.syncfusion.com/maui">
+    <ContentPage.Resources>
+        <Style TargetType="syncfusion:DataGridUnboundRowView">
+            <Setter Property="Background" Value="#0074E3"/>
+        </Style>
+    </ContentPage.Resources>
+</ContentPage>
+{% endhighlight %}
+{% endtabs %}
+
+<img alt="Unbound row styling in .NET MAUI DataGrid" src="Images\styling\maui-datagrid-unbound-row-styling.png" width="404"/>
+
 ### Column Styling 
 You can apply the style for a particular column by using [DataGridColumn.CellStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_CellStyleProperty) and [DataGridColumn.HeaderStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_HeaderStyleProperty) property.
 
