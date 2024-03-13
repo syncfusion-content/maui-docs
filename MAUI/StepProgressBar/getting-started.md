@@ -84,9 +84,9 @@ namespace GettingStarted
 
 ## Populating step progressbar items
 
-You can use ItemsSource property of SfStepProgressBar to populate the step progressbar items. Hence, you must create a item collection and bind it to the progressbar control.
+You can use the ItemsSource property of SfStepProgressBar to populate the step progressbar items. Hence, you must create an item collection and bind it to the progressbar control.
 
-* Create a simple Observable Collection of item for the step progressbar,
+* Create a simple Observable Collection of the item for the step progressbar,
 
 {% tabs %}
 {% highlight c# tabtitle="ViewModel.cs" %}
