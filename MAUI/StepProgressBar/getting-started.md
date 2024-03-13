@@ -167,6 +167,7 @@ this.Content = stepProgressBar;
 {% endtabs %}
 
 ## Active step progression
+## ActiveStepIndex
 The [ActiveStepIndex]() property is used to represent index of the currently active step within the sequence of steps. The [ActiveStepProgressValue]() property is used to add the progress value of the currently active step within a sequence.
 
 {% tabs %}
