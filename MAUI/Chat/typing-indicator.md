@@ -12,7 +12,7 @@ documentation: ug
 In `SfChat`, typing indicator indicates with an animation, that a user (or users) is currently typing, thereby providing an enhanced user experience. To show or hide the typing indicator set the `ShowTypingIndicator` property to `true` or `false` respectively. To show user image and text in the typing indicator create a new instance of `TypingIndicator`, set the `TypingIndicator.Authors` and `TypingIndicator.Text` property and assign the typing indicator instance to the `TypingIndicator` property.
 
 {% tabs %}
-{% highlight xaml hl_lines="14 15" %}
+{% highlight xaml hl_lines="15 16" %}
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:sfChat="clr-namespace:Syncfusion.Maui.Chat;assembly=Syncfusion.Maui.Chat"
@@ -26,9 +26,9 @@ In `SfChat`, typing indicator indicates with an animation, that a user (or users
         <ContentPage.Content>
         <sfChat:SfChat x:Name="sfChat"
                        Messages="{Binding Messages}"
+                       CurrentUser="{Binding CurrentUser}"
                        TypingIndicator="{Binding TypingIndicator}"
-                       ShowTypingIndicator="{Binding ShowTypingIndicator}"
-                       CurrentUser="{Binding CurrentUser}"/>
+                       ShowTypingIndicator="{Binding ShowTypingIndicator}"/>
     </ContentPage.Content>
 </ContentPage>
 
@@ -118,9 +118,7 @@ namespace GettingStarted
                 RaisePropertyChanged("ShowTypingIndicator");
             }
         }
-
         ...
-
     }
 
 {% endhighlight %}
@@ -133,25 +131,19 @@ namespace GettingStarted
 The avatar view in the typing indicator can be customized to show only starting alphabet of the username or only image of the user as avatar by using `TypingIndicator.AvatarViewType` property.
 
 {% tabs %}
-{% highlight c# tabtitle="ViewModel.cs" hl_lines="11" %}
+{% highlight c# tabtitle="ViewModel.cs" hl_lines="8" %}
 public class TypingIndicatorViewModel : INotifyPropertyChanged
 {
-
     ...
-    
-    public GettingStattedViewModel()
+    public TypingIndicatorViewModel()
     {
         this.TypingIndicator = new ChatTypingIndicator();
         this.TypingIndicator.Authors.Add(new Author() { Name = "Harrison", Avatar = "People_Circle14.png" }        
-        
         this.TypingIndicator.AvatarViewType = AvatarViewType.Text;
-        
         this.TypingIndicator.Text = "Harrison is typing...";
         this.ShowTypingIndicator = true;
     }
-
     ...
-
  }
 
 {% endhighlight %}
@@ -161,7 +153,7 @@ public class TypingIndicatorViewModel : INotifyPropertyChanged
 
 ## Notifications when user start/stop typing
  
-In `SfChat`, you can access the typing area in SfChat using the `SfChat.Editor` property, listen to its focus change, text change, completed events to identify when the user starts or ends typing.
+In `SfChat`, you can access the typing area using the `SfChat.Editor` property, listen to its focus change, text change, completed events to identify when the user starts or ends typing.
 
 {% tabs %}
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="9 11" %}
