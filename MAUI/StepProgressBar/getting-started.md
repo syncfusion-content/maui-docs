@@ -130,15 +130,16 @@ public class ViewModel
 The Step progressbar control allows you to bind item collection by setting the [ItemsSource]() property from the [SfStepProgressBar](). Bind item collection in both XAML and C#.
 
 {% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="8" %}
+{% highlight xaml tabtitle="XAML" hl_lines="7" %}
 
 <stepProgressBar:SfStepProgressBar
                     x:Name="stepProgressBar"
-                    Margin="24,10,0,0"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
                     ActiveStepIndex="1"
                     ActiveStepProgressValue="60"
                     LabelSpacing="12"
-                    Orientation="Horizontal"  
+                    Orientation="Vertical"  
                     ItemsSource="{Binding StepProgressItem}">
 </stepProgressBar:SfStepProgressBar>                                                                                              
                 
@@ -153,11 +154,10 @@ The Step progressbar control allows you to bind item collection by setting the [
 ViewModel viewModel = new ViewModel();
 SfStepProgressBar stepProgressBar = new SfStepProgressBar()
 {
-    Margin = new Thickness(24, 10, 0, 0),
     ActiveStepIndex = 1,
     ActiveStepProgressValue = 60,
     LabelSpacing = 12,
-    Orientation = StepProgressBarOrientation.Horizontal,
+    Orientation = StepProgressBarOrientation.Vertical,
     ItemsSource = viewModel.StepProgressItem,
 };
 
@@ -166,7 +166,7 @@ this.Content = stepProgressBar;
 {% endhighlight %}
 {% endtabs %}
 
-## Active step index value and Active progress value
+## Active step progression
 The [ActiveStepIndex]() property is used to represent index of the currently active step within the sequence of steps. The [ActiveStepProgressValue]() property is used to add the progress value of the currently active step within a sequence.
 
 {% tabs %}
@@ -174,15 +174,15 @@ The [ActiveStepIndex]() property is used to represent index of the currently act
 
 <stepProgressBar:SfStepProgressBar
                     x:Name="stepProgressBar"
-                    Margin="24,10,0,0"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
                     ActiveStepIndex="2"
                     ActiveStepProgressValue="60"
                     LabelSpacing="12"
-                    Orientation="Horizontal"  
+                    Orientation="Vertical"  
                     ItemsSource="{Binding StepProgressItem}">
-</stepProgressBar:SfStepProgressBar>                                                                                              
+</stepProgressBar:SfStepProgressBar>
                 
-
 <ContentPage.BindingContext>
     <local:ViewModel />
 </ContentPage.BindingContext>
@@ -193,11 +193,10 @@ The [ActiveStepIndex]() property is used to represent index of the currently act
 ViewModel viewModel = new ViewModel();
 SfStepProgressBar stepProgressBar = new SfStepProgressBar()
 {
-    Margin = new Thickness(24, 10, 0, 0),
     ActiveStepIndex = 2,
     ActiveStepProgressValue = 60,
     LabelSpacing = 12,
-    Orientation = StepProgressBarOrientation.Horizontal,
+    Orientation = StepProgressBarOrientation.Vertical,
     ItemsSource = viewModel.StepProgressItem,
 };
 
