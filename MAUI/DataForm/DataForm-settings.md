@@ -1,10 +1,10 @@
 ---
 layout: post
 title: Change the editor settings in .NET MAUI DataForm control | Syncfusion
-description: Learn about to change the Syncfusion .NET MAUI DataForm (SfDataForm) settings in mobile and desktop applications from a single shared codebase.
-platform: Maui
+description: Learn how to change the Syncfusion .NET MAUI DataForm (SfDataForm) settings in mobile and desktop applications from a single shared codebase.
+platform: maui
 control: SfDataForm
-documentation: UG
+documentation: ug
 ---
 
 # Change the data editor settings (SfDataForm)
@@ -675,3 +675,31 @@ public class DataFormItemManagerEditorExt : DataFormItemManager
 {% endtabs %}
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-dataform/tree/master/EditorViewCustomizationSample)
+
+## Label view customization
+Customize the label view by using the `InitializeDataLabel` method of the  [DataFormItemManager](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItemManager.html).
+
+{% tabs %}
+{% highlight c# %}
+
+this.dataForm.ItemManager = new DataFormItemManagerEditorExt();
+
+public class DataFormItemManagerEditorExt : DataFormItemManager
+{
+    public override void InitializeDataLabel(DataFormItem dataFormItem, Label label)
+    {
+        label.Background = Colors.Orange;
+        label.VerticalOptions = LayoutOptions.Center;
+        label.CharacterSpacing = 2;
+        label.Padding = new Thickness(5, 0, 5, 0);
+        label.Margin = new Thickness(0, 0, 5, 0);
+        label.FontSize = 18;
+        FormattedString formattedString = new FormattedString();
+        formattedString.Spans.Add(new Span { Text = label.Text, TextColor = Colors.White});
+        formattedString.Spans.Add(new Span { Text = " *", TextColor = Colors.Red});
+        label.FormattedText = formattedString;
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
