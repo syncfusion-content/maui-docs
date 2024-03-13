@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Custom controls in .NET MAUI Parallax View Control | Syncfusion
-description: Learn here all about Scrolling support for custom controls support in Syncfusion .NET MAUI Parallax View (SfParallaxView) control and more.
-platform: .NET MAUI
+description: Learn about Scrolling support for custom controls support in Syncfusion .NET MAUI Parallax View (SfParallaxView) control and more.
+platform: MAUI
 control: SfParallaxView
 documentation: ug
 ---
@@ -140,6 +140,6 @@ The [`ParallaxScrollingEventArgs`]() has the following three arguments:
 
 {% endtabs %}
 
-By default, ParallaxView control supports [`.NET MAUI ScrollView`](). For custom controls you need to implement the [`IParallaxView`]() interface.
+By default, the ParallaxView control supports [`.NET MAUI ScrollView`](). For custom controls, you need to implement the [`IParallaxView`]() interface.
 
 You can achieve the parallax scroll support to the custom controls using the native renderers to calculate the total size of the scrollable content. Refer to this [KB article]() for more details.

@@ -1725,12 +1725,12 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
 		<td>
-           SfCalendarViewTheme 
+           SfCalendarTheme 
             <br/>
             <br/>
         </td>
         <td>    
-            By merging this key in application resources, it is possible to customize the appearance of the SfCalendarTheme without merging common theme resource and control style resource dictionaries.
+            By merging this key in application resources, it is possible to customize the appearance of the SfCalendar without merging common theme resource and control style resource dictionaries.
 			
 {% highlight xaml %}
 
@@ -1741,7 +1741,7 @@ This page lists the keys for each control and the element to which it is mapped 
         <ResourceDictionary.MergedDictionaries>
             <syncTheme:SyncfusionThemeResourceDictionary />
             <ResourceDictionary>
-                <x:String x:Key="SfCalendarViewTheme">CommonTheme</x:String>
+                <x:String x:Key="SfCalendarTheme">CommonTheme</x:String>
                 <Color x:Key="SfCalendarHeaderTextColor">Red</Color>
                 <Color x:Key="SfCalendarHeaderBackgroundColor">Green</Color>
             </ResourceDictionary>
@@ -3265,3 +3265,9901 @@ This page lists the keys for each control and the element to which it is mapped 
         <td> Thickness of the progress indicator.<br/><br/></td>
     </tr>
 </table>
+
+## SfPdfViewer
+
+<table>
+    <tr>
+        <th>Theme Dictionary<br/>
+            <br/></th>        
+        <th>
+          Keys
+            <br/>
+            <br/>
+        </th>
+        <th>
+            Description
+            <br/>
+            <br/>
+        </th>
+    </tr>
+
+    <tr>
+        <td rowspan="290">
+            SfPdfViewerStyles  
+            <br/>
+            <br/>
+        </td>
+		<td>
+           SfPdfViewerTheme 
+            <br/>
+            <br/>
+        </td>
+        <td>    
+            By merging this key in application resources, you can customize the appearance of SfPdfViewer without merging common theme resource and control style resource dictionaries.
+			
+{% highlight xaml %}
+
+<Application xmlns:SyncTheme="clr-namespace:Syncfusion.Maui.Themes;assembly=Syncfusion.Maui.Core"
+             ...>
+ <Application.Resources>
+    <SyncTheme:SyncfusionThemeDictionary>
+        <SyncTheme:SyncfusionThemeDictionary.MergedDictionaries>
+            <ResourceDictionary>
+                <x:String x:Key="SfPdfViewerTheme">Custom Theme</x:String>
+                <Color x:Key="SfPdfViewerNormalDialogSaveButtonBackgroundColor">aqua</Color>
+                <Color x:Key="SfPdfViewerNormalScrollHeadBackgroundColor">red</Color>
+                <Color x:Key="SfPdfViewerNormalScrollHeadBorderColor">Blue</Color>
+                <Color x:Key="SfPdfViewerNormalScrollHeadTextColor">green</Color>
+                <Color x:Key="SfPdfViewerNormalContextMenuBackGroundColor">yellow</Color>
+            </ResourceDictionary>
+        </SyncTheme:SyncfusionThemeDictionary.MergedDictionaries>
+    </SyncTheme:SyncfusionThemeDictionary>
+</Application.Resources>
+
+....
+
+</Application>
+
+{% endhighlight %}
+            <br/>
+            <br/>
+        </td>
+        <tr>
+        <td>
+            SfPdfViewerOutlineTabViewContainerBackgroundColor  
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Background colour of the tabview container in the outlineview of the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	</tr>
+    <tr>
+        <td>
+            SfPdfViewerOutlineNoBookMarkTextColor 
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Text colour of the No Bookmark label in the outlineview of the SfPdfViewer.
+        <br/>
+        <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfPdfViewerNormalScrollHeadBorderColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Border color of the scroll head in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerNormalScrollHeadTextColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Text color of the scroll head in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerNormalScrollHeadBackgroundColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Background color of the scroll head in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerNormalPasswordEntryStroke  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Stroke color of the password entry of the password dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerNormalPasswordEntryErrorTextColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Text color of the password entry while entering the wrong password in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerNormalPasswordEntryContainerBackground  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Background color of the password entry of the password dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerNormalPasswordEntryTextColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Normal text color of the password entry of the password dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerNormalDialogOkButtonBackgroundColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Background color of the 'OK' button in the dialogs of the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerHoverDialogOkButtonBackgroundColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Background color of the 'OK' button while hovering over the button in the dialogs of the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerPressedDialogOkButtonBackgroundColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Background color of the 'OK' button while pressing the button in the dialogs of the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerFocusedDialogOkButtonBackgroundColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Background color of the 'OK' button while focusing the button in the dialogs of the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerDisabledDialogOkButtonBackgroundColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Background color of the 'OK' button after disabled the button in the dialogs of the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerNormalDialogOkButtonBorderColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Stroke color of the 'OK' button in the dialogs of the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerHoverDialogOkButtonBorderColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Stroke color of the 'OK' button while hovering over the button in the dialogs of the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerPressedDialogOkButtonBorderColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Stroke color of the 'OK' button while pressing the button in the dialogs of the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerFocusedDialogOkButtonBorderColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Stroke color of the 'OK' button while focusing the button in the dialogs of the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerDisabledDialogOkButtonBorderColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Stroke color of the 'OK' button after disabled the button in the dialogs of the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerNormalDialogOkButtonTextColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Text color of the 'OK' button in the dialogs of the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerHoverDialogOkButtonTextColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Text color of the 'OK' button while hovering over the button in the dialogs of the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerFocusedDialogOkButtonTextColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Text color of the 'OK' button while focusing the button in the dialogs of the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerPressedDialogOkButtonTextColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Text color of the 'OK' button while pressing the button in the dialogs of the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerDisabledDialogOkButtonTextColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Text color of the 'OK' button after disabled the button in the dialogs of the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerNormalDialogTitleTextColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Text color of the title in the dialogs of the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerNormalDialogDescriptionTextColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Text color of the description in the dialogs of the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerNormalDialogCloseButtonBackgroundColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Background color of the 'close' button in the dialogs of the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerHoverDialogCloseButtonBackgroundColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Background color of the 'close' button while hovering over the button in the dialogs of the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerPressedDialogCloseButtonBackgroundColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Background color of the 'close' button while pressing the button in the dialogs of the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerFocusedDialogCloseButtonBackgroundColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Background color of the 'close' button while focusing the button in the dialogs of the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerNormalDialogCloseButtonIconForegroundColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Text color of the 'close' button in the dialogs of the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerHoverDialogCloseButtonIconForegroundColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Text color of the 'close' button while hovering over the in the dialogs of the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerFocusedDialogCloseButtonIconForegroundColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Text color of the 'close' button while focusing the in the dialogs of the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerPressedDialogCloseButtonIconForegroundColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Text color of the 'close' button while pressing the in the dialogs of the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerNormalDialogCloseButtonIconBorderColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Border color of the 'close' button in the dialogs of the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerHoverDialogCloseButtonIconBorderColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Border color of the 'close' button while hovering over the button in the dialogs of the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerFocusedDialogCloseButtonIconBorderColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Border color of the 'close' button while focusing the button in the dialogs of the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerPressedDialogCloseButtonIconBorderColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Border color of the 'close' button while pressing the button in the dialogs of the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerNormalDialogBackgroundColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Background color of the dialogs in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerNormalDialogBorderColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Border color of the dialogs in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerNormalDialogCancelButtonBackgroundColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Background color of the 'cancel' button in the dialogs of the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerHoverDialogCancelButtonBackgroundColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Background color of the 'cancel' button while hovering over the button in the dialogs of the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerPressedDialogCancelButtonBackgroundColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Background color of the 'cancel' button while pressing the button in the dialogs of the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerFocusedDialogCancelButtonBackgroundColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Background color of the 'cancel' button while focusing the button in the dialogs of the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerDisabledDialogCancelButtonBackgroundColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Background color of the 'cancel' button after disabled the button in the dialogs of the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerNormalDialogCancelButtonBorderColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Border color of the 'cancel' button in the dialogs of the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerHoverDialogCancelButtonBorderColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Border color of the 'cancel' button while hovering over the button in the dialogs of the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerPressedDialogCancelButtonBorderColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Border color of the 'cancel' button while pressing the button in the dialogs of the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerFocusedDialogCancelButtonBorderColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Border color of the 'cancel' button while focusing the button in the dialogs of the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerDisabledDialogCancelButtonBorderColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Border color of the 'cancel' button after disabled the button in the dialogs of the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerNormalDialogCancelButtonTextColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Text color of the 'cancel' button in the dialogs of the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerHoverDialogCancelButtonTextColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Text color of the 'cancel' button while hovering over the button in the dialogs of the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerFocusedDialogCancelButtonTextColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Text color of the 'cancel' button while focusing the button in the dialogs of the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerPressedDialogCancelButtonTextColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Text color of the 'cancel' button while pressing the button in the dialogs of the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerDisabledDialogCancelButtonTextColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Text color of the 'cancel' button after disabled the button in the dialogs of the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerNormalDialogOpenButtonBackgroundColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Background color of the 'open' button in the dialogs of the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerHoverDialogOpenButtonBackgroundColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Background color of the 'open' button while hovering over the button in the dialogs of the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerPressedDialogOpenButtonBackgroundColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Background color of the 'open' button while pressing the button in the dialogs of the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerFocusedDialogOpenButtonBackgroundColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Background color of the 'open' button while focusing the button in the dialogs of the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerDisabledDialogOpenBackgroundColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Background color of the 'open' button after disabled the button in the dialogs of the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerNormalDialogOpenButtonBorderColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Border color of the 'open' button in the dialogs of the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerHoverDialogOpenButtonBorderColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Border color of the 'open' button while hovering over the button in the dialogs of the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerPressedDialogOpenButtonBorderColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Border color of the 'open' button while pressing the button in the dialogs of the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerFocusedDialogOpenButtonBorderColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Border color of the 'open' button while focusing the button in the dialogs of the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerDisabledDialogOpenButtonBorderColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Border color of the 'open' button after disabled the button in the dialogs of the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerNormalDialogOpenButtonTextColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Text color of the 'open' button in the dialogs of the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerHoverDialogOpenButtonTextColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Text color of the 'open' button while hovering over the button in the dialogs of the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerFocusedDialogOpenButtonTextColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Text color of the 'open' button while focusing the button in the dialogs of the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerPressedDialogOpenButtonTextColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Text color of the 'open' button while pressing the button in the dialogs of the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerDisabledDialogOpenButtonTextColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Text color of the 'open' button after disabled the button in the dialogs of the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerNormalOutlineTitleTextColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Text color of the title of the outlineview in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerNormalOutlineExpanderTextColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Text color of the expander of the outlineview in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerNormalOutlineExpanderBackgroundColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Background color of the expander of the outlineview in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerHoverOutlineExpanderBackgroundColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Hovering background color of the expander of the outlineview in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerPressedOutlineExpanderBackgroundColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Pressed background color of the expander of the outlineview in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerFocusedOutlineExpanderBackgroundColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Focused background color of the expander of the outlineview in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerNormalOutlineExpanderButtonIconBorderColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+             Border color of the expander button of the outlineview in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerHoverOutlineExpanderButtonIconBorderColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+             Hovering border color of the expander button of the outlineview in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerPressedOutlineExpanderButtonIconBorderColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Pressed border color of the expander button of the outlineview in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerFocusedOutlineExpanderButtonIconBorderColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Focused border color of the expander button of the outlineview in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerNormalOutlineExpanderButtonIconForegroundColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Text color of the expander button of the outlineview in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerHoverOutlineExpanderButtonIconForegroundColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Hovering text color of the expander button of the outlineview in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerFocusedOutlineExpanderButtonIconForegroundColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Focused text color of the expander button of the outlineview in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerPressedOutlineExpanderButtonIconForegroundColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Pressed text color of the expander button of the outlineview in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerNormalOutlineSeparatorBackgroundColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Separator color of outlineview in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerNormalOutlineTitleLabelTextColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Text color of the title of outlineview in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerNormalOutlineContainerBackgroundColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Background color of the outlineview container in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerNormalOutlineCloseButtonBackgroundColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Background color of the close button of the outlineview in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerHoverOutlineCloseButtonBackgroundColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Hovering background color of the close button of the outlineview in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerFocusedOutlineCloseButtonBackgroundColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Focused background color of the close button in the outlineview of the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerPressedOutlineCloseButtonBackgroundColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Pressed background color of the close button in the outlineview of the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerNormalOutlineCloseButtonIconBorderColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Border color of the close button in the outlineview of the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerHoverOutlineCloseButtonIconBorderColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Hovering border color of the close button in the outlineview of the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerPressedOutlineCloseButtonIconBorderColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Pressed border color of the close button in the outlineview of the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerFocusedOutlineCloseButtonIconBorderColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Focused border color of the close button in the outlineview of the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerFocusedOutlineCloseButtonIconBorderColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Focused border color of the close button in the outlineview of the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerNormalOutlineCloseButtonIconForegroundColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Text color of the close button in the outlineview of the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerHoverOutlineCloseButtonIconForegroundColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Hovering text color of the close button in the outlineview of the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerFocusedOutlineCloseButtonIconForegroundColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Focused text color of the close button in the outlineview of the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerPressedOutlineCloseButtonIconForegroundColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Pressed text color of the close button in the outlineview of the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerNormalContextMenuBackgroundColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Background color of the text selection context menu in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerNormalDialogListTextColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Text color of the dialog list in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerNormalDialogSaveButtonTextColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Text color of the 'Save' button in the dialog of the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerHoverDialogSaveButtonTextColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Hovering text color of the 'Save' button in the dialog of the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerPressedDialogSaveButtonTextColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Pressed text color of the 'Save' button in the dialog of the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerDisabledDialogSaveButtonTextColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Text color of the 'Save' button after disabled the button in the dialog of the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerNormalDialogSaveButtonBackgroundColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Background color of the 'Save' button in the dialog of the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerHoverDialogSaveButtonBackgroundColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Hovering background color of the 'Save' button in the dialog of the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerPressedDialogSaveButtonBackgroundColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Pressed background color of the 'Save' button in the dialog of the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerDisabledDialogSaveButtonBackgroundColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Background color of the 'Save' button after disabled the button in the dialog of the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerNormalDialogAnnotationTextEditTopPanelBackgroundColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Header background color of the free text dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerNormalDialogAnnotationTextEditBackgroundColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Background color of the free text dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerNormalDialogAnnotationTextEditTextColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Text color of the free Text editor in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerNormalDialogAnnotationTextEditPlaceHolderColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Place holder color of the free Text editor in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerNormalDialogNormalListCheckBoxColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Check box color of the list box form field in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerNormalDialogSelectedListCheckBoxColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Selected check box color of the list box form field in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerNormalContextMenuTextColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Text color of the text selection context menu in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerNormalSeparatorBackgroundColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Separator color of the text selection context menu in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerNormalContextMenuBorderBackgroundColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Border color of the text selection context menu in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerNormalMoreOptionsBorderBackgroundColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Border color of the text more options menu in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerNormalContextMenuHoverColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Hovering background color of the items in the text selection context menu of SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerNormalContextMenuPressedColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Pressed background color of the items in the text selection context menu of SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerNormalContextMenuHoverTextColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Text color of the hovered item in the text selection context menu of SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerNormalContextMenuPressedTextColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Text color of the pressed item in the text selection context menu of the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerSignaturePadHeaderTextColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Header text color of the signature pad in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerSignaturePadBackgroundColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Background color of the signature pad's main container in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerSignaturePadBorderColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Border color of the draw signature pad in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerSignaturePadClearButtonTextColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Text color of the signature pad's 'Clear' button in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerSignaturePadClearButtonHoverTextColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Hovering text color of the signature pad's 'Clear' button in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerSignaturePadClearButtonPressedTextColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Pressed text color of the signature pad's 'Clear' button in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerSignaturePadClearButtonBackgroundColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Background color of the signature pad's 'Clear' button in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerSignaturePadClearButtonHoverBackgroundColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Hovering background color of the signature pad's 'Clear' button in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerSignaturePadClearButtonPressedBackgroundColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Pressed background color of the signature pad's 'Clear' button in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerSignaturePadCloseButtonTextColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Text color of the signature pad's 'Close' button in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerSignaturePadCloseButtonHoverTextColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Hovering text color of the signature pad's 'Close' button in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerSignaturePadCloseButtonPressedTextColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Pressed text color of the signature pad's 'Close' button in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerSignaturePadCloseButtonBackGroundColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Background color of the signature pad's 'Close' button in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerSignaturePadCloseButtonHoverBackgroundColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Hovering Background color of the signature pad's 'Close' button in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerSignaturePadCloseButtonPressedBackgroundColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Pressed Background color of the signature pad's 'Close' button in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerSignaturePadClearButtonDisabledTextColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Background color of the signature pad's 'Clear' button after disabled in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerSignaturePadCreateButtonTextColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Text color of the signature pad's 'Crete' button in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerSignatureViewColorSelectorColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Color selector color of the signature pad in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerSignatureViewDrawTabBackgroundColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Background color of the signature pad's draw tab  in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerSignatureViewUploadTabButtonColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Upload button color of the signature pad in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerSignatureViewUploadTabButtonBorderColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Border color of the signature pad's upload button in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerSignatureViewUploadTabDragandDropTextColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Drag and drop text color of the signature pad's upload tab in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerSignatureViewUploadTabBackgroundColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Background color of the signature pad's upload tab in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerSignatureViewHeaderBackgroundColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Background color of integrated signature view's header in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerSignatureViewBackButtonTextColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Text color of signature pad's back button in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerSignatureViewOkButtonTextColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Text color of signature pad's OK button in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerSignatureViewHeaderTextColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Text color of integrated signature view's header in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerSignatureViewSaveTextColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Text color of integrated signature view's save button in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerSignatureViewSaveCheckboxColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Checkbox color of signature pad in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerSignatureViewClearTextColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Text color of the signature pad's clear button in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerSignatureViewSaveLayoutBackgroundColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Background color of the signature pad's save layout in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerSignatureViewColorBarBackgroundColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Background color of signature pad's color bar in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerSignatureListViewItemBorderColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Border color of signature listview's items in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerSignatureListViewItemBackgroundColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Background color of signature listview's items in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerSignatureListViewLongPressedItemBackgroundColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Background color of signature listview's items while long press in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerSignatureListViewLongPressedSItemBorderColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Border color of signature listview's items while long pressing on item in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerSignatureListViewTappedItemBackgroundColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Background color of signature listview's items while tapping on the item in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerSignatureListBackgroundColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Background color of signature listview in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerSignatureCreateButtonTextColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Text color of the signature listview container's create button in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerSignatureCreateButtonStrokeColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Stroke color of the signature listview container's create button in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerSignatureListDeleteButtonColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Text color of the signature listview container's delete button in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerSignatureListViewHeaderTextColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Text color of the signature listview container's header in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerSignatureListViewDeleteButtonTextColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Text color of the signature listview delete button in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerSignatureListViewCreateButtonTextColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Text color of the signature listview create button in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerSignatureTextNormalStrokeColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Border color of the text signature views in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerSignatureTextSelectedStrokeColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Border color of the selected text signature view in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerDesktopSignatureTextSelectedBackgroundColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Background color of the selected text signature view (Desktop) in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerMobileSignatureTextSelectedBackgroundColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Background color of the selected text signature view (Mobile) in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerSignatureListViewBackgroundColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Background color of the signature swipe up view (Mobile) in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerSignatureViewTypeTabBackgroundColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Background color of the signature type tab in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerSignatureViewTypeTabTextEntryBorderColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Border color of the signature type tab's entry in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerSignatureViewTypeTabSignatureLabelBorderColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Border color of the signature type tab's label in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerSignaturePadCreateButtonHoverTextColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Hovering text color of the signature pad's create button in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerSignaturePadCreateButtonPressedTextColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Pressed text color of the signature pad's create button in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerSignaturePadCreateButtonHoverBackgroundColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Hovering background color of the signature pad's create button in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerSignaturePadCreateButtonPressedBackgroundColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Pressed background color of the signature pad's create button in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerSignaturePadCreateButtonDisabledTextColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Text color of the signature pad's create button after disabled in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerSignaturePadCloseButtonDisabledTextColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Text color of the signature pad's close button after disabled in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerSignaturePadCancelButtonDisabledTextColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Text color of the signature pad's cancel button after disabled in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerSignaturePadCancelButtonHoverTextColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Hovering text color of the signature pad's cancel button in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerSignaturePadCancelButtonPressedTextColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Pressed text color of the signature pad's cancel button in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerSignaturePadCancelHoverBackgroundColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Hovering background color of the signature pad's cancel button in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            SfPdfViewerSignaturePadCancelPressedBackgroundColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Pressed background color of the signature pad's cancel button in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+</table>
+
+## SfTreeView
+
+<table>
+    <tr>
+        <th>Theme Dictionary<br/>
+            <br/></th>        
+        <th>
+          Keys
+            <br/>
+            <br/>
+        </th>
+        <th>
+            Description
+            <br/>
+            <br/>
+        </th>
+    </tr>
+
+    <tr>
+        <td rowspan="12">
+            SfTreeViewStyles
+            <br/>
+            <br/>
+        </td>
+        <td>
+           SfTreeViewTheme 
+            <br/>
+            <br/>
+        </td>
+        <td>    
+            By merging this key in application resources, you can customize the appearance of SfTreeView without merging common theme resource and control style resource dictionaries.
+			
+{% highlight xaml %}
+
+<Application xmlns:syncTheme="clr-namespace:Syncfusion.Maui.Themes;assembly=Syncfusion.Maui.Core"
+             ...>
+ <Application.Resources>
+    <ResourceDictionary>
+        <ResourceDictionary.MergedDictionaries>
+            <syncTheme:SyncfusionThemeResourceDictionary />
+            <ResourceDictionary>
+                <x:String x:Key="SfTreeViewTheme">CommonTheme</x:String>
+                <Color x:Key="SfTreeViewNormalTreeViewItemBackground">LightBlue</Color>
+                <Color x:Key="SfTreeViewHoverTreeViewItemBackground">Green</Color>
+            </ResourceDictionary>
+        </ResourceDictionary.MergedDictionaries>
+    </ResourceDictionary>
+ </Application.Resources>
+
+....
+
+</Application>
+
+{% endhighlight %}
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td> SfTreeViewNormalTreeViewItemBackground <br/><br/></td>
+        <td> Background color of TreeViewItem.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfTreeViewHoverTreeViewItemBackground  <br/><br/></td> 
+        <td> Background color of TreeViewItem when it is in hover state.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfTreeViewFocusedTreeViewItemBackground <br/><br/></td> 
+        <td> Background color of TreeViewItem when it is in focused state.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfTreeViewPressedTreeViewItemBackground <br/><br/></td>
+        <td> Background color of TreeViewItem when it is in pressed state.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfTreeViewFocusedTreeViewItemTextColor <br/><br/></td>
+        <td> Text color of the TreeViewItem when it is in focused state.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfTreeViewNormalTreeViewItemTextColor  <br/><br/></td> 
+        <td> Text color of the TreeViewItem.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfTreeViewNormalExpanderBackground  <br/><br/></td> 
+        <td> Background color of Expander View.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfTreeViewNormalExpanderColor  <br/><br/></td> 
+        <td> Color of the expander icon.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfTreeViewFocusedTreeViewItemStroke <br/><br/></td> 
+        <td> Stroke color of the TreeViewItem when it is in focused state during keyboard navigation.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfTreeViewFocusedTreeViewItemStrokeThickness <br/><br/></td> 
+        <td> Stroke thickness of the TreeViewItem when it is in focused state during keyboard navigation.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfTreeViewNormalLoadMoreIndicatorColor <br/><br/></td> 
+        <td> Color of the load more indicator.<br/><br/></td>
+    </tr>
+</table>
+
+## SfImageEditor
+
+<table>
+    <tr>
+        <th>Theme Dictionary<br/>
+            <br/></th>        
+        <th>
+          Keys
+            <br/>
+            <br/>
+        </th>
+        <th>
+            Description
+            <br/>
+            <br/>
+        </th>
+    </tr>
+
+    <tr>
+        <td rowspan="19">
+            SfImageEditorStyles  
+            <br/>
+            <br/>
+        </td>
+		<td>
+           SfImageEditorTheme 
+            <br/>
+            <br/>
+        </td>
+        <td>    
+            By merging this key in application resources, it is possible to customize the appearance of the SfImageEditor without merging common theme resource and control style resource dictionaries.
+			
+{% highlight xaml %}
+
+<Application xmlns:syncTheme="clr-namespace:Syncfusion.Maui.Themes;assembly=Syncfusion.Maui.Core"
+             ...>
+ <Application.Resources>
+    <ResourceDictionary>
+        <ResourceDictionary.MergedDictionaries>
+            <syncTheme:SyncfusionThemeResourceDictionary />
+            <ResourceDictionary>
+                <x:String x:Key="SfImageEditorTheme">CommonTheme</x:String>
+                <Color x:Key="SfImageEditorNormalToolbarBackgroundColor">Red</Color>
+                <Color x:Key="SfImageEditorNormalToolbarTextColor">Green</Color>
+            </ResourceDictionary>
+        </ResourceDictionary.MergedDictionaries>
+    </ResourceDictionary>
+ </Application.Resources>
+
+....
+
+</Application>
+
+{% endhighlight %}
+            <br/>
+            <br/>
+        </td>
+	</tr>
+    
+    <tr>
+    <td>
+            SfImageEditorNormalBackground    
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Background color of image editor.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+    <tr>
+    <td>
+            SfImageEditorNormalToolbarBackgroundColor     
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of toolbar background.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfImageEditorNormalToolbarBorderColor      
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of toolbar border in image editor. 
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfImageEditorNormalToolbarIconColor       
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of toolbar icon in image editor. 
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfImageEditorDisabledToolbarIconColor        
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of toolbar icon when it is disabled.  
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfImageEditorHoverToolbarIconBackground         
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of toolbar icon when it is hovered.   
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfImageEditorPressedToolbarIconBackground          
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of toolbar icon when it is in pressed state. 
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfImageEditorNormalToolbarTextColor           
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of toolbar text in image editor.   
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfImageEditorHoverToolbarTextColor            
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of toolbar text when it is hovered.   
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfImageEditorPressedToolbarTextColor             
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of toolbar text when it is pressed.    
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfImageEditorDisabledToolbarTextColor              
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of toolbar text when it is disabled.    
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfImageEditorTooltipBackground               
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Background Color of tooltip in Image editor toolbar    
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfImageEditorTooltipTextColor                
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of tooltip text in image editor     
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfImageEditorFocusedColorPaletteColor                 
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of color palate icon when it is selected.     
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfImageEditorSelectionStroke                  
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of crop layer and annotations selection stroke.     
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfImageEditorNormalSavePopupBackground                   
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of saved message popup background.     
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfImageEditorNormalSavePopupTextColor                    
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of saved message popup text.      
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfImageEditorToolbarIconSeparatorColor                     
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of tool bar icons divider line.     
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfImageEditorNormalToolbarTextFontSize                      
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Font size of toolbar text in image editor.    
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfImageEditorTooltipTextFontSize                       
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Font size of tooltip text in image editor      
+            <br/>
+            <br/>
+        </td>
+    </tr>
+</table>
+
+
+## SfSegmentedControl
+
+<table>
+    <tr>
+        <th>Theme Dictionary<br/>
+            <br/></th>        
+        <th>
+          Keys
+            <br/>
+            <br/>
+        </th>
+        <th>
+            Description
+            <br/>
+            <br/>
+        </th>
+    </tr>
+
+    <tr>
+        <td rowspan="14">
+            SfSegmentedControlStyles
+            <br/>
+            <br/>
+        </td>
+		<td>
+           SfSegmentedControlTheme 
+            <br/>
+            <br/>
+        </td>
+        <td>    
+            By merging this key in application resources, you can customize the appearance of SfSegmentedControl without merging common theme resource and control style resource dictionaries.
+			
+{% highlight xaml %}
+
+<Application xmlns:syncTheme="clr-namespace:Syncfusion.Maui.Themes;assembly=Syncfusion.Maui.Core"
+             ...>
+ <Application.Resources>
+    <ResourceDictionary>
+        <ResourceDictionary.MergedDictionaries>
+            <syncTheme:SyncfusionThemeResourceDictionary />
+            <ResourceDictionary>
+                <x:String x:Key="SfSegmentedControlTheme">CommonTheme</x:String>
+                <Color x:Key="SfSegmentedControlNormalStroke">Red</Color>
+                <Color x:Key="SfSegmentedControlNormalBackground">Green</Color>
+            </ResourceDictionary>
+        </ResourceDictionary.MergedDictionaries>
+    </ResourceDictionary>
+ </Application.Resources>
+
+....
+
+</Application>
+
+{% endhighlight %}
+            <br/>
+            <br/>
+        </td>
+	</tr>
+    
+    <tr>
+    <td>
+            SfSegmentedControlNormalStroke    
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of border in segmented control.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+    <tr>
+    <td>
+            SfSegmentedControlNormalTextColor     
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of text in segmented control.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfSegmentedControlNormalBackground      
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Background color of segmented control.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfSegmentedControlDisabledSegmentBackground       
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Background Color of segment when it is disabled. 
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfSegmentedControlDisabledSegmentTextColor        
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of segment item text when it is disabled.  
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfSegmentedControlSelectionBackground         
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Background color of segment when it is selected.   
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfSegmentedControlSelectionTextColor          
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of segmented items text when it is selected. 
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfSegmentedControlSelectionStroke           
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of segmented item border when it is selected.   
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfSegmentedControlHoveredBackground            
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Background color of segment when it is hovered.   
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfSegmentedControlKeyboardFocusStroke             
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Segmented controls border color when it is focused using the keyboard navigation keys.    
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfSegmentedControlNormalStrokeThickness              
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Thickness of the border stroke in the segmented control.    
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfSegmentedControlNormalCornerRadius               
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Corner radius of the segmented control.     
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfSegmentedControlNormalSegmentCornerRadius                
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Corner radius of segment in segmented control.      
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfSegmentedControlNormalFontSize                 
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Font size of the segment item in segmented control.   
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfSegmentedControlBorderSelectionStrokeThickness                  
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Thickness of the border stroke in segmented control, when it is selected.     
+            <br/>
+            <br/>
+        </td>
+    </tr>
+</table>
+
+
+## SfDataForm
+
+<table>
+    <tr>
+        <th>Theme Dictionary<br/>
+            <br/></th>        
+        <th>
+          Keys
+            <br/>
+            <br/>
+        </th>
+        <th>
+            Description
+            <br/>
+            <br/>
+        </th>
+    </tr>
+
+    <tr>
+        <td rowspan="22">
+            SfDataFormStyles  
+            <br/>
+            <br/>
+        </td>
+		<td>
+           SfDataFormTheme 
+            <br/>
+            <br/>
+        </td>
+        <td>    
+            By merging this key in application resources, it is possible to customize the appearance of the SfDataForm without merging common theme resource and control style resource dictionaries.
+			
+{% highlight xaml %}
+
+<Application xmlns:syncTheme="clr-namespace:Syncfusion.Maui.Themes;assembly=Syncfusion.Maui.Core"
+             ...>
+ <Application.Resources>
+    <ResourceDictionary>
+        <ResourceDictionary.MergedDictionaries>
+            <syncTheme:SyncfusionThemeResourceDictionary />
+            <ResourceDictionary>
+                <x:String x:Key="SfDataFormTheme">CommonTheme</x:String>
+                <Color x:Key="SfDataFormNormalEditorTextColor">Red</Color>
+                <Color x:Key="SfDataFormNormalLabelTextColor">Green</Color>
+            </ResourceDictionary>
+        </ResourceDictionary.MergedDictionaries>
+    </ResourceDictionary>
+ </Application.Resources>
+
+....
+
+</Application>
+
+{% endhighlight %}
+            <br/>
+            <br/>
+        </td>
+	</tr>
+    
+    <tr>
+    <td>
+            SfDataFormNormalBackground    
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Background color of dataform.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+    <tr>
+    <td>
+            SfDataFormNormalEditorBackground     
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Background color of dataform editors.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfDataFormDisabledEditorBackground      
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Disabled editor`s background color. 
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfDataFormNormalEditorTextColor       
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Text color of the dataform editors.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfDataFormDisabledEditorTextColor        
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Disabled editor`s text color.  
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfDataFormNormalEditorPlaceholderColor         
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Placeholder color of the editor.   
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfDataFormNormalEditorStroke          
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Border color of the editor.  
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfDataFormFocusedEditorStroke           
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Border color of the editor when it is focused.   
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfDataFormDisabledEditorStroke            
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Border color of the editor when it is disabled.   
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfDataFormNormalLabelTextColor             
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Text color of the dataform labels.    
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfDataFormNormalErrorLabelTextColor               
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Error label`s text color.     
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfDataFormNormalValidMessageLabelTextColor                
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Valid message label`s text color.      
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfDataFormNormalGroupHeaderTextColor                 
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of group header text.     
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfDataFormNormalGroupHeaderBackground                  
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Background color of group header.     
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfDataFormHoverGroupHeaderBackground                   
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Background color of group header when it is hovered.     
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfDataFormNormalGroupHeaderIconColor                    
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of group header icon.      
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfDataFormNormalEditorTextFontSize                     
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Font size of editor text in dataform.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfDataFormNormalLabelFontSize                      
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Font size of label in dataform.     
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfDataFormNormalErrorLabelFontSize                       
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Font size of error label's in dataform. 
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+    <tr>
+    <td>
+            SfDataFormNormalValidMessageLabelFontSize                       
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Font size of valid message label's in dataform.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+    <tr>
+    <td>
+            SfDataFormNormalGroupHeaderTextFontSize                       
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Font size of group header text in dataform.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+</table>
+
+
+## SfMaps
+
+<table>
+    <tr>
+        <th>Theme Dictionary<br/>
+            <br/></th>        
+        <th>
+          Keys
+            <br/>
+            <br/>
+        </th>
+        <th>
+            Description
+            <br/>
+            <br/>
+        </th>
+    </tr>
+
+    <tr>
+        <td rowspan="32">
+            SfMapsStyles  
+            <br/>
+            <br/>
+        </td>
+		<td>
+           SfMapsTheme 
+            <br/>
+            <br/>
+        </td>
+        <td>    
+            By merging this key in application resources, it is possible to customize the appearance of the SfMaps without merging common theme resource and control style resource dictionaries.
+			
+{% highlight xaml %}
+
+<Application xmlns:syncTheme="clr-namespace:Syncfusion.Maui.Themes;assembly=Syncfusion.Maui.Core"
+             ...>
+ <Application.Resources>
+    <ResourceDictionary>
+        <ResourceDictionary.MergedDictionaries>
+            <syncTheme:SyncfusionThemeResourceDictionary />
+            <ResourceDictionary>
+                <x:String x:Key="SfMapsTheme">CommonTheme</x:String>
+                <Color x:Key="SfMapsShapeLayerNormalShapeFillColor">Red</Color>
+                <Color x:Key="SfMapsShapeLayerNormalShapeStroke">Green</Color>
+            </ResourceDictionary>
+        </ResourceDictionary.MergedDictionaries>
+    </ResourceDictionary>
+ </Application.Resources>
+
+....
+
+</Application>
+
+{% endhighlight %}
+            <br/>
+            <br/>
+        </td>
+	</tr>
+    
+    <tr>
+    <td>
+            SfMapsNormalBackground    
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Background color of maps.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+    <tr>
+    <td>
+            SfMapsBubbleNormalFillColor     
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of bubble in maps.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfMapsBubbleNormalStroke      
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of bubble border in maps. 
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfMapsBubbleHoverFillColor       
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of bubble when it is hovered. 
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfMapsBubbleHoverStroke        
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of bubble border when it is hovered.  
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfMapsTooltipBackground         
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Background Color of tooltip in maps.   
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfMapsTooltipTextColor          
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of tooltip text in maps.  
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfMapsShapeLayerSelectedShapeFillColor           
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of shape layer shape when it is selected.   
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfMapsShapeLayerSelectedShapeStroke            
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of shape layer shape stroke when it is selected.   
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfMapsShapeLayerNormalShapeFillColor             
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of shape layer in maps.  
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfMapsShapeLayerNormalShapeStroke              
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of shape layer stroke.     
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfMapsShapeLayerShapeHoverFillColor               
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of shape layer shape when it is hovered.    
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfMapsShapeLayerShapeHoverStroke                
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of shape layer shape stroke when it is hovered.      
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfMapsShapeSubLayerSelectedShapeFillColor                 
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of sublayer shape when it is selected.      
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfMapsShapeSubLayerSelectedShapeStroke                  
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of sublayer shape stroke when it is selected.     
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfMapsShapeSubLayerNormalShapeFillColor                   
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of shape sublayer in maps.     
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfMapsShapeSubLayerNormalShapeStroke                    
+            <br/>
+            <br/>
+        </td>
+        <td>
+             Color of shape sublayer stroke in maps.      
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfMapsShapeSubLayerShapeHoverFillColor                     
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of sublayer shape when it is hovered.     
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfMapsShapeSubLayerShapeHoverStroke                      
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of sublayer shape stroke when it is hovered.     
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfMapsArcStroke                       
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of arc layer in maps.      
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+    <tr>
+    <td>
+            SfMapsLineStroke                       
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of line layer in maps.      
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+    <tr>
+    <td>
+            SfMapsCircleFillColor                       
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of circle layer in maps.      
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+    <td>
+            SfMapsCircleStroke                       
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of circle layer stroke.      
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+    <td>
+            SfMapsMarkerIconFillColor                       
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of marker icon in maps.      
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+    <td>
+            SfMapsMarkerIconStroke                       
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of marker icon stroke.      
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+    <td>
+            SfMapsPolygonFillColor                       
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of polygon layer in maps.      
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+    <td>
+            SfMapsPolygonStroke                       
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of polygon layer stroke.      
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+    <td>
+            SfMapsPolyLineStroke                       
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of polyline layer in maps.      
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+    <td>
+            SfMapsTooltipTextFontSize                       
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Font size of tooltip text in maps.      
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+    <td>
+            SfMapsDataLabelTextFontSize                       
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Font size of data label in maps.      
+            <br/>
+            <br/>
+        </td>
+    </tr>
+</table>
+
+
+## SfSchedule
+
+<table>
+    <tr>
+        <th>Theme Dictionary<br/>
+            <br/></th>        
+        <th>
+          Keys
+            <br/>
+            <br/>
+        </th>
+        <th>
+            Description
+            <br/>
+            <br/>
+        </th>
+    </tr>
+
+    <tr>
+        <td rowspan="30">
+            SfSchedulerStyles  
+            <br/>
+            <br/>
+        </td>
+		<td>
+           SfSchedulerTheme 
+            <br/>
+            <br/>
+        </td>
+        <td>    
+            By merging this key in application resources, it is possible to customize the appearance of the SfScheduler without merging common theme resource and control style resource dictionaries.
+			
+{% highlight xaml %}
+
+<Application xmlns:syncTheme="clr-namespace:Syncfusion.Maui.Themes;assembly=Syncfusion.Maui.Core"
+             ...>
+ <Application.Resources>
+    <ResourceDictionary>
+        <ResourceDictionary.MergedDictionaries>
+            <syncTheme:SyncfusionThemeResourceDictionary />
+            <ResourceDictionary>
+                <x:String x:Key="SfSchedulerTheme">CommonTheme</x:String> 
+                <Color x:Key="SfSchedulerNormalHeaderTextColor">Red</Color>
+                <Color x:Key="SfSchedulerNormalViewHeaderDayTextColor">Blue</Color>
+                <Color x:Key="SfSchedulerNormalViewHeaderDateTextColor">Blue</Color> 
+            </ResourceDictionary>
+        </ResourceDictionary.MergedDictionaries>
+    </ResourceDictionary>
+ </Application.Resources>
+
+....
+
+</Application>
+
+{% endhighlight %}
+            <br/>
+            <br/>
+        </td>
+	</tr>
+    
+    <tr>
+    <td>
+            SfSchedulerHoverColor    
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of scheduler cells when it is hovered
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+    <tr>
+    <td>
+            SfSchedulerNormalBackground     
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Background color of scheduler.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfSchedulerDisabledNavigationArrowColor      
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of navigation arrow when it is disabled. 
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfSchedulerNormalMoreAppointmentIndicatorColor       
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the more appointment indicator icons. 
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfSchedulerNormalSelectedCellBackground        
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Background Color of selected cell in scheduler.  
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfSchedulerNormalTodayHighlightBrush         
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of today highlight circle.  
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfSchedulerNormalSelectedAppointmentBackground          
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of appointment border when it is selected.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfSchedulerNormalCellBorderBrush           
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of cell border in scheduler.   
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfSchedulerNormalTodayTextColor            
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of today text in scheduler.   
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfSchedulerDisabledDateBackground             
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Disabled color of date.  
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfSchedulerDisabledDateTextColor              
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Disabled color of date text.     
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfSchedulerNormalAppointmentBackground               
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Background Color of appointment layout in day, week and work week view.    
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfSchedulerNormalWeekNumberBackground                 
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Background Color of week number in scheduler.      
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfSchedulerNormalWeekNumberTextColor                  
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of week number text.     
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfSchedulerNormalHeaderBackground                   
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Background Color of header in scheduler.     
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfSchedulerNormalHeaderTextColor                    
+            <br/>
+            <br/>
+        </td>
+        <td>
+             Color of header text in scheduler.      
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfSchedulerNormalViewHeaderBackground                     
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Background Color of view header.     
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfSchedulerNormalViewHeaderDayTextColor                      
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of view header day text.     
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfSchedulerNormalViewHeaderDateTextColor                       
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of view header date text.     
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+    <tr>
+    <td>
+            SfSchedulerNormalAllowedViewDropDownShadowBrush                       
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of allowed view drop-down shadow.      
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+    <tr>
+    <td>
+            SfSchedulerHoverHeaderAllowedViewButtonBackground                       
+            <br/>
+            <br/>
+        </td>
+        <td>
+           Background Color of allowed view button.      
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+    <td>
+            SfSchedulerPressedAllowedViewMoreIconButtonBackground                       
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Background Color of allowed view more icon button when it is selected.      
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+    <td>
+            SfSchedulerNormalTodayTextFontSize                       
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Font size of today text in scheduler.      
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+    <td>
+            SfSchedulerDisabledDateTextFontSize                       
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Font size of disabled date text.     
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+    <td>
+            SfSchedulerNormalAppointmentTextFontSize                       
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Font size of appointment text in scheduler.      
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+    <td>
+            SfSchedulerNormalWeekNumberTextFontSize                       
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Font size of week number text.      
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+    <td>
+            SfSchedulerNormalHeaderFontSize                       
+            <br/>
+            <br/>
+        </td>
+        <td>
+             Font size of header text in scheduler.                 
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+    <td>
+            SfSchedulerNormalViewHeaderDayTextFontSize                       
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Font size of view header day text.      
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+    <td>
+            SfSchedulerNormalViewHeaderDateTextFontSize                       
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Font size of view header date text.      
+            <br/>
+            <br/>
+        </td>
+    </tr>
+</table>
+
+## SfTreeMap
+
+<table>
+    <tr>
+        <th>Theme Dictionary<br/>
+            <br/></th>        
+        <th>
+          Keys
+            <br/>
+            <br/>
+        </th>
+        <th>
+            Description
+            <br/>
+            <br/>
+        </th>
+    </tr>
+
+    <tr>
+        <td rowspan="18">
+            SfTreeMapStyles  
+            <br/>
+            <br/>
+        </td>
+		<td>
+           SfTreeMapTheme 
+            <br/>
+            <br/>
+        </td>
+        <td>    
+            By merging this key in application resources, it is possible to customize the appearance of the SfTreeMap without merging common theme resource and control style resource dictionaries.
+			
+{% highlight xaml %}
+
+<Application xmlns:syncTheme="clr-namespace:Syncfusion.Maui.Themes;assembly=Syncfusion.Maui.Core"
+             ...>
+ <Application.Resources>
+    <ResourceDictionary>
+        <ResourceDictionary.MergedDictionaries>
+            <syncTheme:SyncfusionThemeResourceDictionary />
+            <ResourceDictionary>
+                <x:String x:Key="SfTreeMapTheme">CommonTheme</x:String> 
+                <Color x:Key="SfTreeMapNormalBackground">Blue</Color> 
+                <Color x:Key="SfTreeMapGroupItemNormalBackground">Green</Color> 
+            </ResourceDictionary>
+        </ResourceDictionary.MergedDictionaries>
+    </ResourceDictionary>
+ </Application.Resources>
+
+....
+
+</Application>
+
+{% endhighlight %}
+            <br/>
+            <br/>
+        </td>
+	</tr>
+    
+    <tr>
+    <td>
+            SfTreeMapNormalBackground    
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Background color of treemap.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+    <tr>
+    <td>
+            SfTreeMapSelectedItemStroke     
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of a treemap item's border when it is selected.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfTreeMapItemHoverStroke      
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of a treemap item's border when it is hovered. 
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfTreeMapSelectedItemHoverStroke       
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of a treemap selected item when it is hovered.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfTreeMapToolTipNormalBackground        
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Background color of tooltip in treemap. 
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfTreeMapToolTipNormalStroke         
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of tooltip stroke in treemap.  
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfTreeMapToolTipNormalTextColor          
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of tooltip text in treemap.  
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfTreeMapGroupItemNormalBackground           
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Background color of group item in treemap. 
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfTreeMapGroupItemNormalStroke           
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of group item stroke.   
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfTreeMapGroupItemNormalTextColor             
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of group item text.  
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfTreeMapLegendNormalTextColor              
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of legend text in treemap.     
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfTreeMapItemKeyboardFocusedStroke               
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of keyboard focused stroke in treemap.     
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfTreeMapSelectedItemStrokeWidth                
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Size of selected item border in treemap.      
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfTreeMapGroupItemNormalStrokeWidth                 
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Stroke width of group item in treemap.     
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfTreeMapToolTipNormalFontSize                  
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Font size of tooltip text in treemap.    
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfTreeMapGroupItemNormalFontSize                   
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Font size of group item text.     
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfTreeMapLegendNormalFontSize                    
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Font size of legend text in treemap.      
+            <br/>
+            <br/>
+        </td>
+    </tr>
+</table>
+
+## SfChat
+
+<table>
+    <tr>
+        <th>Theme Dictionary<br/>
+            <br/></th>
+        <th>
+          Keys
+            <br/>
+            <br/>
+        </th>
+        <th>
+            Description
+            <br/>
+            <br/>
+        </th>
+    </tr>
+    <tr>
+    <td rowspan="99">
+            SfChatStyles
+            <br/>
+            <br/>
+        </td>
+		<td>
+           SfChatTheme 
+            <br/>
+            <br/>
+        </td>
+        <td>
+            By merging this key in application resources, it is possible to customize the appearance of the SfChat without merging common theme resource and control style resource dictionaries.
+			
+{% highlight xaml %}
+
+<Application xmlns:syncTheme="clr-namespace:Syncfusion.Maui.Themes;assembly=Syncfusion.Maui.Core"
+             ...>
+ <Application.Resources>
+    <ResourceDictionary>
+        <ResourceDictionary.MergedDictionaries>
+            <syncTheme:SyncfusionThemeResourceDictionary />
+            <ResourceDictionary>
+                <x:String x:Key="SfChatheme">CommonTheme</x:String>
+                <Color x:Key="SfChatIncomingMessageBackground">Red</Color>
+                <Color x:Key="SfChatOutgoingMessageBackground">Green</Color>
+            </ResourceDictionary>
+        </ResourceDictionary.MergedDictionaries>
+    </ResourceDictionary>
+ </Application.Resources>
+
+....
+
+</Application>
+
+{% endhighlight %}
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <!--Incoming message-->
+    <tr>
+        <td> SfChatIncomingMessageBackground <br/><br/></td>
+        <td> Background color of an incoming message.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfChatIncomingMessageTextColor <br/><br/></td>
+        <td> Text color of an incoming message.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfChatIncomingMessageFontFamily <br/><br/></td>
+        <td> Font family of an incoming message.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfChatIncomingMessageFontAttributes <br/><br/></td>
+        <td> Font attributes of an incoming message.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfChatIncomingMessageFontSize <br/><br/></td>
+        <td> Font size of an incoming message.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfChatIncomingMessageAuthorTextColor <br/><br/></td>
+        <td> Text color of the author name in an incoming message.<br/><br/></td>
+    </tr>
+     <tr>
+        <td> SfChatIncomingMessageAuthorFontFamily <br/><br/></td>
+        <td> Font family of the author name in an incoming message.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfChatIncomingMessageAuthorFontAttributes <br/><br/></td>
+        <td> Font attributes of the author name in an incoming message.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfChatIncomingMessageAuthorFontSize <br/><br/></td>
+        <td> Font size of the author name in an incoming message.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfChatIncomingMessageTimestampTextColor <br/><br/></td>
+        <td> Text color of the timestamp in an incoming message.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfChatIncomingMessageTimestampFontFamily <br/><br/></td>
+        <td> Font family of the timestamp in an incoming message.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfChatIncomingMessageTimestampFontAttributes <br/><br/></td>
+        <td> Font attributes of the timestamp in an incoming message.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfChatIncomingMessageTimestampFontSize <br/><br/></td>
+        <td> Font size of the timestamp in an incoming message.<br/><br/></td>
+    </tr>
+    <!--Outgoing message-->
+    <tr>
+        <td> SfChatOutgoingMessageBackground <br/><br/></td>
+        <td> Background color of an outgoing message.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfChatOutgoingMessageTextColor <br/><br/></td>
+        <td> Text color of an outgoing message.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfChatOutgoingMessageFontFamily <br/><br/></td>
+        <td> Font family of an outgoing message.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfChatOutgoingMessageFontAttributes <br/><br/></td>
+        <td> Font attributes of an outgoing message.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfChatOutgoingMessageFontSize <br/><br/></td>
+        <td> Font size of an outgoing message.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfChatOutgoingMessageAuthorTextColor <br/><br/></td>
+        <td> Text color of the author name in an outgoing message.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfChatOutgoingMessageAuthorFontFamily <br/><br/></td>
+        <td> Font family of the author name in an outgoing message.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfChatOutgoingMessageAuthorFontAttributes <br/><br/></td>
+        <td> Font attributes of the author name in an outgoing message.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfChatOutgoingMessageAuthorFontSize <br/><br/></td>
+        <td> Font size of the author name in an outgoing message.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfChatOutgoingMessageTimestampTextColor <br/><br/></td>
+        <td> Text color of the timestamp in an outgoing message.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfChatOutgoingMessageTimestampFontFamily <br/><br/></td>
+        <td> Font family of the timestamp in an outgoing message.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfChatOutgoingMessageTimestampFontAttributes <br/><br/></td>
+        <td> Font attributes of the timestamp in an outgoing message.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfChatOutgoingMessageTimestampFontSize <br/><br/></td>
+        <td> Font size of the timestamp in an outgoing message.<br/><br/></td>
+    </tr>
+    <!--Date picker message-->
+    <tr>
+        <td> SfChatDatePickerIconColor <br/><br/></td>
+        <td> Icon color of date picker.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfChatDatePickerTextColor <br/><br/></td>
+        <td> Text color of date picker.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfChatDatePickerStroke <br/><br/></td>
+        <td> Border color of date picker.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfChatDatePickerBackground <br/><br/></td>
+        <td> Background color of date picker.<br/><br/></td>
+    </tr>
+    <!--Time picker message-->
+    <tr>
+        <td> SfChatTimePickerIconColor <br/><br/></td>
+        <td> Icon color of time picker.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfChatTimePickerTextColor <br/><br/></td>
+        <td> Text color of time picker.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfChatTimePickerStroke <br/><br/></td>
+        <td> Border color of time picker.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfChatTimePickerBackground <br/><br/></td>
+        <td> Background color of time picker.<br/><br/></td>
+    </tr>
+    <!--Hyper link message-->
+    <tr>
+        <td> SfChatIncomingHyperlinkColor <br/><br/></td>
+        <td> Text color of the URL in an incoming hyper link message.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfChatHyperlinkMetaTitleTextColor <br/><br/></td>
+        <td> Text color of the URL's meta title in a hyper link message.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfChatHyperlinkDescriptionTextColor <br/><br/></td>
+        <td> Text color of the URL's meta description in a hyper link message.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfChatHyperlinkDescriptionBackground <br/><br/></td>
+        <td> Background color of the URL description area in a hyper link message.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfChatOutgoingHyperlinkColor <br/><br/></td>
+        <td> Text color of the URL in an outgoing hyper link message.<br/><br/></td>
+    </tr>
+     <!--Image message-->
+    <tr>
+        <td> SfChatIncomingImageStroke <br/><br/></td>
+        <td> Border color of an image in an incoming image message.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfChatOutgoingImageStroke <br/><br/></td>
+        <td> Border color of an image in an outgoing image message.<br/><br/></td>
+    </tr>
+     <!--Calendar message-->
+    <tr>
+        <td> SfChatCalendarBackground <br/><br/></td>
+        <td> Background color of calendar in a calendar message.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfChatCalendarStroke <br/><br/></td>
+        <td> Border color of calendar in a calendar message.<br/><br/></td>
+    </tr>
+    <!--Card message-->
+    <tr>
+        <td> SfChatCardBackground <br/><br/></td>
+        <td> Background color of card in a card message.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfChatCardStroke <br/><br/></td>
+        <td> Border color of card in a card message.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfChatCardTitleTextColor <br/><br/></td>
+        <td> Text color of title of the card.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfChatCardTitleFontFamily <br/><br/></td>
+        <td> Font family of title of the card.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfChatCardTitleFontSize <br/><br/></td>
+        <td> Font size of title of the card.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfChatCardTitleFontAttributes <br/><br/></td>
+        <td> Font attribites of title of the card.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfChatCardSubtitleTextColor <br/><br/></td>
+        <td> Text color of subtitle of the card.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfChatCardSubtitleFontFamily <br/><br/></td>
+        <td> Font family of subtitle of the card.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfChatCardSubtitleFontSize <br/><br/></td>
+        <td> Font size of subtitle of the card.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfChatCardSubtitleFontAttributes <br/><br/></td>
+        <td> Font attributes of subtitle of the card.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfChatCardDescriptionTextColor <br/><br/></td>
+        <td> Text color of description of the card.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfChatCardDescriptionFontFamily <br/><br/></td>
+        <td> Font family of description of the card.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfChatCardDescriptionFontSize <br/><br/></td>
+        <td> Font size of description of the card.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfChatCardDescriptionFontAttributes <br/><br/></td>
+        <td> Font attributes of description of the card.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfChatCardButtonBackground <br/><br/></td>
+        <td> Background color of card button.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfChatCardButtonStroke <br/><br/></td>
+        <td> Border color of card button.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfChatCardButtonTextColor <br/><br/></td>
+        <td> Text color of card button.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfChatCardButtonFontFamily <br/><br/></td>
+        <td> Font family of card button.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfChatCardButtonFontSize <br/><br/></td>
+        <td> Font size of card button.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfChatCardButtonFontAttributes <br/><br/></td>
+        <td> Font attributes of card button.<br/><br/></td>
+    </tr>
+    <!--Message input view-->
+    <tr>
+        <td> SfChatMessageInputViewBackground <br/><br/></td>
+        <td> Background color of message input view.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfChatEditorPlaceholderTextColor <br/><br/></td>
+        <td> Text color of editor place holder.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfChatEditorTextColor <br/><br/></td>
+        <td> Text color of editor.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfChatEditorBackground <br/><br/></td>
+        <td> Background color of editor.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfChatFocusedEditorStroke <br/><br/></td>
+        <td> Border color of enabled editor.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfChatEditorStroke <br/><br/></td>
+        <td> Border color of disabled editor.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfChatEditorFontFamily <br/><br/></td>
+        <td> Font family of editor text.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfChatEditorFontSize <br/><br/></td>
+        <td> Font size of editor text.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfChatEditorFontAttributes <br/><br/></td>
+        <td> Font attributes of editor text.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfChatSendButtonColor <br/><br/></td>
+        <td> Color of send button.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfChatSendButtonBackground <br/><br/></td>
+        <td> Background Color of send button.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfChatAttachmentButtonColor <br/><br/></td>
+        <td> Color for attachment button.<br/><br/></td>
+    </tr>
+    <!--Time break view-->
+    <tr>
+        <td> SfChatTimeBreakViewTextColor <br/><br/></td>
+        <td> Text Color of time break view.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfChatTimeBreakViewBackground <br/><br/></td>
+        <td> Background Color of time break view.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfChatTimeBreakViewStroke <br/><br/></td>
+        <td> Border Color of time break view.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfChatTimeBreakViewFontFamily <br/><br/></td>
+        <td> Font family of time break view label.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfChatTimeBreakViewFontSize <br/><br/></td>
+        <td> Font size of time break view label.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfChatTimeBreakViewFontAttributes <br/><br/></td>
+        <td> Font attributes of time break view label.<br/><br/></td>
+    </tr>
+    <!--typing indicator-->
+    <tr>
+        <td> SfChatTypingIndicatorTextColor <br/><br/></td>
+        <td> Text Color of typing indicator.<br/><br/></td>
+    </tr>
+     <tr>
+        <td> SfChatTypingIndicatorBackground <br/><br/></td>
+        <td> Background Color of typing indicator.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfChatTypingIndicatorFontFamily <br/><br/></td>
+        <td> Font family of typing indicator.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfChatTypingIndicatorFontSize <br/><br/></td>
+        <td> Font size of typing indicator.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfChatTypingIndicatorFontAttributes <br/><br/></td>
+        <td> Font attributes of typing indicator.<br/><br/></td>
+    </tr>
+    <!--Suggestions-->
+    <tr>
+        <td> SfChatSuggestionListItemTextColor <br/><br/></td>
+        <td> Text color of an item in the list of suggestions. <br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfChatSuggestionListItemBackground <br/><br/></td>
+        <td> Background color of an item in the list of suggestions.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfChatSuggestionListItemStroke <br/><br/></td>
+        <td> Border color of an item in the list of suggestions.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfChatSuggestionListItemFontFamily <br/><br/></td>
+        <td> Font family of an item in the list of suggestions.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfChatSuggestionListItemFontSize <br/><br/></td>
+        <td> Font attributes of an item in the list of suggestions.<br/><br/></td>
+    </tr>
+     <tr>
+        <td> SfChatSuggestionListItemFontAttributes <br/><br/></td>
+        <td> Font size of an item in the list of suggestions.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfChatSuggestionListBackground <br/><br/></td>
+        <td> Background color of suggestion list view.<br/><br/></td>
+    </tr>
+    <!--Load more-->
+    <tr>
+        <td> SfChatLoadMoreIndicatorColor <br/><br/></td>
+        <td> Color of the load more indicator.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfChatLoadMoreTextColor <br/><br/></td>
+        <td> Text color of the load more button.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfChatLoadMoreBackground <br/><br/></td>
+        <td> Background color of the load more button.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfChatLoadMoreStroke <br/><br/></td>
+        <td> Border color of the load more button.<br/><br/></td>
+    </tr>
+</table>
+
+## SfPopup
+
+<table>
+    <tr>
+        <th>Theme Dictionary<br/>
+            <br/></th>        
+        <th>
+          Keys
+            <br/>
+            <br/>
+        </th>
+        <th>
+            Description
+            <br/>
+            <br/>
+        </th>
+    </tr>
+    <tr>
+        <td rowspan="21">
+            SfPopupStyles
+            <br/>
+            <br/>
+        </td>
+        <td>
+           SfPopupTheme 
+            <br/>
+            <br/>
+        </td>
+        <td>    
+            By merging this key in application resources, you can customize the appearance of SfPopup without merging common theme resource and control style resource dictionaries.
+            
+{% highlight xaml %}
+<Application xmlns:syncTheme="clr-namespace:Syncfusion.Maui.Themes;assembly=Syncfusion.Maui.Core"
+             ...>
+ <Application.Resources>
+    <ResourceDictionary>
+        <ResourceDictionary.MergedDictionaries>
+            <syncTheme:SyncfusionThemeResourceDictionary />
+            <ResourceDictionary>
+                <x:String x:Key="SfPopupTheme">CommonTheme</x:String>
+                <Color x:Key="SfPopupNormalHeaderBackground">Yellow</Color>
+                <Color x:Key="SfPopupNormalFooterBackground">LightBlue</Color>
+            </ResourceDictionary>
+        </ResourceDictionary.MergedDictionaries>
+    </ResourceDictionary>
+ </Application.Resources>
+....
+</Application>
+{% endhighlight %}
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td> SfPopupNormalBackground <br/><br/></td>
+        <td> Background color of the popup view.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfPopupNormalStroke <br/><br/></td>
+        <td> Border color of the popup view.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfPopupNormalStrokeThickness <br/><br/></td>
+        <td> Border width of the popup view.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfPopupNormalHeaderBackground <br/><br/></td>
+        <td> Background color of the header view in Popup.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfPopupNormalHeaderTextColor  <br/><br/></td> 
+        <td> Text Color of the header view in Popup.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfPopupNormalHeaderFontSize  <br/><br/></td> 
+        <td> Font size of the header view in Popup.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfPopupNormalMessageBackground <br/><br/></td> 
+        <td> Background color of message view in Popup.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfpopupNormalMessageTextColor <br/><br/></td>
+        <td> Text color of the message view in Popup.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfPopupNormalMessageFontSize <br/><br/></td>
+        <td> Font size of the message view in Popup.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfPopupNormalFooterBackground  <br/><br/></td> 
+        <td> Background color of the footer view in Popup.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfPopupNormalFooterFontSize  <br/><br/></td> 
+        <td> Font size of the footer view in Popup.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfPopupNormalAcceptButtonBackground <br/><br/></td> 
+        <td> Background color of the accept button.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfPopupNormalAcceptButtonTextColor <br/><br/></td> 
+        <td> Text color of the accept button.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfPopupNormalDeclineButtonBackground <br/><br/></td> 
+        <td> Background color of the decline button.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfPopupNormalDeclineButtonTextColor <br/><br/></td> 
+        <td> Text color of the decline button.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfPopupNormalCloseButtonIconStroke <br/><br/></td> 
+        <td> Color of the close button icon.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfPopupNormalCloseButtonIconStrokeThickness <br/><br/></td> 
+        <td> Thickness of the close button.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfPopupHoverCloseButtonIconBackground <br/><br/></td> 
+        <td> Color of the close button icon when it is in hover state.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfPopupPressedCloseButtonIconBackground <br/><br/></td> 
+        <td> Color of the close button icon when it is in pressed state.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfPopupNormalOverlayBackground <br/><br/></td> 
+        <td> Background color of the popup overlay.<br/><br/></td>
+    </tr>
+</table>
+
+## SfAutoComplete
+
+<table>
+    <tr>
+        <th>Theme Dictionary<br/>
+            <br/></th>        
+        <th>
+          Keys
+            <br/>
+            <br/>
+        </th>
+        <th>
+            Description
+            <br/>
+            <br/>
+        </th>
+    </tr>
+
+    <tr>
+        <td rowspan="38">
+            SfAutoCompleteStyles  
+            <br/>
+            <br/>
+        </td>
+		<td>
+           SfAutoCompleteTheme 
+            <br/>
+            <br/>
+        </td>
+        <td>    
+            By merging this key in application resources, you can customize the appearance of SfAutoComplete without merging common theme resource and control style resource dictionaries.
+			
+{% highlight xaml %}
+
+<Application xmlns:syncTheme="clr-namespace:Syncfusion.Maui.Themes;assembly=Syncfusion.Maui.Core"
+             ...>
+ <Application.Resources>
+    <ResourceDictionary>
+        <ResourceDictionary.MergedDictionaries>
+            <syncTheme:SyncfusionThemeResourceDictionary />
+            <ResourceDictionary>
+                <x:String x:Key="SfAutoCompleteTheme">CommonTheme</x:String>
+                <Color x:Key="SfAutocompleteNormalTextColor">Pink</Color>
+                <Color x:Key="SfAutocompletePlaceholderTextColor">Blue</Color>
+            </ResourceDictionary>
+        </ResourceDictionary.MergedDictionaries>
+    </ResourceDictionary>
+ </Application.Resources>
+
+....
+
+</Application>
+
+{% endhighlight %}
+            <br/>
+            <br/>
+        </td>
+        </tr>
+        <tr>
+        <td>
+            SfAutocompletePressedClearButtonIconColor  
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the clear button icon in pressed state
+            <br/>
+            <br/>
+        </td>
+    </tr>
+	</tr>
+    <tr>
+        <td>
+            SfAutocompletePressedClearButtonBorder 
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the clear button border in pressed state
+        <br/>
+        <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfAutocompletePressedClearButtonBackground  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Color of the clear button Background in pressed state
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+            SfAutocompleteNormalStroke  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Color of the AutoComplete Background in normal state
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+            SfAutocompleteNormalClearButtonIconColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Color of the clear button icon in normal state
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+            SfAutocompleteNormalClearButtonBorder  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Color of the clear button border in normal state
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+            SfAutocompleteNormalClearButtonBackground  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Color of the clear button background in normal state
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+            SfAutocompleteNormalBackground  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Color of the AutoComplete background in normal state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfAutocompleteHoverStroke  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Color of the AutoComplete stroke in hover state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+            SfAutocompleteHoverClearButtonIconColor 
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Color of the clear button icon in hover state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfAutocompleteHoverClearButtonBorder 
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Color of the clear button icon in hover state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfAutocompleteHoverClearButtonBackground
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Color of the clear button background in hover state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+            SfAutocompleteHoverBackground
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Color of the AutoComplete background in hover state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfAutocompleteFocusedStroke
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Color of the AutoComplete stroke in focus state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfAutocompleteFocusedBackground
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Color of the AutoComplete background in focus state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfAutocompleteDisabledStroke
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Color of the AutoComplete stroke in disable state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfAutocompleteDisabledClearButtonIconColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Color of the clear button icon in disable state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfAutocompleteDisabledClearButtonBorder
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Color of the clear button border in disable state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfAutocompleteDisabledClearButtonBackground
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Color of the clear button background in disable state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfAutocompleteDisabledBackground
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Color of the AutoComplete background in disable state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfAutocompleteNormalTextColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Color of the AutoComplete text color in normal state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfAutocompleteFocusTextColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Color of the AutoComplete text color in focus state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfAutocompleteDisabledTextColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Color of the AutoComplete text color in disable state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfAutocompleteReadOnlyTextColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Color of the AutoComplete readonly text. 
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+            SfAutocompleteSelectionTextColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Color of the AutoComplete selection text. 
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfAutocompleteSelectionBackgroundTextColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Color of the AutoComplete selection background text. 
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfAutocompleteDropdownBorder
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Color of the AutoComplete dropdown border. 
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfAutocompleteDropdownBackground
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Color of the AutoComplete dropdown background. 
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfAutocompletePlaceholderTextColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Color of the AutoComplete placeholder text. 
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfAutocompleteNormalDropdownItemsTextColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Color of the AutoComplete dropdown item text in normal state. 
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfAutocompleteNormalDropdownStroke
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Color of the AutoComplete dropdown stroke in normal state. 
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfAutocompleteNormalDropdownSelectionBackground
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Color of the AutoComplete dropdown selection background in normal state. 
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfAutocompleteHoverDropdownSelectionBackground
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Color of the AutoComplete dropdown selection background in hover state. 
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfAutocompletePressedDropdownSelectionBackground
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Color of the AutoComplete dropdown selection background in pressed state. 
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfAutocompleteNormalFontSize
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Font size of AutoComplete
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfAutocompleteNormalDropdownCornerRadius
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            CornerRadius of AutoComplete
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfAutocompleteNormalDropdownStrokeThickness
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Stroke thickness of the AutoComplete dropdown.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfAutocompleteNormalDropdownItemsFontSize
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            FontSize of the AutoComplete
+            <br/>
+            <br/>
+        </td>
+    </tr>
+</table>
+
+## SfBadgeView
+
+<table>
+    <tr>
+        <th>Theme Dictionary<br/>
+            <br/></th>        
+        <th>
+          Keys
+            <br/>
+            <br/>
+        </th>
+        <th>
+            Description
+            <br/>
+            <br/>
+        </th>
+    </tr>
+
+    <tr>
+        <td rowspan="23">
+            SfBadgeViewStyles 
+            <br/>
+            <br/>
+        </td>
+		<td>
+           SfBadgeViewTheme 
+            <br/>
+            <br/>
+        </td>
+        <td>    
+            By merging this key in application resources, you can customize the appearance of SfBadgeView without merging common theme resource and control style resource dictionaries.
+			
+{% highlight xaml %}
+
+<Application xmlns:syncTheme="clr-namespace:Syncfusion.Maui.Themes;assembly=Syncfusion.Maui.Core"
+             ...>
+ <Application.Resources>
+    <ResourceDictionary>
+        <ResourceDictionary.MergedDictionaries>
+            <syncTheme:SyncfusionThemeResourceDictionary />
+            <ResourceDictionary>
+                <x:String x:Key="SfBadgeViewTheme">CommonTheme</x:String>
+                <Color x:Key="SfBadgeViewNormalBackground">LimeGreen</Color>
+                <Color x:Key="SfBadgeViewNormalStroke">Yellow</Color>
+            </ResourceDictionary>
+        </ResourceDictionary.MergedDictionaries>
+    </ResourceDictionary>
+ </Application.Resources>
+ </Application>
+
+{% endhighlight %}
+            <br/>
+            <br/>
+        </td>
+        </tr>
+        <tr>
+        <td>
+            SfBadgeViewNormalBackground  
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the BadgeView background in normal state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfBadgeViewNormalStroke
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the BadgeView stroke in normal state.
+        <br/>
+        <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfBadgeViewNormalTextColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Color of the BadgeView text in normal state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfBadgeViewErrorBackground  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Color of the BadgeView error background.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfBadgeViewErrorStroke  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Color of the BadgeView error stroke.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfBadgeViewSuccessBackground  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Color of the BadgeView success background.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfBadgeViewSuccessStroke  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Color of the BadgeView success stroke.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfBadgeViewDarkBackground  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Color of the BadgeView dark background.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfBadgeViewDarkStroke  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Color of the BadgeView dark stroke.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfBadgeViewLightStroke  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Color of the BadgeView light stroke.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfBadgeViewLightBackground  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Color of the BadgeView light background.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfBadgeViewLightTextColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Color of the BadgeView light text.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfBadgeViewInfoBackground  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Color of the BadgeView info background.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfBadgeViewInfoStroke  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Color of the BadgeView info stroke.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfBadgeViewSecondaryBackground  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Color of the BadgeView secondary background.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfBadgeViewSecondaryTextColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Color of the BadgeView secondary text.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfBadgeViewSecondaryStroke  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Color of the BadgeView secondary stroke.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfBadgeViewWarningBackground  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Color of the BadgeView warning background.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfBadgeViewWarningStroke  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Color of the BadgeView warning stroke.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfBadgeViewNormalFontSize  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            FontSize of the BadgeView in normal state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfBadgeViewNormalStrokeThickness  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            StrokeThickness of the BadgeView in normal state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfBadgeViewNormalCornerRadius  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            CornerRadius of the BadgeView in normal state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+ ## SfButton
+
+<table>
+    <tr>
+        <th>Theme Dictionary<br/>
+            <br/></th>        
+        <th>
+          Keys
+            <br/>
+            <br/>
+        </th>
+        <th>
+            Description
+            <br/>
+            <br/>
+        </th>
+    </tr>
+
+    <tr>
+        <td rowspan="18">
+            SfButtonStyles 
+            <br/>
+            <br/>
+        </td>
+		<td>
+           SfButtonTheme 
+            <br/>
+            <br/>
+        </td>
+        <td>    
+            By merging this key in application resources, you can customize the appearance of SfButton without merging common theme resource and control style resource dictionaries.
+			
+{% highlight xaml %}
+
+<Application xmlns:syncTheme="clr-namespace:Syncfusion.Maui.Themes;assembly=Syncfusion.Maui.Core"
+             ...>
+ <Application.Resources>
+    <ResourceDictionary>
+        <ResourceDictionary.MergedDictionaries>
+            <syncTheme:SyncfusionThemeResourceDictionary />
+            <ResourceDictionary>
+                <x:String x:Key="SfButtonTheme">CommonTheme</x:String>
+                <Color x:Key="SfButtonNormalBackground">Grey</Color>
+                <Color x:Key="SfButtonNormalTextColor">White</Color>
+            </ResourceDictionary>
+        </ResourceDictionary.MergedDictionaries>
+    </ResourceDictionary>
+ </Application.Resources>
+ </Application>
+
+{% endhighlight %}
+            <br/>
+            <br/>
+        </td>
+        </tr>
+        <tr>
+        <td>
+            SfButtonNormalBackground  
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the Button background in normal state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfButtonPressedBackground
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the Button background in pressed state.
+        <br/>
+        <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfButtonHoverBackground  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Color of the Button background in hover state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfButtonHoverStroke  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Color of the Button stroke in hover state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfButtonPressedStroke  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Color of the Button stroke in pressed state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfButtonNormalStroke  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Color of the Button stroke in normal state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfButtonDisabledBackground  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Color of the Button background in disable state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfButtonDisabledStroke  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Color of the Button stroke in disable state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfButtonNormalTextColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Color of the Button text in normal state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfButtonPressedTextColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Color of the Button text in pressed state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfButtonHoverTextColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Color of the Button text in hover state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfButtonDisabledTextColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Color of the Button text in disable state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfButtonFocusedBackground  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Color of the Button background in focus state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfButtonFocusedStroke  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Color of the Button stroke in focus state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfButtonFocusedTextColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Color of the Button text in focus state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfButtonNormalStrokeThickness  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            StrokeThickness of the Button in normal state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfButtonTextNormalFontSize  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            FontSize of the Button in normal state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    </table>
+
+ ## SfBusyIndicator
+
+<table>
+    <tr>
+        <th>Theme Dictionary<br/>
+            <br/></th>        
+        <th>
+          Keys
+            <br/>
+            <br/>
+        </th>
+        <th>
+            Description
+            <br/>
+            <br/>
+        </th>
+    </tr>
+
+    <tr>
+        <td rowspan="5">
+            SfBusyIndicatorStyles 
+            <br/>
+            <br/>
+        </td>
+		<td>
+           SfBusyIndicatorTheme 
+            <br/>
+            <br/>
+        </td>
+        <td>    
+            By merging this key in application resources, you can customize the appearance of SfBusyIndicator without merging common theme resource and control style resource dictionaries.
+			
+{% highlight xaml %}
+
+<Application xmlns:syncTheme="clr-namespace:Syncfusion.Maui.Themes;assembly=Syncfusion.Maui.Core"
+             ...>
+ <Application.Resources>
+    <ResourceDictionary>
+        <ResourceDictionary.MergedDictionaries>
+            <syncTheme:SyncfusionThemeResourceDictionary />
+            <ResourceDictionary>
+                <x:String x:Key="SfBusyIndicatorTheme">CommonTheme</x:String>
+                <Color x:Key="SfBusyIndicatorNormalIndicatorColor">Blue</Color>
+                <Color x:Key="SfBusyIndicatorNormalTextColor">Black</Color>
+            </ResourceDictionary>
+        </ResourceDictionary.MergedDictionaries>
+    </ResourceDictionary>
+ </Application.Resources>
+ </Application>
+
+{% endhighlight %}
+            <br/>
+            <br/>
+        </td>
+        </tr>
+        <tr>
+        <td>
+            SfBusyIndicatorNormalOverlayFill  
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the BusyIndicator overlayfill in normal state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfBusyIndicatorNormalIndicatorColor  
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the BusyIndicator indicator.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfBusyIndicatorNormalTextColor  
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the BusyIndicator text.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfBusyIndicatorNormalFontSize  
+            <br/>
+            <br/>
+        </td>
+        <td>
+            FontSize of the BusyIndicator.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    </table>
+
+  ## SfCheckBox
+
+<table>
+    <tr>
+        <th>Theme Dictionary<br/>
+            <br/></th>        
+        <th>
+          Keys
+            <br/>
+            <br/>
+        </th>
+        <th>
+            Description
+            <br/>
+            <br/>
+        </th>
+    </tr>
+
+    <tr>
+        <td rowspan="18">
+            SfCheckBoxStyles 
+            <br/>
+            <br/>
+        </td>
+		<td>
+           SfCheckBoxTheme 
+            <br/>
+            <br/>
+        </td>
+        <td>    
+            By merging this key in application resources, you can customize the appearance of SfCheckBox without merging common theme resource and control style resource dictionaries.
+			
+{% highlight xaml %}
+
+<Application xmlns:syncTheme="clr-namespace:Syncfusion.Maui.Themes;assembly=Syncfusion.Maui.Core"
+             ...>
+ <Application.Resources>
+    <ResourceDictionary>
+        <ResourceDictionary.MergedDictionaries>
+            <syncTheme:SyncfusionThemeResourceDictionary />
+            <ResourceDictionary>
+                <x:String x:Key="SfCheckBoxTheme">CommonTheme</x:String>
+                <Color x:Key="SfCheckBoxNormalUncheckedColor">Gold</Color>
+                <Color x:Key="SfCheckBoxNormalTextColor">DarkBlue</Color>
+            </ResourceDictionary>
+        </ResourceDictionary.MergedDictionaries>
+    </ResourceDictionary>
+ </Application.Resources>
+ </Application>
+
+{% endhighlight %}
+            <br/>
+            <br/>
+        </td>
+        </tr>
+        <tr>
+        <td>
+            SfCheckBoxNormalUncheckedColor  
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the CheckBox in it's uncheck state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfCheckBoxHoverUncheckedColor 
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the CheckBox in its unchecked state while hovering.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfCheckBoxPressedUncheckedColor  
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the CheckBox in it's unchecked state while pressed.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfCheckBoxNormalCheckedColor  
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the CheckBox in it's check state
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+            SfCheckBoxHoverCheckedColor  
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the CheckBox in it's check state while hovering.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfCheckBoxPressedCheckedColor  
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the CheckBox in it's check state while pressed.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfCheckBoxNormalTextColor  
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the CheckBox text.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfCheckBoxHoverTextColor  
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the CheckBox text in hover state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfCheckBoxPressedTextColor  
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the CheckBox text in pressed state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfCheckBoxNormalBackgroundColor  
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the CheckBox background in normal state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfCheckBoxTickColor  
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the CheckBox tick.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfCheckBoxDisabledUncheckedColor  
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the unchecked CheckBox in disable state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfCheckBoxDisabledCheckedColor  
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the checked CheckBox in disable state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+            SfCheckBoxNormalFontSize  
+            <br/>
+            <br/>
+        </td>
+        <td>
+            FontSize of the CheckBox.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+</table>
+
+## SfChips
+
+<table>
+    <tr>
+        <th>Theme Dictionary<br/>
+            <br/></th>        
+        <th>
+          Keys
+            <br/>
+            <br/>
+        </th>
+        <th>
+            Description
+            <br/>
+            <br/>
+        </th>
+    </tr>
+
+    <tr>
+        <td rowspan="38">
+            SfChipStyles 
+            <br/>
+            <br/>
+        </td>
+		<td>
+           SfChipTheme 
+            <br/>
+            <br/>
+        </td>
+        <td>    
+            By merging this key in application resources, you can customize the appearance of SfCheckBox without merging common theme resource and control style resource dictionaries.
+			
+{% highlight xaml %}
+
+<Application xmlns:syncTheme="clr-namespace:Syncfusion.Maui.Themes;assembly=Syncfusion.Maui.Core"
+             ...>
+ <Application.Resources>
+    <ResourceDictionary>
+        <ResourceDictionary.MergedDictionaries>
+            <syncTheme:SyncfusionThemeResourceDictionary />
+            <ResourceDictionary>
+                <x:String x:Key="SfChipTheme">CommonTheme</x:String>
+                <Color x:Key="SfChipGroupNormalSelectionBackground">Purple</Color>
+                <Color x:Key="SfChipGroupPressedBackground">YellowGreen</Color>
+            </ResourceDictionary>
+        </ResourceDictionary.MergedDictionaries>
+    </ResourceDictionary>
+ </Application.Resources>
+ </Application>
+
+{% endhighlight %}
+            <br/>
+            <br/>
+        </td>
+        </tr>
+        <tr>
+        <td>
+            SfChipGroupDisabledSelectedTextColor  
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the ChipGroup selected text in disable state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfChipGroupHoverSelectedTextColor 
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the ChipGroup selected text in hover state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfChipGroupPressedSelectedTextColor  
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the ChipGroup selected text in pressed state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfChipGroupNormalSelectedTextColor  
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the ChipGroup selected text in normal state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+            SfChipGroupPressedClearButtonBackground  
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the clear button background in pressed state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfChipGroupHoverClearButtonBackground  
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the clear button background in hover state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfChipGroupPressedClearButtonIconColor  
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the clear button icon in pressed state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfChipGroupHoverClearButtonIconColor 
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the clear button icon in hover state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfChipGroupNormalClearButtonIconColor  
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the clear button icon in normal state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfChipGroupNormalClearButtonBackground  
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the clear button background in normal state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfChipGroupNormalBackground  
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the Chip background.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfChipGroupPressedBackground  
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the Chip background in pressed state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfChipGroupHoverBackground  
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the Chip background in hover state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+            SfChipGroupHoverStroke  
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the Chip stroke in hover state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfChipGroupPressedStroke  
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the Chip stroke in pressed state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfChipGroupNormalStroke  
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the Chip stroke in normal state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfChipGroupDisabledBackground  
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the Chip background in disable state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfChipGroupChoiceBackground 
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the ChipGroup choice background.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfChipGroupDisabledChoiceBackground
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the ChipGroup choice background in disable state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfChipGroupDisabledStroke
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the Chip stroke in disable state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfChipGroupDisabledClearButtonBackground
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the clear button background in disable state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfChipGroupDisabledClearButtonIconColor
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the clear button icon in disable state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfChipGroupNormalTextColor
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the Chip text.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfChipGroupPressedTextColor
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the Chip text in pressed state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfChipGroupHoverTextColor
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the Chip text in hover state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfChipGroupDisabledTextColor
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the Chip text in disable state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfChipGroupSelectedDisabledTextColor
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the Chip selected text in disable state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfChipGroupSelectedDisabledBackground
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the Chip selected background in disable state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfChipGroupNormalSelectionIndicatorColor
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the Chip selection indicator.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfChipGroupPressedSelectionIndicatorColor
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the Chip selection indicator in pressed state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfChipGroupDisabledSelectionIndicatorColor
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the Chip selection indicator in disable state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfChipGroupHoverSelectionBackground
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the Chip selection background in hover state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfChipGroupNormalSelectionBackground
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the Chip selection background.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfChipGroupPressedSelectionBackground
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the Chip selection background in pressed state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfChipGroupDisabledSelectionBackground
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the Chip selection background in disable state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfChipGroupNormalFontSize
+            <br/>
+            <br/>
+        </td>
+        <td>
+            FontSize of the Chip.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfChipGroupNormalStrokeThickness
+            <br/>
+            <br/>
+        </td>
+        <td>
+            StrokeThickness of the Chip.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfChipGroupNormalCornerRadius
+            <br/>
+            <br/>
+        </td>
+        <td>
+            CornerRadius of the Chip.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+</table>
+
+## SfComboBox
+
+<table>
+    <tr>
+        <th>Theme Dictionary<br/>
+            <br/></th>        
+        <th>
+          Keys
+            <br/>
+            <br/>
+        </th>
+        <th>
+            Description
+            <br/>
+            <br/>
+        </th>
+    </tr>
+
+    <tr>
+        <td rowspan="46">
+            SfComboBoxStyles 
+            <br/>
+            <br/>
+        </td>
+		<td>
+           SfComboBoxTheme 
+            <br/>
+            <br/>
+        </td>
+        <td>    
+            By merging this key in application resources, you can customize the appearance of SfComboBox without merging common theme resource and control style resource dictionaries.
+			
+{% highlight xaml %}
+
+<Application xmlns:syncTheme="clr-namespace:Syncfusion.Maui.Themes;assembly=Syncfusion.Maui.Core"
+             ...>
+ <Application.Resources>
+    <ResourceDictionary>
+        <ResourceDictionary.MergedDictionaries>
+            <syncTheme:SyncfusionThemeResourceDictionary />
+            <ResourceDictionary>
+                <x:String x:Key="SfComboBoxTheme">CommonTheme</x:String>
+                <Color x:Key="SfComboBoxNormalStroke">Magenta</Color>
+                <Color x:Key="SfComboBoxFocusTextColor">Lime</Color>
+            </ResourceDictionary>
+        </ResourceDictionary.MergedDictionaries>
+    </ResourceDictionary>
+ </Application.Resources>
+ </Application>
+
+{% endhighlight %}
+            <br/>
+            <br/>
+        </td>
+        </tr>
+        <tr>
+        <td>
+            SfComboBoxPressedClearButtonIconColor  
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the clear button icon in pressed state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfComboBoxPressedClearButtonBorder  
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the clear button border in pressed state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfComboBoxPressedClearButtonBackground 
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the clear button background in pressed state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfComboBoxNormalStroke  
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the ComboBox stroke.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfComboBoxNormalClearButtonIconColor  
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the clear button icon.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfComboBoxNormalClearButtonBorder 
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the clear button border.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfComboBoxNormalClearButtonBackground 
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the clear button background.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfComboBoxNormalBackground
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the ComboBox background.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfComboBoxHoverStroke
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the ComboBox stroke in hover state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfComboBoxHoverClearButtonIconColor
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the clear button icon in hover state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfComboBoxHoverClearButtonBorder
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the clear button border in hover state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfComboBoxHoverClearButtonBackground
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the clear button background in hover state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfComboBoxHoverBackground
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the ComboBox background in hover state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfComboBoxFocusedStroke
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the ComboBox stroke in focus state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfComboBoxFocusedBackground
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the ComboBox background in focus state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfComboBoxFocusedTextColor
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the ComboBox text in focus state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfComboBoxDisabledStroke
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the ComboBox stroke in disable state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfComboBoxDisabledClearButtonIconColor
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the clear button icon in disable state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfComboBoxDisabledClearButtonBorder
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the clear button border in disable state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfComboBoxDisabledClearButtonBackground
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the clear button background in disable state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfComboBoxDisabledBackground
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the ComboBox background in disable state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfComboBoxNormalTextColor
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the ComboBox text.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfComboBoxFocusTextColor
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the ComboBox text in focus state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfComboBoxDisabledTextColor
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the ComboBox text in disable state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfComboBoxReadOnlyTextColor
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the ComboBox readonly text.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfComboBoxSelectionTextColor
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the ComboBox selection text.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+            SfComboBoxSelectionBackgroundTextColor
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the ComboBox selection background text.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfComboBoxDropdownBorder
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the ComboBox dropdown border.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfComboBoxDropdownBackground
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the ComboBox dropdown background.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfComboBoxPlaceholderTextColor
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the ComboBox placeholder text.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfComboBoxNormalDropdownItemsTextColor
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the ComboBox dropdown item text.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfComboBoxNormalDropdownStroke
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the ComboBox dropdown stroke.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfComboBoxNormalDropdownSelectionBackground
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the ComboBox dropdown selection background.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfComboBoxHoverDropdownSelectionBackground
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the ComboBox dropdown selection background in hover state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfComboBoxPressedDropdownSelectionBackground
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the ComboBox dropdown selection background in pressed state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+            SfComboBoxDisabledDropDownIconColor
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the ComboBox dropdown icon in disable state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfComboBoxNormalDropDownIconColor
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the ComboBox dropdown icon.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfComboBoxFocusedDropDownIconColor
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the ComboBox dropdown icon in focus state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfComboBoxFocusedClearButtonIconColor
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the clear button icon in focus state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfComboBoxDisabledPlaceholderTextColor
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the ComboBox placeholder text in disable state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfComboBoxHoverTextColor
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the ComboBox text in hover state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfComboBoxNormalFontSize
+            <br/>
+            <br/>
+        </td>
+        <td>
+            FontSize of the ComboBox.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfComboBoxNormalDropdownCornerRadius
+            <br/>
+            <br/>
+        </td>
+        <td>
+            CornerRadius of the ComboBox dropdown.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfComboBoxNormalDropdownStrokeThickness
+            <br/>
+            <br/>
+        </td>
+        <td>
+            StrokeThickness of the ComboBox dropdown.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfComboBoxNormalDropdownItemsFontSize
+            <br/>
+            <br/>
+        </td>
+        <td>
+            FontSize of the ComboBox dropdown item.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    </table>
+
+  ## SfEffectsView
+
+<table>
+    <tr>
+        <th>Theme Dictionary<br/>
+            <br/></th>        
+        <th>
+          Keys
+            <br/>
+            <br/>
+        </th>
+        <th>
+            Description
+            <br/>
+            <br/>
+        </th>
+    </tr>
+
+    <tr>
+        <td rowspan="5">
+            SfEffectsViewStyles 
+            <br/>
+            <br/>
+        </td>
+		<td>
+           SfEffectsViewTheme 
+            <br/>
+            <br/>
+        </td>
+        <td>    
+            By merging this key in application resources, you can customize the appearance of SfEffectsView without merging common theme resource and control style resource dictionaries.
+			
+{% highlight xaml %}
+
+<Application xmlns:syncTheme="clr-namespace:Syncfusion.Maui.Themes;assembly=Syncfusion.Maui.Core"
+             ...>
+ <Application.Resources>
+    <ResourceDictionary>
+        <ResourceDictionary.MergedDictionaries>
+            <syncTheme:SyncfusionThemeResourceDictionary />
+            <ResourceDictionary>
+                <x:String x:Key="SfEffectsViewTheme">CommonTheme</x:String>
+                <Color x:Key="SfEffectsViewRippleBackground">Yellow</Color>
+                <Color x:Key="SfEffectsViewHighlightBackground">Red</Color>
+            </ResourceDictionary>
+        </ResourceDictionary.MergedDictionaries>
+    </ResourceDictionary>
+ </Application.Resources>
+ </Application>
+
+{% endhighlight %}
+            <br/>
+            <br/>
+        </td>
+        </tr>
+        <tr>
+        <td>
+            SfEffectsViewRippleBackground  
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the EffectsView ripple background.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfEffectsViewSelectionBackground  
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the EffectsView selection background
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfEffectsViewHighlightBackground  
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the EffectsView highlight background.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfEffectsViewRippleAnimationDuration  
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Duration of the EffectsView ripple animation.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    </table>
+
+  ## SfMaskedEntry
+
+<table>
+    <tr>
+        <th>Theme Dictionary<br/>
+            <br/></th>        
+        <th>
+          Keys
+            <br/>
+            <br/>
+        </th>
+        <th>
+            Description
+            <br/>
+            <br/>
+        </th>
+    </tr>
+
+    <tr>
+        <td rowspan="17">
+            SfMaskedEntryStyles 
+            <br/>
+            <br/>
+        </td>
+		<td>
+           SfMaskedEntryTheme 
+            <br/>
+            <br/>
+        </td>
+        <td>    
+            By merging this key in application resources, you can customize the appearance of SfMaskedEntry without merging common theme resource and control style resource dictionaries.
+			
+{% highlight xaml %}
+
+<Application xmlns:syncTheme="clr-namespace:Syncfusion.Maui.Themes;assembly=Syncfusion.Maui.Core"
+             ...>
+ <Application.Resources>
+    <ResourceDictionary>
+        <ResourceDictionary.MergedDictionaries>
+            <syncTheme:SyncfusionThemeResourceDictionary />
+            <ResourceDictionary>
+                <x:String x:Key="SfMaskedEntryTheme">CommonTheme</x:String>
+                <Color x:Key="SfMaskedEntryNormalBackground">Grey</Color>
+                <Color x:Key="SfMaskedEntryNormalTextColor">Gold</Color>
+            </ResourceDictionary>
+        </ResourceDictionary.MergedDictionaries>
+    </ResourceDictionary>
+ </Application.Resources>
+ </Application>
+
+{% endhighlight %}
+            <br/>
+            <br/>
+        </td>
+        </tr>
+        <tr>
+        <td>
+            SfMaskedEntryNormalTextColor  
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the MaskedEntry text.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfMaskedEntryPlaceholderTextColor  
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the MaskedEntry placeholder text.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfMaskedEntryFocusedTextColor  
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the MaskedEntry text in focus state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfMaskedEntryDisabledTextColor 
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the MaskedEntry text in disable state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfMaskedEntryMouseHoveredTextColor 
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the MaskedEntry text in hover state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfMaskedEntryNormalBackground 
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the MaskedEntry background.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfMaskedEntryDisabledBackground 
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the MaskedEntry background in disable state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfMaskedEntryFocusedBackground 
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the MaskedEntry background in focus state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfMaskedEntryMouseHoveredBackground 
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the MaskedEntry background in hover state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfMaskedEntryMouseHoveredStroke 
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the MaskedEntry stroke in hover state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfMaskedEntryNormalStroke 
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the MaskedEntry stroke.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfMaskedEntryFocusedStroke
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the MaskedEntry stroke in focus state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfMaskedEntryDisabledStroke
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the MaskedEntry stroke in disable state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfMaskedEntrySelectedTextColor
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the MaskedEntry selected text.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfMaskedEntrySelectedBackground
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the MaskedEntry selected background.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfMaskedEntryNormalFontSize
+            <br/>
+            <br/>
+        </td>
+        <td>
+            FontSize of the MaskedEntry.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    </table>
+
+   ## SfNavigationDrawer
+
+<table>
+    <tr>
+        <th>Theme Dictionary<br/>
+            <br/></th>        
+        <th>
+          Keys
+            <br/>
+            <br/>
+        </th>
+        <th>
+            Description
+            <br/>
+            <br/>
+        </th>
+    </tr>
+
+    <tr>
+        <td rowspan="3">
+            SfNavigationDrawerStyles 
+            <br/>
+            <br/>
+        </td>
+		<td>
+           SfNavigationDrawerTheme 
+            <br/>
+            <br/>
+        </td>
+        <td>    
+            By merging this key in application resources, you can customize the appearance of SfNavigationDrawer without merging common theme resource and control style resource dictionaries.
+			
+{% highlight xaml %}
+
+<Application xmlns:syncTheme="clr-namespace:Syncfusion.Maui.Themes;assembly=Syncfusion.Maui.Core"
+             ...>
+ <Application.Resources>
+    <ResourceDictionary>
+        <ResourceDictionary.MergedDictionaries>
+            <syncTheme:SyncfusionThemeResourceDictionary />
+            <ResourceDictionary>
+                <x:String x:Key="SfNavigationDrawerTheme">CommonTheme</x:String>
+                <Color x:Key="SfEffectsViewRippleBackground">Yellow</Color>
+                <Color x:Key="SfEffectsViewHighlightBackground">Red</Color>
+            </ResourceDictionary>
+        </ResourceDictionary.MergedDictionaries>
+    </ResourceDictionary>
+ </Application.Resources>
+ </Application>
+
+{% endhighlight %}
+            <br/>
+            <br/>
+        </td>
+        </tr>
+        <tr>
+        <td>
+            SfNavigationDrawerContentBackground  
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the NavigationDrawer background.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfNavigationDrawerGreyLayoutBackground 
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the NavigationDrawer layout background.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    </table>
+
+  ## SfNumericEntry
+
+<table>
+    <tr>
+        <th>Theme Dictionary<br/>
+            <br/></th>        
+        <th>
+          Keys
+            <br/>
+            <br/>
+        </th>
+        <th>
+            Description
+            <br/>
+            <br/>
+        </th>
+    </tr>
+
+    <tr>
+        <td rowspan="22">
+            SfNumericEntryStyles 
+            <br/>
+            <br/>
+        </td>
+		<td>
+           SfNumericEntryTheme 
+            <br/>
+            <br/>
+        </td>
+        <td>    
+            By merging this key in application resources, you can customize the appearance of SfNumericEntry without merging common theme resource and control style resource dictionaries.
+			
+{% highlight xaml %}
+
+<Application xmlns:syncTheme="clr-namespace:Syncfusion.Maui.Themes;assembly=Syncfusion.Maui.Core"
+             ...>
+ <Application.Resources>
+    <ResourceDictionary>
+        <ResourceDictionary.MergedDictionaries>
+            <syncTheme:SyncfusionThemeResourceDictionary />
+            <ResourceDictionary>
+                <x:String x:Key="SfNumericEntryTheme">CommonTheme</x:String>
+                <Color x:Key="SfNumericEntryNormalBackground">Purple</Color>
+                <Color x:Key="SfNumericEntryNormalStroke">Black</Color>
+            </ResourceDictionary>
+        </ResourceDictionary.MergedDictionaries>
+    </ResourceDictionary>
+ </Application.Resources>
+ </Application>
+
+{% endhighlight %}
+            <br/>
+            <br/>
+        </td>
+        </tr>
+        <tr>
+        <td>
+            SfNumericEntryNormalTextColor  
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the NumericEntry text.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfNumericEntryDisabledTextColor 
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the NumericEntry text in disable state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfNumericEntryFocusedTextColor 
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the NumericEntry text in focus state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfNumericEntryMouseHoveredTextColor 
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the NumericEntry text in hover state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfNumericEntryNormalBackground 
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the NumericEntry background.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfNumericEntryDisabledBackground 
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the NumericEntry background in disable state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfNumericEntryMouseHoveredBackground 
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the NumericEntry background in hover state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfNumericEntryFocusedBackground 
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the NumericEntry background in focus state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfNumericEntryNormalArrowColor 
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the NumericEntry arrow.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfNumericEntryDisabledArrowColor 
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the NumericEntry arrow in disable state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+            SfNumericEntryPressedArrowColor 
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the NumericEntry arrow in pressed state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfNumericEntryMouseHoveredArrowColor
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the NumericEntry arrow in hover state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfNumericEntryNormalClearButtonColor
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the NumericEntry clear button.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfNumericEntryDisabledClearButtonColor
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the NumericEntry clear button in disable state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfNumericEntryPressedClearButtonColor
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the NumericEntry clear button in pressed state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfNumericEntryMouseHoveredClearButtonColor
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the NumericEntry clear button in hover state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfNumericEntryNormalStroke
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the NumericEntry stroke.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfNumericEntryFocusedStroke
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the NumericEntry stroke in focus state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfNumericEntryDisabledStroke
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the NumericEntry stroke in disable state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfNumericEntryMouseHoveredStroke
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the NumericEntry stroke in hover state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfNumericEntryNormalFontSize
+            <br/>
+            <br/>
+        </td>
+        <td>
+            FontSize of the NumericEntry.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    </table>
+
+  ## SfRadioButton
+
+<table>
+    <tr>
+        <th>Theme Dictionary<br/>
+            <br/></th>        
+        <th>
+          Keys
+            <br/>
+            <br/>
+        </th>
+        <th>
+            Description
+            <br/>
+            <br/>
+        </th>
+    </tr>
+
+    <tr>
+        <td rowspan="15">
+            SfRadioButtonStyles 
+            <br/>
+            <br/>
+        </td>
+		<td>
+           SfRadioButtonTheme 
+            <br/>
+            <br/>
+        </td>
+        <td>    
+            By merging this key in application resources, you can customize the appearance of SfRadioButton without merging common theme resource and control style resource dictionaries.
+			
+{% highlight xaml %}
+
+<Application xmlns:syncTheme="clr-namespace:Syncfusion.Maui.Themes;assembly=Syncfusion.Maui.Core"
+             ...>
+ <Application.Resources>
+    <ResourceDictionary>
+        <ResourceDictionary.MergedDictionaries>
+            <syncTheme:SyncfusionThemeResourceDictionary />
+            <ResourceDictionary>
+                <x:String x:Key="SfRadioButtonTheme">CommonTheme</x:String>
+                <Color x:Key="SfRadioButtonNormalUncheckedColor">Orange</Color>
+                <Color x:Key="SfRadioButtonNormalTextColor">Green</Color>
+            </ResourceDictionary>
+        </ResourceDictionary.MergedDictionaries>
+    </ResourceDictionary>
+ </Application.Resources>
+ </Application>
+
+{% endhighlight %}
+            <br/>
+            <br/>
+        </td>
+        </tr>
+        <tr>
+        <td>
+            SfRadioButtonNormalUncheckedColor  
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the Unchecked RadioButton.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfRadioButtonHoverUncheckedColor  
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the unchecked RadioButton in hover state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfRadioButtonPressedUncheckedColor  
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the unchecked RadioButton in pressed state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfRadioButtonNormalCheckedColor  
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the checked RadioButton.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfRadioButtonHoverCheckedColor  
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the checked RadioButton in hover state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfRadioButtonPressedCheckedColor  
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the checked RadioButton in pressed state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+            SfRadioButtonNormalTextColor  
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the RadioButton text.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfRadioButtonHoverTextColor  
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the RadioButton text in hover state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfRadioButtonPressedTextColor 
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the RadioButton text in pressed state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfRadioButtonNormalBackgroundColor 
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the RadioButton background.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfRadioButtonDisabledUncheckedColor 
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the unchecked RadioButton in disable state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfRadioButtonDisabledCheckedColor 
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the checked RadioButton in disable state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfRadioButtonDisabledTextColor 
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the RadioButton text in disable state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfRadioButtonNormalFontSize
+            <br/>
+            <br/>
+        </td>
+        <td>
+            FontSize of the RadioButton.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    </table>
+
+  ## SfRating
+
+<table>
+    <tr>
+        <th>Theme Dictionary<br/>
+            <br/></th>        
+        <th>
+          Keys
+            <br/>
+            <br/>
+        </th>
+        <th>
+            Description
+            <br/>
+            <br/>
+        </th>
+    </tr>
+
+    <tr>
+        <td rowspan="13">
+            SfRatingStyles 
+            <br/>
+            <br/>
+        </td>
+		<td>
+            SfRatingTheme 
+            <br/>
+            <br/>
+        </td>
+        <td>    
+            By merging this key in application resources, you can customize the appearance of SfRating without merging common theme resource and control style resource dictionaries.
+			
+{% highlight xaml %}
+
+<Application xmlns:syncTheme="clr-namespace:Syncfusion.Maui.Themes;assembly=Syncfusion.Maui.Core"
+             ...>
+ <Application.Resources>
+    <ResourceDictionary>
+        <ResourceDictionary.MergedDictionaries>
+            <syncTheme:SyncfusionThemeResourceDictionary />
+            <ResourceDictionary>
+                <x:String x:Key="SfRatingTheme">CommonTheme</x:String>
+                <Color x:Key="SfRatingNormalRatedFill">Pink</Color>
+                <Color x:Key="SfRatingHoverUnratedFill">SkyBlue</Color>
+            </ResourceDictionary>
+        </ResourceDictionary.MergedDictionaries>
+    </ResourceDictionary>
+ </Application.Resources>
+ </Application>
+
+{% endhighlight %}
+            <br/>
+            <br/>
+        </td>
+        </tr>
+        <tr>
+        <td>
+            SfRatingNormalRatedFill  
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the rated portion of a Rating.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfRatingNormalRatedStroke  
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the rated portion of a Rating stroke.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfRatingDisabledRatedFill  
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the rated portion of a Rating in disable state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfRatingDisabledRatedStroke  
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the rated portion of a Rating stroke in disable state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfRatingHoverRatedFill  
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the rated portion of a Rating in hover state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+            SfRatingHoverRatedStroke  
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the rated portion of a Rating stroke in hover state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfRatingNormalUnratedFill  
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the unrated portion of a Rating.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfRatingNormalUnratedStroke  
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the unrated portion of a Rating stroke.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfRatingDisabledUnratedFill  
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the unrated portion of a Rating in disable state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfRatingDisabledUnratedStroke  
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the unrated portion of a Rating stroke in disable state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfRatingHoverUnratedFill 
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the unrated portion of a Rating in hover state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfRatingHoverUnratedStroke 
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the unrated portion of a Rating stroke in hover state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    </table>
+
+   ## SfSignaturePad
+
+<table>
+    <tr>
+        <th>Theme Dictionary<br/>
+            <br/></th>        
+        <th>
+          Keys
+            <br/>
+            <br/>
+        </th>
+        <th>
+            Description
+            <br/>
+            <br/>
+        </th>
+    </tr>
+
+    <tr>
+        <td rowspan="5">
+            SfSignaturePadStyles 
+            <br/>
+            <br/>
+        </td>
+		<td>
+           SfSignaturePadTheme 
+            <br/>
+            <br/>
+        </td>
+        <td>    
+            By merging this key in application resources, you can customize the appearance of SfSignaturePad without merging common theme resource and control style resource dictionaries.
+			
+{% highlight xaml %}
+
+<Application xmlns:syncTheme="clr-namespace:Syncfusion.Maui.Themes;assembly=Syncfusion.Maui.Core"
+             ...>
+ <Application.Resources>
+    <ResourceDictionary>
+        <ResourceDictionary.MergedDictionaries>
+            <syncTheme:SyncfusionThemeResourceDictionary />
+            <ResourceDictionary>
+                <x:String x:Key="SfSignaturePadTheme">CommonTheme</x:String>
+                <Color x:Key="SfSignaturePadNormalStrokeColor">Orange</Color>
+                <Color x:Key="SfSignaturePadNormalBackground">Grey</Color>
+            </ResourceDictionary>
+        </ResourceDictionary.MergedDictionaries>
+    </ResourceDictionary>
+ </Application.Resources>
+ </Application>
+
+{% endhighlight %}
+            <br/>
+            <br/>
+        </td>
+        </tr>
+        <tr>
+        <td>
+            SfSignaturePadNormalBackground  
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the SignaturePad background.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfSignaturePadNormalStrokeColor  
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the SignaturePad stroke.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    </table>
+
+  ## SfSwitch
+
+<table>
+    <tr>
+        <th>Theme Dictionary<br/>
+            <br/></th>        
+        <th>
+          Keys
+            <br/>
+            <br/>
+        </th>
+        <th>
+            Description
+            <br/>
+            <br/>
+        </th>
+    </tr>
+
+    <tr>
+        <td rowspan="30">
+            SfSwitchStyles 
+            <br/>
+            <br/>
+        </td>
+		<td>
+           SfSwitchTheme 
+            <br/>
+            <br/>
+        </td>
+        <td>    
+            By merging this key in application resources, you can customize the appearance of SfSwitch without merging common theme resource and control style resource dictionaries.
+			
+{% highlight xaml %}
+
+<Application xmlns:syncTheme="clr-namespace:Syncfusion.Maui.Themes;assembly=Syncfusion.Maui.Core"
+             ...>
+ <Application.Resources>
+    <ResourceDictionary>
+        <ResourceDictionary.MergedDictionaries>
+            <syncTheme:SyncfusionThemeResourceDictionary />
+            <ResourceDictionary>
+                <x:String x:Key="SfSwitchTheme">CommonTheme</x:String>
+                <Color x:Key="SfSwitchOffThumbBackground">LimeGreen</Color>
+                <Color x:Key="SfSwitchOffTrackStroke">Orange</Color>
+            </ResourceDictionary>
+        </ResourceDictionary.MergedDictionaries>
+    </ResourceDictionary>
+ </Application.Resources>
+ </Application>
+
+{% endhighlight %}
+            <br/>
+            <br/>
+        </td>
+        </tr>
+        <tr>
+        <td>
+            SfSwitchOffThumbBackground  
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Background color for the thumb of a Switch control in the off state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfSwitchOffTrackStroke  
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color for the track stroke of a Switch control in the off state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfSwitchOffThumbStroke  
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color for the thumb stroke of a Switch control in the off state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfSwitchTrackBackground  
+            <br/>
+            <br/>
+        </td>
+        <td>
+             Background color for the track of a Switch control in the on state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfSwitchThumbBackground  
+            <br/>
+            <br/>
+        </td>
+        <td>
+             Background color for the thumb of a Switch control in the on state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfSwitchTrackStroke  
+            <br/>
+            <br/>
+        </td>
+        <td>
+             Color for the track stroke of a Switch control in the on state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfSwitchThumbStroke  
+            <br/>
+            <br/>
+        </td>
+        <td>
+             Color for the thumb stroke of a Switch control in the on state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfSwitchOnIconColor  
+            <br/>
+            <br/>
+        </td>
+        <td>
+             Color for the icon of a Switch control in the on state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfSwitchOffHoveredThumbBackground  
+            <br/>
+            <br/>
+        </td>
+        <td>
+             Background color for the thumb of a Switch control in the off state when hovered.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfSwitchOffHoveredThumbStroke  
+            <br/>
+            <br/>
+        </td>
+        <td>
+             Stroke color for the thumb of a Switch control in the off state when hovered.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+            SfSwitchOnHoveredThumbBackground  
+            <br/>
+            <br/>
+        </td>
+        <td>
+             Background color for the thumb of a Switch control in the on state when hovered.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfSwitchOnHoveredThumbStroke  
+            <br/>
+            <br/>
+        </td>
+        <td>
+             Stroke color for the thumb of a Switch control in the on state when hovered.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfSwitchOffDisabledTrackBackground  
+            <br/>
+            <br/>
+        </td>
+        <td>
+             Background color for the track of a Switch control in the off state when disabled.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfSwitchOffDisabledThumbBackground  
+            <br/>
+            <br/>
+        </td>
+        <td>
+             Background color for the thumb of a Switch control in the off state when disabled.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfSwitchOffDisabledTrackStroke  
+            <br/>
+            <br/>
+        </td>
+        <td>
+             Stroke color for the track of a Switch control in the off state when disabled.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfSwitchOffDisabledThumbStroke  
+            <br/>
+            <br/>
+        </td>
+        <td>
+             Stroke color for the thumb of a Switch control in the off state when disabled.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfSwitchOnDisabledTrackBackground  
+            <br/>
+            <br/>
+        </td>
+        <td>
+             Background color for the track of a Switch control in the on state when disabled.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfSwitchOnDisabledThumbBackground 
+            <br/>
+            <br/>
+        </td>
+        <td>
+             Background color for the thumb of a Switch control in the on state when disabled.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfSwitchOnDisabledTrackStroke
+            <br/>
+            <br/>
+        </td>
+        <td>
+             Stroke color for the track of a Switch control in the on state when disabled.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfSwitchOnDisabledThumbStroke
+            <br/>
+            <br/>
+        </td>
+        <td>
+             Stroke color for the thumb of a Switch control in the on state when disabled.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfSwitchOnDisabledIconColor
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color for the icon of a Switch control in the on state when disabled.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfSwitchOffTrackBackground
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Background color for the track of a Switch control in the off state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfSwitchOffThumbWidthRequest
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Width of the thumb for a Switch control in the off state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfSwitchOffThumbHeightRequest
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Height of the thumb for a Switch control in the off state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfSwitchTrackStrokeThickness
+            <br/>
+            <br/>
+        </td>
+        <td>
+            StrokeThickness of the track for a Switch control.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfSwitchPressedThumbWidthRequest
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Width of the thumb for a Switch control in the pressed state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfSwitchPressedThumbHeightRequest
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Height of the thumb for a Switch control in the pressed state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfSwitchOnThumbWidthRequest
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Width of the thumb for a Switch control in the on state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfSwitchOnThumbHeightRequest
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Height of the thumb for a Switch control in the on state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    </table>
+
+## SfTabView
+
+<table>
+    <tr>
+        <th>Theme Dictionary<br/>
+            <br/></th>        
+        <th>
+          Keys
+            <br/>
+            <br/>
+        </th>
+        <th>
+            Description
+            <br/>
+            <br/>
+        </th>
+    </tr>
+
+    <tr>
+        <td rowspan="22">
+            SfTabViewStyles 
+            <br/>
+            <br/>
+        </td>
+		<td>
+           SfTabViewTheme 
+            <br/>
+            <br/>
+        </td>
+        <td>    
+            By merging this key in application resources, you can customize the appearance of SfTabView without merging common theme resource and control style resource dictionaries.
+			
+{% highlight xaml %}
+
+<Application xmlns:syncTheme="clr-namespace:Syncfusion.Maui.Themes;assembly=Syncfusion.Maui.Core"
+             ...>
+ <Application.Resources>
+    <ResourceDictionary>
+        <ResourceDictionary.MergedDictionaries>
+            <syncTheme:SyncfusionThemeResourceDictionary />
+            <ResourceDictionary>
+                <x:String x:Key="SfTabViewTheme">CommonTheme</x:String>
+                <Color x:Key="SfTabViewNormalTextColor">DarkBlue</Color>
+                <Color x:Key="SfTabViewNormalTabBarBackground">Gold</Color>
+            </ResourceDictionary>
+        </ResourceDictionary.MergedDictionaries>
+    </ResourceDictionary>
+ </Application.Resources>
+ </Application>
+
+{% endhighlight %}
+            <br/>
+            <br/>
+        </td>
+        </tr>
+        <tr>
+        <td>
+            SfTabViewNormalTextColor  
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the TabView text.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfTabViewSelectedTextColor  
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the TabView selected text.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfTabViewActiveTextColor  
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the TabView active text.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfTabViewDisabledTextColor  
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the TabView text in disabled state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfTabViewNormalTabBarBackground  
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the TabView tabbar background.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfTabViewDisabledTabBarBackground  
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the TabView tabbar background in disabled state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfTabViewActiveIndicatorBackground  
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Background color of the active indicator in a TabView.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfTabViewActiveMouseHoveredIndicatorBackground  
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Background color of the active indicator in a TabView when hovered.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfTabViewActiveDisabledIndicatorBackground  
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Background color of the active indicator in a TabView when disabled.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfTabViewActiveNormalBackground  
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Background color of the active TabView.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfTabViewActiveFocusedBackground  
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Background color of the active TabView in focus state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfTabViewActivePressedBackground  
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Background color of the active TabView in pressed state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfTabViewActiveDisabledBackground 
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Background color of the active TabView in disabled state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfTabViewActiveHoveredBackground 
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Background color of the active TabView in hover state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfTabViewInActiveNormalBackground 
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Background color of the inactive TabView.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfTabViewInActiveFocusedBackground 
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Background color of the inactive TabView in focus state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfTabViewInActivePressedBackground
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Background color of the inactive TabView in pressed state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfTabViewInActiveDisabledBackground
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Background color of the inactive TabView in disabled state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfTabViewInActiveHoveredBackground
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Background color of the inactive TabView in hover state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfTabViewInActiveTextColor
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Text color of the inactive TabView.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfTabViewNormalFontSize
+            <br/>
+            <br/>
+        </td>
+        <td>
+            FontSize of the TabView.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    </table>
+
+## SfTextInputLayout
+
+<table>
+    <tr>
+        <th>Theme Dictionary<br/>
+            <br/></th>        
+        <th>
+          Keys
+            <br/>
+            <br/>
+        </th>
+        <th>
+            Description
+            <br/>
+            <br/>
+        </th>
+    </tr>
+
+    <tr>
+        <td rowspan="23">
+            SfTextInputLayoutStyles 
+            <br/>
+            <br/>
+        </td>
+		<td>
+           SfTextInputLayoutTheme 
+            <br/>
+            <br/>
+        </td>
+        <td>    
+            By merging this key in application resources, you can customize the appearance of SfTextInputLayout without merging common theme resource and control style resource dictionaries.
+			
+{% highlight xaml %}
+
+<Application xmlns:syncTheme="clr-namespace:Syncfusion.Maui.Themes;assembly=Syncfusion.Maui.Core"
+             ...>
+ <Application.Resources>
+    <ResourceDictionary>
+        <ResourceDictionary.MergedDictionaries>
+            <syncTheme:SyncfusionThemeResourceDictionary />
+            <ResourceDictionary>
+                <x:String x:Key="SfTextInputLayoutTheme">CommonTheme</x:String>
+                <Color x:Key="SfTextInputLayoutStroke">Yellow</Color>
+                <Color x:Key="SfTextInputLayoutContainerBackground">Pink</Color>
+            </ResourceDictionary>
+        </ResourceDictionary.MergedDictionaries>
+    </ResourceDictionary>
+ </Application.Resources>
+ </Application>
+
+{% endhighlight %}
+            <br/>
+            <br/>
+        </td>
+        </tr>
+        <tr>
+        <td>
+            SfTextInputLayoutStroke  
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the TextInputLayout stroke.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfTextInputLayoutNormalContainerBackground  
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the TextInputLayout background in normal state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfTextInputLayoutContainerBackground  
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the TextInputLayout background.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfTextInputLayoutNormalErrorTextColor 
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the TextInputLayout error text.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfTextInputLayoutHintTextColor 
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the TextInputLayout hint text.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfTextInputLayoutHelperTextColor 
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the TextInputLayout helper text.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfTextInputLayoutFocusedHintTextColor 
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the TextInputLayout hint text in focus state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfTextInputLayoutCommonStroke 
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the TextInputLayout common stroke.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfTextInputLayoutFocusedContainerBackground
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the TextInputLayout background in focus state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfTextInputLayoutDisabledStroke
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the TextInputLayout stroke in disable state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfTextInputLayoutDisabledContainerBackground
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the TextInputLayout background in disable state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfTextInputLayoutDisabledErrorTextColor
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the TextInputLayout error text in disable state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfTextInputLayoutDisabledHintTextColor
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the TextInputLayout hint text in disable state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfTextInputLayoutDisabledHelperTextColor
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the TextInputLayout helper text in disable state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfTextInputLayoutMouseHoveredContainerBackground
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the TextInputLayout background text in hover state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfTextInputLayoutHoveredStroke
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the TextInputLayout stroke in hover state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfTextInputLayoutPressedHintTextColor
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the TextInputLayout hint text in pressed state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfTextInputLayoutErrorStroke
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the TextInputLayout error stroke.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfTextInputLayoutNormalHintFontSize
+            <br/>
+            <br/>
+        </td>
+        <td>
+            FontSize of the TextInputLayout hint text.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfTextInputLayoutFocusedHintFontSize
+            <br/>
+            <br/>
+        </td>
+        <td>
+            FontSize of the TextInputLayout text in focus state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfTextInputLayoutNormalHelperFontSize
+            <br/>
+            <br/>
+        </td>
+        <td>
+            FontSize of the TextInputLayout helper text.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfTextInputLayoutNormalErrorFontSize
+            <br/>
+            <br/>
+        </td>
+        <td>
+            FontSize of the TextInputLayout error text.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    </table>
+
+
+
+
