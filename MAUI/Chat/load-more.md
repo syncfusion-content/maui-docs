@@ -15,10 +15,10 @@ N> SfChat does not support LoadMore when `SfChat.ShowTimeBreak` is enabled. Beca
 
 ## Load more manually
 
-By default, upon reaching the top of the chat list, a load more button will be displayed if `SfChat.LoadMoreBehavior` is set as `LoadMoreOption.Manual`. Clicking on this button triggers the `SfChat.LoadMoreCommand`. In the command's action, set the `IsLazyLoading` as `true` to show the busy indicator and hide the load more button. Once the messages are loaded, set the `IsLazyLoading` back to `false ' to hide the busy indicator.
+By default, upon reaching the top of the chat list, a load more button will be displayed if `SfChat.LoadMoreBehavior` is set as `LoadMoreOption.Manual`. Clicking on this button triggers the `SfChat.LoadMoreCommand`. In the command's action, set the `IsLazyLoading` as `true` to show the busy indicator and hide the load more button. Once the messages are loaded, set the `IsLazyLoading` back to `false` to hide the busy indicator.
 
 {% tabs %}
-{% highlight xaml  hl_lines="14" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="14" %}
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
@@ -154,7 +154,7 @@ Set the `SfChat.LoadMoreBehavior` to `LoadMoreOption.Auto`, a busy indicator wil
 N> The `SfChat.IsLazyLoading` will always be `true` if `SfChat.LoadMoreBehavior` is `Auto`. So, to cancel the load more operation and remove the load more view from the chat, set the `LoadMoreBehavior` as `LoadMoreOption.None`.
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
