@@ -210,7 +210,7 @@ Delete the selected shape using either the toolbar or the [`DeleteAnnotation`](h
 
 Remove all the annotations using the [`ClearAnnotations`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_ClearAnnotations) method.
 
-N> It will remove text and pen annotations as well.
+N> It will remove text, pen and custom view annotations as well.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -261,6 +261,35 @@ N> The event is common for text and shape annotations.
 {% endhighlight %}
 
 {% endtabs %}
+
+## Annotation unselected event
+
+This [`AnnotationUnselected`] event occurs when the annotation is unselected.
+
+N> This is common for Shape, Text and CustomView annotations.
+
+{% tabs %}
+
+{% highlight xaml tabtitle="MainPage.xaml" %}
+
+    <imageEditor:SfImageEditor Source="image.png" AnnotationUnselected="OnAnnotationUnSelected" />
+
+{% endhighlight %}
+
+{% highlight C# tabtitle="MainPage.xaml.cs" %}
+
+    private void OnAnnotationUnSelected(object sender, AnnotationUnselectedEventArgs e)
+    {
+        if(e.AnnotationSettings is ImageEditorShapeSettings shapeSettings)
+        {
+            shapeSettings.IsFilled = true;
+        }
+    }
+
+{% endhighlight %}
+
+{% endtabs %}
+
 
 ## Add shape on initial loading
 
