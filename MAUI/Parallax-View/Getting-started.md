@@ -156,9 +156,9 @@ The [`Source`]() represents the foreground view of the parallax view. The value 
 Currently, the [SfParallaxView]() directly supports the following controls. Bind the control to the [`Source`]() property.
 
     1. ScrollView
-    2. ListView
+    2. Syncfusion ListView
 
-The following code sample demonstrates how to bind the ListView to the [`Source`]() property.
+The following code sample demonstrates how to bind the Syncfusion ListView to the [`Source`]() property.
 
 {% tabs %}
 
@@ -168,6 +168,7 @@ The following code sample demonstrates how to bind the ListView to the [`Source`
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:ParallaxSample"
              xmlns:parallax="clr-namespace:Syncfusion.Maui.ParallaxView;assembly=Syncfusion.Maui.ParallaxView"
+             xmlns:list="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView"
              x:Class="ParallaxView_GettingStarted.MainPage">
       
     <ContentPage.Content>
@@ -178,26 +179,31 @@ The following code sample demonstrates how to bind the ListView to the [`Source`
                 </parallax:SfParallaxView.Content>
             </parallax:SfParallaxView>
      
-            <ListView x:Name="listview" ItemsSource="{Binding Items}" BackgroundColor="Transparent" ItemSize="100">
-                <ListView.ItemTemplate>
+            <list:SfListView x:Name="listview" ItemsSource="{Binding Items}" BackgroundColor="Transparent" ItemSize="100">
+                <list:SfListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <Grid Padding="20,0,20,0" RowSpacing="50">
-                                <StackLayout BackgroundColor="Transparent" Grid.Column="1" Padding="0,0,0,0" VerticalOptions="CenterAndExpand" HorizontalOptions="StartAndExpand" Orientation="Vertical">
-                                    <Label HorizontalOptions="Start" TextColor="White" Text="{Binding Name}" Font="25">
-                                    </Label>
-                                    <Label HorizontalOptions="Start" Text="{Binding Author}" TextColor="White">
-                                    </Label>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="0.5*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <Image BackgroundColor="Transparent" HeightRequest="90" HorizontalOptions="CenterAndExpand" 
+                                    WidthRequest="90" Source="{Binding ItemImage}" Grid.Column="0" VerticalOptions="CenterAndExpand" Aspect="AspectFit" />
+                                <StackLayout BackgroundColor="Transparent" Grid.Column="1" VerticalOptions="Center" 
+                                    HorizontalOptions="StartAndExpand" Orientation="Vertical">
+                                    <Label HorizontalOptions="Start" TextColor="White" Text="{Binding Name}"/>
+                                    <Label HorizontalOptions="Start" Text="{Binding Author}" TextColor="White"/>
                                 </StackLayout>
                             </Grid>
                         </ViewCell>
                     </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
+                </list:SfListView.ItemTemplate>
+            </list:SfListView>
         </Grid>
     </ContentPage.Content>
 	
-    </ContentPage>
+  </ContentPage>
 
 {% endhighlight %}
 
@@ -241,6 +247,13 @@ The following code sample demonstrates how to bind the ListView to the [`Source`
                 new Contacts() { Name = "Rolling in the Deep", Author = "Adele" },
                 new Contacts() { Name = "Don’t Stop Believing", Author = "Journey"},
             };
+
+            Assembly assembly = typeof(ParallaxViewModel).GetTypeInfo().Assembly;
+
+            for (int i = 0; i < Items.Count; i++)
+            {
+                Items[i].Image = ImageSource.FromResource("ParallaxView_GettingStarted.ParallaxGuitar" + i + ".png", assembly);
+            }
         }
     }
 
@@ -256,6 +269,12 @@ The following code sample demonstrates how to bind the ListView to the [`Source`
             get;
             set;
         }
+
+        public ImageSource Image
+        {       
+            get;
+            set;
+        }
     }
 
 {% endhighlight %}
@@ -267,3 +286,5 @@ N> The size of the [`Content`]() view will automatically be stretched to the siz
 ![Output of Parallax View](ParallaxView_Images/maui_parallaxview.gif)
 
 You can find the complete getting started sample from this link: [Sample]()
+
+N> In Android, when an image's pixel size cannot stretch to fit the Parallax View Source control during loading, it results in a Java.Lang.RuntimeException. It is necessary to use the image as Parallax View Content without pixelation.

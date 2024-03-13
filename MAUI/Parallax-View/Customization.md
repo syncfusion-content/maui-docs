@@ -40,10 +40,10 @@ namespace ParallaxView_GettingStarted
             ParallaxViewModel view = new ParallaxViewModel();
             BindingContext = view;
             SfParallaxView parallax = new SfParallaxView();
-            ListView listview = new ListView();
+            SfListView listview = new SfListView();
             Image image = new Image();
             Assembly assembly = typeof(MainPage).GetTypeInfo().Assembly;
-            image.Source = ImageSource.FromResource("ParallaxView_GettingStarted.Images.ParallaxWallpaper.png", assembly);
+            image.Source = ImageSource.FromResource("ParallaxView_GettingStarted.ParallaxWallpaper.png", assembly);
             parallax.Content = image;
             parallax.Speed = 0.5;
             listview.ItemsSource = view.Items;
@@ -74,11 +74,11 @@ The orientation of the content scrolling can be customized to vertical or horizo
         </parallax:SfParallaxView.Content>
     </parallax:SfParallaxView>
 
-    <ListView x:Name="listview" Orientation="Horizontal" ItemsSource="{Binding Items}" BackgroundColor="Transparent" ItemSize="100">
+    <SfListView x:Name="listview" Orientation="Horizontal" ItemsSource="{Binding Items}" BackgroundColor="Transparent" ItemSize="100">
         
             . . .
 
-    <ListView>
+    <SfListView>
 
 </Grid>
         
@@ -104,9 +104,9 @@ namespace ParallaxView_GettingStarted
             Assembly assembly = typeof(MainPage).GetTypeInfo().Assembly;
             image.Source = ImageSource.FromResource("ParallaxView_GettingStarted.Images.ParallaxWallpaper.png", assembly);
             parallax.Content = image;
-            parallax.Speed = 0.5;
             parallax.Orientation = Syncfusion.Maui.ParallaxView.Orientation.Horizontal;
             listview.ItemsSource = view.Items;
+            listview.Orientation = ItemsLayoutOrientation.Horizontal;
             parallax.Source = listview;
         }
     }
