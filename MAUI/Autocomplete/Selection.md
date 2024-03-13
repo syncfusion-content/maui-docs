@@ -170,8 +170,6 @@ When the TokensWrapMode is set to Wrap the selected items will be wrapped to the
 
 {% endtabs %}
 
-![.NET MAUI AutoComplete TokensWrapMode Wrap.](Images/Selection/net-maui-autocomplete-wrapmode.png)
-
 #### None Mode
 
 When the TokensWrapMode is set to None the selected item will be wrapped in horizontal orientation.
@@ -193,8 +191,6 @@ When the TokensWrapMode is set to None the selected item will be wrapped in hori
 {% endhighlight %}
 
 {% endtabs %}
-
-![.NET MAUI AutoComplete TokensWrapMode None.](Images/Selection/net-maui-autocomplete-nonemode.png)
  
 ## Selection changed notification
 
