@@ -10,7 +10,7 @@ documentation: ug
 # Customization in MAUI StepProgressBar
 
 ## Step content customization
-You can customize the step content type, size, active step index, strole width and acctive step progress value by using these properties, [ContentType]() with [Numbering](), [Tick](), [Cross](), [Dot]() and [Images](), [StepSize](), [StepContentSize](), [ActiveStepIndex](), [StepStrokeWidth](), [ActiveStepProgressValue](). 
+You can customize the step content type, size, active step index, strole width and active step progress value by using these properties, [ContentType]() with [Numbering](), [Tick](), [Cross](), [Dot]() and [Images](), [StepSize](), [StepContentSize](), [ActiveStepIndex](), [StepStrokeWidth](), [ActiveStepProgressValue](). 
 
 {% tabs %}
 {% highlight xaml hl_lines="2 3 4 5 6 9 12 15" %}
