@@ -157,7 +157,7 @@ The SelectionTextHighlightColor property is used to modify the background color 
                         ItemsSource="{Binding SocialMedias}"
                         DisplayMemberPath="Name"
                         TextMemberPath="Name"
-                        Placeholder="Select a social media"
+                        Placeholder="Enter Media"
                         SelectionTextHighlightColor="Green" />
 
 {% endhighlight %}
@@ -379,7 +379,7 @@ DropDown items can be customized using the [DropDownItemFontAttributes], [DropDo
                         ItemsSource="{Binding SocialMedias}"
                         DisplayMemberPath="Name"
                         TextMemberPath="Name"
-                        Placeholder="Select a social media"
+                        Placeholder="Enter Media"
                         DropDownItemFontAttributes="Italic"
                         DropDownItemFontFamily="OpenSansSemibold"
                         DropDownItemFontSize="16"
@@ -411,7 +411,7 @@ The DropDownBackground property is used to modify the background color of the dr
                         ItemsSource="{Binding SocialMedias}"
                         DisplayMemberPath="Name"
                         TextMemberPath="Name"
-                        Placeholder="Select a social media"
+                        Placeholder="Enter Media"
                         DropDownBackground="YellowGreen" />
 
 {% endhighlight %}
@@ -437,7 +437,7 @@ The SelectedDropDownItemBackground property is used to modify the backgroundcolo
                         ItemsSource="{Binding SocialMedias}"
                         DisplayMemberPath="Name"
                         TextMemberPath="Name"
-                        Placeholder="Select a social media"
+                        Placeholder="Enter Media"
                         SelectedDropDownItemBackground="LightSeaGreen" />
 
 {% endhighlight %}
@@ -463,7 +463,7 @@ The DropDownStroke property is used to modify the border color of the dropdown.
                         ItemsSource="{Binding SocialMedias}"
                         DisplayMemberPath="Name"
                         TextMemberPath="Name"
-                        Placeholder="Select a social media"
+                        Placeholder="Enter Media"
                         DropDownStroke="DarkOrange" />
 
 {% endhighlight %}
@@ -489,7 +489,7 @@ The DropDownStrokeThickness property is used to modify the thickness of the drop
                         ItemsSource="{Binding SocialMedias}"
                         DisplayMemberPath="Name"
                         TextMemberPath="Name"
-                        Placeholder="Select a social media"
+                        Placeholder="Enter Media"
                         DropDownStroke="DarkOrange"
                         DropDownStrokeThickness="5" />
 
@@ -516,7 +516,7 @@ The DropDownItemHeight property is used to modify the height of the dropdown ite
                         ItemsSource="{Binding SocialMedias}"
                         DisplayMemberPath="Name"
                         TextMemberPath="Name"
-                        Placeholder="Select a social media"
+                        Placeholder="Enter Media"
                         DropDownItemHeight="25" />
 
 {% endhighlight %}

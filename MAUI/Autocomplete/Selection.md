@@ -191,6 +191,7 @@ When the TokensWrapMode is set to None, the selected item will be wrapped in a h
              SelectionMode="Multiple"
              MaxDropDownHeight="250"
              DisplayMemberPath="Name"
+             Placeholder="Enter Media"
              TextMemberPath="Name"
              TokensWrapMode="None" />
 
