@@ -7,7 +7,7 @@ control: SfParallaxView
 documentation: ug
 ---
 
-# Customization
+# Customization in .NET MAUI Parallax View
 
 ## Speed Customization
 
