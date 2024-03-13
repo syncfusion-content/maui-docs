@@ -21,6 +21,7 @@ Plot bands are classified into [NumericalPlotBand]() and [DateTimePlotBand](). B
 * [`Fill`]() - changes the fill of the plot band.
 * [`Stroke`]() - changes the stroke color of the plot band.
 * [`StrokeWidth`]() - changes the stroke width of the plot band.
+* [`StrokeDashArray`]() - changes the stoke in dash array.
 * [`IsVisible`]() - changes the visibility of the plot band in chart axis.
 * [`IsRepeatable`]()- specifies the plot band need to be repeated in specified interval.
 
@@ -136,7 +137,8 @@ Plot bands are classified into [NumericalPlotBand]() and [DateTimePlotBand](). B
 The Plot band recurrence feature enables plot bands to be drawn repeatedly at regular intervals. This functionality is particularly useful when you need to mark events that occur recursively along the timeline of the chart.
 
 * [`RepeatEvery`]() - Specifies the frequency at which the plot band is repeated.
-* [`RepeatUntil`]() - Specifies the end value at which the strip line stops repeating.
+* [`RepeatEveryType`]() - Specifies the date time unit for `DateTimePlotBand`.
+* [`RepeatUntil`]() - Specifies the end value at which the plot band stops repeating.
 
 {% tabs %}
 
@@ -294,12 +296,113 @@ Suppose, you want to draw a plot band that should not stretch along its associat
 ![Visualize segmented plot band in .NET MAUI](Plot_band_images/segmented_plotband.png)
 
 ## Plot Line
-When you specify the same value for both start and end, it will draw a line.
+When specifying the same value for both start and end, a plot line will be drawn.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+    <chart:SfCartesianChart>
+        . . .
+    <chart:SfCartesianChart.XAxes>
+       <chart:CategoryAxis/>
+     </chart:SfCartesianChart.XAxes>
+
+    <chart:SfCartesianChart.YAxes>
+      <chart:NumericalAxis>
+         <chart:NumericalAxis.PlotBands>
+             <chart:NumericalPlotBandCollection>
+                  <chart:NumericalPlotBand Start="24" 
+                                           End="24" 
+                                           Fill="#B300E190"
+                                           Stroke="#B300E190"
+                                           StrokeWidth="2"
+                                           Text="Low Temperature"/>
+
+                 <chart:NumericalPlotBand Start="28" 
+                                          End="28" 
+                                          Stroke="#FCD404"
+                                          StrokeWidth="2"
+                                          Fill="#FCD404"
+                                         Text="Average Temperature"/>
+
+                 <chart:NumericalPlotBand Start="32" 
+                                          End="32" 
+                                          Stroke="#FF4E4E"
+                                          StrokeWidth="2"
+                                          Fill="#FF4E4E"
+                                          Text="High Temperature"/>                       
+
+                    </chart:NumericalPlotBandCollection>
+                </chart:NumericalAxis.PlotBands>
+            </chart:NumericalAxis>
+        </chart:SfCartesianChart.YAxes>
+        . . .
+    </chart:SfCartesianChart>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+    SfCartesianChart chart = new SfCartesianChart();
+    . . .
+    CategoryAxis primaryAxis = new CategoryAxis();
+    chart.XAxes.Add(primaryAxis);
+
+    NumericalAxis numericalAxis = new NumericalAxis();
+    NumericalPlotBandCollection numericalPlotBandCollection =  new NumericalPlotBandCollection();
+     NumericalPlotBand plotBand1 = new NumericalPlotBand()
+     {
+        Start = 24,
+        End = 24,
+        Stroke = new SolidColorBrush(Color.FromArgb("#00E190")),
+        StrokeWidth = 2,
+        Fill = new SolidColorBrush(Color.FromArgb("#00E190")),
+        Text = "Low Temperature"
+     };
+
+     NumericalPlotBand plotBand2 = new NumericalPlotBand()
+     {
+        Start = 28,
+        End = 28,
+        Stroke = new SolidColorBrush(Color.FromArgb("#FCD404")),
+        StrokeWidth = 2,
+        Fill = new SolidColorBrush(Color.FromArgb("#FCD404")),
+        Text = "Average Temperature"
+    };
+
+    NumericalPlotBand plotBand3 = new NumericalPlotBand()
+    {
+        Start = 32,
+        End = 32,
+        Stroke = new SolidColorBrush(Color.FromArgb("#FF4E4E")),
+        StrokeWidth = 2,
+        Fill = new SolidColorBrush(Color.FromArgb("#FF4E4E")),
+        Text = "High Temperature"
+     };
+
+     numericalPlotBandCollection.Add(plotBand1);
+     numericalPlotBandCollection.Add(plotBand2);
+     numericalPlotBandCollection.Add(plotBand3); 
+     numericalAxis.PlotBands = numericalPlotBandCollection;
+     chart.YAxes.Add(numericalAxis);
+    ...
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Visualize plot line in .NET MAUI](Plot_band_images/plot_line.png)
 
 ## Text Customization 
 
-[Text]() can be added to plot bands to indicate the significance of each particular region. The [LabelStyle]() property provides options to customize plot band text.
+[Text]() can be added to plot bands to indicate the significance of each particular region. The [LabelStyle]() property provides options to customize plot band text.Following are the options available,
 
+* `HorizontalTextAlignment` -  changes the horizontal alignment of text.
+* `VerticalTextAlignment` - changes the vertical alignment of text.
+* `Angle` - used to rotate the text.
+* `OffsetX` - changes the horizontal padding to the plot band text.
+* `OffsetY` - changes the vertical padding to the plot band text.
 
 {% tabs %}
 
