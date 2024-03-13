@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Customization in .NET MAUI Parallax View control | Syncfusion
-description: Learn here all about Customization support in Syncfusion .NET MAUI Parallax View (SfParallaxView) control and more.
+description: Learn about Customization support in Syncfusion .NET MAUI Parallax View (SfParallaxView) control and more.
 platform: .NET MAUI
 control: SfParallaxView
 documentation: ug
@@ -58,7 +58,7 @@ namespace ParallaxView_GettingStarted
 
 ## Orientation 
 
-The orientation of the content scrolling can be customized to vertical or horizontal using the value of [`Orientation`]() property.
+The orientation of the content scrolling can be customized to vertical or horizontal using the value of the [`Orientation`]() property.
 
 {% tabs %}
 
