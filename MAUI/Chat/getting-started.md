@@ -261,4 +261,5 @@ Messages can be separated based on their date and time of creation and this can 
 
 ![Time break support in .NET MAUI Chat](images/getting-started/maui-chat-timebreak.png)
 
-N>[View Sample in GitHub](https://github.com/SyncfusionExamples/getting-started-with-.net-maui-chat)
+N>
+[View Sample in GitHub](https://github.com/SyncfusionExamples/getting-started-with-.net-maui-chat)

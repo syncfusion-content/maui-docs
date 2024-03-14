@@ -50,4 +50,5 @@ To migrate easier from Xamarin.Forms SfChat to .NET MAUI SfChat, we kept most of
 </tr>
 </table>
 
-N> For information on style key changes in .NET MAUI Chat, you can refer to the styles
+N> 
+For information on style key changes in .NET MAUI Chat, you can refer to the styles here.
