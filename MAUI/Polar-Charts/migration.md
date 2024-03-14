@@ -142,18 +142,6 @@ The following table illustrates the API migration for the chart.
 <th>.NET MAUI</th>
 </tr>
 <tr>
-<td>LabelRotationAngle</td>
-<td>LabelRotation</td>
-</tr>
-<tr>
-<td>PlotOffset</td>
-<td>PlotOffsetStart, PlotOffsetEnd</td>
-</tr>
-<tr>
-<td>LabelExtent</td>
-<td>LabelExtent</td>
-</tr>
-<tr>
 <td>VisibleMinimum</td>
 <td>VisibleMinimum</td>
 </tr>
@@ -270,10 +258,6 @@ this.Content = chart;
 <td>Fill</td>
 </tr>
 <tr>
-<td>ColorModel, CustomBrushes</td>
-<td>PaletteBrushes</td>
-</tr>
-<tr>
 <td>DataMarker</td>
 <td>ShowDataLabels, DataLabelSettings</td>
 </tr>
@@ -380,38 +364,6 @@ this.Content = chart;
 <tr>
 <td>Title</td>
 <td><em>Upcoming</em> </td>
-</tr>
-<tr>
-<td>Series</td>
-<td><em>Upcoming</em> </td>
-</tr>
-<tr>
-<td>BackgroundColor</td>
-<td><em>Upcoming</em> </td>
-</tr>
-<tr>
-<td>StrokeColor</td>
-<td><em>Upcoming</em> </td>
-</tr>
-<tr>
-<td>StrokeWidth</td>
-<td><em>Upcoming</em> </td>
-</tr>
-<tr>
-<td>StrokeDashArray</td>
-<td><em>Upcoming</em> </td>
-</tr>
-<tr>
-<td>CornerRadius</td>
-<td><em>Upcoming</em></td>
-</tr>
-<tr>
-<td>Margin</td>
-<td><em>Upcoming</em></td>
-</tr>
-<tr>
-<td>LabelStyle</td>
-<td><em>Upcoming</em></td>
 </tr>
 <tr>
 <td>OverflowMode</td>
@@ -716,14 +668,12 @@ chart.TooltipBehavior = tooltip;
 ## Upcoming features in .NET MAUI
 
 **Chart** 
- 
-* Support for chart localization. 
+
 * Suspend and resume notification support. 
 
 **Series**
 
 * Listen to property change support for series.
-* Get data point index based on value.
 * Notify event or method when series are rendering.
 * Suspend and resume notification.
 
@@ -743,12 +693,7 @@ chart.TooltipBehavior = tooltip;
 * Support to enable or disable the legend icon visibility.
 * Legend items wrap and floating support.
 * Maximum width support for Legend.
-* Individual legend items based on the data point count.
 * Event or method to notify the legend click and the creation of a legend item.
-
-**Data label**
-
-* DataTemplate support for data labels.
 
 ## Known issue 
 

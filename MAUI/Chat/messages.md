@@ -764,6 +764,7 @@ The `ImageMessage` comes with in-built SfChat.ImageTapped event and `SfChat.Imag
 {% endhighlight %}
 {% endtabs %}
 
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/display-tapped-image-in-full-screen-in-.net-maui-chat)
 
 ### Adding image message as an outgoing message
 
@@ -1078,6 +1079,7 @@ We have loaded a custom template if the message's text contains a particular tex
 
 ![Message template in .NET MAUI Chat](images/messages/maui-chat-message-template.png)
 
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/message-template-.net-maui-chat)
 
 ## Spacing between messages
 
@@ -1530,3 +1532,4 @@ In the provided code example, we've set up a custom template to display a securi
 
 ![Sytem generated message in .NET MAUI Chat](images/messages/maui-chat-system-generated-custom-message-template.png)
 
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/system-generated-message-template-.net-maui-chat)
