@@ -135,7 +135,7 @@ The `SfChat.CurrentUser` helps differentiate between the sender and receiver of 
 {% endhighlight %}
 {% endtabs %}
 
-![.NET MAUI Chat with current user name](images/messages/maui-chat-current-user.png)
+![Current user in .NET MAUI Chat](images/messages/maui-chat-current-user.png)
 
 ## Text message
 
@@ -562,6 +562,7 @@ The `SfChat.CurrentUser` helps differentiate between the sender and receiver of 
                 Text = "You can check out this link to get started",
                 Url = "https://dotnet.microsoft.com/en-us/apps/maui",
             });
+            
             this.Messages.Add(new TextMessage()
             {
                 Author = new Author() { Name = "Andrea", Avatar = "peoplecircle7.png" },
@@ -578,7 +579,7 @@ The `SfChat.CurrentUser` helps differentiate between the sender and receiver of 
 
 `HyperlinkMessage` is used to share URLs as a message. Along with the link, the thumbnail, title, and description of the URL are automatically fetched and displayed. The following code example illustrates how to add a hyperlink message.
 
-![Send hyperlink message type in .NET MAUI Chat](images/messages/maui-chat-outgoing-hyperlink-message.png)
+![Outgoing hyperlink message in .NET MAUI Chat](images/messages/maui-chat-outgoing-hyperlink-message.png)
 
 ## Image message
 
@@ -741,12 +742,13 @@ The `ImageMessage` comes with in-built SfChat.ImageTapped event and `SfChat.Imag
 
     public class ViewModel : INotifyPropertyChanged
     {
+        public ICommand ImageTappedCommand { get; set; }
         ...
         public ViewModel()
         {
             this.messages = new ObservableCollection<object>();
             this.CurrentUser = new Author() { Name = "Nancy" };
-            ImageTappedCommand = new Command(ImageTapped);
+            ImageTappedCommand = new Command<object>(ImageTapped);
         }
 
         private void ImageTapped(object args)
@@ -767,13 +769,13 @@ The `ImageMessage` comes with in-built SfChat.ImageTapped event and `SfChat.Imag
 
 Unlike the other messages, the `ImageMessage` can also be shown as an outgoing message. To add an ImageMessage as an outgoing message, just set the `ImageMessage.Author` as `SfChat.CurrentUser`. You can also add an image message when clicking the attachment button, as shown here.
 
-![Send Image message type in .NET MAUI Chat](images/messages/maui-chat-outgoing-image-message.png)
+![Outgoing Image message in .NET MAUI Chat](images/messages/maui-chat-outgoing-image-message.png)
 
 ## Card Message
 
 You can show a list of interactive cards with each card containing an image, a list of buttons, and text (title, subtitle, and description) to tie in with the cards of popular bot frameworks. Use the `Card.Image`, `Card.Title`, `Card.Subtitle`, and `Card.Description` properties to display the image, title, subtitle, and description in a card respectively.
 
-You can also show one or more buttons on a card as options to choose from. Create the CardButton with the necessary `CardButton.Title`(the text to be displayed in the button) and `CardButton.Value`(the text value that should be added as a response message when the button is clicked, usually the title of the card) and add it to the `Card.Buttons` collection.
+You can also show one or more buttons on a card as options to choose from. Create the `CardButton` with the necessary `CardButton.Title`(the text to be displayed in the button) and `CardButton.Value`(the text value that should be added as a response message when the button is clicked, usually the title of the card) and add it to the `Card.Buttons` collection.
 
 Upon creating the individual cards, add them to a Card typed collection and assign this collection of cards to the `CardMessage.Cards` property. The card message auto-sizes itself in height based on the card contents (the text and button count) of the largest card in the list of cards.
 
@@ -903,7 +905,7 @@ If you don’t want to display images, buttons, or text(title, subtitle, descrip
 
 The `CardMessage` comes with a built-in `SfChat.CardTapped` event and `SfChat.CardCommand` that will be fired upon tapping a button in a card or tapping any card in the message. You can get the selected Card, the clicked CardButton and the actual `CardMessage` via the `CardTappedEventArgs` as `CardTappedEventArgs.Card`, `CardTappedEventArgs.Action` and `CardTappedEventArgs.Message` respectively, in both the `CardTapped` event handler and action of `CardCommand`. Handling this event/command by setting `CardTappedEventArgs.Handled` prevents the `Card.Title` or `CardButton.Value` from getting added as a new message.
 
-N> The Action argument in `CardTappedEventArgs` holds a valid value only when clicking the CardButton in a card. Tapping elsewhere inside the card fires the `CardTapped` event and `CardCommand` with Action as null in the `CardTappedEventArgs`. If the `CardTappedEventArgs.Action` is null, the `CardTappedEventArgs.Card.Title` is added as a new message, else the `CardTappedEventArgs.Action.Value` is added as a new message.
+N> The Action argument in `CardTappedEventArgs` holds a valid value only when clicking the `CardButton` in a card. Tapping elsewhere inside the card fires the `CardTapped` event and `CardCommand` with `Action` as null in the `CardTappedEventArgs`. If the `CardTappedEventArgs.Action` is null, the `CardTappedEventArgs.Card.Title` is added as a new message, else the `CardTappedEventArgs.Action.Value` is added as a new message.
 
 **Card Tapped Event**
 {% tabs %}
@@ -1030,9 +1032,9 @@ We have loaded a custom template if the message's text contains a particular tex
         private SfChat sfChat;
 
         public ChatMessageTemplateSelector()
-        {
-            
+        {   
         }
+        
         public ChatMessageTemplateSelector(SfChat sfChat)
         {
             this.sfChat = sfChat;
@@ -1040,6 +1042,7 @@ We have loaded a custom template if the message's text contains a particular tex
             this.outgoingDataTemplate = new DataTemplate(typeof(OutgoingMessageTemplate));
             this.ratingDataTemplate = new DataTemplate(typeof(RatingTemplate));
         }
+        
         protected override DataTemplate OnSelectTemplate(object item, BindableObject container)
         {
             var message = item as IMessage;
@@ -1073,7 +1076,7 @@ We have loaded a custom template if the message's text contains a particular tex
 {% endhighlight %}
 {% endtabs %}
 
-![Message Template in .NET MAUI Chat](images/messages/maui-chat-message-template.png)
+![Message template in .NET MAUI Chat](images/messages/maui-chat-message-template.png)
 
 
 ## Spacing between messages
@@ -1138,7 +1141,7 @@ The `SfChat.CurrentUser` can send messages by using the send button located in t
 
 The newly added message can be canceled from sending in the `SfChat.SendMessage` event handler and `SfChat.SendMessageCommand` by setting the Handled value as `true` in the provided `SendMessageEventArgs`.
 
-**SendMessage Event handler**
+**SendMessage event handler**
 
 {% tabs %}
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="16" %}
@@ -1171,7 +1174,7 @@ The newly added message can be canceled from sending in the `SfChat.SendMessage`
 {% endhighlight %}
 {% endtabs %}
 
-**SendMessage command**
+**SendMessageCommand**
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="16" %}
@@ -1359,13 +1362,11 @@ By default, the author’s name and avatar are displayed for the incoming messag
 {% endhighlight %}
 {% endtabs %}
 
-![Hiding avatar and author visibility in .NET MAUI Chat](images/messages/maui-chat-hide-avatar.png)
+![Hide incoming avatar and author visibility in .NET MAUI Chat](images/messages/maui-chat-hide-avatar.png)
 
 ## Customize the shape of the message
 
 The `SfChat` allows to change the shape of the messages by using the `SfChat.MessageShape` property.
-
-To customize `MessageShape` in the SfChat, refer to the below code example:
 
 {% tabs %}
 {% highlight xaml hl_lines="16" %}
@@ -1421,8 +1422,6 @@ To customize `MessageShape` in the SfChat, refer to the below code example:
 
 The `SfChat` allows to hide the message input view (editor) by setting `false` to `SfChat.ShowMessageInputView` property.
 
-To hide `ShowMessageInputView` in the SfChat, refer the below code example:
-
 {% tabs %}
 {% highlight xaml hl_lines="16" %}
 
@@ -1472,7 +1471,7 @@ To hide `ShowMessageInputView` in the SfChat, refer the below code example:
 {% endhighlight %}
 {% endtabs %}
 
-## Messages without author (System Generated Messages / Admin messages) in maui chat
+## Messages without author (System Generated Messages / Admin messages)
 
 Using templates, you can show messages with any information, similar to security alerts in WhatsApp or admin notifications. These messages can be put into the `SfChat.Messages` collection without specifying an author.
 In the provided code example, we've set up a custom template to display a security message from an admin when the author of the message is not specified.
@@ -1480,26 +1479,12 @@ In the provided code example, we've set up a custom template to display a securi
 {% tabs %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-    using Syncfusion.Maui.Chat;
+    sfChat = new SfChat();
+    this.sfChat.Messages = viewModel.Messages;
+    this.sfChat.CurrentUser = viewModel.CurrentUser;
+    this.sfChat.MessageTemplate = new CustomMessageTemplateSelector(this.sfChat);
+    this.Content = sfChat;
 
-    namespace MauiChat
-    {
-        public partial class MainPage : ContentPage
-        {
-            SfChat sfChat;
-            ViewModel viewModel;
-            public MainPage()
-            {
-                InitializeComponent();
-                sfChat = new SfChat();
-                viewModel = new ViewModel();
-                this.sfChat.Messages = viewModel.Messages;
-                this.sfChat.CurrentUser = viewModel.CurrentUser;
-                this.sfChat.MessageTemplate = new CustomMessageTemplateSelector() { Chat = this.sfChat };
-                this.Content = sfChat;
-            }
-        }
-    }
 {% endhighlight %}
 {% endtabs %}
 
@@ -1543,5 +1528,5 @@ In the provided code example, we've set up a custom template to display a securi
 {% endhighlight %}
 {% endtabs %}
 
-![Message Template in .NET MAUI Chat without author](images/messages/maui-chat-system-generated-custom-message-template.png)
+![Sytem generated message in .NET MAUI Chat](images/messages/maui-chat-system-generated-custom-message-template.png)
 
