@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Leaf item settings in .NET MAUI TreeMap | Syncfusion
-description: Learn about the Leaf item settings of Syncfusion .NET MAUI TreeMap(STreeMap) control, its basic features, and the functionalities of treemap.
+description: Learn how to harness Syncfusion .NET MAUI TreeMap(STreeMap) control leaf item settings for precise fill color customization, enhancing visual appeal.
 platform: maui
 control: TreeMap (SfTreeMap)
 documentation: ug
@@ -23,6 +23,9 @@ The `LabelPath` property within the `TreeMapLeafItemSettings` is used to display
     <treemap:SfTreeMap.LeafItemSettings>
     <treemap:TreeMapLeafItemSettings LabelPath="Country" />
     </treemap:SfTreeMap.LeafItemSettings>
+    <treemap:SfTreeMap.LeafItemBrushSettings>
+        <treemap:TreeMapUniformBrushSettings Brush="#F8D7B9"/>
+    </treemap:SfTreeMap.LeafItemBrushSettings>
 </treemap:SfTreeMap>
 
 {% endhighlight %}

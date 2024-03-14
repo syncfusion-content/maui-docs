@@ -155,7 +155,11 @@ public class PopulationViewModel
 
 #### Bind data source for TreeMap
 
-To populate the treemap items, utilize the `DataSource` property of `SfTreeMap`. The `PrimaryValuePath` specifies the name of the property within the data object that provides the primary value used to determine the size of each item in the treemap. This primary value typically represents the main quantitative data associated with each item.
+To populate the treemap items, utilize the `DataSource` property of `SfTreeMap`. Along with `DataSourceThe`. Alongside, consider the follwing properties of `SfTreeMap` while initializing the tree map contol.
+* The `PrimaryValuePath` specifies the name of the property within the data object that provides the primary value used to determine the size of each item in the treemap. This primary value typically represents the main quantitative data associated with each item. 
+* The `RangeColorValuePath` specifies the name of the property within the data object that provides the range color value for each item in the tree map.This range color value typically represents a quantitative data range associated with each item, which is used to determine the color of the item based on a gradient or range mapping.
+
+Also, specify the path to the data property containing the text you want to display for the tree map item using `LabelPath` property of `LeafItemSettings`. For detailed label addition guidance, refer documentation.
 
 {% tabs %}
 {% highlight XAML hl_lines="2 5 6 7" %}
