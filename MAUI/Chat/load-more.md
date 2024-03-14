@@ -9,7 +9,7 @@ documentation: ug
 
 # Load More in .NET MAUI Chat (SfChat)
 
-In `SfChat`, scroll to the top of the message list to fetch the old messages on demand in run-time either automatically or manually(by tapping the load more button) by setting the `LoadMoreBehavior` as `LoadMoreOption.Auto` or `LoadMoreOption.Manual` respectively. You can also pass the parameter to the `LoadMoreCommand` using the `LoadMoreCommandParameter` property. Use the `LazyLoading` property to show the busy indicator denoting the loading operation in SfChat.
+In `SfChat`, scroll to the top of the message list to fetch the old messages on demand in run-time either automatically or manually(by tapping the load more button) by setting the `LoadMoreBehavior` as `LoadMoreOption.Auto` or `LoadMoreOption.Manual` respectively. You can also pass the parameter to the `LoadMoreCommand` using the `LoadMoreCommandParameter` property. Use the `IsLazyLoading` property to show the busy indicator denoting the loading operation in SfChat.
 
 N> SfChat does not support LoadMore when `ShowTimeBreak` is enabled. Because SfListView has a limitation that `LoadMoreOption.Auto` or `LoadMoreOption.AutoOnScroll` works only when `LoadMorePosition.Bottom` is `enabled`.
 
