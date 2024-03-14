@@ -55,6 +55,31 @@ N>
 * [View scheduler appointment sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/GettingStarted)
 * [View business object sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/BusinessObject)
 
+## Appointment indicator count
+
+The scheduler month view appointment indicator count allows you to customize the count of the appointment indicator by using the `AppointmentIndicatorCount` property of the [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html). By default, the `AppointmentIndicatorCount` is set to 5.
+
+{% tabs %}  
+{% highlight XAML hl_lines="5" %}
+
+<schedule:SfScheduler x:Name="Scheduler"
+                        View="Month" >
+    <schedule:SfScheduler.MonthView>
+        <schedule:SchedulerMonthView AppointmentDisplayMode="Indicator" 
+                                     AppointmentIndicatorCount="2"/>
+    </schedule:SfScheduler.MonthView>
+</schedule:SfScheduler>
+
+{% endhighlight %}
+{% highlight C# hl_lines="3" %}
+
+this.Scheduler.View = SchedulerView.Month;
+this.Scheduler.MonthView.AppointmentDisplayMode = SchedulerMonthAppointmentDisplayMode.Indicator;
+this.Scheduler.MonthView.AppointmentIndicatorCount = 1;
+
+{% endhighlight %}  
+{% endtabs %}
+
 ## Hide leading and trailing dates
 
 The previous and next month dates from a Scheduler month view can be hidden by using the [ShowLeadingAndTrailingDates](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html#Syncfusion_Maui_Scheduler_SchedulerMonthView_ShowLeadingAndTrailingDates) property in the [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html). The `ShowLeadingAndTrailingDates` property defaults to `true.`
