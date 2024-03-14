@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Legend in .NET MAUI TreeMap | Syncfusion
-description: Learn all about the Legend feature of Syncfusion .NET MAUI TreeMap(STreeMap) control to customize its appearance including text, icon and more.
+title: Legend in .NET MAUI TreeMap control | Syncfusion
+description: Learn here all about how to customize the appearance of legend items in Syncfusion .NET MAUI TreeMap (STreeMap) control by changing text color, icon type, icon size, and more.
 platform: maui
 control: TreeMap (SfTreeMap)
 documentation: ug
 ---
- 
+
 # Legend in .NET MAUI TreeMap (SfTreeMap)
 
-Using a legend, you can provide valuable information for interpreting TreeMap displays. The legends can be represented in various colors, shapes or other identifiers based on the data.
+The legend provides valuable information for interpreting TreeMap displays, presenting data through various colors, shapes, and other identifiers
 
 ## Enable legend
 
-To add a legend to a TreeMap, set `ShowLegend` to `true` in `LegendSettings` and customize the legend item’s colors and text with `LeafItemBrushSettings` and `LegendSettings`.
+To incorporate a legend for the TreeMap control, utilize the `ShowLegend` property within `LegendSettings.` It is possible to customize the legend item’s color and text using the `LeafItemBrushSettings` and `LegendSettings` properties of `SfTreemap.`
 
 {% tabs %}
 {% highlight XAML hl_lines="5" %}
@@ -21,8 +21,7 @@ To add a legend to a TreeMap, set `ShowLegend` to `true` in `LegendSettings` and
 <treemap:SfTreeMap x:Name="treeMap"
                    DataSource="{Binding PopulationDetails}"
                    RangeColorValuePath="Population"
-                   PrimaryValuePath="Population"
-                   ShowToolTip="True">
+                   PrimaryValuePath="Population">
     <treemap:SfTreeMap.LeafItemSettings>
         <treemap:TreeMapLeafItemSettings LabelPath="Country">
             <treemap:TreeMapLeafItemSettings.TextStyle>
@@ -53,7 +52,6 @@ To add a legend to a TreeMap, set `ShowLegend` to `true` in `LegendSettings` and
     </treemap:SfTreeMap.LegendSettings>
 </treemap:SfTreeMap>
 
-
 {% endhighlight %}
 {% highlight C# hl_lines="4" %}
 
@@ -61,6 +59,16 @@ SfTreeMap treeMap = new SfTreeMap();
 PopulationViewModel viewModel = new PopulationViewModel();
 treeMap.DataSource = viewModel.PopulationDetails;
 treeMap.LegendSettings.ShowLegend = true;
+this.treeMap.LeafItemBrushSettings = new TreeMapRangeBrushSettings()
+{
+    RangeBrushes = new List<TreeMapRangeBrush>()
+    {
+        new TreeMapRangeBrush { LegendLabel = "50M - 1B", From = 50000000, To = 1000000000, Brush = new SolidColorBrush(Color.FromArgb("#3F8D71")) },
+        new TreeMapRangeBrush { LegendLabel = "10M - 50M", From = 10000000, To = 50000000, Brush = new SolidColorBrush(Color.FromArgb("#5BA985")) },
+        new TreeMapRangeBrush { LegendLabel = "0.1M - 10M", From = 100000, To = 10000000, Brush = new SolidColorBrush(Color.FromArgb("#7DC59D")) },
+    }
+};
+
 this.Content = treeMap;
 
 {% endhighlight %}

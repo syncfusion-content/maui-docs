@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Add, Remove and Edit Annotations in .NET MAUI PDF Viewer control | Syncfusion
+title: Add, Remove, and Edit Annotations in .NET MAUI PDF Viewer | Syncfusion
 description: Learn here all about adding, removing and editing annotations in a PDF document using Syncfusion .NET MAUI PDF Viewer (SfPdfViewer) control.
 platform: MAUI
 control: SfPdfViewer
@@ -170,5 +170,22 @@ private void OnAnnotationEdited(object sender, AnnotationEventArgs e)
     Annotation editedAnnotation = e.Annotation;
     Debug.WriteLine("The {0} is edited successfully", editedAnnotation.Name);
 }
+{% endhighlight %}
+{% endtabs %}
+
+### Adding custom information to a annotation
+
+The [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) allows you to assign custom information to annotations. The `CustomData` property is utilized to store additional information about each annotation instance for reference. However, it's essential to note that these data are solely intended for reference purposes and will not be displayed in the `SfPdfViewer` interface.
+
+The provided code sample illustrates how to set the `CustomData` property for an annotation. Within this code sample, we set the custom data to represent the created date of the annotation.
+
+{% tabs %}
+{% highlight C# %}
+
+private void OnAnnotationAdded(object sender, AnnotationEventArgs e)
+{
+    e.Annotation.CustomData="Created Date is: " +DateTime.Now.ToString();
+}
+
 {% endhighlight %}
 {% endtabs %}
