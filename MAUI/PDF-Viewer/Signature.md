@@ -25,13 +25,13 @@ This section will go through how to add signature by UI interaction to a PDF doc
 
 You can add signature to a PDF document with UI interaction using signature dialog. The following steps explains how to add signature on a PDF.
 
-	1. Set the AnnotationMode property of the SfPdfViewer to `Signature`. It activates the signature mode on the control and signature dialog box will be open.
-	2. create a signature in any one of the types
-	3. You can customize the color of the signature for handwritten and text signature types
-	4. Tap on the page to add the created signatures.
-	5. Once you have done, set the AnnotationMode to None. It will disable the signature mode and save the added signatures to the PDF page.
-	6. You can later move, resize, or delete the signature.
-	
+1. Set the AnnotationMode property of the SfPdfViewer to `Signature`. It activates the signature mode on the control and signature dialog box will be open.
+2. create a signature in any one of the types
+3. You can customize the color of the signature for handwritten and text signature types
+4. Tap on the page to add the created signatures.
+5. After creating the signature or closing the dialog, the signature mode will be disabled, and the AnnotationMode will be changed to None.
+6. You can later move, resize, or delete the signature.
+
 The following code explains how to enable the `Signature` annotation mode.
 
 {% tabs %}
@@ -61,8 +61,6 @@ void DisableSignatureMode()
 ## Add signature programmatically
 
 This section will go through how to add signature programmatically to a PDF document.
-
-Note: Currently, there is no support for add a text signature programmatically.
 
 ### Add handwritten signature 
 
@@ -113,4 +111,6 @@ customStamp.IsSignature = true;
 PdfViewer.AddAnnotation(customStamp);
 {% endhighlight %}
 {% endtabs %}
+
+N> To add a text signature, you can use an image containing the signature text . You can then add it in the same manner as an image signature.
 

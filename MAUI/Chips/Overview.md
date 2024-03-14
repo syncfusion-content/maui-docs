@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Overview | .NET MAUI Chips | Syncfusion
-platform: maui-controls
+platform: maui
 description: Learn here about overall key features in Essential Studio for .NET MAUI SfChip Control, its elements, and more.
 control: SfChip
 ---

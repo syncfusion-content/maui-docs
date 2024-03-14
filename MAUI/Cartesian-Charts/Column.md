@@ -56,7 +56,7 @@ this.Content = chart;
 
 {% endtabs %}
 
-![Column chart type in MAUI Chart](Chart-Types_images/maui_column_chart.png)
+![Column chart type in MAUI Chart](Chart-Types-images/maui_column_chart.png)
 
 ## Spacing and Width
 
@@ -112,11 +112,11 @@ this.Content = chart;
 
 {% endtabs %}
 
-![Column segment spacing in MAUI Chart](Chart-Types_images/maui_column_chart_with_segment_spacing.png)
+![Column segment spacing in MAUI Chart](Chart-Types-images/maui_column_chart_with_segment_spacing.png)
 
 ## Overlapped Placement
 
-By default, all the column series which have the same x and y axes are placed side by side in a chart. To place the series one over the other (overlapped), set the [EnableSideBySideSeriesPlacement]( https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_EnableSideBySideSeriesPlacement) property of SfCartesianChart to false and configure the Width property to differentiate the series. The following code sample and screenshot illustrate the overlapped placement of column series.
+By default, all the column series which have the same x and y axes are placed side by side in a chart. To place the series one over the other (overlapped), set the [EnableSideBySideSeriesPlacement](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_EnableSideBySideSeriesPlacement) property of SfCartesianChart to false and configure the Width property to differentiate the series. The following code sample and screenshot illustrate the overlapped placement of the column series.
 
 {% tabs %}
 
