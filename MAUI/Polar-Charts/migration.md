@@ -142,18 +142,6 @@ The following table illustrates the API migration for the chart.
 <th>.NET MAUI</th>
 </tr>
 <tr>
-<td>LabelRotationAngle</td>
-<td>LabelRotation</td>
-</tr>
-<tr>
-<td>PlotOffset</td>
-<td>PlotOffsetStart, PlotOffsetEnd</td>
-</tr>
-<tr>
-<td>LabelExtent</td>
-<td>LabelExtent</td>
-</tr>
-<tr>
 <td>VisibleMinimum</td>
 <td>VisibleMinimum</td>
 </tr>
@@ -268,10 +256,6 @@ this.Content = chart;
 <tr>
 <td>Color</td>
 <td>Fill</td>
-</tr>
-<tr>
-<td>ColorModel, CustomBrushes</td>
-<td>PaletteBrushes</td>
 </tr>
 <tr>
 <td>DataMarker</td>
