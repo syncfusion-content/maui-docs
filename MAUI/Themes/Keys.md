@@ -13156,6 +13156,443 @@ This page lists the keys for each control and the element to which it is mapped 
     </tr>
     </table>
 
+  ## SfCartesian Chart
+
+<table>
+    <tr>
+        <th>Theme Dictionary <br/> <br/> </th>        
+        <th>Keys <br/> <br/> </th>
+        <th> Description <br/> <br/> </th>
+    </tr>
+
+    <tr>
+        <td rowspan="23">
+            SfCartesianChartStyles  <br/> <br/>
+        </td>
+		<td> SfCartesianChartTheme <br/> <br/>
+        </td>
+        <td>    
+            By merging this key in application resources, you can customize the appearance of SfCartesianChart without merging common theme resource and control style resource dictionaries.
+			
+{% highlight xaml %}
+
+<Application xmlns:syncTheme="clr-namespace:Syncfusion.Maui.Themes;assembly=Syncfusion.Maui.Core"
+             ...>
+ <Application.Resources>
+    <ResourceDictionary>
+        <ResourceDictionary.MergedDictionaries>
+            <syncTheme:SyncfusionThemeResourceDictionary />
+            <ResourceDictionary>
+                <x:String x:Key="SfCartesianChartTheme">CommonTheme</x:String>
+                <Color x:Key="SfTextInputLayoutStroke">Yellow</Color>
+                <Color x:Key="SfTextInputLayoutContainerBackground">Pink</Color>
+            </ResourceDictionary>
+        </ResourceDictionary.MergedDictionaries>
+    </ResourceDictionary>
+ </Application.Resources>
+ </Application>
+
+{% endhighlight %}
+            <br/>
+            <br/>
+        </td>
+        </tr>
+     <tr>
+        <td>SfCartesianChartBackground<br/><br/></td>
+        <td>Background color of cartesian chart<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfCartesianChartMajorGridLineStroke<br/><br/></td>
+        <td>Stoke of the axis major grid line.<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfCartesianChartMinorGridLineStroke<br/><br/></td>
+        <td>Stoke of the axis minor grid line.<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfCartesianChartMajorTickLineStroke<br/><br/></td>
+        <td>Stoke of the axis major tick line.<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfCartesianChartMinorTickLineStroke<br/><br/></td>
+        <td>Stoke of the axis minor tick line.<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfCartesianChartAxisLineStroke<br/><br/></td>
+        <td>Stoke of the axis line.<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfCartesianChartAxisTitleTextColor<br/><br/></td>
+        <td>Color of the axis title.<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfCartesianChartAxisTitleBackground<br/><br/></td>
+        <td>Background color of the axis title.<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfCartesianChartAxisTitleStroke<br/><br/></td>
+        <td>Stoke of the axis title<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfCartesianChartAxisTitleTextFontSize<br/><br/></td>
+        <td>Font size of the axis title text.<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfCartesianChartDataPointSelectionBrush<br/><br/></td>
+        <td>Color of the selected segment of the series.<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfCartesianChartSeriesSelectionBrush<br/><br/></td>
+        <td>Color of the selected series.<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfCartesianChartTooltipBackground<br/><br/></td>
+        <td>Background of the tooltip<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfCartesianChartTooltipTextColor<br/><br/></td>
+        <td>Text color of the tooltip<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfCartesianChartTooltipTextFontSize<br/><br/></td>
+        <td>Font size of the tooltip<br/><br/></td>
+    </tr>   
+ </table>  
+
+  ## SfCircular Chart
+ <table>
+     <tr>
+         <th>Theme Dictionary <br/> <br/> </th>        
+         <th>Keys <br/> <br/> </th>
+         <th> Description <br/> <br/> </th>
+     </tr>
+     <tr>
+         <td rowspan="23">
+             SfCircularChartStyles  <br/> <br/>
+         </td>
+         <td> SfCircularChartTheme <br/> <br/>
+         </td>
+         <td>    
+             By merging this key in application resources, you can customize the appearance of SfCircularChart without merging common theme resource and control style resource dictionaries.
+             
+ {% highlight xaml %}
+ <Application xmlns:syncTheme="clr-namespace:Syncfusion.Maui.Themes;assembly=Syncfusion.Maui.Core"
+              ...>
+  <Application.Resources>
+     <ResourceDictionary>
+         <ResourceDictionary.MergedDictionaries>
+             <syncTheme:SyncfusionThemeResourceDictionary />
+             <ResourceDictionary>
+                 <x:String x:Key="SfCircularChartTheme">CommonTheme</x:String>
+                 <Color x:Key="SfTextInputLayoutStroke">Yellow</Color>
+                 <Color x:Key="SfTextInputLayoutContainerBackground">Pink</Color>
+             </ResourceDictionary>
+         </ResourceDictionary.MergedDictionaries>
+     </ResourceDictionary>
+  </Application.Resources>
+  </Application>
+ {% endhighlight %}
+             <br/>
+             <br/>
+         </td>
+         </tr>
+     <tr>
+        <td>SfCircularChartBackground<br/><br/></td>
+        <td>Background of circular chart<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfCircularChartSelectionBrush<br/><br/></td>
+        <td>Color of the selected segment of the series.<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfCircularChartTooltipBackground<br/><br/></td>
+        <td>Background of the tooltip<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfCircularChartTooltipTextColor<br/><br/></td>
+        <td>Text color of the tooltip<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfCircularChartTooltipTextFontSize<br/><br/></td>
+        <td>Font size of tooltip text<br/><br/></td>
+    </tr>
+  </table>  
+ 
+ ## SfFunnel Chart
+ <table>
+     <tr>
+         <th>Theme Dictionary <br/> <br/> </th>        
+         <th>Keys <br/> <br/> </th>
+         <th> Description <br/> <br/> </th>
+     </tr>
+     <tr>
+         <td rowspan="23">
+             SfFunnelStyles  <br/> <br/>
+         </td>
+         <td> SfFunnelChartTheme <br/> <br/>
+         </td>
+         <td>    
+             By merging this key in application resources, you can customize the appearance of SfFunnelChart without merging common theme resource and control style resource dictionaries.
+             
+ {% highlight xaml %}
+ <Application xmlns:syncTheme="clr-namespace:Syncfusion.Maui.Themes;assembly=Syncfusion.Maui.Core"
+              ...>
+  <Application.Resources>
+     <ResourceDictionary>
+         <ResourceDictionary.MergedDictionaries>
+             <syncTheme:SyncfusionThemeResourceDictionary />
+             <ResourceDictionary>
+                 <x:String x:Key="SfFunnelChartTheme">CommonTheme</x:String>
+                 <Color x:Key="SfTextInputLayoutStroke">Yellow</Color>
+                 <Color x:Key="SfTextInputLayoutContainerBackground">Pink</Color>
+             </ResourceDictionary>
+         </ResourceDictionary.MergedDictionaries>
+     </ResourceDictionary>
+  </Application.Resources>
+  </Application>
+ {% endhighlight %}
+             <br/>
+             <br/>
+         </td>
+         </tr>
+    <tr>
+        <td>SfFunnelChartBackground<br/><br/></td>
+        <td>Background of funnel chart<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfFunnelChartSelectionBrush<br/><br/></td>
+        <td>Color of the selected segment.<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfFunnelChartTooltipBackground<br/><br/></td>
+        <td>Background of the tooltip<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfFunnelChartTooltipTextColor<br/><br/></td>
+        <td>Text color of the tooltip<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfFunnelChartTooltipTextFontSize<br/><br/></td>
+        <td>Font size of the tooltip text<br/><br/></td>
+    </tr>
+  </table>  
+
+  ## SfPyramid Chart
+  <table>
+      <tr>
+          <th>Theme Dictionary <br/> <br/> </th>        
+          <th>Keys <br/> <br/> </th>
+          <th> Description <br/> <br/> </th>
+      </tr>
+      <tr>
+          <td rowspan="23">
+              SfPyramidChartStyles  <br/> <br/>
+          </td>
+          <td> SfPyramidChartTheme <br/> <br/>
+          </td>
+          <td>    
+              By merging this key in application resources, you can customize the appearance of SfPyramidChart without merging common theme resource and control style resource dictionaries.
+              
+  {% highlight xaml %}
+  <Application xmlns:syncTheme="clr-namespace:Syncfusion.Maui.Themes;assembly=Syncfusion.Maui.Core"
+               ...>
+   <Application.Resources>
+      <ResourceDictionary>
+          <ResourceDictionary.MergedDictionaries>
+              <syncTheme:SyncfusionThemeResourceDictionary />
+              <ResourceDictionary>
+                  <x:String x:Key="SfPyramidChartTheme">CommonTheme</x:String>
+                  <Color x:Key="SfTextInputLayoutStroke">Yellow</Color>
+                  <Color x:Key="SfTextInputLayoutContainerBackground">Pink</Color>
+              </ResourceDictionary>
+          </ResourceDictionary.MergedDictionaries>
+      </ResourceDictionary>
+   </Application.Resources>
+   </Application>
+  {% endhighlight %}
+              <br/>
+              <br/>
+          </td>
+          </tr>
+    <tr>
+        <td>SfPyramidChartBackground<br/><br/></td>
+        <td>Background color of pyramid chart<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfPyramidChartSelectionBrush<br/><br/></td>
+        <td>Color of the selected segment of the series.<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfPyramidChartTooltipBackgrounds<br/><br/></td>
+        <td>Background of the tooltip<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfPyramidChartTooltipTextColor<br/><br/></td>
+        <td>Text color of the tooltip<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfPyramidChartTooltipTextFontSize<br/><br/></td>
+        <td>Font size of the tooltip text<br/><br/></td>
+    </tr>
+   </table>  
+
+   ## SfPolar Chart
+   <table>
+       <tr>
+           <th>Theme Dictionary <br/> <br/> </th>        
+           <th>Keys <br/> <br/> </th>
+           <th> Description <br/> <br/> </th>
+       </tr>
+       <tr>
+           <td rowspan="23">
+               SfPolarChartStyles  <br/> <br/>
+           </td>
+           <td> SfPolarChartTheme <br/> <br/>
+           </td>
+           <td>    
+               By merging this key in application resources, you can customize the appearance of SfPolarChart without merging common theme resource and control style resource dictionaries.
+               
+   {% highlight xaml %}
+   <Application xmlns:syncTheme="clr-namespace:Syncfusion.Maui.Themes;assembly=Syncfusion.Maui.Core"
+                ...>
+    <Application.Resources>
+       <ResourceDictionary>
+           <ResourceDictionary.MergedDictionaries>
+               <syncTheme:SyncfusionThemeResourceDictionary />
+               <ResourceDictionary>
+                   <x:String x:Key="SfPolarChartTheme">CommonTheme</x:String>
+                   <Color x:Key="SfTextInputLayoutStroke">Yellow</Color>
+                   <Color x:Key="SfTextInputLayoutContainerBackground">Pink</Color>
+               </ResourceDictionary>
+           </ResourceDictionary.MergedDictionaries>
+       </ResourceDictionary>
+    </Application.Resources>
+    </Application>
+   {% endhighlight %}
+               <br/>
+               <br/>
+           </td>
+           </tr>
+          <tr>
+        <td>SfPolarChartBackground<br/><br/></td>
+        <td>Background of polar chart<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfPolarMajorGridLineStroke<br/><br/></td>
+        <td>Stoke of the axis major grid line.<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfPolarMinorGridLineStroke<br/><br/></td>
+        <td>Stoke of the axis minor grid line.<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfPolarMajorTickLineStroke<br/><br/></td>
+        <td>Stoke of the axis major tick line.<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfPolarMinorTickLineStroke<br/><br/></td>
+        <td>Stoke of the axis minor tick line.<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfPolarAxisLineStroke<br/><br/></td>
+        <td>Stoke of the axis line.<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfPolarAxisTitleTextColor<br/><br/></td>
+        <td>Color of the axis title text.<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfPolarAxisTitleBackground<br/><br/></td>
+        <td>Background color of the axis title.<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfPolarAxisTitleStroke<br/><br/></td>
+        <td>Stoke of the axis title<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfPolarChartAxisTitleTextFontSize<br/><br/></td>
+        <td>Font size of the axis title text.<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfPolarChartTooltipBackground<br/><br/></td>
+        <td>Background of the tooltip<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfPolarChartTooltipTextColor<br/><br/></td>
+        <td>Text color of the tooltip<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfPolarChartTooltipTextFontSize<br/><br/></td>
+        <td>Font size of the tooltip text<br/><br/></td>
+    </tr> 
+ </table>  
+
+ ## SfSunburst Chart
+ <table>
+     <tr>
+         <th>Theme Dictionary <br/> <br/> </th>        
+         <th>Keys <br/> <br/> </th>
+         <th> Description <br/> <br/> </th>
+     </tr>
+     <tr>
+         <td rowspan="23">
+             SfSunburstChartStyles  <br/> <br/>
+         </td>
+         <td> SfSunburstChartTheme <br/> <br/>
+         </td>
+         <td>    
+             By merging this key in application resources, you can customize the appearance of SfSunburstChart without merging common theme resource and control style resource dictionaries.
+             
+ {% highlight xaml %}
+ <Application xmlns:syncTheme="clr-namespace:Syncfusion.Maui.Themes;assembly=Syncfusion.Maui.Core"
+              ...>
+  <Application.Resources>
+     <ResourceDictionary>
+         <ResourceDictionary.MergedDictionaries>
+             <syncTheme:SyncfusionThemeResourceDictionary />
+             <ResourceDictionary>
+                 <x:String x:Key="SfSunburstChartTheme">CommonTheme</x:String>
+                 <Color x:Key="SfTextInputLayoutStroke">Yellow</Color>
+                 <Color x:Key="SfTextInputLayoutContainerBackground">Pink</Color>
+             </ResourceDictionary>
+         </ResourceDictionary.MergedDictionaries>
+     </ResourceDictionary>
+  </Application.Resources>
+  </Application>
+ {% endhighlight %}
+             <br/>
+             <br/>
+         </td>
+         </tr>
+    <tr>
+        <td>SfSunburstChartBackground<br/><br/></td>
+        <td>Background color of sunburst chart<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfSunburstChartTooltipBackground<br/><br/></td>
+        <td>Background of the tooltip<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfSunburstChartTooltipTextColor<br/><br/></td>
+        <td>Text color of the tooltip<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfSunburstChartTooltipTextFontSize<br/><br/></td>
+        <td>Font size of the tooltip text<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfSunburstChartLegendTextColor<br/><br/></td>
+        <td>Text color of the legend<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfSunburstChartLegendFontSize<br/><br/></td>
+        <td>Font size of the legend<br/><br/></td>
+    </tr>    
+</table>  
+   
+  
+ 
+
 
 
 
