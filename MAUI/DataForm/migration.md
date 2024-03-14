@@ -1372,3 +1372,7 @@ The common properties of `Xamarin SfDataForm` list items ( [ DataFormPickerEdito
 * [Android] - in RTL mode Radio button's content does not arrange from the right.
 * `RTL` flow direction not working for ComboBox and AutoComplete editors.
 * `IsReadOnly` not working for AutoComplete editor.
+* Dark theme and light theme - There is no border and focused border stroke customization for the default editors (Text, password, multiline text, picker, DatePicker and TimePicker)
+* Dark theme and light theme - [iOS] There is no border and focused border stroke customization for the default editor (Text, password, picker, DatePicker and TimePicker)
+* Dark theme and light theme -[MacOS] There is no border and focused border stroke customization for the default editor (Text, password and picker)
+* Dark theme and light theme - MacOS The text color customization will not work for the DatePicker and TimePicker.

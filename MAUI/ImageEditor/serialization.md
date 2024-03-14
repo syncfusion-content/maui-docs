@@ -79,4 +79,4 @@ The `Deserialize` method is used to deserialize the annotations over an image. I
 
 {% endtabs %}
 
-N> Serialization is not applicable to custom annotations.
+N> Serialization and deserialization is not applicable for custom annotation views.
