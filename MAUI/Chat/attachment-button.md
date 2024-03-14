@@ -132,7 +132,7 @@ The `SfChat.AttachmentButtonClicked` event and `SfChat.AttachmentButtonCommand` 
 {% endtabs %}
 
 {% tabs %}
-{% highlight c# tabtitle="ViewModel.cs" hl_lines="7" %}
+{% highlight c# tabtitle="ViewModel.cs" hl_lines="8" %}
 ...
 public ICommand AttachmentButtonCommand { get; set; }
 
