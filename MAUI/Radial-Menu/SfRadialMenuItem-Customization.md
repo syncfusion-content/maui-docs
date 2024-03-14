@@ -232,7 +232,9 @@ The [`BackgroundColor`] property changes the background color of the [`SfRadialM
              xmlns:local="clr-namespace:RadialSample"
              xmlns:syncfusion="clr-namespace:Syncfusion.Maui.RadialMenu;assembly=Syncfusion.Maui.RadialMenu"
              x:Class="RadialSample.MainPage">
-    <radialMenu:SfRadialMenu>
+    <radialMenu:SfRadialMenu CenterButtonText="&#xe710;"
+                             CenterButtonFontFamily="Maui Material Assets"
+                             CenterButtonFontSize="28">
         <radialMenu:SfRadialMenuItem.Items>
             <radialMenu:SfRadialMenuItem BackgroundColor="#00cc1d" />
             <radialMenu:SfRadialMenuItem BackgroundColor="#c65619" />
@@ -257,7 +259,12 @@ namespace RadialSample
         {
             InitializeComponent();
 
-            SfRadialMenu radialMenu = new SfRadialMenu();
+            SfRadialMenu radialMenu = new SfRadialMenu()
+            {
+                CenterButtonText="&#xe710;"
+                CenterButtonFontFamily="Maui Material Assets",
+                CenterButtonFontSize=28,
+            };
             RadialMenuItemsCollection itemCollection = new RadialMenuItemsCollection()
             {
                 new SfRadialMenuItem() { BackgroundColor= Color.FromArgb("#00cc1d") },
@@ -275,6 +282,8 @@ namespace RadialSample
 {% endhighlight %}
 
 {% endtabs %}
+
+![Display RadialMenuItem with BackgroundColor.](images/radialmenuitem-customization/maui-radialmenu-radialmenuitem-backgroundcolor.png)
 
 ## FontFamily
 
