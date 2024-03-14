@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Orientation in .NET MAUI Step ProgressBar control | Syncfusion
+title: Orientation in .NET MAUI Step ProgressBar Control | Syncfusion
 description: Learn here all about Orientation support in Syncfusion .NET MAUI Step ProgressBar (SfStepProgressBar) control and more.
 platform: maui
 control: SfStepProgressBar
@@ -11,17 +11,17 @@ documentation: ug
 The StepProgressBar control provides options to change the default orientation, so a multi-step process can be visualized in horizontal or vertical orientation.
 
 ## Horizontal
-By default, StepProgressBar step views are displayed horizontally. You can also define the orientation as demonstrated in the following code example.
+By default, StepProgressBar step views are displayed [Horizontal](). You can also define the orientation as demonstrated in the following code example.
 
 {% tabs %}
-{% highlight xaml tabtitle="XAML" %}
+{% highlight xaml tabtitle="XAML" hl_lines="2" %}
 
 <stepProgressBar:SfStepProgressBar 
                     Orientation="Horizontal">
 </stepProgressBar:SfStepProgressBar>
 
 {% endhighlight %}
-{% highlight c# tabtitle="C#" %}
+{% highlight c# tabtitle="C#" hl_lines="2" %}
 
 SfStepProgressBar stepProgressBar = new SfStepProgressBar();
 stepProgressBar.Orientation = StepOrientation.Horizontal;
@@ -30,17 +30,17 @@ stepProgressBar.Orientation = StepOrientation.Horizontal;
 {% endtabs %}
 
 ## Vertical
-To view the step progress bar control vertically, you can define the vertical orientation as demonstrated in the following code example.
+To view the step progress bar control in [Vertical](), you can define the vertical orientation as demonstrated in the following code example.
 
 {% tabs %}
-{% highlight xaml tabtitle="XAML" %}
+{% highlight xaml tabtitle="XAML" hl_lines="2" %}
 
 <stepProgressBar:SfStepProgressBar 
                     Orientation="Vertical">
 </stepProgressBar:SfStepProgressBar>
 
 {% endhighlight %}
-{% highlight c# tabtitle="C#" %}
+{% highlight c# tabtitle="C#" hl_lines="2" %}
 
 SfStepProgressBar stepProgressBar = new SfStepProgressBar();
 stepProgressBar.Orientation = StepOrientation.Vertical;

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Description in .NET MAUI Step ProgressBar control | Syncfusion
+title: Description in .NET MAUI Step ProgressBar Control | Syncfusion
 description: Learn here all about Description support in Syncfusion .NET MAUI Step ProgressBar (SfStepProgressBar) control and more.
 platform: maui
 control: SfStepProgressBar
@@ -16,7 +16,7 @@ The primary and secondary description for a step view can be set using the [Prim
 * Create a simple Observable Collection of item for the step progressbar,
 
 {% tabs %}
-{% highlight c# tabtitle="ViewModel.cs" hl_lines="25 26 27 28" %}
+{% highlight c# tabtitle="ViewModel.cs" hl_lines="26 27 28 29 30" %}
 
 public class ViewModel
 {
@@ -82,7 +82,7 @@ SfStepProgressBar stepProgressBar = new SfStepProgressBar()
 {
     VerticalOptions = LayoutOptions.Center,
     HorizontalOptions = LayoutOptions.Center,
-    Orientation = StepProgressBarOrientation.Horizontal,
+    Orientation = StepProgressBarOrientation.Vertical,
     LabelSpacing = 12,
     ActiveStepIndex = 3,
     ActiveStepProgressValue = 50,
@@ -124,37 +124,37 @@ public class ViewModel
         }
     }
 
-            public ViewModel()
-        {
-            FormattedString primaryFormattedText1 = new FormattedString();
-            primaryFormattedText1.Spans.Add(new Span { Text = "Step 1: Introduction", FontSize = 14, FontAttributes = FontAttributes.Bold });
-            primaryFormattedText1.Spans.Add(new Span { Text = "\nWelcome to our", FontSize = 12, TextColor = Colors.Gray });
-            primaryFormattedText1.Spans.Add(new Span { Text = "\nplatform!", FontSize = 12, TextColor = Colors.Gray });
+    public ViewModel()
+    {
+        FormattedString primaryFormattedText1 = new FormattedString();
+        primaryFormattedText1.Spans.Add(new Span { Text = "Step 1: Introduction", FontSize = 14, FontAttributes = FontAttributes.Bold });
+        primaryFormattedText1.Spans.Add(new Span { Text = "\nWelcome to our", FontSize = 12, TextColor = Colors.Gray });
+        primaryFormattedText1.Spans.Add(new Span { Text = "\nplatform!", FontSize = 12, TextColor = Colors.Gray });
 
-            FormattedString primaryFormattedText2 = new FormattedString();
-            primaryFormattedText2.Spans.Add(new Span { Text = "Step 2: Registration", FontSize = 14, FontAttributes = FontAttributes.Bold });
-            primaryFormattedText2.Spans.Add(new Span { Text = "\nCreate your account", FontSize = 12, TextColor = Colors.Gray });
-            primaryFormattedText2.Spans.Add(new Span { Text = "\nto access exclusive features", FontSize = 12, TextColor = Colors.Gray });
+        FormattedString primaryFormattedText2 = new FormattedString();
+        primaryFormattedText2.Spans.Add(new Span { Text = "Step 2: Registration", FontSize = 14, FontAttributes = FontAttributes.Bold });
+        primaryFormattedText2.Spans.Add(new Span { Text = "\nCreate your account", FontSize = 12, TextColor = Colors.Gray });
+        primaryFormattedText2.Spans.Add(new Span { Text = "\nto access exclusive features", FontSize = 12, TextColor = Colors.Gray });
 
-            FormattedString primaryFormattedText3 = new FormattedString();
-            primaryFormattedText3.Spans.Add(new Span { Text = "Step 3: Profile Setup", FontSize = 14, FontAttributes = FontAttributes.Bold });
-            primaryFormattedText3.Spans.Add(new Span { Text = "\nComplete your profile", FontSize = 12, TextColor = Colors.Gray });
-            primaryFormattedText3.Spans.Add(new Span { Text = "\nto personalize your experience", FontSize = 12, TextColor = Colors.Gray });
+        FormattedString primaryFormattedText3 = new FormattedString();
+        primaryFormattedText3.Spans.Add(new Span { Text = "Step 3: Profile Setup", FontSize = 14, FontAttributes = FontAttributes.Bold });
+        primaryFormattedText3.Spans.Add(new Span { Text = "\nComplete your profile", FontSize = 12, TextColor = Colors.Gray });
+        primaryFormattedText3.Spans.Add(new Span { Text = "\nto personalize your experience", FontSize = 12, TextColor = Colors.Gray });
 
-            FormattedString secondaryFormattedText1 = new FormattedString();
-            secondaryFormattedText1.Spans.Add(new Span { Text = "Join us and explore!", FontSize = 12, TextColor = Colors.Gray });
+        FormattedString secondaryFormattedText1 = new FormattedString();
+        secondaryFormattedText1.Spans.Add(new Span { Text = "Join us and explore!", FontSize = 12, TextColor = Colors.Gray });
 
-            FormattedString secondaryFormattedText2 = new FormattedString();
-            secondaryFormattedText2.Spans.Add(new Span { Text = "Unlock all features", FontSize = 12, TextColor = Colors.Gray });
+        FormattedString secondaryFormattedText2 = new FormattedString();
+        secondaryFormattedText2.Spans.Add(new Span { Text = "Unlock all features", FontSize = 12, TextColor = Colors.Gray });
 
-            FormattedString secondaryFormattedText3 = new FormattedString();
-            secondaryFormattedText3.Spans.Add(new Span { Text = "Personalize your journey", FontSize = 12, TextColor = Colors.Gray });
+        FormattedString secondaryFormattedText3 = new FormattedString();
+        secondaryFormattedText3.Spans.Add(new Span { Text = "Personalize your journey", FontSize = 12, TextColor = Colors.Gray });
 
-            stepProgressItem = new ObservableCollection<StepProgressBarItem>();
-            stepProgressItem.Add(new StepProgressBarItem() { PrimaryFormattedText = primaryFormattedText1, SecondaryFormattedText = secondaryFormattedText1 });
-            stepProgressItem.Add(new StepProgressBarItem() { PrimaryFormattedText = primaryFormattedText2, SecondaryFormattedText = secondaryFormattedText2 });
-            stepProgressItem.Add(new StepProgressBarItem() { PrimaryFormattedText = primaryFormattedText3, SecondaryFormattedText = secondaryFormattedText3 });
-        }
+        stepProgressItem = new ObservableCollection<StepProgressBarItem>();
+        stepProgressItem.Add(new StepProgressBarItem() { PrimaryFormattedText = primaryFormattedText1, SecondaryFormattedText = secondaryFormattedText1 });
+        stepProgressItem.Add(new StepProgressBarItem() { PrimaryFormattedText = primaryFormattedText2, SecondaryFormattedText = secondaryFormattedText2 });
+        stepProgressItem.Add(new StepProgressBarItem() { PrimaryFormattedText = primaryFormattedText3, SecondaryFormattedText = secondaryFormattedText3 });
+    }
 }
 
 {% endhighlight %}
@@ -183,16 +183,16 @@ The Step progressbar control allows you to bind item collection by setting the [
 </ContentPage.BindingContext>
 
 {% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="7" %}
+{% highlight c# tabtitle="C#" hl_lines="10" %}
 
 ViewModel viewModel = new ViewModel();
 SfStepProgressBar stepProgressBar = new SfStepProgressBar()
 {
     VerticalOptions = LayoutOptions.Center,
     HorizontalOptions = LayoutOptions.Center,
-    Orientation = StepProgressBarOrientation.Horizontal,
+    Orientation = StepProgressBarOrientation.Vertical,
     LabelSpacing = 12,
-    ActiveStepIndex = 3,
+    ActiveStepIndex = 1,
     ActiveStepProgressValue = 50,
     ItemsSource = viewModel.StepProgressItem,
 };
@@ -202,14 +202,14 @@ this.Content = stepProgressBar;
 {% endhighlight %}
 {% endtabs %}
 
-N> If both `PrimaryText` and `PrimaryFormattedText` is provided, then PrimaryFormattedText will be displayed.
+N> If both `PrimaryText` and `PrimaryFormattedText` are provided, then `PrimaryFormattedText` will be displayed. This precedence as same as for the `SecondaryText` and `SecondaryFormattedText`.
 
 ## Customize description
 Using [LabelPosition]() and [LabelSpacing]() property, the description alignment and space between the description and step can be customized, respectively. The following code example explains how to customize the LabelPosition and LabelSpacing properties.
 {% tabs %}
 
 {% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="5 6" %}
+{% highlight xaml tabtitle="XAML" hl_lines="6 7" %}
 
 <stepProgressBar:SfStepProgressBar
                         x:Name="stepProgress"
@@ -221,14 +221,14 @@ Using [LabelPosition]() and [LabelSpacing]() property, the description alignment
 </stepProgressBar:SfStepProgressBar> 
 
 {% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="5 6" %}
+{% highlight c# tabtitle="C#" hl_lines="6 7" %}
 
 SfStepProgressBar stepProgressBar = new SfStepProgressBar()
 {
     VerticalOptions = LayoutOptions.Center,
     HorizontalOptions = LayoutOptions.Center,
-    Orientation = StepProgressBarOrientation.Horizontal,
-    LabelSpacing = 12,
+    Orientation = StepProgressBarOrientation.Vertical,
+    LabelSpacing = 28,
     LabelPosition = LabelPosition.Bottom,
 };
 
@@ -239,7 +239,7 @@ this.Content = stepProgressBar;
 
 ## StepProgressBar Image Customization
 
-The [StepProgressBar]() control provides support for customizing the image in [StepView]().
+The [StepProgressBar]() control provides support for adding images as the content of the step. You can add the images by giving image path and with font icons.
 
 ### Customization using Image
 
@@ -250,7 +250,7 @@ You can add the images by giving image path to the [ImageSource]() property in `
 * Create a simple Observable Collection of item with image source for the step progressbar,
 
 {% tabs %}
-{% highlight c# tabtitle="ViewModel.cs" hl_lines="26 27 28" %}
+{% highlight c# tabtitle="ViewModel.cs" %}
 
  public class ViewModel
  {
@@ -331,7 +331,7 @@ this.Content = stepProgressBar;
 
 ### Customization using Font icon
 
-You can add the images by giving font icons to the [ImageSource]() property in `SfStepProgressBar`. The following code example explains how to set an image in step view.
+You can add the images with font icons to the [ImageSource]() property in `SfStepProgressBar`. The following code example explains how to set an image in step view.
 
 #### Initialize view model
 
