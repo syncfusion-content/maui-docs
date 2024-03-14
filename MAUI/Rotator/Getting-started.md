@@ -21,32 +21,32 @@ In the MauiProgram.cs file, register the handler for the Syncfusion core.
 
 {% highlight c# hl_lines="6 17" %}
 
-    using Microsoft.Maui;
-    using Microsoft.Maui.Hosting;
-    using Microsoft.Maui.Controls.Compatibility;
-    using Microsoft.Maui.Controls.Hosting;
-    using Microsoft.Maui.Controls.Xaml;
-    using Syncfusion.Maui.Core.Hosting;
+using Microsoft.Maui;
+using Microsoft.Maui.Hosting;
+using Microsoft.Maui.Controls.Compatibility;
+using Microsoft.Maui.Controls.Hosting;
+using Microsoft.Maui.Controls.Xaml;
+using Syncfusion.Maui.Core.Hosting;
 
-    namespace Rotator
+namespace Rotator
+{
+    public static class MauiProgram
     {
-        public static class MauiProgram
+        public static MauiApp CreateMauiApp()
         {
-            public static MauiApp CreateMauiApp()
+            var builder = MauiApp.CreateBuilder();
+            builder
+            .UseMauiApp<App>()
+            .ConfigureSyncfusionCore()
+            .ConfigureFonts(fonts =>
             {
-                var builder = MauiApp.CreateBuilder();
-                builder
-                .UseMauiApp<App>()
-                .ConfigureSyncfusionCore()
-                .ConfigureFonts(fonts =>
-                {
-                    fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-                });
+                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+            });
 
-                return builder.Build();
-            }      
-        }
-    }   
+            return builder.Build();
+        }      
+    }
+}   
 
 {% endhighlight %} 
 
@@ -59,12 +59,12 @@ Step 2: Add the namespace as shown in the following code sample.
 {% tabs %}
 {% highlight xaml %}
 
-	xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Rotator;assembly=Syncfusion.Maui.Rotator"
+    xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Rotator;assembly=Syncfusion.Maui.Rotator"
 
 {% endhighlight %}
 {% highlight c# %}
 
-	using Syncfusion.Maui.Rotator;
+    using Syncfusion.Maui.Rotator;
 
 {% endhighlight %}
 {% endtabs %}
@@ -78,36 +78,35 @@ The `SfRotator` control is configured entirely in C# code or by using XAML marku
 
 {% highlight xaml %}
 
-    <?xml version="1.0" encoding="utf-8" ?>
-    <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-                xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Rotator;assembly=Syncfusion.Maui.Rotator"
-                xmlns:local="clr-namespace:Rotator"
-                x:Class="GettingStarted.Rotator">
-    <ContentPage.Content>
-    <syncfusion:SfRotator x:Name="rotator" />	
-    </ContentPage.Content>
-    </ContentPage>
-	
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Rotator;assembly=Syncfusion.Maui.Rotator"
+            xmlns:local="clr-namespace:Rotator"
+            x:Class="GettingStarted.Rotator">
+<ContentPage.Content>
+<syncfusion:SfRotator x:Name="rotator" />	
+</ContentPage.Content>
+</ContentPage>
 	
 {% endhighlight %}
 
 {% highlight C# %}		
 
-    using Syncfusion.Maui.Rotator;
+using Syncfusion.Maui.Rotator;
 
-    namespace GettingStarted
-    {
-    public partial class RotatorControlPage : ContentPage
-        {
-            public RotatorControlPage()
-            {
-                InitializeComponent();
-                SfRotator rotator = new SfRotator();
-                this.Content = rotator;
-            }
+namespace GettingStarted
+{
+public partial class RotatorControlPage : ContentPage
+    {
+        public RotatorControlPage()
+        {
+            InitializeComponent();
+            SfRotator rotator = new SfRotator();
+            this.Content = rotator;
         }
     }
+}
         
 {% endhighlight %}
 
@@ -130,30 +129,30 @@ The following code example illustrates to add list of Images in Rotator ,
 
 {% highlight C# %}
 
-    using Syncfusion.Maui.Core.Rotator;
+using Syncfusion.Maui.Core.Rotator;
 
-    namespace Rotator
+namespace Rotator
+{
+    public partial class Rotator : ContentPage
     {
-        public partial class Rotator : ContentPage
+        SfRotator rotator = new SfRotator();
+        StackLayout stackLayout = new StackLayout();
+        public Rotator()
         {
-            SfRotator rotator = new SfRotator();
-            StackLayout stackLayout = new StackLayout();
-            public Rotator()
-            {
-                InitializeComponent ();
-                stackLayout.HeightRequest = 300;
-                List<SfRotatorItem> collectionOfItems = new List<SfRotatorItem>();
-                collectionOfItems.Add(new SfRotatorItem() { Image = "image1.png" });
-                collectionOfItems.Add(new SfRotatorItem() { Image = "image2.png" });
-                collectionOfItems.Add(new SfRotatorItem() { Image = "image3.png" });
-                collectionOfItems.Add(new SfRotatorItem() { Image = "image4.png" });
-                collectionOfItems.Add(new SfRotatorItem() { Image = "image5.png" });
-                rotator.ItemsSource = collectionOfItems;
-                stackLayout.Children.Add(rotator);
-                this.Content = stackLayout;
-            }
+            InitializeComponent ();
+            stackLayout.HeightRequest = 300;
+            List<SfRotatorItem> collectionOfItems = new List<SfRotatorItem>();
+            collectionOfItems.Add(new SfRotatorItem() { Image = "image1.png" });
+            collectionOfItems.Add(new SfRotatorItem() { Image = "image2.png" });
+            collectionOfItems.Add(new SfRotatorItem() { Image = "image3.png" });
+            collectionOfItems.Add(new SfRotatorItem() { Image = "image4.png" });
+            collectionOfItems.Add(new SfRotatorItem() { Image = "image5.png" });
+            rotator.ItemsSource = collectionOfItems;
+            stackLayout.Children.Add(rotator);
+            this.Content = stackLayout;
         }
     }
+}
 
 {% endhighlight %}
 
@@ -169,84 +168,84 @@ The following code example illustrates to add list of Images in Rotator ,
 
 {% highlight xaml %}
 
-    <?xml version="1.0" encoding="utf-8" ?>
-    <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-                xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Rotator;assembly=Syncfusion.Maui.Rotator"
-                xmlns:local="clr-namespace:Rotator"
-                x:Class="Rotator.Rotator">
-        <ContentPage.BindingContext>
-            <local:RotatorViewModel/>
-        </ContentPage.BindingContext>
-        <ContentPage.Content>
-            <syncfusion:SfRotator x:Name="rotator" 
-                            NavigationDelay="2000" 
-                            ItemsSource="{Binding ImageCollection}" 
-                            SelectedIndex="2"
-                            NavigationDirection="Horizontal"
-                            NavigationStripMode="Thumbnail" 
-                            BackgroundColor="#ececec"
-                            WidthRequest="550"
-                            HeightRequest="550">
-                <syncfusion:SfRotator.ItemTemplate>
-                    <DataTemplate>
-                        <Image  Source="{Binding Image}"/>
-                    </DataTemplate>
-                </syncfusion:SfRotator.ItemTemplate>
-            </syncfusion:SfRotator>
-        </ContentPage.Content>
-    </ContentPage>
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Rotator;assembly=Syncfusion.Maui.Rotator"
+            xmlns:local="clr-namespace:Rotator"
+            x:Class="Rotator.Rotator">
+    <ContentPage.BindingContext>
+        <local:RotatorViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <syncfusion:SfRotator x:Name="rotator" 
+                        NavigationDelay="2000" 
+                        ItemsSource="{Binding ImageCollection}" 
+                        SelectedIndex="2"
+                        NavigationDirection="Horizontal"
+                        NavigationStripMode="Thumbnail" 
+                        BackgroundColor="#ececec"
+                        WidthRequest="550"
+                        HeightRequest="550">
+            <syncfusion:SfRotator.ItemTemplate>
+                <DataTemplate>
+                    <Image  Source="{Binding Image}"/>
+                </DataTemplate>
+            </syncfusion:SfRotator.ItemTemplate>
+        </syncfusion:SfRotator>
+    </ContentPage.Content>
+</ContentPage>
 
 {% endhighlight %}
 
 {% highlight C# %}	
 
-    using Syncfusion.Maui.Core.Rotator;
-    using Syncfusion.Maui.Rotator;
+using Syncfusion.Maui.Core.Rotator;
+using Syncfusion.Maui.Rotator;
 
-    namespace Rotator
+namespace Rotator
+{
+    public partial class Rotator : ContentPage
     {
-        public partial class Rotator : ContentPage
+        public Rotator()
         {
-            public Rotator()
+            InitializeComponent ();
+            SfRotator rotator = new SfRotator();
+            var ImageCollection = new List<RotatorModel> {
+            new RotatorModel ("image1.png"),
+            new RotatorModel ("image2.png"),
+            new RotatorModel ("image3.png"),
+            new RotatorModel ("image4.png"),
+            new RotatorModel ("image5.png")
+            };
+            var itemTemplate = new DataTemplate(() =>
             {
-                InitializeComponent ();
-                SfRotator rotator = new SfRotator();
-                var ImageCollection = new List<RotatorModel> {
-                new RotatorModel ("image1.png"),
-                new RotatorModel ("image2.png"),
-                new RotatorModel ("image3.png"),
-                new RotatorModel ("image4.png"),
-                new RotatorModel ("image5.png")
-                };
-                var itemTemplate = new DataTemplate(() =>
-                {
-                    var grid = new Grid();
-                    var nameLabel = new Image();
-                    nameLabel.SetBinding(Image.SourceProperty, "Image");
-                    grid.Children.Add(nameLabel);
-                    return grid;
-                });
-                rotator.ItemTemplate = itemTemplate;
-                rotator.NavigationStripMode = NavigationStripMode.Thumbnail;
-                rotator.ItemsSource = ImageCollection;
-                this.Content = rotator;
-            }
-        }
-        public class RotatorModel
-        {
-            public RotatorModel(string imageString)
-            {
-                Image = imageString;
-            }
-            private String _image;
-            public String Image
-            {
-                get { return _image; }
-                set { _image = value; }
-            }
+                var grid = new Grid();
+                var nameLabel = new Image();
+                nameLabel.SetBinding(Image.SourceProperty, "Image");
+                grid.Children.Add(nameLabel);
+                return grid;
+            });
+            rotator.ItemTemplate = itemTemplate;
+            rotator.NavigationStripMode = NavigationStripMode.Thumbnail;
+            rotator.ItemsSource = ImageCollection;
+            this.Content = rotator;
         }
     }
+    public class RotatorModel
+    {
+        public RotatorModel(string imageString)
+        {
+            Image = imageString;
+        }
+        private String _image;
+        public String Image
+        {
+            get { return _image; }
+            set { _image = value; }
+        }
+    }
+}
 
 {% endhighlight %}
 
@@ -262,88 +261,88 @@ The placement position of navigation strip items such as `Thumbnail` or `Dots` c
 
 {% highlight xaml %}
 
-    <?xml version="1.0" encoding="utf-8" ?>
-    <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-                xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Rotator;assembly=Syncfusion.Maui.Rotator"
-                xmlns:local="clr-namespace:Rotator"
-                x:Class="Rotator.Rotator">
-        <ContentPage.BindingContext>
-            <local:RotatorViewModel/>
-        </ContentPage.BindingContext>
-        <ContentPage.Content>
-            <syncfusion:SfRotator x:Name="rotator" 
-                            NavigationDelay="2000" 
-                            ItemsSource="{Binding ImageCollection}" 
-                            SelectedIndex="2"
-                            NavigationDirection="Horizontal"
-                            NavigationStripMode="Dots" 
-                            BackgroundColor="#ececec"
-                            NavigationStripPosition="Top"
-                            WidthRequest="550"
-                            HeightRequest="550">
-                <syncfusion:SfRotator.ItemTemplate>
-                    <DataTemplate>
-                        <Image  Source="{Binding Image}"/>
-                    </DataTemplate>
-                </syncfusion:SfRotator.ItemTemplate>
-            </syncfusion:SfRotator>
-        </ContentPage.Content>
-    </ContentPage>	
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Rotator;assembly=Syncfusion.Maui.Rotator"
+            xmlns:local="clr-namespace:Rotator"
+            x:Class="Rotator.Rotator">
+    <ContentPage.BindingContext>
+        <local:RotatorViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <syncfusion:SfRotator x:Name="rotator" 
+                        NavigationDelay="2000" 
+                        ItemsSource="{Binding ImageCollection}" 
+                        SelectedIndex="2"
+                        NavigationDirection="Horizontal"
+                        NavigationStripMode="Dots" 
+                        BackgroundColor="#ececec"
+                        NavigationStripPosition="Top"
+                        WidthRequest="550"
+                        HeightRequest="550">
+            <syncfusion:SfRotator.ItemTemplate>
+                <DataTemplate>
+                    <Image  Source="{Binding Image}"/>
+                </DataTemplate>
+            </syncfusion:SfRotator.ItemTemplate>
+        </syncfusion:SfRotator>
+    </ContentPage.Content>
+</ContentPage>	
 
 {% endhighlight %}
 
 {% highlight C# %}	
 
-    using Syncfusion.Maui.Core.Rotator;
-    using Syncfusion.Maui.Rotator;
+using Syncfusion.Maui.Core.Rotator;
+using Syncfusion.Maui.Rotator;
 
-    namespace Rotator
+namespace Rotator
+{
+    public partial class Rotator : ContentPage
     {
-        public partial class Rotator : ContentPage
+        public Rotator()
         {
-            public Rotator()
+            InitializeComponent ();
+            SfRotator rotator = new SfRotator();
+            var ImageCollection = new List<RotatorModel> {
+            new RotatorModel ("image1.png"),
+            new RotatorModel ("image2.png"),
+            new RotatorModel ("image3.png"),
+            new RotatorModel ("image4.png"),
+            new RotatorModel ("image5.png")
+            };
+            var itemTemplate = new DataTemplate(() =>
             {
-                InitializeComponent ();
-                SfRotator rotator = new SfRotator();
-                var ImageCollection = new List<RotatorModel> {
-                new RotatorModel ("image1.png"),
-                new RotatorModel ("image2.png"),
-                new RotatorModel ("image3.png"),
-                new RotatorModel ("image4.png"),
-                new RotatorModel ("image5.png")
-                };
-                var itemTemplate = new DataTemplate(() =>
-                {
-                    var grid = new Grid();
-                    var nameLabel = new Image();
-                    nameLabel.SetBinding(Image.SourceProperty, "Image");
-                    grid.Children.Add(nameLabel);
-                    return grid;
-                });
-                rotator.ItemTemplate = itemTemplate;
-                rotator.NavigationStripMode = NavigationStripMode.Dots;
-                rotator.NavigationStripPosition = NavigationStripPosition.Top;
-                rotator.WidthRequest=550;
-                rotator.HeightRequest=550;
-                rotator.ItemsSource = ImageCollection;
-                this.Content = rotator;
-            }
-        }
-        public class RotatorModel
-        {
-            public RotatorModel(string imageString)
-            {
-                Image = imageString;
-            }
-            private String _image;
-            public String Image
-            {
-                get { return _image; }
-                set { _image = value; }
-            }
+                var grid = new Grid();
+                var nameLabel = new Image();
+                nameLabel.SetBinding(Image.SourceProperty, "Image");
+                grid.Children.Add(nameLabel);
+                return grid;
+            });
+            rotator.ItemTemplate = itemTemplate;
+            rotator.NavigationStripMode = NavigationStripMode.Dots;
+            rotator.NavigationStripPosition = NavigationStripPosition.Top;
+            rotator.WidthRequest=550;
+            rotator.HeightRequest=550;
+            rotator.ItemsSource = ImageCollection;
+            this.Content = rotator;
         }
     }
+    public class RotatorModel
+    {
+        public RotatorModel(string imageString)
+        {
+            Image = imageString;
+        }
+        private String _image;
+        public String Image
+        {
+            get { return _image; }
+            set { _image = value; }
+        }
+    }
+}
 	
 {% endhighlight %}
 
