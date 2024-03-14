@@ -7,7 +7,7 @@ control: SfStepProgressBar
 documentation: ug
 ---
 
-# Accessibility in .NET Maui SfStepProgressBar
+# Accessibility in .NET MAUI SfStepProgressBar
 
 Enhance .NET MAUI StepProgressBar's accessibility with a user-friendly design, ensuring inclusive features for seamless navigation and usability for all users. Please find the table of elements along with their formats and examples.
 
