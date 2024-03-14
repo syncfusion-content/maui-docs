@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting started with .NET MAUI Step ProgressBar control | Syncfusion
+title: Getting Started with .NET MAUI Step ProgressBar Control | Syncfusion
 description: Learn here all about getting started with Syncfusion .NET MAUI Step ProgressBar (SfStepProgressBar) control and its basic features.
 platform: maui
 control: SfStepProgressBar
@@ -21,7 +21,7 @@ This section explains how to add the [.NET MAUI Step ProgressBar]() control. Thi
 4. Initialize `SfStepProgressBar.`
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3 5" %}
+{% highlight xaml tabtitle="XAML" hl_lines="3 5" %}
 
 <ContentPage   
     . . .
@@ -31,7 +31,7 @@ This section explains how to add the [.NET MAUI Step ProgressBar]() control. Thi
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1 9 10" %}
+{% highlight c# tabtitle="C#" hl_lines="1 9 10" %}
 
 using Syncfusion.Maui.ProgressBar;
 . . .
@@ -84,9 +84,9 @@ namespace GettingStarted
 
 ## Populating step progressbar items
 
-You can use ItemsSource property of SfStepProgressBar to populate the step progressbar items. Hence, you must create a item collection and bind it to the progressbar control.
+You can use [ItemsSource]() property of SfStepProgressBar to populate the step progressbar items. Hence, you must create a item collection and bind it to the progressbar control.
 
-* Create a simple Observable Collection of item for the step progressbar,
+* Create a simple Observable Collection of the item for the step progressbar,
 
 {% tabs %}
 {% highlight c# tabtitle="ViewModel.cs" %}
@@ -116,9 +116,10 @@ public class ViewModel
     public ViewModel()
     {
         stepProgressItem = new ObservableCollection<StepProgressBarItem>();
-        stepProgressItem.Add(new StepProgressBarItem() { PrimaryText = "Completed" });
-        stepProgressItem.Add(new StepProgressBarItem() { PrimaryText = "In Progress" });
-        stepProgressItem.Add(new StepProgressBarItem() { PrimaryText = "Not Started" });
+        stepProgressItem.Add(new StepProgressBarItem() { PrimaryText = "Cart" });
+        stepProgressItem.Add(new StepProgressBarItem() { PrimaryText = "Address" });
+        stepProgressItem.Add(new StepProgressBarItem() { PrimaryText = "Delivery" });
+        stepProgressItem.Add(new StepProgressBarItem() { PrimaryText = "Ordered" });
     }
 }
 
@@ -130,34 +131,37 @@ public class ViewModel
 The Step progressbar control allows you to bind item collection by setting the [ItemsSource]() property from the [SfStepProgressBar](). Bind item collection in both XAML and C#.
 
 {% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="8" %}
+{% highlight xaml tabtitle="XAML" hl_lines="10" %}
 
 <stepProgressBar:SfStepProgressBar
-                    x:Name="stepProgressBar"
-                    Margin="24,10,0,0"
-                    ActiveStepIndex="1"
-                    ActiveStepProgressValue="60"
+                    x:Name="stepProgress"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"                                        
+                    Orientation="Horizontal"                                                                                       
                     LabelSpacing="12"
-                    Orientation="Horizontal"  
+                    ActiveStepIndex="2"
+                    ActiveStepProgressValue="60"
+                    ProgressAnimationDuration="2500"
                     ItemsSource="{Binding StepProgressItem}">
-</stepProgressBar:SfStepProgressBar>                                                                                              
-                
+</stepProgressBar:SfStepProgressBar>                                                                                             
 
 <ContentPage.BindingContext>
     <local:ViewModel />
 </ContentPage.BindingContext>
 
 {% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="9" %}
+{% highlight c# tabtitle="C#" hl_lines="11" %}
 
 ViewModel viewModel = new ViewModel();
 SfStepProgressBar stepProgressBar = new SfStepProgressBar()
 {
-    Margin = new Thickness(24, 10, 0, 0),
-    ActiveStepIndex = 1,
-    ActiveStepProgressValue = 60,
-    LabelSpacing = 12,
+    VerticalOptions = LayoutOptions.Center,
+    HorizontalOptions = LayoutOptions.Center,
     Orientation = StepProgressBarOrientation.Horizontal,
+    LabelSpacing = 12,
+    ActiveStepIndex = 2,
+    ActiveStepProgressValue = 60,
+    ProgressAnimationDuration = 2500,               
     ItemsSource = viewModel.StepProgressItem,
 };
 
@@ -165,3 +169,31 @@ this.Content = stepProgressBar;
 
 {% endhighlight %}
 {% endtabs %}
+
+![Getting started of .NET MAUI StepProgressBar](images/getting-started/maui-stepprogressbar-getting-started.gif)
+
+## ActiveStepIndex
+The [ActiveStepIndex]() property is used to represent index of the currently active step within the sequence of steps. The [ActiveStepProgressValue]() property is used to add the progress value of the currently active step within a sequence.
+
+{% tabs %}
+{% highlight xaml tabtitle="XAML" hl_lines="3 4" %}
+
+<stepProgressBar:SfStepProgressBar
+                    x:Name="stepProgress"
+                    ActiveStepIndex="3"
+                    ActiveStepProgressValue="40">
+</stepProgressBar:SfStepProgressBar>
+
+{% endhighlight %}
+{% highlight c# tabtitle="C#" hl_lines="3 4" %}
+
+SfStepProgressBar stepProgressBar = new SfStepProgressBar()
+{
+    ActiveStepIndex = 3,
+    ActiveStepProgressValue = 40,
+};
+
+{% endhighlight %}
+{% endtabs %}
+
+N> If `ActiveStepIndex` value is less than 0, first step will be marked as `NotStarted` step status. If `ActiveStepIndex` value is greater than the step count, all the steps will be marked as `Completed` step status.

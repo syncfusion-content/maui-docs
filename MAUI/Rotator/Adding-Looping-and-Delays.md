@@ -11,7 +11,7 @@ documentation: ug
 
 Looping and delay can be enabled in the `SfRotator` control in .NET MAUI.
 
-## Toggle AutoPlay
+## Enable AutoPlay
 
 The `EnableAutoPlay` property specifies whether the items should navigate automatically based on the `NavigationDelay` property when the property value is set to true.
 

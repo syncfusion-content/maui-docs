@@ -28,8 +28,8 @@ To initialize the control, import the radialMenu control namespace and initializ
 
 <table>
 <tr>
-<th>Xamarin SfRadialMenu control</th>
-<th>.NET MAUI SfRadialMenu control</th></tr>
+<th>Xamarin</th>
+</tr>
 <tr>
 <td>
 
@@ -38,7 +38,7 @@ To initialize the control, import the radialMenu control namespace and initializ
 <ContentPage 
 ...
 xmlns:radialMenu="clr-namespace:Syncfusion.XForms.RadialMenu;assembly=Syncfusion.RadialMenu.XForms">
-     <radialMenu:SfRadialMenu x:Name="radialMenuControl"/>
+     <radialMenu:SfRadialMenu x:Name="radialMenu"/>
 </ContentPage>
 {% endhighlight %}
 
@@ -47,7 +47,7 @@ xmlns:radialMenu="clr-namespace:Syncfusion.XForms.RadialMenu;assembly=Syncfusion
 using Syncfusion.XForms.RadialMenu;
 ...
 
-SfRadialMenu radialMenuControl = new SfRadialMenu();
+SfRadialMenu radialMenu = new SfRadialMenu();
 this.Content = radialMenuControl;
 
 {% endhighlight %}
@@ -57,6 +57,15 @@ this.Content = radialMenuControl;
 <td>
 
 {% tabs %}
+</td>
+</tr>
+<tr>
+<th>.NET MAUI</th>
+</tr>
+<tr>
+<td>
+{% tabs %}
+
 {% highlight XAML %}
 
 <ContentPage 
@@ -72,12 +81,13 @@ xmlns:radialMenu="clr-namespace:Syncfusion.Maui.RadialMenu;assembly=Syncfusion.M
 using Syncfusion.Maui.RadialMenu;
 …
 
-SfRadialMenu radialMenuControl = new SfRadialMenu();
-this.Content = radialMenuControl;
+SfRadialMenu radialMenu = new SfRadialMenu();
+this.Content = radialMenu;
 
 {% endhighlight %}
 {% endtabs %}
-</td></tr>
+</td>
+</tr>
 </table>
 
 ## Classes 
@@ -90,14 +100,14 @@ this.Content = radialMenuControl;
 </tr>
 
 <tr>
-<td>{{'[SfRadialMenu](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.RadialMenu.SfRadialMenu.html)'| markdownify }}</td>
-<td>{{'[SfRadialMenu](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html)'| markdownify}}</td>
+<td>{{'[SfRadialMenu]'}}</td>
+<td>{{'[SfRadialMenu]'}}</td>
 <td>The SfRadialMenu displays a hierarchical menu in a circular layout, which is optimized for touch enabled devices. Typically, it is used as a context menu, and it can expose more menu items in the same space than traditional menus.</td>
 </tr>
 
 <tr>
-<td>{{'[SfRadialMenuItem](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.RadialMenu.SfRadialMenuItem.html)'| markdownify }}</td>
-<td>{{'[SfRadialMenuItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenuItem.html)'| markdownify}}</td>
+<td>{{'[SfRadialMenuItem]'}}</td>
+<td>{{'[SfRadialMenuItem]'}}</td>
 <td>Represents an item that can be added as children in SfRadialMenu.Any object can be added as SfRadialMenuItem and that can be populated as menus.</td>
 </tr>
 
@@ -106,7 +116,7 @@ this.Content = radialMenuControl;
 
 ## Properties
 
-### SfRadialMenuControl
+### SfRadialMenu Control
 
 <table> 
 <tr>
@@ -115,23 +125,27 @@ this.Content = radialMenuControl;
 <th>Description</th></tr>
 
 <tr>
-<td>{{'[CenterButtonBorderColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.RadialMenu.SfRadialMenuControl.html#Syncfusion_XForms_Buttons_SfSegmentedControl_BorderColor)'| markdownify }}</td>
-<td>{{'[CenterButtonStroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenuControl.html#Syncfusion_Maui_Buttons_SfSegmentedControl_Stroke)'| markdownify}}</td>
-<td>Gets or sets the stroke brush for the centerbuttonstroke in the SfRadialMenuControl.</td>
+<td>{{'[CenterButtonBorderColor]'}}</td>
+<td>{{'[CenterButtonStroke]'}}</td>
+<td>Gets or sets a value of the stroke brush for the centerbuttonstroke in the SfRadialMenu.</td>
 </tr>
 
 <tr>
-<td>{{'[CenterButtonBorderThickness](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.RadialMenu.SfRadialMenuControl.html#Syncfusion_XForms_Buttons_SfSegmentedControl_BorderThickness)'| markdownify }}</td>
-<td>{{'[CenterButtonStrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenuControl.html#Syncfusion_Maui_Buttons_SfSegmentedControl_StrokeThickness)'| markdownify}}</td>
-<td>Gets or sets a value of the the stroke brush for the centerbuttonstrokethickness in the SfRadialMenuControl.</td>
+<td>{{'[CenterButtonBorderThickness]'}}</td>
+<td>{{'[CenterButtonStrokeThickness]'}}</td>
+<td>Gets or sets a value of the the strokethickness for the centerbuttonstrokethickness in the SfRadialMenu.</td>
 </tr>
 
 </table> 
 
-## Upcoming features
+## Upcoming features in .NET MAUI RadialMenu
 
-* LayoutType.
-* VisibleSegmentCount.
-* Selection.
-* CenterButtonPlacement.
+* LayoutType that determines arrangement of items on rim either automatic or user defined.
+* VisibleSegmentCount that determines the number of segments visible at a time on the menu..
+* Selection allows you to highlight or choose segments within the hierarchy.
+* CenterButtonPlacement that specifies the position of the center button within the menu..
 * Accessibility.
+
+## Support and feedback
+
+If you are unable to find the migration information you require in the self-help resources listed above, please contact us by creating a [support ticket](https://internalsupport.bolddesk.com/agent/tickets/create). If you do not see what you need, Please request it in our [feedback portal](https://www.syncfusion.com/feedback/maui). 
