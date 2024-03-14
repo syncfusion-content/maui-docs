@@ -149,7 +149,7 @@ public partial class LoadMoreViewModel : INotifyPropertyChanged
 
 ## Load more automatically
 
-Set the `LoadMoreBehavior` to `LoadMoreOption.Auto`, a busy indicator will appear automatically when you reach the top of the chat list. Unlike `LoadMoreOption.Manual`, `SfChat.LoadMoreCommand` executes automatically without needing any additional clicks when you reach the top of the chat list. 
+Set the `LoadMoreBehavior` to `LoadMoreOption.Auto`, a busy indicator will appear automatically when you reach the top of the chat list. Unlike `LoadMoreOption.Manual`, `LoadMoreCommand` executes automatically without needing any additional clicks when you reach the top of the chat list. 
 
 N> When the `LoadMoreBehavior` is set to `Auto` `IsLazyLoading` will be `true` by default. So, to cancel the load more operation and remove the load more view from the chat, set the `LoadMoreBehavior` as `LoadMoreOption.None`.
 
