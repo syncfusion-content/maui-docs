@@ -178,12 +178,11 @@ The following code example, explains how to initialize the properties of the .NE
 <th>Description</th></tr>
 
 {% tabs %}
-{% highlight XAML hl_lines="2 3 4" %}
+{% highlight XAML hl_lines="2 3" %}
 
 <treemap:SfTreeMap x:Name="treeMap"
                    DataSource="{Binding PopulationDetails}"
-                   PrimaryValuePath="Population"
-                   RangeColorValuePath="Population">
+                   PrimaryValuePath="Population">
     <treemap:SfTreeMap.BindingContext>
         <local:PopulationViewModel />
     </treemap:SfTreeMap.BindingContext>
@@ -191,13 +190,12 @@ The following code example, explains how to initialize the properties of the .NE
 
 {% endhighlight %}
 
-{% highlight C# hl_lines="3 4 5" %}
+{% highlight C# hl_lines="3 4" %}
 
 SfTreeMap treeMap = new SfTreeMap();
 PopulationViewModel viewModel = new PopulationViewModel();
 treeMap.DataSource = viewModel.PopulationDetails;
 treeMap.PrimaryValuePath = "Population";
-treeMap.RangeColorValuePath = "Population";
 this.Content = treeMap;
 
 {% endhighlight %}
@@ -400,12 +398,11 @@ public class PopulationViewModel
 The following code example, explains how to configure the leaf item settings in .NET MAUI SfTreeMap control.
 
 {% tabs %}
-{% highlight XAML hl_lines="8 9 10 11 12" %}
+{% highlight XAML hl_lines="7 8 9 10 11" %}
 
 <treemap:SfTreeMap x:Name="treeMap"
                    DataSource="{Binding PopulationDetails}"
-                   PrimaryValuePath="Population"
-                   RangeColorValuePath="Population">
+                   PrimaryValuePath="Population">
     <treemap:SfTreeMap.BindingContext>
         <local:PopulationViewModel />
     </treemap:SfTreeMap.BindingContext>
@@ -414,16 +411,21 @@ The following code example, explains how to configure the leaf item settings in 
                                          Stroke="Black">
         </treemap:TreeMapLeafItemSettings>
     </treemap:SfTreeMap.LeafItemSettings>
+    <treemap:SfTreeMap.LeafItemBrushSettings>
+        <treemap:TreeMapUniformBrushSettings Brush="Orange"/>
+    </treemap:SfTreeMap.LeafItemBrushSettings>
 </treemap:SfTreeMap>
 
 {% endhighlight %}
 
-{% highlight C# hl_lines="4" %}
+{% highlight C# hl_lines="5" %}
 
 SfTreeMap treeMap = new SfTreeMap();
 PopulationViewModel viewModel = new PopulationViewModel();
 treeMap.DataSource = viewModel.PopulationDetails;
-this.treeMap.LeafItemSettings = new TreeMapLeafItemSettings() { LabelPath = "Country", Stroke = Brush.Black };
+treeMap.PrimaryValuePath = "Population";
+treeMap.LeafItemSettings = new TreeMapLeafItemSettings() { LabelPath = "Country", Stroke = Brush.Black };
+treeMap.LeafItemBrushSettings = new TreeMapUniformBrushSettings() { Brush = Brush.Orange };
 this.Content = treeMap;
 
 {% endhighlight %}
@@ -549,16 +551,47 @@ The following code example, explains how to configure the legend settings in .NE
         <treemap:TreeMapLegendSettings ShowLegend="True">
     </treemap:TreeMapLegendSettings>
     </treemap:SfTreeMap.LegendSettings>
+    <treemap:SfTreeMap.LeafItemBrushSettings>
+    <treemap:TreeMapRangeBrushSettings>
+        <treemap:TreeMapRangeBrushSettings.RangeBrushes>
+            <treemap:TreeMapRangeBrush LegendLabel="50M - 1B"
+                                       From="50000000"
+                                       To="1000000000" 
+                                       Brush ="#F0A868" />
+            <treemap:TreeMapRangeBrush LegendLabel="10M - 50M"
+                                       From="10000000"
+                                       To="50000000" 
+                                       Brush ="#F3BC8B" />
+            <treemap:TreeMapRangeBrush LegendLabel="0.1M - 10M"
+                                       From="100000" 
+                                       To="10000000"  
+                                       Brush= "#F8D7B9" />
+        </treemap:TreeMapRangeBrushSettings.RangeBrushes>
+      </treemap:TreeMapRangeBrushSettings>
+    </treemap:SfTreeMap.LeafItemBrushSettings>
 </treemap:SfTreeMap>
 
 {% endhighlight %}
 
-{% highlight C# hl_lines="4" %}
+{% highlight C# hl_lines="7" %}
 
 SfTreeMap treeMap = new SfTreeMap();
 PopulationViewModel viewModel = new PopulationViewModel();
 treeMap.DataSource = viewModel.PopulationDetails;
-this.treeMap.LegendSettings = new TreeMapLegendSettings() { ShowLegend = true };
+treeMap.PrimaryValuePath = "Population";
+treeMap.RangeColorValuePath = "Population";
+treeMap.LeafItemSettings = new TreeMapLeafItemSettings() { LabelPath = "Country", Stroke = Brush.Black };
+treeMap.LegendSettings = new TreeMapLegendSettings() { ShowLegend = true };
+treeMap.LeafItemBrushSettings = new TreeMapRangeBrushSettings()
+{
+    RangeBrushes = new List<TreeMapRangeBrush>()
+    {
+        new TreeMapRangeBrush { LegendLabel = "50M - 1B", From = 50000000, To = 1000000000, Brush = new SolidColorBrush(Color.FromArgb("#F0A868")) },
+        new TreeMapRangeBrush { LegendLabel = "10M - 50M", From = 10000000, To = 50000000, Brush = new SolidColorBrush(Color.FromArgb("#F3BC8B")) },
+        new TreeMapRangeBrush { LegendLabel = "0.1M - 10M", From = 100000, To = 10000000, Brush = new SolidColorBrush(Color.FromArgb("#F8D7B9")) },
+    }
+};
+
 this.Content = treeMap;
 
 {% endhighlight %}
@@ -666,12 +699,11 @@ public class PopulationViewModel
 The following code example, explains how to configure the uniform brush settings in .NET MAUI SfTreeMap control.
 
 {% tabs %}
-{% highlight XAML hl_lines="12 13 14" %}
+{% highlight XAML hl_lines="11 12 13" %}
 
 <treemap:SfTreeMap x:Name="treeMap"
                    DataSource="{Binding PopulationDetails}"
-                   PrimaryValuePath="Population"
-                   RangeColorValuePath="Population">
+                   PrimaryValuePath="Population">
     <treemap:SfTreeMap.BindingContext>
         <local:PopulationViewModel />
     </treemap:SfTreeMap.BindingContext>
@@ -686,12 +718,14 @@ The following code example, explains how to configure the uniform brush settings
 
 {% endhighlight %}
 
-{% highlight C# hl_lines="4" %}
+{% highlight C# hl_lines="5" %}
 
 SfTreeMap treeMap = new SfTreeMap();
 PopulationViewModel viewModel = new PopulationViewModel();
 treeMap.DataSource = viewModel.PopulationDetails;
-this.treeMap.LeafItemBrushSettings = new TreeMapUniformBrushSettings() { Brush = Brush.Orange };
+treeMap.PrimaryValuePath = "Population";
+treeMap.LeafItemBrushSettings = new TreeMapUniformBrushSettings() { Brush = Brush.Orange };
+treeMap.LeafItemSettings = new TreeMapLeafItemSettings() { LabelPath = "Country" };
 this.Content = treeMap;
 
 {% endhighlight %}
@@ -769,12 +803,11 @@ public class PopulationViewModel
 The following code example, explains how to configure the desaturation brush settings in .NET MAUI SfTreeMap control.
 
 {% tabs %}
-{% highlight XAML hl_lines="12 13 14" %}
+{% highlight XAML hl_lines="11 12 13" %}
 
 <treemap:SfTreeMap x:Name="treeMap"
                    DataSource="{Binding PopulationDetails}"
-                   PrimaryValuePath="Population"
-                   RangeColorValuePath="Population">
+                   PrimaryValuePath="Population">
     <treemap:SfTreeMap.BindingContext>
         <local:PopulationViewModel />
     </treemap:SfTreeMap.BindingContext>
@@ -789,12 +822,14 @@ The following code example, explains how to configure the desaturation brush set
 
 {% endhighlight %}
 
-{% highlight C# hl_lines="4" %}
+{% highlight C# hl_lines="6" %}
 
 SfTreeMap treeMap = new SfTreeMap();
 PopulationViewModel viewModel = new PopulationViewModel();
 treeMap.DataSource = viewModel.PopulationDetails;
-this.treeMap.LeafItemBrushSettings = new TreeMapDesaturationBrushSettings() { Brush = Brush.BlueViolet, From = 1, To = 0.2 };
+treeMap.PrimaryValuePath = "Population";
+treeMap.LeafItemSettings = new TreeMapLeafItemSettings() { LabelPath = "Country" };
+treeMap.LeafItemBrushSettings = new TreeMapDesaturationBrushSettings() { Brush = Brush.BlueViolet, From = 1, To = 0.2 };
 this.Content = treeMap;
 
 {% endhighlight %}
@@ -913,11 +948,14 @@ The following code example, explains how to configure the palette brush settings
 
 {% endhighlight %}
 
-{% highlight C# hl_lines="4 5 6 7 8 9 10 11 12 13 14 15" %}
+{% highlight C# hl_lines="7 8 9 10 11 12 13 14 15 16 17 18" %}
 
 SfTreeMap treeMap = new SfTreeMap();
 PopulationViewModel viewModel = new PopulationViewModel();
 treeMap.DataSource = viewModel.PopulationDetails;
+treeMap.PrimaryValuePath = "Population";
+treeMap.RangeColorValuePath = "Population";
+treeMap.LeafItemSettings = new TreeMapLeafItemSettings() { LabelPath = "Country" };
 this.treeMap.LeafItemBrushSettings = new TreeMapPaletteBrushSettings()
 {
     Brushes = new List<Brush>()
@@ -1049,11 +1087,14 @@ To categorize leaf nodes in a TreeMap according to different ranges of backgroun
 
 {% endhighlight %}
 
-{% highlight C# hl_lines="4 5 6 7 8 9 10 11 12" %}
+{% highlight C# hl_lines="7 8 9 10 11 12 13 14 15" %}
 
 SfTreeMap treeMap = new SfTreeMap();
 PopulationViewModel viewModel = new PopulationViewModel();
 treeMap.DataSource = viewModel.PopulationDetails;
+treeMap.PrimaryValuePath = "Population";
+treeMap.RangeColorValuePath = "Population";
+treeMap.LeafItemSettings = new TreeMapLeafItemSettings() { LabelPath = "Country" };
 this.treeMap.LeafItemBrushSettings = new TreeMapRangeBrushSettings()
 {
     RangeBrushes = new List<TreeMapRangeBrush>()
@@ -1159,13 +1200,12 @@ public class PopulationViewModel
 The following code example, explains how to configure the tooltip setting in .NET MAUI SfTreeMap control.
 
 {% tabs %}
-{% highlight XAML hl_lines="4 16 17 18" %}
+{% highlight XAML hl_lines="4 15 16 17" %}
 
 <treemap:SfTreeMap x:Name="treeMap"
                    DataSource="{Binding PopulationDetails}"
                    PrimaryValuePath="Population"
-                   ShowToolTip="True"
-                   RangeColorValuePath="Population">
+                   ShowToolTip="True">
     <treemap:SfTreeMap.BindingContext>
         <local:PopulationViewModel />
     </treemap:SfTreeMap.BindingContext>
@@ -1174,7 +1214,7 @@ The following code example, explains how to configure the tooltip setting in .NE
     </treemap:TreeMapLeafItemSettings>
     </treemap:SfTreeMap.LeafItemSettings>
     <treemap:SfTreeMap.LeafItemBrushSettings>
-        <treemap:TreeMapUniformBrushSettings Brush="#F8D7B9"/>
+        <treemap:TreeMapUniformBrushSettings Brush="Orange"/>
     </treemap:SfTreeMap.LeafItemBrushSettings>
     <treemap:SfTreeMap.ToolTipSettings >
         <treemap:TreeMapToolTipSettings Background = "Red" />
@@ -1183,12 +1223,15 @@ The following code example, explains how to configure the tooltip setting in .NE
 
 {% endhighlight %}
 
-{% highlight C# hl_lines="4 5" %}
+{% highlight C# hl_lines="5 8" %}
 
 SfTreeMap treeMap = new SfTreeMap();
 PopulationViewModel viewModel = new PopulationViewModel();
 treeMap.DataSource = viewModel.PopulationDetails;
+treeMap.PrimaryValuePath = "Population";
 treeMap.ShowToolTip = true;
+treeMap.LeafItemBrushSettings = new TreeMapUniformBrushSettings() { Brush = Brush.Orange };
+treeMap.LeafItemSettings = new TreeMapLeafItemSettings() { LabelPath = "Country" };
 treeMap.ToolTipSettings = new TreeMapToolTipSettings() { Background = Brush.Red };
 this.Content = treeMap;
 
@@ -1285,12 +1328,11 @@ public class PopulationViewModel
 The following code example, explains how to configure the tree map level in .NET MAUI SfTreeMap control.
 
 {% tabs %}
-{% highlight XAML hl_lines="15 16 17" %}
+{% highlight XAML hl_lines="14 15 16" %}
 
 <treemap:SfTreeMap x:Name="treeMap"
                    DataSource="{Binding PopulationDetails}"
-                   PrimaryValuePath="Population"
-                   RangeColorValuePath="Population">
+                   PrimaryValuePath="Population">
     <treemap:SfTreeMap.BindingContext>
         <local:PopulationViewModel />
     </treemap:SfTreeMap.BindingContext>
@@ -1299,7 +1341,7 @@ The following code example, explains how to configure the tree map level in .NET
         </treemap:TreeMapLeafItemSettings>
     </treemap:SfTreeMap.LeafItemSettings>
     <treemap:SfTreeMap.LeafItemBrushSettings>
-        <treemap:TreeMapUniformBrushSettings Brush="#F8D7B9"/>
+        <treemap:TreeMapUniformBrushSettings Brush="Orange"/>
     </treemap:SfTreeMap.LeafItemBrushSettings>
     <treemap:SfTreeMap.Levels>
        <treemap:TreeMapLevel GroupPath="Continent"/>
@@ -1308,12 +1350,15 @@ The following code example, explains how to configure the tree map level in .NET
 
 {% endhighlight %}
 
-{% highlight C# hl_lines="4" %}
+{% highlight C# hl_lines="7" %}
 
 SfTreeMap treeMap = new SfTreeMap();
 PopulationViewModel viewModel = new PopulationViewModel();
 treeMap.DataSource = viewModel.PopulationDetails;
-this.treeMap.Levels.Add(new TreeMapLevel() { GroupPath = "Continent"});
+treeMap.PrimaryValuePath = "Population";
+treeMap.LeafItemBrushSettings = new TreeMapUniformBrushSettings() { Brush = Brush.Orange };
+treeMap.LeafItemSettings = new TreeMapLeafItemSettings() { LabelPath = "Country" };
+treeMap.Levels.Add(new TreeMapLevel() { GroupPath = "Continent"});
 this.Content = treeMap;
 
 {% endhighlight %}
