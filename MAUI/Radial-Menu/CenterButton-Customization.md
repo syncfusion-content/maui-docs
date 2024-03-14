@@ -730,7 +730,7 @@ namespace RadialSample
 
 ![Display RadialMenu with StrokeThickness.](images/centerbutton-customization/maui-radialmenu-centerbutton-customization-strokethickness.png)
 
-## Center button view and center back button view
+## CenterButtonView and CenterButtonBackView
 
 You can customize the center button using [`CenterButtonView`] and center back button using [`CenterButtonBackView`] in  [`SfRadialMenu`].
 
