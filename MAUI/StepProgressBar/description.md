@@ -13,10 +13,45 @@ Each step in a multi-step process has a different operation. To display informat
 ## Text 
 The primary and secondary descriptions for a step view can be set using the [PrimaryText]() and [SecondaryText]() properties, as demonstrated in the following code example.
 
-* Create a simple Observable Collection of item for the step progressbar.
+* Create a simple Observable Collection which contains the `PrimaryText` and `SecondaryText` for the step progressbar and bound the collection to the `ItemSource` property.
 
 {% tabs %}
-{% highlight c# tabtitle="ViewModel.cs" hl_lines="26 27 28 29 30" %}
+{% highlight XAML hl_lines="9" %}
+
+<stepProgressBar:SfStepProgressBar
+                    x:Name="stepProgress"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"                                        
+                    Orientation="Vertical"                                                                                       
+                    LabelSpacing="12"
+                    ActiveStepIndex="3"
+                    ActiveStepProgressValue="50"
+                    ItemsSource="{Binding StepProgressItem}">
+</stepProgressBar:SfStepProgressBar>
+
+<ContentPage.BindingContext>
+    <local:ViewModel />
+</ContentPage.BindingContext>
+
+{% endhighlight %}
+{% highlight C# hl_lines="10" %}
+
+ViewModel viewModel = new ViewModel();
+SfStepProgressBar stepProgressBar = new SfStepProgressBar()
+{
+    VerticalOptions = LayoutOptions.Center,
+    HorizontalOptions = LayoutOptions.Center,
+    Orientation = StepProgressBarOrientation.Vertical,
+    LabelSpacing = 12,
+    ActiveStepIndex = 3,
+    ActiveStepProgressValue = 50,
+    ItemsSource = viewModel.StepProgressItem,
+};
+
+this.Content = stepProgressBar;
+
+{% endhighlight %}
+{% highlight C# tabtitle="ViewModel.cs" hl_lines="26 27 28 29 30" %}
 
 public class ViewModel
 {
@@ -54,10 +89,13 @@ public class ViewModel
 {% endhighlight %}
 {% endtabs %}
 
-* Bind the Collection to the step progressbar
+## Formatted text
+[PrimaryFormattedText]() and [SecondaryFormattedText]() can be used to customize the description with different formatting style. The following code example explains how to set `PrimaryFormattedText` and `SecondaryFormattedText` to a step view.
+
+* Create a simple Observable Collection which contains the `PrimaryFormattedText` and `SecondaryFormattedText` for the step progressbar and bound the collection to the `ItemSource` property.
 
 {% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="9" %}
+{% highlight XAML hl_lines="9" %}
 
 <stepProgressBar:SfStepProgressBar
                     x:Name="stepProgress"
@@ -65,17 +103,17 @@ public class ViewModel
                     HorizontalOptions="Center"                                        
                     Orientation="Vertical"                                                                                       
                     LabelSpacing="12"
-                    ActiveStepIndex="3"
+                    ActiveStepIndex="1"
                     ActiveStepProgressValue="50"
                     ItemsSource="{Binding StepProgressItem}">
-</stepProgressBar:SfStepProgressBar>
+</stepProgressBar:SfStepProgressBar>                                                                                             
 
 <ContentPage.BindingContext>
     <local:ViewModel />
 </ContentPage.BindingContext>
 
 {% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="10" %}
+{% highlight C# %}
 
 ViewModel viewModel = new ViewModel();
 SfStepProgressBar stepProgressBar = new SfStepProgressBar()
@@ -84,7 +122,7 @@ SfStepProgressBar stepProgressBar = new SfStepProgressBar()
     HorizontalOptions = LayoutOptions.Center,
     Orientation = StepProgressBarOrientation.Vertical,
     LabelSpacing = 12,
-    ActiveStepIndex = 3,
+    ActiveStepIndex = 1,
     ActiveStepProgressValue = 50,
     ItemsSource = viewModel.StepProgressItem,
 };
@@ -92,15 +130,7 @@ SfStepProgressBar stepProgressBar = new SfStepProgressBar()
 this.Content = stepProgressBar;
 
 {% endhighlight %}
-{% endtabs %}
-
-## Formatted text
-[PrimaryFormattedText]() and [SecondaryFormattedText]() can be used to customize the description with different formatting style. The following code example explains how to set `PrimaryFormattedText` and `SecondaryFormattedText` to a step view.
-
-* Create a simple Observable Collection of item for the step progressbar,
-
-{% tabs %}
-{% highlight c# tabtitle="ViewModel.cs" %}
+{% highlight C# tabtitle="ViewModel.cs" %}
 
 public class ViewModel
 {
@@ -160,48 +190,6 @@ public class ViewModel
 {% endhighlight %}
 {% endtabs %}
 
-* Bind the Collection to step progressbar.
-
-The Step progressbar control allows you to bind item collection by setting the [ItemsSource]() property from the [SfStepProgressBar](). Bind item collection in both XAML and C#.
-
-{% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="9" %}
-
-<stepProgressBar:SfStepProgressBar
-                    x:Name="stepProgress"
-                    VerticalOptions="Center"
-                    HorizontalOptions="Center"                                        
-                    Orientation="Vertical"                                                                                       
-                    LabelSpacing="12"
-                    ActiveStepIndex="1"
-                    ActiveStepProgressValue="50"
-                    ItemsSource="{Binding StepProgressItem}">
-</stepProgressBar:SfStepProgressBar>                                                                                             
-
-<ContentPage.BindingContext>
-    <local:ViewModel />
-</ContentPage.BindingContext>
-
-{% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="10" %}
-
-ViewModel viewModel = new ViewModel();
-SfStepProgressBar stepProgressBar = new SfStepProgressBar()
-{
-    VerticalOptions = LayoutOptions.Center,
-    HorizontalOptions = LayoutOptions.Center,
-    Orientation = StepProgressBarOrientation.Vertical,
-    LabelSpacing = 12,
-    ActiveStepIndex = 1,
-    ActiveStepProgressValue = 50,
-    ItemsSource = viewModel.StepProgressItem,
-};
-
-this.Content = stepProgressBar;
-
-{% endhighlight %}
-{% endtabs %}
-
 N> If both `PrimaryText` and `PrimaryFormattedText` are provided, then `PrimaryFormattedText` will be displayed. This precedence is same as for the `SecondaryText` and `SecondaryFormattedText`.
 
 ## Customize label spacing
@@ -215,7 +203,7 @@ You can customize the space between the step and primary or secondary text of th
 </stepProgressBar:SfStepProgressBar> 
 
 {% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="2" %}
+{% highlight c# tabtitle="C#" hl_lines="3" %}
 
 SfStepProgressBar stepProgressBar = new SfStepProgressBar()
 {
@@ -240,7 +228,7 @@ The default value of the `LabelPosition` property in the horizontal direction is
 </stepProgressBar:SfStepProgressBar> 
 
 {% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="2" %}
+{% highlight c# tabtitle="C#" hl_lines="3" %}
 
 SfStepProgressBar stepProgressBar = new SfStepProgressBar()
 {
@@ -262,14 +250,49 @@ The [StepProgressBar]() control provides support for adding images as the conten
 
 You can add the images by giving image path to the [ImageSource]() property in `SfStepProgressBar`. The following code example explains how to set an image in step view.
 
-#### Initialize view model
-
-* Create a simple Observable Collection of item with image source for the step progressbar.
+* Create a simple Observable Collection that contain the provided images by using the `StepProgressBarItem` collection, which is bound to the `ItemSource` property.
 
 {% tabs %}
-{% highlight c# tabtitle="ViewModel.cs" %}
+{% highlight XAML hl_lines="8" %}
 
- public class ViewModel
+<stepProgressBar:SfStepProgressBar
+                    x:Name="stepProgress"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"                                        
+                    Orientation="Horizontal"                                                                                       
+                    LabelSpacing="12"
+                    LabelPosition="Bottom"
+                    ActiveStepIndex="2"
+                    ActiveStepProgressValue="50"    
+                    ItemsSource="{Binding StepProgressItem}">
+</stepProgressBar:SfStepProgressBar>                                                                                              
+
+<ContentPage.BindingContext>
+    <local:ViewModel />
+</ContentPage.BindingContext>
+
+{% endhighlight %}
+{% highlight C# hl_lines="9" %}
+
+ViewModel viewModel = new ViewModel();
+SfStepProgressBar stepProgressBar = new SfStepProgressBar()
+{
+    VerticalOptions = LayoutOptions.Center,
+    HorizontalOptions = LayoutOptions.Center,
+    Orientation = StepProgressBarOrientation.Horizontal,
+    LabelSpacing = 12,
+    LabelPosition = LabelPosition.Bottom,
+    ActiveStepIndex = 2,
+    ActiveStepProgressValue = 50,
+    ItemsSource = viewModel.StepProgressItem,
+};
+
+this.Content = stepProgressBar;
+
+{% endhighlight %}
+{% highlight C# tabtitle="ViewModel.cs" %}
+
+public class ViewModel
  {
     /// <summary>
     /// The Step progress bar item collection.
@@ -304,29 +327,31 @@ You can add the images by giving image path to the [ImageSource]() property in `
 {% endhighlight %}
 {% endtabs %}
 
-* Bind the Collection to step progressbar.
+### Customization using Font icon
+
+You can add the images with font icons to the [ImageSource]() property in `SfStepProgressBar`. The following code example explains how to set an image in step view.
+
+* Create a simple Observable Collection that contain the provided images by using the `StepProgressBarItem` collection, which is bound to the `ItemSource` property.
 
 {% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="8" %}
+{% highlight XAML hl_lines="8" %}
 
 <stepProgressBar:SfStepProgressBar
                     x:Name="stepProgress"
                     VerticalOptions="Center"
                     HorizontalOptions="Center"                                        
-                    Orientation="Horizontal"                                                                                       
-                    LabelSpacing="12"
-                    LabelPosition="Bottom"
+                    Orientation="Horizontal"
                     ActiveStepIndex="2"
                     ActiveStepProgressValue="50"    
                     ItemsSource="{Binding StepProgressItem}">
-</stepProgressBar:SfStepProgressBar>                                                                                              
+</stepProgressBar:SfStepProgressBar>                                                                                            
 
 <ContentPage.BindingContext>
     <local:ViewModel />
 </ContentPage.BindingContext>
 
 {% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="9" %}
+{% highlight C# hl_lines="9" %}
 
 ViewModel viewModel = new ViewModel();
 SfStepProgressBar stepProgressBar = new SfStepProgressBar()
@@ -334,8 +359,6 @@ SfStepProgressBar stepProgressBar = new SfStepProgressBar()
     VerticalOptions = LayoutOptions.Center,
     HorizontalOptions = LayoutOptions.Center,
     Orientation = StepProgressBarOrientation.Horizontal,
-    LabelSpacing = 12,
-    LabelPosition = LabelPosition.Bottom,
     ActiveStepIndex = 2,
     ActiveStepProgressValue = 50,
     ItemsSource = viewModel.StepProgressItem,
@@ -344,20 +367,9 @@ SfStepProgressBar stepProgressBar = new SfStepProgressBar()
 this.Content = stepProgressBar;
 
 {% endhighlight %}
-{% endtabs %}
+{% highlight C# tabtitle="ViewModel.cs" hl_lines="26 27 28" %}
 
-### Customization using Font icon
-
-You can add the images with font icons to the [ImageSource]() property in `SfStepProgressBar`. The following code example explains how to set an image in step view.
-
-#### Initialize view model
-
-* Create a simple Observable Collection of item with font icons for the step progressbar.
-
-{% tabs %}
-{% highlight c# tabtitle="ViewModel.cs" hl_lines="26 27 28" %}
-
- public class ViewModel
+public class ViewModel
  {
     /// <summary>
     /// The Step progress bar item collection.
@@ -387,44 +399,6 @@ You can add the images with font icons to the [ImageSource]() property in `SfSte
         stepProgressItem.Add(new StepProgressBarItem() { ImageSource = new FontImageSource() { Glyph = "\ue786", Size = 32, FontFamily = "IconFont", Color = Colors.White } });
     }
  }
-
-{% endhighlight %}
-{% endtabs %}
-
-* Bind the Collection to step progressbar.
-
-{% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="8" %}
-
-<stepProgressBar:SfStepProgressBar
-                    x:Name="stepProgress"
-                    VerticalOptions="Center"
-                    HorizontalOptions="Center"                                        
-                    Orientation="Horizontal"
-                    ActiveStepIndex="2"
-                    ActiveStepProgressValue="50"    
-                    ItemsSource="{Binding StepProgressItem}">
-</stepProgressBar:SfStepProgressBar>                                                                                            
-
-<ContentPage.BindingContext>
-    <local:ViewModel />
-</ContentPage.BindingContext>
-
-{% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="9" %}
-
-ViewModel viewModel = new ViewModel();
-SfStepProgressBar stepProgressBar = new SfStepProgressBar()
-{
-    VerticalOptions = LayoutOptions.Center,
-    HorizontalOptions = LayoutOptions.Center,
-    Orientation = StepProgressBarOrientation.Horizontal,
-    ActiveStepIndex = 2,
-    ActiveStepProgressValue = 50,
-    ItemsSource = viewModel.StepProgressItem,
-};
-
-this.Content = stepProgressBar;
 
 {% endhighlight %}
 {% endtabs %}
