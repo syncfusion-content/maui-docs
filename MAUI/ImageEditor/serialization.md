@@ -80,3 +80,5 @@ The `Deserialize` method is used to deserialize the annotations over an image. I
 {% endtabs %}
 
 N> Serialization is not applicable to custom annotations.
+
+![Serialization in .NET Maui ImageEditor](images/serialization/imageeditor-serialization.gif)

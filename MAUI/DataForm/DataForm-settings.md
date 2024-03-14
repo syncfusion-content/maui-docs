@@ -703,3 +703,5 @@ public class DataFormItemManagerEditorExt : DataFormItemManager
 
 {% endhighlight %}
 {% endtabs %}
+
+![Label view customization in .NET MAUI DataForm.](images/editor-settings/label-view-customization.jpeg)
