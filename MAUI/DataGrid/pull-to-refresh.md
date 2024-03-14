@@ -19,14 +19,14 @@ The `PullToRefresh` control provides support for loading any custom control as p
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-    xmlns:sfgrid="clr-namespace:Syncfusion.Maui.DataGrid;assembly=Syncfusion.Maui.DataGrid"
-    xmlns:pulltoRefresh="clr-namespace:Syncfusion.Maui.PullToRefresh;assembly=Syncfusion.Maui.PullToRefresh"
+xmlns:sfgrid="clr-namespace:Syncfusion.Maui.DataGrid;assembly=Syncfusion.Maui.DataGrid"
+xmlns:pulltoRefresh="clr-namespace:Syncfusion.Maui.PullToRefresh;assembly=Syncfusion.Maui.PullToRefresh"
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-    using Syncfusion.Maui.DataGrid;
-    using Syncfusion.Maui.PullToRefresh;
+using Syncfusion.Maui.DataGrid;
+using Syncfusion.Maui.PullToRefresh;
 
 {% endhighlight %}
 {% endtabs %}
@@ -41,74 +41,74 @@ This is how the final output will look like when hosting a DataGrid control as p
 <img alt="TransitionMode SlideonTop" src="Images\pull-to-refresh\net-maui-datagrid-slideontop.gif" width="404"/>
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="23 24 36 37" %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 
-    <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="PullToRefreshTemplate.MainPage"
-             xmlns:sfgrid="clr-namespace:Syncfusion.Maui.DataGrid;assembly=Syncfusion.Maui.DataGrid"
-             xmlns:pulltoRefresh="clr-namespace:Syncfusion.Maui.PullToRefresh;assembly=Syncfusion.Maui.PullToRefresh"
-             xmlns:local="clr-namespace:PullToRefreshTemplate">
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            x:Class="PullToRefreshTemplate.MainPage"
+            xmlns:sfgrid="clr-namespace:Syncfusion.Maui.DataGrid;assembly=Syncfusion.Maui.DataGrid"
+            xmlns:pulltoRefresh="clr-namespace:Syncfusion.Maui.PullToRefresh;assembly=Syncfusion.Maui.PullToRefresh"
+            xmlns:local="clr-namespace:PullToRefreshTemplate">
 
-        <ContentPage.Behaviors>
-            <local:PullToRefreshTemplateBehavior />
-        </ContentPage.Behaviors>
+    <ContentPage.Behaviors>
+        <local:PullToRefreshTemplateBehavior />
+    </ContentPage.Behaviors>
 
-        <ContentPage.Content>
-            <Grid>
-                <pulltoRefresh:SfPullToRefresh x:Name="pullToRefresh"
-                                            TransitionMode="SlideOnTop">
+    <ContentPage.Content>
+        <Grid>
+            <pulltoRefresh:SfPullToRefresh x:Name="pullToRefresh"
+                                        TransitionMode="SlideOnTop">
 
-                    <pulltoRefresh:SfPullToRefresh.PullableContent>
-                        <sfgrid:SfDataGrid x:Name="dataGrid"
-                                        ItemsSource="{Binding OrderInfoCollection}">
-                        </sfgrid:SfDataGrid>
-                    </pulltoRefresh:SfPullToRefresh.PullableContent>
-                </pulltoRefresh:SfPullToRefresh>
-            </Grid>
-        </ContentPage.Content>
-    </ContentPage>
+                <pulltoRefresh:SfPullToRefresh.PullableContent>
+                    <sfgrid:SfDataGrid x:Name="dataGrid"
+                                    ItemsSource="{Binding OrderInfoCollection}">
+                    </sfgrid:SfDataGrid>
+                </pulltoRefresh:SfPullToRefresh.PullableContent>
+            </pulltoRefresh:SfPullToRefresh>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# tabtitle="PullToRefreshTemplateBehavior.cs" %}
 
-    using Syncfusion.Maui.PullToRefresh;
+using Syncfusion.Maui.PullToRefresh;
 
-    namespace PullToRefreshTemplate
+namespace PullToRefreshTemplate
+{
+    public class PullToRefreshTemplateBehavior : Behavior<ContentPage>
     {
-        public class PullToRefreshTemplateBehavior : Behavior<ContentPage>
+        private OrderInfoRepository? viewModel;
+        private Syncfusion.Maui.PullToRefresh.SfPullToRefresh? pullToRefresh;
+        protected override void OnAttachedTo(ContentPage bindable)
         {
-            private OrderInfoRepository? viewModel;
-            private Syncfusion.Maui.PullToRefresh.SfPullToRefresh? pullToRefresh;
-            protected override void OnAttachedTo(ContentPage bindable)
-            {
-                this.viewModel = new OrderInfoRepository();
-                bindable.BindingContext = this.viewModel;
-                this.pullToRefresh = bindable.FindByName<Syncfusion.Maui.PullToRefresh.SfPullToRefresh>("pullToRefresh");
-                this.pullToRefresh.Refreshing += this.PullToRefresh_Refreshing;
-                base.OnAttachedTo(bindable);
-            }
+            this.viewModel = new OrderInfoRepository();
+            bindable.BindingContext = this.viewModel;
+            this.pullToRefresh = bindable.FindByName<Syncfusion.Maui.PullToRefresh.SfPullToRefresh>("pullToRefresh");
+            this.pullToRefresh.Refreshing += this.PullToRefresh_Refreshing;
+            base.OnAttachedTo(bindable);
+        }
 
-            private async void PullToRefresh_Refreshing(object? sender, EventArgs e)
-            {
-                this.pullToRefresh!.IsRefreshing = true;
-                await Task.Delay(new TimeSpan(0, 0, 3));
-                this.viewModel!.ItemsSourceRefresh();
-                this.pullToRefresh.IsRefreshing = false;
-            }
+        private async void PullToRefresh_Refreshing(object? sender, EventArgs e)
+        {
+            this.pullToRefresh!.IsRefreshing = true;
+            await Task.Delay(new TimeSpan(0, 0, 3));
+            this.viewModel!.ItemsSourceRefresh();
+            this.pullToRefresh.IsRefreshing = false;
+        }
 
-            protected override void OnDetachingFrom(ContentPage bindable)
-            {
-                this.pullToRefresh!.Refreshing -= this.PullToRefresh_Refreshing;
-                base.OnDetachingFrom(bindable);
-            }
+        protected override void OnDetachingFrom(ContentPage bindable)
+        {
+            this.pullToRefresh!.Refreshing -= this.PullToRefresh_Refreshing;
+            base.OnDetachingFrom(bindable);
         }
     }
+}
 
 {% endhighlight %}
 {% endtabs %}
 
-## Transition Mode
+### Transition Mode
 
 The [TransitionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PullToRefresh.SfPullToRefresh.html#Syncfusion_Maui_PullToRefresh_SfPullToRefresh_TransitionMode) property specifies the mode of the animations. It has the following two modes:
 
@@ -120,14 +120,14 @@ The default transition is `SlideOnTop` that draws the RefreshView on top of the 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
-    <pulltoRefresh:SfPullToRefresh x:Name="pullToRefresh"
-                                TransitionMode="SlideOnTop">
-        <pulltoRefresh:SfPullToRefresh.PullableContent>
-            <sfgrid:SfDataGrid x:Name="dataGrid"
-                               ItemsSource="{Binding OrderInfoCollection}">
-            </sfgrid:SfDataGrid>
-        </pulltoRefresh:SfPullToRefresh.PullableContent>
-    </pulltoRefresh:SfPullToRefresh>
+<pulltoRefresh:SfPullToRefresh x:Name="pullToRefresh"
+                            TransitionMode="SlideOnTop">
+    <pulltoRefresh:SfPullToRefresh.PullableContent>
+        <sfgrid:SfDataGrid x:Name="dataGrid"
+                            ItemsSource="{Binding OrderInfoCollection}">
+        </sfgrid:SfDataGrid>
+    </pulltoRefresh:SfPullToRefresh.PullableContent>
+</pulltoRefresh:SfPullToRefresh>
 
 {% endhighlight %}
 {% endtabs %}
@@ -137,14 +137,14 @@ The following code example shows how to set the `TransitionMode` as `Push` to Sf
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
-    <pulltoRefresh:SfPullToRefresh x:Name="pullToRefresh"
-                                TransitionMode="Push">
-        <pulltoRefresh:SfPullToRefresh.PullableContent>
-            <sfgrid:SfDataGrid x:Name="dataGrid"
-                               ItemsSource="{Binding OrderInfoCollection}">
-            </sfgrid:SfDataGrid>
-        </pulltoRefresh:SfPullToRefresh.PullableContent>
-    </pulltoRefresh:SfPullToRefresh>
+<pulltoRefresh:SfPullToRefresh x:Name="pullToRefresh"
+                            TransitionMode="Push">
+    <pulltoRefresh:SfPullToRefresh.PullableContent>
+        <sfgrid:SfDataGrid x:Name="dataGrid"
+                            ItemsSource="{Binding OrderInfoCollection}">
+        </sfgrid:SfDataGrid>
+    </pulltoRefresh:SfPullToRefresh.PullableContent>
+</pulltoRefresh:SfPullToRefresh>
 
 {% endhighlight %}
 {% endtabs %}

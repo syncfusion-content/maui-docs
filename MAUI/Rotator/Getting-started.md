@@ -74,6 +74,8 @@ Step 2: Add the namespace as shown in the following code sample.
 
 The `SfRotator` control is configured entirely in C# code or by using XAML markup.
 
+{% tabs %}
+
 {% highlight xaml %}
 
     <?xml version="1.0" encoding="utf-8" ?>
