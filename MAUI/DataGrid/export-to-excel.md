@@ -546,6 +546,22 @@ var excelEngine = excelExport.ExportToExcel(this.dataGrid, exportOption);
 
 The SfDataGrid offers various properties within the `DataGridExcelExportingOption` class to enable customization of the grid when exporting it to Excel.
 
+## Exporting Options
+
+Furthermore, you can export the data to Excel by providing the grid and [DataGridExcelExportingOption](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.Exporting.DataGridExcelExportingOption.html#properties) as arguments to the `ExportToExcel` method, which provides various customization options.
+
+{% tabs %}
+{% highlight c# %}
+DataGridExcelExportingController excelExport = new DataGridExcelExportingController();
+DataGridExcelExportingOption exportOption = new DataGridExcelExportingOption();
+exportOption.CanExportColumnWidth = false;
+exportOption.DefaultColumnWidth = 150;
+var excelEngine = excelExport.ExportToExcel(this.dataGrid, exportOption);
+{% endhighlight %}
+{% endtabs %}
+
+The SfDataGrid offers various properties within the `DataGridExcelExportingOption` class to enable customization of the grid when exporting it to Excel.
+
 ### Exporting formatted text and actual value
 
 The actual value will be exported to Excel by default. To export the display text, you need to set the `ExportMode` property as Text.

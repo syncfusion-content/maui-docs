@@ -19,6 +19,8 @@ The .NET MAUI DataGrid control is used to display and manipulate data in a tabul
 
 * **Column Types** - Show different data types in different types of columns. The following column types are supported: numeric, text, date, checkbox, image, combobox and template. The template column is used to load any control in a column.
 
+* **Column Resizing** - Interactive support to adjust the width of columns.
+
 * **Editing** - Interactive support to edit with different column types.
 
 * **Sorting** - Interactively sort one or more columns.
@@ -45,6 +47,12 @@ The .NET MAUI DataGrid control is used to display and manipulate data in a tabul
 
 * **Load More** -  Display an interactive view when the grid reaches its maximum or minimum offset while scrolling down or up. Tapping the interactive view triggers a command to add more data to the item source of the grid at runtime.
 
+* **Pull To Refresh** - Support allows users to load a subset of data when the DataGrid is pulled down.
+
 * **Exporting** - Support to export the data to Excel and PDF.
+
+* **Unbound column** - It allows adding additional columns that are not bound with data objects from the underlying data source.
+
+* **Unbound Row** - It allows adding rows at the top and bottom of the DataGrid which are not bound with data objects from the underlying data source.
 
 N> You can refer to our [MAUI DataGrid](https://www.syncfusion.com/maui-controls/maui-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [MAUI DataGrid example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/DataGrid) to learn about various features and how to easily configure them, with built-in support for creating stunning visual effects.

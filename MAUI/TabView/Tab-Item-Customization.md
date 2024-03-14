@@ -431,3 +431,28 @@ The [BadgeSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.
 ![Tabview BadgeSupport](images/TabItem_badge.png) 
 
 N> View [sample](https://github.com/SyncfusionExamples/maui-tabview-samples/tree/main/TabViewCustomizationSample) in GitHub.
+
+## Tab Header Padding
+
+The `TabHeaderPadding` property in SfTabView allows for adding padding to the tab header.
+
+N> The `TabHeaderPadding` property is only applicable when `TabWidthMode` is set to "SizeToContent".
+
+{% tabs %}
+
+{% highlight xaml %}
+<tabView:SfTabView>
+    <tabView:SfTabItem TabWidthMode="SizeToContent" TabHeaderPadding="5,10,5,10">
+</tabView:SfTabView>
+{% endhighlight %}
+
+{% highlight C# %}
+var tabView = new SfTabView();
+tabView = new SfTabView();
+tabView.TabWidthMode = TabWidthMode.SizeToContent;
+tabView.TabHeaderPadding = new Thickness(5, 10, 5, 10);
+{% endhighlight %}
+
+{% endtabs %}
+
+![Image Text Spacing](images/TabViewHeaderItem_Padding.png)
