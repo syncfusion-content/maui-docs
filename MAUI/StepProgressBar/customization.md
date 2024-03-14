@@ -190,34 +190,6 @@ public MainPage()
 {% endhighlight %}
 {% endtabs %}
 
-## Label spacing
-You can customize the space between the step and primary or secondary text of the step progress bar by using the [LabelSpacing]() property in `SfStepProgressBar`.
-
-{% tabs %}
-{% highlight xaml hl_lines="2" %}
-
-<progressBar:SfStepProgressBar x:Name = "stepProgressBar" 
-                        LabelSpacing="10">
-</progressBar:SfStepProgressBar>
-
-{% endhighlight %}
-
-{% highlight c# %}
-
-public MainPage()
-{
-    InitializeComponent();
-    SfStepProgressBar sfstepProgressbar = new SfStepProgressBar()
-    {
-         LabelSpacing = 10,
-    };
-          
-    this.Content = sfstepProgressbar;
-}
-
-{% endhighlight %}
-{% endtabs %}
-
 ## Customize step appearance
 You can customize the appearance of the steps by using the [ShapeType](), [Background](), [ContentType](), [ContentFillColor](), [ProgressColor](), [Stroke](), and [TextStyle] properties from the InProgressStepSettings for the in-progress state, CompletedStepSettings for the completed state, and NotStartedStepSettings for the not-started state. 
 
