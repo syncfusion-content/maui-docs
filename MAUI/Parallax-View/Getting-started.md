@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Getting Started with .NET MAUI Parallax View control | Syncfusion
-description: Learn here about getting started with Syncfusion .NET MAUI Parallax View (SfParallaxView) control, its elements and more.
-platform: .NET MAUI
+title: Getting started with .NET MAUI Parallax View control | Syncfusion
+description: Learn about getting started with Syncfusion .NET MAUI Parallax View (SfParallaxView) control and more.
+platform: MAUI
 control: SfParallaxView
 documentation: ug
 ---
@@ -35,15 +35,17 @@ This section explains the steps required to configure the [`SfParallaxView`]() c
 {% highlight C# %}
 
     using Syncfusion.Maui.ParallaxView;
-    namespace ParallaxView_GettingStarted
+    namespace ParallaxViewGettingStarted
     {
         public partial class MainPage : ContentPage
         {
             public MainPage()
             {
-                InitializeComponent();           
+                InitializeComponent();  
+                Grid grid = new Grid();         
                 SfParallaxView parallaxView = new SfParallaxView(); 
-                this.Content = parallaxView;
+                grid.Children.Add(parallaxView);
+                this.Content = grid;
             }
         }   
     }
@@ -54,18 +56,14 @@ This section explains the steps required to configure the [`SfParallaxView`]() c
 
 ## Register the handler
 
-Syncfusion.Maui.Core nuget is a dependent package for all Syncfusion controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion core.
+Syncfusion.Maui.Core Nuget is a dependent package for all Syncfusion controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion core.
 
 {% highlight C# %}
 
-    using Microsoft.Maui;
-    using Microsoft.Maui.Hosting;
-    using Microsoft.Maui.Controls.Compatibility;
-    using Microsoft.Maui.Controls.Hosting;
-    using Microsoft.Maui.Controls.Xaml;
+    using Microsoft.Extensions.Logging;
     using Syncfusion.Maui.Core.Hosting;
 
-    namespace ParallaxView_GettingStarted
+    namespace ParallaxViewGettingStarted
     {
         public static class MauiProgram
         {
@@ -92,7 +90,7 @@ Syncfusion.Maui.Core nuget is a dependent package for all Syncfusion controls of
 
 ### Content
 
-The [`Content`]() represents the background view of a parallax view. You can set any kind of view to the [`Content`]() property such as Image and StackLayout.
+The [`Content`]() represents the background view of a parallax view. Set any kind of view to the [`Content`]() property, such as Image and StackLayout.
 
 The following code sample demonstrates how to set the content property to the parallax view.
 
@@ -102,21 +100,21 @@ The following code sample demonstrates how to set the content property to the pa
 
    <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:ParallaxSample"
+             xmlns:local="clr-namespace:ParallaxViewGettingStarted"
              xmlns:parallax="clr-namespace:Syncfusion.Maui.ParallaxView;assembly=Syncfusion.Maui.ParallaxView"
-             x:Class="ParallaxView_GettingStarted.MainPage">
+             x:Class="ParallaxViewGettingStarted.MainPage">
       
-    <ContentPage.Content>
-        <Grid>            
-        <parallax:SfParallaxView x:Name="parallaxview">
-            <parallax:SfParallaxView.Content>
-                <Image Source="{Binding Image}" BackgroundColor="Transparent" HorizontalOptions="Fill" VerticalOptions="Fill" Aspect="AspectFill" />
-            </parallax:SfParallaxView.Content>
-        </parallax:SfParallaxView>       
-        </Grid>
-    </ContentPage.Content>
+        <ContentPage.Content>
+            <Grid>            
+            	<parallax:SfParallaxView x:Name="parallaxview">
+                	<parallax:SfParallaxView.Content>
+                    	<Image Source="{Binding Image}" BackgroundColor="Transparent" HorizontalOptions="Fill" VerticalOptions="Fill" Aspect="AspectFill" />
+                	</parallax:SfParallaxView.Content>
+            	</parallax:SfParallaxView>       
+            </Grid>
+        </ContentPage.Content>
 	
-    </ContentPage>
+   </ContentPage>
 
 {% endhighlight %}
 
@@ -124,7 +122,7 @@ The following code sample demonstrates how to set the content property to the pa
 
     using Syncfusion.Maui.ParallaxView;
 
-    namespace ParallaxView_GettingStarted
+    namespace ParallaxViewGettingStarted
     {
         public partial class MainPage : ContentPage
         {
@@ -141,7 +139,7 @@ The following code sample demonstrates how to set the content property to the pa
 
             public ParallaxViewModel()
             {
-                Image = ImageSource.FromResource("ParallaxView_GettingStarted.ParallaxGuitar1.png", typeof(MainPage).GetTypeInfo().Assembly);
+                Image = ImageSource.FromResource("ParallaxViewGettingStarted.parallax.jpg", typeof(MainPage).GetTypeInfo().Assembly);
             }
         }  
     }  
@@ -153,14 +151,14 @@ The following code sample demonstrates how to set the content property to the pa
 
 ### Source
 
-The [`Source`]() represents the foreground view of the parallax view. The value of [`Source`]() should be a scrollable content or the view which implements [IParallaxView]() interface.
+The [`Source`]() represents the foreground view of the parallax view. The value of the [`Source`]() should be a scrollable content or the view which implements the [IParallaxView]() interface.
 
-As of now, the [SfParallaxView]() supports the following controls directly. You can simply bind the control to the [`Source`]() property.
+Currently, the [SfParallaxView]() directly supports the following controls. Bind the control to the [`Source`]() property.
 
     1. ScrollView
-    2. ListView
+    2. Syncfusion ListView
 
-The following code sample demonstrates how to bind the ListView to the [`Source`]() property.
+The following code sample demonstrates how to bind the Syncfusion ListView to the [`Source`]() property.
 
 {% tabs %}
 
@@ -168,9 +166,10 @@ The following code sample demonstrates how to bind the ListView to the [`Source`
 
   <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:ParallaxSample"
+             xmlns:local="clr-namespace:ParallaxViewGettingStarted"
              xmlns:parallax="clr-namespace:Syncfusion.Maui.ParallaxView;assembly=Syncfusion.Maui.ParallaxView"
-             x:Class="ParallaxView_GettingStarted.MainPage">
+             xmlns:list="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView"
+             x:Class="ParallaxViewGettingStarted.MainPage">
       
     <ContentPage.Content>
         <Grid>
@@ -180,26 +179,31 @@ The following code sample demonstrates how to bind the ListView to the [`Source`
                 </parallax:SfParallaxView.Content>
             </parallax:SfParallaxView>
      
-            <ListView x:Name="listview" ItemsSource="{Binding Items}" BackgroundColor="Transparent" ItemSize="100">
-                <ListView.ItemTemplate>
+            <list:SfListView x:Name="listview" ItemsSource="{Binding Items}" BackgroundColor="Transparent" ItemSize="100">
+                <list:SfListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <Grid Padding="20,0,20,0" RowSpacing="50">
-                                <StackLayout BackgroundColor="Transparent" Grid.Column="1" Padding="0,0,0,0" VerticalOptions="CenterAndExpand" HorizontalOptions="StartAndExpand" Orientation="Vertical">
-                                    <Label HorizontalOptions="Start" TextColor="White" Text="{Binding Name}" Font="25">
-                                    </Label>
-                                    <Label HorizontalOptions="Start" Text="{Binding Author}" TextColor="White">
-                                    </Label>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="0.5*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <Image BackgroundColor="Transparent" HeightRequest="90" HorizontalOptions="CenterAndExpand" 
+                                    WidthRequest="90" Source="{Binding ItemImage}" Grid.Column="0" VerticalOptions="CenterAndExpand" Aspect="AspectFit" />
+                                <StackLayout BackgroundColor="Transparent" Grid.Column="1" VerticalOptions="CenterAndExpand" 
+                                    HorizontalOptions="FillAndExpand" Orientation="Vertical">
+                                    <Label HorizontalOptions="FillAndExpand" TextColor="White" Text="{Binding Name}"/>
+                                    <Label HorizontalOptions="FillAndExpand" Text="{Binding Author}" TextColor="White"/>
                                 </StackLayout>
                             </Grid>
                         </ViewCell>
                     </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
+                </list:SfListView.ItemTemplate>
+            </list:SfListView>
         </Grid>
     </ContentPage.Content>
 	
-    </ContentPage>
+  </ContentPage>
 
 {% endhighlight %}
 
@@ -221,7 +225,8 @@ The following code sample demonstrates how to bind the ListView to the [`Source`
         public ObservableCollection<Contacts> Items { get; set; }
         public ParallaxViewModel()
         {
-            Image = ImageSource.FromResource("ParallaxView_GettingStarted.ParallaxGuitar1.png", typeof(MainPage).GetTypeInfo().Assembly);
+            Assembly assembly = typeof(ParallaxViewModel).GetTypeInfo().Assembly;
+            Image = ImageSource.FromResource("ParallaxViewGettingStarted.parallax.jpg", assembly);
             Items = new ObservableCollection<Contacts>()
             {
                 new Contacts() { Name = "Thriller", Author = "Michael Jackson" },
@@ -243,6 +248,11 @@ The following code sample demonstrates how to bind the ListView to the [`Source`
                 new Contacts() { Name = "Rolling in the Deep", Author = "Adele" },
                 new Contacts() { Name = "Don’t Stop Believing", Author = "Journey"},
             };
+
+            for (int i = 0; i < Items.Count; i++)
+            {
+                Items[i].ItemImage = ImageSource.FromResource("ParallaxViewGettingStarted.parallax" + i + ".png", assembly);
+            }
         }
     }
 
@@ -258,6 +268,12 @@ The following code sample demonstrates how to bind the ListView to the [`Source`
             get;
             set;
         }
+
+        public ImageSource ItemImage
+        {       
+            get;
+            set;
+        }
     }
 
 {% endhighlight %}
@@ -269,3 +285,5 @@ N> The size of the [`Content`]() view will automatically be stretched to the siz
 ![Output of Parallax View](ParallaxView_Images/maui_parallaxview.gif)
 
 You can find the complete getting started sample from this link: [Sample]()
+
+N> In Android, when an image's pixel size cannot stretch to fit the Parallax View Source control during loading, it results in a Java.Lang.RuntimeException. It is necessary to use the image as Parallax View Content without pixelation.

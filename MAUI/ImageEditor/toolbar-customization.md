@@ -621,3 +621,28 @@ The default toolbar item action can be restricted by setting the `e.cancel` to `
 {% endhighlight %}
 
 {% endtabs %}
+
+## Show or hide the tooltip
+
+To show or hide the tooltip, set the [`ShowTooltip`] property to either true or false. By default, the [`ShowTooltip`] property is set to `true`.
+
+{% tabs %}
+
+{% highlight C# %}
+
+SfImageEditor imageEditor = new SfImageEditor();
+imageEditor.Source = ImageSource.FromFile("image.png");
+
+ImageEditorToolbar headerToolbar = imageEditor.Toolbars[0];
+if (headerToolbar.ToolbarItems.FirstOrDefault() is ImageEditorToolbarGroupItem browseGroup)
+{
+    ImageEditorToolbarItem? browseItem = browseGroup.Items.FirstOrDefault();
+    if (browseItem != null)
+    {
+        browseItem.ShowTooltip = false;
+    }
+}
+
+{% endhighlight %}
+
+{% endtabs %}
