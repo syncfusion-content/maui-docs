@@ -86,7 +86,7 @@ The Swiping can be customized by using the `SfChat.StartSwipeTemplate` when swip
 
 {% endhighlight %}
 
-{% highlight c# hl_lines="17 53" %}
+{% highlight c# hl_lines="17 52" %}
 using Syncfusion.Maui.Chat;
 namespace GettingStarted
 {
