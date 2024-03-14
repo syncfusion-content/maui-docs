@@ -956,7 +956,7 @@ treeMap.DataSource = viewModel.PopulationDetails;
 treeMap.PrimaryValuePath = "Population";
 treeMap.RangeColorValuePath = "Population";
 treeMap.LeafItemSettings = new TreeMapLeafItemSettings() { LabelPath = "Country" };
-this.treeMap.LeafItemBrushSettings = new TreeMapPaletteBrushSettings()
+treeMap.LeafItemBrushSettings = new TreeMapPaletteBrushSettings()
 {
     Brushes = new List<Brush>()
     {
@@ -1095,7 +1095,7 @@ treeMap.DataSource = viewModel.PopulationDetails;
 treeMap.PrimaryValuePath = "Population";
 treeMap.RangeColorValuePath = "Population";
 treeMap.LeafItemSettings = new TreeMapLeafItemSettings() { LabelPath = "Country" };
-this.treeMap.LeafItemBrushSettings = new TreeMapRangeBrushSettings()
+treeMap.LeafItemBrushSettings = new TreeMapRangeBrushSettings()
 {
     RangeBrushes = new List<TreeMapRangeBrush>()
     {
