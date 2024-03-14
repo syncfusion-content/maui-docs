@@ -184,4 +184,56 @@ The following table contains the default name and value details used in the SfPd
 <td>AddFreeTextToastMessage</td>
 <td>Tap on the page to add the free text annotation</td>
 </tr>
+<tr>
+<td>Draw your signature</td>
+<td>Draw your signature</td>
+</tr>
+<tr>
+<td>Color</td>
+<td>Color</td>
+</tr>
+<tr>
+<td>Clear</td>
+<td>Clear</td>
+</tr>
+<tr>
+<td>Add Signature</td>
+<td>Add Signature</td>
+</tr>
+<tr>
+<td>Draw</td>
+<td>Draw</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>Type</td>
+</tr>
+<tr>
+<td>Upload</td>
+<td>Upload</td>
+</tr>
+<tr>
+<td>Type your signature</td>
+<td>Type your signature</td>
+</tr>
+<tr>
+<td>Signature</td>
+<td>Signature</td>
+</tr>
+<tr>
+<td>Create</td>
+<td>Create</td>
+</tr>
+<tr>
+<td>Insert</td>
+<td>Insert</td>
+</tr>
+<tr>
+<td>Upload an image</td>
+<td>Upload an image</td>
+</tr>
+<tr>
+<td>Drag and drop an image here</td>
+<td>Drag and drop an image here</td>
+</tr>
 </table>

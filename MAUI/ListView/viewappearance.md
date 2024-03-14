@@ -571,7 +571,7 @@ public partial class MainPage : ContentPage
 
 {% tabs %}
 {% highlight c# tabtitle="ItemGeneratorExt.cs" %}
-public class ItemGeneratorExt : ItemGenerator
+public class ItemGeneratorExt : ItemsGenerator
 {
     public SfListView listView;
 	
@@ -608,7 +608,7 @@ public class HeaderItemExt : HeaderItem
 
     public HeaderItemExt(SfListView listView)
     {
-        this.listView = listView
+        this.listView = listView;
     }
 
     protected override void OnItemAppearing()
@@ -630,7 +630,7 @@ public class FooterItemExt : FooterItem
 
     public FooterItemExt(SfListView listView)
     {
-        this.listView = listView
+        this.listView = listView;
     }
 
     protected override void OnItemAppearing()
@@ -652,7 +652,7 @@ public class GroupHeaderItemExt : GroupHeaderItem
 
     public GroupHeaderItemExt(SfListView listView)
     {
-        this.listView = listView
+        this.listView = listView;
     }
 
     protected override void OnItemAppearing()
@@ -674,7 +674,7 @@ public class LoadMoreItemExt : LoadMoreItem
 
     public LoadMoreItemExt(SfListView listView)
     {
-        this.listView = listView
+        this.listView = listView;
     }
 
     protected override void OnItemAppearing()
@@ -696,7 +696,7 @@ public class ListViewItemExt : ListViewItem
 
     public ListViewItemExt(SfListView listView)
     {
-        this.listView = listView
+        this.listView = listView;
     }
 
     protected override void OnItemAppearing()

@@ -25,7 +25,7 @@ SfChart
 <div> SfCircularChart </div>
 <div> SfFunnelChart</div>
 <div> SfPyramidChart </div>
-<div> SfPolarChart (<em>Upcoming</em>) </div>
+<div> SfPolarChart </div>
 </td>
 </tr>
 </table>
@@ -407,38 +407,6 @@ this.Content = chart;
 <tr>
 <td>Title</td>
 <td><em>Upcoming</em> </td>
-</tr>
-<tr>
-<td>Series</td>
-<td><em>Upcoming</em> </td>
-</tr>
-<tr>
-<td>BackgroundColor</td>
-<td><em>Upcoming</em> </td>
-</tr>
-<tr>
-<td>StrokeColor</td>
-<td><em>Upcoming</em> </td>
-</tr>
-<tr>
-<td>StrokeWidth</td>
-<td><em>Upcoming</em> </td>
-</tr>
-<tr>
-<td>StrokeDashArray</td>
-<td><em>Upcoming</em> </td>
-</tr>
-<tr>
-<td>CornerRadius</td>
-<td><em>Upcoming</em></td>
-</tr>
-<tr>
-<td>Margin</td>
-<td><em>Upcoming</em></td>
-</tr>
-<tr>
-<td>LabelStyle</td>
-<td><em>Upcoming</em></td>
 </tr>
 <tr>
 <td>OverflowMode</td>
@@ -886,8 +854,6 @@ chart.ZoomPanBehavior = zooming;
 
 **Chart** 
  
-* Support for crosshair interactions. 
-* Support for chart localization. 
 * Support for annotations. 
 * Suspend and resume notification support. 
 * Technical indicators for charts.
@@ -895,7 +861,6 @@ chart.ZoomPanBehavior = zooming;
 **Series**
 
 * Listen to property change support for series.
-* Get data point index based on value.
 * Get data points by passing rect.
 * Notify event or method when series are rendering.
 * Suspend and resume notification.
@@ -909,7 +874,6 @@ chart.ZoomPanBehavior = zooming;
 * Event or method to notify the axis label click.
 * Axis label wrapping support.
 * Support for axis draw labels as multiple lines using /n.
-* Striplines for range base axis.
 * Support setting the maximum labels count for the chart axis.
 
 **Legend** 
@@ -918,17 +882,11 @@ chart.ZoomPanBehavior = zooming;
 * Support to enable or disable the legend icon visibility.
 * Legend items wrap and floating support.
 * Maximum width support for Legend.
-* Individual legend items based on the data point count.
 * Event or method to notify the legend click and the creation of a legend item.
 
 **Data label**
 
-* DataTemplate support for data labels.
 * Connector lines and its customization support.
-
-**Selection**
-
-* Cluster selection support.
 
 **Zooming**
 

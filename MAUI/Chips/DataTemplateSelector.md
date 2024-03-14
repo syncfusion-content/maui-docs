@@ -2,7 +2,7 @@
 layout: post
 title: DataTemplateSelector in .NET MAUI Chips control | Syncfusion
 description: Learn about DataTemplateSelector support in Syncfusion .NET MAUI Chips control, its elements and more.
-platform: .NET MAUI
+platform: maui
 control: Chips
 documentation: ug
 ---
