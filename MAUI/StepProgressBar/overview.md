@@ -13,22 +13,24 @@ Syncfusion .NET MAUI Step ProgressBar (SfStepProgressBar) control allows you to 
 
 ## Key features
 
-* **Orientation**: The Step ProgressBar allows you to change the orientation to `horizontal` or `vertical` direction.
+* `Orientation` : The Step ProgressBar allows you to change the orientation to `horizontal` or `vertical` direction.
 
-* **Progress indication status**: Supports three statuses of progress indications: Completed, In Progress, and Not Started.
+* `Progress indication status` : Supports three statuses of progress indications: Completed, In Progress, and Not Started.
 
-* **Status representation**: To display information about a step's status using Primary and Secondary text.
+* `Status representation` : To display information about a step's status using Primary and Secondary text.
 
-* **Formatted text**: Primary and Secondary formatted text used to Customize the description.
+* `Formatted text` : Primary and Secondary formatted text used to Customize the description.
 
-* **Label positioning**: You can change the label position to Start, End, Top, or Bottom.
+* `Label positioning` : You can change the label position to Start, End, Top, or Bottom.
 
-* **Change active step status**: Allows initializing the active step index and progress value.
+* `Change active step status` : Allows initializing the active step index and progress value.
 
-* **Content types**: You can add different content types such as Tick, Cross, Dot, or None, with customizations.
+* `Content types` : You can add different content types such as Tick, Cross, Dot, or None, with customizations.
 
-* **Shape customization**: Customize the step progress bar shape type to Circle or Square.
+* `Shape customization` : Customize the step progress bar shape type to Circle or Square.
 
-* **Image support**: You can represent the step progress bar status with images inside the step.
+* `Image support` : You can represent the step progress bar status with images inside the step.
 
-* **Customization**: Supports customization of the step progress bar background color, step size, content size, animations, and more.
+* `Customization` : Supports customization of the step progress bar background color, step size, content size, animations, and more.
+
+![Overview of .NET MAUI StepProgressBar](images/overview/maui-stepprogressbar-overview.gif)
