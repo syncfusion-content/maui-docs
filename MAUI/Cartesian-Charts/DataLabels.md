@@ -205,9 +205,9 @@ The [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chart
 <chart:SfCartesianChart IsTransposed="True" >
     <chart:SfCartesianChart.Resources>
         <DataTemplate x:Key="labelTemplate">
-            <HorizontalStackLayout Spacing="5">
-                <Label Text="{Binding Item.Values}" VerticalOptions="Center" FontSize = "15"/>
+            <HorizontalStackLayout Spacing="5" WidthRequest="100">
                 <Image Source="arrow.png" WidthRequest="15" HeightRequest="15"/>
+                <Label Text="{Binding Item.Values}" VerticalOptions="Center" FontSize = "15"/>               
             </HorizontalStackLayout>
         </DataTemplate>
     </chart:SfCartesianChart.Resources>
@@ -216,7 +216,13 @@ The [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chart
                         LabelTemplate="{StaticResource labelTemplate}"
                         XBindingPath="Name"
                         YBindingPath="Values" 
-                        ShowDataLabels="True"/>
+                        ShowDataLabels="True">
+
+        <chart:ColumnSeries.DataLabelSettings>
+            <chart:CartesianDataLabelSettings LabelPlacement="Outer"/>
+        </chart:ColumnSeries.DataLabelSettings>
+
+    </chart:ColumnSeries>
 
 </chart:SfCartesianChart>
 
@@ -232,17 +238,21 @@ series.ShowDataLabels = true;
 series.ItemsSource = new ViewModel().Data;
 series.XBindingPath = "Name";
 series.YBindingPath = "Values";
+series.DataLabelSettings = new CartesianDataLabelSettings()
+{
+    LabelPlacement = DataLabelPlacement.Outer
+};
 
 DataTemplate labelTemplate = new DataTemplate(() =>
 {
-    HorizontalStackLayout horizontalStackLayout = new HorizontalStackLayout { Spacing = 5 };
+    HorizontalStackLayout horizontalStackLayout = new HorizontalStackLayout { Spacing = 5, WidthRequest=50 };
 
     var label = new Label
     {
         VerticalOptions = LayoutOptions.Center,
         FontSize = 15
     };
-    label.SetBinding(Label.TextProperty, new Binding("Item.Values"));
+    label.SetBinding(Label.TextProperty, "Item.Values");
 
     var image = new Image
     {
@@ -251,8 +261,8 @@ DataTemplate labelTemplate = new DataTemplate(() =>
         HeightRequest = 15
     };
     
-    horizontalStackLayout.Children.Add(label);
     horizontalStackLayout.Children.Add(image);
+    horizontalStackLayout.Children.Add(label);
     
     return horizontalStackLayout;
 });
