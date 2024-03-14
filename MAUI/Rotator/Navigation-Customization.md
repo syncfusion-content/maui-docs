@@ -189,7 +189,7 @@ rotator.NavigationButtonIconColor = Colors.Blue;
 {% endhighlight %}
 {% endtabs %}
 
-![SfRotator with navigation button's icon Color](images/NavigationButtonIconColor.png)
+![SfRotator with navigation button icon Color](images/NavigationButtonIconColor.png)
 
 ### Navigation Button Background Color
 
@@ -218,7 +218,7 @@ rotator.NavigationButtonIconColor = Colors.Blue;
 {% endhighlight %}
 {% endtabs %}
 
-![SfRotator with navigation button's Background Color](images/NavigationButtonBackgroundColor.png)
+![SfRotator with navigation button Background Color](images/NavigationButtonBackgroundColor.png)
 
 ## Navigation Visibility
 
