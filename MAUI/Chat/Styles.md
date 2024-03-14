@@ -1026,7 +1026,7 @@ You can style the elements of the suggestion view by setting values to the in-bu
                 <ResourceDictionary>
                     <x:String x:Key="SfChatTheme">CustomTheme</x:String>
                     <Color x:Key="SfChatSuggestionListItemTextColor">Blue</Color>
-                    <Color x:Key="SfChatSuggestionListItemBackground">Gray</Color>
+                    <Color x:Key="SfChatSuggestionListItemBackground">#d9d9d9</Color>
                     <Color x:Key="SfChatSuggestionListBackground">Violet</Color>
                     <x:String x:Key="SfChatSuggestionListItemFontFamily">Roboto-Medium</x:String>
                     <FontAttributes x:Key="SfChatSuggestionListItemFontAttributes">Bold</FontAttributes>
@@ -1047,7 +1047,7 @@ You can style the elements of the suggestion view by setting values to the in-bu
         dictionary.Add("SfChatTheme", "CustomTheme");
         dictionary.Add("SfChatSuggestionListItemTextColor", Colors.Blue);
         dictionary.Add("SfChatSuggestionListBackground", Colors.Violet);
-        dictionary.Add("SfChatSuggestionListItemBackground", Colors.Gray);
+        dictionary.Add("SfChatSuggestionListItemBackground", Color.FromHex("#d9d9d9"));
         dictionary.Add("SfChatSuggestionListItemFontFamily", "Roboto-Medium");
         dictionary.Add("SfChatSuggestionListItemFontAttributes", FontAttributes.Italic);
         dictionary.Add("SfChatSuggestionListItemFontSize", 16);
