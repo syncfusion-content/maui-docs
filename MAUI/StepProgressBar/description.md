@@ -11,9 +11,9 @@ documentation: ug
 Each step in a multi-step process has a different operation. To display information about a step's status can be shown on either side. A primary description will be on the right or bottom of the step, and a secondary description will be on the left or top of the step.
 
 ## Text 
-The primary and secondary description for a step view can be set using the [PrimaryText]() and [SecondaryText]() properties as demonstrated in the following code example.
+The primary and secondary descriptions for a step view can be set using the [PrimaryText]() and [SecondaryText]() properties, as demonstrated in the following code example.
 
-* Create a simple Observable Collection of item for the step progressbar,
+* Create a simple Observable Collection of item for the step progressbar.
 
 {% tabs %}
 {% highlight c# tabtitle="ViewModel.cs" hl_lines="26 27 28 29 30" %}
@@ -95,7 +95,7 @@ this.Content = stepProgressBar;
 {% endtabs %}
 
 ## Formatted text
-To customize the description with different formatting style, [PrimaryFormattedText]() and [SecondaryFormattedText]() can be used. The following code example explains how to set `PrimaryFormattedText` and `SecondaryFormattedText` to a step view.
+[PrimaryFormattedText]() and [SecondaryFormattedText]() can be used to customize the description with different formatting style. The following code example explains how to set `PrimaryFormattedText` and `SecondaryFormattedText` to a step view.
 
 * Create a simple Observable Collection of item for the step progressbar,
 
@@ -160,7 +160,7 @@ public class ViewModel
 {% endhighlight %}
 {% endtabs %}
 
-* Bind the Collection to step progressbar
+* Bind the Collection to step progressbar.
 
 The Step progressbar control allows you to bind item collection by setting the [ItemsSource]() property from the [SfStepProgressBar](). Bind item collection in both XAML and C#.
 
@@ -202,7 +202,7 @@ this.Content = stepProgressBar;
 {% endhighlight %}
 {% endtabs %}
 
-N> If both `PrimaryText` and `PrimaryFormattedText` are provided, then `PrimaryFormattedText` will be displayed. This precedence as same as for the `SecondaryText` and `SecondaryFormattedText`.
+N> If both `PrimaryText` and `PrimaryFormattedText` are provided, then `PrimaryFormattedText` will be displayed. This precedence is same as for the `SecondaryText` and `SecondaryFormattedText`.
 
 ## Customize description
 Using [LabelPosition]() and [LabelSpacing]() property, the description alignment and space between the description and step can be customized, respectively. The following code example explains how to customize the LabelPosition and LabelSpacing properties.
@@ -239,7 +239,7 @@ this.Content = stepProgressBar;
 
 ## StepProgressBar Image Customization
 
-The [StepProgressBar]() control provides support for adding images as the content of the step. You can add the images by giving image path and with font icons.
+The [StepProgressBar]() control provides support for adding images as the content of the step. You can add the images by giving an image path and font icons.
 
 ### Customization using Image
 
@@ -247,7 +247,7 @@ You can add the images by giving image path to the [ImageSource]() property in `
 
 #### Initialize view model
 
-* Create a simple Observable Collection of item with image source for the step progressbar,
+* Create a simple Observable Collection of item with image source for the step progressbar.
 
 {% tabs %}
 {% highlight c# tabtitle="ViewModel.cs" %}
@@ -277,17 +277,17 @@ You can add the images by giving image path to the [ImageSource]() property in `
     public ViewModel()
     {
         stepProgressItem = new ObservableCollection<StepProgressBarItem>();
-        stepProgressItem.Add(new StepProgressBarItem() { PrimaryText = "Enter Email", ImageSource = "email.png" });
-        stepProgressItem.Add(new StepProgressBarItem() { PrimaryText = "Create Password", ImageSource = "password.png" });
-        stepProgressItem.Add(new StepProgressBarItem() { PrimaryText = "Verify Email", ImageSource = "verified.png" });
-        stepProgressItem.Add(new StepProgressBarItem() { PrimaryText = "Complete Profile", ImageSource = "profile.png" });
+        stepProgressItem.Add(new StepProgressBarItem() { ImageSource = "ordered.png" });
+        stepProgressItem.Add(new StepProgressBarItem() { ImageSource = "transport.png" });
+        stepProgressItem.Add(new StepProgressBarItem() { ImageSource = "payment.png" });
+        stepProgressItem.Add(new StepProgressBarItem() { ImageSource = "delivered.png" });
     }
  }
 
 {% endhighlight %}
 {% endtabs %}
 
-* Bind the Collection to step progressbar
+* Bind the Collection to step progressbar.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="8" %}
@@ -335,7 +335,7 @@ You can add the images with font icons to the [ImageSource]() property in `SfSte
 
 #### Initialize view model
 
-* Create a simple Observable Collection of item with font icons for the step progressbar,
+* Create a simple Observable Collection of item with font icons for the step progressbar.
 
 {% tabs %}
 {% highlight c# tabtitle="ViewModel.cs" hl_lines="26 27 28" %}
@@ -374,7 +374,7 @@ You can add the images with font icons to the [ImageSource]() property in `SfSte
 {% endhighlight %}
 {% endtabs %}
 
-* Bind the Collection to step progressbar
+* Bind the Collection to step progressbar.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="8" %}
