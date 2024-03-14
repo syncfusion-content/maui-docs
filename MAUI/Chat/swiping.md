@@ -13,7 +13,7 @@ In `SfChat`, you can enable swiping by setting the `AllowSwiping` property to `t
 
 ### Swipe templates
 
-The Swiping can be customized by using the `StartSwipeTemplate` when swiping towards the `right` and `EndSwipeTemplate` when swiping towards the `left`. The content inside the swipe template is arranged based on the offset values when swiping a message.
+The Swiping can be customized by using the `StartSwipeTemplate` when swiping towards the right and `EndSwipeTemplate` when swiping towards the left. The content inside the swipe template is arranged based on the offset values when swiping a message.
 
 {% tabs %}
 {% highlight xaml hl_lines="17 40" %}
@@ -181,7 +181,7 @@ namespace GettingStarted
 {% endhighlight %}
 {% endtabs %}
 
-![End swipe template in .NET MAUI Chat](images/swiping/maui-chat-start-and-end-swipe-template.png)
+![Swipe views in .NET MAUI Chat](images/swiping/maui-chat-start-and-end-swipe-template.png)
 
 ### Swipe Events
 
