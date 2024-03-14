@@ -218,7 +218,7 @@ The [StrokeDashArray](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts
 
 ## Enable Marker
 
-A marker, also known as a symbol, is used to determine or highlight the position of the data point. To enable markers in the series, set the [ShowMarkers](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.StackingLineSeries.html#Syncfusion_Maui_Charts_StackingLineSeries_ShowMarkers) property to true.
+A marker, also known as a symbol, is used to determine or highlight the position of the data point. To enable markers in the series, set the [ShowMarkers](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.StackingLineSeries.html#Syncfusion_Maui_Charts_StackingLineSeries_ShowMarkers) property to `true`.
 
 {% tabs %}
 
