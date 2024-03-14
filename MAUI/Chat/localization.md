@@ -66,3 +66,4 @@ To localize the `Chat` based on the `CurrentUICulture` using the `resource` file
 
    ![Chat with localized content](images/localization/maui-chat-with-localized-content.png)
 
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/localization-for-.net-maui-chat)
