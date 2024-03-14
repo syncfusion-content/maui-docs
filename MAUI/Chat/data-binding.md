@@ -111,7 +111,7 @@ Create the below collection of objects that must be converted to message collect
 Now, bind the existing collection of data objects to the `SfChat.ItemsSource` property, in our case it is `viewModel.MessageCollection`. 
 
 {% tabs %}
-{% highlight xaml hl_lines="22 23" %}
+{% highlight xaml hl_lines="21 22" %}
     
     <?xml version="1.0" encoding="utf-8" ?>
     <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
@@ -139,7 +139,7 @@ Now, bind the existing collection of data objects to the `SfChat.ItemsSource` pr
     </ContentPage>
 
 {% endhighlight %}
-{% highlight c# hl_lines="19 20" %}
+{% highlight c# hl_lines="18 19" %}
     
     using MauiChat.ViewModel;
     using Syncfusion.Maui.Chat;

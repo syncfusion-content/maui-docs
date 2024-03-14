@@ -13,11 +13,11 @@ documentation: ug
 
 <table>
 <tr>
-<td>`Message.Author`</td>
-<td>Specify the avatar and name of the message sender using the `Author.Avatar` and `Author.Name` properties, respectively.</td>
+<td>{{'Message.Author'| markdownify }}</td>
+<td>Specify the avatar and name of the message sender using {{'Author.Avatar'| markdownify }} and {{'Author.Name'| markdownify }} properties respectively.</td>
 </tr>
 <tr>
-<td>`Message.DateTime`</td>
+<td>{{'Message.DateTime'| markdownify }}</td>
 <td>To display message created or received time.</td>
 </tr>
 </table>
@@ -27,7 +27,7 @@ documentation: ug
 The `SfChat.CurrentUser` helps differentiate between the sender and receiver of the messages. On any given chat window, the `SfChat.CurrentUser` is meant to be the sender (author of outgoing messages). Refer to the below code example to set up a current user in a chat.
 
 {% tabs %}
-{% highlight xaml hl_lines="16" %}
+{% highlight xaml hl_lines="15" %}
     
     <?xml version="1.0" encoding="utf-8" ?>
     <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
@@ -48,7 +48,7 @@ The `SfChat.CurrentUser` helps differentiate between the sender and receiver of 
     </ContentPage>
 
 {% endhighlight %}
-{% highlight c# hl_lines="16" %}
+{% highlight c# hl_lines="15" %}
 
     using Syncfusion.Maui.Chat;
 
@@ -188,7 +188,7 @@ The `SfChat.CurrentUser` helps differentiate between the sender and receiver of 
 {% endtabs %}
 
 {% tabs %}
-{% highlight c# tabtitle="ViewModel.cs" %}
+{% highlight c# tabtitle="ViewModel.cs" hl_lines="6" %}
     
         public class ViewModel : INotifyPropertyChanged
         {
@@ -283,7 +283,7 @@ The `SfChat.CurrentUser` helps differentiate between the sender and receiver of 
 {% endtabs %}
 
 {% tabs %}
-{% highlight c# tabtitle="ViewModel.cs" %}
+{% highlight c# tabtitle="ViewModel.cs" hl_lines="12" %}
 
     public class ViewModel : INotifyPropertyChanged
     {
@@ -295,6 +295,7 @@ The `SfChat.CurrentUser` helps differentiate between the sender and receiver of 
                 Author = CurrentUser,
                 Text = "Flight to USA",
             });
+
             this.Messages.Add(new DatePickerMessage()
             {
                 Author = new Author() { Name = "Travel Bot",Avatar = "flight.png" },
@@ -370,7 +371,7 @@ The `SfChat.CurrentUser` helps differentiate between the sender and receiver of 
 {% endtabs %}
  
 {% tabs %}
-{% highlight c# tabtitle="ViewModel.cs" %}
+{% highlight c# tabtitle="ViewModel.cs" hl_lines="12" %}
 
     public class ViewModel : INotifyPropertyChanged
     {
@@ -457,7 +458,7 @@ The `SfChat.CurrentUser` helps differentiate between the sender and receiver of 
 {% endtabs %}
  
 {% tabs %}
-{% highlight c# tabtitle="ViewModel.cs" %}          
+{% highlight c# tabtitle="ViewModel.cs" hl_lines="12" %}          
 
     public class ViewModel : INotifyPropertyChanged
     {
@@ -536,7 +537,7 @@ The `SfChat.CurrentUser` helps differentiate between the sender and receiver of 
 {% endtabs %}
  
 {% tabs %}
-{% highlight c# tabtitle="ViewModel.cs" %}
+{% highlight c# tabtitle="ViewModel.cs" hl_lines="18" %}
 
     public class ViewModel : INotifyPropertyChanged
     {
@@ -548,6 +549,7 @@ The `SfChat.CurrentUser` helps differentiate between the sender and receiver of 
                 Author = new Author() { Name = "Michale", Avatar = "peoplecircle23.png" },
                 Text = "We should develop this app in .NET Maui, since it provides native experience and performance.",
             });
+
             this.Messages.Add(new TextMessage()
             {
                 Author = CurrentUser,
@@ -630,7 +632,8 @@ The `SfChat.CurrentUser` helps differentiate between the sender and receiver of 
 {% endtabs %}
  
 {% tabs %}
-{% highlight c# tabtitle="ViewModel.cs" %}
+{% highlight c# tabtitle="ViewModel.cs" hl_lines="13" %}
+
     public class ViewModel : INotifyPropertyChanged
     {
         ...
@@ -642,6 +645,7 @@ The `SfChat.CurrentUser` helps differentiate between the sender and receiver of 
                 Text = "I was delighted to buy some sports cars, can you suggest some cars",
                 DateTime = DateTime.Now,
             });
+
             this.Messages.Add(new ImageMessage()
             {
                 Author = currentUser,
@@ -672,7 +676,7 @@ The `ImageMessage` comes with in-built SfChat.ImageTapped event and `SfChat.Imag
 ## ImageTapped event
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="17" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="16" %}
     
     <?xml version="1.0" encoding="utf-8" ?>
     <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
@@ -711,7 +715,7 @@ The `ImageMessage` comes with in-built SfChat.ImageTapped event and `SfChat.Imag
 ## ImageTappedCommand
 
 {% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="17" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="16" %}
 
     <?xml version="1.0" encoding="utf-8" ?>
     <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
@@ -822,7 +826,8 @@ If you don’t want to display images, buttons, or text(title, subtitle, descrip
 {% endtabs %}
  
 {% tabs %}
-{% highlight c# tabtitle="ViewModel.cs" %}
+{% highlight c# tabtitle="ViewModel.cs" hl_lines="54" %}
+
     public class ViewModel : INotifyPropertyChanged
     {
         ...
@@ -898,11 +903,12 @@ If you don’t want to display images, buttons, or text(title, subtitle, descrip
 
 The `CardMessage` comes with a built-in `SfChat.CardTapped` event and `SfChat.CardCommand` that will be fired upon tapping a button in a card or tapping any card in the message. You can get the selected Card, the clicked CardButton and the actual `CardMessage` via the `CardTappedEventArgs` as `CardTappedEventArgs.Card`, `CardTappedEventArgs.Action` and `CardTappedEventArgs.Message` respectively, in both the `CardTapped` event handler and action of `CardCommand`. Handling this event/command by setting `CardTappedEventArgs.Handled` prevents the `Card.Title` or `CardButton.Value` from getting added as a new message.
 
-N> The Action argument in `CardTappedEventArgs` holds a valid value only when clicking the CardButton in a card. Tapping elsewhere inside the card fires the `CardTapped` event and `CardCommand` with Action as null in the `CardTappedEventArgs`. If the `CardTappedEventArgs.Action` is null, the `CardTappedEventArgs.Card.Title` is added as a new message, else the `CardTappedEventArgs.Action.Value` is added as a new message.
+N>
+The Action argument in `CardTappedEventArgs` holds a valid value only when clicking the CardButton in a card. Tapping elsewhere inside the card fires the `CardTapped` event and `CardCommand` with Action as null in the `CardTappedEventArgs`. If the `CardTappedEventArgs.Action` is null, the `CardTappedEventArgs.Card.Title` is added as a new message, else the `CardTappedEventArgs.Action.Value` is added as a new message.
 
 **Card Tapped Event**
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="17" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="16" %}
     
     <?xml version="1.0" encoding="utf-8" ?>
     <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
@@ -936,7 +942,7 @@ N> The Action argument in `CardTappedEventArgs` holds a valid value only when cl
 
 **Card Command**
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="17" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="16" %}
     
     <?xml version="1.0" encoding="utf-8" ?>
     <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
@@ -988,7 +994,7 @@ N> The Action argument in `CardTappedEventArgs` holds a valid value only when cl
 We have loaded a custom template if the message's text contains a particular text value in the below code example.
 
 {% tabs %}
-{% highlight c# tabtitle="TemplateSelector.cs" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="16" %}
 
     using Syncfusion.Maui.Chat;
 
@@ -1009,7 +1015,13 @@ We have loaded a custom template if the message's text contains a particular tex
                 this.Content = sfChat;
             }       
         }
-    }
+    }  
+
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight c# tabtitle="TemplateSelector.cs" %}
 
     public class ChatMessageTemplateSelector : DataTemplateSelector
     {
@@ -1059,7 +1071,6 @@ We have loaded a custom template if the message's text contains a particular tex
             }
         }
     }
-
 {% endhighlight %}
 {% endtabs %}
 
@@ -1068,10 +1079,10 @@ We have loaded a custom template if the message's text contains a particular tex
 
 ## Spacing between messages
 
-`SfChat` allows to change the vertical spacing between the messages in view using `SfChat.MessageSpacing` property. The default value is 8.
+`SfChat` allows to change the vertical spacing between the messages in view using `SfChat.MessageSpacing` property. The default value is `8`.
 
 {% tabs %}
-{% highlight xaml hl_lines="17" %}
+{% highlight xaml hl_lines="16" %}
     
     <?xml version="1.0" encoding="utf-8" ?>
     <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
@@ -1093,7 +1104,7 @@ We have loaded a custom template if the message's text contains a particular tex
     </ContentPage>
 
 {% endhighlight %}
-{% highlight c# hl_lines="17" %}
+{% highlight c# hl_lines="16" %}
 
     using Syncfusion.Maui.Chat;
 
@@ -1122,7 +1133,7 @@ We have loaded a custom template if the message's text contains a particular tex
 
 ## Sending message
 
-The `SfChat.CurrentUser` can send messages by using the send button located in the message input area at the bottom of the chat control. Tapping the send button or pressing the Enter key (in UWP&MAC) will generate a new text message with the text entered in the editor and add it to the `SfChat.Messages` collection. The `SfChat.SendMessage event` and `SfChat.SendMessageCommand` will be triggered upon tapping the send button.
+The `SfChat.CurrentUser` can send messages by using the send button located in the message input area at the bottom of the chat control. Tapping the send button or pressing the Enter key (in WinUI & macOS) will generate a new text message with the text entered in the editor and add it to the `SfChat.Messages` collection. The `SfChat.SendMessage event` and `SfChat.SendMessageCommand` will be triggered upon tapping the send button.
 
 **Cancel the message from sending**
 
@@ -1131,7 +1142,7 @@ The newly added message can be canceled from sending in the `SfChat.SendMessage`
 **SendMessage Event handler**
 
 {% tabs %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="17" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="16" %}
  
     using Syncfusion.Maui.Chat;
 
@@ -1164,7 +1175,7 @@ The newly added message can be canceled from sending in the `SfChat.SendMessage`
 **SendMessage command**
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="17" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="16" %}
     
     <?xml version="1.0" encoding="utf-8" ?>
     <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
@@ -1235,7 +1246,7 @@ The newly added message can be canceled from sending in the `SfChat.SendMessage`
 By default, the keyboard will be open in view, even after a message is sent or focus is lost, just like in most mainstream chat applications. To hide the keyboard after the message has been sent or lost focus, set the `SfChat.ShowKeyboardAlways` property to `false`.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="17" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="16" %}
     
     <?xml version="1.0" encoding="utf-8" ?>
     <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
@@ -1264,7 +1275,7 @@ By default, the keyboard will be open in view, even after a message is sent or f
 By default, users can input multi-line messages by adding new lines in the editor within the chat control for outgoing messages. However, if you wish to limit multi-line input and display a send button on the keyboard instead, you can achieve this by setting the `SfChat.AllowMultilineInput` property to `false`.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="17" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="16" %}
     
     <?xml version="1.0" encoding="utf-8" ?>
     <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
@@ -1288,14 +1299,15 @@ By default, users can input multi-line messages by adding new lines in the edito
 {% endhighlight %}
 {% endtabs %}
 
-N> In iOS, you cannot scroll horizontally on the editor when `AllowMultilineInput` is set as `false`.
+N>
+In iOS, you cannot scroll horizontally on the editor when `AllowMultilineInput` is set as `false`.
 
 ## Show avatar and author name for outgoing message
 
 By default, the author’s name and avatar are not shown for outgoing messages sent by the `SfChat.CurrentUser`. You have the option to display or hide the avatar and name for all outgoing messages by using the `SfChat.ShowOutgoingMessageAvatar` and `SfChat.ShowOutgoingMessageAuthorName` properties, respectively.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="17 18" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="16 17" %}
     
     <?xml version="1.0" encoding="utf-8" ?>
     <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
@@ -1320,6 +1332,37 @@ By default, the author’s name and avatar are not shown for outgoing messages s
 {% endhighlight %}
 {% endtabs %}
 
+## Hide avatar and author name for incoming messages
+
+By default, the author’s name and avatar are displayed for the incoming messages sent by users other than the `SfChat.CurrentUser`. You can choose to either show or hide the avatar and name for all incoming messages using the `SfChat.ShowIncomingMessageAvatar` and `SfChat.ShowIncomingMessageAuthorName` properties, respectively.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="16 17" %}
+    
+    <?xml version="1.0" encoding="utf-8" ?>
+    <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                xmlns:sfChat="clr-namespace:Syncfusion.Maui.Chat;assembly=Syncfusion.Maui.Chat"
+                xmlns:local="clr-namespace:MauiChat"             
+                x:Class="MauiChat.MainPage">
+
+        <ContentPage.BindingContext>
+            <local:ViewModel/>
+        </ContentPage.BindingContext>
+
+        <ContentPage.Content>
+            <sfChat:SfChat x:Name="sfChat"
+                            Messages="{Binding Messages}"                          
+                            CurrentUser="{Binding CurrentUser}"
+                            ShowIncomingMessageAuthorName="False"
+                            ShowIncomingMessageAvatar="False" />
+        </ContentPage.Content>
+    </ContentPage>
+{% endhighlight %}
+{% endtabs %}
+
+![Hiding avatar and author visibility in .NET MAUI Chat](images/messages/maui-chat-hide-avatar.png)
+
 ## Customize the shape of the message
 
 The `SfChat` allows to change the shape of the messages by using the `SfChat.MessageShape` property.
@@ -1327,7 +1370,8 @@ The `SfChat` allows to change the shape of the messages by using the `SfChat.Mes
 To customize `MessageShape` in the SfChat, refer to the below code example:
 
 {% tabs %}
-{% highlight xaml hl_lines="17" %}
+{% highlight xaml hl_lines="16" %}
+
     <?xml version="1.0" encoding="utf-8" ?>
     <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
@@ -1348,7 +1392,7 @@ To customize `MessageShape` in the SfChat, refer to the below code example:
     </ContentPage>
 
 {% endhighlight %}
-{% highlight c# hl_lines="17" %}
+{% highlight c# hl_lines="16" %}
 
     using Syncfusion.Maui.Chat;
 
@@ -1382,7 +1426,8 @@ The `SfChat` allows to hide the message input view (editor) by setting `false` t
 To hide `ShowMessageInputView` in the SfChat, refer the below code example:
 
 {% tabs %}
-{% highlight xaml hl_lines="17" %}
+{% highlight xaml hl_lines="16" %}
+
     <?xml version="1.0" encoding="utf-8" ?>
     <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
@@ -1403,7 +1448,7 @@ To hide `ShowMessageInputView` in the SfChat, refer the below code example:
     </ContentPage>
 
 {% endhighlight %}
-{% highlight c# hl_lines="17" %}
+{% highlight c# hl_lines="16" %}
 
     using Syncfusion.Maui.Chat;
 
@@ -1428,37 +1473,6 @@ To hide `ShowMessageInputView` in the SfChat, refer the below code example:
 
 {% endhighlight %}
 {% endtabs %}
-
-## Hide avatar and author name for incoming messages
-
-By default, the author’s name and avatar are displayed for the incoming messages sent by users other than the `SfChat.CurrentUser`. You can choose to either show or hide the avatar and name for all incoming messages using the `SfChat.ShowIncomingMessageAvatar` and `SfChat.ShowIncomingMessageAuthorName` properties, respectively.
-
-{% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="17 18" %}
-    
-    <?xml version="1.0" encoding="utf-8" ?>
-    <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-                xmlns:sfChat="clr-namespace:Syncfusion.Maui.Chat;assembly=Syncfusion.Maui.Chat"
-                xmlns:local="clr-namespace:MauiChat"             
-                x:Class="MauiChat.MainPage">
-
-        <ContentPage.BindingContext>
-            <local:ViewModel/>
-        </ContentPage.BindingContext>
-
-        <ContentPage.Content>
-            <sfChat:SfChat x:Name="sfChat"
-                            Messages="{Binding Messages}"                          
-                            CurrentUser="{Binding CurrentUser}"
-                            ShowIncomingMessageAuthorName="False"
-                            ShowIncomingMessageAvatar="False" />
-        </ContentPage.Content>
-    </ContentPage>
-{% endhighlight %}
-{% endtabs %}
-
-![Hiding avatar and author visibility in .NET MAUI Chat](images/messages/maui-chat-hide-avatar.png)
 
 ## Messages without author (System Generated Messages / Admin messages) in maui chat
 
@@ -1488,10 +1502,16 @@ In the provided code example, we've set up a custom template to display a securi
             }
         }
     }
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight c# tabtitle="MessageTemplateSelector.cs" %}
 
     public class MessageTemplateSelector : ChatMessageTemplateSelector
     {
         private readonly DataTemplate customMessageTemplate;
+
         public MessageTemplateSelector(SfChat sfChat):base(sfChat)
         {
             this.customMessageTemplate = new DataTemplate(typeof(CustomMessageTemplate));
@@ -1501,8 +1521,10 @@ In the provided code example, we've set up a custom template to display a securi
         {
             var message = item as IMessage;
             if (message == null)
-            return null;
-
+            {
+                return null;
+            }
+            
             if (item as ITextMessage != null)
             {
                 if ((item as ITextMessage).Author == null)
