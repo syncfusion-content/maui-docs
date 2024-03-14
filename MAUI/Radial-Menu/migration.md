@@ -24,7 +24,7 @@ To make the migration from the [Xamarin SfRadialMenu Control](https://www.syncfu
 
 ## Initialize Control
 
-To initialize the control, import the radialMenu control namespace and initialize the [SfRadialMenuControl](https://www.syncfusion.com/maui-controls/maui-radial-menu-control) as shown in the following code sample.
+To initialize the control, import the radialMenu control namespace and initialize the [SfRadialMenuControl]() as shown in the following code sample.
 
 <table>
 <tr>
@@ -52,11 +52,6 @@ this.Content = radialMenuControl;
 
 {% endhighlight %}
 {% endtabs %}
-
-</td>
-<td>
-
-{% tabs %}
 </td>
 </tr>
 <tr>
@@ -64,7 +59,7 @@ this.Content = radialMenuControl;
 </tr>
 <tr>
 <td>
-{% tabs %}
+{% tabs %} 
 
 {% highlight XAML %}
 
@@ -141,11 +136,11 @@ this.Content = radialMenu;
 ## Upcoming features in .NET MAUI RadialMenu
 
 * LayoutType that determines arrangement of items on rim either automatic or user defined.
-* VisibleSegmentCount that determines the number of segments visible at a time on the menu..
+* VisibleSegmentCount that determines the number of segments visible at a time on the menu.
 * Selection allows you to highlight or choose segments within the hierarchy.
-* CenterButtonPlacement that specifies the position of the center button within the menu..
+* CenterButtonPlacement that specifies the position of the center button within the menu.
 * Accessibility.
 
 ## Support and feedback
 
-If you are unable to find the migration information you require in the self-help resources listed above, please contact us by creating a [support ticket](https://internalsupport.bolddesk.com/agent/tickets/create). If you do not see what you need, Please request it in our [feedback portal](https://www.syncfusion.com/feedback/maui). 
+If you are unable to find the migration information you require in the self-help resources listed above, please contact us by creating a [support ticket](https://internalsupport.bolddesk.com/agent/tickets/create). If you do not see what you need, Please request it in our [feedback portal](https://www.syncfusion.com/feedback/maui).
