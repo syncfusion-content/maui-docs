@@ -9,11 +9,11 @@ documentation: ug
 
 # Swiping in .NET MAUI Chat (SfChat)
 
-In `SfChat`, you can enable swiping by setting the `SfChat.AllowSwiping` property to `true`. When you swipe left or right on a message, swipe views appear. It provides customizable swipe templates for swiping on the left and right sides. You can also limit how far you can swipe on a message by setting the `SfChat.MaxSwipeOffset` property.
+In `SfChat`, you can enable swiping by setting the `AllowSwiping` property to `true`. When you swipe left or right on a message, swipe views appear. It provides customizable swipe templates for swiping on the left and right sides. You can also limit how far you can swipe on a message by setting the `MaxSwipeOffset` property.
 
 ### Swipe templates
 
-The Swiping can be customized by using the `SfChat.StartSwipeTemplate` when swiping towards the `right` and `SfListView.EndSwipeTemplate` when swiping towards the `left`. The content inside the swipe template is arranged based on the offset values when swiping a message.
+The Swiping can be customized by using the `StartSwipeTemplate` when swiping towards the `right` and `EndSwipeTemplate` when swiping towards the `left`. The content inside the swipe template is arranged based on the offset values when swiping a message.
 
 {% tabs %}
 {% highlight xaml hl_lines="17 40" %}
@@ -187,7 +187,7 @@ namespace GettingStarted
 
 ### SwipeStarted Event
 
-The `SfChat.SwipeStarted` event is raised when the swipe offset changes from its initial value. This event is triggered with `MessageSwipeStartedEventArgs`.
+The `SwipeStarted` event is raised when the swipe offset changes from its initial value. This event is triggered with `MessageSwipeStartedEventArgs`.
 
 The `SwipeStarted` event provides the following properties in their arguments:
 
@@ -224,7 +224,7 @@ The `SwipeStarted` event provides the following properties in their arguments:
 
 ### Swiping Event
 
-The `SfChat.Swiping` event is raised while swiping a message is in progress. This event is triggered with `MessageSwipingEventArgs`.
+The `Swiping` event is raised while swiping a message is in progress. This event is triggered with `MessageSwipingEventArgs`.
 
 The `Swiping` event provides the following properties in their arguments:
 
@@ -263,7 +263,7 @@ The `Swiping` event provides the following properties in their arguments:
 
 ### SwipeEnded Event
 
-The `SfChat.SwipeEnded` event is fired when the swipe offset value reaches the `SfChat.MaxSwipeOffset` value indicating that the swipe action is completed. This event is triggered with `MessageSwipeEndedEventArgs`.
+The `SwipeEnded` event is fired when the swipe offset value reaches the `MaxSwipeOffset` value indicating that the swipe action is completed. This event is triggered with `MessageSwipeEndedEventArgs`.
 
 The `SwipeEnded` event provides the following properties in their arguments:
 
@@ -300,7 +300,7 @@ The `SwipeEnded` event provides the following properties in their arguments:
 
 ## Reset Swipe view Programmatically 
 
-The `SfChat` allows you to cancel the swipe programmatically by calling the `SfChat.ResetSwipeOffset` method in the `SfChat.SwipeEnded` event.
+The `SfChat` allows you to cancel the swipe programmatically by calling the `ResetSwipeOffset` method in the `SwipeEnded` event.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="5" %}
