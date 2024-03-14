@@ -204,31 +204,46 @@ this.Content = stepProgressBar;
 
 N> If both `PrimaryText` and `PrimaryFormattedText` are provided, then `PrimaryFormattedText` will be displayed. This precedence is same as for the `SecondaryText` and `SecondaryFormattedText`.
 
-## Customize description
-Using [LabelPosition]() and [LabelSpacing]() property, the description alignment and space between the description and step can be customized, respectively. The following code example explains how to customize the LabelPosition and LabelSpacing properties.
-{% tabs %}
+## Customize label spacing
+You can customize the space between the step and primary or secondary text of the step progress bar by using the [LabelSpacing]() property in `SfStepProgressBar`. The default value of `LabelSpacing` property is `5`.
 
 {% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="6 7" %}
+{% highlight xaml tabtitle="XAML" hl_lines="2" %}
 
-<stepProgressBar:SfStepProgressBar
-                        x:Name="stepProgress"
-                        VerticalOptions="Center"
-                        HorizontalOptions="Center"                                        
-                        Orientation="Vertical"                                                                                   
-                        LabelSpacing="28"
+<stepProgressBar:SfStepProgressBar                                                                              
+                        LabelSpacing="28">
+</stepProgressBar:SfStepProgressBar> 
+
+{% endhighlight %}
+{% highlight c# tabtitle="C#" hl_lines="2" %}
+
+SfStepProgressBar stepProgressBar = new SfStepProgressBar()
+{
+    LabelSpacing = 28,
+};
+
+this.Content = stepProgressBar;
+
+{% endhighlight %}
+{% endtabs %}
+
+## Customize label position
+You can customize the position of primary or secondary text of the step progress bar by using the [LabelPosition]() property in `SfStepProgressBar`. It can be positioned at the `Start`, `End`, `Bottom` or `Top`. 
+
+The default value of the `LabelPosition` property in the horizontal direction is `Bottom`, and in the vertical direction, it is `End`.
+
+{% tabs %}
+{% highlight xaml tabtitle="XAML" hl_lines="2" %}
+
+<stepProgressBar:SfStepProgressBar                                                                              
                         LabelPosition="Bottom">
 </stepProgressBar:SfStepProgressBar> 
 
 {% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="6 7" %}
+{% highlight c# tabtitle="C#" hl_lines="2" %}
 
 SfStepProgressBar stepProgressBar = new SfStepProgressBar()
 {
-    VerticalOptions = LayoutOptions.Center,
-    HorizontalOptions = LayoutOptions.Center,
-    Orientation = StepProgressBarOrientation.Vertical,
-    LabelSpacing = 28,
     LabelPosition = LabelPosition.Bottom,
 };
 
@@ -236,6 +251,8 @@ this.Content = stepProgressBar;
 
 {% endhighlight %}
 {% endtabs %}
+
+N> The `LabelPosition` property will be considered only if either `PrimaryText` or `SecondaryText`, and either `PrimaryFormattedText` or `SecondaryFormattedText`, is provided.
 
 ## StepProgressBar Image Customization
 
