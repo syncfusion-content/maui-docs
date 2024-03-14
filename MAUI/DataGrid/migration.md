@@ -123,6 +123,11 @@ To make migration from [Xamarin SfDataGrid](https://www.syncfusion.com/xamarin-u
 <td>Gets or sets the background for the header row.</td>
 </tr>
 <tr>
+<td>{{'[ChildColumns](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.StackedColumn.html#Syncfusion_SfDataGrid_XForms_StackedColumn_ChildColumns)'| markdownify }}</td>
+<td>{{'[ColumnMappingNames](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStackedColumn.html#Syncfusion_Maui_DataGrid_DataGridStackedColumn_ColumnMappingNames)'| markdownify }}</td>
+<td>Gets or sets the name of child columns that need to be stacked under the specified DataGridStackedColumn.</td>
+</tr>
+<tr>
 <td>{{'[RowBackgroundColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.DataGridStyle.html#Syncfusion_SfDataGrid_XForms_DataGridStyle_RowBackgroundColor)'| markdownify }}</td>
 <td>{{'[RowBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_RowBackground)'| markdownify }}</td>
 <td>Gets or sets the background of the data rows.</td>
@@ -292,6 +297,18 @@ By writing the converter, you can achieve the requirement conditionally. Refer {
 We have passed the optional parameters such as {{'[canIncludeHiddenColumns](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.GridRowSizingOptions.html#Syncfusion_SfDataGrid_XForms_GridRowSizingOptions_CanIncludeHiddenColumns)'| markdownify }} and {{'[excludedColumns](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.GridRowSizingOptions.html#Syncfusion_SfDataGrid_XForms_GridRowSizingOptions_ExcludeColumns)'| markdownify }} where as we have not provided the {{'[GridRowSizingOptions](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.GridRowSizingOptions.html)'| markdownify }} class as parameters.
 </td>
 </tr>
+<tr>
+<td>{{'[ExpandAllGroup](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.SfDataGrid.html#Syncfusion_SfDataGrid_XForms_SfDataGrid_ExpandAllGroup)'| markdownify }}</td>
+<td>{{'[ExpandAllGroups](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ExpandAllGroups)'| markdownify }}</td>
+<td>Expands all the groups in SfDataGrid.<br>
+</td>
+</tr>
+<tr>
+<td>{{'[CollapseAllGroup](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.SfDataGrid.html#Syncfusion_SfDataGrid_XForms_SfDataGrid_CollapseAllGroup)'| markdownify }}</td>
+<td>{{'[CollapseAllGroups](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CollapseAllGroups)'| markdownify }}</td>
+<td>Collapses all the groups in SfDataGrid.<br>
+</td>
+</tr>
 </table>
 
 ## Classes
@@ -330,6 +347,11 @@ We have passed the optional parameters such as {{'[canIncludeHiddenColumns](http
 <td>{{'[GridTextColumn](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.GridTextColumn.html)'| markdownify }}</td>
 <td>{{'[DataGridTextColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridTextColumn.html)'| markdownify }}</td>
 <td>Represents a {{'[SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html)'| markdownify }} column that hosts textual Content in its cells.</td>
+</tr>
+<tr>
+<td>{{'[GridComboBoxColumn](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.GridComboBoxColumn.html)'| markdownify }}</td>
+<td>{{'[DataGridComboBoxColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridComboBoxColumn.html)'| markdownify }}</td>
+<td>A column which is used to display a list of items in the form of a SfComboBox as the content.</td>
 </tr>
 <tr>
 <td>{{'[GridCell](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.GridCell.html)'| markdownify }}</td>
