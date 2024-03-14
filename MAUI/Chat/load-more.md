@@ -285,7 +285,7 @@ public partial class LoadMoreViewModel : INotifyPropertyChanged
 
 `SfChat` allows you to customize the load more view to display any custom button or indicator when loading more messages. This feature automatically adjusts the size of the load more view based on the content inside.
 
-You can use the `IsLazyLoading` property to determine whether to display the custom button or the busy indicator. In the code sample below, a custom view and a busy indicator are added as children of a grid, which is then set as the `SfChat.LoadMoreTemplate`. When `IsLazyLoading` is `false`, the custom view is shown, and the busy indicator is hidden. When `IsLazyLoading` is `true`, the custom view is hidden, and the busy indicator is shown. 
+You can use the `IsLazyLoading` property to determine whether to display the custom button or the busy indicator. In the code sample below, a custom view and a busy indicator are added as children of a grid, which is then set as the `LoadMoreTemplate`. When `IsLazyLoading` is `false`, the custom view is shown, and the busy indicator is hidden. When `IsLazyLoading` is `true`, the custom view is hidden, and the busy indicator is shown. 
 
 {% tabs %}
 {% highlight xaml hl_lines="26" %}
