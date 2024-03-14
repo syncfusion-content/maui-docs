@@ -245,7 +245,7 @@ series.DataLabelSettings = new CartesianDataLabelSettings()
 
 DataTemplate labelTemplate = new DataTemplate(() =>
 {
-    HorizontalStackLayout horizontalStackLayout = new HorizontalStackLayout { Spacing = 5, WidthRequest=50 };
+    HorizontalStackLayout horizontalStackLayout = new HorizontalStackLayout { Spacing = 5, WidthRequest=100 };
 
     var label = new Label
     {
