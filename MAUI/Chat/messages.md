@@ -758,8 +758,7 @@ The `ImageMessage` comes with in-built SfChat.ImageTapped event and `SfChat.Imag
 {% endhighlight %}
 {% endtabs %}
 
-N>
-[View sample in GitHub](https://github.com/SyncfusionExamples/display-tapped-image-in-full-screen-in-.net-maui-chat)
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/display-tapped-image-in-full-screen-in-.net-maui-chat)
 
 ### Adding image message as an outgoing message
 
@@ -900,8 +899,7 @@ If you don’t want to display images, buttons, or text(title, subtitle, descrip
 
 The `CardMessage` comes with a built-in `SfChat.CardTapped` event and `SfChat.CardCommand` that will be fired upon tapping a button in a card or tapping any card in the message. You can get the selected Card, the clicked CardButton and the actual `CardMessage` via the `CardTappedEventArgs` as `CardTappedEventArgs.Card`, `CardTappedEventArgs.Action` and `CardTappedEventArgs.Message` respectively, in both the `CardTapped` event handler and action of `CardCommand`. Handling this event/command by setting `CardTappedEventArgs.Handled` prevents the `Card.Title` or `CardButton.Value` from getting added as a new message.
 
-N>
-The Action argument in `CardTappedEventArgs` holds a valid value only when clicking the CardButton in a card. Tapping elsewhere inside the card fires the `CardTapped` event and `CardCommand` with Action as null in the `CardTappedEventArgs`. If the `CardTappedEventArgs.Action` is null, the `CardTappedEventArgs.Card.Title` is added as a new message, else the `CardTappedEventArgs.Action.Value` is added as a new message.
+N> The Action argument in `CardTappedEventArgs` holds a valid value only when clicking the CardButton in a card. Tapping elsewhere inside the card fires the `CardTapped` event and `CardCommand` with Action as null in the `CardTappedEventArgs`. If the `CardTappedEventArgs.Action` is null, the `CardTappedEventArgs.Card.Title` is added as a new message, else the `CardTappedEventArgs.Action.Value` is added as a new message.
 
 **Card Tapped Event**
 {% tabs %}
@@ -1068,8 +1066,7 @@ We have loaded a custom template if the message's text contains a particular tex
 
 ![Message Template in .NET MAUI Chat](images/messages/maui-chat-message-template.png)
 
-N>
-[View sample in GitHub](https://github.com/SyncfusionExamples/message-template-.net-maui-chat)
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/message-template-.net-maui-chat)
 
 ## Spacing between messages
 
@@ -1293,8 +1290,7 @@ By default, users can input multi-line messages by adding new lines in the edito
 {% endhighlight %}
 {% endtabs %}
 
-N>
-In iOS, you cannot scroll horizontally on the editor when `AllowMultilineInput` is set as `false`.
+N> In iOS, you cannot scroll horizontally on the editor when `AllowMultilineInput` is set as `false`.
 
 ## Show avatar and author name for outgoing message
 
@@ -1531,5 +1527,4 @@ In the provided code example, we've set up a custom template to display a securi
 
 ![Message Template in .NET MAUI Chat without author](images/messages/maui-chat-system-generated-custom-message-template.png)
 
-N>
-[View sample in GitHub](https://github.com/SyncfusionExamples/system-generated-message-template-.net-maui-chat)
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/system-generated-message-template-.net-maui-chat)
