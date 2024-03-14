@@ -28,3 +28,5 @@ Enhance .NET MAUI StepProgressBar's accessibility with a user-friendly design, e
 <td>Step 1 Ordered Completed </td>
 </tr>
 </table>
+
+ ![Accessibility in .NET MAUI SfStepProgressBar.](images/accessibility/maui-stepprogressbar-accessibility.png)
