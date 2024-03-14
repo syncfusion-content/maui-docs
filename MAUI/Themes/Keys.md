@@ -247,11 +247,11 @@ This page lists the keys for each control and the element to which it is mapped 
 	</tr>
     <tr>
         <td>SfDataGridHeaderRowBackground<br/><br/></td>
-        <td>Background color of the header rows in the SfDataGrid.<br/><br/></td>
+        <td>Background color of the header row in the SfDataGrid.<br/><br/></td>
     </tr>
     <tr>
         <td>SfDataGridHeaderRowTextColor<br/><br/></td>
-        <td>Text color of the header rows in the SfDataGrid.<br/><br/></td>
+        <td>Text color of the header row in the SfDataGrid.<br/><br/></td>
     </tr>
     <tr>
         <td>SfDataGridRowBackground<br/><br/></td>
@@ -323,7 +323,7 @@ This page lists the keys for each control and the element to which it is mapped 
     </tr>
     <tr>
         <td>SfDataGridLoadMoreBackground<br/><br/></td>
-        <td>Background color of the load more row in the SfDataGrid.<br/><br/></td>
+        <td>Background color of the load more view in the SfDataGrid.<br/><br/></td>
     </tr>
     <tr>
         <td>SfDataGridLoadMoreButtonTextColor<br/><br/></td>
@@ -335,11 +335,11 @@ This page lists the keys for each control and the element to which it is mapped 
     </tr>
     <tr>
         <td>SfDataGridLoadMoreIndicatorColor<br/><br/></td>
-        <td>Indicator color of the load more in the SfDataGrid.<br/><br/></td>
+        <td>Color of the load more indicator in the SfDataGrid.<br/><br/></td>
     </tr>
     <tr>
         <td>SfDataGridColumnResizingIndicatorColor<br/><br/></td>
-        <td>Color for the resizing indicator in the SfDataGrid.<br/><br/></td>
+        <td>Color of the column resizing indicator in the SfDataGrid.<br/><br/></td>
     </tr>
     <tr>
         <td>SfDataGridUnboundRowBackground<br/><br/></td>
@@ -385,15 +385,15 @@ This page lists the keys for each control and the element to which it is mapped 
 	</tr>
     <tr>
         <td>SfDataPagerNavigationButtonIconColor<br/><br/></td>
-        <td>Icon color of the navigation button in the SfDataPager.<br/><br/></td>
+        <td>Color of the navigation button icon in the SfDataPager.<br/><br/></td>
     </tr>
     <tr>
         <td>SfDataPagerDataPagerBackgroundColor<br/><br/></td>
-        <td>Background color of the data pager in the SfDataPager.<br/><br/></td>
+        <td>Background color of the SfDataPager.<br/><br/></td>
     </tr>
     <tr>
         <td>SfDataPagerNumericButtonSelectionBackgroundColor<br/><br/></td>
-        <td>Background color of the selection numeric button in the SfDataPager.<br/><br/></td>
+        <td>Background color of the selected numeric button in the SfDataPager.<br/><br/></td>
     </tr>
     <tr>
         <td>SfDataPagerNavigationButtonBackgroundColor<br/><br/></td>
@@ -409,7 +409,7 @@ This page lists the keys for each control and the element to which it is mapped 
     </tr>
     <tr>
         <td>SfDataPagerNumericButtonSelectionTextColor<br/><br/></td>
-        <td>Text color of the selection numeric button in the SfDataPager.<br/><br/></td>
+        <td>Text color of the selected numeric button in the SfDataPager.<br/><br/></td>
     </tr>
     <tr>
         <td>SfDataPagerNavigationButtonDisableBackgroundColor<br/><br/></td>
@@ -417,11 +417,11 @@ This page lists the keys for each control and the element to which it is mapped 
     </tr>
     <tr>
         <td>SfDataPagerNavigationButtonDisableIconColor<br/><br/></td>
-        <td>Icon color of the disable navigation button in the SfDataPager.<br/><br/></td>
+        <td>Color of the disable navigation button icon in the SfDataPager.<br/><br/></td>
     </tr>
     <tr>
         <td>SfDataPagerHoveredBackgroundColor<br/><br/></td>
-        <td>Hovering background color in the SfDataPager.<br/><br/></td>
+        <td>Hovering background color of the numeric and navigation buttons in the SfDataPager.<br/><br/></td>
     </tr>
 </table>
 
