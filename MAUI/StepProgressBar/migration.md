@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Migrate from Syncfusion Xamarin SfStepProgressBar to .NET MAUI SfStepProgressBar
+title: Migrate from Xamarin to .NET MAUI StepProgressBar | Syncfusion
 description: Learn here all about Migrating from Syncfusion Xamarin step progressbar to Syncfusion .NET MAUI SfStepProgressBar control.
 platform: maui
 control: SfStepProgressBar
 documentation: ug
 ---  
 
-# Migrate from Xamarin.Forms SfStepProgressBar to .NET MAUI SfStepProgressBar 
+# Migrate from Xamarin.Forms SfStepProgressBar to MAUI SfStepProgressBar
 
-To make the migration from the [Xamarin SfStepProgressBar](https://www.syncfusion.com/xamarin-ui-controls/xamarin-stepprogressbar) to [.NET MAUI SfStepProgressBar]() easier, most of the APIs from the Xamarin SfStepProgressBar were kept in the.NET MAUI SfStepProgressBar. However, to maintain the consistency of API naming in the .NET MAUI SfStepProgressBar, some of the APIs have been renamed. Please find the difference in the following topics.
+To make the migration from the [Xamarin SfStepProgressBar](https://www.syncfusion.com/xamarin-ui-controls/xamarin-stepprogressbar) to [.NET MAUI SfStepProgressBar]() easier, most of the APIs from the Xamarin SfStepProgressBar were kept in the.NET MAUI SfStepProgressBar. However, to maintain the consistency of API naming in the .NET MAUI SfStepProgressBar, some of the APIs have been renamed. Find the difference in the following topics.
 
 ## Namespaces 
 
@@ -195,17 +195,17 @@ this.Content = stepProgressBar ;
 <tr>
 <td>{{'[CompletedStepStyle]()'| markdownify }}</td>
 <td>{{'[CompletedStepSettings]()'| markdownify }}</td>
-<td>Gets or sets the completed step style for the step progressbar.</td>
+<td>Gets or sets the completed step settings for the step progressbar.</td>
 </tr>
 <tr>
 <td>{{'[InProgressStepStyle]()'| markdownify }}</td>
 <td>{{'[InProgressStepSettings]()'| markdownify }}</td>
-<td>Gets or sets the in progress step style for the step progressbar.</td>
+<td>Gets or sets the in progress step settings for the step progressbar.</td>
 </tr>
 <tr>
 <td>{{'[NotStartedStepStyle]()'| markdownify }}</td>
 <td>{{'[NotStartedStepSettings]()'| markdownify }}</td>
-<td>Gets or sets the not started step style for the step progressbar.</td>
+<td>Gets or sets the not started step settings for the step progressbar.</td>
 </tr>
 <tr>
 <td>{{'[Orientation]()'| markdownify }}</td>
@@ -220,7 +220,7 @@ this.Content = stepProgressBar ;
 <tr>
 <td>{{'[TitleAlignment]()'| markdownify }}</td>
 <td>{{'[LabelPosition]()'| markdownify }}</td>
-<td> Gets or sets the label position or tile alignment.</td>
+<td> Gets or sets the label position for the step progress bar.</td>
 </tr>
 <tr>
 <td>{{'[TitleSpace]()'| markdownify }}</td>
@@ -255,22 +255,22 @@ this.Content = stepProgressBar ;
 <tr>
 <td>{{'[FontAttributes]()'| markdownify }}</td>
 <td>{{'[[FontAttributes]()(From [TextStyle]() property of [StepSettings]() class)]()'| markdownify }}</td>
-<td>Gets or sets the font attributes of the text style.</td>
+<td>Gets or sets the font attributes of the text style which is used to customize the primary and secondary text.</td>
 </tr>
 <tr>
 <td>{{'[FontColor]()'| markdownify }}</td>
 <td>{{'[[TextColor]()(From [TextStyle]() property of [StepSettings]() class)]()'| markdownify }}</td>
-<td>Gets or sets the text color of the text style.</td>
+<td>Gets or sets the text color of the text style which is used to customize the primary and secondary text.</td>
 </tr>
 <tr>
 <td>{{'[FontFamily]()'| markdownify }}</td>
 <td>{{'[[FontFamily]()(From [TextStyle]() property of [StepSettings]() class)]()'| markdownify }}</td>
-<td>Gets or sets the font family of the text style.</td>
+<td>Gets or sets the font family of the text style which is used to customize the primary and secondary text.</td>
 </tr>
 <tr>
 <td>{{'[FontSize]()'| markdownify }}</td>
 <td>{{'[[FontSize]()(From [TextStyle]() property of [StepSettings]() class)]()'| markdownify }}</td>
-<td>Gets or sets the font size of the text style.</td>
+<td>Gets or sets the font size of the text style which is used to customize the primary and secondary text.</td>
 </tr>
 <tr>
 <td>{{'[GapWidth]()'| markdownify }}</td>
@@ -300,7 +300,7 @@ this.Content = stepProgressBar ;
 <tr>
 <td>{{'[MarkerShapeType]()'| markdownify }}</td>
 <td>{{'[ShapeType]()'| markdownify }}</td>
-<td>.</td>
+<td>Gets or sets the shape type of the step.</td>
 </tr>
 <tr>
 <td>{{'[MarkerStrokeColor]()'| markdownify }}</td>
@@ -360,7 +360,7 @@ this.Content = stepProgressBar ;
 <tr>
 <td>{{'[Status]()'| markdownify }}</td>
 <td>Nil</td>
-<td>Not Supported.</td>
+<td>By using '[ActiveStepIndex]()' and '[ActiveStepProgressValue]()' property, we can acheive the desired step status.</td>
 </tr>
 </table>
 
@@ -423,3 +423,9 @@ this.Content = stepProgressBar ;
 <td>Occurs whenever the step status is changed.</td>
 </tr>
 </table>
+
+## Upcoming Features
+
+* Mapping support
+* RTL support
+* Template support

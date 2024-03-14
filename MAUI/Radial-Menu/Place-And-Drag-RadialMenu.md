@@ -13,7 +13,7 @@ You can place radial menu anywhere on its parent layout, and drag it with in the
 
 ## Dragging RadialMenu
 
-You can enable/disable dragging by using the [`IsDragEnabled`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SfRadialMenu.html#Syncfusion_Maui_SfRadialMenu_IsDragEnabled) property.
+You can enable/disable dragging by using the [`IsDragEnabled`] property.
 
 {% tabs %}
 
@@ -73,17 +73,17 @@ namespace RadialSample
 
 ## DragEvents
 
-[`SfRadialMenu`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SfRadialMenu.html) provides for event for [`DragBegin`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SfRadialMenu.html#Syncfusion_Maui_SfRadialMenu_DragBegin) and [`DragEnd`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SfRadialMenu.html#Syncfusion_Maui_SfRadialMenu_DragEnd) in which the event get hooked when the RadialMenu is get dragged.
+[`SfRadialMenu`] provides for event for [`DragBegin`] in which the event get hooked when the RadialMenu is get dragged.
 
 ### DragBegin event
 
-This event get triggered when RadialMenu is start to drag with [`DragBeginEventArgs`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SfRadialMenu.DragBeginEventArgs.html).
+This event get triggered when RadialMenu is start to drag with [`DragBeginEventArgs`].
 
-* [`Position`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SfRadialMenu.DragBeginEventArgs.html#Syncfusion_Maui__SfRadialMenu_DragBeginEventArgs_Position) - Gets the Start position of the RadialMenu.
+* [`Position`] - Gets the Start position of the RadialMenu.
 
-* [`Handled`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SfRadialMenu.DragBeginEventArgs.html#Syncfusion_Maui_SfRadialMenu_DragBeginEventArgs_Handled) - Gets and Sets the boolean value for enabling and disabling the dragging of RadialMenu.
+* [`Handled`] - Gets and Sets the boolean value for enabling and disabling the dragging of RadialMenu.
 
-To hook the [`DragBegin`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SfRadialMenu.html#Syncfusion_Maui_SfRadialMenu_DragBegin) event, and to get the start position and restricts the dragging, follow the code example:
+To hook the [`DragBegin`] event, and to get the start position and restricts the dragging, follow the code example:
 
 {% tabs %}
 
@@ -145,15 +145,15 @@ namespace RadialSample
 
 ### Drag End
 
-This event get triggered when dragging is ended in RadialMenu with [`DragEndEventArgs`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SfRadialMenu.DragEndEventArgs.html).
+This event get triggered when dragging is ended in RadialMenu with [`DragEndEventArgs`].
 
-* [`OldValue`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SfRadialMenu.DragEndEventArgs.html#Syncfusion_Maui_SfRadialMenu_DragEndEventArgs_OldValue) - Gets the Start position of the RadialMenu.
+* [`OldValue`] - Gets the Start position of the RadialMenu.
 
-* [`NewValue`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SfRadialMenu.DragEndEventArgs.html#Syncfusion_Maui_SfRadialMenu_DragEndEventArgs_NewValue) - Gets the end position of the RadialMenu.
+* [`NewValue`] - Gets the end position of the RadialMenu.
 
-* [`Handled`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SfRadialMenu.DragEndEventArgs.html#Syncfusion_Maui_SfRadialMenu_DragEndEventArgs_Handled) - Gets and Sets the boolean value for restricting the RadialMenu to move another position.
+* [`Handled`] - Gets and Sets the boolean value for restricting the RadialMenu to move another position.
 
-To hook the [`DragEnd`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SfRadialMenu.html#Syncfusion_Maui_SfRadialMenu_SfRadialMenu_DragEnd) event, and to get the start position, end position and restricts the movement of the RadialMenu, follow the code example:
+To hook the [`DragEnd`] event, and to get the start position, end position and restricts the movement of the RadialMenu, follow the code example:
 
 {% tabs %}
 

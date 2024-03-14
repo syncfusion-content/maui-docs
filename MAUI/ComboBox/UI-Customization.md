@@ -157,17 +157,19 @@ The SelectionTextHighlightColor property is used to modify the background color 
                         ItemsSource="{Binding SocialMedias}"
                         DisplayMemberPath="Name"
                         TextMemberPath="Name"
-                        Placeholder="Select a social media"
-                        SelectionTextHighlightColor="Aqua" />
+                        Placeholder="Enter Media"
+                        SelectionTextHighlightColor="Green" />
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-combobox.SelectionTextHighlightColor = Colors.Aqua;
+combobox.SelectionTextHighlightColor = Colors.Green;
 
 {% endhighlight %}
 {% endtabs %}
+
+![.NET MAUI ComboBox Selection Text Highlight Color](Images/UICustomization/SelectionTextHighlightColor.png)
 
 ## Maximum DropDown Height
 
@@ -377,23 +379,25 @@ DropDown items can be customized using the [DropDownItemFontAttributes], [DropDo
                         ItemsSource="{Binding SocialMedias}"
                         DisplayMemberPath="Name"
                         TextMemberPath="Name"
-                        Placeholder="Select a social media"
-                        DropDownItemFontAttributes="Bold"
+                        Placeholder="Enter Media"
+                        DropDownItemFontAttributes="Italic"
                         DropDownItemFontFamily="OpenSansSemibold"
-                        DropDownItemFontSize="20"
-                        DropDownItemTextColor="White" />
+                        DropDownItemFontSize="16"
+                        DropDownItemTextColor="DarkViolet" />
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-combobox.DropDownItemFontAttributes = FontAttributes.Bold;
+combobox.DropDownItemFontAttributes = FontAttributes.Italic;
 combobox.DropDownItemFontFamily = "OpenSansSemibold";
-combobox.DropDownItemFontSize = 20;
-combobox.DropDownItemTextColor = Colors.White;
+combobox.DropDownItemFontSize = 16;
+combobox.DropDownItemTextColor = Colors.DarkViolet;
 
 {% endhighlight %}
 {% endtabs %}
+
+![.NET MAUI ComboBox DropDown Item Text](Images/UICustomization/DropDownItemText.png)
 
 ### Customize the DropDown background color
 
@@ -407,17 +411,19 @@ The DropDownBackground property is used to modify the background color of the dr
                         ItemsSource="{Binding SocialMedias}"
                         DisplayMemberPath="Name"
                         TextMemberPath="Name"
-                        Placeholder="Select a social media"
-                        DropDownBackground="Yellow" />
+                        Placeholder="Enter Media"
+                        DropDownBackground="YellowGreen" />
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-combobox.DropDownBackground = Colors.Yellow;
+combobox.DropDownBackground = Colors.YellowGreen;
 
 {% endhighlight %}
 {% endtabs %}
+
+![.NET MAUI ComboBox DropDown Background](Images/UICustomization/DropDownBackground.png)
 
 ### Customize the DropDown selected item backgroundcolor
 
@@ -431,17 +437,19 @@ The SelectedDropDownItemBackground property is used to modify the backgroundcolo
                         ItemsSource="{Binding SocialMedias}"
                         DisplayMemberPath="Name"
                         TextMemberPath="Name"
-                        Placeholder="Select a social media"
-                        SelectedDropDownItemBackground="YellowGreen" />
+                        Placeholder="Enter Media"
+                        SelectedDropDownItemBackground="LightSeaGreen" />
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-combobox.SelectedDropDownItemBackground = Colors.YellowGreen;
+combobox.SelectedDropDownItemBackground = Colors.LightSeaGreen;
 
 {% endhighlight %}
 {% endtabs %}
+
+![.NET MAUI ComboBox Selected DropDown Item Background](Images/UICustomization/SelectedDropDownItemBackground.png)
 
 ### Customize the DropDown Border Color
 
@@ -455,17 +463,19 @@ The DropDownStroke property is used to modify the border color of the dropdown.
                         ItemsSource="{Binding SocialMedias}"
                         DisplayMemberPath="Name"
                         TextMemberPath="Name"
-                        Placeholder="Select a social media"
-                        DropDownStroke="Red" />
+                        Placeholder="Enter Media"
+                        DropDownStroke="DarkOrange" />
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-combobox.DropDownStroke = Colors.Red;
+combobox.DropDownStroke = Colors.DarkOrange;
 
 {% endhighlight %}
 {% endtabs %}
+
+![.NET MAUI ComboBox DropDown Stroke](Images/UICustomization/DropDownStroke.png)
 
 ### Customize the DropDown Border Thickness
 
@@ -479,7 +489,8 @@ The DropDownStrokeThickness property is used to modify the thickness of the drop
                         ItemsSource="{Binding SocialMedias}"
                         DisplayMemberPath="Name"
                         TextMemberPath="Name"
-                        Placeholder="Select a social media"
+                        Placeholder="Enter Media"
+                        DropDownStroke="DarkOrange"
                         DropDownStrokeThickness="5" />
 
 {% endhighlight %}
@@ -490,6 +501,8 @@ combobox.DropDownStrokeThickness = 5;
 
 {% endhighlight %}
 {% endtabs %}
+
+![.NET MAUI ComboBox DropDown StrokeThickness](Images/UICustomization/DropDownStrokeThickness.png)
 
 ### Customize the DropDown Item Height
 
@@ -503,17 +516,19 @@ The DropDownItemHeight property is used to modify the height of the dropdown ite
                         ItemsSource="{Binding SocialMedias}"
                         DisplayMemberPath="Name"
                         TextMemberPath="Name"
-                        Placeholder="Select a social media"
-                        DropDownItemHeight="50" />
+                        Placeholder="Enter Media"
+                        DropDownItemHeight="25" />
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-combobox.DropDownItemHeight = 50;
+combobox.DropDownItemHeight = 25;
 
 {% endhighlight %}
 {% endtabs %}
+
+![.NET MAUI ComboBox DropDown Item Height](Images/UICustomization/DropDownItemHeight.png)
 
 ## Customize the DropDown (suggestion) item based on condition
 
