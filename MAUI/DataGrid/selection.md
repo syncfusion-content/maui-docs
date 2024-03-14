@@ -299,6 +299,31 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
+## Disable focus for a column
+
+By default, the current cell is focusable for all the columns. To disable current cell focus for a particular column, you can simply set `DataGridColumn.AllowFocus` property to `false`.
+
+{% tabs %}
+{% highlight XAML}
+<syncfusion:SfDataGrid x:Name="sfDataGrid"
+                    SelectionMode="Single"
+                    NavigationMode="Cell"
+                    ColumnWidthMode="Auto"
+                    ItemsSource="{Binding OrderInfoCollection}" >
+<syncfusion:SfDataGrid.Columns>
+   <syncfusion:DataGridTextColumn MappingName="OrderID"
+                 Format="D"
+                 AllowFocus="False"
+                 HeaderText="Order ID" />
+   <syncfusion:DataGridTextColumn MappingName="CustomerID"
+                 HeaderText="Customer ID" />
+   <syncfusion:DataGridTextColumn MappingName="ShipCountry "
+                 HeaderText="Ship Country " />
+</syncfusion:SfDataGrid.Columns>
+</syncfusion:SfDataGrid>
+{% endhighlight %}
+{% endtabs %}
+
 ## Events in selection
 The DataGrid provides the following events for selection:
 

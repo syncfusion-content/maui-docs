@@ -151,7 +151,7 @@ chart.Series.Add(series);
 
 The content of the label can be customized using the [LabelContext]() property. Following are the two options that are supported now,
 
-* [Percentage]() - This will show the percentage value of corresponding data point Y value
+* [Percentage]() - This will show the percentage value of corresponding data point Y value.
 
 * [YValue]() - This will show the corresponding Y value.
 
@@ -196,7 +196,7 @@ The content of the label can be customized using the [LabelContext]() property. 
 
 ## LabelTemplate
 
-The [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html) provides support to customize the appearance of the datalabel by using the [LabelTemplate]() property.
+The [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html) provides support to customize the appearance of the datalabel using the [LabelTemplate]() property.
 
 {% tabs %}
 
