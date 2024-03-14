@@ -101,61 +101,61 @@ The [SfPyramidChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.
 
 {% highlight xaml %}
 
-    <Grid x:Name="grid">
-        <Grid.Resources>
-            <DataTemplate x:Key="labelTemplate">
-                    <HorizontalStackLayout Spacing="5">
-                        <Label Text="{Binding Item.Value}" VerticalOptions="Center" FontSize = "15"/>
-                        <Image Source="arrow.png" WidthRequest="15" HeightRequest="15"/>
-                    </HorizontalStackLayout>
-            </DataTemplate>
-        </Grid.Resources>
+<Grid x:Name="grid">
+    <Grid.Resources>
+        <DataTemplate x:Key="labelTemplate">
+                <HorizontalStackLayout Spacing="5">
+                    <Label Text="{Binding Item.Value}" VerticalOptions="Center" FontSize = "15"/>
+                    <Image Source="arrow.png" WidthRequest="15" HeightRequest="15"/>
+                </HorizontalStackLayout>
+        </DataTemplate>
+    </Grid.Resources>
 
-        <chart:SfPyramidChart ItemsSource="{Binding Data}" 
-                              LabelTemplate="{StaticResource labelTemplate}"
-                              XBindingPath="Name" 
-                              YBindingPath="Value"
-                              ShowDataLabels="True"/>
+    <chart:SfPyramidChart ItemsSource="{Binding Data}" 
+                            LabelTemplate="{StaticResource labelTemplate}"
+                            XBindingPath="Name" 
+                            YBindingPath="Value"
+                            ShowDataLabels="True"/>
 
-    </Grid>
+</Grid>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfPyramidChart chart = new SfPyramidChart();
-    . . .
-    chart.ItemsSource = new ViewModel().Data;
-    chart.XBindingPath = "Name";
-    chart.YBindingPath = "Value";
-    chart.ShowDataLabels = true;
+SfPyramidChart chart = new SfPyramidChart();
+. . .
+chart.ItemsSource = new ViewModel().Data;
+chart.XBindingPath = "Name";
+chart.YBindingPath = "Value";
+chart.ShowDataLabels = true;
 
-    DataTemplate labelTemplate = new DataTemplate(() =>
+DataTemplate labelTemplate = new DataTemplate(() =>
+{
+    HorizontalStackLayout horizontalStackLayout = new HorizontalStackLayout { Spacing = 5 };
+
+    var label = new Label
     {
-        HorizontalStackLayout horizontalStackLayout = new HorizontalStackLayout { Spacing = 5 };
+        VerticalOptions = LayoutOptions.Center,
+        FontSize = 15
+    };
+    label.SetBinding(Label.TextProperty, new Binding("Item.Value"));
+    
+    var image = new Image
+    {
+        Source = "arrow.png",
+        WidthRequest = 15,
+        HeightRequest = 15
+    };
 
-        var label = new Label
-        {
-            VerticalOptions = LayoutOptions.Center,
-            FontSize = 15
-        };
-        label.SetBinding(Label.TextProperty, new Binding("Item.Value"));
-        
-        var image = new Image
-        {
-            Source = "arrow.png",
-            WidthRequest = 15,
-            HeightRequest = 15
-        };
+    horizontalStackLayout.Children.Add(label);
+    horizontalStackLayout.Children.Add(image);
+    
+    return horizontalStackLayout;
+});
 
-        horizontalStackLayout.Children.Add(label);
-        horizontalStackLayout.Children.Add(image);
-        
-        return horizontalStackLayout;
-    });
-
-    chart.LabelTemplate = labelTemplate;   
-    this.Content = chart;
+chart.LabelTemplate = labelTemplate;   
+this.Content = chart;
 
 {% endhighlight %}
 

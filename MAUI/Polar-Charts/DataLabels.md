@@ -154,33 +154,33 @@ The content of the label can be customized using the [LabelContext]() property. 
 
 {% highlight xaml %}
 
-    <chart:SfPolarChart>
-        . . .
-        <chart:PolarAreaSeries ItemsSource="{Binding PlantDetails}" 
-                            ShowDataLabels="True"
-                            XBindingPath="Direction"
-                            YBindingPath="Tree" 
-                            LabelContext="Percentage"/>
+<chart:SfPolarChart>
+    . . .
+    <chart:PolarAreaSeries ItemsSource="{Binding PlantDetails}" 
+                        ShowDataLabels="True"
+                        XBindingPath="Direction"
+                        YBindingPath="Tree" 
+                        LabelContext="Percentage"/>
 
-    </chart:SfPolarChart>
+</chart:SfPolarChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfPolarChart chart = new SfPolarChart();
-    . . .
-    PolarAreaSeries series = new PolarAreaSeries()
-    {
-        ItemsSource = new ViewModel().PlantDetails,
-        XBindingPath = "Direction",
-        YBindingPath = "Tree",
-        ShowDataLabels = true,
-        LabelContext = LabelContext.Percentage
-    };
+SfPolarChart chart = new SfPolarChart();
+. . .
+PolarAreaSeries series = new PolarAreaSeries()
+{
+    ItemsSource = new ViewModel().PlantDetails,
+    XBindingPath = "Direction",
+    YBindingPath = "Tree",
+    ShowDataLabels = true,
+    LabelContext = LabelContext.Percentage
+};
 
-    chart.Series.Add(series);
-    this.Content = chart;
+chart.Series.Add(series);
+this.Content = chart;
         
 {% endhighlight %}
 
@@ -196,63 +196,63 @@ The [SfPolarChart]() provides support to customize the appearance of the datalab
 
 {% highlight xaml %}
 
-    <chart:SfPolarChart >
-        <chart:SfPolarChart.Resources>
-            <DataTemplate x:Key="labelTemplate">
-                <HorizontalStackLayout Spacing="5">
-                    <Label Text="{Binding Item.Tree}" VerticalOptions="Center" FontSize = "15"/>
-                    <Image Source="arrow.png" WidthRequest="15" HeightRequest="15"/>
-                </HorizontalStackLayout>
-            </DataTemplate>
-        </chart:SfPolarChart.Resources>
-        . . .
-        <chart:PolarAreaSeries ItemsSource="{Binding PlantDetails}" 
-                            LabelTemplate="{StaticResource labelTemplate}"
-                            XBindingPath="Direction"
-                            YBindingPath="Tree" 
-                            ShowDataLabels="True"/>
+<chart:SfPolarChart >
+    <chart:SfPolarChart.Resources>
+        <DataTemplate x:Key="labelTemplate">
+            <HorizontalStackLayout Spacing="5">
+                <Label Text="{Binding Item.Tree}" VerticalOptions="Center" FontSize = "15"/>
+                <Image Source="arrow.png" WidthRequest="15" HeightRequest="15"/>
+            </HorizontalStackLayout>
+        </DataTemplate>
+    </chart:SfPolarChart.Resources>
+    . . .
+    <chart:PolarAreaSeries ItemsSource="{Binding PlantDetails}" 
+                        LabelTemplate="{StaticResource labelTemplate}"
+                        XBindingPath="Direction"
+                        YBindingPath="Tree" 
+                        ShowDataLabels="True"/>
 
-    </chart:SfPolarChart>
+</chart:SfPolarChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfPolarChart chart = new SfPolarChart();
-    . . .
-    PolarAreaSeries series = new PolarAreaSeries();
-    series.ShowDataLabels = true;
-    series.ItemsSource = new ViewModel().PlantDetails;
-    series.XBindingPath = "Direction";
-    series.YBindingPath = "Tree";
+SfPolarChart chart = new SfPolarChart();
+. . .
+PolarAreaSeries series = new PolarAreaSeries();
+series.ShowDataLabels = true;
+series.ItemsSource = new ViewModel().PlantDetails;
+series.XBindingPath = "Direction";
+series.YBindingPath = "Tree";
 
-    DataTemplate labelTemplate = new DataTemplate(() =>
+DataTemplate labelTemplate = new DataTemplate(() =>
+{
+    HorizontalStackLayout horizontalStackLayout = new HorizontalStackLayout { Spacing = 5 };
+
+    var label = new Label
     {
-        HorizontalStackLayout horizontalStackLayout = new HorizontalStackLayout { Spacing = 5 };
+        VerticalOptions = LayoutOptions.Center,
+        FontSize = 15
+    };
+    label.SetBinding(Label.TextProperty, new Binding("Item.Tree"));
 
-        var label = new Label
-        {
-            VerticalOptions = LayoutOptions.Center,
-            FontSize = 15
-        };
-        label.SetBinding(Label.TextProperty, new Binding("Item.Tree"));
+    var image = new Image
+    {
+        Source = "arrow.png",
+        WidthRequest = 15,
+        HeightRequest = 15
+    };
+    
+    horizontalStackLayout.Children.Add(label);
+    horizontalStackLayout.Children.Add(image);
+    
+    return horizontalStackLayout;
+});
 
-        var image = new Image
-        {
-            Source = "arrow.png",
-            WidthRequest = 15,
-            HeightRequest = 15
-        };
-        
-        horizontalStackLayout.Children.Add(label);
-        horizontalStackLayout.Children.Add(image);
-        
-        return horizontalStackLayout;
-    });
-
-    series.LabelTemplate = labelTemplate;
-    chart.Series.Add(series);
-    this.Content = chart;
+series.LabelTemplate = labelTemplate;
+chart.Series.Add(series);
+this.Content = chart;
         
 {% endhighlight %}
 
