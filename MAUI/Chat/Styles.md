@@ -792,8 +792,8 @@ You can style the elements of the editor view by setting values to the in-built 
                 <ResourceDictionary>
                     <x:String x:Key="SfChatTheme">CustomTheme</x:String>
                     <Color x:Key="SfChatEditorPlaceholderTextColor">Blue</Color>
-                    <Color x:Key="SfChatEditorTextColor">Gray</Color>
-                    <Color x:Key="SfChatEditorBackground">Violet</Color>
+                    <Color x:Key="SfChatEditorTextColor">Black</Color>
+                    <Color x:Key="SfChatEditorBackground">LightGreen</Color>
                     <Color x:Key="SfChatEditorStroke">Black</Color>
                     <x:String x:Key="SfChatEditorFontFamily">Roboto-Medium</x:String>
                     <FontAttributes x:Key="SfChatEditorFontAttributes">Bold</FontAttributes>
@@ -827,8 +827,6 @@ You can style the elements of the editor view by setting values to the in-built 
 {% endtabs %}
 
 ![Editor style in .NET MAUI Chat](images/styles/maui-chat-editor-style.png)
-
-![Editor text style in .NET MAUI Chat](images/styles/maui-chat-editor-withtext-style.png)
 
 ## Typing indicator styling
 
@@ -999,7 +997,7 @@ You can style the elements of the suggestion view by setting values to the in-bu
 </tr>
 <tr>
 <td> SfChatSuggestionListBackground </td>
-<td> Background color of the suggestion list view. </td>
+<td> Background color of the suggestions list view. </td>
 </tr>
 <tr>
 <td> SfChatSuggestionListItemFontFamily </td>
@@ -1086,15 +1084,6 @@ You can style the send message button based on its state by setting values to th
 <td> SfChatDisabledSendButtonBackground </td>
 <td> Disabled background color of the send button. </td>
 </tr>
-<tr>
-<td> SfChatHoveredSendButtonBackground </td>
-<td> Hovered background color of the send button. </td>
-</tr>
-<tr>
-<td> SfChatPressedSendButtonBackground </td>
-<td> Pressed background color of the send button. </td>
-</tr>
-</tr>
 </table>
 
 {% tabs %}
@@ -1105,12 +1094,10 @@ You can style the send message button based on its state by setting values to th
             <syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
                 <ResourceDictionary>
                     <x:String x:Key="SfChatTheme">CustomTheme</x:String>
-                    <Color x:Key="SfChatSendButtonDisabledColor">Blue</Color>
+                    <Color x:Key="SfChatSendButtonDisabledColor">purple</Color>
                     <Color x:Key="SfChatSendButtonColor">DeepPink</Color>
-                    <Color x:Key="SfChatSendButtonBackground">#d9d9d9</Color>
-                    <Color x:Key="SfChatDisabledSendButtonBackground">SkyBlue</Color>
-                    <Color x:Key="SfChatHoveredSendButtonBackground">Orange</Color>
-                    <Color x:Key="SfChatPressedSendButtonBackground">Violet</Color>       
+                    <Color x:Key="SfChatSendButtonBackground">SkyBlue</Color>
+                    <Color x:Key="SfChatDisabledSendButtonBackground">LightGreen</Color>
                 </ResourceDictionary>
             </syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
         </syncTheme:SyncfusionThemeDictionary>
@@ -1129,8 +1116,6 @@ You can style the send message button based on its state by setting values to th
         dictionary.Add("SfChatSendButtonColor", Colors.DeepPink);
         dictionary.Add("SfChatSendButtonBackground", Color.FromHex("#d9d9d9"));
         dictionary.Add("SfChatDisabledSendButtonBackground", Colors.SkyBlue);
-        dictionary.Add("SfChatHoveredSendButtonBackground", Colors.Orange);
-        dictionary.Add("SfChatPressedSendButtonBackground", Colors.Violet);
         this.Resources.Add(dictionary);
         ....
     }
@@ -1138,9 +1123,7 @@ You can style the send message button based on its state by setting values to th
 {% endhighlight %}
 {% endtabs %}
 
-![Send button disable style in .NET MAUI Chat](images/styles/maui-chat-sendicon-disable-style.png)
-
-![Send button enable style in .NET MAUI Chat](images/styles/maui-chat-sendicon-enable-style.png)
+![Send button disable and enable style in .NET MAUI Chat](images/styles/maui-chat-send-button-style.png)
 
 ## Attachment button styling
 
@@ -1155,18 +1138,6 @@ You can style the attachment button by setting values to the in-built keys of th
 <td> SfChatAttachmentButtonColor </td>
 <td> Color of the attachment button. </td>
 </tr>
-<tr>
-<td> SfChatHoveredAttachmentButtonColor </td>
-<td> Color of the effect when attachment button is clicked. </td>
-</tr>
-<tr>
-<td> SfChatHoveredAttachmentBackground </td>
-<td> Color of the effect when attachment button is hovered. </td>
-</tr>
-<tr>
-<td> SfChatPressedAttachmentBackground </td>
-<td> Color of the effect when attachment button is pressed. </td>
-</tr>
 </table>
 
 {% tabs %}
@@ -1178,9 +1149,6 @@ You can style the attachment button by setting values to the in-built keys of th
                 <ResourceDictionary>
                     <x:String x:Key="SfChatTheme">CustomTheme</x:String>
                     <Color x:Key="SfChatAttachmentButtonColor">Orange</Color>
-                    <Color x:Key="SfChatHoveredAttachmentButtonColor">Violet</Color>
-                    <Color x:Key="SfChatHoveredAttachmentBackground">Pink</Color>
-                    <Color x:Key="SfChatPressedAttachmentBackground">#d9d9d9</Color>
                 </ResourceDictionary>
             </syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
         </syncTheme:SyncfusionThemeDictionary>
