@@ -13589,10 +13589,3 @@ This page lists the keys for each control and the element to which it is mapped 
         <td>Font size of the legend<br/><br/></td>
     </tr>    
 </table>  
-   
-  
- 
-
-
-
-
