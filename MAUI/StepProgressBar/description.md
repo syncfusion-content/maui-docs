@@ -13,7 +13,7 @@ Each step in a multi-step process has a different operation. To display informat
 ## Text 
 The primary and secondary descriptions for a step view can be set using the [PrimaryText]() and [SecondaryText]() properties, as demonstrated in the following code example.
 
-* Create a simple Observable Collection which contains the `PrimaryText` and `SecondaryText` for the step progressbar and bound the collection to the `ItemSource` property.
+* Create a simple Observable Collection that contain the `PrimaryText` and `SecondaryText` by using the `StepProgressBarItem` collection, which is bound to the `ItemSource` property.
 
 {% tabs %}
 {% highlight XAML hl_lines="9" %}
@@ -92,7 +92,7 @@ public class ViewModel
 ## Formatted text
 [PrimaryFormattedText]() and [SecondaryFormattedText]() can be used to customize the description with different formatting style. The following code example explains how to set `PrimaryFormattedText` and `SecondaryFormattedText` to a step view.
 
-* Create a simple Observable Collection which contains the `PrimaryFormattedText` and `SecondaryFormattedText` for the step progressbar and bound the collection to the `ItemSource` property.
+* Create a simple Observable Collection that contain the `PrimaryFormattedText` and `SecondaryFormattedText` by using the `StepProgressBarItem` collection, which is bound to the `ItemSource` property.
 
 {% tabs %}
 {% highlight XAML hl_lines="9" %}
