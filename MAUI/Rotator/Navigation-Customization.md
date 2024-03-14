@@ -13,7 +13,7 @@ The Rotator control supports customizing dots, thumbnails and navigation buttons
 
 ## Dots Customization
 
-In Dot Customization we can customise the  dots' stroke color, selected dots' color, and unselected dots' color.
+In Dot Customization we can customise the  dots' stroke, selected and unselected dots' color.
 
 {% tabs %}
 {% highlight xaml %}
@@ -109,7 +109,7 @@ In Dot Customization we can customise the  dots' stroke color, selected dots' co
 
 ## Thumbnails Customization
 
-In Thumbnail Customization we can customise the  selected thumbnail' color, and unselected thumbnail dots' color.
+In Thumbnail Customization we can customise the  selected and unselected thumbnail's stroke.
 
 {% tabs %}
 {% highlight xaml %}
@@ -204,7 +204,7 @@ In Thumbnail Customization we can customise the  selected thumbnail' color, and 
 
 ## Navigation Button Customization
 
-In Navigation Button Customization we can customise the  navigation button's icon color and navigation button's Background color.
+In Navigation Button Customization we can customise the  navigation button's icon and Background color.
 
 {% tabs %}
 {% highlight xaml %}
@@ -259,4 +259,59 @@ In Navigation Button Customization we can customise the  navigation button's ico
 {% endtabs %}
 
 ![SfRotator with navigation button customization](images/NavigationButton.png)
+
+## Navigation Visibility
+
+We can show or hide  Navigation Button using `ShowNavigationButton` property.
+
+{% tabs %}
+{% highlight xaml %}
+
+    <ContentPage.Content>
+          <syncfusion:SfRotator x:Name="rotator" 
+                      ItemsSource="{Binding ImageCollection}" 
+                      SelectedIndex="2"
+                      BackgroundColor="#ececec"
+                       NavigationStripMode="Thumbnail"
+                      ShowNavigationButton="False"
+                      WidthRequest="550"
+                      HeightRequest="550">
+                <syncfusion:SfRotator.ItemTemplate>
+                    <DataTemplate>
+                        <Image  Source="{Binding Image}"/>
+                    </DataTemplate>
+                </syncfusion:SfRotator.ItemTemplate>
+            </syncfusion:SfRotator>
+        </ContentPage.Content>
+
+{% endhighlight %}
+{% highlight c# %}
+
+    SfRotator rotator = new SfRotator();
+    var ImageCollection = new List<RotatorModel> {
+    new RotatorModel ("image1.png"),
+    new RotatorModel ("image2.png"),
+    new RotatorModel ("image3.png"),
+    new RotatorModel ("image4.png"),
+    new RotatorModel ("image5.png")
+    };
+    var itemTemplate = new DataTemplate(() =>
+    {
+        var grid = new Grid();
+        var nameLabel = new Image();
+        nameLabel.SetBinding(Image.SourceProperty, "Image");
+        grid.Children.Add(nameLabel);
+        return grid;
+    });
+    rotator.ItemTemplate = itemTemplate;
+    rotator.NavigationStripMode = NavigationStripMode.Thumbnail;rotator.ShowNavigationButton = false;
+    rotator.ItemsSource = ImageCollection;
+    rotator.WidthRequest=550;
+    rotator.HeightRequest=550;
+    this.Content = rotator;
+
+{% endhighlight %}
+{% endtabs %}
+
+![SfRotator with ShowNavigationButton property](images/ShowNavigationButton.png)
 
