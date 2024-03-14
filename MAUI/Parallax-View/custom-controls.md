@@ -126,4 +126,4 @@ The [`ParallaxScrollingEventArgs`]() has the following three arguments:
 
 By default, the Parallax View control supports [`.NET MAUI ScrollView`]() and [Syncfusion ListView](). For custom controls, you need to implement the [`IParallaxView`]() interface from Syncfusion.Maui.Core.
 
-Refer to this [sample](https://github.com/SyncfusionExamples/MAUI-Parallax-View-Sample-Demos) for Parallax View control with custom control(ListView).
+You can find the Parallax View control with custom ListView control from this [link](https://github.com/SyncfusionExamples/MAUI-Parallax-View-Sample-Demos).
