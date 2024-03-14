@@ -9,13 +9,13 @@ documentation: ug
 
 # Load More in .NET MAUI Chat (SfChat)
 
-In `SfChat`, scroll to the top of the message list to fetch the old messages on demand in run-time either automatically or manually(by tapping the load more button) by setting the `SfChat.LoadMoreBehavior` as `LoadMoreOption.Auto` or `LoadMoreOption.Manual` respectively. You can also pass the parameter to the `SfChat.LoadMoreCommand` using the `SfChat.LoadMoreCommandParameter` property. Use the `SfChat.LazyLoading` property to show the busy indicator denoting the loading operation in SfChat.
+In `SfChat`, scroll to the top of the message list to fetch the old messages on demand in run-time either automatically or manually(by tapping the load more button) by setting the `LoadMoreBehavior` as `LoadMoreOption.Auto` or `LoadMoreOption.Manual` respectively. You can also pass the parameter to the `LoadMoreCommand` using the `LoadMoreCommandParameter` property. Use the `LazyLoading` property to show the busy indicator denoting the loading operation in SfChat.
 
-N> SfChat does not support LoadMore when `SfChat.ShowTimeBreak` is enabled. Because SfListView has a limitation that `LoadMoreOption.Auto` or `LoadMoreOption.AutoOnScroll` works only when `LoadMorePosition.Bottom` is `enabled`.
+N> SfChat does not support LoadMore when `ShowTimeBreak` is enabled. Because SfListView has a limitation that `LoadMoreOption.Auto` or `LoadMoreOption.AutoOnScroll` works only when `LoadMorePosition.Bottom` is `enabled`.
 
 ## Load more manually
 
-By default, upon reaching the top of the chat list, a load more button will be displayed if `SfChat.LoadMoreBehavior` is set as `LoadMoreOption.Manual`. Clicking on this button triggers the `SfChat.LoadMoreCommand`. In the command's action, set the `IsLazyLoading` as `true` to show the busy indicator and hide the load more button. Once the messages are loaded, set the `IsLazyLoading` back to `false` to hide the busy indicator.
+By default, upon reaching the top of the chat list, a load more button will be displayed if `LoadMoreBehavior` is set as `LoadMoreOption.Manual`. Clicking on this button triggers the `LoadMoreCommand`. In the command's action, set the `IsLazyLoading` as `true` to show the busy indicator and hide the load more button. Once the messages are loaded, set the `IsLazyLoading` back to `false` to hide the busy indicator.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="14" %}
@@ -149,9 +149,9 @@ public partial class LoadMoreViewModel : INotifyPropertyChanged
 
 ## Load more automatically
 
-Set the `SfChat.LoadMoreBehavior` to `LoadMoreOption.Auto`, a busy indicator will appear automatically when you reach the top of the chat list. Unlike `LoadMoreOption.Manual`, `SfChat.LoadMoreCommand` executes automatically without needing any additional clicks when you reach the top of the chat list. 
+Set the `LoadMoreBehavior` to `LoadMoreOption.Auto`, a busy indicator will appear automatically when you reach the top of the chat list. Unlike `LoadMoreOption.Manual`, `SfChat.LoadMoreCommand` executes automatically without needing any additional clicks when you reach the top of the chat list. 
 
-N> The `SfChat.IsLazyLoading` will always be `true` if `SfChat.LoadMoreBehavior` is `Auto`. So, to cancel the load more operation and remove the load more view from the chat, set the `LoadMoreBehavior` as `LoadMoreOption.None`.
+N> When the `LoadMoreBehavior` is set to `Auto` `IsLazyLoading` will be `true` by default. So, to cancel the load more operation and remove the load more view from the chat, set the `LoadMoreBehavior` as `LoadMoreOption.None`.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
