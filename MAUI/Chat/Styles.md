@@ -888,7 +888,7 @@ You can style the elements of the typing indicator view by setting values to the
         dictionary.Add("SfChatTheme", "CustomTheme");
         dictionary.Add("SfChatTypingIndicatorBackground", Color.FromHex("#eee479"));
         dictionary.Add("SfChatTypingIndicatorTextColor", Colors.Blue);
-        dictionary.Add("SfChatTypingIndicatorFontFamily", "Roboto-Regular");
+        dictionary.Add("SfChatTypingIndicatorFontFamily", "Roboto-Medium");
         dictionary.Add("SfChatTypingIndicatorFontAttributes", FontAttributes.Italic);
         dictionary.Add("SfChatTypingIndicatorFontSize", 16);
         this.Resources.Add(dictionary);
