@@ -11,7 +11,7 @@ documentation: ug
 
 In `SfChat`, you can enable swiping by setting the `AllowSwiping` property to `true`. When you swipe left or right on a message, swipe views appear. It provides customizable swipe templates for swiping on the left and right sides. You can also limit how far you can swipe on a message by setting the `MaxSwipeOffset` property.
 
-### Swipe templates
+## Swipe templates
 
 The Swiping can be customized by using the `StartSwipeTemplate` when swiping towards the right and `EndSwipeTemplate` when swiping towards the left. The content inside the swipe template is arranged based on the offset values when swiping a message.
 
@@ -183,7 +183,7 @@ namespace GettingStarted
 
 ![Swipe views in .NET MAUI Chat](images/swiping/maui-chat-start-and-end-swipe-template.png)
 
-### Swipe Events
+## Swipe Events
 
 ### SwipeStarted Event
 
