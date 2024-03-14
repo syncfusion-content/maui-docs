@@ -107,8 +107,6 @@ The following code sample demonstrates how to Display images and text in the Rad
 
 {% highlight c# %}
 
-![Display image with text in .NET MAUI RadialMenu.](images/populating-items/maui-radialmenu-populating-text-with-images.png)
-
 using Syncfusion.Maui.RadialMenu;
 
 namespace RadialSample
@@ -138,6 +136,8 @@ namespace RadialSample
 {% endhighlight %}
 
 {% endtabs %}
+
+![Display image with text in .NET MAUI RadialMenu.](images/populating-items/maui-radialmenu-populating-text-with-images.png)
 
 ## Custom Font with Text
 
@@ -329,7 +329,10 @@ Using [`ItemsSource`], objects of any class can be given as items for [`SfRadial
     </ContentPage.BindingContext>
     <ContentPage.Content>
         <syncfusion:SfRadialMenu 
-            x:Name="radial_Menu" 
+            x:Name="radial_Menu"
+            CenterButtonFontSize="28"
+            CenterButtonFontFamily="Maui Material Assets"
+            CenterButtonText="&#xe71b;"
             ItemsSource="{Binding EmployeeCollection}">
             <syncfusion:SfRadialMenu.ItemTemplate>
                 <DataTemplate>
@@ -399,6 +402,8 @@ namespace RadialSample
 {% endhighlight %}
 
 {% endtabs %}
+
+![Display RadialMenu with ItemsSource and ItemTemplate.](images/populating-items/maui-radialmenu-populating-itemssource-with-itemtemplate.png)
 
 ## Animation duration
 

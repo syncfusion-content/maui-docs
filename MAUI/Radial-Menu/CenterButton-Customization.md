@@ -100,6 +100,8 @@ namespace RadialSample
 
 {% endtabs %}
 
+![Display RadialMenu with CenterButtonText and CenterButtonBackText.](images/centerbutton-customization/maui-radialmenu-centerbutton-customization-text.png)
+
 ## CenterButtonTextColor and CenterButtonBackTextColor
 
 The [`CenterButtonTextColor`] changes the text color of the center button in [`SfRadialMenu`], and the [`CenterButtonBackTextColor`] changes the text color of the center back button in [`SfRadialMenu`].
@@ -255,6 +257,8 @@ namespace RadialSample
 {% endhighlight %}
 
 {% endtabs %}
+
+
 
 ## CenterButtonRadius
 
