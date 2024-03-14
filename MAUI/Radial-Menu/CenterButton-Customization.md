@@ -92,6 +92,8 @@ namespace RadialSample
                 colorSubMenuItem.ItemWidth = 50;
                 radialMenu.Items[4].Items.Add(colorSubMenuItem);
             }
+
+            this.Content = radialMenu;
         }
     }
 }
@@ -188,6 +190,8 @@ namespace RadialSample
                 colorSubMenuItem.ItemWidth = 50;
                 radialMenu.Items[4].Items.Add(colorSubMenuItem);
             }
+
+            this.Content = radialMenu;
         }
     }
 }
@@ -409,6 +413,8 @@ namespace RadialSample
                 colorSubMenuItem.ItemWidth = 50;
                 radialMenu.Items[4].Items.Add(colorSubMenuItem);
             }
+
+            this.Content = radialMenu;
         }
     }
 }
@@ -504,6 +510,8 @@ namespace RadialSample
                 colorSubMenuItem.ItemWidth = 50;
                 radialMenu.Items[4].Items.Add(colorSubMenuItem);
             }
+
+            this.Content = radialMenu;
         }
     }
 }
@@ -595,6 +603,8 @@ namespace RadialSample
                 colorSubMenuItem.ItemWidth = 50;
                 radialMenu.Items[4].Items.Add(colorSubMenuItem);
             }
+
+            this.Content = radialMenu;
         }
     }
 }
@@ -790,7 +800,6 @@ You can customize the center button using [`CenterButtonView`] and center back b
 {% highlight C# %}
 
 using Syncfusion.Maui.RadialMenu;
-using System.Collections.ObjectModel;
 
 namespace RadialSample
 {
