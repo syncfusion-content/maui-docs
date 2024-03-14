@@ -397,7 +397,7 @@ To make migration from [Xamarin SfPdfViewer](https://www.syncfusion.com/xamarin-
 </tr>
 <tr>
 <td>{{'[SaveDocument](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.SfPdfViewer.html#Syncfusion_SfPdfViewer_XForms_SfPdfViewer_SaveDocument)'| markdownify }}</td>
-<td>{{`FlattenOnSave`| markdownify }}</td>
+<td>{{'FlattenOnSave'| markdownify }}</td>
 <td>Saves the document and returns the stream.</td>
 </tr>
 </table>
