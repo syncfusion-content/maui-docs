@@ -20,12 +20,12 @@ Enhance .NET MAUI StepProgressBar's accessibility with a user-friendly design, e
 <tr>
 <td>Step</td>
 <td>Step Number PrimaryText/SecondaryText Stepstatus</td>
-<td>Step 1 Ordered Completed </td>
+<td>Step 1 Login Login successfully completed </td>
 </tr>
 <tr>
 <td>Step</td>
 <td>Step Number PrimaryFormattedText/SecondaryFormattedText Stepstatus</td>
-<td>Step 1 Ordered Completed </td>
+<td>Step 1 Login Login successfully Completed </td>
 </tr>
 </table>
 
