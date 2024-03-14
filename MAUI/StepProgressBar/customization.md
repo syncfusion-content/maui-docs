@@ -70,6 +70,8 @@ public MainPage()
 {% endhighlight %}
 {% endtabs %}
 
+ ![Step shape in .NET MAUI SfStepProgressBar.](images/customization/maui-stepprogressbar-stepshape.png)
+
 ## Customize step content 
 Customize the step content type, size, active step index, stroke width, and active step progress value by using these properties, [ContentType]() with [Numbering](), [Tick](), [Cross](), [Dot]() and [Images](). 
 
@@ -128,6 +130,8 @@ this.Content = sfstepProgressbar;
 {% endhighlight %}
 {% endtabs %}
 
+ ![Step content in .NET MAUI SfStepProgressBar.](images/customization/maui-stepprogressbar-stepcontent.png)
+ 
 ## Animation duration
 Customize the progress animation duration by using the [ProgressAnimationDuration]() property in `SfStepProgressBar`. By default the value of the animation duration is `1000`.
 
@@ -279,3 +283,5 @@ public MainPage()
 
 {% endhighlight %}
 {% endtabs %}
+
+ ![Step customization in .NET MAUI SfStepProgressBar.](images/customization/maui-stepprogressbar-customstepprogress.png)
