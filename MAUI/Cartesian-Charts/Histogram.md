@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Histogram Chart in .NET MAUI Chart control | Syncfusion
+title: Histogram Chart in .NET MAUI Chart Control | Syncfusion
 description: Learn here all about the Histogram chart and its type in Syncfusion .NET MAUI Chart (SfCartesianChart) control. 
 platform: maui
 control: SfCartesianChart
@@ -10,7 +10,7 @@ documentation: ug
 # Histogram Chart in .NET MAUI Chart
 [Histogram chart]() is a graphical representation that organizes a group of data points into user-specified ranges. It is similar in appearance to a column chart.
 
-Customize histogram intervals using the [HistogramInterval]() property and normal distribution curve can be collapsed using [ShowNormalDistributionCurve]() property. 
+Customize histogram intervals using the [HistogramInterval]() property and normal distribution curve can be collapsed using the [ShowNormalDistributionCurve]() property. 
 
 {% tabs %}
 

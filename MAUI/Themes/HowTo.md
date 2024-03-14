@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to customize theming in Syncfusion controls
-description: Learn here about how to switch between light and dark themes in Syncfusion Maui controls and more details.
+description: Learn here all about how to switch between light and dark themes in Syncfusion Maui controls, along with additional details on this feature.
 platform: maui
 control: General
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Switching between light theme and dark theme
 
-To switch between light and dark themes in Syncfusion Maui controls, refer to the following example code.
+Refer to the following example code to switch between light and dark themes in Syncfusion Maui controls.
 
 {% highlight C# %} 
 void UpdateTheme(object sender, System.EventArgs e)
@@ -34,4 +34,4 @@ void UpdateTheme(object sender, System.EventArgs e)
 
 {% endhighlight %}
 
-The complete Theme switch sample is available in `this` link.
+The complete theme switch sample is available in `this` link.

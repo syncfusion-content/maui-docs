@@ -20,7 +20,8 @@ This section provides a quick overview for getting started with the .NET MAUI Ch
 
 {% tabs %}
 {% highlight xaml hl_lines="4" %}
-    <ContentPage   
+
+    <ContentPage> 
       . . .
       xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Chat;assembly=Syncfusion.Maui.Chat">
       <syncfusion:SfChat />
@@ -72,9 +73,9 @@ The `Syncfusion.Maui.Core` NuGet is a dependent package for all the Syncfusion c
 
             builder.ConfigureSyncfusionCore();
             return builder.Build();
-         }
-       }
-    }
+          }
+        }
+     }
 
 {% endhighlight %} 
 {% endtabs %}
@@ -259,3 +260,5 @@ Messages can be separated based on their date and time of creation and this can 
 {% endtabs %}
 
 ![Time break support in .NET MAUI Chat](images/getting-started/maui-chat-timebreak.png)
+
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/getting-started-with-.net-maui-chat)
