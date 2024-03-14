@@ -31,6 +31,8 @@ This section provides a quick overview of how to get started with the `.NET MAUI
     <treemap:SfTreeMap />
 </ContentPage>
 
+{% endhighlight %}
+
 {% highlight C# hl_lines="1 9 10" %}
 
 using Syncfusion.Maui.TreeMap;
@@ -47,6 +49,8 @@ public partial class MainPage : ContentPage
 }
 
 {% endhighlight %}
+
+{% endtabs %}
 
 ## Register the handler
 
