@@ -219,21 +219,10 @@ This page lists the keys for each control and the element to which it is mapped 
         <th>Keys<br/><br/></th>
         <th>Description<br/><br/></th>
     </tr>
-
     <tr>
-        <td rowspan="27">
-            SfDataGridStyles  
-            <br/>
-            <br/>
-        </td>
-		<td>
-           SfDataGridTheme 
-            <br/>
-            <br/>
-        </td>
-        <td>    
-            By merging this key in application resources, it is possible to customize the appearance of the SfDataGrid without merging common theme resource and control style resource dictionaries.
-			
+        <td rowspan="27">SfDataGridStyles<br/><br/></td>
+		<td>SfDataGridTheme<br/><br/></td>
+        <td>By merging this key in application resources, it is possible to customize the appearance of the SfDataGrid without merging common theme resource and control style resource dictionaries.	
 {% highlight xaml %}
 <Application xmlns:syncTheme="clr-namespace:Syncfusion.Maui.Themes;assembly=Syncfusion.Maui.Core"
              ...>
@@ -374,7 +363,6 @@ This page lists the keys for each control and the element to which it is mapped 
         <td rowspan="11">SfDataPagerStyles<br/><br/></td>
 		<td>SfDataPagerTheme<br/><br/></td>
         <td>By merging this key in application resources, it is possible to customize the appearance of the SfDataPager without merging common theme resource and control style resource dictionaries.
-			
 {% highlight xaml %}
 <Application xmlns:syncTheme="clr-namespace:Syncfusion.Maui.Themes;assembly=Syncfusion.Maui.Core"
              ...>
@@ -454,7 +442,6 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </th>
     </tr>
-
     <tr>
         <td rowspan="7">
             SfExpanderStyles  
