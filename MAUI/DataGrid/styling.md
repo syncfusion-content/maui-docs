@@ -316,7 +316,7 @@ You can apply the style for a particular column by using [DataGridColumn.CellSty
                                         CellStyle="{StaticResource customCellStyle}"
                                         HeaderStyle="{StaticResource customHeaderStyle}"/>
         </syncfusion:SfDataGrid.Columns>
-    </syncfusion:SfDataGrid>]
+    </syncfusion:SfDataGrid>
 </ContentPage>
 {% endhighlight %}
 {% endtabs %}
