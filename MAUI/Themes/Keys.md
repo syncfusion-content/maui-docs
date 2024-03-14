@@ -13166,7 +13166,7 @@ This page lists the keys for each control and the element to which it is mapped 
     </tr>
 
     <tr>
-        <td rowspan="23">
+        <td rowspan="16">
             SfCartesianChartStyles  <br/> <br/>
         </td>
 		<td> SfCartesianChartTheme <br/> <br/>
@@ -13184,8 +13184,8 @@ This page lists the keys for each control and the element to which it is mapped 
             <syncTheme:SyncfusionThemeResourceDictionary />
             <ResourceDictionary>
                 <x:String x:Key="SfCartesianChartTheme">CommonTheme</x:String>
-                <Color x:Key="SfTextInputLayoutStroke">Yellow</Color>
-                <Color x:Key="SfTextInputLayoutContainerBackground">Pink</Color>
+                <Color x:Key="SfCartesianChartBackground">AliceBlue</Color>
+                <Color x:Key="SfCartesianChartMajorGridLineStroke">Black</Color>
             </ResourceDictionary>
         </ResourceDictionary.MergedDictionaries>
     </ResourceDictionary>
@@ -13267,7 +13267,7 @@ This page lists the keys for each control and the element to which it is mapped 
          <th> Description <br/> <br/> </th>
      </tr>
      <tr>
-         <td rowspan="23">
+         <td rowspan="6">
              SfCircularChartStyles  <br/> <br/>
          </td>
          <td> SfCircularChartTheme <br/> <br/>
@@ -13284,8 +13284,8 @@ This page lists the keys for each control and the element to which it is mapped 
              <syncTheme:SyncfusionThemeResourceDictionary />
              <ResourceDictionary>
                  <x:String x:Key="SfCircularChartTheme">CommonTheme</x:String>
-                 <Color x:Key="SfTextInputLayoutStroke">Yellow</Color>
-                 <Color x:Key="SfTextInputLayoutContainerBackground">Pink</Color>
+                 <Color x:Key="SfCircularChartBackground">LightYellow</Color>
+                 <Color x:Key="SfCircularChartTooltipBackground">Gray</Color>
              </ResourceDictionary>
          </ResourceDictionary.MergedDictionaries>
      </ResourceDictionary>
@@ -13326,7 +13326,7 @@ This page lists the keys for each control and the element to which it is mapped 
          <th> Description <br/> <br/> </th>
      </tr>
      <tr>
-         <td rowspan="23">
+         <td rowspan="6">
              SfFunnelStyles  <br/> <br/>
          </td>
          <td> SfFunnelChartTheme <br/> <br/>
@@ -13343,8 +13343,8 @@ This page lists the keys for each control and the element to which it is mapped 
              <syncTheme:SyncfusionThemeResourceDictionary />
              <ResourceDictionary>
                  <x:String x:Key="SfFunnelChartTheme">CommonTheme</x:String>
-                 <Color x:Key="SfTextInputLayoutStroke">Yellow</Color>
-                 <Color x:Key="SfTextInputLayoutContainerBackground">Pink</Color>
+                 <Color x:Key="SfFunnelChartBackground">LightYellow</Color>
+                 <Color x:Key="SfFunnelChartTooltipBackground">Gray</Color>
              </ResourceDictionary>
          </ResourceDictionary.MergedDictionaries>
      </ResourceDictionary>
@@ -13385,7 +13385,7 @@ This page lists the keys for each control and the element to which it is mapped 
           <th> Description <br/> <br/> </th>
       </tr>
       <tr>
-          <td rowspan="23">
+          <td rowspan="6">
               SfPyramidChartStyles  <br/> <br/>
           </td>
           <td> SfPyramidChartTheme <br/> <br/>
@@ -13402,8 +13402,8 @@ This page lists the keys for each control and the element to which it is mapped 
               <syncTheme:SyncfusionThemeResourceDictionary />
               <ResourceDictionary>
                   <x:String x:Key="SfPyramidChartTheme">CommonTheme</x:String>
-                  <Color x:Key="SfTextInputLayoutStroke">Yellow</Color>
-                  <Color x:Key="SfTextInputLayoutContainerBackground">Pink</Color>
+                  <Color x:Key="SfPyramidChartBackground">LightYellow</Color>
+                  <Color x:Key="SfPyramidChartTooltipBackgrounds">Gray</Color>
               </ResourceDictionary>
           </ResourceDictionary.MergedDictionaries>
       </ResourceDictionary>
@@ -13444,7 +13444,7 @@ This page lists the keys for each control and the element to which it is mapped 
            <th> Description <br/> <br/> </th>
        </tr>
        <tr>
-           <td rowspan="23">
+           <td rowspan="14">
                SfPolarChartStyles  <br/> <br/>
            </td>
            <td> SfPolarChartTheme <br/> <br/>
@@ -13461,8 +13461,8 @@ This page lists the keys for each control and the element to which it is mapped 
                <syncTheme:SyncfusionThemeResourceDictionary />
                <ResourceDictionary>
                    <x:String x:Key="SfPolarChartTheme">CommonTheme</x:String>
-                   <Color x:Key="SfTextInputLayoutStroke">Yellow</Color>
-                   <Color x:Key="SfTextInputLayoutContainerBackground">Pink</Color>
+                   <Color x:Key="SfPolarChartBackground">LightYellow</Color>
+                   <Color x:Key="SfPolarChartTooltipBackground">LightPink</Color>
                </ResourceDictionary>
            </ResourceDictionary.MergedDictionaries>
        </ResourceDictionary>
@@ -13535,7 +13535,7 @@ This page lists the keys for each control and the element to which it is mapped 
          <th> Description <br/> <br/> </th>
      </tr>
      <tr>
-         <td rowspan="23">
+         <td rowspan="7">
              SfSunburstChartStyles  <br/> <br/>
          </td>
          <td> SfSunburstChartTheme <br/> <br/>
@@ -13552,8 +13552,8 @@ This page lists the keys for each control and the element to which it is mapped 
              <syncTheme:SyncfusionThemeResourceDictionary />
              <ResourceDictionary>
                  <x:String x:Key="SfSunburstChartTheme">CommonTheme</x:String>
-                 <Color x:Key="SfTextInputLayoutStroke">Yellow</Color>
-                 <Color x:Key="SfTextInputLayoutContainerBackground">Pink</Color>
+                 <Color x:Key="SfSunburstChartBackground">LightGreen</Color>
+                 <Color x:Key="SfSunburstChartTooltipBackground">LightYellow</Color>
              </ResourceDictionary>
          </ResourceDictionary.MergedDictionaries>
      </ResourceDictionary>
