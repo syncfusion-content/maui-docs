@@ -813,8 +813,8 @@ You can style the elements of the editor view by setting values to the in-built 
         ResourceDictionary dictionary = new ResourceDictionary();
         dictionary.Add("SfChatTheme", "CustomTheme");
         dictionary.Add("SfChatEditorPlaceholderTextColor", Colors.Blue);
-        dictionary.Add("SfChatEditorBackground", Colors.Violet);
-        dictionary.Add("SfChatEditorTextColor", Colors.Gray);
+        dictionary.Add("SfChatEditorBackground", Colors.LightGreen);
+        dictionary.Add("SfChatEditorTextColor", Colors.Black);
         dictionary.Add("SfChatEditorStroke", Colors.Black);
         dictionary.Add("SfChatEditorFontFamily", "Roboto-Medium");
         dictionary.Add("SfChatEditorFontAttributes", FontAttributes.Italic);
@@ -1094,7 +1094,7 @@ You can style the send message button based on its state by setting values to th
             <syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
                 <ResourceDictionary>
                     <x:String x:Key="SfChatTheme">CustomTheme</x:String>
-                    <Color x:Key="SfChatSendButtonDisabledColor">purple</Color>
+                    <Color x:Key="SfChatSendButtonDisabledColor">Purple</Color>
                     <Color x:Key="SfChatSendButtonColor">DeepPink</Color>
                     <Color x:Key="SfChatSendButtonBackground">SkyBlue</Color>
                     <Color x:Key="SfChatDisabledSendButtonBackground">LightGreen</Color>
@@ -1112,10 +1112,10 @@ You can style the send message button based on its state by setting values to th
         InitializeComponent();
         ResourceDictionary dictionary = new ResourceDictionary();
         dictionary.Add("SfChatTheme", "CustomTheme");
-        dictionary.Add("SfChatSendButtonDisabledColor", Colors.Blue);
+        dictionary.Add("SfChatSendButtonDisabledColor", Colors.Purple);
         dictionary.Add("SfChatSendButtonColor", Colors.DeepPink);
-        dictionary.Add("SfChatSendButtonBackground", Color.FromHex("#d9d9d9"));
-        dictionary.Add("SfChatDisabledSendButtonBackground", Colors.SkyBlue);
+        dictionary.Add("SfChatSendButtonBackground", Colors.SkyBlue);
+        dictionary.Add("SfChatDisabledSendButtonBackground", Colors.LightGreen);
         this.Resources.Add(dictionary);
         ....
     }
