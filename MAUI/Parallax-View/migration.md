@@ -158,6 +158,7 @@ this.Content = parallax;
 <td>IParallaxView</td>
 <td>IParallaxView</td>
 <td>Defines a event and a property to perform parallax scrolling.</td>
+</tr>
 </table>
 
 ## Enums

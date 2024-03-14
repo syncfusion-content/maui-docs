@@ -159,34 +159,34 @@ The content of the label can be customized using the [LabelContext]() property. 
 
 {% highlight xaml %}
 
-    <chart:SfCartesianChart IsTransposed="True">
-        . . .
-        <chart:ColumnSeries ItemsSource="{Binding Data}" 
-                            ShowDataLabels="True"
-                            XBindingPath="Name"
-                            YBindingPath="Height" 
-                            LabelContext="Percentage"/>
+<chart:SfCartesianChart IsTransposed="True">
+    . . .
+    <chart:ColumnSeries ItemsSource="{Binding Data}" 
+                        ShowDataLabels="True"
+                        XBindingPath="Name"
+                        YBindingPath="Height" 
+                        LabelContext="Percentage"/>
 
-    </chart:SfCartesianChart>
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
-    chart.IsTransposed = true;
-    . . .
-    ColumnSeries series = new ColumnSeries()
-    {
-        ItemsSource = new ViewModel().Data,
-        XBindingPath = "Name",
-        YBindingPath = "Height",
-        ShowDataLabels = true,
-        LabelContext = LabelContext.Percentage
-    };
+SfCartesianChart chart = new SfCartesianChart();
+chart.IsTransposed = true;
+. . .
+ColumnSeries series = new ColumnSeries()
+{
+    ItemsSource = new ViewModel().Data,
+    XBindingPath = "Name",
+    YBindingPath = "Height",
+    ShowDataLabels = true,
+    LabelContext = LabelContext.Percentage
+};
 
-    chart.Series.Add(series);
-    this.Content = chart;
+chart.Series.Add(series);
+this.Content = chart;
         
 {% endhighlight %}
 
@@ -202,64 +202,74 @@ The [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chart
 
 {% highlight xaml %}
 
-    <chart:SfCartesianChart IsTransposed="True" >
-        <chart:SfCartesianChart.Resources>
-            <DataTemplate x:Key="labelTemplate">
-                <HorizontalStackLayout Spacing="5">
-                    <Label Text="{Binding Item.Values}" VerticalOptions="Center" FontSize = "15"/>
-                    <Image Source="arrow.png" WidthRequest="15" HeightRequest="15"/>
-                </HorizontalStackLayout>
-            </DataTemplate>
-        </chart:SfCartesianChart.Resources>
-        . . .
-        <chart:ColumnSeries ItemsSource="{Binding Data}" 
-                            LabelTemplate="{StaticResource labelTemplate}"
-                            XBindingPath="Name"
-                            YBindingPath="Values" 
-                            ShowDataLabels="True"/>
+<chart:SfCartesianChart IsTransposed="True" >
+    <chart:SfCartesianChart.Resources>
+        <DataTemplate x:Key="labelTemplate">
+            <HorizontalStackLayout Spacing="5" WidthRequest="100">
+                <Image Source="arrow.png" WidthRequest="15" HeightRequest="15"/>
+                <Label Text="{Binding Item.Values}" VerticalOptions="Center" FontSize = "15"/>               
+            </HorizontalStackLayout>
+        </DataTemplate>
+    </chart:SfCartesianChart.Resources>
+    . . .
+    <chart:ColumnSeries ItemsSource="{Binding Data}" 
+                        LabelTemplate="{StaticResource labelTemplate}"
+                        XBindingPath="Name"
+                        YBindingPath="Values" 
+                        ShowDataLabels="True">
 
-    </chart:SfCartesianChart>
+        <chart:ColumnSeries.DataLabelSettings>
+            <chart:CartesianDataLabelSettings LabelPlacement="Outer"/>
+        </chart:ColumnSeries.DataLabelSettings>
+
+    </chart:ColumnSeries>
+
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
-    chart.IsTransposed = true;
-    . . .
-    ColumnSeries series = new ColumnSeries();
-    series.ShowDataLabels = true;
-    series.ItemsSource = new ViewModel().Data;
-    series.XBindingPath = "Name";
-    series.YBindingPath = "Values";
+SfCartesianChart chart = new SfCartesianChart();
+chart.IsTransposed = true;
+. . .
+ColumnSeries series = new ColumnSeries();
+series.ShowDataLabels = true;
+series.ItemsSource = new ViewModel().Data;
+series.XBindingPath = "Name";
+series.YBindingPath = "Values";
+series.DataLabelSettings = new CartesianDataLabelSettings()
+{
+    LabelPlacement = DataLabelPlacement.Outer
+};
 
-    DataTemplate labelTemplate = new DataTemplate(() =>
+DataTemplate labelTemplate = new DataTemplate(() =>
+{
+    HorizontalStackLayout horizontalStackLayout = new HorizontalStackLayout { Spacing = 5, WidthRequest=100 };
+
+    var label = new Label
     {
-        HorizontalStackLayout horizontalStackLayout = new HorizontalStackLayout { Spacing = 5 };
+        VerticalOptions = LayoutOptions.Center,
+        FontSize = 15
+    };
+    label.SetBinding(Label.TextProperty, "Item.Values");
 
-        var label = new Label
-        {
-            VerticalOptions = LayoutOptions.Center,
-            FontSize = 15
-        };
-        label.SetBinding(Label.TextProperty, new Binding("Item.Values"));
+    var image = new Image
+    {
+        Source = "arrow.png",
+        WidthRequest = 15,
+        HeightRequest = 15
+    };
+    
+    horizontalStackLayout.Children.Add(image);
+    horizontalStackLayout.Children.Add(label);
+    
+    return horizontalStackLayout;
+});
 
-        var image = new Image
-        {
-            Source = "arrow.png",
-            WidthRequest = 15,
-            HeightRequest = 15
-        };
-        
-        horizontalStackLayout.Children.Add(label);
-        horizontalStackLayout.Children.Add(image);
-        
-        return horizontalStackLayout;
-    });
-
-    series.LabelTemplate = labelTemplate;
-    chart.Series.Add(series);
-    this.Content = chart;
+series.LabelTemplate = labelTemplate;
+chart.Series.Add(series);
+this.Content = chart;
         
 {% endhighlight %}
 
