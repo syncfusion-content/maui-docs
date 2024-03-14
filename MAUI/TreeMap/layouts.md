@@ -13,7 +13,7 @@ The Tree Map control provides multiple layout types for organizing hierarchical 
 
 ## Squarified
 
-The `Squarified` layout visualizes data in square-like rectangles with an optimal aspect ratio. It divides rectangles considering both the height and width of the parent view. This layout, which is the default rendering type for TreeMap, determines the size of each rectangle based on the `PrimaryValuePath` property value and the available size.
+The `Squarified` layout visualizes data in square-like rectangles with an optimal aspect ratio. It divides rectangles considering both the height and width of the parent view. This layout, which is the default rendering type for TreeMap, determines the size of each rectangle will be calculated based on the `PrimaryValuePath` property value and the available size.
 
 {% tabs %}
 {% highlight XAML hl_lines="3" %}
@@ -21,9 +21,11 @@ The `Squarified` layout visualizes data in square-like rectangles with an optima
 <treemap:SfTreeMap x:Name="treeMap"
                    DataSource="{Binding PopulationDetails}"
                    LayoutType="Squarified"
-                   RangeColorValuePath="Population"
                    PrimaryValuePath="Population"
                    ShowToolTip="True">
+    <treemap:SfTreeMap.BindingContext>
+        <local:PopulationViewModel />
+    </treemap:SfTreeMap.BindingContext>
     <treemap:SfTreeMap.LeafItemSettings>
         <treemap:TreeMapLeafItemSettings LabelPath="Country">
         </treemap:TreeMapLeafItemSettings>
@@ -41,10 +43,8 @@ PopulationViewModel viewModel = new PopulationViewModel();
 treeMap.DataSource = viewModel.PopulationDetails;
 treeMap.LayoutType = LayoutType.Squarified;
 treeMap.PrimaryValuePath = "Population";
-treeMap.RangeColorValuePath = "Population";
 treeMap.LeafItemSettings = new TreeMapLeafItemSettings() { LabelPath = "Country" };
 treeMap.LeafItemBrushSettings = new TreeMapUniformBrushSettings() { Brush = new SolidColorBrush(Color.FromArgb("#D21243")) };
-treeMap.LegendSettings.ShowLegend = true;
 this.Content = treeMap;
 
 {% endhighlight %}
@@ -103,9 +103,11 @@ public class PopulationViewModel
 {% endhighlight %}
 {% endtabs %}
 
+![squarified-layout-type-in-maui-treemap](images/layouts/squarified-layout-type-in-maui-treemap.jpeg) {:width="313" height="444" .lazy .shadow-effect}
+
 ## Slice and dice auto
 
-The `SliceAndDiceAuto` layout visualizes data using long, thin rectangles arranged vertically or horizontally with a high aspect ratio, thereby offering a comprehensive view of the data. This layout will start to arrange each rectangle in a horizontal vertical or direction and the size of the rectangle will be based on the `PrimaryValuePath` property value.
+The `SliceAndDiceAuto` layout visualizes data using long, thin rectangles arranged vertically or horizontally with a high aspect ratio, thereby offering a comprehensive view of the data. This layout will start to arrange each rectangle in a horizontal or vertical direction and the size of the rectangle will be calculated based on the `PrimaryValuePath` property value.
 
 {% tabs %}
 {% highlight XAML hl_lines="3" %}
@@ -113,9 +115,10 @@ The `SliceAndDiceAuto` layout visualizes data using long, thin rectangles arrang
 <treemap:SfTreeMap x:Name="treeMap"
                    DataSource="{Binding PopulationDetails}"
                    LayoutType="SliceAndDiceAuto"
-                   RangeColorValuePath="Population"
-                   PrimaryValuePath="Population"
-                   ShowToolTip="True">
+                   PrimaryValuePath="Population">
+    <treemap:SfTreeMap.BindingContext>
+        <local:PopulationViewModel />
+    </treemap:SfTreeMap.BindingContext>
     <treemap:SfTreeMap.LeafItemSettings>
         <treemap:TreeMapLeafItemSettings LabelPath="Country">
         </treemap:TreeMapLeafItemSettings>
@@ -133,10 +136,8 @@ PopulationViewModel viewModel = new PopulationViewModel();
 treeMap.DataSource = viewModel.PopulationDetails;
 treeMap.LayoutType = LayoutType.SliceAndDiceAuto;
 treeMap.PrimaryValuePath = "Population";
-treeMap.RangeColorValuePath = "Population";
 treeMap.LeafItemSettings = new TreeMapLeafItemSettings() { LabelPath = "Country" };
 treeMap.LeafItemBrushSettings = new TreeMapUniformBrushSettings() { Brush = new SolidColorBrush(Color.FromArgb("#D21243")) };
-treeMap.LegendSettings.ShowLegend = true;
 this.Content = treeMap;
 
 {% endhighlight %}
@@ -195,9 +196,11 @@ public class PopulationViewModel
 {% endhighlight %}
 {% endtabs %}
 
+![slice-and-dice-auto-layout-type-in-maui-treemap](images/layouts/slice-and-dice-auto-layout-type-in-maui-treemap.jpeg) {:width="313" height="444" .lazy .shadow-effect}
+
 ## Slice and dice horizontal
 
-The `SliceAndDiceHorizontal` layout arranges data into horizontal rectangles with a high aspect ratio and displays them sorted horizontally. This layout will start to arrange each rectangle in a horizontal direction and the size of the rectangle will be based on the `PrimaryValuePath` property value.
+The `SliceAndDiceHorizontal` layout arranges data into horizontal rectangles with a high aspect ratio and displays them sorted horizontally. This layout will start to arrange each rectangle in a horizontal direction and the size of the rectangle will be calculated based on the `PrimaryValuePath` property value.
 
 {% tabs %}
 {% highlight XAML hl_lines="3" %}
@@ -205,16 +208,17 @@ The `SliceAndDiceHorizontal` layout arranges data into horizontal rectangles wit
 <treemap:SfTreeMap x:Name="treeMap"
                    DataSource="{Binding PopulationDetails}"
                    LayoutType="SliceAndDiceHorizontal"
-                   RangeColorValuePath="Population"
-                   PrimaryValuePath="Population"
-                   ShowToolTip="True">
-     <treemap:SfTreeMap.LeafItemSettings>
-         <treemap:TreeMapLeafItemSettings LabelPath="Country">
-         </treemap:TreeMapLeafItemSettings>
-     </treemap:SfTreeMap.LeafItemSettings>
-     <treemap:SfTreeMap.LeafItemBrushSettings>
-         <treemap:TreeMapUniformBrushSettings Brush="#D21243" />
-     </treemap:SfTreeMap.LeafItemBrushSettings>
+                   PrimaryValuePath="Population">
+    <treemap:SfTreeMap.BindingContext>
+        <local:PopulationViewModel />
+    </treemap:SfTreeMap.BindingContext>
+    <treemap:SfTreeMap.LeafItemSettings>
+        <treemap:TreeMapLeafItemSettings LabelPath="Country">
+        </treemap:TreeMapLeafItemSettings>
+    </treemap:SfTreeMap.LeafItemSettings>
+    <treemap:SfTreeMap.LeafItemBrushSettings>
+        <treemap:TreeMapUniformBrushSettings Brush="#D21243" />
+    </treemap:SfTreeMap.LeafItemBrushSettings>
 </treemap:SfTreeMap>
 
 {% endhighlight %}
@@ -225,10 +229,8 @@ PopulationViewModel viewModel = new PopulationViewModel();
 treeMap.DataSource = viewModel.PopulationDetails;
 treeMap.LayoutType = LayoutType.SliceAndDiceHorizontal;
 treeMap.PrimaryValuePath = "Population";
-treeMap.RangeColorValuePath = "Population";
 treeMap.LeafItemSettings = new TreeMapLeafItemSettings() { LabelPath = "Country" };
 treeMap.LeafItemBrushSettings = new TreeMapUniformBrushSettings() { Brush = new SolidColorBrush(Color.FromArgb("#D21243")) };
-treeMap.LegendSettings.ShowLegend = true;
 this.Content = treeMap;
 
 {% endhighlight %}
@@ -287,9 +289,11 @@ public class PopulationViewModel
 {% endhighlight %}
 {% endtabs %}
 
+![slice-and-dice-horizontal-layout-type-in-maui-treemap](images/layouts/slice-and-dice-horizontal-layout-type-in-maui-treemap.jpeg) {:width="313" height="444" .lazy .shadow-effect}
+
 ## SliceAndDiceVertical
 
-The `SliceAndDiceVertical` layout organizes data into vertical rectangles with a high aspect ratio and displays them sorted vertically. This layout will start to arrange each rectangle in a vertical direction and the size of the rectangle will be based on the `PrimaryValuePath` property value.
+The `SliceAndDiceVertical` layout organizes data into vertical rectangles with a high aspect ratio and displays them sorted vertically. This layout will start to arrange each rectangle in a vertical direction and the size of the rectangle will be calculated based on the `PrimaryValuePath` property value.
 
 {% tabs %}
 {% highlight XAML hl_lines="3" %}
@@ -297,16 +301,18 @@ The `SliceAndDiceVertical` layout organizes data into vertical rectangles with a
 <treemap:SfTreeMap x:Name="treeMap"
                    DataSource="{Binding PopulationDetails}"
                    LayoutType="SliceAndDiceVertical"
-                   RangeColorValuePath="Population"
                    PrimaryValuePath="Population"
                    ShowToolTip="True">
-     <treemap:SfTreeMap.LeafItemSettings>
-         <treemap:TreeMapLeafItemSettings LabelPath="Country">
-         </treemap:TreeMapLeafItemSettings>
-     </treemap:SfTreeMap.LeafItemSettings>
-     <treemap:SfTreeMap.LeafItemBrushSettings>
-         <treemap:TreeMapUniformBrushSettings Brush="#D21243" />
-     </treemap:SfTreeMap.LeafItemBrushSettings>
+    <treemap:SfTreeMap.BindingContext>
+        <local:PopulationViewModel />
+    </treemap:SfTreeMap.BindingContext>
+    <treemap:SfTreeMap.LeafItemSettings>
+        <treemap:TreeMapLeafItemSettings LabelPath="Country">
+        </treemap:TreeMapLeafItemSettings>
+    </treemap:SfTreeMap.LeafItemSettings>
+    <treemap:SfTreeMap.LeafItemBrushSettings>
+        <treemap:TreeMapUniformBrushSettings Brush="#D21243" />
+    </treemap:SfTreeMap.LeafItemBrushSettings>
 </treemap:SfTreeMap>
 
 {% endhighlight %}
@@ -317,10 +323,8 @@ PopulationViewModel viewModel = new PopulationViewModel();
 treeMap.DataSource = viewModel.PopulationDetails;
 treeMap.LayoutType = LayoutType.SliceAndDiceVertical;
 treeMap.PrimaryValuePath = "Population";
-treeMap.RangeColorValuePath = "Population";
 treeMap.LeafItemSettings = new TreeMapLeafItemSettings() { LabelPath = "Country" };
 treeMap.LeafItemBrushSettings = new TreeMapUniformBrushSettings() { Brush = new SolidColorBrush(Color.FromArgb("#D21243")) };
-treeMap.LegendSettings.ShowLegend = true;
 this.Content = treeMap;
 
 {% endhighlight %}
@@ -375,6 +379,8 @@ public class PopulationViewModel
         set;
     }
 }
+
+![slice-and-dice-vertical-layout-type-in-maui-treemap](images/layouts/slice-and-dice-vertical-layout-type-in-maui-treemap.jpeg) {:width="313" height="444" .lazy .shadow-effect}
 
 {% endhighlight %}
 {% endtabs %}

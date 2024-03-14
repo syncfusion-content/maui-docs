@@ -9,24 +9,27 @@ documentation: ug
 
 # Legend in .NET MAUI TreeMap (SfTreeMap)
 
-The legend provides valuable information for interpreting TreeMap displays, presenting data through various colors, shapes, and other identifiers
+The legend provides valuable information for interpreting TreeMap displays by presenting data through various colors, shapes, and other identifiers.
 
 ## Enable legend
 
 To incorporate a legend for the TreeMap control, utilize the `ShowLegend` property within `LegendSettings.` It is possible to customize the legend item’s color and text using the `LeafItemBrushSettings` and `LegendSettings` properties of `SfTreemap.`
 
 {% tabs %}
-{% highlight XAML hl_lines="5" %}
+{% highlight XAML hl_lines="8 9 10" %}
 
 <treemap:SfTreeMap x:Name="treeMap"
                    DataSource="{Binding PopulationDetails}"
                    RangeColorValuePath="Population"
                    PrimaryValuePath="Population">
+    <treemap:SfTreeMap.BindingContext>
+        <local:PopulationViewModel />
+    </treemap:SfTreeMap.BindingContext>
+    <treemap:SfTreeMap.LegendSettings>
+        <treemap:TreeMapLegendSettings ShowLegend="True"/>
+    </treemap:SfTreeMap.LegendSettings>
     <treemap:SfTreeMap.LeafItemSettings>
         <treemap:TreeMapLeafItemSettings LabelPath="Country">
-            <treemap:TreeMapLeafItemSettings.TextStyle>
-                <treemap:TreeMapTextStyle TextColor="#000000" />
-            </treemap:TreeMapLeafItemSettings.TextStyle>
         </treemap:TreeMapLeafItemSettings>
     </treemap:SfTreeMap.LeafItemSettings>
     <treemap:SfTreeMap.LeafItemBrushSettings>
@@ -47,19 +50,19 @@ To incorporate a legend for the TreeMap control, utilize the `ShowLegend` proper
             </treemap:TreeMapRangeBrushSettings.RangeBrushes>
         </treemap:TreeMapRangeBrushSettings>
     </treemap:SfTreeMap.LeafItemBrushSettings>
-    <treemap:SfTreeMap.LegendSettings>
-        <treemap:TreeMapLegendSettings ShowLegend="True"/>
-    </treemap:SfTreeMap.LegendSettings>
 </treemap:SfTreeMap>
 
 {% endhighlight %}
-{% highlight C# hl_lines="4" %}
+{% highlight C# hl_lines="6" %}
 
 SfTreeMap treeMap = new SfTreeMap();
 PopulationViewModel viewModel = new PopulationViewModel();
 treeMap.DataSource = viewModel.PopulationDetails;
+treeMap.PrimaryValuePath = "Population";
+treeMap.RangeColorValuePath = "Population";
 treeMap.LegendSettings.ShowLegend = true;
-this.treeMap.LeafItemBrushSettings = new TreeMapRangeBrushSettings()
+treeMap.LeafItemSettings = new TreeMapLeafItemSettings() { LabelPath = "Country" };
+treeMap.LeafItemBrushSettings = new TreeMapRangeBrushSettings()
 {
     RangeBrushes = new List<TreeMapRangeBrush>()
     {
@@ -129,405 +132,64 @@ public class PopulationViewModel
 
 ## Placement
 
-You can position the legend items in different directions using the `TreeMapLegendSettings.Placement` property. The default value of the `Placement` property is `Placement.Top`. The possible values are `Left`, `Right`, `Top`, and `Bottom`.
+You can position the legend items in different directions using the `Placement` property of `LegendSettings` in SfTreeMap. The default value of the `Placement` property is `Top.` The possible values include `Left,` `Right,` `Top,` and `Bottom.`
 
 {% tabs %}
-{% highlight XAML hl_lines="5" %}
+{% highlight XAML hl_lines="8 9 10 11" %}
 
 <treemap:SfTreeMap x:Name="treeMap"
                    DataSource="{Binding PopulationDetails}"
                    RangeColorValuePath="Population"
-                   PrimaryValuePath="Population"
-                   ShowToolTip="True">
-    <treemap:SfTreeMap.LeafItemSettings>
-        <treemap:TreeMapLeafItemSettings LabelPath="Country">
-            <treemap:TreeMapLeafItemSettings.TextStyle>
-                <treemap:TreeMapTextStyle TextColor="#000000" />
-            </treemap:TreeMapLeafItemSettings.TextStyle>
-        </treemap:TreeMapLeafItemSettings>
-    </treemap:SfTreeMap.LeafItemSettings>
-    <treemap:SfTreeMap.LeafItemBrushSettings>
-        <treemap:TreeMapRangeBrushSettings>
-            <treemap:TreeMapRangeBrushSettings.RangeBrushes>
-                <treemap:TreeMapRangeBrush LegendLabel="50M - 1B"
-                                           From="50000000"
-                                           To="1000000000" 
-                                           Brush ="#3F8D71" />
-                <treemap:TreeMapRangeBrush LegendLabel="10M - 50M"
-                                           From="10000000"
-                                           To="50000000" 
-                                           Brush ="#5BA985" />
-                <treemap:TreeMapRangeBrush LegendLabel="0.1M - 10M"
-                                           From="100000" 
-                                           To="10000000"  
-                                           Brush= "#7DC59D" />
-            </treemap:TreeMapRangeBrushSettings.RangeBrushes>
-        </treemap:TreeMapRangeBrushSettings>
-    </treemap:SfTreeMap.LeafItemBrushSettings>
+                   PrimaryValuePath="Population">
+    <treemap:SfTreeMap.BindingContext>
+       <local:PopulationViewModel />
+    </treemap:SfTreeMap.BindingContext>
     <treemap:SfTreeMap.LegendSettings>
         <treemap:TreeMapLegendSettings ShowLegend="True"
                                        Placement="Left" />
     </treemap:SfTreeMap.LegendSettings>
+    <treemap:SfTreeMap.LeafItemSettings>
+        <treemap:TreeMapLeafItemSettings LabelPath="Country">
+        </treemap:TreeMapLeafItemSettings>
+    </treemap:SfTreeMap.LeafItemSettings>
+    <treemap:SfTreeMap.LeafItemBrushSettings>
+        <treemap:TreeMapRangeBrushSettings>
+            <treemap:TreeMapRangeBrushSettings.RangeBrushes>
+                <treemap:TreeMapRangeBrush LegendLabel="50M - 1B"
+                                           From="50000000"
+                                           To="1000000000" 
+                                           Brush ="#3F8D71" />
+                <treemap:TreeMapRangeBrush LegendLabel="10M - 50M"
+                                           From="10000000"
+                                           To="50000000" 
+                                           Brush ="#5BA985" />
+                <treemap:TreeMapRangeBrush LegendLabel="0.1M - 10M"
+                                           From="100000" 
+                                           To="10000000"  
+                                           Brush= "#7DC59D" />
+            </treemap:TreeMapRangeBrushSettings.RangeBrushes>
+        </treemap:TreeMapRangeBrushSettings>
+    </treemap:SfTreeMap.LeafItemBrushSettings>
 </treemap:SfTreeMap>
 
-
 {% endhighlight %}
-{% highlight C# hl_lines="4" %}
+{% highlight C# hl_lines="6" %}
 
 SfTreeMap treeMap = new SfTreeMap();
 PopulationViewModel viewModel = new PopulationViewModel();
 treeMap.DataSource = viewModel.PopulationDetails;
+treeMap.PrimaryValuePath = "Population";
+treeMap.RangeColorValuePath = "Population";
 treeMap.LegendSettings = new TreeMapLegendSettings() { Placement = LegendPlacement.Left, ShowLegend = true };
-this.Content = treeMap;
-
-{% endhighlight %}
-{% highlight C# tabtitle="PopulationDetails.cs" %}
-
-/// <summary>    
-/// Represents the custom data properties.
-/// </summary>
-public class PopulationDetails
+treeMap.LeafItemSettings = new TreeMapLeafItemSettings() { LabelPath = "Country" };
+treeMap.LeafItemBrushSettings = new TreeMapRangeBrushSettings()
 {
-    public string Country { get; set; }
-    public string Continent { get; set; }
-    public double Population { get; set; }
-}
-
-{% endhighlight %}
-{% highlight C# tabtitle="PopulationViewModel.cs" %}
-
-/// <summary>    
-/// Represents demographic information for population data for a specific country.
-/// </summary>
-public class PopulationViewModel
-{
-    public PopulationViewModel()
+    RangeBrushes = new List<TreeMapRangeBrush>()
     {
-        this.PopulationDetails = new ObservableCollection<PopulationDetails>()
-        {
-            new PopulationDetails() { Continent ="North America", Country = "United States of America", Population = 339996564 },
-            new PopulationDetails() { Continent ="South America", Country = "Brazil", Population = 216422446 },
-            new PopulationDetails() { Continent ="North America", Country = "Mexico", Population = 128455567 },
-            new PopulationDetails() { Continent ="South America", Country = "Colombia", Population = 52085168 },
-            new PopulationDetails() { Continent ="South America", Country = "Argentina", Population = 45773884 },
-            new PopulationDetails() { Continent ="North America", Country = "Canada", Population = 38781292 },
-            new PopulationDetails() { Continent ="South America", Country = "Peru", Population = 34352719 },
-            new PopulationDetails() { Continent ="South America", Country = "Venezuela", Population = 28838499 },
-            new PopulationDetails() { Continent ="South America", Country = "Chile", Population = 19629590 },
-            new PopulationDetails() { Continent ="South America", Country = "Ecuador", Population = 18190484 },
-            new PopulationDetails() { Continent ="North America", Country = "Guatemala", Population = 18092026 },
-            new PopulationDetails() { Continent ="South America", Country = "Bolivia", Population = 12388571 },
-            new PopulationDetails() { Continent ="North America", Country = "Honduras", Population = 10593798 },
-            new PopulationDetails() { Continent ="North America", Country = "Nicaragua", Population = 7046311 },
-            new PopulationDetails() { Continent ="South America", Country = "Paraguay", Population = 6861524 },
-            new PopulationDetails() { Continent ="North America", Country = "El Salvador", Population = 6364943 },
-            new PopulationDetails() { Continent ="North America", Country = "Costa Rica", Population = 5212173 },
-            new PopulationDetails() { Continent ="South America", Country = "Uruguay", Population = 3423109 },
-        };
+        new TreeMapRangeBrush { LegendLabel = "50M - 1B", From = 50000000, To = 1000000000, Brush = new SolidColorBrush(Color.FromArgb("#3F8D71")) },
+        new TreeMapRangeBrush { LegendLabel = "10M - 50M", From = 10000000, To = 50000000, Brush = new SolidColorBrush(Color.FromArgb("#5BA985")) },
+        new TreeMapRangeBrush { LegendLabel = "0.1M - 10M", From = 100000, To = 10000000, Brush = new SolidColorBrush(Color.FromArgb("#7DC59D")) },
     }
-
-    public ObservableCollection<PopulationDetails> PopulationDetails
-    {
-        get;
-        set;
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-## Icon Size
-
-The `IconSize` property in the legend is used to change the size of the icon. The default value of the `IconSize` property is `Size(16.0, 16.0).`
-
-{% tabs %}
-{% highlight XAML hl_lines="5" %}
-
-<treemap:SfTreeMap x:Name="treeMap"
-                   DataSource="{Binding PopulationDetails}"
-                   RangeColorValuePath="Population"
-                   PrimaryValuePath="Population"
-                   ShowToolTip="True">
-    <treemap:SfTreeMap.LeafItemSettings>
-        <treemap:TreeMapLeafItemSettings LabelPath="Country">
-            <treemap:TreeMapLeafItemSettings.TextStyle>
-                <treemap:TreeMapTextStyle TextColor="#000000" />
-            </treemap:TreeMapLeafItemSettings.TextStyle>
-        </treemap:TreeMapLeafItemSettings>
-    </treemap:SfTreeMap.LeafItemSettings>
-    <treemap:SfTreeMap.LeafItemBrushSettings>
-        <treemap:TreeMapRangeBrushSettings>
-            <treemap:TreeMapRangeBrushSettings.RangeBrushes>
-                <treemap:TreeMapRangeBrush LegendLabel="50M - 1B"
-                                           From="50000000"
-                                           To="1000000000" 
-                                           Brush ="#3F8D71" />
-                <treemap:TreeMapRangeBrush LegendLabel="10M - 50M"
-                                           From="10000000"
-                                           To="50000000" 
-                                           Brush ="#5BA985" />
-                <treemap:TreeMapRangeBrush LegendLabel="0.1M - 10M"
-                                           From="100000" 
-                                           To="10000000"  
-                                           Brush= "#7DC59D" />
-            </treemap:TreeMapRangeBrushSettings.RangeBrushes>
-        </treemap:TreeMapRangeBrushSettings>
-    </treemap:SfTreeMap.LeafItemBrushSettings>
-    <treemap:SfTreeMap.LegendSettings>
-        <treemap:TreeMapLegendSettings ShowLegend="True"
-                                       IconSize="15,15" />
-    </treemap:SfTreeMap.LegendSettings>
-</treemap:SfTreeMap>
-
-
-{% endhighlight %}
-{% highlight C# hl_lines="4" %}
-
-SfTreeMap treeMap = new SfTreeMap();
-PopulationViewModel viewModel = new PopulationViewModel();
-treeMap.DataSource = viewModel.PopulationDetails;
-treeMap.LegendSettings = new TreeMapLegendSettings() { IconSize = new Size(15, 15) , ShowLegend = true};
-this.Content = treeMap;
-
-{% endhighlight %}
-{% highlight C# tabtitle="PopulationDetails.cs" %}
-
-/// <summary>    
-/// Represents the custom data properties.
-/// </summary>
-public class PopulationDetails
-{
-    public string Country { get; set; }
-    public string Continent { get; set; }
-    public double Population { get; set; }
-}
-
-{% endhighlight %}
-{% highlight C# tabtitle="PopulationViewModel.cs" %}
-
-/// <summary>    
-/// Represents demographic information for population data for a specific country.
-/// </summary>
-public class PopulationViewModel
-{
-    public PopulationViewModel()
-    {
-        this.PopulationDetails = new ObservableCollection<PopulationDetails>()
-        {
-            new PopulationDetails() { Continent ="North America", Country = "United States of America", Population = 339996564 },
-            new PopulationDetails() { Continent ="South America", Country = "Brazil", Population = 216422446 },
-            new PopulationDetails() { Continent ="North America", Country = "Mexico", Population = 128455567 },
-            new PopulationDetails() { Continent ="South America", Country = "Colombia", Population = 52085168 },
-            new PopulationDetails() { Continent ="South America", Country = "Argentina", Population = 45773884 },
-            new PopulationDetails() { Continent ="North America", Country = "Canada", Population = 38781292 },
-            new PopulationDetails() { Continent ="South America", Country = "Peru", Population = 34352719 },
-            new PopulationDetails() { Continent ="South America", Country = "Venezuela", Population = 28838499 },
-            new PopulationDetails() { Continent ="South America", Country = "Chile", Population = 19629590 },
-            new PopulationDetails() { Continent ="South America", Country = "Ecuador", Population = 18190484 },
-            new PopulationDetails() { Continent ="North America", Country = "Guatemala", Population = 18092026 },
-            new PopulationDetails() { Continent ="South America", Country = "Bolivia", Population = 12388571 },
-            new PopulationDetails() { Continent ="North America", Country = "Honduras", Population = 10593798 },
-            new PopulationDetails() { Continent ="North America", Country = "Nicaragua", Population = 7046311 },
-            new PopulationDetails() { Continent ="South America", Country = "Paraguay", Population = 6861524 },
-            new PopulationDetails() { Continent ="North America", Country = "El Salvador", Population = 6364943 },
-            new PopulationDetails() { Continent ="North America", Country = "Costa Rica", Population = 5212173 },
-            new PopulationDetails() { Continent ="South America", Country = "Uruguay", Population = 3423109 },
-        };
-    }
-
-    public ObservableCollection<PopulationDetails> PopulationDetails
-    {
-        get;
-        set;
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-## Icon type
-
-The `IconType` property is used to change the icon shape. The default value of the `IconType` property is `LegendIconType.Rectangle`.
-
-The following possible values are available to customize the legend icon type:
-
-* `Rectangle`
-* `HorizontalLine`
-* `Circle`
-* `Diamond`
-* `Pentagon`
-* `Triangle`
-* `InvertedTriangle`
-* `Cross`
-* `Plus`
-* `Hexagon`
-* `VerticalLine`
-
-{% tabs %}
-{% highlight XAML hl_lines="5" %}
-
-<treemap:SfTreeMap x:Name="treeMap"
-                   DataSource="{Binding PopulationDetails}"
-                   RangeColorValuePath="Population"
-                   PrimaryValuePath="Population"
-                   ShowToolTip="True">
-    <treemap:SfTreeMap.LeafItemSettings>
-        <treemap:TreeMapLeafItemSettings LabelPath="Country">
-            <treemap:TreeMapLeafItemSettings.TextStyle>
-                <treemap:TreeMapTextStyle TextColor="#000000" />
-            </treemap:TreeMapLeafItemSettings.TextStyle>
-        </treemap:TreeMapLeafItemSettings>
-    </treemap:SfTreeMap.LeafItemSettings>
-    <treemap:SfTreeMap.LeafItemBrushSettings>
-        <treemap:TreeMapRangeBrushSettings>
-            <treemap:TreeMapRangeBrushSettings.RangeBrushes>
-                <treemap:TreeMapRangeBrush LegendLabel="50M - 1B"
-                                           From="50000000"
-                                           To="1000000000" 
-                                           Brush ="#3F8D71" />
-                <treemap:TreeMapRangeBrush LegendLabel="10M - 50M"
-                                           From="10000000"
-                                           To="50000000" 
-                                           Brush ="#5BA985" />
-                <treemap:TreeMapRangeBrush LegendLabel="0.1M - 10M"
-                                           From="100000" 
-                                           To="10000000"  
-                                           Brush= "#7DC59D" />
-            </treemap:TreeMapRangeBrushSettings.RangeBrushes>
-        </treemap:TreeMapRangeBrushSettings>
-    </treemap:SfTreeMap.LeafItemBrushSettings>
-    <treemap:SfTreeMap.LegendSettings>
-        <treemap:TreeMapLegendSettings ShowLegend="True"
-                                       IconType="Diamond" />
-    </treemap:SfTreeMap.LegendSettings>
-</treemap:SfTreeMap>
-
-
-{% endhighlight %}
-{% highlight C# hl_lines="4" %}
-
-SfTreeMap treeMap = new SfTreeMap();
-PopulationViewModel viewModel = new PopulationViewModel();
-treeMap.DataSource = viewModel.PopulationDetails;
-treeMap.LegendSettings = new TreeMapLegendSettings() { IconType = LegendIconType.Diamond, ShowLegend = true };
-this.Content = treeMap;
-
-{% endhighlight %}
-{% highlight C# tabtitle="PopulationDetails.cs" %}
-
-/// <summary>    
-/// Represents the custom data properties.
-/// </summary>
-public class PopulationDetails
-{
-    public string Country { get; set; }
-    public string Continent { get; set; }
-    public double Population { get; set; }
-}
-
-{% endhighlight %}
-{% highlight C# tabtitle="PopulationViewModel.cs" %}
-
-/// <summary>    
-/// Represents demographic information for population data for a specific country.
-/// </summary>
-public class PopulationViewModel
-{
-    public PopulationViewModel()
-    {
-        this.PopulationDetails = new ObservableCollection<PopulationDetails>()
-        {
-            new PopulationDetails() { Continent ="North America", Country = "United States of America", Population = 339996564 },
-            new PopulationDetails() { Continent ="South America", Country = "Brazil", Population = 216422446 },
-            new PopulationDetails() { Continent ="North America", Country = "Mexico", Population = 128455567 },
-            new PopulationDetails() { Continent ="South America", Country = "Colombia", Population = 52085168 },
-            new PopulationDetails() { Continent ="South America", Country = "Argentina", Population = 45773884 },
-            new PopulationDetails() { Continent ="North America", Country = "Canada", Population = 38781292 },
-            new PopulationDetails() { Continent ="South America", Country = "Peru", Population = 34352719 },
-            new PopulationDetails() { Continent ="South America", Country = "Venezuela", Population = 28838499 },
-            new PopulationDetails() { Continent ="South America", Country = "Chile", Population = 19629590 },
-            new PopulationDetails() { Continent ="South America", Country = "Ecuador", Population = 18190484 },
-            new PopulationDetails() { Continent ="North America", Country = "Guatemala", Population = 18092026 },
-            new PopulationDetails() { Continent ="South America", Country = "Bolivia", Population = 12388571 },
-            new PopulationDetails() { Continent ="North America", Country = "Honduras", Population = 10593798 },
-            new PopulationDetails() { Continent ="North America", Country = "Nicaragua", Population = 7046311 },
-            new PopulationDetails() { Continent ="South America", Country = "Paraguay", Population = 6861524 },
-            new PopulationDetails() { Continent ="North America", Country = "El Salvador", Population = 6364943 },
-            new PopulationDetails() { Continent ="North America", Country = "Costa Rica", Population = 5212173 },
-            new PopulationDetails() { Continent ="South America", Country = "Uruguay", Population = 3423109 },
-        };
-    }
-
-    public ObservableCollection<PopulationDetails> PopulationDetails
-    {
-        get;
-        set;
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-## Brush settings
-
-The color and text of the icons in the legend are applied based on the `TreeMapRangeBrush.Brush` and `TreeMapRangeBrush.LegendLabel` properties, respectively, by default.
-
-You can apply color to the Treemap items based on whether the value from `TreeMapRangeBrushSettings` falls within the `TreeMapRangeBrush.From` and `TreeMapRangeBrush.To` properties. Then, the `TreeMapRangeBrush.Brush` will be applied to the respective Treemap item.
-
-{% tabs %}
-{% highlight XAML hl_lines="5" %}
-
-<treemap:SfTreeMap x:Name="treeMap"
-                   DataSource="{Binding PopulationDetails}"
-                   RangeColorValuePath="Population"
-                   PrimaryValuePath="Population"
-                   ShowToolTip="True">
-    <treemap:SfTreeMap.LeafItemSettings>
-        <treemap:TreeMapLeafItemSettings LabelPath="Country">
-            <treemap:TreeMapLeafItemSettings.TextStyle>
-                <treemap:TreeMapTextStyle TextColor="#000000" />
-            </treemap:TreeMapLeafItemSettings.TextStyle>
-        </treemap:TreeMapLeafItemSettings>
-    </treemap:SfTreeMap.LeafItemSettings>
-    <treemap:SfTreeMap.LeafItemBrushSettings>
-        <treemap:TreeMapRangeBrushSettings>
-            <treemap:TreeMapRangeBrushSettings.RangeBrushes>
-                <treemap:TreeMapRangeBrush LegendLabel="50M - 1B"
-                                           From="50000000"
-                                           To="1000000000" 
-                                           Brush ="#3F8D71" />
-                <treemap:TreeMapRangeBrush LegendLabel="10M - 50M"
-                                           From="10000000"
-                                           To="50000000" 
-                                           Brush ="#5BA985" />
-                <treemap:TreeMapRangeBrush LegendLabel="0.1M - 10M"
-                                           From="100000" 
-                                           To="10000000"  
-                                           Brush= "#7DC59D" />
-            </treemap:TreeMapRangeBrushSettings.RangeBrushes>
-        </treemap:TreeMapRangeBrushSettings>
-    </treemap:SfTreeMap.LeafItemBrushSettings>
-    <treemap:SfTreeMap.LegendSettings>
-        <treemap:TreeMapLegendSettings ShowLegend="True"/>
-    </treemap:SfTreeMap.LegendSettings>
-</treemap:SfTreeMap>
-
-
-{% endhighlight %}
-{% highlight C# hl_lines="5" %}
-
-SfTreeMap treeMap = new SfTreeMap();
-PopulationViewModel viewModel = new PopulationViewModel();
-treeMap.DataSource = viewModel.PopulationDetails;
-treeMap.LegendSettings.ShowLegend = true;
-this.treeMap.LeafItemBrushSettings = new TreeMapRangeBrushSettings()
-{
-   RangeBrushes = new List<TreeMapRangeBrush>()
-   {
-      new TreeMapRangeBrush() { LegendLabel = "50M - 1B", Brush = new SolidColorBrush(Color.FromArgb("#3F8D71")), From = 50000000, To = 1000000000, },
-      new TreeMapRangeBrush() { LegendLabel = "10M - 50M", Brush = new SolidColorBrush(Color.FromArgb("#5BA985")), From = 10000000, To = 50000000, },
-      new TreeMapRangeBrush() { LegendLabel = "0.1M - 10M", Brush = new SolidColorBrush(Color.FromArgb("#7DC59D")), From = 100000, To = 10000000, },
-   }
 };
 
 this.Content = treeMap;
@@ -588,24 +250,28 @@ public class PopulationViewModel
 {% endhighlight %}
 {% endtabs %}
 
-## Text style
+N> This property will be applicable to only when the `ShowLegend` is enabled.
 
-You can customize the legend item's text appearance, such as `TextColor`, `FontSize`, `FontAttributes`, and `FontFamily`, in the TreeMap using the `TreeMapLegendSettings.TextStyle` property.
+## Icon size
+
+The `IconSize` property in the legend is used to change the size of the icon. Its default value is `new Size(16, 16).`
 
 {% tabs %}
-{% highlight XAML hl_lines="5" %}
+{% highlight XAML hl_lines="10" %}
 
 <treemap:SfTreeMap x:Name="treeMap"
                    DataSource="{Binding PopulationDetails}"
                    RangeColorValuePath="Population"
-                   PrimaryValuePath="Population"
-                   LayoutType="SliceAndDiceVertical"
-                   ShowToolTip="True">
+                   PrimaryValuePath="Population">
+    <treemap:SfTreeMap.BindingContext>
+       <local:PopulationViewModel />
+    </treemap:SfTreeMap.BindingContext>
+    <treemap:SfTreeMap.LegendSettings>
+        <treemap:TreeMapLegendSettings ShowLegend="True"
+                                       IconSize="20,20" />
+    </treemap:SfTreeMap.LegendSettings>
     <treemap:SfTreeMap.LeafItemSettings>
         <treemap:TreeMapLeafItemSettings LabelPath="Country">
-            <treemap:TreeMapLeafItemSettings.TextStyle>
-                <treemap:TreeMapTextStyle TextColor="#000000" />
-            </treemap:TreeMapLeafItemSettings.TextStyle>
         </treemap:TreeMapLeafItemSettings>
     </treemap:SfTreeMap.LeafItemSettings>
     <treemap:SfTreeMap.LeafItemBrushSettings>
@@ -626,26 +292,28 @@ You can customize the legend item's text appearance, such as `TextColor`, `FontS
             </treemap:TreeMapRangeBrushSettings.RangeBrushes>
         </treemap:TreeMapRangeBrushSettings>
     </treemap:SfTreeMap.LeafItemBrushSettings>
-    <treemap:SfTreeMap.LegendSettings>
-    <treemap:TreeMapLegendSettings ShowLegend="True" >
-        <treemap:TreeMapLegendSettings.TextStyle>
-            <treemap:TreeMapTextStyle TextColor="Orange"
-                                      FontSize="14"
-                                      FontAttributes="Italic" />
-        </treemap:TreeMapLegendSettings.TextStyle>
-    </treemap:TreeMapLegendSettings>
-</treemap:SfTreeMap.LegendSettings>
-
 </treemap:SfTreeMap>
 
-
 {% endhighlight %}
-{% highlight C# hl_lines="4" %}
+{% highlight C# hl_lines="6" %}
 
 SfTreeMap treeMap = new SfTreeMap();
 PopulationViewModel viewModel = new PopulationViewModel();
 treeMap.DataSource = viewModel.PopulationDetails;
-treeMap.LegendSettings = new TreeMapLegendSettings() { TextStyle = new TreeMapTextStyle() { TextColor = Colors.Orange, FontSize = 14, FontAttributes = FontAttributes.Italic }, ShowLegend = true };
+treeMap.PrimaryValuePath = "Population";
+treeMap.RangeColorValuePath = "Population";
+treeMap.LegendSettings = new TreeMapLegendSettings() { IconSize = new Size(20, 20), ShowLegend = true };
+treeMap.LeafItemSettings = new TreeMapLeafItemSettings() { LabelPath = "Country" };
+treeMap.LeafItemBrushSettings = new TreeMapRangeBrushSettings()
+{
+    RangeBrushes = new List<TreeMapRangeBrush>()
+    {
+        new TreeMapRangeBrush { LegendLabel = "50M - 1B", From = 50000000, To = 1000000000, Brush = new SolidColorBrush(Color.FromArgb("#3F8D71")) },
+        new TreeMapRangeBrush { LegendLabel = "10M - 50M", From = 10000000, To = 50000000, Brush = new SolidColorBrush(Color.FromArgb("#5BA985")) },
+        new TreeMapRangeBrush { LegendLabel = "0.1M - 10M", From = 100000, To = 10000000, Brush = new SolidColorBrush(Color.FromArgb("#7DC59D")) },
+    }
+};
+
 this.Content = treeMap;
 
 {% endhighlight %}
@@ -704,24 +372,42 @@ public class PopulationViewModel
 {% endhighlight %}
 {% endtabs %}
 
-## Appearence customization
+N> This property will be applicable to only when the `ShowLegend` is enabled.
 
-Customize the legend items using the following properties.
+## Icon type
+
+The `IconType` property in the legend is used to change the icon shape. The default value of the `IconType` property is `Rectangle.`
+
+Here are the available options to customize the legend icon type:
+
+  * `Rectangle`
+  * `HorizontalLine`
+  * `Circle`
+  * `Diamond`
+  * `Pentagon`
+  * `Triangle`
+  * `InvertedTriangle`
+  * `Cross`
+  * `Plus`
+  * `Hexagon`
+  * `VerticalLine`
 
 {% tabs %}
-{% highlight XAML hl_lines="5" %}
+{% highlight XAML hl_lines="10" %}
 
 <treemap:SfTreeMap x:Name="treeMap"
                    DataSource="{Binding PopulationDetails}"
                    RangeColorValuePath="Population"
-                   PrimaryValuePath="Population"
-                   LayoutType="SliceAndDiceVertical"
-                   ShowToolTip="True">
+                   PrimaryValuePath="Population">
+    <treemap:SfTreeMap.BindingContext>
+       <local:PopulationViewModel />
+    </treemap:SfTreeMap.BindingContext>
+    <treemap:SfTreeMap.LegendSettings>
+        <treemap:TreeMapLegendSettings ShowLegend="True"
+                                       IconType="Diamond" />
+    </treemap:SfTreeMap.LegendSettings>
     <treemap:SfTreeMap.LeafItemSettings>
         <treemap:TreeMapLeafItemSettings LabelPath="Country">
-            <treemap:TreeMapLeafItemSettings.TextStyle>
-                <treemap:TreeMapTextStyle TextColor="#000000" />
-            </treemap:TreeMapLeafItemSettings.TextStyle>
         </treemap:TreeMapLeafItemSettings>
     </treemap:SfTreeMap.LeafItemSettings>
     <treemap:SfTreeMap.LeafItemBrushSettings>
@@ -742,20 +428,278 @@ Customize the legend items using the following properties.
             </treemap:TreeMapRangeBrushSettings.RangeBrushes>
         </treemap:TreeMapRangeBrushSettings>
     </treemap:SfTreeMap.LeafItemBrushSettings>
+</treemap:SfTreeMap>
+
+{% endhighlight %}
+{% highlight C# hl_lines="6" %}
+
+SfTreeMap treeMap = new SfTreeMap();
+PopulationViewModel viewModel = new PopulationViewModel();
+treeMap.DataSource = viewModel.PopulationDetails;
+treeMap.PrimaryValuePath = "Population";
+treeMap.RangeColorValuePath = "Population";
+treeMap.LegendSettings = new TreeMapLegendSettings() { IconType = LegendIconType.Diamond, ShowLegend = true };
+treeMap.LeafItemSettings = new TreeMapLeafItemSettings() { LabelPath = "Country" };
+treeMap.LeafItemBrushSettings = new TreeMapRangeBrushSettings()
+{
+    RangeBrushes = new List<TreeMapRangeBrush>()
+    {
+        new TreeMapRangeBrush { LegendLabel = "50M - 1B", From = 50000000, To = 1000000000, Brush = new SolidColorBrush(Color.FromArgb("#3F8D71")) },
+        new TreeMapRangeBrush { LegendLabel = "10M - 50M", From = 10000000, To = 50000000, Brush = new SolidColorBrush(Color.FromArgb("#5BA985")) },
+        new TreeMapRangeBrush { LegendLabel = "0.1M - 10M", From = 100000, To = 10000000, Brush = new SolidColorBrush(Color.FromArgb("#7DC59D")) },
+    }
+};
+
+this.Content = treeMap;
+
+{% endhighlight %}
+{% highlight C# tabtitle="PopulationDetails.cs" %}
+
+/// <summary>    
+/// Represents the custom data properties.
+/// </summary>
+public class PopulationDetails
+{
+    public string Country { get; set; }
+    public string Continent { get; set; }
+    public double Population { get; set; }
+}
+
+{% endhighlight %}
+{% highlight C# tabtitle="PopulationViewModel.cs" %}
+
+/// <summary>    
+/// Represents demographic information for population data for a specific country.
+/// </summary>
+public class PopulationViewModel
+{
+    public PopulationViewModel()
+    {
+        this.PopulationDetails = new ObservableCollection<PopulationDetails>()
+        {
+            new PopulationDetails() { Continent ="North America", Country = "United States of America", Population = 339996564 },
+            new PopulationDetails() { Continent ="South America", Country = "Brazil", Population = 216422446 },
+            new PopulationDetails() { Continent ="North America", Country = "Mexico", Population = 128455567 },
+            new PopulationDetails() { Continent ="South America", Country = "Colombia", Population = 52085168 },
+            new PopulationDetails() { Continent ="South America", Country = "Argentina", Population = 45773884 },
+            new PopulationDetails() { Continent ="North America", Country = "Canada", Population = 38781292 },
+            new PopulationDetails() { Continent ="South America", Country = "Peru", Population = 34352719 },
+            new PopulationDetails() { Continent ="South America", Country = "Venezuela", Population = 28838499 },
+            new PopulationDetails() { Continent ="South America", Country = "Chile", Population = 19629590 },
+            new PopulationDetails() { Continent ="South America", Country = "Ecuador", Population = 18190484 },
+            new PopulationDetails() { Continent ="North America", Country = "Guatemala", Population = 18092026 },
+            new PopulationDetails() { Continent ="South America", Country = "Bolivia", Population = 12388571 },
+            new PopulationDetails() { Continent ="North America", Country = "Honduras", Population = 10593798 },
+            new PopulationDetails() { Continent ="North America", Country = "Nicaragua", Population = 7046311 },
+            new PopulationDetails() { Continent ="South America", Country = "Paraguay", Population = 6861524 },
+            new PopulationDetails() { Continent ="North America", Country = "El Salvador", Population = 6364943 },
+            new PopulationDetails() { Continent ="North America", Country = "Costa Rica", Population = 5212173 },
+            new PopulationDetails() { Continent ="South America", Country = "Uruguay", Population = 3423109 },
+        };
+    }
+
+    public ObservableCollection<PopulationDetails> PopulationDetails
+    {
+        get;
+        set;
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+N> This property will be applicable to only when the `ShowLegend` is enabled.
+
+## Legend size
+
+The `Size` property of `LegendSettings` determines the dimensions of the legend displayed alongside the visualization. Adjusting this property allows you to customize the size of the legend to fit the layout requirements and ensure optimal presentation of information.
+
+ * If the legend is positioned at the top or bottom, the default height is 40 units, and the width is set to match the layout width.
+ * If the legend is placed on the left or right side:
+    * For Android and iOS platforms, the default width is 100 units, and the height matches the layout height.
+    * For Windows and macOS platforms, the default width is 200 units, and the height matches the layout height.
+
+{% tabs %}
+{% highlight XAML hl_lines="10" %}
+
+<treemap:SfTreeMap x:Name="treeMap"
+                   DataSource="{Binding PopulationDetails}"
+                   RangeColorValuePath="Population"
+                   PrimaryValuePath="Population">
+    <treemap:SfTreeMap.BindingContext>
+       <local:PopulationViewModel />
+    </treemap:SfTreeMap.BindingContext>
+    <treemap:SfTreeMap.LegendSettings>
+        <treemap:TreeMapLegendSettings ShowLegend="True"
+                                       Size="300, 300" />
+    </treemap:SfTreeMap.LegendSettings>
+    <treemap:SfTreeMap.LeafItemSettings>
+        <treemap:TreeMapLeafItemSettings LabelPath="Country">
+        </treemap:TreeMapLeafItemSettings>
+    </treemap:SfTreeMap.LeafItemSettings>
+    <treemap:SfTreeMap.LeafItemBrushSettings>
+        <treemap:TreeMapRangeBrushSettings>
+            <treemap:TreeMapRangeBrushSettings.RangeBrushes>
+                <treemap:TreeMapRangeBrush LegendLabel="50M - 1B"
+                                           From="50000000"
+                                           To="1000000000" 
+                                           Brush ="#3F8D71" />
+                <treemap:TreeMapRangeBrush LegendLabel="10M - 50M"
+                                           From="10000000"
+                                           To="50000000" 
+                                           Brush ="#5BA985" />
+                <treemap:TreeMapRangeBrush LegendLabel="0.1M - 10M"
+                                           From="100000" 
+                                           To="10000000"  
+                                           Brush= "#7DC59D" />
+            </treemap:TreeMapRangeBrushSettings.RangeBrushes>
+        </treemap:TreeMapRangeBrushSettings>
+    </treemap:SfTreeMap.LeafItemBrushSettings>
+</treemap:SfTreeMap>
+
+{% endhighlight %}
+{% highlight C# hl_lines="6" %}
+
+SfTreeMap treeMap = new SfTreeMap();
+PopulationViewModel viewModel = new PopulationViewModel();
+treeMap.DataSource = viewModel.PopulationDetails;
+treeMap.PrimaryValuePath = "Population";
+treeMap.RangeColorValuePath = "Population";
+treeMap.LegendSettings = new TreeMapLegendSettings() { Size = new Size(300, 300), ShowLegend = true };
+treeMap.LeafItemSettings = new TreeMapLeafItemSettings() { LabelPath = "Country" };
+treeMap.LeafItemBrushSettings = new TreeMapRangeBrushSettings()
+{
+    RangeBrushes = new List<TreeMapRangeBrush>()
+    {
+        new TreeMapRangeBrush { LegendLabel = "50M - 1B", From = 50000000, To = 1000000000, Brush = new SolidColorBrush(Color.FromArgb("#3F8D71")) },
+        new TreeMapRangeBrush { LegendLabel = "10M - 50M", From = 10000000, To = 50000000, Brush = new SolidColorBrush(Color.FromArgb("#5BA985")) },
+        new TreeMapRangeBrush { LegendLabel = "0.1M - 10M", From = 100000, To = 10000000, Brush = new SolidColorBrush(Color.FromArgb("#7DC59D")) },
+    }
+};
+
+this.Content = treeMap;
+
+{% endhighlight %}
+{% highlight C# tabtitle="PopulationDetails.cs" %}
+
+/// <summary>    
+/// Represents the custom data properties.
+/// </summary>
+public class PopulationDetails
+{
+    public string Country { get; set; }
+    public string Continent { get; set; }
+    public double Population { get; set; }
+}
+
+{% endhighlight %}
+{% highlight C# tabtitle="PopulationViewModel.cs" %}
+
+/// <summary>    
+/// Represents demographic information for population data for a specific country.
+/// </summary>
+public class PopulationViewModel
+{
+    public PopulationViewModel()
+    {
+        this.PopulationDetails = new ObservableCollection<PopulationDetails>()
+        {
+            new PopulationDetails() { Continent ="North America", Country = "United States of America", Population = 339996564 },
+            new PopulationDetails() { Continent ="South America", Country = "Brazil", Population = 216422446 },
+            new PopulationDetails() { Continent ="North America", Country = "Mexico", Population = 128455567 },
+            new PopulationDetails() { Continent ="South America", Country = "Colombia", Population = 52085168 },
+            new PopulationDetails() { Continent ="South America", Country = "Argentina", Population = 45773884 },
+            new PopulationDetails() { Continent ="North America", Country = "Canada", Population = 38781292 },
+            new PopulationDetails() { Continent ="South America", Country = "Peru", Population = 34352719 },
+            new PopulationDetails() { Continent ="South America", Country = "Venezuela", Population = 28838499 },
+            new PopulationDetails() { Continent ="South America", Country = "Chile", Population = 19629590 },
+            new PopulationDetails() { Continent ="South America", Country = "Ecuador", Population = 18190484 },
+            new PopulationDetails() { Continent ="North America", Country = "Guatemala", Population = 18092026 },
+            new PopulationDetails() { Continent ="South America", Country = "Bolivia", Population = 12388571 },
+            new PopulationDetails() { Continent ="North America", Country = "Honduras", Population = 10593798 },
+            new PopulationDetails() { Continent ="North America", Country = "Nicaragua", Population = 7046311 },
+            new PopulationDetails() { Continent ="South America", Country = "Paraguay", Population = 6861524 },
+            new PopulationDetails() { Continent ="North America", Country = "El Salvador", Population = 6364943 },
+            new PopulationDetails() { Continent ="North America", Country = "Costa Rica", Population = 5212173 },
+            new PopulationDetails() { Continent ="South America", Country = "Uruguay", Population = 3423109 },
+        };
+    }
+
+    public ObservableCollection<PopulationDetails> PopulationDetails
+    {
+        get;
+        set;
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+N> This property will be applicable to only when the `ShowLegend` is enabled.
+
+## Brush settings
+
+The color and text of icons in the legend are by default determined by the `Brush` and `LegendLabel` properties of `TreeMapRangeBrush,` respectively.
+
+You can assign colors to TreeMap items based on whether the value falls within the range specified by `From` and `To` properties of `TreeMapRangeBrushSettings.` Subsequently, the corresponding `TreeMapRangeBrush.Brush` will be applied to the respective TreeMap item.
+
+{% tabs %}
+{% highlight XAML hl_lines="8 9 10 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32" %}
+
+<treemap:SfTreeMap x:Name="treeMap"
+                   DataSource="{Binding PopulationDetails}"
+                   RangeColorValuePath="Population"
+                   PrimaryValuePath="Population">
+    <treemap:SfTreeMap.BindingContext>
+       <local:PopulationViewModel />
+    </treemap:SfTreeMap.BindingContext>
     <treemap:SfTreeMap.LegendSettings>
         <treemap:TreeMapLegendSettings ShowLegend="True"/>
     </treemap:SfTreeMap.LegendSettings>
+    <treemap:SfTreeMap.LeafItemSettings>
+        <treemap:TreeMapLeafItemSettings LabelPath="Country">
+        </treemap:TreeMapLeafItemSettings>
+    </treemap:SfTreeMap.LeafItemSettings>
+    <treemap:SfTreeMap.LeafItemBrushSettings>
+        <treemap:TreeMapRangeBrushSettings>
+            <treemap:TreeMapRangeBrushSettings.RangeBrushes>
+                <treemap:TreeMapRangeBrush LegendLabel="50M - 1B"
+                                           From="50000000"
+                                           To="1000000000" 
+                                           Brush ="#3F8D71" />
+                <treemap:TreeMapRangeBrush LegendLabel="10M - 50M"
+                                           From="10000000"
+                                           To="50000000" 
+                                           Brush ="#5BA985" />
+                <treemap:TreeMapRangeBrush LegendLabel="0.1M - 10M"
+                                           From="100000" 
+                                           To="10000000"  
+                                           Brush= "#7DC59D" />
+            </treemap:TreeMapRangeBrushSettings.RangeBrushes>
+        </treemap:TreeMapRangeBrushSettings>
+    </treemap:SfTreeMap.LeafItemBrushSettings>
 </treemap:SfTreeMap>
 
-
 {% endhighlight %}
-{% highlight C# hl_lines="5" %}
+{% highlight C# hl_lines="6 8 9 10 11 12 13 14 15 16" %}
 
 SfTreeMap treeMap = new SfTreeMap();
 PopulationViewModel viewModel = new PopulationViewModel();
 treeMap.DataSource = viewModel.PopulationDetails;
-treeMap.LegendSettings.ShowLegend = true;
-treeMap.LayoutType = LayoutType.SliceAndDiceVertical;
+treeMap.PrimaryValuePath = "Population";
+treeMap.RangeColorValuePath = "Population";
+treeMap.LegendSettings = new TreeMapLegendSettings() { ShowLegend = true };
+treeMap.LeafItemSettings = new TreeMapLeafItemSettings() { LabelPath = "Country" };
+treeMap.LeafItemBrushSettings = new TreeMapRangeBrushSettings()
+{
+    RangeBrushes = new List<TreeMapRangeBrush>()
+    {
+        new TreeMapRangeBrush { LegendLabel = "50M - 1B", From = 50000000, To = 1000000000, Brush = new SolidColorBrush(Color.FromArgb("#3F8D71")) },
+        new TreeMapRangeBrush { LegendLabel = "10M - 50M", From = 10000000, To = 50000000, Brush = new SolidColorBrush(Color.FromArgb("#5BA985")) },
+        new TreeMapRangeBrush { LegendLabel = "0.1M - 10M", From = 100000, To = 10000000, Brush = new SolidColorBrush(Color.FromArgb("#7DC59D")) },
+    }
+};
+
 this.Content = treeMap;
 
 {% endhighlight %}
@@ -813,3 +757,132 @@ public class PopulationViewModel
 
 {% endhighlight %}
 {% endtabs %}
+
+N> This property will be applicable to only when the `ShowLegend` is enabled.
+
+## Text style
+
+You can customize the appearance of legend items text, including `TextColor,` `FontSize,` `FontAttributes,` and `FontFamily,` within the TreeMap by utilizing the `TextStyle` property of `LegendSettings.`
+
+{% tabs %}
+{% highlight XAML hl_lines="8 9 10 11 12 13 14 15 16" %}
+
+<treemap:SfTreeMap x:Name="treeMap"
+                   DataSource="{Binding PopulationDetails}"
+                   RangeColorValuePath="Population"
+                   PrimaryValuePath="Population">
+    <treemap:SfTreeMap.BindingContext>
+       <local:PopulationViewModel />
+    </treemap:SfTreeMap.BindingContext>
+   <treemap:SfTreeMap.LegendSettings>
+    <treemap:TreeMapLegendSettings ShowLegend="True">
+        <treemap:TreeMapLegendSettings.TextStyle>
+            <treemap:TreeMapTextStyle TextColor="Black"
+                                      FontSize="16"
+                                      FontAttributes="Bold"/>
+            </treemap:TreeMapLegendSettings.TextStyle>
+        </treemap:TreeMapLegendSettings>
+    </treemap:SfTreeMap.LegendSettings>
+    <treemap:SfTreeMap.LeafItemSettings>
+        <treemap:TreeMapLeafItemSettings LabelPath="Country">
+        </treemap:TreeMapLeafItemSettings>
+    </treemap:SfTreeMap.LeafItemSettings>
+    <treemap:SfTreeMap.LeafItemBrushSettings>
+        <treemap:TreeMapRangeBrushSettings>
+            <treemap:TreeMapRangeBrushSettings.RangeBrushes>
+                <treemap:TreeMapRangeBrush LegendLabel="50M - 1B"
+                                           From="50000000"
+                                           To="1000000000" 
+                                           Brush ="#3F8D71" />
+                <treemap:TreeMapRangeBrush LegendLabel="10M - 50M"
+                                           From="10000000"
+                                           To="50000000" 
+                                           Brush ="#5BA985" />
+                <treemap:TreeMapRangeBrush LegendLabel="0.1M - 10M"
+                                           From="100000" 
+                                           To="10000000"  
+                                           Brush= "#7DC59D" />
+            </treemap:TreeMapRangeBrushSettings.RangeBrushes>
+        </treemap:TreeMapRangeBrushSettings>
+    </treemap:SfTreeMap.LeafItemBrushSettings>
+</treemap:SfTreeMap>
+
+{% endhighlight %}
+{% highlight C# hl_lines="6" %}
+
+SfTreeMap treeMap = new SfTreeMap();
+PopulationViewModel viewModel = new PopulationViewModel();
+treeMap.DataSource = viewModel.PopulationDetails;
+treeMap.PrimaryValuePath = "Population";
+treeMap.RangeColorValuePath = "Population";
+treeMap.LegendSettings = new TreeMapLegendSettings() { ShowLegend = true, TextStyle = new TreeMapTextStyle() { TextColor = Colors.Black, FontSize = 16, FontAttributes = FontAttributes.Bold } };
+treeMap.LeafItemSettings = new TreeMapLeafItemSettings() { LabelPath = "Country" };
+treeMap.LeafItemBrushSettings = new TreeMapRangeBrushSettings()
+{
+    RangeBrushes = new List<TreeMapRangeBrush>()
+    {
+        new TreeMapRangeBrush { LegendLabel = "50M - 1B", From = 50000000, To = 1000000000, Brush = new SolidColorBrush(Color.FromArgb("#3F8D71")) },
+        new TreeMapRangeBrush { LegendLabel = "10M - 50M", From = 10000000, To = 50000000, Brush = new SolidColorBrush(Color.FromArgb("#5BA985")) },
+        new TreeMapRangeBrush { LegendLabel = "0.1M - 10M", From = 100000, To = 10000000, Brush = new SolidColorBrush(Color.FromArgb("#7DC59D")) },
+    }
+};
+
+this.Content = treeMap;
+
+{% endhighlight %}
+{% highlight C# tabtitle="PopulationDetails.cs" %}
+
+/// <summary>    
+/// Represents the custom data properties.
+/// </summary>
+public class PopulationDetails
+{
+    public string Country { get; set; }
+    public string Continent { get; set; }
+    public double Population { get; set; }
+}
+
+{% endhighlight %}
+{% highlight C# tabtitle="PopulationViewModel.cs" %}
+
+/// <summary>    
+/// Represents demographic information for population data for a specific country.
+/// </summary>
+public class PopulationViewModel
+{
+    public PopulationViewModel()
+    {
+        this.PopulationDetails = new ObservableCollection<PopulationDetails>()
+        {
+            new PopulationDetails() { Continent ="North America", Country = "United States of America", Population = 339996564 },
+            new PopulationDetails() { Continent ="South America", Country = "Brazil", Population = 216422446 },
+            new PopulationDetails() { Continent ="North America", Country = "Mexico", Population = 128455567 },
+            new PopulationDetails() { Continent ="South America", Country = "Colombia", Population = 52085168 },
+            new PopulationDetails() { Continent ="South America", Country = "Argentina", Population = 45773884 },
+            new PopulationDetails() { Continent ="North America", Country = "Canada", Population = 38781292 },
+            new PopulationDetails() { Continent ="South America", Country = "Peru", Population = 34352719 },
+            new PopulationDetails() { Continent ="South America", Country = "Venezuela", Population = 28838499 },
+            new PopulationDetails() { Continent ="South America", Country = "Chile", Population = 19629590 },
+            new PopulationDetails() { Continent ="South America", Country = "Ecuador", Population = 18190484 },
+            new PopulationDetails() { Continent ="North America", Country = "Guatemala", Population = 18092026 },
+            new PopulationDetails() { Continent ="South America", Country = "Bolivia", Population = 12388571 },
+            new PopulationDetails() { Continent ="North America", Country = "Honduras", Population = 10593798 },
+            new PopulationDetails() { Continent ="North America", Country = "Nicaragua", Population = 7046311 },
+            new PopulationDetails() { Continent ="South America", Country = "Paraguay", Population = 6861524 },
+            new PopulationDetails() { Continent ="North America", Country = "El Salvador", Population = 6364943 },
+            new PopulationDetails() { Continent ="North America", Country = "Costa Rica", Population = 5212173 },
+            new PopulationDetails() { Continent ="South America", Country = "Uruguay", Population = 3423109 },
+        };
+    }
+
+    public ObservableCollection<PopulationDetails> PopulationDetails
+    {
+        get;
+        set;
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+N> This property will be applicable to only when the `ShowLegend` is enabled.
