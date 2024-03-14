@@ -124,7 +124,6 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </th>
     </tr>
-
     <tr>
         <td rowspan="12">
             SfAccordionStyles  
@@ -216,21 +215,9 @@ This page lists the keys for each control and the element to which it is mapped 
 
 <table>
     <tr>
-        <th>
-            Theme Dictionary
-            <br/>
-            <br/>
-        </th>        
-        <th>
-            Keys
-            <br/>
-            <br/>
-        </th>
-        <th>
-            Description
-            <br/>
-            <br/>
-        </th>
+        <th>Theme Dictionary<br/><br/></th>
+        <th>Keys<br/><br/></th>
+        <th>Description<br/><br/></th>
     </tr>
 
     <tr>
@@ -248,7 +235,6 @@ This page lists the keys for each control and the element to which it is mapped 
             By merging this key in application resources, it is possible to customize the appearance of the SfDataGrid without merging common theme resource and control style resource dictionaries.
 			
 {% highlight xaml %}
-
 <Application xmlns:syncTheme="clr-namespace:Syncfusion.Maui.Themes;assembly=Syncfusion.Maui.Core"
              ...>
 <Application.Resources>
@@ -263,392 +249,133 @@ This page lists the keys for each control and the element to which it is mapped 
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>
-
 ....
-
 </Application>
-
 {% endhighlight %}
             <br/>
             <br/>
         </td>
 	</tr>
-
     <tr>
-        <td>
-            SfDataGridHeaderRowBackground
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Background color of the header rows in the SfDataGrid.
-            <br/>
-            <br/>
-        </td>
+        <td>SfDataGridHeaderRowBackground<br/><br/></td>
+        <td>Background color of the header rows in the SfDataGrid.<br/><br/></td>
     </tr>
-
     <tr>
-        <td>
-            SfDataGridHeaderRowTextColor
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Text color of the header rows in the SfDataGrid.
-            <br/>
-            <br/>
-        </td>
+        <td>SfDataGridHeaderRowTextColor<br/><br/></td>
+        <td>Text color of the header rows in the SfDataGrid.<br/><br/></td>
     </tr>
-
     <tr>
-        <td>
-            SfDataGridRowBackground
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Background color of the data rows in the SfDataGrid.
-            <br/>
-            <br/>
-        </td>
+        <td>SfDataGridRowBackground<br/><br/></td>
+        <td>Background color of the data rows in the SfDataGrid.<br/><br/></td>
     </tr>
-
     <tr>
-        <td>
-            SfDataGridRowTextColor
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Text color of the data rows in the SfDataGrid.
-            <br/>
-            <br/>
-        </td>
+        <td>SfDataGridRowTextColor<br/><br/></td>
+        <td>Text color of the data rows in the SfDataGrid.<br/><br/></td>
     </tr>
-
     <tr>
-        <td>
-            SfDataGridGridLineColor
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color for the grid lines in the SfDataGrid.
-            <br/>
-            <br/>
-        </td>
+        <td>SfDataGridGridLineColor<br/><br/></td>
+        <td>Color for the grid lines in the SfDataGrid.<br/><br/></td>
     </tr>
-
     <tr>
-        <td>
-            SfDataGridSelectionBackground
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Background color of the selected rows in the SfDataGrid.
-            <br/>
-            <br/>
-        </td>
+        <td>SfDataGridSelectionBackground<br/><br/></td>
+        <td>Background color of the selected rows in the SfDataGrid.<br/><br/></td>
     </tr>
-
+    <tr>            
+        <td>SfDataGridSelectedRowTextColor<br/><br/></td>
+        <td>Text color of the selected rows in the SfDataGrid.<br/><br/></td>
+    </tr>
     <tr>
-        <td>
-            SfDataGridSelectedRowTextColor
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Text color of the selected rows in the SfDataGrid.
-            <br/>
-            <br/>
-        </td>
+        <td>SfDataGridAlternatingRowBackground<br/><br/></td>
+        <td>Background color of the alternate rows in the SfDataGrid.<br/><br/></td>
     </tr>
-
     <tr>
-        <td>
-            SfDataGridAlternatingRowBackground
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Background color of the alternate rows in the SfDataGrid.
-            <br/>
-            <br/>
-        </td>
+        <td>SfDataGridCurrentCellBorderColor<br/><br/></td>
+        <td>Border color of the current cell in the SfDataGrid.<br/><br/></td>
     </tr>
-
     <tr>
-        <td>
-            SfDataGridCurrentCellBorderColor
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Border color of the current cell in the SfDataGrid.
-            <br/>
-            <br/>
-        </td>
+        <td>SfDataGridCurrentRowHighlightColor<br/><br/></td>
+        <td>Border color of the current row in the SfDataGrid.<br/><br/></td>
     </tr>
-
     <tr>
-        <td>
-            SfDataGridCurrentRowHighlightColor
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Border color of the current row in the SfDataGrid.
-            <br/>
-            <br/>
-        </td>
+        <td>SfDataGridCaptionSummaryRowBackground<br/><br/></td>
+        <td>Background color of the caption summary rows in the SfDataGrid.<br/><br/></td>
     </tr>
-
     <tr>
-        <td>
-            SfDataGridCaptionSummaryRowBackground
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Background color of the caption summary rows in the SfDataGrid.
-            <br/>
-            <br/>
-        </td>
+        <td>SfDataGridCaptionSummaryRowTextColor<br/><br/></td>
+        <td>Text color of the caption summary rows in the SfDataGrid.<br/><br/></td>
     </tr>
-
     <tr>
-        <td>
-            SfDataGridCaptionSummaryRowTextColor
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Text color of the caption summary rows in the SfDataGrid.
-            <br/>
-            <br/>
-        </td>
+        <td>SfDataGridGroupSummaryRowBackground<br/><br/></td>
+        <td>Background color of the group summary rows in the SfDataGrid.<br/><br/></td>
     </tr>
-
     <tr>
-        <td>
-            SfDataGridGroupSummaryRowBackground
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Background color of the group summary rows in the SfDataGrid.
-            <br/>
-            <br/>
-        </td>
+        <td>SfDataGridGroupSummaryRowTextColor<br/><br/></td>
+        <td>Text color of the group summary rows in the SfDataGrid.<br/><br/></td>
     </tr>
-
     <tr>
-        <td>
-            SfDataGridGroupSummaryRowTextColor
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Text color of the group summary rows in the SfDataGrid.
-            <br/>
-            <br/>
-        </td>
+        <td>SfDataGridTableSummaryRowBackground<br/><br/></td>
+        <td>Background color of the table summary rows in the SfDataGrid.<br/><br/></td>
     </tr>
-
     <tr>
-        <td>
-            SfDataGridTableSummaryRowBackground
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Background color of the table summary rows in the SfDataGrid.
-            <br/>
-            <br/>
-        </td>
+        <td>SfDataGridTableSummaryRowTextColor<br/><br/></td>
+        <td>Text color of the table summary rows in the SfDataGrid.<br/><br/></td>
     </tr>
-
     <tr>
-        <td>
-            SfDataGridTableSummaryRowTextColor
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Text color of the table summary rows in the SfDataGrid.
-            <br/>
-            <br/>
-        </td>
+        <td>SfDataGridFreezePaneLineColor<br/><br/></td>
+        <td>Color of the line which indicates the frozen pane in the SfDataGrid.<br/><br/></td>
     </tr>
-
     <tr>
-        <td>
-            SfDataGridFreezePaneLineColor
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color of the line which indicates the frozen pane in the SfDataGrid.
-            <br/>
-            <br/>
-        </td>
+        <td>SfDataGridStackedHeaderRowBackground<br/><br/></td>
+        <td>Background color of the stacked header rows in the SfDataGrid.<br/><br/></td>
     </tr>
-
     <tr>
-        <td>
-            SfDataGridStackedHeaderRowBackground
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Background color of the stacked header rows in the SfDataGrid.
-            <br/>
-            <br/>
-        </td>
+        <td>SfDataGridStackedHeaderRowTextColor<br/><br/></td>
+        <td>Text color of the stacked header rows in the SfDataGrid.<br/><br/></td>
     </tr>
-
     <tr>
-        <td>
-            SfDataGridStackedHeaderRowTextColor
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Text color of the stacked header rows in the SfDataGrid.
-            <br/>
-            <br/>
-        </td>
+        <td>SfDataGridLoadMoreBackground<br/><br/></td>
+        <td>Background color of the load more row in the SfDataGrid.<br/><br/></td>
     </tr>
-
     <tr>
-        <td>
-            SfDataGridLoadMoreBackground
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Background color of the load more row in the SfDataGrid.
-            <br/>
-            <br/>
-        </td>
+        <td>SfDataGridLoadMoreButtonTextColor<br/><br/></td>
+        <td>Text color of the load more Button in the SfDataGrid.<br/><br/></td>
     </tr>
-
     <tr>
-        <td>
-            SfDataGridLoadMoreButtonTextColor
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Text color of the load more Button in the SfDataGrid.
-            <br/>
-            <br/>
-        </td>
+        <td>SfDataGridLoadMoreButtonBackground<br/><br/></td>
+        <td>Background color of the load more Button in the SfDataGrid.<br/><br/></td>
     </tr>
-
     <tr>
-        <td>
-            SfDataGridLoadMoreButtonBackground
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Background color of the load more Button in the SfDataGrid.
-            <br/>
-            <br/>
-        </td>
+        <td>SfDataGridLoadMoreIndicatorColor<br/><br/></td>
+        <td>Indicator color of the load more in the SfDataGrid.<br/><br/></td>
     </tr>
-
     <tr>
-        <td>
-            SfDataGridLoadMoreIndicatorColor
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Indicator color of the load more in the SfDataGrid.
-            <br/>
-            <br/>
-        </td>
+        <td>SfDataGridColumnResizingIndicatorColor<br/><br/></td>
+        <td>Color for the resizing indicator in the SfDataGrid.<br/><br/></td>
     </tr>
-
     <tr>
-        <td>
-            SfDataGridColumnResizingIndicatorColor
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color for the resizing indicator in the SfDataGrid.
-            <br/>
-            <br/>
-        </td>
+        <td>SfDataGridUnboundRowBackground<br/><br/></td>
+        <td>Background color of the unbound rows in the SfDataGrid.<br/><br/></td>
     </tr>
-
     <tr>
-        <td>
-            SfDataGridUnboundRowBackground
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Background color of the unbound rows in the SfDataGrid.
-            <br/>
-            <br/>
-        </td>
+        <td>SfDataGridUnboundRowTextColor<br/><br/></td>
+        <td>Text color of the unbound rows in the SfDataGrid.<br/><br/></td>
     </tr>
+</table>
 
-    <tr>
-        <td>
-            SfDataGridUnboundRowTextColor
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Text color of the unbound rows in the SfDataGrid.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-
-## SfDataGrid
+## SfDataPager
 
 <table>
     <tr>
-        <th>
-            Theme Dictionary
-            <br/>
-            <br/>
-        </th>        
-        <th>
-            Keys
-            <br/>
-            <br/>
-        </th>
-        <th>
-            Description
-            <br/>
-            <br/>
-        </th>
+        <th>Theme Dictionary<br/><br/></th>
+        <th>Keys<br/><br/></th>
+        <th>Description<br/><br/></th>
     </tr>
-
     <tr>
-        <td rowspan="11">
-            SfDataPagerStyles  
-            <br/>
-            <br/>
-        </td>
-		<td>
-           SfDataPagerTheme 
-            <br/>
-            <br/>
-        </td>
-        <td>    
-            By merging this key in application resources, it is possible to customize the appearance of the SfDataPager without merging common theme resource and control style resource dictionaries.
+        <td rowspan="11">SfDataPagerStyles<br/><br/></td>
+		<td>SfDataPagerTheme<br/><br/></td>
+        <td>By merging this key in application resources, it is possible to customize the appearance of the SfDataPager without merging common theme resource and control style resource dictionaries.
 			
 {% highlight xaml %}
-
 <Application xmlns:syncTheme="clr-namespace:Syncfusion.Maui.Themes;assembly=Syncfusion.Maui.Core"
              ...>
 <Application.Resources>
@@ -663,147 +390,52 @@ This page lists the keys for each control and the element to which it is mapped 
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>
-
 ....
-
 </Application>
-
 {% endhighlight %}
-            <br/>
-            <br/>
-        </td>
+        <br/><br/></td>
 	</tr>
-
     <tr>
-        <td>
-            SfDataPagerNavigationButtonIconColor
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Icon color of the navigation button in the SfDataPager.
-            <br/>
-            <br/>
-        </td>
+        <td>SfDataPagerNavigationButtonIconColor<br/><br/></td>
+        <td>Icon color of the navigation button in the SfDataPager.<br/><br/></td>
     </tr>
-
     <tr>
-        <td>
-            SfDataPagerDataPagerBackgroundColor
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Background color of the data pager in the SfDataPager.
-            <br/>
-            <br/>
-        </td>
+        <td>SfDataPagerDataPagerBackgroundColor<br/><br/></td>
+        <td>Background color of the data pager in the SfDataPager.<br/><br/></td>
     </tr>
-
     <tr>
-        <td>
-            SfDataPagerNumericButtonSelectionBackgroundColor
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Background color of the selection numeric button in the SfDataPager.
-            <br/>
-            <br/>
-        </td>
+        <td>SfDataPagerNumericButtonSelectionBackgroundColor<br/><br/></td>
+        <td>Background color of the selection numeric button in the SfDataPager.<br/><br/></td>
     </tr>
-
     <tr>
-        <td>
-            SfDataPagerNavigationButtonBackgroundColor
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Background color of the navigation button in the SfDataPager.
-            <br/>
-            <br/>
-        </td>
+        <td>SfDataPagerNavigationButtonBackgroundColor<br/><br/></td>
+        <td>Background color of the navigation button in the SfDataPager.<br/><br/></td>
     </tr>
-
     <tr>
-        <td>
-            SfDataPagerNumericButtonBackgroundColor
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Background color of the numeric button in the SfDataPager.
-            <br/>
-            <br/>
-        </td>
+        <td>SfDataPagerNumericButtonBackgroundColor<br/><br/></td>
+        <td>Background color of the numeric button in the SfDataPager.<br/><br/></td>
     </tr>
-
     <tr>
-        <td>
-            SfDataPagerNumericButtonTextColor
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Text color of the numeric button in the SfDataPager.
-            <br/>
-            <br/>
-        </td>
+        <td>SfDataPagerNumericButtonTextColor<br/><br/></td>
+        <td>Text color of the numeric button in the SfDataPager.<br/><br/></td>
     </tr>
-
     <tr>
-        <td>
-            SfDataPagerNumericButtonSelectionTextColor
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Text color of the selection numeric button in the SfDataPager.
-            <br/>
-            <br/>
-        </td>
+        <td>SfDataPagerNumericButtonSelectionTextColor<br/><br/></td>
+        <td>Text color of the selection numeric button in the SfDataPager.<br/><br/></td>
     </tr>
-
     <tr>
-        <td>
-            SfDataPagerNavigationButtonDisableBackgroundColor
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Background color of the disable navigation button in the SfDataPager.
-            <br/>
-            <br/>
-        </td>
+        <td>SfDataPagerNavigationButtonDisableBackgroundColor<br/><br/></td>
+        <td>Background color of the disable navigation button in the SfDataPager.<br/><br/></td>
     </tr>
-
     <tr>
-        <td>
-            SfDataPagerNavigationButtonDisableIconColor
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Icon color of the disable navigation button in the SfDataPager.
-            <br/>
-            <br/>
-        </td>
+        <td>SfDataPagerNavigationButtonDisableIconColor<br/><br/></td>
+        <td>Icon color of the disable navigation button in the SfDataPager.<br/><br/></td>
     </tr>
-
     <tr>
-        <td>
-            SfDataPagerHoveredBackgroundColor
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Hovering background color in the SfDataPager.
-            <br/>
-            <br/>
-        </td>
+        <td>SfDataPagerHoveredBackgroundColor<br/><br/></td>
+        <td>Hovering background color in the SfDataPager.<br/><br/></td>
     </tr>
-
+</table>
 
 ## SfExpander
 
