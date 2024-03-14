@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Right To Left FlowDirection in .NET MAUI Image Editor Control | Syncfusion
+title: FlowDirection in .NET MAUI Image Editor | Syncfusion
 description: Learn about Right To Left support in Syncfusion .NET MAUI Image Editor(SfImageEditor) control and more.
 platform: maui
 control: SfImageEditor
