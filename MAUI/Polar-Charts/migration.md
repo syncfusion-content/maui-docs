@@ -382,38 +382,6 @@ this.Content = chart;
 <td><em>Upcoming</em> </td>
 </tr>
 <tr>
-<td>Series</td>
-<td><em>Upcoming</em> </td>
-</tr>
-<tr>
-<td>BackgroundColor</td>
-<td><em>Upcoming</em> </td>
-</tr>
-<tr>
-<td>StrokeColor</td>
-<td><em>Upcoming</em> </td>
-</tr>
-<tr>
-<td>StrokeWidth</td>
-<td><em>Upcoming</em> </td>
-</tr>
-<tr>
-<td>StrokeDashArray</td>
-<td><em>Upcoming</em> </td>
-</tr>
-<tr>
-<td>CornerRadius</td>
-<td><em>Upcoming</em></td>
-</tr>
-<tr>
-<td>Margin</td>
-<td><em>Upcoming</em></td>
-</tr>
-<tr>
-<td>LabelStyle</td>
-<td><em>Upcoming</em></td>
-</tr>
-<tr>
 <td>OverflowMode</td>
 <td><em>Upcoming</em></td>
 </tr>
@@ -716,14 +684,12 @@ chart.TooltipBehavior = tooltip;
 ## Upcoming features in .NET MAUI
 
 **Chart** 
- 
-* Support for chart localization. 
+
 * Suspend and resume notification support. 
 
 **Series**
 
 * Listen to property change support for series.
-* Get data point index based on value.
 * Notify event or method when series are rendering.
 * Suspend and resume notification.
 
@@ -743,12 +709,7 @@ chart.TooltipBehavior = tooltip;
 * Support to enable or disable the legend icon visibility.
 * Legend items wrap and floating support.
 * Maximum width support for Legend.
-* Individual legend items based on the data point count.
 * Event or method to notify the legend click and the creation of a legend item.
-
-**Data label**
-
-* DataTemplate support for data labels.
 
 ## Known issue 
 
