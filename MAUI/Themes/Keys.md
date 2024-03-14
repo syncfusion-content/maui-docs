@@ -1679,21 +1679,17 @@ This page lists the keys for each control and the element to which it is mapped 
         <td> SfListViewNormalLoadMoreButtonBackground <br/><br/></td> 
         <td> Background color of the load more button when it is in the default state.<br/><br/></td>
     </tr>
-    </tr>
     <tr>
         <td> SfListViewNormalLoadMoreItemTextColor <br/><br/></td> 
         <td> Text color of the load more button.<br/><br/></td>
-    </tr>
     </tr>
     <tr>
         <td> SfListViewNormalLoadMoreIndicatorIconColor <br/><br/></td> 
         <td> Color of the Load More Indicator.<br/><br/></td>
     </tr>
-    </tr>
     <tr>
         <td> SfListViewNormalEmptyViewItemBackground <br/><br/></td> 
         <td> Background color of the EmptyViewItem.<br/><br/></td>
-    </tr>
     </tr>
     <tr>
         <td> SfListViewNormalEmptyViewItemTextColor <br/><br/></td> 
