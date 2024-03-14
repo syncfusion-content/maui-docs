@@ -49,6 +49,7 @@ To prevent resizing a column using the `SfDataGrid.ColumnResizing` event and the
 
 {% highlight c# %}
 this.dataGrid.ColumnResizing += DataGrid_ColumnResizing;
+
 private void DataGrid_ColumnResizing(object? sender, Syncfusion.Maui.DataGrid.DataGridColumnResizingEventArgs e)
 {
     //Code to end resizing if ColumnIndex is 2
@@ -61,6 +62,7 @@ To cancel resizing a column using the `SfDataGrid.ColumnResizing` event and the 
 
 {% highlight c# %}
 this.dataGrid.ColumnResizing += DataGrid_ColumnResizing;
+
 private void DataGrid_ColumnResizing(object? sender, Syncfusion.Maui.DataGrid.DataGridColumnResizingEventArgs e)
 {
     //Code to end resizing if Column's Width is >= 100
@@ -73,6 +75,7 @@ To cancel resizing a column using the `SfDataGrid.ColumnResizing` event and the 
 
 {% highlight c# %}
 this.dataGrid.ColumnResizing += DataGrid_ColumnResizing;
+
 private void DataGrid_ColumnResizing(object? sender, Syncfusion.Maui.DataGrid.DataGridColumnResizingEventArgs e)
 {
     // Code to end resizing if interaction state is Progressing
