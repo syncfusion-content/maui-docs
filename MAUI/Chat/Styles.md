@@ -11,7 +11,7 @@ documentation: ug
 
 You can style the elements of the `SfChat` control by creating resource dictionaries and assigning values to the in-built keys assigned for each individual element.
 
-## Chat Background
+## Chat background
 
 You can set any solid color as background for `SfChat` by setting any color to the `SfChat.Background` property. However, if you want the solid color to be applied to the message input view area, also, set the background color of the message input view as transparent, as shown in the below code sample.
 
@@ -71,7 +71,7 @@ You can set any solid color as background for `SfChat` by setting any color to t
 {% endhighlight %}
 {% endtabs %}
 
-![.NET MAUI Chat with Background Color](images/styles/maui-chat-background-color-style.png)
+![Background color in .NET MAUI Chat](images/styles/maui-chat-background-color-style.png)
 
 ### Set background image
 
@@ -142,7 +142,7 @@ You can set any image as the background for the `SfChat` by setting the `SfChat.
 {% endhighlight %}
 {% endtabs %}
 
-![.NET MAUI Chat with Background Image](images/styles/maui-chat-image-background-style.png)
+![Background image in .NET MAUI Chat](images/styles/maui-chat-image-background-style.png)
 
 ### Set gradient background
 
@@ -220,7 +220,7 @@ You can set the gradient view as a background for a chat by setting the `SfChat.
 {% endhighlight %}
 {% endtabs %}
 
-![.NET MAUI Chat with Gradient Background](images/styles/maui-chat-gradient-background-style.png)
+![Gradient background in .NET MAUI Chat](images/styles/maui-chat-gradient-background-style.png)
 
 ## Incoming message styling
 
@@ -338,7 +338,7 @@ You can style the elements of an incoming message by setting values to the in-bu
 {% endhighlight %}
 {% endtabs %}
 
-![.NET MAUI Chat Incoming message with style](images/styles/maui-chat-incoming-message-style.png)
+![Incoming message style in .NET MAUI Chat](images/styles/maui-chat-incoming-message-style.png)
  
 ## Outgoing message styling
 
@@ -444,7 +444,7 @@ You can style the elements of an outgoing message by setting values to the in-bu
 {% endhighlight %}
 {% endtabs %}
 
-![.NET MAUI Chat Outgoing message with style](images/styles/maui-chat-outgoing-message-style.png)
+![Outgoing message style in .NET MAUI Chat](images/styles/maui-chat-outgoing-message-style.png)
 
 ## Calendar message styling
 
@@ -565,7 +565,7 @@ You can style the elements of a hyperlink message by setting values to the in-bu
 {% endhighlight %}
 {% endtabs %}
 
-![.NET MAUI Chat Hyperlink message with style](images/styles/maui-chat-hyperlink-message-style.png)
+![Hyperlink message style in .NET MAUI Chat](images/styles/maui-chat-hyperlink-message-style.png)
 
 ## Date picker message styling
 
@@ -631,7 +631,7 @@ You can style the elements of a date picker message by setting values to the in-
 {% endhighlight %}
 {% endtabs %}
 
-![.NET MAUI Chat Date Picker message with style](images/styles/maui-chat-datepicker-message-style.png)
+![Date picker message style in .NET MAUI Chat](images/styles/maui-chat-datepicker-message-style.png)
 
 ## Time picker message styling
 
@@ -694,7 +694,7 @@ You can style the elements of a time picker message by setting values to the in-
 {% endhighlight %}
 {% endtabs %}
 
-![.NET MAUI Chat Time Picker Message with style](images/styles/maui-chat-timepicker-message-style.png)
+![Time picker message style in .NET MAUI Chat](images/styles/maui-chat-timepicker-message-style.png)
 
 ## Message input view styling
 
@@ -742,7 +742,7 @@ You can style the elements of the message input view by setting values to the in
 {% endhighlight %}
 {% endtabs %}
 
-![.NET MAUI Chat message input view with style](images/styles/maui-chat-message-inputview-style.png)
+![Message input view style in .NET MAUI Chat](images/styles/maui-chat-message-inputview-style.png)
 
 ## Editor styling
 
@@ -826,9 +826,9 @@ You can style the elements of the editor view by setting values to the in-built 
 {% endhighlight %}
 {% endtabs %}
 
-![.NET MAUI Chat editor with style](images/styles/maui-chat-editor-style.png)
+![Editor style in .NET MAUI Chat](images/styles/maui-chat-editor-style.png)
 
-![.NET MAUI Chat editor with style](images/styles/maui-chat-editor-withtext-style.png)
+![Editor text style in .NET MAUI Chat](images/styles/maui-chat-editor-withtext-style.png)
 
 ## Typing indicator styling
 
@@ -900,7 +900,7 @@ You can style the elements of the typing indicator view by setting values to the
 {% endhighlight %}
 {% endtabs %}
 
-![.NET MAUI Chat Typing indicator with style](images/styles/maui-chat-typingindicator-style.png)
+![Typing indicator style in .NET MAUI Chat](images/styles/maui-chat-typingindicator-style.png)
 
 ## Time break view styling
 
@@ -978,9 +978,9 @@ You can style the elements of the time break view by setting values to the in-bu
 {% endhighlight %}
 {% endtabs %}
 
-![.NET MAUI Chat Time break view with style](images/styles/maui-chat-time-break-style.png)
+![Time break view style in .NET MAUI Chat](images/styles/maui-chat-time-break-style.png)
 
-## Suggestion styling
+## Suggestions styling
 
 You can style the elements of the suggestion view by setting values to the in-built keys of the suggestion view in the resource dictionary.
 
@@ -1060,7 +1060,7 @@ You can style the elements of the suggestion view by setting values to the in-bu
 {% endhighlight %}
 {% endtabs %}
 
-![NET MAUI Chat suggestion with style](images/styles/maui-chat-suggestion-style.png)
+![Suggestions style in .NET MAUI Chat](images/styles/maui-chat-suggestion-style.png)
 
 ## Send button styling
 
@@ -1138,9 +1138,9 @@ You can style the send message button based on its state by setting values to th
 {% endhighlight %}
 {% endtabs %}
 
-![NET MAUI Chat send button Disable with style](images/styles/maui-chat-sendicon-disable-style.png)
+![Send button disable style in .NET MAUI Chat](images/styles/maui-chat-sendicon-disable-style.png)
 
-![NET MAUI Chat send button Enable with style](images/styles/maui-chat-sendicon-enable-style.png)
+![Send button enable style in .NET MAUI Chat](images/styles/maui-chat-sendicon-enable-style.png)
 
 ## Attachment button styling
 
@@ -1203,5 +1203,5 @@ You can style the attachment button by setting values to the in-built keys of th
 {% endhighlight %}
 {% endtabs %}
 
-![NET MAUI Chat attachment button with style](images/styles/maui-chat-attachmentbutton-style.png)
+![Attachment button style in .NET MAUI Chat](images/styles/maui-chat-attachmentbutton-style.png)
 
