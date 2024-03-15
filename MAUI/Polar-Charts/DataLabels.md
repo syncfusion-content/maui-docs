@@ -17,7 +17,7 @@ Each data label can be represented by the following:
 
 ## Enable Data Label 
 
-The [ShowDataLabels]() property of a series is used to enable the data labels.
+The [ShowDataLabels](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_ShowDataLabels) property of a series is used to enable the data labels.
 
 {% tabs %}
 
@@ -25,10 +25,8 @@ The [ShowDataLabels]() property of a series is used to enable the data labels.
 
 <chart:SfPolarChart>
     . . .
-    <chart:PolarLineSeries ItemsSource="{Binding PlantDetails}" 
-                        XBindingPath="Direction"
-                        YBindingPath="Tree" ShowDataLabels="True">
-        </chart:PolarLineSeries>
+    <chart:PolarLineSeries ItemsSource="{Binding PlantDetails}"  XBindingPath="Direction" YBindingPath="Tree" 
+                ShowDataLabels="True" />
 </chart:SfPolarChart>
 
 {% endhighlight %}
@@ -55,61 +53,12 @@ chart.Series.Add(series);
 
 Data labels can be customized using the [DataLabelSettings]() property of chart series. To customize them, you need to create an instance of [PolarDataLabelSettings]() and set it to the [DataLabelSettings]() property. The following properties available in [PolarDataLabelSettings]() can be used to customize the data labels.
 
-* [BarAlignment]() - Gets or sets the data label alignment top, middle, or bottom.
-* [LabelPlacement]() - Gets or sets the data label position inside, outside, or default.
-* [LabelStyle]() - Gets or sets the options for customizing the data labels. 
-* [UseSeriesPalette]() - Gets or sets a value indicating whether the data label should reflect the series interior.
-
-## Data Label Alignment
-
-The alignment of data labels inside the series is defined using the [BarAlignment]() property.
-
-* [Top]() - Positions the data label at the top edge point of a chart segment.
-* [Middle]() - Positions the data label at the center point of a chart segment.
-* [Bottom]() - Positions the data label at the bottom edge point of a chart segment.
-
-N> This behavior varies based on the chart series type.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<chart:SfPolarChart>
-    . . .
-    <chart:PolarLineSeries ShowDataLabels="True">
-        <chart:PolarLineSeries.DataLabelSettings>
-            <chart:PolarDataLabelSettings BarAlignment="Middle"/>
-        </chart:PolarLineSeries.DataLabelSettings>
-    </chart:PolarLineSeries>
-</chart:SfPolarChart>
-
-{% endhighlight %}
-
-{% highlight c# %}
-
-SfPolarChart chart = new SfPolarChart();
-PolarLineSeries series = new PolarLineSeries();
-. . .
-series.DataLabelSettings = new PolarDataLabelSettings()
-{
-    BarAlignment = DataLabelAlignment.Middle,
-};
-
-chart.Series.Add(series);
-
-{% endhighlight %}
-
-{% endtabs %}
-
-## LabelPlacement
-
-In addition to the alignment options mentioned above, the Chart provides additional customization options for positioning the data labels.
-
-The [LabelPlacement]() property is used to position the data labels at [Center](), [Inner](), and [Outer]() positions relative to the actual data point position. By default, labels are positioned based on the series types for better readability.
+* [LabelStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartDataLabelSettings.html#Syncfusion_Maui_Charts_ChartDataLabelSettings_LabelStyle) - Gets or sets the options for customizing the data labels. 
+* [UseSeriesPalette](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartDataLabelSettings.html#Syncfusion_Maui_Charts_ChartDataLabelSettings_UseSeriesPalette) - Gets or sets a value indicating whether the data label should reflect the series interior.
 
 ## Applying Series Brush
 
-The [UseSeriesPalette]() property is used to set the interior of the series to the data marker background.
+The [UseSeriesPalette](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartDataLabelSettings.html#Syncfusion_Maui_Charts_ChartDataLabelSettings_UseSeriesPalette) property is used to set the interior of the series to the data marker background.
 
 {% tabs %}
 
@@ -135,7 +84,6 @@ series.DataLabelSettings = new PolarDataLabelSettings()
 {
     UseSeriesPalette = false,
 };
-
 chart.Series.Add(series);
 
 {% endhighlight %}
@@ -154,33 +102,29 @@ The content of the label can be customized using the [LabelContext]() property. 
 
 {% highlight xaml %}
 
-    <chart:SfPolarChart>
-        . . .
-        <chart:PolarAreaSeries ItemsSource="{Binding PlantDetails}" 
-                            ShowDataLabels="True"
-                            XBindingPath="Direction"
-                            YBindingPath="Tree" 
-                            LabelContext="Percentage"/>
-
-    </chart:SfPolarChart>
+<chart:SfPolarChart>
+    . . .
+    <chart:PolarAreaSeries ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Tree" 
+                    ShowDataLabels="True" LabelContext="Percentage" />
+</chart:SfPolarChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfPolarChart chart = new SfPolarChart();
-    . . .
-    PolarAreaSeries series = new PolarAreaSeries()
-    {
-        ItemsSource = new ViewModel().PlantDetails,
-        XBindingPath = "Direction",
-        YBindingPath = "Tree",
-        ShowDataLabels = true,
-        LabelContext = LabelContext.Percentage
-    };
+SfPolarChart chart = new SfPolarChart();
+. . .
+PolarAreaSeries series = new PolarAreaSeries()
+{
+    ItemsSource = new ViewModel().PlantDetails,
+    XBindingPath = "Direction",
+    YBindingPath = "Tree",
+    ShowDataLabels = true,
+    LabelContext = LabelContext.Percentage
+};
+chart.Series.Add(series);
 
-    chart.Series.Add(series);
-    this.Content = chart;
+this.Content = chart;
         
 {% endhighlight %}
 
@@ -206,12 +150,8 @@ The [SfPolarChart]() provides support to customize the appearance of the datalab
             </DataTemplate>
         </chart:SfPolarChart.Resources>
         . . .
-        <chart:PolarAreaSeries ItemsSource="{Binding PlantDetails}" 
-                            LabelTemplate="{StaticResource labelTemplate}"
-                            XBindingPath="Direction"
-                            YBindingPath="Tree" 
-                            ShowDataLabels="True"/>
-
+        <chart:PolarAreaSeries ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Tree" 
+        ShowDataLabels="True" LabelTemplate="{StaticResource labelTemplate}"/>
     </chart:SfPolarChart>
 
 {% endhighlight %}
@@ -221,10 +161,10 @@ The [SfPolarChart]() provides support to customize the appearance of the datalab
     SfPolarChart chart = new SfPolarChart();
     . . .
     PolarAreaSeries series = new PolarAreaSeries();
-    series.ShowDataLabels = true;
     series.ItemsSource = new ViewModel().PlantDetails;
     series.XBindingPath = "Direction";
     series.YBindingPath = "Tree";
+    series.ShowDataLabels = true;
 
     DataTemplate labelTemplate = new DataTemplate(() =>
     {
