@@ -202,7 +202,7 @@ maskedEntry.TextColor =  Colors.Green;
 
 ## Stroke
 
-The [`MaskedEntry`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html) border color can be changed by using the `Stroke` property.
+The [MaskedEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html) border color can be changed by using the `Stroke` property.
 
 {% tabs %}
 {% highlight XAML %}
@@ -227,7 +227,7 @@ The following image illustrates the result of the above code:
 
 ## Border visibility
 
-The `ShowBorder` property of [`SfMaskedEntry`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html) is used to modify the visibility of the border and its default value is **true**. The following code example demonstrates how to change the border visibility,
+The `ShowBorder` property of [SfMaskedEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html) is used to modify the visibility of the border and its default value is **true**. The following code example demonstrates how to change the border visibility,
 
 {% tabs %}
 {% highlight XAML %}
@@ -250,9 +250,9 @@ The following image illustrates the result of the above code:
 
 ![ShowBorder](MaskedEntry_Images/MaskedEntry_ShowBorder.png)
 
-### TextAlignment
+## TextAlignment
 
-The [`SfMaskedEntry`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html) provides support to customize the text alignment by using the `HorizontalTextAlignment` and `VerticalTextAlignment` properties.
+The [SfMaskedEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html) provides support to customize the text alignment by using the `HorizontalTextAlignment` and `VerticalTextAlignment` properties.
 
 {% tabs %}
 {% highlight xaml %}
