@@ -287,7 +287,7 @@ public class PopulationViewModel
 
 ## Programatic item selection
 
-You can programmatically select the tree map items by utilizing the `SelectedItems` property in the `SfTreeMap.` This property holds a collection of tree map items representing the currently selected ones. In `Single` selection mode, only the first item in the SelectedItems collection will be selected. In `Multiple` selection mode, all items in the `SelectedItems` collection will be selected. When `SelectionMode` is set to `None`, no items are selected.
+You can programmatically select the tree map items by utilizing the `SelectedItems` property in the `SfTreeMap.` This property holds a collection of the treemap items representing the currently selected ones. In the `Single` selection mode, only the first item in the SelectedItems collection will be selected. In the `Multiple` selection mode, all items in the `SelectedItems` collection will be selected. When `SelectionMode` is set to `None,` no items are selected.
 
 {% tabs %}
 {% highlight XAML %}

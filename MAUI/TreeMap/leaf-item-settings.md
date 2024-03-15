@@ -9,7 +9,7 @@ documentation: ug
  
 # Leaf item settings in .NET MAUI TreeMap (SfTreeMap)
 
-A leaf item in the TreeMap represents a visualized data element. It does not contain child items but may have a parent item if levels are specified in the TreeMap control. It also allows you to customize the spacing between items, stroke color, stroke width, text style, and text format option in the tree map control.
+A leaf item in the TreeMap represents a visualized data element. It does not contain child items but may have a parent item if levels are specified in the TreeMap control. It also allows you to customize the spacing between items, stroke color, stroke width, text style, and text format option in the TreeMap control.
 
 ## Label path
 
@@ -467,7 +467,7 @@ public class PopulationViewModel
 
 ## Customize leaf item appearance using style
 
-The leaf item appearance customization can be achieved by using the `TextStyle` property of `LeafItemSettings` in `SfTreeMap.` It is used to customize the `TextColor,` `FontSize,` `FontFamily,` and `FontAttributes` of tree map item text.
+The leaf item appearance customization can be achieved by using the `TextStyle` property of `LeafItemSettings` in `SfTreeMap.` It is used to customize the `TextColor,` `FontSize,` `FontFamily,` and `FontAttributes` of the treemap item text.
 
 {% tabs %}
 {% highlight XAML hl_lines="9 10 11 12 13" %}
