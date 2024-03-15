@@ -11658,7 +11658,7 @@ This page lists the keys for each control and the element to which it is mapped 
          <th> Description <br/> <br/> </th>
      </tr>
      <tr>
-         <td rowspan="202">
+         <td rowspan="205">
              SfRangeSelectorThemeStyles  <br/> <br/>
          </td>
          <td> SfRangeSelectorTheme <br/> <br/>
