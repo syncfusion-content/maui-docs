@@ -192,7 +192,7 @@ this.Content = treeMap;
 To display text for the leaf items, utilize the `LabelPath` property within the `LeafItemSettings` of `SfTreeMap`. This property allows you to specify the path to the data property containing the text you want to display.
 
 {% tabs %}
-{% highlight XAML hl_lines="7 8 9 10" %}
+{% highlight XAML hl_lines="7 8 9" %}
 
 <treemap:SfTreeMap x:Name="treeMap"
                    DataSource="{Binding PopulationDetails}"
@@ -201,8 +201,7 @@ To display text for the leaf items, utilize the `LabelPath` property within the 
         <local:PopulationViewModel />
     </treemap:SfTreeMap.BindingContext>
     <treemap:SfTreeMap.LeafItemSettings>
-    <treemap:TreeMapLeafItemSettings LabelPath="Country" 
-                                     Stroke="Black" />
+    <treemap:TreeMapLeafItemSettings LabelPath="Country"/>
     </treemap:SfTreeMap.LeafItemSettings>
     <treemap:SfTreeMap.LeafItemBrushSettings>
        <treemap:TreeMapUniformBrushSettings Brush="Orange"/>
@@ -216,7 +215,7 @@ SfTreeMap treeMap = new SfTreeMap();
 PopulationViewModel viewModel = new PopulationViewModel();
 treeMap.DataSource = viewModel.PopulationDetails;
 treeMap.PrimaryValuePath = "Population";
-treeMap.LeafItemSettings = new TreeMapLeafItemSettings() { LabelPath = "Country", Stroke = Brush.Black };
+treeMap.LeafItemSettings = new TreeMapLeafItemSettings() { LabelPath = "Country" };
 treeMap.LeafItemBrushSettings = new TreeMapUniformBrushSettings() { Brush = Brush.Orange };
 this.Content = treeMap;
 
@@ -366,7 +365,6 @@ public class PopulationViewModel
 {% endhighlight %}
 {% endtabs %}
 
-
 ## Enable tooltip
 
 To enable tooltips for the TreeMap control, utilize the `ShowToolTip` property of `SfTreeMap`. By default, the value of `ShowToolTip` is set to `false`. To provide users with additional information or context about specific treemap items, simply set this property to `true`.
@@ -463,7 +461,7 @@ public class PopulationViewModel
 To incorporate a legend for the TreeMap control, utilize the `ShowLegend` property within `LegendSettings.` It is possible to customize the legend item’s color and text using the `LeafItemBrushSettings` and `LegendSettings` properties of `SfTreemap.`
 
 {% tabs %}
-{% highlight XAML hl_lines="4 8 9 10" %}
+{% highlight XAML hl_lines="8 9 10" %}
 
 <treemap:SfTreeMap x:Name="treeMap"
                    DataSource="{Binding PopulationDetails}"
