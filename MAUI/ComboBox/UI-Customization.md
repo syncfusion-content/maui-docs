@@ -891,15 +891,15 @@ N> The cursor position support is available for editable mode only, and two-way 
 
 ## Border visibility
 
-The `ShowBorder` property of [`SfComboBox`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) is used to modify the visibility of the border and its default value is **true**. The following code example demonstrates how to change the border visibility,
+The `ShowBorder` property of [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) is used to modify the visibility of the border and its default value is **true**. The following code example demonstrates how to change the border visibility,
 
 {% tabs %}
 {% highlight xaml %}
 
 <editors:SfComboBox x:Name="comboBox"
-                            WidthRequest="200" 
-                            HeightRequest="35"
-                            ShowBorder="False"/>
+                    WidthRequest="200" 
+                    HeightRequest="35"
+                    ShowBorder="False"/>
 {% endhighlight %}
 {% highlight C# %}
 
@@ -919,7 +919,7 @@ The following image illustrates the result of the above code:
 
 ### TextAlignment
 
-The [`SfComboBox`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) provides support to customize the text alignment by using the `HorizontalTextAlignment` and `VerticalTextAlignment` properties.
+The [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) provides support to customize the text alignment by using the `HorizontalTextAlignment` and `VerticalTextAlignment` properties.
 
 N> Dynamic changes to the `HorizontalTextAlignment` property may not be functioning as expected on Android platform.
 
