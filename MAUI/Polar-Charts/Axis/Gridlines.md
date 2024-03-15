@@ -11,7 +11,7 @@ documentation: ug
 
 ## Major Grid Lines
 
-By default, major gridlines are automatically added to the [ChartAxis]() in its defined intervals. The visibility of the major gridlines can be controlled using the [ShowMajorGridLines]() property. The default value of [ShowMajorGridLines]() is `true`. 
+By default, major gridlines are automatically added to the [ChartAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html) in its defined intervals. The visibility of the major gridlines can be controlled using the [ShowMajorGridLines](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_ShowMajorGridLines) property. The default value of [ShowMajorGridLines](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_ShowMajorGridLines) is `true`. 
 
 {% tabs %}
 
@@ -21,6 +21,7 @@ By default, major gridlines are automatically added to the [ChartAxis]() in its 
     <chart:SfPolarChart.PrimaryAxis>
         <chart:NumericalAxis ShowMajorGridLines="False" />
     </chart:SfPolarChart.PrimaryAxis>
+
     <chart:SfPolarChart.SecondaryAxis>
         <chart:NumericalAxis />
     </chart:SfPolarChart.SecondaryAxis>
@@ -35,10 +36,9 @@ SfPolarChart chart = new SfPolarChart();
 . . .
 NumericalAxis primaryAxis = new NumericalAxis();
 primaryAxis.ShowMajorGridLines = false;
-chart.PrimaryAxis.Add(primaryAxis);
-
+chart.PrimaryAxis = primaryAxis;
 NumericalAxis secondaryAxis = new NumericalAxis();
-chart.SecondaryAxis.Add(secondaryAxis);
+chart.SecondaryAxis = secondaryAxis;
 
 {% endhighlight %}
 
@@ -46,7 +46,7 @@ chart.SecondaryAxis.Add(secondaryAxis);
 
 ### Customization
 
-The [MajorGridLineStyle]() property in the chart axis is used to customize the appearance of major gridlines.
+The [MajorGridLineStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_MajorGridLineStyle) property in the chart axis is used to customize the appearance of major gridlines.
 
 {% tabs %}
 
@@ -63,9 +63,7 @@ The [MajorGridLineStyle]() property in the chart axis is used to customize the a
     <chart:SfPolarChart.PrimaryAxis>
         <chart:NumericalAxis>
             <chart:NumericalAxis.MajorGridLineStyle>
-                <chart:ChartLineStyle StrokeDashArray="{StaticResource dashArray}"
-									  Stroke="Black"
-									  StrokeWidth="2" />
+                <chart:ChartLineStyle StrokeDashArray="{StaticResource dashArray}" Stroke="Black" StrokeWidth="2"/>
             </chart:NumericalAxis.MajorGridLineStyle>
         </chart:NumericalAxis>
     </chart:SfPolarChart.PrimaryAxis>
@@ -91,10 +89,9 @@ axisLineStyle.Stroke = Colors.Black;
 axisLineStyle.StrokeWidth = 2;
 axisLineStyle.StrokeDashArray = doubleCollection;
 primaryAxis.MajorGridLineStyle = axisLineStyle;
-chart.PrimaryAxis.Add(primaryAxis);
-
+chart.PrimaryAxis = primaryAxis;
 NumericalAxis secondaryAxis = new NumericalAxis();
-chart.SecondaryAxis.Add(secondaryAxis);
+chart.SecondaryAxis = secondaryAxis;
 
 {% endhighlight %}
 
@@ -102,7 +99,7 @@ chart.SecondaryAxis.Add(secondaryAxis);
 
 ## Minor Grid Lines
 
-Minor gridlines will be added automatically when the small tick lines is defined and using the [MinorTicksPerInterval]() property of the chart axis. The visibility of the minor gridlines can be controlled using the [ShowMinorGridLines]() property. The default value of [ShowMinorGridLines]() is `true`.
+Minor gridlines will be added automatically when the small tick lines is defined and using the [MinorTicksPerInterval](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.RangeAxisBase.html#Syncfusion_Maui_Charts_RangeAxisBase_MinorTicksPerInterval) property of the chart axis. The visibility of the minor gridlines can be controlled using the [ShowMinorGridLines](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.RangeAxisBase.html#Syncfusion_Maui_Charts_RangeAxisBase_ShowMinorGridLines) property. The default value of [ShowMinorGridLines](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.RangeAxisBase.html#Syncfusion_Maui_Charts_RangeAxisBase_ShowMinorGridLines) is `true`.
 
 {% tabs %}
 
@@ -125,12 +122,12 @@ Minor gridlines will be added automatically when the small tick lines is defined
 
 SfPolarChart chart = new SfPolarChart();
 NumericalAxis primaryAxis = new NumericalAxis();
-chart.PrimaryAxis.Add(primaryAxis);
+chart.PrimaryAxis = primaryAxis;
 chart.SecondaryAxis = new NumericalAxis()
 {
     MinorTicksPerInterval = 3,
 };
-chart.SecondaryAxis.Add(secondaryAxis);
+chart.SecondaryAxis = secondaryAxis;
 . . .
 
 {% endhighlight %}
@@ -139,7 +136,7 @@ chart.SecondaryAxis.Add(secondaryAxis);
 
 ### Customization
 
-The [MinorGridLineStyle]() property in the chart axis is used to customize the appearance of minor gridlines.
+The [MinorGridLineStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.RangeAxisBase.html#Syncfusion_Maui_Charts_RangeAxisBase_MinorGridLineStyle) property in the chart axis is used to customize the appearance of minor gridlines.
 
 {% tabs %}
 
@@ -161,9 +158,7 @@ The [MinorGridLineStyle]() property in the chart axis is used to customize the a
     <chart:SfPolarChart.SecondaryAxis>
         <chart:NumericalAxis ShowMinorGridLines="True" MinorTicksPerInterval="2">
             <chart:NumericalAxis.MinorGridLineStyle>
-                <chart:ChartLineStyle StrokeDashArray="{StaticResource dashArray}"
-									  Stroke="Black" 
-									  StrokeWidth="0.8"  />
+                <chart:ChartLineStyle StrokeDashArray="{StaticResource dashArray}" Stroke="Black" StrokeWidth="0.8"  />
             </chart:NumericalAxis.MinorGridLineStyle>
         </chart:NumericalAxis>
     </chart:SfPolarChart.SecondaryAxis>
@@ -176,7 +171,7 @@ The [MinorGridLineStyle]() property in the chart axis is used to customize the a
 
 SfPolarChart chart = new SfPolarChart();
 NumericalAxis primaryAxis = new NumericalAxis();
-chart.PrimaryAxis.Add(primaryAxis);
+chart.PrimaryAxis = primaryAxis;
 
 DoubleCollection doubleCollection = new DoubleCollection();
 doubleCollection.Add(3);
@@ -188,7 +183,7 @@ axisLineStyle.Stroke = Colors.Black;
 axisLineStyle.StrokeWidth = 0.8;
 axisLineStyle.StrokeDashArray = doubleCollection;
 secondaryAxis.MinorGridLineStyle = axisLineStyle;
-chart.SecondaryAxis.Add(secondaryAxis);
+chart.SecondaryAxis = secondaryAxis;
 
 {% endhighlight %}
 
