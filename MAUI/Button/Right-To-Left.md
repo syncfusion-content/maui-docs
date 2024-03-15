@@ -9,7 +9,7 @@ documentation: ug
 
 # Right To Left in .NET MAUI Button (SfButton)
 
-`SfButton` supports changing the layout direction of the control in the right-to-left direction by setting the FlowDirection to `RightToLeft` or by changing the device language.
+[SfButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfButton.html) supports changing the layout direction of the control in the right-to-left direction by setting the FlowDirection to `RightToLeft` or by changing the device language.
 
 {% tabs %}
 {% highlight xaml %}
