@@ -577,7 +577,7 @@ public class PopulationViewModel
 {% endtabs %}
 
 ### Customize the text style of each level
-Customize the style of header item text using the `TextStyle` property of `TreeMapLevel`, which is used to customize the `TextColor`, `FontSize`, `FontFamily` and `FontAttributes`.
+Customize the appearance of header item text using the `TextStyle` property of `TreeMapLevel`, which is used to customize the `TextColor`, `FontSize`, `FontFamily` and `FontAttributes`.
 
 {% tabs %}
 {% highlight XAML hl_lines="14 15 16" %}
