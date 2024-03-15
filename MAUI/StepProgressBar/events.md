@@ -17,7 +17,7 @@ The [`StepTapped`]() event is triggered when any step view is tapped. The associ
 * [`StepTappedEventArgs`]() - Hold the step tapped event arguments.
 
 {% tabs %}
-{% highlight xaml hl_lines="1" %}
+{% highlight xaml hl_lines="2" %}
 
 <progressBar:SfStepProgressBar ItemsSource="{Binding StepProgressItem}"
                                StepTapped="SfStepProgressBar_StepTapped">
@@ -43,7 +43,7 @@ The [`StepStatusChanged`]() event is triggered when the step view status is chan
 * [`StepStatusChangedEventArgs`]() - Hold the step status changed event arguments.
 
 {% tabs %}
-{% highlight xaml hl_lines="1" %}
+{% highlight xaml hl_lines="2" %}
 
 <progressBar:SfStepProgressBar ItemsSource="{Binding StepProgressItem}"
                                 ActiveStepIndex="1"

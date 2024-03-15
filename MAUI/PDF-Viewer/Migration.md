@@ -482,7 +482,7 @@ To make migration from [Xamarin SfPdfViewer](https://www.syncfusion.com/xamarin-
 </tr>
 </table>
 
-## Upcoming Features   
+## Upcoming Features
 
 * Built-in toolbar
 * Thumbnail
