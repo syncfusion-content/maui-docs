@@ -273,6 +273,18 @@ The following code example shows the usage of DataTemplate.
     <treemap:SfTreeMap.BindingContext>
        <local:PopulationViewModel />
     </treemap:SfTreeMap.BindingContext>
+    <treemap:SfTreeMap.ToolTipTemplate>
+        <DataTemplate>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Population:"
+                       Margin="8,0,0,0"
+                       TextColor="White" />
+                <Label Text="{Binding Item.Population}"
+                       Margin="5,0,8,0"
+                       TextColor="White" />
+            </StackLayout>
+        </DataTemplate>
+    </treemap:SfTreeMap.ToolTipTemplate>
     <treemap:SfTreeMap.LegendSettings>
         <treemap:TreeMapLegendSettings ShowLegend="True"
                                        IconSize="20,20" />
