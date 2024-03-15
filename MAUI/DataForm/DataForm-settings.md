@@ -675,33 +675,3 @@ public class DataFormItemManagerEditorExt : DataFormItemManager
 {% endtabs %}
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-dataform/tree/master/EditorViewCustomizationSample)
-
-## Label view customization
-Customize the label view by using the `InitializeDataLabel` method of the  [DataFormItemManager](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItemManager.html).
-
-{% tabs %}
-{% highlight c# %}
-
-this.dataForm.ItemManager = new DataFormItemManagerEditorExt();
-
-public class DataFormItemManagerEditorExt : DataFormItemManager
-{
-    public override void InitializeDataLabel(DataFormItem dataFormItem, Label label)
-    {
-        label.Background = Colors.Orange;
-        label.VerticalOptions = LayoutOptions.Center;
-        label.CharacterSpacing = 2;
-        label.Padding = new Thickness(5, 0, 5, 0);
-        label.Margin = new Thickness(0, 0, 5, 0);
-        label.FontSize = 18;
-        FormattedString formattedString = new FormattedString();
-        formattedString.Spans.Add(new Span { Text = label.Text, TextColor = Colors.White});
-        formattedString.Spans.Add(new Span { Text = " *", TextColor = Colors.Red});
-        label.FormattedText = formattedString;
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-![Label view customization in .NET MAUI DataForm.](images/editor-settings/label-view-customization.jpeg)
