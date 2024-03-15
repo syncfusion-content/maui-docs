@@ -11,7 +11,7 @@ documentation: ug
 
 The [Syncfusion .NET MAUI](https://marketplace.visualstudio.com/items?itemName=SyncfusionInc.MAUI-VSCode-Extensions) Extension for Visual Studio Code simplifies the use of Syncfusion .NET MAUI components by configuring the required Syncfusion .NET MAUI NuGet packages. This extension streamlines development by providing developers with easy access to the powerful features and functionalities of Syncfusion .NET MAUI components, saving time and effort.
 
-The Syncfusion .NET MAUI Extension offers the following support in Visual Studio Code:
+The Syncfusion .NET MAUI Extension offers the following support in Visual Studio Code: 
 
 **Project Template:** Creates Syncfusion .NET MAUI applications with the necessary Syncfusion components and configurations for development.
 
