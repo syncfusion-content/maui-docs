@@ -16,7 +16,7 @@ In `SfChat`, you can enable swiping by setting the `AllowSwiping` property to `t
 The Swiping can be customized by using the `StartSwipeTemplate` when swiping towards the right and `EndSwipeTemplate` when swiping towards the left. The content inside the swipe template is arranged based on the offset values when swiping a message.
 
 {% tabs %}
-{% highlight xaml hl_lines="17 40" %}
+{% highlight xaml hl_lines="17 41" %}
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"

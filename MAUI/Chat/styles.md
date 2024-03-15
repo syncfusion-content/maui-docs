@@ -512,17 +512,20 @@ You can style the elements of a hyperlink message by setting values to the in-bu
 <tr>
 <td> SfChatIncomingHyperlinkColor </td>
 <td> Text color of the URL in a hyperlink message. </td>
-</tr><tr>
+</tr>
 <tr>
 <td> SfChatOutgoingHyperlinkColor </td>
 <td> Text color of the URL in an outgoing hyperlink message. </td>
-</tr><tr>
+</tr>
+<tr>
 <td> SfChatHyperlinkDescriptionTextColor </td>
 <td> Text color of the URL's meta description in a hyperlink message. </td>
-</tr><tr>
+</tr>
+<tr>
 <td> sfChatHyperlinkDescriptionBackground </td>
 <td> Background color of the URL description area in a hyperlink message. </td>
-</tr><tr>
+</tr>
+<tr>
 <td> SfChatHyperlinkMetaTitleTextColor </td>
 <td> Text color of the URL's meta title in a hyperlink message. </td>
 </tr>
@@ -645,13 +648,16 @@ You can style the elements of a time picker message by setting values to the in-
 <tr>
 <td> SfChatTimePickerIconColor </td>
 <td> Color of time picker icon. </td>
-</tr><tr>
+</tr>
+<tr>
 <td> SfChatTimePickerTextColor </td>
 <td> Color of the text in time picker.  </td>
-</tr><tr>
+</tr>
+<tr>
 <td> SfChatTimePickerBackground </td>
 <td> Background color of time picker. </td>
-</tr><tr>
+</tr>
+<tr>
 <td> SfChatTimePickerStroke </td>
 <td> Border color of time picker. </td>
 </tr>
@@ -1076,6 +1082,7 @@ You can style the send message button based on its state by setting values to th
 <tr>
 <td> SfChatSendButtonDisabledColor </td>
 <td> Color of the send button when it is in 'Disabled' state. </td>
+</tr>
 <tr>
 <td> SfChatSendButtonBackground </td>
 <td> Background color of the send button. </td>
@@ -1172,4 +1179,3 @@ You can style the attachment button by setting values to the in-built keys of th
 {% endtabs %}
 
 ![Attachment button style in .NET MAUI Chat](images/styles/maui-chat-attachmentbutton-style.png)
-

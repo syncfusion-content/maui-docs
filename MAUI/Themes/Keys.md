@@ -11650,6 +11650,853 @@ This page lists the keys for each control and the element to which it is mapped 
     </tr>
 </table>
 
+## SfRangeSelector
+ <table>
+     <tr>
+         <th>Theme Dictionary <br/> <br/> </th>        
+         <th>Keys <br/> <br/> </th>
+         <th> Description <br/> <br/> </th>
+     </tr>
+     <tr>
+         <td rowspan="205">
+             SfRangeSelectorThemeStyles  <br/> <br/>
+         </td>
+         <td> SfRangeSelectorTheme <br/> <br/>
+         </td>
+         <td>    
+             By merging this key in application resources, you can customize the appearance of SfRangeSelector without merging common theme resource and control style resource dictionaries.
+             
+ {% highlight xaml %}
+ <Application xmlns:syncTheme="clr-namespace:Syncfusion.Maui.Themes;assembly=Syncfusion.Maui.Core"
+              ...>
+  <Application.Resources>
+     <ResourceDictionary>
+         <ResourceDictionary.MergedDictionaries>
+             <syncTheme:SyncfusionThemeResourceDictionary />
+             <ResourceDictionary>
+                 <x:String x:Key="SfRangeSelectorTheme">CommonTheme</x:String>
+                 <Color x:Key="SfRangeSelectorNormalActiveRegionFillBrush">Black</Color>
+                 <Color x:Key="SfRangeSelectorNormalInactiveRegionFillBrush">LightGray</Color>
+             </ResourceDictionary>
+         </ResourceDictionary.MergedDictionaries>
+     </ResourceDictionary>
+  </Application.Resources>
+  </Application>
+ {% endhighlight %}
+             <br/>
+             <br/>
+         </td>
+         </tr>
+    <tr>
+        <td>SfRangeSelectorNormalActiveRegionFillBrush<br/><br/></td>
+        <td>Active region color for normal range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorNormalInactiveRegionFillBrush<br/><br/></td>
+        <td>Inactive region color for normal range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorDisabledActiveRegionFillBrush<br/><br/></td>
+        <td>Active region color for disabled range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorDisabledInactiveRegionFillBrush<br/><br/></td>
+        <td>Inactive region color for disabled range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorHoverActiveRegionFillBrush<br/><br/></td>
+        <td>Active region color while hover the range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorHoverInactiveRegionFillBrush<br/><br/></td>
+        <td>Inactive region color while hover the range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorPressedActiveRegionFillBrush<br/><br/></td>
+        <td>Active region color while pressed the range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorPressedInactiveRegionFillBrush<br/><br/></td>
+        <td>Inactive region color while pressed the range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorDraggedActiveRegionFillBrush<br/><br/></td>
+        <td>Active region color while drag the range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorDraggedInactiveRegionFillBrush<br/><br/></td>
+        <td>Inactive region color while drag the range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorNormalActiveRegionStrokeBrush<br/><br/></td>
+        <td>Active region stroke color for normal range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorNormalInactiveRegionStrokeBrush<br/><br/></td>
+        <td>Inactive region stroke color for normal range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorDisabledActiveRegionStrokeBrush<br/><br/></td>
+        <td>Active region stroke color for disabled range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorDisabledInactiveRegionStrokeBrush<br/><br/></td>
+        <td>Inactive region stroke color for disabled range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorHoverActiveRegionStrokeBrush<br/><br/></td>
+        <td>Active region stroke color while hover the range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorHoverInactiveRegionStrokeBrush<br/><br/></td>
+        <td>Inactive region stroke color while hover the range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorPressedActiveRegionStrokeBrush<br/><br/></td>
+        <td>Active region stroke color while pressed the range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorPressedInactiveRegionStrokeBrush<br/><br/></td>
+        <td>Inactive region stroke color while pressed the range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorDraggedActiveRegionStrokeBrush<br/><br/></td>
+        <td>Active region stroke color while drag the range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorDraggedInactiveRegionStrokeBrush<br/><br/></td>
+        <td>Inactive region stroke color while drag the range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorNormalActiveRegionStrokeThickness<br/><br/></td>
+        <td>Active region stroke thickness for normal range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorNormalInactiveRegionStrokeThickness<br/><br/></td>
+        <td>Inactive region stroke thickness for normal range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorDisabledActiveRegionStrokeThickness<br/><br/></td>
+        <td>Active region stroke thickness for disabled range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorDisabledInactiveRegionStrokeThickness<br/><br/></td>
+        <td>Inactive region stroke thickness for disabled range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorHoverActiveRegionStrokeThickness<br/><br/></td>
+        <td>Active region stroke thickness while hover the range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorHoverInactiveRegionStrokeThickness<br/><br/></td>
+        <td>Inactive region stroke thickness while hover the range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorPressedActiveRegionStrokeThickness<br/><br/></td>
+        <td>Active region stroke thickness while pressed the range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorPressedInactiveRegionStrokeThickness<br/><br/></td>
+        <td>Inactive region stroke thickness while pressed the range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorDraggedActiveRegionStrokeThickness<br/><br/></td>
+        <td>Active region stroke thickness while drag the range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorDraggedInactiveRegionStrokeThickness<br/><br/></td>
+        <td>Inactive region stroke thickness while drag the range selector<br/><br/></td>
+    </tr>
+     <tr>
+        <td>SfRangeSelectorNormalActiveTrackFillBrush<br/><br/></td>
+        <td>Active track color for normal range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorNormalInactiveTrackFillBrush<br/><br/></td>
+        <td>Inactive track color for normal range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorDisabledActiveTrackFillBrush<br/><br/></td>
+        <td>Active track color for disabled range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorDisabledInactiveTrackFillBrush<br/><br/></td>
+        <td>Inactive track color for disabled range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorHoverActiveTrackFillBrush<br/><br/></td>
+        <td>Active track color while hover the range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorHoverInactiveTrackFillBrush<br/><br/></td>
+        <td>Inactive track color while hover the range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorrPressedActiveTrackFillBrush<br/><br/></td>
+        <td>Active track color while pressed the range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorPressedInactiveTrackFillBrush<br/><br/></td>
+        <td>Inactive track color while pressed the range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorDraggedActiveTrackFillBrush<br/><br/></td>
+        <td>Active track color while drag the range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorDraggedInactiveTrackFillBrush<br/><br/></td>
+        <td>Inactive track color while drag the range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorNormalActiveTrackSize<br/><br/></td>
+        <td>Active track size for normal range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorNormalInactiveTrackSize<br/><br/></td>
+        <td>Inactive track size for normal range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorDisabledActiveTrackSize<br/><br/></td>
+        <td>Active track size for disabled range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorDisabledInactiveTrackSize<br/><br/></td>
+        <td>Inactive track size for disabled range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorHoverActiveTrackSize<br/><br/></td>
+        <td>Active track size while hover the range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorHoverInactiveTrackSize<br/><br/></td>
+        <td>Inactive track size while hover the range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorPressedActiveTrackSize<br/><br/></td>
+        <td>Active track size while pressed the range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorPressedInactiveTrackSize<br/><br/></td>
+        <td>Inactive track size while pressed the range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorDraggedActiveTrackSize<br/><br/></td>
+        <td>Active track size while drag the range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorDraggedInactiveTrackSize<br/><br/></td>
+        <td>Inactive track size while drag the range selector<br/><br/></td>
+    </tr>
+     <tr>
+        <td>SfRangeSelectorNormalThumbFillBrush<br/><br/></td>
+        <td>Thumb color for normal range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorDisabledThumbFillBrush<br/><br/></td>
+        <td>Thumb color for disabled range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorHoverThumbFillBrush<br/><br/></td>
+        <td>Thumb color while hover the range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorPressedThumbFillBrush<br/><br/></td>
+        <td>Thumb color while pressed the range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorDraggedThumbFillBrush<br/><br/></td>
+        <td>Thumb color while drag the range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorNormalThumbStrokeBrush<br/><br/></td>
+        <td>Thumb stroke for normal range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorDisabledThumbStrokeBrush<br/><br/></td>
+        <td>Thumb stroke for disabled range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorHoverThumbStrokeBrush<br/><br/></td>
+        <td>Thumb stroke while hover the range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorPressedThumbStrokeBrush<br/><br/></td>
+        <td>Thumb stroke while pressed the range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorDraggedThumbStrokeBrush<br/><br/></td>
+        <td>Thumb stroke while drag the range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorNormalThumbOverlapStrokeBrush<br/><br/></td>
+        <td>Thumb overlap stroke for normal range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorDisabledThumbOverlapStrokeBrush<br/><br/></td>
+        <td>Thumb overlap stroke for disabled range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorHoverThumbOverlapStrokeBrush<br/><br/></td>
+        <td>Thumb overlap stroke while hover the range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorPressedThumbOverlapStrokeBrush<br/><br/></td>
+        <td>Thumb overlap stroke while pressed the range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorDraggedThumbOverlapStrokeBrush<br/><br/></td>
+        <td>Thumb overlap stroke while drag the range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorNormalThumbRadius<br/><br/></td>
+        <td>Thumb radius for normal range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorDisabledThumbRadius<br/><br/></td>
+        <td>Thumb radius for disabled range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorHoverThumbRadius<br/><br/></td>
+        <td>Thumb radius while hover the range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorPressedThumbRadius<br/><br/></td>
+        <td>Thumb radius while pressed the range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorDraggedThumbRadius<br/><br/></td>
+        <td>Thumb radius while drag the range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorNormalThumbStrokeThickness<br/><br/></td>
+        <td>Thumb stroke thickness for normal range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorDisabledThumbStrokeThickness<br/><br/></td>
+        <td>Thumb stroke thickness for disabled range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorHoverThumbStrokeThickness<br/><br/></td>
+        <td>Thumb stroke thickness while hover the range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorPressedThumbStrokeThickness<br/><br/></td>
+        <td>Thumb stroke thickness while pressed the range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorDraggedThumbStrokeThickness<br/><br/></td>
+        <td>Thumb stroke thickness while drag the range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorThumbOverlayBrush<br/><br/></td>
+        <td>Thumb overlay color for range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorThumbOverlayRadius<br/><br/></td>
+        <td>Thumb overlay radius for range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorNormalActiveDividerFillBrush<br/><br/></td>
+        <td>Active divider color for normal range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorNormalInactiveDividerFillBrush<br/><br/></td>
+        <td>Inactive divider color for normal range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorDisabledActiveDividerFillBrush<br/><br/></td>
+        <td>Active divider color for disabled range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorDisabledInactiveDividerFillBrush<br/><br/></td>
+        <td>Inactive divider color for disabled range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorHoverActiveDividerFillBrush<br/><br/></td>
+        <td>Active divider color while hover the range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorHoverInactiveDividerFillBrush<br/><br/></td>
+        <td>Inactive divider color while hover the range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorPressedActiveDividerFillBrush<br/><br/></td>
+        <td>Active divider color while pressed the range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorPressedInactiveDividerFillBrush<br/><br/></td>
+        <td>Inactive divider color while pressed the range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorDraggedActiveDividerFillBrush<br/><br/></td>
+        <td>Active divider color while drag the range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorDraggedInactiveDividerFillBrush<br/><br/></td>
+        <td>Inactive divider color while drag the range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorNormalActiveDividerStrokeBrush<br/><br/></td>
+        <td>Active divider stroke for normal range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorNormalInactiveDividerStrokeBrush<br/><br/></td>
+        <td>Inactive divider stroke for normal range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorDisabledActiveDividerStrokeBrush<br/><br/></td>
+        <td>Active divider stroke for disabled range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorDisabledInactiveDividerStrokeBrush<br/><br/></td>
+        <td>Inactive divider stroke for disabled range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorHoverActiveDividerStrokeBrush<br/><br/></td>
+        <td>Active divider stroke while hover the range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorHoverInactiveDividerStrokeBrush<br/><br/></td>
+        <td>Inactive divider stroke while hover the range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorPressedActiveDividerStrokeBrush<br/><br/></td>
+        <td>Active divider stroke while pressed the range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorPressedInactiveDividerStrokeBrush<br/><br/></td>
+        <td>Inactive divider stroke while pressed the range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorDraggedActiveDividerStrokeBrush<br/><br/></td>
+        <td>Active divider stroke while drag the range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorDraggedInactiveDividerStrokeBrush<br/><br/></td>
+        <td>Inactive divider stroke while drag the range selector<br/><br/></td>
+    </tr>
+     <tr>
+        <td>SfRangeSelectorNormalActiveDividerRadius<br/><br/></td>
+        <td>Active divider radius for normal range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorNormalInactiveDividerRadius<br/><br/></td>
+        <td>Inactive divider radius for normal range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorDisabledActiveDividerRadius<br/><br/></td>
+        <td>Active divider radius for disabled range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorDisabledInactiveDividerRadius<br/><br/></td>
+        <td>Inactive divider radius for disabled range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorHoverActiveDividerRadius<br/><br/></td>
+        <td>Active divider radius while hover the range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorHoverInactiveDividerRadius<br/><br/></td>
+        <td>Inactive divider radius while hover the range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorPressedActiveDividerRadius<br/><br/></td>
+        <td>Active divider radius while pressed the range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorPressedInactiveDividerRadius<br/><br/></td>
+        <td>Inactive divider radius while pressed the range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorDraggedActiveDividerRadius<br/><br/></td>
+        <td>Active divider radius while drag the range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorDraggedInactiveDividerRadius<br/><br/></td>
+        <td>Inactive divider radius while drag the range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorNormalActiveDividerStrokeThickness<br/><br/></td>
+        <td>Active divider stroke thickness for normal range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorNormalInactiveDividerStrokeThickness<br/><br/></td>
+        <td>Inactive divider stroke thickness for normal range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorDisabledActiveDividerStrokeThickness<br/><br/></td>
+        <td>Active divider stroke thickness for disabled range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorDisabledInactiveDividerStrokeThickness<br/><br/></td>
+        <td>Inactive divider stroke thickness for disabled range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorHoverActiveDividerStrokeThickness<br/><br/></td>
+        <td>Active divider stroke thickness while hover the range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorHoverInactiveDividerStrokeThickness<br/><br/></td>
+        <td>Inactive divider stroke thickness while hover the range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorPressedActiveDividerStrokeThickness<br/><br/></td>
+        <td>Active divider stroke thickness while pressed the range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorPressedInactiveDividerStrokeThickness<br/><br/></td>
+        <td>Inactive divider stroke thickness while pressed the range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorDraggedActiveDividerStrokeThickness<br/><br/></td>
+        <td>Active divider stroke thickness while drag the range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorDraggedInactiveDividerStrokeThickness<br/><br/></td>
+        <td>Inactive divider stroke thickness while drag the range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorNormalActiveMajorTickFillBrush<br/><br/></td>
+        <td>Active major tick color for normal range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorNormalInactiveMajorTickFillBrush<br/><br/></td>
+        <td>Inactive major tick color for normal range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorDisabledActiveMajorTickFillBrush<br/><br/></td>
+        <td>Active major tick color for disabled range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorDisabledInactiveMajorTickFillBrush<br/><br/></td>
+        <td>Inactive major tick color for disabled range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorHoverActiveMajorTickFillBrush<br/><br/></td>
+        <td>Active major tick color while hover the range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorHoverInactiveMajorTickFillBrush<br/><br/></td>
+        <td>Inactive major tick color while hover the range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorPressedActiveMajorTickFillBrush<br/><br/></td>
+        <td>Active major tick color while pressed the range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorPressedInactiveMajorTickFillBrush<br/><br/></td>
+        <td>Inactive major tick color while pressed the range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorDraggedActiveMajorTickFillBrush<br/><br/></td>
+        <td>Active major tick color while drag the range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorDraggedInactiveMajorTickFillBrush<br/><br/></td>
+        <td>Inactive major tick color while drag the range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorNormalActiveMajorTickSize<br/><br/></td>
+        <td>Active major tick size for normal range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorNormalInactiveMajorTickSize<br/><br/></td>
+        <td>Inactive major tick size for normal range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorDisabledActiveMajorTickSize<br/><br/></td>
+        <td>Active major tick size for disabled range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorDisabledInactiveMajorTickSize<br/><br/></td>
+        <td>Inactive major tick size for disabled range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorHoverActiveMajorTickSize<br/><br/></td>
+        <td>Active major tick size while hover the range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorHoverInactiveMajorTickSize<br/><br/></td>
+        <td>Inactive major tick size while hover the range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorPressedActiveMajorTickSize<br/><br/></td>
+        <td>Active major tick size while pressed the range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorPressedInactiveMajorTickSize<br/><br/></td>
+        <td>Inactive major tick size while pressed the range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorDraggedActiveMajorTickSize<br/><br/></td>
+        <td>Active major tick size while drag the range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorDraggedInactiveMajorTickSize<br/><br/></td>
+        <td>Inactive major tick size while drag the range selector<br/><br/></td>
+    </tr>
+     <tr>
+        <td>SfRangeSelectorrNormalActiveMinorTickFillBrush<br/><br/></td>
+        <td>Active minor tick color for normal range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorNormalInactiveMinorTickFillBrush<br/><br/></td>
+        <td>Inactive minor tick color for normal range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorDisabledActiveMinorTickFillBrush<br/><br/></td>
+        <td>Active minor tick color for disabled range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorDisabledInactiveMinorTickFillBrush<br/><br/></td>
+        <td>Inactive minor tick color for disabled range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorHoverActiveMinorTickFillBrush<br/><br/></td>
+        <td>Active minor tick color while hover the range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorHoverInactiveMinorTickFillBrush<br/><br/></td>
+        <td>Inactive minor tick color while hover the range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorPressedActiveMinorTickFillBrush<br/><br/></td>
+        <td>Active minor tick color while pressed the range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorPressedInactiveMinorTickFillBrush<br/><br/></td>
+        <td>Inactive minor tick color while pressed the range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorDraggedActiveMinorTickFillBrush<br/><br/></td>
+        <td>Active minor tick color while drag the range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorDraggedInactiveMinorTickFillBrush<br/><br/></td>
+        <td>Inactive minor tick color while drag the range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorNormalActiveMinorTickSize<br/><br/></td>
+        <td>Active minor tick size for normal range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorNormalInactiveMinorTickSize<br/><br/></td>
+        <td>Inactive minor tick size for normal range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorDisabledActiveMinorTickSize<br/><br/></td>
+        <td>Active minor tick size for disabled range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorDisabledInactiveMinorTickSize<br/><br/></td>
+        <td>Inactive minor tick size for disabled range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorHoverActiveMinorTickSize<br/><br/></td>
+        <td>Active minor tick size while hover the range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorHoverInactiveMinorTickSize<br/><br/></td>
+        <td>Inactive minor tick size while hover the range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorPressedActiveMinorTickSize<br/><br/></td>
+        <td>Active minor tick size while pressed the range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorPressedInactiveMinorTickSize<br/><br/></td>
+        <td>Inactive minor tick size while pressed the range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorDraggedActiveMinorTickSize<br/><br/></td>
+        <td>Active minor tick size while drag the range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorDraggedInactiveMinorTickSize<br/><br/></td>
+        <td>Inactive minor tick size while drag the range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorNormalActiveLabelTextColor<br/><br/></td>
+        <td>Active label color for normal range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorNormalInactiveLabelTextColor<br/><br/></td>
+        <td>Inactive label color for normal range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorDisabledActiveLabelTextColor<br/><br/></td>
+        <td>Active label color for disabled range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorDisabledInactiveLabelTextColor<br/><br/></td>
+        <td>Inactive label color for disabled range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorHoverActiveLabelTextColor<br/><br/></td>
+        <td>Active label color while hover the range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorHoverInactiveLabelTextColor<br/><br/></td>
+        <td>Inactive label color while hover the range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorPressedActiveLabelTextColor<br/><br/></td>
+        <td>Active label color while pressed the range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorPressedInactiveLabelTextColor<br/><br/></td>
+        <td>Inactive label color while pressed the range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorDraggedActiveLabelTextColor<br/><br/></td>
+        <td>Active label color while drag the range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorDraggedInactiveLabelTextColor<br/><br/></td>
+        <td>Inactive label color while drag the range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorNormalActiveLabelFontSize<br/><br/></td>
+        <td>Active label size for normal range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorNormalInactiveLabelFontSize<br/><br/></td>
+        <td>Inactive label size for normal range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorDisabledActiveLabelFontSize<br/><br/></td>
+        <td>Active label size for disabled range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorDisabledInactiveLabelFontSize<br/><br/></td>
+        <td>Inactive label size for disabled range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorHoverActiveLabelFontSize<br/><br/></td>
+        <td>Active label size while hover the range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorHoverInactiveLabelFontSize<br/><br/></td>
+        <td>Inactive label size while hover the range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorPressedActiveLabelFontSize<br/><br/></td>
+        <td>Active label size while pressed the range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorPressedInactiveLabelFontSize<br/><br/></td>
+        <td>Inactive label size while pressed the range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorDraggedActiveLabelFontSize<br/><br/></td>
+        <td>Active label size while drag the range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorDraggedInactiveLabelFontSize<br/><br/></td>
+        <td>Inactive label size while drag the range selector<br/><br/></td>
+    </tr>
+     <tr>
+        <td>SfRangeSelectorNormalTooltipFillBrush<br/><br/></td>
+        <td>Tooltip color for normal range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorDisabledTooltipFillBrush<br/><br/></td>
+        <td>Tooltip color for disabled range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorHoverTooltipFillBrush<br/><br/></td>
+        <td>Tooltip color while hover the range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorPressedTooltipFillBrush<br/><br/></td>
+        <td>Tooltip color while pressed the range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorDraggedTooltipFillBrush<br/><br/></td>
+        <td>Tooltip color while drag the range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorNormalTooltipStrokeBrush<br/><br/></td>
+        <td>Tooltip stroke color for normal range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorDisabledTooltipStrokeBrush<br/><br/></td>
+        <td>Tooltip stroke color for disabled range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorHoverTooltipStrokeBrush<br/><br/></td>
+        <td>Tooltip stroke color while hover the range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorPressedTooltipStrokeBrush<br/><br/></td>
+        <td>Tooltip stroke color while pressed the range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorDraggedTooltipStrokeBrush<br/><br/></td>
+        <td>Tooltip stroke color while drag the range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorNormalTooltipStrokeThickness<br/><br/></td>
+        <td>Tooltip stroke thickness for normal range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorDisabledTooltipStrokeThickness<br/><br/></td>
+        <td>Tooltip stroke thickness for disabled range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorHoverTooltipStrokeThickness<br/><br/></td>
+        <td>Tooltip stroke thickness while hover the range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorPressedTooltipStrokeThickness<br/><br/></td>
+        <td>Tooltip stroke thickness while pressed the range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorDraggedTooltipStrokeThickness<br/><br/></td>
+        <td>Tooltip stroke thickness while drag the range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorNormalTooltipTextColor<br/><br/></td>
+        <td>Tooltip text color for normal range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorDisabledTooltipTextColor<br/><br/></td>
+        <td>Tooltip text color for disabled range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorHoverTooltipTextColor<br/><br/></td>
+        <td>Tooltip text color while hover the range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorPressedTooltipTextColor<br/><br/></td>
+        <td>Tooltip text color while pressed the range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorDraggedTooltipTextColor<br/><br/></td>
+        <td>Tooltip text color while drag the range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorNormalTooltipFontSize<br/><br/></td>
+        <td>Tooltip font size for normal range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorDisabledTooltipFontSize<br/><br/></td>
+        <td>Tooltip font size for disabled range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorHoverTooltipFontSize<br/><br/></td>
+        <td>Tooltip font size while hover the range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorPressedTooltipFontSize<br/><br/></td>
+        <td>Tooltip font size while pressed the range selector<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfRangeSelectorDraggedTooltipFontSize<br/><br/></td>
+        <td>Tooltip font size while drag the range selector<br/><br/></td>
+    </tr>
+  </table>  
+
 ## SfShimmer
 
 <table>
@@ -11826,6 +12673,733 @@ This page lists the keys for each control and the element to which it is mapped 
     </tr>
     </table>
 
+## SfSlider
+ <table>
+        <tr>
+            <th>Theme Dictionary <br/> <br/> </th>        
+            <th>Keys <br/> <br/> </th>
+            <th> Description <br/> <br/> </th>
+        </tr>
+        <tr>
+            <td rowspan="175">
+                SfSliderStyles  <br/> <br/>
+            </td>
+            <td> SfSliderTheme <br/> <br/>
+            </td>
+            <td>    
+                By merging this key in application resources, you can customize the appearance of SfSlider without merging common theme resource and control style resource dictionaries.
+                
+ {% highlight xaml %}
+    <Application xmlns:syncTheme="clr-namespace:Syncfusion.Maui.Themes;assembly=Syncfusion.Maui.Core"
+                 ...>
+     <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <syncTheme:SyncfusionThemeResourceDictionary />
+                <ResourceDictionary>
+                    <x:String x:Key="SfSliderTheme">CommonTheme</x:String>
+                    <Color x:Key="SfSliderNormalActiveTrackFillBrush">Black</Color>
+                    <Color x:Key="SfSliderNormalInactiveTrackFillBrush">LightGray</Color>
+                </ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+     </Application.Resources>
+     </Application>
+ {% endhighlight %}
+                <br/>
+                <br/>
+              </td>
+           </tr>
+        <tr>
+            <td>SfSliderNormalActiveTrackFillBrush<br/><br/></td>
+            <td>Active track color for normal slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderNormalInactiveTrackFillBrush<br/><br/></td>
+            <td>Inactive track color for normal slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderDisabledActiveTrackFillBrush<br/><br/></td>
+            <td>Active track color for disabled slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderDisabledInactiveTrackFillBrush<br/><br/></td>
+            <td>Inactive track color for disabled slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderHoverActiveTrackFillBrush<br/><br/></td>
+            <td>Active track color while hover the slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderHoverInactiveTrackFillBrush<br/><br/></td>
+            <td>Inactive track color while hover the slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderPressedActiveTrackFillBrush<br/><br/></td>
+            <td>Active track color while pressed the slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderPressedInactiveTrackFillBrush<br/><br/></td>
+            <td>Inactive track color while pressed the slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderDraggedActiveTrackFillBrush<br/><br/></td>
+            <td>Active track color while drag the slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderDraggedInactiveTrackFillBrush<br/><br/></td>
+            <td>Inactive track color while drag the slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderNormalActiveTrackSize<br/><br/></td>
+            <td>Active track size for normal slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderNormalInactiveTrackSize<br/><br/></td>
+            <td>Inactive track size for normal slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderDisabledActiveTrackSize<br/><br/></td>
+            <td>Active track size for disabled slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderDisabledInactiveTrackSize<br/><br/></td>
+            <td>Inactive track size for disabled slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderHoverActiveTrackSizes<br/><br/></td>
+            <td>Active track size while hover the slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderHoverInactiveTrackSize<br/><br/></td>
+            <td>Inactive track size while hover the slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderPressedActiveTrackSize<br/><br/></td>
+            <td>Active track size while pressed the slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderPressedInactiveTrackSize<br/><br/></td>
+            <td>Inactive track size while pressed the slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderDraggedActiveTrackSize<br/><br/></td>
+            <td>Active track size while drag the slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderDraggedInactiveTrackSize<br/><br/></td>
+            <td>Inactive track size while drag the slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderNormalThumbFillBrush<br/><br/></td>
+            <td>Thumb color for normal slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderDisabledThumbFillBrush<br/><br/></td>
+            <td>Thumb color for disabled slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderHoverThumbFillBrush<br/><br/></td>
+            <td>Thumb color while hover the slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderPressedThumbFillBrushs<br/><br/></td>
+            <td>Thumb color while pressed the slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderDraggedThumbFillBrush<br/><br/></td>
+            <td>Thumb color while drag the slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderNormalThumbStrokeBrush<br/><br/></td>
+            <td>Thumb stroke for normal slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderDisabledThumbStrokeBrush<br/><br/></td>
+            <td>Thumb stroke for disabled slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderHoverThumbStrokeBrush<br/><br/></td>
+            <td>Thumb stroke while hover the slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderPressedThumbStrokeBrush<br/><br/></td>
+            <td>Thumb stroke while pressed the slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderDraggedThumbStrokeBrush<br/><br/></td>
+            <td>Thumb stroke while drag the slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderNormalThumbOverlapStrokeBrush<br/><br/></td>
+            <td>Thumb overlap stroke for normal slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderDisabledThumbOverlapStrokeBrush<br/><br/></td>
+            <td>Thumb overlap stroke for disabled slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderHoverThumbOverlapStrokeBrush<br/><br/></td>
+            <td>Thumb overlap stroke while hover the slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderPressedThumbOverlapStrokeBrush<br/><br/></td>
+            <td>Thumb overlap stroke while pressed the slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderDraggedThumbOverlapStrokeBrush<br/><br/></td>
+            <td>Thumb overlap stroke while drag the slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderNormalThumbRadius<br/><br/></td>
+            <td>Thumb radius for normal slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderDisabledThumbRadius<br/><br/></td>
+            <td>Thumb radius for disabled slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderHoverThumbRadius<br/><br/></td>
+            <td>Thumb radius while hover the slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderPressedThumbRadius<br/><br/></td>
+            <td>Thumb radius while pressed the slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderDraggedThumbRadius<br/><br/></td>
+            <td>Thumb radius while drag the slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderNormalThumbStrokeThickness<br/><br/></td>
+            <td>Thumb stroke thickness for normal slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderDisabledThumbStrokeThickness<br/><br/></td>
+            <td>Thumb stroke thickness for disabled slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderHoverThumbStrokeThickness<br/><br/></td>
+            <td>Thumb stroke thickness while hover the slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderPressedThumbStrokeThickness<br/><br/></td>
+            <td>Thumb stroke thickness while pressed the slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderDraggedThumbStrokeThickness<br/><br/></td>
+            <td>Thumb stroke thickness while drag the slider<br/><br/></td>
+        </tr>    
+        <tr>
+            <td>SfSliderThumbOverlayBrush<br/><br/></td>
+            <td>Thumb overlay color for slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderThumbOverlayRadius<br/><br/></td>
+            <td>Thumb overlay radius for slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderNormalActiveDividerFillBrush<br/><br/></td>
+            <td>Active divider color for normal slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderNormalInactiveDividerFillBrush<br/><br/></td>
+            <td>Inactive divider color for normal slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderDisabledActiveDividerFillBrush<br/><br/></td>
+            <td>Active divider color for disabled slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderDisabledInactiveDividerFillBrush<br/><br/></td>
+            <td>Inactive divider color for disabled slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderHoverActiveDividerFillBrush<br/><br/></td>
+            <td>Active divider color while hover the slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderHoverInactiveDividerFillBrush<br/><br/></td>
+            <td>Inactive divider color while hover the slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderPressedActiveDividerFillBrush<br/><br/></td>
+            <td>Active divider color while pressed the slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderPressedInactiveDividerFillBrush<br/><br/></td>
+            <td>Inactive divider color while pressed the slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderDraggedActiveDividerFillBrush<br/><br/></td>
+            <td>Active divider color while drag the slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderDraggedInactiveDividerFillBrush<br/><br/></td>
+            <td>Inactive divider color while drag the slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderNormalActiveDividerStrokeBrush<br/><br/></td>
+            <td>Active divider stroke for normal slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderNormalInactiveDividerStrokeBrush<br/><br/></td>
+            <td>Inactive divider stroke for normal slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderDisabledActiveDividerStrokeBrush<br/><br/></td>
+            <td>Active divider stroke for disabled slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderDisabledInactiveDividerStrokeBrush<br/><br/></td>
+            <td>Inactive divider stroke for disabled slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderHoverActiveDividerStrokeBrush<br/><br/></td>
+            <td>Active divider stroke while hover the slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderHoverInactiveDividerStrokeBrush<br/><br/></td>
+            <td>Inactive divider stroke while hover the slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderPressedActiveDividerStrokeBrush<br/><br/></td>
+            <td>Active divider stroke while pressed the slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderPressedInactiveDividerStrokeBrush<br/><br/></td>
+            <td>Inactive divider stroke while pressed the slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderDraggedActiveDividerStrokeBrush<br/><br/></td>
+            <td>Active divider stroke while drag the slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderDraggedInactiveDividerStrokeBrush<br/><br/></td>
+            <td>Inactive divider stroke while drag the slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderNormalActiveDividerRadius<br/><br/></td>
+            <td>Active divider radius for normal slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderNormalInactiveDividerRadius<br/><br/></td>
+            <td>Inactive divider radius for normal slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderDisabledActiveDividerRadius<br/><br/></td>
+            <td>Active divider radius for disabled slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderDisabledInactiveDividerRadius<br/><br/></td>
+            <td>Inactive divider radius for disabled slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderHoverActiveDividerRadius<br/><br/></td>
+            <td>Active divider radius while hover the slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderHoverInactiveDividerRadius<br/><br/></td>
+            <td>Inactive divider radius while hover the slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderPressedActiveDividerRadius<br/><br/></td>
+            <td>Active divider radius while pressed the slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderPressedInactiveDividerRadius<br/><br/></td>
+            <td>Inactive divider radius while pressed the slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderDraggedActiveDividerRadius<br/><br/></td>
+            <td>Active divider radius while drag the slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderDraggedInactiveDividerRadius<br/><br/></td>
+            <td>Inactive divider radius while drag the slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderNormalActiveDividerStrokeThickness<br/><br/></td>
+            <td>Active divider stroke thickness for normal slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderNormalInactiveDividerStrokeThickness<br/><br/></td>
+            <td>Inactive divider stroke thickness for normal slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderDisabledActiveDividerStrokeThickness<br/><br/></td>
+            <td>Active divider stroke thickness for disabled slider<br/><br/></td>
+        </tr>
+       <tr>
+            <td>SfSliderDisabledInactiveDividerStrokeThickness<br/><br/></td>
+            <td>Inactive divider stroke thickness for disabled slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderHoverActiveDividerStrokeThickness<br/><br/></td>
+            <td>Active divider stroke thickness while hover the slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderHoverInactiveDividerStrokeThickness<br/><br/></td>
+            <td>Inactive divider stroke thickness while hover the slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderPressedActiveDividerStrokeThickness<br/><br/></td>
+            <td>Active divider stroke thickness while pressed the slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderPressedInactiveDividerStrokeThickness<br/><br/></td>
+            <td>Inactive divider stroke thickness while pressed the slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderDraggedActiveDividerStrokeThickness<br/><br/></td>
+            <td>Active divider stroke thickness while drag the slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderDraggedInactiveDividerStrokeThickness<br/><br/></td>
+            <td>Inactive divider stroke thickness while drag the slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderNormalActiveMajorTickFillBrush<br/><br/></td>
+            <td>Active major tick color for normal slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderNormalInactiveMajorTickFillBrush<br/><br/></td>
+            <td>Inactive major tick color for normal slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderDisabledActiveMajorTickFillBrush<br/><br/></td>
+            <td>Active major tick color for disabled slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderDisabledInactiveMajorTickFillBrush<br/><br/></td>
+            <td>Inactive major tick color for disabled slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderHoverActiveMajorTickFillBrush<br/><br/></td>
+            <td>Active major tick color while hovering the slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderHoverInactiveMajorTickFillBrush<br/><br/></td>
+            <td>Inactive major tick color while hovering the slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderPressedActiveMajorTickFillBrush<br/><br/></td>
+            <td>Active major tick color while pressing the slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderPressedInactiveMajorTickFillBrush<br/><br/></td>
+            <td>Inactive major tick color while pressing the slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderDraggedActiveMajorTickFillBrush<br/><br/></td>
+            <td>Active major tick color while dragging the slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderDraggedInactiveMajorTickFillBrush<br/><br/></td>
+            <td>Inactive major tick color while dragging the slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderNormalActiveMajorTickSize<br/><br/></td>
+            <td>Active major tick size for normal slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderNormalInactiveMajorTickSize<br/><br/></td>
+            <td>Inactive major tick size for normal slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderDisabledActiveMajorTickSize<br/><br/></td>
+            <td>Active major tick size for disabled slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderDisabledInactiveMajorTickSize<br/><br/></td>
+            <td>Inactive major tick size for disabled slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderHoverActiveMajorTickSize<br/><br/></td>
+            <td>Active major tick size while hovering the slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderHoverInactiveMajorTickSize<br/><br/></td>
+            <td>Inactive major tick size while hovering the slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderPressedActiveMajorTickSize<br/><br/></td>
+            <td>Active major tick size while pressing the slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderPressedInactiveMajorTickSize<br/><br/></td>
+            <td>Inactive major tick size while pressing the slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderDraggedActiveMajorTickSize<br/><br/></td>
+            <td>Active major tick size while dragging the slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderDraggedInactiveMajorTickSize<br/><br/></td>
+            <td>Inactive major tick size while dragging the slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderNormalActiveMinorTickFillBrush<br/><br/></td>
+            <td>Active minor tick color for normal slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderNormalInactiveMinorTickFillBrush<br/><br/></td>
+            <td>Inactive minor tick color for normal slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderDisabledActiveMinorTickFillBrush<br/><br/></td>
+            <td>Active minor tick color for disabled slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderDisabledInactiveMinorTickFillBrush<br/><br/></td>
+            <td>Inactive minor tick color for disabled slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderHoverActiveMinorTickFillBrush<br/><br/></td>
+            <td>Active minor tick color while hovering the slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderHoverInactiveMinorTickFillBrush<br/><br/></td>
+            <td>Inactive minor tick color while hovering the slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderPressedActiveMinorTickFillBrush<br/><br/></td>
+            <td>Active minor tick color while pressing the slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderPressedInactiveMinorTickFillBrush<br/><br/></td>
+            <td>Inactive minor tick color while pressing the slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderDraggedActiveMinorTickFillBrush<br/><br/></td>
+            <td>Active minor tick color while dragging the slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderDraggedInactiveMinorTickFillBrush<br/><br/></td>
+            <td>Inactive minor tick color while dragging the slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderNormalActiveMinorTickSize<br/><br/></td>
+            <td>Active minor tick size for normal slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderNormalInactiveMinorTickSize<br/><br/></td>
+            <td>Inactive minor tick size for normal slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderDisabledActiveMinorTickSize<br/><br/></td>
+            <td>Active minor tick size for disabled slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderDisabledInactiveMinorTickSize<br/><br/></td>
+            <td>Inactive minor tick size for disabled slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderHoverActiveMinorTickSize<br/><br/></td>
+            <td>Active minor tick size while hovering the slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderHoverInactiveMinorTickSize<br/><br/></td>
+            <td>Inactive minor tick size while hovering the slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderPressedActiveMinorTickSize<br/><br/></td>
+            <td>Active minor tick size while pressing the slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderPressedInactiveMinorTickSize<br/><br/></td>
+            <td>Inactive minor tick size while pressing the slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderDraggedActiveMinorTickSize<br/><br/></td>
+            <td>Active minor tick size while dragging the slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderDraggedInactiveMinorTickSize<br/><br/></td>
+            <td>Inactive minor tick size while dragging the slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderNormalActiveLabelTextColor<br/><br/></td>
+            <td>Active label color for normal slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderNormalInactiveLabelTextColor<br/><br/></td>
+            <td>Inactive label color for normal slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderDisabledActiveLabelTextColor<br/><br/></td>
+            <td>Active label color for disabled slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderDisabledInactiveLabelTextColor<br/><br/></td>
+            <td>Inactive label color for disabled slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderHoverActiveLabelTextColor<br/><br/></td>
+            <td>Active label color while hover the slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderHoverInactiveLabelTextColor<br/><br/></td>
+            <td>Inactive label color while hover the slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderPressedActiveLabelTextColor<br/><br/></td>
+            <td>Active label color while pressed the slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderPressedInactiveLabelTextColor<br/><br/></td>
+            <td>Inactive label color while pressed the slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderDraggedActiveLabelTextColor<br/><br/></td>
+            <td>Active label color while drag the slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderDraggedInactiveLabelTextColor<br/><br/></td>
+            <td>Inactive label color while drag the slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderNormalActiveLabelFontSize<br/><br/></td>
+            <td>Active label size for normal slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderNormalInactiveLabelFontSize<br/><br/></td>
+            <td>Inactive label size for normal slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderDisabledActiveLabelFontSize<br/><br/></td>
+            <td>Active label size for disabled slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderDisabledInactiveLabelFontSize<br/><br/></td>
+            <td>Inactive label size for disabled slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderHoverActiveLabelFontSize<br/><br/></td>
+            <td>Active label size while hover the slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderHoverInactiveLabelFontSize<br/><br/></td>
+            <td>Inactive label size while hover the slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderPressedActiveLabelFontSize<br/><br/></td>
+            <td>Active label size while pressed the slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderPressedInactiveLabelFontSize<br/><br/></td>
+            <td>Inactive label size while pressed the slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderDraggedActiveLabelFontSize<br/><br/></td>
+            <td>Active label size while drag the slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderDraggedInactiveLabelFontSize<br/><br/></td>
+            <td>Inactive label size while drag the slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderNormalTooltipFillBrush<br/><br/></td>
+            <td>Tooltip color for normal slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderDisabledTooltipFillBrush<br/><br/></td>
+            <td>Tooltip color for disabled slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderHoverTooltipFillBrush<br/><br/></td>
+            <td>Tooltip color while hovering the slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderPressedTooltipFillBrush<br/><br/></td>
+            <td>Tooltip color while pressing the slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderDraggedTooltipFillBrush<br/><br/></td>
+            <td>Tooltip color while dragging the slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderNormalTooltipStrokeBrush<br/><br/></td>
+            <td>Tooltip stroke color for normal slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderDisabledTooltipStrokeBrush<br/><br/></td>
+            <td>Tooltip stroke color for disabled slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderHoverTooltipStrokeBrush<br/><br/></td>
+            <td>Tooltip stroke color while hovering the slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderPressedTooltipStrokeBrush<br/><br/></td>
+            <td>Tooltip stroke color while pressing the slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderDraggedTooltipStrokeBrush<br/><br/></td>
+            <td>Tooltip stroke color while dragging the slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderNormalTooltipStrokeThickness<br/><br/></td>
+            <td>Tooltip stroke thickness for normal slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderDisabledTooltipStrokeThickness<br/><br/></td>
+            <td>Tooltip stroke thickness for disabled slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderHoverTooltipStrokeThickness<br/><br/></td>
+            <td>Tooltip stroke thickness while hovering the slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderPressedTooltipStrokeThickness<br/><br/></td>
+            <td>Tooltip stroke thickness while pressing the slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderDraggedTooltipStrokeThickness<br/><br/></td>
+            <td>Tooltip stroke thickness while dragging the slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderNormalTooltipTextColor<br/><br/></td>
+            <td>Tooltip text color for normal slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderDisabledTooltipTextColor<br/><br/></td>
+            <td>Tooltip text color for disabled slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderHoverTooltipTextColor<br/><br/></td>
+            <td>Tooltip text color while hovering the slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderPressedTooltipTextColor<br/><br/></td>
+            <td>Tooltip text color while pressing the slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderDraggedTooltipTextColor<br/><br/></td>
+            <td>Tooltip text color while dragging the slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderNormalTooltipFontSize<br/><br/></td>
+            <td>Tooltip font size for normal slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderDisabledTooltipFontSize<br/><br/></td>
+            <td>Tooltip font size for disabled slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderHoverTooltipFontSize<br/><br/></td>
+            <td>Tooltip font size while hovering the slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderPressedTooltipFontSize<br/><br/></td>
+            <td>Tooltip font size while pressing the slider<br/><br/></td>
+        </tr>
+        <tr>
+            <td>SfSliderDraggedTooltipFontSize<br/><br/></td>
+            <td>Tooltip font size while dragging the slider<br/><br/></td>
+        </tr>
+</table>  
+    
 ## SfStepProgressBar
 
 <table>
