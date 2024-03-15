@@ -134,7 +134,7 @@ This page lists the keys for each control and the element to which it is mapped 
     </tr>
 
     <tr>
-        <td rowspan="38">
+        <td rowspan="39">
             SfAutoCompleteStyles  
             <br/>
             <br/>
@@ -185,7 +185,6 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
     </tr>
-	</tr>
     <tr>
         <td>
             SfAutocompletePressedClearButtonBorder 
@@ -1214,7 +1213,7 @@ This page lists the keys for each control and the element to which it is mapped 
 	</tr>
 </table>
 
- ## SfButton
+## SfButton
 
 <table>
     <tr>
@@ -3021,7 +3020,7 @@ This page lists the keys for each control and the element to which it is mapped 
     </tr>
 
     <tr>
-        <td rowspan="38">
+        <td rowspan="39">
             SfChipStyles 
             <br/>
             <br/>
@@ -5503,7 +5502,8 @@ This page lists the keys for each control and the element to which it is mapped 
     </tr>
 </table>
 
- ## SfFunnel Chart
+## SfFunnel Chart
+
  <table>
      <tr>
          <th>Theme Dictionary <br/> <br/> </th>        
@@ -5581,7 +5581,7 @@ This page lists the keys for each control and the element to which it is mapped 
     </tr>
 
     <tr>
-        <td rowspan="19">
+        <td rowspan="21">
             SfImageEditorStyles  
             <br/>
             <br/>
@@ -11414,7 +11414,7 @@ This page lists the keys for each control and the element to which it is mapped 
     </tr>
 
     <tr>
-        <td rowspan="14">
+        <td rowspan="16">
             SfSegmentedControlStyles
             <br/>
             <br/>
