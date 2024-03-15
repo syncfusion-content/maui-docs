@@ -117,7 +117,7 @@ The [`Text`] property provides text to the [`SfRadialMenuItem`].
              x:Class="RadialSample.MainPage">
      <syncfusion:SfRadialMenu>
         <syncfusion:SfRadialMenu.Items>
-            <syncfusion:SfRadialMenuItem Text="Bold" FontSize="12" ItemTapped="SfRadialMenuItem_ItemTapped"/>
+            <syncfusion:SfRadialMenuItem Text="Bold" FontSize="12"/>
             <syncfusion:SfRadialMenuItem Text="Copy" FontSize="12"/>
             <syncfusion:SfRadialMenuItem Text="Undo" FontSize="12"/>
             <syncfusion:SfRadialMenuItem Text="Paste" FontSize="12"/>
@@ -174,7 +174,7 @@ The [`ItemHeight`] changes the height of the [`SfRadialMenuItem`] and The [`Item
              xmlns:local="clr-namespace:RadialSample"
              xmlns:syncfusion="clr-namespace:Syncfusion.Maui.RadialMenu;assembly=Syncfusion.Maui.RadialMenu"
              x:Class="RadialSample.MainPage">
-    <syncfusion:SfRadialMenu>
+    <syncfusion:SfRadialMenu CenterButtonText = "Edit">
         <syncfusion:SfRadialMenu.Items>
             <syncfusion:SfRadialMenuItem ItemHeight="60" ItemWidth="60" Text="John"  Image="johnson.png"/>
             <syncfusion:SfRadialMenuItem ItemHeight="60" ItemWidth="60" Text="Krish" Image="krish.png"/>
@@ -199,7 +199,10 @@ namespace RadialSample
         {
             InitializeComponent();
 
-            SfRadialMenu radialMenu = new SfRadialMenu();
+            SfRadialMenu radialMenu = new SfRadialMenu()
+            {
+                CenterButtonText = "Edit",
+            };
             RadialMenuItemsCollection itemCollection = new RadialMenuItemsCollection()
             {
                 new SfRadialMenuItem() { Text="John",  Image="johnson.png", ItemHeight=60, ItemWidth=60 },
@@ -218,6 +221,8 @@ namespace RadialSample
 
 {% endtabs %}
 
+![Display RadialMenuItem with ItemHeight and ItemWidth.](images/radialmenuitem-customization/maui-radialmenu-radialmenuitem-itemheight-and-itemwidth.png)
+
 ## BackgroundColor
 
 The [`BackgroundColor`] property changes the background color of the [`SfRadialMenuItem`].
@@ -232,7 +237,9 @@ The [`BackgroundColor`] property changes the background color of the [`SfRadialM
              xmlns:local="clr-namespace:RadialSample"
              xmlns:syncfusion="clr-namespace:Syncfusion.Maui.RadialMenu;assembly=Syncfusion.Maui.RadialMenu"
              x:Class="RadialSample.MainPage">
-    <radialMenu:SfRadialMenu>
+    <radialMenu:SfRadialMenu CenterButtonText="&#xe710;"
+                             CenterButtonFontFamily="Maui Material Assets"
+                             CenterButtonFontSize="28">
         <radialMenu:SfRadialMenuItem.Items>
             <radialMenu:SfRadialMenuItem BackgroundColor="#00cc1d" />
             <radialMenu:SfRadialMenuItem BackgroundColor="#c65619" />
@@ -257,7 +264,12 @@ namespace RadialSample
         {
             InitializeComponent();
 
-            SfRadialMenu radialMenu = new SfRadialMenu();
+            SfRadialMenu radialMenu = new SfRadialMenu()
+            {
+                CenterButtonText="&#xe710;"
+                CenterButtonFontFamily="Maui Material Assets",
+                CenterButtonFontSize=28,
+            };
             RadialMenuItemsCollection itemCollection = new RadialMenuItemsCollection()
             {
                 new SfRadialMenuItem() { BackgroundColor= Color.FromArgb("#00cc1d") },
@@ -275,6 +287,8 @@ namespace RadialSample
 {% endhighlight %}
 
 {% endtabs %}
+
+![Display RadialMenuItem with BackgroundColor.](images/radialmenuitem-customization/maui-radialmenu-radialmenuitem-backgroundcolor.png)
 
 ## FontFamily
 

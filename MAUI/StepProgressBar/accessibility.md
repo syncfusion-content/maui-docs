@@ -7,7 +7,7 @@ control: SfStepProgressBar
 documentation: ug
 ---
 
-# Accessibility in .NET Maui SfStepProgressBar
+# Accessibility in .NET MAUI SfStepProgressBar
 
 Enhance .NET MAUI StepProgressBar's accessibility with a user-friendly design, ensuring inclusive features for seamless navigation and usability for all users. Please find the table of elements along with their formats and examples.
 
@@ -20,11 +20,13 @@ Enhance .NET MAUI StepProgressBar's accessibility with a user-friendly design, e
 <tr>
 <td>Step</td>
 <td>Step Number PrimaryText/SecondaryText Stepstatus</td>
-<td>Step 1 Ordered Completed </td>
+<td>Step 1 Login Login successfully completed </td>
 </tr>
 <tr>
 <td>Step</td>
 <td>Step Number PrimaryFormattedText/SecondaryFormattedText Stepstatus</td>
-<td>Step 1 Ordered Completed </td>
+<td>Step 1 Login Login successfully Completed </td>
 </tr>
 </table>
+
+ ![Accessibility in .NET MAUI SfStepProgressBar.](images/accessibility/maui-stepprogressbar-accessibility.png)
