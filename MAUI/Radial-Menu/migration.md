@@ -24,7 +24,7 @@ To make the migration from the [Xamarin SfRadialMenu Control](https://www.syncfu
 
 ## Initialize Control
 
-To initialize the control, import the radialMenu control namespace and initialize the [SfRadialMenuControl]() as shown in the following code sample.
+To initialize the control, import the radialMenu control namespace and initialize the [SfRadialMenu]() as shown in the following code sample.
 
 <table>
 <tr>

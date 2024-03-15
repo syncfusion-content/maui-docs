@@ -9,7 +9,7 @@ documentation: ug
 
 # Migrating from Xamarin Rotator to .NET MAUI Rotator
 
-To migrate easily from `Xamarin SfRotator` to `.NET MAUI SfRotator`, we kept all the APIs from Xamarin SfRotator in MAUI SfRotator. We have renamed the namespace as follows.
+To migrate easily from `Xamarin SfRotator` to `.NET MAUI SfRotator`, we kept all the APIs from Xamarin SfRotator in MAUI SfRotator. However, to maintain the consistency of API naming in MAUI SfRotator, we renamed some of the APIs. The APIs that have been changed in MAUI SfRotator from Xamarin SfRotator are detailed as follows.
 
 ## Namespaces 
 
@@ -31,8 +31,7 @@ To migrate easily from `Xamarin SfRotator` to `.NET MAUI SfRotator`, we kept all
 <th>Description</th></tr>
 <tr>
 <td>{{'[DotsBorderColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRotator.XForms.SfRotator.html#Syncfusion_SfRotator_XForms_SfRotator_DotsBorderColor)'| markdownify }}</td>
-<td>{{'[DotsStroke](link)'| markdownify }}</td>
+<td>DotsStroke</td>
 <td>Gets or sets the value of DotsStroke.
 </td></tr>
-<tr>
 </table>
