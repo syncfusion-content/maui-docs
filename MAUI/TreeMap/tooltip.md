@@ -9,7 +9,7 @@ documentation: ug
 
 # Tooltip in .NET MAUI TreeMap (SfTreeMap)
 
-Tooltip is used to provide information When the mouse hovers over items, the interactive TreeMap displays details about items’ values in tooltips.
+Tooltip is used to provide information When the mouse hovers over items or select the items, the interactive TreeMap displays details about items’ values in tooltips.
 
 ## Enable Tooltip
 
