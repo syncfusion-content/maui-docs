@@ -267,7 +267,7 @@ public class PopulationViewModel
 {% endhighlight %}
 {% endtabs %}
 
-## Applying leaf item brush settings
+## Applying brush settings
 
 The brush settings is used to customize the fill colors for leaf items based on ranges or values, offering four brush settings: `UniformBrushSettings,` `RangeBrushSettings,` `DesaturationBrushSettings,` and `PaletteBrushSettings.` Each setting provides unique options for defining and applying color schemes, enhancing the visualization of the tree map.
 
@@ -350,110 +350,6 @@ public class PopulationViewModel
 
 {% endhighlight %}
 {% endtabs %}
-
-## Applying group item brush settings
-
-The group items are colored using the `Brushes` property within the colors collection of `TreeMapPaletteBrushSettings` in the `GroupItemBrushSettings` of `SfTreeMap.`
-
-{% tabs %}
-{% highlight XAML hl_lines="15 16 17 18 19 20 21 22" %}
-
-<treemap:SfTreeMap x:Name="treeMap"
-                   DataSource="{Binding PopulationDetails}"
-                   PrimaryValuePath="Population">
-    <treemap:SfTreeMap.BindingContext>
-        <local:PopulationViewModel />
-    </treemap:SfTreeMap.BindingContext>
-    <treemap:SfTreeMap.LeafItemSettings>
-        <treemap:TreeMapLeafItemSettings LabelPath="Country"
-                                         Stroke="White">
-        </treemap:TreeMapLeafItemSettings>
-    </treemap:SfTreeMap.LeafItemSettings>
-    <treemap:SfTreeMap.Levels>
-        <treemap:TreeMapLevel GroupPath="Continent"/>
-    </treemap:SfTreeMap.Levels>
-    <treemap:SfTreeMap.GroupItemBrushSettings>
-        <treemap:TreeMapPaletteBrushSettings>
-            <treemap:TreeMapPaletteBrushSettings.Brushes>
-                <SolidColorBrush>#003790</SolidColorBrush>
-                <SolidColorBrush>#FF8F00</SolidColorBrush>
-            </treemap:TreeMapPaletteBrushSettings.Brushes>
-        </treemap:TreeMapPaletteBrushSettings>
-    </treemap:SfTreeMap.GroupItemBrushSettings>
-</treemap:SfTreeMap>
-
-{% endhighlight %}
-
-{% highlight C# hl_lines="7 8 9 10 11 12 13 14" %}
-
-SfTreeMap treeMap = new SfTreeMap();
-PopulationViewModel viewModel = new PopulationViewModel();
-treeMap.DataSource = viewModel.PopulationDetails;
-treeMap.PrimaryValuePath = "Population";
-treeMap.LeafItemSettings = new TreeMapLeafItemSettings() { LabelPath = "Country", Stroke = Colors.White };
-treeMap.Levels.Add(new TreeMapLevel() { GroupPath = "Continent" });
-treeMap.GroupItemBrushSettings = new TreeMapPaletteBrushSettings()
-{
-    Brushes = new List<Brush>()
-    {
-        new SolidColorBrush(Color.FromArgb("#003790")),
-        new SolidColorBrush(Color.FromArgb("#FF8F00")),
-    }
-};
-
-this.Content = treeMap;
-
-{% endhighlight %}
-{% highlight C# tabtitle="PopulationDetails.cs" %}
-
-public class PopulationDetails
-{
-    public string Country { get; set; }
-    public string Continent { get; set; }
-    public int Population { get; set; }
-}
-
-{% endhighlight %}
-{% highlight c# tabtitle="PopulationViewModel.cs" %}
-
-public class PopulationViewModel
-{
-    public PopulationViewModel()
-    {
-        this.PopulationDetails = new ObservableCollection<PopulationDetails>()
-        {
-            new PopulationDetails() { Continent ="North America", Country = "United States of America", Population = 339996564 },
-            new PopulationDetails() { Continent ="South America", Country = "Brazil", Population = 216422446 },
-            new PopulationDetails() { Continent ="North America", Country = "Mexico", Population = 128455567 },
-            new PopulationDetails() { Continent ="South America", Country = "Colombia", Population = 52085168 },
-            new PopulationDetails() { Continent ="South America", Country = "Argentina", Population = 45773884 },
-            new PopulationDetails() { Continent ="North America", Country = "Canada", Population = 38781292 },
-            new PopulationDetails() { Continent ="South America", Country = "Peru", Population = 34352719 },
-            new PopulationDetails() { Continent ="South America", Country = "Venezuela", Population = 28838499 },
-            new PopulationDetails() { Continent ="South America", Country = "Chile", Population = 19629590 },
-            new PopulationDetails() { Continent ="South America", Country = "Ecuador", Population = 18190484 },
-            new PopulationDetails() { Continent ="North America", Country = "Guatemala", Population = 18092026 },
-            new PopulationDetails() { Continent ="South America", Country = "Bolivia", Population = 12388571 },
-            new PopulationDetails() { Continent ="North America", Country = "Honduras", Population = 10593798 },
-            new PopulationDetails() { Continent ="North America", Country = "Nicaragua", Population = 7046311 },
-            new PopulationDetails() { Continent ="South America", Country = "Paraguay", Population = 6861524 },
-            new PopulationDetails() { Continent ="North America", Country = "El Salvador", Population = 6364943 },
-            new PopulationDetails() { Continent ="North America", Country = "Costa Rica", Population = 5212173 },
-            new PopulationDetails() { Continent ="South America", Country = "Uruguay", Population = 3423109 },
-        };
-    }
-
-    public ObservableCollection<PopulationDetails> PopulationDetails
-    {
-        get;
-        set;
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-N> This is applicable only when `Levels` is enabled.
 
 ## Enable tooltip
 

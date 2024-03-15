@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Brush settings in .NET MAUI TreeMap (SfTreeMap) control | Syncfusion
+title:  Brush Settings in .NET MAUI TreeMap (SfTreeMap) Control | Syncfusion
 description: Learn here how to apply brush settings for tree map items in Syncfusion .NET MAUI TreeMap control, enhancing the tree map visualization.
 platform: maui
 control: TreeMap (SfTreeMap)
@@ -9,11 +9,11 @@ documentation: ug
  
 # Leaf item brush settings in .NET MAUI TreeMap (SfTreeMap)
 
-The brush settings is used to customize the fill colors for leaf items based on ranges or values, offering four brush settings: `UniformBrushSettings,` `RangeBrushSettings,` `DesaturationBrushSettings,` and `PaletteBrushSettings.` Each setting provides unique options for defining and applying color schemes, enhancing the visualization of the tree map.
+The brush settings are used to customize the fill colors for leaf items based on ranges or values, offering four brush settings: `UniformBrushSettings`, `RangeBrushSettings`, `DesaturationBrushSettings`, and `PaletteBrushSettings`. Each setting provides unique options for defining and applying color schemes, enhancing the visualization of the treemap.
 
 ## Uniform brush settings
 
-The uniform brush settings in `SfTreeMap` assigns a single color uniformly for leaf items representing data. Customize the background brush for tree map leaf items using the `Brush` property of `TreeMapUniformBrushSettings`.
+The uniform brush settings in `SfTreeMap` assign a single color uniformly for leaf items representing data. Customize the background brush for treemap leaf items using the `Brush` property of `TreeMapUniformBrushSettings`.
 
 {% tabs %}
 {% highlight XAML hl_lines="11 12 13" %}
