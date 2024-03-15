@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Selection and Highlights in .NET MAUI TreeMap | Syncfusion in .NET MAUI TreeMap | Syncfusion
+title: Selection and Highlights in .NET MAUI TreeMap | Syncfusion
 description: Learn about the functionality of selection and highlights within the Syncfusion .NET MAUI TreeMap(STreeMap) control.
 platform: maui
 control: TreeMap (SfTreeMap)
