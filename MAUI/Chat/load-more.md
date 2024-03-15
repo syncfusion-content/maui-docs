@@ -404,3 +404,5 @@ public partial class MainPage : ContentPage
 {% endtabs %}
 
 ![Load more template in .NET MAUI Chat](images/load-more/maui-chat-load-more-template.gif)
+
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/loadmore-automatically-in-.net-maui-chat)
