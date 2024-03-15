@@ -132,7 +132,7 @@ N> This is common for Shape, Text and CustomView annotations.
 
 ## Annotation selected event
 
-This [`AnnotationSelected`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_AnnotationSelected) event occurs when the annotation is selected.
+This [AnnotationSelected](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_AnnotationSelected) event occurs when the annotation is selected.
 
 N> This is common for Shape, Text and CustomView annotations.
 
@@ -210,7 +210,7 @@ Add a custom view on image loading using the [`Imageloaded`](https://help.syncfu
 {% endtabs %}
 
 
-### Add custom view with manual bounds
+## Add custom view with manual bounds
 
 The custom view can be added with user-defined view bounds. The [`Bounds`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorAnnotationSettings.html#Syncfusion_Maui_ImageEditor_ImageEditorAnnotationSettings_Bounds) are treated as ratio values of image width and height, so you have to specify bound's rectangle values in the range of 0 to 1.
 
