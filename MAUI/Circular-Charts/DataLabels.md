@@ -99,7 +99,7 @@ chart.Series.Add(series);
 
 The content of the label can be customized using the [LabelContext]() property. Following are the two options that are supported now,
 
-* [Percentage]() - This will show the percentage value of corresponding data point Y value
+* [Percentage]() - This will show the percentage value of corresponding data point Y value.
 
 * [YValue]() - This will show the corresponding Y value.
 
@@ -107,33 +107,33 @@ The content of the label can be customized using the [LabelContext]() property. 
 
 {% highlight xaml %}
 
-    <chart:SfCircularChart>
-        
-        <chart:PieSeries ItemsSource="{Binding Data}" 
-                         LabelContext="Percentage"
-                         ShowDataLabels="True"
-                         XBindingPath="Product" 
-                         YBindingPath="SalesRate"/>  
-        
-    </chart:SfCircularChart>
+<chart:SfCircularChart>
+ . . .   
+<chart:PieSeries ItemsSource="{Binding Data}" 
+                 LabelContext="Percentage"
+                 ShowDataLabels="True"
+                 XBindingPath="Product" 
+                 YBindingPath="SalesRate"/>  
+
+</chart:SfCircularChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfCircularChart chart = new SfCircularChart();
-    . . .
-    PieSeries series = new PieSeries()
-    {
-        ItemsSource = new ViewModel().Data,
-        XBindingPath = "Product",
-        YBindingPath = "SalesRate",
-        ShowDataLabels = true,
-        LabelContext = LabelContext.Percentage
-    };
+SfCircularChart chart = new SfCircularChart();
+. . .
+PieSeries series = new PieSeries()
+{
+    ItemsSource = new ViewModel().Data,
+    XBindingPath = "Product",
+    YBindingPath = "SalesRate",
+    ShowDataLabels = true,
+    LabelContext = LabelContext.Percentage
+};
 
-    chart.Series.Add(series);
-    this.Content = chart;
+chart.Series.Add(series);
+this.Content = chart;
         
 {% endhighlight %}
 
@@ -143,30 +143,30 @@ The content of the label can be customized using the [LabelContext]() property. 
 
 ## LabelTemplate
 
-The [SfCircularChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCircularChart.html) provides support to customize the appearance of the datalabel by using the [LabelTemplate]() property.
+The [SfCircularChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCircularChart.html) provides support to customize the appearance of the datalabel using the [LabelTemplate]() property.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-    <chart:SfCircularChart>
+<chart:SfCircularChart>
 
-    <chart:SfCircularChart.Resources>
-        <DataTemplate x:Key="labelTemplate">
-            <HorizontalStackLayout Spacing="5">
-                <Label Text="{Binding Item.Product}" TextColor="White" FontSize="13"/>
-                <Label Text=" : " TextColor="White" FontSize="13"/>
-                <Label Text="{Binding Item.SalesRate}" TextColor="White" FontSize="13"/>
-            </HorizontalStackLayout>
-        </DataTemplate>
-    </chart:SfCircularChart.Resources>
+<chart:SfCircularChart.Resources>
+    <DataTemplate x:Key="labelTemplate">
+        <HorizontalStackLayout Spacing="5">
+            <Label Text="{Binding Item.Product}" TextColor="White" FontSize="13"/>
+            <Label Text=" : " TextColor="White" FontSize="13"/>
+            <Label Text="{Binding Item.SalesRate}" TextColor="White" FontSize="13"/>
+        </HorizontalStackLayout>
+    </DataTemplate>
+</chart:SfCircularChart.Resources>
 
-    <chart:PieSeries ItemsSource="{Binding Data}" 
-                     ShowDataLabels="True"
-                     LabelTemplate="{StaticResource labelTemplate}"
-                     XBindingPath="Product" 
-                     YBindingPath="SalesRate">
-    </chart:PieSeries>
+<chart:PieSeries ItemsSource="{Binding Data}" 
+                    ShowDataLabels="True"
+                    LabelTemplate="{StaticResource labelTemplate}"
+                    XBindingPath="Product" 
+                    YBindingPath="SalesRate">
+</chart:PieSeries>
 
 </chart:SfCircularChart>
 
@@ -174,49 +174,49 @@ The [SfCircularChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts
 
 {% highlight c# %}
 
-    SfCircularChart chart = new SfCircularChart();
-    . . .
-    PieSeries series = new PieSeries();
-    series.ItemsSource = new ViewModel().Data;
-    series.XBindingPath = "Product";
-    series.YBindingPath = "SalesRate";
-    series.ShowDataLabels = true;
+SfCircularChart chart = new SfCircularChart();
+. . .
+PieSeries series = new PieSeries();
+series.ItemsSource = new ViewModel().Data;
+series.XBindingPath = "Product";
+series.YBindingPath = "SalesRate";
+series.ShowDataLabels = true;
 
-    DataTemplate labelTemplate = new DataTemplate(() =>
+DataTemplate labelTemplate = new DataTemplate(() =>
+{
+    var horizontalStackLayout = new HorizontalStackLayout { Spacing = 5 };
+
+    var productLabel = new Label
     {
-        var horizontalStackLayout = new HorizontalStackLayout { Spacing = 5 };
+        TextColor = Color.White,
+        FontSize = 13
+    };
+    productLabel.SetBinding(Label.TextProperty, "Item.Product");
 
-        var productLabel = new Label
-        {
-            TextColor = Color.White,
-            FontSize = 13
-        };
-        productLabel.SetBinding(Label.TextProperty, "Item.Product");
+    var separatorLabel = new Label
+    {
+        Text = " : ",
+        TextColor = Color.White,
+        FontSize = 13,
+    };
 
-        var separatorLabel = new Label
-        {
-            Text = " : ",
-            TextColor = Color.White,
-            FontSize = 13,
-        };
+    var salesRateLabel = new Label
+    {
+        TextColor = Color.White,
+        FontSize = 13,
+    };
+    salesRateLabel.SetBinding(Label.TextProperty, "Item.SalesRate");
 
-        var salesRateLabel = new Label
-        {
-            TextColor = Color.White,
-            FontSize = 13,
-        };
-        salesRateLabel.SetBinding(Label.TextProperty, "Item.SalesRate");
+    horizontalStackLayout.Children.Add(productLabel);
+    horizontalStackLayout.Children.Add(separatorLabel);
+    horizontalStackLayout.Children.Add(salesRateLabel);
 
-        horizontalStackLayout.Children.Add(productLabel);
-        horizontalStackLayout.Children.Add(separatorLabel);
-        horizontalStackLayout.Children.Add(salesRateLabel);
+    return horizontalStackLayout;
+});
 
-        return horizontalStackLayout;
-    });
-
-    series.LabelTemplate = labelTemplate;
-    chart.Series.Add(series);
-    this.Content = chart;
+series.LabelTemplate = labelTemplate;
+chart.Series.Add(series);
+this.Content = chart;
         
 {% endhighlight %}
 

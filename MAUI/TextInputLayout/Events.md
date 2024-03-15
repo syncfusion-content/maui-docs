@@ -34,6 +34,8 @@ inputLayout.Content = new Entry() { Text = "1234" };
 
 {% endhighlight %}
 
+{% endtabs %}
+
 {% tabs %}
 {% highlight c# %}
     

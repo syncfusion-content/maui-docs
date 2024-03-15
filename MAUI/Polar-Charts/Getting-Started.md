@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting started with .NET MAUI Chart control | Syncfusion
+title: Getting Started with .NET MAUI Chart Control | Syncfusion
 description: This section explains about the getting started with Syncfusion .NET MAUI Chart (SfPolarChart) control.
 platform: maui
 control: SfPolarChart
@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with .NET MAUI Chart
 
-This section explains how to populate the Polar chart with data, a title, data labels, a legend, tooltips and markers. It also covers the essential aspects of getting started with the chart.
+This section explains how to populate the Polar chart with data, a title, data labels, a legend, tooltips, and markers. It also covers the essential aspects of getting started with the chart.
 
 ## Creating an application with .NET MAUI chart
 
@@ -53,7 +53,7 @@ This section explains how to populate the Polar chart with data, a title, data l
 
 ## Register the handler
 
-Syncfusion.Maui.Core NuGet package is a dependent package for all Syncfusion controls in .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion core.
+The Syncfusion.Maui.Core NuGet package is a dependent package for all Syncfusion controls in .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion core.
 
 {% highlight C# %}
 
@@ -137,7 +137,7 @@ Next, create a view model class and initialize a list of `PlantData` objects as 
 
 {% endtabs %} 
 
-Create a `ViewModel` instance and set it as the chart's `BindingContext`. This enables property binding from `ViewModel` class.
+Create a `ViewModel` instance and set it as the chart's `BindingContext`. This enables property binding from the `ViewModel` class.
  
 N> Add the namespace of the `ViewModel` class to your XAML page, if you prefer to set the `BindingContext` in XAML.
 

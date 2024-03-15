@@ -74,7 +74,7 @@ Token mode supports both editable and non-editable text boxes for selecting item
 
 ### Programmatic selection
 
-The selected items can be changed programmatically by using the [SelectedItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_SelectedItems) property of ComboBox control.
+The selected items can be changed programmatically by using the [SelectedItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_SelectedItems) property of ComboBox control. This property allows both getting and setting of the selected items in the ComboBox control.
 
 {% tabs %}
 
@@ -84,6 +84,7 @@ The selected items can be changed programmatically by using the [SelectedItems](
              HeightRequest="50"
              WidthRequest="350"
              ItemsSource="{Binding SocialMedias}"
+             SelectedItems="{Binding SelectedItemsList}"
              SelectionMode="Multiple"
              MaxDropDownHeight="250"
              DisplayMemberPath="Name"
@@ -93,10 +94,12 @@ The selected items can be changed programmatically by using the [SelectedItems](
 
 {% highlight C# %}
 
+  public ObservableCollection<SocialMedia> SelectedItemsList { get; set; }
   SocialMediaViewModel socialMediaViewModel = (this.comboBox.BindingContext as SocialMediaViewModel);
   ObservableCollection<SocialMedia> socialMediasList = socialMediaViewModel.SocialMedias;
-  this.comboBox.SelectedItems.Add(socialMediasList[0]);
-  this.comboBox.SelectedItems.Add(socialMediasList[2]);
+  SelectedItemsList = new ObservableCollection<SocialMedia>();
+  SelectedItemsList.Add(socialMediasList[0]);
+  SelectedItemsList.Add(socialMediasList[2]);
 
 {% endhighlight %}
 
@@ -129,6 +132,60 @@ The selected items can be changed interactively by using keyboard or by selectin
 
 ![.NET MAUI ComboBox UI Multiselection.](Images/selection/net-maui-combobox-ui-multiselection.gif)
 
+### TokensWrapMode
+
+There are two ways to display multi-selection items in the ComboBox control. They are:
+
+* Wrap
+* None
+
+#### Wrap mode
+
+When the TokensWrapMode is set to Wrap, the selected items will be wrapped to the next line of the SfComboBox.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+ <editors:SfComboBox x:Name="comboBox" 
+             HeightRequest="50"
+             WidthRequest="350"
+             ItemsSource="{Binding SocialMedias}"
+             SelectionMode="Multiple"
+             Placeholder="Enter Media"
+             DisplayMemberPath="Name"
+             TextMemberPath="Name"
+             TokensWrapMode="Wrap" />
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![.NET MAUI ComboBox Wrap mode.](Images/selection/net-maui-combobox-wrapmode.png)
+
+#### None mode
+
+When the TokensWrapMode is set to None, the selected item will be wrapped in a horizontal orientation.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+ <editors:SfComboBox x:Name="comboBox" 
+             HeightRequest="50"
+             WidthRequest="350"
+             ItemsSource="{Binding SocialMedias}"
+             SelectionMode="Multiple"
+             Placeholder="Enter Media"
+             DisplayMemberPath="Name"
+             TextMemberPath="Name"
+             TokensWrapMode="None" />
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![.NET MAUI ComboBox None mode.](Images/selection/net-maui-combobox-nonemode.png)
 
 ## Selection changed notification
 

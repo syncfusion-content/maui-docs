@@ -21,7 +21,6 @@ This section provides a quick overview of how to get started with the `.NET MAUI
 
 4. Initialize `SfTreeMap`.
 
-
 {% tabs %}
 {% highlight XAML hl_lines="3 5" %}
 
@@ -31,6 +30,8 @@ This section provides a quick overview of how to get started with the `.NET MAUI
 
     <treemap:SfTreeMap />
 </ContentPage>
+
+{% endhighlight %}
 
 {% highlight C# hl_lines="1 9 10" %}
 
@@ -48,6 +49,8 @@ public partial class MainPage : ContentPage
 }
 
 {% endhighlight %}
+
+{% endtabs %}
 
 ## Register the handler
 
@@ -158,15 +161,17 @@ public class PopulationViewModel
 To populate the treemap items, utilize the `DataSource` property of `SfTreeMap`. The `PrimaryValuePath` specifies the name of the property within the data object that provides the primary value used to determine the size of each item in the treemap. This primary value typically represents the main quantitative data associated with each item.
 
 {% tabs %}
-{% highlight XAML hl_lines="2 5 6 7" %}
+{% highlight XAML hl_lines="2 4 5 6" %}
 
 <treemap:SfTreeMap x:Name="treeMap"
                    DataSource="{Binding PopulationDetails}"
-                   PrimaryValuePath="Population"
-                   RangeColorValuePath="Population">
+                   PrimaryValuePath="Population">
     <treemap:SfTreeMap.BindingContext>
         <local:PopulationViewModel />
     </treemap:SfTreeMap.BindingContext>
+    <treemap:SfTreeMap.LeafItemBrushSettings>
+       <treemap:TreeMapUniformBrushSettings Brush="Orange"/>
+    </treemap:SfTreeMap.LeafItemBrushSettings>
 </treemap:SfTreeMap>
 
 {% endhighlight %}
@@ -175,6 +180,8 @@ To populate the treemap items, utilize the `DataSource` property of `SfTreeMap`.
 SfTreeMap treeMap = new SfTreeMap();
 PopulationViewModel viewModel = new PopulationViewModel();
 treeMap.DataSource = viewModel.PopulationDetails;
+treeMap.PrimaryValuePath = "Population";
+treeMap.LeafItemBrushSettings = new TreeMapUniformBrushSettings() { Brush = Brush.Orange };
 this.Content = treeMap;
 
 {% endhighlight %}
@@ -185,28 +192,31 @@ this.Content = treeMap;
 To display text for the leaf items, utilize the `LabelPath` property within the `LeafItemSettings` of `SfTreeMap`. This property allows you to specify the path to the data property containing the text you want to display.
 
 {% tabs %}
-{% highlight XAML hl_lines="9" %}
+{% highlight XAML hl_lines="7 8 9" %}
 
 <treemap:SfTreeMap x:Name="treeMap"
                    DataSource="{Binding PopulationDetails}"
-                   PrimaryValuePath="Population"
-                   RangeColorValuePath="Population">
+                   PrimaryValuePath="Population">
     <treemap:SfTreeMap.BindingContext>
         <local:PopulationViewModel />
     </treemap:SfTreeMap.BindingContext>
     <treemap:SfTreeMap.LeafItemSettings>
-    <treemap:TreeMapLeafItemSettings LabelPath="Country" 
-                                     Stroke="Black" />
+    <treemap:TreeMapLeafItemSettings LabelPath="Country"/>
     </treemap:SfTreeMap.LeafItemSettings>
+    <treemap:SfTreeMap.LeafItemBrushSettings>
+       <treemap:TreeMapUniformBrushSettings Brush="Orange"/>
+    </treemap:SfTreeMap.LeafItemBrushSettings>
 </treemap:SfTreeMap>
 
 {% endhighlight %}
-{% highlight C# hl_lines="4"  %}
+{% highlight C# hl_lines="5"  %}
 
 SfTreeMap treeMap = new SfTreeMap();
 PopulationViewModel viewModel = new PopulationViewModel();
 treeMap.DataSource = viewModel.PopulationDetails;
-this.treeMap.LeafItemSettings = new TreeMapLeafItemSettings() { LabelPath = "Country", Stroke = Brush.Black };
+treeMap.PrimaryValuePath = "Population";
+treeMap.LeafItemSettings = new TreeMapLeafItemSettings() { LabelPath = "Country" };
+treeMap.LeafItemBrushSettings = new TreeMapUniformBrushSettings() { Brush = Brush.Orange };
 this.Content = treeMap;
 
 {% endhighlight %}
@@ -270,12 +280,11 @@ public class PopulationViewModel
 To customize fill colors for leaf items based on ranges or values, utilize the `LeafItemBrushSettings` property within `SfTreeMap`. This property offers four distinct brush settings: `TreeMapUniformBrushSettings`, `TreeMapRangeBrushSettings`, `TreeMapDesaturationBrushSettings`, and `TreeMapPaletteBrushSettings`. Each setting provides unique options for defining and applying color schemes to enhance your TreeMap visualization.
 
 {% tabs %}
-{% highlight XAML hl_lines="12 13 14" %}
+{% highlight XAML hl_lines="11 12 13" %}
 
 <treemap:SfTreeMap x:Name="treeMap"
                    DataSource="{Binding PopulationDetails}"
-                   PrimaryValuePath="Population"
-                   RangeColorValuePath="Population">
+                   PrimaryValuePath="Population">
     <treemap:SfTreeMap.BindingContext>
         <local:PopulationViewModel />
     </treemap:SfTreeMap.BindingContext>
@@ -290,12 +299,14 @@ To customize fill colors for leaf items based on ranges or values, utilize the `
 
 {% endhighlight %}
 
-{% highlight C# hl_lines="4" %}
+{% highlight C# hl_lines="5" %}
 
 SfTreeMap treeMap = new SfTreeMap();
 PopulationViewModel viewModel = new PopulationViewModel();
 treeMap.DataSource = viewModel.PopulationDetails;
-this.treeMap.LeafItemBrushSettings = new TreeMapUniformBrushSettings() { Brush = Brush.Orange };
+treeMap.PrimaryValuePath = "Population";
+treeMap.LeafItemBrushSettings = new TreeMapUniformBrushSettings() { Brush = Brush.Orange };
+treeMap.LeafItemSettings = new TreeMapLeafItemSettings() { LabelPath = "Country" };
 this.Content = treeMap;
 
 {% endhighlight %}
@@ -354,39 +365,39 @@ public class PopulationViewModel
 {% endhighlight %}
 {% endtabs %}
 
-
 ## Enable tooltip
 
 To enable tooltips for the TreeMap control, utilize the `ShowToolTip` property of `SfTreeMap`. By default, the value of `ShowToolTip` is set to `false`. To provide users with additional information or context about specific treemap items, simply set this property to `true`.
 
 {% tabs %}
-{% highlight XAML hl_lines="5" %}
+{% highlight XAML hl_lines="4" %}
 
 <treemap:SfTreeMap x:Name="treeMap"
                    DataSource="{Binding PopulationDetails}"
                    PrimaryValuePath="Population"
-                   RangeColorValuePath="Population"
                    ShowToolTip="True">
     <treemap:SfTreeMap.BindingContext>
         <local:PopulationViewModel />
     </treemap:SfTreeMap.BindingContext>
     <treemap:SfTreeMap.LeafItemSettings>
-    <treemap:TreeMapLeafItemSettings LabelPath="Country" 
-                                     Stroke="Black">
-            <treemap:TreeMapLeafItemSettings.TextStyle>
-                <treemap:TreeMapTextStyle TextColor="Black" />
-            </treemap:TreeMapLeafItemSettings.TextStyle>
+    <treemap:TreeMapLeafItemSettings LabelPath="Country">
         </treemap:TreeMapLeafItemSettings>
     </treemap:SfTreeMap.LeafItemSettings>
+    <treemap:SfTreeMap.LeafItemBrushSettings>
+       <treemap:TreeMapUniformBrushSettings Brush="Orange"/>
+    </treemap:SfTreeMap.LeafItemBrushSettings>
 </treemap:SfTreeMap>
 
 {% endhighlight %}
-{% highlight C# hl_lines="4" %}
+{% highlight C# hl_lines="5" %}
 
 SfTreeMap treeMap = new SfTreeMap();
 PopulationViewModel viewModel = new PopulationViewModel();
 treeMap.DataSource = viewModel.PopulationDetails;
+treeMap.PrimaryValuePath = "Population";
 treeMap.ShowToolTip = true;
+treeMap.LeafItemBrushSettings = new TreeMapUniformBrushSettings() { Brush = Brush.Orange };
+treeMap.LeafItemSettings = new TreeMapLeafItemSettings() { LabelPath = "Country" };
 this.Content = treeMap;
 
 {% endhighlight %}
@@ -450,7 +461,7 @@ public class PopulationViewModel
 To incorporate a legend for the TreeMap control, utilize the `ShowLegend` property within `LegendSettings.` It is possible to customize the legend item’s color and text using the `LeafItemBrushSettings` and `LegendSettings` properties of `SfTreemap.`
 
 {% tabs %}
-{% highlight XAML hl_lines="9" %}
+{% highlight XAML hl_lines="8 9 10" %}
 
 <treemap:SfTreeMap x:Name="treeMap"
                    DataSource="{Binding PopulationDetails}"
@@ -486,12 +497,25 @@ To incorporate a legend for the TreeMap control, utilize the `ShowLegend` proper
 </treemap:SfTreeMap>
 
 {% endhighlight %}
-{% highlight C# hl_lines="4" %}
+{% highlight C# hl_lines="6" %}
 
 SfTreeMap treeMap = new SfTreeMap();
 PopulationViewModel viewModel = new PopulationViewModel();
 treeMap.DataSource = viewModel.PopulationDetails;
+treeMap.PrimaryValuePath = "Population";
+treeMap.RangeColorValuePath = "Population";
 treeMap.LegendSettings.ShowLegend = true;
+treeMap.LeafItemSettings = new TreeMapLeafItemSettings() { LabelPath = "Country" };
+treeMap.LeafItemBrushSettings = new TreeMapRangeBrushSettings()
+{
+    RangeBrushes = new List<TreeMapRangeBrush>()
+    {
+        new TreeMapRangeBrush { LegendLabel = "50M - 1B", From = 50000000, To = 1000000000, Brush = new SolidColorBrush(Color.FromArgb("#F0A868")) },
+        new TreeMapRangeBrush { LegendLabel = "10M - 50M", From = 10000000, To = 50000000, Brush = new SolidColorBrush(Color.FromArgb("#F3BC8B")) },
+        new TreeMapRangeBrush { LegendLabel = "0.1M - 10M", From = 100000, To = 10000000, Brush = new SolidColorBrush(Color.FromArgb("#F8D7B9")) },
+    }
+};
+
 this.Content = treeMap;
 
 {% endhighlight %}

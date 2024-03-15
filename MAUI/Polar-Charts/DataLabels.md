@@ -166,33 +166,21 @@ The [SfPolarChart]() provides support to customize the appearance of the datalab
     series.YBindingPath = "Tree";
     series.ShowDataLabels = true;
 
-    DataTemplate labelTemplate = new DataTemplate(() =>
+DataTemplate labelTemplate = new DataTemplate(() =>
+{
+    var image = new Image
     {
-        HorizontalStackLayout horizontalStackLayout = new HorizontalStackLayout { Spacing = 5 };
+        Source = "arrow.png",
+        WidthRequest = 15,
+        HeightRequest = 15
+    };
+    
+    return image;
+});
 
-        var label = new Label
-        {
-            VerticalOptions = LayoutOptions.Center,
-            FontSize = 15
-        };
-        label.SetBinding(Label.TextProperty, new Binding("Item.Tree"));
-
-        var image = new Image
-        {
-            Source = "arrow.png",
-            WidthRequest = 15,
-            HeightRequest = 15
-        };
-        
-        horizontalStackLayout.Children.Add(label);
-        horizontalStackLayout.Children.Add(image);
-        
-        return horizontalStackLayout;
-    });
-
-    series.LabelTemplate = labelTemplate;
-    chart.Series.Add(series);
-    this.Content = chart;
+series.LabelTemplate = labelTemplate;
+chart.Series.Add(series);
+this.Content = chart;
         
 {% endhighlight %}
 

@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Custom controls in .NET MAUI Parallax View Control | Syncfusion
-description: Learn here all about Scrolling support for custom controls support in Syncfusion .NET MAUI Parallax View (SfParallaxView) control and more.
-platform: .NET MAUI
+description: Learn about Scrolling support for custom controls support in Syncfusion .NET MAUI Parallax View (SfParallaxView) control and more.
+platform: MAUI
 control: SfParallaxView
 documentation: ug
 ---
@@ -13,14 +13,17 @@ The Parallax view supports custom scrollable controls using the [`IParallaxView`
 
 {% highlight c# %}
 
-        public class CustomListView : ListView, IParallaxView
-        {
+using Syncfusion.Maui.Core;
 
-            public Size ScrollableContentSize { get ; set ; }
+namespace ParallaxViewCustomControl
+{
+    public class CustomListView : ListView, IParallaxView
+    {
+        public Size ScrollableContentSize { get ; set ; }
 
-            public event EventHandler<ParallaxScrollingEventArgs> Scrolling;
-
-        }
+        public event EventHandler<ParallaxScrollingEventArgs> Scrolling;
+    }
+}
 
 {% endhighlight %}                         
 
@@ -30,16 +33,20 @@ The [`ScrollableContentSize`]() is the total content size of the scrollable cust
 
 {% highlight c# %}
 
-    public class CustomListView : ListView, IParallaxView
+using Syncfusion.Maui.Core;
 
+namespace ParallaxViewCustomControl
+{
+    public class CustomListView : ListView, IParallaxView
     {
         public Size ScrollableContentSize { get; set; }
+
         public CustomListView()
         {
             this.ScrollableContentSize = ContentSize; //  Total scrollable size of the custom control
         }
-
     }
+}
 
 {% endhighlight %}
 
@@ -59,87 +66,64 @@ The [`ParallaxScrollingEventArgs`]() has the following three arguments:
 
 {% highlight xaml %}
 
-         <Grid>            
-            <parallax:SfParallaxView Source="{x:Reference Name = listView}" x:Name="parallaxview">
-                <parallax:SfParallaxView.Content>
-                    <Image x:Name="image" BackgroundColor="Transparent" HorizontalOptions="Fill" VerticalOptions="Fill" Aspect="AspectFill" />
-                </parallax:SfParallaxView.Content>
-            </parallax:SfParallaxView>
-            <local:CustomListView x:Name="listView" >
-                                  
-                   . . .
-
-            </local:CustomListView>
-            </Grid>
+<Grid>
+    <parallax:SfParallaxView Source="{x:Reference Name = listView}" x:Name="parallaxview">
+        <parallax:SfParallaxView.Content>
+            <Image x:Name="image" Source="{Binding Image}" BackgroundColor="Transparent" HorizontalOptions="Fill" VerticalOptions="Fill" Aspect="AspectFill" />
+        </parallax:SfParallaxView.Content>
+    </parallax:SfParallaxView>
+    <local:CustomListView x:Name="listView" >
+        . . .
+    </local:CustomListView>
+</Grid>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-          public class CustomListView : ListView, IParallaxView
+using Syncfusion.Maui.Core;
+
+namespace ParallaxViewCustomControl
+{
+    public class CustomListView : ListView, IParallaxView
+    {
+        public Size ScrollableContentSize { get; set; }
+
+        public event EventHandler<ParallaxScrollingEventArgs>? Scrolling;
+
+        public CustomListView()
+        {
+            this.Scrolled += CustomListView_Scrolled;
+        }
+
+        private void CustomListView_Scrolled(object? sender, ScrolledEventArgs e)
+        {
+            if (sender is ListView listView && Scrolling != null)
             {
-                public ListViewScrollingEventArgs scrollingEventArgs;
-                internal event EventHandler<ListViewScrollingEventArgs> CustomListViewScrolling;
+                Scrolling.Invoke(this, new ParallaxScrollingEventArgs(e.ScrollX, e.ScrollY, false));
+            }
+        }
 
-                private Size scrollableContentSize = new Size();
-                public Size ScrollableContentSize
-                {
-                    get
-                    {
-                        return this.scrollableContentSize;
-                    }
-                    set
-                    {
-                        this.scrollableContentSize = value;
-                        OnPropertyChanged("ScrollableContentSize");
-                    }
-                }
+        protected override Size MeasureOverride(double widthConstraint, double heightConstraint)
+        {
+            var minimumSize = new Size(40, 40);
+            Size request = Size.Zero;
 
-                public event EventHandler<ParallaxScrollingEventArgs> Scrolling;
-
-                protected virtual void OnScrollChanged(ParallaxScrollingEventArgs e)
-                {
-                    Scrolling?.Invoke(this, e);
-                }
-
-
-                public CustomListView()
-                {
-                    this.scrollingEventArgs = new ListViewScrollingEventArgs(); // Need to initiate event args
-                    CustomListViewScrolling += CustomListView_CustomListViewScrolling; // Need to invoke custom scroll event
-                }
-
-                private void CustomListView_CustomListViewScrolling(object sender, ListViewScrollingEventArgs e)
-                {
-                    OnScrollChanged(new ParallaxScrollingEventArgs(e.ScrollX, e.ScrollY, false));
-                }
+            if (ItemsSource is IList list && HasUnevenRows == false && RowHeight > 0 && !IsGroupingEnabled)
+            {
+                request = new Size(widthConstraint, list.Count * RowHeight);
             }
 
-            public class ListViewScrollingEventArgs : EventArgs
-            {
-                /// <summary>
-                /// Initializes a new instance of the <see cref="ListViewScrollingEventArgs" /> class.
-                /// </summary>
-                public ListViewScrollingEventArgs()
-                {
-                }
-
-                /// <summary>
-                /// Gets or sets ScrollX value.
-                /// </summary>
-                public double ScrollX { get; set; }
-
-                /// <summary>
-                /// Gets or sets ScrollY value.
-                /// </summary>
-                public double ScrollY { get; set; }
-            
-            }
+            this.ScrollableContentSize = new SizeRequest(request, minimumSize);
+            return base.MeasureOverride(widthConstraint, heightConstraint);
+        }
+    }
+}
 
 {% endhighlight %}
 
 {% endtabs %}
 
-By default, ParallaxView control supports [`.NET MAUI ScrollView`](). For custom controls you need to implement the [`IParallaxView`]() interface.
+By default, the Parallax View control supports [`.NET MAUI ScrollView`]() and [Syncfusion ListView](). For custom controls, you need to implement the [`IParallaxView`]() interface from Syncfusion.Maui.Core.
 
-You can achieve the parallax scroll support to the custom controls using the native renderers to calculate the total size of the scrollable content. Refer to this [KB article]() for more details.
+You can find the Parallax View control with custom ListView control from this [link](https://github.com/SyncfusionExamples/MAUI-Parallax-View-Sample-Demos).

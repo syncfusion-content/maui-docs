@@ -9,7 +9,7 @@ documentation: ug
 
 # Migrate from Xamarin.Forms SfParallaxView to .NET MAUI SfParallaxView
 
-The [SfParallaxView]() was created from the scratch using the upgraded APIs and performance of the .NET MAUI graphics library and framework layouts. However, to maintain the consistency of the API naming in MAUI [SfParallaxView](), we renamed some of the APIs. The APIs changed in MAUI [SfParallaxView]() from Xamarin [SfParallaxView]() are detailed as follows:
+The [SfParallaxView]() is created from scratch using the upgraded APIs and performance of the .NET MAUI graphics library and framework layouts. However, to maintain the consistency of the API naming in MAUI [SfParallaxView](), we renamed some of the APIs. The APIs changed in MAUI [SfParallaxView]() from Xamarin [SfParallaxView]() are detailed as follows:
 
 ## Namespaces
 
@@ -45,23 +45,23 @@ To initialize the control, import the parallax view namespace and Initialize [Sf
 
 {% highlight xaml %}
 
-    <ContentPage
-        . . .
-        xmlns:parallax="clr-namespace:Syncfusion.XForms.ParallaxView;assembly=Syncfusion.XForms.ParallaxView">
+<ContentPage
+    . . .
+    xmlns:parallax="clr-namespace:Syncfusion.XForms.ParallaxView;assembly=Syncfusion.XForms.ParallaxView">
 
-        <parallax:SfParallaxView/>
+    <parallax:SfParallaxView/>
 
-    </ContentPage>
+</ContentPage>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-    using Syncfusion.XForms.ParallaxView;
-    ...
+using Syncfusion.XForms.ParallaxView;
+...
 
-    SfParallaxView parallax = new SfParallaxView();
-    this.Content = parallax;
+SfParallaxView parallax = new SfParallaxView();
+this.Content = parallax;
 
 {% endhighlight %}
 
@@ -77,13 +77,13 @@ To initialize the control, import the parallax view namespace and Initialize [Sf
 
 {% highlight xaml %}
 
-    <ContentPage
-        . . .    
-        xmlns:parallax="clr-namespace:Syncfusion.Maui.ParallaxView;assembly=Syncfusion.Maui.ParallaxView">
+<ContentPage
+    . . .    
+    xmlns:parallax="clr-namespace:Syncfusion.Maui.ParallaxView;assembly=Syncfusion.Maui.ParallaxView">
 
-        <parallax:SfParallaxView/>
+    <parallax:SfParallaxView/>
 
-    </ContentPage>
+</ContentPage>
  
 {% endhighlight %}
 {% highlight C# %}
@@ -101,6 +101,21 @@ this.Content = parallax;
 </table>
 
 ## Classes
+
+<table>
+<tr>
+<th>Namespace</th>
+<th>Class</th>
+</tr>
+<tr>
+<td>Syncfusion.Maui.ParallaxView</td>
+<td>SfParallaxView</td>
+</tr>
+<tr>
+<td>Syncfusion.Maui.Core</td>
+<td>ParallaxScrollingEventArgs</td>
+</tr>
+</table>
 
 <table>
 <tr>
@@ -124,6 +139,17 @@ this.Content = parallax;
 
 <table>
 <tr>
+<th>Namespace</th>
+<th>Interface</th>
+</tr>
+<tr>
+<td>Syncfusion.Maui.Core</td>
+<td>IParallaxView</td>
+</tr>
+</table>
+
+<table>
+<tr>
 <th>Xamarin</th>
 <th>.NET MAUI</th>
 <th>Description</th>
@@ -132,9 +158,21 @@ this.Content = parallax;
 <td>IParallaxView</td>
 <td>IParallaxView</td>
 <td>Defines a event and a property to perform parallax scrolling.</td>
+</tr>
 </table>
 
 ## Enums
+
+<table>
+<tr>
+<th>Namespace</th>
+<th>Enums</th>
+</tr>
+<tr>
+<td>Syncfusion.Maui.ParallaxView</td>
+<td>Orientation</td>
+</tr>
+</table>
 
 <table>
 <tr>
@@ -150,9 +188,10 @@ this.Content = parallax;
 </table>
 
 ## API Migration
-The following table illustrates the API migration for the parallax view.
 
 ### Parallax View
+
+The following table illustrates the API migration for the parallax view.
 
 <table>
 <tr>
@@ -199,4 +238,4 @@ The following table illustrates the API migration for the parallax view.
 
 ## Support and feedback
 
-If you are unable to find the migration information you require in the self-help resources listed above, please contact us by creating a [support ticket](https://internalsupport.bolddesk.com/agent/tickets/create). If you do not see what you need, Please request it in our [feedback portal](https://www.syncfusion.com/feedback/maui). 
+If you are unable to find the migration information you require in the self-help resources listed above, please contact us by creating a [support ticket](https://internalsupport.bolddesk.com/agent/tickets/create). If you don't find what you need, please request it from our [feedback portal](https://www.syncfusion.com/feedback/maui). 

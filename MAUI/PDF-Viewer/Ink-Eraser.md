@@ -44,6 +44,22 @@ void DisableInkEraserMode()
 {% endhighlight %}
 {% endtabs %}
 
+## How to erase ink annotation only using stylus
+
+The ink eraser operation can be customized so that the ink strokes can be added only using a stylus by setting the `AnnotationSettings.Ink.TouchScreenInputMode` property to TouchScreenInputMode.Stylus. When TouchScreenInputMode is set to TouchScreenInputMode.Stylus, users can easily erase ink strokes using a stylus. However, zooming and scrolling functionality will still be available using their fingers.
+
+By default, the TouchScreenInputMode property is set to TouchScreenInputMode.FingerAndStylus, where both finger and stylus inputs are recognized as ink erasing operations.
+
+{% tabs %}
+{% highlight C# %}
+
+PdfViewer.AnnotationSettings.Ink.TouchScreenInputMode = TouchScreenInputMode.Stylus;
+
+{% endhighlight %}
+{% endtabs %}
+
+N> * At present, this feature is available only in iOS and Android.
+
 ## Customize the ink eraser thickness
 
 The default thickness of the ink eraser is 40. You can adjust the thickness using the `InkEraser.Thickness` property in the annotation settings.  
