@@ -362,7 +362,6 @@ public class PopulationViewModel
 {% endhighlight %}
 {% endtabs %}
 
-
 ## Enable tooltip
 
 To enable tooltips for the TreeMap control, utilize the `ShowToolTip` property of `SfTreeMap`. By default, the value of `ShowToolTip` is set to `false`. To provide users with additional information or context about specific treemap items, simply set this property to `true`.
