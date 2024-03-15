@@ -9,7 +9,7 @@ documentation: ug
 
 # Axis Title in MAUI Chart
 
-The [Title]() property is used to set the title for the chart axis.
+The [Title](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_Title) property is used to set the title for the chart axis.
 
 N> Polar chart supports title for secondary axis only.
 
@@ -20,17 +20,17 @@ N> Polar chart supports title for secondary axis only.
 <chart:SfPolarChart>
     . . .
 
-    <chart:SfPolarChart.PrimaryAxis>
-        <chart:CategoryAxis>
-        </chart:CategoryAxis>
-    </chart:SfPolarChart.PrimaryAxis>
-    <chart:SfPolarChart.SecondaryAxis>
-        <chart:NumericalAxis>
-            <chart:NumericalAxis.Title>
-                <chart:ChartAxisTitle Text="Values"/>
-            </chart:NumericalAxis.Title>
-        </chart:NumericalAxis>
-    </chart:SfPolarChart.SecondaryAxis>
+<chart:SfPolarChart.PrimaryAxis>
+    <chart:CategoryAxis>
+    </chart:CategoryAxis>
+</chart:SfPolarChart.PrimaryAxis>
+<chart:SfPolarChart.SecondaryAxis>
+    <chart:NumericalAxis>
+        <chart:NumericalAxis.Title>
+            <chart:ChartAxisTitle Text="Values"/>
+        </chart:NumericalAxis.Title>
+    </chart:NumericalAxis>
+</chart:SfPolarChart.SecondaryAxis>
 </chart:SfPolarChart>
 
 {% endhighlight %}
@@ -40,12 +40,11 @@ N> Polar chart supports title for secondary axis only.
 SfPolarChart chart = new SfPolarChart();
 . . .
 CategoryAxis primaryAxis = new CategoryAxis();
-chart.PrimaryAxis.Add(primaryAxis);
-
+chart.PrimaryAxis = primaryAxis;
 NumericalAxis secondaryAxis = new NumericalAxis();
 secondaryAxis.Title = new ChartAxisTitle();
 secondaryAxis.Title.Text = "Values";
-chart.SecondaryAxis.Add(secondaryAxis);
+chart.SecondaryAxis = secondaryAxis;
 
 {% endhighlight %}
 
@@ -53,7 +52,7 @@ chart.SecondaryAxis.Add(secondaryAxis);
 
 ## Customization
 
-The [Title]() property in axis provides options to customize the text and font of the axis title. The axis does not display the title by default. The title can be customized using following properties,
+The [Title](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_Title) property in axis provides options to customize the text and font of the axis title. The axis does not display the title by default. The title can be customized using following properties,
 
 * `Text` - Gets or sets the title for axis.
 * `Background` - Gets or sets the background color of the labels.
@@ -68,7 +67,7 @@ The [Title]() property in axis provides options to customize the text and font o
 
 ## Label extent
 
-The [LabelExtent]() property allows you to set the gap between axis labels and the title. This is typically used to maintain the fixed gap between axis labels and title when the digits of the axis value changed in live update.
+The [LabelExtent](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_LabelExtent) property allows you to set the gap between axis labels and the title. This is typically used to maintain the fixed gap between axis labels and title when the digits of the axis value changed in live update.
 
 {% tabs %}
 
@@ -76,15 +75,13 @@ The [LabelExtent]() property allows you to set the gap between axis labels and t
 
 <chart:SfPolarChart>
     . . .
-    
-    <chart:SfPolarChart.SecondaryAxis>
-        <chart:NumericalAxis LabelExtent="60">
-            <chart:NumericalAxis.Title>
-                <chart:ChartAxisTitle Text="Numeric"/>
-            </chart:NumericalAxis.Title>
-        </chart:NumericalAxis>
-    </chart:SfPolarChart.SecondaryAxis>
-
+<chart:SfPolarChart.SecondaryAxis>
+    <chart:NumericalAxis LabelExtent="60">
+        <chart:NumericalAxis.Title>
+            <chart:ChartAxisTitle Text="Numeric"/>
+        </chart:NumericalAxis.Title>
+    </chart:NumericalAxis>
+</chart:SfPolarChart.SecondaryAxis>
 </chart:SfPolarChart>
 
 {% endhighlight %}
@@ -97,7 +94,7 @@ NumericalAxis secondaryAxis = new NumericalAxis();
 secondaryAxis.LabelExtent = 60;
 secondaryAxis.Title = new ChartAxisTitle();
 secondaryAxis.Title.Text = "Numeric";
-chart.SecondaryAxis.Add(secondaryAxis);
+chart.SecondaryAxis = secondaryAxis;
 
 {% endhighlight %}
 
