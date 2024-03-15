@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Leaf Item Settings in .NET MAUI TreeMap | Syncfusion
-description: Learn how to harness Syncfusion .NET MAUI TreeMap(STreeMap) control leaf item settings for precise fill color customization, enhancing visual appeal.
+description:  Learn about the leaf items within Syncfusion .NET MAUI TreeMap control, exploring its fundamental features and functionalities for effective treemap visualization.
 platform: maui
 control: TreeMap (SfTreeMap)
 documentation: ug
