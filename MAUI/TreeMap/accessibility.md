@@ -7,7 +7,7 @@ control: TreeMap (SfTreeMap)
 documentation: ug
 ---
 
-## Accessibility in .NET MAUI TreeMap (SfTreeMap)
+# Accessibility in .NET MAUI TreeMap (SfTreeMap)
 
 The TreeMap is designed to effectively work with its elements, providing voice descriptions of the treemap items.
 
