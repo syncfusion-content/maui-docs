@@ -17,8 +17,7 @@ To display an area series in a polar chart, instantiate the [PolarAreaSeries]() 
 
 {% highlight xaml %}
 
-<chart:SfPolarChart>
-    
+<chart:SfPolarChart> 
     <chart:SfPolarChart.PrimaryAxis>
         <chart:CategoryAxis />
     </chart:SfPolarChart.PrimaryAxis>
@@ -27,10 +26,7 @@ To display an area series in a polar chart, instantiate the [PolarAreaSeries]() 
         <chart:NumericalAxis />
     </chart:SfPolarChart.SecondaryAxis>   
 
-    <chart:PolarAreaSeries ItemsSource="{Binding PlantDetails}"
-					  XBindingPath="Direction"
-					  YBindingPath="Tree"/>  
-
+    <chart:PolarAreaSeries ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Tree"/>  
 </chart:SfPolarChart>
 
 {% endhighlight %}
@@ -39,18 +35,17 @@ To display an area series in a polar chart, instantiate the [PolarAreaSeries]() 
 
 SfPolarChart chart = new SfPolarChart();
 CategoryAxis primaryAxis = new CategoryAxis();
-chart.PrimaryAxis.Add(primaryAxis);
+chart.PrimaryAxis = primaryAxis;
 NumericalAxis secondaryAxis = new NumericalAxis();
-chart.SecondaryAxis.Add(secondaryAxis);
-
+chart.SecondaryAxis = secondaryAxis;
 PolarAreaSeries series = new PolarAreaSeries()
 {
     ItemsSource = new ViewModel().PlantDetails,
     XBindingPath = "Direction",
     YBindingPath = "Tree",
 };
-
 chart.Series.Add(series);
+
 this.Content = chart;
 
 {% endhighlight %}
@@ -61,7 +56,7 @@ this.Content = chart;
 
 ## Grid line Type
 
-The [GridLineType]() property used to modify the rendering style of axis grid lines. The default [GridLineType]() is [Circle](). Switching to the [Polygon]() grid line type transforms the polar chart appearance, resembling a spider, or web chart.
+The [GridLineType]() property used to customize the rendering style of axis grid lines. The default [GridLineType]() is [Circle](). Switching to the [Polygon]() grid line type transforms the polar chart appearance, resembling a spider, or web chart.
 
 {% tabs %}
 
@@ -69,10 +64,7 @@ The [GridLineType]() property used to modify the rendering style of axis grid li
 
 <chart:SfPolarChart GridLineType="Polygon"> 
 . . .
-    <chart:PolarAreaSeries ItemsSource="{Binding PlantDetails}"
-					  XBindingPath="Direction"
-					  YBindingPath="Tree"/>  
-
+    <chart:PolarAreaSeries ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Tree"/>  
 </chart:SfPolarChart>
 
 {% endhighlight %}
@@ -90,6 +82,7 @@ PolarAreaSeries series = new PolarAreaSeries()
 };
 
 chart.Series.Add(series);
+
 this.Content = chart;
 
 {% endhighlight %}
@@ -108,11 +101,7 @@ The [IsClosed]() property is used to render the series with or without closed pa
 
 <chart:SfPolarChart> 
 . . .
-    <chart:PolarAreaSeries ItemsSource="{Binding PlantDetails}"
-					  XBindingPath="Direction"
-					  YBindingPath="Tree"
-                      IsClosed="False"/>  
-
+    <chart:PolarAreaSeries ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Tree" IsClosed="False"/>  
 </chart:SfPolarChart>
 
 {% endhighlight %}
@@ -128,8 +117,8 @@ PolarAreaSeries series = new PolarAreaSeries()
     YBindingPath = "Tree",
     IsClosed = "False"
 };
-
 chart.Series.Add(series);
+
 this.Content = chart;
 
 {% endhighlight %}
@@ -148,11 +137,8 @@ A marker, also known as a symbol, is used to determine or highlight the position
 
 <chart:SfPolarChart>
 ...
- <chart:PolarAreaSeries XBindingPath="Direction"
-                   YBindingPath="Tree"
-                   ItemsSource="{Binding PlantDetails}"
-                   ShowMarkers="True"/>
-
+ <chart:PolarAreaSeries ItemsSource="{Binding PlantDetails}" XBindingPath="Direction"  YBindingPath="Tree"    
+                ShowMarkers="True"/>
 </chart:SfPolarChart>
 
 {% endhighlight %}
@@ -160,17 +146,16 @@ A marker, also known as a symbol, is used to determine or highlight the position
 {% highlight c# %}
 
 SfPolarChart chart = new SfPolarChart();
-
 ...
 PolarAreaSeries series = new PolarAreaSeries()
 {
+    ItemsSource = new ViewModel().PlantDetails,
     XBindingPath = "Direction",
     YBindingPath = "Tree",
-    ItemsSource = new ViewModel().PlantDetails,
     ShowMarkers= true
  };
-
 chart.Series.Add(series);
+
 this.Content= chart;
 
 {% endhighlight %}
@@ -181,12 +166,12 @@ this.Content= chart;
 
 In order to change the series markers appearance, create an instance of the [MarkerSettings]() property. The following properties are used to customize marker appearance.
 
-* [Type](), of type `ShapeType`, describes the shape of the series marker. The default value of this property is [ShapeType.Circle]().
-* [Stroke](), of type `Brush`, indicates the brush used to paint the marker border.
-* [StrokeWidth](), of type `double`, indicates the width of the marker border.
-* [Fill](), of type `Brush`, indicates the color of the marker.
-* [Width](), of type `double`, indicates the width of the marker.
-* [Height](), of type `double`, indicates the height of the marker.
+* [Type](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartMarkerSettings.html#Syncfusion_Maui_Charts_ChartMarkerSettings_Type), of type `ShapeType`, describes the shape of the series marker. The default value of this property is `ShapeType.Circle`.
+* [Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartMarkerSettings.html#Syncfusion_Maui_Charts_ChartMarkerSettings_Stroke), of type `Brush`, indicates the brush used to paint the marker border.
+* [StrokeWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartMarkerSettings.html#Syncfusion_Maui_Charts_ChartMarkerSettings_StrokeWidth), of type `double`, indicates the width of the marker border.
+* [Fill](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartMarkerSettings.html#Syncfusion_Maui_Charts_ChartMarkerSettings_Fill), of type `Brush`, indicates the color of the marker.
+* [Width](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartMarkerSettings.html#Syncfusion_Maui_Charts_ChartMarkerSettings_Width), of type `double`, indicates the width of the marker.
+* [Height](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartMarkerSettings.html#Syncfusion_Maui_Charts_ChartMarkerSettings_Height), of type `double`, indicates the height of the marker.
 
 {% tabs %}
 
@@ -194,20 +179,13 @@ In order to change the series markers appearance, create an instance of the [Mar
 
 <chart:SfPolarChart>
 ...
- <chart:PolarAreaSeries XBindingPath="Direction"
-                   YBindingPath="Tree"
-                   ItemsSource="{Binding PlantDetails}"
-                   ShowMarkers="True">
+ <chart:PolarAreaSeries ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Tree"
+                ShowMarkers="True">
     <chart:PolarAreaSeries.MarkerSettings>
-        <chart:ChartMarkerSettings Type="Diamond"
-                                   Fill="Brown"
-                                   Stroke="Black"
-                                   StrokeWidth="1"
-                                   Height="8"
-                                   Width="8"/>
+        <chart:ChartMarkerSettings Type="Diamond" Fill="Brown" Stroke="Black"
+                StrokeWidth="1" Height="8" Width="8"/>
     </chart:PolarAreaSeries.MarkerSettings>
  </chart:PolarAreaSeries>
-
 </chart:SfPolarChart>
 
 {% endhighlight %}
@@ -215,25 +193,24 @@ In order to change the series markers appearance, create an instance of the [Mar
 {% highlight c# %}
 
 SfPolarChart chart = new SfPolarChart();
-
 ...
 PolarAreaSeries series = new PolarAreaSeries()
 {
-   XBindingPath = "Direction",
-   YBindingPath = "Tree",
-   ItemsSource = new ViewModel().PlantDetails,
-   ShowMarkers = true,
- };
+    ItemsSource = new ViewModel().PlantDetails,
+    XBindingPath = "Direction",
+    YBindingPath = "Tree",
+    ShowMarkers = true
+};
 
 ChartMarkerSettings chartMarker= new ChartMarkerSettings();
-        chartMarker.Type = ShapeType.Diamond;
-        chartMarker.Fill = Colors.Brown;
-        chartMarker.Stroke = Colors.Black;
-        chartMarker.StrokeWidth= 1;
-        chartMarker.Height = 8;
-        chartMarker.Width = 8;
-
+chartMarker.Type = ShapeType.Diamond;
+chartMarker.Fill = Colors.Brown;
+chartMarker.Stroke = Colors.Black;
+chartMarker.StrokeWidth= 1;
+chartMarker.Height = 8;
+chartMarker.Width = 8;
 chart.Series.Add(series);
+
 this.Content = chart;
 
 {% endhighlight %}
