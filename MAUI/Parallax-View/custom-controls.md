@@ -13,17 +13,17 @@ The Parallax view supports custom scrollable controls using the [`IParallaxView`
 
 {% highlight c# %}
 
-    using Syncfusion.Maui.Core;
+using Syncfusion.Maui.Core;
 
-    namespace ParallaxViewCustomControl
+namespace ParallaxViewCustomControl
+{
+    public class CustomListView : ListView, IParallaxView
     {
-        public class CustomListView : ListView, IParallaxView
-        {
-            public Size ScrollableContentSize { get ; set ; }
+        public Size ScrollableContentSize { get ; set ; }
 
-            public event EventHandler<ParallaxScrollingEventArgs> Scrolling;
-        }
+        public event EventHandler<ParallaxScrollingEventArgs> Scrolling;
     }
+}
 
 {% endhighlight %}                         
 
@@ -33,20 +33,20 @@ The [`ScrollableContentSize`]() is the total content size of the scrollable cust
 
 {% highlight c# %}
 
-    using Syncfusion.Maui.Core;
+using Syncfusion.Maui.Core;
 
-    namespace ParallaxViewCustomControl
+namespace ParallaxViewCustomControl
+{
+    public class CustomListView : ListView, IParallaxView
     {
-        public class CustomListView : ListView, IParallaxView
-        {
-            public Size ScrollableContentSize { get; set; }
+        public Size ScrollableContentSize { get; set; }
 
-            public CustomListView()
-            {
-                this.ScrollableContentSize = ContentSize; //  Total scrollable size of the custom control
-            }
+        public CustomListView()
+        {
+            this.ScrollableContentSize = ContentSize; //  Total scrollable size of the custom control
         }
     }
+}
 
 {% endhighlight %}
 
@@ -66,59 +66,59 @@ The [`ParallaxScrollingEventArgs`]() has the following three arguments:
 
 {% highlight xaml %}
 
-    <Grid>
-        <parallax:SfParallaxView Source="{x:Reference Name = listView}" x:Name="parallaxview">
-            <parallax:SfParallaxView.Content>
-                <Image x:Name="image" Source="{Binding Image}" BackgroundColor="Transparent" HorizontalOptions="Fill" VerticalOptions="Fill" Aspect="AspectFill" />
-            </parallax:SfParallaxView.Content>
-        </parallax:SfParallaxView>
-        <local:CustomListView x:Name="listView" >
-                   . . .
-        </local:CustomListView>
-    </Grid>
+<Grid>
+    <parallax:SfParallaxView Source="{x:Reference Name = listView}" x:Name="parallaxview">
+        <parallax:SfParallaxView.Content>
+            <Image x:Name="image" Source="{Binding Image}" BackgroundColor="Transparent" HorizontalOptions="Fill" VerticalOptions="Fill" Aspect="AspectFill" />
+        </parallax:SfParallaxView.Content>
+    </parallax:SfParallaxView>
+    <local:CustomListView x:Name="listView" >
+        . . .
+    </local:CustomListView>
+</Grid>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    using Syncfusion.Maui.Core;
+using Syncfusion.Maui.Core;
 
-    namespace ParallaxViewCustomControl
+namespace ParallaxViewCustomControl
+{
+    public class CustomListView : ListView, IParallaxView
     {
-        public class CustomListView : ListView, IParallaxView
+        public Size ScrollableContentSize { get; set; }
+
+        public event EventHandler<ParallaxScrollingEventArgs>? Scrolling;
+
+        public CustomListView()
         {
-            public Size ScrollableContentSize { get; set; }
+            this.Scrolled += CustomListView_Scrolled;
+        }
 
-            public event EventHandler<ParallaxScrollingEventArgs>? Scrolling;
-
-            public CustomListView()
+        private void CustomListView_Scrolled(object? sender, ScrolledEventArgs e)
+        {
+            if (sender is ListView listView && Scrolling != null)
             {
-                this.Scrolled += CustomListView_Scrolled;
-            }
-
-            private void CustomListView_Scrolled(object? sender, ScrolledEventArgs e)
-            {
-                if (sender is ListView listView && Scrolling != null)
-                {
-                    Scrolling.Invoke(this, new ParallaxScrollingEventArgs(e.ScrollX, e.ScrollY, false));
-                }
-            }
-
-            protected override Size MeasureOverride(double widthConstraint, double heightConstraint)
-            {
-                var minimumSize = new Size(40, 40);
-                Size request = Size.Zero;
-
-                if (ItemsSource is IList list && HasUnevenRows == false && RowHeight > 0 && !IsGroupingEnabled)
-                {
-                    request = new Size(widthConstraint, list.Count * RowHeight);
-                }
-
-                this.ScrollableContentSize = new SizeRequest(request, minimumSize);
-                return base.MeasureOverride(widthConstraint, heightConstraint);
+                Scrolling.Invoke(this, new ParallaxScrollingEventArgs(e.ScrollX, e.ScrollY, false));
             }
         }
+
+        protected override Size MeasureOverride(double widthConstraint, double heightConstraint)
+        {
+            var minimumSize = new Size(40, 40);
+            Size request = Size.Zero;
+
+            if (ItemsSource is IList list && HasUnevenRows == false && RowHeight > 0 && !IsGroupingEnabled)
+            {
+                request = new Size(widthConstraint, list.Count * RowHeight);
+            }
+
+            this.ScrollableContentSize = new SizeRequest(request, minimumSize);
+            return base.MeasureOverride(widthConstraint, heightConstraint);
+        }
     }
+}
 
 {% endhighlight %}
 

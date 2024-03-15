@@ -65,21 +65,15 @@ The orientation of the content scrolling can be customized to vertical or horizo
 {% highlight xaml %}
 
 <Grid>
-
     <parallax:SfParallaxView Source="{x:Reference Name = listview}" x:Name="parallaxview" Orientation="Horizontal" >
         <parallax:SfParallaxView.Content>
-        
         . . .
-
         </parallax:SfParallaxView.Content>
     </parallax:SfParallaxView>
 
     <SfListView x:Name="listview" Orientation="Horizontal" ItemsSource="{Binding Items}" BackgroundColor="Transparent" ItemSize="100">
-        
-            . . .
-
+        . . .
     <SfListView>
-
 </Grid>
         
 {% endhighlight %}
@@ -92,7 +86,6 @@ namespace ParallaxViewGettingStarted
 {
     public partial class MainPage : ContentPage
     {
-
         public MainPage()
         {
             InitializeComponent();
