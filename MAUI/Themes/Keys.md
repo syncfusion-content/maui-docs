@@ -115,7 +115,7 @@ This page lists the keys for each control and the element to which it is mapped 
     </tr>
 </table>
 
-## SfAutoComplete
+## SfAutocomplete
 
 <table>
     <tr>
@@ -5498,15 +5498,15 @@ This page lists the keys for each control and the element to which it is mapped 
     </tr>
     <tr>
         <td> SfExpanderPressedHeaderIconColor <br/><br/></td> 
-        <td> Color of header icon when it is in pressed state.<br/><br/></td>
+        <td> Color of header icon when it is in pressed state.<br/><br/></td> 
     </tr>
 </table>
 
 ## SfFunnel Chart
 
- <table>
+<table>
      <tr>
-         <th>Theme Dictionary <br/> <br/> </th>        
+         <th>Theme Dictionary <br/> <br/> </th>         
          <th>Keys <br/> <br/> </th>
          <th> Description <br/> <br/> </th>
      </tr>
@@ -10764,6 +10764,231 @@ This page lists the keys for each control and the element to which it is mapped 
 	</tr>
 </table>
 
+## SfRadialMenu
+
+<table>
+    <tr>
+        <th>Theme Dictionary<br/>
+            <br/></th>        
+        <th>
+          Keys
+            <br/>
+            <br/>
+        </th>
+        <th>
+            Description
+            <br/>
+            <br/>
+        </th>
+    </tr>
+
+    <tr>
+        <td rowspan="5">
+            SfRadialMenuStyles 
+            <br/>
+            <br/>
+        </td>
+		<td>
+           SfRadialMenuTheme 
+            <br/>
+            <br/>
+        </td>
+        <td>    
+            By merging this key in application resources, you can customize the appearance of SfRadialMenu without merging common theme resource and control style resource dictionaries.
+			
+{% highlight xaml %}
+
+<Application xmlns:syncTheme="clr-namespace:Syncfusion.Maui.Themes;assembly=Syncfusion.Maui.Core"
+             ...>
+ <Application.Resources>
+    <ResourceDictionary>
+        <ResourceDictionary.MergedDictionaries>
+            <syncTheme:SyncfusionThemeResourceDictionary />
+            <ResourceDictionary>
+                <x:String x:Key="SfRadialMenuTheme">CommonTheme</x:String>
+                <Color x:Key="SfRadialMenuCenterButtonPrimaryBackground">Blue</Color>
+                <Color x:Key="SfRadialMenuBackgroundColor">Black</Color>
+            </ResourceDictionary>
+        </ResourceDictionary.MergedDictionaries>
+    </ResourceDictionary>
+ </Application.Resources>
+ </Application>
+
+{% endhighlight %}
+            <br/>
+            <br/>
+        </td>
+        </tr>
+        <tr>
+        <td>
+            SfRadialMenuCenterButtonPrimaryBackground  
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the RadialMenu center button primary background.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfRadialMenuItemTextColor  
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the RadialMenu item Text.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfRadialMenuCenterButtonBackgroundColor 
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the RadialMenu center button background.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfRadialMenuRimColor 
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the RadialMenu rim.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfRadialMenuRoundButtonBackgroundHovered 
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the RadialMenu round button background in hover state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfRadialMenuRoundButtonBackgroundPressed 
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the RadialMenu round button background in pressed state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfRadialMenuRoundButtonDisabledStroke 
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the RadialMenu round button stroke in disable state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfRadialMenuRoundButtonDisabledTextColor 
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the RadialMenu round button text in disable state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfRadialMenuRearViewHoveredColor 
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the RadialMenu rear view in hover state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfRadialMenuRearViewPressedColor 
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the RadialMenu rear view in pressed state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfRadialMenuSeparatorColor
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the RadialMenu separator.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfRadialMenuPressedTextColor
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the RadialMenu text in pressed state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfRadialMenuDisabledItemColor
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the RadialMenu item in disable state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfRadialMenuBackgroundColor
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the RadialMenu background.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    </table>
+
 ## SfRating
 
 <table>
@@ -10959,6 +11184,135 @@ This page lists the keys for each control and the element to which it is mapped 
         </td>
         <td>
             Color of the unrated portion of a Rating stroke in hover state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    </table>
+
+## SfRotator
+
+<table>
+    <tr>
+        <th>Theme Dictionary<br/>
+            <br/></th>        
+        <th>
+          Keys
+            <br/>
+            <br/>
+        </th>
+        <th>
+            Description
+            <br/>
+            <br/>
+        </th>
+    </tr>
+
+    <tr>
+        <td rowspan="5">
+            SfRotatorStyles 
+            <br/>
+            <br/>
+        </td>
+		<td>
+           SfRotatorTheme 
+            <br/>
+            <br/>
+        </td>
+        <td>    
+            By merging this key in application resources, you can customize the appearance of SfRotator without merging common theme resource and control style resource dictionaries.
+			
+{% highlight xaml %}
+
+<Application xmlns:syncTheme="clr-namespace:Syncfusion.Maui.Themes;assembly=Syncfusion.Maui.Core"
+             ...>
+ <Application.Resources>
+    <ResourceDictionary>
+        <ResourceDictionary.MergedDictionaries>
+            <syncTheme:SyncfusionThemeResourceDictionary />
+            <ResourceDictionary>
+                <x:String x:Key="SfRotatorTheme">CommonTheme</x:String>
+                <Color x:Key="SfRotatorSelectedDotColor">Grey</Color>
+                <Color x:Key="SfRotatorNavigationButtonBackgroundColor">Red</Color>
+            </ResourceDictionary>
+        </ResourceDictionary.MergedDictionaries>
+    </ResourceDictionary>
+ </Application.Resources>
+ </Application>
+
+{% endhighlight %}
+            <br/>
+            <br/>
+        </td>
+        </tr>
+        <tr>
+        <td>
+            SfRotatorSelectedDotColor  
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the selected Rotator dot.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfRotatorUnselectedDotColor  
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the unselected Rotator dot.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfRotatorSelectedThumbnailStroke  
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the selected Thumbnail stroke.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfRotatorUnselectedThumbnailStroke  
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the unselected Thumbnail stroke.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfRotatorNavigationButtonBackgroundColor  
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the Rotator navigation button background.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfRotatorNavigationButtonIconColor 
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the Rotator navigation button icon.
             <br/>
             <br/>
         </td>
@@ -14422,17 +14776,17 @@ This page lists the keys for each control and the element to which it is mapped 
         </td>
         <td>
             FontSize of the TabView.
-            <br/>
+            <br/> 
             <br/>
         </td>
     </tr>
-    </table>
+</table>
 
- ## SfTextInputLayout
+## SfTextInputLayout
 
 <table>
     <tr>
-        <th>Theme Dictionary<br/>
+        <th>Theme Dictionary<br/> 
             <br/></th>        
         <th>
           Keys
