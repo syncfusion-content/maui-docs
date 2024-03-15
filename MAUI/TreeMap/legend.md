@@ -146,7 +146,7 @@ You can position the legend items in different directions using the `Placement` 
     </treemap:SfTreeMap.BindingContext>
     <treemap:SfTreeMap.LegendSettings>
         <treemap:TreeMapLegendSettings ShowLegend="True"
-                                       Placement="Left" />
+                                       Placement="Bottom" />
     </treemap:SfTreeMap.LegendSettings>
     <treemap:SfTreeMap.LeafItemSettings>
         <treemap:TreeMapLeafItemSettings LabelPath="Country">
@@ -180,7 +180,7 @@ PopulationViewModel viewModel = new PopulationViewModel();
 treeMap.DataSource = viewModel.PopulationDetails;
 treeMap.PrimaryValuePath = "Population";
 treeMap.RangeColorValuePath = "Population";
-treeMap.LegendSettings = new TreeMapLegendSettings() { Placement = LegendPlacement.Left, ShowLegend = true };
+treeMap.LegendSettings = new TreeMapLegendSettings() { Placement = LegendPlacement.Bottom, ShowLegend = true };
 treeMap.LeafItemSettings = new TreeMapLeafItemSettings() { LabelPath = "Country" };
 treeMap.LeafItemBrushSettings = new TreeMapRangeBrushSettings()
 {
@@ -257,7 +257,7 @@ N> This property will be applicable to only when the `ShowLegend` is enabled.
 The `IconSize` property in the legend is used to change the size of the icon. Its default value is `new Size(16, 16).`
 
 {% tabs %}
-{% highlight XAML hl_lines="10" %}
+{% highlight XAML hl_lines="8 9 10 11 12" %}
 
 <treemap:SfTreeMap x:Name="treeMap"
                    DataSource="{Binding PopulationDetails}"
@@ -393,7 +393,7 @@ Here are the available options to customize the legend icon type:
   * `VerticalLine`
 
 {% tabs %}
-{% highlight XAML hl_lines="10" %}
+{% highlight XAML hl_lines="8 9 10 11" %}
 
 <treemap:SfTreeMap x:Name="treeMap"
                    DataSource="{Binding PopulationDetails}"
@@ -520,7 +520,7 @@ The `Size` property of `LegendSettings` determines the dimensions of the legend 
     * For Windows and macOS platforms, the default width is 200 units, and the height matches the layout height.
 
 {% tabs %}
-{% highlight XAML hl_lines="10" %}
+{% highlight XAML hl_lines="8 9 10 11" %}
 
 <treemap:SfTreeMap x:Name="treeMap"
                    DataSource="{Binding PopulationDetails}"
@@ -531,7 +531,7 @@ The `Size` property of `LegendSettings` determines the dimensions of the legend 
     </treemap:SfTreeMap.BindingContext>
     <treemap:SfTreeMap.LegendSettings>
         <treemap:TreeMapLegendSettings ShowLegend="True"
-                                       Size="300, 300" />
+                                       Size="300, 150" />
     </treemap:SfTreeMap.LegendSettings>
     <treemap:SfTreeMap.LeafItemSettings>
         <treemap:TreeMapLeafItemSettings LabelPath="Country">
@@ -565,7 +565,7 @@ PopulationViewModel viewModel = new PopulationViewModel();
 treeMap.DataSource = viewModel.PopulationDetails;
 treeMap.PrimaryValuePath = "Population";
 treeMap.RangeColorValuePath = "Population";
-treeMap.LegendSettings = new TreeMapLegendSettings() { Size = new Size(300, 300), ShowLegend = true };
+treeMap.LegendSettings = new TreeMapLegendSettings() { Size = new Size(300, 150), ShowLegend = true };
 treeMap.LeafItemSettings = new TreeMapLeafItemSettings() { LabelPath = "Country" };
 treeMap.LeafItemBrushSettings = new TreeMapRangeBrushSettings()
 {
@@ -666,15 +666,15 @@ You can assign colors to TreeMap items based on whether the value falls within t
                 <treemap:TreeMapRangeBrush LegendLabel="50M - 1B"
                                            From="50000000"
                                            To="1000000000" 
-                                           Brush ="#3F8D71" />
+                                           Brush ="#9E79CD" />
                 <treemap:TreeMapRangeBrush LegendLabel="10M - 50M"
                                            From="10000000"
                                            To="50000000" 
-                                           Brush ="#5BA985" />
+                                           Brush ="#A487CA" />
                 <treemap:TreeMapRangeBrush LegendLabel="0.1M - 10M"
                                            From="100000" 
                                            To="10000000"  
-                                           Brush= "#7DC59D" />
+                                           Brush= "#CAB8E0" />
             </treemap:TreeMapRangeBrushSettings.RangeBrushes>
         </treemap:TreeMapRangeBrushSettings>
     </treemap:SfTreeMap.LeafItemBrushSettings>
@@ -694,9 +694,9 @@ treeMap.LeafItemBrushSettings = new TreeMapRangeBrushSettings()
 {
     RangeBrushes = new List<TreeMapRangeBrush>()
     {
-        new TreeMapRangeBrush { LegendLabel = "50M - 1B", From = 50000000, To = 1000000000, Brush = new SolidColorBrush(Color.FromArgb("#3F8D71")) },
-        new TreeMapRangeBrush { LegendLabel = "10M - 50M", From = 10000000, To = 50000000, Brush = new SolidColorBrush(Color.FromArgb("#5BA985")) },
-        new TreeMapRangeBrush { LegendLabel = "0.1M - 10M", From = 100000, To = 10000000, Brush = new SolidColorBrush(Color.FromArgb("#7DC59D")) },
+        new TreeMapRangeBrush { LegendLabel = "50M - 1B", From = 50000000, To = 1000000000, Brush = new SolidColorBrush(Color.FromArgb("#9E79CD")) },
+        new TreeMapRangeBrush { LegendLabel = "10M - 50M", From = 10000000, To = 50000000, Brush = new SolidColorBrush(Color.FromArgb("#A487CA")) },
+        new TreeMapRangeBrush { LegendLabel = "0.1M - 10M", From = 100000, To = 10000000, Brush = new SolidColorBrush(Color.FromArgb("#CAB8E0")) },
     }
 };
 
@@ -777,7 +777,7 @@ You can customize the appearance of legend items text, including `TextColor,` `F
    <treemap:SfTreeMap.LegendSettings>
     <treemap:TreeMapLegendSettings ShowLegend="True">
         <treemap:TreeMapLegendSettings.TextStyle>
-            <treemap:TreeMapTextStyle TextColor="Black"
+            <treemap:TreeMapTextStyle TextColor="#3F8D71"
                                       FontSize="16"
                                       FontAttributes="Bold"/>
             </treemap:TreeMapLegendSettings.TextStyle>
@@ -815,7 +815,7 @@ PopulationViewModel viewModel = new PopulationViewModel();
 treeMap.DataSource = viewModel.PopulationDetails;
 treeMap.PrimaryValuePath = "Population";
 treeMap.RangeColorValuePath = "Population";
-treeMap.LegendSettings = new TreeMapLegendSettings() { ShowLegend = true, TextStyle = new TreeMapTextStyle() { TextColor = Colors.Black, FontSize = 16, FontAttributes = FontAttributes.Bold } };
+treeMap.LegendSettings = new TreeMapLegendSettings() { ShowLegend = true, TextStyle = new TreeMapTextStyle() { TextColor = Color.FromArgb("#3F8D71"), FontSize = 16, FontAttributes = FontAttributes.Bold } };
 treeMap.LeafItemSettings = new TreeMapLeafItemSettings() { LabelPath = "Country" };
 treeMap.LeafItemBrushSettings = new TreeMapRangeBrushSettings()
 {
