@@ -13,11 +13,11 @@ documentation: ug
 
 <table>
 <tr>
-<td>{{'Message.Author'| markdownify }}</td>
-<td>Specify the avatar and name of the message sender using {{'Author.Avatar'| markdownify }} and {{'Author.Name'| markdownify }} properties respectively.</td>
+<td><code>Message.Author</code></td>
+<td>Specify the avatar and name of the message sender using <code>Author.Avatar</code> and <code>Author.Name</code> properties respectively.</td>
 </tr>
 <tr>
-<td>{{'Message.DateTime'| markdownify }}</td>
+<td><code>Message.DateTime</code></td>
 <td>To display message created or received time.</td>
 </tr>
 </table>
@@ -764,6 +764,7 @@ The `ImageMessage` comes with in-built SfChat.ImageTapped event and `SfChat.Imag
 {% endhighlight %}
 {% endtabs %}
 
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/display-tapped-image-in-full-screen-in-.net-maui-chat)
 
 ### Adding image message as an outgoing message
 
@@ -1078,6 +1079,7 @@ We have loaded a custom template if the message's text contains a particular tex
 
 ![Message template in .NET MAUI Chat](images/messages/maui-chat-message-template.png)
 
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/message-template-.net-maui-chat)
 
 ## Spacing between messages
 
@@ -1530,3 +1532,4 @@ In the provided code example, we've set up a custom template to display a securi
 
 ![Sytem generated message in .NET MAUI Chat](images/messages/maui-chat-system-generated-custom-message-template.png)
 
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/system-generated-message-template-.net-maui-chat)

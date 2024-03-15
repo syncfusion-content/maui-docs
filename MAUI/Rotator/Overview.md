@@ -11,7 +11,9 @@ documentation: ug
 
 The Rotator is a data control used to display image data and navigate through them. The images can be selected either by `Thumbnail` or by `Dots` support.
 
-## Key Features
+![Rotator Overview Image](images/RotatorOverview.png)
+
+## Key features
 
 * `Modes` - Options to navigate data using dots or thumbnail navigation modes.
 * `Position` - Support to decide the placement position of dots or thumbnail items in any of the four sides.

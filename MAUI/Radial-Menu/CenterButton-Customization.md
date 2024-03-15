@@ -92,6 +92,8 @@ namespace RadialSample
                 colorSubMenuItem.ItemWidth = 50;
                 radialMenu.Items[4].Items.Add(colorSubMenuItem);
             }
+
+            this.Content = radialMenu;
         }
     }
 }
@@ -99,6 +101,8 @@ namespace RadialSample
 {% endhighlight %}
 
 {% endtabs %}
+
+![Display RadialMenu with CenterButtonText and CenterButtonBackText.](images/centerbutton-customization/maui-radialmenu-centerbutton-customization-text.png)
 
 ## CenterButtonTextColor and CenterButtonBackTextColor
 
@@ -186,6 +190,8 @@ namespace RadialSample
                 colorSubMenuItem.ItemWidth = 50;
                 radialMenu.Items[4].Items.Add(colorSubMenuItem);
             }
+
+            this.Content = radialMenu;
         }
     }
 }
@@ -208,7 +214,9 @@ The [`CenterButtonBackgroundColor`] changes the background color of the center b
              xmlns:local="clr-namespace:RadialSample"
              xmlns:syncfusion="clr-namespace:Syncfusion.Maui.RadialMenu;assembly=Syncfusion.Maui.RadialMenu"
              x:Class="RadialSample.MainPage">
-    <syncfusion:SfRadialMenu  CenterButtonBackgroundColor="#000000">
+    <syncfusion:SfRadialMenu  CenterButtonBackgroundColor="#000000" 
+                              CenterButtonText="Edit"
+                              CenterButtonTextColor="White">
         <syncfusion:SfRadialMenu.Items>
             <syncfusion:SfRadialMenuItem Text="Bold" FontSize="12"/>
             <syncfusion:SfRadialMenuItem Text="Copy" FontSize="12"/>
@@ -234,7 +242,9 @@ namespace RadialSample
             InitializeComponent();
             SfRadialMenu radialMenu = new SfRadialMenu()
             {
-                CenterButtonBackgroundColor = Color.FromArgb("#000000")
+                CenterButtonBackgroundColor = Color.FromArgb("#000000"),
+                CenterButtonText = "Edit",
+                CenterButtonTextColor = Colors.White,
             };
 
             RadialMenuItemsCollection itemCollection =  new RadialMenuItemsCollection()
@@ -256,6 +266,8 @@ namespace RadialSample
 
 {% endtabs %}
 
+![Display RadialMenu with BackgroundColor.](images/centerbutton-customization/maui-radialmenu-centerbutton-customization-backgroundcolor.png)
+
 ## CenterButtonRadius
 
 The [`CenterButtonRadius`] changes the radius of the center button in [`SfRadialMenu`].
@@ -270,7 +282,7 @@ The [`CenterButtonRadius`] changes the radius of the center button in [`SfRadial
              xmlns:local="clr-namespace:RadialSample"
              xmlns:syncfusion="clr-namespace:Syncfusion.Maui.RadialMenu;assembly=Syncfusion.Maui.RadialMenu"
              x:Class="RadialSample.MainPage">
-    <syncfusion:SfRadialMenu  CenterButtonRadius="5">
+    <syncfusion:SfRadialMenu CenterButtonText="Edit" CenterButtonRadius="5">
         <syncfusion:SfRadialMenu.Items>
             <syncfusion:SfRadialMenuItem Text="Bold" FontSize="12"/>
             <syncfusion:SfRadialMenuItem Text="Copy" FontSize="12"/>
@@ -296,7 +308,8 @@ namespace RadialSample
             InitializeComponent();
             SfRadialMenu radialMenu = new SfRadialMenu()
             {
-                CenterButtonRadius = 5
+                CenterButtonText="Edit",
+                CenterButtonRadius = 5,
             };
 
             RadialMenuItemsCollection itemCollection =  new RadialMenuItemsCollection()
@@ -314,6 +327,8 @@ namespace RadialSample
 {% endhighlight %}
 
 {% endtabs %}
+
+![Display RadialMenu with CenterButtonRadius.](images/centerbutton-customization/maui-radialmenu-centerbutton-customization-radius.png)
 
 ## CenterButtonFontFamily and CenterButtonBackFontFamily
 
@@ -398,6 +413,8 @@ namespace RadialSample
                 colorSubMenuItem.ItemWidth = 50;
                 radialMenu.Items[4].Items.Add(colorSubMenuItem);
             }
+
+            this.Content = radialMenu;
         }
     }
 }
@@ -493,6 +510,8 @@ namespace RadialSample
                 colorSubMenuItem.ItemWidth = 50;
                 radialMenu.Items[4].Items.Add(colorSubMenuItem);
             }
+
+            this.Content = radialMenu;
         }
     }
 }
@@ -568,7 +587,7 @@ namespace RadialSample
                 CenterButtonBackFontAttributes = FontAttributes.Bold,
             };
 
-             for (int i = 0; i < 5; i++)
+            for (int i = 0; i < 5; i++)
             {
                 SfRadialMenuItem mainMenuItems = new SfRadialMenuItem();
                 mainMenuItems.Text = mainItem[i];
@@ -584,6 +603,8 @@ namespace RadialSample
                 colorSubMenuItem.ItemWidth = 50;
                 radialMenu.Items[4].Items.Add(colorSubMenuItem);
             }
+
+            this.Content = radialMenu;
         }
     }
 }
@@ -592,9 +613,9 @@ namespace RadialSample
 
 {% endtabs %}
 
-## CenterButtonBorderColor
+## CenterButtonStroke
 
-The [`CenterButtonBorderColor`] changes the border color of the center button in [`SfRadialMenu`].
+The [`CenterButtonStroke`] changes the stroke color of the center button in [`SfRadialMenu`].
 
 {% tabs %}
 
@@ -606,7 +627,7 @@ The [`CenterButtonBorderColor`] changes the border color of the center button in
              xmlns:local="clr-namespace:RadialSample"
              xmlns:syncfusion="clr-namespace:Syncfusion.Maui.RadialMenu;assembly=Syncfusion.Maui.RadialMenu"
              x:Class="RadialSample.MainPage">
-    <syncfusion:SfRadialMenu CenterButtonBorderColor="Black">
+    <syncfusion:SfRadialMenu CenterButtonText="Edit" CenterButtonStroke="Black">
         <syncfusion:SfRadialMenu.Items>
             <syncfusion:SfRadialMenuItem Text="Bold" FontSize="12"/>
             <syncfusion:SfRadialMenuItem Text="Copy" FontSize="12"/>
@@ -632,7 +653,8 @@ namespace RadialSample
             InitializeComponent();
             SfRadialMenu radialMenu = new SfRadialMenu()
             {
-                CenterButtonBorderColor = Color.Black
+                CenterButtonStroke = Colors.Black,
+                CenterButtonText="Edit",
             };
 
             RadialMenuItemsCollection itemCollection =  new RadialMenuItemsCollection()
@@ -651,9 +673,11 @@ namespace RadialSample
 
 {% endtabs %}
 
-## CenterButtonBorderThickness
+![Display RadialMenu with Stroke.](images/centerbutton-customization/maui-radialmenu-centerbutton-customization-stroke.png)
 
-The [`CenterButtonBorderThickness`] changes the border thickness of the center button in [`SfRadialMenu`].
+## CenterButtonStrokeThickness
+
+The [`CenterButtonStrokeThickness`] changes the stroke thickness of the center button in [`SfRadialMenu`].
 
 {% tabs %}
 
@@ -665,9 +689,9 @@ The [`CenterButtonBorderThickness`] changes the border thickness of the center b
              xmlns:local="clr-namespace:RadialSample"
              xmlns:syncfusion="clr-namespace:Syncfusion.Maui.RadialMenu;assembly=Syncfusion.Maui.RadialMenu"
              x:Class="RadialSample.MainPage">
-    <syncfusion:SfRadialMenu 
-                             CenterButtonBorderColor="Black"
-                             CenterButtonBorderThickness="5">
+    <syncfusion:SfRadialMenu CenterButtonText="Edit"
+                             CenterButtonStroke="Black"
+                             CenterButtonStrokeThickness="5">
         <syncfusion:SfRadialMenu.Items>
             <syncfusion:SfRadialMenuItem Text="Bold" FontSize="12"/>
             <syncfusion:SfRadialMenuItem Text="Copy" FontSize="12"/>
@@ -693,8 +717,9 @@ namespace RadialSample
             InitializeComponent();
             SfRadialMenu radialMenu = new SfRadialMenu()
             {
-                CenterButtonBorderColor = Color.Black,
-                CenterButtonBorderThickness = 5,
+                CenterButtonText="Edit",
+                CenterButtonStroke = Colors.Black,
+                CenterButtonStrokeThickness = 5,
             };
 
             RadialMenuItemsCollection itemCollection =  new RadialMenuItemsCollection()
@@ -713,7 +738,9 @@ namespace RadialSample
 
 {% endtabs %}
 
-## Center button view and center back button view
+![Display RadialMenu with StrokeThickness.](images/centerbutton-customization/maui-radialmenu-centerbutton-customization-strokethickness.png)
+
+## CenterButtonView and CenterButtonBackView
 
 You can customize the center button using [`CenterButtonView`] and center back button using [`CenterButtonBackView`] in  [`SfRadialMenu`].
 
@@ -731,17 +758,40 @@ You can customize the center button using [`CenterButtonView`] and center back b
         <syncfusion:SfRadialMenu.CenterButtonView>
             <Grid>
                 <StackLayout VerticalOptions="Center">
-                    <Image Source="Beverage1.png"/>
+                    <Image Source="dotnet_bot.png"/>
                 </StackLayout>
             </Grid>
         </syncfusion:SfRadialMenu.CenterButtonView>
         <syncfusion:SfRadialMenu.CenterButtonBackView>
             <Grid>
                 <StackLayout VerticalOptions="Center">
-                    <Image Source="Beverage2.png"/>
+                    <Image Source="backicon.png"/>
                 </StackLayout>
             </Grid>
         </syncfusion:SfRadialMenu.CenterButtonBackView>
+         <syncfusion:SfRadialMenu.Items>
+                    <syncfusion:SfRadialMenuItem Text="Bold" 
+                                                 FontSize="12"/>
+                    <syncfusion:SfRadialMenuItem Text="Copy" 
+                                                 FontSize="12"/>
+                    <syncfusion:SfRadialMenuItem Text="Undo" 
+                                                 FontSize="12"/>
+                    <syncfusion:SfRadialMenuItem Text="Paste" 
+                                                 FontSize="12"/>
+                    <syncfusion:SfRadialMenuItem Text="Color" FontSize="12">
+                        <syncfusion:SfRadialMenuItem.Items>
+                            <syncfusion:SfRadialMenuItem Text="Font" 
+                                                         FontSize="12" 
+                                                         ItemWidth="50"/>
+                            <syncfusion:SfRadialMenuItem Text="Gradient" 
+                                                         FontSize="12" 
+                                                         ItemWidth="50"/>
+                            <syncfusion:SfRadialMenuItem Text="Highlight" 
+                                                         FontSize="12" 
+                                                         ItemWidth="50"/>
+                        </syncfusion:SfRadialMenuItem.Items>
+                    </syncfusion:SfRadialMenuItem>
+        </syncfusion:SfRadialMenu.Items>
     </syncfusion:SfRadialMenu>
 </ContentPage>
 
@@ -750,7 +800,6 @@ You can customize the center button using [`CenterButtonView`] and center back b
 {% highlight C# %}
 
 using Syncfusion.Maui.RadialMenu;
-using System.Collections.ObjectModel;
 
 namespace RadialSample
 {
@@ -759,6 +808,8 @@ namespace RadialSample
         public MainPage()
         {
             InitializeComponent();
+            string[] mainItem = new string[] { "Bold", "Copy", "Paste", "Undo", "Color" };
+            string[] colorItem = new string[] { "Font", "Gradient", "Highlight" };
             Grid centerButtonGrid = new Grid();
             Grid centerButtonBackGrid = new Grid();
             StackLayout centerButtonLayout = new StackLayout()
@@ -770,9 +821,9 @@ namespace RadialSample
                 VerticalOptions = LayoutOptions.Center
             };
 
-            centerButtonLayout.Children.Add(new Image() { Source = "Beverage1.png" });
+            centerButtonLayout.Children.Add(new Image() { Source = "dotnet_bot.png" });
             centerButtonGrid.Children.Add(centerButtonLayout);
-            centerButtonBackLayout.Children.Add(new Image() { Source = "Beverage2.png" });
+            centerButtonBackLayout.Children.Add(new Image() { Source = "backicon.png" });
             centerButtonBackGrid.Children.Add(centerButtonBackLayout);
 
             SfRadialMenu radialMenu = new SfRadialMenu()
@@ -780,6 +831,23 @@ namespace RadialSample
                 CenterButtonView = centerButtonGrid,
                 CenterButtonBackView = centerButtonBackGrid
             };
+
+            for (int i = 0; i < 5; i++)
+            {
+                SfRadialMenuItem mainMenuItems = new SfRadialMenuItem();
+                mainMenuItems.Text = mainItem[i];
+                mainMenuItems.FontSize = 12;
+                syncfusion.Items.Add(mainMenuItems);
+            }
+
+            for (int i = 0; i < 3; i++)
+            {
+                SfRadialMenuItem colorSubMenuItem = new SfRadialMenuItem();
+                colorSubMenuItem.Text = colorItem[i];
+                colorSubMenuItem.FontSize = 12;
+                colorSubMenuItem.ItemWidth = 50;
+                radialMenu.Items[4].Items.Add(colorSubMenuItem);
+            }
 
             this.Content = radialMenu;
         }
@@ -789,6 +857,8 @@ namespace RadialSample
 {% endhighlight %}
 
 {% endtabs %}
+
+![Display RadialMenu with CenterButtonView and CenterButtonBackView.](images/centerbutton-customization/maui-radialmenu-centerbutton-customization-frontview-and-backview.png)
 
 ## EnableCenterButtonAnimation
 

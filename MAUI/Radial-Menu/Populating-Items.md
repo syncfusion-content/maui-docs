@@ -107,8 +107,6 @@ The following code sample demonstrates how to Display images and text in the Rad
 
 {% highlight c# %}
 
-![Display image with text in .NET MAUI RadialMenu.](images/populating-items/maui-radialmenu-populating-text-with-images.png)
-
 using Syncfusion.Maui.RadialMenu;
 
 namespace RadialSample
@@ -138,6 +136,8 @@ namespace RadialSample
 {% endhighlight %}
 
 {% endtabs %}
+
+![Display image with text in .NET MAUI RadialMenu.](images/populating-items/maui-radialmenu-populating-text-with-images.png)
 
 ## Custom Font with Text
 
@@ -194,7 +194,15 @@ namespace RadialSample
         {
             InitializeComponent();
 
-            SfRadialMenu radialMenu = new SfRadialMenu();
+            SfRadialMenu radialMenu = new SfRadialMenu()
+            {
+                CenterButtonBackFontFamily="Maui Material Assets",
+                CenterButtonBackFontSize=28,
+                CenterButtonBackText="&#xe72d;",
+                CenterButtonFontFamily="Maui Material Assets",
+                CenterButtonFontSize=28,
+                CenterButtonText="&#xe710;",
+            };
             RadialMenuItemsCollection itemCollection = new RadialMenuItemsCollection()
             {
                 new SfRadialMenuItem() { FontFamily="Maui Material Assets" FontSize="20" Text="&#xe72e;" },
@@ -276,7 +284,11 @@ namespace RadialSample
             string[] mainItem = new string[] { "Bold", "Copy", "Paste", "Undo", "Color" };
             string[] colorItem = new string[] { "Font", "Gradient", "Highlight" };
 
-            SfRadialMenu radialMenu = new SfRadialMenu();
+            SfRadialMenu radialMenu = new SfRadialMenu()
+            {
+                CenterButtonText="Edit", 
+                CenterButtonFontSize=12,
+            };
 
             // Adding radial menu outer rim items.
 
@@ -329,7 +341,10 @@ Using [`ItemsSource`], objects of any class can be given as items for [`SfRadial
     </ContentPage.BindingContext>
     <ContentPage.Content>
         <syncfusion:SfRadialMenu 
-            x:Name="radial_Menu" 
+            x:Name="radial_Menu"
+            CenterButtonFontSize="28"
+            CenterButtonFontFamily="Maui Material Assets"
+            CenterButtonText="&#xe71b;"
             ItemsSource="{Binding EmployeeCollection}">
             <syncfusion:SfRadialMenu.ItemTemplate>
                 <DataTemplate>
@@ -400,6 +415,8 @@ namespace RadialSample
 
 {% endtabs %}
 
+![Display RadialMenu with ItemsSource and ItemTemplate.](images/populating-items/maui-radialmenu-populating-itemssource-with-itemtemplate.png)
+
 ## Animation duration
 
 Duration of animation in radial menu can be changed using the [`AnimationDuration`] property. It is used to change the speed of opening and closing of radial menu.
@@ -440,7 +457,7 @@ namespace RadialSample
             InitializeComponent();
             SfRadialMenu radialMenu = new SfRadialMenu()
             {
-                AnimationDuration = 1000
+                AnimationDuration = 800
             };
 
             RadialMenuItemsCollection itemCollection = new RadialMenuItemsCollection()

@@ -31,6 +31,8 @@ This section provides a quick overview of how to get started with the `.NET MAUI
     <treemap:SfTreeMap />
 </ContentPage>
 
+{% endhighlight %}
+
 {% highlight C# hl_lines="1 9 10" %}
 
 using Syncfusion.Maui.TreeMap;
@@ -47,6 +49,8 @@ public partial class MainPage : ContentPage
 }
 
 {% endhighlight %}
+
+{% endtabs %}
 
 ## Register the handler
 
@@ -92,9 +96,6 @@ Create a simple data model in a new class file as shown in the following example
 {% tabs %}
 {% highlight C# tabtitle="PopulationDetails.cs" %}
 
-/// <summary>    
-/// Represents the custom data properties.
-/// </summary>
 public class PopulationDetails
 {
     public string Country { get; set; }
@@ -112,9 +113,6 @@ Create a view model class to set values for the properties listed in the model c
 {% tabs %}
 {% highlight C# tabtitle="PopulationViewModel.cs" %}
 
-/// <summary>    
-/// Represents demographic information for countries in the Americas for the year 2023.
-/// </summary>
 public class PopulationViewModel
 {
     public PopulationViewModel()
@@ -192,7 +190,7 @@ this.Content = treeMap;
 To display text for the leaf items, utilize the `LabelPath` property within the `LeafItemSettings` of `SfTreeMap`. This property allows you to specify the path to the data property containing the text you want to display.
 
 {% tabs %}
-{% highlight XAML hl_lines="7 8 9 10" %}
+{% highlight XAML hl_lines="7 8 9" %}
 
 <treemap:SfTreeMap x:Name="treeMap"
                    DataSource="{Binding PopulationDetails}"
@@ -201,8 +199,7 @@ To display text for the leaf items, utilize the `LabelPath` property within the 
         <local:PopulationViewModel />
     </treemap:SfTreeMap.BindingContext>
     <treemap:SfTreeMap.LeafItemSettings>
-    <treemap:TreeMapLeafItemSettings LabelPath="Country" 
-                                     Stroke="Black" />
+    <treemap:TreeMapLeafItemSettings LabelPath="Country"/>
     </treemap:SfTreeMap.LeafItemSettings>
     <treemap:SfTreeMap.LeafItemBrushSettings>
        <treemap:TreeMapUniformBrushSettings Brush="Orange"/>
@@ -216,16 +213,13 @@ SfTreeMap treeMap = new SfTreeMap();
 PopulationViewModel viewModel = new PopulationViewModel();
 treeMap.DataSource = viewModel.PopulationDetails;
 treeMap.PrimaryValuePath = "Population";
-treeMap.LeafItemSettings = new TreeMapLeafItemSettings() { LabelPath = "Country", Stroke = Brush.Black };
+treeMap.LeafItemSettings = new TreeMapLeafItemSettings() { LabelPath = "Country" };
 treeMap.LeafItemBrushSettings = new TreeMapUniformBrushSettings() { Brush = Brush.Orange };
 this.Content = treeMap;
 
 {% endhighlight %}
 {% highlight C# tabtitle="PopulationDetails.cs" %}
 
-/// <summary>    
-/// Represents the custom data properties.
-/// </summary>
 public class PopulationDetails
 {
     public string Country { get; set; }
@@ -236,9 +230,6 @@ public class PopulationDetails
 {% endhighlight %}
 {% highlight C# tabtitle="PopulationViewModel.cs" %}
 
-/// <summary>    
-/// Represents demographic information for countries in the Americas for the year 2023.
-/// </summary>
 public class PopulationViewModel
 {
     public PopulationViewModel()
@@ -313,9 +304,6 @@ this.Content = treeMap;
 {% endhighlight %}
 {% highlight C# tabtitle="PopulationDetails.cs" %}
 
-/// <summary>    
-/// Represents the custom data properties.
-/// </summary>
 public class PopulationDetails
 {
     public string Country { get; set; }
@@ -326,9 +314,6 @@ public class PopulationDetails
 {% endhighlight %}
 {% highlight c# tabtitle="PopulationViewModel.cs" %}
 
-/// <summary>    
-/// Represents demographic information for countries in the Americas for the year 2023.
-/// </summary>
 public class PopulationViewModel
 {
     public PopulationViewModel()
@@ -365,7 +350,6 @@ public class PopulationViewModel
 
 {% endhighlight %}
 {% endtabs %}
-
 
 ## Enable tooltip
 
@@ -405,9 +389,6 @@ this.Content = treeMap;
 {% endhighlight %}
 {% highlight C# tabtitle="PopulationDetails.cs" %}
 
-/// <summary>    
-/// Represents the custom data properties.
-/// </summary>
 public class PopulationDetails
 {
     public string Country { get; set; }
@@ -418,9 +399,6 @@ public class PopulationDetails
 {% endhighlight %}
 {% highlight C# tabtitle="PopulationViewModel.cs" %}
 
-/// <summary>    
-/// Represents demographic information for countries in the Americas for the year 2023.
-/// </summary>
 public class PopulationViewModel
 {
     public PopulationViewModel()
@@ -463,7 +441,7 @@ public class PopulationViewModel
 To incorporate a legend for the TreeMap control, utilize the `ShowLegend` property within `LegendSettings.` It is possible to customize the legend item’s color and text using the `LeafItemBrushSettings` and `LegendSettings` properties of `SfTreemap.`
 
 {% tabs %}
-{% highlight XAML hl_lines="4 8 9 10" %}
+{% highlight XAML hl_lines="8 9 10" %}
 
 <treemap:SfTreeMap x:Name="treeMap"
                    DataSource="{Binding PopulationDetails}"
@@ -523,9 +501,6 @@ this.Content = treeMap;
 {% endhighlight %}
 {% highlight C# tabtitle="PopulationDetails.cs" %}
 
-/// <summary>    
-/// Represents the custom data properties.
-/// </summary>
 public class PopulationDetails
 {
     public string Country { get; set; }
@@ -536,9 +511,6 @@ public class PopulationDetails
 {% endhighlight %}
 {% highlight C# tabtitle="PopulationViewModel.cs" %}
 
-/// <summary>    
-/// Represents demographic information for countries in the Americas for the year 2023.
-/// </summary>
 public class PopulationViewModel
 {
     public PopulationViewModel()
