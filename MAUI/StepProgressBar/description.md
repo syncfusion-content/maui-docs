@@ -335,7 +335,7 @@ public class ViewModel
 {% endhighlight %}
 {% endtabs %}
 
- ![Customization using image in .NET MAUI SfStepProgressBar.](images/description/maui-stepprogressbar-custom-image.png)
+ ![Customization using image in .NET MAUI SfStepProgressBar.](images/description/maui-stepprogressbar-custom-image.png){:width="500" height="127"}
  
 ### Customization using Font icon
 
@@ -413,4 +413,4 @@ public class ViewModel
 {% endhighlight %}
 {% endtabs %}
 
- ![Customization using font in .NET MAUI SfStepProgressBar.](images/description/maui-stepprogressbar-custom-fonticon.png)
+ ![Customization using font in .NET MAUI SfStepProgressBar.](images/description/maui-stepprogressbar-custom-fonticon.png){:width="500" height="127"}
