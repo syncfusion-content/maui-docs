@@ -97,7 +97,7 @@ public class PopulationViewModel
 {% endhighlight %}
 {% endtabs %}
 
-![squarified-layout-type-in-maui-treemap](images/layouts/squarified-layout-type-in-maui-treemap.jpeg) {:width="313" height="444" .lazy .shadow-effect}
+![squarified-layout-type-in-maui-treemap](images/layouts/squarified-layout-type-in-maui-treemap.jpeg){:width="313" height="444" .lazy .shadow-effect}
 
 ## Slice and dice auto
 
@@ -184,7 +184,7 @@ public class PopulationViewModel
 {% endhighlight %}
 {% endtabs %}
 
-![slice-and-dice-auto-layout-type-in-maui-treemap](images/layouts/slice-and-dice-auto-layout-type-in-maui-treemap.jpeg) {:width="313" height="444" .lazy .shadow-effect}
+![slice-and-dice-auto-layout-type-in-maui-treemap](images/layouts/slice-and-dice-auto-layout-type-in-maui-treemap.jpeg){:width="313" height="444" .lazy .shadow-effect}
 
 ## Slice and dice horizontal
 
@@ -271,7 +271,7 @@ public class PopulationViewModel
 {% endhighlight %}
 {% endtabs %}
 
-![slice-and-dice-horizontal-layout-type-in-maui-treemap](images/layouts/slice-and-dice-horizontal-layout-type-in-maui-treemap.jpeg) {:width="313" height="444" .lazy .shadow-effect}
+![slice-and-dice-horizontal-layout-type-in-maui-treemap](images/layouts/slice-and-dice-horizontal-layout-type-in-maui-treemap.jpeg){:width="313" height="444" .lazy .shadow-effect}
 
 ## Slice and dice vertical
 
@@ -356,7 +356,7 @@ public class PopulationViewModel
     }
 }
 
-![slice-and-dice-vertical-layout-type-in-maui-treemap](images/layouts/slice-and-dice-vertical-layout-type-in-maui-treemap.jpeg) {:width="313" height="444" .lazy .shadow-effect}
+![slice-and-dice-vertical-layout-type-in-maui-treemap](images/layouts/slice-and-dice-vertical-layout-type-in-maui-treemap.jpeg){:width="313" height="444" .lazy .shadow-effect}
 
 {% endhighlight %}
 {% endtabs %}
