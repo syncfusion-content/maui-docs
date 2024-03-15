@@ -84,6 +84,7 @@ series.DataLabelSettings = new PolarDataLabelSettings()
 {
     UseSeriesPalette = false,
 };
+
 chart.Series.Add(series);
 
 {% endhighlight %}
@@ -122,8 +123,8 @@ PolarAreaSeries series = new PolarAreaSeries()
     ShowDataLabels = true,
     LabelContext = LabelContext.Percentage
 };
-chart.Series.Add(series);
 
+chart.Series.Add(series);
 this.Content = chart;
         
 {% endhighlight %}
@@ -144,13 +145,13 @@ The [SfPolarChart]() provides support to customize the appearance of the datalab
         <chart:SfPolarChart.Resources>
             <DataTemplate x:Key="labelTemplate">
                 <HorizontalStackLayout Spacing="5">
-                    <Label Text="{Binding Item.Tree}" VerticalOptions="Center" FontSize = "15"/>
+                    <Label Text="{Binding Item.Values}" VerticalOptions="Center" FontSize = "15"/>
                     <Image Source="arrow.png" WidthRequest="15" HeightRequest="15"/>
                 </HorizontalStackLayout>
             </DataTemplate>
         </chart:SfPolarChart.Resources>
         . . .
-        <chart:PolarAreaSeries ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Tree" 
+        <chart:PolarAreaSeries ItemsSource="{Binding Data}" XBindingPath="Category" YBindingPath="Values" 
         ShowDataLabels="True" LabelTemplate="{StaticResource labelTemplate}"/>
     </chart:SfPolarChart>
 
@@ -158,13 +159,13 @@ The [SfPolarChart]() provides support to customize the appearance of the datalab
 
 {% highlight c# %}
 
-    SfPolarChart chart = new SfPolarChart();
-    . . .
-    PolarAreaSeries series = new PolarAreaSeries();
-    series.ItemsSource = new ViewModel().PlantDetails;
-    series.XBindingPath = "Direction";
-    series.YBindingPath = "Tree";
-    series.ShowDataLabels = true;
+SfPolarChart chart = new SfPolarChart();
+. . .
+PolarAreaSeries series = new PolarAreaSeries();
+series.ItemsSource = new ViewModel().Data;
+series.XBindingPath = "Category";
+series.YBindingPath = "Values";
+series.ShowDataLabels = true;
 
 DataTemplate labelTemplate = new DataTemplate(() =>
 {

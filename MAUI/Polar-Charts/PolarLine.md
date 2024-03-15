@@ -44,8 +44,8 @@ PolarLineSeries series = new PolarLineSeries()
     XBindingPath = "Direction",
     YBindingPath = "Tree"
 };
-chart.Series.Add(series);
 
+chart.Series.Add(series);
 this.Content = chart;
 
 {% endhighlight %}
@@ -80,8 +80,8 @@ PolarLineSeries series = new PolarLineSeries()
     XBindingPath = "Direction",
     YBindingPath = "Tree"
 };
-chart.Series.Add(series);
 
+chart.Series.Add(series);
 this.Content = chart;
 
 {% endhighlight %}
@@ -118,8 +118,8 @@ PolarLineSeries series = new PolarLineSeries()
     YBindingPath = "Tree",
     IsClosed = "False"
 };
-chart.Series.Add(series);
 
+chart.Series.Add(series);
 this.Content = chart;
 
 {% endhighlight %}
@@ -212,7 +212,6 @@ chartMarker.StrokeWidth= 1;
 chartMarker.Height = 8;
 chartMarker.Width = 8;
 chart.Series.Add(series);
-
 this.Content = chart;
 
 {% endhighlight %}

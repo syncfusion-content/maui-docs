@@ -127,6 +127,7 @@ chart.SecondaryAxis = new NumericalAxis()
 {
     MinorTicksPerInterval = 3,
 };
+
 chart.SecondaryAxis = secondaryAxis;
 . . .
 

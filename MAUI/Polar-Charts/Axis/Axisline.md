@@ -39,16 +39,11 @@ N> The customization of axis lines using the AxisLineStyle property can only be 
 SfPolarChart chart = new SfPolarChart();
 . . .
 NumericalAxis secondaryAxis = new NumericalAxis();
-
 ChartLineStyle axisLineStyle = new ChartLineStyle();
-
 axisLineStyle.Stroke = Colors.Red;
-
 axisLineStyle.StrokeWidth = 2;
-
 secondaryAxis.AxisLineStyle = axisLineStyle;
-
-chart.SecondaryAxis.Add(secondaryAxis);
+chart.SecondaryAxis = secondaryAxis;
 
 {% endhighlight %}
 
@@ -82,18 +77,12 @@ The padding to the axis line is defined by using the [AxisLineOffset]() property
 SfPolarChart chart = new SfPolarChart();
 . . .
 NumericalAxis secondaryAxis = new NumericalAxis();
-
 secondaryAxis.AxisLineOffset = 25;
-
 ChartLineStyle axisLineStyle = new ChartLineStyle();
-
 axisLineStyle.Stroke = Colors.Red;
-
 axisLineStyle.StrokeWidth = 2;
-
 secondaryAxis.AxisLineStyle = axisLineStyle;
-
-chart.SecondaryAxis.Add(secondaryAxis);
+chart.SecondaryAxis = secondaryAxis;
 
 {% endhighlight %}
 

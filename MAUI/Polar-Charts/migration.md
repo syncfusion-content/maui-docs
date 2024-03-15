@@ -494,7 +494,6 @@ style.Angle = 315;
 style.Margin = 5;
 style.FontSize = 18;
 series.DataMarker.LabelStyle = style;
-
 chart.Series.Add(series);
 {% endhighlight %}
 
@@ -540,7 +539,6 @@ style.Angle = 315;
 style.Margin = 5;
 style.FontSize = 18;
 series.PolarDataLabelSettings.LabelStyle = style;
-
 chart.Series.Add(series);
 {% endhighlight %}
 

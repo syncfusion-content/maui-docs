@@ -53,10 +53,10 @@ PolarLineSeries series3 = new PolarLineSeries()
     XBindingPath = "Direction",
     YBindingPath = "Flower"
 };
+
 chart.Series.Add(series1);
 chart.Series.Add(series2);
 chart.Series.Add(series3);
-
 this.Content = chart;
 
 {% endhighlight %}
@@ -88,9 +88,9 @@ List<Brush> CustomBrushes = new List<Brush>()
  new SolidColorBrush(Color.FromArgb("#F4890B")),
  new SolidColorBrush(Color.FromArgb("#E2227E"))
 };
+
 this.chart.PaletteBrushes = CustomBrushes;
 . . .
-
 this.Content = chart;
 
 {% endhighlight %}

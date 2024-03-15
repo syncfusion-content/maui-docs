@@ -112,8 +112,8 @@ PolarAreaSeries series = new PolarAreaSeries()
     YBindingPath = "Tree",
     EnableTooltip = true
 };
-chart.Series.Add(series);
 
+chart.Series.Add(series);
 this.Content = chart;
 
 {% endhighlight %}
@@ -169,8 +169,8 @@ PolarAreaSeries series = new PolarAreaSeries()
     EnableTooltip = true,
     TooltipTemplate = chart.Resources["tooltipTemplate1"] as DataTemplate
 };
-chart.Series.Add(series);
 
+chart.Series.Add(series);
 this.Content = chart;
         
 {% endhighlight %}

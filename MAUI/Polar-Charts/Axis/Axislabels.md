@@ -59,6 +59,7 @@ DateTimeAxis secondaryAxis = new DateTimeAxis()
 {
     EdgeLabelsDrawingMode = EdgeLabelsDrawingMode.Center
 };
+
 chart.SecondaryAxis = secondaryAxis;
 
 {% endhighlight %}
@@ -96,6 +97,7 @@ NumericalAxis secondaryAxis = new NumericalAxis()
 {
     EdgeLabelsVisibilityMode = EdgeLabelsVisibilityMode.AlwaysVisible
 };
+
 chart.SecondaryAxis = secondaryAxis;
 
 {% endhighlight %}
@@ -127,6 +129,7 @@ NumericalAxis secondaryAxis = new NumericalAxis()
 {
     EdgeLabelsVisibilityMode = EdgeLabelsVisibilityMode.Visible
 };
+
 chart.SecondaryAxis = secondaryAxis;
 
 {% endhighlight %}

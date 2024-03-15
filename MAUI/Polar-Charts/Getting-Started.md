@@ -97,7 +97,7 @@ Now, let us define a simple data model that represents a data point on the chart
 
     public class PlantData   
     {   
-        public string? Direction { get; set; }
+        public string Direction { get; set; }
         public double Tree { get; set; }
         public double Flower { get; set; }
         public double Weed { get; set; }
@@ -203,7 +203,7 @@ chart.SecondaryAxis = secondaryAxis;
 
 To create a polar chart, you can add a [PolarAreaSeries]() to the polar chart [Series]() property of the chart, and  then bind the `PlantData` property of the above `ViewModel` to the `PolarAreaSeries.ItemsSource` as follows.
 
-N> In order to plot the series, the [XBindingPath]() and [YBindingPath]() properties need to be configured correctly. These properties allow the chart to retrieve values from the corresponding properties in the data model.
+N> In order to plot the series, the [XBindingPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_XBindingPath) and [YBindingPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.XYDataSeries.html#Syncfusion_Maui_Charts_XYDataSeries_YBindingPath) properties need to be configured correctly. These properties allow the chart to retrieve values from the corresponding properties in the data model.
 
 {% tabs %}   
 
@@ -266,7 +266,7 @@ chart.Series.Add(series);
 
 ## Add a title
 
-The title of the chart provides quick information to the user about the data being plotted in the chart. The [Title]() property is used to set the title for the chart as follows.
+The title of the chart provides quick information to the user about the data being plotted in the chart. The [Title](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartBase.html#Syncfusion_Maui_Charts_ChartBase_Title) property is used to set the title for the chart as follows.
 
 {% tabs %} 
 

@@ -18,7 +18,7 @@ Adjust the rendering position of series on polar chart by leveraging the [StartA
 {% highlight xaml %}
 
 <chart:SfPolarChart StartAngle="Rotate0">
-    
+
     <chart:SfPolarChart.PrimaryAxis>
         <chart:CategoryAxis />
     </chart:SfPolarChart.PrimaryAxis>
@@ -27,9 +27,7 @@ Adjust the rendering position of series on polar chart by leveraging the [StartA
         <chart:NumericalAxis/>
     </chart:SfPolarChart.SecondaryAxis>   
 
-    <chart:PolarAreaSeries ItemsSource="{Binding PlantDetails}"
-					  XBindingPath="Direction"
-					  YBindingPath="Tree"/>  
+    <chart:PolarAreaSeries ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Tree"/>  
 
 </chart:SfPolarChart>
 
@@ -40,9 +38,9 @@ Adjust the rendering position of series on polar chart by leveraging the [StartA
 SfPolarChart chart = new SfPolarChart();
 chart.StartAngle = ChartPolarAngle.Rotate0;
 CategoryAxis primaryAxis = new CategoryAxis();
-chart.PrimaryAxis.Add(primaryAxis);
+chart.PrimaryAxis = primaryAxis;
 NumericalAxis secondaryAxis = new NumericalAxis();
-chart.SecondaryAxis.Add(secondaryAxis);
+chart.SecondaryAxis = secondaryAxis;
 
 PolarAreaSeries series = new PolarAreaSeries()
 {
@@ -58,4 +56,4 @@ this.Content = chart;
 
 {% endtabs %}
 
-![Polar Start Angle](Rendering-Position_Images\Start_Angle.png)
+![Polar Start Angle](Rendering-Position_Images/Start_Angle.png)
