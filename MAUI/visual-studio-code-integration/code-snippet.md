@@ -32,7 +32,7 @@ For Example, sf-datagrid-grouping
 
       ![Code Snippet](images/MAUI_CodeSnippets.gif)
 
-5.	After adding the Syncfusion .NET MAUI component to the XAML file, I'll provide a commented code sample. This sample will specify whether you should add the component to the ViewModel file, include it in the backend C# code of the XAML file, or if only namespace and NuGet entries are needed. Based on the provided data, you'll need to decide what to add.
+5.	After adding the Syncfusion .NET MAUI component to the XAML file, We've included instructions in the **TODO** section for your reference. This will guide you in determining whether to add the the View Model file or if only add namespace and NuGet entries to run the Syncfusion components.
 
      ![Comment](images/Comment.png)
 
@@ -42,12 +42,12 @@ For Example, sf-datagrid-grouping
 
 ## Configure .NET MAUI application with Syncfusion
 
-The Syncfusion .NET MAUI snippet inserts code into the XAML file. However, you need to configure the .NET MAUI application with Syncfusion by installing the Syncfusion .NET MAUI NuGet package and adding the appropriate namespace. To configure, follow these steps:
+The Syncfusion .NET MAUI snippet inserts code into the XAML file. However, you need to configure the .NET MAUI project with Syncfusion by installing the Syncfusion .NET MAUI NuGet package and adding the appropriate namespace. To configure, follow these steps:
 
-1.	Open the .NET MAUI application file and manually add the necessary Syncfusion .NET MAUI individual NuGet package(s) as a package reference for the Syncfusion .NET MAUI components. I'll provide a commented code sample indicating the corresponding NuGet package entry for each component. Copy the NuGet package entry and paste it into your .NET MAUI application file. This NuGet package will be automatically restored during the build or save process of the application.
+1.	Open the .NET MAUI application file and manually add the necessary Syncfusion .NET MAUI individual NuGet package(s) as a package reference for the Syncfusion .NET MAUI components. We've included a commented code sample indicating the corresponding NuGet package entry for each component. Copy the NuGet package entry and paste it into your .NET MAUI project file. This NuGet package will be automatically restored during the build or save process of the project.
 
-   ![NuGet Package](images/NuGet.png)
+     ![NuGet Package](images/NuGetEntry.gif)
 
-2.	To integrate Syncfusion components into your application, go to the XAML file and insert the necessary Syncfusion .NET MAUI namespace entries. I'll provide a commented code sample indicating the corresponding namespace entry for each component. Copy the namespace entry and paste it into your XAML file.
+2.	To integrate Syncfusion components into your application, go to the XAML file and insert the necessary Syncfusion .NET MAUI namespace entries. We've included a commented code sample indicating the corresponding namespace entry for each component. Copy the namespace entry and paste it into your XAML file.
 
-    ![Namespace](images/Namespace.png)
+    ![Namespace](images/NamespaceEntry.gif)
