@@ -206,7 +206,7 @@ N> This is common for Shape, Text and CustomView annotations.
 
 ## Annotation unselected event
 
-This [`AnnotationUnselected`] event occurs when the annotation is unselected.
+This `AnnotationUnselected` event occurs when the annotation is unselected.
 
 N> This is common for Shape, Text and CustomView annotations.
 
@@ -258,7 +258,7 @@ Add a text on image loading using the [`Imageloaded`](https://help.syncfusion.co
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-image-editor-examples/tree/master/ImageLoadedSample)
 
-### Add text with manual bounds
+## Add text with manual bounds
 
 The text can be added with user-defined view bounds. The [`Bounds`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorAnnotationSettings.html#Syncfusion_Maui_ImageEditor_ImageEditorAnnotationSettings_Bounds) are treated as ratio values of image width and height, so you have to specify bound's rectangle values in the range of 0 to 1.
 

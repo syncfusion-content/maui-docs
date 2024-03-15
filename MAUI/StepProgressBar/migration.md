@@ -9,7 +9,7 @@ documentation: ug
 
 # Migrate from Xamarin.Forms SfStepProgressBar to MAUI SfStepProgressBar
 
-To make the migration from the [Xamarin SfStepProgressBar](https://www.syncfusion.com/xamarin-ui-controls/xamarin-stepprogressbar) to [.NET MAUI SfStepProgressBar]() easier, most of the APIs from the Xamarin SfStepProgressBar were kept in the.NET MAUI SfStepProgressBar. However, to maintain the consistency of API naming in the .NET MAUI SfStepProgressBar, some of the APIs have been renamed. Find the difference in the following topics.
+To make the migration from the [Xamarin SfStepProgressBar](https://www.syncfusion.com/xamarin-ui-controls/xamarin-stepprogressbar) to [.NET MAUI SfStepProgressBar]() easier, most of the APIs from the `Xamarin SfStepProgressBar` were kept in the `.NET MAUI SfStepProgressBar`. However, to maintain the consistency of API naming in the `.NET MAUI SfStepProgressBar`, some of the APIs have been renamed. Find the difference in the following topics.
 
 ## Namespaces 
 
@@ -129,66 +129,6 @@ The following code example, explains how to initialize the properties of the `Xa
 <table>
 <tr>
 <th>Xamarin SfStepProgressBar</th>
-<th>.NET MAUI SfStepProgressBar</th></tr>
-<tr>
-<td>
-{% tabs %}
-
-{% highlight xaml %}
-
-<ContentPage
-xmlns:progressBar="clr-namespace:Syncfusion.XForms.ProgressBar;assembly=Syncfusion.SfProgressBar.XForms">
-
-    <progressBar:SfStepProgressBar />
-
-</ContentPage>
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-using Syncfusion.XForms.ProgressBar;
-...
-
-SfStepProgressBar sfStepProgressBar = new SfStepProgressBar ();
-this.Content = sfStepProgressBar ;
-
-{% endhighlight %}
-
-{% endtabs %}
-
-</td>
-<td>
-{% tabs %}
-
-{% highlight xaml %}
-
-<ContentPage
-xmlns:progressBar="clr-namespace:Syncfusion.Maui.ProgressBar;assembly=Syncfusion.Maui.ProgressBar">
-
-    <progressBar:SfStepProgressBar />
-
-</ContentPage>
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-using Syncfusion.Maui.ProgressBar;
-...
-
-SfStepProgressBar stepProgressBar = new SfStepProgressBar();
-this.Content = stepProgressBar ;
-
-{% endhighlight %}
-
-{% endtabs %}
-</td></tr>
-</table>
-
-<table>
-<tr>
-<th>Xamarin SfStepProgressBar</th>
 <th>.NET MAUI SfStepProgressBar</th>
 <th>Description</th>
 </tr>
@@ -254,22 +194,22 @@ this.Content = stepProgressBar ;
 </tr>
 <tr>
 <td>{{'[FontAttributes]()'| markdownify }}</td>
-<td>{{'[[FontAttributes]()(From [TextStyle]() property of [StepSettings]() class)]()'| markdownify }}</td>
+<td>{{'[FontAttributes]()(From [TextStyle]() property of [StepSettings]() class)'| markdownify }}</td>
 <td>Gets or sets the font attributes of the text style which is used to customize the primary and secondary text.</td>
 </tr>
 <tr>
 <td>{{'[FontColor]()'| markdownify }}</td>
-<td>{{'[[TextColor]()(From [TextStyle]() property of [StepSettings]() class)]()'| markdownify }}</td>
+<td>{{'[TextColor]()(From [TextStyle]() property of [StepSettings]() class)'| markdownify }}</td>
 <td>Gets or sets the text color of the text style which is used to customize the primary and secondary text.</td>
 </tr>
 <tr>
 <td>{{'[FontFamily]()'| markdownify }}</td>
-<td>{{'[[FontFamily]()(From [TextStyle]() property of [StepSettings]() class)]()'| markdownify }}</td>
+<td>{{'[FontFamily]()(From [TextStyle]() property of [StepSettings]() class)'| markdownify }}</td>
 <td>Gets or sets the font family of the text style which is used to customize the primary and secondary text.</td>
 </tr>
 <tr>
 <td>{{'[FontSize]()'| markdownify }}</td>
-<td>{{'[[FontSize]()(From [TextStyle]() property of [StepSettings]() class)]()'| markdownify }}</td>
+<td>{{'[FontSize]()(From [TextStyle]() property of [StepSettings]() class)'| markdownify }}</td>
 <td>Gets or sets the font size of the text style which is used to customize the primary and secondary text.</td>
 </tr>
 <tr>
@@ -284,7 +224,7 @@ this.Content = stepProgressBar ;
 </tr>
 <tr>
 <td>{{'[MarkerContentSize]()'| markdownify }}</td>
-<td>{{'[[StepContentSize]()(From [SfStepProgressBar]() class)]()'| markdownify }}</td>
+<td>{{'[StepContentSize]()(From [SfStepProgressBar]() class)'| markdownify }}</td>
 <td>Gets or sets the content size of the step.</td>
 </tr>
 <tr>
@@ -360,7 +300,7 @@ this.Content = stepProgressBar ;
 <tr>
 <td>{{'[Status]()'| markdownify }}</td>
 <td>Nil</td>
-<td>By using '[ActiveStepIndex]()' and '[ActiveStepProgressValue]()' property, we can acheive the desired step status.</td>
+<td>By using ActiveStepIndex and ActiveStepProgressValue property, we can acheive the desired step status.</td>
 </tr>
 </table>
 

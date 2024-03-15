@@ -20,6 +20,7 @@ The [.NET MAUI PDF Viewer](https://www.syncfusion.com/maui-controls/maui-pdf-vie
 * **Text search** - Search for text and instantly navigate all its occurrences in a PDF document.
 * **Select and copy text** - Select text from a PDF document and copy it to the clipboard. This is helpful for sharing text content with others.
 * **Outline view** - Use the outline view's hierarchical list of headings and subheadings to instantly navigate to the required topic in the document.
+* **Custom bookmarks** - Add, remove, and modify custom bookmarks in PDF files. This feature lets you quickly jump to specific sections or chapters without scrolling through the entire document.
 * **Document link navigation** - Navigate to the topic or position by tapping the document link annotation of the topics in the table of contents in a PDF document..
 * **Hyperlink navigation** - Detects hyperlinks, and tapping on the hyperlink will open the URL in a browser.
 * **Form filling** - Fill, modify, import, export and save form data from PDF documents. This feature helps to digitize the manual process of filling out paper forms. This can be used for filling out job applications, registration forms, medical forms, etc. Supported form fields are text box, checkbox, radio button, combo box, list box, button (only GoTo actions) and signature. 
@@ -29,6 +30,10 @@ The [.NET MAUI PDF Viewer](https://www.syncfusion.com/maui-controls/maui-pdf-vie
 * **Stamp annotation** - Add, remove, modify, import, and export stamp annotations in PDF files. Stamps are predefined graphical text that can be used to mark or signify certain aspects of documents, like that they have undergone quality checks or audits. This feature also allows adding personalized images or text to PDF documents.
 * **Sticky note annotation** - Add, remove, modify, import, and export sticky note annotations in PDF files. This feature will help add comments or notes to a specific part a document to clarify complex concepts, terms, or ideas.
 * **Text markup annotations** - Add, remove, modify, import, and export text markup annotations in PDF files. The available text markups are highlight, underline, strikeout and squiggly. This feature will help mark important passages, emphasize specific words or phrases, indicate that certain content should be removed or indicate that text contains possible errors.
-* **Free text annotation** - Add, remove, modify, import, and export free text annotations in PDF files. This feature will help you to add text notes, comments, or feedback to PDF documents.
-* **Save** - Save the modified PDF files.
+* **Free text annotation** - Add, remove, modify, import, and export free text annotations in PDF files. This feature helps to add text notes, comments, or feedback to PDF documents.
+* **Electronic signatures** - Add, remove, and modify electronic signatures in PDF files that include freehand-drawn, text, and image signatures. It can be used to sign contracts and agreements digitally, eliminating the need for physical signatures.
+* **Page layout modes** - View the PDF files in different page layout modes, such as continuous scoll and single page.
+* **Save** - Save the modified PDF files. 
+* **Print** - Print the PDF files.
+* **Coordinates conversion** - Obtain the PDF page coordinates relative to the PDF Viewer’s client coordinates and vice versa. It also helps to obtain the scroll point relative to the PDF page coordinates and bring the given region into view.
 * **Localization** - All static text within the PDF Viewer can be localized to any supported language.

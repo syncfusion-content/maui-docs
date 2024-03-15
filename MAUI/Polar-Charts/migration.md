@@ -142,18 +142,6 @@ The following table illustrates the API migration for the chart.
 <th>.NET MAUI</th>
 </tr>
 <tr>
-<td>LabelRotationAngle</td>
-<td>LabelRotation</td>
-</tr>
-<tr>
-<td>PlotOffset</td>
-<td>PlotOffsetStart, PlotOffsetEnd</td>
-</tr>
-<tr>
-<td>LabelExtent</td>
-<td>LabelExtent</td>
-</tr>
-<tr>
 <td>VisibleMinimum</td>
 <td>VisibleMinimum</td>
 </tr>
@@ -209,10 +197,8 @@ The following code example explains how to migrate the axis of Xamarin [SfChart]
 {% endhighlight %} 
 {% highlight C# %}
 SfChart chart = new SfChart();
-
 CategoryAxis primaryAxis = new CategoryAxis();
 chart.PrimaryAxis = primaryAxis;
-
 NumericalAxis secondaryAxis  =  new NumericalAxis();
 chart.SecondaryAxis = secondaryAxis;
 
@@ -245,9 +231,9 @@ this.Content = chart;
 {% highlight C# %}
 SfPolarChart chart = new SfPolarChart();
 CategoryAxis primaryAxis = new CategoryAxis();
-chart.PrimaryAxis.Add(primaryAxis);
-NumericalAxis secondaryAxis = new NumericalAxis();
-chart.SecondaryAxis.Add(secondaryAxis);
+chart.PrimaryAxis = primaryAxis;
+NumericalAxis secondaryAxis  =  new NumericalAxis();
+chart.SecondaryAxis = secondaryAxis;
 
 this.Content = chart;
 {% endhighlight %}
@@ -268,10 +254,6 @@ this.Content = chart;
 <tr>
 <td>Color</td>
 <td>Fill</td>
-</tr>
-<tr>
-<td>ColorModel, CustomBrushes</td>
-<td>PaletteBrushes</td>
 </tr>
 <tr>
 <td>DataMarker</td>
@@ -296,22 +278,20 @@ The following code example explains how to migrate the series of Xamarin [SfChar
 
 <chart:SfChart>
 . . .
-    <chart:PolarAreaSeries ItemsSource="{Binding PlantDetails}" 
-    XBindingPath="Direction" 
-    YBindingPath="Tree">
+    <chart:PolarAreaSeries ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Tree">
 	</chart:PolarAreaSeries>
- </chart:SfChart>
+</chart:SfChart>
 
 {% endhighlight %} 
 {% highlight C# %}
 SfChart chart = new SfChart();
 . . .
-
 PolarAreaSeries series = new PolarAreaSeries();
 series.SetBinding(ChartSeries.ItemsSourceProperty, "PlantDetails");
 series.XBindingPath = "Direction";
 series.YBindingPath = "Tree";
 chart.Series.Add(series);
+
 this.Content = chart;
 {% endhighlight %}
 
@@ -328,9 +308,7 @@ this.Content = chart;
 {% highlight xaml %}
 
 <chart:SfPolarChart>
-<chart:PolarAreaSeries ItemsSource="{Binding PlantDetails}"
-					XBindingPath="Direction"
-					YBindingPath="Tree">
+<chart:PolarAreaSeries ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Tree">
 </chart:PolarAreaSeries>
 </chart:SfPolarChart>
 
@@ -339,13 +317,13 @@ this.Content = chart;
 SfPolarChart chart = new SfPolarChart();
 . . .
 PolarAreaSeries series = new PolarAreaSeries();
-series.Label = "Tree";
-series.ShowDataLabels = true;
 series.ItemsSource = (new ViewModel()).PlantDetails;
 series.XBindingPath = "Direction";
 series.YBindingPath = "Tree";
-
+series.Label = "Tree";
+series.ShowDataLabels = true;
 chart.Series.Add(series);
+
 this.Content = chart;
 {% endhighlight %}
 
@@ -380,38 +358,6 @@ this.Content = chart;
 <tr>
 <td>Title</td>
 <td><em>Upcoming</em> </td>
-</tr>
-<tr>
-<td>Series</td>
-<td><em>Upcoming</em> </td>
-</tr>
-<tr>
-<td>BackgroundColor</td>
-<td><em>Upcoming</em> </td>
-</tr>
-<tr>
-<td>StrokeColor</td>
-<td><em>Upcoming</em> </td>
-</tr>
-<tr>
-<td>StrokeWidth</td>
-<td><em>Upcoming</em> </td>
-</tr>
-<tr>
-<td>StrokeDashArray</td>
-<td><em>Upcoming</em> </td>
-</tr>
-<tr>
-<td>CornerRadius</td>
-<td><em>Upcoming</em></td>
-</tr>
-<tr>
-<td>Margin</td>
-<td><em>Upcoming</em></td>
-</tr>
-<tr>
-<td>LabelStyle</td>
-<td><em>Upcoming</em></td>
 </tr>
 <tr>
 <td>OverflowMode</td>
@@ -464,7 +410,7 @@ The following code example shows how to enable legend in chart.
 
 <chart:SfChart>
     <chart:SfChart.Legend>
-		<chart:ChartLegend/>
+        <chart:ChartLegend/>
 	</chart:SfChart.Legend>
 </chart:SfChart>
 
@@ -488,7 +434,7 @@ chart.Legend = new ChartLegend ();
 
 <chart:SfPolarChart>
     <chart:SfPolarChart.Legend>
-		<chart:ChartLegend/>
+        <chart:ChartLegend/>
 	</chart:SfPolarChart.Legend>
 </chart:SfPolarChart>
 
@@ -521,20 +467,12 @@ To customize the data label appearance, create an instance of the [ChartDataMark
 
 <chart:SfChart>  
      . . .
-    <chart:PolarAreaSeries ItemsSource="{Binding PlantDetails}" 
-                        XBindingPath="Direction"
-                        YBindingPath="Tree">
+    <chart:PolarAreaSeries ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Tree">
 	    <chart:PolarAreaSeries.DataMarker>
 	        <chart:ChartDataMarker ShowLabel="True">
 		        <chart:ChartDataMarker.LabelStyle>
-			        <chart:DataMarkerLabelStyle 
-                    TextColor="Blue" 
-                    BorderColor="Red" 
-                    BorderThickness="2" 
-                    BackgroundColor="Aqua" 
-                    Angle="315" 
-                    Margin="5" FontSize="18" 
-                    FontAttributes="Italic"/>
+			        <chart:DataMarkerLabelStyle TextColor="Blue" BorderColor="Red" BorderThickness="2" 
+                                            BackgroundColor="Aqua" Angle="315" Margin="5" FontSize="18" FontAttributes="Italic"/>
 		        </chart:ChartDataMarker.LabelStyle>
 	        </chart:ChartDataMarker>
 	    </chart:PolarAreaSeries.DataMarker>
@@ -547,7 +485,6 @@ PolarAreaSeries series = new PolarAreaSeries();
 . . .
 series.DataMarker = new ChartDataMarker();
 series.DataMarker.ShowLabel = true;
-
 var style = new DataMarkerLabelStyle();
 style.TextColor = Color.Blue;
 style.BorderColor = Color.Red;
@@ -575,20 +512,13 @@ chart.Series.Add(series);
 
 <chart:SfPolarChart>
     . . .
-    <chart:PolarAreaSeries ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" 
-    YBindingPath="Tree" ShowDataLabels="True">
+    <chart:PolarAreaSeries ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Tree" 
+                    ShowDataLabels="True">
         <chart:PolarAreaSeries.DataLabelSettings>
             <chart:PolarDataLabelSettings>
                 <chart:PolarDataLabelSettings.LabelStyle>
-                    <chart:ChartDataLabelStyle 
-                    TextColor="Blue" 
-                    Stroke="Red" 
-                    StrokeWidth="2" 
-                    Background="Aqua" 
-                    Angle="315" 
-                    Margin="5" 
-                    FontSize="18" 
-                    FontAttributes="Italic"/>
+                    <chart:ChartDataLabelStyle TextColor="Blue" Stroke="Red" StrokeWidth="2" Background="Aqua" 
+                            Angle="315" Margin="5" FontSize="18" FontAttributes="Italic"/>
                 </chart:PolarDataLabelSettings.LabelStyle>
             </chart:PolarDataLabelSettings>
         </chart:PolarAreaSeries.DataLabelSettings>  
@@ -621,7 +551,7 @@ chart.Series.Add(series);
 
 ### Tooltip
 
-To customize the tooltip appearance, create an instance of the [ChartTooltipBehavior](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.ChartTooltipBehavior.html) class and add it to the [ChartBehaviors](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.SfChart.html#Syncfusion_SfChart_XForms_SfChart_ChartBehaviors) collection of [SfChart](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.SfChart.html). For [SfPolarChart](), you can directly set the [ChartTooltipBehavior]() instance to the [TooltipBehavior]() property, as shown in the below code sample.
+To customize the tooltip appearance, create an instance of the [ChartTooltipBehavior](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.ChartTooltipBehavior.html) class and add it to the [ChartBehaviors](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.SfChart.html#Syncfusion_SfChart_XForms_SfChart_ChartBehaviors) collection of [SfChart](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.SfChart.html). For [SfPolarChart](), you can directly set the [ChartTooltipBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartTooltipBehavior.html?tabs=tabid-1%2Ctabid-3%2Ctabid-5%2Ctabid-11%2Ctabid-9%2Ctabid-7) instance to the [TooltipBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartTooltipBehavior.html?tabs=tabid-1%2Ctabid-3%2Ctabid-5%2Ctabid-11%2Ctabid-9%2Ctabid-7) property, as shown in the below code sample.
 
 <table>
 <tr>
@@ -635,17 +565,12 @@ To customize the tooltip appearance, create an instance of the [ChartTooltipBeha
 <chart:SfChart>
 . . . 
     <chart:SfChart.ChartBehaviors>
-	      <chart:ChartTooltipBehavior 
-          BackgroundColor="Blue" 
-          TextColor="White" 
-          Margin="5" 
-          FontSize="15"/>
+        <chart:ChartTooltipBehavior BackgroundColor="Blue" TextColor="White" Margin="5" 
+                            FontSize="15"/>
     </chart:SfChart.ChartBehaviors>
     
-    <chart:PolarAreaSeries ItemsSource="{Binding Data}" 
-                        XBindingPath="Demand"
-                        YBindingPath="Year2010"
-                        EnableTooltip="True"/>
+    <chart:PolarAreaSeries ItemsSource="{Binding Data}" XBindingPath="Demand" YBindingPath="Year2010"
+                            EnableTooltip="True"/>
 </chart:SfChart>
 
 {% endhighlight %} 
@@ -655,7 +580,6 @@ PolarAreaSeries series = new PolarAreaSeries();
 . . .
 series.EnableTooltip = true;
 chart.Series.Add(series);
-
 ChartTooltipBehavior tool = new ChartTooltipBehavior();
 tool.BackgroundColor = Color.Blue;
 tool.TextColor = Color.White;
@@ -680,17 +604,12 @@ chart.ChartBehaviors.Add(tool);
 <chart:SfPolarChart>
 . . .
    <chart:SfPolarChart.TooltipBehavior>
-        <chart:ChartTooltipBehavior 
-        Background="Blue" 
-        TextColor="White" 
-        Margin="5" 
-        FontSize="15"/>
+        <chart:ChartTooltipBehavior Background="Blue" TextColor="White" Margin="5" 
+                    FontSize="15"/>
    </chart:SfPolarChart.TooltipBehavior>
 
-   <chart:PolarAreaSeries ItemsSource="{Binding Data}" 
-                       XBindingPath="Demand"
-                       YBindingPath="Year2010"
-                       EnableTooltip="True"/>
+   <chart:PolarAreaSeries ItemsSource="{Binding Data}" XBindingPath="Demand" YBindingPath="Year2010"
+                    EnableTooltip="True"/>
 </chart:SfPolarChart>
 
 {% endhighlight %} 
@@ -716,14 +635,12 @@ chart.TooltipBehavior = tooltip;
 ## Upcoming features in .NET MAUI
 
 **Chart** 
- 
-* Support for chart localization. 
+
 * Suspend and resume notification support. 
 
 **Series**
 
 * Listen to property change support for series.
-* Get data point index based on value.
 * Notify event or method when series are rendering.
 * Suspend and resume notification.
 
@@ -733,9 +650,6 @@ chart.TooltipBehavior = tooltip;
 * Align the axis labels and tick inside the series clip rect.
 * Range style customization.
 * Event or method to notify the axis label click.
-* Axis label wrapping support.
-* Support for axis draw labels as multiple lines using /n.
-* Support setting the maximum labels count for the chart axis.
 
 **Legend** 
 
@@ -743,23 +657,16 @@ chart.TooltipBehavior = tooltip;
 * Support to enable or disable the legend icon visibility.
 * Legend items wrap and floating support.
 * Maximum width support for Legend.
-* Individual legend items based on the data point count.
 * Event or method to notify the legend click and the creation of a legend item.
-
-**Data label**
-
-* DataTemplate support for data labels.
 
 ## Known issue 
 
-* According to this ticket - https://www.syncfusion.com/feedback/49487/gradient-support-for-line-based-series-in-net-maui-chart, the gradient feature is not functioning properly for Polar line series in .NET MAUI Chart.
+* #FB49487 - Gradient Support for Line-Based Series in .NET MAUI Chart.
 
 ## Unsupported features from Xamarin.Forms
 
-* Only continuous series will support data marker symbols.
-* Data label created event support was not provided in series. Instead, you can use the [DrawDataLabel]() override method in the [ChartSeries]() class.
-* [RangeStyle]() support was not provided in the axis. Instead, you can use [DrawMajorTick](), [DrawMinorTick]() and [DrawGridLine]() override methods provided in the axis class.
-* In.NET MAUI, the [ChartDataPoint]() model class was no longer available. Instead, create your own model.
+* Data label created event support was not provided in series. Instead, you can use the [DrawDataLabel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_DrawDataLabel_Microsoft_Maui_Graphics_ICanvas_Microsoft_Maui_Controls_Brush_System_String_Microsoft_Maui_Graphics_PointF_System_Int32_) override method in the [ChartSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html) class.
+* In.NET MAUI, the [ChartDataPoint](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.ChartDataPoint.html#) model class was no longer available. Instead, create your own model.
 
 
 ## Support and feedback

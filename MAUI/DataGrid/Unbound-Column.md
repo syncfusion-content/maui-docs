@@ -63,74 +63,73 @@ The arithmetic or logic expression can be specified by using the expression prop
 List of supported arithmetic and logical operations are as follows:
 
 <table>
-<tr>
-<th> Arithmetic operations </th>
-<th> Operator </th>
-</tr>
-<tr>
-<td> Add</td>
-<td> + </td>
-</tr>
-<tr>
-<td> Subtract</td>
-<td> - </td>
-</tr>
-<tr>
-<td> Multiply</td>
-<td> / </td>
-</tr>
-<tr>
-<td> Divide </td>
-<td> / </td>
-</tr>
-<tr>
-<td> Power</td>
-<td> ^ </td>
-</tr>
-<tr>
-<td> Mod</td>
-<td> % </td>
-</tr>
-<tr>
-<td> Greater Than</td>
-<td> < </td>
-</tr>
-<tr>
-<td> Less than</td>
-<td> > </td>
-</tr>
-<tr>
-<td> Equal</td>
-<td> = </td>
-</tr>
-<tr>
-<td> GreaterThanOrEqual</td>
-<td> >= </td>
-</tr>
-<tr>
-<td> LessThanOrEqual </td>
-<td> <= </td>
-</tr>
+    <tr>
+        <th> Arithmetic operations </th>
+        <th> Operator </th>
+    </tr>
+    <tr>
+        <td> Add</td>
+        <td> + </td>
+    </tr>
+    <tr>
+        <td> Subtract</td>
+        <td> - </td>
+    </tr>
+    <tr>
+        <td> Multiply</td>
+        <td> / </td>
+    </tr>
+    <tr>
+        <td> Divide </td>
+        <td> / </td>
+    </tr>
+    <tr>
+        <td> Power</td>
+        <td> ^ </td>
+    </tr>
+    <tr>
+        <td> Mod</td>
+        <td> % </td>
+    </tr>
+    <tr>
+        <td> Greater Than</td>
+        <td> < </td>
+    </tr>
+    <tr>
+        <td> Less than</td>
+        <td> > </td>
+    </tr>
+    <tr>
+        <td> Equal</td>
+        <td> = </td>
+    </tr>
+    <tr>
+        <td> GreaterThanOrEqual</td>
+        <td> >= </td>
+    </tr>
+    <tr>
+        <td> LessThanOrEqual </td>
+        <td> <= </td>
+    </tr>
 </table>
 
 <table>
-<tr>
-<th> Logical operations </th>
-<th> Operators </th>
-</tr>
-<tr>
-<td> AND </td>
-<td> (char)135 </td>
-</tr>
-<tr>
-<td> OR  </td>
-<td> (char)136 </td>
-</tr>
-<tr>
-<td> NOT </td>
-<td> (char)137 </td>
-</tr>
-<tr>
+    <tr>
+        <th> Logical operations </th>
+        <th> Operators </th>
+    </tr>
+    <tr>
+        <td> AND </td>
+        <td> (char)135 </td>
+    </tr>
+    <tr>
+        <td> OR  </td>
+        <td> (char)136 </td>
+    </tr>
+    <tr>
+        <td> NOT </td>
+        <td> (char)137 </td>
+    </tr>
 </table>
 
 {% tabs %}

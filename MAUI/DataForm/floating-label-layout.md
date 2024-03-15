@@ -1,5 +1,5 @@
 ---
-layout: Post
+layout: post
 title: Floating label layout in .NET MAUI DataForm control | Syncfusion
 description: Learn about the Floating label layout support in Syncfusion .NET MAUI DataForm (SfDataForm) control.
 platform: maui
@@ -82,6 +82,8 @@ Dataform supports the floating label layout for the following editors.
 * Picker editor
 * Date picker
 * Time picker
+
+N> The time picker will not work in the Windows platform within the text input layout.
 
 ## Container types
 Containers enhance the perspective of the dataform editor views. By default, the container type is [Outlined](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.TextInputLayoutContainerType.html#Syncfusion_Maui_DataForm_TextInputLayoutContainerType_Outlined). By using the [ContainerType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.TextInputLayoutSettings.html#Syncfusion_Maui_DataForm_TextInputLayoutSettings_ContainerType) property of the [TextInputLayoutSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.TextInputLayoutSettings.html) in [DataForm](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html) or [DataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html), modify the container type to [Filled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.TextInputLayoutContainerType.html#Syncfusion_Maui_DataForm_TextInputLayoutContainerType_Filled) or [None](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.TextInputLayoutContainerType.html#Syncfusion_Maui_DataForm_TextInputLayoutContainerType_None).
@@ -869,3 +871,5 @@ N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-dataform/t
 The Floating label layout does not support non-editable editors such as [RadioGroup editor](https://help.syncfusion.com/maui/dataform/editors#radiogroup-editor), [CheckBox editor](https://help.syncfusion.com/maui/dataform/editors#checkbox-editor), and [Switch editor](https://help.syncfusion.com/maui/dataform/editors#switch-editor).
 
 N> By default, the layout type of unsupported editors is `Default`. You can also set the layout type for the unsupported editor using this [Changing layout type of the DataFormItem](https://help.syncfusion.com/maui/dataform/floating-label-layout#changing-the-layout-type-for-the-editor).
+
+N> The time picker will not work in Windows platform within the text input layout.

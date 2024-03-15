@@ -1,5 +1,5 @@
 ---
-layout: cell-selection
+layout: post
 title: Cell selection in the .NET MAUI Scheduler | Syncfusion
 description: Learn how to customize the cell selection in Syncfusion .NET MAUI Scheduler (SfScheduler) control here.
 platform: maui
@@ -30,12 +30,14 @@ this.Scheduler.CellSelectionView.Stroke = Brush.Green;
 {% endhighlight %}
 {% endtabs %}
 
+![customize-border-color-in-cell-selection-in-maui-scheduler](images/cell-selection/border-color-in-maui-scheduler.jpeg)
+
 ## Background
 
 The cell selection background color can be customized by using the `Background` property in the `CellSelectionView`.
-The default value is Brush.Transparent.
+The default value is `Brush.Transparent`.
 
-Note: As default, `stroke` will have value; if background alone is required, you can set the stroke property to transparent.
+N> As default, `Stroke` will have value; if `Background` alone is required, you can set the  `Stroke` property to `Brush.Transparent`.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="3" %}
@@ -51,6 +53,8 @@ Note: As default, `stroke` will have value; if background alone is required, you
 this.Scheduler.CellSelectionView.Background = Brush.Green;
 {% endhighlight %}
 {% endtabs %}
+
+![customize-background-color-in-cell-selection-in-maui-scheduler](images/cell-selection/background-color-in-maui-scheduler.jpeg)
 
 ## Corner Radius
 
@@ -72,12 +76,13 @@ this.Scheduler.CellSelectionView.CornerRadius = 2;
 {% endhighlight %}
 {% endtabs %}
 
+![customize-corner-radius-in-cell-selection-in-maui-scheduler](images/cell-selection/corner-radius-in-maui-scheduler.jpeg)
+
 ## Stroke Thickness
 
-The thickness of the `Stroke` of Scheduler can be customized by using the `StrokeWidth` property in the `CellSelectionView`.  
+The thickness of the selection view `Stroke` can be customized by using the `StrokeWidth` property in the `CellSelectionView`. 
 
-Note: The `StrokeWidth` is only applicable for `Stroke` property.
-
+N> The `StrokeWidth` is only applicable for the `Stroke` property.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="3" %}
@@ -94,6 +99,8 @@ this.Scheduler.CellSelectionView.Stroke = Brush.Green;
 this.Scheduler.CellSelectionView.StrokeWidth = 2;
 {% endhighlight %}
 {% endtabs %}
+
+![customize-stroke-thickness-in-cell-selection-in-maui-scheduler](images/cell-selection/stroke-thickness-in-maui-scheduler.jpeg)
 
 ## Template
 
@@ -116,3 +123,5 @@ The scheduler allows you to use the custom view as a selection view by using the
 
 {% endhighlight %}
 {% endtabs %}
+
+![customize-template-in-cell-selection-in-maui-scheduler](images/cell-selection/template-in-maui-scheduler.jpeg)

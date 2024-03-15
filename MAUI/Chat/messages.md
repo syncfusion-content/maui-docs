@@ -13,11 +13,11 @@ documentation: ug
 
 <table>
 <tr>
-<td>{{'Message.Author'| markdownify }}</td>
-<td>Specify the avatar and name of the message sender using {{'Author.Avatar'| markdownify }} and {{'Author.Name'| markdownify }} properties respectively.</td>
+<td><code>Message.Author</code></td>
+<td>Specify the avatar and name of the message sender using <code>Author.Avatar</code> and <code>Author.Name</code> properties respectively.</td>
 </tr>
 <tr>
-<td>{{'Message.DateTime'| markdownify }}</td>
+<td><code>Message.DateTime</code></td>
 <td>To display message created or received time.</td>
 </tr>
 </table>

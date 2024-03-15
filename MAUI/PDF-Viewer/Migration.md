@@ -396,9 +396,9 @@ To make migration from [Xamarin SfPdfViewer](https://www.syncfusion.com/xamarin-
 <td>Prints the PDF document.</td>
 </tr>
 <tr>
-<td>{{'[SaveDocument](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.SfPdfViewer.html#Syncfusion_SfPdfViewer_XForms_SfPdfViewer_SaveDocument)'| markdownify }}</td>
-<td>{{`FlattenOnSave`| markdownify }}</td>
-<td>Saves the document and returns the stream.</td>
+<td>{{'[SaveDocument(bool flattenForm)](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.SfPdfViewer.html#Syncfusion_SfPdfViewer_XForms_SfPdfViewer_SaveDocument_System_Boolean_)'| markdownify }}</td>
+<td>{{'FormField.FlattenOnSave'| markdownify }}</td>
+<td>Specifies whether the form fields should be flattened or not on saving</td>
 </tr>
 </table>
 
@@ -482,7 +482,7 @@ To make migration from [Xamarin SfPdfViewer](https://www.syncfusion.com/xamarin-
 </tr>
 </table>
 
-## Upcoming Features   
+## Upcoming Features
 
 * Built-in toolbar
 * Thumbnail

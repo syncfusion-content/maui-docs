@@ -15,7 +15,7 @@ Drawer can be toggled using
 * Swipe gesture
 
 ## Opening Drawer Programmatically
-The IsOpen property and [ToggleDrawer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html#Syncfusion_Maui_NavigationDrawer_SfNavigationDrawer_ToggleDrawer) method enable programmatically opening or closing the drawer.
+The `IsOpen` property and [ToggleDrawer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html#Syncfusion_Maui_NavigationDrawer_SfNavigationDrawer_ToggleDrawer) method enable programmatically opening or closing the drawer.
 
 {% tabs %}
 
@@ -37,7 +37,7 @@ SfNavigationDrawer navigationDrawer = new SfNavigationDrawer()
 
 {% endtabs %}
 
-Using [`ToggleDrawer`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html#Syncfusion_Maui_NavigationDrawer_SfNavigationDrawer_ToggleDrawer) method,
+Using [ToggleDrawer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html#Syncfusion_Maui_NavigationDrawer_SfNavigationDrawer_ToggleDrawer) method,
 
 {% highlight c# %} 
 
@@ -45,4 +45,4 @@ navigationDrawer.ToggleDrawer();
 
 {% endhighlight %}
 
-Toggling drawer by swipe gesture is explained in [`Swipe Gesture and Sensitivity`](https://help.syncfusion.com/maui/navigationdrawer/swipe-gesture) section.
+Toggling drawer by swipe gesture is explained in [Swipe Gesture and Sensitivity](https://help.syncfusion.com/maui/navigationdrawer/swipe-gesture) section.

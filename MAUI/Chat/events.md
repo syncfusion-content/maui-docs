@@ -37,7 +37,7 @@ The `SfChat` control includes a built-in event called `SfChat.MessageTapped` and
 ### MessageTapped Command
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}   
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}   
 
     <sfChat:SfChat x:Name="sfChat"  
             MessageTappedCommand="{Binding TappedCommand}" />
