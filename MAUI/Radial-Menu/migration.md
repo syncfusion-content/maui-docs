@@ -85,30 +85,6 @@ this.Content = radialMenu;
 </tr>
 </table>
 
-## Classes 
-
-<table>
-<tr>
-<th>Xamarin SfRadialMenu control</th>
-<th>.NET MAUI SfRadialMenu control</th>
-<th>Description</th>
-</tr>
-
-<tr>
-<td>{{'[SfRadialMenu]'}}</td>
-<td>{{'[SfRadialMenu]'}}</td>
-<td>The SfRadialMenu displays a hierarchical menu in a circular layout, which is optimized for touch enabled devices. Typically, it is used as a context menu, and it can expose more menu items in the same space than traditional menus.</td>
-</tr>
-
-<tr>
-<td>{{'[SfRadialMenuItem]'}}</td>
-<td>{{'[SfRadialMenuItem]'}}</td>
-<td>Represents an item that can be added as children in SfRadialMenu.Any object can be added as SfRadialMenuItem and that can be populated as menus.</td>
-</tr>
-
-</table> 
-
-
 ## Properties
 
 ### SfRadialMenu Control
