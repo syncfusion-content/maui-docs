@@ -530,21 +530,30 @@ private void ExportToExcel_Clicked(object sender, EventArgs e)
 
 N> The SfDataGrid is unable to export the DataGridTemplateColumn to PDF or Excel because it is not possible to access to the loaded views necessary for drawing them with specific range, values, and so on from the DataGridTemplateColumn.
 
-## Exporting Options
+## ExportToExcel
 
-Furthermore, you can export the data to Excel by providing the grid and [DataGridExcelExportingOption](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.Exporting.DataGridExcelExportingOption.html#properties) as arguments to the `ExportToExcel` method, which provides various customization options.
+To export the data to PDF, you can use the [DataGridPdfExportingController.ExportToPdf]() method, which requires passing the SfDataGrid as an argument.
 
 {% tabs %}
 {% highlight c# %}
-DataGridExcelExportingController excelExport = new DataGridExcelExportingController();
-DataGridExcelExportingOption exportOption = new DataGridExcelExportingOption();
-exportOption.CanExportColumnWidth = false;
-exportOption.DefaultColumnWidth = 150;
-var excelEngine = excelExport.ExportToExcel(this.dataGrid, exportOption);
+
+private void Button_Clicked(object sender, EventArgs e)
+{
+    DataGridExcelExportingController excelExport = new DataGridExcelExportingController();
+    DataGridExcelExportingOption option = new DataGridExcelExportingOption();
+    var excelEngine = excelExport.ExportToExcel(this.datagrid, option);            
+    var workbook = excelEngine.Excel.Workbooks[0];
+    MemoryStream stream = new MemoryStream();
+    workbook.SaveAs(stream);
+    workbook.Close();
+    excelEngine.Dispose();
+    string OutputFilename = "ExportFeature.xlsx";
+    SaveService saveService = new();
+    saveService.SaveAndView(OutputFilename, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", stream);
+}
+
 {% endhighlight %}
 {% endtabs %}
-
-The SfDataGrid offers various properties within the `DataGridExcelExportingOption` class to enable customization of the grid when exporting it to Excel.
 
 ## Exporting Options
 
@@ -590,7 +599,7 @@ The [ExcelRowIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid
 
 By using the `System.Collections.IEnumerable Columns` property, you can retrieve or set the [ExcludedColumns](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.Exporting.DataGridExcelExportingOption.html#Syncfusion_Maui_DataGrid_Exporting_DataGridExcelExportingOption_ExcludedColumns) collection of columns, which contains all the columns to be exported. The columns in the ExcludedColumns list will not be included in the Columns collection.
 
-## Customize header, groups and table summary when exporting
+## Customize header, stacked header, groups, table summary and unbound row when exporting
 
 ### Export groups
 
@@ -619,13 +628,26 @@ By default, the column headers will be exported to Excel sheet. To export the Sf
 {% tabs %}
 {% highlight c# %}
 DataGridExcelExportingOption option = new DataGridExcelExportingOption();
-        option.CanExportHeader = false;
+option.CanExportHeader = false;
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="Export DataGrid to Excel format without header cells" src="Images\export-to-excel\maui-datagrid-exclude-header.png" width="689"/>
+<img alt="Export DataGrid to Excel format without header cells" src="Images\export-to-excel\maui-datagrid-header-row.png" width="689"/>
 
-### ExportGroupSummary
+### Export stacked header
+
+By default, the column headers will not be exported to Excel sheet. To export the SfDataGrid with stacked headers column, set the [DataGridExcelExportingOption.CanExportStackedHeaders]() property to `true`.
+
+{% tabs %}
+{% highlight c# %}
+DataGridExcelExportingOption option = new DataGridExcelExportingOption();
+option.CanExportStackedHeaders = true;
+{% endhighlight %}
+{% endtabs %}
+
+<img alt="Export DataGrid to Excel format without header cells" src="Images\export-to-excel\maui-datagrid-stacked-header.png" width="689"/>
+
+### Export group summary
 
 By default, the `GroupSummary` rows in the data grid will be exported to Excel. To export the `SfDataGrid` without group summaries, set the [DataGridExcelExportingOption.CanExportGroupSummary](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.Exporting.DataGridExcelExportingOption.html#Syncfusion_Maui_DataGrid_Exporting_DataGridExcelExportingOption_CanExportGroupSummary) property to `false`.
 
@@ -666,9 +688,23 @@ To export the data grid with applied grouping, enable the option to expand or co
 {% tabs %}
 {% highlight c# %}
 DataGridExcelExportingOption option = new DataGridExcelExportingOption();
-        option.CanAllowOutlining = true;
+option.CanAllowOutlining = true;
 {% endhighlight %}
 {% endtabs %}
+
+#### Export unbound row
+
+By default, unbound row in the data grid will not be exported to Excel. To export the SfDataGrid with unbound row, set the [DataGridExcelExportingOption.CanExportUnboundRow]() property to `true`.
+
+{% tabs %}
+{% highlight c# %}
+DataGridExcelExportingOption option = new DataGridExcelExportingOption();
+option.CanExportUnboundRow= true;
+{% endhighlight %}
+{% endtabs %}
+
+* CanExportUnboundRow = true;
+<img alt="Export DataGrid with unbound row" src="Images\export-to-excel\maui-datagrid-unbound-row.png" width="689"/>
 
 ### Exclude columns when exporting
 

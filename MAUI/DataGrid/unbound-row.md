@@ -123,12 +123,10 @@ private void Datagrid_QueryUnboundRow(object? sender, DataGridUnboundRowEventArg
     }
     else if (e.RowColumnIndex.ColumnIndex == 1)
     {
-        
         e.Value = (datagrid.CurrentRow as OrderInfo).CustomerID;
     }
     else if (e.RowColumnIndex.ColumnIndex == 2)
     {
-        
         e.Value = (datagrid.CurrentRow as OrderInfo).ShipCountry;
     }
     e.Handled = true;
@@ -138,10 +136,10 @@ private void Datagrid_QueryUnboundRow(object? sender, DataGridUnboundRowEventArg
 
 <img alt="Populating data for unbound rows" src="Images\unboundRow\maui-datagrid-unbound-row-population-data.png" width="404"/>
 
-## Refreshing the Unbound Rows at runtime
+## Refreshing the unbound rows at runtime
 
 
-### Add/Remove unbound rows
+### Add or remove unbound rows
 
 You can add or remove unbound rows using [SfDataGrid.UnboundRows]() property which reflects in UI immediately.
  
@@ -154,6 +152,7 @@ Here in the below code example, we have invalidated the unbound rows whenever se
 {% tabs %}
 {% highlight c# %}
 datagrid.SelectionChanged += Datagrid_SelectionChanged;
+
 private void Datagrid_SelectionChanged(object? sender, DataGridSelectionChangedEventArgs e)
 {
     datagrid!.InvalidateUnboundRow(datagrid!.UnboundRows[0]);
@@ -230,3 +229,7 @@ The unbound row can be obtained by using the [GetUnboundRowAtRowIndex]() method.
 var unboundRow = dataGrid.GetUnboundRowAtRowIndex(1);
 {% endhighlight %}
 {% endtabs %}
+
+## Styling
+
+For unbound row styling, refer to this [documentation for styling](https://help.syncfusion.com/maui/datagrid/styling#styling-unbound-row-cell) and [documentation for conditional styling]().

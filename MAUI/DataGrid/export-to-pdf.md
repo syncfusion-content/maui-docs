@@ -510,6 +510,7 @@ private void ExportToPDF_Clicked(object sender, EventArgs e)
     MemoryStream stream = new MemoryStream();
     DataGridPdfExportingController pdfExport = new DataGridPdfExportingController();
     DataGridPdfExportingOption option = new DataGridPdfExportingOption();
+    var pdfDoc = new PdfDocument();
     pdfDoc = pdfExport.ExportToPdf(this.dataGrid, option);
     pdfDoc.Save(stream);
     pdfDoc.Close(true);
@@ -601,9 +602,9 @@ option.CanRepeatHeaders = true;
 {% endtabs %}
 
 
-### Customize header, groups and table summary when exporting
+### Customize header, stacked header, groups, table summary and unbound row when exporting
 
-#### Export Groups
+#### Export groups
 
 By default, all the groups in the data grid will be exported to PDF document. To export the data grid without groups, set the [DataGridPdfExportingOption.CanExportGroups](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.Exporting.DataGridPdfExportingOption.html#Syncfusion_Maui_DataGrid_Exporting_DataGridPdfExportingOption_CanExportGroups) property to `false`.
 
@@ -617,7 +618,7 @@ option.CanExportGroups = true;
 <img alt="Export DataGrid with groups to PDF format" src="Images\export-to-pdf\maui-datagrid-export-groups.png" width="689"/>
 
 
-#### Exclude Column header while exporting
+#### Exclude column header while exporting
 
 By default, the column headers will be exported to PDF document. To export the SfDataGrid without the column headers, set the [DataGridPdfExportingOption.CanExportHeader](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.Exporting.DataGridPdfExportingOption.html#Syncfusion_Maui_DataGrid_Exporting_DataGridPdfExportingOption_CanExportHeader) property to `false`.
 
@@ -630,7 +631,20 @@ option.CanExportHeader = false;
 
 <img alt="Export DataGrid to PDF format without column header cells" src="Images\export-to-pdf\maui-datagrid-exclude-header.png" width="689"/>
 
-#### Export Table Summaries 
+#### Export stacked header 
+
+By default, the column headers will not be exported to PDF document. To export the SfDataGrid with the column headers, set the [DataGridPdfExportingOption.CanExportStackedHeaders]() property to `true`.
+
+{% tabs %}
+{% highlight c# %}
+DataGridPdfExportingOption option = new DataGridPdfExportingOption();
+option.CanExportStackedHeaders = true;
+{% endhighlight %}
+{% endtabs %}
+
+<img alt="Export DataGrid to PDF format without column header cells" src="Images\export-to-pdf\maui-datagrid-stacked-header.png" width="689"/>
+
+#### Export table summaries 
 
 By default, table summaries in the data grid will be exported to PDF. To export the SfDataGrid without table summaries, set the [DataGridPdfExportingOption.CanExportTableSummary](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.Exporting.DataGridPdfExportingOption.html#Syncfusion_Maui_DataGrid_Exporting_DataGridPdfExportingOption_CanExportTableSummary) property to `false`.
 
@@ -643,7 +657,7 @@ option.CanExportTableSummary = true;
 
 <img alt="Export DataGrid to PDF format with table summary rows" src="Images\export-to-pdf\maui-datagrid-export-table-summary.png" width="689"/>
 
-#### Export Group Summaries 
+#### Export group summaries 
 
 By default, the GroupSummary rows in the data grid will be exported to PDF. To export the `SfDataGrid` without group summaries, set the [DataGridPdfExportingOption.CanExportGroupSummary](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.Exporting.DataGridPdfExportingOption.html#Syncfusion_Maui_DataGrid_Exporting_DataGridPdfExportingOption_CanExportGroupSummary) property to `false`.
 
@@ -655,6 +669,19 @@ option.CanExportGroupSummary = true;
 {% endtabs %}
 
 <img alt="Export DataGrid to PDF format with group summaries" src="Images\export-to-pdf\maui-datagrid-export-group-summary.png" width="689"/>
+
+#### Export unbound row 
+
+By default, the unbound rows in the data grid will not be exported to PDF. To export the `SfDataGrid` with unbound rows, set the [DataGridPdfExportingOption.CanExportUnboundRow]() property to `true`.
+
+{% tabs %}
+{% highlight c# %}
+DataGridPdfExportingOption option = new DataGridPdfExportingOption();
+option.CanExportUnboundRow = true;
+{% endhighlight %}
+{% endtabs %}
+
+<img alt="Export DataGrid to PDF format with unbound row" src="Images\export-to-pdf\maui-datagrid-unbound-row.png" width="689"/>
 
 #### Exporting the selected rows of SfDataGrid
 
