@@ -194,7 +194,15 @@ namespace RadialSample
         {
             InitializeComponent();
 
-            SfRadialMenu radialMenu = new SfRadialMenu();
+            SfRadialMenu radialMenu = new SfRadialMenu()
+            {
+                CenterButtonBackFontFamily="Maui Material Assets",
+                CenterButtonBackFontSize=28,
+                CenterButtonBackText="&#xe72d;",
+                CenterButtonFontFamily="Maui Material Assets",
+                CenterButtonFontSize=28,
+                CenterButtonText="&#xe710;",
+            };
             RadialMenuItemsCollection itemCollection = new RadialMenuItemsCollection()
             {
                 new SfRadialMenuItem() { FontFamily="Maui Material Assets" FontSize="20" Text="&#xe72e;" },
@@ -276,7 +284,11 @@ namespace RadialSample
             string[] mainItem = new string[] { "Bold", "Copy", "Paste", "Undo", "Color" };
             string[] colorItem = new string[] { "Font", "Gradient", "Highlight" };
 
-            SfRadialMenu radialMenu = new SfRadialMenu();
+            SfRadialMenu radialMenu = new SfRadialMenu()
+            {
+                CenterButtonText="Edit", 
+                CenterButtonFontSize=12,
+            };
 
             // Adding radial menu outer rim items.
 
@@ -445,7 +457,7 @@ namespace RadialSample
             InitializeComponent();
             SfRadialMenu radialMenu = new SfRadialMenu()
             {
-                AnimationDuration = 1000
+                AnimationDuration = 800
             };
 
             RadialMenuItemsCollection itemCollection = new RadialMenuItemsCollection()
