@@ -513,7 +513,6 @@ You can style the elements of a hyperlink message by setting values to the in-bu
 <td> SfChatIncomingHyperlinkColor </td>
 <td> Text color of the URL in a hyperlink message. </td>
 </tr><tr>
-<tr>
 <td> SfChatOutgoingHyperlinkColor </td>
 <td> Text color of the URL in an outgoing hyperlink message. </td>
 </tr><tr>
