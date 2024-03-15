@@ -50,9 +50,6 @@ this.Content = treeMap;
 {% endhighlight %}
 {% highlight C# tabtitle="PopulationDetails.cs" %}
 
-/// <summary>    
-/// Represents the custom data properties.
-/// </summary>
 public class PopulationDetails
 {
     public string Country { get; set; }
@@ -63,9 +60,6 @@ public class PopulationDetails
 {% endhighlight %}
 {% highlight C# tabtitle="PopulationViewModel.cs" %}
 
-/// <summary>    
-/// Represents demographic information for population data for a specific country.
-/// </summary>
 public class PopulationViewModel
 {
     public PopulationViewModel()
@@ -143,9 +137,6 @@ this.Content = treeMap;
 {% endhighlight %}
 {% highlight C# tabtitle="PopulationDetails.cs" %}
 
-/// <summary>    
-/// Represents the custom data properties.
-/// </summary>
 public class PopulationDetails
 {
     public string Country { get; set; }
@@ -156,9 +147,6 @@ public class PopulationDetails
 {% endhighlight %}
 {% highlight C# tabtitle="PopulationViewModel.cs" %}
 
-/// <summary>    
-/// Represents demographic information for population data for a specific country.
-/// </summary>
 public class PopulationViewModel
 {
     public PopulationViewModel()
@@ -236,9 +224,6 @@ this.Content = treeMap;
 {% endhighlight %}
 {% highlight C# tabtitle="PopulationDetails.cs" %}
 
-/// <summary>    
-/// Represents the custom data properties.
-/// </summary>
 public class PopulationDetails
 {
     public string Country { get; set; }
@@ -249,9 +234,6 @@ public class PopulationDetails
 {% endhighlight %}
 {% highlight C# tabtitle="PopulationViewModel.cs" %}
 
-/// <summary>    
-/// Represents demographic information for population data for a specific country.
-/// </summary>
 public class PopulationViewModel
 {
     public PopulationViewModel()
@@ -291,7 +273,7 @@ public class PopulationViewModel
 
 ![slice-and-dice-horizontal-layout-type-in-maui-treemap](images/layouts/slice-and-dice-horizontal-layout-type-in-maui-treemap.jpeg) {:width="313" height="444" .lazy .shadow-effect}
 
-## SliceAndDiceVertical
+## Slice and dice vertical
 
 The `SliceAndDiceVertical` layout organizes data into vertical rectangles with a high aspect ratio and displays them sorted vertically. This layout will start to arrange each rectangle in a vertical direction and the size of the rectangle will be calculated based on the `PrimaryValuePath` property value.
 
@@ -330,9 +312,6 @@ this.Content = treeMap;
 {% endhighlight %}
 {% highlight C# tabtitle="PopulationDetails.cs" %}
 
-/// <summary>    
-/// Represents the custom data properties.
-/// </summary>
 public class PopulationDetails
 {
     public string Country { get; set; }
@@ -343,9 +322,6 @@ public class PopulationDetails
 {% endhighlight %}
 {% highlight C# tabtitle="PopulationViewModel.cs" %}
 
-/// <summary>    
-/// Represents demographic information for population data for a specific country.
-/// </summary>
 public class PopulationViewModel
 {
     public PopulationViewModel()

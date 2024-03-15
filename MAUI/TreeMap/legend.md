@@ -77,9 +77,6 @@ this.Content = treeMap;
 {% endhighlight %}
 {% highlight C# tabtitle="PopulationDetails.cs" %}
 
-/// <summary>    
-/// Represents the custom data properties.
-/// </summary>
 public class PopulationDetails
 {
     public string Country { get; set; }
@@ -90,9 +87,6 @@ public class PopulationDetails
 {% endhighlight %}
 {% highlight C# tabtitle="PopulationViewModel.cs" %}
 
-/// <summary>    
-/// Represents demographic information for population data for a specific country.
-/// </summary>
 public class PopulationViewModel
 {
     public PopulationViewModel()
@@ -197,9 +191,6 @@ this.Content = treeMap;
 {% endhighlight %}
 {% highlight C# tabtitle="PopulationDetails.cs" %}
 
-/// <summary>    
-/// Represents the custom data properties.
-/// </summary>
 public class PopulationDetails
 {
     public string Country { get; set; }
@@ -210,9 +201,6 @@ public class PopulationDetails
 {% endhighlight %}
 {% highlight C# tabtitle="PopulationViewModel.cs" %}
 
-/// <summary>    
-/// Represents demographic information for population data for a specific country.
-/// </summary>
 public class PopulationViewModel
 {
     public PopulationViewModel()
@@ -319,9 +307,6 @@ this.Content = treeMap;
 {% endhighlight %}
 {% highlight C# tabtitle="PopulationDetails.cs" %}
 
-/// <summary>    
-/// Represents the custom data properties.
-/// </summary>
 public class PopulationDetails
 {
     public string Country { get; set; }
@@ -332,9 +317,6 @@ public class PopulationDetails
 {% endhighlight %}
 {% highlight C# tabtitle="PopulationViewModel.cs" %}
 
-/// <summary>    
-/// Represents demographic information for population data for a specific country.
-/// </summary>
 public class PopulationViewModel
 {
     public PopulationViewModel()
@@ -455,9 +437,6 @@ this.Content = treeMap;
 {% endhighlight %}
 {% highlight C# tabtitle="PopulationDetails.cs" %}
 
-/// <summary>    
-/// Represents the custom data properties.
-/// </summary>
 public class PopulationDetails
 {
     public string Country { get; set; }
@@ -468,9 +447,6 @@ public class PopulationDetails
 {% endhighlight %}
 {% highlight C# tabtitle="PopulationViewModel.cs" %}
 
-/// <summary>    
-/// Represents demographic information for population data for a specific country.
-/// </summary>
 public class PopulationViewModel
 {
     public PopulationViewModel()
@@ -582,9 +558,6 @@ this.Content = treeMap;
 {% endhighlight %}
 {% highlight C# tabtitle="PopulationDetails.cs" %}
 
-/// <summary>    
-/// Represents the custom data properties.
-/// </summary>
 public class PopulationDetails
 {
     public string Country { get; set; }
@@ -595,9 +568,6 @@ public class PopulationDetails
 {% endhighlight %}
 {% highlight C# tabtitle="PopulationViewModel.cs" %}
 
-/// <summary>    
-/// Represents demographic information for population data for a specific country.
-/// </summary>
 public class PopulationViewModel
 {
     public PopulationViewModel()
@@ -705,9 +675,6 @@ this.Content = treeMap;
 {% endhighlight %}
 {% highlight C# tabtitle="PopulationDetails.cs" %}
 
-/// <summary>    
-/// Represents the custom data properties.
-/// </summary>
 public class PopulationDetails
 {
     public string Country { get; set; }
@@ -718,9 +685,6 @@ public class PopulationDetails
 {% endhighlight %}
 {% highlight C# tabtitle="PopulationViewModel.cs" %}
 
-/// <summary>    
-/// Represents demographic information for population data for a specific country.
-/// </summary>
 public class PopulationViewModel
 {
     public PopulationViewModel()
@@ -832,9 +796,6 @@ this.Content = treeMap;
 {% endhighlight %}
 {% highlight C# tabtitle="PopulationDetails.cs" %}
 
-/// <summary>    
-/// Represents the custom data properties.
-/// </summary>
 public class PopulationDetails
 {
     public string Country { get; set; }
@@ -845,9 +806,6 @@ public class PopulationDetails
 {% endhighlight %}
 {% highlight C# tabtitle="PopulationViewModel.cs" %}
 
-/// <summary>    
-/// Represents demographic information for population data for a specific country.
-/// </summary>
 public class PopulationViewModel
 {
     public PopulationViewModel()

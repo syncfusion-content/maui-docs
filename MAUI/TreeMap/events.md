@@ -12,11 +12,8 @@ documentation: ug
 ## SelectionChanged
 
 The `SelectionChanged` event occurs when there's a change in the selection within a tree map item.
-Below is a list of the arguments:
 
-* `Sender`: This contains the `SfTreeMap` object.
-
-* `SelectionChanged`: This event occurs when a selection change action is performed on an element available in the `TreeMapSelectionChangedEventArgs` object.
+We can get the below details from the `SelectionChanged` event.
 
     * `OldItems`: Returns the previously selected item.
     * `NewItems`: Returns the newly selected item.
@@ -49,11 +46,6 @@ Below is a list of the arguments:
 
 this.treeMap.SelectionChanged += this.OnTreeMapSelectionChanged;
 
- /// <summary>
- /// Occurs when the selection within the tree map item is changed.
- /// </summary>
- /// <param name="sender">The tree map object.</param>
- /// <param name="e">the selection changed event args.</param>
  private void OnTreeMapSelectionChanged(object sender, TreeMapSelectionChangedEventArgs e)
  {
      var oldItems = e.OldItems;
@@ -66,9 +58,6 @@ this.treeMap.SelectionChanged += this.OnTreeMapSelectionChanged;
 {% endhighlight %}
 {% highlight C# tabtitle="PopulationDetails.cs" %}
 
-/// <summary>    
-/// Represents the custom data properties.
-/// </summary>
 public class PopulationDetails
 {
     public string Country { get; set; }
@@ -79,9 +68,6 @@ public class PopulationDetails
 {% endhighlight %}
 {% highlight c# tabtitle="PopulationViewModel.cs" %}
 
-/// <summary>    
-/// Represents demographic information for countries in the Americas for the year 2023.
-/// </summary>
 public class PopulationViewModel
 {
     public PopulationViewModel()

@@ -36,8 +36,4 @@ Moves selection to the previous item on the left side of the TreeMap.
 <br/><br/></td></tr>
 </table>
 
-N> 
-
-* When `SelectionMode` is set to `Single,` each key press clears the previous focus and selects the new item.
-* When `SelectionMode` is set to `Multiple,` the previously focused item remains selected while new items are selected with each key press.
-* When `SelectionMode` is set to `None,` the item remains unselected.
+N> When `SelectionMode` is set to `Single,` each key press clears the previous focus and selects the new item. When `SelectionMode` is set to `Multiple,` the previously focused item remains selected while new items are selected with each key press.When `SelectionMode` is set to `None,` the item remains unselected.
