@@ -271,4 +271,4 @@ T> The size of the [`Content`]() view will automatically be stretched to the siz
 
 You can find the complete getting started sample from this [link]().
 
-N> [\#11230](https://github.com/dotnet/maui/issues/11230) In Android, when an image's pixel size cannot stretch to fit the Parallax View Source control during loading, it results in a Java.Lang.RuntimeException. It is necessary to use the image as Parallax View Content without pixelation.
+N> In Android, when an image's pixel size cannot stretch to fit the Parallax View Source control during loading, it results in a Java.Lang.RuntimeException. It is necessary to use the image as Parallax View Content without pixelation.
