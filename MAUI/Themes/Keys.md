@@ -135,7 +135,7 @@ This page lists the keys for each control and the element to which it is mapped 
 
     <tr>
         <td rowspan="39">
-            SfAutoCompleteStyles  
+            SfAutocompleteStyles  
             <br/>
             <br/>
         </td>
@@ -145,7 +145,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>    
-            By merging this key in application resources, you can customize the appearance of SfAutoComplete without merging common theme resource and control style resource dictionaries.
+            By merging this key in application resources, you can customize the appearance of SfAutocomplete without merging common theme resource and control style resource dictionaries.
 			
 {% highlight xaml %}
 
