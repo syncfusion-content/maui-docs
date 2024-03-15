@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Selection and highlights in .NET MAUI TreeMap | Syncfusion
-description: Learn about the selection and highlights in Syncfusion .NET MAUI TreeMap(STreeMap) control.
+description: Learn about the functionality of selection and highlights within the Syncfusion .NET MAUI TreeMap(STreeMap) control.
 platform: maui
 control: TreeMap (SfTreeMap)
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
  
 # Selection in TreeMap control
 
-The Treemap control allows interactive selection of items by clicking or tapping. `Tooltip`, if enabled, displays additional information upon clicking or tapping, enhancing user understanding of data points. When `SelectionMode` is `None`, interaction is disabled, ideal for static visualizations.
+The Treemap control allows interactive selection of items by clicking or tapping. `Tooltip`, if enabled, displays additional information upon clicking or tapping, enhancing user understanding of data points. When `SelectionMode` is `None`, interaction is disabled for treemap items.
 
 ## Selection mode
 
