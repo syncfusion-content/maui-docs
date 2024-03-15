@@ -269,7 +269,7 @@ public class PopulationViewModel
 
 ## Applying brush settings
 
-The brush settings is used to customize the fill colors for leaf items based on ranges or values, offering four brush settings: `UniformBrushSettings,` `RangeBrushSettings,` `DesaturationBrushSettings,` and `PaletteBrushSettings.` Each setting provides unique options for defining and applying color schemes, enhancing the visualization of the tree map.
+The brush settings are used to customize the fill colors for leaf items based on ranges or values, offering four brush settings: `UniformBrushSettings,` `RangeBrushSettings,` `DesaturationBrushSettings,` and `PaletteBrushSettings.` Each setting provides unique options for defining and applying color schemes, enhancing the visualization of the treemap.
 
 {% tabs %}
 {% highlight XAML hl_lines="11 12 13" %}
