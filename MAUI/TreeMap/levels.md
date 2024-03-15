@@ -13,7 +13,7 @@ Levels in .NET MAUI TreeMap allow for hierarchical data visualization, enabling 
 ## Group path
 The `GroupPath` property of `TreeMapLevel` specifies the name of the property in the data object that determines how items in the tree map are grouped. The grouping is based on the values of this property in the data source, which splits the level into distinct groups.
 
-In the following example, levels are added, and each level is configured using the `GroupPath.`
+In the following example shows, how levels are added, and each level is configured using the `GroupPath.`
 
 {% tabs %}
 {% highlight XAML hl_lines="14 15 16" %}
@@ -106,10 +106,12 @@ public class PopulationViewModel
 {% endtabs %}
 
 ## Customize level appearance
-The level appearance customization can be achieved by using the `TextStyle`, `Background`, `Spacing`, `Stroke`, and `StrokeWidth` properties of `TreeMapLevel` in the `SfTreeMap.`
+
+The level appearance customization can be achieved by using the `Spacing,` `Stroke,` `StrokeWidth,` `TextStyle`, and `Background` properties of `TreeMapLevel` in the `SfTreeMap.`
 
 ### Customize level appearance using spacing
-The `Spacing` property of `TreeMapLevel` can be customized by using the `Levels` in `SfTreeMap.` It is used to customize the spacing between the tree map header items and its default value is `1.`
+
+The `Spacing` property of `TreeMapLevel` can be customized by using the `Levels` property in `SfTreeMap.` It is used to customize the spacing between the tree map header items, with a default value of `1.`
 
 {% tabs %}
 {% highlight XAML hl_lines="16" %}
@@ -203,7 +205,8 @@ public class PopulationViewModel
 {% endtabs %}
 
 ### Customize level appearance using header height
-The `HeaderHeight` property of `TreeMapLevel` can be customized by using the `Levels` in `SfTreeMap.` It is used to customize the header height for each level in the tree map and its default value is `24.`
+
+The `HeaderHeight` property of `TreeMapLevel` can be customized using the `Levels` property in `SfTreeMap.` This property adjusts the header height for each level in the tree map, with a default value of `24.`
 
 {% tabs %}
 {% highlight XAML hl_lines="16" %}
@@ -298,7 +301,7 @@ public class PopulationViewModel
 
 ### Customize level appearance using background
 
-The `Background` property of `TreeMapLevel` can be customized by using the `Levels` in the `SfTreeMap.` It is used to customize the background brush for the tree map header item. The default value of `Background` is `Null.`
+The `Background` property of `TreeMapLevel` can be customized by using the `Levels` property in the `SfTreeMap.` It is used to customize the background brush for the tree map header item. The default value of `Background` is `Null.`
 
 {% tabs %}
 {% highlight XAML hl_lines="16" %}
@@ -391,11 +394,11 @@ public class PopulationViewModel
 {% endhighlight %}
 {% endtabs %}
 
-N> Setting a background value for the property applies the same background color to tree map header items within the same level. To customize the background color for both header and leaf items at each level, utilize the `GroupItemBrushSettings` property.
+N> To customize the background color for both header and leaf items at each level, utilize the `GroupItemBrushSettings` property.
 
 ### Customize level appearance using stroke
 
-The `Stroke` property of `TreeMapLevel` can be customized by using the `Levels` in the `SfTreeMap.` It is used to customize the stroke color for the tree map header item. The default value of `Stroke` is `new SolidColorBrush(Color.FromArgb("#CAC4D0")).`
+The `Stroke` property of `TreeMapLevel` can be customized by using the `Levels` property in the `SfTreeMap.` It is used to customize the stroke color for the tree map header item. The default value of `Stroke` is `new SolidColorBrush(Color.FromArgb("#CAC4D0")).`
 
 {% tabs %}
 {% highlight XAML hl_lines="16" %}
@@ -490,7 +493,7 @@ public class PopulationViewModel
 
 ###  Customize level appearance using stroke width
 
-The `StrokeWidth` property of `TreeMapLevel` can be customized by using the `Levels` in the `SfTreeMap.` It is used to customize the width of the stroke for the tree map header item. The default value of `StrokeWidth` is `1.`
+The `StrokeWidth` property of `TreeMapLevel` can be customized by using the `Levels` property in the `SfTreeMap.` It is used to customize the width of the stroke for the tree map header item. The default value of `StrokeWidth` is `1.`
 
 {% tabs %}
 {% highlight XAML hl_lines="16" %}
