@@ -238,29 +238,9 @@ We can show or hide  Navigation Button using `ShowNavigationButton` property.
 {% endhighlight %}
 {% highlight c# %}
 
-    SfRotator rotator = new SfRotator();
-    var ImageCollection = new List<RotatorModel> {
-    new RotatorModel ("image1.png"),
-    new RotatorModel ("image2.png"),
-    new RotatorModel ("image3.png"),
-    new RotatorModel ("image4.png"),
-    new RotatorModel ("image5.png")
-    };
-    var itemTemplate = new DataTemplate(() =>
-    {
-        var grid = new Grid();
-        var nameLabel = new Image();
-        nameLabel.SetBinding(Image.SourceProperty, "Image");
-        grid.Children.Add(nameLabel);
-        return grid;
-    });
-    rotator.ItemTemplate = itemTemplate;
-    rotator.NavigationStripMode = NavigationStripMode.Thumbnail;rotator.ShowNavigationButton = false;
-    rotator.ItemsSource = ImageCollection;
-    rotator.WidthRequest=550;
-    rotator.HeightRequest=550;
-    this.Content = rotator;
-
+rotator.NavigationStripMode = NavigationStripMode.Thumbnail;
+rotator.ShowNavigationButton = false;
+    
 {% endhighlight %}
 {% endtabs %}
 
