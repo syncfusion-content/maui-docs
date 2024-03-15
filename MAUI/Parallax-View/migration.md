@@ -45,23 +45,23 @@ To initialize the control, import the parallax view namespace and Initialize [Sf
 
 {% highlight xaml %}
 
-    <ContentPage
-        . . .
-        xmlns:parallax="clr-namespace:Syncfusion.XForms.ParallaxView;assembly=Syncfusion.XForms.ParallaxView">
+<ContentPage
+    . . .
+    xmlns:parallax="clr-namespace:Syncfusion.XForms.ParallaxView;assembly=Syncfusion.XForms.ParallaxView">
 
-        <parallax:SfParallaxView/>
+    <parallax:SfParallaxView/>
 
-    </ContentPage>
+</ContentPage>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-    using Syncfusion.XForms.ParallaxView;
-    ...
+using Syncfusion.XForms.ParallaxView;
+...
 
-    SfParallaxView parallax = new SfParallaxView();
-    this.Content = parallax;
+SfParallaxView parallax = new SfParallaxView();
+this.Content = parallax;
 
 {% endhighlight %}
 
@@ -77,13 +77,13 @@ To initialize the control, import the parallax view namespace and Initialize [Sf
 
 {% highlight xaml %}
 
-    <ContentPage
-        . . .    
-        xmlns:parallax="clr-namespace:Syncfusion.Maui.ParallaxView;assembly=Syncfusion.Maui.ParallaxView">
+<ContentPage
+    . . .    
+    xmlns:parallax="clr-namespace:Syncfusion.Maui.ParallaxView;assembly=Syncfusion.Maui.ParallaxView">
 
-        <parallax:SfParallaxView/>
+    <parallax:SfParallaxView/>
 
-    </ContentPage>
+</ContentPage>
  
 {% endhighlight %}
 {% highlight C# %}
@@ -113,7 +113,7 @@ this.Content = parallax;
 </tr>
 <tr>
 <td>Syncfusion.Maui.Core</td>
-<td>ParallaxScrollingEventArg</td>
+<td>ParallaxScrollingEventArgs</td>
 </tr>
 </table>
 
