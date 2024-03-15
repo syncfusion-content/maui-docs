@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Accessibility in .NET MAUI TreeMap (STreeMap) control | Syncfusion
+title: Accessibility in .NET MAUI TreeMap (STreeMap) Control | Syncfusion
 description: Learn here about performing actions using accessibility in Syncfusion .NET MAUI TreeMap (STreeMap) control.
 platform: maui
 control: TreeMap (SfTreeMap)
@@ -17,7 +17,7 @@ The `Syncfusion .NET MAUI TreeMap` supports keyboard shortcuts for user interact
 
 N> This feature is only applicable for Windows and macOS platforms.
 
-Below is a table outlining the various shortcuts and their associated functions:
+The following is a table outlining the various shortcuts and their associated functions:
 
 <table>
 <tr>

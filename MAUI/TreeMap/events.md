@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Events in .NET MAUI TreeMap (SfTreemap) control | Syncfusion
+title: Events in .NET MAUI TreeMap (SfTreemap) Control | Syncfusion
 description: Learn here all about the Events support in the Syncfusion .NET MAUI TreeMap (SfTreemap) control and more.
 platform: maui
 control: TreeMap (SfTreeMap)
@@ -11,7 +11,7 @@ documentation: ug
 
 ## SelectionChanged
 
-The `SelectionChanged` event occurs when there's a change in the selection within a tree map item.
+The `SelectionChanged` event occurs when there is a change in the selection within a tree map item.
 
 We can get the below details from the `SelectionChanged` event.
 
