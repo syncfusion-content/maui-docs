@@ -7,7 +7,7 @@ control: SfPolarChart
 documentation: ug
 ---
 
-# Rendering Position  
+# Rendering Position in .NET MAUI Chart
 
 ## Start Angle
 
