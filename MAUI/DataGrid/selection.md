@@ -304,7 +304,7 @@ public partial class MainPage : ContentPage
 By default, the current cell is focusable for all the columns. To disable current cell focus for a particular column, you can simply set `DataGridColumn.AllowFocus` property to `false`.
 
 {% tabs %}
-{% highlight XAML}
+{% highlight XAML %}
 <syncfusion:SfDataGrid x:Name="sfDataGrid"
                     SelectionMode="Single"
                     NavigationMode="Cell"

@@ -70,18 +70,20 @@ public MainPage()
 {% endhighlight %}
 {% endtabs %}
 
+ ![Step shape in .NET MAUI SfStepProgressBar.](images/customization/maui-stepprogressbar-stepshape.png){:width="286" height="351"}
+
 ## Customize step content 
-Customize the step content type, size, active step index, stroke width, and active step progress value by using these properties, [ContentType]() with [Numbering](), [Tick](), [Cross](), [Dot]() and [Images](). 
+Customize the step content type by using the [ContentType]() property with [Numbering](), [Tick](), [Cross](), [Dot]() and [Images](). 
 
 {% tabs %}
 {% highlight xaml hl_lines="9 12 15" %}
 
 <progressBar:SfStepProgressBar x:Name = "stepProgressBar"
-                            StepSize="40"
-                            StepContentSize="25"
-							ActiveStepIndex="1"
-							StepStrokeWidth="10"    
-                            ActiveStepProgressValue="60">
+                        StepSize="40"
+                        StepContentSize="25"
+						ActiveStepIndex="1"
+						StepStrokeWidth="10"    
+                        ActiveStepProgressValue="60">
 
     <progressBar:SfStepProgressBar.InProgressStepSettings>
         <progressBar:StepSettings Background="#ff67579c" ContentType="Dot" ContentFillColor="White"/>
@@ -128,6 +130,8 @@ this.Content = sfstepProgressbar;
 {% endhighlight %}
 {% endtabs %}
 
+ ![Step content in .NET MAUI SfStepProgressBar.](images/customization/maui-stepprogressbar-stepcontent.png){:width="286" height="351"}
+ 
 ## Animation duration
 Customize the progress animation duration by using the [ProgressAnimationDuration]() property in `SfStepProgressBar`. By default the value of the animation duration is `1000`.
 
@@ -190,36 +194,8 @@ public MainPage()
 {% endhighlight %}
 {% endtabs %}
 
-## Label spacing
-You can customize the space between the step and primary or secondary text of the step progress bar by using the [LabelSpacing]() property in `SfStepProgressBar`.
-
-{% tabs %}
-{% highlight xaml hl_lines="2" %}
-
-<progressBar:SfStepProgressBar x:Name = "stepProgressBar" 
-                        LabelSpacing="10">
-</progressBar:SfStepProgressBar>
-
-{% endhighlight %}
-
-{% highlight c# %}
-
-public MainPage()
-{
-    InitializeComponent();
-    SfStepProgressBar sfstepProgressbar = new SfStepProgressBar()
-    {
-         LabelSpacing = 10,
-    };
-          
-    this.Content = sfstepProgressbar;
-}
-
-{% endhighlight %}
-{% endtabs %}
-
 ## Customize step appearance
-You can customize the appearance of the steps by using the [ShapeType](), [Background](), [ContentType](), [ContentFillColor](), [ProgressColor](), [Stroke](), and [TextStyle] properties from the InProgressStepSettings for the in-progress state, CompletedStepSettings for the completed state, and NotStartedStepSettings for the not-started state. 
+You can customize the appearance of the steps by using the [ShapeType](), [Background](), [ContentType](), [ContentFillColor](), [ProgressColor](), [Stroke](), and [TextStyle]() properties from the [InProgressStepSettings]() for the in-progress state, [CompletedStepSettings]() for the completed state, and [NotStartedStepSettings]() for the not-started state. 
 
 {% tabs %}
 {% highlight xaml hl_lines="4 5 6 7 9 11 12 13 14 19 20 21 22" %}
@@ -307,3 +283,5 @@ public MainPage()
 
 {% endhighlight %}
 {% endtabs %}
+
+ ![Step customization in .NET MAUI SfStepProgressBar.](images/customization/maui-stepprogressbar-customstepprogress.png){:width="286" height="351"}
