@@ -8,10 +8,12 @@ documentation: ug
 ---
  
 # Levels in .NET MAUI TreeMap (SfTreeMap)
-Levels in .NET MAUI TreeMap allow for hierarchical data visualization, enabling multi-level categorization and exploration of complex datasets. You can seamlessly navigate through different levels of data hierarchy, facilitating comprehensive understanding and analysis.
+Levels in .NET MAUI TreeMap allow for hierarchical data visualization, enabling multi-level categorization and exploration of complex datasets. The TreeMap supports n number of levels and each level is separated by using the `GroupPath` property.
 
-## TreeMap Level
-Using `Levels` property of `SfTreeMap` you can integrate multiple hierarchical data levels to the TreeMap. The `GroupPath` property of `TreeMapLevel` specifies the name of the property in the data object that determines how items in the tree map are grouped. The grouping is based on the values of this property in the data source, which splits the level into distinct groups.
+## Group path
+The `GroupPath` property of `TreeMapLevel` specifies the name of the property in the data object that determines how items in the tree map are grouped. The grouping is based on the values of this property in the data source, which splits the level into distinct groups.
+
+In the following example, levels are added, and each level is configured using the `GroupPath.`
 
 {% tabs %}
 {% highlight XAML hl_lines="14 15 16" %}
@@ -103,11 +105,11 @@ public class PopulationViewModel
 {% endhighlight %}
 {% endtabs %}
 
-## Level customization
-The .NET MAUI TreeMap control allows you to customize the background, text style, spacing, and more.
+## Customize level appearance
+The level appearance customization can be achieved by using the `TextStyle`, `Background`, `Spacing`, `Stroke`, and `StrokeWidth` properties of `TreeMapLevel` in the `SfTreeMap.`
 
-### Customize the levels spacing
-Customize the spacing between the tree map header items using the `Spacing` property of `TreeMapLevel`. The default value of `Spacing` property is `1`.
+### Customize level appearance using spacing
+The `Spacing` property of `TreeMapLevel` can be customized by using the `Levels` in `SfTreeMap.` It is used to customize the spacing between the tree map header items and its default value is `1.`
 
 {% tabs %}
 {% highlight XAML hl_lines="16" %}
@@ -200,8 +202,8 @@ public class PopulationViewModel
 {% endhighlight %}
 {% endtabs %}
 
-### Customize the header height
-Customize the height of the header for each level using the `HeaderHeight` property of `TreeMapLevel`. The default value of `HeaderHeight` property is `24`.
+### Customize level appearance using header height
+The `HeaderHeight` property of `TreeMapLevel` can be customized by using the `Levels` in `SfTreeMap.` It is used to customize the header height for each level in the tree map and its default value is `24.`
 
 {% tabs %}
 {% highlight XAML hl_lines="16" %}
@@ -294,8 +296,9 @@ public class PopulationViewModel
 {% endhighlight %}
 {% endtabs %}
 
-### Customize the background 
-Customize the background brush for the tree map header items using the `Background` property of `TreeMapLevel`.
+### Customize level appearance using background
+
+The `Background` property of `TreeMapLevel` can be customized by using the `Levels` in the `SfTreeMap.` It is used to customize the background brush for the tree map header item. The default value of `Background` is `Null.`
 
 {% tabs %}
 {% highlight XAML hl_lines="16" %}
@@ -315,7 +318,7 @@ Customize the background brush for the tree map header items using the `Backgrou
     </treemap:SfTreeMap.LeafItemBrushSettings>
     <treemap:SfTreeMap.Levels>
         <treemap:TreeMapLevel GroupPath="Continent"
-                              Background="Blue"/>
+                              Background="LightGreen"/>
     </treemap:SfTreeMap.Levels>
 </treemap:SfTreeMap>
 
@@ -329,7 +332,7 @@ treeMap.DataSource = viewModel.PopulationDetails;
 treeMap.PrimaryValuePath = "Population";
 treeMap.LeafItemBrushSettings = new TreeMapUniformBrushSettings() { Brush = Brush.Orange };
 treeMap.LeafItemSettings = new TreeMapLeafItemSettings() { LabelPath = "Country" };
-treeMap.Levels.Add(new TreeMapLevel() { GroupPath = "Continent", Background = Brush.Blue });
+treeMap.Levels.Add(new TreeMapLevel() { GroupPath = "Continent", Background = Brush.LightGreen });
 this.Content = treeMap;
 
 {% endhighlight %}
@@ -388,8 +391,11 @@ public class PopulationViewModel
 {% endhighlight %}
 {% endtabs %}
 
-### Customize the border color
-Customize the border color of the each level using the `Stroke` property of `TreeMapLevel`.
+N> Setting a background value for the property applies the same background color to tree map header items within the same level. To customize the background color for both header and leaf items at each level, utilize the `GroupItemBrushSettings` property.
+
+### Customize level appearance using stroke
+
+The `Stroke` property of `TreeMapLevel` can be customized by using the `Levels` in the `SfTreeMap.` It is used to customize the stroke color for the tree map header item. The default value of `Stroke` is `new SolidColorBrush(Color.FromArgb("#CAC4D0")).`
 
 {% tabs %}
 {% highlight XAML hl_lines="16" %}
@@ -482,11 +488,12 @@ public class PopulationViewModel
 {% endhighlight %}
 {% endtabs %}
 
-### Customize the border thickness
-Customize the border thickness for each level using the `StrokeWidth` property of `TreeMapLevel`. The default value of `StrokeWidth` is `1`.
+###  Customize level appearance using stroke width
+
+The `StrokeWidth` property of `TreeMapLevel` can be customized by using the `Levels` in the `SfTreeMap.` It is used to customize the width of the stroke for the tree map header item. The default value of `StrokeWidth` is `1.`
 
 {% tabs %}
-{% highlight XAML hl_lines="14 15 16" %}
+{% highlight XAML hl_lines="16" %}
 
 <treemap:SfTreeMap x:Name="treeMap"
                    DataSource="{Binding PopulationDetails}"
@@ -517,7 +524,7 @@ treeMap.DataSource = viewModel.PopulationDetails;
 treeMap.PrimaryValuePath = "Population";
 treeMap.LeafItemBrushSettings = new TreeMapUniformBrushSettings() { Brush = Brush.Orange };
 treeMap.LeafItemSettings = new TreeMapLeafItemSettings() { LabelPath = "Country" };
-treeMap.Levels.Add(new TreeMapLevel() { GroupPath = "Continent", StrokeWidth = 2 });
+treeMap.Levels.Add(new TreeMapLevel() { GroupPath = "Continent", StrokeWidth = 3 });
 this.Content = treeMap;
 
 {% endhighlight %}
@@ -576,11 +583,12 @@ public class PopulationViewModel
 {% endhighlight %}
 {% endtabs %}
 
-### Customize the text style of each level
-Customize the appearance of header item text using the `TextStyle` property of `TreeMapLevel`, which is used to customize the `TextColor`, `FontSize`, `FontFamily` and `FontAttributes`.
+### Customize level appearance using style
+
+The `TextStyle` property of `TreeMapLevel` can be customized by using the `Levels` in the `SfTreeMap.` It is used to customize the `TextColor,` `FontSize,` `FontFamily` and `FontAttributes.` of tree map header item text.
 
 {% tabs %}
-{% highlight XAML hl_lines="14 15 16" %}
+{% highlight XAML hl_lines="16 17 18 19 20" %}
 
 <treemap:SfTreeMap x:Name="treeMap"
                    DataSource="{Binding PopulationDetails}"
@@ -608,7 +616,7 @@ Customize the appearance of header item text using the `TextStyle` property of `
 
 {% endhighlight %}
 
-{% highlight C# hl_lines="9" %}
+{% highlight C# hl_lines="7 8 9 10 11" %}
 
 SfTreeMap treeMap = new SfTreeMap();
 PopulationViewModel viewModel = new PopulationViewModel();
@@ -621,6 +629,7 @@ treeMap.Levels.Add(new TreeMapLevel()
     GroupPath = "Continent",
     TextStyle = new TreeMapTextStyle() { TextColor = Colors.Red, FontSize = 14, FontAttributes = FontAttributes.Italic },
 });
+
 this.Content = treeMap;
 
 {% endhighlight %}
@@ -678,4 +687,3 @@ public class PopulationViewModel
 
 {% endhighlight %}
 {% endtabs %}
-
