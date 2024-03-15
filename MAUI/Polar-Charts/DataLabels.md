@@ -199,10 +199,7 @@ The [SfPolarChart]() provides support to customize the appearance of the datalab
 <chart:SfPolarChart >
     <chart:SfPolarChart.Resources>
         <DataTemplate x:Key="labelTemplate">
-            <HorizontalStackLayout Spacing="5">
-                <Label Text="{Binding Item.Tree}" VerticalOptions="Center" FontSize = "15"/>
                 <Image Source="arrow.png" WidthRequest="15" HeightRequest="15"/>
-            </HorizontalStackLayout>
         </DataTemplate>
     </chart:SfPolarChart.Resources>
     . . .
@@ -228,15 +225,6 @@ series.YBindingPath = "Tree";
 
 DataTemplate labelTemplate = new DataTemplate(() =>
 {
-    HorizontalStackLayout horizontalStackLayout = new HorizontalStackLayout { Spacing = 5 };
-
-    var label = new Label
-    {
-        VerticalOptions = LayoutOptions.Center,
-        FontSize = 15
-    };
-    label.SetBinding(Label.TextProperty, new Binding("Item.Tree"));
-
     var image = new Image
     {
         Source = "arrow.png",
@@ -244,10 +232,7 @@ DataTemplate labelTemplate = new DataTemplate(() =>
         HeightRequest = 15
     };
     
-    horizontalStackLayout.Children.Add(label);
-    horizontalStackLayout.Children.Add(image);
-    
-    return horizontalStackLayout;
+    return image;
 });
 
 series.LabelTemplate = labelTemplate;
