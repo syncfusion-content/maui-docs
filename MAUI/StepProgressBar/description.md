@@ -89,6 +89,8 @@ public class ViewModel
 {% endhighlight %}
 {% endtabs %}
 
+ ![Text in .NET MAUI SfStepProgressBar.](images/description/maui-stepprogressbar-text.png)
+ 
 ## Formatted text
 [PrimaryFormattedText]() and [SecondaryFormattedText]() can be used to customize the description with different formatting style. The following code example explains how to set `PrimaryFormattedText` and `SecondaryFormattedText` to a step view.
 
@@ -190,6 +192,8 @@ public class ViewModel
 {% endhighlight %}
 {% endtabs %}
 
+ ![Formatted text in .NET MAUI SfStepProgressBar.](images/description/maui-stepprogressbar-formattedtext.png)
+
 N> If both `PrimaryText` and `PrimaryFormattedText` are provided, then `PrimaryFormattedText` will be displayed. This precedence is same as for the `SecondaryText` and `SecondaryFormattedText`.
 
 ## Customize label spacing
@@ -215,6 +219,8 @@ this.Content = stepProgressBar;
 {% endhighlight %}
 {% endtabs %}
 
+ ![Label spacing in .NET MAUI SfStepProgressBar.](images/description/maui-stepprogressbar-labelspacing.png)
+ 
 ## Customize label position
 You can customize the position of primary or secondary text of the step progress bar by using the [LabelPosition]() property in `SfStepProgressBar`. It can be positioned at the `Start`, `End`, `Bottom` or `Top`. 
 
@@ -239,6 +245,8 @@ this.Content = stepProgressBar;
 
 {% endhighlight %}
 {% endtabs %}
+
+ ![Label position in .NET MAUI SfStepProgressBar.](images/description/maui-stepprogressbar-labelposition.png)
 
 N> The `LabelPosition` property will be considered only if either `PrimaryText` or `SecondaryText`, and either `PrimaryFormattedText` or `SecondaryFormattedText`, is provided.
 
@@ -327,6 +335,8 @@ public class ViewModel
 {% endhighlight %}
 {% endtabs %}
 
+ ![Customization using image in .NET MAUI SfStepProgressBar.](images/description/maui-stepprogressbar-custom-image.png)
+ 
 ### Customization using Font icon
 
 You can add the images with font icons to the [ImageSource]() property in `SfStepProgressBar`. The following code example explains how to set an image in step view.
@@ -402,3 +412,5 @@ public class ViewModel
 
 {% endhighlight %}
 {% endtabs %}
+
+ ![Customization using font in .NET MAUI SfStepProgressBar.](images/description/maui-stepprogressbar-custom-fonticon.png)
