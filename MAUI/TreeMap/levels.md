@@ -8,9 +8,11 @@ documentation: ug
 ---
  
 # Levels in .NET MAUI TreeMap (SfTreeMap)
-Levels in .NET MAUI TreeMap allow for hierarchical data visualization, enabling multi-level categorization and exploration of complex datasets. The TreeMap supports n number of levels and each level is separated by using the `GroupPath` property.
+
+Levels in .NET MAUI TreeMap allow for hierarchical data visualization, enabling multi-level categorization and exploration of complex datasets. The TreeMap supports n number of levels and each level is separated using the `GroupPath` property.
 
 ## Group path
+
 The `GroupPath` property of `TreeMapLevel` specifies the name of the property in the data object that determines how items in the tree map are grouped. The grouping is based on the values of this property in the data source, which splits the level into distinct groups.
 
 In the following example shows, how levels are added, and each level is configured using the `GroupPath.`
@@ -588,7 +590,7 @@ public class PopulationViewModel
 
 ### Customize level appearance using style
 
-The `TextStyle` property of `TreeMapLevel` can be customized by using the `Levels` in the `SfTreeMap.` It is used to customize the `TextColor,` `FontSize,` `FontFamily` and `FontAttributes.` of tree map header item text.
+The `TextStyle` property of `TreeMapLevel` can be customized using the `Levels` in the `SfTreeMap.` It is used to customize the `TextColor,` `FontSize,` `FontFamily` and `FontAttributes` of treemap header item text.
 
 {% tabs %}
 {% highlight XAML hl_lines="16 17 18 19 20" %}

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Selection and highlights in .NET MAUI TreeMap | Syncfusion
+title: Selection and Highlights in .NET MAUI TreeMap | Syncfusion in .NET MAUI TreeMap | Syncfusion
 description: Learn about the functionality of selection and highlights within the Syncfusion .NET MAUI TreeMap(STreeMap) control.
 platform: maui
 control: TreeMap (SfTreeMap)
@@ -9,14 +9,15 @@ documentation: ug
  
 # Selection in TreeMap control
 
-The Treemap control allows interactive selection of items by clicking or tapping. `Tooltip`, if enabled, displays additional information upon clicking or tapping, enhancing user understanding of data points. When `SelectionMode` is `None`, interaction is disabled for treemap items.
+The Treemap control enables users to select specific groups or items for distinction, with the Tooltip feature providing additional information during interaction. However, when the SelectionMode is set to `None,` interaction with treemap items is disabled.
 
 ## Selection mode
 
-Selection mode in the Treemap control determines the interactivity level, enabling users to choose specific items by clicking or tapping. The default value of `SelectionMode` is `SelectionMode.Single`.
+The selection mode in the Treemap control determines the interactivity level, enabling users to choose specific items. The default value of `SelectionMode` is `Single`.
 
 ### Single selection
-With `Single` selection mode, you can choose one item at a time within the Treemap control, ideal for isolating and examining individual data points thoroughly.
+
+In the `Single` selection mode, users can choose only one item at a time within the Treemap control.
 
 {% tabs %}
 {% highlight XAML hl_lines="4" %}
@@ -105,7 +106,8 @@ public class PopulationViewModel
 {% endtabs %}
 
 ### Multiple selection
-With `Multiple` selection mode you can select multiple items simultaneously, facilitating comparative analysis and exploration of related data within the Treemap.
+
+In the `Multiple` selection mode, users can select multiple items simultaneously within the Treemap control.
 
 {% tabs %}
 {% highlight XAML hl_lines="4" %}
@@ -194,7 +196,8 @@ public class PopulationViewModel
 {% endtabs %}
 
 ### None
-When set to none selection mode, interactivity within the Treemap control is disabled.
+
+In the `None` selection mode, interaction with treemap items is disabled.
 
 {% tabs %}
 {% highlight XAML hl_lines="4" %}
@@ -282,8 +285,9 @@ public class PopulationViewModel
 {% endhighlight %}
 {% endtabs %}
 
-## Select items programatically
-You can programmatically add default selected items by utilizing the `SelectedItems` property of `SfTreeMap`. This property holds a collection of tree map items representing the currently selected ones. In `Single` selection mode, only the first item in the SelectedItems collection will be selected. In `Multiple` selection mode, all items in the SelectedItems collection will be selected. When `SelectionMode` is set to `None`, no items will be selected automatically.
+## Programatic item selection
+
+You can programmatically select the tree map items by utilizing the `SelectedItems` property in the `SfTreeMap`. This property holds a collection of tree map items representing the currently selected ones. In `Single` selection mode, only the first item in the SelectedItems collection will be selected. In `Multiple` selection mode, all items in the `SelectedItems` collection will be selected. When `SelectionMode` is set to `None`, no items are selected.
 
 {% tabs %}
 {% highlight XAML %}
@@ -303,7 +307,7 @@ You can programmatically add default selected items by utilizing the `SelectedIt
 </treemap:SfTreeMap>
 
 {% endhighlight %}
-{% highlight C# hl_lines="5"  %}
+{% highlight C# hl_lines="7"  %}
 
 SfTreeMap treeMap = new SfTreeMap();
 PopulationViewModel viewModel = new PopulationViewModel();
@@ -311,6 +315,7 @@ treeMap.DataSource = viewModel.PopulationDetails;
 treeMap.PrimaryValuePath = "Population";
 treeMap.LeafItemSettings = new TreeMapLeafItemSettings() { LabelPath = "Country" };
 treeMap.LeafItemBrushSettings = new TreeMapUniformBrushSettings() { Brush = Brush.Orange };
+treeMap.SelectedItems.Add(new TreeMapItemInfo() { Item = "Brazil", GroupLevel = -1 });
 this.Content = treeMap;
 
 {% endhighlight %}
@@ -369,8 +374,13 @@ public class PopulationViewModel
 {% endhighlight %}
 {% endtabs %}
 
-## Customize selected item border color
-Customize the selected item border color using `SelectedItemStroke` property of `SfTreeMap`. The default value of `SelectedItemStroke` is `Color.FromArgb("#1C1B1F")`.
+## Customize selected item appearance
+
+The selected items appearance customization can be achieved by using the `SelectedItemStroke` and `SelectedItemStrokeWidth` properties in the `SfTreeMap`.
+
+### Customize selected item appearance using stroke
+
+The selected item stroke can be customized by using the `SelectedItemStroke` property of `SfTreeMap.` The default value of `SelectedItemStroke` is `new SolidColorBrush(Color.FromArgb("#1C1B1F")).`
 
 {% tabs %}
 {% highlight XAML hl_lines="4" %}
@@ -458,8 +468,11 @@ public class PopulationViewModel
 {% endhighlight %}
 {% endtabs %}
 
-## Customize selected item border thickness
-Customize selected item border thickness using `SelectedItemStrokeWidth` property of `SfTreeMap`. The default value of `SelectedItemStrokeWidth` is `2`.
+N> This property is applicable only when the `SelectionMode` is set to `Single` or `Multiple.`
+
+### Customize selected item appearance using stroke width
+
+The selected item stroke width can be customized by using the `SelectedItemStrokeWidth` property of `SfTreeMap.` The default value of `SelectedItemStrokeWidth` is `2.`
 
 {% tabs %}
 {% highlight XAML hl_lines="4" %}
