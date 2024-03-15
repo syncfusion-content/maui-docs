@@ -32,11 +32,11 @@ The following instructions outline the process of installing the Syncfusion .NET
 
 5.	After installation, reload Visual Studio Code using the **Reload Window** command in the Visual Studio Code palette. You can access the command palette by pressing **Ctrl+Shift+P** and searching for Reload Window among the Visual Studio Code commands.
 
-   ![Reload-Window](images/Reload-Window.png)
+    ![Reload-Window](images/Reload-Window.png)
 
 6.	You can now create a new Syncfusion .NET MAUI application using the Syncfusion .NET MAUI extensions from the Visual Studio Code Palette. Find the **Syncfusion .NET MAUI Template Studio: Launch** option among the Visual Studio Code commands to open the Syncfusion .NET MAUI Template Studio wizard.
 
-   ![CreateProjectPalette](images/CreateProjectPalette.png)
+    ![CreateProjectPalette](images/CreateProjectPalette.png)
 
 ## Install from the Visual Studio Code Marketplace
 
@@ -53,7 +53,7 @@ The following instructions outline the process of downloading and installing Syn
     ![Reload-Window](images/Reload-Window.png)
 5.	You can now initiate the creation of a new Syncfusion .NET MAUI application using the Syncfusion .NET MAUI extensions from the Visual Studio Code Palette. Locate the **Syncfusion .NET MAUI Template Studio: Launch** option among the Visual Studio Code commands to open the Syncfusion .NET MAUI Template Studio wizard.
 
-  ![CreateProjectPalette](images/CreateProjectPalette.png)
+    ![CreateProjectPalette](images/CreateProjectPalette.png)
 
 ## Manually Installing an Extension in Visual Studio Code
 
@@ -63,12 +63,13 @@ The following instructions detail the manual installation process of the Syncfus
 
 2.	In VS Code, navigate to the Extensions view by clicking on the Extensions icon located in the Activity Bar.
 
-  ![ExtensionIcon](images/ExtensionIcon.png)
+    ![ExtensionIcon](images/ExtensionIcon.png)
 
 3.	Click on the three dots (ellipsis) located in the top-right corner, then select "Install from VSIX."
   
-  ![InstallVsix](images/InstallVsix.png)
+    ![InstallVsix](images/InstallVsix.png)
 
 4.	Navigate to the location where you downloaded the SyncfusionInc..NET-MAUI-VSCode-Extensions.vsix file, then select and install it.
 
-  ![DownloadVsix](images/DownloadVsix.png)
+    ![DownloadVsix](images/DownloadVsix.png)
+    
