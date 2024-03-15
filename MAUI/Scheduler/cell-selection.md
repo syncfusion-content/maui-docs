@@ -33,7 +33,7 @@ this.Scheduler.CellSelectionView.Stroke = Brush.Green;
 ## Background
 
 The cell selection background color can be customized by using the `Background` property in the `CellSelectionView`.
-The default value is Brush.Transparent.
+The default value is `Brush.Transparent`.
 
 N> As default, `Stroke` will have value; if `Background` alone is required, you can set the  `Stroke` property to `Brush.Transparent`.
 
@@ -74,10 +74,9 @@ this.Scheduler.CellSelectionView.CornerRadius = 2;
 
 ## Stroke Thickness
 
-The thickness of the `Stroke` of Scheduler can be customized by using the `StrokeWidth` property in the `CellSelectionView`.  
+The thickness of the selection view `Stroke` can be customized by using the `StrokeWidth` property in the `CellSelectionView`. 
 
-N> The thickness of the selection view `Stroke` can be customized by using the `StrokeWidth` property in the `CellSelectionView`.
-
+N> The `StrokeWidth` is only applicable for the `Stroke` property.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="3" %}
