@@ -29,6 +29,8 @@ stepProgressBar.Orientation = StepOrientation.Horizontal;
 {% endhighlight %}
 {% endtabs %}
 
+ ![Orientation in .NET MAUI SfStepProgressBar.](images/orientation/maui-stepprogressbar-orientation-horizontal.png)
+
 ## Vertical
 To view the step progress bar control in [Vertical](), you can define the vertical orientation as demonstrated in the following code example.
 
@@ -47,3 +49,5 @@ stepProgressBar.Orientation = StepOrientation.Vertical;
 
 {% endhighlight %}
 {% endtabs %}
+
+ ![Orientation in .NET MAUI SfStepProgressBar.](images/orientation/maui-stepprogressbar-orientation-vertical.png)
