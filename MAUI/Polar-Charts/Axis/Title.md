@@ -19,18 +19,18 @@ N> Polar chart supports title for secondary axis only.
 
 <chart:SfPolarChart>
     . . .
+    <chart:SfPolarChart.PrimaryAxis>
+        <chart:CategoryAxis>
+        </chart:CategoryAxis>
+    </chart:SfPolarChart.PrimaryAxis>
 
-<chart:SfPolarChart.PrimaryAxis>
-    <chart:CategoryAxis>
-    </chart:CategoryAxis>
-</chart:SfPolarChart.PrimaryAxis>
-<chart:SfPolarChart.SecondaryAxis>
-    <chart:NumericalAxis>
-        <chart:NumericalAxis.Title>
-            <chart:ChartAxisTitle Text="Values"/>
-        </chart:NumericalAxis.Title>
-    </chart:NumericalAxis>
-</chart:SfPolarChart.SecondaryAxis>
+    <chart:SfPolarChart.SecondaryAxis>
+        <chart:NumericalAxis>
+            <chart:NumericalAxis.Title>
+                <chart:ChartAxisTitle Text="Values"/>
+            </chart:NumericalAxis.Title>
+        </chart:NumericalAxis>
+    </chart:SfPolarChart.SecondaryAxis>
 </chart:SfPolarChart>
 
 {% endhighlight %}
@@ -75,13 +75,13 @@ The [LabelExtent](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Cha
 
 <chart:SfPolarChart>
     . . .
-<chart:SfPolarChart.SecondaryAxis>
-    <chart:NumericalAxis LabelExtent="60">
-        <chart:NumericalAxis.Title>
-            <chart:ChartAxisTitle Text="Numeric"/>
-        </chart:NumericalAxis.Title>
-    </chart:NumericalAxis>
-</chart:SfPolarChart.SecondaryAxis>
+    <chart:SfPolarChart.SecondaryAxis>
+        <chart:NumericalAxis LabelExtent="60">
+            <chart:NumericalAxis.Title>
+                <chart:ChartAxisTitle Text="Numeric"/>
+            </chart:NumericalAxis.Title>
+        </chart:NumericalAxis>
+    </chart:SfPolarChart.SecondaryAxis>
 </chart:SfPolarChart>
 
 {% endhighlight %}

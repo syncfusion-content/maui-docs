@@ -41,9 +41,9 @@ Polar chart supports the following types of chart axis.
 SfPolarChart chart = new SfPolarChart();
 . . .
 NumericalAxis primaryAxis = new NumericalAxis();
-chart.PrimaryAxis.Add(primaryAxis);
+chart.PrimaryAxis = primaryAxis;
 NumericalAxis secondaryAxis = new NumericalAxis();
-chart.SecondaryAxis.Add(secondaryAxis);
+chart.SecondaryAxis = secondaryAxis;
 
 {% endhighlight %}
 
@@ -61,13 +61,13 @@ Axis interval can be customized by using the [Interval](https://help.syncfusion.
 
 <chart:SfPolarChart>
 . . .
-<chart:SfPolarChart.PrimaryAxis>
-    <chart:NumericalAxis Interval="10" />
-</chart:SfPolarChart.PrimaryAxis>
+    <chart:SfPolarChart.PrimaryAxis>
+        <chart:NumericalAxis Interval="10" />
+    </chart:SfPolarChart.PrimaryAxis>
 
-<chart:SfPolarChart.SecondaryAxis>
-    <chart:NumericalAxis/>
-</chart:SfPolarChart.SecondaryAxis>
+    <chart:SfPolarChart.SecondaryAxis>
+        <chart:NumericalAxis/>
+    </chart:SfPolarChart.SecondaryAxis>
 </chart:SfPolarChart>
 
 {% endhighlight %}
@@ -80,9 +80,9 @@ NumericalAxis primaryAxis = new NumericalAxis()
 {
     Interval = 10, 
 };
-chart.PrimaryAxis.Add(primaryAxis);
+chart.PrimaryAxis = primaryAxis;
 NumericalAxis secondaryAxis = new NumericalAxis();
-chart.SecondaryAxis.Add(secondaryAxis);
+chart.SecondaryAxis = secondaryAxis;
 
 {% endhighlight %}
 
