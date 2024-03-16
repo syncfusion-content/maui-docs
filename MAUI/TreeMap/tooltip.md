@@ -9,71 +9,41 @@ documentation: ug
 
 # Tooltip in .NET MAUI TreeMap (SfTreeMap)
 
-Tooltip is used to provide information When the mouse hovers over items or select the items, the interactive TreeMap displays details about items’ values in tooltips.
+The tooltip provides information when hovering over or selecting items in the interactive TreeMap, displaying details about the values of each item.
 
 ## Enable Tooltip
 
-To enable the tooltip in the TreeMap, set the `ShowToolTip` property to `true`. It is possible to customize the tooltip using the `ToolTipSettings` properties of `SfTreemap`.
+To enable tooltips for the TreeMap control, utilize the `ShowToolTip` property of `SfTreeMap.` By default, the value of `ShowToolTip` is set to `false.` To provide users with additional information or context about specific treemap items, simply set this property to `true.`
 
 {% tabs %}
 {% highlight XAML hl_lines="4" %}
 
 <treemap:SfTreeMap x:Name="treeMap"
                    DataSource="{Binding PopulationDetails}"
-                   RangeColorValuePath="Population"
-                   ShowTooltip = "True"
-                   PrimaryValuePath="Population">
+                   PrimaryValuePath="Population"
+                   ShowToolTip="True">
     <treemap:SfTreeMap.BindingContext>
         <local:PopulationViewModel />
     </treemap:SfTreeMap.BindingContext>
-    <treemap:SfTreeMap.LegendSettings>
-        <treemap:TreeMapLegendSettings ShowLegend="True"/>
-    </treemap:SfTreeMap.LegendSettings>
     <treemap:SfTreeMap.LeafItemSettings>
         <treemap:TreeMapLeafItemSettings LabelPath="Country">
         </treemap:TreeMapLeafItemSettings>
     </treemap:SfTreeMap.LeafItemSettings>
     <treemap:SfTreeMap.LeafItemBrushSettings>
-        <treemap:TreeMapRangeBrushSettings>
-            <treemap:TreeMapRangeBrushSettings.RangeBrushes>
-                <treemap:TreeMapRangeBrush LegendLabel="50M - 1B"
-                                           From="50000000"
-                                           To="1000000000" 
-                                           Brush ="#3F8D71" />
-                <treemap:TreeMapRangeBrush LegendLabel="10M - 50M"
-                                           From="10000000"
-                                           To="50000000" 
-                                           Brush ="#5BA985" />
-                <treemap:TreeMapRangeBrush LegendLabel="0.1M - 10M"
-                                           From="100000" 
-                                           To="10000000"  
-                                           Brush= "#7DC59D" />
-            </treemap:TreeMapRangeBrushSettings.RangeBrushes>
-        </treemap:TreeMapRangeBrushSettings>
+       <treemap:TreeMapUniformBrushSettings Brush="Orange"/>
     </treemap:SfTreeMap.LeafItemBrushSettings>
 </treemap:SfTreeMap>
 
 {% endhighlight %}
-{% highlight C# hl_lines="6" %}
+{% highlight C# hl_lines="5" %}
 
 SfTreeMap treeMap = new SfTreeMap();
 PopulationViewModel viewModel = new PopulationViewModel();
 treeMap.DataSource = viewModel.PopulationDetails;
 treeMap.PrimaryValuePath = "Population";
-treeMap.RangeColorValuePath = "Population";
-treeMap.ShowTooltip = true;
-treeMap.LegendSettings.ShowLegend = true;
+treeMap.ShowToolTip = true;
+treeMap.LeafItemBrushSettings = new TreeMapUniformBrushSettings() { Brush = Brush.Orange };
 treeMap.LeafItemSettings = new TreeMapLeafItemSettings() { LabelPath = "Country" };
-treeMap.LeafItemBrushSettings = new TreeMapRangeBrushSettings()
-{
-    RangeBrushes = new List<TreeMapRangeBrush>()
-    {
-        new TreeMapRangeBrush { LegendLabel = "50M - 1B", From = 50000000, To = 1000000000, Brush = new SolidColorBrush(Color.FromArgb("#3F8D71")) },
-        new TreeMapRangeBrush { LegendLabel = "10M - 50M", From = 10000000, To = 50000000, Brush = new SolidColorBrush(Color.FromArgb("#5BA985")) },
-        new TreeMapRangeBrush { LegendLabel = "0.1M - 10M", From = 100000, To = 10000000, Brush = new SolidColorBrush(Color.FromArgb("#7DC59D")) },
-    }
-};
-
 this.Content = treeMap;
 
 {% endhighlight %}
@@ -83,7 +53,7 @@ public class PopulationDetails
 {
     public string Country { get; set; }
     public string Continent { get; set; }
-    public double Population { get; set; }
+    public int Population { get; set; }
 }
 
 {% endhighlight %}
@@ -126,85 +96,59 @@ public class PopulationViewModel
 {% endhighlight %}
 {% endtabs %}
 
-## Appearance customization
+## Customize tooltip appearance
 
-Customize the tooltip appearance using `ToolTipSettings`.
+The tooltip appearance customization can be achieved by using the `Stroke,` `Duration,` `TextStyle`, and `Background` properties of `ToolTipSettings` in the `SfTreeMap.`
 
-* `Background`: Change the background color of the tooltip in TreeMap using the `TreeMapToolTipSetting.Background` property.
-* `Duration`: Specifies the duration time in milliseconds for which tooltip will be displayed.
-* `Stroke`: Change the border color of the tooltip in TreeMap using the `TreeMapToolTipSetting.Stroke` property.
-* `TextStyle`: Change the tooltip text appearance such as `TextColor`, `FontSize`, `FontAttributes`, and `FontFamily` in the TreeMap using the `TreeMapToolTipSetting.TextStyle` property.
+Additionally, you can achieve further appearance customization by using `TooltipTemplate` of the `SfTreeMap.`
 
+### Customize level appearance using tool tip properties
+
+To customize the appearance of tooltips in the TreeMap using `ToolTipSettings,` you can utilize the following properties:
+
+* `Background`: This property allows you to change the background color of the tooltip
+* `Duration`: Specifies the duration, in milliseconds, for which the tooltip will be displayed. This helps control how long the tooltip remains visible on the screen.
+* `Stroke`: This property enables you to change the border color of the tooltip.
+* `TextStyle`: This property is used to modify the appearance of the tooltip text. You can customize attributes such as TextColor, FontSize, FontAttributes, and FontFamily.
 
 {% tabs %}
-{% highlight XAML hl_lines="8 9 10 11" %}
+{% highlight XAML hl_lines="4 12 13 14 15 16 17 18 19 20 21" %}
 
-<treemap:SfTreeMap x:Name="treeMap"
-                   DataSource="{Binding PopulationDetails}"
-                   RangeColorValuePath="Population"
-                   PrimaryValuePath="Population">
-    <treemap:SfTreeMap.BindingContext>
-       <local:PopulationViewModel />
-    </treemap:SfTreeMap.BindingContext>
-    <treemap:SfTreeMap.ToolTipSettings>
-        <treemap:TreeMapToolTipSettings Background="Blue"
-                                        Stroke="Red">
-            <treemap:TreeMapToolTipSettings.TextStyle>
-                <treemap:TreeMapTextStyle FontSize="16"
-                                          TextColor="Black"
-                                          FontAttributes="Bold" />
-            </treemap:TreeMapToolTipSettings.TextStyle>
-        </treemap:TreeMapToolTipSettings>
-    </treemap:SfTreeMap.ToolTipSettings>
-    <treemap:SfTreeMap.LegendSettings>
-        <treemap:TreeMapLegendSettings ShowLegend="True"
-                                       Placement="Bottom" />
-    </treemap:SfTreeMap.LegendSettings>
+ <treemap:SfTreeMap x:Name="treeMap"
+                    DataSource="{Binding PopulationDetails}"
+                    PrimaryValuePath="Population"
+                    ShowToolTip="True">
     <treemap:SfTreeMap.LeafItemSettings>
         <treemap:TreeMapLeafItemSettings LabelPath="Country">
         </treemap:TreeMapLeafItemSettings>
     </treemap:SfTreeMap.LeafItemSettings>
     <treemap:SfTreeMap.LeafItemBrushSettings>
-        <treemap:TreeMapRangeBrushSettings>
-            <treemap:TreeMapRangeBrushSettings.RangeBrushes>
-                <treemap:TreeMapRangeBrush LegendLabel="50M - 1B"
-                                           From="50000000"
-                                           To="1000000000" 
-                                           Brush ="#3F8D71" />
-                <treemap:TreeMapRangeBrush LegendLabel="10M - 50M"
-                                           From="10000000"
-                                           To="50000000" 
-                                           Brush ="#5BA985" />
-                <treemap:TreeMapRangeBrush LegendLabel="0.1M - 10M"
-                                           From="100000" 
-                                           To="10000000"  
-                                           Brush= "#7DC59D" />
-            </treemap:TreeMapRangeBrushSettings.RangeBrushes>
-        </treemap:TreeMapRangeBrushSettings>
+        <treemap:TreeMapUniformBrushSettings Brush="Orange"/>
     </treemap:SfTreeMap.LeafItemBrushSettings>
-</treemap:SfTreeMap>
+    <treemap:SfTreeMap.ToolTipSettings>
+        <treemap:TreeMapToolTipSettings Background="Blue"
+                                        Stroke="Red"
+                                        Duration="0:0:10">
+            <treemap:TreeMapToolTipSettings.TextStyle>
+                <treemap:TreeMapTextStyle TextColor="White"
+                                          FontSize="14"
+                                          FontAttributes="Italic"/>
+            </treemap:TreeMapToolTipSettings.TextStyle>
+         </treemap:TreeMapToolTipSettings>                                     
+    </treemap:SfTreeMap.ToolTipSettings>
+ </treemap:SfTreeMap>
 
 {% endhighlight %}
-{% highlight C# hl_lines="6" %}
+{% highlight C# hl_lines="5 8" %}
 
 SfTreeMap treeMap = new SfTreeMap();
-PopulationViewModel viewModel = new PopulationViewModel();
+GroupLevelViewModel viewModel = new GroupLevelViewModel();
 treeMap.DataSource = viewModel.PopulationDetails;
 treeMap.PrimaryValuePath = "Population";
-treeMap.RangeColorValuePath = "Population";
-treeMap.ToolTipSettings = new TreeMapToolTipSettings() { Background = Brush.Blue, Stroke = Brush.Red, TextStyle = new TreeMapTextStyle() { TextColor = Colors.Black, FontSize = 16, FontAttributes = FontAttributes.Bold} };
-treeMap.LegendSettings = new TreeMapLegendSettings() { Placement = LegendPlacement.Bottom, ShowLegend = true };
+treeMap.ShowToolTip = true;
+treeMap.LeafItemBrushSettings = new TreeMapUniformBrushSettings() { Brush = Brush.Orange };
 treeMap.LeafItemSettings = new TreeMapLeafItemSettings() { LabelPath = "Country" };
-treeMap.LeafItemBrushSettings = new TreeMapRangeBrushSettings()
-{
-    RangeBrushes = new List<TreeMapRangeBrush>()
-    {
-        new TreeMapRangeBrush { LegendLabel = "50M - 1B", From = 50000000, To = 1000000000, Brush = new SolidColorBrush(Color.FromArgb("#3F8D71")) },
-        new TreeMapRangeBrush { LegendLabel = "10M - 50M", From = 10000000, To = 50000000, Brush = new SolidColorBrush(Color.FromArgb("#5BA985")) },
-        new TreeMapRangeBrush { LegendLabel = "0.1M - 10M", From = 100000, To = 10000000, Brush = new SolidColorBrush(Color.FromArgb("#7DC59D")) },
-    }
-};
-
+treeMap.ToolTipSettings = new TreeMapToolTipSettings() { Background = Brush.Blue, Stroke = Brush.Red, TextStyle = new TreeMapTextStyle() { TextColor = Colors.White, FontSize = 14, FontAttributes = FontAttributes.Italic } };
 this.Content = treeMap;
 
 {% endhighlight %}
@@ -214,7 +158,7 @@ public class PopulationDetails
 {
     public string Country { get; set; }
     public string Continent { get; set; }
-    public double Population { get; set; }
+    public int Population { get; set; }
 }
 
 {% endhighlight %}
@@ -256,6 +200,8 @@ public class PopulationViewModel
 
 {% endhighlight %}
 {% endtabs %}
+
+N> N> This property will be applicable to only when the `ShowToolTip` is enabled.
 
 ## Tooltip Template
 
@@ -264,75 +210,34 @@ The `SfTreeMap` provides support to customize the appearance of the tooltip by u
 The following code example shows the usage of DataTemplate.
 
 {% tabs %}
-{% highlight XAML hl_lines="8 9 10 11 12" %}
+{% highlight XAML hl_lines="4" %}
 
 <treemap:SfTreeMap x:Name="treeMap"
                    DataSource="{Binding PopulationDetails}"
-                   RangeColorValuePath="Population"
-                   PrimaryValuePath="Population">
+                   PrimaryValuePath="Population"
+                   ShowToolTip="True">
     <treemap:SfTreeMap.BindingContext>
-       <local:PopulationViewModel />
+        <local:PopulationViewModel />
     </treemap:SfTreeMap.BindingContext>
-    <treemap:SfTreeMap.ToolTipTemplate>
-        <DataTemplate>
-            <StackLayout Orientation="Horizontal">
-                <Label Text="Population:"
-                       Margin="8,0,0,0"
-                       TextColor="White" />
-                <Label Text="{Binding Item.Population}"
-                       Margin="5,0,8,0"
-                       TextColor="White" />
-            </StackLayout>
-        </DataTemplate>
-    </treemap:SfTreeMap.ToolTipTemplate>
-    <treemap:SfTreeMap.LegendSettings>
-        <treemap:TreeMapLegendSettings ShowLegend="True"
-                                       IconSize="20,20" />
-    </treemap:SfTreeMap.LegendSettings>
     <treemap:SfTreeMap.LeafItemSettings>
-        <treemap:TreeMapLeafItemSettings LabelPath="Country">
+    <treemap:TreeMapLeafItemSettings LabelPath="Country">
         </treemap:TreeMapLeafItemSettings>
     </treemap:SfTreeMap.LeafItemSettings>
     <treemap:SfTreeMap.LeafItemBrushSettings>
-        <treemap:TreeMapRangeBrushSettings>
-            <treemap:TreeMapRangeBrushSettings.RangeBrushes>
-                <treemap:TreeMapRangeBrush LegendLabel="50M - 1B"
-                                           From="50000000"
-                                           To="1000000000" 
-                                           Brush ="#3F8D71" />
-                <treemap:TreeMapRangeBrush LegendLabel="10M - 50M"
-                                           From="10000000"
-                                           To="50000000" 
-                                           Brush ="#5BA985" />
-                <treemap:TreeMapRangeBrush LegendLabel="0.1M - 10M"
-                                           From="100000" 
-                                           To="10000000"  
-                                           Brush= "#7DC59D" />
-            </treemap:TreeMapRangeBrushSettings.RangeBrushes>
-        </treemap:TreeMapRangeBrushSettings>
+       <treemap:TreeMapUniformBrushSettings Brush="Orange"/>
     </treemap:SfTreeMap.LeafItemBrushSettings>
 </treemap:SfTreeMap>
 
 {% endhighlight %}
-{% highlight C# hl_lines="6" %}
+{% highlight C# hl_lines="5" %}
 
 SfTreeMap treeMap = new SfTreeMap();
 PopulationViewModel viewModel = new PopulationViewModel();
 treeMap.DataSource = viewModel.PopulationDetails;
 treeMap.PrimaryValuePath = "Population";
-treeMap.RangeColorValuePath = "Population";
-treeMap.LegendSettings = new TreeMapLegendSettings() { IconSize = new Size(20, 20), ShowLegend = true };
+treeMap.ShowToolTip = true;
+treeMap.LeafItemBrushSettings = new TreeMapUniformBrushSettings() { Brush = Brush.Orange };
 treeMap.LeafItemSettings = new TreeMapLeafItemSettings() { LabelPath = "Country" };
-treeMap.LeafItemBrushSettings = new TreeMapRangeBrushSettings()
-{
-    RangeBrushes = new List<TreeMapRangeBrush>()
-    {
-        new TreeMapRangeBrush { LegendLabel = "50M - 1B", From = 50000000, To = 1000000000, Brush = new SolidColorBrush(Color.FromArgb("#3F8D71")) },
-        new TreeMapRangeBrush { LegendLabel = "10M - 50M", From = 10000000, To = 50000000, Brush = new SolidColorBrush(Color.FromArgb("#5BA985")) },
-        new TreeMapRangeBrush { LegendLabel = "0.1M - 10M", From = 100000, To = 10000000, Brush = new SolidColorBrush(Color.FromArgb("#7DC59D")) },
-    }
-};
-
 this.Content = treeMap;
 
 {% endhighlight %}
@@ -342,7 +247,7 @@ public class PopulationDetails
 {
     public string Country { get; set; }
     public string Continent { get; set; }
-    public double Population { get; set; }
+    public int Population { get; set; }
 }
 
 {% endhighlight %}
@@ -384,3 +289,5 @@ public class PopulationViewModel
 
 {% endhighlight %}
 {% endtabs %}
+
+N> N> This property will be applicable to only when the `ShowToolTip` is enabled.
