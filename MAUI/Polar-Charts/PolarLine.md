@@ -138,7 +138,7 @@ A marker, also known as a symbol, is used to determine or highlight the position
 
 <chart:SfPolarChart>
 ...
- <chart:PolarLineSeries XBindingPath="Direction" YBindingPath="Tree" ItemsSource="{Binding PlantDetails}"
+ <chart:PolarLineSeries ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Tree" 
                 ShowMarkers="True"/>
 
 </chart:SfPolarChart>
@@ -151,9 +151,9 @@ SfPolarChart chart = new SfPolarChart();
 ...
 PolarLineSeries series = new PolarLineSeries()
 {
+    ItemsSource = new ViewModel().PlantDetails,
     XBindingPath = "Direction",
     YBindingPath = "Tree",
-    ItemsSource = new ViewModel().PlantDetails,
     ShowMarkers= true
 };
 
