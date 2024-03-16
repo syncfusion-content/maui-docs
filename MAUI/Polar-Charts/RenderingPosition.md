@@ -7,18 +7,17 @@ control: SfPolarChart
 documentation: ug
 ---
 
-# Rendering Position
+# Rendering Position in .NET MAUI Chart
 
 ## Start Angle
 
-Adjust the rendering position of series on polar chart by leveraging the [StartAngle]() property, offering four degree values: 0, 90, 180, and 270. The default setting for the [StartAngle]() property is [Rotate270]().
+Adjust the rendering position of series on polar chart by leveraging the [StartAngle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPolarChart.html#Syncfusion_Maui_Charts_SfPolarChart_StartAngle) property, offering four degree values: 0, 90, 180, and 270. The default setting for the [StartAngle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPolarChart.html#Syncfusion_Maui_Charts_SfPolarChart_StartAngle) property is [Rotate270](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartPolarAngle.html#Syncfusion_Maui_Charts_ChartPolarAngle_Rotate270).
 
 {% tabs %}
 
 {% highlight xaml %}
 
 <chart:SfPolarChart StartAngle="Rotate0">
-    
     <chart:SfPolarChart.PrimaryAxis>
         <chart:CategoryAxis />
     </chart:SfPolarChart.PrimaryAxis>
@@ -27,10 +26,7 @@ Adjust the rendering position of series on polar chart by leveraging the [StartA
         <chart:NumericalAxis/>
     </chart:SfPolarChart.SecondaryAxis>   
 
-    <chart:PolarAreaSeries ItemsSource="{Binding PlantDetails}"
-					  XBindingPath="Direction"
-					  YBindingPath="Tree"/>  
-
+    <chart:PolarAreaSeries ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Tree"/>  
 </chart:SfPolarChart>
 
 {% endhighlight %}
@@ -40,9 +36,9 @@ Adjust the rendering position of series on polar chart by leveraging the [StartA
 SfPolarChart chart = new SfPolarChart();
 chart.StartAngle = ChartPolarAngle.Rotate0;
 CategoryAxis primaryAxis = new CategoryAxis();
-chart.PrimaryAxis.Add(primaryAxis);
+chart.PrimaryAxis = primaryAxis;
 NumericalAxis secondaryAxis = new NumericalAxis();
-chart.SecondaryAxis.Add(secondaryAxis);
+chart.SecondaryAxis = secondaryAxis;
 
 PolarAreaSeries series = new PolarAreaSeries()
 {
@@ -58,4 +54,4 @@ this.Content = chart;
 
 {% endtabs %}
 
-![Polar Start Angle](Rendering-Position_Images\Start_Angle.png)
+![Polar Start Angle](Rendering-Position_Images/Start_Angle.png)
