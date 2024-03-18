@@ -22,7 +22,7 @@ Currently working on delivering brand-new .NET MAUI controls that can be used in
 		</th>
 	</tr>
 	<tr>
-	    <td rowspan="4" valign="center">
+	    <td rowspan="5" valign="center">
 			<a href="https://help.syncfusion.com/xamarin/charts/getting-started">SfChart</a><br/>
 		</td>
 		<td rowspan="1" valign="top">
@@ -42,6 +42,11 @@ Currently working on delivering brand-new .NET MAUI controls that can be used in
 	<tr>
 		<td rowspan="1" valign="top">
 			<a href="https://help.syncfusion.com/maui/pyramid-charts/migration">SfPyramidChart</a><br/>
+		</td>
+	</tr>
+	<tr>
+		<td rowspan="1" valign="top">
+			<a href="https://help.syncfusion.com/maui/polar-charts/migration">SfPolarChart</a><br/>
 		</td>
 	</tr>
 	<tr>
@@ -454,7 +459,7 @@ Currently working on delivering brand-new .NET MAUI controls that can be used in
 			<a href="https://help.syncfusion.com/xamarin/chat/getting-started">SfChat</a><br/>
 		</td>
 		<td rowspan="1" valign="top">
-			Volume 1 2024<br/>
+			<a href="https://help.syncfusion.com/maui/chat/migration">SfChat</a><br/>
 		</td>
 	</tr>
 	<tr>
@@ -462,7 +467,7 @@ Currently working on delivering brand-new .NET MAUI controls that can be used in
 			<a href="https://help.syncfusion.com/xamarin/kanban-board/getting-started">SfKanban</a><br/>
 		</td>
 		<td rowspan="1" valign="top">
-			Volume 1 2024<br/>
+			Volume 2 2024<br/>
 		</td>
 	</tr>
 	<tr>
@@ -470,7 +475,7 @@ Currently working on delivering brand-new .NET MAUI controls that can be used in
 			<a href="https://help.syncfusion.com/xamarin/parallax-view/gettingstarted">SfParallaxView</a><br/>
 		</td>
 		<td rowspan="1" valign="top">
-			Volume 1 2024<br/>
+			<a href="https://help.syncfusion.com/maui/parallax-view/migration">SfParallaxView</a><br/>
 		</td>
 	</tr>
 	<tr>
@@ -478,7 +483,7 @@ Currently working on delivering brand-new .NET MAUI controls that can be used in
 			<a href="https://help.syncfusion.com/xamarin/radial-menu/getting-started">SfRadialMenu</a><br/>
 		</td>
 		<td rowspan="1" valign="top">
-			Volume 1 2024<br/>
+			<a href="https://help.syncfusion.com/maui/radial-menu/migration">SfRadialMenu</a><br/>
 		</td>
 	</tr>
 	<tr>
@@ -486,7 +491,7 @@ Currently working on delivering brand-new .NET MAUI controls that can be used in
 			<a href="https://help.syncfusion.com/xamarin/rotator/getting-started">SfRotator</a><br/>
 		</td>
 		<td rowspan="1" valign="top">
-			Volume 1 2024<br/>
+			<a href="https://help.syncfusion.com/maui/rotator/migration">SfRotator</a><br/>
 		</td>
 	</tr>
 	<tr>
@@ -494,7 +499,7 @@ Currently working on delivering brand-new .NET MAUI controls that can be used in
 			<a href="https://help.syncfusion.com/xamarin/stepprogressbar/gettingstarted">SfStepProgressBar</a><br/>
 		</td>
 		<td rowspan="1" valign="top">
-			Volume 1 2024<br/>
+			<a href="https://help.syncfusion.com/maui/stepprogressbar/migration">SfStepProgressBar</a><br/>
 		</td>
 	</tr>
 	<tr>
@@ -502,7 +507,7 @@ Currently working on delivering brand-new .NET MAUI controls that can be used in
 			<a href="https://help.syncfusion.com/xamarin/treemap/getting-started">SfTreemap</a><br/>
 		</td>
 		<td rowspan="1" valign="top">
-			Volume 1 2024<br/>
+			<a href="https://help.syncfusion.com/maui/treemap/migration">SfTreemap</a><br/>
 		</td>
 	</tr>
 	<tr>
@@ -510,7 +515,7 @@ Currently working on delivering brand-new .NET MAUI controls that can be used in
 			<a href="https://help.syncfusion.com/xamarin/digital-gauge/getting-started">SfDigitalGauge</a><br/>
 		</td>
 		<td rowspan="1" valign="top">
-			Underway<br/>
+			Volume 2 2024<br/>
 		</td>
 	</tr>
 	<tr>
