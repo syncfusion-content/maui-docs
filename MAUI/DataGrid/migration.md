@@ -431,6 +431,18 @@ We have passed the optional parameters such as {{'[canIncludeHiddenColumns](http
 </tr>
 
 <tr>
+<td>{{'[GridUnboundRows](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.UnboundRows.html)'| markdownify}}</td>
+<td>{{'[DataGridUnboundRows](https://help.syncfusion.com/maui/datagrid/unbound-row)'| markdownify}}</td>
+<td>Represents a {{'[DataGridUnboundRows](https://help.syncfusion.com/maui/datagrid/unbound-column)'| markdownify}} as a control to add additional rows in a {{[SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html)'| markdownify }} control.</td>
+</tr>
+
+<tr>
+<td>{{'[GridUnboundColumn](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.GridUnboundColumn.html)'| markdownify}}</td>
+<td>{{'[DataGridUnboundColumn](https://help.syncfusion.com/maui/datagrid/unbound-column)'| markdownify}}</td>
+<td>Represents a {{'[DataGridUnboundColumn](https://help.syncfusion.com/maui/datagrid/unbound-column)'| markdownify}} as a control to add additional columns in a {{[SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html)'| markdownify }} control.</td>
+</tr>
+
+<tr>
 <td>{{'[AppearanceManager](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.DataPager.AppearanceManager.html)'| markdownify }}</td>
 <td>{{'[DataPagerStyle]()'| markdownify }}</td>
 <td>Represents a class that enables users to customize the appearance of the data pager.</td>
@@ -453,8 +465,5 @@ We have passed the optional parameters such as {{'[canIncludeHiddenColumns](http
 *	Accessibility
 *	Custom selection
 *	Swiping
-*	Unbound row
-*	Unbound column
-*	Pull To Refresh
 *	Column drag and drop
 *	Row drag and drop
