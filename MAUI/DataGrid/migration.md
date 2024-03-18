@@ -71,7 +71,7 @@ To make migration from [Xamarin SfDataGrid](https://www.syncfusion.com/xamarin-u
 </tr>
 <tr>
 <td>{{'[ProgressStates](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.ProgressStates.html)'| markdownify }}</td>
-<td>{{'[DataGridProgressState]()'| markdownify }}</td>
+<td>{{'[DataGridProgressState](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridProgressState.html)'| markdownify }}</td>
 <td>Defines constants that specify the possible progressing states of resizing operation.</td>
 </tr>
 </table>
@@ -234,7 +234,7 @@ To make migration from [Xamarin SfDataGrid](https://www.syncfusion.com/xamarin-u
 </tr>
 <tr>
 <td>{{'[AllowResizingColumn](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.SfDataGrid.html#Syncfusion_SfDataGrid_XForms_SfDataGrid_AllowResizingColumn)'| markdownify }}</td>
-<td>{{'[AllowResizingColumns]()'| markdownify }}</td>
+<td>{{'[AllowResizingColumns](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AllowResizingColumnProperty)'| markdownify }}</td>
 <td>This enables users to resize the columns by tapping and dragging the right border of the column headers. 
 </td>
 </tr>
