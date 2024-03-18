@@ -122,7 +122,7 @@ The following gif image illustrates the result of the above code.
 
 ## Customize the selection text highlightColor 
 
-The SelectionTextHighlightColor property is used to modify the background color of the selected item text in the autocomplete control.
+The [SelectionTextHighlightColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_SelectionTextHighlightColor) property is used to modify the background color of the selected item text in the autocomplete control.
 
 {% tabs %}
 {% highlight xaml %}
@@ -343,7 +343,7 @@ The following image illustrates the result of the above code:
 
 ### Customize the DropDown item text
 
-DropDown items can be customized using the [DropDownItemFontAttributes], [DropDownItemFontFamily], [DropDownItemFontSize], and [DropDownItemTextColor] properties.
+DropDown items can be customized using the [DropDownItemFontAttributes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_DropDownItemFontAttributes), [DropDownItemFontFamily](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_DropDownItemFontFamily), [DropDownItemFontSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_DropDownItemFontSize), and [DropDownItemTextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_DropDownItemTextColor) properties.
 
 {% tabs %}
 {% highlight xaml %}
@@ -375,7 +375,7 @@ autocomplete.DropDownItemTextColor = Colors.DarkViolet;
 
 ### Customize the DropDown background color
 
-The DropDownBackground property is used to modify the background color of the dropdown.
+The [DropDownBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_DropDownBackground) property is used to modify the background color of the dropdown.
 
 {% tabs %}
 {% highlight xaml %}
@@ -401,7 +401,7 @@ autocomplete.DropDownBackground = Colors.YellowGreen;
 
 ### Customize the DropDown selected item backgroundcolor
 
-The SelectedDropDownItemBackground property is used to modify the background color of the selected item in the dropdown.
+The [SelectedDropDownItemBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_SelectedDropDownItemBackground) property is used to modify the background color of the selected item in the dropdown.
 
 {% tabs %}
 {% highlight xaml %}
@@ -427,7 +427,7 @@ autocomplete.SelectedDropDownItemBackground = Colors.YellowGreen;
 
 ### Customize the DropDown Border Color
 
-The DropDownStroke property is used to modify the border color of the dropdown.
+The [DropDownStroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_DropDownStroke) property is used to modify the border color of the dropdown.
 
 {% tabs %}
 {% highlight xaml %}
@@ -453,7 +453,7 @@ autocomplete.DropDownStroke = Colors.DarkOrange;
 
 ### Customize the DropDown Border Thickness
 
-The DropDownStrokeThickness property is used to modify the thickness of the dropdown border.
+The [DropDownStrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_DropDownStrokeThickness) property is used to modify the thickness of the dropdown border.
 
 {% tabs %}
 {% highlight xaml %}
@@ -480,7 +480,7 @@ autocomplete.DropDownStrokeThickness = 5;
 
 ### Customize the DropDown Item Height
 
-The DropDownItemHeight property is used to modify the height of the dropdown items.
+The [DropDownItemHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_DropDownItemHeight) property is used to modify the height of the dropdown items.
 
 {% tabs %}
 {% highlight xaml %}
