@@ -69,7 +69,7 @@ public List<RotatorModel> ImageCollection
 
 ### Binding the Data with Custom Template
 
-The [`SfRotator`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html?tabs=tabid-1)provides support to add a custom view as RotatorItems by designing a view inside its ItemTemplate. This template will be applied for all its items, and its data will be bound.
+The [`SfRotator`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html?tabs=tabid-1) provides support to add a custom view as RotatorItems by designing a view inside its ItemTemplate. This template will be applied for all its items, and its data will be bound.
 
 {% tabs %}
 

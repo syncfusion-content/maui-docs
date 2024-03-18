@@ -362,7 +362,6 @@ this.Content = mainGrid;
 
 ![AvatarView Stroke Thickness](Customization_Images/StrokeThickness_AvatarView.png)
 
-
 ### Corner radius
 
 You can customize the corner radius of the avatar view using the [CornerRadius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html#Syncfusion_Maui_Core_SfAvatarView_CornerRadius) property.
