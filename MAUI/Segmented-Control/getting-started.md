@@ -15,7 +15,7 @@ This section provides a quick overview of how to get started with the [.NET MAUI
 
 1. Create a new .NET MAUI application in Visual Studio.
 
-2. Syncfusion .NET MAUI components are available in [nuget.org](https://www.nuget.org/). To add the SfDataForm to your project, open the NuGet package manager in Visual Studio, search for `Syncfusion.Maui.Buttons`, then install it.
+2. Syncfusion .NET MAUI components are available in [nuget.org](https://www.nuget.org/). To add the SfSegmentedControl to your project, open the NuGet package manager in Visual Studio, search for `Syncfusion.Maui.Buttons`, then install it.
 
 3. To initialize the control, import the control namespace `Syncfusion.Maui.Buttons` in XAML or C# code.
 
