@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Migrate from Xamarin to .NET MAUI Segmented Control (SfSegmentedControl) | Syncfusion
+title: Migrate from Xamarin to .NET MAUI Segmented Control | Syncfusion
 description: Learn about Migrating from Syncfusion Xamarin.Forms Segmented control to .NET MAUI Segmented control.
 platform: maui
 control: Segmented (SfSegmented) control
 documentation: ug
 ---
  
-# Migrate from Xamarin.Forms Segmented Control to .NET MAUI Segmented Control (SfSegmentedControl)
+# Migrate from Xamarin.Forms to .NET MAUI Segmented Control
 
 To make the migration from the [Xamarin SfSegmented Control](https://www.syncfusion.com/xamarin-ui-controls/xamarin-segmented-control) to the [.NET MAUI SfSegmented Control](https://www.syncfusion.com/maui-controls/maui-segmented-control) easier, most of the APIs from the `Xamarin SfSegmented Control` were kept in the `.NET MAUI SfSegmented Control`. However, to maintain the consistency of API naming in the `.NET MAUI SfSegmented Control`, some of the APIs have been renamed. Please find the difference in the following topics.
 
