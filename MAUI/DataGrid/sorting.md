@@ -245,6 +245,34 @@ public class CustomSortComparer : IComparer<object>, ISortDirection
 {% endhighlight %}
 {% endtabs %}
 
+## Change sort icon color
+
+The default sort icon color can be customized by setting the [DataGridStyle.SortIconColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_SortIconColorProperty) property.
+{% tabs %}
+
+{% highlight xaml %}
+<syncfusion:SfDataGrid x:Name="sfDataGrid"
+                        ItemsSource="{Binding OrderInfoCollection}" >
+        <syncfusion:SfDataGrid.DefaultStyle>
+                <syncfusion:DataGridStyle SortIconColor="DodgerBlue" />
+        </syncfusion:SfDataGrid.DefaultStyle>
+        <syncfusion:SfDataGrid.Columns>
+                    <syncfusion:DataGridTextColumn MappingName="OrderID"
+                              AllowSorting="True"
+                              HeaderText="Order ID" />
+                    <syncfusion:DataGridTextColumn MappingName="CustomerID"
+                              HeaderText="Customer ID" />
+                    <syncfusion:DataGridTextColumn MappingName="ShipCountry "
+                              HeaderText="Ship Country " />
+        </syncfusion:SfDataGrid.Columns>
+</syncfusion:SfDataGrid>
+{% endhighlight %}
+{% endtabs %}
+
+
+<img alt="Sort icon customization in MAUI DataGrid" src="Images\sorting\maui-datagrid-sort-icon-color.png" width="404">
+
+
 ## Load sort icon through template
 
 The SfDataGrid uses an icon to indicate the ascending and descending states of sorting. You can personalize the sorting icon by using the [SfDataGrid.SortIconTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_SortIconTemplate) property. This property allows you to define a custom template that appears in its regular form when the sort is in ascending order. It will rotate downward when the sort is in descending order. To implement this, refer to the following code snippet:

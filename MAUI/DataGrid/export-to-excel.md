@@ -632,7 +632,7 @@ option.CanExportHeader = false;
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="Export DataGrid to Excel format without header cells" src="Images\export-to-excel\maui-datagrid-header-row.png" width="689"/>
+<img alt="Export DataGrid to Excel format without header cells" src="Images\export-to-excel\maui-datagrid-exclude-header.png" width="689"/>
 
 ### Export stacked header
 
