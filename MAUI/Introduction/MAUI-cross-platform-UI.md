@@ -62,7 +62,7 @@ You can find the platforms supported by each .NET MAUI control as below.
 	</td>
 	</tr>
 	<tr>
-		<td rowspan="9" valign="top">
+		<td rowspan="11" valign="top">
 			DATA VISUALIZATION<br/>
 		</td>
 		<td>
@@ -118,6 +118,23 @@ You can find the platforms supported by each .NET MAUI control as below.
 	<tr>
 		<td>
 			<a href="/maui/funnel-charts/overview">Funnel Charts</a><br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<a href="/maui/polar-charts/overview">Polar Charts</a><br/>
 		</td>
 		<td>
 		Yes<br/>
@@ -202,7 +219,7 @@ You can find the platforms supported by each .NET MAUI control as below.
 	</tr>
 	<tr>
 		<td>
-			<a href="/maui/SunburstChart/Overview">SunburstChart</a><br/>
+			<a href="/maui/SunburstChart/Overview">Sunburst Chart</a><br/>
 		</td>
 		<td>
 		Yes<br/>
@@ -218,7 +235,24 @@ You can find the platforms supported by each .NET MAUI control as below.
 		</td>
 	</tr>
 	<tr>
-	    <td rowspan="3" valign="top">
+		<td>
+			<a href="/maui/TreeMap/overview">Tree Map</a><br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+	</tr>
+	<tr>
+	    <td rowspan="5" valign="top">
 			NAVIGATION<br/>
 		</td>
 		<td>
@@ -271,8 +305,42 @@ You can find the platforms supported by each .NET MAUI control as below.
 		Yes<br/>
 		</td>
 	</tr>
+	<tr>
+		<td>
+			<a href="/maui/radial-menu/overview">Radial Menu</a><br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<a href="/maui/rotator/overview">Rotator</a><br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+	</tr>
     <tr>
-	    <td rowspan="8" valign="top">
+	    <td rowspan="9" valign="top">
 			LAYOUT<br/>
 		</td>
 	    <td>
@@ -396,6 +464,23 @@ You can find the platforms supported by each .NET MAUI control as below.
 	<tr>
 		<td>
 			<a href="/maui/textinputlayout/overview">Text Input Layout</a><br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<a href="/maui/Parallax-View/overview">Parallax View</a><br/>
 		</td>
 		<td>
 		Yes<br/>
@@ -865,7 +950,7 @@ You can find the platforms supported by each .NET MAUI control as below.
 		</td>
 	</tr>	
     <tr>
-	    <td rowspan="5" valign="top">
+	    <td rowspan="6" valign="top">
 		NOTIFICATION<br/>
 		</td>
 		<td>
@@ -921,6 +1006,23 @@ You can find the platforms supported by each .NET MAUI control as below.
 	<tr>
 		<td>
 			<a href="/maui/linearprogressbar/overview">Linear Progress Bar</a><br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<a href="/maui/stepprogressbar/overview">Step Progress Bar</a><br/>
 		</td>
 		<td>
 		Yes<br/>
@@ -1012,6 +1114,26 @@ You can find the platforms supported by each .NET MAUI control as below.
 		</td>
 		<td>
 			<a href="/maui/pdf-viewer/overview">PDF Viewer</a><br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+	</tr>
+	<tr>  
+	    <td rowspan="1" valign="top">
+	    Chat<br/>
+		</td>
+		<td>
+			<a href="/maui/Chat/overview">Chat</a><br/>
 		</td>
 		<td>
 		Yes<br/>
