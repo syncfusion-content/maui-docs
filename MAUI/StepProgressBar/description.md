@@ -11,7 +11,7 @@ documentation: ug
 Each step in a multi-step process has a different operation. To display information about a step's status can be shown on either side. A primary description will be on the right or bottom of the step, and a secondary description will be on the left or top of the step.
 
 ## Text 
-The primary and secondary descriptions for a step view can be set using the [PrimaryText]() and [SecondaryText]() properties, as demonstrated in the following code example.
+The primary and secondary descriptions for a step view can be set using the [PrimaryText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.StepProgressBarItem.html#Syncfusion_Maui_ProgressBar_StepProgressBarItem_PrimaryText) and [SecondaryText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.StepProgressBarItem.html#Syncfusion_Maui_ProgressBar_StepProgressBarItem_SecondaryText) properties, as demonstrated in the following code example.
 
 * Create a simple Observable Collection that contain the `PrimaryText` and `SecondaryText` by using the `StepProgressBarItem` collection, which is bound to the `ItemSource` property.
 
@@ -92,7 +92,7 @@ public class ViewModel
  ![Text in .NET MAUI SfStepProgressBar.](images/description/maui-stepprogressbar-text.png)
  
 ## Formatted text
-[PrimaryFormattedText]() and [SecondaryFormattedText]() can be used to customize the description with different formatting style. The following code example explains how to set `PrimaryFormattedText` and `SecondaryFormattedText` to a step view.
+[PrimaryFormattedText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.StepProgressBarItem.html#Syncfusion_Maui_ProgressBar_StepProgressBarItem_PrimaryFormattedText) and [SecondaryFormattedText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.StepProgressBarItem.html#Syncfusion_Maui_ProgressBar_StepProgressBarItem_SecondaryFormattedText) can be used to customize the description with different formatting style. The following code example explains how to set `PrimaryFormattedText` and `SecondaryFormattedText` to a step view.
 
 * Create a simple Observable Collection that contain the `PrimaryFormattedText` and `SecondaryFormattedText` by using the `StepProgressBarItem` collection, which is bound to the `ItemSource` property.
 
@@ -197,7 +197,7 @@ public class ViewModel
 N> If both `PrimaryText` and `PrimaryFormattedText` are provided, then `PrimaryFormattedText` will be displayed. This precedence is same as for the `SecondaryText` and `SecondaryFormattedText`.
 
 ## Customize label spacing
-You can customize the space between the step and primary or secondary text of the step progress bar by using the [LabelSpacing]() property in `SfStepProgressBar`. The default value of `LabelSpacing` property is `5`.
+You can customize the space between the step and primary or secondary text of the step progress bar by using the [LabelSpacing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_LabelSpacing) property in `SfStepProgressBar`. The default value of `LabelSpacing` property is `5`.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="2" %}
@@ -222,7 +222,7 @@ this.Content = stepProgressBar;
  ![Label spacing in .NET MAUI SfStepProgressBar.](images/description/maui-stepprogressbar-labelspacing.png)
  
 ## Customize label position
-You can customize the position of primary or secondary text of the step progress bar by using the [LabelPosition]() property in `SfStepProgressBar`. It can be positioned at the `Start`, `End`, `Bottom` or `Top`. 
+You can customize the position of primary or secondary text of the step progress bar by using the [LabelPosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_LabelPosition) property in `SfStepProgressBar`. It can be positioned at the `Start`, `End`, `Bottom` or `Top`. 
 
 The default value of the `LabelPosition` property in the horizontal direction is `Bottom`, and in the vertical direction, it is `End`.
 
@@ -252,11 +252,11 @@ N> The `LabelPosition` property will be considered only if either `PrimaryText` 
 
 ## StepProgressBar Image Customization
 
-The [StepProgressBar]() control provides support for adding images as the content of the step. You can add the images by giving an image path and font icons.
+The [StepProgressBar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html) control provides support for adding images as the content of the step. You can add the images by giving an image path and font icons.
 
 ### Customization using Image
 
-You can add the images by giving image path to the [ImageSource]() property in `SfStepProgressBar`. The following code example explains how to set an image in step view.
+You can add the images by giving image path to the [ImageSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.StepProgressBarItem.html#Syncfusion_Maui_ProgressBar_StepProgressBarItem_ImageSource) property in `SfStepProgressBar`. The following code example explains how to set an image in step view.
 
 * Create a simple Observable Collection that contain the provided images by using the `StepProgressBarItem` collection, which is bound to the `ItemSource` property.
 
@@ -339,7 +339,7 @@ public class ViewModel
  
 ### Customization using Font icon
 
-You can add the images with font icons to the [ImageSource]() property in `SfStepProgressBar`. The following code example explains how to set an image in step view.
+You can add the images with font icons to the [ImageSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.StepProgressBarItem.html#Syncfusion_Maui_ProgressBar_StepProgressBarItem_ImageSource) property in `SfStepProgressBar`. The following code example explains how to set an image in step view.
 
 * Create a simple Observable Collection that contain the provided images by using the `StepProgressBarItem` collection, which is bound to the `ItemSource` property.
 
