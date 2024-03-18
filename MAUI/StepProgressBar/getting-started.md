@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 # Getting started with .NET MAUI Step ProgressBar (SfStepProgressBar)
-This section explains how to add the [.NET MAUI Step ProgressBar]() control. This section covers only the basic features needed to get started with Syncfusion Step ProgressBar.
+This section explains how to add the [.NET MAUI Step ProgressBar](https://www.syncfusion.com/maui-controls/maui-stepprogressbar) control. This section covers only the basic features needed to get started with Syncfusion Step ProgressBar.
 
 ## Creating an application using the .NET MAUI Step ProgressBar
 
@@ -84,7 +84,7 @@ namespace GettingStarted
 
 ## Populating step progressbar items
 
-You can use [ItemsSource]() property of SfStepProgressBar to populate the step progressbar items. Hence, you must create a item collection and bind it to the progressbar control.
+You can use [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.StepProgressBarItem.html#Syncfusion_Maui_ProgressBar_StepProgressBarItem_ImageSource) property of SfStepProgressBar to populate the step progressbar items. Hence, you must create a item collection and bind it to the progressbar control.
 
 * Create a simple Observable Collection of the item for the step progressbar,
 
@@ -128,7 +128,7 @@ public class ViewModel
 
 * Bind the Collection to step progressbar
 
-The Step progressbar control allows you to bind item collection by setting the [ItemsSource]() property from the [SfStepProgressBar](). Bind item collection in both XAML and C#.
+The Step progressbar control allows you to bind item collection by setting the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.StepProgressBarItem.html#Syncfusion_Maui_ProgressBar_StepProgressBarItem_ImageSource) property from the [SfStepProgressBar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html). Bind item collection in both XAML and C#.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="10" %}
@@ -173,7 +173,7 @@ this.Content = stepProgressBar;
 ![Getting started of .NET MAUI StepProgressBar](images/getting-started/maui-stepprogressbar-getting-started.gif)
 
 ## ActiveStepIndex
-The [ActiveStepIndex]() property is used to represent index of the currently active step within the sequence of steps. The [ActiveStepProgressValue]() property is used to add the progress value of the currently active step within a sequence.
+The [ActiveStepIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_ActiveStepIndex) property is used to represent index of the currently active step within the sequence of steps. The [ActiveStepProgressValue](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_ActiveStepProgressValue) property is used to add the progress value of the currently active step within a sequence.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="3 4" %}
