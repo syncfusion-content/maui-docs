@@ -191,9 +191,6 @@ this.Content = treeMap;
 {% endhighlight %}
 {% highlight C# tabtitle="PopulationDetails.cs" %}
 
-/// <summary>    
-/// Represents the custom data properties.
-/// </summary>
 public class PopulationDetails
 {
     public string Country { get; set; }
@@ -204,9 +201,6 @@ public class PopulationDetails
 {% endhighlight %}
 {% highlight c# tabtitle="PopulationViewModel.cs" %}
 
-/// <summary>    
-/// Represents demographic information for countries in the Americas for the year 2023.
-/// </summary>
 public class PopulationViewModel
 {
     public PopulationViewModel()
@@ -348,7 +342,7 @@ public class PopulationViewModel
 
 </table>
 
-#### TreeMapItemInfo
+### TreeMapItemInfo
 
 <table>
 <tr>
@@ -378,7 +372,7 @@ public class PopulationViewModel
 </tr>
 </table>
 
-### TreeMapLeafItemSettings
+### LeafItemSettings
 
 The following code example, explains how to configure the leaf item settings in .NET MAUI SfTreeMap control.
 
@@ -415,9 +409,6 @@ this.Content = treeMap;
 {% endhighlight %}
 {% highlight C# tabtitle="PopulationDetails.cs" %}
 
-/// <summary>    
-/// Represents the custom data properties.
-/// </summary>
 public class PopulationDetails
 {
     public string Country { get; set; }
@@ -428,9 +419,6 @@ public class PopulationDetails
 {% endhighlight %}
 {% highlight c# tabtitle="PopulationViewModel.cs" %}
 
-/// <summary>    
-/// Represents demographic information for countries in the Americas for the year 2023.
-/// </summary>
 public class PopulationViewModel
 {
     public PopulationViewModel()
@@ -513,7 +501,7 @@ public class PopulationViewModel
 
 </table>
 
-### TreeMapLegendSettings
+### LegendSettings
 
 The following code example, explains how to configure the legend settings in .NET MAUI SfTreeMap control.
 
@@ -533,7 +521,7 @@ The following code example, explains how to configure the legend settings in .NE
     </treemap:SfTreeMap.LeafItemSettings>
     <treemap:SfTreeMap.LegendSettings>
         <treemap:TreeMapLegendSettings ShowLegend="True">
-    </treemap:TreeMapLegendSettings>
+        </treemap:TreeMapLegendSettings>
     </treemap:SfTreeMap.LegendSettings>
     <treemap:SfTreeMap.LeafItemBrushSettings>
     <treemap:TreeMapRangeBrushSettings>
@@ -581,9 +569,6 @@ this.Content = treeMap;
 {% endhighlight %}
 {% highlight C# tabtitle="PopulationDetails.cs" %}
 
-/// <summary>    
-/// Represents the custom data properties.
-/// </summary>
 public class PopulationDetails
 {
     public string Country { get; set; }
@@ -594,9 +579,6 @@ public class PopulationDetails
 {% endhighlight %}
 {% highlight c# tabtitle="PopulationViewModel.cs" %}
 
-/// <summary>    
-/// Represents demographic information for countries in the Americas for the year 2023.
-/// </summary>
 public class PopulationViewModel
 {
     public PopulationViewModel()
@@ -678,7 +660,7 @@ public class PopulationViewModel
 
 </table>
 
-### TreeMapUniformBrushSettings
+### UniformBrushSettings
 
 The following code example, explains how to configure the uniform brush settings in .NET MAUI SfTreeMap control.
 
@@ -715,9 +697,6 @@ this.Content = treeMap;
 {% endhighlight %}
 {% highlight C# tabtitle="PopulationDetails.cs" %}
 
-/// <summary>    
-/// Represents the custom data properties.
-/// </summary>
 public class PopulationDetails
 {
     public string Country { get; set; }
@@ -728,9 +707,6 @@ public class PopulationDetails
 {% endhighlight %}
 {% highlight c# tabtitle="PopulationViewModel.cs" %}
 
-/// <summary>    
-/// Represents demographic information for countries in the Americas for the year 2023.
-/// </summary>
 public class PopulationViewModel
 {
     public PopulationViewModel()
@@ -782,7 +758,7 @@ public class PopulationViewModel
 
 </table>
 
-### TreeMapDesaturationBrushSettings
+### DesaturationBrushSettings
 
 The following code example, explains how to configure the desaturation brush settings in .NET MAUI SfTreeMap control.
 
@@ -795,8 +771,8 @@ The following code example, explains how to configure the desaturation brush set
     <treemap:SfTreeMap.BindingContext>
         <local:PopulationViewModel />
     </treemap:SfTreeMap.BindingContext>
-        <treemap:SfTreeMap.LeafItemSettings>
-            <treemap:TreeMapLeafItemSettings LabelPath="Country">
+    <treemap:SfTreeMap.LeafItemSettings>
+        <treemap:TreeMapLeafItemSettings LabelPath="Country">
         </treemap:TreeMapLeafItemSettings>
     </treemap:SfTreeMap.LeafItemSettings>
     <treemap:SfTreeMap.LeafItemBrushSettings>
@@ -819,9 +795,6 @@ this.Content = treeMap;
 {% endhighlight %}
 {% highlight C# tabtitle="PopulationDetails.cs" %}
 
-/// <summary>    
-/// Represents the custom data properties.
-/// </summary>
 public class PopulationDetails
 {
     public string Country { get; set; }
@@ -832,9 +805,6 @@ public class PopulationDetails
 {% endhighlight %}
 {% highlight c# tabtitle="PopulationViewModel.cs" %}
 
-/// <summary>    
-/// Represents demographic information for countries in the Americas for the year 2023.
-/// </summary>
 public class PopulationViewModel
 {
     public PopulationViewModel()
@@ -898,7 +868,7 @@ public class PopulationViewModel
 
 </table>
 
-### TreeMapPaletteBrushSettings
+### PaletteBrushSettings
 
 The following code example, explains how to configure the palette brush settings in .NET MAUI SfTreeMap control.
 
@@ -958,9 +928,6 @@ this.Content = treeMap;
 {% endhighlight %}
 {% highlight C# tabtitle="PopulationDetails.cs" %}
 
-/// <summary>    
-/// Represents the custom data properties.
-/// </summary>
 public class PopulationDetails
 {
     public string Country { get; set; }
@@ -971,9 +938,6 @@ public class PopulationDetails
 {% endhighlight %}
 {% highlight c# tabtitle="PopulationViewModel.cs" %}
 
-/// <summary>    
-/// Represents demographic information for countries in the Americas for the year 2023.
-/// </summary>
 public class PopulationViewModel
 {
     public PopulationViewModel()
@@ -1025,11 +989,13 @@ public class PopulationViewModel
 
 </table>
 
-### TreeMapRangeBrushSettings
+### RangeBrushSettings
 
-To categorize leaf nodes in a TreeMap according to different ranges of background color values, use `TreeMapRangeBrushSettings`. Define the upper and lower limits of each range using the `To` and `From` properties of `TreeMapRangeBrush`.
+To categorize leaf items in a TreeMap according to different ranges of background color values, use `TreeMapRangeBrushSettings`. Define the upper and lower limits of each range using the `To` and `From` properties of `TreeMapRangeBrush`.
 
-#### TreeMapRangeBrush
+#### RangeBrush
+
+The following code example explains how to configure the range brush in .NET MAUI SfTreeMap control.
 
 {% tabs %}
 {% highlight XAML hl_lines="12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28" %}
@@ -1089,14 +1055,12 @@ treeMap.LeafItemBrushSettings = new TreeMapRangeBrushSettings()
     }
 };
 
+treeMap.LegendSettings = new TreeMapLegendSettings() { ShowLegend = true };
 this.Content = treeMap;
 
 {% endhighlight %}
 {% highlight C# tabtitle="PopulationDetails.cs" %}
 
-/// <summary>    
-/// Represents the custom data properties.
-/// </summary>
 public class PopulationDetails
 {
     public string Country { get; set; }
@@ -1107,9 +1071,6 @@ public class PopulationDetails
 {% endhighlight %}
 {% highlight c# tabtitle="PopulationViewModel.cs" %}
 
-/// <summary>    
-/// Represents demographic information for countries in the Americas for the year 2023.
-/// </summary>
 public class PopulationViewModel
 {
     public PopulationViewModel()
@@ -1179,7 +1140,7 @@ public class PopulationViewModel
 
 </table>
 
-### TreeMapToolTipSettings
+### ToolTipSettings
 
 The following code example, explains how to configure the tooltip setting in .NET MAUI SfTreeMap control.
 
@@ -1195,7 +1156,7 @@ The following code example, explains how to configure the tooltip setting in .NE
     </treemap:SfTreeMap.BindingContext>
     <treemap:SfTreeMap.LeafItemSettings>
         <treemap:TreeMapLeafItemSettings LabelPath="Country">
-    </treemap:TreeMapLeafItemSettings>
+        </treemap:TreeMapLeafItemSettings>
     </treemap:SfTreeMap.LeafItemSettings>
     <treemap:SfTreeMap.LeafItemBrushSettings>
         <treemap:TreeMapUniformBrushSettings Brush="Orange"/>
@@ -1222,9 +1183,6 @@ this.Content = treeMap;
 {% endhighlight %}
 {% highlight C# tabtitle="PopulationDetails.cs" %}
 
-/// <summary>    
-/// Represents the custom data properties.
-/// </summary>
 public class PopulationDetails
 {
     public string Country { get; set; }
@@ -1235,9 +1193,6 @@ public class PopulationDetails
 {% endhighlight %}
 {% highlight c# tabtitle="PopulationViewModel.cs" %}
 
-/// <summary>    
-/// Represents demographic information for countries in the Americas for the year 2023.
-/// </summary>
 public class PopulationViewModel
 {
     public PopulationViewModel()
@@ -1307,7 +1262,7 @@ public class PopulationViewModel
 
 </table>
 
-### TreeMapLevel
+### Levels
 
 The following code example, explains how to configure the tree map level in .NET MAUI SfTreeMap control.
 
@@ -1348,9 +1303,6 @@ this.Content = treeMap;
 {% endhighlight %}
 {% highlight C# tabtitle="PopulationDetails.cs" %}
 
-/// <summary>    
-/// Represents the custom data properties.
-/// </summary>
 public class PopulationDetails
 {
     public string Country { get; set; }
@@ -1361,9 +1313,6 @@ public class PopulationDetails
 {% endhighlight %}
 {% highlight c# tabtitle="PopulationViewModel.cs" %}
 
-/// <summary>    
-/// Represents demographic information for countries in the Americas for the year 2023.
-/// </summary>
 public class PopulationViewModel
 {
     public PopulationViewModel()
@@ -1451,7 +1400,7 @@ public class PopulationViewModel
 
 </table>
 
-### TreeMapTextStyle
+### TextStyle
 
 The `FontColor`, `FontSize`, `FontFamily`, and `FontAttributes` properties of the `SfTreeMap` is grouped to `TreeMapTextStyle`.
 
