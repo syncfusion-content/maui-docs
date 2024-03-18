@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Basic Features in .NET MAUI Masked Entry control | Syncfusion
+title: Basic Features in .NET MAUI Numeric Entry control | Syncfusion
 description: Learn about Basic Features support in Syncfusion .NET MAUI Masked Entry (SfNumericEntry) control and more.
 platform: maui
 control: SfNumericEntry
