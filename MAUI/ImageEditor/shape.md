@@ -264,7 +264,7 @@ N> The event is common for text and shape annotations.
 
 ## Annotation unselected event
 
-This `AnnotationUnselected` event occurs when the annotation is unselected.
+This [AnnotationUnselected](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_AnnotationUnselected) event occurs when the annotation is unselected.
 
 N> This is common for Shape, Text and CustomView annotations.
 
