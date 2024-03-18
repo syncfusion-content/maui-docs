@@ -9,11 +9,11 @@ documentation: ug
 
 # Axis labels in .NET MAUI Chart
 
-Axis labels are used to display the units, measures, or category values of an axis in a user-friendly way. They are generated based on the range and the values bound to the [XBindingPath]() or [YBindingPath]() properties of the series.
+Axis labels are used to display the units, measures, or category values of an axis in a user-friendly way. They are generated based on the range and the values bound to the [XBindingPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_XBindingPath) or [YBindingPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.XYDataSeries.html#Syncfusion_Maui_Charts_XYDataSeries_YBindingPath) properties of the series.
 
 ## Label customization
 
-The [LabelStyle]() property of the axis provides options to customize the font family, font size, font attributes, and text color of axis labels. The axis labels can be customized using the following properties:
+The [LabelStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_LabelStyle) property of the axis provides options to customize the font family, font size, font attributes, and text color of axis labels. The axis labels can be customized using the following properties:
 
 * `Background` - Gets or sets the background color of the labels.
 * `CornerRadius` - Gets or sets a value that defines the rounded corners for labels.
@@ -29,7 +29,7 @@ The [LabelStyle]() property of the axis provides options to customize the font f
 
 ## Edge Labels Drawing Mode
 
-The chart axis supports customizing the rendering position of the edge labels using the [EdgeLabelsDrawingMode]() property. The default value of the [EdgeLabelsDrawingMode]() property is `Shift`.
+The chart axis supports customizing the rendering position of the edge labels using the [EdgeLabelsDrawingMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_EdgeLabelsDrawingMode) property. The default value of the [EdgeLabelsDrawingMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_EdgeLabelsDrawingMode) property is `Shift`.
 
 | Action | Description |
 |--|--|
@@ -47,7 +47,6 @@ The chart axis supports customizing the rendering position of the edge labels us
     <chart:SfPolarChart.SecondaryAxis>
         <chart:DateTimeAxis EdgeLabelsDrawingMode="Center"/>
     </chart:SfPolarChart.SecondaryAxis>
-
 </chart:SfPolarChart>
 
 {% endhighlight %}
@@ -60,7 +59,8 @@ DateTimeAxis secondaryAxis = new DateTimeAxis()
 {
     EdgeLabelsDrawingMode = EdgeLabelsDrawingMode.Center
 };
-chart.SecondaryAxis.Add(secondaryAxis);
+
+chart.SecondaryAxis = secondaryAxis;
 
 {% endhighlight %}
 
@@ -68,13 +68,13 @@ chart.SecondaryAxis.Add(secondaryAxis);
 
 ## Edge Labels Visibility
  
-The visibility of the edge labels of the axis can be controlled using the [EdgeLabelsVisibilityMode]() property. The default value of [EdgeLabelsVisibilityMode]() is `Default`, which displays the edge label based on auto interval calculations.
+The visibility of the edge labels of the axis can be controlled using the [EdgeLabelsVisibilityMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.RangeAxisBase.html#Syncfusion_Maui_Charts_RangeAxisBase_EdgeLabelsVisibilityMode) property. The default value of [EdgeLabelsVisibilityMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.RangeAxisBase.html#Syncfusion_Maui_Charts_RangeAxisBase_EdgeLabelsVisibilityMode) is `Default`, which displays the edge label based on auto interval calculations.
 
 N> EdgeLabelsDrawingMode and EdgeLabelsVisibilityMode can only be customized for the secondary axis.
 
 **Always Visible**
 
-The `AlwaysVisible` option in [EdgeLabelsVisibilityMode]() is used to display the edge labels even when the chart area is zoomed state.
+The `AlwaysVisible` option in [EdgeLabelsVisibilityMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.RangeAxisBase.html#Syncfusion_Maui_Charts_RangeAxisBase_EdgeLabelsVisibilityMode) is used to display the edge labels even when the chart area is zoomed state.
 
 {% tabs %}
 
@@ -82,11 +82,9 @@ The `AlwaysVisible` option in [EdgeLabelsVisibilityMode]() is used to display th
 
 <chart:SfPolarChart>
     . . .
-
     <chart:SfPolarChart.SecondaryAxis>
         <chart:NumericalAxis EdgeLabelsVisibilityMode="AlwaysVisible"/>
     </chart:SfPolarChart.SecondaryAxis>
-
 </chart:SfPolarChart>
 
 {% endhighlight %}
@@ -99,7 +97,8 @@ NumericalAxis secondaryAxis = new NumericalAxis()
 {
     EdgeLabelsVisibilityMode = EdgeLabelsVisibilityMode.AlwaysVisible
 };
-chart.SecondaryAxis.Add(secondaryAxis);
+
+chart.SecondaryAxis = secondaryAxis;
 
 {% endhighlight %}
 
@@ -115,11 +114,9 @@ The `Visible` option is used to display the edge labels irrespective of the auto
 
 <chart:SfPolarChart>
 . . .
-
     <chart:SfPolarChart.SecondaryAxis>
         <chart:NumericalAxis EdgeLabelsVisibilityMode="Visible"/>
     </chart:SfPolarChart.SecondaryAxis>
-
 </chart:SfPolarChart>
 
 {% endhighlight %}
@@ -132,7 +129,8 @@ NumericalAxis secondaryAxis = new NumericalAxis()
 {
     EdgeLabelsVisibilityMode = EdgeLabelsVisibilityMode.Visible
 };
-chart.SecondaryAxis.Add(secondaryAxis);
+
+chart.SecondaryAxis = secondaryAxis;
 
 {% endhighlight %}
 
