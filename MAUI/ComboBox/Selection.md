@@ -34,7 +34,7 @@ The selected item can be changed interactively by selecting from the drop-down l
 
 The following gif image illustrates the result of the above code:
 
-![.NET MAUI ComboBox UI selection.](Images/selection/net-maui-combobox-ui-selection.png)
+![.NET MAUI ComboBox UI selection.](Images/Selection/net-maui-combobox-ui-selection.png)
 
 
 ### Programmatic selection 
@@ -136,12 +136,12 @@ The selected items can be changed interactively by using keyboard or by selectin
 
 There are two ways to display multi-selection items in the ComboBox control. They are:
 
-* Wrap
-* None
+* [Wrap](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ComboBoxTokensWrapMode.html#Syncfusion_Maui_Inputs_ComboBoxTokensWrapMode_Wrap)
+* [None](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ComboBoxTokensWrapMode.html#Syncfusion_Maui_Inputs_ComboBoxTokensWrapMode_None)
 
 #### Wrap mode
 
-When the TokensWrapMode is set to Wrap, the selected items will be wrapped to the next line of the SfComboBox.
+When the [TokensWrapMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_TokensWrapMode) is set to [Wrap](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ComboBoxTokensWrapMode.html#Syncfusion_Maui_Inputs_ComboBoxTokensWrapMode_Wrap), the selected items will be wrapped to the next line of the SfComboBox.
 
 {% tabs %}
 
@@ -165,7 +165,7 @@ When the TokensWrapMode is set to Wrap, the selected items will be wrapped to th
 
 #### None mode
 
-When the TokensWrapMode is set to None, the selected item will be wrapped in a horizontal orientation.
+When the [TokensWrapMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_TokensWrapMode) is set to [None](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ComboBoxTokensWrapMode.html#Syncfusion_Maui_Inputs_ComboBoxTokensWrapMode_None), the selected item will be wrapped in a horizontal orientation.
 
 {% tabs %}
 

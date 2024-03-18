@@ -11,7 +11,7 @@ documentation: ug
 
 AutoSizing can be enabled in the [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) control so that the control will extend its layout based on the input content.
 
-The EnableAutoSize property is used to enable the auto sizing in the SfComboBox control. To enable the API, set the SelectionMode as Multiple and TokensWrapMode as Wrap. The default value of EnableAutoSize is false.
+The [EnableAutoSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_EnableAutoSize) property is used to enable the auto sizing in the SfComboBox control. To enable the API, set the [SelectionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_SelectionMode) as Multiple and [TokensWrapMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_TokensWrapMode) as Wrap. The default value of [EnableAutoSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_EnableAutoSize) is false.
 
 {% tabs %}
 {% highlight xaml %}
@@ -23,11 +23,12 @@ The EnableAutoSize property is used to enable the auto sizing in the SfComboBox 
              MaxDropDownHeight="250"
              DisplayMemberPath="Name"
              TextMemberPath="Name"
+             Placeholder="Enter Media"
              TokensWrapMode="Wrap"
              EnableAutoSize="True" />
 
 {% endhighlight %}
 {% endtabs %}
 
-![.NET MAUI ComboBox AutoSize.](Images/selection/net-maui-combobox-autosize.png){:width="444" height="393" .lazy .shadow-effect .section-padding .img-padding loading="lazy"}
+![.NET MAUI ComboBox AutoSize.](Images/AutoSizing/net-maui-combobox-autosize.png)
 
