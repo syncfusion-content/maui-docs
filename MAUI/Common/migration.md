@@ -520,6 +520,14 @@ Currently working on delivering brand-new .NET MAUI controls that can be used in
 	</tr>
 	<tr>
 	    <td rowspan="1" valign="top">
+			<a href="https://help.syncfusion.com/xamarin/sparkline/getting-started">SfSparkline</a><br/>
+		</td>
+		<td rowspan="1" valign="top">
+			Underway<br/>
+		</td>
+	</tr>
+	<tr>
+	    <td rowspan="1" valign="top">
 			<a href="https://help.syncfusion.com/xamarin/diagram/getting-started">SfDiagram</a><br/>
 		</td>
 		<td rowspan="1" valign="top">
