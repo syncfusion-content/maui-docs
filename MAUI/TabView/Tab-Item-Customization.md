@@ -434,9 +434,9 @@ N> View [sample](https://github.com/SyncfusionExamples/maui-tabview-samples/tree
 
 ## Tab Header Padding
 
-The `TabHeaderPadding` property in SfTabView allows for adding padding to the tab header.
+The [TabHeaderPadding](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_TabHeaderPadding) property in [SfTabView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html?tabs=tabid-1) allows for adding padding to the tab header.
 
-N> The `TabHeaderPadding` property is only applicable when `TabWidthMode` is set to "SizeToContent".
+N> The `TabHeaderPadding` property is only applicable when [TabWidthMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_TabWidthMode) is set to [SizeToContent](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.TabWidthMode.html#Syncfusion_Maui_TabView_TabWidthMode_SizeToContent).
 
 {% tabs %}
 
