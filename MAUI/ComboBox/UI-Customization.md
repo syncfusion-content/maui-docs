@@ -935,7 +935,7 @@ N> The `Completed` event is not supported in the Android platform.
 
 ## DropDownOpening Event
 
-The `DropDownOpening` event will be fired whenever opening the dropdown menu in the SfComboBox. It can cancel dropdown opening with CancelEventArgs that contains the following property:
+The [DropDownOpening](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDropdownEntry.html#Syncfusion_Maui_Core_SfDropdownEntry_DropdownOpening) event will be fired whenever opening the dropdown menu in the SfComboBox. It can cancel dropdown opening with CancelEventArgs that contains the following property:
 
  * Cancel: Dropdown opening is based on this value.
 
@@ -979,7 +979,7 @@ The `DropDownOpening` event will be fired whenever opening the dropdown menu in 
 
 ## DropDownOpened Event
 
-The `DropDownOpened` event occurs when the SfComboBox drop-down is opened.
+The [DropDownOpened](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDropdownEntry.html#Syncfusion_Maui_Core_SfDropdownEntry_DropdownOpened) event occurs when the SfComboBox drop-down is opened.
 
 {% tabs %}
 
@@ -1021,7 +1021,7 @@ x:Name="comboBox" >
 
 ## DropDownClosed Event
 
-The `DropDownClosed` event occurs when the SfComboBox drop-down is closed.
+The [DropDownClosed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_DropDownClosed) event occurs when the SfComboBox drop-down is closed.
 
 {% tabs %}
 {% highlight xaml %}
@@ -1079,15 +1079,15 @@ N> The cursor position support is available for editable mode only, and two-way 
 
 ## Border visibility
 
-The `ShowBorder` property of [`SfComboBox`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) is used to modify the visibility of the border and its default value is **true**. The following code example demonstrates how to change the border visibility,
+The [ShowBorder](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_ShowBorder) property of [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) is used to modify the visibility of the border and its default value is **true**. The following code example demonstrates how to change the border visibility,
 
 {% tabs %}
 {% highlight xaml %}
 
 <editors:SfComboBox x:Name="comboBox"
-                            WidthRequest="200" 
-                            HeightRequest="35"
-                            ShowBorder="False"/>
+                    WidthRequest="200" 
+                    HeightRequest="35"
+                    ShowBorder="False"/>
 {% endhighlight %}
 {% highlight C# %}
 
@@ -1105,9 +1105,9 @@ The following image illustrates the result of the above code:
 
 ![.NET MAUI ComboBox showborder](Images/UICustomization/ShowBorder.png)
 
-### TextAlignment
+## TextAlignment
 
-The [`SfComboBox`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) provides support to customize the text alignment by using the `HorizontalTextAlignment` and `VerticalTextAlignment` properties.
+The [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) provides support to customize the text alignment by using the [HorizontalTextAlignment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_HorizontalTextAlignment) and [VerticalTextAlignment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_VerticalTextAlignment) properties.
 
 N> Dynamic changes to the `HorizontalTextAlignment` property may not be functioning as expected on Android platform.
 

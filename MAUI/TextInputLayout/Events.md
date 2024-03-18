@@ -11,9 +11,9 @@ documentation: ug
 
 ## PasswordVisibilityToggled Event
 
-The `PasswordVisibilityToggled` event will be triggered whenever you toggle the password toggle icon in the SfTextInputLayout. The event arguments are of type `PasswordVisibilityToggledEventArgs` and expose the following property:
+The [PasswordVisibilityToggled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_PasswordVisibilityToggled) event will be triggered whenever you toggle the password toggle icon in the SfTextInputLayout. The event arguments are of type [PasswordVisibilityToggledEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.PasswordVisibilityToggledEventArgs.html) and expose the following property:
 
-* `IsPasswordVisible`: Its value is defined based on the visibility of the password.
+* [IsPasswordVisible](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.PasswordVisibilityToggledEventArgs.html#Syncfusion_Maui_Core_PasswordVisibilityToggledEventArgs_IsPasswordVisible): Its value is defined based on the visibility of the password.
 
 {% tabs %} 
 {% highlight xaml %} 
