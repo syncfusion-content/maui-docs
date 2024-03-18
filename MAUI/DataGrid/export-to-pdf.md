@@ -633,7 +633,7 @@ option.CanExportHeader = false;
 
 #### Export stacked header 
 
-By default, the column headers will not be exported to PDF document. To export the SfDataGrid with the column headers, set the [DataGridPdfExportingOption.CanExportStackedHeaders]() property to `true`.
+By default, the column headers will not be exported to PDF document. To export the SfDataGrid with the column headers, set the [DataGridPdfExportingOption.CanExportStackedHeaders](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.Exporting.DataGridPdfExportingOption.html#Syncfusion_Maui_DataGrid_Exporting_DataGridPdfExportingOption_CanExportStackedHeaders) property to `true`.
 
 {% tabs %}
 {% highlight c# %}
@@ -672,7 +672,7 @@ option.CanExportGroupSummary = true;
 
 #### Export unbound row 
 
-By default, the unbound rows in the data grid will not be exported to PDF. To export the `SfDataGrid` with unbound rows, set the [DataGridPdfExportingOption.CanExportUnboundRow]() property to `true`.
+By default, the unbound rows in the data grid will not be exported to PDF. To export the `SfDataGrid` with unbound rows, set the [DataGridPdfExportingOption.CanExportUnboundRow](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.Exporting.DataGridPdfExportingOption.html#Syncfusion_Maui_DataGrid_Exporting_DataGridPdfExportingOption_CanExportUnboundRows) property to `true`.
 
 {% tabs %}
 {% highlight c# %}

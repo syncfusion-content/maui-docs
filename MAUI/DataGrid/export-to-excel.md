@@ -532,7 +532,7 @@ N> The SfDataGrid is unable to export the DataGridTemplateColumn to PDF or Excel
 
 ## ExportToExcel
 
-To export the data to PDF, you can use the [DataGridPdfExportingController.ExportToPdf]() method, which requires passing the SfDataGrid as an argument.
+To export the data to Excel, you can use the [DataGridExcelExportingController.ExportToExcel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.Exporting.DataGridExcelExportingController.html#Syncfusion_Maui_DataGrid_Exporting_DataGridExcelExportingController_ExportToExcel_Syncfusion_Maui_DataGrid_SfDataGrid_) method, which requires passing the SfDataGrid as an argument.
 
 {% tabs %}
 {% highlight c# %}
@@ -636,7 +636,7 @@ option.CanExportHeader = false;
 
 ### Export stacked header
 
-By default, the column headers will not be exported to Excel sheet. To export the SfDataGrid with stacked headers column, set the [DataGridExcelExportingOption.CanExportStackedHeaders]() property to `true`.
+By default, the column headers will not be exported to Excel sheet. To export the SfDataGrid with stacked headers column, set the [DataGridExcelExportingOption.CanExportStackedHeaders](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.Exporting.DataGridExcelExportingOption.html#Syncfusion_Maui_DataGrid_Exporting_DataGridExcelExportingOption_CanExportStackedHeaders) property to `true`.
 
 {% tabs %}
 {% highlight c# %}
@@ -694,7 +694,7 @@ option.CanAllowOutlining = true;
 
 #### Export unbound row
 
-By default, unbound row in the data grid will not be exported to Excel. To export the SfDataGrid with unbound row, set the [DataGridExcelExportingOption.CanExportUnboundRow]() property to `true`.
+By default, unbound row in the data grid will not be exported to Excel. To export the SfDataGrid with unbound row, set the [DataGridExcelExportingOption.CanExportUnboundRow](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.Exporting.DataGridExcelExportingOption.html#Syncfusion_Maui_DataGrid_Exporting_DataGridExcelExportingOption_CanExportUnboundRows) property to `true`.
 
 {% tabs %}
 {% highlight c# %}
