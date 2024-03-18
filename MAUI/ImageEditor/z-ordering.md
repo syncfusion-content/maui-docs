@@ -18,7 +18,7 @@ The image editor control allows to change the position of annotations that are a
 
 ## BringToFront
 
-The `BringToFront` method is used to bring the selected annotation to the front of all the annotations over an image.
+The [BringToFront](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_BringToFront) method is used to bring the selected annotation to the front of all the annotations over an image.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -44,7 +44,7 @@ The `BringToFront` method is used to bring the selected annotation to the front 
 
 ## SendToBack
 
-The `SendToBack` method is used to send the selected annotation to the back of all the annotations.
+The [SendToBack](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_SendToBack) method is used to send the selected annotation to the back of all the annotations.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -70,7 +70,7 @@ The `SendToBack` method is used to send the selected annotation to the back of a
 
 ## BringForward
 
-The `BringForward` method is used to bring the selected annotation to one step forward over the image.
+The [BringForward](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_BringForward) method is used to bring the selected annotation to one step forward over the image.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -96,7 +96,7 @@ The `BringForward` method is used to bring the selected annotation to one step f
 
 ## SendBackward
 
-The `SendBackward` method is used to send the selected annotation one step backward over an image.
+The [SendBackward](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_SendBackward) method is used to send the selected annotation one step backward over an image.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}

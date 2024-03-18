@@ -438,7 +438,7 @@ RadioGroup
 
 ## Label view customization
 
-Customize the label view of the default layout by using the `InitializeDataLabel` method of the [DataFormItemManager](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItemManager.html).
+Customize the label view of the default layout by using the [InitializeDataLabel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItemManager.html#Syncfusion_Maui_DataForm_DataFormItemManager_InitializeDataLabel_Syncfusion_Maui_DataForm_DataFormItem_Microsoft_Maui_Controls_Label_) method of the [DataFormItemManager](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItemManager.html).
 
 {% tabs %}
 {% highlight c# %}
