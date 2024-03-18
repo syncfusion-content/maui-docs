@@ -9,7 +9,7 @@ documentation : ug
 
 # Populating Data in .NET MAUI Rotator (SfRotator)
 
-The `SfRotator` control supports binding to different data sources such as IList Data Source and Observable Collection Data Source.
+The [`SfRotator`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html?tabs=tabid-1) control supports binding to different data sources such as IList Data Source and Observable Collection Data Source.
 
 ## Through Binding
 
@@ -17,7 +17,7 @@ This section explains about setting Item Source and applying custom template to 
 
 ### Create a Model with Data
 
-The `SfRotator` items can be populated with a collection of image data. Assign a collection to it. Collections include arrays, Lists, and DataTables. For example, you may want to create a Rotator model with an Image as follows.
+The [`SfRotator`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html?tabs=tabid-1)items can be populated with a collection of image data. Assign a collection to it. Collections include arrays, Lists, and DataTables. For example, you may want to create a Rotator model with an Image as follows.
 
 {% tabs %}
 
@@ -40,7 +40,7 @@ public String Image
 
 {% endtabs %}
 
-Create and populate the `SfRotator` collection as follows.
+Create and populate the [`SfRotator`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html?tabs=tabid-1) collection as follows.
 
 {% tabs %}
 
@@ -69,7 +69,7 @@ public List<RotatorModel> ImageCollection
 
 ### Binding the Data with Custom Template
 
-The `SfRotator` provides support to add a custom view as RotatorItems by designing a view inside its ItemTemplate. This template will be applied for all its items, and its data will be bound.
+The [`SfRotator`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html?tabs=tabid-1)provides support to add a custom view as RotatorItems by designing a view inside its ItemTemplate. This template will be applied for all its items, and its data will be bound.
 
 {% tabs %}
 
@@ -156,7 +156,7 @@ public partial class Rotator : ContentPage
 
 ## Through Rotator Item
 
-The ItemTemplate provides a common template with different data, whereas if different views for every item are needed, it can also be provided using the `ItemContent` property in the `SfRotatorItem` class.
+The ItemTemplate provides a common template with different data, whereas if different views for every item are needed, it can also be provided using the [`ItemContent`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotatorItem.html#Syncfusion_Maui_Rotator_SfRotatorItem_ItemContent) property in the [`SfRotatorItem`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotatorItem.html) class.
 
 {% tabs %}
 
@@ -208,7 +208,7 @@ public partial class Rotator : ContentPage
 
 ![RotatorItem](images/RotatorItem.png)
 
-Also, the rotator provides support to display only the image data with the `Image` property in the `SfRotatorItem` class.
+Also, the rotator provides support to display only the image data with the [`Image`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotatorItem.html#Syncfusion_Maui_Rotator_SfRotatorItem_Image) property in the [`SfRotatorItem`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotatorItem.html) class.
 
 {% tabs %}
 

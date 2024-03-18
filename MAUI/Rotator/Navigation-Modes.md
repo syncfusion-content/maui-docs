@@ -11,7 +11,7 @@ documentation: ug
 
 # Navigation Modes in .NET MAUI Rotator (SfRotator)
 
-The `NavigationStripMode` property specifies the appearance of navigation bar items. The image data can be selected either by `Thumbnail` or by `Dots`navigation modes.
+The [`NavigationStripMode`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html#Syncfusion_Maui_Rotator_SfRotator_NavigationStripMode) property specifies the appearance of navigation bar items. The image data can be selected either by [`Thumbnail`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Rotator.NavigationStripMode.html#Syncfusion_Maui_Core_Rotator_NavigationStripMode_Thumbnail) or by [`Dots`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Rotator.NavigationStripMode.html#Syncfusion_Maui_Core_Rotator_NavigationStripMode_Dots) navigation modes.
 
 ## Thumbnail
 
@@ -195,14 +195,14 @@ namespace Rotator
 
 ## Navigation Strip Positions
 
-The `NavigationStripPosition` specifies the placement position of the navigation bar items, such as thumbnails or dots relative to the slider area.
+The [`NavigationStripPosition`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html#Syncfusion_Maui_Rotator_SfRotator_NavigationStripPosition) specifies the placement position of the navigation bar items, such as thumbnails or dots relative to the slider area.
 
 There are four available positions,
 
-* `Bottom` - Sets the position of the navigation bar items to the bottom.
-* `Left` - Sets the position of the navigation bar items to the left.
-* `Top` - Sets the position of the navigation bar items to the top.
-* `Right` - Sets the position of the navigation bar items to the right.
+* [`Bottom`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Rotator.NavigationStripPosition.html#Syncfusion_Maui_Core_Rotator_NavigationStripPosition_Bottom) - Sets the position of the navigation bar items to the bottom.
+* [`Left`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Rotator.NavigationStripPosition.html#Syncfusion_Maui_Core_Rotator_NavigationStripPosition_Left)  - Sets the position of the navigation bar items to the left.
+* [`Top`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Rotator.NavigationStripPosition.html#Syncfusion_Maui_Core_Rotator_NavigationStripPosition_Top)  - Sets the position of the navigation bar items to the top.
+* [`Right`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Rotator.NavigationStripPosition.html#Syncfusion_Maui_Core_Rotator_NavigationStripPosition_Right    )  - Sets the position of the navigation bar items to the right.
 
 {% tabs %}
 
