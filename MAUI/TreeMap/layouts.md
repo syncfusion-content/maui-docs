@@ -356,7 +356,7 @@ public class PopulationViewModel
     }
 }
 
-![slice-and-dice-vertical-layout-type-in-maui-treemap](images/layouts/slice-and-dice-vertical-layout-type-in-maui-treemap.jpeg){:width="313" height="444" .lazy .shadow-effect}
-
 {% endhighlight %}
 {% endtabs %}
+
+![slice-and-dice-vertical-layout-type-in-maui-treemap](images/layouts/slice-and-dice-vertical-layout-type-in-maui-treemap.jpeg){:width="313" height="444"}

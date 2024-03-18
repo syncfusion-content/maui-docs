@@ -9,17 +9,17 @@ documentation: ug
 
 # Events in the .NET MAUI TreeMap (SfTreeMap)
 
-## SelectionChanged
+## Notifying TreeMap selection changes
 
 The `SelectionChanged` event occurs when there is a change in the selection within a tree map item.
 
 We can get the below details from the `SelectionChanged` event.
 
-    * `OldItems`: Returns the previously selected item.
-    * `NewItems`: Returns the newly selected item.
-    * `Category`: Returns the hierarchical path of the selected item within its groups.
-    * `IsSelected`: Returns the items are selected or deselected.
-    * `GroupLevel`: Returns the level of grouping for the selected items.
+ * `OldItems`: Returns the previously selected items.
+ * `NewItems`: Returns the newly selected items.
+ * `Category`: Returns the hierarchical path of the selected item within its groups.
+ * `IsSelected`: Returns the items are selected or deselected.
+ * `GroupLevel`: Returns the level of grouping for the selected items.
 
 {% tabs %}
 {% highlight XAML hl_lines="3" %}

@@ -13,9 +13,7 @@ The TreeMap is designed to effectively work with its elements, providing voice d
 
 ## Keyboard shortcuts in .NET MAUI TreeMap (SfTreeMap)
 
-The `Syncfusion .NET MAUI TreeMap` supports keyboard shortcuts for user interaction. 
-
-N> This feature is only applicable for Windows and macOS platforms.
+The `Syncfusion .NET MAUI TreeMap` supports keyboard shortcuts for user interaction. This feature is only applicable for Windows and macOS platforms.
 
 The following is a table outlining the various shortcuts and their associated functions:
 
@@ -26,7 +24,7 @@ The following is a table outlining the various shortcuts and their associated fu
 <b> Descriptions </b> <br/><br/></td></tr>
 <tr>
 <td>
-Shift<br/><br/></td><td> 
+Tab<br/><br/></td><td> 
 Moves selection to the next item on the right side of the TreeMap.
 <br/><br/></td></tr>
 <tr>
@@ -36,4 +34,4 @@ Moves selection to the previous item on the left side of the TreeMap.
 <br/><br/></td></tr>
 </table>
 
-N> When `SelectionMode` is set to `Single,` each key press clears the previous focus and selects the new item. When `SelectionMode` is set to `Multiple,` the previously focused item remains selected while new items are selected with each key press.When `SelectionMode` is set to `None,` the item remains unselected.
+N> When `SelectionMode` is set to `Single,` each key press clears the previous focus and selects the new item. When `SelectionMode` is set to `Multiple,` the previously focused item remains selected while new items are selected with each key press. When `SelectionMode` is set to `None,` the item remains unselected.

@@ -356,7 +356,7 @@ public class PopulationViewModel
 The group items are colored using the `Brushes` property within the colors collection of `TreeMapPaletteBrushSettings` in the `GroupItemBrushSettings` of `SfTreeMap.`
 
 {% tabs %}
-{% highlight XAML hl_lines="15 16 17 18 19 20 21 22" %}
+{% highlight XAML hl_lines="14 15 16 17 18 19 20 21" %}
 
 <treemap:SfTreeMap x:Name="treeMap"
                    DataSource="{Binding PopulationDetails}"
@@ -365,8 +365,7 @@ The group items are colored using the `Brushes` property within the colors colle
         <local:PopulationViewModel />
     </treemap:SfTreeMap.BindingContext>
     <treemap:SfTreeMap.LeafItemSettings>
-        <treemap:TreeMapLeafItemSettings LabelPath="Country"
-                                         Stroke="White">
+        <treemap:TreeMapLeafItemSettings LabelPath="Country">
         </treemap:TreeMapLeafItemSettings>
     </treemap:SfTreeMap.LeafItemSettings>
     <treemap:SfTreeMap.Levels>
@@ -390,7 +389,7 @@ SfTreeMap treeMap = new SfTreeMap();
 PopulationViewModel viewModel = new PopulationViewModel();
 treeMap.DataSource = viewModel.PopulationDetails;
 treeMap.PrimaryValuePath = "Population";
-treeMap.LeafItemSettings = new TreeMapLeafItemSettings() { LabelPath = "Country", Stroke = Colors.White };
+treeMap.LeafItemSettings = new TreeMapLeafItemSettings() { LabelPath = "Country" };
 treeMap.Levels.Add(new TreeMapLevel() { GroupPath = "Continent" });
 treeMap.GroupItemBrushSettings = new TreeMapPaletteBrushSettings()
 {

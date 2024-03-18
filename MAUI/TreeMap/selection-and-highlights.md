@@ -9,11 +9,11 @@ documentation: ug
  
 # Selection in TreeMap control
 
-The Treemap control enables users to select specific groups or items for distinction, with the Tooltip feature providing additional information during interaction. However, when the SelectionMode is set to `None,` interaction with treemap items is disabled.
+The Treemap control enables users to select specific groups or items for distinction, with the tooltip feature providing additional information during interaction. However, when the `SelectionMode` is set to `None,` interaction with treemap items are disabled.
 
 ## Selection mode
 
-The selection mode in the Treemap control determines the interactivity level, enabling users to choose specific items. The default value of `SelectionMode` is `Single`.
+The selection mode in the TreeMap control determines the interactivity level, enabling users to choose specific items. The default value of `SelectionMode` is `Single`.
 
 ### Single selection
 
@@ -285,7 +285,7 @@ public class PopulationViewModel
 {% endhighlight %}
 {% endtabs %}
 
-## Programatic item selection
+## Programmatic item selection
 
 You can programmatically select the tree map items by utilizing the `SelectedItems` property in the `SfTreeMap.` This property holds a collection of the treemap items representing the currently selected ones. In the `Single` selection mode, only the first item in the SelectedItems collection will be selected. In the `Multiple` selection mode, all items in the `SelectedItems` collection will be selected. When `SelectionMode` is set to `None,` no items are selected.
 

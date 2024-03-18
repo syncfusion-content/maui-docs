@@ -11,9 +11,9 @@ documentation: ug
 
 The tooltip provides information when hovering over or selecting items in the interactive TreeMap, displaying details about the values of each item.
 
-## Enable Tooltip
+## Enable tooltip
 
-To enable tooltips for the TreeMap control, utilize the `ShowToolTip` property of `SfTreeMap.` By default, the value of `ShowToolTip` is set to `false.` To provide users with additional information or context about specific treemap items, simply set this property to `true.`
+To enable tooltip for the TreeMap control, utilize the `ShowToolTip` property of `SfTreeMap.` By default, the value of `ShowToolTip` is set to `false.` To provide users with additional information or context about specific treemap items, simply set this property to `true.`
 
 {% tabs %}
 {% highlight XAML hl_lines="4" %}
@@ -100,21 +100,21 @@ public class PopulationViewModel
 
 The tooltip appearance customization can be achieved by using the `Stroke,` `Duration,` `TextStyle`, and `Background` properties of `ToolTipSettings` in the `SfTreeMap.`
 
-Additionally, you can achieve further appearance customization by using `TooltipTemplate` of the `SfTreeMap.`
+Additionally, you can achieve further appearance customization by using `ToolTipTemplate` of the `SfTreeMap.`
 
-### Customize level appearance using tool tip properties
+### Customize tooltip appearance using its properties
 
-To customize the appearance of tooltips in the TreeMap using `ToolTipSettings,` you can utilize the following properties:
+To customize the appearance of tooltip in the SfTreeMap using `ToolTipSettings,` you can utilize the following properties:
 
-* `Background`: This property allows you to change the background color of the tooltip
-* `Duration`: Specifies the duration, in milliseconds, for which the tooltip will be displayed. This helps control how long the tooltip remains visible on the screen.
+* `Background`: This property allows you to change the background color of the tooltip.
+* `Duration`: Specifies the duration in milliseconds, for which the tooltip will be displayed. This helps control how long the tooltip remains visible on the screen.
 * `Stroke`: This property enables you to change the border color of the tooltip.
-* `TextStyle`: This property is used to modify the appearance of the tooltip text. You can customize attributes such as TextColor, FontSize, FontAttributes, and FontFamily.
+* `TextStyle`: This property is used to modify the appearance of the tooltip text. You can customize attributes such as `TextColor,` `FontSize,` `FontAttributes,` and `FontFamily.`
 
 {% tabs %}
-{% highlight XAML hl_lines="4 12 13 14 15 16 17 18 19 20 21" %}
+{% highlight XAML hl_lines="4 12 13 14 15 16 17 18 19 20 21 22" %}
 
- <treemap:SfTreeMap x:Name="treeMap"
+<treemap:SfTreeMap x:Name="treeMap"
                     DataSource="{Binding PopulationDetails}"
                     PrimaryValuePath="Population"
                     ShowToolTip="True">
@@ -136,19 +136,22 @@ To customize the appearance of tooltips in the TreeMap using `ToolTipSettings,` 
             </treemap:TreeMapToolTipSettings.TextStyle>
          </treemap:TreeMapToolTipSettings>                                     
     </treemap:SfTreeMap.ToolTipSettings>
+    <treemap:SfTreeMap.BindingContext>
+        <local:PopulationViewModel />
+    </treemap:SfTreeMap.BindingContext>
  </treemap:SfTreeMap>
 
 {% endhighlight %}
 {% highlight C# hl_lines="5 8" %}
 
 SfTreeMap treeMap = new SfTreeMap();
-GroupLevelViewModel viewModel = new GroupLevelViewModel();
+PopulationViewModel viewModel = new PopulationViewModel();
 treeMap.DataSource = viewModel.PopulationDetails;
 treeMap.PrimaryValuePath = "Population";
 treeMap.ShowToolTip = true;
 treeMap.LeafItemBrushSettings = new TreeMapUniformBrushSettings() { Brush = Brush.Orange };
 treeMap.LeafItemSettings = new TreeMapLeafItemSettings() { LabelPath = "Country" };
-treeMap.ToolTipSettings = new TreeMapToolTipSettings() { Background = Brush.Blue, Stroke = Brush.Red, TextStyle = new TreeMapTextStyle() { TextColor = Colors.White, FontSize = 14, FontAttributes = FontAttributes.Italic } };
+treeMap.ToolTipSettings = new TreeMapToolTipSettings() { Background = Brush.Blue, Stroke = Brush.Red, Duration = new TimeSpan(0, 0, 10), TextStyle = new TreeMapTextStyle() { TextColor = Colors.White, FontSize = 14, FontAttributes = FontAttributes.Italic } };
 this.Content = treeMap;
 
 {% endhighlight %}
@@ -201,35 +204,73 @@ public class PopulationViewModel
 {% endhighlight %}
 {% endtabs %}
 
-N> N> This property will be applicable to only when the `ShowToolTip` is enabled.
+N> This property will only be applicable when the `ShowToolTip` is enabled.
 
-## Tooltip Template
+### Customize tooltip appearance using DataTemplate
 
-The `SfTreeMap` provides support to customize the appearance of the tooltip by using the `TooltipTemplate` property.
+You can customize the tool tip appearance by using the `ToolTipTemplate` property in the `SfTreeMap.`
 
 The following code example shows the usage of DataTemplate.
 
 {% tabs %}
-{% highlight XAML hl_lines="4" %}
+{% highlight XAML hl_lines="4 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52" %}
 
 <treemap:SfTreeMap x:Name="treeMap"
                    DataSource="{Binding PopulationDetails}"
                    PrimaryValuePath="Population"
                    ShowToolTip="True">
-    <treemap:SfTreeMap.BindingContext>
-        <local:PopulationViewModel />
-    </treemap:SfTreeMap.BindingContext>
     <treemap:SfTreeMap.LeafItemSettings>
-    <treemap:TreeMapLeafItemSettings LabelPath="Country">
+        <treemap:TreeMapLeafItemSettings LabelPath="Country">
         </treemap:TreeMapLeafItemSettings>
     </treemap:SfTreeMap.LeafItemSettings>
     <treemap:SfTreeMap.LeafItemBrushSettings>
-       <treemap:TreeMapUniformBrushSettings Brush="Orange"/>
+        <treemap:TreeMapUniformBrushSettings Brush="Orange"/>
     </treemap:SfTreeMap.LeafItemBrushSettings>
+    <treemap:SfTreeMap.ToolTipTemplate>
+        <DataTemplate>
+            <StackLayout Orientation="Vertical">
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Country:"
+                           TextColor="White"
+                           Padding="5,0,0,0"
+                           FontSize="Caption"
+                           FontAttributes="Bold"/>
+                    <Label Text="{Binding Item.Country}"
+                           TextColor="White"
+                           FontSize="Caption"
+                           Padding="5,0,0,0"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal"
+                             Margin="0,3,0,0">
+                    <Label Text="Continent:"
+                           TextColor="White" 
+                           Padding="5,0,0,0"
+                           FontSize="Caption"
+                           FontAttributes="Bold"/>
+                    <Label Text="{Binding Item.Continent}"
+                           TextColor="White"
+                           FontSize="Caption"
+                           Padding="5,0,0,0"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal"
+                             Margin="0,3,0,0">
+                    <Label Text="Population:" 
+                           TextColor="White"
+                           FontSize="Caption"
+                           Padding="5,0,0,0"
+                           FontAttributes="Bold"/>
+                    <Label Text="{Binding Item.Population}"
+                           TextColor="White"
+                           FontSize="Caption"
+                           Padding="5,0,0,0"/>
+                </StackLayout>
+            </StackLayout>
+        </DataTemplate>
+    </treemap:SfTreeMap.ToolTipTemplate>
 </treemap:SfTreeMap>
 
 {% endhighlight %}
-{% highlight C# hl_lines="5" %}
+{% highlight C# %}
 
 SfTreeMap treeMap = new SfTreeMap();
 PopulationViewModel viewModel = new PopulationViewModel();
@@ -290,4 +331,4 @@ public class PopulationViewModel
 {% endhighlight %}
 {% endtabs %}
 
-N> N> This property will be applicable to only when the `ShowToolTip` is enabled.
+N> This property will only be applicable when the `ShowToolTip` is enabled.
