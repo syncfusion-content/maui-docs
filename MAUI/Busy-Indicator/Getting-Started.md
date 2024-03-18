@@ -161,5 +161,5 @@ The following gif image illustrates the result of the above code.
 
 ![Getting Started](Images/GettingStarted/CircularMaterial.gif)
 
-N> You can refer to our [.NET MAUI Busy Indicator](https://www.syncfusion.com/maui-controls/maui-busy-indicator) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Busy Indicator Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/BusyIndicator/SampleBrowser.Maui.BusyIndicator/Samples/BusyIndicator) that shows you how to render the BusyIndicator in .NET MAUI.
+N> You can refer to our [.NET MAUI Busy Indicator](https://www.syncfusion.com/maui-controls/maui-busy-indicator) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Busy Indicator Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/BusyIndicator/SampleBrowser.Maui.BusyIndicator/Samples/BusyIndicator) that shows you how to render the Busy Indicator in .NET MAUI.
 
