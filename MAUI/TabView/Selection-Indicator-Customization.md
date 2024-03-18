@@ -135,7 +135,7 @@ N> View [sample](https://github.com/SyncfusionExamples/maui-tabview-samples/tree
 
 ## Indicator Width Mode
 
-The `IndicatorWidthMode` property allows customization of the width of the indicator. By default, the `IndicatorWidthMode` property is set to `Fit`, which adjusts the indicator width to fit the content of the header item. You can change the width size based on the header item by setting the `IndicatorWidthMode` property to `Stretch`.
+The [IndicatorWidthMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_IndicatorWidthMode) property allows customization of the width of the indicator. By default, the `IndicatorWidthMode` property is set to [Fit](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.IndicatorWidthMode.html#Syncfusion_Maui_TabView_IndicatorWidthMode_Fit), which adjusts the indicator width to fit the content of the header item. You can change the width size based on the header item by setting the `IndicatorWidthMode` property to [Stretch](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.IndicatorWidthMode.html#Syncfusion_Maui_TabView_IndicatorWidthMode_Stretch).
 
 {% tabs %}
 
