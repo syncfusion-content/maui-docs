@@ -17,7 +17,7 @@ In Dot Customization we can customise the  dots' stroke, selected and unselected
 
 ### DotsStroke Color
 
-The `DotsStroke` property is used to customize the color of the dots stroke in the `SfRotator`.
+The [`DotsStroke`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html#Syncfusion_Maui_Rotator_SfRotator_DotsStroke) property is used to customize the color of the dots stroke in the [`SfRotator`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html?tabs=tabid-1).
 
 {% tabs %}
 {% highlight xaml %}
@@ -42,7 +42,7 @@ rotator.DotsStroke = Colors.Aqua;
 
 ### Selected Dot Color
 
-The `SelectedDotColor` property is used to customize the color of selected dot in the `SfRotator`.
+The [`SelectedDotColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html#Syncfusion_Maui_Rotator_SfRotator_SelectedDotColor) property is used to customize the color of selected dot in the [`SfRotator`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html?tabs=tabid-1).
 
 {% tabs %}
 {% highlight xaml %}
@@ -70,7 +70,7 @@ rotator.SelectedDotColor = Color.Blue;
 
 ### Unselected Dot Color
 
-The `UnselectedDotColor` property is used to customize the color of unselected dots in the `SfRotator`.
+The [`UnselectedDotColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html#Syncfusion_Maui_Rotator_SfRotator_UnselectedDotColor) property is used to customize the color of unselected dots in the [`SfRotator`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html?tabs=tabid-1).
 
 {% tabs %}
 {% highlight xaml %}
@@ -104,7 +104,7 @@ In Thumbnail Customization we can customise the  selected and unselected thumbna
 
 ### Selected Thumbnail Stroke
 
-The `SelectedThumbnailStroke` property is used to customize the color of the selected thumbnail stroke in the `SfRotator`.
+The [`SelectedThumbnailStroke`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html#Syncfusion_Maui_Rotator_SfRotator_SelectedThumbnailStroke) property is used to customize the color of the selected thumbnail stroke in the [`SfRotator`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html?tabs=tabid-1).
 
 {% tabs %}
 {% highlight xaml %}
@@ -132,7 +132,7 @@ rotator.SelectedThumbnailStroke = Colors.Green;
 
 ### UnSelected Thumbnail Stroke
 
-The `UnSelectedThumbnailStroke` property is used to customize the color of the unselected thumbnails stroke in the `SfRotator`.
+The [`UnSelectedThumbnailStroke`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html#Syncfusion_Maui_Rotator_SfRotator_UnselectedThumbnailStroke) property is used to customize the color of the unselected thumbnails stroke in the [`SfRotator`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html?tabs=tabid-1).
 
 {% tabs %}
 {% highlight xaml %}
@@ -166,7 +166,7 @@ In Navigation Button Customization we can customise the  navigation button's ico
 
 ### Navigation Button Icon Color
 
-The `NavigationButtonIconColor` property is used to customize the color of the navigation buttons icon in the `SfRotator`.
+The [`NavigationButtonIconColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html#Syncfusion_Maui_Rotator_SfRotator_NavigationButtonIconColor) property is used to customize the color of the navigation buttons icon in the [`SfRotator`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html?tabs=tabid-1).
 
 {% tabs %}
 {% highlight xaml %}
@@ -193,7 +193,7 @@ rotator.NavigationButtonIconColor = Colors.Blue;
 
 ### Navigation Button Background Color
 
-The `NavigationButtonBackgroundColor` property is used to customize the color of the navigation buttons background in the `SfRotator`.
+The [`NavigationButtonBackgroundColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html#Syncfusion_Maui_Rotator_SfRotator_NavigationButtonBackgroundColor) property is used to customize the color of the navigation buttons background in the [`SfRotator`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html?tabs=tabid-1).
 
 {% tabs %}
 {% highlight xaml %}
@@ -222,7 +222,7 @@ rotator.NavigationButtonIconColor = Colors.Blue;
 
 ## Navigation Visibility
 
-We can show or hide  Navigation Button using `ShowNavigationButton` property.
+We can show or hide  Navigation Button using [`ShowNavigationButton`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html#Syncfusion_Maui_Rotator_SfRotator_ShowNavigationButton) property.
 
 {% tabs %}
 {% highlight xaml %}

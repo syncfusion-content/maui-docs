@@ -9,7 +9,7 @@ documentation: ug
 
 # Loading Online Images in .NET MAUI Rotator (SfRotator)
 
-This section describes loading the online images in the `SfRotator` Control.
+This section describes loading the online images in the [`SfRotator`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html?tabs=tabid-1) Control.
 
 {% tabs %}
 {% highlight xaml %}

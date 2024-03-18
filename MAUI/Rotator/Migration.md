@@ -9,7 +9,7 @@ documentation: ug
 
 # Migrating from Xamarin Rotator to .NET MAUI Rotator
 
-To migrate easily from `Xamarin SfRotator` to `.NET MAUI SfRotator`, we kept all the APIs from Xamarin SfRotator in MAUI SfRotator. However, to maintain the consistency of API naming in MAUI SfRotator, we renamed some of the APIs. The APIs that have been changed in MAUI SfRotator from Xamarin SfRotator are detailed as follows.
+To migrate easily from [`Xamarin SfRotator`](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRotator.XForms.SfRotator.html) to [`.NET MAUI SfRotator`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html?tabs=tabid-1), we kept all the APIs from Xamarin SfRotator in MAUI SfRotator. However, to maintain the consistency of API naming in MAUI SfRotator, we renamed some of the APIs. The APIs that have been changed in MAUI SfRotator from Xamarin SfRotator are detailed as follows.
 
 ## Namespaces 
 
