@@ -11,10 +11,10 @@ documentation: ug
 
 ## StepTapped
 
-The [`StepTapped`]() event is triggered when any step view is tapped. The associated argument contains the following information.
+The [`StepTapped`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_StepTapped) event is triggered when any step view is tapped. The associated argument contains the following information.
 
-* [`sender`]() - Gets the details of a sender.
-* [`StepTappedEventArgs`]() - Hold the step tapped event arguments.
+* `sender` - Gets the details of a sender.
+* [`StepTappedEventArgs`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.StepTappedEventArgs.html) - Hold the step tapped event arguments.
 
 {% tabs %}
 {% highlight xaml hl_lines="2" %}
@@ -37,10 +37,10 @@ private void SfStepProgressBar_StepTapped(object sender, Syncfusion.Maui.Progres
 
 ## StepChanged
 
-The [`StepStatusChanged`]() event is triggered when the step view status is changed. The associated argument contains the following information.
+The [`StepStatusChanged`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_StepStatusChanged) event is triggered when the step view status is changed. The associated argument contains the following information.
 
-* [`sender`]() - Gets the details of a sender.
-* [`StepStatusChangedEventArgs`]() - Hold the step status changed event arguments.
+* `sender` - Gets the details of a sender.
+* [`StepStatusChangedEventArgs`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.StepTappedEventArgs.html) - Hold the step status changed event arguments.
 
 {% tabs %}
 {% highlight xaml hl_lines="2" %}
