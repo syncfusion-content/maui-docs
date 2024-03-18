@@ -595,6 +595,9 @@ button.EnableRippleEffect = True;
 {% endhighlight %}
 {% endtabs %}
 
+![.NET MAUI RippleEffect support](images/customization-images/Button_EnableRippleEffect.gif)
+
+
 ## Gradient background
 
 You can set the gradient as background of SfButton using the [`Background`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfButton.html#Syncfusion_Maui_Buttons_SfButton_Background) property. It supports the following types of gradients:
