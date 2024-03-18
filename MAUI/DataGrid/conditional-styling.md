@@ -578,3 +578,52 @@ public class ColorConverter : IValueConverter
 Here, table summary cells are customized based on `Salary` summary value.
 
 ![Conditional styling of table summary cell using converter](Images/conditional-styling/maui-datagrid-conditional-tablesummary.png)
+
+## Unbound row cell
+
+Unbound row cells can be customized the unbound row cell based on various properties exposed in [DataGridUnboundRow]() (example: `Position` property).
+
+### Conditional styling of unbound row cell using converter
+
+The appearance of unbound row cell can be customized conditionally based on properties using `converter`, where converter returns the value based on various properties. 
+
+{% tabs %}
+{% highlight xaml %}
+<ContentPage.Resources>
+    <local:ColorConverter x:Key="converter" />
+    <Style TargetType="syncfusion:DataGridUnboundRowCell">
+        <Setter Property="Background"
+                Value="{Binding Converter={StaticResource converter}}" />
+    </Style>
+</ContentPage.Resources>
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                    ItemsSource="{Binding OrderInfoCollection}">
+            <syncfusion:SfDataGrid.UnboundRows>
+                <syncfusion:DataGridUnboundRow Position="Top" />
+                <syncfusion:DataGridUnboundRow Position="FixedTop" />
+            </syncfusion:SfDataGrid.UnboundRows>
+</syncfusion:SfDataGrid>
+{% endhighlight %}
+{% highlight c# %}
+public class ColorConverter : IValueConverter
+{
+    public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+    {
+        var unboundValue = value as DataGridUnboundRowEventArgs;
+        if (unboundValue!.GridUnboundRow.Position == DataGridUnboundRowPosition.Top)
+        {
+            return Colors.LightBlue;
+        }
+        return Colors.LightGreen;
+    }
+    public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+    {
+        return null;
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
+<img alt="Conditional styling for unbound row using converter" src="Images/conditional-styling/maui-datagrid-conditional-unbound-row.png" width="404"/>
+
+
