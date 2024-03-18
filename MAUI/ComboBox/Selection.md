@@ -34,7 +34,7 @@ The selected item can be changed interactively by selecting from the drop-down l
 
 The following gif image illustrates the result of the above code:
 
-![.NET MAUI ComboBox UI selection.](Images/selection/net-maui-combobox-ui-selection.png)
+![.NET MAUI ComboBox UI selection.](Images/Selection/net-maui-combobox-ui-selection.png)
 
 
 ### Programmatic selection 
@@ -64,7 +64,7 @@ comboBox.SelectedIndex = 2;
 
 The following gif image illustrates the result of the above code:
 
-![.NET MAUI ComboBox programmatic selection.](Images/selection/net-maui-combobox-programatic-selection.png)
+![.NET MAUI ComboBox programmatic selection.](Images/Selection/net-maui-combobox-programatic-selection.png)
 
 ## Multiple selection
 
@@ -107,7 +107,7 @@ The selected items can be changed programmatically by using the [SelectedItems](
 
 The following image illustrates the result of the above code.
 
-![.NET MAUI ComboBox Multiple selection.](Images/selection/net-maui-combobox-multiple-selection.png)
+![.NET MAUI ComboBox Multiple selection.](Images/Selection/net-maui-combobox-multiple-selection.png)
 
 ### UI selection
 
@@ -130,18 +130,18 @@ The selected items can be changed interactively by using keyboard or by selectin
 
 {% endtabs %}
 
-![.NET MAUI ComboBox UI Multiselection.](Images/selection/net-maui-combobox-ui-multiselection.gif)
+![.NET MAUI ComboBox UI Multiselection.](Images/Selection/net-maui-combobox-ui-multiselection.gif)
 
 ### TokensWrapMode
 
 There are two ways to display multi-selection items in the ComboBox control. They are:
 
-* Wrap
-* None
+* [Wrap](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ComboBoxTokensWrapMode.html#Syncfusion_Maui_Inputs_ComboBoxTokensWrapMode_Wrap)
+* [None](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ComboBoxTokensWrapMode.html#Syncfusion_Maui_Inputs_ComboBoxTokensWrapMode_None)
 
 #### Wrap mode
 
-When the TokensWrapMode is set to Wrap, the selected items will be wrapped to the next line of the SfComboBox.
+When the [TokensWrapMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_TokensWrapMode) is set to [Wrap](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ComboBoxTokensWrapMode.html#Syncfusion_Maui_Inputs_ComboBoxTokensWrapMode_Wrap), the selected items will be wrapped to the next line of the SfComboBox.
 
 {% tabs %}
 
@@ -161,11 +161,11 @@ When the TokensWrapMode is set to Wrap, the selected items will be wrapped to th
 
 {% endtabs %}
 
-![.NET MAUI ComboBox Wrap mode.](Images/selection/net-maui-combobox-wrapmode.png)
+![.NET MAUI ComboBox Wrap mode.](Images/Selection/net-maui-combobox-wrapmode.png)
 
 #### None mode
 
-When the TokensWrapMode is set to None, the selected item will be wrapped in a horizontal orientation.
+When the [TokensWrapMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_TokensWrapMode) is set to [None](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ComboBoxTokensWrapMode.html#Syncfusion_Maui_Inputs_ComboBoxTokensWrapMode_None), the selected item will be wrapped in a horizontal orientation.
 
 {% tabs %}
 
@@ -185,7 +185,7 @@ When the TokensWrapMode is set to None, the selected item will be wrapped in a h
 
 {% endtabs %}
 
-![.NET MAUI ComboBox None mode.](Images/selection/net-maui-combobox-nonemode.png)
+![.NET MAUI ComboBox None mode.](Images/Selection/net-maui-combobox-nonemode.png)
 
 ## Selection changed notification
 
@@ -228,7 +228,7 @@ private async void OnSelectionChanged(object sender, Syncfusion.Maui.Inputs.Sele
 
 The following image illustrates the result of the above code:
 
-![.NET MAUI ComboBox SelectedChangedEvent.](Images/selection/net-maui-combobox-selection-changed-event.png)
+![.NET MAUI ComboBox SelectedChangedEvent.](Images/Selection/net-maui-combobox-selection-changed-event.png)
 
 N> SelectionChanged event arguments `CurrentSelection` and `PreviousSelection` marked as "Obsolete". You can use the `AddedItems` and `RemovedItems` event arguments.
 
@@ -275,7 +275,7 @@ private void OnSelectionChanged(object sender, Syncfusion.Maui.Inputs.SelectionC
 
 The following gif image illustrates the result of the above code:
 
-![.NET MAUI ComboBox selected value.](Images/selection/net-maui-combobox-selected-value-path.png)
+![.NET MAUI ComboBox selected value.](Images/Selection/net-maui-combobox-selected-value-path.png)
 
 ## Open a drop-down programmatically
 
