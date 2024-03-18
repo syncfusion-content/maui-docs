@@ -9,7 +9,7 @@ documentation: ug
 
 # Migrate from Xamarin.Forms SfParallaxView to .NET MAUI SfParallaxView
 
-The [SfParallaxView]() is created from scratch using the upgraded APIs and performance of the .NET MAUI graphics library and framework layouts. However, to maintain the consistency of the API naming in MAUI [SfParallaxView](), we renamed some of the APIs. The APIs changed in MAUI [SfParallaxView]() from Xamarin [SfParallaxView]() are detailed as follows:
+The [SfParallaxView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ParallaxView.SfParallaxView.html) is created from scratch using the upgraded APIs and performance of the .NET MAUI graphics library and framework layouts. However, to maintain the consistency of the API naming in MAUI [SfParallaxView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ParallaxView.SfParallaxView.html), we renamed some of the APIs. The APIs changed in MAUI [SfParallaxView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ParallaxView.SfParallaxView.html) from Xamarin [SfParallaxView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ParallaxView.SfParallaxView.html) are detailed as follows:
 
 ## Namespaces
 
@@ -28,11 +28,11 @@ Syncfusion.XForms.ParallaxView
 </tr>
 </table>
 
-To make the migration easier, the most of the APIs from the Xamarin [SfParallaxView](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ParallaxView.SfParallaxView.html) were kept in the .NET MAUI [SfParallaxView](). Please refer to the following details and the API migration information available below.
+To make the migration easier, the most of the APIs from the Xamarin [SfParallaxView](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ParallaxView.SfParallaxView.html) were kept in the .NET MAUI [SfParallaxView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ParallaxView.SfParallaxView.html). Please refer to the following details and the API migration information available below.
 
 ## Initialize control
 
-To initialize the control, import the parallax view namespace and Initialize [SfParallaxView]() as shown in the following code sample. 
+To initialize the control, import the parallax view namespace and Initialize [SfParallaxView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ParallaxView.SfParallaxView.html) as shown in the following code sample. 
 
 <table>
 <tr>

@@ -11,7 +11,7 @@ documentation: ug
 
 ## Customization
 
-The polar chart axis provides support for customizing the style of the axis line by defining the [AxisLineStyle]() property, as shown in the code sample below.
+The polar chart axis provides support for customizing the style of the axis line by defining the [AxisLineStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_AxisLineStyle) property, as shown in the code sample below.
 
 N> The customization of axis lines using the AxisLineStyle property can only be applied to the secondary axis.
 
@@ -24,12 +24,10 @@ N> The customization of axis lines using the AxisLineStyle property can only be 
     <chart:SfPolarChart.SecondaryAxis>
         <chart:NumericalAxis >
             <chart:NumericalAxis.AxisLineStyle>
-                <chart:ChartLineStyle StrokeWidth ="2"
-									  Stroke="Red"/>
+                <chart:ChartLineStyle StrokeWidth ="2" Stroke="Red"/>
             </chart:NumericalAxis.AxisLineStyle>
         </chart:NumericalAxis>
     </chart:SfPolarChart.SecondaryAxis>
-
 </chart:SfPolarChart>
 
 {% endhighlight %}
@@ -39,16 +37,11 @@ N> The customization of axis lines using the AxisLineStyle property can only be 
 SfPolarChart chart = new SfPolarChart();
 . . .
 NumericalAxis secondaryAxis = new NumericalAxis();
-
 ChartLineStyle axisLineStyle = new ChartLineStyle();
-
 axisLineStyle.Stroke = Colors.Red;
-
 axisLineStyle.StrokeWidth = 2;
-
 secondaryAxis.AxisLineStyle = axisLineStyle;
-
-chart.SecondaryAxis.Add(secondaryAxis);
+chart.SecondaryAxis = secondaryAxis;
 
 {% endhighlight %}
 
@@ -56,7 +49,7 @@ chart.SecondaryAxis.Add(secondaryAxis);
 
 ## Offset
 
-The padding to the axis line is defined by using the [AxisLineOffset]() property.
+The padding to the axis line is defined by using the [AxisLineOffset](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_AxisLineOffset) property.
 
 {% tabs %}
 
@@ -67,12 +60,10 @@ The padding to the axis line is defined by using the [AxisLineOffset]() property
     <chart:SfPolarChart.SecondaryAxis>
         <chart:NumericalAxis AxisLineOffset="25">
             <chart:NumericalAxis.AxisLineStyle>
-                <chart:ChartLineStyle StrokeWidth ="2"
-									  Stroke="Red"/>
+                <chart:ChartLineStyle StrokeWidth ="2" Stroke="Red"/>
             </chart:NumericalAxis.AxisLineStyle>
         </chart:NumericalAxis>
     </chart:SfPolarChart.SecondaryAxis>
-
 </chart:SfPolarChart>
 
 {% endhighlight %}
@@ -82,18 +73,12 @@ The padding to the axis line is defined by using the [AxisLineOffset]() property
 SfPolarChart chart = new SfPolarChart();
 . . .
 NumericalAxis secondaryAxis = new NumericalAxis();
-
 secondaryAxis.AxisLineOffset = 25;
-
 ChartLineStyle axisLineStyle = new ChartLineStyle();
-
 axisLineStyle.Stroke = Colors.Red;
-
 axisLineStyle.StrokeWidth = 2;
-
 secondaryAxis.AxisLineStyle = axisLineStyle;
-
-chart.SecondaryAxis.Add(secondaryAxis);
+chart.SecondaryAxis = secondaryAxis;
 
 {% endhighlight %}
 

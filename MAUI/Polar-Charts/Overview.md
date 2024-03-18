@@ -9,7 +9,7 @@ documentation: ug
 
 # .NET MAUI Chart Overview
 
-Syncfusion .NET MAUI Chart (SfPolarChart) creates visually appealing circular visualizations for high-quality MAUI applications in a two-dimensional format. Its utility lies in effectively comparing and illustrating multiple variables or data points relative to a shared central point.
+The Syncfusion .NET MAUI Polar Chart allows for the creation of visually stunning polar series for data visualization in high-quality applications. This type of chart, also known as a star chart, spider chart, web chart, spider web chart, cobweb chart, or radar chart, effectively represents data in terms of values and angles.
 
 ## Key features
 
@@ -21,4 +21,4 @@ Syncfusion .NET MAUI Chart (SfPolarChart) creates visually appealing circular vi
 
 * Offers gridline customization, allowing users to switch between circle or polygon shapes, adapting to polar or radar chart types.
 
-* It is user-friendly, offering customization options for features like axis, title, data labels, and tooltip.
+* It is user-friendly, offering customization options for features like axis, title, data labels, markers and tooltip.
