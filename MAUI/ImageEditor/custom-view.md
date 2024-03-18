@@ -9,7 +9,7 @@ documentation: ug
 
 # Custom view Annotation in .NET MAUI Image Editor (SfImageEditor)
 
-The ImageEditor control in .NET MAUI allows you to add custom view using the `AddCustomAnnotationView` method with customizable settings.
+The ImageEditor control in .NET MAUI allows you to add custom view using the [AddCustomAnnotationView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_AddCustomAnnotationView_Microsoft_Maui_Controls_View_Syncfusion_Maui_ImageEditor_ImageEditorAnnotationSettings_) method with customizable settings.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -160,7 +160,7 @@ N> This is common for Shape, Text and CustomView annotations.
 
 ## Annotation unselected event
 
-This `AnnotationUnselected` event occurs when the annotation is unselected.
+This [AnnotationUnselected](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_AnnotationUnselected) event occurs when the annotation is unselected.
 
 N> This is common for Shape, Text and CustomView annotations.
 
