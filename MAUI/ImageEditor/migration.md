@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Migrate from Xamarin to .NET MAUI Image Editor | Syncfusion
+title: Migrate from Xamarin to .NET MAUI SfImageEditor | Syncfusion
 description: Learn about Migrating from Syncfusion Xamarin.Forms ImageEditor to the Syncfusion .NET MAUI ImageEditor control.
 platform: maui
 control: SfImageEditor
@@ -527,3 +527,4 @@ Applicable for crop view selection, shape and text annotation selection.
 * [Mac, iOS]The image is not loading correctly from the stream or URI binding source.
 * Rotation not working for text annotation.
 * [Mac, iOS] The `FontAttributes` will not work for text annotations with the Custom font family.
+* Rotation will not work for custom annotation views.

@@ -1,10 +1,10 @@
 ---
 layout: post
 title: Change the editor settings in .NET MAUI DataForm control | Syncfusion
-description: Learn about to change the Syncfusion .NET MAUI DataForm (SfDataForm) settings in mobile and desktop applications from a single shared codebase.
-platform: Maui
+description: Learn how to change the Syncfusion .NET MAUI DataForm (SfDataForm) settings in mobile and desktop applications from a single shared codebase.
+platform: maui
 control: SfDataForm
-documentation: UG
+documentation: ug
 ---
 
 # Change the data editor settings (SfDataForm)

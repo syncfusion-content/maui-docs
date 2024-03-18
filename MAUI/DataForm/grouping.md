@@ -9,7 +9,7 @@ documentation: ug
 
 # Grouping the editors in .NET MAUI DataForm (SfDataForm)
 
-The [.NET MAUI DataForm](https://www.syncfusion.com/maui-controls/maui-dataform) supports the grouping of the editors, which are relevant to each other. Expand or collapse the group by tapping the group item.
+The .NET MAUI DataForm supports the grouping of the editors, which are relevant to each other. Expand or collapse the group by tapping the group item.
 
 Grouping is achieved by defining the [Display](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.displayattribute?view=net-7.0) attribute or by handling the [GenerateDataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_GenerateDataFormItem) event.
 

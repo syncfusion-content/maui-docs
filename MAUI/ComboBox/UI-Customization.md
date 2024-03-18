@@ -145,6 +145,31 @@ The following gif image illustrates the result of the above code:
 
 ![.NET MAUI ComboBox border color](Images/UICustomization/BorderColor.png)
 
+## Customize the selection text highlightColor 
+
+The [SelectionTextHighlightColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_SelectionTextHighlightColor) property is used to modify the background color of the selected item text in the combobox control.
+
+{% tabs %}
+{% highlight xaml %}
+
+<editors:SfCombobox x:Name="combobox"
+                        WidthRequest="250"
+                        ItemsSource="{Binding SocialMedias}"
+                        DisplayMemberPath="Name"
+                        TextMemberPath="Name"
+                        Placeholder="Enter Media"
+                        SelectionTextHighlightColor="Green" />
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+combobox.SelectionTextHighlightColor = Colors.Green;
+
+{% endhighlight %}
+{% endtabs %}
+
+![.NET MAUI ComboBox Selection Text Highlight Color](Images/UICustomization/SelectionTextHighlightColor.png)
 
 ## Maximum DropDown Height
 
@@ -341,6 +366,169 @@ The [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.Dr
 The following image illustrates the result of the above code:
 
 ![.NET MAUI ComboBox ItemTemplate](Images/UICustomization/ItemTemplate.png)
+
+### Customize the DropDown item text
+
+DropDown items can be customized using the [DropDownItemFontAttributes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_DropDownItemFontAttributes), [DropDownItemFontFamily](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_DropDownItemFontFamily), [DropDownItemFontSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_DropDownItemFontSize), and [DropDownItemTextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_DropDownItemTextColor) properties.
+
+{% tabs %}
+{% highlight xaml %}
+
+<editors:SfCombobox x:Name="combobox"
+                        WidthRequest="250"
+                        ItemsSource="{Binding SocialMedias}"
+                        DisplayMemberPath="Name"
+                        TextMemberPath="Name"
+                        Placeholder="Enter Media"
+                        DropDownItemFontAttributes="Italic"
+                        DropDownItemFontFamily="OpenSansSemibold"
+                        DropDownItemFontSize="16"
+                        DropDownItemTextColor="DarkViolet" />
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+combobox.DropDownItemFontAttributes = FontAttributes.Italic;
+combobox.DropDownItemFontFamily = "OpenSansSemibold";
+combobox.DropDownItemFontSize = 16;
+combobox.DropDownItemTextColor = Colors.DarkViolet;
+
+{% endhighlight %}
+{% endtabs %}
+
+![.NET MAUI ComboBox DropDown Item Text](Images/UICustomization/DropDownItemText.png)
+
+### Customize the DropDown background color
+
+The [DropDownBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_DropDownBackground) property is used to modify the background color of the dropdown.
+
+{% tabs %}
+{% highlight xaml %}
+
+<editors:SfCombobox x:Name="combobox"
+                        WidthRequest="250"
+                        ItemsSource="{Binding SocialMedias}"
+                        DisplayMemberPath="Name"
+                        TextMemberPath="Name"
+                        Placeholder="Enter Media"
+                        DropDownBackground="YellowGreen" />
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+combobox.DropDownBackground = Colors.YellowGreen;
+
+{% endhighlight %}
+{% endtabs %}
+
+![.NET MAUI ComboBox DropDown Background](Images/UICustomization/DropDownBackground.png)
+
+### Customize the DropDown selected item backgroundcolor
+
+The [SelectedDropDownItemBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_SelectedDropDownItemBackground) property is used to modify the backgroundcolor of selected item in the dropdown.
+
+{% tabs %}
+{% highlight xaml %}
+
+<editors:SfCombobox x:Name="combobox"
+                        WidthRequest="250"
+                        ItemsSource="{Binding SocialMedias}"
+                        DisplayMemberPath="Name"
+                        TextMemberPath="Name"
+                        Placeholder="Enter Media"
+                        SelectedDropDownItemBackground="LightSeaGreen" />
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+combobox.SelectedDropDownItemBackground = Colors.LightSeaGreen;
+
+{% endhighlight %}
+{% endtabs %}
+
+![.NET MAUI ComboBox Selected DropDown Item Background](Images/UICustomization/SelectedDropDownItemBackground.png)
+
+### Customize the DropDown Border Color
+
+The [DropDownStroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_DropDownStroke) property is used to modify the border color of the dropdown.
+
+{% tabs %}
+{% highlight xaml %}
+
+<editors:SfCombobox x:Name="combobox"
+                        WidthRequest="250"
+                        ItemsSource="{Binding SocialMedias}"
+                        DisplayMemberPath="Name"
+                        TextMemberPath="Name"
+                        Placeholder="Enter Media"
+                        DropDownStroke="DarkOrange" />
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+combobox.DropDownStroke = Colors.DarkOrange;
+
+{% endhighlight %}
+{% endtabs %}
+
+![.NET MAUI ComboBox DropDown Stroke](Images/UICustomization/DropDownStroke.png)
+
+### Customize the DropDown Border Thickness
+
+The [DropDownStrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_DropDownStrokeThickness) property is used to modify the thickness of the dropdown border.
+
+{% tabs %}
+{% highlight xaml %}
+
+<editors:SfCombobox x:Name="combobox"
+                        WidthRequest="250"
+                        ItemsSource="{Binding SocialMedias}"
+                        DisplayMemberPath="Name"
+                        TextMemberPath="Name"
+                        Placeholder="Enter Media"
+                        DropDownStroke="DarkOrange"
+                        DropDownStrokeThickness="5" />
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+combobox.DropDownStrokeThickness = 5;
+
+{% endhighlight %}
+{% endtabs %}
+
+![.NET MAUI ComboBox DropDown StrokeThickness](Images/UICustomization/DropDownStrokeThickness.png)
+
+### Customize the DropDown Item Height
+
+The [DropDownItemHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_DropDownItemHeight) property is used to modify the height of the dropdown items.
+
+{% tabs %}
+{% highlight xaml %}
+
+<editors:SfCombobox x:Name="combobox"
+                        WidthRequest="250"
+                        ItemsSource="{Binding SocialMedias}"
+                        DisplayMemberPath="Name"
+                        TextMemberPath="Name"
+                        Placeholder="Enter Media"
+                        DropDownItemHeight="25" />
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+combobox.DropDownItemHeight = 25;
+
+{% endhighlight %}
+{% endtabs %}
+
+![.NET MAUI ComboBox DropDown Item Height](Images/UICustomization/DropDownItemHeight.png)
 
 ## Customize the DropDown (suggestion) item based on condition
 
@@ -888,3 +1076,61 @@ comboBox.CursorPosition = 4;
 {% endtabs %}
 
 N> The cursor position support is available for editable mode only, and two-way binding is not supported in the Android platform.
+
+## Border visibility
+
+The `ShowBorder` property of [`SfComboBox`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) is used to modify the visibility of the border and its default value is **true**. The following code example demonstrates how to change the border visibility,
+
+{% tabs %}
+{% highlight xaml %}
+
+<editors:SfComboBox x:Name="comboBox"
+                            WidthRequest="200" 
+                            HeightRequest="35"
+                            ShowBorder="False"/>
+{% endhighlight %}
+{% highlight C# %}
+
+using Syncfusion.Maui.Inputs;
+
+SfComboBox comboBox = new SfComboBox();
+comboBox.WidthRequest = 200;
+comboBox.HeightRequest = 35;
+comboBox.ShowBorder = false;
+
+{% endhighlight %}
+{% endtabs %}
+
+The following image illustrates the result of the above code:
+
+![.NET MAUI ComboBox showborder](Images/UICustomization/ShowBorder.png)
+
+### TextAlignment
+
+The [`SfComboBox`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) provides support to customize the text alignment by using the `HorizontalTextAlignment` and `VerticalTextAlignment` properties.
+
+N> Dynamic changes to the `HorizontalTextAlignment` property may not be functioning as expected on Android platform.
+
+{% tabs %}
+{% highlight xaml %}
+
+<editors:SfComboBox x:Name="comboBox"
+                    WidthRequest="250" 
+                    HeightRequest="50"
+                    HorizontalTextAlignment="Center" 
+                    VerticalTextAlignment="Start"/>
+{% endhighlight %}
+{% highlight c# %}
+
+SfComboBox comboBox = new SfComboBox();
+comboBox.WidthRequest = 250;
+comboBox.HeightRequest = 50;
+comboBox.HorizontalTextAlignment = TextAlignment.Center;
+comboBox.VerticalTextAlignment = TextAlignment.Start;
+
+{% endhighlight %}
+{% endtabs %}
+
+The following image illustrates the result of the above code:
+
+![TextAlignment](Images/UICustomization/TextAlignment.png)

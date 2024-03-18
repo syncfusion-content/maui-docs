@@ -436,4 +436,31 @@ RadioGroup
 </tr>
 </table>
 
-N> You can refer to our [.NET MAUI DataForm](https://www.syncfusion.com/maui-controls/maui-dataform) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI DataForm Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/DataForm) that shows you how to render the DataForm in .NET MAUI.
+## Label view customization
+
+Customize the label view of the default layout by using the `InitializeDataLabel` method of the [DataFormItemManager](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItemManager.html).
+
+{% tabs %}
+{% highlight c# %}
+
+this.dataForm.ItemManager = new DataFormItemManagerEditorExt();
+
+public class DataFormItemManagerEditorExt : DataFormItemManager
+{
+    public override void InitializeDataLabel(DataFormItem dataFormItem, Label label)
+    {
+        label.Background = Colors.Orange;
+        label.VerticalOptions = LayoutOptions.Center;
+        label.CharacterSpacing = 2;
+        label.Padding = new Thickness(5, 0, 5, 0);
+        label.Margin = new Thickness(0, 0, 5, 0);
+        label.FontSize = 18;
+        FormattedString formattedString = new FormattedString();
+        formattedString.Spans.Add(new Span { Text = label.Text, TextColor = Colors.White});
+        formattedString.Spans.Add(new Span { Text = " *", TextColor = Colors.Red});
+        label.FormattedText = formattedString;
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}

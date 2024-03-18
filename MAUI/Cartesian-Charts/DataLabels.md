@@ -146,3 +146,133 @@ chart.Series.Add(series);
 {% endtabs %}
 
 ![Applying series interior for data label in MAUI chart](DataLabel_images/maui_chart_data_label_with_series_brush.jpg)
+
+## Formatting Label Context
+
+The content of the label can be customized using the [LabelContext](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.LabelContext.html) property. Following are the two options that are supported now,
+
+* [Percentage](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.LabelContext.html#Syncfusion_Maui_Charts_LabelContext_Percentage) - This will show the percentage value of corresponding data point Y value.
+
+* [YValue](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.LabelContext.html#Syncfusion_Maui_Charts_LabelContext_YValue) - This will show the corresponding Y value.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<chart:SfCartesianChart IsTransposed="True">
+    . . .
+    <chart:ColumnSeries ItemsSource="{Binding Data}" 
+                        ShowDataLabels="True"
+                        XBindingPath="Name"
+                        YBindingPath="Height" 
+                        LabelContext="Percentage"/>
+
+</chart:SfCartesianChart>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+SfCartesianChart chart = new SfCartesianChart();
+chart.IsTransposed = true;
+. . .
+ColumnSeries series = new ColumnSeries()
+{
+    ItemsSource = new ViewModel().Data,
+    XBindingPath = "Name",
+    YBindingPath = "Height",
+    ShowDataLabels = true,
+    LabelContext = LabelContext.Percentage
+};
+
+chart.Series.Add(series);
+this.Content = chart;
+        
+{% endhighlight %}
+
+{% endtabs %}
+
+![DataLabel context in MAUI Chart](DataLabel_images/maui_chart_data_label_context.png)
+
+## LabelTemplate
+
+The [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html) provides support to customize the appearance of the datalabel using the [LabelTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_LabelTemplate) property.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<chart:SfCartesianChart IsTransposed="True" >
+    <chart:SfCartesianChart.Resources>
+        <DataTemplate x:Key="labelTemplate">
+            <HorizontalStackLayout Spacing="5" WidthRequest="100">
+                <Image Source="arrow.png" WidthRequest="15" HeightRequest="15"/>
+                <Label Text="{Binding Item.Values}" VerticalOptions="Center" FontSize = "15"/>               
+            </HorizontalStackLayout>
+        </DataTemplate>
+    </chart:SfCartesianChart.Resources>
+    . . .
+    <chart:ColumnSeries ItemsSource="{Binding Data}" 
+                        LabelTemplate="{StaticResource labelTemplate}"
+                        XBindingPath="Name"
+                        YBindingPath="Values" 
+                        ShowDataLabels="True">
+
+        <chart:ColumnSeries.DataLabelSettings>
+            <chart:CartesianDataLabelSettings LabelPlacement="Outer"/>
+        </chart:ColumnSeries.DataLabelSettings>
+
+    </chart:ColumnSeries>
+
+</chart:SfCartesianChart>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+SfCartesianChart chart = new SfCartesianChart();
+chart.IsTransposed = true;
+. . .
+ColumnSeries series = new ColumnSeries();
+series.ShowDataLabels = true;
+series.ItemsSource = new ViewModel().Data;
+series.XBindingPath = "Name";
+series.YBindingPath = "Values";
+series.DataLabelSettings = new CartesianDataLabelSettings()
+{
+    LabelPlacement = DataLabelPlacement.Outer
+};
+
+DataTemplate labelTemplate = new DataTemplate(() =>
+{
+    HorizontalStackLayout horizontalStackLayout = new HorizontalStackLayout { Spacing = 5, WidthRequest=100 };
+
+    var label = new Label
+    {
+        VerticalOptions = LayoutOptions.Center,
+        FontSize = 15
+    };
+    label.SetBinding(Label.TextProperty, "Item.Values");
+
+    var image = new Image
+    {
+        Source = "arrow.png",
+        WidthRequest = 15,
+        HeightRequest = 15
+    };
+    
+    horizontalStackLayout.Children.Add(image);
+    horizontalStackLayout.Children.Add(label);
+    
+    return horizontalStackLayout;
+});
+
+series.LabelTemplate = labelTemplate;
+chart.Series.Add(series);
+this.Content = chart;
+        
+{% endhighlight %}
+
+{% endtabs %}
+
+![Label template in MAUI Chart](DataLabel_images/maui_chart_data_label_template.png)
