@@ -995,7 +995,7 @@ To categorize leaf items in a TreeMap according to different ranges of backgroun
 
 #### RangeBrush
 
-The following code example, explains how to configure the range brush in .NET MAUI SfTreeMap control.
+The following code example explains how to configure the range brush in .NET MAUI SfTreeMap control.
 
 {% tabs %}
 {% highlight XAML hl_lines="12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28" %}

@@ -13,7 +13,7 @@ The tooltip provides information when hovering over or selecting items in the in
 
 ## Enable tooltip
 
-To enable tooltip for the TreeMap control, utilize the `ShowToolTip` property of `SfTreeMap.` By default, the value of `ShowToolTip` is set to `false.` To provide users with additional information or context about specific treemap items, simply set this property to `true.`
+To enable the tooltip for the TreeMap control, utilize the `ShowToolTip` property of `SfTreeMap`. By default, the value of `ShowToolTip` is set to `false.` To provide users with additional information or context about specific treemap items, simply set this property to `true.`
 
 {% tabs %}
 {% highlight XAML hl_lines="4" %}
@@ -104,7 +104,7 @@ Additionally, you can achieve further appearance customization by using `ToolTip
 
 ### Customize tooltip appearance using its properties
 
-To customize the appearance of tooltip in the SfTreeMap using `ToolTipSettings,` you can utilize the following properties:
+To customize the appearance of the tooltip in the `SfTreeMap` using `ToolTipSettings,` you can utilize the following properties:
 
 * `Background`: This property allows you to change the background color of the tooltip.
 * `Duration`: Specifies the duration in milliseconds, for which the tooltip will be displayed. This helps control how long the tooltip remains visible on the screen.
@@ -208,7 +208,7 @@ N> This property will only be applicable when the `ShowToolTip` is enabled.
 
 ### Customize tooltip appearance using DataTemplate
 
-You can customize the tool tip appearance by using the `ToolTipTemplate` property in the `SfTreeMap.`
+You can customize the tooltip appearance by using the `ToolTipTemplate` property in the `SfTreeMap.`
 
 The following code example shows the usage of DataTemplate.
 

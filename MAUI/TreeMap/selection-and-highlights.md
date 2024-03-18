@@ -9,11 +9,11 @@ documentation: ug
  
 # Selection in TreeMap control
 
-The Treemap control enables users to select specific groups or items for distinction, with the tooltip feature providing additional information during interaction. However, when the `SelectionMode` is set to `None,` interaction with treemap items are disabled.
+The Treemap control enables users to select specific groups or items for distinction, with the tooltip feature providing additional information during interaction. However, when the `SelectionMode` is set to `None,` interaction with treemap items is disabled.
 
 ## Selection mode
 
-The selection mode in the TreeMap control determines the interactivity level, enabling users to choose specific items. The default value of `SelectionMode` is `Single`.
+The selection mode in the TreeMap control determines the interactivity level, enabling users to choose specific items. The default value of `SelectionMode` is `Single.`
 
 ### Single selection
 
