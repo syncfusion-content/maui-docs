@@ -152,11 +152,9 @@ Customize the font's size, family and attribute of the text displayed in stacked
 {% tabs %}
 {% highlight xaml %}
 <syncfusion:SfDataGrid.DefaultStyle>
-    <syncfusion:DataGridStyle
-            StackedHeaderRowFontSize = 16
-            StackedHeaderRowFontFamily="Helvetica Neue"
-            StackedHeaderRowFontAttributes="Bold"
-            />
+    <syncfusion:DataGridStyle StackedHeaderRowFontSize="16"
+                              StackedHeaderRowFontFamily="Helvetica Neue"
+                              StackedHeaderRowFontAttributes="Bold" />
 </syncfusion:SfDataGrid.DefaultStyle>
 {% endhighlight %}
 {% highlight c# %}
