@@ -403,3 +403,42 @@ this.Content = mainGrid;
 
 ![SfAvatarView corner radius](Customization_Images/CornerRadius_AvatarView.png)
 
+### Content Padding
+
+You can customize the spacig between the stroke and content in view using the [ContentPadding](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html#Syncfusion_Maui_Core_SfAvatarView_ContentPadding) property.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<Grid>
+   <sfavatar:SfAvatarView  ContentType="Default"
+                           ImageSource="twitter.png"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"  
+                           Stroke="Black"
+                           StrokeThickness="1"
+                           ContentPadding="10">
+   </sfavatar:SfAvatarView>
+</Grid>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+Grid mainGrid = new Grid();
+SfAvatarView avatarview = new SfAvatarView();
+avatarview.ImageSource = "twitter.png";
+avatarview.StrokeThickness = 1;
+avatarview.Stroke = Colors.Black;
+avatarview.ContentPadding = 10;
+avatarview.ContentType = ContentType.Default;
+mainGrid.Children.Add(avatarview);
+this.Content = mainGrid;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![SfAvatarView content padding](Customization_Images/ContentPadding_AvatarView.png)
+
