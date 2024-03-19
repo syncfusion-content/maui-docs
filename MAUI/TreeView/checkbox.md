@@ -9,7 +9,7 @@ documentation: ug
 
 # Checkbox in .NET MAUI TreeView (SfTreeView)
 
-The [SfTreeView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html) provides support for loading [CheckBox](https://help.syncfusion.com/maui/checkbox/getting-started) in each node and enables users to check/uncheck the corresponding node. So, you should add a CheckBox in the [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ItemTemplate) of the `SfTreeView` and bind the [IsChecked](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.TreeViewNode.html#Syncfusion_TreeView_Engine_TreeViewNode_IsChecked) property of the [TreeViewNode](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.TreeViewNode.html).
+The `SfTreeView` provides support for loading [CheckBox](https://help.syncfusion.com/maui/checkbox/getting-started) in each node and enables users to check/uncheck the corresponding node. So, you should add a `CheckBox` in the [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ItemTemplate) of the `SfTreeView` and bind the [IsChecked](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.TreeViewNode.html#Syncfusion_TreeView_Engine_TreeViewNode_IsChecked) property of the [TreeViewNode](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.TreeViewNode.html).
 
 ## Working with CheckBox in BoundMode
 

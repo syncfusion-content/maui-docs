@@ -111,10 +111,7 @@ The [ItemRightTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListVi
 
     private void ListView_ItemRightTapped(object sender, Syncfusion.Maui.ListView.ItemRightTappedEventArgs e)
     {
-        var listViewInboxInfo = new ListViewInboxInfo();
-        listViewInboxInfo.Title = "Bryce Thomas";
-        listViewInboxInfo.Subject = "Congratulations on the move!";
-        viewModel.InboxInfo.Add(listViewInboxInfo);
+        DisplayAlert("Item RightTapped", "ListView item right tapped", "Close");
     }
 
 {% endhighlight %}

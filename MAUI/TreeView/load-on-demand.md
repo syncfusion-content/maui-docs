@@ -9,7 +9,7 @@ documentation: ug
 
 # Load on Demand in .NET MAUI TreeView (SfTreeView)
 
-The [SfTreeView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html) enables loading child items only upon request through Lazy loading(load-on-demand). This feature allows loading child items from services when users expand the node. Initially, populate the root [Nodes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_Nodes) by assigning [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ItemsSource), and subsequently, load child items when a node is expanded using [LoadOnDemandCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_LoadOnDemandCommand).
+The `SfTreeView` enables loading child items only upon request through Lazy loading(load-on-demand). This feature allows loading child items from services when users expand the node. Initially, populate the root [Nodes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_Nodes) by assigning [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ItemsSource), and subsequently, load child items when a node is expanded using [LoadOnDemandCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_LoadOnDemandCommand).
 
 N> Load on-demand is applicable for bound mode only.
 
