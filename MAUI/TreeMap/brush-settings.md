@@ -13,7 +13,7 @@ The brush settings are used to customize the fill colors for leaf items based on
 
 ## Uniform brush settings
 
-The uniform brush settings in `SfTreeMap` assign a single color uniformly for leaf items representing data. Customize the background brush for treemap leaf items using the `Brush` property of `TreeMapUniformBrushSettings.`
+The uniform brush settings in `SfTreeMap` assign a single color uniformly for leaf items representing data. Customize the background brush for treemap leaf items using the [Brush](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapUniformBrushSettings.html#Syncfusion_Maui_TreeMap_TreeMapUniformBrushSettings_Brush) property of [TreeMapUniformBrushSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapUniformBrushSettings.html).
 
 {% tabs %}
 {% highlight XAML hl_lines="11 12 13" %}
@@ -103,7 +103,7 @@ public class PopulationViewModel
 
 ## Range brush settings
 
-In `SfTreeMap,` the range brush settings assign a collection of range-based brushes. Utilize the `RangeBrushes` property of `TreeMapRangeBrushSettings` to specify a list of `TreeMapRangeBrush` instances. Each instance defines a specific range and its associated background brush.
+In `SfTreeMap,` the range brush settings assign a collection of range-based brushes. Utilize the [RangeBrushes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapRangeBrushSettings.html#Syncfusion_Maui_TreeMap_TreeMapRangeBrushSettings_RangeBrushes) property of [TreeMapRangeBrushSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapRangeBrushSettings.html) to specify a list of [TreeMapRangeBrush](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapRangeBrush.html) instances. Each instance defines a specific range and its associated background brush.
 
 The `TreeMapRangeBrush` includes the following properties:
 
@@ -234,7 +234,7 @@ N> The `TreeMapRangeBrushSettings` is only applicable when the `RangeColorValueP
 
 The desaturation brush settings in the `SfTreeMap` modify color saturation based on data values, enabling customization of the background brush and desaturation range.
 
-The `TreeMapDesaturationBrushSettings` includes the following properties:
+The [TreeMapDesaturationBrushSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapDesaturationBrushSettings.html) includes the following properties:
 
 * `Brush`: Sets the background brush for desaturation in the SfTreeMap.
 * `From`: Sets the starting value for the desaturation range.
@@ -328,7 +328,7 @@ public class PopulationViewModel
 
 ## Palette brush settings
 
-The leaf items are colored by using the `Brushes` property  within the colors collection of `TreeMapPaletteBrushSettings.`
+The leaf items are colored by using the [Brushes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapPaletteBrushSettings.html#Syncfusion_Maui_TreeMap_TreeMapPaletteBrushSettings_Brushes) property  within the colors collection of [TreeMapPaletteBrushSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapPaletteBrushSettings.html).
 
 {% tabs %}
 {% highlight XAML hl_lines="11 12 13 14 15 16 17 18 19 20 21 22" %}

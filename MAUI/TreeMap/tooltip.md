@@ -13,7 +13,7 @@ The tooltip provides information when hovering over or selecting items in the in
 
 ## Enable tooltip
 
-To enable the tooltip for the TreeMap control, utilize the `ShowToolTip` property of `SfTreeMap`. By default, the value of `ShowToolTip` is set to `false.` To provide users with additional information or context about specific treemap items, simply set this property to `true.`
+To enable the tooltip for the TreeMap control, utilize the [ShowToolTip](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_ShowToolTip) property of [SfTreeMap](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html). By default, the value of `ShowToolTip` is set to `false.` To provide users with additional information or context about specific treemap items, simply set this property to `true.`
 
 {% tabs %}
 {% highlight XAML hl_lines="4" %}
@@ -98,9 +98,9 @@ public class PopulationViewModel
 
 ## Customize tooltip appearance
 
-The tooltip appearance customization can be achieved by using the `Stroke,` `Duration,` `TextStyle`, and `Background` properties of `ToolTipSettings` in the `SfTreeMap.`
+The tooltip appearance customization can be achieved by using the [Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapToolTipSettings.html#Syncfusion_Maui_TreeMap_TreeMapToolTipSettings_Stroke), [Duration](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapToolTipSettings.html#Syncfusion_Maui_TreeMap_TreeMapToolTipSettings_Duration), [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapToolTipSettings.html#Syncfusion_Maui_TreeMap_TreeMapToolTipSettings_TextStyle), and [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapToolTipSettings.html#Syncfusion_Maui_TreeMap_TreeMapToolTipSettings_Background) properties of [ToolTipSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapToolTipSettings.html) in the `SfTreeMap.`
 
-Additionally, you can achieve further appearance customization by using `ToolTipTemplate` of the `SfTreeMap.`
+Additionally, you can achieve further appearance customization by using [ToolTipTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_ToolTipTemplate) of the `SfTreeMap.`
 
 ### Customize tooltip appearance using its properties
 
@@ -208,7 +208,7 @@ N> This property will only be applicable when the `ShowToolTip` is enabled.
 
 ### Customize tooltip appearance using DataTemplate
 
-You can customize the tooltip appearance by using the `ToolTipTemplate` property in the `SfTreeMap.`
+You can customize the tooltip appearance by using the [ToolTipTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_ToolTipTemplate) property in the `SfTreeMap.`
 
 The following code example shows the usage of DataTemplate.
 

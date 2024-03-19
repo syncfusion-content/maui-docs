@@ -11,7 +11,7 @@ documentation: ug
 
 ## Notifying TreeMap selection changes
 
-The `SelectionChanged` event occurs when there is a change in the selection within a tree map item.
+The [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_SelectionChanged) event occurs when there is a change in the selection within a tree map item.
 
 We can get the below details from the `SelectionChanged` event.
 
