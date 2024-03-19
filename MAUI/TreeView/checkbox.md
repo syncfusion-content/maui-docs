@@ -9,15 +9,15 @@ documentation: ug
 
 # Checkbox in .NET MAUI TreeView (SfTreeView)
 
-The `SfTreeView` provides support for loading `CheckBox` in each node and enables users to check/uncheck the corresponding node. So, you should add a CheckBox in the [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ItemTemplate) of the `SfTreeView` and bind the `IsChecked` property of the [TreeViewNode](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.TreeViewNode.html).
+The [SfTreeView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html) provides support for loading [CheckBox](https://help.syncfusion.com/maui/checkbox/getting-started) in each node and enables users to check/uncheck the corresponding node. So, you should add a CheckBox in the [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ItemTemplate) of the `SfTreeView` and bind the [IsChecked](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.TreeViewNode.html#Syncfusion_TreeView_Engine_TreeViewNode_IsChecked) property of the [TreeViewNode](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.TreeViewNode.html).
 
 ## Working with CheckBox in BoundMode
 
-When populating treeview nodes from [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ItemsSource), accessing or modifying checked items can be achieved using `CheckedItems` property.
+When populating treeview nodes from [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ItemsSource), accessing or modifying checked items can be achieved using [CheckedItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_CheckedItems) property.
 
 The SfTreeView facilitates the checking of multiple items by binding the `CheckedItems` property from view model with `ObservableCollection<object>` type.
 
-N> Set the [ItemTemplateContextType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ItemTemplateContextType) as `Node` in order to bind the `TreeViewNode.IsChecked` property to `CheckBox` within the `ItemTemplate`. To know more about `ItemTemplateContextType` click [here](https://help.syncfusion.com/maui/treeview/appearance#bindingcontext-for-itemtemplate). 
+N> Set the [ItemTemplateContextType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ItemTemplateContextType) as `Node` in order to bind the [TreeViewNode.IsChecked](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.TreeViewNode.html#Syncfusion_TreeView_Engine_TreeViewNode_IsChecked) property to `CheckBox` within the `ItemTemplate`. To know more about `ItemTemplateContextType` click [here](https://help.syncfusion.com/maui/treeview/appearance#bindingcontext-for-itemtemplate). 
 
 N> TreeView process and sets `TreeViewNode.IsChecked` based on `CheckedItems` only during the binding of `ItemsSource`.
 
@@ -188,7 +188,7 @@ N> [View sample in GitHub](https://github.com/SyncfusionExamples/load-checkbox-i
 
 ## Working with Checkbox in UnboundMode
 
-You can directly set the CheckBox state by setting the `TreeViewNode.IsChecked` property value while creating nodes.
+You can directly set the CheckBox state by setting the [TreeViewNode.IsChecked](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.TreeViewNode.html#Syncfusion_TreeView_Engine_TreeViewNode_IsChecked) property value while creating nodes.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="19 24 36" %}
@@ -244,7 +244,7 @@ N> [View sample in GitHub](https://github.com/SyncfusionExamples/load-checkbox-i
 
 ## CheckBox State
 
-The `SfTreeView` handles the `IsChecked` property (checkbox state) of `TreeViewNode` based on `CheckBoxMode` property. `CheckBoxMode` property determines the behavior of parent and child node's CheckBox states when users check or uncheck a node. Its default value is `None`. Checkbox contains the  following three states:
+The `SfTreeView` handles the [IsChecked](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.TreeViewNode.html#Syncfusion_TreeView_Engine_TreeViewNode_IsChecked) property (checkbox state) of `TreeViewNode` based on [CheckBoxMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_CheckBoxMode) property. `CheckBoxMode` property determines the behavior of parent and child node's CheckBox states when users check or uncheck a node. Its default value is `None`. Checkbox contains the  following three states:
 
 * `None`: Checking and unchecking are only reflected in the view and do not impact the `CheckedItems` collection.
 * `Individual`: The state of the CheckBox only affects the individual node and does not alter the checkbox state or `IsChecked` property value of parent or child nodes.
@@ -268,9 +268,9 @@ N> When the `CheckBoxMode` is enabled, the `ItemTapped` and `ItemDoubleTapped` e
 
 ### Get or set checked items in bound mode
 
-You can get or set a list of items to be checked or un-checked using `CheckedItems` property.
+You can get or set a list of items to be checked or un-checked using [CheckedItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_CheckedItems) property.
 
-When the `CheckBoxMode` is set to a value other than `None`, the individual `TreeViewNode` or collection of `TreeViewNode` can be programmatically checked by manipulating the `CheckedItems` property or adding items to the `CheckedItems` property based on the `CheckBoxMode`.
+When the [CheckBoxMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_CheckBoxMode) is set to a value other than `None`, the individual `TreeViewNode` or collection of `TreeViewNode` can be programmatically checked by manipulating the `CheckedItems` property or adding items to the `CheckedItems` property based on the `CheckBoxMode`.
 
 N> Programmatically adding or removing the node value does not impact the checkbox states of their parent and child nodes.
 
@@ -285,7 +285,7 @@ N> Programmatically adding or removing the node value does not impact the checkb
 
 ### Get or set checked nodes in unbound mode
 
-You can get the list of checked nodes using the `GetCheckedNodes` method and set the checkbox state by setting `TreeViewNode.IsChecked` property.
+You can get the list of checked nodes using the [GetCheckedNodes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_GetCheckedNodes) method and set the checkbox state by setting [TreeViewNode.IsChecked](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.TreeViewNode.html#Syncfusion_TreeView_Engine_TreeViewNode_IsChecked) property.
 
 {% tabs %}
 {% highlight c# %}
@@ -298,9 +298,9 @@ You can get the list of checked nodes using the `GetCheckedNodes` method and set
 
 ### NodeChecked event
 
-The `NodeChecked` event is raised when checking and unchecking the CheckBox at run time. The `NodeCheckedEventArgs` has the following members, which provide information for the `NodeChecked` event.
+The [NodeChecked](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_NodeChecked) event is raised when checking and unchecking the CheckBox at run time. The [NodeCheckedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.NodeCheckedEventArgs.html) has the following members, which provide information for the `NodeChecked` event.
 
-* `Node`: Gets the `TreeViewNode` and data associated with the checked item as its arguments.
+* [Node](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.NodeCheckedEventArgs.html#Syncfusion_Maui_TreeView_NodeCheckedEventArgs_Node): Gets the `TreeViewNode` and data associated with the checked item as its arguments.
 
 {% tabs %}
 {% highlight c# %}
