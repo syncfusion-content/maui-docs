@@ -289,7 +289,6 @@ private void OnSelectionChanged(object sender, Syncfusion.Maui.Inputs.SelectionC
 
 The following gif image illustrates the result of the above code:
 
-![.NET MAUI Autocomplete selected value.](Images/Selection/net-maui-autocomplete-selected-value-path.gif)
 
 ## Hide clear button in the Autocomplete
 
