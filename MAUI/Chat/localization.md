@@ -9,7 +9,7 @@ documentation: ug
 
 # Localization in .NET MAUI Chat (SfChat)
 
-`Localization` is the process of translating the application resources into different languages for specific cultures. The `SfChat` can be localized by adding a `resource` file.
+`Localization` is the process of translating the application resources into different languages for specific cultures. The [SfChat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html) can be localized by adding a `resource` file.
 
 ## Setting CurrentUICulture to the application
 

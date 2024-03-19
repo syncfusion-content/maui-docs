@@ -9,7 +9,7 @@ documentation: ug
 
 # Accessibility in .NET MAUI Chat (SfChat)
 
-Enhance `SfChat` accessibility with a user-friendly design, ensuring inclusive features for seamless navigation and usability for all users. Please find the table of elements along with their formats and examples.
+Enhance [SfChat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html) accessibility with a user-friendly design, ensuring inclusive features for seamless navigation and usability for all users. Please find the table of elements along with their formats and examples.
 
 ## Avatar
 
