@@ -267,6 +267,8 @@ public class PopulationViewModel
 {% endhighlight %}
 {% endtabs %}
 
+ ![getting-started-with-maui-tree-map](images/getting-started/getting-started-with-maui-tree-map.png)
+
 ## Applying brush settings
 
 The brush settings are used to customize the fill colors for leaf items based on ranges or values, offering four brush settings: `UniformBrushSettings,` `RangeBrushSettings,` `DesaturationBrushSettings,` and `PaletteBrushSettings.` Each setting provides unique options for defining and applying color schemes, enhancing the visualization of the treemap.
@@ -547,3 +549,5 @@ public class PopulationViewModel
 
 {% endhighlight %}
 {% endtabs %}
+
+ ![legend-in-maui-tree-map](images/getting-started/legend-in-maui-tree-map.png)

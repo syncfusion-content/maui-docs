@@ -124,6 +124,8 @@ public class PopulationViewModel
 {% endhighlight %}
 {% endtabs %}
 
+ ![enable-legend-in-maui-tree-map](images/legend/enable-legend-in-maui-tree-map.png)
+
 ## Placement
 
 You can position the legend items in different directions using the `Placement` property of `LegendSettings` in SfTreeMap. The default value of the `Placement` property is `Top.` The possible values include `Left,` `Right,` `Top,` and `Bottom.`
@@ -240,6 +242,8 @@ public class PopulationViewModel
 
 N> This property will be applicable to only when the `ShowLegend` is enabled.
 
+ ![legend-placement-in-maui-tree-map](images/legend/legend-placement-in-maui-tree-map.png)
+
 ## Icon size
 
 The `IconSize` property in the legend is used to change the size of the icon. Its default value is `new Size(16, 16).`
@@ -355,6 +359,8 @@ public class PopulationViewModel
 {% endtabs %}
 
 N> This property will be applicable to only when the `ShowLegend` is enabled.
+
+ ![legend-icon-size-in-maui-tree-map](images/legend/legend-icon-size-in-maui-tree-map.png)
 
 ## Icon type
 
@@ -486,6 +492,8 @@ public class PopulationViewModel
 
 N> This property will be applicable to only when the `ShowLegend` is enabled.
 
+ ![legend-icon-type-in-maui-tree-map](images/legend/legend-icon-type-in-maui-tree-map.png)
+
 ## Legend size
 
 The `Size` property of `LegendSettings` determines the dimensions of the legend displayed alongside the visualization. Adjusting this property allows you to customize the size of the legend to fit the layout requirements and ensure optimal presentation of information.
@@ -607,6 +615,8 @@ public class PopulationViewModel
 
 N> This property will be applicable to only when the `ShowLegend` is enabled.
 
+ ![legend-size-in-maui-tree-map](images/legend/legend-size-in-maui-tree-map.png)
+
 ## Brush settings
 
 The color and text of icons in the legend are by default determined by the `Brush` and `LegendLabel` properties of `TreeMapRangeBrush,` respectively.
@@ -723,6 +733,8 @@ public class PopulationViewModel
 {% endtabs %}
 
 N> This property will be applicable to only when the `ShowLegend` is enabled.
+
+ ![range-brush-settings-in-maui-tree-map](images/legend/range-brush-settings-in-maui-tree-map.png)
 
 ## Text style
 
@@ -844,3 +856,5 @@ public class PopulationViewModel
 {% endtabs %}
 
 N> This property will be applicable to only when the `ShowLegend` is enabled.
+
+ ![legend-text-style-in-maui-tree-map](images/legend/legend-text-style-in-maui-tree-map.png)
