@@ -327,3 +327,5 @@ The `SfChat` allows you to cancel the swipe programmatically by calling the `Res
    
 {% endhighlight %}
 {% endtabs %}
+
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/swiping-in-.net-maui-chat)
