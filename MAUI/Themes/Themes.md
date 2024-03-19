@@ -23,7 +23,7 @@ To apply themes to your application, merge the `SyncfusionThemeResourceDictionar
 
 #### Theme resource dictionary
 
-This resource dictionary includes keys and their corresponding color codes for all Syncfusion controls. Additionally, it contains the [SfVisualTheme](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Themes.SfVisuals.html) property where we can declare the following two theme color values:
+This resource dictionary includes keys and their corresponding color codes for all Syncfusion controls. Additionally, it contains the `SfVisualTheme` property where we can declare the following two theme color values:
 
 1. MaterialLight
 2. MaterialDark
