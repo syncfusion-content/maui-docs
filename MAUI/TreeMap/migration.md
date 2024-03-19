@@ -9,7 +9,7 @@ documentation: ug
  
 # Migrate from Xamarin.Forms TreeMap to .NET MAUI TreeMap (SfTreeMap)
 
-To make the migration from the [Xamarin SfTreeMap](https://www.syncfusion.com/xamarin-ui-controls/xamarin-treemap) to the [.NET MAUI SfTreeMap](https://www.syncfusion.com/maui-controls/maui-tree-map) easier, most of the APIs from the `Xamarin SfTreeMap` were kept in the `.NET MAUI SfTreeMap`. However, to maintain the consistency of API naming in the `.NET MAUI SfTreeMap`, some of the APIs have been renamed. Please find the difference in the following topics.
+To make the migration from the [Xamarin SfTreeMap](https://www.syncfusion.com/xamarin-ui-controls/xamarin-treemap) to the [.NET MAUI SfTreeMap](https://www.syncfusion.com/maui-controls/maui-tree-map) easier, most of the APIs from the [Xamarin SfTreeMap](https://www.syncfusion.com/xamarin-ui-controls/xamarin-treemap) to the [.NET MAUI SfTreeMap](https://www.syncfusion.com/maui-controls/maui-tree-map) were kept in the [.NET MAUI SfTreeMap](https://www.syncfusion.com/maui-controls/maui-tree-map). However, to maintain the consistency of API naming in the [.NET MAUI SfTreeMap](https://www.syncfusion.com/maui-controls/maui-tree-map), some of the APIs have been renamed. Please find the difference in the following topics.
 
 ## Namespaces
 
@@ -1256,7 +1256,7 @@ public class PopulationViewModel
 
 <tr>
 <td>{{'[StrokeColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.TooltipSetting.html#Syncfusion_SfTreeMap_XForms_TooltipSetting_StrokeColor)'| markdownify }}</td>
-<td>{{'[Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapToolTipSettings.html#Syncfusion_Maui_TreeMap_TreeMapToolTipSettings_Duration)'| markdownify }}</td>
+<td>{{'[Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapToolTipSettings.html#Syncfusion_Maui_TreeMap_TreeMapToolTipSettings_Stroke)'| markdownify }}</td>
 <td>Gets or sets the stroke color for the tool tips in the SfTreeMap.</td>
 </tr>
 
@@ -1402,7 +1402,7 @@ public class PopulationViewModel
 
 ### TextStyle
 
-The `FontColor`, `FontSize`, `FontFamily`, and `FontAttributes` properties of the `SfTreeMap` is grouped to [TreeMapTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapTextStyle.html).
+The [TextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapTextStyle.html#Syncfusion_Maui_TreeMap_TreeMapTextStyle_TextColor), [FontSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapTextStyle.html#Syncfusion_Maui_TreeMap_TreeMapTextStyle_FontSize), [FontFamily](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapTextStyle.html#Syncfusion_Maui_TreeMap_TreeMapTextStyle_FontFamily), and [FontAttributes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapTextStyle.html#Syncfusion_Maui_TreeMap_TreeMapTextStyle_FontAttributes) properties of the [SfTreeMap](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html) is grouped to [TreeMapTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapTextStyle.html).
 
 <table>
 <tr>

@@ -9,7 +9,7 @@ documentation: ug
  
 # Selection in TreeMap control
 
-The Treemap control enables users to select specific groups or items for distinction, with the tooltip feature providing additional information during interaction. However, when the [SelectionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_SelectionMode) is set to `None,` interaction with treemap items is disabled.
+The Treemap control enables users to select specific groups or items for distinction, with the tooltip feature providing additional information during interaction. However, when the [SelectionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_SelectionMode) is set to [None](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SelectionMode.html#Syncfusion_Maui_TreeMap_SelectionMode_None), interaction with treemap items is disabled.
 
 ## Selection mode
 
@@ -287,7 +287,7 @@ public class PopulationViewModel
 
 ## Programmatic item selection
 
-You can programmatically select the tree map items by utilizing the [SelectedItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_SelectedItems) property in the `SfTreeMap.` This property holds a collection of the treemap items representing the currently selected ones. In the `Single` selection mode, only the first item in the SelectedItems collection will be selected. In the `Multiple` selection mode, all items in the `SelectedItems` collection will be selected. When `SelectionMode` is set to `None,` no items are selected.
+You can programmatically select the tree map items by utilizing the [SelectedItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_SelectedItems) property in the [SfTreeMap](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html). This property holds a collection of the treemap items representing the currently selected ones. In the [Single](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SelectionMode.html#Syncfusion_Maui_TreeMap_SelectionMode_Single) selection mode, only the first item in the SelectedItems collection will be selected. In the [Multiple](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SelectionMode.html#Syncfusion_Maui_TreeMap_SelectionMode_Multiple) selection mode, all items in the [SelectedItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_SelectedItems) collection will be selected. When [SelectionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_SelectionMode) is set to [None](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SelectionMode.html#Syncfusion_Maui_TreeMap_SelectionMode_None), no items are selected.
 
 {% tabs %}
 {% highlight XAML %}
@@ -376,11 +376,11 @@ public class PopulationViewModel
 
 ## Customize selected item appearance
 
-The selected items appearance customization can be achieved by using the [SelectedItemStroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_SelectedItemStroke) and [SelectedItemStrokeWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_SelectedItemStrokeWidth) properties in the `SfTreeMap`.
+The selected items appearance customization can be achieved by using the [SelectedItemStroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_SelectedItemStroke) and [SelectedItemStrokeWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_SelectedItemStrokeWidth) properties in the [SfTreeMap](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html).
 
 ### Customize selected item appearance using stroke
 
-The selected item stroke can be customized by using the [SelectedItemStroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_SelectedItemStroke) property of `SfTreeMap.` The default value of `SelectedItemStroke` is `new SolidColorBrush(Color.FromArgb("#1C1B1F")).`
+The selected item stroke can be customized by using the [SelectedItemStroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_SelectedItemStroke) property of [SfTreeMap](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html). The default value of [SelectedItemStroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_SelectedItemStroke) is `new SolidColorBrush(Color.FromArgb("#1C1B1F")).`
 
 {% tabs %}
 {% highlight XAML hl_lines="4" %}
@@ -468,11 +468,11 @@ public class PopulationViewModel
 {% endhighlight %}
 {% endtabs %}
 
-N> This property is applicable only when the `SelectionMode` is set to `Single` or `Multiple.`
+N> This property is applicable only when the [SelectionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_SelectionMode) is set to [Single](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SelectionMode.html#Syncfusion_Maui_TreeMap_SelectionMode_Single) or [Multiple](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SelectionMode.html#Syncfusion_Maui_TreeMap_SelectionMode_Multiple).
 
 ### Customize selected item appearance using stroke width
 
-The selected item stroke width can be customized by using the [SelectedItemStrokeWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_SelectedItemStrokeWidth) property of `SfTreeMap.` The default value of `SelectedItemStrokeWidth` is `2.`
+The selected item stroke width can be customized by using the [SelectedItemStrokeWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_SelectedItemStrokeWidth) property of [SfTreeMap](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html). The default value of [SelectedItemStrokeWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_SelectedItemStrokeWidth) is `2.`
 
 {% tabs %}
 {% highlight XAML hl_lines="4" %}
@@ -560,4 +560,4 @@ public class PopulationViewModel
 {% endhighlight %}
 {% endtabs %}
 
-N> This property is applicable only when the `SelectionMode` is set to `Single` or `Multiple.`
+N> This property is applicable only when the [SelectionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_SelectionMode) is set to [Single](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SelectionMode.html#Syncfusion_Maui_TreeMap_SelectionMode_Single) or [Multiple](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SelectionMode.html#Syncfusion_Maui_TreeMap_SelectionMode_Multiple).
