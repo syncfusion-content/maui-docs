@@ -9,7 +9,7 @@ documentation: ug
 
 # Data Binding in .NET MAUI Chat (SfChat)
 
-The `SfChat` control allows to bind any existing collection of data objects as message collection using the `ItemSource` and `ItemsSourceConverter` property as follows.
+The `SfChat` control allows to bind any existing collection of data objects as message collection using the [ItemSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_ItemsSource) and [ItemsSourceConverter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_ItemsSourceConverter) property as follows.
 
 Create the below collection of objects that must be converted to message collection and displayed as messages in SfChat.
 
@@ -167,7 +167,7 @@ Now, bind the existing collection of data objects to the `SfChat.ItemsSource` pr
 {% endhighlight %}
 {% endtabs %}
 
-Next, create a class derived from `IChatMessageConverter` interface and set it to the `SfChat.ItemsSourceConverter` property as shown below. The `IChatMessageConverter` interface provides the methods `ConvertToChatMessage` and `ConvertToData` to convert an item of an existing collection to a chat message and to convert a chat message to an item of the existing data collection respectively. Similarly these two methods `ConvertToChatMessage` and `ConvertToData` will be fired whenever a new item is added/removed/replaced in the existing data collection or in the chat message collection respectively.
+Next, create a class derived from [IChatMessageConverter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.IChatMessageConverter.html) interface and set it to the [SfChat.ItemsSourceConverter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_ItemsSourceConverter) property as shown below. The `IChatMessageConverter` interface provides the methods [ConvertToChatMessage](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.IChatMessageConverter.html#Syncfusion_Maui_Chat_IChatMessageConverter_ConvertToChatMessage_System_Object_Syncfusion_Maui_Chat_SfChat_) and [ConvertToData](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.IChatMessageConverter.html#Syncfusion_Maui_Chat_IChatMessageConverter_ConvertToData_System_Object_Syncfusion_Maui_Chat_SfChat_) to convert an item of an existing collection to a chat message and to convert a chat message to an item of the existing data collection respectively. Similarly these two methods `ConvertToChatMessage` and `ConvertToData` will be fired whenever a new item is added/removed/replaced in the existing data collection or in the chat message collection respectively.
 
 Implementation of a custom message converter class with conversion logic to convert from data to message and vice versa.
 

@@ -9,13 +9,13 @@ documentation: ug
 
 # Load More in .NET MAUI Chat (SfChat)
 
-In `SfChat`, scroll to the top of the message list to fetch the old messages on demand in run-time either automatically or manually(by tapping the load more button) by setting the `LoadMoreBehavior` as `LoadMoreOption.Auto` or `LoadMoreOption.Manual` respectively. You can also pass the parameter to the `LoadMoreCommand` using the `LoadMoreCommandParameter` property. Use the `IsLazyLoading` property to show the busy indicator denoting the loading operation in SfChat.
+In `SfChat`, scroll to the top of the message list to fetch the old messages on demand in run-time either automatically or manually(by tapping the load more button) by setting the [LoadMoreBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_LoadMoreBehavior) as `LoadMoreOption.Auto` or `LoadMoreOption.Manual` respectively. You can also pass the parameter to the [LoadMoreCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_LoadMoreCommand) using the [LoadMoreCommandParameter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_LoadMoreCommandParameter) property. Use the [IsLazyLoading](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_IsLazyLoading) property to show the busy indicator denoting the loading operation in SfChat.
 
-N> SfChat does not support LoadMore when `ShowTimeBreak` is enabled. Because SfListView has a limitation that `LoadMoreOption.Auto` or `LoadMoreOption.AutoOnScroll` works only when `LoadMorePosition.Bottom` is `enabled`.
+N> SfChat does not support LoadMore when [ShowTimeBreak](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_ShowTimeBreak) is enabled. Because SfListView has a limitation that [LoadMoreOption.Auto](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.LoadMoreOption.html#Syncfusion_Maui_ListView_LoadMoreOption_Auto) or [LoadMoreOption.AutoOnScroll](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.LoadMoreOption.html#Syncfusion_Maui_ListView_LoadMoreOption_AutoOnScroll) works only when [LoadMorePosition.End](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.LoadMorePosition.html#Syncfusion_Maui_ListView_LoadMorePosition_End) is `enabled`.
 
 ## Load more manually
 
-By default, upon reaching the top of the chat list, a load more button will be displayed if `LoadMoreBehavior` is set as `LoadMoreOption.Manual`. Clicking on this button triggers the `LoadMoreCommand`. In the command's action, set the `IsLazyLoading` as `true` to show the busy indicator and hide the load more button. Once the messages are loaded, set the `IsLazyLoading` back to `false` to hide the busy indicator.
+By default, upon reaching the top of the chat list, a load more button will be displayed if `LoadMoreBehavior` is set as [LoadMoreOption.Manual](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.LoadMoreOption.html#Syncfusion_Maui_ListView_LoadMoreOption_Manual). Clicking on this button triggers the `LoadMoreCommand`. In the command's action, set the `IsLazyLoading` as `true` to show the busy indicator and hide the load more button. Once the messages are loaded, set the `IsLazyLoading` back to `false` to hide the busy indicator.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="14" %}
@@ -149,9 +149,9 @@ public partial class LoadMoreViewModel : INotifyPropertyChanged
 
 ## Load more automatically
 
-Set the `LoadMoreBehavior` to `LoadMoreOption.Auto`, a busy indicator will appear automatically when you reach the top of the chat list. Unlike `LoadMoreOption.Manual`, `LoadMoreCommand` executes automatically without needing any additional clicks when you reach the top of the chat list. 
+Set the `LoadMoreBehavior` to [LoadMoreOption.Auto](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.LoadMoreOption.html#Syncfusion_Maui_ListView_LoadMoreOption_Auto), a busy indicator will appear automatically when you reach the top of the chat list. Unlike [LoadMoreOption.Manual](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.LoadMoreOption.html#Syncfusion_Maui_ListView_LoadMoreOption_Manual), [LoadMoreCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_LoadMoreCommand) executes automatically without needing any additional clicks when you reach the top of the chat list. 
 
-N> When the `LoadMoreBehavior` is set to `Auto` `IsLazyLoading` will be `true` by default. So, to cancel the load more operation and remove the load more view from the chat, set the `LoadMoreBehavior` as `LoadMoreOption.None`.
+N> When the `LoadMoreBehavior` is set to `Auto`, [IsLazyLoading](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_IsLazyLoading) will be `true` by default. So, to cancel the load more operation and remove the load more view from the chat, set the `LoadMoreBehavior` as [LoadMoreOption.None](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.LoadMoreOption.html#Syncfusion_Maui_ListView_LoadMoreOption_None).
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -285,7 +285,7 @@ public partial class LoadMoreViewModel : INotifyPropertyChanged
 
 `SfChat` allows you to customize the load more view to display any custom button or indicator when loading more messages. This feature automatically adjusts the size of the load more view based on the content inside.
 
-You can use the `IsLazyLoading` property to determine whether to display the custom button or the busy indicator. In the code sample below, a custom view and a busy indicator are added as children of a grid, which is then set as the `LoadMoreTemplate`. When `IsLazyLoading` is `false`, the custom view is shown, and the busy indicator is hidden. When `IsLazyLoading` is `true`, the custom view is hidden, and the busy indicator is shown. 
+You can use the [IsLazyLoading](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_IsLazyLoading) property to determine whether to display the custom button or the busy indicator. In the code sample below, a custom view and a busy indicator are added as children of a grid, which is then set as the [LoadMoreTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_LoadMoreTemplate). When `IsLazyLoading` is `false`, the custom view is shown, and the busy indicator is hidden. When `IsLazyLoading` is `true`, the custom view is hidden, and the busy indicator is shown. 
 
 {% tabs %}
 {% highlight xaml hl_lines="26" %}

@@ -9,7 +9,7 @@ documentation: ug
 
 # Typing indicator in .NET MAUI Chat (SfChat)
 
-In `SfChat`, typing indicator indicates with an animation, that a user (or users) is currently typing, thereby providing an enhanced user experience. To show or hide the typing indicator set the `ShowTypingIndicator` property to `true` or `false` respectively. To show user image and text in the typing indicator create a new instance of `TypingIndicator`, set the `TypingIndicator.Authors` and `TypingIndicator.Text` property and assign the typing indicator instance to the `TypingIndicator` property.
+In `SfChat`, typing indicator indicates with an animation, that a user (or users) is currently typing, thereby providing an enhanced user experience. To show or hide the typing indicator set the [ShowTypingIndicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_ShowTypingIndicator) property to `true` or `false` respectively. To show user image and text in the typing indicator create a new instance of [TypingIndicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_TypingIndicator), set the [TypingIndicator.Authors](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.ChatTypingIndicator.html#Syncfusion_Maui_Chat_ChatTypingIndicator_Authors) and [TypingIndicator.Text](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.ChatTypingIndicator.html#Syncfusion_Maui_Chat_ChatTypingIndicator_Text) property and assign the typing indicator instance to the `TypingIndicator` property.
 
 {% tabs %}
 {% highlight xaml hl_lines="15 16" %}
@@ -128,7 +128,7 @@ namespace GettingStarted
 
 ## Customize avatar view of typing indicator
 
-The avatar view in the typing indicator can be customized to show only starting alphabet of the username or only image of the user as avatar by using `TypingIndicator.AvatarViewType` property.
+The avatar view in the typing indicator can be customized to show only starting alphabet of the username or only image of the user as avatar by using [TypingIndicator.AvatarViewType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.ChatTypingIndicator.html#Syncfusion_Maui_Chat_ChatTypingIndicator_AvatarViewType) property.
 
 {% tabs %}
 {% highlight c# tabtitle="ViewModel.cs" hl_lines="8" %}
@@ -153,7 +153,7 @@ public class TypingIndicatorViewModel : INotifyPropertyChanged
 
 ## Notifications when user start/stop typing
  
-In `SfChat`, you can access the typing area using the `SfChat.Editor` property, listen to its focus change, text change, completed events to identify when the user starts or ends typing.
+In `SfChat`, you can access the typing area using the [SfChat.Editor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_Editor) property, listen to its focus change, text change, completed events to identify when the user starts or ends typing.
 
 {% tabs %}
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="9 11" %}
