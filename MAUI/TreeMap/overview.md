@@ -16,7 +16,7 @@ The Syncfusion .NET MAUI TreeMap control allows you to visually represent hierar
 ## Key features 
  
  * **Data Binding**: Seamlessly bind the TreeMap control to hierarchical data structures.
- * **Layout Options**: Offers various layout options such as Squarified, SliceAndDiceHorizontal, SliceAndDiceVertical, and the SliceAndDiceAuto.
+ * **Layout Options**: Offers various layout options such as SliceAndDiceHorizontal, SliceAndDiceVertical, SliceAndDiceAuto, and the Squarified.
 
  ![layout-in-maui-tree-map](images/overview/layout-in-maui-tree-map.png)
 
