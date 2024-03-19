@@ -242,8 +242,6 @@ private async void OnSelectionChanged(object sender, Syncfusion.Maui.Inputs.Sele
 
 The following gif image illustrates the result of the above code:
 
-![.NET MAUI Autocomplete selection changed event notification.](Images/Selection/net-maui-autocomplete-selection-changed-notification.gif)
-
 N> SelectionChanged event arguments `CurrentSelection` and `PreviousSelection` marked as "Obsolete". You can use the `AddedItems` and `RemovedItems` event arguments.
 
 ## Get the selected value
