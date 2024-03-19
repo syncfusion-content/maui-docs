@@ -146,7 +146,7 @@ autocomplete.TextSearchMode = AutocompleteTextSearchMode.StartsWith;
 
 The following image illustrates the result of the above code:
 
-![.NET MAUI Autocomplete filtering based on started text](Images/Searching_Filtering/SearchModeStartsWith.png)
+![.NET MAUI Autocomplete filtering based on started text](Images/Searching_Filtering/SearchModeStartsWith.gif)
 
 ### Filter with contains text
 
@@ -173,7 +173,7 @@ autocomplete.TextSearchMode = AutocompleteTextSearchMode.Contains;
 
 The following image illustrates the result of the above code.
 
-![.NET MAUI Autocomplete filtering based on contains text](Images/Searching_Filtering/SearchModeContains.png)
+![.NET MAUI Autocomplete filtering based on contains text](Images/Searching_Filtering/SearchModeContains.gif)
 
 ### Custom filtering
 

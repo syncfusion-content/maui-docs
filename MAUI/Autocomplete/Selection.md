@@ -76,7 +76,7 @@ autocomplete.TextMemberPath = "Name";
 
 The following gif image illustrates the result of the above code:
 
-![.NET MAUI Autocomplete with single selection mode.](Images/Selection/net-maui-autocomplete-single-selection.png)
+![.NET MAUI Autocomplete with single selection mode.](Images/Selection/net-maui-autocomplete-single-selection.gif)
 
 ## Multiple selection
 
@@ -242,7 +242,7 @@ private async void OnSelectionChanged(object sender, Syncfusion.Maui.Inputs.Sele
 
 The following gif image illustrates the result of the above code:
 
-![.NET MAUI Autocomplete selection changed event notification.](Images/Selection/net-maui-autocomplete-selection-changed-notification.png)
+![.NET MAUI Autocomplete selection changed event notification.](Images/Selection/net-maui-autocomplete-selection-changed-notification.gif)
 
 N> SelectionChanged event arguments `CurrentSelection` and `PreviousSelection` marked as "Obsolete". You can use the `AddedItems` and `RemovedItems` event arguments.
 
@@ -289,7 +289,7 @@ private void OnSelectionChanged(object sender, Syncfusion.Maui.Inputs.SelectionC
 
 The following gif image illustrates the result of the above code:
 
-![.NET MAUI Autocomplete selected value.](Images/Selection/net-maui-autocomplete-selected-value-path.png)
+![.NET MAUI Autocomplete selected value.](Images/Selection/net-maui-autocomplete-selected-value-path.gif)
 
 ## Hide clear button in the Autocomplete
 
