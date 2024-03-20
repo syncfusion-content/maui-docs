@@ -2,7 +2,7 @@
 layout: post
 title: Filtering in .NET MAUI ComboBox control | Syncfusion
 description: Learn here all about ComboBox filtering options in Syncfusion .NET MAUI ComboBox (multi-select ComboBox) control and more.
-platform: .NET MAUI
+platform: maui
 control: SfComboBox
 documentation: ug
 ---
