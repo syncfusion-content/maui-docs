@@ -153,7 +153,7 @@ public class TypingIndicatorViewModel : INotifyPropertyChanged
 
 ## Notifications when user start/stop typing
  
-In `SfChat`, you can access the typing area using the [SfChat.Editor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_Editor) property, listen to its focus change, text change, completed events to identify when the user starts or ends typing.
+In `SfChat`, you can access the typing area using the [Editor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_Editor) property, listen to its focus change, text change, completed events to identify when the user starts or ends typing.
 
 {% tabs %}
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="9 11" %}

@@ -11,7 +11,7 @@ documentation: ug
 
 ## MessageTapped Event and Command
 
-The `SfChat` control includes a built-in event called [SfChat.MessageTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_MessageTapped) and a command named [SfChat.MessageTappedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_MessageTappedCommand). These are triggered when a message is tapped. You can access the tapped message and the point of interaction through the [MessageTappedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.MessageTappedEventArgs.html). 
+The `SfChat` control includes a built-in event called [MessageTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_MessageTapped) and a command named [MessageTappedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_MessageTappedCommand). These are triggered when a message is tapped. You can access the tapped message and the point of interaction through the [MessageTappedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.MessageTappedEventArgs.html). 
 
 ### MessageTapped Event
 
@@ -73,7 +73,7 @@ The `SfChat` control includes a built-in event called [SfChat.MessageTapped](htt
 
 ## MessageDoubleTapped Event and Command
 
-The `SfChat` control includes built-in features like the [SfChat.MessageDoubleTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_MessageDoubleTapped) event and [SfChat.MessageDoubleTappedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_MessageDoubleTappedCommand). These are activated when a message is double-tapped. You can access the message that was double-tapped and the point of interaction through the [MessageDoubleTappedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.MessageDoubleTappedEventArgs.html).
+The `SfChat` control includes built-in features like the [MessageDoubleTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_MessageDoubleTapped) event and [MessageDoubleTappedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_MessageDoubleTappedCommand). These are activated when a message is double-tapped. You can access the message that was double-tapped and the point of interaction through the [MessageDoubleTappedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.MessageDoubleTappedEventArgs.html).
 
 ### MessageDoubleTapped Event
 
@@ -134,7 +134,7 @@ The `SfChat` control includes built-in features like the [SfChat.MessageDoubleTa
 
 ## MessageLongPressed Event and Command
 
-The `SfChat` control has built-in features like the [SfChat.MessageLongPressed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_MessageLongPressed) event and [SfChat.MessageLongPressedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_MessageLongPressedCommand). These are activated when a message is long-pressed. You can access the message that was long-pressed and the point of interaction through the [MessageLongPressedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.MessageLongPressedEventArgs.html).
+The `SfChat` control has built-in features like the [MessageLongPressed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_MessageLongPressed) event and [MessageLongPressedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_MessageLongPressedCommand). These are activated when a message is long-pressed. You can access the message that was long-pressed and the point of interaction through the [MessageLongPressedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.MessageLongPressedEventArgs.html).
 
 ### MessageLongPressed Event
 

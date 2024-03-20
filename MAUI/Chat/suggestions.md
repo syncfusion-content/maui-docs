@@ -209,7 +209,7 @@ You can choose to show the suggestion items in horizontal or vertical orientatio
 
 ## Showing suggestions at bottom of chat control
 
-The SfChat allows to show a list of options as suggestions at the bottom of chat control by creating a [ChatSuggestion](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.ChatSuggestions.html) instance and setting it to the [SfChat.Suggestions](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_Suggestions) property.
+The SfChat allows to show a list of options as suggestions at the bottom of chat control by creating a [ChatSuggestion](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.ChatSuggestions.html) instance and setting it to the [Suggestions](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_Suggestions) property.
 
 {% tabs %}
 {% highlight xaml hl_lines="11" %}   
@@ -312,7 +312,7 @@ The SfChat allows to show a list of options as suggestions at the bottom of chat
 
 ## Cancel the suggestions from closing
 
-By default, the suggestions list in the `SfChat` closes automatically after the user selects an option from the list. If you wish to prevent this behavior and keep the suggestions list open even after selection, you can set the [SuggestionItemSelectedEventArgs.HideAfterSelection](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SuggestionItemSelectedEventArgs.html#Syncfusion_Maui_Chat_SuggestionItemSelectedEventArgs_HideAfterSelection) to `false` within the [SuggestionItemSelected](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_SuggestionItemSelected) event handler or the [SfChat.SuggestionItemSelectedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_SuggestionItemSelectedCommand) command's execution. This ensures that the suggestions list remains visible for further interaction after an option is chosen by the user.
+By default, the suggestions list in the `SfChat` closes automatically after the user selects an option from the list. If you wish to prevent this behavior and keep the suggestions list open even after selection, you can set the [SuggestionItemSelectedEventArgs.HideAfterSelection](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SuggestionItemSelectedEventArgs.html#Syncfusion_Maui_Chat_SuggestionItemSelectedEventArgs_HideAfterSelection) to `false` within the [SuggestionItemSelected](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_SuggestionItemSelected) event handler or the [SuggestionItemSelectedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_SuggestionItemSelectedCommand) command's execution. This ensures that the suggestions list remains visible for further interaction after an option is chosen by the user.
 
 **SuggestionItemSelected event**
 

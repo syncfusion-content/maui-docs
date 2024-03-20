@@ -331,4 +331,4 @@ treeView.IsAnimationEnabled = true;
 {% endhighlight %}
 {% endtabs %}
 
-![.NET MAUI TreeView with Animation]()
+![.NET MAUI TreeView with Animation](Images/appearance/maui-treeView-animation.gif)

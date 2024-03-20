@@ -197,7 +197,7 @@ Create a simple message collection as shown in the following code example in a n
 
 ## Binding Messages to Chat 
 
-To bind the messages to SfChat, configure the [SfChat.Messages](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_Messages) property accordingly. You have the option to bind the message collection of the SfChat either through XAML or programmatically in code.
+To bind the messages to SfChat, configure the [Messages](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_Messages) property accordingly. You have the option to bind the message collection of the SfChat either through XAML or programmatically in code.
 
 {% tabs %} 
 {% highlight xaml hl_lines="14" %}

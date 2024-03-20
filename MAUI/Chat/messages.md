@@ -24,7 +24,7 @@ documentation: ug
 
 ## Setting current user for conversation
 
-The [SfChat.CurrentUser](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_CurrentUser) helps differentiate between the sender and receiver of the messages. On any given chat window, the `SfChat.CurrentUser` is meant to be the sender (author of outgoing messages). Refer to the below code example to set up a current user in a chat.
+The [CurrentUser](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_CurrentUser) helps differentiate between the sender and receiver of the messages. On any given chat window, the `CurrentUser` is meant to be the sender (author of outgoing messages). Refer to the below code example to set up a current user in a chat.
 
 {% tabs %}
 {% highlight xaml hl_lines="15" %}
@@ -226,7 +226,7 @@ The [SfChat.CurrentUser](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cha
 
 ## Date picker message
 
-[DatePickerMessage](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.DatePickerMessage.html) is used to display a date picker as a message, allowing users to select a date. When a date is selected, it will be added as a `TextMessage` to the chat window. When you select a date from the date picker, the [SfChat.SendMessage](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_SendMessage) event and [SfChat.SendMessageCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_SendMessageCommand) will be executed.
+[DatePickerMessage](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.DatePickerMessage.html) is used to display a date picker as a message, allowing users to select a date. When a date is selected, it will be added as a `TextMessage` to the chat window. When you select a date from the date picker, the [SendMessage](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_SendMessage) event and [SendMessageCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_SendMessageCommand) will be executed.
 
 {% tabs %}
 {% highlight xaml %}
@@ -313,7 +313,7 @@ The [SfChat.CurrentUser](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cha
 
 ## Time picker message
 
-[TimePickerMessage](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.TimePickerMessage.html) is used to display a time picker as a message, allowing users to select a time. Once a time has been specified, it will be added as a `TextMessage`. When you select a time from the time picker, the [SfChat.SendMessage](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_SendMessage) event and [SfChat.SendMessageCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_SendMessageCommand) will be executed.
+[TimePickerMessage](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.TimePickerMessage.html) is used to display a time picker as a message, allowing users to select a time. Once a time has been specified, it will be added as a `TextMessage`. When you select a time from the time picker, the [SendMessage](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_SendMessage) event and [SendMessageCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_SendMessageCommand) will be executed.
 
 {% tabs %}
 {% highlight xaml %}
@@ -401,7 +401,7 @@ The [SfChat.CurrentUser](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cha
 
 ## Calendar message
 
-[CalendarMessage](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Chat.CalendarMessage.html) is used to display a calendar as a message, allowing users to choose a date. The date chosen from the calendar will be added as a `TextMessage`. When you select a date from the calendar, the [SfChat.SendMessage](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_SendMessage) event and [SfChat.SendMessageCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_SendMessageCommand) will be executed.
+[CalendarMessage](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Chat.CalendarMessage.html) is used to display a calendar as a message, allowing users to choose a date. The date chosen from the calendar will be added as a `TextMessage`. When you select a date from the calendar, the [SendMessage](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_SendMessage) event and [SendMessageCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_SendMessageCommand) will be executed.
 
 {% tabs %}
 {% highlight xaml %}
@@ -577,7 +577,7 @@ The [SfChat.CurrentUser](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cha
 
 ### Adding hyperlink message as an outgoing message
 
-Unlike the other messages, the `HyperlinkMessage` can also be shown as an outgoing message. To add an `HyperlinkMessage` as an outgoing message just set the [HyperlinkMessage.Author](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.MessageBase.html#Syncfusion_Maui_Chat_MessageBase_Author) as [SfChat.CurrentUser](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_CurrentUser).
+Unlike the other messages, the `HyperlinkMessage` can also be shown as an outgoing message. To add an `HyperlinkMessage` as an outgoing message just set the [HyperlinkMessage.Author](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.MessageBase.html#Syncfusion_Maui_Chat_MessageBase_Author) as [CurrentUser](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_CurrentUser).
 
 ![Outgoing hyperlink message in .NET MAUI Chat](images/messages/maui-chat-outgoing-hyperlink-message.png)
 
@@ -672,7 +672,7 @@ Unlike the other messages, the `HyperlinkMessage` can also be shown as an outgoi
 
 ### Event and command
 
-The `ImageMessage` comes with in-built [SfChat.ImageTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_ImageTapped) event and [SfChat.ImageTappedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_ImageTappedCommand) that will be fired upon tapping an image message. You can get the instance of the `ImageMessage` that was tapped in the [ImageTappedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.ImageTappedEventArgs.html) as [ImageTappedEventArgs.Message](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.ImageTappedEventArgs.html#Syncfusion_Maui_Chat_ImageTappedEventArgs_Message). You can handle this event/command to achieve requirements like showing the image in full screen or showing options for sharing the image, etc.
+The `ImageMessage` comes with in-built [ImageTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_ImageTapped) event and [ImageTappedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_ImageTappedCommand) that will be fired upon tapping an image message. You can get the instance of the `ImageMessage` that was tapped in the [ImageTappedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.ImageTappedEventArgs.html) as [ImageTappedEventArgs.Message](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.ImageTappedEventArgs.html#Syncfusion_Maui_Chat_ImageTappedEventArgs_Message). You can handle this event/command to achieve requirements like showing the image in full screen or showing options for sharing the image, etc.
 
 ## ImageTapped event
 
@@ -768,7 +768,7 @@ N> [View sample in GitHub](https://github.com/SyncfusionExamples/display-tapped-
 
 ### Adding image message as an outgoing message
 
-Unlike the other messages, the `ImageMessage` can also be shown as an outgoing message. To add an ImageMessage as an outgoing message, just set the [ImageMessage.Author](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.MessageBase.html#Syncfusion_Maui_Chat_MessageBase_Author) as [SfChat.CurrentUser](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_CurrentUser). You can also add an image message when clicking the attachment button, as shown here.
+Unlike the other messages, the `ImageMessage` can also be shown as an outgoing message. To add an ImageMessage as an outgoing message, just set the [ImageMessage.Author](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.MessageBase.html#Syncfusion_Maui_Chat_MessageBase_Author) as [CurrentUser](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_CurrentUser). You can also add an image message when clicking the attachment button, as shown here.
 
 ![Outgoing Image message in .NET MAUI Chat](images/messages/maui-chat-outgoing-image-message.png)
 
@@ -904,7 +904,7 @@ If you don’t want to display images, buttons, or text(title, subtitle, descrip
 
 ### Event and Command
 
-The [CardMessage](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.CardMessage.html) comes with a built-in [SfChat.CardTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_CardTapped) event and [SfChat.CardCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_CardCommand) that will be fired upon tapping a button in a card or tapping any card in the message. You can get the selected Card, the clicked CardButton and the actual `CardMessage` via the [CardTappedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.CardTappedEventArgs.html) as [CardTappedEventArgs.Card](), [CardTappedEventArgs.Action]() and [CardTappedEventArgs.Message](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.CardTappedEventArgs.html#Syncfusion_Maui_Chat_CardTappedEventArgs_Message) respectively, in both the `CardTapped` event handler and action of `CardCommand`. Handling this event/command by setting [CardTappedEventArgs.Handled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.CardTappedEventArgs.html#Syncfusion_Maui_Chat_CardTappedEventArgs_Handled) prevents the `Card.Title` or `CardButton.Value` from getting added as a new message.
+The [CardMessage](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.CardMessage.html) comes with a built-in [CardTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_CardTapped) event and [CardCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_CardCommand) that will be fired upon tapping a button in a card or tapping any card in the message. You can get the selected Card, the clicked CardButton and the actual `CardMessage` via the [CardTappedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.CardTappedEventArgs.html) as [CardTappedEventArgs.Card](), [CardTappedEventArgs.Action]() and [CardTappedEventArgs.Message](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.CardTappedEventArgs.html#Syncfusion_Maui_Chat_CardTappedEventArgs_Message) respectively, in both the `CardTapped` event handler and action of `CardCommand`. Handling this event/command by setting [CardTappedEventArgs.Handled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.CardTappedEventArgs.html#Syncfusion_Maui_Chat_CardTappedEventArgs_Handled) prevents the `Card.Title` or `CardButton.Value` from getting added as a new message.
 
 N> The Action argument in `CardTappedEventArgs` holds a valid value only when clicking the `CardButton` in a card. Tapping elsewhere inside the card fires the `CardTapped` event and `CardCommand` with `Action` as null in the `CardTappedEventArgs`. If the `CardTappedEventArgs.Action` is null, the `CardTappedEventArgs.Card.Title` is added as a new message, else the `CardTappedEventArgs.Action.Value` is added as a new message.
 
@@ -991,7 +991,7 @@ N> The Action argument in `CardTappedEventArgs` holds a valid value only when cl
 
 ## Template for message
 
-`SfChat` allows the loading of custom templates for all incoming and outgoing messages using the [SfChat.MessageTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_MessageTemplate) property. You can customize the message views as per your liking with the support to load a template for each individual message by using a custom template selector derived from [ChatMessageTemplateSelector](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.ChatMessageTemplateSelector.html) and assigning it to `SfChat.MessageTemplate` as shown below. Load custom templates based on the message type, text, author, etc. The limits are endless.
+`SfChat` allows the loading of custom templates for all incoming and outgoing messages using the [MessageTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_MessageTemplate) property. You can customize the message views as per your liking with the support to load a template for each individual message by using a custom template selector derived from [ChatMessageTemplateSelector](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.ChatMessageTemplateSelector.html) and assigning it to `MessageTemplate` as shown below. Load custom templates based on the message type, text, author, etc. The limits are endless.
 
 We have loaded a custom template if the message's text contains a particular text value in the below code example.
 
@@ -1083,7 +1083,7 @@ N> [View sample in GitHub](https://github.com/SyncfusionExamples/message-templat
 
 ## Spacing between messages
 
-`SfChat` allows to change the vertical spacing between the messages in view using [SfChat.MessageSpacing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_MessageSpacing) property. The default value is `8`.
+`SfChat` allows to change the vertical spacing between the messages in view using [MessageSpacing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_MessageSpacing) property. The default value is `8`.
 
 {% tabs %}
 {% highlight xaml hl_lines="16" %}
@@ -1137,11 +1137,11 @@ N> [View sample in GitHub](https://github.com/SyncfusionExamples/message-templat
 
 ## Sending message
 
-The [SfChat.CurrentUser](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_CurrentUser) can send messages by using the send button located in the message input area at the bottom of the chat control. Tapping the send button or pressing the Enter key (in WinUI & macOS) will generate a new text message with the text entered in the editor and add it to the [SfChat.Messages](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_Messages) collection. The [SfChat.SendMessage event](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_SendMessage) and [SfChat.SendMessageCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_SendMessageCommand) will be triggered upon tapping the send button.
+The [CurrentUser](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_CurrentUser) can send messages by using the send button located in the message input area at the bottom of the chat control. Tapping the send button or pressing the Enter key (in WinUI & macOS) will generate a new text message with the text entered in the editor and add it to the [Messages](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_Messages) collection. The [SendMessage event](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_SendMessage) and [SendMessageCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_SendMessageCommand) will be triggered upon tapping the send button.
 
 **Cancel the message from sending**
 
-The newly added message can be canceled from sending in the `SfChat.SendMessage` event handler and `SfChat.SendMessageCommand` by setting the Handled value as `true` in the provided [SendMessageEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SendMessageEventArgs.html).
+The newly added message can be canceled from sending in the `SendMessage` event handler and `SendMessageCommand` by setting the Handled value as `true` in the provided [SendMessageEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SendMessageEventArgs.html).
 
 **SendMessage event handler**
 
@@ -1247,7 +1247,7 @@ The newly added message can be canceled from sending in the `SfChat.SendMessage`
 
 ## Show keyboard always
 
-By default, the keyboard will be open in view, even after a message is sent or focus is lost, just like in most mainstream chat applications. To hide the keyboard after the message has been sent or lost focus, set the [SfChat.ShowKeyboardAlways](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_ShowKeyboardAlways) property to `false`.
+By default, the keyboard will be open in view, even after a message is sent or focus is lost, just like in most mainstream chat applications. To hide the keyboard after the message has been sent or lost focus, set the [ShowKeyboardAlways](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_ShowKeyboardAlways) property to `false`.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="16" %}
@@ -1276,7 +1276,7 @@ By default, the keyboard will be open in view, even after a message is sent or f
 
 ## Restricting multi-line input in editor (single line messages) in maui chat
 
-By default, users can input multi-line messages by adding new lines in the editor within the chat control for outgoing messages. However, if you wish to limit multi-line input and display a send button on the keyboard instead, you can achieve this by setting the [SfChat.AllowMultilineInput](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_AllowMultilineInput) property to `false`.
+By default, users can input multi-line messages by adding new lines in the editor within the chat control for outgoing messages. However, if you wish to limit multi-line input and display a send button on the keyboard instead, you can achieve this by setting the [AllowMultilineInput](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_AllowMultilineInput) property to `false`.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="16" %}
@@ -1307,7 +1307,7 @@ N> In iOS, you cannot scroll horizontally on the editor when `AllowMultilineInpu
 
 ## Show avatar and author name for outgoing message
 
-By default, the author’s name and avatar are not shown for outgoing messages sent by the `SfChat.CurrentUser`. You have the option to display or hide the avatar and name for all outgoing messages by using the [SfChat.ShowOutgoingMessageAvatar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_ShowOutgoingMessageAvatar) and [SfChat.ShowOutgoingMessageAuthorName](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_ShowOutgoingMessageAuthorName) properties, respectively.
+By default, the author’s name and avatar are not shown for outgoing messages sent by the [CurrentUser](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_CurrentUser). You have the option to display or hide the avatar and name for all outgoing messages by using the [ShowOutgoingMessageAvatar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_ShowOutgoingMessageAvatar) and [ShowOutgoingMessageAuthorName](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_ShowOutgoingMessageAuthorName) properties, respectively.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="16 17" %}
@@ -1337,7 +1337,7 @@ By default, the author’s name and avatar are not shown for outgoing messages s
 
 ## Hide avatar and author name for incoming messages
 
-By default, the author’s name and avatar are displayed for the incoming messages sent by users other than the `SfChat.CurrentUser`. You can choose to either show or hide the avatar and name for all incoming messages using the [SfChat.ShowIncomingMessageAvatar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_ShowIncomingMessageAvatar) and [SfChat.ShowIncomingMessageAuthorName](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_ShowIncomingMessageAuthorName) properties, respectively.
+By default, the author’s name and avatar are displayed for the incoming messages sent by users other than the `CurrentUser`. You can choose to either show or hide the avatar and name for all incoming messages using the [ShowIncomingMessageAvatar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_ShowIncomingMessageAvatar) and [ShowIncomingMessageAuthorName](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_ShowIncomingMessageAuthorName) properties, respectively.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="16 17" %}
@@ -1368,7 +1368,7 @@ By default, the author’s name and avatar are displayed for the incoming messag
 
 ## Customize the shape of the message
 
-The `SfChat` allows to change the shape of the messages by using the [SfChat.MessageShape](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_MessageShape) property.
+The `SfChat` allows to change the shape of the messages by using the [MessageShape](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_MessageShape) property.
 
 {% tabs %}
 {% highlight xaml hl_lines="16" %}
@@ -1422,7 +1422,7 @@ The `SfChat` allows to change the shape of the messages by using the [SfChat.Mes
 
 ## Hide the message input view
 
-The `SfChat` allows to hide the message input view (editor) by setting `false` to [SfChat.ShowMessageInputView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_ShowMessageInputView) property.
+The `SfChat` allows to hide the message input view (editor) by setting `false` to [ShowMessageInputView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_ShowMessageInputView) property.
 
 {% tabs %}
 {% highlight xaml hl_lines="16" %}
@@ -1475,7 +1475,7 @@ The `SfChat` allows to hide the message input view (editor) by setting `false` t
 
 ## Messages without author (System Generated Messages / Admin messages)
 
-Using templates, you can show messages with any information, similar to security alerts in WhatsApp or admin notifications. These messages can be put into the [SfChat.Messages](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_Messages) collection without specifying an author.
+Using templates, you can show messages with any information, similar to security alerts in WhatsApp or admin notifications. These messages can be put into the [Messages](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_Messages) collection without specifying an author.
 In the provided code example, we've set up a custom template to display a security message from an admin when the author of the message is not specified.
 
 {% tabs %}
