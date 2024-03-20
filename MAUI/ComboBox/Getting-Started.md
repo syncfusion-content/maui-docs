@@ -215,7 +215,7 @@ comboBox.TextMemberPath = "Name";
 
 The following gif image illustrates the result of the above code:
 
-![.NET MAUI ComboBox populating using data binding](Images/GettingStarted/NonEditableMode.png)
+![.NET MAUI ComboBox populating using data binding](Images/GettingStarted/NonEditableMode.gif)
 
 ## Editing
 
@@ -243,7 +243,7 @@ comboBox.IsEditable = true;
 
 The following gif image illustrates the result of the above code:
 
-![.NET MAUI ComboBox choose item using editing](Images/GettingStarted/EditableMode.png)
+![.NET MAUI ComboBox choose item using editing](Images/GettingStarted/EditableMode.gif)
 
 You can find the complete getting started sample of .NET MAUI ComboBox from this [link.](https://github.com/SyncfusionExamples/maui-combobox-samples)
 
