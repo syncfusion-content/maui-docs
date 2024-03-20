@@ -24,14 +24,15 @@ The [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.
 To enable the continuous page layout mode, use the following code sample.
 
 {% tabs %}
+{% highlight XAML %}
+
+<syncfusion:SfPdfViewer x:Name="PdfViewer" PageLayoutMode = PageLayoutMode.Continuous/>
+
+{% endhighlight %}
 {% highlight c# %}
 
-// Enable or activate the Continuous Page Layout mode.
-void EnableContinuousPageLayoutMode()
-{
-    // Set the PageLayout mode to Continuous using the `SfPdfViewer` instance.
-    PdfViewer.PageLayoutMode = PageLayoutMode.Continuous;
-}
+SfPdfViewer PdfViewer = new SfPdfViewer ();
+PdfViewer.PageLayoutMode = PageLayoutMode.Continuous;
 
 {% endhighlight %}
 {% endtabs %}
@@ -42,14 +43,15 @@ In single page layout mode, the [SfPdfViewer](https://help.syncfusion.com/cr/mau
 To enable the single page layout mode, use the following code sample.
 
 {% tabs %}
+{% highlight XAML %}
+
+<syncfusion:SfPdfViewer x:Name="PdfViewer" PageLayoutMode = PageLayoutMode.Single/>
+
+{% endhighlight %}
 {% highlight c# %}
 
-// Enable or activate the Single Page Layout mode.
-void EnableSinglePageLayoutMode()
-{
-    // Set the PageLayout mode to Single using the `SfPdfViewer` instance.
-    PdfViewer.PageLayoutMode = PageLayoutMode.Single;
-}
+SfPdfViewer PdfViewer = new SfPdfViewer ();
+PdfViewer.PageLayoutMode = PageLayoutMode.Single;
 
 {% endhighlight %}
 {% endtabs %}
