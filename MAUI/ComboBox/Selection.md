@@ -34,7 +34,7 @@ The selected item can be changed interactively by selecting from the drop-down l
 
 The following gif image illustrates the result of the above code:
 
-![.NET MAUI ComboBox UI selection.](Images/Selection/net-maui-combobox-ui-selection.png)
+![.NET MAUI ComboBox UI selection.](Images/Selection/net-maui-combobox-ui-selection.gif)
 
 
 ### Programmatic selection 
@@ -228,7 +228,7 @@ private async void OnSelectionChanged(object sender, Syncfusion.Maui.Inputs.Sele
 
 The following image illustrates the result of the above code:
 
-![.NET MAUI ComboBox SelectedChangedEvent.](Images/Selection/net-maui-combobox-selection-changed-event.png)
+![.NET MAUI ComboBox SelectedChangedEvent.](Images/Selection/net-maui-combobox-selection-changed-event.gif)
 
 N> SelectionChanged event arguments `CurrentSelection` and `PreviousSelection` marked as "Obsolete". You can use the `AddedItems` and `RemovedItems` event arguments.
 
@@ -275,7 +275,7 @@ private void OnSelectionChanged(object sender, Syncfusion.Maui.Inputs.SelectionC
 
 The following gif image illustrates the result of the above code:
 
-![.NET MAUI ComboBox selected value.](Images/Selection/net-maui-combobox-selected-value-path.png)
+![.NET MAUI ComboBox selected value.](Images/Selection/net-maui-combobox-selected-value-path.gif)
 
 ## Open a drop-down programmatically
 
