@@ -37,7 +37,7 @@ comboBox.IsEditable = true;
 
 The following image illustrates the result of the above code:
 
-![.NET MAUI ComboBox choose item using editing](Images/Editing/EditableMode.png)
+![.NET MAUI ComboBox choose item using editing](Images/Editing/EditableMode.gif)
 
 ## Non-editable ComboBox
 
@@ -65,7 +65,7 @@ comboBox.IsEditable = false;
 
 The following gif image illustrates the result of the above code:
 
-![.NET MAUI ComboBox choose item using non editing mode](Images/Editing/NonEditableMode.png)
+![.NET MAUI ComboBox choose item using non editing mode](Images/Editing/NonEditableMode.gif)
 
 ## Hide clear button in the editor
 
