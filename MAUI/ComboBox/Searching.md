@@ -84,7 +84,7 @@ comboBox.TextSearchMode = ComboBoxTextSearchMode.StartsWith;
 
 The following image illustrates the result of the above code:
 
-![.NET MAUI ComboBox TextSearchMode StartsWith](Images/Searching/TextSearchModeStartsWith.png)
+![.NET MAUI ComboBox TextSearchMode StartsWith](Images/Searching/TextSearchModeStartsWith.gif)
 
 ### Search with contains text
 
@@ -112,4 +112,4 @@ comboBox.TextSearchMode = ComboBoxTextSearchMode.Contains;
 
 The following image illustrates the result of the above code:
 
-![.NET MAUI ComboBox TextSearchMode Contains](Images/Searching/TextSearchModeContains.png)
+![.NET MAUI ComboBox TextSearchMode Contains](Images/Searching/TextSearchModeContains.gif)
