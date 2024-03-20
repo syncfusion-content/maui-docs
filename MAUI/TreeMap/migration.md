@@ -9,7 +9,7 @@ documentation: ug
  
 # Migrate from Xamarin.Forms TreeMap to .NET MAUI TreeMap (SfTreeMap)
 
-To make the migration from the [Xamarin SfTreeMap](https://www.syncfusion.com/xamarin-ui-controls/xamarin-treemap) to the `.NET MAUI SfTreeMap` easier, most of the APIs from the `Xamarin SfTreeMap` were kept in the `.NET MAUI SfTreeMap`. However, to maintain the consistency of API naming in the `.NET MAUI SfTreeMap`, some of the APIs have been renamed. Please find the difference in the following topics.
+To make the migration from the [Xamarin SfTreeMap](https://www.syncfusion.com/xamarin-ui-controls/xamarin-treemap) to the [.NET MAUI SfTreeMap](https://www.syncfusion.com/maui-controls/maui-tree-map) easier, most of the APIs from the [Xamarin SfTreeMap](https://www.syncfusion.com/xamarin-ui-controls/xamarin-treemap) to the [.NET MAUI SfTreeMap](https://www.syncfusion.com/maui-controls/maui-tree-map) were kept in the [.NET MAUI SfTreeMap](https://www.syncfusion.com/maui-controls/maui-tree-map). However, to maintain the consistency of API naming in the [.NET MAUI SfTreeMap](https://www.syncfusion.com/maui-controls/maui-tree-map), some of the APIs have been renamed. Please find the difference in the following topics.
 
 ## Namespaces
 
@@ -24,7 +24,7 @@ To make the migration from the [Xamarin SfTreeMap](https://www.syncfusion.com/xa
 
 ## Initialize Control
 
-To initialize the control, import the treeMap control namespace and initialize the `SfTreeMap` as shown in the following code sample.
+To initialize the control, import the treeMap control namespace and initialize the [SfTreeMap](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html) as shown in the following code sample.
 
 <table>
 <tr>
@@ -94,62 +94,62 @@ this.Content = treeMap;
 </tr>
 <tr>
 <td>{{'[LeafItemSettings](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.LeafItemSettings.html)'| markdownify }}</td>
-<td>TreeMapLeafItemSettings</td>
+<td>{{'[TreeMapLeafItemSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapLeafItemSettings.html)'| markdownify }}</td>
 <td>Represents settings for customizing the appearance of leaf items in the SfTreeMap.</td>
 </tr>
 <tr>
 <td>{{'[LegendSettings](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.LegendSettings.html)'| markdownify }}</td>
-<td>TreeMapLegendSettings</td>
+<td>{{'[TreeMapLegendSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapLegendSettings.html)'| markdownify }}</td>
 <td>Represents settings for customizing the appearance of legend items in the SfTreeMap.</td>
 </tr>
 <tr>
 <td>{{'[ColorMapping](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.ColorMapping.html)'| markdownify }}</td>
-<td>TreeMapBrushSettings</td>
+<td>{{'[TreeMapBrushSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapBrushSettings.html)'| markdownify }}</td>
 <td>Provides base settings for brushes used in the SfTreeMap.</td>
 </tr>
 <tr>
 <td>{{'[UniColorMapping](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.UniColorMapping.html)'| markdownify }}</td>
-<td>TreeMapUniformBrushSettings</td>
+<td>{{'[TreeMapUniformBrushSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapUniformBrushSettings.html)'| markdownify }}</td>
 <td>Provides settings for assigning a single color to represent data uniformly in the SfTreeMap.</td>
 </tr>
 <tr>
 <td>{{'[DesaturationColorMapping](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.DesaturationColorMapping.html)'| markdownify }}</td>
-<td>TreeMapDesaturationBrushSettings</td>
+<td>{{'[TreeMapDesaturationBrushSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapDesaturationBrushSettings.html)'| markdownify }}</td>
 <td>Represents the settings for desaturation in the SfTreeMap control, allowing customization of the background brush and desaturation range.</td>
 </tr>
 <tr>
 <td>{{'[PaletteColorMapping](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.PaletteColorMapping.html)'| markdownify }}</td>
-<td>TreeMapPaletteBrushSettings</td>
+<td>{{'[TreeMapPaletteBrushSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapPaletteBrushSettings.html)'| markdownify }}</td>
 <td>Provides settings for customizing the palette brushes in the SfTreeMap.</td>
 </tr>
 <tr>
 <td>{{'[RangeColorMapping](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.RangeColorMapping.html)'| markdownify }}</td>
-<td>TreeMapRangeBrushSettings</td>
+<td>{{'[TreeMapRangeBrushSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapRangeBrushSettings.html)'| markdownify }}</td>
 <td>Provides settings for defining range based brushes in the SfTreeMap.</td>
 </tr>
 <tr>
 <td>{{'[Range](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.Range.html)'| markdownify }}</td>
-<td>TreeMapRangeBrush</td>
+<td>{{'[TreeMapRangeBrush](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapRangeBrush.html)'| markdownify }}</td>
 <td>Represents the settings for defining a range brush in the SfTreeMap.</td>
 </tr>
 <tr>
 <td>{{'[TooltipSetting](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.TooltipSetting.html)'| markdownify }}</td>
-<td>TreeMapToolTipSettings</td>
+<td>{{'[TreeMapToolTipSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapToolTipSettings.html)'| markdownify }}</td>
 <td>Provides settings for configuring tool tips in the SfTreeMap.</td>
 </tr>
 <tr>
 <td>{{'[TreeMapLevel](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.TreeMapLevel.html)'| markdownify }}</td>
-<td>TreeMapLevel</td>
+<td>{{'[TreeMapLevel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapLevel.html)'| markdownify }}</td>
 <td>Represents a level in the hierarchical structure of the SfTreeMap.</td>
 </tr>
 <tr>
 <td>Nil</td>
-<td>TreeMapItemInfo</td>
+<td>{{'[TreeMapItemInfo](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapItemInfo.html)'| markdownify }}</td>
 <td>Represents the collection of currently selected tree map items in the SfTreeMap control. The TreeMapItemInfo property is set as the binding context for tooltips and leaf item templates.</td>
 </tr>
 <tr>
 <td>{{'[Style](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.Style.html)'| markdownify }}</td>
-<td>TreeMapTextStyle</td>
+<td>{{'[TreeMapTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapTextStyle.html)'| markdownify }}</td>
 <td> Gets or sets the style of tree map item text, that is used to customize the text color, font, font size, font family and font attributes.</td>
 </tr>
 </table>
@@ -240,103 +240,103 @@ public class PopulationViewModel
 
 <tr>
 <td>{{'[DataSource](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.SfTreeMap.html#Syncfusion_SfTreeMap_XForms_SfTreeMap_DataSource)'| markdownify }}</td>
-<td>DataSource</td>
+<td>{{'[DataSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_DataSource)'| markdownify }}</td>
 <td>Gets or sets a collection used to generate the item in the SfTreeMap.</td>
 </tr>
 
 <tr>
 <td>{{'[WeightValuePath](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.SfTreeMap.html#Syncfusion_SfTreeMap_XForms_SfTreeMap_WeightValuePath)'| markdownify }}</td>
-<td>PrimaryValuePath</td>
+<td>{{'[PrimaryValuePath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_PrimaryValuePath)'| markdownify }}</td>
 <td>Gets or sets the name of the property in the data object that provides the primary value for each item in the SfTreeMap.</td>
 </tr>
 
 <tr>
 <td>{{'[ColorValuePath](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.SfTreeMap.html#Syncfusion_SfTreeMap_XForms_SfTreeMap_ColorValuePath)'| markdownify }}</td>
-<td>RangeColorValuePath</td>
+<td>{{'[RangeColorValuePath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_RangeColorValuePath)'| markdownify }}</td>
 <td>Gets or sets the name of the property in the data object that provides the range color value for each item in the SfTreeMap control.</td>
 </tr>
 
 <tr>
 <td>{{'[HightlightColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.SfTreeMap.html#Syncfusion_SfTreeMap_XForms_SfTreeMap_HightlightColor)'| markdownify }}</td>
-<td>SelectedItemStroke</td>
+<td>{{'[SelectedItemStroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_SelectedItemStroke)'| markdownify }}</td>
 <td>Gets or sets the stroke color for the selected item in the SfTreeMap.</td>
 </tr>
 
 <tr>
 <td>{{'[HightlightBorderWidth](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.SfTreeMap.html#Syncfusion_SfTreeMap_XForms_SfTreeMap_HightlightBorderWidth)'| markdownify }}</td>
-<td>SelectedItemStrokeWidth</td>
+<td>{{'[SelectedItemStrokeWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_SelectedItemStrokeWidth)'| markdownify }}</td>
 <td>Gets or sets the stroke width for the selected item in the SfTreeMap.</td>
 </tr>
 
 <tr>
 <td>{{'[LayoutType](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.SfTreeMap.html#Syncfusion_SfTreeMap_XForms_SfTreeMap_LayoutType)'| markdownify }}</td>
-<td>LayoutType</td>
+<td>{{'[LayoutType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_LayoutType)'| markdownify }}</td>
 <td>Gets or sets the layout type used to arrange items using a specific layout algorithm.</td>
 </tr>
 
 <tr>
 <td>{{'[ItemTemplate](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.SfTreeMap.html#Syncfusion_SfTreeMap_XForms_SfTreeMap_ItemTemplate)'| markdownify }}</td>
-<td>LeafItemTemplate</td>
+<td>{{'[LeafItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_LeafItemTemplate)'| markdownify }}</td>
 <td>Gets or sets the data template to use for customizing the appearance of individual leaf items in the SfTreeMap.</td>
 </tr>
 
 <tr>
 <td>{{'[LeafItemSettings](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.SfTreeMap.html#Syncfusion_SfTreeMap_XForms_SfTreeMap_LeafItemSettings)'| markdownify }}</td>
-<td>LeafItemSettings</td>
+<td>{{'[LeafItemSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_LeafItemSettings)'| markdownify }}</td>
 <td>Gets or sets the settings for the leaf item, which is used to customize the stroke color, stroke width, text style, spacing between items, and text format option in the SfTreeMap.</td>
 </tr>
 
 <tr>
 <td>{{'[LeafItemColorMapping](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.SfTreeMap.html#Syncfusion_SfTreeMap_XForms_SfTreeMap_LeafItemColorMapping)'| markdownify }}</td>
-<td>LeafItemBrushSettings</td>
+<td>{{'[LeafItemBrushSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_LeafItemBrushSettings)'| markdownify }}</td>
 <td>Gets or sets the settings for the leaf item brush, which is used to customize the leaf items in the SfTreeMap.</td>
 </tr>
 
 <tr>
 <td>{{'[LegendSettings](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.SfTreeMap.html#Syncfusion_SfTreeMap_XForms_SfTreeMap_LegendSettings)'| markdownify }}</td>
-<td>LegendSettings</td>
+<td>{{'[LegendSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_LegendSettings)'| markdownify }}</td>
 <td>Gets or sets the settings for the legend, which is used to customize the icon size, text style, icon type, placement, show legend and legend size in the SfTreeMap.</td>
 </tr>
 
 <tr>
 <td>{{'[Levels](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.SfTreeMap.html#Syncfusion_SfTreeMap_XForms_SfTreeMap_Levels)'| markdownify }}</td>
-<td>Levels</td>
+<td>{{'[Levels](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_Levels)'| markdownify }}</td>
 <td>Gets or sets the collection of levels defining the hierarchical structure for grouped visualization of data in the SfTreeMap.</td>
 </tr>
 
 <tr>
 <td>{{'[SelectedItems](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.SfTreeMap.html#Syncfusion_SfTreeMap_XForms_SfTreeMap_SelectedItems)'| markdownify }}</td>
-<td>SelectedItems</td>
+<td>{{'[SelectedItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_SelectedItems)'| markdownify }}</td>
 <td>Gets or sets the collection of tree map item representing the currently selected items in the SfTreeMap.</td>
 </tr>
 
 <tr>
 <td>{{'[SelectionMode](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.SfTreeMap.html#Syncfusion_SfTreeMap_XForms_SfTreeMap_SelectionMode)'| markdownify }}</td>
-<td>SelectionMode</td>
+<td>{{'[SelectionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_SelectionMode)'| markdownify }}</td>
 <td>Gets or sets the selection mode for the SfTreeMap. This property is used to customize the selection for tree map.</td>
 </tr>
 
 <tr>
 <td>{{'[ShowTooltip](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.SfTreeMap.html#Syncfusion_SfTreeMap_XForms_SfTreeMap_ShowTooltip)'| markdownify }}</td>
-<td>ShowToolTip</td>
+<td>{{'[ShowToolTip](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_ShowToolTip)'| markdownify }}</td>
 <td>Gets or sets a value indicating whether tool tips are displayed for items in the SfTreeMap.</td>
 </tr>
 
 <tr>
 <td>{{'[TooltipSettings](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.SfTreeMap.html#Syncfusion_SfTreeMap_XForms_SfTreeMap_TooltipSettings)'| markdownify }}</td>
-<td>ToolTipSettings</td>
+<td>{{'[ToolTipSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_ToolTipSettings)'| markdownify }}</td>
 <td>Gets or sets the settings for the tool tips, which is used to customize the background, duration, stroke, and text style in the SfTreeMap.</td>
 </tr>
 
 <tr>
 <td>{{'[TooltipTemplate](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.TooltipSetting.html#Syncfusion_SfTreeMap_XForms_TooltipSetting_TooltipTemplate)'| markdownify }}</td>
-<td>ToolTipTemplate</td>
+<td>{{'[ToolTipTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_ToolTipTemplate)'| markdownify }}</td>
 <td>Gets or sets the data template to use for customizing the appearance of tool tips for items in the SfTreeMap.</td>
 </tr>
 
 <tr>
 <td>Nil</td>
-<td>GroupItemBrushSettings</td>
+<td>{{'[GroupItemBrushSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_GroupItemBrushSettings)'| markdownify }}</td>
 <td> Gets or sets the settings for the group item brush, which is used to customize the group items in the SfTreeMap.</td>
 </tr>
 
@@ -352,22 +352,22 @@ public class PopulationViewModel
 </tr>
 <tr>
 <td>Nil</td>
-<td>Item</td>
+<td>{{'[Item](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapItemInfo.html#Syncfusion_Maui_TreeMap_TreeMapItemInfo_Item)'| markdownify }}</td>
 <td>Gets or sets the item associated with the TreeMapItemInfo.</td>
 </tr>
 <tr>
 <td>Nil</td>
-<td>GroupLevel</td>
+<td>{{'[GroupLevel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapItemInfo.html#Syncfusion_Maui_TreeMap_TreeMapItemInfo_GroupLevel)'| markdownify }}</td>
 <td>Gets or sets the group level of the item.</td>
 </tr>
 <tr>
 <td>Nil</td>
-<td>Background</td>
+<td>{{'[Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapItemInfo.html#Syncfusion_Maui_TreeMap_TreeMapItemInfo_Background)'| markdownify }}</td>
 <td>Gets the background brush for the item.</td>
 </tr>
 <tr>
 <td>Nil</td>
-<td>PrimaryValueText</td>
+<td>{{'[PrimaryValueText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapItemInfo.html#Syncfusion_Maui_TreeMap_TreeMapItemInfo_PrimaryValueText)'| markdownify }}</td>
 <td>Gets the primary value text of the item.</td>
 </tr>
 </table>
@@ -465,37 +465,37 @@ public class PopulationViewModel
 
 <tr>
 <td>{{'[BorderColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.LeafItemSettings.html#Syncfusion_SfTreeMap_XForms_LeafItemSettings_BorderColor)'| markdownify }}</td>
-<td>Stroke</td>
+<td>{{'[Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapLeafItemSettings.html#Syncfusion_Maui_TreeMap_TreeMapLeafItemSettings_Stroke)'| markdownify }}</td>
 <td>Gets or sets the stroke color for the leaf items in the SfTreeMap.</td>
 </tr>
 
 <tr>
 <td>{{'[BorderWidth](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.LeafItemSettings.html#Syncfusion_SfTreeMap_XForms_LeafItemSettings_BorderWidth)'| markdownify }}</td>
-<td>StrokeWidth</td>
+<td>{{'[StrokeWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapLeafItemSettings.html#Syncfusion_Maui_TreeMap_TreeMapLeafItemSettings_StrokeWidth)'| markdownify }}</td>
 <td>Gets or sets the width of the stroke for the leaf items in the SfTreeMap.</td>
 </tr>
 
 <tr>
 <td>{{'[Gap](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.LeafItemSettings.html#Syncfusion_SfTreeMap_XForms_LeafItemSettings_Gap)'| markdownify }}</td>
-<td>Spacing</td>
+<td>{{'[Spacing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapLeafItemSettings.html#Syncfusion_Maui_TreeMap_TreeMapLeafItemSettings_Spacing)'| markdownify }}</td>
 <td>Gets or sets the spacing between the leaf items in the SfTreeMap.</td>
 </tr>
 
 <tr>
 <td>{{'[LabelPath](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.LeafItemSettings.html#Syncfusion_SfTreeMap_XForms_LeafItemSettings_LabelPath)'| markdownify }}</td>
-<td>LabelPath</td>
+<td>{{'[LabelPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapLeafItemSettings.html#Syncfusion_Maui_TreeMap_TreeMapLeafItemSettings_LabelPath)'| markdownify }}</td>
 <td>Gets or sets the path of the label for the leaf items in the SfTreeMap.</td>
 </tr>
 
 <tr>
 <td>{{'[LabelStyle](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.LeafItemSettings.html#Syncfusion_SfTreeMap_XForms_LeafItemSettings_LabelStyle)'| markdownify }}</td>
-<td>TextStyle</td>
+<td>{{'[TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapLeafItemSettings.html#Syncfusion_Maui_TreeMap_TreeMapLeafItemSettings_TextStyle)'| markdownify }}</td>
 <td>Gets or sets the style of leaf item text, that is used to customize the text color, font, font size, font family and font attributes.</td>
 </tr>
 
 <tr>
 <td>{{'[OverflowMode](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.LeafItemSettings.html#Syncfusion_SfTreeMap_XForms_LeafItemSettings_OverflowMode)'| markdownify }}</td>
-<td>TextFormatOption</td>
+<td>{{'[TextFormatOption](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapLeafItemSettings.html#Syncfusion_Maui_TreeMap_TreeMapLeafItemSettings_TextFormatOption)'| markdownify }}</td>
 <td>Gets or sets the text format option for the leaf items in the SfTreeMap.</td>
 </tr>
 
@@ -520,8 +520,8 @@ The following code example, explains how to configure the legend settings in .NE
         </treemap:TreeMapLeafItemSettings>
     </treemap:SfTreeMap.LeafItemSettings>
     <treemap:SfTreeMap.LegendSettings>
-        <treemap:TreeMapLegendSettings ShowLegend="True">
-        </treemap:TreeMapLegendSettings>
+    <treemap:TreeMapLegendSettings ShowLegend="True">
+    </treemap:TreeMapLegendSettings>
     </treemap:SfTreeMap.LegendSettings>
     <treemap:SfTreeMap.LeafItemBrushSettings>
     <treemap:TreeMapRangeBrushSettings>
@@ -624,37 +624,37 @@ public class PopulationViewModel
 
 <tr>
 <td>{{'[ShowLegend](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.LegendSettings.html#Syncfusion_SfTreeMap_XForms_LegendSettings_ShowLegend)'| markdownify }}</td>
-<td>ShowLegend</td>
+<td>{{'[ShowLegend](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapLegendSettings.html#Syncfusion_Maui_TreeMap_TreeMapLegendSettings_ShowLegend)'| markdownify }}</td>
 <td>Gets or sets a value indicating whether the legend is enabled in the SfTreeMap.</td>
 </tr>
 
 <tr>
 <td>{{'[IconSize](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.LegendSettings.html#Syncfusion_SfTreeMap_XForms_LegendSettings_IconSize)'| markdownify }}</td>
-<td>IconSize</td>
+<td>{{'[IconSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapLegendSettings.html#Syncfusion_Maui_TreeMap_TreeMapLegendSettings_IconSize)'| markdownify }}</td>
 <td>Gets or sets the size of the legend icons in the SfTreeMap.</td>
 </tr>
 
 <tr>
 <td>{{'[LegendIcon](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.LegendSettings.html#Syncfusion_SfTreeMap_XForms_LegendSettings_LegendIcon)'| markdownify }}</td>
-<td>IconType</td>
+<td>{{'[IconType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapLegendSettings.html#Syncfusion_Maui_TreeMap_TreeMapLegendSettings_IconType)'| markdownify }}</td>
 <td>Gets or sets the type of icons to be used for the legend in the SfTreeMap.</td>
 </tr>
 
 <tr>
 <td>{{'[LegendPosition](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.LegendSettings.html#Syncfusion_SfTreeMap_XForms_LegendSettings_LegendPosition)'| markdownify }}</td>
-<td>Placement</td>
+<td>{{'[Placement](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapLegendSettings.html#Syncfusion_Maui_TreeMap_TreeMapLegendSettings_Placement)'| markdownify }}</td>
 <td>Gets or sets the placement of the legend with in the SfTreeMap.</td>
 </tr>
 
 <tr>
 <td>{{'[Size](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.LegendSettings.html#Syncfusion_SfTreeMap_XForms_LegendSettings_Size)'| markdownify }}</td>
-<td>Size</td>
+<td>{{'[Size](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapLegendSettings.html#Syncfusion_Maui_TreeMap_TreeMapLegendSettings_Size)'| markdownify }}</td>
 <td>Gets or sets the size of the legend layout in the SfTreeMap.</td>
 </tr>
 
 <tr>
 <td>{{'[LabelStyle](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.LegendSettings.html#Syncfusion_SfTreeMap_XForms_LegendSettings_LabelStyle)'| markdownify }}</td>
-<td>TextStyle</td>
+<td>{{'[TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapLegendSettings.html#Syncfusion_Maui_TreeMap_TreeMapLegendSettings_TextStyle)'| markdownify }}</td>
 <td>Gets or sets the style of legend item text, that is used to customize the text color, font, font size, font family and font attributes.</td>
 </tr>
 
@@ -752,7 +752,7 @@ public class PopulationViewModel
 
 <tr>
 <td>{{'[Color](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.UniColorMapping.html#Syncfusion_SfTreeMap_XForms_UniColorMapping_Color)'| markdownify }}</td>
-<td>Brush</td>
+<td>{{'[Brush](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapUniformBrushSettings.html#Syncfusion_Maui_TreeMap_TreeMapUniformBrushSettings_Brush)'| markdownify }}</td>
 <td>Gets or sets the background brush for the tree map leaf items in the SfTreeMap.</td>
 </tr>
 
@@ -773,7 +773,7 @@ The following code example, explains how to configure the desaturation brush set
     </treemap:SfTreeMap.BindingContext>
     <treemap:SfTreeMap.LeafItemSettings>
         <treemap:TreeMapLeafItemSettings LabelPath="Country">
-        </treemap:TreeMapLeafItemSettings>
+    </treemap:TreeMapLeafItemSettings>
     </treemap:SfTreeMap.LeafItemSettings>
     <treemap:SfTreeMap.LeafItemBrushSettings>
         <treemap:TreeMapDesaturationBrushSettings Brush="BlueViolet" From="1" To="0.2"/>
@@ -850,19 +850,19 @@ public class PopulationViewModel
 
 <tr>
 <td>{{'[Color](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.DesaturationColorMapping.html#Syncfusion_SfTreeMap_XForms_DesaturationColorMapping_Color)'| markdownify }}</td>
-<td>Brush</td>
+<td>{{'[Brush](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapDesaturationBrushSettings.html#Syncfusion_Maui_TreeMap_TreeMapDesaturationBrushSettings_Brush)'| markdownify }}</td>
 <td>Gets or sets the background brush for the desaturation in the SfTreeMap.</td>
 </tr>
 
 <tr>
 <td>{{'[From](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.DesaturationColorMapping.html#Syncfusion_SfTreeMap_XForms_DesaturationColorMapping_From)'| markdownify }}</td>
-<td>From</td>
+<td>{{'[From](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapDesaturationBrushSettings.html#Syncfusion_Maui_TreeMap_TreeMapDesaturationBrushSettings_From)'| markdownify }}</td>
 <td>Gets or sets the starting value for the desaturation range in the SfTreeMap.</td>
 </tr>
 
 <tr>
 <td>{{'[To](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.DesaturationColorMapping.html#Syncfusion_SfTreeMap_XForms_DesaturationColorMapping_To)'| markdownify }}</td>
-<td>To</td>
+<td>{{'[To](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapDesaturationBrushSettings.html#Syncfusion_Maui_TreeMap_TreeMapDesaturationBrushSettings_To)'| markdownify }}</td>
 <td>Gets or sets the ending value for the desaturation range in the SfTreeMap.</td>
 </tr>
 
@@ -983,7 +983,7 @@ public class PopulationViewModel
 
 <tr>
 <td>{{'[Colors](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.PaletteColorMapping.html#Syncfusion_SfTreeMap_XForms_PaletteColorMapping_Colors)'| markdownify }}</td>
-<td>Brushes</td>
+<td>{{'[Brushes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapPaletteBrushSettings.html#Syncfusion_Maui_TreeMap_TreeMapPaletteBrushSettings_Brushes)'| markdownify }}</td>
 <td>Gets or sets the list of brushes used for the palette in the SfTreeMap.</td>
 </tr>
 
@@ -991,7 +991,7 @@ public class PopulationViewModel
 
 ### RangeBrushSettings
 
-To categorize leaf items in a TreeMap according to different ranges of background color values, use `TreeMapRangeBrushSettings`. Define the upper and lower limits of each range using the `To` and `From` properties of `TreeMapRangeBrush`.
+To categorize leaf items in a TreeMap according to different ranges of background color values, use [TreeMapRangeBrushSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapRangeBrushSettings.html). Define the upper and lower limits of each range using the [To](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapRangeBrush.html#Syncfusion_Maui_TreeMap_TreeMapRangeBrush_To) and [From](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapRangeBrush.html#Syncfusion_Maui_TreeMap_TreeMapRangeBrush_From) properties of [TreeMapRangeBrush](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapRangeBrush.html).
 
 #### RangeBrush
 
@@ -1116,25 +1116,25 @@ public class PopulationViewModel
 
 <tr>
 <td>{{'[LegendLabel](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.Range.html#Syncfusion_SfTreeMap_XForms_Range_LegendLabel)'| markdownify }}</td>
-<td>LegendLabel</td>
+<td>{{'[LegendLabel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapRangeBrush.html#Syncfusion_Maui_TreeMap_TreeMapRangeBrush_LegendLabel)'| markdownify }}</td>
 <td>Gets or sets the text for the legend item associated with the range in the SfTreeMap.</td>
 </tr>
 
 <tr>
 <td>{{'[Color](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.Range.html#Syncfusion_SfTreeMap_XForms_Range_Color)'| markdownify }}</td>
-<td>Brush</td>
+<td>{{'[Brush](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapRangeBrush.html#Syncfusion_Maui_TreeMap_TreeMapRangeBrush_Brush)'| markdownify }}</td>
 <td>Gets or sets the background brush for the range in the SfTreeMap.</td>
 </tr>
 
 <tr>
 <td>{{'[From](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.Range.html#Syncfusion_SfTreeMap_XForms_Range_From)'| markdownify }}</td>
-<td>From</td>
+<td>{{'[From](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapRangeBrush.html#Syncfusion_Maui_TreeMap_TreeMapRangeBrush_From)'| markdownify }}</td>
 <td>Gets or sets the starting value of the range for the background brush in the SfTreeMap.</td>
 </tr>
 
 <tr>
 <td>{{'[To](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.Range.html#Syncfusion_SfTreeMap_XForms_Range_To)'| markdownify }}</td>
-<td>To</td>
+<td>{{'[To](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapRangeBrush.html#Syncfusion_Maui_TreeMap_TreeMapRangeBrush_To)'| markdownify }}</td>
 <td>Gets or sets the ending value of the range for the background brush in the SfTreeMap.</td>
 </tr>
 
@@ -1156,7 +1156,7 @@ The following code example, explains how to configure the tooltip setting in .NE
     </treemap:SfTreeMap.BindingContext>
     <treemap:SfTreeMap.LeafItemSettings>
         <treemap:TreeMapLeafItemSettings LabelPath="Country">
-        </treemap:TreeMapLeafItemSettings>
+    </treemap:TreeMapLeafItemSettings>
     </treemap:SfTreeMap.LeafItemSettings>
     <treemap:SfTreeMap.LeafItemBrushSettings>
         <treemap:TreeMapUniformBrushSettings Brush="Orange"/>
@@ -1238,25 +1238,25 @@ public class PopulationViewModel
 
 <tr>
 <td>{{'[BackgroundColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.TooltipSetting.html#Syncfusion_SfTreeMap_XForms_TooltipSetting_BackgroundColor)'| markdownify }}</td>
-<td>Background</td>
+<td>{{'[Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapToolTipSettings.html#Syncfusion_Maui_TreeMap_TreeMapToolTipSettings_Background)'| markdownify }}</td>
 <td>Gets or sets the background brush for tool tips in the SfTreeMap.</td>
 </tr>
 
 <tr>
 <td>{{'[Duration](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.TooltipSetting.html#Syncfusion_SfTreeMap_XForms_TooltipSetting_Duration)'| markdownify }}</td>
-<td>Duration</td>
+<td>{{'[Duration](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapToolTipSettings.html#Syncfusion_Maui_TreeMap_TreeMapToolTipSettings_Duration)'| markdownify }}</td>
 <td>Gets or sets the duration for which tool tips are displayed in the SfTreeMap.</td>
 </tr>
 
 <tr>
 <td>{{'[TextColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.TooltipSetting.html#Syncfusion_SfTreeMap_XForms_TooltipSetting_TextColor)'| markdownify }}</td>
-<td>TextColor (From TextStyle of ToolTipSettings class)</td>
+<td>{{'[TextColor (From TextStyle of ToolTipSettings class)](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapToolTipSettings.html#Syncfusion_Maui_TreeMap_TreeMapToolTipSettings_TextStyle)'| markdownify }}</td>
 <td>Gets or sets the style of tool tips text, that is used to customize the text color, font, font size, font family and font attributes.</td>
 </tr>
 
 <tr>
 <td>{{'[StrokeColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.TooltipSetting.html#Syncfusion_SfTreeMap_XForms_TooltipSetting_StrokeColor)'| markdownify }}</td>
-<td>Stroke</td>
+<td>{{'[Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapToolTipSettings.html#Syncfusion_Maui_TreeMap_TreeMapToolTipSettings_Stroke)'| markdownify }}</td>
 <td>Gets or sets the stroke color for the tool tips in the SfTreeMap.</td>
 </tr>
 
@@ -1358,43 +1358,43 @@ public class PopulationViewModel
 
 <tr>
 <td>{{'[LabelPath](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.TreeMapLevel.html#Syncfusion_SfTreeMap_XForms_TreeMapLevel_LabelPath)'| markdownify }}</td>
-<td>GroupPath</td>
+<td>{{'[GroupPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapLevel.html#Syncfusion_Maui_TreeMap_TreeMapLevel_GroupPath)'| markdownify }}</td>
 <td>Gets or sets the property path used for grouping tree map items in the SfTreeMap.</td>
 </tr>
 
 <tr>
 <td>{{'[GroupBackground](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.TreeMapFlatLevel.html#Syncfusion_SfTreeMap_XForms_TreeMapFlatLevel_GroupBackground)'| markdownify }}</td>
-<td>Background</td>
+<td>{{'[Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapLevel.html#Syncfusion_Maui_TreeMap_TreeMapLevel_Background)'| markdownify }}</td>
 <td>Gets or sets the background brush for the tree map header items in the SfTreeMap.</td>
 </tr>
 
 <tr>
 <td>{{'[GroupBorderColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.TreeMapFlatLevel.html#Syncfusion_SfTreeMap_XForms_TreeMapFlatLevel_GroupBorderColor)'| markdownify }}</td>
-<td>Stroke</td>
+<td>{{'[Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapLevel.html#Syncfusion_Maui_TreeMap_TreeMapLevel_Stroke)'| markdownify }}</td>
 <td>Gets or sets the stroke color for the tree map header items in the SfTreeMap.</td>
 </tr>
 
 <tr>
 <td>{{'[GroupBorderThickness](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.TreeMapFlatLevel.html#Syncfusion_SfTreeMap_XForms_TreeMapFlatLevel_GroupBorderThickness)'| markdownify }}</td>
-<td>StrokeWidth</td>
+<td>{{'[StrokeWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapLevel.html#Syncfusion_Maui_TreeMap_TreeMapLevel_StrokeWidth)'| markdownify }}</td>
 <td>Gets or sets the width of the stroke for the tree map header items in the SfTreeMap.</td>
 </tr>
 
 <tr>
 <td>{{'[GroupGap](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.TreeMapFlatLevel.html#Syncfusion_SfTreeMap_XForms_TreeMapFlatLevel_GroupGap)'| markdownify }}</td>
-<td>Spacing</td>
+<td>{{'[Spacing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapLevel.html#Syncfusion_Maui_TreeMap_TreeMapLevel_Spacing)'| markdownify }}</td>
 <td>Gets or sets the spacing between the tree map header items in the SfTreeMap.</td>
 </tr>
 
 <tr>
 <td>{{'[HeaderStyle](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.TreeMapLevel.html#Syncfusion_SfTreeMap_XForms_TreeMapLevel_HeaderStyle)'| markdownify }}</td>
-<td>TextStyle</td>
+<td>{{'[TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapLevel.html#Syncfusion_Maui_TreeMap_TreeMapLevel_TextStyle)'| markdownify }}</td>
 <td>Gets or sets the style of header item text, that used to customize the text color, font, font size, font family and font attributes.</td>
 </tr>
 
 <tr>
 <td>{{'[HeaderHeight](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.TreeMapLevel.html#Syncfusion_SfTreeMap_XForms_TreeMapLevel_HeaderHeight)'| markdownify }}</td>
-<td>HeaderHeight</td>
+<td>{{'[HeaderHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapLevel.html#Syncfusion_Maui_TreeMap_TreeMapLevel_HeaderHeight)'| markdownify }}</td>
 <td>Gets or sets the height of the header for each level in the SfTreeMap.</td>
 </tr>
 
@@ -1402,7 +1402,7 @@ public class PopulationViewModel
 
 ### TextStyle
 
-The `FontColor`, `FontSize`, `FontFamily`, and `FontAttributes` properties of the `SfTreeMap` is grouped to `TreeMapTextStyle`.
+The [TextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapTextStyle.html#Syncfusion_Maui_TreeMap_TreeMapTextStyle_TextColor), [FontSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapTextStyle.html#Syncfusion_Maui_TreeMap_TreeMapTextStyle_FontSize), [FontFamily](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapTextStyle.html#Syncfusion_Maui_TreeMap_TreeMapTextStyle_FontFamily), and [FontAttributes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapTextStyle.html#Syncfusion_Maui_TreeMap_TreeMapTextStyle_FontAttributes) properties of the [SfTreeMap](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html) is grouped to [TreeMapTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapTextStyle.html).
 
 <table>
 <tr>
@@ -1413,25 +1413,25 @@ The `FontColor`, `FontSize`, `FontFamily`, and `FontAttributes` properties of th
 
 <tr>
 <td>{{'[Color](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.Style.html#Syncfusion_SfTreeMap_XForms_Style_Color)'| markdownify }}</td>
-<td>TextColor</td>
+<td>{{'[TextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapTextStyle.html#Syncfusion_Maui_TreeMap_TreeMapTextStyle_TextColor)'| markdownify }}</td>
 <td>Gets or sets the text color for the SfTreeMap.</td>
 </tr>
 
 <tr>
 <td>{{'[FontSize](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.Style.html#Syncfusion_SfTreeMap_XForms_Style_FontSize)'| markdownify }}</td>
-<td>FontSize</td>
+<td>{{'[FontSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapTextStyle.html#Syncfusion_Maui_TreeMap_TreeMapTextStyle_FontSize)'| markdownify }}</td>
 <td>Gets or sets the double value that represents the font size of the SfTreeMap.</td>
 </tr>
 
 <tr>
 <td>{{'[FontFamily](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.Style.html#Syncfusion_SfTreeMap_XForms_Style_FontFamily)'| markdownify }}</td>
-<td>FontFamily</td>
+<td>{{'[FontFamily](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapTextStyle.html#Syncfusion_Maui_TreeMap_TreeMapTextStyle_FontFamily)'| markdownify }}</td>
 <td>Gets or sets the string, that represents font family of the SfTreeMap.</td>
 </tr>
 
 <tr>
 <td>{{'[FontAttributes](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.Style.html#Syncfusion_SfTreeMap_XForms_Style_FontAttributes)'| markdownify }}</td>
-<td>FontAttributes</td>
+<td>{{'[FontAttributes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapTextStyle.html#Syncfusion_Maui_TreeMap_TreeMapTextStyle_FontAttributes)'| markdownify }}</td>
 <td>Gets or sets the FontAttributes of the SfTreeMap.</td>
 </tr>
 
@@ -1448,31 +1448,31 @@ The `FontColor`, `FontSize`, `FontFamily`, and `FontAttributes` properties of th
 
 <tr>
 <td>{{'[LabelOverflowMode](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.LabelOverflowMode.html)'| markdownify }}</td>
-<td>TextFormatOption</td>
+<td>{{'[TextFormatOption](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TextFormatOption.html)'| markdownify }}</td>
 <td>Specifies text formatting options for tree map leaf items in the SfTreeMap.</td>
 </tr>
 
 <tr>
 <td>{{'[LayoutTypes](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.LayoutTypes.html)'| markdownify }}</td>
-<td>LayoutType</td>
+<td>{{'[LayoutType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.LayoutType.html)'| markdownify }}</td>
 <td>Specifies the layout type of algorithm used to arrange the items in the SfTreeMap.</td>
 </tr>
 
 <tr>
 <td>{{'[LegendPositions](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.LegendPositions.html)'| markdownify }}</td>
-<td>LegendPlacement</td>
+<td>{{'[LegendPlacement](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.LegendPlacement.html)'| markdownify }}</td>
 <td>Represents the legend placement to customize the legend position.</td>
 </tr>
 
 <tr>
 <td>{{'[LegendIcons](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.LegendIcons.html)'| markdownify }}</td>
-<td>LegendIconType</td>
+<td>{{'[LegendIconType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.LegendIconType.html)'| markdownify }}</td>
 <td>Specifies the shape of icons used in legends for the SfTreeMap control.</td>
 </tr>
 
 <tr>
 <td>{{'[SelectionMode](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.SelectionMode.html)'| markdownify }}</td>
-<td>SelectionMode</td>
+<td>{{'[SelectionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SelectionMode.html)'| markdownify }}</td>
 <td>Specifies the selection mode for the tree map items in the SfTreeMap.</td>
 </tr>
 
