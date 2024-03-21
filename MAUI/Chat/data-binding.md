@@ -9,7 +9,7 @@ documentation: ug
 
 # Data Binding in .NET MAUI Chat (SfChat)
 
-The `SfChat` control allows to bind any existing collection of data objects as message collection using the [ItemSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_ItemsSource) and [ItemsSourceConverter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_ItemsSourceConverter) property as follows.
+The `SfChat` control allows to bind any existing collection of data objects as message collection using the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_ItemsSource) and [ItemsSourceConverter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_ItemsSourceConverter) property as follows.
 
 Create the below collection of objects that must be converted to message collection and displayed as messages in SfChat.
 

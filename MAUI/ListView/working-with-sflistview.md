@@ -117,10 +117,6 @@ The [ItemRightTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListVi
 {% endhighlight %}
 {% endtabs %}
 
-The [ItemRightTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemRightTapped) event is used for the following use cases:
-
-* To show the context menu.
-
 ### ItemLongPress event
 
 The [ItemLongPress](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemLongPress) event will be triggered whenever long pressing the item. Here, [LongPressCommandParameter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_LongPressCommandParameter) sets the parameter for [SfListView.LongPressCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_LongPressCommand) and its default value is [ItemLongPressEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemLongPressEventArgs.html). `ItemLongPressEventArgs` has the following members, which provides information for `ItemLongPress` event:
