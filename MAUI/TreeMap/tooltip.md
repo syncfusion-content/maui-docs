@@ -1,26 +1,25 @@
 ---
 layout: post
-title: Layout types in .NET MAUI TreeMap Control | Syncfusion
-description: Learn here all about adding different layouts of the Syncfusion .NET MAUI TreeMap (STreeMap) control and more.
+title: Tooltip in .NET MAUI TreeMap Control | Syncfusion
+description: Learn here all about how to customize the appearance of tooltip in Syncfusion .NET MAUI TreeMap control and more.
 platform: maui
 control: TreeMap (SfTreeMap)
 documentation: ug
 ---
- 
-# Layouts in .NET MAUI TreeMap (SfTreeMap)
 
-The TreeMap control provides multiple layout types for organizing hierarchical data effectively. You can utilize the [LayoutType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_LayoutType) property within the [SfTreeMap](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html) to switch between four distinct layouts: [Squarified](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.LayoutType.html#Syncfusion_Maui_TreeMap_LayoutType_Squarified), [SliceAndDiceAuto](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.LayoutType.html#Syncfusion_Maui_TreeMap_LayoutType_SliceAndDiceAuto), [SliceAndDiceHorizontal](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.LayoutType.html#Syncfusion_Maui_TreeMap_LayoutType_SliceAndDiceHorizontal), and [SliceAndDiceVertical](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.LayoutType.html#Syncfusion_Maui_TreeMap_LayoutType_SliceAndDiceVertical).
+# Tooltip in .NET MAUI TreeMap (SfTreeMap)
 
-## Squarified
+The tooltip provides information when hovering over or selecting items in the interactive TreeMap, displaying details about the values of each item.
 
-The [Squarified](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.LayoutType.html#Syncfusion_Maui_TreeMap_LayoutType_Squarified) layout visualizes data in square-like rectangles with an optimal aspect ratio. It divides rectangles considering both the height and width of the parent view. This layout, which is the default rendering type for TreeMap, determines the size of each rectangle will be calculated based on the [PrimaryValuePath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_PrimaryValuePath) property value and the available size.
+## Enable tooltip
+
+To enable the tooltip for the TreeMap control, utilize the [ShowToolTip](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_ShowToolTip) property of [SfTreeMap](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html). By default, the value of [ShowToolTip](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_ShowToolTip) is set to `false.` To provide users with additional information or context about specific treemap items, simply set this property to `true.`
 
 {% tabs %}
-{% highlight XAML hl_lines="3" %}
+{% highlight XAML hl_lines="4" %}
 
 <treemap:SfTreeMap x:Name="treeMap"
                    DataSource="{Binding PopulationDetails}"
-                   LayoutType="Squarified"
                    PrimaryValuePath="Population"
                    ShowToolTip="True">
     <treemap:SfTreeMap.BindingContext>
@@ -31,20 +30,20 @@ The [Squarified](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.Lay
         </treemap:TreeMapLeafItemSettings>
     </treemap:SfTreeMap.LeafItemSettings>
     <treemap:SfTreeMap.LeafItemBrushSettings>
-        <treemap:TreeMapUniformBrushSettings Brush="#D21243" />
+       <treemap:TreeMapUniformBrushSettings Brush="Orange"/>
     </treemap:SfTreeMap.LeafItemBrushSettings>
 </treemap:SfTreeMap>
 
 {% endhighlight %}
-{% highlight C# hl_lines="4" %}
+{% highlight C# hl_lines="5" %}
 
 SfTreeMap treeMap = new SfTreeMap();
 PopulationViewModel viewModel = new PopulationViewModel();
 treeMap.DataSource = viewModel.PopulationDetails;
-treeMap.LayoutType = LayoutType.Squarified;
 treeMap.PrimaryValuePath = "Population";
+treeMap.ShowToolTip = true;
+treeMap.LeafItemBrushSettings = new TreeMapUniformBrushSettings() { Brush = Brush.Orange };
 treeMap.LeafItemSettings = new TreeMapLeafItemSettings() { LabelPath = "Country" };
-treeMap.LeafItemBrushSettings = new TreeMapUniformBrushSettings() { Brush = new SolidColorBrush(Color.FromArgb("#D21243")) };
 this.Content = treeMap;
 
 {% endhighlight %}
@@ -54,7 +53,7 @@ public class PopulationDetails
 {
     public string Country { get; set; }
     public string Continent { get; set; }
-    public double Population { get; set; }
+    public int Population { get; set; }
 }
 
 {% endhighlight %}
@@ -97,128 +96,62 @@ public class PopulationViewModel
 {% endhighlight %}
 {% endtabs %}
 
-![squarified-layout-type-in-maui-treemap](images/layouts/squarified-layout-type-in-maui-treemap.jpeg){:width="313" height="444" .lazy .shadow-effect}
+## Customize tooltip appearance
 
-## Slice and dice auto
+The tooltip appearance customization can be achieved by using the [Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapToolTipSettings.html#Syncfusion_Maui_TreeMap_TreeMapToolTipSettings_Stroke), [Duration](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapToolTipSettings.html#Syncfusion_Maui_TreeMap_TreeMapToolTipSettings_Duration), [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapToolTipSettings.html#Syncfusion_Maui_TreeMap_TreeMapToolTipSettings_TextStyle), and [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapToolTipSettings.html#Syncfusion_Maui_TreeMap_TreeMapToolTipSettings_Background) properties of [ToolTipSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapToolTipSettings.html) in the [SfTreeMap](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html).
 
-The  [SliceAndDiceAuto](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.LayoutType.html#Syncfusion_Maui_TreeMap_LayoutType_SliceAndDiceAuto) layout visualizes data using long, thin rectangles arranged vertically or horizontally with a high aspect ratio, thereby offering a comprehensive view of the data. This layout will start to arrange each rectangle in a horizontal or vertical direction, and the size of the rectangle will be calculated based on the [PrimaryValuePath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_PrimaryValuePath) property value.
+Additionally, you can achieve further appearance customization by using [ToolTipTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_ToolTipTemplate) of the [SfTreeMap](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html).
+
+### Customize tooltip appearance using its properties
+
+To customize the appearance of the tooltip in the [SfTreeMap](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html) using [ToolTipSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapToolTipSettings.html), you can utilize the following properties:
+
+* [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapToolTipSettings.html#Syncfusion_Maui_TreeMap_TreeMapToolTipSettings_Background): This property allows you to change the background color of the tooltip.
+* [Duration](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapToolTipSettings.html#Syncfusion_Maui_TreeMap_TreeMapToolTipSettings_Duration): Specifies the duration in milliseconds, for which the tooltip will be displayed. This helps control how long the tooltip remains visible on the screen.
+* [Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapToolTipSettings.html#Syncfusion_Maui_TreeMap_TreeMapToolTipSettings_Stroke): This property enables you to change the border color of the tooltip.
+* [TextStyle]([Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapToolTipSettings.html#Syncfusion_Maui_TreeMap_TreeMapToolTipSettings_Stroke)): This property is used to modify the appearance of the tooltip text. You can customize attributes such as [TextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapTextStyle.html#Syncfusion_Maui_TreeMap_TreeMapTextStyle_TextColor), [FontSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapTextStyle.html#Syncfusion_Maui_TreeMap_TreeMapTextStyle_FontSize), [FontFamily](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapTextStyle.html#Syncfusion_Maui_TreeMap_TreeMapTextStyle_FontFamily), and [FontAttributes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapTextStyle.html#Syncfusion_Maui_TreeMap_TreeMapTextStyle_FontAttributes).
 
 {% tabs %}
-{% highlight XAML hl_lines="3" %}
+{% highlight XAML hl_lines="4 12 13 14 15 16 17 18 19 20 21 22" %}
 
 <treemap:SfTreeMap x:Name="treeMap"
-                   DataSource="{Binding PopulationDetails}"
-                   LayoutType="SliceAndDiceAuto"
-                   PrimaryValuePath="Population">
-    <treemap:SfTreeMap.BindingContext>
-        <local:PopulationViewModel />
-    </treemap:SfTreeMap.BindingContext>
+                    DataSource="{Binding PopulationDetails}"
+                    PrimaryValuePath="Population"
+                    ShowToolTip="True">
     <treemap:SfTreeMap.LeafItemSettings>
         <treemap:TreeMapLeafItemSettings LabelPath="Country">
         </treemap:TreeMapLeafItemSettings>
     </treemap:SfTreeMap.LeafItemSettings>
     <treemap:SfTreeMap.LeafItemBrushSettings>
-        <treemap:TreeMapUniformBrushSettings Brush="#D21243" />
+        <treemap:TreeMapUniformBrushSettings Brush="Orange"/>
     </treemap:SfTreeMap.LeafItemBrushSettings>
-</treemap:SfTreeMap>
-
-{% endhighlight %}
-{% highlight C# hl_lines="4" %}
-
-SfTreeMap treeMap = new SfTreeMap();
-PopulationViewModel viewModel = new PopulationViewModel();
-treeMap.DataSource = viewModel.PopulationDetails;
-treeMap.LayoutType = LayoutType.SliceAndDiceAuto;
-treeMap.PrimaryValuePath = "Population";
-treeMap.LeafItemSettings = new TreeMapLeafItemSettings() { LabelPath = "Country" };
-treeMap.LeafItemBrushSettings = new TreeMapUniformBrushSettings() { Brush = new SolidColorBrush(Color.FromArgb("#D21243")) };
-this.Content = treeMap;
-
-{% endhighlight %}
-{% highlight C# tabtitle="PopulationDetails.cs" %}
-
-public class PopulationDetails
-{
-    public string Country { get; set; }
-    public string Continent { get; set; }
-    public double Population { get; set; }
-}
-
-{% endhighlight %}
-{% highlight C# tabtitle="PopulationViewModel.cs" %}
-
-public class PopulationViewModel
-{
-    public PopulationViewModel()
-    {
-        this.PopulationDetails = new ObservableCollection<PopulationDetails>()
-        {
-            new PopulationDetails() { Continent ="North America", Country = "United States of America", Population = 339996564 },
-            new PopulationDetails() { Continent ="South America", Country = "Brazil", Population = 216422446 },
-            new PopulationDetails() { Continent ="North America", Country = "Mexico", Population = 128455567 },
-            new PopulationDetails() { Continent ="South America", Country = "Colombia", Population = 52085168 },
-            new PopulationDetails() { Continent ="South America", Country = "Argentina", Population = 45773884 },
-            new PopulationDetails() { Continent ="North America", Country = "Canada", Population = 38781292 },
-            new PopulationDetails() { Continent ="South America", Country = "Peru", Population = 34352719 },
-            new PopulationDetails() { Continent ="South America", Country = "Venezuela", Population = 28838499 },
-            new PopulationDetails() { Continent ="South America", Country = "Chile", Population = 19629590 },
-            new PopulationDetails() { Continent ="South America", Country = "Ecuador", Population = 18190484 },
-            new PopulationDetails() { Continent ="North America", Country = "Guatemala", Population = 18092026 },
-            new PopulationDetails() { Continent ="South America", Country = "Bolivia", Population = 12388571 },
-            new PopulationDetails() { Continent ="North America", Country = "Honduras", Population = 10593798 },
-            new PopulationDetails() { Continent ="North America", Country = "Nicaragua", Population = 7046311 },
-            new PopulationDetails() { Continent ="South America", Country = "Paraguay", Population = 6861524 },
-            new PopulationDetails() { Continent ="North America", Country = "El Salvador", Population = 6364943 },
-            new PopulationDetails() { Continent ="North America", Country = "Costa Rica", Population = 5212173 },
-            new PopulationDetails() { Continent ="South America", Country = "Uruguay", Population = 3423109 },
-        };
-    }
-
-    public ObservableCollection<PopulationDetails> PopulationDetails
-    {
-        get;
-        set;
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-![slice-and-dice-auto-layout-type-in-maui-treemap](images/layouts/slice-and-dice-auto-layout-type-in-maui-treemap.jpeg){:width="313" height="444" .lazy .shadow-effect}
-
-## Slice and dice horizontal
-
-The [SliceAndDiceHorizontal](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.LayoutType.html#Syncfusion_Maui_TreeMap_LayoutType_SliceAndDiceHorizontal) layout arranges data into horizontal rectangles with a high aspect ratio and displays them sorted horizontally. This layout will start to arrange each rectangle in a horizontal direction, and the size of the rectangle will be calculated based on the [PrimaryValuePath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_PrimaryValuePath) property value.
-
-{% tabs %}
-{% highlight XAML hl_lines="3" %}
-
-<treemap:SfTreeMap x:Name="treeMap"
-                   DataSource="{Binding PopulationDetails}"
-                   LayoutType="SliceAndDiceHorizontal"
-                   PrimaryValuePath="Population">
+    <treemap:SfTreeMap.ToolTipSettings>
+        <treemap:TreeMapToolTipSettings Background="Blue"
+                                        Stroke="Red"
+                                        Duration="0:0:10">
+            <treemap:TreeMapToolTipSettings.TextStyle>
+                <treemap:TreeMapTextStyle TextColor="White"
+                                          FontSize="14"
+                                          FontAttributes="Italic"/>
+            </treemap:TreeMapToolTipSettings.TextStyle>
+         </treemap:TreeMapToolTipSettings>                                     
+    </treemap:SfTreeMap.ToolTipSettings>
     <treemap:SfTreeMap.BindingContext>
         <local:PopulationViewModel />
     </treemap:SfTreeMap.BindingContext>
-    <treemap:SfTreeMap.LeafItemSettings>
-        <treemap:TreeMapLeafItemSettings LabelPath="Country">
-        </treemap:TreeMapLeafItemSettings>
-    </treemap:SfTreeMap.LeafItemSettings>
-    <treemap:SfTreeMap.LeafItemBrushSettings>
-        <treemap:TreeMapUniformBrushSettings Brush="#D21243" />
-    </treemap:SfTreeMap.LeafItemBrushSettings>
-</treemap:SfTreeMap>
+ </treemap:SfTreeMap>
 
 {% endhighlight %}
-{% highlight C# hl_lines="4" %}
+{% highlight C# hl_lines="5 8" %}
 
 SfTreeMap treeMap = new SfTreeMap();
 PopulationViewModel viewModel = new PopulationViewModel();
 treeMap.DataSource = viewModel.PopulationDetails;
-treeMap.LayoutType = LayoutType.SliceAndDiceHorizontal;
 treeMap.PrimaryValuePath = "Population";
+treeMap.ShowToolTip = true;
+treeMap.LeafItemBrushSettings = new TreeMapUniformBrushSettings() { Brush = Brush.Orange };
 treeMap.LeafItemSettings = new TreeMapLeafItemSettings() { LabelPath = "Country" };
-treeMap.LeafItemBrushSettings = new TreeMapUniformBrushSettings() { Brush = new SolidColorBrush(Color.FromArgb("#D21243")) };
+treeMap.ToolTipSettings = new TreeMapToolTipSettings() { Background = Brush.Blue, Stroke = Brush.Red, Duration = new TimeSpan(0, 0, 10), TextStyle = new TreeMapTextStyle() { TextColor = Colors.White, FontSize = 14, FontAttributes = FontAttributes.Italic } };
 this.Content = treeMap;
 
 {% endhighlight %}
@@ -228,7 +161,7 @@ public class PopulationDetails
 {
     public string Country { get; set; }
     public string Continent { get; set; }
-    public double Population { get; set; }
+    public int Population { get; set; }
 }
 
 {% endhighlight %}
@@ -271,42 +204,81 @@ public class PopulationViewModel
 {% endhighlight %}
 {% endtabs %}
 
-![slice-and-dice-horizontal-layout-type-in-maui-treemap](images/layouts/slice-and-dice-horizontal-layout-type-in-maui-treemap.jpeg){:width="313" height="444" .lazy .shadow-effect}
+N> This property will only be applicable when the [ShowToolTip](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_ShowToolTip) is enabled.
 
-## Slice and dice vertical
+### Customize tooltip appearance using DataTemplate
 
-The [SliceAndDiceVertical](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.LayoutType.html#Syncfusion_Maui_TreeMap_LayoutType_SliceAndDiceVertical) layout organizes data into vertical rectangles with a high aspect ratio and displays them sorted vertically. This layout will start to arrange each rectangle in a vertical direction, and the size of the rectangle will be calculated based on the [PrimaryValuePath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_PrimaryValuePath) property value.
+You can customize the tooltip appearance by using the [ToolTipTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_ToolTipTemplate) property in the [SfTreeMap](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html).
+
+The following code example shows the usage of DataTemplate.
 
 {% tabs %}
-{% highlight XAML hl_lines="3" %}
+{% highlight XAML hl_lines="4 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52" %}
 
 <treemap:SfTreeMap x:Name="treeMap"
                    DataSource="{Binding PopulationDetails}"
-                   LayoutType="SliceAndDiceVertical"
                    PrimaryValuePath="Population"
                    ShowToolTip="True">
-    <treemap:SfTreeMap.BindingContext>
-        <local:PopulationViewModel />
-    </treemap:SfTreeMap.BindingContext>
     <treemap:SfTreeMap.LeafItemSettings>
         <treemap:TreeMapLeafItemSettings LabelPath="Country">
         </treemap:TreeMapLeafItemSettings>
     </treemap:SfTreeMap.LeafItemSettings>
     <treemap:SfTreeMap.LeafItemBrushSettings>
-        <treemap:TreeMapUniformBrushSettings Brush="#D21243" />
+        <treemap:TreeMapUniformBrushSettings Brush="Orange"/>
     </treemap:SfTreeMap.LeafItemBrushSettings>
+    <treemap:SfTreeMap.ToolTipTemplate>
+        <DataTemplate>
+            <StackLayout Orientation="Vertical">
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Country:"
+                           TextColor="White"
+                           Padding="5,0,0,0"
+                           FontSize="Caption"
+                           FontAttributes="Bold"/>
+                    <Label Text="{Binding Item.Country}"
+                           TextColor="White"
+                           FontSize="Caption"
+                           Padding="5,0,0,0"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal"
+                             Margin="0,3,0,0">
+                    <Label Text="Continent:"
+                           TextColor="White" 
+                           Padding="5,0,0,0"
+                           FontSize="Caption"
+                           FontAttributes="Bold"/>
+                    <Label Text="{Binding Item.Continent}"
+                           TextColor="White"
+                           FontSize="Caption"
+                           Padding="5,0,0,0"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal"
+                             Margin="0,3,0,0">
+                    <Label Text="Population:" 
+                           TextColor="White"
+                           FontSize="Caption"
+                           Padding="5,0,0,0"
+                           FontAttributes="Bold"/>
+                    <Label Text="{Binding Item.Population}"
+                           TextColor="White"
+                           FontSize="Caption"
+                           Padding="5,0,0,0"/>
+                </StackLayout>
+            </StackLayout>
+        </DataTemplate>
+    </treemap:SfTreeMap.ToolTipTemplate>
 </treemap:SfTreeMap>
 
 {% endhighlight %}
-{% highlight C# hl_lines="4" %}
+{% highlight C# %}
 
 SfTreeMap treeMap = new SfTreeMap();
 PopulationViewModel viewModel = new PopulationViewModel();
 treeMap.DataSource = viewModel.PopulationDetails;
-treeMap.LayoutType = LayoutType.SliceAndDiceVertical;
 treeMap.PrimaryValuePath = "Population";
+treeMap.ShowToolTip = true;
+treeMap.LeafItemBrushSettings = new TreeMapUniformBrushSettings() { Brush = Brush.Orange };
 treeMap.LeafItemSettings = new TreeMapLeafItemSettings() { LabelPath = "Country" };
-treeMap.LeafItemBrushSettings = new TreeMapUniformBrushSettings() { Brush = new SolidColorBrush(Color.FromArgb("#D21243")) };
 this.Content = treeMap;
 
 {% endhighlight %}
@@ -316,7 +288,7 @@ public class PopulationDetails
 {
     public string Country { get; set; }
     public string Continent { get; set; }
-    public double Population { get; set; }
+    public int Population { get; set; }
 }
 
 {% endhighlight %}
@@ -359,4 +331,4 @@ public class PopulationViewModel
 {% endhighlight %}
 {% endtabs %}
 
-![slice-and-dice-vertical-layout-type-in-maui-treemap](images/layouts/slice-and-dice-vertical-layout-type-in-maui-treemap.jpeg){:width="313" height="444"}
+N> This property will only be applicable when the [ShowToolTip](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_ShowToolTip) is enabled.
