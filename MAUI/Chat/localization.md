@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Localization in .NET MAUI SfChat control | Syncfusion
-description: Learn about Localization support in Syncfusion .NET MAUI Chat (SfChat) control and more.
+description: Learn here all about Localization feature of Syncfusion .NET MAUI Chat(SfChat) control and more.
 platform: MAUI
 control: SfChat
 documentation: ug
