@@ -100,8 +100,8 @@ The [ItemDoubleTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListV
 
 The [ItemRightTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemRightTapped) event will be triggered whenever the item is right tapped. The [ItemRightTappedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemRightTappedEventArgs.html) has the following members providing information for the `ItemRightTapped` event:
 
- * [ItemType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemRightTappedEventArgs.html#Syncfusion_Maui_ListView_ItemRightTappedEventArgs_ItemType): It gets the type of right tapped item.
- * [DataItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemRightTappedEventArgs.html#Syncfusion_Maui_ListView_ItemRightTappedEventArgs_DataItem): The underlying data associated with the right tapped item as its arguments.
+ * [ItemType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemRightTappedEventArgs.html#Syncfusion_Maui_ListView_ItemRightTappedEventArgs_ItemType): Gets the type of right tapped item.
+ * [DataItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemRightTappedEventArgs.html#Syncfusion_Maui_ListView_ItemRightTappedEventArgs_DataItem): The underlying data is associated with the right tapped item as its arguments.
  * [Position](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemRightTappedEventArgs.html#Syncfusion_Maui_ListView_ItemRightTappedEventArgs_Position): Gets the touch position in the right tapped item.
 
 {% tabs %}

@@ -317,7 +317,7 @@ Download the entire source code from GitHub [here](https://github.com/Syncfusion
 
 ## Animation
 
-The `SfTreeView` supports to animate expanding or collapsing the [TreeViewNode](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.TreeViewNode.html). To enable/disable the animation use [IsAnimationEnabled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_IsAnimationEnabled) property of `SfTreeView`.
+The `SfTreeView` supports to animate expanding or collapsing the [TreeViewNode](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.TreeViewNode.html). To enable or disable the animation, use the [IsAnimationEnabled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_IsAnimationEnabled) property of `SfTreeView`.
  
 N> The default value of the `IsAnimationEnabled` property is `false`.
 

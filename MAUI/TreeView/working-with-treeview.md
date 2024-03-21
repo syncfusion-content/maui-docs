@@ -83,7 +83,7 @@ private void TreeView_ItemDoubleTapped(object sender, ItemDoubleTappedEventArgs 
 The [ItemRightTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ItemRightTapped) event will be triggered whenever the item is right tapped. The [ItemRightTappedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.ItemRightTappedEventArgs.html) has the following members providing information for the `ItemRightTapped` event:
 
  * [Node](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.ItemRightTappedEventArgs.html#Syncfusion_Maui_TreeView_ItemRightTappedEventArgs_Node): Gets the [TreeViewNode](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.TreeViewNode.html) and data associated with the right-tapped item as its arguments.
- * [Position](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.ItemRightTappedEventArgs.html#Syncfusion_Maui_TreeView_ItemRightTappedEventArgs_Position): Gets the touch position in the right tapped item.
+ * [Position](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.ItemRightTappedEventArgs.html#Syncfusion_Maui_TreeView_ItemRightTappedEventArgs_Position): Gets the touch position in the right-tapped item.
 
 {% tabs %}
 {% highlight xaml %}
