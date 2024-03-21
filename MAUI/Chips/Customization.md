@@ -2,7 +2,7 @@
 layout: post
 title: Customization in .NET MAUI Chips control | Syncfusion
 description: Learn about Customization support in Syncfusion Essential Studio .NET MAUI Chips control, its elements and more.
-platform: .NET MAUI
+platform: maui
 control: Chips
 documentation: ug
 ---
@@ -1806,4 +1806,6 @@ using Syncfusion.Maui.Core;
 
 N> The default value of ChipImageSize is [`18d`].
 
+## IsSelected
 
+The [IsSelected](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChip.html#Syncfusion_Maui_Core_SfChip_IsSelected) property in the [SfChip](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChip.html) is used to indicate whether a chip has been selected in `choice` and `filter` types.

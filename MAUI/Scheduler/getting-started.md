@@ -467,26 +467,6 @@ this.Content = scheduler;
 
 ![change-first-day-of-week-in-maui-scheduler](images/getting-started/change-first-day-of-week-in-maui-scheduler.png)
 
-## Cell selection background
-
-The selection view of Scheduler can be customized by using the [SelectedCellBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_SelectedCellBackground) property in the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html).
-
-{% tabs %}  
-{% highlight XAML %}
-
-<scheduler:SfScheduler x:Name="Scheduler" SelectedCellBackground="Orange"/>
-
-{% endhighlight %}
-{% highlight C# %}
-
-SfScheduler scheduler = new SfScheduler();
-scheduler.SelectedCellBackground = Brush.Orange;
-this.Content = scheduler;
-
-{% endhighlight %}  
-{% endtabs %}  
-
-![change-cell-selection-background-in-maui-scheduler](images/getting-started/change-cell-selection-background-in-maui-scheduler.png)
 
 ## Today highlight brush
 

@@ -210,7 +210,7 @@ Delete the selected shape using either the toolbar or the [`DeleteAnnotation`](h
 
 Remove all the annotations using the [`ClearAnnotations`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_ClearAnnotations) method.
 
-N> It will remove text and pen annotations as well.
+N> It will remove text, pen and custom view annotations as well.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -262,6 +262,35 @@ N> The event is common for text and shape annotations.
 
 {% endtabs %}
 
+## Annotation unselected event
+
+This `AnnotationUnselected` event occurs when the annotation is unselected.
+
+N> This is common for Shape, Text and CustomView annotations.
+
+{% tabs %}
+
+{% highlight xaml tabtitle="MainPage.xaml" %}
+
+    <imageEditor:SfImageEditor Source="image.png" AnnotationUnselected="OnAnnotationUnSelected" />
+
+{% endhighlight %}
+
+{% highlight C# tabtitle="MainPage.xaml.cs" %}
+
+    private void OnAnnotationUnSelected(object sender, AnnotationUnselectedEventArgs e)
+    {
+        if(e.AnnotationSettings is ImageEditorShapeSettings shapeSettings)
+        {
+            shapeSettings.IsFilled = true;
+        }
+    }
+
+{% endhighlight %}
+
+{% endtabs %}
+
+
 ## Add shape on initial loading
 
 Annotate a shape on image loading using the [`Imageloaded`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_ImageLoaded) event.
@@ -287,7 +316,7 @@ Annotate a shape on image loading using the [`Imageloaded`](https://help.syncfus
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-image-editor-examples/tree/master/ImageLoadedSample)
 
-### Add shape with manual bounds
+## Add shape with manual bounds
 
 Shapes can be added by user-defined view bounds. The [`Bounds`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorAnnotationSettings.html#Syncfusion_Maui_ImageEditor_ImageEditorAnnotationSettings_Bounds) are treated as ratio values of image width and height, so you have to specify bounds rectangle values in the range of 0 to 1.
 {% tabs %}

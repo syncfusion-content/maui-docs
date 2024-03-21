@@ -247,7 +247,7 @@ public class CityFilteringBehavior : IComboBoxFilterBehavior
     public List<int> GetMatchingIndexes(SfComboBox source, ComboBoxFilterInfo filterInfo)
     {
         List<int> filteredlist = new List<int>();
-            List<CityInfo> cityItems = source.ItemsSourceList.OfType<CityInfo>().ToList();
+        ObservableCollection<CityInfo> cityItems = (ObservableCollection<CityInfo>)source.ItemsSource;
 
             filteredlist.AddRange(from CityInfo item in cityItems
                                   where item.CountryName.StartsWith(filterInfo.Text, StringComparison.CurrentCultureIgnoreCase) ||

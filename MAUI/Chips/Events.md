@@ -2,7 +2,7 @@
 layout: post
 title: Events in .NET MAUI Chips control | Syncfusion
 description: Learn about Events support in Syncfusion Essential Studio .NET MAUI Chips control, its elements and more.
-platform: .NET MAUI
+platform: maui
 control: Chips
 documentation: ug
 ---

@@ -113,34 +113,93 @@ The following gif image illustrates the result of the above code:
 
 ### Programmatic selection
 
-The selected items can be changed programmatically by using the [SelectedItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_SelectedItems) property of Autocomplete control.
+The selected items can be changed programmatically by using the [SelectedItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_SelectedItems) property of Autocomplete control. This property allows both getting and setting of the selected items in the Autocomplete control.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-  <editors:SfAutocomplete
-  SelectionMode="Multiple"
-  WidthRequest="350"
-  HeightRequest="50"
-  ItemsSource="{Binding SocialMedias}"
-  DisplayMemberPath="Name"
-  TextMemberPath="Name"    
-  x:Name="autoComplete" />
+  <editors:SfAutocomplete x:Name="autoComplete"
+                SelectionMode="Multiple"
+                WidthRequest="350"
+                HeightRequest="50"
+                ItemsSource="{Binding SocialMedias}"
+                SelectedItems="{Binding SelectedItemsList}"
+                DisplayMemberPath="Name"
+                TextMemberPath="Name" />
 
 {% endhighlight %}
 
 {% highlight C# %}
 
- SocialMediaViewModel socialMediaViewModel = (this.autoComplete.BindingContext as SocialMediaViewModel);
- ObservableCollection<SocialMedia> socialMediasList = socialMediaViewModel.SocialMedias;
- this.autoComplete.SelectedItems.Add(socialMediasList[0]);
- this.autoComplete.SelectedItems.Add(socialMediasList[2]);
+  public ObservableCollection<SocialMedia> SelectedItemsList { get; set; }
+  SocialMediaViewModel socialMediaViewModel = (this.autoComplete.BindingContext as SocialMediaViewModel);
+  ObservableCollection<SocialMedia> socialMediasList = socialMediaViewModel.SocialMedias;
+  SelectedItemsList = new ObservableCollection<SocialMedia>();
+  SelectedItemsList.Add(socialMediasList[0]);
+  SelectedItemsList.Add(socialMediasList[2]);
+  SelectedItemsList.Add(socialMediasList[4]);
 
 {% endhighlight %}
 
 {% endtabs %}
 
+### TokensWrapMode
+
+There are two ways to display multi-selection items in the AutoComplete control. They are:
+
+* [Wrap](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.AutocompleteTokensWrapMode.html#Syncfusion_Maui_Inputs_AutocompleteTokensWrapMode_Wrap)
+* [None](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.AutocompleteTokensWrapMode.html#Syncfusion_Maui_Inputs_AutocompleteTokensWrapMode_None)
+
+#### Wrap mode
+
+When the [TokensWrapMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html#Syncfusion_Maui_Inputs_SfAutocomplete_TokensWrapMode) is set to [Wrap](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.AutocompleteTokensWrapMode.html#Syncfusion_Maui_Inputs_AutocompleteTokensWrapMode_Wrap), the selected items will be wrapped to the next line of the SfAutoComplete.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+ <editors:SfAutoComplete x:Name="autoComplete" 
+             HeightRequest="50"
+             WidthRequest="350"
+             ItemsSource="{Binding SocialMedias}"
+             SelectionMode="Multiple"
+             MaxDropDownHeight="250"
+             DisplayMemberPath="Name"
+             Placeholder="Enter Media"
+             TextMemberPath="Name"
+             TokensWrapMode="Wrap" />
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![.NET MAUI Autocomplete with TokensWrapMode as wrap.](Images/Selection/net-maui-autocomplete-wrapmode.png)
+
+#### None Mode
+
+When the [TokensWrapMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html#Syncfusion_Maui_Inputs_SfAutocomplete_TokensWrapMode) is set to [None](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.AutocompleteTokensWrapMode.html#Syncfusion_Maui_Inputs_AutocompleteTokensWrapMode_None), the selected item will be wrapped in a horizontal orientation.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+ <editors:SfAutoComplete x:Name="autoComplete" 
+             HeightRequest="50"
+             WidthRequest="350"
+             ItemsSource="{Binding SocialMedias}"
+             SelectionMode="Multiple"
+             MaxDropDownHeight="250"
+             DisplayMemberPath="Name"
+             Placeholder="Enter Media"
+             TextMemberPath="Name"
+             TokensWrapMode="None" />
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![.NET MAUI Autocomplete with TokensWrapMode as none.](Images/Selection/net-maui-autocomplete-nonemode.png)
  
 ## Selection changed notification
 
@@ -183,7 +242,7 @@ private async void OnSelectionChanged(object sender, Syncfusion.Maui.Inputs.Sele
 
 The following gif image illustrates the result of the above code:
 
-![.NET MAUI Autocomplete selection changed event notification.](Images/Selection/net-maui-autocomplete-selection-changed-notification.png)
+![.NET MAUI Autocomplete selection changed event notification.](Images/Selection/net-maui-autocomplete-selection-changed-notification.gif)
 
 N> SelectionChanged event arguments `CurrentSelection` and `PreviousSelection` marked as "Obsolete". You can use the `AddedItems` and `RemovedItems` event arguments.
 

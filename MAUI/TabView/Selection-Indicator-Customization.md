@@ -132,3 +132,35 @@ tabView.IndicatorBackground = graBrush;
 ![Selection Indicator Gradient](images/Selection-Indicator-gradient-background.png) 
 
 N> View [sample](https://github.com/SyncfusionExamples/maui-tabview-samples/tree/main/TabBarCustomization) in GitHub
+
+## Indicator Width Mode
+
+The [IndicatorWidthMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_IndicatorWidthMode) property allows customization of the width of the indicator. By default, the `IndicatorWidthMode` property is set to [Fit](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.IndicatorWidthMode.html#Syncfusion_Maui_TabView_IndicatorWidthMode_Fit), which adjusts the indicator width to fit the content of the header item. You can change the width size based on the header item by setting the `IndicatorWidthMode` property to [Stretch](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.IndicatorWidthMode.html#Syncfusion_Maui_TabView_IndicatorWidthMode_Stretch).
+
+{% tabs %}
+
+{% highlight xaml %}
+    <tabView:SfTabView IndicatorWidthMode="Fit">
+{% endhighlight %}
+
+{% highlight C# %}
+     tabView.IndicatorWidthMode = IndicatorWidthMode.Fit;
+{% endhighlight %}
+
+{% endtabs %}
+
+![Selection Indicator Background.](images/IndicatorWidthMode_Fit.png) 
+
+{% tabs %}
+
+{% highlight xaml %}
+    <tabView:SfTabView IndicatorWidthMode="Stretch">
+{% endhighlight %}
+
+{% highlight C# %}
+     tabView.IndicatorWidthMode = IndicatorWidthMode.Stretch;
+{% endhighlight %}
+
+{% endtabs %}
+
+![Selection Indicator Background.](images/IndicatorWidthMode_Stretch.png) 
