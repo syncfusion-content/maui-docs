@@ -126,7 +126,7 @@ public class PopulationViewModel
 
 ## Placement
 
-You can position the legend items in different directions using the `Placement` property of `LegendSettings` in SfTreeMap. The default value of the `Placement` property is `Top.` The possible values include `Left,` `Right,` `Top,` and `Bottom.`
+You can position the legend items in different directions using the `Placement` property of `LegendSettings` in `SfTreeMap.` The default value of the `Placement` property is `Top.` The possible values include `Left,` `Right,` `Top,` and `Bottom.`
 
 {% tabs %}
 {% highlight XAML hl_lines="8 9 10 11" %}
@@ -238,14 +238,14 @@ public class PopulationViewModel
 {% endhighlight %}
 {% endtabs %}
 
-N> This property will be applicable to only when the `ShowLegend` is enabled.
+N> This property will only be applicable when the `ShowLegend` is enabled.
 
 ## Icon size
 
 The `IconSize` property in the legend is used to change the size of the icon. Its default value is `new Size(16, 16).`
 
 {% tabs %}
-{% highlight XAML hl_lines="8 9 10 11 12" %}
+{% highlight XAML hl_lines="8 9 10 11" %}
 
 <treemap:SfTreeMap x:Name="treeMap"
                    DataSource="{Binding PopulationDetails}"
@@ -354,7 +354,7 @@ public class PopulationViewModel
 {% endhighlight %}
 {% endtabs %}
 
-N> This property will be applicable to only when the `ShowLegend` is enabled.
+N> This property will only be applicable when the `ShowLegend` is enabled.
 
 ## Icon type
 
@@ -484,7 +484,7 @@ public class PopulationViewModel
 {% endhighlight %}
 {% endtabs %}
 
-N> This property will be applicable to only when the `ShowLegend` is enabled.
+N> This property will only be applicable when the `ShowLegend` is enabled.
 
 ## Legend size
 
@@ -605,7 +605,7 @@ public class PopulationViewModel
 {% endhighlight %}
 {% endtabs %}
 
-N> This property will be applicable to only when the `ShowLegend` is enabled.
+N> This property will only be applicable when the `ShowLegend` is enabled.
 
 ## Brush settings
 
@@ -843,4 +843,4 @@ public class PopulationViewModel
 {% endhighlight %}
 {% endtabs %}
 
-N> This property will be applicable to only when the `ShowLegend` is enabled.
+N> This property will only be applicable when the `ShowLegend` is enabled.

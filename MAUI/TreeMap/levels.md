@@ -396,7 +396,7 @@ public class PopulationViewModel
 {% endhighlight %}
 {% endtabs %}
 
-N> To customize the background color for both header and leaf items at each level, utilize the `GroupItemBrushSettings` property.
+N> To customize the same background color for both header and leaf items at each level, utilize the `GroupItemBrushSettings` property.
 
 ### Customize level appearance using stroke
 
@@ -588,7 +588,7 @@ public class PopulationViewModel
 {% endhighlight %}
 {% endtabs %}
 
-### Customize level appearance using style
+### Customize level appearance using text style
 
 The `TextStyle` property of `TreeMapLevel` can be customized using the `Levels` in the `SfTreeMap.` It is used to customize the `TextColor,` `FontSize,` `FontFamily` and `FontAttributes` of treemap header item text.
 

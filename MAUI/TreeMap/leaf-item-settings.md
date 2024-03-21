@@ -7,7 +7,7 @@ control: TreeMap (SfTreeMap)
 documentation: ug
 ---
  
-# Leaf item settings in .NET MAUI TreeMap (SfTreeMap)
+# Leaf Item Settings in .NET MAUI TreeMap (SfTreeMap)
 
 A leaf item in the TreeMap represents a visualized data element. It does not contain child items but may have a parent item if levels are specified in the TreeMap control. It also allows you to customize the spacing between items, stroke color, stroke width, text style, and text format option in the TreeMap control.
 
@@ -104,7 +104,7 @@ public class PopulationViewModel
 
 The leaf item appearance customization can be achieved by using the `Spacing,` `Stroke,` `StrokeWidth,` `TextStyle,` and `TextFormatOption,` properties of `LeafItemSettings` in the `SfTreeMap.`
 
-## Customize leaf item appearance using spacing
+### Customize leaf item appearance using spacing
 
 The leaf item appearance customization can be achieved by using `Spacing` property of `LeafItemSettings` in `SfTreeMap.` It is used to customize the spacing between the tree map leaf items and its default value is `1.`
 
@@ -194,7 +194,7 @@ public class PopulationViewModel
 {% endhighlight %}
 {% endtabs %}
 
-## Customize leaf item appearance using stroke
+### Customize leaf item appearance using stroke
 
 The leaf item appearance customization can be achieved by using the `Stroke` property of `LeafItemSettings` in `SfTreeMap.` It is used to customize the stroke color for the tree map leaf items. The default value of `Stroke` property is `Transparent.`
 
@@ -284,7 +284,7 @@ public class PopulationViewModel
 {% endhighlight %}
 {% endtabs %}
 
-## Customize leaf item appearance using stroke width
+### Customize leaf item appearance using stroke width
 
 The leaf item appearance customization can be achieved by using the `StrokeWidth` property of `LeafItemSettings` in `SfTreeMap.` It is used to customize the width of the stroke for the tree map leaf items. The default value of `StrokeWidth` property is `1.`
 
@@ -375,7 +375,7 @@ public class PopulationViewModel
 {% endhighlight %}
 {% endtabs %}
 
-## Customize leaf item appearance using text format option
+### Customize leaf item appearance using text format option
 
 The leaf item appearance customization can be achieved by using the `TextFormatOption` property of `LeafItemSettings` in `SfTreeMap.` This property, applicable only when `LabelPath` is specified, defaults to `Trim.` Options include `Wrap` or `Hide` for altering text appearance.
 
@@ -465,7 +465,7 @@ public class PopulationViewModel
 {% endhighlight %}
 {% endtabs %}
 
-## Customize leaf item appearance using style
+### Customize leaf item appearance using style
 
 The leaf item appearance customization can be achieved by using the `TextStyle` property of `LeafItemSettings` in `SfTreeMap.` It is used to customize the `TextColor,` `FontSize,` `FontFamily,` and `FontAttributes` of the treemap item text.
 
@@ -564,3 +564,5 @@ public class PopulationViewModel
 
 {% endhighlight %}
 {% endtabs %}
+
+N> This property is applicable to only when the `LabelPath` property is specified.

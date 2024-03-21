@@ -7,7 +7,7 @@ control: TreeMap (SfTreeMap)
 documentation: ug
 ---
  
-# Leaf item brush settings in .NET MAUI TreeMap (SfTreeMap)
+# Leaf Item Brush Settings in .NET MAUI TreeMap (SfTreeMap)
 
 The brush settings are used to customize the fill colors for leaf items based on ranges or values, offering four brush settings: `UniformBrushSettings,` `RangeBrushSettings,` `DesaturationBrushSettings,` and `PaletteBrushSettings.` Each setting provides unique options for defining and applying color schemes, enhancing the visualization of the treemap.
 
@@ -228,7 +228,7 @@ public class PopulationViewModel
 {% endhighlight %}
 {% endtabs %}
 
-N> The `TreeMapRangeBrushSettings` is applicable only when both the `RangeColorValuePath` property of `SfTreeMap` and the `ShowLegend` property of `LegendSettings` are enabled.
+N> The `TreeMapRangeBrushSettings` is only applicable when the `RangeColorValuePath` property of the `SfTreeMap` is enabled. Additionally, you can ensure that legend items share the same background color by setting the `ShowLegend` property within `LegendSettings.`
 
 ## Desaturation brush settings
 
@@ -249,8 +249,8 @@ The `TreeMapDesaturationBrushSettings` includes the following properties:
     <treemap:SfTreeMap.BindingContext>
         <local:PopulationViewModel />
     </treemap:SfTreeMap.BindingContext>
-        <treemap:SfTreeMap.LeafItemSettings>
-            <treemap:TreeMapLeafItemSettings LabelPath="Country">
+    <treemap:SfTreeMap.LeafItemSettings>
+        <treemap:TreeMapLeafItemSettings LabelPath="Country">
         </treemap:TreeMapLeafItemSettings>
     </treemap:SfTreeMap.LeafItemSettings>
     <treemap:SfTreeMap.LeafItemBrushSettings>
