@@ -11,7 +11,7 @@ documentation: ug
 
 ## Selected Index Changed Event
 
-The SelectedIndexChanged event is used to notify when the selection is changed by swiping or dynamically setting the `SelectedIndex` property of the `SfRotator`.
+The SelectedIndexChanged event is used to notify when the selection is changed by swiping or dynamically setting the [`SelectedIndex`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html#Syncfusion_Maui_Rotator_SfRotator_SelectedIndex) property of the [`SfRotator`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html?tabs=tabid-1).
 
 {% tabs %}
 
@@ -129,7 +129,7 @@ namespace Rotator
 
 ## Item Tapped Event
 
-The `ItemTapped` event will be triggered whenever tapping the item.
+The [`ItemTapped`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html#Syncfusion_Maui_Rotator_SfRotator_ItemTapped) event will be triggered whenever tapping the item.
 
 {% tabs %}
 

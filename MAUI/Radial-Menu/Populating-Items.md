@@ -13,7 +13,7 @@ This section explains the ways about populating items through radial menu item a
 
 ## Through radial menu items
 
-By passing a collection of [`SfRadialMenuItem`], you can get the view of [`SfRadialMenu`] control. The radial menu item class provides various options to customize the items by giving custom views, font icons, and images. You can add radial menu items by hierarchy.
+By passing a collection of [`SfRadialMenuItem`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenuItem.html), you can get the view of [`SfRadialMenu`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html) control. The radial menu item class provides various options to customize the items by giving custom views, font icons, and images. You can add radial menu items by hierarchy.
 
 ### Text
 
@@ -74,7 +74,7 @@ namespace RadialSample
 
 {% endtabs %}
 
-N> Instead of using ObservableCollection, use `RadialMenuItemsCollection` for the RadialMenu Items list and `SubMenuItemsCollection` for the list of items within each RadialMenuItem.
+N> Instead of using ObservableCollection, use [`RadialMenuItemsCollection`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.RadialMenuItemsCollection.html) for the RadialMenu Items list and [`SubMenuItemsCollection`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SubMenuItemsCollection.html) for the list of items within each RadialMenuItem.
 
 ![Display text in .NET MAUI RadialMenu](images/populating-items/maui-radialmenu-populating-only-text.png)
 
@@ -324,7 +324,7 @@ namespace RadialSample
 
 ## Through ItemsSource and ItemTemplate
 
-Using [`ItemsSource`], objects of any class can be given as items for [`SfRadialMenu`]. The views corresponding to the objects can be set using the [`ItemTemplate`] property. A simple usage of [`ItemTemplate`] and [`ItemsSource`] to display a default image and name of users is shown in the following code.
+Using [`ItemsSource`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_ItemsSource), objects of any class can be given as items for [`SfRadialMenu`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html). The views corresponding to the objects can be set using the [`ItemTemplate`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_ItemTemplate) property. A simple usage of [`ItemTemplate`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_ItemTemplate) and [`ItemsSource`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_ItemsSource) to display a default image and name of users is shown in the following code.
 
 {% tabs %}
 
@@ -419,7 +419,7 @@ namespace RadialSample
 
 ## Animation duration
 
-Duration of animation in radial menu can be changed using the [`AnimationDuration`] property. It is used to change the speed of opening and closing of radial menu.
+Duration of animation in radial menu can be changed using the [`AnimationDuration`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_AnimationDuration) property. It is used to change the speed of opening and closing of radial menu.
 
 {% tabs %}
 
@@ -479,7 +479,7 @@ namespace RadialSample
 
 ## IsOpen
 
-The [`IsOpen`] property indicates whether the radial menu is in open or close state.
+The [`IsOpen`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_IsOpen) property indicates whether the radial menu is in open or close state.
 
 {% tabs %}
 
@@ -539,7 +539,7 @@ namespace RadialSample
 
 ## Separator thickness and color in radial menu
 
-Thickness of strip between the two items can be changed using the [`SeparatorThickness`] property and the color of strip can be changed using the [`SeparatorColor`] property.
+Thickness of strip between the two items can be changed using the [`SeparatorThickness`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_SeparatorThickness) property and the color of strip can be changed using the [`SeparatorColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_SeparatorColor) property.
 
 {% tabs %}
 
@@ -602,7 +602,7 @@ namespace RadialSample
 
 ## Rim color and rim radius in radial menu
 
-The radius of rim can be changed using the [`RimRadius`] property and the color of rim can be changed using the [`RimColor`] property.
+The radius of rim can be changed using the [`RimRadius`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_RimRadius) property and the color of rim can be changed using the [`RimColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_RimColor) property.
 
 {% tabs %}
 
@@ -665,7 +665,7 @@ namespace RadialSample
 
 ## DisplayMemberPath
 
-The control is populated with a list of employees, and the employee model contains two properties: ID and EmployeeName. So, it is necessary to intimate by which property it should display to the items. The [`DisplayMemberPath`] property specifies the property path.
+The control is populated with a list of employees, and the employee model contains two properties: ID and EmployeeName. So, it is necessary to intimate by which property it should display to the items. The [`DisplayMemberPath`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_DisplayMemberPath) property specifies the property path.
 
 {% tabs %}
 
