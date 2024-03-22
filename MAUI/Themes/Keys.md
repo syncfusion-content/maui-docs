@@ -3631,7 +3631,7 @@ This page lists the keys for each control and the element to which it is mapped 
         <th>Description<br/><br/></th>
     </tr>
     <tr>
-        <td rowspan="27">SfDataGridStyles<br/><br/></td>
+        <td rowspan="33">SfDataGridStyles<br/><br/></td>
 		<td>SfDataGridTheme<br/><br/></td>
         <td>By merging this key in application resources, it is possible to customize the appearance of the SfDataGrid without merging common theme resource and control style resource dictionaries.	
 {% highlight xaml %}
@@ -3731,6 +3731,30 @@ This page lists the keys for each control and the element to which it is mapped 
     <tr>
         <td>SfDataGridStackedHeaderRowTextColor<br/><br/></td>
         <td>Text color of the stacked header rows in the SfDataGrid.<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfDataGridSortNumberTextColor<br/><br/></td>
+        <td>Text color of the sort number in the SfDataGrid.<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfDataGridSortNumberBackground<br/><br/></td>
+        <td>Background color of the sort number in the SfDataGrid.<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfDataGridGroupIconColor<br/><br/></td>
+        <td>Color of the group icon in the SfDataGrid.<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfDataGridCheckBoxColor<br/><br/></td>
+        <td>Color of the check box in the SfDataGrid.<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfDataGridInputBackgroundColor<br/><br/></td>
+        <td>Background color of the input in the SfDataGrid.<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfDataGridSortIconColor<br/><br/></td>
+        <td>Color of the sort icon in the SfDataGrid.<br/><br/></td>
     </tr>
     <tr>
         <td>SfDataGridLoadMoreBackground<br/><br/></td>
