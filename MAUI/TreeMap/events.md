@@ -9,17 +9,17 @@ documentation: ug
 
 # Events in the .NET MAUI TreeMap (SfTreeMap)
 
-## SelectionChanged
+## Notifying TreeMap selection changes
 
-The `SelectionChanged` event occurs when there is a change in the selection within a tree map item.
+The [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_SelectionChanged) event occurs when there is a change in the selection within a tree map item.
 
-We can get the below details from the `SelectionChanged` event.
+We can get the below details from the [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_SelectionChanged) event.
 
-    * `OldItems`: Returns the previously selected item.
-    * `NewItems`: Returns the newly selected item.
-    * `Category`: Returns the hierarchical path of the selected item within its groups.
-    * `IsSelected`: Returns the items are selected or deselected.
-    * `GroupLevel`: Returns the level of grouping for the selected items.
+ * [OldItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapSelectionChangedEventArgs.html#Syncfusion_Maui_TreeMap_TreeMapSelectionChangedEventArgs_OldItems): Returns the previously selected items.
+ * [NewItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapSelectionChangedEventArgs.html#Syncfusion_Maui_TreeMap_TreeMapSelectionChangedEventArgs_NewItems): Returns the newly selected items.
+ * [Category](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapSelectionChangedEventArgs.html#Syncfusion_Maui_TreeMap_TreeMapSelectionChangedEventArgs_Category): Returns the hierarchical path of the selected item within its groups.
+ * [IsSelected](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapSelectionChangedEventArgs.html#Syncfusion_Maui_TreeMap_TreeMapSelectionChangedEventArgs_IsSelected): Returns the items are selected or deselected.
+ * [GroupLevel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapSelectionChangedEventArgs.html#Syncfusion_Maui_TreeMap_TreeMapSelectionChangedEventArgs_GroupLevel): Returns the level of grouping for the selected items.
 
 {% tabs %}
 {% highlight XAML hl_lines="3" %}

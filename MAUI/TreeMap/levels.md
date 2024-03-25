@@ -9,13 +9,13 @@ documentation: ug
  
 # Levels in .NET MAUI TreeMap (SfTreeMap)
 
-Levels in .NET MAUI TreeMap allow for hierarchical data visualization, enabling multi-level categorization and exploration of complex datasets. The TreeMap supports n number of levels and each level is separated using the `GroupPath` property.
+Levels in .NET MAUI TreeMap allow for hierarchical data visualization, enabling multi-level categorization and exploration of complex datasets. The TreeMap supports n number of levels and each level is separated using the [GroupPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapLevel.html#Syncfusion_Maui_TreeMap_TreeMapLevel_GroupPath) property.
 
 ## Group path
 
-The `GroupPath` property of `TreeMapLevel` specifies the name of the property in the data object that determines how items in the tree map are grouped. The grouping is based on the values of this property in the data source, which splits the level into distinct groups.
+The [GroupPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapLevel.html#Syncfusion_Maui_TreeMap_TreeMapLevel_GroupPath) property of [TreeMapLevel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapLevel.html) specifies the name of the property in the data object that determines how items in the tree map are grouped. The grouping is based on the values of this property in the data source, which splits the level into distinct groups.
 
-In the following example shows, how levels are added, and each level is configured using the `GroupPath.`
+In the following example shows, how levels are added, and each level is configured using the [GroupPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapLevel.html#Syncfusion_Maui_TreeMap_TreeMapLevel_GroupPath).
 
 {% tabs %}
 {% highlight XAML hl_lines="14 15 16" %}
@@ -109,11 +109,11 @@ public class PopulationViewModel
 
 ## Customize level appearance
 
-The level appearance customization can be achieved by using the `Spacing,` `Stroke,` `StrokeWidth,` `TextStyle`, and `Background` properties of `TreeMapLevel` in the `SfTreeMap.`
+The level appearance customization can be achieved by using the [Spacing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapLevel.html#Syncfusion_Maui_TreeMap_TreeMapLevel_Spacing), [Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapLevel.html#Syncfusion_Maui_TreeMap_TreeMapLevel_Stroke), [StrokeWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapLevel.html#Syncfusion_Maui_TreeMap_TreeMapLevel_StrokeWidth), [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapLevel.html#Syncfusion_Maui_TreeMap_TreeMapLevel_TextStyle), and [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapLevel.html#Syncfusion_Maui_TreeMap_TreeMapLevel_Background) properties of [TreeMapLevel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapLevel.html) in the [SfTreeMap](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html).
 
 ### Customize level appearance using spacing
 
-The `Spacing` property of `TreeMapLevel` can be customized by using the `Levels` property in `SfTreeMap.` It is used to customize the spacing between the tree map header items, with a default value of `1.`
+The [Spacing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapLevel.html#Syncfusion_Maui_TreeMap_TreeMapLevel_Spacing) property of [TreeMapLevel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapLevel.html) can be customized by using the [Levels](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_Levels) property in the[SfTreeMap](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html). It is used to customize the spacing between the tree map header items, with a default value of `1.`
 
 {% tabs %}
 {% highlight XAML hl_lines="16" %}
@@ -208,7 +208,7 @@ public class PopulationViewModel
 
 ### Customize level appearance using header height
 
-The `HeaderHeight` property of `TreeMapLevel` can be customized using the `Levels` property in `SfTreeMap.` This property adjusts the header height for each level in the tree map, with a default value of `24.`
+The [HeaderHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapLevel.html#Syncfusion_Maui_TreeMap_TreeMapLevel_HeaderHeight) property of [TreeMapLevel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapLevel.html) can be customized using the [Levels](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_Levels) property in the [SfTreeMap](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html). This property adjusts the header height for each level in the tree map, with a default value of `24.`
 
 {% tabs %}
 {% highlight XAML hl_lines="16" %}
@@ -303,7 +303,7 @@ public class PopulationViewModel
 
 ### Customize level appearance using background
 
-The `Background` property of `TreeMapLevel` can be customized by using the `Levels` property in the `SfTreeMap.` It is used to customize the background brush for the tree map header item. The default value of `Background` is `Null.`
+The [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapLevel.html#Syncfusion_Maui_TreeMap_TreeMapLevel_Background) property of [TreeMapLevel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapLevel.html) can be customized by using the [Levels](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_Levels) property in the[SfTreeMap](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html). It is used to customize the background brush for the tree map header item. The default value of [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapLevel.html#Syncfusion_Maui_TreeMap_TreeMapLevel_Background) is `Null.`
 
 {% tabs %}
 {% highlight XAML hl_lines="16" %}
@@ -396,11 +396,11 @@ public class PopulationViewModel
 {% endhighlight %}
 {% endtabs %}
 
-N> To customize the background color for both header and leaf items at each level, utilize the `GroupItemBrushSettings` property.
+N> To customize the same background color for both header and leaf items at each level, utilize the [GroupItemBrushSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_GroupItemBrushSettings) property.
 
 ### Customize level appearance using stroke
 
-The `Stroke` property of `TreeMapLevel` can be customized by using the `Levels` property in the `SfTreeMap.` It is used to customize the stroke color for the tree map header item. The default value of `Stroke` is `new SolidColorBrush(Color.FromArgb("#CAC4D0")).`
+The [Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapLevel.html#Syncfusion_Maui_TreeMap_TreeMapLevel_Stroke) property of [TreeMapLevel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapLevel.html) can be customized by using the [Levels](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_Levels) property in the [SfTreeMap](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html). It is used to customize the stroke color for the tree map header item. The default value of [Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapLevel.html#Syncfusion_Maui_TreeMap_TreeMapLevel_Stroke) is `new SolidColorBrush(Color.FromArgb("#CAC4D0")).`
 
 {% tabs %}
 {% highlight XAML hl_lines="16" %}
@@ -495,7 +495,7 @@ public class PopulationViewModel
 
 ###  Customize level appearance using stroke width
 
-The `StrokeWidth` property of `TreeMapLevel` can be customized by using the `Levels` property in the `SfTreeMap.` It is used to customize the width of the stroke for the tree map header item. The default value of `StrokeWidth` is `1.`
+The [StrokeWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapLevel.html#Syncfusion_Maui_TreeMap_TreeMapLevel_StrokeWidth) property of [TreeMapLevel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapLevel.html) can be customized by using the [Levels](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_Levels) property in [SfTreeMap](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html). It is used to customize the width of the stroke for the tree map header item. The default value of [StrokeWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapLevel.html#Syncfusion_Maui_TreeMap_TreeMapLevel_StrokeWidth) is `1.`
 
 {% tabs %}
 {% highlight XAML hl_lines="16" %}
@@ -588,9 +588,9 @@ public class PopulationViewModel
 {% endhighlight %}
 {% endtabs %}
 
-### Customize level appearance using style
+### Customize level appearance using text style
 
-The `TextStyle` property of `TreeMapLevel` can be customized using the `Levels` in the `SfTreeMap.` It is used to customize the `TextColor,` `FontSize,` `FontFamily` and `FontAttributes` of treemap header item text.
+The [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapLevel.html#Syncfusion_Maui_TreeMap_TreeMapLevel_TextStyle) property of [TreeMapLevel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapLevel.html) can be customized using the [Levels](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_Levels) property in the[SfTreeMap](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html). It is used to customize the [TextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapTextStyle.html#Syncfusion_Maui_TreeMap_TreeMapTextStyle_TextColor), [FontSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapTextStyle.html#Syncfusion_Maui_TreeMap_TreeMapTextStyle_FontSize), [FontFamily](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapTextStyle.html#Syncfusion_Maui_TreeMap_TreeMapTextStyle_FontFamily), and [FontAttributes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapTextStyle.html#Syncfusion_Maui_TreeMap_TreeMapTextStyle_FontAttributes) of treemap header item text.
 
 {% tabs %}
 {% highlight XAML hl_lines="16 17 18 19 20" %}
