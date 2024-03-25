@@ -23,7 +23,7 @@ To apply themes to your application, merge the `SyncfusionThemeResourceDictionar
 
 #### Theme resource dictionary
 
-This resource dictionary includes keys and their corresponding color codes for all Syncfusion controls. Additionally, it contains the `SfVisualTheme` property where we can declare the following two theme color values:
+This resource dictionary includes keys and their corresponding color codes for all Syncfusion controls. Additionally, it contains the `VisualTheme` property where we can declare the following two theme color values:
 
 1. MaterialLight
 2. MaterialDark
@@ -42,7 +42,7 @@ When using more number of Syncfusion controls in an application, to make the pro
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <!-- Theme resource dictionary -->
-                <syncTheme:SyncfusionThemeResourceDictionary SfVisualTheme="MaterialDark"/>
+                <syncTheme:SyncfusionThemeResourceDictionary VisualTheme="MaterialDark"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
 </Application.Resources>
@@ -72,7 +72,7 @@ In addition to the primary keys, the theme resource dictionary also contains the
 <Application.Resources>
     <ResourceDictionary>
         <ResourceDictionary.MergedDictionaries>
-            <syncTheme:SyncfusionThemeResourceDictionary SfVisualTheme="MaterialDark"/>
+            <syncTheme:SyncfusionThemeResourceDictionary VisualTheme="MaterialDark"/>
             <ResourceDictionary>
                 <Color x:Key="SfRadialGaugeNeedlePointerNeedleFillColor">LimeGreen</Color>
                 <Color x:Key="SfRadialGaugeNeedlePointerKnobFillColor">LimeGreen</Color>
@@ -104,7 +104,7 @@ Using this approach, you can create your own theme for all the controls or speci
  <Application.Resources>
     <ResourceDictionary>
         <ResourceDictionary.MergedDictionaries>
-            <syncTheme:SyncfusionThemeResourceDictionary SfVisualTheme="MaterialDark"/>
+            <syncTheme:SyncfusionThemeResourceDictionary VisualTheme="MaterialDark"/>
             <ResourceDictionary>
                 <x:String x:Key="SfRadialGaugeTheme">CommonTheme</x:String>
                 <Color x:Key="SfRadialGaugeNeedlePointerNeedleFillColor">LimeGreen</Color>
