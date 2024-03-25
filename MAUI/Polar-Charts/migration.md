@@ -30,11 +30,11 @@ SfChart
 </tr>
 </table>
 
-To make the migration easier, the majority of the APIs from the Xamarin [SfChart](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.SfChart.html) were kept in the .NET MAUI [SfPolarChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPolarChart.html?tabs=tabid-1%2Ctabid-3%2Ctabid-6%2Ctabid-8%2Ctabid-10%2Ctabid-23%2Ctabid-18%2Ctabid-12%2Ctabid-14%2Ctabid-20%2Ctabid-16). Currently, most of the features have been added in the [SfPolarChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPolarChart.html?tabs=tabid-1%2Ctabid-3%2Ctabid-6%2Ctabid-8%2Ctabid-10%2Ctabid-23%2Ctabid-18%2Ctabid-12%2Ctabid-14%2Ctabid-20%2Ctabid-16), but only a few are pending in the .NET MAUI along with some limitations. Please refer to the following details and the API migration information available below.
+To make the migration easier, the majority of the APIs from the Xamarin [SfChart](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.SfChart.html) were kept in the .NET MAUI [SfPolarChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPolarChart.html). Currently, most of the features have been added in the [SfPolarChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPolarChart.html), but only a few are pending in the .NET MAUI along with some limitations. Please refer to the following details and the API migration information available below.
 
 ## API migration
 
-To initialize the control, import the Chart namespace and Initialize [SfPolarChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPolarChart.html?tabs=tabid-1%2Ctabid-3%2Ctabid-6%2Ctabid-8%2Ctabid-10%2Ctabid-23%2Ctabid-18%2Ctabid-12%2Ctabid-14%2Ctabid-20%2Ctabid-16) as shown in the following code sample. 
+To initialize the control, import the Chart namespace and Initialize [SfPolarChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPolarChart.html) as shown in the following code sample. 
 
 <table>
 <tr>
@@ -170,7 +170,7 @@ The following table illustrates the API migration for the chart.
 
 </table>
 
-The following code example explains how to migrate the axis of Xamarin [SfChart](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.SfChart.html) to .NET MAUI [SfPolarChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPolarChart.html?tabs=tabid-1%2Ctabid-3%2Ctabid-6%2Ctabid-8%2Ctabid-10%2Ctabid-23%2Ctabid-18%2Ctabid-12%2Ctabid-14%2Ctabid-20%2Ctabid-16).
+The following code example explains how to migrate the axis of Xamarin [SfChart](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.SfChart.html) to .NET MAUI [SfPolarChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPolarChart.html).
 
 <table>
 <tr>
@@ -261,7 +261,7 @@ this.Content = chart;
 </tr>
 </table>
 
-The following code example explains how to migrate the series of Xamarin [SfChart](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.SfChart.html) to .NET MAUI [SfPolarChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPolarChart.html?tabs=tabid-1%2Ctabid-3%2Ctabid-6%2Ctabid-8%2Ctabid-10%2Ctabid-23%2Ctabid-18%2Ctabid-12%2Ctabid-14%2Ctabid-20%2Ctabid-16).
+The following code example explains how to migrate the series of Xamarin [SfChart](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.SfChart.html) to .NET MAUI [SfPolarChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPolarChart.html).
 
 <table>
 <tr>
@@ -303,7 +303,7 @@ this.Content = chart;
 {% highlight xaml %}
 
 <chart:SfPolarChart>
-    <chart:PolarAreaSeries ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Tree">
+    <chart:PolarAreaSeries ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Tree" ShowDataLabels="True">
     </chart:PolarAreaSeries>
 </chart:SfPolarChart>
 
@@ -315,7 +315,6 @@ PolarAreaSeries series = new PolarAreaSeries();
 series.ItemsSource = (new ViewModel()).PlantDetails;
 series.XBindingPath = "Direction";
 series.YBindingPath = "Tree";
-series.Label = "Tree";
 series.ShowDataLabels = true;
 chart.Series.Add(series);
 this.Content = chart;
@@ -601,7 +600,7 @@ chart.ChartBehaviors.Add(tool);
                     FontSize="15"/>
    </chart:SfPolarChart.TooltipBehavior>
 
-   <chart:PolarAreaSeries ItemsSource="{Binding Data}" XBindingPath="Demand" YBindingPath="Year2010"
+   <chart:PolarAreaSeries ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Tree"
                     EnableTooltip="True"/>
 </chart:SfPolarChart>
 
