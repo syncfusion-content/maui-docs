@@ -740,11 +740,11 @@ chart.TooltipBehavior = tooltip;
 </tr>
 <tr>
 <td>ShowTrackballLabel</td>
-<td>This feature is currently not supported for Polar Charts.</td>
+<td>This feature is not supported for Polar Charts.</td>
 </tr>
 <tr>
 <td>TrackballLabelStyle</td>
-<td>This feature is currently not supported for Polar Charts.</td>
+<td>This feature is not supported for Polar Charts.</td>
 </tr>
 </table>
 
