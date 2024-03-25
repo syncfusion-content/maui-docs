@@ -661,6 +661,93 @@ chart.TooltipBehavior = tooltip;
 * Data label created event support was not provided in series. Instead, you can use the [DrawDataLabel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_DrawDataLabel_Microsoft_Maui_Graphics_ICanvas_Microsoft_Maui_Controls_Brush_System_String_Microsoft_Maui_Graphics_PointF_System_Int32_) override method in the [ChartSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html) class.
 * In.NET MAUI, the [ChartDataPoint](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.ChartDataPoint.html) model class was no longer available. Instead, create your own model.
 
+## Limitations
+
+<table>
+<tr>
+<th>Features</th>
+<th>Comments</th>
+</tr>
+<tr>
+<td>LabelRotation</td>
+<td>This feature supports for secondary axis only.</td>
+</tr>
+<tr>
+<td>AxisLineStyle</td>
+<td>This feature supports for secondary axis only.</td>
+</tr>
+<tr>
+<td>AxisLineOffset</td>
+<td>This feature supports for secondary axis only.
+</td>
+</tr>
+<tr>
+<td>CrossesAt</td>
+<td>This feature is currently not supported for Polar charts.</td>
+</tr>
+<tr>
+<td>RenderNextToCrossingValue</td>
+<td>This feature is currently not supported for Polar charts.</td>
+</tr>
+<tr>
+<td>CrossAxisName</td>
+<td>This feature is currently not supported for Polar charts.</td>
+</tr>
+<tr>
+<td>Axis Title</td>
+<td>This feature supports for secondary axis only.</td>
+</tr>
+<tr>
+<td>EdgeLabelsDrawingMode</td>
+<td>This feature supports for secondary axis only.</td>
+</tr>
+<tr>
+<td>EnableAutoIntervalOnZooming</td>
+<td>This feature is currently not supported for Polar charts.
+</td>
+</tr>
+<tr>
+<td>LabelPlacement</td>
+<td>This feature is currently not supported for Primary axis.</td>
+</tr>
+<tr>
+<td>ArrangeByIndex</td>
+<td>This feature is currently not supported for Primary axis.
+</td>
+</tr>
+<tr>
+<td>AutoScrollingDeltaType</td>
+<td>This feature is currently not supported for DateTime axis.</td>
+</tr>
+<tr>
+<td>SelectionBehavior(Upcoming)</td>
+<td>This feature is currently not supported for Polar Charts.</td>
+</tr>
+<tr>
+<td>AutoScrollingDelta</td>
+<td>This feature is currently not supported for Polar Charts.</td>
+</tr>
+<tr>
+<td>AutoScrollingMode</td>
+<td>This feature is currently not supported for Polar Charts.</td>
+</tr>
+<tr>
+<td>ZoomPosition</td>
+<td>This feature is currently not supported for Polar Charts.</td>
+</tr>
+<tr>
+<td>ZoomFactor</td>
+<td>This feature is currently not supported for Polar Charts.</td>
+</tr>
+<tr>
+<td>ShowTrackballLabel</td>
+<td>This feature is currently not supported for Polar Charts.</td>
+</tr>
+<tr>
+<td>TrackballLabelStyle</td>
+<td>This feature is currently not supported for Polar Charts.</td>
+</tr>
+</table>
 
 ## Support and feedback
 
