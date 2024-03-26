@@ -134,7 +134,7 @@ This page lists the keys for each control and the element to which it is mapped 
     </tr>
 
     <tr>
-        <td rowspan="39">
+        <td rowspan="16">
             SfAutocompleteStyles  
             <br/>
             <br/>
@@ -173,50 +173,14 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         </tr>
-        <tr>
-        <td>
-            SfAutocompletePressedClearButtonIconColor  
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color of the clear button icon in pressed state
-            <br/>
-            <br/>
-        </td>
-    </tr>
     <tr>
         <td>
-            SfAutocompletePressedClearButtonBorder 
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color of the clear button border in pressed state
-        <br/>
-        <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfAutocompletePressedClearButtonBackground  
+            SfAutocompleteNormalFontSize
             <br/>
             <br/>
         </td> 
         <td>
-            Color of the clear button Background in pressed state
-            <br/>
-            <br/>
-        </td>
-    </tr>
-     <tr>
-        <td>
-            SfAutocompleteNormalStroke  
-            <br/>
-            <br/>
-        </td> 
-        <td>
-            Color of the AutoComplete Background in normal state
+            Font size of SfAutocomplete
             <br/>
             <br/>
         </td>
@@ -235,48 +199,120 @@ This page lists the keys for each control and the element to which it is mapped 
     </tr>
      <tr>
         <td>
-            SfAutocompleteNormalClearButtonBorder  
-            <br/>
-            <br/>
-        </td> 
-        <td>
-            Color of the clear button border in normal state
-            <br/>
-            <br/>
-        </td>
-    </tr>
-     <tr>
-        <td>
-            SfAutocompleteNormalClearButtonBackground  
-            <br/>
-            <br/>
-        </td> 
-        <td>
-            Color of the clear button background in normal state
-            <br/>
-            <br/>
-        </td>
-    </tr>
-     <tr>
-        <td>
             SfAutocompleteNormalBackground  
             <br/>
             <br/>
         </td> 
         <td>
-            Color of the AutoComplete background in normal state.
+            Color of the Autocomplete background in normal state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+            SfAutocompleteNormalStroke  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Color of the Autocomplete Background in normal state
             <br/>
             <br/>
         </td>
     </tr>
     <tr>
         <td>
-            SfAutocompleteHoverStroke  
+            SfAutocompleteNormalTextColor
             <br/>
             <br/>
         </td> 
         <td>
-            Color of the AutoComplete stroke in hover state.
+            Color of the SfAutocomplete text color in normal state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfAutocompletePlaceholderTextColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Color of the SfAutocomplete placeholder text. 
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfAutocompleteFocusedBackground
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Color of the Autocomplete background in focus state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfAutocompleteFocusedStroke
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Color of the Autocomplete stroke in focus state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfAutocompleteFocusTextColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Color of the SfAutocomplete text color in focus state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfAutocompleteDisabledBackground
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Color of the SfAutocomplete background in disable state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfAutocompleteDisabledStroke
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Color of the Autocomplete stroke in disable state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfAutocompleteDisabledTextColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Color of the SfAutocomplete text color in disable state.
             <br/>
             <br/>
         </td>
@@ -293,30 +329,6 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
     </tr>
-    <tr>
-        <td>
-            SfAutocompleteHoverClearButtonBorder 
-            <br/>
-            <br/>
-        </td> 
-        <td>
-            Color of the clear button icon in hover state.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfAutocompleteHoverClearButtonBackground
-            <br/>
-            <br/>
-        </td> 
-        <td>
-            Color of the clear button background in hover state.
-            <br/>
-            <br/>
-        </td>
-    </tr>
      <tr>
         <td>
             SfAutocompleteHoverBackground
@@ -324,307 +336,19 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td> 
         <td>
-            Color of the AutoComplete background in hover state.
+            Color of the Autocomplete background in hover state.
             <br/>
             <br/>
         </td>
     </tr>
     <tr>
         <td>
-            SfAutocompleteFocusedStroke
+            SfAutocompleteHoverStroke  
             <br/>
             <br/>
         </td> 
         <td>
-            Color of the AutoComplete stroke in focus state.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfAutocompleteFocusedBackground
-            <br/>
-            <br/>
-        </td> 
-        <td>
-            Color of the AutoComplete background in focus state.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfAutocompleteDisabledStroke
-            <br/>
-            <br/>
-        </td> 
-        <td>
-            Color of the AutoComplete stroke in disable state.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfAutocompleteDisabledClearButtonIconColor
-            <br/>
-            <br/>
-        </td> 
-        <td>
-            Color of the clear button icon in disable state.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfAutocompleteDisabledClearButtonBorder
-            <br/>
-            <br/>
-        </td> 
-        <td>
-            Color of the clear button border in disable state.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfAutocompleteDisabledClearButtonBackground
-            <br/>
-            <br/>
-        </td> 
-        <td>
-            Color of the clear button background in disable state.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfAutocompleteDisabledBackground
-            <br/>
-            <br/>
-        </td> 
-        <td>
-            Color of the AutoComplete background in disable state.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfAutocompleteNormalTextColor
-            <br/>
-            <br/>
-        </td> 
-        <td>
-            Color of the AutoComplete text color in normal state.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfAutocompleteFocusTextColor
-            <br/>
-            <br/>
-        </td> 
-        <td>
-            Color of the AutoComplete text color in focus state.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfAutocompleteDisabledTextColor
-            <br/>
-            <br/>
-        </td> 
-        <td>
-            Color of the AutoComplete text color in disable state.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfAutocompleteReadOnlyTextColor
-            <br/>
-            <br/>
-        </td> 
-        <td>
-            Color of the AutoComplete readonly text. 
-            <br/>
-            <br/>
-        </td>
-    </tr>
-     <tr>
-        <td>
-            SfAutocompleteSelectionTextColor
-            <br/>
-            <br/>
-        </td> 
-        <td>
-            Color of the AutoComplete selection text. 
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfAutocompleteSelectionBackgroundTextColor
-            <br/>
-            <br/>
-        </td> 
-        <td>
-            Color of the AutoComplete selection background text. 
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfAutocompleteDropdownBorder
-            <br/>
-            <br/>
-        </td> 
-        <td>
-            Color of the AutoComplete dropdown border. 
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfAutocompleteDropdownBackground
-            <br/>
-            <br/>
-        </td> 
-        <td>
-            Color of the AutoComplete dropdown background. 
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfAutocompletePlaceholderTextColor
-            <br/>
-            <br/>
-        </td> 
-        <td>
-            Color of the AutoComplete placeholder text. 
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfAutocompleteNormalDropdownItemsTextColor
-            <br/>
-            <br/>
-        </td> 
-        <td>
-            Color of the AutoComplete dropdown item text in normal state. 
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfAutocompleteNormalDropdownStroke
-            <br/>
-            <br/>
-        </td> 
-        <td>
-            Color of the AutoComplete dropdown stroke in normal state. 
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfAutocompleteNormalDropdownSelectionBackground
-            <br/>
-            <br/>
-        </td> 
-        <td>
-            Color of the AutoComplete dropdown selection background in normal state. 
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfAutocompleteHoverDropdownSelectionBackground
-            <br/>
-            <br/>
-        </td> 
-        <td>
-            Color of the AutoComplete dropdown selection background in hover state. 
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfAutocompletePressedDropdownSelectionBackground
-            <br/>
-            <br/>
-        </td> 
-        <td>
-            Color of the AutoComplete dropdown selection background in pressed state. 
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfAutocompleteNormalFontSize
-            <br/>
-            <br/>
-        </td> 
-        <td>
-            Font size of AutoComplete
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfAutocompleteNormalDropdownCornerRadius
-            <br/>
-            <br/>
-        </td> 
-        <td>
-            CornerRadius of AutoComplete
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfAutocompleteNormalDropdownStrokeThickness
-            <br/>
-            <br/>
-        </td> 
-        <td>
-            Stroke thickness of the AutoComplete dropdown.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfAutocompleteNormalDropdownItemsFontSize
-            <br/>
-            <br/>
-        </td> 
-        <td>
-            FontSize of the AutoComplete
+            Color of the Autocomplete stroke in hover state.
             <br/>
             <br/>
         </td>
@@ -650,7 +374,7 @@ This page lists the keys for each control and the element to which it is mapped 
     </tr>
 
     <tr>
-        <td rowspan="14">
+        <td rowspan="4">
             SfAvatarViewStyles  
             <br/>
             <br/>
@@ -816,7 +540,7 @@ This page lists the keys for each control and the element to which it is mapped 
     </tr>
 
     <tr>
-        <td rowspan="23">
+        <td rowspan="2">
             SfBadgeViewStyles 
             <br/>
             <br/>
@@ -859,259 +583,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the BadgeView background in normal state.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfBadgeViewNormalStroke
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color of the BadgeView stroke in normal state.
-        <br/>
-        <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfBadgeViewNormalTextColor  
-            <br/>
-            <br/>
-        </td> 
-        <td>
-            Color of the BadgeView text in normal state.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfBadgeViewErrorBackground  
-            <br/>
-            <br/>
-        </td> 
-        <td>
-            Color of the BadgeView error background.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfBadgeViewErrorStroke  
-            <br/>
-            <br/>
-        </td> 
-        <td>
-            Color of the BadgeView error stroke.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfBadgeViewSuccessBackground  
-            <br/>
-            <br/>
-        </td> 
-        <td>
-            Color of the BadgeView success background.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfBadgeViewSuccessStroke  
-            <br/>
-            <br/>
-        </td> 
-        <td>
-            Color of the BadgeView success stroke.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfBadgeViewDarkBackground  
-            <br/>
-            <br/>
-        </td> 
-        <td>
-            Color of the BadgeView dark background.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfBadgeViewDarkStroke  
-            <br/>
-            <br/>
-        </td> 
-        <td>
-            Color of the BadgeView dark stroke.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfBadgeViewLightStroke  
-            <br/>
-            <br/>
-        </td> 
-        <td>
-            Color of the BadgeView light stroke.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfBadgeViewLightBackground  
-            <br/>
-            <br/>
-        </td> 
-        <td>
-            Color of the BadgeView light background.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfBadgeViewLightTextColor  
-            <br/>
-            <br/>
-        </td> 
-        <td>
-            Color of the BadgeView light text.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfBadgeViewInfoBackground  
-            <br/>
-            <br/>
-        </td> 
-        <td>
-            Color of the BadgeView info background.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfBadgeViewInfoStroke  
-            <br/>
-            <br/>
-        </td> 
-        <td>
-            Color of the BadgeView info stroke.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfBadgeViewSecondaryBackground  
-            <br/>
-            <br/>
-        </td> 
-        <td>
-            Color of the BadgeView secondary background.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfBadgeViewSecondaryTextColor  
-            <br/>
-            <br/>
-        </td> 
-        <td>
-            Color of the BadgeView secondary text.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfBadgeViewSecondaryStroke  
-            <br/>
-            <br/>
-        </td> 
-        <td>
-            Color of the BadgeView secondary stroke.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfBadgeViewWarningBackground  
-            <br/>
-            <br/>
-        </td> 
-        <td>
-            Color of the BadgeView warning background.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfBadgeViewWarningStroke  
-            <br/>
-            <br/>
-        </td> 
-        <td>
-            Color of the BadgeView warning stroke.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfBadgeViewNormalFontSize  
-            <br/>
-            <br/>
-        </td> 
-        <td>
-            FontSize of the BadgeView in normal state.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfBadgeViewNormalStrokeThickness  
-            <br/>
-            <br/>
-        </td> 
-        <td>
-            StrokeThickness of the BadgeView in normal state.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfBadgeViewNormalCornerRadius  
-            <br/>
-            <br/>
-        </td> 
-        <td>
-            CornerRadius of the BadgeView in normal state.
+            Color of the SfBadgeView background in normal state.
             <br/>
             <br/>
         </td>
@@ -1232,7 +704,7 @@ This page lists the keys for each control and the element to which it is mapped 
     </tr>
 
     <tr>
-        <td rowspan="18">
+        <td rowspan="13">
             SfButtonStyles 
             <br/>
             <br/>
@@ -1275,91 +747,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the Button background in normal state.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfButtonPressedBackground
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color of the Button background in pressed state.
-        <br/>
-        <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfButtonHoverBackground  
-            <br/>
-            <br/>
-        </td> 
-        <td>
-            Color of the Button background in hover state.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfButtonHoverStroke  
-            <br/>
-            <br/>
-        </td> 
-        <td>
-            Color of the Button stroke in hover state.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfButtonPressedStroke  
-            <br/>
-            <br/>
-        </td> 
-        <td>
-            Color of the Button stroke in pressed state.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfButtonNormalStroke  
-            <br/>
-            <br/>
-        </td> 
-        <td>
-            Color of the Button stroke in normal state.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfButtonDisabledBackground  
-            <br/>
-            <br/>
-        </td> 
-        <td>
-            Color of the Button background in disable state.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfButtonDisabledStroke  
-            <br/>
-            <br/>
-        </td> 
-        <td>
-            Color of the Button stroke in disable state.
+            Color of the SfButton background in normal state.
             <br/>
             <br/>
         </td>
@@ -1371,19 +759,31 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td> 
         <td>
-            Color of the Button text in normal state.
+            Color of the SfButton text in normal state.
             <br/>
             <br/>
         </td>
     </tr>
     <tr>
         <td>
-            SfButtonPressedTextColor  
+            SfButtonNormalStroke  
             <br/>
             <br/>
         </td> 
         <td>
-            Color of the Button text in pressed state.
+            Color of the SfButton stroke in normal state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfButtonHoverBackground  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Color of the SfButton background in hover state.
             <br/>
             <br/>
         </td>
@@ -1395,7 +795,79 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td> 
         <td>
-            Color of the Button text in hover state.
+            Color of the SfButton text in hover state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfButtonHoverStroke  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Color of the SfButton stroke in hover state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfButtonPressedBackground
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the SfButton background in pressed state.
+        <br/>
+        <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfButtonPressedTextColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Color of the SfButton text in pressed state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfButtonPressedStroke  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Color of the SfButton stroke in pressed state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfButtonDisabledBackground  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Color of the SfButton background in disable state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfButtonDisabledStroke  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Color of the SfButton stroke in disable state.
             <br/>
             <br/>
         </td>
@@ -1407,67 +879,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td> 
         <td>
-            Color of the Button text in disable state.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfButtonFocusedBackground  
-            <br/>
-            <br/>
-        </td> 
-        <td>
-            Color of the Button background in focus state.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfButtonFocusedStroke  
-            <br/>
-            <br/>
-        </td> 
-        <td>
-            Color of the Button stroke in focus state.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfButtonFocusedTextColor  
-            <br/>
-            <br/>
-        </td> 
-        <td>
-            Color of the Button text in focus state.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfButtonNormalStrokeThickness  
-            <br/>
-            <br/>
-        </td> 
-        <td>
-            StrokeThickness of the Button in normal state.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfButtonTextNormalFontSize  
-            <br/>
-            <br/>
-        </td> 
-        <td>
-            FontSize of the Button in normal state.
+            Color of the SfButton text in disable state.
             <br/>
             <br/>
         </td>
@@ -1536,7 +948,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the BusyIndicator overlayfill in normal state.
+            Color of the SfBusyIndicator overlayfill in normal state.
             <br/>
             <br/>
         </td>
@@ -1548,7 +960,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the BusyIndicator indicator.
+            Color of the SfBusyIndicator indicator.
             <br/>
             <br/>
         </td>
@@ -1560,7 +972,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the BusyIndicator text.
+            Color of the SfBusyIndicator text.
             <br/>
             <br/>
         </td>
@@ -1572,7 +984,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            FontSize of the BusyIndicator.
+            FontSize of the SfBusyIndicator.
             <br/>
             <br/>
         </td>
@@ -2795,7 +2207,7 @@ This page lists the keys for each control and the element to which it is mapped 
     </tr>
 
     <tr>
-        <td rowspan="18">
+        <td rowspan="13">
             SfCheckBoxStyles 
             <br/>
             <br/>
@@ -2838,31 +2250,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the CheckBox in it's uncheck state.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfCheckBoxHoverUncheckedColor 
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color of the CheckBox in its unchecked state while hovering.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfCheckBoxPressedUncheckedColor  
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color of the CheckBox in it's unchecked state while pressed.
+            Color of the SfCheckBox in it's uncheck state.
             <br/>
             <br/>
         </td>
@@ -2874,31 +2262,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the CheckBox in it's check state
-            <br/>
-            <br/>
-        </td>
-    </tr>
-     <tr>
-        <td>
-            SfCheckBoxHoverCheckedColor  
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color of the CheckBox in it's check state while hovering.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfCheckBoxPressedCheckedColor  
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color of the CheckBox in it's check state while pressed.
+            Color of the SfCheckBox in it's check state
             <br/>
             <br/>
         </td>
@@ -2910,43 +2274,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the CheckBox text.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfCheckBoxHoverTextColor  
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color of the CheckBox text in hover state.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfCheckBoxPressedTextColor  
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color of the CheckBox text in pressed state.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfCheckBoxNormalBackgroundColor  
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color of the CheckBox background in normal state.
+            Color of the SfCheckBox text.
             <br/>
             <br/>
         </td>
@@ -2958,7 +2286,79 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the CheckBox tick.
+            Color of the SfCheckBox tick.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+            SfCheckBoxHoverCheckedColor  
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the SfCheckBox in it's check state while hovering.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfCheckBoxHoverUncheckedColor 
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the SfCheckBox in its unchecked state while hovering.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfCheckBoxHoverTextColor  
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the SfCheckBox text in hover state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfCheckBoxPressedCheckedColor  
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the SfCheckBox in it's check state while pressed.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfCheckBoxPressedUncheckedColor  
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the SfCheckBox in it's unchecked state while pressed.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfCheckBoxPressedTextColor  
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the SfCheckBox text in pressed state.
             <br/>
             <br/>
         </td>
@@ -2970,7 +2370,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the unchecked CheckBox in disable state.
+            Color of the unchecked SfCheckBox in disable state.
             <br/>
             <br/>
         </td>
@@ -2982,19 +2382,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the checked CheckBox in disable state.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-     <tr>
-        <td>
-            SfCheckBoxNormalFontSize  
-            <br/>
-            <br/>
-        </td>
-        <td>
-            FontSize of the CheckBox.
+            Color of the checked SfCheckBox in disable state.
             <br/>
             <br/>
         </td>
@@ -3020,7 +2408,7 @@ This page lists the keys for each control and the element to which it is mapped 
     </tr>
 
     <tr>
-        <td rowspan="39">
+        <td rowspan="32">
             SfChipStyles 
             <br/>
             <br/>
@@ -3031,7 +2419,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>    
-            By merging this key in application resources, you can customize the appearance of SfCheckBox without merging common theme resource and control style resource dictionaries.
+            By merging this key in application resources, you can customize the appearance of SfChips without merging common theme resource and control style resource dictionaries.
 			
 {% highlight xaml %}
 
@@ -3043,8 +2431,8 @@ This page lists the keys for each control and the element to which it is mapped 
             <syncTheme:SyncfusionThemeResourceDictionary />
             <ResourceDictionary>
                 <x:String x:Key="SfChipTheme">CommonTheme</x:String>
-                <Color x:Key="SfChipGroupNormalSelectionBackground">Purple</Color>
-                <Color x:Key="SfChipGroupPressedBackground">YellowGreen</Color>
+                <Color x:Key="SfChipNormalBackground">Purple</Color>
+                <Color x:Key="SfChipNormalTextColor">YellowGreen</Color>
             </ResourceDictionary>
         </ResourceDictionary.MergedDictionaries>
     </ResourceDictionary>
@@ -3056,261 +2444,129 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         </tr>
+    <tr>
+        <td>
+            SfChipNormalStrokeThickness
+            <br/>
+            <br/>
+        </td>
+        <td>
+            StrokeThickness of the SfChips.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfChipNormalFontSize
+            <br/>
+            <br/>
+        </td>
+        <td>
+            FontSize of the SfChips.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfChipNormalCornerRadius
+            <br/>
+            <br/>
+        </td>
+        <td>
+            CornerRadius of the SfChips.
+            <br/>
+            <br/>
+        </td>
+    </tr>
         <tr>
         <td>
-            SfChipGroupDisabledSelectedTextColor  
+            SfChipNormalBackground 
             <br/>
             <br/>
         </td>
         <td>
-            Color of the ChipGroup selected text in disable state.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfChipGroupHoverSelectedTextColor 
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color of the ChipGroup selected text in hover state.
+            Color of the SfChips Background.
             <br/>
             <br/>
         </td>
     </tr>
     <tr>
         <td>
-            SfChipGroupPressedSelectedTextColor  
+            SfChipNormalTextColor  
             <br/>
             <br/>
         </td>
         <td>
-            Color of the ChipGroup selected text in pressed state.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfChipGroupNormalSelectedTextColor  
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color of the ChipGroup selected text in normal state.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-     <tr>
-        <td>
-            SfChipGroupPressedClearButtonBackground  
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color of the clear button background in pressed state.
+            Color of the SfChip TextColor.
             <br/>
             <br/>
         </td>
     </tr>
     <tr>
         <td>
-            SfChipGroupHoverClearButtonBackground  
+            SfChipNormalClearButtonIconColor  
             <br/>
             <br/>
         </td>
         <td>
-            Color of the clear button background in hover state.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfChipGroupPressedClearButtonIconColor  
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color of the clear button icon in pressed state.
+            Color of the clear button icon.
             <br/>
             <br/>
         </td>
     </tr>
     <tr>
         <td>
-            SfChipGroupHoverClearButtonIconColor 
+            SfChipNormalStroke 
             <br/>
             <br/>
         </td>
         <td>
-            Color of the clear button icon in hover state.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfChipGroupNormalClearButtonIconColor  
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color of the clear button icon in normal state.
+            Color of the SfChips stroke.
             <br/>
             <br/>
         </td>
     </tr>
     <tr>
         <td>
-            SfChipGroupNormalClearButtonBackground  
+            SfChipNormalSelectionIndicatorColor
             <br/>
             <br/>
         </td>
         <td>
-            Color of the clear button background in normal state.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfChipGroupNormalBackground  
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color of the Chip background.
+            Color of the SfChips selection indicator.
             <br/>
             <br/>
         </td>
     </tr>
     <tr>
         <td>
-            SfChipGroupPressedBackground  
+            SfChipDisabledBackground
             <br/>
             <br/>
         </td>
         <td>
-            Color of the Chip background in pressed state.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfChipGroupHoverBackground  
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color of the Chip background in hover state.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-     <tr>
-        <td>
-            SfChipGroupHoverStroke  
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color of the Chip stroke in hover state.
+            Color of the SfChips background in disable state.
             <br/>
             <br/>
         </td>
     </tr>
     <tr>
         <td>
-            SfChipGroupPressedStroke  
+            SfChipDisabledTextColor
             <br/>
             <br/>
         </td>
         <td>
-            Color of the Chip stroke in pressed state.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfChipGroupNormalStroke  
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color of the Chip stroke in normal state.
+            Color of the SfChips text in disable state.
             <br/>
             <br/>
         </td>
     </tr>
     <tr>
         <td>
-            SfChipGroupDisabledBackground  
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color of the Chip background in disable state.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfChipGroupChoiceBackground 
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color of the ChipGroup choice background.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfChipGroupDisabledChoiceBackground
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color of the ChipGroup choice background in disable state.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfChipGroupDisabledStroke
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color of the Chip stroke in disable state.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfChipGroupDisabledClearButtonBackground
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color of the clear button background in disable state.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfChipGroupDisabledClearButtonIconColor
+            SfChipDisabledClearButtonIconColor
             <br/>
             <br/>
         </td>
@@ -3322,172 +2578,60 @@ This page lists the keys for each control and the element to which it is mapped 
     </tr>
     <tr>
         <td>
-            SfChipGroupNormalTextColor
+            SfChipDisabledStroke
             <br/>
             <br/>
         </td>
         <td>
-            Color of the Chip text.
+            Color of the SfChips stroke in disable state.
             <br/>
             <br/>
         </td>
     </tr>
     <tr>
         <td>
-            SfChipGroupPressedTextColor
+            SfChipDisabledSelectionIndicatorColor
             <br/>
             <br/>
         </td>
         <td>
-            Color of the Chip text in pressed state.
+            Color of the SfChips selection indicator in disable state.
             <br/>
             <br/>
         </td>
     </tr>
-    <tr>
+        <tr>
         <td>
-            SfChipGroupHoverTextColor
+           SfChipGroupTheme 
             <br/>
             <br/>
         </td>
-        <td>
-            Color of the Chip text in hover state.
+        <td>    
+            By merging this key in application resources, you can customize the appearance of SfChipGroup without merging common theme resource and control style resource dictionaries.
+			
+{% highlight xaml %}
+
+<Application xmlns:syncTheme="clr-namespace:Syncfusion.Maui.Themes;assembly=Syncfusion.Maui.Core"
+             ...>
+ <Application.Resources>
+    <ResourceDictionary>
+        <ResourceDictionary.MergedDictionaries>
+            <syncTheme:SyncfusionThemeResourceDictionary />
+            <ResourceDictionary>
+                <x:String x:Key="SfChipGroupTheme">CommonTheme</x:String>
+                <Color x:Key="SfChipGroupNormalSelectionBackground">Purple</Color>
+                <Color x:Key="SfChipGroupNormalSelectedTextColor">YellowGreen</Color>
+            </ResourceDictionary>
+        </ResourceDictionary.MergedDictionaries>
+    </ResourceDictionary>
+ </Application.Resources>
+ </Application>
+
+{% endhighlight %}
             <br/>
             <br/>
         </td>
-    </tr>
-    <tr>
-        <td>
-            SfChipGroupDisabledTextColor
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color of the Chip text in disable state.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfChipGroupSelectedDisabledTextColor
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color of the Chip selected text in disable state.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfChipGroupSelectedDisabledBackground
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color of the Chip selected background in disable state.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfChipGroupNormalSelectionIndicatorColor
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color of the Chip selection indicator.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfChipGroupPressedSelectionIndicatorColor
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color of the Chip selection indicator in pressed state.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfChipGroupDisabledSelectionIndicatorColor
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color of the Chip selection indicator in disable state.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfChipGroupHoverSelectionBackground
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color of the Chip selection background in hover state.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfChipGroupNormalSelectionBackground
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color of the Chip selection background.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfChipGroupPressedSelectionBackground
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color of the Chip selection background in pressed state.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfChipGroupDisabledSelectionBackground
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color of the Chip selection background in disable state.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfChipGroupNormalFontSize
-            <br/>
-            <br/>
-        </td>
-        <td>
-            FontSize of the Chip.
-            <br/>
-            <br/>
-        </td>
-    </tr>
+        </tr>
     <tr>
         <td>
             SfChipGroupNormalStrokeThickness
@@ -3495,7 +2639,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            StrokeThickness of the Chip.
+            StrokeThickness of the SfChipGroup.
             <br/>
             <br/>
         </td>
@@ -3507,7 +2651,175 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            CornerRadius of the Chip.
+            CornerRadius of the SfChipGroup.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfChipGroupNormalSelectedTextColor  
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the SfChipGroup selected text in normal state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfChipGroupNormalClearButtonIconColor
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the clear button icon.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfChipGroupNormalBackground  
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the SfChipGroup background.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfChipGroupNormalTextColor
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the SfChipGroup text.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfChipGroupNormalStroke  
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the SfChipGroup stroke in normal state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfChipGroupNormalSelectionBackground
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the SfChipGroup selection background.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfChipGroupNormalSelectionIndicatorColor
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the SfChipGroup selection indicator.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfChipGroupPressedStroke  
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the SfChipGroup stroke in pressed state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfChipGroupDisabledBackground  
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the SfChipGroup background in disable state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+      <tr>
+        <td>
+            SfChipGroupDisabledTextColor
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the SfChipGroup text in disable state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfChipGroupDisabledStroke
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the SfChipGroup stroke in disable state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfChipGroupSelectedDisabledBackground
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the SfChipGroup selected background in disable state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfChipGroupSelectedDisabledTextColor
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the SfChipGroup selected text in disable state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+            SfChipGroupDisabledSelectionIndicatorColor
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the SfChipGroup selection indicator in disable state.
             <br/>
             <br/>
         </td>
@@ -3699,7 +3011,7 @@ This page lists the keys for each control and the element to which it is mapped 
     </tr>
 
     <tr>
-        <td rowspan="46">
+        <td rowspan="21">
             SfComboBoxStyles 
             <br/>
             <br/>
@@ -3735,38 +3047,26 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         </tr>
-        <tr>
+    <tr>
         <td>
-            SfComboBoxPressedClearButtonIconColor  
+            SfComboBoxNormalFontSize
             <br/>
             <br/>
         </td>
         <td>
-            Color of the clear button icon in pressed state.
+            FontSize of the SfComboBox.
             <br/>
             <br/>
         </td>
     </tr>
     <tr>
         <td>
-            SfComboBoxPressedClearButtonBorder  
+            SfComboBoxNormalBackground
             <br/>
             <br/>
         </td>
         <td>
-            Color of the clear button border in pressed state.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfComboBoxPressedClearButtonBackground 
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color of the clear button background in pressed state.
+            Color of the SfComboBox background.
             <br/>
             <br/>
         </td>
@@ -3778,7 +3078,31 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the ComboBox stroke.
+            Color of the SfComboBox stroke.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfComboBoxNormalTextColor
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the SfComboBox text.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+            SfComboBoxPlaceholderTextColor
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the SfComboBox placeholder text.
             <br/>
             <br/>
         </td>
@@ -3797,144 +3121,48 @@ This page lists the keys for each control and the element to which it is mapped 
     </tr>
     <tr>
         <td>
-            SfComboBoxNormalClearButtonBorder 
+            SfComboBoxFocusedBackground
             <br/>
             <br/>
         </td>
         <td>
-            Color of the clear button border.
+            Color of the SfComboBox background in focus state.
             <br/>
             <br/>
         </td>
     </tr>
-    <tr>
-        <td>
-            SfComboBoxNormalClearButtonBackground 
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color of the clear button background.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfComboBoxNormalBackground
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color of the ComboBox background.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfComboBoxHoverStroke
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color of the ComboBox stroke in hover state.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfComboBoxHoverClearButtonIconColor
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color of the clear button icon in hover state.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfComboBoxHoverClearButtonBorder
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color of the clear button border in hover state.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfComboBoxHoverClearButtonBackground
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color of the clear button background in hover state.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfComboBoxHoverBackground
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color of the ComboBox background in hover state.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
+     <tr>
         <td>
             SfComboBoxFocusedStroke
             <br/>
             <br/>
         </td>
         <td>
-            Color of the ComboBox stroke in focus state.
+            Color of the SfComboBox stroke in focus state.
             <br/>
             <br/>
         </td>
     </tr>
     <tr>
         <td>
-            SfComboBoxFocusedBackground
+            SfComboBoxFocusedDropDownIconColor
             <br/>
             <br/>
         </td>
         <td>
-            Color of the ComboBox background in focus state.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfComboBoxFocusedTextColor
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color of the ComboBox text in focus state.
+            Color of the SfComboBox dropdown icon in focus state.
             <br/>
             <br/>
         </td>
     </tr>
-    <tr>
+     <tr>
         <td>
-            SfComboBoxDisabledStroke
+            SfComboBoxFocusedClearButtonIconColor
             <br/>
             <br/>
         </td>
         <td>
-            Color of the ComboBox stroke in disable state.
+            Color of the clear button icon in focus state.
             <br/>
             <br/>
         </td>
@@ -3951,62 +3179,26 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
     </tr>
-    <tr>
-        <td>
-            SfComboBoxDisabledClearButtonBorder
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color of the clear button border in disable state.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfComboBoxDisabledClearButtonBackground
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color of the clear button background in disable state.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
+     <tr>
         <td>
             SfComboBoxDisabledBackground
             <br/>
             <br/>
         </td>
         <td>
-            Color of the ComboBox background in disable state.
+            Color of the SfComboBox background in disable state.
             <br/>
             <br/>
         </td>
     </tr>
     <tr>
         <td>
-            SfComboBoxNormalTextColor
+            SfComboBoxDisabledStroke
             <br/>
             <br/>
         </td>
         <td>
-            Color of the ComboBox text.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfComboBoxFocusTextColor
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color of the ComboBox text in focus state.
+            Color of the SfComboBox stroke in disable state.
             <br/>
             <br/>
         </td>
@@ -4018,187 +3210,19 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the ComboBox text in disable state.
+            Color of the SfComboBox text in disable state.
             <br/>
             <br/>
         </td>
     </tr>
     <tr>
-        <td>
-            SfComboBoxReadOnlyTextColor
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color of the ComboBox readonly text.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfComboBoxSelectionTextColor
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color of the ComboBox selection text.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-     <tr>
-        <td>
-            SfComboBoxSelectionBackgroundTextColor
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color of the ComboBox selection background text.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfComboBoxDropdownBorder
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color of the ComboBox dropdown border.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfComboBoxDropdownBackground
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color of the ComboBox dropdown background.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfComboBoxPlaceholderTextColor
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color of the ComboBox placeholder text.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfComboBoxNormalDropdownItemsTextColor
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color of the ComboBox dropdown item text.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfComboBoxNormalDropdownStroke
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color of the ComboBox dropdown stroke.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfComboBoxNormalDropdownSelectionBackground
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color of the ComboBox dropdown selection background.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfComboBoxHoverDropdownSelectionBackground
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color of the ComboBox dropdown selection background in hover state.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfComboBoxPressedDropdownSelectionBackground
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color of the ComboBox dropdown selection background in pressed state.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-     <tr>
         <td>
             SfComboBoxDisabledDropDownIconColor
             <br/>
             <br/>
         </td>
         <td>
-            Color of the ComboBox dropdown icon in disable state.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfComboBoxNormalDropDownIconColor
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color of the ComboBox dropdown icon.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfComboBoxFocusedDropDownIconColor
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color of the ComboBox dropdown icon in focus state.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfComboBoxFocusedClearButtonIconColor
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color of the clear button icon in focus state.
+            Color of the SfComboBox dropdown icon in disable state.
             <br/>
             <br/>
         </td>
@@ -4210,7 +3234,31 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the ComboBox placeholder text in disable state.
+            Color of the SfComboBox placeholder text in disable state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfComboBoxHoverBackground
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the SfComboBox background in hover state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfComboBoxHoverStroke
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the SfComboBox stroke in hover state.
             <br/>
             <br/>
         </td>
@@ -4222,55 +3270,19 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the ComboBox text in hover state.
+            Color of the SfComboBox text in hover state.
             <br/>
             <br/>
         </td>
     </tr>
-    <tr>
+        <tr>
         <td>
-            SfComboBoxNormalFontSize
+            SfComboBoxNormalDropDownIconColor
             <br/>
             <br/>
         </td>
         <td>
-            FontSize of the ComboBox.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfComboBoxNormalDropdownCornerRadius
-            <br/>
-            <br/>
-        </td>
-        <td>
-            CornerRadius of the ComboBox dropdown.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfComboBoxNormalDropdownStrokeThickness
-            <br/>
-            <br/>
-        </td>
-        <td>
-            StrokeThickness of the ComboBox dropdown.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfComboBoxNormalDropdownItemsFontSize
-            <br/>
-            <br/>
-        </td>
-        <td>
-            FontSize of the ComboBox dropdown item.
+            Color of the SfComboBox dropdown icon.
             <br/>
             <br/>
         </td>
@@ -4619,7 +3631,7 @@ This page lists the keys for each control and the element to which it is mapped 
         <th>Description<br/><br/></th>
     </tr>
     <tr>
-        <td rowspan="27">SfDataGridStyles<br/><br/></td>
+        <td rowspan="33">SfDataGridStyles<br/><br/></td>
 		<td>SfDataGridTheme<br/><br/></td>
         <td>By merging this key in application resources, it is possible to customize the appearance of the SfDataGrid without merging common theme resource and control style resource dictionaries.	
 {% highlight xaml %}
@@ -4719,6 +3731,30 @@ This page lists the keys for each control and the element to which it is mapped 
     <tr>
         <td>SfDataGridStackedHeaderRowTextColor<br/><br/></td>
         <td>Text color of the stacked header rows in the SfDataGrid.<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfDataGridSortNumberTextColor<br/><br/></td>
+        <td>Text color of the sort number in the SfDataGrid.<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfDataGridSortNumberBackground<br/><br/></td>
+        <td>Background color of the sort number in the SfDataGrid.<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfDataGridGroupIconColor<br/><br/></td>
+        <td>Color of the group icon in the SfDataGrid.<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfDataGridCheckBoxColor<br/><br/></td>
+        <td>Color of the check box in the SfDataGrid.<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfDataGridInputBackgroundColor<br/><br/></td>
+        <td>Background color of the input in the SfDataGrid.<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfDataGridSortIconColor<br/><br/></td>
+        <td>Color of the sort icon in the SfDataGrid.<br/><br/></td>
     </tr>
     <tr>
         <td>SfDataGridLoadMoreBackground<br/><br/></td>
@@ -5376,7 +4412,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the EffectsView ripple background.
+            Color of the SfEffectsView ripple background.
             <br/>
             <br/>
         </td>
@@ -5388,7 +4424,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the EffectsView selection background
+            Color of the SfEffectsView selection background
             <br/>
             <br/>
         </td>
@@ -5400,7 +4436,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the EffectsView highlight background.
+            Color of the SfEffectsView highlight background.
             <br/>
             <br/>
         </td>
@@ -5412,7 +4448,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Duration of the EffectsView ripple animation.
+            Duration of the SfEffectsView ripple animation.
             <br/>
             <br/>
         </td>
@@ -6741,7 +5777,7 @@ This page lists the keys for each control and the element to which it is mapped 
     </tr>
 
     <tr>
-        <td rowspan="17">
+        <td rowspan="14">
             SfMaskedEntryStyles 
             <br/>
             <br/>
@@ -6784,55 +5820,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the MaskedEntry text.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfMaskedEntryPlaceholderTextColor  
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color of the MaskedEntry placeholder text.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfMaskedEntryFocusedTextColor  
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color of the MaskedEntry text in focus state.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfMaskedEntryDisabledTextColor 
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color of the MaskedEntry text in disable state.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfMaskedEntryMouseHoveredTextColor 
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color of the MaskedEntry text in hover state.
+            Color of the SfMaskedEntry text.
             <br/>
             <br/>
         </td>
@@ -6844,7 +5832,43 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the MaskedEntry background.
+            Color of the SfMaskedEntry background.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfMaskedEntryPlaceholderTextColor  
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the SfMaskedEntry placeholder text.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+            SfMaskedEntryNormalStroke 
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the SfMaskedEntry stroke.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+            SfMaskedEntryDisabledTextColor 
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the SfMaskedEntry text in disable state.
             <br/>
             <br/>
         </td>
@@ -6856,67 +5880,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the MaskedEntry background in disable state.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfMaskedEntryFocusedBackground 
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color of the MaskedEntry background in focus state.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfMaskedEntryMouseHoveredBackground 
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color of the MaskedEntry background in hover state.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfMaskedEntryMouseHoveredStroke 
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color of the MaskedEntry stroke in hover state.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfMaskedEntryNormalStroke 
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color of the MaskedEntry stroke.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfMaskedEntryFocusedStroke
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color of the MaskedEntry stroke in focus state.
+            Color of the SfMaskedEntry background in disable state.
             <br/>
             <br/>
         </td>
@@ -6928,43 +5892,79 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the MaskedEntry stroke in disable state.
+            Color of the SfMaskedEntry stroke in disable state.
             <br/>
             <br/>
         </td>
     </tr>
     <tr>
         <td>
-            SfMaskedEntrySelectedTextColor
+            SfMaskedEntryMouseHoveredTextColor 
             <br/>
             <br/>
         </td>
         <td>
-            Color of the MaskedEntry selected text.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfMaskedEntrySelectedBackground
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color of the MaskedEntry selected background.
+            Color of the SfMaskedEntry text in hover state.
             <br/>
             <br/>
         </td>
     </tr>
     <tr>
         <td>
-            SfMaskedEntryNormalFontSize
+            SfMaskedEntryMouseHoveredBackground 
             <br/>
             <br/>
         </td>
         <td>
-            FontSize of the MaskedEntry.
+            Color of the SfMaskedEntry background in hover state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfMaskedEntryMouseHoveredStroke 
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the SfMaskedEntry stroke in hover state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfMaskedEntryFocusedTextColor  
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the SfMaskedEntry text in focus state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfMaskedEntryFocusedBackground 
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the SfMaskedEntry background in focus state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfMaskedEntryFocusedStroke
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the SfMaskedEntry stroke in focus state.
             <br/>
             <br/>
         </td>
@@ -7013,8 +6013,8 @@ This page lists the keys for each control and the element to which it is mapped 
             <syncTheme:SyncfusionThemeResourceDictionary />
             <ResourceDictionary>
                 <x:String x:Key="SfNavigationDrawerTheme">CommonTheme</x:String>
-                <Color x:Key="SfEffectsViewRippleBackground">Yellow</Color>
-                <Color x:Key="SfEffectsViewHighlightBackground">Red</Color>
+                <Color x:Key="SfNavigationDrawerContentBackground">Yellow</Color>
+                <Color x:Key="SfNavigationDrawerGreyLayoutBackground">Red</Color>
             </ResourceDictionary>
         </ResourceDictionary.MergedDictionaries>
     </ResourceDictionary>
@@ -7033,7 +6033,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the NavigationDrawer background.
+            Color of the SfNavigationDrawer background.
             <br/>
             <br/>
         </td>
@@ -7045,7 +6045,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the NavigationDrawer layout background.
+            Color of the SfNavigationDrawer layout background.
             <br/>
             <br/>
         </td>
@@ -7071,7 +6071,7 @@ This page lists the keys for each control and the element to which it is mapped 
     </tr>
 
     <tr>
-        <td rowspan="22">
+        <td rowspan="21">
             SfNumericEntryStyles 
             <br/>
             <br/>
@@ -7114,43 +6114,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the NumericEntry text.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfNumericEntryDisabledTextColor 
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color of the NumericEntry text in disable state.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfNumericEntryFocusedTextColor 
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color of the NumericEntry text in focus state.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfNumericEntryMouseHoveredTextColor 
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color of the NumericEntry text in hover state.
+            Color of the SfNumericEntry text.
             <br/>
             <br/>
         </td>
@@ -7162,139 +6126,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the NumericEntry background.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfNumericEntryDisabledBackground 
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color of the NumericEntry background in disable state.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfNumericEntryMouseHoveredBackground 
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color of the NumericEntry background in hover state.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfNumericEntryFocusedBackground 
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color of the NumericEntry background in focus state.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfNumericEntryNormalArrowColor 
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color of the NumericEntry arrow.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfNumericEntryDisabledArrowColor 
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color of the NumericEntry arrow in disable state.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-     <tr>
-        <td>
-            SfNumericEntryPressedArrowColor 
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color of the NumericEntry arrow in pressed state.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfNumericEntryMouseHoveredArrowColor
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color of the NumericEntry arrow in hover state.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfNumericEntryNormalClearButtonColor
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color of the NumericEntry clear button.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfNumericEntryDisabledClearButtonColor
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color of the NumericEntry clear button in disable state.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfNumericEntryPressedClearButtonColor
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color of the NumericEntry clear button in pressed state.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfNumericEntryMouseHoveredClearButtonColor
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color of the NumericEntry clear button in hover state.
+            Color of the SfNumericEntry background.
             <br/>
             <br/>
         </td>
@@ -7306,19 +6138,43 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the NumericEntry stroke.
+            Color of the SfNumericEntry stroke.
             <br/>
             <br/>
         </td>
     </tr>
     <tr>
         <td>
-            SfNumericEntryFocusedStroke
+            SfNumericEntryDisabledTextColor 
             <br/>
             <br/>
         </td>
         <td>
-            Color of the NumericEntry stroke in focus state.
+            Color of the SfNumericEntry text in disable state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfNumericEntryDisabledBackground 
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the SfNumericEntry background in disable state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfNumericEntryDisabledClearButtonColor
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the SfNumericEntry clear button in disable state.
             <br/>
             <br/>
         </td>
@@ -7330,7 +6186,43 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the NumericEntry stroke in disable state.
+            Color of the SfNumericEntry stroke in disable state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfNumericEntryDisabledArrowColor 
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the SfNumericEntry arrow in disable state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+            SfNumericEntryMouseHoveredTextColor 
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the SfNumericEntry text in hover state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfNumericEntryMouseHoveredBackground 
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the SfNumericEntry background in hover state.
             <br/>
             <br/>
         </td>
@@ -7342,19 +6234,115 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the NumericEntry stroke in hover state.
+            Color of the SfNumericEntry stroke in hover state.
             <br/>
             <br/>
         </td>
     </tr>
     <tr>
         <td>
-            SfNumericEntryNormalFontSize
+            SfNumericEntryNormalClearButtonColor
             <br/>
             <br/>
         </td>
         <td>
-            FontSize of the NumericEntry.
+            Color of the SfNumericEntry clear button.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfNumericEntryMouseHoveredArrowColor
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the SfNumericEntry arrow in hover state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfNumericEntryFocusedTextColor 
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the SfNumericEntry text in focus state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfNumericEntryFocusedBackground 
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the SfNumericEntry background in focus state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfNumericEntryFocusedStroke
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the SfNumericEntry stroke in focus state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfNumericEntryPressedClearButtonColor
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the SfNumericEntry clear button in pressed state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfNumericEntryNormalArrowColor 
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the SfNumericEntry arrow.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+            SfNumericEntryPressedArrowColor 
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the SfNumericEntry arrow in pressed state. 
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfNumericEntryPlaceholderTextColor 
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the SfNumericEntry placeholder text.
             <br/>
             <br/>
         </td>
@@ -9906,98 +8894,6 @@ This page lists the keys for each control and the element to which it is mapped 
     </tr>
 </table>
 
-## SfPolar Chart
-
-   <table>
-       <tr>
-           <th>Theme Dictionary <br/> <br/> </th>        
-           <th>Keys <br/> <br/> </th>
-           <th> Description <br/> <br/> </th>
-       </tr>
-       <tr>
-           <td rowspan="14">
-               SfPolarChartStyles  <br/> <br/>
-           </td>
-           <td> SfPolarChartTheme <br/> <br/>
-           </td>
-           <td>    
-               By merging this key in application resources, you can customize the appearance of SfPolarChart without merging common theme resource and control style resource dictionaries.
-               
-   {% highlight xaml %}
-   <Application xmlns:syncTheme="clr-namespace:Syncfusion.Maui.Themes;assembly=Syncfusion.Maui.Core"
-                ...>
-    <Application.Resources>
-       <ResourceDictionary>
-           <ResourceDictionary.MergedDictionaries>
-               <syncTheme:SyncfusionThemeResourceDictionary />
-               <ResourceDictionary>
-                   <x:String x:Key="SfPolarChartTheme">CommonTheme</x:String>
-                   <Color x:Key="SfPolarChartBackground">LightYellow</Color>
-                   <Color x:Key="SfPolarChartTooltipBackground">LightPink</Color>
-               </ResourceDictionary>
-           </ResourceDictionary.MergedDictionaries>
-       </ResourceDictionary>
-    </Application.Resources>
-    </Application>
-   {% endhighlight %}
-               <br/>
-               <br/>
-           </td>
-           </tr>
-          <tr>
-        <td>SfPolarChartBackground<br/><br/></td>
-        <td>Background of polar chart<br/><br/></td>
-    </tr>
-    <tr>
-        <td>SfPolarMajorGridLineStroke<br/><br/></td>
-        <td>Stoke of the axis major grid line.<br/><br/></td>
-    </tr>
-    <tr>
-        <td>SfPolarMinorGridLineStroke<br/><br/></td>
-        <td>Stoke of the axis minor grid line.<br/><br/></td>
-    </tr>
-    <tr>
-        <td>SfPolarMajorTickLineStroke<br/><br/></td>
-        <td>Stoke of the axis major tick line.<br/><br/></td>
-    </tr>
-    <tr>
-        <td>SfPolarMinorTickLineStroke<br/><br/></td>
-        <td>Stoke of the axis minor tick line.<br/><br/></td>
-    </tr>
-    <tr>
-        <td>SfPolarAxisLineStroke<br/><br/></td>
-        <td>Stoke of the axis line.<br/><br/></td>
-    </tr>
-    <tr>
-        <td>SfPolarAxisTitleTextColor<br/><br/></td>
-        <td>Color of the axis title text.<br/><br/></td>
-    </tr>
-    <tr>
-        <td>SfPolarAxisTitleBackground<br/><br/></td>
-        <td>Background color of the axis title.<br/><br/></td>
-    </tr>
-    <tr>
-        <td>SfPolarAxisTitleStroke<br/><br/></td>
-        <td>Stoke of the axis title<br/><br/></td>
-    </tr>
-    <tr>
-        <td>SfPolarChartAxisTitleTextFontSize<br/><br/></td>
-        <td>Font size of the axis title text.<br/><br/></td>
-    </tr>
-    <tr>
-        <td>SfPolarChartTooltipBackground<br/><br/></td>
-        <td>Background of the tooltip<br/><br/></td>
-    </tr>
-    <tr>
-        <td>SfPolarChartTooltipTextColor<br/><br/></td>
-        <td>Text color of the tooltip<br/><br/></td>
-    </tr>
-    <tr>
-        <td>SfPolarChartTooltipTextFontSize<br/><br/></td>
-        <td>Font size of the tooltip text<br/><br/></td>
-    </tr> 
- </table>
-
 ## SfPopup
 
 <table>
@@ -10283,7 +9179,7 @@ This page lists the keys for each control and the element to which it is mapped 
     </tr>
 
     <tr>
-        <td rowspan="15">
+        <td rowspan="13">
             SfRadioButtonStyles 
             <br/>
             <br/>
@@ -10326,31 +9222,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the Unchecked RadioButton.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfRadioButtonHoverUncheckedColor  
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color of the unchecked RadioButton in hover state.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfRadioButtonPressedUncheckedColor  
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color of the unchecked RadioButton in pressed state.
+            Color of the Unchecked SfRadioButton.
             <br/>
             <br/>
         </td>
@@ -10362,31 +9234,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the checked RadioButton.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfRadioButtonHoverCheckedColor  
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color of the checked RadioButton in hover state.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfRadioButtonPressedCheckedColor  
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color of the checked RadioButton in pressed state.
+            Color of the checked SfRadioButton.
             <br/>
             <br/>
         </td>
@@ -10398,7 +9246,31 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the RadioButton text.
+            Color of the SfRadioButton text.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfRadioButtonHoverUncheckedColor  
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the unchecked SfRadioButton in hover state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfRadioButtonHoverCheckedColor  
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the checked SfRadioButton in hover state.
             <br/>
             <br/>
         </td>
@@ -10410,7 +9282,31 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the RadioButton text in hover state.
+            Color of the SfRadioButton text in hover state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfRadioButtonPressedUncheckedColor  
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the unchecked SfRadioButton in pressed state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfRadioButtonPressedCheckedColor  
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the checked SfRadioButton in pressed state.
             <br/>
             <br/>
         </td>
@@ -10422,19 +9318,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the RadioButton text in pressed state.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfRadioButtonNormalBackgroundColor 
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color of the RadioButton background.
+            Color of the SfRadioButton text in pressed state.
             <br/>
             <br/>
         </td>
@@ -10446,7 +9330,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the unchecked RadioButton in disable state.
+            Color of the unchecked SfRadioButton in disable state.
             <br/>
             <br/>
         </td>
@@ -10458,7 +9342,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the checked RadioButton in disable state.
+            Color of the checked SfRadioButton in disable state.
             <br/>
             <br/>
         </td>
@@ -10470,19 +9354,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the RadioButton text in disable state.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfRadioButtonNormalFontSize
-            <br/>
-            <br/>
-        </td>
-        <td>
-            FontSize of the RadioButton.
+            Color of the SfRadioButton text in disable state.
             <br/>
             <br/>
         </td>
@@ -10783,7 +9655,7 @@ This page lists the keys for each control and the element to which it is mapped 
     </tr>
 
     <tr>
-        <td rowspan="5">
+        <td rowspan="7">
             SfRadialMenuStyles 
             <br/>
             <br/>
@@ -10826,7 +9698,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the RadialMenu center button primary background.
+            Color of the SfRadialMenu center button primary background.
             <br/>
             <br/>
         </td>
@@ -10838,7 +9710,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the RadialMenu item Text.
+            Color of the SfRadialMenu item Text.
             <br/>
             <br/>
         </td>
@@ -10850,7 +9722,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the RadialMenu center button background.
+            Color of the SfRadialMenu center button background.
             <br/>
             <br/>
         </td>
@@ -10862,115 +9734,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the RadialMenu rim.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfRadialMenuRoundButtonBackgroundHovered 
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color of the RadialMenu round button background in hover state.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfRadialMenuRoundButtonBackgroundPressed 
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color of the RadialMenu round button background in pressed state.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfRadialMenuRoundButtonDisabledStroke 
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color of the RadialMenu round button stroke in disable state.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfRadialMenuRoundButtonDisabledTextColor 
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color of the RadialMenu round button text in disable state.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfRadialMenuRearViewHoveredColor 
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color of the RadialMenu rear view in hover state.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfRadialMenuRearViewPressedColor 
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color of the RadialMenu rear view in pressed state.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfRadialMenuSeparatorColor
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color of the RadialMenu separator.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfRadialMenuPressedTextColor
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color of the RadialMenu text in pressed state.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfRadialMenuDisabledItemColor
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color of the RadialMenu item in disable state.
+            Color of the SfRadialMenu rim.
             <br/>
             <br/>
         </td>
@@ -10982,7 +9746,19 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the RadialMenu background.
+            Color of the SfRadialMenu background.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+            SfRadialMenuSeparatorColor
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the SfRadialMenu separator.
             <br/>
             <br/>
         </td>
@@ -11051,7 +9827,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the rated portion of a Rating.
+            Color of the rated portion of a SfRating.
             <br/>
             <br/>
         </td>
@@ -11063,7 +9839,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the rated portion of a Rating stroke.
+            Color of the rated portion of a SfRating stroke.
             <br/>
             <br/>
         </td>
@@ -11075,7 +9851,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the rated portion of a Rating in disable state.
+            Color of the rated portion of a SfRating in disable state.
             <br/>
             <br/>
         </td>
@@ -11087,7 +9863,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the rated portion of a Rating stroke in disable state.
+            Color of the rated portion of a SfRating stroke in disable state.
             <br/>
             <br/>
         </td>
@@ -11099,7 +9875,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the rated portion of a Rating in hover state.
+            Color of the rated portion of a SfRating in hover state.
             <br/>
             <br/>
         </td>
@@ -11111,7 +9887,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the rated portion of a Rating stroke in hover state.
+            Color of the rated portion of a SfRating stroke in hover state.
             <br/>
             <br/>
         </td>
@@ -11123,7 +9899,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the unrated portion of a Rating.
+            Color of the unrated portion of a SfRating.
             <br/>
             <br/>
         </td>
@@ -11135,7 +9911,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the unrated portion of a Rating stroke.
+            Color of the unrated portion of a SfRating stroke.
             <br/>
             <br/>
         </td>
@@ -11147,7 +9923,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the unrated portion of a Rating in disable state.
+            Color of the unrated portion of a SfRating in disable state.
             <br/>
             <br/>
         </td>
@@ -11159,7 +9935,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the unrated portion of a Rating stroke in disable state.
+            Color of the unrated portion of a SfRating stroke in disable state.
             <br/>
             <br/>
         </td>
@@ -11171,7 +9947,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the unrated portion of a Rating in hover state.
+            Color of the unrated portion of a SfRating in hover state.
             <br/>
             <br/>
         </td>
@@ -11183,7 +9959,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the unrated portion of a Rating stroke in hover state.
+            Color of the unrated portion of a SfRating stroke in hover state.
             <br/>
             <br/>
         </td>
@@ -11252,7 +10028,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the selected Rotator dot.
+            Color of the selected SfRotator dot.
             <br/>
             <br/>
         </td>
@@ -11264,7 +10040,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the unselected Rotator dot.
+            Color of the unselected SfRotator dot.
             <br/>
             <br/>
         </td>
@@ -11300,7 +10076,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the Rotator navigation button background.
+            Color of the SfRotator navigation button background.
             <br/>
             <br/>
         </td>
@@ -11312,7 +10088,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the Rotator navigation button icon.
+            Color of the SfRotator navigation button icon.
             <br/>
             <br/>
         </td>
@@ -13008,7 +11784,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the SignaturePad background.
+            Color of the SfSignaturePad background.
             <br/>
             <br/>
         </td>
@@ -13020,7 +11796,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the SignaturePad stroke.
+            Color of the SfSignaturePad stroke.
             <br/>
             <br/>
         </td>
@@ -14087,7 +12863,7 @@ This page lists the keys for each control and the element to which it is mapped 
     </tr>
 
     <tr>
-        <td rowspan="30">
+        <td rowspan="15">
             SfSwitchStyles 
             <br/>
             <br/>
@@ -14125,48 +12901,12 @@ This page lists the keys for each control and the element to which it is mapped 
         </tr>
         <tr>
         <td>
-            SfSwitchOffThumbBackground  
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Background color for the thumb of a Switch control in the off state.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfSwitchOffTrackStroke  
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color for the track stroke of a Switch control in the off state.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfSwitchOffThumbStroke  
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color for the thumb stroke of a Switch control in the off state.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
             SfSwitchTrackBackground  
             <br/>
             <br/>
         </td>
         <td>
-             Background color for the track of a Switch control in the on state.
+             Background color for the track of a SfSwitch control in the on state.
             <br/>
             <br/>
         </td>
@@ -14178,31 +12918,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-             Background color for the thumb of a Switch control in the on state.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfSwitchTrackStroke  
-            <br/>
-            <br/>
-        </td>
-        <td>
-             Color for the track stroke of a Switch control in the on state.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfSwitchThumbStroke  
-            <br/>
-            <br/>
-        </td>
-        <td>
-             Color for the thumb stroke of a Switch control in the on state.
+             Background color for the thumb of a SfSwitch control in the on state.
             <br/>
             <br/>
         </td>
@@ -14214,235 +12930,31 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-             Color for the icon of a Switch control in the on state.
+             Color for the icon of a SfSwitch control in the on state.
             <br/>
             <br/>
         </td>
     </tr>
     <tr>
         <td>
-            SfSwitchOffHoveredThumbBackground  
+            SfSwitchTrackStroke  
             <br/>
             <br/>
         </td>
         <td>
-             Background color for the thumb of a Switch control in the off state when hovered.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfSwitchOffHoveredThumbStroke  
-            <br/>
-            <br/>
-        </td>
-        <td>
-             Stroke color for the thumb of a Switch control in the off state when hovered.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-     <tr>
-        <td>
-            SfSwitchOnHoveredThumbBackground  
-            <br/>
-            <br/>
-        </td>
-        <td>
-             Background color for the thumb of a Switch control in the on state when hovered.
+             Color for the track stroke of a SfSwitch control in the on state.
             <br/>
             <br/>
         </td>
     </tr>
     <tr>
         <td>
-            SfSwitchOnHoveredThumbStroke  
+            SfSwitchThumbStroke  
             <br/>
             <br/>
         </td>
         <td>
-             Stroke color for the thumb of a Switch control in the on state when hovered.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfSwitchOffDisabledTrackBackground  
-            <br/>
-            <br/>
-        </td>
-        <td>
-             Background color for the track of a Switch control in the off state when disabled.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfSwitchOffDisabledThumbBackground  
-            <br/>
-            <br/>
-        </td>
-        <td>
-             Background color for the thumb of a Switch control in the off state when disabled.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfSwitchOffDisabledTrackStroke  
-            <br/>
-            <br/>
-        </td>
-        <td>
-             Stroke color for the track of a Switch control in the off state when disabled.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfSwitchOffDisabledThumbStroke  
-            <br/>
-            <br/>
-        </td>
-        <td>
-             Stroke color for the thumb of a Switch control in the off state when disabled.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfSwitchOnDisabledTrackBackground  
-            <br/>
-            <br/>
-        </td>
-        <td>
-             Background color for the track of a Switch control in the on state when disabled.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfSwitchOnDisabledThumbBackground 
-            <br/>
-            <br/>
-        </td>
-        <td>
-             Background color for the thumb of a Switch control in the on state when disabled.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfSwitchOnDisabledTrackStroke
-            <br/>
-            <br/>
-        </td>
-        <td>
-             Stroke color for the track of a Switch control in the on state when disabled.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfSwitchOnDisabledThumbStroke
-            <br/>
-            <br/>
-        </td>
-        <td>
-             Stroke color for the thumb of a Switch control in the on state when disabled.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfSwitchOnDisabledIconColor
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color for the icon of a Switch control in the on state when disabled.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfSwitchOffTrackBackground
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Background color for the track of a Switch control in the off state.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfSwitchOffThumbWidthRequest
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Width of the thumb for a Switch control in the off state.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfSwitchOffThumbHeightRequest
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Height of the thumb for a Switch control in the off state.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfSwitchTrackStrokeThickness
-            <br/>
-            <br/>
-        </td>
-        <td>
-            StrokeThickness of the track for a Switch control.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfSwitchPressedThumbWidthRequest
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Width of the thumb for a Switch control in the pressed state.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfSwitchPressedThumbHeightRequest
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Height of the thumb for a Switch control in the pressed state.
+             Color for the thumb stroke of a SfSwitch control in the on state.
             <br/>
             <br/>
         </td>
@@ -14454,7 +12966,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Width of the thumb for a Switch control in the on state.
+            Width of the thumb for a SfSwitch control in the on state.
             <br/>
             <br/>
         </td>
@@ -14466,7 +12978,91 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Height of the thumb for a Switch control in the on state.
+            Height of the thumb for a SfSwitch control in the on state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfSwitchOffTrackBackground
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Background color for the track of a SfSwitch control in the off state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+        <tr>
+        <td>
+            SfSwitchOffThumbBackground  
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Background color for the thumb of a SfSwitch control in the off state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfSwitchOffTrackStroke  
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color for the track stroke of a SfSwitch control in the off state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfSwitchOffThumbStroke  
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color for the thumb stroke of a SfSwitch control in the off state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfSwitchOffThumbWidthRequest
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Width of the thumb for a SfSwitch control in the off state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfSwitchOffThumbHeightRequest
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Height of the thumb for a SfSwitch control in the off state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfSwitchTrackStrokeThickness
+            <br/>
+            <br/>
+        </td>
+        <td>
+            StrokeThickness of the track for a SfSwitch control.
             <br/>
             <br/>
         </td>
@@ -14492,7 +13088,7 @@ This page lists the keys for each control and the element to which it is mapped 
     </tr>
 
     <tr>
-        <td rowspan="22">
+        <td rowspan="32">
             SfTabViewStyles 
             <br/>
             <br/>
@@ -14515,7 +13111,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <syncTheme:SyncfusionThemeResourceDictionary />
             <ResourceDictionary>
                 <x:String x:Key="SfTabViewTheme">CommonTheme</x:String>
-                <Color x:Key="SfTabViewNormalTextColor">DarkBlue</Color>
+                <Color x:Key="SfTabViewActiveMouseHoveredIndicatorBackground">DarkBlue</Color>
                 <Color x:Key="SfTabViewNormalTabBarBackground">Gold</Color>
             </ResourceDictionary>
         </ResourceDictionary.MergedDictionaries>
@@ -14528,42 +13124,6 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         </tr>
-        <tr>
-        <td>
-            SfTabViewNormalTextColor  
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color of the TabView text.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfTabViewSelectedTextColor  
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color of the TabView selected text.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfTabViewActiveTextColor  
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color of the TabView active text.
-            <br/>
-            <br/>
-        </td>
-    </tr>
     <tr>
         <td>
             SfTabViewDisabledTextColor  
@@ -14571,31 +13131,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the TabView text in disabled state.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfTabViewNormalTabBarBackground  
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color of the TabView tabbar background.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfTabViewDisabledTabBarBackground  
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color of the TabView tabbar background in disabled state.
+            Color of the SfTabView text in disabled state.
             <br/>
             <br/>
         </td>
@@ -14607,7 +13143,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Background color of the active indicator in a TabView.
+            BackgroundColor of the active indicator in a SfTabView.
             <br/>
             <br/>
         </td>
@@ -14619,7 +13155,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Background color of the active indicator in a TabView when hovered.
+            BackgroundColor of the active indicator in a SfTabView when hovered.
             <br/>
             <br/>
         </td>
@@ -14631,7 +13167,19 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Background color of the active indicator in a TabView when disabled.
+            BackgroundColor of the active indicator in a SfTabView when disabled. 
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfTabViewNormalTextColor 
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the SfTabView text.
             <br/>
             <br/>
         </td>
@@ -14643,19 +13191,19 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Background color of the active TabView.
+            BackgroundColor of the active SfTabView. 
             <br/>
             <br/>
         </td>
     </tr>
     <tr>
         <td>
-            SfTabViewActiveFocusedBackground  
+            SfTabViewInActiveNormalTextColor 
             <br/>
             <br/>
         </td>
         <td>
-            Background color of the active TabView in focus state.
+            TextColor of the inactive SfTabView. 
             <br/>
             <br/>
         </td>
@@ -14667,91 +13215,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Background color of the active TabView in pressed state.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfTabViewActiveDisabledBackground 
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Background color of the active TabView in disabled state.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfTabViewActiveHoveredBackground 
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Background color of the active TabView in hover state.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfTabViewInActiveNormalBackground 
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Background color of the inactive TabView.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfTabViewInActiveFocusedBackground 
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Background color of the inactive TabView in focus state.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfTabViewInActivePressedBackground
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Background color of the inactive TabView in pressed state.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfTabViewInActiveDisabledBackground
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Background color of the inactive TabView in disabled state.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfTabViewInActiveHoveredBackground
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Background color of the inactive TabView in hover state.
+            BackgroundColor of the active SfTabView in pressed state.
             <br/>
             <br/>
         </td>
@@ -14763,20 +13227,272 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Text color of the inactive TabView.
+            TextColor of the inactive SfTabView.
             <br/>
             <br/>
         </td>
     </tr>
     <tr>
         <td>
-            SfTabViewNormalFontSize
+            SfTabViewInActivePressedBackground
             <br/>
             <br/>
         </td>
         <td>
-            FontSize of the TabView.
-            <br/> 
+            BackgroundColor of the inactive SfTabView in pressed state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfTabViewActiveTextColor
+            <br/>
+            <br/>
+        </td>
+        <td>
+            TextColor of the active SfTabView. 
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfTabViewInActiveNormalBackground 
+            <br/>
+            <br/>
+        </td>
+        <td>
+            BackgroundColor of the inactive SfTabView.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfTabViewSelectedTextColor
+            <br/>
+            <br/>
+        </td>
+        <td>
+            TextColor of the selected SfTabView.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfTabViewInActiveDisabledBackground
+            <br/>
+            <br/>
+        </td>
+        <td>
+            BackgroundColor of the inactive SfTabView in disabled state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfTabViewInActiveHoveredBackground
+            <br/>
+            <br/>
+        </td>
+        <td>
+            BackgroundColor of the inactive SfTabView in hover state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfTabViewNormalFilledTextColor
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the filled SfTabView text.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfTabViewActiveFilledNormalBackground
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the active fill SfTabView background.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfTabViewActiveHoveredFilledTextColor
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the active hovered fill SfTabView text.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfTabViewActiveHoveredBackground 
+            <br/>
+            <br/>
+        </td>
+        <td>
+            BackgroundColor of the active SfTabView in hover state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfTabViewInActiveHoveredFilledTextColor 
+            <br/>
+            <br/>
+        </td>
+        <td>
+            TextColor of the inactive SfTabView in hover state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfTabViewInActiveHoveredFilledBackground 
+            <br/>
+            <br/>
+        </td>
+        <td>
+            BackgroundColor of the inactive fill SfTabView in hover state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfTabViewActivePressedFilledTextColor 
+            <br/>
+            <br/>
+        </td>
+        <td>
+            TextColor of the active filled SfTabView in pressed state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfTabViewActivePressedFilledBackground
+            <br/>
+            <br/>
+        </td>
+        <td>
+            BackgroundColor of the active filled SfTabView in pressed state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfTabViewInActivePressedFilledTextColor
+            <br/>
+            <br/>
+        </td>
+        <td>
+            TextColor of the inactive filled SfTabView in pressed state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfTabViewInActivePressedFilledBackground
+            <br/>
+            <br/>
+        </td>
+        <td>
+            BackgroundColor of the inactive filled SfTabView in pressed state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfTabViewActiveFocusedFilledTextColor
+            <br/>
+            <br/>
+        </td>
+        <td>
+            TextColor of the active filled SfTabView in focus state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfTabViewActiveFocusedFilledBackground
+            <br/>
+            <br/>
+        </td>
+        <td>
+            BackgroundColor of the active filled SfTabView in focus state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfTabViewSelectedFilledTextColor
+            <br/>
+            <br/>
+        </td>
+        <td>
+            TextColor of the selected filled SfTabView.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfTabViewSelectedFilledBackground
+            <br/>
+            <br/>
+        </td>
+        <td>
+            BackgroundColor of the selected filled SfTabView.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfTabViewDisabledFilledTextColor
+            <br/>
+            <br/>
+        </td>
+        <td>
+            TextColor of the disabled filled SfTabView.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+            SfTabViewDisabledFilledBackground
+            <br/>
+            <br/>
+        </td>
+        <td>
+            BackgroundColor of the disabled filled SfTabView.
+            <br/>
             <br/>
         </td>
     </tr>
@@ -14801,7 +13517,7 @@ This page lists the keys for each control and the element to which it is mapped 
     </tr>
 
     <tr>
-        <td rowspan="23">
+        <td rowspan="11">
             SfTextInputLayoutStyles 
             <br/>
             <br/>
@@ -14837,18 +13553,6 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         </tr>
-        <tr>
-        <td>
-            SfTextInputLayoutStroke  
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color of the TextInputLayout stroke.
-            <br/>
-            <br/>
-        </td>
-    </tr>
     <tr>
         <td>
             SfTextInputLayoutNormalContainerBackground  
@@ -14856,151 +13560,19 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the TextInputLayout background in normal state.
+            Color of the SfTextInputLayout background in normal state.
             <br/>
             <br/>
         </td>
     </tr>
-    <tr>
+        <tr>
         <td>
-            SfTextInputLayoutContainerBackground  
+            SfTextInputLayoutStroke  
             <br/>
             <br/>
         </td>
         <td>
-            Color of the TextInputLayout background.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfTextInputLayoutNormalErrorTextColor 
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color of the TextInputLayout error text.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfTextInputLayoutHintTextColor 
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color of the TextInputLayout hint text.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfTextInputLayoutHelperTextColor 
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color of the TextInputLayout helper text.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfTextInputLayoutFocusedHintTextColor 
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color of the TextInputLayout hint text in focus state.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfTextInputLayoutCommonStroke 
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color of the TextInputLayout common stroke.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfTextInputLayoutFocusedContainerBackground
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color of the TextInputLayout background in focus state.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfTextInputLayoutDisabledStroke
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color of the TextInputLayout stroke in disable state.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfTextInputLayoutDisabledContainerBackground
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color of the TextInputLayout background in disable state.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfTextInputLayoutDisabledErrorTextColor
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color of the TextInputLayout error text in disable state.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfTextInputLayoutDisabledHintTextColor
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color of the TextInputLayout hint text in disable state.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfTextInputLayoutDisabledHelperTextColor
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Color of the TextInputLayout helper text in disable state.
+            Color of the SfTextInputLayout stroke.
             <br/>
             <br/>
         </td>
@@ -15012,91 +13584,91 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the TextInputLayout background text in hover state.
+            Color of the SfTextInputLayout background text in hover state.
             <br/>
             <br/>
         </td>
     </tr>
     <tr>
+        <td>
+            SfTextInputLayoutContainerBackground  
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the SfTextInputLayout background.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
         <td>
             SfTextInputLayoutHoveredStroke
             <br/>
             <br/>
         </td>
         <td>
-            Color of the TextInputLayout stroke in hover state.
+            Color of the SfTextInputLayout stroke in hover state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+      <tr>
+        <td>
+            SfTextInputLayoutFocusedContainerBackground
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the SfTextInputLayout background in focus state.
             <br/>
             <br/>
         </td>
     </tr>
     <tr>
         <td>
-            SfTextInputLayoutPressedHintTextColor
+            SfTextInputLayoutCommonStroke 
             <br/>
             <br/>
         </td>
         <td>
-            Color of the TextInputLayout hint text in pressed state.
+            Color of the SfTextInputLayout common stroke.
             <br/>
             <br/>
         </td>
     </tr>
     <tr>
+        <td>
+            SfTextInputLayoutDisabledContainerBackground
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the SfTextInputLayout background in disable state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+            SfTextInputLayoutDisabledStroke
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the SfTextInputLayout stroke in disable state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
         <td>
             SfTextInputLayoutErrorStroke
             <br/>
             <br/>
         </td>
         <td>
-            Color of the TextInputLayout error stroke.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfTextInputLayoutNormalHintFontSize
-            <br/>
-            <br/>
-        </td>
-        <td>
-            FontSize of the TextInputLayout hint text.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfTextInputLayoutFocusedHintFontSize
-            <br/>
-            <br/>
-        </td>
-        <td>
-            FontSize of the TextInputLayout text in focus state.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfTextInputLayoutNormalHelperFontSize
-            <br/>
-            <br/>
-        </td>
-        <td>
-            FontSize of the TextInputLayout helper text.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfTextInputLayoutNormalErrorFontSize
-            <br/>
-            <br/>
-        </td>
-        <td>
-            FontSize of the TextInputLayout error text.
+            Color of the SfTextInputLayout error stroke.
             <br/>
             <br/>
         </td>
