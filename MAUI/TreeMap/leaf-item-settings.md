@@ -100,6 +100,8 @@ public class PopulationViewModel
 {% endhighlight %}
 {% endtabs %}
 
+ ![leaf-item-label-path-in-maui-tree-map](images/leaf-item-settings/label-path.png)
+
 ## Customize leaf item appearance
 
 The leaf item appearance customization can be achieved by using the [Spacing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapLeafItemSettings.html#Syncfusion_Maui_TreeMap_TreeMapLeafItemSettings_Spacing), [Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapLeafItemSettings.html#Syncfusion_Maui_TreeMap_TreeMapLeafItemSettings_Stroke), [StrokeWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapLeafItemSettings.html#Syncfusion_Maui_TreeMap_TreeMapLeafItemSettings_StrokeWidth), [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapLeafItemSettings.html#Syncfusion_Maui_TreeMap_TreeMapLeafItemSettings_TextStyle), and [TextFormatOption](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapLeafItemSettings.html#Syncfusion_Maui_TreeMap_TreeMapLeafItemSettings_TextFormatOption) properties of [LeafItemSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_LeafItemSettings) in the [SfTreeMap](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html).
@@ -194,6 +196,8 @@ public class PopulationViewModel
 {% endhighlight %}
 {% endtabs %}
 
+ ![leaf-item-spacing-in-maui-tree-map](images/leaf-item-settings/leaf-item-spacing.png)
+
 ### Customize leaf item appearance using stroke
 
 The leaf item appearance customization can be achieved by using the [Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapLeafItemSettings.html#Syncfusion_Maui_TreeMap_TreeMapLeafItemSettings_Stroke) property of [LeafItemSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_LeafItemSettings) in [SfTreeMap](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html). It is used to customize the stroke color for the tree map leaf items. The default value of [Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapLeafItemSettings.html#Syncfusion_Maui_TreeMap_TreeMapLeafItemSettings_Stroke) property is `Transparent.`
@@ -283,6 +287,8 @@ public class PopulationViewModel
 
 {% endhighlight %}
 {% endtabs %}
+
+ ![leaf-item-stroke-in-maui-tree-map](images/leaf-item-settings/leaf-item-stroke.png)
 
 ### Customize leaf item appearance using stroke width
 
@@ -375,6 +381,8 @@ public class PopulationViewModel
 {% endhighlight %}
 {% endtabs %}
 
+ ![leaf-item-stroke-width-in-maui-tree-map](images/leaf-item-settings/leaf-item-stroke-width.png)
+
 ### Customize leaf item appearance using text format option
 
 The leaf item appearance customization can be achieved by using the [TextFormatOption](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapLeafItemSettings.html#Syncfusion_Maui_TreeMap_TreeMapLeafItemSettings_TextFormatOption) property of [LeafItemSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_LeafItemSettings) in [SfTreeMap](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html). This property, applicable only when [LabelPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapLeafItemSettings.html#Syncfusion_Maui_TreeMap_TreeMapLeafItemSettings_LabelPath) is specified, defaults to [Trim](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TextFormatOption.html#Syncfusion_Maui_TreeMap_TextFormatOption_Trim). Options include [Wrap](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TextFormatOption.html#Syncfusion_Maui_TreeMap_TextFormatOption_Wrap) or [Hide](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TextFormatOption.html#Syncfusion_Maui_TreeMap_TextFormatOption_Hide) for altering text appearance.
@@ -464,6 +472,8 @@ public class PopulationViewModel
 
 {% endhighlight %}
 {% endtabs %}
+
+ ![leaf-item-text-format-option-in-maui-tree-map](images/leaf-item-settings/leaf-item-text-format-option.png)
 
 ### Customize leaf item appearance using style
 
@@ -566,3 +576,5 @@ public class PopulationViewModel
 {% endtabs %}
 
 N> This property is applicable to only when the [LabelPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapLeafItemSettings.html#Syncfusion_Maui_TreeMap_TreeMapLeafItemSettings_LabelPath) property is specified.
+
+ ![leaf-item-text-style-in-maui-tree-map](images/leaf-item-settings/leaf-item-text-style.png)
