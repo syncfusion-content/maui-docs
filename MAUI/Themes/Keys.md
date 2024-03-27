@@ -140,7 +140,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
 		<td>
-           SfAutoCompleteTheme 
+           SfAutocompleteTheme 
             <br/>
             <br/>
         </td>
@@ -156,7 +156,7 @@ This page lists the keys for each control and the element to which it is mapped 
         <ResourceDictionary.MergedDictionaries>
             <syncTheme:SyncfusionThemeResourceDictionary />
             <ResourceDictionary>
-                <x:String x:Key="SfAutoCompleteTheme">CommonTheme</x:String>
+                <x:String x:Key="SfAutocompleteTheme">CommonTheme</x:String>
                 <Color x:Key="SfAutocompleteNormalTextColor">Pink</Color>
                 <Color x:Key="SfAutocompletePlaceholderTextColor">Blue</Color>
             </ResourceDictionary>
