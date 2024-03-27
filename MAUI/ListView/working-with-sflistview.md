@@ -96,6 +96,27 @@ The [ItemDoubleTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListV
 * To delete the item in the list view at runtime.
 * To change the underlying bound data.
 
+### ItemRightTapped event
+
+The [ItemRightTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemRightTapped) event will be triggered whenever the item is right tapped. The [ItemRightTappedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemRightTappedEventArgs.html) has the following members providing information for the `ItemRightTapped` event:
+
+ * [ItemType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemRightTappedEventArgs.html#Syncfusion_Maui_ListView_ItemRightTappedEventArgs_ItemType): Gets the type of right tapped item.
+ * [DataItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemRightTappedEventArgs.html#Syncfusion_Maui_ListView_ItemRightTappedEventArgs_DataItem): The underlying data is associated with the right tapped item as its arguments.
+ * [Position](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemRightTappedEventArgs.html#Syncfusion_Maui_ListView_ItemRightTappedEventArgs_Position): Gets the touch position in the right tapped item.
+
+{% tabs %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+    listView.ItemRightTapped += ListView_ItemRightTapped;
+
+    private void ListView_ItemRightTapped(object sender, Syncfusion.Maui.ListView.ItemRightTappedEventArgs e)
+    {
+        DisplayAlert("Item RightTapped", "ListView item right tapped", "Close");
+    }
+
+{% endhighlight %}
+{% endtabs %}
+
 ### ItemLongPress event
 
 The [ItemLongPress](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemLongPress) event will be triggered whenever long pressing the item. Here, [LongPressCommandParameter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_LongPressCommandParameter) sets the parameter for [SfListView.LongPressCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_LongPressCommand) and its default value is [ItemLongPressEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemLongPressEventArgs.html). `ItemLongPressEventArgs` has the following members, which provides information for `ItemLongPress` event:

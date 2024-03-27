@@ -97,11 +97,11 @@ chart.Series.Add(series);
 
 ## Formatting Label Context
 
-The content of the label can be customized using the [LabelContext]() property. Following are the two options that are supported now,
+The content of the label can be customized using the [LabelContext](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.LabelContext.html) property. Following are the two options that are supported now,
 
-* [Percentage]() - This will show the percentage value of corresponding data point Y value.
+* [Percentage](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.LabelContext.html#Syncfusion_Maui_Charts_LabelContext_Percentage) - This will show the percentage value of corresponding data point Y value.
 
-* [YValue]() - This will show the corresponding Y value.
+* [YValue](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.LabelContext.html#Syncfusion_Maui_Charts_LabelContext_YValue) - This will show the corresponding Y value.
 
 {% tabs %}
 
@@ -143,7 +143,7 @@ this.Content = chart;
 
 ## LabelTemplate
 
-The [SfCircularChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCircularChart.html) provides support to customize the appearance of the datalabel using the [LabelTemplate]() property.
+The [SfCircularChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCircularChart.html) provides support to customize the appearance of the datalabel using the [LabelTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_LabelTemplate) property.
 
 {% tabs %}
 

@@ -9,14 +9,14 @@ documentation: ug
 
 # Getting Started with .NET MAUI Parallax View (SfParallaxView)
 
-This section explains the steps required to configure the [`SfParallaxView`]() control and add basic elements to it using various APIs.
+This section explains the steps required to configure the [`SfParallaxView`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ParallaxView.SfParallaxView.html) control and add basic elements to it using various APIs.
 
 ## Creating an application using .NET MAUI Parallax View
 
 1. Create a new .NET MAUI application in Visual studio.
 2. Syncfusion .NET MAUI components are available in [nuget.org](https://www.nuget.org/). To add SfParallaxView to your project, open the NuGet package manager in Visual Studio, search for Syncfusion.Maui.ParallaxView and then install it.
 3. To initialize the control, import the Parallax View namespace.
-4. Initialize [SfParallaxView]().
+4. Initialize [SfParallaxView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ParallaxView.SfParallaxView.html).
 
 {% tabs %} 
 
@@ -88,7 +88,7 @@ namespace ParallaxViewGettingStarted
 
 ## Add content to the parallax view
 
-The [`Content`]() represents the background view of a parallax view. Set any kind of view to the [`Content`]() property, such as Image and StackLayout.
+The [`Content`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ParallaxView.SfParallaxView.html#Syncfusion_Maui_ParallaxView_SfParallaxView_Content) represents the background view of a parallax view. Set any kind of view to the [`Content`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ParallaxView.SfParallaxView.html#Syncfusion_Maui_ParallaxView_SfParallaxView_Content) property, such as Image and StackLayout.
 
 The following code sample demonstrates how to set the content property to the parallax view.
 
@@ -147,14 +147,14 @@ namespace ParallaxViewGettingStarted
 
 ## Bind source to the parallax view
 
-The [`Source`]() represents the foreground view of the parallax view. The value of the [`Source`]() should be a scrollable content or the view which implements the [IParallaxView]() interface.
+The [`Source`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ParallaxView.SfParallaxView.html#Syncfusion_Maui_ParallaxView_SfParallaxView_Source) represents the foreground view of the parallax view. The value of the [`Source`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ParallaxView.SfParallaxView.html#Syncfusion_Maui_ParallaxView_SfParallaxView_Source) should be a scrollable content or the view which implements the [IParallaxView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.IParallaxView.html) interface.
 
-Currently, the [SfParallaxView]() directly supports the following controls. Bind the control to the [`Source`]() property.
+Currently, the [SfParallaxView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ParallaxView.SfParallaxView.html) directly supports the following controls. Bind the control to the [`Source`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ParallaxView.SfParallaxView.html#Syncfusion_Maui_ParallaxView_SfParallaxView_Source) property.
 
     1. ScrollView
     2. Syncfusion ListView
 
-The following code sample demonstrates how to bind the Syncfusion ListView to the [`Source`]() property.
+The following code sample demonstrates how to bind the Syncfusion ListView to the [`Source`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ParallaxView.SfParallaxView.html#Syncfusion_Maui_ParallaxView_SfParallaxView_Source) property.
 
 {% tabs %}
 
@@ -265,7 +265,7 @@ public class Contacts
 
 {% endtabs %}
 
-T> The size of the [`Content`]() view will automatically be stretched to the size of the [`Source`]() view.
+T> The size of the [`Content`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ParallaxView.SfParallaxView.html#Syncfusion_Maui_ParallaxView_SfParallaxView_Content) view will automatically be stretched to the size of the [`Source`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ParallaxView.SfParallaxView.html#Syncfusion_Maui_ParallaxView_SfParallaxView_Source) view.
 
 ![Output of Parallax View](ParallaxView_Images/maui_parallaxview.gif)
 

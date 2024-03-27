@@ -38,8 +38,8 @@ PolarAreaSeries series = new PolarAreaSeries()
     YBindingPath = "Tree",
     EnableTooltip = true
 };
-chart.Series.Add(series);
 
+chart.Series.Add(series);
 this.Content = chart;
 
 {% endhighlight %}
@@ -48,7 +48,7 @@ this.Content = chart;
 
 ![Tooltip template in MAUI Chart](Tooltip_images/MAUI_polar_chart_tooltip.png)
 
-The [ChartTooltipBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartTooltipBehavior.html) is used to customize the tooltip. For customizing the tooltip, create an instance [ChartTooltipBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartTooltipBehavior.html) and set it to the [TooltipBehavior]() property of [SfPolarChart](). The following properties are used to customize the tooltip:
+The [ChartTooltipBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartTooltipBehavior.html) is used to customize the tooltip. For customizing the tooltip, create an instance [ChartTooltipBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartTooltipBehavior.html) and set it to the [TooltipBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartBase.html#Syncfusion_Maui_Charts_ChartBase_TooltipBehavior) property of [SfPolarChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPolarChart.html?tabs=tabid-1%2Ctabid-3%2Ctabid-6%2Ctabid-8%2Ctabid-10%2Ctabid-23%2Ctabid-18%2Ctabid-12%2Ctabid-14%2Ctabid-20%2Ctabid-16). The following properties are used to customize the tooltip:
 
 * [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartTooltipBehavior.html#Syncfusion_Maui_Charts_ChartTooltipBehavior_Background) - Gets or sets the background color to the tooltip label.
 * [FontAttributes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartTooltipBehavior.html#Syncfusion_Maui_Charts_ChartTooltipBehavior_FontAttributes) - Gets or sets the font style for the label.
@@ -112,8 +112,8 @@ PolarAreaSeries series = new PolarAreaSeries()
     YBindingPath = "Tree",
     EnableTooltip = true
 };
-chart.Series.Add(series);
 
+chart.Series.Add(series);
 this.Content = chart;
 
 {% endhighlight %}
@@ -122,7 +122,7 @@ this.Content = chart;
 
 ## Template
 
-The [SfPolarChart]() provides support for customizing the appearance of the tooltip by using the [TooltipTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_TooltipTemplate) property.
+The [SfPolarChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPolarChart.html?tabs=tabid-1%2Ctabid-3%2Ctabid-6%2Ctabid-8%2Ctabid-10%2Ctabid-23%2Ctabid-18%2Ctabid-12%2Ctabid-14%2Ctabid-20%2Ctabid-16) provides support for customizing the appearance of the tooltip by using the [TooltipTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_TooltipTemplate) property.
 
 {% tabs %}
 
@@ -132,14 +132,14 @@ The [SfPolarChart]() provides support for customizing the appearance of the tool
     <chart:SfPolarChart.Resources>
          <DataTemplate x:Key="tooltipTemplate1" x:Name="temp">
             <StackLayout>
-                <Label Text="{Binding Item.Direction}" HorizontalTextAlignment="Center" HorizontalOptions="Center"            VerticalTextAlignment="Center" TextColor="White" FontAttributes="Bold" FontFamily="Helvetica" Margin="0,2,0,2" FontSize="12.5"/>
+                <Label Text="{Binding Item.Direction}" HorizontalTextAlignment="Center" HorizontalOptions="Center"             VerticalTextAlignment="Center" TextColor="White" FontAttributes="Bold" FontFamily="Helvetica" Margin="0,2,0,2" FontSize="12.5"/>
                 <BoxView Color="Gray" HeightRequest="1" WidthRequest="90"/>
                     <StackLayout Orientation="Horizontal" VerticalOptions="Fill" Spacing="0" Padding="3" Margin="0" HorizontalOptions="Center">
                         <Ellipse Stroke="White" StrokeThickness="2" HeightRequest="10" 
                             WidthRequest="10" Fill="#48988B" Margin="0,1,3,0"/>
                         <Label Text="Tree"  VerticalTextAlignment="Center" HorizontalOptions="Start" 
                             TextColor="White" FontFamily="Helvetica" FontSize="12" Margin="3,0,3,0"/>
-                        <Label Text="{Binding Item.Tree,StringFormat=' :  {0}'}" VerticalTextAlignment="Center" HorizontalOptions="End"   TextColor="White" FontFamily="Helvetica" Margin="0,0,3,0" FontSize="12"/>
+                        <Label Text="{Binding Item.Tree,StringFormat=' :  {0}'}" VerticalTextAlignment="Center" HorizontalOptions="End" TextColor="White" FontFamily="Helvetica" Margin="0,0,3,0" FontSize="12"/>
                     </StackLayout>
      </StackLayout>
  </DataTemplate>
@@ -169,8 +169,8 @@ PolarAreaSeries series = new PolarAreaSeries()
     EnableTooltip = true,
     TooltipTemplate = chart.Resources["tooltipTemplate1"] as DataTemplate
 };
-chart.Series.Add(series);
 
+chart.Series.Add(series);
 this.Content = chart;
         
 {% endhighlight %}
