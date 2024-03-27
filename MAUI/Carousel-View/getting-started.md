@@ -234,3 +234,5 @@ N> The [SelectedIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carou
 ![OverView image for Carousel](images/gettingstarted.png)
 
 N> You can find the complete getting started sample from this [link.](https://github.com/SyncfusionExamples/Getting-Started-with-.NET-MAUI-SfCarousel)
+
+N> You can also explore our [.NET MAUI Carousel Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/Carousel) that shows you how to render and configure the Carousel in .NET MAUI.
