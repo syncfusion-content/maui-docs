@@ -395,11 +395,11 @@ When specifying the same value for both start and end, a plot line will be drawn
 
 [Text](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartPlotBand.html#Syncfusion_Maui_Charts_ChartPlotBand_Text) can be added to plot bands to indicate the significance of each particular region. The [LabelStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartPlotBand.html#Syncfusion_Maui_Charts_ChartPlotBand_LabelStyle) property provides options to customize plot band text.Following are the options available,
 
-* `HorizontalTextAlignment` -  changes the horizontal alignment of text.
-* `VerticalTextAlignment` - changes the vertical alignment of text.
-* `Angle` - used to rotate the text.
-* `OffsetX` - changes the horizontal padding to the plot band text.
-* `OffsetY` - changes the vertical padding to the plot band text.
+* `HorizontalTextAlignment` - Gets or sets the horizontal alignment of text.
+* `VerticalTextAlignment` - Gets or sets the vertical alignment of text.
+* `Angle` - Gets or sets the angle for the text.
+* `OffsetX` - Gets or sets the horizontal padding for the plot band text.
+* `OffsetY` - Gets or sets the vertical padding for the plot band text.
 
 {% tabs %}
 
