@@ -42,6 +42,7 @@ NumericalAxis secondaryAxis = new NumericalAxis()
 {
     MinorTicksPerInterval = 4 
 };
+
 chart.SecondaryAxis = secondaryAxis;
 
 {% endhighlight %}

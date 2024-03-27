@@ -17,7 +17,7 @@ Polar chart supports the following types of chart axis.
 
 ## Numerical Axis
 
-[NumericalAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.NumericalAxis.html) is used to plot numerical values to the chart. [NumericalAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.NumericalAxis.html) can be defined for both [PrimaryAxis]() and [SecondaryAxis]().
+[NumericalAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.NumericalAxis.html) is used to plot numerical values to the chart. [NumericalAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.NumericalAxis.html) can be defined for both [PrimaryAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPolarChart.html#Syncfusion_Maui_Charts_SfPolarChart_PrimaryAxis) and [SecondaryAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPolarChart.html#Syncfusion_Maui_Charts_SfPolarChart_SecondaryAxis).
 
 {% tabs %}
 
@@ -78,8 +78,9 @@ SfPolarChart chart = new SfPolarChart();
 . . .
 NumericalAxis primaryAxis = new NumericalAxis()
 {
-    Interval = 10, 
+    Interval = 10 
 };
+
 chart.PrimaryAxis = primaryAxis;
 NumericalAxis secondaryAxis = new NumericalAxis();
 chart.SecondaryAxis = secondaryAxis;
@@ -112,6 +113,7 @@ NumericalAxis secondaryAxis = new NumericalAxis()
     Minimum = 0,
     Interval = 20
 };
+
 chart.SecondaryAxis = secondaryAxis;
 
 {% endhighlight %}
@@ -175,8 +177,9 @@ SfPolarChart chart = new SfPolarChart();
 . . .
 CategoryAxis primaryAxis = new CategoryAxis()
 {
-    Interval = 2, 
+    Interval = 2
 };
+
 chart.PrimaryAxis = primaryAxis;
 NumericalAxis secondaryAxis = new NumericalAxis();
 chart.SecondaryAxis = secondaryAxis;
@@ -245,6 +248,7 @@ DateTimeAxis primaryAxis = new DateTimeAxis()
     Interval = 6, 
     IntervalType = DateTimeIntervalType.Months
 };
+
 chart.PrimaryAxis = primaryAxis;
 NumericalAxis secondaryAxis = new NumericalAxis();
 chart.SecondaryAxis = secondaryAxis;
@@ -277,8 +281,9 @@ SfPolarChart chart = new SfPolarChart();
 DateTimeAxis primaryAxis = new DateTimeAxis()
 {
     Minimum = new DateTime(2021,05,10),
-    Maximum = new DateTime(2021,11,01),
+    Maximum = new DateTime(2021,11,01)
 };
+
 chart.PrimaryAxis = primaryAxis;
 
 {% endhighlight %}

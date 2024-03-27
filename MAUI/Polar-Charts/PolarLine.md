@@ -11,7 +11,7 @@ documentation: ug
 
 ## Polar Line Chart
 
-To display a line series in a polar chart, instantiate the [PolarLineSeries]() and include it in the [Series]() collection property of [SfPolarChart]().
+To display a line series in a polar chart, instantiate the [PolarLineSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.PolarLineSeries.html) and include it in the [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPolarChart.html#Syncfusion_Maui_Charts_SfPolarChart_Series) collection property of [SfPolarChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPolarChart.html).
 
 {% tabs %}
 
@@ -44,8 +44,8 @@ PolarLineSeries series = new PolarLineSeries()
     XBindingPath = "Direction",
     YBindingPath = "Tree"
 };
-chart.Series.Add(series);
 
+chart.Series.Add(series);
 this.Content = chart;
 
 {% endhighlight %}
@@ -56,7 +56,7 @@ this.Content = chart;
 
 ## Grid line Type
 
-The [GridLineType]() property used to customize the rendering style of axis grid lines. The default [GridLineType]() is [Circle](). Switching to the [Polygon]() grid line type transforms the polar chart appearance, resembling a spider or web chart.
+The [GridLineType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPolarChart.html#Syncfusion_Maui_Charts_SfPolarChart_GridLineType) property used to customize the rendering style of axis grid lines. The default [GridLineType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPolarChart.html#Syncfusion_Maui_Charts_SfPolarChart_GridLineType) is [Circle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.PolarChartGridLineType.html#Syncfusion_Maui_Charts_PolarChartGridLineType_Circle). Switching to the [Polygon](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.PolarChartGridLineType.html#Syncfusion_Maui_Charts_PolarChartGridLineType_Polygon) grid line type transforms the polar chart appearance, resembling a spider or web chart.
 
 {% tabs %}
 
@@ -80,8 +80,8 @@ PolarLineSeries series = new PolarLineSeries()
     XBindingPath = "Direction",
     YBindingPath = "Tree"
 };
-chart.Series.Add(series);
 
+chart.Series.Add(series);
 this.Content = chart;
 
 {% endhighlight %}
@@ -92,7 +92,7 @@ this.Content = chart;
 
 ## Closed Series
 
-The [IsClosed]() property is used to render the series with or without closed path. The default value of [IsClosed]() is true.
+The [IsClosed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.PolarSeries.html#Syncfusion_Maui_Charts_PolarSeries_IsClosed) property is used to render the series with or without closed path. The default value of [IsClosed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.PolarSeries.html#Syncfusion_Maui_Charts_PolarSeries_IsClosed) is true.
 
 {% tabs %}
 
@@ -118,8 +118,8 @@ PolarLineSeries series = new PolarLineSeries()
     YBindingPath = "Tree",
     IsClosed = "False"
 };
-chart.Series.Add(series);
 
+chart.Series.Add(series);
 this.Content = chart;
 
 {% endhighlight %}
@@ -130,7 +130,7 @@ this.Content = chart;
 
 ## Enable Marker
 
-A marker, also known as a symbol, is used to determine or highlight the position of the data point. To enable markers in the series, set the [ShowMarkers]() property to true.
+A marker, also known as a symbol, is used to determine or highlight the position of the data point. To enable markers in the series, set the [ShowMarkers](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.PolarSeries.html#Syncfusion_Maui_Charts_PolarSeries_ShowMarkers) property to true.
 
 {% tabs %}
 
@@ -138,7 +138,7 @@ A marker, also known as a symbol, is used to determine or highlight the position
 
 <chart:SfPolarChart>
 ...
- <chart:PolarLineSeries XBindingPath="Direction" YBindingPath="Tree" ItemsSource="{Binding PlantDetails}"
+ <chart:PolarLineSeries ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Tree" 
                 ShowMarkers="True"/>
 
 </chart:SfPolarChart>
@@ -151,13 +151,13 @@ SfPolarChart chart = new SfPolarChart();
 ...
 PolarLineSeries series = new PolarLineSeries()
 {
+    ItemsSource = new ViewModel().PlantDetails,
     XBindingPath = "Direction",
     YBindingPath = "Tree",
-    ItemsSource = new ViewModel().PlantDetails,
     ShowMarkers= true
 };
-chart.Series.Add(series);
 
+chart.Series.Add(series);
 this.Content= chart;
 
 {% endhighlight %}
@@ -166,7 +166,7 @@ this.Content= chart;
 
 ### Marker customization
 
-In order to change the series markers appearance, create an instance of the [MarkerSettings]() property. The following properties are used to customize marker appearance.
+In order to change the series markers appearance, create an instance of the [MarkerSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.PolarSeries.html#Syncfusion_Maui_Charts_PolarSeries_MarkerSettings) property. The following properties are used to customize marker appearance.
 
 * [Type](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartMarkerSettings.html#Syncfusion_Maui_Charts_ChartMarkerSettings_Type), of type `ShapeType`, describes the shape of the series marker. The default value of this property is `ShapeType.Circle`.
 * [Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartMarkerSettings.html#Syncfusion_Maui_Charts_ChartMarkerSettings_Stroke), of type `Brush`, indicates the brush used to paint the marker border.
@@ -212,7 +212,6 @@ chartMarker.StrokeWidth= 1;
 chartMarker.Height = 8;
 chartMarker.Width = 8;
 chart.Series.Add(series);
-
 this.Content = chart;
 
 {% endhighlight %}
