@@ -21,18 +21,17 @@ The page layout modes of [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncf
 ### Continuous layout mode
 
 The [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html)’s default page layout mode is `Continuous`. In this mode, the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) displays pages in a continuous vertical scroll, is useful for documents containing a continuous flow of content. It enables users to scroll through the document with ease, providing a more fluid reading experience. 
-To enable the continuous page layout mode, use the following code sample.
+To enable the continuous page layout mode, you can call the following code in a button click.
 
 {% tabs %}
-{% highlight XAML %}
-
-<syncfusion:SfPdfViewer x:Name="PdfViewer" PageLayoutMode = PageLayoutMode.Continuous/>
-
-{% endhighlight %}
 {% highlight c# %}
 
-SfPdfViewer PdfViewer = new SfPdfViewer ();
-PdfViewer.PageLayoutMode = PageLayoutMode.Continuous;
+// Enable or activate the Continuous Page Layout mode.
+void EnableContinuousPageLayoutMode()
+{
+    // Set the PageLayout mode to Continuous using the `SfPdfViewer` instance.
+    PdfViewer.PageLayoutMode = PageLayoutMode.Continuous;
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -40,21 +39,22 @@ PdfViewer.PageLayoutMode = PageLayoutMode.Continuous;
 ### Singe page layout mode
 
 In single page layout mode, the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) shows one page at a time and allows users to swipe or scroll horizontally through the document. It provides a focused view, allowing readers to concentrate on a single page at a time without being distracted. 
-To enable the single page layout mode, use the following code sample.
+To enable the single page layout mode, you can call the following code in a button click.
 
 {% tabs %}
-{% highlight XAML %}
-
-<syncfusion:SfPdfViewer x:Name="PdfViewer" PageLayoutMode = PageLayoutMode.Single/>
-
-{% endhighlight %}
 {% highlight c# %}
 
-SfPdfViewer PdfViewer = new SfPdfViewer ();
-PdfViewer.PageLayoutMode = PageLayoutMode.Single;
+// Enable or activate the Single Page Layout mode.
+void EnableSinglePageLayoutMode()
+{
+    // Set the PageLayout mode to Single using the `SfPdfViewer` instance.
+    PdfViewer.PageLayoutMode = PageLayoutMode.Single;
+}
 
 {% endhighlight %}
 {% endtabs %}
+
+N> You can download the **Custom Toolbar** sample project for the .NET MAUI PDF Viewer [here](https://github.com/SyncfusionExamples/maui-pdf-viewer-examples) , which demonstrates fuctionality related to the [PageLayoutMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.PageLayoutMode.html) feature.
 
 ## Obtain total page count and current page number
 
