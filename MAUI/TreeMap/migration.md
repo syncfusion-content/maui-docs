@@ -1489,7 +1489,7 @@ The [TextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.Tree
 
 <tr>
 <td>{{'[ItemSelected](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfTreeMap.XForms.SfTreeMap.TreeMapItemSelectedEventHandler.html)'| markdownify }}</td>
-<td>SelectionChanged</td>
+<td>{{'[SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_SelectionChanged)'| markdownify }}</td>
 <td>Occurs when the selection within the tree map item is changed.</td>
 </tr>
 </table>

@@ -105,6 +105,8 @@ public class PopulationViewModel
 {% endhighlight %}
 {% endtabs %}
 
+![single-selection-in-maui-tree-map](images/selection/single-selection-in-maui-tree-map.png)
+
 ### Multiple selection
 
 In the [Multiple](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SelectionMode.html#Syncfusion_Maui_TreeMap_SelectionMode_Multiple) selection mode, users can select multiple items simultaneously within the Treemap control.
@@ -194,6 +196,8 @@ public class PopulationViewModel
 
 {% endhighlight %}
 {% endtabs %}
+
+![multiple-selection-in-maui-tree-map](images/selection/multiple-selection-in-maui-tree-map.png)
 
 ### None
 
@@ -285,6 +289,8 @@ public class PopulationViewModel
 {% endhighlight %}
 {% endtabs %}
 
+![none-selection-in-maui-tree-map](images/selection/none-selection-in-maui-tree-map.png)
+
 ## Programmatic item selection
 
 You can programmatically select the tree map items by utilizing the [SelectedItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_SelectedItems) property in the [SfTreeMap](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html). This property holds a collection of the treemap items representing the currently selected ones. In the [Single](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SelectionMode.html#Syncfusion_Maui_TreeMap_SelectionMode_Single) selection mode, only the first item in the SelectedItems collection will be selected. In the [Multiple](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SelectionMode.html#Syncfusion_Maui_TreeMap_SelectionMode_Multiple) selection mode, all items in the [SelectedItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_SelectedItems) collection will be selected. When [SelectionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_SelectionMode) is set to [None](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SelectionMode.html#Syncfusion_Maui_TreeMap_SelectionMode_None), no items are selected.
@@ -373,6 +379,8 @@ public class PopulationViewModel
 
 {% endhighlight %}
 {% endtabs %}
+
+![selected-items-in-maui-tree-map](images/selection/selected-items-in-maui-tree-map.png)
 
 ## Customize selected item appearance
 
@@ -470,6 +478,8 @@ public class PopulationViewModel
 
 N> This property is applicable only when the [SelectionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_SelectionMode) is set to [Single](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SelectionMode.html#Syncfusion_Maui_TreeMap_SelectionMode_Single) or [Multiple](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SelectionMode.html#Syncfusion_Maui_TreeMap_SelectionMode_Multiple).
 
+![selected-item-stroke-in-maui-tree-map](images/selection/selected-item-stroke-in-maui-tree-map.png)
+
 ### Customize selected item appearance using stroke width
 
 The selected item stroke width can be customized by using the [SelectedItemStrokeWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_SelectedItemStrokeWidth) property of [SfTreeMap](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html). The default value of [SelectedItemStrokeWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_SelectedItemStrokeWidth) is `2.`
@@ -561,3 +571,5 @@ public class PopulationViewModel
 {% endtabs %}
 
 N> This property is applicable only when the [SelectionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_SelectionMode) is set to [Single](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SelectionMode.html#Syncfusion_Maui_TreeMap_SelectionMode_Single) or [Multiple](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SelectionMode.html#Syncfusion_Maui_TreeMap_SelectionMode_Multiple).
+
+![selected-item-stroke-width-in-maui-tree-map](images/selection/selected-item-stroke-width-in-maui-tree-map.png)
