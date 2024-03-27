@@ -247,7 +247,7 @@ public class CustomSortComparer : IComparer<object>, ISortDirection
 
 ## Change sort icon color
 
-The default sort icon color can be customized by setting the `DataGridStyle.SortIconColor` property.
+The default sort icon color can be customized by setting the [DataGridStyle.SortIconColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_SortIconColorProperty) property.
 {% tabs %}
 
 {% highlight xaml %}

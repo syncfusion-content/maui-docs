@@ -3631,7 +3631,7 @@ This page lists the keys for each control and the element to which it is mapped 
         <th>Description<br/><br/></th>
     </tr>
     <tr>
-        <td rowspan="27">SfDataGridStyles<br/><br/></td>
+        <td rowspan="33">SfDataGridStyles<br/><br/></td>
 		<td>SfDataGridTheme<br/><br/></td>
         <td>By merging this key in application resources, it is possible to customize the appearance of the SfDataGrid without merging common theme resource and control style resource dictionaries.	
 {% highlight xaml %}
@@ -3731,6 +3731,30 @@ This page lists the keys for each control and the element to which it is mapped 
     <tr>
         <td>SfDataGridStackedHeaderRowTextColor<br/><br/></td>
         <td>Text color of the stacked header rows in the SfDataGrid.<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfDataGridSortNumberTextColor<br/><br/></td>
+        <td>Text color of the sort number in the SfDataGrid.<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfDataGridSortNumberBackground<br/><br/></td>
+        <td>Background color of the sort number in the SfDataGrid.<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfDataGridGroupIconColor<br/><br/></td>
+        <td>Color of the group icon in the SfDataGrid.<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfDataGridCheckBoxColor<br/><br/></td>
+        <td>Color of the check box in the SfDataGrid.<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfDataGridInputBackgroundColor<br/><br/></td>
+        <td>Background color of the input in the SfDataGrid.<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfDataGridSortIconColor<br/><br/></td>
+        <td>Color of the sort icon in the SfDataGrid.<br/><br/></td>
     </tr>
     <tr>
         <td>SfDataGridLoadMoreBackground<br/><br/></td>
@@ -8869,98 +8893,6 @@ This page lists the keys for each control and the element to which it is mapped 
         </td>
     </tr>
 </table>
-
-## SfPolar Chart
-
-   <table>
-       <tr>
-           <th>Theme Dictionary <br/> <br/> </th>        
-           <th>Keys <br/> <br/> </th>
-           <th> Description <br/> <br/> </th>
-       </tr>
-       <tr>
-           <td rowspan="14">
-               SfPolarChartStyles  <br/> <br/>
-           </td>
-           <td> SfPolarChartTheme <br/> <br/>
-           </td>
-           <td>    
-               By merging this key in application resources, you can customize the appearance of SfPolarChart without merging common theme resource and control style resource dictionaries.
-               
-   {% highlight xaml %}
-   <Application xmlns:syncTheme="clr-namespace:Syncfusion.Maui.Themes;assembly=Syncfusion.Maui.Core"
-                ...>
-    <Application.Resources>
-       <ResourceDictionary>
-           <ResourceDictionary.MergedDictionaries>
-               <syncTheme:SyncfusionThemeResourceDictionary />
-               <ResourceDictionary>
-                   <x:String x:Key="SfPolarChartTheme">CommonTheme</x:String>
-                   <Color x:Key="SfPolarChartBackground">LightYellow</Color>
-                   <Color x:Key="SfPolarChartTooltipBackground">LightPink</Color>
-               </ResourceDictionary>
-           </ResourceDictionary.MergedDictionaries>
-       </ResourceDictionary>
-    </Application.Resources>
-    </Application>
-   {% endhighlight %}
-               <br/>
-               <br/>
-           </td>
-           </tr>
-          <tr>
-        <td>SfPolarChartBackground<br/><br/></td>
-        <td>Background of polar chart<br/><br/></td>
-    </tr>
-    <tr>
-        <td>SfPolarMajorGridLineStroke<br/><br/></td>
-        <td>Stoke of the axis major grid line.<br/><br/></td>
-    </tr>
-    <tr>
-        <td>SfPolarMinorGridLineStroke<br/><br/></td>
-        <td>Stoke of the axis minor grid line.<br/><br/></td>
-    </tr>
-    <tr>
-        <td>SfPolarMajorTickLineStroke<br/><br/></td>
-        <td>Stoke of the axis major tick line.<br/><br/></td>
-    </tr>
-    <tr>
-        <td>SfPolarMinorTickLineStroke<br/><br/></td>
-        <td>Stoke of the axis minor tick line.<br/><br/></td>
-    </tr>
-    <tr>
-        <td>SfPolarAxisLineStroke<br/><br/></td>
-        <td>Stoke of the axis line.<br/><br/></td>
-    </tr>
-    <tr>
-        <td>SfPolarAxisTitleTextColor<br/><br/></td>
-        <td>Color of the axis title text.<br/><br/></td>
-    </tr>
-    <tr>
-        <td>SfPolarAxisTitleBackground<br/><br/></td>
-        <td>Background color of the axis title.<br/><br/></td>
-    </tr>
-    <tr>
-        <td>SfPolarAxisTitleStroke<br/><br/></td>
-        <td>Stoke of the axis title<br/><br/></td>
-    </tr>
-    <tr>
-        <td>SfPolarChartAxisTitleTextFontSize<br/><br/></td>
-        <td>Font size of the axis title text.<br/><br/></td>
-    </tr>
-    <tr>
-        <td>SfPolarChartTooltipBackground<br/><br/></td>
-        <td>Background of the tooltip<br/><br/></td>
-    </tr>
-    <tr>
-        <td>SfPolarChartTooltipTextColor<br/><br/></td>
-        <td>Text color of the tooltip<br/><br/></td>
-    </tr>
-    <tr>
-        <td>SfPolarChartTooltipTextFontSize<br/><br/></td>
-        <td>Font size of the tooltip text<br/><br/></td>
-    </tr> 
- </table>
 
 ## SfPopup
 

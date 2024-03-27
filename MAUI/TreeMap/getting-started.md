@@ -267,10 +267,15 @@ public class PopulationViewModel
 {% endhighlight %}
 {% endtabs %}
 
+<<<<<<< HEAD
 ![getting-started-with-maui-tree-map](images/getting-started/getting-started-with-maui-tree-map.png)
 
 ## Applying leaf item brush settings
 
+=======
+## Applying leaf item brush settings
+
+>>>>>>> f2a621d6c92a7f86fbd954e1f206dae85568a60e
 The brush settings are used to customize the fill colors for leaf items based on ranges or values, offering four brush settings: [UniformBrushSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapUniformBrushSettings.html), [RangeBrushSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapRangeBrushSettings.html), [DesaturationBrushSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapDesaturationBrushSettings.html), and [PaletteBrushSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapPaletteBrushSettings.html). Each setting provides unique options for defining and applying color schemes, enhancing the visualization of the treemap.
 
 {% tabs %}
