@@ -147,7 +147,7 @@ The following gif image illustrates the result of the above code:
 
 ## Customize the selection text highlightColor 
 
-The SelectionTextHighlightColor property is used to modify the background color of the selected item text in the combobox control.
+The [SelectionTextHighlightColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_SelectionTextHighlightColor) property is used to modify the background color of the selected item text in the combobox control.
 
 {% tabs %}
 {% highlight xaml %}
@@ -369,7 +369,7 @@ The following image illustrates the result of the above code:
 
 ### Customize the DropDown item text
 
-DropDown items can be customized using the [DropDownItemFontAttributes], [DropDownItemFontFamily], [DropDownItemFontSize], and [DropDownItemTextColor] properties.
+DropDown items can be customized using the [DropDownItemFontAttributes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_DropDownItemFontAttributes), [DropDownItemFontFamily](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_DropDownItemFontFamily), [DropDownItemFontSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_DropDownItemFontSize), and [DropDownItemTextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_DropDownItemTextColor) properties.
 
 {% tabs %}
 {% highlight xaml %}
@@ -401,7 +401,7 @@ combobox.DropDownItemTextColor = Colors.DarkViolet;
 
 ### Customize the DropDown background color
 
-The DropDownBackground property is used to modify the background color of the dropdown.
+The [DropDownBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_DropDownBackground) property is used to modify the background color of the dropdown.
 
 {% tabs %}
 {% highlight xaml %}
@@ -427,7 +427,7 @@ combobox.DropDownBackground = Colors.YellowGreen;
 
 ### Customize the DropDown selected item backgroundcolor
 
-The SelectedDropDownItemBackground property is used to modify the backgroundcolor of selected item in the dropdown.
+The [SelectedDropDownItemBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_SelectedDropDownItemBackground) property is used to modify the backgroundcolor of selected item in the dropdown.
 
 {% tabs %}
 {% highlight xaml %}
@@ -453,7 +453,7 @@ combobox.SelectedDropDownItemBackground = Colors.LightSeaGreen;
 
 ### Customize the DropDown Border Color
 
-The DropDownStroke property is used to modify the border color of the dropdown.
+The [DropDownStroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_DropDownStroke) property is used to modify the border color of the dropdown.
 
 {% tabs %}
 {% highlight xaml %}
@@ -479,7 +479,7 @@ combobox.DropDownStroke = Colors.DarkOrange;
 
 ### Customize the DropDown Border Thickness
 
-The DropDownStrokeThickness property is used to modify the thickness of the dropdown border.
+The [DropDownStrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_DropDownStrokeThickness) property is used to modify the thickness of the dropdown border.
 
 {% tabs %}
 {% highlight xaml %}
@@ -506,7 +506,7 @@ combobox.DropDownStrokeThickness = 5;
 
 ### Customize the DropDown Item Height
 
-The DropDownItemHeight property is used to modify the height of the dropdown items.
+The [DropDownItemHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_DropDownItemHeight) property is used to modify the height of the dropdown items.
 
 {% tabs %}
 {% highlight xaml %}
@@ -935,7 +935,7 @@ N> The `Completed` event is not supported in the Android platform.
 
 ## DropDownOpening Event
 
-The `DropDownOpening` event will be fired whenever opening the dropdown menu in the SfComboBox. It can cancel dropdown opening with CancelEventArgs that contains the following property:
+The [DropDownOpening](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDropdownEntry.html#Syncfusion_Maui_Core_SfDropdownEntry_DropdownOpening) event will be fired whenever opening the dropdown menu in the SfComboBox. It can cancel dropdown opening with CancelEventArgs that contains the following property:
 
  * Cancel: Dropdown opening is based on this value.
 
@@ -979,7 +979,7 @@ The `DropDownOpening` event will be fired whenever opening the dropdown menu in 
 
 ## DropDownOpened Event
 
-The `DropDownOpened` event occurs when the SfComboBox drop-down is opened.
+The [DropDownOpened](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDropdownEntry.html#Syncfusion_Maui_Core_SfDropdownEntry_DropdownOpened) event occurs when the SfComboBox drop-down is opened.
 
 {% tabs %}
 
@@ -1021,7 +1021,7 @@ x:Name="comboBox" >
 
 ## DropDownClosed Event
 
-The `DropDownClosed` event occurs when the SfComboBox drop-down is closed.
+The [DropDownClosed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_DropDownClosed) event occurs when the SfComboBox drop-down is closed.
 
 {% tabs %}
 {% highlight xaml %}
@@ -1079,15 +1079,15 @@ N> The cursor position support is available for editable mode only, and two-way 
 
 ## Border visibility
 
-The `ShowBorder` property of [`SfComboBox`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) is used to modify the visibility of the border and its default value is **true**. The following code example demonstrates how to change the border visibility,
+The [ShowBorder](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_ShowBorder) property of [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) is used to modify the visibility of the border and its default value is **true**. The following code example demonstrates how to change the border visibility,
 
 {% tabs %}
 {% highlight xaml %}
 
 <editors:SfComboBox x:Name="comboBox"
-                            WidthRequest="200" 
-                            HeightRequest="35"
-                            ShowBorder="False"/>
+                    WidthRequest="200" 
+                    HeightRequest="35"
+                    ShowBorder="False"/>
 {% endhighlight %}
 {% highlight C# %}
 
@@ -1105,9 +1105,9 @@ The following image illustrates the result of the above code:
 
 ![.NET MAUI ComboBox showborder](Images/UICustomization/ShowBorder.png)
 
-### TextAlignment
+## TextAlignment
 
-The [`SfComboBox`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) provides support to customize the text alignment by using the `HorizontalTextAlignment` and `VerticalTextAlignment` properties.
+The [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) provides support to customize the text alignment by using the [HorizontalTextAlignment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_HorizontalTextAlignment) and [VerticalTextAlignment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_VerticalTextAlignment) properties.
 
 N> Dynamic changes to the `HorizontalTextAlignment` property may not be functioning as expected on Android platform.
 

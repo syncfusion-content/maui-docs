@@ -301,7 +301,7 @@ public partial class MainPage : ContentPage
 
 ## Disable focus for a column
 
-By default, the current cell is focusable for all the columns. To disable current cell focus for a particular column, you can simply set `DataGridColumn.AllowFocus` property to `false`.
+By default, the current cell is focusable for all the columns. To disable current cell focus for a particular column, you can simply set [DataGridColumn.AllowFocus](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_AllowFocusProperty) property to `false`.
 
 {% tabs %}
 {% highlight XAML %}

@@ -10,7 +10,7 @@ documentation: ug
 
 # Visual States in .NET MAUI Button (SfButton)
 
-The visual of the Button can be customized using `VisualStates`. The `SfButton `control contains the following five visual states:
+The visual of the Button can be customized using `VisualStates`. The [SfButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfButton.html) control contains the following five visual states:
 
 * Normal
 * Hovered
@@ -18,7 +18,7 @@ The visual of the Button can be customized using `VisualStates`. The `SfButton `
 * Checked
 * Disabled
 
-N> The visual states Checked and Unchecked are only updated when enabling the IsCheckable property in the SfButton.
+N> The visual states [Checked](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfButton.html#Syncfusion_Maui_Buttons_SfButton_IsChecked) and Unchecked are only updated when enabling the [IsCheckable](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfButton.html#Syncfusion_Maui_Buttons_SfButton_IsCheckable) property in the SfButton.
 
 {% tabs %}
 {% highlight xaml %}

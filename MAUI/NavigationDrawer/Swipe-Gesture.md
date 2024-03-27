@@ -43,7 +43,7 @@ this.Content = navigationDrawer;
 
 ## Swipe Sensitivity
 
-The TouchThreshold property in the [SfNavigationDrawer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.html) can expand the swipe region. The default value of TouchThreshold is [`120`].
+The [TouchThreshold](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.DrawerSettings.html#Syncfusion_Maui_NavigationDrawer_DrawerSettings_TouchThreshold) property in the [SfNavigationDrawer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.html) can expand the swipe region. The default value of TouchThreshold is `120`.
 
 {% tabs %}
 

@@ -8,7 +8,7 @@ documentation: ug
 ---
 # Time break in .NET MAUI Chat (SfChat)
 
-The `Chat` control provides a simple way to organize messages by their date and time of creation, allowing users to easily identify messages in the order they were created. To display the time break view in Chat, set the `ShowTimeBreak` property to `true`.
+The `Chat` control provides a simple way to organize messages by their date and time of creation, allowing users to easily identify messages in the order they were created. To display the time break view in Chat, set the [ShowTimeBreak](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_ShowTimeBreak) property to `true`.
 
 {% tabs %}
 {% highlight xaml hl_lines="2" %}
@@ -28,7 +28,7 @@ The `Chat` control provides a simple way to organize messages by their date and 
 
 ## Stick time break view
 
-To stick the time break view, enable the `StickyTimeBreak` property. When `StickyTimeBreak` is set to `true`, the time break view will remain displayed until the preceding time break view is no longer visible. Additionally, the time break will adjust its position as another time break appears while scrolling.
+To stick the time break view, enable the [StickyTimeBreak](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_StickyTimeBreak) property. When `StickyTimeBreak` is set to `true`, the time break view will remain displayed until the preceding time break view is no longer visible. Additionally, the time break will adjust its position as another time break appears while scrolling.
 
 {% tabs %}
 {% highlight xaml hl_lines="3" %}
@@ -47,7 +47,7 @@ To stick the time break view, enable the `StickyTimeBreak` property. When `Stick
 
 ## Template for time break view
 
-The `Chat` control allows to load custom template for time break view using the `TimeBreakTemplate` property.
+The `Chat` control allows to load custom template for time break view using the [TimeBreakTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_TimeBreakTemplate) property.
 
 {% tabs %}
 {% highlight xaml hl_lines="9 21" %}

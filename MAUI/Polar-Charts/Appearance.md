@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 # Appearance in .NET MAUI Polar Chart
-The appearance of [SfPolarChart]() can be customized using the predefined brushes, custom brushes, and gradient, which allows for the enrichment of the application.
+The appearance of [SfPolarChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPolarChart.html?tabs=tabid-1%2Ctabid-3%2Ctabid-6%2Ctabid-8%2Ctabid-10%2Ctabid-23%2Ctabid-18%2Ctabid-12%2Ctabid-14%2Ctabid-20%2Ctabid-16) can be customized using the predefined brushes, custom brushes, and gradient, which allows for the enrichment of the application.
 
 ## Default PaletteBrushes for Chart
 
@@ -67,7 +67,7 @@ this.Content = chart;
 
 ### Custom PaletteBrushes
 
-The [SfPolarChart]() provides support for defining custom brushes for the chart in a preferred order using the [PaletteBrushes]() property, as illustrated in the following code example.
+The [SfPolarChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPolarChart.html?tabs=tabid-1%2Ctabid-3%2Ctabid-6%2Ctabid-8%2Ctabid-10%2Ctabid-23%2Ctabid-18%2Ctabid-12%2Ctabid-14%2Ctabid-20%2Ctabid-16) provides support for defining custom brushes for the chart in a preferred order using the [PaletteBrushes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPolarChart.html#Syncfusion_Maui_Charts_SfPolarChart_PaletteBrushes) property, as illustrated in the following code example.
 
 {% tabs %}
 
@@ -181,7 +181,7 @@ public class ViewModel
 
 ## Plotting Area Customization:
 
-[SfPolarChart]() allows you to add any view to the chart plot area, which is useful for adding any relevant data, a watermark, or a color gradient to the background of the chart.
+[SfPolarChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPolarChart.html?tabs=tabid-1%2Ctabid-3%2Ctabid-6%2Ctabid-8%2Ctabid-10%2Ctabid-23%2Ctabid-18%2Ctabid-12%2Ctabid-14%2Ctabid-20%2Ctabid-16) allows you to add any view to the chart plot area, which is useful for adding any relevant data, a watermark, or a color gradient to the background of the chart.
 
 {% tabs %}
 

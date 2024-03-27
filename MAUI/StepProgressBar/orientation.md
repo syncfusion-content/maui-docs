@@ -11,7 +11,7 @@ documentation: ug
 The StepProgressBar control provides options to change the default orientation, so a multi-step process can be visualized in horizontal or vertical orientation.
 
 ## Horizontal
-By default, StepProgressBar step views are displayed [Horizontal](). You can also define the orientation as demonstrated in the following code example.
+By default, StepProgressBar step views are displayed [Horizontal](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.StepProgressBarOrientation.html#Syncfusion_Maui_ProgressBar_StepProgressBarOrientation_Horizontal). You can also define the orientation as demonstrated in the following code example.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="2" %}
@@ -32,7 +32,7 @@ stepProgressBar.Orientation = StepOrientation.Horizontal;
  ![Orientation in .NET MAUI SfStepProgressBar.](images/orientation/maui-stepprogressbar-orientation-horizontal.png)
 
 ## Vertical
-To view the step progress bar control in [Vertical](), you can define the vertical orientation as demonstrated in the following code example.
+To view the step progress bar control in [Vertical](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.StepProgressBarOrientation.html#Syncfusion_Maui_ProgressBar_StepProgressBarOrientation_Vertical), you can define the vertical orientation as demonstrated in the following code example.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="2" %}

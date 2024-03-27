@@ -9,7 +9,7 @@ documentation: ug
 
 # Migrate from Xamarin.Forms SfChat to .NET MAUI SfChat
 
-To migrate easier from Xamarin.Forms SfChat to .NET MAUI SfChat, we kept most of the APIs from Xamarin SfChat in MAUI SfChat. However, to maintain the consistency of API naming in MAUI SfChat, we renamed some of the APIs. The APIs that have been changed in MAUI SfChat from Xamarin SfChat are detailed as follows.
+To migrate easier from Xamarin.Forms SfChat to .NET MAUI SfChat, we kept most of the APIs from Xamarin SfChat in MAUI [SfChat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html). However, to maintain the consistency of API naming in MAUI SfChat, we renamed some of the APIs. The APIs that have been changed in MAUI SfChat from Xamarin SfChat are detailed as follows.
 
 ## Namespaces
 
@@ -32,20 +32,22 @@ To migrate easier from Xamarin.Forms SfChat to .NET MAUI SfChat, we kept most of
 </tr>
 
 <tr>
-<td>{{'IsBusy'| markdownify }}</td>
-<td>{{'IsLazyLoading'| markdownify }}</td>
+<td>{{'[IsBusy](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Chat.SfChat.html#Syncfusion_XForms_Chat_SfChat_IsBusy)'| markdownify }}</td>
+<td>{{'[IsLazyLoading](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_IsLazyLoading)'| markdownify }}</td>
 <td>Gets or sets a value indicating if the chat is currently loading more items. If it is true, the load indicator will be displayed until it is set to false.</td>
 </tr>
 
 <tr>
-<td>{{'LeftSwipeViewTemplate'| markdownify }}</td>
-<td>{{'StartSwipeTemplate'| markdownify }}</td>
+<td>{{'[LeftSwipeViewTemplate](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Chat.SfChat.html#Syncfusion_XForms_Chat_SfChat_LeftSwipeViewTemplate)'| markdownify }}</td>
+<td>{{'[StartSwipeTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_StartSwipeTemplate)'| markdownify }}</td>
 <td>Gets or sets the template shown when a user swipes an item to the right.</td>
 </tr>
 
 <tr>
-<td>{{'RightSwipeViewTemplate'| markdownify }}</td>
-<td>{{'EndSwipeTemplate'| markdownify }}</td>
+<td>{{'[RightSwipeViewTemplate](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Chat.SfChat.html#Syncfusion_XForms_Chat_SfChat_RightSwipeViewTemplate)'| markdownify }}</td>
+<td>{{'[EndSwipeTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_EndSwipeTemplate)'| markdownify }}</td>
 <td>Gets or sets the template shown when a user swipes an item to the left.</td>
 </tr>
 </table>
+
+N> To know about the available built-in keys used to customize styles, check [here](https://help.syncfusion.com/maui/chat/styles) for more details.

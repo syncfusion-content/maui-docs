@@ -45,6 +45,39 @@ public class CommandViewModel
 {% endhighlight %}
 {% endtabs %}
 
+### RightTapCommand
+
+The [RightTapCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_RightTapCommand) will be triggered when you right tap the item and pass the [ItemRightTappedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemRightTappedEventArgs.html) as a parameter.
+
+{% tabs %}
+{% highlight c# tabtitle="CommandViewModel.cs" hl_lines="18 19 20 21" %}
+
+listView.RightTapCommand = viewModel.RightTapCommand;
+
+public class CommandViewModel
+{
+    private Command<Object> rightTapCommand;
+
+    public Command<object> RightTapCommand
+    {
+        get { return rightTapCommand; }
+        set { rightTapCommand = value; }
+    }
+
+    public CommandViewModel()
+    {
+        RightTapCommand = new Command<object>(RightTapCommandMethod);
+    }
+
+    private void RightTapCommandMethod(object obj)
+    {
+        DisplayAlert("Item Right Tapped", "ListView item right tapped", "Close");
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
 ### LongPress command
 
 The [LongPressCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_LongPressCommand) will be triggered when you long press the item and pass the [ItemLongPressEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemLongPressEventArgs.html) as a parameter.

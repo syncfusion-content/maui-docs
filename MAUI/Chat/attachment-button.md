@@ -9,7 +9,7 @@ documentation: ug
 
 # Attachment button in .NET MAUI Chat (SfChat)
 
-In `SfChat`, you can show the attachment button by setting the `ShowAttachmentButton` to `true`.
+In `SfChat`, you can show the attachment button by setting the [ShowAttachmentButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_ShowAttachmentButton) to `true`.
 
 {% tabs %}
 {% highlight xaml hl_lines="12" %}
@@ -55,7 +55,7 @@ public partial class MainPage : ContentPage
 
 ## Event and command
 
-The `AttachmentButtonClicked` event and `AttachmentButtonCommand` will be executed upon tapping the attachment button. You can pass parameter to the `AttachmentButtonCommand` using the `AttachmentButtonCommandParameter`. You can provide options for the users to upload files, images, pdf and other media as messages in SfChat from the event handler and action of the `AttachmentButtonClicked` event and `AttachmentButtonCommand` respectively.
+The [AttachmentButtonClicked](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_AttachmentButtonClicked) event and [AttachmentButtonCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_AttachmentButtonCommand) will be executed upon tapping the attachment button. You can pass parameter to the `AttachmentButtonCommand` using the [AttachmentButtonCommandParameter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_AttachmentButtonCommandParameter). You can provide options for the users to upload files, images, pdf and other media as messages in SfChat from the event handler and action of the `AttachmentButtonClicked` event and `AttachmentButtonCommand` respectively.
 
 **AttachmentButtonClicked Event**
 
@@ -161,7 +161,7 @@ private void Tapped(object args)
 
 ## Attachment button template 
 
-In SfChat, you can load custom view or buttons as attachment button using `AttachmentButtonTemplate` property. You can also specify the width of your template view to load more than one button.
+In SfChat, you can load custom view or buttons as attachment button using [AttachmentButtonTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_AttachmentButtonTemplate) property. You can also specify the width of your template view to load more than one button.
 
 {% tabs %}
 {% highlight xaml hl_lines="15" %}

@@ -9,11 +9,11 @@ documentation: ug
 
 # Adding Looping and Delays in .NET MAUI Rotator (SfRotator)
 
-Looping and delay can be enabled in the `SfRotator` control in .NET MAUI.
+Looping and delay can be enabled in the [`SfRotator`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html?tabs=tabid-1) control in .NET MAUI.
 
 ## Enable AutoPlay
 
-The `EnableAutoPlay` property specifies whether the items should navigate automatically based on the `NavigationDelay` property when the property value is set to true.
+The [`EnableAutoPlay`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html#Syncfusion_Maui_Rotator_SfRotator_EnableAutoPlay) property specifies whether the items should navigate automatically based on the [`NavigationDelay`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html#Syncfusion_Maui_Rotator_SfRotator_NavigationDelay) property when the property value is set to true.
 
 N> By default, the property value is set to false.
 
@@ -106,7 +106,7 @@ namespace Rotator
 
 ## Setting Navigation Delay
 
-The `NavigationDelay` property specifies the delay duration while switching to the next navigation item when the `EnableAutoPlay` property is enabled.
+The [`NavigationDelay`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html#Syncfusion_Maui_Rotator_SfRotator_NavigationDelay) property specifies the delay duration while switching to the next navigation item when the [`EnableAutoPlay`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html#Syncfusion_Maui_Rotator_SfRotator_EnableAutoPlay) property is enabled.
 
 N> The property value should be in milliseconds.
 
@@ -199,7 +199,7 @@ namespace Rotator
 
 ## Looping Items
 
-The `EnableLooping` property specifies whether the items should navigate to the first item once they reach the last item and vice-versa..
+The [`EnableLooping`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html#Syncfusion_Maui_Rotator_SfRotator_EnableLooping) property specifies whether the items should navigate to the first item once they reach the last item and vice-versa..
 
 {% tabs %}
 
@@ -292,7 +292,7 @@ namespace Rotator
 
 ## Enable swiping
 
-To restrict the user interaction, the `EnableSwiping` property of `SfRotator` can be set to false.
+To restrict the user interaction, the [`EnableSwiping`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html#Syncfusion_Maui_Rotator_SfRotator_EnableSwiping) property of [`SfRotator`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html?tabs=tabid-1) can be set to false.
 
 {% tabs %}
 

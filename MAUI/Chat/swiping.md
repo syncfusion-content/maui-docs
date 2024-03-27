@@ -9,11 +9,11 @@ documentation: ug
 
 # Swiping in .NET MAUI Chat (SfChat)
 
-In `SfChat`, you can enable swiping by setting the `AllowSwiping` property to `true`. When you swipe left or right on a message, swipe views appear. It provides customizable swipe templates for swiping on the left and right sides. You can also limit how far you can swipe on a message by setting the `MaxSwipeOffset` property.
+In `SfChat`, you can enable swiping by setting the [AllowSwiping](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_AllowSwiping) property to `true`. When you swipe left or right on a message, swipe views appear. It provides customizable swipe templates for swiping on the left and right sides. You can also limit how far you can swipe on a message by setting the [MaxSwipeOffset](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_MaxSwipeOffset) property.
 
 ## Swipe templates
 
-The Swiping can be customized by using the `StartSwipeTemplate` when swiping towards the right and `EndSwipeTemplate` when swiping towards the left. The content inside the swipe template is arranged based on the offset values when swiping a message.
+The Swiping can be customized by using the [StartSwipeTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_StartSwipeTemplate) when swiping towards the right and [EndSwipeTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_EndSwipeTemplate) when swiping towards the left. The content inside the swipe template is arranged based on the offset values when swiping a message.
 
 {% tabs %}
 {% highlight xaml hl_lines="17 41" %}
@@ -187,13 +187,13 @@ namespace GettingStarted
 
 ### SwipeStarted Event
 
-The `SwipeStarted` event is raised when the swipe offset changes from its initial value. This event is triggered with `MessageSwipeStartedEventArgs`.
+The [SwipeStarted](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_SwipeStarted) event is raised when the swipe offset changes from its initial value. This event is triggered with [MessageSwipeStartedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.MessageSwipeStartedEventArgs.html).
 
 The `SwipeStarted` event provides the following properties in their arguments:
 
-* `Message`: Defines the underlying data associated with the swiped message.
-* `SwipeDirection`: Defines the swipe direction of the message being swiped.
-* `Cancel`: Defines that the swipe action can be canceled by setting the `Cancel` property to `true`.
+* [Message](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.MessageSwipeEventArgs.html#Syncfusion_Maui_Chat_MessageSwipeEventArgs_Message): Defines the underlying data associated with the swiped message.
+* [SwipeDirection](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.MessageSwipeEventArgs.html#Syncfusion_Maui_Chat_MessageSwipeEventArgs_SwipeDirection): Defines the swipe direction of the message being swiped.
+* [Cancel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.MessageSwipeStartedEventArgs.html#Syncfusion_Maui_Chat_MessageSwipeStartedEventArgs_Cancel): Defines that the swipe action can be canceled by setting the `Cancel` property to `true`.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="5" %}
@@ -224,14 +224,14 @@ The `SwipeStarted` event provides the following properties in their arguments:
 
 ### Swiping Event
 
-The `Swiping` event is raised while swiping a message is in progress. This event is triggered with `MessageSwipingEventArgs`.
+The [Swiping](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_Swiping) event is raised while swiping a message is in progress. This event is triggered with [MessageSwipingEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.MessageSwipingEventArgs.html).
 
 The `Swiping` event provides the following properties in their arguments:
 
-* `Message`: Defines the underlying data associated with the swiped message.
-* `SwipeDirection`: Defines the swipe direction of the message being swiped.
-* `SwipeOffSet`: Defines the current swipe offset of the message that is being swiped.
-* `Handled`: Defines that if it is true, the current swipe offset value remains the same for the swiped message until the `SwipeEnded` event is raised.
+* [Message](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.MessageSwipeEventArgs.html#Syncfusion_Maui_Chat_MessageSwipeEventArgs_Message): Defines the underlying data associated with the swiped message.
+* [SwipeDirection](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.MessageSwipeEventArgs.html#Syncfusion_Maui_Chat_MessageSwipeEventArgs_SwipeDirection): Defines the swipe direction of the message being swiped.
+* [SwipeOffSet](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.MessageSwipingEventArgs.html#Syncfusion_Maui_Chat_MessageSwipingEventArgs_SwipeOffSet): Defines the current swipe offset of the message that is being swiped.
+* [Handled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.MessageSwipingEventArgs.html#Syncfusion_Maui_Chat_MessageSwipingEventArgs_Handled): Defines that if it is true, the current swipe offset value remains the same for the swiped message until the [SwipeEnded](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_SwipeEnded) event is raised.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="6" %}
@@ -263,13 +263,13 @@ The `Swiping` event provides the following properties in their arguments:
 
 ### SwipeEnded Event
 
-The `SwipeEnded` event is fired when the swipe offset value reaches the `MaxSwipeOffset` value indicating that the swipe action is completed. This event is triggered with `MessageSwipeEndedEventArgs`.
+The [SwipeEnded](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_SwipeEnded) event is fired when the swipe offset value reaches the `MaxSwipeOffset` value indicating that the swipe action is completed. This event is triggered with [MessageSwipeEndedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.MessageSwipeEndedEventArgs.html).
 
 The `SwipeEnded` event provides the following properties in their arguments:
 
-* `Message`: Defines the underlying data associated with the swiped message.
-* `SwipeDirection`: Defines the swipe direction of the message being swiped.
-* `SwipeOffSet`: Defines the current swipe offset of the message that is being swiped.
+* [Message](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.MessageSwipeEventArgs.html#Syncfusion_Maui_Chat_MessageSwipeEventArgs_Message): Defines the underlying data associated with the swiped message.
+* [SwipeDirection](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.MessageSwipeEventArgs.html#Syncfusion_Maui_Chat_MessageSwipeEventArgs_SwipeDirection): Defines the swipe direction of the message being swiped.
+* [SwipeOffSet](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.MessageSwipeEndedEventArgs.html#Syncfusion_Maui_Chat_MessageSwipeEndedEventArgs_SwipeOffSet): Defines the current swipe offset of the message that is being swiped.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="6" %}
@@ -300,7 +300,7 @@ The `SwipeEnded` event provides the following properties in their arguments:
 
 ## Reset Swipe view Programmatically 
 
-The `SfChat` allows you to cancel the swipe programmatically by calling the `ResetSwipeOffset` method in the `SwipeEnded` event.
+The `SfChat` allows you to cancel the swipe programmatically by calling the [ResetSwipeOffset](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_ResetSwipeOffset) method in the [SwipeEnded](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_SwipeEnded) event.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="5" %}
