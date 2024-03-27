@@ -34,4 +34,4 @@ void UpdateTheme(object sender, System.EventArgs e)
 
 {% endhighlight %}
 
-The complete theme switch sample is available in `this` link.
+The complete theme switch sample is available in [this](https://github.com/SyncfusionExamples/Switching-between-light-and-dark-themes-in-.NET-Maui) link.
