@@ -11,21 +11,21 @@ documentation: ug
 
 A plot band, also known as a stripline, allows for shading specific regions or ranges in the plot area background at regular or custom intervals. It also provides options to customize the size of these bands. Text can be added to plot band and indicate the significance of each particular region.
 
-Plot bands are classified into [NumericalPlotBand]() and [DateTimePlotBand](). Based on the axis, plot bands are drawn using these classifications. The following properties are used to configure the plot band:
+Plot bands are classified into [NumericalPlotBand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.NumericalPlotBand.html?tabs=tabid-2%2Ctabid-28) and [DateTimePlotBand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DateTimePlotBand.html?tabs=tabid-2%2Ctabid-28). Based on the axis, plot bands are drawn using these classifications. The following properties are used to configure the plot band:
 
-* [`Size`]() - changes how long plot band should be expanded. This is applicable only when end is not specified.
-* [`SizeType`]() - changes the date-time unit of the value specified in the `Size` property. The values can be year, month, day, hour, minute, second, and millisecond.
-* [`Text`]()- changes the text of the plot band.
-* [`Fill`]() - changes the fill of the plot band.
-* [`Stroke`]() - changes the stroke color of the plot band.
-* [`StrokeWidth`]() - changes the stroke width of the plot band.
-* [`StrokeDashArray`]() - changes the stoke in dash array.
-* [`IsVisible`]() - changes the visibility of the plot band in chart axis.
-* [`IsRepeatable`]()- specifies the plot band need to be repeated in specified interval.
+* [`Size`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartPlotBand.html#Syncfusion_Maui_Charts_ChartPlotBand_Size) - changes how long plot band should be expanded. This is applicable only when end is not specified.
+* [`SizeType`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DateTimePlotBand.html#Syncfusion_Maui_Charts_DateTimePlotBand_SizeType) - changes the date-time unit of the value specified in the `Size` property. The values can be year, month, day, hour, minute, second, and millisecond.
+* [`Text`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartPlotBand.html#Syncfusion_Maui_Charts_ChartPlotBand_Text)- changes the text of the plot band.
+* [`Fill`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartPlotBand.html#Syncfusion_Maui_Charts_ChartPlotBand_Fill) - changes the fill of the plot band.
+* [`Stroke`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartPlotBand.html#Syncfusion_Maui_Charts_ChartPlotBand_Stroke) - changes the stroke color of the plot band.
+* [`StrokeWidth`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartPlotBand.html#Syncfusion_Maui_Charts_ChartPlotBand_StrokeWidth) - changes the stroke width of the plot band.
+* [`StrokeDashArray`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartPlotBand.html#Syncfusion_Maui_Charts_ChartPlotBand_StrokeDashArray) - changes the stoke in dash array.
+* [`IsVisible`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartPlotBand.html#Syncfusion_Maui_Charts_ChartPlotBand_IsVisible) - changes the visibility of the plot band in chart axis.
+* [`IsRepeatable`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartPlotBand.html#Syncfusion_Maui_Charts_ChartPlotBand_IsRepeatable)- specifies the plot band need to be repeated in specified interval.
 
 ## Numerical PlotBand 
 
-[NumericalPlotBands]() are used to draw plot bands for [NumericalAxis]() and [CategoryAxis](). To add a plot band, create an instance of [NumericalPlotBandCollection]() and specify numerical value for the [Start]() and [End]() parameter. These parameters determine the beginning and end of the plot band.
+[NumericalPlotBands](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.NumericalPlotBand.html?tabs=tabid-2%2Ctabid-28) are used to draw plot bands for [NumericalAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.NumericalAxis.html?tabs=tabid-1%2Ctabid-13%2Ctabid-11%2Ctabid-3%2Ctabid-7%2Ctabid-5%2Ctabid-9) and [CategoryAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.CategoryAxis.html?tabs=tabid-1%2Ctabid-5%2Ctabid-3). To add a plot band, create an instance of [NumericalPlotBandCollection](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.NumericalPlotBandCollection.html) and specify numerical value for the [Start](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.NumericalPlotBand.html#Syncfusion_Maui_Charts_NumericalPlotBand_Start) and [End](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.NumericalPlotBand.html#Syncfusion_Maui_Charts_NumericalPlotBand_End) parameter. These parameters determine the beginning and end of the plot band.
 
 {% tabs %}
 
@@ -75,7 +75,7 @@ Plot bands are classified into [NumericalPlotBand]() and [DateTimePlotBand](). B
 
 ## DateTime PlotBand
 
-[DateTimePlotBands]() are used to draw plot bands for [DateTimeAxis](). To add a plot band, create an instance of [DateTimePlotBandCollection]() and specifying the [Start]() date and [End]() date. These parameters determine the beginning and end of the plot band.
+[DateTimePlotBands](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DateTimePlotBand.html?tabs=tabid-2%2Ctabid-28) are used to draw plot bands for [DateTimeAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DateTimeAxis.html?tabs=tabid-1%2Ctabid-15%2Ctabid-13%2Ctabid-7%2Ctabid-3%2Ctabid-11%2Ctabid-5%2Ctabid-9). To add a plot band, create an instance of [DateTimePlotBandCollection](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DateTimePlotBandCollection.html) and specifying the [Start](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DateTimePlotBand.html#Syncfusion_Maui_Charts_DateTimePlotBand_Start) date and [End](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DateTimePlotBand.html#Syncfusion_Maui_Charts_DateTimePlotBand_End) date. These parameters determine the beginning and end of the plot band.
 
 {% tabs %}
 
@@ -133,9 +133,9 @@ Plot bands are classified into [NumericalPlotBand]() and [DateTimePlotBand](). B
 
 The Plot band recurrence feature enables plot bands to be drawn repeatedly at regular intervals. This functionality is particularly useful when you need to mark events that occur recursively along the timeline of the chart.
 
-* [`RepeatEvery`]() - Specifies the frequency at which the plot band is repeated.
-* [`RepeatEveryType`]() - Specifies the date time unit for `DateTimePlotBand`.
-* [`RepeatUntil`]() - Specifies the end value at which the plot band stops repeating.
+* [`RepeatEvery`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartPlotBand.html#Syncfusion_Maui_Charts_ChartPlotBand_RepeatEvery) - Specifies the frequency at which the plot band is repeated.
+* [`RepeatEveryType`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DateTimePlotBand.html#Syncfusion_Maui_Charts_DateTimePlotBand_RepeatEveryType) - Specifies the date time unit for `DateTimePlotBand`.
+* [`RepeatUntil`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DateTimePlotBand.html#Syncfusion_Maui_Charts_DateTimePlotBand_RepeatUntil) - Specifies the end value at which the plot band stops repeating.
 
 {% tabs %}
 
@@ -198,7 +198,7 @@ The Plot band recurrence feature enables plot bands to be drawn repeatedly at re
 
 Typically, if you draw a plot band for a vertical axis, the height of the plot band is determined by the start and end properties. The end of the plot band is equivalent to the end of its associated horizontal axis, meaning the plot band is drawn horizontally across the entire stretch of its associated horizontal axis. Similarly, for a horizontal axis, the width is determined by the start and width properties. Vertically, it is drawn across the entire stretch of the associated vertical axis
 
-Suppose, you want to draw a plot band that should not stretch along its associated axis, you have to set [AssociatedAxisStart]() and [AssociatedAxisEnd]() properties. The values provided in these two properties correspond to its associated axis specified by [AssociatedAxisName]() property. 
+Suppose, you want to draw a plot band that should not stretch along its associated axis, you have to set [AssociatedAxisStart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartPlotBand.html#Syncfusion_Maui_Charts_ChartPlotBand_AssociatedAxisStart) and [AssociatedAxisEnd](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartPlotBand.html#Syncfusion_Maui_Charts_ChartPlotBand_AssociatedAxisEnd) properties. The values provided in these two properties correspond to its associated axis specified by [AssociatedAxisName](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartPlotBand.html#Syncfusion_Maui_Charts_ChartPlotBand_AssociatedAxisName) property. 
 
 {% tabs %}
 
@@ -393,13 +393,13 @@ When specifying the same value for both start and end, a plot line will be drawn
 
 ## Text Customization 
 
-[Text]() can be added to plot bands to indicate the significance of each particular region. The [LabelStyle]() property provides options to customize plot band text.Following are the options available,
+[Text](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartPlotBand.html#Syncfusion_Maui_Charts_ChartPlotBand_Text) can be added to plot bands to indicate the significance of each particular region. The [LabelStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartPlotBand.html#Syncfusion_Maui_Charts_ChartPlotBand_LabelStyle) property provides options to customize plot band text.Following are the options available,
 
-* `HorizontalTextAlignment` -  changes the horizontal alignment of text.
-* `VerticalTextAlignment` - changes the vertical alignment of text.
-* `Angle` - used to rotate the text.
-* `OffsetX` - changes the horizontal padding to the plot band text.
-* `OffsetY` - changes the vertical padding to the plot band text.
+* `HorizontalTextAlignment` - Gets or sets the horizontal alignment of text.
+* `VerticalTextAlignment` - Gets or sets the vertical alignment of text.
+* `Angle` - Gets or sets the angle for the text.
+* `OffsetX` - Gets or sets the horizontal padding for the plot band text.
+* `OffsetY` - Gets or sets the vertical padding for the plot band text.
 
 {% tabs %}
 

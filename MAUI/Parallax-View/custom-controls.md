@@ -9,7 +9,7 @@ documentation: ug
 
 # Scrolling support for custom controls in .NET MAUI Parallax View
 
-The Parallax view supports custom scrollable controls using the [`IParallaxView`]() interface. This interface implements the [`ScrollableContentSize`]() property and the [`Scrolling`]() event. 
+The Parallax view supports custom scrollable controls using the [`IParallaxView`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.IParallaxView.html) interface. This interface implements the [`ScrollableContentSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.IParallaxView.html#Syncfusion_Maui_Core_IParallaxView_ScrollableContentSize) property and the [`Scrolling`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.IParallaxView.html#Syncfusion_Maui_Core_IParallaxView_Scrolling) event. 
 
 {% highlight c# %}
 
@@ -29,7 +29,7 @@ namespace ParallaxViewCustomControl
 
 ## Scrollable ContentSize
 
-The [`ScrollableContentSize`]() is the total content size of the scrollable custom control.
+The [`ScrollableContentSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.IParallaxView.html#Syncfusion_Maui_Core_IParallaxView_ScrollableContentSize) is the total content size of the scrollable custom control.
 
 {% highlight c# %}
 
@@ -52,15 +52,15 @@ namespace ParallaxViewCustomControl
 
 ## Scrolling event
 
-The [`Scrolling`]() event occurs whenever the [`ParallaxScrollingEventArgs`]() value is set through the scrollable custom control scrolled event.
+The [`Scrolling`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.IParallaxView.html#Syncfusion_Maui_Core_IParallaxView_Scrolling) event occurs whenever the [`ParallaxScrollingEventArgs`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ParallaxScrollingEventArgs.html) value is set through the scrollable custom control scrolled event.
 
-The [`ParallaxScrollingEventArgs`]() has the following three arguments:
+The [`ParallaxScrollingEventArgs`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ParallaxScrollingEventArgs.html) has the following three arguments:
 
-* [`ScrollX`](): Denotes X position of the finished scroll.
+* [`ScrollX`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ParallaxScrollingEventArgs.html#Syncfusion_Maui_Core_ParallaxScrollingEventArgs_ScrollX): Denotes X position of the finished scroll.
 
-* [`ScrollY`](): Denotes Y position of the finished scroll.
+* [`ScrollY`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ParallaxScrollingEventArgs.html#Syncfusion_Maui_Core_ParallaxScrollingEventArgs_ScrollY): Denotes Y position of the finished scroll.
 
-* [`CanAnimate`](): Defines whether to animate the scroll or not.
+* [`CanAnimate`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ParallaxScrollingEventArgs.html#Syncfusion_Maui_Core_ParallaxScrollingEventArgs_CanAnimate): Defines whether to animate the scroll or not.
 
 {% tabs %}
 
@@ -124,6 +124,6 @@ namespace ParallaxViewCustomControl
 
 {% endtabs %}
 
-By default, the Parallax View control supports [`.NET MAUI ScrollView`]() and [Syncfusion ListView](). For custom controls, you need to implement the [`IParallaxView`]() interface from Syncfusion.Maui.Core.
+By default, the Parallax View control supports [`.NET MAUI ScrollView`](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/scrollview) and [Syncfusion ListView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html). For custom controls, you need to implement the [`IParallaxView`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.IParallaxView.html) interface from Syncfusion.Maui.Core.
 
 You can find the Parallax View control with custom ListView control from this [link](https://github.com/SyncfusionExamples/MAUI-Parallax-View-Sample-Demos).

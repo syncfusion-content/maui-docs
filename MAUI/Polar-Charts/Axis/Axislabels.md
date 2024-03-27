@@ -29,7 +29,7 @@ The [LabelStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Char
 
 ## Edge Labels Drawing Mode
 
-The chart axis supports customizing the rendering position of the edge labels using the [EdgeLabelsDrawingMode]() property. The default value of the [EdgeLabelsDrawingMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_EdgeLabelsDrawingMode) property is `Shift`.
+The chart axis supports customizing the rendering position of the edge labels using the [EdgeLabelsDrawingMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_EdgeLabelsDrawingMode) property. The default value of the [EdgeLabelsDrawingMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_EdgeLabelsDrawingMode) property is `Shift`.
 
 | Action | Description |
 |--|--|
@@ -59,6 +59,7 @@ DateTimeAxis secondaryAxis = new DateTimeAxis()
 {
     EdgeLabelsDrawingMode = EdgeLabelsDrawingMode.Center
 };
+
 chart.SecondaryAxis = secondaryAxis;
 
 {% endhighlight %}
@@ -96,6 +97,7 @@ NumericalAxis secondaryAxis = new NumericalAxis()
 {
     EdgeLabelsVisibilityMode = EdgeLabelsVisibilityMode.AlwaysVisible
 };
+
 chart.SecondaryAxis = secondaryAxis;
 
 {% endhighlight %}
@@ -127,6 +129,7 @@ NumericalAxis secondaryAxis = new NumericalAxis()
 {
     EdgeLabelsVisibilityMode = EdgeLabelsVisibilityMode.Visible
 };
+
 chart.SecondaryAxis = secondaryAxis;
 
 {% endhighlight %}

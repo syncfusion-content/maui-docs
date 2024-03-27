@@ -177,7 +177,7 @@ DoubleCollection doubleCollection = new DoubleCollection();
 doubleCollection.Add(3);
 doubleCollection.Add(3);
 
-NumericalAxis secondaryAxis = new NumericalAxis() { MinorTicksPerInterval = 2 };
+NumericalAxis secondaryAxis = new NumericalAxis() { MinorTicksPerInterval = 2, ShowMinorGridLines = true; };
 ChartLineStyle axisLineStyle = new ChartLineStyle();
 axisLineStyle.Stroke = Colors.Black;
 axisLineStyle.StrokeWidth = 0.8;

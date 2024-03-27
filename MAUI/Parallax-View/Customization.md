@@ -11,7 +11,7 @@ documentation: ug
 
 ## Speed Customization
 
-The [`Speed`]() value denotes the scrolling speed of the [`Content`]() added as a background view. Based on the speed value, the background view will scroll along with the foreground view.
+The [`Speed`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ParallaxView.SfParallaxView.html#Syncfusion_Maui_ParallaxView_SfParallaxView_Speed) value denotes the scrolling speed of the [`Content`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ParallaxView.SfParallaxView.html#Syncfusion_Maui_ParallaxView_SfParallaxView_Content) added as a background view. Based on the speed value, the background view will scroll along with the foreground view.
 
 {% tabs %}
 
@@ -58,7 +58,7 @@ namespace ParallaxViewGettingStarted
 
 ## Orientation 
 
-The orientation of the content scrolling can be customized to vertical or horizontal using the value of the [`Orientation`]() property.
+The orientation of the content scrolling can be customized to vertical or horizontal using the value of the [`Orientation`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ParallaxView.SfParallaxView.html#Syncfusion_Maui_ParallaxView_SfParallaxView_Orientation) property.
 
 {% tabs %}
 
