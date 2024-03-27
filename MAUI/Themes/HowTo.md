@@ -20,13 +20,13 @@ void UpdateTheme(object sender, System.EventArgs e)
         var theme = mergedDictionaries.OfType<SyncfusionThemeResourceDictionary>().FirstOrDefault();
         if (theme != null)
         {
-            if (theme.SfVisualTheme is SfVisuals.MaterialDark)
+            if (theme.VisualTheme is SfVisuals.MaterialDark)
             {
-                theme.SfVisualTheme = SfVisuals.MaterialLight;
+                theme.VisualTheme = SfVisuals.MaterialLight;
             }
             else
             {
-                theme.SfVisualTheme = SfVisuals.MaterialDark;
+                theme.VisualTheme = SfVisuals.MaterialDark;
             }
         }
      }
