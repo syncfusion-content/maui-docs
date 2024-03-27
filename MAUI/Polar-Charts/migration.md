@@ -30,11 +30,11 @@ SfChart
 </tr>
 </table>
 
-To make the migration easier, the majority of the APIs from the Xamarin [SfChart](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.SfChart.html) were kept in the .NET MAUI [SfPolarChart](). Currently, most of the features have been added in the [SfPolarChart](), but only a few are pending in the .NET MAUI along with some limitations. Please refer to the following details and the API migration information available below.
+To make the migration easier, the majority of the APIs from the Xamarin [SfChart](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.SfChart.html) were kept in the .NET MAUI [SfPolarChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPolarChart.html). Currently, most of the features have been added in the [SfPolarChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPolarChart.html), but only a few are pending in the .NET MAUI along with some limitations. Please refer to the following details and the API migration information available below.
 
 ## API migration
 
-To initialize the control, import the Chart namespace and Initialize [SfPolarChart]() as shown in the following code sample. 
+To initialize the control, import the Chart namespace and Initialize [SfPolarChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPolarChart.html) as shown in the following code sample. 
 
 <table>
 <tr>
@@ -56,9 +56,8 @@ To initialize the control, import the Chart namespace and Initialize [SfPolarCha
 {% highlight C# %}
 using Syncfusion.SfChart.XForms;
 ...
-
- SfChart chart = new SfChart(); 
- this.Content = chart;
+SfChart chart = new SfChart(); 
+this.Content = chart;
 
 {% endhighlight %}
 {% endtabs %}
@@ -77,8 +76,7 @@ using Syncfusion.SfChart.XForms;
     . . .    
     xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
    
-        <chart:SfPolarChart/>
-   
+        <chart:SfPolarChart/>  
 </ContentPage>
  
 {% endhighlight %}
@@ -172,7 +170,7 @@ The following table illustrates the API migration for the chart.
 
 </table>
 
-The following code example explains how to migrate the axis of Xamarin [SfChart](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.SfChart.html) to .NET MAUI [SfPolarChart]().
+The following code example explains how to migrate the axis of Xamarin [SfChart](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.SfChart.html) to .NET MAUI [SfPolarChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPolarChart.html).
 
 <table>
 <tr>
@@ -201,7 +199,6 @@ CategoryAxis primaryAxis = new CategoryAxis();
 chart.PrimaryAxis = primaryAxis;
 NumericalAxis secondaryAxis  =  new NumericalAxis();
 chart.SecondaryAxis = secondaryAxis;
-
 this.Content = chart;
 {% endhighlight %}
 
@@ -234,7 +231,6 @@ CategoryAxis primaryAxis = new CategoryAxis();
 chart.PrimaryAxis = primaryAxis;
 NumericalAxis secondaryAxis  =  new NumericalAxis();
 chart.SecondaryAxis = secondaryAxis;
-
 this.Content = chart;
 {% endhighlight %}
 
@@ -265,7 +261,7 @@ this.Content = chart;
 </tr>
 </table>
 
-The following code example explains how to migrate the series of Xamarin [SfChart](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.SfChart.html) to .NET MAUI [SfPolarChart]().
+The following code example explains how to migrate the series of Xamarin [SfChart](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.SfChart.html) to .NET MAUI [SfPolarChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPolarChart.html).
 
 <table>
 <tr>
@@ -291,7 +287,6 @@ series.SetBinding(ChartSeries.ItemsSourceProperty, "PlantDetails");
 series.XBindingPath = "Direction";
 series.YBindingPath = "Tree";
 chart.Series.Add(series);
-
 this.Content = chart;
 {% endhighlight %}
 
@@ -308,8 +303,8 @@ this.Content = chart;
 {% highlight xaml %}
 
 <chart:SfPolarChart>
-<chart:PolarAreaSeries ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Tree">
-</chart:PolarAreaSeries>
+    <chart:PolarAreaSeries ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Tree" ShowDataLabels="True">
+    </chart:PolarAreaSeries>
 </chart:SfPolarChart>
 
 {% endhighlight %} 
@@ -320,10 +315,8 @@ PolarAreaSeries series = new PolarAreaSeries();
 series.ItemsSource = (new ViewModel()).PlantDetails;
 series.XBindingPath = "Direction";
 series.YBindingPath = "Tree";
-series.Label = "Tree";
 series.ShowDataLabels = true;
 chart.Series.Add(series);
-
 this.Content = chart;
 {% endhighlight %}
 
@@ -454,7 +447,7 @@ chart.Legend = new ChartLegend ();
 
 ### Data Label
 
-To customize the data label appearance, create an instance of the [ChartDataMarker](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.ChartDataMarker.html) class and add it to the [DataMarker](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.ChartSeries.html#Syncfusion_SfChart_XForms_ChartSeries_DataMarker) of [Series](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.ChartSeries.html). For [SfPolarChart](), you can set the [PolarDataLabelSettings]() instance to the [DataLabelSettings]() property, as shown in the below code sample.
+To customize the data label appearance, create an instance of the [ChartDataMarker](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.ChartDataMarker.html) class and add it to the [DataMarker](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.ChartSeries.html#Syncfusion_SfChart_XForms_ChartSeries_DataMarker) of [Series](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.ChartSeries.html). For [SfPolarChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPolarChart.html), you can set the [PolarDataLabelSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.PolarDataLabelSettings.html) instance to the [DataLabelSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.PolarSeries.html#Syncfusion_Maui_Charts_PolarSeries_DataLabelSettings) property, as shown in the below code sample.
 
 <table>
 <tr>
@@ -472,7 +465,8 @@ To customize the data label appearance, create an instance of the [ChartDataMark
 	        <chart:ChartDataMarker ShowLabel="True">
 		        <chart:ChartDataMarker.LabelStyle>
 			        <chart:DataMarkerLabelStyle TextColor="Blue" BorderColor="Red" BorderThickness="2" 
-                                            BackgroundColor="Aqua" Angle="315" Margin="5" FontSize="18" FontAttributes="Italic"/>
+                                            BackgroundColor="Aqua" Angle="315" Margin="5" 
+                                            FontSize="18" FontAttributes="Italic"/>
 		        </chart:ChartDataMarker.LabelStyle>
 	        </chart:ChartDataMarker>
 	    </chart:PolarAreaSeries.DataMarker>
@@ -494,7 +488,6 @@ style.Angle = 315;
 style.Margin = 5;
 style.FontSize = 18;
 series.DataMarker.LabelStyle = style;
-
 chart.Series.Add(series);
 {% endhighlight %}
 
@@ -540,7 +533,6 @@ style.Angle = 315;
 style.Margin = 5;
 style.FontSize = 18;
 series.PolarDataLabelSettings.LabelStyle = style;
-
 chart.Series.Add(series);
 {% endhighlight %}
 
@@ -551,7 +543,7 @@ chart.Series.Add(series);
 
 ### Tooltip
 
-To customize the tooltip appearance, create an instance of the [ChartTooltipBehavior](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.ChartTooltipBehavior.html) class and add it to the [ChartBehaviors](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.SfChart.html#Syncfusion_SfChart_XForms_SfChart_ChartBehaviors) collection of [SfChart](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.SfChart.html). For [SfPolarChart](), you can directly set the [ChartTooltipBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartTooltipBehavior.html?tabs=tabid-1%2Ctabid-3%2Ctabid-5%2Ctabid-11%2Ctabid-9%2Ctabid-7) instance to the [TooltipBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartTooltipBehavior.html?tabs=tabid-1%2Ctabid-3%2Ctabid-5%2Ctabid-11%2Ctabid-9%2Ctabid-7) property, as shown in the below code sample.
+To customize the tooltip appearance, create an instance of the [ChartTooltipBehavior](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.ChartTooltipBehavior.html) class and add it to the [ChartBehaviors](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.SfChart.html#Syncfusion_SfChart_XForms_SfChart_ChartBehaviors) collection of [SfChart](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.SfChart.html). For [SfPolarChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPolarChart.html), you can directly set the [ChartTooltipBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartTooltipBehavior.html) instance to the [TooltipBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartTooltipBehavior.html) property, as shown in the below code sample.
 
 <table>
 <tr>
@@ -608,7 +600,7 @@ chart.ChartBehaviors.Add(tool);
                     FontSize="15"/>
    </chart:SfPolarChart.TooltipBehavior>
 
-   <chart:PolarAreaSeries ItemsSource="{Binding Data}" XBindingPath="Demand" YBindingPath="Year2010"
+   <chart:PolarAreaSeries ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Tree"
                     EnableTooltip="True"/>
 </chart:SfPolarChart>
 
@@ -666,8 +658,95 @@ chart.TooltipBehavior = tooltip;
 ## Unsupported features from Xamarin.Forms
 
 * Data label created event support was not provided in series. Instead, you can use the [DrawDataLabel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_DrawDataLabel_Microsoft_Maui_Graphics_ICanvas_Microsoft_Maui_Controls_Brush_System_String_Microsoft_Maui_Graphics_PointF_System_Int32_) override method in the [ChartSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html) class.
-* In.NET MAUI, the [ChartDataPoint](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.ChartDataPoint.html#) model class was no longer available. Instead, create your own model.
+* In.NET MAUI, the [ChartDataPoint](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.ChartDataPoint.html) model class was no longer available. Instead, create your own model.
 
+## Limitations
+
+<table>
+<tr>
+<th>Features</th>
+<th>Comments</th>
+</tr>
+<tr>
+<td>LabelRotation</td>
+<td>This feature supports for secondary axis only.</td>
+</tr>
+<tr>
+<td>AxisLineStyle</td>
+<td>This feature supports for secondary axis only.</td>
+</tr>
+<tr>
+<td>AxisLineOffset</td>
+<td>This feature supports for secondary axis only.
+</td>
+</tr>
+<tr>
+<td>CrossesAt</td>
+<td>This feature is currently not supported for Polar charts.</td>
+</tr>
+<tr>
+<td>RenderNextToCrossingValue</td>
+<td>This feature is currently not supported for Polar charts.</td>
+</tr>
+<tr>
+<td>CrossAxisName</td>
+<td>This feature is currently not supported for Polar charts.</td>
+</tr>
+<tr>
+<td>Axis Title</td>
+<td>This feature supports for secondary axis only.</td>
+</tr>
+<tr>
+<td>EdgeLabelsDrawingMode</td>
+<td>This feature supports for secondary axis only.</td>
+</tr>
+<tr>
+<td>EnableAutoIntervalOnZooming</td>
+<td>This feature is currently not supported for Polar charts.
+</td>
+</tr>
+<tr>
+<td>LabelPlacement</td>
+<td>This feature is currently not supported for Primary axis.</td>
+</tr>
+<tr>
+<td>ArrangeByIndex</td>
+<td>This feature is currently not supported for Primary axis.
+</td>
+</tr>
+<tr>
+<td>AutoScrollingDeltaType</td>
+<td>This feature is currently not supported for DateTime axis.</td>
+</tr>
+<tr>
+<td>SelectionBehavior(Upcoming)</td>
+<td>This feature is currently not supported for Polar Charts.</td>
+</tr>
+<tr>
+<td>AutoScrollingDelta</td>
+<td>This feature is currently not supported for Polar Charts.</td>
+</tr>
+<tr>
+<td>AutoScrollingMode</td>
+<td>This feature is currently not supported for Polar Charts.</td>
+</tr>
+<tr>
+<td>ZoomPosition</td>
+<td>This feature is currently not supported for Polar Charts.</td>
+</tr>
+<tr>
+<td>ZoomFactor</td>
+<td>This feature is currently not supported for Polar Charts.</td>
+</tr>
+<tr>
+<td>ShowTrackballLabel</td>
+<td>This feature is not supported for Polar Charts.</td>
+</tr>
+<tr>
+<td>TrackballLabelStyle</td>
+<td>This feature is not supported for Polar Charts.</td>
+</tr>
+</table>
 
 ## Support and feedback
 
