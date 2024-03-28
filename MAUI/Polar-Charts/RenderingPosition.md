@@ -44,7 +44,7 @@ PolarAreaSeries series = new PolarAreaSeries()
 {
     ItemsSource = new ViewModel().PlantDetails,
     XBindingPath = "Direction",
-    YBindingPath = "Tree",
+    YBindingPath = "Tree"
 };
 
 chart.Series.Add(series);

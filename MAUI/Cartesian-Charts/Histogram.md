@@ -102,6 +102,7 @@ Customize the normal distribution curve by using the [CurveLineStyle](https://he
         XBindingPath = "Value",
         YBindingPath = "Size",
         HistogramInterval = 20,
+        ShowNormalDistributionCurve = true,
         CurveStyle = new ChartLineStyle
         {
             Stroke = Color.Blue,
