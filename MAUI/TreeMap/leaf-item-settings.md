@@ -100,7 +100,7 @@ public class PopulationViewModel
 {% endhighlight %}
 {% endtabs %}
 
- ![leaf-item-label-path-in-maui-tree-map](images/leaf-item-settings/label-path.png)
+ ![leaf-item-label-path-in-maui-tree-map](images/leaf-item-settings/leaf-item-label-path.png)
 
 ## Customize leaf item appearance
 
