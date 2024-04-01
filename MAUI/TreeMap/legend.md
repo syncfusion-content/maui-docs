@@ -124,6 +124,8 @@ public class PopulationViewModel
 {% endhighlight %}
 {% endtabs %}
 
+ ![enable-legend-in-maui-tree-map](images/legend/enable-legend-in-maui-tree-map.png)
+
 ## Placement
 
 You can position the legend items in different directions using the [Placement](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapLegendSettings.html#Syncfusion_Maui_TreeMap_TreeMapLegendSettings_Placement) property of [LegendSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_LegendSettings) in [SfTreeMap](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html). The default value of the [Placement](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapLegendSettings.html#Syncfusion_Maui_TreeMap_TreeMapLegendSettings_Placement) property is [Top](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.LegendPlacement.html#Syncfusion_Maui_TreeMap_LegendPlacement_Top). The possible values include [Left](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.LegendPlacement.html#Syncfusion_Maui_TreeMap_LegendPlacement_Left), [Right](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.LegendPlacement.html#Syncfusion_Maui_TreeMap_LegendPlacement_Right), [Top](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.LegendPlacement.html#Syncfusion_Maui_TreeMap_LegendPlacement_Top) and [Bottom](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.LegendPlacement.html#Syncfusion_Maui_TreeMap_LegendPlacement_Bottom).
@@ -240,6 +242,8 @@ public class PopulationViewModel
 
 N> This property will only be applicable when the [ShowLegend](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapLegendSettings.html#Syncfusion_Maui_TreeMap_TreeMapLegendSettings_ShowLegend) is enabled.
 
+ ![legend-placement-in-maui-tree-map](images/legend/legend-placement-in-maui-tree-map.png)
+
 ## Icon size
 
 The [IconSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapLegendSettings.html#Syncfusion_Maui_TreeMap_TreeMapLegendSettings_IconSize) property in the legend is used to change the size of the icon. Its default value is `new Size(16, 16).`
@@ -355,6 +359,8 @@ public class PopulationViewModel
 {% endtabs %}
 
 N> This property will only be applicable when the [ShowLegend](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapLegendSettings.html#Syncfusion_Maui_TreeMap_TreeMapLegendSettings_ShowLegend) is enabled.
+
+ ![legend-icon-size-in-maui-tree-map](images/legend/legend-icon-size-in-maui-tree-map.png)
 
 ## Icon type
 
@@ -486,6 +492,8 @@ public class PopulationViewModel
 
 N> This property will only be applicable when the [ShowLegend](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapLegendSettings.html#Syncfusion_Maui_TreeMap_TreeMapLegendSettings_ShowLegend) is enabled.
 
+ ![legend-icon-type-in-maui-tree-map](images/legend/legend-icon-type-in-maui-tree-map.png)
+
 ## Legend size
 
 The [Size](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapLegendSettings.html#Syncfusion_Maui_TreeMap_TreeMapLegendSettings_Size) property of [LegendSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_LegendSettings) determines the dimensions of the legend displayed alongside the visualization. Adjusting this property allows you to customize the size of the legend to fit the layout requirements and ensure optimal presentation of information.
@@ -607,6 +615,8 @@ public class PopulationViewModel
 
 N> This property will only be applicable when the [ShowLegend](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapLegendSettings.html#Syncfusion_Maui_TreeMap_TreeMapLegendSettings_ShowLegend) is enabled.
 
+ ![legend-size-in-maui-tree-map](images/legend/legend-size-in-maui-tree-map.png)
+
 ## Brush settings
 
 The color and text of icons in the legend are by default determined by the [Brush](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapRangeBrush.html#Syncfusion_Maui_TreeMap_TreeMapRangeBrush_Brush) and [LegendLabel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapRangeBrush.html#Syncfusion_Maui_TreeMap_TreeMapRangeBrush_LegendLabel) properties of [TreeMapRangeBrush](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapRangeBrush.html), respectively.
@@ -723,6 +733,8 @@ public class PopulationViewModel
 {% endtabs %}
 
 N> This property will be applicable to only when the [ShowLegend](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapLegendSettings.html#Syncfusion_Maui_TreeMap_TreeMapLegendSettings_ShowLegend) is enabled.
+
+ ![range-brush-settings-in-maui-tree-map](images/legend/range-brush-settings-in-maui-tree-map.png)
 
 ## Text style
 
@@ -844,3 +856,5 @@ public class PopulationViewModel
 {% endtabs %}
 
 N> This property will only be applicable when the [ShowLegend](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapLegendSettings.html#Syncfusion_Maui_TreeMap_TreeMapLegendSettings_ShowLegend) is enabled.
+
+![legend-text-style-in-maui-tree-map](images/legend/legend-text-style-in-maui-tree-map.png)
