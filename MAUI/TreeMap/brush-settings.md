@@ -101,6 +101,8 @@ public class PopulationViewModel
 {% endhighlight %}
 {% endtabs %}
 
+ ![uniform-brush-settings-in-maui-tree-map](images/brush-settings/uniform-brush-settings.png)
+
 ## Range brush settings
 
 In [SfTreeMap](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html), the range brush settings assign a collection of range-based brushes. Utilize the [RangeBrushes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapRangeBrushSettings.html#Syncfusion_Maui_TreeMap_TreeMapRangeBrushSettings_RangeBrushes) property of [TreeMapRangeBrushSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapRangeBrushSettings.html) to specify a list of [TreeMapRangeBrush](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapRangeBrush.html) instances. Each instance defines a specific range and its associated background brush.
@@ -230,6 +232,8 @@ public class PopulationViewModel
 
 N> The [TreeMapRangeBrushSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapRangeBrushSettings.html) is only applicable when the [RangeColorValuePath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_RangeColorValuePath) property of the [SfTreeMap](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html) is enabled. Additionally, you can ensure that legend items share the same background color by setting the [ShowLegend](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapLegendSettings.html#Syncfusion_Maui_TreeMap_TreeMapLegendSettings_ShowLegend) property within [LegendSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_LegendSettings).
 
+ ![range-brush-settings-in-maui-tree-map](images/brush-settings/range-brush-settings.png)
+
 ## Desaturation brush settings
 
 The desaturation brush settings in the [SfTreeMap](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html) modify color saturation based on data values, enabling customization of the background brush and desaturation range.
@@ -325,6 +329,8 @@ public class PopulationViewModel
 
 {% endhighlight %}
 {% endtabs %}
+
+ ![desaturation-brush-settings-in-maui-tree-map](images/brush-settings/desaturation-brush-settings.png)
 
 ## Palette brush settings
 
@@ -436,3 +442,5 @@ public class PopulationViewModel
 
 {% endhighlight %}
 {% endtabs %}
+
+ ![palatte-brush-settings-in-maui-tree-map](images/brush-settings/palatte-brush-settings.png)

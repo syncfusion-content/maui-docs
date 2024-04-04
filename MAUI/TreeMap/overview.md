@@ -9,14 +9,14 @@ documentation: ug
  
 # Overview of .NET MAUI TreeMap (SfTreeMap)
 
-The Syncfusion .NET MAUI TreeMap control allows you to visually represent hierarchical data with rectangles that are sized and colored based on underlying values. It efficiently displays grouped and nested data structures, offering various layout options, extensive customization options, supporting item selection, data binding to different sources, and more.
+The Syncfusion [.NET MAUI TreeMap](https://www.syncfusion.com/maui-controls/maui-tree-map) control allows you to visually represent hierarchical data with rectangles that are sized and colored based on underlying values. It efficiently displays grouped and nested data structures, offering various layout options, extensive customization options, supporting item selection, data binding to different sources, and more.
 
  ![overview-of-maui-tree-map](images/overview/overview-of-maui-tree-map.png)
 
 ## Key features 
  
  * **Data Binding**: Seamlessly bind the TreeMap control to hierarchical data structures.
- * **Layout Options**: Offers various layout options such as SliceAndDiceHorizontal, SliceAndDiceVertical, SliceAndDiceAuto, and the Squarified.
+ * **Layout**: Offers various layout options such as SliceAndDiceHorizontal, SliceAndDiceVertical, SliceAndDiceAuto, and the Squarified.
 
  ![layout-in-maui-tree-map](images/overview/layout-in-maui-tree-map.png)
 
