@@ -8,9 +8,9 @@ documentation: ug
 ---
 
 # Histogram Chart in .NET MAUI Chart
-[Histogram chart]() is a graphical representation that organizes a group of data points into user-specified ranges. It is similar in appearance to a column chart.
+[Histogram chart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.HistogramSeries.html?tabs=tabid-1%2Ctabid-28) is a graphical representation that organizes a group of data points into user-specified ranges. It is similar in appearance to a column chart.
 
-Customize histogram intervals using the [HistogramInterval]() property and normal distribution curve can be collapsed using the [ShowNormalDistributionCurve]() property. 
+Customize histogram intervals using the [HistogramInterval](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.HistogramSeries.html#Syncfusion_Maui_Charts_HistogramSeries_HistogramInterval) property and normal distribution curve can be collapsed using the [ShowNormalDistributionCurve](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.HistogramSeries.html#Syncfusion_Maui_Charts_HistogramSeries_ShowNormalDistributionCurve) property. 
 
 {% tabs %}
 
@@ -66,7 +66,7 @@ Customize histogram intervals using the [HistogramInterval]() property and norma
 
 ## Customization of distribution curve
 
-Customize the normal distribution curve by using the [CurveLineStyle]() property.
+Customize the normal distribution curve by using the [CurveLineStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.HistogramSeries.html#Syncfusion_Maui_Charts_HistogramSeries_CurveStyle) property.
 
 {% tabs %}
 
@@ -102,6 +102,7 @@ Customize the normal distribution curve by using the [CurveLineStyle]() property
         XBindingPath = "Value",
         YBindingPath = "Size",
         HistogramInterval = 20,
+        ShowNormalDistributionCurve = true,
         CurveStyle = new ChartLineStyle
         {
             Stroke = Color.Blue,

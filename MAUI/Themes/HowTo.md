@@ -20,13 +20,13 @@ void UpdateTheme(object sender, System.EventArgs e)
         var theme = mergedDictionaries.OfType<SyncfusionThemeResourceDictionary>().FirstOrDefault();
         if (theme != null)
         {
-            if (theme.SfVisualTheme is SfVisuals.MaterialDark)
+            if (theme.VisualTheme is SfVisuals.MaterialDark)
             {
-                theme.SfVisualTheme = SfVisuals.MaterialLight;
+                theme.VisualTheme = SfVisuals.MaterialLight;
             }
             else
             {
-                theme.SfVisualTheme = SfVisuals.MaterialDark;
+                theme.VisualTheme = SfVisuals.MaterialDark;
             }
         }
      }
@@ -34,4 +34,4 @@ void UpdateTheme(object sender, System.EventArgs e)
 
 {% endhighlight %}
 
-The complete theme switch sample is available in `this` link.
+The complete theme switch sample is available in [this](https://github.com/SyncfusionExamples/Switching-between-light-and-dark-themes-in-.NET-Maui) link.

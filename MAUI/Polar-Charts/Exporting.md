@@ -11,7 +11,7 @@ documentation: ug
 
 ## Export as an image
 
-You can export the chart view as an image in the desired file format using the [SaveAsImage]() method of [SfPolarChart](). The supported image formats are **JPEG and PNG**. By default, if you don't mention any image format with the filename, the chart view will be exported as an image in the PNG format.
+You can export the chart view as an image in the desired file format using the [SaveAsImage](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartBase.html#Syncfusion_Maui_Charts_ChartBase_SaveAsImage_System_String_) method of [SfPolarChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPolarChart.html). The supported image formats are **JPEG and PNG**. By default, if you don't mention any image format with the filename, the chart view will be exported as an image in the PNG format.
 
 N> The chart view can be exported as an image only when the chart view is added to the visual tree.
 
@@ -24,7 +24,6 @@ The following code sample demonstrates the usage of this method:
 SfPolarChart chart = new SfPolarChart();
 ...
 chart.SaveAsImage("ChartSample.jpeg");
-
 this.Content = chart;
 
 {% endhighlight %}
@@ -64,7 +63,7 @@ Add the following code snippet to the "Info" file:
 
 ## Get the stream of Chart
 
-The [GetStreamAsync](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartBase.html#Syncfusion_Maui_Charts_ChartBase_GetStreamAsync_Syncfusion_Maui_Core_ImageFileFormat_) method of [SfPolarChart]() is used to asynchronously get the chart view as a stream in the desired ImageFileFormat. The output stream can be passed as an input to other components that accept streams, such as PDF, Excel, and Word. The supported image file formats are **JPEG and PNG**.
+The [GetStreamAsync](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartBase.html#Syncfusion_Maui_Charts_ChartBase_GetStreamAsync_Syncfusion_Maui_Core_ImageFileFormat_) method of [SfPolarChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPolarChart.html) is used to asynchronously get the chart view as a stream in the desired ImageFileFormat. The output stream can be passed as an input to other components that accept streams, such as PDF, Excel, and Word. The supported image file formats are **JPEG and PNG**.
 
 N> The charts stream can only be rendered when the chart view is added to the visual tree.
 
@@ -77,7 +76,6 @@ The following code sample demonstrates the usage of this method:
 SfPolarChart chart = new SfPolarChart();
 ...
 await chart.GetStreamAsync(ImageFileFormat.Jpeg);
-
 this.Content = chart;
 
 {% endhighlight %}

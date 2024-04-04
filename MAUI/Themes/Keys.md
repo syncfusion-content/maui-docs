@@ -140,7 +140,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
 		<td>
-           SfAutoCompleteTheme 
+           SfAutocompleteTheme 
             <br/>
             <br/>
         </td>
@@ -156,7 +156,7 @@ This page lists the keys for each control and the element to which it is mapped 
         <ResourceDictionary.MergedDictionaries>
             <syncTheme:SyncfusionThemeResourceDictionary />
             <ResourceDictionary>
-                <x:String x:Key="SfAutoCompleteTheme">CommonTheme</x:String>
+                <x:String x:Key="SfAutocompleteTheme">CommonTheme</x:String>
                 <Color x:Key="SfAutocompleteNormalTextColor">Pink</Color>
                 <Color x:Key="SfAutocompletePlaceholderTextColor">Blue</Color>
             </ResourceDictionary>
@@ -204,7 +204,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td> 
         <td>
-            Color of the Autocomplete background in normal state.
+            Color of the SfAutocomplete background in normal state.
             <br/>
             <br/>
         </td>
@@ -216,7 +216,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td> 
         <td>
-            Color of the Autocomplete Background in normal state
+            Color of the SfAutocomplete Background in normal state
             <br/>
             <br/>
         </td>
@@ -252,7 +252,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td> 
         <td>
-            Color of the Autocomplete background in focus state.
+            Color of the SfAutocomplete background in focus state.
             <br/>
             <br/>
         </td>
@@ -264,7 +264,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td> 
         <td>
-            Color of the Autocomplete stroke in focus state.
+            Color of the SfAutocomplete stroke in focus state.
             <br/>
             <br/>
         </td>
@@ -300,7 +300,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td> 
         <td>
-            Color of the Autocomplete stroke in disable state.
+            Color of the SfAutocomplete stroke in disable state.
             <br/>
             <br/>
         </td>
@@ -336,7 +336,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td> 
         <td>
-            Color of the Autocomplete background in hover state.
+            Color of the SfAutocomplete background in hover state.
             <br/>
             <br/>
         </td>
@@ -348,7 +348,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td> 
         <td>
-            Color of the Autocomplete stroke in hover state.
+            Color of the SfAutocomplete stroke in hover state.
             <br/>
             <br/>
         </td>
