@@ -269,7 +269,7 @@ public class PopulationViewModel
 
 ![getting-started-with-maui-tree-map](images/getting-started/getting-started-with-maui-tree-map.png)
 
-N> For more details on adding label, you can refer to [Leaf item settings](https://help.syncfusion.com/maui/treemap/leaf-item-settings) docummentation.
+N> For more details on adding label, you can refer to [Leaf item settings](https://help.syncfusion.com/maui/treemap/leaf-item-settings) documentation.
 
 ## Applying leaf item brush settings
 
@@ -355,7 +355,7 @@ public class PopulationViewModel
 {% endhighlight %}
 {% endtabs %}
 
-N> For more details on leaf item brush settings, you can refer to [Brush settings](https://help.syncfusion.com/maui/treemap/brush-settings) docummentation.
+N> For more details on leaf item brush settings, you can refer to [Brush settings](https://help.syncfusion.com/maui/treemap/brush-settings) documentation.
 
 ## Applying group item brush settings
 
@@ -462,7 +462,7 @@ N> This is applicable only when [Levels](https://help.syncfusion.com/cr/maui/Syn
 
 ## Enable tooltip
 
-To enable the tooltip for the TreeMap control, utilize the [ShowToolTip](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_ShowToolTip) property of [SfTreeMap](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html) By default, the value of [ShowToolTip](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_ShowToolTip) is set to `false.` To provide users with additional information or context about specific treemap items, simply set this property to `true.`
+To enable the tooltip for the TreeMap control, utilize the [ShowToolTip](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_ShowToolTip) property of [SfTreeMap](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html) By default, the value of [ShowToolTip](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_ShowToolTip) is set to `false.` To provide users with additional information or context about specific treemap items, simply set this property to `true.` Refer to [Tooltip](https://help.syncfusion.com/maui/treemap/tooltip) documentation, for additional information on tree map tooltip support.
 
 {% tabs %}
 {% highlight XAML hl_lines="4" %}
@@ -547,7 +547,7 @@ public class PopulationViewModel
 
 ## Enable legend
 
-To incorporate a legend for the TreeMap control, utilize the [ShowLegend](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapLegendSettings.html#Syncfusion_Maui_TreeMap_TreeMapLegendSettings_ShowLegend) property within [LegendSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_LegendSettings). It is possible to customize the legend item’s color and text using the [LeafItemBrushSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_LeafItemBrushSettings) and [LegendSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_LegendSettings) properties of [SfTreeMap](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html). Refer to [Legend](https://help.syncfusion.com/maui/treemap/legend) docummentation, for additional information on tree map legend.
+To incorporate a legend for the TreeMap control, utilize the [ShowLegend](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapLegendSettings.html#Syncfusion_Maui_TreeMap_TreeMapLegendSettings_ShowLegend) property within [LegendSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_LegendSettings). It is possible to customize the legend item’s color and text using the [LeafItemBrushSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_LeafItemBrushSettings) and [LegendSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_LegendSettings) properties of [SfTreeMap](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html). Refer to [Legend](https://help.syncfusion.com/maui/treemap/legend) documentation, for additional information on tree map legend.
 
 {% tabs %}
 {% highlight XAML hl_lines="8 9 10" %}
