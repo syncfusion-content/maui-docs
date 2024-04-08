@@ -171,4 +171,4 @@ sfNumericEntry.AllowNull = false;
 
 ![.NET MAUI NumericEntry prevent empty textbox](GettingStarted_images/allowNull.gif)
 
-N> You can refer to our [.NET MAUI Numeric Entry](https://www.syncfusion.com/maui-controls/maui-numeric-entry) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Numeric Entry Example](https://github.com/SyncfusionExamples/maui-numericentry-samples) that shows you how to render the Numeric Entry in .NET MAUI.
+N> You can refer to our [.NET MAUI Numeric Entry](https://www.syncfusion.com/maui-controls/maui-numeric-entry) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Numeric Entry Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/Inputs/SampleBrowser.Maui.Inputs/Samples/NumericEntry) that shows you how to render the Numeric Entry in .NET MAUI.
