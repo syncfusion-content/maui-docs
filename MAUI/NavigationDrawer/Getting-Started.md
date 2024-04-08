@@ -465,3 +465,5 @@ public partial class NavigationDrawerPage : ContentPage
 ![OverView Image for NavigationDrawer](Images/getting-started/gettingstarted.png)
 
 You can find the getting started sample from the [`GitHub`](https://github.com/SyncfusionExamples/Getting-started-sample-for-.NET-MAUI-NavigationDrawer) link.
+
+N> You can refer to our [.NET MAUI Navigation Drawer](https://www.syncfusion.com/maui-controls/maui-navigationdrawer) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Navigation Drawer Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/NavigationDrawer) that shows you how to render the Navigation Drawer in .NET MAUI.
