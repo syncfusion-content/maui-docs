@@ -441,14 +441,13 @@ N> The `TabHeaderPadding` property is only applicable when [TabWidthMode](https:
 {% tabs %}
 
 {% highlight xaml %}
-<tabView:SfTabView>
-    <tabView:SfTabItem TabWidthMode="SizeToContent" TabHeaderPadding="5,10,5,10">
+<tabView:SfTabView TabWidthMode="SizeToContent" TabHeaderPadding="5,10,5,10">
+    <tabView:SfTabItem/>
 </tabView:SfTabView>
 {% endhighlight %}
 
 {% highlight C# %}
 var tabView = new SfTabView();
-tabView = new SfTabView();
 tabView.TabWidthMode = TabWidthMode.SizeToContent;
 tabView.TabHeaderPadding = new Thickness(5, 10, 5, 10);
 {% endhighlight %}
