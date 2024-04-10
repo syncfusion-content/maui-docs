@@ -342,7 +342,7 @@ The `DataGridCheckBoxColumn` inherits all the properties of the `DataGridColumn`
 {% endhighlight %}
 {% endtabs %}
 
-![DataGrid with CheckBox column](Images\column-types\maui-datagrid-column-checkbox.png)
+![DataGrid with CheckBoxColumn](Images\column-types\maui-datagrid-column-checkbox.png)
 
 ## DataGridImageColumn
 
@@ -373,7 +373,7 @@ It is possible to load images in any of the following four ways:
 {% endhighlight %}
 {% endtabs %}
 
-![DataGrid with image column](Images\column-types\maui-datagrid-column-imagecolumn.png)
+![DataGrid with ImageColumn](Images\column-types\maui-datagrid-column-imagecolumn.png)
 
 ### Aspect
 
@@ -606,7 +606,7 @@ The [DataGridComboBoxColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui
 * Collection of primitive types
 * Collection of user-defined types (custom objects)
 
-![DataGrid with editing in comboBox column](Images\column-types\maui-datagrid-comboBox-column.png)
+![DataGrid with editing in ComboBoxColumn](Images\column-types\maui-datagrid-comboBox-column.png)
 
 ### Collection of primitive types
 
@@ -779,7 +779,7 @@ dataGrid.Columns.Add(comboBoxColumn);
 {% endhighlight %}
 {% endtabs %}
 
-![DataGrid with Edited comboBox column](Images\column-types\maui-datagrid-combobox-column-editing.png)
+![DataGrid with edited ComboBox column](Images\column-types\maui-datagrid-combobox-column-editing.png)
 
 ### Auto suggesting on edit mode
 
@@ -820,7 +820,7 @@ dataGrid.Columns.Add(comboBoxColumn);
 {% endhighlight %}
 {% endtabs %}
 
-![DataGrid with Suggesting comboBox column](Images\column-types\maui-datagrid-combobox-column-editing.png)
+![DataGrid with suggesting ComboBox column](Images\column-types\maui-datagrid-combobox-column-editing.png)
 
 ### Change clear button visibility
 
