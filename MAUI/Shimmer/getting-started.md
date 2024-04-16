@@ -125,4 +125,39 @@ SfShimmer shimmer = new SfShimmer()
 
 ![Circle persona shimmer view in .NET MAUI.](images/overview/maui-circle-persona.gif)
 
+## Loading shimmer content
+
+Shimmer content is loaded when the [`IsActive`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Shimmer.SfShimmer.html#Syncfusion_Maui_Shimmer_SfShimmer_IsActive) property of the [`SfShimmer`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Shimmer.SfShimmer.html) is disabled.
+
+{% tabs %} 
+
+{% highlight xaml %} 
+
+        <shimmer:SfShimmer x:Name="shimmer" VerticalOptions="FillAndExpand" IsActive ="false">
+                <shimmer:SfShimmer.Content>
+                     <StackLayout>
+                        <Label Text="Content is loaded!"/>
+                      </StackLayout>
+                </shimmer:SfShimmer.Content>
+        </shimmer:SfShimmer>
+
+{% endhighlight %}
+
+{% highlight C# %} 
+
+            shimmer = new SfShimmer()
+            {
+                IsActive = false,
+                VerticalOptions = LayoutOptions.FillAndExpand,
+                Content = new Label
+                {
+                    Text = "Content is loaded!"
+                }
+            };
+            this.Content = shimmer;
+
+{% endhighlight %}
+
+{% endtabs %}
+
 N> You can refer to our [.NET MAUI Shimmer](https://www.syncfusion.com/maui-controls/maui-shimmer) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Shimmer Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/Shimmer) that shows you how to render the Shimmer in .NET MAUI.
