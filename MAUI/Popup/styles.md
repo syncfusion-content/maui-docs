@@ -113,7 +113,7 @@ The SfPopup allows customizing the footer appearance using the following propert
 </tr>
 <tr>
 <td> {{'[FooterButtonCornerRadius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupStyle.html#Syncfusion_Maui_Popup_PopupStyle_ FooterButtonCornerRadius)'| markdownify }} </td>
-<td> Gets or sets the CornerRadius  for the both Footer buttons in the footer.</td>
+<td> Gets or sets the CornerRadius for the both Footer buttons in the footer.</td>
 </tr>
 </table>
 
