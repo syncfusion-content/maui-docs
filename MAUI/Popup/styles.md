@@ -111,6 +111,10 @@ The SfPopup allows customizing the footer appearance using the following propert
 <td> {{'[DeclineButtonTextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupStyle.html#Syncfusion_Maui_Popup_PopupStyle_DeclineButtonTextColor)'| markdownify }} </td>
 <td> Gets or sets the foreground color for the Decline button in the footer.</td>
 </tr>
+<tr>
+<td> {{'[FooterButtonCornerRadius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupStyle.html#Syncfusion_Maui_Popup_PopupStyle_ FooterButtonCornerRadius)'| markdownify }} </td>
+<td> Gets or sets the CornerRadius  for the both Footer buttons in the footer.</td>
+</tr>
 </table>
 
 Refer to the following code example for customizing the footer elements.
@@ -123,7 +127,8 @@ Refer to the following code example for customizing the footer elements.
                             AcceptButtonBackground ="DimGray"
                             AcceptButtonTextColor="White"
                             DeclineButtonBackground="DimGray"
-                            DeclineButtonTextColor="White" />
+                            DeclineButtonTextColor="White"
+                            FooterButtonCornerRadius =”20”/>
     </sfPopup:SfPopup.PopupStyle>
 </sfPopup:SfPopup>
 {% endhighlight %}
@@ -146,6 +151,7 @@ public partial class MainPage : ContentPage
         popup.PopupStyle.AcceptButtonTextColor = Color.White;
         popup.PopupStyle.DeclineButtonBackground = Color.FromRgb(105, 105, 105);
         popup.PopupStyle.DeclineButtonTextColor = Color.White;
+        popup.PopupStyle.FooterButtonCornerRadius = 20;
     }
 }
 {% endhighlight %}
