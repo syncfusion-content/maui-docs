@@ -111,16 +111,18 @@ The SfPopup allows customizing the footer appearance using the following propert
 <td> {{'[DeclineButtonTextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupStyle.html#Syncfusion_Maui_Popup_PopupStyle_DeclineButtonTextColor)'| markdownify }} </td>
 <td> Gets or sets the foreground color for the Decline button in the footer.</td>
 </tr>
+<td>
+`FooterButtonCornerRadius`
+</td>
 <tr>
-<td> {{'[FooterButtonCornerRadius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupStyle.html#Syncfusion_Maui_Popup_PopupStyle_ FooterButtonCornerRadius)'| markdownify }} </td>
-<td> Gets or sets the CornerRadius for the both Footer buttons in the footer.</td>
+<td> Gets or sets the corner radius of the accept and decline buttons in the footer. The default value is 20.</td>
 </tr>
 </table>
 
 Refer to the following code example for customizing the footer elements.
 
 {% tabs %}
-{% highlight xaml hl_lines="3 4 5 6 7" %}
+{% highlight xaml hl_lines="3 4 5 6 7 8" %}
 <sfPopup:SfPopup x:Name="popup" AppearanceMode="TwoButton" ShowFooter="True" >
     <sfPopup:SfPopup.PopupStyle>
         <sfPopup:PopupStyle FooterBackground="LightGray"
@@ -128,11 +130,11 @@ Refer to the following code example for customizing the footer elements.
                             AcceptButtonTextColor="White"
                             DeclineButtonBackground="DimGray"
                             DeclineButtonTextColor="White"
-                            FooterButtonCornerRadius =”20”/>
+                            FooterButtonCornerRadius =0,20,20,0/>
     </sfPopup:SfPopup.PopupStyle>
 </sfPopup:SfPopup>
 {% endhighlight %}
-{% highlight c# hl_lines="14 15 16 17 18" %}
+{% highlight c# hl_lines="14 15 16 17 18 19" %}
 public partial class MainPage : ContentPage
 {
     SfPopup popup;
