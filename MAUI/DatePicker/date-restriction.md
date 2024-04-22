@@ -34,7 +34,7 @@ this.Content = picker;
 
 ## Maximum date
 
-The [.NET MAUI Date picker](https://www.syncfusion.com/maui-controls/maui-datepicker) provides an option to restrict the selection of date items by using the [MaximumDate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html#Syncfusion_Maui_Picker_SfDatePicker_MaximumDate) property in [SfDatePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html), and you cannot select the dates beyond the maximum date range.
+The Date picker provides an option to restrict the selection of date items by using the [MaximumDate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html#Syncfusion_Maui_Picker_SfDatePicker_MaximumDate) property in [SfDatePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html), and you cannot select the dates beyond the maximum date range.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="2" %}
