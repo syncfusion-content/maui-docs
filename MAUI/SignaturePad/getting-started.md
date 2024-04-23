@@ -264,4 +264,4 @@ private void OnDrawCompleted(object? sender, EventArgs e)
 
 {% endtabs %}
 
-N> You can refer to our [.NET MAUI SignaturePad](https://www.syncfusion.com/maui-controls/maui-signaturepad) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI SignaturePad Example](https://www.syncfusion.com/maui-controls/maui-signaturepad) that shows you how to render and configure the SignaturePad in .NET MAUI.
+N> You can refer to our [.NET MAUI SignaturePad](https://www.syncfusion.com/maui-controls/maui-signaturepad) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI SignaturePad Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/SignaturePad) that shows you how to render the SignaturePad in .NET MAUI.
