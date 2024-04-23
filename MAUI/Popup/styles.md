@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Styles in .NET MAUI Popup control | Syncfusion
-description: Learn about Styles support in Syncfusion .NET MAUI Popup (SfPopup) control, its elements, and more.
+description: Learn here all about Styles support in the Syncfusion .NET MAUI Popup (SfPopup) control, its elements, and more.
 platform: MAUI
 control: SfPopup
 documentation: ug
@@ -130,7 +130,7 @@ Refer to the following code example for customizing the footer elements.
                             AcceptButtonTextColor="White"
                             DeclineButtonBackground="DimGray"
                             DeclineButtonTextColor="White"
-                            FooterButtonCornerRadius =0,20,20,0/>
+                            FooterButtonCornerRadius ="0,20,20,0"/>
     </sfPopup:SfPopup.PopupStyle>
 </sfPopup:SfPopup>
 {% endhighlight %}
@@ -153,7 +153,7 @@ public partial class MainPage : ContentPage
         popup.PopupStyle.AcceptButtonTextColor = Color.White;
         popup.PopupStyle.DeclineButtonBackground = Color.FromRgb(105, 105, 105);
         popup.PopupStyle.DeclineButtonTextColor = Color.White;
-        popup.PopupStyle.FooterButtonCornerRadius = 20;
+        popup.PopupStyle.FooterButtonCornerRadius = new CornerRadius(0,20,20,0);
     }
 }
 {% endhighlight %}
