@@ -19,7 +19,7 @@ The data rows can be customized conditionally by writing the style with a conver
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml"%}
-<ContentPage xmlns:syncfusion="http://schemas.syncfusion.com/maui">
+<ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.DataGrid;assembly=Syncfusion.Maui.DataGrid">
     <ContentPage.Resources>
         <local:ColorConverter x:Key="converter"/>
         <Style TargetType="syncfusion:DataGridRow">
@@ -56,7 +56,7 @@ Styling can be applied to a particular row based on RowIndex property by writing
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml"%}
-<ContentPage xmlns:syncfusion="http://schemas.syncfusion.com/maui">
+<ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.DataGrid;assembly=Syncfusion.Maui.DataGrid">
     <ContentPage.Resources>
         <local:ColorConverter x:Key="converter"/>
         <Style TargetType="syncfusion:DataGridRow">
@@ -92,7 +92,7 @@ Styling can be applied to a particular row based on the RowData property by writ
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml"%}
-<ContentPage xmlns:syncfusion="http://schemas.syncfusion.com/maui">
+<ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.DataGrid;assembly=Syncfusion.Maui.DataGrid">
     <ContentPage.Resources>
         <local:ColorConverter x:Key="converter"/>
         <Style TargetType="syncfusion:DataGridRow">
@@ -129,7 +129,7 @@ The `SfDataGrid` provides the support to apply the conditional style for specifi
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml"%}
-<ContentPage xmlns:syncfusion="http://schemas.syncfusion.com/maui">
+<ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.DataGrid;assembly=Syncfusion.Maui.DataGrid">
     <ContentPage.Resources>
         <local:ColorConverter x:Key="converter"/>
     </ContentPage.Resources>
@@ -176,7 +176,7 @@ The grid cell can be customized conditionally by writing the style with a conver
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml"%}
-<ContentPage xmlns:syncfusion="http://schemas.syncfusion.com/maui">
+<ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.DataGrid;assembly=Syncfusion.Maui.DataGrid">
     <ContentPage.Resources>
         <local:ColorConverter x:Key="converter"/>
         <Style TargetType="syncfusion:DataGridCell">
@@ -210,7 +210,7 @@ Styling can be applied to a particular cell based on RowIndex, ColumnIndex and M
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml"%}
-<ContentPage xmlns:syncfusion="http://schemas.syncfusion.com/maui">
+<ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.DataGrid;assembly=Syncfusion.Maui.DataGrid">
     <ContentPage.Resources>
         <local:ColorConverter x:Key="converter"/>
         <local:ForeColorConverter x:Key="foreColorconverter"/>
@@ -282,7 +282,7 @@ Styling can be applied to a particular cell based on RowIndex and ColumnIndex pr
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml"%}
-<ContentPage xmlns:syncfusion="http://schemas.syncfusion.com/maui">
+<ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.DataGrid;assembly=Syncfusion.Maui.DataGrid">
     <ContentPage.Resources>
         <local:ColorConverter x:Key="converter"/>
         <local:ForeColorConverter x:Key="foreColorconverter"/>
@@ -338,7 +338,7 @@ Styling can be applied to a particular cell based on CellValue property by writi
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml"%}
-<ContentPage xmlns:syncfusion="http://schemas.syncfusion.com/maui">
+<ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.DataGrid;assembly=Syncfusion.Maui.DataGrid">
     <ContentPage.Resources>
         <local:ColorConverter x:Key="converter"/>
         <local:ForeColorConverter x:Key="foreColorconverter"/>
