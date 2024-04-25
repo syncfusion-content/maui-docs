@@ -153,7 +153,7 @@ this.Content = calendar;
 <tr>
 <td>{{'[InlineEventArgs](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.InlineEventArgs.html)' | markdownify }}</td>
 <td>Nil</td>
-<td>Not Supported.</td>
+<td>For events related support use the .NET MAUI Scheduler control</td>
 </tr> 
 <tr>
 <td>{{'[InlineItemTappedEventArgs](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.InlineItemTappedEventArgs.html)' | markdownify }}</td>
@@ -334,7 +334,7 @@ this.Content = calendar;
 <tr>
 <td>{{'[Locale](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_Locale)'| markdownify }}</td>
 <td>Nil</td>
-<td>Not Supported.</td>
+<td>Refer this [link](https://help.syncfusion.com/maui/calendar/localization) for using localization in .NET MAUI Calendar</td>
 </tr>
 <tr>
 <td>{{'[MaxDate](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_MaxDate)'| markdownify }}</td>
@@ -374,7 +374,7 @@ this.Content = calendar;
 <tr>
 <td>{{'[NavigationArrowThickness](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_NavigationArrowThickness)'| markdownify }}</td>
 <td>Nil</td>
-<td>Not Supported.</td>
+<td>By using custom header in sample level you can customize the navigation arrows.</td>
 </tr>
 <tr>
 <td>{{'[NavigationButtonHeight](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_NavigationButtonHeight)'| markdownify }}</td>
@@ -1105,7 +1105,7 @@ this.Content = calendar;
 <tr>
 <td>{{'[NavigateTo](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_NavigateTo_System_DateTime_)'| markdownify }}</td>
 <td>Nil</td>
-<td>Not Supported.</td>
+<td>Using [DisplayDate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_DisplayDate), you can navigate to specific date.</td>
 </tr>
 <tr>
 <td>{{'[Refresh](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_Refresh)'| markdownify }}</td>
