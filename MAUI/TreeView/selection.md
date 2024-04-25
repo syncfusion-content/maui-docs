@@ -156,6 +156,32 @@ The TreeView allows to select the items through keyboard interactions. Behavior 
 
 * When the `SelectionMode` is `Multiple` or `Extended`, the focus border will set to the `CurrentItem`.
 
+### KeyDown event
+
+The `KeyDown` event is raised while pressing the key. The `KeyPressEventArgs` contains the following members for the event:
+
+ * `Key`: Returns the currently pressed key.
+ * `IsShiftKeyPressed`: Indicates whether the Shift key is in pressed state
+ * `IsCtrlKeyPressed`: Indicates whether the Control key is in pressed state.
+ * `IsAltKeyPressed`: Indicates whether the Alt key is in pressed state.
+ * `IsCommandKeyPressed`: Indicates whether the Command key is in pressed state.
+ * `Handled`: Gets or sets whether the event is handled or not.
+
+{% tabs %}
+{% highlight xaml %}
+<syncfusion:SfTreeView x:Name="treeView" KeyDown="treeView_KeyDown"/>
+{% endhighlight %}
+{% highlight c# %}
+
+treeView.KeyDown += this.TreeView_KeyDown;
+private void TreeView_KeyDown(object? sender, KeyPressEventArgs e)
+{
+    DisplayAlert("Key Press", "Key is Pressed","Close"); 
+}
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Limitation
 
 * When a grid is loaded inside the [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ItemTemplate) with a background color, the [SelectionBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_SelectionBackground) will not displayed because it overlaps the `SelectionBackground`. In this case, set the background color for the TreeView instead of grid in the `ItemTemplate`.
