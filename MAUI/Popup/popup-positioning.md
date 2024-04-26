@@ -277,12 +277,25 @@ public class ViewModel : INotifyPropertyChanged
 To close a popup automatically after a specified delay, you can use the `AutoCloseDelay` property, which allows you to give the duration in milliseconds for the popup to automatically close itself without any user interaction.
 
 {% tabs %}
-{% highlight xaml hl_lines="1" %}
-<syncfusion:SfPopup x:Name="SfPopup" AutoCloseDelay="3000" IsOpen="True"> 
+{% highlight xaml hl_lines="3" %}
+<syncfusion:SfPopup x:Name="SfPopup" 
+                    IsOpen="True"
+                    AutoCloseDelay="3000"> 
 </syncfusion:SfPopup>
 {% endhighlight %}
-{% highlight c# hl_lines="1" %}
-popup.AutoCloseDelay=3000
+{% highlight c# hl_lines="9" %}
+using Syncfusion.Maui.Popup;
+. . .
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        SfPopup popup = new SfPopup();
+        popup.AutoCloseDelay = 3000;
+        popup.IsOpen = true;
+    }
+}
 {% endhighlight %}
 {% endtabs %}
 
