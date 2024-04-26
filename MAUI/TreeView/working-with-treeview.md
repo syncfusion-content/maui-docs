@@ -104,7 +104,7 @@ private void TreeView_ItemLongPress(object sender, ItemLongPressEventArgs e)
 
 ### KeyDown event
 
-The `KeyDown` event is triggered when a key is pressed while the [SfTreeView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.html) is in focus.The `KeyPressEventArgs` contains the following members for the `KeyDown` event:
+The `KeyDown` event is triggered when a key is pressed while the [SfTreeView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.html) is in focus. The `KeyPressEventArgs` has the following members that provide information for the `KeyDown` event:
 
  * `Key`: Returns the currently pressed key.
  * `IsShiftKeyPressed`: Indicates whether the Shift key is in pressed state.
