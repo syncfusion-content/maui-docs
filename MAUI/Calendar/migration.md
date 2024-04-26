@@ -138,7 +138,7 @@ this.Content = calendar;
 <tr>
 <td>{{'[MonthLabelSettings](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.MonthLabelSettings.html)' | markdownify }}</td>
 <td>Nil</td>
-<td>Not Supported.</td>
+<td>Use properties from [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#properties).</td>
 </tr> 
 <tr>
 <td>{{'[CalendarInlineEvent](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.CalendarInlineEvent.html)' | markdownify }}</td>
@@ -153,7 +153,7 @@ this.Content = calendar;
 <tr>
 <td>{{'[InlineEventArgs](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.InlineEventArgs.html)' | markdownify }}</td>
 <td>Nil</td>
-<td>For events related support use the .NET MAUI Scheduler control</td>
+<td>Not Supported.</td>
 </tr> 
 <tr>
 <td>{{'[InlineItemTappedEventArgs](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.InlineItemTappedEventArgs.html)' | markdownify }}</td>
@@ -168,7 +168,7 @@ this.Content = calendar;
 <tr>
 <td>{{'[MonthCell](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.MonthCell.html)' | markdownify }}</td>
 <td>Nil</td>
-<td>Not Supported.</td>
+<td>Use properties from [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#properties).</td>
 </tr> 
 <tr>
 <td>{{'[MonthCellLoadedEventArgs](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.MonthCellLoadedEventArgs.html)' | markdownify }}</td>
@@ -183,7 +183,7 @@ this.Content = calendar;
 <tr>
 <td>{{'[YearCell](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.YearCell.html)' | markdownify }}</td>
 <td>Nil</td>
-<td>Not Supported.</td>
+<td>Use properties from [YearView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarYearView.html)</td>
 </tr>
 <tr>
 <td>{{'[YearCellLoadedEventArgs](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.YearCellLoadedEventArgs.html)' | markdownify }}</td>
@@ -284,12 +284,12 @@ this.Content = calendar;
 <tr>
 <td>{{'[CustomDayLabels](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_CustomDayLabels)'| markdownify }}</td>
 <td>Nil</td>
-<td>Not Supported.</td>
+<td>By using custom header (hides default view header using Height(https://help.syncfusion.com/maui/calendar/headers#customize-view-header-height) value as 0) in sample level you can customize.</td>
 </tr>
 <tr>
 <td>{{'[DataSource](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_DataSource)'| markdownify }}</td>
 <td>Nil</td>
-<td>For datasource related support suggesting to use .NET MAUI Scheduler</td>
+<td>For [Datasource](https://help.syncfusion.com/maui/scheduler/appointments) related support suggesting to use .NET MAUI Scheduler</td>
 </tr>
 <tr>
 <td>{{'[DisplayDate](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_DisplayDate)'| markdownify }}</td>
@@ -344,7 +344,7 @@ this.Content = calendar;
 <tr>
 <td>{{'[MaximumEventIndicatorCount](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_MaximumEventIndicatorCount)'| markdownify }}</td>
 <td>Nil</td>
-<td>For event related support suggesting to use .NET MAUI Scheduler</td>
+<td>Not supported.</td>
 </tr>
 <tr>
 <td>{{'[MinDate](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_MinDate)'| markdownify }}</td>
@@ -374,7 +374,7 @@ this.Content = calendar;
 <tr>
 <td>{{'[NavigationArrowThickness](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_NavigationArrowThickness)'| markdownify }}</td>
 <td>Nil</td>
-<td>By using custom header in sample level you can customize the navigation arrows.</td>
+<td>By using custom header ([Height](https://help.syncfusion.com/maui/calendar/headers#customize-the-header-height) value as 0) in sample level you can customize the navigation arrows.</td>
 </tr>
 <tr>
 <td>{{'[NavigationButtonHeight](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_NavigationButtonHeight)'| markdownify }}</td>
@@ -429,7 +429,7 @@ this.Content = calendar;
 <tr>
 <td>{{'[ShowHeader](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_ShowHeader)'| markdownify }}</td>
 <td>Nil</td>
-<td>Not Supported.</td>
+<td>By using [Height](https://help.syncfusion.com/maui/calendar/headers#customize-the-header-height) property of the HeaderView value as 0 in sample level you can hide and show the headers.</td>
 </tr>
 <tr>
 <td>{{'[ShowInlineEvents](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_ShowInlineEvents)'| markdownify }}</td>
@@ -474,7 +474,7 @@ this.Content = calendar;
 <tr>
 <td>{{'[VisibleDates](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_VisibleDates)'| markdownify }}</td>
 <td>Nil</td>
-<td>Not Supported.</td>
+<td>Use visible dates from the [ViewChanged](https://help.syncfusion.com/maui/calendar/events#viewchanged) event.</td>
 </tr>
 <tr>
 <td>{{'[YearViewMode](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_YearViewMode)'| markdownify }}</td>
@@ -734,7 +734,7 @@ this.Content = calendar;
 <tr>
 <td>{{'[MonthLabelSettings](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.MonthViewSettings.html#Syncfusion_SfCalendar_XForms_MonthViewSettings_MonthLabelSettings)'| markdownify }}</td>
 <td>Nil</td>
-<td>Not Supported.</td>
+<td>Use properties from [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#properties).</td>
 </tr>
 <tr>
 <td>{{'[PreviousMonthBackgroundColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.MonthViewSettings.html#Syncfusion_SfCalendar_XForms_MonthViewSettings_PreviousMonthBackgroundColor)'| markdownify }}</td>
