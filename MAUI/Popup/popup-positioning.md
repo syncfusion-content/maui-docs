@@ -299,7 +299,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![Dismiss popup automatically after specified delay in .NET MAUI Popup](Images/popup-positioning/maui-popup-autoclosedelay.gif)
+![Dismiss the popup automatically after a specified delay in the .NET MAUI Popup.](Images/popup-positioning/maui-popup-autoclosedelay.gif)
 
 ## How to
 
