@@ -394,7 +394,7 @@ By default, the suggestions list in the `SfChat` closes automatically after the 
 
 ## Prevent the chosen suggestion from being sent automatically.
 
-By default, when tap/click the suggestion item, it will be sent as an outgoing message immediately. So, If you wish to prevent this behavior and show the suggestions list in editor view, you can set the `SuggestionItemSelectedEventArgs.CancelSendMessage` to `true` within the `SuggestionItemSelected` event handler or the `SfChat.SuggestionItemSelectedCommand` command's execution.
+By default, when tapping or clicking the suggestion item, it will be sent as an outgoing message immediately. So, if you wish to prevent this behavior and show the suggestions list in editor view, you can set the `SuggestionItemSelectedEventArgs.CancelSendMessage` to `true` within the `SuggestionItemSelected` event handler or the `SfChat.SuggestionItemSelectedCommand` command's execution.
 
 **SuggestionItemSelected event**
 
@@ -409,7 +409,7 @@ By default, when tap/click the suggestion item, it will be sent as an outgoing m
     /// <param name="e"><see cref="SuggestionItemSelectedEventArgs"/> as parameter</param>
     private void SfChat_SuggestionItemSelected(object sender, SuggestionItemSelectedEventArgs e)
     {
-        // After tapping/clicking the suggestion item,item will be visible in editor view.
+        // After tapping or clicking the suggestion item,it will be visible in editor view.
         e.CancelSendMessage = true;
     }
 
