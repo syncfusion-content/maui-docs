@@ -135,6 +135,8 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}	
 
+N> This property won't work when adding the SfCardView as a child of SfCardLayout.
+
 ![MAUI SfCardView image](images/maui-card-swiptodismiss.gif)
 
 ## Dismiss the card programmatically
