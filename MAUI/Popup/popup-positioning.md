@@ -283,19 +283,10 @@ To close a popup automatically after a specified delay, you can use the `AutoClo
                     AutoCloseDelay="3000"> 
 </syncfusion:SfPopup>
 {% endhighlight %}
-{% highlight c# hl_lines="9" %}
-using Syncfusion.Maui.Popup;
-. . .
-public partial class MainPage : ContentPage
-{
-    public MainPage()
-    {
-        InitializeComponent();
-        SfPopup popup = new SfPopup();
-        popup.AutoCloseDelay = 3000;
-        popup.IsOpen = true;
-    }
-}
+{% highlight c# hl_lines="2" %}
+SfPopup popup = new SfPopup();
+popup.AutoCloseDelay = 3000;
+popup.IsOpen = true;
 {% endhighlight %}
 {% endtabs %}
 
