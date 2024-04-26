@@ -198,5 +198,6 @@ maskedEntry.Value = "12/02/2022";
 N> 
 Get the complete getting started sample from the [GitHub](https://github.com/SyncfusionExamples/maui-maskedentry-samples) link.
 
+N> You can refer to our [.NET MAUI Masked Entry](https://www.syncfusion.com/maui-controls/maui-masked-entry) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Busy Indicator Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/Inputs/SampleBrowser.Maui.Inputs/Samples/MaskedEntry) that shows you how to render the Masked Entry in .NET MAUI.
 
 
