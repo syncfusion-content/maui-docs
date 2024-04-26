@@ -286,7 +286,7 @@ popup.AutoCloseDelay=3000
 {% endhighlight %}
 {% endtabs %}
 
-![.NET MAUI Popup closes automatically after specified delay](Images/popup-positioning/maui-popup-autoclosedelay.gif)
+![Dismiss popup automatically after specified delay in .NET MAUI Popup](Images/popup-positioning/maui-popup-autoclosedelay.gif)
 
 ## How to
 
