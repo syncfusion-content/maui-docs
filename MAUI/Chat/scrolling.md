@@ -37,7 +37,7 @@ You can scroll to a particular message programmatically using the [SfChat.Scroll
 
 ## Auto scroll chat control to bottom when new message is added
 
-By default, the [SfChat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html) control is scrolled to the bottom to show the newly added message. If you want to disable this auto scroll, set `CanAutoScrollToBottom` as `false`.
+By default, the [SfChat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html) control is scrolled to the bottom to show the newly added message. If you want to disable this auto scroll, set [CanAutoScrollToBottom](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_CanAutoScrollToBottom) as `false`.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="4" %}
