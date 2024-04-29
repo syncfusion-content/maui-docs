@@ -344,7 +344,7 @@ this.Content = calendar;
 <tr>
 <td>{{'[MaximumEventIndicatorCount](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_MaximumEventIndicatorCount)'| markdownify }}</td>
 <td>Nil</td>
-<td>Not supported.</td>
+<td>For [Datasource](https://help.syncfusion.com/maui/scheduler/appointments) related support suggesting to use .NET MAUI Scheduler</td
 </tr>
 <tr>
 <td>{{'[MinDate](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_MinDate)'| markdownify }}</td>
@@ -379,12 +379,12 @@ this.Content = calendar;
 <tr>
 <td>{{'[NavigationButtonHeight](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_NavigationButtonHeight)'| markdownify }}</td>
 <td>Nil</td>
-<td>By using custom header in sample level you can customize the navigation arrows.</td>
+<td>By using custom header, you can customize the navigation arrows.</td>
 </tr>
 <tr>
 <td>{{'[NavigationButtonWidth](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_NavigationButtonWidth)'| markdownify }}</td>
 <td>Nil</td>
-<td>By using custom header in sample level you can customize the navigation arrows.</td>
+<td>By using custom header, you can customize the navigation arrows.</td>
 </tr>
 <tr>
 <td>{{'[NavigationDirection](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_NavigationDirection)'| markdownify }}</td>
