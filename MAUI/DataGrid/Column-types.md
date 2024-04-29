@@ -68,7 +68,7 @@ The following table describes the types of columns and their usage:
 </tr>
 <tr>
 <td>{{'[DataGridUnboundColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridUnboundColumn.html)'| markdownify }}</td>
-<td>{{'[DataGridUnboundRowCellRenderer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridUnboundRowCellRenderer.html)'| markdownify }}</td>
+<td>{{'[DataGridUnboundCellRenderer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridUnboundCellRenderer.html)'| markdownify }}</td>
 <td>Unbound</td>
 <td>To add additional columns that are not bound with data object from the underlying data source.</td>
 </tr>
