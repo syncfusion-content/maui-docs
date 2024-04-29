@@ -21,42 +21,56 @@ The following table describes the types of columns and their usage:
 <tr>
 <th>Column Type</th>
 <th>Renderer</th>
+<th>Key</th>
 <th>Description</th>
 </tr>
 <tr>
 <td>{{'[DataGridTextColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridTextColumn.html)'| markdownify }}</td>
 <td>{{'[DataGridTextBoxRenderer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridTextBoxCellRenderer.html)' | markdownify }}</td>
+<td>Text</td>
 <td>To display a string or numbers in each row.</td>
 </tr>
 <tr>
 <td>{{'[DataGridCheckBoxColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCheckBoxColumn.html)'| markdownify }}</td>
 <td>{{'[DataGridCheckBoxRenderer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCheckBoxCellRenderer.html)'| markdownify }}</td>
+<td>CheckBox</td>
 <td>To display CheckBox in each row.</td>
 </tr>
 <tr>
 <td>{{'[DataGridImageColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridImageColumn.html)'| markdownify }}</td>
 <td>{{'[DataGridImageCellRenderer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridImageCellRenderer.html)'| markdownify }}</td>
+<td>Image</td>
 <td>To display an image in each row.</td>
 </tr>
 <tr>
 <td>{{'[DataGridTemplateColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridTemplateColumn.html)'| markdownify }}</td>
 <td>{{'[DataGridCellTemplateRenderer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCellTemplateRenderer.html)'| markdownify }}</td>
+<td>Template</td>
 <td>To customize a column based on the requirements.</td>
 </tr>
 <tr>
 <td>{{'[DataGridNumericColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridNumericColumn.html)'| markdownify }}</td>
 <td>{{'[DataGridNumericCellRenderer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridNumericCellRenderer.html)'| markdownify }}</td>
+<td>Numeric</td>
 <td>To display numeric data.</td>
 </tr>
 <tr>
 <td>{{'[DataGridDateColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridDateColumn.html)'| markdownify }}</td>
 <td>{{'[DataGridDateCellRenderer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridDateCellRenderer.html)'| markdownify }}</td>
+<td>DateTime</td>
 <td>To display the date and time value.</td>
 </tr>
 <tr>
 <td>{{'[DataGridComboBoxColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridComboBoxColumn.html)'| markdownify }}</td>
 <td>{{'[DataGridComboBoxRenderer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridComboBoxRenderer.html)'| markdownify }}</td>
+<td>ComboBox</td>
 <td>To display the date and time value.</td>
+</tr>
+<tr>
+<td>{{'[DataGridUnboundColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridUnboundColumn.html)'| markdownify }}</td>
+<td>{{'[DataGridUnboundCellRenderer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridUnboundCellRenderer.html)'| markdownify }}</td>
+<td>Unbound</td>
+<td>To add additional columns that are not bound with data object from the underlying data source.</td>
 </tr>
 </table>
 
@@ -272,7 +286,7 @@ dataGrid.Columns.Add(new DataGridTextColumn()
 
 #### Format column using converter
 
-We can customise the format of a particular column using converter.
+We can customize the format of a particular column using converter.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml"%}
