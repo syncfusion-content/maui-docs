@@ -63,7 +63,7 @@ Enhance [SfChat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat
 </tr>
 </table>
 
-![Inner elements Accessibility in .NET MAUI Chat](images/Accessibility/maui-chat-accessibility-loadmore.png)
+![Accessibility in .NET MAUI Chat](images/Accessibility/maui-chat-accessibility-loadmore.png)
 
 ## Calendar
 
@@ -78,22 +78,7 @@ Enhance [SfChat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat
 </tr>
 </table>
 
-![Calendar Accessibility in .NET MAUI Chat](images/Accessibility/maui-chat-accessibility-calendar.png)
-
-## Suggestion
-
-<table>
-<tr>
-<th>Element</th>
-<th>Value</th>
-</tr>
-<tr>
-<td>Suggestions View</td>
-<td>Suggestions</td>
-</tr>
-</table>
-
-![Suggestion Accessibility in .NET MAUI Chat ](images/Accessibility/maui-chat-accessibility-suggestions.png)
+![Accessibility for calendar message in .NET MAUI Chat](images/Accessibility/maui-chat-accessibility-calendar.png)
 
 ## Cards
 
@@ -108,4 +93,19 @@ Enhance [SfChat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat
 </tr>
 </table>
 
-![Cards Accessibility in .NET MAUI Chat](images/Accessibility/maui-chat-accessibility-cards.png)
+![Accessibility for card message in .NET MAUI Chat](images/Accessibility/maui-chat-accessibility-cards.png)
+
+## Suggestion
+
+<table>
+<tr>
+<th>Element</th>
+<th>Value</th>
+</tr>
+<tr>
+<td>Suggestions View</td>
+<td>Suggestions</td>
+</tr>
+</table>
+
+![Accessibility for suggestions in .NET MAUI Chat ](images/Accessibility/maui-chat-accessibility-suggestions.png)
