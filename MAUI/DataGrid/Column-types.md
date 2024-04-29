@@ -286,7 +286,7 @@ dataGrid.Columns.Add(new DataGridTextColumn()
 
 #### Format column using converter
 
-We can customise the format of a particular column using converter.
+We can customize the format of a particular column using converter.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml"%}
