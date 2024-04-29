@@ -62,9 +62,9 @@ The [SfChat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.htm
                 Scrolled="sfChat_Scrolled"/>
 {% endhighlight %}  
 {% highlight c# hl_lines="8" %}
-    sfChat.Scrolled += ScrollTo_Clicked;
+     sfChat.Scrolled += SfChat_Scrolled;
     
-    private void ScrollTo_Clicked(object? sender, ChatScrolledEventArgs e)
+    private void SfChat_Scrolled(object? sender, ChatScrolledEventArgs e)
     {
         // The chat will not be auto scrolled to the bottom
         // if the user is not currently at the bottom end of the chat at the time of the arrival of the new message
