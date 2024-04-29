@@ -445,7 +445,7 @@ By default, when tapping or clicking the suggestion item, it will be sent as an 
 
         public SuggestionsViewModel()
         {
-            SuggestionItemSelectedCommand = new Command(ExecuteSuggestion,CanExecuteSuggestion);
+            SuggestionItemSelectedCommand = new Command(ExecuteSuggestion);
         }
 
         /// <summary>
@@ -463,6 +463,9 @@ By default, when tapping or clicking the suggestion item, it will be sent as an 
             }
         }
 
+        /// <summary>
+        /// Executes the action when a suggestion item is selected.
+        /// </summary>
         public void Execute(object parameter)
         {
            var args = parameter as SuggestionItemSelectedEventArgs;
