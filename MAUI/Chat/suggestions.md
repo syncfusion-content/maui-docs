@@ -466,7 +466,7 @@ By default, when tapping or clicking the suggestion item, it will be sent as an 
         /// <summary>
         /// Executes the action when a suggestion item is selected.
         /// </summary>
-        public void Execute(object parameter)
+        public void ExecuteSuggestion(object parameter)
         {
            var args = parameter as SuggestionItemSelectedEventArgs;
            // Selected suggestion item will be shown in editor view.
