@@ -762,6 +762,10 @@ You can customize the following styles when exporting to PDF as well:
 * GroupCaptionStyle
 * GroupSummaryStyle
 
+### Limitations
+
+* Implicit and explicit styling is not applicable.
+
 #### HeaderStyle
 
 The SfDataGrid allows exporting the column headers with custom style by using the [DataGridPdfExportingOption.HeaderStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.Exporting.DataGridPdfExportingOption.html#Syncfusion_Maui_DataGrid_Exporting_DataGridPdfExportingOption_HeaderStyle) property.

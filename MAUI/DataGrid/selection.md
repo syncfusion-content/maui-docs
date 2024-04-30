@@ -385,7 +385,7 @@ The `SfDataGrid` supports highlighting the current row when the `SelectionMode` 
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml"%}
-<ContentPage xmlns:syncfusion="http://schemas.syncfusion.com/maui">
+<ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.DataGrid;assembly=Syncfusion.Maui.DataGrid">
     <ContentPage.Content>
         <syncfusion:SfDataGrid ItemsSource="{Binding OrderInfoCollection}">
             <syncfusion:SfDataGrid.DefaultStyle>
@@ -404,7 +404,7 @@ Change the selection back color and text color by using the  [SelectionBackgroun
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml"%}
-<ContentPage xmlns:syncfusion="http://schemas.syncfusion.com/maui">
+<ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.DataGrid;assembly=Syncfusion.Maui.DataGrid">
     <ContentPage.Content>
         <syncfusion:SfDataGrid ItemsSource="{Binding OrderInfoCollection}">
             <syncfusion:SfDataGrid.DefaultStyle>
@@ -434,7 +434,7 @@ Change the current cell border color and width by using the [CurrentCellBorderCo
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml"%}
-<ContentPage xmlns:syncfusion="http://schemas.syncfusion.com/maui">
+<ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.DataGrid;assembly=Syncfusion.Maui.DataGrid">
     <ContentPage.Content>
         <syncfusion:SfDataGrid ItemsSource="{Binding OrderInfoCollection}">
             <syncfusion:SfDataGrid.DefaultStyle>
@@ -464,7 +464,7 @@ The SfDataGrid allows you to bind the selection properties such as `SelectedInde
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml"%}
-<ContentPage xmlns:syncfusion="http://schemas.syncfusion.com/maui">
+<ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.DataGrid;assembly=Syncfusion.Maui.DataGrid">
     <ContentPage.Content>
         <syncfusion:SfDataGrid ItemsSource="{Binding OrderInfoCollection}"
                             SelectedIndex="{Binding DataGridSelectedIndex}"
