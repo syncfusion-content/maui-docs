@@ -284,7 +284,7 @@ this.Content = calendar;
 <tr>
 <td>{{'[CustomDayLabels](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_CustomDayLabels)'| markdownify }}</td>
 <td>Nil</td>
-<td>By using custom header (hides default view header using Height(https://help.syncfusion.com/maui/calendar/headers#customize-view-header-height) value as 0) in sample level you can customize.</td>
+<td>By using custom header (hides default view header using Height(https://help.syncfusion.com/maui/calendar/headers#customize-view-header-height) value as 0), you can customize.</td>
 </tr>
 <tr>
 <td>{{'[DataSource](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_DataSource)'| markdownify }}</td>
@@ -334,7 +334,7 @@ this.Content = calendar;
 <tr>
 <td>{{'[Locale](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_Locale)'| markdownify }}</td>
 <td>Nil</td>
-<td>Refer this [link](https://help.syncfusion.com/maui/calendar/localization) for using localization in .NET MAUI Calendar</td>
+<td>Refer to this [link](https://help.syncfusion.com/maui/calendar/localization) for using localization in .NET MAUI Calendar</td>
 </tr>
 <tr>
 <td>{{'[MaxDate](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_MaxDate)'| markdownify }}</td>
@@ -374,17 +374,17 @@ this.Content = calendar;
 <tr>
 <td>{{'[NavigationArrowThickness](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_NavigationArrowThickness)'| markdownify }}</td>
 <td>Nil</td>
-<td>By using custom header ([Height](https://help.syncfusion.com/maui/calendar/headers#customize-the-header-height) value as 0) in sample level you can customize the navigation arrows.</td>
+<td>By using custom header ([Height](https://help.syncfusion.com/maui/calendar/headers#customize-the-header-height) value as 0), customize the navigation arrows.</td>
 </tr>
 <tr>
 <td>{{'[NavigationButtonHeight](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_NavigationButtonHeight)'| markdownify }}</td>
 <td>Nil</td>
-<td>By using custom header, you can customize the navigation arrows.</td>
+<td>By using custom header, customize the navigation arrows.</td>
 </tr>
 <tr>
 <td>{{'[NavigationButtonWidth](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_NavigationButtonWidth)'| markdownify }}</td>
 <td>Nil</td>
-<td>By using custom header, you can customize the navigation arrows.</td>
+<td>By using custom header, customize the navigation arrows.</td>
 </tr>
 <tr>
 <td>{{'[NavigationDirection](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_NavigationDirection)'| markdownify }}</td>
@@ -1075,7 +1075,7 @@ this.Content = calendar;
 <tr>
 <td>{{'[AddDatesInPast](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_AddDatesInPast)'| markdownify }}</td>
 <td>{{'[EnablePastDates](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_EnablePastDates)'| markdownify }}</td>
-<td>Gets or sets a value indicating whether the dates enabled or disabled before today date.</td>
+<td>Gets or sets a value indicating whether the dates are enabled or disabled before today's date.</td>
 </tr>
 <tr>
 <td>{{'[Backward](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_AddDatesInPast)'| markdownify }}</td>
