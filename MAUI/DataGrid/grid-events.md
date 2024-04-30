@@ -80,6 +80,8 @@ private void dataGrid_CellLongPress(object sender, DataGridCellLongPressEventArg
 {% endhighlight %}
 {% endtabs %}
 
+N> The `CellLongPress` event is triggered only when performing a long press on the screen touch in the Windows platform.
+
 ### CellRightTapped event
 This event will be triggered when a right-click mouse gesture is recognized on a cell. This event has the [DataGridCellRightTappedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCellRightTappedEventArgs.html) as arguments.
 
