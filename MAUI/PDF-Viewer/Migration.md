@@ -72,7 +72,7 @@ To make migration from [Xamarin SfPdfViewer](https://www.syncfusion.com/xamarin-
 <tr>
 <td>{{'[Bookmarks](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.SfPdfViewer.html#Syncfusion_SfPdfViewer_XForms_SfPdfViewer_Bookmarks)'| markdownify}}</td>
 <td>{{'[DocumentOutline](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_DocumentOutline)'| markdownify}}</td>
-<td>Gets the oultline for the document.</td>
+<td>Gets the outline for the document.</td>
 </tr>
 <tr>
 <td>{{'[IsTextSelectionEnabled](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.SfPdfViewer.html#Syncfusion_SfPdfViewer_XForms_SfPdfViewer_IsTextSelectionEnabled)'| markdownify}}</td>
@@ -447,7 +447,7 @@ To make migration from [Xamarin SfPdfViewer](https://www.syncfusion.com/xamarin-
 <div>{{'[StrikeOutAnnotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.StrikeOutAnnotation.html)'| markdownify }},</div>
 <div>{{'[UnderlineAnnotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.UnderlineAnnotation.html)'| markdownify }} </div>
 </td>
-<td>Represents the textmarkup annotation on the text contents in the page.</td>
+<td>Represents the text markup annotation on the text contents in the page.</td>
 </tr>
 <tr>
 <td>{{'[ShapeAnnotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.ShapeAnnotation.html)'| markdownify }}</td>
