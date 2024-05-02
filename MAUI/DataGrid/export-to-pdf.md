@@ -764,7 +764,7 @@ You can customize the following styles when exporting to PDF as well:
 
 ### Limitations
 
-* Implicit and explicit styling is not applicable.
+* The implicit and explicit styles are not applicable when exporting the DataGrid to PDF.
 
 #### HeaderStyle
 

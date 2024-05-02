@@ -803,7 +803,7 @@ option.CanApplyGridStyle = true;
 
 ### Limitations
 
-* Implicit and explicit styling is not applicable.
+* The implicit and explicit styles are not applicable when exporting the DataGrid to Excel.
 
 #### TopTableSummaryStyle
 
