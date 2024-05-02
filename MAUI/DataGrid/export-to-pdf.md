@@ -141,7 +141,7 @@ namespace GettingStarted
         public partial void SaveAndView(string filename, string contentType, MemoryStream stream)
         {
             string exception = string.Empty;
-            string? root = System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments);
+            string? root = Android.App.Application.Context.GetExternalFilesDir(Android.OS.Environment.DirectoryDownloads)!.AbsolutePath.ToString();
 
             Java.IO.File myDir = new(root + "/Syncfusion");
             myDir.Mkdir();
@@ -219,7 +219,7 @@ Add the following code to the AndroidManifest.xml file located under Properties 
         android:grantUriPermissions="true">
 			<meta-data
 				android:name="android.support.FILE_PROVIDER_PATHS"
-				android:resource="@xml/file_paths" />
+				android:resource="@xml/provider_path" />
 		</provider>
 	</application>
 	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
