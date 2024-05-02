@@ -138,7 +138,7 @@ this.Content = calendar;
 <tr>
 <td>{{'[MonthLabelSettings](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.MonthLabelSettings.html)' | markdownify }}</td>
 <td>Nil</td>
-<td>Use properties from [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#properties).</td>
+<td>Use properties from {{'[MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#properties)' | markdownify }}.</td>
 </tr> 
 <tr>
 <td>{{'[CalendarInlineEvent](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.CalendarInlineEvent.html)' | markdownify }}</td>
