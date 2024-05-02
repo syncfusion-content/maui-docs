@@ -355,7 +355,7 @@ namespace GettingStarted
 
 ### Save and View the PDF document in MacCatalyst
 
-Add the new class file with name SaveMAC file under Platforms-> MacCatylyst directory to save and view the PDF document in the MAC Device and use the below code in it.
+Add the new class file with name SaveMAC file under Platforms-> MacCatalyst directory to save and view the PDF document in the MAC Device and use the below code in it.
 
 {% tabs %}
 {% highlight c# %}
