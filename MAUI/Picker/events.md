@@ -9,7 +9,7 @@ documentation: ug
 
 # Events in .NET MAUI Picker (SfPicker)
 
-Three events have been used for a picker when it is in the Dialog mode. They are, 
+Three events have been used for a [.NET MAUI Picker](https://www.syncfusion.com/maui-controls/maui-picker) when it is in the Dialog mode. They are, 
 
  * Opened 
  * Closing 
