@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Events with .NET MAUI Picker Control | Syncfusion
-description: Learn here all about events with Syncfusion .NET MAUI Picker (SfPicker) control.
+description: Learn here all about events with Syncfusion Essential .NET MAUI Picker (SfPicker) control, it's elements and more details.
 platform: maui
 control: SfPicker
 documentation: ug
