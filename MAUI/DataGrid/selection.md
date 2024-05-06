@@ -259,6 +259,14 @@ If the active current cell is in edit mode, the changes will be committed and mo
 All rows or cells will be selected.
 </td>
 </tr>
+<tr>
+<td>
+<kbd>Delete</kbd>
+</td>
+<td>
+Selected rows will be deleted
+</td>
+</tr>
 </table>
 
 ## Move Current Cell
@@ -320,6 +328,21 @@ By default, the current cell is focusable for all the columns. To disable curren
    <syncfusion:DataGridTextColumn MappingName="ShipCountry "
                  HeaderText="Ship Country " />
 </syncfusion:SfDataGrid.Columns>
+</syncfusion:SfDataGrid>
+{% endhighlight %}
+{% endtabs %}
+
+## Disable Deleting the rows
+
+By default, the selected rows will be deleted. If we set the `DataGrid.AllowDeleting` property to `False`, the deletion of rows will be disabled.
+
+{% tabs %}
+{% highlight XAML %}
+<syncfusion:SfDataGrid x:Name="sfDataGrid"
+                    SelectionMode="Single"
+                    NavigationMode="Cell"
+                    AllowDeleting="False"
+                    ItemsSource="{Binding OrderInfoCollection}" >
 </syncfusion:SfDataGrid>
 {% endhighlight %}
 {% endtabs %}
@@ -519,5 +542,20 @@ public class ViewModel : INotifyPropertyChanged
                 this.PropertyChanged(this, new PropertyChangedEventArgs(name));
         }
     }
+{% endhighlight %}
+{% endtabs %}
+
+## Set KeyBoard Navigation
+
+SfDataGrid allows you to set the Keyboard Navigation property as `True` or `False`. By default, Keyboard Navigation works. But you can set it to `False`, if you prefer to deactivate it.
+
+{% tabs %}
+{% highlight XAML %}
+<syncfusion:SfDataGrid x:Name="sfDataGrid"
+                    SelectionMode="Single"
+                    NavigationMode="Cell"
+                    AllowKeyboardNavigation="False"
+                    ItemsSource="{Binding OrderInfoCollection}" >
+</syncfusion:SfDataGrid>
 {% endhighlight %}
 {% endtabs %}

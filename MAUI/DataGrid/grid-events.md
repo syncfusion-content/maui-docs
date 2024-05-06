@@ -38,6 +38,19 @@ private void dataGrid_CellTapped(object sender, DataGridCellTappedEventArgs e)
 {% endhighlight %}
 {% endtabs %}
 
+## CellTappedCommand and Parameter
+When we tapped the cell, the `CellTappedComamnd` binds to the command which you defined in your ViewModel. With this we can also use the `CellTappedCommandParameter` to be passed to the `Command` when it is executed.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                   CellTapped="dataGrid_CellTapped"
+                   CellTappedCommand="{Binding ButtonCommand}"
+                   CellTappedCommandParameter="7"
+                   ItemsSource="{Binding OrderInfoCollection}" />
+{% endhighlight %}
+{% endtabs %}
+
 ### CellDoubleTapped event
 
 This event will be triggered while double tapping a cell in the DataGrid. This event has the [DataGridCellDoubleTappedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCellDoubleTappedEventArgs.html) as arguments. 
@@ -59,6 +72,19 @@ private void dataGrid_CellDoubleTapped(object sender, DataGridCellDoubleTappedEv
 {% endhighlight %}
 {% endtabs %}
 
+## CellDoubleTappedCommand and Parameter
+When we double tapped the cell, the `CellDoubleTappedCommand` binds to the command which you defined in your ViewModel. With this we can also use the `CellDoubleTappedCommandParameter` to be passed to the `Command` when it is executed.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                   CellDoubleTapped="dataGrid_CellDoubleTapped"
+                   CellDoubleTappedCommand="{Binding ButtonCommand}"
+                   CellDoubleTappedCommandParameter="8"
+                   ItemsSource="{Binding OrderInfoCollection}" />
+{% endhighlight %}
+{% endtabs %}
+
 ### CellLongPress event
 
 This event will be triggered while long pressing a cell in the DataGrid. This event has the [DataGridCellLongPressEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCellLongPressEventArgs.html) as arguments. 
@@ -77,6 +103,19 @@ private void dataGrid_CellLongPress(object sender, DataGridCellLongPressEventArg
     var columnIndex = e.RowColumnIndex.ColumnIndex;
     var column = e.Column;
 }
+{% endhighlight %}
+{% endtabs %}
+
+## CellLongPressedCommand and its Parameter
+When we long presssed the cell, the `CellLongPressedCommand` binds to the command which you defined in your ViewModel. With this we can also use the `CellLongPressedCommandParameter` to be passed to the `Command` when it is executed.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                   CellLongPressed="dataGrid_CellLongPressed"
+                   CellLongPressedCommand="{Binding ButtonCommand}"
+                   CellLongPressedCommandParameter="8"
+                   ItemsSource="{Binding OrderInfoCollection}" />
 {% endhighlight %}
 {% endtabs %}
 
@@ -102,6 +141,19 @@ private void SfDataGrid_CellRightTapped(object sender, DataGridCellRightTappedEv
 {% endtabs %}
 
 N> The `CellRightTapped` event is only applicable for Windows and macOS.
+
+## CellRightTapped Command and its Parameter
+When the cell is right tapped, the `CellRightTappedCommand` binds to the command which you defined in your ViewModel. With this we can also use the `CellRightTappedCommandParameter` to be passed to the `Command` when it is executed.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                   CellRightTapped="dataGrid_CellRightTapped"
+                   CellRightTappedCommand="{Binding ButtonCommand}"
+                   CellRightTappedCommandParameter="8"
+                   ItemsSource="{Binding OrderInfoCollection}" />
+{% endhighlight %}
+{% endtabs %}
 
 ## Cell Pointer Events
 
@@ -131,6 +183,19 @@ private void dataGrid_CellEntered(object sender, DataGridCellEnteredEventArgs e)
 {% endhighlight %}
 {% endtabs %}
 
+## CellEntered Command and Parameter
+When the cell is entered into the grid, the `CellEnteredCommand` binds to the command which you defined in your ViewModel. With this we can also use the `CellEnteredCommandParameter` to be passed to the `Command` when it is executed.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                   CellEntered="dataGrid_CellEntered"
+                   CellEnteredCommand="{Binding ButtonCommand}"
+                   CellEnteredCommandParameter="8"
+                   ItemsSource="{Binding OrderInfoCollection}" />
+{% endhighlight %}
+{% endtabs %}
+
 ### CellHovered event
 This event will be triggered when the mouse pointer hovers over a cell in the DataGrid. It uses [DataGridCellHoveredEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCellHoveredEventArgs.html) as its argument.
 
@@ -152,6 +217,19 @@ private void dataGrid_CellHovered(object sender, DataGridCellHoveredEventArgs e)
 {% endhighlight %}
 {% endtabs %}
 
+## CellHovered Command and Parameter
+When the cell is hovered, the `CellHoveredCommand` binds to the command which you defined in your ViewModel. With this we can also use the `CellHoveredParameter` to be passed to the `Command` when it is executed.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                   CellHovered="dataGrid_CellHovered"
+                   CellHoveredCommand="{Binding ButtonCommand}"
+                   CellHoveredCommandParameter="8"
+                   ItemsSource="{Binding OrderInfoCollection}" />
+{% endhighlight %}
+{% endtabs %}
+
 ### CellExited event
 This event will be triggered when the mouse pointer exits a cell in the DataGrid. It uses [DataGridCellExitedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCellExitedEventArgs.html) as its argument.
 
@@ -169,6 +247,19 @@ private void dataGrid_CellExited(object sender, DataGridCellExitedEventArgs e)
     var columnIndex = e.RowColumnIndex.ColumnIndex;
     var column = e.Column;
 }
+{% endhighlight %}
+{% endtabs %}
+
+## CellExited Command and Parameter
+When the cell is exited, the `CellExitedCommand` binds to the command which you defined in your ViewModel. With this we can also use the `CellExitedCommandParameter` to be passed to the `Command` when it is executed.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                   CellExited="dataGrid_CellExited"
+                   CellExitedCommand="{Binding ButtonCommand}"
+                   CellExitedCommandParameter="8"
+                   ItemsSource="{Binding OrderInfoCollection}" />
 {% endhighlight %}
 {% endtabs %}
 
