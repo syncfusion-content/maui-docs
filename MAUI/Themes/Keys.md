@@ -216,7 +216,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td> 
         <td>
-            Color of the SfAutocomplete Background in normal state
+            Color of the SfAutocomplete stroke in normal state
             <br/>
             <br/>
         </td>
