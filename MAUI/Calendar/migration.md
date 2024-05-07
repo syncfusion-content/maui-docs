@@ -284,7 +284,7 @@ this.Content = calendar;
 <tr>
 <td>{{'[CustomDayLabels](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_CustomDayLabels)'| markdownify }}</td>
 <td>Nil</td>
-<td>By using custom header (hides default view header using {{'Height(https://help.syncfusion.com/maui/calendar/headers#customize-view-header-height)' | markdownify }} value as 0), you can customize.</td>
+<td>By using custom header (hides default view header using {{'[Height](https://help.syncfusion.com/maui/calendar/headers#customize-view-header-height)' | markdownify }} value as 0), you can customize.</td>
 </tr>
 <tr>
 <td>{{'[DataSource](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_DataSource)'| markdownify }}</td>
@@ -334,7 +334,7 @@ this.Content = calendar;
 <tr>
 <td>{{'[Locale](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_Locale)'| markdownify }}</td>
 <td>Nil</td>
-<td>Refer to this [link](https://help.syncfusion.com/maui/calendar/localization) for using localization in .NET MAUI Calendar</td>
+<td>Refer to this {{'[link](https://help.syncfusion.com/maui/calendar/localization)' | }} for using localization in .NET MAUI Calendar</td>
 </tr>
 <tr>
 <td>{{'[MaxDate](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_MaxDate)'| markdownify }}</td>
@@ -369,7 +369,7 @@ this.Content = calendar;
 <tr>
 <td>{{'[NavigateToMonthOnInActiveDatesSelection](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_NavigateToMonthOnInActiveDatesSelection)'| markdownify }}</td>
 <td>Nil</td>
-<td>It can be achieved by setting the {{'[DisplayDate](https://help.syncfusion.com/maui/calendar/date-navigation#programmatic-date-navigation)' | markdownify }} property inside the [Tapped](https://help.syncfusion.com/maui/calendar/events#tapped) event.</td>
+<td>It can be achieved by setting the {{'[DisplayDate](https://help.syncfusion.com/maui/calendar/date-navigation#programmatic-date-navigation)' | markdownify }} property inside the {{'[Tapped](https://help.syncfusion.com/maui/calendar/events#tapped)' | markdownify }} event.</td>
 </tr>
 <tr>
 <td>{{'[NavigationArrowThickness](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_NavigationArrowThickness)'| markdownify }}</td>
@@ -579,7 +579,7 @@ this.Content = calendar;
 <tr>
 <td>{{'[BorderColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.MonthViewSettings.html#Syncfusion_SfCalendar_XForms_MonthViewSettings_BorderColor)'| markdownify }}</td>
 <td>Nil</td>
-<td>Using the [CellTemplate](https://help.syncfusion.com/maui/calendar/customizations#month-cell-appearance-using-datatemplate), you can customize the month cells.</td>
+<td>Using the {{'[CellTemplate](https://help.syncfusion.com/maui/calendar/customizations#month-cell-appearance-using-datatemplate)' | markdownify }}, you can customize the month cells.</td>
 </tr>
 <tr>
 <td>{{'[CellGridOptions](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.MonthViewSettings.html#Syncfusion_SfCalendar_XForms_MonthViewSettings_CellGridOptions)'| markdownify }}</td>
@@ -1035,7 +1035,7 @@ this.Content = calendar;
 <tr>
 <td>{{'[OnHeaderLoaded](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_OnHeaderLoaded)'| markdownify }}</td>
 <td>Nil</td>
-<td>Customize the header view by using the properties of [HeaderView](https://help.syncfusion.com/maui/calendar/headers).</td>
+<td>Customize the header view by using the properties of {{'[HeaderView](https://help.syncfusion.com/maui/calendar/headers)' | markdownify }}.</td>
 </tr>
 <tr>
 <td>{{'[OnInlineLoaded](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_OnInlineLoaded)'| markdownify }}</td>
@@ -1045,7 +1045,7 @@ this.Content = calendar;
 <tr>
 <td>{{'[OnMonthCellLoaded](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_OnMonthCellLoaded)'| markdownify }}</td>
 <td>Nil</td>
-<td>Customize the header view by using the properties of [MonthView](https://help.syncfusion.com/maui/calendar/customizations#month-cell-customization).</td>
+<td>Customize the header view by using the properties of {{'[MonthView](https://help.syncfusion.com/maui/calendar/customizations#month-cell-customization)' | markdownify }}.</td>
 </tr>
 <tr>
 <td>{{'[OnViewModeChanged](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_OnViewModeChanged)'| markdownify }}</td>
@@ -1055,7 +1055,7 @@ this.Content = calendar;
 <tr>
 <td>{{'[OnYearCellLoaded](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_OnYearCellLoaded)'| markdownify }}</td>
 <td>Nil</td>
-<td>Customize the year view by using the properties of [YearView](https://help.syncfusion.com/maui/calendar/customizations#year-cell-customization).</td>
+<td>Customize the year view by using the properties of {{'[YearView](https://help.syncfusion.com/maui/calendar/customizations#year-cell-customization)' | markdownify}}.</td>
 </tr>
 <tr>
 <td>{{'[SelectionChanged](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_SelectionChanged)'| markdownify }}</td>
