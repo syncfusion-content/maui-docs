@@ -39,7 +39,7 @@ private void dataGrid_CellTapped(object sender, DataGridCellTappedEventArgs e)
 {% endtabs %}
 
 ### CellTappedCommand and its Parameter
-When we tapped the cell, the `CellTappedCommand` binds to the command which you defined in your ViewModel. With this we can also use the `CellTappedCommandParameter` to be passed to the `Command` when it is executed.
+The command will be invoked while tapping a cell in the SfDataGrid. The instance of `DataGridCellTappedEventArgs` will be passed as the default value of the command's parameter. It can be customized by setting the `CellTappedCommandParameter` property.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -74,7 +74,7 @@ private void dataGrid_CellDoubleTapped(object sender, DataGridCellDoubleTappedEv
 {% endtabs %}
 
 ### CellDoubleTappedCommand and its Parameter
-When we double tapped the cell, the `CellDoubleTappedCommand` triggered that binds to the command which you have defined in your ViewModel. With this we can also use the `CellDoubleTappedCommandParameter` to be passed to the `Command` when it is executed.
+The command will be invoked while double tapping a cell in the SfDataGrid. The instance of `DataGridCellDoubleTappedEventArgs` will be passed as the default value of the command's parameter. It can be customized by setting the `CellDoubleTappedCommandParameter` property.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -108,7 +108,7 @@ private void dataGrid_CellLongPress(object sender, DataGridCellLongPressEventArg
 {% endtabs %}
 
 ### CellLongPressedCommand and its Parameter
-When we long presssed the cell, the `CellLongPressedCommand` binds to the command which you defined in your ViewModel. Additionally, we have the option to utilize the `CellLongPressedCommandParameter` for passing data to the Command upon its execution.
+The command will be invoked while long-pressing a cell in the SfDataGrid. The instance of `DataGridCellLongPressEventArgs` will be passed as the default value of the command's parameter. It can be customized by setting the `CellLongPressedCommandParameter` property.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -144,7 +144,7 @@ private void SfDataGrid_CellRightTapped(object sender, DataGridCellRightTappedEv
 N> The `CellRightTapped` event is only applicable for Windows and macOS.
 
 ### CellRightTapped Command and its Parameter
-When the cell is right tapped, the `CellRightTappedCommand` binds to the command which you defined in your ViewModel. Additionally, we have the option to utilize the `CellRightTappedCommandParameter` for passing data to the Command upon its execution.
+The command will be invoked when a right-click mouse gesture is recognized on a cell in the SfDataGrid. The instance of `DataGridCellRightTappedEventArgs` will be passed as the default value of the command's parameter. It can be customized by setting the `CellRightTappedCommandParameter` property.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -184,8 +184,8 @@ private void dataGrid_CellEntered(object sender, DataGridCellEnteredEventArgs e)
 {% endhighlight %}
 {% endtabs %}
 
-## CellEntered Command and its Parameter
-When the cell is entered into the grid, the `CellEnteredCommand` triggered that binds to the command which you defined in your ViewModel. With this we can also use the `CellEnteredCommandParameter` to be passed to the `Command` when it is executed.
+### CellEntered Command and its Parameter
+The command will be invoked when the mouse pointer enters a cell in the SfDataGrid. The instance of `DataGridCellEnteredEventArgs` will be passed as the default value of the command's parameter. It can be customized by setting the `CellEnteredCommandParameter` property.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -219,7 +219,7 @@ private void dataGrid_CellHovered(object sender, DataGridCellHoveredEventArgs e)
 {% endtabs %}
 
 ### CellHovered Command and its Parameter
-When the cell is hovered, the `CellHoveredCommand` binds to the command which you defined in your ViewModel. Additionally, we have the option to utilize the `CellHoveredCommandParameter` for passing data to the Command upon its execution.
+The command will be invoked when the mouse pointer hovers over a cell in the SfDataGrid. The instance of `DataGridCellHoveredEventArgs` will be passed as the default value of the command's parameter. It can be customized by setting the `CellHoveredCommandParameter` property.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -252,7 +252,7 @@ private void dataGrid_CellExited(object sender, DataGridCellExitedEventArgs e)
 {% endtabs %}
 
 ### CellExited Command and its Parameter
-When the cell is exited, the `CellExitedCommand`triggered that binds to the command which you have defined in your ViewModel. With this we can also use the `CellExitedCommandParameter` to be passed to the `Command` when it is executed.
+The command will be invoked when the mouse pointer exits a cell in the SfDataGrid. The instance of `DataGridCellExitedEventArgs` will be passed as the default value of the command's parameter. It can be customized by setting the `CellExitedCommandParameter` property.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}

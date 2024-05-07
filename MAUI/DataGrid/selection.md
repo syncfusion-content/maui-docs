@@ -264,7 +264,7 @@ All rows or cells will be selected.
 <kbd>Delete</kbd>
 </td>
 <td>
-Selected rows will be deleted.
+The selected rows will be deleted.
 </td>
 </tr>
 </table>
@@ -332,9 +332,9 @@ By default, the current cell is focusable for all the columns. To disable curren
 {% endhighlight %}
 {% endtabs %}
 
-## Disable Deleting the rows
+## Disable Delete Key Functionality
 
-By default, the selected rows will be deleted. If we set the `DataGrid.AllowDeleting` property to `False`, the deletion of rows will be disabled.
+By default, the selected rows will be deleted when pressing the delete key. It can be disabled by setting the `SfDataGrid.AllowDeleting` property to false.
 
 {% tabs %}
 {% highlight XAML %}
@@ -545,9 +545,9 @@ public class ViewModel : INotifyPropertyChanged
 {% endhighlight %}
 {% endtabs %}
 
-## Set KeyBoard Navigation
+## Disable KeyBoard Navigation
 
-SfDataGrid allows you to set the Keyboard Navigation property as `True` or `False`. By default, Keyboard Navigation works. But you can set it to `False`, if you prefer to deactivate it.
+By default, the keyboard navigation will be enabled when setting the selection and navigation modes. It can be disabled by setting the `SfDataGrid.AllowKeyboardNavigation` to false.
 
 {% tabs %}
 {% highlight XAML %}
