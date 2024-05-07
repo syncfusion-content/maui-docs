@@ -78,7 +78,7 @@ SfPolarChart chart = new SfPolarChart();
 . . .
 NumericalAxis primaryAxis = new NumericalAxis()
 {
-    Interval = 10, 
+    Interval = 10 
 };
 
 chart.PrimaryAxis = primaryAxis;
@@ -177,7 +177,7 @@ SfPolarChart chart = new SfPolarChart();
 . . .
 CategoryAxis primaryAxis = new CategoryAxis()
 {
-    Interval = 2, 
+    Interval = 2
 };
 
 chart.PrimaryAxis = primaryAxis;
@@ -281,7 +281,7 @@ SfPolarChart chart = new SfPolarChart();
 DateTimeAxis primaryAxis = new DateTimeAxis()
 {
     Minimum = new DateTime(2021,05,10),
-    Maximum = new DateTime(2021,11,01),
+    Maximum = new DateTime(2021,11,01)
 };
 
 chart.PrimaryAxis = primaryAxis;
