@@ -74,7 +74,7 @@ private void dataGrid_CellDoubleTapped(object sender, DataGridCellDoubleTappedEv
 {% endtabs %}
 
 ## CellDoubleTappedCommand and its Parameter
-When we double tapped the cell, the `CellDoubleTappedCommand` binds to the command which you defined in your ViewModel. With this we can also use the `CellDoubleTappedCommandParameter` to be passed to the `Command` when it is executed.
+When we double tapped the cell, the `CellDoubleTappedCommand` triggered that binds to the command which you have defined in your ViewModel. With this we can also use the `CellDoubleTappedCommandParameter` to be passed to the `Command` when it is executed.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -108,7 +108,7 @@ private void dataGrid_CellLongPress(object sender, DataGridCellLongPressEventArg
 {% endtabs %}
 
 ### CellLongPressedCommand and its Parameter
-When we long presssed the cell, the `CellLongPressedCommand` binds to the command which you defined in your ViewModel. With this we can also use the `CellLongPressedCommandParameter` to be passed to the `Command` when it is executed.
+When we long presssed the cell, the `CellLongPressedCommand` binds to the command which you defined in your ViewModel. Additionally, we have the option to utilize the `CellLongPressedCommandParameter` for passing data to the Command upon its execution.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -144,7 +144,7 @@ private void SfDataGrid_CellRightTapped(object sender, DataGridCellRightTappedEv
 N> The `CellRightTapped` event is only applicable for Windows and macOS.
 
 ### CellRightTapped Command and its Parameter
-When the cell is right tapped, the `CellRightTappedCommand` binds to the command which you defined in your ViewModel. With this we can also use the `CellRightTappedCommandParameter` to be passed to the `Command` when it is executed.
+When the cell is right tapped, the `CellRightTappedCommand` binds to the command which you defined in your ViewModel. Additionally, we have the option to utilize the `CellRightTappedCommandParameter` for passing data to the Command upon its execution.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -185,7 +185,7 @@ private void dataGrid_CellEntered(object sender, DataGridCellEnteredEventArgs e)
 {% endtabs %}
 
 ## CellEntered Command and its Parameter
-When the cell is entered into the grid, the `CellEnteredCommand` binds to the command which you defined in your ViewModel. With this we can also use the `CellEnteredCommandParameter` to be passed to the `Command` when it is executed.
+When the cell is entered into the grid, the `CellEnteredCommand` triggered that binds to the command which you defined in your ViewModel. With this we can also use the `CellEnteredCommandParameter` to be passed to the `Command` when it is executed.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -219,7 +219,7 @@ private void dataGrid_CellHovered(object sender, DataGridCellHoveredEventArgs e)
 {% endtabs %}
 
 ### CellHovered Command and its Parameter
-When the cell is hovered, the `CellHoveredCommand` binds to the command which you defined in your ViewModel. With this we can also use the `CellHoveredParameter` to be passed to the `Command` when it is executed.
+When the cell is hovered, the `CellHoveredCommand` binds to the command which you defined in your ViewModel. Additionally, we have the option to utilize the `CellHoveredCommandParameter` for passing data to the Command upon its execution.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -252,7 +252,7 @@ private void dataGrid_CellExited(object sender, DataGridCellExitedEventArgs e)
 {% endtabs %}
 
 ### CellExited Command and its Parameter
-When the cell is exited, the `CellExitedCommand` binds to the command which you defined in your ViewModel. With this we can also use the `CellExitedCommandParameter` to be passed to the `Command` when it is executed.
+When the cell is exited, the `CellExitedCommand`triggered that binds to the command which you have defined in your ViewModel. With this we can also use the `CellExitedCommandParameter` to be passed to the `Command` when it is executed.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
