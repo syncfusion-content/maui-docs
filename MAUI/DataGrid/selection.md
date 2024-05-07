@@ -338,8 +338,7 @@ By default, the selected rows will be deleted when pressing the delete key. It c
 
 {% tabs %}
 {% highlight XAML %}
-<syncfusion:SfDataGrid x:Name="sfDataGrid"
-                    SelectionMode="Single"
+<syncfusion:SfDataGrid SelectionMode="Single"
                     NavigationMode="Cell"
                     AllowDeleting="False"
                     ItemsSource="{Binding OrderInfoCollection}" >
@@ -551,8 +550,7 @@ By default, the keyboard navigation will be enabled when setting the selection a
 
 {% tabs %}
 {% highlight XAML %}
-<syncfusion:SfDataGrid x:Name="sfDataGrid"
-                    SelectionMode="Single"
+<syncfusion:SfDataGrid SelectionMode="Single"
                     NavigationMode="Cell"
                     AllowKeyboardNavigation="False"
                     ItemsSource="{Binding OrderInfoCollection}" >

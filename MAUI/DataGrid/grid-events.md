@@ -43,11 +43,16 @@ The command will be invoked while tapping a cell in the SfDataGrid. The instance
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
-<syncfusion:SfDataGrid x:Name="dataGrid"
-                   CellTapped="dataGrid_CellTapped"
-                   CellTappedCommand="{Binding ButtonCommand}"
-                   CellTappedCommandParameter="7"
-                   ItemsSource="{Binding OrderInfoCollection}" />
+<syncfusion:SfDataGrid CellTappedCommand="{Binding ButtonCommand}"
+                       ItemsSource="{Binding OrderInfoCollection}" />
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+public Command ButtonCommand { get; } = new Command(ListenTap);
+
+private static void ListenTap(object obj)
+{
+    System.Diagnostics.Debug.WriteLine(obj.GetType().Name);
+}
 {% endhighlight %}
 {% endtabs %}
 
@@ -78,14 +83,18 @@ The command will be invoked while double tapping a cell in the SfDataGrid. The i
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
-<syncfusion:SfDataGrid x:Name="dataGrid"
-                   CellDoubleTapped="dataGrid_CellDoubleTapped"
-                   CellDoubleTappedCommand="{Binding ButtonCommand}"
-                   CellDoubleTappedCommandParameter="8"
-                   ItemsSource="{Binding OrderInfoCollection}" />
+<syncfusion:SfDataGrid CellDoubleTappedCommand="{Binding ButtonCommand}"
+                       ItemsSource="{Binding OrderInfoCollection}" />
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+public Command ButtonCommand { get; } = new Command(ListenTap);
+
+private static void ListenTap(object obj)
+{
+    System.Diagnostics.Debug.WriteLine(obj.GetType().Name);
+}
 {% endhighlight %}
 {% endtabs %}
-
 ### CellLongPress event
 
 This event will be triggered while long pressing a cell in the DataGrid. This event has the [DataGridCellLongPressEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCellLongPressEventArgs.html) as arguments. 
@@ -112,11 +121,16 @@ The command will be invoked while long-pressing a cell in the SfDataGrid. The in
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
-<syncfusion:SfDataGrid x:Name="dataGrid"
-                   CellLongPressed="dataGrid_CellLongPressed"
-                   CellLongPressedCommand="{Binding ButtonCommand}"
-                   CellLongPressedCommandParameter="8"
-                   ItemsSource="{Binding OrderInfoCollection}" />
+<syncfusion:SfDataGrid CellLongPressedCommand="{Binding ButtonCommand}"
+                       ItemsSource="{Binding OrderInfoCollection}" />
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+public Command ButtonCommand { get; } = new Command(ListenTap);
+
+private static void ListenTap(object obj)
+{
+    System.Diagnostics.Debug.WriteLine(obj.GetType().Name);
+}
 {% endhighlight %}
 {% endtabs %}
 
@@ -148,11 +162,16 @@ The command will be invoked when a right-click mouse gesture is recognized on a 
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
-<syncfusion:SfDataGrid x:Name="dataGrid"
-                   CellRightTapped="dataGrid_CellRightTapped"
-                   CellRightTappedCommand="{Binding ButtonCommand}"
-                   CellRightTappedCommandParameter="8"
-                   ItemsSource="{Binding OrderInfoCollection}" />
+<syncfusion:SfDataGrid CellRightTappedCommand="{Binding ButtonCommand}"
+                       ItemsSource="{Binding OrderInfoCollection}" />
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+public Command ButtonCommand { get; } = new Command(ListenTap);
+
+private static void ListenTap(object obj)
+{
+    System.Diagnostics.Debug.WriteLine(obj.GetType().Name);
+}
 {% endhighlight %}
 {% endtabs %}
 
@@ -189,11 +208,16 @@ The command will be invoked when the mouse pointer enters a cell in the SfDataGr
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
-<syncfusion:SfDataGrid x:Name="dataGrid"
-                   CellEntered="dataGrid_CellEntered"
-                   CellEnteredCommand="{Binding ButtonCommand}"
-                   CellEnteredCommandParameter="8"
-                   ItemsSource="{Binding OrderInfoCollection}" />
+<syncfusion:SfDataGrid CellEnteredCommand="{Binding ButtonCommand}"
+                       ItemsSource="{Binding OrderInfoCollection}" />
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+public Command ButtonCommand { get; } = new Command(ListenTap);
+
+private static void ListenTap(object obj)
+{
+    System.Diagnostics.Debug.WriteLine(obj.GetType().Name);
+}
 {% endhighlight %}
 {% endtabs %}
 
@@ -223,11 +247,16 @@ The command will be invoked when the mouse pointer hovers over a cell in the SfD
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
-<syncfusion:SfDataGrid x:Name="dataGrid"
-                   CellHovered="dataGrid_CellHovered"
-                   CellHoveredCommand="{Binding ButtonCommand}"
-                   CellHoveredCommandParameter="8"
-                   ItemsSource="{Binding OrderInfoCollection}" />
+<syncfusion:SfDataGrid CellHoveredCommand="{Binding ButtonCommand}"
+                       ItemsSource="{Binding OrderInfoCollection}" />
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+public Command ButtonCommand { get; } = new Command(ListenTap);
+
+private static void ListenTap(object obj)
+{
+    System.Diagnostics.Debug.WriteLine(obj.GetType().Name);
+}
 {% endhighlight %}
 {% endtabs %}
 
@@ -256,11 +285,16 @@ The command will be invoked when the mouse pointer exits a cell in the SfDataGri
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
-<syncfusion:SfDataGrid x:Name="dataGrid"
-                   CellExited="dataGrid_CellExited"
-                   CellExitedCommand="{Binding ButtonCommand}"
-                   CellExitedCommandParameter="8"
-                   ItemsSource="{Binding OrderInfoCollection}" />
+<syncfusion:SfDataGrid CellExitedCommand="{Binding ButtonCommand}"
+                       ItemsSource="{Binding OrderInfoCollection}" />
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+public Command ButtonCommand { get; } = new Command(ListenTap);
+
+private static void ListenTap(object obj)
+{
+    System.Diagnostics.Debug.WriteLine(obj.GetType().Name);
+}
 {% endhighlight %}
 {% endtabs %}
 
