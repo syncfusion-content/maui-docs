@@ -38,7 +38,7 @@ private void dataGrid_CellTapped(object sender, DataGridCellTappedEventArgs e)
 {% endhighlight %}
 {% endtabs %}
 
-## CellTappedCommand and its Parameter
+### CellTappedCommand and its Parameter
 When we tapped the cell, the `CellTappedCommand` binds to the command which you defined in your ViewModel. With this we can also use the `CellTappedCommandParameter` to be passed to the `Command` when it is executed.
 
 {% tabs %}
@@ -73,7 +73,7 @@ private void dataGrid_CellDoubleTapped(object sender, DataGridCellDoubleTappedEv
 {% endhighlight %}
 {% endtabs %}
 
-## CellDoubleTappedCommand and its Parameter
+### CellDoubleTappedCommand and its Parameter
 When we double tapped the cell, the `CellDoubleTappedCommand` triggered that binds to the command which you have defined in your ViewModel. With this we can also use the `CellDoubleTappedCommandParameter` to be passed to the `Command` when it is executed.
 
 {% tabs %}
