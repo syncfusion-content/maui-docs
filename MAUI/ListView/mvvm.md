@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Working with MVVM in .NET MAUI ListView control | Syncfusion
+title: Working with MVVM in .NET MAUI ListView Control | Syncfusion
 description: Learn here all about Working with MVVM support in Syncfusion .NET MAUI ListView (SfListView) control and more.
 platform: MAUI
 control: SfListView
