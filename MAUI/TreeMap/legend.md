@@ -855,6 +855,6 @@ public class PopulationViewModel
 {% endhighlight %}
 {% endtabs %}
 
-![legend-text-style-in-maui-tree-map](images/legend/legend-text-style-in-maui-tree-map.png)
-
 N> This property will only be applicable when the [ShowLegend](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapLegendSettings.html#Syncfusion_Maui_TreeMap_TreeMapLegendSettings_ShowLegend) is enabled.
+
+![legend-text-style-in-maui-tree-map](images/legend/legend-text-style-in-maui-tree-map.png)
