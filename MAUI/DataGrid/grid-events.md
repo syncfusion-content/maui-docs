@@ -38,7 +38,7 @@ private void dataGrid_CellTapped(object sender, DataGridCellTappedEventArgs e)
 {% endhighlight %}
 {% endtabs %}
 
-### CellTappedCommand and its Parameter
+### CellTappedCommand
 The command will be invoked while tapping a cell in the SfDataGrid. The instance of `DataGridCellTappedEventArgs` will be passed as the default value of the command's parameter. It can be customized by setting the `CellTappedCommandParameter` property.
 
 {% tabs %}
@@ -47,11 +47,18 @@ The command will be invoked while tapping a cell in the SfDataGrid. The instance
                        ItemsSource="{Binding OrderInfoCollection}" />
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
-public Command ButtonCommand { get; } = new Command(ListenTap);
+Command TapCommand = new Command(ListenTap);
 
 private static void ListenTap(object obj)
 {
-    System.Diagnostics.Debug.WriteLine(obj.GetType().Name);
+    var args = obj as DataGridCellTappedEventArgs;
+    if (args != null)
+    {
+        var rowIndex = e.RowColumnIndex.RowIndex;
+        var rowData = e.RowData;
+        var columnIndex = e.RowColumnIndex.ColumnIndex;
+        var column = e.Column;
+    }
 }
 {% endhighlight %}
 {% endtabs %}
@@ -77,7 +84,7 @@ private void dataGrid_CellDoubleTapped(object sender, DataGridCellDoubleTappedEv
 {% endhighlight %}
 {% endtabs %}
 
-### CellDoubleTappedCommand and its Parameter
+### CellDoubleTappedCommand
 The command will be invoked while double tapping a cell in the SfDataGrid. The instance of `DataGridCellDoubleTappedEventArgs` will be passed as the default value of the command's parameter. It can be customized by setting the `CellDoubleTappedCommandParameter` property.
 
 {% tabs %}
@@ -86,11 +93,18 @@ The command will be invoked while double tapping a cell in the SfDataGrid. The i
                        ItemsSource="{Binding OrderInfoCollection}" />
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
-public Command ButtonCommand { get; } = new Command(ListenTap);
+Command DoubleTapCommand = new Command(ListenTap);
 
 private static void ListenTap(object obj)
 {
-    System.Diagnostics.Debug.WriteLine(obj.GetType().Name);
+    var args = obj as DataGridCellDoubleTappedEventArgs;
+    if (args != null)
+    {
+        var rowIndex = e.RowColumnIndex.RowIndex;
+        var rowData = e.RowData;
+        var columnIndex = e.RowColumnIndex.ColumnIndex;
+        var column = e.Column;
+    }
 }
 {% endhighlight %}
 {% endtabs %}
@@ -116,7 +130,7 @@ private void dataGrid_CellLongPress(object sender, DataGridCellLongPressEventArg
 {% endhighlight %}
 {% endtabs %}
 
-### CellLongPressedCommand and its Parameter
+### CellLongPressedCommand
 The command will be invoked while long-pressing a cell in the SfDataGrid. The instance of `DataGridCellLongPressEventArgs` will be passed as the default value of the command's parameter. It can be customized by setting the `CellLongPressedCommandParameter` property.
 
 {% tabs %}
@@ -125,11 +139,18 @@ The command will be invoked while long-pressing a cell in the SfDataGrid. The in
                        ItemsSource="{Binding OrderInfoCollection}" />
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
-public Command ButtonCommand { get; } = new Command(ListenTap);
+Command LongPressCommand = new Command(ListenTap);
 
 private static void ListenTap(object obj)
 {
-    System.Diagnostics.Debug.WriteLine(obj.GetType().Name);
+    var args = obj as DataGridCellLongPressedEventArgs;
+    if (args != null)
+    {
+        var rowIndex = e.RowColumnIndex.RowIndex;
+        var rowData = e.RowData;
+        var columnIndex = e.RowColumnIndex.ColumnIndex;
+        var column = e.Column;
+    }
 }
 {% endhighlight %}
 {% endtabs %}
@@ -157,7 +178,7 @@ private void SfDataGrid_CellRightTapped(object sender, DataGridCellRightTappedEv
 
 N> The `CellRightTapped` event is only applicable for Windows and macOS.
 
-### CellRightTapped Command and its Parameter
+### CellRightTappedCommand
 The command will be invoked when a right-click mouse gesture is recognized on a cell in the SfDataGrid. The instance of `DataGridCellRightTappedEventArgs` will be passed as the default value of the command's parameter. It can be customized by setting the `CellRightTappedCommandParameter` property.
 
 {% tabs %}
@@ -166,11 +187,18 @@ The command will be invoked when a right-click mouse gesture is recognized on a 
                        ItemsSource="{Binding OrderInfoCollection}" />
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
-public Command ButtonCommand { get; } = new Command(ListenTap);
+Command RightTapCommand = new Command(ListenTap);
 
 private static void ListenTap(object obj)
 {
-    System.Diagnostics.Debug.WriteLine(obj.GetType().Name);
+    var args = obj as DataGridCellRightTappedEventArgs;
+    if (args != null)
+    {
+        var rowIndex = e.RowColumnIndex.RowIndex;
+        var rowData = e.RowData;
+        var columnIndex = e.RowColumnIndex.ColumnIndex;
+        var column = e.Column;
+    }
 }
 {% endhighlight %}
 {% endtabs %}
@@ -203,7 +231,7 @@ private void dataGrid_CellEntered(object sender, DataGridCellEnteredEventArgs e)
 {% endhighlight %}
 {% endtabs %}
 
-### CellEntered Command and its Parameter
+### CellEnteredCommand
 The command will be invoked when the mouse pointer enters a cell in the SfDataGrid. The instance of `DataGridCellEnteredEventArgs` will be passed as the default value of the command's parameter. It can be customized by setting the `CellEnteredCommandParameter` property.
 
 {% tabs %}
@@ -212,11 +240,18 @@ The command will be invoked when the mouse pointer enters a cell in the SfDataGr
                        ItemsSource="{Binding OrderInfoCollection}" />
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
-public Command ButtonCommand { get; } = new Command(ListenTap);
+Command EnteredCommand = new Command(ListenTap);
 
 private static void ListenTap(object obj)
 {
-    System.Diagnostics.Debug.WriteLine(obj.GetType().Name);
+    var args = obj as DataGridCellEnteredEventArgs;
+    if (args != null)
+    {
+        var rowIndex = e.RowColumnIndex.RowIndex;
+        var rowData = e.RowData;
+        var columnIndex = e.RowColumnIndex.ColumnIndex;
+        var column = e.Column;
+    }
 }
 {% endhighlight %}
 {% endtabs %}
@@ -242,7 +277,7 @@ private void dataGrid_CellHovered(object sender, DataGridCellHoveredEventArgs e)
 {% endhighlight %}
 {% endtabs %}
 
-### CellHovered Command and its Parameter
+### CellHoveredCommand
 The command will be invoked when the mouse pointer hovers over a cell in the SfDataGrid. The instance of `DataGridCellHoveredEventArgs` will be passed as the default value of the command's parameter. It can be customized by setting the `CellHoveredCommandParameter` property.
 
 {% tabs %}
@@ -251,11 +286,18 @@ The command will be invoked when the mouse pointer hovers over a cell in the SfD
                        ItemsSource="{Binding OrderInfoCollection}" />
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
-public Command ButtonCommand { get; } = new Command(ListenTap);
+Command HoveredCommand = new Command(ListenTap);
 
 private static void ListenTap(object obj)
 {
-    System.Diagnostics.Debug.WriteLine(obj.GetType().Name);
+    var args = obj as DataGridCellHoveredEventArgs;
+    if (args != null)
+    {
+        var rowIndex = e.RowColumnIndex.RowIndex;
+        var rowData = e.RowData;
+        var columnIndex = e.RowColumnIndex.ColumnIndex;
+        var column = e.Column;
+    }
 }
 {% endhighlight %}
 {% endtabs %}
@@ -280,7 +322,7 @@ private void dataGrid_CellExited(object sender, DataGridCellExitedEventArgs e)
 {% endhighlight %}
 {% endtabs %}
 
-### CellExited Command and its Parameter
+### CellExitedCommand
 The command will be invoked when the mouse pointer exits a cell in the SfDataGrid. The instance of `DataGridCellExitedEventArgs` will be passed as the default value of the command's parameter. It can be customized by setting the `CellExitedCommandParameter` property.
 
 {% tabs %}
@@ -289,11 +331,18 @@ The command will be invoked when the mouse pointer exits a cell in the SfDataGri
                        ItemsSource="{Binding OrderInfoCollection}" />
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
-public Command ButtonCommand { get; } = new Command(ListenTap);
+Command ExitedCommand = new Command(ListenTap);
 
 private static void ListenTap(object obj)
 {
-    System.Diagnostics.Debug.WriteLine(obj.GetType().Name);
+    var args = obj as DataGridCellExitedEventArgs;
+    if (args != null)
+    {
+        var rowIndex = e.RowColumnIndex.RowIndex;
+        var rowData = e.RowData;
+        var columnIndex = e.RowColumnIndex.ColumnIndex;
+        var column = e.Column;
+    }
 }
 {% endhighlight %}
 {% endtabs %}

@@ -256,7 +256,7 @@ To make migration from [Xamarin SfDataGrid](https://www.syncfusion.com/xamarin-u
 <tr>
 <td>{{'[GridTappedCommand](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.SfDataGrid.html#Syncfusion_SfDataGrid_XForms_SfDataGrid_GridTappedCommand)'| markdownify }}</td>
 <td>{{'[CellTappedCommand]()'| markdownify }}</td>
-<td>The `SfDataGrid.DataGridTappedCommand` will be executed when tapping the SfDataGrid.</td>
+<td>Occurs when the cell is tapped.</td>
 </tr>
 <tr>
 <td>{{'[GridDoubleTapped](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.SfDataGrid.html#Syncfusion_SfDataGrid_XForms_SfDataGrid_GridDoubleTapped)'| markdownify }}</td>
@@ -266,7 +266,7 @@ To make migration from [Xamarin SfDataGrid](https://www.syncfusion.com/xamarin-u
 <tr>
 <td>{{'[GridDoubleTappedCommand](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.SfDataGrid.html#Syncfusion_SfDataGrid_XForms_SfDataGrid_GridDoubleTappedCommand)'| markdownify }}</td>
 <td>{{'[CellDoubleTappedCommand]()'| markdownify }}</td>
-<td>The `SfDataGrid.DataGridCellDoubleTappedCommand` will be executed when double tapping the SfDataGrid.</td>
+<td>Occurs when the cell is tapped twice.</td>
 </tr>
 <tr>
 <td>{{'[GridLongPressed](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.SfDataGrid.html#Syncfusion_SfDataGrid_XForms_SfDataGrid_GridLongPressed)'| markdownify }}</td>
@@ -276,7 +276,7 @@ To make migration from [Xamarin SfDataGrid](https://www.syncfusion.com/xamarin-u
 <tr>
 <td>{{'[GridLongPressedCommand](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.SfDataGrid.html#Syncfusion_SfDataGrid_XForms_SfDataGrid_GridLongPressedCommand)'| markdownify }}</td>
 <td>{{'[CellLongPressedCommand]()'| markdownify }}</td>
-<td>The `SfDataGrid.DataGridCellLongPressedCommand` will be executed when long pressing the SfDataGrid.</td>
+<td>Occurs when the cell is long pressed for particular period.</td>
 </tr>
 <tr>
 <td>{{'[QueryRowStyle](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.SfDataGrid.html#Syncfusion_SfDataGrid_XForms_SfDataGrid_QueryRowStyle)'| markdownify }}</td>
