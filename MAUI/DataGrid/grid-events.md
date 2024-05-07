@@ -199,3 +199,62 @@ private void SfDataGrid_CellValueChanged(object sender, ValueChangedEventArgs e)
 {% endhighlight %}
 
 {% endtabs %}
+
+## DataGridLoaded
+
+This event will be triggered once components in the SfDataGrid initialized and rendered.
+
+{% tabs %}
+
+{% highlight c# %}
+
+dataGrid.DataGridLoaded += DataGrid_GridLoaded;
+
+private void DataGrid_GridLoaded(object? sender, EventArgs e)
+{
+
+}           
+ 
+{% endhighlight %}
+
+{% endtabs %}
+
+## DataGridViewCreated
+
+This event will be triggered once the SfDataGrid.View is created.
+
+{% tabs %}
+
+{% highlight c# %}
+
+dataGrid.ViewCreated += DataGrid_viewCreated;     
+ 
+private void DataGrid_viewCreated(object? sender, EventArgs e)
+{
+           
+}
+{% endhighlight %}
+
+{% endtabs %}
+
+## DataItemsSourceChanged
+
+This event will be triggered once the source is changed in SfDataGrid
+
+{% tabs %}
+
+{% highlight c# %}
+
+dataGrid.ItemsSourceChanged += DataGrid_DataGridItemsSourceChanged;
+
+private void DataGrid_DataGridItemsSourceChanged(object? sender, DataGridItemsSourceChangedEventArgs e)
+{
+    var newItemSource = e.NewItemSource;
+    var oldItemSource = e.OldItemSource;
+    var newView = e.NewView;
+    var oldView = e.OldView;
+}
+
+{% endhighlight %}
+
+{% endtabs %}
