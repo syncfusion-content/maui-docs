@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Header and Footer in MAUI AutoComplete control | Syncfusion
+title: Header and Footer in Maui AutoComplete control | Syncfusion
 description: Learn about Header and Footer support in Syncfusion Maui AutoComplete (SfAutoComplete) control and more details.
 platform: maui
 control: SfAutoComplete
