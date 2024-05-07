@@ -43,11 +43,8 @@ When we tapped the cell, the `CellTappedComamnd` binds to the command which you 
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
-<syncfusion:SfDataGrid x:Name="dataGrid"
-                   CellTapped="dataGrid_CellTapped"
-                   CellTappedCommand="{Binding ButtonCommand}"
-                   CellTappedCommandParameter="7"
-                   ItemsSource="{Binding OrderInfoCollection}" />
+<syncfusion:SfDataGrid CellTappedCommand="{Binding ButtonCommand}"
+                       ItemsSource="{Binding OrderInfoCollection}" />
 {% endhighlight %}
 {% endtabs %}
 
@@ -106,8 +103,8 @@ private void dataGrid_CellLongPress(object sender, DataGridCellLongPressEventArg
 {% endhighlight %}
 {% endtabs %}
 
-## CellLongPressedCommand and its Parameter
-When we long presssed the cell, the `CellLongPressedCommand` binds to the command which you defined in your ViewModel. With this we can also use the `CellLongPressedCommandParameter` to be passed to the `Command` when it is executed.
+### CellLongPressedCommand and its Parameter
+When we long pressed the cell, the `CellLongPressedCommand` binds to the command which you defined in your ViewModel. With this we can also use the `CellLongPressedCommandParameter` to be passed to the `Command` when it is executed.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -142,7 +139,7 @@ private void SfDataGrid_CellRightTapped(object sender, DataGridCellRightTappedEv
 
 N> The `CellRightTapped` event is only applicable for Windows and macOS.
 
-## CellRightTapped Command and its Parameter
+### CellRightTapped Command and its Parameter
 When the cell is right tapped, the `CellRightTappedCommand` binds to the command which you defined in your ViewModel. With this we can also use the `CellRightTappedCommandParameter` to be passed to the `Command` when it is executed.
 
 {% tabs %}
