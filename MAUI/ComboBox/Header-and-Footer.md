@@ -162,5 +162,3 @@ The following code example shows how to set footer content in [`SfComboBox`].
 
 {% endtabs %}
 
-![Footer Image]()
-

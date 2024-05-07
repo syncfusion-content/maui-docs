@@ -151,8 +151,6 @@ The following event will be hooked.
 
 {% endtabs %}
 
-![Header Image]()
-
 ## Footer Content
 
 We can provide Footer Content at the bottom of the AutoComplete's Suggestion box. [`DropDownFooterView`] property is used to set the content of the footer.The height of the Header in the [`SfAutoComplete`] can be adjusted by the property [`DropDownFooterViewHeight`].
@@ -273,5 +271,3 @@ namespace AutocompleteSample
 {% endhighlight %}
 
 {% endtabs %}
-
-![Footer Image]()
