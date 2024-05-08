@@ -13,7 +13,7 @@ Axis labels are used to display the units, measures, or category values of an ax
 
 ## Positioning the labels
 
-The [LabelsPosition]() property determines whether the axis labels are positioned inside or outside the chart area. By default, LabelsPosition is set to Outside.
+The [LabelsPosition]() property is used to position the axis labels inside or outside the chart area. By default, [LabelsPosition]() is positioned `AxisElementPosition.Outside` the chart area.
 
 N> Polar chart supports LabelsPosition for secondary axis only.
 
@@ -27,7 +27,6 @@ N> Polar chart supports LabelsPosition for secondary axis only.
         <chart:NumericalAxis LabelsPosition="Inside"/>
     </chart:SfPolarChart.SecondaryAxis>
 
-    . . .
 </chart:SfPolarChart>
 
 
@@ -37,7 +36,6 @@ N> Polar chart supports LabelsPosition for secondary axis only.
 
 SfPolarChart chart = new SfPolarChart();
 . . .
-
 NumericalAxis axis = new NumericalAxis()
 {
     LabelsPosition = AxisElementPosition.Inside

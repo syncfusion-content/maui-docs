@@ -385,29 +385,29 @@ chart.YAxes.Add(secondaryAxis);
 
 The [ZoomStart]() event is triggered when the user initiates a zoom action by using a pinch gesture on the chart. This event can be cancelled, allowing its action to be interrupted or stopped.
 
-* [Axis]() - The ZoomStart event will be triggered for each axis within the Chart.
-* [CurrentZoomFactor]() - Used to retrieve the updated zoom factor of the corresponding axis.
-* [CurrentZoomPosition]() - Used to retrieve the updated zoom position of the corresponding axis.
+* [Axis]() - The ZoomStart event will be triggered for all the axes within the Chart.
+* [CurrentZoomFactor]() - Used to get the updated zoom factor of the corresponding axis.
+* [CurrentZoomPosition]() - Used to get the updated zoom position of the corresponding axis.
 * [Cancel]() - Used to determine the value indicating whether the zooming process should be canceled.
 
 ### ZoomDelta
 
-The [ZoomDelta]() event is activated during the zooming process, and it can be cancelled.
+The [ZoomDelta]() event is activated during the zooming process, and it is a cancelable event.
 
-* [Axis]() - The ZoomStart event will be triggered for each axis within the Chart.
-* [PreviousZoomFactor]() - Used to retrieve the previous zoom factor of the axis.
-* [PreviousZoomPosition]() - Used to retrieve the previous zoom position of the axis.
-* [CurrentZoomFactor]() - Used to retrieve the current zoom factor of the axis.
-* [CurrentZoomPosition]() - Used to retrieve the current zoom position of the axis.
+* [Axis]() - The ZoomStart event will be triggered for all the axes within the Chart.
+* [PreviousZoomFactor]() - Used to get the previous zoom factor of the axis.
+* [PreviousZoomPosition]() - Used to get the previous zoom position of the axis.
+* [CurrentZoomFactor]() - Used to get the current zoom factor of the axis.
+* [CurrentZoomPosition]() - Used to get the current zoom position of the axis.
 * [Cancel]() - Used to determine the value indicating whether the zooming process should be canceled.
 
 ### ZoomEnd
 
 The [ZoomEnd]() event is triggered once the zooming action finishes.
 
-* [Axis]() - The ZoomEnd event will be triggered for each axis within the Chart.
-* [CurrentZoomFactor]() - Used to retrieve the zoom factor after zooming process.
-* [CurrentZoomPosition]() - Used to retrieve the zoom position after zooming process.
+* [Axis]() - The ZoomEnd event will be triggered for all the axes within the Chart.
+* [CurrentZoomFactor]() - Used to get the zoom factor after zooming process.
+* [CurrentZoomPosition]() - Used to get the zoom position after zooming process.
 
 ### SelectionZoomStart
 
@@ -417,7 +417,7 @@ The [SelectionZoomStart]() event is triggered when the user begins box selection
 
 ### SelectionZoomDelta
 
-The SelectionZoomDelta event is activated during the process of selecting a region for zooming, and it can be canceled.
+The [SelectionZoomDelta]() event is activated during the process of selecting a region for zooming, and it is a cancelable event.
 
 * [ZoomRect]() - Contains the bounds of the currently selected region.
 * [Cancel]() - Used to set the value indicating whether the box selection zooming process should be cancelled.
@@ -432,7 +432,7 @@ The SelectionZoomEnd event is triggered after the selection zooming ends.
 
 The [Scroll]() event is triggered during panning, and it is a cancelable event.
 
-* [Axis]() - The event will be triggered for each axis within the Chart.
+* [Axis]() - The event will be triggered for all the axes within the Chart.
 * [ZoomPosition]() - Gets the current zoom position of the axis.
 * [Cancel]() - Used to indicate whether the scrolling should be canceled.
 
@@ -440,6 +440,6 @@ The [Scroll]() event is triggered during panning, and it is a cancelable event.
 
 The [ResetZoom]() event is triggered after the chart is reset by double-tapping.
 
-* [Axis]() - The event will be triggered for each axis within the Chart.
-* [PreviousZoomFactor]() - Used to retrieve the previous zoom factor of the axis.
-* [PreviousZoomPosition]() - Used to retrieve the previous zoom position of the axis.
+* [Axis]() - The event will be triggered for all the axes within the Chart.
+* [PreviousZoomFactor]() - Used to get the previous zoom factor of the axis.
+* [PreviousZoomPosition]() - Used to get the previous zoom position of the axis.

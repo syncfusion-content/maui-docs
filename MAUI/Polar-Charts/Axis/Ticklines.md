@@ -51,7 +51,7 @@ chart.SecondaryAxis = secondaryAxis;
 
 ## Positioning the ticklines
 
-The positioning of tick lines inside or outside the chart area can be controlled using the [TickPosition]() property. By default, the tick lines are positioned outside of the chart area. 
+The positioning of tick lines inside or outside the chart area can be controlled using the [TickPosition]() property. By default, the tick lines are positioned `AxisElementPosition.Outside` the chart area.
 
 N> Polar chart supports TickPosition for secondary axis only.
 
@@ -60,13 +60,11 @@ N> Polar chart supports TickPosition for secondary axis only.
 {% highlight xaml %}
 
 <chart:SfPolarChart>
-. . .
-
+    . . .
     <chart:SfPolarChart.SecondaryAxis>
         <chart:NumericalAxis TickPosition="Inside"/>
     </chart:SfPolarChart.SecondaryAxis>
 
-    . . .
 </chart:SfPolarChart>
 
 {% endhighlight %}
@@ -75,7 +73,6 @@ N> Polar chart supports TickPosition for secondary axis only.
 
 SfPolarChart chart = new SfPolarChart();
 . . .
-
 NumericalAxis secondaryAxis = new NumericalAxis()
 {
     TickPosition = AxisElementPosition.Inside
