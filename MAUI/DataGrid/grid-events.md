@@ -395,7 +395,7 @@ private void DataGrid_GridLoaded(object? sender, EventArgs e)
 
 ## ViewCreated
 
-This event will be triggered once the SfDataGrid.View is created.
+This event will be triggered once the `SfDataGrid.View` is created.
 
 {% tabs %}
 

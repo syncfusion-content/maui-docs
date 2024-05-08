@@ -302,20 +302,15 @@ By writing the converter, you can achieve the requirement conditionally. Refer {
 <td>Occurs when page index is changed.</td>
 </tr>
 <tr>
-<td>{{'[GridViewCreated event](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.SfDataGrid.html#Syncfusion_SfDataGrid_XForms_SfDataGrid_GridViewCreated)'| markdownigy}}</td>
-<td>{{'[GridViewCreated]()' | markdownify}}</td>
-<td>Occurs when the SfDataGrid.View is created.</td>
+<td>{{'[GridViewCreated](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.SfDataGrid.html#Syncfusion_SfDataGrid_XForms_SfDataGrid_GridViewCreated)'| markdownigy}}</td>
+<td>{{'[ViewCreated]()' | markdownify}}</td>
+<td>Occurs when the View is created.</td>
 </tr>
 <tr>
-<td>{{'[GridLoaded event](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.SfDataGrid.html#Syncfusion_SfDataGrid_XForms_SfDataGrid_GridLoaded)'| markdownify}}</td>
-<td>{{'[GridLoaded]()'| markdownify}}</td>
+<td>{{'[GridLoaded](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.SfDataGrid.html#Syncfusion_SfDataGrid_XForms_SfDataGrid_GridLoaded)'| markdownify}}</td>
+<td>{{'[DataGridLoaded]()'| markdownify}}</td>
 <td>Occurs when the components in the SfDataGrid initialized and rendered.</td>
 </tr>
-<tr>
-<td>{{'[ItemsSource changed event](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.SfDataGrid.html#Syncfusion_SfDataGrid_XForms_SfDataGrid_ItemsSourceChanged)'| markdownify }}</td>
-<td>{{'[DataItemsSourceChanged ]()'| markdownify }}</td>
-<td>Occurs when the source is changed in SfDataGrid
-</td>
 </tr>
 </table>
 
