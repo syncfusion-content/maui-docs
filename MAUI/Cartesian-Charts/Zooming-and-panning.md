@@ -218,6 +218,39 @@ chart.ZoomPanBehavior = zooming;
 
 {% endtabs %}
 
+### Maximum Zoom Level
+
+The [MaximumZoomLevel]() property is used to determine the maximum limit for zooming within the chart. Once the zooming operation reaches its limit, further zooming actions are not carried out.
+
+{% tabs %}
+
+{% highlight xml %}
+
+<chart:SfCartesianChart>
+    <chart:SfCartesianChart.ZoomPanBehavior>
+        <chart:ChartZoomPanBehavior MaximumZoomLevel = "2" />
+    </chart:SfCartesianChart.ZoomPanBehavior>
+    ...
+</chart:SfCartesianChart>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+SfCartesianChart chart = new SfCartesianChart();
+...
+ChartZoomPanBehavior zooming = new ChartZoomPanBehavior()
+{
+    MaximumZoomLevel = 2
+};
+
+chart.ZoomPanBehavior = zooming;
+...
+
+{% endhighlight %}
+
+{% endtabs %}
+
 ## Enable Panning
 
 Panning feature allows moving the visible area of the chart when it is zoomed in. To enable panning, you have to set [EnablePanning](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartZoomPanBehavior.html#Syncfusion_Maui_Charts_ChartZoomPanBehavior_EnablePanning) property to `true`.
