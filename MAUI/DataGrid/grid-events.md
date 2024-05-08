@@ -376,7 +376,7 @@ private void SfDataGrid_CellValueChanged(object sender, ValueChangedEventArgs e)
 {% endtabs %}
 ## DataGridLoaded
 
-This event will be triggered once components in the SfDataGrid initialized and rendered.
+This event will be triggered once components in the `SfDataGrid` initialized and rendered.
 
 {% tabs %}
 
