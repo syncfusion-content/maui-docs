@@ -272,7 +272,7 @@ dataGrid.Columns.Add(new DataGridTextColumn()
 
 #### Format column using converter
 
-We can customise the format of a particular column using converter.
+We can customize the format of a particular column using converter.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml"%}
@@ -892,6 +892,44 @@ DataGridNumericColumn numericColumn = new DataGridNumericColumn()
 };
 dataGrid.Columns.Add(numericColumn);
 {% endhighlight %}
+{% endtabs %}
+
+## Allow Null Value
+
+The `DataGridNumericColumn.AllowNull` property allows you to commit a null value to the respective cell during the end edit. 
+
+{% tabs %}
+{% highlight xaml %}
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                       AutoGenerateColumnsMode="None"
+                       AllowEditing="True"
+                       SelectionMode="Single"
+                       NavigationMode="Cell"
+                       ItemsSource="{Binding OrderInfoCollection}">
+     <syncfusion:SfDataGrid.Columns>
+         <syncfusion:DataGridNumericColumn HeaderText="Order ID" 
+                                           MappingName="OrderID" 
+                                           AllowNull="True" />   
+     </syncfusion:SfDataGrid.Columns>
+</syncfusion:SfDataGrid>
+
+{% endhighlight %}
+
+{% highlight c# %}
+dataGrid = new SfDataGrid();
+dataGrid.AllowEditing = true;
+dataGrid.SelectionMode = DataGridSelectionMode.Single;
+dataGrid.NavigationMode = DataGridNavigationMode.Cell;
+DataGridNumericColumn numericColumn = new DataGridNumericColumn()
+{
+    MappingName = "OrderID",
+    HeaderText = "OrderID",
+    AllowNull = true,
+};
+dataGrid.Columns.Add(numericColumn);
+
+{% endhighlight %}
+
 {% endtabs %}
 
 ## Bind a view model property inside header template
