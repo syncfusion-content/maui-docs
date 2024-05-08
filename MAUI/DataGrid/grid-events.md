@@ -393,7 +393,7 @@ private void DataGrid_GridLoaded(object? sender, EventArgs e)
 
 {% endtabs %}
 
-## DataGridViewCreated
+## ViewCreated
 
 This event will be triggered once the SfDataGrid.View is created.
 
@@ -411,7 +411,7 @@ private void DataGrid_viewCreated(object? sender, EventArgs e)
 
 {% endtabs %}
 
-## DataItemsSourceChanged
+## ItemsSourceChanged
 
 This event will be triggered once the source is changed in SfDataGrid
 

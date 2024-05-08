@@ -894,9 +894,9 @@ dataGrid.Columns.Add(numericColumn);
 {% endhighlight %}
 {% endtabs %}
 
-## Allow Null
+## Allow Null Value
 
-This AllowNull property enhances the flexibility and usability of the application system by enabling users to input null values into numeric columns during the end edit phase. 
+The `DataGridNumericColumn.AllowNull` property allows you to commit a null value to the respective cell during the end edit. 
 
 {% tabs %}
 {% highlight xaml %}
@@ -908,20 +908,25 @@ This AllowNull property enhances the flexibility and usability of the applicatio
                        ItemsSource="{Binding OrderInfoCollection}">
      <syncfusion:SfDataGrid.Columns>
          <syncfusion:DataGridNumericColumn HeaderText="Order ID" 
-                     MappingName="OrderID" AllowNull="False" />
-         <syncfusion:DataGridNumericColumn HeaderText="Order ID" 
-                     MappingName="OrderID" AllowNull="True" />
-         <syncfusion:DataGridNumericColumn HeaderText=" ID"
-                     MappingName="ID" AllowNull="False" />
-         <syncfusion:DataGridNumericColumn HeaderText="ID"
-                     MappingName="ID" AllowNull="True" />
+                                           MappingName="OrderID" 
+                                           AllowNull="True" />   
      </syncfusion:SfDataGrid.Columns>
 </syncfusion:SfDataGrid>
 
 {% endhighlight %}
 
 {% highlight c# %}
-
+dataGrid = new SfDataGrid();
+dataGrid.AllowEditing = true;
+dataGrid.SelectionMode = DataGridSelectionMode.Single;
+dataGrid.NavigationMode = DataGridNavigationMode.Cell;
+DataGridNumericColumn numericColumn = new DataGridNumericColumn()
+{
+    MappingName = "OrderID",
+    HeaderText = "OrderID",
+    AllowNull = true,
+};
+dataGrid.Columns.Add(numericColumn);
 
 {% endhighlight %}
 
