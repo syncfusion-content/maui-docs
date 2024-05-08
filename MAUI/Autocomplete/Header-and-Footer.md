@@ -38,6 +38,7 @@ We can provide Header Content at the top of the AutoComplete's dropdown.[`DropDo
         <autocomplete:SfAutoComplete HeightRequest="40"
                                      ShowDropDownHeaderView ="True"
                                      ItemsSource="{Binding SocialMedias}"
+                                     DisplayMemberPath="Name"
                                      DropDownHeaderViewHeight="50">
             <autocomplete:SfAutoComplete.DropDownHeaderView>
                 <StackLayout BackgroundColor="#f0f0f0" >
@@ -79,7 +80,7 @@ namespace AutocompleteSample
             {
                 HeightRequest = 40,
                 ShowDropDownHeaderView = true,
-                ItemsSource = ViewModel.SocialMedias, // Assuming SocialMedias is a property in your ViewModel
+                ItemsSource = new List<string> { "Facebook", "Twitter", "Instagram", "LinkedIn" },
                 DropDownHeaderViewHeight = 50
             };
 
@@ -136,7 +137,8 @@ The following code example illustrate how to set Footer content in [`SfAutoCompl
                  Padding="30">
         <autocomplete:SfAutoComplete HeightRequest="40"
                                      ShowDropDownFooterView ="True"
-                                     ItemsSource = new List<string> { "Facebook", "Twitter", "Instagram", "LinkedIn" },
+                                     ItemsSource = "{Binding SocialMedias}"
+                                     DisplayMemberPath="Name"
                                      DropDownFooterViewHeight="50">
             <autocomplete:SfAutoComplete.DropDownFooterView>
                 <StackLayout BackgroundColor="#f0f0f0" >

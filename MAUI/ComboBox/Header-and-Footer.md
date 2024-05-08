@@ -19,7 +19,7 @@ You can provide content for header at the top of the ComboBox's dropdown. The [`
 {% highlight xaml %}
 
     <StackLayout VerticalOptions="Start" HorizontalOptions="Start" Padding="30">
-        <combobox:SfComboBox HeightRequest="40" x:Name="comboBox" IsEditableMode="true" ItemsSource="{Binding SocialMedias}" AllowFiltering="true">
+        <combobox:SfComboBox HeightRequest="40" x:Name="comboBox" IsEditableMode="true" DisplayMemberPath="Name" ItemsSource="{Binding SocialMedias}" AllowFiltering="true">
             <combobox:SfComboBox.DropDownHeaderView>
                 <StackLayout BackgroundColor="#f0f0f0" >
                     <Label  x:Name="label2" FontSize="20" VerticalTextAlignment="Center" HorizontalOptions="Center" VerticalOptions="Center" TextColor="#006bcd" />
@@ -79,7 +79,7 @@ The following code example shows how to set footer content in [`SfComboBox`].
 {% highlight xaml %}
 
     <StackLayout VerticalOptions="Start" HorizontalOptions="Start" Padding="30">
-        <combobox:SfComboBox HeightRequest="40" ItemsSource="{Binding SocialMedias}" x:Name="comboBox" IsEditableMode="true" AllowFiltering="true">
+        <combobox:SfComboBox HeightRequest="40" ItemsSource="{Binding SocialMedias}" DisplayMemberPath="Name" x:Name="comboBox" IsEditableMode="true" AllowFiltering="true">
             <combobox:SfComboBox.DropDownFooterView>
                 <StackLayout BackgroundColor="#f0f0f0" >
                     <Label Text="Add New" BackgroundColor="#f0f0f0" TextColor="#006bcd" VerticalTextAlignment="Center" VerticalOptions="Center" HorizontalTextAlignment="Center" FontSize="20"/>
