@@ -409,3 +409,36 @@ private void DataGrid_CurrentCellEndEdit(object sender, DataGridCurrentCellEndEd
 }
 {% endhighlight %}
 {% endtabs %}
+
+## Allow Null
+
+This AllowNull property enhances the flexibility and usability of the application system by enabling users to input null values into numeric columns during the end edit phase. 
+
+{% tabs %}
+{% highlight xaml %}
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                       AutoGenerateColumnsMode="None"
+                       AllowEditing="True"
+                       SelectionMode="Single"
+                       NavigationMode="Cell"
+                       ItemsSource="{Binding OrderInfoCollection}">
+     <syncfusion:SfDataGrid.Columns>
+         <syncfusion:DataGridNumericColumn HeaderText="Order ID" 
+                     MappingName="OrderID" AllowNull="False" />
+         <syncfusion:DataGridNumericColumn HeaderText="Order ID" 
+                     MappingName="OrderID" AllowNull="True" />
+         <syncfusion:DataGridNumericColumn HeaderText=" ID"
+                     MappingName="ID" AllowNull="False" />
+         <syncfusion:DataGridNumericColumn HeaderText="ID"
+                     MappingName="ID" AllowNull="True" />
+     </syncfusion:SfDataGrid.Columns>
+</syncfusion:SfDataGrid>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+
+{% endhighlight %}
+
+{% endtabs %}
