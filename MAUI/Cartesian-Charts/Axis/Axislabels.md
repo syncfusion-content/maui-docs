@@ -13,7 +13,7 @@ Axis labels are used to show the units or measures or category value of axis to 
 
 ## Positioning the labels
 
-The [LabelsPosition]() property is used to position the axis labels inside or outside the chart area. By default, [LabelsPosition]() is positioned `AxisElementPosition.Outside` the chart area.
+The [LabelsPosition]() property is used to position the axis labels inside or outside the chart area. [LabelsPosition]() property default value is `AxisElementPosition.Outside`.
 
 {% tabs %}
 
@@ -21,6 +21,11 @@ The [LabelsPosition]() property is used to position the axis labels inside or ou
 
 <chart:SfCartesianChart>
     . . .
+
+    <chart:SfCartesianChart.XAxes>
+        <chart:CategoryAxis />
+    </chart:SfCartesianChart.XAxes>
+
     <chart:SfCartesianChart.YAxes>
         <chart:NumericalAxis LabelsPosition="Inside"/>
     </chart:SfCartesianChart.YAxes>
@@ -33,12 +38,13 @@ The [LabelsPosition]() property is used to position the axis labels inside or ou
 {% highlight c# %}
 
 SfCartesianChart chart = new SfCartesianChart();
-. . .
+CategoryAxis primaryAxis = new CategoryAxis();
 NumericalAxis secondaryAxis = new NumericalAxis()
 {
     LabelsPosition = AxisElementPosition.Inside
 };
 
+chart.XAxes.Add(primaryAxis);
 chart.YAxes.Add(secondaryAxis);
 
 {% endhighlight %}

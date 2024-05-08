@@ -13,9 +13,9 @@ Axis labels are used to display the units, measures, or category values of an ax
 
 ## Positioning the labels
 
-The [LabelsPosition]() property is used to position the axis labels inside or outside the chart area. By default, [LabelsPosition]() is positioned `AxisElementPosition.Outside` the chart area.
+The [LabelsPosition]() property is used to position the axis labels inside or outside the chart area. [LabelsPosition]() property default value is `AxisElementPosition.Outside`.
 
-N> Polar chart supports LabelsPosition for secondary axis only.
+N> This is only applicable to the secondary axis of Polar chart.
 
 {% tabs %}
 

@@ -51,9 +51,9 @@ chart.SecondaryAxis = secondaryAxis;
 
 ## Positioning the ticklines
 
-The positioning of tick lines inside or outside the chart area can be controlled using the [TickPosition]() property. By default, the tick lines are positioned `AxisElementPosition.Outside` the chart area.
+The tick lines can be positioned inside or outside the chart area using the [TickPosition]() property. [TickPosition]() property default value is `AxisElementPosition.Outside`.
 
-N> Polar chart supports TickPosition for secondary axis only.
+N> This is only applicable to the secondary axis of Polar chart.
 
 {% tabs %}
 

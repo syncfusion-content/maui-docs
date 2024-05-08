@@ -52,7 +52,7 @@ chart.YAxes.Add(secondaryAxis);
 
 ## Positioning the ticklines
 
-The positioning of tick lines inside or outside the chart area can be controlled using the [TickPosition]() property. By default, the tick lines are positioned `AxisElementPosition.Outside` the chart area. 
+The tick lines can be positioned inside or outside the chart area using the [TickPosition]() property. [LabelsPosition]() property default value is `AxisElementPosition.Outside`.
 
 {% tabs %}
 
@@ -60,6 +60,11 @@ The positioning of tick lines inside or outside the chart area can be controlled
 
 <chart:SfCartesianChart>
     . . .  
+
+    <chart:SfCartesianChart.XAxes>
+        <chart:CategoryAxis />
+    </chart:SfCartesianChart.XAxes>
+
     <chart:SfCartesianChart.YAxes>
         <chart:NumericalAxis TickPosition="Inside"/>
     </chart:SfCartesianChart.YAxes>
@@ -72,12 +77,13 @@ The positioning of tick lines inside or outside the chart area can be controlled
 {% highlight c# %}
 
 SfCartesianChart chart = new SfCartesianChart();
-. . .
+CategoryAxis primaryAxis = new CategoryAxis();
 NumericalAxis secondaryAxis = new NumericalAxis()
 {
     TickPosition = AxisElementPosition.Inside
 };
 
+chart.XAxes.Add(primaryAxis);
 chart.YAxes.Add(secondaryAxis);
 
 {% endhighlight %}
