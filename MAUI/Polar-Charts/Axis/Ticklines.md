@@ -49,6 +49,46 @@ chart.SecondaryAxis = secondaryAxis;
 
 {% endtabs %}
 
+## Positioning the ticklines
+
+The positioning of tick lines inside or outside the chart area can be controlled using the [TickPosition]() property. By default, the tick lines are positioned outside of the chart area. 
+
+N> Polar chart supports TickPosition for secondary axis only.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<chart:SfPolarChart>
+. . .
+
+    <chart:SfPolarChart.SecondaryAxis>
+        <chart:NumericalAxis TickPosition="Inside"/>
+    </chart:SfPolarChart.SecondaryAxis>
+
+    . . .
+</chart:SfPolarChart>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+SfPolarChart chart = new SfPolarChart();
+. . .
+
+NumericalAxis secondaryAxis = new NumericalAxis()
+{
+    TickPosition = AxisElementPosition.Inside
+};
+
+chart.SecondaryAxis = secondaryAxis;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Axis ticks inside position in .NET MAUI Chart.](Axis_Images/MAUI_inside_ticks.png)
+
 ## Customization
 
 Both major and minor tick lines can be customized using the [MajorTickStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_MajorTickStyle) and [MinorTickStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.RangeAxisBase.html#Syncfusion_Maui_Charts_RangeAxisBase_MinorTickStyle) properties respectively. They provide options to change the [StrokeWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxisTickStyle.html#Syncfusion_Maui_Charts_ChartAxisTickStyle_StrokeWidth), [TickSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxisTickStyle.html#Syncfusion_Maui_Charts_ChartAxisTickStyle_TickSize), [Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxisTickStyle.html#Syncfusion_Maui_Charts_ChartAxisTickStyle_Stroke) of tick lines. By default, minor tick lines will not be visible.

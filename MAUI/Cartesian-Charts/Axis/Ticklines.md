@@ -50,6 +50,53 @@ chart.YAxes.Add(secondaryAxis);
 
 {% endtabs %}
 
+## Positioning the ticklines
+
+The positioning of tick lines inside or outside the chart area can be controlled using the [TickPosition]() property. By default, the tick lines are positioned outside of the chart area. 
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<chart:SfCartesianChart>
+
+    <chart:SfCartesianChart.XAxes>
+        <chart:CategoryAxis TickPosition="Inside"/>
+    </chart:SfCartesianChart.XAxes>
+
+    <chart:SfCartesianChart.YAxes>
+        <chart:NumericalAxis TickPosition="Inside"/>
+    </chart:SfCartesianChart.YAxes>
+
+    . . .
+</chart:SfCartesianChart>
+
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+SfCartesianChart chart = new SfCartesianChart();
+. . .
+CategoryAxis primaryAxis = new CategoryAxis()
+{
+    TickPosition = AxisElementPosition.Inside
+};
+
+NumericalAxis secondaryAxis = new NumericalAxis()
+{
+    TickPosition = AxisElementPosition.Inside
+};
+
+chart.XAxes.Add(primaryAxis);
+chart.YAxes.Add(secondaryAxis);
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Axis ticks inside position in .NET MAUI Chart.](axis_images/maui_chart_inside_ticks.png)
+
 ## Customization
 
 Both major and minor tick lines can be customized by using the [MajorTickStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_MajorTickStyle) and [MinorTickStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.RangeAxisBase.html#Syncfusion_Maui_Charts_RangeAxisBase_MinorTickStyle) properties respectively. They provide options to change the [StrokeWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxisTickStyle.html#Syncfusion_Maui_Charts_ChartAxisTickStyle_StrokeWidth), [TickSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxisTickStyle.html#Syncfusion_Maui_Charts_ChartAxisTickStyle_TickSize), [Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxisTickStyle.html#Syncfusion_Maui_Charts_ChartAxisTickStyle_Stroke) of tick lines. By default minor tick lines will not be visible.

@@ -11,6 +11,46 @@ documentation: ug
 
 Axis labels are used to display the units, measures, or category values of an axis in a user-friendly way. They are generated based on the range and the values bound to the [XBindingPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_XBindingPath) or [YBindingPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.XYDataSeries.html#Syncfusion_Maui_Charts_XYDataSeries_YBindingPath) properties of the series.
 
+## Positioning the labels
+
+The [LabelsPosition]() property determines whether the axis labels are positioned inside or outside the chart area. By default, LabelsPosition is set to Outside.
+
+N> Polar chart supports LabelsPosition for secondary axis only.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<chart:SfPolarChart>
+    . . .
+    <chart:SfPolarChart.SecondaryAxis>
+        <chart:NumericalAxis LabelsPosition="Inside"/>
+    </chart:SfPolarChart.SecondaryAxis>
+
+    . . .
+</chart:SfPolarChart>
+
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+SfPolarChart chart = new SfPolarChart();
+. . .
+
+NumericalAxis axis = new NumericalAxis()
+{
+    LabelsPosition = AxisElementPosition.Inside
+};
+
+chart.SecondaryAxis = axis;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Axis labels inside position in .NET MAUI Chart.](Axis_Images/MAUI_inside_labels.png)
+
 ## Label customization
 
 The [LabelStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_LabelStyle) property of the axis provides options to customize the font family, font size, font attributes, and text color of axis labels. The axis labels can be customized using the following properties:
