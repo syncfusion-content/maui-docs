@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Grid Events in MAUI DataGrid control | Syncfusion
-description: Learn here all about data grid events that help identify interactions on the cell, and listen to cell value changes in the Syncfusion MAUI DataGrid (SfDataGrid) control, and learn more about it.
+description: Learn here about data grid events and listen to cell value changes in the Syncfusion MAUI DataGrid (SfDataGrid) control, and learn more about it.
 platform: MAUI
 control: SfDataGrid
 documentation: UG
@@ -38,6 +38,31 @@ private void dataGrid_CellTapped(object sender, DataGridCellTappedEventArgs e)
 {% endhighlight %}
 {% endtabs %}
 
+### CellTappedCommand
+The command will be invoked while tapping a cell in the SfDataGrid. The instance of `DataGridCellTappedEventArgs` will be passed as the default value of the command's parameter. It can be customized by setting the `CellTappedCommandParameter` property.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+<syncfusion:SfDataGrid CellTappedCommand="{Binding ButtonCommand}"
+                       ItemsSource="{Binding OrderInfoCollection}" />
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+Command TapCommand = new Command(ListenTap);
+
+private static void ListenTap(object obj)
+{
+    var args = obj as DataGridCellTappedEventArgs;
+    if (args != null)
+    {
+        var rowIndex = e.RowColumnIndex.RowIndex;
+        var rowData = e.RowData;
+        var columnIndex = e.RowColumnIndex.ColumnIndex;
+        var column = e.Column;
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
 ### CellDoubleTapped event
 
 This event will be triggered while double tapping a cell in the DataGrid. This event has the [DataGridCellDoubleTappedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCellDoubleTappedEventArgs.html) as arguments. 
@@ -59,6 +84,31 @@ private void dataGrid_CellDoubleTapped(object sender, DataGridCellDoubleTappedEv
 {% endhighlight %}
 {% endtabs %}
 
+### CellDoubleTappedCommand
+The command will be invoked while double tapping a cell in the SfDataGrid. The instance of `DataGridCellDoubleTappedEventArgs` will be passed as the default value of the command's parameter. It can be customized by setting the `CellDoubleTappedCommandParameter` property.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+<syncfusion:SfDataGrid CellDoubleTappedCommand="{Binding ButtonCommand}"
+                       ItemsSource="{Binding OrderInfoCollection}" />
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+Command DoubleTapCommand = new Command(ListenTap);
+
+private static void ListenTap(object obj)
+{
+    var args = obj as DataGridCellDoubleTappedEventArgs;
+    if (args != null)
+    {
+        var rowIndex = e.RowColumnIndex.RowIndex;
+        var rowData = e.RowData;
+        var columnIndex = e.RowColumnIndex.ColumnIndex;
+        var column = e.Column;
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
 ### CellLongPress event
 
 This event will be triggered while long pressing a cell in the DataGrid. This event has the [DataGridCellLongPressEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCellLongPressEventArgs.html) as arguments. 
@@ -76,6 +126,31 @@ private void dataGrid_CellLongPress(object sender, DataGridCellLongPressEventArg
     var rowData = e.RowData;
     var columnIndex = e.RowColumnIndex.ColumnIndex;
     var column = e.Column;
+}
+{% endhighlight %}
+{% endtabs %}
+
+### CellLongPressedCommand
+The command will be invoked while long-pressing a cell in the SfDataGrid. The instance of `DataGridCellLongPressEventArgs` will be passed as the default value of the command's parameter. It can be customized by setting the `CellLongPressedCommandParameter` property.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+<syncfusion:SfDataGrid CellLongPressedCommand="{Binding ButtonCommand}"
+                       ItemsSource="{Binding OrderInfoCollection}" />
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+Command LongPressCommand = new Command(ListenTap);
+
+private static void ListenTap(object obj)
+{
+    var args = obj as DataGridCellLongPressedEventArgs;
+    if (args != null)
+    {
+        var rowIndex = e.RowColumnIndex.RowIndex;
+        var rowData = e.RowData;
+        var columnIndex = e.RowColumnIndex.ColumnIndex;
+        var column = e.Column;
+    }
 }
 {% endhighlight %}
 {% endtabs %}
@@ -102,6 +177,31 @@ private void SfDataGrid_CellRightTapped(object sender, DataGridCellRightTappedEv
 {% endtabs %}
 
 N> The `CellRightTapped` event is only applicable for Windows and macOS.
+
+### CellRightTappedCommand
+The command will be invoked when a right-click mouse gesture is recognized on a cell in the SfDataGrid. The instance of `DataGridCellRightTappedEventArgs` will be passed as the default value of the command's parameter. It can be customized by setting the `CellRightTappedCommandParameter` property.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+<syncfusion:SfDataGrid CellRightTappedCommand="{Binding ButtonCommand}"
+                       ItemsSource="{Binding OrderInfoCollection}" />
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+Command RightTapCommand = new Command(ListenTap);
+
+private static void ListenTap(object obj)
+{
+    var args = obj as DataGridCellRightTappedEventArgs;
+    if (args != null)
+    {
+        var rowIndex = e.RowColumnIndex.RowIndex;
+        var rowData = e.RowData;
+        var columnIndex = e.RowColumnIndex.ColumnIndex;
+        var column = e.Column;
+    }
+}
+{% endhighlight %}
+{% endtabs %}
 
 ## Cell Pointer Events
 
@@ -131,6 +231,31 @@ private void dataGrid_CellEntered(object sender, DataGridCellEnteredEventArgs e)
 {% endhighlight %}
 {% endtabs %}
 
+### CellEnteredCommand
+The command will be invoked when the mouse pointer enters a cell in the SfDataGrid. The instance of `DataGridCellEnteredEventArgs` will be passed as the default value of the command's parameter. It can be customized by setting the `CellEnteredCommandParameter` property.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+<syncfusion:SfDataGrid CellEnteredCommand="{Binding ButtonCommand}"
+                       ItemsSource="{Binding OrderInfoCollection}" />
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+Command EnteredCommand = new Command(ListenTap);
+
+private static void ListenTap(object obj)
+{
+    var args = obj as DataGridCellEnteredEventArgs;
+    if (args != null)
+    {
+        var rowIndex = e.RowColumnIndex.RowIndex;
+        var rowData = e.RowData;
+        var columnIndex = e.RowColumnIndex.ColumnIndex;
+        var column = e.Column;
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
 ### CellHovered event
 This event will be triggered when the mouse pointer hovers over a cell in the DataGrid. It uses [DataGridCellHoveredEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCellHoveredEventArgs.html) as its argument.
 
@@ -152,6 +277,31 @@ private void dataGrid_CellHovered(object sender, DataGridCellHoveredEventArgs e)
 {% endhighlight %}
 {% endtabs %}
 
+### CellHoveredCommand
+The command will be invoked when the mouse pointer hovers over a cell in the SfDataGrid. The instance of `DataGridCellHoveredEventArgs` will be passed as the default value of the command's parameter. It can be customized by setting the `CellHoveredCommandParameter` property.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+<syncfusion:SfDataGrid CellHoveredCommand="{Binding ButtonCommand}"
+                       ItemsSource="{Binding OrderInfoCollection}" />
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+Command HoveredCommand = new Command(ListenTap);
+
+private static void ListenTap(object obj)
+{
+    var args = obj as DataGridCellHoveredEventArgs;
+    if (args != null)
+    {
+        var rowIndex = e.RowColumnIndex.RowIndex;
+        var rowData = e.RowData;
+        var columnIndex = e.RowColumnIndex.ColumnIndex;
+        var column = e.Column;
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
 ### CellExited event
 This event will be triggered when the mouse pointer exits a cell in the DataGrid. It uses [DataGridCellExitedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCellExitedEventArgs.html) as its argument.
 
@@ -168,6 +318,31 @@ private void dataGrid_CellExited(object sender, DataGridCellExitedEventArgs e)
     var rowData = e.RowData;
     var columnIndex = e.RowColumnIndex.ColumnIndex;
     var column = e.Column;
+}
+{% endhighlight %}
+{% endtabs %}
+
+### CellExitedCommand
+The command will be invoked when the mouse pointer exits a cell in the SfDataGrid. The instance of `DataGridCellExitedEventArgs` will be passed as the default value of the command's parameter. It can be customized by setting the `CellExitedCommandParameter` property.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+<syncfusion:SfDataGrid CellExitedCommand="{Binding ButtonCommand}"
+                       ItemsSource="{Binding OrderInfoCollection}" />
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+Command ExitedCommand = new Command(ListenTap);
+
+private static void ListenTap(object obj)
+{
+    var args = obj as DataGridCellExitedEventArgs;
+    if (args != null)
+    {
+        var rowIndex = e.RowColumnIndex.RowIndex;
+        var rowData = e.RowData;
+        var columnIndex = e.RowColumnIndex.ColumnIndex;
+        var column = e.Column;
+    }
 }
 {% endhighlight %}
 {% endtabs %}
@@ -194,6 +369,64 @@ private void SfDataGrid_CellValueChanged(object sender, ValueChangedEventArgs e)
     var newValue = e.NewValue;
     var rowColIndex = e.RowColIndex;
     var rowData = e.RowData;
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+## DataGridLoaded
+
+This event will be triggered once components in the `SfDataGrid` initialized and rendered.
+
+{% tabs %}
+
+{% highlight c# %}
+
+dataGrid.DataGridLoaded += DataGrid_GridLoaded;
+
+private void DataGrid_GridLoaded(object? sender, EventArgs e)
+{
+
+}           
+ 
+{% endhighlight %}
+
+{% endtabs %}
+
+## ViewCreated
+
+This event will be triggered once the `SfDataGrid.View` is created.
+
+{% tabs %}
+
+{% highlight c# %}
+
+dataGrid.ViewCreated += DataGrid_viewCreated;     
+ 
+private void DataGrid_viewCreated(object? sender, EventArgs e)
+{
+           
+}
+{% endhighlight %}
+
+{% endtabs %}
+
+## ItemsSourceChanged
+
+This event will be triggered once the source is changed in SfDataGrid
+
+{% tabs %}
+
+{% highlight c# %}
+
+dataGrid.ItemsSourceChanged += DataGrid_DataGridItemsSourceChanged;
+
+private void DataGrid_DataGridItemsSourceChanged(object? sender, DataGridItemsSourceChangedEventArgs e)
+{
+    var newItemSource = e.NewItemSource;
+    var oldItemSource = e.OldItemSource;
+    var newView = e.NewView;
+    var oldView = e.OldView;
 }
 
 {% endhighlight %}

@@ -2,7 +2,7 @@
 layout: post
 title: Visual Customization in .NET MAUI Radio Button Control | Syncfusion
 description: Learn here all about Visual Customization support in Syncfusion .NET MAUI Radio Button (SfRadioButton) control and more.
-platform: .NET MAUI
+platform: maui
 control: SfRadioButton
 documentation: ug 
 ---
@@ -108,3 +108,26 @@ You can customize the display text appearance of the [`SfRadioButton`](https://h
 {% endtabs %}
 
 ![.NET MAUI Radio Button TextAppereance](Images/VisualCustomization/textappearance.png)
+
+## Size customization
+
+The [`ControlSize`] property is used to customize the [`RadioButton`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioButton.html) control size. 
+
+{% tabs %}
+{% highlight xaml %}
+
+<StackLayout>
+    <syncfusion:SfRadioButton Text="RadioButton" ControlSize="40"/>
+</StackLayout>
+
+{% endhighlight %}
+{% highlight c# %}
+
+	StackLayout stackLayout = new StackLayout();
+	SfRadioButton radioButton = new SfRadioButton();
+	radioButton.Text = "Radio Button";
+	radioButton.ControlSize = 40;
+	stackLayout.Children.Add(radioButton);
+
+{% endhighlight %}
+{% endtabs %}

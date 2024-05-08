@@ -2,7 +2,7 @@
 layout: post
 title: Customization in .NET MAUI CheckBox Control | Syncfusion
 description: Learn about Customization support in Syncfusion Essential Studio .NET MAUI CheckBox control, its elements and more.
-platform: .NET MAUI
+platform: maui
 control: SfCheckBox
 documentation: ug
 ---
@@ -194,3 +194,26 @@ The [`TickColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.Sf
 {% endtabs %}
 
 ![.NET MAUI CheckBox](Images/Visual-Customization/tickcolor.png)
+
+## Size Customization
+
+The [`ControlSize`] property is used to customize the [`CheckBox`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html) control size.
+
+{% tabs %}
+{% highlight xaml %}
+
+    <StackLayout>
+        <syncfusion:SfCheckBox Text="CheckBox" ControlSize="40"/>
+    </StackLayout>
+
+{% endhighlight %}
+{% highlight c# %}
+
+    StackLayout stackLayout = new StackLayout();
+    SfCheckBox  sfCheckBox  = new SfCheckBox();
+    sfCheckBox.Text = "Radio Button";
+    sfCheckBox.ControlSize = 40;
+    stackLayout.Children.Add(sfCheckBox);
+
+{% endhighlight %}
+{% endtabs %}
