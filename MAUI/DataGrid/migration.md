@@ -313,7 +313,7 @@ By writing the converter, you can achieve the requirement conditionally. Refer {
 </tr>
 <tr>
 <td>{{'[ItemsSource changed event](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.SfDataGrid.html#Syncfusion_SfDataGrid_XForms_SfDataGrid_ItemsSourceChanged)'| markdownify }}</td>
-<td>{{'[DataItemsSourceChanged]()'| markdownify }}</td>
+<td>{{'[DataItemsSourceChanged ]()'| markdownify }}</td>
 <td>Occurs when the source is changed in SfDataGrid
 </td>
 </tr>
