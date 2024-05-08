@@ -332,7 +332,7 @@ By default, the current cell is focusable for all the columns. To disable curren
 {% endhighlight %}
 {% endtabs %}
 
-## Disable Delete Key Functionality
+## Disable delete key functionality
 
 By default, the selected rows will be deleted when pressing the delete key. It can be disabled by setting the `SfDataGrid.AllowDeleting` property to false.
 
@@ -544,7 +544,7 @@ public class ViewModel : INotifyPropertyChanged
 {% endhighlight %}
 {% endtabs %}
 
-## Disable KeyBoard Navigation
+## Disable keyboard navigation
 
 By default, the keyboard navigation will be enabled when setting the selection and navigation modes. It can be disabled by setting the `SfDataGrid.AllowKeyboardNavigation` to false.
 
