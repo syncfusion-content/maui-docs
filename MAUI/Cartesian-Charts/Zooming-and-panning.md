@@ -394,7 +394,7 @@ The [ZoomStart]() event is triggered when the user initiates a zoom action by us
 
 The [ZoomDelta]() event is activated during the zooming process, and it is a cancelable event.
 
-* [Axis]() - The ZoomStart event will be triggered for all the axes within the Chart.
+* [Axis]() - The ZoomDelta event will be triggered for all the axes within the Chart.
 * [PreviousZoomFactor]() - Used to get the previous zoom factor of the axis.
 * [PreviousZoomPosition]() - Used to get the previous zoom position of the axis.
 * [CurrentZoomFactor]() - Used to get the current zoom factor of the axis.
