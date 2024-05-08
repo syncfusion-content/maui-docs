@@ -19,16 +19,7 @@ You can provide content for header at the top of the ComboBox's dropdown. The [`
 {% highlight xaml %}
 
     <StackLayout VerticalOptions="Start" HorizontalOptions="Start" Padding="30">
-        <combobox:SfComboBox HeightRequest="40" x:Name="comboBox" IsEditableMode="true" AllowFiltering="true">
-            <combobox:SfComboBox.DataSource>
-                <ListCollection:List x:TypeArguments="x:String">
-                    <x:String> Uganda </x:String>
-                    <x:String> Ukraine </x:String>
-                    <x:String> United Arab Emirates </x:String>
-                    <x:String> United Kingdom </x:String>
-                    <x:String> United States </x:String>
-                </ListCollection:List>
-            </combobox:SfComboBox.DataSource> 
+        <combobox:SfComboBox HeightRequest="40" x:Name="comboBox" IsEditableMode="true" ItemsSource="{Binding SocialMedias}" AllowFiltering="true">
             <combobox:SfComboBox.DropDownHeaderView>
                 <StackLayout BackgroundColor="#f0f0f0" >
                     <Label  x:Name="label2" FontSize="20" VerticalTextAlignment="Center" HorizontalOptions="Center" VerticalOptions="Center" TextColor="#006bcd" />
@@ -49,6 +40,14 @@ You can provide content for header at the top of the ComboBox's dropdown. The [`
         Padding = new Thickness(30)
     };
 
+     SfComboBox comboBox = new SfComboBox()
+     {
+        HeightRequest = 40,
+        ShowDropDownHeaderView = true,
+        ItemsSource = new List<string> { "Facebook", "Twitter", "Instagram", "LinkedIn" },
+        DropDownHeaderViewHeight = 50
+    };
+
     Label label2 = new Label()
     {
         FontSize = 20,
@@ -57,26 +56,6 @@ You can provide content for header at the top of the ComboBox's dropdown. The [`
         HorizontalOptions = LayoutOptions.Center,
         VerticalOptions = LayoutOptions.Center,
         TextColor = Color.FromHex("#006bcd")
-    };
-
-    List<String> countryNames = new List<String>();
-    countryNames.Add("Uganda");
-    countryNames.Add("Ukraine");
-    countryNames.Add("United Arab Emirates");
-    countryNames.Add("United Kingdom");
-    countryNames.Add("United States");
-
-    SfComboBox comboBox = new SfComboBox();
-    comboBox.HeightRequest = 40;
-    comboBox.DataSource = countryNames;
-    comboBox.IsEditableMode = true;
-    comboBox.AllowFiltering = true;
-    comboBox.ShowDropDownHeaderView = true;
-    //Set the height of the Header View
-    comboBox.DropDownHeaderViewHeight = 50;
-    comboBox.ValueChanged += (object sender, Syncfusion.XForms.ComboBox.ValueChangedEventArgs e) =>
-    {
-        label2.Text = "Search for " + e.Value;
     };
 
     comboBox.DropDownHeaderView = label2;
@@ -100,16 +79,7 @@ The following code example shows how to set footer content in [`SfComboBox`].
 {% highlight xaml %}
 
     <StackLayout VerticalOptions="Start" HorizontalOptions="Start" Padding="30">
-        <combobox:SfComboBox HeightRequest="40" x:Name="comboBox" IsEditableMode="true" AllowFiltering="true">
-            <combobox:SfComboBox.DataSource>
-                <ListCollection:List x:TypeArguments="x:String">
-                    <x:String> Uganda </x:String>
-                    <x:String> Ukraine </x:String>
-                    <x:String> United Arab Emirates </x:String>
-                    <x:String> United Kingdom </x:String>
-                    <x:String> United States </x:String>
-                </ListCollection:List>
-            </combobox:SfComboBox.DataSource> 
+        <combobox:SfComboBox HeightRequest="40" ItemsSource="{Binding SocialMedias}" x:Name="comboBox" IsEditableMode="true" AllowFiltering="true">
             <combobox:SfComboBox.DropDownFooterView>
                 <StackLayout BackgroundColor="#f0f0f0" >
                     <Label Text="Add New" BackgroundColor="#f0f0f0" TextColor="#006bcd" VerticalTextAlignment="Center" VerticalOptions="Center" HorizontalTextAlignment="Center" FontSize="20"/>
@@ -128,19 +98,14 @@ The following code example shows how to set footer content in [`SfComboBox`].
         HorizontalOptions = LayoutOptions.Start,
         Padding = new Thickness(30)
     };
-    List<String> countryNames = new List<String>();
-    countryNames.Add("Uganda");
-    countryNames.Add("Ukraine");
-    countryNames.Add("United Arab Emirates");
-    countryNames.Add("United Kingdom");
-    countryNames.Add("United States");
 
-    SfComboBox comboBox = new SfComboBox();
-    comboBox.HeightRequest = 40;
-    comboBox.DataSource = countryNames;
-    comboBox.IsEditableMode = true;
-    comboBox.AllowFiltering = true;
-    comboBox.ShowDropDownFooterView = true;
+    SfComboBox comboBox = new SfComboBox()
+     {
+        HeightRequest = 40,
+        ShowDropDownFooterView = true,
+        ItemsSource = new List<string> { "Facebook", "Twitter", "Instagram", "LinkedIn" },
+        DropDownFooterViewHeight = 50
+    };
 
     StackLayout customFooterView = new StackLayout();
     Label label = new Label() 
