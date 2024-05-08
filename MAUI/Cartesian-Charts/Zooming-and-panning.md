@@ -383,7 +383,7 @@ chart.YAxes.Add(secondaryAxis);
 
 ### ZoomStart
 
-The [ZoomStart]() event is triggered when the user initiates a zoom action by using a pinch gesture on the chart. This event can be cancelled, allowing its action to be interrupted or stopped.
+The [ZoomStart]() event is triggered when the user initiates a zoom action by using a pinch gesture on the chart. This event can be canceled, allowing its action to be interrupted or stopped.
 
 * [Axis]() - The ZoomStart event will be triggered for all the axes within the Chart.
 * [CurrentZoomFactor]() - Used to get the updated zoom factor of the corresponding axis.
@@ -420,7 +420,7 @@ The [SelectionZoomStart]() event is triggered when the user begins box selection
 The [SelectionZoomDelta]() event is activated during the process of selecting a region for zooming, and it is a cancelable event.
 
 * [ZoomRect]() - Contains the bounds of the currently selected region.
-* [Cancel]() - Used to set the value indicating whether the box selection zooming process should be cancelled.
+* [Cancel]() - Used to set the value indicating whether the box selection zooming process should be canceled.
 
 ### SelectionZoomEnd
 
