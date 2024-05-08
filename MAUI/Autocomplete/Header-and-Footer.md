@@ -11,11 +11,11 @@ documentation: ug
 
 ## Header and Footer in Maui SfAutoComplete
 
-We can provide Header and Footer view in the suggestion list in [`SfAutoComplete`] by enabling [`ShowDropDownHeaderView`] and [`ShowDropDownFooterView`]. 
+We can provide Header and Footer view in the dropdown in [`SfAutoComplete`] by enabling [`ShowDropDownHeaderView`] and [`ShowDropDownFooterView`]. 
 
 ## Header Content
 
-We can provide Header Content at the top of the AutoComplete's Suggestion box.[`DropDownHeaderView`] property is used to set the content of the header. The height of the Header in the [`SfAutoComplete`] can be adjusted by the property [`DropDownHeaderViewHeight`].
+We can provide Header Content at the top of the AutoComplete's dropdown.[`DropDownHeaderView`] property is used to set the content of the header. The height of the Header in the [`SfAutoComplete`] can be adjusted by the property [`DropDownHeaderViewHeight`].
 
 {% tabs %}
 
@@ -28,28 +28,17 @@ We can provide Header Content at the top of the AutoComplete's Suggestion box.[`
              xmlns:local="clr-namespace:AutocompleteSample"             
              x:Class="AutocompleteSample.MainPage">
 
+    <ContentPage.BindingContext>
+        <local:SocialMediaViewModel />
+    </ContentPage.BindingContext>
+
     <StackLayout VerticalOptions="Start" 
                  HorizontalOptions="Start" 
                  Padding="30">
         <autocomplete:SfAutoComplete HeightRequest="40"
                                      ShowDropDownHeaderView ="True"
-                                     DropDownHeaderViewHeight="50"
-                                     ValueChanged="SfAutoComplete_ValueChanged">
-            <autocomplete:SfAutoComplete.AutoCompleteSource>
-               <ListCollection:List x:TypeArguments="x:String">
-                    <x:String>India</x:String>
-                    <x:String>Uganda</x:String>
-                    <x:String>Ukraine</x:String>
-                    <x:String>Canada</x:String>
-                    <x:String>United Arab Emirates</x:String>
-                    <x:String>France</x:String>
-                    <x:String>United Kingdom</x:String>
-                    <x:String>China</x:String>
-                    <x:String>United States</x:String>
-                    <x:String>Japan</x:String>
-                    <x:String>Angola</x:String>
-                </ListCollection:List>
-            </autocomplete:SfAutoComplete.AutoCompleteSource>
+                                     ItemsSource="{Binding SocialMedias}"
+                                     DropDownHeaderViewHeight="50">
             <autocomplete:SfAutoComplete.DropDownHeaderView>
                 <StackLayout BackgroundColor="#f0f0f0" >
                     <Label  x:Name="SearchLabel" 
@@ -79,40 +68,27 @@ namespace AutocompleteSample
         public MainPage()
         {
             InitializeComponent();
-            StackLayout stackLayout = new StackLayout()
+            StackLayout stackLayout = new StackLayout
             {
                 VerticalOptions = LayoutOptions.Start,
                 HorizontalOptions = LayoutOptions.Start,
                 Padding = new Thickness(30)
             };
 
-            SfAutoComplete autoComplete = new SfAutoComplete()
+            SfAutoComplete autoComplete = new SfAutoComplete
             {
                 HeightRequest = 40,
                 ShowDropDownHeaderView = true,
-                DropDownHeaderViewHeight = 50,
-                AutoCompleteSource = new List<string>()
-                {
-                    "India",
-                    "Uganda",
-                    "Ukraine",
-                    "Canada",
-                    "United Arab Emirates",
-                    "France",
-                    "United Kingdom",
-                    "China",
-                    "United States",
-                    "Japan",
-                    "Angola"
-                }
+                ItemsSource = ViewModel.SocialMedias, // Assuming SocialMedias is a property in your ViewModel
+                DropDownHeaderViewHeight = 50
             };
 
-            StackLayout layout = new StackLayout()
+            StackLayout dropDownHeaderView = new StackLayout
             {
                 BackgroundColor = Color.FromHex("#f0f0f0")
             };
 
-            SearchLabel = new Label()
+            Label searchLabel = new Label
             {
                 FontSize = 20,
                 VerticalTextAlignment = TextAlignment.Center,
@@ -120,12 +96,10 @@ namespace AutocompleteSample
                 VerticalOptions = LayoutOptions.Center,
                 TextColor = Color.FromHex("#006bcd")
             };
-
-            layout.Children.Add(SearchLabel);
-            autoComplete.DropDownHeaderView = layout;
-            autoComplete.ValueChanged += SfAutoComplete_ValueChanged;
+            dropDownHeaderView.Children.Add(searchLabel);
+            autoComplete.DropDownHeaderView = dropDownHeaderView;
             stackLayout.Children.Add(autoComplete);
-            this.Content = stackLayout;
+            Content = stackLayout;
         }
     }
 }
@@ -134,26 +108,11 @@ namespace AutocompleteSample
 
 {% endtabs %}
 
-## Events 
-
-The following event will be hooked.
-
-{% tabs %}
-
-{% highlight C# %}
-
-        private void SfAutoComplete_ValueChanged(object sender, ValueChangedEventArgs e)
-        {
-            SearchLabel.Text = "Search for " + e.Value;
-        }
-        
-{% endhighlight %}
-
-{% endtabs %}
+![Header Image](Images/HeaderFooter/headertemplate.png)
 
 ## Footer Content
 
-We can provide Footer Content at the bottom of the AutoComplete's Suggestion box. [`DropDownFooterView`] property is used to set the content of the footer.The height of the Header in the [`SfAutoComplete`] can be adjusted by the property [`DropDownFooterViewHeight`].
+We can provide Footer Content at the bottom of the AutoComplete's dropdown. [`DropDownFooterView`] property is used to set the content of the footer.The height of the Header in the [`SfAutoComplete`] can be adjusted by the property [`DropDownFooterViewHeight`].
 
 The following code example illustrate how to set Footer content in [`SfAutoComplete`].
 
@@ -168,27 +127,17 @@ The following code example illustrate how to set Footer content in [`SfAutoCompl
              xmlns:local="clr-namespace:AutocompleteSample"             
              x:Class="AutocompleteSample.MainPage">
 
+    <ContentPage.BindingContext>
+        <local:SocialMediaViewModel />
+    </ContentPage.BindingContext>
+
     <StackLayout VerticalOptions="Start" 
                  HorizontalOptions="Start" 
                  Padding="30">
         <autocomplete:SfAutoComplete HeightRequest="40"
                                      ShowDropDownFooterView ="True"
+                                     ItemsSource = new List<string> { "Facebook", "Twitter", "Instagram", "LinkedIn" },
                                      DropDownFooterViewHeight="50">
-            <autocomplete:SfAutoComplete.AutoCompleteSource>
-                <ListCollection:List x:TypeArguments="x:String">
-                    <x:String>India</x:String>
-                    <x:String>Uganda</x:String>
-                    <x:String>Ukraine</x:String>
-                    <x:String>Canada</x:String>
-                    <x:String>United Arab Emirates</x:String>
-                    <x:String>France</x:String>
-                    <x:String>United Kingdom</x:String>
-                    <x:String>China</x:String>
-                    <x:String>United States</x:String>
-                    <x:String>Japan</x:String>
-                    <x:String>Angola</x:String>
-                </ListCollection:List>
-            </autocomplete:SfAutoComplete.AutoCompleteSource>
             <autocomplete:SfAutoComplete.DropDownFooterView>
                 <StackLayout BackgroundColor="#f0f0f0" >
                     <Label  Text="Add New"
@@ -228,21 +177,8 @@ namespace AutocompleteSample
             {
                 HeightRequest = 40,
                 ShowDropDownFooterView = true,
+                ItemsSource = new List<string> { "Facebook", "Twitter", "Instagram", "LinkedIn" },
                 DropDownFooterViewHeight = 50,
-                AutoCompleteSource = new List<string>()
-                {
-                    "India",
-                    "Uganda",
-                    "Ukraine",
-                    "Canada",
-                    "United Arab Emirates",
-                    "France",
-                    "United Kingdom",
-                    "China",
-                    "United States",
-                    "Japan",
-                    "Angola"
-                }
             };
 
             StackLayout layout = new StackLayout()
@@ -271,3 +207,5 @@ namespace AutocompleteSample
 {% endhighlight %}
 
 {% endtabs %}
+
+![Footer Image](images/HeaderFooter/footertemplate.png)

@@ -8,11 +8,11 @@ documentation: ug
 ---
 # Header and Footer in Maui ComboBox (SfComboBox)
 
-You can provide header and footer views in the suggestion list in [`SfComboBox`] by enabling the [`ShowDropDownHeaderView`] and the [`ShowDropDownFooterView`] properties. 
+You can provide header and footer views in the dropdown in [`SfComboBox`] by enabling the [`ShowDropDownHeaderView`] and the [`ShowDropDownFooterView`] properties. 
 
 ## Header content
 
-You can provide content for header at the top of the ComboBox's Suggestion box. The [`DropDownHeaderView`] property is used to set the content of the header. The height of the header in the [`SfComboBox`] can be adjusted using the [`DropDownHeaderViewHeight`] property.
+You can provide content for header at the top of the ComboBox's dropdown. The [`DropDownHeaderView`] property is used to set the content of the header. The height of the header in the [`SfComboBox`] can be adjusted using the [`DropDownHeaderViewHeight`] property.
 
 {% tabs %}
 
@@ -87,11 +87,11 @@ You can provide content for header at the top of the ComboBox's Suggestion box. 
 
 {% endtabs %}
 
-![Header Image]
+![Header Image](Images/HeaderFooter/headertemplate.png)
 
 ## Footer content
 
-You can provide content for footer at the bottom of the ComboBox's Suggestion box. The [`DropDownFooterView`] property is used to set the content for footer. The height of the footer in the [`SfComboBox`] can be adjusted using the [`DropDownFooterViewHeight`] property.
+You can provide content for footer at the bottom of the ComboBox's dropdown. The [`DropDownFooterView`] property is used to set the content for footer. The height of the footer in the [`SfComboBox`] can be adjusted using the [`DropDownFooterViewHeight`] property.
 
 The following code example shows how to set footer content in [`SfComboBox`].
 
@@ -161,4 +161,6 @@ The following code example shows how to set footer content in [`SfComboBox`].
 {% endhighlight %}
 
 {% endtabs %}
+
+![Footer Image](Images/HeaderFooter/footertemplate.png)
 
