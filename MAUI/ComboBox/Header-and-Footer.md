@@ -1,12 +1,14 @@
 ---
 layout: post
-title: Header and Footer in Maui ComboBox control | Syncfusion
+title: Header and Footer in MAUI ComboBox control | Syncfusion
 description: Learn here all about Header and Footer support in Syncfusion Maui ComboBox (SfComboBox) control and more.
 platform: maui
 control: SfComboBox
 documentation: ug
 ---
-# Header and Footer in Maui ComboBox (SfComboBox)
+# Header and Footer in .NET MAUI ComboBox (SfComboBox)
+
+## Header and Footer in .NET MAUI SfComboBox
 
 You can provide header and footer views in the dropdown in [`SfComboBox`] by enabling the [`ShowDropDownHeaderView`] and the [`ShowDropDownFooterView`] properties. 
 

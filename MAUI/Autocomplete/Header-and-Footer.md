@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Header and Footer in Maui AutoComplete control | Syncfusion
-description: Learn about Header and Footer support in Syncfusion Maui AutoComplete (SfAutoComplete) control and more details.
+title: Header and Footer in MAUI AutoComplete control | Syncfusion
+description: Learn about Header and Footer support in Syncfusion MAUI AutoComplete (SfAutoComplete) control and more details.
 platform: maui
 control: SfAutoComplete
 documentation: ug
 ---
 
-# Header and Footer in Maui AutoComplete (SfAutoComplete)
+# Header and Footer in .NET MAUI AutoComplete (SfAutoComplete)
 
-## Header and Footer in Maui SfAutoComplete
+## Header and Footer in .NET MAUI SfAutoComplete
 
 We can provide Header and Footer view in the dropdown in [`SfAutoComplete`] by enabling [`ShowDropDownHeaderView`] and [`ShowDropDownFooterView`]. 
 
