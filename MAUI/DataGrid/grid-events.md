@@ -39,11 +39,11 @@ private void dataGrid_CellTapped(object sender, DataGridCellTappedEventArgs e)
 {% endtabs %}
 
 ### CellTappedCommand
-The command will be invoked while tapping a cell in the SfDataGrid. The instance of `DataGridCellTappedEventArgs` will be passed as the default value of the command's parameter. It can be customized by setting the `CellTappedCommandParameter` property.
+The `CellTappedCommand` will be invoked while tapping a cell in the SfDataGrid. The instance of `DataGridCellTappedEventArgs` will be passed as the default value of the command's parameter. It can be customized by setting the [CellTappedCommandParameter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CellTappedCommandParameter) property.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
-<syncfusion:SfDataGrid CellTappedCommand="{Binding ButtonCommand}"
+<syncfusion:SfDataGrid CellTappedCommand="{Binding TapCommand}"
                        ItemsSource="{Binding OrderInfoCollection}" />
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
@@ -85,11 +85,11 @@ private void dataGrid_CellDoubleTapped(object sender, DataGridCellDoubleTappedEv
 {% endtabs %}
 
 ### CellDoubleTappedCommand
-The command will be invoked while double tapping a cell in the SfDataGrid. The instance of `DataGridCellDoubleTappedEventArgs` will be passed as the default value of the command's parameter. It can be customized by setting the `CellDoubleTappedCommandParameter` property.
+The `CellDoubleTappedCommand` will be invoked while double tapping a cell in the SfDataGrid. The instance of `DataGridCellDoubleTappedEventArgs` will be passed as the default value of the command's parameter. It can be customized by setting the [CellDoubleTappedCommandParameter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CellDoubleTappedCommandParameter) property.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
-<syncfusion:SfDataGrid CellDoubleTappedCommand="{Binding ButtonCommand}"
+<syncfusion:SfDataGrid CellDoubleTappedCommand="{Binding DoubleTapCommand}"
                        ItemsSource="{Binding OrderInfoCollection}" />
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
@@ -131,11 +131,11 @@ private void dataGrid_CellLongPress(object sender, DataGridCellLongPressEventArg
 {% endtabs %}
 
 ### CellLongPressedCommand
-The command will be invoked while long-pressing a cell in the SfDataGrid. The instance of `DataGridCellLongPressEventArgs` will be passed as the default value of the command's parameter. It can be customized by setting the `CellLongPressedCommandParameter` property.
+The `CellLongPressedCommand` will be invoked while long-pressing a cell in the SfDataGrid. The instance of `DataGridCellLongPressEventArgs` will be passed as the default value of the command's parameter. It can be customized by setting the [CellLongPressedCommandParameter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CellLongPressCommandParameter) property.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
-<syncfusion:SfDataGrid CellLongPressedCommand="{Binding ButtonCommand}"
+<syncfusion:SfDataGrid CellLongPressedCommand="{Binding LongPressCommand}"
                        ItemsSource="{Binding OrderInfoCollection}" />
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
@@ -179,11 +179,11 @@ private void SfDataGrid_CellRightTapped(object sender, DataGridCellRightTappedEv
 N> The `CellRightTapped` event is only applicable for Windows and macOS.
 
 ### CellRightTappedCommand
-The command will be invoked when a right-click mouse gesture is recognized on a cell in the SfDataGrid. The instance of `DataGridCellRightTappedEventArgs` will be passed as the default value of the command's parameter. It can be customized by setting the `CellRightTappedCommandParameter` property.
+The [CellRightTappedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CellRightTappedCommand) will be invoked when a right-click mouse gesture is recognized on a cell in the SfDataGrid. The instance of `DataGridCellRightTappedEventArgs` will be passed as the default value of the command's parameter. It can be customized by setting the [CellRightTappedCommandParameter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CellRightTappedCommandParameter) property.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
-<syncfusion:SfDataGrid CellRightTappedCommand="{Binding ButtonCommand}"
+<syncfusion:SfDataGrid CellRightTappedCommand="{Binding RightTapCommand}"
                        ItemsSource="{Binding OrderInfoCollection}" />
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
@@ -232,11 +232,11 @@ private void dataGrid_CellEntered(object sender, DataGridCellEnteredEventArgs e)
 {% endtabs %}
 
 ### CellEnteredCommand
-The command will be invoked when the mouse pointer enters a cell in the SfDataGrid. The instance of `DataGridCellEnteredEventArgs` will be passed as the default value of the command's parameter. It can be customized by setting the `CellEnteredCommandParameter` property.
+The [CellEnteredCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CellEnteredCommand) will be invoked when the mouse pointer enters a cell in the SfDataGrid. The instance of `DataGridCellEnteredEventArgs` will be passed as the default value of the command's parameter. It can be customized by setting the [CellEnteredCommandParameter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CellEnteredCommandParameter) property.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
-<syncfusion:SfDataGrid CellEnteredCommand="{Binding ButtonCommand}"
+<syncfusion:SfDataGrid CellEnteredCommand="{Binding EnteredCommand}"
                        ItemsSource="{Binding OrderInfoCollection}" />
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
@@ -278,11 +278,11 @@ private void dataGrid_CellHovered(object sender, DataGridCellHoveredEventArgs e)
 {% endtabs %}
 
 ### CellHoveredCommand
-The command will be invoked when the mouse pointer hovers over a cell in the SfDataGrid. The instance of `DataGridCellHoveredEventArgs` will be passed as the default value of the command's parameter. It can be customized by setting the `CellHoveredCommandParameter` property.
+The [CellHoveredCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CellHoveredCommand) will be invoked when the mouse pointer hovers over a cell in the SfDataGrid. The instance of `DataGridCellHoveredEventArgs` will be passed as the default value of the command's parameter. It can be customized by setting the [CellHoveredCommandParameter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CellHoveredCommandParameter) property.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
-<syncfusion:SfDataGrid CellHoveredCommand="{Binding ButtonCommand}"
+<syncfusion:SfDataGrid CellHoveredCommand="{Binding HoveredCommand}"
                        ItemsSource="{Binding OrderInfoCollection}" />
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
@@ -323,11 +323,11 @@ private void dataGrid_CellExited(object sender, DataGridCellExitedEventArgs e)
 {% endtabs %}
 
 ### CellExitedCommand
-The command will be invoked when the mouse pointer exits a cell in the SfDataGrid. The instance of `DataGridCellExitedEventArgs` will be passed as the default value of the command's parameter. It can be customized by setting the `CellExitedCommandParameter` property.
+The [CellExitedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CellExitedCommand) will be invoked when the mouse pointer exits a cell in the SfDataGrid. The instance of `DataGridCellExitedEventArgs` will be passed as the default value of the command's parameter. It can be customized by setting the [CellExitedCommandParameter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CellExitedCommandParameter) property.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
-<syncfusion:SfDataGrid CellExitedCommand="{Binding ButtonCommand}"
+<syncfusion:SfDataGrid CellExitedCommand="{Binding ExitedCommand}"
                        ItemsSource="{Binding OrderInfoCollection}" />
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}

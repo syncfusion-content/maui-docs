@@ -894,9 +894,9 @@ dataGrid.Columns.Add(numericColumn);
 {% endhighlight %}
 {% endtabs %}
 
-## Allow Null Value
+## Allow null value
 
-The `DataGridNumericColumn.AllowNull` property allows you to commit a null value to the respective cell during the end edit. 
+The [DataGridNumericColumn.AllowNull](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_AllowNull) property allows you to commit a null value to the respective cell during the end edit. 
 
 {% tabs %}
 {% highlight xaml %}
