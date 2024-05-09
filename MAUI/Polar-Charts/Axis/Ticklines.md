@@ -49,7 +49,7 @@ chart.SecondaryAxis = secondaryAxis;
 
 {% endtabs %}
 
-## Positioning the ticklines
+## Positioning the ticks
 
 The tick lines can be positioned inside or outside the chart area using the [TickPosition]() property. [TickPosition]() property default value is `AxisElementPosition.Outside`.
 
