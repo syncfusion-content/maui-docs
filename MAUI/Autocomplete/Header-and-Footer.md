@@ -1,21 +1,19 @@
 ---
 layout: post
-title: Header and Footer in MAUI AutoComplete control | Syncfusion
-description: Learn about Header and Footer support in Syncfusion MAUI AutoComplete (SfAutoComplete) control and more details.
+title: Header and Footer in MAUI Autocomplete control | Syncfusion
+description: Learn about Header and Footer support in Syncfusion MAUI Autocomplete (SfAutocomplete) control and more details.
 platform: maui
-control: SfAutoComplete
+control: SfAutocomplete
 documentation: ug
 ---
 
-# Header and Footer in .NET MAUI AutoComplete (SfAutoComplete)
+# Header and Footer support in .NET MAUI Autocomplete (SfAutocomplete)
 
-## Header and Footer in .NET MAUI SfAutoComplete
-
-We can provide Header and Footer view in the dropdown in [`SfAutoComplete`] by enabling [`ShowDropDownHeaderView`] and [`ShowDropDownFooterView`]. 
+We can provide Header and Footer view in the dropdown in [`SfAutocomplete`] by enabling [`ShowDropDownHeaderView`] and [`ShowDropDownFooterView`]. 
 
 ## Header Content
 
-We can provide Header Content at the top of the AutoComplete's dropdown.[`DropDownHeaderView`] property is used to set the content of the header. The height of the Header in the [`SfAutoComplete`] can be adjusted by the property [`DropDownHeaderViewHeight`].
+We can provide Header Content at the top of the Autocomplete's dropdown.[`DropDownHeaderView`] property is used to set the content of the header. The height of the Header in the [`SfAutocomplete`] can be adjusted by the property [`DropDownHeaderViewHeight`].
 
 {% tabs %}
 
@@ -35,12 +33,12 @@ We can provide Header Content at the top of the AutoComplete's dropdown.[`DropDo
     <StackLayout VerticalOptions="Start" 
                  HorizontalOptions="Start" 
                  Padding="30">
-        <autocomplete:SfAutoComplete HeightRequest="40"
+        <autocomplete:SfAutocomplete HeightRequest="40"
                                      ShowDropDownHeaderView ="True"
                                      ItemsSource="{Binding SocialMedias}"
                                      DisplayMemberPath="Name"
                                      DropDownHeaderViewHeight="50">
-            <autocomplete:SfAutoComplete.DropDownHeaderView>
+            <autocomplete:SfAutocomplete.DropDownHeaderView>
                 <StackLayout BackgroundColor="#f0f0f0" >
                     <Label  x:Name="SearchLabel" 
                             FontSize="20" 
@@ -49,8 +47,8 @@ We can provide Header Content at the top of the AutoComplete's dropdown.[`DropDo
                             VerticalOptions="Center" 
                             TextColor="#006bcd"   />
                 </StackLayout>
-            </autocomplete:SfAutoComplete.DropDownHeaderView>
-        </autocomplete:SfAutoComplete>
+            </autocomplete:SfAutocomplete.DropDownHeaderView>
+        </autocomplete:SfAutocomplete>
     </StackLayout>
 </ContentPage>
 
@@ -76,7 +74,7 @@ namespace AutocompleteSample
                 Padding = new Thickness(30)
             };
 
-            SfAutoComplete autoComplete = new SfAutoComplete
+            SfAutocomplete autoComplete = new SfAutocomplete
             {
                 HeightRequest = 40,
                 ShowDropDownHeaderView = true,
@@ -113,9 +111,9 @@ namespace AutocompleteSample
 
 ## Footer Content
 
-We can provide Footer Content at the bottom of the AutoComplete's dropdown. [`DropDownFooterView`] property is used to set the content of the footer.The height of the Header in the [`SfAutoComplete`] can be adjusted by the property [`DropDownFooterViewHeight`].
+We can provide Footer Content at the bottom of the Autocomplete's dropdown. [`DropDownFooterView`] property is used to set the content of the footer.The height of the Header in the [`SfAutocomplete`] can be adjusted by the property [`DropDownFooterViewHeight`].
 
-The following code example illustrate how to set Footer content in [`SfAutoComplete`].
+The following code example illustrate how to set Footer content in [`SfAutocomplete`].
 
 {% tabs %}
 
@@ -135,12 +133,12 @@ The following code example illustrate how to set Footer content in [`SfAutoCompl
     <StackLayout VerticalOptions="Start" 
                  HorizontalOptions="Start" 
                  Padding="30">
-        <autocomplete:SfAutoComplete HeightRequest="40"
+        <autocomplete:SfAutocomplete HeightRequest="40"
                                      ShowDropDownFooterView ="True"
                                      ItemsSource = "{Binding SocialMedias}"
                                      DisplayMemberPath="Name"
                                      DropDownFooterViewHeight="50">
-            <autocomplete:SfAutoComplete.DropDownFooterView>
+            <autocomplete:SfAutocomplete.DropDownFooterView>
                 <StackLayout BackgroundColor="#f0f0f0" >
                     <Label  Text="Add New"
                             FontSize="20" 
@@ -149,8 +147,8 @@ The following code example illustrate how to set Footer content in [`SfAutoCompl
                             VerticalOptions="Center" 
                             TextColor="#006bcd" />
                 </StackLayout>
-            </autocomplete:SfAutoComplete.DropDownFooterView>
-        </autocomplete:SfAutoComplete>
+            </autocomplete:SfAutocomplete.DropDownFooterView>
+        </autocomplete:SfAutocomplete>
     </StackLayout>
 </ContentPage>
 
@@ -175,7 +173,7 @@ namespace AutocompleteSample
                 Padding = new Thickness(30)
             };
 
-            SfAutoComplete autoComplete = new SfAutoComplete()
+            SfAutocomplete autoComplete = new SfAutocomplete()
             {
                 HeightRequest = 40,
                 ShowDropDownFooterView = true,
