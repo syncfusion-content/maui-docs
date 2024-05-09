@@ -255,7 +255,7 @@ To make migration from [Xamarin SfDataGrid](https://www.syncfusion.com/xamarin-u
 </tr>
 <tr>
 <td>{{'[GridTappedCommand](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.SfDataGrid.html#Syncfusion_SfDataGrid_XForms_SfDataGrid_GridTappedCommand)'| markdownify }}</td>
-<td>{{'[CellTappedCommand]()'| markdownify }}</td>
+<td>{{'[CellTappedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CellTappedCommand)'| markdownify }}</td>
 <td>Occurs when the cell is tapped.</td>
 </tr>
 <tr>
@@ -265,7 +265,7 @@ To make migration from [Xamarin SfDataGrid](https://www.syncfusion.com/xamarin-u
 </tr>
 <tr>
 <td>{{'[GridDoubleTappedCommand](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.SfDataGrid.html#Syncfusion_SfDataGrid_XForms_SfDataGrid_GridDoubleTappedCommand)'| markdownify }}</td>
-<td>{{'[CellDoubleTappedCommand]()'| markdownify }}</td>
+<td>{{'[CellDoubleTappedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CellDoubleTappedCommand)'| markdownify }}</td>
 <td>Occurs when the cell is tapped twice.</td>
 </tr>
 <tr>
@@ -275,7 +275,7 @@ To make migration from [Xamarin SfDataGrid](https://www.syncfusion.com/xamarin-u
 </tr>
 <tr>
 <td>{{'[GridLongPressedCommand](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.SfDataGrid.html#Syncfusion_SfDataGrid_XForms_SfDataGrid_GridLongPressedCommand)'| markdownify }}</td>
-<td>{{'[CellLongPressedCommand]()'| markdownify }}</td>
+<td>{{'[CellLongPressedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CellLongPressCommand)'| markdownify }}</td>
 <td>Occurs when the cell is long pressed for particular period.</td>
 </tr>
 <tr>
@@ -293,22 +293,22 @@ By writing the converter, you can achieve the requirement conditionally. Refer {
 </tr>
 <tr>
 <td>{{'[PageIndexChanging](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.DataPager.SfDataPager.html#Syncfusion_SfDataGrid_XForms_DataPager_SfDataPager_PageIndexChanging)'| markdownify }}</td>
-<td>{{'[PageChanging]()'| markdownify }}</td>
+<td>{{'[PageChanging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataPager.SfDataPager.html#Syncfusion_Maui_DataGrid_DataPager_SfDataPager_PageChanging)'| markdownify }}</td>
 <td>Occurs when page index is being changed.</td>
 </tr>
 <tr>
 <td>{{'[PageIndexChanged](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.DataPager.SfDataPager.html#Syncfusion_SfDataGrid_XForms_DataPager_SfDataPager_PageIndexChanged)'| markdownify }}</td>
-<td>{{'[PageChanged]()'| markdownify }}</td>
+<td>{{'[PageChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataPager.SfDataPager.html#Syncfusion_Maui_DataGrid_DataPager_SfDataPager_PageChanged)'| markdownify }}</td>
 <td>Occurs when page index is changed.</td>
 </tr>
 <tr>
 <td>{{'[GridViewCreated](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.SfDataGrid.html#Syncfusion_SfDataGrid_XForms_SfDataGrid_GridViewCreated)'| markdownigy}}</td>
-<td>{{'[ViewCreated]()' | markdownify}}</td>
+<td>{{'[ViewCreated](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ViewCreated)' | markdownify}}</td>
 <td>Occurs when the View is created.</td>
 </tr>
 <tr>
 <td>{{'[GridLoaded](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.SfDataGrid.html#Syncfusion_SfDataGrid_XForms_SfDataGrid_GridLoaded)'| markdownify}}</td>
-<td>{{'[DataGridLoaded]()'| markdownify}}</td>
+<td>{{'[DataGridLoaded](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_DataGridLoaded)'| markdownify}}</td>
 <td>Occurs when the components in the SfDataGrid initialized and rendered.</td>
 </tr>
 </tr>
