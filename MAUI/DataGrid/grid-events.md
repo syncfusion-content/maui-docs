@@ -39,7 +39,7 @@ private void dataGrid_CellTapped(object sender, DataGridCellTappedEventArgs e)
 {% endtabs %}
 
 ### CellTappedCommand
-The `CellTappedCommand` will be invoked while tapping a cell in the SfDataGrid. The instance of `DataGridCellTappedEventArgs` will be passed as the default value of the command's parameter. It can be customized by setting the [CellTappedCommandParameter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CellTappedCommandParameter) property.
+The [CellTappedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CellTappedCommand) will be invoked while tapping a cell in the SfDataGrid. The instance of `DataGridCellTappedEventArgs` will be passed as the default value of the command's parameter. It can be customized by setting the [CellTappedCommandParameter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CellTappedCommandParameter) property.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -85,7 +85,7 @@ private void dataGrid_CellDoubleTapped(object sender, DataGridCellDoubleTappedEv
 {% endtabs %}
 
 ### CellDoubleTappedCommand
-The `CellDoubleTappedCommand` will be invoked while double tapping a cell in the SfDataGrid. The instance of `DataGridCellDoubleTappedEventArgs` will be passed as the default value of the command's parameter. It can be customized by setting the [CellDoubleTappedCommandParameter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CellDoubleTappedCommandParameter) property.
+The [CellDoubleTappedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CellDoubleTappedCommand) will be invoked while double tapping a cell in the SfDataGrid. The instance of `DataGridCellDoubleTappedEventArgs` will be passed as the default value of the command's parameter. It can be customized by setting the [CellDoubleTappedCommandParameter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CellDoubleTappedCommandParameter) property.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -131,7 +131,7 @@ private void dataGrid_CellLongPress(object sender, DataGridCellLongPressEventArg
 {% endtabs %}
 
 ### CellLongPressedCommand
-The `CellLongPressedCommand` will be invoked while long-pressing a cell in the SfDataGrid. The instance of `DataGridCellLongPressEventArgs` will be passed as the default value of the command's parameter. It can be customized by setting the [CellLongPressedCommandParameter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CellLongPressCommandParameter) property.
+The [CellLongPressedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CellLongPressCommand) will be invoked while long-pressing a cell in the SfDataGrid. The instance of `DataGridCellLongPressEventArgs` will be passed as the default value of the command's parameter. It can be customized by setting the [CellLongPressedCommandParameter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CellLongPressCommandParameter) property.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
