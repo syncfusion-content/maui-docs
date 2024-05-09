@@ -64,7 +64,6 @@ private static void ListenTap(object obj)
 {% endtabs %}
 
 ### CellDoubleTapped event
-
 This event will be triggered while double tapping a cell in the DataGrid. This event has the [DataGridCellDoubleTappedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCellDoubleTappedEventArgs.html) as arguments. 
 
 {% tabs %}
@@ -110,7 +109,6 @@ private static void ListenTap(object obj)
 {% endtabs %}
 
 ### CellLongPress event
-
 This event will be triggered while long pressing a cell in the DataGrid. This event has the [DataGridCellLongPressEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCellLongPressEventArgs.html) as arguments. 
 
 {% tabs %}
