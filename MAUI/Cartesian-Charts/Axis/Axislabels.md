@@ -11,6 +11,48 @@ documentation: ug
 
 Axis labels are used to show the units or measures or category value of axis to visualize the data user friendly. It will be generated based on the range and the values binded to [XBindingPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_XBindingPath) or [YBindingPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.XYDataSeries.html#Syncfusion_Maui_Charts_XYDataSeries_YBindingPath) properties of series.
 
+## Positioning the labels
+
+The [LabelsPosition]() property is used to position the axis labels inside or outside the chart area. [LabelsPosition]() property default value is `AxisElementPosition.Outside`.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<chart:SfCartesianChart>
+    . . .
+
+    <chart:SfCartesianChart.XAxes>
+        <chart:CategoryAxis />
+    </chart:SfCartesianChart.XAxes>
+
+    <chart:SfCartesianChart.YAxes>
+        <chart:NumericalAxis LabelsPosition="Inside"/>
+    </chart:SfCartesianChart.YAxes>
+
+</chart:SfCartesianChart>
+
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+SfCartesianChart chart = new SfCartesianChart();
+CategoryAxis primaryAxis = new CategoryAxis();
+NumericalAxis secondaryAxis = new NumericalAxis()
+{
+    LabelsPosition = AxisElementPosition.Inside
+};
+
+chart.XAxes.Add(primaryAxis);
+chart.YAxes.Add(secondaryAxis);
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Axis label inside position in .NET MAUI Chart.](axis_images/maui_chart_inside_label.png)
+
 ## Label Rotation
 
 The [LabelRotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_LabelRotation) property is used to define the angle for the label content.
