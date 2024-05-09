@@ -111,7 +111,7 @@ namespace AutocompleteSample
 
 ## Footer Content
 
-We can provide Footer Content at the bottom of the Autocomplete's dropdown. [`DropDownFooterView`] property is used to set the content of the footer.The height of the Header in the [`SfAutocomplete`] can be adjusted by the property [`DropDownFooterViewHeight`].
+We can provide Footer Content at the bottom of the Autocomplete's dropdown. [`DropDownFooterView`] property is used to set the content of the footer.The height of the Footer in the [`SfAutocomplete`] can be adjusted by the property [`DropDownFooterViewHeight`].
 
 The following code example illustrate how to set Footer content in [`SfAutocomplete`].
 

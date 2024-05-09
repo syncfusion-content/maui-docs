@@ -7,7 +7,7 @@ control: SfComboBox
 documentation: ug
 ---
 
-# Header and Footer in .NET MAUI ComboBox (SfComboBox)
+# Header and Footer support in .NET MAUI ComboBox (SfComboBox)
 
 You can provide header and footer views in the dropdown in [`SfComboBox`] by enabling the [`ShowDropDownHeaderView`] and the [`ShowDropDownFooterView`] properties. 
 
