@@ -115,3 +115,5 @@ namespace EffectsViewMauiSample
 {% endtabs %}
 
 ![Effects View Initialization](Getting-Started_images/RippleEffect.gif)
+
+N> You can refer to our [.NET MAUI Effects View](https://www.syncfusion.com/maui-controls/maui-effects-view) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Effects View Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/EffectsView) that shows you how to render the Effects View in .NET MAUI.

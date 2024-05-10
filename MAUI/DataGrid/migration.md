@@ -71,7 +71,7 @@ To make migration from [Xamarin SfDataGrid](https://www.syncfusion.com/xamarin-u
 </tr>
 <tr>
 <td>{{'[ProgressStates](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.ProgressStates.html)'| markdownify }}</td>
-<td>{{'[DataGridProgressState]()'| markdownify }}</td>
+<td>{{'[DataGridProgressState](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridProgressState.html)'| markdownify }}</td>
 <td>Defines constants that specify the possible progressing states of resizing operation.</td>
 </tr>
 </table>
@@ -234,7 +234,7 @@ To make migration from [Xamarin SfDataGrid](https://www.syncfusion.com/xamarin-u
 </tr>
 <tr>
 <td>{{'[AllowResizingColumn](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.SfDataGrid.html#Syncfusion_SfDataGrid_XForms_SfDataGrid_AllowResizingColumn)'| markdownify }}</td>
-<td>{{'[AllowResizingColumns]()'| markdownify }}</td>
+<td>{{'[AllowResizingColumns](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AllowResizingColumnProperty)'| markdownify }}</td>
 <td>This enables users to resize the columns by tapping and dragging the right border of the column headers. 
 </td>
 </tr>
@@ -445,14 +445,26 @@ We have passed the optional parameters such as {{'[canIncludeHiddenColumns](http
 </tr>
 
 <tr>
+<td>{{'[GridUnboundRows](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.UnboundRows.html)'| markdownify}}</td>
+<td>{{'[DataGridUnboundRows](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridUnboundRows.html)'| markdownify}}</td>
+<td>Represents a {{'[DataGridUnboundRows](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridUnboundRows.html)'| markdownify}} as a control to add additional rows in a {{[SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html)'| markdownify }} control.</td>
+</tr>
+
+<tr>
+<td>{{'[GridUnboundColumn](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.GridUnboundColumn.html)'| markdownify}}</td>
+<td>{{'[DataGridUnboundColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridUnboundColumn.html)'| markdownify}}</td>
+<td>Represents a {{'[DataGridUnboundColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridUnboundColumn.html)'| markdownify}} as a control to add additional columns in a {{[SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html)'| markdownify }} control.</td>
+</tr>
+
+<tr>
 <td>{{'[AppearanceManager](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.DataPager.AppearanceManager.html)'| markdownify }}</td>
-<td>{{'[DataPagerStyle]()'| markdownify }}</td>
+<td>{{'[DataPagerStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataPager.DataPagerStyle.html)'| markdownify }}</td>
 <td>Represents a class that enables users to customize the appearance of the data pager.</td>
 </tr>
 
 <tr>
 <td>{{'[GridResizingEventArgs](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.GridResizingEventArgs.html)'| markdownify }}</td>
-<td>{{'[DataGridColumnResizingEventArgs]()'| markdownify }}</td>
+<td>{{'[DataGridColumnResizingEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumnResizingEventArgs.html)'| markdownify }}</td>
 <td>Represents a datagrid column resizing event args.</td>
 </tr>
 </table>
@@ -467,7 +479,5 @@ We have passed the optional parameters such as {{'[canIncludeHiddenColumns](http
 *	Accessibility
 *	Custom selection
 *	Swiping
-*	Unbound row
-*	Unbound column
 *	Column drag and drop
 *	Row drag and drop

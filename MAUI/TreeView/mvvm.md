@@ -173,6 +173,38 @@ public class CommandViewModel
 {% endhighlight %}
 {% endtabs %}
 
+### RightTapCommand
+
+The [RightTapCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_RightTapCommand) will be triggered whenever you right tap the item and pass the [TreeViewNode](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.TreeViewNode.html) as a parameter.
+
+{% tabs %}
+{% highlight c# tabtitle="CommandViewModel.cs" %}
+
+treeView.RightTapCommand = viewModel.RightTapCommand;
+
+public class CommandViewModel
+{
+    private Command<object> rightTapCommand;
+
+    public Command<object> RightTapCommand
+    {
+        get { return rightTapCommand; }
+        set { rightTapCommand = value; }
+    }
+
+    public CommandViewModel()
+    {            
+        RightTapCommand = new Command<object>(RightTapCommandMethod);
+    }
+
+    private void RightTapCommandMethod(object obj)
+    {
+        App.Current.MainPage.DisplayAlert("Alert", ((obj as TreeViewNode).Content as FileManager).ItemName+ "  is right tapped","OK");
+    }   
+}
+{% endhighlight %}
+{% endtabs %}
+
 ### LongPressCommand
 
 The [LongPressCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_LongPressCommand) will be triggered whenever an item is long pressed and passing the [TreeViewNode](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.TreeViewNode.html) as command parameter.

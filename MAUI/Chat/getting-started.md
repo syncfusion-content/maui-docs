@@ -14,7 +14,7 @@ This section provides a quick overview for getting started with the .NET MAUI Ch
 ## Creating an application using the .NET MAUI Chat
 
  1. Create a new .NET MAUI application in Visual Studio.
- 2. The Syncfusion .NET MAUI components are available on [nuget.org](https://www.nuget.org/). To add SfChat to your project, open the NuGet package manager in Visual Studio, search for `Syncfusion.Maui.Chat` and then install it.
+ 2. The Syncfusion .NET MAUI components are available on [nuget.org](https://www.nuget.org/). To add SfChat to your project, open the NuGet package manager in Visual Studio, search for [Syncfusion.Maui.Chat](https://www.nuget.org/packages/Syncfusion.Maui.Chat) and then install it.
  3. Import the control namespace `Syncfusion.Maui.Chat` in XAML or C# code.
  4. Initialize the `SfChat` control.
 
@@ -197,7 +197,7 @@ Create a simple message collection as shown in the following code example in a n
 
 ## Binding Messages to Chat 
 
-To bind the messages to SfChat, configure the `SfChat.Messages` property accordingly. You have the option to bind the message collection of the SfChat either through XAML or programmatically in code.
+To bind the messages to SfChat, configure the [Messages](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_Messages) property accordingly. You have the option to bind the message collection of the SfChat either through XAML or programmatically in code.
 
 {% tabs %} 
 {% highlight xaml hl_lines="14" %}
@@ -244,7 +244,7 @@ To bind the messages to SfChat, configure the `SfChat.Messages` property accordi
 
 ## Showing time break between messages
 
-Messages can be separated based on their date and time of creation and this can be done by setting the `ShowTimeBreak` property to `true`.
+Messages can be separated based on their date and time of creation and this can be done by setting the [ShowTimeBreak](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_ShowTimeBreak) property to `true`.
 
 {% tabs %}
 {% highlight xaml hl_lines="2" %}
