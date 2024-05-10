@@ -42,9 +42,41 @@ private void TabView_TabItemTapped(object sender, TabItemTappedEventArgs e)
 
 {% endtabs %}
 
+## Selection Changing event
+
+The `SelectionChanging` event notifies before the selection changes, triggered by swiping, tapping the tab header, and dynamically setting the [`SelectedIndex`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html?tabs=tabid-1#Syncfusion_Maui_TabView_SfTabView_SelectedIndex) property of SfTabView. The `SelectionChangingEventArgs` provides the following properties:
+
+* `Index` - Gets the index value of the item that is about to be selected. 
+
+* `Cancel` - Gets or sets a boolean value indicating whether the selection of the tab item should be canceled.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<tabView:SfTabView x:Name="tabView" SelectionChanged="TabView_SelectionChanging" />
+	
+{% endhighlight %}
+
+{% highlight C# %}
+
+tabView.SelectionChanged += TabView_SelectionChanging;
+private void TabView_SelectionChanging(object sender, SelectionChangingEventArgs e)
+{
+    // Access the index value of the item that is being selected.
+    var selectionChangingIndex =  e.Index;
+
+    // if we set Cancel as true then the tabbed item could not selected.
+    e.Cancel = true;
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
 ## Selection Changed event
 
-The [`SelectionChanged`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_SelectionChanged) event is used to notify when the selection is changed by swiping or dynamically setting the [`SelectedIndex`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.TabView.SfTabView.html#Syncfusion_XForms_TabView_SfTabView_SelectedIndex) property of SfTabView. The [`TabSelectionChangedEventArgs`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.TabSelectionChangedEventArgs.html) provides the following properties:
+The [`SelectionChanged`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_SelectionChanged) event is used to notify when the selection is changed by swiping or dynamically setting the [`SelectedIndex`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html?tabs=tabid-1#Syncfusion_Maui_TabView_SfTabView_SelectedIndex) property of SfTabView. The [`TabSelectionChangedEventArgs`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.TabSelectionChangedEventArgs.html) provides the following properties:
 
 * [`NewValue`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.TabSelectionChangedEventArgs.html#Syncfusion_Maui_TabView_TabSelectionChangedEventArgs_NewIndex) : Gets the index of currently selected tab item.
 * [`OldValue`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.TabSelectionChangedEventArgs.html#Syncfusion_Maui_TabView_TabSelectionChangedEventArgs_OldIndex) : Gets the index of previously selected tab item.
@@ -60,7 +92,7 @@ The [`SelectionChanged`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Tab
 
 {% highlight C# %}
 
-tabView.SelectionChanged += TabView_TabItemTapped;
+tabView.SelectionChanged += TabView_SelectionChanged;
 private void TabView_SelectionChanged(object sender, TabSelectionChangedEventArgs e)
 {
     // Access the new and old Index
