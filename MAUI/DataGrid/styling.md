@@ -46,7 +46,7 @@ public partial class MainPage : ContentPage
 ![Default Styling in .NET MAUI DataGrid](Images/styling/maui-datagrid-defaultsyle.png)
 
 ## Set datagrid style from application resources
-You can write custom style for the properties in the `SfDataGrid.DefaultStyle` class using the application resource and consume the custom style as a static resource to the DefaultSyle property for the required DataGrid used on that page.
+You can write custom style for the properties in the `SfDataGrid.DefaultStyle` class using the application resource and consume the custom style as a static resource to the DefaultStyle property for the required DataGrid used on that page.
 
 {% tabs %}
 {% highlight xaml tabtitle="App.xaml"%}
@@ -70,7 +70,7 @@ You can write custom style for the properties in the `SfDataGrid.DefaultStyle` c
 {% endtabs %}
 
 ## Set datagrid style from page resources
-You can write custom style for the properties in the `SfDataGrid.DefaultStyle` class using page resource and consume the custom style as a static resource to the DefaultSyle property for the required DataGrid used on that page.
+You can write custom style for the properties in the `SfDataGrid.DefaultStyle` class using page resource and consume the custom style as a static resource to the DefaultStyle property for the required DataGrid used on that page.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml"%}
@@ -327,6 +327,8 @@ The unbound row can be customized by the writing style for [DataGridUnboundRowVi
 
 ### Column Styling 
 You can apply the style for a particular column by using [DataGridColumn.CellStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_CellStyleProperty) and [DataGridColumn.HeaderStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_HeaderStyleProperty) property.
+
+N> The column styling (explicit styling) takes higher priority than implicit styling, and implicit styling takes higher priority than default styling in SfDataGrid.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml"%}
