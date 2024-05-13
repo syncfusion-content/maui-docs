@@ -275,7 +275,7 @@ In custom grouping, you can sort all the inner records of each group by setting 
     <ContentPage.Resources>
         <ResourceDictionary>
             <local:GroupOrderNoConverter x:Key="groupOrderNoConverter" />
-            <local:PriceConverter x:key="priceConverter" />
+            <local:PriceConverter x:Key="priceConverter" />
         </ResourceDictionary>
     </ContentPage.Resources>
 
