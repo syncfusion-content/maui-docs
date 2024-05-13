@@ -72,10 +72,11 @@ namespace GettingStarted
                 FileSavePicker savePicker = new();
                 if (extension == ".pdf")
                 {
-                    savePicker.DefaultFileExtension = ".xlsx";
+                    savePicker.DefaultFileExtension = ".pdf";
                     savePicker.SuggestedFileName = filename;
-                    //Saves the file as xlsx file.
-                    savePicker.FileTypeChoices.Add("XLSX", new List<string>() { ".xlsx" });
+ 
+                    //Saves the file as Pdf file.
+                    savePicker.FileTypeChoices.Add("PDF", new List<string>() { ".pdf" });
                 }
                 WinRT.Interop.InitializeWithWindow.Initialize(savePicker, windowHandle);
                 stFile = await savePicker.PickSaveFileAsync();
