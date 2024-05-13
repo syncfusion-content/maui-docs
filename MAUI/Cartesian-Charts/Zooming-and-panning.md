@@ -220,7 +220,7 @@ chart.ZoomPanBehavior = zooming;
 
 ### Maximum Zoom Level
 
-The [MaximumZoomLevel]() property is used to determine the maximum limit for zooming within the chart. Once the zooming operation reaches its limit, further zooming actions are not carried out. The [MaximumZoomLevel]() property default value is null.
+The [MaximumZoomLevel]() property is used to determine the maximum limit for zooming within the chart. Once the zooming operation reaches its limit, further zooming actions are not carried out. The [MaximumZoomLevel]() property default value is `double.NaN`.
 
 {% tabs %}
 
