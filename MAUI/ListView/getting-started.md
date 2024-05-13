@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with .NET MAUI ListView control | Syncfusion
+title: Getting Started with .NET MAUI ListView Control | Syncfusion
 description: Learn here about getting started with Syncfusion .NET MAUI ListView (SfListView) control, its elements and more.
 platform: MAUI
 control: SfListView
