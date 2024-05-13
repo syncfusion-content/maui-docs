@@ -408,7 +408,7 @@ this.dataGrid.CollapseAllGroups();
 
 ### Expand or collapse a specific group
 
-To expand and collapse specfic groups programmatically, you can simply invoke the [SfDataGrid.ExpandGroup](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ExpandGroup_Syncfusion_Maui_Data_Group_) and [SfDataGrid.CollapseGroup]() methods.
+To expand and collapse specific groups programmatically, you can simply invoke the [SfDataGrid.ExpandGroup](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ExpandGroup_Syncfusion_Maui_Data_Group_) and [SfDataGrid.CollapseGroup]() methods.
 
 {% tabs %}
 {% highlight c# %}
