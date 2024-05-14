@@ -908,6 +908,35 @@ dataGrid.Columns.Add(numericColumn);
 {% endhighlight %}
 {% endtabs %}
 
+### Show Row Header
+
+The `SfDataGrid` allows you to add the content inside the row header using the RowHeaderTemplate. It allows you to load any view inside the row header.
+
+{% tabs %}
+{% highlight xaml %}
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                  ShowRowHeader="True"
+                  AutoGeneratingColumn="dataGrid_AutoGeneratingColumn"
+                  ItemsSource="{Binding OrderInfoCollection}">
+
+    <syncfusion:SfDataGrid.RowHeaderTemplate>
+        <DataTemplate>
+             <Label Text="{Binding ID}" HorizontalTextAlignment = "Center" VerticalTextAlignment = "Center"/>
+        </DataTemplate>
+    </syncfusion:SfDataGrid.RowHeaderTemplate>
+</syncfusion:SfDataGrid>
+{% endhighlight %}
+
+{% highlight c# %}
+private void dataGrid_AutoGeneratingColumn(object sender, Syncfusion.Maui.DataGrid DataGridAutoGeneratingColumnEventArgs e)
+{
+    if (e.Column.MappingName == "ID")
+        e.Cancel = true;
+}
+{% endhighlight %}
+
+{% endtabs %}
+
 ### Allow null value
 
 The [DataGridNumericColumn.AllowNull](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_AllowNull) property allows you to commit a null value to the respective cell during the end edit. 
