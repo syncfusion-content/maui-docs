@@ -54,10 +54,10 @@ private static void ListenTap(object obj)
     var args = obj as DataGridCellTappedEventArgs;
     if (args != null)
     {
-        var rowIndex = e.RowColumnIndex.RowIndex;
-        var rowData = e.RowData;
-        var columnIndex = e.RowColumnIndex.ColumnIndex;
-        var column = e.Column;
+        var rowIndex = args.RowColumnIndex.RowIndex;
+        var rowData = args.RowData;
+        var columnIndex = args.RowColumnIndex.ColumnIndex;
+        var column = args.Column;
     }
 }
 {% endhighlight %}
@@ -99,10 +99,10 @@ private static void ListenTap(object obj)
     var args = obj as DataGridCellDoubleTappedEventArgs;
     if (args != null)
     {
-        var rowIndex = e.RowColumnIndex.RowIndex;
-        var rowData = e.RowData;
-        var columnIndex = e.RowColumnIndex.ColumnIndex;
-        var column = e.Column;
+        var rowIndex = args.RowColumnIndex.RowIndex;
+        var rowData = args.RowData;
+        var columnIndex = args.RowColumnIndex.ColumnIndex;
+        var column = args.Column;
     }
 }
 {% endhighlight %}
@@ -144,10 +144,10 @@ private static void ListenTap(object obj)
     var args = obj as DataGridCellLongPressedEventArgs;
     if (args != null)
     {
-        var rowIndex = e.RowColumnIndex.RowIndex;
-        var rowData = e.RowData;
-        var columnIndex = e.RowColumnIndex.ColumnIndex;
-        var column = e.Column;
+        var rowIndex = args.RowColumnIndex.RowIndex;
+        var rowData = args.RowData;
+        var columnIndex = args.RowColumnIndex.ColumnIndex;
+        var column = args.Column;
     }
 }
 {% endhighlight %}
@@ -192,10 +192,10 @@ private static void ListenTap(object obj)
     var args = obj as DataGridCellRightTappedEventArgs;
     if (args != null)
     {
-        var rowIndex = e.RowColumnIndex.RowIndex;
-        var rowData = e.RowData;
-        var columnIndex = e.RowColumnIndex.ColumnIndex;
-        var column = e.Column;
+        var rowIndex = args.RowColumnIndex.RowIndex;
+        var rowData = args.RowData;
+        var columnIndex = args.RowColumnIndex.ColumnIndex;
+        var column = args.Column;
     }
 }
 {% endhighlight %}
@@ -245,10 +245,10 @@ private static void ListenTap(object obj)
     var args = obj as DataGridCellEnteredEventArgs;
     if (args != null)
     {
-        var rowIndex = e.RowColumnIndex.RowIndex;
-        var rowData = e.RowData;
-        var columnIndex = e.RowColumnIndex.ColumnIndex;
-        var column = e.Column;
+        var rowIndex = args.RowColumnIndex.RowIndex;
+        var rowData = args.RowData;
+        var columnIndex = args.RowColumnIndex.ColumnIndex;
+        var column = args.Column;
     }
 }
 {% endhighlight %}
@@ -291,10 +291,10 @@ private static void ListenTap(object obj)
     var args = obj as DataGridCellHoveredEventArgs;
     if (args != null)
     {
-        var rowIndex = e.RowColumnIndex.RowIndex;
-        var rowData = e.RowData;
-        var columnIndex = e.RowColumnIndex.ColumnIndex;
-        var column = e.Column;
+        var rowIndex = args.RowColumnIndex.RowIndex;
+        var rowData = args.RowData;
+        var columnIndex = args.RowColumnIndex.ColumnIndex;
+        var column = args.Column;
     }
 }
 {% endhighlight %}
@@ -336,10 +336,10 @@ private static void ListenTap(object obj)
     var args = obj as DataGridCellExitedEventArgs;
     if (args != null)
     {
-        var rowIndex = e.RowColumnIndex.RowIndex;
-        var rowData = e.RowData;
-        var columnIndex = e.RowColumnIndex.ColumnIndex;
-        var column = e.Column;
+        var rowIndex = args.RowColumnIndex.RowIndex;
+        var rowData = args.RowData;
+        var columnIndex = args.RowColumnIndex.ColumnIndex;
+        var column = args.Column;
     }
 }
 {% endhighlight %}
