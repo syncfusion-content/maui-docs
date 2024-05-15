@@ -1368,7 +1368,7 @@ By default, the author’s name and avatar are displayed for the incoming messag
 
 ## MessageTimestampFormat for Incoming and Outgoing messages
 
-The `SfChat` allows you specify the format in which timestamps are shown for outgoing and incoming messages. The date and time representation can be customised using the [IncomingMessageTimestampFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_IncomingMessageTimestampFormat) and [OutgoingMessageTimestampFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_OutgoingMessageTimestampFormat) properties.
+The `SfChat` allows you specify the format in which timestamps are shown for outgoing and incoming messages. The date and time representation can be customized using the [IncomingMessageTimestampFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_IncomingMessageTimestampFormat) and [OutgoingMessageTimestampFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_OutgoingMessageTimestampFormat) properties.
 
 {% tabs %}
 {% highlight xaml hl_lines="4 5" %}
