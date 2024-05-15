@@ -1274,7 +1274,7 @@ By default, the keyboard will be open in view, even after a message is sent or f
 {% endhighlight %}
 {% endtabs %}
 
-## Restricting multi-line input in editor (single line messages) in maui chat
+## Restricting multi-line input in editor (single line messages) in Maui chat
 
 By default, users can input multi-line messages by adding new lines in the editor within the chat control for outgoing messages. However, if you wish to limit multi-line input and display a send button on the keyboard instead, you can achieve this by setting the [AllowMultilineInput](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_AllowMultilineInput) property to `false`.
 
@@ -1371,25 +1371,18 @@ By default, the author’s name and avatar are displayed for the incoming messag
 The `SfChat` allows you to define the format in which timestamps are displayed for outgoing and incoming messages. [IncomingMessageTimestampFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_IncomingMessageTimestampFormat) and [OutgoingMessageTimestampFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_OutgoingMessageTimestampFormat) allow customization of the date and time representation.
 
 {% tabs %}
-{% highlight xaml hl_lines="16 17" %}
+{% highlight xaml hl_lines="4 5" %}
 
- <?xml version="1.0" encoding="utf-8" ?>
- <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-              xmlns:sfChat="clr-namespace:Syncfusion.Maui.Chat;assembly=Syncfusion.Maui.Chat"
-              xmlns:local="clr-namespace:MauiChat"             
-              x:Class="MauiChat.MainPage">
-
-    <ContentPage.BindingContext>
-       <local:ViewModel/>
-    </ContentPage.BindingContext>
-
-    <ContentPage.Content>
-       <sfchat:SfChat x:Name="SfChat"              
-                      Messages="{Binding Messages}"     
-                      CurrentUser="{Binding CurrentUser}"
-                      IncomingMessageTimestampFormat="hh:mm tt"
-                      OutgoingMessageTimestampFormat="hh:mm tt" >
+    <sfchat:SfChat x:Name="SfChat"              
+                   Messages="{Binding Messages}"     
+                   CurrentUser="{Binding CurrentUser}"
+                   IncomingMessageTimestampFormat="hh:mm tt"
+                   OutgoingMessageTimestampFormat="hh:mm tt" />
+{% endhighlight %}
+{% highlight c# hl_lines="2 3" %}
+  SfChat sfChat = new SfChat();
+  sfChat.IncomingMessageTimestampFormat = "hh:mm tt";
+  sfChat.OutgoingMessageTimestampFormat = "hh:mm tt";
 {% endhighlight %}
 {% endtabs %}
 
