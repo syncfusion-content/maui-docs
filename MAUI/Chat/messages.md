@@ -1366,6 +1366,35 @@ By default, the author’s name and avatar are displayed for the incoming messag
 
 ![Hide incoming avatar and author visibility in .NET MAUI Chat](images/messages/maui-chat-hide-avatar.png)
 
+## MessageTimestampFormat for Incoming and Outgoing messages
+
+The `SfChat` allows you to define the format in which timestamps are displayed for outgoing and incoming messages. [IncomingMessageTimestampFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_IncomingMessageTimestampFormat) and [OutgoingMessageTimestampFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_OutgoingMessageTimestampFormat) allow customization of the date and time representation.
+
+{% tabs %}
+{% highlight xaml hl_lines="16 17" %}
+
+ <?xml version="1.0" encoding="utf-8" ?>
+ <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              xmlns:sfChat="clr-namespace:Syncfusion.Maui.Chat;assembly=Syncfusion.Maui.Chat"
+              xmlns:local="clr-namespace:MauiChat"             
+              x:Class="MauiChat.MainPage">
+
+    <ContentPage.BindingContext>
+       <local:ViewModel/>
+    </ContentPage.BindingContext>
+
+    <ContentPage.Content>
+       <sfchat:SfChat x:Name="SfChat"              
+                      Messages="{Binding Messages}"     
+                      CurrentUser="{Binding CurrentUser}"
+                      IncomingMessageTimestampFormat="hh:mm tt"
+                      OutgoingMessageTimestampFormat="hh:mm tt" >
+{% endhighlight %}
+{% endtabs %}
+
+![MessageTimeStampFormat in .NET MAUI Chat](images/messages/maui-chat-messagetimestampformat.png)
+
 ## Customize the shape of the message
 
 The `SfChat` allows to change the shape of the messages by using the [MessageShape](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_MessageShape) property.
