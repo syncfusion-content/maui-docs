@@ -17,20 +17,20 @@ Syncfusion themes allow you to apply colors across all the Syncfusion controls w
 
 ## Applying light and dark themes
 
-By default, Syncfusion offers support for both light and dark themes through the inclusion of a `SyncfusionThemeResourceDictionary`.
+By default, Syncfusion offers support for both light and dark themes through the inclusion of a SyncfusionThemeResourceDictionary.
 
-To apply themes to your application, merge the `SyncfusionThemeResourceDictionary` item.
+To apply themes to your application, merge the SyncfusionThemeResourceDictionary item.
 
 #### Theme resource dictionary
 
-This resource dictionary includes keys and their corresponding color codes for all Syncfusion controls. Additionally, it contains the `VisualTheme` property where we can declare the following two theme color values:
+This resource dictionary includes keys and their corresponding color codes for all Syncfusion controls. Additionally, it contains the VisualTheme property where we can declare the following two theme color values:
 
 1. MaterialLight
 2. MaterialDark
 
 #### Automatic merging
 
-When using more number of Syncfusion controls in an application, to make the process easier for merging the control style dictionaries of the controls, the `SyncfusionThemeResourceDictionary` class has been provided for automatic merging.
+When using more number of Syncfusion controls in an application, to make the process easier for merging the control style dictionaries of the controls, the SyncfusionThemeResourceDictionary class has been provided for automatic merging.
 
 {% highlight xaml %}
 
@@ -63,7 +63,7 @@ The following section explains how to override both the primary and control spec
 
 ### Overriding the control specific keys
 
-In addition to the primary keys, the theme resource dictionary also contains the keys that are specific to each controls; these keys can also be overridden. You can find the keys and the UI elements to which they are mapped to all the controls in this `documentation`.
+In addition to the primary keys, the theme resource dictionary also contains the keys that are specific to each controls; these keys can also be overridden. You can find the keys and the UI elements to which they are mapped to all the controls in this [documentation](https://help.syncfusion.com/maui/themes/keys).
 
 {% highlight xaml %}
 
@@ -94,7 +94,7 @@ In addition to the primary keys, the theme resource dictionary also contains the
 
 ## Creating your own theme
 
-You can also create your own theme as an alternative approach to the above methods. To create your own theme, first, you need to merge the resource, whose key name should be "ControlName" + "Theme" based on the controls. For example, the SfChartTheme and SfTextInputLayoutTheme. You can find this key for each control in this `documentation`. After merging this resource, you need to merge the required color resources based on the UI elements that need to be customized. You can find the keys and the UI elements to which they are mapped to all the controls in this `documentation`.
+You can also create your own theme as an alternative approach to the above methods. To create your own theme, first, you need to merge the resource, whose key name should be "ControlName" + "Theme" based on the controls. For example, the SfChartTheme and SfTextInputLayoutTheme. You can find this key for each control in this [documentation](https://help.syncfusion.com/maui/themes/keys). After merging this resource, you need to merge the required color resources based on the UI elements that need to be customized. You can find the keys and the UI elements to which they are mapped to all the controls in this [documentation](https://help.syncfusion.com/maui/themes/keys).
 Using this approach, you can create your own theme for all the controls or specific controls you need.
 
 {% highlight xaml %}
