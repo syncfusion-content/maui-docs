@@ -7,7 +7,7 @@ control: DigitalGauge
 documentation: ug
 ---
 
-# Character Types in MAui Digital Gauge (SfDigitalGauge)
+# Character Types in Maui Digital Gauge (SfDigitalGauge)
 
 The digital characters can be drawn in the following four different segments:
 
