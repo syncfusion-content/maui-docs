@@ -83,13 +83,13 @@ The [DisplayMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Cha
 
 ## Activation mode
 
-The [`ActivationMode`]() property is used to restrict the visibility of trackball based on the touch actions. The default value of this property is [`ChartTrackballActivationMode.LongPress`]().
+The [ActivationMode]() property is used to restrict the visibility of trackball based on the touch actions. The default value of this property is `ChartTrackballActivationMode.LongPress`.
 
 The ChartTrackballActivationMode enum contains the following values:
 
-* [`LongPress`]() – Activates trackball only when performing the long press action.
-* [`TouchMove`]() – Activates trackball only when performing touch move action.
-* [`None`]() – Hides the visibility of trackball when setting activation mode to [`None`](). It will be activated when calling 
+* `LongPress` – Activates trackball only when performing the long press action.
+* `TouchMove` – Activates trackball only when performing touch move action.
+* `None` – Hides the visibility of trackball when setting activation mode to `None`. It will be activated when calling 
 
 {% tabs %}
 
@@ -117,7 +117,7 @@ The ChartTrackballActivationMode enum contains the following values:
 
 {% endtabs %}
 
-N> The default value of [`ActivationMode`]() property is [`ChartTrackballActivationMode.LongPress`]() for Android and iOS platform and default value for MacOS and UWP platform is [`ChartTrackballActivationMode.TouchMove`]().
+N> The default value of [ActivationMode]() property is `ChartTrackballActivationMode.LongPress` for Android and iOS platform and default value for MacOS and UWP platform is `ChartTrackballActivationMode.TouchMove`.
 
 ## Apperance customization
 
@@ -184,14 +184,14 @@ The [LabelStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Char
 
 {% highlight xaml %}
 
-<chart:SfCartesianChart>
-   ...
-    <chart:ChartTrackballBehavior.LineStyle>
-        <chart:ChartLineStyle Stroke="Gray"   
-                              StrokeDashArray="4"/>     
-    </chart:ChartTrackballBehavior.LineStyle>
-...
-</chart:SfCartesianChart>
+    <chart:SfCartesianChart>
+    ...
+        <chart:ChartTrackballBehavior.LineStyle>
+            <chart:ChartLineStyle Stroke="Gray"   
+                                StrokeDashArray="4"/>     
+        </chart:ChartTrackballBehavior.LineStyle>
+    ...
+    </chart:SfCartesianChart>
 
 {% endhighlight %}
 
