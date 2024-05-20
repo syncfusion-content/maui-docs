@@ -167,3 +167,78 @@ chart.XAxes.Add(primaryAxis);
 {% endhighlight %}
 
 {% endtabs %}
+
+## Smart Axis Labels
+
+Axis labels may overlap with each other based on chart dimensions and label size. The [LabelsIntersectAction]() property of axis is used to avoid overlapping of axis labels. The default value of the LabelsIntersectAction is `None`; other available values are `MultipleRows`, `Hide`, and `Wrap`.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<chart:SfCartesianChart>
+. . .
+    <chart:SfCartesianChart.XAxes>
+       <chart:CategoryAxis LabelsIntersectAction="MultipleRows" />
+    </chart:SfCartesianChart.XAxes>
+
+</chart:SfCartesianChart>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+SfCartesianChart chart = new SfCartesianChart();
+. . .
+CategoryAxis primaryAxis = new CategoryAxis()
+{
+    LabelsIntersectAction = AxisLabelsIntersectAction.MultipleRows,
+};
+ chart.XAxes.Add(primaryAxis);
+ 
+
+{% endhighlight %}
+
+{% endtabs %}
+
+**Wrap**
+
+Using the [MaxWidth]() property, we can set the wrap width of the axis labels. It also provides support to customize the rendering position of the axis labels using the [WrappedLabelAlignment]() property. The default value is `start`; other available values are `center` and `end`.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<chart:SfCartesianChart>
+. . .
+    <chart:SfCartesianChart.XAxes>
+      <chart:CategoryAxis LabelsIntersectAction="Wrap">
+         <chart:CategoryAxis.LabelStyle >
+             <chart:ChartAxisLabelStyle  MaxWidth="20" WrappedLabelAlignment="Center" />
+         </chart:CategoryAxis.LabelStyle>
+      </chart:CategoryAxis>
+ </chart:SfCartesianChart.XAxes>
+
+</chart:SfCartesianChart>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+SfCartesianChart chart = new SfCartesianChart();
+...
+CategoryAxis primaryAxis = new CategoryAxis()
+{
+    LabelsIntersectAction = AxisLabelsIntersectAction.Wrap,
+};
+ChartAxisLabelStyle chartAxisLabelStyle = new ChartAxisLabelStyle()
+{
+    MaxWidth = 20,
+    WrappedLabelAlignment = ChartAxisLabelAlignment.Center
+};
+primaryAxis.LabelStyle = chartAxisLabelStyle;
+chart.XAxes.Add(primaryAxis);
+
+{% endhighlight %}
+
+{% endtabs %}
