@@ -110,7 +110,7 @@ The ChartTrackballActivationMode enum contains the following values:
     SfCartesianChart chart = new SfCartesianChart();
     ...
     ChartTrackballBehavior trackball = new ChartTrackballBehavior();
-    trackball.ActivationMode = ChartTrackballActivationMode.TouchMove;
+    trackball.ActivationMode = ChartTrackballActivationMode.LongPress;
     . . . 
 
 {% endhighlight %}
