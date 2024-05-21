@@ -52,6 +52,7 @@ The [DisplayMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Cha
 
 * `FloatAllPoints` – Displays labels for all the data points along the vertical line.
 * `NearestPoint` – Displays label for a single data point nearer to the touch point on the chart area.
+* `GroupAllPoints` – Displays label for all the data points grouped and positioned at the top of the chart area.
 
 {% tabs %}
 
@@ -219,6 +220,189 @@ this.Content = chart;
 {% endhighlight %}
 
 {% endtabs %}
+
+### Trackball Label Template
+
+You can customize the appearance of the Trackball label with your own template by using [TrackballLabelTemplate]() property of [ChartSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html).
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<chart:SfCartesianChart>
+    <chart:SfCartesianChart.Resources>
+        <DataTemplate x:Key="trackballLabelTemplate">
+            <HorizontalStackLayout>
+                <Label Text="{Binding DataItem.Values}" FontSize="20" VerticalOptions="Center" TextColor="White"/>
+                <Image Source="image.png" WidthRequest="40" HeightRequest="40"/>
+            </HorizontalStackLayout>          
+        </DataTemplate>
+    </chart:SfCartesianChart.Resources>
+
+   <chart:SfCartesianChart.TrackballBehavior>
+      <chart:ChartTrackballBehavior/>
+   </chart:SfCartesianChart.TrackballBehavior>
+    . . .
+    <chart:LineSeries ItemsSource="{Binding Data1}" 
+                      TrackballLabelTemplate ="{StaticResource trackballLabelTemplate}"
+                      XBindingPath="Name"
+                      YBindingPath="Values"/>
+
+    <chart:LineSeries ItemsSource="{Binding Data2}" 
+                      TrackballLabelTemplate ="{StaticResource trackballLabelTemplate}"
+                      XBindingPath="Name"
+                      YBindingPath="Values"/>
+
+    <chart:LineSeries ItemsSource="{Binding Data3}" 
+                      TrackballLabelTemplate ="{StaticResource trackballLabelTemplate}"
+                      XBindingPath="Name"
+                      YBindingPath="Values"/>
+                      
+</chart:SfCartesianChart>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+SfCartesianChart chart = new SfCartesianChart();
+
+ChartTrackballBehavior trackball = new ChartTrackballBehavior();
+chart.TrackballBehavior= trackball;
+. . .
+LineSeries series1 = new LineSeries();
+series1.ItemsSource = new ViewModel().Data1;
+series1.XBindingPath = "Name";
+series1.YBindingPath = "Values";
+
+LineSeries series2 = new LineSeries();
+series2.ItemsSource = new ViewModel().Data2;
+series2.XBindingPath = "Name";
+series2.YBindingPath = "Values";
+
+LineSeries series3 = new LineSeries();
+series3.ItemsSource = new ViewModel().Data3;
+series3.XBindingPath = "Name";
+series3.YBindingPath = "Values";
+
+DataTemplate trackballLabelTemplate = new DataTemplate(() =>
+{
+    HorizontalStackLayout horizontalStackLayout = new HorizontalStackLayout();
+
+    Label label = new Label
+    {
+        FontSize = 20,
+        VerticalOptions = LayoutOptions.Center,
+        TextColor = Colors.White
+    };
+    label.SetBinding(Label.TextProperty, "DataItem.Values");
+
+    Image image = new Image
+    {
+        Source = "image.png",
+        WidthRequest = 40,
+        HeightRequest = 40
+    };
+
+    horizontalStackLayout.Add(label);
+    horizontalStackLayout.Add(image);
+
+    return horizontalStackLayout;
+});
+
+series1.TrackballLabelTemplate = trackballLabelTemplate;
+series1.TrackballLabelTemplate = trackballLabelTemplate;
+series1.TrackballLabelTemplate = trackballLabelTemplate;
+
+chart.Series.Add(series1);
+chart.Series.Add(series2);
+chart.Series.Add(series3);
+this.Content = chart;
+        
+{% endhighlight %}
+
+{% endtabs %}
+
+![Trackball Label Template support in MAUI chart](Trackball_images/maui_chart_trackball_label_template.png)
+
+## Customize the Axis Label with DataTemplate
+
+Customize the appearance of axis label of trackball using [TrackballLabelTemplate[]() property of [ChartAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html).
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<chart:SfCartesianChart>
+    <chart:SfCartesianChart.Resources>
+            <DataTemplate x:Key="axisLabelTemplate">
+                <HorizontalStackLayout>
+                    <Label WidthRequest="50" HeightRequest="20" HorizontalTextAlignment="Center" BackgroundColor="Blue" Text="{Binding ValueX}" TextColor="White" FontSize ="15"/>
+                </HorizontalStackLayout>
+            </DataTemplate>
+    </chart:SfCartesianChart.Resources>
+
+   <chart:SfCartesianChart.TrackballBehavior>
+      <chart:ChartTrackballBehavior/>
+   </chart:SfCartesianChart.TrackballBehavior>
+
+    <chart:SfCartesianChart.XAxes>
+        <chart:DateTimeAxis TrackballLabelTemplate="{StaticResource axisLabelTemplate}" ShowTrackballLabel="True"/>
+    </chart:SfCartesianChart.XAxes>  
+
+    <chart:LineSeries ItemsSource="{Binding Data}" 
+                      XBindingPath="Name"
+                      YBindingPath="Values"/>
+                      
+</chart:SfCartesianChart>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+SfCartesianChart chart = new SfCartesianChart();
+
+ChartTrackballBehavior trackball = new ChartTrackballBehavior();
+chart.TrackballBehavior= trackball;
+
+DateTimeAxis primaryAxis = new DateTimeAxis();
+primaryAxis.ShowTrackballLabel = true;
+
+DataTemplate axisLabelTemplate = new DataTemplate(() =>
+{
+    HorizontalStackLayout horizontalStackLayout = new HorizontalStackLayout();
+
+    var label = new Label
+    {
+        WidthRequest = 50,
+        HeightRequest = 20,
+        HorizontalTextAlignment = TextAlignment.Center,
+        BackgroundColor = Colors.Blue,
+        TextColor = Colors.White,
+        FontSize = 15
+    };
+    label.SetBinding(Label.TextProperty, "ValueX");
+
+    horizontalStackLayout.Add(label);
+
+    return horizontalStackLayout;
+});
+
+primaryAxis.TrackballLabelTemplate = trackballLabelTemplate;
+. . .
+LineSeries series = new LineSeries();
+series.ItemsSource = new ViewModel().Data;
+series.XBindingPath = "Name";
+series.YBindingPath = "Values";
+
+chart.Series.Add(series);
+
+this.Content = chart;
+        
+{% endhighlight %}
+
+{% endtabs %}
+
+![Axis Trackball Label Template support in MAUI chart](Trackball_images/maui_chart_axis_trackball_label_template.png)
 
 ## Show or Hide the Series Label
 
