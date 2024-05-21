@@ -82,7 +82,7 @@ The [DisplayMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Cha
 
 {% endtabs %}
 
-## Apperance customization
+## Appearance customization
 
 ### Trackball Labels customization
 
@@ -174,7 +174,7 @@ this.Content = chart;
 
 ### Trackball Markers Customization
 
-The [MarkerSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartTrackballBehavior.html#Syncfusion_Maui_Charts_ChartTrackballBehavior_MarkerSettings) property provides to customize the trackball markers. The trackball marker can be customised using the following properties.
+The [MarkerSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartTrackballBehavior.html#Syncfusion_Maui_Charts_ChartTrackballBehavior_MarkerSettings) property provides to customize the trackball markers. The trackball marker can be customized using the following properties.
 
 * `Type`, of type `ShapeType`, used to set the marker shape type.
 * `Stroke`, of type `Brush`, used to change the marker border color.
