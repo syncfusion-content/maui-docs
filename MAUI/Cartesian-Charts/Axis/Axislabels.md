@@ -58,6 +58,9 @@ The [LabelStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Char
 * `TextColor` - Gets or sets the color for the text of the label.
 * `LabelFormat` - Gets or sets the label format. This property is used to set numeric or date-time format to the chart axis label.
 * `LabelAlignment` - Gets or sets the axis label at start, end, and center positions.
+* `MaxWidth` - Gets or sets the wrap width of the axis labels.
+* `WrappedLabelAlignment` - Gets or sets the horizontal rendering position of the wrapped axis labels. The default value is `Start`; other available values are `Center` and `End`.
+
 
 ## Edge Labels Drawing Mode
 
@@ -196,49 +199,8 @@ CategoryAxis primaryAxis = new CategoryAxis()
 };
  chart.XAxes.Add(primaryAxis);
  
-
 {% endhighlight %}
 
 {% endtabs %}
 
-**Wrap**
-
-Using the [MaxWidth]() property, we can set the wrap width of the axis labels. It also provides support to customize the rendering position of the axis labels using the [WrappedLabelAlignment]() property. The default value is `start`; other available values are `center` and `end`.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<chart:SfCartesianChart>
-. . .
-    <chart:SfCartesianChart.XAxes>
-      <chart:CategoryAxis LabelsIntersectAction="Wrap">
-         <chart:CategoryAxis.LabelStyle >
-             <chart:ChartAxisLabelStyle  MaxWidth="20" WrappedLabelAlignment="Center" />
-         </chart:CategoryAxis.LabelStyle>
-      </chart:CategoryAxis>
- </chart:SfCartesianChart.XAxes>
-
-</chart:SfCartesianChart>
-
-{% endhighlight %}
-
-{% highlight c# %}
-
-SfCartesianChart chart = new SfCartesianChart();
-...
-CategoryAxis primaryAxis = new CategoryAxis()
-{
-    LabelsIntersectAction = AxisLabelsIntersectAction.Wrap,
-};
-ChartAxisLabelStyle chartAxisLabelStyle = new ChartAxisLabelStyle()
-{
-    MaxWidth = 20,
-    WrappedLabelAlignment = ChartAxisLabelAlignment.Center
-};
-primaryAxis.LabelStyle = chartAxisLabelStyle;
-chart.XAxes.Add(primaryAxis);
-
-{% endhighlight %}
-
-{% endtabs %}
+N> If [LabelsIntersectAction]() is set to `Wrap`, we can use the [MaxWidth]() property to set the wrap width and the [WrappedLabelAlignment]()property to align the text.
