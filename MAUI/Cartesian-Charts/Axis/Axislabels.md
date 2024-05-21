@@ -203,4 +203,4 @@ CategoryAxis primaryAxis = new CategoryAxis()
 
 {% endtabs %}
 
-N> If [LabelsIntersectAction]() is set to `Wrap`, we can use the [MaxWidth]() property to set the wrap width and the [WrappedLabelAlignment]()property to align the text.
+N> If [LabelsIntersectAction]() is set to `Wrap`, we should set width of wrap using [MaxWidth]() property and the [WrappedLabelAlignment]() property to align the wrapped text.
