@@ -398,8 +398,11 @@ The [BadgeSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.
 
 {% highlight xaml %}
     <tabView:SfTabView>
-        <tabView:SfTabItem BadgeText="Inbox">
-            <tabView:SfTabItem.BadgeSettings FontSize="15" FontAttributes="Bold" FontFamily="serif">
+        <tabView:SfTabItem Header="RECENTS" BadgeText="20">
+            <tabView:SfTabItem.BadgeSettings >
+                <core:BadgeSettings FontSize="15" 
+                                    FontAttributes="Bold" 
+                                    FontFamily="serif"/>
             </tabView:SfTabItem.BadgeSettings>
         </tabView:SfTabItem>
     </tabView:SfTabView>
