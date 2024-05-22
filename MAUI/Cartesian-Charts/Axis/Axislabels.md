@@ -203,7 +203,7 @@ CategoryAxis primaryAxis = new CategoryAxis()
 
 {% endtabs %}
 
-![Smart axis lable support in .NET MAUI SfCartesianChart.](axis_images/maui_chart_smart_axis_label.png)
+![Smart axis lable support in .NET MAUI SfCartesianChart.](axis_images/maui_chart_smart_axis_labels.png)
 
 N> If the [LabelsIntersectAction]() is set to Wrap, we should set the width of the wrap using the [MaxWidth]() property.
 
