@@ -203,4 +203,8 @@ CategoryAxis primaryAxis = new CategoryAxis()
 
 {% endtabs %}
 
-N> If [LabelsIntersectAction]() is set to `Wrap`, we should set width of wrap using [MaxWidth]() property and the [WrappedLabelAlignment]() property to align the wrapped text.
+![Smart axis lable support in .NET MAUI SfCartesianChart.](axis_images/maui_chart_smart_axis_label.png)
+
+N> If the [LabelsIntersectAction]() is set to Wrap, we should set the width of the wrap using the [MaxWidth]() property.
+
+We can align the wrapped axis label using the [WrappedLabelAlignment]() property.
