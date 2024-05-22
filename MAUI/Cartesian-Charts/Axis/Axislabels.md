@@ -173,7 +173,7 @@ chart.XAxes.Add(primaryAxis);
 
 ## Smart Axis Labels
 
-Axis labels may overlap with each other based on chart dimensions and label size. The [LabelsIntersectAction]() property of axis is used to avoid overlapping of axis labels. The default value of the LabelsIntersectAction is `None`; other available values are `MultipleRows`, `Hide`, and `Wrap`.
+Axis labels may overlap with each other based on chart dimensions and label size. The [LabelsIntersectAction]() property of axis is used to avoid overlapping of axis labels. The default value of the LabelsIntersectAction is `Hide`; other available values are `MultipleRows`, `None`, and `Wrap`.
 
 {% tabs %}
 
@@ -206,5 +206,4 @@ CategoryAxis primaryAxis = new CategoryAxis()
 ![Smart axis lable support in .NET MAUI SfCartesianChart.](axis_images/maui_chart_smart_axis_labels.png)
 
 N> If the [LabelsIntersectAction]() is set to Wrap, we should set the width of the wrap using the [MaxWidth]() property.
-
 We can align the wrapped axis label using the [WrappedLabelAlignment]() property.
