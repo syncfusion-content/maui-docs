@@ -304,3 +304,5 @@ this.Content = picker;
 {% endtabs %}
 
 ![Set Picker height and width in .NET MAUI picker.](images/getting-started/maui-picker-height-and-width.png)
+
+N> You can refer to our [.NET MAUI Picker](https://www.syncfusion.com/maui-controls/maui-picker) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Picker Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/Picker) that shows you how to render and configure the Picker in .NET MAUI.
