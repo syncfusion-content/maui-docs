@@ -223,3 +223,62 @@ this.Content = chart;
 {% endtabs %}
 
 ![Label template in MAUI Chart](DataLabel_images/maui_chart_datalabel_template.png)
+
+## Smart Labels
+
+This feature is used to arrange the data labels smartly and avoid the intersection when there is overlapping of labels. The [SmartLabelAlignment]() enum contains the following values.
+
+* [Shift]() - smartly arranges the overlapped data labels.
+* [Hide]() - hides the intersected data labels.
+* [None]() - intersected data labels will be visible.
+
+By default, value for [SmartLabelAlignment]() property [Shift]().
+
+If the [LabelPlacement]() is [Inner]() and the [SmartLabelAlignment]() is [Shift](), then the overlapped labels will shift to outside the slices and arrange smartly. If the [LabelPlacement]() is [Inner]() and the [SmartLabelAlignment]() is [Hide](), then the overlapped labels will be hidden.
+
+If the [LabelPlacement]() is [Outer]() and the [SmartLabelAlignment]() is [Shift](), then the overlapped labels arrange smartly. If the [LabelPlacement]() is [Outer]() and the [SmartLabelAlignment]() is [Hide](), then the overlapped labels will be hidden.
+
+If the [SmartLabelAlignment]() is [None](), then the overlapped labels will be visible irrespective of LabelPlacement.
+
+When the [SmartLabelAlignment]() is [Shift](), and if the data label goes out of the chart area, then the labels got trimmed and the tooltip is shown when clicking/tapping the data label. 
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<chart:SfCircularChart>
+
+    <chart:PieSeries ItemsSource="{Binding Data}" 
+                     ShowDataLabels="True"
+                     XBindingPath="Product" 
+                     YBindingPath="SalesRate">
+         <chart:PieSeries.DataLabelSettings>
+             <chart:CircularDataLabelSettings LabelPlacement="Outer" SmartLabelAlignment="Shift"/>
+         </chart:PieSeries.DataLabelSettings>               
+    </chart:PieSeries>
+
+</chart:SfCircularChart>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+SfCircularChart chart = new SfCircularChart();
+. . .
+PieSeries series = new PieSeries();
+series.ItemsSource = new ViewModel().Data;
+series.XBindingPath = "Product";
+series.YBindingPath = "SalesRate";
+series.ShowDataLabels = true;
+series.DataLabelSettings = new CircularDataLabelSettings()
+{
+    LabelPlacement = DataLabelPlacement.Outer,
+    SmartLabelAlignment = SmartLabelAlignment.Shift,
+};
+
+chart.Series.Add(series);
+this.Content = chart;
+        
+{% endhighlight %}
+
+{% endtabs %}
