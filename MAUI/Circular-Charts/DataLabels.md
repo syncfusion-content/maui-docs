@@ -234,9 +234,9 @@ This feature is used to arrange the data labels smartly and avoid the intersecti
 
 By default, value for [SmartLabelAlignment]() property [Shift]().
 
-If the [LabelPlacement]() is [Inner]() and the [SmartLabelAlignment]() is [Shift](), then the overlapped labels will shift to outside the slices and arrange smartly. If the [LabelPlacement]() is [Inner]() and the [SmartLabelAlignment]() is [Hide](), then the overlapped labels will be hidden.
+If the [LabelPlacement](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartDataLabelSettings.html?tabs=tabid-5%2Ctabid-3%2Ctabid-1#Syncfusion_Maui_Charts_ChartDataLabelSettings_LabelPlacement) is [Inner](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DataLabelPlacement.html#Syncfusion_Maui_Charts_DataLabelPlacement_Inner) and the [SmartLabelAlignment]() is [Shift](), then the overlapped labels will shift to outside the slices and arrange smartly. If the [LabelPlacement](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartDataLabelSettings.html#Syncfusion_Maui_Charts_ChartDataLabelSettings_LabelPlacement) is [Inner](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DataLabelPlacement.html#Syncfusion_Maui_Charts_DataLabelPlacement_Inner) and the [SmartLabelAlignment]() is [Hide](), then the overlapped labels will be hidden.
 
-If the [LabelPlacement]() is [Outer]() and the [SmartLabelAlignment]() is [Shift](), then the overlapped labels arrange smartly. If the [LabelPlacement]() is [Outer]() and the [SmartLabelAlignment]() is [Hide](), then the overlapped labels will be hidden.
+If the [LabelPlacement](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartDataLabelSettings.html#Syncfusion_Maui_Charts_ChartDataLabelSettings_LabelPlacement) is [Outer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DataLabelPlacement.html#Syncfusion_Maui_Charts_DataLabelPlacement_Outer) and the [SmartLabelAlignment]() is [Shift](), then the overlapped labels arrange smartly. If the [LabelPlacement]() is [Outer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DataLabelPlacement.html#Syncfusion_Maui_Charts_DataLabelPlacement_Outer) and the [SmartLabelAlignment]() is [Hide](), then the overlapped labels will be hidden.
 
 If the [SmartLabelAlignment]() is [None](), then the overlapped labels will be visible irrespective of LabelPlacement.
 
