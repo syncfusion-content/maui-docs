@@ -356,7 +356,10 @@ To make migration from [Xamarin SfPdfViewer](https://www.syncfusion.com/xamarin-
 <td>Removes all annotations from the PDF document.</td>
 </tr>
 <tr>
-<td>{{'[AddAnnotation](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.SfPdfViewer.html#Syncfusion_SfPdfViewer_XForms_SfPdfViewer_AddAnnotation_Syncfusion_SfPdfViewer_XForms_IAnnotation_)'| markdownify}}</td>
+<td>
+<div>{{'[AddAnnotation](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.SfPdfViewer.html#Syncfusion_SfPdfViewer_XForms_SfPdfViewer_AddAnnotation_Syncfusion_SfPdfViewer_XForms_IAnnotation_)'| markdownify}}</div>
+<div>{{'[AddStamp](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.SfPdfViewer.html#Syncfusion_SfPdfViewer_XForms_SfPdfViewer_AddStamp_Xamarin_Forms_View_System_Int32_)'| markdownify}}</div>
+</td>
 <td>{{'[AddAnnotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AddAnnotation_Syncfusion_Maui_PdfViewer_Annotation_)'| markdownify}}</td>
 <td>Adds the given annotation to the page represented by the annotation’s PageNumber property.</td>
 </tr>
@@ -402,7 +405,7 @@ To make migration from [Xamarin SfPdfViewer](https://www.syncfusion.com/xamarin-
 </tr>
 <tr>
 <td>{{'[Print](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.SfPdfViewer.html#Syncfusion_SfPdfViewer_XForms_SfPdfViewer_Print)'| markdownify }}</td>
-<td>{{'PrintDocument'| markdownify }}</td>
+<td>{{'[PrintDocument](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_PrintDocument)'| markdownify }}</td>
 <td>Prints the PDF document.</td>
 </tr>
 <tr>
@@ -421,12 +424,12 @@ To make migration from [Xamarin SfPdfViewer](https://www.syncfusion.com/xamarin-
 <th>Description</th></tr>
 <tr>
 <td>{{'[CustomBookmark](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.CustomBookmark.html)'| markdownify }}</td>
-<td>Bookmark</td>
+<td>{{'[Bookmark](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.Bookmark.html)'| markdownify }}</td>
 <td>Represents a custom bookmark with a name and associated page number.</td>
 </tr>
 <tr>
 <td>{{'[TouchMode](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.TouchMode.html)'| markdownify }}</td>
-<td>TouchScreenInputMode</td>
+<td>{{'[TouchScreenInputMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.TouchScreenInputMode.html)'| markdownify }}</td>
 <td>Represents a custom bookmark with a name and associated page number.</td>
 </tr>
 <tr>
@@ -460,7 +463,7 @@ To make migration from [Xamarin SfPdfViewer](https://www.syncfusion.com/xamarin-
 </tr>
 <tr>
 <td>{{'[PopupAnnotation](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.PopupAnnotation.html)'| markdownify }}</td>
-<td>StickyNoteAnnotation</td>
+<td>{{'[StickyNoteAnnotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.StickyNoteAnnotation.html)'| markdownify }}</td>
 <td>Represents the sticky note annotation on the text contents in the page.</td>
 </tr>
 <tr>
