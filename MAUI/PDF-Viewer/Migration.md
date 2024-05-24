@@ -203,27 +203,27 @@ To make migration from [Xamarin SfPdfViewer](https://www.syncfusion.com/xamarin-
 </tr>
 <tr>
 <td>{{'[FormField.CanEdit](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.FormField.html#Syncfusion_SfPdfViewer_XForms_FormField_CanEdit)'| markdownify}}</td>
-<td>{{'FormField.ReadOnly'| markdownify}}</td>
+<td>{{'[FormField.ReadOnly](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.FormField.html#Syncfusion_Maui_PdfViewer_FormField_ReadOnly)'| markdownify}}</td>
 <td>Gets or sets a value that indicates whether the form field can be edited or not.</td>
 </tr>
 <tr>
 <td>{{'[SignatureFormField.HandwrittenSignature](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.SignatureFormField.html#Syncfusion_SfPdfViewer_XForms_SignatureFormField_HandwrittenSignature)'| markdownify}}</td>
-<td>{{'SignatureFormField.Signature'| markdownify}}</td>
+<td>{{'[SignatureFormField.Signature](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SignatureFormField.html#Syncfusion_Maui_PdfViewer_SignatureFormField_Signature)'| markdownify}}</td>
 <td>Gets or sets the ink annotation signature in the signature field.</td>
 </tr>
 <tr>
 <td>{{'[PageViewMode](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.SfPdfViewer.html#Syncfusion_SfPdfViewer_XForms_SfPdfViewer_PageViewMode)'| markdownify}}</td>
-<td>{{'PageLayoutMode'| markdownify}}</td>
+<td>{{'[PageLayoutMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_PageLayoutMode)'| markdownify}}</td>
 <td>Gets or sets the layout mode in which the pages will be displayed.</td>
 </tr>
 <tr>
 <td>{{'[InkAnnotationSettings.TouchMode](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.InkAnnotationSettings.html#Syncfusion_SfPdfViewer_XForms_InkAnnotationSettings_TouchMode)'| markdownify}}</td>
-<td>InkAnnotationSettings.TouchScreenInputMode</td>
+<td>{{'[InkAnnotationSettings.TouchScreenInputMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.InkAnnotationSettings.html#Syncfusion_Maui_PdfViewer_InkAnnotationSettings_TouchScreenInputMode)'| markdownify}}</td>
 <td>Gets or sets a value that indicates the input mode in which the ink strokes should be allowed to be drawn.</td>
 </tr>
 <tr>
 <td>{{'[TouchMode.Direct](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.TouchMode.html#Syncfusion_SfPdfViewer_XForms_TouchMode_Direct)'| markdownify}}</td>
-<td>TouchScreenInputMode.FingerAndStylus</td>
+<td>{{'[TouchScreenInputMode.FingerAndStylus](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.TouchScreenInputMode.html#Syncfusion_Maui_PdfViewer_TouchScreenInputMode_FingerAndStylus)'| markdownify}}</td>
 <td>Allows drawing ink using both finger and stylus.</td>
 </tr>
 </table>
@@ -356,7 +356,10 @@ To make migration from [Xamarin SfPdfViewer](https://www.syncfusion.com/xamarin-
 <td>Removes all annotations from the PDF document.</td>
 </tr>
 <tr>
-<td>{{'[AddAnnotation](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.SfPdfViewer.html#Syncfusion_SfPdfViewer_XForms_SfPdfViewer_AddAnnotation_Syncfusion_SfPdfViewer_XForms_IAnnotation_)'| markdownify}}</td>
+<td>
+<div>{{'[AddAnnotation](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.SfPdfViewer.html#Syncfusion_SfPdfViewer_XForms_SfPdfViewer_AddAnnotation_Syncfusion_SfPdfViewer_XForms_IAnnotation_)'| markdownify}}</div>
+<div>{{'[AddStamp](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.SfPdfViewer.html#Syncfusion_SfPdfViewer_XForms_SfPdfViewer_AddStamp_Xamarin_Forms_View_System_Int32_)'| markdownify}}</div>
+</td>
 <td>{{'[AddAnnotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AddAnnotation_Syncfusion_Maui_PdfViewer_Annotation_)'| markdownify}}</td>
 <td>Adds the given annotation to the page represented by the annotation’s PageNumber property.</td>
 </tr>
@@ -402,12 +405,12 @@ To make migration from [Xamarin SfPdfViewer](https://www.syncfusion.com/xamarin-
 </tr>
 <tr>
 <td>{{'[Print](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.SfPdfViewer.html#Syncfusion_SfPdfViewer_XForms_SfPdfViewer_Print)'| markdownify }}</td>
-<td>{{'PrintDocument'| markdownify }}</td>
+<td>{{'[PrintDocument](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_PrintDocument)'| markdownify }}</td>
 <td>Prints the PDF document.</td>
 </tr>
 <tr>
 <td>{{'[SaveDocument(bool flattenForm)](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.SfPdfViewer.html#Syncfusion_SfPdfViewer_XForms_SfPdfViewer_SaveDocument_System_Boolean_)'| markdownify }}</td>
-<td>{{'FormField.FlattenOnSave'| markdownify }}</td>
+<td>{{'[FormField.FlattenOnSave](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.FormField.html#Syncfusion_Maui_PdfViewer_FormField_FlattenOnSave)'| markdownify }}</td>
 <td>Specifies whether the form fields should be flattened or not on saving</td>
 </tr>
 </table>
@@ -421,13 +424,13 @@ To make migration from [Xamarin SfPdfViewer](https://www.syncfusion.com/xamarin-
 <th>Description</th></tr>
 <tr>
 <td>{{'[CustomBookmark](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.CustomBookmark.html)'| markdownify }}</td>
-<td>Bookmark</td>
+<td>{{'[Bookmark](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.Bookmark.html)'| markdownify }}</td>
 <td>Represents a custom bookmark with a name and associated page number.</td>
 </tr>
 <tr>
 <td>{{'[TouchMode](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.TouchMode.html)'| markdownify }}</td>
-<td>TouchScreenInputMode</td>
-<td>Represents a custom bookmark with a name and associated page number.</td>
+<td>{{'[TouchScreenInputMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.TouchScreenInputMode.html)'| markdownify }}</td>
+<td>Enumerates the values that specify the input mode in which the ink strokes should be allowed to be drawn.</td>
 </tr>
 <tr>
 <td>{{'[TextSelectionCompletedEventArgs](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.TextSelectionCompletedEventArgs.html)'| markdownify }}</td>
@@ -460,7 +463,7 @@ To make migration from [Xamarin SfPdfViewer](https://www.syncfusion.com/xamarin-
 </tr>
 <tr>
 <td>{{'[PopupAnnotation](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.PopupAnnotation.html)'| markdownify }}</td>
-<td>StickyNoteAnnotation</td>
+<td>{{'[StickyNoteAnnotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.StickyNoteAnnotation.html)'| markdownify }}</td>
 <td>Represents the sticky note annotation on the text contents in the page.</td>
 </tr>
 <tr>
