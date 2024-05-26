@@ -472,3 +472,5 @@ tabView.IsScrollButtonEnabled = true;
 {% endhighlight %}
 
 {% endtabs %}
+
+![TabView Scroll Mode](images/TabViewScroll.gif) 
