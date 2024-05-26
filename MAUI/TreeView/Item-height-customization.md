@@ -133,11 +133,11 @@ Download the entire source code from GitHub [here](https://github.com/Syncfusion
 
 ## Autofit the item's height based on the content
 
-The `SfTreeView` allows dynamic adjustment of item heights based on the content loaded in the [SfTreeView.ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ItemTemplate) by setting the `SfTreeView.NodeSizeMode` property as `Dynamic`. The default value is `None`.
+The `SfTreeView` allows dynamic adjustment of item heights based on the content loaded in the [SfTreeView.ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ItemTemplate) by setting the `SfTreeView.NodeSizeMode` property to `Dynamic`. The default value is `None`.
 
-The control contains the following two types of `NodeSizeMode`:
+The control offers the following two types of `NodeSizeMode`:
 
- * `Dynamic`: Automatically adjust the item hights to fit their content and resize items accordingly if the content size changes during runtime.
+ * `Dynamic`: Automatically adjust the item heights to fit their content and resize items accordingly if the content size changes during runtime.
  * `None`: [SfTreeView.ItemHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ItemHeight)  is used to layout the `SfTreeView` items.
  
  N> If you manually define any size for the view loaded in [SfTreeView.ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ItemTemplate), the `SfTreeView` will consider that size as the item size for each item.
