@@ -460,6 +460,6 @@ The following code example, explains how to initialize the properties of the `Xa
  * Picker background color is not applied to the popup.
  * Picker dynamic items source does not render the picker item.
 
-## Upcomming features
+## Upcoming features
 
  * Looping support for picker items.
