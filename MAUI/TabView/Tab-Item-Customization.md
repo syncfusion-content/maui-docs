@@ -223,7 +223,7 @@ The image will be placed to the right side of the text horizontally.
 
 ## Image Text Spacing
 
-The `ImageTextSpacing` property in SfTabItem allows for the provision of spacing between the image and the text of the tab item.
+The [ImageTextSpacing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabItem.html#Syncfusion_Maui_TabView_SfTabItem_ImageTextSpacing) property in SfTabItem allows for the provision of spacing between the image and the text of the tab item.
 
 {% tabs %}
 
@@ -398,8 +398,11 @@ The [BadgeSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.
 
 {% highlight xaml %}
     <tabView:SfTabView>
-        <tabView:SfTabItem BadgeText="Inbox">
-            <tabView:SfTabItem.BadgeSettings FontSize="15" FontAttributes="Bold" FontFamily="serif">
+        <tabView:SfTabItem Header="RECENTS" BadgeText="20">
+            <tabView:SfTabItem.BadgeSettings >
+                <core:BadgeSettings FontSize="15" 
+                                    FontAttributes="Bold" 
+                                    FontFamily="serif"/>
             </tabView:SfTabItem.BadgeSettings>
         </tabView:SfTabItem>
     </tabView:SfTabView>
