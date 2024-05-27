@@ -412,7 +412,6 @@ chart.YAxes.Add(secondaryAxis);
 
 {% endtabs %}
 
-
 ## Events
 
 ### ZoomStart
