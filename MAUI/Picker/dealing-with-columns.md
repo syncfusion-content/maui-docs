@@ -53,7 +53,7 @@ When you have a collection of objects, and you want to display a specific proper
             SelectedIndex = 1,
         };
         this.Picker.Columns.Add(pickerColumn);
-
+    }
 {% endhighlight %}
 {% highlight c# tabtitle="CountryInfo.cs" %}
 
@@ -103,6 +103,26 @@ Customize the SelectedIndex of every column by setting the `SelectedIndex` prope
 
 {% endhighlight %}
 {% endtabs %}
+
+### SelectedItem customization
+
+Customize the SelectedItem of every column by setting the `SelectedItem` property in the [PickerColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerColumn.html). The default value of the [SelectedItem]() property is based on [SelectedIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerColumn.html#Syncfusion_Maui_Picker_PickerColumn_SelectedIndex) default value.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+
+<sfPicker:SfPicker x:Name="Picker">
+</sfPicker:SfPicker>
+
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+    this.Picker.Columns[0].SelectedItem = "India";
+
+{% endhighlight %}
+{% endtabs %}
+
+N> If you sets both the `Selected Item` and `Selected Index` properties, the picker will display the item corresponding to the `Selected Index` in the selection view. This ensures the index value takes precedence for display purposes. And in multiple column, if you set any one of the column selected item as `null`, then the other column selected item also will be null.
 
 ### HeaderText customization
 

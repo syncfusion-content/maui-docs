@@ -175,7 +175,7 @@ The following code example, explains how to initialize the properties of the `Xa
 </tr>
 <tr>
 <td>{{'[CancelButtonBackgroundColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_CancelButtonBackgroundColorProperty)'| markdownify }}</td>
-<td>{{'[[Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_Background) '| markdownify }}</td>
+<td>{{'[Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_Background) '| markdownify }}</td>
 <td>Gets or sets the background of the footer view in SfPicker.</td>
 </tr>
 <tr>
@@ -240,7 +240,7 @@ The following code example, explains how to initialize the properties of the `Xa
 </tr>
 <tr>
 <td>{{'[HeaderBackgroundColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_HeaderBackgroundColorProperty)'| markdownify }}</td>
-<td>{{'[[Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerHeaderView.html#Syncfusion_Maui_Picker_PickerHeaderView_Background) From [HeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfPicker.html#Syncfusion_Maui_Picker_SfPicker_HeaderView) '| markdownify }}</td>
+<td>{{'[Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerHeaderView.html#Syncfusion_Maui_Picker_PickerHeaderView_Background) From [HeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfPicker.html#Syncfusion_Maui_Picker_SfPicker_HeaderView) '| markdownify }}</td>
 <td>Gets or sets the background of the header view in picker.</td>
 </tr>
 <tr>
@@ -335,8 +335,8 @@ The following code example, explains how to initialize the properties of the `Xa
 </tr>
 <tr>
 <td>{{'[SelectedItem](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPicker.XForms.SfPicker.html#Syncfusion_SfPicker_XForms_SfPicker_SelectedItem)'| markdownify }}</td>
-<td>Nil</td>
-<td>Not Supported.</td>
+<td>{{'[SelectedItem]() From [PickerColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerColumn.html)'| markdownify }}</td>
+<td>Gets or sets the selected item of the columns on SfPicker.</td>
 </tr>
 <tr>
 <td>{{'[SelectedItemFontAttributes](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_SelectedItemFontAttributeProperty)'| markdownify }}</td>
@@ -463,4 +463,3 @@ The following code example, explains how to initialize the properties of the `Xa
 ## Upcomming features
 
  * Looping support for picker items.
- * SelectedItem support for picker.

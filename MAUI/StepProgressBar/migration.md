@@ -367,5 +367,4 @@ The following code example, explains how to initialize the properties of the `Xa
 ## Upcoming Features
 
 * Mapping support
-* RTL support
 * Template support
