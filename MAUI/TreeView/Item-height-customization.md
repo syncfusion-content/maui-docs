@@ -159,8 +159,6 @@ The control offers the following two types of `NodeSizeMode`:
 {% endhighlight %}
 {% endtabs %}
 
-Download the entire source code from GitHub here.
-
 ![.NET MAUI TreeView Item Height Customization](Images/item-height-customization/maui-treeview-nodesizemode.png)
 
 ## Limitations
