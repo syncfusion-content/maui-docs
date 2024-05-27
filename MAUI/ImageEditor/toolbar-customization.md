@@ -342,6 +342,29 @@ saveGroup.Items.Add(new ImageEditorToolbarItem() { Name = "Share", View = image 
 
 ![Add Toolbar Item in .NET Maui ImageEditor](images/toolbar/imageeditor-add-item.png)
 
+### Add a Toolbar Item with the Text
+
+Add the text to the [`ImageEditorToolbar`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorToolbar.html) manually.
+
+{% tabs %}
+
+{% highlight C# %}
+
+ImageEditorToolbarGroupItem browseGroup = (ImageEditorToolbarGroupItem)headerToolbar.ToolbarItems[0];
+ImageEditorToolbarItem browseItem = browseGroup.Items.FirstOrDefault();
+browseItem.Text = "Browse";
+imageEditor.ToolbarSettings.TextStyle = new ImageEditorTextStyle()
+{
+    FontAttributes = FontAttributes.Bold,
+    FontFamily = "Handlee",
+    FontSize = 20,
+    TextColor = Colors.Red,
+};
+
+{% endhighlight %}
+
+{% endtabs %}
+
 ## Explicitly Create Toolbars
 
 The ImageEditor automatically generates the toolbars. To add the toolbars manually, you need to explicitly add them and change the [`AutoGenerateToolbarItems`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_AutoGenerateToolbarItems) property to `false`.
