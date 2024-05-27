@@ -135,6 +135,8 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}	
 
+N> This property will not work when adding the SfCardView as a child of SfCardLayout.
+
 ![MAUI SfCardView image](images/maui-card-swiptodismiss.gif)
 
 ## Dismiss the card programmatically
@@ -220,3 +222,5 @@ public partial class MainPage : ContentPage
 {% endtabs %}	
 
 ![MAUI SfCardView image](images/maui-card-cardlayout.gif)
+
+N> You can refer to our [.NET MAUI Cards](https://www.syncfusion.com/maui-controls/maui-cards) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Cards Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/Cards) that shows you how to render and configure the Cards in .NET MAUI.

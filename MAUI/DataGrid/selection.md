@@ -259,6 +259,14 @@ If the active current cell is in edit mode, the changes will be committed and mo
 All rows or cells will be selected.
 </td>
 </tr>
+<tr>
+<td>
+<kbd>Delete</kbd>
+</td>
+<td>
+The selected rows will be deleted.
+</td>
+</tr>
 </table>
 
 ## Move Current Cell
@@ -301,7 +309,7 @@ public partial class MainPage : ContentPage
 
 ## Disable focus for a column
 
-By default, the current cell is focusable for all the columns. To disable current cell focus for a particular column, you can simply set `DataGridColumn.AllowFocus` property to `false`.
+By default, the current cell is focusable for all the columns. To disable current cell focus for a particular column, you can simply set [DataGridColumn.AllowFocus](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_AllowFocusProperty) property to `false`.
 
 {% tabs %}
 {% highlight XAML %}
@@ -320,6 +328,20 @@ By default, the current cell is focusable for all the columns. To disable curren
    <syncfusion:DataGridTextColumn MappingName="ShipCountry "
                  HeaderText="Ship Country " />
 </syncfusion:SfDataGrid.Columns>
+</syncfusion:SfDataGrid>
+{% endhighlight %}
+{% endtabs %}
+
+## Disable delete key functionality
+
+By default, the selected rows will be deleted when pressing the delete key. It can be disabled by setting the `SfDataGrid.AllowDeleting` property to false.
+
+{% tabs %}
+{% highlight XAML %}
+<syncfusion:SfDataGrid SelectionMode="Single"
+                    NavigationMode="Cell"
+                    AllowDeleting="False"
+                    ItemsSource="{Binding OrderInfoCollection}" >
 </syncfusion:SfDataGrid>
 {% endhighlight %}
 {% endtabs %}
@@ -519,5 +541,19 @@ public class ViewModel : INotifyPropertyChanged
                 this.PropertyChanged(this, new PropertyChangedEventArgs(name));
         }
     }
+{% endhighlight %}
+{% endtabs %}
+
+## Disable keyboard navigation
+
+By default, the keyboard navigation will be enabled when setting the selection and navigation modes. It can be disabled by setting the `SfDataGrid.AllowKeyboardNavigation` to false.
+
+{% tabs %}
+{% highlight XAML %}
+<syncfusion:SfDataGrid SelectionMode="Single"
+                    NavigationMode="Cell"
+                    AllowKeyboardNavigation="False"
+                    ItemsSource="{Binding OrderInfoCollection}" >
+</syncfusion:SfDataGrid>
 {% endhighlight %}
 {% endtabs %}

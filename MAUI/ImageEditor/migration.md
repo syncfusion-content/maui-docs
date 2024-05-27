@@ -520,9 +520,7 @@ Applicable for crop view selection, shape and text annotation selection.
 
 ## Upcoming features
 
-* Support for annotations Z ordering.
 * Support for serialize and deserialize the annotations.
-* Support to add custom shapes or views.
 * Support for pan and zoom improvements while performing the crop action on the images.
 
 ## Known issues in .Net MAUI ImageEditor

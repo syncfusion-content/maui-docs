@@ -9,7 +9,7 @@ documentation: ug
 
 # Columns Resizing in MAUI DataGrid (SfDataGrid)
 
-The `SfDataGrid` allows you to resize the columns by tapping and dragging the right border of the column headers. Resizing can be enabled or disabled by setting the `SfDataGrid.AllowResizingColumns` property. A resizing indicator is displayed while resizing a column.
+The `SfDataGrid` allows you to resize the columns by tapping and dragging the right border of the column headers. Resizing can be enabled or disabled by setting the [SfDataGrid.AllowResizingColumns](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AllowResizingColumns) property. A resizing indicator is displayed while resizing a column.
 
 N> Resizing considers `DataGridColumn.MinimumWidth` and `DataGridColumn.MaximumWidth` of the column and will not exceed the minimum and maximum width constraints.
 
@@ -30,11 +30,11 @@ To hide a column interactively, set the `DataGridColumn.MinimumWidth` property t
 
 ## Resizing events
 
-Based on the requirements, resizing operations can be handled using the `SfDataGrid.ColumnResizing` event. The `SfDataGrid.ColumnResizing` event is triggered while resizing a column and will continue to be triggered until the resizing operation is complete.
+Based on the requirements, resizing operations can be handled using the [SfDataGrid.ColumnResizing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ColumnResizing) event. The `SfDataGrid.ColumnResizing` event is triggered while resizing a column and will continue to be triggered until the resizing operation is complete.
 
 By handling the `SfDataGrid.ColumnResizing` event, it is possible to cancel the resizing of a particular column.
 
-The `SfDataGrid.ColumnResizing` event provides the following properties through `DataGridColumnResizingEventArgs`:
+The `SfDataGrid.ColumnResizing` event provides the following properties through [DataGridColumnResizingEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumnResizingEventArgs.html):
 
 * `Index` - Returns the index of the column currently being resized.
 * `NewValue` - Returns the current width of the column being resized.
@@ -71,7 +71,7 @@ private void DataGrid_ColumnResizing(object? sender, Syncfusion.Maui.DataGrid.Da
 }
 {% endhighlight %}
 
-To cancel resizing a column using the `SfDataGrid.ColumnResizing` event and the `DataGridProgressState` value, refer to the code example below:
+To cancel resizing a column using the `SfDataGrid.ColumnResizing` event and the [DataGridProgressState](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridProgressState.html) value, refer to the code example below:
 
 {% highlight c# %}
 this.dataGrid.ColumnResizing += DataGrid_ColumnResizing;
@@ -87,7 +87,7 @@ private void DataGrid_ColumnResizing(object? sender, Syncfusion.Maui.DataGrid.Da
 
 ## Customize the appearance
 
-The SfDataGrid allows you to change the resizing indicator color using `SfDataGrid.DefaultStyle.ColumnResizingIndicatorColor`.
+The SfDataGrid allows you to change the resizing indicator color using [SfDataGrid.DefaultStyle.ColumnResizingIndicatorColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_ColumnResizingIndicatorColor).
 
 {% tabs %}
 {% highlight xaml %}
