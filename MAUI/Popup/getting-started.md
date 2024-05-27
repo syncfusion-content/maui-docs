@@ -140,7 +140,7 @@ To close the popup programmatically, you can call either the [Dismiss](https://h
 Refer to the following code example for dismissing popup.
 
 {% tabs %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="5 8" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="4 7" %}
     
     private void ClickToDismissPopup_Clicked(object sender, EventArgs e)
     {
