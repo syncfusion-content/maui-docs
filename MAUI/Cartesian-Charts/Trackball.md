@@ -15,6 +15,7 @@ Trackball, which allows you to show the tooltip for the nearest data points when
 
 To enable the trackball in the chart, create an instance of the [ChartTrackballBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartTrackballBehavior.html) and set it to the [TrackballBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_TrackballBehavior) property. The following properties are used to show or hide the line and tooltip.
 
+* [ShowLabel](), of type `bool`, indicates the shows or hides the trackball label. The default value is `True`.
 * [ShowMarkers](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartTrackballBehavior.html#Syncfusion_Maui_Charts_ChartTrackballBehavior_ShowMarkers), of type `bool`, indicates the shows or hides trackball markers. The default value is `True`.
 * [ShowLine](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartTrackballBehavior.html#Syncfusion_Maui_Charts_ChartTrackballBehavior_ShowLine), of type `bool`, indicates the shows or hides the trackball line. The default value is `True`.
 
@@ -223,7 +224,7 @@ this.Content = chart;
 
 ### Trackball Label Template
 
-You can customize the appearance of the Trackball label with your own template by using [TrackballLabelTemplate]() property of [ChartSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html).
+You can customize the appearance of the Trackball label with your own template by using [TrackballLabelTemplate]() property of [CartesianSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.CartesianSeries.html).
 
 {% tabs %}
 
@@ -310,8 +311,8 @@ DataTemplate trackballLabelTemplate = new DataTemplate(() =>
 });
 
 series1.TrackballLabelTemplate = trackballLabelTemplate;
-series1.TrackballLabelTemplate = trackballLabelTemplate;
-series1.TrackballLabelTemplate = trackballLabelTemplate;
+series2.TrackballLabelTemplate = trackballLabelTemplate;
+series3.TrackballLabelTemplate = trackballLabelTemplate;
 
 chart.Series.Add(series1);
 chart.Series.Add(series2);
@@ -335,9 +336,7 @@ Customize the appearance of axis label of trackball using [TrackballLabelTemplat
 <chart:SfCartesianChart>
     <chart:SfCartesianChart.Resources>
             <DataTemplate x:Key="axisLabelTemplate">
-                <HorizontalStackLayout>
-                    <Label WidthRequest="50" HeightRequest="20" HorizontalTextAlignment="Center" BackgroundColor="Blue" Text="{Binding ValueX}" TextColor="White" FontSize ="15"/>
-                </HorizontalStackLayout>
+                <Label WidthRequest="50" HeightRequest="20" HorizontalTextAlignment="Center" BackgroundColor="Blue" Text="{Binding ValueX}" TextColor="White" FontSize ="15"/>
             </DataTemplate>
     </chart:SfCartesianChart.Resources>
 
@@ -369,8 +368,6 @@ primaryAxis.ShowTrackballLabel = true;
 
 DataTemplate axisLabelTemplate = new DataTemplate(() =>
 {
-    HorizontalStackLayout horizontalStackLayout = new HorizontalStackLayout();
-
     var label = new Label
     {
         WidthRequest = 50,
@@ -382,12 +379,10 @@ DataTemplate axisLabelTemplate = new DataTemplate(() =>
     };
     label.SetBinding(Label.TextProperty, "ValueX");
 
-    horizontalStackLayout.Add(label);
-
-    return horizontalStackLayout;
+    return label;
 });
 
-primaryAxis.TrackballLabelTemplate = trackballLabelTemplate;
+primaryAxis.TrackballLabelTemplate = axisLabelTemplate;
 . . .
 LineSeries series = new LineSeries();
 series.ItemsSource = new ViewModel().Data;
