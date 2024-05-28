@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Get the data point collection based on region in Syncfusion SfCartesianChart
-description: Get the data point collection based on region in SfCartesianChart
+title: Get the data point collection based on region in SfCartesianChart
+description: Get the data points that fall inside a given rectangular area or within specified X and Y coordinate ranges in SfCartesianChart
 platform: maui
 control: SfCartesianChart
 documentation: ug
