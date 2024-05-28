@@ -132,7 +132,7 @@ Checkbox
 Bool type property.
 </td>
 <td>
-{{'[CheckBox](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/checkbox?view=net-maui-7.0)'| markdownify }}
+{{'[SfCheckBox](https://help.syncfusion.com/maui/checkbox/overview)'| markdownify }}
 </td>
 </tr>
 <tr>
@@ -146,7 +146,7 @@ Switch
 Bool type property.
 </td>
 <td>
-{{'[Switch](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/switch?view=net-maui-7.0)'| markdownify }}
+{{'[SfSwitch](https://help.syncfusion.com/maui/switch/overview)'| markdownify }}
 </td>
 </tr>
 <tr>
@@ -202,7 +202,7 @@ RadioGroup
 Enum and List type property.
 </td>
 <td>
-{{'[RadioButton](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/radiobutton?view=net-maui-7.0)'| markdownify }}
+{{'[SfRadioButton](https://help.syncfusion.com/maui/radio-button/overview)'| markdownify }}
 </td>
 </tr>
 </table>
@@ -563,7 +563,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 
 ## CheckBox editor
 
-In the CheckBox editor, the [CheckBox](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/checkbox?view=net-maui-7.0) control is loaded. By default, for bool data type property, the CheckBox editor will be loaded in data form.
+In the CheckBox editor, the [SfCheckBox](https://help.syncfusion.com/maui/checkbox/overview) control is loaded. By default, for bool data type property, the CheckBox editor will be loaded in data form.
 
 {% tabs %}
 {% highlight C# %}
@@ -605,7 +605,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 
 ## Switch Editor
 
-In switch editor, [Switch](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/switch?view=net-maui-7.0) is loaded, and DataForm Switch editor supports bool data type property.
+In switch editor, [SfSwitch](https://help.syncfusion.com/maui/switch/overview) is loaded, and DataForm Switch editor supports bool data type property.
 
 To add a switch editor in DataForm, register the editor as [DataFormEditorType.Switch](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormEditorType.html#Syncfusion_Maui_DataForm_DataFormEditorType_Switch) for the required property using the [RegisterEditor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_RegisterEditor_System_String_Syncfusion_Maui_DataForm_DataFormEditorType_) method.
 
@@ -1261,7 +1261,7 @@ N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-dataform/t
 
 ## RadioGroup editor
 
-In the [RadioGroup](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/radiobutton?view=net-maui-7.0) editor, the [RadioButton](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/radiobutton?view=net-maui-7.0) control is loaded.
+In the [RadioGroup](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/radiobutton?view=net-maui-7.0) editor, the [SfRadioButton](https://help.syncfusion.com/maui/radio-button/overview) control is loaded.
 
 The [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormListItem.html#Syncfusion_Maui_DataForm_DataFormListItem_ItemsSource) for the radio group editor is generated for the `enum` data type property. In order to add the `RadioButton` editor in the DataForm, you need to register the editor as [DataFormEditorType.RadioGroup](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormEditorType.html#Syncfusion_Maui_DataForm_DataFormEditorType_RadioGroup) for the required property by using the [RegisterEditor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_RegisterEditor_System_String_Syncfusion_Maui_DataForm_DataFormEditorType_) method.
 
