@@ -141,19 +141,14 @@ The control offers the following two types of `NodeSizeMode`:
  * `None`: [SfTreeView.ItemHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ItemHeight)  is used to layout the `SfTreeView` nodes.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="6" %}
+{% highlight xaml hl_lines="6" %}
 
     <ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.TreeView;assembly=Syncfusion.Maui.TreeView">
     <treeView:SfTreeView x:Name="treeView"
                      ChildPropertyName="SubFiles"
                      ItemsSource="{Binding ImageNodeInfo}"
-                     NodeSizeMode="Dynamic"
-                     AutoExpandMode="AllNodesExpanded">
+                     NodeSizeMode="Dynamic">
 </ContentPage>
-{% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
-
-    treeView.NodeSizeMode = TreeViewNodeSizeMode.Dynamic; 
 {% endhighlight %}
 {% endtabs %}
 
