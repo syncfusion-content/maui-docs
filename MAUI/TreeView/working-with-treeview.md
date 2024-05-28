@@ -115,14 +115,13 @@ The `KeyDown` event is triggered when a key is pressed while the [SfTreeView](ht
 
 {% tabs %}
 {% highlight xaml %}
-<syncfusion:SfTreeView x:Name="treeView" KeyDown="treeView_KeyDown"/>
+<syncfusion:SfTreeView x:Name="treeView" KeyDown="OnTreeViewKeyDown "/>
 {% endhighlight %}
 {% highlight c# %}
 
-treeView.KeyDown += this.TreeView_KeyDown;
-private void TreeView_KeyDown(object? sender, KeyPressEventArgs e)
+private void OnTreeViewKeyDown(object? sender, KeyPressEventArgs e)
 {
-    DisplayAlert("Key Press", "Key is Pressed","Close"); 
+
 }
 
 {% endhighlight %}
