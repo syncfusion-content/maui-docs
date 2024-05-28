@@ -1267,7 +1267,7 @@ The [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.D
 
 **Support for enum data type**
 
-For the `enum` data type property, [RadioButton](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/radiobutton?view=net-maui-7.0) `items` will be added based on the specified property of enum values.
+For the `enum` data type property, [SfRadioButton](https://help.syncfusion.com/maui/radio-button/overview) `items` will be added based on the specified property of enum values.
 
 {% tabs %}
 {% highlight C# %}
