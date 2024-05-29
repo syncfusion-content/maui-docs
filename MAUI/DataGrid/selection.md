@@ -557,3 +557,107 @@ By default, the keyboard navigation will be enabled when setting the selection a
 </syncfusion:SfDataGrid>
 {% endhighlight %}
 {% endtabs %}
+
+
+## Customizing the selection controller behavior
+
+For customizing the selection controller behavior, initially create the instance for selection controller then, we have to create a class by inheriting the `DataGridRowSelectionController`. And then override the the methods you want to customize.
+
+### Changing Enter key behavior
+
+By default, pressing the <kbd>Enter</kbd> key moves the current cell focus to the next cell in the same column. To change this behavior, you can override the relevant selection controllers based on the NavigationModes.
+
+You can modify the <kbd>Enter</kbd> key behavior by overriding the ProcessKeyDown method in the selection controller. In this method, create a new KeyEventArgs instance that simulates a <kbd>Tab</kbd> key press and process the <kbd>Tab</kbd> key action accordingly. 
+
+{% tabs %}
+{% highlight XAML %}
+<syncfusion:SfDataGrid SelectionMode="Single"
+                       AllowEditing="True"
+                       ItemsSource="{Binding OrderInfoCollection}" >
+</syncfusion:SfDataGrid>
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+public partial class ProcessKeyDown : ContentPage
+{
+    public ProcessKeyDown()
+    {
+        InitializeComponent();
+        dataGrid.SelectionController = new GridSelectionController(this.dataGrid);
+    }
+
+    public class GridSelectionController : DataGridRowSelectionController
+    {
+        public GridSelectionController(SfDataGrid dataGrid) : base(dataGrid)
+        {
+        }
+        protected override void ProcessKeyDown(KeyEventArgs args, bool isCtrlKeyPressed, bool isShiftKeyPressed)
+        {
+            switch (args.Key)
+            {
+                case KeyboardKey.Enter:
+                    
+                    var tabArgs = new KeyEventArgs(KeyboardKey.Tab)
+                    {
+                        Handled = false
+                    };
+
+                    base.ProcessKeyDown(tabArgs, isCtrlKeyPressed, isShiftKeyPressed);
+                    args.Handled = true;
+
+                    if (tabArgs.Handled)
+                    {
+                        Console.WriteLine("Tab event was handled successfully");
+                    }
+                    break;
+
+                default:
+                    
+                    base.ProcessKeyDown(args, isCtrlKeyPressed, isShiftKeyPressed);
+                    break;
+            }
+        }
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
+Additionally, we included a scenario to disable the <kbd>Enter</kbd> key behavior. When the <kbd>Enter</kbd> key is pressed, it does not move to the next row but remains in the same place.
+
+{% tabs %}
+{% highlight XAML %}
+<syncfusion:SfDataGrid SelectionMode="Single"
+                       AllowEditing="True"
+                       ItemsSource="{Binding OrderInfoCollection}" >
+</syncfusion:SfDataGrid>
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+public partial class ProcessKeyDown : ContentPage
+{
+    public ProcessKeyDown()
+    {
+        InitializeComponent();
+        dataGrid.SelectionController = new GridSelectionController(this.dataGrid);
+    }
+
+    public class GridSelectionController : DataGridRowSelectionController
+    {
+        public GridSelectionController(SfDataGrid dataGrid) : base(dataGrid)
+        {
+        }
+
+        protected override void ProcessKeyDown(KeyEventArgs args, bool isCtrlKeyPressed, bool isShiftKeyPressed)
+        {
+            if (args.Key == KeyboardKey.Enter)
+            {
+                args.Handled = false;
+                return;
+            }
+
+            base.ProcessKeyDown(args, isCtrlKeyPressed, isShiftKeyPressed);
+        }
+    }
+}
+{% endhighlight %}
+{% endtabs %}
