@@ -51,7 +51,7 @@ chart.SecondaryAxis = secondaryAxis;
 
 ## Positioning the ticks
 
-The tick lines can be positioned inside or outside the chart area using the [TickPosition]() property. [TickPosition]() property default value is `AxisElementPosition.Outside`.
+The tick lines can be positioned inside or outside the chart area using the [TickPosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_TickPosition) property. [TickPosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_TickPosition) property default value is `AxisElementPosition.Outside`.
 
 N> This is only applicable to the secondary axis of Polar chart.
 

@@ -89,7 +89,7 @@ The ChartTrackballActivationMode enum contains the following values:
 
 * `LongPress` – Activates trackball only when performing the long press action.
 * `TouchMove` – Activates trackball only when performing touch move action.
-* `None` – Hides the visibility of trackball when setting activation mode to `None`. It will be activated when calling 
+* `None` – Hides the visibility of trackball when setting activation mode to `None`. It will be activated when calling the `Show` method.
 
 {% tabs %}
 
