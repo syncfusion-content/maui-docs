@@ -27,6 +27,7 @@ N> The tooltip is shown only when the [ToolTipText]() is provided.
 
 <stepProgressBar:SfStepProgressBar
                     x:Name="stepProgress"
+                    Orientation="Horizontal"
                     ShowToolTip="True"
                     ItemsSource="{Binding StepProgressItems}">
 </stepProgressBar:SfStepProgressBar>                                                             
@@ -40,6 +41,7 @@ N> The tooltip is shown only when the [ToolTipText]() is provided.
 SfStepProgressBar stepProgressBar = new SfStepProgressBar();
 ViewModel viewModel = new ViewModel();
 stepProgressBar.ItemsSource = viewModel.StepProgressBarItems;
+stepProgressBar.Orientation = StepProgressBarOrientation.Horizontal;
 stepProgressBar.ShowToolTip = true;
 this.Content = stepProgressBar;
 
@@ -71,10 +73,10 @@ public class ViewModel
     public ViewModel()
     {
         stepProgressItem = new ObservableCollection<StepProgressBarItem>();
-        stepProgressItem.Add(new StepProgressBarItem() { PrimaryText = "Cart", ToolTipText = "Added to Cart" });
-        stepProgressItem.Add(new StepProgressBarItem() { PrimaryText = "Address", ToolTipText = "Added Address" });
-        stepProgressItem.Add(new StepProgressBarItem() { PrimaryText = "Delivery", ToolTipText = "Delivery type" });
-        stepProgressItem.Add(new StepProgressBarItem() { PrimaryText = "Ordered", ToolTipText = "Ordered" });
+        stepProgressItem.Add(new StepProgressBarItem() { PrimaryText = "Cart", ToolTipText = "Add items to cart" });
+        stepProgressItem.Add(new StepProgressBarItem() { PrimaryText = "Address", ToolTipText = "Add delivery address" });
+        stepProgressItem.Add(new StepProgressBarItem() { PrimaryText = "Payment", ToolTipText = "Choose payment method" });
+        stepProgressItem.Add(new StepProgressBarItem() { PrimaryText = "Ordered", ToolTipText = "Place your order" });
     }
 }
 
@@ -99,10 +101,11 @@ To customize the appearance of the tooltip in the [SfStepProgressBar]() using [T
 * [TextStyle](): This property is used to modify the appearance of the tooltip text. You can customize attributes such as [TextColor](), [FontSize](), [FontFamily](), and [FontAttributes]().
 
 {% tabs %}
-{% highlight XAML hl_lines="4 12 13 14 15 16 17 18 19 20 21 22" %}
+{% highlight XAML hl_lines="4 5 6 7 8 9 10 11 12 13 14 15" %}
 
 <stepProgressBar:SfStepProgressBar x:Name="stepProgressBar"
                     ItemsSource="{Binding StepProgressBarItems}"
+                    Orientation="Horizontal"
                     ShowToolTip="True">
     <stepProgressBar:SfStepProgressBar.ToolTipSettings>
         <stepProgressBar:StepProgressBarToolTipSettings Background="Blue"
@@ -121,11 +124,12 @@ To customize the appearance of the tooltip in the [SfStepProgressBar]() using [T
  </stepProgressBar:SfStepProgressBar>
 
 {% endhighlight %}
-{% highlight C# hl_lines="5" %}
+{% highlight C# hl_lines="5 6 7" %}
 
 SfStepProgressBar stepProgressBar = new SfStepProgressBar();
 ViewModel viewModel = new ViewModel();
 stepProgressBar.ItemsSource = viewModel.StepProgressBarItems;
+stepprogressBar.Orientation = StepProgressBarOrientation.Horizontal;
 stepProgressBar.ShowToolTip = true;
 stepProgressBar.ToolTipSettings = new StepProgressBarToolTipSettings() { Background = Brush.Blue, Stroke = Brush.Red, Duration = new TimeSpan(0, 0, 10), TextStyle = new stepProgressBarTextStyle() { TextColor = Colors.White, FontSize = 14, FontAttributes = FontAttributes.Italic } };
 this.Content = stepProgressBar;
@@ -158,10 +162,10 @@ public class ViewModel
     public ViewModel()
     {
         stepProgressItem = new ObservableCollection<StepProgressBarItem>();
-        stepProgressItem.Add(new StepProgressBarItem() { PrimaryText = "Cart", ToolTipText = "Added to Cart" });
-        stepProgressItem.Add(new StepProgressBarItem() { PrimaryText = "Address", ToolTipText = "Added Address" });
-        stepProgressItem.Add(new StepProgressBarItem() { PrimaryText = "Delivery", ToolTipText = "Delivery type" });
-        stepProgressItem.Add(new StepProgressBarItem() { PrimaryText = "Ordered", ToolTipText = "Ordered" });
+        stepProgressItem.Add(new StepProgressBarItem() { PrimaryText = "Cart", ToolTipText = "Add items to cart" });
+        stepProgressItem.Add(new StepProgressBarItem() { PrimaryText = "Address", ToolTipText = "Add delivery address" });
+        stepProgressItem.Add(new StepProgressBarItem() { PrimaryText = "Payment", ToolTipText = "Choose payment method" });
+        stepProgressItem.Add(new StepProgressBarItem() { PrimaryText = "Ordered", ToolTipText = "Place your order" });
     }
 }
 
@@ -183,18 +187,17 @@ The following code example shows the usage of DataTemplate.
 
 <stepProgressBar:SfStepProgressBar x:Name="stepProgressBar"
                     ItemsSource="{Binding StepProgressBarItems}"
+                    Orientation="Horizontal"
                     ShowToolTip="True">
     <progressBar:SfStepProgressBar.ToolTipTemplate>
         <DataTemplate>
             <StackLayout Orientation="Horizontal">
-                <Label Text="Status:" FontAttributes="Bold" 
-                    TextColor="White" 
-                    FontSize="Caption"/>
+                <Image Source="info.png" WidthRequest="20" HeightRequest="20"/>
                 <Label Text="{Binding ToolTipText}" 
                     TextColor="White"
                     FontSize="Caption"
                     Padding="5,0,0,0"
-                    HorizontalOptions="Center"/>
+                    VerticalOptions="Center"/>
             </StackLayout>
         </DataTemplate>
     </progressBar:SfStepProgressBar.ToolTipTemplate>
@@ -209,6 +212,7 @@ The following code example shows the usage of DataTemplate.
 SfStepProgressBar stepProgressBar = new SfStepProgressBar();
 ViewModel viewModel = new ViewModel();
 stepProgressBar.ItemsSource = viewModel.ItemsSource;
+stepProgressBar.Orientation = StepProgressBarOrientation.Horizontal;
 stepProgressBar.ShowToolTip = true;
 this.Content = stepProgressBar;
 
@@ -240,10 +244,10 @@ public class ViewModel
     public ViewModel()
     {
         stepProgressItem = new ObservableCollection<StepProgressBarItem>();
-        stepProgressItem.Add(new StepProgressBarItem() { PrimaryText = "Cart", ToolTipText = "Added to Cart" });
-        stepProgressItem.Add(new StepProgressBarItem() { PrimaryText = "Address", ToolTipText = "Added Address" });
-        stepProgressItem.Add(new StepProgressBarItem() { PrimaryText = "Delivery", ToolTipText = "Delivery type" });
-        stepProgressItem.Add(new StepProgressBarItem() { PrimaryText = "Ordered", ToolTipText = "Ordered" });
+        stepProgressItem.Add(new StepProgressBarItem() { PrimaryText = "Cart", ToolTipText = "Add items to cart" });
+        stepProgressItem.Add(new StepProgressBarItem() { PrimaryText = "Address", ToolTipText = "Add delivery address" });
+        stepProgressItem.Add(new StepProgressBarItem() { PrimaryText = "Payment", ToolTipText = "Choose payment method" });
+        stepProgressItem.Add(new StepProgressBarItem() { PrimaryText = "Ordered", ToolTipText = "Place your order" });
     }
 }
 
