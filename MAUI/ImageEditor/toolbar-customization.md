@@ -342,7 +342,7 @@ saveGroup.Items.Add(new ImageEditorToolbarItem() { Name = "Share", View = image 
 
 ![Add Toolbar Item in .NET Maui ImageEditor](images/toolbar/imageeditor-add-item.png)
 
-### Add a Toolbar Item with the Text
+## Add a Toolbar Item with the Text
 
 Add the text to the [`ImageEditorToolbar`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorToolbar.html) manually.
 
