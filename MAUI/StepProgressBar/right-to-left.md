@@ -7,7 +7,7 @@ control: SfStepProgressBar
 documentation: ug
 ---
  
-# Right To Left Flow Direction in MAUI StepProgressBar (SfStepProgressBar)
+# RightToLeft Flow Direction in MAUI StepProgressBar (SfStepProgressBar)
 
 The [SfStepProgressBar](https://www.syncfusion.com/maui-controls/maui-stepprogressbar) supports changing the flow direction of items rendering in the right-to-left order by setting the `FlowDirection` to `RightToLeft`.
 
