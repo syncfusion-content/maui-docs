@@ -114,7 +114,7 @@ treeView.ScrollBarVisibility = ScrollBarVisibility.Always;
 
 ## Horizontal Scrolling 
 
-TreeView allows  to scroll horizontally by enabling the `EnableHorizontalScrolling` property. By setting the `EnableHorizontalScrolling` to `true` the TreeView can able to scroll in both direction. By default, the value will be `False`.
+TreeView allows you to scroll horizontally by enabling the `EnableHorizontalScrolling` property. By setting the `EnableHorizontalScrolling` to `true` the TreeView can able to scroll in both direction. By default, the value will be `False`.
 
 {% tabs %}
 {% highlight xaml%}
@@ -124,5 +124,4 @@ TreeView allows  to scroll horizontally by enabling the `EnableHorizontalScrolli
 SfTreeView treeView = new SfTreeView();
 treeView.EnableHorizontalScrolling = true;
 {% endhighlight %}
-{% endtabs %}
 {% endtabs %}
