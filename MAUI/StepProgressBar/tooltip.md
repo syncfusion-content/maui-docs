@@ -81,7 +81,7 @@ public class ViewModel
 {% endhighlight %}
 {% endtabs %}
 
-![enable-tooltip-in-maui-stepprogressbar](images\tooltip\enable-tooltip-in-maui-stepprogressbar.png)
+![enable-tooltip-in-maui-stepprogressbar](images/tooltip/enable-tooltip-in-maui-stepprogressbar.png)
 
 ## Customize tooltip appearance
 
@@ -170,7 +170,7 @@ public class ViewModel
 
 N> This property will only be applicable when the [ShowToolTip]() is enabled.
 
-![tooltip-customization-in-maui-stepprogressbar](images\tooltip\tooltip-customization-in-maui-stepprogressbar.png)
+![tooltip-customization-in-maui-stepprogressbar](images/tooltip/tooltip-customization-in-maui-stepprogressbar.png)
 
 ### Customize tooltip appearance using DataTemplate
 
@@ -252,4 +252,4 @@ public class ViewModel
 
 N> This property will only be applicable when the [ShowToolTip]() is enabled.
 
-![tooltip-template-in-maui-stepprogressbar](images\tooltip\tooltip-template-in-maui-stepprogressbar.png)
+![tooltip-template-in-maui-stepprogressbar](images/tooltip/tooltip-template-in-maui-stepprogressbar.png)
