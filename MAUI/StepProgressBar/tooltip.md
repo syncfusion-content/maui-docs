@@ -17,7 +17,7 @@ To enable the tooltip for the step progress bar control, utilize the [ShowToolTi
 
 ## ToolTipText
 
-The tooltip text for a step view can be set using the [ToolTipText]() by using the [StepProgressBarItem]() collection, which is bound to the [ItemsSource]() property.
+The tooltip text for a step view can be set using the [ToolTipText]() property from the [StepProgressBarItem]() collection, which is bound to the [ItemsSource]() property.
 
 
 N> The tooltip is shown only when the [ToolTipText]() is provided.
