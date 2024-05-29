@@ -3,11 +3,11 @@ layout: post
 title: Tooltip in .NET MAUI StepProgressBar Control | Syncfusion
 description: Learn here all about how to customize the appearance of tooltip in Syncfusion .NET MAUI StepProgressBar control and more.
 platform: maui
-control: StepProgressBar (SfStepprogressBar)
+control: SfStepProgressBar
 documentation: ug
 ---
 
-# Tooltip in .NET MAUI StepprogressBar (SfStepprogressBar)
+# Tooltip in .NET MAUI Step ProgressBar (SfStepprogressBar)
 
 The tooltip provides information when hovering over or tapping the steps in the step progress bar, displaying details about the each steps.
 
