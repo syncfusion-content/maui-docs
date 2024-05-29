@@ -202,4 +202,24 @@ this.Calendar.ShowTodayButton = true;
 
 ![Today button in .NET MAUI Calendar.](images/getting-started/maui-today-button.png)
 
+## Corner radius
+
+You can customize the corner radius of the calendar using the [CornerRadius]() property of the SfCalendar, allowing you to set the desired roundness for the corners of the calendar. The default value of the `CornerRadius` property is `20`.
+
+{% tabs %}  
+{% highlight xaml tabtitle="XAML" hl_lines="3" %}
+
+<calendar:SfCalendar x:Name="Calendar" 
+                     View="Month"
+                     CornerRadius="15">
+ </calendar:SfCalendar>
+
+{% endhighlight %}
+{% highlight c# tabtitle="C#" %}
+
+this.Calendar.CornerRadius = 15;
+
+{% endhighlight %}
+{% endtabs %}
+
 N> You can also explore our [.NET MAUI Calendar Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/Calendar) that shows you how to render the Calendar in .NET MAUI.
