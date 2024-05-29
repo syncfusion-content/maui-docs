@@ -1,13 +1,13 @@
 ---
 layout: post
-title: FlowDirection in .NET MAUI Step ProgressBar Control | Syncfusion
+title: Flow Direction in .NET MAUI Step ProgressBar Control | Syncfusion
 description: Learn about Right To Left support in Syncfusion .NET MAUI Step ProgressBar (SfStepProgressBar) control and more.
 platform: maui
 control: SfStepProgressBar
 documentation: ug
 ---
  
-# Right To Left Flow Direction in .NET MAUI Step ProgressBar (SfStepProgressBar)
+# Right To Left Flow Direction in MAUI StepProgressBar (SfStepProgressBar)
 
 The [SfStepProgressBar](https://www.syncfusion.com/maui-controls/maui-stepprogressbar) supports changing the flow direction of items rendering in the right-to-left order by setting the `FlowDirection` to `RightToLeft`.
 
