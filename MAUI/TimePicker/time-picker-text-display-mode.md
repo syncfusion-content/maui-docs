@@ -13,7 +13,7 @@ The time picker text display mode is specified in the time picker property enume
 
 ## Default Mode
 
-In Default mode, for selected items, the text color is white and the font size is 14, and for unselected items, the text color is black and the font size is 14.
+In Default mode, the text color and font size for selected items are white and 14, respectively, while for unselected items, they are black and 14.
 
 {% tabs %}
 
@@ -39,7 +39,7 @@ this.Content = timePicker;
 
 ## Fade Mode
 
-In Fade mode, the text color will fade from the selected item.
+The fade mode in the time picker gradually decreases the visibility of unselected items relative to the selected item. This effect is achieved by setting the `TextDisplayMode` property to `Fade` in `SfTimePicker`.
 
 {% tabs %}
 
@@ -65,7 +65,7 @@ this.Content = timePicker;
 
 ## Shrink Mode
 
-In Shrink mode, the font size will decrease from the selected item.
+The shrink mode is used to display the font size of time picker items decreased from the selected item by setting the `TextDisplayMode` property to `Shrink` in `SfTimePicker`.
 
 {% tabs %}
 
@@ -91,7 +91,7 @@ this.Content = timePicker;
 
 ## FadeAndShrink Mode
 
-In FadeAndShrink mode, the text color will fade, and the text font size will be reduced from the selected item.
+The fade and shrink mode are used to decrease the opacity and font size of time picker items from the selected item by setting the `TextDisplayMode` property to `FadeAndShrink` in `SfTimePicker`.
 
 {% tabs %}
 
