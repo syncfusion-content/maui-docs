@@ -233,10 +233,12 @@ You can customize the appearance of the Trackball label with your own template b
 <chart:SfCartesianChart>
     <chart:SfCartesianChart.Resources>
         <DataTemplate x:Key="trackballLabelTemplate">
-            <HorizontalStackLayout>
-                <Label Text="{Binding DataItem.Values}" FontSize="20" VerticalOptions="Center" TextColor="White"/>
-                <Image Source="image.png" WidthRequest="40" HeightRequest="40"/>
-            </HorizontalStackLayout>          
+            <HorizontalStackLayout Spacing="5">
+                <Image Source="image.png" WidthRequest="20" HeightRequest="20"/>
+                <Label Text="{Binding Series.Label}" FontSize="15"  HorizontalOptions="Center"  TextColor="White"/>
+                <Label Text=" : " FontSize="15"  HorizontalOptions="Center" TextColor="White" />
+                <Label Text="{Binding Label,StringFormat='{0}M'}" FontSize="15" HorizontalOptions="Center" TextColor="White" />
+            </HorizontalStackLayout>         
         </DataTemplate>
     </chart:SfCartesianChart.Resources>
 
@@ -246,18 +248,18 @@ You can customize the appearance of the Trackball label with your own template b
     . . .
     <chart:LineSeries ItemsSource="{Binding Data1}" 
                       TrackballLabelTemplate ="{StaticResource trackballLabelTemplate}"
-                      XBindingPath="Name"
-                      YBindingPath="Values"/>
+                      XBindingPath="XValues"
+                      YBindingPath="YValues"/>
 
     <chart:LineSeries ItemsSource="{Binding Data2}" 
                       TrackballLabelTemplate ="{StaticResource trackballLabelTemplate}"
-                      XBindingPath="Name"
-                      YBindingPath="Values"/>
+                      XBindingPath="XValues"
+                      YBindingPath="YValues"/>
 
     <chart:LineSeries ItemsSource="{Binding Data3}" 
                       TrackballLabelTemplate ="{StaticResource trackballLabelTemplate}"
-                      XBindingPath="Name"
-                      YBindingPath="Values"/>
+                      XBindingPath="XValues"
+                      YBindingPath="YValues"/>
                       
 </chart:SfCartesianChart>
 
@@ -272,40 +274,61 @@ chart.TrackballBehavior= trackball;
 . . .
 LineSeries series1 = new LineSeries();
 series1.ItemsSource = new ViewModel().Data1;
-series1.XBindingPath = "Name";
-series1.YBindingPath = "Values";
+series1.XBindingPath = "XValues";
+series1.YBindingPath = "YValues";
 
 LineSeries series2 = new LineSeries();
 series2.ItemsSource = new ViewModel().Data2;
-series2.XBindingPath = "Name";
-series2.YBindingPath = "Values";
+series2.XBindingPath = "XValues";
+series2.YBindingPath = "YValues";
 
 LineSeries series3 = new LineSeries();
 series3.ItemsSource = new ViewModel().Data3;
-series3.XBindingPath = "Name";
-series3.YBindingPath = "Values";
+series3.XBindingPath = "XValues";
+series3.YBindingPath = "YValues";
 
 DataTemplate trackballLabelTemplate = new DataTemplate(() =>
 {
-    HorizontalStackLayout horizontalStackLayout = new HorizontalStackLayout();
-
-    Label label = new Label
+    HorizontalStackLayout horizontalStackLayout = new HorizontalStackLayout
     {
-        FontSize = 20,
-        VerticalOptions = LayoutOptions.Center,
-        TextColor = Colors.White
+        Spacing = 5
     };
-    label.SetBinding(Label.TextProperty, "DataItem.Values");
 
     Image image = new Image
     {
         Source = "image.png",
-        WidthRequest = 40,
-        HeightRequest = 40
+        WidthRequest = 20,
+        HeightRequest = 20
     };
 
-    horizontalStackLayout.Add(label);
+    Label label1 = new Label
+    {
+        FontSize = 15,
+        HorizontalOptions = LayoutOptions.Center,
+        TextColor = Colors.White
+    };
+    label1.SetBinding(Label.TextProperty,"Series.Label");
+
+    Label label2 = new Label
+    {
+        Text = " : ",
+        FontSize = 15,
+        HorizontalOptions = LayoutOptions.Center,
+        TextColor = Colors.White
+    };
+
+    Label label3 = new Label
+    {
+        FontSize = 15,
+        HorizontalOptions = LayoutOptions.Center,
+        TextColor = Colors.White
+    };
+    label3.SetBinding(Label.TextProperty,"Label", stringFormat: "{0}M");
+
     horizontalStackLayout.Add(image);
+    horizontalStackLayout.Add(label1);
+    horizontalStackLayout.Add(label2);
+    horizontalStackLayout.Add(label3);
 
     return horizontalStackLayout;
 });
