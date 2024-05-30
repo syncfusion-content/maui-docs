@@ -120,6 +120,28 @@ The `LineBreakMode` allows you to wrap or truncate the text. The default value o
 *   `MiddleTruncation` - Truncates the text at the center.
 *   `TailTruncation` - Truncates the text at the end.
 
+{% tabs %}
+{% highlight xaml %}
+
+    <syncfusion:SfRadioButton x:Name="RadioButton" IsChecked="True" WidthRequest="200" LineBreakMode="WordWrap" Text="The LineBreakMode allows you to wrap or truncate the text."></syncfusion:SfRadioButton>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+    StackLayout stackLayout = new StackLayout();
+    SfRadioButton radioButton = new SfRadioButton();
+	radioButton.Text = "The LineBreakMode allows you to wrap or truncate the text.";
+	radioButton.LineBreakMode = "WordWrap";
+	radioButton.WidthRequest = 200;
+	stackLayout.Children.Add(radioButton);
+
+{% endhighlight %}
+{% endtabs %}
+
+![.NET MAUI Radio Button LineBreakmode](Images/VisualCustomization/linebreakmode.png)
+
+
 This demo can be downloaded from this [link](https://www.syncfusion.com/downloads/support/directtrac/general/ze/RadioButton_11858718544)
 
 

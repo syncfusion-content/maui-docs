@@ -206,6 +206,26 @@ The `LineBreakMode` allows you to wrap or truncate the text. The default value o
 *   `MiddleTruncation` - Truncates the text at the center.
 *   `TailTruncation` - Truncates the text at the end.
 
+{% tabs %}
+{% highlight xaml %}
+   
+        <syncfusion:SfCheckBox x:Name="checkBox" IsChecked="True" WidthRequest="200" LineBreakMode="WordWrap" Text="The LineBreakMode allows you to wrap or truncate the text."></syncfusion:SfCheckBox>
+
+{% endhighlight %}
+{% highlight c# %}
+
+    StackLayout stackLayout = new StackLayout();
+    SfCheckBox  sfCheckBox  = new SfCheckBox();
+    sfCheckBox.Text = "The LineBreakMode allows you to wrap or truncate the text.";
+    sfCheckBox.LineBreakMode = "WordWrap";
+    sfCheckBox.WidthRequest = 200;
+    stackLayout.Children.Add(sfCheckBox);
+
+{% endhighlight %}
+{% endtabs %}
+
+![.NET MAUI CheckBox](Images/Visual-Customization/linebreakmode.png)
+
 This demo can be downloaded from this [link](https://www.syncfusion.com/downloads/support/directtrac/general/ze/CHECKB~1847116013)
 
 ## Size Customization
