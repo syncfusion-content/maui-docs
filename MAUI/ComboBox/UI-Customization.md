@@ -530,6 +530,121 @@ combobox.DropDownItemHeight = 25;
 
 ![.NET MAUI ComboBox DropDown Item Height](Images/UICustomization/DropDownItemHeight.png)
 
+### Customize in DropDownPlacement
+
+The drop-down that shows the filtered items will be placed automatically based on the available space and can also be customized using the `DropDownPlacement` property.
+
+*   `Top` - Drop-down will be placed above the text box.
+
+*   `Bottom` - Drop-down will be placed below the text box.
+
+*   `Auto` - Drop-down will be placed based on the available space either top or bottom of the text box.
+
+*   `None` - Drop-down will not be shown with the filtered items.
+
+
+{% tabs %}
+{% highlight xaml %}
+
+ <editors:SfComboBox x:Name="comboBox"
+                         WidthRequest="300"                  
+                         ItemsSource="{Binding SocialMedias}"
+                         DropDownPlacement="Top"
+                         TextMemberPath="Name"
+                         DisplayMemberPath="Name"/>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+comboBox.DropDownPlacement = Syncfusion.Maui.Core.DropDownPlacement.Top;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![.NET MAUI ComboBox Dropdownplacement.](Images/UICustomization/placementcombo.png)
+
+### Customize in DropDown ItemPadding
+
+The comboBox enables the user to provide padding for the items inside dropdown using `ItemPadding` property.
+
+{% tabs %}
+{% highlight xaml %}
+
+   <editors:SfComboBox x:Name="comboBox"
+                         WidthRequest="300"                          
+                         ItemsSource="{Binding SocialMedias}"
+                         ItemPadding="10,20,0,0"
+                         TextMemberPath="Name"
+                         DisplayMemberPath="Name"/>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+comboBox.ItemPadding = new Thickness(10,20,0,0);
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![.NET MAUI ComboBox Itempadding.](Images/UICustomization/Itempadding.png)
+
+### Customize in DropDown Item Width
+
+The `DropdownWidth` property is used to modify the height of the dropdown items.
+
+{% tabs %}
+{% highlight xaml %}
+
+    <editors:SfComboBox x:Name="comboBox"
+                         WidthRequest="300"                            
+                         ItemsSource="{Binding SocialMedias}"                           
+                         DropdownWidth="400"
+                         TextMemberPath="Name"
+                         DisplayMemberPath="Name"/>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+comboBox.DropdownWidth = 400;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![.NET MAUI ComboBox DropDownWidth.](Images/UICustomization/DropDownWidth.png)
+
+
+### Suggestion box on focus
+
+Suggestion box can be shown whenever the control receives focus using the `ShowSuggestionsOnFocus` property. At this time, suggestion list is the complete list of data source.
+
+{% tabs %}
+{% highlight xaml %}
+
+      <editors:SfComboBox x:Name="comboBox"
+                          WidthRequest="300"                            
+                          ItemsSource="{Binding SocialMedias}"                           
+                          ShowSuggestionsOnFocus="True"                            
+                          TextMemberPath="Name"
+                          DisplayMemberPath="Name"/>
+
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+comboBox.ShowSuggestionsOnFocus = true;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![.NET MAUI ComboBox OnFocus.](Images/UICustomization/OnFocus.png)
+
 ## Customize the DropDown (suggestion) item based on condition
 
 The [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_ItemTemplate) property helps you to decorate drop-down items conditionally based on their content using the custom templates. The default value of the `ItemTemplate` is `null`.
