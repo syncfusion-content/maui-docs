@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Date Time Picker Text Dispaly Mode in .NET MAUI Date Time Picker Control | Syncfusion
+title: Text Dispaly Mode in .NET MAUI Date Time Picker Control | Syncfusion
 description: Learn about the date time picker text display mode in Syncfusion .NET MAUI Date Time Picker (SfDateTimePicker) control and its basic features.
 platform: maui
 control: SfDateTimePicker
 documentation: ug
 ---
 
-# Date Time Picker Text dispaly mode in .NET MAUI Picker (SfDateTimePicker)
+# Text display mode in .NET MAUI Picker (SfDateTimePicker)
 
 The date time picker text display mode is specified in the date time picker property enumeration, which is used to display the date time picker items based on the modes. It offers four modes: `Default`, `Fade`, `Shrink` and `FadeAndShrink`. The default date time picker text display mode is `Default` in the [SfDateTimePicker].
 

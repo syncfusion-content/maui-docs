@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Time Picker Text Dispaly Mode in .NET MAUI Time Picker Control | Syncfusion
+title: Text Dispaly Mode in .NET MAUI Time Picker Control | Syncfusion
 description: Learn about the time picker text display mode in Syncfusion .NET MAUI Time Picker (SfTimePicker) control and its basic features.
 platform: maui
 control: SfTimePicker
 documentation: ug
 ---
 
-# Time Picker Text dispaly mode in .NET MAUI Picker (SfTimePicker)
+# Time Picker Text display mode in .NET MAUI Picker (SfTimePicker)
 
 The time picker text display mode is specified in the time picker property enumeration, which is used to display the time picker items based on the modes. It offers four modes: `Default`, `Fade`, `Shrink` and `FadeAndShrink`. The default time picker text display mode is `Default` in the [SfTimePicker].
 
