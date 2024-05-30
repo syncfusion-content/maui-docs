@@ -114,14 +114,11 @@ treeView.ScrollBarVisibility = ScrollBarVisibility.Always;
 
 ## Horizontal Scrolling 
 
-The TreeView allows you to scroll in both direction by enabling the `EnableHorizontalScrolling` property. The default, value will be `False`.
+The TreeView allows you to enable horizontal scrolling based on the content by setting the `EnableHorizontalScrolling` property to `True`. By default, this property is set to `False`.
 
 {% tabs %}
-{% highlight xaml%}
-<syncfusion:SfTreeView x:Name="treeView" EnableHorizontalScrolling="True" />
-{% endhighlight %}
-{% highlight c# hl_lines="2" %}
-SfTreeView treeView = new SfTreeView();
-treeView.EnableHorizontalScrolling = true;
+{% highlight xaml hl_lines="2" %}
+<syncfusion:SfTreeView x:Name="treeView" 
+                       EnableHorizontalScrolling="True" />
 {% endhighlight %}
 {% endtabs %}
