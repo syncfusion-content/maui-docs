@@ -18,9 +18,9 @@ You can customize the footer height `Calendar` by using the `Height` property.
 
 <calendar:SfCalendar  x:Name="calendar"
                       View="Month">
-            <Calendar:SfCalendar.FooterView>
-                <Calendar:CalendarFooterView Height="70" />
-            </Calendar:SfCalendar.FooterView>
+            <calendar:SfCalendar.FooterView>
+                <calendar:CalendarFooterView Height="70" ShowActionButtons="True" ShowTodayButton="True" />
+            </calendar:SfCalendar.FooterView>
 </calendar:SfCalendar>
 
 {% endhighlight %}
@@ -40,9 +40,9 @@ You can display action buttons at the footer of the calendar by using the `ShowA
 
 <calendar:SfCalendar  x:Name="calendar"
                       View="Month">
-            <Calendar:SfCalendar.FooterView>
-                <Calendar:CalendarFooterView ShowActionButtons="true" />
-            </Calendar:SfCalendar.FooterView>
+            <calendar:SfCalendar.FooterView>
+                <calendar:CalendarFooterView ShowActionButtons="true" />
+            </calendar:SfCalendar.FooterView>
 </calendar:SfCalendar>
 
 {% endhighlight %}
@@ -62,9 +62,9 @@ The today button can be displayed at the footer of the calendar using the `ShowT
 
 <calendar:SfCalendar  x:Name="calendar"
                       View="Month">
-            <Calendar:SfCalendar.FooterView>
-                <Calendar:CalendarFooterView ShowTodayButton="True" />
-            </Calendar:SfCalendar.FooterView>
+            <calendar:SfCalendar.FooterView>
+                <calendar:CalendarFooterView ShowTodayButton="True" />
+            </calendar:SfCalendar.FooterView>
 </calendar:SfCalendar>
 
 {% endhighlight %}
@@ -77,16 +77,16 @@ this.calendar.FooterView.ShowTodayButton = true;
 
 ## Set the Divider color
 
-The SfCalendar control allows you to customize the footer divider color by setting the DividerColor property of the CalendarFooterView.
+You can customize the footer divider color by setting the `DividerColor` property of the `CalendarFooterView`.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
 <calendar:SfCalendar  x:Name="calendar"
                       View="Month">
-            <Calendar:SfCalendar.FooterView>
-                <Calendar:CalendarFooterView DividerColor="Red" />
-            </Calendar:SfCalendar.FooterView>
+            <calendar:SfCalendar.FooterView>
+                <calendar:CalendarFooterView DividerColor="Red" ShowActionButtons="True" ShowTodayButton="True" />
+            </calendar:SfCalendar.FooterView>
 </calendar:SfCalendar>
 
 {% endhighlight %}
@@ -99,14 +99,14 @@ this.calendar.FooterView.Height = 70;
 
 ## Customization of the footer 
 
-Customize the footer text style and background color of the Calendar using the TextStyle and Background properties of the CalendarFooterView.
+You can customize the footer text style and background color of the Calendar footer view using the `TextStyle` and `Background` properties of the `CalendarFooterView`.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
 <calendar:SfCalendar x:Name="calendar" >
     <calendar:SfCalendar.FooterView >
-        <calendar:CalendarFooterView Background="#D3D3D3">
+        <calendar:CalendarFooterView Background="#D3D3D3" ShowActionButtons="True" ShowTodayButton="True" >
             <calendar:CalendarFooterView.TextStyle >
                 <calendar:CalendarTextStyle FontSize="15" TextColor="Black" />
             </calendar:CalendarFooterView.TextStyle>
