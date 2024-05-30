@@ -100,6 +100,9 @@ The [LabelStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Char
 * `TextColor` - Gets or sets the color for the text of the label.
 * `LabelFormat` - Gets or sets the label format. This property is used to set numeric or date-time format to the chart axis label.
 * `LabelAlignment` - Gets or sets the axis label at start, end, and center positions.
+* `MaxWidth` - Gets or sets the wrap width of the axis labels.
+* `WrappedLabelAlignment` - Gets or sets the horizontal rendering position of the wrapped axis labels. The default value is `Start`; other available values are `Center` and `End`.
+
 
 ## Edge Labels Drawing Mode
 
@@ -209,3 +212,39 @@ chart.XAxes.Add(primaryAxis);
 {% endhighlight %}
 
 {% endtabs %}
+
+## Smart Axis Labels
+
+Axis labels may overlap with each other based on chart dimensions and label size. The [LabelsIntersectAction]() property of axis is used to avoid overlapping of axis labels. The default value of the LabelsIntersectAction is `Hide`; other available values are `MultipleRows`, `None`, and `Wrap`.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<chart:SfCartesianChart>
+. . .
+    <chart:SfCartesianChart.XAxes>
+       <chart:CategoryAxis LabelsIntersectAction="MultipleRows" />
+    </chart:SfCartesianChart.XAxes>
+
+</chart:SfCartesianChart>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+SfCartesianChart chart = new SfCartesianChart();
+. . .
+CategoryAxis primaryAxis = new CategoryAxis()
+{
+    LabelsIntersectAction = AxisLabelsIntersectAction.MultipleRows,
+};
+ chart.XAxes.Add(primaryAxis);
+ 
+{% endhighlight %}
+
+{% endtabs %}
+
+![Smart axis lable support in .NET MAUI SfCartesianChart.](axis_images/maui_chart_smart_axis_labels.png)
+
+N> If the [LabelsIntersectAction]() is set to Wrap, we should set the width of the wrap using the [MaxWidth]() property. We can align the wrapped axis label using the [WrappedLabelAlignment]() property.
