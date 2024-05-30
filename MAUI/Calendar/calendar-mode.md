@@ -9,7 +9,7 @@ documentation: ug
 
 # Calendar mode in .NET MAUI Calendar (SfCalendar)
 
-The Calendar mode is specified in the calendar property enumeration, which is used to display the calendar based on the modes. It offers three modes: `Default`, `Dialog`, and `RelativeDialog`. The default calendar mode is `Default` in the `SfCalendar`.
+The Calendar mode is specified in the calendar property enumeration, which is used to display the calendar based on the modes. It offers three modes: `Default`, `Dialog`, and `RelativeDialog`. The default calendar mode in the `SfCalendar` is `Default`.
 
 ## Dialog Mode
 
@@ -39,7 +39,7 @@ this.Content = calendar;
 
 The Calendar can be opened programmatically by setting the `IsOpen` property to `true` of `SfCalendar`. By default, the `IsOpen` property is `false`.
 
-Note: This property is automatically changed to `false` when you close the dialog by clicking outside of it.
+N> This property is automatically changed to `false` when you close the dialog by clicking outside of it.
 
 {% tabs %}
 
@@ -74,12 +74,11 @@ private void Button_Clicked(object sender, System.EventArgs e)
 
 ## Relative Dialog Mode
 
-The relative dialog mode displays the calendar in a pop-up by setting the `Mode` property to `RelativeDialog`. It is used to align the calendar in a specific position. You can set the position by setting the `RelativePosition` property in the `SfCalendar`.
+The relative dialog mode displays the calendar in a pop-up by setting the `Mode` property to `RelativeDialog`. It is used to align the calendar in a specific position. You can set the position by using the `RelativePosition` property in the `SfCalendar`.
 
 ### Relative position
 
-The `RelativePosition` is specified in the calendar property enumeration, which is used to align the calendar in a specific position. It provides eight positions such as `AlignTop`, `AlignToLeftOf`, `AlignToRightOf`, `AlignBottom`, `AlignTopLeft`, `AlignTopRight`, `AlignBottomLeft`, and `AlignBottomRight`. The default relative position is `AlignTop` in the `SfCalendar`.
-
+The `RelativePosition` is specified in the calendar property enumeration, which is used to align the calendar in a specific position. It provides eight positions such as `AlignTop`, `AlignToLeftOf`, `AlignToRightOf`, `AlignBottom`, `AlignTopLeft`, `AlignTopRight`, `AlignBottomLeft`, and `AlignBottomRight`. The default relative position in the `SfCalendar` is `AlignTop`.
 
 The Calendar can be opened programmatically by setting the `IsOpen` property to `true` of `SfCalendar`. By default, the `IsOpen` property is `false`.
 
