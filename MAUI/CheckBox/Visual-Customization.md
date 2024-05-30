@@ -217,7 +217,7 @@ The `LineBreakMode` allows you to wrap or truncate the text. The default value o
     StackLayout stackLayout = new StackLayout();
     SfCheckBox  sfCheckBox  = new SfCheckBox();
     sfCheckBox.Text = "The LineBreakMode allows you to wrap or truncate the text.";
-    sfCheckBox.LineBreakMode = "WordWrap";
+    sfCheckBox.LineBreakMode = LineBreakMode.WordWrap;
     sfCheckBox.WidthRequest = 200;
     stackLayout.Children.Add(sfCheckBox);
 

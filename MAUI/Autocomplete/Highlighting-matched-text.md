@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Header and Footer in MAUI Autocomplete control | Syncfusion
-description: Learn about Header and Footer support in Syncfusion MAUI Autocomplete (SfAutocomplete) control and more details.
+title: Highlighting matched text in .NET MAUI SfAutoComplete control | Syncfusion
+description: Learn about Highlighting matched text in .NET MAUI SfAutoComplete (SfAutocomplete) control and more details.
 platform: maui
 control: SfAutocomplete
 documentation: ug

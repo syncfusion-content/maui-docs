@@ -132,7 +132,7 @@ The `LineBreakMode` allows you to wrap or truncate the text. The default value o
     StackLayout stackLayout = new StackLayout();
     SfRadioButton radioButton = new SfRadioButton();
 	radioButton.Text = "The LineBreakMode allows you to wrap or truncate the text.";
-	radioButton.LineBreakMode = "WordWrap";
+	radioButton.LineBreakMode = LineBreakMode.WordWrap;
 	radioButton.WidthRequest = 200;
 	stackLayout.Children.Add(radioButton);
 
