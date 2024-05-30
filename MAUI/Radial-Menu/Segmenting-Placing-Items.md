@@ -7,7 +7,7 @@ control: RadialMenu (SfRadialMenu)
 documentation: ug
 ---
 
-# Segmenting and Placing the Items in .NET MAUI Radial Menuu (SfRadialMenu)
+# Segmenting and Placing the Items in .NET MAUI Radial Menu
 
 There are two different layout types available for radial menu:
 
