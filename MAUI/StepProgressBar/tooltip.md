@@ -23,24 +23,24 @@ The tooltip text for a step view can be set using the [ToolTipText]() property f
 N> The tooltip is shown only when the [ToolTipText]() is provided.
 
 {% tabs %}
-{% highlight XAML hl_lines="3" %}
+{% highlight XAML hl_lines="4" %}
 
 <stepProgressBar:SfStepProgressBar
                     x:Name="stepProgress"
                     Orientation="Horizontal"
                     ShowToolTip="True"
-                    ItemsSource="{Binding StepProgressItems}">
+                    ItemsSource="{Binding StepProgressItem}">
 </stepProgressBar:SfStepProgressBar>                                                             
 <ContentPage.BindingContext>
     <local:ViewModel />
 </ContentPage.BindingContext>
 
 {% endhighlight %}
-{% highlight C# hl_lines="4" %}
+{% highlight C# hl_lines="5" %}
 
 SfStepProgressBar stepProgressBar = new SfStepProgressBar();
 ViewModel viewModel = new ViewModel();
-stepProgressBar.ItemsSource = viewModel.StepProgressBarItems;
+stepProgressBar.ItemsSource = viewModel.StepProgressItem;
 stepProgressBar.Orientation = StepProgressBarOrientation.Horizontal;
 stepProgressBar.ShowToolTip = true;
 this.Content = stepProgressBar;
@@ -104,7 +104,7 @@ To customize the appearance of the tooltip in the [SfStepProgressBar]() using [T
 {% highlight XAML hl_lines="4 5 6 7 8 9 10 11 12 13 14 15" %}
 
 <stepProgressBar:SfStepProgressBar x:Name="stepProgressBar"
-                    ItemsSource="{Binding StepProgressBarItems}"
+                    ItemsSource="{Binding StepProgressItem}"
                     Orientation="Horizontal"
                     ShowToolTip="True">
     <stepProgressBar:SfStepProgressBar.ToolTipSettings>
@@ -128,7 +128,7 @@ To customize the appearance of the tooltip in the [SfStepProgressBar]() using [T
 
 SfStepProgressBar stepProgressBar = new SfStepProgressBar();
 ViewModel viewModel = new ViewModel();
-stepProgressBar.ItemsSource = viewModel.StepProgressBarItems;
+stepProgressBar.ItemsSource = viewModel.StepProgressItem;
 stepprogressBar.Orientation = StepProgressBarOrientation.Horizontal;
 stepProgressBar.ShowToolTip = true;
 stepProgressBar.ToolTipSettings = new StepProgressBarToolTipSettings() { Background = Brush.Blue, Stroke = Brush.Red, Duration = new TimeSpan(0, 0, 10), TextStyle = new stepProgressBarTextStyle() { TextColor = Colors.White, FontSize = 14, FontAttributes = FontAttributes.Italic } };
@@ -183,10 +183,10 @@ You can customize the tooltip appearance by using the [ToolTipTemplate]() proper
 The following code example shows the usage of DataTemplate.
 
 {% tabs %}
-{% highlight XAML hl_lines="3 4 5 6 7 8 9 10 11 12 13 14 15 16 17" %}
+{% highlight XAML hl_lines="4 5 6 7 8 9 10 11 12 13 14 15 16 17" %}
 
 <stepProgressBar:SfStepProgressBar x:Name="stepProgressBar"
-                    ItemsSource="{Binding StepProgressBarItems}"
+                    ItemsSource="{Binding StepProgressItem}"
                     Orientation="Horizontal"
                     ShowToolTip="True">
     <progressBar:SfStepProgressBar.ToolTipTemplate>
@@ -211,9 +211,32 @@ The following code example shows the usage of DataTemplate.
 
 SfStepProgressBar stepProgressBar = new SfStepProgressBar();
 ViewModel viewModel = new ViewModel();
-stepProgressBar.ItemsSource = viewModel.ItemsSource;
 stepProgressBar.Orientation = StepProgressBarOrientation.Horizontal;
 stepProgressBar.ShowToolTip = true;
+stepProgressBar.ItemsSource = viewModel.StepProgressItem;
+DataTemplate toolTipTemplate = new DataTemplate(() =>
+{
+    var stackLayout = new StackLayout();
+    stackLayout.Orientation = StackOrientation.Horizontal;
+    Image image = new Image
+    {
+        Source = "info.png",
+        WidthRequest = 20,
+        HeightRequest = 20
+    };
+    var label = new Label
+    {
+        TextColor = Colors.White,
+        Padding = new Thickness(5, 0, 0, 0),
+        VerticalOptions = LayoutOptions.Center
+    };
+    label.SetBinding(Label.TextProperty, "ToolTipText");
+    stackLayout.Children.Add(image);
+    stackLayout.Children.Add(label);
+    return stackLayout;
+});
+
+stepProgressBar.ToolTipTemplate = toolTipTemplate;
 this.Content = stepProgressBar;
 
 {% endhighlight %}
