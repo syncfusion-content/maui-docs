@@ -2,14 +2,14 @@
 layout: post
 title: Display Types in Maui Digital Gauge control | Syncfusion
 description: Learn here all about Display Types support in Syncfusion Maui Digital Gauge (SfDigitalGauge) control and more.
-platform: Maui
+platform: MAUI
 control: DigitalGauge
 documentation: ug
 ---
 
 # Display Types in Maui Digital Gauge (SfDigitalGauge)
 
-The digital gauge displays numbers, alphabet, and special characters, which are given in the value property.
+The digital gauge displays numbers, alphabet, and special characters, which are given in the text property.
 
 ## Setting value to number
 

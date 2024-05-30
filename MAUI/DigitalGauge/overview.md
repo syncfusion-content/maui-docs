@@ -2,7 +2,7 @@
 layout: post
 title: About Maui Digital Gauge control | Syncfusion
 description: Learn here all about introduction of Syncfusion Maui Digital Gauge (SfDigitalGauge) control, its elements and more.
-platform: Maui
+platform: MAUI
 control: DigitalGauge
 documentation: ug
 ---

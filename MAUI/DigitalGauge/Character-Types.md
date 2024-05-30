@@ -2,7 +2,7 @@
 layout: post
 title: Character Types in Maui Digital Gauge control | Syncfusion
 description: Learn here all about Character Types support in Syncfusion Maui Digital Gauge (SfDigitalGauge) control and more.
-platform: Maui
+platform: MAUI
 control: DigitalGauge
 documentation: ug
 ---

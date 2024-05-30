@@ -260,7 +260,7 @@ SfDigitalGauge digital = new SfDigitalGauge();
 </tr>
 </table>
 
-The following code example explains how to initialize the charactertype in Xamarin SfDigitalGauge and .NET MAUI SfDigitalGauge.
+The following code example explains how to initialize the character type in Xamarin SfDigitalGauge and .NET MAUI SfDigitalGauge.
 
 <table>
 <tr>

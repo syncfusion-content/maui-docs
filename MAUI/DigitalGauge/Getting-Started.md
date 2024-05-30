@@ -2,7 +2,7 @@
 layout: post
 title: Getting Started with Maui Digital Gauge control | Syncfusion
 description: Learn here about getting started with Syncfusion Maui Digital Gauge (SfDigitalGauge) control, its elements and more.
-platform: Maui
+platform: MAUI
 control: DigitalGauge
 documentation: ug
 ---
@@ -137,7 +137,7 @@ The `CharacterHeight`, `CharacterWidth`, and `CharacterStroke`properties are use
 
        <gauge:SfDigitalGauge  CharacterHeight="60" CharacterWidth="25" 
                                                     
-                          CharacterStrokeColor="#146CED"/>
+                          CharacterStroke="#146CED"/>
 
 
 {% endhighlight %}
@@ -150,7 +150,7 @@ The `CharacterHeight`, `CharacterWidth`, and `CharacterStroke`properties are use
 
             digital.CharacterWidth = 25;
 
-            digital.CharacterStrokeColor = Color.FromRgb(20, 108, 237);
+            digital.CharacterStroke = Color.FromRgb(20, 108, 237);
 
 {% endhighlight %}
 
@@ -170,11 +170,11 @@ The following code example is the complete code of the previous configurations.
              x:Class="SampleBrowser.Maui.Gauges.SfDigitalGauge.GettingStarted">
 
             <gauge:SfDigitalGauge Text="1234"
-                                CharacterStroke="LightBlue"
+                                CharacterStroke="Blue"
                                 DisabledSegmentStroke="LightGreen"
                                 CharacterHeight="50"
                                 CharacterWidth="40"
-                                StrokeWidth="40"
+                                StrokeWidth="2"
                                 CharacterType="SevenSegment"/>
          </ContentPage>
 
