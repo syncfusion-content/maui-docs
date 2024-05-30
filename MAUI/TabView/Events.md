@@ -44,7 +44,7 @@ private void TabView_TabItemTapped(object sender, TabItemTappedEventArgs e)
 
 ## Selection Changing event
 
-The `SelectionChanging` event notifies before the selection changes, triggered by swiping, tapping the tab header, and dynamically setting the [`SelectedIndex`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html?tabs=tabid-1#Syncfusion_Maui_TabView_SfTabView_SelectedIndex) property of SfTabView. The `SelectionChangingEventArgs` provides the following properties:
+The `SelectionChanging` event notifies before the selection changes, tapping the tab header, and dynamically setting the [`SelectedIndex`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html?tabs=tabid-1#Syncfusion_Maui_TabView_SfTabView_SelectedIndex) property of SfTabView. The `SelectionChangingEventArgs` provides the following properties:
 
 * `Index` - Gets the index value of the item that is about to be selected. 
 
