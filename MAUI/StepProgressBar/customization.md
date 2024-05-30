@@ -581,7 +581,7 @@ public class ViewModel
 
 ![customize-description-using-datatemplate](images/customization/customize-description-using-datatemplate.png)
 
-## Customize primary snd secondary appearance using DataTemplateSelector
+## Customize primary and secondary text appearance using DataTemplateSelector
 You can customize the appearance of the step descriptions using the [PrimaryTextTemplate]() and [SecondaryTextTemplate]() properties in [SfStepProgressBar](). The DataTemplateSelector can be used to choose a different data template for each step description in the step progress bar based on the step’s data. This allows you to customize the appearance of a particular step description based on certain conditions.
 
 {% tabs %}
