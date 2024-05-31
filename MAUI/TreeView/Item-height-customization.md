@@ -131,6 +131,28 @@ Download the entire source code from GitHub [here](https://github.com/Syncfusion
 
 ![.NET MAUI TreeView Item Height Customization](Images/item-height-customization/maui-treeview-item-height.png)
 
+## Autofit the nodes height based on the content
+
+The `SfTreeView` allows dynamic adjustment of nodes height based on the content loaded in the [SfTreeView.ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ItemTemplate) by setting the `SfTreeView.NodeSizeMode` property to `Dynamic`. The default value is `None`.
+
+The control offers the following two types of `NodeSizeMode`:
+
+ * `Dynamic`: Automatically adjusts the nodes height to fit their content and also resizes the nodes if the content size changes at runtime.
+ * `None`: [SfTreeView.ItemHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ItemHeight)  is used to layout the `SfTreeView` nodes.
+
+{% tabs %}
+{% highlight xaml hl_lines="6" %}
+
+    <ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.TreeView;assembly=Syncfusion.Maui.TreeView">
+    <treeView:SfTreeView x:Name="treeView"
+                     ChildPropertyName="SubFiles"
+                     ItemsSource="{Binding ImageNodeInfo}"
+                     NodeSizeMode="Dynamic">
+</ContentPage>
+{% endhighlight %}
+{% endtabs %}
+
+![.NET MAUI TreeView Item Height Customization](Images/item-height-customization/maui-treeview-nodesizemode.png)
 
 ## Limitations
 

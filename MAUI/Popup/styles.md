@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Styles in .NET MAUI Popup control | Syncfusion
-description: Learn about Styles support in Syncfusion .NET MAUI Popup (SfPopup) control, its elements, and more.
+description: Learn here all about Styles support in the Syncfusion .NET MAUI Popup (SfPopup) control, its elements, and more.
 platform: MAUI
 control: SfPopup
 documentation: ug
@@ -111,23 +111,30 @@ The SfPopup allows customizing the footer appearance using the following propert
 <td> {{'[DeclineButtonTextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupStyle.html#Syncfusion_Maui_Popup_PopupStyle_DeclineButtonTextColor)'| markdownify }} </td>
 <td> Gets or sets the foreground color for the Decline button in the footer.</td>
 </tr>
+<td>
+<code>FooterButtonCornerRadius</code>
+</td>
+<tr>
+<td> Gets or sets the corner radius of the accept and decline buttons in the footer. The default value is 20.</td>
+</tr>
 </table>
 
 Refer to the following code example for customizing the footer elements.
 
 {% tabs %}
-{% highlight xaml hl_lines="3 4 5 6 7" %}
+{% highlight xaml hl_lines="3 4 5 6 7 8" %}
 <sfPopup:SfPopup x:Name="popup" AppearanceMode="TwoButton" ShowFooter="True" >
     <sfPopup:SfPopup.PopupStyle>
         <sfPopup:PopupStyle FooterBackground="LightGray"
                             AcceptButtonBackground ="DimGray"
                             AcceptButtonTextColor="White"
                             DeclineButtonBackground="DimGray"
-                            DeclineButtonTextColor="White" />
+                            DeclineButtonTextColor="White"
+                            FooterButtonCornerRadius ="0,20,20,0"/>
     </sfPopup:SfPopup.PopupStyle>
 </sfPopup:SfPopup>
 {% endhighlight %}
-{% highlight c# hl_lines="14 15 16 17 18" %}
+{% highlight c# hl_lines="14 15 16 17 18 19" %}
 public partial class MainPage : ContentPage
 {
     SfPopup popup;
@@ -146,6 +153,7 @@ public partial class MainPage : ContentPage
         popup.PopupStyle.AcceptButtonTextColor = Color.White;
         popup.PopupStyle.DeclineButtonBackground = Color.FromRgb(105, 105, 105);
         popup.PopupStyle.DeclineButtonTextColor = Color.White;
+        popup.PopupStyle.FooterButtonCornerRadius = new CornerRadius(0,20,20,0);
     }
 }
 {% endhighlight %}

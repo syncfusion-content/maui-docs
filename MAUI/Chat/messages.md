@@ -1274,7 +1274,7 @@ By default, the keyboard will be open in view, even after a message is sent or f
 {% endhighlight %}
 {% endtabs %}
 
-## Restricting multi-line input in editor (single line messages) in maui chat
+## Restricting multi-line input in editor (single line messages) in Maui chat
 
 By default, users can input multi-line messages by adding new lines in the editor within the chat control for outgoing messages. However, if you wish to limit multi-line input and display a send button on the keyboard instead, you can achieve this by setting the [AllowMultilineInput](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_AllowMultilineInput) property to `false`.
 
@@ -1365,6 +1365,28 @@ By default, the author’s name and avatar are displayed for the incoming messag
 {% endtabs %}
 
 ![Hide incoming avatar and author visibility in .NET MAUI Chat](images/messages/maui-chat-hide-avatar.png)
+
+## MessageTimestampFormat for Incoming and Outgoing messages
+
+The `SfChat` allows you specify the format in which timestamps are shown for outgoing and incoming messages. The date and time representation can be customized using the [IncomingMessageTimestampFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_IncomingMessageTimestampFormat) and [OutgoingMessageTimestampFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_OutgoingMessageTimestampFormat) properties.
+
+{% tabs %}
+{% highlight xaml hl_lines="4 5" %}
+
+    <sfchat:SfChat x:Name="SfChat"              
+                   Messages="{Binding Messages}"     
+                   CurrentUser="{Binding CurrentUser}"
+                   IncomingMessageTimestampFormat="hh:mm tt"
+                   OutgoingMessageTimestampFormat="hh:mm tt" />
+{% endhighlight %}
+{% highlight c# hl_lines="2 3" %}
+  SfChat sfChat = new SfChat();
+  sfChat.IncomingMessageTimestampFormat = "hh:mm tt";
+  sfChat.OutgoingMessageTimestampFormat = "hh:mm tt";
+{% endhighlight %}
+{% endtabs %}
+
+![MessageTimeStampFormat in .NET MAUI Chat](images/messages/maui-chat-messagetimestampformat.png)
 
 ## Customize the shape of the message
 
