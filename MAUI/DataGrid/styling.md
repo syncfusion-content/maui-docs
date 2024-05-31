@@ -338,7 +338,7 @@ The row header can be customized by the writing style for `DataGridRowHeaderCell
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="Show row header styling in .NET MAUI DataGrid" src="Images\styling\maui-datagrid-show-row-header.png" width="404"/>
+<img alt="Row header styling in .NET MAUI DataGrid" src="Images\styling\maui-datagrid-show-row-header.png" width="404"/>
 
 ### Column Styling 
 You can apply the style for a particular column by using [DataGridColumn.CellStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_CellStyleProperty) and [DataGridColumn.HeaderStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_HeaderStyleProperty) property.
