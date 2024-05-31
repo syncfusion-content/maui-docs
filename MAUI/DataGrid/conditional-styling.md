@@ -626,4 +626,47 @@ public class ColorConverter : IValueConverter
 
 <img alt="Conditional styling for unbound row using converter" src="Images/conditional-styling/maui-datagrid-conditional-unbound-row.png" width="404"/>
 
+## Row header
 
+The appearance of row header can be customized conditionally based on properties using `converter`, where converter returns the value based on various properties.
+
+{% tabs %}
+{% hightlight xaml %}
+ <ContentPage.Resources>
+     <local:CustomConverter x:Key="converter"/>
+     <Style  TargetType= "syncfusion:DataGridRowHeaderCell">
+        <Setter Property="Background" Value="{Binding Converter={StaticResource converter }}"/>
+     </Style>
+ </ContentPage.Resources>
+ <syncfusion:SfDataGrid x:Name="dataGrid"
+                        ShowRowHeader="True"
+                        ColumnWidthMode="Auto"
+                        ItemsSource="{Binding OrderInfoCollection}">
+    <syncfusion:SfDataGrid.RowHeaderTemplate>
+        <DataTemplate>
+            <Label Text="{Binding ID}" HorizontalTextAlignment = "Center" VerticalTextAlignment = "Center"/>
+        </DataTemplate>
+    </syncfusion:SfDataGrid.RowHeaderTemplate>
+</syncfusion:SfDataGrid>
+
+{% endhighlight %}
+{% highlight c# %}
+ public class CustomConverter : IValueConverter
+ {
+     public object Convert(object? value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
+     {
+         var data = value as OrderInfo;
+         if (data?.ID %2 == 0 )
+             return Colors.LightGreen;
+         else
+             return Colors.Beige;
+     }
+     public object ConvertBack(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
+     {
+         return null;
+     }
+ }
+{% endhighlight %}
+{% endtabs %}
+
+<img alt="Conditional styling for unbound row using converter" src="Images/conditional-styling/maui-datagrid-conditional-show-row-header.png" width="404"/>
