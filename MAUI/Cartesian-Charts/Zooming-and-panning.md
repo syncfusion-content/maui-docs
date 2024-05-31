@@ -226,26 +226,26 @@ The [MaximumZoomLevel]() property is used to determine the maximum limit for zoo
 
 {% highlight xml %}
 
-    <chart:SfCartesianChart>
-        <chart:SfCartesianChart.ZoomPanBehavior>
-            <chart:ChartZoomPanBehavior MaximumZoomLevel = "2" />
-        </chart:SfCartesianChart.ZoomPanBehavior>
-        ...
-    </chart:SfCartesianChart>
+<chart:SfCartesianChart>
+    <chart:SfCartesianChart.ZoomPanBehavior>
+        <chart:ChartZoomPanBehavior MaximumZoomLevel = "2" />
+    </chart:SfCartesianChart.ZoomPanBehavior>
+    ...
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
-    ...
-    ChartZoomPanBehavior zooming = new ChartZoomPanBehavior()
-    {
-        MaximumZoomLevel = 2
-    };
+SfCartesianChart chart = new SfCartesianChart();
+...
+ChartZoomPanBehavior zooming = new ChartZoomPanBehavior()
+{
+    MaximumZoomLevel = 2
+};
 
-    chart.ZoomPanBehavior = zooming;
-    ...
+chart.ZoomPanBehavior = zooming;
+...
 
 {% endhighlight %}
 
