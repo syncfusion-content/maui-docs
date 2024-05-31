@@ -140,7 +140,7 @@ To close the popup programmatically, you can call either the [Dismiss](https://h
 Refer to the following code example for dismissing popup.
 
 {% tabs %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="5 8" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="4 7" %}
     
     private void ClickToDismissPopup_Clicked(object sender, EventArgs e)
     {
@@ -171,7 +171,7 @@ By default, choose a layout from the following available layouts in the SfPopup 
 * [OneButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupButtonAppearanceMode.html#Syncfusion_Maui_Popup_PopupButtonAppearanceMode_OneButton): Shows the SfPopup with one button in the footer view. This is the default value.
 * [TwoButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupButtonAppearanceMode.html#Syncfusion_Maui_Popup_PopupButtonAppearanceMode_TwoButton): Shows the SfPopup with two buttons in the footer view.
 
-Also, customize the entire popupview by loading the templates or custom views for the header, body, and footer.
+Also, customize the entire popup view by loading the templates or custom views for the header, body, and footer.
 
 Refer to the following code example for displaying popup with appearance mode.
 
