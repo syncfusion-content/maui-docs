@@ -9,7 +9,7 @@ documentation: ug
 
 # Picker Text display mode in .NET MAUI Picker (SfPicker)
 
-The picker text display mode is specified in the picker property enumeration, which is used to display the picker items based on the modes. It offers four modes: `Default`, `Fade`, `Shrink` and `FadeAndShrink`. The default picker text display mode is `Default` in the [SfPicker].
+The picker text display mode is specified in the picker property enumeration, which is used to display the picker items based on the modes. It offers four modes: `Default`, `Fade`, `Shrink` and `FadeAndShrink`. The default picker text display mode is `Default` in the `SfPicker`.
 
 ## Fade Mode
 

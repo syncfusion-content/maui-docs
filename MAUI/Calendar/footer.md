@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 # Footer in .NET MAUI Calendar (SfCalendar)
-You can customize all the properties of the Footer view using [FooterView]. By using this property, you can customize the Background, Height, DividerColor, TextStyle, ShowActionButtons and ShowTodayButton of the Calendar.
+You can customize all the properties of the Footer view using `FooterView`. By using this property, you can customize the Background, Height, DividerColor, TextStyle, ShowActionButtons and ShowTodayButton of the Calendar.
 
 ## Customize the header height
 You can customize the footer height `Calendar` by using the `Height` property.

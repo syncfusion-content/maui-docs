@@ -9,7 +9,7 @@ documentation: ug
 
 # Date Picker Text display mode in .NET MAUI Date Picker (SfDatePicker)
 
-The date picker text display mode is specified in the date picker property enumeration, which is used to display the date picker items based on the modes. It offers four modes: `Default`, `Fade`, `Shrink` and `FadeAndShrink`. The default date picker text display mode is `Default` in the [SfDatePicker].
+The date picker text display mode is specified in the date picker property enumeration, which is used to display the date picker items based on the modes. It offers four modes: `Default`, `Fade`, `Shrink` and `FadeAndShrink`. The default date picker text display mode is `Default` in the `SfDatePicker`.
 
 ## Fade Mode
 
