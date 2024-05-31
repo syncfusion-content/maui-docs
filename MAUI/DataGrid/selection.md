@@ -558,7 +558,6 @@ By default, the keyboard navigation will be enabled when setting the selection a
 {% endhighlight %}
 {% endtabs %}
 
-
 ## Customize selection behavior
 
 The default keyboard selection behaviors can be customized by setting the instance of the custom `DataGridRowSelectionController` to the `SfDataGrid.SelectionController` property.
@@ -576,8 +575,7 @@ By default, while pressing <kbd>Enter</kbd> key, the current cell will be moved 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-
-    dataGrid.SelectionController = new GridSelectionController(this.dataGrid);
+    dataGrid.SelectionController = new CustomRowSelectionController(this.dataGrid);
 
     public class CustomRowSelectionController : DataGridRowSelectionController
     {
@@ -592,7 +590,6 @@ By default, while pressing <kbd>Enter</kbd> key, the current cell will be moved 
                 {
                     Handled = false
                 };
-
                 base.ProcessKeyDown(tabArgs, isCtrlKeyPressed, isShiftKeyPressed);
             }
         else
@@ -601,7 +598,6 @@ By default, while pressing <kbd>Enter</kbd> key, the current cell will be moved 
         }
     }
 }
-
 {% endhighlight %}
 {% endtabs %}
 
@@ -616,15 +612,13 @@ The following code snippets show how to disable the default enter key behavior i
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-    dataGrid.SelectionController = new GridSelectionController(this.dataGrid);
+    dataGrid.SelectionController = new CustomRowSelectionController(this.dataGrid);
     
-
     public class CustomRowSelectionController : DataGridRowSelectionController
     {
         public CustomRowSelectionController(SfDataGrid dataGrid) : base(dataGrid)
         {
         }
-
         protected override void KeyBehaviorChange(KeyEventArgs args, bool isCtrlKeyPressed, bool isShiftKeyPressed)
         {
             if (args.Key == KeyboardKey.Enter)
@@ -632,7 +626,6 @@ The following code snippets show how to disable the default enter key behavior i
                 args.Handled = false;
                 return;
             }
-
             base.ProcessKeyDown(args, isCtrlKeyPressed, isShiftKeyPressed);
         }
     }
