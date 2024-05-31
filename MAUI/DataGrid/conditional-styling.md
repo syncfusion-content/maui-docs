@@ -674,3 +674,5 @@ The appearance of row header can be customized conditionally based on properties
  }
 {% endhighlight %}
 {% endtabs %}
+
+<img alt="Conditional styling for unbound row using converter" src="Images/conditional-styling/maui-datagrid-conditional-show-row-header.png" width="404"/>
