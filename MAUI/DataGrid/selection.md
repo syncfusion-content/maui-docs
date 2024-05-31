@@ -577,7 +577,7 @@ By default, while pressing <kbd>Enter</kbd> key, the current cell will be moved 
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
 
-        dataGrid.SelectionController = new GridSelectionController(this.dataGrid);
+    dataGrid.SelectionController = new GridSelectionController(this.dataGrid);
 
     public class CustomRowSelectionController : DataGridRowSelectionController
     {
@@ -616,7 +616,7 @@ The following code snippets show how to disable the default enter key behavior i
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-        dataGrid.SelectionController = new GridSelectionController(this.dataGrid);
+    dataGrid.SelectionController = new GridSelectionController(this.dataGrid);
     
 
     public class CustomRowSelectionController : DataGridRowSelectionController
