@@ -923,11 +923,11 @@ The row header is a type of column that is placed as the first cell of each row 
 {% endhighlight %}
 {% endtabs %}
 
-![show row header](Images\column-types\maui-datagrid-show-row-header.png)
+<img alt="Show row header styling in .NET MAUI DataGrid" src="Images\column-types\maui-datagrid-show-row-header.png" width="404"/>
 
 ### Load template in row header
 
-The row header allows you to load template.
+The data template can be loaded to the row header by setting the `SfDataGrid.RowHeaderTemplate` property.
 
 {% tabs %}
 {% highlight xaml %}
@@ -945,7 +945,8 @@ The row header allows you to load template.
 {% endhighlight %}
 {% endtabs %}
 
-![show row header](Images\column-types\maui-datagrid-show-row-header-load-template.png)
+<img alt="Show row header styling in .NET MAUI DataGrid" src="Images\column-types\maui-datagrid-show-row-header-load-template.png" width="404"/>
+
 
 ### Allow null value
 

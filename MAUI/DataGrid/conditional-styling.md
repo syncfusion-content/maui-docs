@@ -664,7 +664,7 @@ The appearance of row header can be customized conditionally based on properties
      }
      public object ConvertBack(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
      {
-         throw new NotImplementedException();
+         return null;
      }
  }
 {% endhighlight %}

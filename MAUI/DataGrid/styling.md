@@ -326,7 +326,7 @@ The unbound row can be customized by the writing style for [DataGridUnboundRowVi
 <img alt="Unbound row styling in .NET MAUI DataGrid" src="Images\styling\maui-datagrid-unbound-row-styling.png" width="404"/>
 
 ### Styling row header
-The row header can be customized by the writing style for DataGridRowHeaderCell Target Type. 
+The row header can be customized by the writing style for `DataGridRowHeaderCell` Target Type. 
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml"%}
