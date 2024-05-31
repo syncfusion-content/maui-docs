@@ -11,32 +11,6 @@ documentation: ug
 
 The picker text display mode is specified in the picker property enumeration, which is used to display the picker items based on the modes. It offers four modes: `Default`, `Fade`, `Shrink` and `FadeAndShrink`. The default picker text display mode is `Default` in the [SfPicker].
 
-## Default Mode
-
-In Default mode, the text color and font size for selected items are white and 14 respectively, while for unselected items they are black and 14.
-
-{% tabs %}
-
-{% highlight xaml tabtitle="XAML" hl_lines="2" %}
-
-<picker:SfPicker x:Name="Picker"
-                 TextDisplayMode="Default"/>
-
-{% endhighlight %}
-
-{% highlight c# tabtitle="C#" hl_lines="3" %}
-
-SfPicker picker = new SfPicker()
-{
-    TextDisplayMode = PickerTextDisplayMode.Default
-};
-
-this.Content = picker;
-
-{% endhighlight %}
-
-{% endtabs %}
-
 ## Fade Mode
 
 The fade mode in the time picker gradually decreases the visibility of unselected items relative to the selected item. This effect is achieved by setting the `TextDisplayMode` property to `Fade` in `SfPicker`.
