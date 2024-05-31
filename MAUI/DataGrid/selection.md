@@ -575,23 +575,23 @@ By default, while pressing <kbd>Enter</kbd> key, the current cell will be moved 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-    dataGrid.SelectionController = new CustomRowSelectionController(this.dataGrid);
+dataGrid.SelectionController = new CustomRowSelectionController(this.dataGrid);
 
-    public class CustomRowSelectionController : DataGridRowSelectionController
+public class CustomRowSelectionController : DataGridRowSelectionController
+{
+    public CustomRowSelectionController(SfDataGrid dataGrid) : base(dataGrid)
     {
-        public CustomRowSelectionController(SfDataGrid dataGrid) : base(dataGrid)
+    }
+    protected override void KeyBehaviorChange(KeyEventArgs args, bool isCtrlKeyPressed, bool isShiftKeyPressed)
+    {
+        if (args.Key == KeyboardKey.Enter)
         {
-        }
-        protected override void KeyBehaviorChange(KeyEventArgs args, bool isCtrlKeyPressed, bool isShiftKeyPressed)
-        {
-            if (args.Key == KeyboardKey.Enter)
+            var tabArgs = new KeyEventArgs(KeyboardKey.Tab)
             {
-                var tabArgs = new KeyEventArgs(KeyboardKey.Tab)
-                {
-                    Handled = false
-                };
-                base.ProcessKeyDown(tabArgs, isCtrlKeyPressed, isShiftKeyPressed);
-            }
+                Handled = false
+            };
+            base.ProcessKeyDown(tabArgs, isCtrlKeyPressed, isShiftKeyPressed);
+        }
         else
         {
             base.ProcessKeyDown(args, isCtrlKeyPressed, isShiftKeyPressed);
@@ -612,22 +612,22 @@ The following code snippets show how to disable the default enter key behavior i
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-    dataGrid.SelectionController = new CustomRowSelectionController(this.dataGrid);
+dataGrid.SelectionController = new CustomRowSelectionController(this.dataGrid);
     
-    public class CustomRowSelectionController : DataGridRowSelectionController
+public class CustomRowSelectionController : DataGridRowSelectionController
+{
+    public CustomRowSelectionController(SfDataGrid dataGrid) : base(dataGrid)
     {
-        public CustomRowSelectionController(SfDataGrid dataGrid) : base(dataGrid)
-        {
-        }
-        protected override void KeyBehaviorChange(KeyEventArgs args, bool isCtrlKeyPressed, bool isShiftKeyPressed)
-        {
-            if (args.Key == KeyboardKey.Enter)
-            {
-                args.Handled = false;
-                return;
-            }
-            base.ProcessKeyDown(args, isCtrlKeyPressed, isShiftKeyPressed);
-        }
     }
+    protected override void KeyBehaviorChange(KeyEventArgs args, bool isCtrlKeyPressed, bool isShiftKeyPressed)
+    {
+        if (args.Key == KeyboardKey.Enter)
+        {
+            args.Handled = false;
+            return;
+        }
+        base.ProcessKeyDown(args, isCtrlKeyPressed, isShiftKeyPressed);
+    }
+}
 {% endhighlight %}
 {% endtabs %}
