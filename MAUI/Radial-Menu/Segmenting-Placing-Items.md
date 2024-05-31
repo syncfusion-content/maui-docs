@@ -185,3 +185,5 @@ namespace RadialSample
 {% endtabs %}
 
 ![VisibleSegment.](images/radialmenuitem-customization/VisibleSegment.png)
+
+N> The `VisibleSegmentsCount` property is only applicable for `Custom` layout.

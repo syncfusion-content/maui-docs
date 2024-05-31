@@ -39,8 +39,7 @@ It highlights the first position of the matching characters in the suggestion li
      IsEditable="True"
      IsFilteringEnabled="True"
      HighlightedTextColor="Red"
-     HighlightedTextFontAttributes="Bold"
-     TextSearchMode="StartsWith" />
+     HighlightedTextFontAttributes="Bold"/>
 
 {% endhighlight %}
 
@@ -49,7 +48,6 @@ It highlights the first position of the matching characters in the suggestion li
 SfComboBox comboBox = new SfComboBox() 
 {
  HeightRequest = 40,
- TextSearchMode = ComboBoxTextSearchMode.StartsWith,
  TextHighlightMode = OccurrenceMode.FirstOccurrence,
  IsEditable =true,
  IsFilteringEnabled = true,

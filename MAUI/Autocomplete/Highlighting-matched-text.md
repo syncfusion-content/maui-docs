@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Highlighting matched text in AutoComplete control | Syncfusion
-description: Learn about Highlighting matched text in .NET MAUI SfAutoComplete (SfAutocomplete) control and more details.
+title: Highlighting matched text in Autocomplete control | Syncfusion
+description: Learn about Highlighting matched text in .NET MAUI SfAutocomplete (SfAutocomplete) control and more details.
 platform: maui
 control: SfAutocomplete
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Highlighting matched text
 
-## Highlighting matched text in .NET MAUI SfAutoComplete
+## Highlighting matched text in .NET MAUI SfAutocomplete
 
 Highlight matching characters in a suggestion list to pick an item with more clarity. There are two ways to highlight the matching text:
 
@@ -37,8 +37,7 @@ It highlights the first position of the matching characters in the suggestion li
       TextMemberPath="Name"
       DisplayMemberPath="Name"
       HighlightedTextColor="Red"
-      HighlightedTextFontAttributes="Bold"
-      TextSearchMode="StartsWith" />
+      HighlightedTextFontAttributes="Bold"/>
 
 {% endhighlight %}
 
@@ -47,7 +46,6 @@ It highlights the first position of the matching characters in the suggestion li
 SfAutocomplete autoComplete = new SfAutocomplete() 
 {
  HeightRequest = 40,
- TextSearchMode = AutocompleteTextSearchMode.StartsWith,
  TextHighlightMode = OccurrenceMode.FirstOccurrence,
  HighlightedTextColor = Colors.Red,
  HighlightedTextFontAttributes = FontAttributes.Bold,

@@ -549,15 +549,13 @@ The drop-down that shows the filtered items will be placed automatically based o
  <editors:SfComboBox x:Name="comboBox"
                          WidthRequest="300"                  
                          ItemsSource="{Binding SocialMedias}"
-                         DropDownPlacement="Top"
-                         TextMemberPath="Name"
-                         DisplayMemberPath="Name"/>
+                         DropDownPlacement="Top"/>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-comboBox.DropDownPlacement = Syncfusion.Maui.Core.DropDownPlacement.Top;
+comboBox.DropDownPlacement = DropDownPlacement.Top;
 
 {% endhighlight %}
 
@@ -575,9 +573,7 @@ The comboBox enables the user to provide padding for the items inside dropdown u
    <editors:SfComboBox x:Name="comboBox"
                          WidthRequest="300"                          
                          ItemsSource="{Binding SocialMedias}"
-                         ItemPadding="10,20,0,0"
-                         TextMemberPath="Name"
-                         DisplayMemberPath="Name"/>
+                         ItemPadding="10,20,0,0"/>
 
 {% endhighlight %}
 
@@ -601,9 +597,7 @@ The `DropdownWidth` property is used to modify the height of the dropdown items.
     <editors:SfComboBox x:Name="comboBox"
                          WidthRequest="300"                            
                          ItemsSource="{Binding SocialMedias}"                           
-                         DropdownWidth="400"
-                         TextMemberPath="Name"
-                         DisplayMemberPath="Name"/>
+                         DropdownWidth="400"/>
 
 {% endhighlight %}
 
@@ -618,7 +612,7 @@ comboBox.DropdownWidth = 400;
 ![.NET MAUI ComboBox DropDownWidth.](Images/UICustomization/DropDownWidth.png)
 
 
-### Suggestion box on focus
+### Show suggestion box on focus
 
 Suggestion box can be shown whenever the control receives focus using the `ShowSuggestionsOnFocus` property. At this time, suggestion list is the complete list of data source.
 
@@ -628,9 +622,7 @@ Suggestion box can be shown whenever the control receives focus using the `ShowS
       <editors:SfComboBox x:Name="comboBox"
                           WidthRequest="300"                            
                           ItemsSource="{Binding SocialMedias}"                           
-                          ShowSuggestionsOnFocus="True"                            
-                          TextMemberPath="Name"
-                          DisplayMemberPath="Name"/>
+                          ShowSuggestionsOnFocus="True"/>
 
 
 {% endhighlight %}
