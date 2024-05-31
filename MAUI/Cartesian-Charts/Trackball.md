@@ -249,17 +249,20 @@ You can customize the appearance of the Trackball label with your own template b
     <chart:LineSeries ItemsSource="{Binding Data1}" 
                       TrackballLabelTemplate ="{StaticResource trackballLabelTemplate}"
                       XBindingPath="XValues"
-                      YBindingPath="YValues"/>
+                      YBindingPath="YValues"
+                      Label="Thomas"/>
 
     <chart:LineSeries ItemsSource="{Binding Data2}" 
                       TrackballLabelTemplate ="{StaticResource trackballLabelTemplate}"
                       XBindingPath="XValues"
-                      YBindingPath="YValues"/>
+                      YBindingPath="YValues"
+                      Label="Elizabeth"/>
 
     <chart:LineSeries ItemsSource="{Binding Data3}" 
                       TrackballLabelTemplate ="{StaticResource trackballLabelTemplate}"
                       XBindingPath="XValues"
-                      YBindingPath="YValues"/>
+                      YBindingPath="YValues"
+                      Label="Andrew"/>
                       
 </chart:SfCartesianChart>
 
@@ -276,16 +279,19 @@ LineSeries series1 = new LineSeries();
 series1.ItemsSource = new ViewModel().Data1;
 series1.XBindingPath = "XValues";
 series1.YBindingPath = "YValues";
+series1.Label = "Thomas";
 
 LineSeries series2 = new LineSeries();
 series2.ItemsSource = new ViewModel().Data2;
 series2.XBindingPath = "XValues";
 series2.YBindingPath = "YValues";
+series2.Label = "Elizabeth";
 
 LineSeries series3 = new LineSeries();
 series3.ItemsSource = new ViewModel().Data3;
 series3.XBindingPath = "XValues";
 series3.YBindingPath = "YValues";
+series3.Label = "Andrew";
 
 DataTemplate trackballLabelTemplate = new DataTemplate(() =>
 {
