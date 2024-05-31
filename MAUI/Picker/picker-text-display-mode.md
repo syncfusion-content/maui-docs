@@ -13,7 +13,7 @@ The picker text display mode is specified in the picker property enumeration, wh
 
 ## Default Mode
 
-In Default mode, for selected items, the text color is white and the font size is 14, and for unselected items, the text color is black and the font size is 14.
+In Default mode, the text color and font size for selected items are white and 14 respectively, while for unselected items they are black and 14.
 
 {% tabs %}
 

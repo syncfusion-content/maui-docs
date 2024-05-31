@@ -13,7 +13,7 @@ The date picker text display mode is specified in the date picker property enume
 
 ## Default Mode
 
-In Default mode, the text color and font size for selected items are white and 14, respectively, while for unselected items, they are black and 14.
+In Default mode, the text color and font size for selected items are white and 14 respectively, while for unselected items they are black and 14.
 
 {% tabs %}
 
