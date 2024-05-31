@@ -627,7 +627,7 @@ public class ColorConverter : IValueConverter
 <img alt="Conditional styling for unbound row using converter" src="Images/conditional-styling/maui-datagrid-conditional-unbound-row.png" width="404"/>
 
 
-## Show row header
+## Row header
 
 The appearance of row header can be customized conditionally based on properties using `converter`, where converter returns the value based on various properties.
 
@@ -643,11 +643,6 @@ The appearance of row header can be customized conditionally based on properties
                         ShowRowHeader="True"
                         ColumnWidthMode="Auto"
                         ItemsSource="{Binding OrderInfoCollection}">
-    <syncfusion:SfDataGrid.Columns>
-        <syncfusion:DataGridTextColumn MappingName="OrderID" />
-        <syncfusion:DataGridTextColumn MappingName="ShipCity" />
-        <syncfusion:DataGridTextColumn MappingName="ShipCountry" />
-    </syncfusion:SfDataGrid.Columns>
     <syncfusion:SfDataGrid.RowHeaderTemplate>
         <DataTemplate>
             <Label Text="{Binding ID}" HorizontalTextAlignment = "Center" VerticalTextAlignment = "Center"/>
@@ -663,9 +658,9 @@ The appearance of row header can be customized conditionally based on properties
      {
          var data = value as OrderInfo;
          if (data?.ID %2 == 0 )
-             return Colors.Red;
+             return Colors.LightGreen;
          else
-             return Colors.Green;
+             return Colors.Beige;
      }
      public object ConvertBack(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
      {
