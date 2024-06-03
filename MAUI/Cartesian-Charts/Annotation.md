@@ -9,9 +9,9 @@ documentation: ug
 
 # Annotation in .NET MAUI Chart
 
-[SfCartesianChart]() supports annotations that allow you to mark specific areas of interest in the chart area. It allows you to add text, images, and custom views.
+[SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html?tabs=tabid-1) supports annotations that allow you to mark specific areas of interest in the chart area. It allows you to add text, images, and custom views.
 
-The following annotations are supported in [SfCartesianChart]():
+The following annotations are supported in [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html?tabs=tabid-1):
 
 * Text annotation
 * Shape annotation
@@ -77,7 +77,7 @@ To position the annotation based on pixel values, set the [CoordinateUnit]() val
 
         <chart:SfCartesianChart.Annotations>
         
-        <chart:RectangleAnnotation X1="10" Y1="105" X2="300" Y2="200" Text="Pixel value" CoordinateUnit="Pixel"/>
+        <chart:RectangleAnnotation X1="0" Y1="100" X2="300" Y2="400" Text="Pixel value" CoordinateUnit="Pixel"/>
 
     </chart:SfCartesianChart.Annotations>
 
@@ -91,10 +91,10 @@ To position the annotation based on pixel values, set the [CoordinateUnit]() val
         
         var rectangle = new RectangleAnnotation()
         {
-            X1 = 10,
-            Y1 = 105,
+            X1 = 0,
+            Y1 = 100,
             X2 = 300,
-            Y2 = 200,
+            Y2 = 400,
             CoordinateUnit = ChartCoordinateUnit.Pixel,
             Text = "Pixel value"
         };
