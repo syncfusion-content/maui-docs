@@ -324,7 +324,7 @@ The [EllipseAnnotation]() is used to draw an oval or a circle at specific points
 
 ![Ellipse annotation in MAUI Chart](Annotation_image/Ellipse_annotation.png)
 
-N> When the [X2]() and [Y2]() properties of the [EllipseAnnotation]() are set, the [Height]() and [Width]() properties do not work.
+N> When the [X2]() and [Y2]() properties of the [EllipseAnnotation]() are set, the [Height]() and [Width]() properties become ineffective.
 
 ## Line annotation
 
@@ -458,7 +458,7 @@ The [VerticalLineAnnotation]() and [HorizontalLineAnnotation]() are used to draw
 
 ## Displaying axis label for vertical and horizontal line annotations
 
-The [VerticalLineAnnotation]() and [HorizontalLineAnnotation]() display the axis labels where the line is placed. This feature can be enabled by setting the [ShowAxisLabel]() property to true, as shown in the code snippet below:
+The [VerticalLineAnnotation]() and [HorizontalLineAnnotation]() display the axis labels where the line is placed. The [ShowAxisLabel]() property is used to show or hide the axis’s label. This feature can be enabled by setting the [ShowAxisLabel]() property to true, as shown in the code snippet below:
 
 {% tabs %}
 
