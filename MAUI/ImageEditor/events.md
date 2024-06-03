@@ -64,9 +64,13 @@ N> This is common for Shape and Text annotations.
 
 {% endtabs %}
 
-## ID Support for annotation event
+## ID Support for annotation
 
-In ImageEditor, the Unique ID is generated for all annotations (Text, Shapes, Paths, and CustomViews) when they are added to the image editor and you can get this Unique ID from the ItemsSelected event arguments or from the serialized JSON. By passing this Unique ID to the SelectShape method of SfImageEditor, you can select the particular annotation programmatically.
+In ImageEditor, a unique ID is generated for all annotations (Text, Shapes, Paths, and CustomViews) when they are added to the image editor. You can retrieve this unique ID from the ItemsSelected event arguments or from the serialized JSON.
+
+## Select a particular annotation programmatically using annotation ID
+
+By passing the unique ID of an annotation to the SelectAnnotation method of SfImageEditor, you can select the particular annotation programmatically.
 
 {% tabs %}
 
