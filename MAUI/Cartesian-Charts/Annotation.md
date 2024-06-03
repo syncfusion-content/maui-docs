@@ -1,4 +1,4 @@
----
+![image](https://github.com/syncfusion-content/maui-docs/assets/103025761/268d28cc-c1f9-4214-a7d5-55be98ca3134)![image](https://github.com/syncfusion-content/maui-docs/assets/103025761/eb9b370f-058e-4532-aa56-c5d4672ef9c9)---
 layout: post
 title: Annotation in .NET MAUI Chart control | Syncfusion
 description: Learn here all about annotation support and its features in Syncfusion .NET MAUI Chart (SfCartesianChart) control.
@@ -213,12 +213,12 @@ The [TextAnnotation]() can be customized using the [LabelStyle]() property. The 
 * [FontFamily]() -  Gets or sets the font family name for the label.
 * [FontAttributes]() - Gets or sets the font style for the label.
 * [FontSize]() - Gets or sets the font size for the label.
-* [HorizontalTextAlignment]() - Gets or sets the text horizontally at the Start, Center, or End.
-* [VerticalTextAlignment]() - Gets or sets the text vertically at the Start, Center, or End.
-
+* [HorizontalTextAlignment]() - Gets or sets the horizontal alignment of the label.
+* [VerticalTextAlignment]() - Gets or sets the vertical alignment of the label.
+  
 ## Shape annotation
 
-The [ShapeAnnotation]() allows you to add annotations in the form of shapes such as rectangles, ellipses,lines, horizontal lines, vertical lines, at specific areas of interest in the chart area.
+The [ShapeAnnotation]() allows you to add annotations in the form of shapes such as rectangles, ellipses, lines, horizontal lines, vertical lines, at specific areas of interest in the chart area.
 
 * [RectangleAnnotation]() -Used to draw a rectangle over the chart area.
 * [EllipseAnnotation]() - Used to draw a circle or an ellipse over the chart area.
@@ -409,7 +409,7 @@ The [VerticalLineAnnotation]() and [HorizontalLineAnnotation]() are used to draw
 
 ## Displaying axis label for vertical and horizontal line annotations
 
-The [VerticalLineAnnotation]() and [HorizontalLineAnnotation]() allow for the display of axis labels at the line's position using the [ShowAxisLabel]() property. The default value of the [ShowAxisLabel]() property is false. as shown in the code snippet below:
+The [VerticalLineAnnotation]() and [HorizontalLineAnnotation]() allow for the display of axis labels at the line's position using the [ShowAxisLabel]() property. The default value of the [ShowAxisLabel]() property is 'false' as shown in the code snippet below:
 
 {% tabs %}
 
@@ -557,7 +557,7 @@ For all shape annotations, the text can be displayed using the [Text]() property
 
 ## Text customization in shape annotation
 
-The [Text]() in shape annotation also can be customized by using the [LabelStyle]() property. The [LabelStyle]() property provides options to customize the font-family, font-size, font-attributes and text color of axis labels. The following properties are used to customize the text:
+The [Text]() in shape annotation also can be customized by using the [LabelStyle]() property. The [LabelStyle]() property provides options to customize the font-family, font-size, font-attributes and text color of axis labels.
 
 * [TextColor]() - Gets or sets the text color of the label.
 * [Background]() - Gets or sets the background color of the labels.
@@ -565,9 +565,9 @@ The [Text]() in shape annotation also can be customized by using the [LabelStyle
 * [FontFamily]() - Gets or sets the font family name for the label.
 * [FontAttributes]() - Gets or sets the font style for the label.
 * [FontSize]() - Gets or sets the font size for the label.
-* [HorizontalTextAlignment]() - Gets or sets the text horizontally at the Start, Center, or End.
-* [VerticalTextAlignment]() - Gets or sets the text vertically at the Start, Center, or End.
-
+* [HorizontalTextAlignment]() -  Gets or sets the horizontal alignment of the label.
+* [VerticalTextAlignment]() - Gets or sets the vertical alignment of the label.
+  
 ## View annotation
 
 The [ViewAnnotation]() allows you to add annotations in the form of your own custom view using the [View]() property at a specific area of interest in the chart area. Additionally, the [ViewAnnotation]() can be aligned using the [VerticalAlignment]() and [HorizontalAlignment]() properties.
