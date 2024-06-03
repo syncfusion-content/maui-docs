@@ -344,6 +344,7 @@ saveGroup.Items.Add(new ImageEditorToolbarItem() { Name = "Share", View = image 
 
 ## Add a Toolbar Item with the Text
 
+Users can customize each toolbar item and its appearance, including the option to display text alongside icons for enhanced usability.
 Add the text to the [`ImageEditorToolbar`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorToolbar.html) manually.
 
 {% tabs %}
