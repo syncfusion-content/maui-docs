@@ -1,4 +1,3 @@
-![image](https://github.com/syncfusion-content/maui-docs/assets/103025761/268d28cc-c1f9-4214-a7d5-55be98ca3134)![image](https://github.com/syncfusion-content/maui-docs/assets/103025761/eb9b370f-058e-4532-aa56-c5d4672ef9c9)---
 layout: post
 title: Annotation in .NET MAUI Chart control | Syncfusion
 description: Learn here all about annotation support and its features in Syncfusion .NET MAUI Chart (SfCartesianChart) control.
