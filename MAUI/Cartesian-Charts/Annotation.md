@@ -107,7 +107,7 @@ To position the annotation based on pixel values, set the [CoordinateUnit]() val
 
 {% endtabs %}
 
-![Annotation in pixel value in MAUI Chart](Annotation_image/Annotation_with_pixel.png)
+![Annotation in pixel value in MAUI Chart](Annotation_image/Rectangle_with_pixel.png)
 
 ## Adding annotation for multiple axes
 
