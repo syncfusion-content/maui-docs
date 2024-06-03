@@ -141,6 +141,69 @@ this.Content = chart;
 
 ![DataLabel context in MAUI Chart](DataLabel_images/maui_chart_datalabel_context.png)
 
+## Connector line style
+
+This feature is used to customize the connector line. The following [ConnectorLineStyle]() property are used to customize the connector line.
+
+* [Stroke]() – used to change the color of the line
+* [StrokeWidth]() – used to change the stroke thickness of the line
+* [StrokeDashArray]() – used to set the dashes for the line
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<chart:SfCircularChart>
+
+<chart:PieSeries ItemsSource ="{Binding Data}" 
+                    XBindingPath="XValue" 
+                    YBindingPath="YValue"
+                    ShowDataLabels="True">
+    <chart:PieSeries.DataLabelSettings>
+            <chart:CircularDataLabelSettings LabelPosition="Outside" >
+                <chart:CircularDataLabelSettings.ConnectorLineSettings>
+                    <chart:ConnectorLineStyle Stroke="Red" StrokeWidth="2" />
+                </chart:CircularDataLabelSettings.ConnectorLineSettings>
+            </chart:CircularDataLabelSettings>
+    </chart:PieSeries.DataLabelSettings>
+</chart:PieSeries>
+
+</chart:SfCircularChart>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+SfCircularChart chart = new SfCircularChart();
+. . .
+PieSeries series = new PieSeries()
+{
+    ItemsSource = viewModel.Data,
+    XBindingPath = "XValue",
+    YBindingPath = "YValue",
+    ShowDataLabels = true,
+};
+
+var connectorLineStyle = new ConnectorLineStyle
+{
+    Stroke = new SolidColorBrush(Colors.Red),
+    StrokeWidth = 2
+};
+series.DataLabelSettings = new CircularDataLabelSettings()
+{
+    LabelPosition="Outside"
+    ConnectorLineSettings = connectorLineStyle
+};
+
+chart.Series.Add(series);
+this.Content = chart;
+        
+{% endhighlight %}
+
+{% endtabs %}
+
+![Connector line style in MAUI Chart](DataLabel_images/)
+
 ## LabelTemplate
 
 The [SfCircularChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCircularChart.html) provides support to customize the appearance of the data label using the [LabelTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_LabelTemplate) property.
@@ -234,11 +297,11 @@ This feature is used to arrange the data labels smartly and avoid the intersecti
 
 By default, value for [SmartLabelAlignment]() property [Shift]().
 
-If the [LabelPlacement](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartDataLabelSettings.html?tabs=tabid-5%2Ctabid-3%2Ctabid-1#Syncfusion_Maui_Charts_ChartDataLabelSettings_LabelPlacement) is [Inner](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DataLabelPlacement.html#Syncfusion_Maui_Charts_DataLabelPlacement_Inner) and the [SmartLabelAlignment]() is [Shift](), then the overlapped labels will shift to outside the slices and arrange smartly. If the [LabelPlacement](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartDataLabelSettings.html#Syncfusion_Maui_Charts_ChartDataLabelSettings_LabelPlacement) is [Inner](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DataLabelPlacement.html#Syncfusion_Maui_Charts_DataLabelPlacement_Inner) and the [SmartLabelAlignment]() is [Hide](), then the overlapped labels will be hidden.
+If the [LabelPosition]() is [Inside]() and the [SmartLabelAlignment]() is [Shift](), then the overlapped labels will shift to outside the slices and arrange smartly. If the [LabelPosition]() is [Inside]() and the [SmartLabelAlignment]() is [Hide](), then the overlapped labels will be hidden.
 
-If the [LabelPlacement](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartDataLabelSettings.html#Syncfusion_Maui_Charts_ChartDataLabelSettings_LabelPlacement) is [Outer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DataLabelPlacement.html#Syncfusion_Maui_Charts_DataLabelPlacement_Outer) and the [SmartLabelAlignment]() is [Shift](), then the overlapped labels arrange smartly. If the [LabelPlacement]() is [Outer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DataLabelPlacement.html#Syncfusion_Maui_Charts_DataLabelPlacement_Outer) and the [SmartLabelAlignment]() is [Hide](), then the overlapped labels will be hidden.
+If the [LabelPosition]() is [Outside]() and the [SmartLabelAlignment]() is [Shift](), then the overlapped labels arrange smartly. If the [LabelPosition]() is [Outside]() and the [SmartLabelAlignment]() is [Hide](), then the overlapped labels will be hidden.
 
-If the [SmartLabelAlignment]() is [None](), then the overlapped labels will be visible irrespective of LabelPlacement.
+If the [SmartLabelAlignment]() is [None](), then the overlapped labels will be visible irrespective of LabelPosition.
 
 When the [SmartLabelAlignment]() is [Shift](), and if the data label goes out of the chart area, then the labels got trimmed and the tooltip is shown when clicking/tapping the data label. 
 
@@ -252,9 +315,13 @@ When the [SmartLabelAlignment]() is [Shift](), and if the data label goes out of
                      ShowDataLabels="True"
                      XBindingPath="Product" 
                      YBindingPath="SalesRate">
-         <chart:PieSeries.DataLabelSettings>
-             <chart:CircularDataLabelSettings LabelPlacement="Outer" SmartLabelAlignment="Shift"/>
-         </chart:PieSeries.DataLabelSettings>               
+            <chart:PieSeries.DataLabelSettings>
+                <chart:CircularDataLabelSettings  LabelPosition="Outside" SmartLabelAlignment="Shift" >
+                    <chart:CircularDataLabelSettings.ConnectorLineSettings>
+                        <chart:ConnectorLineStyle ConnectorType="Curve"></chart:ConnectorLineStyle>
+                    </chart:CircularDataLabelSettings.ConnectorLineSettings>
+                </chart:CircularDataLabelSettings>
+            </chart:PieSeries.DataLabelSettings>             
     </chart:PieSeries>
 
 </chart:SfCircularChart>
@@ -270,10 +337,17 @@ series.ItemsSource = new ViewModel().Data;
 series.XBindingPath = "Product";
 series.YBindingPath = "SalesRate";
 series.ShowDataLabels = true;
+
+var connectorLineStyle = new ConnectorLineStyle
+{
+    ConnectorType = ConnectorType = ConnectorType.Curve,
+};
+
 series.DataLabelSettings = new CircularDataLabelSettings()
 {
-    LabelPlacement = DataLabelPlacement.Outer,
+    LabelPosition= ChartDataLabelPosition.Outside,
     SmartLabelAlignment = SmartLabelAlignment.Shift,
+    ConnectorLineSettings = connectorLineStyle,
 };
 
 chart.Series.Add(series);
@@ -282,3 +356,5 @@ this.Content = chart;
 {% endhighlight %}
 
 {% endtabs %}
+
+![Smart Labels in MAUI Chart](DataLabel_images/maui_chart_smart_datalabel.png)
