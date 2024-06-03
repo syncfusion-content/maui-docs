@@ -9,7 +9,7 @@ documentation: ug
 
 # Annotation in .NET MAUI Chart
 
-[SfCartesianChart]() supports annotations that allow you to mark specific areas of interest in the chart area. You can add text, images, and custom views.
+[SfCartesianChart]() supports annotations that allow you to mark specific areas of interest in the chart area. It allows you to add text, images, and custom views.
 
 The following annotations are supported in [SfCartesianChart]():
 
@@ -111,7 +111,7 @@ To position the annotation based on pixel values, set the [CoordinateUnit]() val
 
 ## Adding annotation for multiple axes
 
-When there are multiple axes, annotations can also be added to a particular axis by using the [XAxisName]() and [YAxisName]() properties. This can be shown in the code snippet below:
+When there are multiple axes, annotations can be added to a particular axis using the [XAxisName]() and [YAxisName]() properties. This is demonstrated in the code snippet below:
 
 {% tabs %}
 
@@ -367,51 +367,6 @@ The [LineAnnotation]() is used to draw a line at specific points in the chart ar
    
 ![Line Annotation in MAUI Chart](Annotation_image/Line_annotation.png)
 
-## Adding arrow to line annotation
-
-To display a single-headed arrow, set the [LineCap]() property to [Arrow](). The default value of the [LineCap]() property is [None]().
-
-{% tabs %}
-
- {% highlight xaml %}
-
-    <chart:SfCartesianChart>
-    ...
-
-    <chart:SfCartesianChart.Annotations>
-
-        <chart:LineAnnotation X1="1" Y1="10" X2="4" Y2="20" Text="Line" LineCap="Arrow"/>
-
-    </chart:SfCartesianChart.Annotations>
-
-    </chart:SfCartesianChart>
-
-{% endhighlight %} 
-
-{% highlight c# %}
-
-    SfCartesianChart chart = new SfCartesianChart();
-
-    var line = new LineAnnotation()
-    {
-        X1 = 1,
-        Y1 = 10,
-        X2 = 4,
-        Y2 = 20,
-        Text = "Line"
-        LineCap = ChartLineCap.Arrow
-    };
-
-    chart.Annotations.Add(line);
-
-    this.Content = chart;
-
-{% endhighlight %}
-
-{% endtabs %}
-
-![Line Annotation with linecap in MAUI Chart](Annotation_image/Line_with_cap.png)
-
 ## Vertical and Horizontal line annotation
 
 The [VerticalLineAnnotation]() and [HorizontalLineAnnotation]() are used to draw vertical and horizontal lines at specific points in the chart area.
@@ -467,8 +422,8 @@ The [VerticalLineAnnotation]() and [HorizontalLineAnnotation]() display the axis
     <chart:SfCartesianChart>
     ...
     <chart:SfCartesianChart.Annotations>
-        <chart:VerticalLineAnnotation X1="2" ShowAxisLabel="True"/>
-        <chart:HorizontalLineAnnotation Y1="20" ShowAxisLabel="True"/>
+        <chart:VerticalLineAnnotation X1="2.5" ShowAxisLabel="True"/>
+        <chart:HorizontalLineAnnotation Y1="25" ShowAxisLabel="True"/>
     </chart:SfCartesianChart.Annotations>
 
     </chart:SfCartesianChart>
@@ -481,13 +436,13 @@ The [VerticalLineAnnotation]() and [HorizontalLineAnnotation]() display the axis
 
     var vertical = new VerticalLineAnnotation()
     {
-        X1 = 2,
+        X1 = 2.5,
         ShowAxisLabel= true
     };
 
     var horizontal = new HorizontalLineAnnotation()
     {
-        Y1 = 20,
+        Y1 = 25,
         ShowAxisLabel= true
     };
 
@@ -526,8 +481,8 @@ To display a single-headed arrow, set the [LineCap]() property to [Arrow](). The
     <chart:SfCartesianChart>
     ...
     <chart:SfCartesianChart.Annotations>
-        <chart:VerticalLineAnnotation X1="2" LineCap="Arrow"/>
-        <chart:HorizontalLineAnnotation Y1="20" LineCap="Arrow"/>
+        <chart:VerticalLineAnnotation X1="2.5" LineCap="Arrow"/>
+        <chart:HorizontalLineAnnotation Y1="25" LineCap="Arrow"/>
     </chart:SfCartesianChart.Annotations>
 
     </chart:SfCartesianChart>
@@ -560,6 +515,8 @@ To display a single-headed arrow, set the [LineCap]() property to [Arrow](). The
 {% endtabs %}  
 
 ![Vertical and horizontal Line Annotation with linecap in MAUI Chart](Annotation_image/Horizontal_vertical_with_cap.png)
+
+N> The [LineCap]() is applicable to line, horizontal, and vertical annotations by setting [LineCap]() to '[Arrow]()'.
 
 ## Adding text in shape annotation
 
@@ -604,7 +561,7 @@ For all shape annotations, the text can be displayed using the [Text]() property
 
 ![Annotation in MAUI Chart](Annotation_image/Adding_annotation.png)
 
-## Customizing text in shape annotation
+## Text customization in shape annotation
 
 The [Text]() in shape annotation also can be customized by using the [LabelStyle]() property. The [LabelStyle]() property provides options to customize the font-family, font-size, font-attributes and text color of axis labels. The following properties are used to customize the text:
 
