@@ -9,9 +9,7 @@ documentation: ug
 
 # Annotation in .NET MAUI Chart
 
-[SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html?tabs=tabid-1) supports annotations that allow you to mark specific areas of interest in the chart area. It allows you to add text, images, and custom views.
-
-[SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html?tabs=tabid-1) supports the following annotations:
+[SfCartesianChart]() provides annotation support that allows you to mark specific areas of interest in the chart area. This feature enables you to add text, images, and custom views using the following annotations.
 
 * Text annotation
 * Shape annotation
@@ -19,7 +17,7 @@ documentation: ug
 
 ## Adding Annotations
 
-You can create an instance of any type of annotation and add it to the Annotations collection. For example, the [EllipseAnnotation]() can be added.
+To add a annotations, create an instance of any type of annotation and add it to the Annotations collection. For example, the [EllipseAnnotation]() can be added.
 
 {% tabs %}
 
@@ -62,46 +60,42 @@ You can create an instance of any type of annotation and add it to the Annotatio
 
 ## Positioning the annotation
 
-[Annotations]() can be positioned in the plot area based on the [X1]() and [Y1]() properties. For shape annotations, specify the [X2]() and [Y2]() properties, if needed. The X and Y values can be specified using axis units or pixel units, which can be identified by the [CoordinateUnit]() property.
- 
-## Positioning based on CoordinateUnit as pixels
-
-To position the annotation based on pixel values, set the [CoordinateUnit]() value to [Pixels](). Then, set the pixel values in the [X1](),[Y1](), [X2](), and [Y2]() properties of the annotation, as shown in the following code snippet:
+[Annotations]() can be positioned in the plot area based on the [X1]() and [Y1]() properties. For shape annotations, specify the [X2]() and [Y2]() properties, if needed. The X and Y values can be specified using axis units or pixel units, which can be identified by the [CoordinateUnit]() property, as shown in the following code snippet:.
 
 {% tabs %}
 
  {% highlight xaml %}
 
-        <chart:SfCartesianChart>
+    <chart:SfCartesianChart>
         ...
 
-        <chart:SfCartesianChart.Annotations>
+    <chart:SfCartesianChart.Annotations>
         
         <chart:RectangleAnnotation X1="0" Y1="100" X2="300" Y2="400" Text="Pixel value" CoordinateUnit="Pixel"/>
 
     </chart:SfCartesianChart.Annotations>
 
-        </chart:SfCartesianChart>
+    </chart:SfCartesianChart>
 
   {% endhighlight %}
 
 {% highlight c# %}
     
-        SfCartesianChart chart = new SfCartesianChart();
+    SfCartesianChart chart = new SfCartesianChart();
         
-        var rectangle = new RectangleAnnotation()
-        {
-            X1 = 0,
-            Y1 = 100,
-            X2 = 300,
-            Y2 = 400,
-            CoordinateUnit = ChartCoordinateUnit.Pixel,
-            Text = "Pixel value"
-        };
+    var rectangle = new RectangleAnnotation()
+    {
+        X1 = 0,
+        Y1 = 100,
+        X2 = 300,
+        Y2 = 400,
+        CoordinateUnit = ChartCoordinateUnit.Pixel,
+        Text = "Pixel value"
+    };
 
-        chart.Annotations.Add(rectangle);
+    chart.Annotations.Add(rectangle);
 
-        this.Content = chart;
+    this.Content = chart;
 
 {% endhighlight %}
 
@@ -213,24 +207,24 @@ The [TextAnnotation]() is used to add simple text at specific points in the char
 
 The [TextAnnotation]() can be customized using the [LabelStyle]() property. The [LabelStyle]() property provides options to customize the font-family, font-size, font-attributes and text color of axis labels. The following properties are used to customize the text:
 
-* [TextColor]() - Gets or sets the color for the text of the label.
-* [BackgroundColor]() -Gets or sets the background color of the labels.
+* [TextColor]() - Gets or sets the text color of the label.
+* [Background]() -Gets or sets the background color of the labels.
 * [Margin]() - Gets or sets the margin of the label to customize the appearance of label.
 * [FontFamily]() -  Gets or sets the font family name for the label.
 * [FontAttributes]() - Gets or sets the font style for the label.
 * [FontSize]() - Gets or sets the font size for the label.
-* [HorizontalTextAlignment]() - Aligns the text horizontally at the Start, Center, or End.
-* [VerticalTextAlignment]() - Aligns the text vertically at the Start, Center, or End.
+* [HorizontalTextAlignment]() - Gets or sets the text horizontally at the Start, Center, or End.
+* [VerticalTextAlignment]() - Gets or sets the text vertically at the Start, Center, or End.
 
 ## Shape annotation
 
-The [ShapeAnnotation]() allows you to add annotations in the form of shapes such as rectangles, ellipses, horizontal lines, vertical lines, etc., at specific areas of interest in the chart area.
+The [ShapeAnnotation]() allows you to add annotations in the form of shapes such as rectangles, ellipses,lines, horizontal lines, vertical lines, at specific areas of interest in the chart area.
 
-* [RectangleAnnotation]() - Draws a rectangle over the chart area.
-* [EllipseAnnotation]() - Draws a circle or an ellipse over the chart area.
-* [LineAnnotation]() - Draws a line over the chart area.
-* [VerticalLineAnnotation]() - Draws a vertical line across the chart area.
-* [HorizontalLineAnnotation]() - Draws a horizontal line across the chart area.
+* [RectangleAnnotation]() -Used to draw a rectangle over the chart area.
+* [EllipseAnnotation]() - Used to draw a circle or an ellipse over the chart area.
+* [LineAnnotation]() - Used to draw a line over the chart area.
+* [VerticalLineAnnotation]() - Used to draw a vertical line across the chart area.
+* [HorizontalLineAnnotation]() -Used to draw a horizontal line across the chart area.
 
 The following APIs are commonly used in all ShapeAnnotation:
 
@@ -286,7 +280,7 @@ The [RectangleAnnotation]() is used to draw a rectangle or a square at specific 
 
 ## Ellipse annotation
 
-The [EllipseAnnotation]() is used to draw an oval or a circle at specific points in the chart area. You can also specify the height and width of the [EllipseAnnotation]() by using the Height and Width properties, respectively.
+The [EllipseAnnotation]() is used to draw an oval or a circle at specific points in the chart area. You can also specify the height and width of the [EllipseAnnotation]() by using the [Height]() and [Width]() properties, respectively.
 
 {% tabs %}
 
@@ -295,7 +289,7 @@ The [EllipseAnnotation]() is used to draw an oval or a circle at specific points
     <chart:SfCartesianChart>
     ...
     <chart:SfCartesianChart.Annotations>
-        <chart:EllipseAnnotation X1="2" X2="4" Y1="10" Y2="15"/>
+        <chart:EllipseAnnotation X1="2" X2="4" Y1="10" Y2="15" Width="20" Height="20"/>
     </chart:SfCartesianChart.Annotations>
 
     </chart:SfCartesianChart>
@@ -312,6 +306,8 @@ The [EllipseAnnotation]() is used to draw an oval or a circle at specific points
         Y1 = 10,
         X2 = 4,
         Y2 = 15,    
+        Width = 20,
+        Height = 20
     };
 
     chart.Annotations.Add(ellipse);
@@ -413,7 +409,7 @@ The [VerticalLineAnnotation]() and [HorizontalLineAnnotation]() are used to draw
 
 ## Displaying axis label for vertical and horizontal line annotations
 
-The [VerticalLineAnnotation]() and [HorizontalLineAnnotation]() display the axis labels where the line is placed. The [ShowAxisLabel]() property is used to show or hide the axis’s label. This feature can be enabled by setting the [ShowAxisLabel]() property to true, as shown in the code snippet below:
+The [VerticalLineAnnotation]() and [HorizontalLineAnnotation]() allow for the display of axis labels at the line's position using the [ShowAxisLabel]() property. The default value of the [ShowAxisLabel]() property is false. as shown in the code snippet below:
 
 {% tabs %}
 
@@ -459,15 +455,13 @@ The [VerticalLineAnnotation]() and [HorizontalLineAnnotation]() display the axis
 
 ## Axis label customization
 
-The default appearance of the axis label can also be customized using the [AxisLabelStyle]() property. The following styles are used to customize the axis label:
+The default appearance of the axis label can also be customized using the [AxisLabelStyle]() property.The [ChartLabelStyle]() property allows you to customize the axis labels by changing the font family, font size, font attributes, and text color. The following styles are used to customize the axis label:
 
-The [ChartLabelStyle]() property allows you to customize the axis labels by changing the font family, font size, font attributes, and text color. It is the default style for the [AxisLabelStyle]() property. The following properties can be used to customize the axis label:
-
-* [TextColor]() - Gets or sets the color for the text of the label.
+* [TextColor]() - Gets or sets the text color of the label.
 * [Background]() - Gets or sets the background color of the labels.
-* [Margin]() -  Gets or sets the margin of the label to customize the appearance of label.
-* [FontFamily]() -Gets or sets the font family name for the label.
-* [FontAttributes]() -  Gets or sets the font style for the label.
+* [Margin]() - Gets or sets the margin of the label to customize the appearance of label.
+* [FontFamily]() - Gets or sets the font family name for the label.
+* [FontAttributes]() - Gets or sets the font style for the label.
 * [FontSize]() - Gets or sets the font size for the label.
 
 ## Adding arrow to vertical and horizontal line annotations
@@ -495,13 +489,13 @@ To display a single-headed arrow, set the [LineCap]() property to [Arrow](). The
 
     var vertical = new VerticalLineAnnotation()
     {
-        X1 = 2,
+        X1 = 2.5,
         LineCap = ChartLineCap.Arrow
     };
 
     var horizontal = new HorizontalLineAnnotation()
     {
-        Y1 = 20,
+        Y1 = 25,
         LineCap = ChartLineCap.Arrow
     };
 
@@ -516,7 +510,7 @@ To display a single-headed arrow, set the [LineCap]() property to [Arrow](). The
 
 ![Vertical and horizontal Line Annotation with linecap in MAUI Chart](Annotation_image/Horizontal_vertical_with_cap.png)
 
-N> The [LineCap]() is applicable to line, horizontal, and vertical annotations by setting [LineCap]() to '[Arrow]()'.
+N> The [LineCap]() is applicable to line, horizontal, and vertical annotations.
 
 ## Adding text in shape annotation
 
@@ -565,14 +559,14 @@ For all shape annotations, the text can be displayed using the [Text]() property
 
 The [Text]() in shape annotation also can be customized by using the [LabelStyle]() property. The [LabelStyle]() property provides options to customize the font-family, font-size, font-attributes and text color of axis labels. The following properties are used to customize the text:
 
-* [TextColor]() - Gets or sets the color for the text of the label.
+* [TextColor]() - Gets or sets the text color of the label.
 * [Background]() - Gets or sets the background color of the labels.
 * [Margin]() - Gets or sets the margin of the label to customize the appearance of label.
 * [FontFamily]() - Gets or sets the font family name for the label.
 * [FontAttributes]() - Gets or sets the font style for the label.
 * [FontSize]() - Gets or sets the font size for the label.
-* [HorizontalTextAlignment]() - Used to align the text horizontally.
-* [VerticalTextAlignment]() - Used to align the text vertically.
+* [HorizontalTextAlignment]() - Gets or sets the text horizontally at the Start, Center, or End.
+* [VerticalTextAlignment]() - Gets or sets the text vertically at the Start, Center, or End.
 
 ## View annotation
 
