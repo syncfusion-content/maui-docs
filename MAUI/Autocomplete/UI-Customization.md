@@ -504,6 +504,113 @@ autocomplete.DropDownItemHeight = 80;
 
 ![.NET MAUI Autocomplete DropDown Item Height](Images/UICustomization/DropDownItemHeight.png)
 
+### Customize in DropDownPlacement
+
+The drop-down that shows the filtered items will be placed automatically based on the available space and can also be customized using the `DropDownPlacement` property.
+
+*   `Top` - Drop-down will be placed above the text box.
+
+*   `Bottom` - Drop-down will be placed below the text box.
+
+*   `Auto` - Drop-down will be placed based on the available space either top or bottom of the text box.
+
+*   `None` - Drop-down will not be shown with the filtered items.
+
+
+{% tabs %}
+{% highlight xaml %}
+
+ <editors:SfAutocomplete x:Name="autocomplete"
+                         WidthRequest="300"                  
+                         ItemsSource="{Binding SocialMedias}"
+                         DropDownPlacement="Top"/>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+autocomplete.DropDownPlacement = DropDownPlacement.Top;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![.NET MAUI Autocomplete Dropdownplacement.](Images/UICustomization/placementauto.png)
+
+### Customize in DropDown ItemPadding
+
+The autocomplete enables the user to provide padding for the items inside dropdown using `ItemPadding` property.
+
+{% tabs %}
+{% highlight xaml %}
+
+   <editors:SfAutocomplete x:Name="autocomplete"
+                         WidthRequest="300"                          
+                         ItemsSource="{Binding SocialMedias}"
+                         ItemPadding="10,20,0,0"/>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+autocomplete.ItemPadding = new Thickness(10,20,0,0);
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![.NET MAUI Autocomplete Itempadding.](Images/UICustomization/Itempadding.png)
+
+### Customize in DropDown Item Width
+
+The `DropdownWidth` property is used to modify the height of the dropdown items.
+
+{% tabs %}
+{% highlight xaml %}
+
+    <editors:SfAutocomplete x:Name="autocomplete"
+                         WidthRequest="300"                            
+                         ItemsSource="{Binding SocialMedias}"                           
+                         DropdownWidth="400"/>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+autocomplete.DropdownWidth = 400;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![.NET MAUI Autocomplete DropDownWidth.](Images/UICustomization/DropDownWidth.png)
+
+
+### Show suggestion box on focus
+
+Suggestion box can be shown whenever the control receives focus using the `ShowSuggestionsOnFocus` property. At this time, suggestion list is the complete list of data source.
+
+{% tabs %}
+{% highlight xaml %}
+
+      <editors:SfAutocomplete x:Name="autocomplete"
+                          WidthRequest="300"                            
+                          ItemsSource="{Binding SocialMedias}"                           
+                          ShowSuggestionsOnFocus="True"/>
+
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+autocomplete.ShowSuggestionsOnFocus = true;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![.NET MAUI Autocomplete OnFocus.](Images/UICustomization/OnFocus.png)
+
 ## Customize DropDown (suggestion) items based on condition
 
 The [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_ItemTemplate) property helps you to decorate drop-down items conditionally based on their content using the custom templates. The default value of the `ItemTemplate` is `null`.
@@ -825,7 +932,7 @@ The following image illustrates the result of the above code:
 
 ## Styling token items
 
-The AutoComplete control allows you to customize the style of the TokenItem generated in the selection area by using the TokenItemStyle property.
+The Autocomplete control allows you to customize the style of the TokenItem generated in the selection area by using the TokenItemStyle property.
 
 {% tabs %}
 
@@ -867,7 +974,7 @@ The following image illustrates the result of the above code:
 
 ## Completed Event
 
-The [Completed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_Completed) event is raised when the user finalizes the text in the [SfAutoComplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) by pressing return key on the keyboard.The handler for the event is a generic event handler, taking the `sender` and `EventArgs`(the `EventArgs` value is `string.Empty`):
+The [Completed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_Completed) event is raised when the user finalizes the text in the [SfAutocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) by pressing return key on the keyboard.The handler for the event is a generic event handler, taking the `sender` and `EventArgs`(the `EventArgs` value is `string.Empty`):
 
 {% tabs %}
 {% highlight xaml %}
@@ -915,7 +1022,7 @@ The [DropDownOpening](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.S
 {% highlight xaml %}
 
 <editors:SfAutocomplete 
-DropdownOpening="AutoComplete_DropdownOpening"
+DropdownOpening="Autocomplete_DropdownOpening"
 WidthRequest="350"
 HeightRequest="50"
 ItemsSource="{Binding SocialMedias}"
@@ -928,8 +1035,8 @@ x:Name="autoComplete" >
 
 {% highlight c# %}
 
-    SfAutoComplete autoComplete = new SfAutoComplete();
-    autoComplete.DropdownOpening += AutoComplete_DropdownOpening;
+    SfAutocomplete autoComplete = new SfAutocomplete();
+    autoComplete.DropdownOpening += Autocomplete_DropdownOpening;
 
 {% endhighlight %}
 
@@ -939,7 +1046,7 @@ x:Name="autoComplete" >
 
 {% highlight c# %}
     
- private void AutoComplete_DropdownOpening(object sender, CancelEventArgs e)
+ private void Autocomplete_DropdownOpening(object sender, CancelEventArgs e)
  {
      e.Cancel = true; // If you want to restrict the dropdown open then set the e.Cancel is true. 
  }
@@ -971,7 +1078,7 @@ The [DropDownOpened](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Sf
 
 {% highlight c# %}
 
-  SfAutoComplete autoComplete = new SfAutoComplete();
+  SfAutocomplete autoComplete = new SfAutocomplete();
 
   autoComplete.DropdownOpened += autoComplete_DropdownOpened;
 
@@ -1008,7 +1115,7 @@ The [DropDownClosed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.
 {% endhighlight %}
 {% highlight c# %}
 
-    SfAutoComplete autoComplete = new SfAutoComplete();
+    SfAutocomplete autoComplete = new SfAutocomplete();
     autoComplete.DropDownClosed+=autoComplete_DropDownClosed;
 
 {% endhighlight %}
