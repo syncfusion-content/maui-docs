@@ -29,7 +29,7 @@ The seven-segment type is capable of displaying numbers and a few uppercase lett
 
      <gauge:SfDigitalGauge Text="1 2 3 4 5" StrokeWidth="5" 
                           HeightRequest="100"  WidthRequest="300"
-                          DisabledSegmentAlpha="25" DisabledSegmentStroke="LightSkyBlue"
+                          DisabledSegmentAlpha="0.1" DisabledSegmentStroke="LightSkyBlue"
                           CharacterHeight="90" CharacterWidth="25" 
                           HorizontalOptions="Center" VerticalOptions="Center"
                           CharacterType="SevenSegment" 
@@ -59,9 +59,9 @@ The seven-segment type is capable of displaying numbers and a few uppercase lett
 
             digital.StrokeWidth = 5;
 
-            digital.CharacterType = CharacterType.SevenSegment;
+            digital.CharacterType = DigitalGaugeCharacterType.SevenSegment;
 
-            digital.DisabledSegmentAlpha = 25;
+            digital.DisabledSegmentAlpha = 0.1;
 
             digital.CharacterStroke = Color.FromRgb(20, 108, 237);
 

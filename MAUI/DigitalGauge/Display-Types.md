@@ -21,7 +21,7 @@ Numbers can be displayed in digital gauge in different formats using the `Charac
 
     <gauge:SfDigitalGauge Text="12 34 56" StrokeWidth="5" 
                           HeightRequest="100"  WidthRequest="300"
-                          DisabledSegmentAlpha="25" DisabledSegmentStroke="LightSkyBlue"
+                          DisabledSegmentAlpha="0.1" DisabledSegmentStroke="LightSkyBlue"
                           CharacterHeight="90" CharacterWidth="25" 
                           HorizontalOptions="Center" VerticalOptions="Center"
                           CharacterType="SevenSegment" 
@@ -50,9 +50,9 @@ Numbers can be displayed in digital gauge in different formats using the `Charac
 
             digital.StrokeWidth = 5;
 
-            digital.CharacterType = CharacterType.SevenSegment;
+            digital.CharacterType = DigitalGaugeCharacterType.SevenSegment;
 
-            digital.DisabledSegmentAlpha = 25;
+            digital.DisabledSegmentAlpha = 0.1;
 
             digital.CharacterStroke = Color.FromRgb(20, 108, 237);
 
@@ -73,7 +73,7 @@ Alphabet can be displayed in digital gauge using any one of the character format
 
     <gauge:SfDigitalGauge Text="SYNCFUSION" StrokeWidth="3" 
                           HeightRequest="100"  WidthRequest="340"
-                          DisabledSegmentAlpha="25" DisabledSegmentStroke="Green"
+                          DisabledSegmentAlpha="0.1" DisabledSegmentStroke="Green"
                           CharacterHeight="90" CharacterWidth="25" 
                           HorizontalOptions="Center" VerticalOptions="Center"
                           CharacterType="SixteenSegment" 
@@ -101,9 +101,9 @@ Alphabet can be displayed in digital gauge using any one of the character format
 
             digital.StrokeWidth = 3;
 
-            digital.CharacterType = CharacterType.SixteenSegment;
+            digital.CharacterType = DigitalGaugeCharacterType.SixteenSegment;
 
-            digital.DisabledSegmentAlpha = 25;
+            digital.DisabledSegmentAlpha = 0.1;
 
             digital.CharacterStroke = Color.Green;
 
@@ -123,7 +123,7 @@ Special characters can also be displayed in digital gauge using the EightCrossEi
 
     <gauge:SfDigitalGauge Text="@ # $ % *" StrokeWidth="3" 
                           HeightRequest="100"  WidthRequest="350"
-                          DisabledSegmentAlpha="25" DisabledSegmentStroke="Red"
+                          DisabledSegmentAlpha="0.1" DisabledSegmentStroke="Red"
                           CharacterHeight="90" CharacterWidth="30" 
                           HorizontalOptions="Center" VerticalOptions="Center"
                           CharacterType="EightCrossEightDotMatrix" 
@@ -151,9 +151,9 @@ Special characters can also be displayed in digital gauge using the EightCrossEi
 
             digital.StrokeWidth = 3;
 
-            digital.CharacterType = CharacterType.EightCrossEightDotMatrix;
+            digital.CharacterType = DigitalGaugeCharacterType.EightCrossEightDotMatrix;
 
-            digital.DisabledSegmentAlpha = 25;
+            digital.DisabledSegmentAlpha = 0.1;
 
             digital.CharacterStroke = Color.Red;
 

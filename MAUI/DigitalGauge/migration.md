@@ -126,7 +126,7 @@ In the .NET MAUI digital gauge, APIs there
 </tr>
 </table>
 
-The following code example explains how to initialize the axis in Xamarin SfDigitalGauge and .NET MAUI SfDigitalGauge.
+The following code example explains how to initialize the segments in Xamarin SfDigitalGauge and .NET MAUI SfDigitalGauge.
 
 <table>
 <tr>

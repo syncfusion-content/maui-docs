@@ -121,7 +121,7 @@ By using the `CharacterType` property, you can set the segments for digital gaug
 
 SfDigitalGauge digital = new SfDigitalGauge();
 
-digital.CharacterType = CharacterType.SevenSegment;
+digital.CharacterType = DigitalGaugeCharacterType.SevenSegment;
 
 {% endhighlight %}
 
@@ -208,7 +208,7 @@ namespace Syncfusion.Maui.Gauges.SfDigitalGauge
 
             digital.StrokeWidth = 5;
 
-            digital.CharacterType = CharacterType.SevenSegment;
+            digital.CharacterType = DigitalGaugeCharacterType.SevenSegment;
 
             digital.CharacterStroke = Color.FromRgb(20, 108, 237);
 
