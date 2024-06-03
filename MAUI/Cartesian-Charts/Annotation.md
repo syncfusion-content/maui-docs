@@ -11,7 +11,7 @@ documentation: ug
 
 [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html?tabs=tabid-1) supports annotations that allow you to mark specific areas of interest in the chart area. It allows you to add text, images, and custom views.
 
-The following annotations are supported in [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html?tabs=tabid-1):
+[SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html?tabs=tabid-1) supports the following annotations:
 
 * Text annotation
 * Shape annotation
@@ -226,22 +226,22 @@ The [TextAnnotation]() can be customized using the [LabelStyle]() property. The 
 
 The [ShapeAnnotation]() allows you to add annotations in the form of shapes such as rectangles, ellipses, horizontal lines, vertical lines, etc., at specific areas of interest in the chart area.
 
-* [RectangleAnnotation]() - Used to draw a rectangle over the chart area.
-* [EllipseAnnotation]() - Used to draw a circle or an ellipse over the chart area.
-* [LineAnnotation]() - Used to draw a line over the chart area.
-* [VerticalLineAnnotation]() - Used to draw a vertical line across the chart area.
-* [HorizontalLineAnnotation]() - Used to draw a horizontal line across the chart area.
+* [RectangleAnnotation]() - Draws a rectangle over the chart area.
+* [EllipseAnnotation]() - Draws a circle or an ellipse over the chart area.
+* [LineAnnotation]() - Draws a line over the chart area.
+* [VerticalLineAnnotation]() - Draws a vertical line across the chart area.
+* [HorizontalLineAnnotation]() - Draws a horizontal line across the chart area.
 
 The following APIs are commonly used in all ShapeAnnotation:
 
-* [X2]() - Represents the X2 coordinate of the shape annotation.
-* [Y2]() - Represents the Y2 coordinate of the shape annotation.
-* [Fill]() - Represents the background color of the shape annotation.
-* [Stroke]() - Represents the stroke color of the shape annotation.
-* [StrokeWidth]() - Represents the stroke width of the shape annotation.
-* [StrokeDashArray]() - Represents the stroke dash pattern of the shape annotation.
-* [Text]() - Represents the annotation text of the shape annotation.
-* [LabelStyle]() - Represents the style for customizing the annotation text of the shape annotation.
+* [X2]() - Gets or sets the X2 coordinate of the shape annotation.
+* [Y2]() - Gets or sets the Y2 coordinate of the shape annotation.
+* [Fill]() - Gets or sets the background color of the shape annotation.
+* [Stroke]() - Gets or sets the stroke color of the shape annotation.
+* [StrokeWidth]() - Gets or sets the stroke width of the shape annotation.
+* [StrokeDashArray]() - Gets or sets the stroke dash pattern of the shape annotation.
+* [Text]() - Gets or sets the annotation text of the shape annotation.
+* [LabelStyle]() - Gets or sets the style for customizing the annotation text of the shape annotation.
 
 ## Rectangle annotation
 
