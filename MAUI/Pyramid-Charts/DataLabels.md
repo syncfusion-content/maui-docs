@@ -7,11 +7,11 @@ control: SfPyramidChart
 documentation: ug
 ---
 
-# Data Label in .NET MAUI Chart
+# Data Labels in .NET MAUI Chart
 
 Data labels are used to display values related to a chart segment. Values from data point(x, y) or other custom properties from a data source can be displayed. 
 
-## Enable Data Label 
+## Enable Data Labels 
 
 To define the data label in the chart, set the [ShowDataLabels](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPyramidChart.html#Syncfusion_Maui_Charts_SfPyramidChart_ShowDataLabels) property to true. The default value of [ShowDataLabels](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPyramidChart.html#Syncfusion_Maui_Charts_SfPyramidChart_ShowDataLabels) property is false. 
 

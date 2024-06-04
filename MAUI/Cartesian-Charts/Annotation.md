@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Annotation in .NET MAUI Chart control | Syncfusion
+title: Annotations in .NET MAUI Chart control | Syncfusion
 description: Learn here all about annotation support and its features in Syncfusion .NET MAUI Chart (SfCartesianChart) control.
 platform: maui
 control: SfCartesianChart
 documentation: ug
 ---
 
-# Annotation in .NET MAUI Chart
+# Annotations in .NET MAUI Chart
 
 [SfCartesianChart]() provides annotation support that allows you to mark specific areas of interest in the chart area. This feature enables you to add text, images, and custom views using the following annotations.
 
@@ -17,7 +17,7 @@ documentation: ug
 
 ## Adding Annotations
 
-To add a annotations, create an instance of any type of annotation and add it to the Annotations collection. For example, the [EllipseAnnotation]() can be added.
+To add a annotations, create an instance of any type of annotation and add it to the [Annotations]() collection. For example, the [EllipseAnnotation]() can be added.
 
 {% tabs %}
 
@@ -56,7 +56,7 @@ To add a annotations, create an instance of any type of annotation and add it to
 
 {% endtabs %}
 
-![Annotation in MAUI Chart](Annotation_image/Adding_annotation.png)
+![Annotations in MAUI Chart](Annotation_image/Adding_annotation.png)
 
 ## Positioning the annotation
 
@@ -101,7 +101,7 @@ To add a annotations, create an instance of any type of annotation and add it to
 
 {% endtabs %}
 
-![Annotation in pixel value in MAUI Chart](Annotation_image/Rectangle_with_pixel.png)
+![Annotations in pixel value in MAUI Chart](Annotation_image/Rectangle_with_pixel.png)
 
 ## Adding annotation for multiple axes
 
@@ -160,7 +160,7 @@ When there are multiple axes, annotations can be added to a particular axis usin
 
 {% endtabs %}
 
-![Annotation in multiple axes in MAUI Chart](Annotation_image/Annotation_with_multiple_axes.png)
+![Annotations in multiple axes in MAUI Chart](Annotation_image/Annotation_with_multiple_axes.png)
 
 ## Text annotation
 
@@ -363,7 +363,7 @@ The [LineAnnotation]() is used to draw a line at specific points in the chart ar
    
 ![Line Annotation in MAUI Chart](Annotation_image/Line_annotation.png)
 
-## Vertical and Horizontal line annotation
+## Vertical and Horizontal line annotations
 
 The [VerticalLineAnnotation]() and [HorizontalLineAnnotation]() are used to draw vertical and horizontal lines at specific points in the chart area.
 
@@ -508,7 +508,7 @@ To display a single-headed arrow, set the [LineCap]() property to [Arrow](). The
 
 {% endtabs %}  
 
-![Vertical and horizontal Line Annotation with linecap in MAUI Chart](Annotation_image/Horizontal_vertical_with_cap.png)
+![Vertical and horizontal Line Annotations with linecap in MAUI Chart](Annotation_image/Horizontal_vertical_with_cap.png)
 
 N> The [LineCap]() is applicable to line, horizontal, and vertical annotations.
 
