@@ -178,4 +178,6 @@ this.Calendar.CornerRadius = 15;
 {% endhighlight %}
 {% endtabs %}
 
+![change-corner-radius](images/getting-started/maui-calendar-corner-radius.png)
+
 N> You can also explore our [.NET MAUI Calendar Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/Calendar) that shows you how to render the Calendar in .NET MAUI.
