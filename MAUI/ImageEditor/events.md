@@ -64,60 +64,6 @@ N> This is common for Shape and Text annotations.
 
 {% endtabs %}
 
-## ID Support for annotation
-
-In ImageEditor, a unique ID is generated for all annotations (Text, Shapes, Paths, and CustomViews) when they are added to the image editor. You can retrieve this unique ID from the ItemsSelected event arguments or from the serialized JSON.
-
-## Select a particular annotation programmatically using annotation ID
-
-By passing the unique ID of an annotation to the SelectAnnotation method of SfImageEditor, you can select the particular annotation programmatically.
-
-{% tabs %}
-
-{% highlight xaml tabtitle="MainPage.xaml" %}
-
- <Grid>
-    <Grid.RowDefinitions>
-        <RowDefinition Height="*" />
-        <RowDefinition Height="Auto" />
-    </Grid.RowDefinitions>
-    <imageEditor:SfImageEditor x:Name="imageEditor"
-                               Source="image.png"
-                               ImageLoaded="imageEditor_ImageLoaded" />
-    <StackLayout Grid.Row="1" Margin="10"
-                 Orientation="Horizontal">
-        <Label Text="ShapeID :" VerticalOptions="Center" />
-        <Entry x:Name="shapeID" WidthRequest ="50"/>
-        <Button Text="SelectShape" Margin="25,0,0,0"
-                Clicked="SelectShape_Clicked" WidthRequest="150" />
-    </StackLayout>
-</Grid>
-
-{% endhighlight %}
-
-{% highlight C# tabtitle="MainPage.xaml.cs" %}
-
-private void SelectShape_Clicked(object sender, EventArgs e)
-{
-    int shapeId;
-    if (int.TryParse(this.shapeID.Text, out shapeId))
-    {
-        this.imageEditor.SelectAnnotation(shapeId);
-    }
-}
- 
-private void imageEditor_ImageLoaded(object sender, EventArgs e)
-{
-    imageEditor.AddText("Syncfusion", new ImageEditorTextSettings() { Id = 1, Background = Colors.Blue });
-    imageEditor.AddShape(AnnotationShape.Rectangle, new ImageEditorShapeSettings() { Id = 2, Color = Colors.Violet, Bounds = new Rect(0, 0, 0.3, 0.3) });
-    imageEditor.AddShape(AnnotationShape.Circle, new ImageEditorShapeSettings() { Id = 3, Color = Colors.Orange, Bounds = new Rect(0, 0.4, 0.4, 0.4) });
-    imageEditor.SaveEdits();
-}
-
-{% endhighlight %}
-
-{% endtabs %}
-
 ## Browse image event
 
 The [`BrowseImage`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_BrowseImage) event occurs when you click the browse icon in the toolbar while browsing the image source.
