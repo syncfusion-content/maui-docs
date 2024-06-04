@@ -195,3 +195,20 @@ this.Content = picker;
 {% endtabs %}
 
    ![Set Selected time in .NET MAUI Time picker.](images/getting-started/maui-time-picker-set-selected-time.png)
+
+## Clear selection
+
+The .NET MAUI TimePicker provides clear selection support, allowing you to clear the selected time by setting the `SelectedTime` property to `null`.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+
+<picker:SfTimePicker x:Name="Picker" />
+
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+    this.Picker.SelectedTime = null;
+
+{% endhighlight %}  
+{% endtabs %}
