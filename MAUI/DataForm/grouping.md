@@ -413,6 +413,8 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 
 ![Group header padding in .NET MAUI DataForm.](images/grouping/padding.png)
 
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-dataform/tree/master/DataFormGrouping)
+
 ## Group header customization
 
 The group header of the dataform can be customized by using the `GroupHeaderTemplate` property of the [DataFormGroupItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormGroupItem.html).
@@ -437,4 +439,5 @@ The group header of the dataform can be customized by using the `GroupHeaderTemp
 {% endhighlight %}
 {% endtabs %}
 
-N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-dataform/tree/master/DataFormGrouping)
+N>
+* The BindingContext of the `GroupHeaderTemplate` is the `DataFormGroupItem`.
