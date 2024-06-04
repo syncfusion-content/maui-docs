@@ -322,6 +322,29 @@ public class MonthViewHeaderTemplateSelector : DataTemplateSelector
 N>
 * When using data template selector, performance issues occur as the conversion template views take time within the framework.
 
+## Month Navigation direction
+
+MonthView of SfScheduler can be navigated in both horizontal and vertical direction. You can change the direction of navigation through `NavigationDirection` property of MonthViewSettings in SfSchedule, by default Month navigation direction is `Horizontal`. If the direction is  `Vertical` the `ViewHeader` will be sticky.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+
+<scheduler:SfScheduler x:Name="schedule" View="Month">
+    <scheduler:SfScheduler.MonthView >
+        <scheduler:SchedulerMonthView NavigationDirection="Vertical"/>
+    </scheduler:SfScheduler.MonthView> 
+</scheduler:SfScheduler>
+
+{% endhighlight %}
+{% highlight C# hl_lines="3" %}
+
+schedule.MonthView.NavigationDirection = SchedulerMonthNavigationDirection.Vertical;
+
+{% endhighlight %}  
+{% endtabs %}
+
+![Vertical Swiping MonthView](images\month-view\Swipe.gif)
+
 ## Month cell appearance
 
 The month cell appearance can be customized by using the  [CellStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html#Syncfusion_Maui_Scheduler_SchedulerMonthView_CellStyle), and [CellTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html#Syncfusion_Maui_Scheduler_SchedulerMonthView_CellTemplate) properties of [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html) in the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html).
