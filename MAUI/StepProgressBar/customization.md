@@ -663,6 +663,8 @@ public class ViewModel
     }
 }
 
+{% endhighlight %}
+
 {% highlight c# tabtitle="PrimaryTemplateSelector.cs" %}
 
 public class PrimaryTemplateSelector : DataTemplateSelector
