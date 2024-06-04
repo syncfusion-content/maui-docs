@@ -148,25 +148,35 @@ This feature is used to customize the connector line. The following [ConnectorLi
 * [Stroke]() – used to change the color of the line
 * [StrokeWidth]() – used to change the stroke thickness of the line
 * [StrokeDashArray]() – used to set the dashes for the line
+* [ConnectorType]() - used to specify the connector type
 
 {% tabs %}
 
 {% highlight xaml %}
 
 <chart:SfCircularChart>
-
-<chart:PieSeries ItemsSource ="{Binding Data}" 
-                    XBindingPath="XValue" 
-                    YBindingPath="YValue"
-                    ShowDataLabels="True">
-    <chart:PieSeries.DataLabelSettings>
-            <chart:CircularDataLabelSettings LabelPosition="Outside" >
+    <chart:SfCircularChart.Resources>
+        <DoubleCollection x:Key="dashArray">
+            <x:Double>5</x:Double>
+            <x:Double>2</x:Double>
+        </DoubleCollection>
+    </chart:SfCircularChart.Resources>
+    <chart:PieSeries ItemsSource ="{Binding Data}" 
+                        XBindingPath="XValue" 
+                        YBindingPath="YValue"
+                        ShowDataLabels="True">
+        <chart:PieSeries.DataLabelSettings>
+            <chart:CircularDataLabelSettings LabelPosition="Outside">
                 <chart:CircularDataLabelSettings.ConnectorLineSettings>
-                    <chart:ConnectorLineStyle Stroke="Red" StrokeWidth="2" />
+                    <chart:ConnectorLineStyle StrokeDashArray="{StaticResource dashArray}" 
+                                              ConnectorType="Curve" 
+                                              Stroke="Black" 
+                                              StrokeWidth="3"></chart:ConnectorLineStyle>
                 </chart:CircularDataLabelSettings.ConnectorLineSettings>
-            </chart:CircularDataLabelSettings>
-    </chart:PieSeries.DataLabelSettings>
-</chart:PieSeries>
+                </chart:CircularDataLabelSettings>
+            </chart:PieSeries.DataLabelSettings>
+        </chart:PieSeries.DataLabelSettings>
+    </chart:PieSeries>
 
 </chart:SfCircularChart>
 
@@ -175,6 +185,9 @@ This feature is used to customize the connector line. The following [ConnectorLi
 {% highlight c# %}
 
 SfCircularChart chart = new SfCircularChart();
+DoubleCollection doubleCollection = new DoubleCollection();
+doubleCollection.Add(5);
+doubleCollection.Add(2);
 . . .
 PieSeries series = new PieSeries()
 {
@@ -186,8 +199,10 @@ PieSeries series = new PieSeries()
 
 var connectorLineStyle = new ConnectorLineStyle
 {
-    Stroke = new SolidColorBrush(Colors.Red),
-    StrokeWidth = 2
+    StrokeDashArray = doubleCollection,
+    ConnectorType = ConnectorType = ConnectorType.Curve,
+    Stroke = Colors.Black,
+    StrokeWidth = 3
 };
 series.DataLabelSettings = new CircularDataLabelSettings()
 {
@@ -202,7 +217,7 @@ this.Content = chart;
 
 {% endtabs %}
 
-![Connector line style in MAUI Chart](DataLabel_images/)
+![Connector line style in MAUI Chart](DataLabel_images/maui_chart_connector_line_style.png)
 
 ## LabelTemplate
 
