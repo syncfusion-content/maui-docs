@@ -247,7 +247,7 @@ N> This is common for Shape, Text and CustomView annotations.
 
 ## Add custom view on initial loading
 
-Add a custom view on image loading using the [`Imageloaded`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_ImageLoaded) event.
+Add a custom view on image loading using the [`ImageLoaded`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_ImageLoaded) event.
 
 {% tabs %}
 
