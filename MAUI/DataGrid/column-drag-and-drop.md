@@ -23,6 +23,8 @@ The SfDataGrid allows dragging and dropping a column header by setting the `SfDa
 {% endhighlight %}
 {% endtabs %}
 
+<img alt="DataGrid column drag and drop" src="Images\column-drag-and-drop\maui-datagrid-column-drag-and-drop.gif" width="404"/>
+
 ## Column drag and drop events
 
 The `QueryColumnDragging` event is fired continuously while dragging a column and ends when the dragging ends. By handling the `SfDataGrid.QueryColumnDragging` event, the dragging of a particular column header can be canceled.
@@ -175,6 +177,8 @@ The SfDataGrid allows customizing the column drag and drop indicators using the 
     </syncfusion:SfDataGrid>
 {% endhighlight %}
 
+<img alt="DataGrid column drag indicator color" src="Images\column-drag-and-drop\maui-datagrid-column-drag-indicator-color.png" width="450"/>
+
 ### Customize drag view text color
 
 The SfDataGrid allows customizing the drag view text color using the `SfDataGrid.DefaultStyle.ColumnDragViewTextColor` property.
@@ -189,6 +193,8 @@ The SfDataGrid allows customizing the drag view text color using the `SfDataGrid
     </syncfusion:SfDataGrid>
 {% endhighlight %}
 
+<img alt="DataGrid column drag view text color" src="Images\column-drag-and-drop\maui-datagrid-column-drag-view-text-color.png" width="450"/>
+
 ### Customize drag view background color
 
 The SfDataGrid allows customizing the drag view background color using the `SfDataGrid.DefaultStyle.ColumnDragViewBackgroundColor` property.
@@ -202,6 +208,8 @@ The SfDataGrid allows customizing the drag view background color using the `SfDa
         </syncfusion:SfDataGrid.DefaultStyle>
     </syncfusion:SfDataGrid>
 {% endhighlight %}
+
+<img alt="DataGrid column drag view background color" src="Images\column-drag-and-drop\maui-datagrid-column-drag-view-background-color.png" width="450"/>
 
 ## Cancel auto scrolling
 

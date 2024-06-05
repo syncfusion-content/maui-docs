@@ -77,7 +77,7 @@ List of supported arithmetic and logical operations are as follows:
     </tr>
     <tr>
         <td> Multiply</td>
-        <td> / </td>
+        <td> * </td>
     </tr>
     <tr>
         <td> Divide </td>
