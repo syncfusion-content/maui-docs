@@ -17,13 +17,18 @@ If `LoadUIView` is set to `false`, the cell value of the column will be drawn di
 
 The default value of `LoadUIView` is `True`.  The scrolling performance improved when `LoadUIView` was set to `False`.
 
-{% highlight c# %}
-
+{% tabs %}
+{% highlight xaml %}
+<sfgrid:SfDataGrid.Columns>
+    <sfgrid:DataGridTextColumn MappingName="CustomerID" HeaderText="Customer ID" LoadUIView="False"/>
+</sfgrid:SfDataGrid.Columns>
+{% endhighlight %}
+{% highlight xaml.cs %}
 DataGridTextColumn column = new DataGridTextColumn();
 column.LoadUIView = false;
 dataGrid.Columns.Add(column);
-
 {% endhighlight %}
+{% endtabs %}
 
 You can also download the entire source code of this from [GitHub](https://github.com/SyncfusionExamples/How-to-improve-scrolling-performance-in-.NET-MAUI-DataGrid).
 
