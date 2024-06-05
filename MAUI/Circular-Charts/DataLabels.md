@@ -143,7 +143,7 @@ this.Content = chart;
 
 ## Connector line style
 
-The [ConnectorLineStyle]() is used to customize the appearance of the data label connector line when data labels are placement outside. The following ConnectorLineStyle property are used to customize the connector line.
+The [ConnectorLineStyle]() is used to customize the appearance of the data label connector line when data labels are placement outside. The following [ConnectorLineStyle]() property are used to customize the connector line.
 
 * [Stroke]() – Gets or sets the stroke color of the connector line
 * [StrokeWidth]() – Gets or sets the stroke thickness of the connector line
