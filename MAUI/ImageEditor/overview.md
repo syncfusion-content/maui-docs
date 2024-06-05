@@ -5,11 +5,12 @@ description: Learn about the introduction of Syncfusion .NET MAUI ImageEditor(Sf
 platform: maui
 control: SfImageEditor
 documentation: ug
+keywords: .net maui imageEditor, .NET MAUI ImageEditor, .net maui image editing, image view maui.
 ---
 
 # Overview of .NET MAUI Image Editor (SfImageEditor)
 
-The Syncfusion .NET MAUI ImageEditor (SfImageEditor) is a very handy tool, which is used to edit an image by annotating with freehand drawing paths, text, and built-in shapes; it also allows to crop and flip an image. This control has a built-in toolbar that helps to perform editing operations.
+The [Syncfusion .NET MAUI ImageEditor (SfImageEditor)](https://www.syncfusion.com/maui-controls/maui-image-editor) is a very handy tool, which is used to edit an image by annotating with freehand drawing paths, text, and built-in shapes; it also allows to crop and flip an image. This control has a built-in toolbar that helps to perform editing operations.
 
 ## Key features
  * Image cropping: Crop portions of an image as per the requirement.
