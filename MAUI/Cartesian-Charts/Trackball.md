@@ -53,7 +53,7 @@ The [DisplayMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Cha
 
 * `FloatAllPoints` – Displays labels for all the data points along the vertical line.
 * `NearestPoint` – Displays label for a single data point nearer to the touch point on the chart area.
-* `GroupAllPoints` – Displays label for all the data points grouped and positioned at the top of the chart area.
+* `GroupAllPoints` – Displays all the data point labels grouped at the top of the chart area.
 
 {% tabs %}
 
@@ -262,7 +262,7 @@ The [MarkerSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.
 
 ### Trackball Label Template
 
-You can customize the appearance of the Trackball label with your own template by using [TrackballLabelTemplate]() property of [CartesianSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.CartesianSeries.html).
+Trackball labels can be customized by adding any view as its template by using [TrackballLabelTemplate]() of [CartesianSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.CartesianSeries.html).
 
 T> The `DataItem` can be used to access the data linked to the associated business model
 
