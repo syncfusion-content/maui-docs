@@ -5,6 +5,7 @@ description: Learn here about getting started with Syncfusion .NET MAUI Maps (Sf
 platform: MAUI
 control: SfMaps
 documentation: ug
+keywords: .net maui maps, .NET MAUI Maps, .net maui maps library.
 ---
 
 # Getting started with MAUI Maps (SfMaps)
