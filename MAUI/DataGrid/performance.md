@@ -11,11 +11,11 @@ documentation: UG
 
 ## LoadUIView
 
-By default, the `UIElement` is loaded inside the [DataGridCell](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCell.html). The `DataGridColumn.LoadUIView` property determines whether to load a `UIElement` inside the [DataGridCell](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCell.html) or to draw the cell value directly on the `canvas` of the [DataGridCell](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCell.html) on the Android platform.
+By default, the [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html) loads a `UIElement` into the [DataGridCell](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCell.html) to display the cell content. The `DataGridColumn.LoadUIView` property determines whether to load a `UIElement` or to draw the cell content directly within the [DataGridCell](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCell.html) on the Android platform to improve scrolling performance. This is applicable only for the android platform as of now.
 
-If `LoadUIView` is set to `false`, the cell value of the column will be drawn directly on the `canvas` of the grid cells to enhance performance. However, when `LoadUIView` is set to `true`, a `UIElement` ([SfDataGridLabel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGridLabel.html)) will be loaded in the [DataGridCell](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCell.html).
+If `LoadUIView` is set to `false`, the cell content will be drawn directly in the grid cell to enhance performance. However, when `LoadUIView` is set to `true`, the cell content will be displayed through the `UIElement`.
 
-The default value of `LoadUIView` is `True`.  The scrolling performance improved when `LoadUIView` was set to `False`.
+The default value of this property is `true`. If you want to improve loading and scrolling performance, you can simply set the `LoadUIView` property to `false`.
 
 {% tabs %}
 {% highlight xaml %}
@@ -30,14 +30,14 @@ dataGrid.Columns.Add(column);
 {% endhighlight %}
 {% endtabs %}
 
-You can also download the entire source code of this from [GitHub](https://github.com/SyncfusionExamples/How-to-improve-scrolling-performance-in-.NET-MAUI-DataGrid).
+N> Download demo application from [GitHub](https://github.com/SyncfusionExamples/How-to-improve-scrolling-performance-in-.NET-MAUI-DataGrid).
 
 ### Limitations
 
-* Implicit and explicit padding is not supported. [CellPadding](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_CellPadding) is applied to the left and right, but the top and bottom [CellPadding](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_CellPadding) of [DataGridCell](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCell.html) are determined by the content.
+* Both implicit and explicit padding are not supported. However, left and right padding will be applied based on the padding, while the top and bottom positions will be adjusted based on the content.
 
-* LineBreakMode is not supported.
-
-* Accessibility does not work.
+* `DataGridColumn.LineBreakMode` is not supported.
 
 * Runtime theme switching is not supported.
+
+* This is not supported for [DataGridTemplateColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridTemplateColumn.html), [DataGridCheckBoxColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCheckBoxColumn.html) and [DataGridImageColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridImageColumn.html).
