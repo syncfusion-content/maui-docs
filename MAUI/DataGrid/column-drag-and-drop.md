@@ -9,7 +9,7 @@ documentation: ug
 
 # Column Drag and Drop in MAUI DataGrid (SfDataGrid)
 
-The SfDataGrid allows dragging and dropping a column header by setting the `SfDataGrid.AllowDraggingColumn` property to `true.` The drag view is displayed while dragging a column header. Based on the requirements, drag and drop operations can be handled by using the `SfDataGrid.QueryColumnDragging` event.
+The SfDataGrid allows you to drag and drop a column header by setting the `SfDataGrid.AllowDraggingColumn` property to `true.` A drag view is displayed while dragging a column header. You can handle drag and drop operations based on your requirements by using the `SfDataGrid.QueryColumnDragging` event.
 
 {% tabs %}
 {% highlight xaml %}
@@ -27,7 +27,7 @@ The SfDataGrid allows dragging and dropping a column header by setting the `SfDa
 
 ## Column drag and drop events
 
-The `QueryColumnDragging` event is fired continuously while dragging a column and ends when the dragging ends. By handling the `SfDataGrid.QueryColumnDragging` event, the dragging of a particular column header can be canceled.
+The `QueryColumnDragging` event is fired continuously while dragging and dropping a column. By handling this event, you can cancel the dragging of a particular column header.
 
 The `QueryColumnDragging` event provides the following properties in the `DataGridQueryColumnDraggingEventArgs`:
 
@@ -40,7 +40,7 @@ The `QueryColumnDragging` event provides the following properties in the `DataGr
 
 ## Cancel dragging of a particular column
 
-Dragging of a particular column can be canceled using `DataGridDragAction` argument of the `QueryColumnDragging` event handler.
+The dragging of a particular column can be canceled using the `DataGridDragAction` argument in the `QueryColumnDragging` event.
 
 {% highlight c# %}
 dataGrid.QueryColumnDragging += SfDataGrid_QueryColumnDragging;
@@ -58,7 +58,7 @@ private void SfDataGrid_QueryColumnDragging(object? sender, DataGridQueryColumnD
 
 ## Cancel dropping when dragging for a particular column
 
-Dropping when dragging a particular column can be canceled using the `DataGridDragAction` argument of the `QueryColumnDragging` event handler.
+The dropping of a particular column when dragging can be canceled using the `DataGridDragAction` argument in the `QueryColumnDragging` event.
 
 {% highlight c# %}
 dataGrid.QueryColumnDragging += SfDataGrid_QueryColumnDragging;
@@ -77,7 +77,7 @@ private void SfDataGrid_QueryColumnDragging(object? sender, DataGridQueryColumnD
 
 ## Cancel dropping for a particular column
 
-The dropping of a particular column can be canceled using the `DataGridDragAction` argument of the `QueryColumnDragging` event handler.
+The dropping of a particular column can be canceled using the `DataGridDragAction` argument in the `QueryColumnDragging` event.
 
 {% highlight c# %}
 dataGrid.QueryColumnDragging += SfDataGrid_QueryColumnDragging;
@@ -93,7 +93,7 @@ private void SfDataGrid_QueryColumnDragging(object? sender, DataGridQueryColumnD
 
 ## Cancel dropping at a particular position
 
-Dropping at a particular position can be canceled using the `DataGridDragAction` argument of the `QueryColumnDragging` event handler.
+The dropping at a particular position can be canceled using the `DataGridDragAction` argument in the `QueryColumnDragging` event.
 
 {% highlight c# %}
 dataGrid.QueryColumnDragging += SfDataGrid_QueryColumnDragging;
@@ -109,7 +109,7 @@ private void SfDataGrid_QueryColumnDragging(object? sender, DataGridQueryColumnD
 
 ## Cancel dropping of a particular column in a position
 
-Dropping of a particular column in a position can be canceled using the `DataGridDragAction` and `DraggingPosition` arguments of the `QueryColumnDragging` event handler.
+The dropping of a particular column in a position can be canceled using the `DataGridDragAction` and `DraggingPosition` arguments of the `QueryColumnDragging` event.
 
 {% highlight c# %}
 dataGrid.QueryColumnDragging += SfDataGrid_QueryColumnDragging;
@@ -127,7 +127,7 @@ private void SfDataGrid_QueryColumnDragging(object? sender, DataGridQueryColumnD
 
 ### Cancel dragging between frozen and non-frozen columns
 
-Dragging between frozen and non-frozen columns can be canceled using the `DataGridDragAction` and `From` arguments of the `QueryColumnDragging` event handler, by checking whether the value of the `From` argument is a frozen column index.
+The dragging between frozen and non-frozen columns can be canceled using the `DataGridDragAction` and `From` arguments of the `QueryColumnDragging` event, by checking whether the value of the `From` argument is a frozen column index.
 
 {% highlight c# %}
 dataGrid.FrozenColumnCount = 2;
@@ -145,7 +145,7 @@ private void SfDataGrid_QueryColumnDragging(object? sender, DataGridQueryColumnD
 
 ### Cancel dropping between frozen and non-frozen columns
 
-Dropping between frozen and non-frozen columns can be canceled using the `DataGridDragAction` and `From` arguments of the `QueryColumnDragging` event handler by checking whether the `e.From` value is a frozen column index.
+The dropping between frozen and non-frozen columns can be canceled using the `DataGridDragAction` and `From` arguments of the `QueryColumnDragging` event by checking whether the `DataGridQueryColumnDraggingEventArgs.From` value is a frozen column index.
 
 {% highlight c# %}
 dataGrid.FrozenColumnCount = 2;
@@ -179,41 +179,26 @@ The SfDataGrid allows customizing the column drag and drop indicators using the 
 
 <img alt="DataGrid column drag indicator color" src="Images\column-drag-and-drop\maui-datagrid-column-drag-indicator-color.png" width="450"/>
 
-### Customize drag view text color
+### Customize drag view text and background color
 
-The SfDataGrid allows customizing the drag view text color using the `SfDataGrid.DefaultStyle.ColumnDragViewTextColor` property.
-
-{% highlight xaml %}
-    <syncfusion:SfDataGrid x:Name="dataGrid"
-                           ItemsSource="{Binding OrderInfoCollection}"
-                           AllowDraggingColumn="True">
-        <syncfusion:SfDataGrid.DefaultStyle>
-            <syncfusion:DataGridStyle ColumnDragViewTextColor="Red"/>
-        </syncfusion:SfDataGrid.DefaultStyle>
-    </syncfusion:SfDataGrid>
-{% endhighlight %}
-
-<img alt="DataGrid column drag view text color" src="Images\column-drag-and-drop\maui-datagrid-column-drag-view-text-color.png" width="450"/>
-
-### Customize drag view background color
-
-The SfDataGrid allows customizing the drag view background color using the `SfDataGrid.DefaultStyle.ColumnDragViewBackgroundColor` property.
+The SfDataGrid allows customizing the drag view text and background color using the `SfDataGrid.DefaultStyle.ColumnDragViewTextColor` and `SfDataGrid.DefaultStyle.ColumnDragViewBackgroundColor` properties, respectively.
 
 {% highlight xaml %}
     <syncfusion:SfDataGrid x:Name="dataGrid"
                            ItemsSource="{Binding OrderInfoCollection}"
                            AllowDraggingColumn="True">
         <syncfusion:SfDataGrid.DefaultStyle>
-            <syncfusion:DataGridStyle ColumnDragViewBackgroundColor="GreenYellow"/>
+            <syncfusion:DataGridStyle ColumnDragViewTextColor="#FFFFFF"
+                              ColumnDragViewBackgroundColor="#FFBF69"/>
         </syncfusion:SfDataGrid.DefaultStyle>
     </syncfusion:SfDataGrid>
 {% endhighlight %}
 
-<img alt="DataGrid column drag view background color" src="Images\column-drag-and-drop\maui-datagrid-column-drag-view-background-color.png" width="450"/>
+<img alt="DataGrid column drag view background and text color" src="Images\column-drag-and-drop\maui-datagrid-drag-view-background-and-text-color.png" width="450"/>
 
 ## Cancel auto scrolling
 
-Horizontal auto-scrolling of the SfDataGrid during column drag and drop can be canceled using the `CanAutoScroll` argument of the `QueryColumnDragging` event handler.
+Auto-scrolling during column dragging can be disabled using the `CanAutoScroll` argument in the `QueryColumnDragging` event.
 
 {% highlight c# %}
 dataGrid.QueryColumnDragging += SfDataGrid_QueryColumnDragging;
