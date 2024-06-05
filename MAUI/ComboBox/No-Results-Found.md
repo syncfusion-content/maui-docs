@@ -37,6 +37,8 @@ comboBox.NoResultsFoundText = "Not Found";
 
 {% endtabs %}
 
+![NoResultsFoundText](images/NoResultsFound/NoResultsFoundText.png)
+
 ## NoResultsFoundTemplate
 
 We can customize the appearance of the desire text to be displayed for indicating no results found by using the `NoResultsFoundTemplate` property.
@@ -82,5 +84,7 @@ comboBox.NoResultsFoundTemplate = noResultsTemplate;
 {% endhighlight %}
 
 {% endtabs %}
+
+![NoResultsFoundTemplate](images/NoResultsFound/NoResultsFoundTemplate.png)
 
 N> By Default `NoResultsFoundText` is enabled we can restrict it by using `NoResultsFoundText` as Empty. `comboBox.NoResultsFoundText = ""`;

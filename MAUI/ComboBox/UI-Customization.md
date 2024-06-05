@@ -206,7 +206,7 @@ comboBox.CustomView = customLabel;
 
 {% endtabs %}
 
-
+![CustomView](images/UICustomization/CustomView.png)
 
 N> `SfComboBox` ClearButton will not be supported when using Custom View.
 
@@ -1037,6 +1037,7 @@ comboBox.DropDownButtonSettings = dropDownButtonSettings;
 
 {% endtabs %}
 
+![CustomView](images/UICustomization/DropDownButtonSettings_View.png)
 
 ## Styling token items
 
