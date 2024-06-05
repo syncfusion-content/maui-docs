@@ -264,6 +264,8 @@ The [MarkerSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.
 
 You can customize the appearance of the Trackball label with your own template by using [TrackballLabelTemplate]() property of [CartesianSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.CartesianSeries.html).
 
+T> The `DataItem` can be used to access the data linked to the associated business model
+
 {% tabs %}
 
 {% highlight xaml %}
@@ -273,9 +275,9 @@ You can customize the appearance of the Trackball label with your own template b
         <DataTemplate x:Key="trackballLabelTemplate">
             <HorizontalStackLayout Spacing="5">
                 <Image Source="image.png" WidthRequest="20" HeightRequest="20"/>
-                <Label Text="{Binding Series.Label}" FontSize="15"  HorizontalOptions="Center"  TextColor="White"/>
+                <Label Text="{Binding DataItem.Name}" FontSize="15"  HorizontalOptions="Center"  TextColor="White"/>
                 <Label Text=" : " FontSize="15"  HorizontalOptions="Center" TextColor="White" />
-                <Label Text="{Binding Label,StringFormat='{0}M'}" FontSize="15" HorizontalOptions="Center" TextColor="White" />
+                <Label Text="{Binding DataItem.YValues,StringFormat='{0}M'}" FontSize="15" HorizontalOptions="Center" TextColor="White" />
             </HorizontalStackLayout>         
         </DataTemplate>
     </chart:SfCartesianChart.Resources>
@@ -287,20 +289,17 @@ You can customize the appearance of the Trackball label with your own template b
     <chart:LineSeries ItemsSource="{Binding Data1}" 
                       TrackballLabelTemplate ="{StaticResource trackballLabelTemplate}"
                       XBindingPath="XValues"
-                      YBindingPath="YValues"
-                      Label="Thomas"/>
+                      YBindingPath="YValues"/>
 
     <chart:LineSeries ItemsSource="{Binding Data2}" 
                       TrackballLabelTemplate ="{StaticResource trackballLabelTemplate}"
                       XBindingPath="XValues"
-                      YBindingPath="YValues"
-                      Label="Elizabeth"/>
+                      YBindingPath="YValues"/>
 
     <chart:LineSeries ItemsSource="{Binding Data3}" 
                       TrackballLabelTemplate ="{StaticResource trackballLabelTemplate}"
                       XBindingPath="XValues"
-                      YBindingPath="YValues"
-                      Label="Andrew"/>
+                      YBindingPath="YValues"/>
                       
 </chart:SfCartesianChart>
 
@@ -317,19 +316,16 @@ LineSeries series1 = new LineSeries();
 series1.ItemsSource = new ViewModel().Data1;
 series1.XBindingPath = "XValues";
 series1.YBindingPath = "YValues";
-series1.Label = "Thomas";
 
 LineSeries series2 = new LineSeries();
 series2.ItemsSource = new ViewModel().Data2;
 series2.XBindingPath = "XValues";
 series2.YBindingPath = "YValues";
-series2.Label = "Elizabeth";
 
 LineSeries series3 = new LineSeries();
 series3.ItemsSource = new ViewModel().Data3;
 series3.XBindingPath = "XValues";
 series3.YBindingPath = "YValues";
-series3.Label = "Andrew";
 
 DataTemplate trackballLabelTemplate = new DataTemplate(() =>
 {
@@ -351,7 +347,7 @@ DataTemplate trackballLabelTemplate = new DataTemplate(() =>
         HorizontalOptions = LayoutOptions.Center,
         TextColor = Colors.White
     };
-    label1.SetBinding(Label.TextProperty,"Series.Label");
+    label1.SetBinding(Label.TextProperty,"DataItem.Name");
 
     Label label2 = new Label
     {
@@ -367,7 +363,7 @@ DataTemplate trackballLabelTemplate = new DataTemplate(() =>
         HorizontalOptions = LayoutOptions.Center,
         TextColor = Colors.White
     };
-    label3.SetBinding(Label.TextProperty,"Label", stringFormat: "{0}M");
+    label3.SetBinding(Label.TextProperty," DataItem.YValues", stringFormat: "{0}M");
 
     horizontalStackLayout.Add(image);
     horizontalStackLayout.Add(label1);
