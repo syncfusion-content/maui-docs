@@ -143,12 +143,12 @@ this.Content = chart;
 
 ## Connector line style
 
-This feature is used to customize the connector line. The following [ConnectorLineStyle]() property are used to customize the connector line.
+The [ConnectorLineStyle]() is used to customize the appearance of the data label connector line when data labels are placement outside. The following ConnectorLineStyle property are used to customize the connector line.
 
-* [Stroke]() – used to change the color of the line
-* [StrokeWidth]() – used to change the stroke thickness of the line
-* [StrokeDashArray]() – used to set the dashes for the line
-* [ConnectorType]() - used to specify the connector type
+* [Stroke]() – Gets or sets the stroke color of the connector line
+* [StrokeWidth]() – Gets or sets the stroke thickness of the connector line
+* [StrokeDashArray]() – Gets or sets the dashes for the connector line
+* [ConnectorType]() - Gets or sets a value that specifies the connector type
 
 {% tabs %}
 
@@ -304,7 +304,7 @@ this.Content = chart;
 
 ## Smart Labels
 
-This feature is used to arrange the data labels smartly and avoid the intersection when there is overlapping of labels. The [SmartLabelAlignment]() enum contains the following values.
+ The [SmartLabelAlignment]() property is used to arrange the data labels smartly and avoid the intersection when there is overlapping of labels. The [SmartLabelAlignment]() enum contains the following values.
 
 * [Shift]() - smartly arranges the overlapped data labels.
 * [Hide]() - hides the intersected data labels.
@@ -318,7 +318,7 @@ If the [LabelPosition]() is [Outside]() and the [SmartLabelAlignment]() is [Shif
 
 If the [SmartLabelAlignment]() is [None](), then the overlapped labels will be visible irrespective of LabelPosition.
 
-When the [SmartLabelAlignment]() is [Shift](), and if the data label goes out of the chart area, then the labels got trimmed and the tooltip is shown when clicking/tapping the data label. 
+When the [SmartLabelAlignment]() is [Shift](), and if the data label goes out of the chart area, then the labels got trimmed.
 
 {% tabs %}
 
