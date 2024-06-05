@@ -31,3 +31,7 @@ documentation: ug
 {% endtabs %}
 
 N> You can get the visible plotting region of the series in the chart using [SeriesBounds]() property in run time.
+
+## See also 
+
+[How to highlight selected data points by using GetDataPoints method in .NET MAUI Cartesian Charts]()
