@@ -209,7 +209,11 @@ The `LineBreakMode` allows you to wrap or truncate the text. The default value o
 {% tabs %}
 {% highlight xaml %}
    
-        <syncfusion:SfCheckBox x:Name="checkBox" IsChecked="True" WidthRequest="200" LineBreakMode="WordWrap" Text="The LineBreakMode allows you to wrap or truncate the text."></syncfusion:SfCheckBox>
+        <syncfusion:SfCheckBox x:Name="checkBox" 
+                               IsChecked="True" 
+                               WidthRequest="200" 
+                               LineBreakMode="WordWrap" 
+                               Text="The LineBreakMode allows you to wrap or truncate the text."/>
 
 {% endhighlight %}
 {% highlight c# %}
@@ -220,6 +224,7 @@ The `LineBreakMode` allows you to wrap or truncate the text. The default value o
     sfCheckBox.LineBreakMode = LineBreakMode.WordWrap;
     sfCheckBox.WidthRequest = 200;
     stackLayout.Children.Add(sfCheckBox);
+    this.Content = stackLayout;
 
 {% endhighlight %}
 {% endtabs %}
@@ -230,7 +235,7 @@ This demo can be downloaded from this [link](https://www.syncfusion.com/download
 
 ## Size Customization
 
-The [`ControlSize`] property is used to customize the [`CheckBox`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html) control size.
+The [`ControlSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_ControlSize) property is used to customize the [`CheckBox`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html) control size.
 
 {% tabs %}
 {% highlight xaml %}
@@ -244,9 +249,10 @@ The [`ControlSize`] property is used to customize the [`CheckBox`](https://help.
 
     StackLayout stackLayout = new StackLayout();
     SfCheckBox  sfCheckBox  = new SfCheckBox();
-    sfCheckBox.Text = "Radio Button";
+    sfCheckBox.Text = "CheckBox";
     sfCheckBox.ControlSize = 40;
     stackLayout.Children.Add(sfCheckBox);
+    this.Content = stackLayout;
 
 {% endhighlight %}
 {% endtabs %}

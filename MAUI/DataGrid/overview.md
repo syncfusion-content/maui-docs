@@ -21,6 +21,8 @@ The .NET MAUI DataGrid control is used to display and manipulate data in a tabul
 
 * **Column Resizing** - Interactive support to adjust the width of columns.
 
+* **Column Drag and Drop** - Interactive support to drag and drop columns.
+
 * **Editing** - Interactive support to edit with different column types.
 
 * **Sorting** - Interactively sort one or more columns.
