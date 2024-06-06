@@ -5,7 +5,7 @@ description: Learn here all about crop support in the Syncfusion .NET MAUI Image
 platform: maui
 control: SfImageEditor
 documentation: ug
-keywords: .net maui imageEditor, .NET MAUI ImageEditor,.net maui image editing, .net maui crop image.
+keywords: .net maui imageEditor, .net maui image editing, .net maui crop image.
 ---
 
 # Crop in .NET MAUI Image Editor (SfImageEditor)

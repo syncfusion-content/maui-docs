@@ -5,7 +5,7 @@ description: Learn here all about introduction of Syncfusion .NET MAUI Scheduler
 platform: maui
 control: SfScheduler
 documentation: ug
-keywords : .net maui scheduler, .NET MAUI Scheduler.
+keywords : .net maui scheduler, maui appointment scheduling, .net maui agenda view.
 ---
 
 # Overview of .NET MAUI Scheduler (SfScheduler)

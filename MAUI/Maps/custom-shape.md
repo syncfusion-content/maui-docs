@@ -5,7 +5,7 @@ description: Learn here all about the custom shapes feature of Syncfusion .NET M
 platform: MAUI
 control: SfMaps
 documentation: ug
-keywords: .net maui maps, .NET MAUI Maps, .net maui shape maps.
+keywords: .net maui maps, .net maui shape maps.
 ---
 
 # Custom shapes in .NET MAUI Maps (SfMaps)
