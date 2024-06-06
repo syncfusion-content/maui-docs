@@ -34,7 +34,7 @@ comboBox.MaximumSuggestion = 2;
 
 The following gif image illustrates the result of the above code:
 
-![.NET MAUI ComboBox LoadMore support](Images/LoadMore/LoadMore.gif)
+![.NET MAUI ComboBox LoadMore support](Images/Maximum-display-item-with-Expander/LoadMore.gif)
 
 ## LoadMore text customization
 
@@ -66,7 +66,7 @@ autocomplete.LoadMoreText= "Load more items";
 
 The following gif image illustrates the result of the above code:
 
-![.NET MAUI ComboBox LoadMoreText](Images/LoadMore/LoadMoreText.png)
+![.NET MAUI ComboBox LoadMoreText](Images/Maximum-display-item-with-Expander/LoadMoreText.png)
 
 ## LoadMore view customization
 
@@ -116,7 +116,7 @@ comboBox.LoadMoreTemplate = new DataTemplate(() =>
 
 The following gif image illustrates the result of the above code:
 
-![.NET MAUI ComboBox LoadMoreTemplate](Images/LoadMore/LoadMoreTemplate.png)
+![.NET MAUI ComboBox LoadMoreTemplate](Images/Maximum-display-item-with-Expander/LoadMoreTemplate.png)
 
 ## LoadMore Button Tapped Event
 
