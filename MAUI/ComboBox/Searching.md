@@ -114,7 +114,7 @@ The following image illustrates the result of the above code:
 
 ![.NET MAUI ComboBox TextSearchMode Contains](Images/Searching/TextSearchModeContains.gif)
 
-### Prefix Charatcters constraint
+### Prefix characters constraint
 
 Instead of displaying suggestion list on every character entry, matches can be filtered and displayed after a few character entries. This can be done by `MinimumPrefixCharacters` property and its default value is 1.
 
