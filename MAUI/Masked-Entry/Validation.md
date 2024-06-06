@@ -10,7 +10,7 @@ documentation: ug
 
 ## Validation Mode
 
-Input validation happens based on the value of the `ValidationMode`property. The enum values of this property are:
+Input validation happens based on the value of the `ValidationMode` property. The enum values of this property are:
 
 * KeyPress
 * LostFocus
