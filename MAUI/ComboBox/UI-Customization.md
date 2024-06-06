@@ -152,7 +152,7 @@ The [SelectionTextHighlightColor](https://help.syncfusion.com/cr/maui/Syncfusion
 {% tabs %}
 {% highlight xaml %}
 
-<editors:SfCombobox x:Name="combobox"
+    <editors:SfComboBox x:Name="comboBox"
                         WidthRequest="250"
                         ItemsSource="{Binding SocialMedias}"
                         DisplayMemberPath="Name"
@@ -164,7 +164,7 @@ The [SelectionTextHighlightColor](https://help.syncfusion.com/cr/maui/Syncfusion
 
 {% highlight C# %}
 
-combobox.SelectionTextHighlightColor = Colors.Green;
+    comboBox.SelectionTextHighlightColor = Colors.Green;
 
 {% endhighlight %}
 {% endtabs %}
@@ -180,18 +180,18 @@ The maximum height of the drop-down can be changed by using the [MaxDropDownHeig
 {% tabs %}
 {% highlight xaml %}
 
-<editors:SfComboBox x:Name="comboBox"
-                    WidthRequest="250"
-                    IsEditable="true"
-                    MaxDropDownHeight="150"
-                    ItemsSource="{Binding SocialMedias}"
-                    DisplayMemberPath="Name"
-                    TextMemberPath="Name" />
+    <editors:SfComboBox x:Name="comboBox"
+                        WidthRequest="250"
+                        IsEditable="true"
+                        MaxDropDownHeight="150"
+                        ItemsSource="{Binding SocialMedias}"
+                        DisplayMemberPath="Name"
+                        TextMemberPath="Name" />
 
 {% endhighlight %}
 {% highlight C# %}
 
-comboBox.MaxDropDownHeight = 150;
+    comboBox.MaxDropDownHeight = 150;
 
 {% endhighlight %}
 {% endtabs %}
@@ -257,34 +257,35 @@ The [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.Dr
         <editors:SfComboBox.BindingContext>
             <local:EmployeeViewModel/>
         </editors:SfComboBox.BindingContext>
+
         <editors:SfComboBox.ItemTemplate>
-            <DataTemplate >
+            <DataTemplate>
                 <ViewCell>
                     <Grid Margin="0,5"
                           VerticalOptions="Center"
                           HorizontalOptions="Center"
                           ColumnDefinitions="48,220"
                           RowDefinitions="50">
-                        <Image Grid.Column="0"
-                               HorizontalOptions="Center"
-                               VerticalOptions="Center"
-                               Source="{Binding ProfilePicture}"
-                               Aspect="AspectFit"/>
-                        <StackLayout HorizontalOptions="Start"
-                                     VerticalOptions="Center"
-                                     Grid.Column="1"
-                                     Margin="15,0,0,0">
-                            <Label HorizontalTextAlignment="Start"
-                                   VerticalTextAlignment="Center"
-                                   Opacity=".87"
-                                   FontSize="14"
-                                   Text="{Binding Name}"/>
-                            <Label HorizontalOptions="Start"
-                                   VerticalTextAlignment="Center"
-                                   Opacity=".54"
-                                   FontSize="12"
-                                   Text="{Binding Designation}"/>
-                        </StackLayout>
+                            <Image Grid.Column="0"
+                                   HorizontalOptions="Center"
+                                   VerticalOptions="Center"
+                                   Source="{Binding ProfilePicture}"
+                                   Aspect="AspectFit"/>
+                            <StackLayout HorizontalOptions="Start"
+                                         VerticalOptions="Center"
+                                         Grid.Column="1"
+                                         Margin="15,0,0,0">
+                                <Label HorizontalTextAlignment="Start"
+                                       VerticalTextAlignment="Center"
+                                       Opacity=".87"
+                                       FontSize="14"
+                                       Text="{Binding Name}"/>
+                                <Label HorizontalOptions="Start"
+                                       VerticalTextAlignment="Center"
+                                       Opacity=".54"
+                                       FontSize="12"
+                                       Text="{Binding Designation}"/>
+                            </StackLayout>
                     </Grid>
                 </ViewCell>
             </DataTemplate>
@@ -374,25 +375,25 @@ DropDown items can be customized using the [DropDownItemFontAttributes](https://
 {% tabs %}
 {% highlight xaml %}
 
-<editors:SfCombobox x:Name="combobox"
-                        WidthRequest="250"
-                        ItemsSource="{Binding SocialMedias}"
-                        DisplayMemberPath="Name"
-                        TextMemberPath="Name"
-                        Placeholder="Enter Media"
-                        DropDownItemFontAttributes="Italic"
-                        DropDownItemFontFamily="OpenSansSemibold"
-                        DropDownItemFontSize="16"
-                        DropDownItemTextColor="DarkViolet" />
+<editors:SfComboBox x:Name="comboBox"
+                    WidthRequest="250"
+                    ItemsSource="{Binding SocialMedias}"
+                    DisplayMemberPath="Name"
+                    TextMemberPath="Name"
+                    Placeholder="Enter Media"
+                    DropDownItemFontAttributes="Italic"
+                    DropDownItemFontFamily="OpenSansSemibold"
+                    DropDownItemFontSize="16"
+                    DropDownItemTextColor="DarkViolet" />
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-combobox.DropDownItemFontAttributes = FontAttributes.Italic;
-combobox.DropDownItemFontFamily = "OpenSansSemibold";
-combobox.DropDownItemFontSize = 16;
-combobox.DropDownItemTextColor = Colors.DarkViolet;
+    comboBox.DropDownItemFontAttributes = FontAttributes.Italic;
+    comboBox.DropDownItemFontFamily = "OpenSansSemibold";
+    comboBox.DropDownItemFontSize = 16;
+    comboBox.DropDownItemTextColor = Colors.DarkViolet;
 
 {% endhighlight %}
 {% endtabs %}
@@ -406,19 +407,19 @@ The [DropDownBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inp
 {% tabs %}
 {% highlight xaml %}
 
-<editors:SfCombobox x:Name="combobox"
-                        WidthRequest="250"
-                        ItemsSource="{Binding SocialMedias}"
-                        DisplayMemberPath="Name"
-                        TextMemberPath="Name"
-                        Placeholder="Enter Media"
-                        DropDownBackground="YellowGreen" />
+    <editors:SfComboBox x:Name="comboBox"
+                            WidthRequest="250"
+                            ItemsSource="{Binding SocialMedias}"
+                            DisplayMemberPath="Name"
+                            TextMemberPath="Name"
+                            Placeholder="Enter Media"
+                            DropDownBackground="YellowGreen" />
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-combobox.DropDownBackground = Colors.YellowGreen;
+    comboBox.DropDownBackground = Colors.YellowGreen;
 
 {% endhighlight %}
 {% endtabs %}
@@ -432,7 +433,7 @@ The [SelectedDropDownItemBackground](https://help.syncfusion.com/cr/maui/Syncfus
 {% tabs %}
 {% highlight xaml %}
 
-<editors:SfCombobox x:Name="combobox"
+<editors:SfComboBox x:Name="comboBox"
                         WidthRequest="250"
                         ItemsSource="{Binding SocialMedias}"
                         DisplayMemberPath="Name"
@@ -444,7 +445,7 @@ The [SelectedDropDownItemBackground](https://help.syncfusion.com/cr/maui/Syncfus
 
 {% highlight C# %}
 
-combobox.SelectedDropDownItemBackground = Colors.LightSeaGreen;
+    comboBox.SelectedDropDownItemBackground = Colors.LightSeaGreen;
 
 {% endhighlight %}
 {% endtabs %}
@@ -458,19 +459,19 @@ The [DropDownStroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.
 {% tabs %}
 {% highlight xaml %}
 
-<editors:SfCombobox x:Name="combobox"
-                        WidthRequest="250"
-                        ItemsSource="{Binding SocialMedias}"
-                        DisplayMemberPath="Name"
-                        TextMemberPath="Name"
-                        Placeholder="Enter Media"
-                        DropDownStroke="DarkOrange" />
+    <editors:SfComboBox x:Name="comboBox"
+                            WidthRequest="250"
+                            ItemsSource="{Binding SocialMedias}"
+                            DisplayMemberPath="Name"
+                            TextMemberPath="Name"
+                            Placeholder="Enter Media"
+                            DropDownStroke="DarkOrange" />
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-combobox.DropDownStroke = Colors.DarkOrange;
+    comboBox.DropDownStroke = Colors.DarkOrange;
 
 {% endhighlight %}
 {% endtabs %}
@@ -484,7 +485,7 @@ The [DropDownStrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Mau
 {% tabs %}
 {% highlight xaml %}
 
-<editors:SfCombobox x:Name="combobox"
+<editors:SfComboBox x:Name="comboBox"
                         WidthRequest="250"
                         ItemsSource="{Binding SocialMedias}"
                         DisplayMemberPath="Name"
@@ -497,7 +498,7 @@ The [DropDownStrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Mau
 
 {% highlight C# %}
 
-combobox.DropDownStrokeThickness = 5;
+    comboBox.DropDownStrokeThickness = 5;
 
 {% endhighlight %}
 {% endtabs %}
@@ -511,7 +512,7 @@ The [DropDownItemHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inp
 {% tabs %}
 {% highlight xaml %}
 
-<editors:SfCombobox x:Name="combobox"
+<editors:SfComboBox x:Name="comboBox"
                         WidthRequest="250"
                         ItemsSource="{Binding SocialMedias}"
                         DisplayMemberPath="Name"
@@ -523,7 +524,7 @@ The [DropDownItemHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inp
 
 {% highlight C# %}
 
-combobox.DropDownItemHeight = 25;
+    comboBox.DropDownItemHeight = 25;
 
 {% endhighlight %}
 {% endtabs %}
@@ -734,7 +735,7 @@ The [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.Dr
 {% tabs %}
 {% highlight xaml %}
 
-    <Grid >
+    <Grid>
         <Grid.Resources>
             <DataTemplate x:Key="employeeTemplate1">
                 <ViewCell>
@@ -1050,22 +1051,21 @@ The [DropDownOpening](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.S
 
 {% highlight xaml %}
 
- <editors:SfComboBox 
- DropdownOpening="comboBox_DropdownOpening"
- WidthRequest="350"
- HeightRequest="50"
- ItemsSource="{Binding SocialMedias}"
- DisplayMemberPath="Name"
- TextMemberPath="Name"    
- x:Name="comboBox" >
- </editors:SfComboBox>
+     <editors:SfComboBox x:Name="comboBox"
+                         DropdownOpening="comboBox_DropdownOpening"
+                         WidthRequest="350"
+                         HeightRequest="50"
+                         ItemsSource="{Binding SocialMedias}"
+                         DisplayMemberPath="Name"
+                         TextMemberPath="Name">
+     </editors:SfComboBox>
     
 {% endhighlight %}
 
 {% highlight c# %}
 
-  SfComboBox comboBox = new SfComboBox();
-  comboBox.DropdownOpening += comboBox_DropdownOpening;
+      SfComboBox comboBox = new SfComboBox();
+      comboBox.DropdownOpening += comboBox_DropdownOpening;
 
 {% endhighlight %}
 
@@ -1075,10 +1075,10 @@ The [DropDownOpening](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.S
 
 {% highlight c# %}
     
- private void comboBox_DropdownOpening(object sender, CancelEventArgs e)
- {
-     e.Cancel = true; // If you want to restrict the dropdown open then set the e.Cancel is true. 
- }
+     private void comboBox_DropdownOpening(object sender, CancelEventArgs e)
+     {
+         e.Cancel = true; // If you want to restrict the dropdown open then set the e.Cancel is true. 
+     }
 
 {% endhighlight %}
 
@@ -1092,22 +1092,21 @@ The [DropDownOpened](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Sf
 
 {% highlight xaml %}
 
-<editors:SfComboBox 
-DropdownOpened="comboBox_DropdownOpened"
-WidthRequest="350"
-HeightRequest="50"
-ItemsSource="{Binding SocialMedias}"
-DisplayMemberPath="Name"
-TextMemberPath="Name"    
-x:Name="comboBox" >
-</editors:SfComboBox>
+    <editors:SfComboBox x:Name="comboBox"
+                        DropdownOpened="comboBox_DropdownOpened"
+                        WidthRequest="350"
+                        HeightRequest="50"
+                        ItemsSource="{Binding SocialMedias}"
+                        DisplayMemberPath="Name"
+                        TextMemberPath="Name">   
+    </editors:SfComboBox>
  
 {% endhighlight %}
 
 {% highlight c# %}
 
-  SfComboBox comboBox = new SfComboBox();
-  comboBox.DropdownOpened += comboBox_DropdownOpened;
+      SfComboBox comboBox = new SfComboBox();
+      comboBox.DropdownOpened += comboBox_DropdownOpened;
 
 {% endhighlight %}
 
@@ -1117,10 +1116,10 @@ x:Name="comboBox" >
 
 {% highlight c# %}
 
-  private void comboBox_DropdownOpened(object sender, EventArgs e)
-  {
+      private void comboBox_DropdownOpened(object sender, EventArgs e)
+      {
 
-  }
+      }
 
 {% endhighlight %}
 
@@ -1165,19 +1164,19 @@ The cursor position in the input view can be obtained or updated using the [Curs
 {% tabs %}
 {% highlight xaml %}
 
-<editors:SfComboBox x:Name="comboBox"
-                            WidthRequest="250" 
-                            HeightRequest="35"
-                            IsEditable="True"
-                            CursorPosition = "4" />
+    <editors:SfComboBox x:Name="comboBox"
+                        WidthRequest="250" 
+                        HeightRequest="35"
+                        IsEditable="True"
+                        CursorPosition = "4" />
 {% endhighlight %}
 {% highlight C# %}
 
 using Syncfusion.Maui.Inputs;
 
-SfComboBox comboBox = new SfComboBox();
-comboBox.IsEditable = true;
-comboBox.CursorPosition = 4;
+    SfComboBox comboBox = new SfComboBox();
+    comboBox.IsEditable = true;
+    comboBox.CursorPosition = 4;
 
 {% endhighlight %}
 {% endtabs %}
@@ -1191,19 +1190,19 @@ The [ShowBorder](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfCo
 {% tabs %}
 {% highlight xaml %}
 
-<editors:SfComboBox x:Name="comboBox"
-                    WidthRequest="200" 
-                    HeightRequest="35"
-                    ShowBorder="False"/>
+    <editors:SfComboBox x:Name="comboBox"
+                        WidthRequest="200" 
+                        HeightRequest="35"
+                        ShowBorder="False"/>
 {% endhighlight %}
 {% highlight C# %}
 
 using Syncfusion.Maui.Inputs;
 
-SfComboBox comboBox = new SfComboBox();
-comboBox.WidthRequest = 200;
-comboBox.HeightRequest = 35;
-comboBox.ShowBorder = false;
+    SfComboBox comboBox = new SfComboBox();
+    comboBox.WidthRequest = 200;
+    comboBox.HeightRequest = 35;
+    comboBox.ShowBorder = false;
 
 {% endhighlight %}
 {% endtabs %}
@@ -1221,19 +1220,19 @@ N> Dynamic changes to the `HorizontalTextAlignment` property may not be function
 {% tabs %}
 {% highlight xaml %}
 
-<editors:SfComboBox x:Name="comboBox"
-                    WidthRequest="250" 
-                    HeightRequest="50"
-                    HorizontalTextAlignment="Center" 
-                    VerticalTextAlignment="Start"/>
+    <editors:SfComboBox x:Name="comboBox"
+                        WidthRequest="250" 
+                        HeightRequest="50"
+                        HorizontalTextAlignment="Center" 
+                        VerticalTextAlignment="Start"/>
 {% endhighlight %}
 {% highlight c# %}
 
-SfComboBox comboBox = new SfComboBox();
-comboBox.WidthRequest = 250;
-comboBox.HeightRequest = 50;
-comboBox.HorizontalTextAlignment = TextAlignment.Center;
-comboBox.VerticalTextAlignment = TextAlignment.Start;
+    SfComboBox comboBox = new SfComboBox();
+    comboBox.WidthRequest = 250;
+    comboBox.HeightRequest = 50;
+    comboBox.HorizontalTextAlignment = TextAlignment.Center;
+    comboBox.VerticalTextAlignment = TextAlignment.Start;
 
 {% endhighlight %}
 {% endtabs %}

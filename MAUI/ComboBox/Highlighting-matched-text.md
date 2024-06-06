@@ -30,31 +30,30 @@ It highlights the first position of the matching characters in the suggestion li
 
 {% highlight xaml %}
 
- <editors:SfComboBox x:Name="combobox"
-     WidthRequest="300"
-     ItemsSource="{Binding SocialMedias}"
-     TextHighlightMode="FirstOccurrence"
-     TextMemberPath="Name"
-     DisplayMemberPath="Name"
-     IsEditable="True"
-     IsFilteringEnabled="True"
-     HighlightedTextColor="Red"
-     HighlightedTextFontAttributes="Bold"/>
+     <editors:SfComboBox x:Name="comboBox"
+                         WidthRequest="300"
+                         HeightRequest = "40"
+                         ItemsSource="{Binding SocialMedias}"
+                         TextHighlightMode="FirstOccurrence"
+                         IsEditable="True"
+                         IsFilteringEnabled="True"
+                         HighlightedTextColor="Red"
+                         HighlightedTextFontAttributes="Bold"/>
 
-{% endhighlight %}
+    {% endhighlight %}
 
 {% highlight c# %}
 
-SfComboBox comboBox = new SfComboBox() 
-{
- HeightRequest = 40,
- TextHighlightMode = OccurrenceMode.FirstOccurrence,
- IsEditable =true,
- IsFilteringEnabled = true,
- HighlightedTextColor = Colors.Red,
- HighlightedTextFontAttributes = FontAttributes.Bold,
- ItemsSource = new List<string>(){ "Facebook", "Twitter", "Instagram", "LinkedIn" }
-};
+    SfComboBox comboBox = new SfComboBox() 
+    {
+         HeightRequest = 40,
+         WidthRequest= 300,
+         TextHighlightMode = OccurrenceMode.FirstOccurrence,
+         IsEditable =true,
+         IsFilteringEnabled = true,
+         HighlightedTextColor = Colors.Red,
+         HighlightedTextFontAttributes = FontAttributes.Bold,
+    };
 
 {% endhighlight %}
 {% endtabs %}
@@ -69,33 +68,32 @@ It highlights the matching character that are present everywhere in the suggesti
 
 {% highlight xaml %}
 
- <editors:SfComboBox x:Name="combobox"
-     WidthRequest="300"
-     ItemsSource="{Binding SocialMedias}"
-     TextHighlightMode="MultipleOccurrence"
-     TextMemberPath="Name"
-     DisplayMemberPath="Name"
-     IsEditable="True"
-     IsFilteringEnabled="True"
-     HighlightedTextColor="Red"
-     HighlightedTextFontAttributes="Bold"
-     TextSearchMode="Contains" />
+     <editors:SfComboBox x:Name="comboBox"
+                         WidthRequest="300"
+                         HeightRequest = "40"
+                         ItemsSource="{Binding SocialMedias}"
+                         TextHighlightMode="MultipleOccurrence"
+                         IsEditable="True"
+                         IsFilteringEnabled="True"
+                         HighlightedTextColor="Red"
+                         HighlightedTextFontAttributes="Bold"
+                         TextSearchMode="Contains" />
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-SfComboBox comboBox = new SfComboBox() 
-{
- HeightRequest = 40,
- TextSearchMode = ComboBoxTextSearchMode.Contains,
- TextHighlightMode = OccurrenceMode.MultipleOccurrence,
- IsEditable = true,
- IsFilteringEnabled = true,
- HighlightedTextColor = Colors.Red,
- HighlightedTextFontAttributes = FontAttributes.Bold,
- ItemsSource = new List<string>(){ "Facebook", "Twitter", "Instagram", "LinkedIn" }
-};
+    SfComboBox comboBox = new SfComboBox() 
+    {
+         HeightRequest = 40,
+         WidthRequest= 300,
+         TextSearchMode = ComboBoxTextSearchMode.Contains,
+         TextHighlightMode = OccurrenceMode.MultipleOccurrence,
+         IsEditable = true,
+         IsFilteringEnabled = true,
+         HighlightedTextColor = Colors.Red,
+         HighlightedTextFontAttributes = FontAttributes.Bold,
+    };
 
 {% endhighlight %}
 {% endtabs %}
