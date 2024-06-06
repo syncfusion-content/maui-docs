@@ -264,7 +264,7 @@ The [MarkerSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.
 
 Trackball labels can be customized by adding any view as its template by using [TrackballLabelTemplate]() of [CartesianSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.CartesianSeries.html).
 
-T> The `DataItem` can be used to access the data linked to the associated business model
+T> The `DataItem` can be used to access the data linked to the associated business model. The binding context for `TrackballLabelTemplate` is `TrackballPointInfo`, which provides the necessary data for the labels.
 
 {% tabs %}
 
@@ -388,9 +388,9 @@ this.Content = chart;
 
 ![Trackball Label Template support in MAUI chart](Trackball_images/maui_chart_trackball_label_template.png)
 
-## Customize the Axis Label with DataTemplate
+## Trackball axis label template
 
-Customize the appearance of axis label of trackball using [TrackballLabelTemplate[]() property of [ChartAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html).
+To customize the appearance of axis labels on the trackball, you can use the [TrackballLabelTemplate]() property of the [ChartAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html).
 
 {% tabs %}
 
