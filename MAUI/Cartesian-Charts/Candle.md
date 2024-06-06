@@ -19,18 +19,18 @@ To plot a point on a candlestick chart, a collection of five values is required,
 
 {% highlight c# %}
 
-    ObservableCollection<Model> StockData = new ObservableCollection<Model>();
-    StockData.Add(new Model { Year = "2000", High = 50, Low = 40, Open = 47, Close = 45 });
-    StockData.Add(new Model { Year = "2001", High = 50, Low = 35, Open = 45, Close = 40 });
-    StockData.Add(new Model { Year = "2002", High = 40, Low = 30, Open = 37, Close = 40 });
-    StockData.Add(new Model { Year = "2003", High = 50, Low = 35, Open = 40, Close = 45 });
-    StockData.Add(new Model { Year = "2004", High = 45, Low = 30, Open = 35, Close = 32 });
-    StockData.Add(new Model { Year = "2005", High = 50, Low = 35, Open = 40, Close = 45 });
-    StockData.Add(new Model { Year = "2006", High = 40, Low = 31, Open = 36, Close = 34 });
-    StockData.Add(new Model { Year = "2007", High = 48, Low = 38, Open = 43, Close = 40 });
-    StockData.Add(new Model { Year = "2008", High = 55, Low = 45, Open = 48, Close = 50 });
-    StockData.Add(new Model { Year = "2009", High = 45, Low = 30, Open = 35, Close = 40 });
-    StockData.Add(new Model { Year = "2010", High = 50, Low = 40, Open = 40, Close = 35 });
+ObservableCollection<Model> StockData = new ObservableCollection<Model>();
+StockData.Add(new Model { Year = "2000", High = 50, Low = 40, Open = 47, Close = 45 });
+StockData.Add(new Model { Year = "2001", High = 50, Low = 35, Open = 45, Close = 40 });
+StockData.Add(new Model { Year = "2002", High = 40, Low = 30, Open = 37, Close = 40 });
+StockData.Add(new Model { Year = "2003", High = 50, Low = 35, Open = 40, Close = 45 });
+StockData.Add(new Model { Year = "2004", High = 45, Low = 30, Open = 35, Close = 32 });
+StockData.Add(new Model { Year = "2005", High = 50, Low = 35, Open = 40, Close = 45 });
+StockData.Add(new Model { Year = "2006", High = 40, Low = 31, Open = 36, Close = 34 });
+StockData.Add(new Model { Year = "2007", High = 48, Low = 38, Open = 43, Close = 40 });
+StockData.Add(new Model { Year = "2008", High = 55, Low = 45, Open = 48, Close = 50 });
+StockData.Add(new Model { Year = "2009", High = 45, Low = 30, Open = 35, Close = 40 });
+StockData.Add(new Model { Year = "2010", High = 50, Low = 40, Open = 40, Close = 35 });
 
 {% endhighlight %}
 
@@ -59,24 +59,24 @@ To plot a point on a candlestick chart, a collection of five values is required,
 
 {% highlight c# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
-    CategoryAxis primaryAxis = new CategoryAxis();
-    chart.XAxes.Add(primaryAxis);
-    NumericalAxis secondaryAxis = new NumericalAxis();
-    chart.YAxes.Add(secondaryAxis);
+SfCartesianChart chart = new SfCartesianChart();
+CategoryAxis primaryAxis = new CategoryAxis();
+chart.XAxes.Add(primaryAxis);
+NumericalAxis secondaryAxis = new NumericalAxis();
+chart.YAxes.Add(secondaryAxis);
 
-    CandleSeries series = new CandleSeries()
-    {
-        ItemsSource = new ViewModel().StockData,
-        XBindingPath = "Year",
-        Open = "Open",
-        High = "High",
-        Low = "Low",
-        Close = "Close",
-    };
+CandleSeries series = new CandleSeries()
+{
+    ItemsSource = new ViewModel().StockData,
+    XBindingPath = "Year",
+    Open = "Open",
+    High = "High",
+    Low = "Low",
+    Close = "Close",
+};
 
-    chart.Series.Add(series);
-    this.Content = chart;
+chart.Series.Add(series);
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -117,26 +117,26 @@ In the Candle chart, the [BullishFill](https://help.syncfusion.com/cr/maui/Syncf
 
 {% highlight c# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
-    CategoryAxis primaryAxis = new CategoryAxis();
-    chart.XAxes.Add(primaryAxis);
-    NumericalAxis secondaryAxis = new NumericalAxis();
-    chart.YAxes.Add(secondaryAxis);
+SfCartesianChart chart = new SfCartesianChart();
+CategoryAxis primaryAxis = new CategoryAxis();
+chart.XAxes.Add(primaryAxis);
+NumericalAxis secondaryAxis = new NumericalAxis();
+chart.YAxes.Add(secondaryAxis);
 
-    CandleSeries series = new CandleSeries()
-    {
-        ItemsSource = new ViewModel().StockData,
-        XBindingPath = "Year",
-        Open = "Open",
-        High = "High",
-        Low = "Low",
-        Close = "Close",
-        BullishFill = Colors.Blue,
-        BearishFill = Colors.Yellow,
-    };
+CandleSeries series = new CandleSeries()
+{
+    ItemsSource = new ViewModel().StockData,
+    XBindingPath = "Year",
+    Open = "Open",
+    High = "High",
+    Low = "Low",
+    Close = "Close",
+    BullishFill = Colors.Blue,
+    BearishFill = Colors.Yellow,
+};
 
-    chart.Series.Add(series);
-    this.Content = chart;
+chart.Series.Add(series);
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -176,25 +176,25 @@ In Candle Series, the [EnableSolidCandle](https://help.syncfusion.com/cr/maui/Sy
 
 {% highlight c# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
-    CategoryAxis primaryAxis = new CategoryAxis();
-    chart.XAxes.Add(primaryAxis);
-    NumericalAxis secondaryAxis = new NumericalAxis();
-    chart.YAxes.Add(secondaryAxis);
+SfCartesianChart chart = new SfCartesianChart();
+CategoryAxis primaryAxis = new CategoryAxis();
+chart.XAxes.Add(primaryAxis);
+NumericalAxis secondaryAxis = new NumericalAxis();
+chart.YAxes.Add(secondaryAxis);
 
-    CandleSeries series = new CandleSeries()
-    {
-        ItemsSource = new ViewModel().StockData,
-        XBindingPath = "Year",
-        Open = "Open",
-        High = "High",
-        Low = "Low",
-        Close = "Close",
-        EnableSolidCandle=true,
-    };
+CandleSeries series = new CandleSeries()
+{
+    ItemsSource = new ViewModel().StockData,
+    XBindingPath = "Year",
+    Open = "Open",
+    High = "High",
+    Low = "Low",
+    Close = "Close",
+    EnableSolidCandle=true,
+};
 
-    chart.Series.Add(series);
-    this.Content = chart;
+chart.Series.Add(series);
+this.Content = chart;
 
 {% endhighlight %}
 

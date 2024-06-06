@@ -33,23 +33,19 @@ N> The Cartesian chart has a [Series](https://help.syncfusion.com/cr/maui/Syncfu
 
     <chart:StackingArea100Series ItemsSource="{Binding Data1}"
                                 XBindingPath="Year"
-                                YBindingPath="Value"        
-    </chart:StackingArea100Series>
+                                YBindingPath="Value"/>        
 
     <chart:StackingArea100Series ItemsSource="{Binding Data2}"
                                 XBindingPath="Year"
-                                YBindingPath="Value"         
-    </chart:StackingArea100Series>
+                                YBindingPath="Value"/>         
 
     <chart:StackingArea100Series ItemsSource="{Binding Data3}"
                                 XBindingPath="Year"
-                                YBindingPath="Value"         
-    </chart:StackingArea100Series>
+                                YBindingPath="Value"/>         
 
     <chart:StackingArea100Series ItemsSource="{Binding Data4}"
                                 XBindingPath="Year"
-                                YBindingPath="Value"         
-    </chart:StackingArea100Series>
+                                YBindingPath="Value"/>         
 
 </chart:SfCartesianChart>
 

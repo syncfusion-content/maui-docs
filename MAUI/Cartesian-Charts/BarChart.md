@@ -19,7 +19,7 @@ N> The cartesian chart has Series as its default content.
 
 {% highlight xaml %}
 
-  <chart:SfCartesianChart  x:Name="chart" IsTransposed="True">
+<chart:SfCartesianChart x:Name="chart" IsTransposed="True">
 
     <chart:SfCartesianChart.XAxes>
         <chart:CategoryAxis />
@@ -30,8 +30,8 @@ N> The cartesian chart has Series as its default content.
     </chart:SfCartesianChart.YAxes>   
 
     <chart:ColumnSeries ItemsSource="{Binding Data}"
-						XBindingPath="XValue"
-						YBindingPath="YValue"/>
+                        XBindingPath="XValue"
+                        YBindingPath="YValue"/>
 
 </chart:SfCartesianChart>
 
@@ -83,10 +83,10 @@ The [Width](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ColumnSer
     </chart:SfCartesianChart.YAxes>  
 
     <chart:ColumnSeries ItemsSource="{Binding Data}"
-						XBindingPath="XValue"
-						YBindingPath="YValue"
-						Spacing="0.3"
-						Width="0.5"/>
+                        XBindingPath="XValue"
+                        YBindingPath="YValue"
+                        Spacing="0.3"
+                        Width="0.5"/>
 
 </chart:SfCartesianChart>
 

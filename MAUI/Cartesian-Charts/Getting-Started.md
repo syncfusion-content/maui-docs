@@ -350,8 +350,8 @@ The legend provides information about the data point displayed in the chart. The
 
 {% highlight C# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
-    chart.Legend = new ChartLegend (); 
+SfCartesianChart chart = new SfCartesianChart();
+chart.Legend = new ChartLegend (); 
 
 {% endhighlight %}
 

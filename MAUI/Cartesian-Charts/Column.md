@@ -28,8 +28,8 @@ N> The cartesian chart has [Series](https://help.syncfusion.com/cr/maui/Syncfusi
     </chart:SfCartesianChart.YAxes>   
 
     <chart:ColumnSeries ItemsSource="{Binding Data}"
-						XBindingPath="XValue"
-						YBindingPath="YValue"/>
+                        XBindingPath="XValue"
+                        YBindingPath="YValue"/>
 </chart:SfCartesianChart>
 
 {% endhighlight %}
@@ -122,55 +122,54 @@ By default, all the column series which have the same x and y axes are placed si
 
  {% highlight xaml %}
 
-    <chart:SfCartesianChart  
-          EnableSideBySideSeriesPlacement="False">
-     <chart:SfCartesianChart.XAxes>
-         <chart:CategoryAxis />
-     </chart:SfCartesianChart.XAxes>
+<chart:SfCartesianChart EnableSideBySideSeriesPlacement="False">
+    <chart:SfCartesianChart.XAxes>
+        <chart:CategoryAxis />
+    </chart:SfCartesianChart.XAxes>
 
-     <chart:SfCartesianChart.YAxes>
-         <chart:NumericalAxis />
-     </chart:SfCartesianChart.YAxes>  
+    <chart:SfCartesianChart.YAxes>
+        <chart:NumericalAxis />
+    </chart:SfCartesianChart.YAxes>  
 
-     <chart:ColumnSeries ItemsSource="{Binding Data1}"
-                         XBindingPath="XValue"
-                         YBindingPath="YValue"/>
+    <chart:ColumnSeries ItemsSource="{Binding Data1}"
+                        XBindingPath="XValue"
+                        YBindingPath="YValue"/>
                          
-     <chart:ColumnSeries ItemsSource="{Binding Data2}"
-                         XBindingPath="XValue"
-                         YBindingPath="YValue"
-                         Width="0.2"/>                    
-    </chart:SfCartesianChart>
+    <chart:ColumnSeries ItemsSource="{Binding Data2}"
+                        XBindingPath="XValue"
+                        YBindingPath="YValue"
+                        Width="0.2"/>                    
+</chart:SfCartesianChart>
 
   {% endhighlight %}
 
 {% highlight c# %}
     
-    SfCartesianChart chart = new SfCartesianChart();
-    chart.EnableSideBySideSeriesPlacement = false;
-    CategoryAxis primaryAxis = new CategoryAxis();
-    chart.XAxes.Add(primaryAxis);
-    NumericalAxis secondaryAxis = new NumericalAxis();
-    chart.YAxes.Add(secondaryAxis);
+SfCartesianChart chart = new SfCartesianChart();
+chart.EnableSideBySideSeriesPlacement = false;
+CategoryAxis primaryAxis = new CategoryAxis();
+chart.XAxes.Add(primaryAxis);
+NumericalAxis secondaryAxis = new NumericalAxis();
+chart.YAxes.Add(secondaryAxis);
 
-    ColumnSeries series1 = new ColumnSeries()
-    {
-        ItemsSource = new ViewModel().Data1,
-        XBindingPath = "XValue",
-        YBindingPath = "YValue",
-    };
+ColumnSeries series1 = new ColumnSeries()
+{
+    ItemsSource = new ViewModel().Data1,
+    XBindingPath = "XValue",
+    YBindingPath = "YValue",
+};
 
-    ColumnSeries series2 = new ColumnSeries()
-    {
-        ItemsSource = new ViewModel().Data2,
-        XBindingPath = "XValue",
-        YBindingPath = "YValue",
-        Width = 0.2;
-    };
+ColumnSeries series2 = new ColumnSeries()
+{
+    ItemsSource = new ViewModel().Data2,
+    XBindingPath = "XValue",
+    YBindingPath = "YValue",
+    Width = 0.2;
+};
 
-    chart.Series.Add(series1);
-    chart.Series.Add(series2);
-    this.Content = chart;
+chart.Series.Add(series1);
+chart.Series.Add(series2);
+this.Content = chart;
 
 {% endhighlight %}
 

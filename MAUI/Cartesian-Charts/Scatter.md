@@ -31,10 +31,10 @@ N> The Cartesian chart has [Series](https://help.syncfusion.com/cr/maui/Syncfusi
     </chart:SfCartesianChart.YAxes>  
                 
     <chart:ScatterSeries PointHeight="7"
-						 PointWidth="7"
-						 ItemsSource="{Binding Data}"
-						 XBindingPath="XValue"
-						 YBindingPath="YValue"/>
+                        PointWidth="7"
+                        ItemsSource="{Binding Data}"
+                        XBindingPath="XValue"
+                        YBindingPath="YValue"/>
 </chart:SfCartesianChart>
 
 {% endhighlight %}

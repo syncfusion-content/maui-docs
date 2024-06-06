@@ -23,7 +23,8 @@ N> The Cartesian chart has [Series](https://help.syncfusion.com/cr/maui/Syncfusi
 
 {% highlight xaml %}
 
-    <chart:SfCartesianChart>
+<chart:SfCartesianChart>
+ ...
     <chart:SfCartesianChart.XAxes>
         <chart:NumericalAxis />
     </chart:SfCartesianChart.XAxes>
@@ -32,33 +33,33 @@ N> The Cartesian chart has [Series](https://help.syncfusion.com/cr/maui/Syncfusi
         <chart:NumericalAxis />
     </chart:SfCartesianChart.YAxes>  
                 
-        <chart:BubbleSeries ItemsSource="{Binding Data}"
-                            XBindingPath="XValue"
-                            YBindingPath="YValue"
-                            SizeValuePath="Size"/>
+    <chart:BubbleSeries ItemsSource="{Binding Data}"
+                        XBindingPath="XValue"
+                        YBindingPath="YValue"
+                        SizeValuePath="Size"/>
 
-    </chart:SfCartesianChart>
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
-    NumericalAxis primaryAxis = new NumericalAxis();
-    chart.XAxes.Add(primaryAxis);
-    NumericalAxis secondaryAxis = new NumericalAxis();
-    chart.YAxes.Add(secondaryAxis);
+SfCartesianChart chart = new SfCartesianChart();
+NumericalAxis primaryAxis = new NumericalAxis();
+chart.XAxes.Add(primaryAxis);
+NumericalAxis secondaryAxis = new NumericalAxis();
+chart.YAxes.Add(secondaryAxis);
 
-    BubbleSeries series = new BubbleSeries()
-    {
-        ItemsSource = new ViewModel().Data,
-        XBindingPath = "XValue",
-        YBindingPath = "YValue",
-        SizeValuePath = "Size",
-    };
+BubbleSeries series = new BubbleSeries()
+{
+    ItemsSource = new ViewModel().Data,
+    XBindingPath = "XValue",
+    YBindingPath = "YValue",
+    SizeValuePath = "Size",
+};
 
-    chart.Series.Add(series);
-    this.Content = chart;
+chart.Series.Add(series);
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -73,32 +74,34 @@ The zero size bubble segments can be enabled or disabled using the [ShowZeroSize
 
 {% highlight xaml %}
 
-    <chart:SfCartesianChart>
-        . . .
-            <chart:BubbleSeries ItemsSource="{Binding Data}"
-                                XBindingPath="XValue"
-                                YBindingPath="YValue"
-                                SizeValuePath="Size"
-                                ShowZeroSizeBubbles="False"/>
+<chart:SfCartesianChart>
+    . . .
+        <chart:BubbleSeries ItemsSource="{Binding Data}"
+                            XBindingPath="XValue"
+                            YBindingPath="YValue"
+                            SizeValuePath="Size"
+                            ShowZeroSizeBubbles="False"/>
 
-    </chart:SfCartesianChart>
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
-    ...
+SfCartesianChart chart = new SfCartesianChart();
+...
 
-    BubbleSeries bubbleSeries = new BubbleSeries() 
-    { 
-        ItemsSource = new ViewModel().Data,
-        XBindingPath = "XValue",
-        YBindingPath = "YValue",
-        SizeValuePath = "Size",
-        ShowZeroSizeBubbles = false;
-    };
-    chart.Series.Add(bubbleSeries);
+BubbleSeries bubbleSeries = new BubbleSeries() 
+{ 
+    ItemsSource = new ViewModel().Data,
+    XBindingPath = "XValue",
+    YBindingPath = "YValue",
+    SizeValuePath = "Size",
+    ShowZeroSizeBubbles = false;
+};
+
+chart.Series.Add(bubbleSeries);
+this.Content = chart;
 
 {% endhighlight %}
 

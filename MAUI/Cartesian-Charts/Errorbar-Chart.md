@@ -20,7 +20,7 @@ The following code examples illustrates how to create error bar series:
 
 {% highlight xaml %}
 
-    <chart:SfCartesianChart>
+<chart:SfCartesianChart>
 
     <chart:SfCartesianChart.XAxes>
         <chart:NumericalAxis />
@@ -30,19 +30,16 @@ The following code examples illustrates how to create error bar series:
         <chart:NumericalAxis />
     </chart:SfCartesianChart.YAxes>   
 
-     </chart:SfCartesianChart.YAxes>
-            <chart:ScatterSeries ItemsSource="{Binding EnergyProductions}" 
-                                 XBindingPath="ID" 
-                                 YBindingPath="Coal"
-                                 PointHeight="20"
-                                 PointWidth="20">
-            </chart:ScatterSeries>
-            <chart:ErrorBarSeries ItemsSource="{Binding EnergyProductions}"
-                                  XBindingPath="ID"
-                                  YBindingPath="Coal"
-                                  VerticalErrorValue="50"
-                                  HorizontalErrorValue="0.5">
-            </chart:ErrorBarSeries>
+        <chart:ScatterSeries ItemsSource="{Binding EnergyProductions}" 
+                            XBindingPath="ID" 
+                            YBindingPath="Coal"
+                            PointHeight="20"
+                            PointWidth="20"/>
+        <chart:ErrorBarSeries ItemsSource="{Binding EnergyProductions}"
+                              XBindingPath="ID"
+                              YBindingPath="Coal"
+                              VerticalErrorValue="50"
+                              HorizontalErrorValue="0.5"/>
 
     </chart:SfCartesianChart>
 
@@ -50,32 +47,34 @@ The following code examples illustrates how to create error bar series:
 
 {% highlight c# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
-    NumericalAxis primaryAxis = new NumericalAxis();
-    chart.XAxes.Add(primaryAxis);
-    NumericalAxis secondaryAxis = new NumericalAxis();
-    chart.YAxes.Add(secondaryAxis);
+SfCartesianChart chart = new SfCartesianChart();
+NumericalAxis primaryAxis = new NumericalAxis();
+chart.XAxes.Add(primaryAxis);
+NumericalAxis secondaryAxis = new NumericalAxis();
+chart.YAxes.Add(secondaryAxis);
 
-    ScatterSeries series = new ScatterSeries()
-    {
-        ItemsSource = new ViewModel().EnergyProductions,
-        XBindingPath = "ID",
-        YBindingPath = "Coal",
-        PointWidth = 20,
-        PointHeight = 20
-    };
+ScatterSeries series = new ScatterSeries()
+{
+    ItemsSource = new ViewModel().EnergyProductions,
+    XBindingPath = "ID",
+    YBindingPath = "Coal",
+    PointWidth = 20,
+    PointHeight = 20
+};
 
-    ErrorBarSeries errorBar = new ErrorBarSeries()
-    {
-        ItemsSource = new ViewModel().EnergyProductions,
-        XBindingPath = "ID",
-        YBindingPath = "Coal",
-        HorizontalErrorValue = 0.5,
-        VerticalErrorValue = 50
-    };
+ErrorBarSeries errorBar = new ErrorBarSeries()
+{
+    ItemsSource = new ViewModel().EnergyProductions,
+    XBindingPath = "ID",
+    YBindingPath = "Coal",
+    HorizontalErrorValue = 0.5,
+    VerticalErrorValue = 50
+};
 
-    chart.Series.Add(series);
-    chart.Series.Add(errorBar);
+chart.Series.Add(series);
+chart.Series.Add(errorBar);
+
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -93,29 +92,29 @@ To view both the horizontal and vertical error value, you can set the Mode as Bo
 
 {% highlight xaml %}
 
-    <chart:ErrorBarSeries ItemsSource="{Binding EnergyProductions}"
-                          XBindingPath="ID"
-                          YBindingPath="Coal"
-                          VerticalErrorValue="50"
-                          HorizontalErrorValue="0.5"
-                          Mode="Both">
-    </chart:ErrorBarSeries>
+<chart:ErrorBarSeries ItemsSource="{Binding EnergyProductions}"
+                      XBindingPath="ID"
+                      YBindingPath="Coal"
+                      VerticalErrorValue="50"
+                      HorizontalErrorValue="0.5"
+                      Mode="Both">
+</chart:ErrorBarSeries>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    ErrorBarSeries errorBar = new ErrorBarSeries()
-    {
-        ItemsSource = new ViewModel().EnergyProductions,
-        XBindingPath = "ID",
-        YBindingPath = "Coal",
-        HorizontalErrorValue = 0.5,
-        VerticalErrorValue = 50,
-        Mode= Both
-    };
+ErrorBarSeries errorBar = new ErrorBarSeries()
+{
+    ItemsSource = new ViewModel().EnergyProductions,
+    XBindingPath = "ID",
+    YBindingPath = "Coal",
+    HorizontalErrorValue = 0.5,
+    VerticalErrorValue = 50,
+    Mode= Both
+};
 
-    chart.Series.Add(errorBar);
+chart.Series.Add(errorBar);
 
 
 {% endhighlight %}
@@ -132,29 +131,29 @@ To view horizontal error value, you can set the Mode as Horizontal as shown in t
 
 {% highlight xaml %}
 
-    <chart:ErrorBarSeries ItemsSource="{Binding EnergyProductions}"
-                          XBindingPath="ID"
-                          YBindingPath="Coal"
-                          VerticalErrorValue="50"
-                          HorizontalErrorValue="0.5"
-                          Mode="Horizontal">
-    </chart:ErrorBarSeries>
+<chart:ErrorBarSeries ItemsSource="{Binding EnergyProductions}"
+                      XBindingPath="ID"
+                      YBindingPath="Coal"
+                      VerticalErrorValue="50"
+                      HorizontalErrorValue="0.5"
+                      Mode="Horizontal">
+</chart:ErrorBarSeries>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    ErrorBarSeries errorBar = new ErrorBarSeries()
-    {
-        ItemsSource = new ViewModel().EnergyProductions,
-        XBindingPath = "ID",
-        YBindingPath = "Coal",
-        HorizontalErrorValue = 0.5,
-        VerticalErrorValue = 50,
-        Mode= Horizontal
-    };
+ErrorBarSeries errorBar = new ErrorBarSeries()
+{
+    ItemsSource = new ViewModel().EnergyProductions,
+    XBindingPath = "ID",
+    YBindingPath = "Coal",
+    HorizontalErrorValue = 0.5,
+    VerticalErrorValue = 50,
+    Mode= Horizontal
+};
 
-    chart.Series.Add(errorBar);
+chart.Series.Add(errorBar);
 
 {% endhighlight %}
 
@@ -170,29 +169,29 @@ To view vertical error value, you can set the Mode as Vertical, as shown in the 
 
 {% highlight xaml %}
 
-    <chart:ErrorBarSeries ItemsSource="{Binding EnergyProductions}"
-                          XBindingPath="ID"
-                          YBindingPath="Coal"
-                          VerticalErrorValue="50"
-                          HorizontalErrorValue="0.5"
-                          Mode="Vertical">              
-    </chart:ErrorBarSeries>
+<chart:ErrorBarSeries ItemsSource="{Binding EnergyProductions}"
+                      XBindingPath="ID"
+                      YBindingPath="Coal"
+                      VerticalErrorValue="50"
+                      HorizontalErrorValue="0.5"
+                      Mode="Vertical">              
+</chart:ErrorBarSeries>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    ErrorBarSeries errorBar = new ErrorBarSeries()
-    {
-        ItemsSource = new ViewModel().EnergyProductions,
-        XBindingPath = "ID",
-        YBindingPath = "Coal",
-        HorizontalErrorValue = 0.5,
-        VerticalErrorValue = 50,
-        Mode= Vertical
-    };
+ErrorBarSeries errorBar = new ErrorBarSeries()
+{
+    ItemsSource = new ViewModel().EnergyProductions,
+    XBindingPath = "ID",
+    YBindingPath = "Coal",
+    HorizontalErrorValue = 0.5,
+    VerticalErrorValue = 50,
+    Mode= Vertical
+};
 
-    chart.Series.Add(errorBar);
+chart.Series.Add(errorBar);
 
 {% endhighlight %}
 
@@ -219,31 +218,31 @@ The following code illustrates how to set the [HorizontalDirection](https://help
 
 {% highlight xaml %}
 
-    <chart:ErrorBarSeries ItemsSource="{Binding EnergyProductions}"
-                          XBindingPath="ID"
-                          YBindingPath="Coal"
-                          VerticalErrorValue="50"
-                          HorizontalErrorValue="0.5"
-                          HorizontalDirection="Plus"
-                          VerticalDirectyion="Minus">
-    </chart:ErrorBarSeries>
+<chart:ErrorBarSeries ItemsSource="{Binding EnergyProductions}"
+                      XBindingPath="ID"
+                      YBindingPath="Coal"
+                      VerticalErrorValue="50"
+                      HorizontalErrorValue="0.5"
+                      HorizontalDirection="Plus"
+                      VerticalDirectyion="Minus">
+</chart:ErrorBarSeries>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    ErrorBarSeries errorBar = new ErrorBarSeries()
-    {
-        ItemsSource = new ViewModel().EnergyProductions,
-        XBindingPath = "ID",
-        YBindingPath = "Coal",
-        HorizontalErrorValue = 0.5,
-        VerticalErrorValue = 50,
-        HorizontalDirection="Plus",
-        VerticalDirectyion="Minus"
-    };
+ErrorBarSeries errorBar = new ErrorBarSeries()
+{
+    ItemsSource = new ViewModel().EnergyProductions,
+    XBindingPath = "ID",
+    YBindingPath = "Coal",
+    HorizontalErrorValue = 0.5,
+    VerticalErrorValue = 50,
+    HorizontalDirection="Plus",
+    VerticalDirectyion="Minus"
+};
 
-    chart.Series.Add(errorBar);
+chart.Series.Add(errorBar);
 
 {% endhighlight %}
 
@@ -261,29 +260,29 @@ The [Type](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ErrorBarSe
 
 {% highlight xaml %}
 
-    <chart:ErrorBarSeries ItemsSource="{Binding EnergyProductions}"
-                          XBindingPath="ID"
-                          YBindingPath="Coal"
-                          VerticalErrorValue="50"
-                          HorizontalErrorValue="0.5"
-                          Type="Fixed">                             
-    </chart:ErrorBarSeries>
+<chart:ErrorBarSeries ItemsSource="{Binding EnergyProductions}"
+                      XBindingPath="ID"
+                      YBindingPath="Coal"
+                      VerticalErrorValue="50"
+                      HorizontalErrorValue="0.5"
+                      Type="Fixed">                             
+</chart:ErrorBarSeries>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    ErrorBarSeries errorBar = new ErrorBarSeries()
-    {
-        ItemsSource = new ViewModel().EnergyProductions,
-        XBindingPath = "ID",
-        YBindingPath = "Coal",
-        HorizontalErrorValue = 0.5,
-        VerticalErrorValue = 50,
-        Type="Fixed"
-    };
+ErrorBarSeries errorBar = new ErrorBarSeries()
+{
+    ItemsSource = new ViewModel().EnergyProductions,
+    XBindingPath = "ID",
+    YBindingPath = "Coal",
+    HorizontalErrorValue = 0.5,
+    VerticalErrorValue = 50,
+    Type="Fixed"
+};
 
-    chart.Series.Add(errorBar);
+chart.Series.Add(errorBar);
 
 {% endhighlight %}
 
@@ -297,29 +296,29 @@ The [Type](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ErrorBarSe
 
 {% highlight xaml %}
 
-        <chart:ErrorBarSeries ItemsSource="{Binding EnergyProductions}"
-                              XBindingPath="ID"
-                              YBindingPath="Coal"
-                              VerticalErrorValue="50"
-                              HorizontalErrorValue="0.5"
-                              Type="Percentage">
-        </chart:ErrorBarSeries>
+<chart:ErrorBarSeries ItemsSource="{Binding EnergyProductions}"
+                      XBindingPath="ID"
+                      YBindingPath="Coal"
+                      VerticalErrorValue="50"
+                      HorizontalErrorValue="0.5"
+                      Type="Percentage">
+</chart:ErrorBarSeries>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    ErrorBarSeries errorBar = new ErrorBarSeries()
-    {
-        ItemsSource = new ViewModel().EnergyProductions,
-        XBindingPath = "ID",
-        YBindingPath = "Coal",
-        HorizontalErrorValue = 0.5,
-        VerticalErrorValue = 50,
-        Type="Percentage"
-    };
+ErrorBarSeries errorBar = new ErrorBarSeries()
+{
+    ItemsSource = new ViewModel().EnergyProductions,
+    XBindingPath = "ID",
+    YBindingPath = "Coal",
+    HorizontalErrorValue = 0.5,
+    VerticalErrorValue = 50,
+    Type="Percentage"
+};
 
-    chart.Series.Add(errorBar);
+chart.Series.Add(errorBar);
 
 {% endhighlight %}
 
@@ -333,29 +332,29 @@ The [Type](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ErrorBarSe
 
 {% highlight xaml %}
 
-    <chart:ErrorBarSeries ItemsSource="{Binding EnergyProductions}"
-                          XBindingPath="ID"
-                          YBindingPath="Coal"
-                          VerticalErrorValue="50"
-                          HorizontalErrorValue="0.5"
-                          Type="StandardError">
-    </chart:ErrorBarSeries>
+<chart:ErrorBarSeries ItemsSource="{Binding EnergyProductions}"
+                      XBindingPath="ID"
+                      YBindingPath="Coal"
+                      VerticalErrorValue="50"
+                      HorizontalErrorValue="0.5"
+                      Type="StandardError">
+</chart:ErrorBarSeries>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    ErrorBarSeries errorBar = new ErrorBarSeries()
-    {
-        ItemsSource = new ViewModel().EnergyProductions,
-        XBindingPath = "ID",
-        YBindingPath = "Coal",
-        HorizontalErrorValue = 0.5,
-        VerticalErrorValue = 50,
-        Type="StandardError"
-    };
+ErrorBarSeries errorBar = new ErrorBarSeries()
+{
+    ItemsSource = new ViewModel().EnergyProductions,
+    XBindingPath = "ID",
+    YBindingPath = "Coal",
+    HorizontalErrorValue = 0.5,
+    VerticalErrorValue = 50,
+    Type="StandardError"
+};
 
-    chart.Series.Add(errorBar);
+chart.Series.Add(errorBar);
 
 {% endhighlight %}
 
@@ -375,23 +374,23 @@ The [Type](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ErrorBarSe
                           VerticalErrorValue="50"
                           HorizontalErrorValue="0.5"
                           Type="StandardDeviation">
-    </chart:ErrorBarSeries>
+</chart:ErrorBarSeries>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    ErrorBarSeries errorBar = new ErrorBarSeries()
-    {
-        ItemsSource = new ViewModel().EnergyProductions,
-        XBindingPath = "ID",
-        YBindingPath = "Coal",
-        HorizontalErrorValue = 0.5,
-        VerticalErrorValue = 50,
-        Type="StandardDeviation"
-    };
+ErrorBarSeries errorBar = new ErrorBarSeries()
+{
+    ItemsSource = new ViewModel().EnergyProductions,
+    XBindingPath = "ID",
+    YBindingPath = "Coal",
+    HorizontalErrorValue = 0.5,
+    VerticalErrorValue = 50,
+    Type="StandardDeviation"
+};
 
-    chart.Series.Add(errorBar);
+chart.Series.Add(errorBar);
 
 {% endhighlight %}
 
@@ -415,25 +414,25 @@ If the Type is Custom, you have to bind the [HorizontalErrorPath](https://help.s
                           Type="Custom"
                           HorizontalErrorPath="HorizontalErrorValue"
                           VerticalErrorPath="VerticalErrorValue" >
-    </chart:ErrorBarSeries>
+</chart:ErrorBarSeries>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    ErrorBarSeries errorBar = new ErrorBarSeries()
-    {
-        ItemsSource = new ViewModel().EnergyProductions,
-        XBindingPath = "ID",
-        YBindingPath = "Coal",
-        HorizontalErrorValue = 0.5,
-        VerticalErrorValue = 50,
-        Type="Custom",
-        HorizontalErrorPath="HorizontalErrorValue",
-        VerticalErrorPath="VerticalErrorValue"
-    };
+ErrorBarSeries errorBar = new ErrorBarSeries()
+{
+    ItemsSource = new ViewModel().EnergyProductions,
+    XBindingPath = "ID",
+    YBindingPath = "Coal",
+    HorizontalErrorValue = 0.5,
+    VerticalErrorValue = 50,
+    Type="Custom",
+    HorizontalErrorPath="HorizontalErrorValue",
+    VerticalErrorPath="VerticalErrorValue"
+};
     
-    chart.Series.Add(errorBar);
+chart.Series.Add(errorBar);
 
 {% endhighlight %}
 
@@ -458,42 +457,40 @@ You can define the LineStyle for the error bar lines using the [HorizontalLineSt
                           HorizontalErrorValue="0.5">
 
         <chart:ErrorBarSeries.HorizontalLineStyle>
-            <chart:ErrorBarLineStyle Stroke="Black"  StrokeWidth="2">
-            </chart:ErrorBarLineStyle>
+            <chart:ErrorBarLineStyle Stroke="Black"  StrokeWidth="2"/>
         </chart:ErrorBarSeries.HorizontalLineStyle>  
 
         <chart:ErrorBarSeries.VerticalLineStyle>
-            <chart:ErrorBarLineStyle Stroke="Black"  StrokeWidth="2"  >
-            </chart:ErrorBarLineStyle>
+            <chart:ErrorBarLineStyle Stroke="Black"  StrokeWidth="2" />
         </chart:ErrorBarSeries.VerticalLineStyle>        
-    </chart:ErrorBarSeries>
+</chart:ErrorBarSeries>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    ErrorBarSeries errorBar = new ErrorBarSeries()
-    {
-        ItemsSource = new ViewModel().EnergyProductions,
-        XBindingPath = "ID",
-        YBindingPath = "Coal",
-        HorizontalErrorValue = 0.5,
-        VerticalErrorValue = 50,
-    };
+ErrorBarSeries errorBar = new ErrorBarSeries()
+{
+    ItemsSource = new ViewModel().EnergyProductions,
+    XBindingPath = "ID",
+    YBindingPath = "Coal",
+    HorizontalErrorValue = 0.5,
+    VerticalErrorValue = 50,
+};
 
-    errorBar.HorizontalLineStyle = new ErrorBarLineStyle()
-    {
-        Stroke = new SolidColorBrush(Colors.Red),
-        StrokeWidth = 2
-    };
+errorBar.HorizontalLineStyle = new ErrorBarLineStyle()
+{
+    Stroke = new SolidColorBrush(Colors.Red),
+    StrokeWidth = 2
+};
 
-    errorBar.VerticalLineStyle = new ErrorBarLineStyle()
-    {
-        Stroke = new SolidColorBrush(Colors.Red),
-        StrokeWidth = 2
-    };
+errorBar.VerticalLineStyle = new ErrorBarLineStyle()
+{
+    Stroke = new SolidColorBrush(Colors.Red),
+    StrokeWidth = 2
+};
 
-    chart.Series.Add(errorBar);
+chart.Series.Add(errorBar);
 
 {% endhighlight %}
 
@@ -524,34 +521,34 @@ You can define the CapLineStyle for the error bar lines using the [HorizontalCap
                                         StrokeWidth="2" >
             </chart:ErrorBarCapLineStyle>
         </chart:ErrorBarSeries.VerticalCapLineStyle>  
-    </chart:ErrorBarSeries>
+</chart:ErrorBarSeries>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    ErrorBarSeries errorBar = new ErrorBarSeries()
-    {
-        ItemsSource = new ViewModel().EnergyProductions,
-        XBindingPath = "ID",
-        YBindingPath = "Coal",
-        HorizontalErrorValue = 0.5,
-        VerticalErrorValue = 50,
-    };
+ErrorBarSeries errorBar = new ErrorBarSeries()
+{
+    ItemsSource = new ViewModel().EnergyProductions,
+    XBindingPath = "ID",
+    YBindingPath = "Coal",
+    HorizontalErrorValue = 0.5,
+    VerticalErrorValue = 50,
+};
 
-    errorBar.HorizontalCapLineStyle = new ErrorBarCapLineStyle()
-    {
-        Stroke = new SolidColorBrush(Colors.Red),
-        StrokeWidth = 2
-    };
+errorBar.HorizontalCapLineStyle = new ErrorBarCapLineStyle()
+{
+    Stroke = new SolidColorBrush(Colors.Red),
+    StrokeWidth = 2
+};
 
-    errorBarSeries.VerticalCapLineStyle = new ErrorBarCapLineStyle()
-    {
-        Stroke = new SolidColorBrush(Colors.Red),
-        StrokeWidth = 2
-    };
+errorBarSeries.VerticalCapLineStyle = new ErrorBarCapLineStyle()
+{
+    Stroke = new SolidColorBrush(Colors.Red),
+    StrokeWidth = 2
+};
 
-    chart.Series.Add(errorBar);
+chart.Series.Add(errorBar);
 
 {% endhighlight %}
 

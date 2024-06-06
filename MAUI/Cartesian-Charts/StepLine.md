@@ -45,29 +45,29 @@ N> The cartesian chart has [Series](https://help.syncfusion.com/cr/maui/Syncfusi
 
 {% highlight c# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
-    DatetimeAxis primaryAxis = new DatetimeAxis();
-    chart.XAxes.Add(primaryAxis);
-    NumericalAxis secondaryAxis = new NumericalAxis();
-    chart.YAxes.Add(secondaryAxis);
+SfCartesianChart chart = new SfCartesianChart();
+DatetimeAxis primaryAxis = new DatetimeAxis();
+chart.XAxes.Add(primaryAxis);
+NumericalAxis secondaryAxis = new NumericalAxis();
+chart.YAxes.Add(secondaryAxis);
 
-    StepLineSeries series = new StepLineSeries()
-    {
-        ItemsSource = new ViewModel().Data,
-        XBindingPath = "Date",
-        YBindingPath = "Value",
-    };
+StepLineSeries series = new StepLineSeries()
+{
+    ItemsSource = new ViewModel().Data,
+    XBindingPath = "Date",
+    YBindingPath = "Value",
+};
 
-    StepLineSeries series1 = new StepLineSeries()
-    {
-        ItemsSource = new ViewModel().Data1,
-        XBindingPath = "Date",
-        YBindingPath = "Value",
-    };
+StepLineSeries series1 = new StepLineSeries()
+{
+    ItemsSource = new ViewModel().Data1,
+    XBindingPath = "Date",
+    YBindingPath = "Value",
+};
 
-    chart.Series.Add(series);
-    chart.Series.Add(series1);
-    this.Content = chart;
+chart.Series.Add(series);
+chart.Series.Add(series1);
+this.Content = chart;
 
 {% endhighlight C# %}
 
@@ -83,7 +83,7 @@ The [StrokeDashArray](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts
 
 {% highlight xaml %}
 
-<Chart:SfCartesianChart>
+<chart:SfCartesianChart>
 
     <chart:SfCartesianChart.Resource>
         <DoubleCollection x:Key="DashArray">
@@ -105,33 +105,33 @@ The [StrokeDashArray](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts
                           XBindingPath="Date"
                           YBindingPath="Value"/>
 
-    <Chart:SfCartesianChart>
+<chart:SfCartesianChart>
 
 {% endhighlight xaml %}
 
 {% highlight C# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
+SfCartesianChart chart = new SfCartesianChart();
 
-    DatetimeAxis primaryAxis = new DatetimeAxis();
-    chart.XAxes.Add(primaryAxis);
-    NumericalAxis secondaryAxis = new NumericalAxis();
-    chart.YAxes.Add(secondaryAxis);
+DatetimeAxis primaryAxis = new DatetimeAxis();
+chart.XAxes.Add(primaryAxis);
+NumericalAxis secondaryAxis = new NumericalAxis();
+chart.YAxes.Add(secondaryAxis);
 
-    DoubleCollection doubleCollection = new DoubleCollection();
-    doubleCollection.Add(5);
-    doubleCollection.Add(2);
+DoubleCollection doubleCollection = new DoubleCollection();
+doubleCollection.Add(5);
+doubleCollection.Add(2);
 
-    StepLineSeries steplineSeries = new StepLineSeries()
-    {
-        itemSource = new ViewModel().Data;
-        XBindingPath = "Date";
-        YBindingPath = "Value";
-        StrokeDashArray = doubleCollection;
-    }
+StepLineSeries steplineSeries = new StepLineSeries()
+{
+    ItemsSource = new ViewModel().Data;
+    XBindingPath = "Date";
+    YBindingPath = "Value";
+    StrokeDashArray = doubleCollection;
+}
 
-    chart.Series.Add(steplineSeries);
-    this.Content = chart;
+chart.Series.Add(steplineSeries);
+this.Content = chart;
 
 {% endhighlight C# %}
 
@@ -147,7 +147,7 @@ The [IsTransposed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Sf
 
 {% highlight xaml %}
 
-<Chart:SfCartesianChart IsTransposed="True">
+<chart:SfCartesianChart IsTransposed="True">
 
     <chart:SfCartesianChart.XAxes>
         <chart:DatetimeAxis/>
@@ -165,38 +165,38 @@ The [IsTransposed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Sf
                           XBindingPath="Year"
                           YBindingPath="Value"/>
 
-    <Chart:SfCartesianChart>
+<chart:SfCartesianChart>
 
 {% endhighlight xaml %}
 
 {% highlight C# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
+SfCartesianChart chart = new SfCartesianChart();
 
-    chart.isTransposed = True;
+chart.isTransposed = True;
 
-    DatetimeAxis primaryAxis = new DatetimeAxis();
-    chart.XAxes.Add(primaryAxis);
-    NumericalAxis secondaryAxis = new NumericalAxis();
-    chart.YAxes.Add(secondaryAxis);
+DatetimeAxis primaryAxis = new DatetimeAxis();
+chart.XAxes.Add(primaryAxis);
+NumericalAxis secondaryAxis = new NumericalAxis();
+chart.YAxes.Add(secondaryAxis);
 
-    StepLineSeries steplineSeries = new StepLineSeries()
-    {
-        itemSource = new ViewModel().Data;
-        XBindingPath = "Year";
-        YBindingPath = "Value";
-    };
+StepLineSeries steplineSeries = new StepLineSeries()
+{
+    ItemsSource = new ViewModel().Data;
+    XBindingPath = "Year";
+    YBindingPath = "Value";
+};
 
-    StepLineSeries steplineSeries1 = new StepLineSeries()
-    {
-        itemSource = new ViewModel().Data;
-        XBindingPath = "Year";
-        YBindingPath = "Value";
-    };
+StepLineSeries steplineSeries1 = new StepLineSeries()
+{
+    ItemsSource = new ViewModel().Data;
+    XBindingPath = "Year";
+    YBindingPath = "Value";
+};
 
-    chart.Series.Add(steplineSeries);
-    chart.Series.Add(steplineSeries1);
-    this.Content = chart;
+chart.Series.Add(steplineSeries);
+chart.Series.Add(steplineSeries1);
+this.Content = chart;
 
 {% endhighlight C# %}
 

@@ -19,7 +19,7 @@ N> The Cartesian chart has [Series](https://help.syncfusion.com/cr/maui/Syncfusi
 
 {% highlight xaml %}
 
-    <chart:SfCartesianChart>
+<chart:SfCartesianChart>
 
     <chart:SfCartesianChart.XAxes>
         <chart:CategoryAxis />
@@ -33,27 +33,27 @@ N> The Cartesian chart has [Series](https://help.syncfusion.com/cr/maui/Syncfusi
                                XBindingPath="Department"
                                YBindingPath="Age"/>
 
-    </chart:SfCartesianChart>
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
-    CategoryAxis primaryAxis = new CategoryAxis();
-    chart.XAxes.Add(primaryAxis);
-    NumericalAxis secondaryAxis = new NumericalAxis();
-    chart.YAxes.Add(secondaryAxis);
+SfCartesianChart chart = new SfCartesianChart();
+CategoryAxis primaryAxis = new CategoryAxis();
+chart.XAxes.Add(primaryAxis);
+NumericalAxis secondaryAxis = new NumericalAxis();
+chart.YAxes.Add(secondaryAxis);
 
-    BoxAndWhiskerSeries series = new BoxAndWhiskerSeries()
-    {
-        ItemsSource = new ViewModel().BoxWhiskerData,
-        XBindingPath = "Department",
-        YBindingPath = "Age",
-    };
+BoxAndWhiskerSeries series = new BoxAndWhiskerSeries()
+{
+    ItemsSource = new ViewModel().BoxWhiskerData,
+    XBindingPath = "Department",
+    YBindingPath = "Age",
+};
 
-    chart.Series.Add(series);
-    this.Content = chart;
+chart.Series.Add(series);
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -79,7 +79,7 @@ In Normal mode, the whiskers extend to the minimum and maximum data points withi
 
 {% highlight xaml %}
 
-    <chart:SfCartesianChart>
+<chart:SfCartesianChart>
 
     <chart:SfCartesianChart.XAxes>
         <chart:CategoryAxis />
@@ -94,28 +94,28 @@ In Normal mode, the whiskers extend to the minimum and maximum data points withi
                                YBindingPath="Age"
                                BoxPlotMode="Normal"/>
 
-    </chart:SfCartesianChart>
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
-    CategoryAxis primaryAxis = new CategoryAxis();
-    chart.XAxes.Add(primaryAxis);
-    NumericalAxis secondaryAxis = new NumericalAxis();
-    chart.YAxes.Add(secondaryAxis);
+SfCartesianChart chart = new SfCartesianChart();
+CategoryAxis primaryAxis = new CategoryAxis();
+chart.XAxes.Add(primaryAxis);
+NumericalAxis secondaryAxis = new NumericalAxis();
+chart.YAxes.Add(secondaryAxis);
 
-    BoxAndWhiskerSeries series = new BoxAndWhiskerSeries()
-    {
-        ItemsSource = new ViewModel().BoxWhiskerData,
-        XBindingPath = "Department",
-        YBindingPath = "Age",
-        BoxPlotMode = "Normal"/>
-    };
+BoxAndWhiskerSeries series = new BoxAndWhiskerSeries()
+{
+    ItemsSource = new ViewModel().BoxWhiskerData,
+    XBindingPath = "Department",
+    YBindingPath = "Age",
+    BoxPlotMode = "Normal"
+};
 
-    chart.Series.Add(series);
-    this.Content = chart;
+chart.Series.Add(series);
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -130,7 +130,7 @@ In Inclusive mode, the whiskers extend to the minimum and maximum data points wi
 
 {% highlight xaml %}
 
-    <chart:SfCartesianChart>
+<chart:SfCartesianChart>
 
     <chart:SfCartesianChart.XAxes>
         <chart:CategoryAxis />
@@ -145,28 +145,28 @@ In Inclusive mode, the whiskers extend to the minimum and maximum data points wi
                                YBindingPath="Age"
                                BoxPlotMode="Inclusive"/>
 
-    </chart:SfCartesianChart>
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
-    CategoryAxis primaryAxis = new CategoryAxis();
-    chart.XAxes.Add(primaryAxis);
-    NumericalAxis secondaryAxis = new NumericalAxis();
-    chart.YAxes.Add(secondaryAxis);
+SfCartesianChart chart = new SfCartesianChart();
+CategoryAxis primaryAxis = new CategoryAxis();
+chart.XAxes.Add(primaryAxis);
+NumericalAxis secondaryAxis = new NumericalAxis();
+chart.YAxes.Add(secondaryAxis);
 
-    BoxAndWhiskerSeries series = new BoxAndWhiskerSeries()
-    {
-        ItemsSource = new ViewModel().BoxWhiskerData,
-        XBindingPath = "Department",
-        YBindingPath = "Age",
-        BoxPlotMode = "Inclusive"/>
-    };
+BoxAndWhiskerSeries series = new BoxAndWhiskerSeries()
+{
+    ItemsSource = new ViewModel().BoxWhiskerData,
+    XBindingPath = "Department",
+    YBindingPath = "Age",
+    BoxPlotMode = "Inclusive"
+};
 
-    chart.Series.Add(series);
-    this.Content = chart;
+chart.Series.Add(series);
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -181,7 +181,7 @@ The Median values of given dataset is viewed by enabling the [ShowMedian](https:
 
 {% highlight xaml %}
 
-    <chart:SfCartesianChart>
+<chart:SfCartesianChart>
 
     <chart:SfCartesianChart.XAxes>
         <chart:CategoryAxis />
@@ -196,28 +196,28 @@ The Median values of given dataset is viewed by enabling the [ShowMedian](https:
                                YBindingPath="Age"
                                ShowMedian="True"/>
 
-    </chart:SfCartesianChart>
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
-    CategoryAxis primaryAxis = new CategoryAxis();
-    chart.XAxes.Add(primaryAxis);
-    NumericalAxis secondaryAxis = new NumericalAxis();
-    chart.YAxes.Add(secondaryAxis);
+SfCartesianChart chart = new SfCartesianChart();
+CategoryAxis primaryAxis = new CategoryAxis();
+chart.XAxes.Add(primaryAxis);
+NumericalAxis secondaryAxis = new NumericalAxis();
+chart.YAxes.Add(secondaryAxis);
 
-    BoxAndWhiskerSeries series = new BoxAndWhiskerSeries()
-    {
-        ItemsSource = new ViewModel().BoxWhiskerData,
-        XBindingPath = "Department",
-        YBindingPath = "Age",
-        ShowMedian = "True"/>
-    };
+BoxAndWhiskerSeries series = new BoxAndWhiskerSeries()
+{
+    ItemsSource = new ViewModel().BoxWhiskerData,
+    XBindingPath = "Department",
+    YBindingPath = "Age",
+    ShowMedian = "True"
+};
 
-    chart.Series.Add(series);
-    this.Content = chart;
+chart.Series.Add(series);
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -241,7 +241,7 @@ The outlier value in the box plot can be viewed by enabling the [ShowOutlier](ht
 
 {% highlight xaml %}
 
-    <chart:SfCartesianChart>
+<chart:SfCartesianChart>
 
     <chart:SfCartesianChart.XAxes>
         <chart:CategoryAxis />
@@ -256,28 +256,28 @@ The outlier value in the box plot can be viewed by enabling the [ShowOutlier](ht
                                 YBindingPath="Age"
                                 ShowOutlier="False"/>
 
-    </chart:SfCartesianChart>
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
-    CategoryAxis primaryAxis = new CategoryAxis();
-    chart.XAxes.Add(primaryAxis);
-    NumericalAxis secondaryAxis = new NumericalAxis();
-    chart.YAxes.Add(secondaryAxis);
+SfCartesianChart chart = new SfCartesianChart();
+CategoryAxis primaryAxis = new CategoryAxis();
+chart.XAxes.Add(primaryAxis);
+NumericalAxis secondaryAxis = new NumericalAxis();
+chart.YAxes.Add(secondaryAxis);
 
-    BoxAndWhiskerSeries series = new BoxAndWhiskerSeries()
-    {
-        ItemsSource = new ViewModel().BoxWhiskerData,
-        XBindingPath = "Department",
-        YBindingPath = "Age",
-        ShowOutlier = "False"/>
-    };
+BoxAndWhiskerSeries series = new BoxAndWhiskerSeries()
+{
+    ItemsSource = new ViewModel().BoxWhiskerData,
+    XBindingPath = "Department",
+    YBindingPath = "Age",
+    ShowOutlier = "False"
+};
 
-    chart.Series.Add(series);
-    this.Content = chart;
+chart.Series.Add(series);
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -295,7 +295,7 @@ The following code shows how to set the [OutlierShapeType](https://help.syncfusi
 
 {% highlight xaml %}
 
-    <chart:SfCartesianChart>
+<chart:SfCartesianChart>
 
     <chart:SfCartesianChart.XAxes>
         <chart:CategoryAxis />
@@ -310,28 +310,28 @@ The following code shows how to set the [OutlierShapeType](https://help.syncfusi
                                 YBindingPath="Age"
                                 OutlierShapeType="Cross"/>
 
-    </chart:SfCartesianChart>
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
-    CategoryAxis primaryAxis = new CategoryAxis();
-    chart.XAxes.Add(primaryAxis);
-    NumericalAxis secondaryAxis = new NumericalAxis();
-    chart.YAxes.Add(secondaryAxis);
+SfCartesianChart chart = new SfCartesianChart();
+CategoryAxis primaryAxis = new CategoryAxis();
+chart.XAxes.Add(primaryAxis);
+NumericalAxis secondaryAxis = new NumericalAxis();
+chart.YAxes.Add(secondaryAxis);
 
-    BoxAndWhiskerSeries series = new BoxAndWhiskerSeries()
-    {
-        ItemsSource = new ViewModel().BoxWhiskerData,
-        XBindingPath = "Department",
-        YBindingPath = "Age",
-        OutlierShapeType = ShapeType.Cross/>
-    };
+BoxAndWhiskerSeries series = new BoxAndWhiskerSeries()
+{
+    ItemsSource = new ViewModel().BoxWhiskerData,
+    XBindingPath = "Department",
+    YBindingPath = "Age",
+    OutlierShapeType = ShapeType.Cross
+};
 
-    chart.Series.Add(series);
-    this.Content = chart;
+chart.Series.Add(series);
+this.Content = chart;
 
 {% endhighlight %}
 

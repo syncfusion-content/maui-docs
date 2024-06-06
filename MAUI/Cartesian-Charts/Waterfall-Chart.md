@@ -23,52 +23,53 @@ documentation: ug
 
 {% highlight xaml %}
 
-    <chart:SfCartesianChart>
-        <chart:SfCartesianChart.XAxes>
-            <chart:CategoryAxis/>
-        </chart:SfCartesianChart.XAxes>
+<chart:SfCartesianChart>
+    <chart:SfCartesianChart.XAxes>
+        <chart:CategoryAxis/>
+    </chart:SfCartesianChart.XAxes>
 
-        <chart:SfCartesianChart.YAxes>
-            <chart:NumericalAxis/>
-        </chart:SfCartesianChart.YAxes>
+    <chart:SfCartesianChart.YAxes>
+        <chart:NumericalAxis/>
+    </chart:SfCartesianChart.YAxes>
     
-        <chart:SfCartesianChart.Series>
-            <chart:WaterfallSeries ItemsSource="{Binding Sales}"
-                                   XBindingPath="Department"
-                                   YBindingPath="Value"
-                                   AllowAutoSum="True"
-                                   NegativePointsBrush="Red"
-                                   SummaryBindingPath="IsSummary"
-                                   SummaryPointsBrush="RoyalBlue"
-                                   ShowConnectorLine="True"/>
-             </chart:SfCartesianChart.Series>   
-    </chart:SfCartesianChart>
+    <chart:SfCartesianChart.Series>
+        <chart:WaterfallSeries ItemsSource="{Binding Sales}"
+                               XBindingPath="Department"
+                               YBindingPath="Value"
+                               AllowAutoSum="True"
+                               NegativePointsBrush="Red"
+                               SummaryBindingPath="IsSummary"
+                               SummaryPointsBrush="RoyalBlue"
+                               ShowConnectorLine="True"/>
+    </chart:SfCartesianChart.Series>   
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
-    CategoryAxis xAxis = new CategoryAxis();
-    NumericalAxis yAxis = new NumericalAxis();
-    chart.XAxes.Add(xAxis);
-    chart.YAxes.Add(yAxis);
+SfCartesianChart chart = new SfCartesianChart();
+CategoryAxis xAxis = new CategoryAxis();
+NumericalAxis yAxis = new NumericalAxis();
+chart.XAxes.Add(xAxis);
+chart.YAxes.Add(yAxis);
    
-    ViewModel viewModel = new ViewModel();
+ViewModel viewModel = new ViewModel();
 
-    WaterfallSeries series = new WaterfallSeries()
-    {
-        ItemsSource =new viewModel().Sales;
-        XBindingPath = "Department";
-        YBindingPath = "Value";
-        SummaryBindingPath = "IsSummary";
-        SummaryPointsBrush = new SolidColorBrush(Colors.Blue);
-        NegativePointsBrush = new SolidColorBrush(Colors.Red);
-        AllowAutoSum = True;
-        ShowConnectorLine = True;
-    }
+WaterfallSeries series = new WaterfallSeries()
+{
+    ItemsSource =new viewModel().Sales,
+    XBindingPath = "Department",
+    YBindingPath = "Value",
+    SummaryBindingPath = "IsSummary",
+    SummaryPointsBrush = new SolidColorBrush(Colors.Blue),
+    NegativePointsBrush = new SolidColorBrush(Colors.Red),
+    AllowAutoSum = True,
+    ShowConnectorLine = True
+};
     
-    chart.Series.Add(series);
+chart.Series.Add(series);
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -85,10 +86,10 @@ The following code example illustrates how to apply style for connector line.
 
 {% highlight xaml %}
 
-        <chart:SfCartesianChart.Series>
-            <chart:WaterfallSeries ItemsSource="{Binding Sales}"
-                                   XBindingPath="Department"
-                                   YBindingPath="Value">
+<chart:SfCartesianChart.Series>
+    <chart:WaterfallSeries ItemsSource="{Binding Sales}"
+                           XBindingPath="Department"
+                           YBindingPath="Value">
                 <chart:WaterfallSeries.ConnectorLineStyle>
                     <chart:ChartLineStyle Stroke="DarkViolet" StrokeWidth=2>
                     </chart:WaterfallSeries.ConnectorLineStyle>
@@ -99,20 +100,20 @@ The following code example illustrates how to apply style for connector line.
 
 {% highlight c# %}
 
-    WaterfallSeries series = new WaterfallSeries()
-    {
-        ItemsSource =new viewModel().Sales;
-        XBindingPath = "Department";
-        YBindingPath = "Value"
-    };
+WaterfallSeries series = new WaterfallSeries()
+{
+    ItemsSource =new viewModel().Sales,
+    XBindingPath = "Department",
+    YBindingPath = "Value"
+};
 
-    WaterfallSeries.ConnectorLineStyle = new ChartLineStyle
-    {
-        Stroke = new SolidColorBrush(Colors.DarkViolet),
-        StrokeThickness = 2
-    };
+WaterfallSeries.ConnectorLineStyle = new ChartLineStyle()
+{
+    Stroke = new SolidColorBrush(Colors.DarkViolet),
+    StrokeThickness = 2
+};
 
-    chart.Series.Add(series);
+chart.Series.Add(series);
     
 {% endhighlight %}
 

@@ -23,34 +23,34 @@ To add a annotations, create an instance of any type of annotation and add it to
 
 {% highlight xaml %}
 
-    <chart:SfCartesianChart>
-    ...
-        <chart:SfCartesianChart.Annotations>
+<chart:SfCartesianChart>
+ ...
+    <chart:SfCartesianChart.Annotations>
 
-            <chart:EllipseAnnotation X1="2" X2="4" Y1="10" Y2="15" Text="Ellipse"/>
+        <chart:EllipseAnnotation X1="2" X2="4" Y1="10" Y2="15" Text="Ellipse"/>
         
-        </chart:SfCartesianChart.Annotations>
+    </chart:SfCartesianChart.Annotations>
     
-    </chart:SfCartesianChart>
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
-    ...
-    var ellipse = new EllipseAnnotation()
-    {
-        X1 = 2,
-        Y1 = 10,
-        X2 = 4,
-        Y2 = 15,
-        Text = "Ellipse"
-    };
+SfCartesianChart chart = new SfCartesianChart();
+...
+var ellipse = new EllipseAnnotation()
+{
+    X1 = 2,
+    Y1 = 10,
+    X2 = 4,
+    Y2 = 15,
+    Text = "Ellipse"
+};
 
-    chart.Annotations.Add(ellipse);
+chart.Annotations.Add(ellipse);
 
-    this.Content = chart;
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -60,14 +60,14 @@ To add a annotations, create an instance of any type of annotation and add it to
 
 ## Positioning the annotation
 
-[Annotations]() can be positioned in the plot area based on the [X1]() and [Y1]() properties. For shape annotations, specify the [X2]() and [Y2]() properties, if needed. The X and Y values can be specified using axis units or pixel units, which can be identified by the [CoordinateUnit]() property, as shown in the following code snippet:.
+[Annotations]() can be positioned in the plot area based on the [X1]() and [Y1]() properties. For shape annotations, specify the [X2]() and [Y2]() properties, if needed. The X and Y values can be specified using axis units or pixel units, which can be identified by the [CoordinateUnit]() property, as shown in the following code snippet:
 
 {% tabs %}
 
- {% highlight xaml %}
+{% highlight xaml %}
 
-    <chart:SfCartesianChart>
-        ...
+<chart:SfCartesianChart>
+    ...
 
     <chart:SfCartesianChart.Annotations>
         
@@ -75,27 +75,27 @@ To add a annotations, create an instance of any type of annotation and add it to
 
     </chart:SfCartesianChart.Annotations>
 
-    </chart:SfCartesianChart>
+</chart:SfCartesianChart>
 
-  {% endhighlight %}
+{% endhighlight %}
 
 {% highlight c# %}
     
-    SfCartesianChart chart = new SfCartesianChart();
+SfCartesianChart chart = new SfCartesianChart();
         
-    var rectangle = new RectangleAnnotation()
-    {
-        X1 = 0,
-        Y1 = 100,
-        X2 = 300,
-        Y2 = 400,
-        CoordinateUnit = ChartCoordinateUnit.Pixel,
-        Text = "Pixel value"
-    };
+var rectangle = new RectangleAnnotation()
+{
+    X1 = 0,
+    Y1 = 100,
+    X2 = 300,
+    Y2 = 400,
+    CoordinateUnit = ChartCoordinateUnit.Pixel,
+    Text = "Pixel value"
+};
 
-    chart.Annotations.Add(rectangle);
+chart.Annotations.Add(rectangle);
 
-    this.Content = chart;
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -111,8 +111,8 @@ When there are multiple axes, annotations can be added to a particular axis usin
 
  {% highlight xaml %}
 
-    <chart:SfCartesianChart>
-    ...
+<chart:SfCartesianChart>
+...
 
     <chart:SfCartesianChart.YAxes>
         <chart:NumericalAxis Minimum="0" Maximum="1"/>
@@ -125,36 +125,36 @@ When there are multiple axes, annotations can be added to a particular axis usin
 
     </chart:SfCartesianChart.Annotations>
 
-    </chart:SfCartesianChart>
+</chart:SfCartesianChart>
 
  {% endhighlight %}
 
 {% highlight c# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
+SfCartesianChart chart = new SfCartesianChart();
 
-    NumericalAxis yAxis1 = new NumericalAxis();
-    yAxis1.Minimum = 0;
-    yAxis1.Maximum = 1;
-    chart.XAxes.Add(yAxis1);
-    NumericalAxis yAxis2 = new NumericalAxis();
-    yAxis2.Name = "YAxis";
-    yAxis2.CrossesAt = double.MaxValue;
-    chart.YAxes.Add(yAxis2);
+NumericalAxis yAxis1 = new NumericalAxis();
+yAxis1.Minimum = 0;
+yAxis1.Maximum = 1;
+chart.XAxes.Add(yAxis1);
+NumericalAxis yAxis2 = new NumericalAxis();
+yAxis2.Name = "YAxis";
+yAxis2.CrossesAt = double.MaxValue;
+chart.YAxes.Add(yAxis2);
 
-    var ellipse = new EllipseAnnotation()
-    {
-        X1 = 2,
-        Y1 = 10,
-        X2 = 4,
-        Y2 = 15,
-        Text = "Ellipse",
-        YAxisName = "YAxis"
-    };
+var ellipse = new EllipseAnnotation()
+{
+    X1 = 2,
+    Y1 = 10,
+    X2 = 4,
+    Y2 = 15,
+    Text = "Ellipse",
+    YAxisName = "YAxis"
+};
 
-    chart.Annotations.Add(ellipse);
+chart.Annotations.Add(ellipse);
 
-    this.Content = chart;
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -170,7 +170,7 @@ The [TextAnnotation]() is used to add simple text at specific points in the char
 
  {% highlight xaml %}
 
-    <chart:SfCartesianChart>
+<chart:SfCartesianChart>
     ...
 
         <chart:SfCartesianChart.Annotations>
@@ -179,23 +179,24 @@ The [TextAnnotation]() is used to add simple text at specific points in the char
             
         </chart:SfCartesianChart.Annotations>
 
-    </chart:SfCartesianChart>
+</chart:SfCartesianChart>
+
  {% endhighlight %}
 
 {% highlight c# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
+SfCartesianChart chart = new SfCartesianChart();
 
-    var text = new TextAnnotation()
-    {
-        X1 = 2,
-        Y1 = 25,
-        Text = "Text Annotation"    
-    };
+var text = new TextAnnotation()
+{
+    X1 = 2,
+    Y1 = 25,
+    Text = "Text Annotation"    
+};
 
-    chart.Annotations.Add(text);
+chart.Annotations.Add(text);
 
-    this.Content = chart;
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -245,32 +246,32 @@ The [RectangleAnnotation]() is used to draw a rectangle or a square at specific 
 
  {% highlight xaml %}
 
-    <chart:SfCartesianChart>
-     ...
+<chart:SfCartesianChart>
+    ...
 
     <chart:SfCartesianChart.Annotations>
         <chart:RectangleAnnotation X1="1" Y1="40" X2="2" Y2="20"/>
     </chart:SfCartesianChart.Annotations>
 
-    </chart:SfCartesianChart>
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
+SfCartesianChart chart = new SfCartesianChart();
 
-    var rectangle = new RectangleAnnotation()
-    {
-        X1 = 1,
-        Y1 = 40,
-        X2 = 2,
-        Y2 = 20,                
-    };
+var rectangle = new RectangleAnnotation()
+{
+    X1 = 1,
+    Y1 = 40,
+    X2 = 2,
+    Y2 = 20,                
+};
 
-    chart.Annotations.Add(rectangle);
+chart.Annotations.Add(rectangle);
 
-    this.Content = chart;
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -286,33 +287,33 @@ The [EllipseAnnotation]() is used to draw an oval or a circle at specific points
 
  {% highlight xaml %}
 
-    <chart:SfCartesianChart>
+<chart:SfCartesianChart>
     ...
     <chart:SfCartesianChart.Annotations>
         <chart:EllipseAnnotation X1="2" X2="4" Y1="10" Y2="15" Width="20" Height="20"/>
     </chart:SfCartesianChart.Annotations>
 
-    </chart:SfCartesianChart>
+</chart:SfCartesianChart>
 
 {% endhighlight %} 
 
 {% highlight c# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
+SfCartesianChart chart = new SfCartesianChart();
 
-    var ellipse = new EllipseAnnotation()
-    {
-        X1 = 2,
-        Y1 = 10,
-        X2 = 4,
-        Y2 = 15,    
-        Width = 20,
-        Height = 20
-    };
+var ellipse = new EllipseAnnotation()
+{
+    X1 = 2,
+    Y1 = 10,
+    X2 = 4,
+    Y2 = 15,    
+    Width = 20,
+    Height = 20
+};
 
-    chart.Annotations.Add(ellipse);
+chart.Annotations.Add(ellipse);
 
-    this.Content = chart;
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -330,32 +331,32 @@ The [LineAnnotation]() is used to draw a line at specific points in the chart ar
 
  {% highlight xaml %}
 
-    <chart:SfCartesianChart>
+<chart:SfCartesianChart>
     ...
 
     <chart:SfCartesianChart.Annotations>
         <chart:LineAnnotation X1="0.5" Y1="10" X2="3.5" Y2="20" Text="Line"/>
     </chart:SfCartesianChart.Annotations>
 
-    </chart:SfCartesianChart>
+</chart:SfCartesianChart>
 
 {% endhighlight %} 
 
 {% highlight c# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
-    var line = new LineAnnotation()
-    {
-        X1 = 0.5,
-        Y1 = 10,
-        X2 = 3.5,
-        Y2 = 20,
-        Text = "Line"
-    };
+SfCartesianChart chart = new SfCartesianChart();
+var line = new LineAnnotation()
+{
+    X1 = 0.5,
+    Y1 = 10,
+    X2 = 3.5,
+    Y2 = 20,
+    Text = "Line"
+};
 
-    chart.Annotations.Add(line);
+chart.Annotations.Add(line);
 
-    this.Content = chart;
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -371,35 +372,35 @@ The [VerticalLineAnnotation]() and [HorizontalLineAnnotation]() are used to draw
 
  {% highlight xaml %}
 
-    <chart:SfCartesianChart>
+<chart:SfCartesianChart>
     ...
         <chart:SfCartesianChart.Annotations>
             <chart:VerticalLineAnnotation X1="2"/>
             <chart:HorizontalLineAnnotation Y1="20"/>
         </chart:SfCartesianChart.Annotations>
 
-    </chart:SfCartesianChart>
+</chart:SfCartesianChart>
 
 {% endhighlight %} 
 
 {% highlight c# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
+SfCartesianChart chart = new SfCartesianChart();
 
-    var vertical = new VerticalLineAnnotation()
-    {
-        X1 = 2,
-    };
+var verticalLineAnnotation = new VerticalLineAnnotation()
+{
+    X1 = 2,
+};
 
-    var horizontal = new HorizontalLineAnnotation()
-    {
-        Y1 = 20,
-    };
+var horizontalLineAnnotation = new HorizontalLineAnnotation()
+{
+    Y1 = 20,
+};
 
-    chart.Annotations.Add(vertical);
-    chart.Annotations.Add(horizontal);
+chart.Annotations.Add(verticalLineAnnotation);
+chart.Annotations.Add(horizontalLineAnnotation);
 
-    this.Content = chart;
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -415,37 +416,37 @@ The [VerticalLineAnnotation]() and [HorizontalLineAnnotation]() allow for the di
 
  {% highlight xaml %}
 
-    <chart:SfCartesianChart>
+<chart:SfCartesianChart>
     ...
     <chart:SfCartesianChart.Annotations>
         <chart:VerticalLineAnnotation X1="2.5" ShowAxisLabel="True"/>
         <chart:HorizontalLineAnnotation Y1="25" ShowAxisLabel="True"/>
     </chart:SfCartesianChart.Annotations>
 
-    </chart:SfCartesianChart>
+</chart:SfCartesianChart>
 
 {% endhighlight %} 
 
 {% highlight c# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
+SfCartesianChart chart = new SfCartesianChart();
 
-    var vertical = new VerticalLineAnnotation()
-    {
-        X1 = 2.5,
-        ShowAxisLabel= true
-    };
+var verticalLineAnnotation = new VerticalLineAnnotation()
+{
+    X1 = 2.5,
+    ShowAxisLabel= true
+};
 
-    var horizontal = new HorizontalLineAnnotation()
-    {
-        Y1 = 25,
-        ShowAxisLabel= true
-    };
+var horizontalLineAnnotation = new HorizontalLineAnnotation()
+{
+    Y1 = 25,
+    ShowAxisLabel= true
+};
 
-    chart.Annotations.Add(vertical);
-    chart.Annotations.Add(horizontal);
+chart.Annotations.Add(verticalLineAnnotation);
+chart.Annotations.Add(horizontalLineAnnotation);
 
-    this.Content = chart;
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -472,37 +473,37 @@ To display a single-headed arrow, set the [LineCap]() property to [Arrow](). The
 
  {% highlight xaml %}
 
-    <chart:SfCartesianChart>
+<chart:SfCartesianChart>
     ...
     <chart:SfCartesianChart.Annotations>
         <chart:VerticalLineAnnotation X1="2.5" LineCap="Arrow"/>
         <chart:HorizontalLineAnnotation Y1="25" LineCap="Arrow"/>
     </chart:SfCartesianChart.Annotations>
 
-    </chart:SfCartesianChart>
+</chart:SfCartesianChart>
 
 {% endhighlight %} 
 
 {% highlight c# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
+SfCartesianChart chart = new SfCartesianChart();
 
-    var vertical = new VerticalLineAnnotation()
-    {
-        X1 = 2.5,
-        LineCap = ChartLineCap.Arrow
-    };
+var verticalLineAnnotation = new VerticalLineAnnotation()
+{
+    X1 = 2.5,
+    LineCap = ChartLineCap.Arrow
+};
 
-    var horizontal = new HorizontalLineAnnotation()
-    {
-        Y1 = 25,
-        LineCap = ChartLineCap.Arrow
-    };
+var horizontalLineAnnotation = new HorizontalLineAnnotation()
+{
+    Y1 = 25,
+    LineCap = ChartLineCap.Arrow
+};
 
-    chart.Annotations.Add(vertical);
-    chart.Annotations.Add(horizontal);
+chart.Annotations.Add(verticalLineAnnotation);
+chart.Annotations.Add(horizontalLineAnnotation);
 
-    this.Content = chart;
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -520,34 +521,34 @@ For all shape annotations, the text can be displayed using the [Text]() property
 
 {% highlight xaml %}
 
-    <chart:SfCartesianChart>
+<chart:SfCartesianChart>
     ...
         <chart:SfCartesianChart.Annotations>
 
-        <chart:EllipseAnnotation X1="2" X2="4" Y1="10" Y2="15" Text="Ellipse"/>
+            <chart:EllipseAnnotation X1="2" X2="4" Y1="10" Y2="15" Text="Ellipse"/>
         
         </chart:SfCartesianChart.Annotations>
     
-    </chart:SfCartesianChart>
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
+SfCartesianChart chart = new SfCartesianChart();
     ...
-    var ellipse = new EllipseAnnotation()
-    {
-        X1 = 2,
-        Y1 = 10,
-        X2 = 4,
-        Y2 = 15,
-        Text = "Ellipse"
-    };
+var ellipseAnnotation = new EllipseAnnotation()
+{
+    X1 = 2,
+    Y1 = 10,
+    X2 = 4,
+    Y2 = 15,
+    Text = "Ellipse"
+};
 
-    chart.Annotations.Add(ellipse);
+chart.Annotations.Add(ellipseAnnotation);
 
-    this.Content = chart;
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -576,7 +577,7 @@ The [ViewAnnotation]() allows you to add annotations in the form of your own cus
 
 {% highlight xaml %}
 
-    <chart:SfCartesianChart>
+<chart:SfCartesianChart>
     ...
         <chart:SfCartesianChart.Annotations>
             <chart:ViewAnnotation X1="3" Y1="30">
@@ -585,25 +586,25 @@ The [ViewAnnotation]() allows you to add annotations in the form of your own cus
                     </chart:ViewAnnotation.View>
             </chart:ViewAnnotation>
         </chart:SfCartesianChart.Annotations>
-    </chart:SfCartesianChart>
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
-    ...
+SfCartesianChart chart = new SfCartesianChart();
+...
 
-    var viewAnnotation = new ViewAnnotation()
-    {
-        X1 = 3,
-        Y1 = 30,
-        View = new Image { Source = "cloud.png" }
-    };
+var viewAnnotation = new ViewAnnotation()
+{
+    X1 = 3,
+    Y1 = 30,
+    View = new Image { Source = "cloud.png" }
+};
 
-    chart.Annotations.Add(viewAnnotation);
+chart.Annotations.Add(viewAnnotation);
 
-    this.Content = chart;
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -619,34 +620,34 @@ The [IsVisible]() property of [ChartAnnotation]() is used to toggle the visibili
 
 {% highlight xaml %}
 
-    <chart:SfCartesianChart>
+<chart:SfCartesianChart>
     ...
 
         <chart:SfCartesianChart.Annotations>
             <chart:EllipseAnnotation X1="2" X2="4" Y1="10" Y2="15" Text="Ellipse" IsVisible="False"/>
         </chart:SfCartesianChart.Annotations>
 
-    </chart:SfCartesianChart>
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
-    ...
-    var ellipse = new EllipseAnnotation()
-    {
-        X1 = 2,
-        Y1 = 10,
-        X2 = 4,
-        Y2 = 15,
-        Text = "Ellipse",
-        IsVisible = false
-    };
+SfCartesianChart chart = new SfCartesianChart();
+ ...
+var ellipseAnnotation = new EllipseAnnotation()
+{
+    X1 = 2,
+    Y1 = 10,
+    X2 = 4,
+    Y2 = 15,
+    Text = "Ellipse",
+    IsVisible = false
+};
 
-    chart.Annotations.Add(ellipse);
+chart.Annotations.Add(ellipse);
 
-    this.Content = chart;
+this.Content = chart;
 
 {% endhighlight %}
 

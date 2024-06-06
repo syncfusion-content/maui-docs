@@ -29,8 +29,8 @@ N> The cartesian chart has [Series](https://help.syncfusion.com/cr/maui/Syncfusi
     </chart:SfCartesianChart.YAxes>  
                 
     <chart:FastLineSeries ItemsSource="{Binding Data}"
-						  XBindingPath="XValue"
-						  YBindingPath="YValue"/>
+                          XBindingPath="XValue"
+                          YBindingPath="YValue"/>
 </chart:SfCartesianChart>
 
 {% endhighlight %}
@@ -84,9 +84,9 @@ The [StrokeDashArray](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts
     </chart:SfCartesianChart.YAxes>  
 
     <chart:FastLineSeries ItemsSource="{Binding Data}"
-						  XBindingPath="XValue"
-						  YBindingPath="YValue" 
-						  StrokeDashArray="{StaticResource dashArray}"/>
+                          XBindingPath="XValue"
+                          YBindingPath="YValue" 
+                          StrokeDashArray="{StaticResource dashArray}"/>
 </chart:SfCartesianChart>
 
 {% endhighlight %}
@@ -134,9 +134,9 @@ There may be some jagged lines at the edges. This can be reduced by using the `E
     .....
 
     <chart:FastLineSeries EnableAntiAliasing="True"
-						  ItemsSource="{Binding Data}"
-						  XBindingPath="XValue"
-						  YBindingPath="YValue"/>
+                          ItemsSource="{Binding Data}"
+                          XBindingPath="XValue"
+                          YBindingPath="YValue"/>
 </chart:SfCartesianChart>
 
 {% endhighlight %}

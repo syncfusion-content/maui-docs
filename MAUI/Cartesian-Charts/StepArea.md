@@ -138,12 +138,12 @@ To change the series markers appearance, create an instance of the [MarkerSettin
 SfCartesianChart chart = new SfCartesianChart();
 ...
 ChartMarkerSettings chartMarker= new ChartMarkerSettings();
-        chartMarker.Type = ShapeType.Diamond;
-        chartMarker.Fill = Colors.Brown;
-        chartMarker.Stroke = Colors.Black;
-        chartMarker.StrokeWidth= 1;
-        chartMarker.Height = 8;
-        chartMarker.Width = 8;
+chartMarker.Type = ShapeType.Diamond;
+chartMarker.Fill = Colors.Brown;
+chartMarker.Stroke = Colors.Black;
+chartMarker.StrokeWidth= 1;
+chartMarker.Height = 8;
+chartMarker.Width = 8;
 
 StepAreaSeries = new StepAreaSeries()
 {
@@ -151,7 +151,7 @@ StepAreaSeries = new StepAreaSeries()
    YBindingPath = "Value",
    ItemsSource = new ViewModel().Data,
    ShowMarkers = true,
- };
+};
 
 chart.Series.Add(series);
 this.Content = chart;

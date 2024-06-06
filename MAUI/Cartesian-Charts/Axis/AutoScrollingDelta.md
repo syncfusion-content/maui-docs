@@ -17,35 +17,35 @@ By adding [ChartZoomPanBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.
 
 {% highlight xaml %}
 
-    <chart:SfCartesianChart>
-        . . .
-        <chart:SfCartesianChart.XAxes>
-            <chart:CategoryAxis AutoScrollingDelta="3" />
-        </chart:SfCartesianChart.XAxes>
+<chart:SfCartesianChart>
+    . . .
+    <chart:SfCartesianChart.XAxes>
+        <chart:CategoryAxis AutoScrollingDelta="3" />
+    </chart:SfCartesianChart.XAxes>
 
-         <chart:SfCartesianChart.ZoomPanBehavior>
-             <chart:ChartZoomPanBehavior EnablePanning="True"></chart:ChartZoomPanBehavior>
-        </chart:SfCartesianChart.ZoomPanBehavior>
+    <chart:SfCartesianChart.ZoomPanBehavior>
+        <chart:ChartZoomPanBehavior EnablePanning="True"/>
+    </chart:SfCartesianChart.ZoomPanBehavior>
 
-    </chart:SfCartesianChart>
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
-    . . .
-    CategoryAxis primaryAxis = new CategoryAxis()
-    {
-        AutoScrollingDelta = 3,
-    };
-    chart.XAxes.Add(primaryAxis);
+SfCartesianChart chart = new SfCartesianChart();
+. . .
+CategoryAxis primaryAxis = new CategoryAxis()
+{
+    AutoScrollingDelta = 3,
+};
+chart.XAxes.Add(primaryAxis);
 
-    ChartZoomPanBehavior zooming = new ChartZoomPanBehavior()
-    {
-        EnablePanning = true,
-    };
-    chart.ZoomPanBehavior = zooming;
+ChartZoomPanBehavior zooming = new ChartZoomPanBehavior()
+{
+    EnablePanning = true,
+};
+chart.ZoomPanBehavior = zooming;
 
 {% endhighlight %}
 
@@ -59,26 +59,26 @@ By adding [ChartZoomPanBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.
 
 {% highlight xaml %}
 
-    <chart:SfCartesianChart>
-        . . .
-        <chart:SfCartesianChart.XAxes>
-            <chart:CategoryAxis AutoScrollingDelta="3" AutoScrollingMode="Start"/>
-        </chart:SfCartesianChart.XAxes>
+<chart:SfCartesianChart>
+    . . .
+    <chart:SfCartesianChart.XAxes>
+        <chart:CategoryAxis AutoScrollingDelta="3" AutoScrollingMode="Start"/>
+    </chart:SfCartesianChart.XAxes>
 
-    </chart:SfCartesianChart>
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
-    . . .
-    CategoryAxis primaryAxis = new CategoryAxis()
-    {
-        AutoScrollingDelta = 3,
-        AutoScrollingMode = ChartAutoScrollingMode.start,
-    };
-    chart.XAxes.Add(primaryAxis);
+SfCartesianChart chart = new SfCartesianChart();
+. . .
+CategoryAxis primaryAxis = new CategoryAxis()
+{
+    AutoScrollingDelta = 3,
+    AutoScrollingMode = ChartAutoScrollingMode.start,
+};
+chart.XAxes.Add(primaryAxis);
 
 {% endhighlight %}
 
@@ -92,26 +92,26 @@ In [DateTimeAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Dat
 
 {% highlight xaml %}
 
-    <chart:SfCartesianChart>
-        . . .
-        <chart:SfCartesianChart.XAxes>
-            <chart:DateTimeAxis AutoScrollingDelta="3" AutoScrollingDeltaType="Days"/>
-        </chart:SfCartesianChart.XAxes>
+<chart:SfCartesianChart>
+    . . .
+    <chart:SfCartesianChart.XAxes>
+        <chart:DateTimeAxis AutoScrollingDelta="3" AutoScrollingDeltaType="Days"/>
+    </chart:SfCartesianChart.XAxes>
 
-    </chart:SfCartesianChart>
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
-    . . .
-    DateTimeAxis primaryAxis = new DateTimeAxis()
-    {
-        AutoScrollingDelta = 3,
-        AutoScrollingDeltaType = DateTimeDeltaType.Days,
-    };
-    chart.XAxes.Add(primaryAxis);
+SfCartesianChart chart = new SfCartesianChart();
+. . .
+DateTimeAxis primaryAxis = new DateTimeAxis()
+{
+    AutoScrollingDelta = 3,
+    AutoScrollingDeltaType = DateTimeDeltaType.Days,
+};
+chart.XAxes.Add(primaryAxis);
 
 {% endhighlight %}
 

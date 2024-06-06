@@ -25,8 +25,8 @@ N> The Cartesian chart has the [Series](https://help.syncfusion.com/cr/maui/Sync
 
 {% highlight xaml %}
 
-    <chart:SfCartesianChart>
-    ...
+<chart:SfCartesianChart>
+...
     <chart:SfCartesianChart.XAxes>
         <chart:CategoryAxis/>
     </chart:SfCartesianChart.XAxes>
@@ -40,28 +40,28 @@ N> The Cartesian chart has the [Series](https://help.syncfusion.com/cr/maui/Sync
                            High="HighValue"
                            Low="LowValue"/>
     
-    </chart:SfCartesianChart>
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
-    CategoryAxis primaryAxis = new CategoryAxis();
-    chart.XAxes.Add(primaryAxis);
-    NumericalAxis secondaryAxis = new NumericalAxis();
-    chart.YAxes.Add(secondaryAxis);
+SfCartesianChart chart = new SfCartesianChart();
+CategoryAxis primaryAxis = new CategoryAxis();
+chart.XAxes.Add(primaryAxis);
+NumericalAxis secondaryAxis = new NumericalAxis();
+chart.YAxes.Add(secondaryAxis);
 
-    RangeAreaSeries series = new RangeAreaSeries()
-    {
-        ItemsSource = new ViewModel().Data,
-        XBindingPath = "XValue",
-        High="HighValue",
-        Low="LowValue",
-    };
+RangeAreaSeries series = new RangeAreaSeries()
+{
+    ItemsSource = new ViewModel().Data,
+    XBindingPath = "XValue",
+    High="HighValue",
+    Low="LowValue",
+};
 
-    chart.Series.Add(series);
-    this.Content = chart;
+chart.Series.Add(series);
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -77,33 +77,33 @@ A marker, also known as a symbol, is used to determine or highlight the position
 
 {% highlight xaml %}
 
-    <chart:SfCartesianChart>
-    ...
+<chart:SfCartesianChart>
+...
     <chart:RangeAreaSeries XBindingPath="XValue"
                            High="HighValue"
                            Low="LowValue"
                            ItemsSource="{Binding Data}"
                            ShowMarkers="True"/>
 
-    </chart:SfCartesianChart>
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
-    ...
-    RangeAreaSeries series = new RangeAreaSeries()
-    {
-        XBindingPath = "XValue",
-        High = "HighValue",
-        Low = "LowValue",
-        ItemsSource = new ViewModel().Data,
-        ShowMarkers= true,
-    };
+SfCartesianChart chart = new SfCartesianChart();
+...
+RangeAreaSeries series = new RangeAreaSeries()
+{
+    XBindingPath = "XValue",
+    High = "HighValue",
+    Low = "LowValue",
+    ItemsSource = new ViewModel().Data,
+    ShowMarkers= true,
+};
 
-    chart.Series.Add(series);
-    this.Content= chart;
+chart.Series.Add(series);
+this.Content= chart;
 
 {% endhighlight %}
 
@@ -124,8 +124,8 @@ In order to change the series markers’ appearance, create an instance of the [
 
 {% highlight xaml %}
 
-    <chart:SfCartesianChart>
-    ...
+<chart:SfCartesianChart>
+...
     <chart:RangeAreaSeries XBindingPath="XValue"
                            High="HighValue"
                            Low="LowValue"
@@ -141,33 +141,33 @@ In order to change the series markers’ appearance, create an instance of the [
         </chart:RangeAreaSeries.MarkerSettings>
     </chart:RangeAreaSeries>
     
-    </chart:SfCartesianChart>
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
-    ...
-    ChartMarkerSettings chartMarker= new ChartMarkerSettings();
-        chartMarker.Type = ShapeType.Diamond;
-        chartMarker.Fill = Colors.Brown;
-        chartMarker.Stroke = Colors.Black;
-        chartMarker.StrokeWidth= 1;
-        chartMarker.Height = 8;
-        chartMarker.Width = 8;
+SfCartesianChart chart = new SfCartesianChart();
+...
+ChartMarkerSettings chartMarker= new ChartMarkerSettings();
+chartMarker.Type = ShapeType.Diamond;
+chartMarker.Fill = Colors.Brown;
+chartMarker.Stroke = Colors.Black;
+chartMarker.StrokeWidth= 1;
+chartMarker.Height = 8;
+chartMarker.Width = 8;
 
-    RangeAreaSeries series = new RangeAreaSeries()
-    {
-        XBindingPath = "XValue",
-        High = "HighValue",
-        Low = "LowValue",
-        ItemsSource = new ViewModel().Data,
-        ShowMarkers = true,
-    };
+RangeAreaSeries series = new RangeAreaSeries()
+{
+    XBindingPath = "XValue",
+    High = "HighValue",
+    Low = "LowValue",
+    ItemsSource = new ViewModel().Data,
+    ShowMarkers = true,
+};
 
-    chart.Series.Add(series);
-    this.Content = chart;
+chart.Series.Add(series);
+this.Content = chart;
 
 {% endhighlight %}
 

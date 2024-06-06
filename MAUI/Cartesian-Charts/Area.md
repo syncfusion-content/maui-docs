@@ -30,8 +30,8 @@ N> The cartesian chart has [Series](https://help.syncfusion.com/cr/maui/Syncfusi
     </chart:SfCartesianChart.YAxes>   
 
     <chart:AreaSeries ItemsSource="{Binding Data}"
-					  XBindingPath="Demand"
-					  YBindingPath="Year2010"/>  
+                      XBindingPath="Demand"
+                      YBindingPath="Year2010"/>  
 
 </chart:SfCartesianChart>
 
@@ -80,8 +80,8 @@ The [SplineAreaSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chart
     </chart:SfCartesianChart.YAxes>
             
     <chart:SplineAreaSeries ItemsSource="{Binding Data}"
-							XBindingPath="Demand" 
-							YBindingPath="Year2010"/>  
+                            XBindingPath="Demand" 
+                            YBindingPath="Year2010"/>  
 
 </chart:SfCartesianChart>
 
@@ -135,7 +135,7 @@ A marker, also known as a symbol, is used to determine or highlight the position
 SfCartesianChart chart = new SfCartesianChart();
 
 ...
-AreaSeries series = new LineSeries()
+AreaSeries series = new AreaSeries()
 {
     XBindingPath = "Year",
     YBindingPath = "Percentage",
@@ -191,20 +191,20 @@ SfCartesianChart chart = new SfCartesianChart();
 
 ...
 ChartMarkerSettings chartMarker= new ChartMarkerSettings();
-        chartMarker.Type = ShapeType.Diamond;
-        chartMarker.Fill = Colors.Brown;
-        chartMarker.Stroke = Colors.Black;
-        chartMarker.StrokeWidth= 1;
-        chartMarker.Height = 8;
-        chartMarker.Width = 8;
+chartMarker.Type = ShapeType.Diamond;
+chartMarker.Fill = Colors.Brown;
+chartMarker.Stroke = Colors.Black;
+chartMarker.StrokeWidth= 1;
+chartMarker.Height = 8;
+chartMarker.Width = 8;
 
-AreaSeries series = new LineSeries()
+AreaSeries series = new AreaSeries()
 {
    XBindingPath = "Year",
    YBindingPath = "Percentage",
    ItemsSource = new ViewModel().Data,
    ShowMarkers = true,
- };
+};
 
 chart.Series.Add(series);
 this.Content = chart;

@@ -29,11 +29,11 @@ N> The Cartesian chart has [Series](https://help.syncfusion.com/cr/maui/Syncfusi
     </chart:SfCartesianChart.YAxes>  
 
     <chart:LineSeries XBindingPath="Demand"
-					  ItemsSource="{Binding Data}"
-					  YBindingPath="Year2010"/>
+                      ItemsSource="{Binding Data}"
+                      YBindingPath="Year2010"/>
     <chart:LineSeries XBindingPath="Demand"
-					  ItemsSource="{Binding Data}"
-					  YBindingPath="Year2011"/>
+                      ItemsSource="{Binding Data}"  
+                      YBindingPath="Year2011"/>
 </chart:SfCartesianChart>
 
 {% endhighlight %}
@@ -97,13 +97,13 @@ The [StrokeDashArray](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts
     </chart:SfCartesianChart.YAxes>  
 
     <chart:LineSeries XBindingPath="Demand"
-					  ItemsSource="{Binding Data}"
-					  YBindingPath="Year2010"
-					  StrokeDashArray="{StaticResource dashArray}"/>
+                      ItemsSource="{Binding Data}"
+                      YBindingPath="Year2010"
+                      StrokeDashArray="{StaticResource dashArray}"/>
     <chart:LineSeries XBindingPath="Demand"
-					  ItemsSource="{Binding Data}" 
-					  YBindingPath="Year2011"
-					  StrokeDashArray="{StaticResource dashArray}"/>
+                      ItemsSource="{Binding Data}" 
+                      YBindingPath="Year2011"
+                      StrokeDashArray="{StaticResource dashArray}"/>
 </chart:SfCartesianChart>
 
 {% endhighlight %}
@@ -166,11 +166,11 @@ The [SplineSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Sp
     </chart:SfCartesianChart.YAxes>  
 
     <chart:SplineSeries XBindingPath="Demand"
-						ItemsSource="{Binding Data}"
-						YBindingPath="Year2010"/>
+                        ItemsSource="{Binding Data}"
+                        YBindingPath="Year2010"/>
     <chart:SplineSeries XBindingPath="Demand"
-						ItemsSource="{Binding Data}"
-						YBindingPath="Year2011"/>
+                        ItemsSource="{Binding Data}"
+                        YBindingPath="Year2011"/>
 </chart:SfCartesianChart>
 
 {% endhighlight %}
@@ -233,9 +233,9 @@ The following types are used in SplineSeries:
     </chart:SfCartesianChart.YAxes>  
 
     <chart:SplineSeries XBindingPath="Demand"
-						ItemsSource="{Binding Data}"
-						YBindingPath="Year2010"
-						Type="Cardinal"/>
+                        ItemsSource="{Binding Data}"
+                        YBindingPath="Year2010"
+                        Type="Cardinal"/>
 </chart:SfCartesianChart>
 
 {% endhighlight %}
@@ -301,7 +301,7 @@ LineSeries series = new LineSeries()
     YBindingPath = "Year2010",
     ItemsSource = new ViewModel().Data,
     ShowMarkers= true,
- };
+};
 
 LineSeries series = new LineSeries()
 {
@@ -309,7 +309,7 @@ LineSeries series = new LineSeries()
     YBindingPath = "Year2011",
     ItemsSource = new ViewModel().Data,
     ShowMarkers= true,
- };
+};
 
 chart.Series.Add(series);
 this.Content= chart;
@@ -360,12 +360,12 @@ SfCartesianChart chart = new SfCartesianChart();
 
 ...
 ChartMarkerSettings chartMarker= new ChartMarkerSettings();
-        chartMarker.Type = ShapeType.Diamond;
-        chartMarker.Fill = Colors.Brown;
-        chartMarker.Stroke = Colors.Black;
-        chartMarker.StrokeWidth= 1;
-        chartMarker.Height = 8;
-        chartMarker.Width = 8;
+chartMarker.Type = ShapeType.Diamond;
+chartMarker.Fill = Colors.Brown;
+chartMarker.Stroke = Colors.Black;
+chartMarker.StrokeWidth= 1;
+chartMarker.Height = 8;
+chartMarker.Width = 8;
 
 LineSeries series = new LineSeries()
 {
@@ -374,7 +374,7 @@ LineSeries series = new LineSeries()
    ItemsSource = new ViewModel().Data,
    ShowMarkers = true,
    MarkerSettings = chartMarker,
- };
+};
 
 chart.Series.Add(series);
 this.Content = chart;

@@ -129,7 +129,7 @@ N> The directional Zooming Feature is not supported in the macOS platform.
 <chart:SfCartesianChart>
     <chart:SfCartesianChart.XAxes>
         <chart:CategoryAxis ZoomFactor="0.3"
-							ZoomPosition="0.5"/>
+                            ZoomPosition="0.5"/>
     </chart:SfCartesianChart.XAxes>
     ...
 </chart:SfCartesianChart>
@@ -228,7 +228,7 @@ The [MaximumZoomLevel]() property is used to determine the maximum limit for zoo
 
 <chart:SfCartesianChart>
     <chart:SfCartesianChart.ZoomPanBehavior>
-        <chart:ChartZoomPanBehavior MaximumZoomLevel = "2" />
+        <chart:ChartZoomPanBehavior MaximumZoomLevel ="2"/>
     </chart:SfCartesianChart.ZoomPanBehavior>
     ...
 </chart:SfCartesianChart>
@@ -293,12 +293,12 @@ N> To perform selection zooming on a desktop, hold the left mouse button, double
 
 {% highlight xaml %}
 
-    <chart:SfCartesianChart>
+<chart:SfCartesianChart>
         <chart:SfCartesianChart.ZoomPanBehavior>
             <chart:ChartZoomPanBehavior EnableSelectionZooming ="True"/>
         </chart:SfCartesianChart.ZoomPanBehavior>
         ...
-    </chart:SfCartesianChart>
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
@@ -353,7 +353,7 @@ The following code sample illustrates how enable to axis trackball label while s
 
 {% highlight xaml %}
 
-    <chart:SfCartesianChart>
+<chart:SfCartesianChart>
         . . .
             <chart:SfCartesianChart.XAxes>
                 <chart:NumericalAxis ShowTrackballLabel="True">
@@ -378,7 +378,7 @@ The following code sample illustrates how enable to axis trackball label while s
                 </chart:NumericalAxis>
             </chart:SfCartesianChart.YAxes>
             
-    </chart:SfCartesianChart>
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 

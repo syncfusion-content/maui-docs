@@ -49,35 +49,35 @@ N> The cartesian chart has [Series](https://help.syncfusion.com/cr/maui/Syncfusi
 
 {% highlight c# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
-    CategoryAxis primaryAxis = new CategoryAxis();
-    chart.XAxes.Add(primaryAxis);
-    NumericalAxis secondaryAxis = new NumericalAxis();
-    chart.YAxes.Add(secondaryAxis);
+SfCartesianChart chart = new SfCartesianChart();
+CategoryAxis primaryAxis = new CategoryAxis();
+chart.XAxes.Add(primaryAxis);
+NumericalAxis secondaryAxis = new NumericalAxis();
+chart.YAxes.Add(secondaryAxis);
 
-    StackingColumn100Series series = new StackingColumn100Series()
-    {
-        ItemsSource = new ViewModel().Data,
-        XBindingPath = "Name",
-        YBindingPath = "Value",
-    };
-    StackingColumn100Series series1 = new StackingColumn100Series()
-    {
-        ItemsSource = new ViewModel().Data1,
-        XBindingPath = "Name",
-        YBindingPath = "Value",
-    };
-    StackingColumn100Series series2 = new StackingColumn100Series()
-    {
-        ItemsSource = new ViewModel().Data2,
-        XBindingPath = "Name",
-        YBindingPath = "Value",
-    };
+StackingColumn100Series series = new StackingColumn100Series()
+{
+    ItemsSource = new ViewModel().Data,
+    XBindingPath = "Name",
+    YBindingPath = "Value",
+};
+StackingColumn100Series series1 = new StackingColumn100Series()
+{
+    ItemsSource = new ViewModel().Data1,
+    XBindingPath = "Name",
+    YBindingPath = "Value",
+};
+StackingColumn100Series series2 = new StackingColumn100Series()
+{
+    ItemsSource = new ViewModel().Data2,
+    XBindingPath = "Name",
+    YBindingPath = "Value",
+};
  
-    chart.Series.Add(series);
-    chart.Series.Add(series1);
-    chart.Series.Add(series2);
-    this.Content = chart;
+chart.Series.Add(series);
+chart.Series.Add(series1);
+chart.Series.Add(series2);
+this.Content = chart;
 
 {% endhighlight C# %}
 
@@ -129,46 +129,46 @@ We can group and stack the similar stacked column 100 series type using the [Gro
 
 {% highlight c# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
-    CategoryAxis primaryAxis = new CategoryAxis();
-    chart.XAxes.Add(primaryAxis);
-    NumericalAxis secondaryAxis = new NumericalAxis();
-    chart.YAxes.Add(secondaryAxis);
+SfCartesianChart chart = new SfCartesianChart();
+CategoryAxis primaryAxis = new CategoryAxis();
+chart.XAxes.Add(primaryAxis);
+NumericalAxis secondaryAxis = new NumericalAxis();
+chart.YAxes.Add(secondaryAxis);
 
-    StackingColumn100Series series = new StackingColumn100Series()
-    {
-        ItemsSource = new ViewModel().Data,
-        XBindingPath = "XValue",
-        YBindingPath = "YValue",
-        GroupingLabel="GroupOne"
-    };
-    StackingColumn100Series series1 = new StackingColumn100Series()
-    {
-        ItemsSource = new ViewModel().Data1,
-        XBindingPath = "XValue",
-        YBindingPath = "YValue",
-        GroupingLabel="GroupOne"
-    };
-    StackingColumn100Series series2 = new StackingColumn100Series()
-    {
-        ItemsSource = new ViewModel().Data2,
-        XBindingPath = "XValue",
-        YBindingPath = "YValue",
-        GroupingLabel="GroupTwo"
-    };
-    StackingColumn100Series series3 = new StackingColumn100Series()
-    {
-        ItemsSource = new ViewModel().Data3,
-        XBindingPath = "XValue",
-        YBindingPath = "YValue",
-        GroupingLabel="GroupTwo"
-    };
+StackingColumn100Series series = new StackingColumn100Series()
+{
+    ItemsSource = new ViewModel().Data,
+    XBindingPath = "XValue",
+    YBindingPath = "YValue",
+    GroupingLabel="GroupOne"
+};
+StackingColumn100Series series1 = new StackingColumn100Series()
+{
+    ItemsSource = new ViewModel().Data1,
+    XBindingPath = "XValue",
+    YBindingPath = "YValue",
+    GroupingLabel="GroupOne"
+};
+StackingColumn100Series series2 = new StackingColumn100Series()
+{
+    ItemsSource = new ViewModel().Data2,
+    XBindingPath = "XValue",
+    YBindingPath = "YValue",
+    GroupingLabel="GroupTwo"
+};
+StackingColumn100Series series3 = new StackingColumn100Series()
+{
+    ItemsSource = new ViewModel().Data3,
+    XBindingPath = "XValue",
+    YBindingPath = "YValue",
+    GroupingLabel="GroupTwo"
+};
 
-    chart.Series.Add(series);
-    chart.Series.Add(series1);
-    chart.Series.Add(series2);
-    chart.Series.Add(series3);
-    this.Content = chart;
+chart.Series.Add(series);
+chart.Series.Add(series1);
+chart.Series.Add(series2);
+chart.Series.Add(series3);
+this.Content = chart;
 
 {% endhighlight C# %}
 

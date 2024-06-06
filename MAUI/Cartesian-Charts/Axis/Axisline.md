@@ -23,7 +23,7 @@ Cartesian chart axis provides support to customize the style of axis line by def
         <chart:NumericalAxis >
             <chart:NumericalAxis.AxisLineStyle>
                 <chart:ChartLineStyle StrokeWidth ="2"
-									  Stroke="Red"/>
+                                      Stroke="Red"/>
             </chart:NumericalAxis.AxisLineStyle>
         </chart:NumericalAxis>
     </chart:SfCartesianChart.XAxes>
@@ -68,7 +68,7 @@ The padding to the axis line is defined by using the [AxisLineOffset](https://he
         <chart:NumericalAxis AxisLineOffset="25">
             <chart:NumericalAxis.AxisLineStyle>
                 <chart:ChartLineStyle StrokeWidth ="2"
-									  Stroke="Red"/>
+                                      Stroke="Red"/>
             </chart:NumericalAxis.AxisLineStyle>
         </chart:NumericalAxis>
     </chart:SfCartesianChart.XAxes>
