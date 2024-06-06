@@ -137,3 +137,5 @@ if (annotation is SquareAnnotation squareAnnotation)
 }
 {% endhighlight %}
 {% endtabs %}
+
+The example project to convert coordinates can be downloaded [here](https://github.com/SyncfusionExamples/maui-pdf-viewer-examples/tree/master/ConversionOfCoordinates).

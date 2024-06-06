@@ -114,3 +114,5 @@ void EditSelectedStampAnnotation(Annotation selectedAnnotation)
 }
 {% endhighlight %}
 {% endtabs %}
+
+The example project with the stamp annotation functionalities can be downloaded [here](https://github.com/SyncfusionExamples/maui-pdf-viewer-examples/tree/master/Annotations/Stamp).

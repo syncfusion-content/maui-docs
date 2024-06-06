@@ -156,3 +156,5 @@ void EditSelectedHighlightAnnotation(Annotation selectedAnnotation)
 }
 {% endhighlight %}
 {% endtabs %}
+
+The example project with the text markup annotation functionalities can be downloaded [here](https://github.com/SyncfusionExamples/maui-pdf-viewer-examples/tree/master/Annotations/TextMarkups).

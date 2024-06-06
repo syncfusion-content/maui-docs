@@ -167,4 +167,4 @@ namespace OpenLocalFile
 {% endhighlight %} 
 {% endtabs %}
 
-The example project to open a PDF document from local storage using `File Picker` can be downloaded [here](https://github.com/SyncfusionExamples/maui-pdf-viewer-examples). 
+The example project to open a PDF document from local storage using `File Picker` can be downloaded [here](https://github.com/SyncfusionExamples/maui-pdf-viewer-examples/tree/master/Open%20Local%20File). 

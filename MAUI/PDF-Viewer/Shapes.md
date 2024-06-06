@@ -158,3 +158,5 @@ void EditSelectedCicleAnnotation(Annotation selectedAnnotation)
 }
 {% endhighlight %}
 {% endtabs %}
+
+The example project with the shape annotation functionalities can be downloaded [here](https://github.com/SyncfusionExamples/maui-pdf-viewer-examples/tree/master/Annotations/Shapes).
