@@ -59,7 +59,7 @@ this.Content = chart;
 
 {% endtabs %}
 
-![Area chart type in MAUI Chart](Chart-types_images/maui_area_chart.png)
+![Area chart type in MAUI Chart](Chart-types-images/maui_area_chart.png)
 
 ## Spline Area Chart
 
@@ -109,7 +109,7 @@ this.Content = chart;
 
 {% endtabs %}
 
-![Spline area chart type in MAUI Chart](Chart-types_images/maui_spline_area_chart.png)
+![Spline area chart type in MAUI Chart](Chart-types-images/maui_spline_area_chart.png)
 
 ## Enable Marker
 

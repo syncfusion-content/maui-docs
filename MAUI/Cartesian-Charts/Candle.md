@@ -82,7 +82,7 @@ this.Content = chart;
 
 {% endtabs %}
 
-![Candle chart type in MAUI Chart](Chart-types_images/CandleBasicRendering.png)
+![Candle chart type in MAUI Chart](Chart-types-images/CandleBasicRendering.png)
 
 ## Bull and Bear Color
 
@@ -142,7 +142,7 @@ this.Content = chart;
 
 {% endtabs %}
 
-![Candle chart fill color in MAUI Chart](Chart-types_images/CandleFillColor.png)
+![Candle chart fill color in MAUI Chart](Chart-types-images/CandleFillColor.png)
 
 ## EnableSolidCandle
 
@@ -200,4 +200,4 @@ this.Content = chart;
 
 {% endtabs %}
 
-![Solid candle in MAUI Chart](Chart-types_images/SolidCandles.png)
+![Solid candle in MAUI Chart](Chart-types-images/SolidCandles.png)

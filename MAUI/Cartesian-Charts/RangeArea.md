@@ -67,7 +67,7 @@ this.Content = chart;
 
 {% endtabs %}
 
-![Range Area chart type in MAUI Chart](Chart-types_images/maui_range_area.png)
+![Range Area chart type in MAUI Chart](Chart-types-images/maui_range_area.png)
 
 ## Enable Marker
 

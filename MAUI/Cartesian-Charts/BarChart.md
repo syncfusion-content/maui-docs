@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Bar Chart in .NET MAUI Chart control | Syncfusion
-description: Learn here all about bar chart support in Syncfusion .NET MAUI Chart (SfCartesianChart) control.
+description: Learn here all about bar chart and its features in Syncfusion .NET MAUI Chart (SfCartesianChart) control.
 platform: maui
 control: SfCartesianChart
 documentation: ug
@@ -60,7 +60,7 @@ this.Content = chart;
 
 {% endtabs %}
 
-![Bar chart type in MAUI Chart](Chart-Types_images/maui_bar_chart.png)
+![Bar chart type in MAUI Chart](Chart-Types-images/maui_bar_chart.png)
 
 ## Spacing and Width
 
@@ -117,4 +117,4 @@ this.Content = chart;
 
 {% endtabs %}
 
-![Bar segment spacing in MAUI Chart](Chart-Types_images/maui_bar_chart_with_segment_spacing.png)
+![Bar segment spacing in MAUI Chart](Chart-Types-images/maui_bar_chart_with_segment_spacing.png)

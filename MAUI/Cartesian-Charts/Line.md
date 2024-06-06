@@ -70,7 +70,7 @@ this.Content = chart;
 
 {% endtabs %}
 
-![Line Chart in MAUI](Chart-types_images/maui_line_chart.png)
+![Line Chart in MAUI](Chart-types-images/maui_line_chart.png)
 
 ### Dashed line
 
@@ -146,7 +146,7 @@ this.Content = chart;
 
 {% endtabs %}
 
-![Dashed line chart in MAUI](Chart-types_images/maui_dashed_line_chart.png)
+![Dashed line chart in MAUI](Chart-types-images/maui_dashed_line_chart.png)
 
 ## Spline Chart 
 
@@ -206,7 +206,7 @@ this.Content = chart;
 
 {% endtabs %}
 
-![Spline chart type in MAUI Chart](Chart-types_images/maui_spline_chart.png)
+![Spline chart type in MAUI Chart](Chart-types-images/maui_spline_chart.png)
 
 ### Spline rendering types
 
@@ -264,7 +264,7 @@ this.Content = chart;
 
 {% endtabs %}
 
-![Spline types chart in MAUI Chart](Chart-types_images/maui_spline_types_chart.png)
+![Spline types chart in MAUI Chart](Chart-types-images/maui_spline_types_chart.png)
 
 ## Enable Marker
 
@@ -318,7 +318,7 @@ this.Content= chart;
 
 {% endtabs %}
 
-![Marker support in MAUI Chart](Chart-types_images/marker_support.png)
+![Marker support in MAUI Chart](Chart-types-images/marker_support.png)
 
 ### Marker customization
 

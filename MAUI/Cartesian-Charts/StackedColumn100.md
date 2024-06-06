@@ -83,7 +83,7 @@ this.Content = chart;
 
 {% endtabs %}
 
-![Stacking Column 100 Chart in MAUI](Chart-types_images/StackedColumn100Chart.png)
+![Stacking Column 100 Chart in MAUI](Chart-types-images/StackedColumn100Chart.png)
 
 ## Grouping Series 
 

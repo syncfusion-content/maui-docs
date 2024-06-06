@@ -75,7 +75,7 @@ this.Content = chart;
 
 {% endtabs %}
 
-![Waterfall Chart in MAUI Chart](Chart-types_images/maui_waterfall_Basic.png)
+![Waterfall Chart in MAUI Chart](Chart-types-images/maui_waterfall_Basic.png)
 
 ### Connector line customization
 
@@ -119,4 +119,4 @@ chart.Series.Add(series);
 
 {% endtabs %}
 
-![Connector line customization in Waterfall Chart](Chart-types_images/maui_waterfall_LineStyle.png)
+![Connector line customization in Waterfall Chart](Chart-types-images/maui_waterfall_LineStyle.png)

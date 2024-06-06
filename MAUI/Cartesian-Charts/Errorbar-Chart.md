@@ -80,7 +80,7 @@ this.Content = chart;
 
 {% endtabs %}
 
-![Error Bar Series in MAUI Chart](Chart-types_images/maui_errorbar_BasicRendering.png)
+![Error Bar Series in MAUI Chart](Chart-types-images/maui_errorbar_BasicRendering.png)
 
 ## Mode 
 The error bar mode specifies whether the error bar should be drawn horizontally, vertically or both. The [Mode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ErrorBarSeries.html#Syncfusion_Maui_Charts_ErrorBarSeries_Mode) property used to switch the error bar mode. By default, the Mode value is [Both](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ErrorBarMode.html#Syncfusion_Maui_Charts_ErrorBarMode_Both), which will display both horizontal and vertical error values.
@@ -121,7 +121,7 @@ chart.Series.Add(errorBar);
 
 {% endtabs %}
 
-![Horizontal Mode Support in Error Bar Series](Chart-types_images/maui_errorbar_BasicRendering.png)
+![Horizontal Mode Support in Error Bar Series](Chart-types-images/maui_errorbar_BasicRendering.png)
 
 ### Horizontal
 
@@ -159,7 +159,7 @@ chart.Series.Add(errorBar);
 
 {% endtabs %}
 
-![Horizontal Mode Support in Error Bar Series](Chart-types_images/maui_errorbar_ModeHorizontal.png)
+![Horizontal Mode Support in Error Bar Series](Chart-types-images/maui_errorbar_ModeHorizontal.png)
 
 ### Vertical
 
@@ -197,7 +197,7 @@ chart.Series.Add(errorBar);
 
 {% endtabs %}
 
-![Vertical Mode Support in Error Bar Series](Chart-types_images/maui_errorbar_ModeVertical.png)
+![Vertical Mode Support in Error Bar Series](Chart-types-images/maui_errorbar_ModeVertical.png)
 
 
 ## Direction 
@@ -248,7 +248,7 @@ chart.Series.Add(errorBar);
 
 {% endtabs %}
 
-![Horizontal Direction as Both in Error Bar Series](Chart-types_images/maui_errorbar_Direction.png)
+![Horizontal Direction as Both in Error Bar Series](Chart-types-images/maui_errorbar_Direction.png)
 
 ## Type
 
@@ -288,7 +288,7 @@ chart.Series.Add(errorBar);
 
 {% endtabs %}
 
-![Fixed Type in Error Bar Series](Chart-types_images/maui_errorbar_BasicRendering.png)
+![Fixed Type in Error Bar Series](Chart-types-images/maui_errorbar_BasicRendering.png)
 
 ### Percentage
 
@@ -324,7 +324,7 @@ chart.Series.Add(errorBar);
 
 {% endtabs %}
 
-![Percentage Type in Error Bar Series](Chart-types_images/maui_errorbar_TypePercentage.png)
+![Percentage Type in Error Bar Series](Chart-types-images/maui_errorbar_TypePercentage.png)
 
 ### Standard Error
 
@@ -360,7 +360,7 @@ chart.Series.Add(errorBar);
 
 {% endtabs %}
 
-![Standard Error Type in Error Bar Series](Chart-types_images/maui_errorbar_TypeStandardError.png)
+![Standard Error Type in Error Bar Series](Chart-types-images/maui_errorbar_TypeStandardError.png)
 
 ### Standard Deviation
 
@@ -396,7 +396,7 @@ chart.Series.Add(errorBar);
 
 {% endtabs %}
 
-![Standard Deviation Type in Error Bar Series](Chart-types_images/maui_errorbar_TypeStandardDeviation.png)
+![Standard Deviation Type in Error Bar Series](Chart-types-images/maui_errorbar_TypeStandardDeviation.png)
 
 ### Custom
 
@@ -438,7 +438,7 @@ chart.Series.Add(errorBar);
 
 {% endtabs %}
 
-![Custom Type in Error Bar Series](Chart-types_images/maui_errorbar_TypeCustom.png)
+![Custom Type in Error Bar Series](Chart-types-images/maui_errorbar_TypeCustom.png)
 
 ## Customization
 
@@ -496,7 +496,7 @@ chart.Series.Add(errorBar);
 
 {% endtabs %}
 
-![Horizontal Line Style in Error Bar Series](Chart-types_images/maui_errorbar_LineStyle.png)
+![Horizontal Line Style in Error Bar Series](Chart-types-images/maui_errorbar_LineStyle.png)
 
 ### Cap Line Style
 
@@ -554,4 +554,4 @@ chart.Series.Add(errorBar);
 
 {% endtabs %}
 
-![Horizontal Cap Line Style in Error Bar Series](Chart-types_images/maui_errorbar_CapLineStyle.png)
+![Horizontal Cap Line Style in Error Bar Series](Chart-types-images/maui_errorbar_CapLineStyle.png)

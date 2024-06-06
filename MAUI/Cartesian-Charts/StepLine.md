@@ -73,7 +73,7 @@ this.Content = chart;
 
 {% endtabs %}
 
-![StepLine Chart in MAUI](Chart-types_images/StepLineChart.png)
+![StepLine Chart in MAUI](Chart-types-images/StepLineChart.png)
 
 ## Dashed Step Line Chart
 
@@ -137,7 +137,7 @@ this.Content = chart;
 
 {% endtabs %}
 
-![StepLine Chart in MAUI](Chart-types_images/DashedStepLine.png)
+![StepLine Chart in MAUI](Chart-types-images/DashedStepLine.png)
 
 ## Vertical Step Line Chart 
 
@@ -202,4 +202,4 @@ this.Content = chart;
 
 {% endtabs %}
 
-![StepLine Chart in MAUI](Chart-types_images/VerticalStepLine.png)
+![StepLine Chart in MAUI](Chart-types-images/VerticalStepLine.png)

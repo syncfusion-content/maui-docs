@@ -59,7 +59,7 @@ this.Content = chart;
 
 {% endtabs %}
 
-![BoxAndWhisker chart type in MAUI Chart](Chart-types_images/BoxBasicRendering.png)
+![BoxAndWhisker chart type in MAUI Chart](Chart-types-images/BoxBasicRendering.png)
 
 ## Customize the series Box mode
 The series box plotting mode can be changed by using [BoxPlotMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.BoxAndWhiskerSeries.html#Syncfusion_Maui_Charts_BoxAndWhiskerSeries_BoxPlotMode) property of [BoxAndWhiskerSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.BoxAndWhiskerSeries.html). The plotting mode of series can be calculated as follows:
@@ -121,7 +121,7 @@ this.Content = chart;
 
 {% endtabs %}
 
-![BoxPlotMode Normal in MAUI Chart](Chart-types_images/BoxModeNormal.png)
+![BoxPlotMode Normal in MAUI Chart](Chart-types-images/BoxModeNormal.png)
 
 ## Inclusive
 In Inclusive mode, the whiskers extend to the minimum and maximum data points within 1.5 times the IQR. Any points beyond this range are considered outliers. The following code illustrate how to define property [BoxPlotMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.BoxAndWhiskerSeries.html#Syncfusion_Maui_Charts_BoxAndWhiskerSeries_BoxPlotMode) value as [Inclusive](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.BoxPlotMode.html#Syncfusion_Maui_Charts_BoxPlotMode_Inclusive).
@@ -172,7 +172,7 @@ this.Content = chart;
 
 {% endtabs %}
 
-![BoxPlotMode Inclusive in MAUI Chart](Chart-types_images/BoxModeInclusive.png)
+![BoxPlotMode Inclusive in MAUI Chart](Chart-types-images/BoxModeInclusive.png)
 
 ## ShowMedian
 The Median values of given dataset is viewed by enabling the [ShowMedian](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.BoxAndWhiskerSeries.html#Syncfusion_Maui_Charts_BoxAndWhiskerSeries_ShowMedian) property of [BoxAndWhiskerSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.BoxAndWhiskerSeries.html). By default, the ShowMedian property value is False. The following code illustrates how to enable the [ShowMedian](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.BoxAndWhiskerSeries.html#Syncfusion_Maui_Charts_BoxAndWhiskerSeries_ShowMedian) property.
@@ -223,7 +223,7 @@ this.Content = chart;
 
 {% endtabs %}
 
-![ShowMedian in MAUI chart](Chart-types_images/ShowMedian.png)
+![ShowMedian in MAUI chart](Chart-types-images/ShowMedian.png)
 
 N>
 
@@ -283,7 +283,7 @@ this.Content = chart;
 
 {% endtabs %}
 
-![Outlier Segment in MAUI chart](Chart-types_images/ShowOutlier.png)
+![Outlier Segment in MAUI chart](Chart-types-images/ShowOutlier.png)
 
 ## OutlierShapeType
 
@@ -337,4 +337,4 @@ this.Content = chart;
 
 {% endtabs %}
 
-![OutlierShapeType in MAUI chart](Chart-types_images/OutlierShape.png)
+![OutlierShapeType in MAUI chart](Chart-types-images/OutlierShape.png)

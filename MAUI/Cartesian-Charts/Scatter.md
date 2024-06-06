@@ -63,4 +63,4 @@ this.Content = chart;
 
 {% endtabs %}
 
-![Scatter chart type in MAUI Chart](Chart-types_images/maui_scatter_chart.jpg)
+![Scatter chart type in MAUI Chart](Chart-types-images/maui_scatter_chart.jpg)

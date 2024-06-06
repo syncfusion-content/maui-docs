@@ -65,7 +65,7 @@ this.Content = chart;
 
 {% endtabs %}
 
-![Bubble chart type in MAUI Chart](Chart-Types_images/BubbleBasisImage.png)
+![Bubble chart type in MAUI Chart](Chart-Types-images/BubbleBasisImage.png)
 
 ## Show zero size bubbles
 The zero size bubble segments can be enabled or disabled using the [ShowZeroSizeBubbles](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.BubbleSeries.html#Syncfusion_Maui_Charts_BubbleSeries_ShowZeroSizeBubbles) property. By default, the property value is True. The following code illustrates how to set the value to the property.
@@ -107,4 +107,4 @@ this.Content = chart;
 
 {% endtabs %}
 
-![ShowZeroSize bubble  type in MAUI Chart](Chart-Types_images/ShowZeroSizeBubble.png)
+![ShowZeroSize bubble  type in MAUI Chart](Chart-Types-images/ShowZeroSizeBubble.png)

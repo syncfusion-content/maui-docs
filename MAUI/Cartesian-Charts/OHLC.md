@@ -1,7 +1,7 @@
 ---
 layout: post
 title: OHLC Chart in .NET MAUI Chart control | Syncfusion
-description: Learn here all about ohlc chart support in Syncfusion .NET MAUI Chart (SfCartesianChart) control.
+description: Learn here all about ohlc chart and its features in Syncfusion .NET MAUI Chart (SfCartesianChart) control.
 platform: maui
 control: SfCartesianChart
 documentation: ug
@@ -81,7 +81,7 @@ this.Content = chart;
 
 {% endtabs %}
 
-![OHLC chart type in MAUI Chart](Chart-types_images/OHLCBasicRendering.png)
+![OHLC chart type in MAUI Chart](Chart-types-images/OHLCBasicRendering.png)
 
 ## Bull and Bear Color
 
@@ -141,4 +141,4 @@ this.Content = chart;
 
 {% endtabs %}
 
-![OHLC chart fill color in MAUI Chart](Chart-types_images/OhlcFillColor.png)
+![OHLC chart fill color in MAUI Chart](Chart-types-images/OhlcFillColor.png)

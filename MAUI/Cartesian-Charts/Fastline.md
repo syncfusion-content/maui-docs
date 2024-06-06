@@ -57,7 +57,7 @@ this.Content = chart;
 
 {% endtabs %}
 
-![FastLine chart type in MAUI Chart](Chart-types_images/maui_fastline_chart.png)
+![FastLine chart type in MAUI Chart](Chart-types-images/maui_fastline_chart.png)
 
 ### Dashed line
 
@@ -120,7 +120,7 @@ this.Content = chart;
 
 {% endtabs %}
 
-![Dashed fast line chart in MAUI](Chart-types_images/maui_dashed_fastline_chart.png)
+![Dashed fast line chart in MAUI](Chart-types-images/maui_dashed_fastline_chart.png)
 
 ### Anti-aliasing
 

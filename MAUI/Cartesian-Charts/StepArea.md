@@ -58,7 +58,7 @@ this.Content = chart;
 
 {% endtabs %}
 
-![Step Area chart type in MAUI Chart](Chart-types_images/maui_StepArea_chart.png)
+![Step Area chart type in MAUI Chart](Chart-types-images/maui_StepArea_chart.png)
 
 ## Enable Marker
 
