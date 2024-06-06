@@ -143,7 +143,7 @@ this.Content = chart;
 
 ## Connector line style
 
-The [ConnectorLineStyle]() is used to customize the appearance of the data label connector line when data labels are placement outside. The following [ConnectorLineStyle]() property are used to customize the connector line.
+The [ConnectorLineStyle]() is used to customize the appearance of the data label connector line when data labels are placed outside. The following [ConnectorLineStyle]() property are used to customize the connector line.
 
 * [Stroke]() – Gets or sets the stroke color of the connector line
 * [StrokeWidth]() – Gets or sets the stroke thickness of the connector line
@@ -304,7 +304,7 @@ this.Content = chart;
 
 ## Smart Labels
 
- The [SmartLabelAlignment]() property is used to arrange the data labels smartly and avoid the intersection when there is overlapping of labels. The [SmartLabelAlignment]() enum contains the following values.
+ The [SmartLabelAlignment]() property is used to arrange the data labels smartly to avoid intersection when labels overlap. The [SmartLabelAlignment]() enum contains the following values.
 
 * [Shift]() - smartly arranges the overlapped data labels.
 * [Hide]() - hides the intersected data labels.
