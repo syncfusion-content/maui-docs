@@ -19,26 +19,26 @@ documentation: ug
 
 {% highlight xaml %}
 
-    <chart:SfCartesianChart>
-        .........
+<chart:SfCartesianChart>
+    .........
 
-        <chart:SfCartesianChart.InteractiveBehavior>
-                <local:ChartInteractiveExt></local:ChartInteractiveExt>
-        </chart:SfCartesianChart.InteractiveBehavior>
+    <chart:SfCartesianChart.InteractiveBehavior>
+        <local:ChartInteractiveExt></local:ChartInteractiveExt>
+    </chart:SfCartesianChart.InteractiveBehavior>
 
-    </chart:SfCartesianChart>
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
-    .......
+SfCartesianChart chart = new SfCartesianChart();
+.......
     
-    ChartInteractiveExt interactiveExt = new ChartInteractiveExt();
-    chart.Behaviors.Add(interactiveExt);
+ChartInteractiveExt interactiveExt = new ChartInteractiveExt();
+chart.Behaviors.Add(interactiveExt);
 
-    Content = chart;
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -48,23 +48,23 @@ documentation: ug
 
 {% highlight c# %}
 
-    public class ChartInteractiveExt: ChartInteractiveBehavior
+public class ChartInteractiveExt: ChartInteractiveBehavior
+{
+    protected override void OnTouchDown(ChartBase chart, float pointX, float pointY)
     {
-        protected override void OnTouchDown(ChartBase chart, float pointX, float pointY)
-        {
-            base.OnTouchDown(chart, pointX, pointY);
-        }
-
-        protected override void OnTouchMove(ChartBase chart, float pointX, float pointY)
-        {
-            base.OnTouchMove(chart, pointX, pointY);
-        }
-
-        protected override void OnTouchUp(ChartBase chart, float pointX, float pointY)
-        {
-            base.OnTouchUp(chart, pointX, pointY);
-        }
+        base.OnTouchDown(chart, pointX, pointY);
     }
+
+    protected override void OnTouchMove(ChartBase chart, float pointX, float pointY)
+    {
+        base.OnTouchMove(chart, pointX, pointY);
+    }
+
+    protected override void OnTouchUp(ChartBase chart, float pointX, float pointY)
+    {
+        base.OnTouchUp(chart, pointX, pointY);
+    }
+}
 
 {% endhighlight  %}
 

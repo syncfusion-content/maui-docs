@@ -86,47 +86,46 @@ public class ViewModel
 	{
 		CustomBrushes = new List<Brush>();
 		LinearGradientBrush gradientColor1 = new LinearGradientBrush();
-			gradientColor1.GradientStops = new GradientStopCollection()
-			{
-				new GradientStop() { Offset = 1, Color = Color.FromRgb(255, 231, 199) },
-				new GradientStop() { Offset = 0, Color = Color.FromRgb(252, 182, 159) }
-			};
+		gradientColor1.GradientStops = new GradientStopCollection()
+		{
+			new GradientStop() { Offset = 1, Color = Color.FromRgb(255, 231, 199) },
+			new GradientStop() { Offset = 0, Color = Color.FromRgb(252, 182, 159) }
+		};
 
-			LinearGradientBrush gradientColor2 = new LinearGradientBrush();
-			gradientColor2.GradientStops = new GradientStopCollection()
-			{
-				new GradientStop() { Offset = 1, Color = Color.FromRgb(250, 221, 125) },
-				new GradientStop() { Offset = 0, Color = Color.FromRgb(252, 204, 45) }
-			};
+		LinearGradientBrush gradientColor2 = new LinearGradientBrush();
+		gradientColor2.GradientStops = new GradientStopCollection()
+		{
+			new GradientStop() { Offset = 1, Color = Color.FromRgb(250, 221, 125) },
+			new GradientStop() { Offset = 0, Color = Color.FromRgb(252, 204, 45) }
+		};
 
-			LinearGradientBrush gradientColor3 = new LinearGradientBrush();
-			gradientColor3.GradientStops = new GradientStopCollection()
-			{
-				new GradientStop() { Offset = 1, Color = Color.FromRgb(255, 231, 199) },
-				new GradientStop() { Offset = 0, Color = Color.FromRgb(252, 182, 159) }
-			};
+		LinearGradientBrush gradientColor3 = new LinearGradientBrush();
+		gradientColor3.GradientStops = new GradientStopCollection()
+		{
+			new GradientStop() { Offset = 1, Color = Color.FromRgb(255, 231, 199) },
+			new GradientStop() { Offset = 0, Color = Color.FromRgb(252, 182, 159) }
+		};
 
-			LinearGradientBrush gradientColor4 = new LinearGradientBrush();
-			gradientColor4.GradientStops = new GradientStopCollection()
-			{
-				new GradientStop() { Offset = 1, Color = Color.FromRgb(221, 214, 243) },
-				new GradientStop() { Offset = 0, Color = Color.FromRgb(250, 172, 168) }
-			};
+		LinearGradientBrush gradientColor4 = new LinearGradientBrush();
+		gradientColor4.GradientStops = new GradientStopCollection()
+		{
+			new GradientStop() { Offset = 1, Color = Color.FromRgb(221, 214, 243) },
+			new GradientStop() { Offset = 0, Color = Color.FromRgb(250, 172, 168) }
+		};
 
-			LinearGradientBrush gradientColor5 = new LinearGradientBrush();
-			gradientColor5.GradientStops = new GradientStopCollection()
-			{
-				new GradientStop() { Offset = 1, Color = Color.FromRgb(168, 234, 238) },
-				new GradientStop() { Offset = 0, Color = Color.FromRgb(123, 176, 249) }
-			};
+		LinearGradientBrush gradientColor5 = new LinearGradientBrush();
+		gradientColor5.GradientStops = new GradientStopCollection()
+		{
+			new GradientStop() { Offset = 1, Color = Color.FromRgb(168, 234, 238) },
+			new GradientStop() { Offset = 0, Color = Color.FromRgb(123, 176, 249) }
+		};
 
-			CustomBrushes.Add(gradientColor1);
-			CustomBrushes.Add(gradientColor2);
-			CustomBrushes.Add(gradientColor3);
-			CustomBrushes.Add(gradientColor4);
-			CustomBrushes.Add(gradientColor5);
+		CustomBrushes.Add(gradientColor1);
+		CustomBrushes.Add(gradientColor2);
+		CustomBrushes.Add(gradientColor3);
+		CustomBrushes.Add(gradientColor4);
+		CustomBrushes.Add(gradientColor5);
 	}
-
 . . .
 }
 
