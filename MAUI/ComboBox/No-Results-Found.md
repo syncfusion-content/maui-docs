@@ -1,12 +1,12 @@
 ---
 layout: post
-title: No Result Found in in ComboBox control | Syncfusion
-description: Learn all about No Result Found support in .NET MAUI ComboBox (SfComboBox) control and more details.
+title: No Results Found in  ComboBox control | Syncfusion
+description: Learn all about No Results Found support in .NET MAUI ComboBox (SfComboBox) control and more details.
 platform: maui
 control: SfComboBox
 documentation: ug
 ---
-# No Result Found in .NET MAUI ComboBox  (SfComboBox)
+# No Results Found in .NET MAUI ComboBox (SfComboBox)
 
 When the entered item is not in the suggestion list, `SfComboBox` displays a text indicating there is no search results found. We can set the desire text to be displayed for indicating no results found with the ` NoResultsFoundText` and `NoResultsFoundTemplate` properties.
 

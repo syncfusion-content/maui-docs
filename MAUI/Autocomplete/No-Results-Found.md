@@ -1,14 +1,14 @@
 ---
 layout: post
-title: No Result Found in in Autocomplete control | Syncfusion
-description: Learn about No Result Found support in .NET MAUI Autocomplete (SfAutocomplete) control and more details.
+title: No Results Found in .NET MAUI  Autocomplete control | Syncfusion
+description: Learn about No Results Found support in .NET MAUI Autocomplete (SfAutocomplete) control and more details.
 platform: maui
-control: SfAutoComplete
+control: SfAutocomplete
 documentation: ug
 ---
-# No Result Found in .NET MAUI Autocomplete  (SfAutoComplete)
+# No Results Found in .NET MAUI Autocomplete (SfAutocomplete)
 
-When the entered item is not in the suggestion list, `SfAutoComplete` displays a text indicating there is no search results found. We can set the desire text to be displayed for indicating no results found with the `NoResultsFoundText` and `NoResultsFoundTemplate` properties.
+When the entered item is not in the suggestion list, `SfAutocomplete` displays a text indicating there is no search results found. We can set the desire text to be displayed for indicating no results found with the `NoResultsFoundText` and `NoResultsFoundTemplate` properties.
 
 ## NoResultsFoundText
 We can customize the desire text to be displayed for indicating no results found by using the ` NoResultsFoundText` property.
