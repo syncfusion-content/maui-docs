@@ -73,7 +73,7 @@ SfAutocomplete allows customizing User Interface(UI) of Load More view. To custo
  <editors:SfAutocomplete x:Name="autocomplete"
                          WidthRequest="250"
                          ItemsSource="{Binding SocialMedias}"
-                         MaximumSuggestion="3"
+                         MaximumSuggestion="2"
                          DisplayMemberPath="Name"
                          TextMemberPath="Name" >
                 <editors:SfAutocomplete.LoadMoreTemplate>
@@ -121,7 +121,7 @@ The LoadMore support provides `LoadMoreButtonTapped` Event. The event can be tri
  <editors:SfAutocomplete x:Name="autocomplete"
                          WidthRequest="250"
                          ItemsSource="{Binding SocialMedias}"
-                         MaximumSuggestion="3"
+                         MaximumSuggestion="2"
                          LoadMoreButtonTapped="autocomplete_LoadMoreButtonTapped"
                          DisplayMemberPath="Name"
                          TextMemberPath="Name" >
