@@ -77,7 +77,7 @@ List of supported arithmetic and logical operations are as follows:
     </tr>
     <tr>
         <td> Multiply</td>
-        <td> / </td>
+        <td> * </td>
     </tr>
     <tr>
         <td> Divide </td>
@@ -159,7 +159,7 @@ The [DataGridUnboundColumnEventArgs](https://help.syncfusion.com/cr/maui/Syncfus
 ***OriginalSender:*** Gets the data grid raising event.
 ***Record:*** Gets the underlying row data
 ***UnboundAction:*** Defines the action for triggering event.
-***Value:*** Gets or Sets the value for DataGridUnboundCOlumn cell based on unboundAction.
+***Value:*** Gets or Sets the value for DataGridUnboundColumn cell based on unboundAction.
 
 Populate the data for the unbound column by handling `QueryUnboundColumnValue` event which allows customizing the value of the `DataGridUnboundColumn`. `DataGridUnboundColumnEventArgs` exposes `Value` property, by which you can set the value for the grid cells of the unbound column based on the `UnboundAction`.
 
