@@ -11,19 +11,19 @@ documentation: ug
 
 [CartesianSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.CartesianSeries.html) provides the following methods to get a collection of data under a particular region.
 
-* [`GetDataPoints(Rect rectangle)`]() - Method to get the collection of data that fall inside the given rectangle region. 
-* [`GetDataPoints(double startX, double endX, double startY, double endY)`]() - Method to get the data points from the given range.
+* [`GetDataPoints(Rect rectangle)`]() - Gets the collection of data that falls inside the given rectangle region.
+* [`GetDataPoints(double startX, double endX, double startY, double endY)`]() - Gets the collection of data from the given axis visible range.
 
 {% tabs %}
 
 {% highlight c# %}
 
-    //Get the collection of data that fall inside the given rectangle
+    //Gets the collection of data that falls inside the given rectangle region.
     List<object> dataPoints = Series.GetDataPoints(rectangle);
 
     or
 
-    //Get the data points from the given range.
+    //Gets the collection of data from the given axis visible range.
     List<object> dataPoints = Series.GetDataPoints(startX, endX, startY, endY);
 
 {% endhighlight  %}
