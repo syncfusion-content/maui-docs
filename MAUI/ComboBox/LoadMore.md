@@ -19,7 +19,7 @@ Restrict the number of suggestions displayed and have the remaining items loaded
                     IsFilteringEnabled="True"
                     IsEditable="True" 
                     ItemsSource="{Binding SocialMedias}"          
-                    MaximumSuggestion="3"
+                    MaximumSuggestion="2"
                     DisplayMemberPath="Name"                                    
                     TextMemberPath="Name">
 
@@ -27,10 +27,14 @@ Restrict the number of suggestions displayed and have the remaining items loaded
 
 {% highlight C# %}
 
-comboBox.MaximumSuggestion = 3;
+comboBox.MaximumSuggestion = 2;
 
 {% endhighlight %}
 {% endtabs %}
+
+The following gif image illustrates the result of the above code:
+
+![.NET MAUI ComboBox LoadMore support](Images/LoadMore/LoadMore.gif)
 
 ## LoadMore text customization
 
@@ -44,8 +48,8 @@ The LoadMore support provides `LoadMoreText`. We can set the desire text for the
                     IsFilteringEnabled="True"
                     IsEditable="True" 
                     ItemsSource="{Binding SocialMedias}"          
-                    MaximumSuggestion="3"
-                    LoadMoreText="LOAD MORE"
+                    MaximumSuggestion="2"
+                    LoadMoreText="Load more items"
                     DisplayMemberPath="Name"                                    
                     TextMemberPath="Name"/>
 
@@ -54,11 +58,15 @@ The LoadMore support provides `LoadMoreText`. We can set the desire text for the
 
 {% highlight C# %}
 
-autocomplete.MaximumSuggestion = 3;
-autocomplete.LoadMoreText= "LOAD MORE";
+autocomplete.MaximumSuggestion = 2;
+autocomplete.LoadMoreText= "Load more items";
 
 {% endhighlight %}
 {% endtabs %}
+
+The following gif image illustrates the result of the above code:
+
+![.NET MAUI ComboBox LoadMoreText](Images/LoadMore/LoadMoreText.png)
 
 ## LoadMore view customization
 
@@ -72,8 +80,7 @@ SfComboBox allows customizing User Interface(UI) of Load More view. To customize
                     IsFilteringEnabled="True"
                     IsEditable="True" 
                     ItemsSource="{Binding SocialMedias}"          
-                    MaximumSuggestion="3"
-                    LoadMoreText="LOAD MORE"
+                    MaximumSuggestion="2"
                     DisplayMemberPath="Name"                                    
                     TextMemberPath="Name">
     <editors:SfComboBox.LoadMoreTemplate>
@@ -89,7 +96,7 @@ SfComboBox allows customizing User Interface(UI) of Load More view. To customize
 
 {% highlight C# %}
 
-comboBox.MaximumSuggestion = 3;
+comboBox.MaximumSuggestion = 2;
 comboBox.LoadMoreTemplate = new DataTemplate(() =>
 {
     var grid = new Grid();
@@ -107,6 +114,10 @@ comboBox.LoadMoreTemplate = new DataTemplate(() =>
 {% endhighlight %}
 {% endtabs %}
 
+The following gif image illustrates the result of the above code:
+
+![.NET MAUI ComboBox LoadMoreTemplate](Images/LoadMore/LoadMoreTemplate.png)
+
 ## LoadMore Button Tapped Event
 
 The LoadMore support provides `LoadMoreButtonTapped` Event. The event can be triggered only when you tap on the load more button.
@@ -118,7 +129,7 @@ The LoadMore support provides `LoadMoreButtonTapped` Event. The event can be tri
                     WidthRequest="300"
                     IsFilteringEnabled="True"
                     IsEditable="True" 
-                    MaximumSuggestion="3"
+                    MaximumSuggestion="2"
                     ItemsSource="{Binding SocialMedias}"
                     LoadMoreButtonTapped="comboBox_LoadMoreButtonTapped"
                     DisplayMemberPath="Name"                                    
@@ -129,7 +140,7 @@ The LoadMore support provides `LoadMoreButtonTapped` Event. The event can be tri
 
 {% highlight C# %}
 
-comboBox.MaximumSuggestion = 3;
+comboBox.MaximumSuggestion = 2;
 comboBox.LoadMoreButtonTapped += ComboBox_LoadMoreButtonTapped;
 
 private void ComboBox_LoadMoreButtonTapped(object? sender, EventArgs e)

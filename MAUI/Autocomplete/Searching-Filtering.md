@@ -199,6 +199,10 @@ autocomplete.MinimumPrefixCharacters = 3;
 {% endhighlight %}
 {% endtabs %}
 
+The following image illustrates the result of the above code.
+
+![.NET MAUI Autocomplete MinimumPrefixCharacters](Images/Searching_Filtering/MinimumPrefixCharacters.png)
+
 ### Custom filtering
 
 The `Autocomplete` control supports applying your custom filter logic to suggest items based on your filter criteria by using the `FilterBehavior` and `SearchBehavior` properties. The default value of `FilterBehavior` and `SearchBehavior` is `null`.

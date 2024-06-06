@@ -9,7 +9,7 @@ documentation: ug
 
 # LoadMore in .NET MAUI Autocomplete (SfAutocomplete)
 
-Restrict the number of suggestions displayed and have the remaining items loaded by selecting LoadMore.We can restrict maximum suggestion to be displayed with the `MaximumSuggestion` property.
+Restrict the number of suggestions displayed and have the remaining items loaded by selecting LoadMore. We can restrict maximum suggestion to be displayed with the `MaximumSuggestion` property.
 
 {% tabs %}
 {% highlight xaml %}
@@ -17,7 +17,7 @@ Restrict the number of suggestions displayed and have the remaining items loaded
  <editors:SfAutocomplete x:Name="autocomplete"
                          WidthRequest="250"
                          ItemsSource="{Binding SocialMedias}"
-                         MaximumSuggestion="3"
+                         MaximumSuggestion="2"
                          DisplayMemberPath="Name"
                          TextMemberPath="Name" />
 
@@ -25,10 +25,14 @@ Restrict the number of suggestions displayed and have the remaining items loaded
 
 {% highlight C# %}
 
-autocomplete.MaximumSuggestion = 3;
+autocomplete.MaximumSuggestion = 2;
 
 {% endhighlight %}
 {% endtabs %}
+
+The following gif image illustrates the result of the above code:
+
+![.NET MAUI Autocomplete LoadMore support](Images/LoadMore/LoadMore.gif)
 
 ## LoadMore text customization
 
@@ -40,8 +44,8 @@ The LoadMore support provides `LoadMoreText`. We can set the desire text for the
  <editors:SfAutocomplete x:Name="autocomplete"
                          WidthRequest="250"
                          ItemsSource="{Binding SocialMedias}"
-                         MaximumSuggestion="3"
-                         LoadMoreText="LOAD MORE"
+                         MaximumSuggestion="2"
+                         LoadMoreText="Load more items"
                          DisplayMemberPath="Name"
                          TextMemberPath="Name" />
 
@@ -49,11 +53,15 @@ The LoadMore support provides `LoadMoreText`. We can set the desire text for the
 
 {% highlight C# %}
 
-autocomplete.MaximumSuggestion = 3;
-autocomplete.LoadMoreText= "LOAD MORE";
+autocomplete.MaximumSuggestion = 2;
+autocomplete.LoadMoreText= "Load more items";
 
 {% endhighlight %}
 {% endtabs %}
+
+The following gif image illustrates the result of the above code:
+
+![.NET MAUI Autocomplete LoadMoreText](Images/LoadMore/LoadMoreText.png)
 
 ## LoadMore view customization
 
@@ -65,7 +73,7 @@ SfAutocomplete allows customizing User Interface(UI) of Load More view. To custo
  <editors:SfAutocomplete x:Name="autocomplete"
                          WidthRequest="250"
                          ItemsSource="{Binding SocialMedias}"
-                         MaximumSuggestion="3"
+                         MaximumSuggestion="2"
                          DisplayMemberPath="Name"
                          TextMemberPath="Name" >
                 <editors:SfAutocomplete.LoadMoreTemplate>
@@ -81,7 +89,7 @@ SfAutocomplete allows customizing User Interface(UI) of Load More view. To custo
 
 {% highlight C# %}
 
-autocomplete.MaximumSuggestion = 3;
+autocomplete.MaximumSuggestion = 2;
 autocomplete.LoadMoreTemplate = new DataTemplate(() =>
 {
     var grid = new Grid();
@@ -99,6 +107,10 @@ autocomplete.LoadMoreTemplate = new DataTemplate(() =>
 {% endhighlight %}
 {% endtabs %}
 
+The following gif image illustrates the result of the above code:
+
+![.NET MAUI Autocomplete LoadMoreTemplate](Images/LoadMore/LoadMoreTemplate.png)
+
 ## LoadMore Button Tapped Event
 
 The LoadMore support provides `LoadMoreButtonTapped` Event. The event can be triggered only when you tap on the load more button.
@@ -109,7 +121,7 @@ The LoadMore support provides `LoadMoreButtonTapped` Event. The event can be tri
  <editors:SfAutocomplete x:Name="autocomplete"
                          WidthRequest="250"
                          ItemsSource="{Binding SocialMedias}"
-                         MaximumSuggestion="3"
+                         MaximumSuggestion="2"
                          LoadMoreButtonTapped="autocomplete_LoadMoreButtonTapped"
                          DisplayMemberPath="Name"
                          TextMemberPath="Name" >
@@ -119,7 +131,7 @@ The LoadMore support provides `LoadMoreButtonTapped` Event. The event can be tri
 
 {% highlight C# %}
 
-autocomplete.MaximumSuggestion = 3;
+autocomplete.MaximumSuggestion = 2;
 autocomplete.LoadMoreButtonTapped += Autocomplete_LoadMoreButtonTapped;
 
 private void Autocomplete_LoadMoreButtonTapped(object? sender, EventArgs e)

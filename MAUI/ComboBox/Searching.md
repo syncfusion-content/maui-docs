@@ -138,3 +138,7 @@ comboBox.MinimumPrefixCharacters = 3;
 
 {% endhighlight %}
 {% endtabs %}
+
+The following image illustrates the result of the above code.
+
+![.NET MAUI ComboBox MinimumPrefixCharacters](Images/Searching/MinimumPrefixCharacters.png)
