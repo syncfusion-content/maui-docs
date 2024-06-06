@@ -5,6 +5,7 @@ description: This section explains about how to initialize legend and its custom
 platform: maui
 control: SfPyramidChart
 documentation: ug
+keywords: .net maui pyramid chart, pyramid-chart, chart legend, legend-wrap, legend view, legend layout, chart legend items, legend alignment.
 ---
 
 # Legend in .NET MAUI Chart (SfPyramidChart)

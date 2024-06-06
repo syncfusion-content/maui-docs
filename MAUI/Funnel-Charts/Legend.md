@@ -5,11 +5,12 @@ description: This section explains about how to initialize legend and its custom
 platform: maui
 control: SfFunnelChart
 documentation: ug
+keywords: .net maui funnel chart, funnel-chart, chart legend, legend-wrap, legend view, legend layout, chart legend items, legend alignment.
 ---
 
 # Legend in .NET MAUI Chart (SfFunnelChart)
 
-The [Legend](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartBase.html#Syncfusion_Maui_Charts_ChartBase_Legend) provides a list of cartesian series, helping to identify the corresponding data series in the chart. Here's a detailed guide on how to define and customize the legend in the cartesian chart.
+The [Legend](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartBase.html#Syncfusion_Maui_Charts_ChartBase_Legend) provides a list of data points, helping to identify the corresponding data points in the chart. Here's a detailed guide on how to define and customize the legend in the cartesian chart.
 
 ## Define Legend
 
