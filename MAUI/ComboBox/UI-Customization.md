@@ -171,6 +171,45 @@ The [SelectionTextHighlightColor](https://help.syncfusion.com/cr/maui/Syncfusion
 
 ![.NET MAUI ComboBox Selection Text Highlight Color](Images/UICustomization/SelectionTextHighlightColor.png)
 
+## CustomView for ComboBox
+
+`CustomView` property has used to provide the custom view instead of entry in ComboBox. It's default height and width has control height and width.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<editors:SfComboBox x:Name="comboBox"
+                    HeightRequest="40"
+                    WidthRequest="240">
+    <editors:SfComboBox.CustomView>
+        <Label x:Name="customLabel"  Text="Custom View"  
+               TextColor="Red"
+               HorizontalOptions="Center"
+               VerticalTextAlignment="Center"/>
+    </editors:SfComboBox.CustomView>
+</editors:SfComboBox>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+var customLabel = new Label();
+customLabel.TextColor = Colors.Red;
+customLabel.VerticalTextAlignment = TextAlignment.Center;
+customLabel.HorizontalOptions = LayoutOptions.Center;
+customLabel.Text = "Custom View";
+
+comboBox.CustomView = customLabel; 
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![CustomView](images/UICustomization/CustomView.png)
+
+N> `SfComboBox` ClearButton will not be supported when using Custom View.
+
 ## Maximum DropDown Height
 
 The maximum height of the drop-down can be changed by using the [MaxDropDownHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDropdownEntry.html#Syncfusion_Maui_Core_SfDropdownEntry_MaxDropDownHeight) property of the ComboBox control. The default value of MaxDropDownHeight property is `400d`.
@@ -956,6 +995,50 @@ The [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.Dr
 The following image illustrates the result of the above code:
 
 ![.NET MAUI ComboBox ItemTemplateSelector](Images/UICustomization/TemplateSelector.png)
+
+## DropDown button customization
+
+We can set view to the drop down button in `SfComboBox` using DropDownButtonSettings property.
+{% tabs %}
+
+{% highlight xaml %}
+
+<editors:SfComboBox x:Name="comboBox"
+                    ItemsSource="{Binding SocialMedias}"
+                     TextMemberPath="Name"
+                    DisplayMemberPath="Name"
+                    HeightRequest="40"
+                    WidthRequest="240">
+    <editors:SfComboBox.DropDownButtonSettings>
+        <editors:DropDownButtonSettings>
+            <editors:DropDownButtonSettings.View>
+            <Label Text="Click" FontSize="12" TextColor="Blue"
+                   VerticalOptions="Center" />
+            </editors:DropDownButtonSettings.View>
+        </editors:DropDownButtonSettings>
+    </editors:SfComboBox.DropDownButtonSettings>
+    
+</editors:SfComboBox>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+var dropDownButtonSettings = new DropDownButtonSettings();
+var label = new Label
+{
+    Text="Click";
+    FontSize="12"; 
+    TextColor="Blue";
+    VerticalOptions="Center" 
+};
+dropDownButtonSettings.View = label;
+comboBox.DropDownButtonSettings = dropDownButtonSettings;
+{% endhighlight %}
+
+{% endtabs %}
+
+![CustomView](images/UICustomization/DropDownButtonSettings_View.png)
 
 ## Styling token items
 
