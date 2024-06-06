@@ -5,6 +5,7 @@ description: Learn here all about how to customize the appearance and change the
 platform: maui
 control: SfScheduler
 documentation: ug
+keywords : .net maui scheduler, .NET MAUI month view.
 ---
 
 # Month View in .NET MAUI Scheduler (SfScheduler)

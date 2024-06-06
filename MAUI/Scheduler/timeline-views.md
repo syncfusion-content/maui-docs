@@ -5,6 +5,7 @@ description: Learn here all about how to customize the timeline views settings i
 platform: maui
 control: SfScheduler
 documentation: ug
+keywords : .net maui scheduler, .NET MAUI timeline view.
 ---
 
 # Timeline Views in .NET MAUI Scheduler (SfScheduler)
