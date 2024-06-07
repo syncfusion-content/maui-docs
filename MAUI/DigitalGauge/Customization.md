@@ -8,7 +8,7 @@ documentation: ug
 keywords: .net maui, .net maui digital gauge, digital gauge, character segments, digital character, character types, character display types
 ---
 
-# Customize Character Segments in .NET MAUI Digital Gauge (SfDigitalGauge)
+# Customize Character Segments in .NET MAUI Digital Gauge
 
 The characters of a digital gauge can be customized in terms of `CharacterWidth`, `CharacterHeight`, `CharacterSpacing`, and `CharacterStrokeColor`.
 
