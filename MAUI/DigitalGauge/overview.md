@@ -8,7 +8,7 @@ documentation: ug
 ---
 # Maui Digital Gauge (SfDigitalGauge) Overview
 
-The digital gauge control is used to display alphanumeric characters in digital (LED display) mode. This control displays a range of values that uses character in combination with numbers.
+The Syncfusion .NET MAUI DigitalGauge control is used to display alphanumeric characters in digital (LED display) mode. This control displays a range of values that use characters in combination with numbers.
 
 ## Key features
 
@@ -25,15 +25,15 @@ This type of digital gauge displays digital characters in 7 segments. It is main
 
 ### 14-segment display
 
-This type of digital gauge displays digital characters in 14 segments. It is mainly used to display both the numbers and alphabet.
+This type of digital gauge displays digital characters in 14 segments. It is mainly used to display both numbers and the alphabet.
 
 ### 16-segment display
 
-This type of digital gauge displays digital characters in 16 segments. It is also mainly used to display both the numbers and alphabet.
+This type of digital gauge displays digital characters in 16 segments. It is also mainly used to display both numbers and the alphabet.
 
 ### 8 * 8 dot matrix display
 
-This type of digital gauge displays digital characters in 8*8 dot matrix segments, in which the characters are spotted by the regular brush and the remaining dots are spotted by the dimmed brush. It is mainly used to display numbers, characters, and special characters.
+This type of digital gauge displays digital characters in 8x8 dot matrix segments, where the characters are spotted by the regular brush and the remaining dots are spotted by the dimmed brush. It is mainly used to display numbers, characters, and special characters.
 
 
 

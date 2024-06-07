@@ -13,8 +13,8 @@ The characters of a digital gauge can be customized in terms of `CharacterWidth`
 
 ## customize character size
 
-The values of digital characters are scaled by altering the height and width of digital characters. It is achieved by setting the `CharacterHeight`and `CharacterWidth` properties in the digital gauge. Default value of `CharacterHeight` and `CharacterWidth` is 25.
-
+The values of digital characters are scaled by altering the height and width of digital characters. This is achieved by setting the `CharacterHeight` and `CharacterWidth` properties in the digital gauge. The default value of `CharacterHeight` is 60 and `CharacterWidth` is 40.
+`
 {% tabs %}
 
 {% highlight xaml %}
@@ -35,7 +35,7 @@ The values of digital characters are scaled by altering the height and width of 
 
             digital.HeightRequest = 120;
 
-            digital.WidthRequest = 330;
+            digital.WidthRequest = 40;
 
             digital.Text = "SYNCFUSION";
 
@@ -64,7 +64,7 @@ The values of digital characters are scaled by altering the height and width of 
 
 ## Setting character spacing
 
-The values of digital characters are spaced by altering the space of digital characters. It is achieved by setting the `CharacterSpacing` property.
+The values of digital characters are spaced by altering the space between digital characters. This is achieved by setting the `CharacterSpacing` property.
 
 {% tabs %}
 
@@ -114,9 +114,9 @@ The values of digital characters are spaced by altering the space of digital cha
 {% endtabs %}
 
 
-## Customize character segment stroke
+## Customize character segment stroke and stroke width
 
-The values of digital characters color can be customized using the `CharacterStrokeColor` property.
+The values of digital characters color can be customized using the `CharacterStrokeColor` property. The width of the digital character value can be customized using the `StrokeWidth` property.
 
 {% tabs %}
 
@@ -166,7 +166,7 @@ The values of digital characters color can be customized using the `CharacterStr
 
 ## Customize disabled segment
 
-You can customize the color and opacity of disabled segments using the `DisabledSegmentStroke` and `DisabledSegmentStroke`properties. The width of the digital character value can be customized using the `StrokeWidth` property.
+You can customize the color and opacity of disabled segments using the `DisabledSegmentStroke` and `DisabledSegmentStroke`properties.
 
 {% tabs %}
 

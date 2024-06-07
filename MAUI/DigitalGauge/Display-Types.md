@@ -9,11 +9,11 @@ documentation: ug
 
 # Display Types in Maui Digital Gauge (SfDigitalGauge)
 
-The digital gauge displays numbers, alphabet, and special characters, which are given in the text property.
+The digital gauge displays numbers, the alphabet, and special characters, which are given in the text property.
 
 ## Setting value to number
 
-Numbers can be displayed in digital gauge in different formats using the `CharacterType`property.
+Numbers can be displayed in a digital gauge in different formats using the `CharacterType` property.
 
 {% tabs %}
 
@@ -65,7 +65,7 @@ Numbers can be displayed in digital gauge in different formats using the `Charac
 
 ## Setting value to alphabet
 
-Alphabet can be displayed in digital gauge using any one of the character format types.
+Alphabet can be displayed in a digital gauge using any one of the character format types.
 
 {% tabs %}
 

@@ -8,55 +8,46 @@ documentation: ug
 ---
 # Getting Started with Maui Digital Gauge (SfDigitalGauge)
 
-This section explains the steps required to configure the `SfDigitalGauge` and add basic elements to it using various APIs.
+This section explains how to add the .NET MAUI DigitalGauge control. This section covers only the basic features needed to get started with Syncfusion DigitalGauge.
 
+## Creating an application using the .NET MAUI DigitalGauge
 
+1. Create a new .NET MAUI application in Visual Studio.
 
-You can add SfDigitalGauge reference using one of the following methods:
+2. Syncfusion .NET MAUI components are available on nuget.org. To add SfDigitalGauge to your project,
+open the NuGet package manager in Visual Studio, search for Syncfusion.Maui.Gauges, and then install it.
 
-**Method 1: Adding SfDigitalGauge reference from nuget.org**
+3. To initialize the control, import the control namespace Syncfusion.Maui.Gauges in XAML or C# code.
 
-Syncfusion Maui components are available in [nuget.org](https://www.nuget.org/). To add SfDigitalGauge to your project, open the NuGet package manager in Visual Studio, search for [Syncfusion.Maui.Gauges](https://www.nuget.org/packages/Syncfusion.Maui.Gauges/25.2.4?_src=template), and then install it.
-
-N> Install the same version of SfDigitalGauge NuGet in all the projects.
-
-
-## Adding namespace for the assemblies
+4. Initialize SfDigitalGauge.
 
 {% tabs %}
 
 {% highlight xaml %}
+<ContentPage
+. . .
+   xmlns:gauge="clr-namespace:Syncfusion.Maui.Gauges;assembly=Syncfusion.Maui.Gauges"
 
-xmlns:gauge="clr-namespace:Syncfusion.Maui.Gauges;assembly=Syncfusion.Maui.Gauges"
+   <gauge:SfDigitalGauge/> 
+</ContentPage>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
 using Syncfusion.Maui.Gauges;
+. . .
 
-{% endhighlight %}
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        SfDigitalGauge sfDigitalGauge = new SfDigitalGauge();
+        this.Content = sfDigitalGauge;
+    }
+}
 
-{% endtabs %}
-
-
-## Initialize gauge
-
-You can initialize the `SfDigitalGauge`control with a required optimal name using the included namespace.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-     <gauge:SfDigitalGauge/> 
-
-{% endhighlight %}
-
-{% highlight c# %}
-
-SfDigitalGauge sfDigitalGauge = new SfDigitalGauge();
-
-this.Content = sfDigitalGauge;
 
 {% endhighlight %}
 
@@ -101,13 +92,13 @@ namespace GaugeMauiSample
 
 By using the `CharacterType` property, you can set the segments for digital gauge. The digital characters can be drawn in the following four different segments:
 
-•	SevenSegment
+• SevenSegment
 
-•	FourteenSegment
+• FourteenSegment
 
-•	SixteenSegment
+• SixteenSegment
 
-•	EightCrossEightDotMatrix
+• EightCrossEightDotMatrix
 
 {% tabs %}
 

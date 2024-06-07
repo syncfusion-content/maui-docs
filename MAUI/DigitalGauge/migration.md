@@ -75,9 +75,9 @@ this.Content = digitalGauge;
 </td></tr>
 </table>
 
-## Character Segments
+## Properties
 
-In the .NET MAUI digital gauge, APIs there 
+The following code example, explains how to initialize the properties of the `Xamarin SfDigitalGauge` and `.NET MAUI SfDigitalGauge`.
 
 <table>
 <tr>
@@ -231,6 +231,20 @@ SfDigitalGauge digital = new SfDigitalGauge();
 </td></tr>
 </table>
 
+## Enum
+
+<table>
+<tr>
+<th>Xamarin SfDigitalGauge</th>
+<th>.NET MAUI SfDigitalGauge</th>
+<th>Description</th></tr>
+<tr>
+<td>CharacterType</td>
+<td>DigitalGaugeCharacterType</td>
+<td>Defines the character segment type for the SfDigitalGauge.</td>
+</tr>
+</table>
+
 ## Character Types
 
 <table>
@@ -364,4 +378,17 @@ SfDigitalGauge digital = new SfDigitalGauge();
 
 {% endtabs %}
 </td></tr>
+</table>
+
+## Event
+<table>
+<tr>
+<th>Xamarin SfDigitalGauge</th>
+<th>.NET MAUI SfDigitalGauge</th>
+<th>Description</th></tr>
+<tr>
+<td>ValueChanged</td>
+<td>TextChanged</td>
+<td>Occurs when the text of the DigitalGauge is changed.</td>
+</tr>
 </table>
