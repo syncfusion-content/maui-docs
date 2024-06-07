@@ -7,7 +7,7 @@ control: SfMaskedEntry
 documentation: ug 
 ---
 
-# Show Password Character in .NET MAUI MaskedEntry (SfMaskedEntry)
+# Show Password Character in .NET MAUI Masked Entry (SfMaskedEntry)
 
 ## Password Char
 
