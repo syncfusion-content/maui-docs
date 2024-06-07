@@ -22,7 +22,7 @@ This section details the process of integrating the Card control and focuses sol
 4. Initialize `SfCards.`
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3 5 6 7" %}
+
 
 <ContentPage   
     . . .
