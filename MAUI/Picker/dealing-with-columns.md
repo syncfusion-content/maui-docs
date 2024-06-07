@@ -122,7 +122,9 @@ Customize the SelectedItem of every column by setting the `SelectedItem` propert
 {% endhighlight %}
 {% endtabs %}
 
-N> * If you sets both the `Selected Item` and `Selected Index` properties, the picker will display the item corresponding to the `Selected Index` in the selection view. This ensures the index value takes precedence for display purposes. N> * In multiple columns, if you set any one column's selected item as `null`, the selected item for the other columns will also become `null`.
+N> 
+* If you sets both the `Selected Item` and `Selected Index` properties, the picker will display the item corresponding to the `Selected Index` in the selection view. This ensures the index value takes precedence for display purposes.
+* In multiple columns, if you set any one column's selected item as `null`, the selected item for the other columns will also become `null`.
 
 ### HeaderText customization
 
