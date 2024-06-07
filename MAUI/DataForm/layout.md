@@ -412,7 +412,7 @@ dataForm.ScrollTo("FirstName");
 {% endhighlight %}
 {% endtabs %}
 
-![Scroll To Editor](images\layout\Scroll.gif){:width="300" height="425" loading="lazy" .lazy .shadow-effect .section-padding .img-padding}
+![Scroll To Editor](images\layout\Scroll.gif){:width="325" height="600" loading="lazy" .lazy .shadow-effect .section-padding .img-padding}
 
 ## Change the editor height
 
