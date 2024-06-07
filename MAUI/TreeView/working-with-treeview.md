@@ -126,6 +126,31 @@ private void TreeView_ItemLongPress(object sender, ItemLongPressEventArgs e)
 {% endhighlight %}
 {% endtabs %}
 
+### KeyDown event
+
+The `KeyDown` event is triggered when a key is pressed while the [SfTreeView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.html) is in focus. The `KeyPressEventArgs` has the following members that provide information for the `KeyDown` event:
+
+ * `Key`: Returns the currently pressed key.
+ * `IsShiftKeyPressed`: Indicates whether the Shift key is in pressed state.
+ * `IsCtrlKeyPressed`: Indicates whether the Control key is in pressed state.
+ * `IsAltKeyPressed`: Indicates whether the Alt key is in pressed state.
+ * `IsCommandKeyPressed`: Indicates whether the Command key is in pressed state.
+ * `Handled`: Gets or sets whether the event is handled or not.
+
+{% tabs %}
+{% highlight xaml %}
+<syncfusion:SfTreeView x:Name="treeView" KeyDown="OnTreeViewKeyDown "/>
+{% endhighlight %}
+{% highlight c# %}
+
+private void OnTreeViewKeyDown(object? sender, KeyPressEventArgs e)
+{
+
+}
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Update the runtime changes
 
 The [PropertyChanged](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.TreeViewNode.html#Syncfusion_TreeView_Engine_TreeViewNode_PropertyChanged) event will be triggered whenever a property in the customized TreeViewNode is changed. You can get the name of the property that changed by using the `PropertyName` property of the `PropertyChangedEventArgs`.

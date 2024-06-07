@@ -285,3 +285,415 @@ public MainPage()
 {% endtabs %}
 
  ![Step customization in .NET MAUI SfStepProgressBar.](images/customization/maui-stepprogressbar-customstepprogress.png){:width="286" height="351"}
+
+## Customize step appearance using DataTemplate
+You can customize the step appearance using the [StepTemplate]() property in [SfStepProgressBar]().
+
+{% tabs %}
+{% highlight xaml tabtitle="XAML" hl_lines="5 6 7 8 9 10 11" %}
+
+<progressBar:SfStepProgressBar x:Name="stepProgress"
+                               Orientation="Horizontal"
+                               ActiveStepIndex="3"
+                               ItemsSource="{Binding StepProgressItem}">
+    <progressBar:SfStepProgressBar.StepTemplate>
+        <DataTemplate>
+            <Grid>
+                <Image Source="tick.png"/>
+            </Grid>
+        </DataTemplate>
+    </progressBar:SfStepProgressBar.StepTemplate>
+</progressBar:SfStepProgressBar>
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C#" hl_lines="6 7 8 9 10 11 12 13" %}
+
+SfStepProgressBar stepProgressBar = new SfStepProgressBar();
+ViewModel viewModel = new ViewModel();
+stepProgressBar.ActiveStepIndex = 3;
+stepProgressBar.Orientation = StepProgressBarOrientation.Horizontal;
+stepProgressBar.ItemsSource = viewModel.StepProgressItem;
+var stepTemplate = new DataTemplate(() =>
+{
+    var grid = new Grid();
+    var image = new Image { Source = "tick.png" };
+    grid.Children.Add(image);
+    return grid;
+});
+stepProgressBar.StepTemplate = stepTemplate;
+this.Content = stepProgressBar;
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="ViewModel.cs" %}
+
+public class ViewModel
+{
+    /// <summary>
+    /// The Step progress bar item collection.
+    /// </summary>
+    private ObservableCollection<StepProgressBarItem> stepProgressItem;
+
+    /// <summary>
+    /// The Step progress bar item collection.
+    /// </summary>
+    public ObservableCollection<StepProgressBarItem> StepProgressItem
+    {
+        get
+        {
+            return stepProgressItem;
+        }
+        set
+        {
+            stepProgressItem = value;
+        }
+    }
+
+    public ViewModel()
+    {
+        stepProgressItem = new ObservableCollection<StepProgressBarItem>();
+        stepProgressItem.Add(new StepProgressBarItem() { PrimaryText = "Ordered" });
+        stepProgressItem.Add(new StepProgressBarItem() { PrimaryText = "Packed" });
+        stepProgressItem.Add(new StepProgressBarItem() { PrimaryText = "Shipped" });
+        stepProgressItem.Add(new StepProgressBarItem() { PrimaryText = "Delivered" });
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![customize-step-using-datatemplate](images/customization/customize-step-using-datatemplate.png)
+
+## Customize step appearance using DataTemplateSelector
+You can customize the step appearance using the [StepTemplate]() property in [SfStepProgressBar](). The DataTemplateSelector can be used to choose a different data template for each step in the step progress bar based on the step’s data. This allows you to customize the appearance of a particular step based on certain conditions.
+
+{% tabs %}
+{% highlight xaml tabtitle="XAML" %}
+
+<Grid>
+    <Grid.Resources>
+        <DataTemplate x:Key="template1">
+            <Grid>
+                <Image Source="ordered.png" HorizontalOptions="Center" VerticalOptions="Center"/>
+            </Grid>
+        </DataTemplate>
+        <DataTemplate x:Key="template2">
+            <Grid>
+                <Image Source="packed.png" HorizontalOptions="Center" VerticalOptions="Center"/>
+            </Grid>
+        </DataTemplate>
+        <DataTemplate x:Key="template3">
+            <Grid>
+                <Image Source="shipped.png" HorizontalOptions="Center" VerticalOptions="Center"/>
+            </Grid>
+        </DataTemplate>
+        <DataTemplate x:Key="template4">
+            <Grid>
+                <Image Source="delivered.png" HorizontalOptions="Center" VerticalOptions="Center"/>
+            </Grid>
+        </DataTemplate>
+        <local:StepTemplateSelector x:Key="stepTemplateSelector" 
+                                    Template1="{StaticResource template1}" 
+                                    Template2="{StaticResource template2}" 
+                                    Template3="{StaticResource template3}"
+                                    Template4="{StaticResource template4}"/>
+    </Grid.Resources>
+    <progressBar:SfStepProgressBar HorizontalOptions="Center" VerticalOptions="Center"
+                                   x:Name="stepProgress"
+                                   Orientation="Horizontal"
+                                   ActiveStepIndex="3"
+                                   ItemsSource="{Binding StepProgressItem}"
+                                   StepTemplate="{StaticResource stepTemplateSelector}"/>
+</Grid>
+
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="ViewModel.cs" %}
+
+public class ViewModel
+{
+    /// <summary>
+    /// The Step progress bar item collection.
+    /// </summary>
+    private ObservableCollection<StepProgressBarItem> stepProgressItem;
+
+    /// <summary>
+    /// The Step progress bar item collection.
+    /// </summary>
+    public ObservableCollection<StepProgressBarItem> StepProgressItem
+    {
+        get
+        {
+            return stepProgressItem;
+        }
+        set
+        {
+            stepProgressItem = value;
+        }
+    }
+
+    public ViewModel()
+    {
+        stepProgressItem = new ObservableCollection<StepProgressBarItem>();
+        stepProgressItem.Add(new StepProgressBarItem() { PrimaryText = "Ordered" });
+        stepProgressItem.Add(new StepProgressBarItem() { PrimaryText = "Packed" });
+        stepProgressItem.Add(new StepProgressBarItem() { PrimaryText = "Shipped" });
+        stepProgressItem.Add(new StepProgressBarItem() { PrimaryText = "Delivered" });
+    }
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="StepTemplateSelector.cs" %}
+
+ public class StepTemplateSelector : DataTemplateSelector
+ {
+     public StepTemplateSelector()
+     {
+     }
+     public DataTemplate Template1 { get; set; }
+     public DataTemplate Template2 { get; set; }
+     public DataTemplate Template3 { get; set; }
+     public DataTemplate Template4 { get; set; }
+
+     protected override DataTemplate OnSelectTemplate(object item, BindableObject container)
+     {
+         var stepDetails = item as StepProgressBarItem;
+         if (stepDetails.PrimaryText == "Ordered")
+             return Template1;
+         else if (stepDetails.PrimaryText == "Packed")
+             return Template2;
+         else if (stepDetails.PrimaryText == "Shipped")
+             return Template3;
+         else
+             return Template4;
+     }
+ }
+
+{% endhighlight %}
+{% endtabs %}
+
+N> 
+* The [StepTemplate]() will be rendered based on the [StepSize]() property in [SfStepProgressBar]().
+* The `StepSettings` properties such as [ShapeType](), [Background](), [ContentType](), [ContentFillColor](), [Stroke]() are not applicable when [StepTemplate]() is provided.
+
+![customize-step-using-templateselector](images/customization/customize-step-using-templateselector.png)
+
+## Customize primary and secondary text appearance using DataTemplate
+You can customize the appearance of the step descriptions by using the [PrimaryTextTemplate]() and [SecondaryTextTemplate]() properties in [SfStepProgressBar]().
+
+{% tabs %}
+{% highlight xaml tabtitle="XAML" hl_lines="5 6 7 8 9 10 11 12" %}
+
+<progressBar:SfStepProgressBar x:Name="stepProgress"
+                           Orientation="Horizontal"
+                           ActiveStepIndex="3"
+                           ItemsSource="{Binding StepProgressItem}">
+    <progressBar:SfStepProgressBar.PrimaryTextTemplate>
+        <DataTemplate>
+            <StackLayout Orientation="Vertical">
+                <Image Source="tick.png" HorizontalOptions="Center" WidthRequest="20" HeightRequest="20"/>
+                <Label Text="{Binding PrimaryText}" HorizontalOptions="Center"/>
+            </StackLayout>
+        </DataTemplate>
+    </progressBar:SfStepProgressBar.PrimaryTextTemplate>
+</progressBar:SfStepProgressBar>
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C#" %}
+
+SfStepProgressBar stepProgressBar = new SfStepProgressBar();
+ViewModel viewModel = new ViewModel();
+stepProgressBar.ItemsSource = viewModel.StepProgressItem;
+stepProgressBar.Orientation = StepProgressBarOrientation.Horizontal;
+stepProgressBar.ActiveStepIndex = 3;
+var primaryTextTemplate = new DataTemplate(() =>
+{
+    var stackLayout = new StackLayout
+    {
+        Orientation = StackOrientation.Vertical
+    };
+
+    var image = new Image
+    {
+        Source = "tick.png",
+        HorizontalOptions = LayoutOptions.Center,
+        WidthRequest = 20,
+        HeightRequest = 20
+    };
+
+    var label = new Label
+    {
+        HorizontalOptions = LayoutOptions.Center
+    };
+    label.SetBinding(Label.TextProperty, "PrimaryText");
+
+    stackLayout.Children.Add(image);
+    stackLayout.Children.Add(label);
+
+    return stackLayout;
+});
+
+stepProgressBar.PrimaryTextTemplate = primaryTextTemplate;
+this.Content = stepProgressBar;
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="ViewModel.cs" %}
+
+public class ViewModel
+{
+    /// <summary>
+    /// The Step progress bar item collection.
+    /// </summary>
+    private ObservableCollection<StepProgressBarItem> stepProgressItem;
+
+    /// <summary>
+    /// The Step progress bar item collection.
+    /// </summary>
+    public ObservableCollection<StepProgressBarItem> StepProgressItem
+    {
+        get
+        {
+            return stepProgressItem;
+        }
+        set
+        {
+            stepProgressItem = value;
+        }
+    }
+
+    public ViewModel()
+    {
+        stepProgressItem = new ObservableCollection<StepProgressBarItem>();
+        stepProgressItem.Add(new StepProgressBarItem() { PrimaryText = "Ordered" });
+        stepProgressItem.Add(new StepProgressBarItem() { PrimaryText = "Packed" });
+        stepProgressItem.Add(new StepProgressBarItem() { PrimaryText = "Shipped" });
+        stepProgressItem.Add(new StepProgressBarItem() { PrimaryText = "Delivered" });
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![customize-description-using-datatemplate](images/customization/customize-description-using-datatemplate.png)
+
+## Customize primary and secondary text appearance using DataTemplateSelector
+You can customize the appearance of the step descriptions using the [PrimaryTextTemplate]() and [SecondaryTextTemplate]() properties in [SfStepProgressBar](). The DataTemplateSelector can be used to choose a different data template for each step description in the step progress bar based on the step’s data. This allows you to customize the appearance of a particular step description based on certain conditions.
+
+{% tabs %}
+{% highlight xaml tabtitle="XAML" hl_lines="6 7 8 9 10 11 12" %}
+
+<Grid>
+    <Grid.Resources>
+        <DataTemplate x:Key="primaryTemplate1">
+            <StackLayout Orientation="Vertical">
+                <Image Source="ordered.png" HorizontalOptions="Center" WidthRequest="30" HeightRequest="30"/>
+                <Label Text="{Binding PrimaryText}" HorizontalOptions="Center"/>
+            </StackLayout>
+        </DataTemplate>
+        <DataTemplate x:Key="primaryTemplate2">
+            <StackLayout Orientation="Vertical">
+                <Image Source="packed.png" HorizontalOptions="Center" WidthRequest="30" HeightRequest="30"/>
+                <Label Text="{Binding PrimaryText}" HorizontalOptions="Center"/>
+            </StackLayout>
+        </DataTemplate>
+        <DataTemplate x:Key="primaryTemplate3">
+            <StackLayout Orientation="Vertical">
+                <Image Source="shipped.png" HorizontalOptions="Center" WidthRequest="30" HeightRequest="30"/>
+                <Label Text="{Binding PrimaryText}" HorizontalOptions="Center"/>
+            </StackLayout>
+        </DataTemplate>
+        <DataTemplate x:Key="primaryTemplate4">
+            <StackLayout Orientation="Vertical">
+                <Image Source="delivered.png" HorizontalOptions="Center" WidthRequest="30" HeightRequest="30"/>
+                <Label Text="{Binding PrimaryText}" HorizontalOptions="Center"/>
+            </StackLayout>
+        </DataTemplate>
+        <local:PrimaryTemplateSelector x:Key="primaryTemplateSelector" 
+                                       PrimaryTemplate1="{StaticResource primaryTemplate1}" 
+                                       PrimaryTemplate2="{StaticResource primaryTemplate2}" 
+                                       PrimaryTemplate3="{StaticResource primaryTemplate3}"
+                                       PrimaryTemplate4="{StaticResource primaryTemplate4}"/>
+    </Grid.Resources>
+    <progressBar:SfStepProgressBar x:Name="stepProgress"
+                       Orientation="Horizontal"
+                       ActiveStepIndex="3"
+                       ItemsSource="{Binding StepProgressItem}"
+                       PrimaryTextTemplate="{StaticResource primaryTemplateSelector}">
+    </progressBar:SfStepProgressBar>
+</Grid>
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="ViewModel.cs" %}
+
+public class ViewModel
+{
+    /// <summary>
+    /// The Step progress bar item collection.
+    /// </summary>
+    private ObservableCollection<StepProgressBarItem> stepProgressItem;
+
+    /// <summary>
+    /// The Step progress bar item collection.
+    /// </summary>
+    public ObservableCollection<StepProgressBarItem> StepProgressItem
+    {
+        get
+        {
+            return stepProgressItem;
+        }
+        set
+        {
+            stepProgressItem = value;
+        }
+    }
+
+    public ViewModel()
+    {
+        stepProgressItem = new ObservableCollection<StepProgressBarItem>();
+        stepProgressItem.Add(new StepProgressBarItem() { PrimaryText = "Ordered" });
+        stepProgressItem.Add(new StepProgressBarItem() { PrimaryText = "Packed" });
+        stepProgressItem.Add(new StepProgressBarItem() { PrimaryText = "Shipped" });
+        stepProgressItem.Add(new StepProgressBarItem() { PrimaryText = "Delivered" });
+    }
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="PrimaryTemplateSelector.cs" %}
+
+public class PrimaryTemplateSelector : DataTemplateSelector
+{
+    public PrimaryTemplateSelector()
+    {
+    }
+    public DataTemplate PrimaryTemplate1 { get; set; }
+    public DataTemplate PrimaryTemplate2 { get; set; }
+    public DataTemplate PrimaryTemplate3 { get; set; }
+    public DataTemplate PrimaryTemplate4 { get; set; }
+
+    protected override DataTemplate OnSelectTemplate(object item, BindableObject container)
+    {
+        var stepDetails = item as StepProgressBarItem;
+        if (stepDetails.PrimaryText == "Ordered")
+            return PrimaryTemplate1;
+        else if (stepDetails.PrimaryText == "Packed")
+            return PrimaryTemplate2;
+        else if (stepDetails.PrimaryText == "Shipped")
+            return PrimaryTemplate3;
+        else
+            return PrimaryTemplate4;
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+N> The `StepTextStyle` properties such as [TextColor](), [FontSize](), [FontFamily](), and [FontAttributes]() are not applicable when [PrimaryTextTemplate]() or [SecondaryTextTemplate]() is provided.
+
+![customize-description-using-templateselector](images/customization/customize-description-using-templateselector.png)

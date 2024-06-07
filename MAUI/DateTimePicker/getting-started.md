@@ -169,3 +169,20 @@ this.Content = picker;
 {% endtabs %}
 
    ![Set selected date in .NET MAUI Date Time picker.](images/getting-started/maui-date-time-picker-set-selected-date.png)
+
+## Clear selection
+
+The .NET MAUI DateTimePicker provides clear selection support, allowing you to clear the selected date and time by setting the `SelectedDate` property to `null`.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+
+<picker:SfDateTimePicker x:Name="Picker" />
+
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+    this.Picker.SelectedDate = null;
+
+{% endhighlight %}  
+{% endtabs %}

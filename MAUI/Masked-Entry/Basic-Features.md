@@ -35,6 +35,31 @@ maskedEntry.ClearButtonVisibility = ClearButtonVisibility.WhileEditing;
 
 ![ClearButtonVisibility](MaskedEntry_Images/MaskedEntry_ClearButtonVisibility.png)
 
+## Setting Clear Button Icon Color
+
+The clear button icon color can be changed by using the `ClearButtonIconColor`
+
+{% tabs %}
+{% highlight xaml %}
+
+<syncfusion:SfMaskedEntry x:Name="maskedEntry"
+                          WidthRequest="200"
+                          MaskType="Simple"
+                          Mask="(000) 000-0000"
+                          ClearButtonVisibility = "WhileEditing"
+                          ClearButtonColor="Red" />
+
+{% endhighlight %}
+{% highlight C# %}
+
+maskedEntry.ClearButtonColor = Colors.Red;
+
+{% endhighlight %}
+{% endtabs %}
+
+![ClearButtonColor](MaskedEntry_Images/MaskedEntry_ClearButtonColor.png)
+
+
 ## Setting CursorPosition
 
 The cursor position in the masked entry can either be obtained or updated using the [CursorPosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html#Syncfusion_Maui_Inputs_SfMaskedEntry_CursorPosition) property in SfMaskedEntry.

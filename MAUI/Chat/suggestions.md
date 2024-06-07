@@ -357,7 +357,7 @@ By default, the suggestions list in the `SfChat` closes automatically after the 
 
 {% tabs %}
 {% highlight c# tabtitle="ViewModel.cs" hl_lines="29" %}
-    public class SuggestionsViewMOdel : INotifyPropertyChanged
+    public class SuggestionsViewModel : INotifyPropertyChanged
     {
         private ICommand suggestionItemSelectedCommand;
 
@@ -392,3 +392,87 @@ By default, the suggestions list in the `SfChat` closes automatically after the 
 {% endhighlight %}
 {% endtabs %}
 
+## Prevent the chosen suggestion from being sent automatically.
+
+By default, when tapping or clicking the suggestion item, it will be sent as an outgoing message immediately. So, if you wish to prevent this behavior and show the suggestions list in editor view, you can set the `SuggestionItemSelectedEventArgs.CancelSendMessage` to `true` within the `SuggestionItemSelected` event handler or the `SfChat.SuggestionItemSelectedCommand` command's execution.
+
+**SuggestionItemSelected event**
+
+{% tabs %}
+{% highlight c# hl_lines="1 11" %}
+    this.sfChat.SuggestionItemSelected += this.SfChat_SuggestionItemSelected;
+
+    /// <summary>
+    /// Raised when current user has selected the suggestion option from suggestion list.
+    /// </summary>
+    /// <param name="sender"><see cref="SfChat"/> as sender</param>
+    /// <param name="e"><see cref="SuggestionItemSelectedEventArgs"/> as parameter</param>
+    private void SfChat_SuggestionItemSelected(object sender, SuggestionItemSelectedEventArgs e)
+    {
+        // After tapping or clicking the suggestion item,it will be visible in editor view.
+        e.CancelSendMessage = true;
+    }
+
+{% endhighlight %}
+{% endtabs %}
+
+**SuggestionItemSelectedCommand command**
+
+{% tabs %}
+{% highlight xaml hl_lines="11" %}
+ <?xml version="1.0" encoding="utf-8" ?>
+ <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              xmlns:sfChat=clr-namespace:Syncfusion.Maui.Chat;assembly=Syncfusion.Maui.Chat"
+              x:Class="GettingStarted.MainPage">
+
+        <ContentPage.Content>
+             <sfChat:SfChat x:Name="sfChat"
+                            Messages="{Binding Messages}"                
+                            CurrentUser="{Binding CurrentUser}"
+                            SuggestionItemSelectedCommand="{Binding SuggestionItemSelectedCommand}"/>
+        </ContentPage.Content>
+ </ContentPage>
+
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight c# tabtitle="ViewModel.cs" hl_lines="29" %}
+    public class SuggestionsViewModel : INotifyPropertyChanged
+    {
+        private ICommand suggestionItemSelectedCommand;
+
+        public SuggestionsViewModel()
+        {
+            SuggestionItemSelectedCommand = new Command(ExecuteSuggestion);
+        }
+
+        /// <summary>
+        /// Gets or sets the suggestion item selected command.
+        /// </summary>
+        public ICommand SuggestionItemSelectedCommand
+        {
+            get
+            {
+                return this.suggestionItemSelectedCommand;
+            }  
+            set
+            {
+                this.suggestionItemSelectedCommand = value;
+            }
+        }
+
+        /// <summary>
+        /// Executes the action when a suggestion item is selected.
+        /// </summary>
+        public void ExecuteSuggestion(object parameter)
+        {
+           var args = parameter as SuggestionItemSelectedEventArgs;
+           // Selected suggestion item will be shown in editor view.
+           args.CancelSendMessage = true;
+        }
+    }
+
+{% endhighlight %}
+{% endtabs %}
