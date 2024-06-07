@@ -113,3 +113,32 @@ comboBox.TextSearchMode = ComboBoxTextSearchMode.Contains;
 The following image illustrates the result of the above code:
 
 ![.NET MAUI ComboBox TextSearchMode Contains](Images/Searching/TextSearchModeContains.gif)
+
+### Prefix characters constraint
+
+Instead of displaying suggestion list on every character entry, matches can be filtered and displayed after a few character entries. This can be done by `MinimumPrefixCharacters` property and its default value is 1.
+
+{% tabs %}
+{% highlight xaml %}
+
+<editors:SfComboBox x:Name="comboBox" 
+                    WidthRequest="300"
+                    IsFilteringEnabled="True"
+                    IsEditable="True" 
+                    ItemsSource="{Binding SocialMedias}"
+                    MinimumPrefixCharacters="3"
+                    DisplayMemberPath="Name"
+                    TextMemberPath="Name">
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+comboBox.MinimumPrefixCharacters = 3;
+
+{% endhighlight %}
+{% endtabs %}
+
+The following image illustrates the result of the above code.
+
+![.NET MAUI ComboBox MinimumPrefixCharacters](Images/Searching/MinimumPrefixCharacters.png)
