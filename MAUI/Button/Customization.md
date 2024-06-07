@@ -125,7 +125,7 @@ button.VerticalTextAlignment = TextAlignment.Center;
 {% endtabs %}
 
 ## LineBreakMode
-The `LineBreakMode` allows you to wrap or truncate the text. The default value of this property is `WordWrap`. The following other options are available in `LineBreakMode`:
+The `LineBreakMode` allows you to wrap or truncate the text. The default value of this property is `NoWrap`. The following other options are available in `LineBreakMode`:
 
  * `NoWrap` - Avoids the text wrap. 
  * `WordWrap` - Wraps the text by words.
