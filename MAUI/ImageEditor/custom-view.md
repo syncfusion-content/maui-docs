@@ -40,6 +40,7 @@ The ImageEditor control in .NET MAUI allows you to add custom view using the [Ad
 
 Customize the appearance of Custom view annotation using the [`ImageEditorAnnotationSettings`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorAnnotationSettings.html).
 
+* `AnnotationID` : A unique ID is generated for CustomViews annotations when they are added to the image editor. You can retrieve this unique ID from the ItemsSelected event arguments or from the serialized JSON.
 * [`AllowDrag`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorAnnotationSettings.html#Syncfusion_Maui_ImageEditor_ImageEditorAnnotationSettings_AllowDrag): Enables or disables the dragging of custom view annotation. The default value is `true`.
 * [`AllowResize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorAnnotationSettings.html#Syncfusion_Maui_ImageEditor_ImageEditorAnnotationSettings_AllowResize): Enables or disables the resizing of custom view annotation. The default value is `true`.
 * [`Bounds`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorAnnotationSettings.html#Syncfusion_Maui_ImageEditor_ImageEditorAnnotationSettings_Bounds): Specifies the bounds of the custom view. Position the custom view wherever you want on the image. The value of the view bounds should fall between 0 and 1.
@@ -74,6 +75,64 @@ Customize the appearance of Custom view annotation using the [`ImageEditorAnnota
     }
 
 {% endhighlight %}
+{% endtabs %}
+
+## Select a particular annotation programmatically using annotation ID
+
+By passing the unique ID of an annotation to the SelectAnnotation method of SfImageEditor, you can select the particular annotation programmatically.
+
+{% tabs %}
+
+{% highlight xaml tabtitle="MainPage.xaml" %}
+
+ <Grid>
+    <Grid.RowDefinitions>
+        <RowDefinition Height="*" />
+        <RowDefinition Height="Auto" />
+    </Grid.RowDefinitions>
+    <imageEditor:SfImageEditor x:Name="imageEditor"
+                               Source="image.png"
+                               ImageLoaded="imageEditor_ImageLoaded" />
+    <StackLayout Grid.Row="1" Margin="10"
+                 Orientation="Horizontal">
+        <Label Text="ShapeID :" VerticalOptions="Center" />
+        <Entry x:Name="shapeID" WidthRequest ="50"/>
+        <Button Text="SelectShape" Margin="25,0,0,0"
+                Clicked="SelectShape_Clicked" WidthRequest="150" />
+    </StackLayout>
+</Grid>
+
+{% endhighlight %}
+
+{% highlight C# tabtitle="MainPage.xaml.cs" %}
+
+private void SelectShape_Clicked(object sender, EventArgs e)
+{
+    int shapeId;
+    if (int.TryParse(this.shapeID.Text, out shapeId))
+    {
+        this.imageEditor.SelectAnnotation(shapeId);
+    }
+}
+ 
+private void imageEditor_ImageLoaded(object sender, EventArgs e)
+{
+    Image customImage = new Image() { HeightRequest = 100, WidthRequest = 100, Aspect= Aspect.Fill};
+        customImage.Source = ImageSource.FromFile("emoji.png");
+        this.imageEditor.AddCustomAnnotationView(customImage, 
+            new Syncfusion.Maui.ImageEditor.ImageEditorAnnotationSettings 
+            { 
+                Id = 1,
+                Bounds = new Rect(0.2, 0.2, 0.5, 0.1), 
+                RotationAngle = 45,
+                AllowResize = true,
+                AllowDrag = false
+            });
+    imageEditor.SaveEdits();
+}
+
+{% endhighlight %}
+
 {% endtabs %}
 
 ## Delete the custom view
@@ -188,7 +247,7 @@ N> This is common for Shape, Text and CustomView annotations.
 
 ## Add custom view on initial loading
 
-Add a custom view on image loading using the [`Imageloaded`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_ImageLoaded) event.
+Add a custom view on image loading using the [`ImageLoaded`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_ImageLoaded) event.
 
 {% tabs %}
 

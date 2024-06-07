@@ -106,4 +106,3 @@ private void TabView_SelectionChanged(object sender, TabSelectionChangedEventArg
 {% endhighlight %}
 
 {% endtabs %}
-

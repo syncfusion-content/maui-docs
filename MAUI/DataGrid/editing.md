@@ -78,6 +78,22 @@ this.dataGrid.EditTapAction = TapAction.OnDoubleTap;
 
 N> The keyboard will collapse when the editing grid cell loses focus.
 
+## Lost focus behavior
+
+By default, when focus moves from the data grid to another control, the current cell value is not committed. To change this behavior and commit the current cell's value when focus moves, set the `SfDataGrid.LostFocusBehavior` property to `EndEditCurrentCell`.
+
+{% tabs %}
+{% highlight xaml %}
+<syncfusion:SfDataGrid AllowEditing="True"
+                       SelectionMode="Multiple"    
+                       NavigationMode="Cell"
+                       LostFocusBehavior="EndEditCurrentCell"
+                       ItemsSource="{Binding OrderInfoCollection}" />
+{% endhighlight %}
+{% endtabs %}
+
+N> This behavior applies only to `DataGridNumericColumn` and `DataGridTextColumn`.
+
 ## Support for IEditableObject
 
 The SfDataGrid supports committing and rolling back changes at the row level when the underlying data object implements the [IEditableObject](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.ieditableobject?view=net-6.0) interface.

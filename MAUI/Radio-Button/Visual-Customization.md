@@ -147,7 +147,7 @@ This demo can be downloaded from this [link](https://www.syncfusion.com/download
 
 ## Size customization
 
-The [`ControlSize`] property is used to customize the [`RadioButton`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioButton.html) control size. 
+The [`ControlSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_ControlSize) property is used to customize the [`RadioButton`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioButton.html) control size. 
 
 {% tabs %}
 {% highlight xaml %}
@@ -164,6 +164,7 @@ The [`ControlSize`] property is used to customize the [`RadioButton`](https://he
 	radioButton.Text = "Radio Button";
 	radioButton.ControlSize = 40;
 	stackLayout.Children.Add(radioButton);
+	this.Content = stackLayout;
 
 {% endhighlight %}
 {% endtabs %}

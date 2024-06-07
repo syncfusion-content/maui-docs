@@ -286,8 +286,8 @@ public MainPage()
 
  ![Step customization in .NET MAUI SfStepProgressBar.](images/customization/maui-stepprogressbar-customstepprogress.png){:width="286" height="351"}
 
- ## Customize step appearance using DataTemplate
- You can customize the step appearance using the [StepTemplate]() property in [SfStepProgressBar]().
+## Customize step appearance using DataTemplate
+You can customize the step appearance using the [StepTemplate]() property in [SfStepProgressBar]().
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="5 6 7 8 9 10 11" %}
@@ -662,6 +662,8 @@ public class ViewModel
         stepProgressItem.Add(new StepProgressBarItem() { PrimaryText = "Delivered" });
     }
 }
+
+{% endhighlight %}
 
 {% highlight c# tabtitle="PrimaryTemplateSelector.cs" %}
 

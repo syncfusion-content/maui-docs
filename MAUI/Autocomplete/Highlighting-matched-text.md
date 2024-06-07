@@ -24,35 +24,36 @@ The text highlight can be indicated with various customizing styles by enabling 
 *   `HighlightTextFontAttributes` - sets the FontAttributes of the highlighted text.
 
 ## First Occurrence
+
 It highlights the first position of the matching characters in the suggestion list.
 
 {% tabs %}
 
 {% highlight xaml %}
 
- <editors:SfAutocomplete x:Name="autocomplete"
-      WidthRequest="300"
-      ItemsSource="{Binding SocialMedias}"
-      TextHighlightMode="FirstOccurrence"
-      TextMemberPath="Name"
-      DisplayMemberPath="Name"
-      HighlightedTextColor="Red"
-      HighlightedTextFontAttributes="Bold"/>
+     <editors:SfAutocomplete x:Name="autocomplete"
+			                 HeightRequest = "40"
+			                 WidthRequest="300"
+			                 ItemsSource="{Binding SocialMedias}"
+			                 TextHighlightMode="FirstOccurrence"
+			                 HighlightedTextColor="Red"
+			                 HighlightedTextFontAttributes="Bold"/>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-SfAutocomplete autoComplete = new SfAutocomplete() 
-{
- HeightRequest = 40,
- TextHighlightMode = OccurrenceMode.FirstOccurrence,
- HighlightedTextColor = Colors.Red,
- HighlightedTextFontAttributes = FontAttributes.Bold,
- ItemsSource = new List<string>(){ "Facebook", "Twitter", "Instagram", "LinkedIn" }
-};
+    SfAutocomplete autoComplete = new SfAutocomplete() 
+    {
+         HeightRequest = 40,
+         WidthRequest=300,
+         TextHighlightMode = OccurrenceMode.FirstOccurrence,
+         HighlightedTextColor = Colors.Red,
+         HighlightedTextFontAttributes = FontAttributes.Bold,
+    };
 
 {% endhighlight %}
+
 {% endtabs %}
 
 ![HighlightText Image](images/HighlightingText/firstoccurrence.png)
@@ -65,31 +66,31 @@ It highlights the matching character that are present everywhere in the suggesti
 
 {% highlight xaml %}
 
- <editors:SfAutocomplete x:Name="autocomplete"
-     WidthRequest="300"
-     ItemsSource="{Binding SocialMedias}"
-     TextHighlightMode="MultipleOccurrence"
-     TextMemberPath="Name"
-     DisplayMemberPath="Name"
-     HighlightedTextColor="Red"
-     HighlightedTextFontAttributes="Bold"
-     TextSearchMode="Contains" />
+     <editors:SfAutocomplete x:Name="autocomplete"
+		                     HeightRequest = "40"
+		                     WidthRequest="300"
+		                     ItemsSource="{Binding SocialMedias}"
+		                     TextHighlightMode="MultipleOccurrence"
+		                     HighlightedTextColor="Red"
+		                     HighlightedTextFontAttributes="Bold"
+		                     TextSearchMode="Contains"/>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-SfAutocomplete autoComplete = new SfAutocomplete() 
-{
- HeightRequest = 40,
- TextSearchMode = AutocompleteTextSearchMode.Contains,
- TextHighlightMode = OccurrenceMode.MultipleOccurrence,
- HighlightedTextColor = Colors.Red,
- HighlightedTextFontAttributes = FontAttributes.Bold,
- ItemsSource = new List<string>(){ "Facebook", "Twitter", "Instagram", "LinkedIn" }
-};
+    SfAutocomplete autoComplete = new SfAutocomplete() 
+    {
+         HeightRequest = 40,
+         WidthRequest=300,
+         TextSearchMode = AutocompleteTextSearchMode.Contains,
+         TextHighlightMode = OccurrenceMode.MultipleOccurrence,
+         HighlightedTextColor = Colors.Red,
+         HighlightedTextFontAttributes = FontAttributes.Bold,
+    };
 
 {% endhighlight %}
+
 {% endtabs %}
 
 ![HighlightText Image](images/HighlightingText/multipleoccurrence.png)
