@@ -124,6 +124,16 @@ button.VerticalTextAlignment = TextAlignment.Center;
 {% endhighlight %}
 {% endtabs %}
 
+## LineBreakMode
+The `LineBreakMode` allows you to wrap or truncate the text. The default value of this property is `WordWrap`. The following other options are available in `LineBreakMode`:
+
+ * `NoWrap` - Avoids the text wrap. 
+ * `WordWrap` - Wraps the text by words.
+ * `CharacterWrap` - Wraps the text by character.
+ * `HeadTruncation` - Truncates the text at the start.
+ * `MiddleTruncation` - Truncates the text at the center.
+ * `TailTruncation` - Truncates the text at the end.
+
 ## Background Customization
 
 The background of the button can be customized by its background color, border color, border width and corner radius.
