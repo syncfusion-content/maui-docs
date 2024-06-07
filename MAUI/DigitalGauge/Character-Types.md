@@ -11,12 +11,9 @@ documentation: ug
 
 The digital characters can be drawn in the following four different segments:
 
-•	Seven
-
-•	Fourteen
-
-•	Sixteen
-
+•	SevenSegment
+•	FourteenSegment
+•	SixteenSegment
 •	EightCrossEightDotMatrix
 
 ## Seven segment
