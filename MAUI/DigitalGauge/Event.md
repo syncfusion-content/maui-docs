@@ -6,9 +6,9 @@ platform: MAUI
 control: DigitalGauge
 documentation: ug
 ---
-## Events in MAUI DigitalGauge
+# Events in MAUI DigitalGauge
 
-# TextChanged
+## TextChanged
 
 The `TextChanged` event is triggered when the text is changed. The associated argument contains the following information.
 
