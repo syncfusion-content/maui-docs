@@ -5,6 +5,7 @@ description: Learn here all about the line chart and its type in Syncfusion .NET
 platform: maui
 control: SfCartesianChart
 documentation: ug
+keywords: .net maui line chart, maui line chart, .net maui chart line type, line chart customization .net maui, syncfusion maui line chart, cartesian line chart maui, .net maui chart line visualization.
 ---
 
 # Line Chart in .NET MAUI Chart

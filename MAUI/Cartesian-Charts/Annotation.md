@@ -5,6 +5,7 @@ description: Learn here all about annotation support and its features in Syncfus
 platform: maui
 control: SfCartesianChart
 documentation: ug
+keywords: .net maui chart annotations, .net maui annotations customization, syncfusion maui chart annotations, .net maui chart text annotation, .net maui chart shape annotation,  .net maui chart view annotation.
 ---
 
 # Annotations in .NET MAUI Chart

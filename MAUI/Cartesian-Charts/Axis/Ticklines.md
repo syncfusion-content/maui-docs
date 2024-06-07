@@ -5,6 +5,7 @@ description: Learn here all about chart axis tick line and its customization in 
 platform: maui
 control: SfCartesianChart
 documentation: ug
+keywords: .net maui chart tick lines, .net maui chart tick customization, .net maui chart tickline guide, syncfusion maui chart tick lines, cartesian chart tick lines maui, .net maui chart axis tick lines, customize tick lines .net maui chart.
 ---
 
 # Tick Lines in .NET MAUI Chart

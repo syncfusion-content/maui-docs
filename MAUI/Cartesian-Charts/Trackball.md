@@ -5,6 +5,7 @@ description: This section explains about how to enable trackball and its customi
 platform: maui
 control: SfCartesianChart
 documentation: ug
+keywords: .net maui chart trackball, maui chart trackball, .net maui trackball customization, syncfusion maui trackball chart, cartesian trackball maui, .net maui trackball visualization.
 ---
 
 # Trackball in .NET MAUI Chart

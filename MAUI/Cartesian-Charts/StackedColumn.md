@@ -5,6 +5,7 @@ description: Learn here all about stacked column and bar chart support in Syncfu
 platform: maui
 control: SfCartesianChart
 documentation: ug
+keywords: .net maui stacked column chart, maui stacked column chart, stacked column chart customization .net maui, syncfusion maui stacked column chart, cartesian stacked column chart maui, .net maui chart stacked column visualization, .net maui cumulative column chart.
 ---
 
 # Stacked Column Chart in .NET MAUI Chart

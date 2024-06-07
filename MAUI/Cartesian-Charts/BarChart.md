@@ -5,6 +5,7 @@ description: Learn here all about bar chart and its features in Syncfusion .NET 
 platform: maui
 control: SfCartesianChart
 documentation: ug
+keywords: .net maui bar chart, maui bar chart, .net maui chart bar type, bar chart customization .net maui, syncfusion maui bar chart, cartesian bar chart maui, .net maui chart bar visualization.
 ---
 
 # Bar Chart in .NET MAUI Chart

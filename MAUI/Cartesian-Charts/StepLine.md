@@ -5,6 +5,7 @@ description: Learn here all about stepline chart support in Syncfusion .NET MAUI
 platform: maui
 control: SfCartesianChart
 documentation: ug
+keywords: .net maui step line chart, maui step line chart, step line chart customization .net maui, syncfusion maui step line chart, cartesian step line chart maui, .net maui chart step line visualization.
 ---
 
 # Step Line Chart in .NET MAUI Chart

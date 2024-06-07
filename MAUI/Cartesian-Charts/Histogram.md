@@ -5,6 +5,7 @@ description: Learn here all about the Histogram chart and its type in Syncfusion
 platform: maui
 control: SfCartesianChart
 documentation: ug
+keywords: .net maui histogram chart, histogram chart customization .net maui, syncfusion maui histogram chart, cartesian histogram chart maui, .net maui chart histogram , .net maui frequency distribution chart.
 ---
 
 # Histogram Chart in .NET MAUI Chart

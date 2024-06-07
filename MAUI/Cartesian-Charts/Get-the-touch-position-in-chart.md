@@ -5,6 +5,7 @@ description: Learn here all about getting the touch position in SfCartesianChart
 platform: maui
 control: SfCartesianChart
 documentation: ug
+keywords: .net maui chart touch position, maui chart touch position, .net maui chart touch event, sfcartesianchart touch interaction in .net maui, .net maui chart touch gesture, .net maui chart touch behavior.
 ---
 
 # Get the touch position in SfCartesianChart

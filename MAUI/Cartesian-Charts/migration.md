@@ -5,6 +5,7 @@ description: This section explains the features available in the .NET MAUI Chart
 platform: MAUI
 control: SfCartesianChart
 documentation: ug
+keywords: migrate from xamarin.Forms sfChart to .net maui sfCartesianChart, transitioning from xamarin.Forms sfChart to .net maui sfCartesianChart, move from xamarin.Forms sfChart to .net maui sfCartesianChart, upgrading xamarin.Forms s to .net maui sfCartesianChart.
 ---
 
 # Migrate from Xamarin.Forms SfChart to .NET MAUI SfCartesianChart
@@ -57,8 +58,8 @@ To initialize the control, import the Chart namespace and Initialize [SfCartesia
 using Syncfusion.SfChart.XForms;
 ...
 
- SfChart chart = new SfChart(); 
- this.Content = chart;
+SfChart chart = new SfChart(); 
+this.Content = chart;
 
 {% endhighlight %}
 {% endtabs %}
@@ -324,10 +325,9 @@ The following code example explains how to migrate the series of Xamarin [SfChar
 <chart:SfChart>
 . . .
     <chart:ColumnSeries ItemsSource="{Binding Data}" 
-    XBindingPath="Name" 
-    YBindingPath="Height">
-	</chart:ColumnSeries>
- </chart:SfChart>
+                        XBindingPath="Name" 
+                        YBindingPath="Height"/>
+</chart:SfChart>
 
 {% endhighlight %} 
 {% highlight C# %}
@@ -357,8 +357,7 @@ this.Content = chart;
 <chart:SfCartesianChart>
 <chart:ColumnSeries ItemsSource="{Binding Data}"
 					XBindingPath="Name"
-					YBindingPath="Height">
-</chart:ColumnSeries>
+					YBindingPath="Height"/>
 </chart:SfCartesianChart>
 
 {% endhighlight %} 
@@ -571,7 +570,7 @@ chart.Series.Add(series);
 <chart:SfCartesianChart>
     . . .
     <chart:ColumnSeries ItemsSource="{Binding Data}" XBindingPath="Category" 
-    YBindingPath="Value" ShowDataLabels="True">
+                        YBindingPath="Value" ShowDataLabels="True">
         <chart:ColumnSeries.DataLabelSettings>
             <chart:CartesianDataLabelSettings>
                 <chart:CartesianDataLabelSettings.LabelStyle>
@@ -761,8 +760,8 @@ chart.ChartBehaviors.Add(selectionBehavior);
 . . .
     <chart:SfCartesianChart.Series>
         <chart:ColumnSeries ItemsSource="{Binding Data}" 
-                        XBindingPath="Name"
-                        YBindingPath="Height">
+                            XBindingPath="Name"
+                            YBindingPath="Height">
                 <chart:ColumnSeries.SelectionBehavior>
                         <chart:DataPointSelectionBehavior SelectionBrush="#314A6E"/>
                 </chart:ColumnSeries.SelectionBehavior>

@@ -5,6 +5,7 @@ description: Learn here all about the area chart types and its features in Syncf
 platform: maui
 control: SfCartesianChart
 documentation: ug
+keywords: .net maui area chart, .net maui chart area type, area chart customization .net maui, syncfusion maui area chart, cartesian area chart maui, .net maui chart filled line visualization.
 ---
 
 # Area Chart in .NET MAUI Chart

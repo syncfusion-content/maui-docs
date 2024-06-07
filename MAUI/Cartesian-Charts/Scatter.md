@@ -4,7 +4,8 @@ title: Scatter Chart in .NET MAUI Chart control | Syncfusion
 description: Learn here all about the scatter chart and its features in Syncfusion .NET MAUI Chart (SfCartesianChart) control.
 platform: maui
 control: SfCartesianChart
-documentation: ug
+documentation: ug 
+keywords: .net maui scatter chart, maui scatter chart, scatter chart customization .net maui, syncfusion maui scatter chart, cartesian scatter chart maui, .net maui chart scatter visualization, .net maui point chart.
 ---
 
 # Scatter Chart in .NET MAUI Chart

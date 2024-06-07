@@ -5,6 +5,7 @@ description: Learn here all about plot band and its features in Syncfusion .NET 
 platform: maui
 control: SfCartesianChart
 documentation: ug
+keywords: .net maui plot band, maui plot band, .net maui chart plot band type, plot band customization .net maui, syncfusion maui plot band, cartesian plot band maui, .net maui chart plot band visualization, .net maui shaded region chart, .net maui recurrence plot band.
 ---
 
 # Plot bands in .NET MAUI Chart

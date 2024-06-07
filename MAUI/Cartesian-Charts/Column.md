@@ -5,6 +5,7 @@ description: Learn here all about column and bar chart support in Syncfusion .NE
 platform: maui
 control: SfCartesianChart
 documentation: ug
+keywords: .net maui column chart, column chart customization .net maui, syncfusion maui column chart, cartesian column chart maui, .net maui chart column visualization, create column chart .net maui.
 ---
 
 # Column Chart in .NET MAUI Chart
