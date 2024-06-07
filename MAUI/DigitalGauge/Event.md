@@ -10,7 +10,7 @@ documentation: ug
 
 ### TextChanged
 
-The TextChanged event is triggered when the text is changed. The associated argument contains the following information.
+The `TextChanged` event is triggered when the text is changed. The associated argument contains the following information.
 
 * sender - Gets details of a sender.
 * DigitalGaugeTextChangedEventArgs - Holds the text changed event arguments.
