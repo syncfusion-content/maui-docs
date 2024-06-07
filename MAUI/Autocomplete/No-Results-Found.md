@@ -40,6 +40,7 @@ autocomplete.NoResultsFoundText = "Not Found";
 
 We can customize the appearance of the desire text to be displayed for indicating no results found by using the `NoResultsFoundTemplate` property.
 
+{% tabs %}
 {% highlight xaml %}
 
   <editors:SfAutocomplete x:Name="autocomplete"
@@ -53,9 +54,7 @@ We can customize the appearance of the desire text to be displayed for indicatin
               <Label Text="Not Found"  FontSize="20" FontAttributes="Italic" TextColor="Red" Margin="70,10,0,0"/>
            </DataTemplate>
       </editors:SfAutocomplete.NoResultsFoundTemplate>
-      
   </editors:SfAutocomplete>
-
 {% endhighlight %}
 
 {% highlight c# %}
@@ -81,4 +80,4 @@ autocomplete.NoResultsFoundTemplate = noResultsTemplate;
 
 ![NoResultsFoundTemplate](images/NoResultsFound/NoResultsFoundTemplate.png)
 
-N> By Default `NoResultsFoundText` is enabled we can restrict it by using `NoResultsFoundText` as Empty. `autocomplete.NoResultsFoundText = ""`;
+N> By Default `NoResultsFoundText` is enabled we can restrict it by using `NoResultsFoundText` as Empty. `autocomplete.NoResultsFoundText = "";`
