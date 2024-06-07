@@ -24,9 +24,9 @@ The [SfStepProgressBar](https://www.syncfusion.com/maui-controls/maui-stepprogre
 
 {% highlight C# %}
    
-     SfStepProgressBar stepProgressBar = new SfStepProgressBar();
-     stepProgressBar.FlowDirection = RightToLeft;
-     this.content = stepProgressBar;
+SfStepProgressBar stepProgressBar = new SfStepProgressBar();
+stepProgressBar.FlowDirection = RightToLeft;
+this.content = stepProgressBar;
 
 {% endhighlight %}
 

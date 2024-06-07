@@ -1,10 +1,11 @@
 ---
 layout: post
 title: Image Effects in .NET MAUI Image Editor control | Syncfusion
-description: Learn about Image Effect support in Syncfusion .NET MAUI Image Editor (SfImageEditor) control.
+description: Learn about Image Effect support in Syncfusion .NET MAUI Image Editor (SfImageEditor) control and more.
 platform: maui
 control: SfImageEditor
 documentation: ug
+keywords: .net maui imageEditor, .net maui image editing, .net maui image filters.
 ---
 
 # Image Effect in .NET MAUI Image Editor (SfImageEditor)
