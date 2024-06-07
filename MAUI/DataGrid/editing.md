@@ -76,7 +76,7 @@ this.dataGrid.EditTapAction = TapAction.OnDoubleTap;
 {% endhighlight %}
 {% endtabs %}
 
-N> The keyboard will collapse when the editing grid cell loses focus.
+N>The keyboard will collapse when the editing grid cell loses focus.
 
 ## Lost focus behavior
 
@@ -92,7 +92,7 @@ By default, when focus moves from the data grid to another control, the current 
 {% endhighlight %}
 {% endtabs %}
 
-N> This behavior applies only to `DataGridNumericColumn` and `DataGridTextColumn`.
+N>This behavior applies only to `DataGridNumericColumn` and `DataGridTextColumn`.
 
 ## Support for IEditableObject
 
