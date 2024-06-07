@@ -324,7 +324,7 @@ N>
 
 ## Month Navigation direction
 
-The `MonthView` of `SfScheduler` can be navigated in both horizontal and vertical directions. You can change the direction of navigation through the `NavigationDirection` property of `MonthViewSettings` in `SfScheduler`. By default, the navigation direction is `Horizontal`.
+The `MonthView` of `SfScheduler` can be navigated in both horizontal and vertical directions. You can change the direction of navigation through the `NavigationDirection` property of `MonthViewSettings` in `SfScheduler.` By default, the navigation direction is `Horizontal.`
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
