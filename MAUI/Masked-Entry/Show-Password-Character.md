@@ -7,7 +7,7 @@ control: SfMaskedEntry
 documentation: ug 
 ---
 
-# Show Password Character in .NET MAUI Masked Entry (SfMaskedEntry)
+# Show Password Character in .NET MAUI MaskedEntry (SfMaskedEntry)
 
 ## Password Char
 
@@ -16,8 +16,8 @@ The SfMaskedEntry control supports to work as a password text box when setting a
 {% tabs %}
 {% highlight xaml %}
  <editors:SfMaskedEntry x:Name="maskedEntry"
-                         WidthRequest="200"
-                          Mask="\w+" 
+                        WidthRequest="200"
+                        Mask="\w+" 
                         MaskType="RegEx" 
                         PasswordChar="*"/>
 {% endhighlight %}

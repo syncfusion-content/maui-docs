@@ -6,7 +6,7 @@ platform: maui
 control: SfMaskedEntry
 documentation: ug 
 ---
-# Validation in in .NET MAUI Masked Entry (SfMaskedEntry)
+# Validation in .NET MAUI MaskedEntry (SfMaskedEntry)
 
 ## Validation Mode
 
