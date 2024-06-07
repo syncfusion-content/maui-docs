@@ -335,7 +335,7 @@ this.Content = scheduler;
 
 ## Agenda appointment template 
 
-The Syncfusion .NET MAUI Scheduler allows users to customize the visual representation of agenda appointments by defining data templates, enhancing usability within the application. Users can customize the appointment text, icon, image, or view based on our needs based on appointment details. 
+The Syncfusion .NET MAUI Scheduler allows users to customize the visual representation of agenda appointments by defining data templates, enhancing usability within the application. Users can customize the appointment text, icon, image, or view based on their needs and appointment details.
 
 {% tabs %}
 {% highlight XAML hl_lines="5" %}
@@ -372,3 +372,7 @@ The Syncfusion .NET MAUI Scheduler allows users to customize the visual represen
 
 {% endhighlight %}
 {% endtabs %}
+
+N>
+* By default, the `SchedulerAppointment` is set as the `BindingContext` for `AppointmentTemplate` for both `SchedulerAppointment` and custom data object in `AppointmentsSource.`
+* The Custom data object can be bound in `AppointmentTemplate` by using `SchedulerAppointment.DataItem.`
