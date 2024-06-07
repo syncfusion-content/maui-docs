@@ -134,6 +134,24 @@ The `LineBreakMode` allows you to wrap or truncate the text. The default value o
  * `MiddleTruncation` - Truncates the text at the center.
  * `TailTruncation` - Truncates the text at the end.
 
+ {% tabs %}
+{% highlight xaml %}
+
+<button:SfButton x:Name="button" Text="Add Items To Cart" LineBreakMode="MiddleTruncation">
+</button:SfButton>
+
+{% endhighlight %}
+{% highlight c# %}
+
+SfButton button = new SfButton();
+button.Text = "Add Items To Cart";
+button.LineBreakMode = LineBreakMode.MiddleTruncation;
+
+{% endhighlight %}
+{% endtabs %}
+
+![SfButton with LineBreakMode](images/customization-images/Button_linebreakmode.png)
+
 ## Background Customization
 
 The background of the button can be customized by its background color, border color, border width and corner radius.
