@@ -137,7 +137,7 @@ The `LineBreakMode` allows you to wrap or truncate the text. The default value o
  {% tabs %}
 {% highlight xaml %}
 
-<button:SfButton x:Name="button" Text="Add Items To Cart" LineBreakMode="MiddleTruncation">
+<button:SfButton x:Name="button" Text="Add Items To Cart" LineBreakMode="MiddleTruncation" ImageSource="Cart.png">
 </button:SfButton>
 
 {% endhighlight %}
@@ -146,6 +146,7 @@ The `LineBreakMode` allows you to wrap or truncate the text. The default value o
 SfButton button = new SfButton();
 button.Text = "Add Items To Cart";
 button.LineBreakMode = LineBreakMode.MiddleTruncation;
+button.ImageSource="Cart.png";
 
 {% endhighlight %}
 {% endtabs %}
