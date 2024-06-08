@@ -5,6 +5,7 @@ description: Learn here all about customizing the Day, Week and Workweek views s
 platform: maui
 control: SfScheduler
 documentation: ug
+keywords : .net maui scheduler, .net maui week view, .net maui work week view, .net maui day view, special time regions, recurring time region.
 ---
 
 # Day and Week views in .NET MAUI Event Scheduler (SfScheduler)
