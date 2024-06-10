@@ -214,7 +214,7 @@ The appearance of row header can be customized conditionally based on properties
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="Conditional styling for row header using converter" src="Images/conditional-styling/maui-datagrid-conditional-show-row-header.png" width="404"/>
+<img alt="Conditional styling for row header using converter" src="Images/conditional-styling/maui-datagrid-conditional-row-header.png" width="404"/>
 
 ## Conditional cell style
 The grid cell can be customized conditionally by writing the style with a converter for the [DataGridCell](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCell.html) control. Its BindingContext is the underlying datasource object.
