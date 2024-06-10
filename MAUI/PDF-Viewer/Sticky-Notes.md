@@ -82,6 +82,8 @@ void EditSelectedStickyNoteAnnotation(Annotation selectedAnnotation)
 
 ## Sticky note modal view
 
+The (Sfpdfviewer)[(https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html)] allows receives notifications when creating and editing sticky notes. Notifications are useful for displaying custom dialogs when the sticky note modal view appears or disappears at the application level.
+
 The `Sfpdfviewer.StickyNoteModalViewAppearing` event is triggered whenever the modal view opens for sticky note annotation. You can cancel the opening of the modal view for the current sticky note annotation being edited by setting `e.Cancel = true`, allowing you to display your own custom dialog.
 
 {% tabs %}

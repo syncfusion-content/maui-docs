@@ -114,7 +114,9 @@ PdfViewer.AddAnnotation(customStamp);
 
 N> To add a text signature, you can use an image containing the signature text . You can then add it in the same manner as an image signature.
 
-#### Signature pad modal view 
+#### Signature pad modal view
+
+The (Sfpdfviewer)[(https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html)] allows receives notifications when creating signatures using signature pad. Notifications are useful for displaying custom dialogs when the signature pad modal view appears or disappears at the application level.
 
 The `Sfpdfviewer.SignatureModalViewAppearing` event is triggered whenever the modal view opens for signature pad. You can cancel the opening of the modal view for the current signature pad being edited by setting `e.Cancel = true`, allowing you to display your own custom dialog.
 

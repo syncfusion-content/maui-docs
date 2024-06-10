@@ -93,6 +93,8 @@ void AddCustomStampAnnotation()
 
 ### Custom stamp modal view
 
+The (Sfpdfviewer)[(https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html)] allows receives notifications when creating custom stamps. Notifications are useful for displaying custom dialogs when the custom stamp modal view appears or disappears at the application level.
+
 The `Sfpdfviewer.CustomStampModalViewAppearing` event is triggered whenever the modal view opens for custom stamp. You can cancel the opening of the modal view for the current stamp annotation being edited by setting `e.Cancel = true`, allowing you to display your own custom dialog.
 
 {% tabs %}
