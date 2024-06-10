@@ -56,7 +56,7 @@ Data labels can be customized by using the [DataLabelSettings](https://help.sync
 * [ConnectorLineStyle]() - Gets or sets the options for customizing the appearance of the data label connector line.
 * [LabelStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartDataLabelSettings.html#Syncfusion_Maui_Charts_ChartDataLabelSettings_LabelStyle) - Gets or sets the options for customizing the data labels. 
 
-N> Data label support is applicable only for [PieSeries]() and [DoughnutSeries]() chart types.
+N> Data label support is applicable only for [PieSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.PieSeries.html) and [DoughnutSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DoughnutSeries.html) chart types.
 
 ![Data label in MAUI chart](DataLabel_images/maui_chart_datalabels.png)
 
