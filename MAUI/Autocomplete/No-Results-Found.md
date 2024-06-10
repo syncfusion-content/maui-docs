@@ -11,7 +11,7 @@ documentation: ug
 When the entered item is not in the suggestion list, `SfAutocomplete` displays a text indicating there is no search results found. We can set the desire text to be displayed for indicating no results found with the `NoResultsFoundText` and `NoResultsFoundTemplate` properties.
 
 ## NoResultsFoundText
-We can customize the desire text to be displayed for indicating no results found by using the ` NoResultsFoundText` property.
+We can customize the desire text to be displayed for indicating no results found by using the `NoResultsFoundText` property.
 
 {% tabs %}
 
@@ -48,7 +48,6 @@ We can customize the appearance of the desire text to be displayed for indicatin
               TextMemberPath="Name"
              DisplayMemberPath="Name"
              WidthRequest="240">
-
       <editors:SfAutocomplete.NoResultsFoundTemplate>
           <DataTemplate>
               <Label Text="Not Found"  FontSize="20" FontAttributes="Italic" TextColor="Red" Margin="70,10,0,0"/>
@@ -80,4 +79,4 @@ autocomplete.NoResultsFoundTemplate = noResultsTemplate;
 
 ![NoResultsFoundTemplate](images/NoResultsFound/NoResultsFoundTemplate.png)
 
-N> By Default `NoResultsFoundText` is enabled we can restrict it by using `NoResultsFoundText` as Empty. `autocomplete.NoResultsFoundText = "";`
+N> By Default `NoResultsFoundText` is enabled we can restrict it by using `NoResultsFoundText` as Empty.
