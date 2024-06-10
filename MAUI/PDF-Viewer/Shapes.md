@@ -5,6 +5,7 @@ description: Learn here all about Shape Annotations in Syncfusion .NET MAUI PDF 
 platform: MAUI
 control: SfPdfViewer
 documentation: ug
+keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, maui pdf viewer, maui pdf view, .net maui annotations, .net maui shape annotations
 ---
 
 # Shape Annotations in .NET MAUI PDF Viewer (SfPdfViewer)
