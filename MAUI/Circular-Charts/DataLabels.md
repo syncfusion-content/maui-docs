@@ -224,3 +224,4 @@ this.Content = chart;
 
 ![Label template in MAUI Chart](DataLabel_images/maui_chart_datalabel_template.png)
 
+
