@@ -6,6 +6,7 @@ platform: MAUI
 control: SfPdfViewer
 documentation: ug
 keywords: .net maui imageEditor, .net maui image editing, .net maui crop image.
+---
 
 # Magnification .NET MAUI PDF Viewer (SfPdfViewer)
 
