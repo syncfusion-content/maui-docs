@@ -13,7 +13,7 @@ The picker text display mode is specified in the picker property enumeration, wh
 
 ## Fade Mode
 
-The fade mode in the time picker gradually decreases the visibility of unselected items relative to the selected item. This effect is achieved by setting the `TextDisplayMode` property to `Fade` in `SfPicker`.
+The fade mode in the picker gradually decreases the visibility of unselected items relative to the selected item. This effect is achieved by setting the `TextDisplayMode` property to `Fade` in `SfPicker`.
 
 {% tabs %}
 
@@ -39,7 +39,7 @@ this.Content = picker;
 
 ## Shrink Mode
 
-The shrink mode is used to display the font size of time picker items decreased from the selected item by setting the `TextDisplayMode` property to `Shrink` in `SfPicker`.
+The shrink mode is used to display the font size of picker items decreased from the selected item by setting the `TextDisplayMode` property to `Shrink` in `SfPicker`.
 
 {% tabs %}
 
@@ -65,7 +65,7 @@ this.Content = picker;
 
 ## FadeAndShrink Mode
 
-The fade and shrink mode are used to decrease the opacity and font size of time picker items from the selected item by setting the `TextDisplayMode` property to `FadeAndShrink` in `SfPicker`.
+The fade and shrink mode are used to decrease the opacity and font size of picker items from the selected item by setting the `TextDisplayMode` property to `FadeAndShrink` in `SfPicker`.
 
 {% tabs %}
 
