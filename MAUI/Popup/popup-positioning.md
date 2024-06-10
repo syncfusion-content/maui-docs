@@ -272,6 +272,26 @@ public class ViewModel : INotifyPropertyChanged
 
 ![Relative positioning of .NET MAUI Popup in MVVM](Images/popup-positioning/maui-popup-relative-positioning-in-mvvm.png)
 
+## Close the popup automatically after timeout
+
+To close a popup automatically after a specified delay, you can use the `AutoCloseDuration` property, which allows you to give the duration in milliseconds for the popup to automatically close itself without any user interaction.
+
+{% tabs %}
+{% highlight xaml hl_lines="3" %}
+<syncfusion:SfPopup x:Name="SfPopup" 
+                    IsOpen="True"
+                    AutoCloseDuration="3000"> 
+</syncfusion:SfPopup>
+{% endhighlight %}
+{% highlight c# hl_lines="2" %}
+SfPopup popup = new SfPopup();
+popup.AutoCloseDuration = 3000;
+popup.IsOpen = true;
+{% endhighlight %}
+{% endtabs %}
+
+![Dismiss the popup automatically after a specified delay in the .NET MAUI Popup.](Images/popup-positioning/maui-popup-autocloseduration.gif)
+
 ## How to
 
 ### Returning result

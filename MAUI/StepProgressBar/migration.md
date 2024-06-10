@@ -300,7 +300,7 @@ The following code example, explains how to initialize the properties of the `Xa
 <tr>
 <td>{{'[Status](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.StepView.html#Syncfusion_XForms_ProgressBar_StepView_Status)'| markdownify }}</td>
 <td>Nil</td>
-<td>By using ActiveStepIndex and ActiveStepProgressValue property, we can acheive the desired step status.</td>
+<td>By using ActiveStepIndex and ActiveStepProgressValue property, we can achieve the desired step status.</td>
 </tr>
 </table>
 
@@ -367,5 +367,4 @@ The following code example, explains how to initialize the properties of the `Xa
 ## Upcoming Features
 
 * Mapping support
-* RTL support
 * Template support

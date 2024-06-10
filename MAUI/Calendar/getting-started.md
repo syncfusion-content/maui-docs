@@ -158,48 +158,26 @@ this.Calendar.SelectionMode = CalendarSelectionMode.Multiple;
 
 ![change-selection-mode](images/getting-started/maui-calendar-multiple-selection.png)
 
-## Action buttons
+## Corner radius
 
-You can display action buttons at the bottom of the calendar by using the [ShowActionButtons](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_ShowActionButtons) property of the SfCalendar. It allows you to confirm or cancel the selected date, dates, and range of dates in calendar views of the [SfCalendar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html).
-
-{% tabs %}  
-{% highlight xaml tabtitle="XAML" %}
-
-<calendar:SfCalendar x:Name="Calendar" 
-                     View="Month" 
-                     ShowActionButtons="True">
- </calendar:SfCalendar>
-
-{% endhighlight %}
-{% highlight c# tabtitle="C#" %}
-
-this.Calendar.ShowActionButtons = true;
-
-{% endhighlight %}  
-{% endtabs %}
-
-![Action buttons in .NET MAUI Calendar.](images/getting-started/maui-action-button.png)
-
-## Today button
-
-The today button can be displayed at the bottom of the calendar using the [ShowTodayButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_ShowTodayButton) property of the [SfCalendar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html), allowing you to quickly navigate from current view to the today view.
+You can customize the corner radius of the calendar using the [CornerRadius]() property of the SfCalendar, allowing you to set the desired roundness for the corners of the calendar. The default value of the `CornerRadius` property is `20`.
 
 {% tabs %}  
-{% highlight xaml tabtitle="XAML" %}
+{% highlight xaml tabtitle="XAML" hl_lines="3" %}
 
 <calendar:SfCalendar x:Name="Calendar" 
                      View="Month"
-                     ShowTodayButton="True">
+                     CornerRadius="15">
  </calendar:SfCalendar>
 
 {% endhighlight %}
 {% highlight c# tabtitle="C#" %}
 
-this.Calendar.ShowTodayButton = true;
+this.Calendar.CornerRadius = 15;
 
 {% endhighlight %}
 {% endtabs %}
 
-![Today button in .NET MAUI Calendar.](images/getting-started/maui-today-button.png)
+![change-corner-radius](images/getting-started/maui-calendar-corner-radius.png)
 
 N> You can also explore our [.NET MAUI Calendar Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/Calendar) that shows you how to render the Calendar in .NET MAUI.

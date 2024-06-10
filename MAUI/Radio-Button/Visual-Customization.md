@@ -109,9 +109,45 @@ You can customize the display text appearance of the [`SfRadioButton`](https://h
 
 ![.NET MAUI Radio Button TextAppereance](Images/VisualCustomization/textappearance.png)
 
+## LineBreakMode
+
+The `LineBreakMode` allows you to wrap or truncate the text. The default value of this property is NoWrap. The following other options are available in `LineBreakMode`:
+
+*   `NoWrap` - Avoids the text wrap.
+*   `WordWrap` - Wraps the text by words.
+*   `CharacterWrap` - Wraps the text by character.
+*   `HeadTruncation` - Truncates the text at the start.
+*   `MiddleTruncation` - Truncates the text at the center.
+*   `TailTruncation` - Truncates the text at the end.
+
+{% tabs %}
+{% highlight xaml %}
+
+    <syncfusion:SfRadioButton x:Name="RadioButton" IsChecked="True" WidthRequest="200" LineBreakMode="WordWrap" Text="The LineBreakMode allows you to wrap or truncate the text."></syncfusion:SfRadioButton>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+    StackLayout stackLayout = new StackLayout();
+    SfRadioButton radioButton = new SfRadioButton();
+	radioButton.Text = "The LineBreakMode allows you to wrap or truncate the text.";
+	radioButton.LineBreakMode = LineBreakMode.WordWrap;
+	radioButton.WidthRequest = 200;
+	stackLayout.Children.Add(radioButton);
+
+{% endhighlight %}
+{% endtabs %}
+
+![.NET MAUI Radio Button LineBreakmode](Images/VisualCustomization/linebreakmode.png)
+
+
+This demo can be downloaded from this [link](https://www.syncfusion.com/downloads/support/directtrac/general/ze/RadioButton_11858718544)
+
+
 ## Size customization
 
-The [`ControlSize`] property is used to customize the [`RadioButton`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioButton.html) control size. 
+The [`ControlSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_ControlSize) property is used to customize the [`RadioButton`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioButton.html) control size. 
 
 {% tabs %}
 {% highlight xaml %}
@@ -128,6 +164,7 @@ The [`ControlSize`] property is used to customize the [`RadioButton`](https://he
 	radioButton.Text = "Radio Button";
 	radioButton.ControlSize = 40;
 	stackLayout.Children.Add(radioButton);
+	this.Content = stackLayout;
 
 {% endhighlight %}
 {% endtabs %}
