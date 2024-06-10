@@ -5,7 +5,7 @@ description: Learn here all about magnification feature in Syncfusion .NET MAUI 
 platform: MAUI
 control: SfPdfViewer
 documentation: ug
----
+keywords: .net maui imageEditor, .net maui image editing, .net maui crop image.
 
 # Magnification .NET MAUI PDF Viewer (SfPdfViewer)
 
