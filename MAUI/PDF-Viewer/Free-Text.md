@@ -149,7 +149,7 @@ void EditSelectedFreeTextAnnotation(Annotation selectedAnnotation)
 
 ## Free text modal view
 
-The Sfpdfviewer allows receives notifications when creating and editing free text. Notifications are useful for displaying custom dialogs when the free text modal view appears or disappears at the application level.
+The (Sfpdfviewer)[(https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html)] allows receives notifications when creating and editing free text. Notifications are useful for displaying custom dialogs when the free text modal view appears or disappears at the application level.
 
 The `Sfpdfviewer.FreeTextModalViewAppearing` event is triggered whenever the modal view opens for free text annotation. You can cancel the opening of the modal view for the current free text annotation being edited by setting `e.Cancel = true`, allowing you to display your own custom dialog.
 
