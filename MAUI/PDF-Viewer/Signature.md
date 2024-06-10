@@ -114,3 +114,59 @@ PdfViewer.AddAnnotation(customStamp);
 
 N> To add a text signature, you can use an image containing the signature text . You can then add it in the same manner as an image signature.
 
+#### Signature pad modal view 
+
+The `Sfpdfviewer.SignatureModalViewAppearing` event is triggered whenever the modal view opens for signature pad. You can cancel the opening of the modal view for the current signature pad being edited by setting `e.Cancel = true`, allowing you to display your own custom dialog.
+
+{% tabs %}
+{% highlight c# %}
+
+FormField formField;
+CustomIcon customIcon;
+……..
+pdfviewer.SignatureModalViewAppearing += PdfViewer_SignatureModalViewAppearing;
+……..
+
+private void PdfViewer_SignatureModalViewAppearing(object? sender, FormFieldModalViewAppearingEventArgs e)
+ {
+     e.Cancel = true;
+     formField = e.FormField;
+    // Implement your own UI for signature pad annotation and show it.
+    ShowCustomDialog();
+    customIcon.IsVisible = false;
+ }
+
+Private void customDialogOkButton_Clicked(object sender, EventArgs e)
+{
+   if(formField is SignatureFormField signatureField)
+  {
+     List<List<float>> inkPointsCollection  = customDialog.InkPointsCollection;
+     InkAnnotation inkSignature = new InkAnnotation(inkPointsCollection, signature.PageNumber);
+
+     inkSignature.Color = Colors.Red;
+      // Add the created handwritten signature to the signature form field.
+     signatureField.Signature = inkSignature;
+  }  
+}
+
+{% endhighlight %} 
+{% endtabs %}
+
+The `Sfpdfviewer.SignatureModalViewDisappearing` event is triggered whenever the modal view for signature pad is closing.
+
+{% tabs %}
+{% highlight c# %}
+
+pdfviewer.SignatureModalViewDisappearing += PdfViewer_SignatureModalViewDisappearing;
+…..
+private void PdfViewer_SignatureModalViewDisappearing(object? sender, EventArgs e)
+ {
+      // Show your icons / custom dialog while disappearing the modal view at application level. 
+      customIcon.IsVisible = true;     
+ }
+
+{% endhighlight %} 
+{% endtabs %}
+
+![Signature pad modal view](Images/Annotations/signature-pad-modal-view.png)
+

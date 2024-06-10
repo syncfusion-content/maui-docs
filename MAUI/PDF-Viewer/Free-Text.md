@@ -194,5 +194,6 @@ private void PdfViewer_FreeTextModalViewDisappearing(object? sender, EventArgs e
 {% endhighlight %} 
 {% endtabs %}
 
+![Free text modal view](Images/Annotations/free-text-modal-view.png)
 
 N> These notifications are only available on Android and iOS platforms.

@@ -128,4 +128,6 @@ Private void PdfViewer_StickyNoteModalViewDisappearing(object? Sender, EventArgs
 {% endhighlight %} 
 {% endtabs %}
 
+![Sticky note modal view](Images/Annotations/sticky-note-modal-view.png)
+
 N> These notifications are only available on Android and iOS platforms. 

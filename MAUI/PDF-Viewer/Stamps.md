@@ -140,6 +140,8 @@ private void PdfViewer_CustomStampModalViewDisappearing(object? sender, EventArg
 {% endhighlight %} 
 {% endtabs %}
 
+![Custom stamp modal view](Images/Annotations/custom-stamp-modal-view.png)
+
 ## Edit the selected stamp
 
 You can edit the properties of the selected stamp annotation programmatically by accessing the selected annotation instance. The selected annotation instance may be obtained from the [AnnotationSelected](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationSelected) event. 
