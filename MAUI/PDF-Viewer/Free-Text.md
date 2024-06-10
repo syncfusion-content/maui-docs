@@ -146,3 +146,53 @@ void EditSelectedFreeTextAnnotation(Annotation selectedAnnotation)
 }
 {% endhighlight %}
 {% endtabs %}
+
+## Free text modal view
+
+The `Sfpdfviewer.FreeTextModalViewAppearing` event is triggered whenever the modal view opens for free text annotation. You can cancel the opening of the modal view for the current free text annotation being edited by setting `e.Cancel = true`, allowing you to display your own custom dialog.
+
+{% tabs %}
+{% highlight c# %}
+
+Annotation editedAnnotation;
+CustomIcon customIcon;
+pdfviewer.FreeTextModalViewAppearing += PdfViewer_AnnotationModalViewAppearing;
+………
+private void PdfViewer_FreeTextModalViewAppearing(object? sender, Syncfusion.Maui.PdfViewer.AnnotationModalViewAppearingEventArgs e)
+{
+    e.Cancel = true;
+    editedAnnotation = e.Annotation;
+    // Implement your own UI for free text editor and show it.
+    ShowCustomDialog();
+    customIcon.IsVisible = false;
+}
+
+Private void customDialogOkButton_Clicked(object sender, EventArgs e)
+{
+   //Get the typed text in the custom dialog 
+   string newText = customDialog.Text; 
+   if(editedAnnotation is FreeTextAnnotation freeText)
+   freeText.Text = newText;
+}
+
+{% endhighlight %} 
+{% endtabs %}
+
+The `Sfpdfviewer.FreeTextModalViewDisappearing` event is triggered whenever the modal view for free text annotation is closing.
+
+{% tabs %}
+{% highlight c# %}
+
+pdfviewer.FreeTextModalViewDisappearing += PdfViewer_FreeTextModalViewDisappearing;
+….
+private void PdfViewer_FreeTextModalViewDisappearing(object? sender, EventArgs e)
+ {
+    // Show your own icons / custom dialog while disappearing the modal view at application level. 
+    customIcon.IsVisible = true;
+ }
+
+{% endhighlight %} 
+{% endtabs %}
+
+
+N> These notifications are only available on Android and iOS platforms.

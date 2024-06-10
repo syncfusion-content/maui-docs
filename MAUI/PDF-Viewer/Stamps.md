@@ -91,6 +91,55 @@ void AddCustomStampAnnotation()
 {% endhighlight %}
 {% endtabs %}
 
+### Custom stamp modal view
+
+The `Sfpdfviewer.CustomStampModalViewAppearing` event is triggered whenever the modal view opens for custom stamp. You can cancel the opening of the modal view for the current stamp annotation being edited by setting `e.Cancel = true`, allowing you to display your own custom dialog.
+
+{% tabs %}
+{% highlight c# %}
+
+PdfViewer.CustomStampModalViewAppearing += PdfViewer_CustomStampModalViewAppearing;
+CustomIcon customIcon;
+Annotation editedAnnotation;
+……
+private void PdfViewer_CustomStampModalViewAppearing(object? sender, AnnotationModalViewAppearingEventArgs e)
+{
+    e.Cancel = true;
+    editedAnnotation = e.Annotation;
+    // Implement your own UI for custom stamp annotation and show it.
+    ShowCustomDialog();
+    customIcon.IsVisible = false;
+}
+
+Private void customDialogOkButton_Clicked(object sender, EventArgs e)
+{
+   //Get the typed opacity value in the custom dialog 
+   float newOpacity = customDialog.OpacityValue; 
+   if (annotation is StampAnnotation customStamp)
+   {
+     customStamp.Opacity = newOpacity;
+   }
+}
+
+{% endhighlight %} 
+{% endtabs %}
+
+The `Sfpdfviewer.CustomStampModalViewDisappearing` event is triggered whenever the modal view for stamp annotation is closing.
+
+{% tabs %}
+{% highlight c# %}
+
+pdfviewer.CustomStampModalViewDisappearing += PdfViewer_StickyNoteModalViewDisappearing;
+….
+private void PdfViewer_CustomStampModalViewDisappearing(object? sender, EventArgs e)
+{
+    // Show your own icons / custom dialog while disappearing the modal view at application level. 
+      customIcon.IsVisible = true;
+}
+
+{% endhighlight %} 
+{% endtabs %}
+
 ## Edit the selected stamp
 
 You can edit the properties of the selected stamp annotation programmatically by accessing the selected annotation instance. The selected annotation instance may be obtained from the [AnnotationSelected](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationSelected) event. 

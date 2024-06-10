@@ -195,6 +195,60 @@ if (signature != null)
 
 The `Signature` property is of type [InkAnnotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.InkAnnotation.html) and it will behave like an ink after signing. If the PDF document is saved, the signature will be preserved as an ink annotation in the saved document. 
 
+#### Signature Pad Modal View 
+
+The `Sfpdfviewer.SignatureModalViewAppearing` event is triggered whenever the modal view opens for signature pad. You can cancel the opening of the modal view for the current signature pad being edited by setting `e.Cancel = true`, allowing you to display your own custom dialog.
+
+{% tabs %}
+{% highlight c# %}
+
+FormField formField;
+CustomIcon customIcon;
+……..
+pdfviewer.SignatureModalViewAppearing += PdfViewer_SignatureModalViewAppearing;
+……..
+
+private void PdfViewer_SignatureModalViewAppearing(object? sender, FormFieldModalViewAppearingEventArgs e)
+ {
+     e.Cancel = true;
+     formField = e.FormField;
+    // Implement your own UI for signature pad annotation and show it.
+    ShowCustomDialog();
+    customIcon.IsVisible = false;
+ }
+
+Private void customDialogOkButton_Clicked(object sender, EventArgs e)
+{
+   if(formField is SignatureFormField signatureField)
+  {
+     List<List<float>> inkPointsCollection  = customDialog.InkPointsCollection;
+     InkAnnotation inkSignature = new InkAnnotation(inkPointsCollection, signature.PageNumber);
+
+     inkSignature.Color = Colors.Red;
+      // Add the created handwritten signature to the signature form field.
+     signatureField.Signature = inkSignature;
+  }  
+}
+
+{% endhighlight %} 
+{% endtabs %}
+
+The `Sfpdfviewer.SignatureModalViewDisappearing` event is triggered whenever the modal view for signature pad is closing.
+
+{% tabs %}
+{% highlight c# %}
+
+pdfviewer.SignatureModalViewDisappearing += PdfViewer_SignatureModalViewDisappearing;
+…..
+private void PdfViewer_SignatureModalViewDisappearing(object? sender, EventArgs e)
+ {
+      // Show your icons / custom dialog while disappearing the modal view at application level. 
+      customIcon.IsVisible = true;     
+ }
+
+{% endhighlight %} 
+{% endtabs %}
+
 ### Button form fields
 
 Button form fields will be rendered in the PDF viewer. But the PDF viewer supports only the `GoTo` actions that navigates to a particular location in the PDF document alone. Other types of button actions are not supported.
