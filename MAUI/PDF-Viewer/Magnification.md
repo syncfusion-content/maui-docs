@@ -62,13 +62,13 @@ You can change the zoom mode using the `SfPdfViewer.ZoomMode` property of the PD
 
 On the desktop built-in toolbar, a magnifying tool is available that shows the current zoom percentage of the document. Using the tool, you can choose a zoom percentage from a predefined set of values. Additionally, you can choose the fit-to-width or fit-to-page option. 
 
-![Desktop Zoom Mode Combo Box](Images/DesktopZoomPercentage.png)
+![Desktop Zoom Mode Combo Box](Images/windowszoom.gif)
 
 #### Using zoom mode tool in the mobile 
 
 On the mobile built-in toolbar, by default, the magnifying tool is not visible. When the document `ZoomFactor` is changed, it becomes visible. Using the tool, you can choose the `Fit to Width` or `Fit to Page` option. When an option is selected, the icon will no longer be visible until the zoom percentage changes again. 
 
-![Mobile Zoom Mode Combo box](Images/ZoomModeMobile.jpg)
+![Mobile Zoom Mode Combo box](Images/ZoomModeforMobile.gif)
 
 ### Setting zoom mode programmatically 
 
