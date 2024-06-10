@@ -83,6 +83,7 @@ The number of segments in the panel is determined using the `VisibleSegmentsCoun
 The `VisibleSegmentsCount` property is used to specify the number of segments available in circular panel. When children count is greater than the value given in the `VisibleSegmentsCount` property, the overflowing children are not arranged in the panel. When children count is lesser than the `VisibleSegmentsCount` property, then remaining segments are left free. If number of item count is higher than VisibleItemCount, excessive items will not be shown.
 
 ### SegmentIndex
+
 `SegmentIndex` property is used to specify the index of the radial menu item in circular panel. Based on the index, the radial menu items are inserted in the segment. When the `SegmentIndex` is not specified for a RadialMenuItem the menu item is arranged in the next available free segment.
 
 ## Code snippet for VisibleSegmentCount and SegmentIndex
@@ -91,47 +92,61 @@ The `VisibleSegmentsCount` property is used to specify the number of segments av
 
 {% highlight xaml %}
 
-   {% tabs %}
-
-{% highlight xaml %}
-
-   <radialMenu:SfRadialMenu x:Name="radialMenu"
-                         CenterButtonBackFontFamily="Maui Material Assets"
-                         CenterButtonBackFontSize="20"
-                         CenterButtonBackText="&#xe72d;"
-                         CenterButtonFontFamily="Maui Material Assets"
-                         CenterButtonFontSize="20"
-                         CenterButtonText="&#xe710;" 
-                         LayoutType="Custom" 
-                         VisibleSegmentsCount="3">
-    <radialMenu:SfRadialMenu.Items>
-        <radialMenu:SfRadialMenuItem 
-            Text="&#xe744;"                    
-            SegmentIndex="1"
-            FontFamily="Maui Material Assets">
-        </radialMenu:SfRadialMenuItem>
-        <radialMenu:SfRadialMenuItem  
-            Text="&#xe700;"                     
-            SegmentIndex="0"
-            FontFamily="Maui Material Assets">
-        </radialMenu:SfRadialMenuItem>
-        <radialMenu:SfRadialMenuItem 
-                Text="&#xe72d;"                        
-                SegmentIndex="2"
-                FontFamily="Maui Material Assets">
-        </radialMenu:SfRadialMenuItem>
-        <radialMenu:SfRadialMenuItem  
-            Text="&#xe735;"                    
-            FontFamily="Maui Material Assets">
-        </radialMenu:SfRadialMenuItem>
-    </radialMenu:SfRadialMenu.Items>
-</radialMenu:SfRadialMenu>
+     <radialMenu:SfRadialMenu x:Name="radial_Menu"
+                              CenterButtonFontFamily="MauiSampleFontIcon"
+                              CenterButtonFontSize="30"
+                              CenterButtonStrokeThickness="3"
+                              CenterButtonText="&#xe770;"
+                              LayoutType="Custom"
+                              RimColor="Transparent"
+                              RimRadius="300"
+                              SeparatorThickness="0"
+                              VisibleSegmentsCount="12">
+                                <radialMenu:SfRadialMenu.Items>
+                                    <radialMenu:SfRadialMenuItem
+                                        x:Name="Linkedin"
+                                        BackgroundColor="Transparent"
+                                        FontFamily="MauiSampleFontIcon"
+                                        FontSize="40"
+                                        ItemHeight="40"
+                                        ItemWidth="40"
+                                        SegmentIndex="0"
+                                        Text="&#xe79c;" />
+                                    <radialMenu:SfRadialMenuItem
+                                        x:Name="Facebook"
+                                        BackgroundColor="Transparent"
+                                        FontFamily="MauiSampleFontIcon"
+                                        FontSize="40"
+                                        ItemHeight="40"
+                                        ItemWidth="40"
+                                        SegmentIndex="1"
+                                        Text="&#xe799;" />
+                                    <radialMenu:SfRadialMenuItem
+                                        x:Name="pinterest"
+                                        BackgroundColor="Transparent"
+                                        FontFamily="MauiSampleFontIcon"
+                                        FontSize="40"
+                                        ItemHeight="40"
+                                        ItemWidth="40"
+                                        SegmentIndex="2"
+                                        Text="&#xe79b;" />
+                                    <radialMenu:SfRadialMenuItem
+                                        x:Name="twitter"
+                                        BackgroundColor="Transparent"
+                                        FontFamily="MauiSampleFontIcon"
+                                        FontSize="40"
+                                        ItemHeight="40"
+                                        ItemWidth="40"
+                                        SegmentIndex="3"
+                                        Text="&#xe79a;" />
+                                </radialMenu:SfRadialMenu.Items>
+     </radialMenu:SfRadialMenu>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
- using Syncfusion.Maui.RadialMenu;
+using Syncfusion.Maui.RadialMenu;
 
 namespace RadialSample
 {
@@ -143,26 +158,67 @@ namespace RadialSample
 
             SfRadialMenu radialMenu = new SfRadialMenu()
             {
-                CenterButtonBackFontFamily="Maui Material Assets",
-                CenterButtonBackFontSize=20,
-                CenterButtonBackText="&#xe72d;",
-                CenterButtonFontFamily="Maui Material Assets",
-                CenterButtonFontSize=20,
-                CenterButtonText="&#xe710;",
-                LayoutType = LayoutType.Custom,
-                VisibleSegmentsCount = 3,
+                CenterButtonFontFamily = "MauiSampleFontIcon",
+                CenterButtonFontSize = 30,
+                CenterButtonStrokeThickness = 3,
+                CenterButtonText = "&#xe770;",
+                LayoutType = RadialMenuLayoutType.Custom,
+                RimColor = Colors.Transparent,
+                RimRadius = 300,
+                SeparatorThickness = 0,
+                VisibleSegmentsCount = 12
             };
-            RadialMenuItemsCollection itemCollection = new RadialMenuItemsCollection()
+
+            SfRadialMenuItem linkedinItem = new SfRadialMenuItem
             {
-                new SfRadialMenuItem() { FontFamily="Maui Material Assets" FontSize="20" Text="&#xe72e;" },
-                new SfRadialMenuItem() { FontFamily="Maui Material Assets" FontSize="20" Text="&#xe744;" },
-                new SfRadialMenuItem() { FontFamily="Maui Material Assets" FontSize="20" Text="&#xe745;" },
-                new SfRadialMenuItem() { FontFamily="Maui Material Assets" FontSize="20" Text="&#xe73b;" },
-                new SfRadialMenuItem() { FontFamily="Maui Material Assets" FontSize="20" Text="&#xe762;" },
+                BackgroundColor = Colors.Transparent,
+                FontFamily = "MauiSampleFontIcon",
+                FontSize = 40,
+                ItemHeight = 40,
+                ItemWidth = 40,
+                SegmentIndex = 0,
+                Text = "&#xe79c"
             };
-            
-            radialMenu.Items = itemCollection;
-            this.Content = radialMenu;
+
+            SfRadialMenuItem facebookItem = new SfRadialMenuItem
+            {
+                BackgroundColor = Colors.Transparent,
+                FontFamily = "MauiSampleFontIcon",
+                FontSize = 40,
+                ItemHeight = 40,
+                ItemWidth = 40,
+                SegmentIndex = 1,
+                Text = "&#xe799;"
+            };
+
+            SfRadialMenuItem pinterestItem = new SfRadialMenuItem
+            {
+                BackgroundColor = Colors.Transparent,
+                FontFamily = "MauiSampleFontIcon",
+                FontSize = 40,
+                ItemHeight = 40,
+                ItemWidth = 40,
+                SegmentIndex = 2,
+                Text = "&#xe79b;" 
+            };
+
+            SfRadialMenuItem twitterItem = new SfRadialMenuItem
+            {
+                BackgroundColor = Colors.Transparent,
+                FontFamily = "MauiSampleFontIcon",
+                FontSize = 40,
+                ItemHeight = 40,
+                ItemWidth = 40,
+                SegmentIndex = 3,
+                Text = "&#xe79a;"
+            };
+
+            radialMenu.Items.Add(linkedinItem);
+            radialMenu.Items.Add(facebookItem);
+            radialMenu.Items.Add(pinterestItem);
+            radialMenu.Items.Add(twitterItem);
+
+            Content = radialMenu;
         }
     }
 }
@@ -171,19 +227,6 @@ namespace RadialSample
 
 {% endtabs %}
 
-{% endhighlight %}
-
-{% highlight C# %}
-
- SfRadialMenu radialMenu = new SfRadialMenu() 
- {
-     LayoutType = LayoutType.Custom
- };
-
-{% endhighlight %}
-
-{% endtabs %}
-
-![VisibleSegment.](images/radialmenuitem-customization/VisibleSegment.png)
+![VisibleSegment.](images/segmentation/maui-radialmenu-segmentation-segmentIndex.png)
 
 N> The `VisibleSegmentsCount` property is only applicable for `Custom` layout.

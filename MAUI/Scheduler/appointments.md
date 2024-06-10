@@ -5,6 +5,7 @@ description: Learn here all about how to plan, configure and manage all day, rec
 platform: maui
 control: SfScheduler
 documentation: ug
+keywords : .net maui scheduler, .net maui appointments planning, .net maui appointment editor, .net maui recurring events, .net maui spanned appointments, .net maui recurrence appointments.
 ---
 
 # Appointments in .NET MAUI Scheduler (SfScheduler)

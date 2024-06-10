@@ -333,3 +333,46 @@ this.Content = scheduler;
 {% endhighlight %}
 {% endtabs %}
 
+## Agenda appointment template 
+
+The Syncfusion .NET MAUI Scheduler allows users to customize the visual representation of agenda appointments by defining data templates, enhancing usability within the application. Users can customize the appointment text, icon, image, or view based on their needs and appointment details.
+
+{% tabs %}
+{% highlight XAML hl_lines="5" %}
+
+<Grid>
+    <Grid.Resources>
+        <DataTemplate x:Key="mainTemplate">
+            <Grid Background = "Purple" HeightRequest="30" >
+                <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="Black" Text="Client Meeting"/>
+            </Grid>
+        </DataTemplate>
+    </Grid.Resources>
+    <Scheduler:SfScheduler x:Name="DataTemplateScheduler"
+                           View="Agenda">
+        <Scheduler:SfScheduler.AgendaView>
+            <Scheduler:SchedulerAgendaView AppointmentTemplate="{StaticResource mainTemplate}">
+                <Scheduler:SchedulerAgendaView.MonthHeaderTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Label x:Name="label"
+                                   HorizontalOptions="Center"
+                                   Background="MediumPurple"
+                                   VerticalOptions="Center"
+                                   TextColor="White"
+                                   FontSize="25"
+                                   Text="{Binding StringFormat='{0:MMMM yyyy}'}" />
+                        </Grid>
+                    </DataTemplate>
+                </Scheduler:SchedulerAgendaView.MonthHeaderTemplate>
+            </Scheduler:SchedulerAgendaView>
+        </Scheduler:SfScheduler.AgendaView>
+    </Scheduler:SfScheduler>
+</Grid>
+
+{% endhighlight %}
+{% endtabs %}
+
+N>
+* By default, the `SchedulerAppointment` is set as the `BindingContext` for `AppointmentTemplate` for both `SchedulerAppointment` and custom data object in `AppointmentsSource.`
+* The Custom data object can be bound in `AppointmentTemplate` by using `SchedulerAppointment.DataItem.`
