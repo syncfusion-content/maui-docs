@@ -200,7 +200,7 @@ The following table illustrates the API migration for the chart.
 </tr>
 <tr>
 <td>TickPosition</td>
-<td><em>Upcoming</em></td>
+<td><em>TickPosition</em></td>
 </tr>
 <tr>
 <td>MaximumLabels</td>
@@ -212,7 +212,7 @@ The following table illustrates the API migration for the chart.
 </tr>
 <tr>
 <td>TrackballLabelTemplate</td>
-<td><em>Upcoming</em></td>
+<td><em>TrackballLabelTemplate</em></td>
 </tr>
 </table>
 
@@ -853,14 +853,12 @@ chart.ZoomPanBehavior = zooming;
 
 **Chart** 
  
-* Support for annotations. 
 * Suspend and resume notification support. 
 * Technical indicators for charts.
 
 **Series**
 
 * Listen to property change support for series.
-* Get data points by passing rect.
 * Notify event or method when series are rendering.
 * Suspend and resume notification.
 * Trendlines support for continuous series. 
@@ -868,10 +866,8 @@ chart.ZoomPanBehavior = zooming;
 **Axis**
 
 * DateTime category axis support.
-* Align the axis labels and tick inside the series clip rect.
 * Range style customization.
 * Event or method to notify the axis label click.
-* Axis label wrapping support.
 * Support for axis draw labels as multiple lines using /n.
 * Support setting the maximum labels count for the chart axis.
 
@@ -879,18 +875,12 @@ chart.ZoomPanBehavior = zooming;
 
 * Title support for legend. 
 * Support to enable or disable the legend icon visibility.
-* Legend items wrap and floating support.
-* Maximum width support for Legend.
+* Legend floating support.
 * Event or method to notify the legend click and the creation of a legend item.
 
 **Data label**
 
 * Connector lines and its customization support.
-
-**Zooming**
-
-* Support setting the maximum zoom level.
-* Event for zooming and panning.
 
 ## Known issue 
 

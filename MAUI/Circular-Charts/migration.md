@@ -621,8 +621,7 @@ N> For more information about selection check [here](https://help.syncfusion.com
 
 * Title support for legend. 
 * Support to enable or disable the legend icon visibility.
-* Legend items wrap and floating support.
-* Maximum width support for Legend.
+* Legend floating support.
 * Event or method to notify the legend click and the creation of a legend item.
 * The ability to show/hide corresponding data points by legend item toggle.
 
