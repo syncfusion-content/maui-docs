@@ -49,7 +49,7 @@ private void PdfViewer_PasswordRequested(object sender, PasswordRequestedEventAr
 
 ## Handling password request
 
-When attempting to open a password protected document, the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) will display a default password prompt to obtain the user password to load the document. However, if you want to suppress the default password prompt and to implement your own UI to obtain the user password by using the `PasswordRequested` event. Set the [Handled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.DocumentLoadFailedEventArgs.html#Syncfusion_Maui_PdfViewer_DocumentLoadFailedEventArgs_Handled) property of the `PasswordRequestedEventArgs` to `true` to disable the control’s default password prompt and handle your own logic to supply the password to open the document.
+When attempting to open a password protected document, the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) will display a default password prompt to obtain the user password to load the document. However, if you want to suppress the default password prompt and to implement your own UI to obtain the user password by using the [PasswordRequested](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_PasswordRequested) event. Set the [Handled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.DocumentLoadFailedEventArgs.html#Syncfusion_Maui_PdfViewer_DocumentLoadFailedEventArgs_Handled) property of the [PasswordRequestedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.PasswordRequestedEventArgs.html) to `true` to disable the control’s default password prompt and handle your own logic to supply the password to open the document.
 
 {% tabs %}
 {% highlight xaml %}
@@ -79,7 +79,7 @@ When attempting to open a password protected document, the [SfPdfViewer](https:/
 
 ### Creating a password request view
 
-This is an example of how to create a custom password request dialog to ask for user password and use the same to view the password-protected PDF document in the `SfPdfViewer`. The following code snippets illustrate the creation of a custom password request dialog and viewing the documents, with a few code additions to the **Getting Started** example.
+This is an example of how to create a custom password request dialog to ask for user password and use the same to view the password-protected PDF document in the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html). The following code snippets illustrate the creation of a custom password request dialog and viewing the documents, with a few code additions to the **Getting Started** example.
 
 **Step 1:** Create a custom password dialog view named `PasswordDialogBox` and add the functionalities to accept and validate the password, as shown below.
 
@@ -256,7 +256,7 @@ public partial class PasswordDialogBox : ContentView
 {% endhighlight %}
 {% endtabs %}
 
-**Step 2:** Add the `SfPdfViewer` and `PasswordDialogBox` elements to the `MainPage` and handle the functionalities to open a custom password request dialog and display the PDF document after providing a correct password, as shown below.
+**Step 2:** Add the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) and `PasswordDialogBox` elements to the `MainPage` and handle the functionalities to open a custom password request dialog and display the PDF document after providing a correct password, as shown below.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}

@@ -98,7 +98,7 @@ The following table contains the default name and value details used in the SfPd
 </tr>
 <tr>
 <td>Cancel</td>
-<td>CANCEL</td>
+<td>Cancel</td>
 </tr>
 <tr>
 <td>CanOpenWebPage</td>
@@ -235,5 +235,301 @@ The following table contains the default name and value details used in the SfPd
 <tr>
 <td>Drag and drop an image here</td>
 <td>Drag and drop an image here</td>
+</tr>
+<tr>
+<td>AddHighlightToastMessage</td>
+<td>Drag over a text to highlight it</td>
+</tr>
+<tr>
+<td>AddSignature</td>
+<td>Add signature</td>
+</tr>
+<tr>
+<td>AddSignatureToastMessage</td>
+<td>Tap to add the signature</td>
+</tr>
+<tr>
+<td>AddSquigglyToastMessage</td>
+<td>Drag over a text to add a squiggly underline</td>
+</tr>
+<tr>
+<td>AddStampToastMessage</td>
+<td>Tap to add the stamp</td>
+</tr>
+<tr>
+<td>AddStickyNoteToastMessage</td>
+<td>Tap to add a sticky note</td>
+</tr>
+<tr>
+<td>AddStrikeoutToastMessage</td>
+<td>Drag over a text to strike it through</td>
+</tr>
+<tr>
+<td>AddUnderlineToastMessage</td>
+<td>Drag over a text to underline it</td>
+</tr>
+<tr>
+<td>Annotations</td>
+<td>Annotations</td>
+</tr>
+<tr>
+<td>Arrow</td>
+<td>Arrow</td>
+</tr>
+<tr>
+<td>Border</td>
+<td>Border</td>
+</tr>
+<tr>
+<td>Circle</td>
+<td>Circle</td>
+</tr>
+<tr>
+<td>Cloud</td>
+<td>Cloud</td>
+</tr>
+<tr>
+<td>ColorPicker</td>
+<td>Color picker</td>
+</tr>
+<tr>
+<td>Comment</td>
+<td>Comment</td>
+</tr>
+<tr>
+<td>ContinuousPage</td>
+<td>Continuous page</td>
+</tr>
+<tr>
+<td>CreateStamps</td>
+<td>Create Stamps</td>
+</tr>
+<tr>
+<td>Delete</td>
+<td>Delete</td>
+</tr>
+<tr>
+<td>DragAndDropImage</td>
+<td>Drag and drop an image here.</td>
+</tr>
+<tr>
+<td>DrawArrowToastMessage</td>
+<td>Drag to draw an arrow</td>
+</tr>
+<tr>
+<td>DrawCircleToastMessage</td>
+<td>Drag to draw a circle</td>
+</tr>
+<tr>
+<td>DrawCloudToastMessage</td>
+<td>Tap to begin drawing a cloud</td>
+</tr>
+<tr>
+<td>DrawInkToastMessage</td>
+<td>Drag to draw an ink</td>
+</tr>
+<tr>
+<td>DrawLineToastMessage</td>
+<td>Drag to draw a line</td>
+</tr>
+<tr>
+<td>DrawPolygonToastMessage</td>
+<td>Tap to begin drawing a polygon</td>
+</tr>
+<tr>
+<td>DrawPolylineToastMessage</td>
+<td>Tap to begin drawing a polyline</td>
+</tr>
+<tr>
+<td>DrawSquareToastMessage</td>
+<td>Drag to draw a square</td>
+</tr>
+<tr>
+<td>EraseInkToastMessage</td>
+<td>Drag over an ink to erase it</td>
+</tr>
+<tr>
+<td>Fill</td>
+<td>Fill</td>
+</tr>
+<tr>
+<td>FitToPage</td>
+<td>Fit to Page</td>
+</tr>
+<tr>
+<td>FitToWidth</td>
+<td>Fit to Width</td>
+</tr>
+<tr>
+<td>FontSize</td>
+<td>Font size</td>
+</tr>
+<tr>
+<td>FreeText</td>
+<td>Free text</td>
+</tr>
+<tr>
+<td>FreeTextEditorPlaceHolder</td>
+<td>Text…</td>
+</tr>
+<tr>
+<td>Help</td>
+<td>Help</td>
+</tr>
+<tr>
+<td>Ink</td>
+<td>Ink</td>
+</tr>
+<tr>
+<td>InkEraser</td>
+<td>Ink eraser</td>
+</tr>
+<tr>
+<td>InvalidPageNumber</td>
+<td>Invalid page number</td>
+</tr>
+<tr>
+<td>Key</td>
+<td>Key</td>
+</tr>
+<tr>
+<td>Line</td>
+<td>Line</td>
+</tr>
+<tr>
+<td>NewParagraph</td>
+<td>New Paragraph</td>
+</tr>
+<tr>
+<td>NextPage</td>
+<td>Next page</td>
+</tr>
+<tr>
+<td>NoBookmark</td>
+<td>No Bookmark</td>
+</tr>
+<tr>
+<td>NoColor</td>
+<td>No Color</td>
+</tr>
+<tr>
+<td>NoMatchesWereFoundToastMessage</td>
+<td>No matches were found.</td>
+</tr>
+<tr>
+<td>NoMoreMatchesWereFoundToastMessage</td>
+<td>No more matches were found</td>
+</tr>
+<tr>
+<td>Note</td>
+<td>Note</td>
+</tr>
+<tr>
+<td>Opacity</td>
+<td>Opacity</td>
+</tr>
+<tr>
+<td>PageByPage</td>
+<td>Page by page</td>
+</tr>
+<tr>
+<td>PageCount</td>
+<td>Page count</td>
+</tr>
+<tr>
+<td>PageLayoutMode</td>
+<td>Page layout mode</td>
+</tr>
+<tr>
+<td>PageNumberEntry</td>
+<td>Page number entry</td>
+</tr>
+<tr>
+<td>PageNumberHint</td>
+<td>Enter page number here</td>
+</tr>
+<tr>
+<td>Paragraph</td>
+<td>Paragraph</td>
+</tr>
+<tr>
+<td>Polygon</td>
+<td>Polygon</td>
+</tr>
+<tr>
+<td>Polyline</td>
+<td>Polyline</td>
+</tr>
+<tr>
+<td>PreviousPage</td>
+<td>Previous page</td>
+</tr>
+<tr>
+<td>Print</td>
+<td>Print</td>
+</tr>
+<tr>
+<td>Redo</td>
+<td>Redo</td>
+</tr>
+<tr>
+<td>Rename</td>
+<td>Rename</td>
+</tr>
+<tr>
+<td>Search</td>
+<td>Search</td>
+</tr>
+<tr>
+<td>Shapes</td>
+<td>Shapes</td>
+</tr>
+<tr>
+<td>Square</td>
+<td>Square</td>
+</tr>
+<tr>
+<td>Stamps</td>
+<td>Stamps</td>
+</tr>
+<tr>
+<td>StickyNote</td>
+<td>Sticky note</td>
+</tr>
+<tr>
+<td>StickyNoteIcons</td>
+<td>Sticky note icons</td>
+</tr>
+<tr>
+<td>Stroke</td>
+<td>Stroke</td>
+</tr>
+<tr>
+<td>Text</td>
+<td>Text</td>
+</tr>
+<tr>
+<td>TextMarkups</td>
+<td>Text markups</td>
+</tr>
+<tr>
+<td>Thickness</td>
+<td>Thickness</td>
+</tr>
+<tr>
+<td>TypeSignaturePlaceHolder</td>
+<td>Type your signature</td>
+</tr>
+<tr>
+<td>Undo</td>
+<td>Undo</td>
+</tr>
+<tr>
+<td>UploadImage</td>
+<td>Upload an image</td>
+</tr>
+<tr>
+<td>ZoomMode</td>
+<td>Zoom mode</td>
 </tr>
 </table>
