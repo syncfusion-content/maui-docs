@@ -120,4 +120,4 @@ private void LastPageButton_Clicked(object sender, EventArgs e)
 {% endhighlight %}
 {% endtabs %}
 
-The example project with the page navigation functionalities can be downloaded [here](https://github.com/SyncfusionExamples/maui-pdf-viewer-examples/tree/master/Page%20Navigation).
+The example project with page navigation functionalities can be downloaded [here](https://github.com/SyncfusionExamples/maui-pdf-viewer-examples/tree/master/Page%20Navigation).
