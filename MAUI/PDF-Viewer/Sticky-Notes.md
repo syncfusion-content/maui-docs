@@ -26,8 +26,10 @@ This section will go through how to add sticky note annotations to a PDF page us
 On the built-in toolbar, a sticky note annotation tool is available. Using that, you can add the sticky note annotation to the tapped position. Additionally, the toolbar shows the option to modify the properties of existing or new sticky note annotations. 
 
 The following image represents how to add the sticky note annotations using the toolbar on the desktop. 
+![Sticky Note Desktop](Images/stick.gif)
 
-The following image represents how to add the sticky note annotation using toolbar in mobile. 
+The following image represents how to add the sticky note annotation using toolbar in mobile.
+![Sticky Note Mobile](Images/stickymobile.gif)
 
 ### Add the sticky note without using toolbar
 
