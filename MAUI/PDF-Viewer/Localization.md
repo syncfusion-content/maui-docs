@@ -5,6 +5,7 @@ description: Learn here all about to localize the static text used in the Syncfu
 platform: MAUI
 control: SfPdfViewer
 documentation: ug
+keywords : .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .net maui open pdf, maui pdf viewer, maui pdf view
 ---
 
 # Localization in .NET MAUI PDF Viewer (SfPdfViewer)
