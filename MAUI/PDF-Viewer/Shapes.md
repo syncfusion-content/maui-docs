@@ -161,15 +161,15 @@ void EditSelectedCicleAnnotation(Annotation selectedAnnotation)
 
 ## Border styles for shape annotation
 
-[SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) allows the users to change the shape annotation border style. Currently, it provides support for following border style.
+[SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) allows the users to change the shape annotations border style. Currently, it provides support for following border styles.
 1.	Cloudy
 2.	Solid
 
-N> By default, the shape annotation border style will be solid. The value of `BorderStyle` property will be applicable for square and polygon annotation and it does not affect other shape annotations such as circle, line, arrow and polyline annotations.
+N> By default, border style of the shape annotations is solid. The value of `BorderStyle` property is applicable to square and polygon annotations but does not affect other shape annotations such as circle, line, arrow, and polyline annotations.
 
 ### Draw cloud shape annotation
 
-To draw a cloud shape annotation, set the annotation mode to either [AnnotationMode.Square](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.AnnotationMode.html) or [AnnotationMode.Polygon](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.AnnotationMode.html). Then you should set the `BorderStyle` property of the shape annotation settings to `BorderStyle.Cloudy`. The following sample code illustrates how to draw a rectangle and polygon annotation with the cloud border style.
+To draw a cloud annotation, set the annotation mode to either [AnnotationMode.Square](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.AnnotationMode.html) or [AnnotationMode.Polygon](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.AnnotationMode.html). Then you should set the `BorderStyle` property of the shape annotation settings to `BorderStyle.Cloudy`. The following sample code illustrates how to draw a rectangle and polygon annotation with the cloud border style.
 
 {% tabs %}
 {% highlight C# %}
@@ -214,12 +214,13 @@ void ChangeBorderStyleOfSelectedPolygonAnnotation(Annotation selectedAnnotation)
 {% endhighlight %}
 {% endtabs %}
 
-### Add cloud border style Polygon annotation from UI
+### Add cloud border style polygon annotation from UI
 
-You can add cloud border style polygon annotation to a PDF document using toolbar of the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html). Watch the following GIF video to see how to add a cloud border style polygon annotation on both desktop and mobile platforms.
-
+You can add cloud annotation to a PDF document using the built in toolbar.
+#### Desktop toolbar
 ![Output of desktop cloud](Images/Annotations/desktop-cloud.gif)
 
+#### Mobile toolbar
 ![Output of mobile cloud](Images/Annotations/mobile-cloud.gif)
 
 
