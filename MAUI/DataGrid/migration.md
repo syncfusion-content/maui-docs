@@ -74,6 +74,11 @@ To make migration from [Xamarin SfDataGrid](https://www.syncfusion.com/xamarin-u
 <td>{{'[DataGridProgressState](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridProgressState.html)'| markdownify }}</td>
 <td>Defines constants that specify the possible progressing states of resizing operation.</td>
 </tr>
+<tr>
+<td>{{'[QueryColumnDraggingReason](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.QueryColumnDraggingReason.html)'| markdownify }}</td>
+<td>{{'[DataGridDragAction](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridDragAction.html)'| markdownify }}</td>
+<td>Defines constants that specify the possible progressing states of resizing operation.</td>
+</tr>
 </table>
 
 ## Properties
@@ -238,7 +243,18 @@ To make migration from [Xamarin SfDataGrid](https://www.syncfusion.com/xamarin-u
 <td>This enables users to resize the columns by tapping and dragging the right border of the column headers. 
 </td>
 </tr>
-
+<tr>
+<td>{{'[Reason](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.QueryRowDraggingEventArgs.html#Syncfusion_SfDataGrid_XForms_QueryRowDraggingEventArgs_Reason)'| markdownify }}</td>
+<td>{{`DraggingAction`| markdownify }}</td>
+<td>This enables users to get the column dragging details as a `DataGridDragAction`. 
+</td>
+</tr>
+<tr>
+<td>{{'[ColumnDragViewForegroundColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.DataGridStyle.html#Syncfusion_SfDataGrid_XForms_DataGridStyle_ColumnDragViewForegroundColor)'| markdownify }}</td>
+<td>{{`ColumnDragViewTextColor`| markdownify }}</td>
+<td>This enables users to change the color of the column drag view text color. 
+</td>
+</tr>
 </table>
 
 ## Events
@@ -467,6 +483,12 @@ We have passed the optional parameters such as {{'[canIncludeHiddenColumns](http
 <td>{{'[DataGridColumnResizingEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumnResizingEventArgs.html)'| markdownify }}</td>
 <td>Represents a datagrid column resizing event args.</td>
 </tr>
+
+<tr>
+<td>{{'[QueryColumnDraggingEventArgs ](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.QueryColumnDraggingEventArgs.html)'| markdownify }}</td>
+<td>{{'[DataGridQueryColumnDraggingEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridQueryColumnDraggingEventArgs.html)'| markdownify }}</td>
+<td>Represents a datagrid column drag and drop event args.</td>
+</tr>
 </table>
 
 ## Known issues 
@@ -479,5 +501,4 @@ We have passed the optional parameters such as {{'[canIncludeHiddenColumns](http
 *	Accessibility
 *	Custom selection
 *	Swiping
-*	Column drag and drop
 *	Row drag and drop

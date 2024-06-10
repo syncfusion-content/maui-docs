@@ -557,3 +557,77 @@ By default, the keyboard navigation will be enabled when setting the selection a
 </syncfusion:SfDataGrid>
 {% endhighlight %}
 {% endtabs %}
+
+## Customize selection behavior
+
+The default keyboard selection behaviors can be customized by setting the instance of the custom `DataGridRowSelectionController` to the `SfDataGrid.SelectionController` property.
+
+### Change enter key behavior
+
+By default, while pressing <kbd>Enter</kbd> key, the current cell will be moved to the next focused cell in the same column. You can change the behavior by overriding the `ProcessKeyDown` method in the custom selection controller.
+
+{% tabs %}
+{% highlight XAML %}
+<syncfusion:SfDataGrid SelectionMode="Single"
+                       NavigationMode="Cell"
+                       ItemsSource="{Binding OrderInfoCollection}" >
+</syncfusion:SfDataGrid>
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+dataGrid.SelectionController = new CustomRowSelectionController(this.dataGrid);
+
+public class CustomRowSelectionController : DataGridRowSelectionController
+{
+    public CustomRowSelectionController(SfDataGrid dataGrid) : base(dataGrid)
+    {
+    }
+    protected override void KeyBehaviorChange(KeyEventArgs args, bool isCtrlKeyPressed, bool isShiftKeyPressed)
+    {
+        if (args.Key == KeyboardKey.Enter)
+        {
+            var tabArgs = new KeyEventArgs(KeyboardKey.Tab)
+            {
+                Handled = false
+            };
+            base.ProcessKeyDown(tabArgs, isCtrlKeyPressed, isShiftKeyPressed);
+        }
+        else
+        {
+            base.ProcessKeyDown(args, isCtrlKeyPressed, isShiftKeyPressed);
+        }
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
+The following code snippets show how to disable the default enter key behavior in `SfDataGrid` by writing custom selection controller.
+
+{% tabs %}
+{% highlight XAML %}
+<syncfusion:SfDataGrid SelectionMode="Single"
+                       NavigationMode="Cell"
+                       ItemsSource="{Binding OrderInfoCollection}" >
+</syncfusion:SfDataGrid>
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+dataGrid.SelectionController = new CustomRowSelectionController(this.dataGrid);
+    
+public class CustomRowSelectionController : DataGridRowSelectionController
+{
+    public CustomRowSelectionController(SfDataGrid dataGrid) : base(dataGrid)
+    {
+    }
+    protected override void KeyBehaviorChange(KeyEventArgs args, bool isCtrlKeyPressed, bool isShiftKeyPressed)
+    {
+        if (args.Key == KeyboardKey.Enter)
+        {
+            args.Handled = false;
+            return;
+        }
+        base.ProcessKeyDown(args, isCtrlKeyPressed, isShiftKeyPressed);
+    }
+}
+{% endhighlight %}
+{% endtabs %}

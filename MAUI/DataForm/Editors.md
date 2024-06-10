@@ -205,6 +205,20 @@ Enum and List type property.
 {{'[SfRadioButton](https://help.syncfusion.com/maui/radio-button/overview)'| markdownify }}
 </td>
 </tr>
+<tr>
+<td>
+Segment
+</td>
+<td>
+DataFormSegmentItem
+</td>
+<td>
+Enum and List type property.
+</td>
+<td>
+{{'[SfSegmentedControl](https://www.syncfusion.com/maui-controls/maui-segmented-control)'| markdownify }}
+</td>
+</tr>
 </table>
 
 ## Change the editor for any data type
@@ -1317,6 +1331,137 @@ public class DataFormItemsSourceProvider : IDataFormSourceProvider
 ![Radiogroup editor in .NET MAUI DataForm.](images/editors/dataform-radio-group-editor.png)
 
 N> [View editors sample in GitHub](https://github.com/SyncfusionExamples/maui-dataform/tree/master/DataFormEditors)
+
+## Segment editor
+
+In the `Segment` editor, the [SfSegmentedControl](https://www.syncfusion.com/maui-controls/maui-segmented-control) will be loaded.
+
+#### Changing the ItemsSource of Segment
+
+The [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormListItem.html#Syncfusion_Maui_DataForm_DataFormListItem_ItemsSource) for the segment editor is generated for the `enum` data type property. In order to add the `Segment` editor in the DataForm, you need to register the editor as `DataFormEditorType.Segment` for the required property by using the [RegisterEditor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_RegisterEditor_System_String_Syncfusion_Maui_DataForm_DataFormEditorType_) method.
+
+**Using IDataFormSourceProvider**
+
+{% tabs %}
+{% highlight C# %}
+
+public string Country { get; set; }
+
+public class DataFormItemsSourceProvider : IDataFormSourceProvider
+{
+        public object GetSource(string sourceName)
+    {
+        if (sourceName == "Country")
+        {
+            List<string> list = new List<string>()
+            {
+                "USA",
+                "China",
+                "Italy",
+                "India"
+            };
+			
+            return list;
+        }
+        return new List<string>();
+    }
+}
+
+this.dataForm.ItemsSourceProvider = new DataFormItemsSourceProvider();
+this.dataForm.RegisterEditor("Country", DataFormEditorType.Segment);
+
+{% endhighlight %}
+{% endtabs %}
+
+#### Using event
+
+You can also set [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormListItem.html#Syncfusion_Maui_DataForm_DataFormListItem_ItemsSource) for the segment editor by using the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormListItem.html#Syncfusion_Maui_DataForm_DataFormListItem_ItemsSource) property of the DataFormSegmentItem in the [GenerateDataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_GenerateDataFormItem) event when [AutoGenerateItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_AutoGenerateItems) is true.
+
+N> If [AutoGenerateItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_AutoGenerateItems) is false, you can set the property directly by using the [DataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html). Please refer [here](https://help.syncfusion.com/maui/dataform/dataform-settings#explicitly-create-data-editors) to learn more about creating data editors explicitly.
+
+{% tabs %}
+{% highlight C# %}
+
+this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+
+private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+{
+    if (e.DataFormItem != null && e.DataFormItem.FieldName == "Name" && e.DataFormItem is DataFormSegmentItem segmentItem)
+    {
+        List<string> list = new Lisvt<string>()
+        {
+            "Home",
+            "Food",
+            "Utilities",
+            "Education"
+        };
+        segmentItem.ItemsSource = list;
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+#### Loading the complex type property values in segment
+
+You can display the complex type property values in the segment editor by using the [DisplayMemberPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormListItem.html#Syncfusion_Maui_DataForm_DataFormListItem_DisplayMemberPath) and [SelectedValuePath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormListItem.html?tabs=tabid-1#Syncfusion_Maui_DataForm_DataFormListItem_SelectedValuePath) properties of DataFormSegmentItem. You need to use the [GenerateDataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_GenerateDataFormItem) event to set [DisplayMemberPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormListItem.html#Syncfusion_Maui_DataForm_DataFormListItem_DisplayMemberPath) and [SelectedValuePath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormListItem.html?tabs=tabid-1#Syncfusion_Maui_DataForm_DataFormListItem_SelectedValuePath) property values when [AutoGenerateItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_AutoGenerateItems) is true.
+
+{% tabs %}
+{% highlight C# %}
+
+this.dataForm.ItemsSourceProvider = new DataFormItemsSourceProvider();
+this.dataForm.DataObject = new ContactInfo();
+this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+this.dataForm.RegisterEditor("EmployeeDetails", DataFormEditorType.Segment);
+
+private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+{
+    if (e.DataFormItem != null && e.DataFormItem.FieldName == "EmployeeDetails" && e.DataFormItem is DataFormSegmentItem segmentItem)
+    {   
+        segmentItem.DisplayMemberPath = "ID";
+        segmentItem.SelectedValuePath = "Name";
+    }
+} 
+
+public class DataFormItemsSourceProvider  : IDataFormSourceProvider
+{
+    public object GetSource(string sourceName)
+    {
+        if (sourceName == "EmployeeDetails")
+        {
+            List<EmployeeInfo> details = new List<EmployeeInfo>();
+            details.Add(new EmployeeInfo() { ID = 1, Name =  "Eric"  });
+            details.Add(new EmployeeInfo() { ID = 2, Name = "James"  });
+            details.Add(new EmployeeInfo() { ID = 3, Name = "Jacob"  });
+            details.Add(new EmployeeInfo() { ID = 4, Name = "Lucas"  });
+            details.Add(new EmployeeInfo() { ID = 5, Name = "Mark"  });
+            details.Add(new EmployeeInfo() { ID = 6, Name = "Aldan"  });
+            details.Add(new EmployeeInfo() { ID = 7, Name = "Aldrin"  });
+            details.Add(new EmployeeInfo() { ID = 8, Name = "Alan"  });
+            details.Add(new EmployeeInfo() { ID = 9, Name = "Aaron"  });
+
+            return details;
+        }
+
+        return new List<string>();
+    }
+}
+
+public class ContactInfo
+{
+    [Display(Name ="First Name")]
+    public String FirstName { get; set; } 
+    public string EmployeeDetails { get; set; }
+}
+
+public class EmployeeInfo
+{
+    public int ID { get; set; }
+    public string Name { get; set; }
+}
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Custom editor
 

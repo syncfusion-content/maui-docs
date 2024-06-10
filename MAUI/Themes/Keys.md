@@ -3784,6 +3784,18 @@ This page lists the keys for each control and the element to which it is mapped 
         <td>SfDataGridUnboundRowTextColor<br/><br/></td>
         <td>Text color of the unbound rows in the SfDataGrid.<br/><br/></td>
     </tr>
+    <tr>
+        <td>SfDataGridColumnDraggingIndicatorLineColor<br/><br/></td>
+        <td>Indicator line color of the column drag view in the SfDataGrid.<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfDataGridColumnDragViewBackgroundColor<br/><br/></td>
+        <td>Background color of the column drag view in the SfDataGrid.<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfDataGridColumnDragViewTextColor<br/><br/></td>
+        <td>Text color of the column drag view in the SfDataGrid.<br/><br/></td>
+    </tr>
 </table>
 
 ## SfDataPager
