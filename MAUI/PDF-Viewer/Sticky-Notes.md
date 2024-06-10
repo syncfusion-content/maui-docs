@@ -19,15 +19,20 @@ The following sticky note icon types are currently available in [SfPdfViewer](ht
 
 ## Add sticky notes
 
-This section will go through how to add sticky note annotations to a PDF page interactively as well as programmatically. 
+This section will go through how to add sticky note annotations to a PDF page using toolbar as well as programmatically. 
 
-### Add sticky note annotation with UI Interaction 
+### Add sticky note annotation with toolbar  
+
+On the built-in toolbar, a sticky note annotation tool is available. Using that, you can add the sticky note annotation to the tapped position. Additionally, the toolbar shows the option to modify the properties of existing or new sticky note annotations. 
+
+The following image represents how to add the sticky note annotations using the toolbar on the desktop. 
+
+The following image represents how to add the sticky note annotation using toolbar in mobile. 
+
+### Add the sticky note without using toolbar
 
 You can add sticky note annotation to a PDF document by tapping with touch (or mouse down) on a PDF page. The following steps explains how to add sticky note annotation in a PDF: 
 1.  Set the AnnotationMode property of the SfPdfViewer to StickyNote. This activates the sticky note mode on the control.
-2.  Tap (or mouse down) on a PDF page, where you want to add the sticky note annotation. This will add a sticky note with a default style and a popup will be displayed to write and submit the text.
-3.  Once the sticky note is added, AnnotationMode is automatically changed to None.
-4.  You can later select and edit the annotations, if required.
 
 The following code explains how to enable the sticky note mode
 {% tabs %}
@@ -41,7 +46,12 @@ void EnableStickyNoteMode()
 {% endhighlight %}
 {% endtabs %}
 
-Similarly, refer to the following code to disable the sticky note mode: 
+2.  Tap (or mouse down) on a PDF page, where you want to add the sticky note annotation. This will add a sticky note with a default style and a popup will be displayed to write and submit the text.
+3.  Once the sticky note is added, AnnotationMode is automatically changed to None.
+4.  You can later select and edit the annotations, if required.
+5.  If you need to disable the 'AnnotationMode' of 'StickyNote', you need to change the AnnotationMode to None. refer to the following code to disable the sticky note mode
+
+The following code explains how to disable the sticky note mode:  
 {% tabs %}
 {% highlight C# %}
 // Disable or deactivate the sticky note mode. 
