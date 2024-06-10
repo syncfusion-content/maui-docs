@@ -146,3 +146,5 @@ void EditSelectedFreeTextAnnotation(Annotation selectedAnnotation)
 }
 {% endhighlight %}
 {% endtabs %}
+
+The example project with the free text annotation functionalities can be downloaded [here](https://github.com/SyncfusionExamples/maui-pdf-viewer-examples/tree/master/Annotations/FreeText).

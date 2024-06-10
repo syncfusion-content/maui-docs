@@ -171,3 +171,5 @@ void EditSelectedInkAnnotation(Annotation selectedAnnotation)
 }
 {% endhighlight %}
 {% endtabs %}
+
+The example project with the ink annotation functionalities can be downloaded [here](https://github.com/SyncfusionExamples/maui-pdf-viewer-examples/tree/master/Annotations/Ink).

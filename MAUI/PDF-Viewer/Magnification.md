@@ -46,4 +46,4 @@ PdfViewer.MaxZoomFactor = 2;
 
 N>If the `ZoomFactor` value is set beyond the [MinZoomFactor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_MinZoomFactor) and [MaxZoomFactor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_MaxZoomFactor) limits, then it will not be effective.
 
-The example project with the zoom or magnification functionalities can be downloaded [here](https://github.com/SyncfusionExamples/maui-pdf-viewer-examples).
+The example project with the zoom or magnification functionalities can be downloaded [here](https://github.com/SyncfusionExamples/maui-pdf-viewer-examples/tree/master/Zoom).
