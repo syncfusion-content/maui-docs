@@ -167,7 +167,7 @@ this.Content = chart;
 
 {% endtabs %}
 
-![Smart Labels in MAUI Chart]()
+![Smart Labels in MAUI Chart](DataLabel_images/maui_chart_smart_datalabel.png)
 
 ## Applying Series Brush
 
@@ -413,4 +413,4 @@ this.Content = chart;
 
 {% endtabs %}
 
-![Connector line style in MAUI Chart]()
+![Connector line style in MAUI Chart](DataLabel_images/maui_chart_connector_line_style.png)
