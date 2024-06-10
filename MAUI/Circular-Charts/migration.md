@@ -625,10 +625,6 @@ N> For more information about selection check [here](https://help.syncfusion.com
 * Event or method to notify the legend click and the creation of a legend item.
 * The ability to show/hide corresponding data points by legend item toggle.
 
-**Data label**
-
-* Connector lines customization support.
-
 ## Known issue 
 
 * [iOS] [#9135](https://github.com/dotnet/maui/issues/9135) - The chart legend was taking up a huge amount of vertical space or becoming hidden.
