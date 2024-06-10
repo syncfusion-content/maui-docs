@@ -5,6 +5,7 @@ description: Learn here all about Sticky Note Annotations in Syncfusion .NET MAU
 platform: MAUI
 control: SfPdfViewer
 documentation: ug
+keywords: .net maui imageEditor, .net maui image editing, .net maui crop image.
 ---
 
 # Sticky Note Annotation in .NET MAUI PDF Viewer (SfPdfViewer)
