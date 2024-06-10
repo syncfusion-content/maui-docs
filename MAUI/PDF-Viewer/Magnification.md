@@ -66,7 +66,7 @@ On the desktop built-in toolbar, a magnifying tool is available that shows the c
 
 #### Using zoom mode tool in the mobile 
 
-On the mobile built-in toolbar, by default, the magnifying tool is not visible. When the document `Zoomfactor` is changed, it becomes visible. Using the tool, you can choose the `Fit to Width` or `Fit to Page` option. When an option is selected, the icon will no longer be visible until the zoom percentage changes again. 
+On the mobile built-in toolbar, by default, the magnifying tool is not visible. When the document `ZoomFactor` is changed, it becomes visible. Using the tool, you can choose the `Fit to Width` or `Fit to Page` option. When an option is selected, the icon will no longer be visible until the zoom percentage changes again. 
 
 ![Mobile Zoom Mode Combo box](Images/ZoomModeMobile.jpg)
 
@@ -74,7 +74,7 @@ On the mobile built-in toolbar, by default, the magnifying tool is not visible. 
 
 #### Change to Fit to Page
 
-Set the value for `SfPdfviewer.ZoomMode` to `ZoomMode.FitToPage` enumeration. It will magnify the PDF document so that the entire PDF page is visible in the view port. 
+Set the value for `SfPdfViewer.ZoomMode` to `ZoomMode.FitToPage` enumeration. It will magnify the PDF document so that the entire PDF page is visible in the view port. 
 Refer to the following code example. 
 
 {% tabs %}
@@ -90,7 +90,7 @@ pdfViewer.ZoomMode = ZoomMode.FitToPage;
 
 #### Change to Fit to Width 
 
-You can change the `SfPdfviewer.ZoomMode` using `ZoomMode.FitToWidth` enumeration. It will magnify the PDF document so that the widest page of the PDF document fits the width of the view port. 
+You can change the `SfPdfViewer.ZoomMode` using `ZoomMode.FitToWidth` enumeration. It will magnify the PDF document so that the widest page of the PDF document fits the width of the view port. 
 Refer to the following code example.
 
 {% tabs %}
