@@ -5,6 +5,7 @@ description: Learn here about performing actions using keyboard shortcuts in Syn
 platform: MAUI
 control: SfPdfViewer
 documentation: ug
+keywords: .net maui imageEditor, .net maui image editing, .net maui crop image.
 ---
 
 # Keyboard shortcuts in .NET MAUI PDF Viewer (SfPdfViewer)
