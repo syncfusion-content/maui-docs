@@ -13,7 +13,7 @@ The date picker text display mode is specified in the date picker property enume
 
 ## Fade Mode
 
-The fade mode in the time picker gradually decreases the visibility of unselected items relative to the selected item. This effect is achieved by setting the `TextDisplayMode` property to `Fade` in `SfDatePicker`.
+The fade mode in the date picker gradually decreases the visibility of unselected items relative to the selected item. This effect is achieved by setting the `TextDisplayMode` property to `Fade` in `SfDatePicker`.
 
 {% tabs %}
 
@@ -39,7 +39,7 @@ this.Content = datePicker;
 
 ## Shrink Mode
 
-The shrink mode is used to display the font size of time picker items decreased from the selected item by setting the `TextDisplayMode` property to `Shrink` in `SfDatePicker`.
+The shrink mode is used to display the font size of date picker items decreased from the selected item by setting the `TextDisplayMode` property to `Shrink` in `SfDatePicker`.
 
 {% tabs %}
 
@@ -65,7 +65,7 @@ this.Content = datePicker;
 
 ## FadeAndShrink Mode
 
-The fade and shrink mode are used to decrease the opacity and font size of time picker items from the selected item by setting the `TextDisplayMode` property to `FadeAndShrink` in `SfDatePicker`.
+The fade and shrink mode are used to decrease the opacity and font size of date picker items from the selected item by setting the `TextDisplayMode` property to `FadeAndShrink` in `SfDatePicker`.
 
 {% tabs %}
 
