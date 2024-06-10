@@ -166,9 +166,9 @@ void EditSelectedCicleAnnotation(Annotation selectedAnnotation)
 1.	Cloudy
 2.	Solid
 
-N> By default, border style of the shape annotations is solid. The value of `BorderStyle` property is applicable to square and polygon annotations only and it does not affect other shape annotations such as circle, line, arrow, and polyline annotations.
+N> By default, border style of the shape annotations is solid. The value of `BorderStyle` property is applicable only for square and polygon annotations only and it does not affect other shape annotations such as circle, line, arrow, and polyline annotations.
 
-### Draw cloud shape annotation
+### Draw cloud shaped annotation
 
 To draw a cloud annotation, set the annotation mode to either [AnnotationMode.Square](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.AnnotationMode.html) or [AnnotationMode.Polygon](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.AnnotationMode.html). Then you should set the `BorderStyle` property of the shape annotation settings to `BorderStyle.Cloudy`. The following sample code illustrates how to draw a rectangle and polygon annotation with the cloud border style.
 
@@ -193,9 +193,9 @@ To draw a cloud annotation, set the annotation mode to either [AnnotationMode.Sq
 {% endhighlight %}
 {% endtabs %}
 
-### Change the selected shape annotation border style
+### Change the border style for selected polygon annotation
 
-You can change the border style of the selected shape annotation programmatically by accessing the selected annotation instance. The selected annotation instance may be obtained from the [AnnotationSelected](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationSelected) event. The following example shows how to change the border style of selected polygon annotation. Similarly, you can modify the square annotations border style.
+You can change the border style of the selected polygon annotation programmatically by accessing the selected annotation instance. The selected annotation instance may be obtained from the [AnnotationSelected](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationSelected) event. The following example shows how to change the border style of selected polygon annotation. Similarly, you can modify the square annotations border style.
 
 {% tabs %}
 {% highlight C# %}
