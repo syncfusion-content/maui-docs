@@ -82,54 +82,71 @@ void EditSelectedStickyNoteAnnotation(Annotation selectedAnnotation)
 
 ## Sticky note modal view
 
-The (Sfpdfviewer)[(https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html)] allows receives notifications when creating and editing sticky notes. Notifications are useful for displaying custom dialogs when the sticky note modal view appears or disappears at the application level.
+The sticky note modal view appears when text needs to be input by the user for creating and editing sticky note annotations in Android and iOS platforms. The [Sfpdfviewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) notifies when the modal view is appearing and disappearing through events. The events help you in hiding and showing elements that are part of the app UI that are not necessary as long as the modal view is visible. 
 
-The `Sfpdfviewer.StickyNoteModalViewAppearing` event is triggered whenever the modal view opens for sticky note annotation. You can cancel the opening of the modal view for the current sticky note annotation being edited by setting `e.Cancel = true`, allowing you to display your own custom dialog.
+![Sticky note modal view](Images/Annotations/sticky-note-modal-view.png)
+
+The `Sfpdfviewer.StickyNoteModalViewAppearing` event is triggered whenever the modal view opens for either creating or editing a sticky note annotation.
+
+{% tabs %}
+{% highlight c# %}
+
+pdfviewer.StickyNoteModalViewAppearing += PdfViewer_StickyNoteModalViewAppearing;
+
+private void PdfViewer_StickyNoteModalViewAppearing(object? Sender, AnnotationModalViewAppearingEventArgs e)
+{
+    // Implement the logic to hide unwanted UI elements such as toolbar items add in the app UI. 
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+The `Sfpdfviewer.StickyNoteModalViewDisappearing` event is triggered when the modal view is closing.
+
+{% tabs %}
+{% highlight c# %}
+
+pdfviewer.StickyNoteModalViewDisappearing += PdfViewer_StickyNoteModalViewDisappearing;
+
+Private void PdfViewer_StickyNoteModalViewDisappearing(object? Sender, EventArgs e)
+{
+    // Implement the logic to show the UI elements that were hidden from the StickyNoteModalViewAppearing event handler.
+}
+
+{% endhighlight %} 
+{% endtabs %}
+
+### Supressing the sticky note modal view and implement your own UI
+
+The [Sfpdfviewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) allows you to supress the sticky note modal view and use your own UI in its place. This can be achieved by setting the `AnnotationModalViewAppearingEventArgs.Cancel` property to `true` in the `StickyNoteModalViewAppearing` event handler. 
+
+The below code snippet illustrates supressing the sticky note modal view and using a UI implemented in the app in its place. The sticky note annotation instance that is created or edited can be obtained from the event args. Once the user enters the text in the custom dialog and confirms, the text can be assigned to this sticky note annotation instance. 
 
 {% tabs %}
 {% highlight c# %}
 
 Annotation editedAnnotation;
-CustomIcon customIcon;
 pdfviewer.StickyNoteModalViewAppearing += PdfViewer_StickyNoteModalViewAppearing;
-……
+
 private void PdfViewer_StickyNoteModalViewAppearing(object? Sender, AnnotationModalViewAppearingEventArgs e)
- {
+{
     e.Cancel = true;
     editedAnnotation = e.Annotation;
     // Implement your own UI for sticky note editor and show it.
     ShowCustomDialog();
-    customIcon.IsVisible = false;
-
 }
-….
+
 Private void customDialogOkButton_Clicked(object sender, EventArgs e)
 {
-   //Get the typed text in the custom dialog 
+   //Get the typed text from the custom dialog 
    string newText = customDialog.Text; 
    if(editedAnnotation is StickyNoteAnnotation stickyNote)
-   stickyNote.Text = newText;
+   {
+      stickyNote.Text = newText;
+   }
 }
 
 {% endhighlight %} 
 {% endtabs %}
 
-The `Sfpdfviewer.StickyNoteModalViewDisappearing` event is triggered whenever the modal view for sticky note annotation is closing.
-
-{% tabs %}
-{% highlight c# %}
-
-Pdfviewer.StickyNoteModalViewDisappearing += PdfViewer_StickyNoteModalViewDisappearing;
-….
-Private void PdfViewer_StickyNoteModalViewDisappearing(object? Sender, EventArgs e)
-{
-     // Show your own icons / custom dialog while disappearing the modal view at application level. 
-      customIcon.IsVisible = true;
-}
-
-{% endhighlight %} 
-{% endtabs %}
-
-![Sticky note modal view](Images/Annotations/sticky-note-modal-view.png)
-
-N> These notifications are only available on Android and iOS platforms. 
+N> For WinUI and MacCatalyst platforms, there is no separate modal view to receive text input from the users. As a result, the `StickyNoteModalViewAppearing` and `StickyNoteModalViewDisappearing` events are not applicable for these platforms. 
