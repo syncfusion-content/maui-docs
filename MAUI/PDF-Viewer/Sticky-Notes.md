@@ -5,6 +5,7 @@ description: Learn here all about Sticky Note Annotations in Syncfusion .NET MAU
 platform: MAUI
 control: SfPdfViewer
 documentation: ug
+keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .net maui open pdf, maui pdf viewer, maui pdf view
 ---
 
 # Sticky Note Annotation in .NET MAUI PDF Viewer (SfPdfViewer)
@@ -13,7 +14,7 @@ The sticky note annotation feature of [SfPdfViewer](https://help.syncfusion.com/
 
 ## Types of sticky notes
 
-The following sticky note icon types are currently available in [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html). The icon types can be selected from the `StickyNoteIcon` enumeration.
+The following sticky note icon types are currently available in [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html). The icon types can be selected from the [StickyNoteIcon](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.StickyNoteIcon.html) enumeration.
 
 ![Sticky note icon types](Images/Annotations/sticky-note-icon-types.png)
 

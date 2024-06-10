@@ -5,6 +5,7 @@ description: Learn here about Free Text Annotation in Syncfusion .NET MAUI PDF V
 platform: MAUI
 control: SfPdfViewer
 documentation: ug
+keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .net maui open pdf, maui pdf viewer, maui pdf view
 ---
 
 # Free Text Annotations in .NET MAUI PDF Viewer (SfPdfViewer)
@@ -19,10 +20,10 @@ This section will go through how to add free text annotations to a PDF page inte
 
 You can add free text annotation to a PDF document by tapping with touch (or mouse down) on a PDF page. The following steps explains how to add free text annotation in a PDF.
 
-1.	Set the `AnnotationMode` property of the SfPdfViewer to `FreeText`. It activates the free text annotation mode.
+1.	Set the [AnnotationMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.AnnotationMode.html) property of the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) to [FreeText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.AnnotationMode.html#Syncfusion_Maui_PdfViewer_AnnotationMode_FreeText). It activates the free text annotation mode.
 2.	Tap (or mouse down) on a PDF page, where you want to add the free text annotation. This will add a text box with a default style and allows you to write your text inline in the Desktop platforms. In mobile, a popup will be displayed to write and submit the text.
 3.	You can add multiple free text annotations in this mode in a similar manner.
-4.	Once you have done, set the `AnnotationMode` to [None](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.AnnotationMode.html#Syncfusion_Maui_PdfViewer_AnnotationMode_None). It will disable the annotation mode. 
+4.	Once you have done, set the [AnnotationMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.AnnotationMode.html) to [None](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.AnnotationMode.html#Syncfusion_Maui_PdfViewer_AnnotationMode_None). It will disable the annotation mode. 
 5.	You can later select and edit the annotations if required.
 
 The following code explains how to enable the free text annotation mode.
@@ -32,7 +33,7 @@ The following code explains how to enable the free text annotation mode.
 // Enable or activate the freetext mode.
 void EnableFreetextMode()
 {
-    // Set the annotation mode to FreeText using the `SfPdfViewer` instance.
+    // Set the annotation mode to FreeText using the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) instance.
     PdfViewer.AnnotationMode = AnnotationMode.FreeText;
 }
 {% endhighlight %}
@@ -45,7 +46,7 @@ Similarly, refer to the following code to disable the free text annotation mode.
 // Disable or deactivate the freetext mode.
 void DisableFreetextMode()
 {
-    // Set the annotation mode to none using the `SfPdfViewer` instance.
+    // Set the annotation mode to none using the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) instance.
     PdfViewer.AnnotationMode = AnnotationMode.None;
 }
 {% endhighlight %}
@@ -53,7 +54,7 @@ void DisableFreetextMode()
 
 ### Adding Annotations Programmatically
 
-You can create and add a free Text annotation to a PDF document programmatically using the [AddAnnotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AddAnnotation_Syncfusion_Maui_PdfViewer_Annotation_) method of the `SfPdfViewer`. The following example explains how to create a free text annotation and add it to the first page of a PDF document.
+You can create and add a free Text annotation to a PDF document programmatically using the [AddAnnotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AddAnnotation_Syncfusion_Maui_PdfViewer_Annotation_) method of the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html). The following example explains how to create a free text annotation and add it to the first page of a PDF document.
 
 {% tabs %}
 {% highlight C# %}
@@ -89,7 +90,7 @@ void AddFreeTextAnnotation()
 
 ## Free text annotation settings
 
-In the free text annotation mode, the annotation will be added with a default appearance. You can modify the annotation after it has been added to the pages. However, if you need to define the appearance before adding free text annotation on the document, you can change its default settings using the `AnnotationSettings` property of the `SfPdfViewer`. For that, you need to obtain the default free text annotation settings.
+In the free text annotation mode, the annotation will be added with a default appearance. You can modify the annotation after it has been added to the pages. However, if you need to define the appearance before adding free text annotation on the document, you can change its default settings using the [AnnotationSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.AnnotationSettings.html) property of the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html). For that, you need to obtain the default free text annotation settings.
 
 The following example explains how to obtain the default free text annotation settings and modify some of its properties. Similarly, you can modify all the other properties.
 
@@ -97,7 +98,7 @@ The following example explains how to obtain the default free text annotation se
 {% highlight C# %}
 void CustomizeDefaultFreeTextSettings() 
 { 
-   // Obtain the default free text annotation settings from the `SfPdfViewer` instance. 
+   // Obtain the default free text annotation settings from the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) instance. 
    FreeTextAnnotationSettings freeTextSettings = PdfViewer.AnnotationSettings.FreeText; 
  
    // Modify the default appearance properties. 
