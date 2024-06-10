@@ -5,7 +5,8 @@ description: Learn here all about migrating from Syncfusion Xamarin SfPdfViewer 
 platform: MAUI
 control: SfPdfViewer
 documentation: ug
---- 
+keywords: .net maui imageEditor, .net maui image editing, .net maui crop image.
+---
 
 # Migrate from Xamarin.Forms SfPdfViewer to .NET MAUI SfPdfViewer
 
