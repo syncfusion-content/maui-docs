@@ -7,13 +7,13 @@ control: SfPdfViewer
 documentation: ug
 keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .net maui open pdf, maui pdf viewer, maui pdf view
 ---
-#Show and Hide annotations in .NET MAUI PDF Viewer (SfPdfViewer)
+# Show and Hide annotations in .NET MAUI PDF Viewer (SfPdfViewer)
  
 You can manage the visibility of annotations using the `Hidden` property. It helps you to hide annotations containing confidential data when sharing documents externally or presenting documents, ensuring data privacy and security. Also, it makes it easier to read the documents which are cluttered with more annotations. Like other annotation properties, you can undo and redo the hiding or showing actions. Additionally, when an annotation is locked, it cannot be hidden. Annotations that are hidden will remain hidden during import, export, printing and saving
 ##Hide annotations
 
 To hide annotations in the document, set the `Hidden` property of the annotations to true. 
-###Hide all annotations 
+### Hide all annotations 
 
 While reviewing and presenting documents, all annotations can be hidden to improve the focus on the content and to avoid distraction caused by cluttered annotations. The following example explains how to hide all annotations in a PDF document. 
 
@@ -43,7 +43,7 @@ private void HideAllAnnotationsButton_Clicked(object sender, EventArgs e)
 
 * Similarly, to show all the annotations, set the Hidden property value to false.
 
-###Hide specific annotation 
+### Hide specific annotation 
 
 While collaborating, the `Hidden` property of annotations can be used to show and hide annotations from specific authors. The following example illustrates how to hide annotations from a specific author by accessing the annotation's 'Hidden' property. 
 
@@ -76,6 +76,6 @@ private void HideAnnotationButton_Clicked(object sender, EventArgs e)
 
 * Similarly, to show the annotation, set the `Hidden` property value to false. 
 
-##Note:
+## Note:
 * In iOS and Mac, while printing a document containing hidden annotations, the hidden annotations will be visible in the print preview or the printed document. 
 * When a document containing hidden annotations is loaded, it will not only disappear in the UI but will not be added to the 'SfPdfViewer.Annotations' collection as well. 
