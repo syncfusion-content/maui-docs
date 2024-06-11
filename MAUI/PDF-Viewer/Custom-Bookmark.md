@@ -30,7 +30,7 @@ pdfViewer.IsOutlineViewVisible = true;
 
 ## Accessing custom bookmarks collection
 
-To access the custom bookmarks, you can use the `CustomBookmarks` collection. This property provides the list of custom bookmarks in the PDF. 
+To access the custom bookmarks, you can use the [CustomBookmarks](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_CustomBookmarks) collection. This property provides the list of custom bookmarks in the PDF. 
 
 {% tabs %}
 {% highlight c# %}
@@ -42,7 +42,7 @@ var customBookmarks = pdfViewer.CustomBookmarks;
 
 ## Add , Edit and Remove custom bookmark
 
-To add, edit, or remove custom bookmarks in a PDF viewer, you can use the `CustomBookmarks` collection. This property provides access to the collection of custom bookmarks that can be manipulated to modify the bookmarks displayed in the viewer's bookmark view.
+To add, edit, or remove custom bookmarks in a PDF viewer, you can use the [CustomBookmarks](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_CustomBookmarks) collection. This property provides access to the collection of custom bookmarks that can be manipulated to modify the bookmarks displayed in the viewer's bookmark view.
 
 ### Add custom bookmarks using the bookmark pane
 
@@ -52,7 +52,7 @@ Custom bookmarks can be added using the floating button in the bookmark pane.
 
 ### Adding a Custom Bookmark programmatically
 
-To add a custom bookmark, you can create a new instance of Bookmark and add it to the `CustomBookmarks` collection:
+To add a custom bookmark, you can create a new instance of Bookmark and add it to the [CustomBookmarks](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_CustomBookmarks) collection:
 
 {% tabs %}
 {% highlight c# %}
@@ -77,7 +77,7 @@ Tap the context menu button on the custom bookmark to be edited and choose Renam
 
 ### Rename a Custom Bookmark programmatically
 
-To rename an existing custom bookmark, you can retrieve the bookmark from the `CustomBookmarks` collection and modify its properties:
+To rename an existing custom bookmark, you can retrieve the bookmark from the [CustomBookmarks](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_CustomBookmarks) collection and modify its properties:
 
 {% tabs %}
 {% highlight c# %}
@@ -98,7 +98,7 @@ Tap the context menu button on the custom bookmark to be removed and tap `Delete
 
 ### Removing a Custom Bookmark programmatically
 
-To remove a custom bookmark, you can remove it directly from the `CustomBookmarks` collection:
+To remove a custom bookmark, you can remove it directly from the [CustomBookmarks](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_CustomBookmarks) collection:
 
 {% tabs %}
 {% highlight c# %}
@@ -117,13 +117,13 @@ if (bookmarkToRemove != null)
 
 ### Navigating using UI
 
-As mentioned above, you can show the outline view by setting the `IsOultineViewVisible` property to `true`. When the outline view is showing, you can tap on any bookmark to navigate to the destination pointed to that bookmark. 
+As mentioned above, you can show the outline view by setting the [IsOutlineViewVisible](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_IsOutlineViewVisible) property to `true`. When the outline view is showing, you can tap on any bookmark to navigate to the destination pointed to that bookmark. 
 
 ![Custom bookmark in .NET MAUI PDF Viewer](Images\custom-bookmark.png)
 
 ### Navigating programmatically
 
-The PDF viewer allows the users to navigate to an custom bookmark using the `GoToBookmark` method. The below code snippet illustrates the same.
+The PDF viewer allows the users to navigate to an custom bookmark using the [GoToBookmark](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_GoToBookmark_Syncfusion_Maui_PdfViewer_Bookmark_) method. The below code snippet illustrates the same.
 
 {% tabs %}
 {% highlight c# %}
