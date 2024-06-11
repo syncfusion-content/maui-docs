@@ -276,11 +276,10 @@ T> The `DataItem` can be used to access the data linked to the associated busine
 <chart:SfCartesianChart>
     <chart:SfCartesianChart.Resources>
         <DataTemplate x:Key="trackballLabelTemplate">
-            <HorizontalStackLayout Spacing="5">
+            <HorizontalStackLayout>
                 <Image Source="image.png" WidthRequest="20" HeightRequest="20"/>
-                <Label Text="{Binding DataItem.Name}" FontSize="15"  HorizontalOptions="Center"  TextColor="White"/>
-                <Label Text=" : " FontSize="15"  HorizontalOptions="Center" TextColor="White" />
-                <Label Text="{Binding DataItem.YValues,StringFormat='{0}M'}" FontSize="15" HorizontalOptions="Center" TextColor="White" />
+                <Label Text="{Binding Series.Label, StringFormat=' {0}'}" FontSize="12" HorizontalOptions="Center"  TextColor="White"/>
+                <Label Text="{Binding DataItem.YValues,StringFormat=': {0}M'}" FontSize="12" HorizontalOptions="Center" TextColor="White"/>
             </HorizontalStackLayout>         
         </DataTemplate>
     </chart:SfCartesianChart.Resources>
@@ -292,17 +291,20 @@ T> The `DataItem` can be used to access the data linked to the associated busine
     <chart:LineSeries ItemsSource="{Binding Data1}" 
                       TrackballLabelTemplate ="{StaticResource trackballLabelTemplate}"
                       XBindingPath="XValues"
-                      YBindingPath="YValues"/>
+                      YBindingPath="YValues"
+                      Label="Thomas"/>
 
     <chart:LineSeries ItemsSource="{Binding Data2}" 
                       TrackballLabelTemplate ="{StaticResource trackballLabelTemplate}"
                       XBindingPath="XValues"
-                      YBindingPath="YValues"/>
+                      YBindingPath="YValues"
+                      Label="Elizabeth"/>
 
     <chart:LineSeries ItemsSource="{Binding Data3}" 
                       TrackballLabelTemplate ="{StaticResource trackballLabelTemplate}"
                       XBindingPath="XValues"
-                      YBindingPath="YValues"/>
+                      YBindingPath="YValues"
+                      Label="Andrew"/>
                       
 </chart:SfCartesianChart>
 
@@ -319,23 +321,23 @@ LineSeries series1 = new LineSeries();
 series1.ItemsSource = new ViewModel().Data1;
 series1.XBindingPath = "XValues";
 series1.YBindingPath = "YValues";
+series1.Label = "Thomas";
 
 LineSeries series2 = new LineSeries();
 series2.ItemsSource = new ViewModel().Data2;
 series2.XBindingPath = "XValues";
 series2.YBindingPath = "YValues";
+series2.Label = "Elizabeth";
 
 LineSeries series3 = new LineSeries();
 series3.ItemsSource = new ViewModel().Data3;
 series3.XBindingPath = "XValues";
 series3.YBindingPath = "YValues";
+series3.Label = "Andrew";
 
 DataTemplate trackballLabelTemplate = new DataTemplate(() =>
 {
-    HorizontalStackLayout horizontalStackLayout = new HorizontalStackLayout
-    {
-        Spacing = 5
-    };
+    HorizontalStackLayout horizontalStackLayout = new HorizontalStackLayout();
 
     Image image = new Image
     {
@@ -350,28 +352,19 @@ DataTemplate trackballLabelTemplate = new DataTemplate(() =>
         HorizontalOptions = LayoutOptions.Center,
         TextColor = Colors.White
     };
-    label1.SetBinding(Label.TextProperty,"DataItem.Name");
+    label1.SetBinding(Label.TextProperty, new Binding("Series.Label", stringFormat: " {0}"));
 
     Label label2 = new Label
     {
-        Text = " : ",
         FontSize = 15,
         HorizontalOptions = LayoutOptions.Center,
         TextColor = Colors.White
     };
-
-    Label label3 = new Label
-    {
-        FontSize = 15,
-        HorizontalOptions = LayoutOptions.Center,
-        TextColor = Colors.White
-    };
-    label3.SetBinding(Label.TextProperty," DataItem.YValues", stringFormat: "{0}M");
+    label2.SetBinding(Label.TextProperty, new Binding("DataItem.YValues", stringFormat: ": {0}M"));
 
     horizontalStackLayout.Add(image);
     horizontalStackLayout.Add(label1);
     horizontalStackLayout.Add(label2);
-    horizontalStackLayout.Add(label3);
 
     return horizontalStackLayout;
 });
