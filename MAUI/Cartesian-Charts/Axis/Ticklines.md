@@ -5,6 +5,7 @@ description: Learn here all about chart axis tick line and its customization in 
 platform: maui
 control: SfCartesianChart
 documentation: ug
+keywords: .net maui chart tick lines, .net maui chart tick customization, .net maui chart tickline guide, syncfusion maui chart tick lines, cartesian chart tick lines maui, .net maui chart axis tick lines, customize tick lines .net maui chart.
 ---
 
 # Tick Lines in .NET MAUI Chart
@@ -106,8 +107,8 @@ Both major and minor tick lines can be customized by using the [MajorTickStyle](
     <chart:NumericalAxis MinorTicksPerInterval="4">
         <chart:NumericalAxis.MajorTickStyle>
             <chart:ChartAxisTickStyle Stroke="Red"
-									  StrokeWidth="1"
-									  TickSize="10"/>
+                                    StrokeWidth="1"
+                                    TickSize="10"/>
         </chart:NumericalAxis.MajorTickStyle>
         
         <chart:NumericalAxis.MinorTickStyle>

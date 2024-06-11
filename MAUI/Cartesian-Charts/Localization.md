@@ -5,6 +5,7 @@ description: Learn here all about Localization support in Syncfusion .NET MAUI C
 platform: maui
 control: SfCartesianChart
 documentation: ug
+keywords: .net maui chart localization, sfCartesianchart localization in .net maui, .net maui chart localization support, .net maui chart language settings, maui chart language support.
 ---
 
 # Localization in .NET MAUI Chart (SfCartesianChart)

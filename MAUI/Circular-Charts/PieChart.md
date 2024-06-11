@@ -18,9 +18,9 @@ N> The circular chart has [Series](https://help.syncfusion.com/cr/maui/Syncfusio
 {% highlight xaml %}
 
 <chart:SfCircularChart>
-        <chart:PieSeries ItemsSource="{Binding Data}" 
-                        XBindingPath="Product" 
-                        YBindingPath="SalesRate"/>
+    <chart:PieSeries ItemsSource="{Binding Data}" 
+                     XBindingPath="Product" 
+                     YBindingPath="SalesRate"/>
 </chart:SfCircularChart>
 
 {% endhighlight %}
@@ -34,6 +34,7 @@ series.XBindingPath = "Product";
 series.YBindingPath = "SalesRate";
 
 chart.Series.Add(series);
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -51,10 +52,9 @@ The rendering size of the [PieSeries](https://help.syncfusion.com/cr/maui/Syncfu
 
 <chart:SfCircularChart>
     <chart:PieSeries ItemsSource="{Binding Data}" 
-                    XBindingPath="Product" 
-                    YBindingPath="SalesRate"
-                    Radius = "0.9"/>
-    </chart:SfCircularChart.Series>            
+                     XBindingPath="Product" 
+                     YBindingPath="SalesRate"
+                     Radius = "0.9"/>            
 </chart:SfCircularChart>
 
 {% endhighlight %}
@@ -69,6 +69,7 @@ series.YBindingPath = "SalesRate";
 series.Radius = 0.9;
 
 chart.Series.Add(series);
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -86,10 +87,10 @@ By using the [StartAngle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Ch
 
 <chart:SfCircularChart>
     <chart:PieSeries StartAngle="180"
-				EndAngle="360"
-				ItemsSource="{Binding Data}"
-				XBindingPath="Product"
-				YBindingPath="SalesRate" />
+                     EndAngle="360"
+                     ItemsSource="{Binding Data}"
+                     XBindingPath="Product"
+                     YBindingPath="SalesRate" />
 </chart:SfCircularChart>
 
 {% endhighlight %}
@@ -105,6 +106,7 @@ series.StartAngle = 180;
 series.EndAngle = 360;
 
 chart.Series.Add(series);
+this.Content = chart;
 
 {% endhighlight %}
 

@@ -1,10 +1,11 @@
 ---
 layout: post
 title: Bar Chart in .NET MAUI Chart control | Syncfusion
-description: Learn here all about bar chart support in Syncfusion .NET MAUI Chart (SfCartesianChart) control.
+description: Learn here all about bar chart and its features in Syncfusion .NET MAUI Chart (SfCartesianChart) control.
 platform: maui
 control: SfCartesianChart
 documentation: ug
+keywords: .net maui bar chart, maui bar chart, .net maui chart bar type, bar chart customization .net maui, syncfusion maui bar chart, cartesian bar chart maui, .net maui chart bar visualization.
 ---
 
 # Bar Chart in .NET MAUI Chart
@@ -19,7 +20,7 @@ N> The cartesian chart has Series as its default content.
 
 {% highlight xaml %}
 
-  <chart:SfCartesianChart  x:Name="chart" IsTransposed="True">
+<chart:SfCartesianChart x:Name="chart" IsTransposed="True">
 
     <chart:SfCartesianChart.XAxes>
         <chart:CategoryAxis />
@@ -30,8 +31,8 @@ N> The cartesian chart has Series as its default content.
     </chart:SfCartesianChart.YAxes>   
 
     <chart:ColumnSeries ItemsSource="{Binding Data}"
-						XBindingPath="XValue"
-						YBindingPath="YValue"/>
+                        XBindingPath="XValue"
+                        YBindingPath="YValue"/>
 
 </chart:SfCartesianChart>
 
@@ -60,7 +61,7 @@ this.Content = chart;
 
 {% endtabs %}
 
-![Bar chart type in MAUI Chart](Chart-Types_images/maui_bar_chart.png)
+![Bar chart type in MAUI Chart](Chart-Types-images/maui_bar_chart.png)
 
 ## Spacing and Width
 
@@ -83,10 +84,10 @@ The [Width](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ColumnSer
     </chart:SfCartesianChart.YAxes>  
 
     <chart:ColumnSeries ItemsSource="{Binding Data}"
-						XBindingPath="XValue"
-						YBindingPath="YValue"
-						Spacing="0.3"
-						Width="0.5"/>
+                        XBindingPath="XValue"
+                        YBindingPath="YValue"
+                        Spacing="0.3"
+                        Width="0.5"/>
 
 </chart:SfCartesianChart>
 
@@ -117,4 +118,4 @@ this.Content = chart;
 
 {% endtabs %}
 
-![Bar segment spacing in MAUI Chart](Chart-Types_images/maui_bar_chart_with_segment_spacing.png)
+![Bar segment spacing in MAUI Chart](Chart-Types-images/maui_bar_chart_with_segment_spacing.png)

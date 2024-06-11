@@ -157,7 +157,7 @@ The following table illustrates the API migration for the chart.
 </tr>
 <tr>
 <td>TickPosition</td>
-<td><em>Upcoming</em></td>
+<td><em>TickPosition</em></td>
 </tr>
 <tr>
 <td>MaximumLabels</td>
@@ -639,7 +639,6 @@ chart.TooltipBehavior = tooltip;
 **Axis**
 
 * DateTime category axis support.
-* Align the axis labels and tick inside the series clip rect.
 * Range style customization.
 * Event or method to notify the axis label click.
 
@@ -647,8 +646,7 @@ chart.TooltipBehavior = tooltip;
 
 * Title support for legend. 
 * Support to enable or disable the legend icon visibility.
-* Legend items wrap and floating support.
-* Maximum width support for Legend.
+* Legend floating support.
 * Event or method to notify the legend click and the creation of a legend item.
 
 ## Known issue 

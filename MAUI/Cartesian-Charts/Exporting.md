@@ -5,6 +5,7 @@ description: Learn here how to export the chart view as an image and stream in t
 platform: maui
 control: SfCartesianChart
 documentation: ug
+keywords: .net maui chart exporting, maui chart exporting, .net maui chart exporting options, syncfusion maui chart exporting, .net maui chart exporting visualization, .net maui cartesian chart export support.
 ---
 
 # Exporting in .NET MAUI Chart

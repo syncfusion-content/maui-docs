@@ -5,6 +5,7 @@ description: Learn here all about stacked column and bar chart support in Syncfu
 platform: maui
 control: SfCartesianChart
 documentation: ug
+keywords: .net maui stacked column chart, maui stacked column chart, stacked column chart customization .net maui, syncfusion maui stacked column chart, cartesian stacked column chart maui, .net maui chart stacked column visualization, .net maui cumulative column chart.
 ---
 
 # Stacked Column Chart in .NET MAUI Chart
@@ -31,14 +32,11 @@ N> The Cartesian chart has [Series](https://help.syncfusion.com/cr/maui/Syncfusi
 
     <chart:StackingColumnSeries ItemsSource="{Binding Data}"
                                 XBindingPath="Name"
-                                YBindingPath="Value"        
-    </chart:StackingColumnSeries>
+                                YBindingPath="Value"/>        
 
     <chart:StackingColumnSeries ItemsSource="{Binding Data1}"
                                 XBindingPath="Name"
-                                YBindingPath="Value"         
-    </chart:StackingColumnSeries>
-
+                                YBindingPath="Value"/>         
 </chart:SfCartesianChart>
 
 
@@ -92,20 +90,17 @@ N> If the [GroupingLabel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Ch
     <chart:StackingColumnSeries XBindingPath="Name"
                                 YBindingPath="Value"
                                 ItemsSource="{Binding Data}"
-                                GroupingLabel="GroupOne"
-    </chart:StackingColumnSeries>
+                                GroupingLabel="GroupOne"/>
 
     <chart:StackingColumnSeries XBindingPath="Name"
                                 YBindingPath="Value"
                                 ItemsSource="{Binding Data1}"
-                                GroupingLabel="GroupTwo"
-    </chart:StackingColumnSeries>
+                                GroupingLabel="GroupTwo"/>
 
     <chart:StackingColumnSeries XBindingPath="Name"
                                 YBindingPath="Value"
                                 ItemsSource="{Binding Data2}"
-                                GroupingLabel="GroupOne"
-    </chart:StackingColumnSeries>
+                                GroupingLabel="GroupOne"/>
 
 </chart:SfCartesianChart>
 
@@ -134,7 +129,7 @@ StackingColumnSeries series1 = new StackingColumnSeries()
     ItemsSource = new ViewModel().Data1,
     GroupingLabel="GroupTwo"
 };
-StackingColumnSeries  series = new  StackingColumnSeries()
+StackingColumnSeries series2 = new  StackingColumnSeries()
 {
     XBindingPath = "Name",
     YBindingPath = "Value",
@@ -143,7 +138,8 @@ StackingColumnSeries  series = new  StackingColumnSeries()
 };
 
 chart.Series.Add(series);
-chart.Series.Add(series1);     
+chart.Series.Add(series1); 
+chart.Series.Add(series2);      
 this.Content = chart;
 
 {% endhighlight %}
