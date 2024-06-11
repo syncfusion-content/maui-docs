@@ -202,9 +202,10 @@ The visibility of cartesian series can be controlled by tapping the legend item 
 
 {% endtabs %}
 
-
 ## Legend maximum size request
 To set the maximum size request for the legend view, override the [GetMaximumSizeCoefficient]() protected method in [ChartLegend](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLegend.html) class. The value should be between 0 and 1, representing the maximum size request, not the desired size for the legend items layout.
+
+{% tabs %}
 
 {% highlight xaml %}
     
@@ -234,7 +235,6 @@ To set the maximum size request for the legend view, override the [GetMaximumSiz
 {% endhighlight %}
 
 {% endtabs %}
-
 
 ## Items layout
 The [ItemsLayout]() property is used to customize the arrangement and position of each legend item. The default value is `null`. This property accepts any layout type.
@@ -313,7 +313,6 @@ N> The BindingContext of the template is the corresponding underlying legend ite
 
 {% endhighlight %}
 
-
 {% highlight c# %}
 
     SfCartesianChart chart = new SfCartesianChart();
@@ -329,7 +328,6 @@ N> The BindingContext of the template is the corresponding underlying legend ite
 {% endtabs %}
 
 ![Legend layout for cartesian chart](Legend-images/cartesian_chart.png)
-
 
 ## Limitations
 * Do not add items explicitly.

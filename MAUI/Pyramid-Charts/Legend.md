@@ -163,6 +163,8 @@ The legend can be positioned to the left, right, top, or bottom of the chart are
 ## Legend maximum size request
 To set the maximum size request for the legend view, override the [GetMaximumSizeCoefficient]() protected method in [ChartLegend](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLegend.html) class. The value should be between 0 and 1, representing the maximum size request, not the desired size for the legend items layout.
 
+{% tabs %}
+
 {% highlight xaml %}
 
     <chart:SfPolarChart >
@@ -198,7 +200,6 @@ To set the maximum size request for the legend view, override the [GetMaximumSiz
 The [ItemsLayout]() property is used to customize the arrangement and position of each legend item. The default value is `null`. This property accepts any layout type.
 
 For more details about the layout alignment refer to this [article]().
-
 
 {% tabs %}
 
@@ -249,7 +250,6 @@ For more details about the layout alignment refer to this [article]().
 The [ChartLegend](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLegend.html) supports customizing the appearance of legend items using the [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLegend.html#Syncfusion_Maui_Charts_ChartLegend_ItemTemplate) property. The default value of ItemsTemplate is `null`.
 
 N> The BindingContext of the template is the corresponding underlying legend item provided in the ChartLegendItem class.
-
 
 {% tabs %}
 
@@ -306,5 +306,3 @@ N> The BindingContext of the template is the corresponding underlying legend ite
 * For better UX, arrange items vertically for left and right dock positions, and vice versa for top and bottom dock positions.
 * If the layout's measured size is larger than the MaximumHeightRequest, scrolling will be enabled.
 * If MaximumHeightRequest is set to 1 and the chart's available size is smaller than the layout's measured size, the series may not have enough space to draw properly.
-
-
