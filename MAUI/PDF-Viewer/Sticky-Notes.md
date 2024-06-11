@@ -103,7 +103,7 @@ void AddStickyNote()
 
 ## Sticky note annotation settings 
 
-In the sticky note annotation mode, the annotation will be added with a default appearance. You can modify the annotation after it has been added to the pages. However, if you need to define the appearance before adding sticky note annotations to the document, you can change its default settings using the [SfPdfViewer.AnnotationSettings.StickyNote](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationSettings) For that, you need to obtain the default sticky note annotation settings.
+In the sticky note annotation mode, the annotation will be added with a default appearance. You can modify the annotation after it has been added to the pages. However, if you need to define the appearance before adding sticky note annotations to the document, you can change its default settings using theÂ [SfPdfViewer.AnnotationSettings.StickyNote](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationSettings) For that, you need to obtain the default sticky note annotation settings.
 
 The following example explains how to obtain the default sticky note annotation settings and modify some of their properties. Similarly, you can modify all the other properties.
 
@@ -154,11 +154,11 @@ void EditSelectedStickyNoteAnnotation(Annotation selectedAnnotation)
 
 ## Sticky note modal view
 
-The sticky note modal view appears when text needs to be input by the user for creating and editing sticky note annotations in Android and iOS platforms. The [Sfpdfviewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) notifies when the modal view is appearing and disappearing through events. The events help you in hiding and showing elements that are part of the app UI that are not necessary as long as the modal view is visible. 
+The sticky note modal view appears when text needs to be input by the user for creating and editing sticky note annotations in Android and iOS platforms. The [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) notifies when the modal view is appearing and disappearing through events. The events help you in hiding and showing elements that are part of the app UI that are not necessary as long as the modal view is visible. 
 
 ![Sticky note modal view](Images/Annotations/sticky-note-modal-view.png)
 
-The `Sfpdfviewer.StickyNoteModalViewAppearing` event is triggered whenever the modal view opens for either creating or editing a sticky note annotation.
+The `SfPdfViewer.StickyNoteModalViewAppearing` event is triggered whenever the modal view opens for either creating or editing a sticky note annotation.
 
 {% tabs %}
 {% highlight c# %}
@@ -173,7 +173,7 @@ private void PdfViewer_StickyNoteModalViewAppearing(object? Sender, AnnotationMo
 {% endhighlight %}
 {% endtabs %}
 
-The `Sfpdfviewer.StickyNoteModalViewDisappearing` event is triggered when the modal view is closing.
+The `SfPdfViewer.StickyNoteModalViewDisappearing` event is triggered when the modal view is closing.
 
 {% tabs %}
 {% highlight c# %}
@@ -188,11 +188,11 @@ Private void PdfViewer_StickyNoteModalViewDisappearing(object? Sender, EventArgs
 {% endhighlight %} 
 {% endtabs %}
 
-### Supressing the sticky note modal view and implement your own UI
+### Suppressing the sticky note modal view and implementing your own UI
 
-The [Sfpdfviewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) allows you to supress the sticky note modal view and use your own UI in its place. This can be achieved by setting the `AnnotationModalViewAppearingEventArgs.Cancel` property to `true` in the `StickyNoteModalViewAppearing` event handler. 
+The [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) allows you to suppress the sticky note modal view and use your own UI in its place. This can be achieved by setting the `AnnotationModalViewAppearingEventArgs.Cancel` property to `true` in the `StickyNoteModalViewAppearing` event handler. 
 
-The below code snippet illustrates supressing the sticky note modal view and using a UI implemented in the app in its place. The sticky note annotation instance that is created or edited can be obtained from the event args. Once the user enters the text in the custom dialog and confirms, the text can be assigned to this sticky note annotation instance. 
+The below code snippet illustrates suppressing the sticky note modal view and using a UI implemented in the app in its place. The sticky note annotation instance that is created or edited can be obtained from the event args. Once the user enters the text in the custom dialog and confirms, the text can be assigned to this sticky note annotation instance. 
 
 {% tabs %}
 {% highlight c# %}
