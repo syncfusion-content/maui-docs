@@ -147,3 +147,74 @@ void EditSelectedFreeTextAnnotation(Annotation selectedAnnotation)
 }
 {% endhighlight %}
 {% endtabs %}
+
+## Free text modal view
+
+The free text modal view appears when text needs to be input by the user for creating and editing free text annotations in Android and iOS platforms. The [Sfpdfviewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) notifies when the modal view is appearing and disappearing through events. The events help you in hiding and showing elements that are part of the app UI that are not necessary as long as the modal view is visible.
+
+![Free text modal view](Images/Annotations/free-text-modal-view.png)
+
+The `Sfpdfviewer.FreeTextModalViewAppearing` event is triggered whenever the modal view opens for either creating or editing a free text annotation.
+
+{% tabs %}
+{% highlight c# %}
+
+pdfviewer.FreeTextModalViewAppearing += PdfViewer_FreeTextModalViewAppearing;
+
+private void PdfViewer_FreeTextModalViewAppearing(object? Sender, AnnotationModalViewAppearingEventArgs e)
+{
+    // Implement the logic to hide unwanted UI elements such as toolbar items add in the app UI. 
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+The `Sfpdfviewer.FreeTextModalViewDisappearing` event is triggered when the modal view is closing.
+
+{% tabs %}
+{% highlight c# %}
+
+pdfviewer.FreeTextModalViewDisappearing += PdfViewer_FreeTextModalViewDisappearing;
+
+Private void PdfViewer_FreeTextModalViewDisappearing(object? Sender, EventArgs e)
+{
+    // Implement the logic to show the UI elements that were hidden from the FreeTextModalViewAppearing event handler.
+}
+
+{% endhighlight %} 
+{% endtabs %}
+
+### Supressing the free text modal view and implement your own UI
+
+The [Sfpdfviewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) allows you to supress the free text modal view and use your own UI in its place. This can be achieved by setting the `AnnotationModalViewAppearingEventArgs.Cancel` property to `true` in the `FreeTextModalViewAppearing` event handler. 
+
+The below code snippet illustrates supressing the free text modal view and using a UI implemented in the app in its place. The free text annotation instance that is created or edited can be obtained from the event args. Once the user enters the text in the custom dialog and confirms, the text can be assigned to this free text annotation instance. 
+
+{% tabs %}
+{% highlight c# %}
+
+Annotation editedAnnotation;
+pdfviewer.FreeTextModalViewAppearing += PdfViewer_FreeTextModalViewAppearing;
+
+private void PdfViewer_FreeTextModalViewAppearing(object? Sender, AnnotationModalViewAppearingEventArgs e)
+{
+    e.Cancel = true;
+    editedAnnotation = e.Annotation;
+    // Implement your own UI for free text editor and show it.
+    ShowCustomDialog();
+}
+
+Private void customDialogOkButton_Clicked(object sender, EventArgs e)
+{
+   //Get the typed text from the custom dialog 
+   string newText = customDialog.Text; 
+   if(editedAnnotation is FreeTextAnnotation freeText)
+   {
+      freeText.Text = newText;
+   }
+}
+
+{% endhighlight %} 
+{% endtabs %}
+
+N> For WinUI and MacCatalyst platforms, there is no separate modal view to receive text input from the users. As a result, the `FreeTextModalViewAppearing` and `FreeTextModalViewDisappearing` events are not applicable for these platforms. 
