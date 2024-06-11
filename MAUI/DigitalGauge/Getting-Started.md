@@ -113,5 +113,5 @@ In .NET MAUI DigitalGauge user can display value using `Text` property.
 
 {% endtabs %}
 
-
+![getting-started](Images\getting-started.png)
 
