@@ -119,7 +119,13 @@ void EditSelectedStampAnnotation(Annotation selectedAnnotation)
 
 The custom stamp modal view appears when the user wants to create a custom stamp from a typed text. The [Sfpdfviewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) notifies when the modal view is appearing and disappearing through events. The events help you in hiding and showing elements that are part of the app UI that are not necessary as long as the modal view is visible.
 
-![Custom stamp modal view](Images/Annotations/custom-stamp-modal-view.png)
+### Custom stamp modal view mobile
+
+![Custom stamp modal view mobile](Images/Annotations/custom-stamp-modal-view-mobile.png)
+
+### Custom stamp modal view desktop
+
+![Custom stamp modal view desktop](Images/Annotations/custom-stamp-modal-view-mobile-desktop.png)
 
 The `Sfpdfviewer.CustomStampModalViewAppearing` event is triggered when the modal view opens for creating a custom stamp.
 
