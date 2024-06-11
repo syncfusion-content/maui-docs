@@ -5,6 +5,7 @@ description: Learn here all about stacked area chart support in Syncfusion .NET 
 platform: maui
 control: SfCartesianChart
 documentation: ug
+keywords: .net maui stacked area chart, maui stacked area chart, stacked area chart customization .net maui, syncfusion maui stacked area chart, cartesian stacked area chart maui, .net maui chart stacked area visualization, .net maui cumulative area chart.
 ---
 
 # Stacked Area Chart in .NET MAUI Chart
@@ -20,7 +21,7 @@ N> The Cartesian chart has a [Series](https://help.syncfusion.com/cr/maui/Syncfu
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-
+...
     <chart:SfCartesianChart.XAxes>
     <chart:CategoryAxis/>
     </chart:SfCartesianChart.XAxes>
@@ -30,24 +31,20 @@ N> The Cartesian chart has a [Series](https://help.syncfusion.com/cr/maui/Syncfu
     </chart:SfCartesianChart.YAxes>
 
     <chart:StackingAreaSeries ItemsSource="{Binding Data1}"
-                                XBindingPath="Year"
-                                YBindingPath="Value"        
-    </chart:StackingAreaSeries>
+                              XBindingPath="Year"
+                              YBindingPath="Value"/>        
 
     <chart:StackingAreaSeries ItemsSource="{Binding Data2}"
-                                XBindingPath="Year"
-                                YBindingPath="Value"         
-    </chart:StackingAreaSeries>
+                              XBindingPath="Year"
+                              YBindingPath="Value"/>         
 
     <chart:StackingAreaSeries ItemsSource="{Binding Data3}"
-                                XBindingPath="Year"
-                                YBindingPath="Value"         
-    </chart:StackingAreaSeries>
+                              XBindingPath="Year"
+                              YBindingPath="Value"/>         
 
     <chart:StackingAreaSeries ItemsSource="{Binding Data4}"
-                                XBindingPath="Year"
-                                YBindingPath="Value"         
-    </chart:StackingAreaSeries>
+                              XBindingPath="Year"
+                              YBindingPath="Value"/>         
 
 </chart:SfCartesianChart>
 

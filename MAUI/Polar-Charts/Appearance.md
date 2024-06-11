@@ -21,10 +21,9 @@ By default, the chart applies a set of predefined brushes to the series in a spe
 <chart:SfPolarChart> 
 . . .
     <chart:PolarLineSeries ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Tree"/> 
-
 	<chart:PolarLineSeries ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Weed"/> 
+	<chart:PolarLineSeries ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Flower"/>
 
-	<chart:PolarLineSeries ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Flower"/> 
 </chart:SfPolarChart>
 
 {% endhighlight %}
@@ -112,9 +111,7 @@ The following code sample and screenshot illustrates how to apply the gradient b
 <chart:SfPolarChart PaletteBrushes="{Binding CustomBrushes}">
 . . .
     <chart:PolarAreaSeries ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Tree"/>
-
 	<chart:PolarAreaSeries ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Weed"/>
-
 	<chart:PolarAreaSeries ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Flower"/>
 </chart:SfPolarChart>
 
