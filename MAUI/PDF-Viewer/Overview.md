@@ -18,7 +18,7 @@ The [.NET MAUI PDF Viewer](https://www.syncfusion.com/maui-controls/maui-pdf-vie
 * **Magnification** - The content of a PDF document can be efficiently zoomed in and out by pinching or changing the zoom factor programmatically. 
 * **Page navigation** - Navigate to the desired pages instantly using the page navigation option programmatically or by dragging the scroll head in the UI.
 * **Open password-protected PDFs** - Load and view password-protected PDFs in a hassle-free way. You can design a custom password request view and integrate the functionality easily with the options available.
-* **Built-In Toolbar** - The PDF Viewer control includes a built-in toolbar, offering a seamless user experience with essential functions such as page navigation, text search, page layout mode adjustments, and various annotation tools. The toolbar's visibility can also be customized according to user preferences.
+* **Built-in Toolbar** - The PDF Viewer control includes a built-in toolbar, offering a seamless user experience with essential functions such as page navigation, text search, page layout mode adjustments, and various annotation tools. The toolbar's visibility can also be customized according to user preferences.
 * **Text search** - Search for text and instantly navigate all its occurrences in a PDF document.
 * **Select and copy text** - Select text from a PDF document and copy it to the clipboard. This is helpful for sharing text content with others.
 * **Outline view** - Use the outline view's hierarchical list of headings and subheadings to instantly navigate to the required topic in the document.
