@@ -74,7 +74,7 @@ On the mobile built-in toolbar, by default, the magnifying tool is not visible. 
 
 ### Setting zoom mode programmatically 
 
-#### Change to Fit to Page
+#### Change to fit-to-page
 
 You can change the `SfPdfViewer.ZoomMode` using the `ZoomMode.FitToPage` enumeration. It will magnify the PDF document so that the entire PDF page is visible in the view port. 
 Refer to the following code example: 
@@ -90,7 +90,7 @@ pdfViewer.ZoomMode = ZoomMode.FitToPage;
 {% endhighlight %}
 {% endtabs %}
 
-#### Change to Fit to Width 
+#### Change to fit-to-width 
 
 You can change the `SfPdfViewer.ZoomMode` using the `ZoomMode.FitToWidth` enumeration. It will magnify the PDF document so that the widest page of the PDF document fits the width of the view port. 
 Refer to the following code example:
