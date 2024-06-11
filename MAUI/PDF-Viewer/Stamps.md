@@ -125,7 +125,7 @@ The custom stamp modal view appears when the user wants to create a custom stamp
 
 ### Custom stamp modal view desktop
 
-![Custom stamp modal view desktop](Images/Annotations/custom-stamp-modal-view-mobile-desktop.png)
+![Custom stamp modal view desktop](Images/Annotations/custom-stamp-modal-view-desktop.png)
 
 The `Sfpdfviewer.CustomStampModalViewAppearing` event is triggered when the modal view opens for creating a custom stamp.
 
