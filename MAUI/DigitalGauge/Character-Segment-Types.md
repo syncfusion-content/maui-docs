@@ -43,6 +43,7 @@ The seven-segment type is capable of displaying numbers and a few uppercase lett
 
 {% endtabs %}
 
+![Seven Segment](Images\DigitalGauge5.png)
 
 ## Fourteen segment
 
@@ -70,6 +71,8 @@ The fourteen-segment type is capable of displaying numbers and the alphabet effi
 
 {% endtabs %}
 
+![Fourteen Segment](Images\DigitalGauge6.png)
+
 ## Sixteen segment
 
 The sixteen-segment type is capable of displaying numbers and the alphabet clearly.
@@ -95,6 +98,8 @@ The sixteen-segment type is capable of displaying numbers and the alphabet clear
 {% endhighlight %}
 
 {% endtabs %}
+
+![Sixteen Segment](Images\DigitalGauge7.png)
 
 ## EightCrossEightDotMatrix segment
 
@@ -122,3 +127,4 @@ The dot matrix segment type is capable of displaying numbers, the alphabet, and 
 
 {% endtabs %}
 
+![EightCrossEightDotMatrix Segment](Images\DigitalGauge8.png)
