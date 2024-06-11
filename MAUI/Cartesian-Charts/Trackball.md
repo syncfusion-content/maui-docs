@@ -262,7 +262,7 @@ this.Content = chart;
 
 {% endtabs %}
 
-### Trackball Label Template
+## Trackball Label Template
 
 Trackball labels can be customized by adding any view as its template by using [TrackballLabelTemplate]() of [CartesianSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.CartesianSeries.html).
 
