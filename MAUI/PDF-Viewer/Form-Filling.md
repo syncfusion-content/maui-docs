@@ -43,7 +43,7 @@ private void PdfViewer_DocumentLoadFailed(object sender, DocumentLoadFailedEvent
 
 ### Retrieve form data from the PDF
 
-The form data in a PDF can be obtained from the `SfPdfViewer.FormFields` property. The form data will be available when the PDF completes loading and the data can be retrieved from the [DocumentLoaded](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_DocumentLoaded) event. The following code snippet illustrates getting the total count of form fields in the PDF document.
+The form data in a PDF can be obtained from the [SfPdfViewer.FormFields](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_FormFields) property. The form data will be available when the PDF completes loading and the data can be retrieved from the [DocumentLoaded](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_DocumentLoaded) event. The following code snippet illustrates getting the total count of form fields in the PDF document.
 
 {% tabs %}
 {% highlight C# %}
@@ -67,7 +67,7 @@ private void OnDocumentLoaded(object? sender, EventArgs? e)
 
 ### Editing text form fields
 
-A text form field can be modified using the `Text` property. The following code snippet illustrates retrieving a text form field named "name" from PDF Viewer. 
+A text form field can be modified using the [Text](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.TextFormField.html#Syncfusion_Maui_PdfViewer_TextFormField_Text) property. The following code snippet illustrates retrieving a text form field named "name" from PDF Viewer. 
 
 {% tabs %}
 {% highlight C# %}
@@ -85,7 +85,7 @@ if (formField is TextFormField nameTextBox)
 
 ### Editing checkbox form fields
 
-By modifying the `IsChecked` property, the checkbox field can be checked or unchecked programmatically. The following code snippet illustrates retrieving a checkbox form field named "newsletter" from PDF Viewer. 
+By modifying the [IsChecked](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.CheckboxFormField.html#Syncfusion_Maui_PdfViewer_CheckboxFormField_IsChecked) property, the checkbox field can be checked or unchecked programmatically. The following code snippet illustrates retrieving a checkbox form field named "newsletter" from PDF Viewer. 
 
 {% tabs %}
 {% highlight C# %}
@@ -103,7 +103,7 @@ if (formField is CheckboxFormField checkBox)
 
 ### Editing combo box form fields
 
-The `SelectedItem` property can be used to programmatically choose an item from the combo box. The `SelectedItem` should be one of the values from the `ComboBoxFormField.Items` array. The following code snippet illustrates retrieving a combobox form field named "state" from PDF Viewer.  
+The [SelectedItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.ComboBoxFormField.html#Syncfusion_Maui_PdfViewer_ComboBoxFormField_SelectedItem) property can be used to programmatically choose an item from the combo box. The [SelectedItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.ComboBoxFormField.html#Syncfusion_Maui_PdfViewer_ComboBoxFormField_SelectedItem) should be one of the values from the [ComboBoxFormField.Items](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.ComboBoxFormField.html#Syncfusion_Maui_PdfViewer_ComboBoxFormField_Items) array. The following code snippet illustrates retrieving a combobox form field named "state" from PDF Viewer.  
 
 {% tabs %}
 {% highlight C# %}
@@ -121,7 +121,7 @@ if (formField is ComboBoxFormField comboBox)
 
 ### Editing list box form fields
 
-The `SelectedItems` property can be used to programmatically choose an item from the list box. The `SelectedItems` should contain only the values from the `ListBoxFormFields.Items` array. Both one and more selections are supported by the list box. The below code snippet illustrates modifying a single-select list box form field named "courses" from PDF Viewer.
+The [SelectedItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.ListBoxFormField.html#Syncfusion_Maui_PdfViewer_ListBoxFormField_SelectedItems) property can be used to programmatically choose an item from the list box. The [SelectedItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.ListBoxFormField.html#Syncfusion_Maui_PdfViewer_ListBoxFormField_SelectedItems) should contain only the values from the [ListBoxFormFields.Items](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.ListBoxFormField.html#Syncfusion_Maui_PdfViewer_ListBoxFormField_Items) array. Both one and more selections are supported by the list box. The below code snippet illustrates modifying a single-select list box form field named "courses" from PDF Viewer.
 
 {% tabs %}
 {% highlight C# %}
@@ -156,7 +156,7 @@ if (formField is ListBoxFormField listBox)
 
 ### Editing radio button form fields
 
-Programmatically select an item from the radio buttons using the `SelectedItem` property. The `SelectedItem` should be one of the values from the `RadioButtonFormField.Items` array. The following code snippet illustrates retrieving a radio button form field named "gender" from PDF Viewer.
+Programmatically select an item from the radio buttons using the [SelectedItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.RadioButtonFormField.html#Syncfusion_Maui_PdfViewer_RadioButtonFormField_SelectedItem) property. The [SelectedItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.RadioButtonFormField.html#Syncfusion_Maui_PdfViewer_RadioButtonFormField_SelectedItem) should be one of the values from the [RadioButtonFormField.Items](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.RadioButtonFormField.html#Syncfusion_Maui_PdfViewer_RadioButtonFormField_Items) array. The following code snippet illustrates retrieving a radio button form field named "gender" from PDF Viewer.
 
 {% tabs %}
 {% highlight C# %}
@@ -174,7 +174,7 @@ if (formField is RadioButtonFormField radioButton)
 
 ### Editing signature form fields
 
-Programmatically, add a signature to an unsigned signature field by creating and assigning an ink annotation to the `SignatureFormField.Signature` property. The following code snippet illustrates retrieving a signature form field named "signature" from PDF Viewer. 
+Programmatically, add a signature to an unsigned signature field by creating and assigning an ink annotation to the [SignatureFormField.Signature](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SignatureFormField.html#Syncfusion_Maui_PdfViewer_SignatureFormField_Signature) property. The following code snippet illustrates retrieving a signature form field named "signature" from PDF Viewer. 
 
 {% tabs %}
 {% highlight C# %}
@@ -193,7 +193,7 @@ if (signature != null)
 {% endhighlight %}
 {% endtabs %}
 
-The `Signature` property is of type [InkAnnotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.InkAnnotation.html) and it will behave like an ink after signing. If the PDF document is saved, the signature will be preserved as an ink annotation in the saved document. 
+The [Signature](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SignatureFormField.html#Syncfusion_Maui_PdfViewer_SignatureFormField_Signature) property is of type [InkAnnotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.InkAnnotation.html) and it will behave like an ink after signing. If the PDF document is saved, the signature will be preserved as an ink annotation in the saved document. 
 
 #### Supressing the signature modal view
 
@@ -236,9 +236,9 @@ Button form fields will be rendered in the PDF viewer. But the PDF viewer suppor
 
 ### Adding custom information to a form field
 
-The [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) allows you to assign custom information to form fields. The `CustomData` property is utilized to store additional information about each form field instance for reference. However, it's essential to note that these data are solely intended for reference purposes and will not be displayed in the `SfPdfViewer` interface.
+The [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) allows you to assign custom information to form fields. The [CustomData](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.FormField.html#Syncfusion_Maui_PdfViewer_FormField_CustomData) property is utilized to store additional information about each form field instance for reference. However, it's essential to note that these data are solely intended for reference purposes and will not be displayed in the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) interface.
 
-The following code sample demonstrates how to set the `CustomData` property for a form field. In this code sample, we set the custom data to represent the modification time of the form field.
+The following code sample demonstrates how to set the [CustomData](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.FormField.html#Syncfusion_Maui_PdfViewer_FormField_CustomData) property for a form field. In this code sample, we set the custom data to represent the modification time of the form field.
 
 {% tabs %}
 {% highlight C# %}
@@ -253,7 +253,7 @@ private void PdfViewer_FormFieldValueChanged(object sender, FormFieldValueChange
 
 ## Restrict form field editing
 
-The form fields can be prevented from being modified by setting the `ReadOnly` property. The following example illustrates how to make all form fields read-only.
+The form fields can be prevented from being modified by setting the [ReadOnly](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.FormField.html#Syncfusion_Maui_PdfViewer_FormField_ReadOnly) property. The following example illustrates how to make all form fields read-only.
 
 {% tabs %}
 {% highlight C# %}
@@ -269,7 +269,7 @@ foreach (FormField formField in PdfViewer.FormFields)
 
 ## Clearing form data
 
-The `ClearFormData` method will clear the data in all form fields in the PDF.
+The [ClearFormData](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_ClearFormData_System_Int32_) method will clear the data in all form fields in the PDF.
 
 {% tabs %}
 {% highlight C# %}
@@ -280,7 +280,7 @@ PdfViewer.ClearFormData();
 {% endhighlight %}
 {% endtabs %}
 
-The `ClearFormData` method passed with the page number will clear all the form field data on the mentioned page of a PDF document.
+The [ClearFormData](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_ClearFormData_System_Int32_) method passed with the page number will clear all the form field data on the mentioned page of a PDF document.
 
 {% tabs %}
 {% highlight C# %}
@@ -297,7 +297,7 @@ The [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.
 
 ### Detecting the value change of form fields
 
-The `FormFieldValueChanged` event will be raised when the values of the form fields are changed. The below code snippet illustrates detecting the value change of a text form field.
+The [FormFieldValueChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_FormFieldValueChanged) event will be raised when the values of the form fields are changed. The below code snippet illustrates detecting the value change of a text form field.
 
 {% tabs %}
 {% highlight XAML %}
@@ -326,11 +326,11 @@ private void PdfViewer_FormFieldValueChanged(object? sender, FormFieldValueChang
 {% endhighlight %}
 {% endtabs %}
 
-Similarly, the value changes of other form field types can also be detected using this event. The `OldValue` and `NewValue` properties should be cast to the expected type based on the type of the field. e.g. For a check box, they should be typecast to `bool` which indicates the checked state of the checkbox.
+Similarly, the value changes of other form field types can also be detected using this event. The [OldValue](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.FormFieldValueChangedEventArgs.html#Syncfusion_Maui_PdfViewer_FormFieldValueChangedEventArgs_OldValue) and [NewValue](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.FormFieldValueChangedEventArgs.html#Syncfusion_Maui_PdfViewer_FormFieldValueChangedEventArgs_NewValue) properties should be cast to the expected type based on the type of the field. e.g. For a check box, they should be typecast to `bool` which indicates the checked state of the checkbox.
 
 ### Detecting the focus and unfocus of form fields
 
-The `FormFieldFocusChanged` event will be raised when text or signature field is focused or unfocused.
+The [FormFieldFocusChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_FormFieldFocusChanged) event will be raised when text or signature field is focused or unfocused.
 
 {% tabs %}
 {% highlight XAML %}
@@ -374,7 +374,7 @@ N> The XFDF and FDF are the standard file data formats that can be used across g
 
 ### Import form data
 
-The form data can be imported into a PDF document using the `ImportFormData` method. The stream of the file to be imported and the data format should be passed as parameters to the method. The following example explains how to import form data from an XFDF file, assuming that the file is in the application’s data directory.
+The form data can be imported into a PDF document using the [ImportFormData](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_ImportFormData_System_IO_Stream_Syncfusion_Pdf_Parsing_DataFormat_System_Boolean_) method. The stream of the file to be imported and the data format should be passed as parameters to the method. The following example explains how to import form data from an XFDF file, assuming that the file is in the application’s data directory.
 
 {% tabs %}
 {% highlight C# %}
@@ -403,7 +403,7 @@ PdfViewer.ImportFormData(inputFileStream, Syncfusion.Pdf.Parsing.DataFormat.XFdf
 
 ### Export form data
 
-The form data can be exported from a PDF document using the `ExportFormData` method. The empty stream to write the exported data and the data format should be passed as parameters to the method. The following code explains how to export form field data from a PDF document into an XFDF file in the application’s data directory.
+The form data can be exported from a PDF document using the [ExportFormData](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_ExportFormData_System_IO_Stream_Syncfusion_Pdf_Parsing_DataFormat_) method. The empty stream to write the exported data and the data format should be passed as parameters to the method. The following code explains how to export form field data from a PDF document into an XFDF file in the application’s data directory.
 
 {% tabs %}
 {% highlight C# %}
@@ -422,7 +422,7 @@ void ExportFormData()
 
 ### How to perform validation over the form field data?
 
-In PDF viewer, form validations can be done by obtaining the values from the form fields using the `FormFields` property and comparing them with the expected values. Below is an example that illustrates retrieving form fields by their names and checking whether they meet the expected values, before saving the document. 
+In PDF viewer, form validations can be done by obtaining the values from the form fields using the [FormFields](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_FormFields) property and comparing them with the expected values. Below is an example that illustrates retrieving form fields by their names and checking whether they meet the expected values, before saving the document. 
  
 In this example, the form field values are checked whether they meet the below criteria. If the criteria are satisfied, the PDF will be saved along with the form data. Otherwise, an error dialogue will be shown.
 
