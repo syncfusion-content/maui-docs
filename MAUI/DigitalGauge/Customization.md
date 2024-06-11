@@ -12,7 +12,7 @@ keywords: .net maui, .net maui digital gauge, digital gauge, character segments,
 
 The characters of a digital gauge can be customized in terms of `CharacterWidth`, `CharacterHeight`, `CharacterSpacing`, and `CharacterStrokeColor`.
 
-## customize character size
+## Customize character size
 
 The values of digital characters are scaled by altering the height and width of digital characters. This is achieved by setting the `CharacterHeight` and `CharacterWidth` properties in the digital gauge. The default value of `CharacterHeight` is 60 and `CharacterWidth` is 40.
 `
