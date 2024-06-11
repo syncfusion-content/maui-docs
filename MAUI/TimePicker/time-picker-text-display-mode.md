@@ -37,6 +37,8 @@ this.Content = timePicker;
 
 {% endtabs %}
 
+![Fade Mode in .NET MAUI Time Picker.](images/text-display-mode/fade-mode.png)
+
 ## Shrink Mode
 
 The shrink mode is used to display the font size of time picker items decreased from the selected item by setting the `TextDisplayMode` property to `Shrink` in `SfTimePicker`.
@@ -63,6 +65,8 @@ this.Content = timePicker;
 
 {% endtabs %}
 
+![Shrink Mode in .NET MAUI Time Picker.](images/text-display-mode/shrink-mode.png)
+
 ## FadeAndShrink Mode
 
 The fade and shrink mode are used to decrease the opacity and font size of time picker items from the selected item by setting the `TextDisplayMode` property to `FadeAndShrink` in `SfTimePicker`.
@@ -88,3 +92,5 @@ this.Content = timePicker;
 {% endhighlight %}
 
 {% endtabs %}
+
+![Fade and Shrink Mode in .NET MAUI Time Picker.](images/text-display-mode/fade-shrink-mode.png)
