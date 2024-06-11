@@ -358,7 +358,6 @@ The Intermediate state is used when a group of sub-choices has both checked and 
 ![.NET MAUI CheckBox](Images/Getting-Started/picktoppings.png)
 
 ![.NET MAUI CheckBox](Images/Getting-Started/selectalltoppings.png)
-
 You can find the complete getting started sample of the .NET MAUI CheckBox from this [link.](https://github.com/SyncfusionExamples/maui-checkbox-samples)
 
 N> You can refer to our [.NET MAUI CheckBox](https://www.syncfusion.com/maui-controls/maui-checkbox) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI CheckBox Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/Buttons/SampleBrowser.Maui.Buttons/Samples/CheckBox) that shows you how to render the CheckBox in .NET MAUI.
