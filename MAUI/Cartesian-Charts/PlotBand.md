@@ -5,6 +5,7 @@ description: Learn here all about plot band and its features in Syncfusion .NET 
 platform: maui
 control: SfCartesianChart
 documentation: ug
+keywords: .net maui plot band, maui plot band, .net maui chart plot band type, plot band customization .net maui, syncfusion maui plot band, cartesian plot band maui, .net maui chart plot band visualization, .net maui shaded region chart, .net maui recurrence plot band.
 ---
 
 # Plot bands in .NET MAUI Chart
@@ -31,7 +32,7 @@ Plot bands are classified into [NumericalPlotBand](https://help.syncfusion.com/c
 
 {% highlight xaml %}
 
-    <chart:SfCartesianChart>
+<chart:SfCartesianChart>
         . . .
         <chart:SfCartesianChart.YAxes>
             <chart:NumericalAxis>
@@ -44,28 +45,28 @@ Plot bands are classified into [NumericalPlotBand](https://help.syncfusion.com/c
             </chart:NumericalAxis>
         </chart:SfCartesianChart.YAxes>
         . . .
-    </chart:SfCartesianChart>
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
+SfCartesianChart chart = new SfCartesianChart();
     . . .
     
-    NumericalAxis numericalAxis = new NumericalAxis();
-    NumericalPlotBandCollection numericalPlotBandCollection = new NumericalPlotBandCollection();
-    NumericalPlotBand plotBand = new NumericalPlotBand
-    {
-        Start = 24,
-        End = 28,
-        Fill = Colors.Orange
-    };
+NumericalAxis numericalAxis = new NumericalAxis();
+NumericalPlotBandCollection numericalPlotBandCollection = new NumericalPlotBandCollection();
+NumericalPlotBand plotBand = new NumericalPlotBand
+{
+    Start = 24,
+    End = 28,
+    Fill = Colors.Orange
+};
 
-    numericalPlotBandCollection.Add(plotBand);
-    numericalAxis.PlotBands = numericalPlotBandCollection;
-    chart.YAxes.Add(numericalAxis);
-    ...
+numericalPlotBandCollection.Add(plotBand);
+numericalAxis.PlotBands = numericalPlotBandCollection;
+chart.YAxes.Add(numericalAxis);
+...
 
 {% endhighlight %}
 
@@ -81,7 +82,7 @@ Plot bands are classified into [NumericalPlotBand](https://help.syncfusion.com/c
 
 {% highlight xaml %}
 
-    <chart:SfCartesianChart>
+<chart:SfCartesianChart>
         . . .
      <chart:SfCartesianChart.XAxes>
          <chart:DateTimeAxis>
@@ -98,14 +99,14 @@ Plot bands are classified into [NumericalPlotBand](https://help.syncfusion.com/c
         <chart:SfCartesianChart.YAxes>
             <chart:NumericalAxis/>
         </chart:SfCartesianChart.YAxes>
-    </chart:SfCartesianChart>
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
-    . . .
+SfCartesianChart chart = new SfCartesianChart();
+. . .
     DateTimeAxis dateTimeAxis = new DateTimeAxis();
     DateTimePlotBandCollection dateTimePlotBandCollection = new DateTimePlotBandCollection();
     DateTimePlotBand plotBand = new DateTimePlotBand
@@ -121,7 +122,7 @@ Plot bands are classified into [NumericalPlotBand](https://help.syncfusion.com/c
 
     NumericalAxis secondaryAxis = new NumericalAxis();
     chart.YAxes.Add(secondaryAxis);
-    ...
+...
 
 {% endhighlight %}
 
@@ -141,7 +142,7 @@ The Plot band recurrence feature enables plot bands to be drawn repeatedly at re
 
 {% highlight xaml %}
 
-    <chart:SfCartesianChart>
+<chart:SfCartesianChart>
         . . .
         <chart:SfCartesianChart.XAxes>
             <chart:CategoryAxis/>
@@ -160,33 +161,33 @@ The Plot band recurrence feature enables plot bands to be drawn repeatedly at re
                 </chart:NumericalAxis.PlotBands>
             </chart:NumericalAxis>
         </chart:SfCartesianChart.YAxes>
-    </chart:SfCartesianChart>
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
+SfCartesianChart chart = new SfCartesianChart();
     . . .
-    CategoryAxis primaryAxis = new CategoryAxis();
-    chart.XAxes.Add(primaryAxis);
+CategoryAxis primaryAxis = new CategoryAxis();
+chart.XAxes.Add(primaryAxis);
 
-    NumericalAxis numericalAxis = new NumericalAxis();
-    NumericalPlotBandCollection numericalPlotBandCollection = new NumericalPlotBandCollection();
-    NumericalPlotBand plotBand = new NumericalPlotBand
-    {
-        Start = 20,
-        End = 22,
-        IsRepeatable = True
-        RepeatUntil = 32
-        RepeatEvery = 4                                  
-        Fill = Colors.LightGray
-    };
+NumericalAxis numericalAxis = new NumericalAxis();
+NumericalPlotBandCollection numericalPlotBandCollection = new NumericalPlotBandCollection();
+NumericalPlotBand plotBand = new NumericalPlotBand
+{
+    Start = 20,
+    End = 22,
+    IsRepeatable = True
+    RepeatUntil = 32
+    RepeatEvery = 4                                  
+    Fill = Colors.LightGray
+};
 
-    numericalPlotBandCollection.Add(plotBand);
-    numericalAxis.PlotBands = numericalPlotBandCollection;
-    chart.YAxes.Add(numericalAxis);
-    ...
+numericalPlotBandCollection.Add(plotBand);
+numericalAxis.PlotBands = numericalPlotBandCollection;
+chart.YAxes.Add(numericalAxis);
+...
 
 {% endhighlight %}
 
@@ -204,8 +205,8 @@ Suppose, you want to draw a plot band that should not stretch along its associat
 
 {% highlight xaml %}
 
-    <chart:SfCartesianChart>
-        . . .
+<chart:SfCartesianChart>
+    . . .
     <chart:SfCartesianChart.XAxes>
        <chart:CategoryAxis/>
      </chart:SfCartesianChart.XAxes>
@@ -238,53 +239,53 @@ Suppose, you want to draw a plot band that should not stretch along its associat
             </chart:NumericalAxis>
         </chart:SfCartesianChart.YAxes>
         . . .
-    </chart:SfCartesianChart>
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
-    . . .
-    CategoryAxis primaryAxis = new CategoryAxis();
-    chart.XAxes.Add(primaryAxis);
+SfCartesianChart chart = new SfCartesianChart();
+. . .
+CategoryAxis primaryAxis = new CategoryAxis();
+chart.XAxes.Add(primaryAxis);
 
-    NumericalAxis numericalAxis = new NumericalAxis();
-    NumericalPlotBandCollection numericalPlotBandCollection =  new NumericalPlotBandCollection();
-    NumericalPlotBand plotBand1 = new NumericalPlotBand()
-    {
-        Start = 20,
-        End = 22,
-        AssociatedAxisEnd = 2,
-        Text = "Low",
-        Fill = new SolidColorBrush(Color.FromArgb("#B300E190"))
-    };
+NumericalAxis numericalAxis = new NumericalAxis();
+NumericalPlotBandCollection numericalPlotBandCollection =  new NumericalPlotBandCollection();
+NumericalPlotBand plotBand1 = new NumericalPlotBand()
+{
+    Start = 20,
+    End = 22,
+    AssociatedAxisEnd = 2,
+    Text = "Low",
+    Fill = new SolidColorBrush(Color.FromArgb("#B300E190"))
+};
 
-   NumericalPlotBand plotBand2 = new NumericalPlotBand()
-   {
-       Start = 25,
-       End = 27,
-       AssociatedAxisStart = 4.3,
-       AssociatedAxisEnd = 6.8,
-       Text = "Average",
-       Fill = new SolidColorBrush(Color.FromArgb("#B3FCD404"))
-   };
+NumericalPlotBand plotBand2 = new NumericalPlotBand()
+{
+    Start = 25,
+    End = 27,
+    AssociatedAxisStart = 4.3,
+    AssociatedAxisEnd = 6.8,
+    Text = "Average",
+    Fill = new SolidColorBrush(Color.FromArgb("#B3FCD404"))
+};
 
-   NumericalPlotBand plotBand3 = new NumericalPlotBand()
-   {
-       Start = 30,
-       End = 32,
-       AssociatedAxisStart = 9,
-       Text = "High",
-       Fill = new SolidColorBrush(Color.FromArgb("#B3FF4E4E"))
-   };
+NumericalPlotBand plotBand3 = new NumericalPlotBand()
+{
+    Start = 30,
+    End = 32,
+    AssociatedAxisStart = 9,
+    Text = "High",
+    Fill = new SolidColorBrush(Color.FromArgb("#B3FF4E4E"))
+};
 
-     numericalPlotBandCollection.Add(plotBand1);
-     numericalPlotBandCollection.Add(plotBand2);
-     numericalPlotBandCollection.Add(plotBand3); 
-     numericalAxis.PlotBands = numericalPlotBandCollection;
-     chart.YAxes.Add(numericalAxis);
-    ...
+numericalPlotBandCollection.Add(plotBand1);
+numericalPlotBandCollection.Add(plotBand2);
+numericalPlotBandCollection.Add(plotBand3); 
+numericalAxis.PlotBands = numericalPlotBandCollection;
+chart.YAxes.Add(numericalAxis);
+...
 
 {% endhighlight %}
 
@@ -299,8 +300,8 @@ When specifying the same value for both start and end, a plot line will be drawn
 
 {% highlight xaml %}
 
-    <chart:SfCartesianChart>
-        . . .
+<chart:SfCartesianChart>
+    . . .
     <chart:SfCartesianChart.XAxes>
        <chart:CategoryAxis/>
      </chart:SfCartesianChart.XAxes>
@@ -334,56 +335,56 @@ When specifying the same value for both start and end, a plot line will be drawn
                 </chart:NumericalAxis.PlotBands>
             </chart:NumericalAxis>
         </chart:SfCartesianChart.YAxes>
-        . . .
-    </chart:SfCartesianChart>
+    . . .
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
-    . . .
-    CategoryAxis primaryAxis = new CategoryAxis();
-    chart.XAxes.Add(primaryAxis);
+SfCartesianChart chart = new SfCartesianChart();
+. . .
+CategoryAxis primaryAxis = new CategoryAxis();
+chart.XAxes.Add(primaryAxis);
 
-    NumericalAxis numericalAxis = new NumericalAxis();
-    NumericalPlotBandCollection numericalPlotBandCollection =  new NumericalPlotBandCollection();
-     NumericalPlotBand plotBand1 = new NumericalPlotBand()
-     {
-        Start = 24,
-        End = 24,
-        Stroke = new SolidColorBrush(Color.FromArgb("#00E190")),
-        StrokeWidth = 2,
-        Fill = new SolidColorBrush(Color.FromArgb("#00E190")),
-        Text = "Low Temperature"
-     };
+NumericalAxis numericalAxis = new NumericalAxis();
+NumericalPlotBandCollection numericalPlotBandCollection =  new NumericalPlotBandCollection();
+NumericalPlotBand plotBand1 = new NumericalPlotBand()
+{
+    Start = 24,
+    End = 24,
+    Stroke = new SolidColorBrush(Color.FromArgb("#00E190")),
+    StrokeWidth = 2,
+    Fill = new SolidColorBrush(Color.FromArgb("#00E190")),
+    Text = "Low Temperature"
+};
 
-     NumericalPlotBand plotBand2 = new NumericalPlotBand()
-     {
-        Start = 28,
-        End = 28,
-        Stroke = new SolidColorBrush(Color.FromArgb("#FCD404")),
-        StrokeWidth = 2,
-        Fill = new SolidColorBrush(Color.FromArgb("#FCD404")),
-        Text = "Average Temperature"
-    };
+NumericalPlotBand plotBand2 = new NumericalPlotBand()
+{
+    Start = 28,
+    End = 28,
+    Stroke = new SolidColorBrush(Color.FromArgb("#FCD404")),
+    StrokeWidth = 2,
+    Fill = new SolidColorBrush(Color.FromArgb("#FCD404")),
+    Text = "Average Temperature"
+};
 
-    NumericalPlotBand plotBand3 = new NumericalPlotBand()
-    {
-        Start = 32,
-        End = 32,
-        Stroke = new SolidColorBrush(Color.FromArgb("#FF4E4E")),
-        StrokeWidth = 2,
-        Fill = new SolidColorBrush(Color.FromArgb("#FF4E4E")),
-        Text = "High Temperature"
-     };
+NumericalPlotBand plotBand3 = new NumericalPlotBand()
+{
+    Start = 32,
+    End = 32,
+    Stroke = new SolidColorBrush(Color.FromArgb("#FF4E4E")),
+    StrokeWidth = 2,
+    Fill = new SolidColorBrush(Color.FromArgb("#FF4E4E")),
+    Text = "High Temperature"
+};
 
-     numericalPlotBandCollection.Add(plotBand1);
-     numericalPlotBandCollection.Add(plotBand2);
-     numericalPlotBandCollection.Add(plotBand3); 
-     numericalAxis.PlotBands = numericalPlotBandCollection;
-     chart.YAxes.Add(numericalAxis);
-    ...
+numericalPlotBandCollection.Add(plotBand1);
+numericalPlotBandCollection.Add(plotBand2);
+numericalPlotBandCollection.Add(plotBand3); 
+numericalAxis.PlotBands = numericalPlotBandCollection;
+chart.YAxes.Add(numericalAxis);
+...
 
 {% endhighlight %}
 
@@ -405,13 +406,13 @@ When specifying the same value for both start and end, a plot line will be drawn
 
 {% highlight xaml %}
 
-    <chart:SfCartesianChart>
-        . . .
-     <chart:SfCartesianChart.XAxes>
+<chart:SfCartesianChart>
+    . . .
+    <chart:SfCartesianChart.XAxes>
        <chart:CategoryAxis/>
-      </chart:SfCartesianChart.XAxes>
+    </chart:SfCartesianChart.XAxes>
 
-      <chart:SfCartesianChart.YAxes>
+    <chart:SfCartesianChart.YAxes>
         <chart:NumericalAxis>
           <chart:NumericalAxis.PlotBands>
             <chart:NumericalPlotBandCollection>
@@ -422,46 +423,46 @@ When specifying the same value for both start and end, a plot line will be drawn
               <chart:NumericalPlotBand.LabelStyle>
                <chart:ChartPlotBandLabelStyle TextColor="Blue"
                                               FontSize="12" 
-                                     FontAttributes="Bold"/>
+                                              FontAttributes="Bold"/>
               </chart:NumericalPlotBand.LabelStyle>
            </chart:NumericalPlotBandCollection>
          </chart:NumericalAxis.PlotBands>
        </chart:NumericalAxis>
-     </chart:SfCartesianChart.YAxes>
-        . . .
-    </chart:SfCartesianChart>
+    </chart:SfCartesianChart.YAxes>
+    . . .
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
-    . . .
-    CategoryAxis primaryAxis = new CategoryAxis();
-    chart.XAxes.Add(primaryAxis);
+SfCartesianChart chart = new SfCartesianChart();
+. . .
+CategoryAxis primaryAxis = new CategoryAxis();
+chart.XAxes.Add(primaryAxis);
 
-    NumericalAxis numericalAxis = new NumericalAxis();
-    NumericalPlotBandCollection numericalPlotBandCollection = new NumericalPlotBandCollection();
-    NumericalPlotBand plotBand = new NumericalPlotBand
-    {
-        Start = 28,
-        Width = 10,
-        Fill = Color.Orange,
-        Text = "Plot Band"
-    };
+NumericalAxis numericalAxis = new NumericalAxis();
+NumericalPlotBandCollection numericalPlotBandCollection = new NumericalPlotBandCollection();
+NumericalPlotBand plotBand = new NumericalPlotBand
+{
+    Start = 28,
+    Width = 10,
+    Fill = Color.Orange,
+    Text = "Plot Band"
+};
 
-    ChartPlotBandLabelStyle labelStyle = new ChartPlotBandLabelStyle
-    {
-        TextColor = Color.Blue,
-        FontSize = 12,
-        FontAttributes = FontAttributes.Bold
-    };
+ChartPlotBandLabelStyle labelStyle = new ChartPlotBandLabelStyle
+{
+    TextColor = Color.Blue,
+    FontSize = 12,
+    FontAttributes = FontAttributes.Bold
+};
 
-    plotBand.LabelStyle = labelStyle;
-    numericalPlotBandCollection.Add(plotBand);
-    numericalAxis.PlotBands= numericalPlotBandCollection;
-    chart.YAxes.Add(numericalAxis);
-    ...
+plotBand.LabelStyle = labelStyle;
+numericalPlotBandCollection.Add(plotBand);
+numericalAxis.PlotBands= numericalPlotBandCollection;
+chart.YAxes.Add(numericalAxis);
+...
 
 {% endhighlight %}
 

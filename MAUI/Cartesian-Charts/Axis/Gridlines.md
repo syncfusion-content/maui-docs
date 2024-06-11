@@ -5,6 +5,7 @@ description: Learn here all about the chart axis grid lines and its customizatio
 platform: maui
 control: SfCartesianChart
 documentation: ug
+keywords: .net maui chart grid lines, .net maui chart grid customization, syncfusion maui chart grid lines, cartesian chart grid lines maui, .net maui chart axis grid lines, customize grid lines .net maui chart.
 ---
 
 # Grid Lines in .NET MAUI Chart

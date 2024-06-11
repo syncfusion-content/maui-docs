@@ -5,6 +5,7 @@ description: Learn here all about axis labels and its customization in Syncfusio
 platform: maui
 control: SfCartesianChart
 documentation: ug
+keywords: .net maui chart axis labels, axis labels customization .net maui, syncfusion maui chart axis labels, cartesian chart axis labels maui, customize axis labels .net maui chart.
 ---
 
 # Axis labels in .NET MAUI Chart

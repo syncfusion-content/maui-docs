@@ -21,8 +21,7 @@ To define the tooltip in the chart, set the [EnableTooltip](https://help.syncfus
 
 <chart:SfCircularChart>
 . . .
-    <chart:PieSeries EnableTooltip="True">
-    </chart:PieSeries>
+    <chart:PieSeries EnableTooltip="True"/>   
 </chart:SfCircularChart>
 
 {% endhighlight %}
@@ -34,6 +33,7 @@ SfCircularChart chart = new SfCircularChart();
 PieSeries series = new PieSeries();
 series.EnableTooltip = true;
 chart.Series.Add(series);
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -111,10 +111,10 @@ Circular chart provides support to customize the appearance of the tooltip by us
     </chart:SfCircularChart.Resources>
 
     <chart:PieSeries EnableTooltip="True"
-			ItemsSource="{Binding Data}" 
-			XBindingPath="Product" 
-			YBindingPath="SalesRate"
-			TooltipTemplate="{StaticResource tooltipTemplate}"/>
+					 ItemsSource="{Binding Data}" 
+					 XBindingPath="Product" 
+					 YBindingPath="SalesRate"
+					 TooltipTemplate="{StaticResource tooltipTemplate}"/>
     . . .
 </chart:SfCircularChart>
 
@@ -128,6 +128,9 @@ PieSeries series = new PieSeries();
 series.EnableTooltip = true;
 series.TooltipTemplate = chart.Resources["tooltipTemplate"] as DataTemplate;
 . . .     
+
+this.Content = chart;
+
 {% endhighlight %}
 
 {% endtabs %}
