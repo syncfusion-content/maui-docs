@@ -89,14 +89,14 @@ You can customize the display text appearance of the [`SfRadioButton`](https://h
 {% tabs %}
 {% highlight xaml %}
 
-	<syncfusion:SfRadioButton 	x:Name="radioButton" 
-								Text="Radio Button" 
-								IsChecked="True" 
-								TextColor="Blue" 
-								HorizontalTextAlignment="Center" 
-								FontFamily="Arial" 
-								FontAttributes="Bold" 
-								FontSize="20"/>
+	<syncfusion:SfRadioButton x:Name="radioButton" 
+				  Text="Radio Button" 
+				  IsChecked="True" 
+				  TextColor="Blue" 
+				  HorizontalTextAlignment="Center" 
+			          FontFamily="Arial" 
+				  FontAttributes="Bold" 
+				  FontSize="20"/>
 
 {% endhighlight %}
 {% highlight c# %}
@@ -131,10 +131,10 @@ The `LineBreakMode` allows you to wrap or truncate the text. The default value o
 {% highlight xaml %}
 
     <syncfusion:SfRadioButton   x:Name="RadioButton" 
-								IsChecked="True" 
-								WidthRequest="200" 
-								LineBreakMode="WordWrap" 
-								Text="The LineBreakMode allows you to wrap or truncate the text."></syncfusion:SfRadioButton>
+				IsChecked="True" 
+				WidthRequest="200" 
+				LineBreakMode="WordWrap" 
+				Text="The LineBreakMode allows you to wrap or truncate the text."></syncfusion:SfRadioButton>
 
 {% endhighlight %}
 
@@ -142,10 +142,10 @@ The `LineBreakMode` allows you to wrap or truncate the text. The default value o
 
     StackLayout stackLayout = new StackLayout();
     SfRadioButton radioButton = new SfRadioButton();
-	radioButton.Text = "The LineBreakMode allows you to wrap or truncate the text.";
-	radioButton.LineBreakMode = LineBreakMode.WordWrap;
-	radioButton.WidthRequest = 200;
-	stackLayout.Children.Add(radioButton);
+    radioButton.Text = "The LineBreakMode allows you to wrap or truncate the text.";
+    radioButton.LineBreakMode = LineBreakMode.WordWrap;
+    radioButton.WidthRequest = 200;
+    stackLayout.Children.Add(radioButton);
 
 {% endhighlight %}
 {% endtabs %}
