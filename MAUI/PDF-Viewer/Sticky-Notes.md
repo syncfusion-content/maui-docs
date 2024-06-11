@@ -5,7 +5,7 @@ description: Learn here all about Sticky Note Annotations in Syncfusion .NET MAU
 platform: MAUI
 control: SfPdfViewer
 documentation: ug
-keywords: .net maui imageEditor, .net maui image editing, .net maui crop image.
+keywords: keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .net maui open pdf, maui pdf viewer, maui pdf view.
 ---
 
 # Sticky Note Annotation in .NET MAUI PDF Viewer (SfPdfViewer)
@@ -103,9 +103,9 @@ void AddStickyNote()
 
 ## Sticky note annotation settings 
 
-In the sticky note annotation mode, the annotation will be added with a default appearance. You can modify the annotation after it has been added to the pages. However, if you need to define the appearance before adding sticky note annotation on the document, you can change its default settings using the [SfPdfViewer.AnnotationSettings.StickyNote](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationSettings) For that, you need to obtain the default sticky note annotation settings.
+In the sticky note annotation mode, the annotation will be added with a default appearance. You can modify the annotation after it has been added to the pages. However, if you need to define the appearance before adding sticky note annotations to the document, you can change its default settings using the [SfPdfViewer.AnnotationSettings.StickyNote](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationSettings) For that, you need to obtain the default sticky note annotation settings.
 
-The following example explains how to obtain the default sticky note annotation settings and modify some of its properties. Similarly, you can modify all the other properties.
+The following example explains how to obtain the default sticky note annotation settings and modify some of their properties. Similarly, you can modify all the other properties.
 
 {% tabs %}
 {% highlight C# %}
