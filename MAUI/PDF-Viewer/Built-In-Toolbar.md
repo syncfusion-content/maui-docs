@@ -31,7 +31,7 @@ public MainPage()
 {% highlight XAML %}
  <ContentPage.Content>
 
-      <syncfusion:SfPdfViewer x:Name="pdfViewer" DocumentSource ="{Binding PdfDocumentStream} " ShowToolbars="False" />
+  <syncfusion:SfPdfViewer x:Name="pdfViewer" DocumentSource ="{Binding PdfDocumentStream} " ShowToolbars="False" />
 
   </ContentPage.Content>
 {% endhighlight %}
@@ -45,7 +45,7 @@ To customize the toolbar, you can programmatically add, remove, and hide the ite
 
 ### Accessing and Modifying the Visibility of the Toolbar Items
 
-By using the `GetByName` method with its specified toolbar or icon names, you can access the properties of those toolbars or items. After accessing the item, you can modify its visibility by setting the `IsVisible` property.Here we retrieves the "PrimaryToolbar" and "Search" item using the GetByName method and hides the "Search" item by setting its visibility to false.
+By using the `GetByName` method with its specified toolbar or icon names, you can access the properties of those toolbars or items. After accessing the item, you can modify its visibility by setting the `IsVisible` property. Here, we retrieve the toolbar "PrimaryToolbar" and "Search" item using the GetByName method and hide the "Search" item by setting its visibility to false.
 
 {% tabs %}
 {% highlight C# %}
@@ -61,7 +61,7 @@ item.IsVisible = false; // Hide the search item
 
 ### Adding a New Toolbar Item
 
-To add an item to the toolbar in [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html), first, create the button you want to include. Then, convert that button into a ToolbarItem using the `ToolbarItem` method. Finally, add the newly created ToolbarItem to the toolbar using the `Add` method. Here we create the new button fileOpenButton and retrieves the "PrimaryToolbar" using GetByName method.Added the new button in the "Primary Toolbar".
+To add an item to the toolbar in [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html), first, create the button you want to include. Then, convert that button into a ToolbarItem using the `ToolbarItem` method. Finally, add the newly created ToolbarItem to the toolbar using the `Add` method. Here we create the new button fileOpenButton and retrieve the "PrimaryToolbar" using the GetByName method. Add the new button to the "Primary Toolbar".
 
 {% tabs %}
 {% highlight C# %}
@@ -89,7 +89,7 @@ pdfViewer.Toolbars?.GetByName("PrimaryToolbar")?.Items?.Add(new Syncfusion.Maui.
 
 ### Adding a New Toolbar Item at a Specific Index
 
-To add an item at a specific index in the toolbar in [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html), first create the button you want to include. Then, convert that button into a ToolbarItem using the `ToolbarItem` method. Finally, add the newly created ToolbarItem to the toolbar using the `Insert` method. Use the `Index` property to get the index of the item you want to add after, and insert the new item at a specific index. Here we create the button fileSaveButton and retrieves the index of the "Print" button in the "PrimaryToolbar".The new button is inserted into the toolbar right after the "Print" button.
+To add an item at a specific index in the toolbar in [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html), first create the button you want to include. Then, convert that button into a ToolbarItem using the `ToolbarItem` method. Finally, add the newly created ToolbarItem to the toolbar using the `Insert` method. Use the `Index` property to get the index of the item you want to add after, and insert the new item at a specific index. Here we create the button fileSaveButton and retrieve the index of the "Print" button in the "PrimaryToolbar". The new button is inserted into the toolbar right after the "Print" button.
 
 {% tabs %}
 {% highlight C# %}
@@ -120,7 +120,7 @@ pdfViewer.Toolbars?.GetByName("PrimaryToolbar")?.Items?.Insert(index+1, new Sync
 
 ### Removing an Item from the Toolbar 
 
-To remove an item from the toolbar in [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html), you can access the specific item using the `GetByName` method and then remove it from the toolbar's item collection using the `Remove` method.Here we retrieves the "Outline" item from the "PrimaryToolbar" using the GetByName method. If the item is found, it removes it from the toolbar.
+To remove an item from the toolbar in [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html), you can access the specific item using the `GetByName` method and then remove it from the toolbar's item collection using the `Remove` method. Here we retrieve the "Outline" item from the "PrimaryToolbar" using the GetByName method. If the item is found, it is removed from the toolbar.
 
 {% tabs %}
 {% highlight C# %}
@@ -331,7 +331,7 @@ Similarly, you can customize the other toolbars and their items by accessing the
 </tr>
 <tr>
 <td>PageSettings</td>
-<td>The button that appears in the top toolbar allows you to customizes page display and layout of the PDF viewer content. </td>
+<td>The button that appears in the top toolbar allows you to customize the page display and layout of the PDF viewer content. </td>
 </tr>
 <tr>
 <td>Search</td>
@@ -339,15 +339,15 @@ Similarly, you can customize the other toolbars and their items by accessing the
 </tr>
 <tr>
 <td>MoreItem</td>
-<td>The button that appears in the top toolbar allows you to expands the options available in the PDF Viewer.</td>
+<td>The button that appears in the top toolbar allows you to expand the options available in the PDF Viewer.</td>
 </tr>
 <tr>
 <td>TextMarkup</td>
-<td>The button that appears in the Bottom toolbar allows you to annotate text in the PDF Viewer.</td>
+<td>The button that appears in the bottom toolbar allows you to annotate text in the PDF Viewer.</td>
 </tr>
 <tr>
 <td>FreeText</td>
-<td>The button that appears in the bottom toolbar allows you to add text annotations directly onto the document in the PDF Viewer.</td>
+<td>The button that appears in the bottom toolbar allows you to add text annotations directly to the document in the PDF Viewer.</td>
 </tr>
 <tr>
 <td>Ink</td>
@@ -359,11 +359,11 @@ Similarly, you can customize the other toolbars and their items by accessing the
 </tr>
 <tr>
 <td>Shape</td>
-<td>The button that appears in the bottom toolbar allows you to add shapes in the document.</td>
+<td>The button that appears in the bottom toolbar allows you to add shapes to the document.</td>
 </tr>
 <tr>
 <td>Stamp</td>
-<td>The button that appears in the bottom toolbar allows you to add the inbuilt stamps and custom stamps.</td>
+<td>The button that appears in the bottom toolbar allows you to add the in-built and custom stamps.</td>
 </tr>
 <tr>
 <td>Signature</td>
@@ -371,11 +371,11 @@ Similarly, you can customize the other toolbars and their items by accessing the
 </tr>
 <tr>
 <td>StickyNote</td>
-<td>The button that appears in the bottom toolbar allows you to add the sticky note in the document.</td>
+<td>The button that appears in the bottom toolbar allows you to add the sticky note to the document.</td>
 </tr>
 <tr>
 <td>TextMarkupToolbarBackIcon</td>
-<td>The button that appears in the text markup toolbar allows you to navigate back from the Text Markup Toolbar.</td>
+<td>The button that appears in the text markup toolbar allows you to navigate back from the text markup toolbar.</td>
 </tr>
 <tr>
 <td>Highlight</td>
@@ -395,7 +395,7 @@ Similarly, you can customize the other toolbars and their items by accessing the
 </tr>
 <tr>
 <td>ShapeToolbarBackIcon</td>
-<td>The button that appears in the shape toolbar allows you to navigate back from the Shape Toolbar.</td>
+<td>The button that appears in the shape toolbar allows you to navigate back from the shape toolbar.</td>
 </tr>
 <tr>
 <td>Line</td>
@@ -407,19 +407,19 @@ Similarly, you can customize the other toolbars and their items by accessing the
 </tr>
 <tr>
 <td>Rectangle</td>
-<td>The button that appears in the shape toolbar allows you to draw rectangle in the document.</td>
+<td>The button that appears in the shape toolbar allows you to draw a rectangle in the document.</td>
 </tr>
 <tr>
 <td>Circle</td>
-<td>The button that appears in the shape toolbar allows you to draw circle in the document.</td>
+<td>The button that appears in the shape toolbar allows you to draw a circle in the document.</td>
 </tr>
 <tr>
 <td>Polygon</td>
-<td>The button that appears in the shape toolbar allows you to draw polygon in the document.</td>
+<td>The button that appears in the shape toolbar allows you to draw polygons in the document.</td>
 </tr>
 <tr>
 <td>Polyline</td>
-<td>The button that appears in the shape toolbar allows you to draw polyline in the document.</td>
+<td>The button that appears in the shape toolbar allows you to draw polylines in the document.</td>
 </tr>
 <tr>
 <td>Cloud</td>
@@ -431,7 +431,7 @@ Similarly, you can customize the other toolbars and their items by accessing the
 </tr>
 <tr>
 <td>BackIconSeparator</td>
-<td>The separator that appears in the annotation edit toolbar positioned after the back button.</td>
+<td>The separator that appears in the annotation edit toolbar is positioned after the back button.</td>
 </tr>
 <tr>
 <td>AnnotationType</td>
@@ -451,7 +451,7 @@ Similarly, you can customize the other toolbars and their items by accessing the
 </tr>
 <tr>
 <td>TextPropertySeparator</td>
-<td>The separator that appears in the free text annotation edit toolbar positioned after the text size button.</td>
+<td>The separator that appears in the free text annotation edit toolbar is positioned after the text size button.</td>
 </tr>
 <tr>
 <td>Edit</td>
@@ -539,11 +539,11 @@ Similarly, you can customize the other toolbars and their items by accessing the
 </tr>
 <tr>
 <td>ClearSearch</td>
-<td>The button that appears in the search toolbar allows you to clears the current search text.</td>
+<td>The button that appears in the search toolbar allows you to clear the current search text.</td>
 </tr>
 <tr>
 <td>ClearSeparator</td>
-<td>The separator that appears in the search toolbar positioned after the clear button</td>
+<td>The separator that appears in the search toolbar is positioned after the clear button.</td>
 </tr>
 <tr>
 <td>PreviousSearch</td>
@@ -580,7 +580,7 @@ Similarly, you can customize the other toolbars and their items by accessing the
 </tr>
 <tr>
 <td>Next page</td>
-<td>The button that appears in the primary toolbar allows you to navigate to the page next the current one in the PDF Viewer.</td>
+<td>The button that appears in the primary toolbar allows you to navigate to the page next to the current one in the PDF Viewer.</td>
 </tr>
 <tr>
 <td>Page number entry</td>
@@ -604,7 +604,7 @@ Similarly, you can customize the other toolbars and their items by accessing the
 </tr>
 <tr>
 <td>Outline</td>
-<td>The button that appears in the primary toolbar allows you to see the outline view of document.</td>
+<td>The button that appears in the primary toolbar allows you to see the outline view of the document.</td>
 </tr>
 <tr>
 <td>Search</td>
@@ -612,7 +612,7 @@ Similarly, you can customize the other toolbars and their items by accessing the
 </tr>
 <tr>
 <td>Page layout mode</td>
-<td>The button that appears in the primary toolbar allows you to customizes page display and layout in the PDF Viewer.</td>
+<td>The button that appears in the primary toolbar allows you to customize page display and layout in the PDF Viewer.</td>
 </tr>
 <tr>
 <td>Text markups</td>
@@ -644,19 +644,19 @@ Similarly, you can customize the other toolbars and their items by accessing the
 </tr>
 <tr>
 <td>Free text</td>
-<td>The button that appears in the annotation toolbar allows you to add text annotations directly onto the document in the PDF Viewer.</td>
+<td>The button that appears in the annotation toolbar allows you to add text annotations directly to the document in the PDF Viewer.</td>
 </tr>
 <tr>
 <td>Shapes</td>
-<td>The button that appears in the annotation toolbar allows you to add different shapes in the document.</td>
+<td>The button that appears in the annotation toolbar allows you to add different shapes to the document.</td>
 </tr>
 <tr>
 <td>Square</td>
-<td>The button that appears in the annotation toolbar allows you to draw square in the document.</td>
+<td>The button that appears in the annotation toolbar allows you to draw a square in the document.</td>
 </tr>
 <tr>
 <td>Circle</td>
-<td>The button that appears in the annotation toolbar allows you to draw circle in the document.</td>
+<td>The button that appears in the annotation toolbar allows you to draw a circle in the document.</td>
 </tr>
 <tr>
 <td>Line</td>
@@ -668,15 +668,15 @@ Similarly, you can customize the other toolbars and their items by accessing the
 </tr>
 <tr>
 <td>Polyline</td>
-<td>The button that appears in the annotation toolbar allows you to draw polyline in the document.</td>
+<td>The button that appears in the annotation toolbar allows you to draw polylines in the document.</td>
 </tr>
 <tr>
 <td>Polygon</td>
-<td>The button that appears in the annotation toolbar allows you to draw polygon in the document.</td>
+<td>The button that appears in the annotation toolbar allows you to draw polygons in the document.</td>
 </tr>
 <tr>
 <td>Cloud</td>
-<td>The button that appears in the annotation toolbar allows you to draw a cloud in the document.</td>
+<td>The button that appears in the annotation toolbar allows you to draw a cloud on the document.</td>
 </tr>
 <tr>
 <td>Stamps</td>
@@ -684,11 +684,11 @@ Similarly, you can customize the other toolbars and their items by accessing the
 </tr>
 <tr>
 <td>Sticky note</td>
-<td>The button that appears in the annotation toolbar allows you to add the sticky note in the document in the PDF Viewer.</td>
+<td>The button that appears in the annotation toolbar allows you to add the sticky note to the document in the PDF Viewer.</td>
 </tr>
 <tr>
 <td>Signature</td>
-<td>The button that appears in the annotation toolbar allows you to create and add the signature.</td>
+<td>The button that appears in the annotation toolbar allows you to create and add a signature.</td>
 </tr>
 <tr>
 <td>Color picker</td>
@@ -712,11 +712,11 @@ Similarly, you can customize the other toolbars and their items by accessing the
 </tr>
 <tr>
 <td>ColorPickerSeparator</td>
-<td>The separator that appears in the annotation toolbar positioned before the color picker button.</td>
+<td>The separator that appears in the annotation toolbar is positioned before the color picker button.</td>
 </tr>
 <tr>
 <td>Close</td>
-<td>The button that appears in the annotation toolbar allows you to close the annotations toolbar.</td>
+<td>The button that appears in the annotation toolbar allows you to close the annotation toolbar.</td>
 </tr>
 <tr>
 <td>PageCountSeparator</td>
@@ -724,18 +724,18 @@ Similarly, you can customize the other toolbars and their items by accessing the
 </tr>
 <tr>
 <td>ZoomIconSeparator</td>
-<td>The separator that appears in the primary toolbar positioned before the Zoom mode button.</td>
+<td>The separator that appears in the primary toolbar is positioned before the Zoom mode button.</td>
 </tr>
 <tr>
 <td>AnnotationSeparator</td>
-<td>The separator that appears in the primary toolbar positioned before the annotations button.</td>
+<td>The separator that appears in the primary toolbar is positioned before the annotations button.</td>
 </tr>
 <tr>
 <td>PrintSeparator</td>
-<td>The separator that appears in the primary toolbar positioned after the print button.</td>
+<td>The separator that appears in the primary toolbar is positioned after the print button.</td>
 </tr>
 <tr>
 <td>MoreOptionSeparator</td>
-<td>The separator that appears in the primary toolbar positioned before the page layout mode.</td>
+<td>The separator that appears in the primary toolbar is positioned before the page layout mode.</td>
 </tr>
 </table>

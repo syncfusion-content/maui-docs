@@ -23,7 +23,7 @@ In the above code snippet, `pdfDocumentStream` is the `Stream` instance read fro
 
 ## Detecting a password-protected document
 
-You can identify whether a PDF document to be opened is a password protected or not by using the [PasswordRequested](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_PasswordRequested) event. This event triggers when the document to be loaded in the `SfPdfViewer` requires a password. In this event handler method, you can set the `password` property from the [PasswordRequestedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.PasswordRequestedEventArgs.html) with the correct password to load the document. Refer to the following code example.
+You can identify whether a PDF document to be opened is a password protected or not by using the [PasswordRequested](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_PasswordRequested) event. This event triggers when the document to be loaded in the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) requires a password. In this event handler method, you can set the [password](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.PasswordRequestedEventArgs.html#Syncfusion_Maui_PdfViewer_PasswordRequestedEventArgs_Password) property from the [PasswordRequestedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.PasswordRequestedEventArgs.html) with the correct password to load the document. Refer to the following code example.
 
 {% tabs %}
 {% highlight xaml %}

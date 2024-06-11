@@ -145,7 +145,7 @@ private void PdfTextSearchProgress(object sender, TextSearchProgressEventArgs e)
 
 ### Search completion percentage
 
-The [TotalPagesSearched](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.TextSearchProgressEventArgs.html#Syncfusion_Maui_PdfViewer_TextSearchProgressEventArgs_TotalPagesSearched) property of the `TextSearchProgressEventArgs` provides the total number of pages that have been searched to find the specified text across the PDF document. You may use this information to find the search completion percentage as shown in the following code example:
+The [TotalPagesSearched](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.TextSearchProgressEventArgs.html#Syncfusion_Maui_PdfViewer_TextSearchProgressEventArgs_TotalPagesSearched) property of the [TextSearchProgressEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.TextSearchProgressEventArgs.html) provides the total number of pages that have been searched to find the specified text across the PDF document. You may use this information to find the search completion percentage as shown in the following code example:
 
 {% tabs %}
 {% highlight C# %}
