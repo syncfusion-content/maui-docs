@@ -14,7 +14,6 @@ The [Legend](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartBas
 ## Defining the legend
 To define the legend in the chart, initialize the [ChartLegend](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLegend.html) class and assign it to the [Legend](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartBase.html#Syncfusion_Maui_Charts_ChartBase_Legend) property.
 
-
 {% tabs %}
 
 {% highlight xaml %}
@@ -42,7 +41,6 @@ To define the legend in the chart, initialize the [ChartLegend](https://help.syn
 
 ## Legend visibility
 The visibility of the chart legend can be controlled using the [IsVisible](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLegend.html#Syncfusion_Maui_Charts_ChartLegend_IsVisible) property. By default, the IsVisible property is set to `true`.
-
 
 {% tabs %}
 
@@ -73,7 +71,6 @@ The visibility of the chart legend can be controlled using the [IsVisible](https
 
 ## Legend item visibility
 The visibility of individual legend items for specific series can be controlled using the [IsVisibleOnLegend](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_IsVisibleOnLegend) property of the series. The default value for IsVisibleOnLegend is `true`.
-
 
 {% tabs %}
 
@@ -133,7 +130,6 @@ The visibility of individual legend items for specific series can be controlled 
 ## Legend icon
 To specify the legend icon based on the associated series type, use the [LegendIcon](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_LegendIcon) property and change its type using the [ChartLegendIconType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLegendIconType.html) enum values. The default value of the LegendIcon property is `Circle`.
 
-
 {% tabs %}
 
 {% highlight xaml %}
@@ -178,7 +174,6 @@ To specify the legend icon based on the associated series type, use the [LegendI
 
 ## Placement
 The legend can be positioned to the left, right, top, or bottom of the chart area using the [Placement](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLegend.html#Syncfusion_Maui_Charts_ChartLegend_Placement) property in the ChartLegend class. The default placement is `Top`.
-
 
 {% tabs %}
 

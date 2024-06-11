@@ -12,7 +12,7 @@ keywords: .net maui, .net maui digital gauge, digital gauge, character segments,
 
 The characters of a digital gauge can be customized in terms of `CharacterWidth`, `CharacterHeight`, `CharacterSpacing`, and `CharacterStrokeColor`.
 
-## customize character size
+## Customize character size
 
 The values of digital characters are scaled by altering the height and width of digital characters. This is achieved by setting the `CharacterHeight` and `CharacterWidth` properties in the digital gauge. The default value of `CharacterHeight` is 60 and `CharacterWidth` is 40.
 `
@@ -21,8 +21,7 @@ The values of digital characters are scaled by altering the height and width of 
 {% highlight xaml %}
 
     <gauge:SfDigitalGauge Text="SYNCFUSION" 
-                          CharacterHeight="60" CharacterWidth="40" 
-                          CharacterStroke="#146CED"/>
+                          CharacterHeight="60" CharacterWidth="40"/>
 {% endhighlight %}
 
 {% highlight c# %}
@@ -39,6 +38,7 @@ The values of digital characters are scaled by altering the height and width of 
 
 {% endtabs %}
 
+![height-width-for-text](Images\height-width-for-text.png)
 
 ## Setting character spacing
 
@@ -57,7 +57,7 @@ The values of digital characters are spaced by altering the space between digita
 
             SfDigitalGauge digital = new SfDigitalGauge();
 
-            digital.Time = "01-01-18";
+            digital.Time = "01-01-24";
 
             digital.CharacterSpacing = 10;
 
@@ -67,6 +67,7 @@ The values of digital characters are spaced by altering the space between digita
 
 {% endtabs %}
 
+![character-spacing-digitalgauge](Images\character-spacing-digitalgauge.png)
 
 ## Customize character segment stroke
 
@@ -92,6 +93,8 @@ The values of digital characters color can be customized using the `CharacterStr
 
 {% endtabs %}
 
+![characterstroke-digitalgauge](Images\characterstroke-digitalgauge.png)
+
 ## Customize character segment width
 
 The width of the digital character value can be customized using the `StrokeWidth` property.
@@ -116,6 +119,7 @@ The width of the digital character value can be customized using the `StrokeWidt
 
 {% endtabs %}
 
+![characterwidth-digitalgauge](Images\characterwidth-digitalgauge.png)
 
 ## Customize disabled segment
 
@@ -143,6 +147,8 @@ You can customize the color and opacity of disabled segments using the `Disabled
 
 {% endtabs %}
 
+![disabled-segment-stroke-digitalgauge](Images\disabled-segment-stroke-digitalgauge.png)
+
 ## Customize background color of digital gauge
 
 You can customize the background color of the digital gauge using the `BackgroundColor` property.
@@ -168,3 +174,5 @@ You can customize the background color of the digital gauge using the `Backgroun
 {% endhighlight %}
 
 {% endtabs %}
+
+![backgroundcolor-digitalgauge](Images\backgroundcolor-digitalgauge.png)

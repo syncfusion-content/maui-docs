@@ -14,7 +14,6 @@ The [Legend](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartBas
 ## Defining the legend
 To define the legend in the chart, initialize the [ChartLegend](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLegend.html) class and assign it to the [Legend](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartBase.html#Syncfusion_Maui_Charts_ChartBase_Legend) property.
 
-
 {% tabs %}
 
 {% highlight xaml %}
@@ -114,7 +113,6 @@ The visibility of individual legend items for specific series can be controlled 
 
 ## Legend icon
 To specify the legend icon based on the associated series type, use the [LegendIcon](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_LegendIcon) property and change its type using the [ChartLegendIconType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLegendIconType.html) enum values. The default value of the LegendIcon property is `Circle`.
-
 
 {% tabs %}
 

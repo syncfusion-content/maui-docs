@@ -5,6 +5,7 @@ description: Learn here all about the bubble chart and its features in Syncfusio
 platform: maui
 control: SfCartesianChart
 documentation: ug
+keywords: .net maui bubble chart, maui bubble chart, bubble chart customization .net maui, syncfusion maui bubble chart, cartesian bubble chart maui, .net maui chart bubble visualization.
 ---
 
 # Bubble Chart in .NET MAUI Chart
@@ -23,7 +24,8 @@ N> The Cartesian chart has [Series](https://help.syncfusion.com/cr/maui/Syncfusi
 
 {% highlight xaml %}
 
-    <chart:SfCartesianChart>
+<chart:SfCartesianChart>
+ ...
     <chart:SfCartesianChart.XAxes>
         <chart:NumericalAxis />
     </chart:SfCartesianChart.XAxes>
@@ -32,39 +34,39 @@ N> The Cartesian chart has [Series](https://help.syncfusion.com/cr/maui/Syncfusi
         <chart:NumericalAxis />
     </chart:SfCartesianChart.YAxes>  
                 
-        <chart:BubbleSeries ItemsSource="{Binding Data}"
-                            XBindingPath="XValue"
-                            YBindingPath="YValue"
-                            SizeValuePath="Size"/>
+    <chart:BubbleSeries ItemsSource="{Binding Data}"
+                        XBindingPath="XValue"
+                        YBindingPath="YValue"
+                        SizeValuePath="Size"/>
 
-    </chart:SfCartesianChart>
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
-    NumericalAxis primaryAxis = new NumericalAxis();
-    chart.XAxes.Add(primaryAxis);
-    NumericalAxis secondaryAxis = new NumericalAxis();
-    chart.YAxes.Add(secondaryAxis);
+SfCartesianChart chart = new SfCartesianChart();
+NumericalAxis primaryAxis = new NumericalAxis();
+chart.XAxes.Add(primaryAxis);
+NumericalAxis secondaryAxis = new NumericalAxis();
+chart.YAxes.Add(secondaryAxis);
 
-    BubbleSeries series = new BubbleSeries()
-    {
-        ItemsSource = new ViewModel().Data,
-        XBindingPath = "XValue",
-        YBindingPath = "YValue",
-        SizeValuePath = "Size",
-    };
+BubbleSeries series = new BubbleSeries()
+{
+    ItemsSource = new ViewModel().Data,
+    XBindingPath = "XValue",
+    YBindingPath = "YValue",
+    SizeValuePath = "Size",
+};
 
-    chart.Series.Add(series);
-    this.Content = chart;
+chart.Series.Add(series);
+this.Content = chart;
 
 {% endhighlight %}
 
 {% endtabs %}
 
-![Bubble chart type in MAUI Chart](Chart-Types_images/BubbleBasisImage.png)
+![Bubble chart type in MAUI Chart](Chart-Types-images/BubbleBasisImage.png)
 
 ## Show zero size bubbles
 The zero size bubble segments can be enabled or disabled using the [ShowZeroSizeBubbles](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.BubbleSeries.html#Syncfusion_Maui_Charts_BubbleSeries_ShowZeroSizeBubbles) property. By default, the property value is True. The following code illustrates how to set the value to the property.
@@ -73,35 +75,37 @@ The zero size bubble segments can be enabled or disabled using the [ShowZeroSize
 
 {% highlight xaml %}
 
-    <chart:SfCartesianChart>
-        . . .
-            <chart:BubbleSeries ItemsSource="{Binding Data}"
-                                XBindingPath="XValue"
-                                YBindingPath="YValue"
-                                SizeValuePath="Size"
-                                ShowZeroSizeBubbles="False"/>
+<chart:SfCartesianChart>
+    . . .
+        <chart:BubbleSeries ItemsSource="{Binding Data}"
+                            XBindingPath="XValue"
+                            YBindingPath="YValue"
+                            SizeValuePath="Size"
+                            ShowZeroSizeBubbles="False"/>
 
-    </chart:SfCartesianChart>
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
-    ...
+SfCartesianChart chart = new SfCartesianChart();
+...
 
-    BubbleSeries bubbleSeries = new BubbleSeries() 
-    { 
-        ItemsSource = new ViewModel().Data,
-        XBindingPath = "XValue",
-        YBindingPath = "YValue",
-        SizeValuePath = "Size",
-        ShowZeroSizeBubbles = false;
-    };
-    chart.Series.Add(bubbleSeries);
+BubbleSeries bubbleSeries = new BubbleSeries() 
+{ 
+    ItemsSource = new ViewModel().Data,
+    XBindingPath = "XValue",
+    YBindingPath = "YValue",
+    SizeValuePath = "Size",
+    ShowZeroSizeBubbles = false;
+};
+
+chart.Series.Add(bubbleSeries);
+this.Content = chart;
 
 {% endhighlight %}
 
 {% endtabs %}
 
-![ShowZeroSize bubble  type in MAUI Chart](Chart-Types_images/ShowZeroSizeBubble.png)
+![ShowZeroSize bubble  type in MAUI Chart](Chart-Types-images/ShowZeroSizeBubble.png)

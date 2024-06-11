@@ -19,8 +19,8 @@ N> The circular chart has [Series](https://help.syncfusion.com/cr/maui/Syncfusio
 
 <chart:SfCircularChart>
     <chart:DoughnutSeries ItemsSource="{Binding Data}" 
-                        XBindingPath="Product" 
-                        YBindingPath="SalesRate" />
+                          XBindingPath="Product" 
+                          YBindingPath="SalesRate" />
 </chart:SfCircularChart>
 
 {% endhighlight %}
@@ -34,6 +34,7 @@ series.XBindingPath = "Product";
 series.YBindingPath = "SalesRate";
 
 chart.Series.Add(series);
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -51,9 +52,9 @@ The [InnerRadius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Dou
 
 <chart:SfCircularChart>
     <chart:DoughnutSeries ItemsSource="{Binding Data}"
-						InnerRadius="0.7"		  
-						XBindingPath="Product"
-						YBindingPath="SalesRate" />
+                          InnerRadius="0.7"	
+                          XBindingPath="Product"
+                          YBindingPath="SalesRate" />
 </chart:SfCircularChart>
 
 {% endhighlight %}
@@ -67,6 +68,7 @@ series.YBindingPath = "SalesRate";
 series.InnerRadius = 0.7;
 
 chart.Series.Add(series);
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -84,9 +86,9 @@ By using the [StartAngle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Ch
 
 <chart:SfCircularChart>
     <chart:DoughnutSeries StartAngle="180" EndAngle="360"
-                    ItemsSource="{Binding Data}"
-                    XBindingPath="Product" 
-                    YBindingPath="SalesRate" />
+                          ItemsSource="{Binding Data}"
+                          XBindingPath="Product" 
+                          YBindingPath="SalesRate" />
 </chart:SfCircularChart>
     
 {% endhighlight %}
@@ -101,6 +103,7 @@ series.StartAngle = 180;
 series.EndAngle = 360;
 
 chart.Series.Add(series);
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -155,6 +158,7 @@ StackLayout layout = new StackLayout();
 border.Content = layout;
 series.CenterView = border;
 chart.Series.Add(series);
+this.Content = chart;
 
 {% endhighlight %}
 

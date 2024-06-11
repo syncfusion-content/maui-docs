@@ -5,6 +5,7 @@ description: This section explains about chart axis title, title style, title te
 platform: maui
 control: SfCartesianChart
 documentation: ug
+keywords: .net maui cartesian charts, .net maui axis title, cartesian chart axis title, syncfusion cartesian charts maui, maui chart axis labeling, .net maui chart axis title, cartesian chart axis title guide maui, .net maui sfCartesianChart axis title.
 ---
 
 # Axis Title in MAUI Chart

@@ -15,7 +15,6 @@ The [Legend](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartBas
 ## Defining the legend
 To define the legend in the chart, initialize the [ChartLegend](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLegend.html) class and assign it to the [Legend](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartBase.html#Syncfusion_Maui_Charts_ChartBase_Legend) property.
 
-
 {% tabs %}
 
 {% highlight xaml %}
@@ -274,7 +273,6 @@ N> The BindingContext of the template is the corresponding underlying legend ite
     </chart:SfFunnelChart>
 
 {% endhighlight %}
-
 
 {% highlight c# %}
 
