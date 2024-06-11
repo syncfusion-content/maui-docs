@@ -5,6 +5,7 @@ description: Learn here all about range column and range bar chart support in Sy
 platform: maui
 control: SfCartesianChart
 documentation: ug
+keywords: .net maui range column chart, maui range column chart, range column chart customization .net maui, syncfusion maui range column chart, cartesian range column chart maui, .net maui chart range column visualization, .net maui interval column chart.
 ---
 
 # Range Column Chart in .NET MAUI Chart

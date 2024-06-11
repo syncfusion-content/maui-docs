@@ -41,6 +41,7 @@ selection.SelectionBrush="#314A6E";
 DoughnutSeries series = new DoughnutSeries();
 series.SelectionBehavior = selection;
 chart.Series.Add(series);
+this.Content = chart;
 
 {% endhighlight %}
 

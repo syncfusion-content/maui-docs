@@ -5,6 +5,7 @@ description: Learn here all about axis types and its features in Syncfusion .NET
 platform: maui
 control: SfCartesianChart
 documentation: ug
+keywords: .net maui cartesian charts, .net maui axis types, cartesian chart axis types, syncfusion cartesian charts maui, maui chart axis customization, .net maui chart axis, cartesian chart axis guide maui, .net maui sfCartesianChart axis.
 ---
 
 # Types of Axis in .NET MAUI Chart
@@ -250,31 +251,31 @@ The following code illustrates how to define the property [ArrangeByIndex](https
 
 {% highlight xaml %}
 
-    <chart:SfCartesianChart>
-        . . .
-        <chart:SfCartesianChart.XAxes>
-            <chart:CategoryAxis ArrangeByIndex="False" />
-        </chart:SfCartesianChart.XAxes>
-        <chart:SfCartesianChart.YAxes>
-            <chart:NumericalAxis/>
-        </chart:SfCartesianChart.YAxes>
+<chart:SfCartesianChart>
+    . . .
+    <chart:SfCartesianChart.XAxes>
+        <chart:CategoryAxis ArrangeByIndex="False" />
+    </chart:SfCartesianChart.XAxes>
+    <chart:SfCartesianChart.YAxes>
+        <chart:NumericalAxis/>
+    </chart:SfCartesianChart.YAxes>
 
-        <chart:ColumnSeries ItemsSource="{Binding Items}"
-                            XBindingPath="Year"
-                            YBindingPath="Value"/>
+    <chart:ColumnSeries ItemsSource="{Binding Items}"
+                        XBindingPath="Year"
+                        YBindingPath="Value"/>
 
-        <chart:ColumnSeries ItemsSource="{Binding Items}"
-                            XBindingPath="Year1"
-                            BindingPath="Value"/>
+    <chart:ColumnSeries ItemsSource="{Binding Items}"
+                        XBindingPath="Year1"
+                        YBindingPath="Value"/>
 
-        </chart:SfCartesianChart>
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
-    . . .
+SfCartesianChart chart = new SfCartesianChart();
+. . .
     CategoryAxis primaryAxis = new CategoryAxis()
     {
         ArrangeByIndex = false, 
@@ -296,6 +297,8 @@ The following code illustrates how to define the property [ArrangeByIndex](https
 
     chart.Series.Add(series1);
     chart.Series.Add(series2);  
+
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -663,9 +666,10 @@ NumericalAxis secondaryAxis1 = new NumericalAxis();
 chart.YAxes.Add(secondaryAxis1);
 series1.YAxisName = "series_YAxis";
 
-
 chart.Series.Add(series1);
 chart.Series.Add(series2);
+
+this.Content = chart;
 
 {% endhighlight %}
 

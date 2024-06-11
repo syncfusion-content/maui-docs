@@ -5,6 +5,7 @@ description: Learn here all about to customize each chart axis label using the c
 platform: maui
 control: SfCartesianChart
 documentation: ug
+keywords: .net maui chart customize axis label callback, .net maui chart axis label callback event, sfcartesianchart axis label callback customization in .net maui, sfcartesianchart custom axis label event handling in .net maui.
 ---
 
 # Customize each chart axis label using the callback event
