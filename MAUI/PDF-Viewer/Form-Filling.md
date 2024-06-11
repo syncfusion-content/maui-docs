@@ -195,6 +195,41 @@ if (signature != null)
 
 The `Signature` property is of type [InkAnnotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.InkAnnotation.html) and it will behave like an ink after signing. If the PDF document is saved, the signature will be preserved as an ink annotation in the saved document. 
 
+#### Supressing the signature modal view
+
+The [Sfpdfviewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) allows you to supress the signature modal view and use your own UI in its place. This can be achieved by setting the `AnnotationModalViewAppearingEventArgs.Cancel` property to `true` in the `SignatureModalViewAppearing` event handler. 
+
+The below code snippet illustrates supressing the signature modal view and using a UI implemented in the app in its place. In this illustration, it is assumed that the signature is produced in the form of an image stream when the user completes drawing the signature in the custom dialog. When the signing is completed using the custom dialog, a stamp annotation is created and assigned as the signature of the form field.   
+
+{% tabs %}
+{% highlight c# %}
+
+FormField signatureFormField;
+pdfviewer.SignatureModalViewAppearing += PdfViewer_SignatureModalViewAppearing;
+
+private void PdfViewer_SignatureModalViewAppearing(object? Sender, FormFieldModalViewAppearingEventArgs e)
+{
+    e.Cancel = true;
+    signatureFormField = e.FormField;
+    
+    // Implement your own UI for creating a signature.
+    ShowCustomDialog();
+}
+
+Private void customDialogOkButton_Clicked(object sender, EventArgs e)
+{
+   //Get the signature in the form of a Stream instance (possibly converted from an image of the user's free hand drawing) 
+   signatureImageStream = GetSignatureImageStream();
+   
+   // Create a stamp annotation. The bounds values are not necessary since the stamp will be automatically fit over the signature form field. 
+   StampAnnotation signatureStamp = new StampAnnotation(signatureImageStream, signatureFormField.PageNumber, new RectF(0, 0, 0, 0));
+   
+   signatureFormField.Signature = signatureStamp;
+}
+
+{% endhighlight %} 
+{% endtabs %}
+
 ### Button form fields
 
 Button form fields will be rendered in the PDF viewer. But the PDF viewer supports only the `GoTo` actions that navigates to a particular location in the PDF document alone. Other types of button actions are not supported.
