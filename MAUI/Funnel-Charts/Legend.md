@@ -17,6 +17,7 @@ The [Legend](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartBas
 Defining the legend
 To define the legend in the chart, initialize the [ChartLegend](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLegend.html) class and assign it to the [Legend](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartBase.html#Syncfusion_Maui_Charts_ChartBase_Legend) property.
 
+
 {% tabs %}
 
 {% highlight xaml %}
@@ -49,6 +50,7 @@ To define the legend in the chart, initialize the [ChartLegend](https://help.syn
 
 ## Legend visibility
 The visibility of the chart legend can be controlled using the [IsVisible](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLegend.html#Syncfusion_Maui_Charts_ChartLegend_IsVisible) property. By default, the IsVisible property is set to `true`.
+
 
 {% tabs %}
 
@@ -84,6 +86,7 @@ The visibility of the chart legend can be controlled using the [IsVisible](https
 Legend icon
 To specify the legend icon based on the associated series type, use the [LegendIcon](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfFunnelChart.html#Syncfusion_Maui_Charts_SfFunnelChart_LegendIcon) property and change its type using the [ChartLegendIconType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLegendIconType.html) enum values. The default value of the LegendIcon property is `Circle`.
 
+
 {% tabs %}
 
 {% highlight xaml %}
@@ -118,6 +121,7 @@ To specify the legend icon based on the associated series type, use the [LegendI
 ## Placement
 The legend can be positioned to the left, right, top, or bottom of the chart area using the [Placement](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLegend.html#Syncfusion_Maui_Charts_ChartLegend_Placement) property in the ChartLegend class. The default placement is `Top`.
 
+
 {% tabs %}
 
 {% highlight xaml %}
@@ -149,10 +153,10 @@ The legend can be positioned to the left, right, top, or bottom of the chart are
 
 {% endtabs %}
 
+
 ## Legend maximum size request
 To set the maximum size request for the legend view, override the [GetMaximumSizeCoefficient]() protected method in [ChartLegend](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLegend.html) class. The value should be between 0 and 1, representing the maximum size request, not the desired size for the legend items layout.
 
-{% tabs %}
 
 {% highlight xaml %}
     
@@ -182,6 +186,7 @@ To set the maximum size request for the legend view, override the [GetMaximumSiz
 {% endhighlight %}
 
 {% endtabs %}
+
 
 ## Items Layout
 The [ItemsLayout]() property is used to customize the arrangement and position of each legend item. The default value is `null`. This property accepts any layout type.
@@ -240,6 +245,7 @@ The [ChartLegend](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Cha
 
 N> The BindingContext of the template is the corresponding underlying legend item provided in the ChartLegendItem class.
 
+
 {% tabs %}
 
 {% highlight xaml %}
@@ -269,6 +275,7 @@ N> The BindingContext of the template is the corresponding underlying legend ite
 
 {% endhighlight %}
 
+
 {% highlight c# %}
 
      SfFunnelChart chart = new SfFunnelChart()
@@ -293,3 +300,5 @@ N> The BindingContext of the template is the corresponding underlying legend ite
 * For better UX, arrange items vertically for left and right dock positions, and horizontally for top and bottom dock positions.
 * If the layout's measured size is larger than the MaximumHeightRequest, scrolling will be enabled.
 * If MaximumHeightRequest is set to 1 and the chart's available size is smaller than the layout's measured size, the series may not have enough space to draw properly.
+
+
