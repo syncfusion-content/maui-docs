@@ -13,7 +13,7 @@ This section walks you through the UI customization options supported in the [Sf
 
 ## Show or hide scroll head
 
-You can scroll through the pages by simply dragging the scroll head in the UI. The `SfPdfViewer` allows you to show or hide the scroll head thumb displayed using the [ShowScrollHead](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_ShowScrollHead) property. Refer to the following code example.
+You can scroll through the pages by simply dragging the scroll head in the UI. The [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) allows you to show or hide the scroll head thumb displayed using the [ShowScrollHead](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_ShowScrollHead) property. Refer to the following code example.
 
 {% tabs %}
 {% highlight c# %}
