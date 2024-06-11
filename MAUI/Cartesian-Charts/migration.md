@@ -5,6 +5,7 @@ description: This section explains the features available in the .NET MAUI Chart
 platform: MAUI
 control: SfCartesianChart
 documentation: ug
+keywords: migrate from xamarin.Forms sfChart to .net maui sfCartesianChart, transitioning from xamarin.Forms sfChart to .net maui sfCartesianChart, move from xamarin.Forms sfChart to .net maui sfCartesianChart, upgrading xamarin.Forms s to .net maui sfCartesianChart.
 ---
 
 # Migrate from Xamarin.Forms SfChart to .NET MAUI SfCartesianChart
@@ -57,8 +58,8 @@ To initialize the control, import the Chart namespace and Initialize [SfCartesia
 using Syncfusion.SfChart.XForms;
 ...
 
- SfChart chart = new SfChart(); 
- this.Content = chart;
+SfChart chart = new SfChart(); 
+this.Content = chart;
 
 {% endhighlight %}
 {% endtabs %}
@@ -199,7 +200,7 @@ The following table illustrates the API migration for the chart.
 </tr>
 <tr>
 <td>TickPosition</td>
-<td><em>Upcoming</em></td>
+<td><em>TickPosition</em></td>
 </tr>
 <tr>
 <td>MaximumLabels</td>
@@ -211,7 +212,7 @@ The following table illustrates the API migration for the chart.
 </tr>
 <tr>
 <td>TrackballLabelTemplate</td>
-<td><em>Upcoming</em></td>
+<td><em>TrackballLabelTemplate</em></td>
 </tr>
 </table>
 
@@ -324,10 +325,9 @@ The following code example explains how to migrate the series of Xamarin [SfChar
 <chart:SfChart>
 . . .
     <chart:ColumnSeries ItemsSource="{Binding Data}" 
-    XBindingPath="Name" 
-    YBindingPath="Height">
-	</chart:ColumnSeries>
- </chart:SfChart>
+                        XBindingPath="Name" 
+                        YBindingPath="Height"/>
+</chart:SfChart>
 
 {% endhighlight %} 
 {% highlight C# %}
@@ -357,8 +357,7 @@ this.Content = chart;
 <chart:SfCartesianChart>
 <chart:ColumnSeries ItemsSource="{Binding Data}"
 					XBindingPath="Name"
-					YBindingPath="Height">
-</chart:ColumnSeries>
+					YBindingPath="Height"/>
 </chart:SfCartesianChart>
 
 {% endhighlight %} 
@@ -571,7 +570,7 @@ chart.Series.Add(series);
 <chart:SfCartesianChart>
     . . .
     <chart:ColumnSeries ItemsSource="{Binding Data}" XBindingPath="Category" 
-    YBindingPath="Value" ShowDataLabels="True">
+                        YBindingPath="Value" ShowDataLabels="True">
         <chart:ColumnSeries.DataLabelSettings>
             <chart:CartesianDataLabelSettings>
                 <chart:CartesianDataLabelSettings.LabelStyle>
@@ -761,8 +760,8 @@ chart.ChartBehaviors.Add(selectionBehavior);
 . . .
     <chart:SfCartesianChart.Series>
         <chart:ColumnSeries ItemsSource="{Binding Data}" 
-                        XBindingPath="Name"
-                        YBindingPath="Height">
+                            XBindingPath="Name"
+                            YBindingPath="Height">
                 <chart:ColumnSeries.SelectionBehavior>
                         <chart:DataPointSelectionBehavior SelectionBrush="#314A6E"/>
                 </chart:ColumnSeries.SelectionBehavior>
@@ -854,14 +853,12 @@ chart.ZoomPanBehavior = zooming;
 
 **Chart** 
  
-* Support for annotations. 
 * Suspend and resume notification support. 
 * Technical indicators for charts.
 
 **Series**
 
 * Listen to property change support for series.
-* Get data points by passing rect.
 * Notify event or method when series are rendering.
 * Suspend and resume notification.
 * Trendlines support for continuous series. 
@@ -869,10 +866,8 @@ chart.ZoomPanBehavior = zooming;
 **Axis**
 
 * DateTime category axis support.
-* Align the axis labels and tick inside the series clip rect.
 * Range style customization.
 * Event or method to notify the axis label click.
-* Axis label wrapping support.
 * Support for axis draw labels as multiple lines using /n.
 * Support setting the maximum labels count for the chart axis.
 
@@ -880,18 +875,12 @@ chart.ZoomPanBehavior = zooming;
 
 * Title support for legend. 
 * Support to enable or disable the legend icon visibility.
-* Legend items wrap and floating support.
-* Maximum width support for Legend.
+* Legend floating support.
 * Event or method to notify the legend click and the creation of a legend item.
 
 **Data label**
 
 * Connector lines and its customization support.
-
-**Zooming**
-
-* Support setting the maximum zoom level.
-* Event for zooming and panning.
 
 ## Known issue 
 

@@ -5,6 +5,7 @@ description: Learn here all about introduction of Syncfusion .NET MAUI Chart (Sf
 platform: maui
 control: SfCartesianChart
 documentation: ug
+keywords: .net maui sfCartesianChart overview,  introduction to sfCartesianChart in .net maui, exploring sfCartesianChart in .net maui.
 ---
 
 # .NET MAUI Chart Overview

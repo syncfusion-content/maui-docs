@@ -5,6 +5,7 @@ description: This section explains about the getting started with Syncfusion MAU
 platform: maui
 control: SfCartesianChart
 documentation: ug
+keywords: .net maui cartesian chart, .net maui charting, cartesian chart maui, syncfusion cartesian chart maui, maui chart control, .net maui data visualization, cartesian chart example maui.
 ---
 
 # Getting Started with .NET MAUI Chart
@@ -350,8 +351,8 @@ The legend provides information about the data point displayed in the chart. The
 
 {% highlight C# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
-    chart.Legend = new ChartLegend (); 
+SfCartesianChart chart = new SfCartesianChart();
+chart.Legend = new ChartLegend (); 
 
 {% endhighlight %}
 

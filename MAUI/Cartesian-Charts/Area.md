@@ -5,6 +5,7 @@ description: Learn here all about the area chart types and its features in Syncf
 platform: maui
 control: SfCartesianChart
 documentation: ug
+keywords: .net maui area chart, .net maui chart area type, area chart customization .net maui, syncfusion maui area chart, cartesian area chart maui, .net maui chart filled line visualization.
 ---
 
 # Area Chart in .NET MAUI Chart
@@ -30,8 +31,8 @@ N> The cartesian chart has [Series](https://help.syncfusion.com/cr/maui/Syncfusi
     </chart:SfCartesianChart.YAxes>   
 
     <chart:AreaSeries ItemsSource="{Binding Data}"
-					  XBindingPath="Demand"
-					  YBindingPath="Year2010"/>  
+                      XBindingPath="Demand"
+                      YBindingPath="Year2010"/>  
 
 </chart:SfCartesianChart>
 
@@ -59,7 +60,7 @@ this.Content = chart;
 
 {% endtabs %}
 
-![Area chart type in MAUI Chart](Chart-types_images/maui_area_chart.png)
+![Area chart type in MAUI Chart](Chart-types-images/maui_area_chart.png)
 
 ## Spline Area Chart
 
@@ -80,8 +81,8 @@ The [SplineAreaSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chart
     </chart:SfCartesianChart.YAxes>
             
     <chart:SplineAreaSeries ItemsSource="{Binding Data}"
-							XBindingPath="Demand" 
-							YBindingPath="Year2010"/>  
+                            XBindingPath="Demand" 
+                            YBindingPath="Year2010"/>  
 
 </chart:SfCartesianChart>
 
@@ -109,7 +110,7 @@ this.Content = chart;
 
 {% endtabs %}
 
-![Spline area chart type in MAUI Chart](Chart-types_images/maui_spline_area_chart.png)
+![Spline area chart type in MAUI Chart](Chart-types-images/maui_spline_area_chart.png)
 
 ## Enable Marker
 
@@ -135,7 +136,7 @@ A marker, also known as a symbol, is used to determine or highlight the position
 SfCartesianChart chart = new SfCartesianChart();
 
 ...
-AreaSeries series = new LineSeries()
+AreaSeries series = new AreaSeries()
 {
     XBindingPath = "Year",
     YBindingPath = "Percentage",
@@ -191,20 +192,20 @@ SfCartesianChart chart = new SfCartesianChart();
 
 ...
 ChartMarkerSettings chartMarker= new ChartMarkerSettings();
-        chartMarker.Type = ShapeType.Diamond;
-        chartMarker.Fill = Colors.Brown;
-        chartMarker.Stroke = Colors.Black;
-        chartMarker.StrokeWidth= 1;
-        chartMarker.Height = 8;
-        chartMarker.Width = 8;
+chartMarker.Type = ShapeType.Diamond;
+chartMarker.Fill = Colors.Brown;
+chartMarker.Stroke = Colors.Black;
+chartMarker.StrokeWidth= 1;
+chartMarker.Height = 8;
+chartMarker.Width = 8;
 
-AreaSeries series = new LineSeries()
+AreaSeries series = new AreaSeries()
 {
    XBindingPath = "Year",
    YBindingPath = "Percentage",
    ItemsSource = new ViewModel().Data,
    ShowMarkers = true,
- };
+};
 
 chart.Series.Add(series);
 this.Content = chart;
