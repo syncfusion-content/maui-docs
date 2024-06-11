@@ -21,9 +21,9 @@ To define the legend in the chart, initialize the [ChartLegend](https://help.syn
 
     <chart:SfPolarChart >
     . . .
-    <chart:SfPolarChart.Legend>
-        <chart:ChartLegend/>
-    </chart:SfPolarChart.Legend>
+        <chart:SfPolarChart.Legend>
+            <chart:ChartLegend/>
+        </chart:SfPolarChart.Legend>
     . . .
     </chart:SfPolarChart>
 
@@ -34,6 +34,7 @@ To define the legend in the chart, initialize the [ChartLegend](https://help.syn
 
     SfPolarChart chart = new SfPolarChart();
     chart.Legend = new ChartLegend();
+    this.Content = chart;
 
 {% endhighlight %}
 
@@ -50,7 +51,7 @@ The visibility of the chart legend can be controlled using the [IsVisible](https
     <chart:SfPolarChart>
         ...
         <chart:SfPolarChart.Legend>
-        <chart:ChartLegend IsVisible = "True"/>
+            <chart:ChartLegend IsVisible = "True"/>
         </chart:SfPolarChart.Legend>
         ...
     </chart:SfCartesianChart>
@@ -64,13 +65,13 @@ The visibility of the chart legend can be controlled using the [IsVisible](https
     { 
         IsVisible = true 
     };
+    this.Content = chart;
 
 {% endhighlight %}
 
 {% endtabs %}
 
-## LegendItems Visibility
-Legend item visibility
+## Legend item visibility
 The visibility of individual legend items for specific series can be controlled using the [IsVisibleOnLegend](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_IsVisibleOnLegend) property of the series. The default value for IsVisibleOnLegend is `true`.
 
 
@@ -80,7 +81,6 @@ The visibility of individual legend items for specific series can be controlled 
     
     <chart:SfPolarChart>
       ...
-
         <chart:SfPolarChart.Legend>
             <chart:ChartLegend/>
         </chart:SfPolarChart.Legend> 
@@ -88,12 +88,12 @@ The visibility of individual legend items for specific series can be controlled 
         <chart:PolarAreaSeries 
             ItemsSource="{Binding  PlantDetails}" 
             IsVisibleOnLegend="True"  Label="Tree"
-            XBindingPath="Direction" YBindingPath="Tree" />
+            XBindingPath="Direction" YBindingPath="Tree"/>
 
         <chart:PolarAreaSeries 
             ItemsSource="{Binding PlantDetails}" 
-            XBindingPath="Direction" YBindingPath="Weed" IsVisibleOnLegend="False" Label="Weed"/>
-
+            XBindingPath="Direction" YBindingPath="Weed"
+            sVisibleOnLegend="False" Label="Weed"/>
     </chart:SfPolarChart>
 
 {% endhighlight %}
@@ -130,7 +130,7 @@ The visibility of individual legend items for specific series can be controlled 
 
 {% endtabs %}
 
-## Legend Icon
+## Legend icon
 To specify the legend icon based on the associated series type, use the [LegendIcon](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_LegendIcon) property and change its type using the [ChartLegendIconType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLegendIconType.html) enum values. The default value of the LegendIcon property is `Circle`.
 
 
@@ -140,7 +140,6 @@ To specify the legend icon based on the associated series type, use the [LegendI
 
     <chart:SfPolarChart>
       ...
-
         <chart:SfPolarChart.Legend>
             <chart:ChartLegend/>
         </chart:SfPolarChart.Legend> 
@@ -150,7 +149,6 @@ To specify the legend icon based on the associated series type, use the [LegendI
             LegendIcon = "Diamond" Label="Tree"
             XBindingPath="Direction" 
             YBindingPath="Tree" />
-
     </chart:SfPolarChart>
 
 {% endhighlight %}
@@ -189,7 +187,7 @@ The legend can be positioned to the left, right, top, or bottom of the chart are
     <chart:SfPolarChart>
         ...
         <chart:SfPolarChart.Legend>
-        <chart:ChartLegend IsVisible = "True"/>
+            <chart:ChartLegend IsVisible = "True"/>
         </chart:SfPolarChart.Legend>
         ...
     </chart:SfCartesianChart>
@@ -204,6 +202,7 @@ The legend can be positioned to the left, right, top, or bottom of the chart are
     { 
         Placement = LegendPlacement.Bottom
     };
+    this.Content = chart;
 
 {% endhighlight %}
 
@@ -218,7 +217,6 @@ The visibility of polar series can be controlled by tapping the legend item usin
     
     <chart:SfPolarChart>
       ...
-
         <chart:SfPolarChart.Legend>
             <chart:ChartLegend ToggleSeriesVisibility="True"/>
         </chart:SfPolarChart.Legend> 
@@ -230,8 +228,8 @@ The visibility of polar series can be controlled by tapping the legend item usin
 
         <chart:PolarAreaSeries 
             ItemsSource="{Binding PlantDetails}" 
-            XBindingPath="Direction" YBindingPath="Weed" IsVisibleOnLegend="False" Label="Weed"/>
-
+            XBindingPath="Direction" YBindingPath="Weed" 
+            IsVisibleOnLegend="False" Label="Weed"/>
     </chart:SfPolarChart>
 
 {% endhighlight %}
@@ -278,9 +276,9 @@ To set the maximum size request for the legend view, override the [GetMaximumSiz
 
     <chart:SfPolarChart >
     . . .
-    <chart:SfPolarChart.Legend>
-        <chart:LegendExt/>
-    </chart:SfPolarChart.Legend>
+        <chart:SfPolarChart.Legend>
+            <chart:LegendExt/>
+        </chart:SfPolarChart.Legend>
     . . .
     </chart:SfPolarChart>
 
@@ -300,16 +298,17 @@ To set the maximum size request for the legend view, override the [GetMaximumSiz
 
     SfPolarChart chart = new SfPolarChart();
     chart.Legend = new LegendExt();
+    this.Content = chart;
 
 {% endhighlight %}
 
 {% endtabs %}
 
 
-## Items Layout
+## Items layout
 An [ItemsLayout]() property is used to customize the arrangement and posistion for each legend item. The default value is `null`. It accepts any layout type in ItemsLayout property.
 
-For more details about the layout alignment refer to this [article].
+For more details about the layout alignment refer to this [article](https://support.syncfusion.com/agent/kb/16201).
 
 {% tabs %}
 
@@ -319,16 +318,9 @@ For more details about the layout alignment refer to this [article].
     ...
         <chart:SfPolarChart.Legend>
             <chart:ChartLegend >
-            <chart:ChartLegend.ItemsLayout>
-               <chart:ChartLegend.ItemsLayout>
-                    <FlexLayout 
-                        HorizontalOptions="Start" 
-                        Margin="10"
-                        WidthRequest="{Binding Width,
-                        Source={x:Reference Chart1}}">
-                    </FlexLayout>
+                <chart:ChartLegend.ItemsLayout>
+                    <HorizontalStackLayout/>
                 </chart:ChartLegend.ItemsLayout>
-            </chart:ChartLegend.ItemsLayout>
             </chart:ChartLegend>
         </chart:SfPolarChart.Legend>
 
@@ -344,6 +336,11 @@ For more details about the layout alignment refer to this [article].
             YBindingPath="Weed" 
             Label="Weed"/>
 
+         <chart:PolarLineSeries 
+            ItemsSource="{Binding PlantDetails}" 
+            XBindingPath="Direction"
+            YBindingPath="Flower" 
+            Label="Flower"/>
     </chart:SfPolarChart>
 
 {% endhighlight %}
@@ -356,10 +353,7 @@ For more details about the layout alignment refer to this [article].
     
     ChartLegend legend = new ChartLegend();
 
-    FlexLayout layout = new FlexLayout();
-    layout.Wrap = FlexWrap.Wrap;
-    layout.HorizontalOptions = LayoutOptions.Start;
-    layout.SetBinding(WidthRequestProperty, nameof(SfPolarChart.WidthProperty));
+    HorizontalStackLayout layout = new HorizontalStackLayout();
     legend.ItemsLayout = layout;
 
     PolarAreaSeries series1 = new PolarAreaSeries()
@@ -373,14 +367,23 @@ For more details about the layout alignment refer to this [article].
     PolarAreaSeries series2 = new PolarAreaSeries()
     {
         XBindingPath = "Direction",
-        YBindingPath = "Tree",
+        YBindingPath = "Weed",
         ItemsSource = polarViewModel.PlantDetails,
         Label = "Weed",
+    };
+
+    PolarAreaSeries series3 = new PolarAreaSeries()
+    {
+        XBindingPath = "Direction",
+        YBindingPath = "Flower",
+        ItemsSource = polarViewModel.PlantDetails,
+        Label = "Flower",
     };
 
     chart.Legend = legend;
     chart.Series.Add(series1);
     chart.Series.Add(series2);
+    chart.Series.Add(series3);
 
     this.Content = chart;
         
@@ -475,6 +478,8 @@ N> The BindingContext of the template is the corresponding underlying legend ite
 {% endhighlight %}
 
 {% endtabs %}
+
+![Legend layout for polar chart](Legend-images/polar_chart.png)
 
 ## Limitations
 * Do not add items explicitly.

@@ -46,7 +46,7 @@ The visibility of the chart legend can be controlled using the [IsVisible](https
     
     <chart:SfCartesianChart>
         <chart:SfCartesianChart.Legend>
-        <chart:ChartLegend IsVisible = "True"/>
+            <chart:ChartLegend IsVisible = "True"/>
         </chart:SfCartesianChart.Legend>
     </chart:SfCartesianChart>
 
@@ -72,13 +72,12 @@ The visibility of individual legend items for specific series can be controlled 
     
     <chart:SfCartesianChart>
         <chart:SfCartesianChart.Legend>
-        <chart:ChartLegend />
+            <chart:ChartLegend/>
         </chart:SfCartesianChart.Legend>
-
         <chart:LineSeries ItemsSource="{Binding Data}"
-                        XBindingPath="XValue"
-                        IsVisibleOnLegend="True"
-                        YBindingPath="YValue"/>
+                          XBindingPath="XValue"
+                          IsVisibleOnLegend="True"
+                          YBindingPath="YValue"/>
     </chart:SfCartesianChart>
 
 {% endhighlight %}
@@ -88,7 +87,7 @@ The visibility of individual legend items for specific series can be controlled 
     SfCartesianChart chart = new SfCartesianChart();
     ViewModel viewModel = new ViewModel();
 
-    chart.Legend = new ChartLegend(){ };
+    chart.Legend = new ChartLegend();
 
     LineSeries series = new LineSeries()
     {
@@ -98,6 +97,7 @@ The visibility of individual legend items for specific series can be controlled 
         YBindingPath = "YValue",
     };
     chart.Series.Add(series);
+    this.Content=chart;
 
 {% endhighlight %}
 
@@ -111,16 +111,13 @@ To specify the legend icon based on the associated series type, use the [LegendI
 {% highlight xaml %}
 
     <chart:SfCartesianChart>
-
         <chart:SfCartesianChart.Legend>
-           <chart:ChartLegend />
+            <chart:ChartLegend/>
         </chart:SfCartesianChart.Legend>
-
          <chart:ColumnSeries ItemsSource="{Binding Data}"
-                           XBindingPath="XValue"
-                           YBindingPath="YValue"
-                           LegendIcon = "Diamond"/>
-
+                             XBindingPath="XValue"
+                             YBindingPath="YValue"
+                             LegendIcon = "Diamond"/>
     </chart:SfCartesianChart>
 
 {% endhighlight %}
@@ -153,11 +150,11 @@ The legend can be positioned to the left, right, top, or bottom of the chart are
 
 {% highlight xaml %}
 
-    <chart:SfCartesianChart >
+    <chart:SfCartesianChart>
         <chart:SfCartesianChart.Legend>
-            <chart:ChartLegend Placement="Bottom"  >
+            <chart:ChartLegend Placement="Bottom">
             </chart:ChartLegend>
-      </chart:SfCartesianChart.Legend>
+        </chart:SfCartesianChart.Legend>
     </chart:SfCartesianChart>
 
 {% endhighlight %}
@@ -182,12 +179,11 @@ The visibility of cartesian series can be controlled by tapping the legend item 
 
 {% highlight xaml %}
 
-    <chart:SfCartesianChart >
+    <chart:SfCartesianChart>
         <chart:SfCartesianChart.Legend>
-            <chart:ChartLegend           
-              ToggleSeriesVisibility="True">
-        </chart:ChartLegend>
-      </chart:SfCartesianChart.Legend>
+            <chart:ChartLegend ToggleSeriesVisibility="True">
+            </chart:ChartLegend>
+        </chart:SfCartesianChart.Legend>
     </chart:SfCartesianChart>
 
 {% endhighlight %}
@@ -212,12 +208,12 @@ To set the maximum size request for the legend view, override the [GetMaximumSiz
 
 {% highlight xaml %}
     
-    <chart:SfCartesianChart >
-    . . .
-    <chart:SfCartesianChart.Legend>
-        <chart:LegendExt/>
-    </chart:SfCartesianChart.Legend>
-    . . .
+    <chart:SfCartesianChart>
+        . . .
+            <chart:SfCartesianChart.Legend>
+                <chart:LegendExt/>
+            </chart:SfCartesianChart.Legend>
+        . . .
     </chart:SfCartesianChart>
 
 {% endhighlight %}
@@ -243,25 +239,25 @@ To set the maximum size request for the legend view, override the [GetMaximumSiz
 ## Items layout
 The [ItemsLayout]() property is used to customize the arrangement and position of each legend item. The default value is `null`. This property accepts any layout type.
 
-For more details about the layout alignment refer to this [article].
+For more details about the layout alignment refer to this [article](https://support.syncfusion.com/agent/kb/16201).
 
 {% tabs %}
 
 {% highlight xaml %}
 
-    <chart:SfCartesianChart  x:Name="chart1" >
+    <chart:SfCartesianChart x:Name="chart1">
         <chart:SfCartesianChart.Legend>
             <chart:ChartLegend Placement="Bottom">
-            <chart:ChartLegend.ItemsLayout>
-                <FlexLayout HorizontalOptions="Start"
-                            Margin="10"
-                            WidthRequest="{Binding Width,
-                            Source={x:Reference Chart1}}">
-                </FlexLayout>
+                <chart:ChartLegend.ItemsLayout>
+                    <FlexLayout HorizontalOptions="Start"
+                                Margin="10"
+                                WidthRequest="{Binding Width,
+                                Source={x:Reference Chart1}}">
+                    </FlexLayout>
                 </chart:ChartLegend.ItemsLayout>
             </chart:ChartLegend>
         </chart:SfCartesianChart.Legend>
-        </chart:SfCartesianChart>
+    </chart:SfCartesianChart>
 
 {% endhighlight %}
 
@@ -295,24 +291,24 @@ N> The BindingContext of the template is the corresponding underlying legend ite
 
 {% highlight xaml %}
 
-    <chart:SfCartesianChart >
+    <chart:SfCartesianChart>
         <chart:SfCartesianChart.Resources>
             <DataTemplate x:Key="legendTemplate">
-            <StackLayout Orientation="Horizontal" >
-                <Rectangle HeightRequest="12" 
-                    WidthRequest="12" Margin="3"
-                    Background="{Binding IconBrush}"/>
-            <Label Text="{Binding Text}" 
-                    Margin="3"/>
-        </StackLayout>
-    </DataTemplate>
-    </chart:SfCartesianChart.Resources>  
+                <StackLayout Orientation="Horizontal">
+                    <Rectangle HeightRequest="12" 
+                               WidthRequest="12" Margin="3"
+                               Background="{Binding IconBrush}"/>
+                    <Label Text="{Binding Text}" 
+                           Margin="3"/>
+                </StackLayout>
+            </DataTemplate>
+        </chart:SfCartesianChart.Resources>  
     
-    <chart:SfCartesianChart.Legend>
-        <chart:ChartLegend    
-               ItemTemplate="{StaticResource legendTemplate}">
-        </chart:ChartLegend>
-      </chart:SfCartesianChart.Legend>
+        <chart:SfCartesianChart.Legend>
+            <chart:ChartLegend    
+                ItemTemplate="{StaticResource legendTemplate}">
+            </chart:ChartLegend>
+        </chart:SfCartesianChart.Legend>
     </chart:SfCartesianChart>
 
 {% endhighlight %}
@@ -325,11 +321,15 @@ N> The BindingContext of the template is the corresponding underlying legend ite
     ChartLegend legend = new ChartLegend();
     legend.ItemTemplate = chart.Resources["legendTemplate"] as DataTemplate;
     ...
+    chart.Legend = legend;
     this.Content = chart;
         
 {% endhighlight %}
 
 {% endtabs %}
+
+![Legend layout for cartesian chart](Legend-images/cartesian_chart.png)
+
 
 ## Limitations
 * Do not add items explicitly.

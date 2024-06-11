@@ -12,9 +12,7 @@ keywords: .net maui funnel chart, funnel-chart, chart legend, legend-wrap, legen
 
 The [Legend](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartBase.html#Syncfusion_Maui_Charts_ChartBase_Legend) provides a list of data points, helping to identify the corresponding data points in the chart. Here's a detailed guide on how to define and customize the legend in the cartesian chart.
 
-## Define Legend
-
-Defining the legend
+## Defining the legend
 To define the legend in the chart, initialize the [ChartLegend](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLegend.html) class and assign it to the [Legend](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartBase.html#Syncfusion_Maui_Charts_ChartBase_Legend) property.
 
 
@@ -22,14 +20,13 @@ To define the legend in the chart, initialize the [ChartLegend](https://help.syn
 
 {% highlight xaml %}
 
-     <chart:SfFunnelChart   ItemsSource="{Binding Data}" 
-               XBindingPath="Name"
-               YBindingPath="Height" x:Name="chart" >
+     <chart:SfFunnelChart ItemsSource="{Binding Data}" 
+                          XBindingPath="Name"
+                          YBindingPath="Height">
         <chart:SfFunnelChart.Legend>
             <chart:ChartLegend/>
         </chart:SfFunnelChart.Legend>
     </chart:SfFunnelChart>
-
 
 {% endhighlight %}
 
@@ -43,6 +40,7 @@ To define the legend in the chart, initialize the [ChartLegend](https://help.syn
     };
 
     chart.Legend = new ChartLegend();
+    this.Content = chart;
 
 {% endhighlight %}
 
@@ -56,11 +54,11 @@ The visibility of the chart legend can be controlled using the [IsVisible](https
 
 {% highlight xaml %}
     
-    <chart:SfFunnelChart   ItemsSource="{Binding Data}" 
-               XBindingPath="Name"
-               YBindingPath="Height" x:Name="chart" >
+    <chart:SfFunnelChart ItemsSource="{Binding Data}" 
+                         XBindingPath="Name"
+                         YBindingPath="Height">
         <chart:SfFunnelChart.Legend>
-            <chart:ChartLegend IsVisible = "True" />
+            <chart:ChartLegend IsVisible = "True"/>
         </chart:SfFunnelChart.Legend>
     </chart:SfFunnelChart>
 
@@ -76,14 +74,17 @@ The visibility of the chart legend can be controlled using the [IsVisible](https
         ItemsSource = new ViewModel().Data,
     };
 
-    chart.Legend = new ChartLegend(){ IsVisible = true };
+    chart.Legend = new ChartLegend()
+    { 
+        IsVisible = true 
+    };
+    this.Content = chart;
 
 {% endhighlight %}
 
 {% endtabs %}
 
-## Legend Icon
-Legend icon
+## Legend icon
 To specify the legend icon based on the associated series type, use the [LegendIcon](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfFunnelChart.html#Syncfusion_Maui_Charts_SfFunnelChart_LegendIcon) property and change its type using the [ChartLegendIconType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLegendIconType.html) enum values. The default value of the LegendIcon property is `Circle`.
 
 
@@ -91,9 +92,9 @@ To specify the legend icon based on the associated series type, use the [LegendI
 
 {% highlight xaml %}
 
-    <chart:SfFunnelChart   ItemsSource="{Binding Data}" 
-               XBindingPath="Name"  LegendIcon="Diamond"
-               YBindingPath="Height" x:Name="chart" >
+    <chart:SfFunnelChart ItemsSource="{Binding Data}" 
+                         XBindingPath="Name" LegendIcon="Diamond"
+                         YBindingPath="Height">
         <chart:SfFunnelChart.Legend>
             <chart:ChartLegend/>
         </chart:SfFunnelChart.Legend>
@@ -103,16 +104,16 @@ To specify the legend icon based on the associated series type, use the [LegendI
 
 {% highlight c# %}
 
-     SfFunnelChart chart = new SfFunnelChart()
+    SfFunnelChart chart = new SfFunnelChart()
     {
         XBindingPath = "Name",
         YBindingPath = "Height",
         ItemsSource = new ViewModel().Data,
     };
 
-    chart.Legend = new ChartLegend(){ };
+    chart.Legend = new ChartLegend();
     chart.LegendIcon = ChartLegendIconType.Diamond;
-
+    this.Content = chart;
 
 {% endhighlight %}
 
@@ -126,13 +127,14 @@ The legend can be positioned to the left, right, top, or bottom of the chart are
 
 {% highlight xaml %}
 
-    <chart:SfFunnelChart   ItemsSource="{Binding Data}" 
-               XBindingPath="Name"  LegendIcon="Diamond"
-               YBindingPath="Height" x:Name="chart" >
+    <chart:SfFunnelChart ItemsSource="{Binding Data}" 
+                         XBindingPath="Name"  
+                         LegendIcon="Diamond"
+                         YBindingPath="Height">
         <chart:SfFunnelChart.Legend>
-            <chart:ChartLegend Placement="Bottom"  >
+            <chart:ChartLegend Placement="Bottom">
             </chart:ChartLegend>
-      </chart:SfFunnelChart.Legend>
+        </chart:SfFunnelChart.Legend>
     </chart:SfFunnelChart>
 
 {% endhighlight %}
@@ -147,7 +149,11 @@ The legend can be positioned to the left, right, top, or bottom of the chart are
     };
    
     chart.Legend = new ChartLegend()
-    { Placement = LegendPlacement.Bottom };
+    { 
+        Placement = LegendPlacement.Bottom 
+    };
+
+    this.Content = chart;
 
 {% endhighlight %}
 
@@ -160,7 +166,7 @@ To set the maximum size request for the legend view, override the [GetMaximumSiz
 
 {% highlight xaml %}
     
-    <chart:SfFunnelChart >
+    <chart:SfFunnelChart>
     . . .
     <chart:SfFunnelChart.Legend>
         <chart:LegendExt/>
@@ -182,6 +188,7 @@ To set the maximum size request for the legend view, override the [GetMaximumSiz
 
     SfFunnelChart chart = new SfFunnelChart();
     chart.Legend = new LegendExt();
+    this.Content = chart;
 
 {% endhighlight %}
 
@@ -191,24 +198,25 @@ To set the maximum size request for the legend view, override the [GetMaximumSiz
 ## Items Layout
 The [ItemsLayout]() property is used to customize the arrangement and position of each legend item. The default value is `null`. This property accepts any layout type.
 
-For more details about the layout alignment refer to this [article].
+For more details about the layout alignment refer to this [article](https://support.syncfusion.com/agent/kb/16201).
 
 {% tabs %}
 
 {% highlight xaml %}
 
-     <chart:SfFunnelChart   ItemsSource="{Binding Data}" 
-               XBindingPath="Name"  LegendIcon="Diamond"
-               YBindingPath="Height" x:Name="chart" >
+     <chart:SfFunnelChart ItemsSource="{Binding Data}" 
+                          XBindingPath="Name"
+                          LegendIcon="Diamond"
+                          YBindingPath="Height">
         <chart:SfFunnelChart.Legend>
             <chart:ChartLegend >
-            <chart:ChartLegend.ItemsLayout>
-              <FlexLayout Wrap="Wrap"
-                          WidthRequest="400">
-              </FlexLayout>
-            </chart:ChartLegend.ItemsLayout>
-        </chart:ChartLegend>
-      </chart:SfFunnelChart.Legend>
+                <chart:ChartLegend.ItemsLayout>
+                    <FlexLayout Wrap="Wrap"
+                                WidthRequest="400">
+                    </FlexLayout>
+                </chart:ChartLegend.ItemsLayout>
+            </chart:ChartLegend>
+        </chart:SfFunnelChart.Legend>
     </chart:SfFunnelChart>
 
 {% endhighlight %}
@@ -238,9 +246,7 @@ For more details about the layout alignment refer to this [article].
 
 {% endtabs %}
 
-## Template
-
-Item template
+## Item template
 The [ChartLegend](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLegend.html) supports customizing the appearance of legend items using the [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLegend.html#Syncfusion_Maui_Charts_ChartLegend_ItemTemplate) property. The default value of ItemsTemplate is `null`.
 
 N> The BindingContext of the template is the corresponding underlying legend item provided in the ChartLegendItem class.
@@ -250,27 +256,27 @@ N> The BindingContext of the template is the corresponding underlying legend ite
 
 {% highlight xaml %}
 
-    <chart:SfFunnelChart >
+    <chart:SfFunnelChart>
         <chart:SfFunnelChart.Resources>
             <DataTemplate x:Key="legendTemplate">
-            <StackLayout Orientation="Horizontal" >
-                <Rectangle HeightRequest="12" 
-                    WidthRequest="12" Margin="3"
-                    Background="{Binding IconBrush}"/>
-            <Label Text="{Binding Text}" 
-                    Margin="3"/>
-        </StackLayout>
-    </DataTemplate>
-    </chart:SfFunnelChart.Resources>  
+                <StackLayout Orientation="Horizontal">
+                    <Rectangle HeightRequest="12" 
+                               WidthRequest="12" Margin="3"
+                               Background="{Binding IconBrush}"/>
+                    <Label Text="{Binding Text}" 
+                           Margin="3"/>
+                </StackLayout>
+            </DataTemplate>
+        </chart:SfFunnelChart.Resources>  
     
-    <chart:SfFunnelChart   ItemsSource="{Binding Data}" 
-               XBindingPath="Name"  
-               YBindingPath="Height" x:Name="chart" >
-        <chart:SfFunnelChart.Legend>
-        <chart:ChartLegend    
-               ItemTemplate="{StaticResource legendTemplate}">
-        </chart:ChartLegend>
-      </chart:SfFunnelChart.Legend>
+        <chart:SfFunnelChart ItemsSource="{Binding Data}" 
+                XBindingPath="Name"  
+                YBindingPath="Height">
+            <chart:SfFunnelChart.Legend>
+                <chart:ChartLegend    
+                    ItemTemplate="{StaticResource legendTemplate}">
+                </chart:ChartLegend>
+            </chart:SfFunnelChart.Legend>
     </chart:SfFunnelChart>
 
 {% endhighlight %}
@@ -287,12 +293,15 @@ N> The BindingContext of the template is the corresponding underlying legend ite
      
     ChartLegend legend = new ChartLegend();
     legend.ItemTemplate = chart.Resources["legendTemplate"] as DataTemplate;
+    chart.Legend = legend;
     ...
     this.Content = chart;
         
 {% endhighlight %}
 
 {% endtabs %}
+
+![Legend layout for funnel chart](Legend-images/funnel_chart.png)
 
 ## Limitations
 * Do not add items explicitly.
