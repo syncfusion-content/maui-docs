@@ -38,7 +38,7 @@ The values of digital characters are scaled by altering the height and width of 
 
 {% endtabs %}
 
-![Height and Width for text](Images\DigitalGauge12.png)
+![height-width-for-text](Images\height-width-for-text.png)
 
 ## Setting character spacing
 
@@ -67,7 +67,7 @@ The values of digital characters are spaced by altering the space between digita
 
 {% endtabs %}
 
-![Character spacing for digitalgauge](Images\DigitalGauge17.png)
+![character-spacing-digitalgauge](Images\character-spacing-digitalgauge.png)
 
 ## Customize character segment stroke
 
@@ -93,7 +93,7 @@ The values of digital characters color can be customized using the `CharacterStr
 
 {% endtabs %}
 
-![CharacterStroke for DigitalGauge](Images\DigitalGauge13.png)
+![characterstroke-digitalgauge](Images\characterstroke-digitalgauge.png)
 
 ## Customize character segment width
 
@@ -119,7 +119,7 @@ The width of the digital character value can be customized using the `StrokeWidt
 
 {% endtabs %}
 
-![CharacterStroke for DigitalGauge](Images\DigitalGauge14.png)
+![characterwidth-digitalgauge](Images\characterwidth-digitalgauge.png)
 
 ## Customize disabled segment
 
@@ -147,7 +147,7 @@ You can customize the color and opacity of disabled segments using the `Disabled
 
 {% endtabs %}
 
-![CharacterStroke for DigitalGauge](Images\DigitalGauge15.png)
+![disabled-segment-stroke-digitalgauge](Images\disabled-segment-stroke-digitalgauge.png)
 
 ## Customize background color of digital gauge
 
@@ -175,4 +175,4 @@ You can customize the background color of the digital gauge using the `Backgroun
 
 {% endtabs %}
 
-![CharacterStroke for DigitalGauge](Images\DigitalGauge16.png)
+![backgroundcolor-digitalgauge](Images\backgroundcolor-digitalgauge.png)

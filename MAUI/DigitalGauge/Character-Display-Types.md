@@ -34,7 +34,7 @@ Numbers can be displayed in a digital gauge in different formats using the `Char
 
 {% endtabs %}
 
-![Display Number](Images\DigitalGauge9.png)
+![display-number](Images\display-number.png)
 
 
 ## Setting value to Display alphabets
@@ -62,7 +62,7 @@ Alphabet can be displayed in a digital gauge using any one of the character form
 
 {% endtabs %}
 
-![Display Character](Images\DigitalGauge10.png)
+![display-character](Images\display-character.png)
 
 ## Setting value to display special characters
 
@@ -89,4 +89,4 @@ Special characters can also be displayed in digital gauge using the EightCrossEi
 
 {% endtabs %}
 
-![Display Special Character](Images\DigitalGauge11.png)
+![display-special-character](Images\display-special-character.png)
