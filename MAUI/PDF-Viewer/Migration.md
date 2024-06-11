@@ -5,7 +5,8 @@ description: Learn here all about migrating from Syncfusion Xamarin SfPdfViewer 
 platform: MAUI
 control: SfPdfViewer
 documentation: ug
---- 
+keywords: keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .net maui open pdf, maui pdf viewer, maui pdf view.
+---
 
 # Migrate from Xamarin.Forms SfPdfViewer to .NET MAUI SfPdfViewer
 
@@ -225,6 +226,11 @@ To make migration from [Xamarin SfPdfViewer](https://www.syncfusion.com/xamarin-
 <td>{{'[TouchMode.Direct](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.TouchMode.html#Syncfusion_SfPdfViewer_XForms_TouchMode_Direct)'| markdownify}}</td>
 <td>{{'[TouchScreenInputMode.FingerAndStylus](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.TouchScreenInputMode.html#Syncfusion_Maui_PdfViewer_TouchScreenInputMode_FingerAndStylus)'| markdownify}}</td>
 <td>Allows drawing ink using both finger and stylus.</td>
+</tr>
+<tr>
+  <td>{{'[IsToolbarVisible](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.SfPdfViewer.html#Syncfusion_SfPdfViewer_XForms_SfPdfViewer_IsToolbarVisible)'| markdownify}}</td> 
+  <td> `ShowToolbars` </td>
+  <td>Backing store for the ShowToolbars property.</td>
 </tr>
 </table>
 
@@ -494,8 +500,3 @@ To make migration from [Xamarin SfPdfViewer](https://www.syncfusion.com/xamarin-
 <td>Provides data for the {{'[AnnotationAdded](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationAdded)'| markdownify}}, {{'[AnnotationSelected](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationSelected)'| markdownify}}, {{'[AnnotationDeselected](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationDeselected)'| markdownify}}, {{'[AnnotationEdited](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationEdited)'| markdownify}}, {{'[AnnotationRemoved](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationRemoved)'| markdownify}} events.</td>
 </tr>
 </table>
-
-## Upcoming Features
-
-* Built-in toolbar
-* Thumbnail
