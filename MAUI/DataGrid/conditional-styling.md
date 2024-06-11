@@ -176,7 +176,7 @@ public class ColorConverter : IValueConverter
 The appearance of row header can be customized conditionally based on properties using `converter`, where converter returns the value based on various properties.
 
 {% tabs %}
-{% hightlight xaml %}
+{% highlight xaml %}
  <ContentPage.Resources>
      <local:CustomConverter x:Key="converter"/>
      <Style  TargetType= "syncfusion:DataGridRowHeaderCell">
