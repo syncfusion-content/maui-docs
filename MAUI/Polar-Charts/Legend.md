@@ -308,7 +308,7 @@ To set the maximum size request for the legend view, override the [GetMaximumSiz
 ## Items layout
 An [ItemsLayout]() property is used to customize the arrangement and posistion for each legend item. The default value is `null`. It accepts any layout type in ItemsLayout property.
 
-For more details about the layout alignment refer to this [article](https://support.syncfusion.com/agent/kb/16201).
+For more details about the layout alignment refer to this [article]().
 
 {% tabs %}
 
