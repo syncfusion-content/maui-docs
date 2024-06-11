@@ -9,11 +9,11 @@ documentation: ug
 
 # Header and Footer support in .NET MAUI Autocomplete (SfAutocomplete)
 
-We can provide Header and Footer view in the dropdown in [`SfAutocomplete`] by enabling [`ShowDropDownHeaderView`] and [`ShowDropDownFooterView`]. 
+We can provide Header and Footer view in the dropdown in [SfAutocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) by enabling [ShowDropDownHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_ShowDropdownHeaderView) and [ShowDropDownFooterView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_ShowDropdownFooterView). 
 
 ## Header Content
 
-We can provide Header Content at the top of the Autocomplete's dropdown.[`DropDownHeaderView`] property is used to set the content of the header. The height of the Header in the [`SfAutocomplete`] can be adjusted by the property [`DropDownHeaderViewHeight`].
+We can provide Header Content at the top of the Autocomplete's dropdown.[DropDownHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_DropdownHeaderView) property is used to set the content of the header. The height of the Header in the [SfAutocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) can be adjusted by the property [DropDownHeaderViewHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_DropdownHeaderViewHeight).
 
 {% tabs %}
 
@@ -111,9 +111,9 @@ namespace AutocompleteSample
 
 ## Footer Content
 
-We can provide Footer Content at the bottom of the Autocomplete's dropdown. [`DropDownFooterView`] property is used to set the content of the footer.The height of the Footer in the [`SfAutocomplete`] can be adjusted by the property [`DropDownFooterViewHeight`].
+We can provide Footer Content at the bottom of the Autocomplete's dropdown. [DropDownFooterView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_DropdownFooterView) property is used to set the content of the footer.The height of the Footer in the [SfAutocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) can be adjusted by the property [DropDownFooterViewHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_DropdownFooterViewHeight).
 
-The following code example illustrate how to set Footer content in [`SfAutocomplete`].
+The following code example illustrate how to set Footer content in [SfAutocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html).
 
 {% tabs %}
 
