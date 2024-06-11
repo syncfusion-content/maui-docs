@@ -204,13 +204,13 @@ The below code snippet illustrates supressing the signature modal view and using
 {% tabs %}
 {% highlight c# %}
 
-FormField signatureFormField;
+SignatureFormField? signatureFormField;
 pdfviewer.SignatureModalViewAppearing += PdfViewer_SignatureModalViewAppearing;
 
 private void PdfViewer_SignatureModalViewAppearing(object? Sender, FormFieldModalViewAppearingEventArgs e)
 {
     e.Cancel = true;
-    signatureFormField = e.FormField;
+    signatureFormField = e.FormField as SignatureFormField;
     
     // Implement your own UI for creating a signature.
     ShowCustomDialog();
