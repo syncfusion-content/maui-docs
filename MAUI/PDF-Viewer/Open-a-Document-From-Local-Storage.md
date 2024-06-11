@@ -49,7 +49,7 @@ In `MainPage.xaml`, add a new button to open a PDF document from the local stora
 {% endhighlight %} 
 {% endtabs %}
 
-In `PdfViewerViewModel.cs`, implement the functionalities of the `File picker` to choose a PDF document and read its stream, which can be assigned to the `DocumentSource` property of the `SfPdfViewer` to view the document. Refer to the following code:
+In `PdfViewerViewModel.cs`, implement the functionalities of the `File picker` to choose a PDF document and read its stream, which can be assigned to the [DocumentSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_DocumentSource) property of the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) to view the document. Refer to the following code:
 
 {% tabs %}
 {% highlight c# tabtitle="PdfViewerViewModel.cs" %}
