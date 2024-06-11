@@ -10,7 +10,7 @@ documentation: ug
 # Footer in .NET MAUI Calendar (SfCalendar)
 You can customize all the properties of the Footer view using `FooterView`. By using this property, you can customize the Background, Height, DividerColor, TextStyle, ShowActionButtons and ShowTodayButton of the Calendar.
 
-## Customize the header height
+## Customize the footer height
 You can customize the footer height `Calendar` by using the `Height` property.
 
 {% tabs %}
@@ -30,6 +30,8 @@ this.calendar.FooterView.Height = 70;
 
 {% endhighlight %}
 {% endtabs %}
+
+![Customize the header height in .NET MAUI Calendar.](images/footer/footer-height.png)
 
 ## Action buttons
 
@@ -53,6 +55,8 @@ this.calendar.FooterView.ShowActionButtons = true;
 {% endhighlight %}
 {% endtabs %}
 
+![Show Action button in .NET MAUI Calendar.](images/footer/footer-show-action-button.png)
+
 ## Today button
 
 The today button can be displayed at the footer of the calendar using the `ShowTodayButton` property of the `SfCalendar`, allowing you to quickly navigate from current view to the today view.
@@ -75,6 +79,8 @@ this.calendar.FooterView.ShowTodayButton = true;
 {% endhighlight %}
 {% endtabs %}
 
+![Show Today button in .NET MAUI Calendar.](images/footer/footer-show-today-button.png)
+
 ## Set the Divider color
 
 You can customize the footer divider color by setting the `DividerColor` property of the `CalendarFooterView`.
@@ -96,6 +102,8 @@ this.calendar.FooterView.Height = 70;
 
 {% endhighlight %}
 {% endtabs %}
+
+![Set Divider Color in .NET MAUI Calendar.](images/footer/footer-divider-color.png)
 
 ## Customization of the footer 
 
@@ -132,3 +140,5 @@ this.Content = calendar;
 
 {% endhighlight %}
 {% endtabs %}
+
+![Footer Text Style in .NET MAUI Calendar.](images/footer/footer-text-style.png)

@@ -37,6 +37,8 @@ this.Content = picker;
 
 {% endtabs %}
 
+![Fade mode in .NET MAUI Picker.](images/text-display-mode/fade-mode.png)
+
 ## Shrink Mode
 
 The shrink mode is used to display the font size of picker items decreased from the selected item by setting the `TextDisplayMode` property to `Shrink` in `SfPicker`.
@@ -63,6 +65,8 @@ this.Content = picker;
 
 {% endtabs %}
 
+![Shrink mode in .NET MAUI Date picker.](images/text-display-mode/shrink-mode.png)
+
 ## FadeAndShrink Mode
 
 The fade and shrink mode are used to decrease the opacity and font size of picker items from the selected item by setting the `TextDisplayMode` property to `FadeAndShrink` in `SfPicker`.
@@ -88,3 +92,5 @@ this.Content = picker;
 {% endhighlight %}
 
 {% endtabs %}
+
+![Fade and Shrink mode in .NET MAUI Date picker.](images/text-display-mode/fade-shrink-mode.png)
