@@ -134,7 +134,8 @@ The `LineBreakMode` allows you to wrap or truncate the text. The default value o
 				IsChecked="True" 
 				WidthRequest="200" 
 				LineBreakMode="WordWrap" 
-				Text="The LineBreakMode allows you to wrap or truncate the text."></syncfusion:SfRadioButton>
+				Text="The LineBreakMode allows you to wrap or truncate the text.">
+				</syncfusion:SfRadioButton>
 
 {% endhighlight %}
 
@@ -153,7 +154,7 @@ The `LineBreakMode` allows you to wrap or truncate the text. The default value o
 ![.NET MAUI Radio Button LineBreakmode](Images/VisualCustomization/linebreakmode.png)
 
 
-This demo can be downloaded from this [GitHub link](https://github.com/SyncfusionExamples/How-to-wrap-text-in-DOTNET-MAUI-RadiButton)
+This demo can be downloaded from [GitHub link](https://github.com/SyncfusionExamples/How-to-wrap-text-in-DOTNET-MAUI-RadiButton)
 
 
 ## Size customization

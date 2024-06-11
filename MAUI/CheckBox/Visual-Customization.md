@@ -238,7 +238,7 @@ The `LineBreakMode` allows you to wrap or truncate the text. The default value o
 
 ![.NET MAUI CheckBox](Images/Visual-Customization/linebreakmode.png)
 
-This demo can be downloaded from this [GitHub link](https://github.com/SyncfusionExamples/How-to-wrap-text-in-DOTNET-MAUI-CheckBox)
+This demo can be downloaded from [GitHub link](https://github.com/SyncfusionExamples/How-to-wrap-text-in-DOTNET-MAUI-CheckBox)
 
 ## Size Customization
 
