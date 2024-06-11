@@ -57,7 +57,7 @@ OutlineElement nestedElement = outlineElement.Children[3];
 
 ### Navigating using UI
 
-As mentioned above, you can show the outline view by setting the `IsOultineViewVisible` property to `true`. When the outline view is showing, you can tap on any element to navigate to the destination pointed by that element. 
+As mentioned above, you can show the outline view by setting the [IsOutlineViewVisible](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_IsOutlineViewVisible) property to `true`. When the outline view is showing, you can tap on any element to navigate to the destination pointed by that element. 
 
 ![Document outline in .NET MAUI PDF Viewer](Images\outline-view.png)
 
