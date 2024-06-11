@@ -136,7 +136,7 @@ The [.NET MAUI PDF viewer](https://www.syncfusion.com/maui-controls/maui-pdf-vie
     <li>Resets the `AnnotationMode` to `None`.</li>   
     <li>Closes the currently showing built-in dialog.</li>
     <li>Deselects the currently selected annotation.</li>
-    <li>Unfocus the built-in page entry dialog.</li>
+    <li>Unfocus the built-in page entry.</li>
    </ul>
 </td>
 </tr>

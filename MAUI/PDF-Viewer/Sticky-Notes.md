@@ -30,16 +30,17 @@ The following image represents how to add the sticky note annotations using the 
 
 ![Sticky Note Desktop](Images/stick.gif)
 
-The following image represents how to add the sticky note annotation using toolbar in mobile.
+The following image represents how to add the sticky note annotation using the toolbar on mobile.
 
 ![Sticky Note Mobile](Images/stickymobile.gif)
 
-### Add the sticky note without using toolbar
+### Add the sticky note without using the toolbar
 
-You can add sticky note annotation to a PDF document by tapping with touch (or mouse down) on a PDF page. The following steps explains how to add sticky note annotation in a PDF: 
-1.  Set the AnnotationMode property of the SfPdfViewer to StickyNote. This activates the sticky note mode on the control.
+You can add sticky note annotations to a PDF document by tapping with a touch (or mouse down) on a PDF page. The following steps explain how to add sticky note annotations to a PDF: 
+1. Set the [AnnotationMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationMode) property of the SfPdfViewer to `StickyNote`. This activates the sticky note mode on the control.
 
 The following code explains how to enable the sticky note mode
+
 {% tabs %}
 {% highlight C# %}
 // Enable or activate the sticky note mode. 
@@ -51,12 +52,13 @@ void EnableStickyNoteMode()
 {% endhighlight %}
 {% endtabs %}
 
-2.  Tap (or mouse down) on a PDF page, where you want to add the sticky note annotation. This will add a sticky note with a default style and a popup will be displayed to write and submit the text.
-3.  Once the sticky note is added, AnnotationMode is automatically changed to None.
-4.  You can later select and edit the annotations, if required.
-5.  If you need to disable the 'AnnotationMode' of 'StickyNote', you need to change the AnnotationMode to None. refer to the following code to disable the sticky note mode
+2. Tap (or mouse down) on a PDF page, where you want to add the sticky note annotation. This will add a sticky note with a default style and a popup will be displayed to write and submit the text.
+3. Once the sticky note is added, [AnnotationMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationMode) is automatically changed to [None](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.AnnotationMode.html#Syncfusion_Maui_PdfViewer_AnnotationMode_None).
+4. You can later select and edit the annotations, if required.
+5. If you need to disable the [AnnotationMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationMode) of `StickyNote`, you need to change the [AnnotationMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationMode) to [None](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.AnnotationMode.html#Syncfusion_Maui_PdfViewer_AnnotationMode_None). Refer to the following code to disable the sticky note mode:
 
 The following code explains how to disable the sticky note mode:  
+
 {% tabs %}
 {% highlight C# %}
 // Disable or deactivate the sticky note mode. 
@@ -104,10 +106,10 @@ void AddStickyNote()
 In the sticky note annotation mode, the annotation will be added with a default appearance. You can modify the annotation after it has been added to the pages. However, if you need to define the appearance before adding sticky note annotation on the document, you can change its default settings using the [SfPdfViewer.AnnotationSettings.StickyNote](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationSettings) For that, you need to obtain the default sticky note annotation settings.
 
 The following example explains how to obtain the default sticky note annotation settings and modify some of its properties. Similarly, you can modify all the other properties.
+
 {% tabs %}
 {% highlight C# %}
 void CustomizeDefaultStickyNoteSettings() 
-
 { 
     // Obtain the default sticky note annotation settings from the `SfPdfViewer` instance. 
     StickyNoteAnnotationSettings stickyNoteSettings = PdfViewer.AnnotationSettings.StickyNote; 

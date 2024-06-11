@@ -57,15 +57,16 @@ The .NET MAUI PDF Viewer supports the below zoom modes:
 
 Fit-to-page ensures that users can see the entire page content to get a quick overview without having to scroll. Fit-to-width is helpful when reading documents with narrow columns, such as newspaper articles or other multicolumn layouts.
 You can change the zoom mode using the `SfPdfViewer.ZoomMode` property of the PDF Viewer, default value for `SfPdfViewer.ZoomMode` is `ZoomMode.Default`.
-### How to setting zoom mode from toolbar? 
 
-#### Using magnification drop down tool in the desktop 
+### Change zoom mode from the toolbar
 
-On the desktop built-in toolbar, a magnifying tool is available that shows the current zoom percentage of the document. Using the tool, you can choose a zoom percentage from a predefined set of values. Additionally, you can choose the fit-to-width or fit-to-page option. 
+#### Using the magnification drop-down tool on the desktop 
+
+On the desktop built-in toolbar, a magnifying tool is available that shows the current zoom percentage of the document. Using the tool, you can choose a zoom percentage from a predefined set of values. Additionally, you can choose the fit-to-width or fit-to-page option.
 
 ![Desktop Zoom Mode Combo Box](Images/windowszoom.gif)
 
-#### Using zoom mode tool in the mobile 
+#### Using the zoom mode tool on the mobile
 
 On the mobile built-in toolbar, by default, the magnifying tool is not visible. When the document `ZoomFactor` is changed, it becomes visible. Using the tool, you can choose the `Fit to Width` or `Fit to Page` option. When an option is selected, the icon will no longer be visible until the zoom percentage changes again. 
 
@@ -75,8 +76,8 @@ On the mobile built-in toolbar, by default, the magnifying tool is not visible. 
 
 #### Change to Fit to Page
 
-Set the value for `SfPdfViewer.ZoomMode` to `ZoomMode.FitToPage` enumeration. It will magnify the PDF document so that the entire PDF page is visible in the view port. 
-Refer to the following code example. 
+You can change the `SfPdfViewer.ZoomMode` using the `ZoomMode.FitToPage` enumeration. It will magnify the PDF document so that the entire PDF page is visible in the view port. 
+Refer to the following code example: 
 
 {% tabs %}
 {% highlight xaml %}
@@ -91,8 +92,8 @@ pdfViewer.ZoomMode = ZoomMode.FitToPage;
 
 #### Change to Fit to Width 
 
-You can change the `SfPdfViewer.ZoomMode` using `ZoomMode.FitToWidth` enumeration. It will magnify the PDF document so that the widest page of the PDF document fits the width of the view port. 
-Refer to the following code example.
+You can change the `SfPdfViewer.ZoomMode` using the `ZoomMode.FitToWidth` enumeration. It will magnify the PDF document so that the widest page of the PDF document fits the width of the view port. 
+Refer to the following code example:
 
 {% tabs %}
 {% highlight xaml %}
@@ -105,5 +106,4 @@ pdfViewer.ZoomMode = ZoomMode.FitToWidth;
 {% endhighlight %}
 {% endtabs %}
 
-##### Note:
-1. When the zoom factor of a PDF is changed, the zoom mode automatically changes to the default setting. After this change, you can manually adjust the zoom mode to either "Fit to Page" or "Fit to Width" as needed. 
+N> When the zoom factor of a PDF is changed, the zoom mode automatically changes to the default setting. After this change, you can manually adjust the zoom mode to either "Fit to Page" or "Fit to Width" as needed. 
