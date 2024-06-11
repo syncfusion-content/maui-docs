@@ -8,10 +8,10 @@ documentation: ug
 ---
 # No Results Found in .NET MAUI ComboBox (SfComboBox)
 
-When the entered item is not in the suggestion list, `SfComboBox` displays a text indicating there is no search results found. We can set the desire text to be displayed for indicating no results found with the ` NoResultsFoundText` and `NoResultsFoundTemplate` properties.
+When the entered item is not in the suggestion list, `SfComboBox` displays a text indicating there is no search results found. We can set the desire text to be displayed for indicating no results found with the `NoResultsFoundText` and `NoResultsFoundTemplate` properties.
 
 ## NoResultsFoundText
-We can customize the desire text to be displayed for indicating no results found by using the ` NoResultsFoundText` property. 
+We can customize the desire text to be displayed for indicating no results found by using the `NoResultsFoundText` property. 
 
 {% tabs %}
 
@@ -43,6 +43,8 @@ comboBox.NoResultsFoundText = "Not Found";
 
 We can customize the appearance of the desire text to be displayed for indicating no results found by using the `NoResultsFoundTemplate` property.
 
+{% tabs %}
+
 {% highlight xaml %}
 
 <editors:SfComboBox x:Name="comboBox"
@@ -57,7 +59,6 @@ We can customize the appearance of the desire text to be displayed for indicatin
             <Label Text="Not Found"  FontSize="20" FontAttributes="Italic" TextColor="Red" Margin="70,10,0,0"/>
         </DataTemplate>
     </editors:SfComboBox.NoResultsFoundTemplate>
-    
 </editors:SfComboBox>
 
 
@@ -87,4 +88,4 @@ comboBox.NoResultsFoundTemplate = noResultsTemplate;
 
 ![NoResultsFoundTemplate](images/NoResultsFound/NoResultsFoundTemplate.png)
 
-N> By Default `NoResultsFoundText` is enabled we can restrict it by using `NoResultsFoundText` as Empty. `comboBox.NoResultsFoundText = ""`;
+N> By Default `NoResultsFoundText` is enabled we can restrict it by using `NoResultsFoundText` as Empty.

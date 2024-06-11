@@ -5,6 +5,7 @@ description: Learn all about the Markers feature of Syncfusion .NET MAUI Maps (S
 platform: MAUI
 control: SfMaps
 documentation: ug
+keywords: .net maui maps, .net maui interactive map marker.
 ---
 
 # Markers in .NET MAUI Maps (SfMaps)

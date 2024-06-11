@@ -61,7 +61,6 @@ The following code example illustrates using `SfDataPager` with the data grid co
       </pager:SfDataPager>      
       <syncfusion:SfDataGrid x:Name="dataGrid"
                          Grid.Row="0"
-                         AutoGenerateColumns="true"
                          SelectionMode="Single"
                          ItemsSource="{Binding Source={x:Reference dataPager}, Path=PagedSource }"  
                          >
@@ -598,10 +597,10 @@ To apply custom style, follow the code example:
                          PageSize="15"
                          Source="{Binding OrdersInfo}">
                 <pager:SfDataPager.DefaultStyle >
-                    <pager:DataPagerStyle NumericButtonSelectionBackgroundColor="Red"
-                                          NumericButtonBackgroundColor="GreenYellow"
-                                          NavigationButtonBackgroundColor="Black"
-                                          NavigationButtonIconColor="White">
+                    <pager:DataPagerStyle NumericButtonSelectionBackgroundColor="Pink"
+                                          NumericButtonBackgroundColor="Purple"
+                                          NavigationButtonBackgroundColor="LightBlue"
+                                          NavigationButtonIconColor="Teal">
                     </pager:DataPagerStyle>
                 </pager:SfDataPager.DefaultStyle>
 </pager:SfDataPager>

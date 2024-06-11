@@ -5,6 +5,7 @@ description: Learn here all about box and whisker chart support in Syncfusion .N
 platform: maui
 control: SfCartesianChart
 documentation: ug
+keywords: .net maui box and whisker chart, maui box and whisker chart, box and whisker chart customization .net maui, syncfusion maui box and whisker chart, .net maui chart box plot visualization, .net maui chart box and whisker , .net maui box plot chart.
 ---
 
 # Box and Whisker Chart in .NET MAUI Chart
@@ -19,7 +20,7 @@ N> The Cartesian chart has [Series](https://help.syncfusion.com/cr/maui/Syncfusi
 
 {% highlight xaml %}
 
-    <chart:SfCartesianChart>
+<chart:SfCartesianChart>
 
     <chart:SfCartesianChart.XAxes>
         <chart:CategoryAxis />
@@ -33,33 +34,33 @@ N> The Cartesian chart has [Series](https://help.syncfusion.com/cr/maui/Syncfusi
                                XBindingPath="Department"
                                YBindingPath="Age"/>
 
-    </chart:SfCartesianChart>
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
-    CategoryAxis primaryAxis = new CategoryAxis();
-    chart.XAxes.Add(primaryAxis);
-    NumericalAxis secondaryAxis = new NumericalAxis();
-    chart.YAxes.Add(secondaryAxis);
+SfCartesianChart chart = new SfCartesianChart();
+CategoryAxis primaryAxis = new CategoryAxis();
+chart.XAxes.Add(primaryAxis);
+NumericalAxis secondaryAxis = new NumericalAxis();
+chart.YAxes.Add(secondaryAxis);
 
-    BoxAndWhiskerSeries series = new BoxAndWhiskerSeries()
-    {
-        ItemsSource = new ViewModel().BoxWhiskerData,
-        XBindingPath = "Department",
-        YBindingPath = "Age",
-    };
+BoxAndWhiskerSeries series = new BoxAndWhiskerSeries()
+{
+    ItemsSource = new ViewModel().BoxWhiskerData,
+    XBindingPath = "Department",
+    YBindingPath = "Age",
+};
 
-    chart.Series.Add(series);
-    this.Content = chart;
+chart.Series.Add(series);
+this.Content = chart;
 
 {% endhighlight %}
 
 {% endtabs %}
 
-![BoxAndWhisker chart type in MAUI Chart](Chart-types_images/BoxBasicRendering.png)
+![BoxAndWhisker chart type in MAUI Chart](Chart-types-images/BoxBasicRendering.png)
 
 ## Customize the series Box mode
 The series box plotting mode can be changed by using [BoxPlotMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.BoxAndWhiskerSeries.html#Syncfusion_Maui_Charts_BoxAndWhiskerSeries_BoxPlotMode) property of [BoxAndWhiskerSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.BoxAndWhiskerSeries.html). The plotting mode of series can be calculated as follows:
@@ -79,7 +80,7 @@ In Normal mode, the whiskers extend to the minimum and maximum data points withi
 
 {% highlight xaml %}
 
-    <chart:SfCartesianChart>
+<chart:SfCartesianChart>
 
     <chart:SfCartesianChart.XAxes>
         <chart:CategoryAxis />
@@ -94,34 +95,34 @@ In Normal mode, the whiskers extend to the minimum and maximum data points withi
                                YBindingPath="Age"
                                BoxPlotMode="Normal"/>
 
-    </chart:SfCartesianChart>
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
-    CategoryAxis primaryAxis = new CategoryAxis();
-    chart.XAxes.Add(primaryAxis);
-    NumericalAxis secondaryAxis = new NumericalAxis();
-    chart.YAxes.Add(secondaryAxis);
+SfCartesianChart chart = new SfCartesianChart();
+CategoryAxis primaryAxis = new CategoryAxis();
+chart.XAxes.Add(primaryAxis);
+NumericalAxis secondaryAxis = new NumericalAxis();
+chart.YAxes.Add(secondaryAxis);
 
-    BoxAndWhiskerSeries series = new BoxAndWhiskerSeries()
-    {
-        ItemsSource = new ViewModel().BoxWhiskerData,
-        XBindingPath = "Department",
-        YBindingPath = "Age",
-        BoxPlotMode = "Normal"/>
-    };
+BoxAndWhiskerSeries series = new BoxAndWhiskerSeries()
+{
+    ItemsSource = new ViewModel().BoxWhiskerData,
+    XBindingPath = "Department",
+    YBindingPath = "Age",
+    BoxPlotMode = "Normal"
+};
 
-    chart.Series.Add(series);
-    this.Content = chart;
+chart.Series.Add(series);
+this.Content = chart;
 
 {% endhighlight %}
 
 {% endtabs %}
 
-![BoxPlotMode Normal in MAUI Chart](Chart-types_images/BoxModeNormal.png)
+![BoxPlotMode Normal in MAUI Chart](Chart-types-images/BoxModeNormal.png)
 
 ## Inclusive
 In Inclusive mode, the whiskers extend to the minimum and maximum data points within 1.5 times the IQR. Any points beyond this range are considered outliers. The following code illustrate how to define property [BoxPlotMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.BoxAndWhiskerSeries.html#Syncfusion_Maui_Charts_BoxAndWhiskerSeries_BoxPlotMode) value as [Inclusive](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.BoxPlotMode.html#Syncfusion_Maui_Charts_BoxPlotMode_Inclusive).
@@ -130,7 +131,7 @@ In Inclusive mode, the whiskers extend to the minimum and maximum data points wi
 
 {% highlight xaml %}
 
-    <chart:SfCartesianChart>
+<chart:SfCartesianChart>
 
     <chart:SfCartesianChart.XAxes>
         <chart:CategoryAxis />
@@ -145,34 +146,34 @@ In Inclusive mode, the whiskers extend to the minimum and maximum data points wi
                                YBindingPath="Age"
                                BoxPlotMode="Inclusive"/>
 
-    </chart:SfCartesianChart>
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
-    CategoryAxis primaryAxis = new CategoryAxis();
-    chart.XAxes.Add(primaryAxis);
-    NumericalAxis secondaryAxis = new NumericalAxis();
-    chart.YAxes.Add(secondaryAxis);
+SfCartesianChart chart = new SfCartesianChart();
+CategoryAxis primaryAxis = new CategoryAxis();
+chart.XAxes.Add(primaryAxis);
+NumericalAxis secondaryAxis = new NumericalAxis();
+chart.YAxes.Add(secondaryAxis);
 
-    BoxAndWhiskerSeries series = new BoxAndWhiskerSeries()
-    {
-        ItemsSource = new ViewModel().BoxWhiskerData,
-        XBindingPath = "Department",
-        YBindingPath = "Age",
-        BoxPlotMode = "Inclusive"/>
-    };
+BoxAndWhiskerSeries series = new BoxAndWhiskerSeries()
+{
+    ItemsSource = new ViewModel().BoxWhiskerData,
+    XBindingPath = "Department",
+    YBindingPath = "Age",
+    BoxPlotMode = "Inclusive"
+};
 
-    chart.Series.Add(series);
-    this.Content = chart;
+chart.Series.Add(series);
+this.Content = chart;
 
 {% endhighlight %}
 
 {% endtabs %}
 
-![BoxPlotMode Inclusive in MAUI Chart](Chart-types_images/BoxModeInclusive.png)
+![BoxPlotMode Inclusive in MAUI Chart](Chart-types-images/BoxModeInclusive.png)
 
 ## ShowMedian
 The Median values of given dataset is viewed by enabling the [ShowMedian](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.BoxAndWhiskerSeries.html#Syncfusion_Maui_Charts_BoxAndWhiskerSeries_ShowMedian) property of [BoxAndWhiskerSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.BoxAndWhiskerSeries.html). By default, the ShowMedian property value is False. The following code illustrates how to enable the [ShowMedian](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.BoxAndWhiskerSeries.html#Syncfusion_Maui_Charts_BoxAndWhiskerSeries_ShowMedian) property.
@@ -181,7 +182,7 @@ The Median values of given dataset is viewed by enabling the [ShowMedian](https:
 
 {% highlight xaml %}
 
-    <chart:SfCartesianChart>
+<chart:SfCartesianChart>
 
     <chart:SfCartesianChart.XAxes>
         <chart:CategoryAxis />
@@ -196,34 +197,34 @@ The Median values of given dataset is viewed by enabling the [ShowMedian](https:
                                YBindingPath="Age"
                                ShowMedian="True"/>
 
-    </chart:SfCartesianChart>
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
-    CategoryAxis primaryAxis = new CategoryAxis();
-    chart.XAxes.Add(primaryAxis);
-    NumericalAxis secondaryAxis = new NumericalAxis();
-    chart.YAxes.Add(secondaryAxis);
+SfCartesianChart chart = new SfCartesianChart();
+CategoryAxis primaryAxis = new CategoryAxis();
+chart.XAxes.Add(primaryAxis);
+NumericalAxis secondaryAxis = new NumericalAxis();
+chart.YAxes.Add(secondaryAxis);
 
-    BoxAndWhiskerSeries series = new BoxAndWhiskerSeries()
-    {
-        ItemsSource = new ViewModel().BoxWhiskerData,
-        XBindingPath = "Department",
-        YBindingPath = "Age",
-        ShowMedian = "True"/>
-    };
+BoxAndWhiskerSeries series = new BoxAndWhiskerSeries()
+{
+    ItemsSource = new ViewModel().BoxWhiskerData,
+    XBindingPath = "Department",
+    YBindingPath = "Age",
+    ShowMedian = "True"
+};
 
-    chart.Series.Add(series);
-    this.Content = chart;
+chart.Series.Add(series);
+this.Content = chart;
 
 {% endhighlight %}
 
 {% endtabs %}
 
-![ShowMedian in MAUI chart](Chart-types_images/ShowMedian.png)
+![ShowMedian in MAUI chart](Chart-types-images/ShowMedian.png)
 
 N>
 
@@ -241,7 +242,7 @@ The outlier value in the box plot can be viewed by enabling the [ShowOutlier](ht
 
 {% highlight xaml %}
 
-    <chart:SfCartesianChart>
+<chart:SfCartesianChart>
 
     <chart:SfCartesianChart.XAxes>
         <chart:CategoryAxis />
@@ -256,34 +257,34 @@ The outlier value in the box plot can be viewed by enabling the [ShowOutlier](ht
                                 YBindingPath="Age"
                                 ShowOutlier="False"/>
 
-    </chart:SfCartesianChart>
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
-    CategoryAxis primaryAxis = new CategoryAxis();
-    chart.XAxes.Add(primaryAxis);
-    NumericalAxis secondaryAxis = new NumericalAxis();
-    chart.YAxes.Add(secondaryAxis);
+SfCartesianChart chart = new SfCartesianChart();
+CategoryAxis primaryAxis = new CategoryAxis();
+chart.XAxes.Add(primaryAxis);
+NumericalAxis secondaryAxis = new NumericalAxis();
+chart.YAxes.Add(secondaryAxis);
 
-    BoxAndWhiskerSeries series = new BoxAndWhiskerSeries()
-    {
-        ItemsSource = new ViewModel().BoxWhiskerData,
-        XBindingPath = "Department",
-        YBindingPath = "Age",
-        ShowOutlier = "False"/>
-    };
+BoxAndWhiskerSeries series = new BoxAndWhiskerSeries()
+{
+    ItemsSource = new ViewModel().BoxWhiskerData,
+    XBindingPath = "Department",
+    YBindingPath = "Age",
+    ShowOutlier = "False"
+};
 
-    chart.Series.Add(series);
-    this.Content = chart;
+chart.Series.Add(series);
+this.Content = chart;
 
 {% endhighlight %}
 
 {% endtabs %}
 
-![Outlier Segment in MAUI chart](Chart-types_images/ShowOutlier.png)
+![Outlier Segment in MAUI chart](Chart-types-images/ShowOutlier.png)
 
 ## OutlierShapeType
 
@@ -295,7 +296,7 @@ The following code shows how to set the [OutlierShapeType](https://help.syncfusi
 
 {% highlight xaml %}
 
-    <chart:SfCartesianChart>
+<chart:SfCartesianChart>
 
     <chart:SfCartesianChart.XAxes>
         <chart:CategoryAxis />
@@ -310,31 +311,31 @@ The following code shows how to set the [OutlierShapeType](https://help.syncfusi
                                 YBindingPath="Age"
                                 OutlierShapeType="Cross"/>
 
-    </chart:SfCartesianChart>
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
-    CategoryAxis primaryAxis = new CategoryAxis();
-    chart.XAxes.Add(primaryAxis);
-    NumericalAxis secondaryAxis = new NumericalAxis();
-    chart.YAxes.Add(secondaryAxis);
+SfCartesianChart chart = new SfCartesianChart();
+CategoryAxis primaryAxis = new CategoryAxis();
+chart.XAxes.Add(primaryAxis);
+NumericalAxis secondaryAxis = new NumericalAxis();
+chart.YAxes.Add(secondaryAxis);
 
-    BoxAndWhiskerSeries series = new BoxAndWhiskerSeries()
-    {
-        ItemsSource = new ViewModel().BoxWhiskerData,
-        XBindingPath = "Department",
-        YBindingPath = "Age",
-        OutlierShapeType = ShapeType.Cross/>
-    };
+BoxAndWhiskerSeries series = new BoxAndWhiskerSeries()
+{
+    ItemsSource = new ViewModel().BoxWhiskerData,
+    XBindingPath = "Department",
+    YBindingPath = "Age",
+    OutlierShapeType = ShapeType.Cross
+};
 
-    chart.Series.Add(series);
-    this.Content = chart;
+chart.Series.Add(series);
+this.Content = chart;
 
 {% endhighlight %}
 
 {% endtabs %}
 
-![OutlierShapeType in MAUI chart](Chart-types_images/OutlierShape.png)
+![OutlierShapeType in MAUI chart](Chart-types-images/OutlierShape.png)

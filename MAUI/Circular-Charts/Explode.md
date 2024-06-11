@@ -24,12 +24,12 @@ Exploding a segment is used to pull attention to a specific area of the circular
 <chart:SfCircularChart>
     . . .
     <chart:DoughnutSeries x:Name="DoughnutSeries"
-					  ItemsSource="{Binding Data}"
-					  ExplodeIndex="2"
-					  ExplodeRadius="10"
-					  ExplodeOnTouch="True"
-					  XBindingPath="Utilization"
-					  YBindingPath="ResponseTime" />
+                          ItemsSource="{Binding Data}"
+                          ExplodeIndex="2"
+                          ExplodeRadius="10"
+                          ExplodeOnTouch="True"
+                          XBindingPath="Utilization"
+                          YBindingPath="ResponseTime" />
 </chart:SfCircularChart>
 
 {% endhighlight %}
@@ -49,6 +49,7 @@ DoughnutSeries series = new DoughnutSeries()
 };
 
 chart.Series.Add(series);
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -67,10 +68,10 @@ By setting the [ExplodeAll](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.
 <chart:SfCircularChart>
     . . .
     <chart:DoughnutSeries x:Name="DoughnutSeries"
-					  ItemsSource="{Binding Data}"
-					  XBindingPath="XValue"
-					  YBindingPath="YValue"
-                      ExplodeAll="True" />
+                          ItemsSource="{Binding Data}"
+                          XBindingPath="XValue"
+                          YBindingPath="YValue"
+                          ExplodeAll="True" />
 </chart:SfCircularChart>
 
 {% endhighlight %}
@@ -88,6 +89,7 @@ DoughnutSeries series = new DoughnutSeries()
 };
 
 chart.Series.Add(series);
+this.Content = chart;
 
 {% endhighlight %}
 
