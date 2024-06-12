@@ -118,7 +118,11 @@ N> To add a text signature, you can use an image containing the signature text .
 
 The signature modal view appears when a signature needs to be created. The [Sfpdfviewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) notifies when the modal view is appearing and disappearing through events. The events help you in hiding and showing elements that are part of the app UI that are not necessary as long as the modal view is visible.
 
-![Signature pad modal view](Images/Annotations/signature-pad-modal-view.png)
+**Mobile:**
+![Signature pad modal view mobile](Images/Annotations/signature-pad-modal-view-mobile.png)
+
+**Desktop:**
+![Signature pad modal view  desktop](Images/Annotations/signature-pad-modal-view-desktop.png)
 
 The `Sfpdfviewer.SignatureModalViewAppearing` event is triggered whenever the modal view opens. 
 
@@ -127,7 +131,7 @@ The `Sfpdfviewer.SignatureModalViewAppearing` event is triggered whenever the mo
 
 pdfviewer.SignatureModalViewAppearing += PdfViewer_SignatureModalViewAppearing;
 
-private void PdfViewer_SignatureModalViewAppearing(object? Sender, AnnotationModalViewAppearingEventArgs e)
+private void PdfViewer_SignatureModalViewAppearing(object? Sender, FormFieldModalViewAppearingEventArgs e)
 {
     // Implement the logic to hide unwanted UI elements such as toolbar items add in the app UI. 
 }
