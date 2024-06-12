@@ -136,7 +136,7 @@ To remove an item from the toolbar in [SfPdfViewer](https://help.syncfusion.com/
 
 Similarly, you can customize the other toolbars and their items by accessing their names. We have listed the other toolbar and toolbar item names below:
 
-### Mobile toolbar names
+### Mobile toolbar names 
 
 <table>
 <tr>
@@ -233,7 +233,7 @@ Similarly, you can customize the other toolbars and their items by accessing the
 </tr>
 </table>
 
-### Desktop toolbar names
+### Desktop toolbar names 
 
 <table>
 <tr>
