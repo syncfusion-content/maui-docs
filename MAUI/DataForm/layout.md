@@ -402,7 +402,7 @@ Here, the `Name` field will be hidden.
 
 ## Programmatically scroll to specific editor
 
-You can programmatically scroll to specific editor using the `ScrollTo` method by passing the `property name`.
+You can programmatically scroll to specific editor using the [ScrollTo](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_ScrollTo_System_String_) method by passing the `property name`.
 
 {% tabs %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
