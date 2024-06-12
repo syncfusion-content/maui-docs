@@ -195,3 +195,5 @@ this.Content = picker;
 {% endtabs %}
 
    ![Set Selected time in .NET MAUI Time picker.](images/getting-started/maui-time-picker-set-selected-time.png)
+
+N> You can refer to our [.NET MAUI Time Picker](https://www.syncfusion.com/maui-controls/maui-timepicker) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Time Picker Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/Picker/SampleBrowser.Maui.Picker/Samples/TimePicker) that shows you how to render the Time Picker in .NET MAUI.
