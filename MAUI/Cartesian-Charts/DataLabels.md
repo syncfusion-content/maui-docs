@@ -5,6 +5,7 @@ description: This section explains about how to configure the data labels and it
 platform: maui
 control: SfCartesianChart
 documentation: ug
+keywords: .net maui chart data label, maui chart data label, .net maui data label customization, syncfusion maui chart data label, cartesian data label maui, .net maui chart data label visualization, .net maui chart value label.
 ---
 
 # Data Labels in .NET MAUI Chart

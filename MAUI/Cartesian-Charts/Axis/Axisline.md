@@ -5,6 +5,7 @@ description: Learn here all about the chart axis line and its customization in S
 platform: maui
 control: SfCartesianChart
 documentation: ug
+keywords: .net maui chart axis line, .net maui chart axis customization, .net maui chart axisline guide, maui chart axis line settings, syncfusion maui chart axis line, .net maui chart axis styling, customize axis line .net maui chart.
 ---
 
 # Axis line in .NET MAUI Chart
@@ -23,7 +24,7 @@ Cartesian chart axis provides support to customize the style of axis line by def
         <chart:NumericalAxis >
             <chart:NumericalAxis.AxisLineStyle>
                 <chart:ChartLineStyle StrokeWidth ="2"
-									  Stroke="Red"/>
+                                      Stroke="Red"/>
             </chart:NumericalAxis.AxisLineStyle>
         </chart:NumericalAxis>
     </chart:SfCartesianChart.XAxes>
@@ -68,7 +69,7 @@ The padding to the axis line is defined by using the [AxisLineOffset](https://he
         <chart:NumericalAxis AxisLineOffset="25">
             <chart:NumericalAxis.AxisLineStyle>
                 <chart:ChartLineStyle StrokeWidth ="2"
-									  Stroke="Red"/>
+                                      Stroke="Red"/>
             </chart:NumericalAxis.AxisLineStyle>
         </chart:NumericalAxis>
     </chart:SfCartesianChart.XAxes>

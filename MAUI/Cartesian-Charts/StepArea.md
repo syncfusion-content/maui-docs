@@ -5,6 +5,7 @@ description: Learn here all about the Step area chart types and its features in 
 platform: maui
 control: SfCartesianChart
 documentation: ug
+keywords: .net maui step area chart, maui step area chart, .net maui chart step area type, step area chart customization .net maui, syncfusion maui step area chart, cartesian step area chart maui, .net maui chart step area visualization, syncfusion maui stair-step area chart.
 ---
 
 # Step Area Chart in .NET MAUI Chart
@@ -58,7 +59,7 @@ this.Content = chart;
 
 {% endtabs %}
 
-![Step Area chart type in MAUI Chart](Chart-types_images/maui_StepArea_chart.png)
+![Step Area chart type in MAUI Chart](Chart-types-images/maui_StepArea_chart.png)
 
 ## Enable Marker
 
@@ -138,12 +139,12 @@ To change the series markers appearance, create an instance of the [MarkerSettin
 SfCartesianChart chart = new SfCartesianChart();
 ...
 ChartMarkerSettings chartMarker= new ChartMarkerSettings();
-        chartMarker.Type = ShapeType.Diamond;
-        chartMarker.Fill = Colors.Brown;
-        chartMarker.Stroke = Colors.Black;
-        chartMarker.StrokeWidth= 1;
-        chartMarker.Height = 8;
-        chartMarker.Width = 8;
+chartMarker.Type = ShapeType.Diamond;
+chartMarker.Fill = Colors.Brown;
+chartMarker.Stroke = Colors.Black;
+chartMarker.StrokeWidth= 1;
+chartMarker.Height = 8;
+chartMarker.Width = 8;
 
 StepAreaSeries = new StepAreaSeries()
 {
@@ -151,7 +152,7 @@ StepAreaSeries = new StepAreaSeries()
    YBindingPath = "Value",
    ItemsSource = new ViewModel().Data,
    ShowMarkers = true,
- };
+};
 
 chart.Series.Add(series);
 this.Content = chart;
