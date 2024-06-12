@@ -10,11 +10,11 @@ keywords: .net maui, .net maui digital gauge, digital gauge, character segments,
 
 # Character Display Types in .NET MAUI Digital Gauge (SfDigitalGauge)
 
-The digital gauge displays numbers, the alphabet, and special characters, which are given in the text property.
+The digital gauge displays numbers, the alphabet, and special characters, which are given in the [text](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfDigitalGauge.html#Syncfusion_Maui_Gauges_SfDigitalGauge_Text) property.
 
 ## Setting value to Display number Character
 
-Numbers can be displayed in a digital gauge in different formats using the `CharacterType` property.
+Numbers can be displayed in a digital gauge in different formats using the [CharacterType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfDigitalGauge.html#Syncfusion_Maui_Gauges_SfDigitalGauge_CharacterType) property.
 
 {% tabs %}
 
@@ -66,7 +66,7 @@ Alphabet can be displayed in a digital gauge using any one of the character form
 
 ## Setting value to display special characters
 
-Special characters can also be displayed in digital gauge using the EightCrossEightDotMatrix character format type.
+Special characters can also be displayed in digital gauge using the [EightCrossEightDotMatrix](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.DigitalGaugeCharacterType.html#Syncfusion_Maui_Gauges_DigitalGaugeCharacterType_EightCrossEightDotMatrix) character format type.
 
 {% tabs %}
 
