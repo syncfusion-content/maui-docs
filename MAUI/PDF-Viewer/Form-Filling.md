@@ -197,20 +197,20 @@ The [Signature](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.Si
 
 #### Supressing the signature modal view
 
-The [Sfpdfviewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) allows you to supress the signature modal view and use your own UI in its place. This can be achieved by setting the `AnnotationModalViewAppearingEventArgs.Cancel` property to `true` in the `SignatureModalViewAppearing` event handler. 
+The [Sfpdfviewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) allows you to supress the signature modal view and use your own UI in its place. This can be achieved by setting the `FormFieldModalViewAppearingEventArgs.Cancel` property to `true` in the `SignatureModalViewAppearing` event handler. 
 
 The below code snippet illustrates supressing the signature modal view and using a UI implemented in the app in its place. In this illustration, it is assumed that the signature is produced in the form of an image stream when the user completes drawing the signature in the custom dialog. When the signing is completed using the custom dialog, a stamp annotation is created and assigned as the signature of the form field.   
 
 {% tabs %}
 {% highlight c# %}
 
-FormField signatureFormField;
+SignatureFormField? signatureFormField;
 pdfviewer.SignatureModalViewAppearing += PdfViewer_SignatureModalViewAppearing;
 
 private void PdfViewer_SignatureModalViewAppearing(object? Sender, FormFieldModalViewAppearingEventArgs e)
 {
     e.Cancel = true;
-    signatureFormField = e.FormField;
+    signatureFormField = e.FormField as SignatureFormField;
     
     // Implement your own UI for creating a signature.
     ShowCustomDialog();
