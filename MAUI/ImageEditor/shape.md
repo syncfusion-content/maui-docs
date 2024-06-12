@@ -184,7 +184,7 @@ Customize the appearance of each shape using the [`ImageEditorShapeSettings`](ht
 
 ## Select a particular annotation programmatically using annotation ID
 
-By passing the unique ID of an annotation to the SelectAnnotation method of SfImageEditor, you can select the particular annotation programmatically.
+By passing the unique `ID` of an annotation to the [SelectAnnotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_SelectAnnotation_System_Object_) method of `SfImageEditor`, you can select the particular annotation programmatically.
 
 {% tabs %}
 
