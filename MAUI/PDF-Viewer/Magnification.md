@@ -60,13 +60,13 @@ You can change the zoom mode using the `SfPdfViewer.ZoomMode` property of the PD
 
 ### Change zoom mode from the toolbar
 
-#### Using the magnification drop-down tool on the desktop 
+**Using the magnification drop-down tool on the desktop**
 
 On the desktop built-in toolbar, a magnifying tool is available that shows the current zoom percentage of the document. Using the tool, you can choose a zoom percentage from a predefined set of values. Additionally, you can choose the fit-to-width or fit-to-page option.
 
 ![Desktop Zoom Mode Combo Box](Images/windowszoom.gif)
 
-#### Using the zoom mode tool on the mobile
+**Using the zoom mode tool on the mobile**
 
 On the mobile built-in toolbar, by default, the magnifying tool is not visible. When the document `ZoomFactor` is changed, it becomes visible. Using the tool, you can choose the `Fit to Width` or `Fit to Page` option. When an option is selected, the icon will no longer be visible until the zoom percentage changes again. 
 
@@ -74,7 +74,7 @@ On the mobile built-in toolbar, by default, the magnifying tool is not visible. 
 
 ### Setting zoom mode programmatically 
 
-#### Change to fit-to-page
+**Change to fit-to-page**
 
 You can change the `SfPdfViewer.ZoomMode` using the `ZoomMode.FitToPage` enumeration. It will magnify the PDF document so that the entire PDF page is visible in the view port. 
 Refer to the following code example: 
@@ -90,7 +90,7 @@ pdfViewer.ZoomMode = ZoomMode.FitToPage;
 {% endhighlight %}
 {% endtabs %}
 
-#### Change to fit-to-width 
+**Change to fit-to-width**
 
 You can change the `SfPdfViewer.ZoomMode` using the `ZoomMode.FitToWidth` enumeration. It will magnify the PDF document so that the widest page of the PDF document fits the width of the view port. 
 Refer to the following code example:
