@@ -417,8 +417,7 @@ N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-dataform/t
 
 ## Group header customization
 
-The group header of the dataform can be customized by using the `GroupHeaderTemplate` property of the [DataFormGroupItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormGroupItem.html).
-
+The group header of the dataform can be customized by using the [GroupHeaderTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_GroupHeaderTemplate) property of the [SfDataForm](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html).
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="3" %}
 
@@ -440,4 +439,4 @@ The group header of the dataform can be customized by using the `GroupHeaderTemp
 {% endtabs %}
 
 N>
-* The BindingContext of the `GroupHeaderTemplate` is the `DataFormGroupItem`.
+* The BindingContext of the [GroupHeaderTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_GroupHeaderTemplate) is the [DataFormGroupItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormGroupItem.html).
