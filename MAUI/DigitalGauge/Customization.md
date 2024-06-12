@@ -71,7 +71,7 @@ The values of digital characters are spaced by altering the space between digita
 
 ## Customize character segment stroke
 
-The values of digital characters color can be customized using the [CharacterStrokeColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfDigitalGauge.html#Syncfusion_Maui_Gauges_SfDigitalGauge_CharacterStroke) property.
+The values of digital characters color can be customized using the [CharacterStroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfDigitalGauge.html#Syncfusion_Maui_Gauges_SfDigitalGauge_CharacterStroke) property.
 
 {% tabs %}
 
