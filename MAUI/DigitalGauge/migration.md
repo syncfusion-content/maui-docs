@@ -10,7 +10,7 @@ keywords: .net maui, .net maui digital gauge, digital gauge, character segments,
 
 # Migrate from Xamarin.Forms SfDigitalGauge to .NET MAUI SfDigitalGauge
 
-To make the migration from the Xamarin `SfDigitalGauge` to the .NET MAUI `SfDigitalGauge` easier, most of the similar APIs from the Xamarin `SfDigitalGauge` were kept in the.NET MAUI `SfDigitalGauge`. Also, the APIs has been restructured by considering various use cases and maintaining API consistency. Please find the difference in the following topics.
+To make the migration from the [Xamarin SfDigitalGauge](https://www.nuget.org/packages/Syncfusion.Xamarin.SfGauge) to the [.NET MAUI SfDigitalGauge](https://www.syncfusion.com/maui-controls/maui-digital-gauge) easier, most of the similar APIs from the [Xamarin SfDigitalGauge](https://www.nuget.org/packages/Syncfusion.Xamarin.SfGauge) were kept in the [.NET MAUI SfDigitalGauge](https://www.syncfusion.com/maui-controls/maui-digital-gauge). Also, the APIs has been restructured by considering various use cases and maintaining API consistency. Please find the difference in the following topics.
 
 ## Initialize control
 
@@ -86,43 +86,43 @@ The following code example, explains how to initialize the properties of the `Xa
 <th>.NET MAUI SfDigitalGauge</th>
 <th>Description</th></tr>
 <tr>
-<td>Value</td>
-<td>Text</td>
+<td>{{'[Value](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfGauge.XForms.SfDigitalGauge.html#Syncfusion_SfGauge_XForms_SfDigitalGauge_Value)'| markdownify }}</td>
+<td>{{'[Text](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfDigitalGauge.html#Syncfusion_Maui_Gauges_SfDigitalGauge_Text)'| markdownify }}</td>
 <td>Gets or sets the value of the text of the digital gauge.</td>
 </tr>
 <tr>
-<td>SegmentStrokeWidth</td>
-<td>StrokeWidth</td>
+<td>{{'[SegmentStrokeWidth](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfGauge.XForms.SfDigitalGauge.html#Syncfusion_SfGauge_XForms_SfDigitalGauge_SegmentStrokeWidth)'| markdownify }}</td>
+<td>{{'[StrokeWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfDigitalGauge.html#Syncfusion_Maui_Gauges_SfDigitalGauge_StrokeWidth)'| markdownify }}</td>
 <td>Gets or sets the value stroke width of the segment.</td>
 </tr>
 <tr>
-<td>DisabledSegmentColor</td>
-<td>DisabledSegmentStroke</td>
+<td>{{'[DisabledSegmentColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfGauge.XForms.SfDigitalGauge.html#Syncfusion_SfGauge_XForms_SfDigitalGauge_DisabledSegmentColor)'| markdownify }}</td>
+<td>{{'[DisabledSegmentStroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfDigitalGauge.html#Syncfusion_Maui_Gauges_SfDigitalGauge_DisabledSegmentStroke)'| markdownify }}</td>
 <td>Gets or sets a color for the disabled segment of the digital gauge</td>
 </tr>
 <tr>
-<td>CharacterStrokeColor</td>
-<td>CharacterStroke</td>
+<td>{{'[CharacterStrokeColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfGauge.XForms.SfDigitalGauge.html#Syncfusion_SfGauge_XForms_SfDigitalGauge_CharacterStrokeColor)'| markdownify }}</td>
+<td>{{'[CharacterStroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfDigitalGauge.html#Syncfusion_Maui_Gauges_SfDigitalGauge_CharacterStroke)'| markdownify }}</td>
 <td>Gets or sets a color for the text color of the digital gauge</td>
 </tr>
 <tr>
-<td>CharacterWidth</td>
-<td>CharacterWidth</td>
+<td>{{'[CharacterWidth](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfGauge.XForms.SfDigitalGauge.html#Syncfusion_SfGauge_XForms_SfDigitalGauge_CharacterWidth)'| markdownify }}</td>
+<td>{{'[CharacterWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfDigitalGauge.html#Syncfusion_Maui_Gauges_SfDigitalGauge_CharacterWidth)'| markdownify }}</td>
 <td>Gets or sets a value to the character width.</td>
 </tr>
 <tr>
-<td>DisabledSegmentAlpha</td>
-<td>DisabledSegmentAlpha</td>
+<td>{{'[DisabledSegmentAlpha](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfGauge.XForms.SfDigitalGauge.html#Syncfusion_SfGauge_XForms_SfDigitalGauge_DisabledSegmentAlpha)'| markdownify }}</td>
+<td>{{'[DisabledSegmentAlpha](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfDigitalGauge.html#Syncfusion_Maui_Gauges_SfDigitalGauge_DisabledSegmentAlpha)'| markdownify }}</td>
 <td>Gets or sets a value to visibility of the disabled segment.</td>
 </tr>
 <tr>
-<td>CharacterHeight</td>
-<td>CharacterHeight</td>
+<td>{{'[CharacterHeight](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfGauge.XForms.SfDigitalGauge.html#Syncfusion_SfGauge_XForms_SfDigitalGauge_CharacterHeight)'| markdownify }}</td>
+<td>{{'[CharacterHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfDigitalGauge.html#Syncfusion_Maui_Gauges_SfDigitalGauge_CharacterHeight)'| markdownify }}</td>
 <td>Gets or sets the value for the character height</td>
 </tr>
 <tr>
-<td>CharacterSpacing</td>
-<td>CharacterSpacing</td>
+<td>{{'[CharacterSpacing](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfGauge.XForms.SfDigitalGauge.html#Syncfusion_SfGauge_XForms_SfDigitalGauge_CharacterSpacing)'| markdownify }}</td>
+<td>{{'[CharacterSpacing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfDigitalGauge.html#Syncfusion_Maui_Gauges_SfDigitalGauge_CharacterSpacing)'| markdownify }}</td>
 <td>Gets or sets the value for the character spacing</td>
 </tr>
 </table>
@@ -240,8 +240,8 @@ SfDigitalGauge digital = new SfDigitalGauge();
 <th>.NET MAUI SfDigitalGauge</th>
 <th>Description</th></tr>
 <tr>
-<td>CharacterType</td>
-<td>DigitalGaugeCharacterType</td>
+<td>{{'[CharacterType](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfGauge.XForms.CharacterType.html)'| markdownify }}</td>
+<td>{{'[DigitalGaugeCharacterType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.DigitalGaugeCharacterType.html)'| markdownify }}</td>
 <td>Defines the character segment type for the SfDigitalGauge.</td>
 </tr>
 </table>
@@ -254,23 +254,23 @@ SfDigitalGauge digital = new SfDigitalGauge();
 <th>.NET MAUI SfDigitalGauge</th>
 <th>Description</th></tr>
 <tr>
-<td>SegmentSeven</td>
-<td>SevenSegment</td>
+<td>{{'[SegmentSeven](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfGauge.XForms.CharacterType.html#Syncfusion_SfGauge_XForms_CharacterType_SegmentSeven)'| markdownify }}</td>
+<td>{{'[SevenSegment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.DigitalGaugeCharacterType.html#Syncfusion_Maui_Gauges_DigitalGaugeCharacterType_SevenSegment)'| markdownify }}</td>
 <td>The seven-segment type is capable of displaying numbers and a few uppercase letters efficiently.</td>
 </tr>
 <tr>
-<td>SegmentFourteen</td>
-<td>FourteenSegment</td>
+<td>{{'[SegmentFourteen](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfGauge.XForms.CharacterType.html#Syncfusion_SfGauge_XForms_CharacterType_SegmentFourteen)'| markdownify }}</td>
+<td>{{'[FourteenSegment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.DigitalGaugeCharacterType.html#Syncfusion_Maui_Gauges_DigitalGaugeCharacterType_FourteenSegment)'| markdownify }}</td>
 <td>The fourteen-segment type is capable of displaying numbers and alphabet efficiently.</td>
 </tr>
 <tr>
-<td>SegmentSixteen</td>
-<td>SixteenSegment</td>
+<td>{{'[SegmentSixteen](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfGauge.XForms.CharacterType.html#Syncfusion_SfGauge_XForms_CharacterType_SegmentSixteen)'| markdownify }}</td>
+<td>{{'[SixteenSegment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.DigitalGaugeCharacterType.html#Syncfusion_Maui_Gauges_DigitalGaugeCharacterType_SixteenSegment)'| markdownify }}</td>
 <td>The sixteen-segment type is capable of displaying numbers and alphabet clearly.</td>
 </tr>
 <tr>
-<td>EightCrossEightDotMatrix</td>
-<td>EightCrossEightDotMatrix</td>
+<td>{{'[EightCrossEightDotMatrix](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfGauge.XForms.CharacterType.html#Syncfusion_SfGauge_XForms_CharacterType_EightCrossEightDotMatrix)'| markdownify }}/td>
+<td>{{'[EightCrossEightDotMatrix](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.DigitalGaugeCharacterType.html#Syncfusion_Maui_Gauges_DigitalGaugeCharacterType_EightCrossEightDotMatrix)'| markdownify }}</td>
 <td>The dot matrix segment type is capable of displaying numbers, alphabet, and special characters efficiently.</td>
 </tr>
 </table>
@@ -388,8 +388,8 @@ SfDigitalGauge digital = new SfDigitalGauge();
 <th>.NET MAUI SfDigitalGauge</th>
 <th>Description</th></tr>
 <tr>
-<td>ValueChanged</td>
-<td>TextChanged</td>
+<td>{{'[ValueChanged](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfGauge.XForms.SfDigitalGauge.ValueChangedEventHandler.html)'| markdownify }}</td>
+<td>{{'[TextChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.DigitalGaugeTextChangedEventArgs.html)'| markdownify }}</td>
 <td>Occurs when the text of the DigitalGauge is changed.</td>
 </tr>
 </table>
