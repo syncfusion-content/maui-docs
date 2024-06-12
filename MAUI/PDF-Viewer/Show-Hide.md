@@ -43,11 +43,11 @@ private void HideAllAnnotationsButton_Clicked(object sender, EventArgs e)
 {% endhighlight %}
 {% endtabs %}
 
-* Similarly, to show all the annotations, set the Hidden property value to `false`.
+* Similarly, to show all the annotations, set the `Hidden` property value to `false`.
 
 ### Hide specific annotation 
 
-While collaborating, the `Hidden` property of annotations can be used to show and hide annotations from specific authors. The following example illustrates how to hide annotations from a specific author by accessing the annotation's 'Hidden' property. 
+While collaborating, the `Hidden` property of annotations can be used to show and hide annotations from specific authors. The following example illustrates how to hide annotations from a specific author by accessing the annotation's `Hidden` property. 
 
 {% tabs %}
 {% highlight xaml %}
