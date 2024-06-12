@@ -9,18 +9,18 @@ keywords: .net maui, .net maui digital gauge, digital gauge, character segments,
 ---
 # Getting Started with .NET MAUI Digital Gauge (SfDigitalGauge)
 
-This section explains how to add the .NET MAUI DigitalGauge control. This section covers only the basic features needed to get started with Syncfusion DigitalGauge.
+This section explains how to add the [.NET MAUI DigitalGauge](https://www.syncfusion.com/maui-controls/maui-digital-gauge) control. This section covers only the basic features needed to get started with Syncfusion DigitalGauge.
 
 ## Creating an application using the .NET MAUI DigitalGauge
 
 1. Create a new .NET MAUI application in Visual Studio.
 
-2. Syncfusion .NET MAUI components are available on nuget.org. To add SfDigitalGauge to your project,
-open the NuGet package manager in Visual Studio, search for Syncfusion.Maui.Gauges, and then install it.
+2. Syncfusion .NET MAUI components are available on [nuget.org](https://www.nuget.org/). To add `SfDigitalGauge` to your project,
+open the NuGet package manager in Visual Studio, search for [Syncfusion.Maui.Gauges](https://www.nuget.org/packages/Syncfusion.Maui.gauges), and then install it.
 
-3. To initialize the control, import the control namespace Syncfusion.Maui.Gauges in XAML or C# code.
+3. To initialize the control, import the control namespace `Syncfusion.Maui.Gauges` in XAML or C# code.
 
-4. Initialize SfDigitalGauge.
+4. Initialize `SfDigitalGauge`.
 
 {% tabs %}
 
@@ -56,7 +56,7 @@ public partial class MainPage : ContentPage
 
 ### Register the handler
 
-Syncfusion.Maui.Core NuGet is a dependent package for all Syncfusion controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion core.
+`Syncfusion.Maui.Core` NuGet is a dependent package for all Syncfusion controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion core.
 
 {% highlight c# tabtitle="~/MauiProgram.cs" hl_lines="17" %}
 
@@ -91,7 +91,7 @@ namespace GaugeMauiSample
 
 ## Display content to the DigitalGauge
 
-In .NET MAUI DigitalGauge user can display value using `Text` property.
+In [.NET MAUI DigitalGauge](https://www.syncfusion.com/maui-controls/maui-digital-gauge) user can display value using [Text](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfDigitalGauge.html#Syncfusion_Maui_Gauges_SfDigitalGauge_Text) property.
 
 {% tabs %}
 
