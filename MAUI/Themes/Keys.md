@@ -6380,7 +6380,7 @@ This page lists the keys for each control and the element to which it is mapped 
     </tr>
 
     <tr>
-        <td rowspan="290">
+        <td rowspan="330">
             SfPdfViewerStyles  
             <br/>
             <br/>
@@ -10213,7 +10213,6 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
     </tr>   
-
 </table>
 
 ## SfPicker
