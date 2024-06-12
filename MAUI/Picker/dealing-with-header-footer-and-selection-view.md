@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Header, footer and selection view with .NET MAUI Picker Control | Syncfusion
+title: Header, footer and selection in .NET MAUI Picker Control | Syncfusion
 description: Learn here all about header, footer and selection view with Syncfusion .NET MAUI Picker (SfPicker) control.
 platform: maui
 control: SfPicker
 documentation: ug
 ---
 
-# Dealing with Header, Footer and Selection view in .NET MAUI Picker (SfPicker)
+# Dealing with Header, Footer and Selection in MAUI Picker (SfPicker)
 
 This section explains the header, footer and selction view customization of picker control.
 
@@ -221,8 +221,7 @@ The .NET MAUI Picker control and footer [TextStyle](https://help.syncfusion.com/
         TextColor = Colors.Gray,
         FontSize = 18,
         FontAttributes = FontAttributes.Italic
-        };
-    }
+    };
 
 {% endhighlight %}
 {% endtabs %}
@@ -288,7 +287,7 @@ Customize the picker selection view by using the SelectionView property of the S
 
 ### Background and selection shape customization
 
-In the SfPicker control, the corner radius, stroke, background and padding can be customized by setting the [CornerRadius], [Stroke], [Background] and [Padding] properties in the [PickerSelectionView].
+In the SfPicker control, the corner radius, stroke, background and padding can be customized by setting the [CornerRadius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerSelectionView.html#Syncfusion_Maui_Picker_PickerSelectionView_CornerRadius), [Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerSelectionView.html#Syncfusion_Maui_Picker_PickerSelectionView_Stroke), [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerSelectionView.html#Syncfusion_Maui_Picker_PickerSelectionView_Background) and [Padding](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerSelectionView.html#Syncfusion_Maui_Picker_PickerSelectionView_Padding) properties in the [PickerSelectionView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerSelectionView.html).
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" %}
