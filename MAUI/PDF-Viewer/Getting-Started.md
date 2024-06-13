@@ -107,9 +107,9 @@ namespace PdfViewerExample
 {% endhighlight %} 
 {% endtabs %}
 
-**Step 6:** In the `MainPage.xaml`, import the control namespace `Syncfusion.Maui.PdfViewer`, and then initialize the `SfPdfViewer` control and bind the `PdfDocumentStream` created to the [DocumentSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_DocumentSource)` property. The following code snippet explains the same.
+**Step 6:** In the `MainPage.xaml`, import the control namespace `Syncfusion.Maui.PdfViewer`, and then initialize the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) control and bind the `PdfDocumentStream` created to the [DocumentSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_DocumentSource) property. The following code snippet explains the same.
 
-N>`DocumentSource` property supports both `Stream` and `byte[]` objects.
+N>[DocumentSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_DocumentSource) property supports both `Stream` and `byte[]` objects.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}

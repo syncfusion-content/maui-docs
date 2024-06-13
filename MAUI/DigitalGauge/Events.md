@@ -11,7 +11,7 @@ keywords: .net maui, .net maui digital gauge, digital gauge, character segments,
 
 ## TextChanged
 
-The `TextChanged` event is triggered when the text is changed. The associated argument contains the following information.
+The [TextChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.DigitalGaugeTextChangedEventArgs.html#Syncfusion_Maui_Gauges_DigitalGaugeTextChangedEventArgs__ctor) event is triggered when the text is changed. The associated argument contains the following information.
 
 * sender - Gets details of a sender.
 * DigitalGaugeTextChangedEventArgs - Holds the text changed event arguments.

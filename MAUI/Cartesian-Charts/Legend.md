@@ -206,9 +206,10 @@ The visibility of cartesian series can be controlled by tapping the legend item 
 
 {% endtabs %}
 
-
 ## Legend maximum size request
 To set the maximum size request for the legend view, override the [GetMaximumSizeCoefficient]() protected method in [ChartLegend](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLegend.html) class. The value should be between 0 and 1, representing the maximum size request, not the desired size for the legend items layout.
+
+{% tabs %}
 
 {% highlight xaml %}
     
