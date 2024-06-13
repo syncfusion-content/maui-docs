@@ -17,17 +17,6 @@ The [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.
 By default, the built-in toolbar is visible. You can hide it by setting the `ShowToolbars` property of the PDF Viewer to `false`. And you can show the built-in toolbar by setting the `ShowToolbars` property of the PDF Viewer to `true`.
 
 {% tabs %}
-{% highlight C# %}
-//set the ShowToolbars to false
-public MainPage()
-{
-     SfPdfViewer pdfViewer=new SfPdfViewer();
-     pdfViewer.ShowToolbars = false;
-}  
-{% endhighlight %}
-{% endtabs %}
-
-{% tabs %}
 {% highlight XAML %}
  <ContentPage.Content>
 

@@ -37,6 +37,8 @@ this.Content = timePicker;
 
 {% endtabs %}
 
+![Fade Mode in .NET MAUI Time Picker.](images/text-display-mode/time-picker-fade-mode.png)
+
 ## Shrink Mode
 
 The shrink mode is used to display the font size of time picker items decreased from the selected item by setting the [TextDisplayMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_TextDisplayMode) property to [Shrink](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerTextDisplayMode.html#Syncfusion_Maui_Picker_PickerTextDisplayMode_Shrink) in [SfTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html).
@@ -63,6 +65,8 @@ this.Content = timePicker;
 
 {% endtabs %}
 
+![Shrink Mode in .NET MAUI Time Picker.](images/text-display-mode/time-picker-shrink-mode.png)
+
 ## FadeAndShrink Mode
 
 The fade and shrink mode are used to decrease the opacity and font size of time picker items from the selected item by setting the [TextDisplayMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_TextDisplayMode) property to [FadeAndShrink](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerTextDisplayMode.html#Syncfusion_Maui_Picker_PickerTextDisplayMode_FadeAndShrink) in [SfTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html).
@@ -88,3 +92,5 @@ this.Content = timePicker;
 {% endhighlight %}
 
 {% endtabs %}
+
+![Fade and Shrink Mode in .NET MAUI Time Picker.](images/text-display-mode/time-picker-fade-shrink-mode.png)

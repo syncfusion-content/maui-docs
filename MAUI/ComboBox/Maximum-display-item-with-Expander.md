@@ -9,7 +9,7 @@ documentation: ug
 
 # LoadMore in .NET MAUI ComboBox (SfComboBox)
 
-Restrict the number of suggestions displayed and have the remaining items loaded by selecting LoadMore. We can restrict maximum suggestion to be displayed with the `MaximumSuggestion` property.
+Restrict the number of suggestions displayed and have the remaining items loaded by selecting LoadMore. We can restrict maximum suggestion to be displayed with the [MaximumSuggestio](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_MaximumSuggestion)` property.
 
 {% tabs %}
 {% highlight xaml %}
@@ -38,7 +38,7 @@ The following gif image illustrates the result of the above code:
 
 ## LoadMore text customization
 
-The LoadMore support provides `LoadMoreText`. We can set the desire text for the displaying the Load more text with the property LoadMoreText.
+The LoadMore support provides [LoadMoreText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_LoadMoreText). We can set the desire text for the displaying the Load more text with the property LoadMoreText.
 
 {% tabs %}
 {% highlight xaml %}
@@ -70,7 +70,7 @@ The following gif image illustrates the result of the above code:
 
 ## LoadMore view customization
 
-SfComboBox allows customizing User Interface(UI) of Load More view. To customize the load more text, add the custom UI in the `LoadMoreTemplate` API in SfComboBox, as shown in the following code snippet.
+SfComboBox allows customizing User Interface(UI) of Load More view. To customize the load more text, add the custom UI in the [LoadMoreTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_LoadMoreTemplate) API in SfComboBox, as shown in the following code snippet.
 
 {% tabs %}
 {% highlight xaml %}
@@ -120,7 +120,7 @@ The following gif image illustrates the result of the above code:
 
 ## LoadMore Button Tapped Event
 
-The LoadMore support provides `LoadMoreButtonTapped` Event. The event can be triggered only when you tap on the load more button.
+The LoadMore support provides [LoadMoreButtonTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_LoadMoreButtonTapped) Event. The event can be triggered only when you tap on the load more button.
 
 {% tabs %}
 {% highlight xaml %}
