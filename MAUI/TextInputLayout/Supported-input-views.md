@@ -79,7 +79,9 @@ To initialize the [Autocomplete](https://help.syncfusion.com/maui/autocomplete/o
 
 There are two different selection modes in [Autocomplete](https://help.syncfusion.com/maui/autocomplete/selection) control.
 
-#### [Single Selection](https://help.syncfusion.com/maui/autocomplete/selection#single-selection)
+N> For more information regarding Autocomplete selection modes, refer to the [Single Selection](https://help.syncfusion.com/maui/autocomplete/selection#single-selection) and [Multiple Selection](https://help.syncfusion.com/maui/autocomplete/selection#multiple-selection) documentation.
+
+#### Single Selection
 
 {% tabs %} 
 
@@ -120,7 +122,7 @@ inputLayout.Content = autocomplete;
 
 ![Autocomplete Single Selection](images/SupportedInputViews/Autocomplete.jpg)
 
-#### [Multi Selection](https://help.syncfusion.com/maui/autocomplete/selection#multiple-selection)
+#### Multiple Selection
 
 {% tabs %} 
 
@@ -181,7 +183,10 @@ To initialize the [ComboBox](https://help.syncfusion.com/maui/combobox/overview)
 
 There are two different selection modes in [ComboBox](https://help.syncfusion.com/maui/combobox/selection) control.
 
-#### [Single Selection](https://help.syncfusion.com/maui/combobox/selection#single-selection)
+
+N> For more information regarding ComboBox selection modes, refer to the [Single Selection](https://help.syncfusion.com/maui/combobox/selection#single-selection) and [Multiple Selection](https://help.syncfusion.com/maui/combobox/selection#multiple-selection) documentation.
+
+#### Single Selection
 
 {% tabs %} 
 
@@ -222,7 +227,7 @@ inputLayout.Content = combobox;
 
 ![Combobox Single Selection](images/SupportedInputViews/ComboBox.jpg)
 
-#### [Multi Selection](https://help.syncfusion.com/maui/combobox/selection#multiple-selection)
+#### Multiple Selection
 
 {% tabs %} 
 
