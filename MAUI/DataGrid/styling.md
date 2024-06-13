@@ -343,6 +343,8 @@ The row header can be customized by the writing style for `DataGridRowHeaderCell
 ### Column Styling 
 You can apply the style for a particular column by using [DataGridColumn.CellStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_CellStyleProperty) and [DataGridColumn.HeaderStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_HeaderStyleProperty) property.
 
+N> The column styling (explicit styling) takes higher priority than implicit styling, and implicit styling takes higher priority than default styling in SfDataGrid.
+
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml"%}
 <ContentPage xmlns:syncfusion="http://schemas.syncfusion.com/maui">

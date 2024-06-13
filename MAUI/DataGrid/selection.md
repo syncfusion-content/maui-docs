@@ -334,7 +334,7 @@ By default, the current cell is focusable for all the columns. To disable curren
 
 ## Disable delete key functionality
 
-By default, the selected rows will be deleted when pressing the delete key. It can be disabled by setting the `SfDataGrid.AllowDeleting` property to false.
+By default, the selected rows will be deleted when pressing the delete key. It can be disabled by setting the [SfDataGrid.AllowDeleting](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AllowDeleting) property to false.
 
 {% tabs %}
 {% highlight XAML %}
@@ -546,7 +546,7 @@ public class ViewModel : INotifyPropertyChanged
 
 ## Disable keyboard navigation
 
-By default, the keyboard navigation will be enabled when setting the selection and navigation modes. It can be disabled by setting the `SfDataGrid.AllowKeyboardNavigation` to false.
+By default, the keyboard navigation will be enabled when setting the selection and navigation modes. It can be disabled by setting the [SfDataGrid.AllowKeyboardNavigation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AllowKeyboardNavigation) to false.
 
 {% tabs %}
 {% highlight XAML %}

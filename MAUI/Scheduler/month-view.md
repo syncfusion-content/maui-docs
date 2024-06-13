@@ -325,7 +325,7 @@ N>
 
 ## Month Navigation direction
 
-The `MonthView` of `SfScheduler` can be navigated in both horizontal and vertical directions. You can change the direction of navigation through the `NavigationDirection` property of `MonthViewSettings` in `SfScheduler.` By default, the navigation direction is `Horizontal.`
+The [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html) of [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html) can be navigated in both horizontal and vertical directions. You can change the direction of navigation through the [NavigationDirection](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html#Syncfusion_Maui_Scheduler_SchedulerMonthView_NavigationDirection) property of [MonthViewSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html) in `SfScheduler` . By default, the navigation direction is `Horizontal`.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}

@@ -13,14 +13,14 @@ The tooltip provides information when hovering over or tapping the steps in the 
 
 ## Enable tooltip
 
-To enable the tooltip for the step progress bar control, utilize the [ShowToolTip]() property of [SfStepProgressBar](). By default, the value of [ShowToolTip]()  is set to `false`. To provide users with additional information or context about specific step, simply set this property to `true`.
+To enable the tooltip for the step progress bar control, utilize the [ShowToolTip](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_ShowToolTip) property of [SfStepProgressBar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html). By default, the value of [ShowToolTip](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_ShowToolTip)  is set to `false`. To provide users with additional information or context about specific step, simply set this property to `true`.
 
 ## ToolTipText
 
-The tooltip text for a step view can be set using the [ToolTipText]() property from the [StepProgressBarItem]() collection, which is bound to the [ItemsSource]() property.
+The tooltip text for a step view can be set using the [ToolTipText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.StepProgressBarItem.html#Syncfusion_Maui_ProgressBar_StepProgressBarItem_ToolTipText) property from the [StepProgressBarItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.StepProgressBarItem.html) collection, which is bound to the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_ItemsSource) property.
 
 
-N> The tooltip is shown only when the [ToolTipText]() is provided.
+N> The tooltip is shown only when the [ToolTipText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.StepProgressBarItem.html#Syncfusion_Maui_ProgressBar_StepProgressBarItem_ToolTipText) is provided.
 
 {% tabs %}
 {% highlight XAML hl_lines="4" %}
@@ -87,18 +87,18 @@ public class ViewModel
 
 ## Customize tooltip appearance
 
-The tooltip appearance customization can be achieved by using the [Stroke](), [Duration](), [TextStyle](), and [Background]() properties of [ToolTipSettings]() in the [SfStepProgressBar]().
+The tooltip appearance customization can be achieved by using the [Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.StepProgressBarToolTipSettings.html#Syncfusion_Maui_ProgressBar_StepProgressBarToolTipSettings_Stroke), [Duration](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.StepProgressBarToolTipSettings.html#Syncfusion_Maui_ProgressBar_StepProgressBarToolTipSettings_Duration), [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.StepProgressBarToolTipSettings.html#Syncfusion_Maui_ProgressBar_StepProgressBarToolTipSettings_TextStyle), and [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.StepProgressBarToolTipSettings.html#Syncfusion_Maui_ProgressBar_StepProgressBarToolTipSettings_Background) properties of [ToolTipSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_ToolTipSettings) in the [SfStepProgressBar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html).
 
-Additionally, you can achieve further appearance customization by using [ToolTipTemplate]() of the [SfStepProgressBar]().
+Additionally, you can achieve further appearance customization by using [ToolTipTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_ToolTipTemplate) of the [SfStepProgressBar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html).
 
 ### Customize tooltip appearance using its properties
 
-To customize the appearance of the tooltip in the [SfStepProgressBar]() using [ToolTipSettings](), you can utilize the following properties:
+To customize the appearance of the tooltip in the [SfStepProgressBar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html) using [ToolTipSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_ToolTipSettings), you can utilize the following properties:
 
-* [Background](): This property allows you to change the background color of the tooltip.
-* [Duration](): Specifies the duration in milliseconds, for which the tooltip will be displayed. This helps control how long the tooltip remains visible on the screen.
-* [Stroke](): This property enables you to change the border color of the tooltip.
-* [TextStyle](): This property is used to modify the appearance of the tooltip text. You can customize attributes such as [TextColor](), [FontSize](), [FontFamily](), and [FontAttributes]().
+* [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.StepProgressBarToolTipSettings.html#Syncfusion_Maui_ProgressBar_StepProgressBarToolTipSettings_Background): This property allows you to change the background color of the tooltip.
+* [Duration](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.StepProgressBarToolTipSettings.html#Syncfusion_Maui_ProgressBar_StepProgressBarToolTipSettings_Duration): Specifies the duration in milliseconds, for which the tooltip will be displayed. This helps control how long the tooltip remains visible on the screen.
+* [Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.StepProgressBarToolTipSettings.html#Syncfusion_Maui_ProgressBar_StepProgressBarToolTipSettings_Stroke): This property enables you to change the border color of the tooltip.
+* [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.StepProgressBarToolTipSettings.html#Syncfusion_Maui_ProgressBar_StepProgressBarToolTipSettings_TextStyle): This property is used to modify the appearance of the tooltip text. You can customize attributes such as [TextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.StepTextStyle.html#Syncfusion_Maui_ProgressBar_StepTextStyle_TextColor), [FontSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.StepTextStyle.html#Syncfusion_Maui_ProgressBar_StepTextStyle_FontSize), [FontFamily](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.StepTextStyle.html#Syncfusion_Maui_ProgressBar_StepTextStyle_FontFamily), and [FontAttributes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.StepTextStyle.html#Syncfusion_Maui_ProgressBar_StepTextStyle_FontAttributes).
 
 {% tabs %}
 {% highlight XAML hl_lines="4 5 6 7 8 9 10 11 12 13 14 15" %}
@@ -172,13 +172,13 @@ public class ViewModel
 {% endhighlight %}
 {% endtabs %}
 
-N> This property will only be applicable when the [ShowToolTip]() is enabled.
+N> This property will only be applicable when the [ShowToolTip](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_ShowToolTip) is enabled.
 
 ![tooltip-customization-in-maui-stepprogressbar](images/tooltip/tooltip-customization-in-maui-stepprogressbar.png)
 
 ### Customize tooltip appearance using DataTemplate
 
-You can customize the tooltip appearance by using the [ToolTipTemplate]() property in the [SfStepProgressBar]().
+You can customize the tooltip appearance by using the [ToolTipTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_ToolTipTemplate) property in the [SfStepProgressBar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html).
 
 The following code example shows the usage of DataTemplate.
 
@@ -277,6 +277,6 @@ public class ViewModel
 {% endhighlight %}
 {% endtabs %}
 
-N> This property will only be applicable when the [ShowToolTip]() is enabled.
+N> This property will only be applicable when the [ShowToolTip](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_ShowToolTip) is enabled.
 
 ![tooltip-template-in-maui-stepprogressbar](images/tooltip/tooltip-template-in-maui-stepprogressbar.png)

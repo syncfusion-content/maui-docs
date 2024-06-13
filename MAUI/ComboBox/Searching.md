@@ -116,7 +116,7 @@ The following image illustrates the result of the above code:
 
 ### Prefix characters constraint
 
-Instead of displaying suggestion list on every character entry, matches can be filtered and displayed after a few character entries. This can be done by `MinimumPrefixCharacters` property and its default value is 1.
+Instead of displaying suggestion list on every character entry, matches can be filtered and displayed after a few character entries. This can be done by [MinimumPrefixCharacters](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_MinimumPrefixCharacters) property and its default value is 1.
 
 {% tabs %}
 {% highlight xaml %}
