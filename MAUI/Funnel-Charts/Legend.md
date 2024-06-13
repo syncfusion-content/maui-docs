@@ -14,7 +14,6 @@ The [Legend](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartBas
 
 ## Defining the legend
 
-Defining the legend
 To define the legend in the chart, initialize the [ChartLegend](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLegend.html) class and assign it to the [Legend](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartBase.html#Syncfusion_Maui_Charts_ChartBase_Legend) property.
 
 {% tabs %}
@@ -240,7 +239,6 @@ this.Content = chart;
 
 ## Item template
 
-Item template
 The [ChartLegend](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLegend.html) supports customizing the appearance of legend items using the [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLegend.html#Syncfusion_Maui_Charts_ChartLegend_ItemTemplate) property. The default value of ItemsTemplate is `null`.
 
 N> The BindingContext of the template is the corresponding underlying legend item provided in the ChartLegendItem class.

@@ -69,7 +69,6 @@ chart.Legend = new ChartLegend()
 {% endtabs %}
 
 ## Legend item visibility
-Legend item visibility
 The visibility of individual legend items for specific series can be controlled using the [IsVisibleOnLegend](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_IsVisibleOnLegend) property of the series. The default value for IsVisibleOnLegend is `true`.
 
 {% tabs %}

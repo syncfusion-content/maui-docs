@@ -66,7 +66,7 @@ this.Content = chart;
 {% endtabs %}
 
 ## Legend item visibility
-Legend item visibility
+
 The visibility of individual legend items for specific series can be controlled using the [IsVisibleOnLegend](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_IsVisibleOnLegend) property of the series. The default value for IsVisibleOnLegend is `true`.
 
 
@@ -241,8 +241,8 @@ chart.Legend = new LegendExt();
 
 {% endtabs %}
 
-## Items Layout
- Items layout
+## Items layout
+
 The [ItemsLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLegend.html#Syncfusion_Maui_Charts_ChartLegend_ItemsLayout) property is used to customize the arrangement and position of each legend item. The default value is `null`. This property accepts any layout type.
 
 For more details about the layout alignment refer to this [article]().
