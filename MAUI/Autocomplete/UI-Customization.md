@@ -504,7 +504,7 @@ autocomplete.DropDownItemHeight = 80;
 
 ![.NET MAUI Autocomplete DropDown Item Height](Images/UICustomization/DropDownItemHeight.png)
 
-### Customize in DropDownPlacement
+### Customize the DropDownPlacement
 
 The drop-down that shows the filtered items will be placed automatically based on the available space and can also be customized using the `DropDownPlacement` property.
 
@@ -537,7 +537,7 @@ autocomplete.DropDownPlacement = DropDownPlacement.Top;
 
 ![.NET MAUI Autocomplete Dropdownplacement.](Images/UICustomization/placementauto.png)
 
-### Customize in DropDown ItemPadding
+### Customize the DropDown ItemPadding
 
 The autocomplete enables the user to provide padding for the items inside dropdown using `ItemPadding` property.
 
@@ -561,7 +561,7 @@ autocomplete.ItemPadding = new Thickness(10,20,0,0);
 
 ![.NET MAUI Autocomplete Itempadding.](Images/UICustomization/Itempadding.png)
 
-### Customize in DropDown Item Width
+### Customize the DropDown Item Width
 
 The `DropdownWidth` property is used to modify the height of the dropdown items.
 
