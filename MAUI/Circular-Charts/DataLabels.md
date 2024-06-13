@@ -130,7 +130,14 @@ When the [SmartLabelAlignment]() is [Shift](), and if the data label goes out of
 
 <chart:SfCircularChart>
 
-    <chart:PieSeries ItemsSource="{Binding Data}" 
+    <chart:SfCircularChart.Resources>
+        <DataTemplate x:Key="labelTemplate">
+        ...
+        </DataTemplate>
+    </chart:SfCircularChart.Resources>
+
+    <chart:PieSeries ItemsSource="{Binding Data}"
+                     LabelTemplate="{StaticResource labelTemplate}"
                      ShowDataLabels="True"
                      XBindingPath="Product" 
                      YBindingPath="SalesRate">
@@ -153,6 +160,13 @@ series.ItemsSource = new ViewModel().Data;
 series.XBindingPath = "Product";
 series.YBindingPath = "SalesRate";
 series.ShowDataLabels = true;
+
+DataTemplate labelTemplate = new DataTemplate(() =>
+{
+    ...
+});
+
+series.LabelTemplate = labelTemplate;
 
 series.DataLabelSettings = new CircularDataLabelSettings()
 {
