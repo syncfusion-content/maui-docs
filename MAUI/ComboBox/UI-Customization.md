@@ -627,7 +627,7 @@ comboBox.ItemPadding = new Thickness(10,20,0,0);
 
 ![.NET MAUI ComboBox Itempadding.](Images/UICustomization/Itempadding.png)
 
-### Customize in DropDown Item Width
+### Customize in DropDown Width
 
 The `DropdownWidth` property is used to modify the height of the dropdown items.
 

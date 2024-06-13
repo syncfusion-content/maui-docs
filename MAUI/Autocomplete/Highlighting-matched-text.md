@@ -32,12 +32,12 @@ It highlights the first position of the matching characters in the suggestion li
 {% highlight xaml %}
 
      <editors:SfAutocomplete x:Name="autocomplete"
-			                 HeightRequest = "40"
-			                 WidthRequest="300"
-			                 ItemsSource="{Binding SocialMedias}"
-			                 TextHighlightMode="FirstOccurrence"
-			                 HighlightedTextColor="Red"
-			                 HighlightedTextFontAttributes="Bold"/>
+			     HeightRequest = "40"
+			     WidthRequest="300"
+			     ItemsSource="{Binding SocialMedias}"
+			     TextHighlightMode="FirstOccurrence"
+			     HighlightedTextColor="Red"
+			     HighlightedTextFontAttributes="Bold"/>
 
 {% endhighlight %}
 
@@ -60,20 +60,20 @@ It highlights the first position of the matching characters in the suggestion li
 
 ## Multiple Occurrence
 
-It highlights the matching character that are present everywhere in the suggestion list for [Contains](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.AutocompleteTextSearchMode.html#Syncfusion_Maui_Inputs_AutocompleteTextSearchMode_Contains) case in [TextSearchMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html#Syncfusion_Maui_Inputs_SfAutocomplete_TextSearchMode)
+It highlights the matching character that are present everywhere in the suggestion list for [Contains](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.AutocompleteTextSearchMode.html#Syncfusion_Maui_Inputs_AutocompleteTextSearchMode_Contains) case in [TextSearchMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html#Syncfusion_Maui_Inputs_SfAutocomplete_TextSearchMode).
 
 {% tabs %}
 
 {% highlight xaml %}
 
      <editors:SfAutocomplete x:Name="autocomplete"
-		                     HeightRequest = "40"
-		                     WidthRequest="300"
-		                     ItemsSource="{Binding SocialMedias}"
-		                     TextHighlightMode="MultipleOccurrence"
-		                     HighlightedTextColor="Red"
-		                     HighlightedTextFontAttributes="Bold"
-		                     TextSearchMode="Contains"/>
+		             HeightRequest = "40"
+		             WidthRequest="300"
+		             ItemsSource="{Binding SocialMedias}"
+		             TextHighlightMode="MultipleOccurrence"
+		             HighlightedTextColor="Red"
+		             HighlightedTextFontAttributes="Bold"
+		             TextSearchMode="Contains"/>
 
 {% endhighlight %}
 
