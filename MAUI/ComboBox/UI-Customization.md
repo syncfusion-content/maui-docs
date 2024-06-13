@@ -173,7 +173,7 @@ The [SelectionTextHighlightColor](https://help.syncfusion.com/cr/maui/Syncfusion
 
 ## CustomView for ComboBox
 
-`CustomView` property has used to provide the custom view instead of entry in ComboBox. It's default height and width has control height and width.
+[CustomView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_CustomView) property has used to provide the custom view instead of entry in ComboBox. It's default height and width has control height and width.
 
 {% tabs %}
 
@@ -998,7 +998,7 @@ The following image illustrates the result of the above code:
 
 ## DropDown button customization
 
-We can set view to the drop down button in `SfComboBox` using DropDownButtonSettings property.
+We can set view to the drop down button in [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) using [DropDownButtonSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_DropDownButtonSettings) property.
 {% tabs %}
 
 {% highlight xaml %}
