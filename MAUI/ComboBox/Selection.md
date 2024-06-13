@@ -134,8 +134,8 @@ When setting [MultiSelectionDisplayMode](https://help.syncfusion.com/cr/maui/Syn
 
 ![.NET MAUI ComboBox with MultiSelectionDisplayMode as Delimiter.](Images/Selection/net-maui-combobox-delimiter.jpg)
 
-### Token - TokensWrapMode
-Multi-selection token mode has two different layout types to display selected items as tokens. They are:
+### Token
+Multi-selection token mode has two different layouts to display the selected items by setting [TokensWrapMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_TokensWrapMode) property.
 
 * [Wrap](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ComboBoxTokensWrapMode.html#Syncfusion_Maui_Inputs_ComboBoxTokensWrapMode_Wrap)
 * [None](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ComboBoxTokensWrapMode.html#Syncfusion_Maui_Inputs_ComboBoxTokensWrapMode_None)

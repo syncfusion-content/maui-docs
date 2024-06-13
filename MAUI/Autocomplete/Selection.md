@@ -144,8 +144,8 @@ When setting [MultiSelectionDisplayMode](https://help.syncfusion.com/cr/maui/Syn
 
 ![.NET MAUI Autocomplete with MultiSelectionDisplayMode as Delimiter.](Images/Selection/net-maui-autocomplete-delimiter.jpg)
 
-### Token - TokensWrapMode
-Multi-selection token mode has two different layout types to display selected items as tokens. They are:
+### Token
+Multi-selection token mode has two different layouts to display the selected items by setting [TokensWrapMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html#Syncfusion_Maui_Inputs_SfAutocomplete_TokensWrapMode) property.
 
 * [Wrap](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.AutocompleteTokensWrapMode.html#Syncfusion_Maui_Inputs_AutocompleteTokensWrapMode_Wrap)
 * [None](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.AutocompleteTokensWrapMode.html#Syncfusion_Maui_Inputs_AutocompleteTokensWrapMode_None)
