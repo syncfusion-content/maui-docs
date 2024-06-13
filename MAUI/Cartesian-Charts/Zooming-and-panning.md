@@ -219,9 +219,9 @@ chart.ZoomPanBehavior = zooming;
 
 {% endtabs %}
 
-### Maximum Zoom Level
+## Maximum Zoom Level
 
-The [MaximumZoomLevel]() property is used to determine the maximum limit for zooming within the chart. Once the zooming operation reaches its limit, further zooming actions are not carried out. The [MaximumZoomLevel]() property default value is `double.NaN`.
+The [MaximumZoomLevel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartZoomPanBehavior.html#Syncfusion_Maui_Charts_ChartZoomPanBehavior_MaximumZoomLevel) property is used to determine the maximum limit for zooming within the chart. Once the zooming operation reaches its limit, further zooming actions are not carried out. The [MaximumZoomLevel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartZoomPanBehavior.html#Syncfusion_Maui_Charts_ChartZoomPanBehavior_MaximumZoomLevel) property default value is `double.NaN`.
 
 {% tabs %}
 
@@ -419,7 +419,7 @@ chart.YAxes.Add(secondaryAxis);
 
 The [ZoomStart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_ZoomStart) event is triggered when the user initiates a zoom action by using a pinch gesture on the chart. This event can be canceled, allowing its action to be interrupted or stopped.
 
-* [Axis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartZoomEventArgs.html#Syncfusion_Maui_Charts_ChartZoomEventArgs_Axis) - The ZoomStart event will be triggered for all the axes within the Chart.
+* [Axis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartZoomEventArgs.html#Syncfusion_Maui_Charts_ChartZoomEventArgs_Axis) - The ZoomStart event will be triggered for all the axes within the chart.
 * [CurrentZoomFactor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartZoomEventArgs.html#Syncfusion_Maui_Charts_ChartZoomEventArgs_CurrentZoomFactor) - Used to get the updated zoom factor of the corresponding axis.
 * [CurrentZoomPosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartZoomEventArgs.html#Syncfusion_Maui_Charts_ChartZoomEventArgs_CurrentZoomPosition) - Used to get the updated zoom position of the corresponding axis.
 * [Cancel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartZoomStartEventArgs.html#Syncfusion_Maui_Charts_ChartZoomStartEventArgs_Cancel) - Used to determine the value indicating whether the zooming process should be canceled.
@@ -428,7 +428,7 @@ The [ZoomStart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCar
 
 The [ZoomDelta](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_ZoomDelta) event is activated during the zooming process, and it is a cancelable event.
 
-* [Axis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartResetZoomEventArgs.html#Syncfusion_Maui_Charts_ChartResetZoomEventArgs_Axis) - The ZoomDelta event will be triggered for all the axes within the Chart.
+* [Axis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartResetZoomEventArgs.html#Syncfusion_Maui_Charts_ChartResetZoomEventArgs_Axis) - The ZoomDelta event will be triggered for all the axes within the chart.
 * [PreviousZoomFactor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartResetZoomEventArgs.html#Syncfusion_Maui_Charts_ChartResetZoomEventArgs_PreviousZoomFactor) - Used to get the previous zoom factor of the axis.
 * [PreviousZoomPosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartResetZoomEventArgs.html#Syncfusion_Maui_Charts_ChartResetZoomEventArgs_PreviousZoomPosition) - Used to get the previous zoom position of the axis.
 * [CurrentZoomFactor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartZoomEventArgs.html#Syncfusion_Maui_Charts_ChartZoomEventArgs_CurrentZoomFactor) - Used to get the current zoom factor of the axis.
@@ -439,7 +439,7 @@ The [ZoomDelta](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCar
 
 The [ZoomEnd](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_ZoomEnd) event is triggered once the zooming action finishes.
 
-* [Axis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartZoomEventArgs.html#Syncfusion_Maui_Charts_ChartZoomEventArgs_Axis) - The ZoomEnd event will be triggered for all the axes within the Chart.
+* [Axis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartZoomEventArgs.html#Syncfusion_Maui_Charts_ChartZoomEventArgs_Axis) - The ZoomEnd event will be triggered for all the axes within the chart.
 * [CurrentZoomFactor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartZoomEventArgs.html#Syncfusion_Maui_Charts_ChartZoomEventArgs_CurrentZoomFactor) - Used to get the zoom factor after zooming process.
 * [CurrentZoomPosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartZoomEventArgs.html#Syncfusion_Maui_Charts_ChartZoomEventArgs_CurrentZoomPosition) - Used to get the zoom position after zooming process.
 
@@ -454,7 +454,7 @@ The [SelectionZoomStart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cha
 The [SelectionZoomDelta](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_SelectionZoomDelta) event is activated during the process of selecting a region for zooming, and it is a cancelable event.
 
 * [ZoomRect](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSelectionZoomEventArgs.html#Syncfusion_Maui_Charts_ChartSelectionZoomEventArgs_ZoomRect) - Contains the bounds of the currently selected region.
-* [Cancel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSelectionZoomDeltaEventArgs.html#Syncfusion_Maui_Charts_ChartSelectionZoomDeltaEventArgs_Cancel) - Used to set the value indicating whether the box selection zooming process should be canceled.
+* [Cancel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSelectionZoomDeltaEventArgs.html#Syncfusion_Maui_Charts_ChartSelectionZoomDeltaEventArgs_Cancel) - Used to set the value indicating whether the box selection zooming process should be cancelled.
 
 ### SelectionZoomEnd
 
@@ -466,14 +466,14 @@ The SelectionZoomEnd event is triggered after the selection zooming ends.
 
 The [Scroll](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Scroll) event is triggered during panning, and it is a cancelable event.
 
-* [Axis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartScrollEventArgs.html#Syncfusion_Maui_Charts_ChartScrollEventArgs_Axis) - The event will be triggered for all the axes within the Chart.
+* [Axis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartScrollEventArgs.html#Syncfusion_Maui_Charts_ChartScrollEventArgs_Axis) - The event will be triggered for all the axes within the chart.
 * [ZoomPosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartScrollEventArgs.html#Syncfusion_Maui_Charts_ChartScrollEventArgs_ZoomPosition) - Gets the current zoom position of the axis.
-* [Cancel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartScrollEventArgs.html#Syncfusion_Maui_Charts_ChartScrollEventArgs_Cancel) - Used to indicate whether the scrolling should be canceled.
+* [Cancel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartScrollEventArgs.html#Syncfusion_Maui_Charts_ChartScrollEventArgs_Cancel) - Used to indicate whether the scrolling should be cancelled.
 
 ### ResetZoom
 
 The [ResetZoom](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_ResetZoom) event is triggered after the chart is reset by double-tapping.
 
-* [Axis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartResetZoomEventArgs.html#Syncfusion_Maui_Charts_ChartResetZoomEventArgs_Axis) - The event will be triggered for all the axes within the Chart.
+* [Axis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartResetZoomEventArgs.html#Syncfusion_Maui_Charts_ChartResetZoomEventArgs_Axis) - The event will be triggered for all the axes within the chart.
 * [PreviousZoomFactor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartResetZoomEventArgs.html#Syncfusion_Maui_Charts_ChartResetZoomEventArgs_PreviousZoomFactor) - Used to get the previous zoom factor of the axis.
 * [PreviousZoomPosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartResetZoomEventArgs.html#Syncfusion_Maui_Charts_ChartResetZoomEventArgs_PreviousZoomPosition) - Used to get the previous zoom position of the axis.
