@@ -7,7 +7,7 @@ control: SfImageEditor
 documentation: ug
 ---
 
-## Accessibility in .NET MAUI Image Editor (SfImageEditor)
+# Accessibility in .NET MAUI Image Editor (SfImageEditor)
 
 The Image Editor is designed to work effectively with the icons and sliders on its toolbar, providing voice descriptions of their names, and functions.
 
