@@ -80,40 +80,14 @@ The following gif image illustrates the result of the above code:
 
 ## Multiple selection
 
-The AutoComplete allows user to select multiple values by beginning to enter the input and selecting items from the drop-down list. The multi-select AutoComplete mode can be enabled by setting the [SelectionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html#Syncfusion_Maui_Inputs_SfAutocomplete_SelectionMode) property as [Multiple](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.AutocompleteSelectionMode.html#Syncfusion_Maui_Inputs_AutocompleteSelectionMode_Multiple). 
+The Autocomplete allows user to select multiple values from the drop-down list by setting the  [SelectionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html#Syncfusion_Maui_Inputs_SfAutocomplete_SelectionMode) property as [Multiple](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.AutocompleteSelectionMode.html#Syncfusion_Maui_Inputs_AutocompleteSelectionMode_Multiple).
 
-Selected items will be displayed with a  token representation and each tokenized items can be removed by clicking their close button. The selected items can be retrieved from the [SelectedItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_SelectedItems) property.
+The selected items can be changed programmatically by using the [SelectedItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_SelectedItems) property. This property allows both getting and setting of the selected items in the Autocomplete control.
 
-{% tabs %}
+Also there are two ways to display multi-selection items in the AutoComplete control using [MultiSelectionDisplayMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.AutocompleteMultiSelectionDisplayMode.html) property. By default MultiSelectionDisplayMode  is [Token](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.AutocompleteMultiSelectionDisplayMode.html#Syncfusion_Maui_Inputs_AutocompleteMultiSelectionDisplayMode_Token).
 
-{% highlight XAML %}
-
- <editors:SfAutocomplete
- SelectionMode="Multiple"
- WidthRequest="350"
- HeightRequest="50"
- ItemsSource="{Binding SocialMedias}"
- DisplayMemberPath="Name"
- TextMemberPath="Name"    
- Width="250"
- x:Name="autoComplete" />
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-autoComplete.SelectionMode = Syncfusion.Maui.Inputs.AutocompleteSelectionMode.Multiple;
-
-{% endhighlight %}
-{% endtabs %}
-
-The following gif image illustrates the result of the above code:
-
-![.NET MAUI Autocomplete with multi selection mode.](Images/Selection/net-maui-autocomplete-multiselection.gif)
-
-### Programmatic selection
-
-The selected items can be changed programmatically by using the [SelectedItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_SelectedItems) property of Autocomplete control. This property allows both getting and setting of the selected items in the Autocomplete control.
+* [Delimiter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.AutocompleteMultiSelectionDisplayMode.html#Syncfusion_Maui_Inputs_AutocompleteMultiSelectionDisplayMode_Delimiter)
+* [Token](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.AutocompleteMultiSelectionDisplayMode.html#Syncfusion_Maui_Inputs_AutocompleteMultiSelectionDisplayMode_Token)
 
 {% tabs %}
 
@@ -144,14 +118,7 @@ The selected items can be changed programmatically by using the [SelectedItems](
 
 {% endtabs %}
 
-### Multi-Selection DisplayMode
-
-There are two ways to display multi-selection items in the AutoComplete control. By default [MultiSelectionDisplayMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.AutocompleteMultiSelectionDisplayMode.html) is [Token](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.AutocompleteMultiSelectionDisplayMode.html#Syncfusion_Maui_Inputs_AutocompleteMultiSelectionDisplayMode_Token).
-
-* [Delimiter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.AutocompleteMultiSelectionDisplayMode.html#Syncfusion_Maui_Inputs_AutocompleteMultiSelectionDisplayMode_Delimiter)
-* [Token](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.AutocompleteMultiSelectionDisplayMode.html#Syncfusion_Maui_Inputs_AutocompleteMultiSelectionDisplayMode_Token)
-
-#### Delimiter
+### Delimiter
 
 When setting [MultiSelectionDisplayMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.AutocompleteMultiSelectionDisplayMode.html) to [Delimiter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.AutocompleteMultiSelectionDisplayMode.html#Syncfusion_Maui_Inputs_AutocompleteMultiSelectionDisplayMode_Delimiter), the selected items can be separated by the desired character specified as the delimiter. We can set the delimiter text to any preferred character using the [DelimiterText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_DelimiterText) property. By default DelimiterText is ",".
 
@@ -177,13 +144,13 @@ When setting [MultiSelectionDisplayMode](https://help.syncfusion.com/cr/maui/Syn
 
 ![.NET MAUI Autocomplete with MultiSelectionDisplayMode as Delimiter.](Images/Selection/net-maui-autocomplete-delimiter.jpg)
 
-#### Token - TokensWrapMode
+### Token - TokensWrapMode
 Multi-selection token mode has two different layout types to display selected items as tokens. They are:
 
 * [Wrap](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.AutocompleteTokensWrapMode.html#Syncfusion_Maui_Inputs_AutocompleteTokensWrapMode_Wrap)
 * [None](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.AutocompleteTokensWrapMode.html#Syncfusion_Maui_Inputs_AutocompleteTokensWrapMode_None)
 
-##### Wrap mode
+#### Wrap mode
 
 When the [TokensWrapMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html#Syncfusion_Maui_Inputs_SfAutocomplete_TokensWrapMode) is set to [Wrap](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.AutocompleteTokensWrapMode.html#Syncfusion_Maui_Inputs_AutocompleteTokensWrapMode_Wrap), the selected items will be wrapped to the next line of the SfAutoComplete.
 
@@ -208,7 +175,7 @@ When the [TokensWrapMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.In
 
 ![.NET MAUI Autocomplete with TokensWrapMode as wrap.](Images/Selection/net-maui-autocomplete-wrapmode.png)
 
-##### None Mode
+#### None Mode
 
 When the [TokensWrapMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html#Syncfusion_Maui_Inputs_SfAutocomplete_TokensWrapMode) is set to [None](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.AutocompleteTokensWrapMode.html#Syncfusion_Maui_Inputs_AutocompleteTokensWrapMode_None), the selected item will be wrapped in a horizontal orientation.
 
