@@ -37,7 +37,7 @@ maskedEntry.ClearButtonVisibility = ClearButtonVisibility.WhileEditing;
 
 ## Setting Clear Button Icon Color
 
-The clear button icon color can be changed by using the [ClearButtonIconColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html#Syncfusion_Maui_Inputs_SfMaskedEntry_ClearButtonColor).
+The clear button icon color can be changed by using the [ClearButtonColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html#Syncfusion_Maui_Inputs_SfMaskedEntry_ClearButtonColor).
 
 {% tabs %}
 {% highlight xaml %}
