@@ -37,7 +37,7 @@ this.Content = timePicker;
 
 {% endtabs %}
 
-![Fade Mode in .NET MAUI Time Picker.](images/text-display-mode/fade-mode.png)
+![Fade Mode in .NET MAUI Time Picker.](images/text-display-mode/time-picker-fade-mode.png)
 
 ## Shrink Mode
 
@@ -65,7 +65,7 @@ this.Content = timePicker;
 
 {% endtabs %}
 
-![Shrink Mode in .NET MAUI Time Picker.](images/text-display-mode/shrink-mode.png)
+![Shrink Mode in .NET MAUI Time Picker.](images/text-display-mode/time-picker-shrink-mode.png)
 
 ## FadeAndShrink Mode
 
@@ -93,4 +93,4 @@ this.Content = timePicker;
 
 {% endtabs %}
 
-![Fade and Shrink Mode in .NET MAUI Time Picker.](images/text-display-mode/fade-shrink-mode.png)
+![Fade and Shrink Mode in .NET MAUI Time Picker.](images/text-display-mode/time-picker-fade-shrink-mode.png)

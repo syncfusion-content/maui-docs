@@ -37,7 +37,7 @@ this.Content = dateTimePicker;
 
 {% endtabs %}
 
-![Fade mode in .NET MAUI Date Time picker.](images/text-display-mode/fade-mode.png)
+![Fade mode in .NET MAUI Date Time picker.](images/text-display-mode/date-time-picker-fade.png)
 
 ## Shrink Mode
 
@@ -65,7 +65,7 @@ this.Content = dateTimePicker;
 
 {% endtabs %}
 
-![Shrink mode in .NET MAUI Date Time picker.](images/text-display-mode/shrink-mode.png)
+![Shrink mode in .NET MAUI Date Time picker.](images/text-display-mode/date-time-picker-shrink.png)
 
 ## FadeAndShrink Mode
 
@@ -93,4 +93,4 @@ this.Content = dateTimePicker;
 
 {% endtabs %}
 
-![Fade and Shrink mode in .NET MAUI Date Time picker.](images/text-display-mode/fade-shrink-mode.png)
+![Fade and Shrink mode in .NET MAUI Date Time picker.](images/text-display-mode/date-time-picker-fade-shrink.png)

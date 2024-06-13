@@ -31,7 +31,7 @@ this.calendar.FooterView.Height = 70;
 {% endhighlight %}
 {% endtabs %}
 
-![Customize the header height in .NET MAUI Calendar.](images/footer/footer-height.png)
+![Customize the header height in .NET MAUI Calendar.](images/footer/calendar-footer-height.png)
 
 ## Action buttons
 
@@ -55,7 +55,7 @@ this.calendar.FooterView.ShowActionButtons = true;
 {% endhighlight %}
 {% endtabs %}
 
-![Show Action button in .NET MAUI Calendar.](images/footer/footer-show-action-button.png)
+![Show Action button in .NET MAUI Calendar.](images/footer/calendar-action-button.png)
 
 ## Today button
 
@@ -79,7 +79,7 @@ this.calendar.FooterView.ShowTodayButton = true;
 {% endhighlight %}
 {% endtabs %}
 
-![Show Today button in .NET MAUI Calendar.](images/footer/footer-show-today-button.png)
+![Show Today button in .NET MAUI Calendar.](images/footer/calendar-today-button.png)
 
 ## Set the Divider color
 
@@ -103,7 +103,7 @@ this.calendar.FooterView.Height = 70;
 {% endhighlight %}
 {% endtabs %}
 
-![Set Divider Color in .NET MAUI Calendar.](images/footer/footer-divider-color.png)
+![Set Divider Color in .NET MAUI Calendar.](images/footer/calendar-divider-color.png)
 
 ## Customization of the footer 
 
@@ -141,4 +141,4 @@ this.Content = calendar;
 {% endhighlight %}
 {% endtabs %}
 
-![Footer Text Style in .NET MAUI Calendar.](images/footer/footer-text-style.png)
+![Footer Text Style in .NET MAUI Calendar.](images/footer/calendar-footer-textstyle.png)
