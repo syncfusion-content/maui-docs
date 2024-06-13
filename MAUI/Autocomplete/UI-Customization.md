@@ -563,7 +563,7 @@ autocomplete.ItemPadding = new Thickness(10,20,0,0);
 
 ### Customize the DropDown Width
 
-The `DropdownWidth` property is used to modify the height of the dropdown.
+The `DropdownWidth` property is used to modify the Width of the dropdown.
 
 {% tabs %}
 {% highlight xaml %}
