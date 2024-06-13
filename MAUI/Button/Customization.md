@@ -125,7 +125,7 @@ button.VerticalTextAlignment = TextAlignment.Center;
 {% endtabs %}
 
 ## LineBreakMode
-The [`LineBreakMode`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfButton.html#Syncfusion_Maui_Buttons_SfButton_LineBreakMode) allows you to wrap or truncate the text. The default value of this property is `NoWrap`. The following other options are available in [`LineBreakMode`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfButton.html#Syncfusion_Maui_Buttons_SfButton_LineBreakMode):
+The [`LineBreakMode`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfButton.html#Syncfusion_Maui_Buttons_SfButton_LineBreakMode) allows you to wrap or truncate the text. The default value of this property is `NoWrap`. The following other options are available in LineBreakMode:
 
  * `NoWrap` - Avoids the text wrap. 
  * `WordWrap` - Wraps the text by words.
