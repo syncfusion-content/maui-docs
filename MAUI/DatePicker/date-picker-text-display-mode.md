@@ -37,6 +37,8 @@ this.Content = datePicker;
 
 {% endtabs %}
 
+![Fade mode in .NET MAUI Date picker.](images/text-display-mode/date-picker-fade.png)
+
 ## Shrink Mode
 
 The shrink mode is used to display the font size of date picker items decreased from the selected item by setting the [TextDisplayMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_TextDisplayMode) property to [Shrink](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerTextDisplayMode.html#Syncfusion_Maui_Picker_PickerTextDisplayMode_Shrink) in [SfDatePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html).
@@ -63,6 +65,8 @@ this.Content = datePicker;
 
 {% endtabs %}
 
+![Shrink mode in .NET MAUI Date picker.](images/text-display-mode/date-picker-shrink.png)
+
 ## FadeAndShrink Mode
 
 The fade and shrink mode are used to decrease the opacity and font size of date picker items from the selected item by setting the [TextDisplayMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_TextDisplayMode) property to [FadeAndShrink](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerTextDisplayMode.html#Syncfusion_Maui_Picker_PickerTextDisplayMode_FadeAndShrink) in [SfDatePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html).
@@ -88,3 +92,5 @@ this.Content = datePicker;
 {% endhighlight %}
 
 {% endtabs %}
+
+![Fade and Shrink mode in .NET MAUI Date picker.](images/text-display-mode/date-picker-fade-shrink.png)

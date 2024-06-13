@@ -31,6 +31,8 @@ this.calendar.FooterView.Height = 70;
 {% endhighlight %}
 {% endtabs %}
 
+![Customize the header height in .NET MAUI Calendar.](images/footer/calendar-footer-height.png)
+
 ## Action buttons
 
 You can display action buttons at the footer of the calendar by using the [ShowActionButtons](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarFooterView.html#Syncfusion_Maui_Calendar_CalendarFooterView_ShowActionButtons) property of the [SfCalendar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html). It allows you to confirm or cancel the selected date, dates, and range of dates in calendar views of the [SfCalendar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html).
@@ -52,6 +54,8 @@ this.calendar.FooterView.ShowActionButtons = true;
 
 {% endhighlight %}
 {% endtabs %}
+
+![Show Action button in .NET MAUI Calendar.](images/footer/calendar-action-button.png)
 
 ## Today button
 
@@ -75,6 +79,8 @@ this.calendar.FooterView.ShowTodayButton = true;
 {% endhighlight %}
 {% endtabs %}
 
+![Show Today button in .NET MAUI Calendar.](images/footer/calendar-today-button.png)
+
 ## Set the Divider color
 
 You can customize the footer divider color by setting the [DividerColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarFooterView.html#Syncfusion_Maui_Calendar_CalendarFooterView_DividerColor) property of the [CalendarFooterView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarFooterView.html).
@@ -96,6 +102,8 @@ this.calendar.FooterView.Height = 70;
 
 {% endhighlight %}
 {% endtabs %}
+
+![Set Divider Color in .NET MAUI Calendar.](images/footer/calendar-divider-color.png)
 
 ## Customization of the footer 
 
@@ -132,3 +140,5 @@ this.Content = calendar;
 
 {% endhighlight %}
 {% endtabs %}
+
+![Footer Text Style in .NET MAUI Calendar.](images/footer/calendar-footer-textstyle.png)
