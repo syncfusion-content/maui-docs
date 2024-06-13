@@ -5,6 +5,7 @@ description: Learn here all about annotation collection in Syncfusion .NET MAUI 
 platform: MAUI
 control: SfPdfViewer
 documentation: ug
+keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .net maui open pdf, maui pdf viewer, maui pdf view
 ---
 
 # Annotation Collection in .NET MAUI PDF Viewer (SfPdfViewer)
@@ -15,7 +16,7 @@ The existing annotations in a PDF document can be accessed using the [Annotation
 {% highlight c# %}
 public void WireDocumentLoadedEvent()
 {
-    // Wire the document loaded event of the `SfPdfViewer` to occur when a PDF document is loaded.
+    // Wire the document loaded event of the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) to occur when a PDF document is loaded.
     PdfViewer.DocumentLoaded += OnDocumentLoaded;
 }
 
