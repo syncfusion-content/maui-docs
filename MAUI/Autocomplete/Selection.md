@@ -352,9 +352,8 @@ The following image illustrates the result of the above code:
 
 ## Is Drop-Down Open
 
-The [IsDropDownOpen](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDropdownEntry.html#Syncfusion_Maui_Core_SfDropdownEntry_IsDropDownOpenProperty) property in the Autocomplete control can be used to get a boolean value indicating whether the drop-down is open or closed state. It returns `true` if the drop-down is open, otherwise `false`.
+In the Autocomplete control, the drop-down can be opened or closed programmatically by using the [IsDropDownOpen](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDropdownEntry.html#Syncfusion_Maui_Core_SfDropdownEntry_IsDropDownOpen) property. The default value of the IsDropDownOpen property is `false`.
 
-N> Currently, users can only get the boolean value based on whether a drop-down menu is open or not; the property "IsDropDownOpen" cannot be set.
 
 {% tabs %}
 {% highlight XAML %}
@@ -362,6 +361,7 @@ N> Currently, users can only get the boolean value based on whether a drop-down 
 <editors:SfAutocomplete x:Name="autocomplete"
                         WidthRequest="250"
                         ItemsSource="{Binding SocialMedias}"
+                        IsDropDownOpen = true;
                         DisplayMemberPath="Name"
                         TextMemberPath="Name">
 </editors:SfAutocomplete>
@@ -369,7 +369,7 @@ N> Currently, users can only get the boolean value based on whether a drop-down 
 {% endhighlight %}
 {% highlight C# %}
 
-bool isAutocompleteDropDownOpen = autocomplete.IsDropDownOpen;
+autocomplete.IsDropDownOpen = true;
 
 {% endhighlight %}
 {% endtabs %}
