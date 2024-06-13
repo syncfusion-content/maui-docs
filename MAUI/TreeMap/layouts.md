@@ -19,75 +19,124 @@ The [Squarified](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.Lay
 {% highlight XAML hl_lines="3" %}
 
 <treemap:SfTreeMap x:Name="treeMap"
-                   DataSource="{Binding PopulationDetails}"
+                   DataSource="{Binding AirportDetails}"
                    LayoutType="Squarified"
-                   PrimaryValuePath="Population"
-                   ShowToolTip="True">
+                   PrimaryValuePath="Count"
+                   RangeColorValuePath="Count">
     <treemap:SfTreeMap.BindingContext>
-        <local:PopulationViewModel />
+        <local:ViewModel />
     </treemap:SfTreeMap.BindingContext>
     <treemap:SfTreeMap.LeafItemSettings>
-        <treemap:TreeMapLeafItemSettings LabelPath="Country">
+        <treemap:TreeMapLeafItemSettings LabelPath="State">
         </treemap:TreeMapLeafItemSettings>
     </treemap:SfTreeMap.LeafItemSettings>
     <treemap:SfTreeMap.LeafItemBrushSettings>
-        <treemap:TreeMapUniformBrushSettings Brush="#D21243" />
+        <treemap:TreeMapRangeBrushSettings>
+            <treemap:TreeMapRangeBrushSettings.RangeBrushes>
+                <treemap:TreeMapRangeBrush LegendLabel="32"
+                                                From="32"
+                                                To="32"
+                                                Brush="#35D2E5" />
+                <treemap:TreeMapRangeBrush LegendLabel="31"
+                                                From="27"
+                                                To="31"
+                                                Brush="#84D592" />
+                <treemap:TreeMapRangeBrush LegendLabel="26"
+                                                From="8"
+                                                To="26"
+                                                Brush="#C8DA3F" />
+                <treemap:TreeMapRangeBrush LegendLabel="7"
+                                                From="6"
+                                                To="7"
+                                                Brush="#53D4BB" />
+                <treemap:TreeMapRangeBrush LegendLabel="5"
+                                                From="4"
+                                                To="5"
+                                                Brush="#F1C17A" />
+                <treemap:TreeMapRangeBrush LegendLabel="3"
+                                                From="3" 
+                                                To="3" 
+                                                Brush ="#F79EE3" />
+                <treemap:TreeMapRangeBrush LegendLabel="2"
+                                                From="2" 
+                                                To="2" 
+                                                Brush ="#A39EE4"/>
+                <treemap:TreeMapRangeBrush LegendLabel="1"
+                                                From="0"
+                                                To="1"
+                                                Brush="#F6989B"/>
+            </treemap:TreeMapRangeBrushSettings.RangeBrushes>
+        </treemap:TreeMapRangeBrushSettings>
     </treemap:SfTreeMap.LeafItemBrushSettings>
+    <treemap:SfTreeMap.LegendSettings>
+        <treemap:TreeMapLegendSettings ShowLegend="True" />
+    </treemap:SfTreeMap.LegendSettings>
 </treemap:SfTreeMap>
 
 {% endhighlight %}
 {% highlight C# hl_lines="4" %}
 
 SfTreeMap treeMap = new SfTreeMap();
-PopulationViewModel viewModel = new PopulationViewModel();
-treeMap.DataSource = viewModel.PopulationDetails;
+ViewModel viewModel = new ViewModel();
+treeMap.DataSource = viewModel.AirportDetails;
 treeMap.LayoutType = LayoutType.Squarified;
-treeMap.PrimaryValuePath = "Population";
-treeMap.LeafItemSettings = new TreeMapLeafItemSettings() { LabelPath = "Country" };
-treeMap.LeafItemBrushSettings = new TreeMapUniformBrushSettings() { Brush = new SolidColorBrush(Color.FromArgb("#D21243")) };
+treeMap.PrimaryValuePath = "Count";
+treeMap.RangeColorValuePath = "Count";
+treeMap.LeafItemSettings = new TreeMapLeafItemSettings() { LabelPath = "State" };
+treeMap.LeafItemBrushSettings = new TreeMapRangeBrushSettings()
+{
+    RangeBrushes = new List<TreeMapRangeBrush>()
+    {
+        new TreeMapRangeBrush() { LegendLabel="32", From=32, To=32, Brush = new SolidColorBrush(Color.FromArgb("#35D2E5")) },
+        new TreeMapRangeBrush() { LegendLabel="31", From=27, To=31, Brush = new SolidColorBrush(Color.FromArgb("#84D592")) },
+        new TreeMapRangeBrush() { LegendLabel="26", From=8, To=26, Brush = new SolidColorBrush(Color.FromArgb("#C8DA3F")) },
+        new TreeMapRangeBrush() { LegendLabel="7", From=6, To=7, Brush = new SolidColorBrush(Color.FromArgb("#53D4BB")) },
+        new TreeMapRangeBrush() { LegendLabel="5", From=4, To=5, Brush = new SolidColorBrush(Color.FromArgb("#F1C17A")) },
+        new TreeMapRangeBrush() { LegendLabel="3", From=3, To=3, Brush = new SolidColorBrush(Color.FromArgb("#F79EE3")) },
+        new TreeMapRangeBrush() { LegendLabel="2", From=2, To=2, Brush = new SolidColorBrush(Color.FromArgb("#A39EE4")) },
+        new TreeMapRangeBrush() { LegendLabel="1", From=0, To=1, Brush = new SolidColorBrush(Color.FromArgb("#F6989B")) },
+    }
+};
+
+treeMap.LegendSettings = new TreeMapLegendSettings() { ShowLegend = true };
 this.Content = treeMap;
 
 {% endhighlight %}
-{% highlight C# tabtitle="PopulationDetails.cs" %}
+{% highlight C# tabtitle="AirportDetails.cs" %}
 
-public class PopulationDetails
+public class AirportDetails
 {
-    public string Country { get; set; }
-    public string Continent { get; set; }
-    public double Population { get; set; }
+    public string State { get; set; }
+    public int Count { get; set; }
 }
 
 {% endhighlight %}
-{% highlight C# tabtitle="PopulationViewModel.cs" %}
+{% highlight C# tabtitle="ViewModel.cs" %}
 
-public class PopulationViewModel
+public class ViewModel
 {
-    public PopulationViewModel()
+    public ViewModel()
     {
-        this.PopulationDetails = new ObservableCollection<PopulationDetails>()
+        this.AirportDetails = new ObservableCollection<AirportDetails>()
         {
-            new PopulationDetails() { Continent ="North America", Country = "United States of America", Population = 339996564 },
-            new PopulationDetails() { Continent ="South America", Country = "Brazil", Population = 216422446 },
-            new PopulationDetails() { Continent ="North America", Country = "Mexico", Population = 128455567 },
-            new PopulationDetails() { Continent ="South America", Country = "Colombia", Population = 52085168 },
-            new PopulationDetails() { Continent ="South America", Country = "Argentina", Population = 45773884 },
-            new PopulationDetails() { Continent ="North America", Country = "Canada", Population = 38781292 },
-            new PopulationDetails() { Continent ="South America", Country = "Peru", Population = 34352719 },
-            new PopulationDetails() { Continent ="South America", Country = "Venezuela", Population = 28838499 },
-            new PopulationDetails() { Continent ="South America", Country = "Chile", Population = 19629590 },
-            new PopulationDetails() { Continent ="South America", Country = "Ecuador", Population = 18190484 },
-            new PopulationDetails() { Continent ="North America", Country = "Guatemala", Population = 18092026 },
-            new PopulationDetails() { Continent ="South America", Country = "Bolivia", Population = 12388571 },
-            new PopulationDetails() { Continent ="North America", Country = "Honduras", Population = 10593798 },
-            new PopulationDetails() { Continent ="North America", Country = "Nicaragua", Population = 7046311 },
-            new PopulationDetails() { Continent ="South America", Country = "Paraguay", Population = 6861524 },
-            new PopulationDetails() { Continent ="North America", Country = "El Salvador", Population = 6364943 },
-            new PopulationDetails() { Continent ="North America", Country = "Costa Rica", Population = 5212173 },
-            new PopulationDetails() { Continent ="South America", Country = "Uruguay", Population = 3423109 },
+            new AirportDetails { State = "Brazil", Count = 31 },
+            new AirportDetails { State = "Colombia", Count = 32 },
+            new AirportDetails { State = "Argentina", Count = 26 },
+            new AirportDetails { State = "Ecuador", Count = 7 },
+            new AirportDetails { State = "Chile", Count = 5 },
+            new AirportDetails { State = "Peru", Count = 3 },
+            new AirportDetails { State = "Venezuela", Count = 3 },
+            new AirportDetails { State = "Bolivia", Count = 3 },
+            new AirportDetails { State = "Paraguay", Count = 2 },
+            new AirportDetails { State = "Uruguay", Count = 3 },
+            new AirportDetails { State = "Falkland Islands", Count = 1 },
+            new AirportDetails { State = "French Guiana", Count = 1 },
+            new AirportDetails { State = "Guyana", Count = 1 },
+            new AirportDetails { State = "Suriname", Count = 1 },
         };
     }
 
-    public ObservableCollection<PopulationDetails> PopulationDetails
+    public ObservableCollection<AirportDetails> AirportDetails
     {
         get;
         set;
@@ -107,74 +156,124 @@ The  [SliceAndDiceAuto](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Tree
 {% highlight XAML hl_lines="3" %}
 
 <treemap:SfTreeMap x:Name="treeMap"
-                   DataSource="{Binding PopulationDetails}"
+                   DataSource="{Binding AirportDetails}"
                    LayoutType="SliceAndDiceAuto"
-                   PrimaryValuePath="Population">
+                   PrimaryValuePath="Count"
+                   RangeColorValuePath="Count">
     <treemap:SfTreeMap.BindingContext>
-        <local:PopulationViewModel />
+        <local:ViewModel />
     </treemap:SfTreeMap.BindingContext>
     <treemap:SfTreeMap.LeafItemSettings>
-        <treemap:TreeMapLeafItemSettings LabelPath="Country">
+        <treemap:TreeMapLeafItemSettings LabelPath="State">
         </treemap:TreeMapLeafItemSettings>
     </treemap:SfTreeMap.LeafItemSettings>
     <treemap:SfTreeMap.LeafItemBrushSettings>
-        <treemap:TreeMapUniformBrushSettings Brush="#D21243" />
+        <treemap:TreeMapRangeBrushSettings>
+            <treemap:TreeMapRangeBrushSettings.RangeBrushes>
+                <treemap:TreeMapRangeBrush LegendLabel="32"
+                                                From="32"
+                                                To="32"
+                                                Brush="#35D2E5" />
+                <treemap:TreeMapRangeBrush LegendLabel="31"
+                                                From="27"
+                                                To="31"
+                                                Brush="#84D592" />
+                <treemap:TreeMapRangeBrush LegendLabel="26"
+                                                From="8"
+                                                To="26"
+                                                Brush="#C8DA3F" />
+                <treemap:TreeMapRangeBrush LegendLabel="7"
+                                                From="6"
+                                                To="7"
+                                                Brush="#53D4BB" />
+                <treemap:TreeMapRangeBrush LegendLabel="5"
+                                                From="4"
+                                                To="5"
+                                                Brush="#F1C17A" />
+                <treemap:TreeMapRangeBrush LegendLabel="3"
+                                                From="3" 
+                                                To="3" 
+                                                Brush ="#F79EE3" />
+                <treemap:TreeMapRangeBrush LegendLabel="2"
+                                                From="2" 
+                                                To="2" 
+                                                Brush ="#A39EE4"/>
+                <treemap:TreeMapRangeBrush LegendLabel="1"
+                                                From="0"
+                                                To="1"
+                                                Brush="#F6989B"/>
+            </treemap:TreeMapRangeBrushSettings.RangeBrushes>
+        </treemap:TreeMapRangeBrushSettings>
     </treemap:SfTreeMap.LeafItemBrushSettings>
+    <treemap:SfTreeMap.LegendSettings>
+        <treemap:TreeMapLegendSettings ShowLegend="True" />
+    </treemap:SfTreeMap.LegendSettings>
 </treemap:SfTreeMap>
 
 {% endhighlight %}
 {% highlight C# hl_lines="4" %}
 
 SfTreeMap treeMap = new SfTreeMap();
-PopulationViewModel viewModel = new PopulationViewModel();
-treeMap.DataSource = viewModel.PopulationDetails;
+ViewModel viewModel = new ViewModel();
+treeMap.DataSource = viewModel.AirportDetails;
 treeMap.LayoutType = LayoutType.SliceAndDiceAuto;
-treeMap.PrimaryValuePath = "Population";
-treeMap.LeafItemSettings = new TreeMapLeafItemSettings() { LabelPath = "Country" };
-treeMap.LeafItemBrushSettings = new TreeMapUniformBrushSettings() { Brush = new SolidColorBrush(Color.FromArgb("#D21243")) };
+treeMap.PrimaryValuePath = "Count";
+treeMap.RangeColorValuePath = "Count";
+treeMap.LeafItemSettings = new TreeMapLeafItemSettings() { LabelPath = "State" };
+treeMap.LeafItemBrushSettings = new TreeMapRangeBrushSettings()
+{
+    RangeBrushes = new List<TreeMapRangeBrush>()
+    {
+        new TreeMapRangeBrush() { LegendLabel="32", From=32, To=32, Brush = new SolidColorBrush(Color.FromArgb("#35D2E5")) },
+        new TreeMapRangeBrush() { LegendLabel="31", From=27, To=31, Brush = new SolidColorBrush(Color.FromArgb("#84D592")) },
+        new TreeMapRangeBrush() { LegendLabel="26", From=8, To=26, Brush = new SolidColorBrush(Color.FromArgb("#C8DA3F")) },
+        new TreeMapRangeBrush() { LegendLabel="7", From=6, To=7, Brush = new SolidColorBrush(Color.FromArgb("#53D4BB")) },
+        new TreeMapRangeBrush() { LegendLabel="5", From=4, To=5, Brush = new SolidColorBrush(Color.FromArgb("#F1C17A")) },
+        new TreeMapRangeBrush() { LegendLabel="3", From=3, To=3, Brush = new SolidColorBrush(Color.FromArgb("#F79EE3")) },
+        new TreeMapRangeBrush() { LegendLabel="2", From=2, To=2, Brush = new SolidColorBrush(Color.FromArgb("#A39EE4")) },
+        new TreeMapRangeBrush() { LegendLabel="1", From=0, To=1, Brush = new SolidColorBrush(Color.FromArgb("#F6989B")) },
+    }
+};
+
+treeMap.LegendSettings = new TreeMapLegendSettings() { ShowLegend = true };
 this.Content = treeMap;
 
 {% endhighlight %}
-{% highlight C# tabtitle="PopulationDetails.cs" %}
+{% highlight C# tabtitle="AirportDetails.cs" %}
 
-public class PopulationDetails
+public class AirportDetails
 {
-    public string Country { get; set; }
-    public string Continent { get; set; }
-    public double Population { get; set; }
+    public string State { get; set; }
+    public int Count { get; set; }
 }
 
 {% endhighlight %}
-{% highlight C# tabtitle="PopulationViewModel.cs" %}
+{% highlight C# tabtitle="ViewModel.cs" %}
 
-public class PopulationViewModel
+public class ViewModel
 {
-    public PopulationViewModel()
+    public ViewModel()
     {
-        this.PopulationDetails = new ObservableCollection<PopulationDetails>()
+        this.AirportDetails = new ObservableCollection<AirportDetails>()
         {
-            new PopulationDetails() { Continent ="North America", Country = "United States of America", Population = 339996564 },
-            new PopulationDetails() { Continent ="South America", Country = "Brazil", Population = 216422446 },
-            new PopulationDetails() { Continent ="North America", Country = "Mexico", Population = 128455567 },
-            new PopulationDetails() { Continent ="South America", Country = "Colombia", Population = 52085168 },
-            new PopulationDetails() { Continent ="South America", Country = "Argentina", Population = 45773884 },
-            new PopulationDetails() { Continent ="North America", Country = "Canada", Population = 38781292 },
-            new PopulationDetails() { Continent ="South America", Country = "Peru", Population = 34352719 },
-            new PopulationDetails() { Continent ="South America", Country = "Venezuela", Population = 28838499 },
-            new PopulationDetails() { Continent ="South America", Country = "Chile", Population = 19629590 },
-            new PopulationDetails() { Continent ="South America", Country = "Ecuador", Population = 18190484 },
-            new PopulationDetails() { Continent ="North America", Country = "Guatemala", Population = 18092026 },
-            new PopulationDetails() { Continent ="South America", Country = "Bolivia", Population = 12388571 },
-            new PopulationDetails() { Continent ="North America", Country = "Honduras", Population = 10593798 },
-            new PopulationDetails() { Continent ="North America", Country = "Nicaragua", Population = 7046311 },
-            new PopulationDetails() { Continent ="South America", Country = "Paraguay", Population = 6861524 },
-            new PopulationDetails() { Continent ="North America", Country = "El Salvador", Population = 6364943 },
-            new PopulationDetails() { Continent ="North America", Country = "Costa Rica", Population = 5212173 },
-            new PopulationDetails() { Continent ="South America", Country = "Uruguay", Population = 3423109 },
+            new AirportDetails { State = "Brazil", Count = 31 },
+            new AirportDetails { State = "Colombia", Count = 32 },
+            new AirportDetails { State = "Argentina", Count = 26 },
+            new AirportDetails { State = "Ecuador", Count = 7 },
+            new AirportDetails { State = "Chile", Count = 5 },
+            new AirportDetails { State = "Peru", Count = 3 },
+            new AirportDetails { State = "Venezuela", Count = 3 },
+            new AirportDetails { State = "Bolivia", Count = 3 },
+            new AirportDetails { State = "Paraguay", Count = 2 },
+            new AirportDetails { State = "Uruguay", Count = 3 },
+            new AirportDetails { State = "Falkland Islands", Count = 1 },
+            new AirportDetails { State = "French Guiana", Count = 1 },
+            new AirportDetails { State = "Guyana", Count = 1 },
+            new AirportDetails { State = "Suriname", Count = 1 },
         };
     }
 
-    public ObservableCollection<PopulationDetails> PopulationDetails
+    public ObservableCollection<AirportDetails> AirportDetails
     {
         get;
         set;
@@ -194,74 +293,124 @@ The [SliceAndDiceHorizontal](https://help.syncfusion.com/cr/maui/Syncfusion.Maui
 {% highlight XAML hl_lines="3" %}
 
 <treemap:SfTreeMap x:Name="treeMap"
-                   DataSource="{Binding PopulationDetails}"
+                   DataSource="{Binding AirportDetails}"
                    LayoutType="SliceAndDiceHorizontal"
-                   PrimaryValuePath="Population">
+                   PrimaryValuePath="Count"
+                   RangeColorValuePath="Count">
     <treemap:SfTreeMap.BindingContext>
-        <local:PopulationViewModel />
+        <local:ViewModel />
     </treemap:SfTreeMap.BindingContext>
     <treemap:SfTreeMap.LeafItemSettings>
-        <treemap:TreeMapLeafItemSettings LabelPath="Country">
+        <treemap:TreeMapLeafItemSettings LabelPath="State">
         </treemap:TreeMapLeafItemSettings>
     </treemap:SfTreeMap.LeafItemSettings>
     <treemap:SfTreeMap.LeafItemBrushSettings>
-        <treemap:TreeMapUniformBrushSettings Brush="#D21243" />
+        <treemap:TreeMapRangeBrushSettings>
+            <treemap:TreeMapRangeBrushSettings.RangeBrushes>
+                <treemap:TreeMapRangeBrush LegendLabel="32"
+                                                From="32"
+                                                To="32"
+                                                Brush="#35D2E5" />
+                <treemap:TreeMapRangeBrush LegendLabel="31"
+                                                From="27"
+                                                To="31"
+                                                Brush="#84D592" />
+                <treemap:TreeMapRangeBrush LegendLabel="26"
+                                                From="8"
+                                                To="26"
+                                                Brush="#C8DA3F" />
+                <treemap:TreeMapRangeBrush LegendLabel="7"
+                                                From="6"
+                                                To="7"
+                                                Brush="#53D4BB" />
+                <treemap:TreeMapRangeBrush LegendLabel="5"
+                                                From="4"
+                                                To="5"
+                                                Brush="#F1C17A" />
+                <treemap:TreeMapRangeBrush LegendLabel="3"
+                                                From="3" 
+                                                To="3" 
+                                                Brush ="#F79EE3" />
+                <treemap:TreeMapRangeBrush LegendLabel="2"
+                                                From="2" 
+                                                To="2" 
+                                                Brush ="#A39EE4"/>
+                <treemap:TreeMapRangeBrush LegendLabel="1"
+                                                From="0"
+                                                To="1"
+                                                Brush="#F6989B"/>
+            </treemap:TreeMapRangeBrushSettings.RangeBrushes>
+        </treemap:TreeMapRangeBrushSettings>
     </treemap:SfTreeMap.LeafItemBrushSettings>
+    <treemap:SfTreeMap.LegendSettings>
+        <treemap:TreeMapLegendSettings ShowLegend="True" />
+    </treemap:SfTreeMap.LegendSettings>
 </treemap:SfTreeMap>
 
 {% endhighlight %}
 {% highlight C# hl_lines="4" %}
 
 SfTreeMap treeMap = new SfTreeMap();
-PopulationViewModel viewModel = new PopulationViewModel();
-treeMap.DataSource = viewModel.PopulationDetails;
+ViewModel viewModel = new ViewModel();
+treeMap.DataSource = viewModel.AirportDetails;
 treeMap.LayoutType = LayoutType.SliceAndDiceHorizontal;
-treeMap.PrimaryValuePath = "Population";
-treeMap.LeafItemSettings = new TreeMapLeafItemSettings() { LabelPath = "Country" };
-treeMap.LeafItemBrushSettings = new TreeMapUniformBrushSettings() { Brush = new SolidColorBrush(Color.FromArgb("#D21243")) };
+treeMap.PrimaryValuePath = "Count";
+treeMap.RangeColorValuePath = "Count";
+treeMap.LeafItemSettings = new TreeMapLeafItemSettings() { LabelPath = "State" };
+treeMap.LeafItemBrushSettings = new TreeMapRangeBrushSettings()
+{
+    RangeBrushes = new List<TreeMapRangeBrush>()
+    {
+        new TreeMapRangeBrush() { LegendLabel="32", From=32, To=32, Brush = new SolidColorBrush(Color.FromArgb("#35D2E5")) },
+        new TreeMapRangeBrush() { LegendLabel="31", From=27, To=31, Brush = new SolidColorBrush(Color.FromArgb("#84D592")) },
+        new TreeMapRangeBrush() { LegendLabel="26", From=8, To=26, Brush = new SolidColorBrush(Color.FromArgb("#C8DA3F")) },
+        new TreeMapRangeBrush() { LegendLabel="7", From=6, To=7, Brush = new SolidColorBrush(Color.FromArgb("#53D4BB")) },
+        new TreeMapRangeBrush() { LegendLabel="5", From=4, To=5, Brush = new SolidColorBrush(Color.FromArgb("#F1C17A")) },
+        new TreeMapRangeBrush() { LegendLabel="3", From=3, To=3, Brush = new SolidColorBrush(Color.FromArgb("#F79EE3")) },
+        new TreeMapRangeBrush() { LegendLabel="2", From=2, To=2, Brush = new SolidColorBrush(Color.FromArgb("#A39EE4")) },
+        new TreeMapRangeBrush() { LegendLabel="1", From=0, To=1, Brush = new SolidColorBrush(Color.FromArgb("#F6989B")) },
+    }
+};
+
+treeMap.LegendSettings = new TreeMapLegendSettings() { ShowLegend = true };
 this.Content = treeMap;
 
 {% endhighlight %}
-{% highlight C# tabtitle="PopulationDetails.cs" %}
+{% highlight C# tabtitle="AirportDetails.cs" %}
 
-public class PopulationDetails
+public class AirportDetails
 {
-    public string Country { get; set; }
-    public string Continent { get; set; }
-    public double Population { get; set; }
+    public string State { get; set; }
+    public int Count { get; set; }
 }
 
 {% endhighlight %}
-{% highlight C# tabtitle="PopulationViewModel.cs" %}
+{% highlight C# tabtitle="ViewModel.cs" %}
 
-public class PopulationViewModel
+public class ViewModel
 {
-    public PopulationViewModel()
+    public ViewModel()
     {
-        this.PopulationDetails = new ObservableCollection<PopulationDetails>()
+        this.AirportDetails = new ObservableCollection<AirportDetails>()
         {
-            new PopulationDetails() { Continent ="North America", Country = "United States of America", Population = 339996564 },
-            new PopulationDetails() { Continent ="South America", Country = "Brazil", Population = 216422446 },
-            new PopulationDetails() { Continent ="North America", Country = "Mexico", Population = 128455567 },
-            new PopulationDetails() { Continent ="South America", Country = "Colombia", Population = 52085168 },
-            new PopulationDetails() { Continent ="South America", Country = "Argentina", Population = 45773884 },
-            new PopulationDetails() { Continent ="North America", Country = "Canada", Population = 38781292 },
-            new PopulationDetails() { Continent ="South America", Country = "Peru", Population = 34352719 },
-            new PopulationDetails() { Continent ="South America", Country = "Venezuela", Population = 28838499 },
-            new PopulationDetails() { Continent ="South America", Country = "Chile", Population = 19629590 },
-            new PopulationDetails() { Continent ="South America", Country = "Ecuador", Population = 18190484 },
-            new PopulationDetails() { Continent ="North America", Country = "Guatemala", Population = 18092026 },
-            new PopulationDetails() { Continent ="South America", Country = "Bolivia", Population = 12388571 },
-            new PopulationDetails() { Continent ="North America", Country = "Honduras", Population = 10593798 },
-            new PopulationDetails() { Continent ="North America", Country = "Nicaragua", Population = 7046311 },
-            new PopulationDetails() { Continent ="South America", Country = "Paraguay", Population = 6861524 },
-            new PopulationDetails() { Continent ="North America", Country = "El Salvador", Population = 6364943 },
-            new PopulationDetails() { Continent ="North America", Country = "Costa Rica", Population = 5212173 },
-            new PopulationDetails() { Continent ="South America", Country = "Uruguay", Population = 3423109 },
+            new AirportDetails { State = "Brazil", Count = 31 },
+            new AirportDetails { State = "Colombia", Count = 32 },
+            new AirportDetails { State = "Argentina", Count = 26 },
+            new AirportDetails { State = "Ecuador", Count = 7 },
+            new AirportDetails { State = "Chile", Count = 5 },
+            new AirportDetails { State = "Peru", Count = 3 },
+            new AirportDetails { State = "Venezuela", Count = 3 },
+            new AirportDetails { State = "Bolivia", Count = 3 },
+            new AirportDetails { State = "Paraguay", Count = 2 },
+            new AirportDetails { State = "Uruguay", Count = 3 },
+            new AirportDetails { State = "Falkland Islands", Count = 1 },
+            new AirportDetails { State = "French Guiana", Count = 1 },
+            new AirportDetails { State = "Guyana", Count = 1 },
+            new AirportDetails { State = "Suriname", Count = 1 },
         };
     }
 
-    public ObservableCollection<PopulationDetails> PopulationDetails
+    public ObservableCollection<AirportDetails> AirportDetails
     {
         get;
         set;
@@ -281,75 +430,124 @@ The [SliceAndDiceVertical](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.T
 {% highlight XAML hl_lines="3" %}
 
 <treemap:SfTreeMap x:Name="treeMap"
-                   DataSource="{Binding PopulationDetails}"
-                   LayoutType="SliceAndDiceVertical"
-                   PrimaryValuePath="Population"
-                   ShowToolTip="True">
+                    DataSource="{Binding AirportDetails}"
+                    LayoutType="SliceAndDiceVertical"
+                    PrimaryValuePath="Count"
+                    RangeColorValuePath="Count">
     <treemap:SfTreeMap.BindingContext>
-        <local:PopulationViewModel />
+        <local:ViewModel />
     </treemap:SfTreeMap.BindingContext>
     <treemap:SfTreeMap.LeafItemSettings>
-        <treemap:TreeMapLeafItemSettings LabelPath="Country">
+        <treemap:TreeMapLeafItemSettings LabelPath="State">
         </treemap:TreeMapLeafItemSettings>
     </treemap:SfTreeMap.LeafItemSettings>
     <treemap:SfTreeMap.LeafItemBrushSettings>
-        <treemap:TreeMapUniformBrushSettings Brush="#D21243" />
+        <treemap:TreeMapRangeBrushSettings>
+            <treemap:TreeMapRangeBrushSettings.RangeBrushes>
+                <treemap:TreeMapRangeBrush LegendLabel="32"
+                                                From="32"
+                                                To="32"
+                                                Brush="#35D2E5" />
+                <treemap:TreeMapRangeBrush LegendLabel="31"
+                                                From="27"
+                                                To="31"
+                                                Brush="#84D592" />
+                <treemap:TreeMapRangeBrush LegendLabel="26"
+                                                From="8"
+                                                To="26"
+                                                Brush="#C8DA3F" />
+                <treemap:TreeMapRangeBrush LegendLabel="7"
+                                                From="6"
+                                                To="7"
+                                                Brush="#53D4BB" />
+                <treemap:TreeMapRangeBrush LegendLabel="5"
+                                                From="4"
+                                                To="5"
+                                                Brush="#F1C17A" />
+                <treemap:TreeMapRangeBrush LegendLabel="3"
+                                                From="3" 
+                                                To="3" 
+                                                Brush ="#F79EE3" />
+                <treemap:TreeMapRangeBrush LegendLabel="2"
+                                                From="2" 
+                                                To="2" 
+                                                Brush ="#A39EE4"/>
+                <treemap:TreeMapRangeBrush LegendLabel="1"
+                                                From="0"
+                                                To="1"
+                                                Brush="#F6989B"/>
+            </treemap:TreeMapRangeBrushSettings.RangeBrushes>
+        </treemap:TreeMapRangeBrushSettings>
     </treemap:SfTreeMap.LeafItemBrushSettings>
+    <treemap:SfTreeMap.LegendSettings>
+        <treemap:TreeMapLegendSettings ShowLegend="True" />
+    </treemap:SfTreeMap.LegendSettings>
 </treemap:SfTreeMap>
 
 {% endhighlight %}
 {% highlight C# hl_lines="4" %}
 
 SfTreeMap treeMap = new SfTreeMap();
-PopulationViewModel viewModel = new PopulationViewModel();
-treeMap.DataSource = viewModel.PopulationDetails;
+ViewModel viewModel = new ViewModel();
+treeMap.DataSource = viewModel.AirportDetails;
 treeMap.LayoutType = LayoutType.SliceAndDiceVertical;
-treeMap.PrimaryValuePath = "Population";
-treeMap.LeafItemSettings = new TreeMapLeafItemSettings() { LabelPath = "Country" };
-treeMap.LeafItemBrushSettings = new TreeMapUniformBrushSettings() { Brush = new SolidColorBrush(Color.FromArgb("#D21243")) };
+treeMap.PrimaryValuePath = "Count";
+treeMap.RangeColorValuePath = "Count";
+treeMap.LeafItemSettings = new TreeMapLeafItemSettings() { LabelPath = "State" };
+treeMap.LeafItemBrushSettings = new TreeMapRangeBrushSettings()
+{
+    RangeBrushes = new List<TreeMapRangeBrush>()
+    {
+        new TreeMapRangeBrush() { LegendLabel="32", From=32, To=32, Brush = new SolidColorBrush(Color.FromArgb("#35D2E5")) },
+        new TreeMapRangeBrush() { LegendLabel="31", From=27, To=31, Brush = new SolidColorBrush(Color.FromArgb("#84D592")) },
+        new TreeMapRangeBrush() { LegendLabel="26", From=8, To=26, Brush = new SolidColorBrush(Color.FromArgb("#C8DA3F")) },
+        new TreeMapRangeBrush() { LegendLabel="7", From=6, To=7, Brush = new SolidColorBrush(Color.FromArgb("#53D4BB")) },
+        new TreeMapRangeBrush() { LegendLabel="5", From=4, To=5, Brush = new SolidColorBrush(Color.FromArgb("#F1C17A")) },
+        new TreeMapRangeBrush() { LegendLabel="3", From=3, To=3, Brush = new SolidColorBrush(Color.FromArgb("#F79EE3")) },
+        new TreeMapRangeBrush() { LegendLabel="2", From=2, To=2, Brush = new SolidColorBrush(Color.FromArgb("#A39EE4")) },
+        new TreeMapRangeBrush() { LegendLabel="1", From=0, To=1, Brush = new SolidColorBrush(Color.FromArgb("#F6989B")) },
+    }
+};
+
+treeMap.LegendSettings = new TreeMapLegendSettings() { ShowLegend = true };
 this.Content = treeMap;
 
 {% endhighlight %}
-{% highlight C# tabtitle="PopulationDetails.cs" %}
+{% highlight C# tabtitle="AirportDetails.cs" %}
 
-public class PopulationDetails
+public class AirportDetails
 {
-    public string Country { get; set; }
-    public string Continent { get; set; }
-    public double Population { get; set; }
+    public string State { get; set; }
+    public int Count { get; set; }
 }
 
 {% endhighlight %}
-{% highlight C# tabtitle="PopulationViewModel.cs" %}
+{% highlight C# tabtitle="ViewModel.cs" %}
 
-public class PopulationViewModel
+public class ViewModel
 {
-    public PopulationViewModel()
+    public ViewModel()
     {
-        this.PopulationDetails = new ObservableCollection<PopulationDetails>()
+        this.AirportDetails = new ObservableCollection<AirportDetails>()
         {
-            new PopulationDetails() { Continent ="North America", Country = "United States of America", Population = 339996564 },
-            new PopulationDetails() { Continent ="South America", Country = "Brazil", Population = 216422446 },
-            new PopulationDetails() { Continent ="North America", Country = "Mexico", Population = 128455567 },
-            new PopulationDetails() { Continent ="South America", Country = "Colombia", Population = 52085168 },
-            new PopulationDetails() { Continent ="South America", Country = "Argentina", Population = 45773884 },
-            new PopulationDetails() { Continent ="North America", Country = "Canada", Population = 38781292 },
-            new PopulationDetails() { Continent ="South America", Country = "Peru", Population = 34352719 },
-            new PopulationDetails() { Continent ="South America", Country = "Venezuela", Population = 28838499 },
-            new PopulationDetails() { Continent ="South America", Country = "Chile", Population = 19629590 },
-            new PopulationDetails() { Continent ="South America", Country = "Ecuador", Population = 18190484 },
-            new PopulationDetails() { Continent ="North America", Country = "Guatemala", Population = 18092026 },
-            new PopulationDetails() { Continent ="South America", Country = "Bolivia", Population = 12388571 },
-            new PopulationDetails() { Continent ="North America", Country = "Honduras", Population = 10593798 },
-            new PopulationDetails() { Continent ="North America", Country = "Nicaragua", Population = 7046311 },
-            new PopulationDetails() { Continent ="South America", Country = "Paraguay", Population = 6861524 },
-            new PopulationDetails() { Continent ="North America", Country = "El Salvador", Population = 6364943 },
-            new PopulationDetails() { Continent ="North America", Country = "Costa Rica", Population = 5212173 },
-            new PopulationDetails() { Continent ="South America", Country = "Uruguay", Population = 3423109 },
+            new AirportDetails { State = "Brazil", Count = 31 },
+            new AirportDetails { State = "Colombia", Count = 32 },
+            new AirportDetails { State = "Argentina", Count = 26 },
+            new AirportDetails { State = "Ecuador", Count = 7 },
+            new AirportDetails { State = "Chile", Count = 5 },
+            new AirportDetails { State = "Peru", Count = 3 },
+            new AirportDetails { State = "Venezuela", Count = 3 },
+            new AirportDetails { State = "Bolivia", Count = 3 },
+            new AirportDetails { State = "Paraguay", Count = 2 },
+            new AirportDetails { State = "Uruguay", Count = 3 },
+            new AirportDetails { State = "Falkland Islands", Count = 1 },
+            new AirportDetails { State = "French Guiana", Count = 1 },
+            new AirportDetails { State = "Guyana", Count = 1 },
+            new AirportDetails { State = "Suriname", Count = 1 },
         };
     }
 
-    public ObservableCollection<PopulationDetails> PopulationDetails
+    public ObservableCollection<AirportDetails> AirportDetails
     {
         get;
         set;
