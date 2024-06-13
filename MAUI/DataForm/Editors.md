@@ -210,7 +210,7 @@ Enum and List type property.
 Segment
 </td>
 <td>
-DataFormSegmentItem
+{{'[DataFormSegmentItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormSegmentItem.html)'| markdownify }}
 </td>
 <td>
 Enum and List type property.
@@ -1334,7 +1334,7 @@ N> [View editors sample in GitHub](https://github.com/SyncfusionExamples/maui-da
 
 ## Segment editor
 
-In the `Segment` editor, the [SfSegmentedControl](https://www.syncfusion.com/maui-controls/maui-segmented-control) will be loaded.
+In the [Segment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormEditorType.html#Syncfusion_Maui_DataForm_DataFormEditorType_Segment) editor, the [SfSegmentedControl](https://www.syncfusion.com/maui-controls/maui-segmented-control) will be loaded.
 
 #### Changing the ItemsSource of Segment
 

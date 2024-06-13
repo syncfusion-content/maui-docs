@@ -160,7 +160,7 @@ this.Calendar.SelectionMode = CalendarSelectionMode.Multiple;
 
 ## Corner radius
 
-You can customize the corner radius of the calendar using the [CornerRadius]() property of the SfCalendar, allowing you to set the desired roundness for the corners of the calendar. The default value of the `CornerRadius` property is `20`.
+You can customize the corner radius of the calendar using the [CornerRadius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_CornerRadius) property of the SfCalendar, allowing you to set the desired roundness for the corners of the calendar. The default value of the `CornerRadius` property is `20`.
 
 {% tabs %}  
 {% highlight xaml tabtitle="XAML" hl_lines="3" %}

@@ -11,7 +11,7 @@ documentation: ug
 
 ## Password Char
 
-The SfMaskedEntry control supports to work as a password text box when setting a character to the `PasswordChar`property.
+The SfMaskedEntry control supports to work as a password text box when setting a character to the [PasswordChar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html#Syncfusion_Maui_Inputs_SfMaskedEntry_PasswordChar) property.
 
 {% tabs %}
 {% highlight xaml %}

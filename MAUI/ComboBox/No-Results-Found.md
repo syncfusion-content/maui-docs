@@ -8,10 +8,10 @@ documentation: ug
 ---
 # No Results Found in .NET MAUI ComboBox (SfComboBox)
 
-When the entered item is not in the suggestion list, `SfComboBox` displays a text indicating there is no search results found. We can set the desire text to be displayed for indicating no results found with the ` NoResultsFoundText` and `NoResultsFoundTemplate` properties.
+When the entered item is not in the suggestion list, [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) displays a text indicating there is no search results found. We can set the desire text to be displayed for indicating no results found with the [NoResultsFoundText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_NoResultsFoundText) and [NoResultsFoundTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_NoResultsFoundTemplate) properties.
 
 ## NoResultsFoundText
-We can customize the desire text to be displayed for indicating no results found by using the ` NoResultsFoundText` property. 
+We can customize the desire text to be displayed for indicating no results found by using the [NoResultsFoundText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_NoResultsFoundText) property. 
 
 {% tabs %}
 
@@ -41,7 +41,7 @@ comboBox.NoResultsFoundText = "Not Found";
 
 ## NoResultsFoundTemplate
 
-We can customize the appearance of the desire text to be displayed for indicating no results found by using the `NoResultsFoundTemplate` property.
+We can customize the appearance of the desire text to be displayed for indicating no results found by using the [NoResultsFoundTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_NoResultsFoundTemplate) property.
 
 {% tabs %}
 
@@ -88,4 +88,4 @@ comboBox.NoResultsFoundTemplate = noResultsTemplate;
 
 ![NoResultsFoundTemplate](images/NoResultsFound/NoResultsFoundTemplate.png)
 
-N> By Default `NoResultsFoundText` is enabled we can restrict it by using `NoResultsFoundText` as Empty. `comboBox.NoResultsFoundText = "";`
+N> By Default [NoResultsFoundText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_NoResultsFoundText) is enabled we can restrict it by using [NoResultsFoundText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_NoResultsFoundText)as Empty.

@@ -5,6 +5,7 @@ description: Learn here all about chart axis and its keys features of Syncfusion
 platform: maui
 control: SfCartesianChart
 documentation: ug
+keywords: .net maui chart axis overview, .net maui chart control axis, .net maui chart axis features, .net maui chart control axis functionality.
 ---
 
 # Axis in .NET MAUI Chart
