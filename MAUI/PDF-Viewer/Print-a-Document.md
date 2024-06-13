@@ -5,6 +5,7 @@ description: Learn here all about printing feature in Syncfusion .NET MAUI PDF V
 platform: MAUI
 control: SfPdfViewer
 documentation: ug
+keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .net maui open pdf, maui pdf viewer, maui pdf view
 ---
 
 # Print a Document in .NET MAUI PDF Viewer (SfPdfViewer)
@@ -13,7 +14,7 @@ The print feature of [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusio
 
 Moreover, when performing a print operation, the default device print dialog opens, providing users with familiar options and settings to customize their printing experience.
 
-To print a PDF programmatically, you can use the `PrintDocument` method provided by [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html).Refer to the following code example.
+To print a PDF programmatically, you can use the [PrintDocument](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_PrintDocument) method provided by [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html).Refer to the following code example.
 
 {% tabs %}
 {% highlight c# %}
@@ -22,7 +23,7 @@ PdfViewer.PrintDocument();
 {% endhighlight %}
 {% endtabs %}
 
-Also, [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) provides another way to print through command binding using the `PrintDocumentCommand`. This makes printing easier, especially when used with buttons.
+Also, [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) provides another way to print through command binding using the [PrintDocumentCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_PrintDocumentCommand). This makes printing easier, especially when used with buttons.
 
 {% tabs %}
 {% highlight xaml %}
