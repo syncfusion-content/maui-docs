@@ -76,6 +76,35 @@ To migrate easier from Xamarin SfComboBox to [.NET MAUI SfComboBox](https://help
 <td> {{'[StartsWith](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ComboBox.SuggestionMode.html#Syncfusion_XForms_ComboBox_SuggestionMode_StartsWith)'| markdownify }},<br/> {{'[StartsWithCaseSensitive](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ComboBox.SuggestionMode.html#Syncfusion_XForms_ComboBox_SuggestionMode_StartsWithCaseSensitive)'| markdownify }},<br/> {{'[Contains](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ComboBox.SuggestionMode.html#Syncfusion_XForms_ComboBox_SuggestionMode_Contains)'| markdownify }},<br/> {{'[ContainsWithCaseSensitive](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ComboBox.SuggestionMode.html#Syncfusion_XForms_ComboBox_SuggestionMode_ContainsWithCaseSensitive)'| markdownify }},<br/> {{'[Equals](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ComboBox.SuggestionMode.html#Syncfusion_XForms_ComboBox_SuggestionMode_Equals)'| markdownify }},<br/> {{'[EqualsWithCaseSensitive](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ComboBox.SuggestionMode.html#Syncfusion_XForms_ComboBox_SuggestionMode_EqualsWithCaseSensitive)'| markdownify }},<br/> {{'[EndsWith](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ComboBox.SuggestionMode.html#Syncfusion_XForms_ComboBox_SuggestionMode_EndsWith)'| markdownify }},<br/> {{'[EndsWithCaseSensitive](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ComboBox.SuggestionMode.html#Syncfusion_XForms_ComboBox_SuggestionMode_EndsWithCaseSensitive)'| markdownify }},<br/> {{'[Custom](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ComboBox.SuggestionMode.html#Syncfusion_XForms_ComboBox_SuggestionMode_Custom)'| markdownify }}</td>
 <td> {{'[StartsWith](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ComboBoxTextSearchMode.html#Syncfusion_Maui_Inputs_ComboBoxTextSearchMode_StartsWith)'| markdownify }},<br/> {{'[Contains](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ComboBoxTextSearchMode.html#Syncfusion_Maui_Inputs_ComboBoxTextSearchMode_Contains)'| markdownify }}.</td>
 <td>Gets or sets the search mode of the control.</td></tr>
+
+<tr>
+<td>
+Xamarin - {{'[SuggestionBoxPlacement](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ComboBox.SuggestionBoxPlacement.html)'| markdownify }} 
+<br/>
+.NET MAUI - {{'[DropDownPlacement](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.DropDownPlacement.html)'| markdownify }} 
+</td>
+
+<td>
+{{'[Auto](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ComboBox.SuggestionBoxPlacement.html#Syncfusion_XForms_ComboBox_SuggestionBoxPlacement_Auto)'| markdownify }}, 
+<br/>
+{{'[Bottom](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ComboBox.SuggestionBoxPlacement.html#Syncfusion_XForms_ComboBox_SuggestionBoxPlacement_Bottom)'| markdownify }},  
+<br/>
+{{'[None](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ComboBox.SuggestionBoxPlacement.html#Syncfusion_XForms_ComboBox_SuggestionBoxPlacement_None)'| markdownify }}, 
+<br/>
+{{'[Top](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ComboBox.SuggestionBoxPlacement.html#Syncfusion_XForms_ComboBox_SuggestionBoxPlacement_Top)'| markdownify }}
+</td>
+
+<td>
+{{'[Auto](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.DropDownPlacement.html#Syncfusion_Maui_Core_DropDownPlacement_Auto)'| markdownify }}, 
+<br/>
+{{'[Bottom](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.DropDownPlacement.html#Syncfusion_Maui_Core_DropDownPlacement_Bottom)'| markdownify }}, 
+<br/>
+{{'[None](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.DropDownPlacement.html#Syncfusion_Maui_Core_DropDownPlacement_None)'| markdownify }}, 
+<br/>
+{{'[Top](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.DropDownPlacement.html#Syncfusion_Maui_Core_DropDownPlacement_Top)'| markdownify }} 
+</td>
+<td>Gets or sets the position of the drop-down.</td>
+</tr>
 </table>
 
 ## Events
