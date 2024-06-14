@@ -194,8 +194,6 @@ this.Content = chart;
 ## Items layout
 The [ItemsLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLegend.html#Syncfusion_Maui_Charts_ChartLegend_ItemsLayout) property is used to customize the arrangement and position of each legend item. The default value is `null`. This property accepts any layout type.
 
-For more details about the layout alignment refer to this article.
-
 {% tabs %}
 
 {% highlight xaml %}
