@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting started with .NET MAUI Slider control | Syncfusion
-description: This section explains about the getting started with Syncfusion MAUI Slider (SfSlider) control and more.
+description: This section explains about the getting started with Syncfusion .NET MAUI Slider (SfSlider) control and more.
 platform: maui
 control: SfSlider
 documentation: ug
@@ -20,13 +20,13 @@ To get start quickly with MAUI SfSlider, you can check on this video:
 
 Create a new .NET MAUI application in Visual Studio.
 
- ![Create MAUI Application](images/getting-started/create-project.png)
+ ![Create .NET MAUI Application](images/getting-started/create-project.png)
 
 ## Adding SfSlider reference
 
  The Syncfusion .NET MAUI components are available in [nuget.org](https://www.nuget.org/). To add the SfSlider to your project, open the NuGet package manager in the Visual Studio, search for the Syncfusion.Maui.Sliders, and install it.
 
- ![Create MAUI Application](images/getting-started/nuget-installation.png)
+ ![Add .NET MAUI Slider nuget reference](images/getting-started/nuget-installation.png)
 
 
 ## Handler registration
