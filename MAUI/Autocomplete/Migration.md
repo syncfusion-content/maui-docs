@@ -170,4 +170,3 @@ Xamarin - {{'[MultiSelectMode](https://help.syncfusion.com/cr/xamarin/Syncfusion
 ## Upcoming features
 
   * Diacritic Sensitivity
-  * Customizations in Drop-Down
