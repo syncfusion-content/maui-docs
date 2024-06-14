@@ -18,7 +18,7 @@ To get start quickly with apply styling .NET MAUI DataGrid, you can check on thi
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml"%}
-<ContentPage xmlns:syncfusion="http://schemas.syncfusion.com/maui">
+<ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.DataGrid;assembly=Syncfusion.Maui.DataGrid">
     <ContentPage.Content>
         <syncfusion:SfDataGrid ItemsSource="{Binding OrderInfoCollection}" >
             <syncfusion:SfDataGrid.DefaultStyle>
@@ -43,10 +43,10 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![Default Styling in .NET MAUI DataGrid](Images/styling/maui-datagrid-defaultsyle.png)
+![Default Styling in .NET MAUI DataGrid](Images/styling/maui-datagrid-defaultstyle.png)
 
 ## Set datagrid style from application resources
-You can write custom style for the properties in the `SfDataGrid.DefaultStyle` class using the application resource and consume the custom style as a static resource to the DefaultSyle property for the required DataGrid used on that page.
+You can write custom style for the properties in the `SfDataGrid.DefaultStyle` class using the application resource and consume the custom style as a static resource to the DefaultStyle property for the required DataGrid used on that page.
 
 {% tabs %}
 {% highlight xaml tabtitle="App.xaml"%}
@@ -61,7 +61,7 @@ You can write custom style for the properties in the `SfDataGrid.DefaultStyle` c
 </Application.Resources>
 {% endhighlight %}
 {% highlight xaml tabtitle="MainPage.xaml"%}
-<ContentPage xmlns:syncfusion="http://schemas.syncfusion.com/maui">
+<ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.DataGrid;assembly=Syncfusion.Maui.DataGrid">
     <ContentPage.Content>
         <syncfusion:SfDataGrid DefaultStyle="{StaticResource customStyle}" ItemsSource="{Binding OrderInfoCollection}" />
     </ContentPage.Content>
@@ -70,11 +70,11 @@ You can write custom style for the properties in the `SfDataGrid.DefaultStyle` c
 {% endtabs %}
 
 ## Set datagrid style from page resources
-You can write custom style for the properties in the `SfDataGrid.DefaultStyle` class using page resource and consume the custom style as a static resource to the DefaultSyle property for the required DataGrid used on that page.
+You can write custom style for the properties in the `SfDataGrid.DefaultStyle` class using page resource and consume the custom style as a static resource to the DefaultStyle property for the required DataGrid used on that page.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml"%}
-<ContentPage xmlns:syncfusion="http://schemas.syncfusion.com/maui">
+<ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.DataGrid;assembly=Syncfusion.Maui.DataGrid">
     <ContentPage.Resources>
         <ResourceDictionary>
             <syncfusion:DataGridStyle x:Key="customStyle" 
@@ -102,7 +102,7 @@ The record cells can be customized by the writing style for [DataGridCell](https
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml"%}
-<ContentPage xmlns:syncfusion="http://schemas.syncfusion.com/maui">
+<ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.DataGrid;assembly=Syncfusion.Maui.DataGrid">
     <ContentPage.Resources>
         <Style TargetType="syncfusion:DataGridCell">
             <Setter Property="Background" Value="#AFD5FB"/>
@@ -123,7 +123,7 @@ The record row can be customized by the writing style for [DataGridRow](https://
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml"%}
-<ContentPage xmlns:syncfusion="http://schemas.syncfusion.com/maui">
+<ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.DataGrid;assembly=Syncfusion.Maui.DataGrid">
     <ContentPage.Resources>
         <Style TargetType="syncfusion:DataGridRow">
             <Setter Property="Background" Value="#AFD5FB"/>
@@ -140,7 +140,7 @@ The header cells can be customized by the writing style for [DataGridHeaderCell]
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml"%}
-<ContentPage xmlns:syncfusion="http://schemas.syncfusion.com/maui">
+<ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.DataGrid;assembly=Syncfusion.Maui.DataGrid">
     <ContentPage.Resources>
         <Style TargetType="syncfusion:DataGridHeaderCell">
             <Setter Property="Background" Value="#0074E3"/>
@@ -161,7 +161,7 @@ The header row can be customized by the writing style for [DataGridHeaderRow](ht
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml"%}
-<ContentPage xmlns:syncfusion="http://schemas.syncfusion.com/maui">
+<ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.DataGrid;assembly=Syncfusion.Maui.DataGrid">
     <ContentPage.Resources>
         <Style TargetType="syncfusion:DataGridHeaderRow">
             <Setter Property="Background" Value="#0074E3"/>
@@ -178,7 +178,7 @@ The table summary cell can be customized by the writing style for [DataGridTable
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml"%}
-<ContentPage xmlns:syncfusion="http://schemas.syncfusion.com/maui">
+<ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.DataGrid;assembly=Syncfusion.Maui.DataGrid">
     <ContentPage.Resources>
         <Style TargetType="syncfusion:DataGridTableSummaryCell">
             <Setter Property="Background" Value="#0074E3"/>
@@ -199,7 +199,7 @@ The table summary row can be customized by the writing style for [DataGridTableS
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml"%}
-<ContentPage xmlns:syncfusion="http://schemas.syncfusion.com/maui">
+<ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.DataGrid;assembly=Syncfusion.Maui.DataGrid">
     <ContentPage.Resources>
         <Style TargetType="syncfusion:DataGridTableSummaryRowView">
             <Setter Property="Background" Value="#0074E3"/>
@@ -216,7 +216,7 @@ The caption summary cell can be customized by the writing style for [DataGridCap
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml"%}
-<ContentPage xmlns:syncfusion="http://schemas.syncfusion.com/maui">
+<ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.DataGrid;assembly=Syncfusion.Maui.DataGrid">
     <ContentPage.Resources>
         <Style TargetType="syncfusion:DataGridCaptionSummaryCell">
             <Setter Property="Background" Value="#0074E3"/>
@@ -237,7 +237,7 @@ The caption summary row can be customized by the writing style for [DataGridCapt
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml"%}
-<ContentPage xmlns:syncfusion="http://schemas.syncfusion.com/maui">
+<ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.DataGrid;assembly=Syncfusion.Maui.DataGrid">
     <ContentPage.Resources>
         <Style TargetType="syncfusion:DataGridCaptionSummaryRowView">
             <Setter Property="Background" Value="#0074E3"/>
@@ -254,7 +254,7 @@ The group summary cell can be customized by the writing style for [DataGridGroup
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml"%}
-<ContentPage xmlns:syncfusion="http://schemas.syncfusion.com/maui">
+<ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.DataGrid;assembly=Syncfusion.Maui.DataGrid">
     <ContentPage.Resources>
         <Style TargetType="syncfusion:DataGridGroupSummaryCell">
             <Setter Property="Background" Value="#0074E3"/>
@@ -275,7 +275,7 @@ The group summary row can be customized by the writing style for [DataGridGroupS
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml"%}
-<ContentPage xmlns:syncfusion="http://schemas.syncfusion.com/maui">
+<ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.DataGrid;assembly=Syncfusion.Maui.DataGrid">
     <ContentPage.Resources>
         <Style TargetType="syncfusion:DataGridGroupSummaryRowView">
             <Setter Property="Background" Value="#0074E3"/>
@@ -292,7 +292,7 @@ The unbound row cell can be customized by the writing style for [DataGridUnbound
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml"%}
-<ContentPage xmlns:syncfusion="http://schemas.syncfusion.com/maui">
+<ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.DataGrid;assembly=Syncfusion.Maui.DataGrid">
     <ContentPage.Resources>
         <Style TargetType="syncfusion:DataGridUnboundRowCell">
             <Setter Property="Background" Value="#0074E3"/>
@@ -313,7 +313,7 @@ The unbound row can be customized by the writing style for [DataGridUnboundRowVi
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml"%}
-<ContentPage xmlns:syncfusion="http://schemas.syncfusion.com/maui">
+<ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.DataGrid;assembly=Syncfusion.Maui.DataGrid">
     <ContentPage.Resources>
         <Style TargetType="syncfusion:DataGridUnboundRowView">
             <Setter Property="Background" Value="#0074E3"/>
@@ -330,7 +330,7 @@ You can apply the style for a particular column by using [DataGridColumn.CellSty
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml"%}
-<ContentPage xmlns:syncfusion="http://schemas.syncfusion.com/maui">
+<ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.DataGrid;assembly=Syncfusion.Maui.DataGrid">
     <ContentPage.Resources>
         <Style TargetType="syncfusion:DataGridHeaderCell" x:Key="customHeaderStyle">
             <Setter Property="Background" Value="#0074E3"/>
@@ -366,7 +366,7 @@ You can apply the alternative row color by using [AlternateRowBackground](https:
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml"%}
-<ContentPage xmlns:syncfusion="http://schemas.syncfusion.com/maui">
+<ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.DataGrid;assembly=Syncfusion.Maui.DataGrid">
     <ContentPage.Content>
         <syncfusion:SfDataGrid ItemsSource="{Binding OrderInfoCollection}">
             <syncfusion:SfDataGrid.DefaultStyle>
@@ -395,7 +395,7 @@ You can change the row count which should be considered to apply the background 
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml"%}
-<ContentPage xmlns:syncfusion="http://schemas.syncfusion.com/maui">
+<ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.DataGrid;assembly=Syncfusion.Maui.DataGrid">
     <ContentPage.Content>
         <syncfusion:SfDataGrid AlternationRowCount="3" 
                             ItemsSource="{Binding OrderInfoCollection}">
@@ -426,7 +426,7 @@ You can apply the style for header and row font attributes by using SfDataGrid.D
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml"%}
-<ContentPage xmlns:syncfusion="http://schemas.syncfusion.com/maui">
+<ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.DataGrid;assembly=Syncfusion.Maui.DataGrid">
     <ContentPage.Content>
         <syncfusion:SfDataGrid ItemsSource="{Binding OrderInfoCollection}">
             <syncfusion:SfDataGrid.DefaultStyle>
@@ -458,7 +458,7 @@ The following example shows how to apply both vertical and horizontal borders fo
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml"%}
-<ContentPage xmlns:syncfusion="http://schemas.syncfusion.com/maui">
+<ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.DataGrid;assembly=Syncfusion.Maui.DataGrid">
     <ContentPage.Content>
         <syncfusion:SfDataGrid ItemsSource="{Binding OrderInfoCollection}"
                             GridLinesVisibility="Both"
@@ -486,7 +486,7 @@ You can change the border width by using [GridLineStrokeThickness](https://help.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml"%}
-<ContentPage xmlns:syncfusion="http://schemas.syncfusion.com/maui">
+<ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.DataGrid;assembly=Syncfusion.Maui.DataGrid">
     <ContentPage.Content>
         <syncfusion:SfDataGrid ItemsSource="{Binding OrderInfoCollection}">
             <syncfusion:SfDataGrid.DefaultStyle>

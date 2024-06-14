@@ -25,7 +25,7 @@ To export the SfDataGrid to an Excel file, the following NuGet package should be
 </table>
 
 ## Save Service class in portable project.
-Add the new class file with name as SaveService to the Project and add below code in it. This is the helper class used to save and view the excell file in Windows, Android, IOS and MAC devices.
+Add the new class file with name as SaveService to the Project and add below code in it. This is the helper class used to save and view the excel file in Windows, Android, iOS and MAC devices.
 
 {% tabs %}
 {% highlight c# %}
@@ -139,7 +139,7 @@ namespace GettingStarted
         public partial void SaveAndView(string filename, string contentType, MemoryStream stream)
         {
             string exception = string.Empty;
-            string? root = System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments);
+            string? root = Android.App.Application.Context.GetExternalFilesDir(Android.OS.Environment.DirectoryDownloads)!.AbsolutePath.ToString();
 
             Java.IO.File myDir = new(root + "/Syncfusion");
             myDir.Mkdir();
@@ -218,7 +218,7 @@ Add the following code to the AndroidManifest.xml file located under Properties 
         android:grantUriPermissions="true">
 			<meta-data
 				android:name="android.support.FILE_PROVIDER_PATHS"
-				android:resource="@xml/file_paths" />
+				android:resource="@xml/provider_path" />
 		</provider>
 	</application>
 	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -227,9 +227,9 @@ Add the following code to the AndroidManifest.xml file located under Properties 
 {% endhighlight %}
 {% endtabs %}
 
-### Save and View the Excel document in IOS
+### Save and View the Excel document in iOS
 
-Add the new class file with name SaveIOS file under Platforms -> IOS directory to save and view the Excell document in the IOS device and use the below code in it.
+Add the new class file with name SaveIOS file under Platforms -> iOS directory to save and view the Excel document in the iOS device and use the below code in it.
 
 {% tabs %}
 {% highlight c# %}
@@ -355,7 +355,7 @@ namespace GettingStarted
 
 ### Save and View the Excel document in MacCatalyst
 
-Add the new class file with name SaveMAC file under Platforms -> MacCatylyst directory to save and view the Excel document in the MAC Device and use the below code in it.
+Add the new class file with name SaveMAC file under Platforms -> Mac Catalyst directory to save and view the Excel document in the MAC Device and use the below code in it.
 
 {% tabs %}
 {% highlight c# %}
@@ -541,7 +541,7 @@ private void Button_Clicked(object sender, EventArgs e)
 {
     DataGridExcelExportingController excelExport = new DataGridExcelExportingController();
     DataGridExcelExportingOption option = new DataGridExcelExportingOption();
-    var excelEngine = excelExport.ExportToExcel(this.datagrid, option);            
+    var excelEngine = excelExport.ExportToExcel(this.dataGrid, option);            
     var workbook = excelEngine.Excel.Workbooks[0];
     MemoryStream stream = new MemoryStream();
     workbook.SaveAs(stream);
@@ -800,6 +800,10 @@ option.CanApplyGridStyle = true;
 {% endtabs %}
 
 <img alt="Export DataGrid to Excel with styling applied" src="Images\export-to-excel\maui-datagrid-can-apply-gridstyle.png" width="689"/>
+
+### Limitations
+
+* The implicit and explicit styles are not applicable when exporting the DataGrid to Excel.
 
 #### TopTableSummaryStyle
 

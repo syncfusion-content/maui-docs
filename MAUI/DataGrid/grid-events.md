@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Grid Events in MAUI DataGrid control | Syncfusion
-description: Learn here all about data grid events that help identify interactions on the cell, and listen to cell value changes in the Syncfusion MAUI DataGrid (SfDataGrid) control, and learn more about it.
+description: Learn here all about data grid events for cell interactions, and listen to cell value changes in Syncfusion MAUI DataGrid (SfDataGrid).
 platform: MAUI
 control: SfDataGrid
 documentation: UG
@@ -79,6 +79,8 @@ private void dataGrid_CellLongPress(object sender, DataGridCellLongPressEventArg
 }
 {% endhighlight %}
 {% endtabs %}
+
+N> The `CellLongPress` event is triggered only when performing a long press on the screen touch in the Windows platform.
 
 ### CellRightTapped event
 This event will be triggered when a right-click mouse gesture is recognized on a cell. This event has the [DataGridCellRightTappedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCellRightTappedEventArgs.html) as arguments.

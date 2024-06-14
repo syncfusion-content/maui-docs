@@ -25,7 +25,7 @@ If you are utilizing a NuGet package to facilitate the process, please ensure th
 
 ## Save Service class in portable project.
 
-Add the new class file with name as SaveService to the project and add below code in it. This is the helper class used and view the PDF file in windows, android, IOS and MAc devices.
+Add the new class file with name as SaveService to the project and add below code in it. This is the helper class used and view the PDF file in windows, android, iOS and MAc devices.
 
 {% tabs %}
 {% highlight c# %}
@@ -141,7 +141,7 @@ namespace GettingStarted
         public partial void SaveAndView(string filename, string contentType, MemoryStream stream)
         {
             string exception = string.Empty;
-            string? root = System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments);
+            string? root = Android.App.Application.Context.GetExternalFilesDir(Android.OS.Environment.DirectoryDownloads)!.AbsolutePath.ToString();
 
             Java.IO.File myDir = new(root + "/Syncfusion");
             myDir.Mkdir();
@@ -219,7 +219,7 @@ Add the following code to the AndroidManifest.xml file located under Properties 
         android:grantUriPermissions="true">
 			<meta-data
 				android:name="android.support.FILE_PROVIDER_PATHS"
-				android:resource="@xml/file_paths" />
+				android:resource="@xml/provider_path" />
 		</provider>
 	</application>
 	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -228,9 +228,9 @@ Add the following code to the AndroidManifest.xml file located under Properties 
 {% endhighlight %}
 {% endtabs %}
 
-### Save and View the PDF document in IOS
+### Save and View the PDF document in iOS
 
-Add the new class file with name SaveIOS file under Platform-> IOS directory to save and view the PDF document in the IOS device and use the below code in it.
+Add the new class file with name SaveIOS file under Platform-> iOS directory to save and view the PDF document in the iOS device and use the below code in it.
 
 {% tabs %}
 {% highlight c# %}
@@ -355,7 +355,7 @@ namespace GettingStarted
 
 ### Save and View the PDF document in MacCatalyst
 
-Add the new class file with name SaveMAC file under Platforms-> MacCatylyst directory to save and view the PDF document in the MAC Device and use the below code in it.
+Add the new class file with name SaveMAC file under Platforms-> MacCatalyst directory to save and view the PDF document in the MAC Device and use the below code in it.
 
 {% tabs %}
 {% highlight c# %}
@@ -762,6 +762,10 @@ You can customize the following styles when exporting to PDF as well:
 * GroupCaptionStyle
 * GroupSummaryStyle
 
+### Limitations
+
+* The implicit and explicit styles are not applicable when exporting the DataGrid to PDF.
+
 #### HeaderStyle
 
 The SfDataGrid allows exporting the column headers with custom style by using the [DataGridPdfExportingOption.HeaderStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.Exporting.DataGridPdfExportingOption.html#Syncfusion_Maui_DataGrid_Exporting_DataGridPdfExportingOption_HeaderStyle) property.
@@ -870,7 +874,7 @@ option.GroupCaptionStyle = new PdfGridCellStyle()
 
 #### GroupSummaryStyle 
 
-`SfDataGrid` supports exporting the `GroupSummary` rows with custom style by using the [DataGridPdfExportingOption.GroupSummaryStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.Exporting.DataGridPdfExportingOption.html#Syncfusion_Maui_DataGrid_Exporting_DataGridPdfExportingOption_GroupSummaryStyle)property.
+`SfDataGrid` supports exporting the `GroupSummary` rows with custom style by using the [DataGridPdfExportingOption.GroupSummaryStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.Exporting.DataGridPdfExportingOption.html#Syncfusion_Maui_DataGrid_Exporting_DataGridPdfExportingOption_GroupSummaryStyle) property.
 
 {% tabs %}
 {% highlight c# %}
