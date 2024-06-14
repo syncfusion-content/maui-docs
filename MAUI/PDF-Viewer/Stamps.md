@@ -28,11 +28,11 @@ On the built-in toolbar, a tool for standard stamps is available that contains 1
 
 The following example explains how to choose a standard stamp and add it to the first page of a PDF document using the built-in toolbar on the desktop.
 
-![Desktop Standard Stamp](Images/DesktopStamp)
+![Desktop Standard Stamp](Images/DesktopStamp.gif)
 
 The following example explains how to choose a standard stamp and add it to the first page of a PDF document using the built-in toolbar on the mobile.
 
-![Mobile Standard Stamp](Images/MobileStamp)
+![Mobile Standard Stamp](Images/MobileStamp.gif)
 
 ### Add custom stamps using toolbar
 
@@ -40,11 +40,11 @@ On the built-in toolbar, you can create your own custom stamp using the built-in
 
 The following example explains how to create a custom stamp using the built-in dialog box and add it to a PDF document on the desktop.
 
-![Desktop Custom Stamp](Images/DesktopCustomStamp)
+![Desktop Custom Stamp](Images/DesktopCustomStamp.gif)
 
 The following example explains how to create a custom stamp using the built-in dialog box and add it to a PDF document on the mobile.
 
-![Mobile Custom Stamp](Images/MobileCustomStamp)
+![Mobile Custom Stamp](Images/MobileCustomStamp.gif)
 
 ### Add standard stamps without using toolbar
 
