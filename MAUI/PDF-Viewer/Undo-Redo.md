@@ -1,10 +1,11 @@
 ---
 layout: post
-title: Undo and Redo actions on the annotations in .NET MAUI PDF Viewer control | Syncfusion
+title: Undo and Redo actions in .NET MAUI PDF Viewer | Syncfusion
 description: Learn here all about Undo and Redo actions on the annotations using Syncfusion .NET MAUI PDF Viewer (SfPdfViewer) control.
 platform: MAUI
 control: SfPdfViewer
 documentation: ug
+keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .net maui open pdf, maui pdf viewer, maui pdf view
 ---
 
 # Undo and Redo in .NET MAUI PDF Viewer (SfPdfViewer)
@@ -51,7 +52,7 @@ void PerformUndo()
 
 ## Redo
 
-You can perform redo to restore the last undone function using the [RedoCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_RedoCommand) of the `SfPdfViewer`. The following code examples explains how to bind the command to a button in XAML to perform the action on button click and also executing the command programmatically as well.
+You can perform redo to restore the last undone function using the [RedoCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_RedoCommand) of the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html).. The following code examples explains how to bind the command to a button in XAML to perform the action on button click and also executing the command programmatically as well.
 
 {% tabs %}
 {% highlight XAML %}
