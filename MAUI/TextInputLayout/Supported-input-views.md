@@ -74,6 +74,15 @@ inputLayout.Content = new Editor();
 
 To initialize the [Autocomplete](https://help.syncfusion.com/maui/autocomplete/overview) control and launch it in each platform, refer to the [getting started with autocomplete](https://help.syncfusion.com/maui/autocomplete/getting-started) documentation.
 
+
+### Selection Mode
+
+There are two different selection modes in [Autocomplete](https://help.syncfusion.com/maui/autocomplete/selection) control.
+
+N> For more information regarding Autocomplete selection modes, refer to the [Single Selection](https://help.syncfusion.com/maui/autocomplete/selection#single-selection) and [Multiple Selection](https://help.syncfusion.com/maui/autocomplete/selection#multiple-selection) documentation.
+
+#### Single Selection
+
 {% tabs %} 
 
 {% highlight xaml %} 
@@ -111,11 +120,73 @@ inputLayout.Content = autocomplete;
 
 {% endtabs %}
 
-![Autocomplete](images/SupportedInputViews/Autocomplete.jpg)
+![Autocomplete Single Selection](images/SupportedInputViews/Autocomplete.jpg)
+
+#### Multiple Selection
+
+{% tabs %} 
+
+{% highlight xaml %} 
+
+<StackLayout Spacing="10">
+<inputLayout:SfTextInputLayout Hint="Delimiter" ContainerType="Outlined" WidthRequest="300" HeightRequest="80" >
+   <autocomplete:SfAutocomplete SelectionMode="Multiple" Placeholder="Enter" MultiSelectionDisplayMode="Delimiter" >
+      <autocomplete:SfAutocomplete.ItemsSource>
+        <x:Array Type="{x:Type x:String}">
+            <x:String>Uganda</x:String>
+            <x:String>Ukraine</x:String>
+            <x:String>United Arab Emirates</x:String>
+            <x:String>United States</x:String>
+         </x:Array>
+      </autocomplete:SfAutocomplete.ItemsSource>
+   </autocomplete:SfAutocomplete>
+</inputLayout:SfTextInputLayout>
+
+<inputLayout:SfTextInputLayout Hint="Token-None" ContainerType="Outlined" WidthRequest="300" HeightRequest="80" >
+   <autocomplete:SfAutocomplete SelectionMode="Multiple" Placeholder="Enter" >
+      <autocomplete:SfAutocomplete.ItemsSource>
+        <x:Array Type="{x:Type x:String}">
+            <x:String>Uganda</x:String>
+            <x:String>Ukraine</x:String>
+            <x:String>United Arab Emirates</x:String>
+            <x:String>United States</x:String>
+         </x:Array>
+      </autocomplete:SfAutocomplete.ItemsSource>
+   </autocomplete:SfAutocomplete>
+</inputLayout:SfTextInputLayout>
+
+<inputLayout:SfTextInputLayout Hint="Token-AutoSize" ContainerType="Outlined" WidthRequest="300" >
+   <autocomplete:SfAutocomplete SelectionMode="Multiple" Placeholder="Enter" TokensWrapMode="Wrap" EnableAutoSize="True" >
+      <autocomplete:SfAutocomplete.ItemsSource>
+        <x:Array Type="{x:Type x:String}">
+            <x:String>Uganda</x:String>
+            <x:String>Ukraine</x:String>
+            <x:String>United Arab Emirates</x:String>
+            <x:String>United States</x:String>
+         </x:Array>
+      </autocomplete:SfAutocomplete.ItemsSource>
+   </autocomplete:SfAutocomplete>
+</inputLayout:SfTextInputLayout>
+</StackLayout>
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Autocomplete Multi Selection](images/SupportedInputViews/Autocomplete-Multi.jpg)
 
 ## Combo box
 
 To initialize the [ComboBox](https://help.syncfusion.com/maui/combobox/overview) control and launch it in each platform, refer to the [getting started with combo box](https://help.syncfusion.com/maui/combobox/getting-started) documentation.
+
+### Selection Mode
+
+There are two different selection modes in [ComboBox](https://help.syncfusion.com/maui/combobox/selection) control.
+
+
+N> For more information regarding ComboBox selection modes, refer to the [Single Selection](https://help.syncfusion.com/maui/combobox/selection#single-selection) and [Multiple Selection](https://help.syncfusion.com/maui/combobox/selection#multiple-selection) documentation.
+
+#### Single Selection
 
 {% tabs %} 
 
@@ -154,7 +225,60 @@ inputLayout.Content = combobox;
 
 {% endtabs %}
 
-![Combobox](images/SupportedInputViews/ComboBox.jpg)
+![Combobox Single Selection](images/SupportedInputViews/ComboBox.jpg)
+
+#### Multiple Selection
+
+{% tabs %} 
+
+{% highlight xaml %} 
+
+<StackLayout Spacing="10">
+<inputLayout:SfTextInputLayout Hint="Delimiter" ContainerType="Outlined" WidthRequest="300" HeightRequest="80" >
+   <combobox:SfComboBox SelectionMode="Multiple" Placeholder="Enter" MultiSelectionDisplayMode="Delimiter" >
+      <combobox:SfComboBox.ItemsSource>
+        <x:Array Type="{x:Type x:String}">
+            <x:String>Uganda</x:String>
+            <x:String>Ukraine</x:String>
+            <x:String>United Arab Emirates</x:String>
+            <x:String>United States</x:String>
+         </x:Array>
+      </combobox:SfComboBox.ItemsSource>
+   </combobox:SfComboBox>
+</inputLayout:SfTextInputLayout>
+
+<inputLayout:SfTextInputLayout Hint="Token-None" ContainerType="Outlined" WidthRequest="300" HeightRequest="80" >
+   <combobox:SfComboBox SelectionMode="Multiple" Placeholder="Enter" >
+      <combobox:SfComboBox.ItemsSource>
+        <x:Array Type="{x:Type x:String}">
+            <x:String>Uganda</x:String>
+            <x:String>Ukraine</x:String>
+            <x:String>United Arab Emirates</x:String>
+            <x:String>United States</x:String>
+         </x:Array>
+      </combobox:SfComboBox.ItemsSource>
+   </combobox:SfComboBox>
+</inputLayout:SfTextInputLayout>
+
+<inputLayout:SfTextInputLayout Hint="Token-AutoSize" ContainerType="Outlined" WidthRequest="300" >
+   <combobox:SfComboBox SelectionMode="Multiple" Placeholder="Enter" TokensWrapMode="Wrap" EnableAutoSize="True" >
+      <combobox:SfComboBox.ItemsSource>
+        <x:Array Type="{x:Type x:String}">
+            <x:String>Uganda</x:String>
+            <x:String>Ukraine</x:String>
+            <x:String>United Arab Emirates</x:String>
+            <x:String>United States</x:String>
+         </x:Array>
+      </combobox:SfComboBox.ItemsSource>
+   </combobox:SfComboBox>
+</inputLayout:SfTextInputLayout>
+</StackLayout>
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![ComboBox Multi Selection](images/SupportedInputViews/ComboBox-Multi.jpg)
 
 ## Masked Entry
 
