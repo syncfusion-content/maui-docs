@@ -141,6 +141,7 @@ SfPyramidChart chart = new SfPyramidChart()
     XBindingPath = "Name",
     YBindingPath = "Height",
     ItemsSource = new ViewModel().Data,
+
 };
    
 chart.Legend = new ChartLegend()
@@ -148,6 +149,7 @@ chart.Legend = new ChartLegend()
     Placement = LegendPlacement.Bottom 
 };
 
+chart.LegendIcon = ChartLegendIconType.Diamond;
 this.Content = chart;
 
 {% endhighlight %}
@@ -221,12 +223,10 @@ SfPyramidChart chart = new SfPyramidChart()
     XBindingPath = "Name",
     YBindingPath = "Height",
     ItemsSource = new ViewModel().Data,
-    LegendIcon = ChartLegendIconType.Diamond
 };
 . . .
 ChartLegend legend = new ChartLegend();
-legend.Placement = LegendPlacement.Bottom;
-
+chart.LegendIcon = ChartLegendIconType.Diamond;
 legend.ItemsLayout = new FlexLayout()
 {
     Wrap = FlexWrap.Wrap,
