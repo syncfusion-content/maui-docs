@@ -570,7 +570,7 @@ The [DropDownItemHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inp
 
 ![.NET MAUI ComboBox DropDown Item Height](Images/UICustomization/DropDownItemHeight.png)
 
-### Customize in DropDownPlacement
+### Customize the DropDownPlacement
 
 The drop-down that shows the filtered items will be placed automatically based on the available space and can also be customized using the `DropDownPlacement` property.
 
@@ -603,7 +603,7 @@ comboBox.DropDownPlacement = DropDownPlacement.Top;
 
 ![.NET MAUI ComboBox Dropdownplacement.](Images/UICustomization/placementcombo.png)
 
-### Customize in DropDown ItemPadding
+### Customize the DropDown ItemPadding
 
 The comboBox enables the user to provide padding for the items inside dropdown using `ItemPadding` property.
 
@@ -627,9 +627,9 @@ comboBox.ItemPadding = new Thickness(10,20,0,0);
 
 ![.NET MAUI ComboBox Itempadding.](Images/UICustomization/Itempadding.png)
 
-### Customize in DropDown Width
+### Customize the DropDown Width
 
-The `DropdownWidth` property is used to modify the height of the dropdown items.
+The `DropdownWidth` property is used to modify the Width of the dropdown.
 
 {% tabs %}
 {% highlight xaml %}
