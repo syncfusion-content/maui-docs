@@ -60,7 +60,7 @@ Styling can be applied to a particular row based on RowIndex property by writing
     <ContentPage.Resources>
         <local:ColorConverter x:Key="converter"/>
         <Style TargetType="syncfusion:DataGridRow">
-            <Setter Property="Background" Value="{Binding Source={RelativeSource Mode=Self}, Converter={StaticResource Key=converter}}"/>
+            <Setter Property="Background" Value="{Binding Source={RelativeSource Mode=Self}, Converter={StaticResource converter}}"/>
         </Style>
     </ContentPage.Resources>
 </ContentPage>
@@ -96,7 +96,7 @@ Styling can be applied to a particular row based on the RowData property by writ
     <ContentPage.Resources>
         <local:ColorConverter x:Key="converter"/>
         <Style TargetType="syncfusion:DataGridRow">
-            <Setter Property="Background" Value="{Binding Source={RelativeSource Mode=Self}, Converter={StaticResource Key=converter}}"/>
+            <Setter Property="Background" Value="{Binding Source={RelativeSource Mode=Self}, Converter={StaticResource converter}}"/>
         </Style>
     </ContentPage.Resources>
 </ContentPage>
@@ -215,8 +215,8 @@ Styling can be applied to a particular cell based on RowIndex, ColumnIndex and M
         <local:ColorConverter x:Key="converter"/>
         <local:ForeColorConverter x:Key="foreColorconverter"/>
         <Style TargetType="syncfusion:DataGridCell">
-            <Setter Property="Background" Value="{Binding Source={RelativeSource Mode=Self}, Converter={StaticResource Key=converter}}"/>
-            <Setter Property="TextColor" Value="{Binding Source={RelativeSource Mode=Self}, Converter={StaticResource Key=foreColorconverter}}"/>
+            <Setter Property="Background" Value="{Binding Source={RelativeSource Mode=Self}, Converter={StaticResource converter}}"/>
+            <Setter Property="TextColor" Value="{Binding Source={RelativeSource Mode=Self}, Converter={StaticResource foreColorconverter}}"/>
         </Style>
     </ContentPage.Resources>
 </ContentPage>
@@ -287,8 +287,8 @@ Styling can be applied to a particular cell based on RowIndex and ColumnIndex pr
         <local:ColorConverter x:Key="converter"/>
         <local:ForeColorConverter x:Key="foreColorconverter"/>
         <Style TargetType="syncfusion:DataGridCell">
-            <Setter Property="Background" Value="{Binding Source={RelativeSource Mode=Self}, Converter={StaticResource Key=converter}}"/>
-            <Setter Property="TextColor" Value="{Binding Source={RelativeSource Mode=Self}, Converter={StaticResource Key=foreColorconverter}}"/>
+            <Setter Property="Background" Value="{Binding Source={RelativeSource Mode=Self}, Converter={StaticResource converter}}"/>
+            <Setter Property="TextColor" Value="{Binding Source={RelativeSource Mode=Self}, Converter={StaticResource foreColorconverter}}"/>
         </Style>
     </ContentPage.Resources>
 </ContentPage>
@@ -343,8 +343,8 @@ Styling can be applied to a particular cell based on CellValue property by writi
         <local:ColorConverter x:Key="converter"/>
         <local:ForeColorConverter x:Key="foreColorconverter"/>
         <Style TargetType="syncfusion:DataGridCell">
-            <Setter Property="Background" Value="{Binding Source={RelativeSource Mode=Self}, Converter={StaticResource Key=converter}}"/>
-            <Setter Property="TextColor" Value="{Binding Source={RelativeSource Mode=Self}, Converter={StaticResource Key=foreColorconverter}}"/>
+            <Setter Property="Background" Value="{Binding Source={RelativeSource Mode=Self}, Converter={StaticResource converter}}"/>
+            <Setter Property="TextColor" Value="{Binding Source={RelativeSource Mode=Self}, Converter={StaticResource foreColorconverter}}"/>
         </Style>
     </ContentPage.Resources>
 </ContentPage>
