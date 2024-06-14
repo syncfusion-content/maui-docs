@@ -20,9 +20,33 @@ The following stamp annotation types are now available in the PDF Viewer.
 
 ## Add stamps to a PDF document
 
-This section will go through how to add stamp annotations to a PDF document programmatically to a PDF document.
+This section will go through how to add stamp annotations to a PDF page using toolbar as well as programmatically.
 
-### Add standard stamps
+### Add standard stamps using toolbar
+
+On the built-in toolbar, a tool for standard stamps is available that contains 18 standard stamps, which are most commonly used in documents. Using that, you can choose your standard stamp and add it to the tapped position.
+
+The following example explains how to choose a standard stamp and add it to the first page of a PDF document using the built-in toolbar on the desktop.
+
+![Desktop Standard Stamp](Images/DesktopStamp)
+
+The following example explains how to choose a standard stamp and add it to the first page of a PDF document using the built-in toolbar on the mobile.
+
+![Mobile Standard Stamp](Images/MobileStamp)
+
+### Add custom stamps using toolbar
+
+On the built-in toolbar, you can create your own custom stamp using the built-in dialog box and add it to a PDF document.
+
+The following example explains how to create a custom stamp using the built-in dialog box and add it to a PDF document on the desktop.
+
+![Desktop Custom Stamp](Images/DesktopCustomStamp)
+
+The following example explains how to create a custom stamp using the built-in dialog box and add it to a PDF document on the mobile.
+
+![Mobile Custom Stamp](Images/MobileCustomStamp)
+
+### Add standard stamps without using toolbar
 
 There are 18 standard stamp types are available in the `SfPdfViewer` that are most commonly used in documents. The appropriate standard stamp type can be selected from the [StampType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.StampType.html) enumeration. 
 
@@ -58,7 +82,7 @@ The following image represents the approved standard stamp appearance in the PDF
 
 ![Standard Approved Stamp.](Images/Annotations/approved-stamp.png)
 
-### Add custom stamps
+### Add custom stamps without using toolbar
 
 You can create a custom stamp from any images and add it to a PDF document. The following example explains how to create a custom stamp from an image in the application and add it to a PDF document using the `AddAnnotation` method of the `SfPdfViewer`.
 
