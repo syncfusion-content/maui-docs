@@ -71,7 +71,7 @@ private void Button_Clicked(object sender, System.EventArgs e)
 
 {% endtabs %}
 
-![Dialog mode in .NET MAUI Calendar.](images/calendar-mode/calendar-dialog-demo.gif)
+![Dialog mode in .NET MAUI Calendar.](images/calendar-mode/calendar_popup.gif)
 
 
 ## Relative Dialog Mode
