@@ -168,7 +168,7 @@ Xamarin - {{'[MultiSelectMode](https://help.syncfusion.com/cr/xamarin/Syncfusion
 <td>{{'[SelectedChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_SelectionChanged)'| markdownify }}</td>
 <td>{{'[SelectionChangedEventArgs](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ComboBox.SelectionChangedEventArgs.html)'| markdownify }}<br/> <ul><li> {{'[Value](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ComboBox.SelectionChangedEventArgs.html#Syncfusion_XForms_ComboBox_SelectionChangedEventArgs_Value)'| markdownify }}</li></ul></td>
 <td>{{'[SelectionChangedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SelectionChangedEventArgs.html)'| markdownify }}<br/> <ul> <li> {{'[PreviousSelection](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SelectionChangedEventArgs.html#Syncfusion_Maui_Inputs_SelectionChangedEventArgs_PreviousSelection)'| markdownify }} </li> <li>  {{'[CurrentSelection](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SelectionChangedEventArgs.html#Syncfusion_Maui_Inputs_SelectionChangedEventArgs_CurrentSelection)'| markdownify }}</li> </ul></td>
-<td>Raises when an item is selected in the dropdown or the SelectedItem is set programatically.Returns the previous selected item and the currently selected item</td></tr>
+<td>Raises when an item is selected in the dropdown or the SelectedItem is set programmatically.Returns the previous selected item and the currently selected item</td></tr>
 
 </table> 
 
