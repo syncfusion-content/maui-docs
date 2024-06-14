@@ -24,8 +24,8 @@ To enable the zooming and panning in the chart, create an instance of [ChartZoom
 
 <chart:SfCartesianChart>
     ...
-<chart:SfCartesianChart.ZoomPanBehavior>
-        <chart:ChartZoomPanBehavior />
+    <chart:SfCartesianChart.ZoomPanBehavior>
+        <chart:ChartZoomPanBehavior/>
     </chart:SfCartesianChart.ZoomPanBehavior>
 </chart:SfCartesianChart>
 
@@ -88,28 +88,28 @@ The directional Zooming feature enhances your zooming experience by allowing you
 
 {% highlight xaml %}
 
-    <chart:SfCartesianChart>
-        ...
-        <chart:SfCartesianChart.ZoomPanBehavior>
-            <chart:ChartZoomPanBehavior EnablePinchZooming="True"
-                                        EnableDirectionalZooming="True"/>
-        </chart:SfCartesianChart.ZoomPanBehavior>
-        ...
-    </chart:SfCartesianChart>
+<chart:SfCartesianChart>
+    ...
+    <chart:SfCartesianChart.ZoomPanBehavior>
+        <chart:ChartZoomPanBehavior EnablePinchZooming="True"
+                                    EnableDirectionalZooming="True"/>
+    </chart:SfCartesianChart.ZoomPanBehavior>
+    ...
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
-    ...
-    ChartZoomPanBehavior zooming = new ChartZoomPanBehavior()
-    {
-        EnablePinchZooming = true,
-        EnableDirectionalZooming = true
-    };
+SfCartesianChart chart = new SfCartesianChart();
+...
+ChartZoomPanBehavior zooming = new ChartZoomPanBehavior()
+{
+    EnablePinchZooming = true,
+    EnableDirectionalZooming = true
+};
 
-    chart.ZoomPanBehavior = zooming;
+chart.ZoomPanBehavior = zooming;
 
 {% endhighlight %}
 
@@ -145,6 +145,7 @@ CategoryAxis primaryAxis = new CategoryAxis()
     ZoomFactor = 0.3,
     ZoomPosition = 0.5
 };
+
 chart.XAxes.Add(primaryAxis);
 ...
 
@@ -166,7 +167,7 @@ Following code example illustrates how to restrict the chart to be zoomed only a
 
 <chart:SfCartesianChart>
     <chart:SfCartesianChart.ZoomPanBehavior>
-        <chart:ChartZoomPanBehavior ZoomMode="X" />
+        <chart:ChartZoomPanBehavior ZoomMode="X"/>
     </chart:SfCartesianChart.ZoomPanBehavior>
     ...
 </chart:SfCartesianChart>
@@ -197,7 +198,7 @@ Following code example illustrates how to restrict the chart to be zoomed only a
 
 <chart:SfCartesianChart>
     <chart:SfCartesianChart.ZoomPanBehavior>
-        <chart:ChartZoomPanBehavior ZoomMode="Y" />
+        <chart:ChartZoomPanBehavior ZoomMode="Y"/>
     </chart:SfCartesianChart.ZoomPanBehavior>
     ...
 </chart:SfCartesianChart>
@@ -295,10 +296,10 @@ N> To perform selection zooming on a desktop, hold the left mouse button, double
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-        <chart:SfCartesianChart.ZoomPanBehavior>
-            <chart:ChartZoomPanBehavior EnableSelectionZooming ="True"/>
-        </chart:SfCartesianChart.ZoomPanBehavior>
-        ...
+    <chart:SfCartesianChart.ZoomPanBehavior>
+        <chart:ChartZoomPanBehavior EnableSelectionZooming ="True"/>
+    </chart:SfCartesianChart.ZoomPanBehavior>
+    ...
 </chart:SfCartesianChart>
 
 {% endhighlight %}
@@ -355,30 +356,29 @@ The following code sample illustrates how enable to axis trackball label while s
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-        . . .
-            <chart:SfCartesianChart.XAxes>
-                <chart:NumericalAxis ShowTrackballLabel="True">
-                    <chart:NumericalAxis.TrackballLabelStyle>
-                        <chart:ChartLabelStyle Background="LightBlue"   
-                                FontSize="15" 
-                                CornerRadius="5"
-                                StrokeWidth="2" 
-                                Stroke="Gray" />
-                    </chart:NumericalAxis.TrackballLabelStyle>
-                </chart:NumericalAxis>
-            </chart:SfCartesianChart.XAxes>
-            <chart:SfCartesianChart.YAxes>
-                <chart:NumericalAxis ShowTrackballLabel="True">
-                    <chart:NumericalAxis.TrackballLabelStyle>
-                        <chart:ChartLabelStyle Background="LightBlue"   
-                                FontSize="15" 
-                                CornerRadius="5"
-                                StrokeWidth="2" 
-                                Stroke="Gray" />
-                    </chart:NumericalAxis.TrackballLabelStyle>
-                </chart:NumericalAxis>
-            </chart:SfCartesianChart.YAxes>
-            
+    . . .
+    <chart:SfCartesianChart.XAxes>
+        <chart:NumericalAxis ShowTrackballLabel="True">
+            <chart:NumericalAxis.TrackballLabelStyle>
+                <chart:ChartLabelStyle Background="LightBlue"   
+                                       FontSize="15" 
+                                       CornerRadius="5"
+                                       StrokeWidth="2" 
+                                       Stroke="Gray"/>
+            </chart:NumericalAxis.TrackballLabelStyle>
+        </chart:NumericalAxis>
+    </chart:SfCartesianChart.XAxes>
+    <chart:SfCartesianChart.YAxes>
+        <chart:NumericalAxis ShowTrackballLabel="True">
+            <chart:NumericalAxis.TrackballLabelStyle>
+                <chart:ChartLabelStyle Background="LightBlue"   
+                                       FontSize="15" 
+                                       CornerRadius="5"
+                                       StrokeWidth="2" 
+                                       Stroke="Gray"/>
+            </chart:NumericalAxis.TrackballLabelStyle>
+        </chart:NumericalAxis>
+    </chart:SfCartesianChart.YAxes>            
 </chart:SfCartesianChart>
 
 {% endhighlight %}
