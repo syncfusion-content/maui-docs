@@ -26,10 +26,6 @@ This section will go through how to add stamp annotations to a PDF page using to
 
 On the built-in toolbar, a tool for standard stamps is available that contains 18 standard stamps, which are most commonly used in documents. Using that, you can choose your standard stamp and add it to the tapped position.
 
-The following example explains how to choose a standard stamp and add it to the first page of a PDF document using the built-in toolbar on the desktop.
-
-![Desktop Standard Stamp](Images/DesktopStamp.gif)
-
 The following example explains how to choose a standard stamp and add it to the first page of a PDF document using the built-in toolbar on the mobile.
 
 ![Mobile Standard Stamp](Images/MobileStamp.gif)
