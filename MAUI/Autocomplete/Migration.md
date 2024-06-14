@@ -57,6 +57,33 @@ To migrate easier from Xamarin SfAutoComplete to [.NET MAUI SfAutocomplete](http
 <td> {{'[ItemsSource](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfAutoComplete.XForms.SfAutoComplete.html#Syncfusion_SfAutoComplete_XForms_SfAutoComplete_ItemsSource)'| markdownify }},<br/> {{'[DataSource](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfAutoComplete.XForms.SfAutoComplete.html#Syncfusion_SfAutoComplete_XForms_SfAutoComplete_DataSource)'| markdownify }},<br/> {{'[AutoCompleteSource](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfAutoComplete.XForms.SfAutoComplete.html#Syncfusion_SfAutoComplete_XForms_SfAutoComplete_AutoCompleteSource)'| markdownify }} </td>
 <td>{{'[ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_ItemsSource)'| markdownify }}</td>
 <td>Gets or sets the data to be populated in the control.</td></tr>
+
+<tr>
+<td>
+{{'[Delimiter](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfAutoComplete.XForms.SfAutoComplete.html#Syncfusion_SfAutoComplete_XForms_SfAutoComplete_Delimiter)'| markdownify }}
+</td>
+<td>
+{{'[DelimiterText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_DelimiterText)'| markdownify }}
+</td>
+<td>Gets or sets a string as delimiter which is displayed between the selected items in multiple selection mode.</td>
+</tr>
+
+<tr>
+<td>
+{{'[NoResultsFoundFontAttributes](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfAutoComplete.XForms.SfAutoComplete.html#Syncfusion_SfAutoComplete_XForms_SfAutoComplete_NoResultsFoundFontAttributes)'| markdownify }},
+<br/>
+{{'[NoResultsFoundFontFamily](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfAutoComplete.XForms.SfAutoComplete.html#Syncfusion_SfAutoComplete_XForms_SfAutoComplete_NoResultsFoundFontFamily)'| markdownify }},
+<br/>
+{{'[NoResultsFoundFontSize](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfAutoComplete.XForms.SfAutoComplete.html#Syncfusion_SfAutoComplete_XForms_SfAutoComplete_NoResultsFoundFontSize)'| markdownify }},
+<br/>
+{{'[NoResultsFoundTextColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfAutoComplete.XForms.SfAutoComplete.html#Syncfusion_SfAutoComplete_XForms_SfAutoComplete_NoResultsFoundTextColor)'| markdownify }}
+</td>
+<td>
+{{'[NoResultsFoundTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_NoResultsFoundTemplate)'| markdownify }}
+</td>
+<td>Gets or sets the DataTemplate used to display in the dropdown when no results are found in the search.</td>
+</tr>
+
 </table> 
 
 ## Enums
@@ -101,6 +128,28 @@ Xamarin - {{'[SuggestionBoxPlacement](https://help.syncfusion.com/cr/xamarin/Syn
 </td>
 <td>Gets or sets the position of the drop-down.</td>
 </tr>
+
+<tr>
+<td>
+Xamarin - {{'[MultiSelectMode](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfAutoComplete.XForms.MultiSelectMode.html)'| markdownify }} 
+<br/>
+.NET MAUI - {{'[MultiSelectionDisplayMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html#Syncfusion_Maui_Inputs_SfAutocomplete_MultiSelectionDisplayMode)'| markdownify }} 
+</td>
+<td>
+{{'[Delimiter](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfAutoComplete.XForms.MultiSelectMode.html#Syncfusion_SfAutoComplete_XForms_MultiSelectMode_Delimiter)'| markdownify }},
+<br/>
+{{'[None](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfAutoComplete.XForms.MultiSelectMode.html#Syncfusion_SfAutoComplete_XForms_MultiSelectMode_None)'| markdownify }},
+<br/>
+{{'[Token](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfAutoComplete.XForms.MultiSelectMode.html#Syncfusion_SfAutoComplete_XForms_MultiSelectMode_Token)'| markdownify }}
+</td>
+<td>
+{{'[Delimiter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.AutocompleteMultiSelectionDisplayMode.html#Syncfusion_Maui_Inputs_AutocompleteMultiSelectionDisplayMode_Delimiter)'| markdownify }},
+<br/>
+{{'[Token](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.AutocompleteMultiSelectionDisplayMode.html#Syncfusion_Maui_Inputs_AutocompleteMultiSelectionDisplayMode_Token)'| markdownify }}
+</td>
+<td>Gets or sets the multi selection mode for the SfAutocomplete control.</td>
+</tr>
+
 </table>
 
 ## Events
@@ -120,10 +169,4 @@ Xamarin - {{'[SuggestionBoxPlacement](https://help.syncfusion.com/cr/xamarin/Syn
 
 ## Upcoming features
 
-  * Multiple Selection with Delimiter
   * Diacritic Sensitivity
-  * Header and Footer
-  * Highlighting Text
-  * Load More Feature
-  * Minimum Prefix Character
-  * Customizations in Drop-Down
