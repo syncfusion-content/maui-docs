@@ -69,6 +69,11 @@ To make migration from [Xamarin SfDataGrid](https://www.syncfusion.com/xamarin-u
 <td>{{'[DataPagerDisplayMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataPager.DataPagerDisplayMode.html)'| markdownify }}</td>
 <td>Defines the possible display mode of SfDataPager.</td>
 </tr>
+<tr>
+<td>{{'[LoadMoreViewPosition](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.LoadMoreViewPosition.html)'| markdownify }}</td>
+<td>{{'[DataGridLoadMorePosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridLoadMorePosition.html)'| markdownify }}</td>
+<td>Defines the position of DataGridLoadMoreView.</td>
+</tr>
 </table>
 
 ## Properties
@@ -227,7 +232,6 @@ To make migration from [Xamarin SfDataGrid](https://www.syncfusion.com/xamarin-u
 <td>-</td>
 <td>This property isn't available because the [UseOnDemandPaging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataPager.SfDataPager.html#Syncfusion_Maui_DataGrid_DataPager_SfDataPager_UseOnDemandPaging) property alone is sufficient to enable on-demand paging in the MAUI DataGrid.</td>
 </tr>
-
 </table>
 
 ## Events
@@ -267,15 +271,9 @@ By writing the converter, you can achieve the requirement conditionally. Refer {
 </tr>
 <tr>
 <td>{{'[PageIndexChanging](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.DataPager.SfDataPager.html#Syncfusion_SfDataGrid_XForms_DataPager_SfDataPager_PageIndexChanging)'| markdownify }}</td>
-<td>{{'[PageChanging]()'| markdownify }}</td>
+<td>{{'[PageChanging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataPager.SfDataPager.html#Syncfusion_Maui_DataGrid_DataPager_SfDataPager_PageChanging)'| markdownify }}</td>
 <td>Occurs when page index is being changed.</td>
 </tr>
-<tr>
-<td>{{'[PageIndexChanged](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.DataPager.SfDataPager.html#Syncfusion_SfDataGrid_XForms_DataPager_SfDataPager_PageIndexChanged)'| markdownify }}</td>
-<td>{{'[PageChanged]()'| markdownify }}</td>
-<td>Occurs when page index is changed.</td>
-</tr>
-
 </table>
 
 ## Methods
@@ -291,6 +289,11 @@ By writing the converter, you can achieve the requirement conditionally. Refer {
 <td>Gets the row height to fit that row based on the content.<br>
 We have passed the optional parameters such as {{'[canIncludeHiddenColumns](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.GridRowSizingOptions.html#Syncfusion_SfDataGrid_XForms_GridRowSizingOptions_CanIncludeHiddenColumns)'| markdownify }} and {{'[excludedColumns](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.GridRowSizingOptions.html#Syncfusion_SfDataGrid_XForms_GridRowSizingOptions_ExcludeColumns)'| markdownify }} where as we have not provided the {{'[GridRowSizingOptions](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.GridRowSizingOptions.html)'| markdownify }} class as parameters.
 </td>
+</tr>
+<tr>
+<td>{{'[UpdateLoadMoreStyle](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.LoadMoreView.html#Syncfusion_SfDataGrid_XForms_LoadMoreView_UpdateLoadMoreStyle_Syncfusion_SfDataGrid_XForms_DataGridStyle_)'| markdownify }}</td>
+<td>{{'[SetLoadMoreViewStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridLoadMoreView.html#Syncfusion_Maui_DataGrid_DataGridLoadMoreView_SetLoadMoreViewStyle_Syncfusion_Maui_DataGrid_DataGridStyle_)'| markdownify }}</td>
+<td>Sets the style to the LoadMoreView.</td>
 </tr>
 </table>
 
@@ -410,8 +413,14 @@ We have passed the optional parameters such as {{'[canIncludeHiddenColumns](http
 
 <tr>
 <td>{{'[AppearanceManager](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.DataPager.AppearanceManager.html)'| markdownify }}</td>
-<td>{{'[DataPagerStyle]()'| markdownify }}</td>
+<td>{{'[DataPagerStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataPager.DataPagerStyle.html)'| markdownify }}</td>
 <td>Represents a class that enables users to customize the appearance of the data pager.</td>
+</tr>
+
+<tr>
+<td>{{'[LoadMoreView](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.LoadMoreView.html)'| markdownify }}</td>
+<td>{{'[DataGridLoadMoreView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridLoadMoreView.html)'| markdownify }}</td>
+<td>Represents a class that enables users to create the load more view.</td>
 </tr>
 
 </table>
