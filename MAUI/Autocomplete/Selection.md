@@ -80,40 +80,14 @@ The following gif image illustrates the result of the above code:
 
 ## Multiple selection
 
-The AutoComplete allows user to select multiple values by beginning to enter the input and selecting items from the drop-down list. The multi-select AutoComplete mode can be enabled by setting the [SelectionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html#Syncfusion_Maui_Inputs_SfAutocomplete_SelectionMode) property as [Multiple](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.AutocompleteSelectionMode.html#Syncfusion_Maui_Inputs_AutocompleteSelectionMode_Multiple). 
+The Autocomplete allows user to select multiple values from the drop-down list by setting the [SelectionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html#Syncfusion_Maui_Inputs_SfAutocomplete_SelectionMode) property as [Multiple](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.AutocompleteSelectionMode.html#Syncfusion_Maui_Inputs_AutocompleteSelectionMode_Multiple).
 
-Selected items will be displayed with a  token representation and each tokenized items can be removed by clicking their close button. The selected items can be retrieved from the [SelectedItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_SelectedItems) property.
+The selected items can be changed programmatically by using the [SelectedItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_SelectedItems) property. This property allows both getting and setting of the selected items in the Autocomplete control.
 
-{% tabs %}
+Also there are two ways to display multi-selection items in the AutoComplete control using [MultiSelectionDisplayMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.AutocompleteMultiSelectionDisplayMode.html) property. By default MultiSelectionDisplayMode  is [Token](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.AutocompleteMultiSelectionDisplayMode.html#Syncfusion_Maui_Inputs_AutocompleteMultiSelectionDisplayMode_Token).
 
-{% highlight XAML %}
-
- <editors:SfAutocomplete
- SelectionMode="Multiple"
- WidthRequest="350"
- HeightRequest="50"
- ItemsSource="{Binding SocialMedias}"
- DisplayMemberPath="Name"
- TextMemberPath="Name"    
- Width="250"
- x:Name="autoComplete" />
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-autoComplete.SelectionMode = Syncfusion.Maui.Inputs.AutocompleteSelectionMode.Multiple;
-
-{% endhighlight %}
-{% endtabs %}
-
-The following gif image illustrates the result of the above code:
-
-![.NET MAUI Autocomplete with multi selection mode.](Images/Selection/net-maui-autocomplete-multiselection.gif)
-
-### Programmatic selection
-
-The selected items can be changed programmatically by using the [SelectedItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_SelectedItems) property of Autocomplete control. This property allows both getting and setting of the selected items in the Autocomplete control.
+* [Delimiter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.AutocompleteMultiSelectionDisplayMode.html#Syncfusion_Maui_Inputs_AutocompleteMultiSelectionDisplayMode_Delimiter)
+* [Token](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.AutocompleteMultiSelectionDisplayMode.html#Syncfusion_Maui_Inputs_AutocompleteMultiSelectionDisplayMode_Token)
 
 {% tabs %}
 
@@ -144,9 +118,34 @@ The selected items can be changed programmatically by using the [SelectedItems](
 
 {% endtabs %}
 
-### TokensWrapMode
+### Delimiter
 
-There are two ways to display multi-selection items in the AutoComplete control. They are:
+When setting [MultiSelectionDisplayMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.AutocompleteMultiSelectionDisplayMode.html) to [Delimiter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.AutocompleteMultiSelectionDisplayMode.html#Syncfusion_Maui_Inputs_AutocompleteMultiSelectionDisplayMode_Delimiter), the selected items can be separated by the desired character specified as the delimiter. We can set the delimiter text to any preferred character using the [DelimiterText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_DelimiterText) property. By default DelimiterText is ",".
+
+{% tabs %}
+
+{% highlight xaml %}
+
+ <editors:SfAutocomplete x:Name="autoComplete" 
+                         HeightRequest="50"
+                         WidthRequest="350"
+                         ItemsSource="{Binding SocialMedias}"
+                         SelectionMode="Multiple"
+                         MultiSelectionDisplayMode="Delimiter"
+                         DelimiterText="/"
+                         MaxDropDownHeight="250"
+                         DisplayMemberPath="Name"
+                         TextMemberPath="Name"
+                         Placeholder="Enter Media" />
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![.NET MAUI Autocomplete with MultiSelectionDisplayMode as Delimiter.](Images/Selection/net-maui-autocomplete-delimiter.jpg)
+
+### Token
+Multi-selection token mode has two different layouts to display the selected items by setting [TokensWrapMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html#Syncfusion_Maui_Inputs_SfAutocomplete_TokensWrapMode) property.
 
 * [Wrap](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.AutocompleteTokensWrapMode.html#Syncfusion_Maui_Inputs_AutocompleteTokensWrapMode_Wrap)
 * [None](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.AutocompleteTokensWrapMode.html#Syncfusion_Maui_Inputs_AutocompleteTokensWrapMode_None)
@@ -320,9 +319,8 @@ The following image illustrates the result of the above code:
 
 ## Is Drop-Down Open
 
-The [IsDropDownOpen](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDropdownEntry.html#Syncfusion_Maui_Core_SfDropdownEntry_IsDropDownOpenProperty) property in the Autocomplete control can be used to get a boolean value indicating whether the drop-down is open or closed state. It returns `true` if the drop-down is open, otherwise `false`.
+In the Autocomplete control, the drop-down can be opened or closed programmatically by using the [IsDropDownOpen](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDropdownEntry.html#Syncfusion_Maui_Core_SfDropdownEntry_IsDropDownOpen) property. The default value of the IsDropDownOpen property is `false`.
 
-N> Currently, users can only get the boolean value based on whether a drop-down menu is open or not; the property "IsDropDownOpen" cannot be set.
 
 {% tabs %}
 {% highlight XAML %}
@@ -330,6 +328,7 @@ N> Currently, users can only get the boolean value based on whether a drop-down 
 <editors:SfAutocomplete x:Name="autocomplete"
                         WidthRequest="250"
                         ItemsSource="{Binding SocialMedias}"
+                        IsDropDownOpen = true;
                         DisplayMemberPath="Name"
                         TextMemberPath="Name">
 </editors:SfAutocomplete>
@@ -337,7 +336,7 @@ N> Currently, users can only get the boolean value based on whether a drop-down 
 {% endhighlight %}
 {% highlight C# %}
 
-bool isAutocompleteDropDownOpen = autocomplete.IsDropDownOpen;
+autocomplete.IsDropDownOpen = true;
 
 {% endhighlight %}
 {% endtabs %}
