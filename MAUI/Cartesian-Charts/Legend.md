@@ -19,19 +19,19 @@ To define the legend in the chart, initialize the [ChartLegend](https://help.syn
 
 {% highlight xaml %}
 
-    <chart:SfCartesianChart>
-        <chart:SfCartesianChart.Legend>
-            <chart:ChartLegend/>
-        </chart:SfCartesianChart.Legend>
-    </chart:SfCartesianChart>
+<chart:SfCartesianChart>
+    <chart:SfCartesianChart.Legend>
+        <chart:ChartLegend/>
+    </chart:SfCartesianChart.Legend>
+</chart:SfCartesianChart>
 
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
-    chart.Legend = new ChartLegend();
+SfCartesianChart chart = new SfCartesianChart();
+chart.Legend = new ChartLegend();
 
 {% endhighlight %}
 
@@ -44,20 +44,22 @@ The visibility of the chart legend can be controlled using the [IsVisible](https
 
 {% highlight xaml %}
     
-    <chart:SfCartesianChart>
-        <chart:SfCartesianChart.Legend>
+<chart:SfCartesianChart>
+    <chart:SfCartesianChart.Legend>
         <chart:ChartLegend IsVisible = "True"/>
-        </chart:SfCartesianChart.Legend>
-    </chart:SfCartesianChart>
+    </chart:SfCartesianChart.Legend>
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
-    ViewModel viewModel = new ViewModel();
+SfCartesianChart chart = new SfCartesianChart();
 
-    chart.Legend = new ChartLegend(){ IsVisible = true };
+chart.Legend = new ChartLegend()
+{ 
+    IsVisible = true 
+};
 
 {% endhighlight %}
 
@@ -70,34 +72,33 @@ The visibility of individual legend items for specific series can be controlled 
 
 {% highlight xaml %}
     
-    <chart:SfCartesianChart>
-        <chart:SfCartesianChart.Legend>
-        <chart:ChartLegend />
-        </chart:SfCartesianChart.Legend>
+<chart:SfCartesianChart>
+    <chart:SfCartesianChart.Legend>
+        <chart:ChartLegend/>
+    </chart:SfCartesianChart.Legend>
 
-        <chart:LineSeries ItemsSource="{Binding Data}"
-                        XBindingPath="XValue"
-                        IsVisibleOnLegend="True"
-                        YBindingPath="YValue"/>
-    </chart:SfCartesianChart>
+    <chart:LineSeries ItemsSource="{Binding Data}"
+                      XBindingPath="XValue"
+                      IsVisibleOnLegend="True"
+                      YBindingPath="YValue"/>
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
-    ViewModel viewModel = new ViewModel();
+SfCartesianChart chart = new SfCartesianChart();
+chart.Legend = new ChartLegend();
+LineSeries series = new LineSeries()
+{
+    ItemsSource = viewModel.Data,
+    XBindingPath = "XValue",
+    IsVisibleOnLegend = true,
+    YBindingPath = "YValue",
+};
 
-    chart.Legend = new ChartLegend(){ };
-
-    LineSeries series = new LineSeries()
-    {
-        ItemsSource = viewModel.Data,
-        XBindingPath = "XValue",
-        IsVisibleOnLegend = true,
-        YBindingPath = "YValue",
-    };
-    chart.Series.Add(series);
+chart.Series.Add(series);
+this.Content=chart;
 
 {% endhighlight %}
 
@@ -110,37 +111,35 @@ To specify the legend icon based on the associated series type, use the [LegendI
 
 {% highlight xaml %}
 
-    <chart:SfCartesianChart>
+<chart:SfCartesianChart>
+    <chart:SfCartesianChart.Legend>
+       <chart:ChartLegend/>
+    </chart:SfCartesianChart.Legend>
 
-        <chart:SfCartesianChart.Legend>
-           <chart:ChartLegend />
-        </chart:SfCartesianChart.Legend>
-
-         <chart:ColumnSeries ItemsSource="{Binding Data}"
-                           XBindingPath="XValue"
-                           YBindingPath="YValue"
-                           LegendIcon = "Diamond"/>
-
-    </chart:SfCartesianChart>
+    <chart:ColumnSeries ItemsSource="{Binding Data}"
+                        XBindingPath="XValue"
+                        YBindingPath="YValue"
+                        LegendIcon = "Diamond"/>
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
-    chart.Legend = new ChartLegend();
-    ViewModel viewModel = new ViewModel();
+SfCartesianChart chart = new SfCartesianChart();
+chart.Legend = new ChartLegend();
+ViewModel viewModel = new ViewModel();
 
-    ColumnSeries columnSeries = new ColumnSeries()
-    {
-          ItemsSource = viewModel.Data,
-          XBindingPath = "XValue",
-          YBindingPath = "YValue",
-          LegendIcon = ChartLegendIconType.Diamond,
-    };
+ColumnSeries columnSeries = new ColumnSeries()
+{
+    ItemsSource = viewModel.Data,
+    XBindingPath = "XValue",
+    YBindingPath = "YValue",
+    LegendIcon = ChartLegendIconType.Diamond,
+};
 
-    chart.Series.Add(columnSeries);
-    this.Content=chart;
+chart.Series.Add(columnSeries);
+this.Content=chart;
 
 {% endhighlight %}
 
@@ -153,23 +152,22 @@ The legend can be positioned to the left, right, top, or bottom of the chart are
 
 {% highlight xaml %}
 
-    <chart:SfCartesianChart >
-        <chart:SfCartesianChart.Legend>
-            <chart:ChartLegend Placement="Bottom"  >
-            </chart:ChartLegend>
-      </chart:SfCartesianChart.Legend>
-    </chart:SfCartesianChart>
+<chart:SfCartesianChart>
+    <chart:SfCartesianChart.Legend>
+        <chart:ChartLegend Placement="Bottom">
+        </chart:ChartLegend>
+    </chart:SfCartesianChart.Legend>
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
-
-    chart.Legend = new ChartLegend()
-    { 
-        Placement = LegendPlacement.Bottom 
-    };
+SfCartesianChart chart = new SfCartesianChart();
+chart.Legend = new ChartLegend()
+{ 
+    Placement = LegendPlacement.Bottom 
+};
 
 {% endhighlight %}
 
@@ -182,59 +180,55 @@ The visibility of cartesian series can be controlled by tapping the legend item 
 
 {% highlight xaml %}
 
-    <chart:SfCartesianChart >
-        <chart:SfCartesianChart.Legend>
-            <chart:ChartLegend           
-              ToggleSeriesVisibility="True">
+<chart:SfCartesianChart>
+    <chart:SfCartesianChart.Legend>
+        <chart:ChartLegend           
+          ToggleSeriesVisibility="True">
         </chart:ChartLegend>
-      </chart:SfCartesianChart.Legend>
-    </chart:SfCartesianChart>
+    </chart:SfCartesianChart.Legend>
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
-    ViewModel viewModel = new ViewModel();
-
-    chart.Legend = new ChartLegend()
-    { 
-        ToggleSeriesVisibility = true 
-    };
+SfCartesianChart chart = new SfCartesianChart();
+chart.Legend = new ChartLegend()
+{ 
+    ToggleSeriesVisibility = true 
+};
 
 {% endhighlight %}
 
 {% endtabs %}
 
 ## Legend maximum size request
-To set the maximum size request for the legend view, override the [GetMaximumSizeCoefficient]() protected method in [ChartLegend](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLegend.html) class. The value should be between 0 and 1, representing the maximum size request, not the desired size for the legend items layout.
+To set the maximum size request for the legend view, override the [GetMaximumSizeCoefficient](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLegend.html#Syncfusion_Maui_Charts_ChartLegend_GetMaximumSizeCoefficient) protected method in [ChartLegend](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLegend.html) class. The value should be between 0 and 1, representing the maximum size request, not the desired size for the legend items layout.
 
 {% tabs %}
 
 {% highlight xaml %}
     
-    <chart:SfCartesianChart >
-    . . .
+<chart:SfCartesianChart>
     <chart:SfCartesianChart.Legend>
         <chart:LegendExt/>
     </chart:SfCartesianChart.Legend>
-    . . .
-    </chart:SfCartesianChart>
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    public class LegendExt : ChartLegend
+public class LegendExt : ChartLegend
+{
+    protected override double GetMaximumSizeCoefficient()
     {
-        protected override double GetMaximumSizeCoefficient()
-        {
-            return 0.7;
-        }
+        return 0.7;
     }
+}
 
-    SfCartesianChart chart = new SfCartesianChart();
-    chart.Legend = new LegendExt();
+SfCartesianChart chart = new SfCartesianChart();
+chart.Legend = new LegendExt();
 
 {% endhighlight %}
 
@@ -242,46 +236,44 @@ To set the maximum size request for the legend view, override the [GetMaximumSiz
 
 
 ## Items layout
-The [ItemsLayout]() property is used to customize the arrangement and position of each legend item. The default value is `null`. This property accepts any layout type.
-
-For more details about the layout alignment refer to this [article].
+The [ItemsLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLegend.html#Syncfusion_Maui_Charts_ChartLegend_ItemsLayout) property is used to customize the arrangement and position of each legend item. The default value is `null`. This property accepts any layout type.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-    <chart:SfCartesianChart  x:Name="chart1" >
-        <chart:SfCartesianChart.Legend>
-            <chart:ChartLegend Placement="Bottom">
+<chart:SfCartesianChart  x:Name="chart1">
+    <chart:SfCartesianChart.Legend>
+        <chart:ChartLegend Placement="Bottom">
             <chart:ChartLegend.ItemsLayout>
                 <FlexLayout HorizontalOptions="Start"
                             Margin="10"
                             WidthRequest="{Binding Width,
                             Source={x:Reference Chart1}}">
                 </FlexLayout>
-                </chart:ChartLegend.ItemsLayout>
-            </chart:ChartLegend>
-        </chart:SfCartesianChart.Legend>
-        </chart:SfCartesianChart>
+            </chart:ChartLegend.ItemsLayout>
+        </chart:ChartLegend>
+    </chart:SfCartesianChart.Legend>
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
-    . . .
-    ChartLegend legend = new ChartLegend();
-    legend.Placement = LegendPlacement.Bottom;
+SfCartesianChart chart = new SfCartesianChart();
+. . .
+ChartLegend legend = new ChartLegend();
+legend.Placement = LegendPlacement.Bottom;
 
-    FlexLayout layout = new FlexLayout();
-    layout.Wrap = FlexWrap.Wrap;
-    layout.HorizontalOptions = LayoutOptions.Start;
-    layout.SetBinding(WidthRequestProperty, nameof(SfCartesianChart.WidthProperty));
-    legend.ItemsLayout = layout;
-    chart.Legend = legend;
+FlexLayout layout = new FlexLayout();
+layout.Wrap = FlexWrap.Wrap;
+layout.HorizontalOptions = LayoutOptions.Start;
+layout.Margin = 10;
+layout.SetBinding(WidthRequestProperty, nameof(SfCartesianChart.WidthProperty));
+legend.ItemsLayout = layout;
 
-    chart.Legend = legend;
-    this.Content = chart;
+chart.Legend = legend;
+this.Content = chart;
         
 {% endhighlight %}
 
@@ -296,41 +288,42 @@ N> The BindingContext of the template is the corresponding underlying legend ite
 
 {% highlight xaml %}
 
-    <chart:SfCartesianChart >
-        <chart:SfCartesianChart.Resources>
-            <DataTemplate x:Key="legendTemplate">
-            <StackLayout Orientation="Horizontal" >
+<chart:SfCartesianChart>
+    <chart:SfCartesianChart.Resources>
+        <DataTemplate x:Key="legendTemplate">
+            <StackLayout Orientation="Horizontal">
                 <Rectangle HeightRequest="12" 
-                    WidthRequest="12" Margin="3"
-                    Background="{Binding IconBrush}"/>
-            <Label Text="{Binding Text}" 
-                    Margin="3"/>
-        </StackLayout>
-    </DataTemplate>
+                           WidthRequest="12" Margin="3"
+                           Background="{Binding IconBrush}"/>
+                <Label Text="{Binding Text}" 
+                       Margin="3"/>
+            </StackLayout>
+        </DataTemplate>
     </chart:SfCartesianChart.Resources>  
     
     <chart:SfCartesianChart.Legend>
         <chart:ChartLegend    
                ItemTemplate="{StaticResource legendTemplate}">
         </chart:ChartLegend>
-      </chart:SfCartesianChart.Legend>
-    </chart:SfCartesianChart>
+    </chart:SfCartesianChart.Legend>
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
-
 {% highlight c# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
-     
-    ChartLegend legend = new ChartLegend();
-    legend.ItemTemplate = chart.Resources["legendTemplate"] as DataTemplate;
-    ...
-    this.Content = chart;
+SfCartesianChart chart = new SfCartesianChart();
+ChartLegend legend = new ChartLegend();
+legend.ItemTemplate = chart.Resources["legendTemplate"] as DataTemplate;
+...
+chart.Legend = legend;
+this.Content = chart;
         
 {% endhighlight %}
 
 {% endtabs %}
+
+![Legend layout for cartesian chart](Legend-images/cartesian_chart.png)
 
 ## Limitations
 * Do not add items explicitly.
