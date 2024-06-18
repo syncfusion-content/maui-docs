@@ -5,6 +5,7 @@ description: Learn here all about Sticky Note Annotations in Syncfusion .NET MAU
 platform: MAUI
 control: SfPdfViewer
 documentation: ug
+keywords: keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .net maui open pdf, maui pdf viewer, maui pdf view.
 ---
 
 # Sticky Note Annotation in .NET MAUI PDF Viewer (SfPdfViewer)
@@ -19,9 +20,58 @@ The following sticky note icon types are currently available in [SfPdfViewer](ht
 
 ## Add sticky notes
 
-Currently, there is no support for a sticky note annotation mode in the [AnnotationMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationMode) property.  However, the sticky notes can be added programmatically using the [AddAnnotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AddAnnotation_Syncfusion_Maui_PdfViewer_Annotation_) method of the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html).
+This section will go through how to add sticky note annotations to a PDF page using toolbar as well as programmatically. 
 
-The following example explains how to create a sticky note with a comment icon and add it to the first page of a PDF document.
+### Add the sticky note annotations using the toolbar 
+
+On the built-in toolbar, a sticky note annotation tool is available. Using that, you can add the sticky note annotation to the tapped position. Additionally, the toolbar shows the option to modify the properties of existing or new sticky note annotations. 
+
+The following image represents how to add the sticky note annotations using the toolbar on the desktop. 
+
+![Sticky Note Desktop](Images/stick.gif)
+
+The following image represents how to add the sticky note annotation using the toolbar on mobile.
+
+![Sticky Note Mobile](Images/stickymobile.gif)
+
+### Add the sticky note annotation without using the toolbar
+
+You can add sticky note annotations to a PDF document by tapping with a touch (or mouse down) on a PDF page. The following steps explain how to add sticky note annotations to a PDF: 
+1. Set the [AnnotationMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationMode) property of the SfPdfViewer to `StickyNote`. This activates the sticky note mode on the control.
+2. Tap (or mouse down) on a PDF page, where you want to add the sticky note annotation. This will add a sticky note with a default style and a popup will be displayed to write and submit the text.
+3. Once the sticky note is added, [AnnotationMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationMode) is automatically changed to [None](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.AnnotationMode.html#Syncfusion_Maui_PdfViewer_AnnotationMode_None).
+4. You can later select and edit the annotations, if required.
+5. If you need to disable the [AnnotationMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationMode) of `StickyNote`, you need to change the [AnnotationMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationMode) to [None](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.AnnotationMode.html#Syncfusion_Maui_PdfViewer_AnnotationMode_None). 
+
+The following code explains how to enable the sticky note mode
+
+{% tabs %}
+{% highlight C# %}
+// Enable or activate the sticky note mode. 
+void EnableStickyNoteMode() 
+{ 
+    // Set the `AnnotationMode` property of `SfPdfViewer` instance to `StickyNote`. 
+    PdfViewer.AnnotationMode = AnnotationMode.StickyNote; 
+} 
+{% endhighlight %}
+{% endtabs %}
+
+Similarly, refer to the following code explains how to disable the sticky note mode:  
+
+{% tabs %}
+{% highlight C# %}
+// Disable or deactivate the sticky note mode. 
+void DisableStickyNoteMode() 
+{ 
+    // Set the `AnnotationMode` property of `SfPdfViewer` instance to `None`. 
+    PdfViewer.AnnotationMode = AnnotationMode.None; 
+} 
+{% endhighlight %}
+{% endtabs %}
+
+### Add sticky note annotation programmatically 
+
+You can create and add a sticky note annotation to a PDF document programmatically using the [AddAnnotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AddAnnotation_Syncfusion_Maui_PdfViewer_Annotation_) method of the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html). The following example explains how to create a sticky note with a comment icon and add it to the first page of a PDF document.
 
 {% tabs %}
 {% highlight C# %}
@@ -47,6 +97,27 @@ void AddStickyNote()
     PdfViewer.AddAnnotation(stickyNote);
 }
 
+{% endhighlight %}
+{% endtabs %}
+
+## Sticky note annotation settings 
+
+In the sticky note annotation mode, the annotation will be added with a default appearance. You can modify the annotation after it has been added to the pages. However, if you need to define the appearance before adding sticky note annotations to the document, you can change its default settings using the [SfPdfViewer.AnnotationSettings.StickyNote](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationSettings) For that, you need to obtain the default sticky note annotation settings.
+
+The following example explains how to obtain the default sticky note annotation settings and modify some of their properties. Similarly, you can modify all the other properties.
+
+{% tabs %}
+{% highlight C# %}
+void CustomizeDefaultStickyNoteSettings() 
+{ 
+    // Obtain the default sticky note annotation settings from the `SfPdfViewer` instance. 
+    StickyNoteAnnotationSettings stickyNoteSettings = PdfViewer.AnnotationSettings.StickyNote; 
+
+    // Modify the default properties. 
+    stickyNoteSettings.Icon = StickyNoteIcon.Comment; // Set the default icon to Comment. 
+    stickyNoteSettings.Color = Colors.Yellow; //Stroke color 
+    stickyNoteSettings.Opacity = 0.75f; // 75% Opacity 
+} 
 {% endhighlight %}
 {% endtabs %}
 
@@ -79,3 +150,74 @@ void EditSelectedStickyNoteAnnotation(Annotation selectedAnnotation)
 }
 {% endhighlight %}
 {% endtabs %}
+
+## Sticky note modal view
+
+The sticky note modal view appears when text needs to be input by the user for creating and editing sticky note annotations in Android and iOS platforms. The [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) notifies when the modal view is appearing and disappearing through events. The events help you in hiding and showing elements that are part of the app UI that are not necessary as long as the modal view is visible. 
+
+![Sticky note modal view](Images/Annotations/sticky-note-modal-view.png)
+
+The `SfPdfViewer.StickyNoteModalViewAppearing` event is triggered whenever the modal view opens for either creating or editing a sticky note annotation.
+
+{% tabs %}
+{% highlight c# %}
+
+pdfviewer.StickyNoteModalViewAppearing += PdfViewer_StickyNoteModalViewAppearing;
+
+private void PdfViewer_StickyNoteModalViewAppearing(object? Sender, AnnotationModalViewAppearingEventArgs e)
+{
+    // Implement the logic to hide unwanted UI elements such as toolbar items add in the app UI. 
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+The `SfPdfViewer.StickyNoteModalViewDisappearing` event is triggered when the modal view is closing.
+
+{% tabs %}
+{% highlight c# %}
+
+pdfviewer.StickyNoteModalViewDisappearing += PdfViewer_StickyNoteModalViewDisappearing;
+
+Private void PdfViewer_StickyNoteModalViewDisappearing(object? Sender, EventArgs e)
+{
+    // Implement the logic to show the UI elements that were hidden from the StickyNoteModalViewAppearing event handler.
+}
+
+{% endhighlight %} 
+{% endtabs %}
+
+### Suppressing the sticky note modal view and implementing your own UI
+
+The [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) allows you to suppress the sticky note modal view and use your own UI in its place. This can be achieved by setting the `AnnotationModalViewAppearingEventArgs.Cancel` property to `true` in the `StickyNoteModalViewAppearing` event handler. 
+
+The below code snippet illustrates suppressing the sticky note modal view and using a UI implemented in the app in its place. The sticky note annotation instance that is created or edited can be obtained from the event args. Once the user enters the text in the custom dialog and confirms, the text can be assigned to this sticky note annotation instance. 
+
+{% tabs %}
+{% highlight c# %}
+
+Annotation editedAnnotation;
+pdfviewer.StickyNoteModalViewAppearing += PdfViewer_StickyNoteModalViewAppearing;
+
+private void PdfViewer_StickyNoteModalViewAppearing(object? Sender, AnnotationModalViewAppearingEventArgs e)
+{
+    e.Cancel = true;
+    editedAnnotation = e.Annotation;
+    // Implement your own UI for sticky note editor and show it.
+    ShowCustomDialog();
+}
+
+Private void customDialogOkButton_Clicked(object sender, EventArgs e)
+{
+   //Get the typed text from the custom dialog 
+   string newText = customDialog.Text; 
+   if(editedAnnotation is StickyNoteAnnotation stickyNote)
+   {
+      stickyNote.Text = newText;
+   }
+}
+
+{% endhighlight %} 
+{% endtabs %}
+
+N> For WinUI and MacCatalyst platforms, there is no separate modal view to receive text input from the users. As a result, the `StickyNoteModalViewAppearing` and `StickyNoteModalViewDisappearing` events are not applicable for these platforms. 

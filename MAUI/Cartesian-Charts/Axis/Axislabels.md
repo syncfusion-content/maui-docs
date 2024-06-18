@@ -5,11 +5,54 @@ description: Learn here all about axis labels and its customization in Syncfusio
 platform: maui
 control: SfCartesianChart
 documentation: ug
+keywords: .net maui chart axis labels, axis labels customization .net maui, syncfusion maui chart axis labels, cartesian chart axis labels maui, customize axis labels .net maui chart.
 ---
 
 # Axis labels in .NET MAUI Chart
 
 Axis labels are used to show the units or measures or category value of axis to visualize the data user friendly. It will be generated based on the range and the values binded to [XBindingPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_XBindingPath) or [YBindingPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.XYDataSeries.html#Syncfusion_Maui_Charts_XYDataSeries_YBindingPath) properties of series.
+
+## Positioning the labels
+
+The [LabelsPosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_LabelsPosition) property is used to position the axis labels inside or outside the chart area. [LabelsPosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_LabelsPosition) property default value is `AxisElementPosition.Outside`.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<chart:SfCartesianChart>
+    . . .
+
+    <chart:SfCartesianChart.XAxes>
+        <chart:CategoryAxis />
+    </chart:SfCartesianChart.XAxes>
+
+    <chart:SfCartesianChart.YAxes>
+        <chart:NumericalAxis LabelsPosition="Inside"/>
+    </chart:SfCartesianChart.YAxes>
+
+</chart:SfCartesianChart>
+
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+SfCartesianChart chart = new SfCartesianChart();
+CategoryAxis primaryAxis = new CategoryAxis();
+NumericalAxis secondaryAxis = new NumericalAxis()
+{
+    LabelsPosition = AxisElementPosition.Inside
+};
+
+chart.XAxes.Add(primaryAxis);
+chart.YAxes.Add(secondaryAxis);
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Axis label inside position in .NET MAUI Chart.](axis_images/maui_chart_inside_label.png)
 
 ## Label Rotation
 
@@ -58,6 +101,9 @@ The [LabelStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Char
 * `TextColor` - Gets or sets the color for the text of the label.
 * `LabelFormat` - Gets or sets the label format. This property is used to set numeric or date-time format to the chart axis label.
 * `LabelAlignment` - Gets or sets the axis label at start, end, and center positions.
+* `MaxWidth` - Gets or sets the wrap width of the axis labels.
+* `WrappedLabelAlignment` - Gets or sets the horizontal rendering position of the wrapped axis labels. The default value is `Start`; other available values are `Center` and `End`.
+
 
 ## Edge Labels Drawing Mode
 
@@ -167,3 +213,39 @@ chart.XAxes.Add(primaryAxis);
 {% endhighlight %}
 
 {% endtabs %}
+
+## Smart Axis Labels
+
+Axis labels may overlap with each other based on chart dimensions and label size. The [LabelsIntersectAction]() property of axis is used to avoid overlapping of axis labels. The default value of the LabelsIntersectAction is `Hide`; other available values are `MultipleRows`, `None`, and `Wrap`.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<chart:SfCartesianChart>
+. . .
+    <chart:SfCartesianChart.XAxes>
+       <chart:CategoryAxis LabelsIntersectAction="MultipleRows" />
+    </chart:SfCartesianChart.XAxes>
+
+</chart:SfCartesianChart>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+SfCartesianChart chart = new SfCartesianChart();
+. . .
+CategoryAxis primaryAxis = new CategoryAxis()
+{
+    LabelsIntersectAction = AxisLabelsIntersectAction.MultipleRows,
+};
+ chart.XAxes.Add(primaryAxis);
+ 
+{% endhighlight %}
+
+{% endtabs %}
+
+![Smart axis lable support in .NET MAUI SfCartesianChart.](axis_images/maui_chart_smart_axis_labels.png)
+
+N> If the [LabelsIntersectAction]() is set to Wrap, we should set the width of the wrap using the [MaxWidth]() property. We can align the wrapped axis label using the [WrappedLabelAlignment]() property.

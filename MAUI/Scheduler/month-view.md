@@ -5,6 +5,7 @@ description: Learn here all about how to customize the appearance and change the
 platform: maui
 control: SfScheduler
 documentation: ug
+keywords : .net maui scheduler, .net maui month view, .net maui month cell, .net maui month cell apperance, .net maui view header.
 ---
 
 # Month View in .NET MAUI Scheduler (SfScheduler)
@@ -57,7 +58,7 @@ N>
 
 ## Appointment indicator count
 
-The scheduler month view appointment indicator count allows you to customize the count of the appointment indicator by using the `AppointmentIndicatorCount` property of the [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html). By default, the `AppointmentIndicatorCount` is set to 5.
+The scheduler month view appointment indicator count allows you to customize the count of the appointment indicator by using the [AppointmentIndicatorCount](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html#Syncfusion_Maui_Scheduler_SchedulerMonthView_AppointmentIndicatorCount) property of the [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html). By default, the [AppointmentIndicatorCount](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html#Syncfusion_Maui_Scheduler_SchedulerMonthView_AppointmentIndicatorCount) is set to 5.
 
 {% tabs %}  
 {% highlight XAML hl_lines="5" %}
@@ -321,6 +322,29 @@ public class MonthViewHeaderTemplateSelector : DataTemplateSelector
 
 N>
 * When using data template selector, performance issues occur as the conversion template views take time within the framework.
+
+## Month Navigation direction
+
+The [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html) of [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html) can be navigated in both horizontal and vertical directions. You can change the direction of navigation through the [NavigationDirection](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html#Syncfusion_Maui_Scheduler_SchedulerMonthView_NavigationDirection) property of [MonthViewSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html) in `SfScheduler` . By default, the navigation direction is `Horizontal`.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+
+<scheduler:SfScheduler x:Name="schedule" View="Month">
+    <scheduler:SfScheduler.MonthView >
+        <scheduler:SchedulerMonthView NavigationDirection="Vertical"/>
+    </scheduler:SfScheduler.MonthView> 
+</scheduler:SfScheduler>
+
+{% endhighlight %}
+{% highlight C# hl_lines="3" %}
+
+schedule.MonthView.NavigationDirection = SchedulerMonthNavigationDirection.Vertical;
+
+{% endhighlight %}  
+{% endtabs %}
+
+![Vertical Swiping MonthView](images\month-view\Swipe.gif){:width="325" height="600" loading="lazy" .lazy .shadow-effect .section-padding .img-padding}
 
 ## Month cell appearance
 

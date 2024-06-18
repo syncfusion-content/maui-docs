@@ -9,7 +9,7 @@ documentation: UG
 
 # Unbound column in MAUI DataGrid (SfDataGrid)
 
-The data grid allows adding additional columns that are not bound with data objects from the underlying data source.The unbound column can be added using the [SfDataGrid.DataGridUnboundColumn]() class.
+The data grid allows adding additional columns that are not bound with data objects from the underlying data source.The unbound column can be added using the [SfDataGrid.DataGridUnboundColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridUnboundColumn.html) class.
 
 {% tabs %}
 {% highlight xaml %}
@@ -58,7 +58,7 @@ N> It is mandatory to specify the `DataGridColumn.MappingName` for `SfDataGrid.D
 Data for the unbound column can be configured by setting the `Expression` property.
 
 ### Using Expression
-The arithmetic or logic expression can be specified by using the expression property to compute the display value. By default, `DataGridUnboundColumn` evaluates the expression with casing. The casing will be disabled while evaluating the expression by setting the `CaseSensitive` property to false
+The arithmetic or logic expression can be specified by using the expression property to compute the display value. By default, `DataGridUnboundColumn` evaluates the expression with casing. The casing will be disabled while evaluating the expression by setting the [CaseSensitive](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridUnboundColumn.html#Syncfusion_Maui_DataGrid_DataGridUnboundColumn_CaseSensitiveProperty) property to false
 
 List of supported arithmetic and logical operations are as follows:
 
@@ -77,7 +77,7 @@ List of supported arithmetic and logical operations are as follows:
     </tr>
     <tr>
         <td> Multiply</td>
-        <td> / </td>
+        <td> * </td>
     </tr>
     <tr>
         <td> Divide </td>
@@ -151,15 +151,15 @@ List of supported arithmetic and logical operations are as follows:
 
 ## Using QueryUnboundColumnValue event
 
-The `QueryUnboundColumnValue` event is fired when value for the unbound column is quired. It provides information about the cell that triggered this event. So, you can set the desired value for the grid cells of the unbound column. This event is triggered with the `DataGridUnboundEventArgs`.
+The [QueryUnboundColumnValue](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_QueryUnboundColumnValue) event is fired when value for the unbound column is quired. It provides information about the cell that triggered this event. So, you can set the desired value for the grid cells of the unbound column. This event is triggered with the `DataGridUnboundEventArgs`.
 
-The `DataGridUnboundColumnEventArgs` provides the following properties:
+The [DataGridUnboundColumnEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridUnboundColumnEventArgs.html) provides the following properties:
 
 ***Column:*** Gets DataGridColumn of the cell that triggers this event.
 ***OriginalSender:*** Gets the data grid raising event.
 ***Record:*** Gets the underlying row data
 ***UnboundAction:*** Defines the action for triggering event.
-***Value:*** Gets or Sets the value for DataGridUnboundCOlumn cell based on unboundAction.
+***Value:*** Gets or Sets the value for DataGridUnboundColumn cell based on unboundAction.
 
 Populate the data for the unbound column by handling `QueryUnboundColumnValue` event which allows customizing the value of the `DataGridUnboundColumn`. `DataGridUnboundColumnEventArgs` exposes `Value` property, by which you can set the value for the grid cells of the unbound column based on the `UnboundAction`.
 

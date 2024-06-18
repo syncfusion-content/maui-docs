@@ -124,6 +124,35 @@ button.VerticalTextAlignment = TextAlignment.Center;
 {% endhighlight %}
 {% endtabs %}
 
+## LineBreakMode
+The [`LineBreakMode`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfButton.html#Syncfusion_Maui_Buttons_SfButton_LineBreakMode) allows you to wrap or truncate the text. The default value of this property is `NoWrap`. The following other options are available in LineBreakMode:
+
+ * `NoWrap` - Avoids the text wrap. 
+ * `WordWrap` - Wraps the text by words.
+ * `CharacterWrap` - Wraps the text by character.
+ * `HeadTruncation` - Truncates the text at the start.
+ * `MiddleTruncation` - Truncates the text at the center.
+ * `TailTruncation` - Truncates the text at the end.
+
+ {% tabs %}
+{% highlight xaml %}
+
+<button:SfButton x:Name="button" Text="Add Items To Cart" LineBreakMode="MiddleTruncation" ImageSource="Cart.png">
+</button:SfButton>
+
+{% endhighlight %}
+{% highlight c# %}
+
+SfButton button = new SfButton();
+button.Text = "Add Items To Cart";
+button.LineBreakMode = LineBreakMode.MiddleTruncation;
+button.ImageSource="Cart.png";
+
+{% endhighlight %}
+{% endtabs %}
+
+![SfButton with LineBreakMode](images/customization-images/Button_linebreakmode.png)
+
 ## Background Customization
 
 The background of the button can be customized by its background color, border color, border width and corner radius.

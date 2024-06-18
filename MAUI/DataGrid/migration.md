@@ -71,7 +71,12 @@ To make migration from [Xamarin SfDataGrid](https://www.syncfusion.com/xamarin-u
 </tr>
 <tr>
 <td>{{'[ProgressStates](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.ProgressStates.html)'| markdownify }}</td>
-<td>{{'[DataGridProgressState]()'| markdownify }}</td>
+<td>{{'[DataGridProgressState](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridProgressState.html)'| markdownify }}</td>
+<td>Defines constants that specify the possible progressing states of resizing operation.</td>
+</tr>
+<tr>
+<td>{{'[QueryColumnDraggingReason](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.QueryColumnDraggingReason.html)'| markdownify }}</td>
+<td>{{'[DataGridDragAction](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridDragAction.html)'| markdownify }}</td>
 <td>Defines constants that specify the possible progressing states of resizing operation.</td>
 </tr>
 </table>
@@ -234,11 +239,22 @@ To make migration from [Xamarin SfDataGrid](https://www.syncfusion.com/xamarin-u
 </tr>
 <tr>
 <td>{{'[AllowResizingColumn](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.SfDataGrid.html#Syncfusion_SfDataGrid_XForms_SfDataGrid_AllowResizingColumn)'| markdownify }}</td>
-<td>{{'[AllowResizingColumns]()'| markdownify }}</td>
+<td>{{'[AllowResizingColumns](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AllowResizingColumnProperty)'| markdownify }}</td>
 <td>This enables users to resize the columns by tapping and dragging the right border of the column headers. 
 </td>
 </tr>
-
+<tr>
+<td>{{'[Reason](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.QueryRowDraggingEventArgs.html#Syncfusion_SfDataGrid_XForms_QueryRowDraggingEventArgs_Reason)'| markdownify }}</td>
+<td>{{`DraggingAction`| markdownify }}</td>
+<td>This enables users to get the column dragging details as a `DataGridDragAction`. 
+</td>
+</tr>
+<tr>
+<td>{{'[ColumnDragViewForegroundColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.DataGridStyle.html#Syncfusion_SfDataGrid_XForms_DataGridStyle_ColumnDragViewForegroundColor)'| markdownify }}</td>
+<td>{{`ColumnDragViewTextColor`| markdownify }}</td>
+<td>This enables users to change the color of the column drag view text color. 
+</td>
+</tr>
 </table>
 
 ## Events
@@ -254,13 +270,28 @@ To make migration from [Xamarin SfDataGrid](https://www.syncfusion.com/xamarin-u
 <td>Occurs when the cell is tapped.</td>
 </tr>
 <tr>
+<td>{{'[GridTappedCommand](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.SfDataGrid.html#Syncfusion_SfDataGrid_XForms_SfDataGrid_GridTappedCommand)'| markdownify }}</td>
+<td>{{'[CellTappedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CellTappedCommand)'| markdownify }}</td>
+<td>Occurs when the cell is tapped.</td>
+</tr>
+<tr>
 <td>{{'[GridDoubleTapped](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.SfDataGrid.html#Syncfusion_SfDataGrid_XForms_SfDataGrid_GridDoubleTapped)'| markdownify }}</td>
 <td>{{'[CellDoubleTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CellDoubleTapped)'| markdownify }}</td>
 <td>Occurs when the cell is tapped twice.</td>
 </tr>
 <tr>
+<td>{{'[GridDoubleTappedCommand](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.SfDataGrid.html#Syncfusion_SfDataGrid_XForms_SfDataGrid_GridDoubleTappedCommand)'| markdownify }}</td>
+<td>{{'[CellDoubleTappedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CellDoubleTappedCommand)'| markdownify }}</td>
+<td>Occurs when the cell is tapped twice.</td>
+</tr>
+<tr>
 <td>{{'[GridLongPressed](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.SfDataGrid.html#Syncfusion_SfDataGrid_XForms_SfDataGrid_GridLongPressed)'| markdownify }}</td>
 <td>{{'[CellLongPress](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CellLongPress)'| markdownify }}</td>
+<td>Occurs when the cell is long pressed for particular period.</td>
+</tr>
+<tr>
+<td>{{'[GridLongPressedCommand](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.SfDataGrid.html#Syncfusion_SfDataGrid_XForms_SfDataGrid_GridLongPressedCommand)'| markdownify }}</td>
+<td>{{'[CellLongPressedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CellLongPressCommand)'| markdownify }}</td>
 <td>Occurs when the cell is long pressed for particular period.</td>
 </tr>
 <tr>
@@ -278,15 +309,25 @@ By writing the converter, you can achieve the requirement conditionally. Refer {
 </tr>
 <tr>
 <td>{{'[PageIndexChanging](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.DataPager.SfDataPager.html#Syncfusion_SfDataGrid_XForms_DataPager_SfDataPager_PageIndexChanging)'| markdownify }}</td>
-<td>{{'[PageChanging]()'| markdownify }}</td>
+<td>{{'[PageChanging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataPager.SfDataPager.html#Syncfusion_Maui_DataGrid_DataPager_SfDataPager_PageChanging)'| markdownify }}</td>
 <td>Occurs when page index is being changed.</td>
 </tr>
 <tr>
 <td>{{'[PageIndexChanged](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.DataPager.SfDataPager.html#Syncfusion_SfDataGrid_XForms_DataPager_SfDataPager_PageIndexChanged)'| markdownify }}</td>
-<td>{{'[PageChanged]()'| markdownify }}</td>
+<td>{{'[PageChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataPager.SfDataPager.html#Syncfusion_Maui_DataGrid_DataPager_SfDataPager_PageChanged)'| markdownify }}</td>
 <td>Occurs when page index is changed.</td>
 </tr>
-
+<tr>
+<td>{{'[GridViewCreated](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.SfDataGrid.html#Syncfusion_SfDataGrid_XForms_SfDataGrid_GridViewCreated)'| markdownigy}}</td>
+<td>{{'[ViewCreated](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ViewCreated)' | markdownify}}</td>
+<td>Occurs when the View is created.</td>
+</tr>
+<tr>
+<td>{{'[GridLoaded](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.SfDataGrid.html#Syncfusion_SfDataGrid_XForms_SfDataGrid_GridLoaded)'| markdownify}}</td>
+<td>{{'[DataGridLoaded](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_DataGridLoaded)'| markdownify}}</td>
+<td>Occurs when the components in the SfDataGrid initialized and rendered.</td>
+</tr>
+</tr>
 </table>
 
 ## Methods
@@ -420,15 +461,33 @@ We have passed the optional parameters such as {{'[canIncludeHiddenColumns](http
 </tr>
 
 <tr>
+<td>{{'[GridUnboundRows](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.UnboundRows.html)'| markdownify}}</td>
+<td>{{'[DataGridUnboundRows](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridUnboundRows.html)'| markdownify}}</td>
+<td>Represents a {{'[DataGridUnboundRows](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridUnboundRows.html)'| markdownify}} as a control to add additional rows in a {{[SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html)'| markdownify }} control.</td>
+</tr>
+
+<tr>
+<td>{{'[GridUnboundColumn](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.GridUnboundColumn.html)'| markdownify}}</td>
+<td>{{'[DataGridUnboundColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridUnboundColumn.html)'| markdownify}}</td>
+<td>Represents a {{'[DataGridUnboundColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridUnboundColumn.html)'| markdownify}} as a control to add additional columns in a {{[SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html)'| markdownify }} control.</td>
+</tr>
+
+<tr>
 <td>{{'[AppearanceManager](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.DataPager.AppearanceManager.html)'| markdownify }}</td>
-<td>{{'[DataPagerStyle]()'| markdownify }}</td>
+<td>{{'[DataPagerStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataPager.DataPagerStyle.html)'| markdownify }}</td>
 <td>Represents a class that enables users to customize the appearance of the data pager.</td>
 </tr>
 
 <tr>
 <td>{{'[GridResizingEventArgs](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.GridResizingEventArgs.html)'| markdownify }}</td>
-<td>{{'[DataGridColumnResizingEventArgs]()'| markdownify }}</td>
+<td>{{'[DataGridColumnResizingEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumnResizingEventArgs.html)'| markdownify }}</td>
 <td>Represents a datagrid column resizing event args.</td>
+</tr>
+
+<tr>
+<td>{{'[QueryColumnDraggingEventArgs ](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.QueryColumnDraggingEventArgs.html)'| markdownify }}</td>
+<td>{{'[DataGridQueryColumnDraggingEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridQueryColumnDraggingEventArgs.html)'| markdownify }}</td>
+<td>Represents a datagrid column drag and drop event args.</td>
 </tr>
 </table>
 
@@ -442,7 +501,4 @@ We have passed the optional parameters such as {{'[canIncludeHiddenColumns](http
 *	Accessibility
 *	Custom selection
 *	Swiping
-*	Unbound row
-*	Unbound column
-*	Column drag and drop
 *	Row drag and drop

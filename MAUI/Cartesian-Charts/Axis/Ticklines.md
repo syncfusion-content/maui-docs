@@ -5,6 +5,7 @@ description: Learn here all about chart axis tick line and its customization in 
 platform: maui
 control: SfCartesianChart
 documentation: ug
+keywords: .net maui chart tick lines, .net maui chart tick customization, .net maui chart tickline guide, syncfusion maui chart tick lines, cartesian chart tick lines maui, .net maui chart axis tick lines, customize tick lines .net maui chart.
 ---
 
 # Tick Lines in .NET MAUI Chart
@@ -50,6 +51,48 @@ chart.YAxes.Add(secondaryAxis);
 
 {% endtabs %}
 
+## Positioning the ticks
+
+The tick lines can be positioned inside or outside the chart area using the [TickPosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_TickPosition) property. [TickPosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_TickPosition) property default value is `AxisElementPosition.Outside`.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<chart:SfCartesianChart>
+    . . .  
+
+    <chart:SfCartesianChart.XAxes>
+        <chart:CategoryAxis />
+    </chart:SfCartesianChart.XAxes>
+
+    <chart:SfCartesianChart.YAxes>
+        <chart:NumericalAxis TickPosition="Inside"/>
+    </chart:SfCartesianChart.YAxes>
+
+</chart:SfCartesianChart>
+
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+SfCartesianChart chart = new SfCartesianChart();
+CategoryAxis primaryAxis = new CategoryAxis();
+NumericalAxis secondaryAxis = new NumericalAxis()
+{
+    TickPosition = AxisElementPosition.Inside
+};
+
+chart.XAxes.Add(primaryAxis);
+chart.YAxes.Add(secondaryAxis);
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Axis ticks inside position in .NET MAUI Chart.](axis_images/maui_chart_inside_ticks.png)
+
 ## Customization
 
 Both major and minor tick lines can be customized by using the [MajorTickStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_MajorTickStyle) and [MinorTickStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.RangeAxisBase.html#Syncfusion_Maui_Charts_RangeAxisBase_MinorTickStyle) properties respectively. They provide options to change the [StrokeWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxisTickStyle.html#Syncfusion_Maui_Charts_ChartAxisTickStyle_StrokeWidth), [TickSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxisTickStyle.html#Syncfusion_Maui_Charts_ChartAxisTickStyle_TickSize), [Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxisTickStyle.html#Syncfusion_Maui_Charts_ChartAxisTickStyle_Stroke) of tick lines. By default minor tick lines will not be visible.
@@ -64,8 +107,8 @@ Both major and minor tick lines can be customized by using the [MajorTickStyle](
     <chart:NumericalAxis MinorTicksPerInterval="4">
         <chart:NumericalAxis.MajorTickStyle>
             <chart:ChartAxisTickStyle Stroke="Red"
-									  StrokeWidth="1"
-									  TickSize="10"/>
+                                    StrokeWidth="1"
+                                    TickSize="10"/>
         </chart:NumericalAxis.MajorTickStyle>
         
         <chart:NumericalAxis.MinorTickStyle>

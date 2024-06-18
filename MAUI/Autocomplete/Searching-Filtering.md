@@ -175,6 +175,34 @@ The following image illustrates the result of the above code.
 
 ![.NET MAUI Autocomplete filtering based on contains text](Images/Searching_Filtering/SearchModeContains.gif)
 
+### Prefix characters constraint
+
+Instead of displaying suggestion list on every character entry, matches can be filtered and displayed after a few character entries. This can be done by [MinimumPrefixCharacters](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_MinimumPrefixCharacters) property and its default value is 1.
+
+{% tabs %}
+{% highlight xaml %}
+
+<editors:SfAutocomplete x:Name="autocomplete"
+                        WidthRequest="250"
+                        TextSearchMode="StartsWith"
+                        ItemsSource="{Binding SocialMedias}"
+                        MinimumPrefixCharacters="3"
+                        DisplayMemberPath="Name"
+                        TextMemberPath="Name" />
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+autocomplete.MinimumPrefixCharacters = 3;
+
+{% endhighlight %}
+{% endtabs %}
+
+The following image illustrates the result of the above code.
+
+![.NET MAUI Autocomplete MinimumPrefixCharacters](Images/Searching_Filtering/MinimumPrefixCharacters.png)
+
 ### Custom filtering
 
 The `Autocomplete` control supports applying your custom filter logic to suggest items based on your filter criteria by using the `FilterBehavior` and `SearchBehavior` properties. The default value of `FilterBehavior` and `SearchBehavior` is `null`.

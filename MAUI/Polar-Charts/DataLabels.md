@@ -15,7 +15,7 @@ Each data label can be represented by the following:
 
 * Label - displays the segment label content at the (X, Y) point.
 
-## Enable Data Label 
+## Enable Data Labels 
 
 The [ShowDataLabels](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_ShowDataLabels) property of a series is used to enable the data labels.
 
@@ -135,25 +135,25 @@ this.Content = chart;
 
 ## LabelTemplate
 
-The [SfPolarChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPolarChart.html) provides support to customize the appearance of the datalabel using the [LabelTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_LabelTemplate) property.
+The [SfPolarChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPolarChart.html) provides support to customize the appearance of the data labels using the [LabelTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_LabelTemplate) property.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-    <chart:SfPolarChart >
-        <chart:SfPolarChart.Resources>
-            <DataTemplate x:Key="labelTemplate">
-                <HorizontalStackLayout Spacing="5">
-                    <Label Text="{Binding Item.Values}" VerticalOptions="Center" FontSize = "15"/>
-                    <Image Source="arrow.png" WidthRequest="15" HeightRequest="15"/>
-                </HorizontalStackLayout>
-            </DataTemplate>
-        </chart:SfPolarChart.Resources>
-        . . .
-        <chart:PolarAreaSeries ItemsSource="{Binding Data}" XBindingPath="Category" YBindingPath="Values" 
+<chart:SfPolarChart >
+    <chart:SfPolarChart.Resources>
+        <DataTemplate x:Key="labelTemplate">
+            <HorizontalStackLayout Spacing="5">
+                <Label Text="{Binding Item.Values}" VerticalOptions="Center" FontSize = "15"/>
+                <Image Source="arrow.png" WidthRequest="15" HeightRequest="15"/>
+            </HorizontalStackLayout>
+        </DataTemplate>
+    </chart:SfPolarChart.Resources>
+    . . .
+    <chart:PolarAreaSeries ItemsSource="{Binding Data}" XBindingPath="Category" YBindingPath="Values" 
         ShowDataLabels="True" LabelTemplate="{StaticResource labelTemplate}"/>
-    </chart:SfPolarChart>
+</chart:SfPolarChart>
 
 {% endhighlight %}
 

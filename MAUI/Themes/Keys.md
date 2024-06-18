@@ -216,7 +216,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td> 
         <td>
-            Color of the SfAutocomplete Background in normal state
+            Color of the SfAutocomplete stroke in normal state
             <br/>
             <br/>
         </td>
@@ -3631,7 +3631,7 @@ This page lists the keys for each control and the element to which it is mapped 
         <th>Description<br/><br/></th>
     </tr>
     <tr>
-        <td rowspan="27">SfDataGridStyles<br/><br/></td>
+        <td rowspan="33">SfDataGridStyles<br/><br/></td>
 		<td>SfDataGridTheme<br/><br/></td>
         <td>By merging this key in application resources, it is possible to customize the appearance of the SfDataGrid without merging common theme resource and control style resource dictionaries.	
 {% highlight xaml %}
@@ -3733,6 +3733,30 @@ This page lists the keys for each control and the element to which it is mapped 
         <td>Text color of the stacked header rows in the SfDataGrid.<br/><br/></td>
     </tr>
     <tr>
+        <td>SfDataGridSortNumberTextColor<br/><br/></td>
+        <td>Text color of the sort number in the SfDataGrid.<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfDataGridSortNumberBackground<br/><br/></td>
+        <td>Background color of the sort number in the SfDataGrid.<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfDataGridGroupIconColor<br/><br/></td>
+        <td>Color of the group icon in the SfDataGrid.<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfDataGridCheckBoxColor<br/><br/></td>
+        <td>Color of the check box in the SfDataGrid.<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfDataGridInputBackgroundColor<br/><br/></td>
+        <td>Background color of the input in the SfDataGrid.<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfDataGridSortIconColor<br/><br/></td>
+        <td>Color of the sort icon in the SfDataGrid.<br/><br/></td>
+    </tr>
+    <tr>
         <td>SfDataGridLoadMoreBackground<br/><br/></td>
         <td>Background color of the load more view in the SfDataGrid.<br/><br/></td>
     </tr>
@@ -3759,6 +3783,18 @@ This page lists the keys for each control and the element to which it is mapped 
     <tr>
         <td>SfDataGridUnboundRowTextColor<br/><br/></td>
         <td>Text color of the unbound rows in the SfDataGrid.<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfDataGridColumnDraggingIndicatorLineColor<br/><br/></td>
+        <td>Indicator line color of the column drag view in the SfDataGrid.<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfDataGridColumnDragViewBackgroundColor<br/><br/></td>
+        <td>Background color of the column drag view in the SfDataGrid.<br/><br/></td>
+    </tr>
+    <tr>
+        <td>SfDataGridColumnDragViewTextColor<br/><br/></td>
+        <td>Text color of the column drag view in the SfDataGrid.<br/><br/></td>
     </tr>
 </table>
 
@@ -6344,7 +6380,7 @@ This page lists the keys for each control and the element to which it is mapped 
     </tr>
 
     <tr>
-        <td rowspan="290">
+        <td rowspan="330">
             SfPdfViewerStyles  
             <br/>
             <br/>
@@ -8629,6 +8665,1554 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
     </tr>
+    <tr>
+        <td>
+           SfPdfViewerPageCountLabelBackgroundColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Background color of the page count label in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+           SfPdfViewerPageCountLabelTextColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Text color of the page count label in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+           SfPdfViewerPageNavigationDialogTextColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Text color of the page navigation dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+           SfPdfViewerPageNavigationDialogPageBoxNormalStateColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Color of the page navigation dialog entry's normal state in the SfPdfViewer. 
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+           SfPdfViewerPageNavigationDialogPageBoxFocusedStateColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Focused color of the page navigation dialog entry in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+           SfPdfViewerPageNavigationDialogPageBoxErrorStateColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Error state color of the page navigation dialog entry in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+           SfPdfViewerPageNavigationDialogBackgroundColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+           Background color of the page navigation dialog in the SfPdfViewer.    
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerPageNavigationDialogTitleTextColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+           Text color of the page navigation dialog's Title in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerPageNavigationDialogCloseTextColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+           Text color of the page navigation dialog's close button in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerPageNavigationDialogOkButtonTextColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+           Text color of the page navigation dialog's ok button in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerPageNavigationDialogCancelButtonTextColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+           Text color of the page navigation dialog's cancel button in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerStampListViewBackgroundColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+           Background color of the stamp list view in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerStampListViewTextColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+           Text color of the stamp list view in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerStampListDeleteButtonColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+           Text color of the stamp list view's delete button in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerStampListItemPressedColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+           Pressed color of the stamp list view's item in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerStampListItemMouseHoverColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+           Hovering color of the stamp list view's item in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerCustomStampDialogBackgroundColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+           Background color of the custom stamp dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerCustomStampDialogTextColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+           Text color of the custom stamp dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerCustomStampDialogPlaceholderColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+           Color of the custom stamp dialog's place holder in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerCustomStampDialogCreateStampLabelTextColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+           Text color of the custom stamp dialog's create stamp label in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerCustomStampDialogCloseButtonTextColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+           Text color of the custom stamp dialog's close button in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerCustomStampStackLayoutBorderColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+           Color of the custom stamp dialog's stack layout border in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerCustomStampSelectedColorButtonHighlightColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+           Color of the custom stamp dialog's selected color button in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerCustomStampInputLayoutBorderNormalStateColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+           Color of the custom stamp dialog's input layout border's normal state in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerCustomStampInputLayoutBorderFocusedStateColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+           Focused color of the custom stamp dialog's input layout border in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerCustomStampApplyButtonTextColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+           Text color of the custom stamp dialog's apply button in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerCustomStampBackButtonTextColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+           Text color of the custom stamp dialog's back button in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerCreateStampButtonBackgroundColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+           Background color of the create stamp button in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerCreateStampButtonTextColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+           Text color of the create stamp button in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerCreateStampButtonLongPressedBackgroundColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+           Long pressed background color of the create stamp button in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerStampListViewSelectedItemBackgroundColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+           Background color of the stamp list view's selected item in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerStampViewTabViewNormalTabTextColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+          Text color of the stamp view tab in its normal state in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerStampViewTabViewSelectedTabTextColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+           Text color of the stamp view tab in its selected state in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerSearchDialogBackgroundColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+           Background color of the search dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerSearchDialogTitleTextColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+           Text color of the search dialog's title in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerSearchDialogTextEntryNormalColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+           Color of the search dialog's entry in its normal state in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerSearchDialogTextEntryFocusedColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+           Focused color of the search dialog's entry in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerSearchDialogCheckboxUncheckedColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+           Color of the search dialog's checkbox in its unchecked state in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerSearchDialogTextEntryTextColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+           Text color of the search dialog's entry in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerSearchDialogErrorTextColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+           Text color of the search dialog's error text in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerSearchDialogCloseButtonTextColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+           Text color of the search dialog's close button in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerSearchDialogClearButtonTextColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+           Text color of the search dialog's clear button in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerSearchDialogSearchButtonTextColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+           Text color of the search dialog's search button in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerSearchDialogPreviousSearchButtonTextColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+           Text color of the search dialog's previous search button in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerSearchDialogNextSearchButtonTextColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+           Text color of the search dialog's next search button in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerSearchDialogSearchButtonDisabledTextColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+           Text color of the search dialog's search button after disabled in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerSearchDialogMatchCaseLabelTextColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+           Text color of the search dialog's match case label in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerSearchDialogStatusLabelTextColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+           Text color of the search dialog's status label in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerSearchDialogSeparatorRectangleColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+           Color of the search dialog's separator in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerSearchDialogSearchBusyIndicatorColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+           Color of the search dialog's search busy indicator in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerSearchDialogSearchBusyIndicatorBackgroundColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+           Background color of the search dialog's search busy indicator in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerFileOperationListViewBackgroundColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+           Background color of the file operation list view in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerFileOperationListViewTextColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+           Text color of the file operation list view in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerFileOperationListViewItemMouseHoverColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+           Hovering color of the file operation list view's item in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerFileOperationListViewItemPressedColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+           Pressed color of the file operation list view's item in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerViewModeOptionsListViewBackgroundColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+           Background color of the view mode options list view in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerViewModeOptionsListViewTextColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+           Text color of the view mode options list view in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerViewModeOptionsListViewItemMouseHoverColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+           Hovering color of the view mode options list view's item in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerViewModeOptionsListViewItemPressedColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+           Pressed color of the view mode options list view's item in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerTextMarkupListViewBackgroundColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+           Background color of the text markup list view in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerTextMarkupListViewTextColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+           Text color of the text markup list view in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerTextMarkupListViewItemMouseHoverColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Hovering color of the text markup list view's item in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerTextMarkupListViewItemPressedColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Pressed color of the text markup list view's item in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerShapeListViewBackgroundColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+           Background color of the shape list view in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerShapeListViewTextColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+           Text color of the shape list view in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerShapeListViewItemMouseHoverColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Hovering color of the shape list view's item in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerShapeListViewItemPressedColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+           Pressed color of the shape list view's item in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerTabViewHeaderTextColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+           Text color of the tab view header in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerSelectedTabViewHeaderTextColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+           Text color of the selected tab view header in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerColorPaletteSeparatorColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+           Color of the color palette's separator in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerColorPaletteDialogBackgroundColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+           Background color of the color palette in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerColorPaletteDialogNoColorLabelTextColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+           Text color of the color palette's no color label in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerColorPaletteDialogTextColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+           Text color of the color palette in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerSliderTrackStyleActiveFillColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+           Active fill color of the slider track style in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerSliderTrackStyleInActiveFillColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+           Inactive fill color of the slider track style in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerSliderThumbStyleColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+           Color of the slider thumb style in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerSliderThumbOverlayStyleColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+           Color of the slider thumbover style in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerColorPaletteSelectedButtonStrokeColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+           Color of the color palette's selected button stroke in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerToolbarBackgroundColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+           Bcakground color of the toolbar in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerToolbarTextColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+           Text color of the toolbar in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerToolbarIconColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+           Color of the toolbar's icon in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerToolbarIconIsPressedColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+           Pressed color of the toolbar's icon in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerToolbarIconIsHoveredColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+           Hovering color of the toolbar's icon in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerMoreOptionToolbarLayoutBackgroundColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+           Background color of the more option toolbar layout in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerPageNumberEntryViewBackgroundColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+           Background color of the page number entry view in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerPageNumberEntryViewTextColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+           Text color of the page number entry view in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerPageNumberEntryViewFocusedStrokeColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+           Focused color of the page number entry view's stroke in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerPageNumberEntryViewUnFocusedStrokeColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+           Unfocused color of the page number entry view's stroke in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerStampContextMenuBackgroundColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+           Background color of the stamp context menu in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerStampContextMenuTextColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+           Text color of the stamp context menu in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerStampContextMenuItemIsPressedColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+           Pressed color of the stamp context menu's item in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerStampContextMenuItemIsHoveredColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+           Hovering color of the stamp context menu's item in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerMatchcaseLabelTextColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+           Text color of the match case label in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerMatchcaseLabelCheckBoxNormalColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+           Normal color of the match case label checkboxx in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          SfPdfViewerMatchcaseToolbarBackgroundColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+           Background color of the match case toolbar in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          SfPdfViewerMatchcaseLabelCheckboxIsCheckedColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+           Color of the match case label's checkbox in it's checked state in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          SfPdfViewerPageLayoutModeSelectionColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+           Color of the page layout mode's selection in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          SfPdfViewerPageLayoutViewBackgroundColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+           Background color of the page layout view in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          SfPdfViewerSeparatorColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+           Color of the separator in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          SfPdfViewerToastBackgroundColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+           Background color of the toast in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          SfPdfViewerToastTextColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+           Text color of the toast in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          SfPdfViewerScrollableIndicatorColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+           Color of the scrollable indicator in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          SfPdfViewerStickyNoteIconListViewBackgroundColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+           Background color of the stickynote icon list view in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          SfPdfViewerStickyNoteIconListViewTextColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+           Text color of the stickynote icon list view in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          SfPdfViewerStickyNoteIconListViewHoverColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+           Hovering color of the stickynote icon list view's item in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          SfPdfViewerStickyNoteIconListViewPressedColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Pressed color of the stickynote icon list view's item in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          SfPdfViewerStampViewEditableStampSelectionBorderColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+           Color of the stamp view's editable stamp selection border in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          SfPdfViewerNormalBookmarkButtonBackgroundColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+           Normal background color of the bookmark button in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          SfPdfViewerNormalBookmarkButtonForegroundColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+           Normal foreground color of the bookmark button in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          SfPdfViewerDisableBookmarkButtonBackgroundColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+           Background color of the bookmark button after disabled in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          SfPdfViewerDisableBookmarkButtonForegroundColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+           Foreground color of the bookmark button after disabled in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          SfPdfViewerNormalBookmarkEditMenuItemBackgroundColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+          Normal background color of the bookmark's edit menu item in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          SfPdfViewerNormalBookmarkEditMenuItemIconColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+          Normal color of the bookmark's edit menu item's icon in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          SfPdfViewerNormalBookmarkEditMenuItemTextColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+           Normal text color of the bookmark's edit menu item in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          SfPdfViewerNormalBookmarkMoreIconBackgroundColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+           Normal background color of the bookmark's more icon in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          SfPdfViewerHoverBookmarkMoreIconBackgroundColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+           Hovering background color of the bookmark's more icon in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          SfPdfViewerPressedBookmarkMoreIconBackgroundColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+           Pressed background color of the bookmark's more icon in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          SfPdfViewerNormalBookmarkMoreIconForegroundColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+           Normal foreground color of the bookmark's more icon in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          SfPdfViewerHoverBookmarkMoreIconForegroundColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+           Hovering foreground color of the bookmark's more icon in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          SfPdfViewerPressedBookmarkMoreIconForegroundColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Pressed foreground color of the bookmark's more icon in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          SfPdfViewerNormalBookmarkRenameCloseIconBackgroundColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+          Normal background color of the bookmark's rename's close icon in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          SfPdfViewerHoverBookmarkRenameCloseIconBackgroundColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+           Hovering background color of the bookmark's rename's close icon in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          SfPdfViewerPressedBookmarkRenameCloseIconBackgroundColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+          Pressed background color of the bookmark's rename's close icon in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          SfPdfViewerNormalBookmarkRenameCloseIconForegroundColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+           Normal foreground color of the bookmark's rename's close icon in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          SfPdfViewerHoverBookmarkRenameCloseIconForegroundColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+           Hovering foreground color of the bookmark's rename's close icon in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          SfPdfViewerPressedBookmarkRenameCloseIconForegroundColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+           Pressed foreground color of the bookmark's rename's close icon in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          SfPdfViewerOutlineNoOutlineNormalTextColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+           Normal text color of the outline's no outline in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          SfPdfViewerNormalOutlineMenuItemHoverBackgroundColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+           Hovering background color of the outline's menu item in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          SfPdfViewerBookmarkTextInputFocusedStrokeColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+           Focused color of the bookmark's text input stroke in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>   
 </table>
 
 ## SfPicker
@@ -8869,98 +10453,6 @@ This page lists the keys for each control and the element to which it is mapped 
         </td>
     </tr>
 </table>
-
-## SfPolar Chart
-
-   <table>
-       <tr>
-           <th>Theme Dictionary <br/> <br/> </th>        
-           <th>Keys <br/> <br/> </th>
-           <th> Description <br/> <br/> </th>
-       </tr>
-       <tr>
-           <td rowspan="14">
-               SfPolarChartStyles  <br/> <br/>
-           </td>
-           <td> SfPolarChartTheme <br/> <br/>
-           </td>
-           <td>    
-               By merging this key in application resources, you can customize the appearance of SfPolarChart without merging common theme resource and control style resource dictionaries.
-               
-   {% highlight xaml %}
-   <Application xmlns:syncTheme="clr-namespace:Syncfusion.Maui.Themes;assembly=Syncfusion.Maui.Core"
-                ...>
-    <Application.Resources>
-       <ResourceDictionary>
-           <ResourceDictionary.MergedDictionaries>
-               <syncTheme:SyncfusionThemeResourceDictionary />
-               <ResourceDictionary>
-                   <x:String x:Key="SfPolarChartTheme">CommonTheme</x:String>
-                   <Color x:Key="SfPolarChartBackground">LightYellow</Color>
-                   <Color x:Key="SfPolarChartTooltipBackground">LightPink</Color>
-               </ResourceDictionary>
-           </ResourceDictionary.MergedDictionaries>
-       </ResourceDictionary>
-    </Application.Resources>
-    </Application>
-   {% endhighlight %}
-               <br/>
-               <br/>
-           </td>
-           </tr>
-          <tr>
-        <td>SfPolarChartBackground<br/><br/></td>
-        <td>Background of polar chart<br/><br/></td>
-    </tr>
-    <tr>
-        <td>SfPolarMajorGridLineStroke<br/><br/></td>
-        <td>Stoke of the axis major grid line.<br/><br/></td>
-    </tr>
-    <tr>
-        <td>SfPolarMinorGridLineStroke<br/><br/></td>
-        <td>Stoke of the axis minor grid line.<br/><br/></td>
-    </tr>
-    <tr>
-        <td>SfPolarMajorTickLineStroke<br/><br/></td>
-        <td>Stoke of the axis major tick line.<br/><br/></td>
-    </tr>
-    <tr>
-        <td>SfPolarMinorTickLineStroke<br/><br/></td>
-        <td>Stoke of the axis minor tick line.<br/><br/></td>
-    </tr>
-    <tr>
-        <td>SfPolarAxisLineStroke<br/><br/></td>
-        <td>Stoke of the axis line.<br/><br/></td>
-    </tr>
-    <tr>
-        <td>SfPolarAxisTitleTextColor<br/><br/></td>
-        <td>Color of the axis title text.<br/><br/></td>
-    </tr>
-    <tr>
-        <td>SfPolarAxisTitleBackground<br/><br/></td>
-        <td>Background color of the axis title.<br/><br/></td>
-    </tr>
-    <tr>
-        <td>SfPolarAxisTitleStroke<br/><br/></td>
-        <td>Stoke of the axis title<br/><br/></td>
-    </tr>
-    <tr>
-        <td>SfPolarChartAxisTitleTextFontSize<br/><br/></td>
-        <td>Font size of the axis title text.<br/><br/></td>
-    </tr>
-    <tr>
-        <td>SfPolarChartTooltipBackground<br/><br/></td>
-        <td>Background of the tooltip<br/><br/></td>
-    </tr>
-    <tr>
-        <td>SfPolarChartTooltipTextColor<br/><br/></td>
-        <td>Text color of the tooltip<br/><br/></td>
-    </tr>
-    <tr>
-        <td>SfPolarChartTooltipTextFontSize<br/><br/></td>
-        <td>Font size of the tooltip text<br/><br/></td>
-    </tr> 
- </table>
 
 ## SfPopup
 

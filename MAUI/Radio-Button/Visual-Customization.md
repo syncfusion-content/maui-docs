@@ -2,7 +2,7 @@
 layout: post
 title: Visual Customization in .NET MAUI Radio Button Control | Syncfusion
 description: Learn here all about Visual Customization support in Syncfusion .NET MAUI Radio Button (SfRadioButton) control and more.
-platform: .NET MAUI
+platform: maui
 control: SfRadioButton
 documentation: ug 
 ---
@@ -89,7 +89,14 @@ You can customize the display text appearance of the [`SfRadioButton`](https://h
 {% tabs %}
 {% highlight xaml %}
 
-	<syncfusion:SfRadioButton x:Name="radioButton" Text="Radio Button" IsChecked="True" TextColor="Blue" HorizontalTextAlignment="Center" FontFamily="Arial" FontAttributes="Bold" FontSize="20"/>
+	<syncfusion:SfRadioButton x:Name="radioButton" 
+				  Text="Radio Button" 
+				  IsChecked="True" 
+				  TextColor="Blue" 
+				  HorizontalTextAlignment="Center" 
+			          FontFamily="Arial" 
+				  FontAttributes="Bold" 
+				  FontSize="20"/>
 
 {% endhighlight %}
 {% highlight c# %}
@@ -108,3 +115,68 @@ You can customize the display text appearance of the [`SfRadioButton`](https://h
 {% endtabs %}
 
 ![.NET MAUI Radio Button TextAppereance](Images/VisualCustomization/textappearance.png)
+
+## LineBreakMode
+
+The `LineBreakMode` allows you to wrap or truncate the text. The default value of this property is NoWrap. The following other options are available in `LineBreakMode`:
+
+*   `NoWrap` - Avoids the text wrap.
+*   `WordWrap` - Wraps the text by words.
+*   `CharacterWrap` - Wraps the text by character.
+*   `HeadTruncation` - Truncates the text at the start.
+*   `MiddleTruncation` - Truncates the text at the center.
+*   `TailTruncation` - Truncates the text at the end.
+
+{% tabs %}
+{% highlight xaml %}
+
+    <syncfusion:SfRadioButton   x:Name="RadioButton" 
+				IsChecked="True" 
+				WidthRequest="200" 
+				LineBreakMode="WordWrap" 
+				Text="The LineBreakMode allows you to wrap or truncate the text.">
+				</syncfusion:SfRadioButton>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+    StackLayout stackLayout = new StackLayout();
+    SfRadioButton radioButton = new SfRadioButton();
+    radioButton.Text = "The LineBreakMode allows you to wrap or truncate the text.";
+    radioButton.LineBreakMode = LineBreakMode.WordWrap;
+    radioButton.WidthRequest = 200;
+    stackLayout.Children.Add(radioButton);
+
+{% endhighlight %}
+{% endtabs %}
+
+![.NET MAUI Radio Button LineBreakmode](Images/VisualCustomization/linebreakmode.png)
+
+
+This demo can be downloaded from [GitHub link](https://github.com/SyncfusionExamples/How-to-wrap-text-in-DOTNET-MAUI-RadiButton)
+
+
+## Size customization
+
+The [`ControlSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_ControlSize) property is used to customize the [`RadioButton`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioButton.html) control size. 
+
+{% tabs %}
+{% highlight xaml %}
+
+<StackLayout>
+    <syncfusion:SfRadioButton Text="RadioButton" ControlSize="40"/>
+</StackLayout>
+
+{% endhighlight %}
+{% highlight c# %}
+
+	StackLayout stackLayout = new StackLayout();
+	SfRadioButton radioButton = new SfRadioButton();
+	radioButton.Text = "Radio Button";
+	radioButton.ControlSize = 40;
+	stackLayout.Children.Add(radioButton);
+	this.Content = stackLayout;
+
+{% endhighlight %}
+{% endtabs %}

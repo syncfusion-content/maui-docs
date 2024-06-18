@@ -5,6 +5,7 @@ description: Learn here all about the line chart and its type in Syncfusion .NET
 platform: maui
 control: SfCartesianChart
 documentation: ug
+keywords: .net maui line chart, maui line chart, .net maui chart line type, line chart customization .net maui, syncfusion maui line chart, cartesian line chart maui, .net maui chart line visualization.
 ---
 
 # Line Chart in .NET MAUI Chart
@@ -29,11 +30,11 @@ N> The Cartesian chart has [Series](https://help.syncfusion.com/cr/maui/Syncfusi
     </chart:SfCartesianChart.YAxes>  
 
     <chart:LineSeries XBindingPath="Demand"
-					  ItemsSource="{Binding Data}"
-					  YBindingPath="Year2010"/>
+                      ItemsSource="{Binding Data}"
+                      YBindingPath="Year2010"/>
     <chart:LineSeries XBindingPath="Demand"
-					  ItemsSource="{Binding Data}"
-					  YBindingPath="Year2011"/>
+                      ItemsSource="{Binding Data}"  
+                      YBindingPath="Year2011"/>
 </chart:SfCartesianChart>
 
 {% endhighlight %}
@@ -70,7 +71,7 @@ this.Content = chart;
 
 {% endtabs %}
 
-![Line Chart in MAUI](Chart-types_images/maui_line_chart.png)
+![Line Chart in MAUI](Chart-types-images/maui_line_chart.png)
 
 ### Dashed line
 
@@ -97,13 +98,13 @@ The [StrokeDashArray](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts
     </chart:SfCartesianChart.YAxes>  
 
     <chart:LineSeries XBindingPath="Demand"
-					  ItemsSource="{Binding Data}"
-					  YBindingPath="Year2010"
-					  StrokeDashArray="{StaticResource dashArray}"/>
+                      ItemsSource="{Binding Data}"
+                      YBindingPath="Year2010"
+                      StrokeDashArray="{StaticResource dashArray}"/>
     <chart:LineSeries XBindingPath="Demand"
-					  ItemsSource="{Binding Data}" 
-					  YBindingPath="Year2011"
-					  StrokeDashArray="{StaticResource dashArray}"/>
+                      ItemsSource="{Binding Data}" 
+                      YBindingPath="Year2011"
+                      StrokeDashArray="{StaticResource dashArray}"/>
 </chart:SfCartesianChart>
 
 {% endhighlight %}
@@ -146,7 +147,7 @@ this.Content = chart;
 
 {% endtabs %}
 
-![Dashed line chart in MAUI](Chart-types_images/maui_dashed_line_chart.png)
+![Dashed line chart in MAUI](Chart-types-images/maui_dashed_line_chart.png)
 
 ## Spline Chart 
 
@@ -166,11 +167,11 @@ The [SplineSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Sp
     </chart:SfCartesianChart.YAxes>  
 
     <chart:SplineSeries XBindingPath="Demand"
-						ItemsSource="{Binding Data}"
-						YBindingPath="Year2010"/>
+                        ItemsSource="{Binding Data}"
+                        YBindingPath="Year2010"/>
     <chart:SplineSeries XBindingPath="Demand"
-						ItemsSource="{Binding Data}"
-						YBindingPath="Year2011"/>
+                        ItemsSource="{Binding Data}"
+                        YBindingPath="Year2011"/>
 </chart:SfCartesianChart>
 
 {% endhighlight %}
@@ -206,7 +207,7 @@ this.Content = chart;
 
 {% endtabs %}
 
-![Spline chart type in MAUI Chart](Chart-types_images/maui_spline_chart.png)
+![Spline chart type in MAUI Chart](Chart-types-images/maui_spline_chart.png)
 
 ### Spline rendering types
 
@@ -233,9 +234,9 @@ The following types are used in SplineSeries:
     </chart:SfCartesianChart.YAxes>  
 
     <chart:SplineSeries XBindingPath="Demand"
-						ItemsSource="{Binding Data}"
-						YBindingPath="Year2010"
-						Type="Cardinal"/>
+                        ItemsSource="{Binding Data}"
+                        YBindingPath="Year2010"
+                        Type="Cardinal"/>
 </chart:SfCartesianChart>
 
 {% endhighlight %}
@@ -264,7 +265,7 @@ this.Content = chart;
 
 {% endtabs %}
 
-![Spline types chart in MAUI Chart](Chart-types_images/maui_spline_types_chart.png)
+![Spline types chart in MAUI Chart](Chart-types-images/maui_spline_types_chart.png)
 
 ## Enable Marker
 
@@ -301,7 +302,7 @@ LineSeries series = new LineSeries()
     YBindingPath = "Year2010",
     ItemsSource = new ViewModel().Data,
     ShowMarkers= true,
- };
+};
 
 LineSeries series = new LineSeries()
 {
@@ -309,7 +310,7 @@ LineSeries series = new LineSeries()
     YBindingPath = "Year2011",
     ItemsSource = new ViewModel().Data,
     ShowMarkers= true,
- };
+};
 
 chart.Series.Add(series);
 this.Content= chart;
@@ -318,7 +319,7 @@ this.Content= chart;
 
 {% endtabs %}
 
-![Marker support in MAUI Chart](Chart-types_images/marker_support.png)
+![Marker support in MAUI Chart](Chart-types-images/marker_support.png)
 
 ### Marker customization
 
@@ -360,12 +361,12 @@ SfCartesianChart chart = new SfCartesianChart();
 
 ...
 ChartMarkerSettings chartMarker= new ChartMarkerSettings();
-        chartMarker.Type = ShapeType.Diamond;
-        chartMarker.Fill = Colors.Brown;
-        chartMarker.Stroke = Colors.Black;
-        chartMarker.StrokeWidth= 1;
-        chartMarker.Height = 8;
-        chartMarker.Width = 8;
+chartMarker.Type = ShapeType.Diamond;
+chartMarker.Fill = Colors.Brown;
+chartMarker.Stroke = Colors.Black;
+chartMarker.StrokeWidth= 1;
+chartMarker.Height = 8;
+chartMarker.Width = 8;
 
 LineSeries series = new LineSeries()
 {
@@ -374,7 +375,7 @@ LineSeries series = new LineSeries()
    ItemsSource = new ViewModel().Data,
    ShowMarkers = true,
    MarkerSettings = chartMarker,
- };
+};
 
 chart.Series.Add(series);
 this.Content = chart;

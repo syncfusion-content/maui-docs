@@ -78,6 +78,30 @@ private void TreeView_ItemDoubleTapped(object sender, ItemDoubleTappedEventArgs 
 {% endhighlight %}
 {% endtabs %}
 
+### ItemRightTapped event
+
+The [ItemRightTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ItemRightTapped) event will be triggered whenever the item is right tapped. The [ItemRightTappedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.ItemRightTappedEventArgs.html) has the following members providing information for the `ItemRightTapped` event:
+
+ * [Node](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.ItemRightTappedEventArgs.html#Syncfusion_Maui_TreeView_ItemRightTappedEventArgs_Node): Gets the [TreeViewNode](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.TreeViewNode.html) and data associated with the right-tapped item as its arguments.
+ * [Position](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.ItemRightTappedEventArgs.html#Syncfusion_Maui_TreeView_ItemRightTappedEventArgs_Position): Gets the touch position in the right-tapped item.
+
+{% tabs %}
+{% highlight xaml %}
+      
+    <syncfusion:SfTreeView x:Name = "treeView" ItemRightTapped = "TreeView_ItemRightTapped" />
+{% endhighlight %}
+{% highlight c# %}
+
+    treeView.ItemRightTapped += TreeView_ItemRightTapped;
+
+    private void TreeView_ItemRightTapped(object sender, ItemRightTappedEventArgs e)
+    {
+        DisplayAlert("Item RightTapped", "TreeView item right tapped", "Close");
+    }
+
+{% endhighlight %}
+{% endtabs %}
+
 ### ItemLongPress event
 
 The [ItemLongPress](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ItemLongPress) event will be triggered whenever the item is long pressed.
@@ -97,6 +121,31 @@ treeView.ItemLongPress += TreeView_ItemLongPress;
 private void TreeView_ItemLongPress(object sender, ItemLongPressEventArgs e)
 {
     DisplayAlert("Item LongPress", "TreeView item is Long Pressed","Close");   
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+### KeyDown event
+
+The `KeyDown` event is triggered when a key is pressed while the [SfTreeView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.html) is in focus. The `KeyPressEventArgs` has the following members that provide information for the `KeyDown` event:
+
+ * `Key`: Returns the currently pressed key.
+ * `IsShiftKeyPressed`: Indicates whether the Shift key is in pressed state.
+ * `IsCtrlKeyPressed`: Indicates whether the Control key is in pressed state.
+ * `IsAltKeyPressed`: Indicates whether the Alt key is in pressed state.
+ * `IsCommandKeyPressed`: Indicates whether the Command key is in pressed state.
+ * `Handled`: Gets or sets whether the event is handled or not.
+
+{% tabs %}
+{% highlight xaml %}
+<syncfusion:SfTreeView x:Name="treeView" KeyDown="OnTreeViewKeyDown "/>
+{% endhighlight %}
+{% highlight c# %}
+
+private void OnTreeViewKeyDown(object? sender, KeyPressEventArgs e)
+{
+
 }
 
 {% endhighlight %}

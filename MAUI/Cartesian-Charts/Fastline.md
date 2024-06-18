@@ -5,6 +5,7 @@ description: Learn here all about the fast line chart and its features in Syncfu
 platform: maui
 control: SfCartesianChart
 documentation: ug
+Keywords: .net maui fast line chart, .net maui performance line chart, fast line chart customization .net maui, syncfusion maui fast line chart, cartesian fast line chart maui, cartesian performance line chart maui, .net maui chart fast line visualization.
 ---
 
 # Fast Line Chart in .NET MAUI Chart
@@ -29,8 +30,8 @@ N> The cartesian chart has [Series](https://help.syncfusion.com/cr/maui/Syncfusi
     </chart:SfCartesianChart.YAxes>  
                 
     <chart:FastLineSeries ItemsSource="{Binding Data}"
-						  XBindingPath="XValue"
-						  YBindingPath="YValue"/>
+                          XBindingPath="XValue"
+                          YBindingPath="YValue"/>
 </chart:SfCartesianChart>
 
 {% endhighlight %}
@@ -57,7 +58,7 @@ this.Content = chart;
 
 {% endtabs %}
 
-![FastLine chart type in MAUI Chart](Chart-types_images/maui_fastline_chart.png)
+![FastLine chart type in MAUI Chart](Chart-types-images/maui_fastline_chart.png)
 
 ### Dashed line
 
@@ -84,9 +85,9 @@ The [StrokeDashArray](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts
     </chart:SfCartesianChart.YAxes>  
 
     <chart:FastLineSeries ItemsSource="{Binding Data}"
-						  XBindingPath="XValue"
-						  YBindingPath="YValue" 
-						  StrokeDashArray="{StaticResource dashArray}"/>
+                          XBindingPath="XValue"
+                          YBindingPath="YValue" 
+                          StrokeDashArray="{StaticResource dashArray}"/>
 </chart:SfCartesianChart>
 
 {% endhighlight %}
@@ -120,7 +121,7 @@ this.Content = chart;
 
 {% endtabs %}
 
-![Dashed fast line chart in MAUI](Chart-types_images/maui_dashed_fastline_chart.png)
+![Dashed fast line chart in MAUI](Chart-types-images/maui_dashed_fastline_chart.png)
 
 ### Anti-aliasing
 
@@ -134,9 +135,9 @@ There may be some jagged lines at the edges. This can be reduced by using the `E
     .....
 
     <chart:FastLineSeries EnableAntiAliasing="True"
-						  ItemsSource="{Binding Data}"
-						  XBindingPath="XValue"
-						  YBindingPath="YValue"/>
+                          ItemsSource="{Binding Data}"
+                          XBindingPath="XValue"
+                          YBindingPath="YValue"/>
 </chart:SfCartesianChart>
 
 {% endhighlight %}

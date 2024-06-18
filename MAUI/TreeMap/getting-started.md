@@ -654,3 +654,5 @@ public class PopulationViewModel
 {% endtabs %}
 
  ![legend-in-maui-tree-map](images/getting-started/legend-in-maui-tree-map.png)
+
+ N> You can refer to our [.NET MAUI TreeMap](https://www.syncfusion.com/maui-controls/maui-tree-map) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI TreeMap Example](https://github.com/SyncfusionExamples/maui-treemap-examples/tree/master/) that shows you how to render the TreeMap in .NET MAUI.

@@ -130,7 +130,7 @@ The [SfPolarChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Sf
 
 <chart:SfPolarChart >
     <chart:SfPolarChart.Resources>
-         <DataTemplate x:Key="tooltipTemplate1" x:Name="temp">
+        <DataTemplate x:Key="tooltipTemplate1" x:Name="temp">
             <StackLayout>
                 <Label Text="{Binding Item.Direction}" HorizontalTextAlignment="Center" HorizontalOptions="Center"             VerticalTextAlignment="Center" TextColor="White" FontAttributes="Bold" FontFamily="Helvetica" Margin="0,2,0,2" FontSize="12.5"/>
                 <BoxView Color="Gray" HeightRequest="1" WidthRequest="90"/>
@@ -141,8 +141,8 @@ The [SfPolarChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Sf
                             TextColor="White" FontFamily="Helvetica" FontSize="12" Margin="3,0,3,0"/>
                         <Label Text="{Binding Item.Tree,StringFormat=' :  {0}'}" VerticalTextAlignment="Center" HorizontalOptions="End" TextColor="White" FontFamily="Helvetica" Margin="0,0,3,0" FontSize="12"/>
                     </StackLayout>
-     </StackLayout>
- </DataTemplate>
+            </StackLayout>
+        </DataTemplate>
         . . .          
     </chart:SfPolarChart.Resources>
     . . .
@@ -200,8 +200,7 @@ The [Show](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartToolt
 ...
 </chart:SfPolarChart>
 
-<Button Text="Show tooltip" Clicked="Button_Clicked">
-</Button>
+<Button Text="Show tooltip" Clicked="Button_Clicked"/>
 
 {% endhighlight %}
 

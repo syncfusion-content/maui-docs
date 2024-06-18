@@ -504,6 +504,113 @@ autocomplete.DropDownItemHeight = 80;
 
 ![.NET MAUI Autocomplete DropDown Item Height](Images/UICustomization/DropDownItemHeight.png)
 
+### Customize the DropDownPlacement
+
+The drop-down that shows the filtered items will be placed automatically based on the available space and can also be customized using the `DropDownPlacement` property.
+
+*   `Top` - Drop-down will be placed above the text box.
+
+*   `Bottom` - Drop-down will be placed below the text box.
+
+*   `Auto` - Drop-down will be placed based on the available space either top or bottom of the text box.
+
+*   `None` - Drop-down will not be shown with the filtered items.
+
+
+{% tabs %}
+{% highlight xaml %}
+
+ <editors:SfAutocomplete x:Name="autocomplete"
+                         WidthRequest="300"                  
+                         ItemsSource="{Binding SocialMedias}"
+                         DropDownPlacement="Top"/>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+autocomplete.DropDownPlacement = DropDownPlacement.Top;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![.NET MAUI Autocomplete Dropdownplacement.](Images/UICustomization/placementauto.png)
+
+### Customize the DropDown ItemPadding
+
+The autocomplete enables the user to provide padding for the items inside dropdown using `ItemPadding` property.
+
+{% tabs %}
+{% highlight xaml %}
+
+   <editors:SfAutocomplete x:Name="autocomplete"
+                           WidthRequest="300"                          
+                           ItemsSource="{Binding SocialMedias}"
+                           ItemPadding="10,20,0,0"/>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+autocomplete.ItemPadding = new Thickness(10,20,0,0);
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![.NET MAUI Autocomplete Itempadding.](Images/UICustomization/Itempadding.png)
+
+### Customize the DropDown Width
+
+The `DropdownWidth` property is used to modify the Width of the dropdown.
+
+{% tabs %}
+{% highlight xaml %}
+
+    <editors:SfAutocomplete x:Name="autocomplete"
+                            WidthRequest="300"                            
+                            ItemsSource="{Binding SocialMedias}"                           
+                            DropdownWidth="400"/>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+autocomplete.DropdownWidth = 400;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![.NET MAUI Autocomplete DropDownWidth.](Images/UICustomization/DropDownWidth.png)
+
+
+### Show suggestion box on focus
+
+Suggestion box can be shown whenever the control receives focus using the `ShowSuggestionsOnFocus` property. At this time, suggestion list is the complete list of data source.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+      <editors:SfAutocomplete x:Name="autocomplete"
+                              WidthRequest="300"                            
+                              ItemsSource="{Binding SocialMedias}"                           
+                              ShowSuggestionsOnFocus="True"/>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+autocomplete.ShowSuggestionsOnFocus = true;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![.NET MAUI Autocomplete OnFocus.](Images/UICustomization/OnFocus.png)
+
 ## Customize DropDown (suggestion) items based on condition
 
 The [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_ItemTemplate) property helps you to decorate drop-down items conditionally based on their content using the custom templates. The default value of the `ItemTemplate` is `null`.
@@ -601,7 +708,7 @@ The [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.Dr
 {% tabs %}
 {% highlight xaml %}
 
-    <Grid >
+    <Grid>
         <Grid.Resources>
             <DataTemplate x:Key="employeeTemplate1">
                 <ViewCell>
@@ -610,28 +717,28 @@ The [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.Dr
                           HorizontalOptions="Center"
                           ColumnDefinitions="48,220"
                           RowDefinitions="50">
-                        <Image Grid.Column="0"
-                               HorizontalOptions="Center"
-                               VerticalOptions="Center"
-                               Source="{Binding ProfilePicture}"
-                               Aspect="AspectFit"/>
-                        <StackLayout HorizontalOptions="Start"
-                                     VerticalOptions="Center"
-                                     Grid.Column="1"
-                                     Margin="15,0,0,0">
-                            <Label HorizontalTextAlignment="Start"
-                                   VerticalTextAlignment="Center"
-                                   Opacity=".87"
-                                   FontSize="14"
-                                   TextColor="Blue"
-                                   Text="{Binding Name}"/>
-                            <Label HorizontalOptions="Start"
-                                   VerticalTextAlignment="Center"
-                                   Opacity=".54"
-                                   FontSize="12"
-                                   TextColor="Coral"
-                                   Text="{Binding Designation}"/>
-                        </StackLayout>
+                            <Image Grid.Column="0"
+                                   HorizontalOptions="Center"
+                                   VerticalOptions="Center"
+                                   Source="{Binding ProfilePicture}"
+                                   Aspect="AspectFit"/>
+                            <StackLayout HorizontalOptions="Start"
+                                         VerticalOptions="Center"
+                                         Grid.Column="1"
+                                         Margin="15,0,0,0">
+                                <Label HorizontalTextAlignment="Start"
+                                        VerticalTextAlignment="Center"
+                                        Opacity=".87"
+                                        FontSize="14"
+                                        TextColor="Blue"
+                                        Text="{Binding Name}"/>
+                                <Label HorizontalOptions="Start"
+                                        VerticalTextAlignment="Center"
+                                        Opacity=".54"
+                                        FontSize="12"
+                                        TextColor="Coral"
+                                        Text="{Binding Designation}"/>
+                            </StackLayout>
                     </Grid>
                 </ViewCell>
             </DataTemplate>
@@ -643,28 +750,28 @@ The [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.Dr
                           HorizontalOptions="Center"
                           ColumnDefinitions="48,220"
                           RowDefinitions="50">
-                        <Image Grid.Column="0"
-                               HorizontalOptions="Center"
-                               VerticalOptions="Center"
-                               Source="{Binding ProfilePicture}"
-                               Aspect="AspectFit"/>
-                        <StackLayout HorizontalOptions="Start"
-                                     VerticalOptions="Center"
-                                     Grid.Column="1"
-                                     Margin="15,0,0,0">
-                            <Label HorizontalTextAlignment="Start"
-                                   VerticalTextAlignment="Center"
-                                   Opacity=".87"
-                                   FontSize="14"
-                                   TextColor="Red"
-                                   Text="{Binding Name}"/>
-                            <Label HorizontalOptions="Start"
-                                   VerticalTextAlignment="Center"
-                                   Opacity=".54"
-                                   FontSize="12"
-                                   TextColor="Green"
-                                   Text="{Binding Designation}"/>
-                        </StackLayout>
+                            <Image Grid.Column="0"
+                                   HorizontalOptions="Center"
+                                   VerticalOptions="Center"
+                                   Source="{Binding ProfilePicture}"
+                                   Aspect="AspectFit"/>
+                            <StackLayout HorizontalOptions="Start"
+                                         VerticalOptions="Center"
+                                         Grid.Column="1"
+                                         Margin="15,0,0,0">
+                                <Label HorizontalTextAlignment="Start"
+                                       VerticalTextAlignment="Center"
+                                       Opacity=".87"
+                                       FontSize="14"
+                                       TextColor="Red"
+                                       Text="{Binding Name}"/>
+                                <Label HorizontalOptions="Start"
+                                       VerticalTextAlignment="Center"
+                                       Opacity=".54"
+                                       FontSize="12"
+                                       TextColor="Green"
+                                       Text="{Binding Designation}"/>
+                            </StackLayout>
                     </Grid>
                 </ViewCell>
             </DataTemplate>
@@ -674,6 +781,7 @@ The [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.Dr
                                             EmployeeTemplate2="{StaticResource employeeTemplate2}"/>
 
         </Grid.Resources>
+
         <editors:SfAutocomplete Placeholder="Enter an employee"
                                 TextMemberPath="Name"
                                 DisplayMemberPath="Name"
@@ -825,7 +933,7 @@ The following image illustrates the result of the above code:
 
 ## Styling token items
 
-The AutoComplete control allows you to customize the style of the TokenItem generated in the selection area by using the TokenItemStyle property.
+The Autocomplete control allows you to customize the style of the TokenItem generated in the selection area by using the TokenItemStyle property.
 
 {% tabs %}
 
@@ -843,7 +951,7 @@ The AutoComplete control allows you to customize the style of the TokenItem gene
    ItemsSource="{Binding SocialMedias}"
    DisplayMemberPath="Name"
    TextMemberPath="Name"    
-   x:Name="autoComplete" >
+   x:Name="autoComplete">
        <editors:SfAutocomplete.TokenItemStyle>
            <Style TargetType="core:SfChipGroup">
                <Setter Property="ChipTextColor" Value="White"/>
@@ -867,7 +975,7 @@ The following image illustrates the result of the above code:
 
 ## Completed Event
 
-The [Completed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_Completed) event is raised when the user finalizes the text in the [SfAutoComplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) by pressing return key on the keyboard.The handler for the event is a generic event handler, taking the `sender` and `EventArgs`(the `EventArgs` value is `string.Empty`):
+The [Completed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_Completed) event is raised when the user finalizes the text in the [SfAutocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) by pressing return key on the keyboard.The handler for the event is a generic event handler, taking the `sender` and `EventArgs`(the `EventArgs` value is `string.Empty`):
 
 {% tabs %}
 {% highlight xaml %}
@@ -914,22 +1022,21 @@ The [DropDownOpening](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.S
 
 {% highlight xaml %}
 
-<editors:SfAutocomplete 
-DropdownOpening="AutoComplete_DropdownOpening"
-WidthRequest="350"
-HeightRequest="50"
-ItemsSource="{Binding SocialMedias}"
-DisplayMemberPath="Name"
-TextMemberPath="Name"    
-x:Name="autoComplete" >
-</editors:SfAutocomplete>
+    <editors:SfAutocomplete x:Name="autoComplete"
+                            DropdownOpening="Autocomplete_DropdownOpening"
+                            WidthRequest="350"
+                            HeightRequest="50"
+                            ItemsSource="{Binding SocialMedias}"
+                            DisplayMemberPath="Name"
+                            TextMemberPath="Name">
+    </editors:SfAutocomplete>
     
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfAutoComplete autoComplete = new SfAutoComplete();
-    autoComplete.DropdownOpening += AutoComplete_DropdownOpening;
+    SfAutocomplete autoComplete = new SfAutocomplete();
+    autoComplete.DropdownOpening += Autocomplete_DropdownOpening;
 
 {% endhighlight %}
 
@@ -939,7 +1046,7 @@ x:Name="autoComplete" >
 
 {% highlight c# %}
     
- private void AutoComplete_DropdownOpening(object sender, CancelEventArgs e)
+ private void Autocomplete_DropdownOpening(object sender, CancelEventArgs e)
  {
      e.Cancel = true; // If you want to restrict the dropdown open then set the e.Cancel is true. 
  }
@@ -957,21 +1064,20 @@ The [DropDownOpened](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Sf
 
 {% highlight xaml %}
 
- <editors:SfAutocomplete 
- DropdownOpened="autoComplete_DropdownOpened"
- WidthRequest="350"
- HeightRequest="50"
- ItemsSource="{Binding SocialMedias}"
- DisplayMemberPath="Name"
- TextMemberPath="Name"    
- x:Name="autoComplete" >
- </editors:SfAutocomplete>
+     <editors:SfAutocomplete x:Name="autoComplete" 
+                             DropdownOpened="autoComplete_DropdownOpened"
+                             WidthRequest="350"
+                             HeightRequest="50"
+                             ItemsSource="{Binding SocialMedias}"
+                             DisplayMemberPath="Name"
+                             TextMemberPath="Name">
+     </editors:SfAutocomplete>
  
 {% endhighlight %}
 
 {% highlight c# %}
 
-  SfAutoComplete autoComplete = new SfAutoComplete();
+  SfAutocomplete autoComplete = new SfAutocomplete();
 
   autoComplete.DropdownOpened += autoComplete_DropdownOpened;
 
@@ -985,9 +1091,9 @@ The [DropDownOpened](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Sf
 {% highlight c# %}
     
   private void autoComplete_DropdownOpened(object sender, EventArgs e)
- {
+  {
     
- }
+  }
    
 {% endhighlight %}
 
@@ -1008,7 +1114,7 @@ The [DropDownClosed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.
 {% endhighlight %}
 {% highlight c# %}
 
-    SfAutoComplete autoComplete = new SfAutoComplete();
+    SfAutocomplete autoComplete = new SfAutocomplete();
     autoComplete.DropDownClosed+=autoComplete_DropDownClosed;
 
 {% endhighlight %}
@@ -1032,17 +1138,17 @@ The cursor position in the input view can be obtained or updated using the [Curs
 {% tabs %}
 {% highlight xaml %}
 
-<editors:SfAutocomplete x:Name="autoComplete"
+    <editors:SfAutocomplete x:Name="autoComplete"
                             WidthRequest="250" 
                             HeightRequest="35"
                             CursorPosition = "4" />
 {% endhighlight %}
 {% highlight C# %}
 
-using Syncfusion.Maui.Inputs;
+    using Syncfusion.Maui.Inputs;
 
-SfAutocomplete autocomplete = new SfAutocomplete();
-autocomplete.CursorPosition = 4;
+    SfAutocomplete autocomplete = new SfAutocomplete();
+    autocomplete.CursorPosition = 4;
 
 {% endhighlight %}
 {% endtabs %}
@@ -1056,19 +1162,19 @@ The [ShowBorder](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAu
 {% tabs %}
 {% highlight xaml %}
 
-<editors:SfAutocomplete x:Name="autoComplete"
-                        WidthRequest="200" 
-                        HeightRequest="35"
-                        ShowBorder = "False" />
+    <editors:SfAutocomplete x:Name="autoComplete"
+                            WidthRequest="200" 
+                            HeightRequest="35"
+                            ShowBorder = "False" />
 {% endhighlight %}
 {% highlight C# %}
 
 using Syncfusion.Maui.Inputs;
 
-SfAutocomplete autocomplete = new SfAutocomplete();
-autocomplete.WidthRequest = 200;
-autocomplete.HeightRequest = 35;
-autocomplete.ShowBorder = false;
+    SfAutocomplete autocomplete = new SfAutocomplete();
+    autocomplete.WidthRequest = 200;
+    autocomplete.HeightRequest = 35;
+    autocomplete.ShowBorder = false;
 
 {% endhighlight %}
 {% endtabs %}
@@ -1086,19 +1192,19 @@ N> Dynamic changes to the `HorizontalTextAlignment` property may not be function
 {% tabs %}
 {% highlight xaml %}
 
-<editors:SfAutocomplete x:Name="autoComplete"
-                        WidthRequest="250" 
-                        HeightRequest="50"
-                        HorizontalTextAlignment="Center" 
-                        VerticalTextAlignment="Start"/>
+    <editors:SfAutocomplete x:Name="autoComplete"
+                            WidthRequest="250" 
+                            HeightRequest="50"
+                            HorizontalTextAlignment="Center" 
+                            VerticalTextAlignment="Start"/>
 {% endhighlight %}
 {% highlight c# %}
 
-SfAutocomplete autocomplete = new SfAutocomplete();
-autocomplete.WidthRequest = 250;
-autocomplete.HeightRequest = 50;
-autocomplete.HorizontalTextAlignment = TextAlignment.Center;
-autocomplete.VerticalTextAlignment = TextAlignment.Start;
+    SfAutocomplete autocomplete = new SfAutocomplete();
+    autocomplete.WidthRequest = 250;
+    autocomplete.HeightRequest = 50;
+    autocomplete.HorizontalTextAlignment = TextAlignment.Center;
+    autocomplete.VerticalTextAlignment = TextAlignment.Start;
 
 {% endhighlight %}
 {% endtabs %}

@@ -2,7 +2,7 @@
 layout: post
 title: Customization in .NET MAUI CheckBox Control | Syncfusion
 description: Learn about Customization support in Syncfusion Essential Studio .NET MAUI CheckBox control, its elements and more.
-platform: .NET MAUI
+platform: maui
 control: SfCheckBox
 documentation: ug
 ---
@@ -127,7 +127,14 @@ You can customize the display text appearance of the [`SfCheckBox`](https://help
 {% tabs %}
 {% highlight xaml %}
 
-    <syncfusion:SfCheckBox x:Name="caption" Text="CheckBox" IsChecked="True" TextColor="Blue" HorizontalTextAlignment="Center" FontFamily="Arial" FontAttributes="Bold" FontSize="20"/>           
+    <syncfusion:SfCheckBox  x:Name="caption" 
+                            Text="CheckBox" 
+                            IsChecked="True" 
+                            TextColor="Blue" 
+                            HorizontalTextAlignment="Center" 
+                            FontFamily="Arial" 
+                            FontAttributes="Bold" 
+                            FontSize="20"/>           
 
 {% endhighlight %}
 {% highlight c# %}
@@ -194,3 +201,65 @@ The [`TickColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.Sf
 {% endtabs %}
 
 ![.NET MAUI CheckBox](Images/Visual-Customization/tickcolor.png)
+
+## LineBreakMode
+
+The `LineBreakMode` allows you to wrap or truncate the text. The default value of this property is NoWrap. The following other options are available in `LineBreakMode`:
+
+*   `NoWrap` - Avoids the text wrap.
+*   `WordWrap` - Wraps the text by words.
+*   `CharacterWrap` - Wraps the text by character.
+*   `HeadTruncation` - Truncates the text at the start.
+*   `MiddleTruncation` - Truncates the text at the center.
+*   `TailTruncation` - Truncates the text at the end.
+
+{% tabs %}
+{% highlight xaml %}
+   
+        <syncfusion:SfCheckBox x:Name="checkBox" 
+                               IsChecked="True" 
+                               WidthRequest="200" 
+                               LineBreakMode="WordWrap" 
+                               Text="The LineBreakMode allows you to wrap or truncate the text."/>
+
+{% endhighlight %}
+{% highlight c# %}
+
+    StackLayout stackLayout = new StackLayout();
+    SfCheckBox  sfCheckBox  = new SfCheckBox();
+    sfCheckBox.Text = "The LineBreakMode allows you to wrap or truncate the text.";
+    sfCheckBox.LineBreakMode = LineBreakMode.WordWrap;
+    sfCheckBox.WidthRequest = 200;
+    stackLayout.Children.Add(sfCheckBox);
+    this.Content = stackLayout;
+
+{% endhighlight %}
+{% endtabs %}
+
+![.NET MAUI CheckBox](Images/Visual-Customization/linebreakmode.png)
+
+This demo can be downloaded from [GitHub link](https://github.com/SyncfusionExamples/How-to-wrap-text-in-DOTNET-MAUI-CheckBox)
+
+## Size Customization
+
+The [`ControlSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_ControlSize) property is used to customize the [`CheckBox`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html) control size.
+
+{% tabs %}
+{% highlight xaml %}
+
+    <StackLayout>
+        <syncfusion:SfCheckBox Text="CheckBox" ControlSize="40"/>
+    </StackLayout>
+
+{% endhighlight %}
+{% highlight c# %}
+
+    StackLayout stackLayout = new StackLayout();
+    SfCheckBox  sfCheckBox  = new SfCheckBox();
+    sfCheckBox.Text = "CheckBox";
+    sfCheckBox.ControlSize = 40;
+    stackLayout.Children.Add(sfCheckBox);
+    this.Content = stackLayout;
+
+{% endhighlight %}
+{% endtabs %}

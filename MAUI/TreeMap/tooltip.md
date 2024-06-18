@@ -96,6 +96,8 @@ public class PopulationViewModel
 {% endhighlight %}
 {% endtabs %}
 
+![enable-tooltip-in-maui-tree-map](images/tooltip/enable-tooltip-in-maui-tree-map.png)
+
 ## Customize tooltip appearance
 
 The tooltip appearance customization can be achieved by using the [Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapToolTipSettings.html#Syncfusion_Maui_TreeMap_TreeMapToolTipSettings_Stroke), [Duration](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapToolTipSettings.html#Syncfusion_Maui_TreeMap_TreeMapToolTipSettings_Duration), [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapToolTipSettings.html#Syncfusion_Maui_TreeMap_TreeMapToolTipSettings_TextStyle), and [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapToolTipSettings.html#Syncfusion_Maui_TreeMap_TreeMapToolTipSettings_Background) properties of [ToolTipSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapToolTipSettings.html) in the [SfTreeMap](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html).
@@ -205,6 +207,8 @@ public class PopulationViewModel
 {% endtabs %}
 
 N> This property will only be applicable when the [ShowToolTip](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_ShowToolTip) is enabled.
+
+![customize-tooltip-appearance-in-maui-tree-map](images/tooltip/customize-tooltip-appearance-in-maui-tree-map.png)
 
 ### Customize tooltip appearance using DataTemplate
 
@@ -332,3 +336,5 @@ public class PopulationViewModel
 {% endtabs %}
 
 N> This property will only be applicable when the [ShowToolTip](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_ShowToolTip) is enabled.
+
+![tooltip-template-in-maui-tree-map](images/tooltip/tooltip-template-in-maui-tree-map.png)

@@ -5,6 +5,7 @@ description: Learn about the shape annotations feature of Syncfusion .NET MAUI I
 platform: maui
 control: SfImageEditor
 documentation: ug
+keywords: .net maui imageEditor, .net maui image editing, .net maui freehand draw, .net maui image annotation.
 ---
 
 # Shape Annotations in .NET MAUI Image Editor (SfImageEditor)
@@ -141,6 +142,7 @@ A [`Polyline`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.A
 
 Customize the appearance of each shape using the [`ImageEditorShapeSettings`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorShapeSettings.html).
 
+* [AnnotationID](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorAnnotationSettings.html#Syncfusion_Maui_ImageEditor_ImageEditorAnnotationSettings_Id) : A unique ID is generated for shape annotations when they are added to the image editor. You can retrieve this unique ID from the ItemsSelected event arguments or from the serialized JSON.
 * [`AllowDrag`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorAnnotationSettings.html#Syncfusion_Maui_ImageEditor_ImageEditorAnnotationSettings_AllowDrag): Enables or disables the dragging for shape annotation. The default value is `true`.
 * [`AllowResize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorAnnotationSettings.html#Syncfusion_Maui_ImageEditor_ImageEditorAnnotationSettings_AllowResize): Enables or disables the resizing for shape annotation. The default value is `true`.
 * [`Bounds`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorAnnotationSettings.html#Syncfusion_Maui_ImageEditor_ImageEditorAnnotationSettings_Bounds): Specifies the bounds of the shapes. Position the shapes wherever you want on the image. The value of the shape bounds should fall between 0 and 1.
@@ -179,6 +181,54 @@ Customize the appearance of each shape using the [`ImageEditorShapeSettings`](ht
 {% endtabs %}
 
 ![Shape annotation customization in .NET Maui ImageEditor](images/shape/imageeditor-shape-customization.png)
+
+## Select a particular annotation programmatically using annotation ID
+
+By passing the unique `ID` of an annotation to the [SelectAnnotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_SelectAnnotation_System_Object_) method of `SfImageEditor`, you can select the particular annotation programmatically.
+
+{% tabs %}
+
+{% highlight xaml tabtitle="MainPage.xaml" %}
+
+ <Grid>
+    <Grid.RowDefinitions>
+        <RowDefinition Height="*" />
+        <RowDefinition Height="Auto" />
+    </Grid.RowDefinitions>
+    <imageEditor:SfImageEditor x:Name="imageEditor"
+                               Source="image.png"
+                               ImageLoaded="imageEditor_ImageLoaded" />
+    <StackLayout Grid.Row="1" Margin="10"
+                 Orientation="Horizontal">
+        <Label Text="ShapeID :" VerticalOptions="Center" />
+        <Entry x:Name="shapeID" WidthRequest ="50"/>
+        <Button Text="SelectShape" Margin="25,0,0,0"
+                Clicked="SelectShape_Clicked" WidthRequest="150" />
+    </StackLayout>
+</Grid>
+
+{% endhighlight %}
+
+{% highlight C# tabtitle="MainPage.xaml.cs" %}
+
+private void SelectShape_Clicked(object sender, EventArgs e)
+{
+    int shapeId;
+    if (int.TryParse(this.shapeID.Text, out shapeId))
+    {
+        this.imageEditor.SelectAnnotation(shapeId);
+    }
+}
+ 
+private void imageEditor_ImageLoaded(object sender, EventArgs e)
+{
+    imageEditor.AddShape(AnnotationShape.Rectangle, new ImageEditorShapeSettings() { Id = 2, Color = Colors.Violet, Bounds = new Rect(0, 0, 0.3, 0.3) });
+    imageEditor.SaveEdits();
+}
+
+{% endhighlight %}
+
+{% endtabs %}
 
 ## Delete the selected shape
 
@@ -264,7 +314,7 @@ N> The event is common for text and shape annotations.
 
 ## Annotation unselected event
 
-This `AnnotationUnselected` event occurs when the annotation is unselected.
+This [AnnotationUnselected](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_AnnotationUnselected) event occurs when the annotation is unselected.
 
 N> This is common for Shape, Text and CustomView annotations.
 
@@ -293,7 +343,7 @@ N> This is common for Shape, Text and CustomView annotations.
 
 ## Add shape on initial loading
 
-Annotate a shape on image loading using the [`Imageloaded`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_ImageLoaded) event.
+Annotate a shape on image loading using the [`ImageLoaded`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_ImageLoaded) event.
 
 {% tabs %}
 

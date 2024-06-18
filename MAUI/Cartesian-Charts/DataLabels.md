@@ -5,9 +5,10 @@ description: This section explains about how to configure the data labels and it
 platform: maui
 control: SfCartesianChart
 documentation: ug
+keywords: .net maui chart data label, maui chart data label, .net maui data label customization, syncfusion maui chart data label, cartesian data label maui, .net maui chart data label visualization, .net maui chart value label.
 ---
 
-# Data Label in .NET MAUI Chart
+# Data Labels in .NET MAUI Chart
 
 Data labels are used to display values related to a chart segment. Values from data point(x, y) or other custom properties from a data source can be displayed. 
 
@@ -16,7 +17,7 @@ Each data label can be represented by the following:
 * Label - displays the segment label content at the (X, Y) point.
 * Connector line - used to connect the (X, Y) point and the label element.
 
-## Enable Data Label 
+## Enable Data Labels 
 
 The [ShowDataLabels](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_ShowDataLabels) property of series is used to enable the data labels.
 
@@ -196,7 +197,7 @@ this.Content = chart;
 
 ## LabelTemplate
 
-The [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html) provides support to customize the appearance of the datalabel using the [LabelTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_LabelTemplate) property.
+The [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html) provides support to customize the appearance of the data labels using the [LabelTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_LabelTemplate) property.
 
 {% tabs %}
 

@@ -223,7 +223,7 @@ The image will be placed to the right side of the text horizontally.
 
 ## Image Text Spacing
 
-The `ImageTextSpacing` property in SfTabItem allows for the provision of spacing between the image and the text of the tab item.
+The [ImageTextSpacing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabItem.html#Syncfusion_Maui_TabView_SfTabItem_ImageTextSpacing) property in SfTabItem allows for the provision of spacing between the image and the text of the tab item.
 
 {% tabs %}
 
@@ -398,8 +398,11 @@ The [BadgeSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.
 
 {% highlight xaml %}
     <tabView:SfTabView>
-        <tabView:SfTabItem BadgeText="Inbox">
-            <tabView:SfTabItem.BadgeSettings FontSize="15" FontAttributes="Bold" FontFamily="serif">
+        <tabView:SfTabItem Header="RECENTS" BadgeText="20">
+            <tabView:SfTabItem.BadgeSettings >
+                <core:BadgeSettings FontSize="15" 
+                                    FontAttributes="Bold" 
+                                    FontFamily="serif"/>
             </tabView:SfTabItem.BadgeSettings>
         </tabView:SfTabItem>
     </tabView:SfTabView>
@@ -408,12 +411,12 @@ The [BadgeSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.
 {% highlight C# %}
 
     var tabView = new SfTabView();
-            BadgeSettings badgeSetting = new BadgeSettings();
-            badgeSetting.FontAttributes = FontAttributes.Bold;
-            badgeSetting.FontSize = 15;
-            badgeSetting.FontFamily = "serif";
+    BadgeSettings badgeSetting = new BadgeSettings();
+    badgeSetting.FontAttributes = FontAttributes.Bold;
+    badgeSetting.FontSize = 15;
+    badgeSetting.FontFamily = "serif";
 
-            var tabItems = new TabItemCollection
+    var tabItems = new TabItemCollection()
     {
         new SfTabItem()
         {
@@ -422,7 +425,8 @@ The [BadgeSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.
             BadgeSettings = badgeSetting,
         }
     };
-            tabView.Items = tabItems;
+
+    tabView.Items = tabItems;
             
 {% endhighlight %}
 
@@ -455,3 +459,24 @@ tabView.TabHeaderPadding = new Thickness(5, 10, 5, 10);
 {% endtabs %}
 
 ![Image Text Spacing](images/TabViewHeaderItem_Padding.png)
+
+## Scroll buttons on Header
+
+Scroll buttons are used to navigate through the items in the header of the tab view by adjusting the `IsScrollButtonEnabled` property of [SfTabView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html?tabs=tabid-1). This functionality additionally indicates the presence of tabs beyond the currently visible area.
+
+{% tabs %}
+
+{% highlight xaml %}
+<tabView:SfTabView  IsScrollButtonEnabled="True">
+    <tabView:SfTabItem/>
+</tabView:SfTabView>
+{% endhighlight %}
+
+{% highlight C# %}
+var tabView = new SfTabView();
+tabView.IsScrollButtonEnabled = true;
+{% endhighlight %}
+
+{% endtabs %}
+
+![TabView Scroll Mode](images/TabViewScroll.gif) 

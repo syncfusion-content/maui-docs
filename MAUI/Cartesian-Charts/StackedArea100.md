@@ -5,6 +5,7 @@ description: Learn here all about StackedArea100 chart support in Syncfusion .NE
 platform: maui
 control: SfCartesianChart
 documentation: ug
+keywords: .net maui stacked area 100 chart, maui stacked area 100 chart, stacked area 100 chart customization .net maui, syncfusion maui stacked area 100 chart, cartesian stacked area 100 chart maui, .net maui chart stacked area 100 visualization, .net maui 100% stacked area chart.
 ---
 
 # StackedArea100 Chart in .NET MAUI Chart
@@ -33,23 +34,19 @@ N> The Cartesian chart has a [Series](https://help.syncfusion.com/cr/maui/Syncfu
 
     <chart:StackingArea100Series ItemsSource="{Binding Data1}"
                                 XBindingPath="Year"
-                                YBindingPath="Value"        
-    </chart:StackingArea100Series>
+                                YBindingPath="Value"/>        
 
     <chart:StackingArea100Series ItemsSource="{Binding Data2}"
                                 XBindingPath="Year"
-                                YBindingPath="Value"         
-    </chart:StackingArea100Series>
+                                YBindingPath="Value"/>         
 
     <chart:StackingArea100Series ItemsSource="{Binding Data3}"
                                 XBindingPath="Year"
-                                YBindingPath="Value"         
-    </chart:StackingArea100Series>
+                                YBindingPath="Value"/>         
 
     <chart:StackingArea100Series ItemsSource="{Binding Data4}"
                                 XBindingPath="Year"
-                                YBindingPath="Value"         
-    </chart:StackingArea100Series>
+                                YBindingPath="Value"/>         
 
 </chart:SfCartesianChart>
 
@@ -103,4 +100,4 @@ this.Content = chart;
 
 {% endtabs %}
 
-![Stacking Area 100 Chart in .NET MAUI Cartesian Charts](chart-types_images\net-maui-cartesian-charts-stacked-area-100-chart.png)
+![Stacking Area 100 Chart in .NET MAUI Cartesian Charts](chart-types-images/net-maui-cartesian-charts-stacked-area-100-chart.png)

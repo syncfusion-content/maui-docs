@@ -25,7 +25,7 @@ If you are utilizing a NuGet package to facilitate the process, please ensure th
 
 ## Save Service class in portable project.
 
-Add the new class file with name as SaveService to the project and add below code in it. This is the helper class used and view the PDF file in windows, android, IOS and MAc devices.
+Add the new class file with name as SaveService to the project and add below code in it. This is the helper class used and view the PDF file in windows, android, iOS and MAc devices.
 
 {% tabs %}
 {% highlight c# %}
@@ -72,10 +72,11 @@ namespace GettingStarted
                 FileSavePicker savePicker = new();
                 if (extension == ".pdf")
                 {
-                    savePicker.DefaultFileExtension = ".xlsx";
+                    savePicker.DefaultFileExtension = ".pdf";
                     savePicker.SuggestedFileName = filename;
-                    //Saves the file as xlsx file.
-                    savePicker.FileTypeChoices.Add("XLSX", new List<string>() { ".xlsx" });
+ 
+                    //Saves the file as Pdf file.
+                    savePicker.FileTypeChoices.Add("PDF", new List<string>() { ".pdf" });
                 }
                 WinRT.Interop.InitializeWithWindow.Initialize(savePicker, windowHandle);
                 stFile = await savePicker.PickSaveFileAsync();
@@ -228,9 +229,9 @@ Add the following code to the AndroidManifest.xml file located under Properties 
 {% endhighlight %}
 {% endtabs %}
 
-### Save and View the PDF document in IOS
+### Save and View the PDF document in iOS
 
-Add the new class file with name SaveIOS file under Platform-> IOS directory to save and view the PDF document in the IOS device and use the below code in it.
+Add the new class file with name SaveIOS file under Platform-> iOS directory to save and view the PDF document in the iOS device and use the below code in it.
 
 {% tabs %}
 {% highlight c# %}
@@ -355,7 +356,7 @@ namespace GettingStarted
 
 ### Save and View the PDF document in MacCatalyst
 
-Add the new class file with name SaveMAC file under Platforms-> MacCatylyst directory to save and view the PDF document in the MAC Device and use the below code in it.
+Add the new class file with name SaveMAC file under Platforms-> MacCatalyst directory to save and view the PDF document in the MAC Device and use the below code in it.
 
 {% tabs %}
 {% highlight c# %}
@@ -510,6 +511,7 @@ private void ExportToPDF_Clicked(object sender, EventArgs e)
     MemoryStream stream = new MemoryStream();
     DataGridPdfExportingController pdfExport = new DataGridPdfExportingController();
     DataGridPdfExportingOption option = new DataGridPdfExportingOption();
+    var pdfDoc = new PdfDocument();
     pdfDoc = pdfExport.ExportToPdf(this.dataGrid, option);
     pdfDoc.Save(stream);
     pdfDoc.Close(true);
@@ -601,9 +603,9 @@ option.CanRepeatHeaders = true;
 {% endtabs %}
 
 
-### Customize header, groups and table summary when exporting
+### Customize header, stacked header, groups, table summary and unbound row when exporting
 
-#### Export Groups
+#### Export groups
 
 By default, all the groups in the data grid will be exported to PDF document. To export the data grid without groups, set the [DataGridPdfExportingOption.CanExportGroups](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.Exporting.DataGridPdfExportingOption.html#Syncfusion_Maui_DataGrid_Exporting_DataGridPdfExportingOption_CanExportGroups) property to `false`.
 
@@ -617,7 +619,7 @@ option.CanExportGroups = true;
 <img alt="Export DataGrid with groups to PDF format" src="Images\export-to-pdf\maui-datagrid-export-groups.png" width="689"/>
 
 
-#### Exclude Column header while exporting
+#### Exclude column header while exporting
 
 By default, the column headers will be exported to PDF document. To export the SfDataGrid without the column headers, set the [DataGridPdfExportingOption.CanExportHeader](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.Exporting.DataGridPdfExportingOption.html#Syncfusion_Maui_DataGrid_Exporting_DataGridPdfExportingOption_CanExportHeader) property to `false`.
 
@@ -630,7 +632,20 @@ option.CanExportHeader = false;
 
 <img alt="Export DataGrid to PDF format without column header cells" src="Images\export-to-pdf\maui-datagrid-exclude-header.png" width="689"/>
 
-#### Export Table Summaries 
+#### Export stacked header 
+
+By default, the column headers will not be exported to PDF document. To export the SfDataGrid with the column headers, set the [DataGridPdfExportingOption.CanExportStackedHeaders](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.Exporting.DataGridPdfExportingOption.html#Syncfusion_Maui_DataGrid_Exporting_DataGridPdfExportingOption_CanExportStackedHeaders) property to `true`.
+
+{% tabs %}
+{% highlight c# %}
+DataGridPdfExportingOption option = new DataGridPdfExportingOption();
+option.CanExportStackedHeaders = true;
+{% endhighlight %}
+{% endtabs %}
+
+<img alt="Export DataGrid to PDF format without column header cells" src="Images\export-to-pdf\maui-datagrid-stacked-header.png" width="689"/>
+
+#### Export table summaries 
 
 By default, table summaries in the data grid will be exported to PDF. To export the SfDataGrid without table summaries, set the [DataGridPdfExportingOption.CanExportTableSummary](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.Exporting.DataGridPdfExportingOption.html#Syncfusion_Maui_DataGrid_Exporting_DataGridPdfExportingOption_CanExportTableSummary) property to `false`.
 
@@ -643,7 +658,7 @@ option.CanExportTableSummary = true;
 
 <img alt="Export DataGrid to PDF format with table summary rows" src="Images\export-to-pdf\maui-datagrid-export-table-summary.png" width="689"/>
 
-#### Export Group Summaries 
+#### Export group summaries 
 
 By default, the GroupSummary rows in the data grid will be exported to PDF. To export the `SfDataGrid` without group summaries, set the [DataGridPdfExportingOption.CanExportGroupSummary](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.Exporting.DataGridPdfExportingOption.html#Syncfusion_Maui_DataGrid_Exporting_DataGridPdfExportingOption_CanExportGroupSummary) property to `false`.
 
@@ -655,6 +670,19 @@ option.CanExportGroupSummary = true;
 {% endtabs %}
 
 <img alt="Export DataGrid to PDF format with group summaries" src="Images\export-to-pdf\maui-datagrid-export-group-summary.png" width="689"/>
+
+#### Export unbound row 
+
+By default, the unbound rows in the data grid will not be exported to PDF. To export the `SfDataGrid` with unbound rows, set the [DataGridPdfExportingOption.CanExportUnboundRow](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.Exporting.DataGridPdfExportingOption.html#Syncfusion_Maui_DataGrid_Exporting_DataGridPdfExportingOption_CanExportUnboundRows) property to `true`.
+
+{% tabs %}
+{% highlight c# %}
+DataGridPdfExportingOption option = new DataGridPdfExportingOption();
+option.CanExportUnboundRow = true;
+{% endhighlight %}
+{% endtabs %}
+
+<img alt="Export DataGrid to PDF format with unbound row" src="Images\export-to-pdf\maui-datagrid-unbound-row.png" width="689"/>
 
 #### Exporting the selected rows of SfDataGrid
 
@@ -843,7 +871,7 @@ option.GroupCaptionStyle = new PdfGridCellStyle()
 
 #### GroupSummaryStyle 
 
-`SfDataGrid` supports exporting the `GroupSummary` rows with custom style by using the [DataGridPdfExportingOption.GroupSummaryStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.Exporting.DataGridPdfExportingOption.html#Syncfusion_Maui_DataGrid_Exporting_DataGridPdfExportingOption_GroupSummaryStyle)property.
+`SfDataGrid` supports exporting the `GroupSummary` rows with custom style by using the [DataGridPdfExportingOption.GroupSummaryStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.Exporting.DataGridPdfExportingOption.html#Syncfusion_Maui_DataGrid_Exporting_DataGridPdfExportingOption_GroupSummaryStyle) property.
 
 {% tabs %}
 {% highlight c# %}

@@ -20,9 +20,9 @@ The start angle and end angle of the sunburst chart can be adjusted by using the
 {% highlight xaml %}
 
 <sunburst:SfSunburstChart ItemsSource="{Binding DataSource}" 
-                            StartAngle="180" 
-                            EndAngle="360"
-                            ValueMemberPath="EmployeesCount">
+                          StartAngle="180"
+                          EndAngle="360"
+                          ValueMemberPath="EmployeesCount">
     . . .
 </sunburst:SfSunburstChart>
  
@@ -50,9 +50,9 @@ The sunburst chart allows you to customize the radius by using the [Radius](http
 
 {% highlight xaml %}
 
-<sunburst:SfSunburstChart ItemsSource="{Binding DataSource}" 
-                            Radius="0.7"
-                            ValueMemberPath="EmployeesCount">
+<sunburst:SfSunburstChart ItemsSource="{Binding DataSource}"
+                          Radius="0.7"
+                          ValueMemberPath="EmployeesCount">
     . . .
 </sunburst:SfSunburstChart>
  
@@ -79,9 +79,9 @@ The sunburst chart allows you to customize the inner radius using the [InnerRadi
 
 {% highlight xaml %}
 
-<sunburst:SfSunburstChart ItemsSource="{Binding DataSource}" 
-                            InnerRadius="0.4"
-                            ValueMemberPath="EmployeesCount">
+<sunburst:SfSunburstChart ItemsSource="{Binding DataSource}"
+                          InnerRadius="0.4"
+                          ValueMemberPath="EmployeesCount">
     . . .
 </sunburst:SfSunburstChart>
  
@@ -109,9 +109,9 @@ Stroke color and stroke width of the sunburst chart can be customized using [Str
 {% highlight xaml %}
 
 <sunburst:SfSunburstChart ItemsSource="{Binding DataSource}" 
-                            Stroke="Black" 
-                            StrokeWidth="2"
-                            ValueMemberPath="EmployeesCount">
+                          Stroke="Black"
+                          StrokeWidth="2"
+                          ValueMemberPath="EmployeesCount">
     . . .
 </sunburst:SfSunburstChart>
  
