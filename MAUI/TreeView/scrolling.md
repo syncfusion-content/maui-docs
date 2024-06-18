@@ -114,7 +114,7 @@ treeView.ScrollBarVisibility = ScrollBarVisibility.Always;
 
 ## Horizontal Scrolling 
 
-The TreeView allows you to enable horizontal scrolling based on the content by setting the `EnableHorizontalScrolling` property to `True`. By default, this property is set to `False`.
+The TreeView allows you to enable horizontal scrolling based on the content by setting the [EnableHorizontalScrolling](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_EnableHorizontalScrolling) property to `True`. By default, this property is set to `False`.
 
 {% tabs %}
 {% highlight xaml hl_lines="2" %}
