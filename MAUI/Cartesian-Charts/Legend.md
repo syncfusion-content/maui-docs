@@ -314,35 +314,6 @@ N> The BindingContext of the template is the corresponding underlying legend ite
 
 SfCartesianChart chart = new SfCartesianChart();
 ChartLegend legend = new ChartLegend();
-
-DataTemplate template = new DataTemplate(() =>
-{
-    StackLayout stackLayout = new StackLayout
-    {
-        Orientation = StackOrientation.Horizontal
-    };
-
-    Rectangle rectangle = new Rectangle
-    {
-        HeightRequest = 12,
-        WidthRequest = 12,
-        Margin = 3,
-    };
-    rectangle.SetBinding(Rectangle.FillProperty, "IconBrush");
-
-    Label label = new Label
-    {
-        Margin = 3,
-    };
-    label.SetBinding(Label.TextProperty, "Text");
-
-    stackLayout.Children.Add(rectangle);
-    stackLayout.Children.Add(label);
-
-    return stackLayout;
-});
-
-chart.Resources.Add("legendTemplate", template);
 legend.ItemTemplate = chart.Resources["legendTemplate"] as DataTemplate;
 ...
 chart.Legend = legend;
