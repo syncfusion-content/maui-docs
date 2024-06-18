@@ -133,12 +133,12 @@ Download the entire source code from GitHub [here](https://github.com/Syncfusion
 
 ## Autofit the nodes height based on the content
 
-The `SfTreeView` allows dynamic adjustment of nodes height based on the content loaded in the [SfTreeView.ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ItemTemplate) by setting the [SfTreeView.NodeSizeMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_NodeSizeMode) property to `Dynamic`. The default value is `None`.
+The TreeView allows dynamic adjustment of nodes height based on the content loaded in the [SfTreeView.ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ItemTemplate) by setting the [SfTreeView.NodeSizeMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_NodeSizeMode) property to `Dynamic`. The default value is `None`.
 
 The control offers the following two types of `NodeSizeMode`:
 
  * [Dynamic](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.TreeViewNodeSizeMode.html#Syncfusion_Maui_TreeView_TreeViewNodeSizeMode_Dynamic): Automatically adjusts the nodes height to fit their content and also resizes the nodes if the content size changes at runtime.
- * [None](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.TreeViewNodeSizeMode.html#Syncfusion_Maui_TreeView_TreeViewNodeSizeMode_None): [SfTreeView.ItemHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ItemHeight)  is used to layout the `SfTreeView` nodes.
+ * [None](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.TreeViewNodeSizeMode.html#Syncfusion_Maui_TreeView_TreeViewNodeSizeMode_None): [SfTreeView.ItemHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ItemHeight)  is used to layout the nodes.
 
 {% tabs %}
 {% highlight xaml hl_lines="6" %}
