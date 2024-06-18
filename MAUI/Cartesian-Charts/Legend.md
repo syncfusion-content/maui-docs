@@ -315,7 +315,7 @@ N> The BindingContext of the template is the corresponding underlying legend ite
 SfCartesianChart chart = new SfCartesianChart();
 ChartLegend legend = new ChartLegend();
 
-DataTemplate legendTemplate = new DataTemplate(() =>
+DataTemplate template = new DataTemplate(() =>
 {
     StackLayout stackLayout = new StackLayout
     {
@@ -328,7 +328,7 @@ DataTemplate legendTemplate = new DataTemplate(() =>
         WidthRequest = 12,
         Margin = 3,
     };
-    rectangle.SetBinding(Rectangle.ColorProperty, "IconBrush");
+    rectangle.SetBinding(Rectangle.FillProperty, "IconBrush");
 
     Label label = new Label
     {
@@ -342,7 +342,8 @@ DataTemplate legendTemplate = new DataTemplate(() =>
     return stackLayout;
 });
 
-legend.ItemTemplate = legendTemplate;
+chart.Resources.Add("legendTemplate", template);
+legend.ItemTemplate = chart.Resources["legendTemplate"] as DataTemplate;
 ...
 chart.Legend = legend;
 this.Content = chart;
