@@ -26,7 +26,7 @@ This section details the process of integrating the Card control and focuses sol
 
 <ContentPage   
     . . .
-    xmlns:card="clr-namespace:Syncfusion.Maui.Cards;assembly=Syncfusion.Maui.Cards">
+    xmlns:cards="clr-namespace:Syncfusion.Maui.Cards;assembly=Syncfusion.Maui.Cards">
 
 <cards:SfCardView>
     <Label Text="CardView" Background="PeachPuff" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
