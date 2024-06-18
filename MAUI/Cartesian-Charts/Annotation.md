@@ -418,7 +418,7 @@ this.Content = chart;
 
 ## Axis label customization
 
-The default appearance of the axis label can also be customized using the [AxisLabelStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.HorizontalLineAnnotation.html#Syncfusion_Maui_Charts_HorizontalLineAnnotation_AxisLabelStyle) property. The [ChartLabelStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLabelStyle.html) property allows you to customize the axis labels by changing the font family, font size, font attributes, and text color. The following styles are used to customize the axis label:
+The default appearance of the axis label can also be customized using the [AxisLabelStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.HorizontalLineAnnotation.html#Syncfusion_Maui_Charts_HorizontalLineAnnotation_AxisLabelStyle) property. The [AxisLabelStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.HorizontalLineAnnotation.html#Syncfusion_Maui_Charts_HorizontalLineAnnotation_AxisLabelStyle) property allows you to customize the axis labels by changing the font family, font size, font attributes, and text color. The following styles are used to customize the axis label:
 
 * [TextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLabelStyle.html#Syncfusion_Maui_Charts_ChartLabelStyle_TextColor) - Gets or sets the text color of the label.
 * [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLabelStyle.html#Syncfusion_Maui_Charts_ChartLabelStyle_Background) - Gets or sets the background color of the labels.
@@ -526,7 +526,7 @@ The [Text](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ShapeAnnot
   
 ## View annotation
 
-The [ViewAnnotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ViewAnnotation.html) allows you to add annotations in the form of your own custom view using the [View](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ViewAnnotation.html#Syncfusion_Maui_Charts_ViewAnnotation_View) property at a specific area of interest in the chart area. Additionally, the [ViewAnnotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ViewAnnotation.html#Syncfusion_Maui_Charts_ViewAnnotation_View) can be aligned using the [VerticalAlignment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ViewAnnotation.html#Syncfusion_Maui_Charts_ViewAnnotation_VerticalAlignment) and [HorizontalAlignment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ViewAnnotation.html#Syncfusion_Maui_Charts_ViewAnnotation_HorizontalAlignment) properties.
+The [ViewAnnotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ViewAnnotation.html) allows you to add annotations in the form of your own custom view using the [View](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ViewAnnotation.html#Syncfusion_Maui_Charts_ViewAnnotation_View) property at a specific area of interest in the chart area. Additionally, the [ViewAnnotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ViewAnnotation.html) can be aligned using the [VerticalAlignment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ViewAnnotation.html#Syncfusion_Maui_Charts_ViewAnnotation_VerticalAlignment) and [HorizontalAlignment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ViewAnnotation.html#Syncfusion_Maui_Charts_ViewAnnotation_HorizontalAlignment) properties.
 
 {% tabs %}
 

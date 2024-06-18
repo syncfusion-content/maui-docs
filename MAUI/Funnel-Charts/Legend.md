@@ -287,13 +287,13 @@ DataTemplate legendTemplate = new DataTemplate(() =>
         Orientation = StackOrientation.Horizontal
     };
 
-    BoxView rectangle = new BoxView
+    Rectangle rectangle = new Rectangle
     {
         HeightRequest = 12,
         WidthRequest = 12,
         Margin = 3,
     };
-    rectangle.SetBinding(BoxView.ColorProperty, "IconBrush");
+    rectangle.SetBinding(Rectangle.ColorProperty, "IconBrush");
 
     Label label = new Label
     {
