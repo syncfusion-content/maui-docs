@@ -274,7 +274,7 @@ public class ViewModel : INotifyPropertyChanged
 
 ## Close the popup automatically after timeout
 
-To close a popup automatically after a specified delay, you can use the `AutoCloseDuration` property, which allows you to give the duration in milliseconds for the popup to automatically close itself without any user interaction.
+To close a popup automatically after a specified delay, you can use the [AutoCloseDuration] (https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_AutoCloseDuration) property, which allows you to give the duration in milliseconds for the popup to automatically close itself without any user interaction.
 
 {% tabs %}
 {% highlight xaml hl_lines="3" %}
