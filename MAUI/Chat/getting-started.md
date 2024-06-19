@@ -11,6 +11,10 @@ documentation: ug
 
 This section provides a quick overview for getting started with the .NET MAUI Chat (SfChat). Walk-through the entire process of creating real world of this control.
 
+To get start quickly with .NET MAUI Chat, you can check on this video:
+
+<style>#MAUIListViewVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUIChatVideoTutorial' src='https://www.youtube.com/watch?v=Ha9jx1bq2Ws'></iframe>
+
 ## Creating an application using the .NET MAUI Chat
 
  1. Create a new .NET MAUI application in Visual Studio.
