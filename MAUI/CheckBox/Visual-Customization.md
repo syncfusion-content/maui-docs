@@ -127,14 +127,7 @@ You can customize the display text appearance of the [`SfCheckBox`](https://help
 {% tabs %}
 {% highlight xaml %}
 
-    <syncfusion:SfCheckBox  x:Name="caption" 
-                            Text="CheckBox" 
-                            IsChecked="True" 
-                            TextColor="Blue" 
-                            HorizontalTextAlignment="Center" 
-                            FontFamily="Arial" 
-                            FontAttributes="Bold" 
-                            FontSize="20"/>           
+    <syncfusion:SfCheckBox x:Name="caption" Text="CheckBox" IsChecked="True" TextColor="Blue" HorizontalTextAlignment="Center" FontFamily="Arial" FontAttributes="Bold" FontSize="20"/>           
 
 {% endhighlight %}
 {% highlight c# %}
@@ -238,7 +231,7 @@ The `LineBreakMode` allows you to wrap or truncate the text. The default value o
 
 ![.NET MAUI CheckBox](Images/Visual-Customization/linebreakmode.png)
 
-This demo can be downloaded from [GitHub link](https://github.com/SyncfusionExamples/How-to-wrap-text-in-DOTNET-MAUI-CheckBox)
+This demo can be downloaded from this [link](https://www.syncfusion.com/downloads/support/directtrac/general/ze/CHECKB~1847116013)
 
 ## Size Customization
 

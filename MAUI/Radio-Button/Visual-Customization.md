@@ -89,14 +89,7 @@ You can customize the display text appearance of the [`SfRadioButton`](https://h
 {% tabs %}
 {% highlight xaml %}
 
-	<syncfusion:SfRadioButton x:Name="radioButton" 
-				  Text="Radio Button" 
-				  IsChecked="True" 
-				  TextColor="Blue" 
-				  HorizontalTextAlignment="Center" 
-			          FontFamily="Arial" 
-				  FontAttributes="Bold" 
-				  FontSize="20"/>
+	<syncfusion:SfRadioButton x:Name="radioButton" Text="Radio Button" IsChecked="True" TextColor="Blue" HorizontalTextAlignment="Center" FontFamily="Arial" FontAttributes="Bold" FontSize="20"/>
 
 {% endhighlight %}
 {% highlight c# %}
@@ -130,12 +123,7 @@ The `LineBreakMode` allows you to wrap or truncate the text. The default value o
 {% tabs %}
 {% highlight xaml %}
 
-    <syncfusion:SfRadioButton   x:Name="RadioButton" 
-				IsChecked="True" 
-				WidthRequest="200" 
-				LineBreakMode="WordWrap" 
-				Text="The LineBreakMode allows you to wrap or truncate the text.">
-				</syncfusion:SfRadioButton>
+    <syncfusion:SfRadioButton x:Name="RadioButton" IsChecked="True" WidthRequest="200" LineBreakMode="WordWrap" Text="The LineBreakMode allows you to wrap or truncate the text."></syncfusion:SfRadioButton>
 
 {% endhighlight %}
 
@@ -143,10 +131,10 @@ The `LineBreakMode` allows you to wrap or truncate the text. The default value o
 
     StackLayout stackLayout = new StackLayout();
     SfRadioButton radioButton = new SfRadioButton();
-    radioButton.Text = "The LineBreakMode allows you to wrap or truncate the text.";
-    radioButton.LineBreakMode = LineBreakMode.WordWrap;
-    radioButton.WidthRequest = 200;
-    stackLayout.Children.Add(radioButton);
+	radioButton.Text = "The LineBreakMode allows you to wrap or truncate the text.";
+	radioButton.LineBreakMode = LineBreakMode.WordWrap;
+	radioButton.WidthRequest = 200;
+	stackLayout.Children.Add(radioButton);
 
 {% endhighlight %}
 {% endtabs %}
@@ -154,7 +142,7 @@ The `LineBreakMode` allows you to wrap or truncate the text. The default value o
 ![.NET MAUI Radio Button LineBreakmode](Images/VisualCustomization/linebreakmode.png)
 
 
-This demo can be downloaded from [GitHub link](https://github.com/SyncfusionExamples/How-to-wrap-text-in-DOTNET-MAUI-RadiButton)
+This demo can be downloaded from this [link](https://www.syncfusion.com/downloads/support/directtrac/general/ze/RadioButton_11858718544)
 
 
 ## Size customization

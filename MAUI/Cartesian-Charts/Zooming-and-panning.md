@@ -24,8 +24,8 @@ To enable the zooming and panning in the chart, create an instance of [ChartZoom
 
 <chart:SfCartesianChart>
     ...
-    <chart:SfCartesianChart.ZoomPanBehavior>
-        <chart:ChartZoomPanBehavior/>
+<chart:SfCartesianChart.ZoomPanBehavior>
+        <chart:ChartZoomPanBehavior />
     </chart:SfCartesianChart.ZoomPanBehavior>
 </chart:SfCartesianChart>
 
@@ -88,28 +88,28 @@ The directional Zooming feature enhances your zooming experience by allowing you
 
 {% highlight xaml %}
 
-<chart:SfCartesianChart>
-    ...
-    <chart:SfCartesianChart.ZoomPanBehavior>
-        <chart:ChartZoomPanBehavior EnablePinchZooming="True"
-                                    EnableDirectionalZooming="True"/>
-    </chart:SfCartesianChart.ZoomPanBehavior>
-    ...
-</chart:SfCartesianChart>
+    <chart:SfCartesianChart>
+        ...
+        <chart:SfCartesianChart.ZoomPanBehavior>
+            <chart:ChartZoomPanBehavior EnablePinchZooming="True"
+                                        EnableDirectionalZooming="True"/>
+        </chart:SfCartesianChart.ZoomPanBehavior>
+        ...
+    </chart:SfCartesianChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-SfCartesianChart chart = new SfCartesianChart();
-...
-ChartZoomPanBehavior zooming = new ChartZoomPanBehavior()
-{
-    EnablePinchZooming = true,
-    EnableDirectionalZooming = true
-};
+    SfCartesianChart chart = new SfCartesianChart();
+    ...
+    ChartZoomPanBehavior zooming = new ChartZoomPanBehavior()
+    {
+        EnablePinchZooming = true,
+        EnableDirectionalZooming = true
+    };
 
-chart.ZoomPanBehavior = zooming;
+    chart.ZoomPanBehavior = zooming;
 
 {% endhighlight %}
 
@@ -145,7 +145,6 @@ CategoryAxis primaryAxis = new CategoryAxis()
     ZoomFactor = 0.3,
     ZoomPosition = 0.5
 };
-
 chart.XAxes.Add(primaryAxis);
 ...
 
@@ -167,7 +166,7 @@ Following code example illustrates how to restrict the chart to be zoomed only a
 
 <chart:SfCartesianChart>
     <chart:SfCartesianChart.ZoomPanBehavior>
-        <chart:ChartZoomPanBehavior ZoomMode="X"/>
+        <chart:ChartZoomPanBehavior ZoomMode="X" />
     </chart:SfCartesianChart.ZoomPanBehavior>
     ...
 </chart:SfCartesianChart>
@@ -198,7 +197,7 @@ Following code example illustrates how to restrict the chart to be zoomed only a
 
 <chart:SfCartesianChart>
     <chart:SfCartesianChart.ZoomPanBehavior>
-        <chart:ChartZoomPanBehavior ZoomMode="Y"/>
+        <chart:ChartZoomPanBehavior ZoomMode="Y" />
     </chart:SfCartesianChart.ZoomPanBehavior>
     ...
 </chart:SfCartesianChart>
@@ -220,9 +219,9 @@ chart.ZoomPanBehavior = zooming;
 
 {% endtabs %}
 
-## Maximum Zoom Level
+### Maximum Zoom Level
 
-The [MaximumZoomLevel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartZoomPanBehavior.html#Syncfusion_Maui_Charts_ChartZoomPanBehavior_MaximumZoomLevel) property is used to determine the maximum limit for zooming within the chart. Once the zooming operation reaches its limit, further zooming actions are not carried out. The [MaximumZoomLevel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartZoomPanBehavior.html#Syncfusion_Maui_Charts_ChartZoomPanBehavior_MaximumZoomLevel) property default value is `double.NaN`.
+The [MaximumZoomLevel]() property is used to determine the maximum limit for zooming within the chart. Once the zooming operation reaches its limit, further zooming actions are not carried out. The [MaximumZoomLevel]() property default value is `double.NaN`.
 
 {% tabs %}
 
@@ -296,10 +295,10 @@ N> To perform selection zooming on a desktop, hold the left mouse button, double
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-    <chart:SfCartesianChart.ZoomPanBehavior>
-        <chart:ChartZoomPanBehavior EnableSelectionZooming ="True"/>
-    </chart:SfCartesianChart.ZoomPanBehavior>
-    ...
+        <chart:SfCartesianChart.ZoomPanBehavior>
+            <chart:ChartZoomPanBehavior EnableSelectionZooming ="True"/>
+        </chart:SfCartesianChart.ZoomPanBehavior>
+        ...
 </chart:SfCartesianChart>
 
 {% endhighlight %}
@@ -356,29 +355,30 @@ The following code sample illustrates how enable to axis trackball label while s
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-    . . .
-    <chart:SfCartesianChart.XAxes>
-        <chart:NumericalAxis ShowTrackballLabel="True">
-            <chart:NumericalAxis.TrackballLabelStyle>
-                <chart:ChartLabelStyle Background="LightBlue"   
-                                       FontSize="15" 
-                                       CornerRadius="5"
-                                       StrokeWidth="2" 
-                                       Stroke="Gray"/>
-            </chart:NumericalAxis.TrackballLabelStyle>
-        </chart:NumericalAxis>
-    </chart:SfCartesianChart.XAxes>
-    <chart:SfCartesianChart.YAxes>
-        <chart:NumericalAxis ShowTrackballLabel="True">
-            <chart:NumericalAxis.TrackballLabelStyle>
-                <chart:ChartLabelStyle Background="LightBlue"   
-                                       FontSize="15" 
-                                       CornerRadius="5"
-                                       StrokeWidth="2" 
-                                       Stroke="Gray"/>
-            </chart:NumericalAxis.TrackballLabelStyle>
-        </chart:NumericalAxis>
-    </chart:SfCartesianChart.YAxes>            
+        . . .
+            <chart:SfCartesianChart.XAxes>
+                <chart:NumericalAxis ShowTrackballLabel="True">
+                    <chart:NumericalAxis.TrackballLabelStyle>
+                        <chart:ChartLabelStyle Background="LightBlue"   
+                                FontSize="15" 
+                                CornerRadius="5"
+                                StrokeWidth="2" 
+                                Stroke="Gray" />
+                    </chart:NumericalAxis.TrackballLabelStyle>
+                </chart:NumericalAxis>
+            </chart:SfCartesianChart.XAxes>
+            <chart:SfCartesianChart.YAxes>
+                <chart:NumericalAxis ShowTrackballLabel="True">
+                    <chart:NumericalAxis.TrackballLabelStyle>
+                        <chart:ChartLabelStyle Background="LightBlue"   
+                                FontSize="15" 
+                                CornerRadius="5"
+                                StrokeWidth="2" 
+                                Stroke="Gray" />
+                    </chart:NumericalAxis.TrackballLabelStyle>
+                </chart:NumericalAxis>
+            </chart:SfCartesianChart.YAxes>
+            
 </chart:SfCartesianChart>
 
 {% endhighlight %}
@@ -419,27 +419,27 @@ chart.YAxes.Add(secondaryAxis);
 
 The [ZoomStart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_ZoomStart) event is triggered when the user initiates a zoom action by using a pinch gesture on the chart. This event can be canceled, allowing its action to be interrupted or stopped.
 
-* [Axis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartZoomEventArgs.html#Syncfusion_Maui_Charts_ChartZoomEventArgs_Axis) - The ZoomStart event will be triggered for all the axes within the chart.
+* [Axis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartZoomEventArgs.html#Syncfusion_Maui_Charts_ChartZoomEventArgs_Axis) - The ZoomStart event will be triggered for all the axes within the Chart.
 * [CurrentZoomFactor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartZoomEventArgs.html#Syncfusion_Maui_Charts_ChartZoomEventArgs_CurrentZoomFactor) - Used to get the updated zoom factor of the corresponding axis.
 * [CurrentZoomPosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartZoomEventArgs.html#Syncfusion_Maui_Charts_ChartZoomEventArgs_CurrentZoomPosition) - Used to get the updated zoom position of the corresponding axis.
-* [Cancel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartZoomStartEventArgs.html#Syncfusion_Maui_Charts_ChartZoomStartEventArgs_Cancel) - Used to determine the value indicating whether the zooming process should be cancelled.
+* [Cancel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartZoomStartEventArgs.html#Syncfusion_Maui_Charts_ChartZoomStartEventArgs_Cancel) - Used to determine the value indicating whether the zooming process should be canceled.
 
 ### ZoomDelta
 
 The [ZoomDelta](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_ZoomDelta) event is activated during the zooming process, and it is a cancelable event.
 
-* [Axis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartZoomEventArgs.html#Syncfusion_Maui_Charts_ChartZoomEventArgs_Axis) - The ZoomDelta event will be triggered for all the axes within the chart.
-* [PreviousZoomFactor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartZoomDeltaEventArgs.html#Syncfusion_Maui_Charts_ChartZoomDeltaEventArgs_PreviousZoomFactor) - Used to get the previous zoom factor of the axis.
-* [PreviousZoomPosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartZoomDeltaEventArgs.html#Syncfusion_Maui_Charts_ChartZoomDeltaEventArgs_PreviousZoomPosition) - Used to get the previous zoom position of the axis.
+* [Axis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartResetZoomEventArgs.html#Syncfusion_Maui_Charts_ChartResetZoomEventArgs_Axis) - The ZoomDelta event will be triggered for all the axes within the Chart.
+* [PreviousZoomFactor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartResetZoomEventArgs.html#Syncfusion_Maui_Charts_ChartResetZoomEventArgs_PreviousZoomFactor) - Used to get the previous zoom factor of the axis.
+* [PreviousZoomPosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartResetZoomEventArgs.html#Syncfusion_Maui_Charts_ChartResetZoomEventArgs_PreviousZoomPosition) - Used to get the previous zoom position of the axis.
 * [CurrentZoomFactor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartZoomEventArgs.html#Syncfusion_Maui_Charts_ChartZoomEventArgs_CurrentZoomFactor) - Used to get the current zoom factor of the axis.
 * [CurrentZoomPosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartZoomEventArgs.html#Syncfusion_Maui_Charts_ChartZoomEventArgs_CurrentZoomPosition) - Used to get the current zoom position of the axis.
-* [Cancel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartZoomDeltaEventArgs.html#Syncfusion_Maui_Charts_ChartZoomDeltaEventArgs_Cancel) - Used to determine the value indicating whether the zooming process should be cancelled.
+* [Cancel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartZoomStartEventArgs.html#Syncfusion_Maui_Charts_ChartZoomStartEventArgs_Cancel) - Used to determine the value indicating whether the zooming process should be canceled.
 
 ### ZoomEnd
 
 The [ZoomEnd](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_ZoomEnd) event is triggered once the zooming action finishes.
 
-* [Axis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartZoomEventArgs.html#Syncfusion_Maui_Charts_ChartZoomEventArgs_Axis) - The ZoomEnd event will be triggered for all the axes within the chart.
+* [Axis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartZoomEventArgs.html#Syncfusion_Maui_Charts_ChartZoomEventArgs_Axis) - The ZoomEnd event will be triggered for all the axes within the Chart.
 * [CurrentZoomFactor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartZoomEventArgs.html#Syncfusion_Maui_Charts_ChartZoomEventArgs_CurrentZoomFactor) - Used to get the zoom factor after zooming process.
 * [CurrentZoomPosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartZoomEventArgs.html#Syncfusion_Maui_Charts_ChartZoomEventArgs_CurrentZoomPosition) - Used to get the zoom position after zooming process.
 
@@ -454,7 +454,7 @@ The [SelectionZoomStart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cha
 The [SelectionZoomDelta](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_SelectionZoomDelta) event is activated during the process of selecting a region for zooming, and it is a cancelable event.
 
 * [ZoomRect](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSelectionZoomEventArgs.html#Syncfusion_Maui_Charts_ChartSelectionZoomEventArgs_ZoomRect) - Contains the bounds of the currently selected region.
-* [Cancel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSelectionZoomDeltaEventArgs.html#Syncfusion_Maui_Charts_ChartSelectionZoomDeltaEventArgs_Cancel) - Used to set the value indicating whether the box selection zooming process should be cancelled.
+* [Cancel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSelectionZoomDeltaEventArgs.html#Syncfusion_Maui_Charts_ChartSelectionZoomDeltaEventArgs_Cancel) - Used to set the value indicating whether the box selection zooming process should be canceled.
 
 ### SelectionZoomEnd
 
@@ -466,14 +466,14 @@ The SelectionZoomEnd event is triggered after the selection zooming ends.
 
 The [Scroll](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Scroll) event is triggered during panning, and it is a cancelable event.
 
-* [Axis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartScrollEventArgs.html#Syncfusion_Maui_Charts_ChartScrollEventArgs_Axis) - The event will be triggered for all the axes within the chart.
+* [Axis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartScrollEventArgs.html#Syncfusion_Maui_Charts_ChartScrollEventArgs_Axis) - The event will be triggered for all the axes within the Chart.
 * [ZoomPosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartScrollEventArgs.html#Syncfusion_Maui_Charts_ChartScrollEventArgs_ZoomPosition) - Gets the current zoom position of the axis.
-* [Cancel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartScrollEventArgs.html#Syncfusion_Maui_Charts_ChartScrollEventArgs_Cancel) - Used to indicate whether the scrolling should be cancelled.
+* [Cancel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartScrollEventArgs.html#Syncfusion_Maui_Charts_ChartScrollEventArgs_Cancel) - Used to indicate whether the scrolling should be canceled.
 
 ### ResetZoom
 
 The [ResetZoom](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_ResetZoom) event is triggered after the chart is reset by double-tapping.
 
-* [Axis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartResetZoomEventArgs.html#Syncfusion_Maui_Charts_ChartResetZoomEventArgs_Axis) - The event will be triggered for all the axes within the chart.
+* [Axis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartResetZoomEventArgs.html#Syncfusion_Maui_Charts_ChartResetZoomEventArgs_Axis) - The event will be triggered for all the axes within the Chart.
 * [PreviousZoomFactor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartResetZoomEventArgs.html#Syncfusion_Maui_Charts_ChartResetZoomEventArgs_PreviousZoomFactor) - Used to get the previous zoom factor of the axis.
 * [PreviousZoomPosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartResetZoomEventArgs.html#Syncfusion_Maui_Charts_ChartResetZoomEventArgs_PreviousZoomPosition) - Used to get the previous zoom position of the axis.

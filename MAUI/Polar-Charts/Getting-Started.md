@@ -11,10 +11,6 @@ documentation: ug
 
 This section explains how to populate the Polar chart with data, a title, data labels, a legend, tooltips, and markers. It also covers the essential aspects of getting started with the chart.
 
-To get start quickly with our .NET MAUI Polar Chart, you can check the below video.
-
-{% youtube "https://www.youtube.com/watch?v=Ga9mytwCo_s&t=4s" %}
-
 ## Creating an application with .NET MAUI chart
 
 1. Create a new .NET MAUI application in Visual Studio.

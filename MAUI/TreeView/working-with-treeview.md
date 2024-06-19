@@ -128,14 +128,14 @@ private void TreeView_ItemLongPress(object sender, ItemLongPressEventArgs e)
 
 ### KeyDown event
 
-The [KeyDown](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_KeyDown) event is triggered when a key is pressed while the [SfTreeView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.html) is in focus. The [KeyPressEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.KeyPressEventArgs.html) has the following members that provide information for the `KeyDown` event:
+The `KeyDown` event is triggered when a key is pressed while the [SfTreeView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.html) is in focus. The `KeyPressEventArgs` has the following members that provide information for the `KeyDown` event:
 
- * [Key](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.KeyPressEventArgs.html#Syncfusion_Maui_TreeView_KeyPressEventArgs_Key): Returns the currently pressed key.
- * [IsShiftKeyPressed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.KeyPressEventArgs.html#Syncfusion_Maui_TreeView_KeyPressEventArgs_IsShiftKeyPressed): Indicates whether the Shift key is in pressed state.
- * [IsCtrlKeyPressed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.KeyPressEventArgs.html#Syncfusion_Maui_TreeView_KeyPressEventArgs_IsCtrlKeyPressed): Indicates whether the Control key is in pressed state.
- * [IsAltKeyPressed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.KeyPressEventArgs.html#Syncfusion_Maui_TreeView_KeyPressEventArgs_IsAltKeyPressed): Indicates whether the Alt key is in pressed state.
- * [IsCommandKeyPressed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.KeyPressEventArgs.html#Syncfusion_Maui_TreeView_KeyPressEventArgs_IsCommandKeyPressed): Indicates whether the Command key is in pressed state.
- * [Handled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.KeyPressEventArgs.html#Syncfusion_Maui_TreeView_KeyPressEventArgs_Handled): Gets or sets whether the event is handled or not.
+ * `Key`: Returns the currently pressed key.
+ * `IsShiftKeyPressed`: Indicates whether the Shift key is in pressed state.
+ * `IsCtrlKeyPressed`: Indicates whether the Control key is in pressed state.
+ * `IsAltKeyPressed`: Indicates whether the Alt key is in pressed state.
+ * `IsCommandKeyPressed`: Indicates whether the Command key is in pressed state.
+ * `Handled`: Gets or sets whether the event is handled or not.
 
 {% tabs %}
 {% highlight xaml %}

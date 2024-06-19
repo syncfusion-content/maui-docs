@@ -245,13 +245,13 @@ To make migration from [Xamarin SfDataGrid](https://www.syncfusion.com/xamarin-u
 </tr>
 <tr>
 <td>{{'[Reason](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.QueryRowDraggingEventArgs.html#Syncfusion_SfDataGrid_XForms_QueryRowDraggingEventArgs_Reason)'| markdownify }}</td>
-<td>{{'[DraggingAction](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridQueryColumnDraggingEventArgs.html#Syncfusion_Maui_DataGrid_DataGridQueryColumnDraggingEventArgs_DraggingAction)'| markdownify }}</td>
+<td>{{`DraggingAction`| markdownify }}</td>
 <td>This enables users to get the column dragging details as a `DataGridDragAction`. 
 </td>
 </tr>
 <tr>
 <td>{{'[ColumnDragViewForegroundColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.DataGridStyle.html#Syncfusion_SfDataGrid_XForms_DataGridStyle_ColumnDragViewForegroundColor)'| markdownify }}</td>
-<td>{{'[ColumnDragViewTextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_ColumnDragViewTextColor)'| markdownify }}</td>
+<td>{{`ColumnDragViewTextColor`| markdownify }}</td>
 <td>This enables users to change the color of the column drag view text color. 
 </td>
 </tr>
@@ -318,7 +318,7 @@ By writing the converter, you can achieve the requirement conditionally. Refer {
 <td>Occurs when page index is changed.</td>
 </tr>
 <tr>
-<td>{{'[GridViewCreated](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.SfDataGrid.html#Syncfusion_SfDataGrid_XForms_SfDataGrid_GridViewCreated)'| markdownify}}</td>
+<td>{{'[GridViewCreated](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.SfDataGrid.html#Syncfusion_SfDataGrid_XForms_SfDataGrid_GridViewCreated)'| markdownigy}}</td>
 <td>{{'[ViewCreated](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ViewCreated)' | markdownify}}</td>
 <td>Occurs when the View is created.</td>
 </tr>

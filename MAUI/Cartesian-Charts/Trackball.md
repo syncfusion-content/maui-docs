@@ -53,7 +53,7 @@ this.Content = chart;
 The [DisplayMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartTrackballBehavior.html#Syncfusion_Maui_Charts_ChartTrackballBehavior_DisplayMode) property specifies whether a label should be displayed for all data points along the trackball line or only the nearest data point label. The following choices are available for this property.
 
 * `FloatAllPoints` – Displays labels for all the data points along the vertical line.
-* `NearestPoint` – Displays a label for a single data point nearer to the touch point on the chart area.
+* `NearestPoint` – Displays label for a single data point nearer to the touch point on the chart area.
 * `GroupAllPoints` – Displays all the data point labels grouped at the top of the chart area.
 
 {% tabs %}
@@ -66,7 +66,7 @@ The [DisplayMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Cha
     <chart:ChartTrackballBehavior ShowLine="True" 
                                   DisplayMode="NearestPoint"/>
 </chart:SfCartesianChart.TrackballBehavior>
-  ...
+    ...
 </chart:SfCartesianChart>
 
 {% endhighlight %}
@@ -86,7 +86,7 @@ trackball.DisplayMode = LabelDisplayMode.NearestPoint;
 
 ## Activation mode
 
-The [ActivationMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartTrackballBehavior.html#Syncfusion_Maui_Charts_ChartTrackballBehavior_ActivationMode) property is used to restrict the visibility of trackball based on the touch actions. 
+The [ActivationMode]() property is used to restrict the visibility of trackball based on the touch actions. The default value of this property is `ChartTrackballActivationMode.LongPress`.
 
 The ChartTrackballActivationMode enum contains the following values:
 
@@ -103,7 +103,7 @@ The ChartTrackballActivationMode enum contains the following values:
 <chart:SfCartesianChart.TrackballBehavior>
     <chart:ChartTrackballBehavior ActivationMode = "LongPress"/>
 </chart:SfCartesianChart.TrackballBehavior>
-  ...
+    ...
 </chart:SfCartesianChart>
 
 {% endhighlight %}
@@ -120,7 +120,7 @@ trackball.ActivationMode = ChartTrackballActivationMode.LongPress;
 
 {% endtabs %}
 
-N> The default value of [ActivationMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartTrackballBehavior.html#Syncfusion_Maui_Charts_ChartTrackballBehavior_ActivationMode) property is `ChartTrackballActivationMode.LongPress` for Android and iOS platform and default value for MacOS and Windows platform is `ChartTrackballActivationMode.TouchMove`.
+N> The default value of [ActivationMode]() property is `ChartTrackballActivationMode.LongPress` for Android and iOS platform and default value for MacOS and Windows platform is `ChartTrackballActivationMode.TouchMove`.
 
 N> On Windows, LongPress gestures are supported only through touch input, not with a mouse. Consequently, when ActivationMode is set to LongPress, the trackball activates only via touch interaction, not with a mouse interaction.
 
@@ -263,9 +263,9 @@ this.Content = chart;
 
 {% endtabs %}
 
-## Trackball Label Template
+### Trackball Label Template
 
-Trackball labels can be customized by adding any view as its template by using [TrackballLabelTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_TrackballLabelTemplate) of [CartesianSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.CartesianSeries.html).
+Trackball labels can be customized by adding any view as its template by using [TrackballLabelTemplate]() of [CartesianSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.CartesianSeries.html).
 
 T> The `DataItem` can be used to access the data linked to the associated business model. The binding context for `TrackballLabelTemplate` is `TrackballPointInfo`, which provides the necessary data for the labels.
 
@@ -276,10 +276,11 @@ T> The `DataItem` can be used to access the data linked to the associated busine
 <chart:SfCartesianChart>
     <chart:SfCartesianChart.Resources>
         <DataTemplate x:Key="trackballLabelTemplate">
-            <HorizontalStackLayout>
+            <HorizontalStackLayout Spacing="5">
                 <Image Source="image.png" WidthRequest="20" HeightRequest="20"/>
-                <Label Text="{Binding Series.Label, StringFormat=' {0}'}" FontSize="12" HorizontalOptions="Center"  TextColor="White"/>
-                <Label Text="{Binding DataItem.YValues,StringFormat=': {0}M'}" FontSize="12" HorizontalOptions="Center" TextColor="White"/>
+                <Label Text="{Binding DataItem.Name}" FontSize="15"  HorizontalOptions="Center"  TextColor="White"/>
+                <Label Text=" : " FontSize="15"  HorizontalOptions="Center" TextColor="White" />
+                <Label Text="{Binding DataItem.YValues,StringFormat='{0}M'}" FontSize="15" HorizontalOptions="Center" TextColor="White" />
             </HorizontalStackLayout>         
         </DataTemplate>
     </chart:SfCartesianChart.Resources>
@@ -291,20 +292,18 @@ T> The `DataItem` can be used to access the data linked to the associated busine
     <chart:LineSeries ItemsSource="{Binding Data1}" 
                       TrackballLabelTemplate ="{StaticResource trackballLabelTemplate}"
                       XBindingPath="XValues"
-                      YBindingPath="YValues"
-                      Label="Thomas"/>
+                      YBindingPath="YValues"/>
 
     <chart:LineSeries ItemsSource="{Binding Data2}" 
                       TrackballLabelTemplate ="{StaticResource trackballLabelTemplate}"
                       XBindingPath="XValues"
-                      YBindingPath="YValues"
-                      Label="Elizabeth"/>
+                      YBindingPath="YValues"/>
 
     <chart:LineSeries ItemsSource="{Binding Data3}" 
                       TrackballLabelTemplate ="{StaticResource trackballLabelTemplate}"
                       XBindingPath="XValues"
-                      YBindingPath="YValues"
-                      Label="Andrew"/>     
+                      YBindingPath="YValues"/>
+                      
 </chart:SfCartesianChart>
 
 {% endhighlight %}
@@ -320,23 +319,23 @@ LineSeries series1 = new LineSeries();
 series1.ItemsSource = new ViewModel().Data1;
 series1.XBindingPath = "XValues";
 series1.YBindingPath = "YValues";
-series1.Label = "Thomas";
 
 LineSeries series2 = new LineSeries();
 series2.ItemsSource = new ViewModel().Data2;
 series2.XBindingPath = "XValues";
 series2.YBindingPath = "YValues";
-series2.Label = "Elizabeth";
 
 LineSeries series3 = new LineSeries();
 series3.ItemsSource = new ViewModel().Data3;
 series3.XBindingPath = "XValues";
 series3.YBindingPath = "YValues";
-series3.Label = "Andrew";
 
 DataTemplate trackballLabelTemplate = new DataTemplate(() =>
 {
-    HorizontalStackLayout horizontalStackLayout = new HorizontalStackLayout();
+    HorizontalStackLayout horizontalStackLayout = new HorizontalStackLayout
+    {
+        Spacing = 5
+    };
 
     Image image = new Image
     {
@@ -351,7 +350,7 @@ DataTemplate trackballLabelTemplate = new DataTemplate(() =>
         HorizontalOptions = LayoutOptions.Center,
         TextColor = Colors.White
     };
-    label1.SetBinding(Label.TextProperty, new Binding("Series.Label", stringFormat: " {0}"));
+    label1.SetBinding(Label.TextProperty,"DataItem.Name");
 
     Label label2 = new Label
     {
@@ -360,11 +359,19 @@ DataTemplate trackballLabelTemplate = new DataTemplate(() =>
         HorizontalOptions = LayoutOptions.Center,
         TextColor = Colors.White
     };
-    label2.SetBinding(Label.TextProperty, new Binding("DataItem.YValues", stringFormat: ": {0}M"));
+
+    Label label3 = new Label
+    {
+        FontSize = 15,
+        HorizontalOptions = LayoutOptions.Center,
+        TextColor = Colors.White
+    };
+    label3.SetBinding(Label.TextProperty," DataItem.YValues", stringFormat: "{0}M");
 
     horizontalStackLayout.Add(image);
     horizontalStackLayout.Add(label1);
     horizontalStackLayout.Add(label2);
+    horizontalStackLayout.Add(label3);
 
     return horizontalStackLayout;
 });
@@ -386,7 +393,7 @@ this.Content = chart;
 
 ## Trackball axis label template
 
-To customize the appearance of axis labels on the trackball, you can use the [TrackballLabelTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_TrackballLabelTemplate) property of the [ChartAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html).
+To customize the appearance of axis labels on the trackball, you can use the [TrackballLabelTemplate]() property of the [ChartAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html).
 
 {% tabs %}
 
@@ -394,9 +401,9 @@ To customize the appearance of axis labels on the trackball, you can use the [Tr
 
 <chart:SfCartesianChart>
     <chart:SfCartesianChart.Resources>
-          <DataTemplate x:Key="axisLabelTemplate">
-              <Label WidthRequest="50" HeightRequest="20" HorizontalTextAlignment="Center" BackgroundColor="Blue" Text="{Binding ValueX}" TextColor="White" FontSize ="15"/>
-          </DataTemplate>
+            <DataTemplate x:Key="axisLabelTemplate">
+                <Label WidthRequest="50" HeightRequest="20" HorizontalTextAlignment="Center" BackgroundColor="Blue" Text="{Binding ValueX}" TextColor="White" FontSize ="15"/>
+            </DataTemplate>
     </chart:SfCartesianChart.Resources>
 
    <chart:SfCartesianChart.TrackballBehavior>
@@ -410,6 +417,7 @@ To customize the appearance of axis labels on the trackball, you can use the [Tr
     <chart:LineSeries ItemsSource="{Binding Data}" 
                       XBindingPath="Name"
                       YBindingPath="Values"/>
+                      
 </chart:SfCartesianChart>
 
 {% endhighlight %}

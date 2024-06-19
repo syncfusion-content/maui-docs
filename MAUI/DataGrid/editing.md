@@ -80,7 +80,7 @@ N> The keyboard will collapse when the editing grid cell loses focus.
 
 ## Lost focus behavior
 
-By default, when focus moves from the data grid to another control, the current cell value is not committed. To change this behavior and commit the current cell's value when focus moves, set the [SfDataGrid.LostFocusBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_LostFocusBehavior) property to `EndEditCurrentCell`.
+By default, when focus moves from the data grid to another control, the current cell value is not committed. To change this behavior and commit the current cell's value when focus moves, set the `SfDataGrid.LostFocusBehavior` property to `EndEditCurrentCell`.
 
 {% tabs %}
 {% highlight xaml %}

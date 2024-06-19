@@ -908,47 +908,9 @@ dataGrid.Columns.Add(numericColumn);
 {% endhighlight %}
 {% endtabs %}
 
-### Allow Null Value
-
-The [DataGridNumericColumn.AllowNullValue](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridNumericColumn.html#Syncfusion_Maui_DataGrid_DataGridNumericColumn_AllowNullValue) property allows you to commit a null value to the respective cell during the end edit. 
-
-{% tabs %}
-{% highlight xaml %}
-<syncfusion:SfDataGrid x:Name="dataGrid"
-                       AutoGenerateColumnsMode="None"
-                       AllowEditing="True"
-                       SelectionMode="Single"
-                       NavigationMode="Cell"
-                       ItemsSource="{Binding OrderInfoCollection}">
-     <syncfusion:SfDataGrid.Columns>
-         <syncfusion:DataGridNumericColumn HeaderText="Order ID" 
-                                           MappingName="OrderID" 
-                                           AllowNullValue="True" />   
-     </syncfusion:SfDataGrid.Columns>
-</syncfusion:SfDataGrid>
-
-{% endhighlight %}
-
-{% highlight c# %}
-dataGrid = new SfDataGrid();
-dataGrid.AllowEditing = true;
-dataGrid.SelectionMode = DataGridSelectionMode.Single;
-dataGrid.NavigationMode = DataGridNavigationMode.Cell;
-DataGridNumericColumn numericColumn = new DataGridNumericColumn()
-{
-    MappingName = "OrderID",
-    HeaderText = "OrderID",
-    AllowNullValue = true,
-};
-dataGrid.Columns.Add(numericColumn);
-
-{% endhighlight %}
-
-{% endtabs %}
-
 ## Row header
 
-The row header is a type of column that is placed as the first cell of each row and remains frozen. To enable the row header, set [SfDataGrid.ShowRowHeader](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ShowRowHeader) to `true` Additionally, the `SfDataGrid` allows you to customize the row header width using the [SfDataGrid.RowHeaderWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_RowHeaderWidth) property. The default value is `30.`
+The row header is a type of column that is placed as the first cell of each row and remains frozen. To enable the row header, set `SfDataGrid.ShowRowHeader` to `true` Additionally, the `SfDataGrid` allows you to customize the row header width using the `SfDataGrid.RowHeaderWidth` property. The default value is 30.
 
 {% tabs %}
 {% highlight xaml %}
@@ -965,7 +927,7 @@ The row header is a type of column that is placed as the first cell of each row 
 
 ### Load template in row header
 
-The data template can be loaded to the row header by setting the [SfDataGrid.RowHeaderTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_RowHeaderTemplate) property.
+The data template can be loaded to the row header by setting the `SfDataGrid.RowHeaderTemplate` property.
 
 {% tabs %}
 {% highlight xaml %}
@@ -984,6 +946,44 @@ The data template can be loaded to the row header by setting the [SfDataGrid.Row
 {% endtabs %}
 
 <img alt="Row header in .NET MAUI DataGrid" src="Images\column-types\maui-datagrid-show-row-header-load-template.png" width="404"/>
+
+## Allow Null Value
+
+The `DataGridNumericColumn.AllowNull` property allows you to commit a null value to the respective cell during the end edit. 
+
+{% tabs %}
+{% highlight xaml %}
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                       AutoGenerateColumnsMode="None"
+                       AllowEditing="True"
+                       SelectionMode="Single"
+                       NavigationMode="Cell"
+                       ItemsSource="{Binding OrderInfoCollection}">
+     <syncfusion:SfDataGrid.Columns>
+         <syncfusion:DataGridNumericColumn HeaderText="Order ID" 
+                                           MappingName="OrderID" 
+                                           AllowNull="True" />   
+     </syncfusion:SfDataGrid.Columns>
+</syncfusion:SfDataGrid>
+
+{% endhighlight %}
+
+{% highlight c# %}
+dataGrid = new SfDataGrid();
+dataGrid.AllowEditing = true;
+dataGrid.SelectionMode = DataGridSelectionMode.Single;
+dataGrid.NavigationMode = DataGridNavigationMode.Cell;
+DataGridNumericColumn numericColumn = new DataGridNumericColumn()
+{
+    MappingName = "OrderID",
+    HeaderText = "OrderID",
+    AllowNull = true,
+};
+dataGrid.Columns.Add(numericColumn);
+
+{% endhighlight %}
+
+{% endtabs %}
 
 ## Bind a view model property inside header template
 

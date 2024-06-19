@@ -18,19 +18,19 @@ To define the legend in the chart, initialize the [ChartLegend](https://help.syn
 
 {% highlight xaml %}
 
-<chart:SfCircularChart>
-    <chart:SfCircularChart.Legend>
-        <chart:ChartLegend/>
-    </chart:SfCircularChart.Legend>
-</chart:SfCircularChart>
+    <chart:SfCircularChart>
+        <chart:SfCircularChart.Legend>
+            <chart:ChartLegend/>
+        </chart:SfCircularChart.Legend>
+    </chart:SfCircularChart>
 
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-SfCircularChart chart = new SfCircularChart();
-chart.Legend = new ChartLegend();
+    SfCircularChart chart = new SfCircularChart();
+    chart.Legend = new ChartLegend();
 
 {% endhighlight %}
 
@@ -43,30 +43,28 @@ The visibility of the chart legend can be controlled using the [IsVisible](https
 
 {% highlight xaml %}
     
-<chart:SfCircularChart>
-    <chart:SfCircularChart.Legend>
+    <chart:SfCircularChart>
+        <chart:SfCircularChart.Legend>
         <chart:ChartLegend IsVisible = "True"/>
-    </chart:SfCircularChart.Legend>
-</chart:SfCircularChart>
+        </chart:SfCircularChart.Legend>
+    </chart:SfCircularChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-SfCircularChart chart = new SfCircularChart();
+    SfCircularChart chart = new SfCircularChart();
+    ViewModel viewModel = new ViewModel();
 
-chart.Legend = new ChartLegend()
-{ 
-    IsVisible = true 
-};
-this.Content = chart;
+    chart.Legend = new ChartLegend(){ IsVisible = true };
+
 
 {% endhighlight %}
 
 {% endtabs %}
 
-## Legend item visibility
-
+## LegendItems Visibility
+Legend item visibility
 The visibility of individual legend items for specific series can be controlled using the [IsVisibleOnLegend](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_IsVisibleOnLegend) property of the series. The default value for IsVisibleOnLegend is `true`.
 
 
@@ -74,73 +72,76 @@ The visibility of individual legend items for specific series can be controlled 
 
 {% highlight xaml %}
     
-<chart:SfCircularChart>
-    <chart:SfCircularChart.Legend>
-        <chart:ChartLegend/>
-    </chart:SfCircularChart.Legend>
+    <chart:SfCircularChart>
+        <chart:SfCircularChart.Legend>
+        <chart:ChartLegend />
+        </chart:SfCircularChart.Legend>
 
-    <chart:PieSeries ItemsSource="{Binding Data}"
-                     XBindingPath="XValue"
-                     IsVisibleOnLegend="True"
-                     YBindingPath="YValue"/>
-</chart:SfCircularChart>
+        <chart:PieSeries ItemsSource="{Binding Data}"
+                        XBindingPath="XValue"
+                        IsVisibleOnLegend="True"
+                        YBindingPath="YValue"/>
+    </chart:SfCircularChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-SfCircularChart chart = new SfCircularChart();
-chart.Legend = new ChartLegend();
-PieSeries series = new PieSeries()
-{
+    SfCircularChart chart = new SfCircularChart();
+    ViewModel viewModel = new ViewModel();
+
+    chart.Legend = new ChartLegend(){ };
+
+    PieSeries series = new PieSeries()
+    {
     ItemsSource = viewModel.Data,
     XBindingPath = "XValue",
     IsVisibleOnLegend = true,
     YBindingPath = "YValue",
-};
-
-chart.Series.Add(series);
-this.Content = chart;
+    };
+    chart.Series.Add(series);
 
 {% endhighlight %}
 
 {% endtabs %}
 
-## Legend icon
+## Legend Icon
 To specify the legend icon based on the associated series type, use the [LegendIcon](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_LegendIcon) property and change its type using the [ChartLegendIconType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLegendIconType.html) enum values. The default value of the LegendIcon property is `Circle`.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<chart:SfCircularChart>
-    <chart:SfCircularChart.Legend>
-       <chart:ChartLegend/>
-    </chart:SfCircularChart.Legend>
+    <chart:SfCircularChart>
 
-    <chart:PieSeries ItemsSource="{Binding Data}"
-                     XBindingPath="XValue"
-                     YBindingPath="YValue"
-                     LegendIcon = "Diamond"/>
-</chart:SfCircularChart>
+        <chart:SfCircularChart.Legend>
+           <chart:ChartLegend />
+        </chart:SfCircularChart.Legend>
+
+         <chart:PieSeries ItemsSource="{Binding Data}"
+                           XBindingPath="XValue"
+                           YBindingPath="YValue"
+                           LegendIcon = "Diamond"/>
+
+    </chart:SfCircularChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-SfCircularChart chart = new SfCircularChart();
-chart.Legend = new ChartLegend();
+    SfCircularChart chart = new SfCircularChart();
+    chart.Legend = new ChartLegend();
+    ViewModel viewModel = new ViewModel();
 
-PieSeries pieSeries = new PieSeries()
-{
-      ItemsSource = viewModel.Data,
-      XBindingPath = "XValue",
-      YBindingPath = "YValue",
-      LegendIcon = ChartLegendIconType.Diamond,
-};
+    PieSeries pieSeries = new PieSeries()
+    {
+          ItemsSource = viewModel.Data,
+          XBindingPath = "XValue",
+          YBindingPath = "YValue",
+          LegendIcon = ChartLegendIconType.Diamond,
+    };
 
-chart.Series.Add(pieSeries);
-this.Content = chart;
+    chart.Series.Add(pieSeries);
 
 {% endhighlight %}
 
@@ -153,25 +154,23 @@ The legend can be positioned to the left, right, top, or bottom of the chart are
 
 {% highlight xaml %}
 
-<chart:SfCircularChart>
-    <chart:SfCircularChart.Legend>
-        <chart:ChartLegend Placement="Bottom">
-        </chart:ChartLegend>
-    </chart:SfCircularChart.Legend>
-</chart:SfCircularChart>
+    <chart:SfCircularChart >
+        <chart:SfCircularChart.Legend>
+            <chart:ChartLegend Placement="Bottom"  >
+            </chart:ChartLegend>
+      </chart:SfCircularChart.Legend>
+    </chart:SfCircularChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-SfCircularChart chart = new SfCircularChart();
+    SfCircularChart chart = new SfCircularChart();
+    ViewModel viewModel = new ViewModel();
 
-chart.Legend = new ChartLegend()
-{ 
-    Placement = LegendPlacement.Bottom 
-};
+    chart.Legend = new ChartLegend()
+    { Placement = LegendPlacement.Bottom };
 
-this.Content = chart;
 {% endhighlight %}
 
 {% endtabs %}
@@ -183,102 +182,104 @@ The visibility of circular series data points can be controlled by tapping the l
 
 {% highlight xaml %}
 
-<chart:SfCircularChart>
-    <chart:SfCircularChart.Legend>
-        <chart:ChartLegend           
-            ToggleSeriesVisibility="True">
+    <chart:SfCircularChart >
+        <chart:SfCircularChart.Legend>
+            <chart:ChartLegend           
+              ToggleSeriesVisibility="True">
         </chart:ChartLegend>
-    </chart:SfCircularChart.Legend>
-</chart:SfCircularChart>
+      </chart:SfCircularChart.Legend>
+    </chart:SfCircularChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-SfCircularChart chart = new SfCircularChart();
-chart.Legend = new ChartLegend()
-{ 
-    ToggleSeriesVisibility = true 
-};
+    SfCircularChart chart = new SfCircularChart();
+    ViewModel viewModel = new ViewModel();
 
-this.Content = chart;
+    chart.Legend = new ChartLegend()
+    { 
+        ToggleSeriesVisibility = true 
+    };
 
 {% endhighlight %}
 
 {% endtabs %}
 
 ## Legend maximum size request
-To set the maximum size request for the legend view, override the [GetMaximumSizeCoefficient](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLegend.html#Syncfusion_Maui_Charts_ChartLegend_GetMaximumSizeCoefficient) protected method in [ChartLegend](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLegend.html) class. The value should be between 0 and 1, representing the maximum size request, not the desired size for the legend items layout.
+To set the maximum size request for the legend view, override the [GetMaximumSizeCoefficient]() protected method in [ChartLegend](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLegend.html) class. The value should be between 0 and 1, representing the maximum size request, not the desired size for the legend items layout.
 
 {% tabs %}
 
 {% highlight xaml %}
     
-<chart:SfCircularChart >
+    <chart:SfCircularChart >
     . . .
     <chart:SfCircularChart.Legend>
         <chart:LegendExt/>
     </chart:SfCircularChart.Legend>
     . . .
-</chart:SfCircularChart>
+    </chart:SfCircularChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-public class LegendExt : ChartLegend
-{
-    protected override double GetMaximumSizeCoefficient()
+    public class LegendExt : ChartLegend
     {
-        return 0.7;
+        protected override double GetMaximumSizeCoefficient()
+        {
+            return 0.7;
+        }
     }
-}
 
-SfCircularChart chart = new SfCircularChart();
-chart.Legend = new LegendExt();
+    SfCircularChart chart = new SfCircularChart();
+    chart.Legend = new LegendExt();
 
 {% endhighlight %}
 
 {% endtabs %}
 
-## Items layout
+## Items Layout
+ Items layout
+The [ItemsLayout]() property is used to customize the arrangement and position of each legend item. The default value is `null`. This property accepts any layout type.
 
-The [ItemsLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLegend.html#Syncfusion_Maui_Charts_ChartLegend_ItemsLayout) property is used to customize the arrangement and position of each legend item. The default value is `null`. This property accepts any layout type.
-
-For more details about the layout alignment refer to this [article](https://support.syncfusion.com/kb/article/16201/how-to-align-the-chart-legend-items-in-net-maui-circular-chart).
+For more details about the layout alignment refer to this [article].
 
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<chart:SfCircularChart>
-    <chart:SfCircularChart.Legend>
-        <chart:ChartLegend>
+    <chart:SfCircularChart >
+        <chart:SfCircularChart.Legend>
+            <chart:ChartLegend >
             <chart:ChartLegend.ItemsLayout>
-                <FlexLayout Wrap="Wrap"
-                            WidthRequest="400">
-                </FlexLayout>
+              <FlexLayout Wrap="Wrap"
+                          WidthRequest="400">
+              </FlexLayout>
             </chart:ChartLegend.ItemsLayout>
         </chart:ChartLegend>
-    </chart:SfCircularChart.Legend>
-</chart:SfCircularChart>
+      </chart:SfCircularChart.Legend>
+    </chart:SfCircularChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-SfCircularChart chart = new SfCircularChart();
-. . .
-ChartLegend legend = new ChartLegend();
-legend.ItemsLayout = new FlexLayout()
-{
-    Wrap = FlexWrap.Wrap,
-    WidthRequest = 400
-};
+    SfCircularChart chart = new SfCircularChart();
+    . . .
+    ChartLegend legend = new ChartLegend();
+    legend.Placement = LegendPlacement.Bottom;
 
-chart.Legend = legend;
-this.Content = chart;
+    legend.ItemsLayout = new FlexLayout()
+    {
+        Wrap = FlexWrap.Wrap,
+        WidthRequest = 400
+    };
+
+    chart.Legend = legend;
+    this.Content = chart;
         
 {% endhighlight %}
 
@@ -293,43 +294,41 @@ N> The BindingContext of the template is the corresponding underlying legend ite
 
 {% highlight xaml %}
 
-<chart:SfCircularChart >
-    <chart:SfCircularChart.Resources>
-        <DataTemplate x:Key="legendTemplate">
+    <chart:SfCircularChart >
+        <chart:SfCircularChart.Resources>
+            <DataTemplate x:Key="legendTemplate">
             <StackLayout Orientation="Horizontal" >
                 <Rectangle HeightRequest="12" 
-                           WidthRequest="12" Margin="3"
-                           Background="{Binding IconBrush}"/>
+                    WidthRequest="12" Margin="3"
+                    Background="{Binding IconBrush}"/>
             <Label Text="{Binding Text}" 
                     Margin="3"/>
-            </StackLayout>
-        </DataTemplate>
+        </StackLayout>
+    </DataTemplate>
     </chart:SfCircularChart.Resources>  
     
     <chart:SfCircularChart.Legend>
         <chart:ChartLegend    
                ItemTemplate="{StaticResource legendTemplate}">
         </chart:ChartLegend>
-    </chart:SfCircularChart.Legend>
-</chart:SfCircularChart>
+      </chart:SfCircularChart.Legend>
+    </chart:SfCircularChart>
 
 {% endhighlight %}
 
 
 {% highlight c# %}
 
-SfCircularChart chart = new SfCircularChart();
-ChartLegend legend = new ChartLegend();
-legend.ItemTemplate = chart.Resources["legendTemplate"] as DataTemplate;
-...
-chart.Legend = legend;
-this.Content = chart;
+    SfCircularChart chart = new SfCircularChart();
+     
+    ChartLegend legend = new ChartLegend();
+    legend.ItemTemplate = chart.Resources["legendTemplate"] as DataTemplate;
+    ...
+    this.Content = chart;
         
 {% endhighlight %}
 
 {% endtabs %}
-
-![Legend layout for circular chart](Legend-images/circular_chart.png)
 
 ## Limitations
 * Do not add items explicitly.
