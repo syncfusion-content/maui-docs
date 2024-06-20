@@ -127,14 +127,7 @@ You can customize the display text appearance of the [`SfCheckBox`](https://help
 {% tabs %}
 {% highlight xaml %}
 
-    <syncfusion:SfCheckBox  x:Name="caption" 
-                            Text="CheckBox" 
-                            IsChecked="True" 
-                            TextColor="Blue" 
-                            HorizontalTextAlignment="Center" 
-                            FontFamily="Arial" 
-                            FontAttributes="Bold" 
-                            FontSize="20"/>           
+    <syncfusion:SfCheckBox x:Name="caption" Text="CheckBox" IsChecked="True" TextColor="Blue" HorizontalTextAlignment="Center" FontFamily="Arial" FontAttributes="Bold" FontSize="20"/>
 
 {% endhighlight %}
 {% highlight c# %}

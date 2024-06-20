@@ -89,14 +89,7 @@ You can customize the display text appearance of the [`SfRadioButton`](https://h
 {% tabs %}
 {% highlight xaml %}
 
-	<syncfusion:SfRadioButton x:Name="radioButton" 
-				  Text="Radio Button" 
-				  IsChecked="True" 
-				  TextColor="Blue" 
-				  HorizontalTextAlignment="Center" 
-			      FontFamily="Arial" 
-				  FontAttributes="Bold" 
-				  FontSize="20"/>
+	<syncfusion:SfRadioButton x:Name="radioButton" Text="Radio Button" IsChecked="True" TextColor="Blue" HorizontalTextAlignment="Center" FontFamily="Arial" FontAttributes="Bold" FontSize="20"/>
 
 {% endhighlight %}
 {% highlight c# %}
