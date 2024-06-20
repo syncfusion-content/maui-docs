@@ -123,12 +123,7 @@ The [`LineBreakMode`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Button
 {% tabs %}
 {% highlight xaml %}
 
-    <syncfusion:SfRadioButton   x:Name="RadioButton" 
-				IsChecked="True" 
-				WidthRequest="200" 
-				LineBreakMode="WordWrap" 
-				Text="The LineBreakMode allows you to wrap or truncate the text.">
-				</syncfusion:SfRadioButton>
+    <syncfusion:SfRadioButton x:Name="RadioButton" IsChecked="True" WidthRequest="200" LineBreakMode="WordWrap" Text="The LineBreakMode allows you to wrap or truncate the text."></syncfusion:SfRadioButton>
 
 {% endhighlight %}
 
