@@ -29,7 +29,6 @@ N> For category axis, minor tick lines are not applicable. Since it is rendered 
 <chart:SfCartesianChart.YAxes>
     <chart:NumericalAxis />
 </chart:SfCartesianChart.YAxes>
-
 </chart:SfCartesianChart>
 
 {% endhighlight %}
