@@ -80,7 +80,7 @@ The number of segments in the panel is determined using the [`VisibleSegmentsCou
 
 ### VisibleSegmentsCount
 
-The [`VisibleSegmentsCount`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_VisibleSegmentsCount) property is used to specify the number of segments available in circular panel. When children count is greater than the value given in the `VisibleSegmentsCount` property, the overflowing children are not arranged in the panel. When children count is lesser than the `VisibleSegmentsCount` property, then remaining segments are left free. If number of item count is higher than VisibleItemCount, excessive items will not be shown.
+The [`VisibleSegmentsCount`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_VisibleSegmentsCount) property is used to specify the number of segments available in circular panel. When children count is greater than the value given in the [`VisibleSegmentsCount`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_VisibleSegmentsCount) property, the overflowing children are not arranged in the panel. When children count is lesser than the [`VisibleSegmentsCount`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_VisibleSegmentsCount) property, then remaining segments are left free. If number of item count is higher than VisibleItemCount, excessive items will not be shown.
 
 ### SegmentIndex
 

@@ -118,7 +118,7 @@ You can customize the display text appearance of the [`SfRadioButton`](https://h
 
 ## LineBreakMode
 
-The `LineBreakMode` allows you to wrap or truncate the text. The default value of this property is NoWrap. The following other options are available in `LineBreakMode`:
+The [`LineBreakMode`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioButton.html#Syncfusion_Maui_Buttons_SfRadioButton_LineBreakMode) allows you to wrap or truncate the text. The default value of this property is NoWrap. The following other options are available in [`LineBreakMode`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioButton.html#Syncfusion_Maui_Buttons_SfRadioButton_LineBreakMode):
 
 *   `NoWrap` - Avoids the text wrap.
 *   `WordWrap` - Wraps the text by words.
