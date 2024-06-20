@@ -462,7 +462,7 @@ tabView.TabHeaderPadding = new Thickness(5, 10, 5, 10);
 
 ## Scroll buttons on Header
 
-Scroll buttons are used to navigate through the items in the header of the tab view by adjusting the `IsScrollButtonEnabled` property of [SfTabView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html?tabs=tabid-1). This functionality additionally indicates the presence of tabs beyond the currently visible area.
+Scroll buttons are used to navigate through the items in the header of the tab view by adjusting the [IsScrollButtonEnabled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_IsScrollButtonEnabled) property of [SfTabView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html?tabs=tabid-1). This functionality additionally indicates the presence of tabs beyond the currently visible area.
 
 {% tabs %}
 
