@@ -5,6 +5,7 @@ description: Learn all about selection modes support in Syncfusion .NET MAUI Com
 platform: maui
 control: SfComboBox
 documentation: ug
+keywords: .net maui combobox, .net maui sfcombobox, syncfusion combobox, combobox maui, .net maui dropdown list, .net maui select menu, .net maui multi selection combobox, .net maui multi selection token, .net maui multi selection delimiter.
 ---
 
 # Selection in .NET MAUI ComboBox (SfComboBox)

@@ -5,6 +5,7 @@ description: Learn here all about Supported Input Views support in the Syncfusio
 platform: maui
 control: SfTextInputLayout
 documentation: ug
+keywords: .net maui text input layout, syncfusion text input layout, text input layout maui.
 ---
 
 # Supported Input Views in .NET MAUI TextInputLayout (SfTextInputLayout)
