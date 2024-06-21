@@ -5,6 +5,7 @@ description: Learn here all about ComboBox filtering options in Syncfusion .NET 
 platform: maui
 control: SfComboBox
 documentation: ug
+keywords: .net maui combobox, .net maui sfcombobox, syncfusion combobox, combobox maui, .net maui dropdown list, .net maui select menu, .net maui combobox filtering.
 ---
 # Filtering in .NET MAUI ComboBox (SfComboBox)
 
