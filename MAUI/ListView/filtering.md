@@ -5,6 +5,7 @@ description: Learn here all about Filtering support in Syncfusion .NET MAUI List
 platform: MAUI
 control: SfListView
 documentation: ug
+keywords : .net maui listview, maui listview, .net maui listview filter, .net maui filter listview, .net maui listview filtering, .net maui listview search filter, .net maui listview filtering items.
 ---
 
 # Filtering in .NET MAUI ListView (SfListView)

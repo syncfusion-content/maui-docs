@@ -5,6 +5,7 @@ description: Learn here all about introduction of Syncfusion .NET MAUI ListView 
 platform: MAUI
 control: ListView
 documentation: ug
+keywords : .net maui listview, .net maui list, maui vertical list, .net maui listview features, .net maui listview guide, .net maui listview tutorial.
 ---
 
 # Overview of .NET MAUI ListView (SfListView)

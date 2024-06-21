@@ -5,6 +5,7 @@ description: Learn here all about Right To Left support in Syncfusion .NET MAUI 
 platform: MAUI
 control: SfListView
 documentation: ug
+keywords : .net maui listview, .net maui list, .net maui rtl listview, .net maui listview right-to-left ui.
 ---
 
 # Right To Left in .NET MAUI ListView (SfListView)

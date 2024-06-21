@@ -5,6 +5,7 @@ description: Learn here all about Selection support in Syncfusion .NET MAUI List
 platform: MAUI
 control: SfListView
 documentation: ug
+keywords : .net maui listview, .net maui list, .net maui listview selection, .net maui listview item selection, .net maui listview selected item.
 ---
 
 # Selection in .NET MAUI ListView (SfListView)
