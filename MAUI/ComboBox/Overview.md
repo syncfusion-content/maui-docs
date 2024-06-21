@@ -5,6 +5,7 @@ description: Learn here all about the introduction of Syncfusion .NET MAUI Combo
 platform: maui
 control: SfComboBox
 documentation: ug
+keywords: .net maui combobox, .net maui sfcombobox, syncfusion combobox, combobox maui, .net maui dropdown list, .net maui select menu.
 ---
 
 # .NET MAUI ComboBox (SfComboBox) Overview
