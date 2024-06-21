@@ -5,6 +5,7 @@ description: Learn all about UI customization support in Syncfusion .NET MAUI Co
 platform: maui
 control: SfComboBox
 documentation: ug
+keywords: .net maui combobox, .net maui sfcombobox, syncfusion combobox, combobox maui, .net maui dropdown list, .net maui select menu.
 ---
 
 # UI Customization in .NET MAUI ComboBox (SfComboBox)

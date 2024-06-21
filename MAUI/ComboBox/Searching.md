@@ -5,6 +5,7 @@ description: Learn how to perform the searching operation in Syncfusion .NET MAU
 platform: maui
 control: SfComboBox
 documentation: ug
+keywords: .net maui combobox, .net maui sfcombobox, syncfusion combobox, combobox maui, .net maui dropdown list, .net maui select menu, .net maui combobox searching.
 ---
 
 # Searching in .NET MAUI ComboBox (SfComboBox)

@@ -5,6 +5,7 @@ description: Learn all about Editable modes support in Syncfusion .NET MAUI Comb
 platform: maui
 control: SfComboBox
 documentation: ug
+keywords: .net maui combobox, .net maui sfcombobox, syncfusion combobox, combobox maui, .net maui dropdown list, .net maui select menu.
 ---
 
 # Editing in .NET MAUI ComboBox (SfComboBox)

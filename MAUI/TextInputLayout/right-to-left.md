@@ -5,6 +5,7 @@ description: Learn about Right-to-Left support in Syncfusion .NET MAUI Text Inpu
 platform: maui
 control: SfTextInputLayout
 documentation: ug
+keywords: .net maui text input layout, syncfusion text input layout, text input layout maui.
 ---
 
 # Right-to-Left in .NET MAUI Text Input Layout (SfTextInputLayout)
