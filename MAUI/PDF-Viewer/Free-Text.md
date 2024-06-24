@@ -16,6 +16,16 @@ The [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.
 
 This section will go through how to add free text annotations to a PDF page interactively as well as programmatically.
 
+### Add and modify free text annotations using built-in toolbar  
+
+#### Free text annotation in desktop 
+
+add the free text Annotation into the PDF using built-in toolbar using the free text icon in annotation toolbar, it will shows when annotation icon is clicked in the top toolbar. 
+
+####  Free text annotation in mobile 
+
+add the free text Annotation into the PDF using built-in toolbar using the free text icon in bottom toolbar. 
+
 ### Add free text annotation with UI interaction
 
 You can add free text annotation to a PDF document by tapping with touch (or mouse down) on a PDF page. The following steps explains how to add free text annotation in a PDF.
