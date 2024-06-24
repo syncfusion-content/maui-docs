@@ -37,7 +37,7 @@ The following image represents how to add the circle annotations using the toolb
 
 The following image represents how to add the circle annotations using the toolbar on mobile.
 
-![Circle annotation for desktop](Images/Annotations/CicleAnnotationDesktop.gif)
+![Circle annotation for mobile](Images/Annotations/CicleAnnotationMobile.gif)
 
 ### Add shapes without using the toolbar
 
