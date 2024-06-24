@@ -5,6 +5,7 @@ description: Learn here all about Header and Footer support in Syncfusion Maui C
 platform: maui
 control: SfComboBox
 documentation: ug
+keywords: .net maui combobox, .net maui sfcombobox, syncfusion combobox, combobox maui, .net maui dropdown list, .net maui select menu.
 ---
 
 # Header and Footer support in .NET MAUI ComboBox (SfComboBox)

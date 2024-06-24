@@ -11,8 +11,8 @@ documentation: ug
 
 There are two different layout types available for radial menu:
 
-*  `Default`
-*  `Custom`
+*  [`Default`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.LayoutType.html#Syncfusion_Maui_RadialMenu_LayoutType_Default)
+*  [`Custom`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.LayoutType.html#Syncfusion_Maui_RadialMenu_LayoutType_Custom)
 
 Both the layout types divide the available space equally among all the children in the circular panel.
 
@@ -49,7 +49,7 @@ Number of segments in the panel is determined by children count in the level. He
 
 ## Custom
 
-The number of segments in the panel is determined using the `VisibleSegmentsCount` property. Since the segment count in all the hierarchical levels are same, radial menu items are arranged in any order based on the `SegmentIndex` property.
+The number of segments in the panel is determined using the [`VisibleSegmentsCount`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_VisibleSegmentsCount) property. Since the segment count in all the hierarchical levels are same, radial menu items are arranged in any order based on the [`SegmentIndex`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenuItem.html#Syncfusion_Maui_RadialMenu_SfRadialMenuItem_SegmentIndex) property.
 
 {% tabs %}
 
@@ -80,11 +80,11 @@ The number of segments in the panel is determined using the `VisibleSegmentsCoun
 
 ### VisibleSegmentsCount
 
-The `VisibleSegmentsCount` property is used to specify the number of segments available in circular panel. When children count is greater than the value given in the `VisibleSegmentsCount` property, the overflowing children are not arranged in the panel. When children count is lesser than the `VisibleSegmentsCount` property, then remaining segments are left free. If number of item count is higher than VisibleItemCount, excessive items will not be shown.
+The [`VisibleSegmentsCount`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_VisibleSegmentsCount) property is used to specify the number of segments available in circular panel. When children count is greater than the value given in the [`VisibleSegmentsCount`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_VisibleSegmentsCount) property, the overflowing children are not arranged in the panel. When children count is lesser than the [`VisibleSegmentsCount`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_VisibleSegmentsCount) property, then remaining segments are left free. If number of item count is higher than VisibleItemCount, excessive items will not be shown.
 
 ### SegmentIndex
 
-`SegmentIndex` property is used to specify the index of the radial menu item in circular panel. Based on the index, the radial menu items are inserted in the segment. When the `SegmentIndex` is not specified for a RadialMenuItem the menu item is arranged in the next available free segment.
+[`SegmentIndex`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenuItem.html#Syncfusion_Maui_RadialMenu_SfRadialMenuItem_SegmentIndex) property is used to specify the index of the radial menu item in circular panel. Based on the index, the radial menu items are inserted in the segment. When the [`SegmentIndex`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenuItem.html#Syncfusion_Maui_RadialMenu_SfRadialMenuItem_SegmentIndex) is not specified for a RadialMenuItem the menu item is arranged in the next available free segment.
 
 ## Code snippet for VisibleSegmentCount and SegmentIndex
 
@@ -229,4 +229,4 @@ namespace RadialSample
 
 ![VisibleSegment.](images/segmentation/maui-radialmenu-segmentation-segmentIndex.png)
 
-N> The `VisibleSegmentsCount` property is only applicable for `Custom` layout.
+N> The [`VisibleSegmentsCount`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_VisibleSegmentsCount) property is only applicable for [`Custom`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.LayoutType.html#Syncfusion_Maui_RadialMenu_LayoutType_Custom) layout.

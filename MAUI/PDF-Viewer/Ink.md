@@ -5,6 +5,7 @@ description: Learn here all about Ink Annotations in Syncfusion .NET MAUI PDF Vi
 platform: MAUI
 control: SfPdfViewer
 documentation: ug
+keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .net maui open pdf, maui pdf viewer, maui pdf view
 ---
 
 # Ink annotation in .NET MAUI PDF Viewer (SfPdfViewer)
@@ -36,7 +37,7 @@ You can draw and add ink annotations to a PDF document with UI interaction using
 3.	Draw the stroke by dragging the finger (or cursor) across the screen.
 4.	Finish the stroke by releasing the finger (or cursor).
 5.	Repeat the steps 2-4, if you want to create multiple strokes on other areas during the ink drawing mode.
-6.	Once you have done, set the `AnnotationMode` to [None](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.AnnotationMode.html#Syncfusion_Maui_PdfViewer_AnnotationMode_None). It will disable the drawing mode and save the drawn strokes to the PDF page as a single ink annotation.
+6.	Once you have done, set the [AnnotationMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationMode) to [None](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.AnnotationMode.html#Syncfusion_Maui_PdfViewer_AnnotationMode_None). It will disable the drawing mode and save the drawn strokes to the PDF page as a single ink annotation.
 7.	You can later move, resize, or edit the annotation.
 
 
@@ -47,7 +48,7 @@ The following code explains how to enable the ink annotation mode.
 // Enable or activate the ink drawing mode.
 void EnableInkDrawingMode()
 {
-    // Set the annotation mode to ink using the `SfPdfViewer` instance.
+    // Set the annotation mode to ink using the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) instance.
     PdfViewer.AnnotationMode = AnnotationMode.Ink;
 }
 {% endhighlight %}
@@ -60,7 +61,7 @@ Similarly, refer to following code to disable the ink annotation mode.
 // Disable or deactivate the ink drawing mode.
 void DisableInkDrawingMode()
 {
-    // Set the annotation mode to none using the `SfPdfViewer` instance.
+    // Set the annotation mode to none using the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) instance.
     PdfViewer.AnnotationMode = AnnotationMode.None;
 }
 {% endhighlight %}
@@ -68,7 +69,7 @@ void DisableInkDrawingMode()
 
 ## Add ink annotations programmatically
 
-You can create and add an ink annotation to a PDF document programmatically using the [AddAnnotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AddAnnotation_Syncfusion_Maui_PdfViewer_Annotation_) method of the `SfPdfViewer`. The following example explains how to create an ink annotation and add it to the first page of a PDF document.
+You can create and add an ink annotation to a PDF document programmatically using the [AddAnnotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AddAnnotation_Syncfusion_Maui_PdfViewer_Annotation_) method of the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html). The following example explains how to create an ink annotation and add it to the first page of a PDF document.
 
 {% tabs %}
 {% highlight C# %}
@@ -107,7 +108,7 @@ void AddInkAnnotation()
 
 ## Annotation settings
 
-In the ink annotation mode, the ink annotation will be drawn with a default appearance and behavior. You can modify the annotation after it has been added to the pages. However, if you need to define the appearance and behavior before drawing on the document, you can change its default settings using the [AnnotationSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationSettings) property of the `SfPdfViewer`.
+In the ink annotation mode, the ink annotation will be drawn with a default appearance and behavior. You can modify the annotation after it has been added to the pages. However, if you need to define the appearance and behavior before drawing on the document, you can change its default settings using the [AnnotationSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationSettings) property of the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html).
 
 ### Customize the default appearance
 
@@ -117,7 +118,7 @@ You can customize the default appearance of ink annotation using the [InkAnnotat
 {% highlight C# %}
 void CustomizeDefaultInkSettings()
 {
-    // Obtain the default ink annotation settings from the `SfPdfViewer` instance.
+    // Obtain the default ink annotation settings from the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) instance.
     InkAnnotationSettings inkSettings = PdfViewer.AnnotationSettings.Ink;
 
     // Modify the default appearance properties
@@ -136,7 +137,7 @@ When drawing ink annotations on a PDF document interactively, all the strokes th
 {% highlight C# %}
 void DisableAggregateInkStrokes()
 {
-    // Obtain the default ink annotation settings from the `SfPdfViewer` instance.
+    // Obtain the default ink annotation settings from the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) instance.
     InkAnnotationSettings inkSettings = PdfViewer.AnnotationSettings.Ink;
 
     // Disable aggregating the insk strokes
@@ -147,7 +148,7 @@ void DisableAggregateInkStrokes()
 
 ### How to draw ink annotation only using stylus
 
-The ink annotation operation can be customized so that the ink strokes can be added only using a stylus by setting the `AnnotationSettings.Ink.TouchScreenInputMode` property to TouchScreenInputMode.Stylus. When TouchScreenInputMode is set to TouchScreenInputMode.Stylus, users can easily draw ink strokes using a stylus. However, zooming and scrolling functionality will still be available using their fingers.
+The ink annotation operation can be customized so that the ink strokes can be added only using a stylus by setting the [AnnotationSettings.Ink.TouchScreenInputMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.InkAnnotationSettings.html#Syncfusion_Maui_PdfViewer_InkAnnotationSettings_TouchScreenInputMode) property to TouchScreenInputMode.Stylus. When TouchScreenInputMode is set to TouchScreenInputMode.Stylus, users can easily draw ink strokes using a stylus. However, zooming and scrolling functionality will still be available using their fingers.
 
 By default, the TouchScreenInputMode property is set to TouchScreenInputMode.FingerAndStylus, where both finger and stylus inputs are recognized as ink operations.
 

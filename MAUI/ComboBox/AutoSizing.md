@@ -5,6 +5,7 @@ description: Learn about auto sizing support in Syncfusion .NET MAUI ComboBox (S
 platform: maui
 control: SfComboBox
 documentation: ug
+keywords: .net maui combobox, .net maui sfcombobox, syncfusion combobox, combobox maui, .net maui dropdown list, .net maui select menu.
 ---
 
 # AutoSizing in .NET MAUI ComboBox (SfComboBox)

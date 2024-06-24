@@ -5,6 +5,7 @@ description: Learn here all about Assistive Labels support in Syncfusion .NET MA
 platform: maui
 control: SfTextInputLayout
 documentation: ug
+keywords: .net maui text input layout, syncfusion text input layout, text input layout maui, .net maui error label, .net maui hint label.
 ---
 
 # Assistive Labels in .NET MAUI Text Input Layout (SfTextInputLayout)

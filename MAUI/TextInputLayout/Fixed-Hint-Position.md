@@ -5,6 +5,7 @@ description: Learn here all about Fixed Hint Position support in Syncfusion .NET
 platform: maui
 control: SfTextInputLayout
 documentation: ug
+keywords: .net maui text input layout, syncfusion text input layout, text input layout maui, .net maui hint label.
 ---
 
 # Fixed Hint Position in .NET MAUI Text Input Layout (SfTextInputLayout)

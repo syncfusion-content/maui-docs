@@ -1,10 +1,11 @@
 ---
 layout: post
-title: Locking and Unlocking annotations in .NET MAUI PDF Viewer control | Syncfusion
+title: Locking and Unlocking annotations in .NET MAUI PDF Viewer | Syncfusion
 description: Learn here all about locking and unlocking annotations using Syncfusion .NET MAUI PDF Viewer (SfPdfViewer) control.
 platform: MAUI
 control: SfPdfViewer
 documentation: ug
+keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .net maui open pdf, maui pdf viewer, maui pdf view
 ---
 
 # Lock and Unlock Annotations in .NET MAUI PDF Viewer (SfPdfViewer)
@@ -19,13 +20,13 @@ To lock all annotations in a document, set the [IsLocked](https://help.syncfusio
 {% highlight C# %}
 void LockAllAnnotations()
 {
-    // Lock all the annotations in a PDF document using the `AnnnotationSettings` property of the `SfPdfViewer` instance.
+    // Lock all the annotations in a PDF document using the [AnnotationSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.AnnotationSettings.html) property of the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) instance.
     PdfViewer.AnnotationSettings.IsLocked = true;
 }
 {% endhighlight %}
 {% endtabs %}
 
-* Similarly, to unlock all the annotations, set the `IsLocked` property value to `false`.
+* Similarly, to unlock all the annotations, set the [IsLocked](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.BaseAnnotationSettings.html#Syncfusion_Maui_PdfViewer_BaseAnnotationSettings_IsLocked) property value to `false`.
 
 
 ## Lock specific annotation
@@ -36,7 +37,7 @@ To lock a specific annotation in a document, access the annotation instance and 
 {% highlight C# %}
 void LockFirstAnnotation()
 {
-    // Obtain the annotation collection using the `SfPdfViewer` instance.
+    // Obtain the annotation collection using the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) instance.
     ReadOnlyObservableCollection<Annotation> annotations = PdfViewer.Annotations;
 
     // Obtain the first annotation in the annotation collection.
@@ -48,7 +49,7 @@ void LockFirstAnnotation()
 {% endhighlight %}
 {% endtabs %}
 
-* Similarly, to unlock the annotation, set the `IsLocked` property value to `false`.
+* Similarly, to unlock the annotation, set the[IsLocked](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.Annotation.html#Syncfusion_Maui_PdfViewer_Annotation_IsLocked) property value to `false`.
 
 
 ## Lock specific annotation types
@@ -59,7 +60,7 @@ You can also use the [AnnotationSettings](https://help.syncfusion.com/cr/maui/Sy
 {% highlight C# %}
 void LockCircleAnnotations()
 {
-    // Obtain the default circle annotation settings using `SfPdfViewer` instance.
+    // Obtain the default circle annotation settings using [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) instance.
     ShapeAnnotationSettings circleAnnotationSettings = PdfViewer.AnnotationSettings.Circle;
     
     // Lock all the circle annotations.
@@ -68,7 +69,7 @@ void LockCircleAnnotations()
 {% endhighlight %}
 {% endtabs %}
 
-* Similarly, to unlock the specific annotation types, set the `IsLocked` property value to `false`.
+* Similarly, to unlock the specific annotation types, set the [IsLocked](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.Annotation.html#Syncfusion_Maui_PdfViewer_Annotation_IsLocked) property value to `false`.
 
 
 ## Lock the selected annotation
@@ -89,4 +90,4 @@ void LockSelectedAnnotation(Annotation selectedAnnotation)
 {% endhighlight %}
 {% endtabs %}
 
-* Similarly, to unlock the selected annotation, set the `IsLocked` property value to `false`.
+* Similarly, to unlock the selected annotation, set the [IsLocked](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.Annotation.html#Syncfusion_Maui_PdfViewer_Annotation_IsLocked) property value to `false`.
