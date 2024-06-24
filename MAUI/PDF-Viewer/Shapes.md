@@ -33,11 +33,11 @@ On the built-in toolbar, a shape annotation tool is available with 7 types of an
 
 The following image represents how to add the circle annotations using the toolbar on the desktop.
 
-![Circle annotation for desktop](Images/Annotations/CicleAnnotationDesktop.gif)
+![Circle annotation for desktop](Images/Annotations/CircleAnnotationDesktop.gif)
 
 The following image represents how to add the circle annotations using the toolbar on mobile.
 
-![Circle annotation for mobile](Images/Annotations/CicleAnnotationMobile.gif)
+![Circle annotation for mobile](Images/Annotations/CircleAnnotationMobile.gif)
 
 ### Add shapes without using the toolbar
 
