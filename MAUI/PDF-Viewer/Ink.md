@@ -13,9 +13,20 @@ The ink annotation feature of [SfPdfViewer](https://help.syncfusion.com/cr/maui/
 
 ## Add ink annotations
 
-This section will go through how to add ink annotations to a PDF document interactively by drawing on the PDF document as well as programmatically.
+This section will cover how to add ink annotations to a PDF document using a toolbar as well as programmatically.
 
-## Add ink annotation with UI interaction
+## Add ink annotation using toolbar
+
+On the built-in toolbar, an ink annotation tool is available. Using that, you can add ink annotations by drawing on the PDF document. Additionally, the toolbar shows the option to modify the properties of existing or new ink annotations.
+
+The following image represents how to add the ink annotations using the toolbar on the desktop.
+
+
+
+The following image represents how to add the ink annotations using the toolbar on mobile.
+
+
+## Add ink annotation without using toolbar
 
 You can draw and add ink annotations to a PDF document with UI interaction using touch or mouse. The following steps explains how to draw ink annotation on a PDF.
 
