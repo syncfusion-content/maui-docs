@@ -21,10 +21,11 @@ On the built-in toolbar, an ink annotation tool is available. Using that, you ca
 
 The following image represents how to add the ink annotations using the toolbar on the desktop.
 
-
+![Ink annotation desktop](Images/Annotations/InkDesktop.gif)
 
 The following image represents how to add the ink annotations using the toolbar on mobile.
 
+![Ink annotation mobile](Images/Annotations/InkMobile.gif)
 
 ## Add ink annotation without using toolbar
 
