@@ -44,6 +44,18 @@ void DisableInkEraserMode()
 {% endhighlight %}
 {% endtabs %}
 
+## How to erase ink annotation and Customize the ink eraser thickness using toolbar
+
+On the built-in toolbar, an ink eraser annotation tool is available. Using that, you can easily erase ink annotation by selecting the tool and applying it to the desired areas of the PDF document. Additionally, the toolbar shows the option to customize the ink eraser thickness, allowing you to adjust it according to your preferences or needs.
+
+The following image demonstrates how to use the ink eraser tool from the toolbar on the desktop to remove ink annotations.
+
+![Ink annotation desktop](Images/Annotations/InkEraserDesktop.gif)
+
+The following image demonstrates how to use the ink eraser tool from the toolbar on mobile to erase ink annotations.
+
+![Ink annotation desktop](Images/Annotations/InkEraserDesktop.gif)
+
 ## How to erase ink annotation only using stylus
 
 The ink eraser operation can be customized so that the ink strokes can be added only using a stylus by setting the `AnnotationSettings.Ink.TouchScreenInputMode` property to TouchScreenInputMode.Stylus. When TouchScreenInputMode is set to TouchScreenInputMode.Stylus, users can easily erase ink strokes using a stylus. However, zooming and scrolling functionality will still be available using their fingers.
