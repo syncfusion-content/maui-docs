@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Basic Features in .NET MAUI Autocomplete control | Syncfusion
-description: Learn the basic features with Syncfusion .NET MAUI Autocomplete control and its suggestion list, as well as other topics in this section.
+description: Learn about Basic Features support in Syncfusion .NET MAUI Autocomplete (SfAutocomplete) control and more.
 platform: maui
 control: SfAutocomplete
 documentation: ug
@@ -34,8 +34,6 @@ autocomplete.TextMemberPath = "Name";
 The following image illustrates the output:
 
 ![.NET MAUI Autocomplete with single selection mode](Images/GettingStarted/SingleSelection.gif)
-
-You can access the full getting started sample for .NET MAUI Autocomplete by following this [link](https://github.com/SyncfusionExamples/maui-autocomplete-samples).
 
 ## Text
 
