@@ -460,4 +460,4 @@ By defining the `ContentItemTemplate` of the `SfTabView`, a custom user interfac
 
 ![Item Template](images/ItemTemplate.png)
 
-N> You can also explore our [.NET MAUI DataGrid Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/TabView) that shows you how to render the Tab View in .NET MAUI.
+N> You can refer to our [.NET MAUI Tab View](https://www.syncfusion.com/maui-controls/maui-tab-view) You can also explore our  [.NET MAUI Tab View Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/TabView) that shows you how to render the Tab View in .NET MAUI.
