@@ -207,3 +207,5 @@ autocomplete.TextMemberPath = "Name";
 
 {% endhighlight %}
 {% endtabs %}
+
+N> You can refer to our [.NET MAUI Autocomplete](https://www.syncfusion.com/maui-controls/maui-autocomplete) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Autocomplete Example](https://github.com/SyncfusionExamples/maui-autocomplete-samples) that shows you how to render the Autocomplete in .NET MAUI.

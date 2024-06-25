@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Basic Features with .NET MAUI Autocomplete | Syncfusion
+title: Basic Features in .NET MAUI Autocomplete control | Syncfusion
 description: Learn the basic features with Syncfusion .NET MAUI Autocomplete control and its suggestion list, as well as other topics in this section.
 platform: maui
 control: SfAutocomplete
@@ -40,5 +40,3 @@ You can access the full getting started sample for .NET MAUI Autocomplete by fol
 ## Text
 
 The [Text](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_Text) property is used to get the user-submitted text in the [SfAutoComplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html). The default value of the `Text` property is `string.Empty`.
-
-N> You can refer to our [.NET MAUI Autocomplete](https://www.syncfusion.com/maui-controls/maui-autocomplete) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Autocomplete Example](https://github.com/SyncfusionExamples/maui-autocomplete-samples) that shows you how to render the Autocomplete in .NET MAUI.
