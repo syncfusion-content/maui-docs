@@ -422,7 +422,7 @@ The [ZoomStart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCar
 * [Axis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartZoomEventArgs.html#Syncfusion_Maui_Charts_ChartZoomEventArgs_Axis) - The ZoomStart event will be triggered for all the axes within the chart.
 * [CurrentZoomFactor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartZoomEventArgs.html#Syncfusion_Maui_Charts_ChartZoomEventArgs_CurrentZoomFactor) - Used to get the updated zoom factor of the corresponding axis.
 * [CurrentZoomPosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartZoomEventArgs.html#Syncfusion_Maui_Charts_ChartZoomEventArgs_CurrentZoomPosition) - Used to get the updated zoom position of the corresponding axis.
-* [Cancel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartZoomStartEventArgs.html#Syncfusion_Maui_Charts_ChartZoomStartEventArgs_Cancel) - Used to determine the value indicating whether the zooming process should be cancelled.
+* [Cancel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartZoomStartEventArgs.html#Syncfusion_Maui_Charts_ChartZoomStartEventArgs_Cancel) - Used to determine the value indicating whether the zooming process should be canceled.
 
 ### ZoomDelta
 
@@ -433,7 +433,7 @@ The [ZoomDelta](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCar
 * [PreviousZoomPosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartZoomDeltaEventArgs.html#Syncfusion_Maui_Charts_ChartZoomDeltaEventArgs_PreviousZoomPosition) - Used to get the previous zoom position of the axis.
 * [CurrentZoomFactor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartZoomEventArgs.html#Syncfusion_Maui_Charts_ChartZoomEventArgs_CurrentZoomFactor) - Used to get the current zoom factor of the axis.
 * [CurrentZoomPosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartZoomEventArgs.html#Syncfusion_Maui_Charts_ChartZoomEventArgs_CurrentZoomPosition) - Used to get the current zoom position of the axis.
-* [Cancel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartZoomDeltaEventArgs.html#Syncfusion_Maui_Charts_ChartZoomDeltaEventArgs_Cancel) - Used to determine the value indicating whether the zooming process should be cancelled.
+* [Cancel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartZoomDeltaEventArgs.html#Syncfusion_Maui_Charts_ChartZoomDeltaEventArgs_Cancel) - Used to determine the value indicating whether the zooming process should be canceled.
 
 ### ZoomEnd
 
@@ -454,7 +454,7 @@ The [SelectionZoomStart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cha
 The [SelectionZoomDelta](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_SelectionZoomDelta) event is activated during the process of selecting a region for zooming, and it is a cancelable event.
 
 * [ZoomRect](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSelectionZoomEventArgs.html#Syncfusion_Maui_Charts_ChartSelectionZoomEventArgs_ZoomRect) - Contains the bounds of the currently selected region.
-* [Cancel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSelectionZoomDeltaEventArgs.html#Syncfusion_Maui_Charts_ChartSelectionZoomDeltaEventArgs_Cancel) - Used to set the value indicating whether the box selection zooming process should be cancelled.
+* [Cancel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSelectionZoomDeltaEventArgs.html#Syncfusion_Maui_Charts_ChartSelectionZoomDeltaEventArgs_Cancel) - Used to set the value indicating whether the box selection zooming process should be canceled.
 
 ### SelectionZoomEnd
 
@@ -468,7 +468,7 @@ The [Scroll](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartes
 
 * [Axis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartScrollEventArgs.html#Syncfusion_Maui_Charts_ChartScrollEventArgs_Axis) - The event will be triggered for all the axes within the chart.
 * [ZoomPosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartScrollEventArgs.html#Syncfusion_Maui_Charts_ChartScrollEventArgs_ZoomPosition) - Gets the current zoom position of the axis.
-* [Cancel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartScrollEventArgs.html#Syncfusion_Maui_Charts_ChartScrollEventArgs_Cancel) - Used to indicate whether the scrolling should be cancelled.
+* [Cancel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartScrollEventArgs.html#Syncfusion_Maui_Charts_ChartScrollEventArgs_Cancel) - Used to indicate whether the scrolling should be canceled.
 
 ### ResetZoom
 
