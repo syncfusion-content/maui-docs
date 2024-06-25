@@ -394,7 +394,7 @@ By default, the suggestions list in the `SfChat` closes automatically after the 
 
 ## Prevent the chosen suggestion from being sent automatically.
 
-By default, when tapping or clicking the suggestion item, it will be sent as an outgoing message immediately. So, if you wish to prevent this behavior and show the suggestions list in editor view, you can set the `SuggestionItemSelectedEventArgs.CancelSendMessage` to `true` within the `SuggestionItemSelected` event handler or the `SfChat.SuggestionItemSelectedCommand` command's execution.
+By default, when tapping or clicking the suggestion item, it will be sent as an outgoing message immediately. So, if you wish to prevent this behavior and show the suggestions list in editor view, you can set the [SuggestionItemSelectedEventArgs.CancelSendMessage](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SuggestionItemSelectedEventArgs.html#Syncfusion_Maui_Chat_SuggestionItemSelectedEventArgs_CancelSendMessage) to `true` within the `SuggestionItemSelected` event handler or the `SfChat.SuggestionItemSelectedCommand` command's execution.
 
 **SuggestionItemSelected event**
 

@@ -5,6 +5,7 @@ description: Learn about Events support in Syncfusion Essential Studio MAUI Text
 platform: maui
 control: SfTextInputLayout
 documentation: ug
+keywords: .net maui text input layout, syncfusion text input layout, text input layout maui.
 ---
 
 # Events in MAUI TextInputLayout

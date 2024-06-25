@@ -111,10 +111,8 @@ The SfPopup allows customizing the footer appearance using the following propert
 <td> {{'[DeclineButtonTextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupStyle.html#Syncfusion_Maui_Popup_PopupStyle_DeclineButtonTextColor)'| markdownify }} </td>
 <td> Gets or sets the foreground color for the Decline button in the footer.</td>
 </tr>
-<td>
-<code>FooterButtonCornerRadius</code>
-</td>
 <tr>
+<td> {{'[FooterButtonCornerRadius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupStyle.html#Syncfusion_Maui_Popup_PopupStyle_FooterButtonCornerRadius)'| markdownify }} </td>
 <td> Gets or sets the corner radius of the accept and decline buttons in the footer. The default value is 20.</td>
 </tr>
 </table>
