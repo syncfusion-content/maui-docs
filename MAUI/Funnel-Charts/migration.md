@@ -336,7 +336,7 @@ To customize the data label appearance, create an instance of the [ChartDataMark
     <chart:FunnelSeries ItemsSource ="{Binding Data}" 
                         XBindingPath="XValue" 
                         YBindingPath="YValue">
-	    <chart:FunnelSeries.DataMarker>
+	<chart:FunnelSeries.DataMarker>
             <chart:ChartDataMarker ShowLabel="True">
                 <chart:ChartDataMarker.LabelStyle>
                     <chart:DataMarkerLabelStyle TextColor="Blue" 
@@ -349,7 +349,7 @@ To customize the data label appearance, create an instance of the [ChartDataMark
                                                 FontAttributes="Italic"/>
                 </chart:ChartDataMarker.LabelStyle>
             </chart:ChartDataMarker>
-	    </chart:FunnelSeries.DataMarker>
+	</chart:FunnelSeries.DataMarker>
     </chart:FunnelSeries>
 </chart:SfChart>
 
@@ -402,7 +402,6 @@ chart.Series.Add(series);
         </chart:FunnelDataLabelSettings>
     </chart:SfFunnelChart.DataLabelSettings>
  </chart:SfFunnelChart>
-
 
 {% endhighlight %} 
 {% highlight C# %}
@@ -526,7 +525,7 @@ Create an instance of the [ChartSelectionBehavior](https://help.syncfusion.com/c
 
 <chart:SfChart>
     ...
-	<chart:SfChart.ChartBehaviors>
+    <chart:SfChart.ChartBehaviors>
         <chart:ChartSelectionBehavior/>
     </chart:SfChart.ChartBehaviors>
 
