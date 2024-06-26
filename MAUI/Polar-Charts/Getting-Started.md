@@ -244,7 +244,7 @@ chart.PrimaryAxis = primaryAxis;
 //Initializing secondary Axis
 NumericalAxis secondaryAxis = new NumericalAxis()
 {
-    Maximum="100"
+    Maximum= 100 
 };
 chart.SecondaryAxis = secondaryAxis;
 
@@ -502,7 +502,7 @@ namespace ChartGettingStarted
 
             NumericalAxis secondaryAxis = new NumericalAxis()
             {
-                Maximum="100"
+                Maximum= 100 
             };
             chart.SecondaryAxis = secondaryAxis;
 
