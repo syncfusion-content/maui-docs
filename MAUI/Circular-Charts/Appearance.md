@@ -22,9 +22,9 @@ The [SfCircularChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts
 <chart:SfCircularChart>
 	. . .
 	<chart:PieSeries ItemsSource="{Binding Data}" 
-					XBindingPath="XValue" 
-					YBindingPath="YValue"
-					PaletteBrushes="{Binding CustomBrushes}"/>
+			 XBindingPath="XValue" 
+			 YBindingPath="YValue"
+			 PaletteBrushes="{Binding CustomBrushes}"/>
 </chart:SfCircularChart>
 
 {% endhighlight %}
@@ -66,9 +66,9 @@ The gradient for the circular chart can be set by using the [PaletteBrushes](htt
 <chart:SfCircularChart>
 	. . .
 	<chart:PieSeries ItemsSource="{Binding Data}" 
-					XBindingPath="XValue" 
-					YBindingPath="YValue"
-					PaletteBrushes="{Binding CustomBrushes}"/>
+			 XBindingPath="XValue" 
+			 YBindingPath="YValue"
+			 PaletteBrushes="{Binding CustomBrushes}"/>
 </chart:SfCircularChart>
 
 {% endhighlight %}
@@ -145,25 +145,25 @@ public class ViewModel
     <chart:SfCircularChart.PlotAreaBackgroundView>
       	<AbsoluteLayout>
        		<Border Stroke="red"
-					StrokeThickness="2"
-					AbsoluteLayout.LayoutBounds="0,0,1,1"
-					AbsoluteLayout.LayoutFlags="All"/>
+			StrokeThickness="2"
+			AbsoluteLayout.LayoutBounds="0,0,1,1"
+			AbsoluteLayout.LayoutFlags="All"/>
        		<Label Text="Copyright @ 2001 - 2022 Syncfusion Inc"
-				   FontSize="18"
-			       AbsoluteLayout.LayoutBounds="1,1,-1,-1"
-				   AbsoluteLayout.LayoutFlags="PositionProportional"
-			       Opacity="0.4"/>
+			FontSize="18"
+			AbsoluteLayout.LayoutBounds="1,1,-1,-1"
+			AbsoluteLayout.LayoutFlags="PositionProportional"
+			Opacity="0.4"/>
        		<Label Text="CONFIDENTIAL"
-			       Rotation="340"
-			       FontSize="80"
-			       FontAttributes="Bold,Italic"
-			       TextColor="Gray"
-			       Margin="10,0,0,0"
-			       AbsoluteLayout.LayoutBounds="0.5,0.5,-1,-1"
-			       AbsoluteLayout.LayoutFlags="PositionProportional"
-			       Opacity="0.3"/>
+			Rotation="340"
+			FontSize="80"
+			FontAttributes="Bold,Italic"
+			TextColor="Gray"
+			Margin="10,0,0,0"
+			AbsoluteLayout.LayoutBounds="0.5,0.5,-1,-1"
+			AbsoluteLayout.LayoutFlags="PositionProportional"
+			Opacity="0.3"/>
     	</AbsoluteLayout>
-	</chart:SfCircularChart.PlotAreaBackgroundView>
+    </chart:SfCircularChart.PlotAreaBackgroundView>
 </chart:SfCircularChart>
 
 {% endhighlight %}
