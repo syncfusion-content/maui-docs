@@ -266,7 +266,7 @@ The legend provides information about the data point displayed in the circular c
 <chart:SfCircularChart>
     . . .
     <chart:SfCircularChart.Legend>
-    <chart:ChartLegend/>
+    	<chart:ChartLegend/>
     </chart:SfCircularChart.Legend>
 </chart:SfCircularChart>
 
@@ -326,10 +326,10 @@ The following code example gives you the complete code of above configurations.
         <chart:ChartLegend/>
     </chart:SfCircularChart.Legend>
     <chart:PieSeries ItemsSource="{Binding Data}"
-		             ShowDataLabels="True"
-		             XBindingPath="Product"
-		             EnableTooltip="True"
-		             YBindingPath="SalesRate"/>
+		     ShowDataLabels="True"
+		     XBindingPath="Product"
+		     EnableTooltip="True"
+		     YBindingPath="SalesRate"/>
 </chart:SfCircularChart>
  
 {% endhighlight %}
