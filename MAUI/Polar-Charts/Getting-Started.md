@@ -340,7 +340,7 @@ The legend provides information about the data point displayed in the chart. The
 
 {% highlight xaml %}
 
-<chart:SfPolarChart >
+<chart:SfPolarChart>
     . . .
     <chart:SfPolarChart.Legend>
         <chart:ChartLegend/>
@@ -442,7 +442,7 @@ The following code example gives you the complete code of above configurations.
     xmlns:model="clr-namespace:ChartGettingStarted">
 
     <ContentPage.BindingContext>
-    <model:ViewModel></model:ViewModel>
+        <model:ViewModel></model:ViewModel>
     </ContentPage.BindingContext>
 
     <ContentPage.Content>
