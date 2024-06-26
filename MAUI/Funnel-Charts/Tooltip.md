@@ -29,7 +29,7 @@ To define the tooltip in the chart, set the [EnableTooltip](https://help.syncfus
 {% highlight c# %}
 
 SfFunnelChart chart = new SfFunnelChart();
-    . . .      
+. . .      
 chart.EnableTooltip = true;
 
 {% endhighlight %}
