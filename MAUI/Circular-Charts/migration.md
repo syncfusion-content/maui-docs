@@ -150,7 +150,7 @@ The following code example explains how to migrate the series of Xamarin [SfChar
     <chart:PieSeries ItemsSource="{Binding Data}" 
                      XBindingPath="Product" 
                      YBindingPath="SalesRate">
-	</chart:PieSeries>
+    </chart:PieSeries>
  </chart:SfChart>
 
 {% endhighlight %} 
@@ -279,8 +279,8 @@ The following code example shows how to enable legend in chart.
 
 <chart:SfChart>
     <chart:SfChart.Legend>
-		<chart:ChartLegend/>
-	</chart:SfChart.Legend>
+	<chart:ChartLegend/>
+    </chart:SfChart.Legend>
 </chart:SfChart>
 
 {% endhighlight %} 
@@ -337,7 +337,7 @@ To customize the data label appearance, create an instance of the [ChartDataMark
 
 <chart:SfChart>  
     <chart:PieSeries ItemsSource ="{Binding Data}" XBindingPath="Expense" YBindingPath="Value">
-	    <chart:PieSeries.DataMarker>
+        <chart:PieSeries.DataMarker>
             <chart:ChartDataMarker ShowLabel="True">
                 <chart:ChartDataMarker.LabelStyle>
                     <chart:DataMarkerLabelStyle TextColor="Blue" 
@@ -350,7 +350,7 @@ To customize the data label appearance, create an instance of the [ChartDataMark
                                                 FontAttributes="Italic"/>
                 </chart:ChartDataMarker.LabelStyle>
             </chart:ChartDataMarker>
-	    </chart:PieSeries.DataMarker>
+	</chart:PieSeries.DataMarker>
     </chart:PieSeries>
 </chart:SfChart>
 
@@ -390,7 +390,7 @@ chart.Series.Add(series);
     <chart:PieSeries ShowDataLabels="True"
                      ItemsSource ="{Binding Data}" 
                      XBindingPath="Expense"
-	                 YBindingPath="Value">
+	             YBindingPath="Value">
         <chart:PieSeries.DataLabelSettings>
             <chart:CircularDataLabelSettings>
                 <chart:CircularDataLabelSettings.LabelStyle>
@@ -450,9 +450,9 @@ To customize the tooltip appearance, create an instance of the [ChartTooltipBeha
     . . . 
     <chart:SfChart.ChartBehaviors>
 	    <chart:ChartTooltipBehavior BackgroundColor="Blue" 
-                                    TextColor="White" 
-                                    Margin="5"
-                                    FontSize="15"/>
+                                        TextColor="White" 
+                                        Margin="5"
+                                        FontSize="15"/>
     </chart:SfChart.ChartBehaviors>
     
     <chart:PieSeries ItemsSource="{Binding Data}" 
@@ -539,7 +539,7 @@ Create an instance of the [ChartSelectionBehavior](https://help.syncfusion.com/c
 
 <chart:SfChart>
     ...
-	<chart:SfChart.ChartBehaviors>
+    <chart:SfChart.ChartBehaviors>
         <chart:ChartSelectionBehavior/>
     </chart:SfChart.ChartBehaviors>
 
