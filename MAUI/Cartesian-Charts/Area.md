@@ -23,11 +23,11 @@ N> The cartesian chart has [Series](https://help.syncfusion.com/cr/maui/Syncfusi
 <chart:SfCartesianChart>
     
     <chart:SfCartesianChart.XAxes>
-        <chart:CategoryAxis />
+        <chart:CategoryAxis/>
     </chart:SfCartesianChart.XAxes>
 
     <chart:SfCartesianChart.YAxes>
-        <chart:NumericalAxis />
+        <chart:NumericalAxis/>
     </chart:SfCartesianChart.YAxes>   
 
     <chart:AreaSeries ItemsSource="{Binding Data}"
@@ -73,11 +73,11 @@ The [SplineAreaSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chart
 <chart:SfCartesianChart>
 
     <chart:SfCartesianChart.XAxes>
-        <chart:CategoryAxis />
+        <chart:CategoryAxis/>
     </chart:SfCartesianChart.XAxes>
 
     <chart:SfCartesianChart.YAxes>
-        <chart:NumericalAxis />
+        <chart:NumericalAxis/>
     </chart:SfCartesianChart.YAxes>
             
     <chart:SplineAreaSeries ItemsSource="{Binding Data}"
@@ -123,9 +123,9 @@ A marker, also known as a symbol, is used to determine or highlight the position
 <chart:SfCartesianChart>
     ...
     <chart:AreaSeries XBindingPath="Year"
-                   YBindingPath="Percentage"
-                   ItemsSource="{Binding Data}"
-                   ShowMarkers="True"/>
+                      YBindingPath="Percentage"
+                      ItemsSource="{Binding Data}"
+                      ShowMarkers="True"/>
 </chart:SfCartesianChart>
 
 {% endhighlight %}
@@ -171,16 +171,15 @@ In order to change the series markers appearance, create an instance of the [Mar
                       YBindingPath="Percentage"
                       ItemsSource="{Binding Data}"
                       ShowMarkers="True">
-    <chart:AreaSeries.MarkerSettings>
-        <chart:ChartMarkerSettings Type="Diamond"
-                                   Fill="Brown"
-                                   Stroke="Black"
-                                   StrokeWidth="1"
-                                   Height="8"
-                                   Width="8"/>
-    </chart:AreaSeries.MarkerSettings>
- </chart:AreaSeries>
-
+        <chart:AreaSeries.MarkerSettings>
+            <chart:ChartMarkerSettings Type="Diamond"
+                                       Fill="Brown"
+                                       Stroke="Black"
+                                       StrokeWidth="1"
+                                       Height="8"
+                                       Width="8"/>
+        </chart:AreaSeries.MarkerSettings>
+    </chart:AreaSeries>
 </chart:SfCartesianChart>
 
 {% endhighlight %}
