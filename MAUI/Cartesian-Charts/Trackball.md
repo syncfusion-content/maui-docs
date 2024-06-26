@@ -354,7 +354,6 @@ DataTemplate trackballLabelTemplate = new DataTemplate(() =>
 
     Label label2 = new Label
     {
-        Text = " : ",
         FontSize = 15,
         HorizontalOptions = LayoutOptions.Center,
         TextColor = Colors.White
