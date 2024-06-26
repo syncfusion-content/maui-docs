@@ -91,11 +91,11 @@ The following code example illustrates how to apply style for connector line.
     <chart:WaterfallSeries ItemsSource="{Binding Sales}"
                            XBindingPath="Department"
                            YBindingPath="Value">
-                <chart:WaterfallSeries.ConnectorLineStyle>
-                    <chart:ChartLineStyle Stroke="DarkViolet" StrokeWidth=2>
-                    </chart:WaterfallSeries.ConnectorLineStyle>
-            </chart:WaterfallSeries>
-        </chart:SfCartesianChart.Series>   
+        <chart:WaterfallSeries.ConnectorLineStyle>
+                <chart:ChartLineStyle Stroke="DarkViolet" StrokeWidth="2"/>
+        </chart:WaterfallSeries.ConnectorLineStyle>
+    </chart:WaterfallSeries>
+</chart:SfCartesianChart.Series>   
     
 {% endhighlight %}
 

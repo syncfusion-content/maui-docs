@@ -121,12 +121,11 @@ A marker, also known as a symbol, is used to determine or highlight the position
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-...
- <chart:AreaSeries XBindingPath="Year"
+    ...
+    <chart:AreaSeries XBindingPath="Year"
                    YBindingPath="Percentage"
                    ItemsSource="{Binding Data}"
                    ShowMarkers="True"/>
-
 </chart:SfCartesianChart>
 
 {% endhighlight %}
@@ -167,11 +166,11 @@ In order to change the series markers appearance, create an instance of the [Mar
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-...
- <chart:AreaSeries XBindingPath="Year"
-                   YBindingPath="Percentage"
-                   ItemsSource="{Binding Data}"
-                   ShowMarkers="True">
+    ...
+    <chart:AreaSeries XBindingPath="Year"
+                      YBindingPath="Percentage"
+                      ItemsSource="{Binding Data}"
+                      ShowMarkers="True">
     <chart:AreaSeries.MarkerSettings>
         <chart:ChartMarkerSettings Type="Diamond"
                                    Fill="Brown"

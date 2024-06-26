@@ -21,14 +21,14 @@ To enable the data point selection, create an instance of the series [SelectionB
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-. . .
+    . . .
     <chart:SfCartesianChart.Series>
         <chart:ColumnSeries ItemsSource="{Binding Data}" 
                         XBindingPath="Time"
                         YBindingPath="FootStepsCount">
-                <chart:ColumnSeries.SelectionBehavior>
-                        <chart:DataPointSelectionBehavior SelectionBrush="#314A6E"/>
-                </chart:ColumnSeries.SelectionBehavior>
+            <chart:ColumnSeries.SelectionBehavior>
+                <chart:DataPointSelectionBehavior SelectionBrush="#314A6E"/>
+            </chart:ColumnSeries.SelectionBehavior>
         </chart:ColumnSeries>
     </chart:SfCartesianChart.Series>
 </chart:SfCartesianChart>
@@ -64,20 +64,20 @@ To enable the series selection, create an instance of the cartesian chart [Selec
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-. . .
+    . . .
     <chart:SfCartesianChart.SelectionBehavior>
         <chart:SeriesSelectionBehavior SelectionBrush="#314A6E"/>
     </chart:SfCartesianChart.SelectionBehavior>
     <chart:SfCartesianChart.Series>
         <chart:ColumnSeries ItemsSource="{Binding Data}" 
-                        XBindingPath="Country"
-                        YBindingPath="Kids"/>
+                            XBindingPath="Country"
+                            YBindingPath="Kids"/>
         <chart:ColumnSeries ItemsSource="{Binding Data}" 
-                        XBindingPath="Country"
-                        YBindingPath="Adults"/>
+                            XBindingPath="Country"
+                            YBindingPath="Adults"/>
         <chart:ColumnSeries ItemsSource="{Binding Data}" 
-                        XBindingPath="Country"
-                        YBindingPath="Seniors"/>
+                            XBindingPath="Country"
+                            YBindingPath="Seniors"/>
     </chart:SfCartesianChart.Series>
 </chart:SfCartesianChart>
 

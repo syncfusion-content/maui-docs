@@ -188,11 +188,11 @@ this.BindingContext = new ViewModel();
 
 {% highlight C# %} 
 
-    SfCartesianChart chart = new SfCartesianChart();
-    CategoryAxis primaryAxis = new CategoryAxis();
-    chart.XAxes.Add(primaryAxis);
-    NumericalAxis secondaryAxis = new NumericalAxis();
-    chart.YAxes.Add(secondaryAxis);
+SfCartesianChart chart = new SfCartesianChart();
+CategoryAxis primaryAxis = new CategoryAxis();
+chart.XAxes.Add(primaryAxis);
+NumericalAxis secondaryAxis = new NumericalAxis();
+chart.YAxes.Add(secondaryAxis);
 
 {% endhighlight %}
 
@@ -219,21 +219,21 @@ N> You need to set [XBindingPath](https://help.syncfusion.com/cr/maui/Syncfusion
     <chart:SfCartesianChart.XAxes>
         <chart:CategoryAxis>
             <chart:CategoryAxis.Title>
-                <chart:ChartAxisTitle Text="Name" />
+                <chart:ChartAxisTitle Text="Name"/>
             </chart:CategoryAxis.Title>
         </chart:CategoryAxis>
     </chart:SfCartesianChart.XAxes>
     <chart:SfCartesianChart.YAxes>
         <chart:NumericalAxis>
             <chart:NumericalAxis.Title>
-                <chart:ChartAxisTitle Text="Height(in cm)" />
+                <chart:ChartAxisTitle Text="Height(in cm)"/>
             </chart:NumericalAxis.Title>
         </chart:NumericalAxis>
     </chart:SfCartesianChart.YAxes>
 
     <chart:ColumnSeries ItemsSource="{Binding Data}" 
                         XBindingPath="Name" 
-                        YBindingPath="Height" />
+                        YBindingPath="Height"/>
 </chart:SfCartesianChart>
 
 {% endhighlight %}
@@ -284,7 +284,7 @@ The title of the chart provide quick information to the user about the data bein
 <Grid>
     <chart:SfCartesianChart>
         <chart:SfCartesianChart.Title>
-            <Label Text="Height Comparison" />
+            <Label Text="Height Comparison"/>
         </chart:SfCartesianChart.Title> 
     </chart:SfCartesianChart>
 </Grid>
@@ -432,7 +432,7 @@ The following code example gives you the complete code of above configurations.
     xmlns:model="clr-namespace:ChartGettingStarted">
 
     <ContentPage.BindingContext>
-    <model:ViewModel></model:ViewModel>
+        <model:ViewModel></model:ViewModel>
     </ContentPage.BindingContext>
 
     <ContentPage.Content>
@@ -462,17 +462,17 @@ The following code example gives you the complete code of above configurations.
                     </chart:NumericalAxis>
                 </chart:SfCartesianChart.YAxes>
 
-            <!--Initialize the series for chart-->
-            <chart:ColumnSeries Label="Height" 
-                    EnableTooltip="True"
-                    ShowDataLabels="True"
-                    ItemsSource="{Binding Data}"
-                    XBindingPath="Name" 
-                    YBindingPath="Height">
-                <chart:ColumnSeries.DataLabelSettings>
-                    <chart:CartesianDataLabelSettings LabelPlacement="Inner"/>
-                    </chart:ColumnSeries.DataLabelSettings>
-            </chart:ColumnSeries>
+                <!--Initialize the series for chart-->
+                <chart:ColumnSeries Label="Height" 
+                        EnableTooltip="True"
+                        ShowDataLabels="True"
+                        ItemsSource="{Binding Data}"
+                        XBindingPath="Name" 
+                        YBindingPath="Height">
+                    <chart:ColumnSeries.DataLabelSettings>
+                        <chart:CartesianDataLabelSettings LabelPlacement="Inner"/>
+                        </chart:ColumnSeries.DataLabelSettings>
+                </chart:ColumnSeries>
             </chart:SfCartesianChart>
         </Grid>
     </ContentPage.Content>

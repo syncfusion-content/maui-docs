@@ -23,11 +23,11 @@ N> The cartesian chart has Series as its default content.
 <chart:SfCartesianChart x:Name="chart" IsTransposed="True">
 
     <chart:SfCartesianChart.XAxes>
-        <chart:CategoryAxis />
+        <chart:CategoryAxis/>
     </chart:SfCartesianChart.XAxes>
 
     <chart:SfCartesianChart.YAxes>
-        <chart:NumericalAxis />
+        <chart:NumericalAxis/>
     </chart:SfCartesianChart.YAxes>   
 
     <chart:ColumnSeries ItemsSource="{Binding Data}"
@@ -76,11 +76,11 @@ The [Width](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ColumnSer
 <chart:SfCartesianChart x:Name="chart" IsTransposed="True">
 
     <chart:SfCartesianChart.XAxes>
-        <chart:CategoryAxis />
+        <chart:CategoryAxis/>
     </chart:SfCartesianChart.XAxes>
 
     <chart:SfCartesianChart.YAxes>
-        <chart:NumericalAxis />
+        <chart:NumericalAxis/>
     </chart:SfCartesianChart.YAxes>  
 
     <chart:ColumnSeries ItemsSource="{Binding Data}"

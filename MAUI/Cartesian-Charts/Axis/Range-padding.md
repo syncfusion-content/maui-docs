@@ -37,7 +37,7 @@ By default, the [RangePadding](https://help.syncfusion.com/cr/maui/Syncfusion.Ma
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-. . .
+    . . .
     <chart:SfCartesianChart.XAxes>
         <chart:NumericalAxis RangePadding="Additional"/>
     </chart:SfCartesianChart.XAxes>
@@ -45,7 +45,7 @@ By default, the [RangePadding](https://help.syncfusion.com/cr/maui/Syncfusion.Ma
     <chart:SfCartesianChart.YAxes>
         <chart:NumericalAxis />
     </chart:SfCartesianChart.YAxes>
-. . .
+    . . .
 </chart:SfCartesianChart>
 
 {% endhighlight %}
@@ -76,15 +76,15 @@ chart.YAxes.Add(secondaryAxis);
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-. . .
+    . . .
     <chart:SfCartesianChart.XAxes>
         <chart:NumericalAxis RangePadding="None"/>
     </chart:SfCartesianChart.XAxes>
 
     <chart:SfCartesianChart.YAxes>
-        <chart:NumericalAxis />
+        <chart:NumericalAxis/>
     </chart:SfCartesianChart.YAxes>
-. . .
+    . . .
 </chart:SfCartesianChart>
 
 {% endhighlight %}
@@ -115,15 +115,15 @@ chart.YAxes.Add(secondaryAxis);
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-. . .
+    . . .
     <chart:SfCartesianChart.XAxes>
         <chart:NumericalAxis RangePadding="Round"/>
     </chart:SfCartesianChart.XAxes>
 
     <chart:SfCartesianChart.YAxes>
-        <chart:NumericalAxis />
+        <chart:NumericalAxis/>
     </chart:SfCartesianChart.YAxes>
-. . .
+    . . .
 </chart:SfCartesianChart>
 
 {% endhighlight %}
@@ -167,15 +167,15 @@ The [RangePadding](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Da
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-. . .
+    . . .
     <chart:SfCartesianChart.XAxes>
         <chart:DateTimeAxis RangePadding="Additional"/>
     </chart:SfCartesianChart.XAxes>
 
     <chart:SfCartesianChart.YAxes>
-        <chart:NumericalAxis />
+        <chart:NumericalAxis/>
     </chart:SfCartesianChart.YAxes>
-. . .
+    . . .
 </chart:SfCartesianChart>
 
 {% endhighlight %}
@@ -207,15 +207,15 @@ chart.YAxes.Add(secondaryAxis);
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-. . .
+    . . .
     <chart:SfCartesianChart.XAxes>
-        <chart:DateTimeAxis RangePadding="None" />
+        <chart:DateTimeAxis RangePadding="None"/>
     </chart:SfCartesianChart.XAxes>
 
     <chart:SfCartesianChart.YAxes>
         <chart:NumericalAxis />
     </chart:SfCartesianChart.YAxes>
-. . .
+    . . .
 </chart:SfCartesianChart>
 
 {% endhighlight %}
@@ -246,15 +246,15 @@ chart.YAxes.Add(secondaryAxis);
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-. . .
+    . . .
     <chart:SfCartesianChart.XAxes>
         <chart:DateTimeAxis RangePadding="Round"/>
     </chart:SfCartesianChart.XAxes>
 
     <chart:SfCartesianChart.YAxes>
-        <chart:NumericalAxis />
+        <chart:NumericalAxis/>
     </chart:SfCartesianChart.YAxes>
-. . .
+    . . .
 </chart:SfCartesianChart>
 
 {% endhighlight %}

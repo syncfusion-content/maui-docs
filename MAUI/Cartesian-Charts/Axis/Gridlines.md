@@ -20,7 +20,7 @@ By default, major gridlines are automatically added to the [ChartAxis](https://h
 
 <chart:SfCartesianChart>
     <chart:SfCartesianChart.XAxes>
-        <chart:NumericalAxis ShowMajorGridLines="False" />
+        <chart:NumericalAxis ShowMajorGridLines="False"/>
     </chart:SfCartesianChart.XAxes>
     <chart:SfCartesianChart.YAxes>
         <chart:NumericalAxis />
@@ -68,13 +68,13 @@ The [MajorGridLineStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cha
             <chart:NumericalAxis.MajorGridLineStyle>
                 <chart:ChartLineStyle StrokeDashArray="{StaticResource dashArray}"
 									  Stroke="Black"
-									  StrokeWidth="2" />
+									  StrokeWidth="2"/>
             </chart:NumericalAxis.MajorGridLineStyle>
         </chart:NumericalAxis>
     </chart:SfCartesianChart.XAxes>
 
     <chart:SfCartesianChart.YAxes>
-        <chart:NumericalAxis />
+        <chart:NumericalAxis/>
     </chart:SfCartesianChart.YAxes>
 </chart:SfCartesianChart>
 
@@ -119,7 +119,7 @@ Minor gridlines will be added automatically when the small tick lines is defined
     </chart:SfCartesianChart.XAxes>
 
     <chart:SfCartesianChart.YAxes>
-        <chart:NumericalAxis MinorTicksPerInterval="3" />
+        <chart:NumericalAxis MinorTicksPerInterval="3"/>
     </chart:SfCartesianChart.YAxes>
     . . .
 </chart:SfCartesianChart>
@@ -168,7 +168,7 @@ The [MinorGridLineStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cha
             <chart:NumericalAxis.MinorGridLineStyle>
                 <chart:ChartLineStyle StrokeDashArray="{StaticResource dashArray}"
 									  Stroke="Black" 
-									  StrokeWidth="0.8"  />
+									  StrokeWidth="0.8"/>
             </chart:NumericalAxis.MinorGridLineStyle>
         </chart:NumericalAxis>
     </chart:SfCartesianChart.YAxes>

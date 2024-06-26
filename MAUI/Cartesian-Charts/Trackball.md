@@ -26,10 +26,10 @@ To enable the trackball in the chart, create an instance of the [ChartTrackballB
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-  ...
-  <chart:SfCartesianChart.TrackballBehavior>
-      <chart:ChartTrackballBehavior/>
-  </chart:SfCartesianChart.TrackballBehavior>
+    ...
+    <chart:SfCartesianChart.TrackballBehavior>
+        <chart:ChartTrackballBehavior/>
+    </chart:SfCartesianChart.TrackballBehavior>
     ...
 </chart:SfCartesianChart>
 
@@ -61,12 +61,12 @@ The [DisplayMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Cha
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-  ...
-<chart:SfCartesianChart.TrackballBehavior>
-    <chart:ChartTrackballBehavior ShowLine="True" 
-                                  DisplayMode="NearestPoint"/>
-</chart:SfCartesianChart.TrackballBehavior>
-  ...
+    ...
+    <chart:SfCartesianChart.TrackballBehavior>
+        <chart:ChartTrackballBehavior ShowLine="True" 
+                                      DisplayMode="NearestPoint"/>
+    </chart:SfCartesianChart.TrackballBehavior>
+    ...
 </chart:SfCartesianChart>
 
 {% endhighlight %}
@@ -99,11 +99,11 @@ The ChartTrackballActivationMode enum contains the following values:
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-  ...
-<chart:SfCartesianChart.TrackballBehavior>
-    <chart:ChartTrackballBehavior ActivationMode = "LongPress"/>
-</chart:SfCartesianChart.TrackballBehavior>
-  ...
+    ...
+    <chart:SfCartesianChart.TrackballBehavior>
+      <chart:ChartTrackballBehavior ActivationMode = "LongPress"/>
+    </chart:SfCartesianChart.TrackballBehavior>
+    ...
 </chart:SfCartesianChart>
 
 {% endhighlight %}
@@ -147,15 +147,15 @@ The [LabelStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Char
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-  ...
-  <chart:ChartTrackballBehavior.LabelStyle>
-      <chart:ChartLabelStyle Background="LightBlue"   
-                              FontSize="15" 
-                              CornerRadius="5"
-                              StrokeWidth="2" 
-                              Stroke="Gray" />
-  </chart:ChartTrackballBehavior.LabelStyle>
-  ...
+    ...
+    <chart:ChartTrackballBehavior.LabelStyle>
+        <chart:ChartLabelStyle Background="LightBlue"   
+                               FontSize="15" 
+                               CornerRadius="5"
+                               StrokeWidth="2" 
+                               Stroke="Gray"/>
+    </chart:ChartTrackballBehavior.LabelStyle>
+    ...
 </chart:SfCartesianChart>
 
 {% endhighlight %}
@@ -190,12 +190,12 @@ this.Content = chart;
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-...
+    ...
     <chart:ChartTrackballBehavior.LineStyle>
         <chart:ChartLineStyle Stroke="Gray"   
-                            StrokeDashArray="4"/>     
+                              StrokeDashArray="4"/>     
     </chart:ChartTrackballBehavior.LineStyle>
-...
+    ...
 </chart:SfCartesianChart>
 
 {% endhighlight %}
@@ -230,15 +230,14 @@ The [MarkerSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-  ...
+    ...
     <chart:ChartMarkerSettings Type="InvertedTriangle"  
-                              Fill="Brown" 
-                              Stroke="Red" 
-                              StrokeWidth="1.5"
-                              Width="15" 
-                              Height="15"/>
-
-...
+                               Fill="Brown" 
+                               Stroke="Red" 
+                               StrokeWidth="1.5"
+                               Width="15" 
+                               Height="15"/>
+    ...
 </chart:SfCartesianChart>
 
 {% endhighlight %}
@@ -394,13 +393,13 @@ To customize the appearance of axis labels on the trackball, you can use the [Tr
 
 <chart:SfCartesianChart>
     <chart:SfCartesianChart.Resources>
-          <DataTemplate x:Key="axisLabelTemplate">
-              <Label WidthRequest="50" HeightRequest="20" HorizontalTextAlignment="Center" BackgroundColor="Blue" Text="{Binding ValueX}" TextColor="White" FontSize ="15"/>
-          </DataTemplate>
+        <DataTemplate x:Key="axisLabelTemplate">
+            <Label WidthRequest="50" HeightRequest="20" HorizontalTextAlignment="Center" BackgroundColor="Blue" Text="{Binding ValueX}" TextColor="White" FontSize ="15"/>
+        </DataTemplate>
     </chart:SfCartesianChart.Resources>
 
-   <chart:SfCartesianChart.TrackballBehavior>
-      <chart:ChartTrackballBehavior/>
+    <chart:SfCartesianChart.TrackballBehavior>
+        <chart:ChartTrackballBehavior/>
    </chart:SfCartesianChart.TrackballBehavior>
 
     <chart:SfCartesianChart.XAxes>
@@ -466,12 +465,11 @@ The [CartesianSeries.ShowTrackballLabel](https://help.syncfusion.com/cr/maui/Syn
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-  ...
-  <chart:LineSeries ShowTrackballLabel="False"
-                    ItemsSource="{Binding Data}" 
-                    XBindingPath="Name" 
-                    YBindingPath="Run"/>  
-
+    ...
+    <chart:LineSeries ShowTrackballLabel="False"
+                      ItemsSource="{Binding Data}" 
+                      XBindingPath="Name" 
+                      YBindingPath="Run"/>  
 </chart:SfCartesianChart>
 
 {% endhighlight %}
@@ -504,10 +502,9 @@ When the trackball moves across the axis, this feature highlights the related ax
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-  ...
+    ...
     <chart:CategoryAxis  IsInversed="False" 
-                        ShowTrackballLabel="False"/> 
-
+                         ShowTrackballLabel="False"/> 
 </chart:SfCartesianChart>
 
 {% endhighlight %}
