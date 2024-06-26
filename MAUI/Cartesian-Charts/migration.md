@@ -458,8 +458,8 @@ The following code example shows how to enable legend in chart.
 
 <chart:SfChart>
     <chart:SfChart.Legend>
-		<chart:ChartLegend/>
-	</chart:SfChart.Legend>
+	<chart:ChartLegend/>
+    </chart:SfChart.Legend>
 </chart:SfChart>
 
 {% endhighlight %} 
@@ -482,8 +482,8 @@ chart.Legend = new ChartLegend ();
 
 <chart:SfCartesianChart>
     <chart:SfCartesianChart.Legend>
-		<chart:ChartLegend/>
-	</chart:SfCartesianChart.Legend>
+	<chart:ChartLegend/>
+    </chart:SfCartesianChart.Legend>
 </chart:SfCartesianChart>
 
 {% endhighlight %} 
@@ -518,19 +518,19 @@ To customize the data label appearance, create an instance of the [ChartDataMark
     <chart:ColumnSeries ItemsSource="{Binding Data}" 
                         XBindingPath="Category"
                         YBindingPath="Value">
-	    <chart:ColumnSeries.DataMarker>
-	        <chart:ChartDataMarker ShowLabel="True">
-		        <chart:ChartDataMarker.LabelStyle>
-			        <chart:DataMarkerLabelStyle TextColor="Blue" 
+	<chart:ColumnSeries.DataMarker>
+            <chart:ChartDataMarker ShowLabel="True">
+	        <chart:ChartDataMarker.LabelStyle>
+	    	    <chart:DataMarkerLabelStyle TextColor="Blue" 
                                                 BorderColor="Red" 
                                                 BorderThickness="2" 
                                                 BackgroundColor="Aqua" 
                                                 Angle="315" 
                                                 Margin="5" FontSize="18" 
                                                 FontAttributes="Italic"/>
-		        </chart:ChartDataMarker.LabelStyle>
-	        </chart:ChartDataMarker>
-	    </chart:ColumnSeries.DataMarker>
+	        </chart:ChartDataMarker.LabelStyle>
+	    </chart:ChartDataMarker>
+	</chart:ColumnSeries.DataMarker>
     </chart:ColumnSeries>
 </chart:SfChart>
 
@@ -627,7 +627,7 @@ To customize the tooltip appearance, create an instance of the [ChartTooltipBeha
 <chart:SfChart>
     . . . 
     <chart:SfChart.ChartBehaviors>
-	    <chart:ChartTooltipBehavior  BackgroundColor="Blue" 
+        <chart:ChartTooltipBehavior  BackgroundColor="Blue" 
                                      TextColor="White" 
                                      Margin="5" 
                                      FontSize="15"/>
@@ -671,11 +671,10 @@ chart.ChartBehaviors.Add(tool);
 <chart:SfCartesianChart>
     . . .
    <chart:SfCartesianChart.TooltipBehavior>
-        <chart:ChartTooltipBehavior 
-        Background="Blue" 
-        TextColor="White" 
-        Margin="5" 
-        FontSize="15"/>
+        <chart:ChartTooltipBehavior Background="Blue" 
+                                    TextColor="White" 
+                                    Margin="5" 
+                                    FontSize="15"/>
    </chart:SfCartesianChart.TooltipBehavior>
 
    <chart:ColumnSeries ItemsSource="{Binding Data}" 
@@ -719,7 +718,7 @@ Create an instance of the [ChartSelectionBehavior](https://help.syncfusion.com/c
 
 <chart:SfChart>
     ...
-	<chart:SfChart.ChartBehaviors>
+    <chart:SfChart.ChartBehaviors>
         <chart:ChartSelectionBehavior/>
     </chart:SfChart.ChartBehaviors>
 
@@ -806,9 +805,9 @@ The zooming and panning are achieved using the [ChartZoomPanBehavior](https://he
 {% highlight xaml %}
 
 <chart:SfChart>
-	<chart:SfChart.ChartBehaviors>
-		<chart:ChartZoomPanBehavior EnableZooming="True"/>
-	</chart:SfChart.ChartBehaviors>
+    <chart:SfChart.ChartBehaviors>
+	<chart:ChartZoomPanBehavior EnableZooming="True"/>
+    </chart:SfChart.ChartBehaviors>
 </chart:SfChart>
 
 {% endhighlight %} 
