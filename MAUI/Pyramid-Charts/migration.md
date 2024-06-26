@@ -336,7 +336,7 @@ To customize the data label appearance, create an instance of the [ChartDataMark
     <chart:PyramidSeries ItemsSource ="{Binding Data}" 
                          XBindingPath="Name" 
                          YBindingPath="Value">
-	    <chart:PyramidSeries.DataMarker>
+	<chart:PyramidSeries.DataMarker>
             <chart:ChartDataMarker ShowLabel="True">
                 <chart:ChartDataMarker.LabelStyle>
                     <chart:DataMarkerLabelStyle TextColor="Blue"
@@ -349,7 +349,7 @@ To customize the data label appearance, create an instance of the [ChartDataMark
                             FontAttributes="Italic"/>
                 </chart:ChartDataMarker.LabelStyle>
             </chart:ChartDataMarker>
-	    </chart:PyramidSeries.DataMarker>
+	</chart:PyramidSeries.DataMarker>
     </chart:PyramidSeries>
 </chart:SfChart>
 
@@ -393,7 +393,7 @@ chart.Series.Add(series);
             <chart:PyramidDataLabelSettings.LabelStyle>
                 <chart:ChartDataLabelStyle TextColor="Blue" 
                                            Stroke="Red"
-					                       StrokeWidth="2" 
+					   StrokeWidth="2" 
                                            Background="Aqua" 
                                            Margin="10" 
                                            FontSize="16"
@@ -526,7 +526,7 @@ Create an instance of the [ChartSelectionBehavior](https://help.syncfusion.com/c
 
 <chart:SfChart>
     ...
-	<chart:SfChart.ChartBehaviors>
+    <chart:SfChart.ChartBehaviors>
         <chart:ChartSelectionBehavior/>
     </chart:SfChart.ChartBehaviors>
 
