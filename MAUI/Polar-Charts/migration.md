@@ -274,7 +274,7 @@ The following code example explains how to migrate the series of Xamarin [SfChar
 <chart:SfChart>
     . . .
     <chart:PolarAreaSeries ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Tree">
-	</chart:PolarAreaSeries>
+    </chart:PolarAreaSeries>
 </chart:SfChart>
 
 {% endhighlight %} 
@@ -403,7 +403,7 @@ The following code example shows how to enable legend in chart.
 <chart:SfChart>
     <chart:SfChart.Legend>
         <chart:ChartLegend/>
-	</chart:SfChart.Legend>
+    </chart:SfChart.Legend>
 </chart:SfChart>
 
 {% endhighlight %} 
@@ -427,7 +427,7 @@ chart.Legend = new ChartLegend ();
 <chart:SfPolarChart>
     <chart:SfPolarChart.Legend>
         <chart:ChartLegend/>
-	</chart:SfPolarChart.Legend>
+    </chart:SfPolarChart.Legend>
 </chart:SfPolarChart>
 
 {% endhighlight %} 
@@ -464,8 +464,8 @@ To customize the data label appearance, create an instance of the [ChartDataMark
 	        <chart:ChartDataMarker ShowLabel="True">
 		        <chart:ChartDataMarker.LabelStyle>
 			        <chart:DataMarkerLabelStyle TextColor="Blue" BorderColor="Red" BorderThickness="2" 
-                                                BackgroundColor="Aqua" Angle="315" Margin="5" 
-                                                FontSize="18" FontAttributes="Italic"/>
+                                                            BackgroundColor="Aqua" Angle="315" Margin="5" 
+                                                            FontSize="18" FontAttributes="Italic"/>
 		        </chart:ChartDataMarker.LabelStyle>
 	        </chart:ChartDataMarker>
 	    </chart:PolarAreaSeries.DataMarker>
