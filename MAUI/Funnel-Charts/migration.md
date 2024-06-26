@@ -48,8 +48,7 @@ To initialize the control, import the Chart namespace and Initialize [SfFunnelCh
     . . .
     xmlns:chart="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms">
 
-     <chart:SfChart/>
-
+    <chart:SfChart/>
 </ContentPage>
 {% endhighlight %}
 
@@ -77,8 +76,7 @@ this.Content = chart;
     . . .    
     xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
    
-        <chart:SfFunnelChart/>
-   
+    <chart:SfFunnelChart/>
 </ContentPage>
  
 {% endhighlight %}
@@ -155,8 +153,8 @@ The following code example explains how to migrate the series of Xamarin [SfChar
 
 <chart:SfChart>
     <chart:FunnelSeries ItemsSource="{Binding Data}" 
-                         XBindingPath="XValue" 
-                         YBindingPath="YValue"/>
+                        XBindingPath="XValue" 
+                        YBindingPath="YValue"/>
 </chart:SfChart>
 
 {% endhighlight %} 
@@ -184,8 +182,8 @@ this.Content = chart;
 {% highlight xaml %}
 
 <chart:SfFunnelChart ItemsSource="{Binding Data}" 
-                      XBindingPath="XValue" 
-                      YBindingPath="YValue">
+                     XBindingPath="XValue" 
+                     YBindingPath="YValue">
 </chart:SfFunnelChart>
 
 
@@ -277,9 +275,9 @@ The following code example shows how to enable legend in chart.
 {% highlight xaml %}
 
 <chart:SfChart>
-  <chart:SfChart.Legend>
-    <chart:ChartLegend/>
-  </chart:SfChart.Legend>
+    <chart:SfChart.Legend>
+        <chart:ChartLegend/>
+    </chart:SfChart.Legend>
 </chart:SfChart>
 
 {% endhighlight %} 
@@ -303,7 +301,7 @@ chart.Legend = new ChartLegend ();
 <chart:SfFunnelChart>
     . . .
     <chart:SfFunnelChart.Legend>
-      <chart:ChartLegend/>
+        <chart:ChartLegend/>
     </chart:SfFunnelChart.Legend>
 </chart:SfFunnelChart>
 
@@ -339,18 +337,18 @@ To customize the data label appearance, create an instance of the [ChartDataMark
                         XBindingPath="XValue" 
                         YBindingPath="YValue">
 	    <chart:FunnelSeries.DataMarker>
-	    <chart:ChartDataMarker ShowLabel="True">
-		  <chart:ChartDataMarker.LabelStyle>
-             <chart:DataMarkerLabelStyle TextColor="Blue" 
-                                         BorderColor="Red"
-                                         BorderThickness="2"
-                                         BackgroundColor="Aqua"
-                                         Angle="315"
-                                         Margin="5"
-                                         FontSize="18"
-                                         FontAttributes="Italic"/>
-		  </chart:ChartDataMarker.LabelStyle>
-	    </chart:ChartDataMarker>
+            <chart:ChartDataMarker ShowLabel="True">
+                <chart:ChartDataMarker.LabelStyle>
+                    <chart:DataMarkerLabelStyle TextColor="Blue" 
+                                                BorderColor="Red"
+                                                BorderThickness="2"
+                                                BackgroundColor="Aqua"
+                                                Angle="315"
+                                                Margin="5"
+                                                FontSize="18"
+                                                FontAttributes="Italic"/>
+                </chart:ChartDataMarker.LabelStyle>
+            </chart:ChartDataMarker>
 	    </chart:FunnelSeries.DataMarker>
     </chart:FunnelSeries>
 </chart:SfChart>
@@ -387,9 +385,9 @@ chart.Series.Add(series);
 {% highlight xaml %}
 
  <chart:SfFunnelChart ItemsSource="{Binding Data}" 
-                       XBindingPath="XValue" 
-                       YBindingPath="YValue"
-                       ShowDataLabels="True">
+                      XBindingPath="XValue" 
+                      YBindingPath="YValue"
+                      ShowDataLabels="True">
     <chart:SfFunnelChart.DataLabelSettings>
         <chart:FunnelDataLabelSettings>
             <chart:FunnelDataLabelSettings.LabelStyle>
@@ -441,7 +439,7 @@ To customize the tooltip appearance, create an instance of the [ChartTooltipBeha
 {% highlight xaml %}
 
 <chart:SfChart>
-. . . 
+    . . . 
     <chart:SfChart.ChartBehaviors>
         <chart:ChartTooltipBehavior BackgroundColor="Blue" 
                                     TextColor="White" 
@@ -484,9 +482,9 @@ chart.ChartBehaviors.Add(tool);
 {% highlight xaml %}
 
 <chart:SfFunnelChart ItemsSource="{Binding Data1}" 
-                      XBindingPath="XValue"  
-                      YBindingPath="YValue"
-                      EnableTooltip="True">
+                     XBindingPath="XValue"  
+                     YBindingPath="YValue"
+                     EnableTooltip="True">
     <chart:SfFunnelChart.TooltipBehavior>
         <chart:ChartTooltipBehavior Background="Blue" 
                                     TextColor="White" 
@@ -527,7 +525,7 @@ Create an instance of the [ChartSelectionBehavior](https://help.syncfusion.com/c
 {% highlight xaml %}
 
 <chart:SfChart>
-...
+    ...
 	<chart:SfChart.ChartBehaviors>
         <chart:ChartSelectionBehavior/>
     </chart:SfChart.ChartBehaviors>
@@ -537,7 +535,7 @@ Create an instance of the [ChartSelectionBehavior](https://help.syncfusion.com/c
                         SelectedDataPointColor="Red" 
                         ItemsSource ="{Binding Data}" 
                         XBindingPath="XValue" 
-                        YBindingPath="YValue" />
+                        YBindingPath="YValue"/>
 </chart:SfChart>
 
 {% endhighlight %} 
@@ -564,8 +562,8 @@ chart.Series.Add(series);
 {% highlight xaml %}
 
 <chart:SfFunnelChart ItemsSource="{Binding Data}" 
-                      XBindingPath="XValue"      
-                      YBindingPath="YValue">
+                     XBindingPath="XValue"      
+                     YBindingPath="YValue">
     <chart:SfFunnelChart.SelectionBehavior>
         <chart:DataPointSelectionBehavior SelectedIndex="2" 
                                           SelectionBrush="red"/>

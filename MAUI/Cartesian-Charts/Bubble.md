@@ -82,7 +82,6 @@ The zero size bubble segments can be enabled or disabled using the [ShowZeroSize
                         YBindingPath="YValue"
                         SizeValuePath="Size"
                         ShowZeroSizeBubbles="False"/>
-
 </chart:SfCartesianChart>
 
 {% endhighlight %}

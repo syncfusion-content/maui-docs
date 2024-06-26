@@ -20,8 +20,8 @@ To define the tooltip in the chart, set the [EnableTooltip](https://help.syncfus
 {% highlight xaml %}
 
 <chart:SfCircularChart>
-. . .
-    <chart:PieSeries EnableTooltip="True"/>   
+	. . .
+	<chart:PieSeries EnableTooltip="True"/>   
 </chart:SfCircularChart>
 
 {% endhighlight %}
@@ -56,11 +56,10 @@ The [ChartTooltipBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.C
 {% highlight xml %}
 
 <chart:SfCircularChart>
-. . .
-<chart:SfCircularChart.TooltipBehavior>
-    <chart:ChartTooltipBehavior/>
-</chart:SfCircularChart.TooltipBehavior>
-
+	. . .
+	<chart:SfCircularChart.TooltipBehavior>
+		<chart:ChartTooltipBehavior/>
+	</chart:SfCircularChart.TooltipBehavior>
 </chart:SfCircularChart>
 
 {% endhighlight %}
@@ -89,23 +88,23 @@ Circular chart provides support to customize the appearance of the tooltip by us
         <DataTemplate x:Key="tooltipTemplate">
             <StackLayout Orientation="Horizontal">
 				<Label Text="{Binding Item.Product}"
-					TextColor="Black"
-					FontAttributes="Bold"
-					FontSize="12"
-					HorizontalOptions="Center"
-					VerticalOptions="Center"/>
+					   TextColor="Black"
+					   FontAttributes="Bold"
+					   FontSize="12"
+					   HorizontalOptions="Center"
+					   VerticalOptions="Center"/>
 				<Label Text=" : " 
-					TextColor="Black"
-					FontAttributes="Bold"
-					FontSize="12"
-					HorizontalOptions="Center"
-					VerticalOptions="Center"/>
+					   TextColor="Black"
+					   FontAttributes="Bold"
+					   FontSize="12"
+					   HorizontalOptions="Center"
+					   VerticalOptions="Center"/>
                 <Label Text="{Binding Item.SalesRate}"
-					TextColor="Black"
-					FontAttributes="Bold"
-					FontSize="12"
-					HorizontalOptions="Center"
-					VerticalOptions="Center"/>
+					   TextColor="Black"
+					   FontAttributes="Bold"
+					   FontSize="12"
+					   HorizontalOptions="Center"
+					   VerticalOptions="Center"/>
             </StackLayout>
         </DataTemplate>
     </chart:SfCircularChart.Resources>

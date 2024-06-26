@@ -24,8 +24,8 @@ To enable the data point selection, create an instance of the series [SelectionB
     . . .
     <chart:SfCartesianChart.Series>
         <chart:ColumnSeries ItemsSource="{Binding Data}" 
-                        XBindingPath="Time"
-                        YBindingPath="FootStepsCount">
+                            XBindingPath="Time"
+                            YBindingPath="FootStepsCount">
             <chart:ColumnSeries.SelectionBehavior>
                 <chart:DataPointSelectionBehavior SelectionBrush="#314A6E"/>
             </chart:ColumnSeries.SelectionBehavior>

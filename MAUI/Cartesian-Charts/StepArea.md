@@ -123,11 +123,11 @@ To change the series markers appearance, create an instance of the [MarkerSettin
                           ShowMarkers="True">
         <chart:StepAreaSeries.MarkerSettings>
             <chart:ChartMarkerSettings Type="Diamond"
-                                    Fill="Brown"
-                                    Stroke="Black"
-                                    StrokeWidth="1"
-                                    Height="8"
-                                    Width="8"/>
+                                        Fill="Brown"
+                                        Stroke="Black"
+                                        StrokeWidth="1"
+                                        Height="8"
+                                        Width="8"/>
         </chart:StepAreaSeries.MarkerSettings>
     </chart:StepAreaSeries>
 </chart:SfCartesianChart>

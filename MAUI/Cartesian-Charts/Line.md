@@ -343,11 +343,11 @@ In order to change the series markers appearance, create an instance of the [Mar
                       ShowMarkers="True">
         <chart:LineSeries.MarkerSettings>
             <chart:ChartMarkerSettings Type="Diamond"
-                                    Fill="Brown"
-                                    Stroke="Black"
-                                    StrokeWidth="1"
-                                    Height="8"
-                                    Width="8"/>
+                                       Fill="Brown"
+                                       Stroke="Black"
+                                       StrokeWidth="1"
+                                       Height="8"
+                                       Width="8"/>
         </chart:LineSeries.MarkerSettings>
     </chart:LineSeries>
 </chart:SfCartesianChart>

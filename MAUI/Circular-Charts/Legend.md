@@ -133,10 +133,10 @@ chart.Legend = new ChartLegend();
 
 PieSeries pieSeries = new PieSeries()
 {
-      ItemsSource = viewModel.Data,
-      XBindingPath = "XValue",
-      YBindingPath = "YValue",
-      LegendIcon = ChartLegendIconType.Diamond,
+    ItemsSource = viewModel.Data,
+    XBindingPath = "XValue",
+    YBindingPath = "YValue",
+    LegendIcon = ChartLegendIconType.Diamond,
 };
 
 chart.Series.Add(pieSeries);
@@ -293,22 +293,21 @@ N> The BindingContext of the template is the corresponding underlying legend ite
 
 {% highlight xaml %}
 
-<chart:SfCircularChart >
+<chart:SfCircularChart>
     <chart:SfCircularChart.Resources>
         <DataTemplate x:Key="legendTemplate">
-            <StackLayout Orientation="Horizontal" >
+            <StackLayout Orientation="Horizontal">
                 <Rectangle HeightRequest="12" 
                            WidthRequest="12" Margin="3"
                            Background="{Binding IconBrush}"/>
-            <Label Text="{Binding Text}" 
-                    Margin="3"/>
+                <Label Text="{Binding Text}" 
+                       Margin="3"/>
             </StackLayout>
         </DataTemplate>
     </chart:SfCircularChart.Resources>  
     
     <chart:SfCircularChart.Legend>
-        <chart:ChartLegend    
-               ItemTemplate="{StaticResource legendTemplate}">
+        <chart:ChartLegend ItemTemplate="{StaticResource legendTemplate}">
         </chart:ChartLegend>
     </chart:SfCircularChart.Legend>
 </chart:SfCircularChart>

@@ -20,7 +20,7 @@ To define the tooltip in the chart, set the [EnableTooltip](https://help.syncfus
 {% highlight xaml %}
 
 <chart:SfFunnelChart EnableTooltip="True">
-. . .
+    . . .
 </chart:SfFunnelChart>
 
 
@@ -29,7 +29,7 @@ To define the tooltip in the chart, set the [EnableTooltip](https://help.syncfus
 {% highlight c# %}
 
 SfFunnelChart chart = new SfFunnelChart();
-. . .      
+    . . .      
 chart.EnableTooltip = true;
 
 {% endhighlight %}
@@ -53,10 +53,10 @@ The [ChartTooltipBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.C
 {% highlight xml %}
 
 <chart:SfFunnelChart EnableTooltip="True">
-. . .
-<chart:SfFunnelChart.TooltipBehavior>
-    <chart:ChartTooltipBehavior Duration="4"/>
-</chart:SfFunnelChart.TooltipBehavior>
+    . . .
+    <chart:SfFunnelChart.TooltipBehavior>
+        <chart:ChartTooltipBehavior Duration="4"/>
+    </chart:SfFunnelChart.TooltipBehavior>
 </chart:SfFunnelChart>
 
 {% endhighlight %}

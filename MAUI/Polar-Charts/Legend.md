@@ -304,12 +304,11 @@ An [ItemsLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Char
 <chart:SfPolarChart>
     ...
     <chart:SfPolarChart.Legend>
-        <chart:ChartLegend >
+        <chart:ChartLegend>
             <chart:ChartLegend.ItemsLayout>
-                    <FlexLayout 
-                        HorizontalOptions="Start" 
-                        Margin="10"
-                        WidthRequest="{Binding Width, Source={x:Reference Chart1}}">
+                    <FlexLayout  HorizontalOptions="Start" 
+                                 Margin="10"
+                                 WidthRequest="{Binding Width, Source={x:Reference Chart1}}">
                     </FlexLayout>
             </chart:ChartLegend.ItemsLayout>
         </chart:ChartLegend>
@@ -318,7 +317,7 @@ An [ItemsLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Char
     <chart:PolarAreaSeries ItemsSource="{Binding  PlantDetails}" 
                            Label="Tree"
                            XBindingPath="Direction"
-                           YBindingPath="Tree" />
+                           YBindingPath="Tree"/>
 
     <chart:PolarAreaSeries ItemsSource="{Binding PlantDetails}"
                            XBindingPath="Direction" 
@@ -396,8 +395,8 @@ N> The BindingContext of the template is the corresponding underlying legend ite
         <DataTemplate x:Key="legendTemplate">
             <StackLayout Orientation="Horizontal">
                 <Rectangle HeightRequest="12" 
-                    WidthRequest="12" Margin="3"
-                    Background="{Binding IconBrush}"/>
+                           WidthRequest="12" Margin="3"
+                           Background="{Binding IconBrush}"/>
                 <Label Text="{Binding Text}" 
                        Margin="3"/>
             </StackLayout>
@@ -405,15 +404,14 @@ N> The BindingContext of the template is the corresponding underlying legend ite
     </chart:SfPolarChart.Resources>  
     
     <chart:SfPolarChart.Legend>
-        <chart:ChartLegend    
-               ItemTemplate="{StaticResource legendTemplate}">
+        <chart:ChartLegend ItemTemplate="{StaticResource legendTemplate}">
         </chart:ChartLegend>
     </chart:SfPolarChart.Legend>
 
     <chart:PolarAreaSeries ItemsSource="{Binding  PlantDetails}" 
                            Label="Tree"
                            XBindingPath="Direction"
-                           YBindingPath="Tree" />
+                           YBindingPath="Tree"/>
 
     <chart:PolarAreaSeries ItemsSource="{Binding PlantDetails}" 
                            XBindingPath="Direction" 

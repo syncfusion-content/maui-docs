@@ -224,11 +224,11 @@ N> In order to plot the series, the [XBindingPath](https://help.syncfusion.com/c
         </chart:NumericalAxis>
     </chart:SfPolarChart.SecondaryAxis>
 
-    <chart:PolarLineSeries  ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Tree" />
+    <chart:PolarLineSeries  ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Tree"/>
         
-    <chart:PolarLineSeries  ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Weed" />
+    <chart:PolarLineSeries  ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Weed"/>
 
-    <chart:PolarLineSeries  ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Flower" />
+    <chart:PolarLineSeries  ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Flower"/>
 </chart:SfPolarChart>
 
 {% endhighlight %}
@@ -368,13 +368,13 @@ N> Additionally, set a label for each series using the `Label` property of the c
 <chart:SfPolarChart>
     . . .
     <chart:PolarLineSeries  ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Tree"
-                Label="Tree"/>
+                            Label="Tree"/>
 
     <chart:PolarLineSeries  ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Weed" 
-                Label="Weed"/>
+                            Label="Weed"/>
 
     <chart:PolarLineSeries  ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Flower" 
-                Label="Flower"/>
+                            Label="Flower"/>
 </chart:SfPolarChart>
 
 {% endhighlight %}
@@ -464,14 +464,14 @@ The following code example gives you the complete code of above configurations.
                     <chart:NumericalAxis Maximum="100"/>                   
                 </chart:SfPolarChart.SecondaryAxis>
 
-            <chart:PolarLineSeries ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Tree" 
-            Label="Tree" EnableTooltip="True" ShowDataLabels="True"/>
+                <chart:PolarLineSeries ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Tree" 
+                                       Label="Tree" EnableTooltip="True" ShowDataLabels="True"/>
 
-            <chart:PolarLineSeries ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Weed" 
-            Label="Weed" EnableTooltip="True" ShowDataLabels="True"/>
+                <chart:PolarLineSeries ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Weed" 
+                                       Label="Weed" EnableTooltip="True" ShowDataLabels="True"/>
 
-            <chart:PolarLineSeries ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Flower" 
-            Label="Flower" EnableTooltip="True" ShowDataLabels="True"/>
+                <chart:PolarLineSeries ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Flower" 
+                                       Label="Flower" EnableTooltip="True" ShowDataLabels="True"/>
             </chart:SfPolarChart>
         </Grid>
     </ContentPage.Content>

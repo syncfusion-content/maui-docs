@@ -49,8 +49,7 @@ To initialize the control, import the Chart namespace and Initialize [SfCartesia
     . . .
     xmlns:chart="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms">
 
-        <chart:SfChart/>
-
+    <chart:SfChart/>
 </ContentPage>
 {% endhighlight %}
 
@@ -78,8 +77,7 @@ this.Content = chart;
     . . .    
     xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
    
-        <chart:SfCartesianChart/>
-   
+    <chart:SfCartesianChart/>
 </ContentPage>
  
 {% endhighlight %}

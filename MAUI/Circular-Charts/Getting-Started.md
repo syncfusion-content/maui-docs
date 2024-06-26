@@ -147,7 +147,7 @@ N> Add namespace of `ViewModel` class to your XAML Page, if you prefer to set `B
 
     <chart:SfCircularChart>
         <chart:SfCircularChart.BindingContext>
-        <model:ChartViewModel/>
+            <model:ChartViewModel/>
         </chart:SfCircularChart.BindingContext>
     </chart:SfCircularChart>
 </ContentPage>
@@ -178,8 +178,8 @@ N> To plot the series, the [XBindingPath](https://help.syncfusion.com/cr/maui/Sy
 <chart:SfCircularChart>
     . . .
     <chart:PieSeries ItemsSource="{Binding Data}" 
-                    XBindingPath="Product" 
-                    YBindingPath="SalesRate"/>
+                     XBindingPath="Product" 
+                     YBindingPath="SalesRate"/>
 </chart:SfCircularChart>
 
 {% endhighlight %}
@@ -325,12 +325,11 @@ The following code example gives you the complete code of above configurations.
     <chart:SfCircularChart.Legend>
         <chart:ChartLegend/>
     </chart:SfCircularChart.Legend>
-    <chart:PieSeries
-		ItemsSource="{Binding Data}"
-		ShowDataLabels="True"
-		XBindingPath="Product"
-		EnableTooltip="True"
-		YBindingPath="SalesRate"/>
+    <chart:PieSeries ItemsSource="{Binding Data}"
+		             ShowDataLabels="True"
+		             XBindingPath="Product"
+		             EnableTooltip="True"
+		             YBindingPath="SalesRate"/>
 </chart:SfCircularChart>
  
 {% endhighlight %}

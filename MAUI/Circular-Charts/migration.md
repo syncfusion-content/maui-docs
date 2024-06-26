@@ -48,8 +48,7 @@ To initialize the control, import the Chart namespace and Initialize [SfCircular
     . . .
     xmlns:chart="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms">
 
-        <chart:SfChart/>
-
+    <chart:SfChart/>
 </ContentPage>
 {% endhighlight %}
 
@@ -57,8 +56,8 @@ To initialize the control, import the Chart namespace and Initialize [SfCircular
 using Syncfusion.SfChart.XForms;
 ...
 
- SfChart chart = new SfChart(); 
- this.Content = chart;
+SfChart chart = new SfChart(); 
+this.Content = chart;
 
 {% endhighlight %}
 {% endtabs %}
@@ -77,8 +76,7 @@ using Syncfusion.SfChart.XForms;
     . . .    
     xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
    
-        <chart:SfCircularChart/>
-   
+    <chart:SfCircularChart/>
 </ContentPage>
  
 {% endhighlight %}
@@ -150,9 +148,9 @@ The following code example explains how to migrate the series of Xamarin [SfChar
 
 <chart:SfChart>
     <chart:PieSeries ItemsSource="{Binding Data}" 
-                        XBindingPath="Product" 
-                        YBindingPath="SalesRate">
-		 </chart:PieSeries>
+                     XBindingPath="Product" 
+                     YBindingPath="SalesRate">
+	</chart:PieSeries>
  </chart:SfChart>
 
 {% endhighlight %} 
@@ -181,8 +179,8 @@ this.Content = chart;
 
 <chart:SfCircularChart>
     <chart:PieSeries ItemsSource="{Binding Data}" 
-                    XBindingPath="Product" 
-                    YBindingPath="SalesRate"/>
+                     XBindingPath="Product" 
+                     YBindingPath="SalesRate"/>
 </chart:SfCircularChart>
 
 {% endhighlight %} 
@@ -306,7 +304,7 @@ chart.Legend = new ChartLegend ();
 <chart:SfCircularChart>
     . . .
     <chart:SfCircularChart.Legend>
-    <chart:ChartLegend/>
+        <chart:ChartLegend/>
     </chart:SfCircularChart.Legend>
 </chart:SfCircularChart>
 
@@ -340,19 +338,18 @@ To customize the data label appearance, create an instance of the [ChartDataMark
 <chart:SfChart>  
     <chart:PieSeries ItemsSource ="{Binding Data}" XBindingPath="Expense" YBindingPath="Value">
 	    <chart:PieSeries.DataMarker>
-	    <chart:ChartDataMarker ShowLabel="True">
-		    <chart:ChartDataMarker.LabelStyle>
-		        <chart:DataMarkerLabelStyle 
-					TextColor="Blue" 
-					BorderColor="Red" 
-					BorderThickness="2"
-					BackgroundColor="Aqua"
-					Angle="315" 
-					Margin="5" 
-					FontSize="18" 
-					FontAttributes="Italic"/>
-			</chart:ChartDataMarker.LabelStyle>
-	    </chart:ChartDataMarker>
+            <chart:ChartDataMarker ShowLabel="True">
+                <chart:ChartDataMarker.LabelStyle>
+                    <chart:DataMarkerLabelStyle TextColor="Blue" 
+                                                BorderColor="Red" 
+                                                BorderThickness="2"
+                                                BackgroundColor="Aqua"
+                                                Angle="315" 
+                                                Margin="5" 
+                                                FontSize="18" 
+                                                FontAttributes="Italic"/>
+                </chart:ChartDataMarker.LabelStyle>
+            </chart:ChartDataMarker>
 	    </chart:PieSeries.DataMarker>
     </chart:PieSeries>
 </chart:SfChart>
@@ -390,23 +387,24 @@ chart.Series.Add(series);
 
 <chart:SfCircularChart>
     . . .
-    <chart:PieSeries ShowDataLabels="True" ItemsSource ="{Binding Data}" XBindingPath="Expense"
-	YBindingPath="Value">
-    <chart:PieSeries.DataLabelSettings>
-        <chart:CircularDataLabelSettings>
-            <chart:CircularDataLabelSettings.LabelStyle>
-                <chart:ChartDataLabelStyle 
-					TextColor="Blue" 
-					Stroke="Red" 
-					StrokeWidth="2" 
-					Background="Aqua" 
-					Angle="315" 
-					Margin="5" 
-					FontSize="18"
-					FontAttributes="Italic"/>
-            </chart:CircularDataLabelSettings.LabelStyle>
-        </chart:CircularDataLabelSettings>
-    </chart:PieSeries.DataLabelSettings>  
+    <chart:PieSeries ShowDataLabels="True"
+                     ItemsSource ="{Binding Data}" 
+                     XBindingPath="Expense"
+	                 YBindingPath="Value">
+        <chart:PieSeries.DataLabelSettings>
+            <chart:CircularDataLabelSettings>
+                <chart:CircularDataLabelSettings.LabelStyle>
+                    <chart:ChartDataLabelStyle TextColor="Blue" 
+                                               Stroke="Red" 
+                                               StrokeWidth="2" 
+                                               Background="Aqua" 
+                                               Angle="315" 
+                                               Margin="5" 
+                                               FontSize="18"
+                                               FontAttributes="Italic"/>
+                </chart:CircularDataLabelSettings.LabelStyle>
+            </chart:CircularDataLabelSettings>
+        </chart:PieSeries.DataLabelSettings>  
     </chart:PieSeries>
 </chart:SfCircularChart>
 
@@ -449,19 +447,18 @@ To customize the tooltip appearance, create an instance of the [ChartTooltipBeha
 {% highlight xaml %}
 
 <chart:SfChart>
-. . . 
+    . . . 
     <chart:SfChart.ChartBehaviors>
-	    <chart:ChartTooltipBehavior 
-        BackgroundColor="Blue" 
-        TextColor="White" 
-        Margin="5"
-        FontSize="15"/>
+	    <chart:ChartTooltipBehavior BackgroundColor="Blue" 
+                                    TextColor="White" 
+                                    Margin="5"
+                                    FontSize="15"/>
     </chart:SfChart.ChartBehaviors>
     
     <chart:PieSeries ItemsSource="{Binding Data}" 
-                        XBindingPath="Demand"
-                        YBindingPath="Year2010"
-                        EnableTooltip="True"/>
+                     XBindingPath="Demand"
+                     YBindingPath="Year2010"
+                     EnableTooltip="True"/>
 </chart:SfChart>
 
 {% endhighlight %} 
@@ -493,20 +490,18 @@ chart.ChartBehaviors.Add(tool);
 {% highlight xaml %}
 
 <chart:SfCircularChart>
-. . .
-  <chart:SfCircularChart.TooltipBehavior>
-        <chart:ChartTooltipBehavior 
-        Background="Blue" 
-        TextColor="White" 
-        Margin="5" 
-        FontSize="15"/>
+    . . .
+    <chart:SfCircularChart.TooltipBehavior>
+        <chart:ChartTooltipBehavior Background="Blue" 
+                                    TextColor="White" 
+                                    Margin="5" 
+                                    FontSize="15"/>
    </chart:SfCircularChart.TooltipBehavior>
 
    <chart:PieSeries ItemsSource="{Binding Data}" 
-                       XBindingPath="Demand"
-                       YBindingPath="Year2010"
-                       EnableTooltip="True"/>
-</chart:PieSeries>
+                    XBindingPath="Demand"
+                    YBindingPath="Year2010"
+                    EnableTooltip="True"/>
 </chart:SfCircularChart>
 
 {% endhighlight %} 
@@ -543,17 +538,17 @@ Create an instance of the [ChartSelectionBehavior](https://help.syncfusion.com/c
 {% highlight xaml %}
 
 <chart:SfChart>
-...
+    ...
 	<chart:SfChart.ChartBehaviors>
-            <chart:ChartSelectionBehavior/>
+        <chart:ChartSelectionBehavior/>
     </chart:SfChart.ChartBehaviors>
 
     <chart:PieSeries EnableDataPointSelection="True" 
-            SelectedDataPointIndex="2" 
-            SelectedDataPointColor="Red" 
-            ItemsSource ="{Binding Data}" 
-            XBindingPath="Demand" 
-            YBindingPath="Year2010" />
+                     SelectedDataPointIndex="2" 
+                     electedDataPointColor="Red" 
+                     ItemsSource ="{Binding Data}" 
+                     XBindingPath="Demand" 
+                     YBindingPath="Year2010"/>
 </chart:SfChart>
 
 {% endhighlight %} 

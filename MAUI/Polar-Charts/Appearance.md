@@ -19,11 +19,10 @@ By default, the chart applies a set of predefined brushes to the series in a spe
 {% highlight xaml %}
 
 <chart:SfPolarChart> 
-. . .
+	. . .
     <chart:PolarLineSeries ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Tree"/> 
 	<chart:PolarLineSeries ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Weed"/> 
 	<chart:PolarLineSeries ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Flower"/>
-
 </chart:SfPolarChart>
 
 {% endhighlight %}
@@ -83,9 +82,9 @@ The [SfPolarChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Sf
 SfPolarChart chart = new SfPolarChart();
 List<Brush> CustomBrushes = new List<Brush>()
 {
- new SolidColorBrush(Color.FromArgb("#25E739")),
- new SolidColorBrush(Color.FromArgb("#F4890B")),
- new SolidColorBrush(Color.FromArgb("#E2227E"))
+	new SolidColorBrush(Color.FromArgb("#25E739")),
+	new SolidColorBrush(Color.FromArgb("#F4890B")),
+	new SolidColorBrush(Color.FromArgb("#E2227E"))
 };
 
 this.chart.PaletteBrushes = CustomBrushes;
@@ -109,7 +108,7 @@ The following code sample and screenshot illustrates how to apply the gradient b
 {% highlight xaml %}
 
 <chart:SfPolarChart PaletteBrushes="{Binding CustomBrushes}">
-. . .
+	. . .
     <chart:PolarAreaSeries ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Tree"/>
 	<chart:PolarAreaSeries ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Weed"/>
 	<chart:PolarAreaSeries ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Flower"/>
@@ -185,18 +184,18 @@ public class ViewModel
 {% highlight xaml %}
 
 <chart:SfPolarChart>
-   <chart:SfPolarChart.PlotAreaBackgroundView>
-    <AbsoluteLayout>
-      <Label Text="Copyright @ 2001 - 2024 Syncfusion Inc"
-			 FontSize="18" AbsoluteLayout.LayoutBounds="1,1,-1,-1"
-			 AbsoluteLayout.LayoutFlags="PositionProportional"
-			 Opacity="0.4"/>
-       <Label Text="CONFIDENTIAL" Rotation="340" FontSize="80"
-			  FontAttributes="Bold,Italic" TextColor="Gray" Margin="10,0,0,0"
-			  AbsoluteLayout.LayoutBounds="0.5,0.5,-1,-1"
-			  AbsoluteLayout.LayoutFlags="PositionProportional"
-			  Opacity="0.3" />
-    </AbsoluteLayout>
+   	<chart:SfPolarChart.PlotAreaBackgroundView>
+    	<AbsoluteLayout>
+      		<Label Text="Copyright @ 2001 - 2024 Syncfusion Inc"
+			 	   FontSize="18" AbsoluteLayout.LayoutBounds="1,1,-1,-1"
+			       AbsoluteLayout.LayoutFlags="PositionProportional"
+			       Opacity="0.4"/>
+       		<Label Text="CONFIDENTIAL" Rotation="340" FontSize="80"
+			  	   FontAttributes="Bold,Italic" TextColor="Gray" Margin="10,0,0,0"
+			  	   AbsoluteLayout.LayoutBounds="0.5,0.5,-1,-1"
+			       AbsoluteLayout.LayoutFlags="PositionProportional"
+			       Opacity="0.3"/>
+    	</AbsoluteLayout>
    </chart:SfPolarChart.PlotAreaBackgroundView>
 </chart:SfPolarChart>
 

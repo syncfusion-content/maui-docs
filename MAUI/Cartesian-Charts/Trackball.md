@@ -101,7 +101,7 @@ The ChartTrackballActivationMode enum contains the following values:
 <chart:SfCartesianChart>
     ...
     <chart:SfCartesianChart.TrackballBehavior>
-      <chart:ChartTrackballBehavior ActivationMode = "LongPress"/>
+        <chart:ChartTrackballBehavior ActivationMode = "LongPress"/>
     </chart:SfCartesianChart.TrackballBehavior>
     ...
 </chart:SfCartesianChart>

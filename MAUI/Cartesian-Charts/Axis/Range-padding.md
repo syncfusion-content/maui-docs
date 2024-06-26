@@ -43,7 +43,7 @@ By default, the [RangePadding](https://help.syncfusion.com/cr/maui/Syncfusion.Ma
     </chart:SfCartesianChart.XAxes>
 
     <chart:SfCartesianChart.YAxes>
-        <chart:NumericalAxis />
+        <chart:NumericalAxis/>
     </chart:SfCartesianChart.YAxes>
     . . .
 </chart:SfCartesianChart>
@@ -213,7 +213,7 @@ chart.YAxes.Add(secondaryAxis);
     </chart:SfCartesianChart.XAxes>
 
     <chart:SfCartesianChart.YAxes>
-        <chart:NumericalAxis />
+        <chart:NumericalAxis/>
     </chart:SfCartesianChart.YAxes>
     . . .
 </chart:SfCartesianChart>

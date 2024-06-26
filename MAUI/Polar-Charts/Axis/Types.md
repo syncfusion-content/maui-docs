@@ -60,9 +60,9 @@ Axis interval can be customized by using the [Interval](https://help.syncfusion.
 {% highlight xaml %}
 
 <chart:SfPolarChart>
-. . .
+    . . .
     <chart:SfPolarChart.PrimaryAxis>
-        <chart:NumericalAxis Interval="10" />
+        <chart:NumericalAxis Interval="10"/>
     </chart:SfPolarChart.PrimaryAxis>
 
     <chart:SfPolarChart.SecondaryAxis>
@@ -129,7 +129,7 @@ The [CategoryAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Ca
 {% highlight xaml %}
 
 <chart:SfPolarChart>
-. . .
+    . . .
     <chart:SfPolarChart.PrimaryAxis>
         <chart:CategoryAxis/>
     </chart:SfPolarChart.PrimaryAxis>
@@ -161,7 +161,7 @@ By default, the [CategoryAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Ma
 <chart:SfPolarChart>
     . . .
     <chart:SfPolarChart.PrimaryAxis>
-        <chart:CategoryAxis Interval="2" />
+        <chart:CategoryAxis Interval="2"/>
     </chart:SfPolarChart.PrimaryAxis>
 
     <chart:SfPolarChart.SecondaryAxis>
