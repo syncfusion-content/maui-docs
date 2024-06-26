@@ -207,11 +207,25 @@ public class ViewModel
 
 SfCartesianChart chart = new SfCartesianChart();
 AbsoluteLayout absoluteLayout = new AbsoluteLayout();
-var copyRight = new Label() {Text = "Copyright @ 2001 - 2022 Syncfusion Inc",FontSize = 18,Opacity = 0.4};
+var copyRight = new Label() 
+{
+	Text = "Copyright @ 2001 - 2022 Syncfusion Inc",
+	FontSize = 18,
+	Opacity = 0.4
+};
+
 AbsoluteLayout.SetLayoutBounds(copyRight, new Rect(1, 1, -1, -1));
 AbsoluteLayout.SetLayoutFlags(copyRight, Microsoft.Maui.Layouts.AbsoluteLayoutFlags.PositionProportional);
 absoluteLayout.Children.Add(copyRight);
-var watermark = new Label(){Text = "CONFIDENTIAL",Rotation = 340,FontSize = 80,FontAttributes = FontAttributes.Bold,TextColor = Colors.Gray, Opacity = 0.3};
+var watermark = new Label()
+{
+	Text = "CONFIDENTIAL",Rotation = 340,
+	FontSize = 80,
+	FontAttributes = FontAttributes.Bold,
+	TextColor = Colors.Gray, 
+	Opacity = 0.3
+};
+
 AbsoluteLayout.SetLayoutBounds(watermark, new Rect(0.5, 0.5, -1, -1));
 AbsoluteLayout.SetLayoutFlags(watermark, Microsoft.Maui.Layouts.AbsoluteLayoutFlags.PositionProportional);
 absoluteLayout.Children.Add(watermark);

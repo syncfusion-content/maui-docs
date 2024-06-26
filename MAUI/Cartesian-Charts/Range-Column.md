@@ -66,7 +66,7 @@ this.Content = chart;
 
 {% endtabs %}
 
-![Range column chart type in MAUI Chart](Chart-Types_images/maui_range_column.png)
+![Range column chart type in MAUI Chart](Chart-Types-images/maui_range_column.png)
 
 ## Spacing and Width
 
@@ -123,4 +123,4 @@ this.Content = chart;
 
 {% endtabs %}
 
-![Range column segment spacing in MAUI Chart](Chart-Types_images/maui_rangeColumn_space_width.png)
+![Range column segment spacing in MAUI Chart](Chart-Types-images/maui_rangeColumn_space_width.png)
