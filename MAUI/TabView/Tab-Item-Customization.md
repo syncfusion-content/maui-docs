@@ -21,7 +21,7 @@ Holds the text of the tab item that is displayed in the tab bar.
 
 {% highlight xaml %}
     <tabView:SfTabView>
-        <tabView:SfTabItem Header="Item 1">
+        <tabView:SfTabItem Header="ITEM 1">
     </tabView:SfTabView>
 {% endhighlight %}
 
@@ -31,7 +31,7 @@ Holds the text of the tab item that is displayed in the tab bar.
     {
         new SfTabItem()
         {
-            Header = "Item 1",
+            Header = "ITEM 1",
         }
     }
 {% endhighlight %}
@@ -48,7 +48,7 @@ The image to be displayed in the tab bar representing the tab item.
 
 {% highlight xaml %}
     <tabView:SfTabView>
-        <tabView:SfTabItem Header="Item 1" ImageSource="alexandar">
+        <tabView:SfTabItem Header="ITEM 1" ImageSource="alexandar">
     </tabView:SfTabView>
 {% endhighlight %}
 
@@ -58,7 +58,7 @@ The image to be displayed in the tab bar representing the tab item.
     {
         new SfTabItem()
         {
-            Header = "Item 1",
+            Header = "ITEM 1",
             ImageSource = "alexandar",
         }
     }
