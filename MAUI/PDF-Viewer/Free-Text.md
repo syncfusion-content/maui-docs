@@ -198,7 +198,7 @@ Private void PdfViewer_FreeTextModalViewDisappearing(object? Sender, EventArgs e
 
 ### Suppressing the free text modal view and implement your own UI
 
-The [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) allows you to suppress the free text modal view and use your own UI in its place. This can be achieved by setting the `AnnotationModalViewAppearingEventArgs.Cancel` property to `true` in the `FreeTextModalViewAppearing` event handler. 
+The [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) allows you to suppress the free text modal view and use your own UI in its place. This can be achieved by setting the [AnnotationModalViewAppearingEventArgs.Cancel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.ModalViewAppearingEventArgs.html#Syncfusion_Maui_PdfViewer_ModalViewAppearingEventArgs_Cancel) property to `true` in the [FreeTextModalViewAppearing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_FreeTextModalViewAppearing) event handler. 
 
 The below code snippet illustrates suppressing the free text modal view and using a UI implemented in the app in its place. The free text annotation instance that is created or edited can be obtained from the event args. Once the user enters the text in the custom dialog and confirms, the text can be assigned to this free text annotation instance. 
 
@@ -229,4 +229,4 @@ Private void customDialogOkButton_Clicked(object sender, EventArgs e)
 {% endhighlight %} 
 {% endtabs %}
 
-N> For WinUI and MacCatalyst platforms, there is no separate modal view to receive text input from the users. As a result, the `FreeTextModalViewAppearing` and `FreeTextModalViewDisappearing` events are not applicable for these platforms. 
+N> For WinUI and MacCatalyst platforms, there is no separate modal view to receive text input from the users. As a result, the [FreeTextModalViewAppearing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_FreeTextModalViewAppearing) and [FreeTextModalViewDisappearing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_FreeTextModalViewDisappearing) events are not applicable for these platforms. 
