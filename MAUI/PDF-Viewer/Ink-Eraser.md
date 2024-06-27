@@ -47,7 +47,7 @@ void DisableInkEraserMode()
 
 ## How to erase ink annotation and customize the ink eraser thickness using toolbar
 
-On the built-in toolbar, an ink eraser annotation tool is available. Using that, you can easily erase ink annotation by selecting the tool and applying it to the desired areas of the PDF document. Additionally, the toolbar shows the option to customize the ink eraser thickness, allowing you to adjust it according to your preferences or needs.
+On the built-in toolbar, an ink eraser tool is available. Using that, you can easily erase all or portions of the ink annotation. Additionally, the toolbar shows the option to customize the ink eraser thickness.
 
 The following image demonstrates how to use the ink eraser tool from the toolbar on the desktop to remove ink annotations.
 

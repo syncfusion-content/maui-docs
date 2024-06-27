@@ -25,11 +25,11 @@ The following shape annotation types are now available in the PDF Viewer.
 
 ## Add shapes to a PDF document
 
-This section will cover how to add shape annotations to a PDF document interactively using the toolbar by drawing on the PDF document, as well as programmatically.
+This section will cover how to add shape annotations to a PDF document using a toolbar as well as programmatically.
 
 ###  Add shapes using the toolbar
 
-On the built-in toolbar, a shape annotation tool is available with 7 types of annotations: arrow, circle, square, line, polygon, polyline, and cloud. Users can select any of these shapes to add annotations at a specific position. Additionally, the toolbar allows modification of properties for both existing and new annotations of the selected shape.
+A shape annotation tool with seven different sorts of annotations (arrow, circle, square, line, polygon, polyline, and cloud) is accessible on the built-in toolbar. Users are able to select any of these shapes and draw them on the page at any desired location. Additionally, the toolbar allows modification of properties for both existing and new annotations of the selected shape.
 
 The following image represents how to add the circle annotations using the toolbar on the desktop.
 
