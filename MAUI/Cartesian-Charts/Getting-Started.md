@@ -367,9 +367,9 @@ N> Additionally, set label for each series using the `Label` property of chart s
 <chart:SfCartesianChart>
     . . .
     <chart:ColumnSeries Label="Height"
-                    ItemsSource="{Binding Data}"
-                    XBindingPath="Name" 
-                    YBindingPath="Height">
+                        ItemsSource="{Binding Data}"
+                        XBindingPath="Name" 
+                        YBindingPath="Height">
     </chart:ColumnSeries>
 </chart:SfCartesianChart>
 
@@ -398,9 +398,9 @@ Tooltips are used to show information about the segment, when a user hovers over
 <chart:SfCartesianChart>
     ...
     <chart:ColumnSeries EnableTooltip="True"
-						ItemsSource="{Binding Data}"
-						XBindingPath="Name"
-						YBindingPath="Height"/>
+			ItemsSource="{Binding Data}"
+			XBindingPath="Name"
+			YBindingPath="Height"/>
     ...
 </chart:SfCartesianChart> 
 
@@ -464,14 +464,14 @@ The following code example gives you the complete code of above configurations.
 
                 <!--Initialize the series for chart-->
                 <chart:ColumnSeries Label="Height" 
-                        EnableTooltip="True"
-                        ShowDataLabels="True"
-                        ItemsSource="{Binding Data}"
-                        XBindingPath="Name" 
-                        YBindingPath="Height">
+                                    EnableTooltip="True"
+                                    ShowDataLabels="True"
+                                    ItemsSource="{Binding Data}"
+                                    XBindingPath="Name" 
+                                    YBindingPath="Height">
                     <chart:ColumnSeries.DataLabelSettings>
                         <chart:CartesianDataLabelSettings LabelPlacement="Inner"/>
-                        </chart:ColumnSeries.DataLabelSettings>
+                    </chart:ColumnSeries.DataLabelSettings>
                 </chart:ColumnSeries>
             </chart:SfCartesianChart>
         </Grid>
