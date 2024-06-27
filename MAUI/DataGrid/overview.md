@@ -5,6 +5,7 @@ description: Learn here all about introduction of Syncfusion .NET MAUI DataGrid 
 platform: MAUI
 control: SfDataGrid
 documentation: ug
+keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .net maui datagrid, .net maui grid, .net grid maui
 ---
 
 # .NET MAUI DataGrid (SfDataGrid) Overview

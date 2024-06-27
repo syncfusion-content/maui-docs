@@ -25,7 +25,7 @@ The seven-segment type is capable of displaying numbers and a few uppercase lett
 
 {% highlight xaml %}
 
-     <gauge:SfDigitalGauge Text="1 2 3 4 5" 
+     <gauge:SfDigitalGauge Text="12345" 
                           CharacterType="SevenSegment" 
                          />
 
@@ -35,7 +35,7 @@ The seven-segment type is capable of displaying numbers and a few uppercase lett
 
             SfDigitalGauge digital = new SfDigitalGauge();
 
-            digital.Text = "1 2 3 4 5";
+            digital.Text = "12345";
 
             digital.CharacterType = DigitalGaugeCharacterType.SevenSegment;
 
@@ -53,7 +53,7 @@ The fourteen-segment type is capable of displaying numbers and the alphabet effi
 
 {% highlight xaml %}
 
-     <gauge:SfDigitalGauge Text="1 2 3 4 5" 
+     <gauge:SfDigitalGauge Text="12345" 
                           CharacterType="FourteenSegment" 
                          />
 
@@ -63,7 +63,7 @@ The fourteen-segment type is capable of displaying numbers and the alphabet effi
 
             SfDigitalGauge digital = new SfDigitalGauge();
 
-            digital.Text = "1 2 3 4 5";
+            digital.Text = "12345";
 
             digital.CharacterType = DigitalGaugeCharacterType.FourteenSegment;
 
@@ -81,7 +81,7 @@ The sixteen-segment type is capable of displaying numbers and the alphabet clear
 
 {% highlight xaml %}
 
-     <gauge:SfDigitalGauge Text="1 2 3 4 5" 
+     <gauge:SfDigitalGauge Text="12345" 
                           CharacterType="SixteenSegment" 
                          />
 
@@ -91,7 +91,7 @@ The sixteen-segment type is capable of displaying numbers and the alphabet clear
 
             SfDigitalGauge digital = new SfDigitalGauge();
 
-            digital.Text = "1 2 3 4 5";
+            digital.Text = "12345";
 
             digital.CharacterType = DigitalGaugeCharacterType.SixteenSegment;
 
@@ -109,7 +109,7 @@ The dot matrix segment type is capable of displaying numbers, the alphabet, and 
 
 {% highlight xaml %}
 
-     <gauge:SfDigitalGauge Text="1 2 3 4 5" 
+     <gauge:SfDigitalGauge Text="12345" 
                           CharacterType="EightCrossEightDotMatrix" 
                          />
 
@@ -119,7 +119,7 @@ The dot matrix segment type is capable of displaying numbers, the alphabet, and 
 
             SfDigitalGauge digital = new SfDigitalGauge();
 
-            digital.Text = "1 2 3 4 5";
+            digital.Text = "12345";
 
             digital.CharacterType = DigitalGaugeCharacterType.EightCrossEightDotMatrix;
 
