@@ -53,10 +53,6 @@ The following image demonstrates how to use the ink eraser tool from the toolbar
 
 ![Ink annotation desktop](Images/Annotations/InkEraserDesktop.gif)
 
-The following image demonstrates how to use the ink eraser tool from the toolbar on mobile to erase ink annotations.
-
-![Ink annotation desktop](Images/Annotations/InkEraserMobile.gif)
-
 ## How to erase ink annotation only using stylus
 
 The ink eraser operation can be customized so that the ink strokes can be added only using a stylus by setting the [AnnotationSettings.Ink.TouchScreenInputMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.TouchScreenInputMode.html) property to TouchScreenInputMode.Stylus. When TouchScreenInputMode is set to TouchScreenInputMode.Stylus, users can easily erase ink strokes using a stylus. However, zooming and scrolling functionality will still be available using their fingers.
