@@ -5,6 +5,7 @@ description: Learn here all about Pull To Refresh support in Syncfusion .NET MAU
 platform: MAUI
 control: SfListView
 documentation: ug
+keywords : .net maui listview, .net maui list,.net maui pull-to-refresh, .net maui refresh listview, .net maui refresh view, .net maui refreshing list, .net maui dynamic update list.
 ---
 
 # Pull To Refresh in .NET MAUI ListView (SfListView)

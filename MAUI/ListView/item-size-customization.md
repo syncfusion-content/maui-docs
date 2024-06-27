@@ -5,6 +5,7 @@ description: Learn here all about Item Size Customization support in Syncfusion 
 platform: MAUI
 control: SfListView
 documentation: ug
+keywords : .net maui listview, .net maui list, .net maui listview auto size, .net maui listview item size,.net maui listview dynamic item size, .net maui listview autofit items.
 ---
 
 # Item Size Customization in .NET MAUI ListView (SfListView)

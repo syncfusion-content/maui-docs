@@ -5,6 +5,7 @@ description: Learn here all about Layouts support in Syncfusion .NET MAUI ListVi
 platform: MAUI
 control: SfListView
 documentation: ug
+keywords : .net maui listview, .net maui list, .net maui vertical list, .net maui listview layout, .net maui grid listview, .net maui linear layout, .net maui grid view list.
 ---
 
 # Layouts in .NET MAUI ListView (SfListView)

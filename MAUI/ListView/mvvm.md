@@ -5,6 +5,7 @@ description: Learn here all about Working with MVVM support in Syncfusion .NET M
 platform: MAUI
 control: SfListView
 documentation: ug
+keywords : .net maui listview, .net maui list, .net maui vertical list, .net maui listview mvvm, .net maui listview commands, .net maui listview binding.
 ---
 
 # Working with MVVM in .NET MAUI ListView (SfListView)

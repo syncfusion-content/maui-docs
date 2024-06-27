@@ -5,6 +5,7 @@ description: Learn here all about Load More support in Syncfusion .NET MAUI List
 platform: MAUI
 control: SfListView
 documentation: ug
+keywords : .net maui listview, .net maui list, .net maui listview load more, .net maui listview infinite scroll, .net maui listview lazy loading, .net maui listview dynamic loading, .net maui listview load more items.
 ---
 # Load More in .NET MAUI ListView (SfListView)
 

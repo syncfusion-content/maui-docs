@@ -5,6 +5,7 @@ description: Learn here all about Working with ListView support in Syncfusion .N
 platform: MAUI
 control: SfListView
 documentation: ug
+keywords : .net maui listview, .net maui list, .net maui listview interaction, .net maui listview events.
 ---
 
 # Working with ListView in .NET MAUI ListView (SfListView)

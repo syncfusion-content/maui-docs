@@ -5,6 +5,7 @@ description: Learn here all about Appearance support in Syncfusion .NET MAUI Lis
 platform: MAUI
 control: SfListView
 documentation: ug
+keywords : .net maui listview, .net maui list,.net maui listview templates, .net maui listview customization, .net maui listview styles, .net maui styling listview, .net maui listview appearance, .net maui listview customize item, .net maui listview data template.
 ---
 
 # Appearance in .NET MAUI ListView (SfListView)

@@ -5,6 +5,7 @@ description: Learn here all about Sorting support in Syncfusion .NET MAUI ListVi
 platform: MAUI
 control: SfListView
 documentation: ug
+keywords : .net maui listview, .net maui list, .net maui listview sorting, .net maui item sorting listview, .net maui listview filter and sort.
 ---
 
 # Sorting in .NET MAUI ListView (SfListView)
