@@ -128,6 +128,7 @@ SfCartesianChart chart = new SfCartesianChart();
 NumericalAxis numerical = new NumericalAxis();
 numerical.MajorTickStyle.StrokeWidth = 1;
 numerical.MajorTickStyle.Stroke = Colors.Red;
+numerical.MajorTickStyle.TickSize = 10;
 numerical.MinorTicksPerInterval = 4;
 numerical.MinorTickStyle.StrokeWidth = 1;
 numerical.MinorTickStyle.Stroke = Colors.Red;
