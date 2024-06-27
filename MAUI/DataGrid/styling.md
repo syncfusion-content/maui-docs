@@ -5,6 +5,7 @@ description: Learn all about Styling support in Syncfusion .NET MAUI DataGrid (S
 platform: MAUI
 control: SfDataGrid
 documentation: ug
+keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .net maui datagrid, .net maui grid, .net grid maui, .net maui styling, maui styling
 ---
 
 # Styling in .NET MAUI DataGrid (SfDataGrid)

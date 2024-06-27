@@ -5,6 +5,7 @@ description: Learn all about Column Types support in Syncfusion .NET MAUI DataGr
 platform: MAUI
 control: SfDataGrid
 documentation: UG
+keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .net maui datagrid, .net maui grid, .net grid maui, .net maui column types, maui column types
 ---
 
 # Column Types in .NET MAUI DataGrid (SfDataGrid)

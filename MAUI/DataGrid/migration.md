@@ -5,6 +5,7 @@ description: Learn here all about Migrating from Syncfusion Xamarin SfDataGrid t
 platform: MAUI
 control: SfDataGrid
 documentation: ug
+keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .net maui datagrid, .net maui grid, .net grid maui
 --- 
 
 # Migrate from Xamarin.Forms SfDataGrid to .NET MAUI SfDataGrid
