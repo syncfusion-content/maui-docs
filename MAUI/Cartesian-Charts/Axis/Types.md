@@ -463,7 +463,10 @@ Axis interval can be customized using the [Interval](https://help.syncfusion.com
 
 {% highlight c# %}
 
-chart.YAxes.Add(new LogarithmicAxis( ) { Interval = 2 });
+chart.YAxes.Add(new LogarithmicAxis() 
+{
+	Interval = 2 
+});
 
 {% endhighlight %}
 
@@ -515,7 +518,10 @@ The logarithmic axis base can be customized using the [LogarithmicBase](https://
 
 {% highlight c# %}
 
-chart.YAxes.Add(new LogarithmicAxis( ) { LogarithmicBase = 5 });
+chart.YAxes.Add(new LogarithmicAxis()
+{ 
+	LogarithmicBase = 5 
+});
 
 {% endhighlight %}
 
@@ -576,7 +582,10 @@ Axis visibility can be controlled using the [IsVisible](https://help.syncfusion.
 
 SfCartesianChart chart = new SfCartesianChart();
 . . .
-NumericalAxis secondaryAxis = new NumericalAxis() { IsVisible = false };
+NumericalAxis secondaryAxis = new NumericalAxis() 
+{
+	IsVisible = false 
+};
 chart.YAxes.Add(secondaryAxis);
 
 {% endhighlight %}
