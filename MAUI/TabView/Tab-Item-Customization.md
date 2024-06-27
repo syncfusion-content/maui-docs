@@ -77,7 +77,7 @@ The assigned view will get displayed in the main area of the tab view.
 
 {% highlight xaml %}
     <tabView:SfTabView>
-        <tabView:SfTabItem Header="Calls" ImageSource="alexandar">
+        <tabView:SfTabItem Header="ITEM 2">
             <tabView:SfTabItem.Content>
                 <ListView>
                     ...
@@ -93,8 +93,7 @@ The assigned view will get displayed in the main area of the tab view.
     {
         new SfTabItem()
         {
-            Header = "Calls",
-            ImageSource = "alexandar",
+            Header = "ITEM 2",
             Content = new ListView()
             {
                 /// code
