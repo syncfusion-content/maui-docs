@@ -93,7 +93,7 @@ The assigned view will get displayed in the main area of the tab view.
     {
         new SfTabItem()
         {
-            Header = "ITEM 2 ",
+            Header = "ITEM 2",
             Content = new ListView()
             {
                 /// code
