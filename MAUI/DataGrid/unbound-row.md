@@ -5,6 +5,7 @@ description: Learn here all about Unbound Row support in Syncfusion .NET MAUI Da
 platform: MAUI
 control: SfDataGrid
 documentation: ug
+keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .net maui datagrid, .net maui grid, .net grid maui, .net maui unbound row, maui unbound row
 ---
 
 

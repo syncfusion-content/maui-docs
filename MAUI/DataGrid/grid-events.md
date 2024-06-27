@@ -5,6 +5,7 @@ description: Learn here about data grid events and listen to cell value changes 
 platform: MAUI
 control: SfDataGrid
 documentation: UG
+keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .net maui datagrid, .net maui grid, .net grid maui, .net maui grid events, maui grid events
 ---
 
 # Grid Events in MAUI DataGrid (SfDataGrid)

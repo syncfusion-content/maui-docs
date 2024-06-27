@@ -5,6 +5,7 @@ description: Learn here all about Editing support in Syncfusion MAUI DataGrid (S
 platform: MAUI
 control: SfDataGrid
 documentation: UG
+keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .net maui datagrid, .net maui grid, .net grid maui, .net maui editing, maui editing
 ---
 
 # Editing in MAUI DataGrid (SfDataGrid)
