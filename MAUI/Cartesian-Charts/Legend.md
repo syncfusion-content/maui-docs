@@ -302,8 +302,7 @@ N> The BindingContext of the template is the corresponding underlying legend ite
     </chart:SfCartesianChart.Resources>  
     
     <chart:SfCartesianChart.Legend>
-        <chart:ChartLegend    
-               ItemTemplate="{StaticResource legendTemplate}">
+        <chart:ChartLegend ItemTemplate="{StaticResource legendTemplate}">
         </chart:ChartLegend>
     </chart:SfCartesianChart.Legend>
 </chart:SfCartesianChart>
