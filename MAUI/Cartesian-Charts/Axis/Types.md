@@ -687,8 +687,8 @@ The chart allows you to customize the origin, by default the axis will be render
     <chart:SfCartesianChart.XAxes>
         <chart:NumericalAxis CrossesAt="0"
 			     Minimum="-8"
-                 Maximum="8"
-                 ShowMajorGridLines="False"/>
+                             Maximum="8"
+                             ShowMajorGridLines="False"/>
     </chart:SfCartesianChart.XAxes>
 
     <chart:SfCartesianChart.YAxes>
