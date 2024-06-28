@@ -5,6 +5,7 @@ description: Learn all about Conditional Styling support in Syncfusion .NET MAUI
 platform: MAUI
 control: SfDataGrid
 documentation: ug
+keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .net maui datagrid, .net maui grid, .net grid maui, .net maui conditional styling, maui conditional styling
 ---
 
 # Conditional Styling in .NET MAUI DataGrid (SfDataGrid)

@@ -5,6 +5,7 @@ description: Learn here all about Row Height Customization support in Syncfusion
 platform: MAUI
 control: SfDataGrid
 documentation: ug
+keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .net maui datagrid, .net maui grid, .net grid maui, .net maui row height customization, maui row height customization
 ---
 
 # Row Height Customization in .NET MAUI DataGrid (SfDataGrid)
