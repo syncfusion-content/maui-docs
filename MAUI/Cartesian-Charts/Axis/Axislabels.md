@@ -99,7 +99,7 @@ The [LabelStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Char
 * `LabelFormat` - Gets or sets the label format. This property is used to set numeric or date-time format to the chart axis label.
 * `LabelAlignment` - Gets or sets the axis label at start, end, and center positions.
 * `MaxWidth` - Gets or sets the wrap width of the axis labels.
-* `WrappedLabelAlignment` - Gets or sets the horizontal rendering position of the wrapped axis labels. The default value is `Start`; other available values are `Center` and `End`.
+* `WrappedLabelAlignment` - Gets or sets the horizontal rendering position of the wrapped axis labels. The default value is `Start`, other available values are `Center` and `End`.
 
 
 ## Edge Labels Drawing Mode

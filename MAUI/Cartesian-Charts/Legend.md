@@ -249,7 +249,7 @@ The [ItemsLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Cha
                 <FlexLayout HorizontalOptions="Start"
                             Margin="10"
                             WidthRequest="{Binding Width,
-                            Source={x:Reference Chart1}}">
+                            Source={x:Reference chart1}}">
                 </FlexLayout>
             </chart:ChartLegend.ItemsLayout>
         </chart:ChartLegend>

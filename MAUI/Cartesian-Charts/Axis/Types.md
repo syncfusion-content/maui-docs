@@ -100,7 +100,7 @@ chart.YAxes.Add(secondaryAxis);
 
 [Maximum](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.NumericalAxis.html#Syncfusion_Maui_Charts_NumericalAxis_Maximum) and [Minimum](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.NumericalAxis.html#Syncfusion_Maui_Charts_NumericalAxis_Minimum) properties of axis is used for setting the maximum and minimum value of the axis range respectively.
 
-N> If  minimum or maximum value is set, the other value is calculated by default internally.
+N> If minimum or maximum value is set, the other value is calculated by default internally.
 
 {% tabs %}
 
@@ -687,8 +687,8 @@ The chart allows you to customize the origin, by default the axis will be render
     <chart:SfCartesianChart.XAxes>
         <chart:NumericalAxis CrossesAt="0"
 			     Minimum="-8"
-        		     Maximum="8"
-        		     ShowMajorGridLines="False"/>
+                 Maximum="8"
+                 ShowMajorGridLines="False"/>
     </chart:SfCartesianChart.XAxes>
 
     <chart:SfCartesianChart.YAxes>
