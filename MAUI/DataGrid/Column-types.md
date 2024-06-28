@@ -126,7 +126,114 @@ public class DisplayBindingConverter : IValueConverter
 
 In order to set the TextAlignment of the header cell and data row cell , use the [DataGridColumn.HeaderTextAlignment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_HeaderTextAlignment) and [DataGridColumn.CellTextAlignment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_CellTextAlignment) property. The default text alignment is based on the type of the columns. The header and data rows are right aligned for numeric, date columns and left aligned for text column.
 
-### Header customizations
+### Line Break Mode
+
+#### No wrap
+
+The text continues outside the container's bounds on a single line, without wrapping.
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                       AutoGenerateColumnsMode="None"
+                       ItemsSource="{Binding OrderInfo}">
+    <syncfusion:SfDataGrid.Columns >
+        <syncfusion:DataGridTextColumn MappingName="Description" HeaderText="Head" LineBreakMode="NoWrap" />
+    </syncfusion:SfDataGrid.Columns>
+</syncfusion:SfDataGrid>
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs"%}
+ dataGrid.Columns[0].LineBreakMode = LineBreakMode.NoWrap;
+{% endhighlight %}
+{% endtabs %}
+
+#### Character wrap
+
+Without taking entire words into consideration, the text breaks at character limits. 
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                       AutoGenerateColumnsMode="None"
+                       ItemsSource="{Binding OrderInfo}">
+    <syncfusion:SfDataGrid.Columns >
+        <syncfusion:DataGridTextColumn MappingName="Description" HeaderText="Head" LineBreakMode="CharacterWrap" />
+    </syncfusion:SfDataGrid.Columns>
+</syncfusion:SfDataGrid>
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs"%}
+ dataGrid.Columns[0].LineBreakMode = LineBreakMode.CharacterWrap;
+{% endhighlight %}
+{% endtabs %}
+#### Word wrap
+
+Entire words are shifted to the next line at word boundaries when the text splits.
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                       AutoGenerateColumnsMode="None"
+                       ItemsSource="{Binding OrderInfo}">
+    <syncfusion:SfDataGrid.Columns >
+        <syncfusion:DataGridTextColumn MappingName="Description" HeaderText="Head" LineBreakMode="WordWrap" />
+    </syncfusion:SfDataGrid.Columns>
+</syncfusion:SfDataGrid>
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs"%}
+ dataGrid.Columns[0].LineBreakMode = LineBreakMode.WordWrap;
+{% endhighlight %}
+{% endtabs %}
+
+#### Head truncation
+
+The text is truncated from the beginning, and an ellipsis ("...") is inserted in the head.
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                       AutoGenerateColumnsMode="None"
+                       ItemsSource="{Binding OrderInfo}">
+    <syncfusion:SfDataGrid.Columns >
+        <syncfusion:DataGridTextColumn MappingName="Description" HeaderText="Head" LineBreakMode="HeadTruncation" />
+    </syncfusion:SfDataGrid.Columns>
+</syncfusion:SfDataGrid>
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs"%}
+ dataGrid.Columns[0].LineBreakMode = LineBreakMode.HeadTruncation;
+{% endhighlight %}
+{% endtabs %}
+
+#### Tail truncation
+
+The text is truncated at the end, and an ellipsis ("...") is inserted in the tail.
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                       AutoGenerateColumnsMode="None"
+                       ItemsSource="{Binding OrderInfo}">
+    <syncfusion:SfDataGrid.Columns >
+        <syncfusion:DataGridTextColumn MappingName="Description" HeaderText="Head" LineBreakMode="TailTruncation" />
+    </syncfusion:SfDataGrid.Columns>
+</syncfusion:SfDataGrid>
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs"%}
+ dataGrid.Columns[0].LineBreakMode = LineBreakMode.TailTruncation;
+{% endhighlight %}
+{% endtabs %}
+
+#### Middle truncation
+
+The text is truncated in the middle, and an ellipsis ("...") is inserted in the middle.
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                       AutoGenerateColumnsMode="None"
+                       ItemsSource="{Binding OrderInfo}">
+    <syncfusion:SfDataGrid.Columns >
+        <syncfusion:DataGridTextColumn MappingName="Description" HeaderText="Head" LineBreakMode="MiddleTruncation" />
+    </syncfusion:SfDataGrid.Columns>
+</syncfusion:SfDataGrid>
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs"%}
+ dataGrid.Columns[0].LineBreakMode = LineBreakMode.MiddleTruncation;
+{% endhighlight %}
+{% endtabs %}
 
 #### HeaderText
 
