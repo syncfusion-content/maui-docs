@@ -235,6 +235,7 @@ The text is truncated in the middle, and an ellipsis ("...") is inserted in the 
 {% endhighlight %}
 {% endtabs %}
 
+N> For Windows, tail, middle, and head truncations are now applicable. 
 #### HeaderText
 
 To customize the display content of the header cell, use the [DataGridColumn.HeaderText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_HeaderText) property. It specifies the text displayed in the column header. If the header text is not defined, then `DataGridColumn.MappingName` will be assigned to the header text and will be displayed as a column header.
