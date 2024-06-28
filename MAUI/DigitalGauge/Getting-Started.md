@@ -97,7 +97,7 @@ In [.NET MAUI DigitalGauge](https://www.syncfusion.com/maui-controls/maui-digita
 
 {% highlight xaml %}
 
-   <gauge:SfDigitalGauge Text="syncfusion"/> 
+   <gauge:SfDigitalGauge Text="SYNCFUSION"/> 
 
 {% endhighlight %}
 
@@ -105,7 +105,7 @@ In [.NET MAUI DigitalGauge](https://www.syncfusion.com/maui-controls/maui-digita
 
         SfDigitalGauge sfDigitalGauge = new SfDigitalGauge();
 
-        digital.Text = "syncfusion";
+        digital.Text = "SYNCFUSION";
 
         this.Content = sfDigitalGauge;
  

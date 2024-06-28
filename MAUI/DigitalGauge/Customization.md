@@ -77,7 +77,7 @@ The values of digital characters color can be customized using the [CharacterStr
 
 {% highlight xaml %}
 
-     <gauge:SfDigitalGauge Text="1 2 3 4 5" "
+     <gauge:SfDigitalGauge Text="12345" "
                           CharacterStroke="Purple"/>
 {% endhighlight %}
 
@@ -85,7 +85,7 @@ The values of digital characters color can be customized using the [CharacterStr
 
             SfDigitalGauge digital = new SfDigitalGauge();
 
-            digital.Text = "1 2 3 4 5";
+            digital.Text = "12345";
 
             digital.CharacterStroke = Color.Purple;
 
@@ -103,7 +103,7 @@ The width of the digital character value can be customized using the [StrokeWidt
 
 {% highlight xaml %}
 
-     <gauge:SfDigitalGauge Text="1 2 3 4 5" 
+     <gauge:SfDigitalGauge Text="12345" 
                            StrokeWidth="3"/>
 {% endhighlight %}
 
@@ -111,7 +111,7 @@ The width of the digital character value can be customized using the [StrokeWidt
 
             SfDigitalGauge digital = new SfDigitalGauge();
 
-            digital.Text = "1 2 3 4 5";
+            digital.Text = "12345";
 
             digital.StrokeWidth = 3;
 
@@ -129,7 +129,7 @@ You can customize the color and opacity of disabled segments using the [Disabled
 
 {% highlight xaml %}
 
-    <gauge:SfDigitalGauge Text="1 2 3 4 5" 
+    <gauge:SfDigitalGauge Text="12345" 
                           DisabledSegmentAlpha="0.1" DisabledSegmentStroke="LightSkyBlue"/>
 {% endhighlight %}
 
@@ -137,7 +137,7 @@ You can customize the color and opacity of disabled segments using the [Disabled
 
             SfDigitalGauge digital = new SfDigitalGauge();
 
-            digital.Text = "1 2 3 4 5";
+            digital.Text = "12345";
 
             digital.DisabledSegmentAlpha = 0.1
 
@@ -158,7 +158,7 @@ You can customize the background color of the digital gauge using the `Backgroun
 
 {% highlight xaml %}
 
-    <gauge:SfDigitalGauge Text="1 2 3 4 5" 
+    <gauge:SfDigitalGauge Text="12345" 
                           BackgroundColor="Blue"/>
 
 {% endhighlight %}
@@ -169,7 +169,7 @@ You can customize the background color of the digital gauge using the `Backgroun
 
             this.BackgroundColor = Colors.Blue;
 
-            digital.Text = "1 2 3 4 5";
+            digital.Text = "12345";
 
 {% endhighlight %}
 
