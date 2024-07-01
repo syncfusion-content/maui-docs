@@ -91,7 +91,7 @@ To specify the legend icon based on the associated series type, use the [LegendI
 
 <chart:SfFunnelChart ItemsSource="{Binding Data}" 
                      XBindingPath="Name"  LegendIcon="Diamond"
-                     YBindingPath="Height"  >
+                     YBindingPath="Height">
     <chart:SfFunnelChart.Legend>
         <chart:ChartLegend/>
     </chart:SfFunnelChart.Legend>
@@ -127,8 +127,7 @@ The legend can be positioned to the left, right, top, or bottom of the chart are
                      XBindingPath="Name"  LegendIcon="Diamond"
                      YBindingPath="Height" x:Name="chart">
     <chart:SfFunnelChart.Legend>
-        <chart:ChartLegend Placement="Bottom">
-        </chart:ChartLegend>
+        <chart:ChartLegend Placement="Bottom"/>
     </chart:SfFunnelChart.Legend>
 </chart:SfFunnelChart>
 
@@ -245,7 +244,9 @@ N> The BindingContext of the template is the corresponding underlying legend ite
 
 {% highlight xaml %}
 
-<chart:SfFunnelChart>
+<chart:SfFunnelChart ItemsSource="{Binding Data}" 
+                     XBindingPath="Name"  
+                     YBindingPath="Height" x:Name="chart">
     <chart:SfFunnelChart.Resources>
         <DataTemplate x:Key="legendTemplate">
             <StackLayout Orientation="Horizontal">
@@ -253,19 +254,14 @@ N> The BindingContext of the template is the corresponding underlying legend ite
                            WidthRequest="12" Margin="3"
                            Background="{Binding IconBrush}"/>
                 <Label Text="{Binding Text}" 
-                    Margin="3"/>
+                       Margin="3"/>
             </StackLayout>
         </DataTemplate>
     </chart:SfFunnelChart.Resources>  
     
-    <chart:SfFunnelChart ItemsSource="{Binding Data}" 
-                         XBindingPath="Name"  
-                         YBindingPath="Height" x:Name="chart">
-        <chart:SfFunnelChart.Legend>
-            <chart:ChartLegend    
-                    ItemTemplate="{StaticResource legendTemplate}">
-            </chart:ChartLegend>
-      </chart:SfFunnelChart.Legend>
+    <chart:SfFunnelChart.Legend>
+        <chart:ChartLegend ItemTemplate="{StaticResource legendTemplate}"/>
+    </chart:SfFunnelChart.Legend>
 </chart:SfFunnelChart>
 
 {% endhighlight %}

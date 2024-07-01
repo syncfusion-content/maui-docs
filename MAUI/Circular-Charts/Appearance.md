@@ -20,12 +20,11 @@ The [SfCircularChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts
 {% highlight xaml %}
 
 <chart:SfCircularChart>
-. . .
-
-<chart:PieSeries ItemsSource="{Binding Data}" 
-                 XBindingPath="XValue" 
-                 YBindingPath="YValue"
-                 PaletteBrushes="{Binding CustomBrushes}" />
+	. . .
+	<chart:PieSeries ItemsSource="{Binding Data}" 
+			 XBindingPath="XValue" 
+			 YBindingPath="YValue"
+			 PaletteBrushes="{Binding CustomBrushes}"/>
 </chart:SfCircularChart>
 
 {% endhighlight %}
@@ -65,12 +64,11 @@ The gradient for the circular chart can be set by using the [PaletteBrushes](htt
 {% highlight xaml %}
 
 <chart:SfCircularChart>
-. . .
-
-<chart:PieSeries ItemsSource="{Binding Data}" 
-                 XBindingPath="XValue" 
-                 YBindingPath="YValue"
-                 PaletteBrushes="{Binding CustomBrushes}" />
+	. . .
+	<chart:PieSeries ItemsSource="{Binding Data}" 
+			 XBindingPath="XValue" 
+			 YBindingPath="YValue"
+			 PaletteBrushes="{Binding CustomBrushes}"/>
 </chart:SfCircularChart>
 
 {% endhighlight %}
@@ -144,28 +142,28 @@ public class ViewModel
 {% highlight xaml %}
 
 <chart:SfCircularChart>
-   <chart:SfCircularChart.PlotAreaBackgroundView>
-      <AbsoluteLayout>
-       <Border Stroke="red"
+    <chart:SfCircularChart.PlotAreaBackgroundView>
+      	<AbsoluteLayout>
+       		<Border Stroke="red"
 			StrokeThickness="2"
 			AbsoluteLayout.LayoutBounds="0,0,1,1"
 			AbsoluteLayout.LayoutFlags="All"/>
-       <Label Text="Copyright @ 2001 - 2022 Syncfusion Inc"
-			FontSize="18"
-			AbsoluteLayout.LayoutBounds="1,1,-1,-1"
-			AbsoluteLayout.LayoutFlags="PositionProportional"
-			Opacity="0.4"/>
-       <Label Text="CONFIDENTIAL"
-			Rotation="340"
-			FontSize="80"
-			FontAttributes="Bold,Italic"
-			TextColor="Gray"
-			Margin="10,0,0,0"
-			AbsoluteLayout.LayoutBounds="0.5,0.5,-1,-1"
-			AbsoluteLayout.LayoutFlags="PositionProportional"
-			Opacity="0.3" />
-    </AbsoluteLayout>
-   </chart:SfCircularChart.PlotAreaBackgroundView>
+       		<Label Text="Copyright @ 2001 - 2022 Syncfusion Inc"
+		       FontSize="18"
+		       AbsoluteLayout.LayoutBounds="1,1,-1,-1"
+		       AbsoluteLayout.LayoutFlags="PositionProportional"
+		       Opacity="0.4"/>
+       		<Label Text="CONFIDENTIAL"
+		       Rotation="340"
+		       FontSize="80"
+		       FontAttributes="Bold,Italic"
+		       TextColor="Gray"
+		       Margin="10,0,0,0"
+		       AbsoluteLayout.LayoutBounds="0.5,0.5,-1,-1"
+		       AbsoluteLayout.LayoutFlags="PositionProportional"
+	               Opacity="0.3"/>
+    	</AbsoluteLayout>
+    </chart:SfCircularChart.PlotAreaBackgroundView>
 </chart:SfCircularChart>
 
 {% endhighlight %}
@@ -174,15 +172,35 @@ public class ViewModel
 
 SfCircularChart chart = new SfCircularChart();
 AbsoluteLayout absoluteLayout = new AbsoluteLayout();
-var border = new Border() {Stroke = Colors.Red,StrokeThickness = 2};
+var border = new Border() 
+{
+	Stroke = Colors.Red,
+	StrokeThickness = 2
+};
+
 AbsoluteLayout.SetLayoutBounds(border, new Rect(0, 0, 1, 1));
 AbsoluteLayout.SetLayoutFlags(border, Microsoft.Maui.Layouts.AbsoluteLayoutFlags.All);
 absoluteLayout.Children.Add(border);
-var copyRight = new Label() {Text = "Copyright @ 2001 - 2022 Syncfusion Inc",FontSize = 18,Opacity = 0.4};
+var copyRight = new Label() 
+{
+	Text = "Copyright @ 2001 - 2022 Syncfusion Inc",
+	FontSize = 18,
+	Opacity = 0.4
+};
+
 AbsoluteLayout.SetLayoutBounds(copyRight, new Rect(1, 1, -1, -1));
 AbsoluteLayout.SetLayoutFlags(copyRight, Microsoft.Maui.Layouts.AbsoluteLayoutFlags.PositionProportional);
 absoluteLayout.Children.Add(copyRight);
-var watermark = new Label(){Text = "CONFIDENTIAL", Rotation = 340,FontSize = 80,FontAttributes = FontAttributes.Bold,TextColor = Colors.Gray,Opacity = 0.3};
+var watermark = new Label()
+{
+	Text = "CONFIDENTIAL", 
+	Rotation = 340,
+	FontSize = 80,
+	FontAttributes = FontAttributes.Bold,
+	TextColor = Colors.Gray,
+	Opacity = 0.3
+};
+
 AbsoluteLayout.SetLayoutBounds(watermark, new Rect(0.5, 0.5, -1, -1));
 AbsoluteLayout.SetLayoutFlags(watermark, Microsoft.Maui.Layouts.AbsoluteLayoutFlags.PositionProportional);
 absoluteLayout.Children.Add(watermark);

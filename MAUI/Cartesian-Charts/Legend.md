@@ -249,7 +249,7 @@ The [ItemsLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Cha
                 <FlexLayout HorizontalOptions="Start"
                             Margin="10"
                             WidthRequest="{Binding Width,
-                            Source={x:Reference Chart1}}">
+                            Source={x:Reference chart1}}">
                 </FlexLayout>
             </chart:ChartLegend.ItemsLayout>
         </chart:ChartLegend>
@@ -302,8 +302,7 @@ N> The BindingContext of the template is the corresponding underlying legend ite
     </chart:SfCartesianChart.Resources>  
     
     <chart:SfCartesianChart.Legend>
-        <chart:ChartLegend    
-               ItemTemplate="{StaticResource legendTemplate}">
+        <chart:ChartLegend ItemTemplate="{StaticResource legendTemplate}">
         </chart:ChartLegend>
     </chart:SfCartesianChart.Legend>
 </chart:SfCartesianChart>

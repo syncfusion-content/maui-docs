@@ -19,13 +19,12 @@ N> The cartesian chart has [Series](https://help.syncfusion.com/cr/maui/Syncfusi
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-
     <chart:SfCartesianChart.XAxes>
-        <chart:CategoryAxis />
+        <chart:CategoryAxis/>
     </chart:SfCartesianChart.XAxes>
 
     <chart:SfCartesianChart.YAxes>
-        <chart:NumericalAxis />
+        <chart:NumericalAxis/>
     </chart:SfCartesianChart.YAxes>   
 
     <chart:ColumnSeries ItemsSource="{Binding Data}"
@@ -72,11 +71,11 @@ The [Width](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ColumnSer
 <chart:SfCartesianChart>
 
     <chart:SfCartesianChart.XAxes>
-        <chart:CategoryAxis />
+        <chart:CategoryAxis/>
     </chart:SfCartesianChart.XAxes>
 
     <chart:SfCartesianChart.YAxes>
-        <chart:NumericalAxis />
+        <chart:NumericalAxis/>
     </chart:SfCartesianChart.YAxes>  
 
     <chart:ColumnSeries ItemsSource="{Binding Data}"
@@ -125,11 +124,11 @@ By default, all the column series which have the same x and y axes are placed si
 
 <chart:SfCartesianChart EnableSideBySideSeriesPlacement="False">
     <chart:SfCartesianChart.XAxes>
-        <chart:CategoryAxis />
+        <chart:CategoryAxis/>
     </chart:SfCartesianChart.XAxes>
 
     <chart:SfCartesianChart.YAxes>
-        <chart:NumericalAxis />
+        <chart:NumericalAxis/>
     </chart:SfCartesianChart.YAxes>  
 
     <chart:ColumnSeries ItemsSource="{Binding Data1}"

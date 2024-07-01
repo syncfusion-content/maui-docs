@@ -37,12 +37,12 @@ public class ViewModel
 	public List<Brush> CustomBrushes { get; set; }
 	public ViewModel()
 	{
-	 CustomBrushes = new List<Brush>();
-	 CustomBrushes.Add(new SolidColorBrush(Color.FromRgb(38, 198, 218)));
-	 CustomBrushes.Add(new SolidColorBrush(Color.FromRgb(0, 188, 212)));
-	 CustomBrushes.Add(new SolidColorBrush(Color.FromRgb(0, 172, 193)));
-	 CustomBrushes.Add(new SolidColorBrush(Color.FromRgb(0, 151, 167)));
-	 CustomBrushes.Add(new SolidColorBrush(Color.FromRgb(0, 131, 143)));
+		CustomBrushes = new List<Brush>();
+		CustomBrushes.Add(new SolidColorBrush(Color.FromRgb(38, 198, 218)));
+		CustomBrushes.Add(new SolidColorBrush(Color.FromRgb(0, 188, 212)));
+		CustomBrushes.Add(new SolidColorBrush(Color.FromRgb(0, 172, 193)));
+		CustomBrushes.Add(new SolidColorBrush(Color.FromRgb(0, 151, 167)));
+		CustomBrushes.Add(new SolidColorBrush(Color.FromRgb(0, 131, 143)));
 	}
 . . .
 }
@@ -79,47 +79,47 @@ public class ViewModel
 	public List<Brush> CustomBrushes { get; set; }
 	public ViewModel()
 	{
-	 CustomBrushes = new List<Brush>();
-	 LinearGradientBrush gradientColor1 = new LinearGradientBrush();
-	 gradientColor1.GradientStops = new GradientStopCollection()
-	 {
-		new GradientStop() { Offset = 1, Color = Color.FromArgb("#a3bded") },
-		new GradientStop() { Offset = 0, Color = Color.FromArgb("#6991c7") }
-	 };
+		CustomBrushes = new List<Brush>();
+		LinearGradientBrush gradientColor1 = new LinearGradientBrush();
+		gradientColor1.GradientStops = new GradientStopCollection()
+		{
+			new GradientStop() { Offset = 1, Color = Color.FromArgb("#a3bded") },
+			new GradientStop() { Offset = 0, Color = Color.FromArgb("#6991c7") }
+		};
 
-	 LinearGradientBrush gradientColor2 = new LinearGradientBrush();
-	 gradientColor2.GradientStops = new GradientStopCollection()
-	 {
-		new GradientStop() { Offset = 1, Color = Color.FromArgb("#A5678E") },
-		new GradientStop() { Offset = 0, Color = Color.FromArgb("#E8B7D4") }
-	 };
+		LinearGradientBrush gradientColor2 = new LinearGradientBrush();
+		gradientColor2.GradientStops = new GradientStopCollection()
+		{
+			new GradientStop() { Offset = 1, Color = Color.FromArgb("#A5678E") },
+			new GradientStop() { Offset = 0, Color = Color.FromArgb("#E8B7D4") }
+		};
 
-	 LinearGradientBrush gradientColor3 = new LinearGradientBrush();
-	 gradientColor3.GradientStops = new GradientStopCollection()
-	 {
-		new GradientStop() { Offset = 1, Color = Color.FromArgb("#FFCAD4") },
-		new GradientStop() { Offset = 0, Color = Color.FromArgb("#FB7B8E") }
-	 };
+		LinearGradientBrush gradientColor3 = new LinearGradientBrush();
+		gradientColor3.GradientStops = new GradientStopCollection()
+		{
+			new GradientStop() { Offset = 1, Color = Color.FromArgb("#FFCAD4") },
+			new GradientStop() { Offset = 0, Color = Color.FromArgb("#FB7B8E") }
+		};
 
-	 LinearGradientBrush gradientColor4 = new LinearGradientBrush();
-	 gradientColor4.GradientStops = new GradientStopCollection()
-	 {
-		new GradientStop() { Offset = 1, Color = Color.FromArgb("#FDC094") },
-		new GradientStop() { Offset = 0, Color = Color.FromArgb("#FFE5D8") }
-	 };
+		LinearGradientBrush gradientColor4 = new LinearGradientBrush();
+		gradientColor4.GradientStops = new GradientStopCollection()
+		{
+			new GradientStop() { Offset = 1, Color = Color.FromArgb("#FDC094") },
+			new GradientStop() { Offset = 0, Color = Color.FromArgb("#FFE5D8") }
+		};
 
-	 LinearGradientBrush gradientColor5 = new LinearGradientBrush();
-	 gradientColor5.GradientStops = new GradientStopCollection()
-	 {
-		new GradientStop() { Offset = 1, Color = Color.FromArgb("#CFF4D2") },
-		new GradientStop() { Offset = 0, Color = Color.FromArgb("#56C596") }
-	 };
+		LinearGradientBrush gradientColor5 = new LinearGradientBrush();
+		gradientColor5.GradientStops = new GradientStopCollection()
+		{
+			new GradientStop() { Offset = 1, Color = Color.FromArgb("#CFF4D2") },
+			new GradientStop() { Offset = 0, Color = Color.FromArgb("#56C596") }
+		};
 
-	 CustomBrushes.Add(gradientColor1);
-	 CustomBrushes.Add(gradientColor2);
-	 CustomBrushes.Add(gradientColor3);
-	 CustomBrushes.Add(gradientColor4);
-	 CustomBrushes.Add(gradientColor5);
+		CustomBrushes.Add(gradientColor1);
+		CustomBrushes.Add(gradientColor2);
+		CustomBrushes.Add(gradientColor3);
+		CustomBrushes.Add(gradientColor4);
+		CustomBrushes.Add(gradientColor5);
 	}
 . . .
 }

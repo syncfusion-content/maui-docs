@@ -19,7 +19,7 @@ Adjust the rendering position of series on polar chart by leveraging the [StartA
 
 <chart:SfPolarChart StartAngle="Rotate0">
     <chart:SfPolarChart.PrimaryAxis>
-        <chart:CategoryAxis />
+        <chart:CategoryAxis/>
     </chart:SfPolarChart.PrimaryAxis>
 
     <chart:SfPolarChart.SecondaryAxis>

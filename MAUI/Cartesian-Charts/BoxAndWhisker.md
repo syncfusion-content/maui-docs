@@ -23,11 +23,11 @@ N> The Cartesian chart has [Series](https://help.syncfusion.com/cr/maui/Syncfusi
 <chart:SfCartesianChart>
 
     <chart:SfCartesianChart.XAxes>
-        <chart:CategoryAxis />
+        <chart:CategoryAxis/>
     </chart:SfCartesianChart.XAxes>
 
     <chart:SfCartesianChart.YAxes>
-        <chart:NumericalAxis />
+        <chart:NumericalAxis/>
     </chart:SfCartesianChart.YAxes>   
 
     <chart:BoxAndWhiskerSeries ItemsSource="{Binding BoxWhiskerData}"
@@ -83,11 +83,11 @@ In Normal mode, the whiskers extend to the minimum and maximum data points withi
 <chart:SfCartesianChart>
 
     <chart:SfCartesianChart.XAxes>
-        <chart:CategoryAxis />
+        <chart:CategoryAxis/>
     </chart:SfCartesianChart.XAxes>
 
     <chart:SfCartesianChart.YAxes>
-        <chart:NumericalAxis />
+        <chart:NumericalAxis/>
     </chart:SfCartesianChart.YAxes>  
 
     <chart:BoxAndWhiskerSeries ItemsSource="{Binding BoxWhiskerData}"
@@ -134,11 +134,11 @@ In Inclusive mode, the whiskers extend to the minimum and maximum data points wi
 <chart:SfCartesianChart>
 
     <chart:SfCartesianChart.XAxes>
-        <chart:CategoryAxis />
+        <chart:CategoryAxis/>
     </chart:SfCartesianChart.XAxes>
 
     <chart:SfCartesianChart.YAxes>
-        <chart:NumericalAxis />
+        <chart:NumericalAxis/>
     </chart:SfCartesianChart.YAxes>  
 
     <chart:BoxAndWhiskerSeries ItemsSource="{Binding BoxWhiskerData}"
@@ -185,11 +185,11 @@ The Median values of given dataset is viewed by enabling the [ShowMedian](https:
 <chart:SfCartesianChart>
 
     <chart:SfCartesianChart.XAxes>
-        <chart:CategoryAxis />
+        <chart:CategoryAxis/>
     </chart:SfCartesianChart.XAxes>
 
     <chart:SfCartesianChart.YAxes>
-        <chart:NumericalAxis />
+        <chart:NumericalAxis/>
     </chart:SfCartesianChart.YAxes>  
 
     <chart:BoxAndWhiskerSeries ItemsSource="{Binding BoxWhiskerData}"
@@ -245,11 +245,11 @@ The outlier value in the box plot can be viewed by enabling the [ShowOutlier](ht
 <chart:SfCartesianChart>
 
     <chart:SfCartesianChart.XAxes>
-        <chart:CategoryAxis />
+        <chart:CategoryAxis/>
     </chart:SfCartesianChart.XAxes>
 
     <chart:SfCartesianChart.YAxes>
-        <chart:NumericalAxis />
+        <chart:NumericalAxis/>
     </chart:SfCartesianChart.YAxes>  
 
     <chart:BoxAndWhiskerSeries ItemsSource="{Binding BoxWhiskerData}"
@@ -299,11 +299,11 @@ The following code shows how to set the [OutlierShapeType](https://help.syncfusi
 <chart:SfCartesianChart>
 
     <chart:SfCartesianChart.XAxes>
-        <chart:CategoryAxis />
+        <chart:CategoryAxis/>
     </chart:SfCartesianChart.XAxes>
 
     <chart:SfCartesianChart.YAxes>
-        <chart:NumericalAxis />
+        <chart:NumericalAxis/>
     </chart:SfCartesianChart.YAxes>  
 
     <chart:BoxAndWhiskerSeries ItemsSource="{Binding BoxWhiskerData}"

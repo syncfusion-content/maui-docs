@@ -19,11 +19,11 @@ By default, major gridlines are automatically added to the [ChartAxis](https://h
 
 <chart:SfPolarChart>
     <chart:SfPolarChart.PrimaryAxis>
-        <chart:NumericalAxis ShowMajorGridLines="False" />
+        <chart:NumericalAxis ShowMajorGridLines="False"/>
     </chart:SfPolarChart.PrimaryAxis>
 
     <chart:SfPolarChart.SecondaryAxis>
-        <chart:NumericalAxis />
+        <chart:NumericalAxis/>
     </chart:SfPolarChart.SecondaryAxis>
     . . .
 </chart:SfPolarChart>
@@ -69,7 +69,7 @@ The [MajorGridLineStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cha
     </chart:SfPolarChart.PrimaryAxis>
 
     <chart:SfPolarChart.SecondaryAxis>
-        <chart:NumericalAxis />
+        <chart:NumericalAxis/>
     </chart:SfPolarChart.SecondaryAxis>
 </chart:SfPolarChart>
 
@@ -78,7 +78,7 @@ The [MajorGridLineStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cha
 {% highlight c# %}
 
 SfPolarChart chart = new SfPolarChart();
-    . . .
+. . .
 DoubleCollection doubleCollection = new DoubleCollection();
 doubleCollection.Add(3);
 doubleCollection.Add(3);
@@ -111,7 +111,7 @@ Minor gridlines will be added automatically when the small tick lines is defined
     </chart:SfPolarChart.PrimaryAxis>
 
     <chart:SfPolarChart.SecondaryAxis>
-        <chart:NumericalAxis MinorTicksPerInterval="3" />
+        <chart:NumericalAxis MinorTicksPerInterval="3"/>
     </chart:SfPolarChart.SecondaryAxis>
     . . .
 </chart:SfPolarChart>
@@ -158,7 +158,7 @@ The [MinorGridLineStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cha
     <chart:SfPolarChart.SecondaryAxis>
         <chart:NumericalAxis ShowMinorGridLines="True" MinorTicksPerInterval="2">
             <chart:NumericalAxis.MinorGridLineStyle>
-                <chart:ChartLineStyle StrokeDashArray="{StaticResource dashArray}" Stroke="Black" StrokeWidth="0.8"  />
+                <chart:ChartLineStyle StrokeDashArray="{StaticResource dashArray}" Stroke="Black" StrokeWidth="0.8"/>
             </chart:NumericalAxis.MinorGridLineStyle>
         </chart:NumericalAxis>
     </chart:SfPolarChart.SecondaryAxis>

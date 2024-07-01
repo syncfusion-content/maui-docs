@@ -20,9 +20,9 @@ N> For category axis, minor tick lines are not applicable as it is rendered base
 {% highlight xaml %}
 
 <chart:SfPolarChart>
-. . .
+    . . .
     <chart:SfPolarChart.PrimaryAxis>
-        <chart:NumericalAxis />
+        <chart:NumericalAxis/>
     </chart:SfPolarChart.PrimaryAxis>
 
     <chart:SfPolarChart.SecondaryAxis>
@@ -94,9 +94,9 @@ Both major and minor tick lines can be customized using the [MajorTickStyle](htt
 {% highlight xaml %}
 
 <chart:SfPolarChart>
-. . .
+    . . .
     <chart:SfPolarChart.PrimaryAxis>
-        <chart:NumericalAxis />
+        <chart:NumericalAxis/>
     </chart:SfPolarChart.PrimaryAxis>
 
     <chart:SfPolarChart.SecondaryAxis>

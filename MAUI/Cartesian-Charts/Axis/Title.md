@@ -88,7 +88,6 @@ The [LabelExtent](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Cha
             </chart:CategoryAxis.Title>
         </chart:CategoryAxis>
     </chart:SfCartesianChart.XAxes>
-
 </chart:SfCartesianChart>
 
 {% endhighlight %}

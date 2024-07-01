@@ -247,24 +247,23 @@ N> The BindingContext of the template is the corresponding underlying legend ite
 
 {% highlight xaml %}
 
-<chart:SfPyramidChart>
+<chart:SfPyramidChart ItemsSource="{Binding Data}" 
+                      XBindingPath="Name"  
+                      YBindingPath="Height" x:Name="chart">
     <chart:SfPyramidChart.Resources>
         <DataTemplate x:Key="legendTemplate">
             <StackLayout Orientation="Horizontal">
                 <Rectangle HeightRequest="12" 
-                    WidthRequest="12" Margin="3"
-                    Background="{Binding IconBrush}"/>
+                           WidthRequest="12" Margin="3"
+                           Background="{Binding IconBrush}"/>
                 <Label Text="{Binding Text}" 
-                    Margin="3"/>
+                       Margin="3"/>
             </StackLayout>
         </DataTemplate>
     </chart:SfPyramidChart.Resources>  
     
-    <chart:SfPyramidChart ItemsSource="{Binding Data}" 
-                          XBindingPath="Name"  
-                          YBindingPath="Height" x:Name="chart" >
-        <chart:SfPyramidChart.Legend>
-            <chart:ChartLegend ItemTemplate="{StaticResource legendTemplate}">
+    <chart:SfPyramidChart.Legend>
+        <chart:ChartLegend ItemTemplate="{StaticResource legendTemplate}">
         </chart:ChartLegend>
     </chart:SfPyramidChart.Legend>
 </chart:SfPyramidChart>
@@ -283,6 +282,7 @@ SfPyramidChart chart = new SfPyramidChart()
 ChartLegend legend = new ChartLegend();
 legend.ItemTemplate = chart.Resources["legendTemplate"] as DataTemplate;
 ...
+chart.Legend = legend;
 this.Content = chart;
         
 {% endhighlight %}

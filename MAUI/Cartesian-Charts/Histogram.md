@@ -18,20 +18,20 @@ Customize histogram intervals using the [HistogramInterval](https://help.syncfus
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-        <chart:SfCartesianChart.XAxes>
-            <chart:NumericalAxis />
-        </chart:SfCartesianChart.XAxes>
+    <chart:SfCartesianChart.XAxes>
+        <chart:NumericalAxis/>
+    </chart:SfCartesianChart.XAxes>
 
-        <chart:SfCartesianChart.YAxes>
-            <chart:NumericalAxis />
-        </chart:SfCartesianChart.YAxes>
+    <chart:SfCartesianChart.YAxes>
+        <chart:NumericalAxis/>
+    </chart:SfCartesianChart.YAxes>
 
-        <chart:HistogramSeries ItemsSource="{Binding HistogramData}"
-                               XBindingPath="Value" 
-                               YBindingPath="Size"
-                               HistogramInterval="20" 
-                               ShowNormalDistributionCurve="True">
-        </chart:HistogramSeries>
+    <chart:HistogramSeries ItemsSource="{Binding HistogramData}"
+                           XBindingPath="Value" 
+                           YBindingPath="Size"
+                           HistogramInterval="20" 
+                           ShowNormalDistributionCurve="True">
+    </chart:HistogramSeries>
 </chart:SfCartesianChart>
 
 
@@ -74,20 +74,19 @@ Customize the normal distribution curve by using the [CurveLineStyle](https://he
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-        ....
-
-      <chart:HistogramSeries ItemsSource="{Binding HistogramData}" 
-                             XBindingPath="Value" 
-                             YBindingPath="Size"
-                             HistogramInterval="20"
-                             ShowNormalDistributionCurve="True">
-         <chart:HistogramSeries.CurveStyle>
-             <chart:ChartLineStyle Stroke="Blue"
-                                   StrokeWidth="2"
-                                   StrokeDashArray="5,6,3">
-             </chart:ChartLineStyle>
-         </chart:HistogramSeries.CurveStyle>
-        </chart:HistogramSeries>
+    ....
+    <chart:HistogramSeries ItemsSource="{Binding HistogramData}" 
+                           XBindingPath="Value" 
+                           YBindingPath="Size"
+                           HistogramInterval="20"
+                           ShowNormalDistributionCurve="True">
+        <chart:HistogramSeries.CurveStyle>
+            <chart:ChartLineStyle Stroke="Blue"
+                                  StrokeWidth="2"
+                                  StrokeDashArray="5,6,3">
+            </chart:ChartLineStyle>
+        </chart:HistogramSeries.CurveStyle>
+    </chart:HistogramSeries>
 </chart:SfCartesianChart>
 
 {% endhighlight %}
@@ -95,8 +94,7 @@ Customize the normal distribution curve by using the [CurveLineStyle](https://he
 {% highlight c# %}
 
 SfCartesianChart chart = new SfCartesianChart();
-    ....
-  
+....
 HistogramSeries histogramSeries = new HistogramSeries
 {
     ItemsSource = new ViewModel().HistogramData, 

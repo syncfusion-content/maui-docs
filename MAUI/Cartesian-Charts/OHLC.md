@@ -38,7 +38,6 @@ StockData.Add(new Model { Year = "2010", High = 50, Low = 40, Open = 40, Close =
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-
     <chart:SfCartesianChart.XAxes>
         <chart:CategoryAxis/>
     </chart:SfCartesianChart.XAxes>

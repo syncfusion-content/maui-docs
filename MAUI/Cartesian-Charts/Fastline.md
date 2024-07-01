@@ -22,11 +22,11 @@ N> The cartesian chart has [Series](https://help.syncfusion.com/cr/maui/Syncfusi
 
 <chart:SfCartesianChart>
     <chart:SfCartesianChart.XAxes>
-        <chart:DateTimeAxis />
+        <chart:DateTimeAxis/>
     </chart:SfCartesianChart.XAxes>
 
     <chart:SfCartesianChart.YAxes>
-        <chart:NumericalAxis />
+        <chart:NumericalAxis/>
     </chart:SfCartesianChart.YAxes>  
                 
     <chart:FastLineSeries ItemsSource="{Binding Data}"
@@ -77,11 +77,11 @@ The [StrokeDashArray](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts
     </chart:SfCartesianChart.Resources>
 
     <chart:SfCartesianChart.XAxes>
-        <chart:chart:DateTimeAxis />
+        <chart:chart:DateTimeAxis/>
     </chart:SfCartesianChart.XAxes>
 
     <chart:SfCartesianChart.YAxes>
-        <chart:NumericalAxis />
+        <chart:NumericalAxis/>
     </chart:SfCartesianChart.YAxes>  
 
     <chart:FastLineSeries ItemsSource="{Binding Data}"
@@ -132,8 +132,7 @@ There may be some jagged lines at the edges. This can be reduced by using the `E
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-    .....
-
+    ...
     <chart:FastLineSeries EnableAntiAliasing="True"
                           ItemsSource="{Binding Data}"
                           XBindingPath="XValue"
@@ -146,7 +145,6 @@ There may be some jagged lines at the edges. This can be reduced by using the `E
 
 SfCartesianChart chart = new SfCartesianChart();
 . . .
-
 FastLineSeries series = new FastLineSeries()
 {
     ItemsSource = new ViewModel().Data,
@@ -156,7 +154,6 @@ FastLineSeries series = new FastLineSeries()
 };
 
 chart.Series.Add(series);
-
 this.Content = chart;
 
 {% endhighlight %}

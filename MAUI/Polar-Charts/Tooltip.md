@@ -22,7 +22,7 @@ To define the tooltip in the series, set the [EnableTooltip](https://help.syncfu
 <chart:SfPolarChart>
     . . .
     <chart:PolarAreaSeries ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Tree" 
-                EnableTooltip="True"/>
+                           EnableTooltip="True"/>
 </chart:SfPolarChart>
 
 {% endhighlight %}
@@ -92,8 +92,9 @@ The [Duration](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartT
         <chart:ChartTooltipBehavior Duration="5000"/>
     </chart:SfPolarChart.TooltipBehavior>
 
-    <chart:PolarAreaSeries ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Tree" 
-                EnableTooltip="True"/>               
+    <chart:PolarAreaSeries ItemsSource="{Binding PlantDetails}"
+                           XBindingPath="Direction" YBindingPath="Tree" 
+                           EnableTooltip="True"/>               
 </chart:SfPolarChart>
 
 {% endhighlight %}
@@ -132,15 +133,16 @@ The [SfPolarChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Sf
     <chart:SfPolarChart.Resources>
         <DataTemplate x:Key="tooltipTemplate1" x:Name="temp">
             <StackLayout>
-                <Label Text="{Binding Item.Direction}" HorizontalTextAlignment="Center" HorizontalOptions="Center"             VerticalTextAlignment="Center" TextColor="White" FontAttributes="Bold" FontFamily="Helvetica" Margin="0,2,0,2" FontSize="12.5"/>
+                <Label Text="{Binding Item.Direction}" HorizontalTextAlignment="Center" HorizontalOptions="Center"  VerticalTextAlignment="Center"                       
+                       TextColor="White" FontAttributes="Bold" FontFamily="Helvetica" Margin="0,2,0,2" FontSize="12.5"/>
                 <BoxView Color="Gray" HeightRequest="1" WidthRequest="90"/>
-                    <StackLayout Orientation="Horizontal" VerticalOptions="Fill" Spacing="0" Padding="3" Margin="0" HorizontalOptions="Center">
-                        <Ellipse Stroke="White" StrokeThickness="2" HeightRequest="10" 
-                            WidthRequest="10" Fill="#48988B" Margin="0,1,3,0"/>
-                        <Label Text="Tree"  VerticalTextAlignment="Center" HorizontalOptions="Start" 
-                            TextColor="White" FontFamily="Helvetica" FontSize="12" Margin="3,0,3,0"/>
-                        <Label Text="{Binding Item.Tree,StringFormat=' :  {0}'}" VerticalTextAlignment="Center" HorizontalOptions="End" TextColor="White" FontFamily="Helvetica" Margin="0,0,3,0" FontSize="12"/>
-                    </StackLayout>
+                <StackLayout Orientation="Horizontal" VerticalOptions="Fill" Spacing="0" Padding="3" Margin="0" HorizontalOptions="Center">
+                    <Ellipse Stroke="White" StrokeThickness="2" HeightRequest="10" 
+                             WidthRequest="10" Fill="#48988B" Margin="0,1,3,0"/>
+                    <Label Text="Tree"  VerticalTextAlignment="Center" HorizontalOptions="Start" 
+                           TextColor="White" FontFamily="Helvetica" FontSize="12" Margin="3,0,3,0"/>
+                    <Label Text="{Binding Item.Tree,StringFormat=' :  {0}'}" VerticalTextAlignment="Center" HorizontalOptions="End" TextColor="White" FontFamily="Helvetica" Margin="0,0,3,0" FontSize="12"/>
+                </StackLayout>
             </StackLayout>
         </DataTemplate>
         . . .          
@@ -151,8 +153,7 @@ The [SfPolarChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Sf
     </chart:SfPolarChart.TooltipBehavior>
 
     <chart:PolarAreaSeries ItemsSource="{Binding PlantDetails}"  XBindingPath="Direction" YBindingPath="Tree" 
-                    TooltipTemplate="{StaticResource tooltipTemplate1}" EnableTooltip="True"/>
-
+                           TooltipTemplate="{StaticResource tooltipTemplate1}" EnableTooltip="True"/>
 </chart:SfPolarChart>
 
 {% endhighlight %}
@@ -192,12 +193,12 @@ The [Show](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartToolt
 {% highlight xaml %}
 
 <chart:SfPolarChart>
-...
-<chart:SfPolarChart.TooltipBehavior>
-    <chart:ChartTooltipBehavior x:Name="tooltip">
-    </chart:ChartTooltipBehavior>
-</chart:SfPolarChart.TooltipBehavior>
-...
+    ...
+    <chart:SfPolarChart.TooltipBehavior>
+        <chart:ChartTooltipBehavior x:Name="tooltip">
+        </chart:ChartTooltipBehavior>
+    </chart:SfPolarChart.TooltipBehavior>
+    ...
 </chart:SfPolarChart>
 
 <Button Text="Show tooltip" Clicked="Button_Clicked"/>

@@ -53,10 +53,10 @@ The [ChartTooltipBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.C
 {% highlight xml %}
 
 <chart:SfPyramidChart EnableTooltip="True">
-. . .
-<chart:SfPyramidChart.TooltipBehavior>
-    <chart:ChartTooltipBehavior Duration="4"/>
-</chart:SfPyramidChart.TooltipBehavior>
+    . . .
+    <chart:SfPyramidChart.TooltipBehavior>
+        <chart:ChartTooltipBehavior Duration="4"/>
+    </chart:SfPyramidChart.TooltipBehavior>
 </chart:SfPyramidChart>
 
 {% endhighlight %}

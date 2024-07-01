@@ -536,9 +536,9 @@ The [ViewAnnotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.
     ...
     <chart:SfCartesianChart.Annotations>
         <chart:ViewAnnotation X1="3" Y1="30">
-                <chart:ViewAnnotation.View>
-                    <Image Source="cloud.png"/>
-                </chart:ViewAnnotation.View>
+            <chart:ViewAnnotation.View>
+                <Image Source="cloud.png"/>
+            </chart:ViewAnnotation.View>
         </chart:ViewAnnotation>
     </chart:SfCartesianChart.Annotations>
 </chart:SfCartesianChart>

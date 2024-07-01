@@ -95,7 +95,7 @@ Now, let us define a simple data model that represents a data point in the chart
 
 {% highlight c# %}
 
- public class Stage
+public class Stage
 {
     public string Name { get; set; }
     public double Value { get; set; }
@@ -146,7 +146,7 @@ N> Add the namespace of `ViewModel` class to your XAML Page, if you prefer to se
 
     <chart:SfPyramidChart>
         <chart:SfPyramidChart.BindingContext>
-        <model:ChartViewModel/>
+            <model:ChartViewModel/>
         </chart:SfPyramidChart.BindingContext>
     </chart:SfPyramidChart>
 </ContentPage>

@@ -19,15 +19,14 @@ The [PlotOffsetStart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-. . .
-<chart:SfCartesianChart.XAxes>
-    <chart:CategoryAxis PlotOffsetStart="30"/>
-</chart:SfCartesianChart.XAxes>
+    . . .
+    <chart:SfCartesianChart.XAxes>
+        <chart:CategoryAxis PlotOffsetStart="30"/>
+    </chart:SfCartesianChart.XAxes>
 
-<chart:SfCartesianChart.YAxes>
-    <chart:NumericalAxis PlotOffsetStart="30"/>
-</chart:SfCartesianChart.YAxes>
-
+    <chart:SfCartesianChart.YAxes>
+        <chart:NumericalAxis PlotOffsetStart="30"/>
+    </chart:SfCartesianChart.YAxes>
 </chart:SfCartesianChart>
 
 {% endhighlight %}
@@ -71,7 +70,6 @@ The [PlotOffsetEnd](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.C
     <chart:SfCartesianChart.YAxes>
         <chart:NumericalAxis PlotOffsetEnd="30"/>
     </chart:SfCartesianChart.YAxes>
-
 </chart:SfCartesianChart>
 
 {% endhighlight %}

@@ -49,12 +49,12 @@ Add the following code snippet to the "Info" file:
 {% highlight xaml %}
 
 <dict>
-...    
-<key>NSPhotoLibraryUsageDescription</key>    
-<string>This App needs permission to access the Photos</string>    
-<key>NSPhotoLibraryAddUsageDescription</key>    
-<string>This App needs permission to access the Photos</string> 
-...
+    ...    
+    <key>NSPhotoLibraryUsageDescription</key>    
+    <string>This App needs permission to access the Photos</string>    
+    <key>NSPhotoLibraryAddUsageDescription</key>    
+    <string>This App needs permission to access the Photos</string> 
+    ...
 </dict>
 
 {% endhighlight %}

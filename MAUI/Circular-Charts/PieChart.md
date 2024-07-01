@@ -90,7 +90,7 @@ By using the [StartAngle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Ch
                      EndAngle="360"
                      ItemsSource="{Binding Data}"
                      XBindingPath="Product"
-                     YBindingPath="SalesRate" />
+                     YBindingPath="SalesRate"/>
 </chart:SfCircularChart>
 
 {% endhighlight %}

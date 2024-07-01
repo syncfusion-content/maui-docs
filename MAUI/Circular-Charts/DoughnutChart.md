@@ -20,7 +20,7 @@ N> The circular chart has [Series](https://help.syncfusion.com/cr/maui/Syncfusio
 <chart:SfCircularChart>
     <chart:DoughnutSeries ItemsSource="{Binding Data}" 
                           XBindingPath="Product" 
-                          YBindingPath="SalesRate" />
+                          YBindingPath="SalesRate"/>
 </chart:SfCircularChart>
 
 {% endhighlight %}
@@ -54,7 +54,7 @@ The [InnerRadius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Dou
     <chart:DoughnutSeries ItemsSource="{Binding Data}"
                           InnerRadius="0.7"	
                           XBindingPath="Product"
-                          YBindingPath="SalesRate" />
+                          YBindingPath="SalesRate"/>
 </chart:SfCircularChart>
 
 {% endhighlight %}
@@ -88,7 +88,7 @@ By using the [StartAngle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Ch
     <chart:DoughnutSeries StartAngle="180" EndAngle="360"
                           ItemsSource="{Binding Data}"
                           XBindingPath="Product" 
-                          YBindingPath="SalesRate" />
+                          YBindingPath="SalesRate"/>
 </chart:SfCircularChart>
     
 {% endhighlight %}
@@ -126,15 +126,15 @@ The [CenterHoleSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.
 <chart:SfCircularChart>    
     <chart:DoughnutSeries ItemsSource="{Binding Data}" XBindingPath="Name" YBindingPath="Value"/>
         <chart:DoughnutSeries.CenterView>
-                <Border HeightRequest="{Binding CenterHoleSize}" WidthRequest="{Binding CenterHoleSize}">
-                    <Border.StrokeShape>
-                        <RoundRectangle CornerRadius="200"/>
-                    </Border.StrokeShape>
-                    <StackLayout>
-                        <Label Text="Total :" />
-                        <Label Text="357,580 km²"/>
-                    </StackLayout>
-                </Border>
+            <Border HeightRequest="{Binding CenterHoleSize}" WidthRequest="{Binding CenterHoleSize}">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="200"/>
+                </Border.StrokeShape>
+                <StackLayout>
+                    <Label Text="Total :"/>
+                    <Label Text="357,580 km²"/>
+                </StackLayout>
+            </Border>
         </chart:DoughnutSeries.CenterView>
     </chart:DoughnutSeries>
 </chart:SfCircularChart>

@@ -27,7 +27,7 @@ N> The Cartesian chart has the [Series](https://help.syncfusion.com/cr/maui/Sync
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-...
+    ...
     <chart:SfCartesianChart.XAxes>
         <chart:CategoryAxis/>
     </chart:SfCartesianChart.XAxes>
@@ -40,7 +40,6 @@ N> The Cartesian chart has the [Series](https://help.syncfusion.com/cr/maui/Sync
                            XBindingPath="XValue"
                            High="HighValue"
                            Low="LowValue"/>
-    
 </chart:SfCartesianChart>
 
 {% endhighlight %}
@@ -79,13 +78,12 @@ A marker, also known as a symbol, is used to determine or highlight the position
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-...
+    ...
     <chart:RangeAreaSeries XBindingPath="XValue"
                            High="HighValue"
                            Low="LowValue"
                            ItemsSource="{Binding Data}"
                            ShowMarkers="True"/>
-
 </chart:SfCartesianChart>
 
 {% endhighlight %}
@@ -126,7 +124,7 @@ In order to change the series markers’ appearance, create an instance of the [
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-...
+    ...
     <chart:RangeAreaSeries XBindingPath="XValue"
                            High="HighValue"
                            Low="LowValue"
@@ -141,7 +139,6 @@ In order to change the series markers’ appearance, create an instance of the [
                                        Width="8"/>
         </chart:RangeAreaSeries.MarkerSettings>
     </chart:RangeAreaSeries>
-    
 </chart:SfCartesianChart>
 
 {% endhighlight %}

@@ -29,6 +29,7 @@ N> The cartesian chart has [Series](https://help.syncfusion.com/cr/maui/Syncfusi
     <chart:SfCartesianChart.YAxes>
         <chart:NumericalAxis/>
     </chart:SfCartesianChart.YAxes>   
+
     <chart:StepAreaSeries ItemsSource="{Binding Data}"
                           XBindingPath="Month"
                           YBindingPath="Value"/>
@@ -70,11 +71,11 @@ A marker, also known as a symbol, determines or highlights the data point’s po
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-...
- <chart:StepAreaSeries XBindingPath="Month"
-                       YBindingPath="Value"
-                       ItemsSource="{Binding Data}"
-                       ShowMarkers="True"/>
+    ...
+    <chart:StepAreaSeries XBindingPath="Month"
+                          YBindingPath="Value"
+                          ItemsSource="{Binding Data}"
+                          ShowMarkers="True"/>
 
 </chart:SfCartesianChart>
 
@@ -115,21 +116,20 @@ To change the series markers appearance, create an instance of the [MarkerSettin
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-...
- <chart:StepAreaSeries XBindingPath="Month"
-                       YBindingPath="Value"
-                       ItemsSource="{Binding Data}"
-                       ShowMarkers="True">
-    <chart:StepAreaSeries.MarkerSettings>
-        <chart:ChartMarkerSettings Type="Diamond"
-                                   Fill="Brown"
-                                   Stroke="Black"
-                                   StrokeWidth="1"
-                                   Height="8"
-                                   Width="8"/>
-    </chart:StepAreaSeries.MarkerSettings>
- </chart:StepAreaSeries>
-
+    ...
+    <chart:StepAreaSeries XBindingPath="Month"
+                          YBindingPath="Value"
+                          ItemsSource="{Binding Data}"
+                          ShowMarkers="True">
+        <chart:StepAreaSeries.MarkerSettings>
+            <chart:ChartMarkerSettings Type="Diamond"
+                                        Fill="Brown"
+                                        Stroke="Black"
+                                        StrokeWidth="1"
+                                        Height="8"
+                                        Width="8"/>
+        </chart:StepAreaSeries.MarkerSettings>
+    </chart:StepAreaSeries>
 </chart:SfCartesianChart>
 
 {% endhighlight %}

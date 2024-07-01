@@ -19,11 +19,11 @@ To display a line series in a polar chart, instantiate the [PolarLineSeries](htt
 
 <chart:SfPolarChart>
     <chart:SfPolarChart.PrimaryAxis>
-        <chart:CategoryAxis />
+        <chart:CategoryAxis/>
     </chart:SfPolarChart.PrimaryAxis>
 
     <chart:SfPolarChart.SecondaryAxis>
-        <chart:NumericalAxis />
+        <chart:NumericalAxis/>
     </chart:SfPolarChart.SecondaryAxis>   
 
     <chart:PolarLineSeries ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Tree"/>  
@@ -63,7 +63,7 @@ The [GridLineType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Sf
 {% highlight xaml %}
 
 <chart:SfPolarChart GridLineType="Polygon"> 
-. . .
+    . . .
     <chart:PolarLineSeries ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Tree"/>  
 </chart:SfPolarChart>
 
@@ -99,10 +99,9 @@ The [IsClosed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.PolarS
 {% highlight xaml %}
 
 <chart:SfPolarChart> 
-. . .
+    . . .
     <chart:PolarLineSeries ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Tree"
-                IsClosed="False"/>  
-
+                           IsClosed="False"/>  
 </chart:SfPolarChart>
 
 {% endhighlight %}
@@ -137,10 +136,9 @@ A marker, also known as a symbol, is used to determine or highlight the position
 {% highlight xaml %}
 
 <chart:SfPolarChart>
-...
- <chart:PolarLineSeries ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Tree" 
-                ShowMarkers="True"/>
-
+    ...
+    <chart:PolarLineSeries ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Tree" 
+                           ShowMarkers="True"/>
 </chart:SfPolarChart>
 
 {% endhighlight %}
@@ -180,14 +178,14 @@ In order to change the series markers appearance, create an instance of the [Mar
 {% highlight xaml %}
 
 <chart:SfPolarChart>
-...
- <chart:PolarLineSeries ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Tree"
-                ShowMarkers="True">
-    <chart:PolarLineSeries.MarkerSettings>
-        <chart:ChartMarkerSettings Type="Diamond" Fill="Brown" Stroke="Black"
-                StrokeWidth="1" Height="8" Width="8"/>
-    </chart:PolarLineSeries.MarkerSettings>
- </chart:PolarLineSeries>
+    ...
+    <chart:PolarLineSeries ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Tree"
+                           ShowMarkers="True">
+        <chart:PolarLineSeries.MarkerSettings>
+            <chart:ChartMarkerSettings Type="Diamond" Fill="Brown" Stroke="Black"
+                                       StrokeWidth="1" Height="8" Width="8"/>
+        </chart:PolarLineSeries.MarkerSettings>
+    </chart:PolarLineSeries>
 </chart:SfPolarChart>
 
 {% endhighlight %}

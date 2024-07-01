@@ -21,9 +21,9 @@ The following code snippet demonstrates the usage of this method:
 
 {% highlight c# %}
 
- SfFunnelChart chart = new SfFunnelChart();
- ...
- chart.SaveAsImage("ChartSample.jpeg");
+SfFunnelChart chart = new SfFunnelChart();
+...
+chart.SaveAsImage("ChartSample.jpeg");
 
 this.Content = chart;
 
@@ -50,12 +50,12 @@ Add the following code snippet to the "Info" file:
 {% highlight xaml %}
 
 <dict>
-...    
-<key>NSPhotoLibraryUsageDescription</key>    
-<string>This App needs permission to access the Photos</string>    
-<key>NSPhotoLibraryAddUsageDescription</key>    
-<string>This App needs permission to access the Photos</string> 
-...
+    ...    
+    <key>NSPhotoLibraryUsageDescription</key>    
+    <string>This App needs permission to access the Photos</string>    
+    <key>NSPhotoLibraryAddUsageDescription</key>    
+    <string>This App needs permission to access the Photos</string> 
+    ...
 </dict>
 
 {% endhighlight %}
@@ -74,9 +74,9 @@ The following code snippet demonstrates the usage of this method:
 
 {% highlight c# %}
 
- SfFunnelChart chart = new SfFunnelChart();
- ...
- await chart.GetStreamAsync(ImageFileFormat.Jpeg);
+SfFunnelChart chart = new SfFunnelChart();
+...
+await chart.GetStreamAsync(ImageFileFormat.Jpeg);
 
 this.Content = chart;
 

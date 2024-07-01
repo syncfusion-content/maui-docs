@@ -21,9 +21,9 @@ N> The Cartesian chart has a [Series](https://help.syncfusion.com/cr/maui/Syncfu
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-...
+    ...
     <chart:SfCartesianChart.XAxes>
-    <chart:CategoryAxis/>
+        <chart:CategoryAxis/>
     </chart:SfCartesianChart.XAxes>
 
     <chart:SfCartesianChart.YAxes>
@@ -45,7 +45,6 @@ N> The Cartesian chart has a [Series](https://help.syncfusion.com/cr/maui/Syncfu
     <chart:StackingAreaSeries ItemsSource="{Binding Data4}"
                               XBindingPath="Year"
                               YBindingPath="Value"/>         
-
 </chart:SfCartesianChart>
 
 
