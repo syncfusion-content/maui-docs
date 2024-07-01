@@ -163,6 +163,7 @@ Without taking entire words into consideration, the text breaks at character lim
  dataGrid.Columns[0].LineBreakMode = LineBreakMode.CharacterWrap;
 {% endhighlight %}
 {% endtabs %}
+
 #### Word wrap
 
 Entire words are shifted to the next line at word boundaries when the text splits.
