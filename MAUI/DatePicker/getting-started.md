@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting started with .NET MAUI Date Picker control | Syncfusion
+title: Getting Started with .NET MAUI Date Picker Control | Syncfusion
 description: Learn about getting started with Syncfusion .NET MAUI Date Picker (SfDatePicker) control and its basic features.
 platform: maui
 control: SfDatePicker
 documentation: ug
 ---
 
-# Getting started with .NET MAUI Date Picker (SfDatePicker)
+# Getting Started with .NET MAUI Date Picker
 This section explains how to add the Date Picker control. It covers only the basic features needed to get started with Syncfusion Date Picker.
 
 ## Creating an application using the .NET MAUI Date Picker
