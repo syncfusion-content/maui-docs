@@ -64,7 +64,6 @@ N> This is only applicable to the secondary axis of Polar chart.
     <chart:SfPolarChart.SecondaryAxis>
         <chart:NumericalAxis TickPosition="Inside"/>
     </chart:SfPolarChart.SecondaryAxis>
-
 </chart:SfPolarChart>
 
 {% endhighlight %}

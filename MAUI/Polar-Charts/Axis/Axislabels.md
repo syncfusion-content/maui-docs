@@ -26,7 +26,6 @@ N> This is only applicable to the secondary axis of Polar chart.
     <chart:SfPolarChart.SecondaryAxis>
         <chart:NumericalAxis LabelsPosition="Inside"/>
     </chart:SfPolarChart.SecondaryAxis>
-
 </chart:SfPolarChart>
 
 
@@ -81,7 +80,7 @@ The chart axis supports customizing the rendering position of the edge labels us
 {% highlight xaml %}
 
 <chart:SfPolarChart>
-. . .
+    . . .
     <chart:SfPolarChart.SecondaryAxis>
         <chart:DateTimeAxis EdgeLabelsDrawingMode="Center"/>
     </chart:SfPolarChart.SecondaryAxis>
@@ -151,7 +150,7 @@ The `Visible` option is used to display the edge labels irrespective of the auto
 {% highlight xaml %}
 
 <chart:SfPolarChart>
-. . .
+    . . .
     <chart:SfPolarChart.SecondaryAxis>
         <chart:NumericalAxis EdgeLabelsVisibilityMode="Visible"/>
     </chart:SfPolarChart.SecondaryAxis>
