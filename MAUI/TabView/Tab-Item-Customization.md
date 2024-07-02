@@ -88,6 +88,7 @@ The assigned view will get displayed in the main area of the tab view.
 {% endhighlight %}
 
 {% highlight C# %}
+
     var tabView = new SfTabView();
     var tabItems = new TabItemCollection
     {
@@ -100,6 +101,7 @@ The assigned view will get displayed in the main area of the tab view.
             }
         }
     }
+    
 {% endhighlight %}
 
 {% endtabs %}

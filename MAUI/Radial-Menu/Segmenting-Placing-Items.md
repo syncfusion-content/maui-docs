@@ -84,6 +84,7 @@ The [`VisibleSegmentsCount`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui
 
 ### SegmentIndex
 
+
 [`SegmentIndex`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenuItem.html#Syncfusion_Maui_RadialMenu_SfRadialMenuItem_SegmentIndex) property is used to specify the index of the radial menu item in circular panel. Based on the index, the radial menu items are inserted in the segment. When the [`SegmentIndex`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenuItem.html#Syncfusion_Maui_RadialMenu_SfRadialMenuItem_SegmentIndex) is not specified for a RadialMenuItem the menu item is arranged in the next available free segment.
 
 ## Code snippet for VisibleSegmentCount and SegmentIndex

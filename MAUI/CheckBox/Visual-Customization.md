@@ -208,13 +208,11 @@ The [`LineBreakMode`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Button
 
 {% tabs %}
 {% highlight xaml %}
-   
         <syncfusion:SfCheckBox x:Name="checkBox" 
                                IsChecked="True" 
                                WidthRequest="200" 
                                LineBreakMode="WordWrap" 
                                Text="The LineBreakMode allows you to wrap or truncate the text."/>
-
 {% endhighlight %}
 {% highlight c# %}
 
