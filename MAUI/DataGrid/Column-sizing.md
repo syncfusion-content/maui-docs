@@ -5,6 +5,7 @@ description: Learn all about Column Sizing support in Syncfusion MAUI DataGrid (
 platform: maui
 control: SfDataGrid
 documentation: ug
+keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .net maui datagrid, .net maui grid, .net grid maui, .net maui sizing, maui column sizing
 ---
 
 # Column Sizing in .NET MAUI DataGrid (SfDataGrid)

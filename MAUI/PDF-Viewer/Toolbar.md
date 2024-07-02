@@ -14,18 +14,7 @@ The [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.
 
 ## Show/hide the toolbar
 
-By default, the built-in toolbar is visible. You can `hide` it by setting the `ShowToolbars` property of the PDF Viewer to `false`. And you can `show` the built-in toolbar by setting the `ShowToolbars` property of the PDF Viewer to `true`.
-
-{% tabs %}
-{% highlight C# %}
-//set the ShowToolbars to false
-public MainPage()
-{
-     SfPdfViewer pdfViewer=new SfPdfViewer();
-     pdfViewer.ShowToolbars = false;
-}  
-{% endhighlight %}
-{% endtabs %}
+By default, the built-in toolbar is visible. You can hide it by setting the `ShowToolbars` property of the PDF Viewer to `false`. And you can show the built-in toolbar by setting the `ShowToolbars` property of the PDF Viewer to `true`.
 
 {% tabs %}
 {% highlight XAML %}
@@ -39,11 +28,9 @@ public MainPage()
 
 ## Customize the toolbar 
 
-To customize the toolbar, you can programmatically add, remove, and hide the items based on your needs.
+To customize the toolbar, you can programmatically add, remove, and hide the items based on your needs using the `GetByName` method.
 
-### Customizing toolbar items using the GetByName method
-
-**Accessing and modifying the visibility of the toolbar items**
+### Accessing and modifying the visibility of the toolbar items
 
 By using the `GetByName` method with its specified toolbar or icon names, you can access the properties of those toolbars or items. After accessing the item, you can modify its visibility by setting the `IsVisible` property. Here, we retrieve the toolbar "PrimaryToolbar" and "Search" item using the GetByName method and hide the "Search" item by setting its visibility to false.
 
@@ -59,7 +46,7 @@ item.IsVisible = false; // Hide the search item
 {% endhighlight %}
 {% endtabs %}
 
-**Adding a new toolbar item**
+### Adding a new toolbar item
 
 To add an item to the toolbar in [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html), first, create the UI element you want to include. Then, convert that element into a ToolbarItem using the `ToolbarItem` method. Finally, add the newly created ToolbarItem to the toolbar using the `Add` method. Here we create the new button fileOpenButton and retrieve the "PrimaryToolbar" using the GetByName method. Add the new button to the "Primary Toolbar".
 
@@ -87,7 +74,7 @@ pdfViewer.Toolbars?.GetByName("PrimaryToolbar")?.Items?.Add(new Syncfusion.Maui.
 {% endhighlight %}
 {% endtabs %}
 
-**Adding a new toolbar item at a specific index**
+### Adding a new toolbar item at a specific index
 
 To add an item at a specific index in the toolbar in [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html), first create the UI element you want to include. Then, convert that element into a ToolbarItem using the `ToolbarItem` method. Finally, add the newly created ToolbarItem to the toolbar using the `Insert` method. Use the `Index` property to get the index of the item you want to add after, and insert the new item at a specific index. Here we create the button fileSaveButton and retrieve the index of the "Print" button in the "PrimaryToolbar". The new button is inserted into the toolbar right after the "Print" button.
 
@@ -110,7 +97,7 @@ Button fileSaveButton = new Button
  };
 //We access the PrimaryToolbar on the desktop using the GetByName method and get the item index using Index property.
 
-var index = (int)pdfViewer?.Toolbars?.GetByName("PrimaryToolbar ")?.Items?.GetByName("Print")?.Index;
+var index = (int)pdfViewer?.Toolbars?.GetByName("PrimaryToolbar")?.Items?.GetByName("Print")?.Index;
 
 // We accessed the PrimaryToolbar on the desktop using the GetByName method and inserted the item after the last item index.
 
@@ -118,7 +105,7 @@ pdfViewer.Toolbars?.GetByName("PrimaryToolbar")?.Items?.Insert(index+1, new Sync
 {% endhighlight %}
 {% endtabs %}
 
-**Removing an item from the toolbar**
+### Removing an item from the toolbar
 
 To remove an item from the toolbar in [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html), you can access the specific item using the `GetByName` method and then remove it from the toolbar's item collection using the `Remove` method. Here we retrieve the "Outline" item from the "PrimaryToolbar" using the GetByName method. If the item is found, it is removed from the toolbar.
 

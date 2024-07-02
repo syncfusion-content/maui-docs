@@ -5,13 +5,14 @@ description: Learn here all about Scrolling performance in Syncfusion .NET MAUI 
 platform: MAUI
 control: SfDataGrid
 documentation: UG
+keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .net maui datagrid, .net maui grid, .net grid maui, .net maui performance, maui performance
 ---
 
 # Performance in MAUI DataGrid (SfDataGrid)
 
 ## LoadUIView
 
-By default, the [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html) loads a `UIElement` into the [DataGridCell](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCell.html) to display the cell content. The `DataGridColumn.LoadUIView` property determines whether to load a `UIElement` or to draw the cell content directly within the `DataGridCell` on the Android platform to improve scrolling performance. This is applicable only for the android platform as of now.
+By default, the [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html) loads a `UIElement` into the [DataGridCell](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCell.html) to display the cell content. The [DataGridColumn.LoadUIView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_LoadUIView) property determines whether to load a `UIElement` or to draw the cell content directly within the `DataGridCell` on the Android platform to improve scrolling performance. This is applicable only for the android platform as of now.
 
 If `LoadUIView` is set to `false`, the cell content will be drawn directly in the grid cell to enhance performance. However, when `LoadUIView` is set to `true`, the cell content will be displayed through the `UIElement`.
 
@@ -33,6 +34,6 @@ N> Download demo application from [GitHub](https://github.com/SyncfusionExamples
 ### Limitations
 
 * Both implicit and explicit padding are not supported. However, left and right padding will be applied based on the padding, while the top and bottom positions will be adjusted based on the content.
-* `DataGridColumn.LineBreakMode` is not supported.
+* [DataGridColumn.LineBreakMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_LineBreakMode) is not supported.
 * Runtime theme changes will not be applied.
 * This is not supported for [DataGridTemplateColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridTemplateColumn.html), [DataGridCheckBoxColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCheckBoxColumn.html) and [DataGridImageColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridImageColumn.html).

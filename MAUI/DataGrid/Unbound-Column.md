@@ -5,6 +5,7 @@ description: Learn here all about unbound columns support in Syncfusion MAUI Dat
 platform: MAUI
 control: SfDataGrid
 documentation: UG
+keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .net maui datagrid, .net maui grid, .net grid maui, .net maui unbound column, maui unbound coulumn
 ---
 
 # Unbound column in MAUI DataGrid (SfDataGrid)

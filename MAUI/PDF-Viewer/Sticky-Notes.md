@@ -5,7 +5,7 @@ description: Learn here all about Sticky Note Annotations in Syncfusion .NET MAU
 platform: MAUI
 control: SfPdfViewer
 documentation: ug
-keywords: keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .net maui open pdf, maui pdf viewer, maui pdf view.
+keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .net maui open pdf, maui pdf viewer, maui pdf view.
 ---
 
 # Sticky Note Annotation in .NET MAUI PDF Viewer (SfPdfViewer)
@@ -14,7 +14,7 @@ The sticky note annotation feature of [SfPdfViewer](https://help.syncfusion.com/
 
 ## Types of sticky notes
 
-The following sticky note icon types are currently available in [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html). The icon types can be selected from the `StickyNoteIcon` enumeration.
+The following sticky note icon types are currently available in [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html). The icon types can be selected from the [StickyNoteIcon](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.StickyNoteIcon.html) enumeration.
 
 ![Sticky note icon types](Images/Annotations/sticky-note-icon-types.png)
 
@@ -37,11 +37,11 @@ The following image represents how to add the sticky note annotation using the t
 ### Add the sticky note annotation without using the toolbar
 
 You can add sticky note annotations to a PDF document by tapping with a touch (or mouse down) on a PDF page. The following steps explain how to add sticky note annotations to a PDF: 
-1. Set the [AnnotationMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationMode) property of the SfPdfViewer to `StickyNote`. This activates the sticky note mode on the control.
+1. Set the [AnnotationMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationMode) property of the SfPdfViewer to [StickyNote](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.AnnotationMode.html#Syncfusion_Maui_PdfViewer_AnnotationMode_StickyNote). This activates the sticky note mode on the control.
 2. Tap (or mouse down) on a PDF page, where you want to add the sticky note annotation. This will add a sticky note with a default style and a popup will be displayed to write and submit the text.
 3. Once the sticky note is added, [AnnotationMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationMode) is automatically changed to [None](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.AnnotationMode.html#Syncfusion_Maui_PdfViewer_AnnotationMode_None).
 4. You can later select and edit the annotations, if required.
-5. If you need to disable the [AnnotationMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationMode) of `StickyNote`, you need to change the [AnnotationMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationMode) to [None](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.AnnotationMode.html#Syncfusion_Maui_PdfViewer_AnnotationMode_None). 
+5. If you need to disable the [AnnotationMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationMode) of [StickyNote](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.AnnotationMode.html#Syncfusion_Maui_PdfViewer_AnnotationMode_StickyNote), you need to change the [AnnotationMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationMode) to [None](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.AnnotationMode.html#Syncfusion_Maui_PdfViewer_AnnotationMode_None). 
 
 The following code explains how to enable the sticky note mode
 
@@ -50,7 +50,7 @@ The following code explains how to enable the sticky note mode
 // Enable or activate the sticky note mode. 
 void EnableStickyNoteMode() 
 { 
-    // Set the `AnnotationMode` property of `SfPdfViewer` instance to `StickyNote`. 
+    // Set the [AnnotationMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationMode) property of [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) instance to [StickyNote](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.AnnotationMode.html#Syncfusion_Maui_PdfViewer_AnnotationMode_StickyNote). 
     PdfViewer.AnnotationMode = AnnotationMode.StickyNote; 
 } 
 {% endhighlight %}
@@ -63,7 +63,7 @@ Similarly, refer to the following code explains how to disable the sticky note m
 // Disable or deactivate the sticky note mode. 
 void DisableStickyNoteMode() 
 { 
-    // Set the `AnnotationMode` property of `SfPdfViewer` instance to `None`. 
+    // Set the [AnnotationMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationMode) property of [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) instance to [None](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.AnnotationMode.html#Syncfusion_Maui_PdfViewer_AnnotationMode_None). 
     PdfViewer.AnnotationMode = AnnotationMode.None; 
 } 
 {% endhighlight %}
@@ -110,7 +110,7 @@ The following example explains how to obtain the default sticky note annotation 
 {% highlight C# %}
 void CustomizeDefaultStickyNoteSettings() 
 { 
-    // Obtain the default sticky note annotation settings from the `SfPdfViewer` instance. 
+    // Obtain the default sticky note annotation settings from the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) instance. 
     StickyNoteAnnotationSettings stickyNoteSettings = PdfViewer.AnnotationSettings.StickyNote; 
 
     // Modify the default properties. 
