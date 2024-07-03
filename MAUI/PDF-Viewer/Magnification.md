@@ -56,7 +56,7 @@ The .NET MAUI PDF Viewer supports the below zoom modes:
 2. Fit to Width
 
 Fit-to-page ensures that users can see the entire page content to get a quick overview without having to scroll. Fit-to-width is helpful when reading documents with narrow columns, such as newspaper articles or other multicolumn layouts.
-You can change the zoom mode using the `SfPdfViewer.ZoomMode` property of the PDF Viewer, default value for `SfPdfViewer.ZoomMode` is `ZoomMode.Default`.
+You can change the zoom mode using the [SfPdfViewer.ZoomMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.ZoomMode.html#fields) property of the PDF Viewer, default value for [SfPdfViewer.ZoomMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.ZoomMode.html#fields) is [ZoomMode.Default](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.ZoomMode.html#Syncfusion_Maui_PdfViewer_ZoomMode_Default).
 
 ### Change zoom mode from the toolbar
 
@@ -68,7 +68,7 @@ On the desktop built-in toolbar, a magnifying tool is available that shows the c
 
 **Using the zoom mode tool on the mobile**
 
-On the mobile built-in toolbar, by default, the magnifying tool is not visible. When the document `ZoomFactor` is changed, it becomes visible. Using the tool, you can choose the `Fit to Width` or `Fit to Page` option. When an option is selected, the icon will no longer be visible until the zoom percentage changes again. 
+On the mobile built-in toolbar, by default, the magnifying tool is not visible. When the document [ZoomFactor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_ZoomFactor) is changed, it becomes visible. Using the tool, you can choose the `Fit to Width` or `Fit to Page` option. When an option is selected, the icon will no longer be visible until the zoom percentage changes again. 
 
 ![Mobile Zoom Mode Combo box](Images/ZoomModeforMobile.gif)
 
@@ -76,7 +76,7 @@ On the mobile built-in toolbar, by default, the magnifying tool is not visible. 
 
 **Change to fit-to-page**
 
-You can change the `SfPdfViewer.ZoomMode` using the `ZoomMode.FitToPage` enumeration. It will magnify the PDF document so that the entire PDF page is visible in the view port. 
+You can change the [SfPdfViewer.ZoomMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.ZoomMode.html#fields) using the [ZoomMode.FitToPage](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.ZoomMode.html#Syncfusion_Maui_PdfViewer_ZoomMode_FitToPage) enumeration. It will magnify the PDF document so that the entire PDF page is visible in the view port. 
 Refer to the following code example: 
 
 {% tabs %}
@@ -92,7 +92,7 @@ pdfViewer.ZoomMode = ZoomMode.FitToPage;
 
 **Change to fit-to-width**
 
-You can change the `SfPdfViewer.ZoomMode` using the `ZoomMode.FitToWidth` enumeration. It will magnify the PDF document so that the widest page of the PDF document fits the width of the view port. 
+You can change the [SfPdfViewer.ZoomMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.ZoomMode.html#fields) using the [ZoomMode.FitToWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.ZoomMode.html#Syncfusion_Maui_PdfViewer_ZoomMode_FitToWidth) enumeration. It will magnify the PDF document so that the widest page of the PDF document fits the width of the view port. 
 Refer to the following code example:
 
 {% tabs %}
