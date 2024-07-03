@@ -95,5 +95,5 @@ this.Content = picker;
 
 ![Fade and Shrink mode in .NET MAUI Date picker.](images/text-display-mode/picker-fade-shrink.png)
 
-N> [View text displat modes sample in GitHub](https://github.com/SyncfusionExamples/How-to-show-the-picker-items-in-different-text-display-modes-in-maui-picker)
+N> [View text display modes sample in GitHub](https://github.com/SyncfusionExamples/How-to-show-the-picker-items-in-different-text-display-modes-in-maui-picker)
 
