@@ -20,7 +20,7 @@ The Scheduler control supports different types of calendars such as Gregorian, K
 <td>
 * GregorianCalendar<br>
 * HebrewCalendar<br>
-* HijriCalendar<br>
+* HijriCalendar (Islamic calendar)<br>
 * KoreanCalendar<br>
 * TaiwanCalendar<br>
 * ThaiCalendar<br>
@@ -34,7 +34,6 @@ The Scheduler control supports different types of calendars such as Gregorian, K
 * Gezer Calendar<br>
 * Haida Calendar<br>
 * Igbo calendar<br>
-* Islamic calendar<br>
 * Javanese calendar<br>
 * Maramataka (Māori lunar calendar)<br>
 * Nepal Sambat<br>
