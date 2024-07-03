@@ -10,11 +10,11 @@ keywords : .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .n
 
 # Working with Toolbar in .NET MAUI Pdf Viewer (SfPdfViewer)
 
-The [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) has a built-in toolbar, which allows you to perform operations such as adding, modifying annotations, searching text, etc. Additionally, you have the option to show or hide the default built-in toolbar, its sub-toolbars, and toolbar items. You can customize your own toolbar by disabling the built-in toolbar, then implementing one in the application and integrating the custom toolbar UI into the PDF viewer APIs. You can see the custom toolbar example [here](https://github.com/SyncfusionExamples/maui-pdf-viewer-examples/tree/master/Custom%20Toolbar).
+The [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) has a built-in toolbar, which allows you to perform operations such as adding, modifying annotations, searching text, etc. Additionally, you have the option to show or hide the default built-in toolbar, its sub-toolbars, and toolbar items. 
 
 ## Show/hide the toolbar
 
-By default, the built-in toolbar is visible. You can hide it by setting the [ShowToolbars](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_ShowToolbars) property of the PDF Viewer to `false`. And you can show the built-in toolbar by setting the [ShowToolbars](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_ShowToolbars) property of the PDF Viewer to `true`.
+By default, the built-in toolbar is visible. In certain scenarios, you might want to hide all the toolbars in the PDF Viewer to display the document in full view or to use customized toolbars based on your application needs. You can do this by setting the [ShowToolbars](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_ShowToolbars) property of the PDF Viewer to `false`. And you can show the built-in toolbar by setting the [ShowToolbars](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_ShowToolbars) property of the PDF Viewer to `true`.
 
 {% tabs %}
 {% highlight C# %}
@@ -38,6 +38,8 @@ public MainPage()
  
 {% endhighlight %}
 {% endtabs %}
+
+You can find the sample project from the [link provided here](https://github.com/SyncfusionExamples/maui-pdf-viewer-examples/tree/master/Toolbar customization/HideToolbars).
 
 ## Customize the toolbar 
 
@@ -150,7 +152,9 @@ To remove an item from the toolbar in [SfPdfViewer](https://help.syncfusion.com/
 {% endhighlight %}
 {% endtabs %}
 
-Similarly, you can customize the other toolbars and their items by accessing their names. We have listed the other toolbar and toolbar item names below:
+You can find the sample project for removing an item from the desktop toolbar using the [link provided here](https://github.com/SyncfusionExamples/maui-pdf-viewer-examples/tree/master/Toolbar customization/RemoveToolbarItemDesktop).
+
+Similarly, you can customize the other toolbars and their items by accessing their names. We have listed the other toolbar and toolbar item names below: 
 
 ### Mobile toolbar names 
 
