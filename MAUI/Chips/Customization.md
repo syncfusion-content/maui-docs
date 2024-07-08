@@ -144,7 +144,6 @@ using Syncfusion.Maui.Core;
 
 N> The Default value of ClosebuttonColor is [`Color.FromArgb("#49454E")`].
 
-
 ## SelectionIndicatorColor
 
 The [`SelectionIndicatorColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChip.html#Syncfusion_Maui_Core_SfChip_SelectionIndicatorColor) property customizes the selection indicator color in SfChip.
