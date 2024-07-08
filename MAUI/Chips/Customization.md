@@ -189,9 +189,9 @@ using Syncfusion.Maui.Core;
 
 N> The default value of SelectionIndicatorColor is [`Color.FromRgb(30, 25, 43)`].
 
-## BackgroundColor
+## Background Color
 
-The [`BackgroundColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChip.html#Syncfusion_Maui_Core_SfChip_BackgroundColor) property customizes the background color of SfChip.
+The [`Background`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ButtonBase.html#Syncfusion_Maui_Core_ButtonBase_Background) property customizes the background color of SfChip.
 
 {% tabs %}
 
@@ -202,7 +202,7 @@ The [`BackgroundColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core
         <chip:SfChip     WidthRequest="100"
                         HorizontalOptions="Center"
                         VerticalOptions="Center"
-                        BackgroundColor="LightCoral"
+                        Background="LightCoral"
                         >
         </chip:SfChip>  
     </StackLayout>
@@ -219,7 +219,7 @@ using Syncfusion.Maui.Core;
     chip.WidthRequest = 100;
     chip.HorizontalOptions = LayoutOptions.Center;
     chip.VerticalOptions = LayoutOptions.Center;
-    chip.BackgroundColor = Colors.LightCoral;
+    chip.Background = Colors.LightCoral;
     stackLayout.Children.Add(chip);
     this.Content = stackLayout;
         
@@ -231,7 +231,7 @@ using Syncfusion.Maui.Core;
 
 ## Stroke
 
-The [`Stroke`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChip.html#Syncfusion_Maui_Core_SfChip_Stroke) property customizes the color of border in SfChip.
+The [`Stroke`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ButtonBase.html#Syncfusion_Maui_Core_ButtonBase_Stroke) property customizes the color of border in SfChip.
 
 {% tabs %}
 
@@ -271,7 +271,7 @@ using Syncfusion.Maui.Core;
 
 ## StrokeThickness
 
-The [`StrokeThickness`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChip.html#Syncfusion_Maui_Core_SfChip_StrokeThickness) property is used to customizes the border thickness of the SfChip on four sides.
+The [`StrokeThickness`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ButtonBase.html#Syncfusion_Maui_Core_ButtonBase_StrokeThickness) property is used to customizes the border thickness of the SfChip on four sides.
 
 {% tabs %}
 
@@ -313,7 +313,7 @@ using Syncfusion.Maui.Core;
 
 ## CornerRadius
 
-The [`CornerRadius`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChip.html#Syncfusion_Maui_Core_SfChip_CornerRadius) property is used to customize the rounded edges in SfChip as demonstrated in the following code sample.
+The [`CornerRadius`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ButtonBase.html#Syncfusion_Maui_Core_ButtonBase_CornerRadius) property is used to customize the rounded edges in SfChip as demonstrated in the following code sample.
 
 {% tabs %}
 
@@ -357,7 +357,7 @@ N> The default value of CornerRadius is [`Thickness(8)`].
 
 ## FontAttributes
 
-The [`FontAttributes`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChip.html#Syncfusion_Maui_Core_SfChip_FontAttributes) property customizes the font style of text in SfChip.
+The [`FontAttributes`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ButtonBase.html#Syncfusion_Maui_Core_ButtonBase_FontAttributes) property customizes the font style of text in SfChip.
 
 {% tabs %}
 
@@ -396,7 +396,7 @@ using Syncfusion.Maui.Core;
 
 ## FontFamily
 
-The [`FontFamily`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChip.html#Syncfusion_Maui_Core_SfChip_FontFamily) property customizes the font family of text in SfChip.
+The [`FontFamily`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ButtonBase.html#Syncfusion_Maui_Core_ButtonBase_FontFamily) property customizes the font family of text in SfChip.
 
 {% tabs %}
 
@@ -436,7 +436,7 @@ using Syncfusion.Maui.Core;
 
 ## FontSize
 
-The [`FontSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChip.html#Syncfusion_Maui_Core_SfChip_FontSize) property customizes the size of text in SfChip.
+The [`FontSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ButtonBase.html#Syncfusion_Maui_Core_ButtonBase_FontSize) property customizes the size of text in SfChip.
 
 {% tabs %}
 
@@ -480,7 +480,7 @@ N> Default Value of FontSize is [`14d`]
    
 ## TextColor
 
-The [`TextColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChip.html#Syncfusion_Maui_Core_SfChip_TextColor) property customizes the color of text in SfChip.
+The [`TextColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ButtonBase.html#Syncfusion_Maui_Core_ButtonBase_TextColor) property customizes the color of text in SfChip.
 
 {% tabs %}
 
@@ -492,7 +492,7 @@ The [`TextColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChi
                         WidthRequest="100"
                         HorizontalOptions="Center"
                         VerticalOptions="Center"
-                        BackgroundColor="Aqua"
+                        Background="Aqua"
                         TextColor="Red"
                         >
         </chip:SfChip>  
@@ -511,7 +511,7 @@ using Syncfusion.Maui.Core;
     chip.WidthRequest = 100;
     chip.HorizontalOptions = LayoutOptions.Center;
     chip.VerticalOptions = LayoutOptions.Center;
-    chip.BackgroundColor = Colors.Aqua;
+    chip.Background = Colors.Aqua;
     chip.TextColor = Colors.Red;
     stackLayout.Children.Add(chip);
     this.Content = stackLayout;
@@ -526,7 +526,7 @@ N> The default value of TextColor is [`Color.FromArgb("#1C1B1F")`].
 
 ## TextAlignment
 
-The [`HorizontalTextAlignment`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChip.html#Syncfusion_Maui_Core_SfChip_HorizontalTextAlignment) and [`VerticalTextAlignment`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChip.html#Syncfusion_Maui_Core_SfChip_VerticalTextAlignment) properties customize the alignment of text in SfChip.
+The [`HorizontalTextAlignment`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ButtonBase.html#Syncfusion_Maui_Core_ButtonBase_HorizontalTextAlignment) and [`VerticalTextAlignment`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ButtonBase.html#Syncfusion_Maui_Core_ButtonBase_VerticalTextAlignment) properties customize the alignment of text in SfChip.
 
 {% tabs %}
 
@@ -655,7 +655,7 @@ using Syncfusion.Maui.Core;
 
 ## ImageSource
 
-The [`ImageSource`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChip.html#Syncfusion_Maui_Core_SfChip_ImageSource) property customizes the icon image of SfChip by adding a custom image.
+The [`ImageSource`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ButtonBase.html#Syncfusion_Maui_Core_ButtonBase_ImageSource) property customizes the icon image of SfChip by adding a custom image.
 
 {% tabs %}
 
@@ -745,7 +745,7 @@ N> The default value of ImageSize is [`18d`].
 
 ## ImageAlignment 
 
-The [`ImageAlignment`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChip.html#Syncfusion_Maui_Core_SfChip_ImageAlignment) property customizes the alignment of icon image in SfChip.
+The [`ImageAlignment`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ButtonBase.html#Syncfusion_Maui_Core_ButtonBase_ImageAlignment) property customizes the alignment of icon image in SfChip.
 
 {% tabs %}
 
@@ -792,7 +792,7 @@ N> The default value of ImageAlignment is [`Alignment.Start`].
 
 ## Command
 
-The [`Command`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChip.html#Syncfusion_Maui_Core_SfChip_Command) property associates a command with an instance of SfChip. This property is most often set with MVVM pattern to bind callbacks back into the ViewModel.
+The [`Command`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ButtonBase.html#Syncfusion_Maui_Core_ButtonBase_Command) property associates a command with an instance of SfChip. This property is most often set with MVVM pattern to bind callbacks back into the ViewModel.
 
 {% tabs %}
 
@@ -808,7 +808,7 @@ The [`Command`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChip.
                         HorizontalOptions="Center"
                         VerticalOptions="Center"
                         WidthRequest="120"
-                        BackgroundColor="{Binding Background}"
+                        Background="{Binding Background}"
                         Command="{Binding ButtonCommand}">
         </chip:SfChip>  
     </StackLayout>
