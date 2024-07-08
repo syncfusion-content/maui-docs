@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Page Navigation in .NET MAUI PDF Viewer control | Syncfusion
+title: Page Navigation in .NET MAUI PDF Viewer Control | Syncfusion
 description: Learn here all about page navigation feature in Syncfusion .NET MAUI PDF Viewer (SfPdfViewer) control and more.
 platform: MAUI
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Page Navigation in .NET MAUI PDF Viewer (SfPdfViewer)
+# Page Navigation in .NET MAUI PDF Viewer
 
 After loading a document, you can navigate or scroll to different pages using the page navigation options, either programmatically or by dragging the scroll head in the UI. This section walks through the page navigation functionalities supported in the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html).
 
