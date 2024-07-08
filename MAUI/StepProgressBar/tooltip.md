@@ -7,7 +7,7 @@ control: SfStepProgressBar
 documentation: ug
 ---
 
-# Tooltip in .NET MAUI Step ProgressBar (SfStepProgressBar)
+# Tooltip in .NET MAUI Step ProgressBar
 
 The tooltip provides information when hovering over or tapping the steps in the step progress bar, displaying details about the each steps.
 
