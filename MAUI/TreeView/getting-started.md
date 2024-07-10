@@ -888,3 +888,5 @@ You can refresh the view by using the [RefreshView](https://help.syncfusion.com/
 treeView.RefreshView();
 {% endhighlight %}
 {% endtabs %}
+
+N> You can refer to our [.NET MAUI TreeView](https://www.syncfusion.com/maui-controls/maui-treeview) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Date TreeView Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/TreeView) that shows you how to render the TreeView in .NET MAUI.
