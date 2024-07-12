@@ -40,7 +40,7 @@ inputLayout.Content = new Entry();
 
 The visibility of the helper text can be disabled by setting the [ShowHelperText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_ShowHelperText) property to false. By default, it is set to true.
 
-![helper label](images/AssistiveLabels/maui-textinputlayout-helpertext.jpg)
+![Maui-TextInputlayout-helper label](images/AssistiveLabels/Helpertext.jpg)
 
 ## Error message
 

@@ -18,7 +18,7 @@ The [ComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComb
 
 ### UI Selection 
 
-The selected item can be changed interactively by selecting from the drop-down list or entering the value in .net maui select menu.
+The selected item can be changed interactively by selecting from the drop-down list or entering the value.
 
 {% tabs %}
 {% highlight xaml %}
@@ -35,7 +35,7 @@ The selected item can be changed interactively by selecting from the drop-down l
 
 The following gif image illustrates the result of the above code:
 
-![.NET MAUI ComboBox UI selection.](Images/Selection/net-maui-combobox-ui-selectmenu.gif)
+![.NET MAUI ComboBox UI selection.](Images/Selection/net-maui-combobox-ui-selection.gif)
 
 
 ### Programmatic selection 
@@ -133,7 +133,7 @@ When setting [MultiSelectionDisplayMode](https://help.syncfusion.com/cr/maui/Syn
 
 {% endtabs %}
 
-![.NET MAUI ComboBox with MultiSelectionDisplayMode as Delimiter and Drop down List.](Images/Selection/net-maui-combobox-delimiter-dropdownlist.jpg)
+![.NET MAUI ComboBox with MultiSelectionDisplayMode as Delimiter.](Images/Selection/net-maui-combobox-delimiter.jpg)
 
 ### Token
 Multi-selection token mode has two different layouts to display the selected items by setting [TokensWrapMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_TokensWrapMode) property.
@@ -163,7 +163,7 @@ When the [TokensWrapMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.In
 
 {% endtabs %}
 
-![.NET MAUI ComboBox Wrap mode with drop down list.](Images/Selection/net-maui-combobox-wrapmode-dropdownlist.png)
+![.NET MAUI ComboBox Wrap mode.](Images/Selection/net-maui-combobox-wrapmode.png)
 
 #### None mode
 
