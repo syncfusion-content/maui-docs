@@ -40,7 +40,7 @@ inputLayout.Content = new Entry();
 
 The visibility of the helper text can be disabled by setting the [ShowHelperText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_ShowHelperText) property to false. By default, it is set to true.
 
-![helper label](images/AssistiveLabels/HelperText.jpg)
+![helper label](images/AssistiveLabels/maui-textinputlayout-helpertext.jpg)
 
 ## Error message
 
@@ -138,4 +138,4 @@ inputLayout.Content = new Entry();
 
 {% endtabs %}
 
-![Reserve space for assistive label img](images/AssistiveLabels/ReserveSpace.png)
+![Reserve space for assistive label image](images/AssistiveLabels/ReserveSpace.png)
