@@ -15,7 +15,7 @@ W> Please note that since the PDF Viewer has built-in scrolling capability, it i
 
 ## Navigate to the desired offset programmatically
 
-The [ScrollToOffset](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_ScrollToOffset_System_Double_System_Double_) method moves the scroll position of the SfPdfViewer to the specified horizontal and vertical offsets. If the specified offset value is wrong, the scroll will not happen, and the older position will be retained.
+The [ScrollToOffset](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_ScrollToOffset_System_Double_System_Double_) method moves the scroll position of the SfPdfViewer to the specified horizontal and vertical offsets. If the specified offset value is wrong, the scroll will not happen, and the older position will be retained. The offset values are represented in device-independent units.
 
 {% tabs %}
 {% highlight c# %}
