@@ -30,19 +30,19 @@ To migrate easier from Xamarin SfBusyIndicator to .NET MAUI [SfBusyIndicator](ht
 <th>.NET MAUI SfBusyIndicator</th>
 <th>Description</th></tr>
 <tr>
-<td> IsBusy </td>
-<td>IsRunning</td>
+<td> {{'[IsBusy](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfBusyIndicator.XForms.SfBusyIndicator.html#Syncfusion_SfBusyIndicator_XForms_SfBusyIndicator_IsBusy)'| markdownify}} </td>
+<td>{{'[IsRunning](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html#Syncfusion_Maui_Core_SfBusyIndicator_IsRunning)'| markdownify}} </td>
 <td>Gets or sets a value of the IsRunning property in busy indicator. It determines whether the animation of indicator to be shown or not.</td></tr>
 <tr>
-<td>Duration</td>
-<td>DurationFactor</td>
+<td>{{'[Duration](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfBusyIndicator.XForms.SfBusyIndicator.html#Syncfusion_SfBusyIndicator_XForms_SfBusyIndicator_Duration)'| markdownify}} </td>
+<td>{{'[DurationFactor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html#Syncfusion_Maui_Core_SfBusyIndicator_DurationFactor)'| markdownify}} </td>
 <td>Gets or sets the value of the duration property. It is used to change the speed of animation to finish a cycle.</td></tr>
 <tr>
-<td>ViewBoxWidth ViewBoxHeight</td>
-<td>SizeFactor</td>
+<td>{{'[ViewBoxWidth ViewBoxHeight](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfBusyIndicator.XForms.SfBusyIndicator.html#Syncfusion_SfBusyIndicator_XForms_SfBusyIndicator_ViewBoxHeight)'| markdownify}}</td>
+<td>{{'[SizeFactor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html#Syncfusion_Maui_Core_SfBusyIndicator_SizeFactor)'| markdownify}}</td>
 <td>Gets or set the size factor of the indicator. This is not applicable for all animation types.</td></tr>
 <tr>
-<td>TextSize</td>
-<td>FontSize</td>
+<td>{{'[TextSize](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfBusyIndicator.XForms.SfBusyIndicator.html#Syncfusion_SfBusyIndicator_XForms_SfBusyIndicator_TextSize)'| markdownify}}</td>
+<td>{{'[FontSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html#Syncfusion_Maui_Core_SfBusyIndicator_FontSize)'| markdownify}}</td>
 <td>Gets or sets the font size of the title text.</td></tr>
 </table> 
