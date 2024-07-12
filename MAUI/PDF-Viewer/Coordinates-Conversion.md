@@ -59,7 +59,7 @@ PDF page coordinates are represented in terms of device-independent coordinates 
 
 ![Page coordinates in .NET MAUI PDF Viewer](Images\Coordinates-Conversion\Page-Coordinates.png)
 
-## PDF scroll coordinates
+## Scroll coordinates
 
 Scroll coordinates in the MAUI PdfViewer denote pixel-based positions as pages are scrolled, indicating precise locations within the entire document. The coordinate system originates from the top-left corner of the visible area.
 
