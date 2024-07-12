@@ -78,7 +78,7 @@ The [InitialsType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAv
 * SingleCharacter
 * DoubleCharacter
 
-You must set the [AvatarName](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html#Syncfusion_Maui_Core_SfAvatarView_AvatarName) string property for displaying the initial value in the AvatarView.
+You must set the [AvatarName]((https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html#Syncfusion_Maui_Core_SfAvatarView_AvatarName)) string property for displaying the initial value in the AvatarView.
 
 #### SingleCharacter
 
