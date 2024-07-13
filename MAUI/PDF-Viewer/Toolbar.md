@@ -12,9 +12,9 @@ keywords : .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .n
 
 The [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) has a built-in toolbar, which allows you to perform operations such as adding, modifying annotations, searching text, etc. Additionally, you have the option to show or hide the default built-in toolbar, its sub-toolbars, and toolbar items. 
 
-## Show/hide the toolbar
+## Show/hide the toolbars
 
-By default, the built-in toolbar is visible. In certain scenarios, you might want to hide all the toolbars in the PDF Viewer to display the document in full view or to use customized toolbars based on your application needs. You can do this by setting the [ShowToolbars](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_ShowToolbars) property of the PDF Viewer to `false`. And you can show the built-in toolbar by setting the [ShowToolbars](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_ShowToolbars) property of the PDF Viewer to `true`.
+The built-in toolbars are visible by default. In certain scenarios, you might want to hide all the toolbars in the PDF Viewer to display the document in full view or to use customized toolbars based on your application needs. You can do this by setting the [ShowToolbars](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_ShowToolbars) property of the PDF Viewer to `false`. And you can show the built-in toolbar by setting the [ShowToolbars](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_ShowToolbars) property of the PDF Viewer to `true`.
 
 {% tabs %}
 {% highlight C# %}
@@ -45,7 +45,7 @@ You can find the sample project from the [link provided here](https://github.com
 
 To customize the toolbar, you can programmatically add, remove, and hide the items based on your needs using the `GetByName` method.
 
-### Accessing and modifying the visibility of the toolbar
+### Hide specific toolbar
 
 By using the [GetByName](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.ToolbarCollection.html#Syncfusion_Maui_PdfViewer_ToolbarCollection_GetByName_System_String) method with its specified toolbar names, you can access the properties of those toolbars. After accessing the toolbar, you can modify its visibility by setting the `IsVisible` property. Here, we retrieve the toolbar "BottomToolbar" using the GetByName method and hide it by setting its visibility to false.
 
@@ -61,7 +61,7 @@ By using the [GetByName](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Pdf
 {% endhighlight %}
 {% endtabs %}
 
-### Accessing and modifying the visibility of the toolbar items
+### Hide specific toolbar item
 
 By using the [GetByName](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.ToolbarItemCollection.html#Syncfusion_Maui_PdfViewer_ToolbarItemCollection_GetByName_System_String) method with its specified toolbar or icon names, you can access the properties of those toolbars or items. After accessing the item, you can modify its visibility by setting the `IsVisible` property. Here, we retrieve the toolbar "PrimaryToolbar" and "Search" item using the GetByName method and hide the "Search" item by setting its visibility to false.
 
@@ -154,9 +154,9 @@ To remove an item from the toolbar in [SfPdfViewer](https://help.syncfusion.com/
 
 You can find the sample project for removing an item from the desktop toolbar using the [link provided here](https://github.com/SyncfusionExamples/maui-pdf-viewer-examples/tree/master/Toolbar customization/RemoveToolbarItemDesktop).
 
-Similarly, you can customize the other toolbars and their items by accessing their names. We have listed the other toolbar and toolbar item names below: 
+Similarly, you can customize other toolbars and their items by accessing their names. The names of these toolbars and toolbar items are listed in the following sections. 
 
-### Mobile toolbar names 
+## Mobile toolbar names 
 
 <table>
 <tr>
@@ -253,7 +253,7 @@ Similarly, you can customize the other toolbars and their items by accessing the
 </tr>
 </table>
 
-### Desktop toolbar names 
+## Desktop toolbar names 
 
 <table>
 <tr>
@@ -330,7 +330,7 @@ Similarly, you can customize the other toolbars and their items by accessing the
 </tr>
 </table>
 
-### Mobile toolbar item names
+## Mobile toolbar item names
 
 <table>
 <tr>
@@ -579,7 +579,7 @@ Similarly, you can customize the other toolbars and their items by accessing the
 </tr>
 </table>
 
-### Desktop toolbar item names
+## Desktop toolbar item names
 
 <table>
 <tr>
