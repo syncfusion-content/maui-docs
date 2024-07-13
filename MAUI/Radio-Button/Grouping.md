@@ -65,7 +65,7 @@ The [`CheckedChanged`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Butto
 
 ## SfRadioGroup
 
-[`SfRadioGroup`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioButton.html) is a container that contains a set of radio buttons. When you select a radio button in a radio group, all other items will be automatically deselected. At any given time, you can only select one radio button from the same radio group. It also includes the [`CheckedChanged`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioGroup.html#Syncfusion_Maui_Buttons_SfRadioGroup_CheckedChanged) event and the [`CheckedItem`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioGroup.html#Syncfusion_Maui_Buttons_SfRadioGroup_CheckedItem) property.
+[`SfRadioGroup`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioGroup.html) is a container that contains a set of radio buttons. When you select a radio button in a radio group, all other items will be automatically deselected. At any given time, you can only select one radio button from the same radio group. It also includes the [`CheckedChanged`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioGroup.html#Syncfusion_Maui_Buttons_SfRadioGroup_CheckedChanged) event and the [`CheckedItem`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioGroup.html#Syncfusion_Maui_Buttons_SfRadioGroup_CheckedItem) property.
 
 {% tabs %}
 {% highlight xaml %}

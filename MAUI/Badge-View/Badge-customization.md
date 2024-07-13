@@ -66,7 +66,7 @@ Content = sfBadgeView;
 
 ## Stroke customization
 
-The stroke and stroke thickness of the badge view can be customized using the [Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeSettings.html#Syncfusion_Maui_Core_BadgeSettings_StrokeProperty) and [StrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeSettings.html#Syncfusion_Maui_Core_BadgeSettings_BorderWidthProperty) properties, respectively.
+The stroke and stroke thickness of the badge view can be customized using the [Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeSettings.html#Syncfusion_Maui_Core_BadgeSettings_StrokeProperty) and [StrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeSettings.html#Syncfusion_Maui_Core_BadgeSettings_StrokeThicknessProperty) properties, respectively.
 
 {% tabs %}
 
