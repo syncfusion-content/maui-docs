@@ -22,11 +22,11 @@ N> The Cartesian chart has [Series](https://help.syncfusion.com/cr/maui/Syncfusi
 
 <chart:SfCartesianChart>
     <chart:SfCartesianChart.XAxes>
-        <chart:CategoryAxis />
+        <chart:CategoryAxis/>
     </chart:SfCartesianChart.XAxes>
 
     <chart:SfCartesianChart.YAxes>
-        <chart:NumericalAxis />
+        <chart:NumericalAxis/>
     </chart:SfCartesianChart.YAxes>  
 
     <chart:LineSeries XBindingPath="Demand"
@@ -90,11 +90,11 @@ The [StrokeDashArray](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts
     </chart:SfCartesianChart.Resources>
 
     <chart:SfCartesianChart.XAxes>
-        <chart:CategoryAxis />
+        <chart:CategoryAxis/>
     </chart:SfCartesianChart.XAxes>
 
     <chart:SfCartesianChart.YAxes>
-        <chart:NumericalAxis />
+        <chart:NumericalAxis/>
     </chart:SfCartesianChart.YAxes>  
 
     <chart:LineSeries XBindingPath="Demand"
@@ -159,11 +159,11 @@ The [SplineSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Sp
 
 <chart:SfCartesianChart>
     <chart:SfCartesianChart.XAxes>
-        <chart:CategoryAxis />
+        <chart:CategoryAxis/>
     </chart:SfCartesianChart.XAxes>
 
     <chart:SfCartesianChart.YAxes>
-        <chart:NumericalAxis />
+        <chart:NumericalAxis/>
     </chart:SfCartesianChart.YAxes>  
 
     <chart:SplineSeries XBindingPath="Demand"
@@ -226,11 +226,11 @@ The following types are used in SplineSeries:
 
 <chart:SfCartesianChart>
     <chart:SfCartesianChart.XAxes>
-        <chart:CategoryAxis />
+        <chart:CategoryAxis/>
     </chart:SfCartesianChart.XAxes>
 
     <chart:SfCartesianChart.YAxes>
-        <chart:NumericalAxis />
+        <chart:NumericalAxis/>
     </chart:SfCartesianChart.YAxes>  
 
     <chart:SplineSeries XBindingPath="Demand"
@@ -276,17 +276,16 @@ A marker, also known as a symbol, is used to determine or highlight the position
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-...
- <chart:LineSeries XBindingPath="Demand"
-                   YBindingPath="Year2010"
-                   ItemsSource="{Binding Data}"
-                   ShowMarkers="True"/>
+    ...
+    <chart:LineSeries XBindingPath="Demand"
+                      YBindingPath="Year2010"
+                      ItemsSource="{Binding Data}"
+                      ShowMarkers="True"/>
 
- <chart:LineSeries XBindingPath="Demand"
-                   YBindingPath="Year2011"
-                   ItemsSource="{Binding Data}"
-                   ShowMarkers="True"/>                  
-
+    <chart:LineSeries XBindingPath="Demand"
+                      YBindingPath="Year2011"
+                      ItemsSource="{Binding Data}"
+                      ShowMarkers="True"/>                  
 </chart:SfCartesianChart>
 
 {% endhighlight %}
@@ -337,20 +336,20 @@ In order to change the series markers appearance, create an instance of the [Mar
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-...
- <chart:LineSeries XBindingPath="Year"
-                   YBindingPath="Percentage"
-                   ItemsSource="{Binding Data}"
-                   ShowMarkers="True">
-    <chart:LineSeries.MarkerSettings>
-        <chart:ChartMarkerSettings Type="Diamond"
-                                   Fill="Brown"
-                                   Stroke="Black"
-                                   StrokeWidth="1"
-                                   Height="8"
-                                   Width="8"/>
-    </chart:LineSeries.MarkerSettings>
- </chart:LineSeries>
+    ...
+    <chart:LineSeries XBindingPath="Year"
+                      YBindingPath="Percentage"
+                      ItemsSource="{Binding Data}"
+                      ShowMarkers="True">
+        <chart:LineSeries.MarkerSettings>
+            <chart:ChartMarkerSettings Type="Diamond"
+                                       Fill="Brown"
+                                       Stroke="Black"
+                                       StrokeWidth="1"
+                                       Height="8"
+                                       Width="8"/>
+        </chart:LineSeries.MarkerSettings>
+    </chart:LineSeries>
 </chart:SfCartesianChart>
 
 {% endhighlight %}

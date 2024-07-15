@@ -57,16 +57,16 @@ chart.ShowDataLabels = true;
 {% highlight xaml %}
 
 <chart:SfPyramidChart ShowDataLabels="True">
-. . .
- <chart:SfPyramidChart.DataLabelSettings>
-    <chart:PyramidDataLabelSettings LabelPlacement="Outer" 
-                                    Context="XValue" 
-                                    UseSeriesPalette="True">
-        <chart:PyramidDataLabelSettings.LabelStyle>
-            <chart:ChartDataLabelStyle Margin="2"/>
-        </chart:PyramidDataLabelSettings.LabelStyle>
-    </chart:PyramidDataLabelSettings>
- </chart:SfPyramidChart.DataLabelSettings>
+    . . .
+    <chart:SfPyramidChart.DataLabelSettings>
+        <chart:PyramidDataLabelSettings LabelPlacement="Outer" 
+                                        Context="XValue" 
+                                        UseSeriesPalette="True">
+            <chart:PyramidDataLabelSettings.LabelStyle>
+                <chart:ChartDataLabelStyle Margin="2"/>
+            </chart:PyramidDataLabelSettings.LabelStyle>
+        </chart:PyramidDataLabelSettings>
+    </chart:SfPyramidChart.DataLabelSettings>
 </chart:SfPyramidChart>
 
 {% endhighlight %}

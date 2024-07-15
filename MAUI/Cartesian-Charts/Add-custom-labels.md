@@ -25,7 +25,7 @@ Keywords: .net maui chart custom axis labels, .net maui chart axis label customi
 <chart:SfCartesianChart>
     . . .
     <chart:SfCartesianChart.XAxes>
-        <model:CustomNumericalAxis />
+        <model:CustomNumericalAxis/>
     </chart:SfCartesianChart.XAxes>
     . . .
 </chart:SfCartesianChart>

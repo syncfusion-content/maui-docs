@@ -18,13 +18,13 @@ documentation: ug
 
 {% highlight c# %}
 
-    //Gets the collection of data that falls inside the given rectangle region.
-    List<object> dataPoints = Series.GetDataPoints(rectangle);
+//Gets the collection of data that falls inside the given rectangle region.
+List<object> dataPoints = Series.GetDataPoints(rectangle);
 
-    or
+or
 
-    //Gets the collection of data from the given axis visible range.
-    List<object> dataPoints = Series.GetDataPoints(startX, endX, startY, endY);
+//Gets the collection of data from the given axis visible range.
+List<object> dataPoints = Series.GetDataPoints(startX, endX, startY, endY);
 
 {% endhighlight  %}
 

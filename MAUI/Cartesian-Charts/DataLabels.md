@@ -30,7 +30,7 @@ The [ShowDataLabels](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.
     <chart:ColumnSeries ItemsSource="{Binding Data}" 
                         XBindingPath="Category"
                         YBindingPath="Value" ShowDataLabels="True">
-        </chart:ColumnSeries>
+    </chart:ColumnSeries>
 </chart:SfCartesianChart>
 
 {% endhighlight %}
@@ -167,7 +167,6 @@ The content of the label can be customized using the [LabelContext](https://help
                         XBindingPath="Name"
                         YBindingPath="Height" 
                         LabelContext="Percentage"/>
-
 </chart:SfCartesianChart>
 
 {% endhighlight %}
@@ -203,7 +202,7 @@ The [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chart
 
 {% highlight xaml %}
 
-<chart:SfCartesianChart IsTransposed="True" >
+<chart:SfCartesianChart IsTransposed="True">
     <chart:SfCartesianChart.Resources>
         <DataTemplate x:Key="labelTemplate">
             <HorizontalStackLayout Spacing="5" WidthRequest="100">
@@ -224,7 +223,6 @@ The [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chart
         </chart:ColumnSeries.DataLabelSettings>
 
     </chart:ColumnSeries>
-
 </chart:SfCartesianChart>
 
 {% endhighlight %}

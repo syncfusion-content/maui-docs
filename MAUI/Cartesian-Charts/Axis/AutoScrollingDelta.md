@@ -21,13 +21,12 @@ By adding [ChartZoomPanBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.
 <chart:SfCartesianChart>
     . . .
     <chart:SfCartesianChart.XAxes>
-        <chart:CategoryAxis AutoScrollingDelta="3" />
+        <chart:CategoryAxis AutoScrollingDelta="3"/>
     </chart:SfCartesianChart.XAxes>
 
     <chart:SfCartesianChart.ZoomPanBehavior>
         <chart:ChartZoomPanBehavior EnablePanning="True"/>
     </chart:SfCartesianChart.ZoomPanBehavior>
-
 </chart:SfCartesianChart>
 
 {% endhighlight %}
@@ -65,7 +64,6 @@ chart.ZoomPanBehavior = zooming;
     <chart:SfCartesianChart.XAxes>
         <chart:CategoryAxis AutoScrollingDelta="3" AutoScrollingMode="Start"/>
     </chart:SfCartesianChart.XAxes>
-
 </chart:SfCartesianChart>
 
 {% endhighlight %}
@@ -98,7 +96,6 @@ In [DateTimeAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Dat
     <chart:SfCartesianChart.XAxes>
         <chart:DateTimeAxis AutoScrollingDelta="3" AutoScrollingDeltaType="Days"/>
     </chart:SfCartesianChart.XAxes>
-
 </chart:SfCartesianChart>
 
 {% endhighlight %}
