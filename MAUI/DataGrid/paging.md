@@ -5,6 +5,7 @@ description: Learn here all about Paging support in Syncfusion MAUI DataGrid (Sf
 platform: MAUI
 control: SfDataGrid
 documentation: UG
+keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .net maui datagrid, .net maui grid, .net grid maui, .net maui paging, maui paging
 ---
 
 # Paging in MAUI DataGrid (SfDataGrid)

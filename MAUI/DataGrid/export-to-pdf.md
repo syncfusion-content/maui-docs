@@ -5,6 +5,7 @@ description: Learn here all about PDF Exporting support in Syncfusion MAUI DataG
 platform: MAUI
 control: SfDataGrid
 documentation: UG
+keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .net maui datagrid, .net maui grid, .net grid maui, .net maui export to pdf, maui export to pdf
 ---
 # Export To PDF in MAUI DataGrid (SfDataGrid)
 

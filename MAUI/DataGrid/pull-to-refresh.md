@@ -5,6 +5,7 @@ description: Learn here all about Pull To Refresh support in Syncfusion .NET MAU
 platform: MAUI
 control: SfDataGrid
 documentation: UG
+keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .net maui datagrid, .net maui grid, .net grid maui, .net maui pull to refresh, maui pull to refresh
 ---
 
 # Pull To Refresh in MAUI DataGrid (SfDataGrid)

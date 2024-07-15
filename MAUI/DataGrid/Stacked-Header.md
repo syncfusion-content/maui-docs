@@ -5,6 +5,7 @@ description: Learn here all about how to Stacked Headers in Syncfusion .NET MAUI
 platform: MAUI
 control: SfDataGrid
 documentation: UG
+keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .net maui datagrid, .net maui grid, .net grid maui, .net maui stacked header, maui stacked header
 ---
 
 # Stacked Headers in MAUI DataGrid (SfDataGrid)
