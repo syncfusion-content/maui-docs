@@ -383,4 +383,4 @@ private void PdfViewer_DocumentLoadFailed(object sender, Syncfusion.Maui.PdfView
 {% endhighlight %}
 {% endtabs %}
 
-The example project to open a password-protected document with a customized password request view can be downloaded [here](https://github.com/SyncfusionExamples/maui-pdf-viewer-examples).
+The example project to open a password-protected document with a customized password request view can be downloaded [here](https://github.com/SyncfusionExamples/maui-pdf-viewer-examples/tree/master/Open%20Password%20Protected%20File).
