@@ -42,9 +42,9 @@ Plot bands are classified into [NumericalPlotBand](https://help.syncfusion.com/c
                                              Fill="Orange"/>
                 </chart:NumericalPlotBandCollection>
             </chart:NumericalAxis.PlotBands>
-            </chart:NumericalAxis>
-        </chart:SfCartesianChart.YAxes>
-        . . .
+        </chart:NumericalAxis>
+    </chart:SfCartesianChart.YAxes>
+    . . .
 </chart:SfCartesianChart>
 
 {% endhighlight %}
@@ -52,8 +52,7 @@ Plot bands are classified into [NumericalPlotBand](https://help.syncfusion.com/c
 {% highlight c# %}
 
 SfCartesianChart chart = new SfCartesianChart();
-    . . .
-    
+. . .
 NumericalAxis numericalAxis = new NumericalAxis();
 NumericalPlotBandCollection numericalPlotBandCollection = new NumericalPlotBandCollection();
 NumericalPlotBand plotBand = new NumericalPlotBand

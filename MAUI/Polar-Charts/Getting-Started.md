@@ -205,7 +205,7 @@ chart.SecondaryAxis = secondaryAxis;
 
 ## Populate Chart with data
 
-To create a polar chart, you can add a [PolarAreaSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.PolarAreaSeries.html) to the polar chart [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPolarChart.html#Syncfusion_Maui_Charts_SfPolarChart_Series) property of the chart, and  then bind the `PlantData` property of the above `ViewModel` to the `PolarAreaSeries.ItemsSource` as follows.
+To create a polar chart, you can add a [PolarLineSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.PolarLineSeries.html?tabs=tabid-1%2Ctabid-4) to the polar chart [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPolarChart.html#Syncfusion_Maui_Charts_SfPolarChart_Series) property of the chart, and  then bind the `PlantData` property of the above `ViewModel` to the `PolarLineSeries.ItemsSource` as follows.
 
 N> In order to plot the series, the [XBindingPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_XBindingPath) and [YBindingPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.XYDataSeries.html#Syncfusion_Maui_Charts_XYDataSeries_YBindingPath) properties need to be configured correctly. These properties allow the chart to retrieve values from the corresponding properties in the data model.
 
@@ -220,15 +220,15 @@ N> In order to plot the series, the [XBindingPath](https://help.syncfusion.com/c
     </chart:SfPolarChart.PrimaryAxis>
 
     <chart:SfPolarChart.SecondaryAxis>
-        <chart:NumericalAxis>
+        <chart:NumericalAxis Maximum="100">
         </chart:NumericalAxis>
     </chart:SfPolarChart.SecondaryAxis>
 
-    <chart:PolarAreaSeries ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Tree" />
+    <chart:PolarLineSeries  ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Tree"/>
         
-    <chart:PolarAreaSeries ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Weed" />
+    <chart:PolarLineSeries  ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Weed"/>
 
-    <chart:PolarAreaSeries ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Flower" />
+    <chart:PolarLineSeries  ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Flower"/>
 </chart:SfPolarChart>
 
 {% endhighlight %}
@@ -242,27 +242,32 @@ CategoryAxis primaryAxis = new CategoryAxis();
 chart.PrimaryAxis = primaryAxis;
 
 //Initializing secondary Axis
-NumericalAxis secondaryAxis = new NumericalAxis();
+NumericalAxis secondaryAxis = new NumericalAxis()
+{
+    Maximum="100"
+};
 chart.SecondaryAxis = secondaryAxis;
 
 //Initialize the series
-PolarAreaSeries series = new PolarAreaSeries();
-series.ItemsSource = (new ViewModel()).PlantDetails;
-series.XBindingPath = "Direction";
-series.YBindingPath = "Tree";
+PolarLineSeries  series1 = new PolarLineSeries();
+series1.ItemsSource = (new ViewModel()).PlantDetails;
+series1.XBindingPath = "Direction";
+series1.YBindingPath = "Tree";
 
-PolarAreaSeries series = new PolarAreaSeries();
-series.ItemsSource = (new ViewModel()).PlantDetails;
-series.XBindingPath = "Direction";
-series.YBindingPath = "Weed";
+PolarLineSeries  series2 = new PolarLineSeries();
+series2.ItemsSource = (new ViewModel()).PlantDetails;
+series2.XBindingPath = "Direction";
+series2.YBindingPath = "Weed";
 
-PolarAreaSeries series = new PolarAreaSeries();
-series.ItemsSource = (new ViewModel()).PlantDetails;
-series.XBindingPath = "Direction";
-series.YBindingPath = "Flower";
+PolarLineSeries  series3 = new PolarLineSeries();
+series3.ItemsSource = (new ViewModel()).PlantDetails;
+series3.XBindingPath = "Direction";
+series3.YBindingPath = "Flower";
 
 //Adding Series to the Chart Series Collection
-chart.Series.Add(series);
+chart.Series.Add(series1);
+chart.Series.Add(series2);
+chart.Series.Add(series3);
 
 {% endhighlight %}
 
@@ -309,8 +314,8 @@ The [ShowDataLabels](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.
 
 <chart:SfPolarChart>
     . . . 
-    <chart:PolarAreaSeries ShowDataLabels="True">
-    </chart:PolarAreaSeries>
+    <chart:PolarLineSeries  ShowDataLabels="True">
+    </chart:PolarLineSeries>
 </chart:SfPolarChart>
 
 {% endhighlight %}
@@ -319,9 +324,9 @@ The [ShowDataLabels](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.
 
 SfPolarChart chart = new SfPolarChart()
 . . .
-PolarAreaSeries series = new PolarAreaSeries();
-series.ShowDataLabels = true;
-chart.Series.Add(series);
+PolarLineSeries series1 = new PolarLineSeries();
+series1.ShowDataLabels = true;
+chart.Series.Add(series1);
 
 {% endhighlight %}
 
@@ -335,7 +340,7 @@ The legend provides information about the data point displayed in the chart. The
 
 {% highlight xaml %}
 
-<chart:SfPolarChart >
+<chart:SfPolarChart>
     . . .
     <chart:SfPolarChart.Legend>
         <chart:ChartLegend/>
@@ -362,37 +367,37 @@ N> Additionally, set a label for each series using the `Label` property of the c
 
 <chart:SfPolarChart>
     . . .
-    <chart:PolarAreaSeries ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Tree"
-                Label="Tree"/>
+    <chart:PolarLineSeries  ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Tree"
+                            Label="Tree"/>
 
-    <chart:PolarAreaSeries ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Weed" 
-                Label="Weed"/>
+    <chart:PolarLineSeries  ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Weed" 
+                            Label="Weed"/>
 
-    <chart:PolarAreaSeries ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Flower" 
-                Label="Flower"/>
+    <chart:PolarLineSeries  ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Flower" 
+                            Label="Flower"/>
 </chart:SfPolarChart>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-PolarAreaSeries series = new PolarAreaSeries (); 
-series.ItemsSource = (new ViewModel()).PlantDetails;
-series.XBindingPath = "Direction"; 
-series.YBindingPath = "Tree"; 
-series.Label = "Tree";
+PolarLineSeries series1 = new PolarLineSeries(); 
+series1.ItemsSource = (new ViewModel()).PlantDetails;
+series1.XBindingPath = "Direction"; 
+series1.YBindingPath = "Tree"; 
+series1.Label = "Tree";
 
-PolarAreaSeries series = new PolarAreaSeries();
-series.ItemsSource = (new ViewModel()).PlantDetails;
-series.XBindingPath = "Direction";
-series.YBindingPath = "Weed";
-series.Label = "Weed";
+PolarLineSeries series2 = new PolarLineSeries();
+series2.ItemsSource = (new ViewModel()).PlantDetails;
+series2.XBindingPath = "Direction";
+series2.YBindingPath = "Weed";
+series2.Label = "Weed";
 
-PolarAreaSeries series = new PolarAreaSeries();
-series.ItemsSource = (new ViewModel()).PlantDetails;
-series.XBindingPath = "Direction";
-series.YBindingPath = "Flower";
-series.Label = "Flower";
+PolarLineSeries series3 = new PolarLineSeries();
+series3.ItemsSource = (new ViewModel()).PlantDetails;
+series3.XBindingPath = "Direction";
+series3.YBindingPath = "Flower";
+series3.Label = "Flower";
 
 {% endhighlight %}
 
@@ -408,7 +413,7 @@ Tooltips are used to display information about a segment when a user hovers over
 
 <chart:SfPolarChart>
     ...
-    <chart:PolarAreaSeries EnableTooltip="True"/>
+    <chart:PolarLineSeries EnableTooltip="True"/>
     ...
 </chart:SfPolarChart> 
 
@@ -416,8 +421,8 @@ Tooltips are used to display information about a segment when a user hovers over
 
 {% highlight C# %}
 
-PolarAreaSeries series = new PolarAreaSeries();
-series.EnableTooltip = true;
+PolarLineSeries  series1 = new PolarLineSeries();
+series1.EnableTooltip = true;
 
 {% endhighlight %}
 
@@ -437,7 +442,7 @@ The following code example gives you the complete code of above configurations.
     xmlns:model="clr-namespace:ChartGettingStarted">
 
     <ContentPage.BindingContext>
-    <model:ViewModel></model:ViewModel>
+        <model:ViewModel></model:ViewModel>
     </ContentPage.BindingContext>
 
     <ContentPage.Content>
@@ -456,17 +461,17 @@ The following code example gives you the complete code of above configurations.
                 </chart:SfPolarChart.PrimaryAxis>
 
                 <chart:SfPolarChart.SecondaryAxis>
-                    <chart:NumericalAxis/>                   
+                    <chart:NumericalAxis Maximum="100"/>                   
                 </chart:SfPolarChart.SecondaryAxis>
 
-            <chart:PolarAreaSeries ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Tree" 
-            Label="Tree" EnableTooltip="True" ShowDataLabels="True"/>
+                <chart:PolarLineSeries ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Tree" 
+                                       Label="Tree" EnableTooltip="True" ShowDataLabels="True"/>
 
-            <chart:PolarAreaSeries ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Weed" 
-            Label="Weed" EnableTooltip="True" ShowDataLabels="True"/>
+                <chart:PolarLineSeries ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Weed" 
+                                       Label="Weed" EnableTooltip="True" ShowDataLabels="True"/>
 
-            <chart:PolarAreaSeries ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Flower" 
-            Label="Flower" EnableTooltip="True" ShowDataLabels="True"/>
+                <chart:PolarLineSeries ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Flower" 
+                                       Label="Flower" EnableTooltip="True" ShowDataLabels="True"/>
             </chart:SfPolarChart>
         </Grid>
     </ContentPage.Content>
@@ -495,10 +500,13 @@ namespace ChartGettingStarted
             CategoryAxis primaryAxis = new CategoryAxis();
             chart.PrimaryAxis = primaryAxis;
 
-            NumericalAxis secondaryAxis = new NumericalAxis();
+            NumericalAxis secondaryAxis = new NumericalAxis()
+            {
+                Maximum="100"
+            };
             chart.SecondaryAxis = secondaryAxis;
 
-            PolarAreaSeries series = new PolarAreaSeries()
+            PolarLineSeries  series1 = new PolarLineSeries()
             {
                 ItemsSource = (new ViewModel()).PlantDetails,
                 XBindingPath = "Direction",
@@ -508,7 +516,7 @@ namespace ChartGettingStarted
                 ShowDataLabels="True"
             }; 
 
-            PolarAreaSeries series = new PolarAreaSeries()
+            PolarLineSeries  series2 = new PolarLineSeries()
             {
                 ItemsSource = (new ViewModel()).PlantDetails,
                 XBindingPath = "Direction",
@@ -518,7 +526,7 @@ namespace ChartGettingStarted
                 ShowDataLabels="True"
             }; 
 
-            PolarAreaSeries series = new PolarAreaSeries()
+            PolarLineSeries series3 = new PolarLineSeries()
             {
                 ItemsSource = (new ViewModel()).PlantDetails,
                 XBindingPath = "Direction",
@@ -528,7 +536,9 @@ namespace ChartGettingStarted
                 ShowDataLabels="True"
             };   
 
-            chart.Series.Add(series);
+            chart.Series.Add(series1);
+            chart.Series.Add(series2);
+            chart.Series.Add(series3);
             this.Content = chart;
         }
     }   
