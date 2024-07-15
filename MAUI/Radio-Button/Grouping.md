@@ -2,7 +2,7 @@
 layout: post
 title: Grouping in .NET MAUI Radio Button Control | Syncfusion
 description: Learn here all about Grouping support in Syncfusion .NET MAUI Radio Button (SfRadioButton) control and more.
-platform: .NET MAUI
+platform: maui
 control: SfRadioButton
 documentation: ug 
 ---
