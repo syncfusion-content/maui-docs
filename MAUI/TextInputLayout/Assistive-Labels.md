@@ -73,7 +73,7 @@ inputLayout.Content = new Entry();
 
 {% endtabs %}
 
-![error label](images/AssistiveLabels/ErrorText.jpg)
+![.NET MAUI error label](images/AssistiveLabels/ErrorText.jpg)
 
 N> Error validations should be done in the application level.
 
