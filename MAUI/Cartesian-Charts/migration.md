@@ -49,8 +49,7 @@ To initialize the control, import the Chart namespace and Initialize [SfCartesia
     . . .
     xmlns:chart="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms">
 
-        <chart:SfChart/>
-
+    <chart:SfChart/>
 </ContentPage>
 {% endhighlight %}
 
@@ -78,8 +77,7 @@ this.Content = chart;
     . . .    
     xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
    
-        <chart:SfCartesianChart/>
-   
+    <chart:SfCartesianChart/>
 </ContentPage>
  
 {% endhighlight %}
@@ -323,7 +321,7 @@ The following code example explains how to migrate the series of Xamarin [SfChar
 {% highlight xaml %}
 
 <chart:SfChart>
-. . .
+    . . .
     <chart:ColumnSeries ItemsSource="{Binding Data}" 
                         XBindingPath="Name" 
                         YBindingPath="Height"/>
@@ -458,8 +456,8 @@ The following code example shows how to enable legend in chart.
 
 <chart:SfChart>
     <chart:SfChart.Legend>
-		<chart:ChartLegend/>
-	</chart:SfChart.Legend>
+	<chart:ChartLegend/>
+    </chart:SfChart.Legend>
 </chart:SfChart>
 
 {% endhighlight %} 
@@ -482,8 +480,8 @@ chart.Legend = new ChartLegend ();
 
 <chart:SfCartesianChart>
     <chart:SfCartesianChart.Legend>
-		<chart:ChartLegend/>
-	</chart:SfCartesianChart.Legend>
+	<chart:ChartLegend/>
+    </chart:SfCartesianChart.Legend>
 </chart:SfCartesianChart>
 
 {% endhighlight %} 
@@ -514,24 +512,23 @@ To customize the data label appearance, create an instance of the [ChartDataMark
 {% highlight xaml %}
 
 <chart:SfChart>  
-     . . .
+    . . .
     <chart:ColumnSeries ItemsSource="{Binding Data}" 
                         XBindingPath="Category"
                         YBindingPath="Value">
-	    <chart:ColumnSeries.DataMarker>
-	        <chart:ChartDataMarker ShowLabel="True">
-		        <chart:ChartDataMarker.LabelStyle>
-			        <chart:DataMarkerLabelStyle 
-                    TextColor="Blue" 
-                    BorderColor="Red" 
-                    BorderThickness="2" 
-                    BackgroundColor="Aqua" 
-                    Angle="315" 
-                    Margin="5" FontSize="18" 
-                    FontAttributes="Italic"/>
-		        </chart:ChartDataMarker.LabelStyle>
-	        </chart:ChartDataMarker>
-	    </chart:ColumnSeries.DataMarker>
+	<chart:ColumnSeries.DataMarker>
+            <chart:ChartDataMarker ShowLabel="True">
+	        <chart:ChartDataMarker.LabelStyle>
+	    	    <chart:DataMarkerLabelStyle TextColor="Blue" 
+                                                BorderColor="Red" 
+                                                BorderThickness="2" 
+                                                BackgroundColor="Aqua" 
+                                                Angle="315" 
+                                                Margin="5" FontSize="18" 
+                                                FontAttributes="Italic"/>
+	        </chart:ChartDataMarker.LabelStyle>
+	    </chart:ChartDataMarker>
+	</chart:ColumnSeries.DataMarker>
     </chart:ColumnSeries>
 </chart:SfChart>
 
@@ -574,15 +571,14 @@ chart.Series.Add(series);
         <chart:ColumnSeries.DataLabelSettings>
             <chart:CartesianDataLabelSettings>
                 <chart:CartesianDataLabelSettings.LabelStyle>
-                    <chart:ChartDataLabelStyle 
-                    TextColor="Blue" 
-                    Stroke="Red" 
-                    StrokeWidth="2" 
-                    Background="Aqua" 
-                    Angle="315" 
-                    Margin="5" 
-                    FontSize="18" 
-                    FontAttributes="Italic"/>
+                    <chart:ChartDataLabelStyle TextColor="Blue" 
+                                               Stroke="Red" 
+                                               StrokeWidth="2" 
+                                               Background="Aqua" 
+                                               Angle="315" 
+                                               Margin="5" 
+                                               FontSize="18" 
+                                               FontAttributes="Italic"/>
                 </chart:CartesianDataLabelSettings.LabelStyle>
             </chart:CartesianDataLabelSettings>
         </chart:ColumnSeries.DataLabelSettings>  
@@ -627,13 +623,12 @@ To customize the tooltip appearance, create an instance of the [ChartTooltipBeha
 {% highlight xaml %}
 
 <chart:SfChart>
-. . . 
+    . . . 
     <chart:SfChart.ChartBehaviors>
-	      <chart:ChartTooltipBehavior 
-          BackgroundColor="Blue" 
-          TextColor="White" 
-          Margin="5" 
-          FontSize="15"/>
+        <chart:ChartTooltipBehavior  BackgroundColor="Blue" 
+                                     TextColor="White" 
+                                     Margin="5" 
+                                     FontSize="15"/>
     </chart:SfChart.ChartBehaviors>
     
     <chart:ColumnSeries ItemsSource="{Binding Data}" 
@@ -672,13 +667,12 @@ chart.ChartBehaviors.Add(tool);
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-. . .
+    . . .
    <chart:SfCartesianChart.TooltipBehavior>
-        <chart:ChartTooltipBehavior 
-        Background="Blue" 
-        TextColor="White" 
-        Margin="5" 
-        FontSize="15"/>
+        <chart:ChartTooltipBehavior Background="Blue" 
+                                    TextColor="White" 
+                                    Margin="5" 
+                                    FontSize="15"/>
    </chart:SfCartesianChart.TooltipBehavior>
 
    <chart:ColumnSeries ItemsSource="{Binding Data}" 
@@ -721,17 +715,17 @@ Create an instance of the [ChartSelectionBehavior](https://help.syncfusion.com/c
 {% highlight xaml %}
 
 <chart:SfChart>
-...
-	<chart:SfChart.ChartBehaviors>
-            <chart:ChartSelectionBehavior/>
+    ...
+    <chart:SfChart.ChartBehaviors>
+        <chart:ChartSelectionBehavior/>
     </chart:SfChart.ChartBehaviors>
 
     <chart:ColumnSeries EnableDataPointSelection="True" 
-            SelectedDataPointIndex="2" 
-            SelectedDataPointColor="Red" 
-            ItemsSource ="{Binding Data}" 
-            XBindingPath="Demand" 
-            YBindingPath="Year2010" />
+                        SelectedDataPointIndex="2" 
+                        SelectedDataPointColor="Red" 
+                        ItemsSource ="{Binding Data}" 
+                        XBindingPath="Demand" 
+                        YBindingPath="Year2010"/>
 </chart:SfChart>
 
 {% endhighlight %} 
@@ -757,14 +751,14 @@ chart.ChartBehaviors.Add(selectionBehavior);
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-. . .
+    . . .
     <chart:SfCartesianChart.Series>
         <chart:ColumnSeries ItemsSource="{Binding Data}" 
                             XBindingPath="Name"
                             YBindingPath="Height">
-                <chart:ColumnSeries.SelectionBehavior>
-                        <chart:DataPointSelectionBehavior SelectionBrush="#314A6E"/>
-                </chart:ColumnSeries.SelectionBehavior>
+            <chart:ColumnSeries.SelectionBehavior>
+                <chart:DataPointSelectionBehavior SelectionBrush="#314A6E"/>
+            </chart:ColumnSeries.SelectionBehavior>
         </chart:ColumnSeries>
     </chart:SfCartesianChart.Series>
 </chart:SfCartesianChart>
@@ -809,9 +803,9 @@ The zooming and panning are achieved using the [ChartZoomPanBehavior](https://he
 {% highlight xaml %}
 
 <chart:SfChart>
-	<chart:SfChart.ChartBehaviors>
-		<chart:ChartZoomPanBehavior EnableZooming="True"/>
-	</chart:SfChart.ChartBehaviors>
+    <chart:SfChart.ChartBehaviors>
+	<chart:ChartZoomPanBehavior EnableZooming="True"/>
+    </chart:SfChart.ChartBehaviors>
 </chart:SfChart>
 
 {% endhighlight %} 

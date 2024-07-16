@@ -25,12 +25,12 @@ Each data label can be represented by the following:
 {% highlight xaml %}
 
 <chart:SfCircularChart>
-. . .
-<chart:PieSeries ShowDataLabels="True"
-                ItemsSource="{Binding Data}"  
-                XBindingPath="Product" 
-                YBindingPath="SalesRate"/>
-. . .
+    . . .
+    <chart:PieSeries ShowDataLabels="True"
+                     ItemsSource="{Binding Data}"  
+                     XBindingPath="Product" 
+                     YBindingPath="SalesRate"/>
+    . . .
 </chart:SfCircularChart>
 
 {% endhighlight %}
@@ -74,10 +74,10 @@ The [LabelPosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.C
                      ShowDataLabels="True"
                      XBindingPath="Product" 
                      YBindingPath="SalesRate">
-            <chart:PieSeries.DataLabelSettings>
-                <chart:CircularDataLabelSettings LabelPosition="Outside">
-                </chart:CircularDataLabelSettings>
-            </chart:PieSeries.DataLabelSettings>
+        <chart:PieSeries.DataLabelSettings>
+            <chart:CircularDataLabelSettings LabelPosition="Outside">
+            </chart:CircularDataLabelSettings>
+        </chart:PieSeries.DataLabelSettings>
     </chart:PieSeries>
 
 </chart:SfCircularChart>
@@ -129,7 +129,6 @@ When the [SmartLabelAlignment](https://help.syncfusion.com/cr/maui/Syncfusion.Ma
 {% highlight xaml %}
 
 <chart:SfCircularChart>
-
     <chart:SfCircularChart.Resources>
         <DataTemplate x:Key="labelTemplate">
         ...
@@ -141,10 +140,10 @@ When the [SmartLabelAlignment](https://help.syncfusion.com/cr/maui/Syncfusion.Ma
                      ShowDataLabels="True"
                      XBindingPath="Product" 
                      YBindingPath="SalesRate">
-            <chart:PieSeries.DataLabelSettings>
-                <chart:CircularDataLabelSettings LabelPosition="Outside" SmartLabelAlignment="Shift">
-                </chart:CircularDataLabelSettings>
-            </chart:PieSeries.DataLabelSettings>
+        <chart:PieSeries.DataLabelSettings>
+            <chart:CircularDataLabelSettings LabelPosition="Outside" SmartLabelAlignment="Shift">
+            </chart:CircularDataLabelSettings>
+        </chart:PieSeries.DataLabelSettings>
     </chart:PieSeries>
 </chart:SfCircularChart>
 
@@ -233,13 +232,12 @@ The content of the label can be customized using the [LabelContext](https://help
 {% highlight xaml %}
 
 <chart:SfCircularChart>
- . . .   
-<chart:PieSeries ItemsSource="{Binding Data}" 
-                 LabelContext="Percentage"
-                 ShowDataLabels="True"
-                 XBindingPath="Product" 
-                 YBindingPath="SalesRate"/>  
-
+    . . .   
+    <chart:PieSeries ItemsSource="{Binding Data}" 
+                     LabelContext="Percentage"
+                     ShowDataLabels="True"
+                     XBindingPath="Product" 
+                     YBindingPath="SalesRate"/>  
 </chart:SfCircularChart>
 
 {% endhighlight %}
@@ -276,22 +274,22 @@ The [SfCircularChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts
 
 <chart:SfCircularChart>
 
-<chart:SfCircularChart.Resources>
-    <DataTemplate x:Key="labelTemplate">
-        <HorizontalStackLayout Spacing="5">
-            <Label Text="{Binding Item.Product}" TextColor="White" FontSize="13"/>
-            <Label Text=" : " TextColor="White" FontSize="13"/>
-            <Label Text="{Binding Item.SalesRate}" TextColor="White" FontSize="13"/>
-        </HorizontalStackLayout>
-    </DataTemplate>
-</chart:SfCircularChart.Resources>
+    <chart:SfCircularChart.Resources>
+        <DataTemplate x:Key="labelTemplate">
+            <HorizontalStackLayout Spacing="5">
+                <Label Text="{Binding Item.Product}" TextColor="White" FontSize="13"/>
+                <Label Text=" : " TextColor="White" FontSize="13"/>
+                <Label Text="{Binding Item.SalesRate}" TextColor="White" FontSize="13"/>
+            </HorizontalStackLayout>
+        </DataTemplate>
+    </chart:SfCircularChart.Resources>
 
-<chart:PieSeries ItemsSource="{Binding Data}" 
-                    ShowDataLabels="True"
-                    LabelTemplate="{StaticResource labelTemplate}"
-                    XBindingPath="Product" 
-                    YBindingPath="SalesRate">
-</chart:PieSeries>
+    <chart:PieSeries ItemsSource="{Binding Data}" 
+                     ShowDataLabels="True"
+                     LabelTemplate="{StaticResource labelTemplate}"
+                     XBindingPath="Product" 
+                     YBindingPath="SalesRate">
+    </chart:PieSeries>
 
 </chart:SfCircularChart>
 
@@ -370,9 +368,9 @@ The [ConnectorLineStyle]() is used to customize the appearance of the line that 
         </DoubleCollection>
     </chart:SfCircularChart.Resources>
     <chart:PieSeries ItemsSource ="{Binding Data}" 
-                        XBindingPath="XValue" 
-                        YBindingPath="YValue"
-                        ShowDataLabels="True">
+                     XBindingPath="XValue" 
+                     YBindingPath="YValue"
+                     ShowDataLabels="True">
         <chart:PieSeries.DataLabelSettings>
             <chart:CircularDataLabelSettings LabelPosition="Outside">
                 <chart:CircularDataLabelSettings.ConnectorLineSettings>
@@ -381,11 +379,9 @@ The [ConnectorLineStyle]() is used to customize the appearance of the line that 
                                               Stroke="Black" 
                                               StrokeWidth="3"></chart:ConnectorLineStyle>
                 </chart:CircularDataLabelSettings.ConnectorLineSettings>
-                </chart:CircularDataLabelSettings>
-            </chart:PieSeries.DataLabelSettings>
+            </chart:CircularDataLabelSettings>
         </chart:PieSeries.DataLabelSettings>
     </chart:PieSeries>
-
 </chart:SfCircularChart>
 
 {% endhighlight %}

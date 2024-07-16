@@ -26,7 +26,7 @@ The [ShowDataLabels](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.
 <chart:SfPolarChart>
     . . .
     <chart:PolarLineSeries ItemsSource="{Binding PlantDetails}"  XBindingPath="Direction" YBindingPath="Tree" 
-                ShowDataLabels="True" />
+                           ShowDataLabels="True"/>
 </chart:SfPolarChart>
 
 {% endhighlight %}
@@ -106,7 +106,7 @@ The content of the label can be customized using the [LabelContext](https://help
 <chart:SfPolarChart>
     . . .
     <chart:PolarAreaSeries ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Tree" 
-                    ShowDataLabels="True" LabelContext="Percentage" />
+                           ShowDataLabels="True" LabelContext="Percentage"/>
 </chart:SfPolarChart>
 
 {% endhighlight %}
@@ -152,7 +152,7 @@ The [SfPolarChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Sf
     </chart:SfPolarChart.Resources>
     . . .
     <chart:PolarAreaSeries ItemsSource="{Binding Data}" XBindingPath="Category" YBindingPath="Values" 
-        ShowDataLabels="True" LabelTemplate="{StaticResource labelTemplate}"/>
+                           ShowDataLabels="True" LabelTemplate="{StaticResource labelTemplate}"/>
 </chart:SfPolarChart>
 
 {% endhighlight %}

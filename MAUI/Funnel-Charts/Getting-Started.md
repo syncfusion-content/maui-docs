@@ -95,7 +95,7 @@ Now, let us define a simple data model that represents a data point in the chart
 
 {% highlight c# %}
 
- public class Admission
+public class Admission
 {
     public string XValue { get; set; }
     public double YValue { get; set; }
@@ -147,7 +147,7 @@ N> Add the namespace of `ViewModel` class to your XAML Page, if you prefer to se
 
     <chart:SfFunnelChart>
         <chart:SfFunnelChart.BindingContext>
-        <model:ChartViewModel/>
+            <model:ChartViewModel/>
         </chart:SfFunnelChart.BindingContext>
     </chart:SfFunnelChart>
 </ContentPage>
@@ -165,7 +165,7 @@ chart.BindingContext = viewModel;
 
 ## Populate chart with data
 
- Binding `Data` to the funnel chart [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfFunnelChart.html#Syncfusion_Maui_Charts_SfFunnelChart_ItemsSource) property from its BindingContext to create our own funnel chart.
+Binding `Data` to the funnel chart [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfFunnelChart.html#Syncfusion_Maui_Charts_SfFunnelChart_ItemsSource) property from its BindingContext to create our own funnel chart.
 
 {% tabs %}   
 
@@ -173,7 +173,7 @@ chart.BindingContext = viewModel;
 
 <chart:SfFunnelChart ItemsSource="{Binding Data}" 
                      XBindingPath="XValue" 
-                     YBindingPath="YValue"/>
+                     YBindingPath="YValue">
 . . .            
 </chart:SfFunnelChart>
 
@@ -257,7 +257,7 @@ The legend provides information about the data point displayed in the funnel cha
 <chart:SfFunnelChart>
     . . .
     <chart:SfFunnelChart.Legend>
-    <chart:ChartLegend/>
+        <chart:ChartLegend/>
     </chart:SfFunnelChart.Legend>
 </chart:SfFunnelChart>
 

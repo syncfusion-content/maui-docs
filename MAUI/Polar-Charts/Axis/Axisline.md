@@ -22,7 +22,7 @@ N> The customization of axis lines using the AxisLineStyle property can only be 
 <chart:SfPolarChart>
     . . .
     <chart:SfPolarChart.SecondaryAxis>
-        <chart:NumericalAxis >
+        <chart:NumericalAxis>
             <chart:NumericalAxis.AxisLineStyle>
                 <chart:ChartLineStyle StrokeWidth ="2" Stroke="Red"/>
             </chart:NumericalAxis.AxisLineStyle>

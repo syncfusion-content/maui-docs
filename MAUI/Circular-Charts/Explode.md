@@ -29,7 +29,7 @@ Exploding a segment is used to pull attention to a specific area of the circular
                           ExplodeRadius="10"
                           ExplodeOnTouch="True"
                           XBindingPath="Utilization"
-                          YBindingPath="ResponseTime" />
+                          YBindingPath="ResponseTime"/>
 </chart:SfCircularChart>
 
 {% endhighlight %}
@@ -71,7 +71,7 @@ By setting the [ExplodeAll](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.
                           ItemsSource="{Binding Data}"
                           XBindingPath="XValue"
                           YBindingPath="YValue"
-                          ExplodeAll="True" />
+                          ExplodeAll="True"/>
 </chart:SfCircularChart>
 
 {% endhighlight %}
