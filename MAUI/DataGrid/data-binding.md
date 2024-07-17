@@ -57,6 +57,10 @@ this.sfDataGrid1.ItemsSource = table;
 {% endhighlight %}
 {% endtabs %}
 
+### CanUseFilterView
+
+The `CanUseFilterView` property in SfDataGrid allows you to enable or disable the built-in filter UI for the DataGrid columns.
+
 ### Limitations
 
 * Custom sorting is not supported.
@@ -142,6 +146,24 @@ The [SourceCollectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Mau
 * **OldItems**: It contains the list of old items affected by the Action.
 * **NewStartingIndex**: It contains the index at which the change occurred.
 * **OldStartingIndex**: It contains the index at which the Action occurred.
+
+### Data virtualization
+
+DataGrid provides support to handle the large amount of data through built-in virtualization feature. With Data virtualization, the record entries will be created in the runtime only upon scrolling to the vertical end which increases the performance of grid loading time.
+
+To set `SfDataGrid.EnableDataVirtualization` property to true, follow the code example:
+
+{% tabs %}
+{% highlight xaml %}
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                       ItemsSource="{Binding EmployeeDetails}"
+                       EnableDataVirtualization="True"/>
+{% endhighlight %}
+
+{% highlight c# %}
+datagrid.EnableDataVirtualization = true;
+{% endhighlight %}
+{% endtabs %}
 
 ## Retain scroll position
 

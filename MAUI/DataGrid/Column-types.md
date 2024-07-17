@@ -337,6 +337,56 @@ dataGrid.Columns.Add( new DataGridTextColumn()
 {% endhighlight %}
 {% endtabs %}
 
+### Formatting DataGridTextColumn with different culture
+
+To apply different CultureInfo for DataGridColumns, use the `DataGridColumn.CultureInfo` property. Assign format of the string to this property. Based on the type of the property the column is associated to format the value. You can use different StringFormats to customize values displayed in the record cells.
+
+To apply different cultures for the GridColumns, follow the code example:
+
+{% tabs %}
+{% highlight c# tabtitle="MainPage.xaml.cs"%}
+dataGrid.Columns.Add(new DataGridTextColumn()
+{
+    MappingName = "EmployeeID",
+    Format = "C",
+    CultureInfo = new CultureInfo("en-US"),
+});
+
+dataGrid.Columns.Add(new DataGridTextColumn()
+{
+    MappingName = "IDNumber",
+    Format = "C",
+    CultureInfo = new CultureInfo("en-GB"),
+});
+{% endhighlight %}
+{% endtabs %}
+
+For auto generated columns, this is achievable by handling the `SfDataGrid.AutoGeneratingColumn` event. To apply different cultures for auto generated GridColumns, follow the code example:
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                       ItemsSource="{Binding Employees}"                       
+                       AutoGeneratingColumn="dataGrid_AutoGeneratingColumn"/>
+{% endhighlight %}
+
+{% highlight c# tabtitle="MainPage.xaml.cs"%}
+private void dataGrid_AutoGeneratingColumn(object sender, DataGridAutoGeneratingColumnEventArgs e)
+{
+    if (e.Column.MappingName == "EmployeeID")
+    {
+        e.Column.Format = "C";
+        e.Column.CultureInfo = new CultureInfo("en-US");
+    }
+    else if (e.Column.MappingName == "IDNumber")
+    {
+        e.Column.Format = "C";
+        e.Column.CultureInfo = new CultureInfo("en-GB");
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
 ## DataGridCheckBoxColumn
 
 The `DataGridCheckBoxColumn` inherits all the properties of the `DataGridColumn`. It loads a [CheckBox](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/checkbox) as the content of record cells in the column and responds to value changes in it. The underlying data source can be changed so that it toggles the values shown in the CheckBox. The `SfDataGrid` automatically generates `DataGridCheckBoxColumn` the property in the underlying collection of the type is set to bool.
@@ -946,6 +996,20 @@ dataGrid.Columns.Add(numericColumn);
 {% endhighlight %}
 
 {% endtabs %}
+
+### Number formatting
+
+The `DataGridNumericColumn` allows formatting the numeric data with culture-specific information.
+
+* `MinValue` - To set the minimum value for the numeric column, use the `DataGridNumericColumn.MinValue` property.
+
+* `MaxValue` - To set the maximum value for the numeric column, use the `DataGridNumericColumn.MaxValue` property.
+
+* `ShowClearButton` - To clear the value for the numeric column, use the `DataGridNumericColumn.ShowClearButton` property.
+
+* `NullText` - To set the null text when the numeric cell value was null, use the `DataGridNumericColumn.NullText` property.
+
+* `NullValue` - To set the null value when the numeric cell value was null, use the `DataGridNumericColumn.NullValue` property.
 
 ## Row header
 
