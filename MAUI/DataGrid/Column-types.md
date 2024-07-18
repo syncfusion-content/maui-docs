@@ -1001,13 +1001,13 @@ dataGrid.Columns.Add(numericColumn);
 
 The `DataGridNumericColumn` allows formatting the numeric data with culture-specific information.
 
-* `MinValue` - To set the minimum value for the numeric column, use the `DataGridNumericColumn.MinValue` property.
+* `Minimum` - To set the minimum value for the numeric column, use the `DataGridNumericColumn.Minimum` property.
 
-* `MaxValue` - To set the maximum value for the numeric column, use the `DataGridNumericColumn.MaxValue` property.
+* `Maximum` - To set the maximum value for the numeric column, use the `DataGridNumericColumn.Maximum` property.
 
 * `ShowClearButton` - To clear the value for the numeric column, use the `DataGridNumericColumn.ShowClearButton` property.
 
-* `NullText` - To set the null text when the numeric cell value was null, use the `DataGridNumericColumn.NullText` property.
+* `Placeholder` - To set the placeholder when the numeric cell value was null, use the `DataGridNumericColumn.Placeholder` property.
 
 * `NullValue` - To set the null value when the numeric cell value was null, use the `DataGridNumericColumn.NullValue` property.
 
