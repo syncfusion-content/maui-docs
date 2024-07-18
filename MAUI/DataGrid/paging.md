@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Paging in MAUI DataGrid control | Syncfusion
-description: Learn here all about Paging support in Syncfusion MAUI DataGrid (SfDataGrid) control, its elements and more.
+title: Paging in .NET MAUI DataGrid control | Syncfusion
+description: Learn here all about Paging support in Syncfusion .NET MAUI DataGrid (SfDataGrid) control, its elements and more.
 platform: MAUI
 control: SfDataGrid
 documentation: UG
 keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .net maui datagrid, .net maui grid, .net grid maui, .net maui paging, maui paging
 ---
 
-# Paging in MAUI DataGrid (SfDataGrid)
+# Paging in .NET MAUI DataGrid (SfDataGrid)
 
 The data grid interactively supports data manipulation through the [SfDataPager](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataPager.SfDataPager.html) control, providing built-in options to page data on demand when dealing with large volumes. The `SfDataPager` can be placed above or below as needed to easily manage data paging.
 
