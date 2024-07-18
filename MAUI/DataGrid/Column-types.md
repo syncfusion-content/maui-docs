@@ -877,6 +877,169 @@ dataGrid.Columns.Add(comboBoxColumn);
 
 N> The `ShowClearButton` property has no effect in non-editable mode..
 
+### Drop down width
+
+The ComboBox controll inculdes a `DropDownWidth` that allows the user to increase the width of the drop down box.
+
+{% tabs %}
+{% highlight xaml %}
+<syncfusion:SfDataGrid  x:Name="dataGrid"
+                        AllowEditing="True"
+                        NavigationMode="Cell"
+                        SelectionMode="Single"
+                        ColumnWidthMode="Auto"
+                        ItemsSource="{Binding OrderInfoCollection}">
+    <syncfusion:SfDataGrid.Columns>
+        <syncfusion:DataGridComboBoxColumn
+                        DropDownWidth="200"
+                        IsEditableMode="True"
+                        HeaderText="Customer"
+                        ItemsSource="{Binding CustomerID}"
+                        MappingName="OrderID">
+        </syncfusion:DataGridComboBoxColumn>
+    </syncfusion:SfDataGrid.Columns>
+ </syncfusion:SfDataGrid>
+{% endhighlight %}
+
+{% highlight c# %}
+public ObservableCollection<string> CustomerID { get; set; }
+internal string[] Customers = new string[] { "Maria Anders", "Ana Trujillo", "Thomas ","Tim" };
+ public OrderInfoRepository()
+{
+     this.CustomerID = Customers.ToObservableCollection();
+}
+{% endhighlight %}
+{% endtabs %}
+
+<img alt="DropDownWidth" src="Images\column-types\maui-datagrid-comboBox-drop-down-width.png" width="404"/>
+
+### Can filter suggestions
+
+The `CanFilterSuggestion` property in the SfComboBox component is used to enable or disable the filtering of suggestions based on user input. When set to `true`, this property allows the combo box to filter the list of suggestions dynamically as the user types into the input field.
+
+{% tabs %}
+{% highlight xaml %}
+<syncfusion:SfDataGrid  x:Name="dataGrid"
+                        AllowEditing="True"
+                        NavigationMode="Cell"
+                        SelectionMode="Single"
+                        ColumnWidthMode="Auto"
+                        ItemsSource="{Binding OrderInfoCollection}">
+    <syncfusion:SfDataGrid.Columns>
+        <syncfusion:DataGridComboBoxColumn
+                        DropDownWidth="200"
+                        IsEditableMode="True"
+                        HeaderText="Customer"
+                        CanFilterSuggestions="True"
+                        ItemsSource="{Binding CustomerID}"
+                        MappingName="OrderID">
+        </syncfusion:DataGridComboBoxColumn>
+    </syncfusion:SfDataGrid.Columns>
+</syncfusion:SfDataGrid>
+{% endhighlight %}
+
+{% highlight c# %}
+public ObservableCollection<string> CustomerID { get; set; }
+internal string[] Customers = new string[] { "Maria Anders", "Ana Trujillo", "Thomas ","Tim" };
+
+public OrderInfoRepository()
+{
+     this.CustomerID = Customers.ToObservableCollection();
+}
+{% endhighlight %}
+{% endtabs %}
+
+#### Limitations
+1. I won't work in `DisplayMemberPath` and `ValueMemberPath`.
+2. The observable collection should be in `string` data type.
+
+<img alt="CanFilterSuggestions" src="Images\column-types\maui-datagrid-comboBox-can-filter.png" width="404"/>
+
+### Value member path.
+
+The `ValueMemberPath` property in the Syncfusion SfComboBox component is used to specify the path of the property that should be used as the value of the selected item.
+
+{% tabs %}
+{% highlight xaml %}
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                        AllowEditing="True"
+                        NavigationMode="Cell"
+                        SelectionMode="Single"
+                        ColumnWidthMode="Auto"
+                        ItemsSource="{Binding OrderInfoCollection}">
+    <syncfusion:SfDataGrid.Columns>
+        <syncfusion:DataGridComboBoxColumn
+                 IsEditableMode="True"
+                 HeaderText="Customer"
+                 ItemsSource="{Binding SocialMedias}"
+                 MappingName="OrderID"
+                 ValueMemberPath="ID"
+                 DisplayMemberPath="Name">
+        </syncfusion:DataGridComboBoxColumn>
+    </syncfusion:SfDataGrid.Columns>
+</syncfusion:SfDataGrid>
+{% endhighlight %}
+
+{% highlight c# tabtitle="ViewModel.cs"%}
+public class OrderInfoRepository
+{
+    public ObservableCollection<SocialMedia> SocialMedias { get; set; }
+    public ObservableCollection<string> CustomerID { get; set; }
+    internal string[] Customers = new string[] { "Maria Anders", "Ana Trujillo", "Thomas ", "Tim" };
+    private ObservableCollection<OrderInfo> orderInfo;
+    
+    public ObservableCollection<OrderInfo> OrderInfoCollection
+    {
+        get { return orderInfo; }
+        set { this.orderInfo = value; }
+    }
+
+    public OrderInfoRepository()
+    {
+        orderInfo = new ObservableCollection<OrderInfo>();
+        this.CustomerID = Customers.ToObservableCollection();
+        this.SocialMedias = new ObservableCollection<SocialMedia>();
+        this.SocialMedias.Add(new SocialMedia() { Name = "Facebook", ID = "1001" });
+        this.SocialMedias.Add(new SocialMedia() { Name = "Google Plus", ID = "1002" });
+        this.SocialMedias.Add(new SocialMedia() { Name = "Instagram", ID = "1003" });
+        this.SocialMedias.Add(new SocialMedia() { Name = "LinkedIn", ID = "1004" });
+        this.GenerateOrders();
+    }
+
+    public void GenerateOrders()
+    {
+        orderInfo.Add(new OrderInfo("1001", "Maria Anders", "Germany", "ALFKI", "Berlin"));
+        orderInfo.Add(new OrderInfo("1002", "Ana Trujillo", "Mexico", "ANATR", "Mexico D.F."));
+        orderInfo.Add(new OrderInfo("1003", "Ant Fuller", "Mexico", "ANTON", "Mexico D.F."));
+        orderInfo.Add(new OrderInfo("1004" , "Thomas Hardy", "UK", "AROUT", "London"));
+        orderInfo.Add(new OrderInfo("1005" , "Tim Adams", "Sweden", "BERGS", "London"));
+        orderInfo.Add(new OrderInfo("1006", "Hanna Moos", "Germany", "BLAUS", "Mannheim"));
+        orderInfo.Add(new OrderInfo("1007", "Andrew Fuller", "France", "BLONP", "Strasbourg"));
+        orderInfo.Add(new OrderInfo("1008", "Martin King", "Spain", "BOLID", "Madrid"));
+        orderInfo.Add(new OrderInfo("1009", "Lenny Lin", "France", "BONAP", "Marsiella"));
+        orderInfo.Add(new OrderInfo("1010", "John Carter", "Canada", "BOTTM", "Lenny Lin"));
+        orderInfo.Add(new OrderInfo("1011", "Laura King", "UK", "AROUT", "London"));
+        orderInfo.Add(new OrderInfo("1012", "Anne Wilson", "Germany", "BLAUS", "Mannheim"));
+        orderInfo.Add(new OrderInfo("1013", "Martin King", "France", "BLONP", "Strasbourg"));
+        orderInfo.Add(new OrderInfo("1014", "Gina Irene", "UK", "AROUT", "London"));
+    }
+}
+
+//Model.cs
+public class SocialMedia
+{
+    public string Name { get; set; }
+    public string ID { get; set; }
+       
+}
+{% endhighlight %}
+{% endtabs %}
+
+#### Limitations.
+
+1. The `ValueMemberPath` must exactly match the mapping name with same or different property name and with same data type.
+2. When you use `ValueMemberPath`, `DisplayMemberPath` should be used.
+
 ## DataGridNumericColumn
 
 The `DataGridNumericColumn` inherits all the properties of the `DataGridColumn`. It is used to display numeric data. To create a  `DataGridNumericColumn`, the property corresponding to the column in the underlying collection must be a numeric type (int, double, float, etc.). 
