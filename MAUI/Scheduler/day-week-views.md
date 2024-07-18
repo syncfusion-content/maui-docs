@@ -103,7 +103,7 @@ this.Content = scheduler;
 {% endhighlight %}
 {% endtabs %}
 
-![Change time interval height in .NET MAUI Scheduler.](images/day-week-views/change-time-interval-height-in-maui-scheduler.png)
+![Change time interval height in .NET MAUI Scheduler.](images/day-week-views/change-time-interval-height-in-net-maui-scheduler.png)
 
 ## Flexible working days
 
