@@ -10,9 +10,9 @@ keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .ne
 
 # Paging in .NET MAUI DataGrid (SfDataGrid)
 
-The data grid interactively supports data manipulation through the [SfDataPager](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataPager.SfDataPager.html) control, providing built-in options to page data on demand when dealing with large volumes. The `SfDataPager` can be placed above or below as needed to easily manage data paging.
+The .NET MAUI DataGrid interactively supports data manipulation through the [SfDataPager](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataPager.SfDataPager.html) control, providing built-in options to page data on demand when dealing with large volumes. The `SfDataPager` can be placed above or below as needed to easily manage data paging.
 
-To use paging functionality into the data grid, include the following namespace in your project:
+To use paging functionality into the DataGrid, include the following namespace in your project:
 `Syncfusion.Maui.DataGrid.DataPager`
 
 There are two different modes in paging:
@@ -22,16 +22,16 @@ There are two different modes in paging:
 
 ## Normal paging
 
-The data grid performs data paging using the `SfDataPager`. To enable paging, follow these steps:
+The .NET MAUI DataGrid performs data paging using the `SfDataPager`. To enable paging, follow these steps:
 
  * Create a new instance of `SfDataPager`, and bind the data collection to the `SfDataPager.Source` property. This will internally create `SfDataPager.PagedSource`. 
- * Bind the `PagedSource` property to the `ItemsSource` of the data grid. 
+ * Bind the `PagedSource` property to the `ItemsSource` of the DataGrid. 
  * Set the `SfDataPager.PageSize` property to determine the number of rows to be displayed on each page.
  * Set the `SfDataPager.NumericButtonCount` property to specify the number of buttons that should be displayed in view."
 
 N> The [SfDataPager.PageSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataPager.SfDataPager.html#Syncfusion_Maui_DataGrid_DataPager_SfDataPager_PageSize) property should not be assigned with value 0.
 
-The following code example illustrates using `SfDataPager` with the data grid control:
+The following code example illustrates using `SfDataPager` with the .NET MAUI DataGrid control:
 
 {% tabs %}
 {% highlight xaml %}

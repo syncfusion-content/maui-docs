@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Grid Events in .NET MAUI DataGrid control | Syncfusion
-description: Learn here about data grid events and listen to cell value changes in the Syncfusion .NET MAUI DataGrid (SfDataGrid) control, and learn more about it.
+description: Learn here about DataGrid events and listen to cell value changes in the Syncfusion .NET MAUI DataGrid (SfDataGrid) control, and learn more about it.
 platform: MAUI
 control: SfDataGrid
 documentation: UG
