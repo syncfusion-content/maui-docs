@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Date Nvigations in .NET MAUI Scheduler Control | Syncfusion
+title: Date Navigations in .NET MAUI Scheduler Control | Syncfusion
 description: Learn here all about date navigations and restriction feature of Syncfusion .NET MAUI Scheduler (SfScheduler) control and more.
 platform: maui
 control: SfScheduler
