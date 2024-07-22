@@ -31,6 +31,24 @@ The default value of this property is `true`. If you want to improve loading and
 
 N> Download demo application from [GitHub](https://github.com/SyncfusionExamples/How-to-improve-scrolling-performance-in-.NET-MAUI-DataGrid).
 
+### Data virtualization
+
+DataGrid provides support to handle the large amount of data through built-in virtualization feature. With Data virtualization, the record entries will be created in the runtime only upon scrolling to the vertical end which increases the performance of grid loading time.
+
+To set `SfDataGrid.EnableDataVirtualization` property to true, follow the code example:
+
+{% tabs %}
+{% highlight xaml %}
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                       ItemsSource="{Binding EmployeeDetails}"
+                       EnableDataVirtualization="True"/>
+{% endhighlight %}
+
+{% highlight c# %}
+datagrid.EnableDataVirtualization = true;
+{% endhighlight %}
+{% endtabs %}
+
 ### Limitations
 
 * Both implicit and explicit padding are not supported. However, left and right padding will be applied based on the padding, while the top and bottom positions will be adjusted based on the content.
