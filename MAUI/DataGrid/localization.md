@@ -18,7 +18,7 @@ Localization is the process of translating the application resources into differ
 Application culture can be changed by setting `CurrentUICulture.` in `App.xaml.cs` file.
 
 {% tabs %}
-{% highlight c# tabtitle="App.xaml.cs" hl_lines="1 3 11 15" %}
+{% highlight c# tabtitle="App.xaml.cs" hl_lines="1 3 11 13" %}
 
 using Syncfusion.Maui.DataGrid;
 using System.Globalization;
@@ -31,10 +31,8 @@ public partial class App : Application
 	{
 		InitializeComponent();
 		CultureInfo.CurrentUICulture = new CultureInfo("fr-FR");
-      //// ResXPath => Full path of the resx file; For example : //SfDataGridResources.ResourceManager = new ResourceManager
-      // ("MauiDataGridDemo.Resources.SfDataGrid", Application.Current.GetType().Assembly);
 
-		SfDataGridResources.ResourceManager = new ResourceManager("ResxPath", Application.Current.GetType().Assembly);
+		SfDataGridResources.ResourceManager = new ResourceManager("MauiDataGridDemo.Resources.SfDataGrid", Application.Current.GetType().Assembly);
 	   MainPage = new MainPage();
 	}
 }
@@ -42,7 +40,7 @@ public partial class App : Application
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="Unbound Rows" src="Images\localization\maui-datagrid-localization.png" width="404"/>
+<img alt="Load more in MAUI SfDataGrid" src="Images\localization\maui-datagrid-localization.png" width="404"/>
 
 N>
 The required `resx` files with `Build Action` as `EmbeddedResource` (File name should contain culture code) into the `Resources` folder.
@@ -59,12 +57,12 @@ To localize the `DataGrid` based on `CurrentUICulture` using `resource` files, f
 
    4. The culture name indicates the name of the language and country.
 
-   <img alt="Unbound Rows" src="Images\localization\maui-datagrid-localization-create-resource-file.png" width="404"/>
+   <img alt="Create resources file in the sample" src="Images\localization\maui-datagrid-localization-create-resource-file.png" width="404"/>
 
    5. Now, select `Add` option to add the resource file in **Resources** folder.
 
-   <img alt="Unbound Rows" src="Images\localization\maui-datagrid-localization-sample.png" width="404"/>
+   <img alt="Localization sample" src="Images\localization\maui-datagrid-localization-sample.png" width="404"/>
 
    6. Add the Name/Value pair in Resource Designer of `SfDataGrid.fr-FR.resx` file and change its corresponding value to corresponding culture.
 
-   <img alt="Unbound Rows" src="Images\localization\maui-datagrid-localization-resource-file.png" width="404"/>
+   <img alt="Resource file" src="Images\localization\maui-datagrid-localization-resource-file.png" width="404"/>
