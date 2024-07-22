@@ -879,7 +879,7 @@ N> The `ShowClearButton` property has no effect in non-editable mode..
 
 ### Drop down width
 
-The ComboBox controll inculdes a `DropDownWidth` that allows the user to increase the width of the drop down box.
+The ComboBox control inculde a `DropDownWidth` that allows the user to increase the width of the drop down box.
 
 {% tabs %}
 {% highlight xaml %}
