@@ -106,7 +106,7 @@ this.Calendar.View = CalendarView.Month;
 {% endhighlight %}
 {% endtabs %}
 
-![Change different calendar views in .NET MAUI Calendar.](images/getting-started/maui-calendar-month-view.png)
+![Change different calendar views in .NET MAUI Calendar.](images/getting-started/net-maui-calendar-month-view.png)
 
 ## Change first day of week
 
