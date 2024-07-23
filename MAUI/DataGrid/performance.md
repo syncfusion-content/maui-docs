@@ -38,7 +38,6 @@ N> Download demo application from [GitHub](https://github.com/SyncfusionExamples
 * Runtime theme changes will not be applied.
 * This is not supported for [DataGridTemplateColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridTemplateColumn.html), [DataGridCheckBoxColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCheckBoxColumn.html) and [DataGridImageColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridImageColumn.html).
 
-
 ## Incremental loading
 
 The DataGrid supports loading data incrementally using the `ISupportIncrementalLoading` interface. This interface includes the `LoadMoreItemsAsync` method, which helps to load data incrementally. The `LoadMoreItemsAsync` method is called on-demand while scrolling, based on the `HasMoreItems` property.
