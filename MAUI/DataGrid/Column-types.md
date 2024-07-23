@@ -883,16 +883,15 @@ The combo box drop-down width can be customized by setting the `DataGridComboBox
 
 {% tabs %}
 {% highlight xaml %}
-<syncfusion:SfDataGrid  
-                        AllowEditing="True"
+<syncfusion:SfDataGrid  AllowEditing="True"
                         NavigationMode="Cell"
                         SelectionMode="Single"
                         ItemsSource="{Binding OrderInfoCollection}">
     <syncfusion:SfDataGrid.Columns>
         <syncfusion:DataGridComboBoxColumn
                         DropDownWidth="200"
-                        HeaderText="Customer"
-                        ItemsSource="{Binding CustomerID}"
+                        HeaderText="Customers"
+                        ItemsSource="{Binding Customers}"
                         MappingName="OrderID">
         </syncfusion:DataGridComboBoxColumn>
     </syncfusion:SfDataGrid.Columns>
@@ -907,16 +906,15 @@ The `DataGridComboBoxColumn.CanFilterSuggestions` property can be used to enable
 
 {% tabs %}
 {% highlight xaml %}
-<syncfusion:SfDataGrid  
-                        AllowEditing="True"
+<syncfusion:SfDataGrid  AllowEditing="True"
                         NavigationMode="Cell"
                         SelectionMode="Single"
                         ItemsSource="{Binding OrderInfoCollection}">
     <syncfusion:SfDataGrid.Columns>
         <syncfusion:DataGridComboBoxColumn
-                        HeaderText="Customer"
+                        HeaderText="Customers"
                         CanFilterSuggestions="True"
-                        ItemsSource="{Binding CustomerID}"
+                        ItemsSource="{Binding Customers}"
                         MappingName="OrderID">
         </syncfusion:DataGridComboBoxColumn>
     </syncfusion:SfDataGrid.Columns>
@@ -924,24 +922,19 @@ The `DataGridComboBoxColumn.CanFilterSuggestions` property can be used to enable
 {% endhighlight %}
 {% endtabs %}
 
-#### Limitations
-1. I won't work in `DisplayMemberPath` and `ValueMemberPath`.
-2. The observable collection should be in `string` data type.
-
 ### Value member path.
 
 The `ValueMemberPath` property in the Syncfusion SfComboBox component is used to specify the path of the property that should be used as the value of the selected item.
 
 {% tabs %}
 {% highlight xaml %}
-<syncfusion:SfDataGrid 
-                        AllowEditing="True"
+<syncfusion:SfDataGrid  AllowEditing="True"
                         NavigationMode="Cell"
                         SelectionMode="Single"
                         ItemsSource="{Binding OrderInfoCollection}">
     <syncfusion:SfDataGrid.Columns>
         <syncfusion:DataGridComboBoxColumn
-                 HeaderText="Customer"
+                 HeaderText="Order ID"
                  ItemsSource="{Binding SocialMedias}"
                  MappingName="OrderID"
                  ValueMemberPath="ID"
