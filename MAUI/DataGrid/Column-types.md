@@ -877,9 +877,9 @@ dataGrid.Columns.Add(comboBoxColumn);
 
 N> The `ShowClearButton` property has no effect in non-editable mode..
 
-### Drop down width
+### Customize drop-down width
 
-The ComboBox control include a `DropDownWidth` that allows the user to increase the width of the drop down box.
+The combo box drop-down width can be customized by setting the `DataGridComboBoxColumn.DropdownWidth` property.
 
 {% tabs %}
 {% highlight xaml %}
@@ -903,7 +903,7 @@ The ComboBox control include a `DropDownWidth` that allows the user to increase 
 
 ### Can filter suggestions
 
-The `CanFilterSuggestion` property in the SfComboBox component is used to enable or disable the filtering of suggestions based on user input. When set to `true`, this property allows the combo box to filter the list of suggestions dynamically as the user types into the input field.
+The `DataGridComboBoxColumn.CanFilterSuggestions` property can be used to enable or disable the filtering of suggestions based on user input. When set to `true`, this property allows the combo box to dynamically filter the list of suggestions as the user types into the input field.
 
 {% tabs %}
 {% highlight xaml %}
