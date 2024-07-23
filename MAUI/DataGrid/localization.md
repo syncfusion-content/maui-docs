@@ -40,7 +40,7 @@ public partial class App : Application
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="Load more in MAUI SfDataGrid" src="Images\localization\maui-datagrid-load-more.png" width="404"/>
+<img alt="Load more in MAUI SfDataGrid" src="Images\localization\maui-datagrid-localization.png" width="404"/>
 
 N>
 The required `resx` files with `Build Action` as `EmbeddedResource` (File name should contain culture code) into the `Resources` folder.
