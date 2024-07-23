@@ -682,11 +682,11 @@ public class ViewModel
 
 To display a list of user-defined items in the drop-down of a combo box, create a `DataGridComboBoxColumn` and set its `ItemsSource` property to a user-defined collection. By default, if the [DisplayMemberPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridComboBoxColumn.html#Syncfusion_Maui_DataGrid_DataGridComboBoxColumn_DisplayMemberPath) is not set, the combo box column will display the values from the `MappingName` property of the column.
 
-### Display member path
+#### Display member path
 
 Displays a value by comparing values of the properties set as `DataGridColumn.MappingName` and `ValueMemberPath` in their respective underlying collections. If the values of `ValueMemberPath` property contains the current value of `MappingName` property, its corresponding value of `DisplayMemberPath` property is displayed in the `DataGridCell`. Or else the `DataGridCell` appears blank. However, in edit mode the values of the `DisplayMemberPath` property are displayed as picker items.
 
-### Value member path
+#### Value member path
 
 Once editing completed, the column having the `MappingName` equal to the `ValueMemberPath` has its data changed to the corresponding `ValueMemberPath` value for the selected `DisplayMemberPath` value in the picker.
 
