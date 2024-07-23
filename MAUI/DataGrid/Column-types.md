@@ -682,6 +682,14 @@ public class ViewModel
 
 To display a list of user-defined items in the drop-down of a combo box, create a `DataGridComboBoxColumn` and set its `ItemsSource` property to a user-defined collection. By default, if the [DisplayMemberPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridComboBoxColumn.html#Syncfusion_Maui_DataGrid_DataGridComboBoxColumn_DisplayMemberPath) is not set, the combo box column will display the values from the `MappingName` property of the column.
 
+### Display member path
+
+Displays a value by comparing values of the properties set as `DataGridColumn.MappingName` and `ValueMemberPath` in their respective underlying collections. If the values of `ValueMemberPath` property contains the current value of `MappingName` property, its corresponding value of `DisplayMemberPath` property is displayed in the `DataGridCell`. Or else the `DataGridCell` appears blank. However, in edit mode the values of the `DisplayMemberPath` property are displayed as picker items.
+
+### Value member path
+
+Once editing completed, the column having the `MappingName` equal to the `ValueMemberPath` has its data changed to the corresponding `ValueMemberPath` value for the selected `DisplayMemberPath` value in the picker.
+
 ### Loading different ItemSource for each row of DataGridComboBoxColumn
 
 To load different ItemSources for each row of a DataGridComboBoxColumn, you can utilize the [DataGridComboBoxColumn.ItemsSourceSelector](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridComboBoxColumn.html#Syncfusion_Maui_DataGrid_DataGridComboBoxColumn_ItemsSourceSelector) property.
@@ -921,34 +929,6 @@ The `DataGridComboBoxColumn.CanFilterSuggestions` property can be used to enable
 </syncfusion:SfDataGrid>
 {% endhighlight %}
 {% endtabs %}
-
-### Value member path.
-
-The `ValueMemberPath` property in the Syncfusion SfComboBox component is used to specify the path of the property that should be used as the value of the selected item.
-
-{% tabs %}
-{% highlight xaml %}
-<syncfusion:SfDataGrid  AllowEditing="True"
-                        NavigationMode="Cell"
-                        SelectionMode="Single"
-                        ItemsSource="{Binding OrderInfoCollection}">
-    <syncfusion:SfDataGrid.Columns>
-        <syncfusion:DataGridComboBoxColumn
-                 HeaderText="Order ID"
-                 ItemsSource="{Binding SocialMedias}"
-                 MappingName="OrderID"
-                 ValueMemberPath="ID"
-                 DisplayMemberPath="Name">
-        </syncfusion:DataGridComboBoxColumn>
-    </syncfusion:SfDataGrid.Columns>
-</syncfusion:SfDataGrid>
-{% endhighlight %}
-{% endtabs %}
-
-#### Limitations.
-
-1. The `ValueMemberPath` must exactly match the mapping name with same or different property name and with same data type.
-2. When you use `ValueMemberPath`, `DisplayMemberPath` should be used.
 
 ## DataGridNumericColumn
 

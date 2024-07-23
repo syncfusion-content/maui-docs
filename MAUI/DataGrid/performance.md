@@ -39,15 +39,15 @@ N> Download demo application from [GitHub](https://github.com/SyncfusionExamples
 * This is not supported for [DataGridTemplateColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridTemplateColumn.html), [DataGridCheckBoxColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCheckBoxColumn.html) and [DataGridImageColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridImageColumn.html).
 
 
-# Incremental loading
+## Incremental loading
 
-DataGrid supports to load the data incrementally using `ISupportIncrementalLoading` interface. `ISupportIncrementalLoading` interface has `LoadMoreItemsAsync` method which helps to load the data incrementally. `LoadMoreItemsAsync` called in on-demand while scrolling based on `HasMoreItems` property.
+The DataGrid supports loading data incrementally using the `ISupportIncrementalLoading` interface. This interface includes the `LoadMoreItemsAsync` method, which helps to load data incrementally. The `LoadMoreItemsAsync` method is called on-demand while scrolling, based on the `HasMoreItems` property.
 
-If `HasMoreItems` is false, SfDataGrid stops calling `LoadMoreItemsAsync`. SfDataGrid have `IncrementalList` which is derived from `ISupportIncrementalLoading`. You can use IncrementalList or create collection derived from `ISupportIncrementalLoading` and bind it `SfDataGrid.ItemsSource`.
+If `HasMoreItems` is false, SfDataGrid stops calling `LoadMoreItemsAsync`. SfDataGrid includes `IncrementalList`, which is derived from `ISupportIncrementalLoading`. You can use `IncrementalList` or create a collection derived from `ISupportIncrementalLoading` and bind it to `SfDataGrid.ItemsSource`.
 
-Additionally it supports `SfDataGrid.DataFetchSize` , which will automatically fetch the data when the user reaches the end of the  `dataGrid`. 
+Additionally, the `SfDataGrid.DataFetchSize` property defines the count argument in the `LoadMoreItemsAsync` method, which determines the amount of data to be loaded into the items source when the user reaches the end of the `SfDataGrid`.
 
-In the below code, `IncrementalList` is initialized by passing Action to its constructor for loading items incrementally.
+In the code below, `IncrementalList` is initialized by passing an Action to its constructor for loading items incrementally.
 
 {% tabs %}
 {% highlight xaml %}
