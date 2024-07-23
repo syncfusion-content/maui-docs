@@ -55,3 +55,45 @@ To set `SfDataGrid.EnableDataVirtualization` property to true, follow the code e
 datagrid.EnableDataVirtualization = true;
 {% endhighlight %}
 {% endtabs %}
+
+## Incremental loading
+
+The DataGrid supports loading data incrementally using the `ISupportIncrementalLoading` interface. This interface includes the `LoadMoreItemsAsync` method, which helps to load data incrementally. The `LoadMoreItemsAsync` method is called on-demand while scrolling, based on the `HasMoreItems` property.
+
+If `HasMoreItems` is false, SfDataGrid stops calling `LoadMoreItemsAsync`. SfDataGrid includes `IncrementalList`, which is derived from `ISupportIncrementalLoading`. You can use `IncrementalList` or create a collection derived from `ISupportIncrementalLoading` and bind it to `SfDataGrid.ItemsSource`.
+
+Additionally, the `SfDataGrid.DataFetchSize` property defines the count argument in the `LoadMoreItemsAsync` method, which determines the amount of data to be loaded into the items source when the user reaches the end of the `SfDataGrid`.
+
+In the code below, `IncrementalList` is initialized by passing an Action to its constructor for loading items incrementally.
+
+{% tabs %}
+{% highlight xaml %}
+<syncfusion:SfDataGrid DataFetchSize="20"
+                       ItemsSource="{Binding IncrementalItemsSource}" />
+{% endhighlight %}
+
+{% highlight c# %}
+public class ViewModel
+{
+    public ViewModel()
+    {
+        IncrementalItemsSource = new IncrementalList<OrderInfo>(LoadMoreItems) { MaxItemsCount = 200 };
+    }
+    private IncrementalList<OrderInfo> _incrementalItemsSource;
+
+    public IncrementalList<OrderInfo> IncrementalItemsSource
+    {
+         get { return _incrementalItemsSource; }
+         set { _incrementalItemsSource = value; }
+    }
+
+    async void LoadMoreItems(uint count, int baseIndex)
+    {
+   
+             var _orders = this.GenerateOrders();
+             var list = GenerateOrders().Skip(baseIndex).Take(5).ToList();
+             IncrementalItemsSource.LoadItems(list);
+    }
+}
+{% endhighlight %}
+{% endtabs %}

@@ -734,6 +734,14 @@ public class ViewModel
 
 To display a list of user-defined items in the drop-down of a combo box, create a `DataGridComboBoxColumn` and set its `ItemsSource` property to a user-defined collection. By default, if the [DisplayMemberPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridComboBoxColumn.html#Syncfusion_Maui_DataGrid_DataGridComboBoxColumn_DisplayMemberPath) is not set, the combo box column will display the values from the `MappingName` property of the column.
 
+#### Display member path
+
+Displays a value by comparing values of the properties set as `DataGridColumn.MappingName` and `ValueMemberPath` in their respective underlying collections. If the values of `ValueMemberPath` property contains the current value of `MappingName` property, its corresponding value of `DisplayMemberPath` property is displayed in the `DataGridCell`. Or else the `DataGridCell` appears blank. However, in edit mode the values of the `DisplayMemberPath` property are displayed as picker items.
+
+#### Value member path
+
+Once editing completed, the column having the `MappingName` equal to the `ValueMemberPath` has its data changed to the corresponding `ValueMemberPath` value for the selected `DisplayMemberPath` value in the picker.
+
 ### Loading different ItemSource for each row of DataGridComboBoxColumn
 
 To load different ItemSources for each row of a DataGridComboBoxColumn, you can utilize the [DataGridComboBoxColumn.ItemsSourceSelector](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridComboBoxColumn.html#Syncfusion_Maui_DataGrid_DataGridComboBoxColumn_ItemsSourceSelector) property.
@@ -928,6 +936,51 @@ dataGrid.Columns.Add(comboBoxColumn);
 {% endtabs %}
 
 N> The `ShowClearButton` property has no effect in non-editable mode..
+
+### Customize drop-down width
+
+The combo box drop-down width can be customized by setting the `DataGridComboBoxColumn.DropdownWidth` property.
+
+{% tabs %}
+{% highlight xaml %}
+<syncfusion:SfDataGrid  AllowEditing="True"
+                        NavigationMode="Cell"
+                        SelectionMode="Single"
+                        ItemsSource="{Binding OrderInfoCollection}">
+    <syncfusion:SfDataGrid.Columns>
+        <syncfusion:DataGridComboBoxColumn
+                        DropDownWidth="200"
+                        HeaderText="Customers"
+                        ItemsSource="{Binding Customers}"
+                        MappingName="OrderID">
+        </syncfusion:DataGridComboBoxColumn>
+    </syncfusion:SfDataGrid.Columns>
+ </syncfusion:SfDataGrid>
+{% endhighlight %}
+{% endtabs %}
+
+
+### Can filter suggestions
+
+The `DataGridComboBoxColumn.CanFilterSuggestions` property can be used to enable or disable the filtering of suggestions based on user input. When set to `true`, this property allows the combo box to dynamically filter the list of suggestions as the user types into the input field.
+
+{% tabs %}
+{% highlight xaml %}
+<syncfusion:SfDataGrid  AllowEditing="True"
+                        NavigationMode="Cell"
+                        SelectionMode="Single"
+                        ItemsSource="{Binding OrderInfoCollection}">
+    <syncfusion:SfDataGrid.Columns>
+        <syncfusion:DataGridComboBoxColumn
+                        HeaderText="Customers"
+                        CanFilterSuggestions="True"
+                        ItemsSource="{Binding Customers}"
+                        MappingName="OrderID">
+        </syncfusion:DataGridComboBoxColumn>
+    </syncfusion:SfDataGrid.Columns>
+</syncfusion:SfDataGrid>
+{% endhighlight %}
+{% endtabs %}
 
 ## DataGridNumericColumn
 
