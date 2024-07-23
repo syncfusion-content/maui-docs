@@ -38,6 +38,24 @@ N> Download demo application from [GitHub](https://github.com/SyncfusionExamples
 * Runtime theme changes will not be applied.
 * This is not supported for [DataGridTemplateColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridTemplateColumn.html), [DataGridCheckBoxColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCheckBoxColumn.html) and [DataGridImageColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridImageColumn.html).
 
+## Data virtualization
+
+DataGrid provides support to handle the large amount of data through built-in virtualization feature. With Data virtualization, the record entries will be created in the runtime only upon scrolling to the vertical end which increases the performance of grid loading time.
+
+To set `SfDataGrid.EnableDataVirtualization` property to true, follow the code example:
+
+{% tabs %}
+{% highlight xaml %}
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                       ItemsSource="{Binding EmployeeDetails}"
+                       EnableDataVirtualization="True"/>
+{% endhighlight %}
+
+{% highlight c# %}
+datagrid.EnableDataVirtualization = true;
+{% endhighlight %}
+{% endtabs %}
+
 ## Incremental loading
 
 The DataGrid supports loading data incrementally using the `ISupportIncrementalLoading` interface. This interface includes the `LoadMoreItemsAsync` method, which helps to load data incrementally. The `LoadMoreItemsAsync` method is called on-demand while scrolling, based on the `HasMoreItems` property.
@@ -57,7 +75,7 @@ In the code below, `IncrementalList` is initialized by passing an Action to its 
 {% highlight c# %}
 public class ViewModel
 {
-    public viewModel()
+    public ViewModel()
     {
         IncrementalItemsSource = new IncrementalList<OrderInfo>(LoadMoreItems) { MaxItemsCount = 200 };
     }
@@ -79,5 +97,3 @@ public class ViewModel
 }
 {% endhighlight %}
 {% endtabs %}
-
-
