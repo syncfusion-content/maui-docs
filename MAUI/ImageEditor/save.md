@@ -207,7 +207,9 @@ This [`ImageSaving`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEd
 
     private void OnImageSaving(object sender, ImageSavingEventArgs args)
     {
+        #if IOS || MACCATALYST
         args.CompressionQuality = 0.5F;
+        #endif
     }
 
 {% endhighlight %}
