@@ -20,7 +20,7 @@ The `Datagrid` provides the following events for handling interactions with the 
 * [CellRightTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CellRightTapped) : Called when a right-click mouse gesture has been recognized on a cell.
 
 ### CellTapped event
-This event will be triggered while tapping a cell in the [.NET MAUI DataGrid](https://www.syncfusion.com/maui-controls/maui-datagrid). This event has the [DataGridCellTappedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCellTappedEventArgs.html) as arguments.
+This event will be triggered while tapping a cell in the DataGrid. This event has the [DataGridCellTappedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCellTappedEventArgs.html) as arguments.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
