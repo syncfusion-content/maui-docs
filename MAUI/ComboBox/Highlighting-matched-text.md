@@ -31,15 +31,15 @@ It highlights the first position of the matching characters in the suggestion li
 
 {% highlight xaml %}
 
-     <editors:SfComboBox x:Name="comboBox"
-                         WidthRequest="300"
-                         HeightRequest = "40"
-                         ItemsSource="{Binding SocialMedias}"
-                         TextHighlightMode="FirstOccurrence"
-                         IsEditable="True"
-                         IsFilteringEnabled="True"
-                         HighlightedTextColor="Red"
-                         HighlightedTextFontAttributes="Bold"/>
+<editors:SfComboBox x:Name="comboBox"
+                    WidthRequest="300"
+                    HeightRequest = "40"
+                    ItemsSource="{Binding SocialMedias}"
+                    TextHighlightMode="FirstOccurrence"
+                    IsEditable="True"
+                    IsFilteringEnabled="True"
+                    HighlightedTextColor="Red"
+                    HighlightedTextFontAttributes="Bold"/>
 
     {% endhighlight %}
 
@@ -63,22 +63,22 @@ It highlights the first position of the matching characters in the suggestion li
 
 ## Multiple Occurrence
 
-It highlights the matching character that are present everywhere in the suggestion list for [Contains](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ComboBoxTextSearchMode.html#Syncfusion_Maui_Inputs_ComboBoxTextSearchMode_Contains) case in [TextSearchMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_TextSearchMode)
+It highlights the matching character that are present everywhere in the suggestion list for [Contains](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ComboBoxTextSearchMode.html#Syncfusion_Maui_Inputs_ComboBoxTextSearchMode_Contains) case in [TextSearchMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_TextSearchMode).
 
 {% tabs %}
 
 {% highlight xaml %}
 
-     <editors:SfComboBox x:Name="comboBox"
-                         WidthRequest="300"
-                         HeightRequest = "40"
-                         ItemsSource="{Binding SocialMedias}"
-                         TextHighlightMode="MultipleOccurrence"
-                         IsEditable="True"
-                         IsFilteringEnabled="True"
-                         HighlightedTextColor="Red"
-                         HighlightedTextFontAttributes="Bold"
-                         TextSearchMode="Contains" />
+    <editors:SfComboBox x:Name="comboBox"
+                        WidthRequest="300"
+                        HeightRequest = "40"
+                        ItemsSource="{Binding SocialMedias}"
+                        TextHighlightMode="MultipleOccurrence"
+                        IsEditable="True"
+                        IsFilteringEnabled="True"
+                        HighlightedTextColor="Red"
+                        HighlightedTextFontAttributes="Bold"
+                        TextSearchMode="Contains" />
 
 {% endhighlight %}
 
