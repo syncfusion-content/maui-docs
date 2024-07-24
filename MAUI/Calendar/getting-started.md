@@ -106,7 +106,7 @@ this.Calendar.View = CalendarView.Month;
 {% endhighlight %}
 {% endtabs %}
 
-![change-different-calendar-views-in-maui-calendar](images/getting-started/maui-calendar-month-view.png)
+![Change different calendar views in .NET MAUI Calendar.](images/getting-started/net-maui-calendar-month-view.png)
 
 ## Change first day of week
 
@@ -131,7 +131,7 @@ this.Calendar.MonthView.FirstDayOfWeek = DayOfWeek.Monday;
 {% endhighlight %}  
 {% endtabs %}
 
-![change-first-day-of-week-in-maui-calendar](images/getting-started/maui-calendar-first-day-of-week.png)
+![Change first day of week in .NET MAUI Calendar.](images/getting-started/net-maui-calendar-first-day-of-week.png)
 
 ## Date selection
 
@@ -156,7 +156,7 @@ this.Calendar.SelectionMode = CalendarSelectionMode.Multiple;
 {% endhighlight %}  
 {% endtabs %}
 
-![change-selection-mode](images/getting-started/maui-calendar-multiple-selection.png)
+![Change selection mode in .NET MAUI Calendar.](images/getting-started/net-maui-calendar-multiple-selection.png)
 
 ## Corner radius
 
@@ -178,6 +178,6 @@ this.Calendar.CornerRadius = 15;
 {% endhighlight %}
 {% endtabs %}
 
-![change-corner-radius](images/getting-started/maui-calendar-corner-radius.png)
+![Change corner radius in .NET MAUI Calendar.](images/getting-started/net-maui-calendar-corner-radius.png)
 
 N> You can also explore our [.NET MAUI Calendar Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/Calendar) that shows you how to render the Calendar in .NET MAUI.
