@@ -89,7 +89,7 @@ The code below applies the [ColumnWidthMode.Fill](https://help.syncfusion.com/cr
 {% endhighlight %}
 {% endtabs %}
 
-![Fill column width mode in .NET MAUI DataGrid](Images\column-sizing\maui-datagrid-fill-column-width-mode.png)
+![Fill column width mode in .NET MAUI DataGrid.](Images\column-sizing\net-maui-datagrid-fill-column-width-mode.png)
 
 ## Change the default column width for columns
 
@@ -156,7 +156,7 @@ this.sfGrid.Columns.Add(textColumn);
 {% endhighlight %}
 {% endtabs %}
 
-![Invididual column width mode in .NET MAUI DataGrid](Images\column-sizing\maui-datagrid-invididual-column-width-mode.png)
+![Invididual column width mode in .NET MAUI DataGrid.](Images\column-sizing\net-maui-datagrid-invididual-column-width-mode.png)
 
 ## Refreshing ColumnSizer at runtime
 
@@ -232,4 +232,4 @@ dataGrid.ColumnSizer  = new CustomColumnSizer();
 {% endhighlight %}
 {% endtabs %}
 
-![Customize Auto Width calculation in .NET MAUI DataGrid](Images\column-sizing\maui-datagrid-customize-column-width-calculation.png)
+![Customize auto width calculation in .NET MAUI DataGrid.](Images\column-sizing\net-maui-datagrid-customize-column-width-calculation.png)
