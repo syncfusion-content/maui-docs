@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Day and Week views in .NET MAUI Scheduler Control | Syncfusion
-description: Learn here all about customizing the day, week and workweek views settings and its appearance in Syncfusion .NET MAUI Scheduler (SfScheduler) control and more.
+description: Learn here all about customizing the Day, Week and Workweek views settings and its appearance in Syncfusion .NET MAUI Scheduler (SfScheduler) control and more.
 platform: maui
 control: SfScheduler
 documentation: ug
