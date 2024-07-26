@@ -681,6 +681,80 @@ public class ViewModel
 
 To display a list of user-defined items in the drop-down of a combo box, create a `DataGridComboBoxColumn` and set its `ItemsSource` property to a user-defined collection. By default, if the [DisplayMemberPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridComboBoxColumn.html#Syncfusion_Maui_DataGrid_DataGridComboBoxColumn_DisplayMemberPath) is not set, the combo box column will display the values from the `MappingName` property of the column.
 
+To display a list of user-defined items in the drop-down of a combo box you can refer to the code example below:
+
+{% tabs %}
+{% highlight xaml %}
+    <ContentPage.BindingContext>
+        <local:ViewModel x:Name="viewModel" />
+    </ContentPage.BindingContext>
+
+    <sfGrid:SfDataGrid x:Name="dataGrid"
+                        ItemsSource="{Binding OrderInfoCollection}">
+        <sfGrid:SfDataGrid.Columns>
+            <sfgrid:DataGridComboBoxColumn HeaderText="Ship Details"
+                                            ItemsSource="{Binding ShipDetails}"
+                                            MappingName="Ship" />
+        </sfGrid:SfDataGrid.Columns>
+    </sfGrid:SfDataGrid>
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight c# %}
+
+public class OrderInfo
+{
+    private ShipCountry ship;
+
+    public ShipCountry Ship
+    {
+        get { return ship; }
+        set { this.ship = value; }
+    }
+}
+
+public class ShipCountry
+{
+    private int shipID;
+    private string? shipName;
+
+
+    public int ShipID
+    {
+        get { return shipID; }
+        set { this.shipID = value; }
+    }
+
+    public string? ShipName
+    {
+        get { return shipName; }
+        set { this.shipName = value; }
+    }
+    
+    public ShipCountry(int shipID, string shipName)
+    {
+        this.ShipID = shipID;
+        this.ShipName = shipName;
+    }
+}
+
+public class ViewModel
+{
+    public ObservableCollection<ShipCountry> ShipDetails { get; set; }
+
+    public ViewModel()
+    {
+        this.ShipDetails = shipDetails.ToObservableCollection();
+    }
+
+    internal ShipCountry[] shipDetails = new ShipCountry[] {new ShipCountry(1001, "Titanic"), new ShipCountry(1002, "Bismarck"), new ShipCountry(1003, "Beagle"), new ShipCountry(1004, "Mayflower"), new ShipCountry(1005, "Galleon") };
+}
+{% endhighlight %}
+{% endtabs %}
+
+<img alt="ComboBox column with UserDefined type" src="Images\column-types\maui-datagrid-comboBox-column-user-defined.png" width="404"/>
+
 ### Loading different ItemSource for each row of DataGridComboBoxColumn
 
 To load different ItemSources for each row of a DataGridComboBoxColumn, you can utilize the [DataGridComboBoxColumn.ItemsSourceSelector](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridComboBoxColumn.html#Syncfusion_Maui_DataGrid_DataGridComboBoxColumn_ItemsSourceSelector) property.

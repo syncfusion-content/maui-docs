@@ -1009,7 +1009,7 @@ private void ExcelExport_RowExporting(object sender, DataGridRowExcelExportingEv
     if (!(e.Record.Data is OrderInfo))
         return;
 
-    if (e.RowType == ExportRowType.Record)
+    if (e.RowType == ExportRowType.RecordRow)
     {
         e.Range.CellStyle.ColorIndex = Syncfusion.XlsIO.ExcelKnownColors.Aqua;
     }
@@ -1033,10 +1033,10 @@ You can use these events to customize the properties of the grid cells exported 
 {% tabs %}
 {% highlight c# %}
 DataGridExcelExportingController excelExport = new DataGridExcelExportingController();
-excelExport.RowExporting += ExcelExport_RowExporting;
-private void ExcelExport_RowExporting(object sender, DataGridRowExcelExportingEventArgs e)
+excelExport.CellExporting += CellExport_CellExporting;
+private void CellExport_CellExporting(object? sender, DataGridCellExcelExportingEventArgs e)
 {
-    if (!(e.Record.Data is OrderInfo))
+    if ((e.CellValue is OrderInfo))
         return;
 
     if (e.CellType == ExportCellType.RecordCell && e.ColumnName == "FirstName")

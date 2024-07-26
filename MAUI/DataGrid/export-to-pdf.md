@@ -248,7 +248,7 @@ namespace GettingStarted
         {
             string exception = string.Empty;
             string path = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
-            string filePath = Path.Combine(path, filename);
+            string filePath = Path.Combine(path,filename);
             try
             {
                 FileStream fileStream = File.Open(filePath, FileMode.Create);
@@ -562,7 +562,7 @@ By default, all columns, including hidden columns, are exported to PDF in the Sf
 DataGridPdfExportingOption option = new DataGridPdfExportingOption();
 var list = new List<string>();
 list.Add("OrderID");
-list.Add("CustomerID");
+list.Add("EmployeeID");
 option.ExcludedColumns = list;
 {% endhighlight %}
 {% endtabs %}
@@ -1060,15 +1060,16 @@ You can use this event to customize the properties of the grid rows that are exp
 {% tabs %}
 {% highlight c# %}
 pdfExport.RowExporting += pdfExport_RowExporting; 
-void pdfExport_RowExporting (object sender, DataGridRowPdfExportingEventArgs e)
+void pdfExport_RowExporting(object? sender, DataGridRowPdfExportingEventArgs e)
 {
-    if (e.RowType == ExportRowType.Record) {
-        if ((e.Record.Data as OrderInfo).IsClosed)
-            e.PdfRow.Style.BackgroundBrush = PdfBrushes.Yellow;
-        else
-        e.PdfRow.Style.BackgroundBrush = PdfBrushes.LightGreen;
-    }
-}
+     if (e.RowType == ExportRowType.RecordRow)
+     {
+         if (((OrderInfo)e.Record!.Data).IsClosed)
+             e.PdfRow.Style.BackgroundBrush = PdfBrushes.Yellow;
+         else
+             e.PdfRow.Style.BackgroundBrush = PdfBrushes.LightGreen;
+     }
+ }
 {% endhighlight %}
 {% endtabs %}
 
