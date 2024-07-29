@@ -5,6 +5,7 @@ description: Learn here all about coordinates conversion in Syncfusion .NET MAUI
 platform: MAUI
 control: SfPdfViewer
 documentation: ug
+keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .net maui open pdf, maui pdf viewer, maui pdf view
 ---
 
 # Working with PDF coordinates systems in .NET MAUI PDF Viewer
@@ -13,11 +14,11 @@ PDF Viewer allows users to obtain the PDF page coordinates relative to the PDF V
 
 ## Client rectangle
 
-The `ClientRectangle` in MAUI PdfViewer control is  a rectangular area that represents the dimensions of the client area or viewport. The client area denotes the visible portion of the PDF document within the control. In the MAUI PDF Viewer, this client rectangle is illustrated by the red rectangle in the following figure.
+The [ClientRectangle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_ClientRectangle) in MAUI PdfViewer control is  a rectangular area that represents the dimensions of the client area or viewport. The client area denotes the visible portion of the PDF document within the control. In the MAUI PDF Viewer, this client rectangle is illustrated by the red rectangle in the following figure.
 
 ![Client rectangle in .NET MAUI PDF Viewer](Images\Coordinates-Conversion\Client-Rectangle.png)
 
-The client rectangle can be obtained by the `ClientRectangle` property of the PDF Viewer. The following code sample explains the same.
+The client rectangle can be obtained by the [ClientRectangle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_ClientRectangle) property of the PDF Viewer. The following code sample explains the same.
 
 {% tabs %}
 {% highlight c# %}
@@ -34,7 +35,7 @@ The MAUI PDF Viewer specifies the position of points in the client area(viewport
 
 ### Get page number from client point
 
-You can obtain the page number of the client point using the `GetPageNumberFromClientPoint(Point clientPoint)` method by passing the client point as input parameter. The following code sample explains how to get the page number from the client point.
+You can obtain the page number of the client point using the [GetPageNumberFromClientPoint(Point clientPoint)](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_GetPageNumberFromClientPoint_Microsoft_Maui_Graphics_Point_) method by passing the client point as input parameter. The following code sample explains how to get the page number from the client point.
 
 {% tabs %}
 {% highlight c# %}
@@ -58,13 +59,13 @@ PDF page coordinates are represented in terms of device-independent coordinates 
 
 ![Page coordinates in .NET MAUI PDF Viewer](Images\Coordinates-Conversion\Page-Coordinates.png)
 
-## PDF scroll coordinates
+## Scroll coordinates
 
 Scroll coordinates in the MAUI PdfViewer denote pixel-based positions as pages are scrolled, indicating precise locations within the entire document. The coordinate system originates from the top-left corner of the visible area.
 
 ## Convert PDF Viewer’s coordinates to PDF page coordinates
 
-You can obtain the PDF page coordinates using the `ConvertClientPointToPagePoint(clientPoint, pageNumber)` method by passing the client point and page number as input parameters. The following code sample explains how to convert a tapped client area position to a page point.
+You can obtain the PDF page coordinates using the [ConvertClientPointToPagePoint(clientPoint, pageNumber)](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_ConvertClientPointToPagePoint_Microsoft_Maui_Graphics_Point_System_Int32_) method by passing the client point and page number as input parameters. The following code sample explains how to convert a tapped client area position to a page point.
 
 {% tabs %}
 {% highlight c# %}
@@ -86,11 +87,11 @@ private void PdfViewer_Tapped(object sender, GestureEventArgs e)
 
 ## Convert PDF page coordinates to PDF Viewer’s coordinates
 
-You can obtain the PDF Viewer’s coordinates using the `ConvertPagePointToClientPoint(pagePoint, pageNumber)` method by passing the page point and page number as input parameters. The following code sample explains how to convert a square annotation’s position in the page coordinates to a client point.
+You can obtain the PDF Viewer’s coordinates using the [ConvertPagePointToClientPoint(pagePoint, pageNumber)](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_ConvertPagePointToClientPoint_Microsoft_Maui_Graphics_Point_System_Int32_) method by passing the page point and page number as input parameters. The following code sample explains how to convert a square annotation’s position in the page coordinates to a client point.
 
 {% tabs %}
 {% highlight c# %}
-// Obtain the annotation collection using `SfPdfViewer` instance.
+// Obtain the annotation collection using [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) instance.
 ReadOnlyObservableCollection<Annotation> annotations = PdfViewer.Annotations;
 
 // Obtain the first annotation in the annotation collection.
@@ -113,11 +114,11 @@ if (annotation is SquareAnnotation squareAnnotation)
 
 ## Convert PDF page coordinates to scroll coordinates
 
-You can obtain the PDF Viewer’s scroll coordinates using the `ConvertPagePointToScrollPoint(pagePoint, pageNumber)` method by passing the page point and page number as input parameters. The following code example explains how to convert a square annotation’s position in the page coordinates to a scroll point.
+You can obtain the PDF Viewer’s scroll coordinates using the [ConvertPagePointToScrollPoint(pagePoint, pageNumber)](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_ConvertPagePointToScrollPoint_Microsoft_Maui_Graphics_Point_System_Int32_) method by passing the page point and page number as input parameters. The following code example explains how to convert a square annotation’s position in the page coordinates to a scroll point.
 
 {% tabs %}
 {% highlight c# %}
-// Obtain the annotation collection using `SfPdfViewer` instance.
+// Obtain the annotation collection using [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) instance.
 ReadOnlyObservableCollection<Annotation> annotations = PdfViewer.Annotations;
 
 // Obtain the first annotation in the annotation collection.

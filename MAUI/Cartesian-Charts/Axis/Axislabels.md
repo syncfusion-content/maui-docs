@@ -22,15 +22,13 @@ The [LabelsPosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.
 
 <chart:SfCartesianChart>
     . . .
-
     <chart:SfCartesianChart.XAxes>
-        <chart:CategoryAxis />
+        <chart:CategoryAxis/>
     </chart:SfCartesianChart.XAxes>
 
     <chart:SfCartesianChart.YAxes>
         <chart:NumericalAxis LabelsPosition="Inside"/>
     </chart:SfCartesianChart.YAxes>
-
 </chart:SfCartesianChart>
 
 
@@ -67,7 +65,6 @@ The [LabelRotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.C
     <chart:SfCartesianChart.XAxes>
         <chart:CategoryAxis LabelRotation="90"/>
     </chart:SfCartesianChart.XAxes>
-
 </chart:SfCartesianChart>
 
 {% endhighlight %}
@@ -102,7 +99,7 @@ The [LabelStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Char
 * `LabelFormat` - Gets or sets the label format. This property is used to set numeric or date-time format to the chart axis label.
 * `LabelAlignment` - Gets or sets the axis label at start, end, and center positions.
 * `MaxWidth` - Gets or sets the wrap width of the axis labels.
-* `WrappedLabelAlignment` - Gets or sets the horizontal rendering position of the wrapped axis labels. The default value is `Start`; other available values are `Center` and `End`.
+* `WrappedLabelAlignment` - Gets or sets the horizontal rendering position of the wrapped axis labels. The default value is `Start`, other available values are `Center` and `End`.
 
 
 ## Edge Labels Drawing Mode
@@ -121,11 +118,10 @@ Chart axis provides support to customize the rendering position of the edge labe
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-. . .
+    . . .
     <chart:SfCartesianChart.XAxes>
         <chart:DateTimeAxis EdgeLabelsDrawingMode="Center"/>
     </chart:SfCartesianChart.XAxes>
-
 </chart:SfCartesianChart>
 
 {% endhighlight %}
@@ -163,7 +159,6 @@ The visibility of the edge labels of the axis can be controlled using the [EdgeL
     <chart:SfCartesianChart.XAxes>
         <chart:NumericalAxis EdgeLabelsVisibilityMode="AlwaysVisible"/>
     </chart:SfCartesianChart.XAxes>
-
 </chart:SfCartesianChart>
 
 {% endhighlight %}
@@ -191,11 +186,10 @@ chart.XAxes.Add(primaryAxis);
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-. . .
+    . . .
     <chart:SfCartesianChart.XAxes>
         <chart:NumericalAxis EdgeLabelsVisibilityMode="Visible"/>
     </chart:SfCartesianChart.XAxes>
-
 </chart:SfCartesianChart>
 
 {% endhighlight %}
@@ -216,18 +210,17 @@ chart.XAxes.Add(primaryAxis);
 
 ## Smart Axis Labels
 
-Axis labels may overlap with each other based on chart dimensions and label size. The [LabelsIntersectAction]() property of axis is used to avoid overlapping of axis labels. The default value of the LabelsIntersectAction is `Hide`; other available values are `MultipleRows`, `None`, and `Wrap`.
+Axis labels may overlap with each other based on chart dimensions and label size. The [LabelsIntersectAction](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_LabelsIntersectAction) property of axis is used to avoid overlapping of axis labels. The default value of the LabelsIntersectAction is `Hide`, other available values are `MultipleRows`, `None`, and `Wrap`.
 
 {% tabs %}
 
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-. . .
+    . . .
     <chart:SfCartesianChart.XAxes>
-       <chart:CategoryAxis LabelsIntersectAction="MultipleRows" />
+       <chart:CategoryAxis LabelsIntersectAction="MultipleRows"/>
     </chart:SfCartesianChart.XAxes>
-
 </chart:SfCartesianChart>
 
 {% endhighlight %}
@@ -248,4 +241,4 @@ CategoryAxis primaryAxis = new CategoryAxis()
 
 ![Smart axis lable support in .NET MAUI SfCartesianChart.](axis_images/maui_chart_smart_axis_labels.png)
 
-N> If the [LabelsIntersectAction]() is set to Wrap, we should set the width of the wrap using the [MaxWidth]() property. We can align the wrapped axis label using the [WrappedLabelAlignment]() property.
+N> If the [LabelsIntersectAction](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_LabelsIntersectAction) is set to Wrap, we should set the width of the wrap using the [MaxWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxisLabelStyle.html#Syncfusion_Maui_Charts_ChartAxisLabelStyle_MaxWidth) property. We can align the wrapped axis label using the [WrappedLabelAlignment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxisLabelStyle.html#Syncfusion_Maui_Charts_ChartAxisLabelStyle_WrappedLabelAlignment) property.

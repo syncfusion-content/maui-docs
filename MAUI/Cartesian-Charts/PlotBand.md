@@ -33,18 +33,18 @@ Plot bands are classified into [NumericalPlotBand](https://help.syncfusion.com/c
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-        . . .
-        <chart:SfCartesianChart.YAxes>
-            <chart:NumericalAxis>
-                <chart:NumericalAxis.PlotBands>
-                    <chart:NumericalPlotBandCollection>
-                        <chart:NumericalPlotBand Start="24" End="28" 
-                                                 Fill="Orange"/>
-                    </chart:NumericalPlotBandCollection>
-                </chart:NumericalAxis.PlotBands>
-            </chart:NumericalAxis>
-        </chart:SfCartesianChart.YAxes>
-        . . .
+    . . .
+    <chart:SfCartesianChart.YAxes>
+        <chart:NumericalAxis>
+            <chart:NumericalAxis.PlotBands>
+                <chart:NumericalPlotBandCollection>
+                    <chart:NumericalPlotBand Start="24" End="28" 
+                                             Fill="Orange"/>
+                </chart:NumericalPlotBandCollection>
+            </chart:NumericalAxis.PlotBands>
+        </chart:NumericalAxis>
+    </chart:SfCartesianChart.YAxes>
+    . . .
 </chart:SfCartesianChart>
 
 {% endhighlight %}
@@ -52,8 +52,7 @@ Plot bands are classified into [NumericalPlotBand](https://help.syncfusion.com/c
 {% highlight c# %}
 
 SfCartesianChart chart = new SfCartesianChart();
-    . . .
-    
+. . .
 NumericalAxis numericalAxis = new NumericalAxis();
 NumericalPlotBandCollection numericalPlotBandCollection = new NumericalPlotBandCollection();
 NumericalPlotBand plotBand = new NumericalPlotBand
@@ -83,22 +82,22 @@ chart.YAxes.Add(numericalAxis);
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-        . . .
-     <chart:SfCartesianChart.XAxes>
-         <chart:DateTimeAxis>
-          <chart:DateTimeAxis.PlotBands>
-             <chart:DateTimePlotBandCollection >
-                 <chart:DateTimePlotBand Start="2023-04-01"
-                                         End="2023-06-01"
-                                         Fill="Orange"/>
-                    </chart:DateTimePlotBandCollection >
-                </chart:DateTimeAxis.PlotBands>
-            </chart:DateTimeAxis>
-        </chart:SfCartesianChart.XAxes>
+    . . .
+    <chart:SfCartesianChart.XAxes>
+        <chart:DateTimeAxis>
+            <chart:DateTimeAxis.PlotBands>
+                <chart:DateTimePlotBandCollection>
+                    <chart:DateTimePlotBand Start="2023-04-01"
+                                            End="2023-06-01"
+                                            Fill="Orange"/>
+                </chart:DateTimePlotBandCollection>
+            </chart:DateTimeAxis.PlotBands>
+        </chart:DateTimeAxis>
+    </chart:SfCartesianChart.XAxes>
 
-        <chart:SfCartesianChart.YAxes>
-            <chart:NumericalAxis/>
-        </chart:SfCartesianChart.YAxes>
+    <chart:SfCartesianChart.YAxes>
+        <chart:NumericalAxis/>
+    </chart:SfCartesianChart.YAxes>
 </chart:SfCartesianChart>
 
 {% endhighlight %}
@@ -107,21 +106,21 @@ chart.YAxes.Add(numericalAxis);
 
 SfCartesianChart chart = new SfCartesianChart();
 . . .
-    DateTimeAxis dateTimeAxis = new DateTimeAxis();
-    DateTimePlotBandCollection dateTimePlotBandCollection = new DateTimePlotBandCollection();
-    DateTimePlotBand plotBand = new DateTimePlotBand
-    {
-        Start = new DateTime(2023, 04, 01),
-        End = new DateTime(2023,06,01),
-        Fill = Color.Orange
-    };
+DateTimeAxis dateTimeAxis = new DateTimeAxis();
+DateTimePlotBandCollection dateTimePlotBandCollection = new DateTimePlotBandCollection();
+DateTimePlotBand plotBand = new DateTimePlotBand
+{
+    Start = new DateTime(2023, 04, 01),
+    End = new DateTime(2023,06,01),
+    Fill = Color.Orange
+};
 
-    dateTimePlotBandCollection.Add(plotBand);
-    dateTimeAxis.PlotBands = dateTimePlotBandCollection;
-    chart.XAxes.Add(dateTimeAxis);
+dateTimePlotBandCollection.Add(plotBand);
+dateTimeAxis.PlotBands = dateTimePlotBandCollection;
+chart.XAxes.Add(dateTimeAxis);
 
-    NumericalAxis secondaryAxis = new NumericalAxis();
-    chart.YAxes.Add(secondaryAxis);
+NumericalAxis secondaryAxis = new NumericalAxis();
+chart.YAxes.Add(secondaryAxis);
 ...
 
 {% endhighlight %}
@@ -143,24 +142,24 @@ The Plot band recurrence feature enables plot bands to be drawn repeatedly at re
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-        . . .
-        <chart:SfCartesianChart.XAxes>
-            <chart:CategoryAxis/>
-        </chart:SfCartesianChart.XAxes>
+    . . .
+    <chart:SfCartesianChart.XAxes>
+        <chart:CategoryAxis/>
+    </chart:SfCartesianChart.XAxes>
 
-        <chart:SfCartesianChart.YAxes>
-          <chart:NumericalAxis>
-           <chart:NumericalAxis.PlotBands>
-               <chart:NumericalPlotBandCollection>
+    <chart:SfCartesianChart.YAxes>
+        <chart:NumericalAxis>
+            <chart:NumericalAxis.PlotBands>
+                <chart:NumericalPlotBandCollection>
                     <chart:NumericalPlotBand Start="20"  End="22"
                                              IsRepeatable="True"
                                              RepeatUntil="32"
                                              RepeatEvery="4"
-                                             Fill="LightGray" />
-                    </chart:NumericalPlotBandCollection>
-                </chart:NumericalAxis.PlotBands>
-            </chart:NumericalAxis>
-        </chart:SfCartesianChart.YAxes>
+                                             Fill="LightGray"/>
+                </chart:NumericalPlotBandCollection>
+            </chart:NumericalAxis.PlotBands>
+        </chart:NumericalAxis>
+    </chart:SfCartesianChart.YAxes>
 </chart:SfCartesianChart>
 
 {% endhighlight %}
@@ -168,7 +167,7 @@ The Plot band recurrence feature enables plot bands to be drawn repeatedly at re
 {% highlight c# %}
 
 SfCartesianChart chart = new SfCartesianChart();
-    . . .
+. . .
 CategoryAxis primaryAxis = new CategoryAxis();
 chart.XAxes.Add(primaryAxis);
 
@@ -212,33 +211,32 @@ Suppose, you want to draw a plot band that should not stretch along its associat
      </chart:SfCartesianChart.XAxes>
 
     <chart:SfCartesianChart.YAxes>
-      <chart:NumericalAxis>
-         <chart:NumericalAxis.PlotBands>
-             <chart:NumericalPlotBandCollection>
-                  <chart:NumericalPlotBand Start="20" 
-                                           End="22" 
-                                           AssociatedAxisEnd="2"
-                                           Fill="#B300E190"
-                                           Text="Low"/>
+        <chart:NumericalAxis>
+            <chart:NumericalAxis.PlotBands>
+                <chart:NumericalPlotBandCollection>
+                    <chart:NumericalPlotBand Start="20" 
+                                             End="22" 
+                                             AssociatedAxisEnd="2"
+                                             Fill="#B300E190"
+                                             Text="Low"/>
 
-                 <chart:NumericalPlotBand Start="25" 
-                                           End="27" 
-                                           AssociatedAxisStart = 4.3,
-                                           AssociatedAxisEnd="6.8"
-                                           Fill="#B3FCD404"
-                                           Text="Average"/>
+                    <chart:NumericalPlotBand Start="25" 
+                                             End="27" 
+                                             AssociatedAxisStart = 4.3,
+                                             AssociatedAxisEnd="6.8"
+                                             Fill="#B3FCD404"
+                                             Text="Average"/>
 
-                 <chart:NumericalPlotBand Start="30" 
-                                          End="32" 
-                                          AssociatedAxisStart="9"
-                                          Fill="#B3FF4E4E"
-                                          Text="High"/>                       
-
-                    </chart:NumericalPlotBandCollection>
-                </chart:NumericalAxis.PlotBands>
-            </chart:NumericalAxis>
-        </chart:SfCartesianChart.YAxes>
-        . . .
+                    <chart:NumericalPlotBand Start="30" 
+                                             End="32" 
+                                             AssociatedAxisStart="9"
+                                             Fill="#B3FF4E4E"
+                                             Text="High"/>                       
+                </chart:NumericalPlotBandCollection>
+            </chart:NumericalAxis.PlotBands>
+        </chart:NumericalAxis>
+    </chart:SfCartesianChart.YAxes>
+    . . .
 </chart:SfCartesianChart>
 
 {% endhighlight %}
@@ -307,34 +305,33 @@ When specifying the same value for both start and end, a plot line will be drawn
      </chart:SfCartesianChart.XAxes>
 
     <chart:SfCartesianChart.YAxes>
-      <chart:NumericalAxis>
-         <chart:NumericalAxis.PlotBands>
-             <chart:NumericalPlotBandCollection>
-                  <chart:NumericalPlotBand Start="24" 
-                                           End="24" 
-                                           Fill="#B300E190"
-                                           Stroke="#B300E190"
-                                           StrokeWidth="2"
-                                           Text="Low Temperature"/>
+        <chart:NumericalAxis>
+            <chart:NumericalAxis.PlotBands>
+                <chart:NumericalPlotBandCollection>
+                    <chart:NumericalPlotBand Start="24" 
+                                             End="24" 
+                                             Fill="#B300E190"
+                                             Stroke="#B300E190"
+                                             StrokeWidth="2"
+                                             Text="Low Temperature"/>
 
-                 <chart:NumericalPlotBand Start="28" 
-                                          End="28" 
-                                          Stroke="#FCD404"
-                                          StrokeWidth="2"
-                                          Fill="#FCD404"
-                                         Text="Average Temperature"/>
+                    <chart:NumericalPlotBand Start="28" 
+                                             End="28" 
+                                             Stroke="#FCD404"
+                                             StrokeWidth="2"
+                                             Fill="#FCD404"
+                                             Text="Average Temperature"/>
 
-                 <chart:NumericalPlotBand Start="32" 
-                                          End="32" 
-                                          Stroke="#FF4E4E"
-                                          StrokeWidth="2"
-                                          Fill="#FF4E4E"
-                                          Text="High Temperature"/>                       
-
-                    </chart:NumericalPlotBandCollection>
-                </chart:NumericalAxis.PlotBands>
-            </chart:NumericalAxis>
-        </chart:SfCartesianChart.YAxes>
+                    <chart:NumericalPlotBand Start="32" 
+                                             End="32" 
+                                             Stroke="#FF4E4E"
+                                             StrokeWidth="2"
+                                             Fill="#FF4E4E"
+                                            Text="High Temperature"/>                       
+                </chart:NumericalPlotBandCollection>
+            </chart:NumericalAxis.PlotBands>
+        </chart:NumericalAxis>
+    </chart:SfCartesianChart.YAxes>
     . . .
 </chart:SfCartesianChart>
 
@@ -414,20 +411,21 @@ chart.YAxes.Add(numericalAxis);
 
     <chart:SfCartesianChart.YAxes>
         <chart:NumericalAxis>
-          <chart:NumericalAxis.PlotBands>
-            <chart:NumericalPlotBandCollection>
-             <chart:NumericalPlotBand Start="28" 
-                                      Size="10" 
-                                      Fill="Orange"
-                                      Text="Plot Band">
-              <chart:NumericalPlotBand.LabelStyle>
-               <chart:ChartPlotBandLabelStyle TextColor="Blue"
-                                              FontSize="12" 
-                                              FontAttributes="Bold"/>
-              </chart:NumericalPlotBand.LabelStyle>
-           </chart:NumericalPlotBandCollection>
-         </chart:NumericalAxis.PlotBands>
-       </chart:NumericalAxis>
+            <chart:NumericalAxis.PlotBands>
+                <chart:NumericalPlotBandCollection>
+                    <chart:NumericalPlotBand Start="28" 
+                                             Size="10" 
+                                             Fill="Orange"
+                                             Text="Plot Band">
+                        <chart:NumericalPlotBand.LabelStyle>
+                            <chart:ChartPlotBandLabelStyle TextColor="Blue"
+                                                           FontSize="12" 
+                                                           FontAttributes="Bold"/>
+                        </chart:NumericalPlotBand.LabelStyle>
+                    </chart:NumericalPlotBand>
+                </chart:NumericalPlotBandCollection>
+            </chart:NumericalAxis.PlotBands>
+        </chart:NumericalAxis>
     </chart:SfCartesianChart.YAxes>
     . . .
 </chart:SfCartesianChart>

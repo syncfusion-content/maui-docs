@@ -5,6 +5,7 @@ description: Learn all about column resizing support in Syncfusion MAUI DataGrid
 platform: MAUI
 control: SfDataGrid
 documentation: ug
+keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .net maui datagrid, .net maui grid, .net grid maui, .net maui column resizing, maui column resizing
 ---
 
 # Columns Resizing in MAUI DataGrid (SfDataGrid)
@@ -24,7 +25,7 @@ dataGrid.AllowResizingColumns = true;
 {% endhighlight %}
 {% endtabs %}
 
-![DataGrid with column resizing](Images\column-resizing\maui-datagrid-column-resizing.gif)
+![.NET MAUI DataGrid with column resizing.](Images\column-resizing\net-maui-datagrid-column-resizing.gif)
 
 To hide a column interactively, set the `DataGridColumn.MinimumWidth` property to zero. Then, resize the column to a width less than zero.
 
@@ -107,4 +108,4 @@ dataGrid.DefaultStyle.ColumnResizingIndicatorColor = Colors.Blue;
 {% endhighlight %}
 {% endtabs %}
 
-![DataGrid with column resizing indicator color](Images\column-resizing\maui-datagrid-column-resizing-indicator-color.gif)
+![.NET MAUI DataGrid with column resizing indicator color.](Images\column-resizing\net-maui-datagrid-column-resizing-indicator-color.gif)

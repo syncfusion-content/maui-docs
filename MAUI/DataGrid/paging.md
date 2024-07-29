@@ -5,6 +5,7 @@ description: Learn here all about Paging support in Syncfusion MAUI DataGrid (Sf
 platform: MAUI
 control: SfDataGrid
 documentation: UG
+keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .net maui datagrid, .net maui grid, .net grid maui, .net maui paging, maui paging
 ---
 
 # Paging in MAUI DataGrid (SfDataGrid)
@@ -103,7 +104,7 @@ public partial class MainPage : ContentPage
 
 The following screenshot shows the outcome upon execution of the above code:
 
-![Normal paging .NET MAUI DataGrid](Images\paging\maui-datagrid-normal-paging.png)
+![Normal paging .NET MAUI DataGrid.](Images\paging\net-maui-datagrid-normal-paging.png)
 
 ## On-Demand Paging	
 
@@ -238,7 +239,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![Numeric button shape .NET MAUI DataGrid](Images\paging\maui-datagrid-button-shape.png)
+![Numeric button shape .NET MAUI DataGrid.](Images\paging\net-maui-datagrid-button-shape.png)
 
 ## Generating numeric buttons
 
@@ -292,7 +293,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![Button size and Font size of .NET MAUI DataGrid](Images\paging\maui-datagrid-buttonsize-and-fontsize.png)
+![Button size and font size of .NET MAUI DataGrid.](Images\paging\net-maui-datagrid-buttonsize-and-fontsize.png)
 
 ## Display mode
 
@@ -397,7 +398,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![AutoEllipsisMode .NET MAUI DataGrid](Images\paging\maui-datagrid-autoelipsismode.png)
+![Auto-ellipsis mode .NET MAUI DataGrid.](Images\paging\net-maui-datagrid-autoelipsismode.png)
 
 ## Customize the auto-ellipsis text
 
@@ -622,7 +623,7 @@ public partial class MainPage : ContentPage
 
 The following picture shows the customize styles of data pager:
 
-![DataPager style .NET MAUI DataGrid](Images\paging\maui-datagrid-pager-style.png)
+![Data pager style .NET MAUI DataGrid.](Images\paging\net-maui-datagrid-pager-style.png)
 
 ### Limitations
 1. UI Filtering is not supported. You can code at the application level to filter the data.

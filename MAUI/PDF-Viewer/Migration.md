@@ -229,7 +229,7 @@ To make migration from [Xamarin SfPdfViewer](https://www.syncfusion.com/xamarin-
 </tr>
 <tr>
   <td>{{'[IsToolbarVisible](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.SfPdfViewer.html#Syncfusion_SfPdfViewer_XForms_SfPdfViewer_IsToolbarVisible)'| markdownify}}</td> 
-  <td> <code>ShowToolbars</code> </td>
+  <td>{{'[ShowToolbars](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_ShowToolbars)'| markdownify}}</td> 
   <td>Backing store for the ShowToolbars property.</td>
 </tr>
 </table>
