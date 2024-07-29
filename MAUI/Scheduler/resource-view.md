@@ -78,7 +78,7 @@ this.Scheduler.AppointmentsSource = appointment;
 {% endhighlight %}
 {% endtabs %}
 
-![Resource view in .NET MAUI Scheduler.](images/resource-view/net-maui-scheduler-resource-view-appointments.png)
+![Resource view in .NET MAUI Scheduler.](images/resource-view/resource-view-appointments-in-net-maui-scheduler.png)
 
 ### Multiple resource sharing using Scheduler resources
 
@@ -108,7 +108,7 @@ this.Scheduler.AppointmentsSource = appointment;
 {% endhighlight %}
 {% endtabs %}
 
-![Resource sharing in .NET MAUI Scheduler.](images/resource-view/net-maui-scheduler-resource-sharing.png)
+![Resource sharing in .NET MAUI Scheduler.](images/resource-view/resource-sharing-in-net-maui-scheduler.png)
 
 
 ## Business object binding for resources
@@ -299,7 +299,7 @@ N>
 * If the viewport height is lesser than 400 then each resource height will be calculated by default viewport size(4 (default resource*100)) divided by the minimum value of scheduler resources count and 4 (default resource count).
 * If the MinimumRowHeight is less than the default row height then the default row height will be used.
 
-![Resource minimum row and height in .NET MAUI Scheduler.](images/resource-view/net-maui-scheduler-resource-view-minimum-height.png)
+![Resource minimum row and height in .NET MAUI Scheduler.](images/resource-view/resource-view-minimum-height-in-net-maui-scheduler.png)
 
 ## Assign special time regions to scheduler resources
 You can highlight a resources availability by creating special time regions in the timeline day, timeline week, and timeline workweek views.
@@ -325,7 +325,7 @@ private ObservableCollection<SchedulerTimeRegion> GetTimeRegion()
 {% endhighlight %}
 {% endtabs %}
 
-![Resource view special timeregion in .NET MAUI Scheduler.](images/resource-view/net-maui-scheduler-special-regions-resources.png)
+![Resource view special timeregion in .NET MAUI Scheduler.](images/resource-view/special-regions-resources-in-net-maui-scheduler.png)
 
 ## Programmatic resource selection
 You can programmatically select the resource by using the [SelectedResourceId]() and [SelectedDate]() of the SfScheduler. Please [click]() here to see more details about programmatic date selection.
