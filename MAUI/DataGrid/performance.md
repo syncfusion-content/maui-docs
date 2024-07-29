@@ -60,9 +60,9 @@ datagrid.EnableDataVirtualization = true;
 
 The DataGrid supports loading data incrementally using the [ISupportIncrementalLoading](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Data.ISupportIncrementalLoading.html) interface. This interface includes the `LoadMoreItemsAsync` method, which helps to load data incrementally. The `LoadMoreItemsAsync` method is called on-demand while scrolling, based on the [HasMoreItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Data.ISupportIncrementalLoading.html#Syncfusion_Maui_Data_ISupportIncrementalLoading_HasMoreItems) property.
 
-If `HasMoreItems` is false, SfDataGrid stops calling `LoadMoreItemsAsync`. SfDataGrid includes `IncrementalList`, which is derived from `ISupportIncrementalLoading`. You can use `IncrementalList` or create a collection derived from `ISupportIncrementalLoading` and bind it to [SfDataGrid.ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ItemsSourceProperty).
+If `HasMoreItems` is false, SfDataGrid stops calling `LoadMoreItemsAsync`. SfDataGrid includes `IncrementalList`, which is derived from `ISupportIncrementalLoading`. You can use `IncrementalList` or create a collection derived from `ISupportIncrementalLoading` and bind it to [SfDataGrid.ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ItemsSource).
 
-Additionally, the [SfDataGrid.DataFetchSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_DataFetchSizeProperty) property defines the count argument in the `LoadMoreItemsAsync` method, which determines the amount of data to be loaded into the items source when the user reaches the end of the `SfDataGrid`.
+Additionally, the [SfDataGrid.DataFetchSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_DataFetchSize) property defines the count argument in the `LoadMoreItemsAsync` method, which determines the amount of data to be loaded into the items source when the user reaches the end of the `SfDataGrid`.
 
 In the code below, `IncrementalList` is initialized by passing an Action to its constructor for loading items incrementally.
 

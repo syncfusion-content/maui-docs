@@ -127,23 +127,6 @@ public class DisplayBindingConverter : IValueConverter
 
 In order to set the TextAlignment of the header cell and data row cell , use the [DataGridColumn.HeaderTextAlignment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_HeaderTextAlignment) and [DataGridColumn.CellTextAlignment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_CellTextAlignment) property. The default text alignment is based on the type of the columns. The header and data rows are right aligned for numeric, date columns and left aligned for text column.
 
-### Line Break Mode
-
-The text wrapping and truncation of a column's cell values can be customized by setting the [DataGridColumn.LineBreakMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_LineBreakModeProperty) property.
- 
-{% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
-<syncfusion:SfDataGrid AutoGenerateColumnsMode="None"
-                       ItemsSource="{Binding OrderInfo}">
-    <syncfusion:SfDataGrid.Columns >
-        <syncfusion:DataGridTextColumn MappingName="Name" LineBreakMode="NoWrap" />
-    </syncfusion:SfDataGrid.Columns>
-</syncfusion:SfDataGrid>
-{% endhighlight %}
-{% endtabs %}
-
-N> The truncation modes will not work on the Windows platform.
-
 #### HeaderText
 
 To customize the display content of the header cell, use the [DataGridColumn.HeaderText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_HeaderText) property. It specifies the text displayed in the column header. If the header text is not defined, then `DataGridColumn.MappingName` will be assigned to the header text and will be displayed as a column header.
@@ -386,6 +369,22 @@ private void dataGrid_AutoGeneratingColumn(object sender, DataGridAutoGenerating
 {% endhighlight %}
 {% endtabs %}
 
+### Line Break Mode
+
+The text wrapping and truncation of a column's cell values can be customized by setting the [DataGridColumn.LineBreakMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_LineBreakMode) property.
+ 
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+<syncfusion:SfDataGrid AutoGenerateColumnsMode="None"
+                       ItemsSource="{Binding OrderInfo}">
+    <syncfusion:SfDataGrid.Columns >
+        <syncfusion:DataGridTextColumn MappingName="Name" LineBreakMode="NoWrap" />
+    </syncfusion:SfDataGrid.Columns>
+</syncfusion:SfDataGrid>
+{% endhighlight %}
+{% endtabs %}
+
+N> The truncation modes will not work on the Windows platform.
 
 ## DataGridTextColumn
 
@@ -1071,15 +1070,15 @@ dataGrid.Columns.Add(numericColumn);
 
 The `DataGridNumericColumn` allows formatting the numeric data with culture-specific information.
 
-* `Minimum` - To set the minimum value for the numeric column, use the [DataGridNumericColumn.Minimum](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridNumericColumn.html#Syncfusion_Maui_DataGrid_DataGridNumericColumn_MinimumProperty) property.
+* `Minimum` - To set the minimum value for the numeric column, use the [DataGridNumericColumn.Minimum](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridNumericColumn.html#Syncfusion_Maui_DataGrid_DataGridNumericColumn_Minimum) property.
 
-* `Maximum` - To set the maximum value for the numeric column, use the [DataGridNumericColumn.Maximum](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridNumericColumn.html#Syncfusion_Maui_DataGrid_DataGridNumericColumn_MaximumProperty) property.
+* `Maximum` - To set the maximum value for the numeric column, use the [DataGridNumericColumn.Maximum](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridNumericColumn.html#Syncfusion_Maui_DataGrid_DataGridNumericColumn_Maximum) property.
 
-* `ShowClearButton` - To clear the value for the numeric column, use the [DataGridNumericColumn.ShowClearButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridNumericColumn.html#Syncfusion_Maui_DataGrid_DataGridNumericColumn_ShowClearButtonProperty) property.
+* `ShowClearButton` - To clear the value for the numeric column, use the [DataGridNumericColumn.ShowClearButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridNumericColumn.html#Syncfusion_Maui_DataGrid_DataGridNumericColumn_ShowClearButton) property.
 
-* `Placeholder` - To set the placeholder when the numeric cell value is null, use the [DataGridNumericColumn.Placeholder](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridNumericColumn.html#Syncfusion_Maui_DataGrid_DataGridNumericColumn_PlaceholderProperty) property.
+* `Placeholder` - To set the placeholder when the numeric cell value is null, use the [DataGridNumericColumn.Placeholder](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridNumericColumn.html#Syncfusion_Maui_DataGrid_DataGridNumericColumn_Placeholder) property.
 
-* `NullValue` - To set the null value when the numeric cell value is null, use the [DataGridNumericColumn.NullValue](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridNumericColumn.html#Syncfusion_Maui_DataGrid_DataGridNumericColumn_AllowNullValueProperty) property.
+* `NullValue` - To set the null value when the numeric cell value is null, use the [DataGridNumericColumn.NullValue](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridNumericColumn.html#Syncfusion_Maui_DataGrid_DataGridNumericColumn_NullValue) property.
 
 ## Row header
 
