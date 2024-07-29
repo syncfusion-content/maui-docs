@@ -1,6 +1,6 @@
 ---
 layout: post
-title: About .NET MAUI Maps control | Syncfusion 
+title: Overview of .NET MAUI Maps Control | Syncfusion 
 description: Learn here all about the introduction of Syncfusion .NET MAUI Maps (SfMaps) control, its features, and more.
 platform: MAUI
 control: SfMaps
@@ -29,6 +29,6 @@ The [.NET MAUI Maps](https://www.syncfusion.com/maui-controls/maui-maps) control
 
 * **[Tooltip](https://help.syncfusion.com/maui/maps/tooltip)** - Display additional information about shapes, markers, and bubbles using a customizable tooltip on a map.
 
-![Maps layer overview](images/overview/maui_maps.png)
+![.NET MAUI Maps layer overview.](images/overview/net-maui-maps-overview.png)
 
 N> You can get the samples in the [GitHub](https://github.com/syncfusion/maui-demos) link

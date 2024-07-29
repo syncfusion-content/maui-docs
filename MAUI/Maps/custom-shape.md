@@ -1,14 +1,14 @@
 ---
 layout: post
-title: About .NET MAUI Maps control | Syncfusion 
-description: Learn here all about the custom shapes feature of Syncfusion .NET MAUI Maps (SfMaps) control, its features, and more.
+title: Custom Shapes in .NET MAUI Maps Control | Syncfusion 
+description: Learn here all about the custom shapes feature of Syncfusion .NET MAUI Maps (SfMaps) control, its elemnts, and more.
 platform: MAUI
 control: SfMaps
 documentation: ug
 keywords: .net maui maps, .net maui shape maps.
 ---
 
-# Custom shapes in .NET MAUI Maps (SfMaps)
+# Custom Shapes in .NET MAUI Maps (SfMaps)
 
 The [.NET MAUI Maps](https://www.syncfusion.com/maui-controls/maui-maps) control allows you to render any custom shape to make a map look like building infrastructure, a sports stadium, plane or bus seat arrangements, and more using the [`Geometry`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_Geometry) property.
 {% tabs %}
