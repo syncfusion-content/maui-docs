@@ -108,7 +108,7 @@ this.Scheduler.AppointmentsSource = appointment;
 {% endhighlight %}
 {% endtabs %}
 
-![Resource sharing in .NET MAUI Scheduler.](images/resource-view/resource-sharing-in-net-maui-scheduler.png)
+![Resource sharing in .NET MAUI Scheduler.](images/resource-view/resource-view-sharing-in-net-maui-scheduler.png)
 
 
 ## Business object binding for resources
