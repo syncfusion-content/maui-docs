@@ -371,7 +371,7 @@ private void dataGrid_AutoGeneratingColumn(object sender, DataGridAutoGenerating
 {% endhighlight %}
 {% endtabs %}
 
-### Line Break Mode
+### Line break mode
 
 The text wrapping and truncation of a column's cell values can be customized by setting the [DataGridColumn.LineBreakMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_LineBreakMode) property.
  
