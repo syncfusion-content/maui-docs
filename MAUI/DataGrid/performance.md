@@ -58,7 +58,7 @@ datagrid.EnableDataVirtualization = true;
 
 ## Incremental loading
 
-The DataGrid supports loading data incrementally using the `ISupportIncrementalLoading` interface. This interface includes the `LoadMoreItemsAsync` method, which helps to load data incrementally. The `LoadMoreItemsAsync` method is called on-demand while scrolling, based on the `HasMoreItems` property.
+The DataGrid supports loading data incrementally using the [ISupportIncrementalLoading](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Data.ISupportIncrementalLoading.html) interface. This interface includes the `LoadMoreItemsAsync` method, which helps to load data incrementally. The `LoadMoreItemsAsync` method is called on-demand while scrolling, based on the [HasMoreItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Data.ISupportIncrementalLoading.html#Syncfusion_Maui_Data_ISupportIncrementalLoading_HasMoreItems) property.
 
 If `HasMoreItems` is false, SfDataGrid stops calling `LoadMoreItemsAsync`. SfDataGrid includes `IncrementalList`, which is derived from `ISupportIncrementalLoading`. You can use `IncrementalList` or create a collection derived from `ISupportIncrementalLoading` and bind it to [SfDataGrid.ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ItemsSourceProperty).
 
