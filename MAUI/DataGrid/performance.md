@@ -42,7 +42,7 @@ N> Download demo application from [GitHub](https://github.com/SyncfusionExamples
 
 DataGrid provides support to handle the large amount of data through built-in virtualization feature. With Data virtualization, the record entries will be created in the runtime only upon scrolling to the vertical end which increases the performance of grid loading time.
 
-To set [SfDataGrid.EnableDataVirtualization](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_EnableDataVirtualizationProperty) property to true, follow the code example:
+To set [SfDataGrid.EnableDataVirtualization](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_EnableDataVirtualization) property to true, follow the code example:
 
 {% tabs %}
 {% highlight xaml %}
