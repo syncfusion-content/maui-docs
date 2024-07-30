@@ -271,7 +271,7 @@ public MainPage()
 
 {% endtabs %}
 
-![maps basic view](images/getting-started/map_basic_view.png)
+![.NET MAUI Maps basic view.](images/getting-started/net-maui-map-basic-view.png)
 
 ## Mapping the data source for shape layer
 
@@ -544,7 +544,7 @@ public class ViewModel
 
 {% endtabs %}
 
-![Maps getting started](images/getting-started/maps_getting_started.png)
+![.NET MAUI Maps getting started.](images/getting-started/net-maui-maps-getting-started.png)
 
 ## Add tile layer
 
@@ -576,7 +576,7 @@ this.Content = map;
 
 {% endtabs %}
 
-![.NET MAUI Maps with tile layer](images/getting-started/getting_started_tile_layer.png)
+![.NET MAUI Maps with tile layer.](images/getting-started/net-maui-maps-with-tile-layer.png)
 
 N>
 * Get the complete getting started sample from [GitHub](https://github.com/SyncfusionExamples/.NET-MAUI-Maps-Getting-Started) link.
