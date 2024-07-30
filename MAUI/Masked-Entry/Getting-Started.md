@@ -116,7 +116,7 @@ maskedEntry.Mask = "00/00/0000";
 {% endhighlight %}
 {% endtabs %}
 
-![Simple mask in MAUI MaskedEntry](MaskedEntry_Images/maui_simple_mask.png)
+![Simple mask in .NET MAUI Masked Entry.](maskedentry_images/net-maui-masked-entry-simple-mask.png)
 
 ## Initialize MaskedEntry control using RegEx mask
 
@@ -139,7 +139,7 @@ maskedEntry.Mask = "[A-Za-z0-9._%-]+@[A-Za-z0-9]+.[A-Za-z]{2,3}";
 {% endhighlight %}
 {% endtabs %}
 
-![RegEx mask in MAUI MaskedEntry](MaskedEntry_Images/maui_regex_mask.png)
+![RegEx mask in .NET MAUI Masked Entry.](maskedentry_images/net-maui-masked-entry-regex-mask.png)
 
 ## Setting the prompt character
 
@@ -166,7 +166,7 @@ maskedEntry.PromptChar = '#';
 {% endhighlight %}
 {% endtabs %}
 
-![MAUI MaskedEntry prompt character](MaskedEntry_Images/maui_masked_entry_prompt_char.png)
+![.NET MAUI Masked Entry prompt character.](maskedentry_images/net-maui-masked-entry-prompt-char.png)
 
 ## Setting the value
 
@@ -193,7 +193,7 @@ maskedEntry.Value = "12/02/2022";
 {% endhighlight %}
 {% endtabs %}
 
-![MAUI MaskedEntry value](MaskedEntry_Images/maui_masked_entry_value.png)
+![.NET MAUI Masked Entry value.](maskedentry_images/net-maui-masked-entry-value.png)
 
 N> 
 Get the complete getting started sample from the [GitHub](https://github.com/SyncfusionExamples/maui-maskedentry-samples) link.
