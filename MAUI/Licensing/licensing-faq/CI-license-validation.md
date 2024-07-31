@@ -46,7 +46,7 @@ The following section shows how to validate the Syncfusion license key in CI ser
 The following example shows the syntax for Windows build agents.
 
 {% tabs %}
-{% highlight c# tabtitle ="YAML" %}
+{% highlight c# tabtitle="YAML" %}
 pool:
   vmImage: 'windows-latest'
 
@@ -76,7 +76,7 @@ steps:
 The following example shows the syntax for validating Syncfusion license key in GitHub actions.
 
 {% tabs %}
-{% highlight c# tabtitle ="YAML" %}
+{% highlight c# tabtitle="YAML" %}
   steps:
   - name: Syncfusion License Validation
     shell: pwsh
