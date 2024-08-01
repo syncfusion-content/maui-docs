@@ -90,7 +90,9 @@ You can add a custom image for displaying in [.NET MAUI Avatar View](https://hel
                            HorizontalOptions="Center"   
                            HeightRequest="50"
                            CornerRadius="25"
-                           WidthRequest="50" />
+                           WidthRequest="50" 
+                           Stroke="Black"
+                           StrokeThickness="1"/>
 </Grid>
 </ContentPage.Content>
 
@@ -121,6 +123,8 @@ namespace AvatarViewGettingStarted
             avatarview.WidthRequest = 50;
             avatarview.HeightRequest = 50;
             avatarview.CornerRadius = 25;
+            avatarview.Stroke = Colors.Black;
+            avatarview.StrokeThickness = 1;
             mainGrid.Children.Add(avatarview);
             this.Content = mainGrid;
         }
