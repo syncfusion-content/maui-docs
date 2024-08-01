@@ -25,7 +25,7 @@ dataGrid.AllowResizingColumns = true;
 {% endhighlight %}
 {% endtabs %}
 
-![DataGrid with column resizing](Images\column-resizing\maui-datagrid-column-resizing.gif)
+![.NET MAUI DataGrid with column resizing.](Images\column-resizing\net-maui-datagrid-column-resizing.gif)
 
 To hide a column interactively, set the `DataGridColumn.MinimumWidth` property to zero. Then, resize the column to a width less than zero.
 
@@ -108,4 +108,4 @@ dataGrid.DefaultStyle.ColumnResizingIndicatorColor = Colors.Blue;
 {% endhighlight %}
 {% endtabs %}
 
-![DataGrid with column resizing indicator color](Images\column-resizing\maui-datagrid-column-resizing-indicator-color.gif)
+![.NET MAUI DataGrid with column resizing indicator color.](Images\column-resizing\net-maui-datagrid-column-resizing-indicator-color.gif)

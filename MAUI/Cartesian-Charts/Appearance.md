@@ -57,7 +57,7 @@ Cartesian chart provides support to set the palette to series for applying prede
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-. . .
+    . . .
     <chart:ColumnSeries ItemsSource="{Binding Data}"  
                         XBindingPath="XValue" 
                         YBindingPath="YValue" 
@@ -103,7 +103,7 @@ The following code sample and screenshot illustrates how to apply the gradient b
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-. . .
+    . . .
     <chart:ColumnSeries ItemsSource="{Binding Data}"  
                         XBindingPath="XValue" 
                         YBindingPath="YValue" 
@@ -123,45 +123,45 @@ public class ViewModel
 	{
 		CustomBrushes = new List<Brush>();
 		LinearGradientBrush gradientColor1 = new LinearGradientBrush();
-			gradientColor1.GradientStops = new GradientStopCollection()
-			{
-				new GradientStop() { Offset = 1, Color = Color.FromRgb(255, 231, 199) },
-				new GradientStop() { Offset = 0, Color = Color.FromRgb(252, 182, 159) }
-			};
+		gradientColor1.GradientStops = new GradientStopCollection()
+		{
+			new GradientStop() { Offset = 1, Color = Color.FromRgb(255, 231, 199) },
+			new GradientStop() { Offset = 0, Color = Color.FromRgb(252, 182, 159) }
+		};
 
-			LinearGradientBrush gradientColor2 = new LinearGradientBrush();
-			gradientColor2.GradientStops = new GradientStopCollection()
-			{
-				new GradientStop() { Offset = 1, Color = Color.FromRgb(250, 221, 125) },
-				new GradientStop() { Offset = 0, Color = Color.FromRgb(252, 204, 45) }
-			};
+		LinearGradientBrush gradientColor2 = new LinearGradientBrush();
+		gradientColor2.GradientStops = new GradientStopCollection()
+		{
+			new GradientStop() { Offset = 1, Color = Color.FromRgb(250, 221, 125) },
+			new GradientStop() { Offset = 0, Color = Color.FromRgb(252, 204, 45) }
+		};
 
-			LinearGradientBrush gradientColor3 = new LinearGradientBrush();
-			gradientColor3.GradientStops = new GradientStopCollection()
-			{
-				new GradientStop() { Offset = 1, Color = Color.FromRgb(255, 231, 199) },
-				new GradientStop() { Offset = 0, Color = Color.FromRgb(252, 182, 159) }
-			};
+		LinearGradientBrush gradientColor3 = new LinearGradientBrush();
+		gradientColor3.GradientStops = new GradientStopCollection()
+		{
+			new GradientStop() { Offset = 1, Color = Color.FromRgb(255, 231, 199) },
+			new GradientStop() { Offset = 0, Color = Color.FromRgb(252, 182, 159) }
+		};
 
-			LinearGradientBrush gradientColor4 = new LinearGradientBrush();
-			gradientColor4.GradientStops = new GradientStopCollection()
-			{
-				new GradientStop() { Offset = 1, Color = Color.FromRgb(221, 214, 243) },
-				new GradientStop() { Offset = 0, Color = Color.FromRgb(250, 172, 168) }
-			};
+		LinearGradientBrush gradientColor4 = new LinearGradientBrush();
+		gradientColor4.GradientStops = new GradientStopCollection()
+		{
+			new GradientStop() { Offset = 1, Color = Color.FromRgb(221, 214, 243) },
+			new GradientStop() { Offset = 0, Color = Color.FromRgb(250, 172, 168) }
+		};
 
-			LinearGradientBrush gradientColor5 = new LinearGradientBrush();
-			gradientColor5.GradientStops = new GradientStopCollection()
-			{
-				new GradientStop() { Offset = 1, Color = Color.FromRgb(168, 234, 238) },
-				new GradientStop() { Offset = 0, Color = Color.FromRgb(123, 176, 249) }
-			};
+		LinearGradientBrush gradientColor5 = new LinearGradientBrush();
+		gradientColor5.GradientStops = new GradientStopCollection()
+		{
+			new GradientStop() { Offset = 1, Color = Color.FromRgb(168, 234, 238) },
+			new GradientStop() { Offset = 0, Color = Color.FromRgb(123, 176, 249) }
+		};
 
-			CustomBrushes.Add(gradientColor1);
-			CustomBrushes.Add(gradientColor2);
-			CustomBrushes.Add(gradientColor3);
-			CustomBrushes.Add(gradientColor4);
-			CustomBrushes.Add(gradientColor5);
+		CustomBrushes.Add(gradientColor1);
+		CustomBrushes.Add(gradientColor2);
+		CustomBrushes.Add(gradientColor3);
+		CustomBrushes.Add(gradientColor4);
+		CustomBrushes.Add(gradientColor5);
 	}
 
 . . .
@@ -182,23 +182,23 @@ public class ViewModel
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-   <chart:SfCartesianChart.PlotAreaBackgroundView>
-    <AbsoluteLayout>
-      <Label Text="Copyright @ 2001 - 2022 Syncfusion Inc"
-			 FontSize="18" AbsoluteLayout.LayoutBounds="1,1,-1,-1"
-			 AbsoluteLayout.LayoutFlags="PositionProportional"
-			 Opacity="0.4"/>
-       <Label Text="CONFIDENTIAL" 
-			  Rotation="340"
-			  FontSize="80"
-			  FontAttributes="Bold,Italic"
-			  TextColor="Gray"
-			  Margin="10,0,0,0"
-			  AbsoluteLayout.LayoutBounds="0.5,0.5,-1,-1"
-			  AbsoluteLayout.LayoutFlags="PositionProportional"
-			  Opacity="0.3" />
-    </AbsoluteLayout>
-   </chart:SfCartesianChart.PlotAreaBackgroundView>
+    <chart:SfCartesianChart.PlotAreaBackgroundView>
+        <AbsoluteLayout>
+      	    <Label Text="Copyright @ 2001 - 2022 Syncfusion Inc"
+	           FontSize="18" AbsoluteLayout.LayoutBounds="1,1,-1,-1"
+		   AbsoluteLayout.LayoutFlags="PositionProportional"
+		   Opacity="0.4"/>
+       	    <Label Text="CONFIDENTIAL"
+		   Rotation="340"
+		   FontSize="80"
+		   FontAttributes="Bold,Italic"
+		   TextColor="Gray"
+		   Margin="10,0,0,0"
+		   AbsoluteLayout.LayoutBounds="0.5,0.5,-1,-1"
+		   AbsoluteLayout.LayoutFlags="PositionProportional"
+		   Opacity="0.3"/>
+        </AbsoluteLayout>
+    </chart:SfCartesianChart.PlotAreaBackgroundView>
 </chart:SfCartesianChart>
 
 {% endhighlight %}
@@ -207,11 +207,25 @@ public class ViewModel
 
 SfCartesianChart chart = new SfCartesianChart();
 AbsoluteLayout absoluteLayout = new AbsoluteLayout();
-var copyRight = new Label() {Text = "Copyright @ 2001 - 2022 Syncfusion Inc",FontSize = 18,Opacity = 0.4};
+var copyRight = new Label() 
+{
+	Text = "Copyright @ 2001 - 2022 Syncfusion Inc",
+	FontSize = 18,
+	Opacity = 0.4
+};
+
 AbsoluteLayout.SetLayoutBounds(copyRight, new Rect(1, 1, -1, -1));
 AbsoluteLayout.SetLayoutFlags(copyRight, Microsoft.Maui.Layouts.AbsoluteLayoutFlags.PositionProportional);
 absoluteLayout.Children.Add(copyRight);
-var watermark = new Label(){Text = "CONFIDENTIAL",Rotation = 340,FontSize = 80,FontAttributes = FontAttributes.Bold,TextColor = Colors.Gray, Opacity = 0.3};
+var watermark = new Label()
+{
+	Text = "CONFIDENTIAL",Rotation = 340,
+	FontSize = 80,
+	FontAttributes = FontAttributes.Bold,
+	TextColor = Colors.Gray, 
+	Opacity = 0.3
+};
+
 AbsoluteLayout.SetLayoutBounds(watermark, new Rect(0.5, 0.5, -1, -1));
 AbsoluteLayout.SetLayoutFlags(watermark, Microsoft.Maui.Layouts.AbsoluteLayoutFlags.PositionProportional);
 absoluteLayout.Children.Add(watermark);

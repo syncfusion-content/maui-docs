@@ -7,9 +7,9 @@ control: SfListView
 documentation: ug
 ---
 
-# Getting Started with .NET Maui ListView (SfListView)
+# Getting Started with .NET MAUI ListView (SfListView)
 
-This section provides a quick overview of how to get started with the .NET Maui ListView (SfListView) for Maui. Walk-through the entire process of creating the real world SfListView.
+This section provides a quick overview of how to get started with the .NET MAUI ListView (SfListView) for Maui. Walk-through the entire process of creating the real world SfListView.
 
 To get start quickly with .NET MAUI ListView, you can check on this video:
 
@@ -129,7 +129,7 @@ public class BookInfo : INotifyPropertyChanged
 {% endhighlight %}
 {% endtabs %}
 
-N> If you want your data model to respond to property changes, then implement [INotifyPropertyChanged](https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.inotifypropertychanged?view=net-6.0) interface in your model class.
+N> If you want your data model to respond to property changes, then implement [INotifyPropertyChanged](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.inotifypropertychanged?view=net-6.0) interface in your model class.
 
 Create a model repository class with `BookInfo` collection property initialized with required number of data objects in a new class file as shown in the following code example, and save it as BookInfoRepository.cs file:
 
@@ -261,11 +261,11 @@ namespace GettingStarted
 
 You can also download the entire source code of this demo [here](https://github.com/SyncfusionExamples/gettingstarted-listview-.net-maui).
 
-![.Net MAUI ListView with ItemTemplate](Images/getting-started/maui-listview-with-item-template.jpg)
+![.NET MAUI ListView with item template](Images/getting-started/net-maui-listview-with-item-template.jpg)
 
 ## Layouts
 
-SfListView supports different layouts such as linear and grid layouts. The linear layout arranges the items in a single column, whereas the grid layout arranges the items in a predefined number of columns defined by the [SpanCount](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.GridLayout.html#Syncfusion_Maui_ListView_GridLayout_SpanCount) property of [GridLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.GridLayout.html). 
+SfListView supports different layouts such as linear and grid layouts. The linear layout arranges the items in a single column, whereas the grid layout arranges the items in a predefined number of columns defined by the [SpanCount](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.GridLayout.html#Syncfusion_Maui_ListView_GridLayout_SpanCount) property of [GridLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.GridLayout.html).
 
 The [SfListView.ItemsLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemsLayout) property is used to define the layout of the SfListView. [LinearLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.LinearLayout.html) is default layout of this control.
 
@@ -286,7 +286,7 @@ listView.ItemsLayout = new GridLayout() { SpanCount = 3 };
 {% endhighlight%}
 {% endtabs %}
 
-![.Net MAUI ListView with GridLayout](Images/getting-started/maui-listview-with-grid-layout.jpg)
+![.NET MAUI ListView with grid layout](Images/getting-started/net-maui-listview-with-grid-layout.jpg)
 
 ## DataSource
 
@@ -454,7 +454,7 @@ It also supports you to stick the group header by enabling the [SfListView.IsSti
 {% endhighlight %}
 {% endtabs %}
 
-![.Net MAUI ListView with Grouping](Images/getting-started/maui-listview-with-grouping.jpg)
+![.NET MAUI ListView with grouping](Images/getting-started/net-maui-listview-with-grouping.jpg)
 
 ## Selection
 
@@ -540,6 +540,6 @@ listView.FooterTemplate = new DataTemplate(() =>
 {% endhighlight %}
 {% endtabs %}
 
-![.Net MAUI ListView with Header and Footer](Images/getting-started/maui-listview-with-header-and-footer.jpg)
+![.NET MAUI ListView with header and footer](Images/getting-started/net-maui-listview-with-header-and-footer.jpg)
 
 N> You can refer to our [.NET MAUI ListView](https://www.syncfusion.com/maui-controls/maui-listview) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI ListView example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/ListView) that shows you how to render the ListView in .NET MAUI.

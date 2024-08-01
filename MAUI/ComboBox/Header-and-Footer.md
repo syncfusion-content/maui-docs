@@ -10,11 +10,11 @@ keywords: .net maui combobox, .net maui sfcombobox, syncfusion combobox, combobo
 
 # Header and Footer support in .NET MAUI ComboBox (SfComboBox)
 
-You can provide header and footer views in the dropdown in [`SfComboBox`] by enabling the [`ShowDropDownHeaderView`] and the [`ShowDropDownFooterView`] properties. 
+You can provide header and footer views in the dropdown in [SfComboBox](https://www.syncfusion.com/maui-controls/maui-combobox) by enabling the [ShowDropDownHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_ShowDropdownHeaderView) and the [ShowDropDownFooterView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_ShowDropdownFooterView) properties. 
 
 ## Header content
 
-You can provide content for header at the top of the ComboBox's dropdown. The [`DropDownHeaderView`] property is used to set the content of the header. The height of the header in the [`SfComboBox`] can be adjusted using the [`DropDownHeaderViewHeight`] property.
+You can provide content for header at the top of the ComboBox's dropdown. The [DropDownHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_DropdownHeaderView) property is used to set the content of the header. The height of the header in the [SfComboBox](https://www.syncfusion.com/maui-controls/maui-combobox) can be adjusted using the [DropDownHeaderViewHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_DropdownHeaderViewHeight) property.
 
 {% tabs %}
 
@@ -72,9 +72,9 @@ You can provide content for header at the top of the ComboBox's dropdown. The [`
 
 ## Footer content
 
-You can provide content for footer at the bottom of the ComboBox's dropdown. The [`DropDownFooterView`] property is used to set the content for footer. The height of the footer in the [`SfComboBox`] can be adjusted using the [`DropDownFooterViewHeight`] property.
+You can provide content for footer at the bottom of the ComboBox's dropdown. The [DropDownFooterView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_DropdownFooterView) property is used to set the content for footer. The height of the footer in the [SfComboBox](https://www.syncfusion.com/maui-controls/maui-combobox) can be adjusted using the [DropDownFooterViewHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_DropdownFooterViewHeight) property.
 
-The following code example shows how to set footer content in [`SfComboBox`].
+The following code example shows how to set footer content in [SfComboBox](https://www.syncfusion.com/maui-controls/maui-combobox).
 
 {% tabs %}
 

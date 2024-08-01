@@ -89,7 +89,14 @@ You can customize the display text appearance of the [`SfRadioButton`](https://h
 {% tabs %}
 {% highlight xaml %}
 
-	<syncfusion:SfRadioButton x:Name="radioButton" Text="Radio Button" IsChecked="True" TextColor="Blue" HorizontalTextAlignment="Center" FontFamily="Arial" FontAttributes="Bold" FontSize="20"/>
+	<syncfusion:SfRadioButton x:Name="radioButton" 
+				  Text="Radio Button" 
+				  IsChecked="True" 
+				  TextColor="Blue" 
+				  HorizontalTextAlignment="Center" 
+			          FontFamily="Arial" 
+				  FontAttributes="Bold" 
+				  FontSize="20"/>
 
 {% endhighlight %}
 {% highlight c# %}
@@ -123,7 +130,12 @@ The [`LineBreakMode`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Button
 {% tabs %}
 {% highlight xaml %}
 
-    <syncfusion:SfRadioButton x:Name="RadioButton" IsChecked="True" WidthRequest="200" LineBreakMode="WordWrap" Text="The LineBreakMode allows you to wrap or truncate the text."></syncfusion:SfRadioButton>
+    <syncfusion:SfRadioButton   x:Name="RadioButton" 
+				IsChecked="True" 
+				WidthRequest="200" 
+				LineBreakMode="WordWrap" 
+				Text="The LineBreakMode allows you to wrap or truncate the text.">
+				</syncfusion:SfRadioButton>
 
 {% endhighlight %}
 

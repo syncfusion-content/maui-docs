@@ -270,6 +270,10 @@ The following table contains the default name and value details used in the SfPd
 <td>Drag over a text to underline it</td>
 </tr>
 <tr>
+<td>Apply</td>
+<td>Apply</td>
+</tr>
+<tr>
 <td>Annotations</td>
 <td>Annotations</td>
 </tr>
@@ -398,6 +402,10 @@ The following table contains the default name and value details used in the SfPd
 <td>Line</td>
 </tr>
 <tr>
+<td>MatchCase</td>
+<td>Match Case</td>
+</tr>
+<tr>
 <td>NewParagraph</td>
 <td>New Paragraph</td>
 </tr>
@@ -504,6 +512,14 @@ The following table contains the default name and value details used in the SfPd
 <tr>
 <td>Stroke</td>
 <td>Stroke</td>
+</tr>
+<tr>
+<td>SaveSignature</td>
+<td>Save Signature</td>
+</tr>
+<tr>
+<td>SearchPlaceholder</td>
+<td>Find in the document</td>
 </tr>
 <tr>
 <td>Text</td>

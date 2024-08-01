@@ -21,13 +21,12 @@ N> The Cartesian chart has [Series](https://help.syncfusion.com/cr/maui/Syncfusi
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-
     <chart:SfCartesianChart.XAxes>
-    <chart:CategoryAxis />
+        <chart:CategoryAxis/>
     </chart:SfCartesianChart.XAxes>
 
     <chart:SfCartesianChart.YAxes>
-        <chart:NumericalAxis />
+        <chart:NumericalAxis/>
     </chart:SfCartesianChart.YAxes>
 
     <chart:StackingColumnSeries ItemsSource="{Binding Data}"
@@ -84,9 +83,7 @@ N> If the [GroupingLabel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Ch
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-   
     ....
-
     <chart:StackingColumnSeries XBindingPath="Name"
                                 YBindingPath="Value"
                                 ItemsSource="{Binding Data}"
@@ -101,7 +98,6 @@ N> If the [GroupingLabel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Ch
                                 YBindingPath="Value"
                                 ItemsSource="{Binding Data2}"
                                 GroupingLabel="GroupOne"/>
-
 </chart:SfCartesianChart>
 
 
