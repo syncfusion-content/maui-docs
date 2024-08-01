@@ -13,15 +13,15 @@ documentation: ug
 
 The [SfAvatarView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html?tabs=tabid-1) control allows you to display the view in five different ways:
 
-* `Default` - Displays the default image when initializing without any other source such as image and group.
+* [Default](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ContentType.html#Syncfusion_Maui_Core_ContentType_Default) - Displays the default image when initializing without any other source such as image and group.
 
-* `Initials` - Displays the initial in the view.
+* [Initials](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ContentType.html#Syncfusion_Maui_Core_ContentType_Initials) - Displays the initial in the view.
 
-* `AvatarCharacter` - Displays the default image in the view.
+* [AvatarCharacter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ContentType.html#Syncfusion_Maui_Core_ContentType_AvatarCharacter) - Displays the default image in the view.
 
-* `Custom` - Displays a custom image in the view.
+* [Custom](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ContentType.html#Syncfusion_Maui_Core_ContentType_Custom) - Displays a custom image in the view.
 
-* `Group` - Displays a maximum of three images or initials in a single view.
+* [Group](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ContentType.html#Syncfusion_Maui_Core_ContentType_Group) - Displays a maximum of three images or initials in a single view.
 
 
 ## Default
