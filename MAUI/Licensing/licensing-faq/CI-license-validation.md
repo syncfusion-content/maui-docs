@@ -125,7 +125,7 @@ pipeline {
 
 * Register the license key properly by calling RegisterLicense("License Key") method with the license key. 
 
-* Once the license key is registered, it can be validated by using ValidateLicense("Platform.MAUI") method. This ensures that the license key is valid for the platform and version you are using. For reference, please check the following example.
+* Once the license key is registered, it can be validated by using the ValidateLicense("Platform.MAUI") method. This ensures that the license key is valid for the platform and version you are using. For reference, please check the following example.
 
 {% tabs %}
 {% highlight c# %}
