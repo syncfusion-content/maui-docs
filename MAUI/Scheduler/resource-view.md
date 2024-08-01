@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Resource in MAUI Scheduler control | Syncfusion
-description: Learn here all about Resource view feature of Syncfusion .NET MAUI SfSchedler(SfScheduler) in day, week and workweek of timeline views and more.
-platform: Maui
+title: Resource View in MAUI Scheduler Control | Syncfusion
+description: Learn here all about resource view feature of Syncfusion .NET MAUI SfSchedler(SfScheduler) in day, week and workweek of timeline views and more.
+platform: maui
 control: SfScheduler
 documentation: ug
 ---
 
-# Resource view in .NET MAUI Scheduler (SfScheduler)
+# Resource View in .NET MAUI Scheduler (SfScheduler)
 
 The [.NET MAUI Scheduler](https://www.syncfusion.com/maui-controls/maui-scheduler) control allows you to group appointments based on the resources associated with them in the timeline day, timeline week, timeline workweek, and timeline month views, with complete business object binding, multi resource appointment sharing and UI customization features.
 
@@ -78,7 +78,7 @@ this.Scheduler.AppointmentsSource = appointment;
 {% endhighlight %}
 {% endtabs %}
 
-![resource-view-in-maui-scheduler](images/resource-view/resourceview-appointments-in-maui-scheduler.png)
+![Resource view in .NET MAUI Scheduler.](images/resource-view/resource-view-appointments-in-net-maui-scheduler.png)
 
 ### Multiple resource sharing using Scheduler resources
 
@@ -108,7 +108,7 @@ this.Scheduler.AppointmentsSource = appointment;
 {% endhighlight %}
 {% endtabs %}
 
-![resource-sharing-in-maui-scheduler](images/resource-view/resource-sharing-in-maui-scheduler.png)
+![Resource sharing in .NET MAUI Scheduler.](images/resource-view/resource-view-sharing-in-net-maui-scheduler.png)
 
 
 ## Business object binding for resources
@@ -299,7 +299,7 @@ N>
 * If the viewport height is lesser than 400 then each resource height will be calculated by default viewport size(4 (default resource*100)) divided by the minimum value of scheduler resources count and 4 (default resource count).
 * If the MinimumRowHeight is less than the default row height then the default row height will be used.
 
-![resource-minimum-row-height-maui-scheduler](images/resource-view/resourceview-minimum-height-in-maui-scheduler.png)
+![Resource minimum row and height in .NET MAUI Scheduler.](images/resource-view/resource-view-minimum-height-in-net-maui-scheduler.png)
 
 ## Assign special time regions to scheduler resources
 You can highlight a resources availability by creating special time regions in the timeline day, timeline week, and timeline workweek views.
@@ -325,7 +325,7 @@ private ObservableCollection<SchedulerTimeRegion> GetTimeRegion()
 {% endhighlight %}
 {% endtabs %}
 
-![resource-view-special-timeregion-maui-scheduler](images/resource-view/special-regions-resources-in-maui-scheduler.png)
+![Resource view special timeregion in .NET MAUI Scheduler.](images/resource-view/special-regions-resources-in-net-maui-scheduler.png)
 
 ## Programmatic resource selection
 You can programmatically select the resource by using the [SelectedResourceId]() and [SelectedDate]() of the SfScheduler. Please [click]() here to see more details about programmatic date selection.

@@ -98,7 +98,7 @@ public class Model
 
 {% endtabs %}
 
-![Data labels support](images/data-labels/default-data-labels.png)
+![Data labels support in .NET MAUI Maps.](images/data-labels/net-maui-maps-default-data-labels.png)
 
 ## Overflow mode
 
@@ -187,7 +187,7 @@ public class Model
 
 {% endtabs %}
 
-![Data labels trim support](images/data-labels/data-labels-overflow-mode.png)
+![Data labels trim support in .NET MAUI Maps.](images/data-labels/net-maui-maps-data-labels-overflow-mode.png)
 
 ## Appearance customization
 
@@ -287,4 +287,4 @@ public class Model
 
 {% endtabs %}
 
-![Data labels customization](images/data-labels/data-labels-appearance-customization.png)
+![Data labels customization in .NET MAUI Maps.](images/data-labels/net-maui-maps-data-labels-appearance-customization.png)
