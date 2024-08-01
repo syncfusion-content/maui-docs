@@ -40,12 +40,14 @@ The following code sample demonstrates how to define visual style of circle Avat
 
 <ContentPage.Resources>
     <ResourceDictionary>
-    <Style x:Key="AvatarViewStyle"  TargetType="sfavatar:SfAvatarView">
-        <Setter Property="VerticalOptions" Value="Center"/>
-        <Setter Property="HorizontalOptions" Value="Center"/>
-        <Setter Property="ContentType" Value="Custom"/>
-        <Setter Property="ImageSource" Value="ellanaa.png"/>
-    </Style>
+        <Style x:Key="AvatarViewStyle"  TargetType="sfavatar:SfAvatarView">
+            <Setter Property="VerticalOptions" Value="Center"/>
+            <Setter Property="HorizontalOptions" Value="Center"/>
+            <Setter Property="ContentType" Value="Custom"/>
+            <Setter Property="ImageSource" Value="ellanaa.png"/>
+            <Setter Property="Stroke" Value="Black"/>
+            <Setter Property="StrokeThickness" Value="1"/>
+        </Style>
     </ResourceDictionary>
 </ContentPage.Resources>
 
@@ -114,6 +116,8 @@ avatarview1.AvatarShape = AvatarShape.Circle;
 avatarview1.AvatarSize = AvatarSize.ExtraLarge;
 avatarview1.ContentType = ContentType.Default;
 avatarview1.ImageSource = "ellanaa.png";
+avatarview1.Stroke = Colors.Black;
+avatarview1.StrokeThickness = 1;
 
 Label LargeCirclelabel = new Label();
 LargeCirclelabel.Text = "LargeCircle";
@@ -132,6 +136,8 @@ avatarview2.AvatarShape = AvatarShape.Circle;
 avatarview2.AvatarSize = AvatarSize.Large;
 avatarview2.ContentType = ContentType.Default;
 avatarview2.ImageSource = "ellanaa.png";
+avatarview2.Stroke = Colors.Black;
+avatarview2.StrokeThickness = 1;
 
 Label MediumCirclelabel = new Label();
 MediumCirclelabel.Text = "MediumCircle";
@@ -150,6 +156,8 @@ avatarview3.AvatarShape = AvatarShape.Circle;
 avatarview3.AvatarSize = AvatarSize.Medium;
 avatarview3.ContentType = ContentType.Default;
 avatarview3.ImageSource = "ellanaa.png";
+avatarview3.Stroke = Colors.Black;
+avatarview3.StrokeThickness = 1;
 
 Label SmallCirclelabel = new Label();
 SmallCirclelabel.Text = "SmallCircle";
@@ -168,6 +176,8 @@ avatarview4.AvatarShape = AvatarShape.Circle;
 avatarview4.AvatarSize = AvatarSize.Small;
 avatarview4.ContentType = ContentType.Default;
 avatarview4.ImageSource = "ellanaa.png";
+avatarview4.Stroke = Colors.Black;
+avatarview4.StrokeThickness = 1;
 
 Label XSmallCirclelabel = new Label();
 XSmallCirclelabel.Text = "ExtraSmallCircle";
@@ -186,6 +196,8 @@ avatarview5.AvatarShape = AvatarShape.Circle;
 avatarview5.ImageSource = "ellanaa.png";
 avatarview5.AvatarSize = AvatarSize.ExtraSmall;
 avatarview5.ContentType = ContentType.Default;
+avatarview5.Stroke = Colors.Black;
+avatarview5.StrokeThickness = 1;
 
 mainGrid.Children.Add(XLargeCirclelabel);
 mainGrid.Children.Add(avatarview1);
@@ -248,14 +260,16 @@ The following code sample demonstrates how to define visual style of square Avat
 {% highlight xaml %}
 
 <ContentPage.Resources>
-        <ResourceDictionary>
+    <ResourceDictionary>
         <Style x:Key="AvatarViewStyle"  TargetType="sfavatar:SfAvatarView">
             <Setter Property="VerticalOptions" Value="Center"/>
             <Setter Property="HorizontalOptions" Value="Center"/>
             <Setter Property="ContentType" Value="Custom"/>
             <Setter Property="ImageSource" Value="ellanaa.png"/>
+            <Setter Property="Stroke" Value="Black"/>
+            <Setter Property="StrokeThickness" Value="2"/>
         </Style>
-        </ResourceDictionary>
+    </ResourceDictionary>
 </ContentPage.Resources>
 
 <ContentPage.Content>
@@ -323,6 +337,8 @@ avatarviewsquare1.AvatarShape = AvatarShape.Square;
 avatarviewsquare1.AvatarSize = AvatarSize.ExtraLarge;
 avatarviewsquare1.ContentType = ContentType.Default;
 avatarviewsquare1.ImageSource = "ellanaa.png";
+avatarviewsquare1.Stroke = Colors.Black;
+avatarviewsquare1.StrokeThickness = 2;
 
 Label LargeSquarelabel = new Label();
 LargeSquarelabel.Text = "LargeSquare";
@@ -341,6 +357,8 @@ avatarviewsquare2.AvatarShape = AvatarShape.Square;
 avatarviewsquare2.AvatarSize = AvatarSize.Large;
 avatarviewsquare2.ContentType = ContentType.Default;
 avatarviewsquare2.ImageSource = "ellanaa.png";
+avatarviewsquare2.Stroke = Colors.Black;
+avatarviewsquare2.StrokeThickness = 2;
 
 Label MediumSquarelabel = new Label();
 MediumSquarelabel.Text = "MediumSquare";
@@ -359,6 +377,8 @@ avatarviewsquare3.AvatarShape = AvatarShape.Square;
 avatarviewsquare3.AvatarSize = AvatarSize.Medium;
 avatarviewsquare3.ContentType = ContentType.Default;
 avatarviewsquare3.ImageSource = "ellanaa.png";
+avatarviewsquare3.Stroke = Colors.Black;
+avatarviewsquare3.StrokeThickness = 2;
 
 Label SmallSquarelabel = new Label();
 SmallSquarelabel.Text = "SmallSquare";
@@ -377,6 +397,8 @@ avatarviewsquare4.AvatarShape = AvatarShape.Square;
 avatarviewsquare4.AvatarSize = AvatarSize.Small;
 avatarviewsquare4.ContentType = ContentType.Default;
 avatarviewsquare4.ImageSource = "ellanaa.png";
+avatarviewsquare4.Stroke = Colors.Black;
+avatarviewsquare4.StrokeThickness = 2;
 
 Label XSmallSquarelabel = new Label();
 XSmallSquarelabel.Text = "ExtraSmallSquare";
@@ -396,6 +418,8 @@ avatarviewsquare5.AvatarShape = AvatarShape.Square;
 avatarviewsquare5.AvatarSize = AvatarSize.ExtraSmall;
 avatarviewsquare5.ContentType = ContentType.Default;
 avatarviewsquare5.ImageSource = "ellanaa.png";
+avatarviewsquare5.Stroke = Colors.Black;
+avatarviewsquare5.StrokeThickness = 2;
 
 mainGrid.Children.Add(XLargeCirclelabel);
 mainGrid.Children.Add(avatarview1);
