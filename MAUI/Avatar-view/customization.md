@@ -427,7 +427,7 @@ this.Content = mainGrid;
 
 ### Content Padding
 
-You can customize the spacig between the stroke and content in view using the [ContentPadding](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html#Syncfusion_Maui_Core_SfAvatarView_ContentPadding) property.
+You can customize the spacing between the stroke and content in view using the [ContentPadding](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html#Syncfusion_Maui_Core_SfAvatarView_ContentPadding) property.
 
 {% tabs %}
 
