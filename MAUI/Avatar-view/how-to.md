@@ -29,8 +29,10 @@ xmlns:badge="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
                                         VerticalOptions="Center"
                                         WidthRequest="60"
                                         HeightRequest="60"
-                                        CornerRadius="30">
-				</sfavatar:SfAvatarView>
+                                        CornerRadius="30"
+                                        Stroke="Black"
+                                        StrokeThickness="1">
+                </sfavatar:SfAvatarView>
 			</badge:SfBadgeView.Content>
 			<badge:SfBadgeView.BadgeSettings>
             <badge:BadgeSettings 	Offset="-10,-10"
@@ -67,6 +69,8 @@ avatarview.HeightRequest = 60;
 avatarview.CornerRadius = 30;
 avatarview.ImageSource = "alex.png";
 avatarview.ContentType = ContentType.Custom;
+avatarview.Stroke = Colors.Black;
+avatarview.StrokeThickness = 1;
 badge.Content = avatarview;
 mainGrid.Children.Add(badge);
 this.Content = mainGrid;
