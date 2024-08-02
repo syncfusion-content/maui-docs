@@ -12,7 +12,7 @@ keywords : .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .n
 
 The [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) has a built-in toolbar, which enhances PDF viewing and editing capabilities, allowing you to perform operations such as adding and modifying annotations, searching text, and more.
 
-## Toolbars Structure 
+## Toolbars structure 
 
 The [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) uses multiple or multilevel toolbars to organize its tools effectively based on the available screen space. Around 40 toolbars are used to ensure comprehensive functionality. This approach is implemented on both mobile and desktop platforms to ensure that the user interface remains clean and accessible.
 
@@ -22,7 +22,7 @@ The use of multiple toolbars in the [SfPdfViewer](https://help.syncfusion.com/cr
 
 The names of these toolbars and its description are listed in the following sections. 
 
-### Mobile toolbar names
+#### Mobile toolbar names
 
 <table>
 <tr>
@@ -119,7 +119,7 @@ The names of these toolbars and its description are listed in the following sect
 </tr>
 </table>
 
-### Desktop toolbar names 
+#### Desktop toolbar names 
 
 <table>
 <tr>
@@ -196,257 +196,7 @@ The names of these toolbars and its description are listed in the following sect
 </tr>
 </table>
 
-## Mobile toolbar item names
-
-<table>
-<tr>
-<td>Keys</td>
-<td>Description</td>
-</tr>
-<tr>
-<td>Undo</td>
-<td>The button that appears in the top toolbar allows you to undo an action.</td>
-</tr>
-<tr>
-<td>Redo</td>
-<td>The button that appears in the top toolbar allows you to redo an action.</td>
-</tr>
-<tr>
-<td>ZoomMode</td>
-<td>The button that appears in the top toolbar allows you to adjust the magnification level of the PDF viewer content. </td>
-</tr>
-<tr>
-<td>PageSettings</td>
-<td>The button that appears in the top toolbar allows you to customize the page display and layout of the PDF viewer content. </td>
-</tr>
-<tr>
-<td>Search</td>
-<td>The button that appears in the top toolbar allows you to locate specific text or content in the document quickly. </td>
-</tr>
-<tr>
-<td>MoreItem</td>
-<td>The button that appears in the top toolbar allows you to expand the options available in the PDF Viewer.</td>
-</tr>
-<tr>
-<td>TextMarkup</td>
-<td>The button that appears in the bottom toolbar allows you to annotate text in the PDF Viewer.</td>
-</tr>
-<tr>
-<td>FreeText</td>
-<td>The button that appears in the bottom toolbar allows you to add text annotations directly to the document in the PDF Viewer.</td>
-</tr>
-<tr>
-<td>Ink</td>
-<td>The button that appears in the bottom toolbar allows you to draw freehand annotations.</td>
-</tr>
-<tr>
-<td>Eraser</td>
-<td>The button that appears in the bottom toolbar allows you to erase the ink annotations in the PDF Viewer.</td>
-</tr>
-<tr>
-<td>Shape</td>
-<td>The button that appears in the bottom toolbar allows you to add shapes to the document.</td>
-</tr>
-<tr>
-<td>Stamp</td>
-<td>The button that appears in the bottom toolbar allows you to add the in-built and custom stamps.</td>
-</tr>
-<tr>
-<td>Signature</td>
-<td>The button that appears in the bottom toolbar allows you to create and add the signature and indicate the signature annotation type.</td>
-</tr>
-<tr>
-<td>StickyNote</td>
-<td>The button that appears in the bottom toolbar allows you to add the sticky note to the document.</td>
-</tr>
-<tr>
-<td>TextMarkupToolbarBackIcon</td>
-<td>The button that appears in the text markup toolbar allows you to navigate back from the text markup toolbar.</td>
-</tr>
-<tr>
-<td>Highlight</td>
-<td>The button that appears in the text markup toolbar allows you to highlight the text in the document.</td>
-</tr>
-<tr>
-<td>Underline</td>
-<td>The button that appears in the text markup toolbar allows you to underline the text in the document.</td>
-</tr>
-<tr>
-<td>StrikeOut</td>
-<td>The button that appears in the text markup toolbar allows you to strikeout the text in the document.</td>
-</tr>
-<tr>
-<td>Squiggly</td>
-<td>The button that appears in the text markup toolbar allows you to add squiggly lines to the text in the document.</td>
-</tr>
-<tr>
-<td>ShapeToolbarBackIcon</td>
-<td>The button that appears in the shape toolbar allows you to navigate back from the shape toolbar.</td>
-</tr>
-<tr>
-<td>Line</td>
-<td>The button that appears in the shape toolbar allows you to draw a line in the document.</td>
-</tr>
-<tr>
-<td>Arrow</td>
-<td>The button that appears in the shape toolbar allows you to draw an arrow in the document.</td>
-</tr>
-<tr>
-<td>Rectangle</td>
-<td>The button that appears in the shape toolbar allows you to draw a rectangle in the document.</td>
-</tr>
-<tr>
-<td>Circle</td>
-<td>The button that appears in the shape toolbar allows you to draw a circle in the document.</td>
-</tr>
-<tr>
-<td>Polygon</td>
-<td>The button that appears in the shape toolbar allows you to draw polygons in the document.</td>
-</tr>
-<tr>
-<td>Polyline</td>
-<td>The button that appears in the shape toolbar allows you to draw polylines in the document.</td>
-</tr>
-<tr>
-<td>Cloud</td>
-<td>The button that appears in the shape toolbar allows you to draw a cloud in the document.</td>
-</tr>
-<tr>
-<td>SecondaryAnnotationBackIcon</td>
-<td>The button that appears in the annotation edit toolbars allows you to navigate back from the annotation edit toolbar.</td>
-</tr>
-<tr>
-<td>BackIconSeparator</td>
-<td>The separator that appears in the annotation edit toolbar is positioned after the back button.</td>
-</tr>
-<tr>
-<td>AnnotationType</td>
-<td>The button that appears in the annotation edit toolbar allows you to indicate the annotation type.</td>
-</tr>
-<tr>
-<td>BorderStyle</td>
-<td>The button that appears in the cloud annotation edit toolbar allows you to indicate the cloud annotation.</td>
-</tr>
-<tr>
-<td>TextColor</td>
-<td>The button that appears in the free text annotation edit toolbar allows you to change the free text color.</td>
-</tr>
-<tr>
-<td>TextSize</td>
-<td>The button that appears in the free text annotation edit toolbar allows you to change the text size.</td>
-</tr>
-<tr>
-<td>TextPropertySeparator</td>
-<td>The separator that appears in the free text annotation edit toolbar is positioned after the text size button.</td>
-</tr>
-<tr>
-<td>Edit</td>
-<td>The button that appears in the sticky note annotation edit toolbar allows you to edit text in the sticky note.</td>
-</tr>
-<tr>
-<td>TextFillColor</td>
-<td>The button that appears in the free text annotation edit toolbar allows you to set the fill color of the text box.</td>
-</tr>
-<tr>
-<td>Thickness</td>
-<td>The button that appears in the annotation edit toolbar allows you to set the thickness of the annotations.</td>
-</tr>
-<tr>
-<td>StokeColor</td>
-<td>The button that appears in the annotation edit toolbar allows you to set the stroke color of the annotations.</td>
-</tr>
-<tr>
-<td>Notes</td>
-<td>The button that appears in the top toolbar allows you to show the sticky note icons.</td>
-</tr>
-<tr>
-<td>FillColor</td>
-<td>The button that appears in the annotation edit toolbar allows you to set the fill color of the annotations.</td>
-</tr>
-<tr>
-<td>Opacity</td>
-<td>The button that appears in the annotation edit toolbar allows you to set the opacity of the annotations.</td>
-</tr>
-<tr>
-<td>DeleteSeparator</td>
-<td>The separator that appears in the annotation edit toolbar positioned before the delete button.</td>
-</tr>
-<tr>
-<td>Delete</td>
-<td>The button that appears in the annotation edit toolbar allows you to delete the selected annotations.</td>
-</tr>
-<tr>
-<td>Note</td>
-<td>The button that appears in the sticky note icons toolbar allows you to add note type of the sticky note.</td>
-</tr>
-<tr>
-<td>Insert</td>
-<td>The button that appears in the sticky note icons toolbar allows you to add insert type of the sticky note.</td>
-</tr>
-<tr>
-<td>Comment</td>
-<td>The button that appears in the sticky note icons toolbar allows you to add comment type of the sticky note.</td>
-</tr>
-<tr>
-<td>Key</td>
-<td>The button that appears in the sticky note icons toolbar allows you to add key type of the sticky note.</td>
-</tr>
-<tr>
-<td>Help</td>
-<td>The button that appears in the sticky note icons toolbar allows you to add help type of the sticky note.</td>
-</tr>
-<tr>
-<td>Paragraph</td>
-<td>The button that appears in the sticky note icons toolbar allows you to add paragraph type of the sticky note.</td>
-</tr>
-<tr>
-<td>New Paragraph</td>
-<td>The button that appears in the sticky note icons toolbar allows you to add new paragraph type of the sticky note.</td>
-</tr>
-<tr>
-<td>Outline</td>
-<td>The button that appears in the more option toolbar allows you to see the outline view of document.</td>
-</tr>
-<tr>
-<td>Print</td>
-<td>The button that appears in the more option toolbar allows you to print the document from the PDF Viewer.</td>
-</tr>
-<tr>
-<td>SearchBackIcon</td>
-<td>The button that appears in the search toolbar allows you to navigate back from the search toolbar. </td>
-</tr>
-<tr>
-<td>SearchEntry</td>
-<td>The entry that appears in the search toolbar allows you to enter the text you want to search.</td>
-</tr>
-<tr>
-<td>SearchBusyIndicator</td>
-<td>The button that appears in the search toolbar indicates an ongoing search.</td>
-</tr>
-<tr>
-<td>ClearSearch</td>
-<td>The button that appears in the search toolbar allows you to clear the current search text.</td>
-</tr>
-<tr>
-<td>ClearSeparator</td>
-<td>The separator that appears in the search toolbar is positioned after the clear button.</td>
-</tr>
-<tr>
-<td>PreviousSearch</td>
-<td>The button that appears in the search toolbar allows you to navigate to the previous search result.</td>
-</tr>
-<tr>
-<td>NextSearch</td>
-<td>The button that appears in the search toolbar allows you to navigate to the next search result.</td>
-</tr>
-<tr>
-<td>MoreOption</td>
-<td>The button that appears in the search toolbar allows you to search with case sensitivity.</td>
-</tr>
-</table>
-
-
-## Show/hide the toolbars
+### Show/hide the toolbars
 
 The built-in toolbars are visible by default. In certain scenarios, you might want to hide all the toolbars in the PDF Viewer to display the document in full view or to use customized toolbars based on your application needs. You can do this by setting the [ShowToolbars](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_ShowToolbars) property of the PDF Viewer to `false`. And you can show the built-in toolbar by setting the [ShowToolbars](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_ShowToolbars) property of the PDF Viewer to `true`.
 
@@ -475,15 +225,11 @@ public MainPage()
 
 You can find the sample project from the [link provided here](https://github.com/SyncfusionExamples/maui-pdf-viewer-examples/tree/master/Toolbar customization/HideToolbars).
 
-## Customize the toolbar 
-
-To customize the toolbar, you can programmatically add, remove, and hide the items based on your needs using the `GetByName` method.
-
-### Hide specific toolbar
+### Customize the toolbar 
 
 Sometimes, you might need to hide specific toolbars instead of all. This can be useful if you want to simplify the user interface by removing unnecessary tools or creating a more focused environment for certain tasks. The Toolbars collection property in the PDF Viewer allows you to hide a specific toolbar by using its index or name.
 
-#### Hide Toolbars by Index
+#### Hide specific toolbars by index
 
 If you know the position of the toolbar you want to hide within the Toolbars collection, you can access and hide it using its index. For example, you can use the following code to hide the first and second toolbars in the collection.
 
@@ -497,7 +243,7 @@ If you know the position of the toolbar you want to hide within the Toolbars col
 {% endhighlight %}
 {% endtabs %}
 
-#### Hide Toolbars by Name
+##### Hide specific toolbars by name
 
 By using the [GetByName](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.ToolbarItemCollection.html#Syncfusion_Maui_PdfViewer_ToolbarItemCollection_GetByName_System_String) method with its specified toolbar names, you can access the properties of those toolbars. After accessing the toolbar, you can modify its visibility by setting the IsVisible property. Here, we retrieve the toolbar “BottomToolbar” using the GetByName method and hide it by setting its visibility to false.
 
@@ -512,6 +258,8 @@ By using the [GetByName](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Pdf
  }
 {% endhighlight %}
 {% endtabs %}
+
+
 
 ### Hide specific toolbar item
 
