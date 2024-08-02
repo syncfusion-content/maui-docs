@@ -170,7 +170,6 @@ if (topToolbar != null)
 {
     // Get the first item from the toolbar.
     Syncfusion.Maui.PdfViewer.ToolbarItem? firstItem = topToolbar.Items?[0];
-
     if (firstItem != null)
     {
         // Remove the first item from the toolbar.
