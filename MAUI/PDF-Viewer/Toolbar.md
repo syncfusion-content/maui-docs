@@ -95,6 +95,28 @@ item.IsVisible = false; // Hide the search item
 {% endhighlight %}
 {% endtabs %}
 
+N> Each toolbar operates independently. Hiding an item in one toolbar does not affect others. For example, changing the visibility of the signature icon in the "AnnotationsToolbar" does not impact other toolbars.
+
+To hide an icon from all toolbars, iterate through the toolbar collection and adjust the visibility of the item in each toolbar. Here’s how to hide the "Sticky note" icon from all toolbars:
+
+{% tabs %}
+{% highlight C# %}
+// Iterate through the toolbar collection of the PDF Viewer
+for (int i = 0; i < pdfViewer?.Toolbars.Count; i++)
+{
+    // Get the toolbar item with the name "Sticky note" from the current toolbar
+    var item = pdfViewer.Toolbars[i]?.Items?.GetByName("Sticky note");
+    
+    // Check if the item exists in the toolbar
+    if (item != null)
+    {
+        // Set the visibility of the "Sticky note" item to false, effectively hiding it
+        item.IsVisible = false; // Hide the Sticky note
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
 ### Adding a new toolbar item
 
 To add an item to the toolbar in [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html), first, create the UI element you want to include. Then, convert that element into a ToolbarItem using the `ToolbarItem` method. Finally, add the newly created ToolbarItem to the toolbar using the `Add` method. Here we create the new button fileOpenButton and retrieve the "PrimaryToolbar" using the GetByName method. Add the new button to the "Primary Toolbar".
@@ -192,28 +214,6 @@ you can access the specific item using the [GetByName](https://help.syncfusion.c
  {
      pdfViewer.Toolbars?.GetByName("PrimaryToolbar")?.Items?.Remove(item); // Remove the outline item
  }
-{% endhighlight %}
-{% endtabs %}
-
-N> Each toolbar operates independently. Hiding an item in one toolbar does not affect others. For example, changing the visibility of the signature icon in the "AnnotationsToolbar" does not impact other toolbars.
-
-To hide an icon from all toolbars, iterate through the toolbar collection and adjust the visibility of the item in each toolbar. Here’s how to hide the "Sticky note" icon from all toolbars:
-
-{% tabs %}
-{% highlight C# %}
-// Iterate through the toolbar collection of the PDF Viewer
-for (int i = 0; i < pdfViewer?.Toolbars.Count; i++)
-{
-    // Get the toolbar item with the name "Sticky note" from the current toolbar
-    var item = pdfViewer.Toolbars[i]?.Items?.GetByName("Sticky note");
-    
-    // Check if the item exists in the toolbar
-    if (item != null)
-    {
-        // Set the visibility of the "Sticky note" item to false, effectively hiding it
-        item.IsVisible = false; // Hide the Sticky note
-    }
-}
 {% endhighlight %}
 {% endtabs %}
 
