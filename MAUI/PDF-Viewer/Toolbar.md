@@ -10,7 +10,7 @@ keywords : .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .n
 
 # Working with Toolbar in .NET MAUI Pdf Viewer (SfPdfViewer)
 
-The [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) has a built-in toolbar, which allows you to perform operations such as adding, modifying annotations, searching text, etc. Additionally, you have the option to show or hide the default built-in toolbar, its sub-toolbars, and toolbar items. 
+The [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) has a built-in toolbar, which enhances PDF viewing and editing capabilities, allowing you to perform operations such as adding and modifying annotations, searching text, and more.
 
 ## Show/hide the toolbars
 
