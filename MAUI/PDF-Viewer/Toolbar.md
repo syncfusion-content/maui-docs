@@ -217,6 +217,8 @@ you can access the specific item using the [GetByName](https://help.syncfusion.c
 {% endhighlight %}
 {% endtabs %}
 
+N> Just as with hiding items from toolbar, each toolbar operates independently when removing items. Removing an item from one toolbar does not affect others. To ensure an item is removed from all toolbars, you need to iterate through the toolbar collection and remove the item from each toolbar individually.
+
 You can find the sample project for removing an item from the desktop toolbar using the [link provided here](https://github.com/SyncfusionExamples/maui-pdf-viewer-examples/tree/master/Toolbar customization/RemoveToolbarItemDesktop).
 
 Similarly, you can customize other toolbars and their items by accessing their names. The names of these toolbars and toolbar items are listed in the following sections. 
