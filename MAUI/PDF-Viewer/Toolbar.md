@@ -195,7 +195,7 @@ you can access the specific item using the [GetByName](https://help.syncfusion.c
 {% endhighlight %}
 {% endtabs %}
 
-N>Each toolbar operates independently. Hiding an item in one toolbar does not affect others. For example, changing the visibility of the signature icon in the "AnnotationsToolbar" does not impact other toolbars.
+N> Each toolbar operates independently. Hiding an item in one toolbar does not affect others. For example, changing the visibility of the signature icon in the "AnnotationsToolbar" does not impact other toolbars.
 
 To hide an icon from all toolbars, iterate through the toolbar collection and adjust the visibility of the item in each toolbar. Here’s how to hide the "Sticky note" icon from all toolbars:
 
