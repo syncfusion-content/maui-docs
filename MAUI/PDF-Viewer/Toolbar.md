@@ -165,18 +165,18 @@ You can access the specific item using its index and then remove it from the too
 {% tabs %}
 {% highlight C# %}
 // Get the top toolbar of the PDF Viewer that contains annotation tools on mobile platforms.
-	Syncfusion.Maui.PdfViewer.Toolbar? topToolbar = PdfViewer.Toolbars?.GetByName("TopToolbar");
-	if (topToolbar != null)
-	{
-		// Get the first item from the toolbar.
-		Syncfusion.Maui.PdfViewer.ToolbarItem? firstItem = topToolbar.Items?[0];
+Syncfusion.Maui.PdfViewer.Toolbar? topToolbar = PdfViewer.Toolbars?.GetByName("TopToolbar");
+if (topToolbar != null)
+{
+    // Get the first item from the toolbar.
+    Syncfusion.Maui.PdfViewer.ToolbarItem? firstItem = topToolbar.Items?[0];
 
-		if (firstItem != null)
-		{
-			// Remove the first item from the toolbar.
-			topToolbar?.Items?.Remove(firstItem);
-		}
-	}
+    if (firstItem != null)
+    {
+        // Remove the first item from the toolbar.
+        topToolbar?.Items?.Remove(firstItem);
+    }
+}
 {% endhighlight %}
 {% endtabs %}
 
@@ -203,18 +203,18 @@ To hide an icon from all toolbars, iterate through the toolbar collection and ad
 {% tabs %}
 {% highlight C# %}
 // Iterate through the toolbar collection of the PDF Viewer
-	for (int i = 0; i < pdfViewer?.Toolbars.Count; i++)
-	{
-		// Get the toolbar item with the name "Sticky note" from the current toolbar
-		var item = pdfViewer.Toolbars[i]?.Items?.GetByName("Sticky note");
-		
-		// Check if the item exists in the toolbar
-		if (item != null)
-		{
-			// Set the visibility of the "Sticky note" item to false, effectively hiding it
-			item.IsVisible = false; // Hide the Sticky note
-		}
-	}
+for (int i = 0; i < pdfViewer?.Toolbars.Count; i++)
+{
+    // Get the toolbar item with the name "Sticky note" from the current toolbar
+    var item = pdfViewer.Toolbars[i]?.Items?.GetByName("Sticky note");
+    
+    // Check if the item exists in the toolbar
+    if (item != null)
+    {
+        // Set the visibility of the "Sticky note" item to false, effectively hiding it
+        item.IsVisible = false; // Hide the Sticky note
+    }
+}
 {% endhighlight %}
 {% endtabs %}
 
