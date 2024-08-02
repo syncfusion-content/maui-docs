@@ -800,7 +800,7 @@ you can access the specific item using the [GetByName](https://help.syncfusion.c
 {% endtabs %}
 
 #### Remove item in all toolbars
-In [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html),each toolbar operates independently. Removing an item from one toolbar does not affect others. For example, removing the signature icon from the "AnnotationsToolbar" does not impact other toolbars.
+In [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html),each toolbar operates independently. Removing an item from one toolbar does not affect others. For example, removing the Sticky note icon from the "AnnotationsToolbar" does not impact other toolbars.
 
 To remove an item from all toolbars, iterate through the toolbar collection and remove the item from each toolbar. Here’s how to remove the "Sticky note" item from all toolbars:
 
@@ -822,7 +822,11 @@ pdfViewer.Toolbars[i].Items.Remove(item);
 
 You can find the sample project for removing an item from the desktop toolbar using the [link provided here](https://github.com/SyncfusionExamples/maui-pdf-viewer-examples/tree/master/Toolbar customization/RemoveToolbarItemDesktop).
 
-#### Hide specific toolbar item
+#### Hide items from the toolbar
+
+##### Hide Item by Index
+
+##### Hide item by name
 
 By using the [GetByName](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.ToolbarItemCollection.html#Syncfusion_Maui_PdfViewer_ToolbarItemCollection_GetByName_System_String) method with its specified toolbar names, you can access the items of those toolbars. After accessing the item, you can modify its visibility by setting the `IsVisible` property. Here, we retrieve the toolbar "PrimaryToolbar" and "Search" item using the GetByName method and hide the "Search" item by setting its visibility to false.
 
@@ -838,23 +842,25 @@ item.IsVisible = false; // Hide the search item
 {% endhighlight %}
 {% endtabs %}
 
-N> Each toolbar operates independently. Hiding an item in one toolbar does not affect others. For example, changing the visibility of the signature icon in the "AnnotationsToolbar" does not impact other toolbars.
+#### Hide item in all toolbars
 
-To hide an icon from all toolbars, iterate through the toolbar collection and adjust the visibility of the item in each toolbar. Here’s how to hide the "Sticky note" icon from all toolbars:
+In [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html),each toolbar operates independently. Hiding an item in one toolbar does not affect others. For example, changing the visibility of the signature icon in the "AnnotationsToolbar" does not impact other toolbars.
+
+To hide an icon from all toolbars, iterate through the toolbar collection and adjust the visibility of the item in each toolbar. Here’s how to hide the "Signature" icon from all toolbars:
 
 {% tabs %}
 {% highlight C# %}
 // Iterate through the toolbar collection of the PDF Viewer
 for (int i = 0; i < pdfViewer?.Toolbars.Count; i++)
 {
-    // Get the toolbar item with the name "Sticky note" from the current toolbar
-    var item = pdfViewer.Toolbars[i]?.Items?.GetByName("Sticky note");
+    // Get the toolbar item with the name "Signature" from the current toolbar
+    var item = pdfViewer.Toolbars[i]?.Items?.GetByName("Signature");
     
     // Check if the item exists in the toolbar
     if (item != null)
     {
-        // Set the visibility of the "Sticky note" item to false, effectively hiding it
-        item.IsVisible = false; // Hide the Sticky note
+        // Set the visibility of the "Signature" item to false, effectively hiding it
+        item.IsVisible = false; // Hide the Signature
     }
 }
 {% endhighlight %}
