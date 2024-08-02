@@ -800,9 +800,27 @@ you can access the specific item using the [GetByName](https://help.syncfusion.c
 {% endtabs %}
 
 #### Remove item in all toolbars
-Just as with hiding items from toolbar, each toolbar operates independently when removing items. Removing an item from one toolbar does not affect others. To ensure an item is removed from all toolbars, you need to iterate through the toolbar collection and remove the item from each toolbar individually.
+In [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html),each toolbar operates independently. Removing an item from one toolbar does not affect others. For example, removing the signature icon from the "AnnotationsToolbar" does not impact other toolbars.
 
+To remove an item from all toolbars, iterate through the toolbar collection and remove the item from each toolbar. Here’s how to remove the "Sticky note" item from all toolbars:
 
+{% tabs %}
+{% highlight C# %}
+// Iterate through the toolbar collection of the PDF Viewer
+for (int i = 0; i < pdfViewer?.Toolbars.Count; i++)
+{
+// Get the toolbar item with the name "Sticky note" from the current toolbar
+var item = pdfViewer.Toolbars[i]?.Items?.GetByName("Sticky note");
+if (item != null)
+{
+// Remove the "Sticky note" item
+pdfViewer.Toolbars[i].Items.Remove(item); 
+}
+}
+{% endhighlight %}
+{% endtabs %}
+
+You can find the sample project for removing an item from the desktop toolbar using the [link provided here](https://github.com/SyncfusionExamples/maui-pdf-viewer-examples/tree/master/Toolbar customization/RemoveToolbarItemDesktop).
 
 #### Hide specific toolbar item
 
@@ -842,5 +860,5 @@ for (int i = 0; i < pdfViewer?.Toolbars.Count; i++)
 {% endhighlight %}
 {% endtabs %} 
 
-You can find the sample project for removing an item from the desktop toolbar using the [link provided here](https://github.com/SyncfusionExamples/maui-pdf-viewer-examples/tree/master/Toolbar customization/RemoveToolbarItemDesktop).
+
 
