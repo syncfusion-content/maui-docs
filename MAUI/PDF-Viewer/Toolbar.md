@@ -47,7 +47,25 @@ To customize the toolbar, you can programmatically add, remove, and hide the ite
 
 ### Hide specific toolbar
 
-By using the [GetByName](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.ToolbarCollection.html#Syncfusion_Maui_PdfViewer_ToolbarCollection_GetByName_System_String) method with its specified toolbar names, you can access the properties of those toolbars. After accessing the toolbar, you can modify its visibility by setting the `IsVisible` property. Here, we retrieve the toolbar "BottomToolbar" using the GetByName method and hide it by setting its visibility to false.
+Sometimes, you might need to hide specific toolbars instead of all. This can be useful if you want to simplify the user interface by removing unnecessary tools or creating a more focused environment for certain tasks. The Toolbars collection property in the PDF Viewer allows you to hide a specific toolbar by using its index or name.
+
+#### Hide Toolbars by Index
+
+If you know the position of the toolbar you want to hide within the Toolbars collection, you can access and hide it using its index. For example, you can use the following code to hide the first and second toolbars in the collection.
+
+{% tabs %}
+{% highlight C# %}
+/if (PdfViewer.Toolbars.Count > 1)
+{
+    PdfViewer.Toolbars[0].IsVisible = false; // Hide the first toolbar
+    PdfViewer.Toolbars[1].IsVisible = false; // Hide the second toolbar
+}
+{% endhighlight %}
+{% endtabs %}
+
+#### Hide Toolbars by Name
+
+By using the [GetByName](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.ToolbarItemCollection.html#Syncfusion_Maui_PdfViewer_ToolbarItemCollection_GetByName_System_String) method with its specified toolbar names, you can access the properties of those toolbars. After accessing the toolbar, you can modify its visibility by setting the IsVisible property. Here, we retrieve the toolbar “BottomToolbar” using the GetByName method and hide it by setting its visibility to false.
 
 {% tabs %}
 {% highlight C# %}
@@ -136,9 +154,35 @@ pdfViewer.Toolbars?.GetByName("PrimaryToolbar")?.Items?.Insert(index+1, new Sync
 {% endhighlight %}
 {% endtabs %}
 
-### Removing an item from the toolbar
+### Remove Items from the Toolbar
 
-To remove an item from the toolbar in [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html), you can access the specific item using the [GetByName](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.ToolbarItemCollection.html#Syncfusion_Maui_PdfViewer_ToolbarItemCollection_GetByName_System_String) method and then remove it from the toolbar's item collection using the [Remove](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.ToolbarItemCollection.html#Syncfusion_Maui_PdfViewer_ToolbarItemCollection_Remove_Syncfusion_Maui_PdfViewer_ToolbarItem) method. Here we retrieve the "Outline" item from the "PrimaryToolbar" using the GetByName method. If the item is found, it is removed from the toolbar.
+If you need to remove specific items from the toolbar in [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html), you can do so from the Items collection. You can remove them either by index or by name.
+
+#### Remove Item by Index
+
+You can access the specific item using its index and then remove it from the toolbar’s item collection using the Remove method. Here we retrieve the first item from the “TopToolbar” using its index. If the item is found, it is removed from the toolbar.
+
+{% tabs %}
+{% highlight C# %}
+// Get the top toolbar of the PDF Viewer that contains annotation tools on mobile platforms.
+	Syncfusion.Maui.PdfViewer.Toolbar? topToolbar = PdfViewer.Toolbars?.GetByName("TopToolbar");
+	if (topToolbar != null)
+	{
+		// Get the first item from the toolbar.
+		Syncfusion.Maui.PdfViewer.ToolbarItem? firstItem = topToolbar.Items?[0];
+
+		if (firstItem != null)
+		{
+			// Remove the first item from the toolbar.
+			topToolbar?.Items?.Remove(firstItem);
+		}
+	}
+{% endhighlight %}
+{% endtabs %}
+
+#### Remove Item by Name
+
+you can access the specific item using the [GetByName](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.ToolbarItemCollection.html#Syncfusion_Maui_PdfViewer_ToolbarItemCollection_GetByName_System_String) method and then remove it from the toolbar's item collection using the [Remove](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.ToolbarItemCollection.html#Syncfusion_Maui_PdfViewer_ToolbarItemCollection_Remove_Syncfusion_Maui_PdfViewer_ToolbarItem) method. Here we retrieve the "Outline" item from the "PrimaryToolbar" using the GetByName method. If the item is found, it is removed from the toolbar.
 
 {% tabs %}
 {% highlight C# %}
@@ -149,6 +193,28 @@ To remove an item from the toolbar in [SfPdfViewer](https://help.syncfusion.com/
  {
      pdfViewer.Toolbars?.GetByName("PrimaryToolbar")?.Items?.Remove(item); // Remove the outline item
  }
+{% endhighlight %}
+{% endtabs %}
+
+N>Each toolbar operates independently. Hiding an item in one toolbar does not affect others. For example, changing the visibility of the signature icon in the "AnnotationsToolbar" does not impact other toolbars.
+
+To hide an icon from all toolbars, iterate through the toolbar collection and adjust the visibility of the item in each toolbar. Here’s how to hide the "Sticky note" icon from all toolbars:
+
+{% tabs %}
+{% highlight C# %}
+// Iterate through the toolbar collection of the PDF Viewer
+	for (int i = 0; i < pdfViewer?.Toolbars.Count; i++)
+	{
+		// Get the toolbar item with the name "Sticky note" from the current toolbar
+		var item = pdfViewer.Toolbars[i]?.Items?.GetByName("Sticky note");
+		
+		// Check if the item exists in the toolbar
+		if (item != null)
+		{
+			// Set the visibility of the "Sticky note" item to false, effectively hiding it
+			item.IsVisible = false; // Hide the Sticky note
+		}
+	}
 {% endhighlight %}
 {% endtabs %}
 
