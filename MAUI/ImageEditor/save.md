@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Save image .NET MAUI Image Editor Control | Syncfusion
-description: Learn about save support in the Syncfusion .NET MAUI ImageEditor(SfImageEditor) control and more.
+description: Learn about save support and various other features in the Syncfusion .NET MAUI ImageEditor(SfImageEditor) control.
 platform: maui
 control: SfImageEditor
 documentation: ug
@@ -192,6 +192,30 @@ This [`ImageSaving`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEd
 
 {% endtabs %}
 
+`CompressionQuality`: Optimize the saved image's file size on Android, iOS and MacCatalyst devices, when the [`FileType`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageSavingEventArgs.html#Syncfusion_Maui_ImageEditor_ImageSavingEventArgs_FileType) is set to [`ImageFileType.Jpeg`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageFileType.html#Syncfusion_Maui_ImageEditor_ImageFileType_Jpeg).
+
+{% tabs %}
+
+{% highlight c# tabtitle="C#" %}
+
+    public MainPage()
+    {               
+        . . .
+        imageEditor.ImageSaving += OnImageSaving;
+        . . .
+    }
+
+    private void OnImageSaving(object sender, ImageSavingEventArgs args)
+    {
+        #if ANDROID || IOS || MACCATALYST
+        args.CompressionQuality = 0.5F;
+        #endif
+    }
+
+{% endhighlight %}
+
+{% endtabs %}
+
 ### Image saved event
 
 The [`ImageSaved`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_ImageSaved) event occurs after the image has been saved. To get the location of the saved image, use the [`Location`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageSavedEventArgs.html#Syncfusion_Maui_ImageEditor_ImageSavedEventArgs_Location) argument as shown in the following code.
@@ -220,7 +244,7 @@ The [`ImageSaved`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEdit
 The [`SavePickerOpening`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_SavePickerOpening) event occurs while the save picker opens on the save icon clicked in the toolbar.
 `Cancel`: Restrict the save picker opening by setting the `Cancel` argument to `true`. If the save picker is disabled, the image will be saved in the default location.
 
-Please refer to [`here`](https://help.syncfusion.com/maui/imageeditor/save?cs-save-lang=1&cs-lang=csharp#save-method) to learn more about the default save location.
+Please refer to [`here`](https://help.syncfusion.com/maui/imageeditor/save#save-method) to learn more about the default save location.
 
 {% tabs %}
 
