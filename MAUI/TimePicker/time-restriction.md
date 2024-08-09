@@ -34,7 +34,7 @@ this.Content = picker;
 
 ## Maximum Time
 
-The Timee picker provides an option to restrict the selection of time items by using the [MaximumTime]() property in [SfTimePicker](), and you cannot select the times beyond the maximum time range.
+The Timer picker provides an option to restrict the selection of time items by using the [MaximumTime]() property in [SfTimePicker](), and you cannot select the times beyond the maximum time range.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="2" %}
