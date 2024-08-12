@@ -11,20 +11,20 @@ documentation: ug
 
 ## Minimum Time
 
-The Time picker provides an option to restrict the selection of Time items by using the [MinimumTime]() property in [SfTimePicker](), and you cannot select the times beyond the minimum time range. The MinimumTime value has to be lesser than the MaximumTime value.
+The Time picker provides an option to restrict the selection of Time items by using the [MinimumTime]() property in [SfTimePicker](), and you cannot select the times beyond the minimum time range. The MinimumTime value has to be lesser than the MaximumTime value.When you set minimum time as timespan only hour and minute gets considered.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="2" %}
 
 <picker:SfTimePicker x:Name="Picker"
-                     MinimumTime="7:40:10">
+                     MinimumTime="7:40:0">
 </picker:SfTimePicker>
 
 {% endhighlight %}
 {% highlight c# tabtitle="C#" hl_lines="2" %}
 
 SfTiePicker picker = new SfTimePicker();
-picker.MinimumTime = new TimeSpan(7, 40, 10);
+picker.MinimumTime = new TimeSpan(7, 40, 0);
 this.Content = picker;
 
 {% endhighlight %}  
@@ -34,20 +34,20 @@ this.Content = picker;
 
 ## Maximum Time
 
-The Timer picker provides an option to restrict the selection of time items by using the [MaximumTime]() property in [SfTimePicker](), and you cannot select the times beyond the maximum time range.
+The Timer picker provides an option to restrict the selection of time items by using the [MaximumTime]() property in [SfTimePicker](), and you cannot select the times beyond the maximum time range.The MaximumTime value has to be higher than the MinimumTime value.When you set maximum time as timespan only hour and minute gets considered.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="2" %}
 
 <picker:SfTimePicker x:Name="Picker"
-                     MaximumTime="20:15:30">
+                     MaximumTime="20:15:0">
 </picker:SfTimePicker>
 
 {% endhighlight %}
 {% highlight c# tabtitle="C#" hl_lines="2" %}
 
 SfTimePicker picker = new SfTimePicker();
-picker.MaximumTime = new TimeSpan(20, 15, 30);
+picker.MaximumTime = new TimeSpan(20, 15, 0);
 this.Content = picker;
 
 {% endhighlight %}  

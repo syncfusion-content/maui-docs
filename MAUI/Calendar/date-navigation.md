@@ -70,8 +70,8 @@ this.Calendar.AllowViewNavigation = true;
 {% endhighlight %}
 {% endtabs %}
 
-## Navigation to adjacent months by using leading/trailing dates
-The next and previous months can be navigated by tapping the leading and trailing dates of Calendar control.Tapping on leading dates will navigate to previous month and tapping on trailing dates will navigate to the next month. In `SfCalendar`, this feature can be enabled or disabled by changing this property [NavigateToAdjacentMonth]().
+## Navigation to Adjacent Months Using Leading/Trailing Dates
+You can navigate to the next or previous month by tapping on the leading or trailing dates within the Calendar control. When you tap on a leading date, the calendar will navigate to the previous month, tapping on a trailing date will navigate to the next month. In `SfCalendar`, this functionality can be enabled or disabled by modifying the [NavigateToAdjacentMonth]() property.
 
 ## Programmatically change to adjacent dates
 The next and previous views can be navigated by swiping the Calendar control from right to left and left to right. In the `SfCalendar`, view can be changed programmatically by using the [Forward](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_Forward) and [Backward](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_Backward) methods.
