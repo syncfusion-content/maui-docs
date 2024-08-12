@@ -14,11 +14,11 @@ The [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.
 
 ## Toolbars structure 
 
-The [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) uses multiple or multilevel toolbars to organize its tools effectively based on the available screen space. Around 40 toolbars are used to ensure comprehensive functionality. This approach is implemented on both mobile and desktop platforms to ensure that the user interface remains clean and accessible.
+The [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) features a built-in toolbar that utilizes multiple or multilevel toolbars. This design ensures that the user interface remains clean and accessible. We have incorporated approximately 40 toolbars to ensure comprehensive functionality across various platforms. These toolbars are strategically organized based on the available screen space, adapting to different screen sizes on both mobile and desktop platforms. This approach ensures that tools are easily accessible, preventing the interface from becoming cluttered.
 
 ### Need for using multiple toolbars
 
-The use of multiple toolbars in the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) is essential to maintain a user-friendly interface. By separating tools into different toolbars, users can quickly find and use the tools they need without the interface becoming cluttered.
+Depending on the available screen space, the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) organizes its tools into multiple or multilevel toolbars on mobile and desktop platforms. The use of multiple toolbars in the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) is essential to maintain a user-friendly interface. By separating tools into different toolbars, users can quickly find and use the tools they need without the interface becoming cluttered.
 
 The names of these toolbars and its description are listed in the following sections. 
 
@@ -265,12 +265,13 @@ In [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.S
 
 The names of these toolbar items, along with their descriptions and availability in the toolbars, are listed in the following sections.
 
-### Mobile toolbar names
+### Mobile toolbar item names
 
 <table>
 <tr>
 <td>Keys</td>
 <td>Description</td>
+<td>Item available in toolbars</td>
 </tr>
 <tr>
 <td>Undo</td>
@@ -800,7 +801,8 @@ you can access the specific item using the [GetByName](https://help.syncfusion.c
 {% endtabs %}
 
 #### Remove item in all toolbars
-In [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html),each toolbar operates independently. Removing an item from one toolbar does not affect others. For example, removing the Sticky note icon from the "AnnotationsToolbar" does not impact other toolbars.
+
+In [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html), each toolbar operates independently. Removing an item from one toolbar does not affect others. For example, removing the Sticky note icon from the "AnnotationsToolbar" does not impact other toolbars.
 
 To remove an item from all toolbars, iterate through the toolbar collection and remove the item from each toolbar. Here’s how to remove the "Sticky note" item from all toolbars:
 
@@ -824,7 +826,26 @@ You can find the sample project for removing an item from the desktop toolbar us
 
 #### Hide items from the toolbar
 
+If you need to hide specific items in the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html), you can do so by modifying the visibility of the items. You can hide them either by index or by name.
+
 ##### Hide Item by Index
+
+To hide a toolbar item by its index, you can directly access the item in the toolbar's Items collection using the index and then set its IsVisible property to false. Here’s how you can do it:
+
+{% tabs %}
+{% highlight C# %}
+// Assuming you want to hide the item at a specific index in the PrimaryToolbar.
+int indexToHide = 2; // Replace with the actual index of the item you want to hide.
+
+var toolbar = pdfViewer.Toolbars?.GetByName("PrimaryToolbar");
+if (toolbar != null && indexToHide >= 0 && indexToHide < toolbar.Items.Count)
+{
+    var item = toolbar.Items[indexToHide];
+    item.IsVisible = false; // Hide the item by index
+}
+
+{% endhighlight %}
+{% endtabs %}
 
 ##### Hide item by name
 
