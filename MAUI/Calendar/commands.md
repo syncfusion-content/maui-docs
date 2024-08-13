@@ -24,7 +24,7 @@ The [ViewChangedCommand]() is triggered whenever the view is swiped to the previ
 </calendar:SfCalendar>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="3,5,7" %}
 
 public class CalendarViewModel
 {
