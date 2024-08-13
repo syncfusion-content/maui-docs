@@ -11,7 +11,7 @@ documentation: ug
 
 ## ViewChangedCommand
 
-The [ViewChangedCommand]() is triggered whenever the view is swiped to the previous or next view, as well as when the calendar view is switched to another calendar view.
+The [ViewChangedCommand]() is invoked whenever the view is navigated to either the previous or next view. Additionally, it is triggered when switching between different calendar views, with the `CalendarViewChangedEventArgs` provided as a parameter.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
@@ -24,16 +24,16 @@ The [ViewChangedCommand]() is triggered whenever the view is swiped to the previ
 </calendar:SfCalendar>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="3,5,7" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="3,6,8" %}
 
 public class CalendarViewModel
 {
     public ICommand ViewChangedCommand { get; set; }
     public CalendarViewModel()
     {
-        ViewChangedCommand = new Command(ViewChanged);
+        ViewChangedCommand = new Command<CalendarViewChangedEventArgs>(ViewChanged);
     }
-    private void ViewChanged()
+    private void ViewChanged(CalendarViewChangedEventArgs args)
     {
         // To do your requirement here.
     }
@@ -44,7 +44,7 @@ public class CalendarViewModel
 
 ## SelectionChangedCommand
 
-The [SelectionChangedCommand]() is triggered whenever the selection is changed in calendar view.
+The [SelectionChangedCommand]() is invoked whenever selection changes in the calendar  changes, with the `CalendarSelectionChangedEventArgs` passed as a parameter.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
@@ -57,16 +57,16 @@ The [SelectionChangedCommand]() is triggered whenever the selection is changed i
 </calendar:SfCalendar>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="3,6,8" %}
 
 public class CalendarViewModel
 {
     public ICommand SelectionChangedCommand { get; set; }
     public CalendarViewModel()
     {
-        SelectionChangedCommand = new Command(SelectionChanged);
+        SelectionChangedCommand = new Command<CalendarSelectionChangedEventArgs>(SelectionChanged);
     }
-    private void SelectionChanged()
+    private void SelectionChanged(CalendarSelectionChangedEventArgs args)
     {
         // To do your requirement here.
     }
@@ -77,7 +77,7 @@ public class CalendarViewModel
 
 ## TappedCommand
 
-The [TappedCommand]() is triggered whenever the calendar view is tapped.
+The [TappedCommand] is invoked whenever the calendar view is tapped, with the `CalendarTappedEventArgs` passed as a parameter.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
@@ -90,16 +90,16 @@ The [TappedCommand]() is triggered whenever the calendar view is tapped.
 </calendar:SfCalendar>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="3,6,8" %}
 
 public class CalendarViewModel
 {
     public ICommand TappedCommand { get; set; }
     public CalendarViewModel()
     {
-        TappedCommand = new Command(Tapped);
+        TappedCommand = new Command<CalendarTappedEventArgs>(Tapped);
     }
-    private void Tapped()
+    private void Tapped(CalendarTappedEventArgs args)
     {
         // To do your requirement here.
     }
@@ -110,10 +110,10 @@ public class CalendarViewModel
 
 ## DoubleTappedCommand
 
-The [DoubleTappedCommand]() is triggered whenever the calendar view is double tapped.
+The [DoubleTappedCommand]() is invoked whenever the calendar view is double tapped, with the `CalendarDoubleTappedEventArgs` passed as parameter.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3,6,8" %}
 
 <calendar:SfCalendar  x:Name="Calendar" 
                      DoubleTappedCommand="DoubleTappedCommand">
@@ -130,9 +130,9 @@ public class CalendarViewModel
     public ICommand DoubleTappedCommand { get; set; }
     public CalendarViewModel()
     {
-        DoubleTappedCommand = new Command(DoubleTapped);
+        DoubleTappedCommand = new Command<CalendarDoubleTappedEventArgs>(DoubleTapped);
     }
-    private void DoubleTapped()
+    private void DoubleTapped(CalendarDoubleTappedEventArgs args)
     {
         // To do your requirement here.
     }
@@ -143,7 +143,7 @@ public class CalendarViewModel
 
 ## LongPressedCommand
 
-The [LongPressedCommand]() is triggered whenever the calendar view is long pressed.
+The [LongPressedCommand]() is invoked whenever the calendar view is long pressed, with the `CalendarLongPressedEventArgs` passed as parameter.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
@@ -156,16 +156,16 @@ The [LongPressedCommand]() is triggered whenever the calendar view is long press
 </calendar:SfCalendar>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="3,6,8" %}
 
 public class CalendarViewModel
 {
     public ICommand LongPressedCommand { get; set; }
     public CalendarViewModel()
     {
-        LongPressedCommand = new Command(LongPressed);
+        LongPressedCommand = new Command<CalendarLongPressedEventArgs>(LongPressed);
     }
-    private void LongPressed()
+    private void LongPressed(CalendarLongPressedEventArgs args)
     {
         // To do your requirement here.
     }
@@ -189,7 +189,7 @@ The [AcceptCommand]() is triggered whenever confirm button tapped on calendar.
 </calendar:SfCalendar>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="3,6,8" %}
 
 public class CalendarViewModel
 {
@@ -222,7 +222,7 @@ The [DeclineCommand]() is triggered whenever the cancel button tapped on calenda
 </calendar:SfCalendar>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="3,6,8" %}
 
 public class CalendarViewModel
 {

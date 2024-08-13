@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Events in .NET MAUI DateTimePicker control | Syncfusion
-description: Learn here all about the Command support in Syncfusion .NET MAUI Picker (SfDateTimePicker) control and more details.
+description: Learn here all about the Command support in Syncfusion .NET MAUI Date Time Picker (SfDateTimePicker) control and more details.
 platform: maui
 control: SfDateTimePicker
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 ## SelectionChangedCommand
 
-The [SelectionChangedCommand]() is triggered whenever the selection index changed in date picker.
+The [SelectionChangedCommand]() is triggered whenever the selection index in the picker changes, with the `DateTimePickerSelectionChangedEventArgs` passed as a parameter.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}

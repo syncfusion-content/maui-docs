@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Events in .NET MAUI TimePicker control | Syncfusion
-description: Learn here all about the Command support in Syncfusion .NET MAUI Picker (SfTimePicker) control and more details.
+description: Learn here all about the Command support in Syncfusion .NET MAUI Time Picker (SfTimePicker) control and more details.
 platform: maui
 control: SfTimePicker
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 ## SelectionChangedCommand
 
-The [SelectionChangedCommand]() is triggered whenever the selection index changed in time picker.
+The [SelectionChangedCommand]() is triggered whenever the selection index in the picker changes, with the `TimePickerSelectionChangedEventArgs` passed as a parameter.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}

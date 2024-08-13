@@ -11,7 +11,7 @@ documentation: ug
 
 ## SelectionChangedCommand
 
-The [SelectionChangedCommand]() is triggered whenever the selection index changed in picker.
+The [SelectionChangedCommand]() is triggered whenever the selection index in the picker changes, with the `PickerSelectionChangedEventArgs` passed as a parameter.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
@@ -24,7 +24,7 @@ The [SelectionChangedCommand]() is triggered whenever the selection index change
 </picker:SfPicker>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="3,5,7" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="3,6,8" %}
 
 public class ViewModel
 {
@@ -57,7 +57,7 @@ The [AcceptCommand]() is triggered whenever confirm button tapped on picker.
 </picker:SfPicker>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="3,5,7" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="3,6,8" %}
 
 public class ViewModel
 {
@@ -90,7 +90,7 @@ The [DeclineCommand]() is triggered whenever the cancel button tapped on picker.
 </picker:SfPicker>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="3,5,7" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="3,6,8" %}
 
 public class ViewModel
 {
