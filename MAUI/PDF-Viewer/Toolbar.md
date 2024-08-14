@@ -980,7 +980,6 @@ for (int i = 0; i < pdfViewer?.Toolbars.Count; i++)
 {
     // Get the toolbar item with the name "Signature" from the current toolbar
     var item = pdfViewer.Toolbars[i]?.Items?.GetByName("Signature");
-    
     // Check if the item exists in the toolbar
     if (item != null)
     {
