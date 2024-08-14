@@ -96,4 +96,4 @@ this.Calendar.SelectableDayPredicate = (date) =>
 {% endhighlight %}
 {% endtabs %}
 
-![Month view selectable day predicate in .NET MAUI Calendar.](images/date-restriction/net-maui-selectable-day-predicate.png)
+![Month view selectable day predicate in .NET MAUI Calendar.](images/date-restriction/net-maui-selectable-day-predicate.jpg)
