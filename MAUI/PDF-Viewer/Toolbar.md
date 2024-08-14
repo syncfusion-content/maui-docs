@@ -336,7 +336,7 @@ The names of these toolbar items, along with their descriptions and availability
 <tr>
 <td>Signature</td>
 <td>The button that appears in the bottom toolbar allows you to create and add the signature and indicate the signature annotation type.</td>
-<td>BottomToolbar, HighlightAnnotationEditToolbar, , UnderlineAnnotationEditToolbar, StrikeOutAnnotationEditToolbar ,SquigglyAnnotationEditToolbar, LineAnnotationEditToolbar ,ArrowAnnotationEditToolbar, RectangleAnnotationEditToolbar, CircleAnnotationEditToolbar, PolygonAnnotationEditToolbar, PolylineAnnotationEditToolbar, FreeTextAnnotationEditToolbar, InkAnnotationEditToolbar, EraserEditToolbar, StickyNoteAnnotationEditToolbar, StampAnnotationEditToolbar</td>
+<td>BottomToolbar</td>
 </tr>
 <tr>
 <td>StickyNote</td>
