@@ -101,8 +101,6 @@ You can customize the header appearance by using the [HeaderTemplate]() in the [
 {% endhighlight %}
 {% endtabs %}
 
-![Month view Header appearance changed using template .NET MAUI Calendar.]()
-
 ## Header appearance using DataTemplateSelector
 
 You can customize the header appearance by using the [HeaderTemplate]() in the [SfCalendar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html). The `DataTemplateSelector` can choose a `DataTemplate` at runtime based on the value of a data-bound to Calendar header by using the `HeaderTemplate.` It allows you to choose a different data template for each header, as well as to customize the appearance of a particular header based on certain conditions.
@@ -263,8 +261,6 @@ You can customize the view header appearance by using the [MonthViewHeaderTempla
 
 {% endhighlight %}
 {% endtabs %}
-
-![Month view View Header appearance changed using template in .NET MAUI Calendar.]()
 
 ### View header appearance using DataTemplateSelector
 
