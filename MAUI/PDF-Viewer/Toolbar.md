@@ -276,242 +276,302 @@ The names of these toolbar items, along with their descriptions and availability
 <tr>
 <td>Undo</td>
 <td>The button that appears in the top toolbar allows you to undo an action.</td>
+<td>TopToolbar</td>
 </tr>
 <tr>
 <td>Redo</td>
 <td>The button that appears in the top toolbar allows you to redo an action.</td>
+<td>TopToolbar</td>
 </tr>
 <tr>
 <td>ZoomMode</td>
 <td>The button that appears in the top toolbar allows you to adjust the magnification level of the PDF viewer content. </td>
+<td>TopToolbar</td>
 </tr>
 <tr>
 <td>PageSettings</td>
 <td>The button that appears in the top toolbar allows you to customize the page display and layout of the PDF viewer content. </td>
+<td>TopToolbar</td>
 </tr>
 <tr>
 <td>Search</td>
 <td>The button that appears in the top toolbar allows you to locate specific text or content in the document quickly. </td>
+<td>TopToolbar</td>
 </tr>
 <tr>
 <td>MoreItem</td>
 <td>The button that appears in the top toolbar allows you to expand the options available in the PDF Viewer.</td>
+<td>TopToolbar</td>
 </tr>
 <tr>
 <td>TextMarkup</td>
 <td>The button that appears in the bottom toolbar allows you to annotate text in the PDF Viewer.</td>
+<td>BottomToolbar</td>
 </tr>
 <tr>
 <td>FreeText</td>
 <td>The button that appears in the bottom toolbar allows you to add text annotations directly to the document in the PDF Viewer.</td>
+<td>BottomToolbar</td>
 </tr>
 <tr>
 <td>Ink</td>
 <td>The button that appears in the bottom toolbar allows you to draw freehand annotations.</td>
+<td>BottomToolbar</td>
 </tr>
 <tr>
 <td>Eraser</td>
 <td>The button that appears in the bottom toolbar allows you to erase the ink annotations in the PDF Viewer.</td>
+<td>BottomToolbar</td>
 </tr>
 <tr>
 <td>Shape</td>
 <td>The button that appears in the bottom toolbar allows you to add shapes to the document.</td>
+<td>BottomToolbar</td>
 </tr>
 <tr>
 <td>Stamp</td>
 <td>The button that appears in the bottom toolbar allows you to add the in-built and custom stamps.</td>
+<td>BottomToolbar</td>
 </tr>
 <tr>
 <td>Signature</td>
 <td>The button that appears in the bottom toolbar allows you to create and add the signature and indicate the signature annotation type.</td>
+<td>BottomToolbar, HighlightAnnotationEditToolbar, , UnderlineAnnotationEditToolbar, StrikeOutAnnotationEditToolbar ,SquigglyAnnotationEditToolbar, LineAnnotationEditToolbar ,ArrowAnnotationEditToolbar, RectangleAnnotationEditToolbar, CircleAnnotationEditToolbar, PolygonAnnotationEditToolbar, PolylineAnnotationEditToolbar, FreeTextAnnotationEditToolbar, InkAnnotationEditToolbar, EraserEditToolbar, StickyNoteAnnotationEditToolbar, StampAnnotationEditToolbar</td>
 </tr>
 <tr>
 <td>StickyNote</td>
 <td>The button that appears in the bottom toolbar allows you to add the sticky note to the document.</td>
+<td>BottomToolbar</td>
 </tr>
 <tr>
 <td>TextMarkupToolbarBackIcon</td>
 <td>The button that appears in the text markup toolbar allows you to navigate back from the text markup toolbar.</td>
+<td>TextMarkupToolbar</td>
 </tr>
 <tr>
 <td>Highlight</td>
 <td>The button that appears in the text markup toolbar allows you to highlight the text in the document.</td>
+<td>TextMarkupToolbar</td>
 </tr>
 <tr>
 <td>Underline</td>
 <td>The button that appears in the text markup toolbar allows you to underline the text in the document.</td>
+<td>TextMarkupToolbar</td>
 </tr>
 <tr>
 <td>StrikeOut</td>
 <td>The button that appears in the text markup toolbar allows you to strikeout the text in the document.</td>
+<td>TextMarkupToolbar</td>
 </tr>
 <tr>
 <td>Squiggly</td>
 <td>The button that appears in the text markup toolbar allows you to add squiggly lines to the text in the document.</td>
+<td>TextMarkupToolbar</td>
 </tr>
 <tr>
 <td>ShapeToolbarBackIcon</td>
 <td>The button that appears in the shape toolbar allows you to navigate back from the shape toolbar.</td>
+<td>ShapeAnnotationsToolbar</td>
 </tr>
 <tr>
 <td>Line</td>
 <td>The button that appears in the shape toolbar allows you to draw a line in the document.</td>
+<td>ShapeAnnotationsToolbar</td>
 </tr>
 <tr>
 <td>Arrow</td>
 <td>The button that appears in the shape toolbar allows you to draw an arrow in the document.</td>
+<td>ShapeAnnotationsToolbar</td>
 </tr>
 <tr>
 <td>Rectangle</td>
 <td>The button that appears in the shape toolbar allows you to draw a rectangle in the document.</td>
+<td>ShapeAnnotationsToolbar</td>
 </tr>
 <tr>
 <td>Circle</td>
 <td>The button that appears in the shape toolbar allows you to draw a circle in the document.</td>
+<td>ShapeAnnotationsToolbar</td>
 </tr>
 <tr>
 <td>Polygon</td>
 <td>The button that appears in the shape toolbar allows you to draw polygons in the document.</td>
+<td>ShapeAnnotationsToolbar</td>
 </tr>
 <tr>
 <td>Polyline</td>
 <td>The button that appears in the shape toolbar allows you to draw polylines in the document.</td>
+<td>ShapeAnnotationsToolbar</td>
 </tr>
 <tr>
 <td>Cloud</td>
 <td>The button that appears in the shape toolbar allows you to draw a cloud in the document.</td>
+<td>ShapeAnnotationsToolbar</td>
 </tr>
 <tr>
 <td>SecondaryAnnotationBackIcon</td>
 <td>The button that appears in the annotation edit toolbars allows you to navigate back from the annotation edit toolbar.</td>
+<td>HighlightAnnotationEditToolbar, UnderlineAnnotationEditToolbar, StrikeOutAnnotationEditToolbar, SquigglyAnnotationEditToolbar, LineAnnotationEditToolbar, ArrowAnnotationEditToolbar, RectangleAnnotationEditToolbar, CircleAnnotationEditToolbar, PolygonAnnotationEditToolbar, PolylineAnnotationEditToolbar, FreeTextAnnotationEditToolbar, InkAnnotationEditToolbar, EraserEditToolbar, StickyNoteAnnotationEditToolbar,StampAnnotationEditToolbar</td>
 </tr>
 <tr>
 <td>BackIconSeparator</td>
 <td>The separator that appears in the annotation edit toolbar is positioned after the back button.</td>
+<td> HighlightAnnotationEditToolbar, UnderlineAnnotationEditToolbar, StrikeOutAnnotationEditToolbar, SquigglyAnnotationEditToolbar, LineAnnotationEditToolbar, ArrowAnnotationEditToolbar, RectangleAnnotationEditToolbar, CircleAnnotationEditToolbar, PolygonAnnotationEditToolbar, PolylineAnnotationEditToolbar, FreeTextAnnotationEditToolbar, InkAnnotationEditToolbar, EraserEditToolbar, StickyNoteAnnotationEditToolbar,StampAnnotationEditToolbar</td>
 </tr>
 <tr>
 <td>AnnotationType</td>
 <td>The button that appears in the annotation edit toolbar allows you to indicate the annotation type.</td>
+<td>HighlightAnnotationEditToolbar, UnderlineAnnotationEditToolbar, StrikeOutAnnotationEditToolbar, SquigglyAnnotationEditToolbar, LineAnnotationEditToolbar, ArrowAnnotationEditToolbar, RectangleAnnotationEditToolbar, CircleAnnotationEditToolbar, PolygonAnnotationEditToolbar, PolylineAnnotationEditToolbar, InkAnnotationEditToolbar, EraserEditToolbar, StickyNoteAnnotationEditToolbar, StampAnnotationEditToolbar</td>
 </tr>
 <tr>
 <td>BorderStyle</td>
 <td>The button that appears in the cloud annotation edit toolbar allows you to indicate the cloud annotation.</td>
+<td>PolygonAnnotationEditToolbar</td>
 </tr>
 <tr>
 <td>TextColor</td>
 <td>The button that appears in the free text annotation edit toolbar allows you to change the free text color.</td>
+<td>HighlightAnnotationEditToolbar, UnderlineAnnotationEditToolbar, StrikeOutAnnotationEditToolbar, SquigglyAnnotationEditToolbar, LineAnnotationEditToolbar, ArrowAnnotationEditToolbar, RectangleAnnotationEditToolbar, CircleAnnotationEditToolbar, PolygonAnnotationEditToolbar, PolylineAnnotationEditToolbar, FreeTextAnnotationEditToolbar, InkAnnotationEditToolbar, EraserEditToolbar, StickyNoteAnnotationEditToolbar, StampAnnotationEditToolbar.</td>
 </tr>
 <tr>
 <td>TextSize</td>
 <td>The button that appears in the free text annotation edit toolbar allows you to change the text size.</td>
+<td>HighlightAnnotationEditToolbar, UnderlineAnnotationEditToolbar, StrikeOutAnnotationEditToolbar, SquigglyAnnotationEditToolbar, LineAnnotationEditToolbar, ArrowAnnotationEditToolbar, RectangleAnnotationEditToolbar, CircleAnnotationEditToolbar, PolygonAnnotationEditToolbar, PolylineAnnotationEditToolbar, FreeTextAnnotationEditToolbar, InkAnnotationEditToolbar, EraserEditToolbar, StickyNoteAnnotationEditToolbar, and StampAnnotationEditToolbar.</td>
 </tr>
 <tr>
 <td>TextPropertySeparator</td>
 <td>The separator that appears in the free text annotation edit toolbar is positioned after the text size button.</td>
+<td>HighlightAnnotationEditToolbar, UnderlineAnnotationEditToolbar, StrikeOutAnnotationEditToolbar, SquigglyAnnotationEditToolbar, LineAnnotationEditToolbar, ArrowAnnotationEditToolbar, RectangleAnnotationEditToolbar, CircleAnnotationEditToolbar, PolygonAnnotationEditToolbar, PolylineAnnotationEditToolbar, FreeTextAnnotationEditToolbar, InkAnnotationEditToolbar, EraserEditToolbar, StickyNoteAnnotationEditToolbar, and StampAnnotationEditToolbar.</td>
 </tr>
 <tr>
 <td>Edit</td>
 <td>The button that appears in the sticky note annotation edit toolbar allows you to edit text in the sticky note.</td>
+<td>HighlightAnnotationEditToolbar, UnderlineAnnotationEditToolbar, StrikeOutAnnotationEditToolbar, SquigglyAnnotationEditToolbar, LineAnnotationEditToolbar, ArrowAnnotationEditToolbar, RectangleAnnotationEditToolbar, CircleAnnotationEditToolbar, PolygonAnnotationEditToolbar, PolylineAnnotationEditToolbar, FreeTextAnnotationEditToolbar, InkAnnotationEditToolbar, EraserEditToolbar, StickyNoteAnnotationEditToolbar, and StampAnnotationEditToolbar.</td>
 </tr>
 <tr>
 <td>TextFillColor</td>
 <td>The button that appears in the free text annotation edit toolbar allows you to set the fill color of the text box.</td>
+<td>HighlightAnnotationEditToolbar, UnderlineAnnotationEditToolbar, StrikeOutAnnotationEditToolbar, SquigglyAnnotationEditToolbar, LineAnnotationEditToolbar, ArrowAnnotationEditToolbar, RectangleAnnotationEditToolbar, CircleAnnotationEditToolbar, PolygonAnnotationEditToolbar, PolylineAnnotationEditToolbar, FreeTextAnnotationEditToolbar, InkAnnotationEditToolbar, EraserEditToolbar, StickyNoteAnnotationEditToolbar, and StampAnnotationEditToolbar.</td>
 </tr>
 <tr>
 <td>Thickness</td>
 <td>The button that appears in the annotation edit toolbar allows you to set the thickness of the annotations.</td>
+<td>HighlightAnnotationEditToolbar, UnderlineAnnotationEditToolbar, StrikeOutAnnotationEditToolbar, SquigglyAnnotationEditToolbar, LineAnnotationEditToolbar, ArrowAnnotationEditToolbar, RectangleAnnotationEditToolbar, CircleAnnotationEditToolbar, PolygonAnnotationEditToolbar, PolylineAnnotationEditToolbar, FreeTextAnnotationEditToolbar, InkAnnotationEditToolbar, EraserEditToolbar, StickyNoteAnnotationEditToolbar, and StampAnnotationEditToolbar</td>
 </tr>
 <tr>
 <td>StokeColor</td>
 <td>The button that appears in the annotation edit toolbar allows you to set the stroke color of the annotations.</td>
+<td>HighlightAnnotationEditToolbar, UnderlineAnnotationEditToolbar, StrikeOutAnnotationEditToolbar, SquigglyAnnotationEditToolbar, LineAnnotationEditToolbar, ArrowAnnotationEditToolbar, RectangleAnnotationEditToolbar, CircleAnnotationEditToolbar, PolygonAnnotationEditToolbar, PolylineAnnotationEditToolbar, FreeTextAnnotationEditToolbar, InkAnnotationEditToolbar, EraserEditToolbar, StickyNoteAnnotationEditToolbar, and StampAnnotationEditToolbar</td>
 </tr>
 <tr>
 <td>Notes</td>
 <td>The button that appears in the top toolbar allows you to show the sticky note icons.</td>
+<td>HighlightAnnotationEditToolbar, UnderlineAnnotationEditToolbar, StrikeOutAnnotationEditToolbar, SquigglyAnnotationEditToolbar, LineAnnotationEditToolbar, ArrowAnnotationEditToolbar, RectangleAnnotationEditToolbar, CircleAnnotationEditToolbar, PolygonAnnotationEditToolbar, PolylineAnnotationEditToolbar, FreeTextAnnotationEditToolbar, InkAnnotationEditToolbar, EraserEditToolbar, StickyNoteAnnotationEditToolbar, and StampAnnotationEditToolbar</td>
 </tr>
 <tr>
 <td>FillColor</td>
 <td>The button that appears in the annotation edit toolbar allows you to set the fill color of the annotations.</td>
+<td>HighlightAnnotationEditToolbar, UnderlineAnnotationEditToolbar, StrikeOutAnnotationEditToolbar, SquigglyAnnotationEditToolbar, LineAnnotationEditToolbar, ArrowAnnotationEditToolbar, RectangleAnnotationEditToolbar, CircleAnnotationEditToolbar, PolygonAnnotationEditToolbar, PolylineAnnotationEditToolbar, FreeTextAnnotationEditToolbar, InkAnnotationEditToolbar, EraserEditToolbar, StickyNoteAnnotationEditToolbar, and StampAnnotationEditToolbar.</td>
 </tr>
 <tr>
 <td>Opacity</td>
 <td>The button that appears in the annotation edit toolbar allows you to set the opacity of the annotations.</td>
+<td>HighlightAnnotationEditToolbar, UnderlineAnnotationEditToolbar, StrikeOutAnnotationEditToolbar, SquigglyAnnotationEditToolbar, LineAnnotationEditToolbar, ArrowAnnotationEditToolbar, RectangleAnnotationEditToolbar, CircleAnnotationEditToolbar, PolygonAnnotationEditToolbar, PolylineAnnotationEditToolbar, FreeTextAnnotationEditToolbar, InkAnnotationEditToolbar, EraserEditToolbar, StickyNoteAnnotationEditToolbar, and StampAnnotationEditToolbar.</td>
 </tr>
 <tr>
 <td>DeleteSeparator</td>
 <td>The separator that appears in the annotation edit toolbar positioned before the delete button.</td>
+<td>HighlightAnnotationEditToolbar, UnderlineAnnotationEditToolbar, StrikeOutAnnotationEditToolbar, SquigglyAnnotationEditToolbar, LineAnnotationEditToolbar, ArrowAnnotationEditToolbar, RectangleAnnotationEditToolbar, CircleAnnotationEditToolbar, PolygonAnnotationEditToolbar, PolylineAnnotationEditToolbar, FreeTextAnnotationEditToolbar, InkAnnotationEditToolbar, EraserEditToolbar, StickyNoteAnnotationEditToolbar, and StampAnnotationEditToolbar.</td>
 </tr>
 <tr>
 <td>Delete</td>
 <td>The button that appears in the annotation edit toolbar allows you to delete the selected annotations.</td>
+<td>HighlightAnnotationEditToolbar, UnderlineAnnotationEditToolbar, StrikeOutAnnotationEditToolbar, SquigglyAnnotationEditToolbar, LineAnnotationEditToolbar, ArrowAnnotationEditToolbar, RectangleAnnotationEditToolbar, CircleAnnotationEditToolbar, PolygonAnnotationEditToolbar, PolylineAnnotationEditToolbar, FreeTextAnnotationEditToolbar, InkAnnotationEditToolbar, EraserEditToolbar, StickyNoteAnnotationEditToolbar, and StampAnnotationEditToolbar.</td>
 </tr>
 <tr>
 <td>Note</td>
 <td>The button that appears in the sticky note icons toolbar allows you to add note type of the sticky note.</td>
+<td>StickyNoteIconsToolbarView</td>
 </tr>
 <tr>
 <td>Insert</td>
 <td>The button that appears in the sticky note icons toolbar allows you to add insert type of the sticky note.</td>
+<td>StickyNoteIconsToolbarView</td>
 </tr>
 <tr>
 <td>Comment</td>
 <td>The button that appears in the sticky note icons toolbar allows you to add comment type of the sticky note.</td>
+<td>StickyNoteIconsToolbarView</td>
 </tr>
 <tr>
 <td>Key</td>
 <td>The button that appears in the sticky note icons toolbar allows you to add key type of the sticky note.</td>
+<td>StickyNoteIconsToolbarView</td>
 </tr>
 <tr>
 <td>Help</td>
 <td>The button that appears in the sticky note icons toolbar allows you to add help type of the sticky note.</td>
+<td>StickyNoteIconsToolbarView</td>
 </tr>
 <tr>
 <td>Paragraph</td>
 <td>The button that appears in the sticky note icons toolbar allows you to add paragraph type of the sticky note.</td>
+<td>StickyNoteIconsToolbarView</td>
 </tr>
 <tr>
 <td>New Paragraph</td>
 <td>The button that appears in the sticky note icons toolbar allows you to add new paragraph type of the sticky note.</td>
+<td>StickyNoteIconsToolbarView</td>
 </tr>
 <tr>
 <td>Outline</td>
 <td>The button that appears in the more option toolbar allows you to see the outline view of document.</td>
+<td>MoreOptionToolbar</td>
 </tr>
 <tr>
 <td>Print</td>
 <td>The button that appears in the more option toolbar allows you to print the document from the PDF Viewer.</td>
+<td>MoreOptionToolbar</td>
 </tr>
 <tr>
 <td>SearchBackIcon</td>
 <td>The button that appears in the search toolbar allows you to navigate back from the search toolbar. </td>
+<td>SearchToolbar</td>
 </tr>
 <tr>
 <td>SearchEntry</td>
 <td>The entry that appears in the search toolbar allows you to enter the text you want to search.</td>
+<td>SearchToolbar</td>
 </tr>
 <tr>
 <td>SearchBusyIndicator</td>
 <td>The button that appears in the search toolbar indicates an ongoing search.</td>
+<td>SearchToolbar</td>
 </tr>
 <tr>
 <td>ClearSearch</td>
 <td>The button that appears in the search toolbar allows you to clear the current search text.</td>
+<td>SearchToolbar</td>
 </tr>
 <tr>
 <td>ClearSeparator</td>
 <td>The separator that appears in the search toolbar is positioned after the clear button.</td>
+<td>SearchToolbar</td>
 </tr>
 <tr>
 <td>PreviousSearch</td>
 <td>The button that appears in the search toolbar allows you to navigate to the previous search result.</td>
+<td>SearchToolbar</td>
 </tr>
 <tr>
 <td>NextSearch</td>
 <td>The button that appears in the search toolbar allows you to navigate to the next search result.</td>
+<td>SearchToolbar</td>
 </tr>
 <tr>
 <td>MoreOption</td>
 <td>The button that appears in the search toolbar allows you to search with case sensitivity.</td>
+<td>SearchToolbar</td>
 </tr>
 </table>
 
