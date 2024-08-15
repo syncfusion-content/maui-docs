@@ -7,11 +7,11 @@ control: SfTimePicker
 documentation: ug
 ---  
 
-# Time Restriction in .NET MAUI Time Picker (SfTimePicker)
+# Time restriction in .NET MAUI Time Picker (SfTimePicker)
 
 ## Minimum Time
 
-The Time picker provides an option to restrict the selection of Time items by using the [MinimumTime]() property in [SfTimePicker](), and you cannot select the times beyond the minimum time range. The MinimumTime value has to be lesser than the MaximumTime value.When you set minimum time as timespan only hour and minute gets considered.
+The time picker provides an option to restrict the selection of time items by using the [MinimumTime]() property in [SfTimePicker](), and you cannot select the times beyond the minimum time range. The `MinimumTime` value has to be lesser than the `MaximumTime` value.When you set minimum time as timespan only hour and minute gets considered.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="2" %}
@@ -23,18 +23,18 @@ The Time picker provides an option to restrict the selection of Time items by us
 {% endhighlight %}
 {% highlight c# tabtitle="C#" hl_lines="2" %}
 
-SfTiePicker picker = new SfTimePicker();
+SfTimePicker picker = new SfTimePicker();
 picker.MinimumTime = new TimeSpan(7, 40, 0);
 this.Content = picker;
 
 {% endhighlight %}  
 {% endtabs %}
 
-![Minimum time in .NET MAUI Time picker.](images/time-restriction/maui-timepicker-timerestriction-minimumtime.png)
+![Minimum time in .NET MAUI Time picker.]()
 
 ## Maximum Time
 
-The Timer picker provides an option to restrict the selection of time items by using the [MaximumTime]() property in [SfTimePicker](), and you cannot select the times beyond the maximum time range.The MaximumTime value has to be higher than the MinimumTime value.When you set maximum time as timespan only hour and minute gets considered.
+The time picker provides an option to restrict the selection of time items by using the [MaximumTime]() property in [SfTimePicker](), and you cannot select the times beyond the maximum time range.The `MaximumTime` value has to be higher than the `MinimumTime` value.When you set maximum time as timespan only hour and minute gets considered.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="2" %}
@@ -53,4 +53,4 @@ this.Content = picker;
 {% endhighlight %}  
 {% endtabs %}
 
-![Maximum time in .NET MAUI Time picker.](images/time-restriction/maui-timepicker-timerestriction-maximumtime.png)
+![Maximum time in .NET MAUI Time picker.]()
