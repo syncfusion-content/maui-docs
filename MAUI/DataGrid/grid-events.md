@@ -47,9 +47,9 @@ The [CellTappedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Data
                        ItemsSource="{Binding OrderInfoCollection}" />
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
-Command TapCommand = new Command(ListenTap);
+Command TapCommand = new Command(ListenTapCommand);
 
-private static void ListenTap(object obj)
+private static void ListenTapCommand(object obj)
 {
     var args = obj as DataGridCellTappedEventArgs;
     if (args != null)
@@ -92,9 +92,9 @@ The [CellDoubleTappedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Mau
                        ItemsSource="{Binding OrderInfoCollection}" />
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
-Command DoubleTapCommand = new Command(ListenTap);
+Command DoubleTapCommand = new Command(ListenDoubleTapCommand);
 
-private static void ListenTap(object obj)
+private static void ListenDoubleTapCommand(object obj)
 {
     var args = obj as DataGridCellDoubleTappedEventArgs;
     if (args != null)
@@ -137,9 +137,9 @@ The [CellLongPressCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.D
                        ItemsSource="{Binding OrderInfoCollection}" />
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
-Command LongPressCommand = new Command(ListenTap);
+Command LongPressCommand = new Command(ListenLongPressCommand);
 
-private static void ListenTap(object obj)
+private static void ListenLongPressCommand(object obj)
 {
     var args = obj as DataGridCellLongPressEventArgs;
     if (args != null)
@@ -185,9 +185,9 @@ The [CellRightTappedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui
                        ItemsSource="{Binding OrderInfoCollection}" />
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
-Command RightTapCommand = new Command(ListenTap);
+Command RightTapCommand = new Command(ListenRightTapCommand);
 
-private static void ListenTap(object obj)
+private static void ListenRightTapCommand(object obj)
 {
     var args = obj as DataGridCellRightTappedEventArgs;
     if (args != null)
@@ -238,9 +238,9 @@ The [CellEnteredCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Dat
                        ItemsSource="{Binding OrderInfoCollection}" />
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
-Command EnteredCommand = new Command(ListenTap);
+Command EnteredCommand = new Command(ListenEnteredCommand);
 
-private static void ListenTap(object obj)
+private static void ListenEnteredCommand(object obj)
 {
     var args = obj as DataGridCellEnteredEventArgs;
     if (args != null)
@@ -284,9 +284,9 @@ The [CellHoveredCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Dat
                        ItemsSource="{Binding OrderInfoCollection}" />
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
-Command HoveredCommand = new Command(ListenTap);
+Command HoveredCommand = new Command(ListenHoveredCommand);
 
-private static void ListenTap(object obj)
+private static void ListenHoveredCommand(object obj)
 {
     var args = obj as DataGridCellHoveredEventArgs;
     if (args != null)
@@ -329,9 +329,9 @@ The [CellExitedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Data
                        ItemsSource="{Binding OrderInfoCollection}" />
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
-Command ExitedCommand = new Command(ListenTap);
+Command ExitedCommand = new Command(ListenExitedCommand);
 
-private static void ListenTap(object obj)
+private static void ListenExitedCommand(object obj)
 {
     var args = obj as DataGridCellExitedEventArgs;
     if (args != null)
