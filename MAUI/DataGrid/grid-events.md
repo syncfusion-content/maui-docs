@@ -128,12 +128,12 @@ private void dataGrid_CellLongPress(object sender, DataGridCellLongPressEventArg
 {% endhighlight %}
 {% endtabs %}
 
-### CellLongPressedCommand
-The [CellLongPressedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CellLongPressCommand) will be invoked while long-pressing a cell in the SfDataGrid. The instance of `DataGridCellLongPressEventArgs` will be passed as the default value of the command's parameter. It can be customized by setting the [CellLongPressedCommandParameter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CellLongPressCommandParameter) property.
+### CellLongPressCommand
+The [CellLongPressCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CellLongPressCommand) will be invoked while long-pressing a cell in the SfDataGrid. The instance of `DataGridCellLongPressEventArgs` will be passed as the default value of the command's parameter. It can be customized by setting the [CellLongPressCommandParameter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CellLongPressCommandParameter) property.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
-<syncfusion:SfDataGrid CellLongPressedCommand="{Binding LongPressCommand}"
+<syncfusion:SfDataGrid CellLongPressCommand="{Binding LongPressCommand}"
                        ItemsSource="{Binding OrderInfoCollection}" />
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
@@ -141,7 +141,7 @@ Command LongPressCommand = new Command(ListenTap);
 
 private static void ListenTap(object obj)
 {
-    var args = obj as DataGridCellLongPressedEventArgs;
+    var args = obj as DataGridCellLongPressEventArgs;
     if (args != null)
     {
         var rowIndex = args.RowColumnIndex.RowIndex;
