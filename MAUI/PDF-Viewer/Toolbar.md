@@ -14,7 +14,7 @@ The [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.
 
 ## Toolbars structure 
 
-The [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) features a built-in toolbar that utilizes multiple or multilevel toolbars. This design ensures that the user interface remains clean and accessible. We have incorporated approximately 40 toolbars to ensure comprehensive functionality across various platforms. These toolbars are strategically organized based on the available screen space, adapting to different screen sizes on both mobile and desktop platforms. This approach ensures that tools are easily accessible, preventing the interface from becoming cluttered.
+The [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) features a built-in toolbar that utilizes multiple or multilevel toolbars. This design ensures that the user interface remains clean and accessible. We have incorporated multiple toolbars, such as top, bottom, and sub-toolbars for editing and choosing types, to ensure comprehensive functionality across various platforms. These toolbars are strategically organized based on the available screen space, adapting to different screen sizes on both mobile and desktop platforms. This approach ensures that tools are easily accessible, preventing the interface from becoming cluttered.
 
 ### Need for using multiple toolbars
 
@@ -915,13 +915,13 @@ To remove an item from all toolbars, iterate through the toolbar collection and 
 // Iterate through the toolbar collection of the PDF Viewer
 for (int i = 0; i < pdfViewer?.Toolbars.Count; i++)
 {
-// Get the toolbar item with the name "Sticky note" from the current toolbar
-var item = pdfViewer.Toolbars[i]?.Items?.GetByName("Sticky note");
-if (item != null)
-{
-// Remove the "Sticky note" item
-pdfViewer.Toolbars[i].Items.Remove(item); 
-}
+	// Get the toolbar item with the name "Sticky note" from the current toolbar
+	var item = pdfViewer.Toolbars[i]?.Items?.GetByName("Sticky note");
+	if (item != null)
+	{
+	// Remove the "Sticky note" item
+	pdfViewer.Toolbars[i].Items.Remove(item); 
+	}
 }
 {% endhighlight %}
 {% endtabs %}
@@ -934,7 +934,7 @@ If you need to hide specific items in the [SfPdfViewer](https://help.syncfusion.
 
 ##### Hide Item by Index
 
-To hide a toolbar item by its index, you can directly access the item in the toolbar's Items collection using the index and then set its IsVisible property to false. Here’s how you can do it:
+To hide a toolbar item by its index, you can directly access the item in the toolbar's Items collection using the index and then set its [IsVisible](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.ToolbarItem.html#Syncfusion_Maui_PdfViewer_ToolbarItem_IsVisible) property to false. Here’s how you can do it:
 
 {% tabs %}
 {% highlight C# %}
@@ -953,7 +953,7 @@ if (toolbar != null && indexToHide >= 0 && indexToHide < toolbar.Items.Count)
 
 ##### Hide item by name
 
-By using the [GetByName](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.ToolbarItemCollection.html#Syncfusion_Maui_PdfViewer_ToolbarItemCollection_GetByName_System_String) method with its specified toolbar names, you can access the items of those toolbars. After accessing the item, you can modify its visibility by setting the `IsVisible` property. Here, we retrieve the toolbar "PrimaryToolbar" and "Search" item using the GetByName method and hide the "Search" item by setting its visibility to false.
+By using the [GetByName](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.ToolbarItemCollection.html#Syncfusion_Maui_PdfViewer_ToolbarItemCollection_GetByName_System_String) method with its specified toolbar names, you can access the items of those toolbars. After accessing the item, you can modify its visibility by setting the [IsVisible]https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.ToolbarItem.html#Syncfusion_Maui_PdfViewer_ToolbarItem_IsVisible property. Here, we retrieve the toolbar "PrimaryToolbar" and "Search" item using the GetByName method and hide the "Search" item by setting its visibility to false.
 
 {% tabs %}
 {% highlight C# %}
@@ -969,7 +969,7 @@ item.IsVisible = false; // Hide the search item
 
 #### Hide item in all toolbars
 
-In [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html),each toolbar operates independently. Hiding an item in one toolbar does not affect others. For example, changing the visibility of the signature icon in the "AnnotationsToolbar" does not impact other toolbars.
+In [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html), each toolbar operates independently. Hiding an item in one toolbar does not affect others. For example, changing the visibility of the signature icon in the "AnnotationsToolbar" does not impact other toolbars.You can identify an item present in multiple toolbars by referring to the availability toolbar column in the toolbar item availability topic under the table of [Mobile toolbar item names](https://help.syncfusion.com/maui/pdf-viewer/toolbar#mobile-toolbar-item-names) and [Desktop toolbar item names](https://help.syncfusion.com/maui/pdf-viewer/toolbar#desktop-toolbar-item-names).
 
 To hide an icon from all toolbars, iterate through the toolbar collection and adjust the visibility of the item in each toolbar. Here’s how to hide the "Signature" icon from all toolbars:
 
