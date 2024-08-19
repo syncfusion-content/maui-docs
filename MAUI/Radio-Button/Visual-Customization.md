@@ -180,3 +180,86 @@ The [`ControlSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.
 
 {% endhighlight %}
 {% endtabs %}
+## EnabledAnimation
+
+The `EnabledAnimation` property is used to enable or disable the animation for the [`RadioButton`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioButton.html) control. 
+
+{% tabs %}
+{% highlight xaml %}
+
+ <StackLayout>
+     <syncfusion:SfRadioButton Text="RadioButton EnabledAnimation True" EnabledAnimation="True"/>
+     <syncfusion:SfRadioButton Text="RadioButton EnabledAnimation False" EnabledAnimation="False"/>
+ </StackLayout>
+
+{% endhighlight %}
+{% highlight c# %}
+
+	StackLayout stackLayout = new StackLayout();
+	SfRadioButton radioButtonEnabled = new SfRadioButton
+	{
+		Text = "RadioButton EnabledAnimation True",
+		EnabledAnimation = true
+	};
+
+	SfRadioButton radioButtonDisabled = new SfRadioButton
+	{
+		Text = "RadioButton EnabledAnimation False",
+		EnabledAnimation = false
+	};
+
+	stackLayout.Children.Add(radioButtonEnabled);
+	stackLayout.Children.Add(radioButtonDisabled);
+
+	this.Content = stackLayout;
+
+{% endhighlight %}
+{% endtabs %}
+
+![.NET MAUI Radio Button EnabledAnimation](Images/VisualCustomization/enabledanimation.png)
+
+## SelectedValue
+The [RadioGroup](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioGroup.html) class defines a `SelectedValue` property, of type `object`, This property represents the Value of the checked [RadioButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioButton.html) within a group defined.
+
+When the [IsChecked](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioButton.html#Syncfusion_Maui_Buttons_SfRadioButton_IsChecked) property changes, whether through user interaction the `SelectedValue` property is also updated. 
+
+{% tabs %}
+{% highlight xaml %}
+
+	<syncfusion:SfRadioGroup SelectedValue="debitCard">
+		<syncfusion:SfRadioButton Text="Net banking" Value="netBanking"/>
+		<syncfusion:SfRadioButton Text="Debit card" Value="debitCard"/>
+		<syncfusion:SfRadioButton Text="Credit card" Value="creditCard"/>
+	</syncfusion:SfRadioGroup>
+
+{% endhighlight %}
+{% highlight c# %}
+
+	SfRadioGroup radioGroup = new SfRadioGroup
+	{
+		SelectedValue = "debitCard"
+	};
+	SfRadioButton netBankingRadioButton = new SfRadioButton
+	{
+		Text = "Net banking",
+		Value = "netBanking"
+	};
+	SfRadioButton debitCardRadioButton = new SfRadioButton
+	{
+		Text = "Debit card",
+		Value = "debitCard"
+	};
+	SfRadioButton creditCardRadioButton = new SfRadioButton
+	{
+		Text = "Credit card",
+		Value = "creditCard"
+	};
+	radioGroup.Children.Add(netBankingRadioButton);
+	radioGroup.Children.Add(debitCardRadioButton);
+	radioGroup.Children.Add(creditCardRadioButton);
+	Content = radioGroup;
+
+{% endhighlight %}
+{% endtabs %}
+
+![.NET MAUI Radio Button SelectedValue](Images/VisualCustomization/selectedvalue.png)

@@ -263,3 +263,40 @@ The [`ControlSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.
 
 {% endhighlight %}
 {% endtabs %}
+## EnabledAnimation
+
+The `EnabledAnimation` property is used to enable or disable the animation for the [`CheckBox`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html) control. 
+
+{% tabs %}
+{% highlight xaml %}
+
+ <StackLayout>
+     <syncfusion:SfCheckBox Text="CheckBox EnabledAnimation True" EnabledAnimation="True"/>
+     <syncfusion:SfCheckBox Text="CheckBox DisabledAnimation False" EnabledAnimation="False"/>
+ </StackLayout>
+
+{% endhighlight %}
+{% highlight c# %}
+
+    StackLayout stackLayout = new StackLayout();
+    SfCheckBox checkBoxEnabled = new SfCheckBox
+    {
+        Text = "CheckBox EnabledAnimation True",
+        EnabledAnimation = true
+    };
+
+    SfCheckBox checkBoxDisabled = new SfCheckBox
+    {
+        Text = "CheckBox DisabledAnimation False",
+        EnabledAnimation = false
+    };
+
+    stackLayout.Children.Add(checkBoxEnabled);
+    stackLayout.Children.Add(checkBoxDisabled);
+
+    this.Content = stackLayout;
+
+{% endhighlight %}
+{% endtabs %}
+
+![.NET MAUI CheckBox EnabledAnimation](Images/Visual-Customization/enabledAnimation.png)

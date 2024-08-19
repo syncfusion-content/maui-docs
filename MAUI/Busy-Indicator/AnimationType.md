@@ -161,3 +161,34 @@ SfBusyIndicator busyIndicator = new SfBusyIndicator()
 The following gif image illustrates the result of the above code.
 
 ![Double Circle](Images/AnimationType/DoubleCircle.png)
+
+### Global
+
+The Globe animation is an one of the built-in animations in [SfBusyIndicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html?tabs=tabid-1). Refer to the following code example. Here, we’ll set the animation type as `Global`
+
+{% tabs %}
+
+{% highlight xaml %}
+
+    <core:SfBusyIndicator x:Name="busyIndicator"
+                          IsRunning="True"
+                          AnimationType="Global"/>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+    SfBusyIndicator busyIndicator = new SfBusyIndicator()
+    {
+        IsRunning = true,
+        AnimationType = AnimationType.Global
+    };
+    this.Content = busyIndicator;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+The following gif image illustrates the result of the above code.
+
+![Global](Images/AnimationType/Global.png)
