@@ -82,6 +82,56 @@ this.Content = chart;
 
 {% endtabs %}
 
+## Customizing labels
+
+The appearance of the legend label can be customized using the [`LabelStyle`]() property. 
+
+* [`TextColor`]() – used to change the color of the label.
+* [`FontFamily`]() - used to change the font family for the legend label. 
+* [`FontAttributes`]() - used to change the font style for the legend label. 
+* [`FontSize`]() - used to change the font size for the legend label.
+* [`Margin`]() - used to change the margin size of labels.
+
+{% tabs %} 
+
+{% highlight xaml %}
+
+<chart:SfPyramidChart ItemsSource="{Binding Data}" 
+                      XBindingPath="Name"
+                      YBindingPath="Height">
+    <chart:SfPyramidChart .Legend>
+        <chart:ChartLegend>
+            <chart:ChartLegend.LabelStyle>
+                <chart:ChartLegendLabelStyle TextColor="Blue" Margin="5" FontSize="18" FontAttributes="Bold" FontFamily="Pacifico-Regular"/>
+            </chart:ChartLegend.LabelStyle>
+        </chart:ChartLegend>
+    </chart:SfPyramidChart .Legend>
+</chart:SfPyramidChart >
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+SfPyramidChart chart = new SfPyramidChart()
+{
+    XBindingPath = "Name",
+    YBindingPath = "Height",
+    ItemsSource = new ViewModel().Data,
+};
+
+chart.Legend = new ChartLegend();
+chart.Legend.LabelStyle.TextColor = Color.Blue;
+chart.Legend.LabelStyle.FontSize = 18;
+chart.Legend.LabelStyle.FontAttributes = FontAttributes.Bold;
+chart.Legend.LabelStyle.Margin = 5;
+chart.Legend.LabelStyle.FontFamily = "Pacifico-Regular";
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Legend labels customization support in Maui Chart](Legend-images/legend_label_style.png)
+
 ## Legend icon
 To specify the legend icon based on associate series type using the [LegendIcon](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPyramidChart.html#Syncfusion_Maui_Charts_SfPyramidChart_LegendIcon) and change its type using [ChartLegendIconType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLegendIconType.html) enum values. The default value of the LegendIcon property is `Circle`.
 
@@ -290,6 +340,23 @@ this.Content = chart;
 {% endtabs %}
 
 ![Legend layout for pyramid chart](Legend-images/pyramid_chart.png)
+
+## Event 
+
+**LegendItemCreated**
+
+The [`LegendItemCreated`]() event is triggered when the chart legend item is created. This argument contains the following information.
+
+* [`LegendItem`]() – Used to customize the label and appearance of individual legend item. 
+* [`TextColor`]() – used to change the color of the label.
+* [`FontFamily`]() - used to change the font family for the legend label. 
+* [`FontAttributes`]() - used to change the font style for the legend label. 
+* [`FontSize`]() - used to change the font size for the legend label.
+* [`Margin`]() - used to change the margin size of labels.
+* [`IconBrush`]() - used to change the color of the legend icon.
+* [`IconType`]() - used to change the icon type for the legend icon.
+* [`IconHeight`]() - used to change the icon height of the legend icon.
+* [`IconWidth`]() - used to change the icon width of the legend icon.
 
 ## Limitations
 * Do not add items explicitly.

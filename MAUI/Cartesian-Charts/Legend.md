@@ -109,7 +109,6 @@ this.Content=chart;
 The [`Label`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.CartesianSeries.html#Syncfusion_Maui_Charts_CartesianSeries_Label) property of [`CartesianSeries`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.CartesianSeries.html) is used to define the label for the corresponding series legend item. The appearance of the label can be customized using the [`LabelStyle`]() property. 
 
 * [`TextColor`]() – used to change the color of the label.
-* [`Font`]() – used to change the text size, font family, and font weight. (This is deprecated API. Use FontSize, FontFamily, and FontAttributes properties instead of this.)
 * [`FontFamily`]() - used to change the font family for the legend label. 
 * [`FontAttributes`]() - used to change the font style for the legend label. 
 * [`FontSize`]() - used to change the font size for the legend label.
@@ -365,6 +364,23 @@ this.Content = chart;
 {% endtabs %}
 
 ![Legend layout for cartesian chart](Legend-images/cartesian_chart.png)
+
+## Event 
+
+**LegendItemCreated**
+
+The [`LegendItemCreated`]() event is triggered when the chart legend item is created. This argument contains the following information.
+
+* [`LegendItem`]() – Used to customize the label and appearance of individual legend item. 
+* [`TextColor`]() – used to change the color of the label.
+* [`FontFamily`]() - used to change the font family for the legend label. 
+* [`FontAttributes`]() - used to change the font style for the legend label. 
+* [`FontSize`]() - used to change the font size for the legend label.
+* [`Margin`]() - used to change the margin size of labels.
+* [`IconBrush`]() - used to change the color of the legend icon.
+* [`IconType`]() - used to change the icon type for the legend icon.
+* [`IconHeight`]() - used to change the icon height of the legend icon.
+* [`IconWidth`]() - used to change the icon width of the legend icon.
 
 ## Limitations
 * Do not add items explicitly.
