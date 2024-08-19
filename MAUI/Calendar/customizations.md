@@ -83,7 +83,7 @@ You can customize the calendar month view cell by using the `MonthView` property
 {% endhighlight %}
 {% endtabs %}
 
-![Month view Customization in .NET MAUI Calendar.](images/customization/maui-month-view-customization.png)
+![Month view customization in .NET MAUI Calendar.](images/customization/net-maui-month-view-customization.png)
 
 *    **Special day predicate** - The special day predicate decides whether the month cell date is a special date or not in the calendar. You can add a special date to the `Calendar` using the [SpecialDayPredicate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_SpecialDayPredicate) property, and you can also customize the special day text style and background of the `Calendar` using the [SpecialDatesTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_SpecialDatesTextStyle) and [SpecialDatesBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_SpecialDatesBackground) properties of [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html). You can customize the special day with icons such as dots, hearts, diamonds, stars, and bells in the `MonthView` and also customize the icon color. If you do not wish to add any icon details, you can set them to be transparent.
 
@@ -154,7 +154,7 @@ this.Calendar.MonthView.SpecialDayPredicate = (date) =>
 {% endhighlight %}
 {% endtabs %}
 
-![Special day icon in .NET MAUI Calendar.](images/customization/maui-special_day_predicate.png)
+![Special day icon in .NET MAUI Calendar.](images/customization/net-maui-special_day_predicate.png)
 
 >**NOTE**
 * The Background color and text style will be applied based on the following order: selectableDayPredicate dates, special dates, disable dates, today date, weekend dates, trailingLeading dates, and normal dates.
@@ -210,7 +210,7 @@ You can customize the calendar `year`, `decade`, and `century` views by using th
 {% endhighlight %}
 {% endtabs %}
 
-![Decade view Customization in .NET MAUI Calendar.](images/customization/maui-decade-view-customization.png)
+![Decade view customization in .NET MAUI Calendar.](images/customization/net-maui-decade-view-customization.png)
 
 >**NOTE**
 * The Background color and text style will be applied based on the following order: selectableDayPredicate dates, disable dates, today date and leading Dates.
@@ -239,7 +239,7 @@ this.Calendar.YearView = new CalendarYearView()
 {% endhighlight %}
 {% endtabs %}
 
-![Year view month format in .NET MAUI Calendar.](images/customization/maui-year-view-month-format.png)
+![Year view month format in .NET MAUI Calendar.](images/customization/net-maui-year-view-month-format.png)
 
 ## Selection cell customization
 
@@ -285,7 +285,7 @@ You can customize the selection cell background and text style in Month, Year, D
 {% endhighlight %}
 {% endtabs %}
 
-![Month view Range Selection in .NET MAUI Calendar.](images/customization/maui-month-view-range-selection.png)
+![Month view range selection in .NET MAUI Calendar.](images/customization/net-maui-month-view-range-selection.png)
 
 ## Month cell appearance using DataTemplate
 
@@ -394,7 +394,7 @@ internal class DateToStrokeConverter : IValueConverter
 {% endhighlight %}
 {% endtabs %}
 
-![Month view data template in .NET MAUI Calendar.](images/customization/maui-monthview-cell-template.png)
+![Month view data template in .NET MAUI Calendar.](images/customization/net-maui-monthview-cell-template.png)
 
 ## Month cell appearance using DataTemplateSelector
 
@@ -465,7 +465,7 @@ this.Calendar.View = CalendarView.Month;
 {% endhighlight %}
 {% endtabs %}
 
-![Month view template selector in .NET MAUI Calendar.](images/customization/maui-monthview-cell-template-selector.png)
+![Month view template selector in .NET MAUI Calendar.](images/customization/net-maui-monthview-cell-template-selector.png)
 
 ## Year cell appearance using DataTemplate
 
@@ -572,7 +572,7 @@ internal class DateToStrokeConverter : IValueConverter
 {% endhighlight %}
 {% endtabs %}
 
-![Decade view cell template in .NET MAUI Calendar.](images/customization/maui-decade-view-cell-template.png)
+![Decade view cell template in .NET MAUI Calendar.](images/customization/net-maui-decade-view-cell-template.png)
 
 ## Year cell appearance using DataTemplateSelector
 
@@ -643,4 +643,4 @@ this.Calendar.View = CalendarView.Decade;
 {% endhighlight %}
 {% endtabs %}
 
-![Decade view template selector in .NET MAUI Calendar.](images/customization/maui-decade-view-cell-template-selector.png)
+![Decade view template selector in .NET MAUI Calendar.](images/customization/net-maui-decade-view-cell-template-selector.png)
