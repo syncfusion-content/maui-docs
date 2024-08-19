@@ -104,6 +104,48 @@ this.Content=chart;
 
 {% endtabs %}
 
+## Customizing labels
+
+The [`Label`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.CartesianSeries.html#Syncfusion_Maui_Charts_CartesianSeries_Label) property of [`CartesianSeries`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.CartesianSeries.html) is used to define the label for the corresponding series legend item. The appearance of the label can be customized using the [`LabelStyle`]() property. 
+
+* [`TextColor`]() – used to change the color of the label.
+* [`Font`]() – used to change the text size, font family, and font weight. (This is deprecated API. Use FontSize, FontFamily, and FontAttributes properties instead of this.)
+* [`FontFamily`]() - used to change the font family for the legend label. 
+* [`FontAttributes`]() - used to change the font style for the legend label. 
+* [`FontSize`]() - used to change the font size for the legend label.
+* [`Margin`]() - used to change the margin size of labels.
+
+{% tabs %} 
+
+{% highlight xaml %}
+
+<chart:SfCartesianChart>
+    <chart:SfCartesianChart.Legend>
+        <chart:ChartLegend>
+            <chart:ChartLegend.LabelStyle>
+                <chart:ChartLegendLabelStyle TextColor="Blue" Margin="5" FontSize="18" FontAttributes="Bold" FontFamily="Pacifico-Regular"/>
+            </chart:ChartLegend.LabelStyle>
+        </chart:ChartLegend>
+    </chart:SfCartesianChart.Legend>
+</chart:SfCartesianChart>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+chart.Legend = new ChartLegend();
+chart.Legend.LabelStyle.TextColor = Color.Blue;
+chart.Legend.LabelStyle.FontSize = 18;
+chart.Legend.LabelStyle.FontAttributes = FontAttributes.Bold;
+chart.Legend.LabelStyle.Margin = 5;
+chart.Legend.LabelStyle.FontFamily = "Pacifico-Regular";
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Legend labels customization support in Maui Chart](Legend-images/legend_label_style.png)
+
 ## Legend icon
 To specify the legend icon based on the associated series type, use the [LegendIcon](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_LegendIcon) property and change its type using the [ChartLegendIconType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLegendIconType.html) enum values. The default value of the LegendIcon property is `Circle`.
 
