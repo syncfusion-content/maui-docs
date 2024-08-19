@@ -37,7 +37,7 @@ Our 30-day trial can be downloaded in two ways.
 
    ![Trial and downloads of Syncfusion Essential Studio](images/trial-download.png)
 
-6. Click the More Download Options (element 2 in the above screenshot) button to get the Essential Studio .NET MAUI Offline trial installer which is available in PKG format.
+6. Click the More Download Options (element 2 in the above screenshot) button to get the Essential Studio .NET MAUI Offline trial installer which is available in DMG format.
 
    ![License and downloads of Syncfusion Essential Studio](images/Mac_Download.png)
    
@@ -67,7 +67,7 @@ You should initiate an evaluation if you have already obtained our components th
 2. You can view all the licenses (both active and expired) associated with your account.
 3. You can download .NET MAUI Mac licensed installer by going to More Downloads Options (element 3 in the screenshot below).
 4. Unlock key is not required to install the Syncfusion .NET MAUI Mac trial installer.
-5. For Mac OS, PKG formats is available for download.
+5. For Mac OS, DMG formats is available for download.
 
    ![License and downloads of Syncfusion Essential Studio](images/Mac_Download.png)
 	

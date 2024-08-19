@@ -5,6 +5,7 @@ description: Learn here all about introduction of Annotations in .NET MAUI PDF V
 platform: MAUI
 control: SfPdfViewer
 documentation: ug
+keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .net maui open pdf, maui pdf viewer, maui pdf view
 ---
 
 # Annotations in .NET MAUI PDF Viewer (SfPdfViewer)
@@ -13,7 +14,7 @@ The [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.
 
 ## Supported Annotation Types
 
-The `SfPdfViewer` supports the following annotation types.
+The [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) supports the following annotation types.
 
 1. Arrow
 2. Circle

@@ -5,11 +5,12 @@ description: Learn all about column drag and drop support in Syncfusion MAUI Dat
 platform: MAUI
 control: SfDataGrid
 documentation: ug
+keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .net maui datagrid, .net maui grid, .net grid maui, .net maui column drag and drop, maui column drag and drop
 ---
 
 # Column Drag and Drop in MAUI DataGrid (SfDataGrid)
 
-The SfDataGrid allows you to drag and drop a column header by setting the `SfDataGrid.AllowDraggingColumn` property to `true.` A drag view is displayed while dragging a column header. You can handle drag and drop operations based on your requirements by using the `SfDataGrid.QueryColumnDragging` event.
+The SfDataGrid allows you to drag and drop a column header by setting the [SfDataGrid.AllowDraggingColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AllowDraggingColumn) property to `true.` A drag view is displayed while dragging a column header. You can handle drag and drop operations based on your requirements by using the [SfDataGrid.QueryColumnDragging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_QueryColumnDragging) event.
 
 {% tabs %}
 {% highlight xaml %}
@@ -29,13 +30,13 @@ The SfDataGrid allows you to drag and drop a column header by setting the `SfDat
 
 The `QueryColumnDragging` event is fired continuously while dragging and dropping a column. By handling this event, you can cancel the dragging of a particular column header.
 
-The `QueryColumnDragging` event provides the following properties in the `DataGridQueryColumnDraggingEventArgs`:
+The `QueryColumnDragging` event provides the following properties in the [DataGridQueryColumnDraggingEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridQueryColumnDraggingEventArgs.html):
 
-- `From`: Returns the index of the currently dragging column.
-- `To`: Returns the index where you are trying to drop the column.
-- `DraggingAction`: Returns the column dragging details as a `DataGridDragAction`.
-- `DraggingPosition`: Returns the position of the drag view during column drag and drop operations.
-- `CanAutoScroll`: Returns whether auto-scrolling should happen when the column drag view reaches the left or right ends of the `SfDataGrid`.
+- [From](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridQueryColumnDraggingEventArgs.html#Syncfusion_Maui_DataGrid_DataGridQueryColumnDraggingEventArgs_From): Returns the index of the currently dragging column.
+- [To](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridQueryColumnDraggingEventArgs.html#Syncfusion_Maui_DataGrid_DataGridQueryColumnDraggingEventArgs_To): Returns the index where you are trying to drop the column.
+- [DraggingAction](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridQueryColumnDraggingEventArgs.html#Syncfusion_Maui_DataGrid_DataGridQueryColumnDraggingEventArgs_DraggingAction): Returns the column dragging details as a `DataGridDragAction`.
+- [DraggingPosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridQueryColumnDraggingEventArgs.html#Syncfusion_Maui_DataGrid_DataGridQueryColumnDraggingEventArgs_DraggingPosition): Returns the position of the drag view during column drag and drop operations.
+- [CanAutoScroll](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridQueryColumnDraggingEventArgs.html#Syncfusion_Maui_DataGrid_DataGridQueryColumnDraggingEventArgs_CanAutoScroll): Returns whether auto-scrolling should happen when the column drag view reaches the left or right ends of the `SfDataGrid`.
 - `Cancel`: Returns a boolean property to cancel the event.
 
 ## Cancel dragging of a particular column
@@ -165,7 +166,7 @@ private void SfDataGrid_QueryColumnDragging(object? sender, DataGridQueryColumnD
 
 ### Customize column drag and drop indicator color
 
-The SfDataGrid allows customizing the column drag and drop indicators using the `SfDataGrid.DefaultStyle.ColumnDraggingIndicatorLineColor` property.
+The SfDataGrid allows customizing the column drag and drop indicators using the [SfDataGrid.DefaultStyle.ColumnDraggingIndicatorLineColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_ColumnDraggingIndicatorLineColor) property.
 
 {% highlight xaml %}
     <syncfusion:SfDataGrid x:Name="dataGrid"
@@ -181,7 +182,7 @@ The SfDataGrid allows customizing the column drag and drop indicators using the 
 
 ### Customize drag view text and background color
 
-The SfDataGrid allows customizing the drag view text and background color using the `SfDataGrid.DefaultStyle.ColumnDragViewTextColor` and `SfDataGrid.DefaultStyle.ColumnDragViewBackgroundColor` properties, respectively.
+The SfDataGrid allows customizing the drag view text and background color using the [SfDataGrid.DefaultStyle.ColumnDragViewTextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_ColumnDragViewTextColor) and [SfDataGrid.DefaultStyle.ColumnDragViewBackgroundColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_ColumnDragViewBackgroundColor) properties, respectively.
 
 {% highlight xaml %}
     <syncfusion:SfDataGrid x:Name="dataGrid"

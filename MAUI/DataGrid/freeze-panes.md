@@ -5,6 +5,7 @@ description: Learn here all about how to freeze rows and columns in Syncfusion .
 platform: MAUI
 control: SfDataGrid
 documentation: UG
+keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .net maui datagrid, .net maui grid, .net grid maui, .net maui freeze panes, maui freeze panes
 ---
 
 # Freeze panes in MAUI DataGrid (SfDataGrid)

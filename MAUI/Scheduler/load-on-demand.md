@@ -7,9 +7,9 @@ control: SfScheduler
 documentation: ug
 ---
 
-# Load on demand in .NET MAUI Event Scheduler (SfScheduler).
+# Load on demand in .NET MAUI Event Scheduler (SfScheduler)
 
-The Scheduler provides the capability to display an interactive view when the view is changed, or swipe between the views, and also to load appointments on-demand with a loading indicator, thereby improving loading performance when there are appointments range for multiple years.
+The [.NET MAUI Scheduler](https://www.syncfusion.com/maui-controls/maui-scheduler) provides the capability to display an interactive view when the view is changed, or swipe between the views, and also to load appointments on-demand with a loading indicator, thereby improving loading performance when there are appointments range for multiple years.
 
 ![load-appointment-on-demand-view-in-all-scheduler-views-in-maui-scheduler](images/load-on-demand/load-appointment-on-demand-view-in-all-scheduler-views-in-maui-scheduler.gif)
 

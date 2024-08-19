@@ -5,6 +5,7 @@ description: Learn all about Columns support in Syncfusion .NET MAUI DataGrid (S
 platform: MAUI
 control: SfDataGrid
 documentation: UG
+keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .net maui datagrid, .net maui grid, .net grid maui, .net maui column, maui column
 ---
 
 # Columns in MAUI DataGrid (SfDataGrid)
@@ -111,6 +112,7 @@ The [DataGridAutoGeneratingColumnEventArgs](https://help.syncfusion.com/cr/maui/
 
 * **Column**: This property returns the created column which can be customized.
 * **Cancel**: This property cancels the column creation.
+* **PropertyType**: This property specifies the type of the underlying model property for which the column is created.
 
 You can skip generating a column by handling the `SfDataGrid.AutoGeneratingColumn` event as follows,
 

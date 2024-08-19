@@ -193,10 +193,9 @@ The [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chart
     </chart:SfCartesianChart.TooltipBehavior>
 
     <chart:ColumnSeries ItemsSource="{Binding Data}" TooltipTemplate="{StaticResource tooltipTemplate1}"
-                            XBindingPath="Demand"
-                            YBindingPath="Year2010" 
-                            EnableTooltip="True"/>
-
+                        XBindingPath="Demand"
+                        YBindingPath="Year2010" 
+                        EnableTooltip="True"/>
 </chart:SfCartesianChart>
 
 {% endhighlight %}
@@ -235,15 +234,15 @@ The [Show](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartToolt
 
 {% highlight xaml %}
 
-    <chart:SfCartesianChart>
-        .....
-        <chart:SfCartesianChart.TooltipBehavior>
-            <chart:ChartTooltipBehavior x:Name="tooltip"></chart:ChartTooltipBehavior>
-        </chart:SfCartesianChart.TooltipBehavior>
-        .....
-    </chart:SfCartesianChart>
+<chart:SfCartesianChart>
+    .....
+    <chart:SfCartesianChart.TooltipBehavior>
+        <chart:ChartTooltipBehavior x:Name="tooltip"></chart:ChartTooltipBehavior>
+    </chart:SfCartesianChart.TooltipBehavior>
+    .....
+</chart:SfCartesianChart>
 
-    <Button Text="Show tooltip" Clicked="Button_Clicked"></Button>
+<Button Text="Show tooltip" Clicked="Button_Clicked"></Button>
 
 {% endhighlight %}
 
@@ -253,12 +252,12 @@ The [Show](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartToolt
 
 {% highlight c# %}
 
-        private void Button_Clicked(object sender, EventArgs e)
-        {
-            //pointX - determines the x position of the tooltip, pointY - determines the y position of the tooltip and the bool value determines whether the tooltip should be animated while displaying.
+private void Button_Clicked(object sender, EventArgs e)
+{
+    //pointX - determines the x position of the tooltip, pointY - determines the y position of the tooltip and the bool value determines whether the tooltip should be animated while displaying.
             
-            tooltip.Show(pointX, pointY, true);
-        }
+    tooltip.Show(pointX, pointY, true);
+}
    
 {% endhighlight %}
 
@@ -274,9 +273,9 @@ The [Hide](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartToolt
 
 {% highlight c# %}
 
-        //The argument determines whether the tooltip should be animated while hiding.
+//The argument determines whether the tooltip should be animated while hiding.
 
-        tooltip.Hide();
+tooltip.Hide();
 
 {% endhighlight %}
 

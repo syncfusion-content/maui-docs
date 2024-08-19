@@ -5,6 +5,7 @@ description: Learn here all about stroke thickness customization in Syncfusion .
 platform: maui
 control: SfTextInputLayout
 documentation: ug
+keywords: .net maui text input layout, syncfusion text input layout, text input layout maui.
 --- 
 # How to Customize the thickness of stroke?
 

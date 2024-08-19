@@ -48,8 +48,7 @@ To initialize the control, import the Chart namespace and Initialize [SfPolarCha
     . . .
     xmlns:chart="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms">
 
-        <chart:SfChart/>
-
+    <chart:SfChart/>
 </ContentPage>
 {% endhighlight %}
 
@@ -76,7 +75,7 @@ this.Content = chart;
     . . .    
     xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
    
-        <chart:SfPolarChart/>  
+    <chart:SfPolarChart/>  
 </ContentPage>
  
 {% endhighlight %}
@@ -273,9 +272,9 @@ The following code example explains how to migrate the series of Xamarin [SfChar
 {% highlight xaml %}
 
 <chart:SfChart>
-. . .
+    . . .
     <chart:PolarAreaSeries ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Tree">
-	</chart:PolarAreaSeries>
+    </chart:PolarAreaSeries>
 </chart:SfChart>
 
 {% endhighlight %} 
@@ -404,7 +403,7 @@ The following code example shows how to enable legend in chart.
 <chart:SfChart>
     <chart:SfChart.Legend>
         <chart:ChartLegend/>
-	</chart:SfChart.Legend>
+    </chart:SfChart.Legend>
 </chart:SfChart>
 
 {% endhighlight %} 
@@ -428,7 +427,7 @@ chart.Legend = new ChartLegend ();
 <chart:SfPolarChart>
     <chart:SfPolarChart.Legend>
         <chart:ChartLegend/>
-	</chart:SfPolarChart.Legend>
+    </chart:SfPolarChart.Legend>
 </chart:SfPolarChart>
 
 {% endhighlight %} 
@@ -465,8 +464,8 @@ To customize the data label appearance, create an instance of the [ChartDataMark
 	        <chart:ChartDataMarker ShowLabel="True">
 		        <chart:ChartDataMarker.LabelStyle>
 			        <chart:DataMarkerLabelStyle TextColor="Blue" BorderColor="Red" BorderThickness="2" 
-                                            BackgroundColor="Aqua" Angle="315" Margin="5" 
-                                            FontSize="18" FontAttributes="Italic"/>
+                                                            BackgroundColor="Aqua" Angle="315" Margin="5" 
+                                                            FontSize="18" FontAttributes="Italic"/>
 		        </chart:ChartDataMarker.LabelStyle>
 	        </chart:ChartDataMarker>
 	    </chart:PolarAreaSeries.DataMarker>
@@ -506,12 +505,12 @@ chart.Series.Add(series);
 <chart:SfPolarChart>
     . . .
     <chart:PolarAreaSeries ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Tree" 
-                    ShowDataLabels="True">
+                           ShowDataLabels="True">
         <chart:PolarAreaSeries.DataLabelSettings>
             <chart:PolarDataLabelSettings>
                 <chart:PolarDataLabelSettings.LabelStyle>
                     <chart:ChartDataLabelStyle TextColor="Blue" Stroke="Red" StrokeWidth="2" Background="Aqua" 
-                            Angle="315" Margin="5" FontSize="18" FontAttributes="Italic"/>
+                                               Angle="315" Margin="5" FontSize="18" FontAttributes="Italic"/>
                 </chart:PolarDataLabelSettings.LabelStyle>
             </chart:PolarDataLabelSettings>
         </chart:PolarAreaSeries.DataLabelSettings>  
@@ -555,14 +554,14 @@ To customize the tooltip appearance, create an instance of the [ChartTooltipBeha
 {% highlight xaml %}
 
 <chart:SfChart>
-. . . 
+    . . . 
     <chart:SfChart.ChartBehaviors>
         <chart:ChartTooltipBehavior BackgroundColor="Blue" TextColor="White" Margin="5" 
-                            FontSize="15"/>
+                                    FontSize="15"/>
     </chart:SfChart.ChartBehaviors>
     
     <chart:PolarAreaSeries ItemsSource="{Binding Data}" XBindingPath="Demand" YBindingPath="Year2010"
-                            EnableTooltip="True"/>
+                           EnableTooltip="True"/>
 </chart:SfChart>
 
 {% endhighlight %} 
@@ -594,14 +593,14 @@ chart.ChartBehaviors.Add(tool);
 {% highlight xaml %}
 
 <chart:SfPolarChart>
-. . .
+    . . .
    <chart:SfPolarChart.TooltipBehavior>
         <chart:ChartTooltipBehavior Background="Blue" TextColor="White" Margin="5" 
-                    FontSize="15"/>
+                                    FontSize="15"/>
    </chart:SfPolarChart.TooltipBehavior>
 
    <chart:PolarAreaSeries ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Tree"
-                    EnableTooltip="True"/>
+                          EnableTooltip="True"/>
 </chart:SfPolarChart>
 
 {% endhighlight %} 

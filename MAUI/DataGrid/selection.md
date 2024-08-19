@@ -5,6 +5,7 @@ description: Learn here all about Selection support in Syncfusion .NET MAUI Data
 platform: MAUI
 control: SfDataGrid
 documentation: ug
+keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .net maui datagrid, .net maui grid, .net grid maui, .net maui selection, maui selection
 ---
 
 # Selection in .NET MAUI DataGrid (SfDataGrid)
@@ -560,7 +561,7 @@ By default, the keyboard navigation will be enabled when setting the selection a
 
 ## Customize selection behavior
 
-The default keyboard selection behaviors can be customized by setting the instance of the custom `DataGridRowSelectionController` to the `SfDataGrid.SelectionController` property.
+The default keyboard selection behaviors can be customized by setting the instance of the custom [DataGridRowSelectionController](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridRowSelectionController.html) to the [SfDataGrid.SelectionController](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_SelectionController) property.
 
 ### Change enter key behavior
 

@@ -69,6 +69,10 @@ To migrate easier from Xamarin SfTabView to .NET MAUI SfTabView, we kept most of
 <td>{{'[Title](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.TabView.SfTabItem.html#Syncfusion_XForms_TabView_SfTabItem_Title)' | markdownify }}</td>
 <td>{{'[Header](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabItem.html#Syncfusion_Maui_TabView_SfTabItem_Header)'| markdownify }}</td>
 <td>Gets or sets the text for the tab header.</td></tr>
+<tr>
+<td>{{'[HeaderContent](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.TabView.SfTabItem.html#Syncfusion_XForms_TabView_SfTabItem_HeaderContent)' | markdownify }}</td>
+<td>{{'[HeaderItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_HeaderItemTemplate)'| markdownify }}</td>
+<td>Gets or sets the template that is used to display the header.</td></tr>
 </table> 
 
 ## Enums
@@ -112,3 +116,5 @@ To migrate easier from Xamarin SfTabView to .NET MAUI SfTabView, we kept most of
   * Center button support.
   * Drop-down mode.
   * Visible header count.
+  * Enable-Swiping
+  * Display-Mode

@@ -5,6 +5,7 @@ description: Learn here all about States and Colors support in the Syncfusion .N
 platform: maui
 control: SfTextInputLayout
 documentation: ug
+keywords: .net maui text input layout, syncfusion text input layout, text input layout maui.
 ---
 
 # States and Colors in .NET MAUI Text Input Layout (SfTextInputLayout)

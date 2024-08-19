@@ -38,7 +38,7 @@ The following properties can be used to customize the appearance of the radial b
 <chart:SfCircularChart>
     <chart:RadialBarSeries ItemsSource="{Binding Data}" 
                            XBindingPath="Product" 
-                           YBindingPath="SalesRate" />
+                           YBindingPath="SalesRate"/>
 </chart:SfCircularChart>
 
 {% endhighlight %}
@@ -238,7 +238,7 @@ You can use the following properties to customize the appearance of the circular
                            YBindingPath="SalesRate" 
                            TrackFill="#FFF7ED" 
                            TrackStrokeWidth="1"
-                           TrackStroke="#FED7AA"  />
+                           TrackStroke="#FED7AA"/>
 </chart:SfCircularChart>
 
 {% endhighlight %}
@@ -282,8 +282,8 @@ The [CenterHoleSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.
                            CapStyle = "BothCurve">
         <chart:RadialBarSeries.CenterView>
             <StackLayout HeightRequest="{Binding CenterHoleSize}"
-                             WidthRequest="{Binding CenterHoleSize}">
-                <Image Source="person.png" />
+                         WidthRequest="{Binding CenterHoleSize}">
+                <Image Source="person.png"/>
             </StackLayout>
         </chart:RadialBarSeries.CenterView>
     </chart:RadialBarSeries>

@@ -5,6 +5,7 @@ description: Learn all about Migrating from Syncfusion Xamarin ComboBox to Syncf
 platform: maui
 control: SfComboBox
 documentation: ug
+keywords: .net maui combobox, .net maui sfcombobox, syncfusion combobox, combobox maui.
 ---  
 
 # Migrating from Xamarin SfComboBox to .NET MAUI SfComboBox 

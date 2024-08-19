@@ -14,16 +14,28 @@ The [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.
 
 ## Add free text annotations
 
-This section will go through how to add free text annotations to a PDF page interactively as well as programmatically.
+This section will go through how to add free text annotations to a PDF page using toolbar as well as programmatically.
 
-### Add free text annotation with UI interaction
+### Add the free text annotations using the toolbar  
+
+On the built-in toolbar, a free text annotation tool is available. Using that, you can add the free text annotation to the tapped position. Additionally, the toolbar shows the option to modify the properties of existing or new free text annotations.
+
+The following image represents how to add the free text annotations using the toolbar on the desktop.
+
+![Free text Built-in toolbar](Images/desktopfreetext.gif)
+
+The following image represents how to add the free text annotation using the toolbar on mobile.
+
+![Free text Built-in toolbar](Images/mobilefreetext.gif)
+ 
+### Add free text annotation without using the toolbar
 
 You can add free text annotation to a PDF document by tapping with touch (or mouse down) on a PDF page. The following steps explains how to add free text annotation in a PDF.
 
-1.	Set the `AnnotationMode` property of the SfPdfViewer to `FreeText`. It activates the free text annotation mode.
+1.	Set the [AnnotationMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.AnnotationMode.html) property of the SfPdfViewer to [FreeText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.AnnotationMode.html#Syncfusion_Maui_PdfViewer_AnnotationMode_FreeText). It activates the free text annotation mode.
 2.	Tap (or mouse down) on a PDF page, where you want to add the free text annotation. This will add a text box with a default style and allows you to write your text inline in the Desktop platforms. In mobile, a popup will be displayed to write and submit the text.
 3.	You can add multiple free text annotations in this mode in a similar manner.
-4.	Once you have done, set the `AnnotationMode` to [None](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.AnnotationMode.html#Syncfusion_Maui_PdfViewer_AnnotationMode_None). It will disable the annotation mode. 
+4.	Once you have done, set the [AnnotationMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.AnnotationMode.html) to [None](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.AnnotationMode.html#Syncfusion_Maui_PdfViewer_AnnotationMode_None). It will disable the annotation mode. 
 5.	You can later select and edit the annotations if required.
 
 The following code explains how to enable the free text annotation mode.
@@ -33,7 +45,7 @@ The following code explains how to enable the free text annotation mode.
 // Enable or activate the freetext mode.
 void EnableFreetextMode()
 {
-    // Set the annotation mode to FreeText using the `SfPdfViewer` instance.
+    // Set the annotation mode to FreeText using the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) instance.
     PdfViewer.AnnotationMode = AnnotationMode.FreeText;
 }
 {% endhighlight %}
@@ -46,7 +58,7 @@ Similarly, refer to the following code to disable the free text annotation mode.
 // Disable or deactivate the freetext mode.
 void DisableFreetextMode()
 {
-    // Set the annotation mode to none using the `SfPdfViewer` instance.
+    // Set the annotation mode to none using the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) instance.
     PdfViewer.AnnotationMode = AnnotationMode.None;
 }
 {% endhighlight %}
@@ -54,7 +66,7 @@ void DisableFreetextMode()
 
 ### Adding Annotations Programmatically
 
-You can create and add a free Text annotation to a PDF document programmatically using the [AddAnnotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AddAnnotation_Syncfusion_Maui_PdfViewer_Annotation_) method of the `SfPdfViewer`. The following example explains how to create a free text annotation and add it to the first page of a PDF document.
+You can create and add a free Text annotation to a PDF document programmatically using the [AddAnnotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AddAnnotation_Syncfusion_Maui_PdfViewer_Annotation_) method of the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html). The following example explains how to create a free text annotation and add it to the first page of a PDF document.
 
 {% tabs %}
 {% highlight C# %}
@@ -90,7 +102,7 @@ void AddFreeTextAnnotation()
 
 ## Free text annotation settings
 
-In the free text annotation mode, the annotation will be added with a default appearance. You can modify the annotation after it has been added to the pages. However, if you need to define the appearance before adding free text annotation on the document, you can change its default settings using the `AnnotationSettings` property of the `SfPdfViewer`. For that, you need to obtain the default free text annotation settings.
+In the free text annotation mode, the annotation will be added with a default appearance. You can modify the annotation after it has been added to the pages. However, if you need to define the appearance before adding free text annotation on the document, you can change its default settings using the [AnnotationSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.AnnotationSettings.html) property of the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html). For that, you need to obtain the default free text annotation settings.
 
 The following example explains how to obtain the default free text annotation settings and modify some of its properties. Similarly, you can modify all the other properties.
 
@@ -98,7 +110,7 @@ The following example explains how to obtain the default free text annotation se
 {% highlight C# %}
 void CustomizeDefaultFreeTextSettings() 
 { 
-   // Obtain the default free text annotation settings from the `SfPdfViewer` instance. 
+   // Obtain the default free text annotation settings from the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) instance. 
    FreeTextAnnotationSettings freeTextSettings = PdfViewer.AnnotationSettings.FreeText; 
  
    // Modify the default appearance properties. 
@@ -150,11 +162,11 @@ void EditSelectedFreeTextAnnotation(Annotation selectedAnnotation)
 
 ## Free text modal view
 
-The free text modal view appears when text needs to be input by the user for creating and editing free text annotations in Android and iOS platforms. The [Sfpdfviewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) notifies when the modal view is appearing and disappearing through events. The events help you in hiding and showing elements that are part of the app UI that are not necessary as long as the modal view is visible.
+The free text modal view appears when text needs to be input by the user for creating and editing free text annotations in Android and iOS platforms. The [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) notifies when the modal view is appearing and disappearing through events. The events help you in hiding and showing elements that are part of the app UI that are not necessary as long as the modal view is visible.
 
 ![Free text modal view](Images/Annotations/free-text-modal-view.png)
 
-The `Sfpdfviewer.FreeTextModalViewAppearing` event is triggered whenever the modal view opens for either creating or editing a free text annotation.
+The `SfPdfViewer.FreeTextModalViewAppearing` event is triggered whenever the modal view opens for either creating or editing a free text annotation.
 
 {% tabs %}
 {% highlight c# %}
@@ -169,7 +181,7 @@ private void PdfViewer_FreeTextModalViewAppearing(object? Sender, AnnotationModa
 {% endhighlight %}
 {% endtabs %}
 
-The `Sfpdfviewer.FreeTextModalViewDisappearing` event is triggered when the modal view is closing.
+The `SfPdfViewer.FreeTextModalViewDisappearing` event is triggered when the modal view is closing.
 
 {% tabs %}
 {% highlight c# %}
@@ -184,11 +196,11 @@ Private void PdfViewer_FreeTextModalViewDisappearing(object? Sender, EventArgs e
 {% endhighlight %} 
 {% endtabs %}
 
-### Supressing the free text modal view and implement your own UI
+### Suppressing the free text modal view and implement your own UI
 
-The [Sfpdfviewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) allows you to supress the free text modal view and use your own UI in its place. This can be achieved by setting the `AnnotationModalViewAppearingEventArgs.Cancel` property to `true` in the `FreeTextModalViewAppearing` event handler. 
+The [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) allows you to suppress the free text modal view and use your own UI in its place. This can be achieved by setting the [AnnotationModalViewAppearingEventArgs.Cancel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.ModalViewAppearingEventArgs.html#Syncfusion_Maui_PdfViewer_ModalViewAppearingEventArgs_Cancel) property to `true` in the [FreeTextModalViewAppearing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_FreeTextModalViewAppearing) event handler. 
 
-The below code snippet illustrates supressing the free text modal view and using a UI implemented in the app in its place. The free text annotation instance that is created or edited can be obtained from the event args. Once the user enters the text in the custom dialog and confirms, the text can be assigned to this free text annotation instance. 
+The below code snippet illustrates suppressing the free text modal view and using a UI implemented in the app in its place. The free text annotation instance that is created or edited can be obtained from the event args. Once the user enters the text in the custom dialog and confirms, the text can be assigned to this free text annotation instance. 
 
 {% tabs %}
 {% highlight c# %}
@@ -217,4 +229,4 @@ Private void customDialogOkButton_Clicked(object sender, EventArgs e)
 {% endhighlight %} 
 {% endtabs %}
 
-N> For WinUI and MacCatalyst platforms, there is no separate modal view to receive text input from the users. As a result, the `FreeTextModalViewAppearing` and `FreeTextModalViewDisappearing` events are not applicable for these platforms. 
+N> For WinUI and MacCatalyst platforms, there is no separate modal view to receive text input from the users. As a result, the [FreeTextModalViewAppearing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_FreeTextModalViewAppearing) and [FreeTextModalViewDisappearing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_FreeTextModalViewDisappearing) events are not applicable for these platforms. 

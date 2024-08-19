@@ -21,7 +21,7 @@ Holds the text of the tab item that is displayed in the tab bar.
 
 {% highlight xaml %}
     <tabView:SfTabView>
-        <tabView:SfTabItem Header="Item 1">
+        <tabView:SfTabItem Header="ITEM 1">
     </tabView:SfTabView>
 {% endhighlight %}
 
@@ -31,7 +31,7 @@ Holds the text of the tab item that is displayed in the tab bar.
     {
         new SfTabItem()
         {
-            Header = "Item 1",
+            Header = "ITEM 1",
         }
     }
 {% endhighlight %}
@@ -48,7 +48,7 @@ The image to be displayed in the tab bar representing the tab item.
 
 {% highlight xaml %}
     <tabView:SfTabView>
-        <tabView:SfTabItem Header="Item 1" ImageSource="alexandar">
+        <tabView:SfTabItem Header="ITEM 1" ImageSource="alexandar">
     </tabView:SfTabView>
 {% endhighlight %}
 
@@ -58,7 +58,7 @@ The image to be displayed in the tab bar representing the tab item.
     {
         new SfTabItem()
         {
-            Header = "Item 1",
+            Header = "ITEM 1",
             ImageSource = "alexandar",
         }
     }
@@ -77,7 +77,7 @@ The assigned view will get displayed in the main area of the tab view.
 
 {% highlight xaml %}
     <tabView:SfTabView>
-        <tabView:SfTabItem Header="Calls" ImageSource="alexandar">
+        <tabView:SfTabItem Header="ITEM 2">
             <tabView:SfTabItem.Content>
                 <ListView>
                     ...
@@ -93,8 +93,7 @@ The assigned view will get displayed in the main area of the tab view.
     {
         new SfTabItem()
         {
-            Header = "Calls",
-            ImageSource = "alexandar",
+            Header = "ITEM 2",
             Content = new ListView()
             {
                 /// code
@@ -462,7 +461,7 @@ tabView.TabHeaderPadding = new Thickness(5, 10, 5, 10);
 
 ## Scroll buttons on Header
 
-Scroll buttons are used to navigate through the items in the header of the tab view by adjusting the `IsScrollButtonEnabled` property of [SfTabView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html?tabs=tabid-1). This functionality additionally indicates the presence of tabs beyond the currently visible area.
+Scroll buttons are used to navigate through the items in the header of the tab view by adjusting the [IsScrollButtonEnabled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_IsScrollButtonEnabled) property of [SfTabView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html?tabs=tabid-1). This functionality additionally indicates the presence of tabs beyond the currently visible area.
 
 {% tabs %}
 

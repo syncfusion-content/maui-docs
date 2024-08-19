@@ -10,9 +10,9 @@ keywords : .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .n
 
 # Localization in .NET MAUI PDF Viewer (SfPdfViewer)
 
-Localization is the process of translating the application resources into a different language for the specific cultures. [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) is set up by default with the language code `en-US`. However, by including a resource file (.resx) in the application with the language code, the static text used in the `SfPdfViewer` can be localized to a different language. 
+Localization is the process of translating the application resources into a different language for the specific cultures. [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) is set up by default with the language code `en-US`. However, by including a resource file (.resx) in the application with the language code, the static text used in the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) can be localized to a different language. 
 
-Follow the instructions given to apply localization to the `SfPdfViewer`.
+Follow the instructions given to apply localization to the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html).
 
 ## Change the current user interface culture
 
@@ -270,6 +270,10 @@ The following table contains the default name and value details used in the SfPd
 <td>Drag over a text to underline it</td>
 </tr>
 <tr>
+<td>Apply</td>
+<td>Apply</td>
+</tr>
+<tr>
 <td>Annotations</td>
 <td>Annotations</td>
 </tr>
@@ -398,6 +402,10 @@ The following table contains the default name and value details used in the SfPd
 <td>Line</td>
 </tr>
 <tr>
+<td>MatchCase</td>
+<td>Match Case</td>
+</tr>
+<tr>
 <td>NewParagraph</td>
 <td>New Paragraph</td>
 </tr>
@@ -504,6 +512,14 @@ The following table contains the default name and value details used in the SfPd
 <tr>
 <td>Stroke</td>
 <td>Stroke</td>
+</tr>
+<tr>
+<td>SaveSignature</td>
+<td>Save Signature</td>
+</tr>
+<tr>
+<td>SearchPlaceholder</td>
+<td>Find in the document</td>
 </tr>
 <tr>
 <td>Text</td>

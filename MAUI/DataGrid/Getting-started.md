@@ -5,6 +5,7 @@ description: Learn about getting started with Syncfusion .NET MAUI DataGrid (SfD
 platform: MAUI
 control: SfDataGrid
 documentation: ug
+keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .net maui datagrid, .net maui grid, .net grid maui
 ---
 
 # Getting Started with .NET MAUI DataGrid (SfDataGrid)
@@ -227,7 +228,7 @@ dataGrid.ItemsSource = viewModel.OrderInfoCollection;
 
 Run the application to render the following output:
 
-![Getting started with .NET MAUI DataGrid](Images\getting-started\maui-datagrid-getting-started.png)
+![Getting started with .NET MAUI DataGrid.](Images\getting-started\net-maui-datagrid-getting-started.png)
 
 You can download the complete project of this demo from [GitHub](https://github.com/SyncfusionExamples/simple-.net-maui-datagrid).
 
@@ -293,7 +294,7 @@ dataGrid.SortingMode=DataGridSortingMode.Single;
 
 Run the application and touch the header cell to sort the data and the following output will be displayed:
  
-![Sorting in .NET MAUI DataGrid](Images\getting-started\maui-datagrid-basic-sorting.png)
+![Sorting in .NET MAUI DataGrid.](Images\getting-started\net-maui-datagrid-basic-sorting.png)
 
 Sorting can also be configured by adding the column to the [SfDataGrid.SortColumnDescriptions](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_SortColumnDescriptions) collection as follows:
 

@@ -5,6 +5,7 @@ description: Learn here all about Summaries support in Syncfusion MAUI DataGrid 
 platform: MAUI
 control: SfDataGrid
 documentation: UG
+keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .net maui datagrid, .net maui grid, .net grid maui, .net maui summaries, maui summaries
 ---
 
 # Summaries in MAUI DataGrid (SfDataGrid)
