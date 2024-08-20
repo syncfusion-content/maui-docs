@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Header Display Mode in Maui Tabbed View control | Syncfusion
-description: Learn here all about Header Display Mode support in Syncfusion Maui Tabbed View (SfTabView) control and more.
+title: Header display mode in .NET MAUI Tab View control | Syncfusion
+description: Learn here all about header display mode support in Syncfusion .NET MAUI Tab View (SfTabView) control and more.
 platform: maui
 control: TabView
 documentation: ug
 ---
 
-# Header Display Mode in Maui Tabbed View (SfTabView)
+# Header display mode in .NET MAUI Tab View control (SfTabView)
 
-By default, the tab view control displays the title of each tab item. It can be changed to any of the following types:
+By default, the Tab View control displays the title of each Tab Item. It can be changed to any of the following types:
 
 * Default
 * Image
@@ -17,7 +17,7 @@ By default, the tab view control displays the title of each tab item. It can be 
 
 ![Image for HeaderDisplayMode](images/Header-Display-Mode.png)
 
-The tab view can be changed by setting the `HeaderDisplayMode` property of [`SfTabView`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.html).
+The Tab View can be changed by setting the `HeaderDisplayMode` property of [`SfTabView`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.html).
 
 {% tabs %}
 
@@ -79,7 +79,5 @@ The tab view can be changed by setting the `HeaderDisplayMode` property of [`SfT
 
 {% endtabs %}
 
-    N> `Image` appearance in the header can be achieved through font icons.
-
-    N> The `HeaderDisplayMode` will work only when both a header text and an image are available for the TabItem. If either the text or image is missing, the Default mode will be used.
+    N> The `HeaderDisplayMode` will only apply if both a header and an imagesource are provided for the Tab Item. If either the header or imagesource is missing, the Tab Item will automatically apply the Default mode.
 

@@ -125,3 +125,47 @@ The [`CheckedChanged`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Butto
 
 ![.NET MAUI RadioGroup horizontal orientation](Images/Grouping/radiogrouporientation.png)
 
+## SelectedValue
+The [`RadioGroup`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioGroup.html) class defines a `SelectedValue` property, of type `object`, This property represents the Value of the checked [`RadioButton`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioButton.html) within a group defined.
+
+When the [`IsChecked`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioButton.html#Syncfusion_Maui_Buttons_SfRadioButton_IsChecked) property changes, whether through user interaction the `SelectedValue` property is also updated. 
+
+{% tabs %}
+{% highlight xaml %}
+
+	<syncfusion:SfRadioGroup SelectedValue="DebitCard">
+		<syncfusion:SfRadioButton Text="Net banking" Value="NetBanking"/>
+		<syncfusion:SfRadioButton Text="Debit card" Value="DebitCard"/>
+		<syncfusion:SfRadioButton Text="Credit card" Value="CreditCard"/>
+	</syncfusion:SfRadioGroup>
+
+{% endhighlight %}
+{% highlight c# %}
+
+	SfRadioGroup radioGroup = new SfRadioGroup
+	{
+		SelectedValue = "DebitCard"
+	};
+	SfRadioButton netBankingRadioButton = new SfRadioButton
+	{
+		Text = "Net banking",
+		Value = "NetBanking"
+	};
+	SfRadioButton debitCardRadioButton = new SfRadioButton
+	{
+		Text = "Debit card",
+		Value = "DebitCard"
+	};
+	SfRadioButton creditCardRadioButton = new SfRadioButton
+	{
+		Text = "Credit card",
+		Value = "CreditCard"
+	};
+	radioGroup.Children.Add(netBankingRadioButton);
+	radioGroup.Children.Add(debitCardRadioButton);
+	radioGroup.Children.Add(creditCardRadioButton);
+
+{% endhighlight %}
+{% endtabs %}
+
+![.NET MAUI Radio Button SelectedValue](Images/Grouping/selectedvalue.png)
