@@ -361,7 +361,6 @@ You can show or hide the badges in the BadgeView by setting the IsVisible proper
     </badge:SfBadgeView.BadgeSettings>
 </badge:SfBadgeView>
 
-
 {% endhighlight %}
 {% highlight C# %}
 
