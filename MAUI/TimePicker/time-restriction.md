@@ -11,7 +11,7 @@ documentation: ug
 
 ## Minimum Time
 
-The time picker provides an option to restrict the selection of time items by using the [MinimumTime]() property in [SfTimePicker](), and you cannot select the times beyond the minimum time range. The `MinimumTime` value has to be lesser than the `MaximumTime` value.When you set minimum time as timespan only hour and minute gets considered.
+The time picker provides an option to restrict the selection of time items using the [MinimumTime]()property. This ensures that times beyond the specified minimum time range cannot be selected. The `MinimumTime` value must be less than the `MaximumTime` value. When setting the minimum time, only the hour and minute components are considered.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="2" %}
@@ -34,7 +34,7 @@ this.Content = picker;
 
 ## Maximum Time
 
-The time picker provides an option to restrict the selection of time items by using the [MaximumTime]() property in [SfTimePicker](), and you cannot select the times beyond the maximum time range.The `MaximumTime` value has to be higher than the `MinimumTime` value.When you set maximum time as timespan only hour and minute gets considered.
+The time picker provides an option to restrict the selection of time items using the [MaximumTime]()property. This ensures that times beyond the specified minimum time range cannot be selected. The `MaximumTime` value must be higher than the `MinimumTime` value. When setting the minimum time, only the hour and minute components are considered.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="2" %}

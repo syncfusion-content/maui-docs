@@ -70,8 +70,8 @@ this.Calendar.AllowViewNavigation = true;
 {% endhighlight %}
 {% endtabs %}
 
-## Navigation to Adjacent Months Using Leading/Trailing Dates
-You can navigate to the next or previous month by tapping on the leading or trailing dates within the Calendar control. When you tap on a leading date, the calendar will navigate to the previous month, tapping on a trailing date will navigate to the next month. In `SfCalendar`, this functionality can be enabled or disabled by modifying the [NavigateToAdjacentMonth]() property.
+## Navigating Adjacent Months with Leading and Trailing Dates
+You can navigate to the next or previous month in the Calendar control by tapping on the leading or trailing dates. Tapping on a leading date moves the calendar to the previous month, while tapping on a trailing date moves it to the next month. In `SfCalendar`, this functionality can be enabled or disabled using the [NavigateToAdjacentMonth]() property.
 
 The following code shows the Navigation by using `NavigateToAdjacentMonth` property.
 
