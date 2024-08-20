@@ -1,6 +1,6 @@
 ---
 layout: post
-title: About .NET MAUI Maps control | Syncfusion 
+title: Custom Shapes in .NET MAUI Maps Control | Syncfusion 
 description: Learn here all about the custom shapes feature of Syncfusion .NET MAUI Maps (SfMaps) control, its features, and more.
 platform: MAUI
 control: SfMaps

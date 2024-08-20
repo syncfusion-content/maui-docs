@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Day and Week views in .NET MAUI Scheduler control | Syncfusion
+title: Day and Week views in .NET MAUI Scheduler Control | Syncfusion
 description: Learn here all about customizing the Day, Week and Workweek views settings and its appearance in Syncfusion .NET MAUI Scheduler (SfScheduler) control and more.
 platform: maui
 control: SfScheduler
@@ -8,7 +8,7 @@ documentation: ug
 keywords : .net maui scheduler, .net maui week view, .net maui work week view, .net maui day view, special time regions, recurring time region.
 ---
 
-# Day and Week views in .NET MAUI Event Scheduler (SfScheduler)
+# Day and Week Views in .NET MAUI Event Scheduler (SfScheduler)
 
 The [.NET MAUI Scheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html) provides the ability to display the day, week, workweek views, and the current day will be visible by default. The appointments on a specific day will be arranged in the respective timeslots based on their duration.
 
@@ -44,7 +44,7 @@ this.Content = scheduler;
 {% endhighlight %}
 {% endtabs %}
 
-![visible-days-count-in-maui-scheduler-days-view](images/day-week-views/number-of-visibledays-in-maui-scheduler.png)
+![Visible days count in .NET MAUI Scheduler days view.](images/day-week-views/number-of-visible-days-in-net-maui-scheduler.png)
 
 ## Change time interval
 
@@ -72,7 +72,7 @@ this.Content = scheduler;
 {% endhighlight %}
 {% endtabs %}
 
-![change-time-interval-in-maui-scheduler](images/day-week-views/change-time-interval-in-maui-scheduler.png)
+![Change time interval in .NET MAUI Scheduler.](images/day-week-views/change-time-interval-in-net-maui-scheduler.png)
 
 N> To modify the `TimeInterval` value (in minutes), change the time labels format by setting the `TimeRulerFormat` value to hh:mm.
 
@@ -103,7 +103,7 @@ this.Content = scheduler;
 {% endhighlight %}
 {% endtabs %}
 
-![change-time-interval-height-in-maui-scheduler](images/day-week-views/change-time-interval-height-in-maui-scheduler.png)
+![Change time interval height in .NET MAUI Scheduler.](images/day-week-views/change-time-interval-height-in-net-maui-scheduler.png)
 
 ## Flexible working days
 
@@ -135,7 +135,7 @@ this.Content = scheduler;
 
 N> The `workweek` view displays exactly the defined working days on Scheduler control, whereas other views displays all the days.
 
-![flexible-working-days-in-maui-scheduler](images/day-week-views/flexible-working-days-in-maui-scheduler.png)
+![Flexible working days in .NET MAUI Scheduler.](images/day-week-views/flexible-working-days-in-net-maui-scheduler.png)
 
 ## Flexible working hours
 
@@ -165,7 +165,7 @@ this.Content = scheduler;
 {% endhighlight %}
 {% endtabs %}
 
-![flexible-working-hours-in-maui-scheduler](images/day-week-views/flexible-working-hours-in-maui-scheduler.png)
+![Flexible working hours in .NET MAUI Scheduler.](images/day-week-views/flexible-working-hours-in-net-maui-scheduler.png)
 
 N>
 * The `NonWorkingDays` property will be applicable only for `workweek` and `Timeline workweek` views only. It is not applicable for the remaining views.
@@ -1013,4 +1013,4 @@ this.Scheduler.DaysView.TimeRulerTextStyle = timeRulerTextStyle;
 {% endhighlight %}
 {% endtabs %}
 
-![customize-time-ruler-text-style-in-maui-scheduler](images/day-week-views/customize-time-ruler-text-style-in-maui-scheduler.png)
+![Customize time ruler text style in .NET MAUI Scheduler](images/day-week-views/customize-time-ruler-text-style-in-net-maui-scheduler.png)

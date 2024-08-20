@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Date navigations in .NET MAUI Scheduler control | Syncfusion
+title: Date Navigations in .NET MAUI Scheduler Control | Syncfusion
 description: Learn here all about date navigations and restriction feature of Syncfusion .NET MAUI Scheduler (SfScheduler) control and more.
 platform: maui
 control: SfScheduler
 documentation: ug
 ---
 
-# Date navigation and restriction in .NET MAUI Scheduler
+# Date Navigation and Restriction in .NET MAUI Scheduler
 
 ## Date navigation
 
@@ -148,7 +148,7 @@ this.Content = scheduler;
 {% endhighlight %}
 {% endtabs %}
 
-![allow-view-navigation-in-all-scheduler-views-in-maui-scheduler](images/date-navigation-restriction/allow-view-navigation-in-all-scheduler-views-in-maui-scheduler.gif)
+![Allow view navigation in .NET MAUI Scheduler.](images/date-navigation-restriction/allow-view-navigation-in-net-maui-scheduler.gif)
 
 N>
 * The default value of `AllowViewNavigation` is `false.`
