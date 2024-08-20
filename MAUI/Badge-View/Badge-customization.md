@@ -344,3 +344,46 @@ Content = sfBadgeView;
 {% endtabs %}
 
 ![BadgeView Alignment](badge-customization_images/badge_alignment.png)
+
+## Visibility of badge
+
+The IsVisible property is used to show or hide the badge in the BadgeView. By default, visibility of the badge is enabled.
+
+N> The badge appears only when the `IsVisible` property value is set to **true**.
+
+{% tabs %}
+{% highlight xaml %}
+
+<sf:SfBadgeView BadgeText="20">
+    <sf:SfBadgeView.Content>
+        <Button Text="Message"></Button>
+    </sf:SfBadgeView.Content>
+    <sf:SfBadgeView.BadgeSettings>
+        <sf:BadgeSettings IsVisible="True"/>
+    </sf:SfBadgeView.BadgeSettings>
+</sf:SfBadgeView>
+
+
+{% endhighlight %}
+{% highlight C# %}
+
+Button button=new Button();
+button.Text="Message";
+BadgeSettings badgeSettings=bew BadgeSettings();
+badgeSettings.IsVisible=true;
+BadgeView badgeView=new BadgeView();
+badgeView.BadgeText=20;
+badgeView.BadgeSettings=badgeSettings;
+badgeVuew.Content=button;
+Content=badgeView;
+
+{% endhighlight %}
+{% endtabs %}
+
+If IsVisible is true
+
+![.NET MAUI BadgeView with Badge](badge-customization_images/net_maui_badgeview_with_badge.png)
+
+If IsVisible is false
+
+![.NET MAUI BadgeView without Badge](badge-customization_images/net_maui_badgeview_without_badge.png)
