@@ -105,7 +105,7 @@ You can customize the header appearance by using the [HeaderTemplate]() in the [
 
 ## Header appearance using DataTemplateSelector
 
-You can customize the header appearance by using the [HeaderTemplate]() in the [SfCalendar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html). The `DataTemplateSelector` can choose a `DataTemplate` at runtime based on the value of a data-bound to Calendar header by using the `HeaderTemplate.` It allows you to choose a different data template for each header, as well as to customize the appearance of a particular header based on certain conditions.
+You can customize the header appearance by using the [HeaderTemplate]() in the [SfCalendar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html). The `DataTemplateSelector` allows you to choose a `DataTemplate` at runtime based on the value bound to the calendar header. This lets you select a different data template for each header and customize the appearance of a specific header based on certain conditions.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="34" %}
@@ -170,6 +170,9 @@ public class HeaderTemplateSelector : DataTemplateSelector
 
 {% endhighlight %}  
 {% endtabs %}
+
+N>
+* When using data template selector, performance issues occur as the conversion template views take time within the framework.
 
 ## View header
 You can customize all the properties of the View Header using [HeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_HeaderView). By using this property, you can customize the Background, Height, TextFormat, and TextStyle of the Calendar.
@@ -268,7 +271,7 @@ You can customize the view header appearance by using the [MonthViewHeaderTempla
 
 ### View header appearance using DataTemplateSelector
 
-You can customize the view header appearance by using the [MonthViewHeaderTemplate]() in the [SfCalendar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html). The `DataTemplateSelector` can choose a `DataTemplate` at runtime based on the value of a data-bound to Calendar view header by using the `MonthViewHeaderTemplate.` It allows you to choose a different data template for each view header, as well as customize the appearance of a particular view header based on certain conditions.
+You can customize the view header appearance by using the [MonthViewHeaderTemplate]() in the [SfCalendar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html). The `DataTemplateSelector` allows you to choose a `DataTemplate` at runtime based on the value bound to the calendar view header. This lets you select a different data template for each view header and customize the appearance of a specific view header based on certain conditions.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="18" %}
@@ -314,3 +317,6 @@ public class MonthViewHeaderTemplateSelector : DataTemplateSelector
 
 {% endhighlight %}  
 {% endtabs %}
+
+N>
+* When using data template selector, performance issues occur as the conversion template views take time within the framework.
