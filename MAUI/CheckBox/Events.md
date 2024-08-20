@@ -59,7 +59,7 @@ This event occurs when the value or state of the [`IsChecked`](https://help.sync
 
 ## StateChanging event
 
-"The StateChanging event is triggered when the CheckBox control is tapped, indicating that the state of the [`IsChecked`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html#Syncfusion_Maui_Buttons_SfCheckBox_IsChecked) property in the Checkbox control is about to change. The StateChangingEventArgs provides the following properties:"
+The StateChanging event is triggered when the CheckBox control is tapped, indicating that the state of the [`IsChecked`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html#Syncfusion_Maui_Buttons_SfCheckBox_IsChecked) property in the Checkbox control is about to change. The StateChangingEventArgs provides the following properties:
 
 * [`IsChecked`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html#Syncfusion_Maui_Buttons_SfCheckBox_IsChecked) : The new value(state) of the [`IsChecked`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html#Syncfusion_Maui_Buttons_SfCheckBox_IsChecked) property.
 * `Cancel` : Gets or sets a value indicating whether the event should be canceled.
