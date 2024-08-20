@@ -61,3 +61,47 @@ This event occurs when the value (state) of the [`IsChecked`](https://help.syncf
 
 ![StateChanged event 1](Images/Event/statechanged1.png)
 ![StateChanged event 2](Images/Event/statechanged2.png)
+
+## StateChanging event
+
+The StateChanging event is triggered when the RadioButton control is tapped, indicating that the state of the [`IsChecked`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioButton.html#Syncfusion_Maui_Buttons_SfRadioButton_IsChecked) property in the RadioButton control is about to change. The StateChangingEventArgs provides the following properties:
+
+* [`IsChecked`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioButton.html#Syncfusion_Maui_Buttons_SfRadioButton_IsChecked) : The new value(state) of the [`IsChecked`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioButton.html#Syncfusion_Maui_Buttons_SfRadioButton_IsChecked) property.
+* `Cancel` : Gets or sets a value indicating whether the event should be canceled.
+
+{% tabs %}
+{% highlight xaml %}
+
+    <syncfusion:SfRadioGroup x:Name="radioGroup">
+        <syncfusion:SfRadioButton x:Name="check" Text="Checked State" IsChecked="True" StateChanging="RadioButton_StateChanging"/>
+        <syncfusion:SfRadioButton x:Name="uncheck" Text="Unchecked State"/>
+    </syncfusion:SfRadioGroup>
+
+{% endhighlight %}
+{% highlight c# %}
+
+    SfRadioGroup radioGroup = new SfRadioGroup();
+    SfRadioButton check = new SfRadioButton();
+    check.Text = "Checked State";
+    check.IsChecked = true;
+    check.StateChanging += RadioButton_StateChanging;
+    SfRadioButton uncheck = new SfRadioButton();
+    uncheck.Text = "Unchecked State";
+    uncheck.StateChanging += RadioButton_StateChanging;
+    radioGroup.Children.Add(check);
+    radioGroup.Children.Add(uncheck);
+    this.Content = radioGroup;
+	
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight c# %}
+
+    private void RadioButton_StateChanging(object sender, Syncfusion.Maui.Buttons.StateChangingEventArgs e)
+    {
+        e.cancel=true;
+    }
+
+{% endhighlight %}
+{% endtabs %}
