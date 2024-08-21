@@ -132,4 +132,4 @@ this.Content = chart;
 
 {% endtabs %}
 
-![Spline types chart in MAUI Chart]()
+![Spline types in MAUI Chart]()
