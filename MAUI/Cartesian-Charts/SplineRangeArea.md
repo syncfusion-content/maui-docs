@@ -35,9 +35,9 @@ N> The Cartesian chart has [Series](https://help.syncfusion.com/cr/maui/Syncfusi
     </chart:SfCartesianChart.YAxes>   
 
     <chart:SplineRangeAreaSeries ItemsSource="{Binding Data}"
-			                     XBindingPath="XValue"
+                                 XBindingPath="XValue"
                                  High="HighValue"
-			                     Low="LowValue"/>
+                                 Low="LowValue"/>
 
 </chart:SfCartesianChart>
 
