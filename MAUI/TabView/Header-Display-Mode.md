@@ -79,5 +79,5 @@ The Tab View can be changed by setting the `HeaderDisplayMode` property of [`SfT
 
 {% endtabs %}
 
-    N> The `HeaderDisplayMode` will only apply if both a header and an imagesource are provided for the Tab Item. If either the header or imagesource is missing, the Tab Item will automatically apply the Default mode.
+    N> The `HeaderDisplayMode` will only apply if both a header and an image are provided for the Tab Item. If either the header or imagesource is missing, the Tab Item will automatically apply the Default mode.
 
