@@ -9,7 +9,6 @@ documentation: ug
 
 # Stacked Line Chart in .NET MAUI Chart
 
-
 The stacked line chart is a type of chart that displays multiple line series stacked on top of each other, with the values of each series combined to show a cumulative value of the data points.
 
 To render a stacked line chart, create an instance of the [StackingLineSeries]() and add it to the [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) collection property of the [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html?tabs=tabid-1).
@@ -107,7 +106,7 @@ N> The Cartesian chart has a [Series](https://help.syncfusion.com/cr/maui/Syncfu
 
 ### Dashed Stacked Line
 
-The [StrokeDashArray](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.StackingLineSeries.html#Syncfusion_Maui_Charts_StackingLine_StrokeDashArray) property of [StackingLineSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.StackingLineSeries.html?tabs=tabid-1) is used to render the stacked line series with dashes. Odd value is considered as rendering size and even value is considered as gap.
+The [StrokeDashArray]() property of [StackingLineSeries]() is used to render the stacked line series with dashes. Odd value is considered as rendering size and even value is considered as gap.
 
 {% tabs %}
 
@@ -218,7 +217,7 @@ The [StrokeDashArray](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts
 
 ## Enable Marker
 
-A marker, also known as a symbol, is used to determine or highlight the position of the data point. To enable markers in the series, set the [ShowMarkers](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.StackingLineSeries.html#Syncfusion_Maui_Charts_StackingLineSeries_ShowMarkers) property to `true`.
+A marker, also known as a symbol, is used to determine or highlight the position of the data point. To enable markers in the series, set the [ShowMarkers]() property to `true`.
 
 {% tabs %}
 
@@ -307,7 +306,7 @@ A marker, also known as a symbol, is used to determine or highlight the position
 
 ### Marker customization
 
-In order to change the series markers appearance, create an instance of the [MarkerSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.StackingLineSeries.html#Syncfusion_Maui_Charts_StackingLineSeries_MarkerSettings) property. The following properties are used to customize marker appearance.
+In order to change the series markers appearance, create an instance of the [MarkerSettings]() property. The following properties are used to customize marker appearance.
 
 * [Type](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartMarkerSettings.html#Syncfusion_Maui_Charts_ChartMarkerSettings_Type), of type `ShapeType`, describes the shape of the series marker. The default value of this property is [ShapeType.Circle]().
 * [Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartMarkerSettings.html#Syncfusion_Maui_Charts_ChartMarkerSettings_Stroke), of type `Brush`, indicates the brush used to paint the marker border.
@@ -334,50 +333,10 @@ In order to change the series markers appearance, create an instance of the [Mar
                 <chart:ChartMarkerSettings Type="Diamond" 
                                            StrokeWidth="2"
                                            Fill="White"
-                                           Height="15"
-                                           Width="10"/>
+                                           Height="8"
+                                           Width="8"/>
             </chart:StackingLineSeries.MarkerSettings>    
-        </chart:StackingLineSeries>   
-    
-        <chart:StackingLineSeries ItemsSource="{Binding Data2}"
-                                  XBindingPath="Month"
-                                  YBindingPath="Value"
-                                  ShowMarkers="True">
-            <chart:StackingLineSeries.MarkerSettings>
-                <chart:ChartMarkerSettings Type="Diamond" 
-                                           StrokeWidth="2"
-                                           Fill="White"
-                                           Height="15"
-                                           Width="10"/>
-            </chart:StackingLineSeries.MarkerSettings>    
-        </chart:StackingLineSeries> 
-
-        <chart:StackingLineSeries ItemsSource="{Binding Data3}"
-                                  XBindingPath="Month"
-                                  YBindingPath="Value"
-                                  ShowMarkers="True">
-            <chart:StackingLineSeries.MarkerSettings>
-                <chart:ChartMarkerSettings Type="Diamond" 
-                                           StrokeWidth="2"
-                                           Fill="White"
-                                           Height="15"
-                                           Width="10"/>
-            </chart:StackingLineSeries.MarkerSettings>    
-        </chart:StackingLineSeries> 
-
-        <chart:StackingLineSeries ItemsSource="{Binding Data4}"
-                                  XBindingPath="Month"
-                                  YBindingPath="Value"
-                                  ShowMarkers="True">
-            <chart:StackingLineSeries.MarkerSettings>
-                <chart:ChartMarkerSettings Type="Diamond" 
-                                           StrokeWidth="2"
-                                           Fill="White"
-                                           Height="15"
-                                           Width="10"/>
-            </chart:StackingLineSeries.MarkerSettings>    
-        </chart:StackingLineSeries> 
-
+        </chart:StackingLineSeries>
     </chart:SfCartesianChart>
 
 {% endhighlight %}
@@ -389,11 +348,11 @@ In order to change the series markers appearance, create an instance of the [Mar
     ViewModel viewModel = new ViewModel();
     ...
     ChartMarkerSettings chartMarker= new ChartMarkerSettings();
-        chartMarker.Type = ShapeType.Diamond;
-        chartMarker.Fill=Colors.White;
-        chartMarker.StrokeWidth= 2;
-        chartMarker.Height = 15;
-        chartMarker.Width = 10;
+    chartMarker.Type = ShapeType.Diamond;
+    chartMarker.Fill=Colors.White;
+    chartMarker.StrokeWidth= 2;
+    chartMarker.Height = 8;
+    chartMarker.Width = 8;
 
     StackingLineSeries series1 = new  StackingLineSeries()
     {
@@ -404,42 +363,9 @@ In order to change the series markers appearance, create an instance of the [Mar
         MarkerSettings = chartMarker,
     };
 
-    StackingLineSeries series2 = new StackingLineSeries()
-    {
-        XBindingPath = "Month",
-        YBindingPath = "Value",
-        ItemsSource = viewModel.Data2,
-        ShowMarkers= true,
-        MarkerSettings = chartMarker,
-    };
-
-    StackingLineSeries series3 = new StackingLineSeries()       
-    {
-        XBindingPath = "Month",
-        YBindingPath = "Value",
-        ItemsSource = viewModel.Data3,
-        ShowMarkers= true,
-        MarkerSettings = chartMarker,
-    };
-
-    StackingLineSeries series4 = new StackingLineSeries()
-    {
-        XBindingPath = "Month",
-        YBindingPath = "Value",
-        ItemsSource = viewModel.Data4,
-        ShowMarkers= true, 
-        MarkerSettings = chartMarker,
-    };
-
     chart.Series.Add(series1);
-    chart.Series.Add(series2);     
-    chart.Series.Add(series3); 
-    chart.Series.Add(series4); 
-
     this.Content = chart;
 
 {% endhighlight %}
 
 {% endtabs %}
-
-![Stacked Line Custom Marker support in MAUI Chart](Chart-types-images/stacked_line_custom_marker_support.png)
