@@ -5,6 +5,7 @@ description: Learn here about getting started with the Syncfusion .NET MAUI Swit
 platform: maui
 control: SfSwitch
 documentation: ug
+keywords : .net maui switch, maui switch, .net maui switch contrl, maui switch control.
 ---
 
 # Getting Started with .NET MAUI Switch (SfSwitch)
@@ -13,7 +14,7 @@ This section explains the steps to configure the .NET MAUI Switch control in a r
 
 ## Adding a .NET MAUI Switch reference
 
-The Syncfusion .NET MAUI controls are available in [Nuget.org](https://www.nuget.org/). To add [`.NET MAUI Switch`](https://www.syncfusion.com/maui-controls/maui-switch) to your project, open the NuGet package manager in Visual Studio, search for [`Syncfusion.Maui.Buttons`](https://www.nuget.org/packages/Syncfusion.Maui.Buttons), and install it.
+The Syncfusion .NET MAUI controls are available in [Nuget.org](https://www.nuget.org/). To add [.NET MAUI Switch](https://www.syncfusion.com/maui-controls/maui-switch) to your project, open the NuGet package manager in Visual Studio, search for [Syncfusion.Maui.Buttons](https://www.nuget.org/packages/Syncfusion.Maui.Buttons), and install it.
 
 ## Handler registration 
 
@@ -53,7 +54,7 @@ namespace SwitchSample
 
 Step 1: Add the NuGet to the project as discussed in the above reference section. 
 
-Step 2: Add the namespace as shown in the following code sample.
+Step 2: Add the namespace as shown in the following code sample, to initialize the .NET MAUI Switch control.
 
 {% tabs %}
 {% highlight xaml %}
@@ -70,7 +71,7 @@ Step 2: Add the namespace as shown in the following code sample.
 
 ## Initialize Switch
 
-Now, add the [`SfSwitch`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSwitch.html) control with a required optimal name using the included namespace.
+Now, add the [SfSwitch](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSwitch.html) control with a required optimal name using the included namespace.
 
 {% tabs %}
 
@@ -93,9 +94,9 @@ this.Content = sfSwitch;
 
 ## Performing an action based on state
 
-You can switch between the states. When the state is changed the [`StateChanging`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SwitchStateChangingEventArgs.html) and [`StateChanged`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SwitchStateChangedEventArgs.html) event will be triggered where you can perform an action based on the current state. The [`StateChanging`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SwitchStateChangingEventArgs.html) event allows you to cancel moving to a new state.
+You can switch between states in the .NET MAUI Switch control. When the state changes, the [StateChanging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SwitchStateChangingEventArgs.html) and [StateChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SwitchStateChangedEventArgs.html) events are triggered, allowing you to perform actions based on the current state. The [StateChanging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SwitchStateChangingEventArgs.html) event also provides the option to cancel the transition to a new state.
 
-The following code example displays a message box when switched to off state when work is completed.
+The following code example displays a message box when the .NET MAUI Switch is switched to the off state after the work is completed.
 
 {% tabs %}
 

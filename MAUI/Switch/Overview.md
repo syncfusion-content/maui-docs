@@ -5,11 +5,12 @@ description: Learn here about introduction of the Syncfusion .NET MAUI Switch (S
 platform: maui
 control: SfSwitch
 documentation: ug
+keywords : .net maui switch, maui switch, .net maui switch contrl, maui switch control.
 ---
 
 # .NET MAUI Switch (SfSwitch) Overview
 
-The Switch control in .NET MAUI provides an efficient way to select between the states based on the toggled value.
+The .NET MAUI Switch control provides an efficient way to select between the states based on the toggled value.
 
 ## Key features
 

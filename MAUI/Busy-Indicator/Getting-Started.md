@@ -5,13 +5,14 @@ description: Learn here about getting started with Syncfusion .NET MAUI Busy Ind
 platform: maui
 control: BusyIndicator
 documentation: ug
+keywords : .net maui busy indicator, maui busy indicator, .net maui activity indicator, maui activity indicator, .net maui loading indicator, maui loading indicator.
 ---
 
 # Getting Started with .NET MAUI Busy Indicator (SfBusyIndicator)
 
 ## Getting started with .NET MAUI Busy Indicator
 
-This section explains the steps to configure the [.NET MAUI Busy Indicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html?tabs=tabid-1) control in a real-time scenario and provides a walk-through on some of the customization features available in the control.
+This section explains the steps to configure the [.NET MAUI Busy Indicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html?tabs=tabid-1) control in a real-time scenario and provides a walk-through on some of the customization features available in the control.
 
 To get start quickly with our .NET MAUI Busy Indicator, you can check the below video.
 
@@ -61,9 +62,9 @@ The [.NET MAUI Busy Indicator](https://help.syncfusion.com/cr/maui/Syncfusion.Ma
 
 ### Adding the .NET MAUI Busy Indicator control
 
-Step 1: Add the NuGet to the project as discussed in the above reference section. 
+Step 1: Add the NuGet to the project as discussed in the above reference section. 
 
-Step 2: Add the namespace as shown in the following code sample.
+Step 2: Add the namespace as shown in the following code sample, to initialize the .NET MAUI Busy Indicator.
 
 {% tabs %}
 
@@ -81,7 +82,7 @@ Step 2: Add the namespace as shown in the following code sample.
 
 {% endtabs %}
 
-Step 3: Set the control to content in `ContentPage.`
+Step 3: Set the .NET MAUI Busy Indicator control as the content in the `ContentPage.`
 
 {% tabs %}
 
