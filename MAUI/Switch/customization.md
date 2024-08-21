@@ -5,20 +5,21 @@ description: Learn here all about Customization support in Syncfusion .NET MAUI 
 platform: maui
 control: SfSwitch
 documentation: ug
+keywords : .net maui switch, maui switch, .net maui switch ccustomize, maui switch customize, maui switch color, maui switch size, maui switch icon.
 ---
 
 # Customization in .NET MAUI Switch (SfSwitch)
 
-The switch control provides options to customize the color based on the states. The following code example demonstrates how to customize the switch control.
+The .NET MAUI Switch control provides options to customize the color based on its states. The following code example demonstrates how to customize the .NET MAUI Switch control.
 
 ## Colors
 
 The following properties are used to apply solid colors to the thumb, track, and border, respectively:
 
-* [`TrackBackground`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SwitchSettings.html#Syncfusion_Maui_Buttons_SwitchSettings_TrackBackground): Represents the color for the track.
-* [`ThumbBackground`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SwitchSettings.html#Syncfusion_Maui_Buttons_SwitchSettings_ThumbBackground): Represents the color for the thumb.
-* [`TrackStroke`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SwitchSettings.html#Syncfusion_Maui_Buttons_SwitchSettings_TrackStroke): Represents the color for the border of the track.
-* [`ThumbStroke`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SwitchSettings.html#Syncfusion_Maui_Buttons_SwitchSettings_ThumbStroke): Represents the border color for the thumb.
+* [TrackBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SwitchSettings.html#Syncfusion_Maui_Buttons_SwitchSettings_TrackBackground): Represents the color for the track.
+* [ThumbBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SwitchSettings.html#Syncfusion_Maui_Buttons_SwitchSettings_ThumbBackground): Represents the color for the thumb.
+* [TrackStroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SwitchSettings.html#Syncfusion_Maui_Buttons_SwitchSettings_TrackStroke): Represents the color for the border of the track.
+* [ThumbStroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SwitchSettings.html#Syncfusion_Maui_Buttons_SwitchSettings_ThumbStroke): Represents the border color for the thumb.
 
 {% tabs %}
 
@@ -121,18 +122,18 @@ this.Content = sfSwitch;
 
 ## Sizing
 
-In the switch control, sizing of the thumb and the track can be controlled by using the following properties:
+In the .NET MAUI Switch control, sizing of the thumb and the track can be controlled by using the following properties:
 
-* [`TrackCornerRadius`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SwitchSettings.html#Syncfusion_Maui_Buttons_SwitchSettings_TrackCornerRadius): Represents a CornerRadius value to create curved corner of the track.
-* [`TrackStrokeThickness`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SwitchSettings.html#Syncfusion_Maui_Buttons_SwitchSettings_TrackStrokeThickness): Represents a double value for defining the track border width.
-* [`TrackWidthRequest`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SwitchSettings.html#Syncfusion_Maui_Buttons_SwitchSettings_TrackWidthRequest): Represents a double value for defining the track width.
-* [`TrackHeightRequest`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SwitchSettings.html#Syncfusion_Maui_Buttons_SwitchSettings_TrackHeightRequest): Represents double value for defining the track height.
-* [`ThumbCornerRadius`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SwitchSettings.html#Syncfusion_Maui_Buttons_SwitchSettings_ThumbCornerRadius): Represents a CornerRadius value to create curved corner of the thumb.
-* [`ThumbStrokeThickness`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SwitchSettings.html#Syncfusion_Maui_Buttons_SwitchSettings_ThumbStrokeThickness): Represents a double value for defining the thumb border width.
-* [`ThumbWidthRequest`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SwitchSettings.html#Syncfusion_Maui_Buttons_SwitchSettings_ThumbWidthRequest): Represents double value for defining the thumb width.
-* [`ThumbHeightRequest`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SwitchSettings.html#Syncfusion_Maui_Buttons_SwitchSettings_ThumbHeightRequest): Represents double value for defining the thumb height.
+* [TrackCornerRadius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SwitchSettings.html#Syncfusion_Maui_Buttons_SwitchSettings_TrackCornerRadius): Represents a CornerRadius value to create curved corner of the track.
+* [TrackStrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SwitchSettings.html#Syncfusion_Maui_Buttons_SwitchSettings_TrackStrokeThickness): Represents a double value for defining the track border width.
+* [TrackWidthRequest](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SwitchSettings.html#Syncfusion_Maui_Buttons_SwitchSettings_TrackWidthRequest): Represents a double value for defining the track width.
+* [TrackHeightRequest](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SwitchSettings.html#Syncfusion_Maui_Buttons_SwitchSettings_TrackHeightRequest): Represents double value for defining the track height.
+* [ThumbCornerRadius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SwitchSettings.html#Syncfusion_Maui_Buttons_SwitchSettings_ThumbCornerRadius): Represents a CornerRadius value to create curved corner of the thumb.
+* [ThumbStrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SwitchSettings.html#Syncfusion_Maui_Buttons_SwitchSettings_ThumbStrokeThickness): Represents a double value for defining the thumb border width.
+* [ThumbWidthRequest](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SwitchSettings.html#Syncfusion_Maui_Buttons_SwitchSettings_ThumbWidthRequest): Represents double value for defining the thumb width.
+* [ThumbHeightRequest](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SwitchSettings.html#Syncfusion_Maui_Buttons_SwitchSettings_ThumbHeightRequest): Represents double value for defining the thumb height.
 
-The following code example demonstrates how to customize the size of the track and thumb.
+The following code example demonstrates how to customize the size of the track and thumb in a .NET MAUI Switch.
 
 {% tabs %}
 
@@ -228,10 +229,10 @@ this.Content = sfSwitch;
 
 ## Custom Path
 
-In the switch control, customize the thumb's icon by using the following properties:
+In the .NET MAUI Switch control, customize the thumb's icon by using the following properties:
 
-* [`CustomPath`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SwitchSettings.html#Syncfusion_Maui_Buttons_SwitchSettings_CustomPath): Represents a Path value for defining the thumb's icon.
-* [`IconColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SwitchSettings.html#Syncfusion_Maui_Buttons_SwitchSettings_IconColor): Represents the color for the thumb's icon.
+* [CustomPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SwitchSettings.html#Syncfusion_Maui_Buttons_SwitchSettings_CustomPath): Represents a Path value for defining the thumb's icon.
+* [IconColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SwitchSettings.html#Syncfusion_Maui_Buttons_SwitchSettings_IconColor): Represents the color for the thumb's icon.
 
 {% tabs %}
 
