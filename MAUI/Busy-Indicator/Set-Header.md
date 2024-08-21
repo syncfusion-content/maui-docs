@@ -197,5 +197,5 @@ SfBusyIndicator busyIndicator = new SfBusyIndicator()
 
 The following screenshot illustrates the result of the above code.
 
-![Font Customization](Images/SetHeader/Fontattributes(bold).png)
+![Font Customization](Images/SetHeader/Fontattributes.png)
 

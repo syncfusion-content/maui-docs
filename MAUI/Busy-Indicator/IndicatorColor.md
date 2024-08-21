@@ -42,7 +42,7 @@ SfBusyIndicator busyIndicator = new SfBusyIndicator()
 
 The following gif image illustrates the result of the above code.
 
-![Indicator Color](Images/IndicatorColor/IndicatorColor.png)
+![Indicator Color](Images/IndicatorColor/IndicatorColor.gif)
 
 ## Overlay Background in SfBusyIndicator
 
@@ -80,7 +80,7 @@ SfBusyIndicator busyIndicator = new SfBusyIndicator()
 
 The following gif image illustrates the result of the above code.
 
-![Overlay Fill](Images/IndicatorColor/OverlayFillColor.png)
+![Overlay Fill](Images/IndicatorColor/OverlayFillColor.gif)
 
 The [OverlayFill](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html#Syncfusion_Maui_Core_SfBusyIndicator_OverlayFill) property type is `Brush`, so you can set Gradients as background.
 
@@ -129,5 +129,5 @@ SfBusyIndicator busyIndicator = new SfBusyIndicator()
 
 The following gif image illustrates the result of the above code.
 
-![Overlay Fill](Images/IndicatorColor/OverlayFillBrush.png)
+![Overlay Fill](Images/IndicatorColor/OverlayFillBrush.gif)
 
