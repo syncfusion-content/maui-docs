@@ -219,3 +219,104 @@ private void OnTimePickerCancelButtonClicked(object sender, EventArgs e)
 {% endhighlight %}
 
 {% endtabs %}
+
+## Commands
+
+### SelectionChangedCommand
+
+SfTimePicker includes a built-in event called `SelectionChanged` and invokes this event through the [SelectionChangedCommand]() whenever the selection index in the picker changes, with the `TimePickerSelectionChangedEventArgs` passed as a parameter.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
+
+<picker:SfTimePicker x:Name="picker"
+                    SelectionChangedCommand="{Binding SelectionChangedCommand}">
+<ContentPage.BindingContext>
+    <local:ViewModel/>
+</ContentPage.BindingContext>					  
+</picker:SfTimePicker>
+
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="3,5,7" %}
+
+public class ViewModel
+{
+    public ICommand SelectionChangedCommand { get; set; }
+    public ViewModel()
+    {
+        SelectionChangedCommand = new Command(SelectionChanged);
+    }
+    private void SelectionChanged()
+    {
+        // To do your requirement here.
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+### AcceptCommand
+
+SfTimePicker includes a built-in event called `OkButtonClicked` and invokes this event through the [AcceptCommand]() whenever confirm button tapped on time picker.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
+
+<picker:SfTimePicker x:Name="picker"
+                    AcceptCommand="{Binding AcceptCommand}">
+<ContentPage.BindingContext>
+    <local:ViewModel/>
+</ContentPage.BindingContext>					  
+</picker:SfTimePicker>
+
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="3,5,7" %}
+
+public class ViewModel
+{
+    public ICommand AcceptCommand { get; set; }
+    public ViewModel()
+    {
+        AcceptCommand = new Command(ActionButtonClicked);
+    }
+    private void ActionButtonClicked()
+    {
+        // To do your requirement here.
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+### DeclineCommand
+
+SfTimePicker includes a built-in event called `CancelButtonClicked` and invokes this event through the [DeclineCommand]() whenever the cancel button tapped on time picker.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
+
+<picker:SfTimePicker x:Name="picker"
+                    DeclineCommand="{Binding DeclineCommand}">
+<ContentPage.BindingContext>
+    <local:ViewModel/>
+</ContentPage.BindingContext>					  
+</picker:SfTimePicker>
+
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="3,5,7" %}
+
+public class ViewModel
+{
+    public ICommand DeclineCommand { get; set; }
+    public ViewModel()
+    {
+        DeclineCommand = new Command(ActionButtonCanceled);
+    }
+    private void ActionButtonCanceled()
+    {
+        // To do your requirement here.
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
