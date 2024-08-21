@@ -199,7 +199,8 @@ PolarLineSeries series = new PolarLineSeries()
     ItemsSource = new ViewModel().PlantDetails,
     XBindingPath = "Direction",
     YBindingPath = "Tree",
-    ShowMarkers = true
+    ShowMarkers = true,
+    MarkerSettings = chartMarker
  };
 
 ChartMarkerSettings chartMarker= new ChartMarkerSettings();

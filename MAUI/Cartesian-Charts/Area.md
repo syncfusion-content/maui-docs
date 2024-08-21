@@ -203,6 +203,7 @@ AreaSeries series = new AreaSeries()
    YBindingPath = "Percentage",
    ItemsSource = new ViewModel().Data,
    ShowMarkers = true,
+   MarkerSettings = chartMarker
 };
 
 chart.Series.Add(series);

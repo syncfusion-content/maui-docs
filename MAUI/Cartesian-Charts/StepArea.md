@@ -152,6 +152,7 @@ StepAreaSeries = new StepAreaSeries()
    YBindingPath = "Value",
    ItemsSource = new ViewModel().Data,
    ShowMarkers = true,
+   MarkerSettings = chartMarker
 };
 
 chart.Series.Add(series);

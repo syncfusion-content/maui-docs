@@ -189,7 +189,8 @@ StackingAreaSeries series = new StackingAreaSeries()
     ItemsSource = new ViewModel().StackData,
     XBindingPath = "Year",
     YBindingPath = "Value",
-    ShowMarkers= true
+    ShowMarkers= true,
+    MarkerSettings = chartMarker
 };
 ...
 chart.Series.Add(series);
