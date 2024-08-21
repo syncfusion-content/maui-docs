@@ -121,6 +121,7 @@ SplineRangeAreaSeries series = new SplineRangeAreaSeries()
     XBindingPath = "XValue",
     High="HighValue",
     Low="LowValue",
+    Type = SplineType.Cardinal
 };
 
 chart.Series.Add(series);
