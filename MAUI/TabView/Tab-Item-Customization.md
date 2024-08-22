@@ -482,7 +482,7 @@ tabView.IsScrollButtonEnabled = true;
 
 ## Content transition duration
 
-We can customize the duration of the animation when changing the selected index of the SelectionIndicator in the Tab View by setting the `ContentTransitionDuration` property.
+You can customize the animation duration when changing the selected index of the Tab View by setting the `ContentTransitionDuration` property.
 
 {% tabs %}
 

@@ -166,8 +166,7 @@ The [IndicatorWidthMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Tab
 ![Selection Indicator Background.](images/IndicatorWidthMode_Stretch.png) 
 
 ## Indicator's corner radius
-
-The selection Indicator can be customized using `CornerRadius` property, which is type of CornerRadius.
+You can customize the corner radius of the selection indicator using the `CornerRadius` property in the Tab View.
 
 {% tabs %}
 
