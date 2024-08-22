@@ -5,11 +5,12 @@ description: Learn here all about Right To Left support in Syncfusion .NET MAUI 
 platform: maui
 control: SfSwitch
 documentation: ug
+keywords : .net maui switch, maui switch, .net maui switch rtl, maui switch flow direction.
 ---
 
 # Right To Left in .NET MAUI Switch (SfSwitch)
 
-SfSwitch supports changing the layout direction of the control in the right-to-left direction by setting the FlowDirection to RightToLeft or by changing the device language.
+The .NET MAUI Switch supports changing the layout direction of the control in the right-to-left direction by setting the `FlowDirection` to RightToLeft or by changing the device language.
 
 {% tabs %}
 

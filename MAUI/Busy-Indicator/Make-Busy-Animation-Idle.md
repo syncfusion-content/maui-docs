@@ -5,12 +5,13 @@ description: Learn here all about Make Busy Animation Idle support in Syncfusion
 platform: maui
 control: BusyIndicator
 documentation: ug
+keywords : .net maui busy indicator idle, maui busy indicator idle, maui busy indicator load, maui busy indicator running.
 ---
 # Make Busy Animation Idle in .NET MAUI Busy Indicator (SfBusyIndicator)
 
-## Make Busy Animation Idle in SfBusyIndicator
+## Make Busy Animation Idle in .NET MAUI Busy Indicator
 
-[SfBusyIndicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html) control provides support to determine whether an animation needs to be executed or not. Setting the [IsRunning](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html#Syncfusion_Maui_Core_SfBusyIndicator_IsRunning) property to false will stop the animation and removes the control from view.
+[.NET MAUI Busy Indicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html) control provides support to determine whether an animation needs to be executed or not. Setting the [IsRunning](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html#Syncfusion_Maui_Core_SfBusyIndicator_IsRunning) property to false will stop the animation and removes the control from view.
 
 {% tabs %}
 

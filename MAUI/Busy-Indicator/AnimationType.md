@@ -5,16 +5,17 @@ description: Learn here all about Animation Type support in Syncfusion .NET MAUI
 platform: maui
 control: BusyIndicator
 documentation: ug
+keywords : .net maui busy indicator animation type, maui busy indicator animation type, maui busy indicator animation.
 ---
 # Animation Type in .NET MAUI Busy Indicator (SfBusyIndicator)
 
-## Animation Type in SfBusyIndicator
+## Animation Type in .NET MAUI Busy Indicator
 
-The [AnimationType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html#Syncfusion_Maui_Core_SfBusyIndicator_AnimationType) property for the SfBusyIndicator allows the users to set one of the animations from the built-in animations. The different types of animations are [CircularMaterial](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.AnimationType.html#Syncfusion_Maui_Core_AnimationType_CircularMaterial), [Cupertino](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.AnimationType.html#Syncfusion_Maui_Core_AnimationType_Cupertino), and [LinearMaterial.](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.AnimationType.html#Syncfusion_Maui_Core_AnimationType_LinearMaterial)
+The [AnimationType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html#Syncfusion_Maui_Core_SfBusyIndicator_AnimationType) property for the .NET MAUI Busy Indicator allows the users to set one of the animations from the built-in animations. The different types of animations are [CircularMaterial](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.AnimationType.html#Syncfusion_Maui_Core_AnimationType_CircularMaterial), [Cupertino](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.AnimationType.html#Syncfusion_Maui_Core_AnimationType_Cupertino), and [LinearMaterial.](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.AnimationType.html#Syncfusion_Maui_Core_AnimationType_LinearMaterial)
 
 ### Circular Material 
 
-The CircularMaterial animation is an one of the built-in animations in [SfBusyIndicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html?tabs=tabid-1). Refer to the following code example. Here, we’ll set the animation type as [CircularMaterial.](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.AnimationType.html#Syncfusion_Maui_Core_AnimationType_CircularMaterial)
+The CircularMaterial animation is an one of the built-in animations in [.NET MAUI Busy Indicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html?tabs=tabid-1). Refer to the following code example. Here, we’ll set the animation type as [CircularMaterial.](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.AnimationType.html#Syncfusion_Maui_Core_AnimationType_CircularMaterial)
 
 {% tabs %}
 
@@ -44,7 +45,7 @@ The following gif image illustrates the result of the above code.
 
 ### Cupertino
 
-The Cupertino animation is an one of the built-in animations in [SfBusyIndicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html?tabs=tabid-1). Refer to the following code example. Here, we’ll set the animation type as [Cupertino](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.AnimationType.html#Syncfusion_Maui_Core_AnimationType_Cupertino).
+The Cupertino animation is an one of the built-in animations in [.NET MAUI Busy Indicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html?tabs=tabid-1). Refer to the following code example. Here, we’ll set the animation type as [Cupertino](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.AnimationType.html#Syncfusion_Maui_Core_AnimationType_Cupertino).
 
 {% tabs %}
 
@@ -74,7 +75,7 @@ The following gif image illustrates the result of the above code.
 
 ### Linear Material
 
-The LinearMaterial animation is an one of the built-in animations in [SfBusyIndicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html?tabs=tabid-1). Refer to the following code example. Here, we’ll set the animation type as [LinearMaterial](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.AnimationType.html#Syncfusion_Maui_Core_AnimationType_LinearMaterial).
+The LinearMaterial animation is an one of the built-in animations in [.NET MAUI Busy Indicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html?tabs=tabid-1). Refer to the following code example. Here, we’ll set the animation type as [LinearMaterial](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.AnimationType.html#Syncfusion_Maui_Core_AnimationType_LinearMaterial).
 
 {% tabs %}
 
@@ -104,7 +105,7 @@ The following gif image illustrates the result of the above code.
 
 ### Single Circle
 
-The SingleCircle animation is an one of the built-in animations in [SfBusyIndicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html?tabs=tabid-1). Refer to the following code example. Here, we’ll set the animation type as `SingleCircle`
+The SingleCircle animation is an one of the built-in animations in [.NET MAUI Busy Indicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html?tabs=tabid-1). Refer to the following code example. Here, we’ll set the animation type as `SingleCircle`
 
 {% tabs %}
 
@@ -134,7 +135,7 @@ The following gif image illustrates the result of the above code.
 
 ### Double Circle
 
-The DoubleCircle animation is an one of the built-in animations in [SfBusyIndicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html?tabs=tabid-1). Refer to the following code example. Here, we’ll set the animation type as `DoubleCircle`
+The DoubleCircle animation is an one of the built-in animations in [.NET MAUI Busy Indicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html?tabs=tabid-1). Refer to the following code example. Here, we’ll set the animation type as `DoubleCircle`
 
 {% tabs %}
 
