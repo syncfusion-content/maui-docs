@@ -15,7 +15,7 @@ The default elements of a card can be customized using the below properties of [
 * [`ImageURL`]() - Used to set the image URL of a card. The image will be displayed at right side in default card template.
 * [`Category`]() - Used to set the category of a card. Based on the category the cards will be added to the respective columns. 
 * [`Description`]() - Used to set the description text of a card.
-* [`IndicatorFill`]() - Used to specify the indicator color. The [`Color`]() value of the corresponding [`IndicatorFill`]() should be added in [`ColorModel`]() collection of [`SfKanban`]().
+* [`IndicatorFill`]() - Used to specify the indicator color.
 * [`Tags`]() - Used to specify the tags of a card. The tags will be displayed at bottom in default card template.
 * [`ID`]() - Used to set the ID of a card.
 
@@ -24,27 +24,14 @@ The default elements of a card can be customized using the below properties of [
     new KanbanModel()
     {
         ID = 1,
-        Title = "iOS - 1002",IndicatorFill
+        Title = "iOS - 1002",
         ImageURL = "Image1.png",
         Category = "Open",
         Description = "Analyze customer requirements",
-        IndicatorFill = "Red",
+        IndicatorFill = Colors.Red;
         Tags = new string[] { "Incident", "Customer" }
     });
 
-{% endhighlight %}
-
-Following code snippet is used to define the colors for each key.
-
-{% highlight C# %}
-
-    List<KanbanColorMapping> colorModels = new List<KanbanColorMapping>();
-    colorModels.Add(new KanbanColorMapping("Green", Color.Green));
-    colorModels.Add(new KanbanColorMapping("Red", Color.Red));
-    colorModels.Add(new KanbanColorMapping("Aqua", Color.Aqua));
-    colorModels.Add(new KanbanColorMapping("Blue", Color.Blue));
-    kanban.ColorModel = colorModels;
-    
 {% endhighlight %}
 
 ![Customization of cards in .NET MAUI Kanban]()
