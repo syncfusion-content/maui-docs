@@ -9,7 +9,7 @@ documentation: ug
 
 # Header display mode in .NET MAUI Tab View control (SfTabView)
 
-By default, the Tab View control displays the title of each Tab Item. It can be changed to any of the following types:
+By default, the [.NET MAUI Tab View](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html) control displays the title of each Tab Item. It can be changed to any of the following types:
 
 * Default
 * Image
@@ -17,7 +17,7 @@ By default, the Tab View control displays the title of each Tab Item. It can be 
 
 ![Image for HeaderDisplayMode](images/Header-Display-Mode.png)
 
-The Tab View can be changed by setting the `HeaderDisplayMode` property of [`SfTabView`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.html).
+The Tab View can be changed by setting the `HeaderDisplayMode` property of [.NET MAUI Tab View](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.html).
 
 {% tabs %}
 
