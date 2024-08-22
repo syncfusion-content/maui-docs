@@ -2,7 +2,7 @@
 layout: post
 title: Cards in .NET MAUI Kanban Board control | Syncfusion
 description: Learn here all about Cards support in Syncfusion .NET MAUI Kanban Board (SfKanban) control, its elements and more.
-platform: .NET MAUI
+platform: maui
 control: Kanban
 documentation: ug
 ---
@@ -33,8 +33,6 @@ The default elements of a card can be customized using the below properties of [
     });
 
 {% endhighlight %}
-
-![Customization of cards in .NET MAUI Kanban]()
 
 ## Template
 
@@ -126,8 +124,6 @@ You can replace the entire card template with your own design using [`CardTempla
 
 {% endtabs %}
 
-![Template support for cards in .NET MAUI Kanban]()
-
 ## Data template selector
 
 You can customize the appearance of each card with different templates based on specific constraints using [`DataTemplateSelector`]().
@@ -218,6 +214,3 @@ Assign custom [`DataTemplateSelector`]() to the [`CardTemplate`]() of the SfKanb
 {% endhighlight %}
 
 {% endtabs %}
-
-![DataTemplateSelector support for cards in .NET MAUI Kanban]()
-

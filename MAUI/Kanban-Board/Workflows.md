@@ -2,7 +2,7 @@
 layout: post
 title: Workflows in .NET MAUI Kanban Board control | Syncfusion
 description: Learn here all about Workflows support in Syncfusion .NET MAUI Kanban Board (SfKanban) control and more.
-platform: .NET MAUI
+platform: maui
 control: Kanban
 documentation: ug
 ---
@@ -38,6 +38,3 @@ The following code example describes the workflow functionality.
 
 
 In the below output, you can see the card which was picked from Open state is not allowed to drop on “Code Review” and "Done" state, because we have defined to move the card from Open to “In Progress” state only and not to any other states.
-
-
-![Workflows]()

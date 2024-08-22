@@ -2,7 +2,7 @@
 layout: post
 title: Placeholder in .NET MAUI Kanban Board control | Syncfusion
 description: Learn here all about Placeholder support in Syncfusion .NET MAUI Kanban Board (SfKanban) control and more.
-platform: .NET MAUI
+platform: maui
 control: Kanban
 documentation: ug
 ---
@@ -80,6 +80,3 @@ The following code example describes the above behavior.
 {% endtabs %}
 
 The following output demonstrates the above code example.
-
-![PlaceholderStyle support for .NET MAUI Kanban]()
-

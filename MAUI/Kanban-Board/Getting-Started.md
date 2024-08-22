@@ -2,7 +2,7 @@
 layout: post
 title: Getting Started with .NET MAUI Kanban Board control | Syncfusion
 description: Learn here about getting started with Syncfusion .NET MAUI Kanban Board (SfKanban) control, its elements and more.
-platform: .NET MAUI
+platform: maui
 control: Kanban
 documentation: ug
 ---
@@ -13,7 +13,7 @@ This section provides a quick overview for working with Essential Kanban for .NE
 
 ## Creating an application using .NET MAUI Kanban Board control
 
-1. Create a new .NET MAUI application in Visual studio.
+1. Create a new .NET MAUI application in Visual Studio.
 2. Syncfusion .NET MAUI components are available in [nuget.org](https://www.nuget.org/). To add SfKanban to your project, open the NuGet package manager in Visual Studio, search for Syncfusion.Maui.Kanban and then install it.
 3. To initialize the control, import the Kanban namespace.
 4. Initialize [SfKanban]().
@@ -106,7 +106,7 @@ Create a ViewModel class with a collection property to hold a collection of [`Ka
                 ImageURL = "People_Circle1.png",
                 Category = "Open",
                 Description = "Analyze customer requirements",
-                IndicatorFill = "Red",
+                IndicatorFill = Colors.Red,
                 Tags = new string[] { "Incident", "Customer" }
             });
             Cards.Add(new KanbanModel()
@@ -116,7 +116,7 @@ Create a ViewModel class with a collection property to hold a collection of [`Ka
                 ImageURL = "People_Circle2.png",
                 Category = "Open",
                 Description = "Show the retrieved data from the server in grid control",
-                IndicatorFill = "Green",
+                IndicatorFill = Colors.Green,
                 Tags = new string[] { "Story", "Customer" }
             });
             Cards.Add(new KanbanModel()
@@ -126,7 +126,7 @@ Create a ViewModel class with a collection property to hold a collection of [`Ka
                 ImageURL = "People_Circle3.png",
                 Category = "In Progress",
                 Description = "Add responsive support to application",
-                IndicatorFill = "Brown",
+                IndicatorFill = Colors.Brown,
                 Tags = new string[] { "Story", "Customer" }
             });
             Cards.Add(new KanbanModel()
@@ -136,7 +136,7 @@ Create a ViewModel class with a collection property to hold a collection of [`Ka
                 Category = "Code Review",
                 ImageURL = "Image3.png",
                 Description = "Check login page validation",
-                IndicatorFill = "Brown",
+                IndicatorFill = Colors.Brown,
                 Tags = new string[] { "Story", "Customer" }
             });
         }
@@ -262,5 +262,3 @@ Define the categories of column using [`Categories`]() property of [`KanbanColum
 {% endhighlight %}
 
 This is how the final output will look like. You can download the entire source code of this demo from [here]().
-
-![Final output of SfKanban]()
