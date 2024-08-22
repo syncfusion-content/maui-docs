@@ -59,7 +59,7 @@ When using more number of Syncfusion controls in an application, to make the pro
 
 The theme resource dictionary contains a set of keys that are mapped to the style in control style dictionaries. The default appearance of themes can be customized by overriding the key values.
 
-The following section explains how to override both the primary and control specific keys.
+The following section explains how to override the control specific keys.
 
 ### Overriding the control specific keys
 
