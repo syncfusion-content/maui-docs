@@ -918,3 +918,39 @@ namespace RadialSample
 {% endhighlight %}
 
 {% endtabs %}
+
+## CenterButtonFontAutoScalingEnabled
+
+The `CenterButtonFontAutoScalingEnabled` property is used to automatically scale the control's font size based on the operating system's text size. The default value of `CenterButtonFontAutoScalingEnabled` property is `false`.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+ <syncfusion:SfRadialMenu  CenterButtonFontAutoScalingEnabled="True">
+ </syncfusion:SfRadialMenu>
+    
+{% endhighlight %}
+
+{% highlight C# %}
+
+using Syncfusion.Maui.RadialMenu;
+
+namespace RadialSample
+{
+    public partial class MainPage : ContentPage
+    {
+        public MainPage()
+        {
+            InitializeComponent();
+            SfRadialMenu radialMenu = new SfRadialMenu()
+            {
+                CenterButtonFontAutoScalingEnabled = true,
+            };
+        }
+    }
+}
+
+{% endhighlight %}
+
+{% endtabs %}

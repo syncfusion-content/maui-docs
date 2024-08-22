@@ -344,3 +344,30 @@ Content = sfBadgeView;
 {% endtabs %}
 
 ![BadgeView Alignment](badge-customization_images/badge_alignment.png)
+
+## Font autoscaling enabled
+
+The `FontAutoScalingEnabled` property is used to automatically scale the control's font size based on the operating system's text size. The default value of `FontAutoSaclingEnabled` property is `false`.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<badge:SfBadgeView>
+    <badge:SfBadgeView.BadgeSettings>
+        <badge:BadgeSettings FontAutoScalingEnabled="True"/>
+    </badge:SfBadgeView.BadgeSettings>
+</badge:SfBadgeView>    
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+SfBadgeView sfBadgeView = new SfBadgeView();
+BadgeSettings badgeSetting = new BadgeSettings();
+badgeSetting.FontAutoScalingEnabled = true;
+sfBadgeView.BadgeSettings = badgeSetting;
+    
+{% endhighlight %}
+
+{% endtabs %}

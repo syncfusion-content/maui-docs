@@ -729,3 +729,53 @@ namespace RadialMenuCommandSample
 }
 
 {% endhighlight %}
+
+## Font autoscaling enabled
+
+The `FontAutoScalingEnabled` property is used to automatically scale the control's font size based on the operating system's text size. The default value of `FontAutoSaclingEnabled` property is `false`.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<syncfusion:SfRadialMenu>
+    <syncfusion:SfRadialMenu.Items>
+        <syncfusion:SfRadialMenuItem Text="Bold" FontAutoScalingEnabled="True"/>
+        <syncfusion:SfRadialMenuItem Text="Copy" FontAutoScalingEnabled="True"/>
+        <syncfusion:SfRadialMenuItem Text="Undo" FontAutoScalingEnabled="True"/>
+        <syncfusion:SfRadialMenuItem Text="Paste" FontAutoScalingEnabled="True"/>
+        <syncfusion:SfRadialMenuItem Text="Color" FontAutoScalingEnabled="True"/>
+    </syncfusion:SfRadialMenu.Items>
+</syncfusion:SfRadialMenu>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+using Syncfusion.Maui.RadialMenu;
+
+namespace RadialSample
+{
+    public partial class MainPage : ContentPage
+    {
+        public MainPage()
+        {
+            InitializeComponent();
+
+            SfRadialMenu radialMenu = new SfRadialMenu();
+            RadialMenuItemsCollection itemCollection = new RadialMenuItemsCollection()
+            {
+                new SfRadialMenuItem() { Text = "Bold",  FontAutoScalingEnabled = true },
+                new SfRadialMenuItem() { Text = "Copy", FontAutoScalingEnabled = true },
+                new SfRadialMenuItem() { Text = "Undo", FontAutoScalingEnabled = true },
+                new SfRadialMenuItem() { Text = "Paste", FontAutoScalingEnabled = true },
+                new SfRadialMenuItem() { Text = "Color", FontAutoScalingEnabled = true },
+            };
+            radialMenu.Items = itemCollection;
+        }
+    }
+}
+
+{% endhighlight %}
+
+{% endtabs %}
