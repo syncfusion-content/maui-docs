@@ -126,3 +126,47 @@ The [CheckedChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons
 
 ![.NET MAUI RadioGroup horizontal orientation](Images/Grouping/radiogrouporientation.png)
 
+## Selected value
+The [.NET MAUI RadioGroup](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioGroup.html) class defines a `SelectedValue` property, of type `object`, This property represents the `Value` of the checked [.NET MAUI RadioButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioButton.html) within a group defined.
+
+When any [.NET MAUI RadioButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioButton.html) within a  [.NET MAUI RadioGroup](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioGroup.html) is checked, the `Value` of that RadioButton is assigned to the `SelectedValue` property of the RadioGroup. The `SelectedValue` is dynamically updated whenever a different RadioButton within the RadioGroup is checked.
+
+{% tabs %}
+{% highlight xaml %}
+
+	<syncfusion:SfRadioGroup SelectedValue="DebitCard">
+		<syncfusion:SfRadioButton Text="Net banking" Value="NetBanking"/>
+		<syncfusion:SfRadioButton Text="Debit card" Value="DebitCard"/>
+		<syncfusion:SfRadioButton Text="Credit card" Value="CreditCard"/>
+	</syncfusion:SfRadioGroup>
+
+{% endhighlight %}
+{% highlight c# %}
+
+	SfRadioGroup radioGroup = new SfRadioGroup
+	{
+		SelectedValue = "DebitCard"
+	};
+	SfRadioButton netBankingRadioButton = new SfRadioButton
+	{
+		Text = "Net banking",
+		Value = "NetBanking"
+	};
+	SfRadioButton debitCardRadioButton = new SfRadioButton
+	{
+		Text = "Debit card",
+		Value = "DebitCard"
+	};
+	SfRadioButton creditCardRadioButton = new SfRadioButton
+	{
+		Text = "Credit card",
+		Value = "CreditCard"
+	};
+	radioGroup.Children.Add(netBankingRadioButton);
+	radioGroup.Children.Add(debitCardRadioButton);
+	radioGroup.Children.Add(creditCardRadioButton);
+
+{% endhighlight %}
+{% endtabs %}
+
+![.NET MAUI Radio Button SelectedValue](Images/Grouping/selectedvalue.png)

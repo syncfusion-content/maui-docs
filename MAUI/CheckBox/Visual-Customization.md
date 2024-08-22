@@ -282,3 +282,27 @@ sfCheckBox.FontAutoScalingEnabled = true;
 
 {% endhighlight %}
 {% endtabs %}
+
+## Enable animation
+The `EnabledAnimation` property is used to enable or disable the animation for the [.NET MAUI CheckBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html) control. By default, this property is set to `true`, which means animations are enabled.
+
+{% tabs %}
+{% highlight xaml %}
+
+    <StackLayout>
+        <syncfusion:SfCheckBox Text="CheckBox" EnabledAnimation="False"/>
+    </StackLayout>
+
+{% endhighlight %}
+{% highlight c# %}
+
+    StackLayout stackLayout = new StackLayout();
+    SfCheckBox checkBox = new SfCheckBox
+    {
+        Text = "CheckBox",
+        EnabledAnimation = false
+    };
+    stackLayout.Children.Add(checkBox);
+
+{% endhighlight %}
+{% endtabs %}
