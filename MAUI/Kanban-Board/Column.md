@@ -229,8 +229,8 @@ The following output demonstrates the above example code.
 [`MinimumLimit`]() and [`MaximumLimit`]() properties are used to define the minimum and maximum number of items in a column. If the actual items count is exceeded or lesser than the specified limits, the error bars are used to indicate this violation. Following properties of [`ErrorbarSettings`]() are used to customize the appearance of error bar.
 
 * [`Color`]() - used to change the default color of the error bar.
-* [`MaxValidationColor`]() - used to change the maximum validation color of the error bar.
-* [`MinValidationColor`]() - used to change the minimum validation color of the error bar.
+* [`MaxValidationFill`]() - used to change the maximum validation color of the error bar.
+* [`MinValidationFill`]() - used to change the minimum validation color of the error bar.
 * [`Height`]() - used to change the height of the error bar.
 
 {% tabs %}
@@ -257,7 +257,7 @@ The following output demonstrates the above example code.
 
     <kanban:KanbanColumn x:Name="todoColumn" Title="To Do" MinimumLimit="3" MaximumLimit="5">
         <kanban:KanbanColumn.ErrorbarSettings>
-            <kanban:KanbanErrorBarSettings Color="Green" MinValidationColor="Orange" MaxValidationColor="Red" Height="4"/>
+            <kanban:KanbanErrorBarSettings Color="Green" MinValidationFill="Orange" MaxValidationFill="Red" Height="4"/>
         </kanban:KanbanColumn.ErrorbarSettings>
     </kanban:KanbanColumn>
 
@@ -266,8 +266,8 @@ The following output demonstrates the above example code.
 {% highlight C# %}
 
     todoColumn.ErrorbarSettings.Color = Color.Green;
-    todoColumn.ErrorbarSettings.MinValidationColor = Color.Orange;
-    todoColumn.ErrorbarSettings.MaxValidationColor = Color.Red;
+    todoColumn.ErrorbarSettings.MinValidationFill = Color.Orange;
+    todoColumn.ErrorbarSettings.MaxValidationFill = Color.Red;
     todoColumn.ErrorbarSettings.Height = 4;
 
 {% endhighlight %}
