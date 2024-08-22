@@ -479,3 +479,23 @@ tabView.IsScrollButtonEnabled = true;
 {% endtabs %}
 
 ![TabView Scroll Mode](images/TabViewScroll.gif) 
+
+## ContentTransitionDuration
+
+When the selected index of the control is changed, you can set the speed of the animation of SelectionIndicator by setting the `ContentTransitionDuration` property in Tab View.
+
+{% tabs %}
+
+{% highlight xaml %}
+<tabView:SfTabView  ContentTransitionDuration ="500">
+    <tabView:SfTabItem/>
+</tabView:SfTabView>
+{% endhighlight %}
+
+{% highlight C# %}
+var tabView = new SfTabView();
+tabView.ContentTransitionDuration = 500;
+{% endhighlight %}
+
+{% endtabs %}
+
