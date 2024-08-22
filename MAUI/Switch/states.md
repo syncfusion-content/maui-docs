@@ -5,15 +5,16 @@ description: Learn here all about States support in Syncfusion .NET MAUI Switch 
 platform: maui
 control: SfSwitch
 documentation: ug
+keywords : .net maui switch, maui switch, .net maui switch states, maui switch state.
 ---
 
 # States in .NET MAUI Switch (SfSwitch)
 
-Switch allows you to configure the states as explained in the following sections.
+The .NET MAUI Switch allows you to configure the states as explained in the following sections.
 
 ## On State
 
-You can switch to the on state by tapping the switch button or by setting a value as demonstrated in the following code example.
+You can switch to the "On" state by tapping the .NET MAUI Switch button or by setting a value, as demonstrated in the following code example.
 
 {% tabs %}
 
@@ -37,7 +38,7 @@ this.Content = sfSwitch;
 
 ## Off State
 
-This is the default state. You can switch to the Off state by tapping the switch button or by defining it as demonstrated in the following code example.
+This is the default state. You can switch to the "Off" state by tapping the .NET MAUI Switch button or by defining it, as demonstrated in the following code example.
 
 {% tabs %}
 
@@ -61,7 +62,7 @@ this.Content = sfSwitch;
 
 ## Indeterminate State
 
-The indeterminate state can be enabled by using [`AllowIndeterminateState`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSwitch.html#Syncfusion_Maui_Buttons_SfSwitch_AllowIndeterminateState) property, when you need to display the work progress. The following code example demonstrates how to load the switch in an Indeterminate state by setting the [`IsOn`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSwitch.html#Syncfusion_Maui_Buttons_SfSwitch_IsOn) property to null.
+The indeterminate state can be enabled by using [AllowIndeterminateState](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSwitch.html#Syncfusion_Maui_Buttons_SfSwitch_AllowIndeterminateState) property, when you need to display the work progress. The following code example demonstrates how to load the .NET MAUI Switch in an Indeterminate state by setting the [IsOn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSwitch.html#Syncfusion_Maui_Buttons_SfSwitch_IsOn) property to null.
 
 {% tabs %}
 
@@ -89,7 +90,7 @@ N> By default, the switch control has only two states: on and off.
 
 ## Disabled On
 
-You can switch to disabled on state by setting the [`IsOn`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSwitch.html#Syncfusion_Maui_Buttons_SfSwitch_IsOn) property as true and the [`IsEnabled`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSwitch.html#Syncfusion_Maui_Buttons_SfSwitch_IsEnabled) property as false.
+You can switch to disabled on state by setting the [IsOn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSwitch.html#Syncfusion_Maui_Buttons_SfSwitch_IsOn) property as true and the [IsEnabled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSwitch.html#Syncfusion_Maui_Buttons_SfSwitch_IsEnabled) property as false.
 
 {% tabs %}
 
@@ -114,7 +115,7 @@ this.Content = sfSwitch;
 
 ## Disabled Off
 
-You can switch to disabled off state by setting the [`IsOn`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSwitch.html#Syncfusion_Maui_Buttons_SfSwitch_IsOn) property as false and the [`IsEnabled`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSwitch.html#Syncfusion_Maui_Buttons_SfSwitch_IsEnabled) property as false.
+You can switch to disabled off state by setting the [IsOn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSwitch.html#Syncfusion_Maui_Buttons_SfSwitch_IsOn) property as false and the [IsEnabled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSwitch.html#Syncfusion_Maui_Buttons_SfSwitch_IsEnabled) property as false.
 
 {% tabs %}
 
@@ -139,7 +140,7 @@ this.Content = sfSwitch;
 
 ## Disabled Indeterminate
 
-The disabled indeterminate state can be enabled when you need to display the work progress. The below code example demonstrates loading the switch in disabled indeterminate state by setting the [`IsOn`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSwitch.html#Syncfusion_Maui_Buttons_SfSwitch_IsOn) property value as null and the [`IsEnabled`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSwitch.html#Syncfusion_Maui_Buttons_SfSwitch_IsEnabled) property as false.
+The disabled indeterminate state can be enabled when you need to display the work progress. The below code example demonstrates loading the switch in disabled indeterminate state by setting the [IsOn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSwitch.html#Syncfusion_Maui_Buttons_SfSwitch_IsOn) property value as null and the [IsEnabled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSwitch.html#Syncfusion_Maui_Buttons_SfSwitch_IsEnabled) property as false.
 
 {% tabs %}
 

@@ -5,6 +5,7 @@ description: Learn here all about introduction of Syncfusion .NET MAUI Busy Indi
 platform: maui
 control: BusyIndicator
 documentation: ug
+keywords : .net maui busy indicator, maui busy indicator, maui loading indicator.
 ---
 
 # .NET MAUI Busy Indicator (SfBusyIndicator) Overview
