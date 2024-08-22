@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Drilldown in .NET MAUI TreeMap Control | Syncfusion
-description: Learn here all about drilldown support in Syncfusion .NET MAUI TreeMap control and more.
+description: Learn here all about rtl in Syncfusion .NET MAUI TreeMap control.
 platform: maui
 control: TreeMap (SfTreeMap)
 documentation: ug
