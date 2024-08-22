@@ -371,3 +371,35 @@ sfBadgeView.BadgeSettings = badgeSetting;
 {% endhighlight %}
 
 {% endtabs %}
+
+## Visibility of badge
+
+You can show or hide the badges in the .NET MAUI BadgeView by setting the `IsVisible` property in the [BadgeSetting](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBadgeView.html?tabs=tabid-1#Syncfusion_Maui_Core_SfBadgeView_BadgeSettings). By default, the badge will be visible.
+
+{% tabs %}
+{% highlight xaml %}
+
+<badge:SfBadgeView BadgeText="20">
+    <badge:SfBadgeView.Content>
+        <Button Text="Message"/>
+    </badge:SfBadgeView.Content>
+    <badge:SfBadgeView.BadgeSettings>
+        <badge:BadgeSettings IsVisible="True"/>
+    </badge:SfBadgeView.BadgeSettings>
+</badge:SfBadgeView>
+
+{% endhighlight %}
+{% highlight C# %}
+
+Button button=new Button();
+button.Text="Message";
+BadgeSettings badgeSettings=bew BadgeSettings();
+badgeSettings.IsVisible=true;
+BadgeView badgeView=new BadgeView();
+badgeView.BadgeText=20;
+badgeView.BadgeSettings=badgeSettings;
+badgeVuew.Content=button;
+Content=badgeView;
+
+{% endhighlight %}
+{% endtabs %}
