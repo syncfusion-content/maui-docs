@@ -69,52 +69,27 @@ N> It is recommended to set the TabBarHeight as 72 while displaying the image an
 
 {% endtabs %}
 
-## Customize the Tab Header Alignment
+## Customize the tab header text alignment
 
-The horizontal text alignment of the tab header can be customized by setting the `HeaderHorizontalTextAlignment` property.The default value is center.
+The horizontal text alignment of the tab header can be customized by setting the HeaderHorizontalTextAlignment property. The default value is Center. This property accepts the following values:
 
-### Start
-
-Text will we placed the starting position in header tab.
-
-{% tabs %}
-
-{% highlight xaml %} <tabView:SfTabView HeaderHorizontalTextAlignment="Start"> {% endhighlight %}
-
-{% highlight C# %} tabView.HeaderHorizontalTextAlignment = TextAlignment.Start; {% endhighlight %}
-
-{% endtabs %}
-
-![Tab Bar Placement Top](images/HorizontalTextAlignmentStart.png) 
-
-
-### Center
-
-Text will we placed the center position in header tab.
+*   **Start** - The text will be placed at the starting position in the header tab.
+*   **Center** - The text will be placed at the center of the header tab.
+*   **End** - The text will be placed at the end of the header tab.
 
 {% tabs %}
 
-{% highlight xaml %} <tabView:SfTabView HeaderHorizontalTextAlignment="Center"> {% endhighlight %}
+{% highlight xaml %} 
+<tabView:SfTabView HeaderHorizontalTextAlignment="Center"> 
+{% endhighlight %}
 
-{% highlight C# %} tabView.HeaderHorizontalTextAlignment = TextAlignment.Center; {% endhighlight %}
-
-{% endtabs %}
-
-![Tab Bar Placement Top](images/HorizontalTextAlignmentCenter.png) 
-
-
-### End
-Text will we placed the End position.
-
-{% tabs %}
-
-{% highlight xaml %} <tabView:SfTabView HeaderHorizontalTextAlignment="End"> {% endhighlight %}
-
-{% highlight C# %} tabView.HeaderHorizontalTextAlignment = TextAlignment.End; {% endhighlight %}
+{% highlight C# %} 
+tabView.HeaderHorizontalTextAlignment = TextAlignment.Center; {% endhighlight %}
 
 {% endtabs %}
 
-![Tab Bar Placement Top](images/HorizontalTextAlignmentEnd.png) 
+![Tab header text alignment](images/HorizontalTextAlignmentCenter.png) 
+
 
 ## Tab bar placement options 
 
