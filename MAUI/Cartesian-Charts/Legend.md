@@ -108,11 +108,11 @@ this.Content=chart;
 
 The [`Label`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.CartesianSeries.html#Syncfusion_Maui_Charts_CartesianSeries_Label) property of [`CartesianSeries`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.CartesianSeries.html) is used to define the label for the corresponding series legend item. The appearance of the label can be customized using the [`LabelStyle`]() property. 
 
-* [`TextColor`]() – used to change the color of the label.
-* [`FontFamily`]() - used to change the font family for the legend label. 
-* [`FontAttributes`]() - used to change the font style for the legend label. 
-* [`FontSize`]() - used to change the font size for the legend label.
-* [`Margin`]() - used to change the margin size of labels.
+* [`TextColor`]() – Gets or sets the color of the label.
+* [`FontFamily`]() - Gets or sets the font family for the legend label. 
+* [`FontAttributes`]() - Gets or sets the font style for the legend label. 
+* [`FontSize`]() - Gets or sets the font size for the legend label.
+* [`Margin`]() - Gets or sets the margin size of labels.
 
 {% tabs %} 
 
@@ -122,7 +122,7 @@ The [`Label`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Cartesi
     <chart:SfCartesianChart.Legend>
         <chart:ChartLegend>
             <chart:ChartLegend.LabelStyle>
-                <chart:ChartLegendLabelStyle TextColor="Blue" Margin="5" FontSize="18" FontAttributes="Bold" FontFamily="Pacifico-Regular"/>
+                <chart:ChartLegendLabelStyle TextColor="Blue" Margin="5" FontSize="18" FontAttributes="Bold" FontFamily="PlaywriteAR-Regular"/>
             </chart:ChartLegend.LabelStyle>
         </chart:ChartLegend>
     </chart:SfCartesianChart.Legend>
@@ -137,7 +137,7 @@ chart.Legend.LabelStyle.TextColor = Color.Blue;
 chart.Legend.LabelStyle.FontSize = 18;
 chart.Legend.LabelStyle.FontAttributes = FontAttributes.Bold;
 chart.Legend.LabelStyle.Margin = 5;
-chart.Legend.LabelStyle.FontFamily = "Pacifico-Regular";
+chart.Legend.LabelStyle.FontFamily = "PlaywriteAR-Regular";
 
 {% endhighlight %}
 
@@ -369,9 +369,8 @@ this.Content = chart;
 
 **LegendItemCreated**
 
-The [`LegendItemCreated`]() event is triggered when the chart legend item is created. This argument contains the following information.
+The [`LegendItemCreated`]() event is triggered when the chart legend item is created. The argument contains the [`LegendItem`]() object. The following properties are present in [`LegendItem`]().
 
-* [`LegendItem`]() – Used to customize the label and appearance of individual legend item. 
 * [`TextColor`]() – used to change the color of the label.
 * [`FontFamily`]() - used to change the font family for the legend label. 
 * [`FontAttributes`]() - used to change the font style for the legend label. 
