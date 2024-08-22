@@ -106,7 +106,7 @@ Create a ViewModel class with a collection property to hold a collection of [`Ka
                 ImageURL = "People_Circle1.png",
                 Category = "Open",
                 Description = "Analyze customer requirements",
-                ColorKey = "Red",
+                IndicatorFill = "Red",
                 Tags = new string[] { "Incident", "Customer" }
             });
             Cards.Add(new KanbanModel()
@@ -116,7 +116,7 @@ Create a ViewModel class with a collection property to hold a collection of [`Ka
                 ImageURL = "People_Circle2.png",
                 Category = "Open",
                 Description = "Show the retrieved data from the server in grid control",
-                ColorKey = "Green",
+                IndicatorFill = "Green",
                 Tags = new string[] { "Story", "Customer" }
             });
             Cards.Add(new KanbanModel()
@@ -126,7 +126,7 @@ Create a ViewModel class with a collection property to hold a collection of [`Ka
                 ImageURL = "People_Circle3.png",
                 Category = "In Progress",
                 Description = "Add responsive support to application",
-                ColorKey = "Brown",
+                IndicatorFill = "Brown",
                 Tags = new string[] { "Story", "Customer" }
             });
             Cards.Add(new KanbanModel()
@@ -136,7 +136,7 @@ Create a ViewModel class with a collection property to hold a collection of [`Ka
                 Category = "Code Review",
                 ImageURL = "Image3.png",
                 Description = "Check login page validation",
-                ColorKey = "Brown",
+                IndicatorFill = "Brown",
                 Tags = new string[] { "Story", "Customer" }
             });
         }
