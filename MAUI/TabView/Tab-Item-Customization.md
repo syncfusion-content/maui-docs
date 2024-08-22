@@ -480,9 +480,9 @@ tabView.IsScrollButtonEnabled = true;
 
 ![TabView Scroll Mode](images/TabViewScroll.gif) 
 
-## Font autoscaling enabled
+## FontAutoScalingEnabled
 
-The `FontAutoScalingEnabled` property is used to automatically scale the control's font size based on the operating system's text size. The default value of `FontAutoSaclingEnabled` property is `false`.
+The `FontAutoScalingEnabled` property is used to automatically scale the control's font size based on the operating system's text size. The default value of `FontAutoScalingEnabled` property is `false`.
 
 {% tabs %}
 

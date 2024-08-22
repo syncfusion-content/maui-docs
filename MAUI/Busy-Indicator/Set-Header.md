@@ -199,9 +199,9 @@ The following screenshot illustrates the result of the above code.
 
 ![Font Customization](Images/SetHeader/Fontattributes.png)
 
-## Font autoscaling enabled
+## FontAutoScalingEnabled
 
-The `FontAutoScalingEnabled` property is used to automatically scale the control's font size based on the operating system's text size. The default value of `FontAutoSaclingEnabled` property is `false`.
+The `FontAutoScalingEnabled` property is used to automatically scale the control's font size based on the operating system's text size. The default value of `FontAutoScalingEnabled` property is `false`.
 
 {% tabs %}
 
