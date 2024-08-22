@@ -172,7 +172,7 @@ The visibility of segments in the funnel chart can be controlled by tapping the 
 
 {% endhighlight %}
 
-{% highlight c# }
+{% highlight c# %}
 
 ChartViewModel viewModel = new();
 
