@@ -69,6 +69,53 @@ N> It is recommended to set the TabBarHeight as 72 while displaying the image an
 
 {% endtabs %}
 
+## Customize the Tab Header Alignment
+
+The horizontal text alignment of the tab header can be customized by setting the `HeaderHorizontalTextAlignment` property.The default value is center.
+
+### Start
+
+Text will we placed the starting position in header tab.
+
+{% tabs %}
+
+{% highlight xaml %} <tabView:SfTabView HeaderHorizontalTextAlignment="Start"> {% endhighlight %}
+
+{% highlight C# %} tabView.HeaderHorizontalTextAlignment = TextAlignment.Start; {% endhighlight %}
+
+{% endtabs %}
+
+![Tab Bar Placement Top](images/HorizontalTextAlignmentStart.png) 
+
+
+### Center
+
+Text will we placed the center position in header tab.
+
+{% tabs %}
+
+{% highlight xaml %} <tabView:SfTabView HeaderHorizontalTextAlignment="Center"> {% endhighlight %}
+
+{% highlight C# %} tabView.HeaderHorizontalTextAlignment = TextAlignment.Center; {% endhighlight %}
+
+{% endtabs %}
+
+![Tab Bar Placement Top](images/HorizontalTextAlignmentCenter.png) 
+
+
+### End
+Text will we placed the End position.
+
+{% tabs %}
+
+{% highlight xaml %} <tabView:SfTabView HeaderHorizontalTextAlignment="End"> {% endhighlight %}
+
+{% highlight C# %} tabView.HeaderHorizontalTextAlignment = TextAlignment.End; {% endhighlight %}
+
+{% endtabs %}
+
+![Tab Bar Placement Top](images/HorizontalTextAlignmentEnd.png) 
+
 ## Tab bar placement options 
 
 The .NET MAUI Tab View provides two options for determining how the tab bar aligns relative to the tab content. The options are top and bottom. This can be done using the [TabBarPlacement](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_TabBarPlacement) property.

@@ -164,3 +164,21 @@ The [IndicatorWidthMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Tab
 {% endtabs %}
 
 ![Selection Indicator Background.](images/IndicatorWidthMode_Stretch.png) 
+
+## Indicator CornerRadius
+
+The selection Indicator can be customized using `CornerRadius` property, which is type of CornerRadius.
+
+{% tabs %}
+
+{% highlight xaml %}
+    <tabView:SfTabView IndicatorCornerRadius ="5">
+{% endhighlight %}
+
+{% highlight C# %}
+     tabView.IndicatorCornerRadius  = 5;
+{% endhighlight %}
+
+{% endtabs %} 
+
+![Selection Indicator Background.](images/IndicatorCornerRadius.png) 
