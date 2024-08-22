@@ -482,7 +482,7 @@ tabView.IsScrollButtonEnabled = true;
 
 ## Content transition duration
 
-You can customize the animation duration when changing the selected index of the Tab View by setting the `ContentTransitionDuration` property.
+You can customize the animation duration when changing the [SelectedIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_SelectedIndex) of the Tab View by setting the `ContentTransitionDuration` property.
 
 {% tabs %}
 
