@@ -10,7 +10,7 @@ keywords: .net maui funnel chart, funnel-chart, chart legend, legend-wrap, legen
 
 # Legend in .NET MAUI Chart (SfFunnelChart)
 
-The [Legend](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartBase.html#Syncfusion_Maui_Charts_ChartBase_Legend) provides a list of data points, helping to identify the corresponding data points in the chart. Here's a detailed guide on how to define and customize the legend in the cartesian chart.
+The [Legend](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartBase.html#Syncfusion_Maui_Charts_ChartBase_Legend) provides a list of data points, helping to identify the corresponding data points in the chart. Here's a detailed guide on how to define and customize the legend in the Cartesian chart.
 
 ## Defining the legend
 
@@ -172,7 +172,7 @@ The visibility of segments in the funnel chart can be controlled by tapping the 
 
 {% endhighlight %}
 
-{% highlight c#}
+{% highlight c# }
 
 ChartViewModel viewModel = new();
 
