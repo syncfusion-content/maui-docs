@@ -271,14 +271,14 @@ The `FontAutoScalingEnabled` property is used to automatically scale the Check b
 {% tabs %}
 {% highlight xaml %}
 
-        <syncfusion:SfCheckBox Text="CheckBox" FontAutoScalingEnabled="True"/>
+<syncfusion:SfCheckBox Text="CheckBox" FontAutoScalingEnabled="True"/>
 
 {% endhighlight %}
 {% highlight c# %}
 
-    SfCheckBox  sfCheckBox  = new SfCheckBox();
-    sfCheckBox.Text = "CheckBox";
-    sfCheckBox.FontAutoScalingEnabled = true;
+SfCheckBox  sfCheckBox  = new SfCheckBox();
+sfCheckBox.Text = "CheckBox";
+sfCheckBox.FontAutoScalingEnabled = true;
 
 {% endhighlight %}
 {% endtabs %}

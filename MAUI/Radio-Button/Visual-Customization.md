@@ -188,14 +188,14 @@ The `FontAutoScalingEnabled` property is used to automatically scale the Radio b
 {% tabs %}
 {% highlight xaml %}
 
-    <syncfusion:SfRadioButton Text="RadioButton" FontAutoScalingEnabled="True"/>
+<syncfusion:SfRadioButton Text="RadioButton" FontAutoScalingEnabled="True"/>
 
 {% endhighlight %}
 {% highlight c# %}
 
-	SfRadioButton radioButton = new SfRadioButton();
-	radioButton.Text = "Radio Button";
-	radioButton.FontAutoScalingEnabled = true;
+SfRadioButton radioButton = new SfRadioButton();
+radioButton.Text = "Radio Button";
+radioButton.FontAutoScalingEnabled = true;
 
 {% endhighlight %}
 {% endtabs %}

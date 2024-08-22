@@ -934,22 +934,10 @@ The `CenterButtonFontAutoScalingEnabled` property is used to automatically scale
 
 {% highlight C# %}
 
-using Syncfusion.Maui.RadialMenu;
-
-namespace RadialSample
+SfRadialMenu radialMenu = new SfRadialMenu()
 {
-    public partial class MainPage : ContentPage
-    {
-        public MainPage()
-        {
-            InitializeComponent();
-            SfRadialMenu radialMenu = new SfRadialMenu()
-            {
-                CenterButtonFontAutoScalingEnabled = true,
-            };
-        }
-    }
-}
+    CenterButtonFontAutoScalingEnabled = true,
+};
 
 {% endhighlight %}
 

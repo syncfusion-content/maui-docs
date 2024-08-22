@@ -487,9 +487,9 @@ The `FontAutoScalingEnabled` property is used to automatically scale the tab hea
 {% tabs %}
 
 {% highlight xaml %}
-    <tabView:SfTabView FontAutoScalingEnabled="True">
-    ...
-    </tabView:SfTabView>
+<tabView:SfTabView FontAutoScalingEnabled="True">
+...
+</tabView:SfTabView>
 {% endhighlight %}
 
 {% highlight C# %}
