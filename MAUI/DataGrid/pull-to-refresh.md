@@ -10,6 +10,62 @@ keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .ne
 
 # Pull To Refresh in MAUI DataGrid (SfDataGrid)
 
+## In-build pull to refresh using pull to refresh command in .NET MAUI DataGrid
+
+The data grid enables the `PullToRefresh` option by setting the [SfDataGrid.AllowPullToRefresh]() property to `true` and by setting the [SfDataGrid.PullToRefreshCommand]() property. When the `PullToRefresh` is enabled, the control supports for refreshing the data source at runtime while doing the pull to refresh action. 
+
+## Pull to refresh command
+
+The data grid refreshes the data in view at runtime by triggering an `ICommand` bound to the `SfDataGrid.PullToRefreshCommand` property. While you perform pull to refresh action, if the progress bar meets 100 %, then this command is triggered to refresh the records in view. 
+
+Set the [SfDataGrid.IsBusy]() property to `true` before refreshing the records to notify the grid that pull to refresh action is being performed and set the property to `false` after the view is refreshed. You can also alter the pull to refresh animation time from the sample by setting a delay.
+
+To enable and perform pull to refresh operation, follow the code example:
+
+{% tabs %}
+
+{% highlight c# %}
+//Enable PullToRefresh in SfDataGrid
+dataGrid.AllowPullToRefresh = true;
+dataGrid.TransitionType = Syncfusion.Maui.PullToRefresh.PullToRefreshTransitionType.Push;
+dataGrid.PullToRefreshCommand = new Command(ExecutePullToRefreshCommand);
+ 
+private async void ExecutePullToRefreshCommand()
+{
+    this.dataGrid.IsBusy = true;
+    await Task.Delay(new TimeSpan(0, 0, 5));
+    viewModel.ItemsSourceRefresh();
+    this.dataGrid.IsBusy = false;
+}
+
+//ViewModel.cs
+public void ItemsSourceRefresh()
+{
+    int count = random.Next (1, 10);
+    var ordeshipcity = this.shipCity[this.shipCountry[this.random.Next(0, 5)]];
+    for (int i = 1; i <= count; i++) 
+    {
+        this.OrdersInfo!.Insert(0, new OrderInfo()
+        {
+            OrderID = i,
+            CustomerID = this.customerID[this.random.Next(15)],
+            EmployeeID = this.random.Next(1700, 1800),
+            FirstName = this.firstNames[this.random.Next(15)],
+            LastName = this.lastNames[this.random.Next(15)],
+            Gender = this.genders[this.random.Next(5)],
+            ShipCountry = this.shipCountry[this.random.Next(5)],
+            ShippingDate = DateTime.Now,
+            Freight = Math.Round(this.random.Next(1000) + this.random.NextDouble(), 2),
+            IsClosed = (i % this.random.Next(1, 10) > 5) ? true : false,
+            ShipCity = ordeshipcity[0],
+        });
+    }        
+}
+{% endhighlight %}
+{% endtabs %}
+
+<img alt="in-build pull to refresh" src="Images\pull-to-refresh\net-maui-pull-to-refresh.gif" width="404"/>
+
 ## Host .NET MAUI DataGrid as pullable content
 
 The `PullToRefresh` control provides support for loading any custom control as pullable content. To host the .NET MAUI Datagrid inside the PullToRefresh, follow these steps.
