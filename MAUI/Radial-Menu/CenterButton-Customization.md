@@ -921,7 +921,7 @@ namespace RadialSample
 
 ## CenterButtonFontAutoScalingEnabled
 
-The `CenterButtonFontAutoScalingEnabled` property is used to automatically scale the control's font size based on the operating system's text size. The default value of `CenterButtonFontAutoScalingEnabled` property is `false`. This property applies to both the  [`CenterButtonText`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_CenterButtonText) and the [`CenterButtonBackText`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_CenterButtonBackText).
+The `CenterButtonFontAutoScalingEnabled` property is used to automatically scale the Radial menu's center button font size based on the operating system's text size. The default value of the `CenterButtonFontAutoScalingEnabled` property is `false.` This property applies to both the  [`CenterButtonText`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_CenterButtonText) and the [`CenterButtonBackText`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_CenterButtonBackText).
 
 {% tabs %}
 

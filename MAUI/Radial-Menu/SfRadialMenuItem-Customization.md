@@ -730,9 +730,9 @@ namespace RadialMenuCommandSample
 
 {% endhighlight %}
 
-## Font autoscaling enabled
+## FontAutoScalingEnabled
 
-The `FontAutoScalingEnabled` property is used to automatically scale the control's font size based on the operating system's text size. The default value of `FontAutoScalingEnabled` property is `false`.
+The `FontAutoScalingEnabled` property is used to automatically scale the Radial menu item's font size based on the operating system's text size. The default value of the `FontAutoScalingEnabled` property is `false.`
 
 {% tabs %}
 
@@ -752,29 +752,16 @@ The `FontAutoScalingEnabled` property is used to automatically scale the control
 
 {% highlight C# %}
 
-using Syncfusion.Maui.RadialMenu;
-
-namespace RadialSample
+SfRadialMenu radialMenu = new SfRadialMenu();
+RadialMenuItemsCollection itemCollection = new RadialMenuItemsCollection()
 {
-    public partial class MainPage : ContentPage
-    {
-        public MainPage()
-        {
-            InitializeComponent();
-
-            SfRadialMenu radialMenu = new SfRadialMenu();
-            RadialMenuItemsCollection itemCollection = new RadialMenuItemsCollection()
-            {
-                new SfRadialMenuItem() { Text = "Bold",  FontAutoScalingEnabled = true },
-                new SfRadialMenuItem() { Text = "Copy", FontAutoScalingEnabled = true },
-                new SfRadialMenuItem() { Text = "Undo", FontAutoScalingEnabled = true },
-                new SfRadialMenuItem() { Text = "Paste", FontAutoScalingEnabled = true },
-                new SfRadialMenuItem() { Text = "Color", FontAutoScalingEnabled = true },
-            };
-            radialMenu.Items = itemCollection;
-        }
-    }
-}
+    new SfRadialMenuItem() { Text = "Bold",  FontAutoScalingEnabled = true },
+    new SfRadialMenuItem() { Text = "Copy", FontAutoScalingEnabled = true },
+    new SfRadialMenuItem() { Text = "Undo", FontAutoScalingEnabled = true },
+    new SfRadialMenuItem() { Text = "Paste", FontAutoScalingEnabled = true },
+    new SfRadialMenuItem() { Text = "Color", FontAutoScalingEnabled = true },
+};
+radialMenu.Items = itemCollection;
 
 {% endhighlight %}
 

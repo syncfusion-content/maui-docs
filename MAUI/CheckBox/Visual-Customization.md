@@ -266,24 +266,19 @@ The [`ControlSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.
 
 ## FontAutoScalingEnabled
 
-The `FontAutoScalingEnabled` property is used to automatically scale the control's font size based on the operating system's text size. The default value of `FontAutoScalingEnabled` property is `false`.
+The `FontAutoScalingEnabled` property is used to automatically scale the Check box's font size based on the operating system's text size. The default value of the `FontAutoScalingEnabled` property is `false.`
 
 {% tabs %}
 {% highlight xaml %}
 
-    <StackLayout>
         <syncfusion:SfCheckBox Text="CheckBox" FontAutoScalingEnabled="True"/>
-    </StackLayout>
 
 {% endhighlight %}
 {% highlight c# %}
 
-    StackLayout stackLayout = new StackLayout();
     SfCheckBox  sfCheckBox  = new SfCheckBox();
     sfCheckBox.Text = "CheckBox";
     sfCheckBox.FontAutoScalingEnabled = true;
-    stackLayout.Children.Add(sfCheckBox);
-    this.Content = stackLayout;
 
 {% endhighlight %}
 {% endtabs %}

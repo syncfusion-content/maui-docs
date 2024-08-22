@@ -482,12 +482,13 @@ tabView.IsScrollButtonEnabled = true;
 
 ## FontAutoScalingEnabled
 
-The `FontAutoScalingEnabled` property is used to automatically scale the control's font size based on the operating system's text size. The default value of `FontAutoScalingEnabled` property is `false`.
+The `FontAutoScalingEnabled` property is used to automatically scale the tab header's font size based on the operating system's text size. The default value of the `FontAutoScalingEnabled` property is `false.`
 
 {% tabs %}
 
 {% highlight xaml %}
     <tabView:SfTabView FontAutoScalingEnabled="True">
+    ...
     </tabView:SfTabView>
 {% endhighlight %}
 

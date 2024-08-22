@@ -201,7 +201,7 @@ The following screenshot illustrates the result of the above code.
 
 ## FontAutoScalingEnabled
 
-The `FontAutoScalingEnabled` property is used to automatically scale the control's font size based on the operating system's text size. The default value of `FontAutoScalingEnabled` property is `false`.
+The `FontAutoScalingEnabled` property is used to automatically scale the Busy Indicator's title font size based on the operating system's text size. The default value of the `FontAutoScalingEnabled` property is `false.`
 
 {% tabs %}
 
