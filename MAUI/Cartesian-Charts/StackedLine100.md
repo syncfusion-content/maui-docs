@@ -357,7 +357,7 @@ In order to change the series markers appearance, create an instance of the [Mar
     chartMarker.Height = 8;
     chartMarker.Width = 8;
 
-    StackingLine100Series series1 = new  StackingLine100Series()
+    StackingLine100Series series = new  StackingLine100Series()
     {
         XBindingPath = "Month",
         YBindingPath = "Value",
@@ -366,7 +366,7 @@ In order to change the series markers appearance, create an instance of the [Mar
         MarkerSettings = chartMarker,
     };
 
-    chart.Series.Add(series1);
+    chart.Series.Add(series);
     this.Content = chart;
 
 {% endhighlight %}
