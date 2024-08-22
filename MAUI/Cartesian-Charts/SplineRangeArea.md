@@ -68,8 +68,6 @@ this.Content = chart;
 
 {% endtabs %}
 
-![Spline range area chart type in MAUI Chart]()
-
 ### Spline rendering types
 
 The [Type]() property allows to change the rendering type of spline curve in series. The default value of [Type]() is [Natural](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SplineType.html#Syncfusion_Maui_Charts_SplineType_Natural).
@@ -131,5 +129,3 @@ this.Content = chart;
 {% endhighlight %}
 
 {% endtabs %}
-
-![Spline types in MAUI Spline range area chart]()
