@@ -336,7 +336,7 @@ chart.Legend = new LegendExt();
 
 
 ## Items layout
-An [ItemsLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLegend.html#Syncfusion_Maui_Charts_ChartLegend_ItemsLayout) property is used to customize the arrangement and posistion for each legend item. The default value is `null`. It accepts any layout type in ItemsLayout property.
+An [ItemsLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLegend.html#Syncfusion_Maui_Charts_ChartLegend_ItemsLayout) property is used to customize the arrangement and position for each legend item. The default value is `null`. It accepts any layout type in ItemsLayout property.
 
 {% tabs %}
 
