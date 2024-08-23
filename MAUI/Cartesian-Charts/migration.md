@@ -198,7 +198,7 @@ The following table illustrates the API migration for the chart.
 </tr>
 <tr>
 <td>TickPosition</td>
-<td><em>TickPosition</em></td>
+<td>TickPosition</td>
 </tr>
 <tr>
 <td>MaximumLabels</td>
@@ -206,11 +206,11 @@ The following table illustrates the API migration for the chart.
 </tr>
 <tr>
 <td>LabelsIntersectAction</td>
-<td><em>Upcoming</em></td>
+<td>LabelsIntersectAction</td>
 </tr>
 <tr>
 <td>TrackballLabelTemplate</td>
-<td><em>TrackballLabelTemplate</em></td>
+<td>TrackballLabelTemplate</td>
 </tr>
 </table>
 
@@ -870,7 +870,7 @@ chart.ZoomPanBehavior = zooming;
 * Title support for legend. 
 * Support to enable or disable the legend icon visibility.
 * Legend floating support.
-* Event or method to notify the legend click and the creation of a legend item.
+* Event or method to notify when a legend item is clicked.
 
 **Data label**
 

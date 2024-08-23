@@ -10,7 +10,7 @@ keywords: .net maui funnel chart, funnel-chart, chart legend, legend-wrap, legen
 
 # Legend in .NET MAUI Chart (SfFunnelChart)
 
-The [Legend](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartBase.html#Syncfusion_Maui_Charts_ChartBase_Legend) provides a list of data points, helping to identify the corresponding data points in the chart. Here's a detailed guide on how to define and customize the legend in the cartesian chart.
+The [Legend](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartBase.html#Syncfusion_Maui_Charts_ChartBase_Legend) provides a list of data points, helping to identify the corresponding data points in the chart. Here's a detailed guide on how to define and customize the legend in the funnel chart.
 
 ## Defining the legend
 
@@ -148,6 +148,45 @@ chart.Legend = new ChartLegend()
 };
 
 this.Content = chart;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+## Toggle the series visibility
+The visibility of segments in the funnel chart can be controlled by tapping the legend item using the [ToggleSeriesVisibility](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLegend.html?tabs=tabid-1%2Ctabid-3%2Ctabid-7%2Ctabid-12%2Ctabid-5%2Ctabid-10#Syncfusion_Maui_Charts_ChartLegend_ToggleSeriesVisibility) property. The default value of ToggleSeriesVisibility is `false`.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<chart:SfFunnelChart ItemsSource="{Binding Data}" 
+                     XBindingPath="Name"         
+                     YBindingPath="Value">
+    . . .
+    <chart:SfFunnelChart.Legend>
+        <chart:ChartLegend ToggleSeriesVisibility="True"/>
+    </chart:SfFunnelChart.Legend>
+    . . .
+</chart:SfFunnelChart>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+ChartViewModel viewModel = new();
+
+SfFunnelChart funnelChart = new SfFunnelChart()
+{
+    ItemsSource = viewModel.Data,
+    XBindingPath = "Name",
+    YBindingPath = "Value"
+};
+
+funnelChart.Legend = new ChartLegend()
+{
+    ToggleSeriesVisibility = true
+};
 
 {% endhighlight %}
 
