@@ -181,7 +181,7 @@ The [`ControlSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.
 {% endhighlight %}
 {% endtabs %}
 
-## Font autoscaling enabled
+## Font auto scaling enabled
 The `FontAutoScalingEnabled` property is used to automatically scale the Radio button's font size based on the operating system's text size. The default value of the `FontAutoScalingEnabled` property is `false.`
 
 {% tabs %}

@@ -479,7 +479,7 @@ tabView.IsScrollButtonEnabled = true;
 {% endtabs %}
 
 ![TabView Scroll Mode](images/TabViewScroll.gif) 
-## Font autoscaling enabled
+## Font auto scaling enabled
 
 The `FontAutoScalingEnabled` property is used to automatically scale the tab header's font size based on the operating system's text size. The default value of the `FontAutoScalingEnabled` property is `false.`
 

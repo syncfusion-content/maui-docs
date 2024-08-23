@@ -345,7 +345,7 @@ Content = sfBadgeView;
 
 ![BadgeView Alignment](badge-customization_images/badge_alignment.png)
 
-## Font autoscaling enabled
+## Font auto scaling enabled
 
 The `FontAutoScalingEnabled` property is used to automatically scale the badge text's font size based on the operating system's text size. The default value of the `FontAutoScalingEnabled` property is `false.`
 
