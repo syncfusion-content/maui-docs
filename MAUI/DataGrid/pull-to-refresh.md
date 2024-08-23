@@ -102,7 +102,7 @@ The following code example demonstrates how to set the `TransitionMode` to `Push
 
 <img alt="TransitionMode Push" src="Images\pull-to-refresh\net-maui-pull-to-refresh-push.gif" width="404"/>
 
-# Customization
+### Customization
 
 The data grid allows you to customize various properties such as TransitionMode, PullingThreshold, ProgressBackground, ProgressColor, and more. Refer to the code example below to customize the ProgressColor and ProgressBackground of the pull-to-refresh view.
 
