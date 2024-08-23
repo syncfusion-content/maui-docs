@@ -162,6 +162,7 @@ RangeAreaSeries series = new RangeAreaSeries()
     Low = "LowValue",
     ItemsSource = new ViewModel().Data,
     ShowMarkers = true,
+    MarkerSettings = chartMarker
 };
 
 chart.Series.Add(series);
