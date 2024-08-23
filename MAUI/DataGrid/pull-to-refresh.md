@@ -97,9 +97,9 @@ You can customize various properties of SfPullToRefresh in the data grid, includ
 
 public MainPage()
 {
-InitializeComponent();
-dataGrid.AllowPullToRefresh = true;
-dataGrid.DataGridLoaded += DataGrid_DataGridLoaded;
+    InitializeComponent();
+    dataGrid.AllowPullToRefresh = true;
+    dataGrid.DataGridLoaded += DataGrid_DataGridLoaded;
 }
 
 private void DataGrid_DataGridLoaded(object? sender, EventArgs e)
