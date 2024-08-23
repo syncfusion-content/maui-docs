@@ -199,3 +199,26 @@ The following screenshot illustrates the result of the above code.
 
 ![Font Customization](Images/SetHeader/Fontattributes.png)
 
+## FontAutoScalingEnabled
+
+The `FontAutoScalingEnabled` property is used to automatically scale the Busy Indicator's title font size based on the operating system's text size. The default value of the `FontAutoScalingEnabled` property is `false.`
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<core:SfBusyIndicator FontAutoScalingEnabled="True"/>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+    
+SfBusyIndicator busyIndicator = new SfBusyIndicator()
+{
+    FontAutoScalingEnabled = true,
+};
+
+{% endhighlight %}
+
+{% endtabs %}
