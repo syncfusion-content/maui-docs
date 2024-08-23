@@ -263,3 +263,46 @@ The [`ControlSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.
 
 {% endhighlight %}
 {% endtabs %}
+
+## FontAutoScalingEnabled
+
+The `FontAutoScalingEnabled` property is used to automatically scale the Check box's font size based on the operating system's text size. The default value of the `FontAutoScalingEnabled` property is `false.`
+
+{% tabs %}
+{% highlight xaml %}
+
+<syncfusion:SfCheckBox Text="CheckBox" FontAutoScalingEnabled="True"/>
+
+{% endhighlight %}
+{% highlight c# %}
+
+SfCheckBox  sfCheckBox  = new SfCheckBox();
+sfCheckBox.Text = "CheckBox";
+sfCheckBox.FontAutoScalingEnabled = true;
+
+{% endhighlight %}
+{% endtabs %}
+
+## Enable animation
+The `EnabledAnimation` property is used to enable or disable the animation for the [.NET MAUI CheckBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html) control. By default, this property is set to `true`, which means animations are enabled.
+
+{% tabs %}
+{% highlight xaml %}
+
+    <StackLayout>
+        <syncfusion:SfCheckBox Text="CheckBox" EnabledAnimation="False"/>
+    </StackLayout>
+
+{% endhighlight %}
+{% highlight c# %}
+
+    StackLayout stackLayout = new StackLayout();
+    SfCheckBox checkBox = new SfCheckBox
+    {
+        Text = "CheckBox",
+        EnabledAnimation = false
+    };
+    stackLayout.Children.Add(checkBox);
+
+{% endhighlight %}
+{% endtabs %}

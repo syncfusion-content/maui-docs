@@ -180,3 +180,45 @@ The [`ControlSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.
 
 {% endhighlight %}
 {% endtabs %}
+
+## FontAutoScalingEnabled
+The `FontAutoScalingEnabled` property is used to automatically scale the Radio button's font size based on the operating system's text size. The default value of the `FontAutoScalingEnabled` property is `false.`
+
+{% tabs %}
+{% highlight xaml %}
+
+<syncfusion:SfRadioButton Text="RadioButton" FontAutoScalingEnabled="True"/>
+
+{% endhighlight %}
+{% highlight c# %}
+
+SfRadioButton radioButton = new SfRadioButton();
+radioButton.Text = "Radio Button";
+radioButton.FontAutoScalingEnabled = true;
+
+{% endhighlight %}
+{% endtabs %}
+
+## Enable animation
+The `EnabledAnimation` property is used to enable or disable the animation for the [.NET MAUI RadioButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioButton.html) control. By default, this property is set to `true`, which means animations are enabled.
+
+{% tabs %}
+{% highlight xaml %}
+
+	<StackLayout>
+		<syncfusion:SfRadioButton Text="Radio Button" EnabledAnimation="False"/>
+	</StackLayout>
+
+{% endhighlight %}
+{% highlight c# %}
+
+	StackLayout stackLayout = new StackLayout();
+	SfRadioButton radioButton = new SfRadioButton
+	{
+		Text = "Radio Button",
+		EnabledAnimation = false
+	};
+	stackLayout.Children.Add(radioButton);
+
+{% endhighlight %}
+{% endtabs %}

@@ -206,6 +206,43 @@ this.Content = chart;
 
 {% endtabs %}
 
+## Toggle the series visibility
+The visibility of segments in the pyramid chart can be controlled by tapping the legend item using the [ToggleSeriesVisibility](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLegend.html?tabs=tabid-1%2Ctabid-3%2Ctabid-7%2Ctabid-12%2Ctabid-5%2Ctabid-10#Syncfusion_Maui_Charts_ChartLegend_ToggleSeriesVisibility) property. The default value of ToggleSeriesVisibility is `false`.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<chart:SfPyramidChart ItemsSource="{Binding Data}" 
+                      XBindingPath="Name"         
+                      YBindingPath="Value">
+    . . .
+    <chart:SfPyramidChart.Legend>
+        <chart:ChartLegend ToggleSeriesVisibility="True"/>
+    </chart:SfPyramidChart.Legend>
+    . . .
+</chart:SfPyramidChart>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+SfPyramidChart pyramidChart = new SfPyramidChart()
+{
+    ItemsSource = viewModel.Data,
+    XBindingPath = "Name",
+    YBindingPath = "Value"
+};
+
+pyramidChart.Legend = new ChartLegend()
+{
+    ToggleSeriesVisibility = true
+};
+
+{% endhighlight %}
+
+{% tabs %}
+
 ## Legend maximum size request
 To set the maximum size request for the legend view, override the [GetMaximumSizeCoefficient](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLegend.html#Syncfusion_Maui_Charts_ChartLegend_GetMaximumSizeCoefficient) protected method in [ChartLegend](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLegend.html) class. The value should be between 0 and 1, representing the maximum size request, not the desired size for the legend items layout.
 
