@@ -134,37 +134,37 @@ When any [.NET MAUI RadioButton](https://help.syncfusion.com/cr/maui/Syncfusion.
 {% tabs %}
 {% highlight xaml %}
 
-	<syncfusion:SfRadioGroup SelectedValue="DebitCard">
-		<syncfusion:SfRadioButton Text="Net banking" Value="NetBanking"/>
-		<syncfusion:SfRadioButton Text="Debit card" Value="DebitCard"/>
-		<syncfusion:SfRadioButton Text="Credit card" Value="CreditCard"/>
-	</syncfusion:SfRadioGroup>
+<syncfusion:SfRadioGroup SelectedValue="DebitCard">
+    <syncfusion:SfRadioButton Text="Net banking" Value="NetBanking"/>
+    <syncfusion:SfRadioButton Text="Debit card" Value="DebitCard"/>
+    <syncfusion:SfRadioButton Text="Credit card" Value="CreditCard"/>
+</syncfusion:SfRadioGroup>
 
 {% endhighlight %}
 {% highlight c# %}
 
-	SfRadioGroup radioGroup = new SfRadioGroup
-	{
-		SelectedValue = "DebitCard"
-	};
-	SfRadioButton netBankingRadioButton = new SfRadioButton
-	{
-		Text = "Net banking",
-		Value = "NetBanking"
-	};
-	SfRadioButton debitCardRadioButton = new SfRadioButton
-	{
-		Text = "Debit card",
-		Value = "DebitCard"
-	};
-	SfRadioButton creditCardRadioButton = new SfRadioButton
-	{
-		Text = "Credit card",
-		Value = "CreditCard"
-	};
-	radioGroup.Children.Add(netBankingRadioButton);
-	radioGroup.Children.Add(debitCardRadioButton);
-	radioGroup.Children.Add(creditCardRadioButton);
+SfRadioGroup radioGroup = new SfRadioGroup
+{
+    SelectedValue = "DebitCard"
+};
+SfRadioButton netBankingRadioButton = new SfRadioButton
+{
+    Text = "Net banking",
+    Value = "NetBanking"
+};
+SfRadioButton debitCardRadioButton = new SfRadioButton
+{
+    Text = "Debit card",
+    Value = "DebitCard"
+};
+SfRadioButton creditCardRadioButton = new SfRadioButton
+{
+    Text = "Credit card",
+    Value = "CreditCard"
+};
+radioGroup.Children.Add(netBankingRadioButton);
+radioGroup.Children.Add(debitCardRadioButton);
+radioGroup.Children.Add(creditCardRadioButton);
 
 {% endhighlight %}
 {% endtabs %}
