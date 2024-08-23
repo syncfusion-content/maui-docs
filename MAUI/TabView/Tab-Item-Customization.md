@@ -479,7 +479,6 @@ tabView.IsScrollButtonEnabled = true;
 {% endtabs %}
 
 ![TabView Scroll Mode](images/TabViewScroll.gif) 
-
 ## Font autoscaling enabled
 
 The `FontAutoScalingEnabled` property is used to automatically scale the tab header's font size based on the operating system's text size. The default value of the `FontAutoScalingEnabled` property is `false.`
@@ -495,6 +494,25 @@ The `FontAutoScalingEnabled` property is used to automatically scale the tab hea
 {% highlight C# %}
     var tabView = new SfTabView();
     tabView.FontAutoScalingEnabled = true;
+{% endhighlight %}
+
+{% endtabs %}
+
+## Content transition duration
+
+You can customize the animation duration when changing the [SelectedIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_SelectedIndex) of the Tab View by setting the `ContentTransitionDuration` property.
+
+{% tabs %}
+
+{% highlight xaml %}
+<tabView:SfTabView  ContentTransitionDuration ="300">
+    <tabView:SfTabItem/>
+</tabView:SfTabView>
+{% endhighlight %}
+
+{% highlight C# %}
+var tabView = new SfTabView();
+tabView.ContentTransitionDuration = 300;
 {% endhighlight %}
 
 {% endtabs %}

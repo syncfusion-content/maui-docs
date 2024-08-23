@@ -227,7 +227,7 @@ this.Content = chart;
 </tr>
 <tr>
 <td>ToggleSeriesVisibility</td>
-<td><em>Upcoming</em></td>
+<td>ToggleSeriesVisibility</td>
 </tr>
 <tr>
 <td>OverflowMode</td>
@@ -617,7 +617,7 @@ N> For more information about selection check [here](https://help.syncfusion.com
 * Title support for legend. 
 * Support to enable or disable the legend icon visibility.
 * Legend floating support.
-* Event or method to notify the legend click and the creation of a legend item.
+* Event or method to notify when a legend item is clicked.
 * The ability to show/hide corresponding data points by legend item toggle.
 
 ## Known issue 
