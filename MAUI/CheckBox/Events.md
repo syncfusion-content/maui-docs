@@ -72,10 +72,10 @@ The `StateChanging` event is triggered when the state of the [IsChecked](https:/
 {% endhighlight %}
 {% highlight c# %}
 
-    SfCheckBox checkBox = new SfCheckBox();
-    checkBox.Text = "CheckBox";
-    checkBox.StateChanging += OnStateChanging;
-    this.Content = checkBox;
+SfCheckBox checkBox = new SfCheckBox();
+checkBox.Text = "CheckBox";
+checkBox.StateChanging += OnStateChanging;
+this.Content = checkBox;
 	
 {% endhighlight %}
 {% endtabs %}

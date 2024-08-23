@@ -80,17 +80,17 @@ The `StateChanging` event is triggered when the state of the [IsChecked](https:/
 {% endhighlight %}
 {% highlight c# %}
 
-    SfRadioGroup radioGroup = new SfRadioGroup();
-    SfRadioButton check = new SfRadioButton();
-    check.Text = "Checked State";
-    check.IsChecked = true;
-    check.StateChanging += OnStateChanging;
-    SfRadioButton uncheck = new SfRadioButton();
-    uncheck.Text = "Unchecked State";
-    uncheck.StateChanging += OnStateChanging;
-    radioGroup.Children.Add(check);
-    radioGroup.Children.Add(uncheck);
-    this.Content = radioGroup;
+SfRadioGroup radioGroup = new SfRadioGroup();
+SfRadioButton check = new SfRadioButton();
+check.Text = "Checked State";
+check.IsChecked = true;
+check.StateChanging += OnStateChanging;
+SfRadioButton uncheck = new SfRadioButton();
+uncheck.Text = "Unchecked State";
+uncheck.StateChanging += OnStateChanging;
+radioGroup.Children.Add(check);
+radioGroup.Children.Add(uncheck);
+this.Content = radioGroup;
 	
 {% endhighlight %}
 {% endtabs %}
