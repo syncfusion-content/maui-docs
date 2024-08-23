@@ -123,9 +123,12 @@ private void DataGrid_DataGridLoaded(object? sender, EventArgs e)
     dataGrid.PullToRefreshCommand = RefreshCommand;
     if (dataGrid.Children.Count > 0)
     {
-        dataGrid.Children.OfType<SfPullToRefresh>().First().ProgressColor = Colors.Gray;
-        dataGrid.Children.OfType<SfPullToRefresh>().First().ProgressBackground = Colors.LightBlue;
-        dataGrid.Children.OfType<SfPullToRefresh>().First().ProgressThickness = 4;
+        SfPullToRefresh refreshView = dataGrid.Children.OfType<SfPullToRefresh>().First();
+        refreshView.ProgressColor = Color.FromArgb("ffb703");
+        refreshView.ProgressBackground = Color.FromArgb("023047");
+        refreshView.ProgressThickness = 4;
+        refreshView.RefreshViewThreshold = 10;
+        refreshView.PullingThreshold = 120;
     }
 }
 
