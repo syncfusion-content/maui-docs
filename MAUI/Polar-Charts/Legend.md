@@ -507,15 +507,20 @@ this.Content = chart;
 
 The [`LegendItemCreated`]() event is triggered when the chart legend item is created. The argument contains the [`LegendItem`]() object. The following properties are present in [`LegendItem`]().
 
-* [`TextColor`]() – used to change the color of the label.
-* [`FontFamily`]() - used to change the font family for the legend label. 
-* [`FontAttributes`]() - used to change the font style for the legend label. 
-* [`FontSize`]() - used to change the font size for the legend label.
-* [`Margin`]() - used to change the margin size of labels.
+* [`Text`]() – used to get or set the text of the label.
+* [`TextColor`]() – used to get or set the color of the label.
+* [`FontFamily`]() - used to get or set the font family for the legend label. 
+* [`FontAttributes`]() - used to get or set the font style for the legend label. 
+* [`FontSize`]() - used to get or set the font size for the legend label.
+* [`TextMargin`]() - used to get or set the margin size of labels.
 * [`IconBrush`]() - used to change the color of the legend icon.
-* [`IconType`]() - used to change the icon type for the legend icon.
-* [`IconHeight`]() - used to change the icon height of the legend icon.
-* [`IconWidth`]() - used to change the icon width of the legend icon.
+* [`IconType`]() - used to get or set the icon type for the legend icon.
+* [`IconHeight`]() - used to get or set the icon height of the legend icon.
+* [`IconWidth`]() - used to get or set the icon width of the legend icon.
+* [`IsToggled`]() - used to get or set the toggle visibility of the legend.
+* [`DisableBrush`]() - used to get or set the color of the legend when toggled.
+* [`Index`]() - used to get index position of the legend.
+* [`Item`]() - used to get the corresponding series for the legend item.
 
 ## Limitations
 * Do not add items explicitly.
