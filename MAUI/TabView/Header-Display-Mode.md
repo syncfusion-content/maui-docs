@@ -23,61 +23,42 @@ The Tab View can be changed by setting the `HeaderDisplayMode` property of [.NET
 
 {% highlight xaml %}
 
-    <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-                x:Class="TabView.MainPage"
-                xmlns:tabView="clr-namespace:Syncfusion.Maui.TabView;assembly=Syncfusion.Maui.TabView">
-
-        <tabView:SfTabView HeaderDisplayMode="Default">
-            <tabView:SfTabItem Header="Item1" ImageSource="avatar1.png" />
-            <tabView:SfTabItem Header="Item2" ImageSource="avatar2.png" />
-            <tabView:SfTabItem Header="Item3" ImageSource="avatar3.png" />
-        </tabView:SfTabView>
-
-    </ContentPage>
+<tabView:SfTabView HeaderDisplayMode="Default">
+    <tabView:SfTabItem Header="Item1" ImageSource="avatar1.png" />
+    <tabView:SfTabItem Header="Item2" ImageSource="avatar2.png" />
+    <tabView:SfTabItem Header="Item3" ImageSource="avatar3.png" />
+</tabView:SfTabView>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-    using Syncfusion.Maui.TabView;
-    namespace UGSample
-    {
-        public partial class MainPage : ContentPage
-        {          
-            public MainPage()
-            {
-                InitializeComponent();
-                SfTabView tabView = new SfTabView
-                {
-                    HeaderDisplayMode = TabBarDisplayMode.Default
-                };
-                SfTabItem tabItem1 = new SfTabItem
-                {
-                    Header = "Item1",
-                    ImageSource = "avatar1.png"
-                };
-                SfTabItem tabItem2 = new SfTabItem
-                {
-                    Header = "Item2",
-                    ImageSource = "avatar2.png"
-                };
-                SfTabItem tabItem3 = new SfTabItem
-                {
-                    Header = "Item3",
-                    ImageSource = "avatar3.png"
-                };
-                tabView.Items.Add(tabItem1);
-                tabView.Items.Add(tabItem2);
-                tabView.Items.Add(tabItem3);
-                this.Content = tabView;
-            }
-        }
-    }
+SfTabView tabView = new SfTabView
+{
+    HeaderDisplayMode = TabBarDisplayMode.Default
+};
+SfTabItem tabItem1 = new SfTabItem
+{
+    Header = "Item1",
+    ImageSource = "avatar1.png"
+};
+SfTabItem tabItem2 = new SfTabItem
+{
+    Header = "Item2",
+    ImageSource = "avatar2.png"
+};
+SfTabItem tabItem3 = new SfTabItem
+{
+    Header = "Item3",
+    ImageSource = "avatar3.png"
+};
+tabView.Items.Add(tabItem1);
+tabView.Items.Add(tabItem2);
+tabView.Items.Add(tabItem3);
 
 {% endhighlight %}
 
 {% endtabs %}
 
-    N> The `HeaderDisplayMode` will only apply if both a `Header`and an `ImageSource` are provided for the Tab Item. If either the `Header` or `ImageSource` is missing, the Tab Item will automatically apply the Default mode.
+N> The `HeaderDisplayMode` will only apply if both a [Header](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabItem.html#Syncfusion_Maui_TabView_SfTabItem_Header) and an [ImageSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabItem.html#Syncfusion_Maui_TabView_SfTabItem_ImageSource) are provided for the Tab Item. If either the [Header](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabItem.html#Syncfusion_Maui_TabView_SfTabItem_Header) or [ImageSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabItem.html#Syncfusion_Maui_TabView_SfTabItem_ImageSource) is missing, the Tab Item will automatically apply the Default mode.
 

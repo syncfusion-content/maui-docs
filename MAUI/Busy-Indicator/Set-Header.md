@@ -199,7 +199,7 @@ The following screenshot illustrates the result of the above code.
 
 ![Font Customization](Images/SetHeader/Fontattributes.png)
 
-## FontAutoScalingEnabled
+## Font autoscaling enabled
 
 The `FontAutoScalingEnabled` property is used to automatically scale the Busy Indicator's title font size based on the operating system's text size. The default value of the `FontAutoScalingEnabled` property is `false.`
 
