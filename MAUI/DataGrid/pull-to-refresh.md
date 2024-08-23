@@ -10,25 +10,32 @@ keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .ne
 
 # Pull To Refresh in MAUI DataGrid (SfDataGrid)
 
-## In-build pull to refresh using pull to refresh command in .NET MAUI DataGrid
-
-The data grid enables the `PullToRefresh` option by setting the [SfDataGrid.AllowPullToRefresh]() property to `true` and by setting the [SfDataGrid.PullToRefreshCommand]() property. When the `PullToRefresh` is enabled, the control supports for refreshing the data source at runtime while doing the pull to refresh action. 
+The data grid enables the `PullToRefresh` option by setting the [SfDataGrid.AllowPullToRefresh]() property to `true`, the control supports for refreshing the data source at runtime while doing the pull to refresh action. 
 
 ## Pull to refresh command
 
-The data grid refreshes the data in view at runtime by triggering an `ICommand` bound to the `SfDataGrid.PullToRefreshCommand` property. While you perform pull to refresh action, if the progress bar meets 100 %, then this command is triggered to refresh the records in view. 
+The data grid refreshes the data in view at runtime by triggering an `ICommand` bound to the [SfDataGrid.PullToRefreshCommand]() property. When you perform a pull-to-refresh action, if the progress bar reaches 100%, this command is triggered to refresh the records in view.
 
-Set the [SfDataGrid.IsBusy]() property to `true` before refreshing the records to notify the grid that pull to refresh action is being performed and set the property to `false` after the view is refreshed. You can also alter the pull to refresh animation time from the sample by setting a delay.
+Set the [SfDataGrid.IsBusy]() property to `true` before refreshing the records to notify the grid that a pull-to-refresh action is being performed, and set the property to `false` after the view is refreshed. You can also adjust the pull-to-refresh animation time by setting a delay in the sample.
 
-To enable and perform pull to refresh operation, follow the code example:
+To enable and perform the pull-to-refresh operation, follow the code example:
 
 {% tabs %}
 
+{% highlight Xaml %}
+
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                       AllowPullToRefresh="True"
+                       PullToRefreshCommand="{Binding RefreshCommand}"
+                       ItemsSource="{Binding OrdersInfo}">
+{% endhighlight %}
+
 {% highlight c# %}
-//Enable PullToRefresh in SfDataGrid
+
 dataGrid.AllowPullToRefresh = true;
-dataGrid.TransitionType = Syncfusion.Maui.PullToRefresh.PullToRefreshTransitionType.Push;
-dataGrid.PullToRefreshCommand = new Command(ExecutePullToRefreshCommand);
+
+Command RefreshCommand = new Command(ExecutePullToRefreshCommand);
+dataGrid.PullToRefreshCommand = RefreshCommand;
  
 private async void ExecutePullToRefreshCommand()
 {
@@ -42,7 +49,6 @@ private async void ExecutePullToRefreshCommand()
 public void ItemsSourceRefresh()
 {
     int count = random.Next (1, 10);
-    var ordeshipcity = this.shipCity[this.shipCountry[this.random.Next(0, 5)]];
     for (int i = 1; i <= count; i++) 
     {
         this.OrdersInfo!.Insert(0, new OrderInfo()
@@ -50,21 +56,85 @@ public void ItemsSourceRefresh()
             OrderID = i,
             CustomerID = this.customerID[this.random.Next(15)],
             EmployeeID = this.random.Next(1700, 1800),
-            FirstName = this.firstNames[this.random.Next(15)],
-            LastName = this.lastNames[this.random.Next(15)],
-            Gender = this.genders[this.random.Next(5)],
-            ShipCountry = this.shipCountry[this.random.Next(5)],
-            ShippingDate = DateTime.Now,
-            Freight = Math.Round(this.random.Next(1000) + this.random.NextDouble(), 2),
-            IsClosed = (i % this.random.Next(1, 10) > 5) ? true : false,
-            ShipCity = ordeshipcity[0],
         });
     }        
 }
+
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="in-build pull to refresh" src="Images\pull-to-refresh\net-maui-pull-to-refresh.gif" width="404"/>
+<img alt="Pull To Refresh" src="Images\pull-to-refresh\net-maui-pull-to-refresh-slide-on-top.gif" width="404"/>
+
+### Transition Mode
+
+The [TransitionMode]() property specifies the mode of the animations. It has two modes:
+
+* [SlideOnTop]()
+* [Push]()
+
+The default transition is `SlideOnTop`, which draws the RefreshView on top of the `DataGrid`.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
+
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                       TransitionType="SlideOnTop"
+                       AllowPullToRefresh="True"
+                       ItemsSource="{Binding OrdersInfo}">
+
+{% endhighlight %}
+{% endtabs %}
+
+<img alt="TransitionMode SlideOnTop" src="Images\pull-to-refresh\net-maui-pull-to-refresh-slide-on-top.gif" width="404"/>
+
+The following code example demonstrates how to set the `TransitionMode` to `Push` in SfPullToRefresh. This transition moves only the refresh content, while the header remains fixed.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
+
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                       TransitionType="Push"
+                       AllowPullToRefresh="True"
+                       ItemsSource="{Binding OrdersInfo}">
+
+{% endhighlight %}
+{% endtabs %}
+
+<img alt="TransitionMode Push" src="Images\pull-to-refresh\net-maui-pull-to-refresh-push.gif" width="404"/>
+
+# Customization
+
+The data grid allows you to customize various properties such as TransitionMode, PullingThreshold, ProgressBackground, ProgressColor, and more. Refer to the code example below to customize the ProgressColor and ProgressBackground of the pull-to-refresh view.
+
+{% tabs %}
+{% highlight c# %}
+
+public MainPage()
+{
+    InitializeComponent();
+    dataGrid.AllowPullToRefresh = true;
+    dataGrid.TransitionType = PullToRefreshTransitionType.Push;
+    dataGrid.DataGridLoaded += DataGrid_DataGridLoaded;
+}
+
+private void DataGrid_DataGridLoaded(object? sender, EventArgs e)
+{
+    Command RefreshCommand = new Command(ExecutePullToRefreshCommand);
+    dataGrid.PullToRefreshCommand = RefreshCommand;
+    if (dataGrid.Children.Count > 0)
+    {
+        dataGrid.Children.OfType<SfPullToRefresh>().First().ProgressColor = Colors.Gray;
+        dataGrid.Children.OfType<SfPullToRefresh>().First().ProgressBackground = Colors.LightBlue;
+        dataGrid.Children.OfType<SfPullToRefresh>().First().ProgressThickness = 4;
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+<img alt="Customization" src="Images\pull-to-refresh\net-maui-pull-to-refresh-customization.gif" width="404"/>
+
+To customize the various properties of SfPullToRefresh, refer to this [documentation](https://help.syncfusion.com/maui/pull-to-refresh/customization).
 
 ## Host .NET MAUI DataGrid as pullable content
 
