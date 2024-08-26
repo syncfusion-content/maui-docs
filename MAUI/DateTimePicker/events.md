@@ -206,7 +206,7 @@ private void OnDateTimePickerCancelButtonClicked(object sender, EventArgs e)
 
 ### SelectionChangedCommand
 
-SfDateTimePicker includes a built-in event called `SelectionChanged` and invokes this event through the [SelectionChangedCommand]() whenever the selection index in the picker changes, with the `DateTimePickerSelectionChangedEventArgs` passed as a parameter.
+The SfDateTimePicker includes a built-in event called `SelectionChanged` that is triggered whenever the selection index in the picker changes. This event can be invoked through the [SelectionChangedCommand](), which passes the `DateTimePickerSelectionChangedEventArgs` as a parameter.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
@@ -239,7 +239,7 @@ public class ViewModel
 
 ### AcceptCommand
 
-SfDateTimePicker includes a built-in event called `OkButtonClicked` and invokes this event through the [AcceptCommand]() whenever confirm button tapped on date time picker.
+The SfDateTimePicker includes a built-in event called `OkButtonClicked`, which is triggered when the confirm button is tapped on the date time picker. This event can be invoked through the [AcceptCommand]().
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
@@ -272,7 +272,7 @@ public class ViewModel
 
 ### DeclineCommand
 
-SfDateTimePicker includes a built-in event called `CancelButtonClicked` and invokes this event through the [DeclineCommand]() whenever the cancel button tapped on date time picker.
+The SfDateTimePicker includes a built-in event called `CancelButtonClicked`, which is triggered when the cancel button is tapped on the date time picker. This event can be invoked through the [DeclineCommand]().
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}

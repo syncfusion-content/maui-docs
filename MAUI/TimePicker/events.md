@@ -224,7 +224,7 @@ private void OnTimePickerCancelButtonClicked(object sender, EventArgs e)
 
 ### SelectionChangedCommand
 
-SfTimePicker includes a built-in event called `SelectionChanged` and invokes this event through the [SelectionChangedCommand]() whenever the selection index in the picker changes, with the `TimePickerSelectionChangedEventArgs` passed as a parameter.
+The SfTimePicker includes a built-in event called `SelectionChanged` that is triggered whenever the selection index in the time picker changes. This event can be invoked through the [SelectionChangedCommand](), which passes the `TimePickerSelectionChangedEventArgs` as a parameter.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
@@ -257,7 +257,7 @@ public class ViewModel
 
 ### AcceptCommand
 
-SfTimePicker includes a built-in event called `OkButtonClicked` and invokes this event through the [AcceptCommand]() whenever confirm button tapped on time picker.
+The SfTimePicker includes a built-in event called `OkButtonClicked`, which is triggered when the confirm button is tapped on the time picker. This event can be invoked through the [AcceptCommand]().
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
@@ -290,7 +290,7 @@ public class ViewModel
 
 ### DeclineCommand
 
-SfTimePicker includes a built-in event called `CancelButtonClicked` and invokes this event through the [DeclineCommand]() whenever the cancel button tapped on time picker.
+The SfTimePicker includes a built-in event called `CancelButtonClicked`, which is triggered when the cancel button is tapped on the time picker. This event can be invoked through the [DeclineCommand]().
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}

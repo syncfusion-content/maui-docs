@@ -183,7 +183,7 @@ private void OnCalendarLongPressed(object sender, CalendarLongPressedEventArgs e
 
 ### ViewChangedCommand
 
-SfCalendar includes a built-in event called `ViewChanged` and invokes this event through the [ViewChangedCommand]() whenever the view is navigated to either the previous or next view. Additionally, the event is triggered when switching between different calendar views, with the CalendarViewChangedEventArgs provided as a parameter.
+The SfCalendar includes a built-in event called `ViewChanged`, which is triggered whenever the calendar view is navigated to either the previous or next view. This event can be invoked through the [ViewChangedCommand](), and it also triggers when switching between different calendar views. The `CalendarViewChangedEventArgs` is provided as a parameter to this event.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
@@ -216,7 +216,7 @@ public class CalendarViewModel
 
 ### SelectionChangedCommand
 
-SfCalendar includes a built-in event called `SelectionChanged` and invokes this event through the [SelectionChangedCommand]() whenever selection changes in the calendar  changes, with the `CalendarSelectionChangedEventArgs` passed as a parameter.
+The SfCalendar includes a built-in event called `SelectionChanged` that is triggered whenever the selection in the calendar changes. This event can be invoked through the [SelectionChangedCommand](), which passes the `CalendarSelectionChangedEventArgs` as a parameter.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
@@ -249,7 +249,7 @@ public class CalendarViewModel
 
 ### TappedCommand
 
-SfCalendar includes a built-in event called `Tapped` and invokes this event through the [TappedCommand]() whenever the calendar view is tapped, with the `CalendarTappedEventArgs` passed as a parameter.
+The SfCalendar includes a built-in event called `Tapped` that is triggered whenever the calendar view is tapped. This event can be invoked through the [TappedCommand]() which passes the `CalendarTappedEventArgs` as a parameter.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
@@ -282,7 +282,7 @@ public class CalendarViewModel
 
 ### DoubleTappedCommand
 
-SfCalendar includes a built-in event called `DoubleTapped` and invokes this event through the [DoubleTappedCommand]() whenever the calendar view is double tapped, with the `CalendarDoubleTappedEventArgs` passed as parameter.
+The SfCalendar includes a built-in event called `DoubleTapped` that is triggered whenever the calendar view is double-tapped. This event can be invoked through the [DoubleTappedCommand](), which passes the `CalendarDoubleTappedEventArgs` as a parameter.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="3,6,8" %}
@@ -315,7 +315,7 @@ public class CalendarViewModel
 
 ### LongPressedCommand
 
-SfCalendar includes a built-in event called `LongPressed` and invokes this event through the [LongPressedCommand]() whenever the calendar view is long pressed, with the `CalendarLongPressedEventArgs` passed as parameter.
+The SfCalendar includes a built-in event called `LongPressed`, which is triggered when the calendar view is long pressed. This event can be invoked through the [LongPressedCommand](), with the `CalendarLongPressedEventArgs` passed as a parameter.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
@@ -348,7 +348,7 @@ public class CalendarViewModel
 
 ### AcceptCommand
 
-SfCalendar includes a built-in event called `ActionButtonClicked` and invokes this event through the [AcceptCommand]() whenever confirm button tapped on calendar.
+The SfCalendar includes a built-in event called `ActionButtonClicked`, which is triggered when the confirm button is tapped on the calendar. This event can be invoked through the [AcceptCommand]().
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
@@ -381,7 +381,7 @@ public class CalendarViewModel
 
 ### DeclineCommand
 
-SfCalendar includes a built-in event called `ActionButtonCanceled` and invokes this event through the [DeclineCommand]() whenever the cancel button tapped on calendar.
+The SfCalendar includes a built-in event called `ActionButtonCanceled`, which is triggered when the cancel button is tapped on the calendar. This event can be invoked through the [DeclineCommand]().
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
@@ -411,4 +411,3 @@ public class CalendarViewModel
 
 {% endhighlight %}
 {% endtabs %}
-
