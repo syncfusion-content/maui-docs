@@ -323,8 +323,8 @@ this.Content = calendar;
 </tr>
 <tr>
 <td>{{'[HoldCommand](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_HoldCommand)'| markdownify }}</td>
-<td>Nil</td>
-<td>Not Supported.</td>
+<td>{{'[LongPressedCommand]()'| markdownify }}</td>
+<td>Gets or sets a command to hold a date of SfCalendar.</td>
 </tr>
 <tr>
 <td>{{'[InlineViewMode](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_InlineViewMode)'| markdownify }}</td>
@@ -353,8 +353,8 @@ this.Content = calendar;
 </tr>
 <tr>
 <td>{{'[MonthChangedCommand](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_MonthChangedCommand)'| markdownify }}</td>
-<td>Nil</td>
-<td>Not Supported.</td>
+<td>{{'[ViewChangedCommand]()'| markdownify }}</td>
+<td>Gets or sets a command to change the view of SfCalendar.</td>
 </tr>
 <tr>
 <td>{{'[MonthViewSettings](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_MonthViewSettings)'| markdownify }}</td>
@@ -418,8 +418,8 @@ this.Content = calendar;
 </tr>
 <tr>
 <td>{{'[SelectionChangedCommand](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_SelectionChangedCommand)'| markdownify }}</td>
-<td>Nil</td>
-<td>Not Supported.</td>
+<td>{{'[SelectionChangedCommand]()'| markdownify }}</td>
+<td>Gets or sets a command to select a date of SfCalendar.</td>
 </tr>
 <tr>
 <td>{{'[SelectionMode](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_SelectionMode)'| markdownify }}</td>
@@ -453,8 +453,8 @@ this.Content = calendar;
 </tr>
 <tr>
 <td>{{'[TapCommand](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_TapCommand)'| markdownify }}</td>
-<td>Nil</td>
-<td>Not Supported.</td>
+<td>{{'[TappedCommand]()'| markdownify }}</td>
+<td>Gets or sets a command to tap a date of SfCalendar.</td>
 </tr>
 <tr>
 <td>{{'[ToggleDaySelection](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_ToggleDaySelection)'| markdownify }}</td>
