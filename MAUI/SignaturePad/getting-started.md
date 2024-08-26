@@ -264,4 +264,26 @@ private void OnDrawCompleted(object? sender, EventArgs e)
 
 {% endtabs %}
 
+## Method
+
+### Get Signature Points
+
+The GetSignaturePoints method provides a convenient way for users to retrieve a collection of signature points.This feature eliminates the need for manual extraction, providing a straightforward and reliable way to obtain these points for further processing or analysis.
+{% tabs %}
+{% highlight xaml %}
+<signaturePad:SfSignaturePad x:Name="signaturePad"
+                             StrokeColor="Red"
+                             MinimumStrokeThickness="1"
+                             MaximumStrokeThickness="6" 
+                             DrawCompleted="OnDrawCompleted"/>
+{% endhighlight %}
+{% highlight C# %}
+private void OnDrawCompleted(object? sender, EventArgs e)
+{
+    List<List<float>> pointsCollection = new List<List<float>>();
+    pointsCollection = signaturePad.GetPointsCollection();
+}
+{% endhighlight %}
+{% endtabs %}
+
 N> You can refer to our [.NET MAUI SignaturePad](https://www.syncfusion.com/maui-controls/maui-signaturepad) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI SignaturePad Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/SignaturePad) that shows you how to render the SignaturePad in .NET MAUI.
