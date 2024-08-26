@@ -269,3 +269,102 @@ sfNumericEntry.VerticalTextAlignment = TextAlignment.Start;
 The following image illustrates the result of the above code:
 
 ![HorizontalTextAlignment](GettingStarted_images/textalignment.png)
+
+## PercentDisplayMode
+
+When the [SfNumericEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html) is in percentage format, the value can be displayed in two ways as follows:
+
+`Value`: Displays the actual value with percentage symbol.
+
+{% tabs %}
+{% highlight xaml %}
+
+<editors:SfNumericEntry x:Name="numericEntry" 
+                        CustomFormat="p" 
+                        Value="1000"  
+                        PercentDisplayMode="Value">
+</editors:SfNumericEntry>
+
+{% endhighlight %}
+{% highlight C# %}
+
+SfNumericEntry sfNumericEntry= new SfNumericEntry();
+SfNumericEntry sfNumericEntry = new SfNumericEntry();
+sfNumericEntry.Value = 1000;
+sfNumericEntry.CustomFormat = "p";
+sfNumericEntry.PercentDisplayMode = PercentDisplayMode.Value;
+
+{% endhighlight %}
+{% endtabs %}
+
+`Compute`: Displays the computed value with percentage symbol.
+
+{% tabs %}
+{% highlight xaml %}
+
+<editors:SfNumericEntry x:Name="numericEntry" 
+                        CustomFormat="p" 
+                        Value="1000"  
+                        PercentDisplayMode="Value">
+</editors:SfNumericEntry>
+
+{% endhighlight %}
+{% highlight C# %}
+
+SfNumericEntry sfNumericEntry= new SfNumericEntry();
+sfNumericEntry.Value = 1000;
+sfNumericEntry.CustomFormat = "p";
+sfNumericEntry.PercentDisplayMode = PercentDisplayMode.Compute;
+
+{% endhighlight %}
+{% endtabs %}
+
+N> Default value of PercentDisplayMode is `Compute`.
+
+## Set the maximum number of decimal digits in SfNumericTextBox
+
+The maximum number of digits to be displayed after the decimal point can be specified by using the `MaximumNumberDecimalDigits` property.
+
+N> The `MaximumNumberDecimalDigits` property can be provided with positive value only. Default value of MaximumNumberDecimalDigits is `2`.
+
+{% tabs %}
+{% highlight xaml %}
+
+<editors:SfNumericEntry x:Name="numericEntry" 
+                        Value="1000.23232"  
+                        MaximumNumberDecimalDigits="3">
+</editors:SfNumericEntry>
+
+{% endhighlight %}
+{% highlight C# %}
+
+SfNumericEntry sfNumericEntry= new SfNumericEntry();
+sfNumericEntry.Value = 1000.23232;
+sfNumericEntry.MaximumNumberDecimalDigits = 3;
+
+{% endhighlight %}
+{% endtabs %}
+
+## ReturnType
+
+The `ReturnType` property specifies the action button (e.g., Next, Done, Go) on the virtual keyboard. It helps manage the flow between multiple input fields by defining what happens when the action button is pressed.
+
+You can define the return key type of [SfNumericEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html) by using the ReturnType property.
+
+N> Default value of ReturnType is `Default`.
+
+{% tabs %}
+{% highlight xaml %}
+
+<editors:SfNumericEntry x:Name="numericEntry" 
+                        WidthRequest="200"
+                        ReturnType="Next"/>
+
+{% endhighlight %}
+{% highlight C# %}
+
+SfNumericEntry sfNumericEntry = new SfNumericEntry();
+sfNumericEntry.ReturnType = ReturnType.Next;
+
+{% endhighlight %}
+{% endtabs %}
