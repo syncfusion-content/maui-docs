@@ -79,7 +79,7 @@ The different types of formats are:
 [`hh_tt`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerTimeFormat.html#Syncfusion_Maui_Picker_PickerTimeFormat_hh_tt) - Represents the hour meridiem in hh_tt format.
 
 
-[`Default`]() - Represents the hour minute second merediam in default culture based format.
+[`Default`]() - Represents the hour minute second meridiem in default culture based format.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="2" %}
