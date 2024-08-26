@@ -70,9 +70,6 @@ public void ItemsSourceRefresh()
 
 To customize the progress view animation, adjust the [SfDataGrid.TransitionMode]() property. By default, the transition mode is set to SlideOnTop.
 
-* [SlideOnTop]()
-* [Push]()
-
 The following code snippet demonstrates how to change the transition mode to `Push`. In this mode, only the scrollable view moves, while the header remains fixed:
 
 {% tabs %}
@@ -90,7 +87,7 @@ The following code snippet demonstrates how to change the transition mode to `Pu
 
 ### Customization
 
-You can customize various properties of SfPullToRefresh in the data grid, including TransitionMode, PullingThreshold, ProgressBackground, ProgressColor, and more.
+You can customize various properties of [SfPullToRefresh](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PullToRefresh.SfPullToRefresh.html) in the data grid, including `TransitionMode`, `PullingThreshold`, `ProgressBackground`, `ProgressColor`, and more.
 
 {% tabs %}
 {% highlight c# %}
