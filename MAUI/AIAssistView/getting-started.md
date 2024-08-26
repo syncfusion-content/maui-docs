@@ -82,7 +82,7 @@ The `Syncfusion.Maui.Core` NuGet is a dependent package for all the Syncfusion c
 
 ## Creating ViewModel for the SfAIAssistView
 
-The `SfAiAssistView` control is data-bound and displays a collection of items exchanged between users and AI services. Hence, assist items should be created and bound to the control.
+The `SfAIAssistView` control is data-bound and displays a collection of items exchanged between users and AI services. Hence, assist items should be created and bound to the control.
 
 Create a simple assist items collection as shown in the following code example in a new class file. Save it as `ViewModel.cs` file.
 
@@ -101,11 +101,11 @@ Create a simple assist items collection as shown in the following code example i
       public GettingStartedViewModel()
       {
           this.assistItems = new ObservableCollection<object>();
-          this.GenerateMessages();
+          this.GenerateAssistItems();
       }
 
       /// <summary>
-      /// Gets or sets the collection of messages of a conversation.
+      /// Gets or sets the collection of AssistItems of a conversation.
       /// </summary>
       public ObservableCollection<object> AssistItems
       {
@@ -137,7 +137,7 @@ Create a simple assist items collection as shown in the following code example i
           }
       }
 
-      private void GenerateMessages()
+      private void GenerateAssistItems()
       {
           this.Messages.Add(new AssistItem()
           {
