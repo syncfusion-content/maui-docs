@@ -466,9 +466,9 @@ The [DropDownBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inp
 
 ![.NET MAUI ComboBox DropDown Background](Images/UICustomization/DropDownBackground.png)
 
-### Customize the DropDown selected item backgroundcolor
+### Customize the DropDown selected item background color
 
-The [SelectedDropDownItemBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_SelectedDropDownItemBackground) property is used to modify the backgroundcolor of selected item in the dropdown.
+The [SelectedDropDownItemBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_SelectedDropDownItemBackground) property is used to modify the background color of selected item in the dropdown.
 
 {% tabs %}
 {% highlight xaml %}
@@ -999,24 +999,21 @@ The following image illustrates the result of the above code:
 
 ## DropDown button customization
 
-We can set view to the drop down button in [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) using [DropDownButtonSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_DropDownButtonSettings) property.
+We can customize the size of the drop down button in [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) by using the `Width` and `Height` properties in [DropDownButtonSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_DropDownButtonSettings).
+
 {% tabs %}
 
 {% highlight xaml %}
 
 <editors:SfComboBox x:Name="comboBox"
+                    Placeholder="Enter Social Media"
                     ItemsSource="{Binding SocialMedias}"
-                     TextMemberPath="Name"
+                    TextMemberPath="Name"
                     DisplayMemberPath="Name"
                     HeightRequest="40"
                     WidthRequest="240">
     <editors:SfComboBox.DropDownButtonSettings>
-        <editors:DropDownButtonSettings>
-            <editors:DropDownButtonSettings.View>
-            <Label Text="Click" FontSize="12" TextColor="Blue"
-                   VerticalOptions="Center" />
-            </editors:DropDownButtonSettings.View>
-        </editors:DropDownButtonSettings>
+        <editors:DropDownButtonSettings Width="50" Height="50" />
     </editors:SfComboBox.DropDownButtonSettings>
     
 </editors:SfComboBox>
@@ -1026,20 +1023,73 @@ We can set view to the drop down button in [SfComboBox](https://help.syncfusion.
 {% highlight c# %}
 
 var dropDownButtonSettings = new DropDownButtonSettings();
-var label = new Label
-{
-    Text="Click";
-    FontSize="12"; 
-    TextColor="Blue";
-    VerticalOptions="Center" 
-};
-dropDownButtonSettings.View = label;
+dropDownButtonSettings.Width = 50;
+dropDownButtonSettings.Height = 50;
 comboBox.DropDownButtonSettings = dropDownButtonSettings;
+
 {% endhighlight %}
 
 {% endtabs %}
 
-![CustomView](images/UICustomization/DropDownButtonSettings_View.png)
+![.NET MAUI ComboBox DropDown Button Size Customization](images/UICustomization/DropDownButtonSize.png)
+
+### View for DropDown button
+
+We can set view to the drop down button in [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) using [DropDownButtonSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_DropDownButtonSettings) property.
+{% tabs %}
+
+{% highlight xaml %}
+
+<editors:SfComboBox Placeholder="Enter Social Media"
+                    ItemsSource="{Binding SocialMedias}"
+                    TextMemberPath="Name"
+                    DisplayMemberPath="Name"
+                    HeightRequest="40"
+                    WidthRequest="240">
+    <editors:SfComboBox.DropDownButtonSettings>
+        <editors:DropDownButtonSettings Width="80" Height="40">
+            <editors:DropDownButtonSettings.View>
+                <Grid BackgroundColor="GreenYellow">
+                    <Label Text="Click" 
+                           FontSize="12" 
+                           TextColor="Blue"
+                           HorizontalTextAlignment="Center"
+                           VerticalOptions="Center" />
+                </Grid>
+            </editors:DropDownButtonSettings.View>
+        </editors:DropDownButtonSettings>
+    </editors:SfComboBox.DropDownButtonSettings>
+
+</editors:SfComboBox>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+var dropDownButtonSettings = new DropDownButtonSettings();
+var label = new Label
+{
+    Text = "Click",
+    FontSize = 12,
+    TextColor = Colors.Blue,
+    HorizontalTextAlignment = TextAlignment.Center,
+    VerticalTextAlignment = TextAlignment.Center,
+};
+var grid = new Grid
+{
+    BackgroundColor = Colors.YellowGreen,
+};
+grid.Children.Add(label);
+dropDownButtonSettings.View = grid;
+dropDownButtonSettings.Width = 80;
+dropDownButtonSettings.Height = 40;
+comboBox.DropDownButtonSettings = dropDownButtonSettings;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![.NET MAUI ComboBox DropDown Button CustomView](images/UICustomization/DropDownButtonSettings_View.png)
 
 ## Styling token items
 
