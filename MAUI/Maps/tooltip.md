@@ -280,6 +280,7 @@ Customize the tooltip appearance using the following properties.
 * **Background** - Change the background color of the tooltip in maps using the [`MapTooltipSettings.Background`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapTooltipSettings.html#Syncfusion_Maui_Maps_MapTooltipSettings_Background) property.
 * **Padding** - Change the padding of the tooltip text in maps using the [`MaptooltipSettings.Padding`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapTooltipSettings.html#Syncfusion_Maui_Maps_MapTooltipSettings_Padding) property.
 * **TextStyle** - Change the tooltip text appearance such as [`TextColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLabelStyle.html#Syncfusion_Maui_Maps_MapLabelStyle_TextColor), [`FontSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLabelStyle.html#Syncfusion_Maui_Maps_MapLabelStyle_FontSize), [`FontAttributes`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLabelStyle.html#Syncfusion_Maui_Maps_MapLabelStyle_FontAttributes), and [`FontFamily`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLabelStyle.html#Syncfusion_Maui_Maps_MapLabelStyle_FontFamily) in maps using the [`MapTooltipSettings.TextStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapTooltipSettings.html#Syncfusion_Maui_Maps_MapTooltipSettings_TextStyle) property.
+* **Duration** - Change the tooltip duration time in seconds for which tooltip will be displayed using the `MapTooltipSettings.Duration` property.
 
 {% tabs %}
 
@@ -299,6 +300,7 @@ Customize the tooltip appearance using the following properties.
 
                 <map:MapShapeLayer.ShapeTooltipSettings>
                     <map:MapTooltipSettings Background="#002080"
+                                            Duration="00:00:02"
                                             Padding="2">
                         <map:MapTooltipSettings.TextStyle>
                             <map:MapLabelStyle FontSize="14"
@@ -332,6 +334,7 @@ public MainPage()
    layer.ShapeStrokeThickness = 1;
    layer.ShapeHoverFill = Color.FromArgb("#b0ed83");
    layer.ShapeFill = Color.FromArgb("#809FFF");
+   layer.ShapeTooltipSettings.Duration = new timespan(0,0,2);
    layer.ShowShapeToolTip = true;
 
    layer.ShapeTooltipSettings = new MapTooltipSettings()
