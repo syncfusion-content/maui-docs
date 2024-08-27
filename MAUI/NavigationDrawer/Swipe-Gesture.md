@@ -71,3 +71,9 @@ this.Content = navigationDrawer;
 {% endhighlight %}
 
 {% endtabs %}
+
+## See also 
+
+[How to Disable the Swipe Gesture in .NET MAUI Navigation Drawer?](https://support.syncfusion.com/kb/article/15495/how-to-disable-the-swipe-gesture-in-net-maui-navigation-drawer)
+
+[How to Change Touch Threshold in .NET MAUI NavigationDrawer?](https://support.syncfusion.com/kb/article/15500/how-to-change-touch-threshold-in-net-maui-navigationdrawer)

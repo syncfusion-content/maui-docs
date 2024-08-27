@@ -346,3 +346,7 @@ this.Content = sfSwitch;
 ![switch conrol with custom path](images/Path/Path.gif)
 
 N> Keep the size of the [`CustomPath`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SwitchSettings.html#Syncfusion_Maui_Buttons_SwitchSettings_CustomPath) within the dimensions of the thumb.
+
+## See also 
+
+[How to customize the .NET MAUI Switch control visual?](https://support.syncfusion.com/kb/article/16855/how-to-customize-the-net-maui-switch-control-visual)

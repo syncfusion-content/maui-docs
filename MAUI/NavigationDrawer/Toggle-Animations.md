@@ -116,3 +116,7 @@ this.Content = navigationDrawer;
 {% endtabs %}
 
 ![Reveal](Images/drawer-animation/reveal_animation.png)
+
+## See also 
+
+[How to set toggle animations in .NET MAUI Navigation Drawer (SfNavigationDrawer)?](https://support.syncfusion.com/kb/article/15486/how-to-set-toggle-animations-in-net-maui-navigation-drawer-sfnavigationdrawer)

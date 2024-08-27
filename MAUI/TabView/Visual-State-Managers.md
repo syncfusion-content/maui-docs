@@ -277,3 +277,7 @@ Use the visual state manager to change the .NET MAUI tab properties based on the
 ![Visual state manager](images/Visual-state-manager.png) 
 
 N> View [sample](https://github.com/SyncfusionExamples/maui-tabview-samples/tree/main/VisualStateManagerTabView) in GitHub
+
+## See also 
+
+[How to customize the text color of the header in .NET MAUI TabView?](https://support.syncfusion.com/kb/article/16788/how-to-customize-the-text-color-of-the-header-in-net-maui-tabview)
