@@ -265,4 +265,67 @@ Please refer to [`here`](https://help.syncfusion.com/maui/imageeditor/save#save-
 
 {% endtabs %}
 
+### Indicate unsaved edits
+
+* HasUnsavedEdits
+
+The `HasUnsavedEdits` property notifies the users whether there are unsaved edits such as Crop, Effects, Shapes, Text and Pen annotations in image editor. 
+
+{% tabs %}
+
+{% highlight xaml tabtitle="MainPage.xaml" %}
+
+<Grid RowDefinitions = "0.9*, 0.1*" >
+    < imageEditor:SfImageEditor x:Name="imageEditor" Source="image.jpeg" />
+    <Button Grid.Row="1" Text="HasUnsavedEdits" Clicked="OnHasUnsavedEditsClicked" HorizontalOptions="Center" />
+</ Grid >
+
+{% endhighlight %}
+
+{% highlight C# tabtitle="MainPage.xaml.cs" %}
+            
+private void OnHasUnsavedEditsClicked(object sender, EventArgs e)
+{
+    if (this.imageEditor.HasUnsavedEdits)
+    {
+        this.imageEditor.SaveEdits();
+    }
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
+
+* HasUnsavedDrawnAnnotations
+The `HasUnsavedDrawnAnnotations` property notifies the users whether there are unsaved pen, polygon and polyline drawn in image editor 
+
+{% tabs %}
+
+{% highlight xaml tabtitle="MainPage.xaml" %}
+
+<Grid RowDefinitions = "0.9*, 0.1*" >
+     < imageEditor:SfImageEditor x:Name="imageEditor" Source="image.jpeg" />
+     <Button Grid.Row="1" Text="HasUnsavedDrawnAnnotations" Clicked="OnHasUnsavedDrawnAnnotationsClicked" HorizontalOptions="Center"/>
+</ Grid >
+
+{% endhighlight %}
+
+{% highlight C# tabtitle="MainPage.xaml.cs" %}
+
+private void OnHasUnsavedDrawnAnnotationsClicked(object sender, EventArgs e)
+{
+    if (this.imageEditor.HasUnsavedEdits)
+    {
+        if (this.imageEditor.HasUnsavedDrawnAnnotations)
+        {
+            this.imageEditor.SaveEdits();
+        }
+    }
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-image-editor-examples/tree/master/ImageSavingSample)
