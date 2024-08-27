@@ -1031,7 +1031,7 @@ comboBox.DropDownButtonSettings = dropDownButtonSettings;
 
 {% endtabs %}
 
-![DropDown Button Size](images/UICustomization/DropDownButtonSize.png)
+![ComboBox DropDown Button Size Customization](images/UICustomization/DropDownButtonSize.png)
 
 ### View for DropDown button
 
@@ -1089,7 +1089,7 @@ comboBox.DropDownButtonSettings = dropDownButtonSettings;
 
 {% endtabs %}
 
-![CustomView](images/UICustomization/DropDownButtonSettings_View.png)
+![ComboBox DropDown Button CustomView](images/UICustomization/DropDownButtonSettings_View.png)
 
 ## Styling token items
 
