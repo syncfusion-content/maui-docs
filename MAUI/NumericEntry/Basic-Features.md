@@ -276,6 +276,8 @@ When the [SfNumericEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.In
 
 `Value`: Displays the actual value with percentage symbol.
 
+![.NET MAUI NumericEntry PercentDisplayMode](GettingStarted_images/percentdisplaymode_value.png)
+
 {% tabs %}
 {% highlight xaml %}
 
@@ -298,6 +300,8 @@ sfNumericEntry.PercentDisplayMode = PercentDisplayMode.Value;
 {% endtabs %}
 
 `Compute`: Displays the computed value with percentage symbol.
+
+![.NET MAUI NumericEntry PercentDisplayMode](GettingStarted_images/percentdisplaymode_compute.png)
 
 {% tabs %}
 {% highlight xaml %}
@@ -368,3 +372,6 @@ sfNumericEntry.ReturnType = ReturnType.Next;
 
 {% endhighlight %}
 {% endtabs %}
+
+![.NET MAUI NumericEntry MaximumNumberDecimalDigits](GettingStarted_images/maximumnumberdecimaldigits.png)
+

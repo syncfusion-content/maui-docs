@@ -399,7 +399,7 @@ autocomplete.DropDownBackground = Colors.YellowGreen;
 
 ![.NET MAUI Autocomplete DropDown Background](Images/UICustomization/DropDownBackground.png)
 
-### Customize the DropDown selected item backgroundcolor
+### Customize the DropDown selected item background color
 
 The [SelectedDropDownItemBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_SelectedDropDownItemBackground) property is used to modify the background color of the selected item in the dropdown.
 
@@ -1238,3 +1238,5 @@ sfAutocomplete.ReturnType = ReturnType.Next;
 
 {% endhighlight %}
 {% endtabs %}
+
+![RetrunType](Images/UICustomization/ReturnType.png)

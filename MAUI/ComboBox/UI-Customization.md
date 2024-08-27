@@ -466,9 +466,9 @@ The [DropDownBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inp
 
 ![.NET MAUI ComboBox DropDown Background](Images/UICustomization/DropDownBackground.png)
 
-### Customize the DropDown selected item backgroundcolor
+### Customize the DropDown selected item background color
 
-The [SelectedDropDownItemBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_SelectedDropDownItemBackground) property is used to modify the backgroundcolor of selected item in the dropdown.
+The [SelectedDropDownItemBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_SelectedDropDownItemBackground) property is used to modify the background color of selected item in the dropdown.
 
 {% tabs %}
 {% highlight xaml %}
@@ -1350,3 +1350,5 @@ sfComboBox.ReturnType = ReturnType.Next;
 
 {% endhighlight %}
 {% endtabs %}
+
+![ReturnType](Images/UICustomization/ReturnType.png)
