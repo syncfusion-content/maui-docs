@@ -1327,7 +1327,7 @@ The following image illustrates the result of the above code:
 
 ## ReturnType
 
-The `ReturnType` property specifies the action button (e.g., Next, Done, Go) on the virtual keyboard. It helps manage the flow between multiple input fields by defining what happens when the action button is pressed.
+The `ReturnType` property specifies the return button (e.g., Next, Done, Go) of the keyboard. It helps manage the flow between multiple input fields by defining what happens when the action button is pressed.
 
 You can define the return key type of [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) by using the ReturnType property.
 
