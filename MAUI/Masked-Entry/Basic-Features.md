@@ -342,3 +342,9 @@ The ClearButtonPath property is used to customize the appearance of the clear bu
 The following image illustrates the result of the above code:
 
 ![ClearButtonPath](MaskedEntry_Images/MaskedEntry_Clearbuttoncustomization.png)
+
+## Command
+
+### Return Command and parameter
+
+ReturnCommand and ReturnCommandParameter is used to handle and customization behavior of pressing the Enter key. It allows user to define and control what should happen when presses the Enter key and to provide extra details that might be need to customize the action.
