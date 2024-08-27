@@ -399,7 +399,7 @@ autocomplete.DropDownBackground = Colors.YellowGreen;
 
 ![.NET MAUI Autocomplete DropDown Background](Images/UICustomization/DropDownBackground.png)
 
-### Customize the DropDown selected item backgroundcolor
+### Customize the DropDown selected item background color
 
 The [SelectedDropDownItemBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_SelectedDropDownItemBackground) property is used to modify the background color of the selected item in the dropdown.
 
@@ -1215,7 +1215,7 @@ The following image illustrates the result of the above code:
 
 ## Clear button customization
 
-The ClearButtonPath property is used to customize the appearance of the clear button.
+The `ClearButtonPath` property is used to customize the appearance of the clear button.
 
 {% tabs %}
 {% highlight xaml %}
@@ -1259,5 +1259,41 @@ The following image illustrates the result of the above code:
 
 ### Return Command and parameter
 
-ReturnCommand and ReturnCommandParameter is used to handle and customization behavior of pressing the Enter key. It allows user to define and control what should happen when presses the Enter key and to provide extra details that might be need to customize the action.
+`ReturnCommand` and `ReturnCommandParameter` is used to handle and customization behavior of pressing the Enter key. It allows user to define and control what should happen when presses the Enter key and to provide extra details that might be need to customize the action.
 
+{% tabs %}
+{% highlight xaml %}
+
+<editors:SfAutocomplete x:Name="autocomplete"
+            ReturnCommand="{Binding AlertCommand}"
+            ReturnCommandParameter="This is an alert message">
+</editors:SfAutocomplete>
+
+{% endhighlight %}
+{% highlight c# %}
+
+public class CommandDemoViewModel : INotifyPropertyChanged
+{
+    public ICommand AlertCommand => new Command<string>(OnAlertCommandExecuted);
+
+    private async void OnAlertCommandExecuted(string parameter)
+    {
+        await Application.Current.MainPage.DisplayAlert("Alert", parameter, "OK");
+    }
+
+    public event PropertyChangedEventHandler PropertyChanged;
+
+    private void NotifyPropertyChanged([CallerMemberName] string propertyName = "")
+    {
+        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+    }
+
+    public CommandDemoViewModel()
+    {
+        
+    }
+
+}
+
+{% endhighlight %}
+{% endtabs %}

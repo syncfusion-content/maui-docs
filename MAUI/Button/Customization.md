@@ -126,7 +126,7 @@ button.VerticalTextAlignment = TextAlignment.Center;
 
 ## Text Transform
 
-Users can now customize the Button's text using the text transform feature. They can easily switch between uppercase, lowercase, none, or default styles.
+Users can now customize the Button's text using the `TextTransform` feature. They can easily switch between uppercase, lowercase, none, or default styles.
 
 {% tabs %}
 {% highlight xaml %}

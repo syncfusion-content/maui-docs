@@ -268,7 +268,8 @@ private void OnDrawCompleted(object? sender, EventArgs e)
 
 ### Get Signature Points
 
-The GetSignaturePoints method provides a convenient way for users to retrieve a collection of signature points.This feature eliminates the need for manual extraction, providing a straightforward and reliable way to obtain these points for further processing or analysis.
+The `GetSignaturePoints` method provides a convenient way for users to retrieve a collection of signature points.This feature eliminates the need for manual extraction, providing a straightforward and reliable way to obtain these points for further processing or analysis.
+
 {% tabs %}
 {% highlight xaml %}
 <signaturePad:SfSignaturePad x:Name="signaturePad"
@@ -278,11 +279,13 @@ The GetSignaturePoints method provides a convenient way for users to retrieve a 
                              DrawCompleted="OnDrawCompleted"/>
 {% endhighlight %}
 {% highlight C# %}
+
 private void OnDrawCompleted(object? sender, EventArgs e)
 {
     List<List<float>> pointsCollection = new List<List<float>>();
     pointsCollection = signaturePad.GetPointsCollection();
 }
+
 {% endhighlight %}
 {% endtabs %}
 
