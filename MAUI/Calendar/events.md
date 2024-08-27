@@ -94,6 +94,7 @@ A [Tapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalend
 
     * [Date](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarTappedEventArgs.html#Syncfusion_Maui_Calendar_CalendarTappedEventArgs_Date) : Returns the selected date.
     * [Element](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarTappedEventArgs.html#Syncfusion_Maui_Calendar_CalendarTappedEventArgs_Element) : Returns the `Calendar` element tapped.
+    * [WeekNumber]() : Returns the tapped `WeekNumber`.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
@@ -125,6 +126,7 @@ Whenever the [SfCalendar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sc
 
     * [Date](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarDoubleTappedEventArgs.html#Syncfusion_Maui_Calendar_CalendarDoubleTappedEventArgs_Date) : Returns the double-tapped date.
     * [Element](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarDoubleTappedEventArgs.html#Syncfusion_Maui_Calendar_CalendarDoubleTappedEventArgs_Element) : Returns the double-tapped `Calendar` element.
+    * [WeekNumber]() : Returns the double-tapped `WeekNumber`.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
@@ -157,6 +159,7 @@ Whenever the [SfCalendar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sc
 
     * [Date](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarLongPressedEventArgs.html#Syncfusion_Maui_Calendar_CalendarLongPressedEventArgs_Date) : Returns the long-pressed date.
     * [Element](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarLongPressedEventArgs.html#Syncfusion_Maui_Calendar_CalendarLongPressedEventArgs_Element) : Returns the long-pressed `Calendar` element.
+    * [WeekNumber]() : Returns the long-pressed `WeekNumber`.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
@@ -179,3 +182,235 @@ private void OnCalendarLongPressed(object sender, CalendarLongPressedEventArgs e
 {% endhighlight %}
 {% endtabs %}
 
+## Commands
+
+### ViewChangedCommand
+
+The SfCalendar includes a built-in event called `ViewChanged`, which is triggered whenever the calendar view is navigated to either the previous or next view. This event can be invoked through the [ViewChangedCommand](), and it also triggers when switching between different calendar views. The `CalendarViewChangedEventArgs` is provided as a parameter to this event.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
+
+<calendar:SfCalendar  x:Name="Calendar" 
+                      ViewChangedCommand="ViewChangedCommand">
+<ContentPage.BindingContext>
+    <local:CalendarViewModel/>
+</ContentPage.BindingContext>					  
+</calendar:SfCalendar>
+
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="3,6,8" %}
+
+public class CalendarViewModel
+{
+    public ICommand ViewChangedCommand { get; set; }
+    public CalendarViewModel()
+    {
+        ViewChangedCommand = new Command<CalendarViewChangedEventArgs>(ViewChanged);
+    }
+    private void ViewChanged(CalendarViewChangedEventArgs args)
+    {
+        // To do your requirement here.
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+### SelectionChangedCommand
+
+The SfCalendar includes a built-in event called `SelectionChanged` that is triggered whenever the selection in the calendar changes. This event can be invoked through the [SelectionChangedCommand](), which passes the `CalendarSelectionChangedEventArgs` as a parameter.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
+
+<calendar:SfCalendar  x:Name="Calendar" 
+                     SelectionChangedCommand="SelectionChangedCommand">
+<ContentPage.BindingContext>
+    <local:CalendarViewModel/>
+</ContentPage.BindingContext>					  
+</calendar:SfCalendar>
+
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="3,6,8" %}
+
+public class CalendarViewModel
+{
+    public ICommand SelectionChangedCommand { get; set; }
+    public CalendarViewModel()
+    {
+        SelectionChangedCommand = new Command<CalendarSelectionChangedEventArgs>(SelectionChanged);
+    }
+    private void SelectionChanged(CalendarSelectionChangedEventArgs args)
+    {
+        // To do your requirement here.
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+### TappedCommand
+
+The SfCalendar includes a built-in event called `Tapped` that is triggered whenever the calendar view is tapped. This event can be invoked through the [TappedCommand]() which passes the `CalendarTappedEventArgs` as a parameter.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
+
+<calendar:SfCalendar  x:Name="Calendar" 
+                     TappedCommand="TappedCommand">
+<ContentPage.BindingContext>
+    <local:CalendarViewModel/>
+</ContentPage.BindingContext>					  
+</calendar:SfCalendar>
+
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="3,6,8" %}
+
+public class CalendarViewModel
+{
+    public ICommand TappedCommand { get; set; }
+    public CalendarViewModel()
+    {
+        TappedCommand = new Command<CalendarTappedEventArgs>(Tapped);
+    }
+    private void Tapped(CalendarTappedEventArgs args)
+    {
+        // To do your requirement here.
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+### DoubleTappedCommand
+
+The SfCalendar includes a built-in event called `DoubleTapped` that is triggered whenever the calendar view is double-tapped. This event can be invoked through the [DoubleTappedCommand](), which passes the `CalendarDoubleTappedEventArgs` as a parameter.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3,6,8" %}
+
+<calendar:SfCalendar  x:Name="Calendar" 
+                     DoubleTappedCommand="DoubleTappedCommand">
+<ContentPage.BindingContext>
+    <local:CalendarViewModel/>
+</ContentPage.BindingContext>					  
+</calendar:SfCalendar>
+
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
+
+public class CalendarViewModel
+{
+    public ICommand DoubleTappedCommand { get; set; }
+    public CalendarViewModel()
+    {
+        DoubleTappedCommand = new Command<CalendarDoubleTappedEventArgs>(DoubleTapped);
+    }
+    private void DoubleTapped(CalendarDoubleTappedEventArgs args)
+    {
+        // To do your requirement here.
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+### LongPressedCommand
+
+The SfCalendar includes a built-in event called `LongPressed`, which is triggered when the calendar view is long pressed. This event can be invoked through the [LongPressedCommand](), with the `CalendarLongPressedEventArgs` passed as a parameter.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
+
+<calendar:SfCalendar  x:Name="Calendar" 
+                     LongPressedCommand="LongPressedCommand">
+<ContentPage.BindingContext>
+    <local:CalendarViewModel/>
+</ContentPage.BindingContext>					  
+</calendar:SfCalendar>
+
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="3,6,8" %}
+
+public class CalendarViewModel
+{
+    public ICommand LongPressedCommand { get; set; }
+    public CalendarViewModel()
+    {
+        LongPressedCommand = new Command<CalendarLongPressedEventArgs>(LongPressed);
+    }
+    private void LongPressed(CalendarLongPressedEventArgs args)
+    {
+        // To do your requirement here.
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+### AcceptCommand
+
+The SfCalendar includes a built-in event called `ActionButtonClicked`, which is triggered when the confirm button is tapped on the calendar. This event can be invoked through the [AcceptCommand]().
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
+
+<calendar:SfCalendar  x:Name="Calendar" 
+                     AcceptCommand="AcceptCommand">
+<ContentPage.BindingContext>
+    <local:CalendarViewModel/>
+</ContentPage.BindingContext>					  
+</calendar:SfCalendar>
+
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="3,6,8" %}
+
+public class CalendarViewModel
+{
+    public ICommand AcceptCommand { get; set; }
+    public CalendarViewModel()
+    {
+        AcceptCommand = new Command(ActionButtonClicked);
+    }
+    private void ActionButtonClicked()
+    {
+        // To do your requirement here.
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+### DeclineCommand
+
+The SfCalendar includes a built-in event called `ActionButtonCanceled`, which is triggered when the cancel button is tapped on the calendar. This event can be invoked through the [DeclineCommand]().
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
+
+<calendar:SfCalendar  x:Name="Calendar" 
+                     DeclineCommand="DeclineCommand">
+<ContentPage.BindingContext>
+    <local:CalendarViewModel/>
+</ContentPage.BindingContext>					  
+</calendar:SfCalendar>
+
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="3,6,8" %}
+
+public class CalendarViewModel
+{
+    public ICommand DeclineCommand { get; set; }
+    public CalendarViewModel()
+    {
+        DeclineCommand = new Command(ActionButtonCanceled);
+    }
+    private void ActionButtonCanceled()
+    {
+        // To do your requirement here.
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}

@@ -181,8 +181,8 @@ this.Content = timePicker;
 </tr>
 <tr>
 <td>{{'[CancelCommand](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.SfTimePicker.html#Syncfusion_XForms_Pickers_SfTimePicker_CancelCommand)'| markdownify }}</td>
-<td>Nil</td>
-<td>Not Supported.</td>
+<td>{{'[DeclineCommand]()'| markdownify }}</td>
+<td>Gets or sets a command to decline a selected time value of SfTimePicker.</td>
 </tr>
 <tr>
 <td>{{'[CommandParameter](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.SfTimePicker.html#Syncfusion_XForms_Pickers_SfTimePicker_CommandParameter)'| markdownify }}</td>
@@ -226,8 +226,8 @@ this.Content = timePicker;
 </tr>
 <tr>
 <td>{{'[OkCommand](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.SfTimePicker.html#Syncfusion_XForms_Pickers_SfTimePicker_OkCommand)'| markdownify }}</td>
-<td>Nil</td>
-<td>Not Supported.</td>
+<td>{{'[AcceptCommand]()'| markdownify }}</td>
+<td>Gets or sets a command to accept a selected time value of SfTimePicker.</td>
 </tr>
 <tr>
 <td>{{'[SecondInterval](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.SfTimePicker.html#Syncfusion_XForms_Pickers_SfTimePicker_SecondInterval)'| markdownify }}</td>
