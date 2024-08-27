@@ -532,7 +532,7 @@ this.Content = scheduler;
 
 ## Show navigation arrow
 
-By Using the [ShowNavigationArrows](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_ShowNavigationArrows) property of the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html), you can navigate to the previous or next views of the Scheduler. By default, the value `ShowNavigationArrows` is `true,` which displays the navigation icons and `Today` button in the header view. It allows to quickly navigate to today and previous or next views.
+By Using the [ShowNavigationArrows](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_ShowNavigationArrows) property of the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html), you can navigate to the previous or next views of the Scheduler. By default, the value `ShowNavigationArrows` is `true,` which displays the navigation icons in the header view. It allows to quickly navigate to previous or next views.
 
 {% tabs %}  
 {% highlight XAML %}
@@ -573,6 +573,25 @@ this.Content = scheduler;
 N> This property will not be applicable for the `SchedulerView` is `Timeline Month.`
 
 ![show-week-number-in-maui-scheduler](images/getting-started/show-week-number-in-maui-scheduler.png)
+
+## Show Today button
+
+By Using the `ShowTodayButton` property of the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html), you can show or hide the Today button. This support is to help users to show or hide the Today button dynamically irrespective to the Navigation arrows. 
+
+{% tabs %}  
+{% highlight XAML %}
+
+<scheduler:SfScheduler x:Name="Scheduler" ShowTodayButton="True"/>
+
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+SfScheduler scheduler = new SfScheduler();
+scheduler.ShowTodayButton = true;
+this.Content = scheduler;
+
+{% endhighlight %}  
+{% endtabs %}
 
 #### Customize the week number text style
 

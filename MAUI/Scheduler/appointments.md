@@ -882,6 +882,56 @@ N>
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/RecursiveExceptionAppointment/BusinessObject)
 
+## Suspend and resume the appointment update
+
+Schedule allows you to suspend and resume the appointment UI update while performing collection changes (Add/Remove/Reset).`SuspendAppointmentUpdate` method will suspend appointment UI rendering until you resume it when large number of data added dynamically in schedule `AppointmentSource` to avoid each time updating UI when collection changes. After data added dynamically in schedule, you can call `ResumeAppointmentUpdate` to update the appointment UI rendering. 
+
+{% tabs %}
+{% highlight c# %}
+
+// Creating an instance for the scheduler appointment collection.
+var appointment = new ObservableCollection<SchedulerAppointment>();
+ 
+//Adding scheduler appointment in the scheduler appointment collection. 
+appointment.Add(new SchedulerAppointment()
+{
+    StartTime = DateTime.Today.AddHours(9),
+    EndTime = DateTime.Today.AddHours(11),
+    Subject = "Client Meeting",
+    Location = "Hutchison road",
+});
+ 
+//Adding the scheduler appointment collection to the AppointmentsSource of .NET MAUI Scheduler.
+this.Scheduler.AppointmentsSource = appointment;
+ 
+this.Scheduler.ViewChanged += Scheduler_ViewChanged;
+ 
+ 
+private void Scheduler_ViewChanged(object? sender, SchedulerViewChangedEventArgs e)
+{
+    // Suspends the Appointment Update.
+    this.Scheduler.SuspendAppointmentViewUpdate();
+ 
+    for (int i = 0; i < e.NewVisibleDates.Count; i++)
+    {
+        var visibleDate = e.NewVisibleDates[i].Date;
+        var scheduleAppointment = new SchedulerAppointment()
+        {
+            StartTime = visibleDate.AddHours(10),
+            EndTime = visibleDate.AddHours(12),
+            Subject = visibleDate.ToString("dd/MM/yyyy"),
+            Background = Colors.Red,
+        };
+        appointment.Add(scheduleAppointment);
+    }
+ 
+    // Resumes the Appointment Update.
+    this.Scheduler.ResumeAppointmentViewUpdate();
+}
+
+{% endhighlight %}  
+{% endtabs %}
+
 ## Appointment appearance customization
 
 The appointment appearance customization can be achieved by using the `TextStyle` and `AppointmentTemplate` properties in the `SfScheduler.`
@@ -1050,6 +1100,85 @@ this.Scheduler.AppointmentsSource = appointments;
 N>
 * The `BindingContext` for `AppointmentTemplate` for both `SchedulerAppointment` and `SchedulerAppointment.DataItem` in `AppointmentsSource.`
 * When using data template selector, performance issues occur as the conversion template views take time within the framework.
+
+## Commands
+
+Scheduler commands allow to map Tapped event, Double tapped event, Long Pressed event and View Changed event to Commands which supports the MVVM (Model-View-ViewModel) pattern. 
+
+•    TappedCommand 
+•    DoubleTappedCommand 
+•    LongPressedCommand 
+•    ViewChangedCommand 
+•    SelectionChangedCommand 
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="18 21 24" %}
+
+<scheduler:SfScheduler x:Name="Scheduler"
+                       View="Month"
+                       AllowedViews="Day,Month,TimelineDay,TimelineMonth,TimelineWeek,TimelineWorkWeek,Agenda"
+                       TappedCommand="{Binding SchedulerTappedCommand}"
+                       DoubleTappedCommand="{Binding SchedulerDoubleTappedCommand}"
+                       LongPressedCommand="{Binding SchedulerLongPressedCommand}"
+                       ViewChangedCommand="{Binding SchedulerViewChangedCommand}"
+                       SelectionChangedCommand="{Binding SchedulerSelectionChangedCommand}">
+                       <scheduler:SfScheduler.BindingContext>
+                            <local:SchedulerInteractionViewModel />
+                       </scheduler:SfScheduler.BindingContext>
+</scheduler:SfScheduler>
+
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
+
+public class SchedulerInteractionViewModel
+{
+    public ICommand SchedulerTappedCommand { get; set; }
+    public ICommand SchedulerDoubleTappedCommand { get; set; }
+    public ICommand SchedulerLongPressedCommand { get; set; }
+    public ICommand SchedulerViewChangedCommand { get; set; }
+    public ICommand SchedulerSelectionChangedCommand { get; set; }
+
+    public SchedulerInteractionViewModel()
+    {
+        this.SchedulerTappedCommand = new Command<SchedulerTappedEventArgs>(ExecuteTapped);
+        this.SchedulerDoubleTappedCommand = new Command<SchedulerDoubleTappedEventArgs>(ExecuteDoubleTapped);
+        this.SchedulerLongPressedCommand = new Command<SchedulerLongPressedEventArgs>(ExecuteLongPressed);
+        this.SchedulerViewChangedCommand = new Command<SchedulerViewChangedEventArgs>(ExecuteViewChanged);
+        this.SchedulerSelectionChangedCommand = new Command<SchedulerSelectionChangedEventArgs>(ExecuteSelectionChanged, CanExecuteSelectionChanged);
+    }
+
+    private void ExecuteTapped(SchedulerTappedEventArgs obj)
+    {
+        var selectedDate = obj.Date;
+    }
+
+
+    private void ExecuteDoubleTapped(SchedulerDoubleTappedEventArgs obj)
+    {
+        var selectedDate = obj.Date;
+    }
+
+    private void ExecuteLongPressed(SchedulerLongPressedEventArgs obj)
+    {
+        var selectedDate = obj.Date;
+    }
+
+    private void ExecuteViewChanged(SchedulerViewChangedEventArgs obj)
+    {
+        var oldVisibleDates = obj.OldVisibleDates;
+        var newVisibleDates = obj.NewVisibleDates;
+        var oldSchedulerView = obj.OldView;
+        var newSchedulerView = obj.NewView;
+    }
+
+    private void ExecuteSelectionChanged(SchedulerSelectionChangedEventArgs obj)
+    {
+        var newDateTime = obj.NewValue;
+        var oldDateTime = obj.OldValue;
+    }
+
+{% endhighlight %}  
+{% endtabs %}
 
 ## Appointment selection background
 
