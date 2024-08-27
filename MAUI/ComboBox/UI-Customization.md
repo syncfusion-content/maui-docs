@@ -1040,21 +1040,26 @@ We can set view to the drop down button in [SfComboBox](https://help.syncfusion.
 
 {% highlight xaml %}
 
-<editors:SfComboBox x:Name="comboBox"
+<editors:SfComboBox Placeholder="Enter Social Media"
                     ItemsSource="{Binding SocialMedias}"
                     TextMemberPath="Name"
                     DisplayMemberPath="Name"
                     HeightRequest="40"
                     WidthRequest="240">
     <editors:SfComboBox.DropDownButtonSettings>
-        <editors:DropDownButtonSettings>
+        <editors:DropDownButtonSettings Width="80" Height="40">
             <editors:DropDownButtonSettings.View>
-            <Label Text="Click" FontSize="12" TextColor="Blue"
-                   VerticalOptions="Center" />
+                <Grid BackgroundColor="GreenYellow">
+                    <Label Text="Click" 
+                           FontSize="12" 
+                           TextColor="Blue"
+                           HorizontalTextAlignment="Center"
+                           VerticalOptions="Center" />
+                </Grid>
             </editors:DropDownButtonSettings.View>
         </editors:DropDownButtonSettings>
     </editors:SfComboBox.DropDownButtonSettings>
-    
+
 </editors:SfComboBox>
 
 {% endhighlight %}
@@ -1064,13 +1069,22 @@ We can set view to the drop down button in [SfComboBox](https://help.syncfusion.
 var dropDownButtonSettings = new DropDownButtonSettings();
 var label = new Label
 {
-    Text="Click";
-    FontSize="12"; 
-    TextColor="Blue";
-    VerticalOptions="Center" 
+    Text = "Click",
+    FontSize = 12,
+    TextColor = Colors.Blue,
+    HorizontalTextAlignment = TextAlignment.Center,
+    VerticalTextAlignment = TextAlignment.Center,
 };
-dropDownButtonSettings.View = label;
+var grid = new Grid
+{
+    BackgroundColor = Colors.YellowGreen,
+};
+grid.Children.Add(label);
+dropDownButtonSettings.View = grid;
+dropDownButtonSettings.Width = 80;
+dropDownButtonSettings.Height = 40;
 comboBox.DropDownButtonSettings = dropDownButtonSettings;
+
 {% endhighlight %}
 
 {% endtabs %}
