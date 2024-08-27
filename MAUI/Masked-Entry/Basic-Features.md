@@ -326,4 +326,4 @@ sfMaskedEntry.ReturnType = ReturnType.Next;
 {% endhighlight %}
 {% endtabs %}
 
-![ReturnType](MaskedEntry_Images/MaskedEntry_ReturnType.png)
+![.NET MAUI MaskedEntry ReturnType](MaskedEntry_Images/MaskedEntry_ReturnType.png)

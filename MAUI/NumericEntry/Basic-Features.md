@@ -270,7 +270,7 @@ The following image illustrates the result of the above code:
 
 ![HorizontalTextAlignment](GettingStarted_images/textalignment.png)
 
-## PercentDisplayMode
+## Set the compute to percentage in SfNumericEntry
 
 When the [SfNumericEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html) is in percentage format, the value can be displayed in two ways as follows:
 
@@ -325,7 +325,7 @@ sfNumericEntry.PercentDisplayMode = PercentDisplayMode.Compute;
 
 N> Default value of PercentDisplayMode is `Compute`.
 
-## Set the maximum number of decimal digits in SfNumericTextBox
+## Set the maximum number of decimal digits in SfNumericEntry
 
 The maximum number of digits to be displayed after the decimal point can be specified by using the `MaximumNumberDecimalDigits` property.
 

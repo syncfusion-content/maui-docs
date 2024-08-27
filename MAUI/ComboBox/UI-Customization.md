@@ -1351,4 +1351,4 @@ sfComboBox.ReturnType = ReturnType.Next;
 {% endhighlight %}
 {% endtabs %}
 
-![ReturnType](Images/UICustomization/ReturnType.png)
+![.NET MAUI ComboBox ReturnType](Images/UICustomization/ReturnType.png)
