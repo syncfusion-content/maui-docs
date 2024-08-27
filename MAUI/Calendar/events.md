@@ -111,6 +111,7 @@ private void OnCalendarTapped(object sender, CalendarTappedEventArgs e)
 {
     var selectedDate = e.Date;
     var calendarElement = e.Element;
+    var weekNumber = e.WeekNumber;
 }
 
 {% endhighlight %}
@@ -144,6 +145,7 @@ private void OnCalendarDoubleTapped(object sender, CalendarDoubleTappedEventArgs
 {
     var selectedDate = e.Date;
     var calendarElement = e.Element;
+    var weekNumber = e.WeekNumber;
 }
 
 {% endhighlight %}
@@ -177,6 +179,7 @@ private void OnCalendarLongPressed(object sender, CalendarLongPressedEventArgs e
 {
     var selectedDate = e.Date;
     var calendarElement = e.Element;
+    var weekNumber = e.WeekNumber;
 }
 
 {% endhighlight %}
