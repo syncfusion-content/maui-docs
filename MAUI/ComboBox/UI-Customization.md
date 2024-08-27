@@ -1031,7 +1031,7 @@ comboBox.DropDownButtonSettings = dropDownButtonSettings;
 
 {% endtabs %}
 
-![ComboBox DropDown Button Size Customization](images/UICustomization/DropDownButtonSize.png)
+![.NET MAUI ComboBox DropDown Button Size Customization](images/UICustomization/DropDownButtonSize.png)
 
 ### View for DropDown button
 
@@ -1089,7 +1089,7 @@ comboBox.DropDownButtonSettings = dropDownButtonSettings;
 
 {% endtabs %}
 
-![ComboBox DropDown Button CustomView](images/UICustomization/DropDownButtonSettings_View.png)
+![.NET MAUI ComboBox DropDown Button CustomView](images/UICustomization/DropDownButtonSettings_View.png)
 
 ## Styling token items
 
