@@ -999,6 +999,42 @@ The following image illustrates the result of the above code:
 
 ## DropDown button customization
 
+We can customize the size of the drop down button in [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) by using the `Width` and `Height` properties in [DropDownButtonSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_DropDownButtonSettings).
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<editors:SfComboBox x:Name="comboBox"
+                    Placeholder="Enter Social Media"
+                    ItemsSource="{Binding SocialMedias}"
+                    TextMemberPath="Name"
+                    DisplayMemberPath="Name"
+                    HeightRequest="40"
+                    WidthRequest="240">
+    <editors:SfComboBox.DropDownButtonSettings>
+        <editors:DropDownButtonSettings Width="50" Height="50" />
+    </editors:SfComboBox.DropDownButtonSettings>
+    
+</editors:SfComboBox>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+var dropDownButtonSettings = new DropDownButtonSettings();
+dropDownButtonSettings.Width = 50;
+dropDownButtonSettings.Height = 50;
+comboBox.DropDownButtonSettings = dropDownButtonSettings;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![DropDown Button Size](images/UICustomization/DropDownButtonSize.png)
+
+### View for DropDown button
+
 We can set view to the drop down button in [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) using [DropDownButtonSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_DropDownButtonSettings) property.
 {% tabs %}
 
@@ -1006,7 +1042,7 @@ We can set view to the drop down button in [SfComboBox](https://help.syncfusion.
 
 <editors:SfComboBox x:Name="comboBox"
                     ItemsSource="{Binding SocialMedias}"
-                     TextMemberPath="Name"
+                    TextMemberPath="Name"
                     DisplayMemberPath="Name"
                     HeightRequest="40"
                     WidthRequest="240">
