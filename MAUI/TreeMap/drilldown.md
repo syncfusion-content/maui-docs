@@ -29,7 +29,7 @@ treeMap.EnableDrilldown = true;
 {% endhighlight %}
 {% endtabs %}
 
-![enable-drilldown-in-maui-tree-map](images\drilldown\maui-drilldown.png)
+![enable-drilldown-in-maui-tree-map](images\drilldown\maui-drilldown.png){:width="325" height="580" loading="lazy" .lazy .shadow-effect .section-padding .img-padding}
 
 ## Header customization
 
@@ -37,7 +37,7 @@ The drilldown header used for zoom out (i.e., drill up one level) operation can 
 
 The following code snippet demonstrates how to define the drilldown header style.
 
-![drilldown-headerstyle](images\drilldown\maui-drilldown-headerstyle.png)
+![drilldown-headerstyle](images\drilldown\maui-drilldown-headerstyle.png){:width="325" height="580" loading="lazy" .lazy .shadow-effect .section-padding .img-padding}
 
 {% tabs %} 
 
@@ -64,7 +64,7 @@ map.DrillDownHeaderSettings.TextStyle.TextColor = Colors.Blue;
 
 {% endtabs %} 
 
-![Drilldown](images\drilldown\drilldown.gif){:width="325" height="600" loading="lazy" .lazy .shadow-effect .section-padding .img-padding}
+![Drilldown](images\drilldown\drilldown.gif){:width="325" height="580" loading="lazy" .lazy .shadow-effect .section-padding .img-padding}
 
 The following code snippet is the complete code for drilldown.
 
