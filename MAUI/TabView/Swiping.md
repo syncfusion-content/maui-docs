@@ -9,7 +9,7 @@ documentation: ug
 
 # Swiping in .NET MAUI Tab View (SfTabView)
 
-The `EnableSwiping` property of `SfTabView` is used to navigate between tab contents using swiping. The default value of `EnableSwiping` is `true.`
+The `EnableSwiping` property of `SfTabView` allows users to switch between tab contents by swiping. By default, the `EnableSwiping` property is set to `true.`
 
 {% tabs %}
 
