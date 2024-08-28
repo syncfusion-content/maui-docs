@@ -7,7 +7,7 @@ control: SfAIAssistView
 documentation: ug
 ---
 
-# Items in .NET Maui AIAssistView (SfAIAssistView)
+# Items in .NET MAUI AIAssistView (SfAIAssistView)
 
 ## Text item
 
@@ -29,7 +29,7 @@ documentation: ug
 
         <ContentPage.Content>
             <sfAIAssistView:SfAIAssistView x:Name="sfAIAssistView"
-                                           AssistItems="{Binding Messages}"/>
+                                           AssistItems="{Binding AssistItems}"/>
         </ContentPage.Content>
     </ContentPage>
 
@@ -139,7 +139,7 @@ documentation: ug
         ...
         private void GenerateAssistItems()
         {
-            this.AssistItems.Add(new AssistHyperlinkItem()
+            this.AssistItems.Add(new AssistItem()
             {
                Text = "Hey AI, can you tell me what MAUI is? Could you provide a link to learn more about .NET MAUI?",
             });
@@ -227,7 +227,7 @@ documentation: ug
         }
         ...
     }
-    
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -339,7 +339,6 @@ You can show a list of interactive cards with each card containing an image, a l
             Messages.Add(new AssistCardItem()
             {
                 Cards = CardsCollection,
-                Author = new Author(){Name="Stacy", Avatar= ImageSource.FromResource("Stacy.png")}
             });
         }
         ...  
