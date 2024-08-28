@@ -265,7 +265,7 @@ Please refer to [`here`](https://help.syncfusion.com/maui/imageeditor/save#save-
 
 {% endtabs %}
 
-### Check unsaved annotation edits status
+### Check unsaved annotation edits
 
 * HasUnsavedEdits
 
