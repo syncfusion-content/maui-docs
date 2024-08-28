@@ -276,8 +276,6 @@ When the [SfNumericEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.In
 
 `Value`: Displays the actual value with percentage symbol.
 
-![.NET MAUI NumericEntry PercentDisplayMode](GettingStarted_images/percentdisplaymode_value.png)
-
 {% tabs %}
 {% highlight xaml %}
 
@@ -299,9 +297,9 @@ sfNumericEntry.PercentDisplayMode = PercentDisplayMode.Value;
 {% endhighlight %}
 {% endtabs %}
 
-`Compute`: Displays the computed value with percentage symbol.
+![.NET MAUI NumericEntry PercentDisplayMode](GettingStarted_images/percentdisplaymode_value.png)
 
-![.NET MAUI NumericEntry PercentDisplayMode](GettingStarted_images/percentdisplaymode_compute.png)
+`Compute`: Displays the computed value with percentage symbol.
 
 {% tabs %}
 {% highlight xaml %}
@@ -322,6 +320,8 @@ sfNumericEntry.PercentDisplayMode = PercentDisplayMode.Compute;
 
 {% endhighlight %}
 {% endtabs %}
+
+![.NET MAUI NumericEntry PercentDisplayMode](GettingStarted_images/percentdisplaymode_compute.png)
 
 N> Default value of PercentDisplayMode is `Compute`.
 
@@ -349,6 +349,8 @@ sfNumericEntry.MaximumNumberDecimalDigits = 3;
 {% endhighlight %}
 {% endtabs %}
 
+![.NET MAUI NumericEntry MaximumNumberDecimalDigits](GettingStarted_images/maximumnumberdecimaldigits.png)
+
 ## ReturnType
 
 The `ReturnType` property specifies the return button (e.g., Next, Done, Go) of the keyboard. It helps manage the flow between multiple input fields by defining what happens when the action button is pressed.
@@ -373,5 +375,7 @@ sfNumericEntry.ReturnType = ReturnType.Next;
 {% endhighlight %}
 {% endtabs %}
 
-![.NET MAUI NumericEntry MaximumNumberDecimalDigits](GettingStarted_images/maximumnumberdecimaldigits.png)
+![.NET MAUI NumericEntry ReturnType](GettingStarted_images/returntype.png)
+
+
 
