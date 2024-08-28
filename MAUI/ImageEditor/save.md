@@ -265,7 +265,7 @@ Please refer to [`here`](https://help.syncfusion.com/maui/imageeditor/save#save-
 
 {% endtabs %}
 
-### Indicate unsaved edits
+### Check unsaved edits status
 
 * HasUnsavedEdits
 
@@ -296,9 +296,9 @@ private void OnHasUnsavedEditsClicked(object sender, EventArgs e)
 
 {% endtabs %}
 
-
 * HasUnsavedDrawnAnnotations
-The `HasUnsavedDrawnAnnotations` property notifies the users whether there are unsaved pen, polygon and polyline drawn in image editor 
+
+The `HasUnsavedDrawnAnnotations` property notifies the users whether there are unsaved pen, polygon and polyline drawn in image editor. 
 
 {% tabs %}
 
