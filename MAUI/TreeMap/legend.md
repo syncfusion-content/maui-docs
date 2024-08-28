@@ -754,7 +754,7 @@ The `TreeMapLegend` supports customizing the appearance of legend items using th
 {% endhighlight %}
 {% endtabs %}
 
-![Legend template](images\legend\treemap-legend-template.png)
+![Legend template](images\legend\treemap-legend-template.png){:width="313" height="480"  loading="lazy" .lazy .shadow-effect .section-padding .img-padding}
 
 ## Brush settings
 
