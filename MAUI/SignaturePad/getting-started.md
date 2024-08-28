@@ -268,7 +268,7 @@ private void OnDrawCompleted(object? sender, EventArgs e)
 
 ### Get Signature Points
 
-The `GetSignaturePoints` method provides a convenient way for users to retrieve a collection of signature points.This feature eliminates the need for manual extraction, providing a straightforward and reliable way to obtain these points for further processing or analysis.
+The `GetSignaturePoints` method allows users to obtain the drawn signature points from the [`SfSignaturePad`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SignaturePad.SfSignaturePad.html) once the signature drawing is complete.
 
 {% tabs %}
 {% highlight xaml %}
@@ -283,7 +283,7 @@ The `GetSignaturePoints` method provides a convenient way for users to retrieve 
 private void OnDrawCompleted(object? sender, EventArgs e)
 {
     List<List<float>> pointsCollection = new List<List<float>>();
-    pointsCollection = signaturePad.GetPointsCollection();
+    pointsCollection = signaturePad.GetSignaturePoints();
 }
 
 {% endhighlight %}

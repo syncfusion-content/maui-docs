@@ -126,12 +126,16 @@ button.VerticalTextAlignment = TextAlignment.Center;
 
 ## Text Transform
 
-Users can now customize the Button's text using the `TextTransform` feature. They can easily switch between uppercase, lowercase, none, or default styles.
+Users can now customize the [`SfButton`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfButton.html) text using the `TextTransform` property. They can easily switch between uppercase, lowercase, none, or default styles.
 
 {% tabs %}
 {% highlight xaml %}
 
-<button:SfButton x:Name="button" Text="Submit" TextTransform="Uppercase" HorizontalTextAlignment="Center" VerticalTextAlignment="Center">
+<button:SfButton x:Name="button" 
+                 Text="Submit" 
+                 TextTransform="Uppercase" 
+                 HorizontalTextAlignment="Center" 
+                 VerticalTextAlignment="Center">
 </button:SfButton>
 
 {% endhighlight %}

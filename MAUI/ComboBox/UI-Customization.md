@@ -1327,7 +1327,7 @@ The following image illustrates the result of the above code:
 
 ## Clear button customization
 
-The `ClearButtonPath` property is used to customize the appearance of the clear button.
+The `ClearButtonPath` property allows users to set the path for customizing the appearance of the [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) clear Button.
 
 {% tabs %}
 {% highlight xaml %}
@@ -1348,43 +1348,49 @@ The `ClearButtonPath` property is used to customize the appearance of the clear 
 {% endhighlight %}
 {% highlight c# %}
 
-        private string customizepath = "M1.70711 0.292893C1.31658 -0.097631 0.683417 -0.097631 0.292893 0.292893C-0.097631 0.683417 -0.097631 1.31658 0.292893 1.70711L5.58579 7L0.292893 12.2929C-0.097631 12.6834 -0.097631 13.3166 0.292893 13.7071C0.683417 14.0976 1.31658 14.0976 1.70711 13.7071L7 8.41421L12.2929 13.7071C12.6834 14.0976 13.3166 14.0976 13.7071 13.7071C14.0976 13.3166 14.0976 12.6834 13.7071 12.2929L8.41421 7L13.7071 1.70711C14.0976 1.31658 14.0976 0.683417 13.7071 0.292893C13.3166 -0.097631 12.6834 -0.097631 12.2929 0.292893L7 5.58579L1.70711 0.292893Z";
+private string _customPath = "M1.70711 0.292893C1.31658 -0.097631 0.683417 -0.097631 0.292893 0.292893C-0.097631 0.683417 -0.097631 1.31658 0.292893 1.70711L5.58579 7L0.292893 12.2929C-0.097631 12.6834 -0.097631 13.3166 0.292893 13.7071C0.683417 14.0976 1.31658 14.0976 1.70711 13.7071L7 8.41421L12.2929 13.7071C12.6834 14.0976 13.3166 14.0976 13.7071 13.7071C14.0976 13.3166 14.0976 12.6834 13.7071 12.2929L8.41421 7L13.7071 1.70711C14.0976 1.31658 14.0976 0.683417 13.7071 0.292893C13.3166 -0.097631 12.6834 -0.097631 12.2929 0.292893L7 5.58579L1.70711 0.292893Z";
 
-        var converter = new PathGeometryConverter();
-        var path = new Path() 
-        { 
-            Data = (PathGeometry)converter.ConvertFromInvariantString(customizepath),
-            Fill = Colors.Red,
-            Stroke = Colors.Red
-        };
+var converter = new PathGeometryConverter();
+var path = new Path() 
+{ 
+    Data = (PathGeometry)converter.ConvertFromInvariantString(_customPath;),
+    Fill = Colors.Red,
+    Stroke = Colors.Red
+};
 
-        comboBox.ClearButtonPath = path;
+comboBox.ClearButtonPath = path;
 
 {% endhighlight %}
 {% endtabs %}
 
 The following image illustrates the result of the above code:
 
-![ClearButtonPath](Images/UICustomization/clearbuttoncustomization.png)
+![.NET MAUI ComboBox ClearButtonPath](Images/UICustomization/clearbuttoncustomization.png)
 
 ## Command
 
-### Return Command and parameter
+### Return Command and Return Command Parameter
 
-`ReturnCommand` and `ReturnCommandParameter` is used to handle and customization behavior of pressing the Enter key. It allows user to define and control what should happen when presses the Enter key and to provide extra details that might be need to customize the action.
+`ReturnCommand` and `ReturnCommandParameter` allows users to customize and handle action invoked by pressing the Enter key.
+
+- `ReturnCommand` : Specifies what should happent when a [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) is interacted (e.g., clicking a button or pressing Enter key in an entry field).
+- `ReturnCommandParameter` : Provides additional data needed for the action.
+
 
 {% tabs %}
 {% highlight xaml %}
 
-<editors:SfComboBox x:Name="combobox"
-            ReturnCommand="{Binding AlertCommand}"
-            ReturnCommandParameter="This is an alert message">
-</editors:SfComboBox>
+<editors:SfComboBox x:Name="maskedEntry"
+                    ItemsSource="{Binding SocialMedia}"
+                    DisplayMemberPath="Name"
+                    TextMemberPath="Name"
+                    ReturnCommand="{Binding AlertCommand}"
+                    ReturnCommandParameter="Enter key is pressed"/>
 
 {% endhighlight %}
 {% highlight c# %}
 
-public class CommandDemoViewModel : INotifyPropertyChanged
+public SocialMediaViewModel
 {
     public ICommand AlertCommand => new Command<string>(OnAlertCommandExecuted);
 
@@ -1392,19 +1398,6 @@ public class CommandDemoViewModel : INotifyPropertyChanged
     {
         await Application.Current.MainPage.DisplayAlert("Alert", parameter, "OK");
     }
-
-    public event PropertyChangedEventHandler PropertyChanged;
-
-    private void NotifyPropertyChanged([CallerMemberName] string propertyName = "")
-    {
-        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-    }
-
-    public CommandDemoViewModel()
-    {
-        
-    }
-
 }
 
 {% endhighlight %}
