@@ -329,7 +329,7 @@ N> Default value of PercentDisplayMode is `Compute`.
 
 The maximum number of digits to be displayed after the decimal point can be specified by using the `MaximumNumberDecimalDigits` property.
 
-N> The `MaximumNumberDecimalDigits` property can be provided with positive value only. Default value of MaximumNumberDecimalDigits is `2`.
+N> The `MaximumNumberDecimalDigits` property can only be set to a positive value and does not work when a CustomFormat is provided. The default value of MaximumNumberDecimalDigits is 2.
 
 {% tabs %}
 {% highlight xaml %}
