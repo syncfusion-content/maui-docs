@@ -28,7 +28,6 @@ To define the legend in the chart, initialize the [ChartLegend](https://help.syn
     </chart:SfPyramidChart.Legend>
 </chart:SfPyramidChart>
 
-
 {% endhighlight %}
 
 {% highlight c# %}
@@ -42,6 +41,7 @@ SfPyramidChart chart = new SfPyramidChart()
 
 chart.Legend = new ChartLegend();
 this.Content = chart;
+
 {% endhighlight %}
 
 {% endtabs %}
