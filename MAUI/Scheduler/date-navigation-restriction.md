@@ -156,7 +156,7 @@ N>
 
 ### Show date picker
 
-You can enable the date picker for the scheduler by using the `ShowDatePickerButton` property in the `SfScheduler`, which displays the date picker and `Today button` in the header view. It allows you to quickly navigate to today and different scheduler views.
+You can enable the date picker for the scheduler by using the `ShowDatePickerButton` property in the `SfScheduler`, which displays the date picker in the header view. It allows you to quickly switch between, months, years, decades or century where you can directly jump to a specific date by selecting it from a date picker.
 
 {% tabs %}
 {% highlight XAML hl_lines="2"%}
@@ -175,7 +175,7 @@ this.Content = scheduler;
 {% endhighlight %}
 {% endtabs %}
 
-![Date picker in Scheduler](images\date-navigation-restriction\scheduler-date-navigation.png)
+![Date picker in Scheduler](images\date-navigation-restriction\scheduler-date-navigation.jpeg){:width="313" height="480"  loading="lazy" .lazy .shadow-effect .section-padding .img-padding}
 
 ### Allowed views
 
