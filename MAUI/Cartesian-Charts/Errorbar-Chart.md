@@ -10,8 +10,6 @@ keywords: .net maui error bar chart, error bar chart customization .net maui, sy
 
 # Error Bar in .NET MAUI Chart
 
-## Error Bar Chart
-
 [ErrorBarSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ErrorBarSeries.html) indicates the errors or uncertainty in reported values. This will find the possible variations in measurements, and in Chart control these values are displayed as data points.
 The [HorizontalErrorValue](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ErrorBarSeries.html#Syncfusion_Maui_Charts_ErrorBarSeries_HorizontalErrorValue) and the [VerticalErrorValue](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ErrorBarSeries.html#Syncfusion_Maui_Charts_ErrorBarSeries_VerticalErrorValue) is used to set the error value(variation) to the series.
 
