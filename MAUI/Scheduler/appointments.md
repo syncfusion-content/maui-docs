@@ -550,7 +550,7 @@ var patternAppointment = SchedulerRecurrenceManager.GetPatternAppointment(Schedu
 {% endhighlight %}
 {% endtabs%}
 
-#### How to generate the rule for the recurring appointments?
+#### How to generate the RRule for the recurring appointments?
 
 The [GenerateRRule](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRecurrenceManager.html#Syncfusion_Maui_Scheduler_SchedulerRecurrenceManager_GetDateTimeOccurrences_System_String_System_DateTime_System_Nullable_System_DateTime__System_Nullable_System_DateTime__System_Nullable_System_DateTime__) method of the `.NET MAUI Scheduler` generates the recurrence rule based on the given recurrence properties, the start date and end date of the recurrence appointments.
 
