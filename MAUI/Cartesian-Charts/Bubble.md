@@ -10,6 +10,8 @@ keywords: .net maui bubble chart, maui bubble chart, bubble chart customization 
 
 # Bubble Chart in .NET MAUI Chart
 
+## Bubble Chart
+
 The bubble chart is represented by closely packed circles, whose areas are proportional to the quantities.
 
 To render a bubble chart, create an instance of [BubbleSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.BubbleSeries.html), and add it to the [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) collection property of [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html?tabs=tabid-1). The bubble chart is similar to a scatter plot, but with the additional dimension of bubble size to represent the third variable. 

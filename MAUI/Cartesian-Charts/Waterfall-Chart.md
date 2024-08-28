@@ -10,6 +10,8 @@ Keywords: .net maui waterfall chart, .net maui bridge chart, waterfall chart cus
 
 # Waterfall Chart in .NET MAUI Chart
 
+## Waterfall Chart
+
 [WaterfallSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.WaterfallSeries.html) clarifies the cumulative effect of a set of provided positive and negative values. The series is represented by a rectangle and a connector between the rectangles. To render a waterfall chart, create an instance of [WaterfallSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.WaterfallSeries.html), and add it to the [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) collection property of the [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html?tabs=tabid-1)
 
 * [SummaryBindingPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.WaterfallSeries.html#Syncfusion_Maui_Charts_WaterfallSeries_SummaryBindingPath) of the string type is used to get or set the path value on the source subject to serve summary values to the series.
