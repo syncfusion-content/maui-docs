@@ -1213,6 +1213,34 @@ The following image illustrates the result of the above code:
 
 ![TextAlignment](Images/UICustomization/TextAlignment.png)
 
+## ReturnType
+
+The `ReturnType` property specifies the return button (e.g., Next, Done, Go) of the keyboard. It helps manage the flow between multiple input fields by defining what happens when the action button is pressed.
+
+You can define the return key type of [SfAutocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) by using the ReturnType property.
+
+N> Default value of ReturnType is `Default`.
+
+{% tabs %}
+{% highlight xaml %}
+
+<editors:SfAutocomplete x:Name="autocomplete"
+            ItemsSource="{Binding SocialMedias}"
+            DisplayMemberPath="Name"
+            TextMemberPath="Name" 
+            ReturnType="Next"/>
+
+{% endhighlight %}
+{% highlight C# %}
+
+SfAutocomplete sfAutocomplete = new SfAutocomplete();
+sfAutocomplete.ReturnType = ReturnType.Next;
+
+{% endhighlight %}
+{% endtabs %}
+
+![.NET MAUI Autocomplete ReturnType](Images/UICustomization/ReturnType.png)
+
 ## Clear button customization
 
 The `ClearButtonPath` property allows users to set the path for customizing the appearance of the [SfAutocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) clear Button.

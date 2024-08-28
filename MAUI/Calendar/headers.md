@@ -108,7 +108,7 @@ You can customize the header appearance by using the [HeaderTemplate]() in the [
 You can customize the header appearance by using the [HeaderTemplate]() in the [SfCalendar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html). The `DataTemplateSelector` allows you to choose a `DataTemplate` at runtime based on the value bound to the calendar header. This lets you select a different data template for each header and customize the appearance of a specific header based on certain conditions.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="34" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="33" %}
 
  <Grid>
     <Grid.Resources>
@@ -251,7 +251,7 @@ this.Calendar.MonthView.HeaderView = new CalendarMonthHeaderView
 You can customize the view header appearance by using the [MonthViewHeaderTemplate]() in the [SfCalendar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html).
 
 {% tabs %}  
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3 10" %}    
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3 9" %}
 
  <Calendar:SfCalendar x:Name="Calendar"
                         View="Month">
@@ -274,7 +274,7 @@ You can customize the view header appearance by using the [MonthViewHeaderTempla
 You can customize the view header appearance by using the [MonthViewHeaderTemplate]() in the [SfCalendar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html). The `DataTemplateSelector` allows you to choose a `DataTemplate` at runtime based on the value bound to the calendar view header. This lets you select a different data template for each view header and customize the appearance of a specific view header based on certain conditions.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="18" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="17" %}
 
  <Grid>
     <Grid.Resources>

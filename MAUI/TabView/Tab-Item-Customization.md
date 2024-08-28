@@ -20,20 +20,20 @@ Holds the text of the tab item that is displayed in the tab bar.
 {% tabs %}
 
 {% highlight xaml %}
-    <tabView:SfTabView>
-        <tabView:SfTabItem Header="ITEM 1">
-    </tabView:SfTabView>
+<tabView:SfTabView>
+    <tabView:SfTabItem Header="ITEM 1">
+</tabView:SfTabView>
 {% endhighlight %}
 
 {% highlight C# %}
-    var tabView = new SfTabView();
-    var tabItems = new TabItemCollection
+var tabView = new SfTabView();
+var tabItems = new TabItemCollection
+{
+    new SfTabItem()
     {
-        new SfTabItem()
-        {
-            Header = "ITEM 1",
-        }
+        Header = "ITEM 1",
     }
+}
 {% endhighlight %}
 
 {% endtabs %}
@@ -47,21 +47,21 @@ The image to be displayed in the tab bar representing the tab item.
 {% tabs %}
 
 {% highlight xaml %}
-    <tabView:SfTabView>
-        <tabView:SfTabItem Header="ITEM 1" ImageSource="alexandar">
-    </tabView:SfTabView>
+<tabView:SfTabView>
+    <tabView:SfTabItem Header="ITEM 1" ImageSource="alexandar">
+</tabView:SfTabView>
 {% endhighlight %}
 
 {% highlight C# %}
-    var tabView = new SfTabView();
-    var tabItems = new TabItemCollection
+var tabView = new SfTabView();
+var tabItems = new TabItemCollection
+{
+    new SfTabItem()
     {
-        new SfTabItem()
-        {
-            Header = "ITEM 1",
-            ImageSource = "alexandar",
-        }
+        Header = "ITEM 1",
+        ImageSource = "alexandar",
     }
+}
 
 {% endhighlight %}
 
@@ -76,15 +76,15 @@ The assigned view will get displayed in the main area of the tab view.
 {% tabs %}
 
 {% highlight xaml %}
-    <tabView:SfTabView>
-        <tabView:SfTabItem Header="ITEM 2">
-            <tabView:SfTabItem.Content>
-                <ListView>
-                    ...
-                </ListView>
-            </tabView:SfTabItem.Content>
-         </tabView:SfTabItem>
-    </tabView>
+<tabView:SfTabView>
+    <tabView:SfTabItem Header="ITEM 2">
+        <tabView:SfTabItem.Content>
+            <ListView>
+                ...
+            </ListView>
+        </tabView:SfTabItem.Content>
+        </tabView:SfTabItem>
+</tabView>
 {% endhighlight %}
 
 {% highlight C# %}
@@ -119,20 +119,20 @@ The image will be placed above the text vertically.
 {% tabs %}
 
 {% highlight xaml %}
-    <tabView:SfTabView>
-        <tabView:SfTabItem TabImagePosition="Top">
-    </tabView:SfTabView>
+<tabView:SfTabView>
+    <tabView:SfTabItem TabImagePosition="Top">
+</tabView:SfTabView>
 {% endhighlight %}
 
 {% highlight C# %}
-    var tabView = new SfTabView();
-    var tabItems = new TabItemCollection
+var tabView = new SfTabView();
+var tabItems = new TabItemCollection
+{
+    new SfTabItem()
     {
-        new SfTabItem()
-        {
-            TabImagePosition = TabImagePosition.Top,
-        }
+        TabImagePosition = TabImagePosition.Top,
     }
+}
 {% endhighlight %}
 
 {% endtabs %}
@@ -146,20 +146,20 @@ The image will be placed below the text vertically.
 {% tabs %}
 
 {% highlight xaml %}
-    <tabView:SfTabView>
-        <tabView:SfTabItem TabImagePosition="Bottom">
-    </tabView:SfTabView>
+<tabView:SfTabView>
+    <tabView:SfTabItem TabImagePosition="Bottom">
+</tabView:SfTabView>
 {% endhighlight %}
 
 {% highlight C# %}
-    var tabView = new SfTabView();
-    var tabItems = new TabItemCollection
+var tabView = new SfTabView();
+var tabItems = new TabItemCollection
+{
+    new SfTabItem()
     {
-        new SfTabItem()
-        {
-            TabImagePosition = TabImagePosition.Bottom,
-        }
+        TabImagePosition = TabImagePosition.Bottom,
     }
+}
 {% endhighlight %}
 
 {% endtabs %}
@@ -173,20 +173,20 @@ The image will be placed before the text horizontally.
 {% tabs %}
 
 {% highlight xaml %}
-    <tabView:SfTabView>
-        <tabView:SfTabItem TabImagePosition="Left">
-    </tabView:SfTabView>
+<tabView:SfTabView>
+    <tabView:SfTabItem TabImagePosition="Left">
+</tabView:SfTabView>
 {% endhighlight %}
 
 {% highlight C# %}
-    var tabView = new SfTabView();
-    var tabItems = new TabItemCollection
+var tabView = new SfTabView();
+var tabItems = new TabItemCollection
+{
+    new SfTabItem()
     {
-        new SfTabItem()
-        {
-            TabImagePosition = TabImagePosition.Left,
-        }
+        TabImagePosition = TabImagePosition.Left,
     }
+}
 {% endhighlight %}
 
 {% endtabs %}
@@ -200,20 +200,20 @@ The image will be placed to the right side of the text horizontally.
 {% tabs %}
 
 {% highlight xaml %}
-    <tabView:SfTabView>
-        <tabView:SfTabItem TabImagePosition="Right">
-    </tabView:SfTabView>
+<tabView:SfTabView>
+    <tabView:SfTabItem TabImagePosition="Right">
+</tabView:SfTabView>
 {% endhighlight %}
 
 {% highlight C# %}
-    var tabView = new SfTabView();
-    var tabItems = new TabItemCollection
+var tabView = new SfTabView();
+var tabItems = new TabItemCollection
+{
+    new SfTabItem()
     {
-        new SfTabItem()
-        {
-            TabImagePosition = TabImagePosition.Right,
-        }
+        TabImagePosition = TabImagePosition.Right,
     }
+}
 {% endhighlight %}
 
 {% endtabs %}
@@ -254,20 +254,20 @@ The text color of the tab item displayed in the tab bar.
 {% tabs %}
 
 {% highlight xaml %}
-    <tabView:SfTabView>
-        <tabView:SfTabItem TextColor="Blue"/>
-    </tabView:SfTabView>
+<tabView:SfTabView>
+    <tabView:SfTabItem TextColor="Blue"/>
+</tabView:SfTabView>
 {% endhighlight %}
 
 {% highlight C# %}
-    var tabView = new SfTabView();
-    var tabItems = new TabItemCollection
+var tabView = new SfTabView();
+var tabItems = new TabItemCollection
+{
+    new SfTabItem()
     {
-        new SfTabItem()
-        {
-            TextColor = Color.Blue,
-        }
+        TextColor = Color.Blue,
     }
+}
 {% endhighlight %}
 
 {% endtabs %}
@@ -285,20 +285,20 @@ Font family of the tab item text displayed in the tab bar.
 {% tabs %}
 
 {% highlight xaml %}
-    <tabView:SfTabView>
-        <tabView:SfTabItem FontFamily="OpenSansRegular"/>
-    </tabView:SfTabView>
+<tabView:SfTabView>
+    <tabView:SfTabItem FontFamily="OpenSansRegular"/>
+</tabView:SfTabView>
 {% endhighlight %}
 
 {% highlight C# %}
-    var tabView = new SfTabView();
-    var tabItems = new TabItemCollection
+var tabView = new SfTabView();
+var tabItems = new TabItemCollection
+{
+    new SfTabItem()
     {
-        new SfTabItem()
-        {
-            FontFamily = "OpenSansRegular",
-        }
+        FontFamily = "OpenSansRegular",
     }
+}
 {% endhighlight %}
 
 {% endtabs %}
@@ -312,20 +312,20 @@ The font style of the text of each tab item in the tab bar.
 {% tabs %}
 
 {% highlight xaml %}
-    <tabView:SfTabView>
-        <tabView:SfTabItem FontAttributes="Bold"/>
-    </tabView:SfTabView>
+<tabView:SfTabView>
+    <tabView:SfTabItem FontAttributes="Bold"/>
+</tabView:SfTabView>
 {% endhighlight %}
 
 {% highlight C# %}
-    var tabView = new SfTabView();
-    var tabItems = new TabItemCollection
+var tabView = new SfTabView();
+var tabItems = new TabItemCollection
+{
+    new SfTabItem()
     {
-        new SfTabItem()
-        {
-            FontAttributes = FontAttributes.Bold,
-        }
+        FontAttributes = FontAttributes.Bold,
     }
+}
 {% endhighlight %}
 
 {% endtabs %}
@@ -339,20 +339,20 @@ The size of the text of each tab item in the tab bar.
 {% tabs %}
 
 {% highlight xaml %}
-    <tabView:SfTabView>
-        <tabView:SfTabItem FontSize="32"/>
-    </tabView:SfTabView>
+<tabView:SfTabView>
+    <tabView:SfTabItem FontSize="32"/>
+</tabView:SfTabView>
 {% endhighlight %}
 
 {% highlight C# %}
-    var tabView = new SfTabView();
-    var tabItems = new TabItemCollection
+var tabView = new SfTabView();
+var tabItems = new TabItemCollection
+{
+    new SfTabItem()
     {
-        new SfTabItem()
-        {
-            FontSize = 32,
-        }
+        FontSize = 32,
     }
+}
 {% endhighlight %}
 
 {% endtabs %}
@@ -369,20 +369,20 @@ By using the [BadgeText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Tab
 {% tabs %}
 
 {% highlight xaml %}
-    <tabView:SfTabView>
-        <tabView:SfTabItem BadgeText="Inbox"/>
-    </tabView:SfTabView>
+<tabView:SfTabView>
+    <tabView:SfTabItem BadgeText="Inbox"/>
+</tabView:SfTabView>
 {% endhighlight %}
 
 {% highlight C# %}
-    var tabView = new SfTabView();
-    var tabItems = new TabItemCollection
+var tabView = new SfTabView();
+var tabItems = new TabItemCollection
+{
+    new SfTabItem()
     {
-        new SfTabItem()
-        {
-            BadgeText = "Inbox",
-        }
+        BadgeText = "Inbox",
     }
+}
 {% endhighlight %}
 
 {% endtabs %}
@@ -396,36 +396,36 @@ The [BadgeSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.
 {% tabs %}
 
 {% highlight xaml %}
-    <tabView:SfTabView>
-        <tabView:SfTabItem Header="RECENTS" BadgeText="20">
-            <tabView:SfTabItem.BadgeSettings >
-                <core:BadgeSettings FontSize="15" 
-                                    FontAttributes="Bold" 
-                                    FontFamily="serif"/>
-            </tabView:SfTabItem.BadgeSettings>
-        </tabView:SfTabItem>
-    </tabView:SfTabView>
+<tabView:SfTabView>
+    <tabView:SfTabItem Header="RECENTS" BadgeText="20">
+        <tabView:SfTabItem.BadgeSettings >
+            <core:BadgeSettings FontSize="15" 
+                                FontAttributes="Bold" 
+                                FontFamily="serif"/>
+        </tabView:SfTabItem.BadgeSettings>
+    </tabView:SfTabItem>
+</tabView:SfTabView>
 {% endhighlight %}
 
 {% highlight C# %}
 
-    var tabView = new SfTabView();
-    BadgeSettings badgeSetting = new BadgeSettings();
-    badgeSetting.FontAttributes = FontAttributes.Bold;
-    badgeSetting.FontSize = 15;
-    badgeSetting.FontFamily = "serif";
+var tabView = new SfTabView();
+BadgeSettings badgeSetting = new BadgeSettings();
+badgeSetting.FontAttributes = FontAttributes.Bold;
+badgeSetting.FontSize = 15;
+badgeSetting.FontFamily = "serif";
 
-    var tabItems = new TabItemCollection()
+var tabItems = new TabItemCollection()
+{
+    new SfTabItem()
     {
-        new SfTabItem()
-        {
-            Header="TabItem",
-            BadgeText = "Inbox",
-            BadgeSettings = badgeSetting,
-        }
-    };
+        Header="TabItem",
+        BadgeText = "Inbox",
+        BadgeSettings = badgeSetting,
+    }
+};
 
-    tabView.Items = tabItems;
+tabView.Items = tabItems;
             
 {% endhighlight %}
 
@@ -492,8 +492,8 @@ The `FontAutoScalingEnabled` property is used to automatically scale the tab hea
 {% endhighlight %}
 
 {% highlight C# %}
-    var tabView = new SfTabView();
-    tabView.FontAutoScalingEnabled = true;
+var tabView = new SfTabView();
+tabView.FontAutoScalingEnabled = true;
 {% endhighlight %}
 
 {% endtabs %}
