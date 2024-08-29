@@ -234,26 +234,26 @@ The following image illustrates the result of the above code:
 
 N> SelectionChanged event arguments `CurrentSelection` and `PreviousSelection` marked as "Obsolete". You can use the `AddedItems` and `RemovedItems` event arguments.
 
-## Get the selected value
+## Setting or getting the selected value
 
-The [SelectedValuePath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_SelectedValuePath) property allows you to specify a SelectedValue for a `ComboBox`'s `SelectedItem`. The [SelectedItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_SelectedItem) represents an object in the `Items` collection, and the `ComboBox` displays the value of the selected item's single property. The SelectedValuePath property specifies the path to the property that is used to determine the [SelectedValue](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_SelectedValue) property's value. The default value of SelectedValue and SelectedValuePath is `null`.
+The `SelectedValue` property in a ComboBox control enables you to get or set the `SelectedValue` based on the `SelectedItem` or `SelectedItems` depending on the selection mode. The `SelectedValuePath` property defines, which property of the selected item is used to populate the `SelectedValue`.
 
-For example, when you select any `SocialMedia.Name` in the `ComboBox,` the `SelectedItem` property returns the `SocialMedia` data item that corresponds to the selected `SocialMedia.Name.` However, because the `SelectedValuePath` of this `ComboBox` is set to `SocialMedia.ID,` the `SelectedValue` is set to the `SocialMedia.ID.`
+In single selection mode, the `SelectedValue` property contains the value corresponding to the `SelectedValuePath`("ID"). If the `SelectedItem` returns the entire object(`SocialMedia`), then `SelectedValue` holds the value of `SocialMedia.ID`.
 
 {% tabs %}
 {% highlight XAML %}
 
+<Label Text="SelectedValue :" />
+<Label x:Name="selectedValue" />
+
 <editors:SfComboBox x:Name="comboBox"
                     WidthRequest="250"
                     MaxDropDownHeight="250"
-                    SelectedValuePath="ID"
                     TextMemberPath="Name"   
                     DisplayMemberPath="Name"
-                    ItemsSource="{Binding SocialMedias}" 
+                    ItemsSource="{Binding SocialMedias}"
+                    SelectedValuePath="ID"
                     SelectionChanged="OnSelectionChanged"/>
-
-<Label Text="SelectedValue :" />
-<Label x:Name="selectedValue" />
 
 {% endhighlight %}
 {% highlight C# %}
@@ -277,7 +277,62 @@ private void OnSelectionChanged(object sender, Syncfusion.Maui.Inputs.SelectionC
 
 The following gif image illustrates the result of the above code:
 
-![.NET MAUI ComboBox selected value.](Images/Selection/net-maui-combobox-selected-value-path.gif)
+![.NET MAUI ComboBox selected value.](Images/Selection/net-maui-combobox-single-selected-value.gif)
+
+In multi-selection mode, the `SelectedValue` is a collection of values derived from the `SelectedItems` based on the `SelectedValuePath`("ID"), the `SelectedValue` will contains a list of IDs corresponding to the selected SocialMedia items.
+
+{% tabs %}
+{% highlight XAML %}
+
+<Label Text="SelectedValue count :" />
+<Label x:Name="selectedValue" />
+
+<editors:SfComboBox x:Name="comboBox"
+                    WidthRequest="250"
+                    MaxDropDownHeight="250"
+                    TextMemberPath="Name"   
+                    DisplayMemberPath="Name"
+                    ItemsSource="{Binding SocialMedias}"
+                    SelectionMode="Multiple"
+                    SelectedValuePath="ID"
+                    SelectedValue="{Binding SelectedValueList}"
+                    SelectionChanged="OnSelectionChanged"/>
+
+{% endhighlight %}
+{% highlight C# %}
+
+public ObservableCollection<object> SelectedValueList { get; set; }
+SocialMediaViewModel socialMediaViewModel = (this.comboBox.BindingContext as SocialMediaViewModel);
+ObservableCollection<SocialMedia> socialMediasList = socialMediaViewModel.SocialMedias;
+SelectedValueList = new ObservableCollection<object>();
+SelectedValueList.Add(socialMediasList[0].ID);
+SelectedValueList.Add(socialMediasList[2].ID);
+comboBox.SelectedValuePath = "ID";
+comboBox.SelectionChanged += OnSelectionChanged;
+  
+
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight C# %}
+
+private void OnSelectionChanged(object sender, Syncfusion.Maui.Inputs.SelectionChangedEventArgs e)
+{
+    if(comboBox != null && comboBox.SelectedValue is IList<object> value)
+    {
+        selectedValue.Text = value.Count.ToString();
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+The following gif image illustrates the result of the above code:
+
+![.NET MAUI ComboBox selected value.](Images/Selection/net-maui-combobox-multi-selected-value.gif)
+
+N> If the `SelectedValuePath` not specified, then the `SelectedValue` will be the same as the `SelectedItem` or `SelectedItems` based on the selection mode.
 
 ## Open a drop-down programmatically
 
