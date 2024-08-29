@@ -368,7 +368,7 @@ public class SchedulerInteractionViewModel
 
 •    SelectionChangedCommand 
 
-The `SelectionChangedCommand` will be triggered when you long-press the scheduler view and pass the `SchedulerSelectionChangedEventArgs` as parameter.
+The `SelectionChangedCommand` will be triggered when the scheduler view changes and pass the `SchedulerSelectionChangedEventArgs` as parameter.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="18 21 24" %}
