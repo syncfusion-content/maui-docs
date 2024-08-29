@@ -330,7 +330,7 @@ sfMaskedEntry.ReturnType = ReturnType.Next;
 
 ## Clear button customization
 
-The `ClearButtonPath` property allows users to set the path for customizing the appearance of the [SfMaskedEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html) clear Button.
+The `ClearButtonPath` property allows users to set the path for customizing the appearance of the [SfMaskedEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html) clear button.
 
 {% tabs %}
 {% highlight xaml %}

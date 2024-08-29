@@ -379,7 +379,7 @@ sfNumericEntry.ReturnType = ReturnType.Next;
 
 ## Clear button customization
 
-The `ClearButtonPath` property allows users to set the path for customizing the appearance of the [SfNumericEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html) clear Button.
+The `ClearButtonPath` property allows users to set the path for customizing the appearance of the [SfNumericEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html) clear button.
 
 {% tabs %}
 {% highlight xaml %}

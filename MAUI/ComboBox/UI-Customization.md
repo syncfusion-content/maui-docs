@@ -1405,7 +1405,7 @@ sfComboBox.ReturnType = ReturnType.Next;
 
 ## Clear button customization
 
-The `ClearButtonPath` property allows users to set the path for customizing the appearance of the [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) clear Button.
+The `ClearButtonPath` property allows users to set the path for customizing the appearance of the [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) clear button.
 
 {% tabs %}
 {% highlight xaml %}
