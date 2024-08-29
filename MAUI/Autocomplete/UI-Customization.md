@@ -399,7 +399,7 @@ autocomplete.DropDownBackground = Colors.YellowGreen;
 
 ![.NET MAUI Autocomplete DropDown Background](Images/UICustomization/DropDownBackground.png)
 
-### Customize the DropDown selected item backgroundcolor
+### Customize the DropDown selected item background color
 
 The [SelectedDropDownItemBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_SelectedDropDownItemBackground) property is used to modify the background color of the selected item in the dropdown.
 
@@ -1212,3 +1212,31 @@ N> Dynamic changes to the `HorizontalTextAlignment` property may not be function
 The following image illustrates the result of the above code:
 
 ![TextAlignment](Images/UICustomization/TextAlignment.png)
+
+## ReturnType
+
+The `ReturnType` property specifies the return button (e.g., Next, Done, Go) of the keyboard. It helps manage the flow between multiple input fields by defining what happens when the action button is pressed.
+
+You can define the return key type of [SfAutocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) by using the ReturnType property.
+
+N> Default value of ReturnType is `Default`.
+
+{% tabs %}
+{% highlight xaml %}
+
+<editors:SfAutocomplete x:Name="autocomplete"
+            ItemsSource="{Binding SocialMedias}"
+            DisplayMemberPath="Name"
+            TextMemberPath="Name" 
+            ReturnType="Next"/>
+
+{% endhighlight %}
+{% highlight C# %}
+
+SfAutocomplete sfAutocomplete = new SfAutocomplete();
+sfAutocomplete.ReturnType = ReturnType.Next;
+
+{% endhighlight %}
+{% endtabs %}
+
+![.NET MAUI Autocomplete ReturnType](Images/UICustomization/ReturnType.png)

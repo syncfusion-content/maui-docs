@@ -91,6 +91,9 @@ this.Calendar.NavigateToAdjacentMonth = true;
 {% endhighlight %}
 {% endtabs %}
 
+N>
+The `NavigateToAdjacentMonth` is only applicable for single selection mode.
+
 ![Month view navigation to adjacent months using leading/trailing dates in .NET MAUI Calendar.](images/date-navigation/maui-month-view-navigation-by-leading-trailing-month-dates.gif)
 
 ## Programmatically change to adjacent dates
