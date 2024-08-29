@@ -1413,9 +1413,7 @@ The `ClearButtonPath` property allows users to set the path for customizing the 
 <editors:SfComboBox x:Name="comboBox"
                     ItemsSource="{Binding SocialMedias}"
                     TextMemberPath="Name"
-                    DisplayMemberPath="Name"
-                    HeightRequest="40"
-                    WidthRequest="240">
+                    DisplayMemberPath="Name">
             <editors:SfComboBox.ClearButtonPath>
                 <Path Data="M1.70711 0.292893C1.31658 -0.097631 0.683417 -0.097631 0.292893 0.292893C-0.097631 0.683417 -0.097631 1.31658 0.292893 1.70711L5.58579 7L0.292893 12.2929C-0.097631 12.6834 -0.097631 13.3166 0.292893 13.7071C0.683417 14.0976 1.31658 14.0976 1.70711 13.7071L7 8.41421L12.2929 13.7071C12.6834 14.0976 13.3166 14.0976 13.7071 13.7071C14.0976 13.3166 14.0976 12.6834 13.7071 12.2929L8.41421 7L13.7071 1.70711C14.0976 1.31658 14.0976 0.683417 13.7071 0.292893C13.3166 -0.097631 12.6834 -0.097631 12.2929 0.292893L7 5.58579L1.70711 0.292893Z" 
                 Fill="Red" 
@@ -1436,6 +1434,12 @@ var path = new Path()
     Stroke = Colors.Red
 };
 
+var viewModel = new SocialMediaViewModel();
+
+SfComboBox comboBox = new SfComboBox();
+comboBox.ItemsSource = viewModel.SocialMedia;
+comboBox.DisplayMemberPath = "Name";
+comboBox.TextMemberPath = "Name";
 comboBox.ClearButtonPath = path;
 
 {% endhighlight %}
@@ -1449,23 +1453,36 @@ The following image illustrates the result of the above code:
 
 ### Return Command and Return Command Parameter
 
-`ReturnCommand` and `ReturnCommandParameter` allows users to customize and handle action invoked by pressing the Enter key.
-
-- `ReturnCommand` : Specifies what should happent when a [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) is interacted (e.g., clicking a button or pressing Enter key in an entry field).
-- `ReturnCommandParameter` : Provides additional data needed for the action.
-
+- `ReturnCommand`, of type ICommand, defines the command to be executed when the return key is pressed.
+- `ReturnCommandParameter`, of type object, specifies the parameter for the `ReturnCommand`.
 
 {% tabs %}
 {% highlight xaml %}
 
-<editors:SfComboBox x:Name="maskedEntry"
+<editors:SfComboBox x:Name="comboBox"
                     ItemsSource="{Binding SocialMedia}"
                     DisplayMemberPath="Name"
                     TextMemberPath="Name"
                     ReturnCommand="{Binding AlertCommand}"
-                    ReturnCommandParameter="Enter key is pressed"/>
+                    ReturnCommandParameter="Return key is pressed"/>
 
 {% endhighlight %}
+{% highlight c# %}
+
+var viewModel = new SocialMediaViewModel();
+
+SfComboBox comboBox = new SfComboBox();
+comboBox.ItemsSource = viewModel.SocialMedia;
+comboBox.DisplayMemberPath = "Name";
+comboBox.TextMemberPath = "Name";
+comboBox.ReturnCommand = viewModel.AlertCommand;
+comboBox.ReturnCommandParameter = "Enter key is pressed";
+
+
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
 {% highlight c# %}
 
 public SocialMediaViewModel

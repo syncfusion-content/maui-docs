@@ -408,6 +408,10 @@ var path = new Path()
     Stroke = Colors.Red
 };
 
+SfNumericEntry numericEntry = new SfNumericEntry();
+numricEntry.Value=10;
+numericEntry.ShowClearButton = true;
+numericEntry.IsEditable = true; 
 numericEntry.ClearButtonPath = path;
 
 {% endhighlight %}
@@ -421,14 +425,15 @@ The following image illustrates the result of the above code:
 
 ### Return Command and parameter
 
-`ReturnCommand` and `ReturnCommandParameter` allows users to customize and handle action invoked by pressing the Enter key.
-
-- `ReturnCommand` : Specifies what should happent when a [SfNumericEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html) is interacted (e.g., clicking a button or pressing Enter key in an entry field).
-- `ReturnCommandParameter` : Provides additional data needed for the action.
-
+- `ReturnCommand`, of type ICommand, defines the command to be executed when the return key is pressed.
+- `ReturnCommandParameter`, of type object, specifies the parameter for the `ReturnCommand`.
 
 {% tabs %}
 {% highlight xaml %}
+
+<ContentPage.BindingContext>
+    <local:CommandDemoViewModel />
+</ContentPage.BindingContext>
 
 <editors:SfNumericEntry x:Name="numericEntry"
             ReturnCommand="{Binding AlertCommand}"
@@ -437,6 +442,19 @@ The following image illustrates the result of the above code:
 
 {% endhighlight %}
 {% highlight c# %}
+
+var viewModel = new CommandDemoViewModel();
+SfNumericEntry numericEntry = new SfNumericEntry();
+mnumericEntry.ReturnCommand = viewModel.AlertCommand;
+numericEntry.ReturnCommandParameter = "Return key is pressed";
+
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight c# %}
+
+//ViewModel.cs
 
 public class CommandDemoViewModel
 {
