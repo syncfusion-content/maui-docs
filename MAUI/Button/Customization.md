@@ -124,6 +124,34 @@ button.VerticalTextAlignment = TextAlignment.Center;
 {% endhighlight %}
 {% endtabs %}
 
+## Text Transform
+
+Users can now customize the [`SfButton`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfButton.html) text casing using the `TextTransform` property. They can easily switch between uppercase, lowercase, none, or default casing.
+
+{% tabs %}
+{% highlight xaml %}
+
+<button:SfButton x:Name="button" 
+                 Text="Submit" 
+                 TextTransform="Uppercase" 
+                 HorizontalTextAlignment="Center" 
+                 VerticalTextAlignment="Center">
+</button:SfButton>
+
+{% endhighlight %}
+{% highlight c# %}
+
+SfButton button = new SfButton();
+button.Text = "Submit";
+button.TextTransform = "Uppercase";
+button.HorizontalTextAlignment = TextAlignment.Center;
+button.VerticalTextAlignment = TextAlignment.Center;
+
+{% endhighlight %}
+{% endtabs %}
+
+![.NET MAUI Button Text Transform](images/customization-images/Button_texttransform.png)
+
 ## LineBreakMode
 The [`LineBreakMode`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfButton.html#Syncfusion_Maui_Buttons_SfButton_LineBreakMode) allows you to wrap or truncate the text. The default value of this property is `NoWrap`. The following other options are available in LineBreakMode:
 

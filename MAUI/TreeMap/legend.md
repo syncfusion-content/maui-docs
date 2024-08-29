@@ -617,6 +617,147 @@ N> This property will only be applicable when the [ShowLegend](https://help.sync
 
  ![legend-size-in-maui-tree-map](images/legend/legend-size-in-maui-tree-map.png)
 
+
+## Customize items layout
+
+The `ItemsLayout` property is used to customize the arrangement and position of each legend item. The default value is null. This property accepts any layout type.
+
+{% tabs %}
+{% highlight XAML hl_lines="2"%}
+
+<treemap:SfTreeMap x:Name="treeMap"
+               DataSource="{Binding PopulationDetails}"
+               RangeColorValuePath="Population"
+               PrimaryValuePath="Population">
+
+    <treemap:SfTreeMap.BindingContext>
+    <local:PopulationViewModel />
+    </treemap:SfTreeMap.BindingContext>
+    <treemap:SfTreeMap.Resources>
+        <FlexLayout x:Key="legendLayout"
+                    Padding="10,10,10,10"/>
+    </treemap:SfTreeMap.Resources>
+
+    <treemap:SfTreeMap.LegendSettings>
+        <treemap:TreeMapLegendSettings ShowLegend="True"
+                                        ItemsLayout="{StaticResource legendLayout}"/>
+    </treemap:SfTreeMap.LegendSettings>
+    
+    <treemap:SfTreeMap.LeafItemSettings>
+        <treemap:TreeMapLeafItemSettings LabelPath="Country"/>
+    </treemap:SfTreeMap.LeafItemSettings>
+
+    <treemap:SfTreeMap.LeafItemBrushSettings>
+        <treemap:TreeMapRangeBrushSettings>
+            <treemap:TreeMapRangeBrushSettings.RangeBrushes>
+                <treemap:TreeMapRangeBrush LegendLabel="50M - 1B"
+                                                    From="50000000"
+                                                    To="1000000000" 
+                                                    Brush ="#3F8D71" />
+                <treemap:TreeMapRangeBrush LegendLabel="10M - 50M"
+                                                    From="10000000"
+                                                    To="50000000" 
+                                                    Brush ="#5BA985" />
+                <treemap:TreeMapRangeBrush LegendLabel="0.1M - 10M"
+                                                    From="100000" 
+                                                    To="10000000"  
+                                                    Brush= "#7DC59D" />
+            </treemap:TreeMapRangeBrushSettings.RangeBrushes>
+        </treemap:TreeMapRangeBrushSettings>
+    </treemap:SfTreeMap.LeafItemBrushSettings>
+
+</treemap:SfTreeMap>
+
+{% endhighlight %}
+{% highlight C# hl_lines="2" %}
+
+SfTreeMap treeMap = new SfTreeMap();
+PopulationViewModel viewModel = new PopulationViewModel();
+treeMap.DataSource = viewModel.PopulationDetails;
+treeMap.PrimaryValuePath = "Population";
+treeMap.RangeColorValuePath = "Population";
+treeMap.LegendSettings = new TreeMapLegendSettings() { ShowLegend = true, ItemsLayout = new FlexLayout() { Padding = 10, Background = Colors.LightGreen } };
+treeMap.LeafItemSettings = new TreeMapLeafItemSettings() { LabelPath = "Country" };
+treeMap.LeafItemBrushSettings = new TreeMapRangeBrushSettings()
+{
+    RangeBrushes = new List<TreeMapRangeBrush>()
+    {
+        new TreeMapRangeBrush { LegendLabel = "50M - 1B", From = 50000000, To = 1000000000, Brush = new SolidColorBrush(Color.FromArgb("#3F8D71")) },
+        new TreeMapRangeBrush { LegendLabel = "10M - 50M", From = 10000000, To = 50000000, Brush = new SolidColorBrush(Color.FromArgb("#5BA985")) },
+        new TreeMapRangeBrush { LegendLabel = "0.1M - 10M", From = 100000, To = 10000000, Brush = new SolidColorBrush(Color.FromArgb("#7DC59D")) },
+    }
+};
+ 
+this.Content = treeMap;
+
+{% endhighlight %}
+{% endtabs %}
+
+## Customize items template
+
+The `TreeMapLegend` supports customizing the appearance of legend items using the ItemTemplate property. The default value of ItemTemplate is null.
+
+{% tabs %}
+{% highlight XAML hl_lines="2"%}
+
+ <treemap:SfTreeMap x:Name="treeMap"
+               DataSource="{Binding PopulationDetails}"
+               RangeColorValuePath="Population"
+               PrimaryValuePath="Population">
+
+        <treemap:SfTreeMap.BindingContext>
+            <local:PopulationViewModel />
+        </treemap:SfTreeMap.BindingContext>
+
+        <treemap:SfTreeMap.Resources>
+            <DataTemplate x:Key="legendTemplate">
+                <StackLayout Orientation="Horizontal">
+                    <Rectangle HeightRequest="12" 
+                            WidthRequest="12" Margin="3"
+                            Background="{Binding IconBrush}"/>
+                    <Label Text="{Binding Text}" 
+                        Margin="3"/>
+                </StackLayout>
+            </DataTemplate>
+        </treemap:SfTreeMap.Resources>
+
+        <treemap:SfTreeMap.LegendSettings>
+            <treemap:TreeMapLegendSettings ShowLegend="True"
+                                            ItemTemplate="{StaticResource legendTemplate}"/>
+        </treemap:SfTreeMap.LegendSettings>
+
+        <treemap:SfTreeMap.LeafItemSettings>
+            <treemap:TreeMapLeafItemSettings LabelPath="Country"/>
+        </treemap:SfTreeMap.LeafItemSettings>
+
+        <treemap:SfTreeMap.LeafItemBrushSettings>
+            <treemap:TreeMapRangeBrushSettings>
+                <treemap:TreeMapRangeBrushSettings.RangeBrushes>
+                    <treemap:TreeMapRangeBrush LegendLabel="50M - 1B"
+                                                From="50000000"
+                                                To="1000000000" 
+                                                Brush ="#3F8D71" />
+                    <treemap:TreeMapRangeBrush LegendLabel="10M - 50M"
+                                                From="10000000"
+                                                To="50000000" 
+                                                Brush ="#5BA985" />
+                    <treemap:TreeMapRangeBrush LegendLabel="0.1M - 10M"
+                                                From="100000" 
+                                                To="10000000"  
+                                                Brush= "#7DC59D" />
+                </treemap:TreeMapRangeBrushSettings.RangeBrushes>
+            </treemap:TreeMapRangeBrushSettings>
+        </treemap:SfTreeMap.LeafItemBrushSettings>
+
+</treemap:SfTreeMap>
+
+{% endhighlight %}
+{% endtabs %}
+
+![Legend template](images\legend\treemap-legend-template.png){:width="313" height="480"  loading="lazy" .lazy .shadow-effect .section-padding .img-padding}
+
+N> The BindingContext of the ItemTemplate is the corresponding underlying legend item provided in the TreeMapLegendSettings class.
+
 ## Brush settings
 
 The color and text of icons in the legend are by default determined by the [Brush](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapRangeBrush.html#Syncfusion_Maui_TreeMap_TreeMapRangeBrush_Brush) and [LegendLabel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapRangeBrush.html#Syncfusion_Maui_TreeMap_TreeMapRangeBrush_LegendLabel) properties of [TreeMapRangeBrush](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapRangeBrush.html), respectively.
