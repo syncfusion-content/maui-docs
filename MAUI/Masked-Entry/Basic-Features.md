@@ -366,7 +366,7 @@ maskedEntry.ClearButtonPath = path;
 
 The following image illustrates the result of the above code:
 
-![.NET MAUI SfMaskedEntry ClearButtonPath](MaskedEntry_Images/MaskedEntry_Clearbuttoncustomization.png)
+![.NET MAUI MaskedEntry ClearButtonPath](MaskedEntry_Images/MaskedEntry_Clearbuttoncustomization.png)
 
 ## Command
 
