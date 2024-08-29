@@ -182,3 +182,18 @@ node.SetDirty();
 {% endhighlight %}
 {% endtabs %}
 
+## See also
+
+[How to disable the Ripple Effect on .NET MAUI TreeView (SfTreeView)]
+
+<ContentPage.Resources>
+    <syncTheme:SyncfusionThemeDictionary>
+        <syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
+            <ResourceDictionary>
+                <x:String x:Key="SfTreeViewTheme">CustomTheme</x:String>
+                <Color x:Key="SfTreeViewRippleBackground">Transparent</Color>
+            </ResourceDictionary>
+        </syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
+    </syncTheme:SyncfusionThemeDictionary>
+</ContentPage.Resources>
+
