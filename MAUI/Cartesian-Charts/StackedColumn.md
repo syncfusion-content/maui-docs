@@ -10,6 +10,8 @@ keywords: .net maui stacked column chart, maui stacked column chart, stacked col
 
 # Stacked Column Chart in .NET MAUI Chart
 
+## Stacked Column Chart
+
 The stacked column chart represents data values in a stacked format, where the columns are stacked on each other to indicate the cumulative value of the data points.
 
 To render a stacked column chart, create an instance of the [StackingColumnSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.StackingColumnSeries.html) and add it to the [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) collection property of the [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html?tabs=tabid-1).
