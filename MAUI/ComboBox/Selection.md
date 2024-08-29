@@ -305,8 +305,8 @@ public ObservableCollection<object> SelectedValueList { get; set; }
 SocialMediaViewModel socialMediaViewModel = (this.comboBox.BindingContext as SocialMediaViewModel);
 ObservableCollection<SocialMedia> socialMediasList = socialMediaViewModel.SocialMedias;
 SelectedValueList = new ObservableCollection<object>();
-SelectedValueList.Add(socialMediasList[0].ID);
-SelectedValueList.Add(socialMediasList[2].ID);
+SelectedValueList.Add(socialMediasList[4].ID);
+SelectedValueList.Add(socialMediasList[6].ID);
 comboBox.SelectedValuePath = "ID";
 comboBox.SelectionChanged += OnSelectionChanged;
   

@@ -317,7 +317,7 @@ SocialMediaViewModel socialMediaViewModel = (this.autocomplete.BindingContext as
 ObservableCollection<SocialMedia> socialMediasList = socialMediaViewModel.SocialMedias;
 SelectedValueList = new ObservableCollection<object>();
 SelectedValueList.Add(socialMediasList[0].ID);
-SelectedValueList.Add(socialMediasList[2].ID);
+SelectedValueList.Add(socialMediasList[4].ID);
 autocomplete.SelectedValuePath = "ID";
 autocomplete.SelectionChanged += OnSelectionChanged;
   
