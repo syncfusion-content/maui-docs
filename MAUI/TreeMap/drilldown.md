@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Drilldown in .NET MAUI TreeMap Control | Syncfusion
+title: Drilldown support in .NET MAUI TreeMap Control | Syncfusion
 description: Learn here all about Drilldown feature and the header customization of Syncfusion .NET MAUI TreeMap (SfTreeMap) control and more.
 platform: maui
 control: TreeMap (SfTreeMap)
@@ -11,7 +11,7 @@ documentation: ug
 
 The drilldown feature provides better visualization of hierarchy. A large set of data can be virtualized into minimal views. Each level of items can be drilled down. TreeMap provides animation along with the drilldown support.
 
-## Enable Drilldown
+## Enable drilldown
 
 The drilldown feature can be enabled or disabled using the `EnableDrilldown` property in TreeMap. The header with the group path label will be displayed above the leaf item once drilldown is enabled.
 

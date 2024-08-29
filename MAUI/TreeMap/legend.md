@@ -618,7 +618,7 @@ N> This property will only be applicable when the [ShowLegend](https://help.sync
  ![legend-size-in-maui-tree-map](images/legend/legend-size-in-maui-tree-map.png)
 
 
-## Items Layout 
+## Customize items layout
 
 The `ItemsLayout` property is used to customize the arrangement and position of each legend item. The default value is null. This property accepts any layout type.
 
@@ -693,7 +693,7 @@ this.Content = treeMap;
 {% endhighlight %}
 {% endtabs %}
 
-## Items Template
+## Customize items template
 
 The `TreeMapLegend` supports customizing the appearance of legend items using the ItemTemplate property. The default value of ItemTemplate is null.
 
