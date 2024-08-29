@@ -354,3 +354,16 @@ private bool FilterDepartures(object obj)
 ## See also
 
 [How to set the font size for .NET MAUI ListView (SfListView)](https://support.syncfusion.com/kb/article/11569/how-to-set-the-font-size-for-net-maui-listview-sflistview)
+
+[How to disable the Ripple Effect on .NET MAUI ListView (SfListView)]
+
+<ContentPage.Resources>
+    <syncTheme:SyncfusionThemeDictionary>
+        <syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
+            <ResourceDictionary>
+                <x:String x:Key="SfListViewTheme">CustomTheme</x:String>
+                <Color x:Key="SfListViewItemRippleBackground">Transparent</Color>
+            </ResourceDictionary>
+        </syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
+    </syncTheme:SyncfusionThemeDictionary>
+</ContentPage.Resources>
