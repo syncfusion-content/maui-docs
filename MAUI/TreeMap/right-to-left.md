@@ -9,7 +9,7 @@ documentation: ug
 
 # Right To Left in .NET MAUI TreeMap (SfTreeMap)
 
-SfTreeMap supports changing the flow to the right-to-left direction by setting the FlowDirection to RightToLeft. TreeMap supports RTL when the flow direction of the device is changed.
+SfTreeMap supports changing the flow to the right-to-left direction by setting the `FlowDirection` to RightToLeft.
 
 {% tabs %}
 {% highlight XAML hl_lines="4" %}

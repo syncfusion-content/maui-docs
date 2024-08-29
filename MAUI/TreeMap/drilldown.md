@@ -9,7 +9,7 @@ documentation: ug
 
 # Drilldown in .NET MAUI TreeMap (SfTreeMap)
 
-The drilldown feature provides better visualization of hierarchy. A large set of data can be virtualized into minimal views. Each level of items can be drilled down. TreeMap provides animation along with the drilldown support. The drilldown header will be enabled when you perform drilldown in TreeMap, and this header helps in performing zoom out operation (i.e., drill up one level).
+The drilldown feature provides better visualization of hierarchy. A large set of data can be virtualized into minimal views. Each level of items can be drilled down. TreeMap provides animation along with the drilldown support.
 
 ## Enable Drilldown
 
@@ -31,41 +31,6 @@ treeMap.EnableDrilldown = true;
 
 ![enable-drilldown-in-maui-tree-map](images\drilldown\maui-drilldown.png){:width="313" height="480"  loading="lazy" .lazy .shadow-effect .section-padding .img-padding}
 
-## Header customization
-
-The drilldown header used for zoom out (i.e., drill up one level) operation can be customized by setting style using the `DrilldownHeaderSettings` property in TreeMap. This property provides similar customization option as of the TreeMap level header.
-
-The following code snippet demonstrates how to define the drilldown header style.
-
-![drilldown-headerstyle](images\drilldown\maui-drilldown-headerstyle.png){:width="313" height="444"  loading="lazy" .lazy .shadow-effect .section-padding .img-padding}
-
-{% tabs %} 
-
-{% highlight xaml %}
-
- <treemap:SfTreeMap.DrillDownHeaderSettings>
-    <treemap:TreeMapDrillDownHeaderSettings Height="50" Background="Violet">
-        <treemap:TreeMapDrillDownHeaderSettings.TextStyle>
-            <treemap:TreeMapTextStyle TextColor="Blue"/>
-        </treemap:TreeMapDrillDownHeaderSettings.TextStyle>
-    </treemap:TreeMapDrillDownHeaderSettings>
-</treemap:SfTreeMap.DrillDownHeaderSettings>
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-SfTreeMap map = new SfTreeMap();
-map.DrillDownHeaderSettings.Height = 30;
-map.DrillDownHeaderSettings.Background = Colors.Violet;
-map.DrillDownHeaderSettings.TextStyle.TextColor = Colors.Blue;
-
-{% endhighlight %}
-
-{% endtabs %} 
-
-![Drilldown](images\drilldown\drilldown.gif){:width="325" height="580" loading="lazy" .lazy .shadow-effect .section-padding .img-padding}
-
 The following code snippet is the complete code for drilldown.
 
 {% tabs %} 
@@ -79,14 +44,6 @@ The following code snippet is the complete code for drilldown.
                    Margin="8"
                    ShowToolTip="True"
                    EnableDrillDown="True">
-    
-    <treemap:SfTreeMap.DrillDownHeaderSettings>
-        <treemap:TreeMapDrillDownHeaderSettings Height="50">
-            <treemap:TreeMapDrillDownHeaderSettings.TextStyle>
-                <treemap:TreeMapTextStyle TextColor="Blue"/>
-            </treemap:TreeMapDrillDownHeaderSettings.TextStyle>
-        </treemap:TreeMapDrillDownHeaderSettings>
-    </treemap:SfTreeMap.DrillDownHeaderSettings>
 
     <treemap:SfTreeMap.LeafItemSettings>
         <treemap:TreeMapLeafItemSettings LabelPath="Country">
@@ -389,3 +346,41 @@ public class DrillDownViewModel
 
 {% endhighlight %}
 {% endtabs %}
+
+![Drilldown](images\drilldown\drilldown.gif){:width="325" height="580" loading="lazy" .lazy .shadow-effect .section-padding .img-padding}
+
+## Header customization
+
+The drilldown header used for zoom out (i.e., drill up one level) operation can be customized by setting style using the `DrilldownHeaderSettings` property in TreeMap. This property provides similar customization option as of the TreeMap level header.
+
+The `DrilldownHeaderSettings` include the following properties:
+
+`Background`: Specifies the background brush for the drilldown header in the SfTreeMap.
+`Height`: Specifies the height for the drilldown header in the SfTreeMap.
+`TextStyle`: Specifies the text style for the drilldown header in the SfTreeMap.
+
+The following code snippet demonstrates how to define the drilldown header style.
+
+{% tabs %} 
+{% highlight xaml %}
+
+ <treemap:SfTreeMap.DrillDownHeaderSettings>
+    <treemap:TreeMapDrillDownHeaderSettings Height="50" Background="Violet">
+        <treemap:TreeMapDrillDownHeaderSettings.TextStyle>
+            <treemap:TreeMapTextStyle TextColor="Blue"/>
+        </treemap:TreeMapDrillDownHeaderSettings.TextStyle>
+    </treemap:TreeMapDrillDownHeaderSettings>
+</treemap:SfTreeMap.DrillDownHeaderSettings>
+
+{% endhighlight %}
+{% highlight C# %}
+
+SfTreeMap map = new SfTreeMap();
+map.DrillDownHeaderSettings.Height = 30;
+map.DrillDownHeaderSettings.Background = Colors.Violet;
+map.DrillDownHeaderSettings.TextStyle.TextColor = Colors.Blue;
+
+{% endhighlight %}
+{% endtabs %} 
+
+![drilldown-headerstyle](images\drilldown\maui-drilldown-headerstyle.png){:width="313" height="444"  loading="lazy" .lazy .shadow-effect .section-padding .img-padding}
