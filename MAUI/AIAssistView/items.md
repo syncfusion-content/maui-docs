@@ -157,7 +157,7 @@ documentation: ug
 
 ## Image item
 
-`ImagItem` is used to display an image as a item. Using the `Source`, `Size`, and `Aspect` properties, you can display the desired image in the desired height and width as a item in the AI Assist View control.
+`ImageItem` is used to display an image as a item. Using the `Source`, `Size`, and `Aspect` properties, you can display the desired image in the desired height and width as a item in the AI Assist View control.
 
 {% tabs %}
 {% highlight xaml %}
