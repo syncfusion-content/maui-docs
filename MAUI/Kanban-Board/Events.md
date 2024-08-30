@@ -32,29 +32,29 @@ The default value of the [CardTappedCommandParameter]() is `null`.
 
 {% highlight xaml %}
 
-    <kanban:SfKanban  CardTappedCommand="{Binding CardTappedCommand}" CardTappedCommandParameter="1">
-            <!--Intialize the column-->
-    </kanban:SfKanban>
+<kanban:SfKanban  CardTappedCommand="{Binding CardTappedCommand}" CardTappedCommandParameter="1">
+        <!--Intialize the column-->
+</kanban:SfKanban>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    public class ViewModel
+public class ViewModel
+{
+
+    public ViewModel()
     {
+        CardTappedCommand = new Command<object>(CardTappedEvent);
 
-        public ViewModel()
-        {
-            CardTappedCommand = new Command<object>(CardTappedEvent);
-
-            public ICommand CardTappedCommand { get; set; }
-        }
-
-        private void CardTappedEvent(object args)
-        {
-            //  handle event action.
-        }
+        public ICommand CardTappedCommand { get; set; }
     }
+
+    private void CardTappedEvent(object args)
+    {
+        //  handle event action.
+    }
+}
 {% endhighlight %}
 
 {% endtabs %}

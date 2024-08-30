@@ -37,43 +37,43 @@ The following code example describes the above behavior.
 
 {% highlight xaml %}
 
-    <kanban:SfKanban.PlaceholderStyle >
+<kanban:SfKanban.PlaceholderStyle >
 
-        <kanban:KanbanPlaceholderStyle FontSize="16"
-        TextColor="Green"
-        Fill="Fuchsia"
-        Stroke="Fuchsia"
-        StrokeWidth="2"
-        SelectedFontSize="16"
-        SelectedTextColor="Red"
-        SelectedStroke="Yellow"
-        SelectedStrokeWidth="2"
-        SelectedFill="Green">
-        </kanban:KanbanPlaceholderStyle>
+    <kanban:KanbanPlaceholderStyle FontSize="16"
+    TextColor="Green"
+    Fill="Fuchsia"
+    Stroke="Fuchsia"
+    StrokeWidth="2"
+    SelectedFontSize="16"
+    SelectedTextColor="Red"
+    SelectedStroke="Yellow"
+    SelectedStrokeWidth="2"
+    SelectedFill="Green">
+    </kanban:KanbanPlaceholderStyle>
 
-    </kanban:SfKanban.PlaceholderStyle>
+</kanban:SfKanban.PlaceholderStyle>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-    KanbanPlaceholderStyle style = new KanbanPlaceholderStyle();
+KanbanPlaceholderStyle style = new KanbanPlaceholderStyle();
 
-    style.FontSize = 20;
-    style.TextColor = Colors.Red;
-    style.Fill = Colors.Fuchsia;
-    style.Stroke = Colors.Blue;
-    style.StrokeWidth = 2;
-    style.StrokeDashArray = new double[] { 1, 1 };
+style.FontSize = 20;
+style.TextColor = Colors.Red;
+style.Fill = Colors.Fuchsia;
+style.Stroke = Colors.Blue;
+style.StrokeWidth = 2;
+style.StrokeDashArray = new double[] { 1, 1 };
 
-    style.SelectedFontSize = 20;
-    style.SelectedTextColor = Colors.Red;
-    style.SelectedFill = Colors.Yellow;
-    style.SelectedFill = Colors.Green;
-    style.SelectedStrokeWidth = 2;
-    style.SelectedStrokeDashArray = new double[] { 2, 1 };
+style.SelectedFontSize = 20;
+style.SelectedTextColor = Colors.Red;
+style.SelectedFill = Colors.Yellow;
+style.SelectedFill = Colors.Green;
+style.SelectedStrokeWidth = 2;
+style.SelectedStrokeDashArray = new double[] { 2, 1 };
 
-    kanban.PlaceholderStyle = style;
+kanban.PlaceholderStyle = style;
 
 {% endhighlight %}
 

@@ -22,31 +22,31 @@ This section provides a quick overview for working with Essential Kanban for .NE
 
 {% highlight xaml %}
 
-    <ContentPage
-        . . .    
-        xmlns:kanban="clr-namespace:Syncfusion.Maui.Kanban;assembly=Syncfusion.Maui.Kanban">
-        <Grid>
-            <kanban:SfKanban/>
-        </Grid>
-    </ContentPage>
+<ContentPage
+    . . .    
+    xmlns:kanban="clr-namespace:Syncfusion.Maui.Kanban;assembly=Syncfusion.Maui.Kanban">
+    <Grid>
+        <kanban:SfKanban/>
+    </Grid>
+</ContentPage>
  
 {% endhighlight %}
 
 {% highlight C# %}
 
-    using Syncfusion.Maui.Kanban;
-    namespace KanbanGettingStarted
+using Syncfusion.Maui.Kanban;
+namespace KanbanGettingStarted
+{
+    public partial class MainPage : ContentPage
     {
-        public partial class MainPage : ContentPage
+        public MainPage()
         {
-            public MainPage()
-            {
-                InitializeComponent();           
-                SfKanban kanban = new SfKanban(); 
-                this.Content = kanban;
-            }
-        }   
-    }
+            InitializeComponent();           
+            SfKanban kanban = new SfKanban(); 
+            this.Content = kanban;
+        }
+    }   
+}
 
 {% endhighlight %}
 
@@ -58,32 +58,32 @@ Syncfusion.Maui.Core nuget is a dependent package for all Syncfusion controls of
 
 {% highlight C# %}
 
-    using Microsoft.Maui;
-    using Microsoft.Maui.Hosting;
-    using Microsoft.Maui.Controls.Compatibility;
-    using Microsoft.Maui.Controls.Hosting;
-    using Microsoft.Maui.Controls.Xaml;
-    using Syncfusion.Maui.Core.Hosting;
+using Microsoft.Maui;
+using Microsoft.Maui.Hosting;
+using Microsoft.Maui.Controls.Compatibility;
+using Microsoft.Maui.Controls.Hosting;
+using Microsoft.Maui.Controls.Xaml;
+using Syncfusion.Maui.Core.Hosting;
 
-    namespace KanbanGettingStarted
+namespace KanbanGettingStarted
+{
+    public static class MauiProgram
     {
-        public static class MauiProgram
+        public static MauiApp CreateMauiApp()
         {
-            public static MauiApp CreateMauiApp()
+            var builder = MauiApp.CreateBuilder();
+            builder
+            .UseMauiApp<App>()
+            .ConfigureSyncfusionCore()
+            .ConfigureFonts(fonts =>
             {
-                var builder = MauiApp.CreateBuilder();
-                builder
-                .UseMauiApp<App>()
-                .ConfigureSyncfusionCore()
-                .ConfigureFonts(fonts =>
-                {
-                    fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-                });
+                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+            });
 
-                return builder.Build();
-            }
+            return builder.Build();
         }
     }
+}
 
 {% endhighlight %}
 
@@ -93,54 +93,54 @@ Create a ViewModel class with a collection property to hold a collection of [`Ka
 
 {% highlight C# %}
 
-    public class ViewModel
+public class ViewModel
+{
+    public ObservableCollection<KanbanModel> Cards { get; set; }
+    public ViewModel()
     {
-        public ObservableCollection<KanbanModel> Cards { get; set; }
-        public ViewModel()
+        Cards = new ObservableCollection<KanbanModel>();
+        Cards.Add(new KanbanModel()
         {
-            Cards = new ObservableCollection<KanbanModel>();
-            Cards.Add(new KanbanModel()
-            {
-                ID = 1,
-                Title = "iOS - 1002",
-                ImageURL = "People_Circle1.png",
-                Category = "Open",
-                Description = "Analyze customer requirements",
-                IndicatorFill = Colors.Red,
-                Tags = new string[] { "Incident", "Customer" }
-            });
-            Cards.Add(new KanbanModel()
-            {
-                ID = 6,
-                Title = "Xamarin - 4576",
-                ImageURL = "People_Circle2.png",
-                Category = "Open",
-                Description = "Show the retrieved data from the server in grid control",
-                IndicatorFill = Colors.Green,
-                Tags = new string[] { "Story", "Customer" }
-            });
-            Cards.Add(new KanbanModel()
-            {
-                ID = 13,
-                Title = "UWP - 13",
-                ImageURL = "People_Circle3.png",
-                Category = "In Progress",
-                Description = "Add responsive support to application",
-                IndicatorFill = Colors.Brown,
-                Tags = new string[] { "Story", "Customer" }
-            });
-            Cards.Add(new KanbanModel()
-            {
-                ID = 2543,
-                Title = "People_Circle4.png",
-                Category = "Code Review",
-                ImageURL = "Image3.png",
-                Description = "Check login page validation",
-                IndicatorFill = Colors.Brown,
-                Tags = new string[] { "Story", "Customer" }
-            });
-        }
+            ID = 1,
+            Title = "iOS - 1002",
+            ImageURL = "People_Circle1.png",
+            Category = "Open",
+            Description = "Analyze customer requirements",
+            IndicatorFill = Colors.Red,
+            Tags = new List<string> { "Incident", "Customer" }
+        });
+        Cards.Add(new KanbanModel()
+        {
+            ID = 6,
+            Title = "Xamarin - 4576",
+            ImageURL = "People_Circle2.png",
+            Category = "Open",
+            Description = "Show the retrieved data from the server in grid control",
+            IndicatorFill = Colors.Green,
+            Tags = new List<string> { "Story", "Customer" }
+        });
+        Cards.Add(new KanbanModel()
+        {
+            ID = 13,
+            Title = "UWP - 13",
+            ImageURL = "People_Circle3.png",
+            Category = "In Progress",
+            Description = "Add responsive support to application",
+            IndicatorFill = Colors.Brown,
+            Tags = new List<string> { "Story", "Customer" }
+        });
+        Cards.Add(new KanbanModel()
+        {
+            ID = 2543,
+            Title = "People_Circle4.png",
+            Category = "Code Review",
+            ImageURL = "Image3.png",
+            Description = "Check login page validation",
+            IndicatorFill = Colors.Brown,
+            Tags = new List<string> { "Story", "Customer" }
+        });
     }
+}
 
 {% endhighlight %}
 
@@ -152,17 +152,17 @@ N> Add namespace of ViewModel class in your XAML page if you prefer to set Bindi
 
 {% highlight xaml %}
 
-    <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-                x:Class="KanbanGettingStarted.MainPage"
-                xmlns:chart="clr-namespace:Syncfusion.Maui.Kanban;assembly=Syncfusion.Maui.Kanban"
-                xmlns:local="clr-namespace:KanbanGettingStarted"> 
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            x:Class="KanbanGettingStarted.MainPage"
+            xmlns:chart="clr-namespace:Syncfusion.Maui.Kanban;assembly=Syncfusion.Maui.Kanban"
+            xmlns:local="clr-namespace:KanbanGettingStarted"> 
 
-	    <ContentPage.BindingContext>
-            <local:ViewModel>
-            </local:ViewModel>   
-        </ContentPage.BindingContext>
-    </ContentPage>
+    <ContentPage.BindingContext>
+        <local:ViewModel>
+        </local:ViewModel>   
+    </ContentPage.BindingContext>
+</ContentPage>
 
 {% endhighlight %}
 
@@ -182,14 +182,14 @@ Bind the above data to [`SfKanban`]() using [`ItemsSource`]() property.
 
 {% highlight xaml %}
 
-    <kanban:SfKanban ItemsSource="{Binding Cards}">
-    </kanban:SfKanban>
+<kanban:SfKanban ItemsSource="{Binding Cards}">
+</kanban:SfKanban>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-    kanban.SetBinding(SfKanban.ItemsSourceProperty, "Cards");
+kanban.SetBinding(SfKanban.ItemsSourceProperty, "Cards");
 
 {% endhighlight %}
 
@@ -203,48 +203,48 @@ The columns are generated automatically based on the different values of [`Categ
 
 {% highlight xaml %}
 
-    <kanban:SfKanban x:Name="kanban" AutoGenerateColumns="False" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" ItemsSource="{Binding Cards}">
+<kanban:SfKanban x:Name="kanban" AutoGenerateColumns="False" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" ItemsSource="{Binding Cards}">
 
-        <kanban:SfKanban.Columns>
+    <kanban:SfKanban.Columns>
 
-            <kanban:KanbanColumn x:Name="openColumn" Title="To Do"  >
-            </kanban:KanbanColumn>
+        <kanban:KanbanColumn x:Name="openColumn" Title="To Do"  >
+        </kanban:KanbanColumn>
 
-            <kanban:KanbanColumn x:Name="progressColumn" Title="In Progress">
-            </kanban:KanbanColumn>
+        <kanban:KanbanColumn x:Name="progressColumn" Title="In Progress">
+        </kanban:KanbanColumn>
 
-            <kanban:KanbanColumn x:Name="codeColumn" Title="Code Review" >
-            </kanban:KanbanColumn>
+        <kanban:KanbanColumn x:Name="codeColumn" Title="Code Review" >
+        </kanban:KanbanColumn>
 
-            <kanban:KanbanColumn x:Name="doneColumn" Title="Done"  >
-            </kanban:KanbanColumn> 
+        <kanban:KanbanColumn x:Name="doneColumn" Title="Done"  >
+        </kanban:KanbanColumn> 
 
-        </kanban:SfKanban.Columns>
+    </kanban:SfKanban.Columns>
 
-    </kanban:SfKanban> 
+</kanban:SfKanban> 
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-    kanban.AutoGenerateColumns = false; 
-    kanban.SetBinding(SfKanban.ItemsSourceProperty, "Cards");
+kanban.AutoGenerateColumns = false; 
+kanban.SetBinding(SfKanban.ItemsSourceProperty, "Cards");
 
-    KanbanColumn openColumn = new KanbanColumn();
-    openColumn.Title = "Open";
-    kanban.Columns.Add(openColumn);
+KanbanColumn openColumn = new KanbanColumn();
+openColumn.Title = "Open";
+kanban.Columns.Add(openColumn);
 
-    KanbanColumn progressColumn = new KanbanColumn();
-    progressColumn.Title = "In Progress";
-    kanban.Columns.Add(progressColumn);
+KanbanColumn progressColumn = new KanbanColumn();
+progressColumn.Title = "In Progress";
+kanban.Columns.Add(progressColumn);
 
-    KanbanColumn codeColumn = new KanbanColumn();
-    codeColumn.Title = "Code Review";
-    kanban.Columns.Add(codeColumn);
+KanbanColumn codeColumn = new KanbanColumn();
+codeColumn.Title = "Code Review";
+kanban.Columns.Add(codeColumn);
 
-    KanbanColumn doneColumn = new KanbanColumn();
-    doneColumn.Title = "Done";
-    kanban.Columns.Add(doneColumn);
+KanbanColumn doneColumn = new KanbanColumn();
+doneColumn.Title = "Done";
+kanban.Columns.Add(doneColumn);
 
 {% endhighlight %}
 
@@ -254,11 +254,11 @@ Define the categories of column using [`Categories`]() property of [`KanbanColum
 
 {% highlight C# %}
 
-    openColumn.Categories = new List<object>() { "Open" };
-    progressColumn.Categories = new List<object>() { "In Progress" };
-    codeColumn.Categories = new List<object>() { "Code Review" };
-    doneColumn.Categories = new List<object>() { "Done" };
+openColumn.Categories = new List<object>() { "Open" };
+progressColumn.Categories = new List<object>() { "In Progress" };
+codeColumn.Categories = new List<object>() { "Code Review" };
+doneColumn.Categories = new List<object>() { "Done" };
 
 {% endhighlight %}
 
-This is how the final output will look like. You can download the entire source code of this demo from [here]().
+This is how the final output will look like.
