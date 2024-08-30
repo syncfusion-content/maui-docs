@@ -403,7 +403,7 @@ private string _customPath = "M1.70711 0.292893C1.31658 -0.097631 0.683417 -0.09
 var converter = new PathGeometryConverter();
 var path = new Path() 
 { 
-    Data = (PathGeometry)converter.ConvertFromInvariantString(_customPath;),
+    Data = (PathGeometry)converter.ConvertFromInvariantString(_customPath),
     Fill = Colors.Red,
     Stroke = Colors.Red
 };
@@ -423,7 +423,7 @@ The following image illustrates the result of the above code:
 
 ## Command
 
-### Return Command and parameter
+### Return Command and Return Command Parameter
 
 - `ReturnCommand`, of type ICommand, defines the command to be executed when the return key is pressed.
 - `ReturnCommandParameter`, of type object, specifies the parameter for the `ReturnCommand`.
@@ -432,12 +432,12 @@ The following image illustrates the result of the above code:
 {% highlight xaml %}
 
 <ContentPage.BindingContext>
-    <local:CommandDemoViewModel />
+    <local:CommandDemoViewModel/>
 </ContentPage.BindingContext>
 
 <editors:SfNumericEntry x:Name="numericEntry"
             ReturnCommand="{Binding AlertCommand}"
-            ReturnCommandParameter="This is an alert message">
+            ReturnCommandParameter="Return key is pressed">
 </editors:SfNumericEntry>
 
 {% endhighlight %}
@@ -445,7 +445,7 @@ The following image illustrates the result of the above code:
 
 var viewModel = new CommandDemoViewModel();
 SfNumericEntry numericEntry = new SfNumericEntry();
-mnumericEntry.ReturnCommand = viewModel.AlertCommand;
+numericEntry.ReturnCommand = viewModel.AlertCommand;
 numericEntry.ReturnCommandParameter = "Return key is pressed";
 
 {% endhighlight %}
