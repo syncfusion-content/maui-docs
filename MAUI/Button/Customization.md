@@ -124,7 +124,7 @@ button.VerticalTextAlignment = TextAlignment.Center;
 {% endhighlight %}
 {% endtabs %}
 
-## Text Transform
+### Text Transform
 
 Users can now customize the [`SfButton`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfButton.html) text casing using the `TextTransform` property. They can easily switch between uppercase, lowercase, none, or default casing.
 

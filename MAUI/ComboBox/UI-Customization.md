@@ -1449,9 +1449,7 @@ The following image illustrates the result of the above code:
 
 ![.NET MAUI ComboBox ClearButtonPath](Images/UICustomization/clearbuttoncustomization.png)
 
-## Command
-
-### Return Command and Return Command Parameter
+## Return Command and Return Command Parameter
 
 - `ReturnCommand`, of type ICommand, defines the command to be executed when the return key is pressed.
 - `ReturnCommandParameter`, of type object, specifies the parameter for the `ReturnCommand`.
