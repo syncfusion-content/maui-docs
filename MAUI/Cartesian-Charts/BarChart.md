@@ -14,7 +14,7 @@ A bar chart uses bars to represent data points and compare values across differe
 
 N> By default, [IsTransposed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_IsTransposedProperty) property of the [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html?tabs=tabid-1) is false.
 
-N> The cartesian chart has Series as its default content.
+N> The Cartesian chart has Series as its default content.
 
 {% tabs %}
 
