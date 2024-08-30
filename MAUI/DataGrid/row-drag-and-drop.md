@@ -18,7 +18,7 @@ To enable row drag and drop functionality, please follow the code example below:
 {% highlight XAML %}
 <syncfusion:SfDataGrid x:Name="dataGrid"
                        ItemsSource="{Binding OrderInfoCollection}"  
-                       AllowDraggingRow="True"
+                       AllowDraggingRow="True">
  </syncfusion:SfDataGrid>
 {% endhighlight %}
 {% highlight c# %}
@@ -26,7 +26,7 @@ dataGrid.AllowDraggingRow = true;
 {% endhighlight %}
 {% endtabs %}
 
-![DataGrid with row drag and drop](SfDataGrid_images/RowDragandDrop.gif)
+<img alt="DataGrid row drag and drop" src="Images\row-drag-and-drop\RowDragAndDrop.gif"/>
 
 ## Dragging scenarios
 
@@ -48,7 +48,7 @@ The data grid allows you to load desired content when performing row drag-and-dr
 
 The default template will be used if no other template is explicitly assigned for row drag-and-drop operations.
 
-![Drag and drop pop-up with default apperance](SfDataGrid_images/DefaultTemplate.jpg)
+<img alt="Default drag and drop" src="Images\row-drag-and-drop\DefaultDragAndDrop.gif" />
 
 ## Customizing row drag-and-drop template
 
@@ -70,82 +70,11 @@ Please refer to the following code example that demonstrates how to load a view 
 {% endhighlight %}
 {% endtabs %}
 
-{% tabs %}
-{% highlight c# %}
-//Row template with a custom view representing rows.
 
-public class RowTemplate : Grid
-{        
-    #region Constructor
-
-    public RowTemplate()
-    {
-        this.BackgroundColor = Color.White;
-        this.Children.Add(CreateLabel("OrderID"));
-        this.Children.Add(new BoxView() { Color = Color.Gray, WidthRequest = 1 });
-        this.Children.Add(CreateLabel("EmployeeID"));
-        this.Children.Add(new BoxView() { Color = Color.Gray, WidthRequest = 1 });
-        this.Children.Add(CreateLabel("CustomerID"));
-        this.Children.Add(new BoxView() { Color = Color.Gray, WidthRequest = 1 });
-        this.Children.Add(CreateLabel("FirstName"));
-        this.Children.Add(new BoxView() { Color = Color.Gray, WidthRequest = 1 });
-        this.Children.Add(CreateLabel("LastName"));
-    }
-
-    #endregion
-
-    #region Private Method
-
-    private ContentView CreateLabel(string Property)
-    {
-        var label = new Label();
-        label.TextColor = Color.Black;
-        label.LineBreakMode = LineBreakMode.NoWrap;
-        label.FontSize = 12;
-        label.HorizontalTextAlignment = TextAlignment.Center;
-        label.VerticalTextAlignment = TextAlignment.Center;
-        label.SetBinding(Label.TextProperty, Property);
-        return new ContentView() { Content = label };
-    }
-
-    #endregion
-
-    #region Override Method
-
-    protected override void LayoutChildren(double x, double y, double width, double height)
-    {
-        foreach (var child in Children)
-        {
-            if (Device.OS == TargetPlatform.Android || Device.OS == TargetPlatform.iOS)
-            {
-                if (child is ContentView)
-                    child.Layout(new Rectangle(x, y, (width / ((Children.Count + 1) / 2)) - 0.5, height));
-                else
-                    child.Layout(new Rectangle(x, y, 0.5, height));
-            }
-            else
-            {
-                if (child is ContentView)
-                    child.Layout(new Rectangle(x, y, (width / ((Children.Count + 1) / 2)) - 1, height));
-                else
-                    child.Layout(new Rectangle(x, y, 1, height));
-
-            }
-            x += child.Width;
-        }
-    }
-
-    #endregion
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-![Drag and drop pop-up with customized apperance](SfDataGrid_images/CustomizedTemplate.jpg)
 
 N> Currently, the row drag-and-drop features cannot be used if different row sets with varying heights are specified using the `QueryRowHeight` event.
 
-You can download the customizing row drag-and-drop template sample [here](https://www.syncfusion.com/downloads/support/directtrac/general/ze/RowDragandDrop865318434).
+
 
 ## Events in row drag-and-drop
 
@@ -156,7 +85,7 @@ The `QueryRowDragging` event provides the following properties in the `QueryRowD
  * `From`: Returns the index of the row that is currently being dragged.
  * `To`: Returns the index of the row where you attempt to drop the dragged item.
  * `Position`: Returns the current x and y coordinates of the RowDragView.
- * `Reason`: Returns the details of row dragging as `QueryRowDraggingReason`.
+ * `DraggingAction`: Returns the details of row dragging as `DataGridDragAction`.
  * `RowData`: Returns the underlying data associated with the row that was dragged.
  * `CurrentRowData`: Returns the row data corresponding to the current position of the row drag view.
  * `CanAutoScroll`: Returns whether auto-scrolling should occur when the row drag view reaches the top or bottom of the `SfDataGrid`.
@@ -164,18 +93,18 @@ The `QueryRowDragging` event provides the following properties in the `QueryRowD
 
 ## Cancel dragging of a particular row
 
-Dragging a specific row can be canceled by using the `QueryRowDraggingReason` argument in the `QueryRowDragging` event handler.
+Dragging a specific row can be canceled by using the `DataGridDragAction` argument in the `QueryRowDragging` event handler.
 
 {% tabs %}
 {% highlight c# %}
 
-this.SfGrid.QueryRowDragging += SfGrid_QueryRowDragging;
+this.dataGrid.QueryRowDragging += DataGrid_QueryRowDragging;
 
-private void SfGrid_QueryRowDragging(object sender, QueryRowDraggingEventArgs e)
+private void DataGrid_QueryRowDragging(object? sender, Syncfusion.Maui.DataGrid.DataGridQueryRowDraggingEventArgs e)
 {
     //e.From returns the index of the dragged row.
-    //e.Reason returns the dragging status of the row.
-    if (e.From == 1 && e.Reason == QueryRowDraggingReason.DragStarted)
+    //e.DataGridDragAction returns the dragging status of the row.
+    if (e.From == 1 && e.DraggingAction == DataGridDragAction.DragStarted)
         e.Cancel = true;
 }
 
@@ -184,20 +113,17 @@ private void SfGrid_QueryRowDragging(object sender, QueryRowDraggingEventArgs e)
 
 ## Cancel dropping when dragging over particular rows
 
-The action of dropping while dragging over specific rows can be canceled using the `QueryRowDraggingReason` argument in the `QueryRowDragging` event handler.
+The action of dropping while dragging over specific rows can be canceled using the `DataGridDragAction` argument in the `QueryRowDragging` event handler.
 
 {% tabs %}
 {% highlight c# %}
 
-this.SfGrid.QueryRowDragging += SfGrid_QueryRowDragging;
+this.dataGrid.QueryRowDragging += DataGrid_QueryRowDragging;
 
-private void SfGrid_QueryRowDragging(object sender, QueryRowDraggingEventArgs e)
+private void DataGrid_QueryRowDragging(object? sender, Syncfusion.Maui.DataGrid.DataGridQueryRowDraggingEventArgs e)
 {
-    //e.To returns the index of the current row.
-    //e.Reason returns the dragging status of the row.
-    if ((e.To > 5 || e.To < 10) &&
-    (e.Reason == QueryRowDraggingReason.DragEnded || e.Reason == QueryRowDraggingReason.Dragging))
-        e.Cancel = true;
+    if ((e.To > 5 || e.To < 10) && (e.DraggingAction == DataGridDragAction.DragEnded || e.DraggingAction == DataGridDragAction.Dragging))
+    e.Cancel = true;
 }
 
 {% endhighlight %}
@@ -205,18 +131,16 @@ private void SfGrid_QueryRowDragging(object sender, QueryRowDraggingEventArgs e)
 
 ## Cancel dropping of a particular row
 
-The dropping of a specific row can be canceled using the `QueryRowDraggingReason` argument in the `QueryRowDragging` event handler.
+The dropping of a specific row can be canceled using the `DataGridDragAction` argument in the `QueryRowDragging` event handler.
 
 {% tabs %}
 {% highlight c# %}
 
-this.SfGrid.QueryRowDragging += SfGrid_QueryRowDragging;
+this.dataGrid.QueryRowDragging += DataGrid_QueryRowDragging;
 
-private void SfGrid_QueryRowDragging(object sender, QueryRowDraggingEventArgs e)
+private void DataGrid_QueryRowDragging(object? sender, Syncfusion.Maui.DataGrid.DataGridQueryRowDraggingEventArgs e)
 {
-    //e.From returns the index of the dragged row.
-    //e.Reason returns the dragging status of the row.
-    if (e.From == 1 && e.Reason == QueryRowDraggingReason.DragEnded)
+    if (e.From == 1 && e.DraggingAction == DataGridDragAction.DragEnded)
         e.Cancel = true;
 }
 
@@ -225,18 +149,16 @@ private void SfGrid_QueryRowDragging(object sender, QueryRowDraggingEventArgs e)
 
 ## Cancel dropping at a particular position
 
-Dropping at a specific position can be canceled by using the `QueryRowDraggingReason` argument in the `QueryRowDragging` event handler.
+Dropping at a specific position can be canceled by using the `DataGridDragAction` argument in the `QueryRowDragging` event handler.
 
 {% tabs %}
 {% highlight c# %}
 
-this.SfGrid.QueryRowDragging += SfGrid_QueryRowDragging;
+this.dataGrid.QueryRowDragging += DataGrid_QueryRowDragging;
 
-private void SfGrid_QueryRowDragging(object sender, QueryRowDraggingEventArgs e)
+private void DataGrid_QueryRowDragging(object? sender, Syncfusion.Maui.DataGrid.DataGridQueryRowDraggingEventArgs e)
 {
-    //e.To returns the index of the current row.
-    //e.Reason returns the dragging status of the row.
-    if ((e.To == 5 || e.To == 7) && e.Reason == QueryRowDraggingReason.DragEnded)
+    if ((e.To == 5 || e.To == 7) && e.DraggingAction == DataGridDragAction.DragEnded)
         e.Cancel = true;
 }
 
@@ -245,20 +167,18 @@ private void SfGrid_QueryRowDragging(object sender, QueryRowDraggingEventArgs e)
 
 ## Cancel dropping of a particular row in a position
 
-The dropping of a particular row at a position can be canceled using the `QueryRowDraggingReason` and `Position` arguments in the `QueryRowDragging` event handler.
+The dropping of a particular row at a position can be canceled using the `DataGridDragAction` and `Position` arguments in the `QueryRowDragging` event handler.
 
 {% tabs %}
 {% highlight c# %}
 
-this.SfGrid.QueryRowDragging += SfGrid_QueryRowDragging;
+this.dataGrid.QueryRowDragging += DataGrid_QueryRowDragging;
 
-private void SfGrid_QueryRowDragging(object sender, QueryRowDraggingEventArgs e)
-{
-     //e.To returns the index of the current row.
-     //e.Position returns the x and y position of the current row
-      if ((e.To == 3) && e.Position == new Point(927,1167) && e.Reason == QueryRowDraggingReason.DragEnded)
-        e.Cancel = true;
-}
+ private void DataGrid_QueryRowDragging(object? sender, Syncfusion.Maui.DataGrid.DataGridQueryRowDraggingEventArgs e)
+ {
+     if ((e.To == 3) && e.Position == new Point(927, 1167) && e.DraggingAction == DataGridDragAction.DragEnded)
+         e.Cancel = true;
+ }
 
 {% endhighlight %}
 {% endtabs %}   
@@ -267,69 +187,63 @@ private void SfGrid_QueryRowDragging(object sender, QueryRowDraggingEventArgs e)
 
 ### Cancel dragging between frozen and non-frozen rows
 
-Dragging between frozen and non-frozen rows can be canceled using the `QueryRowDraggingReason` and `From` arguments of the `QueryRowDragging` event handler by checking whether the value of the `From` argument is an index of a frozen row.
+Dragging between frozen and non-frozen rows can be canceled using the `DataGridDragAction` and `From` arguments of the `QueryRowDragging` event handler by checking whether the value of the `From` argument is an index of a frozen row.
 
 {% tabs %}
 {% highlight c# %}
 
-SfGrid.FrozenRowsCount = 4;
+dataGrid.FrozenRowCount = 4;
 
-this.SfGrid.QueryRowDragging += SfGrid_QueryRowDragging;
+this.dataGrid.QueryRowDragging += DataGrid_QueryRowDragging;
 
-private void SfGrid_QueryRowDragging(object sender, QueryRowDraggingEventArgs e)
-{
-     //e.From returns the index of the dragged frozen row.
-     //e.To returns the index of the current row.
-      if    (e.From > sfGrid.GetHeaderIndex() && e.From <= sfGrid.FrozenRowsCount && e.Reason == QueryRowDraggingReason.DragStarted)
-        e.Cancel = true;
-}
+ private void DataGrid_QueryRowDragging(object? sender, Syncfusion.Maui.DataGrid.DataGridQueryRowDraggingEventArgs e)
+ {
+     if (e.From > dataGrid.GetHeaderIndex() && e.From <= dataGrid.FrozenRowCount && e.DraggingAction == DataGridDragAction.DragStarted)
+         e.Cancel = true;
+ }
 
 {% endhighlight %}
 {% endtabs %}
 
 ### Cancel dropping between frozen and non-frozen rows
 
-Dropping between frozen and non-frozen rows can be canceled using the `QueryRowDraggingReason` and `From` arguments of the `QueryRowDragging` event handler by checking whether the value of the `From` argument is an index of a frozen row.
+Dropping between frozen and non-frozen rows can be canceled using the `DataGridDragAction` and `From` arguments of the `QueryRowDragging` event handler by checking whether the value of the `From` argument is an index of a frozen row.
 
 {% tabs %}
 {% highlight c# %}
 
-SfGrid.FrozenRowsCount = 4;
+dataGrid.FrozenRowCount = 4;
 
-this.SfGrid.QueryRowDragging += SfGrid_QueryRowDragging;
+dataGrid.QueryRowDragging += DataGrid_QueryRowDragging;
 
-private void SfGrid_QueryRowDragging(object sender, QueryRowDraggingEventArgs e)
+private async void DataGrid_QueryRowDragging(object? sender, Syncfusion.Maui.DataGrid.DataGridQueryRowDraggingEventArgs e)
 {
-      //e.From returns the index of the dragged frozen row.
-      //e.To returns the index of the current row.
-      if (e.From > sfGrid.GetHeaderIndex() && e.From <= sfGrid.FrozenRowsCount && e.Reason == QueryRowDraggingReason.DragEnded)
+    if (e.From > dataGrid.GetHeaderIndex() && e.From <= dataGrid.FrozenRowCount && e.DraggingAction == DataGridDragAction.DragEnded)
         e.Cancel = true;
 }
 
 {% endhighlight %}
 {% endtabs %}
 
-N> FrozenRowsCount must be less than rows in view.
+N> FrozenRowCount must be less than rows in view.
 
 ## Reorder the underlying data
 
-Reordering changes made directly to the underlying data can be done using the `QueryRowDraggingReason` argument in the `QueryRowDragging` event handler. Please refer to the following code sample to implement permanent reordering changes:
+Reordering changes made directly to the underlying data can be done using the `DataGridDragAction` argument in the `QueryRowDragging` event handler. Please refer to the following code sample to implement permanent reordering changes:
 
 {% tabs %}
 {% highlight c# %}
 
-this.SfGrid.QueryRowDragging += SfGrid_QueryRowDragging;
+this.dataGrid.QueryRowDragging += DataGrid_QueryRowDragging;
 
-private void SfGrid_QueryRowDragging(object sender, QueryRowDraggingEventArgs e)
+private void DataGrid_QueryRowDragging(object? sender, Syncfusion.Maui.DataGrid.DataGridQueryRowDraggingEventArgs e)
 {
-    //e.To returns the index of the current row.
-    //e.From returns the index of the dragged row.
-    if (e.Reason == QueryRowDraggingReason.DragEnded)
+    if (e.DraggingAction == DataGridDragAction.DragEnded)
     {
         var collection = (sender as SfDataGrid).ItemsSource as IList;
         collection.RemoveAt(e.From - 1);
         collection.Insert(e.To - 1, e.RowData);
-	    //To skip default collection change inside the SfDataGrid source for a successful drag and drop operation.
+        //To skip default collection change inside the SfDataGrid source for a successful drag and drop operation.
         e.Cancel = true;
     }
 }
@@ -339,21 +253,21 @@ private void SfGrid_QueryRowDragging(object sender, QueryRowDraggingEventArgs e)
 
 ## Drop a grid row in the last position
 
-The `To` property of the `QueryRowDraggingEventArgs` indicates the current drop index of the dragged row when it is being dragged over the grid rows. It returns the same index when dragging a row over the last position or the second-to-last position. To programmatically track whether the dragged row is dropped in the last position or the second-to-last position, the data grid provides the `Position` property in `QueryRowDraggingEventArgs`, which indicates the position of the RowDragView.
+The `To` property of the `DataGridQueryRowDraggingEventArgs` indicates the current drop index of the dragged row when it is being dragged over the grid rows. It returns the same index when dragging a row over the last position or the second-to-last position. To programmatically track whether the dragged row is dropped in the last position or the second-to-last position, the data grid provides the `Position` property in `DataGridQueryRowDraggingEventArgs`, which indicates the position of the RowDragView.
 
 Refer to the following code example in which the `Position` property is used to determine whether the row is dropped in the last position:
 
 {% tabs %}
 {% highlight c# %}
 
-this.SfGrid.QueryRowDragging += SfGrid_QueryRowDragging;
+this.dataGrid.QueryRowDragging += DataGrid_QueryRowDragging;
 
-private void SfGrid_QueryRowDragging(object sender, QueryRowDraggingEventArgs e)
+private void DataGrid_QueryRowDragging(object? sender, Syncfusion.Maui.DataGrid.DataGridQueryRowDraggingEventArgs e)
 {
-    var totalHeight = dataGrid.RowColumnIndexToPoint(new RowColumnIndex(viewModel.OrdersInfo.Count, 0)).Y + this.dataGrid.RowHeight;
-    if (e.Reason == QueryRowDraggingReason.DragEnded)
+    var totalHeight = dataGrid.RowColumnIndexToPoint(new RowColumnIndex(viewModel.Orders.Count, 0)).Y + this.dataGrid.RowHeight;
+    if (e.DraggingAction == DataGridDragAction.DragEnded)
     {
-        if (Math.Ceiling(e.Position.Y + (dataGrid.RowHeight / 2)) > totalHeight && e.To == viewModel.OrdersInfo.Count)
+        if (Math.Ceiling(e.Position.Y + (dataGrid.RowHeight / 2)) > totalHeight && e.To == viewModel.Orders.Count)
         {
             //Will hit if the row is dropped at the last position                 
             DisplayAlert("RowDragAndDrop info", "The row is dropped at the last position", "OK");
@@ -364,44 +278,6 @@ private void SfGrid_QueryRowDragging(object sender, QueryRowDraggingEventArgs e)
 {% endhighlight %}
 {% endtabs %}
 
-## Customizing row drag-and-drop indicators
-
-The data grid allows you to customize the row drag-and-drop indicators by creating a custom grid style that derives from `DataGridStyle` and assigning it to the `SfDataGrid.GridStyle` property.
-
-{% tabs %}
-{% highlight c#%}
-
-dataGrid.GridStyle = new CustomGridStyle();
-
-{% endhighlight %}
-{% endtabs %}
-
-{% tabs %}
-{% highlight c#%}
-
-// Custom style class
-public class CustomGridStyle : DataGridStyle
-{
-    public CustomGridStyle()
-    {
-
-    }
-
-    public override ImageSource GetRowDragUpIndicator()
-    {
-        return ImageSource.FromResource("DataGridDemo.icons.RedUp.png");
-    }
-
-    public override ImageSource GetRowDragDownIndicator()
-    {
-        return ImageSource.FromResource("DataGridDemo.icons.RedDown.png");
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-![DataGrid with row drag and drop indicators customized](SfDataGrid_images/CustomizedIndicators_Row.jpg)
 
 ## Updating summaries when dragging and dropping a row between groups
 
@@ -419,28 +295,25 @@ public partial class MainPage : ContentPage
     {
          InitializeComponent();
          dataGrid = new SfDataGrid();
-         viewModel = new ViewModel();
-         dataGrid.ItemsSource = viewModel.OrdersInfo;
+         viewModel = new OrderRepo();
+         dataGrid.ItemsSource = viewModel.Orders;
          dataGrid.QueryRowDragging += DataGrid_QueryRowDragging;
          this.Content = dataGrid;
     }
-    private async void DataGrid_QueryRowDragging(object sender, QueryRowDraggingEventArgs e)
+   private void DataGrid_QueryRowDragging(object? sender, Syncfusion.Maui.DataGrid.DataGridQueryRowDraggingEventArgs e)
     {
-         if (e.Reason == QueryRowDraggingReason.DragEnded)
+         if (e.DraggingAction == DataGridDragAction.DragEnded)
          {
              // Delay is given for refreshing the view.
              await Task.Delay(100);                
              this.dataGrid.View.TopLevelGroup.UpdateCaptionSummaries();
              this.dataGrid.View.Refresh();
-          }
+         }
     }
 }
 {% endhighlight %}
 {% endtabs %}
 
-The following screenshot displays the output generated when executing the code example above.
-
-![DataGrid with summary update after drag and drop](SfDataGrid_images/UpdatedSummary.png)
 
 ## Cancel auto scrolling 
 
@@ -449,20 +322,80 @@ The vertical auto-scrolling of the `SfDataGrid` during row drag-and-drop can be 
 {% tabs %}
 {% highlight c# %}
 
-this.SfGrid.QueryRowDragging += SfGrid_QueryRowDragging;
+dataGrid.QueryRowDragging += DataGrid_QueryRowDragging;
 
-private void SfGrid_QueryRowDragging(object sender, QueryRowDraggingEventArgs e)
-{  
-    // Disable scroll while dragging the Rows.    
-    e.CanAutoScroll = false;
+private async void DataGrid_QueryRowDragging(object? sender, Syncfusion.Maui.DataGrid.DataGridQueryRowDraggingEventArgs e)
+{
+   e.CanAutoScroll = true;
 }
 
 {% endhighlight %}
 {% endtabs %}
 
-N> You can refer to our [Xamarin DataGrid](https://www.syncfusion.com/xamarin-ui-controls/xamarin-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [Xamarin.Forms DataGrid example](https://github.com/syncfusion/xamarin-demos/tree/master/Forms/DataGrid) to knows various chart types and how to easily configured with built-in support for creating stunning visual effects.
 
-## See also
+## RowDragAndDrop Style
+### RowDraggingIndicatorLineColor
 
-[How to update the summaries when a row is dragged and dropped between groups](https://support.syncfusion.com/kb/article/7046/how-to-update-the-summaries-when-a-row-is-dragged-and-dropped-between-groups-in-xamarinforms-)
+The `RowDraggingIndicatorLineColor` property in the `SfDataGrid` is used to customize the color of the line that appears during a drag-and-drop operation when you move rows within the dataGrid. This line serves as a visual indicator, showing where the row will be dropped if the user releases the drag at that point.
+
+{% tabs %}
+{% highlight XAML %}
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                       ItemsSource="{Binding OrderInfoCollection}"  
+                       AllowDraggingRow="True">
+
+    <syncfusion:SfDataGrid.DefaultStyle>
+        <syncfusion:DataGridStyle RowDraggingIndicatorLineColor="Blue"/>
+    </syncfusion:SfDataGrid.DefaultStyle>
+ </syncfusion:SfDataGrid>
+{% endhighlight %}
+{% highlight c# %}
+
+dataGrid.DefaultStyle.RowDraggingIndicatorLineColor = Colors.Blue;
+
+{% endhighlight %}
+{% endtabs %}
+
+### RowDragViewBackgroundColor
+The `RowDragViewBackgroundColor` property in the `SfDataGrid` control is used to set the background color of the row that is being dragged during a drag-and-drop operation. 
+
+{% tabs %}
+{% highlight XAML %}
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                       ItemsSource="{Binding OrderInfoCollection}"  
+                       AllowDraggingRow="True">
+
+     <syncfusion:SfDataGrid.DefaultStyle>
+        <syncfusion:DataGridStyle RowDragViewBackgroundColor="Blue"/>
+    </syncfusion:SfDataGrid.DefaultStyle>
+ </syncfusion:SfDataGrid>
+{% endhighlight %}
+{% highlight c# %}
+
+dataGrid.DefaultStyle.RowDragViewBackgroundColor = Colors.Blue;
+
+{% endhighlight %}
+{% endtabs %}
+
+### RowDragViewTextColor
+The `RowDragViewTextColor` property in the `SfDataGrid` is used to set the text color of the row that is being dragged during a drag-and-drop operation. This property allows you to customize the color of the text that appears on the drag view.
+
+{% tabs %}
+{% highlight XAML %}
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                       ItemsSource="{Binding OrderInfoCollection}"  
+                       AllowDraggingRow="True">
+
+    <syncfusion:SfDataGrid.DefaultStyle>
+        <syncfusion:DataGridStyle RowDragViewTextColor="Blue"/>
+    </syncfusion:SfDataGrid.DefaultStyle>
+ </syncfusion:SfDataGrid>
+{% endhighlight %}
+{% highlight c# %}
+
+dataGrid.DefaultStyle.RowDragViewTextColor = Colors.Blue;
+
+{% endhighlight %}
+{% endtabs %}
+
 
