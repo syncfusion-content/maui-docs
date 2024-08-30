@@ -216,3 +216,104 @@ private void OnDatePickerCancelButtonClicked(object sender, EventArgs e)
 {% endhighlight %}
 
 {% endtabs %}
+
+## Commands
+
+### SelectionChangedCommand
+
+The SfDatePicker includes a built-in event called `SelectionChanged` that is triggered whenever the selection index in the picker changes. This event can be invoked through the [SelectionChangedCommand](), which passes the `DatePickerSelectionChangedEventArgs` as a parameter.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
+
+<picker:SfDatePicker x:Name="picker"
+                    SelectionChangedCommand="{Binding SelectionChangedCommand}">
+<ContentPage.BindingContext>
+    <local:ViewModel/>
+</ContentPage.BindingContext>					  
+</picker:SfDatePicker>
+
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="3,5,7" %}
+
+public class ViewModel
+{
+    public ICommand SelectionChangedCommand { get; set; }
+    public ViewModel()
+    {
+        SelectionChangedCommand = new Command(SelectionChanged);
+    }
+    private void SelectionChanged()
+    {
+        // To do your requirement here.
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+### AcceptCommand
+
+The SfDatePicker includes a built-in event called `OkButtonClicked`, which is triggered when the confirm button is tapped on the date picker. This event can be invoked through the [AcceptCommand]().
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
+
+<picker:SfDatePicker x:Name="picker"
+                    AcceptCommand="{Binding AcceptCommand}">
+<ContentPage.BindingContext>
+    <local:ViewModel/>
+</ContentPage.BindingContext>					  
+</picker:SfDatePicker>
+
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="3,5,7" %}
+
+public class ViewModel
+{
+    public ICommand AcceptCommand { get; set; }
+    public ViewModel()
+    {
+        AcceptCommand = new Command(ActionButtonClicked);
+    }
+    private void ActionButtonClicked()
+    {
+        // To do your requirement here.
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+### DeclineCommand
+
+The SfDatePicker includes a built-in event called `CancelButtonClicked`, which is triggered when the cancel button is tapped on the date picker. This event can be invoked through the [DeclineCommand]().
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
+
+<picker:SfDatePicker x:Name="picker"
+                    DeclineCommand="{Binding DeclineCommand}">
+<ContentPage.BindingContext>
+    <local:ViewModel/>
+</ContentPage.BindingContext>					  
+</picker:SfDatePicker>
+
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="3,5,7" %}
+
+public class ViewModel
+{
+    public ICommand DeclineCommand { get; set; }
+    public ViewModel()
+    {
+        DeclineCommand = new Command(ActionButtonCanceled);
+    }
+    private void ActionButtonCanceled()
+    {
+        // To do your requirement here.
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
