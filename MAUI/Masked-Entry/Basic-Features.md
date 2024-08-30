@@ -301,3 +301,117 @@ maskedEntry.VerticalTextAlignment = TextAlignment.Start;
 The following image illustrates the result of the above code:
 
 ![TextAlignment](MaskedEntry_Images/MaskedEntry_TextAlignment.png)
+
+## ReturnType
+
+The `ReturnType` property specifies the return button (e.g., Next, Done, Go) of the keyboard. It helps manage the flow between multiple input fields by defining what happens when the action button is pressed.
+
+You can define the return key type of [SfMaskedEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html) by using the ReturnType property.
+
+N> Default value of ReturnType is `Default`.
+
+{% tabs %}
+{% highlight xaml %}
+
+<editors:SfMaskedEntry x:Name="maskedentry" 
+                        WidthRequest="200"
+                        ReturnType="Next"/>
+
+{% endhighlight %}
+{% highlight C# %}
+
+SfMaskedEntry sfMaskedEntry = new SfMaskedEntry();
+sfMaskedEntry.ReturnType = ReturnType.Next;
+
+{% endhighlight %}
+{% endtabs %}
+
+![.NET MAUI MaskedEntry ReturnType](MaskedEntry_Images/MaskedEntry_ReturnType.png)
+
+## Clear button customization
+
+The `ClearButtonPath` property allows users to set the path for customizing the appearance of the [SfMaskedEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html) clear button.
+
+{% tabs %}
+{% highlight xaml %}
+
+<syncfusion:SfMaskedEntry x:Name="maskedEntry"
+                          ClearButtonVisibility = "WhileEditing">
+            <editors:SfMaskedEntry.ClearButtonPath>
+                <Path Data="M1.70711 0.292893C1.31658 -0.097631 0.683417 -0.097631 0.292893 0.292893C-0.097631 0.683417 -0.097631 1.31658 0.292893 1.70711L5.58579 7L0.292893 12.2929C-0.097631 12.6834 -0.097631 13.3166 0.292893 13.7071C0.683417 14.0976 1.31658 14.0976 1.70711 13.7071L7 8.41421L12.2929 13.7071C12.6834 14.0976 13.3166 14.0976 13.7071 13.7071C14.0976 13.3166 14.0976 12.6834 13.7071 12.2929L8.41421 7L13.7071 1.70711C14.0976 1.31658 14.0976 0.683417 13.7071 0.292893C13.3166 -0.097631 12.6834 -0.097631 12.2929 0.292893L7 5.58579L1.70711 0.292893Z" 
+                Fill="Red" 
+                Stroke="Red"/>
+            </editors:SfMaskedEntry.ClearButtonPath>
+</editors:SfMaskedEntry>
+
+{% endhighlight %}
+{% highlight c# %}
+
+private string _customPath = "M1.70711 0.292893C1.31658 -0.097631 0.683417 -0.097631 0.292893 0.292893C-0.097631 0.683417 -0.097631 1.31658 0.292893 1.70711L5.58579 7L0.292893 12.2929C-0.097631 12.6834 -0.097631 13.3166 0.292893 13.7071C0.683417 14.0976 1.31658 14.0976 1.70711 13.7071L7 8.41421L12.2929 13.7071C12.6834 14.0976 13.3166 14.0976 13.7071 13.7071C14.0976 13.3166 14.0976 12.6834 13.7071 12.2929L8.41421 7L13.7071 1.70711C14.0976 1.31658 14.0976 0.683417 13.7071 0.292893C13.3166 -0.097631 12.6834 -0.097631 12.2929 0.292893L7 5.58579L1.70711 0.292893Z";
+
+var converter = new PathGeometryConverter();
+var path = new Path() 
+{ 
+    Data = (PathGeometry)converter.ConvertFromInvariantString(_customPath;),
+    Fill = Colors.Red,
+    Stroke = Colors.Red
+};
+
+maskedEntry = new SfMaskedEntry(); 
+maskedEntry.ClearButtonVisibility = ClearButtonVisibility.WhileEditing;
+maskedEntry.ClearButtonPath = path;
+
+{% endhighlight %}
+{% endtabs %}
+
+The following image illustrates the result of the above code:
+
+![.NET MAUI MaskedEntry ClearButtonPath](MaskedEntry_Images/MaskedEntry_Clearbuttoncustomization.png)
+
+## Command
+
+### Return Command and Return Command Parameter
+
+- `ReturnCommand`, of type ICommand, defines the command to be executed when the return key is pressed.
+- `ReturnCommandParameter`, of type object, specifies the parameter for the `ReturnCommand`.
+
+{% tabs %}
+{% highlight xaml %}
+
+<ContentPage.BindingContext>
+    <local:CommandDemoViewModel />
+</ContentPage.BindingContext>
+
+<editors:SfMaskedEntry x:Name="maskedEntry"
+            ReturnCommand="{Binding AlertCommand}"
+            ReturnCommandParameter="Return key is pressed">
+</editors:SfMaskedEntry>
+
+{% endhighlight %}
+{% highlight c# %}
+
+var viewModel = new CommandDemoViewModel();
+SfMaskedEntry maskedEntry = new SfMaskedEntry();
+maskedEntry.ReturnCommand = viewModel.AlertCommand;
+maskedEntry.ReturnCommandParameter = "Return key is pressed";
+
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight c# %}
+
+//ViewModel.cs
+
+public class CommandDemoViewModel
+{
+    public ICommand AlertCommand => new Command<string>(OnAlertCommandExecuted);
+
+    private async void OnAlertCommandExecuted(string parameter)
+    {
+        await Application.Current.MainPage.DisplayAlert("Alert", parameter, "OK");
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}

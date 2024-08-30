@@ -28,7 +28,6 @@ To define the legend in the chart, initialize the [ChartLegend](https://help.syn
     </chart:SfPyramidChart.Legend>
 </chart:SfPyramidChart>
 
-
 {% endhighlight %}
 
 {% highlight c# %}
@@ -42,6 +41,7 @@ SfPyramidChart chart = new SfPyramidChart()
 
 chart.Legend = new ChartLegend();
 this.Content = chart;
+
 {% endhighlight %}
 
 {% endtabs %}
@@ -78,6 +78,7 @@ chart.Legend = new ChartLegend()
 };
 
 this.Content = chart;
+
 {% endhighlight %}
 
 {% endtabs %}
@@ -241,7 +242,7 @@ pyramidChart.Legend = new ChartLegend()
 
 {% endhighlight %}
 
-{% tabs %}
+{% endtabs %}
 
 ## Legend maximum size request
 To set the maximum size request for the legend view, override the [GetMaximumSizeCoefficient](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLegend.html#Syncfusion_Maui_Charts_ChartLegend_GetMaximumSizeCoefficient) protected method in [ChartLegend](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLegend.html) class. The value should be between 0 and 1, representing the maximum size request, not the desired size for the legend items layout.
@@ -270,7 +271,7 @@ public class LegendExt : ChartLegend
     }
 }
 
-SfPolarChart chart = new SfPolarChart();
+SfPyramidChart chart = new SfPyramidChart();
 chart.Legend = new LegendExt();
 this.Content = chart;
 

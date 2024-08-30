@@ -19,31 +19,45 @@ The following steps below will assist you to create your **Syncfusion .NET MAUI 
 
     ![CreateProjectPalette](images/CreateProjectPalette.png)
 
-2.	Select **Syncfusion .NET MAUI Template Studio: Launch** and press **Enter**. This will launch the Template Studio wizard for configuring the Syncfusion .NET MAUI app. Enter the Project Name and Project Path as required.
+2.	Select **Syncfusion .NET MAUI Template Studio: Launch** and press **Enter**. This will launch the Template Studio wizard for configuring the Syncfusion .NET MAUI application. Enter a unique **Project Name** to identify your application, and then specify the **Project Location**, which is the directory where your project files will be saved. Ensure that the chosen location meets your project's needs.
 
     ![CreateProject](images/TemplateStudioWizard.png)
 
-3.	To select a control, click on the **Next** button or the **Controls** tab. You can then add the following Syncfusion .NET MAUI components to the application. Choose the required Syncfusion .NET MAUI components.
+3.	To select a component, click the **Next** button or the **Components** tab. From there, you can add the desired Syncfusion .NET MAUI components to your application. Simply choose the necessary Syncfusion .NET MAUI components for your project.
 
-    ![CreateProject](images/MAUICreateProject.gif)
+    ![SelectComponents](images/MAUIControlSelection.gif)
 
-    Select the required control(s) by clicking on the corresponding checkbox.
+    Select the required component(s) by clicking on the corresponding checkbox.
 
-    To unselect a control that has been added, click on the checkbox of the selected control.
+    Choose the required component(s) by clicking the corresponding component box.
 
-    N> **Note:** Select at least one control to enable the **Create** button.
+    To unselect the added component(s), use either one of the following options:
 
-    **Project details section**
+    **Option 1:** Click the corresponding selected component checkbox.
 
-    In the Project Details section, you can modify the Project Name, Project Path, and their configurations. You can also choose the desired .NET Core Version (.NET 7.0 or .NET 8.0).
+    **Option 2:** Click **‘x’** button for the corresponding component in the component list from **Components Selected**.
 
-4.	Click the **Create** button to generate the Syncfusion .NET MAUI application. The created application includes the necessary Syncfusion NuGet packages and rendering code for the selected Syncfusion components.
+    N> **Note:** Select at least one control to enable the **Features** tab.
 
-5.  You can run the application to see the Syncfusion components. Click **F5** or go to **Run>Start Debugging**.
+4. The features for the selected controls will be displayed when you click the **Next** button or the **Features** tab. From there, you can select or unselect the desired features for your selected components.
 
-       ![Debug](images/Debug.png)
+    ![SelectFeatures](images/MAUIControlFeatureSelection.gif)
 
-6.	The Syncfusion .NET MAUI application is configured with the latest Syncfusion .NET MAUI NuGet packages version, namespaces, and component rendering code for Syncfusion components.
+    **Project Summary section**
 
-7.	If you installed the trial setup or NuGet packages from nuget.org you must register the Syncfusion license key to your application since Syncfusion introduced the licensing system from 2018 Volume 2 (v16.2.0.41) Essential Studio release. Navigate to the [help topic](https://help.syncfusion.com/common/essential-studio/licensing/overview#how-to-generate-syncfusion-license-key) to generate and register the Syncfusion license key to your application. Refer to this [blog](https://www.syncfusion.com/blogs/post/whats-new-in-2018-volume-2.aspx?_ga=2.11237684.1233358434.1587355730-230058891.1567654773) post for understanding the licensing changes introduced in Essential Studio.
+    In the **Project Summary** section, you can customize the **Project Name** to uniquely identify your application and specify the **Project Location**, which is the directory where your project files will be saved. You can also adjust the **Configuration Settings** by removing one or more controls from the **Components Selected** list. Additionally, choose your preferred **Core Version** (.NET 7.0 or .NET 8.0) and **Theme** (Material Light or Material Dark).
+
+    ![ProjectSummary](images/MAUIProjectSummary.png)
+
+5.	Click the **Create** button to generate the Syncfusion .NET MAUI application. The created application includes the necessary Syncfusion NuGet packages and rendering code for the selected Syncfusion components.
+
+6.  To view the Syncfusion components in your application, run it by pressing **F5** or selecting **Run > Start Debugging**. Then, search for **.NET MAUI** and select it to launch the application.
+
+    ![Debug](images/Debug.gif)
+
+    N> **Note:** If the .NET MAUI extension is a preview version, the debugger will be listed as **.NET MAUI**. However, if the .NET MAUI extension is stable, this configuration will be replaced with **C#**.
+
+7.	The Syncfusion .NET MAUI application is configured with the latest Syncfusion .NET MAUI NuGet packages version, namespaces, and component rendering code for Syncfusion components.
+
+8.	If you installed the trial setup or NuGet packages from nuget.org you must register the Syncfusion license key to your application since Syncfusion introduced the licensing system from 2018 Volume 2 (v16.2.0.41) Essential Studio release. Navigate to the [help topic](https://help.syncfusion.com/common/essential-studio/licensing/overview#how-to-generate-syncfusion-license-key) to generate and register the Syncfusion license key to your application. Refer to this [blog](https://www.syncfusion.com/blogs/post/whats-new-in-2018-volume-2.aspx?_ga=2.11237684.1233358434.1587355730-230058891.1567654773) post for understanding the licensing changes introduced in Essential Studio.
 

@@ -269,3 +269,202 @@ sfNumericEntry.VerticalTextAlignment = TextAlignment.Start;
 The following image illustrates the result of the above code:
 
 ![HorizontalTextAlignment](GettingStarted_images/textalignment.png)
+
+## Set the compute to percentage in SfNumericEntry
+
+When the [SfNumericEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html) is in percentage format, the value can be displayed in two ways as follows:
+
+`Value`: Displays the actual value with percentage symbol.
+
+{% tabs %}
+{% highlight xaml %}
+
+<editors:SfNumericEntry x:Name="numericEntry" 
+                        CustomFormat="p" 
+                        Value="1000"  
+                        PercentDisplayMode="Value">
+</editors:SfNumericEntry>
+
+{% endhighlight %}
+{% highlight C# %}
+
+SfNumericEntry sfNumericEntry= new SfNumericEntry();
+SfNumericEntry sfNumericEntry = new SfNumericEntry();
+sfNumericEntry.Value = 1000;
+sfNumericEntry.CustomFormat = "p";
+sfNumericEntry.PercentDisplayMode = PercentDisplayMode.Value;
+
+{% endhighlight %}
+{% endtabs %}
+
+![.NET MAUI NumericEntry PercentDisplayMode](GettingStarted_images/percentdisplaymode_value.png)
+
+`Compute`: Displays the computed value with percentage symbol.
+
+{% tabs %}
+{% highlight xaml %}
+
+<editors:SfNumericEntry x:Name="numericEntry" 
+                        CustomFormat="p" 
+                        Value="1000"  
+                        PercentDisplayMode="Value">
+</editors:SfNumericEntry>
+
+{% endhighlight %}
+{% highlight C# %}
+
+SfNumericEntry sfNumericEntry= new SfNumericEntry();
+sfNumericEntry.Value = 1000;
+sfNumericEntry.CustomFormat = "p";
+sfNumericEntry.PercentDisplayMode = PercentDisplayMode.Compute;
+
+{% endhighlight %}
+{% endtabs %}
+
+![.NET MAUI NumericEntry PercentDisplayMode](GettingStarted_images/percentdisplaymode_compute.png)
+
+N> Default value of PercentDisplayMode is `Compute`.
+
+## Set the maximum number of decimal digits in SfNumericEntry
+
+The maximum number of digits to be displayed after the decimal point can be specified by using the `MaximumNumberDecimalDigits` property.
+
+N> The `MaximumNumberDecimalDigits` property can only be set to a positive value and does not work when a CustomFormat is provided. The default value of MaximumNumberDecimalDigits is 2.
+
+{% tabs %}
+{% highlight xaml %}
+
+<editors:SfNumericEntry x:Name="numericEntry" 
+                        Value="1000.23232"  
+                        MaximumNumberDecimalDigits="3">
+</editors:SfNumericEntry>
+
+{% endhighlight %}
+{% highlight C# %}
+
+SfNumericEntry sfNumericEntry= new SfNumericEntry();
+sfNumericEntry.Value = 1000.23232;
+sfNumericEntry.MaximumNumberDecimalDigits = 3;
+
+{% endhighlight %}
+{% endtabs %}
+
+![.NET MAUI NumericEntry MaximumNumberDecimalDigits](GettingStarted_images/maximumnumberdecimaldigits.png)
+
+## ReturnType
+
+The `ReturnType` property specifies the return button (e.g., Next, Done, Go) of the keyboard. It helps manage the flow between multiple input fields by defining what happens when the action button is pressed.
+
+You can define the return key type of [SfNumericEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html) by using the ReturnType property.
+
+N> Default value of ReturnType is `Default`.
+
+{% tabs %}
+{% highlight xaml %}
+
+<editors:SfNumericEntry x:Name="numericEntry" 
+                        WidthRequest="200"
+                        ReturnType="Next"/>
+
+{% endhighlight %}
+{% highlight C# %}
+
+SfNumericEntry sfNumericEntry = new SfNumericEntry();
+sfNumericEntry.ReturnType = ReturnType.Next;
+
+{% endhighlight %}
+{% endtabs %}
+
+![.NET MAUI NumericEntry ReturnType](GettingStarted_images/returntype.png)
+
+## Clear button customization
+
+The `ClearButtonPath` property allows users to set the path for customizing the appearance of the [SfNumericEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html) clear button.
+
+{% tabs %}
+{% highlight xaml %}
+
+<editors:SfNumericEntry x:Name="numericEntry"
+                        ShowClearButton="True" 
+                        IsEditable="True" 
+                        Value="10">
+            <editors:SfNumericEntry.ClearButtonPath>
+                <Path Data="M1.70711 0.292893C1.31658 -0.097631 0.683417 -0.097631 0.292893 0.292893C-0.097631 0.683417 -0.097631 1.31658 0.292893 1.70711L5.58579 7L0.292893 12.2929C-0.097631 12.6834 -0.097631 13.3166 0.292893 13.7071C0.683417 14.0976 1.31658 14.0976 1.70711 13.7071L7 8.41421L12.2929 13.7071C12.6834 14.0976 13.3166 14.0976 13.7071 13.7071C14.0976 13.3166 14.0976 12.6834 13.7071 12.2929L8.41421 7L13.7071 1.70711C14.0976 1.31658 14.0976 0.683417 13.7071 0.292893C13.3166 -0.097631 12.6834 -0.097631 12.2929 0.292893L7 5.58579L1.70711 0.292893Z" 
+                Fill="Red" 
+                Stroke="Red"/>
+            </editors:SfNumericEntry.ClearButtonPath>
+</editors:SfNumericEntry>
+
+{% endhighlight %}
+{% highlight c# %}
+
+private string _customPath = "M1.70711 0.292893C1.31658 -0.097631 0.683417 -0.097631 0.292893 0.292893C-0.097631 0.683417 -0.097631 1.31658 0.292893 1.70711L5.58579 7L0.292893 12.2929C-0.097631 12.6834 -0.097631 13.3166 0.292893 13.7071C0.683417 14.0976 1.31658 14.0976 1.70711 13.7071L7 8.41421L12.2929 13.7071C12.6834 14.0976 13.3166 14.0976 13.7071 13.7071C14.0976 13.3166 14.0976 12.6834 13.7071 12.2929L8.41421 7L13.7071 1.70711C14.0976 1.31658 14.0976 0.683417 13.7071 0.292893C13.3166 -0.097631 12.6834 -0.097631 12.2929 0.292893L7 5.58579L1.70711 0.292893Z";
+
+var converter = new PathGeometryConverter();
+var path = new Path() 
+{ 
+    Data = (PathGeometry)converter.ConvertFromInvariantString(_customPath;),
+    Fill = Colors.Red,
+    Stroke = Colors.Red
+};
+
+SfNumericEntry numericEntry = new SfNumericEntry();
+numricEntry.Value=10;
+numericEntry.ShowClearButton = true;
+numericEntry.IsEditable = true; 
+numericEntry.ClearButtonPath = path;
+
+{% endhighlight %}
+{% endtabs %}
+
+The following image illustrates the result of the above code:
+
+![.NET MAUI NumericEntry ClearButtonPath](GettingStarted_images/clearbuttoncustomization.png)
+
+## Command
+
+### Return Command and parameter
+
+- `ReturnCommand`, of type ICommand, defines the command to be executed when the return key is pressed.
+- `ReturnCommandParameter`, of type object, specifies the parameter for the `ReturnCommand`.
+
+{% tabs %}
+{% highlight xaml %}
+
+<ContentPage.BindingContext>
+    <local:CommandDemoViewModel />
+</ContentPage.BindingContext>
+
+<editors:SfNumericEntry x:Name="numericEntry"
+            ReturnCommand="{Binding AlertCommand}"
+            ReturnCommandParameter="This is an alert message">
+</editors:SfNumericEntry>
+
+{% endhighlight %}
+{% highlight c# %}
+
+var viewModel = new CommandDemoViewModel();
+SfNumericEntry numericEntry = new SfNumericEntry();
+mnumericEntry.ReturnCommand = viewModel.AlertCommand;
+numericEntry.ReturnCommandParameter = "Return key is pressed";
+
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight c# %}
+
+//ViewModel.cs
+
+public class CommandDemoViewModel
+{
+    public ICommand AlertCommand => new Command<string>(OnAlertCommandExecuted);
+
+    private async void OnAlertCommandExecuted(string parameter)
+    {
+        await Application.Current.MainPage.DisplayAlert("Alert", parameter, "OK");
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
