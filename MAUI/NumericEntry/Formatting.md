@@ -159,7 +159,7 @@ NumericEntry.Culture = culture;
 
 ![.NET MAUI NumericEntry culture based custom format](Formatting_images/maui-numeric-entry-culture_support.png)
 
-## Set the compute to percentage in SfNumericEntry
+## Customizing percentage display in SfNumericEntry
 
 When the [SfNumericEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html) is in percentage format, the value can be displayed in two ways as follows:
 
@@ -218,7 +218,7 @@ N> Default value of PercentDisplayMode is `Compute`.
 
 The maximum number of digits to be displayed after the decimal point can be specified by using the `MaximumNumberDecimalDigits` property.
 
-N> The `MaximumNumberDecimalDigits` property can be provided with positive value only. Default value of MaximumNumberDecimalDigits is `2`.
+N> The `MaximumNumberDecimalDigits` property can only be set to a positive value and does not work when a CustomFormat is provided. The default value of MaximumNumberDecimalDigits is 2.
 
 {% tabs %}
 {% highlight xaml %}
