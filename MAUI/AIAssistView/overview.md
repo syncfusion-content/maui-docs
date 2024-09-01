@@ -19,4 +19,4 @@ The Syncfusion .NET MAUI AI Assist View control is used to enhance interaction b
 * `Suggestions` : Offers quick options to choose from and expedite the conversation flow.
 * `Styling` : Customize the appearance of request and response items.
 
-![overview in .NET MAUI SfAIAssistView](Images/maui-aiassistview-overview.gif)
+![overview in .NET MAUI AI Assist View](Images/maui-aiassistview-overview.gif)
