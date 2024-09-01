@@ -1267,7 +1267,7 @@ private string _customPath = "M1.70711 0.292893C1.31658 -0.097631 0.683417 -0.09
 var converter = new PathGeometryConverter();
 var path = new Path() 
 { 
-    Data = (PathGeometry)converter.ConvertFromInvariantString(_customPath;),
+    Data = (PathGeometry)converter.ConvertFromInvariantString(_customPath),
     Fill = Colors.Red,
     Stroke = Colors.Red
 };
@@ -1323,7 +1323,6 @@ autocomplete.ReturnCommandParameter = "Return key is pressed";
 
 public SocialMediaViewModel
 {
-    
     public ICommand AlertCommand => new Command<string>(OnAlertCommandExecuted);
 
     private async void OnAlertCommandExecuted(string parameter)

@@ -1429,7 +1429,7 @@ private string _customPath = "M1.70711 0.292893C1.31658 -0.097631 0.683417 -0.09
 var converter = new PathGeometryConverter();
 var path = new Path() 
 { 
-    Data = (PathGeometry)converter.ConvertFromInvariantString(_customPath;),
+    Data = (PathGeometry)converter.ConvertFromInvariantString(_customPath),
     Fill = Colors.Red,
     Stroke = Colors.Red
 };
@@ -1449,9 +1449,7 @@ The following image illustrates the result of the above code:
 
 ![.NET MAUI ComboBox ClearButtonPath](Images/UICustomization/clearbuttoncustomization.png)
 
-## Command
-
-### Return Command and Return Command Parameter
+## Return Command and Return Command Parameter
 
 - `ReturnCommand`, of type ICommand, defines the command to be executed when the return key is pressed.
 - `ReturnCommandParameter`, of type object, specifies the parameter for the `ReturnCommand`.
@@ -1476,7 +1474,7 @@ comboBox.ItemsSource = viewModel.SocialMedia;
 comboBox.DisplayMemberPath = "Name";
 comboBox.TextMemberPath = "Name";
 comboBox.ReturnCommand = viewModel.AlertCommand;
-comboBox.ReturnCommandParameter = "Enter key is pressed";
+comboBox.ReturnCommandParameter = "Return key is pressed";
 
 
 {% endhighlight %}
