@@ -32,7 +32,8 @@ The `SfAIAssistView` allows you to add and customize appearance of the header se
 </ContentPage>
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
-listView.HeaderTemplate = new DataTemplate(() =>
+
+sfAIAssistView.HeaderTemplate = new DataTemplate(() =>
 {
    var grid = new Grid();
    grid.BackgroundColor = Colors.Blue;
