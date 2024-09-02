@@ -26,7 +26,7 @@ dataGrid.AllowDraggingRow = true;
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="DataGrid row drag and drop" src="Images\row-drag-and-drop\RowDragAndDrop.gif"/>
+<img alt="DataGrid row drag and drop" src="Images\row-drag-and-drop\Dragging.gif" width="404"/>
 
 ## Dragging scenarios
 
@@ -48,7 +48,7 @@ The data grid allows you to load desired content when performing row drag-and-dr
 
 The default template will be used if no other template is explicitly assigned for row drag-and-drop operations.
 
-<img alt="Default drag and drop" src="Images\row-drag-and-drop\DefaultDragAndDrop.gif" />
+<img alt="DataGrid row drag and drop" src="Images\row-drag-and-drop\Dragging.gif" width="404"/>
 
 ## Customizing row drag-and-drop template
 
@@ -58,23 +58,24 @@ Please refer to the following code example that demonstrates how to load a view 
 
 {% tabs %}
 {% highlight xaml %}
-<sfgrid:SfDataGrid.RowDragDropTemplate>
-    <DataTemplate>
-        <sfgrid:BorderView BackgroundColor="White" BorderColor="Black">
-            <sfgrid:BorderView.Content>
-                <local:RowTemplate />
-            </sfgrid:BorderView.Content>
-        </sfgrid:BorderView>
-    </DataTemplate>
-</sfgrid:SfDataGrid.RowDragDropTemplate>
+
+        <syncfusion:SfDataGrid.RowDragDropTemplate>
+        <DataTemplate>
+            <Grid BackgroundColor="LightBlue">
+                <Label Text="Drag View"       
+                       TextColor="Black"           
+                       HorizontalTextAlignment="Center" 
+                       VerticalTextAlignment="Center"/>
+            </Grid>
+        </DataTemplate>
+    </syncfusion:SfDataGrid.RowDragDropTemplate>
+</syncfusion:SfDataGrid>
 {% endhighlight %}
 {% endtabs %}
 
-
+<img alt="Default drag and drop" src="Images\row-drag-and-drop\LabelTemp.gif" />
 
 N> Currently, the row drag-and-drop features cannot be used if different row sets with varying heights are specified using the `QueryRowHeight` event.
-
-
 
 ## Events in row drag-and-drop
 
