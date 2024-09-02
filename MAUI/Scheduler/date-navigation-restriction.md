@@ -175,7 +175,7 @@ this.Content = scheduler;
 {% endhighlight %}
 {% endtabs %}
 
-![Date picker in Scheduler](images/date-navigation-restriction/scheduler-date-navigation.jpeg){:height="580" loading="lazy" .lazy .shadow-effect .section-padding .img-padding}
+![Date picker in Scheduler](images/date-navigation-restriction/scheduler-date-navigation.jpeg){:width="325" height="600" loading="lazy" .lazy .shadow-effect .section-padding .img-padding}
 
 ### Allowed views
 
