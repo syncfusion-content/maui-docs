@@ -55,13 +55,29 @@ listView.HeaderTemplate = new DataTemplate(() =>
 
 ## Header Text
 
-In `SfAIAssistView`, you can use the HeaderText property  to provide customized text as the header.
+In `SfAIAssistView`, you can use the HeaderText property to provide customized text as the header.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3" %}
          <sfAIAssistView:SfAIAssistView x:Name="sfAIAssistView"
                                         AssistItems="{Binding AssistItems}"
-                                        HeaderText="Ask AI"/>  
+                                        HeaderText="Ask AI"
+                                        ShowHeader="True"/>  
+
+{% endhighlight %} 
+
+{% highlight c# hl_lines="7" %} 
+
+    SfAIAssistView sfAIAssistView; 
+    public MainPage() 
+    { 
+        InitializeComponent(); 
+        this.sfAIAssistView = new SfAIAssistView();
+        this.sfAIAssistView.AssistItems = viewModel.AssistItems; 
+        this.sfAIAssistView.HeaderText = "AI";
+        this.sfAIAssistView.ShowHeader = true;
+        this.Content = sfAIAssistView; 
+     } 
 
 {% endhighlight %}
 {% endtabs %}
@@ -71,10 +87,22 @@ In `SfAIAssistView`, you can use the HeaderText property  to provide customized 
 The `SfAIAssistView` shows default header if `ShowHeader` property is set to true. 
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3" %}
          <sfAIAssistView:SfAIAssistView x:Name="sfAIAssistView"
                                         AssistItems="{Binding AssistItems}"
                                         ShowHeader="True"/>  
+
+{% highlight c# hl_lines="7" %} 
+
+    SfAIAssistView sfAIAssistView; 
+    public MainPage() 
+    { 
+        InitializeComponent(); 
+        this.sfAIAssistView = new SfAIAssistView();
+        this.sfAIAssistView.AssistItems = viewModel.AssistItems; 
+        this.sfAIAssistView.ShowHeader = true;
+        this.Content = sfAIAssistView; 
+     } 
 
 {% endhighlight %}
 {% endtabs %}
