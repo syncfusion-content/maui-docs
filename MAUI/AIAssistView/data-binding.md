@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Data Binding in .NET MAUI AIcAssist View Control | Syncfusion
+title: Data Binding in .NET MAUI AI Assist View Control | Syncfusion
 description: Learn here all about Data Binding support in Syncfusion .NET MAUI AI Assist View (SfAIAssistView) control, its elements, and more.
 platform: MAUI
 control: SfAIAssistView
