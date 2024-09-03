@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Header in .NET MAUI AIAssistView control | Syncfusion
-description: Learn here all about Header support in Syncfusion .NET MAUI AIAssistView (SfAIAssistView) control and more.
+title: Header in .NET MAUI AI Assist View control | Syncfusion
+description: Learn here all about Header support in Syncfusion .NET MAUI AI Assist View (SfAIAssistView) control and more.
 platform: MAUI
 control: SfAIAssistView
 documentation: ug
 ---
 
-# Header in .NET MAUI AIAssistView (SfAIAssistView)
+# Header in .NET MAUI AI Assist View (SfAIAssistView)
 
 This section explains how to define and customize the header in the `SfAIAssistView`.
 
@@ -56,7 +56,7 @@ sfAIAssistView.HeaderTemplate = new DataTemplate(() =>
 
 ## Header Text
 
-In `SfAIAssistView`, you can use the HeaderText property to provide customized text as the header.
+In `SfAIAssistView`, you can use the ``HeaderText` property to provide customized text as the header.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="3" %}
@@ -85,7 +85,7 @@ In `SfAIAssistView`, you can use the HeaderText property to provide customized t
 
 ## Show Header
 
-The `SfAIAssistView` shows default header if `ShowHeader` property is set to true. 
+The `SfAIAssistView` shows default header if `ShowHeader` property is set to `true`. 
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="3" %}
