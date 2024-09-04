@@ -140,7 +140,7 @@ You can set any image as the background for the `SfAIAssistView` by setting the 
 
 ### Set gradient background
 
-You can set the gradient view as a background for AI Asist View by setting the `SfAIAssistView.Background` property to the gradient colors.
+You can set the gradient view as a background for AI Assist View by setting the `SfAIAssistView.Background` property to the gradient colors.
 
 {% tabs %}
 {% highlight xaml hl_lines="29 30" %}
