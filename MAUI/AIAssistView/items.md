@@ -67,7 +67,7 @@ documentation: ug
             {
                 this.AssistItems.Add(new AssistItem()
                 {
-                   Text = "Hey AI, can you tell me what MAUI is? Could you provide a link to learn more about .NET MAUI?",
+                   Text = "Hey AI, can you tell me what MAUI is?",
                 });
                 this.Messages.Add(new AssistItem()
                 {
@@ -221,7 +221,7 @@ documentation: ug
             {
                   Size = new Size(0, 0),
                   Aspect = Aspect.AspectFit,
-                  Text = "Here’s an image of a bird.",
+                  Text = "Here's an image of a bird.",
                   Source = "bird01.png"          
             });
         }
@@ -334,9 +334,9 @@ You can show a list of interactive cards with each card containing an image, a l
             this.CardsCollection.Add(card4);
         }   
         
-        private void AssistItems()
+        private void GenerateAssistItems()
         {
-            Messages.Add(new AssistCardItem()
+            AssistItems.Add(new AssistCardItem()
             {
                 Cards = CardsCollection,
             });
@@ -348,5 +348,3 @@ You can show a list of interactive cards with each card containing an image, a l
 {% endtabs %}
 
 ![Card item type in .NET MAUI AI Assist View](images/items/maui-aiassistview-items-card.png)
-
-N> [View sample in GitHub]()
