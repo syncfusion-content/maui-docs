@@ -11,7 +11,7 @@ documentation: ug
 
 This section explains how to define and customize the header in the `SfAIAssistView`.
 
-## Show/Hide Header in AI Assist View
+## Show Header in AI Assist View
 
 The `SfAIAssistView` shows default header if `ShowHeader` property is set to `true`. 
 
