@@ -154,6 +154,29 @@ N>
 * The default value of `AllowViewNavigation` is `false.`
 * The `AllowViewNavigation` is not applicable for the `day` and `timeline day` views.
 
+### Show date picker
+
+You can enable the date picker for the scheduler by using the `ShowDatePickerButton` property in the `SfScheduler`, which displays the date picker in the header view. It allows you to quickly switch between, months, years, decades or century where you can directly jump to a specific date by selecting it from a date picker.
+
+{% tabs %}
+{% highlight XAML hl_lines="2"%}
+
+ <scheduler:SfScheduler x:Name="Scheduler" 
+                       ShowDatePickerButton="True">
+</scheduler:SfScheduler>
+
+{% endhighlight %}
+{% highlight C# hl_lines="2" %}
+
+SfScheduler scheduler = new SfScheduler();
+scheduler.ShowDatePickerButton = true;
+this.Content = scheduler;
+
+{% endhighlight %}
+{% endtabs %}
+
+![Date picker in Scheduler](images/date-navigation-restriction/scheduler-date-navigation.jpeg){:width="325" height="600" loading="lazy" .lazy .shadow-effect .section-padding .img-padding}
+
 ### Allowed views
 
 The [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html) allows to quickly switch between the different scheduler views using the [AllowedViews](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_AllowedViews) property. These views will display as a button in the scheduler header.

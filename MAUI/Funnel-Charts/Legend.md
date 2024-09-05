@@ -106,7 +106,7 @@ The appearance of the legend label can be customized using the [`LabelStyle`]() 
             </chart:ChartLegend.LabelStyle>
         </chart:ChartLegend>
     </chart:SfFunnelChart.Legend>
-</chart:SfFunnelChart >
+</chart:SfFunnelChart>
 
 {% endhighlight %}
 

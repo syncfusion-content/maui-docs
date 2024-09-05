@@ -7,7 +7,7 @@ control: SfAccordion
 documentation: ug
 --- 
 
-## Accordion Events in .NET MAUI Accordion (SfAccordion)
+# Accordion Events in .NET MAUI Accordion (SfAccordion)
 
 There are four built-in events in the SfAccordion control namely:
 

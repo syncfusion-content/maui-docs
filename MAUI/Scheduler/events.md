@@ -23,6 +23,7 @@ Below is a list of the arguments:
     * [Appointments](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerInteractionEventArgs.html#Syncfusion_Maui_Scheduler_SchedulerInteractionEventArgs_Appointments): Returns the selected appointments.
     * [Date](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerInteractionEventArgs.html#Syncfusion_Maui_Scheduler_SchedulerInteractionEventArgs_Date) : Returns the selected date.
     * [Element](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerInteractionEventArgs.html#Syncfusion_Maui_Scheduler_SchedulerInteractionEventArgs_Element) : Returns the `Scheduler` element tapped.
+    * `WeekNumber` : Returns the tapped week number value.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
@@ -41,6 +42,7 @@ private void OnSchedulerTapped(object sender, SchedulerTappedEventArgs e)
     var appointments = e.Appointments;
     var selectedDate = e.Date;
     var schedulerElement = e.Element;
+    var weekNumber = e.WeekNumber;
 }
 
 {% endhighlight %}
@@ -61,6 +63,7 @@ Whenever the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.S
     * [Appointments](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerInteractionEventArgs.html#Syncfusion_Maui_Scheduler_SchedulerInteractionEventArgs_Appointments): Returns the double-tapped appointments.
     * [Date](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerInteractionEventArgs.html#Syncfusion_Maui_Scheduler_SchedulerInteractionEventArgs_Date) : Returns the double-tapped date.
     * [Element](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerInteractionEventArgs.html#Syncfusion_Maui_Scheduler_SchedulerInteractionEventArgs_Element) : Returns the double-tapped `Scheduler` element.
+    * `WeekNumber` : Returns the double-tapped week number value.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
@@ -79,6 +82,7 @@ private void OnSchedulerDoubleTapped(object sender, SchedulerDoubleTappedEventAr
     var appointments = e.Appointments;
     var selectedDate = e.Date;
     var schedulerElement = e.Element;
+    var weekNumber = e.WeekNumber;
 }
 
 {% endhighlight %}
@@ -99,6 +103,7 @@ Whenever the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.S
     * [Appointments](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerInteractionEventArgs.html#Syncfusion_Maui_Scheduler_SchedulerInteractionEventArgs_Appointments): Returns the long-pressed appointments.
     * [Date](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerInteractionEventArgs.html#Syncfusion_Maui_Scheduler_SchedulerInteractionEventArgs_Date) : Returns the long-pressed date.
     * [Element](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerInteractionEventArgs.html#Syncfusion_Maui_Scheduler_SchedulerInteractionEventArgs_Element) : Returns the long-pressed `Scheduler` element.
+    * `WeekNumber` : Returns the long-pressed week number value.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
@@ -117,6 +122,7 @@ private void OnSchedulerLongPressed(object sender, SchedulerLongPressedEventArgs
     var appointments = e.Appointments;
     var selectedDate = e.Date;
     var schedulerElement = e.Element;
+    var weekNumber = e.WeekNumber;
 }
 
 {% endhighlight %}
@@ -199,3 +205,201 @@ private void OnSchedulerViewChanged(object sender, SchedulerViewChangedEventArgs
 
 N>
 Whenever a scheduler view is changed, the `SelectableDayPredicate` function must be called to decide whether the cell is selectable or not in the `SfScheduler.`
+
+## Commands
+
+Scheduler commands allow to map Tapped event, Double tapped event, Long Pressed event and View Changed event to Commands which supports the MVVM (Model-View-ViewModel) pattern. 
+
+### TappedCommand 
+
+The `TappedCommand` will be triggered when you tap the scheduler view and pass the `SchedulerTappedEventArgs` as parameter.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="18 21 24" %}
+
+<scheduler:SfScheduler x:Name="Scheduler"
+                       View="Month"
+                       AllowedViews="Day,Month,TimelineDay,TimelineMonth,TimelineWeek,TimelineWorkWeek,Agenda"
+                       TappedCommand="{Binding SchedulerTappedCommand}">
+                       <scheduler:SfScheduler.BindingContext>
+                            <local:SchedulerInteractionViewModel />
+                       </scheduler:SfScheduler.BindingContext>
+</scheduler:SfScheduler>
+
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
+
+public class SchedulerInteractionViewModel
+{
+    public ICommand SchedulerTappedCommand { get; set; }
+
+    public SchedulerInteractionViewModel()
+    {
+        this.SchedulerTappedCommand = new Command<SchedulerTappedEventArgs>(ExecuteTapped);
+    }
+
+    private void ExecuteTapped(SchedulerTappedEventArgs obj)
+    {
+        var selectedDate = obj.Date;
+    }
+
+}
+
+{% endhighlight %}  
+{% endtabs %}
+
+### DoubleTappedCommand 
+
+The `DoubleTappedCommand` will be triggered when you double-tap the scheduler view and pass the `SchedulerDoubleTappedEventArgs` as parameter.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="18 21 24" %}
+
+<scheduler:SfScheduler x:Name="Scheduler"
+                       View="Month"
+                       AllowedViews="Day,Month,TimelineDay,TimelineMonth,TimelineWeek,TimelineWorkWeek,Agenda"
+                       DoubleTappedCommand="{Binding SchedulerDoubleTappedCommand}">
+                       
+                       <scheduler:SfScheduler.BindingContext>
+                            <local:SchedulerInteractionViewModel />
+                       </scheduler:SfScheduler.BindingContext>
+</scheduler:SfScheduler>
+
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
+
+public class SchedulerInteractionViewModel
+{
+    public ICommand SchedulerDoubleTappedCommand { get; set; }
+
+    public SchedulerInteractionViewModel()
+    {
+        this.SchedulerDoubleTappedCommand = new Command<SchedulerDoubleTappedEventArgs>(ExecuteDoubleTapped);
+    }
+
+    private void ExecuteDoubleTapped(SchedulerDoubleTappedEventArgs obj)
+    {
+        var selectedDate = obj.Date;
+    }
+
+}
+
+{% endhighlight %}  
+{% endtabs %}
+
+### LongPressedCommand 
+
+The `LongPressedCommand` will be triggered when you long-press the scheduler view and pass the `SchedulerLongPressedEventArgs` as parameter.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="18 21 24" %}
+
+<scheduler:SfScheduler x:Name="Scheduler"
+                       View="Month"
+                       AllowedViews="Day,Month,TimelineDay,TimelineMonth,TimelineWeek,TimelineWorkWeek,Agenda"
+                       LongPressedCommand="{Binding SchedulerLongPressedCommand}">
+
+                       <scheduler:SfScheduler.BindingContext>
+                            <local:SchedulerInteractionViewModel />
+                       </scheduler:SfScheduler.BindingContext>
+</scheduler:SfScheduler>
+
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
+
+public class SchedulerInteractionViewModel
+{
+    public ICommand SchedulerLongPressedCommand { get; set; }   
+
+    public SchedulerInteractionViewModel()
+    {
+        this.SchedulerLongPressedCommand = new Command<SchedulerLongPressedEventArgs>(ExecuteLongPressed);
+    }
+
+    private void ExecuteLongPressed(SchedulerLongPressedEventArgs obj)
+    {
+        var selectedDate = obj.Date;
+    }
+}
+
+{% endhighlight %}  
+{% endtabs %}
+
+### ViewChangedCommand 
+
+The `ViewChangedCommand` will be triggered when you long-press the scheduler view and pass the `SchedulerViewChangedEventArgs` as parameter.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="18 21 24" %}
+
+<scheduler:SfScheduler x:Name="Scheduler"
+                       View="Month"
+                       AllowedViews="Day,Month,TimelineDay,TimelineMonth,TimelineWeek,TimelineWorkWeek,Agenda"
+                       ViewChangedCommand="{Binding SchedulerViewChangedCommand}">
+
+                       <scheduler:SfScheduler.BindingContext>
+                            <local:SchedulerInteractionViewModel />
+                       </scheduler:SfScheduler.BindingContext>
+</scheduler:SfScheduler>
+
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
+
+public class SchedulerInteractionViewModel
+{
+    public ICommand SchedulerViewChangedCommand { get; set; }
+
+    public SchedulerInteractionViewModel()
+    {
+        this.SchedulerViewChangedCommand = new Command<SchedulerViewChangedEventArgs>(ExecuteViewChanged);
+    }
+
+    private void ExecuteViewChanged(SchedulerViewChangedEventArgs obj)
+    {
+        var oldVisibleDates = obj.OldVisibleDates;
+        var newVisibleDates = obj.NewVisibleDates;
+        var oldSchedulerView = obj.OldView;
+        var newSchedulerView = obj.NewView;
+    }
+}
+
+{% endhighlight %}  
+{% endtabs %}
+
+•    SelectionChangedCommand 
+
+The `SelectionChangedCommand` will be triggered when the scheduler view changes and pass the `SchedulerSelectionChangedEventArgs` as parameter.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="18 21 24" %}
+
+<scheduler:SfScheduler x:Name="Scheduler"
+                       View="Month"
+                       AllowedViews="Day,Month,TimelineDay,TimelineMonth,TimelineWeek,TimelineWorkWeek,Agenda"
+                       SelectionChangedCommand="{Binding SchedulerSelectionChangedCommand}">
+                       <scheduler:SfScheduler.BindingContext>
+                            <local:SchedulerInteractionViewModel />
+                       </scheduler:SfScheduler.BindingContext>
+</scheduler:SfScheduler>
+
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
+
+public class SchedulerInteractionViewModel
+{
+    public ICommand SchedulerSelectionChangedCommand { get; set; }
+
+    public SchedulerInteractionViewModel()
+    {
+        this.SchedulerSelectionChangedCommand = new Command<SchedulerSelectionChangedEventArgs>(ExecuteSelectionChanged);
+    }
+
+    private void ExecuteSelectionChanged(SchedulerSelectionChangedEventArgs obj)
+    {
+        var newDateTime = obj.NewValue;
+        var oldDateTime = obj.OldValue;
+    }
+}
+
+{% endhighlight %}  
+{% endtabs %}
