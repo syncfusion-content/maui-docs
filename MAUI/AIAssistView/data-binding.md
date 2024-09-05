@@ -9,7 +9,7 @@ documentation: ug
 
 # Data Binding in .NET MAUI AI Assist View (SfAIAssistView)
 
-## Setting current user for conversation
+## Setting current user for AI Assist View
 
 The `CurrentUser` helps differentiate between the user and AI service of the items. The CurrentUser is meant to be the sender (author of outgoing items). Refer to the below code example to set up a current user in AI Assist View.
 
