@@ -9,7 +9,7 @@ documentation: ug
 
 # Control Template in .NET MAUI AI Assist View (SfAIAssistView)
 
-Using control template with AI Assist View, it allows you to create a highly customized and interactive interface a follows.
+Using control template with AI Assist View, it allows you to create a highly customized and interactive interface as follows.
 
 {% tabs %}
 {% highlight xaml hl_lines="159" %}
