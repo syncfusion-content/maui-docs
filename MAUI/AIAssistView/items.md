@@ -9,6 +9,39 @@ documentation: ug
 
 # Items in .NET MAUI AI Assist View (SfAIAssistView)
 
+## Configuring common settings for the AssistItem
+
+<table>
+<tr>
+<td>{{`Text`| markdownify }}</td>
+<td>Displays the content of the assist item in the AI Assist view.</td>
+</tr>
+<tr>
+<td>{{`Profile`| markdownify }}</td>
+<td>Specify the avatar and name of the user using {{`Profile.Avatar``| markdownify }} and {{`Profile.Name`| markdownify }} properties respectively.</td>
+</tr>
+<tr>
+<td>{{`DateTime`| markdownify }}</td>
+<td>Displays the time when the item was sent or received.</td>
+</tr>
+<tr>
+<td>{{`RequestItem`| markdownify }}</td>
+<td>Gets the data associated with the request sent by user for which the response is generated.</td>
+</tr>
+<tr>
+<td>{{`Suggestion`| markdownify }}</td>
+<td>Displays list of `AssistSuggestion` as a response to a request.</td>
+</tr>
+<tr>
+<td>{{`IsLiked`| markdownify }}</td>
+<td>Indicates whether the item has been liked or disliked by the user.</td>
+</tr>
+<tr>
+<td>{{`ShowAssistItemFooter`| markdownify }}</td>
+<td>Determines whether the footer, which includes Copy, Retry, Like, Dislike to be displayed for the assist item..</td>
+</tr>
+</table>
+
 ## Text item
 
 `TextItem` is used to display plain text as a item. The following code example explains how to add a simple text item.
@@ -58,24 +91,27 @@ documentation: ug
 {% endtabs %}
 
 {% tabs %}
-{% highlight c# tabtitle="ViewModel.cs" hl_lines="6" %}
+{% highlight c# tabtitle="ViewModel.cs" hl_lines="8" %}
     
     public class ViewModel : INotifyPropertyChanged
     {
-        ...
 
-        // Adding a request item
-        AssistItem requestItem = new AssistItem()
+       ...
+
+        private void GenerateAssistItems()
         {
-            Text = ""Hey AI, can you tell me what MAUI is?",
-            IsRequested = true;
+            this.AssistItems.Add(new AssistItem()
+            {
+               Text = "Hey AI, can you tell me what MAUI is? Could you provide a link to learn more about .NET MAUI?",
+               IsRequested = true;
  
-            // Add the request item to the collection
-            this.AssistItems.Add(requestItem);
+               // Add the request item to the collection
+               this.AssistItems.Add(requestItem);
  
-            // Generating response item
-            await GetResult(requestItem);
-        }       
+                // Generating response item
+                await GetResult(requestItem);
+            });
+        }      
  
         private async Task GetResult(AssistItem requestItem)
         {
@@ -91,9 +127,8 @@ documentation: ug
            // Add the response item to the collection
            this.AssistItems.Add(responseItem);
 
-            ...
         }
-     }
+    }
     
 {% endhighlight %}
 {% endtabs %}
@@ -150,7 +185,7 @@ documentation: ug
 ## Image item
  
 {% tabs %}
-{% highlight c# tabtitle="ViewModel.cs" hl_lines="23" %}
+{% highlight c# tabtitle="ViewModel.cs" hl_lines="25" %}
 
     public class ViewModel : INotifyPropertyChanged
     {
