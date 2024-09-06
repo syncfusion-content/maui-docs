@@ -9,7 +9,7 @@ documentation: ug
 
 # Suggestions in .NET MAUI AIAssistView (SfAIAssistView)
 
-The `SfAIAssistView` control allows to display a list of options, as suggestions. These suggestions can be presented for all the supported item types in `SfAIAssistView`. When a user selects a suggestion item, the `SuggestionItemSelected` event and `SuggestionItemSelectedCommand` will be triggered. Both the event and the command will provide the `SuggestionItemSelectedEventArgs` as arguments, providing the following information about the selected suggestion item.
+The `SfAIAssistView` control allows to display a list of options, as suggestions. These suggestions can be presented for all the supported item types in `SfAIAssistView`. When a user selects a suggestion item, the `SuggestionItemSelected` event and `SuggestionItemSelectedCommand` will be triggered. Both the event and the command will provide the `SuggestionItemSelectedEventArgs` as arguments.
 
 ## Showing suggestions in items
 
@@ -201,7 +201,7 @@ In the `SfAIAssistView` control, you can include an image in the suggestion list
 You can choose to show the suggestion items in horizontal or vertical orientation using the `Orientation` property.
 
 {% tabs %}
-{% highlight c# tabtitle="ViewModel.cs" hl_lines="12" %}
+{% highlight c# tabtitle="ViewModel.cs" hl_lines="13" %}
 
     public SuggestionsViewModel()
     {
