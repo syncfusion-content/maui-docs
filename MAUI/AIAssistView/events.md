@@ -193,7 +193,7 @@ The `SfAIAssistView` control includes a built-in event called `SuggestionItemSel
 
 ## Request Event and Command
 
-The `SfAIAssistView` control includes a built-in event called `Request` and a command named `RequetCommand`. These are triggered when a request item is sent.
+The `SfAIAssistView` control includes a built-in event called `Request` and a command named `RequestCommand`. These are triggered when a request item is sent.
 
 ### Request Event
 
@@ -335,7 +335,7 @@ The `SfAIAssistView` control includes a built-in command named `ItemRetryCommand
 
 ##  ItemRatingChanged Command
 
-The SfAIAssistView control includes a built-in command named ItemRatingChangedCommand. This command is triggered when the rating of an item changes, such as when a user switches from a `like` to a `dislike` or vice versa.
+The `SfAIAssistView` control includes a built-in command named `ItemRatingChangedCommand`. This command is triggered when the rating of an item changes, such as when a user switches from a `like` to a `dislike` or vice versa.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}   
