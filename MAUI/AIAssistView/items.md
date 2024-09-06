@@ -60,23 +60,40 @@ documentation: ug
 {% tabs %}
 {% highlight c# tabtitle="ViewModel.cs" hl_lines="6" %}
     
-        public class ViewModel : INotifyPropertyChanged
-        {
-            ...
-            private void GenerateAssistItems()
-            {
-                this.AssistItems.Add(new AssistItem()
-                {
-                   Text = "Hey AI, can you tell me what MAUI is?",
-                });
-                this.Messages.Add(new AssistItem()
-                {
-                  Text = "MAUI stands for .NET Multi-platform App UI. It's a .NET framework for building cross-platform apps with a single C# codebase for iOS, Android, macOS, and Windows",
-                });
+    public class ViewModel : INotifyPropertyChanged
+    {
+        ...
 
-            }
+        // Adding a request item
+        AssistItem requestItem = new AssistItem()
+        {
+            Text = ""Hey AI, can you tell me what MAUI is?",
+            IsRequested = true;
+ 
+            // Add the request item to the collection
+            this.AssistItems.Add(requestItem);
+ 
+            // Generating response item
+            await GetResult(requestItem);
+        }       
+ 
+        private async Task GetResult(AssistItem requestItem)
+        {
+           await Task.Delay(1000).ConfigureAwait(true);
+ 
+           AssistItem responseItem = new AssistItem()
+           {
+             // response from AI service
+             Text = "Sure! MAUI stands for .NET Multi-platform App UI. It’s a framework that allows you to create cross-platform applications using a single codebase.This powerful framework is an evolution of Xamarin.Forms and is designed to streamline the development process by allowing you to write code once and deploy it across multiple platforms.",
+,
+           };
+ 
+           // Add the response item to the collection
+           this.AssistItems.Add(responseItem);
+
             ...
         }
+     }
     
 {% endhighlight %}
 {% endtabs %}
@@ -86,145 +103,91 @@ documentation: ug
 ## Hyperlink item
 
 `HyperlinkItem` is used to send a URL as a item. Along with the link, the thumbnail, title, and description of the URL are automatically fetched and displayed. The code example below illustrates how to add a hyperlink item.
-
-{% tabs %}
-{% highlight xaml %}
-    
-    <?xml version="1.0" encoding="utf-8" ?>
-    <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-                xmlns:sfAIAssistView="clr-namespace:Syncfusion.Maui.AIAssistView;assembly=Syncfusion.Maui.AIAssistView"
-                xmlns:local="clr-namespace:MauiAIAssistView"             
-                x:Class="MauiAIAssistView.MainPage">
-
-        <ContentPage.BindingContext>
-            <local:ViewModel/>
-        </ContentPage.BindingContext>
-
-        <ContentPage.Content>
-            <sfAIAssistView:SfAIAssistView x:Name="sfAIAssistView"
-                                           AssistItems="{Binding AssistItems}"/>
-        </ContentPage.Content>
-    </ContentPage>
-
-{% endhighlight %}
-{% highlight c# %}
-
-    using Syncfusion.Maui.AIAssistView;
-
-    namespace MauiAIAssistView
-    {
-        public partial class MainPage : ContentPage
-        {
-            SfAIAssistView sfAIAssistView;
-            ViewModel viewModel;
-            public MainPage()
-            {
-                InitializeComponent();
-                this.AIAssistView = new SfAIAssistView();
-                this.viewModel = new ViewModel();
-                this.sfAIAssistView.AssistItems = viewModel.AssistItems;
-                this.Content = sfAIAssistView;
-            }
-        }
-    }
-{% endhighlight %}
-{% endtabs %}
  
 {% tabs %}
-{% highlight c# tabtitle="ViewModel.cs" hl_lines="13" %}
+{% highlight c# tabtitle="ViewModel.cs" hl_lines="24" %}
 
     public class ViewModel : INotifyPropertyChanged
     {
         ...
+
         private void GenerateAssistItems()
         {
             this.AssistItems.Add(new AssistItem()
             {
                Text = "Hey AI, can you tell me what MAUI is? Could you provide a link to learn more about .NET MAUI?",
-            });
-            this.AssistItems.Add(new AssistHyperlinkItem()
-            {
-                Text = "MAUI stands for .NET Multi-platform App UI. It's a .NET framework for building cross-platform apps with a single C# codebase for iOS, Android, macOS, and Windows. Sure! Here's a link to learn more about .NET MAUI",
-                Url = "https://dotnet.microsoft.com/en-us/apps/maui",
+               IsRequested = true;
+ 
+               // Add the request item to the collection
+               this.AssistItems.Add(requestItem);
+ 
+                // Generating response item
+                await GetResult(requestItem);
             });
         }
-    }     
+
+        private async Task GetResult(AssistItem requestItem)
+        {
+           await Task.Delay(1000).ConfigureAwait(true);
+
+            AssistItem responseItem = new AssistHyperlinkItem()
+            {
+                // response from AI service
+                Text = "MAUI stands for .NET Multi-platform App UI. It's a .NET framework for building cross-platform apps with a single C# codebase for iOS, Android, macOS, and Windows. Sure! Here's a link to learn more about .NET MAUI",
+                Url = "https://dotnet.microsoft.com/en-us/apps/maui",
+            };
+
+           // Add the response item to the collection
+           this.AssistItems.Add(responseItem);
+        }
+    } 
+
 {% endhighlight %}
 {% endtabs %}
 
 ![Hyperlink item type in .NET MAUI AI Assist View](images/assist-items/maui-aiassistview-items-hyperlink.png)
 
 ## Image item
-
-`ImageItem` is used to display an image as a item. Using the `Source`, `Size`, and `Aspect` properties, you can display the desired image in the desired height and width as a item in the AI Assist View control.
-
-{% tabs %}
-{% highlight xaml %}
-    
-    <?xml version="1.0" encoding="utf-8" ?>
-    <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-                xmlns:sfAIAssistView="clr-namespace:Syncfusion.Maui.AIAssistView;assembly=Syncfusion.Maui.AIAssistView"
-                xmlns:local="clr-namespace:MauiAIAssistView"             
-                x:Class="MauiAIAssistView.MainPage">
-
-        <ContentPage.BindingContext>
-            <local:ViewModel/>
-        </ContentPage.BindingContext>
-
-        <ContentPage.Content>
-            <sfAIAssistView:SfAIAssistView x:Name="sfAIAssistView"
-                                           AssistItems="{Binding AssistItems}"/>                        
-        </ContentPage.Content>
-    </ContentPage>
-
-{% endhighlight %}
-{% highlight c# %}
-
-    using Syncfusion.Maui.AIAssistView;
-
-    namespace MauiAIAssistView
-    {
-        public partial class MainPage : ContentPage
-        {
-            SfAIAssistView sfAIAssistView;
-            ViewModel viewModel;
-            public MainPage()
-            {
-                InitializeComponent();
-                this.sfAIAssistView = new SfAIAssistView();
-                this.viewModel = new ViewModel();
-                this.sfAIAssistView.AssistItems = viewModel.AssistItems;
-                this.Content = sfAIAssistView;
-            }
-        }
-    }
-
-{% endhighlight %}
-{% endtabs %}
  
 {% tabs %}
-{% highlight c# tabtitle="ViewModel.cs" hl_lines="11" %}
+{% highlight c# tabtitle="ViewModel.cs" hl_lines="23" %}
 
     public class ViewModel : INotifyPropertyChanged
     {
         ...
+
         private void GenerateAssistItems()
         {
             this.AssistItems.Add(new AssistItem()
             {
                  Text = "Hey AI, Please share an image of bird.",
+                 IsRequested = true;
+ 
+                 // Add the request item to the collection
+                 this.AssistItems.Add(requestItem);
+ 
+                 // Generating response item
+                 await GetResult(requestItem);
             });
-
-            this.AssistItems.Add(new AssistImageItem()
+        }
+        
+        private async Task GetResult(AssistItem requestItem)
+        {
+            await Task.Delay(1000).ConfigureAwait(true);
+            
+            // response from AI service
+            AssistItem responseItem = newnew AssistImageItem()
             {
                   Size = new Size(0, 0),
                   Aspect = Aspect.AspectFit,
                   Text = "Here's an image of a bird.",
                   Source = "bird01.png"          
-            });
+            };
+
+            // Add the response item to the collection
+           this.AssistItems.Add(responseItem);
         }
+
         ...
     }
 
@@ -233,53 +196,71 @@ documentation: ug
 
 ![Image item type in .NET MAUI AI Assist View](Images/assist-items/maui-aiassistview-items-image.png)
 
+## ImageTapped Event and Command
+
+The `SfAIAssistView` control includes a built-in event called `ImageTapped` and a command named `ImageTappedCommand`. These are triggered when an image is tapped. You can access the tapped image and the point of interaction through the `ImageTappedEventArgs`.
+
+### ImageTapped Event
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
+
+    <sfAIAssistView:SfAIAssistView x:Name="sfAIAssistView"
+                                   ImageTapped="sfAIAssistView_ImageTapped" />
+
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
+      
+    sfAIAssistView.ImageTapped += SfAIAssistView_ImageTapped;
+
+    private void SfAIAssistView_ImageTapped(object sender, ImageTappedEventArgs e)
+    {  
+       DisplayAlert("Image", " Tapped on image :" + e.ImageItem.Source, "Ok");                  
+    }
+
+{% endhighlight %}
+{% endtabs %}
+
+### ImageTapped Command
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}   
+
+    <sfAIAssistView:SfAIAssistView x:Name="sfAIAssistView"  
+                                   ImageTappedCommand="{Binding TappedCommand}" />
+
+{% endhighlight %}
+{% highlight c# tabtitle="ViewModel.cs" hl_lines="18" %}
+
+    public class ViewModel : INotifyPropertyChanged
+    {
+        public Command<object> tappedCommand;
+
+        public ViewModel()
+        {
+            TappedCommand = new Command<object>(ImageTapped);
+        }
+        
+        public Command<object> TappedCommand
+        {
+            get { return tappedCommand; }
+            set { tappedCommand = value; }
+        }
+
+        private void ImageTapped(object obj)
+        {
+           var ImageTappedArgs = obj as ImageTappedEventArgs;
+           DisplayAlert("Image", " Tapped on Image item :" + ImageTappedArgs.ImageItem.Source, "Ok");                  
+        }    
+      
+    }
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Card item
 
 You can show a list of interactive cards with each card containing an image, a list of buttons, and text (title, subtitle, and description) to tie in with the cards of popular bot frameworks. Use the `Card.Image`, `Card.Title`, `Card.Subtitle`, and `Card.Description` properties to display the image, title, subtitle, and description in a card respectively.
-
-{% tabs %}
-{% highlight xaml %}
-    
-    <?xml version="1.0" encoding="utf-8" ?>
-    <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-                xmlns:sfAIAssistView="clr-namespace:Syncfusion.Maui.AIAssistView;assembly=Syncfusion.Maui.AIAssistView"
-                xmlns:local="clr-namespace:MauiAIAssistView"             
-                x:Class="MauiAIAssistView.MainPage">
-
-        <ContentPage.BindingContext>
-            <local:ViewModel/>
-        </ContentPage.BindingContext>
-
-        <ContentPage.Content>
-            <sfAIAssistView:SfAIAssistView x:Name="sfAIAssistView"
-                                           AssistItems ="{Binding AssistItems}" />                         
-        </ContentPage.Content>
-    </ContentPage>
-
-{% endhighlight %}
-{% highlight c# %}
-
-    using Syncfusion.Maui.AIAssistView;
-
-    namespace MauiAIAssistView
-    {
-        public partial class MainPage : ContentPage
-        {
-            SfAIAssistView sfAIAssistView;
-            ViewModel viewModel;
-            public MainPage()
-            {
-                InitializeComponent();
-                this.sfAIAssistView = new SfAIAssistView();
-                this.viewModel = new ViewModel();
-                this.sfAIAssistView.AssistItems = viewModel.AssistItems ;
-                this.Content = sfAIAssistView;
-            }
-        }
-    }
-{% endhighlight %}
-{% endtabs %}
  
 {% tabs %}
 {% highlight c# tabtitle="ViewModel.cs" hl_lines="54" %}
@@ -296,6 +277,7 @@ You can show a list of interactive cards with each card containing an image, a l
 
         private void GenerateCards()
         {
+            // response from AI service
             cardsCollection = new ObservableCollection<Card>();
             Card card1 = new Card()
             {
@@ -348,3 +330,65 @@ You can show a list of interactive cards with each card containing an image, a l
 {% endtabs %}
 
 ![Card item type in .NET MAUI AI Assist View](images/assist-items/maui-aiassistview-items-card.png)
+
+## CardTapped Event and Command
+
+The `SfAIAssistView` control includes a built-in event called `CardTapped` and a command named `CardTappedCommand`. These are triggered when a card is tapped. You can access the tapped card and the point of interaction through the `CardTappedEventArgs`.
+
+### CardTapped Event
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
+
+    <sfAIAssistView:SfAIAssistView x:Name="sfAIAssistView"
+                                   CardTapped="sfAIAssistView_CardTapped" />
+
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
+      
+    sfAIAssistView.CardTapped += SfAIAssistView_CardTapped;
+
+    private void SfAIAssistView_CardTapped(object sender, CardTappedEventArgs e)
+    {  
+       DisplayAlert("Card", " Tapped on card :" + e.Card.Title, "Ok");                  
+    }
+
+{% endhighlight %}
+{% endtabs %}
+
+### CardTapped Command
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}   
+
+    <sfAIAssistView:SfAIAssistView x:Name="sfAIAssistView"  
+                                   CardTappedCommand="{Binding TappedCommand}" />
+
+{% endhighlight %}
+{% highlight c# tabtitle="ViewModel.cs" hl_lines="18" %}
+
+    public class ViewModel : INotifyPropertyChanged
+    {
+        public Command<object> tappedCommand;
+
+        public ViewModel()
+        {
+            TappedCommand = new Command<object>(CardTapped);
+        }
+        
+        public Command<object> TappedCommand
+        {
+            get { return tappedCommand; }
+            set { tappedCommand = value; }
+        }
+
+        private void CardTapped(object obj)
+        {
+           var CardTappedArgs = obj as CardTappedEventArgs;
+           DisplayAlert("Card", " Tapped on Card item :" + CardTappedArgs.Card.Title, "Ok");                  
+        }    
+      
+    }
+
+{% endhighlight %}
+{% endtabs %}
