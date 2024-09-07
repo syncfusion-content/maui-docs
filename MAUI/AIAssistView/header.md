@@ -11,7 +11,7 @@ documentation: ug
 
 This section explains how to define and customize the header in the `SfAIAssistView`.
 
-## Show Header in AI Assist View
+## Show Header
 
 The `SfAIAssistView` control allows you to display a default header by configuring the `ShowHeader` property. When this property is set to `true`, the default header will be shown at the top of the assist view.
 
@@ -35,7 +35,7 @@ The `SfAIAssistView` control allows you to display a default header by configuri
 {% endtabs %}
 
 
-## Customized Header Text in AI Assist View
+## Header text
 
 The `SfAIAssistView` control allows you to customize the header text using the `HeaderText` property.
 
@@ -76,35 +76,8 @@ The `SfAIAssistView` control allows you to fully customize the header's appearan
                     <Image  Source="aiassistview.png" HorizontalOptions="Center"/>                 
                     <Label Padding="0,5,0,0" Text="Ask AI Anything!" HorizontalOptions="Center" Grid.Row="1" FontSize="16"/>
                     <FlexLayout x:Name="headerlayout"
-                                BindableLayout.ItemsSource="{Binding HeaderInfoCollection}"
-                                Grid.Row="2"
-                                Wrap="Wrap"
-                                JustifyContent="Center"
-                                Direction="Row"
-                                Padding="10">
-                        <BindableLayout.ItemTemplate>
-                            <DataTemplate>
-                                <Grid RowDefinitions="*,Auto,10" Padding="10">
-                                    <Grid.GestureRecognizers>
-                                        <TapGestureRecognizer Command="{Binding Path=BindingContext.HeaderItemTappedCommand, Source={x:Reference headerlayout}}" CommandParameter="{x:Reference label}"/>
-                                    </Grid.GestureRecognizers>
-                                    <Border WidthRequest="132" Stroke="#CAC4D0"  HeightRequest="130" Grid.RowSpan="2" HorizontalOptions="Center">
-                                        <Border.StrokeShape>
-                                            <RoundRectangle CornerRadius="12"/>
-                                        </Border.StrokeShape>
-                                        <Image Source="{Binding Image}" Aspect="AspectFill" HeightRequest="130" WidthRequest="130" HorizontalOptions="Center"/>
-                                    </Border>
-                                    <Border BackgroundColor="#FFFBFE" Stroke="#CAC4D0" Opacity="0.8" HorizontalOptions="Center" VerticalOptions="End" WidthRequest="120" Grid.Row="1" Grid.RowSpan="2">
-                                        <Border.StrokeShape>
-                                            <RoundRectangle CornerRadius="12"/>
-                                        </Border.StrokeShape>
-                                        <Label Text="{Binding HeaderMessage}" x:Name="label"  TextColor="Black" FontFamily="Roboto-Regular" FontSize="14" Padding="10"
-                                               LineBreakMode="WordWrap" HorizontalOptions="Center"
-                                               HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
-                                    </Border>
-                                </Grid>
-                            </DataTemplate>
-                        </BindableLayout.ItemTemplate>
+                                BindableLayout.ItemsSource="{Binding HeaderInfoCollection}">
+                        ...
                     </FlexLayout>
                 </Grid>
             </DataTemplate>
