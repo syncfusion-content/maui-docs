@@ -13,22 +13,20 @@ This section explains how to define and customize the header in the `SfAIAssistV
 
 ## Show Header in AI Assist View
 
-The `SfAIAssistView` shows default header by setting the `ShowHeader` property to `true`. 
+The `SfAIAssistView` control allows you to display a default header by configuring the `ShowHeader` property. When this property is set to `true`, the default header will be shown at the top of the assist view.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
          <sfAIAssistView:SfAIAssistView x:Name="sfAIAssistView"
-                                        AssistItems="{Binding AssistItems}"
                                         ShowHeader="True"/>  
 
-{% highlight c# hl_lines="7" %} 
+{% highlight c# hl_lines="6" %} 
 
     SfAIAssistView sfAIAssistView; 
     public MainPage() 
     { 
         InitializeComponent(); 
         this.sfAIAssistView = new SfAIAssistView();
-        this.sfAIAssistView.AssistItems = viewModel.AssistItems; 
         this.sfAIAssistView.ShowHeader = true;
         this.Content = sfAIAssistView; 
      } 
@@ -39,25 +37,23 @@ The `SfAIAssistView` shows default header by setting the `ShowHeader` property t
 
 ## Customized Header Text in AI Assist View
 
-In `SfAIAssistView`, the `HeaderText` property provides customized text as the header.
+The `SfAIAssistView` control allows you to customize the header text using the `HeaderText` property.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
          <sfAIAssistView:SfAIAssistView x:Name="sfAIAssistView"
-                                        AssistItems="{Binding AssistItems}"
                                         HeaderText="Ask AI"
                                         ShowHeader="True"/>  
 
 {% endhighlight %} 
 
-{% highlight c# hl_lines="7" %} 
+{% highlight c# hl_lines="6" %} 
 
     SfAIAssistView sfAIAssistView; 
     public MainPage() 
     { 
         InitializeComponent(); 
         this.sfAIAssistView = new SfAIAssistView();
-        this.sfAIAssistView.AssistItems = viewModel.AssistItems; 
         this.sfAIAssistView.HeaderText = "Ask AI";
         this.sfAIAssistView.ShowHeader = true;
         this.Content = sfAIAssistView; 
@@ -68,7 +64,7 @@ In `SfAIAssistView`, the `HeaderText` property provides customized text as the h
 
 ## Header customization
 
-You can customize the header's appearance in `SfAIAssistView` by using the `HeaderTemplate` property.
+The `SfAIAssistView` control allows you to fully customize the header's appearance by using the `HeaderTemplate` property. This property lets you define a custom layout and style for the header.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="46" %}
