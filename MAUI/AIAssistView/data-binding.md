@@ -11,7 +11,7 @@ documentation: ug
 
 ## Generate the assist request & response items
 
-Create AssistItem instance, set values for Profile details, Text and IsRequest properties and add it to ViewModel.AssistItems collection. `IsReques`t property is used to identify or differentiate whether an item is requesting item added by user or is response item received from AI service. When user sends the request through editor and clicking suggestion, its IsRequest property value is set to True automatically.If users want to add the request item manually in code behind, need to set `IsRequest` property to `True``.
+Create AssistItem instance, set values for Profile details, Text and IsRequest properties and add it to ViewModel.AssistItems collection. `IsRequest` property is used to identify or differentiate whether an item is requesting item added by user or is response item received from AI service. When user sends the request through editor and clicking suggestion, its IsRequest property value is set to True automatically.If users want to add the request item manually in code behind, need to set `IsRequest` property to `True``.
 
 {% tabs %}
 {% highlight c# tabtitle="ViewModel.cs" %}
