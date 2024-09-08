@@ -88,7 +88,7 @@ public class ViewModel : INotifyPropertyChanged
 
 ## Binding user requests in .NET MAUI AI Assist View (SfAIAssistView)
 
-The `SfAIAssistView` control allows you to bind user requests using the `RequestCommand` as follows.
+The `SfAIAssistView` control allows you to handle user requests by binding them to the `RequestCommand` property. This command is triggered whenever the user sends a request in the assist view.
 
 {% tabs %}
 {% highlight xaml hl_lines="15" %}
@@ -153,7 +153,7 @@ The `SfAIAssistView` control allows you to bind user requests using the `Request
     private async void ExecuteRequestCommand(object obj)
     {
         var request = (obj as Syncfusion.Maui.AIAssistView.RequestEventArgs).RequestItem;
-        //logic for getting response from the AI
+        // logic for getting response from the AI.
     }
 
     ....
