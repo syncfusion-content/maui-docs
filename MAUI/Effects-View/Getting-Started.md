@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with .NET MAUI Effects View (SfEffectsView)
 
-This section explains the steps required to configure the .NET MAUI Effects View control and customize its elements.
+This section explains the steps required to configure the [.NET MAUI Effects View](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html?tabs=tabid-1) control and customize its elements.
 
 To get start quickly with our .NET MAUI Effects View, you can check the below video.
 
