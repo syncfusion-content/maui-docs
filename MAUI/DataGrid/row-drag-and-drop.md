@@ -26,7 +26,7 @@ dataGrid.AllowDraggingRow = true;
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="DataGrid row drag and drop" src="Images\row-drag-and-drop\Dragging.gif" width="404"/>
+<img alt="DataGrid row drag and drop" src="Images\row-drag-and-drop\maui-datagrid-dragging.gif" width="404"/>
 
 ## Dragging scenarios
 
@@ -46,7 +46,7 @@ The SfDataGrid allows you to load specific content during row drag-and-drop oper
 
 The default template will be used for row drag-and-drop operations unless another template is explicitly assigned.
 
-<img alt="DataGrid row drag and drop" src="Images\row-drag-and-drop\Dragging.gif" width="404"/>
+<img alt="DataGrid row drag and drop" src="Images\row-drag-and-drop\maui-datagrid-dragging.gif" width="404"/>
 
 ## Customizing row drag-and-drop template
 
@@ -71,7 +71,7 @@ Please refer to the following code example that demonstrates how to load a view 
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="Default drag and drop" src="Images\row-drag-and-drop\LabelTemp.gif" />
+<img alt="Default drag and drop" src="Images\row-drag-and-drop\maui-datagrid-labeltemp.gif" Width="404" />
 
 ## Events in row drag-and-drop
 
@@ -357,6 +357,4 @@ dataGrid.DefaultStyle.RowDragViewTextColor = Colors.Maroon;
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="Customization of draw view" src="Images\row-drag-and-drop\RowIndicatorLine.gif" width="404"/>
-
-
+<img alt="Customization of draw view" src="Images\row-drag-and-drop\maui-datagrid-rowindicatorline.gif" width="404"/>
