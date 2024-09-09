@@ -11,7 +11,7 @@ documentation: ug
 
 This section explains how to define and customize the header in the `SfAIAssistView`.
 
-## Show Header
+## Show/hide header
 
 The `SfAIAssistView` control allows you to display a default header by configuring the `ShowHeader` property. When this property is set to `true`, the default header will be shown at the top of the assist view. The default value of the `ShowHeader` property is `false`.
 
@@ -37,7 +37,7 @@ The `SfAIAssistView` control allows you to display a default header by configuri
 
 ## Header text
 
-The `SfAIAssistView` control allows you to customize the header text using the `HeaderText` property. The default value of the HeaderText is `How can I help you?`.
+The `SfAIAssistView` control allows you to customize the header text using the `HeaderText` property.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
@@ -67,7 +67,7 @@ The `SfAIAssistView` control allows you to customize the header text using the `
 The `SfAIAssistView` control allows you to fully customize the header's appearance by using the `HeaderTemplate` property. This property lets you define a custom layout and style for the header.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="46" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="19" %}
 
  <ContentPage.Resources>
         <ResourceDictionary>
@@ -95,5 +95,3 @@ The `SfAIAssistView` control allows you to fully customize the header's appearan
 {% endtabs %}
 
 ![Header View customization in .NET MAUI AI Assist View](Images/maui-aiassistview-header-customization.png)
-
-
