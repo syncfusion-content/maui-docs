@@ -10,7 +10,7 @@ keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .ne
 
 # Row Drag and Drop in MAUI DataGrid (SfDataGrid)
 
-The SfDataGrid allows you to drag and drop a row by setting the `SfDataGrid.AllowDraggingRow` property to `true`. A customizable row drag and drop template is displayed while a row is being dragged.  Based on the requirements, drag and drop operations can be handled by using the `SfDataGrid.QueryRowDragging` event. 
+The `SfDataGrid` control allows you to drag and drop rows by setting the `SfDataGrid.AllowDraggingRow` property to `true`. Dragging is enabled by long pressing and dragging a row on mobile platforms and by clicking and dragging on desktop platforms. A row drag view is displayed during the drag operation. You can handle drag-and-drop operations based on your requirements by using the `SfDataGrid.QueryRowDragging` event.
 
 To enable row drag and drop functionality, please follow the code example below:
 
@@ -30,23 +30,21 @@ dataGrid.AllowDraggingRow = true;
 
 ## Dragging scenarios
 
-The SfDataGrid supports drag and drop operations for both data rows and groups in the following scenarios:
+The SfDataGrid supports drag-and-drop operations for both data rows and groups in the following scenarios:
 
- * Records can be reordered to any position using auto-scrolling.
- * Group positions can be reordered using drag and drop. However, no groups can be added within other groups.
- * Data rows can be reordered within the same group or moved to other groups as well.
+Records can be reordered to any position using auto-scrolling.
+Group positions can be reordered using drag and drop; however, groups cannot be nested within other groups.
+Data rows can be reordered within the same group or moved to different groups.
 
-N> Reordering changes are made only in the `SfDataGrid.View`, and not in the underlying data. Thus, the changes will be reverted when performing sorting, grouping, or any other operation refreshing the view. Reordering changes in the underlying data can be achieved by handling a `QueryRowDragging` event in the sample side as explained below in [Reordering underlying data](# Reordering underlying data ).
-
-N> Now you can drag and drop the grid rows using your mouse in the UWP (Desktop) platform.
+N> Reordering changes are made only in the `SfDataGrid.View`, not in the underlying data. As a result, these changes will be reverted when performing sorting, grouping, or any other operation that refreshes the view. To persist reordering changes in the underlying data, handle the `QueryRowDragging` event as explained below in [Reordering underlying data](#Reordering underlying data).
 
 ## Row drag-and-drop template
 
-The data grid allows you to load desired content when performing row drag-and-drop operations using the `SfDataGrid.RowDragDropTemplate`. The template can be defined either in code or XAML.  
+The SfDataGrid allows you to load specific content during row drag-and-drop operations using the `SfDataGrid.RowDragDropTemplate`. This template can be defined either in code or XAML.
 
 ## Default template
 
-The default template will be used if no other template is explicitly assigned for row drag-and-drop operations.
+The default template will be used for row drag-and-drop operations unless another template is explicitly assigned.
 
 <img alt="DataGrid row drag and drop" src="Images\row-drag-and-drop\Dragging.gif" width="404"/>
 
@@ -75,22 +73,21 @@ Please refer to the following code example that demonstrates how to load a view 
 
 <img alt="Default drag and drop" src="Images\row-drag-and-drop\LabelTemp.gif" />
 
-N> Currently, the row drag-and-drop features cannot be used if different row sets with varying heights are specified using the `QueryRowHeight` event.
-
 ## Events in row drag-and-drop
 
-The `QueryRowDragging` event is triggered when a row begins to be dragged and continues to be triggered until the dragging ends. By handling the `SfDataGrid.QueryRowDragging` event, you can also cancel the dragging of a specific row.
+The `QueryRowDragging` event is triggered when a row begins to be dragged and continues to fire until the dragging ends. By handling the `SfDataGrid.QueryRowDragging` event, you can also cancel the dragging of a specific row.
 
-The `QueryRowDragging` event provides the following properties in the `QueryRowDraggingEventArgs`:
+The `QueryRowDragging` event provides the following properties through the `QueryRowDraggingEventArgs`:
 
- * `From`: Returns the index of the row that is currently being dragged.
- * `To`: Returns the index of the row where you attempt to drop the dragged item.
- * `Position`: Returns the current x and y coordinates of the RowDragView.
- * `DraggingAction`: Returns the details of row dragging as `DataGridDragAction`.
- * `RowData`: Returns the underlying data associated with the row that was dragged.
- * `CurrentRowData`: Returns the row data corresponding to the current position of the row drag view.
- * `CanAutoScroll`: Returns whether auto-scrolling should occur when the row drag view reaches the top or bottom of the `SfDataGrid`.
- * `Cancel`: Returns a Boolean value that indicates whether to cancel the event.
+* `From`: Returns the index of the row that is currently being dragged.
+* `To`: Returns the index of the row where you are attempting to drop the dragged item.
+* `Position`: Returns the current x and y coordinates of the RowDragView.
+* `DraggingAction`: Returns details of the row dragging as a `DataGridDragAction`.
+* `RowData`: Returns the underlying data associated with the dragged row.
+* `CurrentRowData`: Returns the data corresponding to the current position of the `RowDragView`.
+* `CanAutoScroll`: Returns a value indicating whether auto-scrolling should occur when the `RowDragView` reaches the top or bottom of the `SfDataGrid`.
+* `Cancel`: Returns a Boolean value that indicates whether the event should be canceled.
+
 
 ## Cancel dragging of a particular row
 
@@ -334,10 +331,9 @@ private async void DataGrid_QueryRowDragging(object? sender, Syncfusion.Maui.Dat
 {% endtabs %}
 
 
-## RowDragAndDrop Style
-### RowDraggingIndicatorLineColor
+## Customization of draw view
 
-The `RowDraggingIndicatorLineColor` property in the `SfDataGrid` is used to customize the color of the line that appears during a drag-and-drop operation when you move rows within the dataGrid. This line serves as a visual indicator, showing where the row will be dropped if the user releases the drag at that point.
+The row view’s background color, text color, and indicator color can be customized using the `RowDragViewBackgroundColor`, `RowDragViewTextColor`, and `RowDraggingIndicatorLineColor` properties.
 
 {% tabs %}
 {% highlight XAML %}
@@ -346,57 +342,21 @@ The `RowDraggingIndicatorLineColor` property in the `SfDataGrid` is used to cust
                        AllowDraggingRow="True">
 
     <syncfusion:SfDataGrid.DefaultStyle>
-        <syncfusion:DataGridStyle RowDraggingIndicatorLineColor="Blue"/>
+        <syncfusion:DataGridStyle RowDraggingIndicatorLineColor="Blue"
+                                  RowDragViewBackgroundColor="LightCyan"
+                                  RowDragViewTextColor="Maroon"/>
     </syncfusion:SfDataGrid.DefaultStyle>
  </syncfusion:SfDataGrid>
 {% endhighlight %}
 {% highlight c# %}
 
 dataGrid.DefaultStyle.RowDraggingIndicatorLineColor = Colors.Blue;
+dataGrid.DefaultStyle.RowDragViewBackgroundColor = Colors.LightCyan;
+dataGrid.DefaultStyle.RowDragViewTextColor = Colors.Maroon;
 
 {% endhighlight %}
 {% endtabs %}
 
-### RowDragViewBackgroundColor
-The `RowDragViewBackgroundColor` property in the `SfDataGrid` control is used to set the background color of the row that is being dragged during a drag-and-drop operation. 
-
-{% tabs %}
-{% highlight XAML %}
-<syncfusion:SfDataGrid x:Name="dataGrid"
-                       ItemsSource="{Binding OrderInfoCollection}"  
-                       AllowDraggingRow="True">
-
-     <syncfusion:SfDataGrid.DefaultStyle>
-        <syncfusion:DataGridStyle RowDragViewBackgroundColor="Blue"/>
-    </syncfusion:SfDataGrid.DefaultStyle>
- </syncfusion:SfDataGrid>
-{% endhighlight %}
-{% highlight c# %}
-
-dataGrid.DefaultStyle.RowDragViewBackgroundColor = Colors.Blue;
-
-{% endhighlight %}
-{% endtabs %}
-
-### RowDragViewTextColor
-The `RowDragViewTextColor` property in the `SfDataGrid` is used to set the text color of the row that is being dragged during a drag-and-drop operation. This property allows you to customize the color of the text that appears on the drag view.
-
-{% tabs %}
-{% highlight XAML %}
-<syncfusion:SfDataGrid x:Name="dataGrid"
-                       ItemsSource="{Binding OrderInfoCollection}"  
-                       AllowDraggingRow="True">
-
-    <syncfusion:SfDataGrid.DefaultStyle>
-        <syncfusion:DataGridStyle RowDragViewTextColor="Blue"/>
-    </syncfusion:SfDataGrid.DefaultStyle>
- </syncfusion:SfDataGrid>
-{% endhighlight %}
-{% highlight c# %}
-
-dataGrid.DefaultStyle.RowDragViewTextColor = Colors.Blue;
-
-{% endhighlight %}
-{% endtabs %}
+<img alt="Customization of draw view" src="Images\row-drag-and-drop\RowIndicatorLine.gif" width="404"/>
 
 
