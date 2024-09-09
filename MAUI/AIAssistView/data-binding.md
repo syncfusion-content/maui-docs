@@ -11,7 +11,21 @@ documentation: ug
 
 ## Generate the assist request & response items
 
-Create AssistItem instance, set values for Profile details, Text and IsRequest properties and add it to ViewModel.AssistItems collection. `IsRequest` property is used to identify or differentiate whether an item is requesting item added by user or is response item received from AI service. When user sends the request through editor and clicking suggestion, its IsRequest property value is set to True automatically.If users want to add the request item manually in code behind, need to set `IsRequest` property to `True``.
+To add an `AssistItem` to the `ViewModel.AssistItems` collection with specific values for profile details, text, and the `IsRequest` property, follow the steps below:
+
+1. Start by creating an instance of the `AssistItem` class. This item will represent either a user request or a response received from the AI service.
+
+2. The Assistitem has the following members, which provides information for the request/response items,
+
+* `Profile`: Provides information for the user details.
+* `Text`: Describes the text content of the assist item (e.g., the request text from the user or the response text from the AI).
+* `IsRequested`: When the assist item represents a user request, set the `IsRequest` property to `True`. If it's a response item from the AI service, set `IsRequest` to `False`.
+* `DateTime`: To display item created or received time.
+* `RequestItem`: Describes the data associated with the request item.
+
+3. After setting the properties, add the `AssistItem` instance to the `ViewModel.AssistItems` collection, which binds to the `SfAIAssistView.AssistItems` property.
+
+>N The `IsRequest` property is automatically set to `True`, indicating it is a request from the user. If you want to manually add a request item through code, ensure you explicitly set the `IsRequest` property to `True`.
 
 {% tabs %}
 {% highlight c# tabtitle="ViewModel.cs" %}
@@ -48,16 +62,15 @@ public class ViewModel : INotifyPropertyChanged
            {
                // Generating response from AI
 
-                var userAIPrompt = this.GetUserAIPrompt(request.Text);
+               var userAIPrompt = this.GetUserAIPrompt(request.Text);
                var response = await azureAIService!.GetResultsFromAI(request.Text, userAIPrompt).ConfigureAwait(true);
-               response = response.Replace("\n", "<br>");
  
                // Creating response item using response received from AI
 
-                AssistItem responseItem = new AssistItem() { Text = response };
+               AssistItem responseItem = new AssistItem() { Text = response };
                responseItem.RequestItem = inputQuery;
  
-                this.AssistItems.Add(responseItem);
+               this.AssistItems.Add(responseItem);
            }
        }
 
@@ -162,4 +175,3 @@ The `SfAIAssistView` control allows you to handle user requests by binding them 
 
 {% endhighlight %}
 {% endtabs %}
-
