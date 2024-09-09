@@ -13,7 +13,7 @@ This section explains how to define and customize the header in the `SfAIAssistV
 
 ## Show Header
 
-The `SfAIAssistView` control allows you to display a default header by configuring the `ShowHeader` property. When this property is set to `true`, the default header will be shown at the top of the assist view.
+The `SfAIAssistView` control allows you to display a default header by configuring the `ShowHeader` property. When this property is set to `true`, the default header will be shown at the top of the assist view. The default value of the `ShowHeader` property is `false`.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
@@ -37,7 +37,7 @@ The `SfAIAssistView` control allows you to display a default header by configuri
 
 ## Header text
 
-The `SfAIAssistView` control allows you to customize the header text using the `HeaderText` property.
+The `SfAIAssistView` control allows you to customize the header text using the `HeaderText` property. The default value of the HeaderText is `How can I help you?`.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
