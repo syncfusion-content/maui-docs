@@ -38,13 +38,13 @@ documentation: ug
 </tr>
 <tr>
 <td>{{`ShowAssistItemFooter`| markdownify }}</td>
-<td>Determines whether the footer, which includes Copy, Retry, Like, Dislike to be displayed for the assist item..</td>
+<td>Determines whether the footer, which includes Copy, Retry, Like, Dislike to be displayed for the assist item.</td>
 </tr>
 </table>
 
 ## Text item
 
-`TextItem` is used to display plain text as a item. The following code example explains how to add a simple text item.
+The `TextItem` is used to display plain text as a item, which is used to represent text-based content.
 
 {% tabs %}
 {% highlight xaml %}
@@ -102,6 +102,7 @@ documentation: ug
         {
             this.AssistItems.Add(new AssistItem()
             {
+               // Adding a user request as a text item.
                Text = "Hey AI, can you tell me what MAUI is? Could you provide a link to learn more about .NET MAUI?",
                IsRequested = true;
  
@@ -137,8 +138,8 @@ documentation: ug
 
 ## Hyperlink item
 
-`HyperlinkItem` is used to send a URL as a item. Along with the link, the thumbnail, title, and description of the URL are automatically fetched and displayed. The code example below illustrates how to add a hyperlink item.
- 
+The `HyperlinkItem` is used to send a URL as a item. Along with the link, the thumbnail, title, and description of the URL are automatically fetched and displayed.
+
 {% tabs %}
 {% highlight c# tabtitle="ViewModel.cs" hl_lines="24" %}
 
@@ -167,7 +168,7 @@ documentation: ug
 
             AssistItem responseItem = new AssistHyperlinkItem()
             {
-                // response from AI service
+                // Adding a hyperlink item as a response from the AI service.
                 Text = "MAUI stands for .NET Multi-platform App UI. It's a .NET framework for building cross-platform apps with a single C# codebase for iOS, Android, macOS, and Windows. Sure! Here's a link to learn more about .NET MAUI",
                 Url = "https://dotnet.microsoft.com/en-us/apps/maui",
             };
@@ -183,7 +184,9 @@ documentation: ug
 ![Hyperlink item type in .NET MAUI AI Assist View](images/assist-items/maui-aiassistview-items-hyperlink.png)
 
 ## Image item
- 
+
+The `ImageItem` is used to display an image as a item. Using the `Source`, `Size`, and `Aspect` properties, you can display the desired image in the desired height and width as a item in the AI Assist View control.
+
 {% tabs %}
 {% highlight c# tabtitle="ViewModel.cs" hl_lines="25" %}
 
@@ -210,7 +213,7 @@ documentation: ug
         {
             await Task.Delay(1000).ConfigureAwait(true);
             
-            // response from AI service
+            // Adding a hyperlink item as a response from the AI service.
             AssistItem responseItem = newnew AssistImageItem()
             {
                   Size = new Size(0, 0),
@@ -312,7 +315,7 @@ You can show a list of interactive cards with each card containing an image, a l
 
         private void GenerateCards()
         {
-            // response from AI service
+            // Adding a hyperlink item as a response from the AI service.
             cardsCollection = new ObservableCollection<Card>();
             Card card1 = new Card()
             {
