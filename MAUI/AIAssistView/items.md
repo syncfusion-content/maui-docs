@@ -230,8 +230,7 @@ The `ImageItem` is used to display an image as a item. Using the `Source`, `Size
 
 The `SfAIAssistView` control includes a built-in event called `ImageTapped` and a command named `ImageTappedCommand`. These are triggered when an image is tapped. You can access the tapped image through the `ImageTappedEventArgs`. The `ImageTappedEventArgs` has the following member:
 
- * `ImageItem` : Gets the image item that was tapped.
-
+ * `ImageItem` : Refers to the tapped image item.
 ### ImageTapped Event
 
 {% tabs %}
@@ -292,7 +291,7 @@ The `SfAIAssistView` control includes a built-in event called `ImageTapped` and 
 
 ## Card item
 
-You can show a list of interactive cards with each card containing an image, a list of buttons, and text (title, subtitle, and description) to tie in with the cards of popular bot frameworks. Use the `Card.Image`, `Card.Title`, `Card.Subtitle`, and `Card.Description` properties to display the image, title, subtitle, and description in a card respectively.
+In AI Assist View, to display a list of interactive cards, each card can contain an image, a list of buttons, and text (title, subtitle, and description) that align with the design used in popular bot frameworks. The `Card.Image`, `Card.Title`, `Card.Subtitle`, and `Card.Description` properties are used to define and display the image, title, subtitle, and description within each card.
  
 {% tabs %}
 {% highlight c# tabtitle="ViewModel.cs" hl_lines="57" %}
@@ -370,10 +369,10 @@ You can show a list of interactive cards with each card containing an image, a l
 
 The `SfAIAssistView` control includes a built-in event called `CardTapped` and a command named `CardTappedCommand`. These are triggered when a card is tapped. You can access the tapped card through the `CardTappedEventArgs`.The `CardTappedEventArgs` have the following members.
 
- * `Card` : Gets the selected card.
- * `Action` : Gets the selected action from the card.
- * `CardItem`: Gets the current card item.
- * `Handled`: Gets or sets a value indicating whether the event should be handled.
+ * `Card` : Represents the selected card.
+ * `Action` : Represents the selected action from the card.
+ * `CardItem`: Refers to the current card item.
+ * `Handled`: Indicates whether the event is handled or not.
 
 ### CardTapped Event
 
