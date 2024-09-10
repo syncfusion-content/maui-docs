@@ -130,72 +130,13 @@ The `SfAIAssistView` control has built-in features like the `ItemLongPressed` ev
 {% endhighlight %}
 {% endtabs %}
 
-## SuggestionItemSelected Event and Command
-
-The `SfAIAssistView` control includes a built-in event called `SuggestionItemSelected` and a command named `SuggestionItemSelectedCommand`. These are triggered when a suggestion item is selected. You can access the selected suggestion item and the point of interaction through the `SuggestionItemSelectedEventArgs`.
-
-### SuggestionItemSelected Event
-
-{% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
-
-    <sfAIAssistView:SfAIAssistView x:Name="sfAIAssistView"
-                                   SuggestionItemSelected="sfAIAssistView_SuggestionItemSelected" />
-
-{% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
-      
-    sfAIAssistView.SuggestionItemSelected += SfAIAssistView_SuggestionItemSelected;
-
-    private void SfAIAssistView_SuggestionItemSelected(object sender, SuggestionItemSelectedEventArgs e)
-    {  
-       DisplayAlert("Suggestion", " Tapped on suggestion", "Ok");                  
-    }
-
-{% endhighlight %}
-{% endtabs %}
-
-### SuggestionItemSelected Command
-
-{% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}   
-
-    <sfAIAssistView:SfAIAssistView x:Name="sfAIAssistView"  
-                                   SuggestionItemSelectedCommand="{Binding SuggestionItemSelectedCommand}" />
-
-{% endhighlight %}
-{% highlight c# tabtitle="ViewModel.cs" hl_lines="18" %}
-
-    public class ViewModel : INotifyPropertyChanged
-    {
-        public Command<object> suggestionItemSelectedCommand;
-
-        public ViewModel()
-        {
-            SuggestionItemSelectedCommand = new Command<object>(SuggestionItemSelected);
-        }
-        
-        public Command<object> SuggestionItemSelectedCommand
-        {
-            get { return suggestionItemSelectedCommand; }
-            set { suggestionItemSelectedCommand = value; }
-        }
-
-        private void SuggestionItemSelected(object obj)
-        {
-           DisplayAlert("Suggestion", " Tapped on Suggestion:", "Ok");                  
-        }    
-      
-    }
-
-{% endhighlight %}
-{% endtabs %}
-
 ## Request Event and Command
 
 The `SfAIAssistView` control includes a built-in event called `Request` and a command named `RequestCommand`. These are triggered when a request item is sent.
 
 ### Request Event
+
+The Request event is fired when a request item is sent. You can handle this event to fetch response from an AI service.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
