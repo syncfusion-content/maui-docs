@@ -104,7 +104,7 @@ The `SfAIAssistView` control has built-in features like the `ItemLongPressed` ev
                                    ItemLongPressedCommand ="{Binding LongPressedCommand }" />
 
 {% endhighlight %}
-{% highlight c# tabtitle="ViewModel.cs" hl_lines="18" %}
+{% highlight c# tabtitle="ViewModel.cs" hl_lines="16" %}
 
     public class ViewModel : INotifyPropertyChanged
     {
