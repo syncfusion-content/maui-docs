@@ -21,7 +21,7 @@ Holds the text of the tab item that is displayed in the tab bar.
 
 {% highlight xaml %}
 <tabView:SfTabView>
-    <tabView:SfTabItem Header="ITEM 1">
+    <tabView:SfTabItem Header="ITEM 1"/>
 </tabView:SfTabView>
 {% endhighlight %}
 
@@ -48,7 +48,7 @@ The image to be displayed in the tab bar representing the tab item.
 
 {% highlight xaml %}
 <tabView:SfTabView>
-    <tabView:SfTabItem Header="ITEM 1" ImageSource="alexandar">
+    <tabView:SfTabItem Header="ITEM 1" ImageSource="alexandar"/>
 </tabView:SfTabView>
 {% endhighlight %}
 
@@ -108,7 +108,7 @@ The assigned view will get displayed in the main area of the tab view.
 
 ## Image position options 
 
-The .NET MAUI Tab View provides four options that determine how the image of the tab aligns relative to the text. The options are left, top, right and bottom. It can be achieved using the [TabImagePosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.TabImagePosition.html) property of [SfTabItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabItem.html) of type [TabImagePosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.TabImagePosition.html).
+The .NET MAUI Tab View provides four options that determine how the image of the tab aligns relative to the text. The options are left, top, right and bottom. It can be achieved using the [ImagePosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabItem.html#Syncfusion_Maui_TabView_SfTabItem_ImagePosition) property of [SfTabItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabItem.html) of type [ImagePosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabItem.html#Syncfusion_Maui_TabView_SfTabItem_ImagePosition).
 
 N> Each tab item can be set with different image positions. Visual State Manager can be used to apply same value to all tabs.
 
@@ -119,9 +119,9 @@ The image will be placed above the text vertically.
 {% tabs %}
 
 {% highlight xaml %}
-<tabView:SfTabView>
-    <tabView:SfTabItem TabImagePosition="Top">
-</tabView:SfTabView>
+ <tabView:SfTabView>
+     <tabView:SfTabItem ImagePosition="Top"/>
+ </tabView:SfTabView>
 {% endhighlight %}
 
 {% highlight C# %}
@@ -130,14 +130,14 @@ var tabItems = new TabItemCollection
 {
     new SfTabItem()
     {
-        TabImagePosition = TabImagePosition.Top,
+        ImagePosition = TabImagePosition.Top,
     }
 }
 {% endhighlight %}
 
 {% endtabs %}
 
-![Tab Image Position Top](images/Image-Position-Top.png) 
+![Image Position Top](images/Image-Position-Top.png) 
 
 ### Bottom
 
@@ -147,7 +147,7 @@ The image will be placed below the text vertically.
 
 {% highlight xaml %}
 <tabView:SfTabView>
-    <tabView:SfTabItem TabImagePosition="Bottom">
+    <tabView:SfTabItem ImagePosition="Bottom"/>
 </tabView:SfTabView>
 {% endhighlight %}
 
@@ -157,14 +157,14 @@ var tabItems = new TabItemCollection
 {
     new SfTabItem()
     {
-        TabImagePosition = TabImagePosition.Bottom,
+        ImagePosition = TabImagePosition.Bottom,
     }
 }
 {% endhighlight %}
 
 {% endtabs %}
 
-![Tab Image Position Bottom](images/Image-Position-Bottom.png) 
+![Image Position Bottom](images/Image-Position-Bottom.png) 
 
 ### Left
 
@@ -174,7 +174,7 @@ The image will be placed before the text horizontally.
 
 {% highlight xaml %}
 <tabView:SfTabView>
-    <tabView:SfTabItem TabImagePosition="Left">
+    <tabView:SfTabItem ImagePosition="Left">
 </tabView:SfTabView>
 {% endhighlight %}
 
@@ -184,14 +184,14 @@ var tabItems = new TabItemCollection
 {
     new SfTabItem()
     {
-        TabImagePosition = TabImagePosition.Left,
+        ImagePosition = TabImagePosition.Left,
     }
 }
 {% endhighlight %}
 
 {% endtabs %}
 
-![Tab Image Position Left](images/Image-Position-Left.png) 
+![Image Position Left](images/Image-Position-Left.png) 
 
 ### Right
 
@@ -201,7 +201,7 @@ The image will be placed to the right side of the text horizontally.
 
 {% highlight xaml %}
 <tabView:SfTabView>
-    <tabView:SfTabItem TabImagePosition="Right">
+    <tabView:SfTabItem ImagePosition="Right">
 </tabView:SfTabView>
 {% endhighlight %}
 
@@ -211,14 +211,14 @@ var tabItems = new TabItemCollection
 {
     new SfTabItem()
     {
-        TabImagePosition = TabImagePosition.Right,
+        ImagePosition = TabImagePosition.Right,
     }
 }
 {% endhighlight %}
 
 {% endtabs %}
 
-![Tab Image Position Right](images/Image-Position-Right.png) 
+![Image Position Right](images/Image-Position-Right.png) 
 
 ## Image Text Spacing
 
@@ -228,7 +228,7 @@ The [ImageTextSpacing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabVi
 
 {% highlight xaml %}
 <tabView:SfTabView>
-    <tabView:SfTabItem ImageTextSpacing="20">
+    <tabView:SfTabItem ImageTextSpacing="20"/>
 </tabView:SfTabView>
 {% endhighlight %}
 
