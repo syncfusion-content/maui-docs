@@ -15,7 +15,7 @@ The default elements of a card can be customized using the below properties of [
 * [`ImageURL`]() - Used to set the image URL of a card. The image will be displayed at right side in default card template.
 * [`Category`]() - Used to set the category of a card. Based on the category the cards will be added to the respective columns. 
 * [`Description`]() - Used to set the description text of a card.
-* [`IndicatorFill`]() - Used to specify the indicator color.
+* [`IndicatorFill`]() - Used to specify the indicator color of a card.
 * [`Tags`]() - Used to specify the tags of a card. The tags will be displayed at bottom in default card template.
 * [`ID`]() - Used to set the ID of a card.
 

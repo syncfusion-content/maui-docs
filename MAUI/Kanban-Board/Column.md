@@ -24,8 +24,8 @@ By default, columns are sized smartly to arrange the default elements of the car
 
 {% highlight C# %} 
 
-kanban. MinimumColumnWidth = 300;
-kanban. MaximumColumnWidth = 340;
+kanban.MinimumColumnWidth = 300;
+kanban.MaximumColumnWidth = 340;
 
 {% endhighlight %}
 
@@ -53,7 +53,7 @@ kanban.ColumnWidth = 250;
 
 ## Categorizing Columns
 
-To categorize columns based on a specific property, you must explicitly define the property path using the [`ColumnMappingPath`]() property. However, only the properties of [`KanbanModel`]() can be assigned to [`ColumnMappingPath`](). By default, [`SfKanban`]() will categorize the items using the Category property of KanbanModel."
+To categorize columns based on a specific property, you must explicitly define the property path using the [`ColumnMappingPath`]() property. However, only the properties of [`KanbanModel`]() can be assigned to [`ColumnMappingPath`](). By default, [`SfKanban`]() will categorize the items using the Category property of KanbanModel.
 
 {% tabs %}
 
@@ -102,7 +102,7 @@ Header shows the category [`Title`](), items count, min and max informations of 
 
 {% highlight C# %} 
 
-var headerTemplate = new DataTemplate(() => {
+    var headerTemplate = new DataTemplate(() => {
     StackLayout root = new StackLayout() { 
         WidthRequest = 300, 
         HeightRequest = 40, 
@@ -116,7 +116,7 @@ var headerTemplate = new DataTemplate(() => {
     root.Children.Add(label);
     return root;
     });
-kanban.HeaderTemplate = headerTemplate;
+    kanban.HeaderTemplate = headerTemplate;
 
 {% endhighlight %}
 
@@ -218,10 +218,10 @@ int count = todoColumn.ItemsCount;
 
 [`MinimumLimit`]() and [`MaximumLimit`]() properties are used to define the minimum and maximum number of items in a column. If the actual items count is exceeded or lesser than the specified limits, the error bars are used to indicate this violation. Following properties of [`ErrorBarSettings`]() are used to customize the appearance of error bar.
 
-* [`Fill`]() - used to change the default color of the error bar.
-* [`MaxValidationFill`]() - used to change the maximum validation color of the error bar.
-* [`MinValidationFill`]() - used to change the minimum validation color of the error bar.
-* [`Height`]() - used to change the height of the error bar.
+* `Fill`, of type `Brush`, used to change the default color of the error bar.
+* `MaxValidationFill`, of type `Brush`, used to change the maximum validation color of the error bar.
+* `MinValidationFill`, of type `Brush`, used to change the minimum validation color of the error bar.
+* `Height`,of type `double`, used to change the height of the error bar.
 
 {% tabs %}
 
@@ -255,10 +255,19 @@ todoColumn.MaximumLimit = 1;
 
 {% highlight C# %}
 
-todoColumn.ErrorBarSettings.Fill = Colors.Green;
-todoColumn.ErrorBarSettings.MinValidationFill = Colors.Orange;
-todoColumn.ErrorBarSettings.MaxValidationFill = Colors.Red;
-todoColumn.ErrorBarSettings.Height = 4;
+     KanbanColumn todoColumn = new KanbanColumn();
+     todoColumn.Title = "To Do";
+     todoColumn.MaximumLimit = 5;
+     todoColumn.MinimumLimit = 3;
+     KanbanErrorBarSettings kanbanErrorBarSettings = new KanbanErrorBarSettings()
+     {
+         Fill = Colors.Green,
+         MaxValidationFill = Colors.Red,
+         MinValidationFill = Colors.Orange,
+         Height = 4,
+     };
+     todoColumn.ErrorBarSettings = kanbanErrorBarSettings;
+     kanban.Columns.Add(todoColumn);
 
 {% endhighlight %}
 

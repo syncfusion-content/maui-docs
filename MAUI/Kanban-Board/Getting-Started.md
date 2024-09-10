@@ -25,9 +25,9 @@ This section provides a quick overview for working with Essential Kanban for .NE
 <ContentPage
     . . .    
     xmlns:kanban="clr-namespace:Syncfusion.Maui.Kanban;assembly=Syncfusion.Maui.Kanban">
-    <Grid>
-        <kanban:SfKanban/>
-    </Grid>
+    
+    <kanban:SfKanban/>
+    
 </ContentPage>
  
 {% endhighlight %}

@@ -65,7 +65,6 @@ public class ViewModel
 
 * [`Cancel`]() - Used to cancel the drag action.
 * [`Data`]() - Used to get the underlying model of the card.
-* [`KeepItem`]() - Determines whether to keep the dragged card in the source location itself, until it is dropped in a new location. When it is true, the preview of the card will be created for dragging.
 * [`SourceColumn`]() - Used to get the source column of card.
 * [`SourceIndex`]() - Used to get the index of the card in source column.   
 
