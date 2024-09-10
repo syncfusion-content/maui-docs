@@ -33,10 +33,6 @@ documentation: ug
 <td>Displays list of `AssistSuggestion` as a response to a request.</td>
 </tr>
 <tr>
-<td>{{`IsLiked`| markdownify }}</td>
-<td>Indicates whether the item has been liked or disliked by the user.</td>
-</tr>
-<tr>
 <td>{{`ShowAssistItemFooter`| markdownify }}</td>
 <td>Determines whether the footer, which includes Copy, Retry, Like, Dislike to be displayed for the assist item.</td>
 </tr>
@@ -100,27 +96,26 @@ The `TextItem` is used to display plain text as a item, which is used to represe
 
         private void GenerateAssistItems()
         {
-            this.AssistItems.Add(new AssistItem()
+            var requestItem = new AssistItem()
             {
-               // Adding a user request as a text item.
+               // Adding a user request as a text item
                Text = "Hey AI, can you tell me what MAUI is? Could you provide a link to learn more about .NET MAUI?",
-               IsRequested = true;
- 
-               // Add the request item to the collection
-               this.AssistItems.Add(requestItem);
- 
-                // Generating response item
-                await GetResult(requestItem);
-            });
-        }      
- 
+               IsRequested = true
+            };
+
+            this.AssistItems.Add(requestItem);
+
+            // Generating response item
+            await GetResult(requestItem);
+        }
+           
         private async Task GetResult(AssistItem requestItem)
         {
            await Task.Delay(1000).ConfigureAwait(true);
  
            AssistItem responseItem = new AssistItem()
            {
-             // response from AI service
+             // Adding a text item as a response from the AI service
              Text = "Sure! MAUI stands for .NET Multi-platform App UI. It’s a framework that allows you to create cross-platform applications using a single codebase.This powerful framework is an evolution of Xamarin.Forms and is designed to streamline the development process by allowing you to write code once and deploy it across multiple platforms.",
 ,
            };
@@ -141,7 +136,7 @@ The `TextItem` is used to display plain text as a item, which is used to represe
 The `HyperlinkItem` is used to send a URL as a item. Along with the link, the thumbnail, title, and description of the URL are automatically fetched and displayed.
 
 {% tabs %}
-{% highlight c# tabtitle="ViewModel.cs" hl_lines="24" %}
+{% highlight c# tabtitle="ViewModel.cs" hl_lines="23" %}
 
     public class ViewModel : INotifyPropertyChanged
     {
@@ -149,17 +144,16 @@ The `HyperlinkItem` is used to send a URL as a item. Along with the link, the th
 
         private void GenerateAssistItems()
         {
-            this.AssistItems.Add(new AssistItem()
+            var requestItem = new AssistItem()
             {
                Text = "Hey AI, can you tell me what MAUI is? Could you provide a link to learn more about .NET MAUI?",
-               IsRequested = true;
- 
-               // Add the request item to the collection
-               this.AssistItems.Add(requestItem);
- 
-                // Generating response item
-                await GetResult(requestItem);
-            });
+               IsRequested = true
+            };
+
+            this.AssistItems.Add(requestItem);
+        
+            // Generating response item
+            await GetResult(requestItem);
         }
 
         private async Task GetResult(AssistItem requestItem)
@@ -188,7 +182,7 @@ The `HyperlinkItem` is used to send a URL as a item. Along with the link, the th
 The `ImageItem` is used to display an image as a item. Using the `Source`, `Size`, and `Aspect` properties, you can display the desired image in the desired height and width as a item in the AI Assist View control.
 
 {% tabs %}
-{% highlight c# tabtitle="ViewModel.cs" hl_lines="25" %}
+{% highlight c# tabtitle="ViewModel.cs" hl_lines="24" %}
 
     public class ViewModel : INotifyPropertyChanged
     {
@@ -196,24 +190,23 @@ The `ImageItem` is used to display an image as a item. Using the `Source`, `Size
 
         private void GenerateAssistItems()
         {
-            this.AssistItems.Add(new AssistItem()
+            var requestItem = new AssistItem()
             {
                  Text = "Hey AI, Please share an image of bird.",
-                 IsRequested = true;
- 
-                 // Add the request item to the collection
-                 this.AssistItems.Add(requestItem);
- 
-                 // Generating response item
-                 await GetResult(requestItem);
-            });
+                 IsRequested = true
+            };
+
+            this.AssistItems.Add(requestItem);
+            
+            // Generating response item
+            await GetResult(requestItem);
         }
         
         private async Task GetResult(AssistItem requestItem)
         {
             await Task.Delay(1000).ConfigureAwait(true);
             
-            // Adding a hyperlink item as a response from the AI service.
+            // Adding image item as a response from the AI service.
             AssistItem responseItem = newnew AssistImageItem()
             {
                   Size = new Size(0, 0),
@@ -301,7 +294,7 @@ The `SfAIAssistView` control includes a built-in event called `ImageTapped` and 
 You can show a list of interactive cards with each card containing an image, a list of buttons, and text (title, subtitle, and description) to tie in with the cards of popular bot frameworks. Use the `Card.Image`, `Card.Title`, `Card.Subtitle`, and `Card.Description` properties to display the image, title, subtitle, and description in a card respectively.
  
 {% tabs %}
-{% highlight c# tabtitle="ViewModel.cs" hl_lines="54" %}
+{% highlight c# tabtitle="ViewModel.cs" hl_lines="57" %}
 
     public class ViewModel : INotifyPropertyChanged
     {
@@ -309,13 +302,16 @@ You can show a list of interactive cards with each card containing an image, a l
         public ViewModel()
         {
             this.assistItems = new ObservableCollection<object>();
+
+            //Generate card items
             this.GenerateCards();
+
+            //Generate assist items with card responses
             this.GenerateAssistItems();
         }
 
         private void GenerateCards()
         {
-            // Adding a hyperlink item as a response from the AI service.
             cardsCollection = new ObservableCollection<Card>();
             Card card1 = new Card()
             {
