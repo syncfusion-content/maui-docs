@@ -23,8 +23,8 @@ This section provides a quick overview for getting started with the .NET MAUI AI
 
     <ContentPage> 
       . . .
-      xmlns:syncfusion="clr-namespace:Syncfusion.Maui.AIAssistView;assembly=Syncfusion.Maui.AssistView">
-      <syncfusion:SfAIAssistView />
+      xmlns:sfAIAssistView="clr-namespace:Syncfusion.Maui.AIAssistView;assembly=Syncfusion.Maui.AssistView">
+      <sfAIAssistView:SfAIAssistView />
     </ContentPage>
 
 {% endhighlight %}
@@ -105,7 +105,7 @@ Create a simple assist items collection as shown in the following code example i
       }
 
       /// <summary>
-      /// Gets or sets the collection of AssistItems of a conversation.
+      /// Gets or sets the collection of AssistItem of a conversation.
       /// </summary>
       public ObservableCollection<object> AssistItems
       {
