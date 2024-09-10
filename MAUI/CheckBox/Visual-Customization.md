@@ -11,7 +11,7 @@ documentation: ug
 
 ## Customizing a shape
 
-The check box shape can be customized using the [`CornerRadius`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html#Syncfusion_Maui_Buttons_SfCheckBox_CornerRadius) property. This property specifies a uniform radius value for every corner of the check box.
+The check box shape can be customized using the [CornerRadius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html#Syncfusion_Maui_Buttons_SfCheckBox_CornerRadius) property. This property specifies a uniform radius value for every corner of the check box.
 
 {% tabs %}
 {% highlight xaml %}

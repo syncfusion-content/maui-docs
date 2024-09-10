@@ -300,7 +300,7 @@ Content = sfBadgeView;
 
 ## Alignment of badge
 
-Align the badge view using the Center, Start, and End properties of `BadgeAlignment` property.
+Align the badge view using the Center, Start, and End properties of [BadgeAlignment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeSettings.html#Syncfusion_Maui_Core_BadgeSettings_BadgeAlignment) property.
 
 {% tabs %}
 
