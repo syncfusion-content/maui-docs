@@ -12,79 +12,14 @@ documentation: ug
 Using control template with AI Assist View, it allows you to create a highly customized and interactive interface as follows.
 
 {% tabs %}
-{% highlight xaml hl_lines="159" %}
+{% highlight xaml hl_lines="94" %}
 
      <ContentPage.Resources>
         <ResourceDictionary>
             <DataTemplate x:Key="headerTemplate">
-                <VerticalStackLayout Padding="0,23,0,0">
-                    <Grid RowDefinitions="30,30,Auto" RowSpacing="10">
-                        <HorizontalStackLayout HorizontalOptions="Center">
-                            <Border Stroke="#CAC4D0" VerticalOptions="Center" BackgroundColor="LightBlue"  HeightRequest="30" WidthRequest="30">
-                                <Border.StrokeShape>
-                                    <RoundRectangle CornerRadius="6"/>
-                                </Border.StrokeShape>
-                                <Image Source="ai.png" HorizontalOptions="Center" />
-                            </Border>
-                            <Label Text="AssistView" TextColor="Black" FontFamily="Bold" FontSize="20" VerticalOptions="Center" Padding="10,0,0,0"/>
-                        </HorizontalStackLayout>
-                        <Label Grid.Row="1" Text="Your everyday AI Companion" HorizontalOptions="Center" FontFamily="Roboto-Regular" FontSize="16"/>
+                
+                ...
 
-                        <Grid Grid.Row="2" Margin="8,0,8,0">
-                            <listview:SfListView x:Name="headerlayout" ItemSpacing="5" ItemSize="328" HeightRequest="250" Orientation="Horizontal" ScrollBarVisibility="Never" ItemsSource="{Binding Path=HeaderInfoCollection}">
-                                <listview:SfListView.Behaviors>
-                                    <local:ListViewBehavior/>
-                                </listview:SfListView.Behaviors>
-                                <listview:SfListView.ItemTemplate>
-                                    <DataTemplate>
-                                        <Grid RowDefinitions="*,Auto,10">
-                                            <Grid.GestureRecognizers>
-                                                <TapGestureRecognizer Command="{Binding Path=BindingContext.HeaderItemTappedCommand, Source={x:Reference headerlayout}}" CommandParameter="{x:Reference label}"/>
-                                            </Grid.GestureRecognizers>
-                                            <Border Grid.RowSpan="2" Stroke="#CAC4D0" WidthRequest="327" HeightRequest="220" HorizontalOptions="Center" VerticalOptions="Center">
-                                                <Border.StrokeShape>
-                                                    <RoundRectangle CornerRadius="15"/>
-                                                </Border.StrokeShape>
-                                                <Image Source="{Binding Image}" Aspect="AspectFill" HeightRequest="220" VerticalOptions="Center" WidthRequest="325" HorizontalOptions="Center"/>
-                                            </Border>
-                                            <Border Grid.Row="1" Grid.RowSpan="2" BackgroundColor="#FFFBFE" Stroke="#CAC4D0"  Opacity="0.8" HorizontalOptions="Center" VerticalOptions="End" WidthRequest="300">
-                                                <Border.StrokeShape>
-                                                    <RoundRectangle CornerRadius="12"/>
-                                                </Border.StrokeShape>
-                                                <Label x:Name="label" Text="{Binding HeaderMessage}" FontFamily="Roboto-Regular" TextColor="Black" LineBreakMode="WordWrap" FontSize="14" Padding="10" HorizontalOptions="Center" VerticalOptions="End" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
-                                            </Border>
-                                        </Grid>
-                                    </DataTemplate>
-                                </listview:SfListView.ItemTemplate>
-                            </listview:SfListView>
-                            <Grid Grid.Row="2" HorizontalOptions="Start" VerticalOptions="Center" >
-                                <Grid.GestureRecognizers>
-                                    <TapGestureRecognizer Command="{Binding Path=BindingContext.PreviousItemCommand, Source={x:Reference headerlayout}}" CommandParameter="{x:Reference headerlayout}"/>
-                                </Grid.GestureRecognizers>
-                                <Border Padding="0,0,2,0" Background="White" Stroke="#CAC4D0" >
-                                    <Border.StrokeShape>
-                                        <RoundRectangle CornerRadius="20"/>
-                                    </Border.StrokeShape>
-                                    <Image Source="previous_item.png" HorizontalOptions="Center" HeightRequest="25" VerticalOptions="Center" >
-                                    </Image>
-                                </Border>
-                            </Grid>
-
-                            <Grid Grid.Row="2"  HorizontalOptions="End" VerticalOptions="Center">
-                                <Grid.GestureRecognizers>
-                                    <TapGestureRecognizer Command="{Binding Path=BindingContext.NextItemCommand, Source={x:Reference headerlayout}}" CommandParameter="{x:Reference headerlayout}"/>
-                                </Grid.GestureRecognizers>
-                                <Border Padding="2,0,0,0" Background="White" Stroke="#CAC4D0">
-                                    <Border.StrokeShape>
-                                        <RoundRectangle CornerRadius="20"/>
-                                    </Border.StrokeShape>
-                                    <Image Source="next_item.png" HeightRequest="25" VerticalOptions="Center" HorizontalOptions="Center" >
-                                    </Image>
-                                </Border>
-                            </Grid>
-                        </Grid>
-                    </Grid>
-                </VerticalStackLayout>
             </DataTemplate>
             <local:FontAttributeConverter x:Key="fontAttributeConverter"/>
         </ResourceDictionary>
@@ -240,42 +175,10 @@ Using control template with AI Assist View, it allows you to create a highly cus
 
                         <FlexLayout BindableLayout.ItemsSource="{Binding Path=TonesCollection}"
                                     Wrap="Wrap">
-                            <BindableLayout.ItemTemplate>
-                                <DataTemplate>
-                                    <Grid Margin="2"
-                                          Padding="2">
-                                        <Grid RowDefinitions="*"
-                                              ColumnDefinitions="auto,auto,auto">
-                                            <Border 
-                                                    
-                                                    Opacity="0.8"
-                                                    HorizontalOptions="Center"
-                                                    VerticalOptions="End"
-                                                    Grid.Row="0">
+                           
+                           ...
+                           ...
 
-                                                <Border.GestureRecognizers>
-                                                    <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type ScrollView}}, Path=BindingContext.ToggleSelectionCommand}"
-                                                                          CommandParameter="{Binding .}" />
-                                                </Border.GestureRecognizers>
-                                                <Border.StrokeShape>
-                                                    <RoundRectangle CornerRadius="10" />
-                                                </Border.StrokeShape>
-                                                <Label x:Name="label"
-                                                       Text="{Binding ToneContent}"
-                                                       Background="{Binding IsSelected, Converter={StaticResource colorConverter}}"
-                                                       FontFamily="Roboto-Regular"
-                                                       FontSize="14"
-                                                       Padding="7"
-                                                       HorizontalOptions="Center"
-                                                       HorizontalTextAlignment="Center"
-                                                       VerticalTextAlignment="Center"
-                                                       TextColor="{Binding IsSelected, Converter={StaticResource textColorConverter}}">
-                                                </Label>
-                                            </Border>
-                                        </Grid>
-                                    </Grid>
-                                </DataTemplate>
-                            </BindableLayout.ItemTemplate>
                         </FlexLayout>
                     </StackLayout>
                 </Border>
@@ -300,55 +203,9 @@ Using control template with AI Assist View, it allows you to create a highly cus
 
                         <FlexLayout BindableLayout.ItemsSource="{Binding Path=FormatModelsCollection}"
                                     Wrap="Wrap">
-                            <BindableLayout.ItemTemplate>
-                                <DataTemplate>
-                                    <Grid Margin="2"
-                                          Padding="2">
-                                        <!-- Define the rows with appropriate heights -->
-                                        <Grid.RowDefinitions>
-                                            <RowDefinition Height="60" />
-                                            <!-- Height for the image -->
-                                            <RowDefinition Height="30" />
-                                            <!-- Height for the label -->
-                                        </Grid.RowDefinitions>
-                                        <Grid.ColumnDefinitions>
-                                            <ColumnDefinition Width="Auto" />
-                                            <ColumnDefinition Width="Auto" />
-                                            <ColumnDefinition Width="Auto" />
-                                            <ColumnDefinition Width="Auto" />
-
-                                        </Grid.ColumnDefinitions>
-                                        <!-- Image Border -->
-                                        <Border WidthRequest="60"
-                                                HeightRequest="60"
-                                                HorizontalOptions="Center"
-                                                Background="#F6EDFF"
-                                                Stroke="{Binding IsSelected, Converter={StaticResource colorConverter}}">
-                                            <Border.GestureRecognizers>
-                                                <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type ScrollView}}, Path=BindingContext.FormatModelSelectionChangedCommand}"
-                                                                      CommandParameter="{Binding .}" />
-                                            </Border.GestureRecognizers>
-                                            <Border.StrokeShape>
-                                                <RoundRectangle CornerRadius="12" />
-                                            </Border.StrokeShape>
-                                            <Image Source="{Binding Images}"
-                                                   HeightRequest="30"
-                                                   WidthRequest="30"
-                                                   HorizontalOptions="Center"/>
-                                        </Border>
-
-                                        <Label Text="{Binding Content}"
-                                               Grid.Row="1"
-                                               x:Name="label"
-                                               FontFamily="Roboto-Regular"
-                                               FontSize="12"
-                                               HorizontalOptions="Center"
-                                               HorizontalTextAlignment="Center"
-                                               VerticalTextAlignment="Center"/>
-
-                                    </Grid>
-                                </DataTemplate>
-                            </BindableLayout.ItemTemplate>
+                           ...
+                           ...
+                                       
                         </FlexLayout>
                     </StackLayout>
                 </Border>
@@ -373,40 +230,9 @@ Using control template with AI Assist View, it allows you to create a highly cus
 
                         <FlexLayout BindableLayout.ItemsSource="{Binding Path=LengthModelsCollection}"
                                     Wrap="Wrap">
-                            <BindableLayout.ItemTemplate>
-                                <DataTemplate>
-                                    <Grid Margin="2"
-                                          Padding="2">
-                                        <Grid RowDefinitions="35"
-                                              ColumnDefinitions="auto,auto,auto">
+                            ...
+                            ...
 
-                                            <Border 
-                                                    Opacity="0.8"
-                                                    HorizontalOptions="Center"
-                                                    VerticalOptions="End"
-                                                    Grid.Row="0">
-                                                <Border.GestureRecognizers>
-                                                    <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type ScrollView}}, Path=BindingContext.LengthModelSelectionChangedCommand}"
-                                                                          CommandParameter="{Binding .}" />
-                                                </Border.GestureRecognizers>
-                                                <Border.StrokeShape>
-                                                    <RoundRectangle CornerRadius="10" />
-                                                </Border.StrokeShape>
-                                                <Label Text="{Binding LengthContent}"
-                                                       x:Name="label"
-                                                       Background="{Binding IsSelected, Converter={StaticResource colorConverter}}"
-                                                       FontFamily="Roboto-Regular"
-                                                       FontSize="14"
-                                                       Padding="7"
-                                                       HorizontalOptions="Center"
-                                                       HorizontalTextAlignment="Center"
-                                                       VerticalTextAlignment="Center"
-                                                       TextColor="{Binding IsSelected, Converter={StaticResource textColorConverter}}"/>
-                                            </Border>
-                                        </Grid>
-                                    </Grid>
-                                </DataTemplate>
-                            </BindableLayout.ItemTemplate>
                         </FlexLayout>
                     </StackLayout>
                 </Border>
@@ -416,5 +242,3 @@ Using control template with AI Assist View, it allows you to create a highly cus
 
 {% endhighlight %}
 {% endtabs %}
-
-![Control template in .NET MAUI AI Assist View](Images/maui-aiassistview-control-template.png)
