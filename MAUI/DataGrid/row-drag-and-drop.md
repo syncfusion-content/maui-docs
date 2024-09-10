@@ -32,9 +32,9 @@ dataGrid.AllowDraggingRow = true;
 
 The SfDataGrid supports drag-and-drop operations for both data rows and groups in the following scenarios:
 
-Records can be reordered to any position using auto-scrolling.
-Group positions can be reordered using drag and drop; however, groups cannot be nested within other groups.
-Data rows can be reordered within the same group or moved to different groups.
+* Records can be reordered to any position using auto-scrolling.
+* Group positions can be reordered using drag and drop; however, groups cannot be nested within other groups.
+* Data rows can be reordered within the same group or moved to different groups.
 
 N> Reordering changes are made only in the `SfDataGrid.View`, not in the underlying data. As a result, these changes will be reverted when performing sorting, grouping, or any other operation that refreshes the view. To persist reordering changes in the underlying data, handle the `QueryRowDragging` event as explained below in [Reordering underlying data](#Reordering underlying data).
 
@@ -42,13 +42,13 @@ N> Reordering changes are made only in the `SfDataGrid.View`, not in the underly
 
 The SfDataGrid allows you to load specific content during row drag-and-drop operations using the `SfDataGrid.RowDragDropTemplate`. This template can be defined either in code or XAML.
 
-## Default template
+### Default template
 
 The default template will be used for row drag-and-drop operations unless another template is explicitly assigned.
 
 <img alt="DataGrid row drag and drop" src="Images\row-drag-drop\maui-datagrid-dragging.gif" width="404"/>
 
-## Customizing row drag-and-drop template
+### Customizing row drag-and-drop template
 
 Any type of custom view can be loaded inside the `SfDataGrid.RowDragDropTemplate`.
 
@@ -57,7 +57,8 @@ Please refer to the following code example that demonstrates how to load a view 
 {% tabs %}
 {% highlight xaml %}
 
-        <syncfusion:SfDataGrid.RowDragDropTemplate>
+<syncfusion:SfDataGrid>
+    <syncfusion:SfDataGrid.RowDragDropTemplate>
         <DataTemplate>
             <Grid BackgroundColor="LightBlue">
                 <Label Text="Drag View"       
@@ -68,6 +69,7 @@ Please refer to the following code example that demonstrates how to load a view 
         </DataTemplate>
     </syncfusion:SfDataGrid.RowDragDropTemplate>
 </syncfusion:SfDataGrid>
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -331,9 +333,9 @@ private async void DataGrid_QueryRowDragging(object? sender, Syncfusion.Maui.Dat
 {% endtabs %}
 
 
-## Customization of draw view
+## Customization of row drag view
 
-The row view’s background color, text color, and indicator color can be customized using the `RowDragViewBackgroundColor`, `RowDragViewTextColor`, and `RowDraggingIndicatorLineColor` properties.
+The row drag view’s background color, text color, and indicator color can be customized using the `RowDragViewBackgroundColor`, `RowDragViewTextColor`, and `RowDraggingIndicatorLineColor` properties.
 
 {% tabs %}
 {% highlight XAML %}
@@ -357,4 +359,4 @@ dataGrid.DefaultStyle.RowDragViewTextColor = Colors.Maroon;
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="Customization of draw view" src="Images\row-drag-drop\maui-datagrid-rowindicatorline.gif" width="404"/>
+<img alt="Customization of draw view" src="Images\row-drag-drop\maui-datagrid-dragindicator.gif" width="404"/>
