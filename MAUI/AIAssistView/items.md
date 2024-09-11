@@ -78,7 +78,7 @@ The `TextItem` is used to display plain text as a item, which is used to represe
                 InitializeComponent();
                 this.sfAIAssistView = new SfAIAssistView();
                 this.viewModel = new ViewModel();
-                this.sfAIAssistView = viewModel.AssistItems;
+                this.sfAIAssistView.AssistItems = viewModel.AssistItems;
                 this.Content = sfAIAssistView;
             }
         }
@@ -96,7 +96,7 @@ The `TextItem` is used to display plain text as a item, which is used to represe
 
         private void GenerateAssistItems()
         {
-            var requestItem = new AssistItem()
+            AssistItem requestItem = new AssistItem()
             {
                // Adding a user request as a text item
                Text = "Hey AI, can you tell me what MAUI is? Could you provide a link to learn more about .NET MAUI?",
@@ -144,7 +144,7 @@ The `HyperlinkItem` is used to send a URL as a item. Along with the link, the th
 
         private void GenerateAssistItems()
         {
-            var requestItem = new AssistItem()
+            AssistItem requestItem = new AssistItem()
             {
                Text = "Hey AI, can you tell me what MAUI is? Could you provide a link to learn more about .NET MAUI?",
                IsRequested = true
@@ -190,7 +190,7 @@ The `ImageItem` is used to display an image as a item. Using the `Source`, `Size
 
         private void GenerateAssistItems()
         {
-            var requestItem = new AssistItem()
+            AssistItem requestItem = new AssistItem()
             {
                  Text = "Hey AI, Please share an image of bird.",
                  IsRequested = true
@@ -231,6 +231,7 @@ The `ImageItem` is used to display an image as a item. Using the `Source`, `Size
 The `SfAIAssistView` control includes a built-in event called `ImageTapped` and a command named `ImageTappedCommand`. These are triggered when an image is tapped. You can access the tapped image through the `ImageTappedEventArgs`. The `ImageTappedEventArgs` has the following member:
 
  * `ImageItem` : Refers to the tapped image item.
+
 ### ImageTapped Event
 
 {% tabs %}
