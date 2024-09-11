@@ -730,7 +730,7 @@ namespace RadialMenuCommandSample
 
 {% endhighlight %}
 
-## FontAutoScalingEnabled
+## Font auto scaling enabled
 
 The `FontAutoScalingEnabled` property is used to automatically scale the Radial menu item's font size based on the operating system's text size. The default value of the `FontAutoScalingEnabled` property is `false.`
 

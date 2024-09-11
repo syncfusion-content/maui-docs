@@ -300,7 +300,7 @@ Content = sfBadgeView;
 
 ## Alignment of badge
 
-Align the badge view using the Center, Start, and End properties of `BadgeAlignment` property.
+Align the badge view using the Center, Start, and End properties of [BadgeAlignment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeSettings.html#Syncfusion_Maui_Core_BadgeSettings_BadgeAlignment) property.
 
 {% tabs %}
 
@@ -345,7 +345,7 @@ Content = sfBadgeView;
 
 ![BadgeView Alignment](badge-customization_images/badge_alignment.png)
 
-## FontAutoScalingEnabled
+## Font auto scaling enabled
 
 The `FontAutoScalingEnabled` property is used to automatically scale the badge text's font size based on the operating system's text size. The default value of the `FontAutoScalingEnabled` property is `false.`
 

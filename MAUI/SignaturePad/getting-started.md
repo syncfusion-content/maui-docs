@@ -264,4 +264,37 @@ private void OnDrawCompleted(object? sender, EventArgs e)
 
 {% endtabs %}
 
+## Method
+
+### Get Signature Points
+
+Users can use the `GetSignaturePoints` method to retrieve the drawn signature points from the [`SfSignaturePad`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SignaturePad.SfSignaturePad.html).
+
+{% tabs %}
+{% highlight xaml %}
+<signaturePad:SfSignaturePad x:Name="signaturePad"
+                             StrokeColor="Red"
+                             MinimumStrokeThickness="1"
+                             MaximumStrokeThickness="6" 
+                             DrawCompleted="OnDrawCompleted"/>
+{% endhighlight %}
+{% highlight C# %}
+
+SfSignaturePad signaturePad = new SfSignaturePad()
+{
+    StrokeColor = Colors.Red,
+    MinimumStrokeThickness = 1,
+    MaximumStrokeThickness = 6, 
+    DrawCompleted += OnDrawCompleted
+};
+
+private void OnDrawCompleted(object? sender, EventArgs e)
+{
+    List<List<float>> pointsCollection = new List<List<float>>();
+    pointsCollection = signaturePad.GetSignaturePoints();
+}
+
+{% endhighlight %}
+{% endtabs %}
+
 N> You can refer to our [.NET MAUI SignaturePad](https://www.syncfusion.com/maui-controls/maui-signaturepad) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI SignaturePad Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/SignaturePad) that shows you how to render the SignaturePad in .NET MAUI.

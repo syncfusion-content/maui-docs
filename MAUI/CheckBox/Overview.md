@@ -8,7 +8,7 @@ control: SfChekBox
 
 # Overview of .NET MAUI CheckBox (SfCheckBox)
 
-The .NET MAUI CheckBox is a selection control with UI customization. It allows you to choose one or more options from a set and customize the appearance for different visual states using the visual state manager.
+The [.NET MAUI CheckBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html) is a selection control with UI customization. It allows you to choose one or more options from a set and customize the appearance for different visual states using the visual state manager.
 
 ## Key features
 

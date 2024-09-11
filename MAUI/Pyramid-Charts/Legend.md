@@ -28,7 +28,6 @@ To define the legend in the chart, initialize the [ChartLegend](https://help.syn
     </chart:SfPyramidChart.Legend>
 </chart:SfPyramidChart>
 
-
 {% endhighlight %}
 
 {% highlight c# %}
@@ -42,6 +41,7 @@ SfPyramidChart chart = new SfPyramidChart()
 
 chart.Legend = new ChartLegend();
 this.Content = chart;
+
 {% endhighlight %}
 
 {% endtabs %}
@@ -78,9 +78,60 @@ chart.Legend = new ChartLegend()
 };
 
 this.Content = chart;
+
 {% endhighlight %}
 
 {% endtabs %}
+
+## Customizing labels
+
+The appearance of the legend label can be customized using the [`LabelStyle`]() property. 
+
+* [`TextColor`]() – Gets or sets the color of the label.
+* [`FontFamily`]() - Gets or sets the font family for the legend label. 
+* [`FontAttributes`]() - Gets or sets the font style for the legend label. 
+* [`FontSize`]() - Gets or sets the font size for the legend label.
+* [`Margin`]() - Gets or sets the margin size of labels.
+
+{% tabs %} 
+
+{% highlight xaml %}
+
+<chart:SfPyramidChart ItemsSource="{Binding Data}" 
+                      XBindingPath="Name"
+                      YBindingPath="Value">
+    <chart:SfPyramidChart.Legend>
+        <chart:ChartLegend>
+            <chart:ChartLegend.LabelStyle>
+                <chart:ChartLegendLabelStyle TextColor="Blue" Margin="5" FontSize="18" FontAttributes="Bold" FontFamily="PlaywriteAR-Regular"/>
+            </chart:ChartLegend.LabelStyle>
+        </chart:ChartLegend>
+    </chart:SfPyramidChart.Legend>
+</chart:SfPyramidChart >
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+SfPyramidChart chart = new SfPyramidChart()
+{
+    XBindingPath = "Name",
+    YBindingPath = "Value",
+    ItemsSource = new ViewModel().Data,
+};
+
+chart.Legend = new ChartLegend();
+chart.Legend.LabelStyle.TextColor = Color.Blue;
+chart.Legend.LabelStyle.FontSize = 18;
+chart.Legend.LabelStyle.FontAttributes = FontAttributes.Bold;
+chart.Legend.LabelStyle.Margin = 5;
+chart.Legend.LabelStyle.FontFamily = "PlaywriteAR-Regular";
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Legend labels customization support in Maui Chart](Legend-images/legend_label_style.png)
 
 ## Legend icon
 To specify the legend icon based on associate series type using the [LegendIcon](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPyramidChart.html#Syncfusion_Maui_Charts_SfPyramidChart_LegendIcon) and change its type using [ChartLegendIconType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLegendIconType.html) enum values. The default value of the LegendIcon property is `Circle`.
@@ -191,7 +242,7 @@ pyramidChart.Legend = new ChartLegend()
 
 {% endhighlight %}
 
-{% tabs %}
+{% endtabs %}
 
 ## Legend maximum size request
 To set the maximum size request for the legend view, override the [GetMaximumSizeCoefficient](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLegend.html#Syncfusion_Maui_Charts_ChartLegend_GetMaximumSizeCoefficient) protected method in [ChartLegend](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLegend.html) class. The value should be between 0 and 1, representing the maximum size request, not the desired size for the legend items layout.
@@ -200,13 +251,13 @@ To set the maximum size request for the legend view, override the [GetMaximumSiz
 
 {% highlight xaml %}
 
-<chart:SfPolarChart >
+<chart:SfPyramidChart >
     . . .
-    <chart:SfPolarChart.Legend>
+    <chart:SfPyramidChart.Legend>
         <chart:LegendExt/>
-    </chart:SfPolarChart.Legend>
+    </chart:SfPyramidChart.Legend>
     . . .
-</chart:SfPolarChart>
+</chart:SfPyramidChart>
 
 {% endhighlight %}
 
@@ -220,7 +271,7 @@ public class LegendExt : ChartLegend
     }
 }
 
-SfPolarChart chart = new SfPolarChart();
+SfPyramidChart chart = new SfPyramidChart();
 chart.Legend = new LegendExt();
 this.Content = chart;
 
@@ -327,6 +378,27 @@ this.Content = chart;
 {% endtabs %}
 
 ![Legend layout for pyramid chart](Legend-images/pyramid_chart.png)
+
+## Event 
+
+**LegendItemCreated**
+
+The [`LegendItemCreated`]() event is triggered when the chart legend item is created. The argument contains the [`LegendItem`]() object. The following properties are present in [`LegendItem`]().
+
+* [`Text`]() – used to get or set the text of the label.
+* [`TextColor`]() – used to get or set the color of the label.
+* [`FontFamily`]() - used to get or set the font family for the legend label. 
+* [`FontAttributes`]() - used to get or set the font style for the legend label. 
+* [`FontSize`]() - used to get or set the font size for the legend label.
+* [`TextMargin`]() - used to get or set the margin size of labels.
+* [`IconBrush`]() - used to change the color of the legend icon.
+* [`IconType`]() - used to get or set the icon type for the legend icon.
+* [`IconHeight`]() - used to get or set the icon height of the legend icon.
+* [`IconWidth`]() - used to get or set the icon width of the legend icon.
+* [`IsToggled`]() - used to get or set the toggle visibility of the legend.
+* [`DisableBrush`]() - used to get or set the color of the legend when toggled.
+* [`Index`]() - used to get index position of the legend.
+* [`Item`]() - used to get the data object for the associated segment.
 
 ## Limitations
 * Do not add items explicitly.

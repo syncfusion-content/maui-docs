@@ -19,16 +19,16 @@ This event occurs when the value or state of the [`IsChecked`](https://help.sync
 {% tabs %}
 {% highlight xaml %}
 
-    <syncfusion:SfCheckBox x:Name="checkBox" Text="Unchecked State" IsThreeState="True" StateChanged="CheckBox_StateChanged"/>
+<syncfusion:SfCheckBox x:Name="checkBox" Text="Unchecked State" IsThreeState="True" StateChanged="CheckBox_StateChanged"/>
 
 {% endhighlight %}
 {% highlight c# %}
 
-    SfCheckBox checkBox = new SfCheckBox();
-    checkBox.Text = "Unchecked State";
-    checkBox.IsThreeState = true;
-    checkBox.StateChanged += CheckBox_StateChanged;
-    this.Content = checkBox;
+SfCheckBox checkBox = new SfCheckBox();
+checkBox.Text = "Unchecked State";
+checkBox.IsThreeState = true;
+checkBox.StateChanged += CheckBox_StateChanged;
+this.Content = checkBox;
 	
 {% endhighlight %}
 {% endtabs %}
@@ -36,21 +36,21 @@ This event occurs when the value or state of the [`IsChecked`](https://help.sync
 {% tabs %}
 {% highlight c# %}
 
-    private void CheckBox_StateChanged(object sender, Syncfusion.Maui.Buttons.StateChangedEventArgs e)
+private void CheckBox_StateChanged(object sender, Syncfusion.Maui.Buttons.StateChangedEventArgs e)
+{
+    if (e.IsChecked.HasValue && e.IsChecked.Value)
     {
-        if (e.IsChecked.HasValue && e.IsChecked.Value)
-        {
-            checkBox.Text = "Checked State";
-        }
-        else if(e.IsChecked.HasValue && !e.IsChecked.Value)
-        {
-            checkBox.Text = "Unchecked State";
-        }
-        else
-        {
-        checkBox.Text = "Indeterminate State";
-        }
+        checkBox.Text = "Checked State";
     }
+    else if(e.IsChecked.HasValue && !e.IsChecked.Value)
+    {
+        checkBox.Text = "Unchecked State";
+    }
+    else
+    {
+    checkBox.Text = "Indeterminate State";
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -67,15 +67,15 @@ The `StateChanging` event is triggered when the state of the [IsChecked](https:/
 {% tabs %}
 {% highlight xaml %}
 
-    <syncfusion:SfCheckBox x:Name="checkBox" Text="CheckBox" StateChanging="OnStateChanging"/>
+<syncfusion:SfCheckBox x:Name="checkBox" Text="CheckBox" StateChanging="OnStateChanging"/>
 
 {% endhighlight %}
 {% highlight c# %}
 
-    SfCheckBox checkBox = new SfCheckBox();
-    checkBox.Text = "CheckBox";
-    checkBox.StateChanging += OnStateChanging;
-    this.Content = checkBox;
+SfCheckBox checkBox = new SfCheckBox();
+checkBox.Text = "CheckBox";
+checkBox.StateChanging += OnStateChanging;
+this.Content = checkBox;
 	
 {% endhighlight %}
 {% endtabs %}
@@ -83,10 +83,10 @@ The `StateChanging` event is triggered when the state of the [IsChecked](https:/
 {% tabs %}
 {% highlight c# %}
 
-    private void OnStateChanging(object sender, StateChangingEventArgs e)
-    {
-        e.cancel=true;
-    }
+private void OnStateChanging(object sender, StateChangingEventArgs e)
+{
+    e.cancel=true;
+}
 
 {% endhighlight %}
 {% endtabs %}

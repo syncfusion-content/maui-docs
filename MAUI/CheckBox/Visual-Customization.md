@@ -11,7 +11,7 @@ documentation: ug
 
 ## Customizing a shape
 
-The check box shape can be customized using the [`CornerRadius`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html#Syncfusion_Maui_Buttons_SfCheckBox_CornerRadius) property. This property specifies a uniform radius value for every corner of the check box.
+The check box shape can be customized using the [CornerRadius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html#Syncfusion_Maui_Buttons_SfCheckBox_CornerRadius) property. This property specifies a uniform radius value for every corner of the check box.
 
 {% tabs %}
 {% highlight xaml %}
@@ -264,7 +264,7 @@ The [`ControlSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.
 {% endhighlight %}
 {% endtabs %}
 
-## FontAutoScalingEnabled
+## Font auto scaling enabled
 
 The `FontAutoScalingEnabled` property is used to automatically scale the Check box's font size based on the operating system's text size. The default value of the `FontAutoScalingEnabled` property is `false.`
 
@@ -289,20 +289,16 @@ The `EnabledAnimation` property is used to enable or disable the animation for t
 {% tabs %}
 {% highlight xaml %}
 
-    <StackLayout>
-        <syncfusion:SfCheckBox Text="CheckBox" EnabledAnimation="False"/>
-    </StackLayout>
+<syncfusion:SfCheckBox Text="CheckBox" EnabledAnimation="False"/>
 
 {% endhighlight %}
 {% highlight c# %}
 
-    StackLayout stackLayout = new StackLayout();
-    SfCheckBox checkBox = new SfCheckBox
-    {
-        Text = "CheckBox",
-        EnabledAnimation = false
-    };
-    stackLayout.Children.Add(checkBox);
+SfCheckBox checkBox = new SfCheckBox
+{
+    Text = "CheckBox",
+    EnabledAnimation = false
+};
 
 {% endhighlight %}
 {% endtabs %}
