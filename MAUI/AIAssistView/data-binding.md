@@ -34,7 +34,7 @@ public class ViewModel : INotifyPropertyChanged
 {
     . . .
 
-    public ObservableCollection<object> AssistItems
+    public ObservableCollection<IAssistItem> AssistItems
     {
         get
         {
@@ -52,7 +52,7 @@ public class ViewModel : INotifyPropertyChanged
 
     public ViewModel()
     {
-        this.assistItems = new ObservableCollection<object>();
+        this.assistItems = new ObservableCollection<IAssistItem>();
         this.AssistViewRequestCommand = new Command<object>(ExecuteRequestCommand);
     }
 

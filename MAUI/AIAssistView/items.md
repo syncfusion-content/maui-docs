@@ -302,7 +302,7 @@ In AI Assist View, to display a list of interactive cards, each card can contain
         ...
         public ViewModel()
         {
-            this.assistItems = new ObservableCollection<object>();
+            this.assistItems = new ObservableCollection<IAssistItem>();
 
             //Generate card items
             this.GenerateCards();

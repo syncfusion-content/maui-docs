@@ -95,19 +95,19 @@ Create a simple assist items collection as shown in the following code example i
       /// <summary>
       /// Collection of assistItem in a conversation.
       /// </summary>
-      private ObservableCollection<object> assistItems;
+      private ObservableCollection<IAssistItem> assistItems;
 
 
       public GettingStartedViewModel()
       {
-          this.assistItems = new ObservableCollection<object>();
+          this.assistItems = new ObservableCollection<IAssistItem>();
           this.GenerateAssistItems();
       }
 
       /// <summary>
       /// Gets or sets the collection of AssistItem of a conversation.
       /// </summary>
-      public ObservableCollection<object> AssistItems
+      public ObservableCollection<IAssistItem> AssistItems
       {
           get
           {
@@ -171,6 +171,8 @@ Create a simple assist items collection as shown in the following code example i
 
 {% endhighlight %}
 {% endtabs %}
+
+N> The data type of AssistItems is IList<IAssistItem>. Use IAssistItem in the collection for binding, instead of a generic object type.
 
 ## Request and Response items
 
