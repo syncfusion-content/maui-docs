@@ -38,13 +38,14 @@ The `ControlTemplate` in AI Assist View allows you to define and reuse the visua
                             </ContentView.Content>
                         </ContentView>
                     </ControlTemplate>
-        </local:CustomAssistView.ControlTemplate>
+            </local:CustomAssistView.ControlTemplate>
+        </local:CustomAssistView>
             ...
     </ContentPage.Content>
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="ViewModel.cs" hl_lines="33" %}
+{% highlight c# hl_lines="33" %}
 
 public class CustomAssistPage : ContentPage
 {
@@ -65,8 +66,8 @@ public class CustomAssistPage : ContentPage
         {
             RowDefinitions =
             {
-                new RowDefinition { Height = new GridLength(50) }, // Header Row
-                new RowDefinition { Height = GridLength.Star }      // Content Row
+                new RowDefinition { Height = new GridLength(50) }, 
+                new RowDefinition { Height = GridLength.Star }      
             }
         };
 
@@ -116,9 +117,9 @@ public class CustomAssistPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-## CreateAssistChat Override in AI Assist View (SfAIAssistView)
+## CreateAssistChat Override in AI Assist View
 
-The CreateAssistChat method allows for the customization of the chat view functionality within the AI Assist View control. By overriding this method, can create their own custom implementation of the chat view, allowing for greater control over the appearance and behavior of chat interactions.It provides the flexibility to modify how chat messages are displayed, how user interactions are handled.
+The `CreateAssistChat` method allows for the customization of the chat view functionality within the AI Assist View control. By overriding this method, can create their own custom implementation of the chat view, allowing for greater control over the appearance and behavior of chat interactions.It provides the flexibility to modify how chat messages are displayed, how user interactions are handled.
 Here’s how to override the CreateAssistChat method to return a custom instance of AssistViewChat.
 
 {% tabs %} 
@@ -133,7 +134,7 @@ protected virtual AssistViewChat CreateAssistChat()
 {% endhighlight %} 
 {% endtabs %}
 
-The CustomAssistViewChat class inherits from AssistViewChat and can be used to further customize the chat view.
+The `CustomAssistViewChat `class inherits from AssistViewChat and can be used to further customize the chat view.
 
 {% tabs %} 
 {% highlight c# %} 
