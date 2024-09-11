@@ -13,7 +13,7 @@ You can style the elements of the `SfAIAssistView` control by creating resource 
 
 ## AI Assist View background
 
-You can set any solid color as background for `SfAIAssistView` by setting any color to the `SfAssistView.Background` property. However, if you want the solid color to be applied to the control, also, set the background as transparent, as shown in the below code sample.
+To set a solid color as the background for SfAIAssistView, assign a color to the `SfAssistView.Background` property. However, if you want the solid color to be applied to the control, also set the background as transparent, as shown in the below code sample.
 
 {% tabs %}
 {% highlight xaml hl_lines="18 27" %}
@@ -73,7 +73,7 @@ You can set any solid color as background for `SfAIAssistView` by setting any co
 
 ### Set background image
 
-You can set any image as the background for the `SfAIAssistView` by setting the `SfAIAssistView .Background` as `Colors.Transparent` and adding an image below the `SfAIAssistView ` control.
+To set an image as the background for the `SfAIAssistView`, set the `SfAIAssistView.Background` to `Colors.Transparent` and place the image below the `SfAIAssistView` control.
 
 {% tabs %}
 {% highlight xaml hl_lines="26" %}
@@ -140,7 +140,7 @@ You can set any image as the background for the `SfAIAssistView` by setting the 
 
 ### Set gradient background
 
-You can set the gradient view as a background for AI Assist View by setting the `SfAIAssistView.Background` property to the gradient colors.
+To apply a gradient view as a background to the AI Assist View, set the `SfAIAssistView.Background` property to the desired gradient colors.
 
 {% tabs %}
 {% highlight xaml hl_lines="29 30" %}
@@ -214,7 +214,7 @@ You can set the gradient view as a background for AI Assist View by setting the 
 
 ## Request item styling
 
-You can style the elements of request item by setting values to the in-built keys of request item in the resource dictionary.
+To apply styles to the elements of a request item, set values to the in-built keys of the request item in the resource dictionary.
 
 <table>
 <tr>
@@ -306,7 +306,7 @@ You can style the elements of request item by setting values to the in-built key
  
 ## Response item styling
 
-You can style the elements of a response item by setting values to the in-built keys of response item in the resource dictionary.
+To apply styles to the elements of a response item, set values to the in-built keys of the response item in the resource dictionary.
 
 <table>
 <tr>
@@ -398,7 +398,7 @@ You can style the elements of a response item by setting values to the in-built 
 
 ## Hyperlink item styling
 
-You can style the elements of a hyperlink item by setting values to the in-built keys of a hyperlink item in the resource dictionary.
+To apply styles to the elements of a hyperlink item, set values to the in-built keys of the hyperlink item in the resource dictionary.
 
 <table>
 <tr>
@@ -465,7 +465,7 @@ You can style the elements of a hyperlink item by setting values to the in-built
 
 ## Card item styling
 
-You can style the elements of a card item by setting values to the in-built keys of a card item in the resource dictionary.
+To apply styles to the elements of a card item, set values to the in-built keys of the card item in the resource dictionary.
 
 <table>
 <tr>
@@ -624,7 +624,7 @@ You can style the elements of a card item by setting values to the in-built keys
 
 ## Item input view styling
 
-You can style the elements of the  input view by setting values to the in-built keys of the input view in the resource dictionary.
+To apply styles to the elements of the input view, set values to the in-built keys of the input view in the resource dictionary.
 
 <table>
 <tr>
@@ -670,7 +670,7 @@ You can style the elements of the  input view by setting values to the in-built 
 
 ## Editor styling
 
-You can style the elements of the editor view by setting values to the in-built keys of the editor view in the resource dictionary.
+To apply styles to the elements of the editor view, set values to the in-built keys of the editor view in the resource dictionary.
 
 <table>
 <tr>
@@ -752,7 +752,7 @@ You can style the elements of the editor view by setting values to the in-built 
 
 ## Suggestions styling
 
-You can style the elements of the suggestion view by setting values to the in-built keys of the suggestion view in the resource dictionary.
+To apply styles to the elements of the suggestion view, set values to the in-built keys of the suggestion view in the resource dictionary.
 
 <table>
 <tr>
@@ -828,7 +828,7 @@ You can style the elements of the suggestion view by setting values to the in-bu
 
 ## Action view styling
 
-You can style the elements of the suggestion view by setting values to the in-built keys of the suggestion view in the resource dictionary
+To apply styles to the elements of the action view, set values to the in-built keys of the action view in the resource dictionary.
 
 <table>
 <tr>
@@ -905,7 +905,7 @@ You can style the elements of the suggestion view by setting values to the in-bu
 
 ## Send button styling
 
-You can style the send item button based on its state by setting values to the in-built keys of the send item button in the resource dictionary.
+To style the send item button based on its state, set values to the in-built keys of the send button in the resource dictionary.
 
 <table>
 <tr>
