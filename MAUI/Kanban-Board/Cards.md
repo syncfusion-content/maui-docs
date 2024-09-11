@@ -19,6 +19,8 @@ The default elements of a card can be customized using the below properties of [
 * [`Tags`]() - Used to specify the tags of a card. The tags will be displayed at bottom in default card template.
 * [`ID`]() - Used to set the ID of a card.
 
+N> The image URL can be set in two ways: using an assembly reference or a local assembly. Ensure that the image is stored in the `Resources/Images` folder for assembly references.
+
 {% highlight C# %}
 
 new KanbanModel()
@@ -49,7 +51,7 @@ You can replace the entire card template with your own design using [`CardTempla
         
         <StackLayout  Orientation="Horizontal"> 
 
-            <Label Text="{Binding Path=Title}" TextColor="Silver" HorizontalOptions="StartAndExpand" >
+            <Label Text="{Binding Title}" TextColor="Silver" HorizontalOptions="StartAndExpand" >
             </Label>
 
         </StackLayout>      
@@ -81,11 +83,11 @@ var cardTemplate = new DataTemplate(() =>
         BackgroundColor = Color.Gray
     };
 
-    StackLayout titleLayout = new StackLayout();
+    HorizontalStackLayout titleLayout = new HorizontalStackLayout();
     Label title = new Label()
     {
-        TextColor = Color.Silver,
-        HorizontalOptions = LayoutOptions.StartAndExpand
+        TextColor = Colors.Silver,
+        HorizontalOptions = LayoutOptions.Start
     };
     title.SetBinding(Label.TextProperty, new Binding("Title"));
     titleLayout.Children.Add(title);
@@ -98,7 +100,7 @@ var cardTemplate = new DataTemplate(() =>
     {
         WidthRequest = 150,
         FontSize = 14,
-        TextColor = Color.Silver,
+        TextColor = Colors.Silver,
         LineBreakMode = LineBreakMode.WordWrap
     };
     desc.SetBinding(Label.TextProperty, new Binding("Description"));
@@ -126,7 +128,7 @@ kanban.CardTemplate = cardTemplate;
 
 ## Data template selector
 
-You can customize the appearance of each card with different templates based on specific constraints using [`DataTemplateSelector`]().
+You can customize the appearance of each card with different templates based on specific constraints using [`DataTemplateSelector`](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.datatemplateselector?view=net-maui-8.0).
 
 ### Create a data template selector
 

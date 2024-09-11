@@ -76,11 +76,21 @@ kanban.ColumnMappingPath = "ID";
 
 More than one category can be mapped to a column by assigning multiple values to [Categories]() collection of [`KanbanColumn`](). For e.g., you can map "In progress, Validate" types under "In progress" column.
 
+{% tabs %}
+
+{% highlight xaml %}
+
+<kanban:KanbanColumn x:Name="progressColumn" Categories="In Progress,Validated" />
+
+{% endhighlight %}
+
 {% highlight C# %} 
 
 progressColumn.Categories = new List<object>() { "In Progress", "Validated" };
 
 {% endhighlight %}
+
+{% endtabs %}
 
 ## Headers
 
