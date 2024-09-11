@@ -64,7 +64,7 @@ Please refer to the following code example that demonstrates how to load a view 
                 <Label Text="Drag View"       
                        TextColor="Black"           
                        HorizontalTextAlignment="Center" 
-                       VerticalTextAlignment="Center"/>
+                    VerticalTextAlignment="Center"/>
             </Grid>
         </DataTemplate>
     </syncfusion:SfDataGrid.RowDragDropTemplate>
