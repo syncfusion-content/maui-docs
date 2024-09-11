@@ -359,4 +359,4 @@ dataGrid.DefaultStyle.RowDragViewTextColor = Colors.Maroon;
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="Customization of row drag view" src="Images\rowdragdrop\maui-datagrid-draggingindicator.gif" width="400"/>
+<img alt="Customization of row drag view" src="Images\rowdragdrop\maui-datagrid-dragindicator.gif" width="400"/>
