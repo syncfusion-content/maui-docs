@@ -129,7 +129,7 @@ Suggestions can be shown in a item by creating a `AssistSuggestion` instance and
 
 ### Add an image in suggestion item
 
-In the `SfAIAssistView` control, you can include an image in the suggestion list by assigning an image source to the `ImageSource` property.
+In the `SfAIAssistView` control, an image can be added to the suggestion list by assigning an image source to the `ImageSource` property.
 
 {% tabs %}
 {% highlight c# tabtitle="ViewModel.cs" hl_lines="13 14" %}
@@ -161,7 +161,7 @@ In the `SfAIAssistView` control, you can include an image in the suggestion list
 
 ### Change the orientation of suggestions
 
-You can choose to show the suggestion items in horizontal or vertical orientation using the `Orientation` property.
+The `Orientation` property allows you to display suggestion items in either horizontal or vertical orientation.
 
 {% tabs %}
 {% highlight c# tabtitle="ViewModel.cs" hl_lines="13" %}
