@@ -172,7 +172,7 @@ Create a simple assist items collection as shown in the following code example i
 {% endhighlight %}
 {% endtabs %}
 
-N> The data type of `AssistItem` is IList<IAssistItem>. Use `IAssistItem` in the collection for binding, instead of a generic `object` type.
+N> The `SfAIAssistView.AssistItems` property is of type `IList<IAssistItem>`. To ensure the `AssistItems` property functions correctly, it is recommended to use a collection property in the ViewModel with the same type, such as `ObservableCollection<IAssistItem>`.
 
 ## Request and Response items
 
