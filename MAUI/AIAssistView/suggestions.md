@@ -25,12 +25,12 @@ Suggestions can be shown in a item by creating a `AssistSuggestion` instance and
   <?xml version="1.0" encoding="utf-8" ?>
   <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-               xmlns:sfAIAssistView="clr-namespace:Syncfusion.Maui.AIAssistView;assembly=Syncfusion.Maui.AIAssistView"
+               xmlns:syncfusion="clr-namespace:Syncfusion.Maui.AIAssistView;assembly=Syncfusion.Maui.AIAssistView"
                x:Class="MauiAIAssistView.MainPage">
 
       <ContentPage.Content>
-             <sfAIAssistView:SfAIAssistView x:Name="sfAIAssistView"
-                                            AssistItems="{Binding AssistItems}"/>
+             <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+                                        AssistItems="{Binding AssistItems}"/>
 	  <ContentPage.Content>	
   </ContentPage>
 
@@ -218,14 +218,14 @@ By default, when tapping or clicking the suggestion item, it will be sent as a r
  <?xml version="1.0" encoding="utf-8" ?>
  <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
               xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-              xmlns:sfAIAssistView="clr-namespace:Syncfusion.Maui.AIAssistView;assembly=Syncfusion.Maui.AIAssistView"
+              xmlns:syncfusion="clr-namespace:Syncfusion.Maui.AIAssistView;assembly=Syncfusion.Maui.AIAssistView"
               xmlns:local="clr-namespace:MauiAIAssistView"             
               x:Class="MauiAIAssistView.MainPage">
 
         <ContentPage.Content>
-            <sfAIAssistView:SfAIAssistView x:Name="sfAIAssistView" 
-                                           AssistItems="{Binding AssistItems}"
-                                           SuggestionItemSelectedCommand="{Binding SuggestionItemSelectedCommand}" />
+            <syncfusion:SfAIAssistView x:Name="sfAIAssistView" 
+                                       AssistItems="{Binding AssistItems}"
+                                       SuggestionItemSelectedCommand="{Binding SuggestionItemSelectedCommand}" />
         </ContentPage.Content>
  </ContentPage>
 
