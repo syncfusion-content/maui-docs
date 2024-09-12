@@ -13,7 +13,8 @@ The Syncfusion .NET MAUI AI Assist View control is used to enhance interaction b
 
 ## Key features
 
+* `Data binding` : Support to bind any existing data to assist item collection.
 * `Item types` : Support for various item types such as text, image, hyperlink, and card items.
 * `Control template` : Offers a customizable control template to display any view or control.
 * `Suggestions` : Offers quick options to choose from and expedite the conversation flow.
-* `Styling` : Allows to customize the appearance of request and response items.
+* `Styling` : Customize the appearance of request and response items.
