@@ -25,7 +25,7 @@ To add an `AssistItem` to the `ViewModel.AssistItems` collection with specific v
 
 3. After setting the properties, add the `AssistItem` instance to the `ViewModel.AssistItems` collection, which binds to the `SfAIAssistView.AssistItems` property.
 
->N The `IsRequested` property is automatically set to `True`, indicating it is a request from the user. If you want to manually add a request item through code, ensure you explicitly set the `IsRequested` property to `True`.
+N> The `IsRequested` property is automatically set to `True`, indicating it is a request from the user. If you want to manually add a request item through code, ensure you explicitly set the `IsRequested` property to `True`.
 
 {% tabs %}
 {% highlight c# tabtitle="ViewModel.cs" %}
