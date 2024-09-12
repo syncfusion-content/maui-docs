@@ -12,7 +12,7 @@ documentation: ug
 The `ControlTemplate` in AI Assist View allows you to define and reuse the visual structure of a control. This flexible structure enables to fully customize the appearance and behavior of the AI Assist View. By using a `ControlTemplate` with the AI Assist View, you can create a highly customized and interactive interface, as demonstrated below.
 
 {% tabs %}
-{% highlight xaml hl_lines="14" %}
+{% highlight xaml hl_lines="5" %}
 
     <ContentPage.Content>
             ...      
@@ -41,6 +41,8 @@ public class CustomAssistPage : ContentPage
 {
     public CustomAssistPage()
     {
+        ...
+
         var assistView = new CustomAssistView
         {
             AssistItems = new Binding("AssistMessages"),
@@ -68,6 +70,8 @@ public class CustomAssistPage : ContentPage
                 return contentView;
             })
         };
+
+        ...
 
         Content = assistView;
     }
