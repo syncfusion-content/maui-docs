@@ -129,8 +129,6 @@ The `TextItem` is used to display plain text as a item, which is used to represe
 {% endhighlight %}
 {% endtabs %}
 
-![Text item type in .NET MAUI AI Assist View](Images/assist-items/maui-aiassistview-items-text.png)
-
 ## Hyperlink item
 
 The `HyperlinkItem` is used to send a URL as a item. Along with the link, the thumbnail, title, and description of the URL are automatically fetched and displayed.
@@ -176,8 +174,6 @@ The `HyperlinkItem` is used to send a URL as a item. Along with the link, the th
 
 {% endhighlight %}
 {% endtabs %}
-
-![Hyperlink item type in .NET MAUI AI Assist View](images/assist-items/maui-aiassistview-items-hyperlink.png)
 
 ## Image item
 
@@ -225,8 +221,6 @@ The `ImageItem` is used to display an image as a item. Using the `Source`, `Size
 
 {% endhighlight %}
 {% endtabs %}
-
-![Image item type in .NET MAUI AI Assist View](Images/assist-items/maui-aiassistview-items-image.png)
 
 ## ImageTapped Event and Command
 
@@ -365,8 +359,6 @@ In AI Assist View, to display a list of interactive cards, each card can contain
 
 {% endhighlight %}
 {% endtabs %}
-
-![Card item type in .NET MAUI AI Assist View](images/assist-items/maui-aiassistview-items-card.png)
 
 ## CardTapped Event and Command
 
