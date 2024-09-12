@@ -21,7 +21,7 @@ To set a solid color as the background for SfAIAssistView, assign a color to the
     <?xml version="1.0" encoding="utf-8" ?>
     <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-                 xmlns:sfAIAssistView="clr-namespace:Syncfusion.Maui.AIAssistView;assembly=Syncfusion.Maui.AIAssistView"
+                 xmlns:syncfusion="clr-namespace:Syncfusion.Maui.AIAssistView;assembly=Syncfusion.Maui.AIAssistView"
                  xmlns:syncTheme="clr-namespace:Syncfusion.Maui.Themes;assembly=Syncfusion.Maui.Core"
                  xmlns:local="clr-namespace:MauiAIAssistView"             
                  x:Class="MauiAIAssistView.MainPage">
@@ -42,9 +42,9 @@ To set a solid color as the background for SfAIAssistView, assign a color to the
        </ContentPage.Resources>
 
         <ContentPage.Content>
-            <sfAIAssistView:SfAIAssistView x:Name="sfAIAssistView"
-                                           AssistItems="{Binding AssistItems}"
-                                           Background="#94b6ec" />
+            <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+                                       AssistItems="{Binding AssistItems}"
+                                       Background="#94b6ec" />
          </ContentPage.Content>
 
       
@@ -81,7 +81,7 @@ To set an image as the background for the `SfAIAssistView`, set the `SfAIAssistV
     <?xml version="1.0" encoding="utf-8" ?>
     <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-                 xmlns:sfAIAssistView="clr-namespace:Syncfusion.Maui.AIAssistView;assembly=Syncfusion.Maui.AIAssistView"
+                 xmlns:syncfusion="clr-namespace:Syncfusion.Maui.AIAssistView;assembly=Syncfusion.Maui.AIAssistView"
                  xmlns:syncTheme="clr-namespace:Syncfusion.Maui.Themes;assembly=Syncfusion.Maui.Core"
                  xmlns:local="clr-namespace:MauiAIAssistView"        
                  x:Class="MauiAIAssistView.MainPage">
@@ -104,9 +104,9 @@ To set an image as the background for the `SfAIAssistView`, set the `SfAIAssistV
         <ContentPage.Content>
             <Grid>
                 <Image Source="backgroundimage.jpg" Aspect="AspectFill" />
-                <sfAIAssistView:SfAIAssistView x:Name="sfAIAssistView"
-                                               AssistItems="{Binding AssistItems}"
-                                               Background="Transparent" />   
+                <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+                                           AssistItems="{Binding AssistItems}"
+                                           Background="Transparent" />   
             </Grid>
         </ContentPage.Content>
     </ContentPage>
@@ -148,7 +148,7 @@ To apply a gradient view as a background to the AI Assist View, set the `SfAIAss
     <?xml version="1.0" encoding="utf-8" ?>
     <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-                 xmlns:sfAIAssistView="clr-namespace:Syncfusion.Maui.AIAssistView;assembly=Syncfusion.Maui.AIAssistView"
+                 xmlns:syncfusion="clr-namespace:Syncfusion.Maui.AIAssistView;assembly=Syncfusion.Maui.AIAssistView"
                  xmlns:syncTheme="clr-namespace:Syncfusion.Maui.Themes;assembly=Syncfusion.Maui.Core"
                  xmlns:local="clr-namespace:MauiAIAssistView"        
                  x:Class="MauiAIAssistView.MainPage">
@@ -170,9 +170,9 @@ To apply a gradient view as a background to the AI Assist View, set the `SfAIAss
         </ContentPage.Resources>
 
         <ContentPage.Content>
-            <sfAIAssistView:SfAIAssistView x:Name="sfAIAssistView"
-                                               AssistItems="{Binding AssistItems}">                                    
-                <sfAIAssistView:SfAIAssistView.Background>
+            <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+                                       AssistItems="{Binding AssistItems}">                                    
+                <syncfusion:SfAIAssistView.Background>
                     <LinearGradientBrush>
                         <GradientStop Color="SkyBlue" Offset="0.0" />
                         <GradientStop Color="LightCyan" Offset="0.25" />
@@ -180,8 +180,8 @@ To apply a gradient view as a background to the AI Assist View, set the `SfAIAss
                         <GradientStop Color="LightSkyBlue" Offset="0.75" />
                         <GradientStop Color="LightGray" Offset="1.0" />
                     </LinearGradientBrush>
-                </sfAIAssistView:SfAIAssistView.Background>
-            </sfAIAssistView:SfAIAssistView>
+                </syncfusion:SfAIAssistView.Background>
+            </syncfusion:SfAIAssistView>
         </ContentPage.Content>
     </ContentPage>
 
