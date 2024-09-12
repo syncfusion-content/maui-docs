@@ -14,19 +14,10 @@ The `ControlTemplate` in AI Assist View allows you to define and reuse the visua
 {% tabs %}
 {% highlight xaml hl_lines="14" %}
 
-     <ContentPage.Resources>
-        <ResourceDictionary>
-            <DataTemplate x:Key="headerTemplate">
-                
-                ...
-
-            </DataTemplate>
-        </ResourceDictionary>
-    </ContentPage.Resources>
-
     <ContentPage.Content>
             ...      
-        <local:CustomAssistView x:Name="assistView" Grid.Row="1" ShowHeader="{Binding ShowHeader}" ItemCopyCommand="{Binding CopyCommand}" RequestCommand="{Binding AssistViewRequestCommand}" ItemRetryCommand="{Binding RetryCommand}" HeaderTemplate="{StaticResource headerTemplate}" AssistItems="{Binding AssistMessages}">
+        <local:CustomAssistView x:Name="sfAIAssistView"
+                                AssistItems="{Binding AssistMessages}">
             <local:CustomAssistView.ControlTemplate>
                      <ControlTemplate>
                         <ContentView>
@@ -42,59 +33,29 @@ The `ControlTemplate` in AI Assist View allows you to define and reuse the visua
         </local:CustomAssistView>
             ...
     </ContentPage.Content>
-</ContentPage>
 
 {% endhighlight %}
-{% highlight c# hl_lines="33" %}
+{% highlight c# hl_lines="8" %}
 
 public class CustomAssistPage : ContentPage
 {
     public CustomAssistPage()
     {
-        var resourceDictionary = new ResourceDictionary();
-        var headerTemplate = new DataTemplate(() =>
-        {
-            // Define the header template
-            return new ContentView();
-        });
-
-        resourceDictionary.Add("headerTemplate", headerTemplate);
-
-        this.Resources = resourceDictionary;
-
-        var rootGrid = new Grid
-        {
-            RowDefinitions =
-            {
-                new RowDefinition { Height = new GridLength(50) }, 
-                new RowDefinition { Height = GridLength.Star }      
-            }
-        };
-
         var assistView = new CustomAssistView
         {
-            HeaderTemplate = (DataTemplate)this.Resources["headerTemplate"],
             AssistItems = new Binding("AssistMessages"),
-            ShowHeader = new Binding("ShowHeader"),
-            ItemCopyCommand = new Binding("CopyCommand"),
-            RequestCommand = new Binding("AssistViewRequestCommand"),
-            ItemRetryCommand = new Binding("RetryCommand"),
             ControlTemplate = new ControlTemplate(() =>
             {
                 var grid = new Grid();
 
-                var chatContent = new ContentView
-                {
-                    IsVisible = new Binding("IsActiveChatView"),
-                    Content = new Binding("AssistChatView"),
-                    BindingContext = new TemplateBinding("BindingContext")
-                };
+                var chatContent = new ContentView();
+                chatContent.SetBinding(ContentView.IsVisibleProperty, "IsActiveChatView");
+                chatContent.SetBinding(ContentView.ContentProperty, new TemplateBinding("AssistChatView"));
+                chatContent.SetBinding(BindingContextProperty, new TemplateBinding("BindingContext"));
 
-                var composeContent = new ComposeView
-                {
-                    IsVisible = new Binding("IsActiveComposeView"),
-                    BindingContext = new TemplateBinding("BindingContext")
-                };
+                var composeContent = new ComposeView();
+                composeContent.SetBinding(ComposeView.IsVisibleProperty, "IsActiveComposeView");
+                composeContent.SetBinding(BindingContextProperty, new TemplateBinding("BindingContext"));
 
                 grid.Children.Add(chatContent);
                 grid.Children.Add(composeContent);
@@ -108,9 +69,7 @@ public class CustomAssistPage : ContentPage
             })
         };
 
-        rootGrid.Children.Add(assistView, 0, 1);
-
-        Content = rootGrid;
+        Content = assistView;
     }
 }
 
