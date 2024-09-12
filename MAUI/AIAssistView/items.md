@@ -170,7 +170,7 @@ The `HyperlinkItem` is used to send a URL as a item. Along with the link, the th
            // Add the response item to the collection
            this.AssistItems.Add(responseItem);
         }
-        
+
         ...
     } 
 
@@ -264,7 +264,7 @@ The `SfAIAssistView` control includes a built-in event called `ImageTapped` and 
                                    ImageTappedCommand="{Binding TappedCommand}" />
 
 {% endhighlight %}
-{% highlight c# tabtitle="ViewModel.cs" hl_lines="18" %}
+{% highlight c# tabtitle="ViewModel.cs" hl_lines="16" %}
 
     public class ViewModel : INotifyPropertyChanged
     {
@@ -407,7 +407,7 @@ The `SfAIAssistView` control includes a built-in event called `CardTapped` and a
                                    CardTappedCommand="{Binding TappedCommand}" />
 
 {% endhighlight %}
-{% highlight c# tabtitle="ViewModel.cs" hl_lines="18" %}
+{% highlight c# tabtitle="ViewModel.cs" hl_lines="16" %}
 
     public class ViewModel : INotifyPropertyChanged
     {
