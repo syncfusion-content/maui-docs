@@ -87,6 +87,8 @@ public class ViewModel : INotifyPropertyChanged
 {% endhighlight %}
 {% endtabs %}
 
+N> The data type of AssistItems is IList<IAssistItem>. Use IAssistItem in the collection for binding, instead of a generic object type.
+
 ## Bind the RequestCommand property
 The `SfAIAssistView` control allows you to handle user requests by binding them to the `RequestCommand` property. This command is triggered whenever the user sends a request in the assist view.
 
@@ -106,8 +108,8 @@ The `SfAIAssistView` control allows you to handle user requests by binding them 
 
 <ContentPage.Content>
     <sfAIAssistView:SfAIAssistView x:Name="sfAIAssistView"
-                                    AssistItems="{Binding AssistItems}" 
-                                    RequestCommand="{Binding AssistViewRequestCommand}"/>
+                                   AssistItems="{Binding AssistItems}" 
+                                   RequestCommand="{Binding AssistViewRequestCommand}"/>
 </ContentPage.Content>
 </ContentPage>
 

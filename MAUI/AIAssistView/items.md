@@ -170,6 +170,8 @@ The `HyperlinkItem` is used to send a URL as a item. Along with the link, the th
            // Add the response item to the collection
            this.AssistItems.Add(responseItem);
         }
+        
+        ...
     } 
 
 {% endhighlight %}
@@ -228,7 +230,7 @@ The `ImageItem` is used to display an image as a item. Using the `Source`, `Size
 
 ## ImageTapped Event and Command
 
-The `SfAIAssistView` control includes a built-in event called `ImageTapped` and a command named `ImageTappedCommand`. These are triggered when an image is tapped. You can access the tapped image through the `ImageTappedEventArgs`. The `ImageTappedEventArgs` has the following member:
+The `SfAIAssistView` control includes a built-in event called `ImageTapped` and a command named `ImageTappedCommand`. These are triggered when an image is tapped. The tapped image item is accessible through the `ImageTappedEventArgs`. The `ImageTappedEventArgs` has the following member:
 
  * `ImageItem` : Refers to the tapped image item.
 
@@ -368,7 +370,7 @@ In AI Assist View, to display a list of interactive cards, each card can contain
 
 ## CardTapped Event and Command
 
-The `SfAIAssistView` control includes a built-in event called `CardTapped` and a command named `CardTappedCommand`. These are triggered when a card is tapped. You can access the tapped card through the `CardTappedEventArgs`.The `CardTappedEventArgs` have the following members.
+The `SfAIAssistView` control includes a built-in event called `CardTapped` and a command named `CardTappedCommand`. These are triggered when a card is tapped. The tapped card item is accessible through the `CardTappedEventArgs`. The `CardTappedEventArgs` has the following members:
 
  * `Card` : Represents the selected card.
  * `Action` : Represents the selected action from the card.
