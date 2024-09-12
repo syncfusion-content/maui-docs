@@ -172,7 +172,7 @@ Create a simple assist items collection as shown in the following code example i
 {% endhighlight %}
 {% endtabs %}
 
-N> The data type of AssistItems is IList<IAssistItem>. Use IAssistItem in the collection for binding, instead of a generic object type.
+N> The data type of `AssistItem` is IList<IAssistItem>. Use `IAssistItem` in the collection for binding, instead of a generic `object` type.
 
 ## Request and Response items
 
