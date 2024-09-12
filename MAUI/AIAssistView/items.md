@@ -48,7 +48,7 @@ The `TextItem` is used to display plain text as a item, which is used to represe
     <?xml version="1.0" encoding="utf-8" ?>
     <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-                xmlns:sfAIAssistView="clr-namespace:Syncfusion.Maui.AIAssistView;assembly=Syncfusion.Maui.AIAssistView"
+                xmlns:syncfusion="clr-namespace:Syncfusion.Maui.AIAssistView;assembly=Syncfusion.Maui.AIAssistView"
                 xmlns:local="clr-namespace:MauiAIAssistView"             
                 x:Class="MauiAIAssistView.MainPage">
 
@@ -57,8 +57,8 @@ The `TextItem` is used to display plain text as a item, which is used to represe
         </ContentPage.BindingContext>
 
         <ContentPage.Content>
-            <sfAIAssistView:SfAIAssistView x:Name="sfAIAssistView"
-                                           AssistItems="{Binding AssistItems}"/>
+            <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+                                       AssistItems="{Binding AssistItems}"/>
         </ContentPage.Content>
     </ContentPage>
 
@@ -239,8 +239,8 @@ The `SfAIAssistView` control includes a built-in event called `ImageTapped` and 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
-    <sfAIAssistView:SfAIAssistView x:Name="sfAIAssistView"
-                                   ImageTapped="sfAIAssistView_ImageTapped" />
+    <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+                               ImageTapped="sfAIAssistView_ImageTapped" />
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
@@ -260,8 +260,8 @@ The `SfAIAssistView` control includes a built-in event called `ImageTapped` and 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}   
 
-    <sfAIAssistView:SfAIAssistView x:Name="sfAIAssistView"  
-                                   ImageTappedCommand="{Binding TappedCommand}" />
+    <syncfusion:SfAIAssistView x:Name="sfAIAssistView"  
+                               ImageTappedCommand="{Binding TappedCommand}" />
 
 {% endhighlight %}
 {% highlight c# tabtitle="ViewModel.cs" hl_lines="16" %}
@@ -382,8 +382,8 @@ The `SfAIAssistView` control includes a built-in event called `CardTapped` and a
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
-    <sfAIAssistView:SfAIAssistView x:Name="sfAIAssistView"
-                                   CardTapped="sfAIAssistView_CardTapped" />
+    <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+                               CardTapped="sfAIAssistView_CardTapped" />
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
@@ -403,8 +403,8 @@ The `SfAIAssistView` control includes a built-in event called `CardTapped` and a
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}   
 
-    <sfAIAssistView:SfAIAssistView x:Name="sfAIAssistView"  
-                                   CardTappedCommand="{Binding TappedCommand}" />
+    <syncfusion:SfAIAssistView x:Name="sfAIAssistView"  
+                               CardTappedCommand="{Binding TappedCommand}" />
 
 {% endhighlight %}
 {% highlight c# tabtitle="ViewModel.cs" hl_lines="16" %}

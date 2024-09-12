@@ -17,8 +17,8 @@ The `SfAIAssistView` control allows you to display a default header by configuri
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
-         <sfAIAssistView:SfAIAssistView x:Name="sfAIAssistView"
-                                        ShowHeader="True"/>  
+         <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+                                    ShowHeader="True"/>  
 
 {% highlight c# hl_lines="6" %} 
 
@@ -41,9 +41,9 @@ The `SfAIAssistView` control allows you to customize the header text using the `
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
-         <sfAIAssistView:SfAIAssistView x:Name="sfAIAssistView"
-                                        HeaderText="Ask AI"
-                                        ShowHeader="True"/>  
+         <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+                                    HeaderText="Ask AI"
+                                    ShowHeader="True"/>  
 
 {% endhighlight %} 
 
@@ -84,11 +84,11 @@ The `SfAIAssistView` control allows you to fully customize the header's appearan
         </ResourceDictionary>
     </ContentPage.Resources>
 <ContentPage.Content>
-      <sfAIAssistView:SfAIAssistView x:Name="sfAIAssistView"
-                                     AssistItems="{Binding AssistItems}"
-                                     ShowHeader="True"
-                                     HeaderTemplate="{StaticResource headerTemplate}">
-      </sfAIAssistView:SfSfAIAssistView>
+      <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+                                 AssistItems="{Binding AssistItems}"
+                                 ShowHeader="True"
+                                 HeaderTemplate="{StaticResource headerTemplate}">
+      </syncfusion:SfSfAIAssistView>
 </ContentPage.Content>
 
 {% endhighlight %}

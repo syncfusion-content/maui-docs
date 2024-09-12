@@ -23,8 +23,8 @@ This section provides a quick overview for getting started with the .NET MAUI AI
 
     <ContentPage> 
       . . .
-      xmlns:sfAIAssistView="clr-namespace:Syncfusion.Maui.AIAssistView;assembly=Syncfusion.Maui.AssistView">
-      <sfAIAssistView:SfAIAssistView />
+      xmlns:syncfusion="clr-namespace:Syncfusion.Maui.AIAssistView;assembly=Syncfusion.Maui.AssistView">
+      <syncfusion:SfAIAssistView />
     </ContentPage>
 
 {% endhighlight %}
@@ -216,7 +216,7 @@ To bind the assist items to `SfAIAssistView`, configure the `AssistItems` proper
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:sfAIAssistView="clr-namespace:Syncfusion.Maui.AIAssistView;assembly=Syncfusion.Maui.AIAssistView"
+             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.AIAssistView;assembly=Syncfusion.Maui.AIAssistView"
              xmlns:local="clr-namespace:GettingStarted.ViewModel"
              x:Class="GettingStarted.MainPage">
 
@@ -225,8 +225,8 @@ To bind the assist items to `SfAIAssistView`, configure the `AssistItems` proper
     </ContentPage.BindingContext>
 
     <ContentPage.Content>
-        <sfAIAssistView:SfAIAssistView x:Name="sfAIAssistView"
-                                       AssistItems="{Binding AssistItems}"/>
+        <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+                                   AssistItems="{Binding AssistItems}"/>
     </ContentPage.Content>	
 </Content>
 

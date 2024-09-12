@@ -98,7 +98,7 @@ The `SfAIAssistView` control allows you to handle user requests by binding them 
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-                xmlns:sfAIAssistView="clr-namespace:Syncfusion.Maui.AIAssistView;assembly=Syncfusion.Maui.AIAssistView"
+                xmlns:syncfusion="clr-namespace:Syncfusion.Maui.AIAssistView;assembly=Syncfusion.Maui.AIAssistView"
                 xmlns:local="clr-namespace:MauiAIAssistView.ViewModel"
                 x:Class="MauiAIAssistView.MainPage">
 
@@ -107,9 +107,9 @@ The `SfAIAssistView` control allows you to handle user requests by binding them 
 </ContentPage.BindingContext>
 
 <ContentPage.Content>
-    <sfAIAssistView:SfAIAssistView x:Name="sfAIAssistView"
-                                   AssistItems="{Binding AssistItems}" 
-                                   RequestCommand="{Binding AssistViewRequestCommand}"/>
+    <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+                               AssistItems="{Binding AssistItems}" 
+                               RequestCommand="{Binding AssistViewRequestCommand}"/>
 </ContentPage.Content>
 </ContentPage>
 
