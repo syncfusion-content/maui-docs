@@ -84,11 +84,11 @@ The `SfAIAssistView` control allows you to fully customize the header's appearan
         </ResourceDictionary>
     </ContentPage.Resources>
 <ContentPage.Content>
-      <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
-                                 AssistItems="{Binding AssistItems}"
-                                 ShowHeader="True"
-                                 HeaderTemplate="{StaticResource headerTemplate}">
-      </syncfusion:SfSfAIAssistView>
+      <sfAIAssistView:SfAIAssistView x:Name="sfAIAssistView"
+                                     AssistItems="{Binding AssistItems}"
+                                     ShowHeader="True"
+                                     HeaderTemplate="{StaticResource headerTemplate}">
+      </sfAIAssistView:SfSfAIAssistView>
 </ContentPage.Content>
 
 {% endhighlight %}
