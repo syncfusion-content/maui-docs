@@ -18,8 +18,8 @@ The `SfAIAssistView` control includes a built-in event called `ItemTapped` and a
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
-    <sfAIAssistView:SfAIAssistView x:Name="sfAIAssistView"
-                                   ItemTapped="sfAIAssistView_ItemTapped" />
+    <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+                               ItemTapped="sfAIAssistView_ItemTapped" />
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
@@ -39,8 +39,8 @@ The `SfAIAssistView` control includes a built-in event called `ItemTapped` and a
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}   
 
-    <sfAIAssistView:SfAIAssistView x:Name="sfAIAssistView"  
-                                   ItemTappedCommand="{Binding TappedCommand}" />
+    <syncfusion:SfAIAssistView x:Name="sfAIAssistView"  
+                               ItemTappedCommand="{Binding TappedCommand}" />
 
 {% endhighlight %}
 {% highlight c# tabtitle="ViewModel.cs" hl_lines="16" %}
@@ -80,8 +80,8 @@ The `SfAIAssistView` control has built-in features like the `ItemLongPressed` ev
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
-    <sfAIAssistView:SfAIAssistView x:Name="sfAIAssistView"
-                                   ItemLongPressed="sfAIAssistView_ItemLongPressed" />
+    <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+                               ItemLongPressed="sfAIAssistView_ItemLongPressed" />
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
@@ -101,8 +101,8 @@ The `SfAIAssistView` control has built-in features like the `ItemLongPressed` ev
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
     
-    <sfAIAssistView:SfAIAssistView x:Name="sfAIAssistView"
-                                   ItemLongPressedCommand ="{Binding LongPressedCommand }" />
+    <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+                               ItemLongPressedCommand ="{Binding LongPressedCommand }" />
 
 {% endhighlight %}
 {% highlight c# tabtitle="ViewModel.cs" hl_lines="16" %}
@@ -143,8 +143,8 @@ The Request event is fired when a request item is sent. This event can be handle
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
-    <sfAIAssistView:SfAIAssistView x:Name="sfAIAssistView"
-                                   Request="sfAIAssistView_Request" />
+    <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+                               Request="sfAIAssistView_Request" />
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
@@ -166,9 +166,9 @@ The `SfAIAssistView` control allows you to bind user requests using the `Request
 {% tabs %}
 {% highlight xaml hl_lines="3" %}
 
-   <sfAIAssistView:SfAIAssistView x:Name="sfAIAssistView"
-                                  AssistItems="{Binding AssistItems}" 
-                                  RequestCommand="{Binding AssistViewRequestCommand}"/>
+   <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+                              AssistItems="{Binding AssistItems}" 
+                              RequestCommand="{Binding AssistViewRequestCommand}"/>
       
 {% endhighlight %}
 {% endtabs %}
@@ -206,8 +206,8 @@ The `SfAIAssistView` control includes a built-in command named `ItemCopyCommand`
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}   
 
-    <sfAIAssistView:SfAIAssistView x:Name="sfAIAssistView"  
-                                   ItemCopyCommand="{Binding CopyCommand}" />
+    <syncfusion:SfAIAssistView x:Name="sfAIAssistView"  
+                               ItemCopyCommand="{Binding CopyCommand}" />
 
 {% endhighlight %}
 {% highlight c# tabtitle="ViewModel.cs" hl_lines="16" %}
@@ -245,8 +245,8 @@ The `SfAIAssistView` control includes a built-in command named `ItemRetryCommand
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}   
 
-    <sfAIAssistView:SfAIAssistView x:Name="sfAIAssistView"  
-                                   ItemRetryCommand="{Binding RetryCommand}" />
+    <syncfusion:SfAIAssistView x:Name="sfAIAssistView"  
+                               ItemRetryCommand="{Binding RetryCommand}" />
 
 {% endhighlight %}
 {% highlight c# tabtitle="ViewModel.cs" hl_lines="16" %}
@@ -283,8 +283,8 @@ The `SfAIAssistView` control includes a built-in command named `ItemRatingChange
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}   
 
-    <sfAIAssistView:SfAIAssistView x:Name="sfAIAssistView"   
-                                   ItemRatingChangedCommand="{Binding RatingChangedCommand}" />
+    <syncfusion:SfAIAssistView x:Name="sfAIAssistView"   
+                               ItemRatingChangedCommand="{Binding RatingChangedCommand}" />
 
 {% endhighlight %}                                  
 {% highlight c# tabtitle="ViewModel.cs" hl_lines="16" %}
