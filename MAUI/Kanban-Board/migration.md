@@ -113,7 +113,7 @@ The following table illustrates the API migration for the kanban.
 
 ## Upcoming features in .NET MAUI
 
-* Support for keeping cards.
+* Support for keeping cards in the source column location during dragging until dropped.
 * Support for multiple categories.
 * Multiple category placeholder support. 
 
