@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Data Binding in .NET MAUI AI Assist View Control | Syncfusion
-description: Learn here all about Data Binding support in Syncfusion .NET MAUI AI Assist View (SfAIAssistView) control, its elements, and more.
+title: Data Binding in .NET MAUI AI AssistView Control | Syncfusion
+description: Learn here all about Data Binding support in Syncfusion .NET MAUI AI AssistView (SfAIAssistView) control, its elements, and more.
 platform: MAUI
 control: SfAIAssistView
 documentation: ug
 ---
 
-# Data Binding in .NET MAUI AI Assist View (SfAIAssistView)
+# Data Binding in .NET MAUI AI AssistView (SfAIAssistView)
 
 ## Generate the assist request & response items
 
@@ -25,7 +25,7 @@ To add an `AssistItem` to the `ViewModel.AssistItems` collection with specific v
 
 3. After setting the properties, add the `AssistItem` instance to the `ViewModel.AssistItems` collection, which binds to the `SfAIAssistView.AssistItems` property.
 
->N The `IsRequested` property is automatically set to `True`, indicating it is a request from the user. If you want to manually add a request item through code, ensure you explicitly set the `IsRequested` property to `True`.
+N> The `IsRequested` property is automatically set to `True`, indicating it is a request from the user. If you want to manually add a request item through code, ensure you explicitly set the `IsRequested` property to `True`.
 
 {% tabs %}
 {% highlight c# tabtitle="ViewModel.cs" %}
@@ -34,7 +34,7 @@ public class ViewModel : INotifyPropertyChanged
 {
     . . .
 
-    public ObservableCollection<object> AssistItems
+    public ObservableCollection<IAssistItem> AssistItems
     {
         get
         {
@@ -52,7 +52,7 @@ public class ViewModel : INotifyPropertyChanged
 
     public ViewModel()
     {
-        this.assistItems = new ObservableCollection<object>();
+        this.assistItems = new ObservableCollection<IAssistItem>();
         this.AssistViewRequestCommand = new Command<object>(ExecuteRequestCommand);
     }
 
@@ -87,7 +87,10 @@ public class ViewModel : INotifyPropertyChanged
 {% endhighlight %}
 {% endtabs %}
 
+N> The `SfAIAssistView.AssistItems` property is of type `IList<IAssistItem>`. To ensure the `AssistItems` property functions correctly, it is recommended to use a collection property in the ViewModel with the same type, such as `ObservableCollection<IAssistItem>`.
+
 ## Bind the RequestCommand property
+
 The `SfAIAssistView` control allows you to handle user requests by binding them to the `RequestCommand` property. This command is triggered whenever the user sends a request in the assist view.
 
 {% tabs %}
@@ -96,7 +99,7 @@ The `SfAIAssistView` control allows you to handle user requests by binding them 
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-                xmlns:sfAIAssistView="clr-namespace:Syncfusion.Maui.AIAssistView;assembly=Syncfusion.Maui.AIAssistView"
+                xmlns:syncfusion="clr-namespace:Syncfusion.Maui.AIAssistView;assembly=Syncfusion.Maui.AIAssistView"
                 xmlns:local="clr-namespace:MauiAIAssistView.ViewModel"
                 x:Class="MauiAIAssistView.MainPage">
 
@@ -105,9 +108,9 @@ The `SfAIAssistView` control allows you to handle user requests by binding them 
 </ContentPage.BindingContext>
 
 <ContentPage.Content>
-    <sfAIAssistView:SfAIAssistView x:Name="sfAIAssistView"
-                                    AssistItems="{Binding AssistItems}" 
-                                    RequestCommand="{Binding AssistViewRequestCommand}"/>
+    <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+                               AssistItems="{Binding AssistItems}" 
+                               RequestCommand="{Binding AssistViewRequestCommand}"/>
 </ContentPage.Content>
 </ContentPage>
 
@@ -134,5 +137,6 @@ namespace MauiAIAssistView
         }       
     }
 }
+
 {% endhighlight %}
 {% endtabs %}
