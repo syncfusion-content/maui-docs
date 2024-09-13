@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Header customization in .NET MAUI AI Assist View control | Syncfusion
-description: Learn here all about Header support in Syncfusion .NET MAUI AI Assist View (SfAIAssistView) control and more.
+title: Header customization in .NET MAUI AI AssistView control | Syncfusion
+description: Learn here all about Header support in Syncfusion .NET MAUI AI AssistView (SfAIAssistView) control and more.
 platform: MAUI
 control: SfAIAssistView
 documentation: ug
 ---
 
-# Header customization in .NET MAUI AI Assist View (SfAIAssistView)
+# Header customization in .NET MAUI AI AssistView (SfAIAssistView)
 
 This section explains how to define and customize the header in the `SfAIAssistView`.
 
@@ -17,8 +17,8 @@ The `SfAIAssistView` control allows you to display a default header by configuri
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
-         <sfAIAssistView:SfAIAssistView x:Name="sfAIAssistView"
-                                        ShowHeader="True"/>  
+         <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+                                    ShowHeader="True"/>  
 
 {% highlight c# hl_lines="6" %} 
 
@@ -41,9 +41,9 @@ The `SfAIAssistView` control allows you to customize the header text using the `
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
-         <sfAIAssistView:SfAIAssistView x:Name="sfAIAssistView"
-                                        HeaderText="Ask AI"
-                                        ShowHeader="True"/>  
+         <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+                                    HeaderText="Ask AI"
+                                    ShowHeader="True"/>  
 
 {% endhighlight %} 
 
@@ -94,4 +94,4 @@ The `SfAIAssistView` control allows you to fully customize the header's appearan
 {% endhighlight %}
 {% endtabs %}
 
-![Header View customization in .NET MAUI AI Assist View](Images/maui-aiassistview-header-customization.png)
+![Header View customization in .NET MAUI AI AssistView](Images/maui-aiassistview-header-customization.png)
