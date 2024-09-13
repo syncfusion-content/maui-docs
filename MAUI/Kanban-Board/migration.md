@@ -14,7 +14,7 @@ The Kanban Board was created from the scratch using the upgraded APIs and perfor
 
 ## API migration
 
-To initialize the control, import the Chart namespace and Initialize [SfKanban]() as shown in the following code sample. 
+Syncfusion's .NET MAUI Kanban control is compatible with .NET 8.0. To initialize the control, import the Kanban namespace and Initialize [SfKanban]() as shown in the following code sample. 
 
 <table>
 <tr>
@@ -111,39 +111,10 @@ The following table illustrates the API migration for the kanban.
 </tr>
 </table>
 
-### KanbanPlaceholderStyle
+## Upcoming features in .NET MAUI
 
-<table>
-<tr>
-<tr>
-<th>Xamarin</th>
-<th>.NET MAUI</th></tr>
-</tr>
-<tr>
-<td>BackgroundColor</td>
-<td>Fill</td>
-</tr>
-<tr>
-<td>BorderColor</td>
-<td>Stroke</td>
-</tr>
-<tr>
-<td>BorderThickness</td>
-<td>StrokeWidth</td>
-</tr>
-<tr>
-<td>SelectedBackgroundColor</td>
-<td>SelectedFill</td>
-</tr>
-<tr>
-<td>SelectedBorderColor</td>
-<td>SelectedStroke</td>
-</tr>
-<tr>
-<td>SelectedBorderThickness</td>
-<td>SelectedStrokeWidth</td>
-</tr>
-</table>
+* Support for keeping cards in the source column location during dragging until dropped.
+* Multiple category placeholder support. 
 
 ## Support and feedback
 

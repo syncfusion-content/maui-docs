@@ -18,21 +18,21 @@ The following code example describes the workflow functionality.
 
 {% highlight C# %}
 
-    var workflows = new List<KanbanWorkflow>();
+var workflows = new List<KanbanWorkflow>();
 
-    var openWorkflow = new KanbanWorkflow();  
-    openWorkflow.Category = "Open"; 
-    //Define the list of categories which accepts the cards from Open state.
-    openWorkflow.AllowedTransitions = new List<object> { "In Progress" }; 
-    workflows.Add(openWorkflow); 
+var openWorkflow = new KanbanWorkflow();  
+openWorkflow.Category = "Open"; 
+//Define the list of categories which accepts the cards from Open state.
+openWorkflow.AllowedTransitions = new List<object> { "In Progress" }; 
+workflows.Add(openWorkflow); 
 
-    var progressWorkflow = new KanbanWorkflow(); 
-    progressWorkflow.Category = "In Progress"; 
-    //Define the list of categories which accepts the cards from “In Progress” state.
-    progressWorkflow.AllowedTransitions = new List<object> { "Open", "Code Review", "Closed-No Code Changes" }; 
-    workflows.Add(progressWorkflow); 
+var progressWorkflow = new KanbanWorkflow(); 
+progressWorkflow.Category = "In Progress"; 
+//Define the list of categories which accepts the cards from “In Progress” state.
+progressWorkflow.AllowedTransitions = new List<object> { "Open", "Code Review", "Closed-No Code Changes" }; 
+workflows.Add(progressWorkflow); 
 
-    kanban.Workflows = workflows;
+kanban.Workflows = workflows;
 
 {% endhighlight %}
 
