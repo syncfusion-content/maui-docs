@@ -36,6 +36,8 @@ new KanbanModel()
 
 {% endhighlight %}
 
+![Kanban board](Images/indicatorfill.png)
+
 ## Template
 
 You can replace the entire card template with your own design using [`CardTemplate`]() property of [`SfKanban`](). The following code snippet and screenshot illustrates this.
@@ -125,6 +127,8 @@ kanban.CardTemplate = cardTemplate;
 {% endhighlight %}
 
 {% endtabs %}
+
+![Kanban board](Images/cardtemplate.png)
 
 ## Data template selector
 
@@ -216,3 +220,5 @@ kanban.CardTemplate = new KanbanTemplateSelector();
 {% endhighlight %}
 
 {% endtabs %}
+
+![Kanban board](Images/cardtemplateselector.png)

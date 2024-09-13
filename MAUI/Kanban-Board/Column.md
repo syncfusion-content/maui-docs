@@ -134,6 +134,8 @@ Header shows the category [`Title`](), items count, min and max informations of 
 
 The following output is displayed as a result of the above code example.
 
+![Kanban board](Images/header.png)
+
 ## Expand/Collapse Column
 
 Columns can be expanded/collapsed by tapping the toggle button which is placed at top right corner of the Kanban header. [`IsExpanded`]() property of [`KanbanColumn`]() is used to programmatically expand/collapse the Kanban column. The following code example describes the above behavior.   
@@ -164,6 +166,8 @@ kanban.Columns.Add(column2);
 {% endtabs %}
 
 The following output is displayed as a result of the above code example.
+
+![Kanban board](Images/expendcollabse.png)
 
 ## Enable/Disable Drag & Drop 
 
@@ -282,3 +286,5 @@ todoColumn.MaximumLimit = 1;
 {% endhighlight %}
 
 {% endtabs %}
+
+![Kanban board](Images/errorbarsettings.png)

@@ -262,3 +262,5 @@ doneColumn.Categories = new List<object>() { "Done" };
 {% endhighlight %}
 
 This is how the final output will look like.
+
+![Kanban board](Images/gettingStarted.png)
