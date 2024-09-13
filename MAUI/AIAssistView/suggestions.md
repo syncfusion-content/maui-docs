@@ -9,7 +9,7 @@ documentation: ug
 
 # Suggestions in .NET MAUI AIAssistView (SfAIAssistView)
 
-The `SfAIAssistView` control allows to display a list of options, as suggestions. These suggestions can be presented for all the supported item types in `SfAIAssistView`. When a user selects a suggestion item, the `SuggestionItemSelected` event and `SuggestionItemSelectedCommand` will be triggered. Both the event and the command will provide the `SuggestionItemSelectedEventArgs` as arguments, providing the following information about the selected suggestion item.
+The `SfAIAssistView` control allows to display a list of options, as suggestions. These suggestions are supported for all the response item types in `SfAIAssistView`. When a user selects a suggestion item, the `SuggestionItemSelected` event and `SuggestionItemSelectedCommand` will be triggered. Both the event and the command will provide the `SuggestionItemSelectedEventArgs` as arguments, providing the following information about the selected suggestion item.
 
 * `SelectedItem` : Represents the selected suggestion item.
 * `RequestItem` : Represents the request item associated with the selected suggestion.
