@@ -365,7 +365,7 @@ In AI AssistView, to display a list of interactive cards, each card can contain 
 The `SfAIAssistView` control includes a built-in event called `CardTapped` and a command named `CardTappedCommand`. These are triggered when a card is tapped. The tapped card item is accessible through the `CardTappedEventArgs`. The `CardTappedEventArgs` has the following members:
 
  * `Card` : Represents the selected card from the card collection.
- * `Action` : Holds the information about the selected action when a user taps a button on a card
+ * `Action` : Holds the information about the selected action when a user taps a button on a card.
  * `CardItem`: Refers to the current assist view card item.
  * `Handled`: Indicates whether the event is handled or not.
 
