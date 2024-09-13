@@ -30,7 +30,7 @@ public partial class App : Application
             InitializeComponent();
             CultureInfo.CurrentUICulture = new CultureInfo("fr-FR");
             // ResXPath => Full path of the resx file; For example : 
-            //SfKanbanResources.ResourceManager = new ResourceManager
+            // SfKanbanResources.ResourceManager = new ResourceManager
             // ("KanbanSample.Resources.SfKanban", Application.Current.GetType().Assembly);
 
             var ResXPath = "KanbanSample.Resources.SfKanban";
