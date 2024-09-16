@@ -70,61 +70,37 @@ namespace GettingStarted
 
 ## Step 4: Add a Basic DataGrid
 
-### XAML Implementation
-
-Open `MainPage.xaml` and add the `SfDataGrid` control within the `<ContentPage.Content>` tag:
+1. Import the control namespace `Syncfusion.Maui.DataGrid` in XAML or C# code.
+2. Initialize the [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html) control.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:dataGrid="clr-namespace:Syncfusion.Maui.DataGrid;assembly=Syncfusion.Maui.DataGrid"
-             x:Class="YourAppNamespace.MainPage">
-    <ContentPage.Content>
-        <dataGrid:SfDataGrid x:Name="dataGrid" AutoGenerateColumns="True">
-            <!-- Additional configuration goes here -->
-        </dataGrid:SfDataGrid>
-    </ContentPage.Content>
+<ContentPage   
+    . . .
+    xmlns:syncfusion="clr-namespace:Syncfusion.Maui.DataGrid;assembly=Syncfusion.Maui.DataGrid">
+
+    <syncfusion:SfDataGrid />
 </ContentPage>
 
 {% endhighlight %}
-{% endtabs %}
-
-N> Ensure the `xmlns:dataGrid` namespace reference is correctly defined.
-
-### C# Implementation
-
-You can also configure the DataGrid programmatically in `MainPage.xaml.cs`:
-
-{% tabs %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
 using Syncfusion.Maui.DataGrid;
+. . .
 
-namespace YourAppNamespace
+public partial class MainPage : ContentPage
 {
-    public partial class MainPage : ContentPage
+    public MainPage()
     {
-        public MainPage()
-        {
-            InitializeComponent();
-
-            var dataGrid = new SfDataGrid
-            {
-                AutoGenerateColumns = true
-            };
-
-            // Set the data grid as the content of the page
-            this.Content = dataGrid;
-        }
+        InitializeComponent();
+        SfDataGrid dataGrid = new SfDataGrid();
+        this.Content = dataGrid;
     }
 }
 
 {% endhighlight %}
 {% endtabs %}
-
-N> Maintain consistent instance names across both XAML and C#. For example, use `dataGrid` consistently in both XAML and C#.
 
 ## Step 5: Define the View Model
 
@@ -287,10 +263,8 @@ By default, the SfDataGrid automatically creates columns for all the properties 
  
 The columns can be manually defined by setting the `SfDataGrid.AutoGenerateColumnsMode` property to 'None' and by adding the [DataGridColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html) objects to the [SfDataGrid.Columns](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.ColumnCollection.html) collection. This can be done from both XAML and code. The following code example illustrates this:
 
-### XAML Implementation
-
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml %}
 <syncfusion:SfDataGrid x:Name="dataGrid"
             ColumnWidthMode="Fill"
             AutoGenerateColumnsMode="None"
@@ -307,12 +281,7 @@ The columns can be manually defined by setting the `SfDataGrid.AutoGenerateColum
     </syncfusion:SfDataGrid.Columns>
 </syncfusion:SfDataGrid>
 {% endhighlight %}
-{% endtabs %}
-
-### C# Implementation
-
-{% tabs %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# %}
 dataGrid.AutoGenerateColumnsMode = AutoGenerateColumnsMode.None;
 
 DataGridTextColumn orderIdColumn = new DataGridTextColumn ();
@@ -377,10 +346,8 @@ The SfDataGrid can be loaded with specific heights and widths inside different l
 
 The following code example illustrates how this can be done:
 
-### XAML Implementation
-
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml %}
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
               xmlns:local="clr-namespace:GettingStarted"
@@ -400,12 +367,8 @@ The following code example illustrates how this can be done:
     
 </ContentPage>
 {% endhighlight %}
-{% endtabs %}
 
-### C# Implementation
-
-{% tabs %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# %}
 public MainPage()
 {
     InitializeComponent();
