@@ -16,8 +16,8 @@ This section guides you through setting up and configuring a [AvatarView](https:
 ## Prerequisites
 
 Before proceeding, ensure the following are in place:
-1.	Install [.NET 7 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/7.0) or later.
-2.	Set up a .NET MAUI environment with Visual Studio 2022 (v17.3 or later) or VS Code. For VS Code users, ensure that the .NET MAUI workload is installed and configured as described [here](https://github.com/dotnet/maui/wiki/VS-Code-setup).
+1. Install [.NET 7 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/7.0) or later.
+1. Set up a .NET MAUI environment with Visual Studio 2022 (v17.3 or later) or VS Code. For VS Code users, ensure that the .NET MAUI workload is installed and configured as described [here](https://github.com/dotnet/maui/wiki/VS-Code-setup).
 
 To get start quickly with our .NET MAUI Avatar View, you can check the below video.
 
@@ -25,15 +25,15 @@ To get start quickly with our .NET MAUI Avatar View, you can check the below vid
 
 ## Step 1: Create a New MAUI Project
 
-1.	Open Visual Studio or VS Code.
-2.	Go to **File > New > Project** and choose the **.NET MAUI App** template.
-3.	Name the project and choose a location, then click **Create.**
+1. Open Visual Studio or VS Code.
+1. Go to **File > New > Project** and choose the **.NET MAUI App** template.
+1. Name the project and choose a location, then click **Create.**
 
 ## Step 2: Install the Syncfusion MAUI Core NuGet Package
 
-1.	In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
-2.	Search for [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) and install the latest version.
-3.	Ensure the necessary dependencies are installed correctly, and the project is restored.
+1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
+1. Search for [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) and install the latest version.
+1. Ensure the necessary dependencies are installed correctly, and the project is restored.
 
 ## Register the handler
 
@@ -75,7 +75,7 @@ namespace AvatarViewSample
 ## Step - 4  Add a Basic Avatar View
 
 1. To initialize the control, import the Core namespace into your code.
-2. Initialize [SfAvatarView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html?tabs=tabid-1).
+1. Initialize [SfAvatarView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html?tabs=tabid-1).
 
 {% tabs %}
 
