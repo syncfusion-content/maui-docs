@@ -7,19 +7,35 @@ control: SfAvatarView
 documentation: ug
 ---
 
-# Getting Started With .NET MAUI Avatar View (SfAvatarView)
+# Getting Started with .NET MAUI Avatar View
 
-## Creating an application using the .NET MAUI Avatar View
+This section guides you through setting up and configuring a [AvatarView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html?tabs=tabid-1) in your .NET MAUI application. Follow the steps below to add a basic Avatar View to your project.
 
-This section explains the steps required to work with the [SfAvatarView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html?tabs=tabid-1) control for .NET MAUI.
+## Prerequisites
 
-## Adding .NET MAUI Avatar View reference
+Before proceeding, ensure the following are set up:
+1. Install [.NET 7 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/7.0) or later is installed.
+1. Set up a .NET MAUI environment with Visual Studio 2022 (v17.3 or later) or VS Code. For VS Code users, ensure that the .NET MAUI workload is installed and configured as described [here.](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-8.0&tabs=visual-studio-code)
 
-The Syncfusion .NET MAUI controls are available in [Nuget.org](https://www.nuget.org/). To add [.NET MAUI Avatar View](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html?tabs=tabid-1) to your project, open the NuGet package manager in Visual Studio, search for [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) and then install it.
+To get start quickly with our .NET MAUI Avatar View, you can check the below video.
 
-## Handler registration 
+{% youtube "https://www.youtube.com/watch?v=XrTvIgeeUm0" %}
 
- In the MauiProgram.cs file, register the handler for Syncfusion core.
+## Step 1: Create a New MAUI Project
+
+1. Launch Visual Studio or VS Code.
+1. Navigate to **File > New > Project,** then select the **.NET MAUI App** template.
+1. Name the project and choose a location, then click Create.
+
+## Step 2: Install the Syncfusion MAUI Core NuGet Package
+
+1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
+1. Search for [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) and install the latest version.
+1. Ensure the necessary dependencies are installed correctly, and the project is restored.
+
+## Register the handler
+
+Syncfusion.Maui.Core NuGet is a dependent package for all Syncfusion controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion core.
 
 {% highlight c# hl_lines="6 17" %}   
 using Microsoft.Maui;
@@ -54,29 +70,47 @@ namespace AvatarViewSample
 {% endhighlight %}
 
 
-## Adding a namespace
+## Step - 4  Add a Basic Avatar View
 
-Add the following namespace to add [.NET MAUI Avatar View](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html?tabs=tabid-1).
+1. To initialize the control, import the Core namespace into your code.
+1. Initialize [SfAvatarView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html?tabs=tabid-1).
 
 {% tabs %}
 
 {% highlight xaml %}
 
-    xmlns:sfavatar="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
-	
+<ContentPage
+    . . .    
+    xmlns:sfavatar="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core">
+    <Grid>
+        <sfavatar:SfAvatarView />
+    </Grid>
+</ContentPage>
+
 {% endhighlight %}
 
 {% highlight c# %}
 
     using Syncfusion.Maui.Core;
+    namespace AvatarViewGettingStarted
+    {
+        public partial class MainPage : ContentPage
+        {
+            public MainPage()
+            {
+                InitializeComponent();           
+                SfAvatarView avatarView = new SfAvatarView();
+            }
+        }   
+    }
 
 {% endhighlight %}
 
 {% endtabs %}
 
-### Adding the .NET MAUI Avatar View control
+## Step -5 Adding a image in .NET MAUI Avatar View
 
-You can add a custom image for displaying in [.NET MAUI Avatar View](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html?tabs=tabid-1) using the [ImageSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html#Syncfusion_Maui_Core_SfAvatarView_ImageSource) property.
+You can add a custom image for displaying in [.NET MAUI Avatar View](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html?tabs=tabid-1) using the [ImageSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html#Syncfusion_Maui_Core_SfAvatarView_ImageSource) property. And set the [ContentType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html#Syncfusion_Maui_Core_SfAvatarView_ContentType) to `Custom.` To ensure the avatar image appears correctly, place the image in the `Resources/Images` directory.
 
 {% tabs %}
 
@@ -114,18 +148,17 @@ namespace AvatarViewGettingStarted
             Grid mainGrid = new Grid();
 
             // Create an SfAvatarView control.
-            SfAvatarView avatarview = new SfAvatarView();
-            avatarview.VerticalOptions = LayoutOptions.Center;
-            avatarview.HorizontalOptions = LayoutOptions.Center;
-            avatarview.BackgroundColor = Color.FromRgba("#ffb6c1");
-            avatarview.ContentType = ContentType.Custom;
-            avatarview.ImageSource = "alex.png";
-            avatarview.WidthRequest = 50;
-            avatarview.HeightRequest = 50;
-            avatarview.CornerRadius = 25;
-            avatarview.Stroke = Colors.Black;
-            avatarview.StrokeThickness = 1;
-            mainGrid.Children.Add(avatarview);
+            SfAvatarView avatarView = new SfAvatarView();
+            avatarView.VerticalOptions = LayoutOptions.Center;
+            avatarView.HorizontalOptions = LayoutOptions.Center;
+            avatarView.ContentType = ContentType.Custom;
+            avatarView.ImageSource = "alex.png";
+            avatarView.WidthRequest = 50;
+            avatarView.HeightRequest = 50;
+            avatarView.CornerRadius = 25;
+            avatarView.Stroke = Colors.Black;
+            avatarView.StrokeThickness = 1;
+            mainGrid.Children.Add(avatarView);
             this.Content = mainGrid;
         }
     }
