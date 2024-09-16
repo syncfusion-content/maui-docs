@@ -7,17 +7,32 @@ control: NavigationDrawer
 documentation: ug
 ---
 
-# Getting Started with .NET MAUI Navigation Drawer (SfNavigationDrawer)
+# Getting Started with .NET MAUI Navigation Drawer
 
-This section explains how to add the [.NET MAUI NavigationDrawer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html) control. This section covers only the basic features needed to get started with Syncfusion .NET MAUI NavigationDrawer.
+This section guides you through setting up and configuring a [NavigationDrawer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html) in your .NET MAUI application. Follow the steps below to add a basic Tab View to your project.
 
-## Adding a .NET MAUI SfNavigationDrawer reference
+## Prerequisites
 
-Syncfusion .NET MAUI controls are available in [Nuget.org](https://www.nuget.org/). To add [.NET MAUI NavigationDrawer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html) to your project, open the NuGet package manager in Visual Studio, search for [Syncfusion.Maui.NavigationDrawer](https://www.nuget.org/packages/Syncfusion.Maui.NavigationDrawer) and then install it.
+Before proceeding, ensure the following are set up:
 
-## Handler registration 
+1. Install [.NET 7 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/7.0) or later is installed.
+2. Set up a .NET MAUI environment with Visual Studio 2022 (v17.3 or later) or VS Code. For VS Code users, ensure that the .NET MAUI workload is installed and configured as described [here.](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-8.0&tabs=visual-studio-code).
 
- In the MauiProgram.cs file, register the handler for Syncfusion core.
+## Step 1: Create a New MAUI Project
+
+1. Launch Visual Studio or VS Code.
+2. Navigate to **File > New > Project,** then select the .NET MAUI App template.
+3. Name the project and choose a location, then click Create.
+
+## Step 2: Install the Syncfusion MAUI NavigationDrawer NuGet Package
+
+1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
+2. Search for [Syncfusion.Maui.NavigationDrawer](https://www.nuget.org/packages/Syncfusion.Maui.NavigationDrawer) and install the latest version.
+3. Ensure the necessary dependencies are installed correctly, and the project is restored.
+
+## Step 3: Register the handler
+
+Syncfusion.Maui.Core NuGet is a dependent package for all Syncfusion controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion core.
 
 {% highlight c# hl_lines="6 17" %}
 using Microsoft.Maui;
@@ -49,54 +64,46 @@ namespace NavigationDrawerSample
 
 {% endhighlight %} 
 
-## Create a Simple .NET MAUI NavigationDrawer
+## Step 4: Add a Basic NavigationDrawer
 
-The .NET MAUI NavigationDrawer control is configured entirely in C# code or by using XAML markup. The following steps explain how to create a [.NET MAUI NavigationDrawer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html) (SfNavigationDrawer) and configure its elements:
+1. To initialize the control, import the NavigationDrawer namespace into your code.
 
-### Adding the .NET MAUI NavigationDrawer control
-
-Step 1: Add the NuGet to the project as discussed in the above reference section. 
-
-Step 2: Add the namespace as shown in the following code sample:
+2. Initialize [SfNavigationDrawer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html)
 
 {% tabs %}
 
 {% highlight xaml %}
 
-    xmlns:navigationdrawer="clr-namespace:Syncfusion.Maui.NavigationDrawer;assembly=Syncfusion.Maui.NavigationDrawer"
+<ContentPage
+    . . .    
+    xmlns:navigationdrawer="clr-namespace:Syncfusion.Maui.NavigationDrawer;assembly=Syncfusion.Maui.NavigationDrawer">
+    <navigationdrawer:SfNavigationDrawer x:Name="navigationDrawer">
+    <navigationdrawer:SfNavigationDrawer.ContentView>
+        <Grid/>
+    </navigationdrawer:SfNavigationDrawer.ContentView>
+    </navigationdrawer:SfNavigationDrawer>
+</ContentPage>
+    
 	
 {% endhighlight %}
 
 {% highlight c# %}
 
     using Syncfusion.Maui.NavigationDrawer;
-
-{% endhighlight %}
-
-{% endtabs %}
-
-Step 3: Set the control to content in `ContentPage.`
-
-{% tabs %}
-
-{% highlight xaml %}
-
-
-<navigationdrawer:SfNavigationDrawer x:Name="navigationDrawer">
-    <navigationdrawer:SfNavigationDrawer.ContentView>
-        <Grid/>
-    </navigationdrawer:SfNavigationDrawer.ContentView>
-</navigationdrawer:SfNavigationDrawer>
-
-
-{% endhighlight %}
-
-{% highlight c# %}
-          
-SfNavigationDrawer navigationDrawer = new SfNavigationDrawer();
-Grid grid = new Grid();
-navigationDrawer.ContentView = grid;
-this.Content = navigationDrawer; 
+    namespace NavigationDrawerGettingStarted
+    {
+        public partial class MainPage : ContentPage
+        {
+            public MainPage()
+            {
+                InitializeComponent();           
+                SfNavigationDrawer navigationDrawer = new SfNavigationDrawer();
+                Grid grid = new Grid();
+                navigationDrawer.ContentView = grid;
+                this.Content = navigationDrawer; 
+            }
+        }   
+    }
 
 {% endhighlight %}
 
@@ -152,7 +159,7 @@ N> To change the side of the navigation pane, utilize the [Position](https://hel
 
 ## Add Hamburger Menu for Toggling Drawer
 
-Create an ImageButton and set the required image to the `Source` property. Subscribe Clicked event of the button and invoke the [ToggleDrawer()](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html#Syncfusion_Maui_NavigationDrawer_SfNavigationDrawer_ToggleDrawer) method to toggle the drawer. Properly align the layout of [ContentView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html#Syncfusion_Maui_NavigationDrawer_SfNavigationDrawer_ContentView) to position the hamburger icon at the top left, as demonstrated in the following code.
+Create an ImageButton and set the required image to the `Source` property. Add the image to the `Resources/Images` folder. Subscribe Clicked event of the button and invoke the [ToggleDrawer()](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html#Syncfusion_Maui_NavigationDrawer_SfNavigationDrawer_ToggleDrawer) method to toggle the drawer. Properly align the layout of [ContentView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html#Syncfusion_Maui_NavigationDrawer_SfNavigationDrawer_ContentView) to position the hamburger icon at the top left, as demonstrated in the following code.
 
 {% tabs %}	
 
