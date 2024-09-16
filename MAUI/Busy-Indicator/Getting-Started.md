@@ -74,7 +74,7 @@ The [.NET MAUI Busy Indicator](https://help.syncfusion.com/cr/maui/Syncfusion.Ma
 
 ### Adding the .NET MAUI Busy Indicator control
 
-Open the `MainPage.xaml` file, and define the `SfBusyIndicator` control with a standardized instance name as follows:
+Add the namespace as shown in the following code sample.
 
 {% tabs %}
 
@@ -93,6 +93,8 @@ Open the `MainPage.xaml` file, and define the `SfBusyIndicator` control with a s
 {% endtabs %}`
 
 {% tabs %}
+
+Open the `MainPage.xaml` file, and define the `SfBusyIndicator` control with a standardized instance name as follows:
 
 {% highlight xaml %}
 
