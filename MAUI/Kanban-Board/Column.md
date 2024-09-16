@@ -73,7 +73,7 @@ kanban.ColumnMappingPath = "ID";
 
 ### Category for a column
 
-You can assign a specific category to a column by setting the [Categories]() collection of the [`KanbanColumn`](). This will display cards with the specified category under the corresponding column. For example, to map the "In Progress" category to the "In Progress" column
+You can assign a specific category to a column by setting the [Categories]() property of the [`KanbanColumn`](). This will display cards with the specified category under the corresponding column. For example, to map the "In Progress" category to the "In Progress" column
 
 {% tabs %}
 
