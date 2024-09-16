@@ -10,48 +10,33 @@ keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .ne
 
 # Getting Started with .NET MAUI DataGrid (SfDataGrid)
 
-This section provides a quick overview for working with the SfDataGrid for .NET MAUI. Walk through the entire process of creating a real world of this control.
+This section provides a quick overview for working with the SfDataGrid for .NET MAUI.  Follow the steps below to add a basic DataGrid to your project.
+
+## Prerequisites
+
+Before proceeding, ensure the following are in place:
+1. Install [.NET 7 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/7.0) or later.
+2. Set up a .NET MAUI environment with Visual Studio 2022 (v17.3 or later) or VS Code. For VS Code users, ensure that the .NET MAUI workload is installed and configured as described [here](https://github.com/dotnet/maui/wiki/VS-Code-setup).
 
 To get start quickly with .NET MAUI DataGrid, you can check on this video:
 
 <style>#MAUIDataGridVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUIDataGridVideoTutorial' src='https://www.youtube.com/embed/xW0a7JlHbz4'></iframe>
 
-## Creating an application using the .NET MAUI DataGrid
- 1. Create a new .NET MAUI application in Visual Studio.
- 2. Syncfusion .NET MAUI components are available on [nuget.org](https://www.nuget.org/). To add SfDataGrid to your project, open the NuGet package manager in Visual Studio, search for Syncfusion.Maui.DataGrid and then install it.
- 3. Import the control namespace `Syncfusion.Maui.DataGrid` in XAML or C# code.
- 4. Initialize the [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html) control.
+### Step 1: Create a New MAUI Project
 
- {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+1.	Open Visual Studio or VS Code.
+2.	Go to `File` > `New` > `Project` and choose the `.NET MAUI App` template.
+3.	Name the project and choose a location, then click `Create`.
 
-<ContentPage   
-    . . .
-    xmlns:syncfusion="clr-namespace:Syncfusion.Maui.DataGrid;assembly=Syncfusion.Maui.DataGrid">
+### Step 2: Install the Syncfusion MAUI DataGrid NuGet Package
 
-    <syncfusion:SfDataGrid />
-</ContentPage>
+1.	In Solution Explorer, right-click the project and choose Manage NuGet Packages.
+2.	Search for `Syncfusion.Maui.DataGrid` and install the latest version.
+3.	Ensure the necessary dependencies are installed correctly, and the project is restored.
 
-{% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+### Step 3: Register the handler
 
-using Syncfusion.Maui.DataGrid;
-. . .
-
-public partial class MainPage : ContentPage
-{
-    public MainPage()
-    {
-        InitializeComponent();
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-## Register the handler
-
-To use this control inside an application, you must initialize the `SfDataGrid` handler.
+To use this control inside an application, you must initialize the [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html) handler.
 
 {% tabs %}
 {% highlight c# tabtitle="MauiProgram.cs" hl_lines="4 20" %}
@@ -83,6 +68,98 @@ namespace GettingStarted
 {% endhighlight %} 
 {% endtabs %}
 
+### Step 4: Add a Basic DataGrid
+
+#### XAML Implementation
+
+Open `MainPage.xaml` and add the `SfDataGrid` control within the `<ContentPage.Content>` tag:
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:dataGrid="clr-namespace:Syncfusion.Maui.DataGrid;assembly=Syncfusion.Maui.DataGrid"
+             x:Class="YourAppNamespace.MainPage">
+    <ContentPage.Content>
+        <dataGrid:SfDataGrid x:Name="dataGrid" AutoGenerateColumns="True">
+            <!-- Additional configuration goes here -->
+        </dataGrid:SfDataGrid>
+    </ContentPage.Content>
+</ContentPage>
+
+{% endhighlight %}
+{% endtabs %}
+
+N> Ensure the `xmlns:dataGrid` namespace reference is correctly defined.
+
+#### C# Implementation
+
+You can also configure the DataGrid programmatically in `MainPage.xaml.cs`:
+
+{% tabs %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+using Syncfusion.Maui.DataGrid;
+
+namespace YourAppNamespace
+{
+    public partial class MainPage : ContentPage
+    {
+        public MainPage()
+        {
+            InitializeComponent();
+
+            var dataGrid = new SfDataGrid
+            {
+                AutoGenerateColumns = true
+            };
+
+            // Set the data grid as the content of the page
+            this.Content = dataGrid;
+        }
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+N> Maintain consistent instance names across both XAML and C#. For example, use `dataGrid` consistently in both XAML and C#.
+
+## Creating an application using the .NET MAUI DataGrid
+ 1. Create a new .NET MAUI application in Visual Studio.
+ 2. Syncfusion .NET MAUI components are available on [nuget.org](https://www.nuget.org/). To add SfDataGrid to your project, open the NuGet package manager in Visual Studio, search for Syncfusion.Maui.DataGrid and then install it.
+ 3. Import the control namespace `Syncfusion.Maui.DataGrid` in XAML or C# code.
+ 4. Initialize the [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html) control.
+
+ {% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+
+<ContentPage   
+    . . .
+    xmlns:syncfusion="clr-namespace:Syncfusion.Maui.DataGrid;assembly=Syncfusion.Maui.DataGrid">
+
+    <syncfusion:SfDataGrid />
+</ContentPage>
+
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+using Syncfusion.Maui.DataGrid;
+. . .
+
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        SfDataGrid dataGrid = new SfDataGrid;
+        this.Content = dataGrid;
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Create DataModel for the SfDataGrid
 
@@ -238,8 +315,10 @@ By default, the SfDataGrid automatically creates columns for all the properties 
  
 The columns can be manually defined by setting the `SfDataGrid.AutoGenerateColumnsMode` property to 'None' and by adding the [DataGridColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html) objects to the [SfDataGrid.Columns](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.ColumnCollection.html) collection. This can be done from both XAML and code. The following code example illustrates this:
 
+### XAML Implementation
+
 {% tabs %}
-{% highlight xaml %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 <syncfusion:SfDataGrid x:Name="dataGrid"
             ColumnWidthMode="Fill"
             AutoGenerateColumnsMode="None"
@@ -256,7 +335,12 @@ The columns can be manually defined by setting the `SfDataGrid.AutoGenerateColum
     </syncfusion:SfDataGrid.Columns>
 </syncfusion:SfDataGrid>
 {% endhighlight %}
-{% highlight c# %}
+{% endtabs %}
+
+### C# Implementation
+
+{% tabs %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 dataGrid.AutoGenerateColumnsMode = AutoGenerateColumnsMode.None;
 
 DataGridTextColumn orderIdColumn = new DataGridTextColumn ();
@@ -288,7 +372,7 @@ In the SfDataGrid, sorting can be done on its data by setting the [SfDataGrid.So
                        SortingMode="Single" />
 {% endhighlight %}
 {% highlight c# %}
-dataGrid.SortingMode=DataGridSortingMode.Single; 
+dataGrid.SortingMode = DataGridSortingMode.Single;
 {% endhighlight %}
 {% endtabs %}
 
@@ -321,8 +405,10 @@ The SfDataGrid can be loaded with specific heights and widths inside different l
 
 The following code example illustrates how this can be done:
 
+### XAML Implementation
+
 {% tabs %}
-{% highlight xaml %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
               xmlns:local="clr-namespace:GettingStarted"
@@ -342,8 +428,12 @@ The following code example illustrates how this can be done:
     
 </ContentPage>
 {% endhighlight %}
+{% endtabs %}
 
-{% highlight c# %}
+### C# Implementation
+
+{% tabs %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 public MainPage()
 {
     InitializeComponent();
