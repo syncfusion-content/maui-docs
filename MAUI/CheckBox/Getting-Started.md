@@ -9,21 +9,32 @@ documentation: ug
 
 # Getting Started with .NET MAUI CheckBox
 
-This section explains the steps required to work with the [.NET MAUI CheckBox](https://www.syncfusion.com/maui-controls/maui-checkbox) control.
+This section guides you through setting up and configuring a [CheckBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html) in your .NET MAUI application. Follow the steps below to add a basic CheckBox to your project.
 
-## Creating an application with .NET MAUI CheckBox
+## Prerequisites
 
-This section explains the steps required to work with the [CheckBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html) control for .NET MAUI.
+Before proceeding, ensure the following are in place:
+
+    1. Install .NET 7 SDK or later.
+    2. Set up a .NET MAUI environment with Visual Studio 2022 (v17.3 or later) or VS Code. For VS Code users, ensure that the .NET MAUI workload  is installed and configured as described here.
 
 To get start quickly with our .NET MAUI CheckBox, you can check the below video.
 
 {% youtube "https://www.youtube.com/watch?v=dgekGX8eYMo" %}
 
-## Adding a .NET MAUI CheckBox reference
+## Step 1: Create a New MAUI Project
 
-Syncfusion .NET MAUI controls are available on [Nuget.org](https://www.nuget.org/). To add the [.NET MAUI CheckBox](https://www.syncfusion.com/maui-controls/maui-checkbox) to your project, open the NuGet package manager in Visual Studio, search for [Syncfusion.Maui.Buttons](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.html), and install it.
+    1. Open Visual Studio or VS Code.
+    2. Go to File > New > Project and choose the .NET MAUI App template.
+    3. Name the project and choose a location, then click Create.
 
-## Handler registration 
+## Step 2: Install the Syncfusion MAUI Buttons NuGet Package
+
+    1. In Solution Explorer, right-click the project and choose Manage NuGet Packages.
+    2. Search for Syncfusion.Maui.Buttons and install the latest version.
+    3. Ensure the necessary dependencies are installed correctly, and the project is restored.
+
+## step 3: Register the Handler
 
 In the MauiProgram.cs file, register the handler for the Syncfusion core.
 
@@ -58,7 +69,8 @@ namespace ButtonSample
 
 {% endhighlight %}  
 
-## Create a Simple .NET MAUI SfCheckBox
+
+## Step 4 - Add a Basic SfCheckBox
 
 Step 1: Add the NuGet to the project as discussed in the above reference section. 
 
