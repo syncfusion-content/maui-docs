@@ -38,7 +38,7 @@ Before proceeding, ensure the following are in place:
 ## Step 2: Install the Syncfusion MAUI Rotator NuGet Package
 
 1.In **Solution Explorer**, right-click the project and choose **Manage NuGet Packages**.
-2.Search for [Syncfusion.Maui.Inputs](https://www.nuget.org/packages/Syncfusion.Maui.Inputs) and install the latest version.
+2.Search for [Syncfusion.Maui.Sliders](https://www.nuget.org/packages/Syncfusion.Maui.Sliders) and install the latest version.
 3.Ensure the necessary dependencies are installed correctly, and the project is restored.
 
 ## Step 3: Register the Handler
