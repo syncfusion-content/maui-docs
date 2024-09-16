@@ -8,24 +8,37 @@ documentation: ug
 ---
 
 # Getting Started with .NET MAUI Button
+This section guides you through setting up and configuring a [`Button`](https://www.syncfusion.com/maui-controls/maui-button) in your .NET MAUI application. Follow the steps below to add a basic Button to your project.
 
-This section explains the steps required to work with the [`.NET MAUI Button`](https://www.syncfusion.com/maui-controls/maui-button) control.
+## Prerequisites
 
-## Creating an application with .NET MAUI Button
+Before proceeding, ensure the following are in place:
 
-This section explains the steps required to work with the [`SfButton`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfButton.html) control for .NET MAUI.
+Install [`.NET 7 SDK`](https://dotnet.microsoft.com/en-us/download/dotnet/7.0) or later.
+
+Set up a .NET MAUI environment with Visual Studio 2022 (v17.3 or later) or VS Code. For VS Code users, ensure that the .NET MAUI workload is installed and configured as described [`here`](https://github.com/dotnet/maui/wiki/VS-Code-setup).
 
 To get start quickly with our .NET MAUI Button, you can check the below video.
 
 {% youtube "https://www.youtube.com/watch?v=KTGkYShi1YE" %}
 
-## Adding a .NET MAUI Button reference
+## Step 1: Create a New MAUI Project
 
-The Syncfusion .NET MAUI controls are available in [Nuget.org](https://www.nuget.org/). To add [`.NET MAUI Button`](https://www.syncfusion.com/maui-controls/maui-button) to your project, open the NuGet package manager in Visual Studio, search for [`Syncfusion.Maui.Buttons`](https://www.nuget.org/packages/Syncfusion.Maui.Buttons), and install it.
+1. Open Visual Studio or VS Code.
+2. Go to **File > New > Project** and choose the **.NET MAUI App** template.
+3. Name the project and choose a location, then click **Create**.
 
-## Handler registration 
+## Step 2: Install the Syncfusion MAUI Buttons NuGet Package
 
-In the MauiProgram.cs file, register the handler for the Syncfusion core.
+1. In **Solution Explorer**, right-click the project and choose Manage NuGet Packages.
+2. Search for [`Syncfusion.Maui.Buttons`](https://www.nuget.org/packages/Syncfusion.Maui.Buttons) and install the latest version.
+3. Ensure the necessary dependencies are installed correctly, and the project is restored.
+
+
+
+## Step 3: Register the Handler 
+
+Syncfusion.Maui.Core Nuget is a dependent package for all Syncfusion controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion core.
 
 {% highlight c# hl_lines="6 17" %}
 using Microsoft.Maui;
