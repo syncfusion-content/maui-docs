@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with .NET MAUI Autocomplete
 
-This section guides you through setting up and configuring a [Autocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) in your .NET MAUI application. Follow the steps below to add a basic [Autocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) to your project.
+This section guides you through setting up and configuring a [Autocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) in your .NET MAUI application. Follow the steps below to add a basic Autocomplete to your project.
 
 ## Prerequisites
 
@@ -31,12 +31,12 @@ To get start quickly with our .NET MAUI Autocomplete, you can check the below vi
 ## Step 2: Install the Syncfusion MAUI Inputs NuGet Package
 
 1. In **Solution Explorer**, right-click the project and choose **Manage NuGet Packages**.
-2. Search for [`Syncfusion.Maui.Inputs`](https://www.nuget.org/packages/Syncfusion.Maui.Inputs) and install the latest version.
+2. Search for [Syncfusion.Maui.Inputs](https://www.nuget.org/packages/Syncfusion.Maui.Inputs) and install the latest version.
 Ensure the necessary dependencies are installed correctly, and the project is restored.
 
-## Step 3: Handler registration 
+## Step 3: Register the handler
 
- In the MauiProgram.cs file, register the handler for Syncfusion core.
+ Syncfusion.Maui.Core Nuget is a dependent package for all Syncfusion controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion core.
 
 {% highlight c# hl_lines="6 17" %}
 using Microsoft.Maui;
@@ -92,7 +92,7 @@ Step 1: Add the namespace as shown in the following code sample:
 
 {% endtabs %}
 
-Step 2: Set the control as the content in a `ContentPage.`
+Step 2: Set the control as the content in a ContentPage.
 
 {% tabs %}
 
