@@ -9,17 +9,29 @@ documentation: ug
 
 # Getting Started with .NET MAUI RadialMenu Control (SfRadialMenu)
 
-This section provides a quick overview of how to get started with the [.NET MAUI RadialMenu control (SfRadialMenu)](https://www.syncfusion.com/maui-controls/maui-radial-menu) for .NET MAUI and a walk-through to configure the .NET MAUI RadialMenu control in a real-time scenario.
+This section guides you through setting up and configuring a [.NET MAUI RadialMenu control (SfRadialMenu)](https://www.syncfusion.com/maui-controls/maui-radial-menu) in your .NET MAUI application. Follow the steps below to add a basic [.NET MAUI RadialMenu control (SfRadialMenu)](https://www.syncfusion.com/maui-controls/maui-radial-menu) to your project.
 
-## Creating an Application using the .NET MAUI RadialMenu Control
+To get start quickly with our .NET MAUI Radio Button, you can check the below video.
 
-1. Create a new .NET MAUI application in Visual Studio.
+{% youtube "https://www.youtube.com/watch?v=VxufXFzSh0M" %}
 
-2. Syncfusion .NET MAUI components are available in [nuget.org](https://www.nuget.org/). To add the [.NET MAUI RadialMenu]() to your project, open the NuGet package manager in Visual Studio, search for `Syncfusion.Maui.RadialMenu`, and then install it.
+## Prerequisites
+Before proceeding, ensure the following are in place:
+1. Install .NET 7 SDK or later.
 
-3. To initialize the control, import the control namespace `Syncfusion.Maui.RadialMenu` in XAML or C# code.
+2. Set up a .NET MAUI environment with Visual Studio 2022 (v17.3 or later) or VS Code. For VS Code users, ensure that the .NET MAUI workload is installed and configured
 
-4. Initialize [SfRadialMenu](https://www.syncfusion.com/maui-controls/maui-radial-menu).
+## Create a New MAUI Project
+
+1. Open Visual Studio or VS Code.
+2. Go to File > New > Project and choose the .NET MAUI App template.
+3. Name the project and choose a location, then click Create.
+
+## Install the Syncfusion MAUI RadialMenu NuGet Package
+
+1. In Solution Explorer, right-click the project and choose Manage NuGet Packages.
+2. Search for [Syncfusion.Maui.RadialMenu](https://www.nuget.org/packages/Syncfusion.Maui.RadialMenu) and install the latest version.
+Ensure the necessary dependencies are installed correctly, and the project is restored.
 
 ## Register the handler
 
