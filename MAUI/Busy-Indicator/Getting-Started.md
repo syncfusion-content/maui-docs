@@ -10,11 +10,7 @@ keywords : .net maui busy indicator, maui busy indicator, .net maui activity ind
 
 # Getting Started with .NET MAUI Busy Indicator
 
-This section guides you through setting up and configuring a
-[.NET MAUI Busy Indicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html?tabs=tabid-1)
-in your .NET MAUI application. Follow the steps below to add a basic
-[.NET MAUI Busy Indicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html?tabs=tabid-1)
-to your project.
+This section guides you through setting up and configuring a [Busy Indicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html?tabs=tabid-1) in your .NET MAUI application. Follow the steps below to add a basic Busy Indicator to your project.
 
 To get start quickly with our .NET MAUI BusyIndicator, you can check the below video.
 
@@ -28,9 +24,18 @@ Before proceeding, ensure the following are set up:
 
 ## Step 1: Create a New MAUI Project
 
-1. Launch Visual Studio or VS Code.
-2. Navigate to **File > New > Project,** then select the .NET MAUI App template.
-3. Name the project and choose a location, then click Create.
+### Visual Studio
+
+1. Go to **File > New > Project** and choose the **.NET MAUI App** template.
+2. Name the project and choose a location, then click **Next**.
+3. Select the .NET framework version and click **Create**.
+
+### Visual Studio Code
+
+1. Open the command palette by pressing `Ctrl+Shift+P` and type **.NET:New Project** and enter.
+2. Choose the **.NET MAUI App** template.
+3. Select the project location, type the project name and press enter.
+4. Then choose **Create project.**
 
 ## Step 2: Install the Syncfusion MAUI Core NuGet Package
 
@@ -38,9 +43,9 @@ Before proceeding, ensure the following are set up:
 2.  Search for [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) and install the latest version.
 3.  Ensure the necessary dependencies are installed correctly, and the project is restored.
 
-## Step 3: Handler registration 
+## Step 3: Register the handler
 
-In the MauiProgram.cs file, register the handler for Syncfusion core.
+[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion core.
 
 {% highlight c# hl_lines="6 17" %}
 using Microsoft.Maui;
@@ -78,8 +83,6 @@ namespace BusyIndicatorSample
 
 2. Initialize [SfBusyIndicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html?tabs=tabid-1)
 
-Add the namespace as shown in the following code sample.
-
 {% tabs %}
 
 {% highlight xaml %}
@@ -99,7 +102,7 @@ Add the namespace as shown in the following code sample.
 
 using Syncfusion.Maui.Core;
 
-namespace BusyIndicatorMauiSample   
+namespace BusyIndicatorSample   
 {  
 	public partial class MainPage : ContentPage                  
 	{ 
@@ -118,7 +121,7 @@ namespace BusyIndicatorMauiSample
 
 {% endtabs %}
 
-## Step 5: Customizing the Busy Indicator
+## Step 5: Setting Animation Type in .NET MAUI Busy Indicator
 
 [.NET MAUI Busy Indicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html?tabs=tabid-1) provides some predefined animation types like Cupertino, LinearMaterial, and CircularMaterial. Users can select any one of the animation types using the [AnimationType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html#Syncfusion_Maui_Core_SfBusyIndicator_AnimationType) property.
 
