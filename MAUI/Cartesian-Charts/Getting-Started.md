@@ -38,7 +38,7 @@ Before starting, ensure the following are set up:
 ## Step 3: Add a Basic Cartesian Chart
 
 1. To initialize the control, import the Chart namespace into your code.
-2. Initialize [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html?tabs=tabid-1).
+2. Initialize [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html).
 
 {% tabs %} 
 
@@ -111,7 +111,6 @@ namespace ChartGettingStarted
         }
     }
 }
-
 
 {% endhighlight %} 
 
