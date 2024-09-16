@@ -7,7 +7,7 @@ control: SfSlider
 documentation: ug
 ---
 # Getting Started with .NET MAUI Slider
-This section guides you through setting up and configuring a [Slider](https://www.nuget.org/packages/Syncfusion.Maui.Sliders) in your .NET MAUI application. Follow the steps below to add a basic Chip to your project.
+This section guides you through setting up and configuring a [Slider](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfSlider.html) in your .NET MAUI application. Follow the steps below to add a basic Chip to your project.
 
 To get start quickly with MAUI SfSlider, you can check on this video:
 
