@@ -22,7 +22,7 @@ Before proceeding, ensure the following are in place:
 
 ## Step 1: Create a .NET MAUI project
 
- 1. Open Visual studio or VS Code.
+ 1. Open Visual Studio or VS Code.
  2. Go to File > New > Project and choose the .NET MAUI App template.
  3. Name the project and choose a location, then click Create.
  
