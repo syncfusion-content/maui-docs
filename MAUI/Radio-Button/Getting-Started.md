@@ -35,7 +35,7 @@ To get start quickly with our .NET MAUI Radio Button, you can check the below vi
     2. Search for Syncfusion.Maui.Buttons and install the latest version.
     3. Ensure the necessary dependencies are installed correctly, and the project is restored.
 
-## step 3: Handler registration 
+## step 3: Register the Handler 
 
 In the MauiProgram.cs file, register the handler for the Syncfusion core.
 
@@ -160,7 +160,10 @@ The two different visual states of the [.NET MAUI Radio Button](https://help.syn
 
 To change the state of the .NET MAUI Radio Button, you can utilize the [IsChecked](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioButton.html#Syncfusion_Maui_Buttons_SfRadioButton_IsChecked) property of [SfRadioButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioButton.html). When the Radio Button is checked, an inner circle is added to its visualization.
 
-The .NET MAUI Radio Buttons are used when there is a list of two or more options or groups that are mutually exclusive, and the user must select exactly one choice, such as "Select Gender" or "Choose the best option!".
+
+## Grouping RadioButtons with RadioGroup
+
+You can group multiple radio buttons together by using RadioGroup. Only one button within a group can be selected at a time.
 
 {% tabs %}
 {% highlight xaml %}

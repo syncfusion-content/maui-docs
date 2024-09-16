@@ -130,9 +130,9 @@ Step 3: Set the control to content in `ContentPage`.
 {% endhighlight %}
 {% endtabs %}
 
-## Setting caption
+## Set the CheckBox caption
 
-The check box caption can be defined using the [`Text`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_Text) property of [`SfCheckBox`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html). This caption typically describes the meaning of the check box and is displayed next to the check box.
+You can set the caption of the CheckBox using the [Text]((https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_Text)) property.This caption typically describes the meaning of the check box and is displayed next to the check box.
 
 {% tabs %}
 {% highlight xaml %}
@@ -232,6 +232,8 @@ The check box can be used as a single or as a group. A single check box mostly u
 {% endtabs %}
 
 ![.NET MAUI CheckBox](Images/Getting-Started/termsandconditions.png)
+
+## Using Multiple CheckBoxes
 
 Multiple checkboxes can be used as a group for multi-select scenarios in which a user selects one or more items from the choices that are not mutually exclusive.
 
