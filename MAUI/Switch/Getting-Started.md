@@ -29,7 +29,7 @@ Before proceeding, ensure the following are set up:
 1. Navigate to **File > New > Project,** then select the **.NET MAUI App** template.
 1. Name the project and choose a location, then click Create.
 
-## Step 2: Install the Syncfusion MAUI Core NuGet Package
+## Step 2: Install the Syncfusion MAUI Buttons NuGet Package
 
 1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
 1. Search for [Syncfusion.Maui.Buttons](https://www.nuget.org/packages/Syncfusion.Maui.Buttons/) and install the latest version.
@@ -80,7 +80,7 @@ namespace SwitchSample
 
 <ContentPage
     . . .    
-    xmlns:sfavatar="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons">
+    xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons">
     <syncfusion:SfSwitch x:Name="sfSwitch" />
 </ContentPage>
 
@@ -108,7 +108,7 @@ namespace SwitchSample
 
 ![SfSwitch](images/getting-started/SfSwitch.png)
 
-## Performing an action based on switch state
+## Performing an action based on state
 
 In the [.NET MAUI SfSwitch control](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSwitch.html), you can switch between "On" and "Off" states. When the state changes,the [StateChanging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SwitchStateChangingEventArgs.html) and [StateChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SwitchStateChangedEventArgs.html) events are triggered. These events enable you to perform specific actions depending on the current state of the switch. The [StateChanging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SwitchStateChangingEventArgs.html) event also allows you to cancel the transition to a new state if needed.
 

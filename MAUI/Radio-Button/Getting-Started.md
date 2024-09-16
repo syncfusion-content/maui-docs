@@ -30,7 +30,7 @@ Before proceeding, ensure the following are set up:
 1. Navigate to **File > New > Project,** then select the **.NET MAUI App** template.
 1. Name the project and choose a location, then click Create.
 
-## Step 2: Install the Syncfusion MAUI Core NuGet Package
+## Step 2: Install the Syncfusion MAUI Buttons NuGet Package
 
 1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
 1. Search for [Syncfusion.Maui.Buttons](https://www.nuget.org/packages/Syncfusion.Maui.Buttons/) and install the latest version.
@@ -73,8 +73,8 @@ namespace ButtonSample
 
 ## Step 4: Add a Basic RadioButton
 
- To initialize the control, import the Core namespace into your code.
-1. Initialize [SfAvatarView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html?tabs=tabid-1).
+1. To initialize the control, import the Buttons namespace into your code.
+1. Initialize [SfRadioButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioButton.html).
 
 {% tabs %}
 
@@ -82,7 +82,7 @@ namespace ButtonSample
 
 <ContentPage
     . . .    
-    xmlns:sfavatar="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons">
+    xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons">
         <syncfusion:SfRadioButton x:Name="radioButton"/>     
 </ContentPage>
 
@@ -107,7 +107,7 @@ namespace ButtonSample
 {% endhighlight %}
 {% endtabs %}
 
-## Setting caption
+## Step 5: Setting caption
 
 The .NET MAUI Radio Button caption can be defined using the [Text](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_Text) property. This caption typically describes the meaning of the radio button and is displayed next to the radio button.
  
@@ -136,9 +136,6 @@ The two different visual states of the [.NET MAUI Radio Button](https://help.syn
 * Unchecked
 
 To change the state of the .NET MAUI Radio Button, you can utilize the [IsChecked](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioButton.html#Syncfusion_Maui_Buttons_SfRadioButton_IsChecked) property of [SfRadioButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioButton.html). When the Radio Button is checked, an inner circle is added to its visualization.
-
-
-## Grouping RadioButtons with RadioGroup
 
 You can group multiple radio buttons together by using RadioGroup. Only one button within a group can be selected at a time.
 

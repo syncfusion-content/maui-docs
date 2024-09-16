@@ -29,7 +29,7 @@ Before proceeding, ensure the following are set up:
 1. Navigate to **File > New > Project,** then select the **.NET MAUI App** template.
 1. Name the project and choose a location, then click Create.
 
-## Step 2: Install the Syncfusion MAUI Core NuGet Package
+## Step 2: Install the Syncfusion MAUI RadialMenu NuGet Package
 
 1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
 1. Search for [Syncfusion.Maui.RadialMenu](https://www.nuget.org/packages/Syncfusion.Maui.RadialMenu/) and install the latest version.
@@ -95,7 +95,7 @@ namespace RadialMenuGettingStarted
             InitializeComponent();           
             StackLayout stackLayout = new StackLayout();
             SfRadialMenu radialMenu = new SfRadialMenu();
-            stackLayout.Children.Add(syncfusion);
+            stackLayout.Children.Add(radialMenu);
             this.Content = stackLayout;
         }
     }   

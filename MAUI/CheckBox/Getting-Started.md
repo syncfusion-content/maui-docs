@@ -28,13 +28,13 @@ Before proceeding, ensure the following are set up:
 1. Navigate to **File > New > Project,** then select the **.NET MAUI App** template.
 1. Name the project and choose a location, then click Create.
 
-## Step 2: Install the Syncfusion MAUI Core NuGet Package
+## Step 2: Install the Syncfusion MAUI Buttons NuGet Package
 
 1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
 1. Search for [Syncfusion.Maui.Buttons](https://www.nuget.org/packages/Syncfusion.Maui.Buttons/) and install the latest version.
 1. Ensure the necessary dependencies are installed correctly, and the project is restored.
 
-## Register the handler
+## Step 3: Register the handler
 
 Syncfusion.Maui.Core NuGet is a dependent package for all Syncfusion controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion core.
 
@@ -70,9 +70,9 @@ namespace ButtonSample
 {% endhighlight %}  
 
 
-## Step 4 - Add a Basic SfCheckBox
+## Step 4: Add a Basic SfCheckBox
 
-1. To initialize the control, import the Core namespace into your code.
+1. To initialize the control, import the Buttons namespace into your code.
 1. Initialize [SfCheckBox](hhttps://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html).
 
 {% tabs %}
@@ -81,7 +81,7 @@ namespace ButtonSample
 
 <ContentPage
     . . .    
-    xmlns:sfavatar="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons">
+    xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons">
    <syncfusion:SfCheckBox x:Name="checkBox"/>
 </ContentPage>
 
@@ -106,7 +106,7 @@ namespace ButtonSample
 {% endhighlight %}
 {% endtabs %}
 
-## Set the CheckBox caption
+## Step 5: Set the CheckBox caption
 
 You can set the caption of the CheckBox using the [Text]((https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_Text)) property.This caption typically describes the meaning of the check box and is displayed next to the check box.
 
@@ -209,7 +209,6 @@ The check box can be used as a single or as a group. A single check box mostly u
 
 ![.NET MAUI CheckBox](Images/Getting-Started/termsandconditions.png)
 
-## Using Multiple CheckBoxes
 
 Multiple checkboxes can be used as a group for multi-select scenarios in which a user selects one or more items from the choices that are not mutually exclusive.
 
