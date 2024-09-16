@@ -8,7 +8,11 @@ documentation: ug
 ---
 
 # Getting Started with .NET MAUI Chips
-This section guides you through setting up and configuring a [Chip](https://www.nuget.org/packages/Syncfusion.Maui.Core) in your .NET MAUI application. Follow the steps below to add a basic Chip to your project.
+This section guides you through setting up and configuring a [Chips](https://www.nuget.org/packages/Syncfusion.Maui.Core) in your .NET MAUI application. Follow the steps below to add a basic Chip to your project.
+
+To get start quickly with our .NET MAUI Chips, you can check the below video.
+
+{% youtube "https://www.youtube.com/watch?v=hr4GmmvS9EE" %}
 
 ## Prerequisites
 
@@ -20,9 +24,16 @@ Set up a .NET MAUI environment with Visual Studio 2022 (v17.3 or later) or VS Co
 
 ## Step 1: Create a New MAUI Project
 
-1. Open Visual Studio or VS Code.
-2. Go to **File > New > Project** and choose the **.NET MAUI App** template.
-3. Name the project and choose a location, then click **Create**.
+Visual Studio
+1. Go to **File > New > Project** and choose the **.NET MAUI App** template.
+2. Name the project and choose a location, then click **Next**.
+3. Select the .NET framework version and click **Create**.
+
+Visual Studio Code
+1. Open the command palette by pressing `Ctrl+Shift+P`` and type **.NET:New Project** and enter.
+2. Choose the **.NET MAUI App** template.
+3. Select the project location, type the project name and press enter.
+Then choose **Create project**
 
 ## Step 2: Install the Syncfusion MAUI Buttons NuGet Package
 
@@ -32,7 +43,7 @@ Set up a .NET MAUI environment with Visual Studio 2022 (v17.3 or later) or VS Co
 
 ## Step 3: Register the Handler 
 
-Syncfusion.Maui.Core Nuget is a dependent package for all Syncfusion controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion core.
+[Syncfusion.Maui.Core nuget](https://www.nuget.org/packages/Syncfusion.Maui.Core) is a dependent package for all Syncfusion controls of .NET MAUI. In the **MauiProgram.cs file**, register the handler for Syncfusion core.
 
 {% highlight c# hl_lines="6 17" %}
 using Microsoft.Maui;
