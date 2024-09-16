@@ -40,8 +40,6 @@ Before starting, ensure the following are set up:
 1. To initialize the control, import the Chart namespace into your code.
 2. Initialize [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html?tabs=tabid-1).
 
-{% tabs %} 
-
 {% highlight xaml %}
 
 <ContentPage
@@ -54,11 +52,7 @@ Before starting, ensure the following are set up:
  
 {% endhighlight %}
 
-{% endtabs %}
-
 You can also create the chart programmatically in the MainPage.xaml.cs file:
-
-{% tabs %} 
 
 {% highlight C# %}
 
@@ -76,8 +70,6 @@ namespace ChartGettingStarted
 }
 
 {% endhighlight %}
-
-{% endtabs %}
 
 ## Step 4: Register the handler
 
