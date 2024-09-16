@@ -12,7 +12,7 @@ keywords: mask, SfMaskedEntry, maskedentry
 
 This section guides you through setting up and configuring a [Masked Entry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html) in your .NET MAUI application. Follow the steps below to add a basic Masked Entry to your project.
 
-To get start quickly with our .NET MAUI Numeric Entry, you can check the below video.
+To get start quickly with our .NET MAUI Masked Entry, you can check the below video.
 
 {% youtube "https://www.youtube.com/watch?v=yTbh1Jo95Vw" %}
 
