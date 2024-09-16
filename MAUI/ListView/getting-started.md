@@ -45,7 +45,7 @@ Before proceeding, ensure the following are in place:
  ## Step 3: Add a Basic ListView
  
  1. To initialize the control, import the `Syncfusion.Maui.ListView` namespace into your code.
- 2. Initialize [SfListView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.html).
+ 2. Initialize [SfListView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html).
  
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}

@@ -32,13 +32,13 @@ Before proceeding, ensure the following are in place:
  3. Select the project location, type the project name and press enter.
  4. Then choose **Create project**
  
-## Step 2: Install the Syncfusion MAUI Chat NuGet Package
+## Step 2: Install the Syncfusion MAUI PullToRefresh NuGet Package
  
  1. In **Solution Explorer**, right-click the project and choose **Manage NuGet Packages**.
  2. Search for `Syncfusion.Maui.PullToRefresh` on [nuget.org](https://www.nuget.org/) and install the latest version.
  3. Ensure all dependencies are correctly installed, and restore your project.
  
-## Step 3: Add a Basic TreeView
+## Step 3: Add a Basic PullToRefresh
 
  1. To initialize the control, import the `Syncfusion.Maui.PullToRefresh` namespace into your code.
  2. Initialize [SfPullToRefresh](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PullToRefresh.SfPullToRefresh.html).
@@ -105,7 +105,7 @@ The `Syncfusion.Maui.Core` NuGet is a dependent package for all Syncfusion contr
 {% endhighlight %} 
 {% endtabs %}
 
-## Step 5: Define the PullableConent
+## Step 5: Define the PullableContent
 
 The [PullableContent](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PullToRefresh.SfPullToRefresh.html#Syncfusion_Maui_PullToRefresh_SfPullToRefresh_PullableContent) view serves as the designated area where users can initiate the pull-to-refresh action, enabling them to refresh and update the content within the view.
 

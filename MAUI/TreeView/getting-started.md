@@ -32,7 +32,7 @@ Before proceeding, ensure the following are in place:
  3. Select the project location, type the project name and press enter.
  4. Then choose **Create project**
  
-## Step 2: Install the Syncfusion MAUI Chat NuGet Package
+## Step 2: Install the Syncfusion MAUI TreeView NuGet Package
  
  1. In **Solution Explorer**, right-click the project and choose **Manage NuGet Packages**.
  2. Search for `Syncfusion.Maui.TreeView` on [nuget.org](https://www.nuget.org/) and install the latest version.
