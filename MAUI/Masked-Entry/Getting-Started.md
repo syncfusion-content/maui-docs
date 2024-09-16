@@ -12,6 +12,10 @@ keywords: mask, SfMaskedEntry, maskedentry
 
 This section guides you through setting up and configuring a [Masked Entry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html) in your .NET MAUI application. Follow the steps below to add a basic Masked Entry to your project.
 
+To get start quickly with our .NET MAUI Numeric Entry, you can check the below video.
+
+{% youtube "https://www.youtube.com/watch?v=yTbh1Jo95Vw" %}
+
 ## Prerequisites
 
 Before proceeding, ensure the following are in place:
@@ -33,7 +37,7 @@ Ensure the necessary dependencies are installed correctly, and the project is re
 
 ## Step 3: Register the handler
 
- Syncfusion.Maui.Core Nuget is a dependent package for all Syncfusion controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion core.
+ [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) Nuget is a dependent package for all Syncfusion controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion core.
 
 {% highlight c# hl_lines="6 17" %}
 using Microsoft.Maui;

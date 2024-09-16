@@ -12,16 +12,16 @@ keywords: .net maui combobox, .net maui sfcombobox, syncfusion combobox, combobo
 
 This section guides you through setting up and configuring a [ComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) in your .NET MAUI application. Follow the steps below to add a basic ComboBox to your project.
 
+To get start quickly with our .NET MAUI Combo Box, you can check the below video.
+
+{% youtube "https://www.youtube.com/watch?v=jcfaI0PFmSo" %}
+
 ## Prerequisites
 
 Before proceeding, ensure the following are in place:
 
 1. Install [.NET 7 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/7.0) or later.
 2. Set up a .NET MAUI environment with Visual Studio 2022 (v17.3 or later) or VS Code. For VS Code users, ensure that the .NET MAUI workload is installed and configured as described [here](https://github.com/dotnet/maui/wiki/VS-Code-setup).
-
-To get start quickly with our .NET MAUI Combo Box, you can check the below video.
-
-{% youtube "https://www.youtube.com/watch?v=jcfaI0PFmSo" %}
 
 ## Step 1: Create a New MAUI Project
 
@@ -37,7 +37,7 @@ Ensure the necessary dependencies are installed correctly, and the project is re
 
 ## Step 3: Register the handler
 
- Syncfusion.Maui.Core Nuget is a dependent package for all Syncfusion controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion core.
+ [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) Nuget is a dependent package for all Syncfusion controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion core.
 
 {% highlight c# hl_lines="6 17" %}
 
