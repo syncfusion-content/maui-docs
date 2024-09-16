@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with .NET MAUI Popup (SfPopup)
 
-This section guides you through setting up and configuring a Popup(SfPopup) in your .NET MAUI application. Follow the steps below to add a basic ListView to your project.
+This section guides you through setting up and configuring a Popup(SfPopup) in your .NET MAUI application. Follow the steps below to add a basic Popup to your project.
 
 To get start quickly with .NET MAUI Popup, you can check on this video:
 <style>#MAUIPopupVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUIPopupVideoTutorial' src='https://www.youtube.com/embed/HTk6JAGP-qE'></iframe>

@@ -9,18 +9,34 @@ documentation: ug
 
 # Getting Started with .NET MAUI Chat (SfChat)
 
-This section provides a quick overview for getting started with the .NET MAUI Chat (SfChat). Walk-through the entire process of creating real world of this control.
+This section guides you through setting up and configuring a Chat(SfChat) in your .NET MAUI application. Follow the steps below to add a basic Chat to your project.
 
 To get start quickly with .NET MAUI Chat, you can check on this video:
 
 <style>#MAUIChatVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUIChatVideoTutorial' src='https://www.youtube.com/embed/Ha9jx1bq2Ws'></iframe>
 
-## Creating an application using the .NET MAUI Chat
+## Prerequisites
+Before proceeding, ensure the following are in place:
 
- 1. Create a new .NET MAUI application in Visual Studio.
- 2. The Syncfusion .NET MAUI components are available on [nuget.org](https://www.nuget.org/). To add SfChat to your project, open the NuGet package manager in Visual Studio, search for [Syncfusion.Maui.Chat](https://www.nuget.org/packages/Syncfusion.Maui.Chat) and then install it.
- 3. Import the control namespace `Syncfusion.Maui.Chat` in XAML or C# code.
- 4. Initialize the `SfChat` control.
+ 1. Install [.NET 7 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/7.0) or later.
+ 2. Set up a .NET MAUI environment with Visual Studio 2022 (v17.3 or later) or VS Code. For VS Code users, ensure that the .NET MAUI workload is installed and configured as described [here](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-8.0&tabs=visual-studio-code).
+
+## Step 1: Create a .NET MAUI project
+
+ 1. Open Visual Studio or VS Code.
+ 2. Go to File > New > Project and choose the .NET MAUI App template.
+ 3. Name the project and choose a location, then click Create.
+ 
+## Step 2: Install the Syncfusion MAUI Chat NuGet Package
+ 
+ 1. In Solution Explorer, right-click the project and choose Manage NuGet Packages.
+ 2. Search for Syncfusion.Maui.Chat on [nuget.org](https://www.nuget.org/) and install the latest version.
+ 3. Ensure all dependencies are correctly installed, and restore your project.
+
+## Step 3: Add a Basic Chat
+
+ 1. To initialize the control, import the `Syncfusion.Maui.Chat` namespace into your code.
+ 2. Initialize [SfChat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html).
 
 {% tabs %}
 {% highlight xaml hl_lines="4" %}
@@ -50,7 +66,7 @@ To get start quickly with .NET MAUI Chat, you can check on this video:
 {% endhighlight %}
 {% endtabs %}
 
-## Register the handler
+## Step 4: Register the handler
 
 The `Syncfusion.Maui.Core` NuGet is a dependent package for all the Syncfusion controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion core.
 
@@ -84,7 +100,7 @@ The `Syncfusion.Maui.Core` NuGet is a dependent package for all the Syncfusion c
 {% endhighlight %} 
 {% endtabs %}
 
-## Creating ViewModel for the Chat
+## Step 5: Define the View Model
 
 The `SfChat` control is data-bound and displays a collection of messages exchanged between users. Hence, messages should be created and bound to the control.
 
@@ -199,16 +215,18 @@ Create a simple message collection as shown in the following code example in a n
 {% endhighlight %}
 {% endtabs %}
 
-## Binding Messages to Chat 
+### Bind Messages to Chat 
 
-To bind the messages to SfChat, configure the [Messages](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_Messages) property accordingly. You have the option to bind the message collection of the SfChat either through XAML or programmatically in code.
+Create a `ViewModel` instance and set it as the Chat's `BindingContext`. This enables property binding from `ViewModel` class.
+
+To load the messages to SfChat, bind the message collection to the [Messages](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_Messages) property of Chat and bind the [CurrentUser](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_CurrentUser) to differenitate the incoming & outgoing messages.
 
 {% tabs %} 
 {% highlight xaml hl_lines="14" %}
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:sfChat="clr-namespace:Syncfusion.Maui.Chat;assembly=Syncfusion.Maui.Chat"
+             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Chat;assembly=Syncfusion.Maui.Chat"
              xmlns:local="clr-namespace:GettingStarted.ViewModel"
              x:Class="GettingStarted.MainPage">
 
@@ -217,7 +235,7 @@ To bind the messages to SfChat, configure the [Messages](https://help.syncfusion
     </ContentPage.BindingContext>
 
     <ContentPage.Content>
-        <sfChat:SfChat x:Name="sfChat"
+        <syncfusion:SfChat x:Name="sfChat"
                        Messages="{Binding Messages}"
                        CurrentUser="{Binding CurrentUser}"/>
     </ContentPage.Content>	
@@ -225,16 +243,14 @@ To bind the messages to SfChat, configure the [Messages](https://help.syncfusion
 
 {% endhighlight %} 
 
-{% highlight c# hl_lines="10" %} 
+{% highlight c# %} 
  public partial class MainPage : ContentPage 
- {
-    SfChat sfChat; 
-    GettingStartedViewModel viewModel; 
+ { 
     public MainPage() 
     { 
         InitializeComponent(); 
-        this.sfChat = new SfChat();
-        this.viewModel = new GettingStartedViewModel(); 
+        SfChat sfChat = new SfChat();
+        GettingStartedViewModel viewModel = new GettingStartedViewModel(); 
         this.sfChat.Messages = viewModel.Messages; 
         this.sfChat.CurrentUser = viewModel.CurrentUser; 
         this.Content = sfChat; 
@@ -244,25 +260,12 @@ To bind the messages to SfChat, configure the [Messages](https://help.syncfusion
 {% endhighlight %} 
 {% endtabs %}
 
+## Step 6: Running the Application
+
+Press **F5** to build and run the application. Once compiled, the Chat will be displayed with the data provided.
+
+Here is the result of the previous codes,
+
 ![Chat control in .NET MAUI platform](images/getting-started/maui-chat-getting-started.png)
-
-## Showing time break between messages
-
-Messages can be separated based on their date and time of creation and this can be done by setting the [ShowTimeBreak](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_ShowTimeBreak) property to `true`.
-
-{% tabs %}
-{% highlight xaml hl_lines="2" %}
- <sfChat:SfChat x:Name="sfChat"
-                ShowTimeBreak="True" />
-
-{% endhighlight %}
-
-{% highlight c# hl_lines="1"%}
- this.sfChat.ShowTimeBreak = true;
-         
-{% endhighlight %}
-{% endtabs %}
-
-![Time break support in .NET MAUI Chat](images/getting-started/maui-chat-timebreak.png)
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/getting-started-with-.net-maui-chat)
