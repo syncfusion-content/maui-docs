@@ -31,7 +31,7 @@ Before proceeding, ensure the following are set up:
 ## Step 2: Install the Syncfusion MAUI Core NuGet Package
 
 1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
-1. Search for [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) and install the latest version.
+1. Search for [Syncfusion.Maui.Buttons](https://www.nuget.org/packages/Syncfusion.Maui.Buttons/) and install the latest version.
 1. Ensure the necessary dependencies are installed correctly, and the project is restored.
 
 ## Register the handler
