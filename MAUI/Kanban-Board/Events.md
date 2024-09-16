@@ -9,56 +9,6 @@ documentation: ug
 
 # Events in .NET MAUI Kanban Board (SfKanban)
 
-## ItemTapped
-
-[`ItemTapped`]() event is triggered when you tap on any card. The argument contains the following information.
-
-* [`Column`]() - Used to get the column of the card.
-* [`Data`]() - Used to get the underlying model of the card.
-* [`Index`]() - Used to get the index of the card in a column.
-
-### Command
-
-The [`CardTappedCommand`]() property is used to associate a command with an instance of [SfKanban](). This property is most often set with MVVM pattern to bind callbacks back into the ViewModel.
-
-### CommandParameter
-
-The [`CardTappedCommandParameter`]() property is used to set the parameter reference, based on which the event argument is shown.
-
->**NOTE**
-The default value of the [CardTappedCommandParameter]() is `null`.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<kanban:SfKanban  CardTappedCommand="{Binding CardTappedCommand}" CardTappedCommandParameter="1">
-        <!--Intialize the column-->
-</kanban:SfKanban>
-
-{% endhighlight %}
-
-{% highlight c# %}
-
-public class ViewModel
-{
-
-    public ViewModel()
-    {
-        CardTappedCommand = new Command<object>(CardTappedEvent);
-
-        public ICommand CardTappedCommand { get; set; }
-    }
-
-    private void CardTappedEvent(object args)
-    {
-        //  handle event action.
-    }
-}
-{% endhighlight %}
-
-{% endtabs %}
-
 ## DragStart
 
 [`DragStart`]() event is triggered when you start to drag a card. The argument contains the following information.
@@ -112,7 +62,3 @@ public class ViewModel
 * [`SourceIndex`]() - Used to get the index of the card in source column.
 * [`TargetColumn`]() - Used to get the current column which is the drop target for the card.
 * [`TargetIndex`]() - Used to get the new index of the card in target column.
-
-## ColumnsGenerated 
-
-[`ColumnsGenerated`]() event will be fired after the columns are generated automatically. You can access the auto-generated columns using [`ActualColumns`]() property of [`SfKanban`]().

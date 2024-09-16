@@ -132,14 +132,25 @@ public class ViewModel
         Cards.Add(new KanbanModel()
         {
             ID = 2543,
-            Title = "People_Circle4.png",
+            Title = "IOS- 11",
             Category = "Code Review",
-            ImageURL = "Image3.png",
+            ImageURL = "People_Circle4.png",
+            Description = "Check login page validation",
+            IndicatorFill = Colors.Brown,
+            Tags = new List<string> { "Story", "Customer" }
+        });
+        Cards.Add(new KanbanModel()
+        {
+            ID = 123,
+            Title = "UWP-21",
+            Category = "Done",
+            ImageURL = "People_Circle5.png",
             Description = "Check login page validation",
             IndicatorFill = Colors.Brown,
             Tags = new List<string> { "Story", "Customer" }
         });
     }
+    
 }
 
 {% endhighlight %}
@@ -153,14 +164,13 @@ N> Add namespace of ViewModel class in your XAML page if you prefer to set Bindi
 {% highlight xaml %}
 
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-            x:Class="KanbanGettingStarted.MainPage"
-            xmlns:chart="clr-namespace:Syncfusion.Maui.Kanban;assembly=Syncfusion.Maui.Kanban"
-            xmlns:local="clr-namespace:KanbanGettingStarted"> 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="KanbanGettingStarted.MainPage"
+             xmlns:chart="clr-namespace:Syncfusion.Maui.Kanban;assembly=Syncfusion.Maui.Kanban"
+             xmlns:local="clr-namespace:KanbanGettingStarted"> 
 
     <ContentPage.BindingContext>
-        <local:ViewModel>
-        </local:ViewModel>   
+        <local:ViewModel/>  
     </ContentPage.BindingContext>
 </ContentPage>
 
@@ -197,7 +207,8 @@ kanban.SetBinding(SfKanban.ItemsSourceProperty, "Cards");
 
 ## Defining columns
 
-The columns are generated automatically based on the different values of [`Category`]() in the [`KanbanModel`]() class from [`ItemsSource`](). But, you can also define the columns by setting [`AutoGenerateColumns`]() property to false and adding [`KanbanColumn`]() instance to [`Columns`]() property of [`SfKanban`]().
+The columns are generated automatically based on the different values of [`Category`]() in the [`KanbanModel`]() class from [`ItemsSource`](). But, you can also define the columns by setting [`AutoGenerateColumns`]() property to false and adding [`KanbanColumn`]() instance to [`Columns`]() property of [`SfKanban`](). Define the categories of column using [`Categories`]() property of [`KanbanColumn`]() and cards will be added to the respective columns.
+
 
 {% tabs %}
 
@@ -207,16 +218,16 @@ The columns are generated automatically based on the different values of [`Categ
 
     <kanban:SfKanban.Columns>
 
-        <kanban:KanbanColumn x:Name="openColumn" Title="To Do"  >
+        <kanban:KanbanColumn Title="To Do" Categories="Open" >
         </kanban:KanbanColumn>
 
-        <kanban:KanbanColumn x:Name="progressColumn" Title="In Progress">
+        <kanban:KanbanColumn Title="In Progress" Categories="In Progress" >
         </kanban:KanbanColumn>
 
-        <kanban:KanbanColumn x:Name="codeColumn" Title="Code Review" >
+        <kanban:KanbanColumn Title="Code Review" Categories="Code Review" >
         </kanban:KanbanColumn>
 
-        <kanban:KanbanColumn x:Name="doneColumn" Title="Done"  >
+        <kanban:KanbanColumn Title="Done" Categories="Done" >
         </kanban:KanbanColumn> 
 
     </kanban:SfKanban.Columns>
@@ -246,14 +257,6 @@ KanbanColumn doneColumn = new KanbanColumn();
 doneColumn.Title = "Done";
 kanban.Columns.Add(doneColumn);
 
-{% endhighlight %}
-
-{% endtabs %}
-
-Define the categories of column using [`Categories`]() property of [`KanbanColumn`]() and cards will be added to the respective columns.
-
-{% highlight C# %}
-
 openColumn.Categories = new List<object>() { "Open" };
 progressColumn.Categories = new List<object>() { "In Progress" };
 codeColumn.Categories = new List<object>() { "Code Review" };
@@ -261,4 +264,6 @@ doneColumn.Categories = new List<object>() { "Done" };
 
 {% endhighlight %}
 
-This is how the final output will look like.
+{% endtabs %}
+
+You can find the complete getting started sample from this [link](https://github.com/SyncfusionExamples/GettingStarted_Kanban_MAUI).

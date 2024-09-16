@@ -20,21 +20,16 @@ The following code example describes the workflow functionality.
 
 var workflows = new List<KanbanWorkflow>();
 
-var openWorkflow = new KanbanWorkflow();  
-openWorkflow.Category = "Open"; 
-//Define the list of categories which accepts the cards from Open state.
-openWorkflow.AllowedTransitions = new List<object> { "In Progress" }; 
-workflows.Add(openWorkflow); 
+//Define the category and list of categories which accepts the cards from “Open” state.
+var openWorkflow = new KanbanWorkflow("Open", new List<object> { "In Progress" });
+workflows.Add(openWorkflow);
 
-var progressWorkflow = new KanbanWorkflow(); 
-progressWorkflow.Category = "In Progress"; 
-//Define the list of categories which accepts the cards from “In Progress” state.
-progressWorkflow.AllowedTransitions = new List<object> { "Open", "Code Review", "Closed-No Code Changes" }; 
-workflows.Add(progressWorkflow); 
+//Define the category and list of categories which accepts the cards from “In Progress” state.
+var progressWorkflow = new KanbanWorkflow("In Progress", new List<object> { "Open", "Code Review" });
+workflows.Add(progressWorkflow);
 
 kanban.Workflows = workflows;
 
 {% endhighlight %}
 
-
-In the below output, you can see the card which was picked from Open state is not allowed to drop on “Code Review” and "Done" state, because we have defined to move the card from Open to “In Progress” state only and not to any other states.
+By following the code snippet, you will notice that the card picked from the "Open" state is not allowed to be dropped in the "Code Review" or "Done" states because we have defined that the card can only move from the "Open" state to the "In Progress" state and not to any other states.

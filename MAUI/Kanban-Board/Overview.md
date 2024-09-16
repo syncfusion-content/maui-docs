@@ -9,7 +9,7 @@ documentation: ug
 
 # .NET MAUI Kanban Board (SfKanban) Overview
 
-The Kanban control is an efficient way to visualize a workflow at each stage of completion.
+The .NET MAUI Kanban control is a highly interactive and customizable tool designed to streamline task management. It provides an efficient way to visualize workflows at various stages of completion. Kanban helps facilitate effective planning and offers a clear visualization of work progress.
 
 ## Key features
 

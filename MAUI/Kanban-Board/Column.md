@@ -31,7 +31,6 @@ kanban.MaximumColumnWidth = 340;
 
 {% endtabs %}
 
-
 You can also define the exact column width using [`ColumnWidth`]() property of [`SfKanban`]().
 
 {% tabs %}
@@ -72,21 +71,21 @@ kanban.ColumnMappingPath = "ID";
 
 {% endtabs %}
 
-### Multiple category for a column
+### Category for a column
 
-More than one category can be mapped to a column by assigning multiple values to [Categories]() collection of [`KanbanColumn`](). For e.g., you can map "In progress, Validate" types under "In progress" column.
+You can assign a specific category to a column by setting the [Categories]() property of the [`KanbanColumn`](). This will display cards with the specified category under the corresponding column. For example, to map the "In Progress" category to the "In Progress" column
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<kanban:KanbanColumn x:Name="progressColumn" Categories="In Progress,Validated" />
+<kanban:KanbanColumn x:Name="progressColumn" Categories="In Progress" />
 
 {% endhighlight %}
 
 {% highlight C# %} 
 
-progressColumn.Categories = new List<object>() { "In Progress", "Validated" };
+progressColumn.Categories = new List<object>() { "In Progress" };
 
 {% endhighlight %}
 
@@ -132,8 +131,6 @@ Header shows the category [`Title`](), items count, min and max informations of 
 
 {% endtabs %}
 
-The following output is displayed as a result of the above code example.
-
 ## Expand/Collapse Column
 
 Columns can be expanded/collapsed by tapping the toggle button which is placed at top right corner of the Kanban header. [`IsExpanded`]() property of [`KanbanColumn`]() is used to programmatically expand/collapse the Kanban column. The following code example describes the above behavior.   
@@ -162,8 +159,6 @@ kanban.Columns.Add(column2);
 {% endhighlight %}
 
 {% endtabs %}
-
-The following output is displayed as a result of the above code example.
 
 ## Enable/Disable Drag & Drop 
 
@@ -210,8 +205,6 @@ progressColumn.AllowDrop = false;
 {% endhighlight %}
 
 {% endtabs %}
-
-The following output demonstrates the above example code.
 
 ## Items Count
 
