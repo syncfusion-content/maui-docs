@@ -31,7 +31,7 @@ To get start quickly with our .NET MAUI Autocomplete, you can check the below vi
 ## Step 2: Install the Syncfusion MAUI Inputs NuGet Package
 
 1. In **Solution Explorer**, right-click the project and choose **Manage NuGet Packages**.
-2. Search for Syncfusion.Maui.Inputs and install the latest version.
+2. Search for [`Syncfusion.Maui.Inputs`](https://www.nuget.org/packages/Syncfusion.Maui.Inputs) and install the latest version.
 Ensure the necessary dependencies are installed correctly, and the project is restored.
 
 ## Step 3: Handler registration 
