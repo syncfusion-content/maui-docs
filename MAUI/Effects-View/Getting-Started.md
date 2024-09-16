@@ -68,11 +68,11 @@ namespace EffectsViewMauiSample
 
 {% endhighlight %} 
 
-## Step 4: Create a simple Effects View
+## Step 4: Add a Basic Effects View
 
-This section explains how to create a Effects View and configure it. The control can be configured entirely in C# code or by the XAML markup.
+1. To initialize the control, import the Core namespace into your code.
 
-### Adding a SfEffectsView control
+2. Initialize [SfEffectsView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html?tabs=tabid-1)
 
 Add the namespace as shown in the following code sample.
 
@@ -80,31 +80,17 @@ Add the namespace as shown in the following code sample.
 
 {% highlight xaml %}
 
-    xmlns:effectsView="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
+<ContentPage 
+            ...
+            xmlns:effectsView="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core">
+    <ContentPage.Content> 
+	 	<effectsView:SfEffectsView /> 
+	</ContentPage.Content> 
+</ContentPage>
 	
 {% endhighlight %}
 
 {% highlight C# %}
-
-    using Syncfusion.Maui.Core;
-
-{% endhighlight %}
-
-{% endtabs %}
-
-Open the `MainPage.xaml` file and define the `SfEffectsView` control using consistent instance names:
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<ContentPage.Content> 
-	 <effectsView:SfEffectsView /> 
-</ContentPage.Content>  
-
-{% endhighlight %}
-
-{% highlight c# %}
 
 using Syncfusion.Maui.Core;
 
