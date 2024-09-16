@@ -117,7 +117,7 @@ Content = autocomplete;
 
 ## Step 5: Populate items using data binding
 
-The [.NET MAUI Autocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) control can be bound to an external data source using the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_ItemsSource) property. Now, let's create Model and ViewModel classes to populate items with social media details in the [Autocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html).
+The [.NET MAUI Autocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) control can be bound to an external data source using the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_ItemsSource) property. Now, let's create Model and ViewModel classes to populate items with social media details in the Autocomplete.
 
 **Step 1:**  Create a simple model class called 'SocialMedia' with fields 'ID' and 'Name', and then populate social media data in the 'SocialMediaViewModel'.
 
@@ -180,6 +180,7 @@ Now, populate this 'SocialMediaViewModel' data in the [Autocomplete](https://hel
             <!--Setting ItemsSource-->
             <editors:SfAutocomplete x:Name="autocomplete" 
                                     WidthRequest="250"
+                                    HeightRequest = "50"
                                     ItemsSource="{Binding SocialMedias}" />
         </ContentPage.Content>
 </ContentPage>
@@ -189,27 +190,32 @@ Now, populate this 'SocialMediaViewModel' data in the [Autocomplete](https://hel
 {% highlight C# %}
 
 SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
-autocomplete.BindingContext = socialMediaViewModel;
-autocomplete.ItemsSource = SocialMediaViewModel.SocialMedias;
+this.BindingContext = socialMediaViewModel;
+SfAutocomplete autocomplete = new SfAutocomplete(); 
+autocomplete.WidthRequest = 250;
+autocomplete.HeightRequest = 50;
+autocomplete.ItemsSource = socialMediaViewModel.SocialMedias;
+Content = autocomplete;
 
 {% endhighlight %}
 {% endtabs %}
 
-N> Set the 'SocialMediaViewModel' instance as the `BindingContext` of your control. This is done to bind the properties of 'SocialMediaViewModel' to the `Autocomplete`.
+N> Set the 'SocialMediaViewModel' instance as the **BindingContext** of your control. This is done to bind the properties of 'SocialMediaViewModel' to the Autocomplete.
 
-**Step 3:** Set the `TextMemberPath` and `DisplayMemberPath`.
+**Step 3:** Set the **TextMemberPath** and **DisplayMemberPath**.
 
 The [.NET MAUI Autocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) control is populated with a list of social media options. However, since the 'SocialMedia' model includes two properties, 'Name' and 'ID', it's necessary to specify which property should be used as the display value in both the selection box portion and the drop-down suggestion list of the Autocomplete control.
 
-**TextMemberPath**: This property path is used to retrieve the value that will be displayed in the selection box portion of the [.NET MAUI Autocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) control when an item is selected. The default value is `String.Empty`.
+**TextMemberPath**: This property path is used to retrieve the value that will be displayed in the selection box portion of the [.NET MAUI Autocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) control when an item is selected. The default value is **String.Empty**.
 
-**DisplayMemberPath**: This property path is used to specify the name or path of the property that will be displayed for each data item in the drop-down list. The default value is `String.Empty`.
+**DisplayMemberPath**: This property path is used to specify the name or path of the property that will be displayed for each data item in the drop-down list. The default value is **String.Empty**.
 
 {% tabs %}
 {% highlight xaml %}
 
 <editors:SfAutocomplete x:Name="autocomplete"
                         WidthRequest="250" 
+                        HeightRequest = "50"
                         DisplayMemberPath = "Name"
                         TextMemberPath = "Name"
                         ItemsSource="{Binding SocialMedias}" />
@@ -217,8 +223,12 @@ The [.NET MAUI Autocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui
 {% endhighlight %}
 {% highlight C# %}
 
+SfAutocomplete autocomplete = new SfAutocomplete(); 
+autocomplete.WidthRequest = 250;
+autocomplete.HeightRequest = 50;
 autocomplete.DisplayMemberPath = "Name";
 autocomplete.TextMemberPath = "Name";
+autocomplete.ItemsSource = socialMediaViewModel.SocialMedias;
 
 {% endhighlight %}
 {% endtabs %}
