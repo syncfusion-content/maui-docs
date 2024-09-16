@@ -569,6 +569,9 @@ namespace ChartGettingStarted
 
 {% endtabs %}
 
+## Step 9: Running the Application
+Press **F5** to build and run the application. Once compiled, the chart will be displayed with the data provided.
+
 The following chart is created as a result of the previous codes.
 
 ![Getting started for .NET MAUI Chart](Getting-Started_Images/MAUI_chart.jpg)
