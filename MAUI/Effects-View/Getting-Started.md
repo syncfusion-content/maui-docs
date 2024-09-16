@@ -8,18 +8,29 @@ documentation: ug
 ---
 
 # Getting Started with .NET MAUI Effects View (SfEffectsView)
+This section guides you through setting up and configuring a
+[Effects View](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html?tabs=tabid-1)
+in your .NET MAUI application. Follow the steps below to add [Effects View](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html?tabs=tabid-1)
+to your project.
 
-This section explains the steps required to configure the .NET MAUI Effects View control and customize its elements.
-
-To get start quickly with our .NET MAUI Effects View, you can check the below video.
+## Prerequisites
+Before proceeding, ensure the following are in place:
+1. Install [.NET 7 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/7.0) or later.
+2. Set up a .NET MAUI environment with Visual Studio 2022 (v17.3 or later) or VS Code. For VS Code users, ensure that the .NET MAUI workload is installed and configured as described [here](https://github.com/dotnet/maui/wiki/).
 
 {% youtube "https://www.youtube.com/watch?v=IOieyRMCuAo" %}
 
-## Adding a SfEffectsView reference
+## Step 1: Create a New MAUI Project
+1. Open Visual Studio or VS Code.
+2. Go to **File** > **New** > **Project** and choose the .NET MAUI App template.
+3. Name the project and choose a location, then click Create.
 
-Syncfusion .NET MAUI controls are available in [Nuget.org](https://www.nuget.org/). To add [SfEffectsView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html?tabs=tabid-1) to your project, open the NuGet package manager in Visual Studio, search for [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) and then install it.
+## Step 2: Install the Syncfusion MAUI Core NuGet Package
+1.  In **Solution Explorer**, right-click the project and choose **Manage NuGet Packages**.
+2.  Search for [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) and install the latest version.
+3.  Ensure the necessary dependencies are installed correctly, and the project is restored.
 
-## Handler registration 
+## Step 3: Handler registration 
 
  In the MauiProgram.cs file, register the handler for Syncfusion core.
 
@@ -52,15 +63,13 @@ namespace EffectsViewMauiSample
 
 {% endhighlight %} 
 
-## Create a simple Effects View
+## Step 4: Create a simple Effects View
 
 This section explains how to create a Effects View and configure it. The control can be configured entirely in C# code or by the XAML markup.
 
 ### Adding a SfEffectsView control
 
-Step 1: Add the NuGet to the project as discussed in the above reference section. 
-
-Step 2: Add the namespace as shown in the following code sample.
+Add the namespace as shown in the following code sample.
 
 {% tabs %}
 
@@ -78,7 +87,7 @@ Step 2: Add the namespace as shown in the following code sample.
 
 {% endtabs %}
 
-Step 3: Set the control to content in `ContentPage`.
+Open the `MainPage.xaml` file and define the `SfEffectsView` control using consistent instance names:
 
 {% tabs %}
 
@@ -87,7 +96,6 @@ Step 3: Set the control to content in `ContentPage`.
 <ContentPage.Content> 
 	 <effectsView:SfEffectsView /> 
 </ContentPage.Content>  
-
 
 {% endhighlight %}
 
