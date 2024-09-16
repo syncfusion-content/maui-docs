@@ -8,15 +8,15 @@ documentation: ug
 ---
 
 # Getting Started with .NET MAUI Button
-This section guides you through setting up and configuring a [`Button`](https://www.syncfusion.com/maui-controls/maui-button) in your .NET MAUI application. Follow the steps below to add a basic Button to your project.
+This section guides you through setting up and configuring a [Button](https://www.syncfusion.com/maui-controls/maui-button) in your .NET MAUI application. Follow the steps below to add a basic Button to your project.
 
 ## Prerequisites
 
 Before proceeding, ensure the following are in place:
 
-Install [`.NET 7 SDK`](https://dotnet.microsoft.com/en-us/download/dotnet/7.0) or later.
+Install [.NET 7 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/7.0) or later.
 
-Set up a .NET MAUI environment with Visual Studio 2022 (v17.3 or later) or VS Code. For VS Code users, ensure that the .NET MAUI workload is installed and configured as described [`here`](https://github.com/dotnet/maui/wiki/VS-Code-setup).
+Set up a .NET MAUI environment with Visual Studio 2022 (v17.3 or later) or VS Code. For VS Code users, ensure that the .NET MAUI workload is installed and configured as described [here](https://github.com/dotnet/maui/wiki/VS-Code-setup).
 
 To get start quickly with our .NET MAUI Button, you can check the below video.
 
@@ -30,8 +30,8 @@ To get start quickly with our .NET MAUI Button, you can check the below video.
 
 ## Step 2: Install the Syncfusion MAUI Buttons NuGet Package
 
-1. In **Solution Explorer**, right-click the project and choose Manage NuGet Packages.
-2. Search for [`Syncfusion.Maui.Buttons`](https://www.nuget.org/packages/Syncfusion.Maui.Buttons) and install the latest version.
+1. In **Solution Explorer**, right-click the project and choose **Manage NuGet Packages**.
+2. Search for [Syncfusion.Maui.Buttons](https://www.nuget.org/packages/Syncfusion.Maui.Buttons) and install the latest version.
 3. Ensure the necessary dependencies are installed correctly, and the project is restored.
 
 
@@ -70,7 +70,7 @@ namespace ButtonSample
 
 {% endhighlight %} 
 
-## Adding the .NET MAUI Button control
+## Step 4: Add a Basic Button control
 
 Step 1: Add the NuGet to the project as discussed in the above reference section. 
 
@@ -91,7 +91,7 @@ Step 2: Add the namespace as shown in the following code sample.
 
 ## Initialize Button
 
-Now, add the [`SfButton`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfButton.html) control with a required optimal name using the included namespace.
+Now, add the [SfButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfButton.html) control with a required optimal name using the included namespace.
 
 {% tabs %}
 
