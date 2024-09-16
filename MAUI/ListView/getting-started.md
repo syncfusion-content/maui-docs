@@ -35,7 +35,7 @@ Before proceeding, ensure the following are in place:
  
  ## Step 3: Add a Basic ListView
  
- 1. To initialize the control, import the Chart namespace into your code.
+ 1. To initialize the control, import the ListView namespace into your code.
  2. Initialize [SfListView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.html).
  
 {% tabs %}
