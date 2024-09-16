@@ -96,9 +96,6 @@ Add the following namespace to add [.NET MAUI Text Input Layout](https://help.sy
 
 ## Initialize TextInputLayout
 
-Download .NET 7.0 (Linux, macOS, and Windows)
-.NET 7.0 downloads for Linux, macOS, and Windows. .NET is a free, cross-platform, open-source developer platform for building many different types of applications.
-
 {% tabs %} 
 
 {% highlight xaml %} 
