@@ -37,13 +37,13 @@ Before proceeding, ensure the following are in place:
  
 ## Step 2: Install the Syncfusion MAUI Popup NuGet Package
  
- 1. In Solution Explorer, right-click the project and choose Manage NuGet Packages.
- 2. Search for Syncfusion.Maui.Popup on [nuget.org](https://www.nuget.org/) and install the latest version.
+ 1. In **Solution Explorer**, right-click the project and choose **Manage NuGet Packages**.
+ 2. Search for `Syncfusion.Maui.Popup` on [nuget.org](https://www.nuget.org/) and install the latest version.
  3. Ensure all dependencies are correctly installed, and restore your project.
 
 ## Step 3: Add a Basic Popup
 
- 1. To initialize the control, import the Popup namespace into your code.
+ 1. To initialize the control, import the `Syncfusion.Maui.Popup` namespace into your code.
  2. Initialize [SfPopup](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html).
  
 {% tabs %}

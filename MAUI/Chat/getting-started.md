@@ -38,8 +38,8 @@ Before proceeding, ensure the following are in place:
  
 ## Step 2: Install the Syncfusion MAUI Chat NuGet Package
  
- 1. In Solution Explorer, right-click the project and choose Manage NuGet Packages.
- 2. Search for Syncfusion.Maui.Chat on [nuget.org](https://www.nuget.org/) and install the latest version.
+ 1. In **Solution Explorer**, right-click the project and choose **Manage NuGet Packages**.
+ 2. Search for `Syncfusion.Maui.Chat` on [nuget.org](https://www.nuget.org/) and install the latest version.
  3. Ensure all dependencies are correctly installed, and restore your project.
 
 ## Step 3: Add a Basic Chat
