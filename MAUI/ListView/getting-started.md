@@ -27,7 +27,7 @@ Before proceeding, ensure the following are in place:
  2. Go to File > New > Project and choose the .NET MAUI App template.
  3. Name the project and choose a location, then click Create.
  
- ## Step 2: Install the Syncfusion MAUI Charts NuGet Package
+ ## Step 2: Install the Syncfusion MAUI ListView NuGet Package
  
  1. In Solution Explorer, right-click the project and choose Manage NuGet Packages.
  2. Search for Syncfusion.Maui.ListView on [nuget.org](https://www.nuget.org/) and install the latest version.
