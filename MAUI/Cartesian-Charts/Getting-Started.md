@@ -20,8 +20,8 @@ To get start quickly with our .NET MAUI Cartesian Chart, you can check the below
 
 Before starting, ensure the following are set up:
 
-1. .NET 7 SDK or later is installed.
-2. A .NET MAUI development environment is ready with either Visual Studio 2022 (v17.3 or later) or VS Code. If using VS Code, make sure the .NET MAUI workload is installed and configured as per the instructions provided.
+1. .NET 7 SDK (https://dotnet.microsoft.com/en-us/download/dotnet/7.0) or later is installed.
+2. A .NET MAUI development environment is ready with either Visual Studio 2022 (v17.3 or later) or VS Code. If using VS Code, make sure the .NET MAUI workload is installed and configured as per the instructions provided here.
 
 ## Step 1: Create a New MAUI Project
 
@@ -40,6 +40,8 @@ Before starting, ensure the following are set up:
 1. To initialize the control, import the Chart namespace into your code.
 2. Initialize [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html?tabs=tabid-1).
 
+{% tabs %} 
+
 {% highlight xaml %}
 
 <ContentPage
@@ -52,7 +54,11 @@ Before starting, ensure the following are set up:
  
 {% endhighlight %}
 
+{% endtabs %} 
+
 You can also create the chart programmatically in the MainPage.xaml.cs file:
+
+{% tabs %} 
 
 {% highlight C# %}
 
@@ -71,9 +77,11 @@ namespace ChartGettingStarted
 
 {% endhighlight %}
 
+{% endtabs %} 
+
 ## Step 4: Register the handler
 
-Syncfusion.Maui.Core nuget is a dependent package for all Syncfusion controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion core.
+[Syncfusion.Maui.Core nuget](https://www.nuget.org/packages/Syncfusion.Maui.Core) is a dependent package for all Syncfusion controls of .NET MAUI. In the **MauiProgram.cs file**, register the handler for Syncfusion core.
 
 {% highlight C# %}
 
