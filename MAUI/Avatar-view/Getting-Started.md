@@ -9,14 +9,12 @@ documentation: ug
 
 # Getting Started with .NET MAUI Avatar View
 
-## Creating an application using the .NET MAUI Avatar View
-
 This section guides you through setting up and configuring a [AvatarView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html?tabs=tabid-1) in your .NET MAUI application. Follow the steps below to add a basic Avatar View to your project.
 
 ## Prerequisites
 
-Before proceeding, ensure the following are in place:
-1. Install [.NET 7 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/7.0) or later.
+Before proceeding, ensure the following are set up:
+1. Install [.NET 7 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/7.0) or later is installed.
 1. Set up a .NET MAUI environment with Visual Studio 2022 (v17.3 or later) or VS Code. For VS Code users, ensure that the .NET MAUI workload is installed and configured as described [here](https://github.com/dotnet/maui/wiki/VS-Code-setup).
 
 To get start quickly with our .NET MAUI Avatar View, you can check the below video.
@@ -25,9 +23,9 @@ To get start quickly with our .NET MAUI Avatar View, you can check the below vid
 
 ## Step 1: Create a New MAUI Project
 
-1. Open Visual Studio or VS Code.
-1. Go to **File > New > Project** and choose the **.NET MAUI App** template.
-1. Name the project and choose a location, then click **Create.**
+1. Launch Visual Studio or VS Code.
+1. Navigate to **File > New > Project,** then select the **.NET MAUI App** template.
+1. Name the project and choose a location, then click Create.
 
 ## Step 2: Install the Syncfusion MAUI Core NuGet Package
 
