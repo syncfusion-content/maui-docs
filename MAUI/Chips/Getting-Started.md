@@ -7,17 +7,32 @@ control: Chips
 documentation: ug
 ---
 
-# Getting Started with .NET MAUI Chips
+# Getting Started with .NET MAUI Chip
+This section guides you through setting up and configuring a [Chip](https://www.nuget.org/packages/Syncfusion.Maui.Core) in your .NET MAUI application. Follow the steps below to add a basic Chip to your project.
 
-This section explains the steps required to create chips and arrange them in a layout for performing action. This section covers only the minimal features that you needed to know to get started with the chips.
+## Prerequisites
 
-## Adding .NET MAUI Chips reference
+Before proceeding, ensure the following are in place:
 
-Syncfusion .NET MAUI components are available in [nuget.org](https://www.nuget.org/). To add Chips to your project, open the NuGet package manager in Visual Studio, search for [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core), and then install it.
+Install [.NET 7 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/7.0) or later.
 
-## Handler Registration
+Set up a .NET MAUI environment with Visual Studio 2022 (v17.3 or later) or VS Code. For VS Code users, ensure that the .NET MAUI workload is installed and configured as described [here](https://github.com/dotnet/maui/wiki/VS-Code-setup).
 
-In the MauiProgram.cs file, register the handler for Syncfusion core.
+## Step 1: Create a New MAUI Project
+
+1. Open Visual Studio or VS Code.
+2. Go to **File > New > Project** and choose the **.NET MAUI App** template.
+3. Name the project and choose a location, then click **Create**.
+
+## Step 2: Install the Syncfusion MAUI Buttons NuGet Package
+
+1. In **Solution Explorer**, right-click the project and choose **Manage NuGet Packages**.
+2. Search for [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) and install the latest version.
+3. Ensure the necessary dependencies are installed correctly, and the project is restored.
+
+## Step 3: Register the Handler 
+
+Syncfusion.Maui.Core Nuget is a dependent package for all Syncfusion controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion core.
 
 {% highlight c# hl_lines="6 17" %}
 using Microsoft.Maui;
@@ -49,7 +64,7 @@ namespace AutocompleteSample
 
 {% endhighlight %} 
 
-### Adding the .NET MAUI Chips control
+## Step 4: Add a Basic Chips control
 
 Step 1: Add the NuGet to the project
 
