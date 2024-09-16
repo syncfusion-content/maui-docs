@@ -24,8 +24,8 @@ To get start quickly with our .NET MAUI CheckBox, you can check the below video.
 
 ## Step 1: Create a New MAUI Project
 
-    1. Open Visual Studio or VS Code.
-    2. Go to File > New > Project and choose the .NET MAUI App template.
+    1. Launch Visual Studio or VS Code.
+    2. Navigate to File > New > Project and select the .NET MAUI App template.
     3. Name the project and choose a location, then click Create.
 
 ## Step 2: Install the Syncfusion MAUI Buttons NuGet Package
