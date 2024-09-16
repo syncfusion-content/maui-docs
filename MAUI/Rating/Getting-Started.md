@@ -9,19 +9,34 @@ documentation: ug
 
 ---
 
-# Getting Started with .NET MAUI Rating (SfRating)
+# Getting Started with .NET MAUI Rating
 
-This section explains how to configure a [`SfRating`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html) control in a real-time scenario and also provides a walk-through on some of the customization features available in [`SfRating`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html) control.
+This section explains how to configure a [SfRating](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html) control in a real-time scenario and also provides a walk-through on some of the customization features available in SfRating control.
+
+## Prerequisites
+
+Before proceeding, ensure the following are in place:
+
+1.Install [.NET 7 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/7.0) or later.
+2.Set up a .NET MAUI environment with Visual Studio 2022 (v17.3 or later) or VS Code. For VS Code users, ensure that the .NET MAUI workload is installed and configured as described [here](https://github.com/dotnet/maui/wiki/VS-Code-setup).
 
 To get start quickly with our .NET MAUI Rating, you can check the below video.
 
 {% youtube "https://www.youtube.com/watch?v=yEJzdjPNjBs" %}
 
-## Adding a .NET MAUI Rating reference
+## Step 1: Create a New MAUI Project
 
-Syncfusion .NET MAUI controls are available in [Nuget.org](https://www.nuget.org/). To add [.NET MAUI Rating] to your project, open the NuGet package manager in Visual Studio, search for [Syncfusion.Maui.Inputs](https://www.nuget.org/packages/Syncfusion.Maui.Inputs) and then install it.
+1.Open Visual Studio or VS Code.
+2.Go to **File > New > Project** and choose the **.NET MAUI App** template.
+3.Name the project and choose a location, then click **Create**.
 
-## Handler registration 
+## Step 2: Install the Syncfusion MAUI Rotator NuGet Package
+
+1.In **Solution Explorer**, right-click the project and choose **Manage NuGet Packages**.
+2.Search for [Syncfusion.Maui.Inputs](https://www.nuget.org/packages/Syncfusion.Maui.Inputs) and install the latest version.
+3.Ensure the necessary dependencies are installed correctly, and the project is restored.
+
+## Step 3: Register the Handler
 
 In the MauiProgram.cs file, register the handler for Syncfusion core.
 
@@ -55,7 +70,7 @@ namespace RatingSample
 
 {% endhighlight %} 
 
-## Adding the .NET MAUI Rating control
+## Step 4:  Add a Basic Rating
 
 Step 1: Add the NuGet to the project as discussed in the above reference section. 
 
@@ -79,7 +94,7 @@ Step 2: Add the namespace, as shown in the following code sample:
 
 ## Initialize Rating
 
-Now, add the [`SfRating`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html) control with a required optimal name using the included namespace.
+Now, add the [SfRating](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html) control with a required optimal name using the included namespace.
 
 {% tabs %}
 
@@ -105,9 +120,9 @@ public MainPage()
 
 ## Set Number of Rating Items
 
-The number of rating items to be displayed can be customized in the [`SfRating`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html) control. Users can create a rating application using 5 items as follows. The [`ItemCount`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html#Syncfusion_Maui_Inputs_SfRating_ItemCount) property is used to define the number of rating items.
+The number of rating items to be displayed can be customized in the [SfRating](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html) control. Users can create a rating application using 5 items as follows. The [ItemCount](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html#Syncfusion_Maui_Inputs_SfRating_ItemCount) property is used to define the number of rating items.
 
-N> The default value of [`ItemCount`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html#Syncfusion_Maui_Inputs_SfRating_ItemCount) is 5.
+N> The default value of [ItemCount](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html#Syncfusion_Maui_Inputs_SfRating_ItemCount) is 5.
 
 {% tabs %}
 
@@ -133,7 +148,7 @@ public MainPage()
 
 ## Set Value
 
-The display value can be set in the [`SfRating`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html) control, which is selected among the items. The following code example shows the display value of three with five rating items. The [`Value`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html#Syncfusion_Maui_Inputs_SfRating_Value) property is used to set display value.
+The display value can be set in the [SfRating](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html) control, which is selected among the items. The following code example shows the display value of three with five rating items. The [Value](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html#Syncfusion_Maui_Inputs_SfRating_Value) property is used to set display value.
 
 N> The default value of this property is 0.
 
@@ -161,7 +176,7 @@ public MainPage()
 
 ## Precision
 
-The [`SfRating`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html) control provides an option to rate the items in full, half, and exact values. This can be set using the [`Precision`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html#Syncfusion_Maui_Inputs_SfRating_Precision) property. By default, the precision mode is [`Standard`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.Precision.html#Syncfusion_Maui_Inputs_Precision_Standard).
+The [SfRating](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html) control provides an option to rate the items in full, half, and exact values. This can be set using the [Precision](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html#Syncfusion_Maui_Inputs_SfRating_Precision) property. By default, the precision mode is [Standard](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.Precision.html#Syncfusion_Maui_Inputs_Precision_Standard).
 
 {% tabs %}
 

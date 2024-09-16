@@ -31,7 +31,6 @@ To get start quickly with our .NET MAUI TextInputLayout, you can check the below
 
 ## Step 2: Install the Syncfusion MAUI TextInputLayout NuGet Package
 
-
 1.In **Solution Explorer**, right-click the project and choose **Manage NuGet Packages**.
 2.Search for [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) and install the latest version.
 3.Ensure the necessary dependencies are installed correctly, and the project is restored.
