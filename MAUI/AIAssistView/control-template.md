@@ -35,7 +35,7 @@ The `ControlTemplate` in AI AssistView allows you to define and reuse the visual
     </ContentPage.Content>
 
 {% endhighlight %}
-{% highlight c# hl_lines="8" %}
+{% highlight c# hl_lines="10" %}
 
 public class CustomAssistPage : ContentPage
 {
