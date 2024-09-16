@@ -16,12 +16,29 @@ To get start quickly with our .NET MAUI Cartesian Chart, you can check the below
 
 {% youtube "https://www.youtube.com/watch?v=o616GkzdPJk&t=7s" %}
 
-## Creating an application with .NET MAUI chart
+## Prerequisites
 
-1. Create a new .NET MAUI application in Visual Studio.
-2. Syncfusion .NET MAUI components are available in [nuget.org](https://www.nuget.org/). To add SfCartesianChart to your project, open the NuGet package manager in Visual Studio, search for Syncfusion.Maui.Charts and then install it.
-3. To initialize the control, import the Chart namespace.
-4. Initialize [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html?tabs=tabid-1).
+Before starting, ensure the following are set up:
+
+1. .NET 7 SDK or later is installed.
+2. A .NET MAUI development environment is ready with either Visual Studio 2022 (v17.3 or later) or VS Code. If using VS Code, make sure the .NET MAUI workload is installed and configured as per the instructions provided.
+
+## Step 1: Create a New MAUI Project
+
+1. Launch Visual Studio or VS Code.
+2. Navigate to File > New > Project, then select the .NET MAUI App template.
+3. Name the project and choose a location, then click Create.
+
+## Step 2: Install the Syncfusion MAUI Charts NuGet Package
+
+1. In Solution Explorer, right-click the project and choose Manage NuGet Packages.
+2. Search for Syncfusion.Maui.Charts on [nuget.org](https://www.nuget.org/) and install the latest version.
+3. Ensure all dependencies are correctly installed, and restore your project.
+
+## Step 3: Add a Basic Cartesian Chart
+
+1. To initialize the control, import the Chart namespace into your code.
+2. Initialize [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html?tabs=tabid-1).
 
 {% tabs %} 
 
@@ -36,6 +53,12 @@ To get start quickly with our .NET MAUI Cartesian Chart, you can check the below
 </ContentPage>
  
 {% endhighlight %}
+
+{% endtabs %}
+
+You can also create the chart programmatically in the MainPage.xaml.cs file:
+
+{% tabs %} 
 
 {% highlight C# %}
 
@@ -56,7 +79,7 @@ namespace ChartGettingStarted
 
 {% endtabs %}
 
-## Register the handler
+## Step 4: Register the handler
 
 Syncfusion.Maui.Core nuget is a dependent package for all Syncfusion controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion core.
 
@@ -92,7 +115,9 @@ namespace ChartGettingStarted
 
 {% endhighlight %} 
 
-## Initialize view model
+## Step 5: Define the View Model
+
+### Data Model
 
 Now, let us define a simple data model that represents a data point in the chart.
 
@@ -109,6 +134,8 @@ public class Person
 {% endhighlight %} 
 
 {% endtabs %} 
+
+### View Model
 
 Next, create a view model class and initialize a list of `Person` objects as follows.
 
@@ -137,7 +164,9 @@ public class ViewModel
 
 {% endtabs %} 
 
-Set the `ViewModel` instance as the `BindingContext` of your page to bind `ViewModel` properties to the chart. 
+### Binding the ViewModel
+
+Set the `ViewModel` instance as the `BindingContext` of your page to bind `ViewModel` properties to the chart in either XAML or C#. 
  
 N> Add namespace of `ViewModel` class to your XAML Page, if you prefer to set `BindingContext` in XAML.
 
@@ -167,7 +196,7 @@ this.BindingContext = new ViewModel();
 
 {% endtabs %} 
 
-## Initialize Chart axis
+## Step 6: Initialize Chart axis
 
 [ChartAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html) is used to locate the data points inside the chart area. The [XAxes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html?tabs=tabid-1#Syncfusion_Maui_Charts_SfCartesianChart_XAxes) and [YAxes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_YAxes) collection of the chart is used to initialize the axis for the chart.
 
@@ -202,7 +231,7 @@ Run the project and check if you get following output to make sure you have conf
 
 ![Initializing axis for .NET MAUI Chart](Getting-Started_Images/MAUI_chart_initialized.jpg)
 
-## Populate Chart with data
+## Step 7: Add Data Binding to the Chart
 
 As we are going to visualize the comparison of heights in the data model, add [ColumnSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ColumnSeries.html?tabs=tabid-1) to [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) property of chart, and then bind the `Data` property of the above `ViewModel` to the `ColumnSeries.ItemsSource` as follows.
 
@@ -273,7 +302,9 @@ chart.Series.Add(series);
 
 {% endtabs %} 
 
-## Add a title
+## Step 8: Customize the Chart
+
+### Add a title
 
 The title of the chart provide quick information to the user about the data being plotted in the chart. The [Title](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartBase.html#Syncfusion_Maui_Charts_ChartBase_Title) property is used to set title for the chart as follows.
 
@@ -303,7 +334,7 @@ chart.Title = new Label
 
 {% endtabs %}  
 
-## Enable the data labels
+### Enable the data labels
 
 The [ShowDataLabels](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_ShowDataLabels) property of series can be used to enable the data labels to improve the readability of the chart. The label visibility is set to `False` by default.
 
@@ -331,7 +362,7 @@ chart.Series.Add(series);
 
 {% endtabs %}  
 
-## Enable a legend
+### Enable a legend
 
 The legend provides information about the data point displayed in the chart. The [Legend](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartBase.html#Syncfusion_Maui_Charts_ChartBase_Legend) property of the chart was used to enable it.
 
@@ -387,7 +418,7 @@ series.Label = "Height";
 
 {% endtabs %}  
 
-## Enable tooltip
+### Enable tooltip
 
 Tooltips are used to show information about the segment, when a user hovers over a segment. Enable tooltip by setting series [EnableTooltip](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_EnableTooltip) property to true.
 
