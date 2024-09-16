@@ -8,9 +8,8 @@ documentation: ug
 keywords : .net maui busy indicator, maui busy indicator, .net maui activity indicator, maui activity indicator, .net maui loading indicator, maui loading indicator.
 ---
 
-# Getting Started with .NET MAUI Busy Indicator (SfBusyIndicator)
+# Getting Started with .NET MAUI Busy Indicator
 
-## Getting started with .NET MAUI Busy Indicator
 This section guides you through setting up and configuring a
 [.NET MAUI Busy Indicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html?tabs=tabid-1)
 in your .NET MAUI application. Follow the steps below to add a basic
