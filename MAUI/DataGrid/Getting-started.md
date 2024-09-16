@@ -8,7 +8,7 @@ documentation: ug
 keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .net maui datagrid, .net maui grid, .net grid maui
 ---
 
-# Getting Started with .NET MAUI DataGrid (SfDataGrid)
+# Getting Started with .NET MAUI DataGrid
 
 This section provides a quick overview for working with the [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html) for .NET MAUI.  Follow the steps below to add a basic DataGrid to your project.
 
@@ -126,13 +126,15 @@ namespace YourAppNamespace
 
 N> Maintain consistent instance names across both XAML and C#. For example, use `dataGrid` consistently in both XAML and C#.
 
-## Create DataModel for the SfDataGrid
+## Step 5: Define the View Model
+
+### Data Model
 
 The SfDataGrid is a data-bound control. Hence, a data model should be created to bind it to the control. 
 
 Create a simple data source as shown in the following code example in a new class file, and save it as OrderInfo.cs file:
 
- {% tabs %}
+{% tabs %}
 {% highlight c# %}
 public class OrderInfo
 {
@@ -186,6 +188,8 @@ public class OrderInfo
 
 N> If you want your data model to respond to property changes, implement the `INotifyPropertyChanged` interface in your model class.
 
+### View Model
+
 Create a model repository class with OrderInfo collection property initialized with the required number of data objects in a new class file as shown in the following code example and save it as OrderInfoRepository.cs file:
 
 {% tabs %}
@@ -226,7 +230,7 @@ public class OrderInfoRepository
 {% endhighlight %}
 {% endtabs %}
 
-## Binding data to the SfDataGrid
+### Binding the ViewModel
 
 To bind the data source to the SfDataGrid, set the [SfDataGrid.ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ItemsSource) property as follows. You can bind the data source of the SfDataGrid either from XAML or in code. 
 
@@ -268,7 +272,10 @@ dataGrid.ItemsSource = viewModel.OrderInfoCollection;
 {% endhighlight %}
 {% endtabs %}
 
-Run the application to render the following output:
+## Step 9: Running the Application
+Press **F5** to build and run the application. Once compiled, the chart will be displayed with the data provided.
+
+Here is the result of the previous codes,
 
 ![Getting started with .NET MAUI DataGrid.](Images\getting-started\net-maui-datagrid-getting-started.png)
 
