@@ -99,7 +99,7 @@ The following types are used in [SplineRangeAreaSeries]():
                                      XBindingPath="XValue"
                                      High="HighValue"
                                      Low="LowValue"
-                                     Type="Clamped"/>
+                                     Type="Cardinal"/>
 
     </chart:SfCartesianChart>
 
@@ -121,7 +121,7 @@ SplineRangeAreaSeries series = new SplineRangeAreaSeries()
     XBindingPath = "XValue",
     High="HighValue",
     Low="LowValue",
-    Type = SplineType.Clamped
+    Type = SplineType.Cardinal
 };
 
 chart.Series.Add(series);
