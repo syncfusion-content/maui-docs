@@ -272,7 +272,7 @@ dataGrid.ItemsSource = viewModel.OrderInfoCollection;
 {% endhighlight %}
 {% endtabs %}
 
-## Step 9: Running the Application
+## Step 6: Running the Application
 Press **F5** to build and run the application. Once compiled, the chart will be displayed with the data provided.
 
 Here is the result of the previous codes,
