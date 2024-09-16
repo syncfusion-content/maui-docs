@@ -87,14 +87,15 @@ The `CreateAssistChat` method allows for the customization of the chat view func
 {% tabs %} 
 {% highlight c# %} 
 
- public abstract class AssistViewChat : SfChat
- {
-    protected virtual AssistViewChat CreateAssistChat()
-    {
-       // Returning a custom implementation of AssistViewChat
-       return new CustomAssistViewChat(this);
-    }
-  }
+   public class CustomAIAssiststView : SfAIAssistView
+   {
+       public CustomAIAssiststView() { }
+
+       protected override AssistViewChat CreateAssistChat()
+       {
+           return new CustomassistViewchat(this);
+       }
+   }
 
 {% endhighlight %} 
 {% endtabs %}
@@ -104,16 +105,12 @@ The `CustomAssistViewChat `class inherits from `AssistViewChat` and can be used 
 {% tabs %} 
 {% highlight c# %} 
 
-  internal class CustomAssistViewChat : AssistViewChat
-  {
-      /// <summary>
-      /// Initializes a new instance of the <see cref="CustomAssistViewChat"/> class.
-      /// </summary>
-      /// <param name="assistView">Represents the <see cref="SfAIAssistView"/> instance.</param>
-      public CustomAssistViewChat(SfAIAssistView assistView) : base(assistView)
-      {
-         this.ShowMessageInputView = false;
-      }
+   public class CustomassistViewchat : AssistViewChat
+   {
+      public CustomassistViewchat(SfAIAssistView assistView) : base(assistView)
+       {
+           this.ShowMessageInputView = false;   
+       }
    }
 
 {% endhighlight %} 
