@@ -20,7 +20,7 @@ To get start quickly with our .NET MAUI Pyramid Chart, you can check the below v
 Before starting, ensure the following are set up:
 
 1. .NET 7 SDK (https://dotnet.microsoft.com/en-us/download/dotnet/7.0) or later is installed.
-2. A .NET MAUI development environment is ready with either Visual Studio 2022 (v17.3 or later) or VS Code. If using VS Code, make sure the .NET MAUI workload is installed and configured as per the instructions provided here.
+2. A .NET MAUI development environment is ready with either Visual Studio 2022 (v17.3 or later) or VS Code. If using VS Code, make sure the .NET MAUI workload is installed and configured as per the instructions provided [here](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-8.0&tabs=visual-studio-code).
 
 ## Step 1: Create a New MAUI Project
 
@@ -34,7 +34,7 @@ Before starting, ensure the following are set up:
 2. Search for Syncfusion.Maui.Charts on [nuget.org](https://www.nuget.org/) and install the latest version.
 3. Ensure all dependencies are correctly installed, and restore your project.
 
-## Step 3: Add a Basic Cartesian Chart
+## Step 3: Add a Basic Pyramid Chart
 
 1. To initialize the control, import the Chart namespace into your code.
 2. Initialize [SfPyramidChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPyramidChart.html).
