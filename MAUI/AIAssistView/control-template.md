@@ -110,7 +110,7 @@ The `CustomAssistViewChat `class inherits from `AssistViewChat` and can be used 
    {
       public CustomassistViewchat(SfAIAssistView assistView) : base(assistView)
        {
-           //Customizing the AssistViewChat
+           //Customize the AssistViewChat
            this.ShowMessageInputView = false;   
        }
    }
