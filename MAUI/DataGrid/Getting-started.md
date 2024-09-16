@@ -16,25 +16,25 @@ This section provides a quick overview for working with the [SfDataGrid](https:/
 
 Before proceeding, ensure the following are in place:
 1. Install [.NET 7 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/7.0) or later.
-2. Set up a .NET MAUI environment with Visual Studio 2022 (v17.3 or later) or VS Code. For VS Code users, ensure that the .NET MAUI workload is installed and configured as described [here](https://github.com/dotnet/maui/wiki/VS-Code-setup).
+2. Set up a .NET MAUI environment with Visual Studio 2022 (v17.3 or later) or VS Code. For VS Code users, ensure that the .NET MAUI workload is installed and configured as described [here](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-8.0&tabs=visual-studio-code).
 
 To get start quickly with .NET MAUI DataGrid, you can check on this video:
 
 <style>#MAUIDataGridVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUIDataGridVideoTutorial' src='https://www.youtube.com/embed/xW0a7JlHbz4'></iframe>
 
-### Step 1: Create a New MAUI Project
+## Step 1: Create a New MAUI Project
 
 1.	Open Visual Studio or VS Code.
 2.	Go to `File` > `New` > `Project` and choose the `.NET MAUI App` template.
 3.	Name the project and choose a location, then click `Create`.
 
-### Step 2: Install the Syncfusion MAUI DataGrid NuGet Package
+## Step 2: Install the Syncfusion MAUI DataGrid NuGet Package
 
 1.	In Solution Explorer, right-click the project and choose Manage NuGet Packages.
 2.	Search for `Syncfusion.Maui.DataGrid` and install the latest version.
 3.	Ensure the necessary dependencies are installed correctly, and the project is restored.
 
-### Step 3: Register the handler
+## Step 3: Register the handler
 
 To use this control inside an application, you must initialize the `SfDataGrid` handler.
 
@@ -68,9 +68,9 @@ namespace GettingStarted
 {% endhighlight %} 
 {% endtabs %}
 
-### Step 4: Add a Basic DataGrid
+## Step 4: Add a Basic DataGrid
 
-#### XAML Implementation
+### XAML Implementation
 
 Open `MainPage.xaml` and add the `SfDataGrid` control within the `<ContentPage.Content>` tag:
 
@@ -93,7 +93,7 @@ Open `MainPage.xaml` and add the `SfDataGrid` control within the `<ContentPage.C
 
 N> Ensure the `xmlns:dataGrid` namespace reference is correctly defined.
 
-#### C# Implementation
+### C# Implementation
 
 You can also configure the DataGrid programmatically in `MainPage.xaml.cs`:
 
