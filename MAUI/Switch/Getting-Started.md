@@ -8,33 +8,36 @@ documentation: ug
 keywords : .net maui switch, maui switch, .net maui switch contrl, maui switch control.
 ---
 
-# Getting Started with .NET MAUI Switch (SfSwitch)
+# Getting Started with .NET MAUI Switch
 
 This section guides you through setting up and configuring a [.NET MAUI Switch control](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSwitch.html) in your .NET MAUI application. Follow the steps below to add a basic [.NET MAUI Switch control](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSwitch.html) to your project.
 
 
-{% youtube "https://www.youtube.com/watch?v=BJDUlLdsQyo" %}
 
 ## Prerequisites
 
 Before proceeding, ensure the following are in place:
 1. Install .NET 7 SDK or later.
 
-2. Set up a .NET MAUI environment with Visual Studio 2022 (v17.3 or later) or VS Code. For VS Code users, ensure that the .NET MAUI workload is installed and configured
+2. Set up a .NET MAUI environment with Visual Studio 2022 (v17.3 or later) or VS Code. For VS Code users, ensure that the .NET MAUI workload is installed and configured as per the instructions provided [here](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-8.0&tabs=visual-studio-code).
 
-## Create a New MAUI Project
+To get start quickly with our [.NET MAUI Switch control](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSwitch.html), you can check the below video.
+
+{% youtube "https://www.youtube.com/watch?v=BJDUlLdsQyo" %}
+
+## Step 1: Create a New MAUI Project
 
 1. Open Visual Studio or VS Code.
 2. Go to File > New > Project and choose the .NET MAUI App template.
 3. Name the project and choose a location, then click Create.
 
-## Install the Syncfusion MAUI Buttons NuGet Package
+## Step 2: Install the Syncfusion MAUI Buttons NuGet Package
 
 1. In Solution Explorer, right-click the project and choose Manage NuGet Packages.
 2. Search for [Syncfusion.Maui.Buttons](https://www.nuget.org/packages/Syncfusion.Maui.Buttons) and install the latest version.
-Ensure the necessary dependencies are installed correctly, and the project is restored.
+3. Ensure the necessary dependencies are installed correctly, and the project is restored.
 
-## Register the handler
+## Step 3: Register the handler
 
 The [Syncfusion.Maui.Core](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.html) NuGet is a dependent package for all Syncfusion controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion core.
 
@@ -68,7 +71,7 @@ namespace SwitchSample
 
 {% endhighlight %} 
 
-## Adding the .NET MAUI Switch control
+## Step 4: Adding the namespace
 
 Step 1: Add the NuGet to the project as discussed in the above reference section. 
 
@@ -87,7 +90,7 @@ Step 2: Add the namespace as shown in the following code sample, to initialize t
 {% endhighlight %}
 {% endtabs %}
 
-## Initialize Switch
+## Step 5: Adding the .NET MAUI Switch control
 
 Now, add the [SfSwitch](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSwitch.html) control with a required optimal name using the included namespace.
 
