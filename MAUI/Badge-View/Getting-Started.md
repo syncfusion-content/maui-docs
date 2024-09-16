@@ -69,7 +69,7 @@ namespace BadgeViewMauiSample
 
 {% endhighlight %}
 
-## Step - 4:  Add a Basic Badge View
+## Step 4:  Add a Basic Badge View
 
 1. To initialize the control, import the Core namespace into your code.
 1. Initialize [SfBadgeView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBadgeView.html?tabs=tabid-1).
@@ -109,7 +109,7 @@ namespace BadgeViewMauiSample
 
 {% endtabs %}
 
-## Step -5: Adding a badge notification text
+## Step 5: Adding a badge notification text
 
 Add text to Badge View using the [BadgeText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBadgeView.html#Syncfusion_Maui_Core_SfBadgeView_BadgeText) property.
 
@@ -137,7 +137,7 @@ this.Content = badgeView;
 
 {% endtabs %}
 
-## Step - 6: Adding a content
+## Step 6: Adding a content
 
 An Image, button, or label or any view can be added to the Badge View using the [Content](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBadgeView.html#Syncfusion_Maui_Core_SfBadgeView_Content) property.If you need to display a custom icon or image in the badge, ensure the image is included correctly in your project resources.
 
