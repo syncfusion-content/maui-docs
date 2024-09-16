@@ -7,7 +7,7 @@ control: SfChat
 documentation: ug
 ---
 
-# Getting Started with .NET MAUI Chat (SfChat)
+# Getting Started with .NET MAUI Chat
 
 This section guides you through setting up and configuring a Chat(SfChat) in your .NET MAUI application. Follow the steps below to add a basic Chat to your project.
 
@@ -23,9 +23,18 @@ Before proceeding, ensure the following are in place:
 
 ## Step 1: Create a .NET MAUI project
 
- 1. Open Visual Studio or VS Code.
- 2. Go to File > New > Project and choose the .NET MAUI App template.
- 3. Name the project and choose a location, then click Create.
+**Visual Studio**
+
+ 1. Go to **File > New > Project** and choose the **.NET MAUI App** template.
+ 2. Name the project and choose a location, then click **Next**.
+ 3. Select the .NET framework version and click **Create**.
+
+** Visual Code**
+
+ 1. Open the command palette by pressing `Ctrl+Shift+P` and type **.NET:New Project** and enter.
+ 2. Choose the **.NET MAUI App** template.
+ 3. Select the project location, type the project name and press enter.
+ 4. Then choose **Create project**
  
 ## Step 2: Install the Syncfusion MAUI Chat NuGet Package
  
@@ -219,7 +228,7 @@ Create a simple message collection as shown in the following code example in a n
 
 Create a `ViewModel` instance and set it as the Chat's `BindingContext`. This enables property binding from `ViewModel` class.
 
-To load the messages to SfChat, bind the message collection to the [Messages](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_Messages) property of Chat and bind the [CurrentUser](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_CurrentUser) to differenitate the incoming & outgoing messages.
+To load the messages to SfChat, bind the message collection to the [Messages](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_Messages) property of Chat and bind the [CurrentUser](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_CurrentUser) to differentiate the incoming & outgoing messages.
 
 {% tabs %} 
 {% highlight xaml hl_lines="14" %}
