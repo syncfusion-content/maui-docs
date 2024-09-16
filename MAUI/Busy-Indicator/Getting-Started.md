@@ -72,11 +72,11 @@ namespace BusyIndicatorSample
 
 {% endhighlight %} 
 
-## Step 4: Create a Simple .NET MAUI Busy Indicator
+## Step 4: Add a Basic Busy Indicator
 
-The [.NET MAUI Busy Indicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html?tabs=tabid-1) control is configured entirely in C# code or by using XAML markup. The following steps explain how to create a [.NET MAUI Busy Indicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html?tabs=tabid-1) (SfBusyIndicator) and configure its elements.
+1. To initialize the control, import the Core namespace into your code.
 
-### Adding the .NET MAUI Busy Indicator control
+2. Initialize [SfBusyIndicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html?tabs=tabid-1)
 
 Add the namespace as shown in the following code sample.
 
@@ -84,42 +84,41 @@ Add the namespace as shown in the following code sample.
 
 {% highlight xaml %}
 
-    xmlns:core="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
+<ContentPage 
+            ...
+            xmlns:core="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core">
+    <ContentPage.Content> 
+	 	<core:SfBusyIndicator x:Name="busyIndicator"
+                          IsRunning = "True" />
+	</ContentPage.Content> 
+</ContentPage>
 	
 {% endhighlight %}
 
 {% highlight c# %}
 
-    using Syncfusion.Maui.Core;
+using Syncfusion.Maui.Core;
 
-{% endhighlight %}
+namespace BusyIndicatorMauiSample   
+{  
+	public partial class MainPage : ContentPage                  
+	{ 
+	    SfEffectsView effectsView;
 
-{% endtabs %}`
-
-{% tabs %}
-
-Open the `MainPage.xaml` file, and define the `SfBusyIndicator` control with a standardized instance name as follows:
-
-{% highlight xaml %}
-
-<ContentPage.Content>    
-    <core:SfBusyIndicator x:Name="busyIndicator"
-                          IsRunning = "True" />
-</ContentPage.Content>
-
-
-{% endhighlight %}
-
-{% highlight c# %}
-          
-SfBusyIndicator busyIndicator = new SfBusyIndicator(){IsRunning = true}; 
-Content = busyIndicator;  
+		public MainPage()   
+		{   
+			InitializeComponent();       
+			SfBusyIndicator busyIndicator = new SfBusyIndicator(){IsRunning = true};
+            Content = busyIndicator;   
+		}  
+	}  
+}  
 
 {% endhighlight %}
 
 {% endtabs %}
 
-## Customizing the Busy Indicator
+## Step 5: Customizing the Busy Indicator
 
 [.NET MAUI Busy Indicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html?tabs=tabid-1) provides some predefined animation types like Cupertino, LinearMaterial, and CircularMaterial. Users can select any one of the animation types using the [AnimationType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html#Syncfusion_Maui_Core_SfBusyIndicator_AnimationType) property.
 

@@ -74,8 +74,6 @@ namespace EffectsViewMauiSample
 
 2. Initialize [SfEffectsView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html?tabs=tabid-1)
 
-Add the namespace as shown in the following code sample.
-
 {% tabs %}
 
 {% highlight xaml %}
