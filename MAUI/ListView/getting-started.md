@@ -221,7 +221,7 @@ listView.ItemsSource = viewModel.BookInfo;
  By defining the [SfListView.ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemTemplate) of the SfListView, a custom user interface(UI) can be achieved to display the data items. 
  
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="5" %}
+{% highlight xaml hl_lines="5" %}
 <ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView">
   <syncfusion:SfListView x:Name="listView" 
                    ItemsSource="{Binding BookInfo}"
@@ -241,20 +241,20 @@ listView.ItemsSource = viewModel.BookInfo;
   </syncfusion:SfListView>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="App.xaml.cs" hl_lines="15" %}
+{% highlight c# hl_lines="14" %}
 using Microsoft.Maui.Controls;
 using Syncfusion.Maui.ListView;
 using System;
 
 namespace GettingStarted
 {
-    public class App : Application
-    {
-        SfListView listView;
-        public App()
+    public class MainPage : ContentPage
+    {       
+        public MainPage()
         {
+		    InitializeComponent();
             BookInfoRepository viewModel = new BookInfoRepository ();
-            listView = new SfListView();
+			SfListView listView = new SfListView();
             listView.ItemSize = 100;
             listView.ItemsSource = viewModel.BookInfo;
             listView.ItemTemplate = new DataTemplate(() => {
@@ -273,7 +273,7 @@ namespace GettingStarted
 
                 return grid;
             });
-            MainPage = new ContentPage { Content = listView };
+			this.Content = listView;
         }
     }
 } 

@@ -9,17 +9,33 @@ documentation: ug
 
 # Getting Started with .NET MAUI Popup (SfPopup)
 
-This section provides a quick overview of how to get start with the .NET MAUI Popup (SfPopup) for MAUI. Walk through the entire process of creating the real-world SfPopup.
+This section guides you through setting up and configuring a Popup(SfPopup) in your .NET MAUI application. Follow the steps below to add a basic ListView to your project.
 
 To get start quickly with .NET MAUI Popup, you can check on this video:
 <style>#MAUIPopupVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUIPopupVideoTutorial' src='https://www.youtube.com/embed/HTk6JAGP-qE'></iframe>
 
-## Creating an application using the .NET MAUI Popup
+## Prerequisites
+Before proceeding, ensure the following are in place:
 
- 1. Create a new .NET MAUI application in Visual Studio.
- 2. Syncfusion .NET MAUI components are available on [nuget.org](https://www.nuget.org/). To add SfPopup to your project, open the NuGet package manager in Visual Studio, search for Syncfusion.Maui.Popup and install it.
- 3. Import the control namespace `Syncfusion.Maui.Popup` in XAML or C# code.
- 4. Initialize the [SfPopup](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html) control.
+ 1. Install [.NET 7 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/7.0) or later.
+ 2. Set up a .NET MAUI environment with Visual Studio 2022 (v17.3 or later) or VS Code. For VS Code users, ensure that the .NET MAUI workload is installed and configured as described [here](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-8.0&tabs=visual-studio-code).
+
+## Step 1: Create a .NET MAUI project
+
+ 1. Open Visual studio or VS Code.
+ 2. Go to File > New > Project and choose the .NET MAUI App template.
+ 3. Name the project and choose a location, then click Create.
+ 
+## Step 2: Install the Syncfusion MAUI Popup NuGet Package
+ 
+ 1. In Solution Explorer, right-click the project and choose Manage NuGet Packages.
+ 2. Search for Syncfusion.Maui.Popup on [nuget.org](https://www.nuget.org/) and install the latest version.
+ 3. Ensure all dependencies are correctly installed, and restore your project.
+
+## Step 3: Add a Basic Popup
+
+ 1. To initialize the control, import the Popup namespace into your code.
+ 2. Initialize [SfPopup](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html).
  
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -49,7 +65,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-## Register the handler
+## Step 4: Register the handler
 
 The `Syncfusion.Maui.Core` NuGet is a dependent package for all Syncfusion controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion core.
 
@@ -82,11 +98,11 @@ namespace GettingStarted
 {% endhighlight %} 
 {% endtabs %}
 
-## Displaying popup
+## Step 5: Displaying popup
 
 Display a popup over your view by calling the [Show](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_Show_System_Boolean_) method.
 
-Refer to the following code example for displaying popup.
+Refer to the following code example for displaying popup using Button's Click event.
 
 {% tabs %}
 
@@ -96,13 +112,14 @@ Refer to the following code example for displaying popup.
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:GettingStarted"
+			 xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Popup;assembly=Syncfusion.Maui.Popup"
              x:Class="GettingStarted.MainPage" 
              Padding="0,40,0,0">
      <StackLayout x:Name="mainLayout">
        <Button x:Name="clickToShowPopup" Text="ClickToShowPopup" 
                VerticalOptions="Start" HorizontalOptions="Center"
                Clicked="ClickToShowPopup_Clicked" />
-               <popup:SfPopup x:Name="popup" />
+               <syncfusion:SfPopup x:Name="popup" />
      </StackLayout>
 </ContentPage>
 
@@ -129,11 +146,17 @@ namespace GettingStarted
 
 {% endtabs %}
 
+## Step 6: Running the Application
+
+Press **F5** to build and run the application. Once compiled, click the button to open the Popup.
+
+Here is the result of the previous codes.
+
 ![Popup with default appearance](Images/getting-started//maui-popup-with-default-appearance.png)
 
 Download the source code of this sample [here](https://github.com/SyncfusionExamples/getting-started-.net-maui-popup).
 
-## Dismissing popup
+## Close the popup
 
 To close the popup programmatically, you can call either the [Dismiss](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_Dismiss) method or set the IsOpen property to false.
 
@@ -182,13 +205,14 @@ Refer to the following code example for displaying popup with appearance mode.
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:GettingStarted"
+			 xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Popup;assembly=Syncfusion.Maui.Popup"
              x:Class="GettingStarted.MainPage" 
              Padding="0,40,0,0">
      <StackLayout x:Name="mainLayout">
        <Button x:Name="clickToShowPopup" Text="ClickToShowPopup" 
                VerticalOptions="Start" HorizontalOptions="FillAndExpand"
                Clicked="ClickToShowPopup_Clicked" />
-        <popup:SfPopup x:Name="popup"  ShowFooter="True" AppearanceMode="TwoButton"/>
+        <syncfusion:SfPopup x:Name="popup"  ShowFooter="True" AppearanceMode="TwoButton"/>
      </StackLayout>
 </ContentPage>
 
@@ -224,7 +248,7 @@ namespace GettingStarted
 
 ![Popup with Appearance Mode](Images/getting-started//maui-popup-with-appearance-mode.png)
 
-###  Load your template view in the popup body
+##  Load template view in the popup body
 
 Any view can be added as popup content by using the [ContentTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_ContentTemplate) property to refresh it. Refer to the following code example in which a label is added as popup content. 
 
@@ -235,25 +259,25 @@ Any view can be added as popup content by using the [ContentTemplate](https://he
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:GettingStarted"
+			 xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Popup;assembly=Syncfusion.Maui.Popup"
              x:Class="GettingStarted.MainPage" 
-             Padding="0,40,0,0"
-             xmlns:sfPopup="clr-namespace:Syncfusion.Maui.Popup;assembly=Syncfusion.Maui.Popup">
+             Padding="0,40,0,0">
     <StackLayout>
         <Button x:Name="clickToShowPopup"
                 Text="ClickToShowPopup"
                 VerticalOptions="Start"
                 HorizontalOptions="FillAndExpand"
                 Clicked="ClickToShowPopup_Clicked" />
-        <sfPopup:SfPopup x:Name="popup">
-            <sfPopup:SfPopup.ContentTemplate>
+        <syncfusion:SfPopup x:Name="popup">
+            <syncfusion:SfPopup.ContentTemplate>
                 <DataTemplate>
                     <Label Text="This is the Customized view for SfPopup"
                            BackgroundColor="SkyBlue"
                            VerticalTextAlignment="Center"
                            HorizontalTextAlignment="Center" />
                 </DataTemplate>
-            </sfPopup:SfPopup.ContentTemplate>
-        </sfPopup:SfPopup>
+            </syncfusion:SfPopup.ContentTemplate>
+        </syncfusion:SfPopup>
     </StackLayout>
 </ContentPage>
 
