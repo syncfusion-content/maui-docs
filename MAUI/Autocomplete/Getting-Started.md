@@ -7,19 +7,34 @@ control: SfAutocomplete
 documentation: ug
 ---
 
-# Getting Started with .NET MAUI Autocomplete (SfAutocomplete)
+# Getting Started with .NET MAUI Autocomplete
 
-This section explains how to add the Autocomplete control and bind data to it. This section covers only the basic features needed to get started with the Syncfusion [Autocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) control.
+This section guides you through setting up and configuring a [Autocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) in your .NET MAUI application. Follow the steps below to add a basic [Autocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) to your project.
+
+## Prerequisites
+
+Before proceeding, ensure the following are in place:
+
+1. Install [.NET 7 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/7.0) or later.
+2. Set up a .NET MAUI environment with Visual Studio 2022 (v17.3 or later) or VS Code. For VS Code users, ensure that the .NET MAUI workload is installed and configured as described [here](https://github.com/dotnet/maui/wiki/VS-Code-setup).
 
 To get start quickly with our .NET MAUI Autocomplete, you can check the below video.
 
 {% youtube "https://www.youtube.com/watch?v=ontSh2NZvE4" %}
 
-## Adding a .NET MAUI Autocomplete reference
+## Step 1: Create a New MAUI Project
 
-Syncfusion .NET MAUI controls are available in [Nuget.org](https://www.nuget.org/). To add [.NET MAUI Autocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) to your project, open the NuGet package manager in Visual Studio, search for [Syncfusion.Maui.Inputs](https://www.nuget.org/packages/Syncfusion.Maui.Inputs) and then install it.
+1. Open Visual Studio or VS Code.
+2. Go to **File > New > Project** and choose the **.NET MAUI App** template.
+3. Name the project and choose a location, then click **Create**.
 
-## Handler registration 
+## Step 2: Install the Syncfusion MAUI Inputs NuGet Package
+
+1. In **Solution Explorer**, right-click the project and choose **Manage NuGet Packages**.
+2. Search for Syncfusion.Maui.Inputs and install the latest version.
+Ensure the necessary dependencies are installed correctly, and the project is restored.
+
+## Step 3: Handler registration 
 
  In the MauiProgram.cs file, register the handler for Syncfusion core.
 
@@ -53,7 +68,7 @@ namespace AutocompleteSample
 
 {% endhighlight %} 
 
-## Create a Simple .NET MAUI Autocomplete
+## Step 4: Add a Basic Autocomplete
 
 The .NET MAUI Autocomplete control can be configured entirely using C# code or XAML markup. The following steps explain how to create a [.NET MAUI Autocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) (SfAutocomplete) and configure its elements:
 
@@ -100,7 +115,7 @@ Content = autocomplete;
 
 {% endtabs %}
 
-## Populating items using data binding
+## Step 5: Populating items using data binding
 
 The [.NET MAUI Autocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) control can be bound to an external data source using the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_ItemsSource) property. Now, let's create Model and ViewModel classes to populate items with social media details in the [Autocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html).
 
