@@ -8,19 +8,34 @@ documentation: ug
 keywords : .net maui radio button, maui radio button, maui radio button group, maui radio button state.
 ---
 
-# Creating an application with .NET MAUI Radio Button
+# Getting Started with .NET MAUI RadioButton
 
-This section explains the steps required to work with the [SfRadioButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioButton.html) control for .NET MAUI.
+This section guides you through setting up and configuring a [RadioButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioButton.html) in your .NET MAUI application. Follow the steps below to add a basic RadioButton to your project.
+
+## Prerequisites
+
+Before proceeding, ensure the following are in place:
+   
+    1. Install .NET 7 SDK or later.
+    2. Set up a .NET MAUI environment with Visual Studio 2022 (v17.3 or later) or VS Code. For VS Code users, ensure that the .NET MAUI workload is installed and configured as described here.
 
 To get start quickly with our .NET MAUI Radio Button, you can check the below video.
 
 {% youtube "https://www.youtube.com/watch?v=z5EwGpw0KTI" %}
 
-## Adding a .NET MAUI Radio Button reference
+## Step 1: Create a New MAUI Project
 
-Syncfusion .NET MAUI controls are available on [Nuget.org](https://www.nuget.org/). To add the [.NET MAUI Radio Button](https://www.syncfusion.com/maui-controls/maui-radio-button) to your project, open the NuGet Package Manager in Visual Studio, search for Syncfusion.Maui.Buttons, and install it.
+    1. Open Visual Studio or VS Code.
+    2. Go to File > New > Project and choose the .NET MAUI App template.
+    3. Name the project and choose a location, then click Create.
 
-## Handler registration 
+## Step 2: Install the Syncfusion MAUI Buttons NuGet Package
+
+    1. In Solution Explorer, right-click the project and choose Manage NuGet Packages.
+    2. Search for Syncfusion.Maui.Buttons and install the latest version.
+    3. Ensure the necessary dependencies are installed correctly, and the project is restored.
+
+## step 3: Register the Handler 
 
 In the MauiProgram.cs file, register the handler for the Syncfusion core.
 
@@ -55,7 +70,7 @@ namespace ButtonSample
 
 {% endhighlight %}
 
-## Create a Simple .NET MAUI SfRadioButton
+## Step 4: Add a Basic SfRadioButton
 
 Step 1: Add the NuGet to the project as discussed in the above reference section. 
 
@@ -145,14 +160,17 @@ The two different visual states of the [.NET MAUI Radio Button](https://help.syn
 
 To change the state of the .NET MAUI Radio Button, you can utilize the [IsChecked](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioButton.html#Syncfusion_Maui_Buttons_SfRadioButton_IsChecked) property of [SfRadioButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioButton.html). When the Radio Button is checked, an inner circle is added to its visualization.
 
-The .NET MAUI Radio Buttons are used when there is a list of two or more options or groups that are mutually exclusive, and the user must select exactly one choice, such as "Select Gender" or "Choose the best option!".
+
+## Grouping RadioButtons with RadioGroup
+
+You can group multiple radio buttons together by using RadioGroup. Only one button within a group can be selected at a time.
 
 {% tabs %}
 {% highlight xaml %}
 
     <syncfusion:SfRadioGroup x:Name="radioGroup">
-         <syncfusion:SfRadioButton x:Name="male" Text="Male" IsChecked="True"/>
-         <syncfusion:SfRadioButton x:Name="female" Text="Female"/>
+         <syncfusion:SfRadioButton x:Name="male" Text="Male"/>
+         <syncfusion:SfRadioButton x:Name="female" Text="Female" IsChecked="True"/>
     </syncfusion:SfRadioGroup>
 
 {% endhighlight %}
@@ -160,9 +178,9 @@ The .NET MAUI Radio Buttons are used when there is a list of two or more options
 
     SfRadioGroup radioGroup = new SfRadioGroup();
     SfRadioButton male = new SfRadioButton();
-    male.IsChecked = true;
     male.Text = "Male";
     SfRadioButton female = new SfRadioButton();
+    female.IsChecked = true;
     female.Text = "Female";
     radioGroup.Children.Add(male);
     radioGroup.Children.Add(female);
