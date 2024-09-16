@@ -192,7 +192,7 @@ maskedEntry.PromptChar = '#';
 
 ![.NET MAUI Masked Entry prompt character.](maskedentry_images/net-maui-masked-entry-prompt-char.png)
 
-## Step 6: Setting the value
+## Step 7: Setting the value
 
 The [Value](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html#Syncfusion_Maui_Inputs_SfMaskedEntry_Value) property sets the input value for the MaskedEntry control.
 

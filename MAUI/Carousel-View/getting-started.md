@@ -121,9 +121,9 @@ We can populate the carousel's items by using any one of the following ways,
 
 * Through [SfCarouselItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarouselItem.html)
 
-* Through [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_ItemTemplate)
+* Through Model
 
-The below is an simple example for adding Carousel items using SfCarouselItem, for more details on populating data click [Here](https://help.syncfusion.com/maui/carousel-view/populating-data)
+The below is a simple example for adding Carousel items through Model, for more details on populating data click [Here](https://help.syncfusion.com/maui/carousel-view/populating-data)
 
 The following code example illustrates how to create a list of Images in Carousel,
 
