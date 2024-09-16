@@ -99,52 +99,11 @@ namespace TabViewGettingStarted
         public MainPage()
         {
             InitializeComponent();           
-            tabView = new SfTabView();   
+            SfTabView tabView = new SfTabView();   
             this.Content = tabView; 
         }
     }   
 }
-
-{% endhighlight %}
-
-{% endtabs %}
-
-Step 3: Set the control to content in `ContentPage`.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-            x:Class="TabViewMauiSample.MainPage"
-            xmlns:tabView="clr-namespace:Syncfusion.Maui.TabView;assembly=Syncfusion.Maui.TabView"
-            BackgroundColor="{DynamicResource PageBackgroundColor}">
-    <ContentPage.Content> 
-        <tabView:SfTabView /> 
-    </ContentPage.Content>  
-</ContentPage>
-
-{% endhighlight %}
-
-{% highlight c# %}
-
-using Syncfusion.Maui.TabView;
-
-namespace TabViewMauiSample  
-{  
-    public partial class MainPage : ContentPage                  
-    {   
-        private SfTabView tabView;   
-        public MainPage()   
-        {   
-            InitializeComponent();       
-            SfTabView tabView = new SfTabView();   
-            this.Content = tabView;  
-        }  
-    }  
-}  
 
 {% endhighlight %}
 
