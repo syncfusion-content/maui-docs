@@ -71,6 +71,26 @@ kanban.ColumnMappingPath = "ID";
 
 {% endtabs %}
 
+### Category for a column
+
+You can assign a specific category to a column by setting the [Categories]() collection of the [`KanbanColumn`](). This will display cards with the specified category under the corresponding column. For example, to map the "In Progress" category to the "In Progress" column
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<kanban:KanbanColumn x:Name="progressColumn" Categories="In Progress" />
+
+{% endhighlight %}
+
+{% highlight C# %} 
+
+progressColumn.Categories = new List<object>() { "In Progress" };
+
+{% endhighlight %}
+
+{% endtabs %}
+
 ## Headers
 
 Header shows the category [`Title`](), items count, min and max informations of a column. The UI of the header can be replaced entirely using [`HeaderTemplate`]() property of [`SfKanban`](). The following code snippet and screenshot illustrates this.
