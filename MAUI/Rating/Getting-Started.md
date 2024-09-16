@@ -13,16 +13,16 @@ documentation: ug
 
 This section explains how to configure a [SfRating](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html) control in a real-time scenario and also provides a walk-through on some of the customization features available in SfRating control.
 
+To get start quickly with our .NET MAUI Rating, you can check the below video.
+
+{% youtube "https://www.youtube.com/watch?v=yEJzdjPNjBs" %}
+
 ## Prerequisites
 
 Before proceeding, ensure the following are in place:
 
 1.Install [.NET 7 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/7.0) or later.
 2.Set up a .NET MAUI environment with Visual Studio 2022 (v17.3 or later) or VS Code. For VS Code users, ensure that the .NET MAUI workload is installed and configured as described [here](https://github.com/dotnet/maui/wiki/VS-Code-setup).
-
-To get start quickly with our .NET MAUI Rating, you can check the below video.
-
-{% youtube "https://www.youtube.com/watch?v=yEJzdjPNjBs" %}
 
 ## Step 1: Create a New MAUI Project
 
@@ -38,7 +38,7 @@ To get start quickly with our .NET MAUI Rating, you can check the below video.
 
 ## Step 3: Register the Handler
 
-In the MauiProgram.cs file, register the handler for Syncfusion core.
+[Syncfusion.Maui.Core nuget](https://www.nuget.org/packages/Syncfusion.Maui.Core) is a dependent package for all Syncfusion controls of .NET MAUI. In the **MauiProgram.cs file**, register the handler for Syncfusion core.
 
 {% highlight c# hl_lines="6 17" %}
 using Microsoft.Maui;

@@ -11,6 +11,10 @@ documentation: ug
 
 This section explains how to add the Rotator control and bind data to it. This section covers only the basic features needed to get started with the Syncfusion [.NET MAUI Rotator](https://www.syncfusion.com/maui-controls/maui-rotator) control.
 
+To get start quickly with our .NET MAUI TextInputLayout, you can check the below video.
+
+{% youtube "https://www.youtube.com/watch?v=EjyvLta5u4o" %}
+
 ## Prerequisites
 
 Before proceeding, ensure the following are in place:
@@ -32,7 +36,7 @@ Before proceeding, ensure the following are in place:
 
 ## Step 3: Register the Handler
 
-In the MauiProgram.cs file, register the handler for the Syncfusion core.
+[Syncfusion.Maui.Core nuget](https://www.nuget.org/packages/Syncfusion.Maui.Core) is a dependent package for all Syncfusion controls of .NET MAUI. In the **MauiProgram.cs file**, register the handler for Syncfusion core.
 
 {% highlight c# hl_lines="6 17" %}
 
