@@ -8,57 +8,35 @@ documentation: ug
 keywords : .net maui scheduler, .net maui horizontal scheduler, maui appointment scheduling.
 ---
 
-# Getting Started with .NET MAUI Scheduler (SfScheduler)
+# Getting Started with the .NET MAUI Scheduler
 
-This section explains how to populate the appointments to the Scheduler as well as the essential aspects for getting started with the Scheduler and also provides a walk-through to configure the [.NET MAUI Scheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html) control in a real-time scenario.
+This section explains how to populate the appointments to the Scheduler as well as the essential aspects for getting started with the Scheduler and also provides a walk-through to configure the [.NET MAUI Scheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html) control in a real-time scenario. Follow the steps below to add a basic scheduler view to your project.
 
+## Prerequisites
+
+Before proceeding, ensure the following are set up:
+1. Install [.NET 7 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/7.0) or later is installed.
+2. Set up a .NET MAUI environment with Visual Studio 2022 (v17.3 or later) or VS Code. For VS Code users, ensure that the .NET MAUI workload is installed and configured as described [here.](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-8.0&tabs=visual-studio-code)
 
 To get start quickly with our .NET MAUI Scheduler, you can check the below video.
 
 {% youtube "https://www.youtube.com/watch?v=Io2ElO8ORSQ" %}
 
-## Creating an application using the .NET MAUI Scheduler
+## Step 1: Create a New MAUI Project
 
-1. Create a new .NET MAUI application in Visual Studio.
+1. Launch Visual Studio or VS Code.
+2. Navigate to **File > New > Project,** then select the **.NET MAUI App** template.
+3. Name the project and choose a location, then click Create.
 
-2. Syncfusion .NET MAUI components are available in [nuget.org](https://www.nuget.org/). To add SfScheduler to your project, open the NuGet package manager in Visual Studio, search for [Syncfusion.Maui.Scheduler](https://www.nuget.org/packages/Syncfusion.Maui.Scheduler) and then install it.
+## Step 2: Install the Syncfusion MAUI Scheduler NuGet Package
 
-3. To initialize the control, import the control namespace `Syncfusion.Maui.Scheduler` in XAML or C# code.
-
-4. Initialize `SfScheduler.`
-
-{% tabs %}
-{% highlight XAML hl_lines="3 5" %}
-
-<ContentPage   
-    . . .
-    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
-
-    <scheduler:SfScheduler />
-</ContentPage>
-
-{% endhighlight %}
-{% highlight C# hl_lines="1 9 10" %}
-
-using Syncfusion.Maui.Scheduler;
-. . .
-
-public partial class MainPage : ContentPage
-{
-    public MainPage()
-    {
-        InitializeComponent();
-        SfScheduler scheduler = new SfScheduler();
-        this.Content = scheduler;
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
+1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
+2. Search for [Syncfusion.Maui.Scheduler](https://www.nuget.org/packages/Syncfusion.Maui.Scheduler/) and install the latest version.
+3. Ensure the necessary dependencies are installed correctly, and the project is restored.
 
 ## Register the handler
 
-The `Syncfusion.Maui.Core` nuget is a dependent package for all Syncfusion controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion core.
+Syncfusion.Maui.Core NuGet is a dependent package for all Syncfusion controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion core.
 
 {% tabs %}
 {% highlight C# tabtitle="MauiProgram.cs" hl_lines="1 10" %}
@@ -89,6 +67,40 @@ namespace GettingStarted
 {% endhighlight %}
 {% endtabs %}
 
+## Step - 4 Add a Basic Scheduler view.
+
+1. To initialize the control, import the Scheduler namespace into your code.
+2. Initialize [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html).
+
+{% tabs %}
+{% highlight XAML hl_lines="3 5" %}
+
+<ContentPage   
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+
+    <scheduler:SfScheduler />
+</ContentPage>
+
+{% endhighlight %}
+{% highlight C# hl_lines="1 9 10" %}
+
+using Syncfusion.Maui.Scheduler;
+. . .
+
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        SfScheduler scheduler = new SfScheduler();
+        this.Content = scheduler;
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Change different scheduler views
 
 The [.NET MAUI Scheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html) control provides nine different types of views to display dates and it can be assigned to the control by using the [View](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_View) property. The control is assigned to the [Day](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerView.html#Syncfusion_Maui_Scheduler_SchedulerView_Day) view by default. The current date will be displayed initially for all the Scheduler views.
@@ -96,7 +108,7 @@ The [.NET MAUI Scheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sc
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<scheduler:SfScheduler x:Name="Scheduler" View="Month"/>
+<scheduler:SfScheduler x:Name="scheduler" View="Month"/>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
@@ -121,7 +133,7 @@ The [SchedulerAppointment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.S
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<scheduler:SfScheduler x:Name="Scheduler" />
+<scheduler:SfScheduler x:Name="scheduler" />
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="14" %}
@@ -139,7 +151,7 @@ appointment.Add(new SchedulerAppointment()
 });
 
 //Adding the scheduler appointment collection to the AppointmentsSource of .NET MAUI Scheduler.
-this.Scheduler.AppointmentsSource = appointment;
+this.scheduler.AppointmentsSource = appointment;
 
 {% endhighlight %}
 {% endtabs %}
@@ -372,7 +384,7 @@ Map those properties of the `Meeting` class with our [.NET MAUI Scheduler](https
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<scheduler:SfScheduler x:Name="Scheduler" 
+<scheduler:SfScheduler x:Name="scheduler" 
                        AppointmentsSource="{Binding Events}"
                        View="Week" >
     <scheduler:SfScheduler.AppointmentMapping>
@@ -425,7 +437,7 @@ Create meetings of type `ObservableCollection<Meeting>` and assign those appoint
 {% tabs %}
 {% highlight XAML hl_lines="2 4" %}
 
-<schedule:SfScheduler x:Name="Scheduler"
+<schedule:SfScheduler x:Name="scheduler"
                       AppointmentsSource="{Binding Events}">
     <schedule:SfScheduler.BindingContext>
         <local:SchedulerViewModel/>
@@ -454,7 +466,7 @@ The following code shows the Scheduler with `Tuesday` as the first day of the we
 {% tabs %}  
 {% highlight XAML %}
 
-<scheduler:SfScheduler x:Name="Scheduler" FirstDayOfWeek="Tuesday"/>
+<scheduler:SfScheduler x:Name="scheduler" FirstDayOfWeek="Tuesday"/>
 
 {% endhighlight %}
 {% highlight C# %}
@@ -476,7 +488,7 @@ The today highlight brush of Scheduler can be customized by using the [TodayHigh
 {% tabs %}  
 {% highlight XAML %}
 
-<scheduler:SfScheduler x:Name="Scheduler" TodayHighlightBrush="Orange"/>
+<scheduler:SfScheduler x:Name="scheduler" TodayHighlightBrush="Orange"/>
 
 {% endhighlight %}
 {% highlight C# %}
@@ -497,7 +509,7 @@ The vertical and horizontal line color of the Scheduler can be customized by usi
 {% tabs %}  
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<scheduler:SfScheduler x:Name="Scheduler" CellBorderBrush="Orange"/>
+<scheduler:SfScheduler x:Name="scheduler" CellBorderBrush="Orange"/>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
@@ -518,7 +530,7 @@ The Scheduler background color can be customized by using the `BackgroundColor` 
 {% tabs %}  
 {% highlight XAML %}
 
-<scheduler:SfScheduler x:Name="Scheduler" BackgroundColor="LightBlue"/>
+<scheduler:SfScheduler x:Name="scheduler" BackgroundColor="LightBlue"/>
 
 {% endhighlight %}
 {% highlight C# %}
@@ -537,7 +549,7 @@ By Using the [ShowNavigationArrows](https://help.syncfusion.com/cr/maui/Syncfusi
 {% tabs %}  
 {% highlight XAML %}
 
-<scheduler:SfScheduler x:Name="Scheduler" ShowNavigationArrows="False"/>
+<scheduler:SfScheduler x:Name="scheduler" ShowNavigationArrows="False"/>
 
 {% endhighlight %}
 {% highlight C# %}
@@ -558,7 +570,7 @@ Display the week number of the year in all Scheduler views of the [SfScheduler](
 {% tabs %}  
 {% highlight XAML %}
 
-<scheduler:SfScheduler x:Name="Scheduler" ShowWeekNumber="True"/>
+<scheduler:SfScheduler x:Name="scheduler" ShowWeekNumber="True"/>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
@@ -581,7 +593,7 @@ The Week number text style of the Scheduler can be customized by using the [Week
 {% tabs %}  
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<scheduler:SfScheduler x:Name="Scheduler" ShowWeekNumber="True"/>
+<scheduler:SfScheduler x:Name="scheduler" ShowWeekNumber="True"/>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1 14" %}  
