@@ -81,52 +81,35 @@ namespace GettingStarted
 1. To initialize the control, import the gauges namespace into your code.
 2. Initialize [SfLinearGauge](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html).
 
-{% capture codesnippet1 %}
-
 {% tabs %}
+{% highlight xaml tabtitle="XAML" hl_lines="3 5" %}
 
-{% highlight xaml %}
+<ContentPage   
+    . . .
+    xmlns:gauge="clr-namespace:Syncfusion.Maui.Gauges;assembly=Syncfusion.Maui.Gauges">
 
-xmlns:gauge="clr-namespace:Syncfusion.Maui.Gauges;assembly=Syncfusion.Maui.Gauges"
+    <gauge:SfLinearGauge />
+
+</ContentPage>
 
 {% endhighlight %}
-
-{% highlight c# %}
+{% highlight c# tabtitle="C#" hl_lines="1 9 10" %}
 
 using Syncfusion.Maui.Gauges;
+. . .
+
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        SfLinearGauge gauge = new SfLinearGauge();
+        this.Content = gauge;
+    }
+}
 
 {% endhighlight %}
-
 {% endtabs %}
-
-{% endcapture %}
-
-{{ codesnippet1 | UnOrderList_Indent_Level_1 }} 
-
-* Initialize the SfLinearGauge control
-
-{% capture codesnippet2 %}
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<gauge:SfLinearGauge />
-
-{% endhighlight %}
-
-{% highlight c# %}
-
-SfLinearGauge gauge = new SfLinearGauge();
-this.Content = gauge;
-
-{% endhighlight %}
-
-{% endtabs %}
-
-{% endcapture %}
-
-{{ codesnippet2 | UnOrderList_Indent_Level_1 }}
 
 ## Add range to the linear gauge
 

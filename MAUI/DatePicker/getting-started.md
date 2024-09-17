@@ -7,51 +7,39 @@ control: SfDatePicker
 documentation: ug
 ---
 
-# Getting started with .NET MAUI Date Picker (SfDatePicker)
-This section explains how to add the Date Picker control. It covers only the basic features needed to get started with Syncfusion Date Picker.
+# Getting started with .NET MAUI Date Picker
+This section explains how to add the [.NET MAUI Date Picker](https://www.syncfusion.com/maui-controls/maui-datepicker) control. It covers only the basic features needed to get started with Syncfusion Date Picker. Follow the steps below to add a basic date picker to your project.
 
-## Creating an application using the .NET MAUI Date Picker
+## Prerequisites
 
-1. Create a new .NET MAUI application in Visual Studio.
+Before proceeding, ensure the following are set up:
+1. Install [.NET 7 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/7.0) or later is installed.
+2. Set up a .NET MAUI environment with Visual Studio 2022 (v17.3 or later) or VS Code. For VS Code users, ensure that the .NET MAUI workload is installed and configured as described [here.](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-8.0&tabs=visual-studio-code)
 
-2. Syncfusion .NET MAUI components are available on [nuget.org](https://www.nuget.org/). To add the `SfDatePicker` to your project, open the NuGet package manager in Visual Studio, search for [Syncfusion.Maui.Picker](https://www.nuget.org/packages/Syncfusion.Maui.Picker), then install it.
+## Step 1: Create a New MAUI Project
 
-3. To initialize the control, import the control namespace `Syncfusion.Maui.Picker` in XAML or C# code.
+### Visual Studio
 
-4. Initialize `SfDatePicker.`
+1. Go to **File > New > Project** and choose the **.NET MAUI App** template.
+2. Name the project and choose a location, then click **Next**.
+3. Select the .NET framework version and click **Create**.
 
-{% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="3 5" %}
+### Visual Studio Code
 
-<ContentPage   
-    . . .
-    xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+1. Open the command palette by pressing `Ctrl+Shift+P` and type **.NET:New Project** and enter.
+2. Choose the **.NET MAUI App** template.
+3. Select the project location, type the project name and press enter.
+4. Then choose **Create project.**
 
-    <picker:SfDatePicker />
-</ContentPage>
+## Step 2: Install the Syncfusion MAUI Picker NuGet Package
 
-{% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="1 9 10" %}
+1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
+2. Search for [Syncfusion.Maui.Picker](https://www.nuget.org/packages/Syncfusion.Maui.Picker/) and install the latest version.
+3. Ensure the necessary dependencies are installed correctly, and the project is restored.
 
-using Syncfusion.Maui.Picker;
-. . .
+## Step 3: Register the handler
 
-public partial class MainPage : ContentPage
-{
-    public MainPage()
-    {
-        InitializeComponent();
-        SfDatePicker picker = new SfDatePicker();
-        this.Content = picker;
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-## Register the handler
-
-The `Syncfusion.Maui.Core` NuGet is a dependent package for all Syncfusion controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion core.
+The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion core.
 
 {% tabs %}
 {% highlight C# tabtitle="MauiProgram.cs" hl_lines="1 10" %}
@@ -76,6 +64,40 @@ namespace GettingStarted
 
             return builder.Build();
         }
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+## Step 4: Add a Basic date picker.
+
+1. To initialize the control, import the picker namespace into your code.
+2. Initialize [SfDatePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html).
+
+{% tabs %}
+{% highlight xaml tabtitle="XAML" hl_lines="3 5" %}
+
+<ContentPage   
+    . . .
+    xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+
+    <picker:SfDatePicker />
+</ContentPage>
+
+{% endhighlight %}
+{% highlight c# tabtitle="C#" hl_lines="1 9 10" %}
+
+using Syncfusion.Maui.Picker;
+. . .
+
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        SfDatePicker picker = new SfDatePicker();
+        this.Content = picker;
     }
 }
 
@@ -119,7 +141,7 @@ In the SfDatePicker control, validation buttons (OK and Cancel) can be customize
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="3" %}
 
-<picker:SfDatePicker x:Name="Picker">
+<picker:SfDatePicker x:Name="picker">
     <picker:SfDatePicker.FooterView>
         <picker:PickerFooterView ShowOkButton="True" Height="40" />
     </picker:SfDatePicker.FooterView>
@@ -149,7 +171,7 @@ The SfDatePicker control allows you to change the height and the width using the
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines=" 2 3" %}
 
-<picker:SfDatePicker x:Name="Picker" 
+<picker:SfDatePicker x:Name="picker" 
                     HeightRequest="280" 
                     WidthRequest="300">
 </picker:SfDatePicker>
@@ -177,7 +199,7 @@ The SfDatePicker control allows you to select the date using the [SelectedDate](
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="2" %}
 
-<picker:SfDatePicker x:Name="Picker" 
+<picker:SfDatePicker x:Name="picker" 
                      SelectedDate="9/7/2023">
 </picker:SfDatePicker>
 
@@ -203,12 +225,12 @@ The .NET MAUI DatePicker provides clear selection support, allowing you to clear
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<picker:SfDatePicker x:Name="Picker" />
+<picker:SfDatePicker x:Name="picker" />
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-    this.Picker.SelectedDate = null;
+    this.picker.SelectedDate = null;
 
 {% endhighlight %}  
 {% endtabs %}
