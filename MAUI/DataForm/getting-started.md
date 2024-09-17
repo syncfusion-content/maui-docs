@@ -9,9 +9,7 @@ documentation: ug
 
 # Getting Started with the .NET MAUI DataForm
 
-This section provides a quick overview of how to get started with the [.NET MAUI DataForm(SfDataForm)](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.html) for .NET MAUI and a walk-through to configure the .NET MAUI DataForm control in a real-time scenario.
-
-Follow the steps below to add a basic dataForm view to your project.
+This section provides a quick overview of how to get started with the [.NET MAUI DataForm(SfDataForm)](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.html) for .NET MAUI and a walk-through to configure the .NET MAUI DataForm control in a real-time scenario. Follow the steps below to add a basic dataForm view to your project.
 
 ## Prerequisites
 
