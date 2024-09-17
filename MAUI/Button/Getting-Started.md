@@ -9,23 +9,43 @@ documentation: ug
 
 # Getting Started with .NET MAUI Button
 
-This section explains the steps required to work with the [`.NET MAUI Button`](https://www.syncfusion.com/maui-controls/maui-button) control.
+This section guides you through setting up and configuring a [Button](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfButton.html) in your .NET MAUI application. Follow the steps below to add a basic Button to your project.
 
-## Creating an application with .NET MAUI Button
-
-This section explains the steps required to work with the [`SfButton`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfButton.html) control for .NET MAUI.
-
-To get start quickly with our .NET MAUI Button, you can check the below video.
+To quickly get started with the .NET MAUI Button, watch this video.
 
 {% youtube "https://www.youtube.com/watch?v=KTGkYShi1YE" %}
 
-## Adding a .NET MAUI Button reference
+## Prerequisites
 
-The Syncfusion .NET MAUI controls are available in [Nuget.org](https://www.nuget.org/). To add [`.NET MAUI Button`](https://www.syncfusion.com/maui-controls/maui-button) to your project, open the NuGet package manager in Visual Studio, search for [`Syncfusion.Maui.Buttons`](https://www.nuget.org/packages/Syncfusion.Maui.Buttons), and install it.
+Before proceeding, ensure the following are in place:
 
-## Handler registration 
+1. Install [.NET 7 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/7.0) or later.
+2. Set up a .NET MAUI environment with Visual Studio 2022 (v17.3 or later) or Visual Studio Code. For Visual Studio Code users, ensure that the .NET MAUI workload is installed and configured as described [here](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-8.0&tabs=visual-studio-code).
 
-In the MauiProgram.cs file, register the handler for the Syncfusion core.
+## Step 1: Create a New MAUI Project
+
+### Visual Studio
+
+1. Go to **File > New > Project** and choose the **.NET MAUI App** template.
+2. Name the project and choose a location. Then, click **Next**.
+3. Select the .NET framework version and click **Create**.
+
+### Visual Studio Code
+
+1. Open the Command Palette by pressing **Ctrl+Shift+P** and type **.NET:New Project** and press Enter.
+2. Choose the **.NET MAUI App** template.
+3. Select the project location, type the project name and press Enter.
+4. Then choose **Create project**
+
+## Step 2: Install the Syncfusion MAUI Buttons NuGet Package
+
+1. In **Solution Explorer**, right-click the project and choose **Manage NuGet Packages**.
+2. Search for [Syncfusion.Maui.Buttons](https://www.nuget.org/packages/Syncfusion.Maui.Buttons) and install the latest version.
+3. Ensure the necessary dependencies are installed correctly, and the project is restored.
+
+## Step 3: Register the Handler 
+
+[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) nuget is a dependent package for all Syncfusion controls of .NET MAUI. In the **MauiProgram.cs file**, register the handler for Syncfusion core.
 
 {% highlight c# hl_lines="6 17" %}
 using Microsoft.Maui;
@@ -57,7 +77,7 @@ namespace ButtonSample
 
 {% endhighlight %} 
 
-## Adding the .NET MAUI Button control
+## Step 4: Add a Basic Button control
 
 Step 1: Add the NuGet to the project as discussed in the above reference section. 
 
@@ -78,7 +98,7 @@ Step 2: Add the namespace as shown in the following code sample.
 
 ## Initialize Button
 
-Now, add the [`SfButton`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfButton.html) control with a required optimal name using the included namespace.
+Now, add the [SfButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfButton.html) control with a required optimal name using the included namespace.
 
 {% tabs %}
 
@@ -98,7 +118,9 @@ SfButton button = new SfButton();
 
 ## Button icon
 
-The button icon can be defined using the [`ImageSource`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ButtonBase.html#Syncfusion_Maui_Core_ButtonBase_ImageSource) and [`ShowIcon`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ButtonBase.html#Syncfusion_Maui_Core_ButtonBase_ShowIcon) properties of [`SfButton`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfButton.html).
+The button icon can be defined using the [ImageSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ButtonBase.html#Syncfusion_Maui_Core_ButtonBase_ImageSource) and [ShowIcon](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ButtonBase.html#Syncfusion_Maui_Core_ButtonBase_ShowIcon) properties of [SfButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfButton.html).
+
+N> Ensure that the images mentioned in the code snippets are located in the **Resources** folder of your sample project.
 
 {% tabs %}
 {% highlight xaml %}
@@ -123,9 +145,10 @@ button.ShowIcon = true;
 
 ![SfButton with button icon](images/getting-started/ButtonWithIcon.png)
 
+
 ## Button background image
 
-The button background image can be defined using the [`BackgroundImageSource`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ButtonBase.html#Syncfusion_Maui_Core_ButtonBase_BackgroundImageSource) property of [`SfButton`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfButton.html).
+The button background image can be defined using the [BackgroundImageSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ButtonBase.html#Syncfusion_Maui_Core_ButtonBase_BackgroundImageSource) property of [SfButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfButton.html).
 
 {% tabs %}
 {% highlight xaml %}

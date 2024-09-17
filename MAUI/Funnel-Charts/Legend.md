@@ -10,7 +10,7 @@ keywords: .net maui funnel chart, funnel-chart, chart legend, legend-wrap, legen
 
 # Legend in .NET MAUI Chart (SfFunnelChart)
 
-The [Legend](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartBase.html#Syncfusion_Maui_Charts_ChartBase_Legend) provides a list of data points, helping to identify the corresponding data points in the chart. Here's a detailed guide on how to define and customize the legend in the cartesian chart.
+The [Legend](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartBase.html#Syncfusion_Maui_Charts_ChartBase_Legend) provides a list of data points, helping to identify the corresponding data points in the chart. Here's a detailed guide on how to define and customize the legend in the funnel chart.
 
 ## Defining the legend
 
@@ -82,6 +82,56 @@ this.Content = chart;
 
 {% endtabs %}
 
+## Customizing labels
+
+The appearance of the legend label can be customized using the [`LabelStyle`]() property. 
+
+* [`TextColor`]() – Gets or sets the color of the label.
+* [`FontFamily`]() - Gets or sets the font family for the legend label. 
+* [`FontAttributes`]() - Gets or sets the font style for the legend label. 
+* [`FontSize`]() - Gets or sets the font size for the legend label.
+* [`Margin`]() - Gets or sets the margin size of labels.
+
+{% tabs %} 
+
+{% highlight xaml %}
+
+<chart:SfFunnelChart ItemsSource="{Binding Data}" 
+                     XBindingPath="Name"
+                     YBindingPath="Value">
+    <chart:SfFunnelChart.Legend>
+        <chart:ChartLegend>
+            <chart:ChartLegend.LabelStyle>
+                <chart:ChartLegendLabelStyle TextColor="Blue" Margin="5" FontSize="18" FontAttributes="Bold" FontFamily="PlaywriteAR-Regular"/>
+            </chart:ChartLegend.LabelStyle>
+        </chart:ChartLegend>
+    </chart:SfFunnelChart.Legend>
+</chart:SfFunnelChart>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+SfFunnelChart chart = new SfFunnelChart()
+{
+    XBindingPath = "Name",
+    YBindingPath = "Value",
+    ItemsSource = new ViewModel().Data,
+};
+
+chart.Legend = new ChartLegend();
+chart.Legend.LabelStyle.TextColor = Color.Blue;
+chart.Legend.LabelStyle.FontSize = 18;
+chart.Legend.LabelStyle.FontAttributes = FontAttributes.Bold;
+chart.Legend.LabelStyle.Margin = 5;
+chart.Legend.LabelStyle.FontFamily = "PlaywriteAR-Regular";
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Legend labels customization support in Maui Chart](Legend-images/legend_label_style.png)
+
 ## Legend icon
 To specify the legend icon based on the associated series type, use the [LegendIcon](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfFunnelChart.html#Syncfusion_Maui_Charts_SfFunnelChart_LegendIcon) property and change its type using the [ChartLegendIconType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLegendIconType.html) enum values. The default value of the LegendIcon property is `Circle`.
 
@@ -148,6 +198,45 @@ chart.Legend = new ChartLegend()
 };
 
 this.Content = chart;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+## Toggle the series visibility
+The visibility of segments in the funnel chart can be controlled by tapping the legend item using the [ToggleSeriesVisibility](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLegend.html?tabs=tabid-1%2Ctabid-3%2Ctabid-7%2Ctabid-12%2Ctabid-5%2Ctabid-10#Syncfusion_Maui_Charts_ChartLegend_ToggleSeriesVisibility) property. The default value of ToggleSeriesVisibility is `false`.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<chart:SfFunnelChart ItemsSource="{Binding Data}" 
+                     XBindingPath="Name"         
+                     YBindingPath="Value">
+    . . .
+    <chart:SfFunnelChart.Legend>
+        <chart:ChartLegend ToggleSeriesVisibility="True"/>
+    </chart:SfFunnelChart.Legend>
+    . . .
+</chart:SfFunnelChart>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+ChartViewModel viewModel = new();
+
+SfFunnelChart funnelChart = new SfFunnelChart()
+{
+    ItemsSource = viewModel.Data,
+    XBindingPath = "Name",
+    YBindingPath = "Value"
+};
+
+funnelChart.Legend = new ChartLegend()
+{
+    ToggleSeriesVisibility = true
+};
 
 {% endhighlight %}
 
@@ -286,6 +375,27 @@ this.Content = chart;
 {% endtabs %}
 
 ![Legend layout for funnel chart](Legend-images/funnel_chart.png)
+
+## Event 
+
+**LegendItemCreated**
+
+The [`LegendItemCreated`]() event is triggered when the chart legend item is created. The argument contains the [`LegendItem`]() object. The following properties are present in [`LegendItem`]().
+
+* [`Text`]() – used to get or set the text of the label.
+* [`TextColor`]() – used to get or set the color of the label.
+* [`FontFamily`]() - used to get or set the font family for the legend label. 
+* [`FontAttributes`]() - used to get or set the font style for the legend label. 
+* [`FontSize`]() - used to get or set the font size for the legend label.
+* [`TextMargin`]() - used to get or set the margin size of labels.
+* [`IconBrush`]() - used to change the color of the legend icon.
+* [`IconType`]() - used to get or set the icon type for the legend icon.
+* [`IconHeight`]() - used to get or set the icon height of the legend icon.
+* [`IconWidth`]() - used to get or set the icon width of the legend icon.
+* [`IsToggled`]() - used to get or set the toggle visibility of the legend.
+* [`DisableBrush`]() - used to get or set the color of the legend when toggled.
+* [`Index`]() - used to get index position of the legend.
+* [`Item`]() - used to get the data object for the associated segment.
 
 ## Limitations
 * Do not add items explicitly.

@@ -7,21 +7,45 @@ control: SfAutocomplete
 documentation: ug
 ---
 
-# Getting Started with .NET MAUI Autocomplete (SfAutocomplete)
+# Getting Started with .NET MAUI Autocomplete
 
-This section explains how to add the Autocomplete control and bind data to it. This section covers only the basic features needed to get started with the Syncfusion [Autocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) control.
+This section guides you through setting up and configuring a [Autocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) in your .NET MAUI application. Follow the steps below to add a basic Autocomplete to your project.
 
-To get start quickly with our .NET MAUI Autocomplete, you can check the below video.
+To quickly get started with the .NET MAUI Autocomplete, watch this video.
 
 {% youtube "https://www.youtube.com/watch?v=ontSh2NZvE4" %}
 
-## Adding a .NET MAUI Autocomplete reference
+## Prerequisites
 
-Syncfusion .NET MAUI controls are available in [Nuget.org](https://www.nuget.org/). To add [.NET MAUI Autocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) to your project, open the NuGet package manager in Visual Studio, search for [Syncfusion.Maui.Inputs](https://www.nuget.org/packages/Syncfusion.Maui.Inputs) and then install it.
+Before proceeding, ensure the following are in place:
 
-## Handler registration 
+1. Install [.NET 7 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/7.0) or later.
+2. Set up a .NET MAUI environment with Visual Studio 2022 (v17.3 or later) or Visual Studio Code. For Visual Studio Code users, ensure that the .NET MAUI workload is installed and configured as described [here](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-8.0&tabs=visual-studio-code).
 
- In the MauiProgram.cs file, register the handler for Syncfusion core.
+## Step 1: Create a New MAUI Project
+
+### Visual Studio
+
+1. Go to **File > New > Project** and choose the **.NET MAUI App** template.
+2. Name the project and choose a location. Then, click **Next**.
+3. Select the .NET framework version and click **Create**.
+
+### Visual Studio Code
+
+1. Open the Command Palette by pressing **Ctrl+Shift+P** and type **.NET:New Project** and press Enter.
+2. Choose the **.NET MAUI App** template.
+3. Select the project location, type the project name and press Enter.
+4. Then choose **Create project**
+
+## Step 2: Install the Syncfusion MAUI Inputs NuGet Package
+
+1. In **Solution Explorer**, right-click the project and choose **Manage NuGet Packages**.
+2. Search for [Syncfusion.Maui.Inputs](https://www.nuget.org/packages/Syncfusion.Maui.Inputs) and install the latest version.
+3. Ensure the necessary dependencies are installed correctly, and the project is restored.
+
+## Step 3: Register the handler
+
+ [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) nuget is a dependent package for all Syncfusion controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion core.
 
 {% highlight c# hl_lines="6 17" %}
 using Microsoft.Maui;
@@ -53,7 +77,7 @@ namespace AutocompleteSample
 
 {% endhighlight %} 
 
-## Create a Simple .NET MAUI Autocomplete
+## Step 4: Add a Basic Autocomplete
 
 The .NET MAUI Autocomplete control can be configured entirely using C# code or XAML markup. The following steps explain how to create a [.NET MAUI Autocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) (SfAutocomplete) and configure its elements:
 
@@ -77,7 +101,7 @@ Step 1: Add the namespace as shown in the following code sample:
 
 {% endtabs %}
 
-Step 2: Set the control as the content in a `ContentPage.`
+Step 2: Set the control as the content in a ContentPage.
 
 {% tabs %}
 
@@ -100,9 +124,9 @@ Content = autocomplete;
 
 {% endtabs %}
 
-## Populating items using data binding
+## Step 5: Populate items using data binding
 
-The [.NET MAUI Autocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) control can be bound to an external data source using the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_ItemsSource) property. Now, let's create Model and ViewModel classes to populate items with social media details in the [Autocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html).
+The [.NET MAUI Autocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) control can be bound to an external data source using the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_ItemsSource) property. Now, let's create Model and ViewModel classes to populate items with social media details in the Autocomplete.
 
 **Step 1:**  Create a simple model class called 'SocialMedia' with fields 'ID' and 'Name', and then populate social media data in the 'SocialMediaViewModel'.
 
@@ -165,6 +189,7 @@ Now, populate this 'SocialMediaViewModel' data in the [Autocomplete](https://hel
             <!--Setting ItemsSource-->
             <editors:SfAutocomplete x:Name="autocomplete" 
                                     WidthRequest="250"
+                                    HeightRequest = "50"
                                     ItemsSource="{Binding SocialMedias}" />
         </ContentPage.Content>
 </ContentPage>
@@ -174,27 +199,32 @@ Now, populate this 'SocialMediaViewModel' data in the [Autocomplete](https://hel
 {% highlight C# %}
 
 SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
-autocomplete.BindingContext = socialMediaViewModel;
-autocomplete.ItemsSource = SocialMediaViewModel.SocialMedias;
+this.BindingContext = socialMediaViewModel;
+SfAutocomplete autocomplete = new SfAutocomplete(); 
+autocomplete.WidthRequest = 250;
+autocomplete.HeightRequest = 50;
+autocomplete.ItemsSource = socialMediaViewModel.SocialMedias;
+Content = autocomplete;
 
 {% endhighlight %}
 {% endtabs %}
 
-N> Set the 'SocialMediaViewModel' instance as the `BindingContext` of your control. This is done to bind the properties of 'SocialMediaViewModel' to the `Autocomplete`.
+N> Set the BindingContext of your page to an instance of SocialMediaViewModel. This allows you to bind the properties of SocialMediaViewModel to the Autocomplete control.
 
-**Step 3:** Set the `TextMemberPath` and `DisplayMemberPath`.
+**Step 3:** Set the **TextMemberPath** and **DisplayMemberPath**.
 
 The [.NET MAUI Autocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) control is populated with a list of social media options. However, since the 'SocialMedia' model includes two properties, 'Name' and 'ID', it's necessary to specify which property should be used as the display value in both the selection box portion and the drop-down suggestion list of the Autocomplete control.
 
-**TextMemberPath**: This property path is used to retrieve the value that will be displayed in the selection box portion of the [.NET MAUI Autocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) control when an item is selected. The default value is `String.Empty`.
+**TextMemberPath**: This property path is used to retrieve the value that will be displayed in the selection box portion of the [.NET MAUI Autocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) control when an item is selected. The default value is **String.Empty**.
 
-**DisplayMemberPath**: This property path is used to specify the name or path of the property that will be displayed for each data item in the drop-down list. The default value is `String.Empty`.
+**DisplayMemberPath**: This property path is used to specify the name or path of the property that will be displayed for each data item in the drop-down list. The default value is **String.Empty**.
 
 {% tabs %}
 {% highlight xaml %}
 
 <editors:SfAutocomplete x:Name="autocomplete"
                         WidthRequest="250" 
+                        HeightRequest = "50"
                         DisplayMemberPath = "Name"
                         TextMemberPath = "Name"
                         ItemsSource="{Binding SocialMedias}" />
@@ -202,8 +232,12 @@ The [.NET MAUI Autocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui
 {% endhighlight %}
 {% highlight C# %}
 
+SfAutocomplete autocomplete = new SfAutocomplete(); 
+autocomplete.WidthRequest = 250;
+autocomplete.HeightRequest = 50;
 autocomplete.DisplayMemberPath = "Name";
 autocomplete.TextMemberPath = "Name";
+autocomplete.ItemsSource = socialMediaViewModel.SocialMedias;
 
 {% endhighlight %}
 {% endtabs %}

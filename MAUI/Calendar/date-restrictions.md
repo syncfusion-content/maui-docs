@@ -27,7 +27,7 @@ The [MinimumDate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.S
 {% endhighlight %}
 {% endtabs %}
 
-![Month view Minimum DateTime in .NET MAUI Calendar.](images/date-restriction/maui-month-view-minimum-date.png)
+![Month view minimum datetime in .NET MAUI Calendar.](images/date-restriction/net-maui-month-view-minimum-date.png)
 
 ## Maximum date
 The [MaximumDate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_MaximumDate) property will restrict the forward navigation of date selection and also you cannot swipe beyond the maximum date range.
@@ -47,7 +47,7 @@ this.Calendar.MaximumDate = DateTime.Now.AddDays(5);
 {% endhighlight %}
 {% endtabs %}
 
-![Month view Maximum DateTime in .NET MAUI Calendar.](images/date-restriction/maui-month-view-maximum-date.png)
+![Month view maximum dtetime in .NET MAUI Calendar.](images/date-restriction/net-maui-month-view-maximum-date.png)
 
 ## Enable past dates
 To enable or disable the dates before today's date using the [EnablePastDates](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_EnablePastDates) property of the `SfCalendar` and you cannot select the dates before the today date while it is disabled.
@@ -68,7 +68,7 @@ this.Calendar.EnablePastDates = false;
 {% endhighlight %}
 {% endtabs %}
 
-![Month view Enable past dates in .NET MAUI Calendar.](images/date-restriction/Enable-past-date-in-maui-calendar.png)
+![Month view enable past dates in .NET MAUI Calendar.](images/date-restriction/enable-past-date-in-net-maui-calendar.png)
 
 ## Selectable day predicate
 The [SelectableDayPredicate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_SelectableDayPredicate) of the `SfCalendar` decides whether the cell is selectable or not in calendar and if you want to disable the particular selected date in a calendar. Easily prevent the selection of weekends by disabling them. If the callback returns true, the date will be selectable in the Calendar.
@@ -96,4 +96,4 @@ this.Calendar.SelectableDayPredicate = (date) =>
 {% endhighlight %}
 {% endtabs %}
 
-![Month view Selectable Day Predicate in .NET MAUI Calendar.](images/date-restriction/maui-selectable-day-predicate.png)
+![Month view selectable day predicate in .NET MAUI Calendar.](images/date-restriction/net-maui-selectable-day-predicate.png){:width="271" height="351"}

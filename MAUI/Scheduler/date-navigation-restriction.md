@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Date navigations in .NET MAUI Scheduler control | Syncfusion
+title: Date Navigations in .NET MAUI Scheduler Control | Syncfusion
 description: Learn here all about date navigations and restriction feature of Syncfusion .NET MAUI Scheduler (SfScheduler) control and more.
 platform: maui
 control: SfScheduler
 documentation: ug
 ---
 
-# Date navigation and restriction in .NET MAUI Scheduler
+# Date Navigation and Restriction in .NET MAUI Scheduler
 
 ## Date navigation
 
@@ -148,11 +148,34 @@ this.Content = scheduler;
 {% endhighlight %}
 {% endtabs %}
 
-![allow-view-navigation-in-all-scheduler-views-in-maui-scheduler](images/date-navigation-restriction/allow-view-navigation-in-all-scheduler-views-in-maui-scheduler.gif)
+![Allow view navigation in .NET MAUI Scheduler.](images/date-navigation-restriction/allow-view-navigation-in-net-maui-scheduler.gif)
 
 N>
 * The default value of `AllowViewNavigation` is `false.`
 * The `AllowViewNavigation` is not applicable for the `day` and `timeline day` views.
+
+### Show date picker
+
+You can enable the date picker for the scheduler by using the `ShowDatePickerButton` property in the `SfScheduler`, which displays the date picker in the header view. It allows you to quickly switch between, months, years, decades or century where you can directly jump to a specific date by selecting it from a date picker.
+
+{% tabs %}
+{% highlight XAML hl_lines="2"%}
+
+ <scheduler:SfScheduler x:Name="Scheduler" 
+                       ShowDatePickerButton="True">
+</scheduler:SfScheduler>
+
+{% endhighlight %}
+{% highlight C# hl_lines="2" %}
+
+SfScheduler scheduler = new SfScheduler();
+scheduler.ShowDatePickerButton = true;
+this.Content = scheduler;
+
+{% endhighlight %}
+{% endtabs %}
+
+![Date picker in Scheduler](images/date-navigation-restriction/scheduler-date-navigation.jpeg){:width="325" height="600" loading="lazy" .lazy .shadow-effect .section-padding .img-padding}
 
 ### Allowed views
 

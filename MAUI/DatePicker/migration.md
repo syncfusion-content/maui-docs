@@ -186,8 +186,8 @@ this.Content = datePicker;
 </tr>
 <tr>
 <td>{{'[CancelCommand](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.SfDatePicker.html#Syncfusion_XForms_Pickers_SfDatePicker_CancelCommandProperty)'| markdownify }}</td>
-<td>Nil</td>
-<td>Not Supported.</td>
+<td>{{'[DeclineCommand]()'| markdownify }}</td>
+<td>Gets or sets a command to decline a selected date of SfDatePicker.</td>
 </tr>
 <tr>
 <td>{{'[Date](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.SfDatePicker.html#Syncfusion_XForms_Pickers_SfDatePicker_DateProperty)'| markdownify }}</td>
@@ -231,8 +231,8 @@ this.Content = datePicker;
 </tr>
 <tr>
 <td>{{'[OkCommand](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.SfDatePicker.html#Syncfusion_XForms_Pickers_SfDatePicker_OkCommandProperty)'| markdownify }}</td>
-<td>Nil</td>
-<td>Not Supported.</td>
+<td>{{'[AcceptCOmmand]()'| markdownify }}</td>
+<td>Gets or sets a command to accept a selected date of SfDatePicker.</td>
 </tr>
 <tr>
 <td>{{'[YearInterval](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.SfDatePicker.html#Syncfusion_XForms_Pickers_SfDatePicker_YearIntervalProperty)'| markdownify }}</td>

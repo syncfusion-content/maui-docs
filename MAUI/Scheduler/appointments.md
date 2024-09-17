@@ -526,7 +526,7 @@ var date3 = 12/16/2021 10:00:00 AM;
 
 #### How to get the occurrence appointment from the recurring appointment?
 
-The [GetOccurenceAppointment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRecurrenceManager.html#Syncfusion_Maui_Scheduler_SchedulerRecurrenceManager_GetDateTimeOccurrences_System_String_System_DateTime_System_Nullable_System_DateTime__System_Nullable_System_DateTime__System_Nullable_System_DateTime__) method of the `.NET MAUI Scheduler` returns the occurrence appointment for the given pattern appointment at the specified date.
+The [GetOccurrenceAppointment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRecurrenceManager.html#Syncfusion_Maui_Scheduler_SchedulerRecurrenceManager_GetDateTimeOccurrences_System_String_System_DateTime_System_Nullable_System_DateTime__System_Nullable_System_DateTime__System_Nullable_System_DateTime__) method of the `.NET MAUI Scheduler` returns the occurrence appointment for the given pattern appointment at the specified date.
 
 {% tabs %}
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="3" %}
@@ -539,7 +539,7 @@ var occurrenceAppointment = SchedulerRecurrenceManager.GetOccurrenceAppointment(
 
 #### How to get the recurring pattern appointment of the occurrence appointment? 
 
-The [GetOccurenceAppointment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRecurrenceManager.html#Syncfusion_Maui_Scheduler_SchedulerRecurrenceManager_GetDateTimeOccurrences_System_String_System_DateTime_System_Nullable_System_DateTime__System_Nullable_System_DateTime__System_Nullable_System_DateTime__) method of the `.NET MAUI Scheduler` returns the pattern appointment for the provided occurrence appointment.
+The [GetOccurrenceAppointment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRecurrenceManager.html#Syncfusion_Maui_Scheduler_SchedulerRecurrenceManager_GetDateTimeOccurrences_System_String_System_DateTime_System_Nullable_System_DateTime__System_Nullable_System_DateTime__System_Nullable_System_DateTime__) method of the `.NET MAUI Scheduler` returns the pattern appointment for the provided occurrence appointment.
 
 {% tabs %}
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="2" %}
@@ -881,6 +881,56 @@ N>
 * The recurrenceExceptions should be in a Universal Time Coordinates (UTC) time zone.
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/RecursiveExceptionAppointment/BusinessObject)
+
+## Suspend and resume the appointment UI rendering
+
+Schedule allows you to suspend and resume the appointment UI update while performing collection changes (Add/Remove/Reset) to improve UI rendering when working with large appointment collections. `SuspendAppointmentViewUpdate ` method will suspend appointment UI rendering until you resume it when large number of data added dynamically in schedule `AppointmentSource` to avoid each time updating UI when collection changes. After data added dynamically in schedule, you can call `ResumeAppointmentViewUpdate ` to update the appointment UI rendering. 
+
+{% tabs %}
+{% highlight c# %}
+
+// Creating an instance for the scheduler appointment collection.
+var appointment = new ObservableCollection<SchedulerAppointment>();
+ 
+//Adding scheduler appointment in the scheduler appointment collection. 
+appointment.Add(new SchedulerAppointment()
+{
+    StartTime = DateTime.Today.AddHours(9),
+    EndTime = DateTime.Today.AddHours(11),
+    Subject = "Client Meeting",
+    Location = "Hutchison road",
+});
+ 
+//Adding the scheduler appointment collection to the AppointmentsSource of .NET MAUI Scheduler.
+this.Scheduler.AppointmentsSource = appointment;
+ 
+this.Scheduler.ViewChanged += Scheduler_ViewChanged;
+ 
+ 
+private void Scheduler_ViewChanged(object? sender, SchedulerViewChangedEventArgs e)
+{
+    // Suspends the Appointment Update.
+    this.Scheduler.SuspendAppointmentViewUpdate();
+ 
+    for (int i = 0; i < e.NewVisibleDates.Count; i++)
+    {
+        var visibleDate = e.NewVisibleDates[i].Date;
+        var scheduleAppointment = new SchedulerAppointment()
+        {
+            StartTime = visibleDate.AddHours(10),
+            EndTime = visibleDate.AddHours(12),
+            Subject = visibleDate.ToString("dd/MM/yyyy"),
+            Background = Colors.Red,
+        };
+        appointment.Add(scheduleAppointment);
+    }
+ 
+    // Resumes the Appointment Update.
+    this.Scheduler.ResumeAppointmentViewUpdate();
+}
+
+{% endhighlight %}  
+{% endtabs %}
 
 ## Appointment appearance customization
 

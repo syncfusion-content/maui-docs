@@ -105,7 +105,7 @@ The following gif image illustrates the result of the above code.
 
 ### Single Circle
 
-The SingleCircle animation is an one of the built-in animations in [.NET MAUI Busy Indicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html?tabs=tabid-1). Refer to the following code example. Here, we’ll set the animation type as `SingleCircle`
+The SingleCircle animation is an one of the built-in animations in [.NET MAUI Busy Indicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html?tabs=tabid-1). Refer to the following code example. Here, we’ll set the animation type as [SingleCircle.](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.AnimationType.html#Syncfusion_Maui_Core_AnimationType_SingleCircle)
 
 {% tabs %}
 
@@ -135,7 +135,7 @@ The following gif image illustrates the result of the above code.
 
 ### Double Circle
 
-The DoubleCircle animation is an one of the built-in animations in [.NET MAUI Busy Indicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html?tabs=tabid-1). Refer to the following code example. Here, we’ll set the animation type as `DoubleCircle`
+The DoubleCircle animation is an one of the built-in animations in [.NET MAUI Busy Indicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html?tabs=tabid-1). Refer to the following code example. Here, we’ll set the animation type as [DoubleCircle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.AnimationType.html#Syncfusion_Maui_Core_AnimationType_DoubleCircle)
 
 {% tabs %}
 
@@ -162,3 +162,31 @@ SfBusyIndicator busyIndicator = new SfBusyIndicator()
 The following gif image illustrates the result of the above code.
 
 ![Double Circle](Images/AnimationType/DoubleCircle.png)
+
+### Globe
+
+The Globe animation is one of the built-in animations in [.NET MAUI BusyIndicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html?tabs=tabid-1). Refer to the following code example. Here, we’ll set the [AnimationType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html#Syncfusion_Maui_Core_SfBusyIndicator_AnimationType) as `Globe`.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+    <core:SfBusyIndicator AnimationType="Globe" IsRunning="True"/>                        
+                          
+{% endhighlight %}
+
+{% highlight C# %}
+
+    SfBusyIndicator busyIndicator = new SfBusyIndicator()
+    {
+        AnimationType = AnimationType.Globe,
+        IsRunning = true
+    };
+
+{% endhighlight %}
+
+{% endtabs %}
+
+The following gif image illustrates the result of the above code.
+
+![Global](Images/AnimationType/Globe.gif)
