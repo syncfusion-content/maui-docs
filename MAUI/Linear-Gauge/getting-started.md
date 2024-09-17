@@ -9,20 +9,77 @@ documentation: ug
 
 # Getting Started with .NET MAUI Linear Gauge
 
-This section explains the steps required to add the [`.NET MAUI Linear Gauge`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html?tabs=tabid-1) control and its elements such as scale, range, and pointer. This section covers only basic features needed to get started with Syncfusion linear gauge control.
+This section explains the steps required to add the [`.NET MAUI Linear Gauge`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html?tabs=tabid-1) control and its elements such as scale, range, and pointer. This section covers only basic features needed to get started with Syncfusion linear gauge control. Follow the steps below to add a basic linear gauge to your project.
 
 To get start quickly with our .NET MAUI Linear Gauge, you can check the below video.
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=wclf360zOPc"%}
 
-## Creating an application using the .NET MAUI Linear Gauge
+## Prerequisites
 
-* Create a new .NET MAUI application in the Visual Studio.
+Before proceeding, ensure the following are set up:
+1. Install [.NET 7 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/7.0) or later is installed.
+2. Set up a .NET MAUI environment with Visual Studio 2022 (v17.3 or later) or VS Code. For VS Code users, ensure that the .NET MAUI workload is installed and configured as described [here.](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-8.0&tabs=visual-studio-code)
 
-* Syncfusion .NET MAUI components are available on [nuget.org](https://www.nuget.org/). To add SfLinearGauge to your project, open the NuGet package manager in Visual Studio, search for [Syncfusion.Maui.Gauges] then install that.
+## Step 1: Create a New MAUI Project
 
-* Import the control namespace `Syncfusion.Maui.Gauges` in XAML or C# code.
+### Visual Studio
+
+1. Go to **File > New > Project** and choose the **.NET MAUI App** template.
+2. Name the project and choose a location, then click **Next**.
+3. Select the .NET framework version and click **Create**.
+
+### Visual Studio Code
+
+1. Open the command palette by pressing `Ctrl+Shift+P` and type **.NET:New Project** and enter.
+2. Choose the **.NET MAUI App** template.
+3. Select the project location, type the project name and press enter.
+4. Then choose **Create project.**
+
+## Step 2: Install the Syncfusion MAUI Gauges NuGet Package
+
+1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
+2. Search for [Syncfusion.Maui.Gauges](https://www.nuget.org/packages/Syncfusion.Maui.Gauges/) and install the latest version.
+3. Ensure the necessary dependencies are installed correctly, and the project is restored.
+
+## Step 3: Register the handler
+
+The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion core.
+
+{% tabs %}
+{% highlight C# tabtitle="MauiProgram.cs" hl_lines="1 10" %}
+
+using Syncfusion.Maui.Core.Hosting;
+namespace GettingStarted
+{
+    public static class MauiProgram
+    {
+        public static MauiApp CreateMauiApp()
+        {
+            var builder = MauiApp.CreateBuilder();
+
+            builder.ConfigureSyncfusionCore();
+            builder
+            .UseMauiApp<App>()
+            .ConfigureFonts(fonts =>
+            {
+                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+                fonts.AddFont("Segoe-mdl2.ttf", "SegoeMDL2");
+            });
+
+            return builder.Build();
+        }
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+## Step 4: Add a Basic linear gauge.
+
+1. To initialize the control, import the gauges namespace into your code.
+2. Initialize [SfLinearGauge](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html).
 
 {% capture codesnippet1 %}
 
@@ -69,42 +126,7 @@ this.Content = gauge;
 
 {% endcapture %}
 
-{{ codesnippet2 | UnOrderList_Indent_Level_1 }} 
-
-### Register the handler
-
-Syncfusion.Maui.Core NuGet is a dependent package for all Syncfusion controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion core.
-
-{% highlight c# tabtitle="~/MauiProgram.cs" hl_lines="17" %}
-
-using Microsoft.Maui;
-using Microsoft.Maui.Hosting;
-using Microsoft.Maui.Controls.Compatibility;
-using Microsoft.Maui.Controls.Hosting;
-using Microsoft.Maui.Controls.Xaml;
-using Syncfusion.Maui.Core.Hosting;
-
-namespace GaugeMauiSample
-{
-    public static class MauiProgram
-    {
-        public static MauiApp CreateMauiApp()
-        {
-            var builder = MauiApp.CreateBuilder();
-            builder
-            .UseMauiApp<App>()
-            .ConfigureSyncfusionCore()
-            .ConfigureFonts(fonts =>
-            {
-                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-            });
-
-            return builder.Build();
-        }
-    }
-}
-
-{% endhighlight %} 
+{{ codesnippet2 | UnOrderList_Indent_Level_1 }}
 
 ## Add range to the linear gauge
 

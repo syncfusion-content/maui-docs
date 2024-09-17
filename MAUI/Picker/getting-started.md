@@ -31,7 +31,7 @@ Before proceeding, ensure the following are set up:
 3. Select the project location, type the project name and press enter.
 4. Then choose **Create project.**
 
-## Step 2: Install the Syncfusion MAUI ProgressBar NuGet Package
+## Step 2: Install the Syncfusion MAUI Picker NuGet Package
 
 1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
 2. Search for [Syncfusion.Maui.Picker](https://www.nuget.org/packages/Syncfusion.Maui.Picker/) and install the latest version.
