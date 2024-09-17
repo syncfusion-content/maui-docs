@@ -9,9 +9,9 @@ documentation: ug
 
 # Getting Started with .NET MAUI Rotator
 
-This section explains how to add the Rotator control and bind data to it. This section covers only the basic features needed to get started with the Syncfusion [.NET MAUI Rotator](https://www.syncfusion.com/maui-controls/maui-rotator) control.
+This section guides you through setting up and configuring a [Rotator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html?tabs=tabid-1) in your .NET MAUI application. Follow the steps below to add a basic Rotator to your project.
 
-To get start quickly with our .NET MAUI TextInputLayout, you can check the below video.
+To get start quickly with our .NET MAUI Rotator, you can check the below video.
 
 {% youtube "https://www.youtube.com/watch?v=EjyvLta5u4o" %}
 
@@ -43,7 +43,7 @@ Before proceeding, ensure the following are in place:
 
 ## Step 3: Register the Handler
 
-[Syncfusion.Maui.Core nuget](https://www.nuget.org/packages/Syncfusion.Maui.Core) is a dependent package for all Syncfusion controls of .NET MAUI. In the **MauiProgram.cs file**, register the handler for Syncfusion core.
+[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) nuget is a dependent package for all Syncfusion controls of .NET MAUI. In the **MauiProgram.cs file**, register the handler for Syncfusion core.
 
 {% highlight c# hl_lines="6 17" %}
 
@@ -150,6 +150,8 @@ We can populate the rotator’s items by using any one of the following ways,
 The below is an simple example for adding rotator items using SfRotatorItem, for more details on populating data click [Here](https://help.syncfusion.com/maui/rotator/Populating-data)
 
 The following code example illustrates to add list of Images in Rotator ,
+
+N> Ensure that the images mentioned in the code snippets are located in the **Resources** folder of your sample project.
 
 {% tabs %}
 

@@ -44,7 +44,7 @@ Before proceeding, ensure the following are in place:
 
 ## Step 3: Register the Handler
 
-[Syncfusion.Maui.Core nuget](https://www.nuget.org/packages/Syncfusion.Maui.Core) is a dependent package for all Syncfusion controls of .NET MAUI. In the **MauiProgram.cs file**, register the handler for Syncfusion core.
+[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) nuget is a dependent package for all Syncfusion controls of .NET MAUI. In the **MauiProgram.cs file**, register the handler for Syncfusion core.
 
 {% highlight c# hl_lines="6 17" %}   
 using Microsoft.Maui;
@@ -76,7 +76,7 @@ namespace TextInputLayoutSample
 
 {% endhighlight %}
 
-## Step 4:  Add a Basic TextInputLayout
+## Step 4: Add a Basic TextInputLayout
 
 Step 1: Add the NuGet to the project as discussed in the above reference section.
 

@@ -13,7 +13,8 @@ This section explains the steps required to add the [DateTime Range Slider](http
 
 To get start quickly with MAUI SfDateTimeRangeSlider, you can check on this video:
 
-{% youtube "https://www.youtube.com/embed/4mdAax8B4n4" %}
+<style>#MAUIDateTimeRangeSliderVideoTutorial{width : 90% !important; height: 350px !important }</style>
+<iframe id='MAUIDateTimeRangeSliderVideoTutorial' src='https://www.youtube.com/embed/4mdAax8B4n4'></iframe>
 
 ## Prerequisites
 
@@ -35,7 +36,7 @@ Before proceeding, ensure the following are in place:
 3.Select the project location, type the project name and press enter.
 4.Then choose **Create project.
 
-## Step 2: Install the Syncfusion MAUI Rotator NuGet Package
+## Step 2: Install the Syncfusion MAUI DateTime Range Slider NuGet Package
 
 1.In **Solution Explorer**, right-click the project and choose **Manage NuGet Packages**.
 2.Search for [Syncfusion.Maui.Sliders](https://www.nuget.org/packages/Syncfusion.Maui.Sliders) and install the latest version.
@@ -43,7 +44,7 @@ Before proceeding, ensure the following are in place:
 
 ## Step 3: Register the Handler
 
-[Syncfusion.Maui.Core nuget](https://www.nuget.org/packages/Syncfusion.Maui.Core) is a dependent package for all Syncfusion controls of .NET MAUI. In the **MauiProgram.cs file**, register the handler for Syncfusion core.
+[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) nuget is a dependent package for all Syncfusion controls of .NET MAUI. In the **MauiProgram.cs file**, register the handler for Syncfusion core.
 
 {% highlight C# %}
 
