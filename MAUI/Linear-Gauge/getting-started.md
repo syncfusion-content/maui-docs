@@ -37,7 +37,7 @@ Before proceeding, ensure the following are set up:
 3. Select the project location, type the project name and press enter.
 4. Then choose **Create project.**
 
-## Step 2: Install the Syncfusion MAUI Linear Gauge NuGet Package
+## Step 2: Install the Syncfusion MAUI Gauges NuGet Package
 
 1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
 2. Search for [Syncfusion.Maui.Gauges](https://www.nuget.org/packages/Syncfusion.Maui.Gauges/) and install the latest version.
@@ -75,60 +75,40 @@ namespace GettingStarted
 {% endhighlight %}
 {% endtabs %}
 
-## Step 4: Add a Basic Linear Gauge view.
+## Step 4: Add a Basic linear gauge.
 
-* Create a new .NET MAUI application in the Visual Studio.
-
-* Syncfusion .NET MAUI components are available on [nuget.org](https://www.nuget.org/). To add SfLinearGauge to your project, open the NuGet package manager in Visual Studio, search for [Syncfusion.Maui.Gauges] then install that.
-
-* Import the control namespace `Syncfusion.Maui.Gauges` in XAML or C# code.
-
-{% capture codesnippet1 %}
+1. To initialize the control, import the gauges namespace into your code.
+2. Initialize [SfLinearGauge](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html).
 
 {% tabs %}
+{% highlight xaml tabtitle="XAML" hl_lines="3 5" %}
 
-{% highlight xaml %}
+<ContentPage   
+    . . .
+    xmlns:gauge="clr-namespace:Syncfusion.Maui.Gauges;assembly=Syncfusion.Maui.Gauges">
 
-xmlns:gauge="clr-namespace:Syncfusion.Maui.Gauges;assembly=Syncfusion.Maui.Gauges"
+    <gauge:SfLinearGauge />
+
+</ContentPage>
 
 {% endhighlight %}
-
-{% highlight c# %}
+{% highlight c# tabtitle="C#" hl_lines="1 9 10" %}
 
 using Syncfusion.Maui.Gauges;
+. . .
+
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        SfLinearGauge gauge = new SfLinearGauge();
+        this.Content = gauge;
+    }
+}
 
 {% endhighlight %}
-
 {% endtabs %}
-
-{% endcapture %}
-
-{{ codesnippet1 | UnOrderList_Indent_Level_1 }} 
-
-* Initialize the SfLinearGauge control
-
-{% capture codesnippet2 %}
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<gauge:SfLinearGauge />
-
-{% endhighlight %}
-
-{% highlight c# %}
-
-SfLinearGauge gauge = new SfLinearGauge();
-this.Content = gauge;
-
-{% endhighlight %}
-
-{% endtabs %}
-
-{% endcapture %}
-
-{{ codesnippet2 | UnOrderList_Indent_Level_1 }} 
 
 ## Add range to the linear gauge
 
