@@ -11,6 +11,11 @@ documentation: ug
 
 This section provides a quick overview of how to get started with the [.NET MAUI Segmented control (SfSegmentedControl)](https://www.syncfusion.com/maui-controls/maui-segmented-control) for .NET MAUI and a walk-through to configure the .NET MAUI Segmented control in a real-time scenario. Follow the steps below to add .NET MAUI Segmented control to your project.
 
+To get start quickly with our .NET MAUI Segment, you can check the below video.
+
+{% youtube
+"youtube:https://youtu.be/CVFBv5eE_RY?si=amYxmTkb0uCwHWIr"%}
+
 ## Prerequisites
 
 Before proceeding, ensure the following are setup:
@@ -70,7 +75,7 @@ The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/)
 
 ## Step 4: Add .NET MAUI Segmented Control
 
-1. To initialize the control, import the **Buttons** namespace into your code.
+1. To initialize the control, import the `Syncfusion.Maui.Buttons` namespace into your code.
 2. Initialize [SfSegmentedControl](https://www.syncfusion.com/maui-controls/maui-segmented-control).
 
 {% tabs %}

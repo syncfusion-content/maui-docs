@@ -75,7 +75,7 @@ namespace GettingStarted
 
 ## Step 4: Add .NET MAUI Date picker control
 
-1. To initialize the control, import the picker namespace into your code.
+1. To initialize the control, import the `Syncfusion.Maui.Picker` namespace into your code.
 2. Initialize [SfDatePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html).
 
 {% tabs %}

@@ -77,7 +77,8 @@ namespace GettingStarted
 
 ## Step 4: Add .NET MAUI Backdrop page control
 
-Create a page and import the SfBackdropPage namespace along with XAML namespaces in .NET MAUI.
+1. To initialize the control, import the `Syncfusion.Maui.Backdrop` namespace into your code.
+2. Initialize [SfBackdropPage](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Backdrop.SfBackdropPage.html).
 
 {% tabs %}
 

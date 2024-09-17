@@ -77,7 +77,7 @@ namespace GettingStarted
 
 ## Step 4: Add .NET MAUI Calendar control
 
-1. To initialize the control, import the `Syncfusion.MAUI.Calendar` namespace into your code.
+1. To initialize the control, import the `Syncfusion.Maui.Calendar` namespace into your code.
 2. Initialize [SfCalendar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html).
 
 {% tabs %}

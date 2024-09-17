@@ -77,7 +77,8 @@ namespace GettingStarted
 
 ## Step 4: Add .NET MAUI Barcode generator 
 
-Add the following namespace to add .NET MAUI Barcode Generator.
+1. To initialize the control, import the `Syncfusion.Maui.Barcode` namespace into your code.
+2. Initialize [SfBarcodeGenerator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.SfBarcodeGenerator.html).
 
 {% tabs %}
 

@@ -75,7 +75,7 @@ namespace GettingStarted
 
 ## Step 4: Add .NET MAUI Time picker control
 
-1. To initialize the control, import the progressbar namespace into your code.
+1. To initialize the control, import the `Syncfusion.Maui.Picker` namespace into your code.
 2. Initialize [SfTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html).
 
 {% tabs %}

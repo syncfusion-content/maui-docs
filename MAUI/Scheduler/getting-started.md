@@ -78,7 +78,7 @@ namespace GettingStarted
 
 ## Step 4: Add a .NET MAUI Scheduler view
 
-1. To initialize the control, import the Scheduler namespace into your code.
+1. To initialize the control, import the `Syncfusion.Maui.Scheduler` namespace into your code.
 2. Initialize [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html).
 
 {% tabs %}

@@ -81,7 +81,7 @@ namespace MyProject
 
 ## Step 4: Add .NET MAUI Maps
 
-1. To initialize the control, import the **Maps** namespace into your code.
+1. To initialize the control, import the `Syncfusion.Maui.Maps` namespace into your code.
 2. Initialize [SfMaps](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.SfMaps.html)
 
 {% tabs %}

@@ -77,7 +77,7 @@ namespace GettingStarted
 
 ## Step 4: Add .NET MAUI Linear gauge control
 
-1. To initialize the control, import the gauges namespace into your code.
+1. To initialize the control, import the `Syncfusion.Maui.Gauges` namespace into your code.
 2. Initialize [SfLinearGauge](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html).
 
 {% tabs %}

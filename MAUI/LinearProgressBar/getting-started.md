@@ -77,7 +77,8 @@ namespace GettingStarted
 
 ## Step 4: Add .NET MAUI Linear progress bar control
 
-Add the following namespace.
+1. To initialize the control, import the `Syncfusion.Maui.ProgressBar` namespace into your code.
+2. Initialize [SfLinearProgressBar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfLinearProgressBar.html).
 
 {% tabs %}
 

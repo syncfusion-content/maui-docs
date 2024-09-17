@@ -75,7 +75,7 @@ namespace GettingStarted
 
 ## Step 4: Add .NET MAUI Cards control
 
-1. To initialize the control, import the cards namespace into your code.
+1. To initialize the control, import the `Syncfusion.Maui.Cards` namespace into your code.
 2. Initialize [SfCards](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cards.html).
 
 {% tabs %}

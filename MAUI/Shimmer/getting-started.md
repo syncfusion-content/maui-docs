@@ -45,7 +45,7 @@ Before proceeding, ensure the following are set up:
 
 ## Step 3: Register the handler
 
-The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion controls of .NET MAUI. In the**MauiProgram.cs** file, register the handler for Syncfusion core.
+The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion controls of .NET MAUI. In the **MauiProgram.cs** file, register the handler for Syncfusion core.
 
 {% tabs %}
 {% highlight C# tabtitle="MauiProgram.cs" hl_lines="1 10" %}
@@ -77,7 +77,7 @@ namespace GettingStarted
 
 ## Step 4: Add .NET MAUI Shimmer control
 
-1. To initialize the control, import the shimmer namespace into your code.
+1. To initialize the control, import the `Syncfusion.Maui.Shimmer` namespace into your code.
 2. Initialize [SfShimmer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Shimmer.SfShimmer.html).
 
 {% tabs %}

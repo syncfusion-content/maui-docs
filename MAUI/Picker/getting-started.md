@@ -75,7 +75,7 @@ namespace GettingStarted
 
 ## Step 4: Add .NET MAUI Picker control
 
-1. To initialize the control, import the picker namespace into your code.
+1. To initialize the control, import the `Syncfusion.Maui.Picker` namespace into your code.
 2. Initialize [SfPicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfPicker.html).
 
 {% tabs %}

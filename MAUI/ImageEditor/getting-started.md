@@ -12,6 +12,11 @@ keywords: .net maui imageEditor, .net maui image editing, image view maui.
 
 This section explains the steps to create and load an image to the [.Net MAUI ImageEditor(SfImageEditor)](https://www.syncfusion.com/maui-controls/maui-image-editor) control. Follow the steps below to add .NET MAUI ImageEditor control to your project.
 
+To get start quickly with our .NET MAUI ImageEditor, you can check the below video.
+
+{% youtube
+"youtube:https://youtu.be/Gkkh52xSehM?si=_WKWcnGgob0DofXe"%}
+
 ## Prerequisites
 
 Before proceeding, ensure the following are setup:
@@ -74,7 +79,7 @@ namespace GettingStarted
 
 ## Step 4: Add .NET MAUI ImageEditor
 
-1. To initialize the control, import the **ImageEditor** namespace into your code.
+1. To initialize the control, import the `Syncfusion.Maui.ImageEditor` namespace into your code.
 2. Initialize [SfImageEditor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html).
 
 {% tabs %}

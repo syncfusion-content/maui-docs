@@ -12,7 +12,7 @@ This section explains how to add the [.NET MAUI Step ProgressBar](https://www.sy
 
 To get start quickly with our .NET MAUI Step ProgressBar, you can check the below video.
 
-{% youtube "https://www.youtube.com/watch?v=KQFPBITPTM4&list=PLDzXQPWT8wEBhk8dLwOtW-3XF7KEbe_3O" %}"
+{% youtube "https://youtu.be/KQFPBITPTM4?si=qbCQnMl1urV0DeLB" %}"
 
 ## Prerequisites
 
@@ -75,7 +75,7 @@ namespace GettingStarted
 
 ## Step 4: Add .NET MAUI Step Progress Bar control
 
-1. To initialize the control, import the progressbar namespace into your code.
+1. To initialize the control, import the `Syncfusion.Maui.ProgressBar` namespace into your code.
 2. Initialize [SfStepProgressBar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html).
 
 {% tabs %}
