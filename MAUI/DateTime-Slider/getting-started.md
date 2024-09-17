@@ -16,7 +16,7 @@ To quickly get started with the .NET MAUI DateTime Slider, watch this video.
 <style>#MAUIDateTimeSliderVideoTutorial{width : 90% !important; height: 350px !important }</style>
 <iframe id='MAUIDateTimeSliderVideoTutorial' src='https://www.youtube.com/embed/MIdD3Np485M'></iframe>
 
-### Prerequisites
+## Prerequisites
 
 Before proceeding, ensure the following are in place:
 
