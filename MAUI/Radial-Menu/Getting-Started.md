@@ -19,15 +19,22 @@ To get start quickly with our .NET MAUI RadialMenu, you can check the below vide
 
 Before proceeding, ensure the following are set up:
 1. Install [.NET 7 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/7.0) or later is installed.
-2. Set up a .NET MAUI environment with Visual Studio 2022 (v17.3 or later) or VS Code. For VS Code users, ensure that the .NET MAUI workload is installed and configured as described [here.](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-8.0&tabs=visual-studio-code)
-
-
+1. Set up a .NET MAUI environment with Visual Studio 2022 (v17.3 or later) or VS Code. For VS Code users, ensure that the .NET MAUI workload is installed and configured as described [here.](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-8.0&tabs=visual-studio-code)
 
 ## Step 1: Create a New MAUI Project
 
-1. Launch Visual Studio or VS Code.
-1. Navigate to **File > New > Project,** then select the **.NET MAUI App** template.
-1. Name the project and choose a location, then click Create.
+### Visual Studio
+
+1. Go to **File > New > Project** and choose the **.NET MAUI App** template.
+1. Name the project and choose a location, then click **Next**.
+1. Select the .NET framework version and click **Create**.
+
+### Visual Studio Code
+
+1. Open the command palette by pressing `Ctrl+Shift+P` and type **.NET:New Project** and enter.
+1. Choose the **.NET MAUI App** template.
+1. Select the project location, type the project name and press enter.
+1. Then choose **Create project.**
 
 ## Step 2: Install the Syncfusion MAUI RadialMenu NuGet Package
 
@@ -37,12 +44,11 @@ Before proceeding, ensure the following are set up:
 
 ## Step 3: Register the handler
 
-Syncfusion.Maui.Core NuGet is a dependent package for all Syncfusion controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion core.
+[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion core.
 
 {% tabs %}
 {% highlight C# tabtitle="MauiProgram.cs" hl_lines="1 8" %}
 
-    
     using Syncfusion.Maui.Core.Hosting;
     public static class MauiProgram
     {
@@ -74,9 +80,9 @@ l
 {% highlight xaml %}
 <ContentPage
     . . .    
-    xmlns:syncfusion="clr-namespace:Syncfusion.Maui.RadialMenu;assembly=Syncfusion.Maui.RadialMenu">
+    xmlns:radialMenu="clr-namespace:Syncfusion.Maui.RadialMenu;assembly=Syncfusion.Maui.RadialMenu">
     <StackLayout>
-        <syncfusion:SfRadialMenu />
+        <radialMenu:SfRadialMenu />
     </StackLayout>
 </ContentPage>
 
@@ -112,23 +118,23 @@ namespace RadialMenuGettingStarted
 
 <ContentPage 
             ...
-             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.RadialMenu;assembly=Syncfusion.Maui.RadialMenu">
-        <syncfusion:SfRadialMenu x:Name="radialMenu" 
+             xmlns:radialMenu="clr-namespace:Syncfusion.Maui.RadialMenu;assembly=Syncfusion.Maui.RadialMenu">
+        <radialMenu:SfRadialMenu x:Name="radialMenu" 
                                 CenterButtonText="Edit"
                                 CenterButtonFontSize="15">
-            <syncfusion:SfRadialMenu.Items>
-                <syncfusion:SfRadialMenuItem Text="Cut"
+            <radialMenu:SfRadialMenu.Items>
+                <radialMenu:SfRadialMenuItem Text="Cut"
                                             FontSize="15"/>
-                <syncfusion:SfRadialMenuItem Text="Copy"
+                <radialMenu:SfRadialMenuItem Text="Copy"
                                             FontSize="15"/>
-                <syncfusion:SfRadialMenuItem Text="Paste"
+                <radialMenu:SfRadialMenuItem Text="Paste"
                                             FontSize="15"/>
-                <syncfusion:SfRadialMenuItem Text="Crop"
+                <radialMenu:SfRadialMenuItem Text="Crop"
                                             FontSize="15"/>
-                <syncfusion:SfRadialMenuItem Text="Paint"
+                <radialMenu:SfRadialMenuItem Text="Paint"
                                             FontSize="15"/>
-            </syncfusion:SfRadialMenu.Items>
-        </syncfusion:SfRadialMenu>
+            </radialMenu:SfRadialMenu.Items>
+        </radialMenu:SfRadialMenu>
 </ContentPage>
 
 {% endhighlight %}
@@ -137,7 +143,7 @@ namespace RadialMenuGettingStarted
 
 using Syncfusion.Maui.RadialMenu;
 
-namespace RadialSample
+namespace RadialMenuGettingStarted
 {
     public partial class MainPage : ContentPage
     {

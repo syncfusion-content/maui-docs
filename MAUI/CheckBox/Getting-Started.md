@@ -24,9 +24,18 @@ Before proceeding, ensure the following are set up:
 
 ## Step 1: Create a New MAUI Project
 
-1. Launch Visual Studio or VS Code.
-1. Navigate to **File > New > Project,** then select the **.NET MAUI App** template.
-1. Name the project and choose a location, then click Create.
+### Visual Studio
+
+1. Go to **File > New > Project** and choose the **.NET MAUI App** template.
+1. Name the project and choose a location, then click **Next**.
+1. Select the .NET framework version and click **Create**.
+
+### Visual Studio Code
+
+1. Open the command palette by pressing `Ctrl+Shift+P` and type **.NET:New Project** and enter.
+1. Choose the **.NET MAUI App** template.
+1. Select the project location, type the project name and press enter.
+1. Then choose **Create project.**
 
 ## Step 2: Install the Syncfusion MAUI Buttons NuGet Package
 
@@ -36,7 +45,7 @@ Before proceeding, ensure the following are set up:
 
 ## Step 3: Register the handler
 
-Syncfusion.Maui.Core NuGet is a dependent package for all Syncfusion controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion core.
+[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) is a dependent package for all Syncfusion controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion core.
 
 {% highlight c# hl_lines="6 17" %}
 
@@ -47,7 +56,7 @@ using Microsoft.Maui.Controls.Hosting;
 using Microsoft.Maui.Controls.Xaml;
 using Syncfusion.Maui.Core.Hosting;
 
-namespace ButtonSample
+namespace CheckBoxGettingStarted
 {
     public static class MauiProgram
     {
@@ -81,8 +90,8 @@ namespace ButtonSample
 
 <ContentPage
     . . .    
-    xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons">
-   <syncfusion:SfCheckBox x:Name="checkBox"/>
+    xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons">
+   <buttons:SfCheckBox x:Name="checkBox"/>
 </ContentPage>
 
 {% endhighlight %}
@@ -113,7 +122,7 @@ You can set the caption of the CheckBox using the [Text]((https://help.syncfusio
 {% tabs %}
 {% highlight xaml %}
 
-    <syncfusion:SfCheckBox x:Name="checkBox" IsChecked="True" Text="CheckBox"/>
+    <buttons:SfCheckBox x:Name="checkBox" IsChecked="True" Text="CheckBox"/>
 
 {% endhighlight %}
 {% highlight c# %}
@@ -194,7 +203,7 @@ The check box can be used as a single or as a group. A single check box mostly u
 {% tabs %}
 {% highlight xaml %}
 
-    <syncfusion:SfCheckBox x:Name="checkBox" Text="I agree to the terms of services for this site" IsChecked="True"/> 
+    <buttons:SfCheckBox x:Name="checkBox" Text="I agree to the terms of services for this site" IsChecked="True"/> 
 
 {% endhighlight %}
 {% highlight c# %}
@@ -217,10 +226,10 @@ Multiple checkboxes can be used as a group for multi-select scenarios in which a
 
     <StackLayout Padding="20">
         <Label x:Name="label" Text="Pizza Toppings" Margin="0,10"/>
-        <syncfusion:SfCheckBox x:Name="pepperoni" Text="Pepperoni"/>
-        <syncfusion:SfCheckBox x:Name="beef" Text="Beef" IsChecked="True"/>
-        <syncfusion:SfCheckBox x:Name="mushroom" Text="Mushrooms"/>
-        <syncfusion:SfCheckBox x:Name="onion" Text="Onions" IsChecked="True"/>
+        <buttons:SfCheckBox x:Name="pepperoni" Text="Pepperoni"/>
+        <buttons:SfCheckBox x:Name="beef" Text="Beef" IsChecked="True"/>
+        <buttons:SfCheckBox x:Name="mushroom" Text="Mushrooms"/>
+        <buttons:SfCheckBox x:Name="onion" Text="Onions" IsChecked="True"/>
     </StackLayout>
 
 {% endhighlight %}
@@ -265,11 +274,11 @@ The Intermediate state is used when a group of sub-choices has both checked and 
 
     <StackLayout Padding="20">
         <Label x:Name="label" Margin="10" Text="Pizza Toppings"/>
-        <syncfusion:SfCheckBox x:Name="selectAll" Text="Select All" StateChanged="SelectAll_StateChanged"/>
-        <syncfusion:SfCheckBox x:Name="pepperoni" Text="Pepperoni" StateChanged="CheckBox_StateChanged" Margin="30,0"/>
-        <syncfusion:SfCheckBox x:Name="beef" Text="Beef" IsChecked="True" StateChanged="CheckBox_StateChanged" Margin="30,0"/>
-        <syncfusion:SfCheckBox x:Name="mushroom" Text="Mushrooms" StateChanged="CheckBox_StateChanged" Margin="30,0"/>
-        <syncfusion:SfCheckBox x:Name="onion" Text="Onions" IsChecked="True" StateChanged="CheckBox_StateChanged" Margin="30,0"/>
+        <buttons:SfCheckBox x:Name="selectAll" Text="Select All" StateChanged="SelectAll_StateChanged"/>
+        <buttons:SfCheckBox x:Name="pepperoni" Text="Pepperoni" StateChanged="CheckBox_StateChanged" Margin="30,0"/>
+        <buttons:SfCheckBox x:Name="beef" Text="Beef" IsChecked="True" StateChanged="CheckBox_StateChanged" Margin="30,0"/>
+        <buttons:SfCheckBox x:Name="mushroom" Text="Mushrooms" StateChanged="CheckBox_StateChanged" Margin="30,0"/>
+        <buttons:SfCheckBox x:Name="onion" Text="Onions" IsChecked="True" StateChanged="CheckBox_StateChanged" Margin="30,0"/>
     </StackLayout>
 
 {% endhighlight %}

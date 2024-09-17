@@ -22,13 +22,20 @@ Before proceeding, ensure the following are set up:
 1. Install [.NET 7 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/7.0) or later is installed.
 2. Set up a .NET MAUI environment with Visual Studio 2022 (v17.3 or later) or VS Code. For VS Code users, ensure that the .NET MAUI workload is installed and configured as described [here.](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-8.0&tabs=visual-studio-code)
 
-
-
 ## Step 1: Create a New MAUI Project
 
-1. Launch Visual Studio or VS Code.
-1. Navigate to **File > New > Project,** then select the **.NET MAUI App** template.
-1. Name the project and choose a location, then click Create.
+### Visual Studio
+
+1. Go to **File > New > Project** and choose the **.NET MAUI App** template.
+1. Name the project and choose a location, then click **Next**.
+1. Select the .NET framework version and click **Create**.
+
+### Visual Studio Code
+
+1. Open the command palette by pressing `Ctrl+Shift+P` and type **.NET:New Project** and enter.
+1. Choose the **.NET MAUI App** template.
+1. Select the project location, type the project name and press enter.
+1. Then choose **Create project.**
 
 ## Step 2: Install the Syncfusion MAUI Buttons NuGet Package
 
@@ -38,7 +45,7 @@ Before proceeding, ensure the following are set up:
 
 ## Step 3: Register the handler
 
-Syncfusion.Maui.Core NuGet is a dependent package for all Syncfusion controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion core.
+[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion core.
 
 {% highlight c# hl_lines="6 17" %}
 
@@ -49,7 +56,7 @@ using Microsoft.Maui.Controls.Hosting;
 using Microsoft.Maui.Controls.Xaml;
 using Syncfusion.Maui.Core.Hosting;
 
-namespace ButtonSample
+namespace RadioButtonGettingStarted
 {
     public static class MauiProgram
     {
@@ -82,8 +89,8 @@ namespace ButtonSample
 
 <ContentPage
     . . .    
-    xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons">
-        <syncfusion:SfRadioButton x:Name="radioButton"/>     
+    xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons">
+        <buttons:SfRadioButton x:Name="radioButton"/>     
 </ContentPage>
 
 {% endhighlight %}
@@ -114,7 +121,7 @@ The .NET MAUI Radio Button caption can be defined using the [Text](https://help.
 {% tabs %}
 {% highlight xaml %}
 
-    <syncfusion:SfRadioButton x:Name="radioButton" Text="Radio Button"/>
+    <buttons:SfRadioButton x:Name="radioButton" Text="Radio Button"/>
 
 {% endhighlight %}
 {% highlight c# %}
@@ -142,10 +149,10 @@ You can group multiple radio buttons together by using RadioGroup. Only one butt
 {% tabs %}
 {% highlight xaml %}
 
-    <syncfusion:SfRadioGroup x:Name="radioGroup">
-         <syncfusion:SfRadioButton x:Name="male" Text="Male"/>
-         <syncfusion:SfRadioButton x:Name="female" Text="Female" IsChecked="True"/>
-    </syncfusion:SfRadioGroup>
+    <buttons:SfRadioGroup x:Name="radioGroup">
+         <buttons:SfRadioButton x:Name="male" Text="Male"/>
+         <buttons:SfRadioButton x:Name="female" Text="Female" IsChecked="True"/>
+    </buttons:SfRadioGroup>
 
 {% endhighlight %}
 {% highlight c# %}
