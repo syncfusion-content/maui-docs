@@ -42,13 +42,11 @@ Suggestions can be shown in a item by creating a `AssistSuggestion` instance and
    {
          public partial class MainPage : ContentPage
          {
-            SfAIAssistView sfAIAssistView;
-            SuggestionsViewModel viewModel;
             public MainPage()
             {
               InitializeComponent();
-              this.sfAIAssistView = new SfAIAssistView();
-              this.viewModel = new SuggestionsViewModel();
+              SfAIAssistView sfAIAssistView = new SfAIAssistView();
+              SuggestionsViewModel viewModel = new SuggestionsViewModel();
               this.sfAIAssistView.AssistItems = viewModel.AssistItems;
               this.Content = sfAIAssistView;
              }
@@ -172,7 +170,7 @@ The `AssistItemSuggestion.Orientation` property allows you to display suggestion
 
 ## Prevent the chosen suggestion from being sent automatically.
 
-By default, when tapping or clicking the suggestion item, it will be sent as a request item immediately. So, to restrict this behavior and show the selected suggestion item in editor view, you can set the `SuggestionItemSelectedEventArgs.CancelRequest` to `true` within the `SuggestionItemSelected` event handler or the `SuggestionItemSelectedCommand` command's execution.
+By default, when tapping or clicking the suggestion item, it will be sent as a request item immediately. So, to restrict this behavior and show the selected suggestion item in editor view, you can set the `SuggestionItemSelectedEventArgs.CancelRequest` to true within the `SuggestionItemSelected` event handler or the `SuggestionItemSelectedCommand` command's execution.
 
 **SuggestionItemSelected event**
 
