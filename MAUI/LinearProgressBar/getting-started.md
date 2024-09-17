@@ -37,7 +37,7 @@ Before proceeding, ensure the following are set up:
 3. Select the project location, type the project name and press **Enter**.
 4. Then choose **Create project.**
 
-## Step 2: Install the Syncfusion >NET MAUI Linear ProgressBar NuGet Package
+## Step 2: Install the Syncfusion .NET MAUI Linear ProgressBar NuGet Package
 
 1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
 2. Search for [Syncfusion.Maui.ProgressBar](https://www.nuget.org/packages/Syncfusion.Maui.ProgressBar/) and install the latest version.
