@@ -11,7 +11,7 @@ documentation: ug
 
 This section explains the steps required to add the [RangeSlider](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfRangeSlider.html) control and its elements such as track, ticks, labels and tooltip. This section covers only basic features needed to know to get started with Syncfusion Range Slider.
 
-To get start quickly with .NET MAUI Range Slider, you can check the below video.
+To quickly get started with the .NET MAUI Range Slider, watch this video.
 
 {% youtube "https://www.youtube.com/watch?v=9W1N5rH0zD0" %}
 
@@ -19,27 +19,29 @@ To get start quickly with .NET MAUI Range Slider, you can check the below video.
 
 Before proceeding, ensure the following are in place:
 
-1.Install [.NET 7 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/7.0) or later.
-2.Set up a .NET MAUI environment with Visual Studio 2022 (v17.3 or later) or VS Code. For VS Code users, ensure that the .NET MAUI workload is installed and configured as described [here](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-8.0&tabs=visual-studio-code).
+1. Install [.NET 7 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/7.0) or later.
+2. Set up a .NET MAUI environment with Visual Studio 2022 (v17.3 or later) or Visual Studio Code. For Visual Studio Code users, ensure that the .NET MAUI workload is installed and configured as described [here](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-8.0&tabs=visual-studio-code).
 
 ## Step 1: Create a New MAUI Project
 
 ### Visual Studio
-1.Go to **File > New > Project** and choose the **.NET MAUI App** template.
-2.Name the project and choose a location, then click **Next**.
-3.Select the .NET framework version and click **Create**.
+
+1. Go to **File > New > Project** and choose the **.NET MAUI App** template.
+2. Name the project and choose a location. Then, click **Next**.
+3. Select the .NET framework version and click **Create**.
 
 ### Visual Studio Code
-1.Open the command palette by pressing `Ctrl+Shift+P` and type **.NET:New Project** and enter.
-2.Choose the **.NET MAUI** App template.
-3.Select the project location, type the project name and press enter.
-4.Then choose **Create project.
+
+1. Open the Command Palette by pressing **Ctrl+Shift+P** and type **.NET:New Project** and press Enter.
+2. Choose the **.NET MAUI App** template.
+3. Select the project location, type the project name and press Enter.
+4. Then choose **Create project**
 
 ## Step 2: Install the Syncfusion MAUI Sliders NuGet Package
 
-1.In **Solution Explorer**, right-click the project and choose **Manage NuGet Packages**.
-2.Search for [Syncfusion.Maui.Sliders](https://www.nuget.org/packages/Syncfusion.Maui.Sliders) and install the latest version.
-3.Ensure the necessary dependencies are installed correctly, and the project is restored.
+1. In **Solution Explorer**, right-click the project and choose **Manage NuGet Packages**.
+2. Search for [Syncfusion.Maui.Sliders](https://www.nuget.org/packages/Syncfusion.Maui.Sliders) and install the latest version.
+3. Ensure the necessary dependencies are installed correctly, and the project is restored.
 
 ## Step 3: Register the Handler
 
