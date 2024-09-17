@@ -70,7 +70,7 @@ The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/)
 
 ## Step 4: Add .NET MAUI DataForm control
 
-1. To initialize the control, import the **DataForm** namespace into your code.
+1. To initialize the control, import the **Syncfusion.MAUI.DataForm** namespace into your code.
 2. Initialize [SfDataForm](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html)
 
 {% tabs %}
