@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting started with .NET MAUI Circular ProgressBar
 
-This section explains the steps required to add the circular progress bar control with the progress and its customizable elements such as indeterminate, segment, progress fill, and track fill. This section covers only the basic features needed to know and gets started with the Syncfusion circular progress bar.
+This section explains the steps required to add the circular progress bar control with the progress and its customizable elements such as indeterminate, segment, progress fill, and track fill. This section covers only the basic features needed to know and gets started with the Syncfusion circular progress bar. Follow the steps below to add a basic calendar view to your project.
 
 To get start quickly with our .NET MAUI Circular ProgressBar, check the following video.
 
@@ -65,7 +65,6 @@ namespace GettingStarted
             .ConfigureFonts(fonts =>
             {
                 fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-                fonts.AddFont("Segoe-mdl2.ttf", "SegoeMDL2");
             });
 
             return builder.Build();

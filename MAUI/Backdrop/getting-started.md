@@ -65,7 +65,6 @@ namespace GettingStarted
             .ConfigureFonts(fonts =>
             {
                 fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-                fonts.AddFont("Segoe-mdl2.ttf", "SegoeMDL2");
             });
 
             return builder.Build();
@@ -76,7 +75,7 @@ namespace GettingStarted
 {% endhighlight %}
 {% endtabs %}
 
-## Step 4: Add a Basic Backdrop Page view.
+## Step 4: Add a Basic Backdrop page.
 
 Create a page and import the SfBackdropPage namespace along with XAML namespaces in .NET MAUI.
 
