@@ -33,15 +33,15 @@ Before starting, ensure the following are set up:
 3. Select the project location, type the project name and press enter.
 4. Then choose Create project
 
-## Step 2: Install the Syncfusion MAUI Charts NuGet Package
+## Step 2: Install the Syncfusion MAUI Sunburst Chart NuGet Package
 
 1. In Solution Explorer, right-click the project and choose Manage NuGet Packages.
-2. Search for Syncfusion.Maui.Charts on [nuget.org](https://www.nuget.org/) and install the latest version.
+2. Search for Syncfusion.Maui.SunburstChart on [nuget.org](https://www.nuget.org/) and install the latest version.
 3. Ensure all dependencies are correctly installed, and restore your project.
 
 ## Step 3: Add a Basic Sunburst Chart
 
-1. To initialize the control, import the Chart namespace into your code.
+1. To initialize the control, import the Sunburst Chart namespace into your code.
 2. Initialize [SfSunburstChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SfSunburstChart.html).
 
 {% tabs %} 
