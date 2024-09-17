@@ -17,20 +17,19 @@ By default, columns are sized smartly to arrange the default elements of the car
 
 {% highlight xaml %}
 
-    <kanban:SfKanban MinimumColumnWidth ="300" MaximumColumnWidth ="340">
-    </kanban:SfKanban>
+<kanban:SfKanban MinimumColumnWidth ="300" MaximumColumnWidth ="340">
+</kanban:SfKanban>
 
 {% endhighlight %}
 
 {% highlight C# %} 
 
-    kanban. MinimumColumnWidth = 300;
-    kanban. MaximumColumnWidth = 340;
+kanban.MinimumColumnWidth = 300;
+kanban.MaximumColumnWidth = 340;
 
 {% endhighlight %}
 
 {% endtabs %}
-
 
 You can also define the exact column width using [`ColumnWidth`]() property of [`SfKanban`]().
 
@@ -38,14 +37,14 @@ You can also define the exact column width using [`ColumnWidth`]() property of [
 
 {% highlight xaml %}
 
-    <kanban:SfKanban ColumnWidth ="250">
-    </kanban:SfKanban>
+<kanban:SfKanban ColumnWidth ="250">
+</kanban:SfKanban>
 
 {% endhighlight %}
 
 {% highlight C# %} 
 
-    kanban.ColumnWidth = 250;
+kanban.ColumnWidth = 250;
 
 {% endhighlight %}
 
@@ -53,34 +52,44 @@ You can also define the exact column width using [`ColumnWidth`]() property of [
 
 ## Categorizing Columns
 
-If [`ItemsSource`]() contains custom objects, the path of the property which can be used to categorize the card should be explicitly defined using [`ColumnMappingPath`]() property. By default, [`SfKanban`]() will automatically categorize the items using [`Category`]() property of [`KanbanModel`]().
+To categorize columns based on a specific property, you must explicitly define the property path using the [`ColumnMappingPath`]() property. However, only the properties of [`KanbanModel`]() can be assigned to [`ColumnMappingPath`](). By default, [`SfKanban`]() will categorize the items using the Category property of KanbanModel.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-    <kanban:SfKanban ColumnMappingPath="Group">
-    </kanban:SfKanban>
+<kanban:SfKanban ColumnMappingPath="ID">
+</kanban:SfKanban>
 
 {% endhighlight %}
 
 {% highlight C# %} 
 
-    kanban.ColumnMappingPath = "Group";
+kanban.ColumnMappingPath = "ID";
 
 {% endhighlight %}
 
 {% endtabs %}
 
-### Multiple category for a column
+### Category for a column
 
-More than one category can be mapped to a column by assigning multiple values to [Categories]() collection of [`KanbanColumn`](). For e.g., you can map "In progress, Validate" types under "In progress" column.
+You can assign a specific category to a column by setting the [Categories]() property of the [`KanbanColumn`](). This will display cards with the specified category under the corresponding column. For example, to map the "In Progress" category to the "In Progress" column
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<kanban:KanbanColumn x:Name="progressColumn" Categories="In Progress" />
+
+{% endhighlight %}
 
 {% highlight C# %} 
 
-    progressColumn.Categories = new List<object>() { "In Progress", "Validated" };
+progressColumn.Categories = new List<object>() { "In Progress" };
 
 {% endhighlight %}
+
+{% endtabs %}
 
 ## Headers
 
@@ -90,39 +99,37 @@ Header shows the category [`Title`](), items count, min and max informations of 
 
 {% highlight xaml %}
 
-     <kanban:SfKanban.HeaderTemplate >
-         <DataTemplate>
-             <StackLayout WidthRequest="300" HeightRequest="40"  BackgroundColor="Silver">
-                 <Label Margin="10" Text="{Binding Path=Title}" TextColor="Purple" HorizontalOptions="Start" />
-             </StackLayout>
-         </DataTemplate>
-     </kanban:SfKanban.HeaderTemplate>
+<kanban:SfKanban.HeaderTemplate >
+    <DataTemplate>
+        <StackLayout WidthRequest="300" HeightRequest="40"  BackgroundColor="Silver">
+            <Label Margin="10" Text="{Binding Path=Title}" TextColor="Purple" HorizontalOptions="Start" />
+        </StackLayout>
+    </DataTemplate>
+</kanban:SfKanban.HeaderTemplate>
 
 {% endhighlight %}
 
 {% highlight C# %} 
 
     var headerTemplate = new DataTemplate(() => {
-        StackLayout root = new StackLayout() { 
-            WidthRequest = 300, 
-            HeightRequest = 40, 
-            BackgroundColor = Color.Silver 
-        };
-        Label label = new Label();
-        label.Margin = new Thickness(10); 
-        label.SetBinding(Label.TextProperty, new Binding("Title") );
-        label.TextColor = Color.Purple;
-        label.HorizontalOptions = LayoutOptions.Start; 
-        root.Children.Add(label);
-        return root;
-        });
+    StackLayout root = new StackLayout() { 
+        WidthRequest = 300, 
+        HeightRequest = 40, 
+        BackgroundColor = Color.Silver 
+    };
+    Label label = new Label();
+    label.Margin = new Thickness(10); 
+    label.SetBinding(Label.TextProperty, new Binding("Title") );
+    label.TextColor = Color.Purple;
+    label.HorizontalOptions = LayoutOptions.Start; 
+    root.Children.Add(label);
+    return root;
+    });
     kanban.HeaderTemplate = headerTemplate;
 
 {% endhighlight %}
 
 {% endtabs %}
-
-The following output is displayed as a result of the above code example.
 
 ## Expand/Collapse Column
 
@@ -132,28 +139,26 @@ Columns can be expanded/collapsed by tapping the toggle button which is placed a
 
 {% highlight xaml %}
 
-    <kanban:SfKanban.Columns>
-        <kanban:KanbanColumn x:Name="column1" Title="To Do" IsExpanded="false" />
-        <kanban:KanbanColumn x:Name="column2" Title="In Progress" IsExpanded="false" />
-    </kanban:SfKanban.Columns>
+<kanban:SfKanban.Columns>
+    <kanban:KanbanColumn x:Name="column1" Title="To Do" IsExpanded="false" />
+    <kanban:KanbanColumn x:Name="column2" Title="In Progress" IsExpanded="false" />
+</kanban:SfKanban.Columns>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-    KanbanColumn column1 = new KanbanColumn();
-    column1.IsExpanded = false; 
-    KanbanColumn column2 = new KanbanColumn();
-    column2.IsExpanded = false;
+KanbanColumn column1 = new KanbanColumn();
+column1.IsExpanded = false; 
+KanbanColumn column2 = new KanbanColumn();
+column2.IsExpanded = false;
 
-    kanban.Columns.Add(column1);
-    kanban.Columns.Add(column2);
+kanban.Columns.Add(column1);
+kanban.Columns.Add(column2);
 
 {% endhighlight %}
 
 {% endtabs %}
-
-The following output is displayed as a result of the above code example.
 
 ## Enable/Disable Drag & Drop 
 
@@ -165,16 +170,16 @@ The following code is used to disable the drag operation from progress column.
 
 {% highlight xaml %}
 
-    <kanban:SfKanban.Columns>
-        <kanban:KanbanColumn AllowDrag="false"/>
-    </kanban:SfKanban.Columns>
+<kanban:SfKanban.Columns>
+    <kanban:KanbanColumn AllowDrag="false"/>
+</kanban:SfKanban.Columns>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-    KanbanColumn progressColumn = new KanbanColumn();
-    progressColumn.AllowDrag = false;
+KanbanColumn progressColumn = new KanbanColumn();
+progressColumn.AllowDrag = false;
 
 {% endhighlight %}
 
@@ -186,22 +191,20 @@ The following code is used to disable the drop operation of the cards into the p
 
 {% highlight xaml %}
 
-    <kanban:SfKanban.Columns>
-        <kanban:KanbanColumn AllowDrop="false"/>
-    </kanban:SfKanban.Columns>
+<kanban:SfKanban.Columns>
+    <kanban:KanbanColumn AllowDrop="false"/>
+</kanban:SfKanban.Columns>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-    KanbanColumn progressColumn = new KanbanColumn();
-    progressColumn.AllowDrop = false; 
+KanbanColumn progressColumn = new KanbanColumn();
+progressColumn.AllowDrop = false; 
 
 {% endhighlight %}
 
 {% endtabs %}
-
-The following output demonstrates the above example code.
 
 ## Items Count
 
@@ -209,7 +212,7 @@ The following output demonstrates the above example code.
 
 {% highlight C# %}
 
-    int count = todoColumn.ItemsCount;         
+int count = todoColumn.ItemsCount;         
 
 {% endhighlight %}
 
@@ -218,24 +221,24 @@ The following output demonstrates the above example code.
 
 [`MinimumLimit`]() and [`MaximumLimit`]() properties are used to define the minimum and maximum number of items in a column. If the actual items count is exceeded or lesser than the specified limits, the error bars are used to indicate this violation. Following properties of [`ErrorBarSettings`]() are used to customize the appearance of error bar.
 
-* [`Fill`]() - used to change the default color of the error bar.
-* [`MaxValidationFill`]() - used to change the maximum validation color of the error bar.
-* [`MinValidationFill`]() - used to change the minimum validation color of the error bar.
-* [`Height`]() - used to change the height of the error bar.
+* `Fill`, of type `Brush`, used to change the default color of the error bar.
+* `MaxValidationFill`, of type `Brush`, used to change the maximum validation color of the error bar.
+* `MinValidationFill`, of type `Brush`, used to change the minimum validation color of the error bar.
+* `Height`,of type `double`, used to change the height of the error bar.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-    <kanban:KanbanColumn x:Name="todoColumn" Title="To Do" MinimumLimit="2" MaximumLimit="1">
-    </kanban:KanbanColumn>
+<kanban:KanbanColumn x:Name="todoColumn" Title="To Do" MinimumLimit="2" MaximumLimit="1">
+</kanban:KanbanColumn>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-    todoColumn.MinimumLimit = 2; 
-    todoColumn.MaximumLimit = 1;   
+todoColumn.MinimumLimit = 2; 
+todoColumn.MaximumLimit = 1;   
 
 {% endhighlight %}
 
@@ -245,20 +248,29 @@ The following output demonstrates the above example code.
 
 {% highlight xaml %}
 
-    <kanban:KanbanColumn x:Name="todoColumn" Title="To Do" MinimumLimit="3" MaximumLimit="5">
-        <kanban:KanbanColumn.ErrorBarSettings>
-            <kanban:KanbanErrorBarSettings Fill="Green" MinValidationFill="Orange" MaxValidationFill="Red" Height="4"/>
-        </kanban:KanbanColumn.ErrorBarSettings>
-    </kanban:KanbanColumn>
+<kanban:KanbanColumn x:Name="todoColumn" Title="To Do" MinimumLimit="3" MaximumLimit="5">
+    <kanban:KanbanColumn.ErrorBarSettings>
+        <kanban:KanbanErrorBarSettings Fill="Green" MinValidationFill="Orange" MaxValidationFill="Red" Height="4"/>
+    </kanban:KanbanColumn.ErrorBarSettings>
+</kanban:KanbanColumn>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-    todoColumn.ErrorBarSettings.Fill = Colors.Green;
-    todoColumn.ErrorBarSettings.MinValidationFill = Colors.Orange;
-    todoColumn.ErrorBarSettings.MaxValidationFill = Colors.Red;
-    todoColumn.ErrorBarSettings.Height = 4;
+     KanbanColumn todoColumn = new KanbanColumn();
+     todoColumn.Title = "To Do";
+     todoColumn.MaximumLimit = 5;
+     todoColumn.MinimumLimit = 3;
+     KanbanErrorBarSettings kanbanErrorBarSettings = new KanbanErrorBarSettings()
+     {
+         Fill = Colors.Green,
+         MaxValidationFill = Colors.Red,
+         MinValidationFill = Colors.Orange,
+         Height = 4,
+     };
+     todoColumn.ErrorBarSettings = kanbanErrorBarSettings;
+     kanban.Columns.Add(todoColumn);
 
 {% endhighlight %}
 
