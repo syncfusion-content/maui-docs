@@ -87,9 +87,9 @@ namespace GettingStarted
 
 <ContentPage   
     . . .
-    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Calendar;assembly=Syncfusion.Maui.Calendar">
+    xmlns:calendar="clr-namespace:Syncfusion.Maui.Calendar;assembly=Syncfusion.Maui.Calendar">
 
-    <scheduler:SfCalendar />
+    <calendar:SfCalendar />
 </ContentPage>
 
 {% endhighlight %}

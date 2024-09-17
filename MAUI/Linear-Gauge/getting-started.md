@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with .NET MAUI Linear Gauge
 
-This section explains the steps required to add the [`.NET MAUI Linear Gauge`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html?tabs=tabid-1) control and its elements such as scale, range, and pointer. This section covers only basic features needed to get started with Syncfusion linear gauge control. Follow the steps below to add a basic calendar view to your project.
+This section explains the steps required to add the [`.NET MAUI Linear Gauge`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html?tabs=tabid-1) control and its elements such as scale, range, and pointer. This section covers only basic features needed to get started with Syncfusion linear gauge control. Follow the steps below to add a basic linear gauge to your project.
 
 To get start quickly with our .NET MAUI Linear Gauge, you can check the below video.
 

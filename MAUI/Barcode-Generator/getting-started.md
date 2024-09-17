@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with .NET MAUI Barcode Generator
 
-This section explains the steps required to add the [`.NET MAUI Barcode Generator`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.html) control. This section explains the steps required to add the barcode and set its symbology. This section covers only basic features needed to get started with Syncfusion barcode generator control. Follow the steps below to add a basic calendar view to your project.
+This section explains the steps required to add the [`.NET MAUI Barcode Generator`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.html) control. This section explains the steps required to add the barcode and set its symbology. This section covers only basic features needed to get started with Syncfusion barcode generator control. Follow the steps below to add a basic barcode generator to your project.
 
 To get start quickly with our .NET MAUI Barcode Generator, you can check the below video.
 

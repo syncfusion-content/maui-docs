@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with .NET MAUI Radial Gauge
 
-This section explains the steps required to add the [`.NET MAUI Radial Gauge`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfRadialGauge.html) control and its elements such as axis, range, pointer, and annotation. This section covers only basic features needed to get started with Syncfusion radial gauge control. Follow the steps below to add a basic calendar view to your project.
+This section explains the steps required to add the [`.NET MAUI Radial Gauge`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfRadialGauge.html) control and its elements such as axis, range, pointer, and annotation. This section covers only basic features needed to get started with Syncfusion radial gauge control. Follow the steps below to add a basic radial gauge to your project.
 
 To get start quickly with our .NET MAUI Radial Gauge, you can check the below video.
 
