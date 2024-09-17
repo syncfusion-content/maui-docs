@@ -10,6 +10,10 @@ documentation: ug
 # Getting started with .NET MAUI Time Picker
 This section explains how to add the [.NET MAUI Time Picker](https://www.syncfusion.com/maui-controls/maui-timepicker) control. It covers only the basic features needed to get started with the Syncfusion Time Picker. Follow the steps below to add a basic time picker to your project.
 
+To get start quickly with our .NET MAUI Time Picker, you can check the below video.
+
+{% youtube "youtube:https://youtu.be/m3Gn6S_8Oeo?si=AK9iY1m8G8sQ0zsA" %}
+
 ## Prerequisites
 
 Before proceeding, ensure the following are set up:

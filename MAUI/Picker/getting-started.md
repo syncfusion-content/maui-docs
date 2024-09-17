@@ -10,6 +10,10 @@ documentation: ug
 # Getting started with .NET MAUI Picker
 This section explains how to add the [.NET MAUI Picker](https://www.syncfusion.com/maui-controls/maui-picker) control. It covers only the basic features needed to get started with the Syncfusion Picker. Follow the steps below to add a basic picker to your project.
 
+To get start quickly with our .NET MAUI Picker, you can check the below video.
+
+{% youtube "youtube:https://youtu.be/w_pIsZqy5Hs?si=yGY1b9YP5du2vgwy" %}
+
 ## Prerequisites
 
 Before proceeding, ensure the following are set up:

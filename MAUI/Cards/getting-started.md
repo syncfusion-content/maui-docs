@@ -10,6 +10,10 @@ documentation: ug
 # Getting started with .NET MAUI Card
 This section details the process of integrating the [.NET MAUI Cards](https://www.syncfusion.com/maui-controls/maui-cards) control and focuses solely on the fundamental features required for initiating your exploration of Syncfusion Card. Follow the steps below to add a basic cards view to your project.
 
+To get start quickly with our .NET MAUI Cards, you can check the below video.
+
+{% youtube "youtube:https://youtu.be/hveapZxnOFY?si=DVJgc_jN-CKNSDg8" %}
+
 ## Prerequisites
 
 Before proceeding, ensure the following are set up:
