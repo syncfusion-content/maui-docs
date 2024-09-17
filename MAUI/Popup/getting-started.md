@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with .NET MAUI Popup
 
-This section guides you through setting up and configuring a Popup(SfPopup) in your .NET MAUI application. Follow the steps below to add a basic Popup to your project.
+This section guides you through setting up and configuring a [Popup](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html) in your .NET MAUI application. Follow the steps below to add a basic Popup to your project.
 
 To get start quickly with .NET MAUI Popup, you can check on this video:
 <style>#MAUIPopupVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUIPopupVideoTutorial' src='https://www.youtube.com/embed/HTk6JAGP-qE'></iframe>
@@ -22,26 +22,59 @@ Before proceeding, ensure the following are in place:
 
 ## Step 1: Create a .NET MAUI project
 
-**Visual Studio**
+### Visual Studio
 
  1. Go to **File > New > Project** and choose the **.NET MAUI App** template.
  2. Name the project and choose a location, then click **Next**.
  3. Select the .NET framework version and click **Create**.
 
-** Visual Code**
+### Visual Studio Code
 
  1. Open the command palette by pressing `Ctrl+Shift+P` and type **.NET:New Project** and enter.
  2. Choose the **.NET MAUI App** template.
  3. Select the project location, type the project name and press enter.
- 4. Then choose **Create project**
+ 4. Then choose **Create project**.
  
 ## Step 2: Install the Syncfusion MAUI Popup NuGet Package
  
  1. In **Solution Explorer**, right-click the project and choose **Manage NuGet Packages**.
- 2. Search for `Syncfusion.Maui.Popup` on [nuget.org](https://www.nuget.org/) and install the latest version.
- 3. Ensure all dependencies are correctly installed, and restore your project.
+ 2. Search for [Syncfusion.Maui.Popup](https://www.nuget.org/packages/Syncfusion.Maui.Popup) and install the latest version.
+ 3. Ensure the necessary dependencies are installed correctly, and the project is restored.
 
-## Step 3: Add a Basic Popup
+## Step 3: Register the handler
+
+The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) is a dependent package for all Syncfusion controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion core.
+
+{% tabs %}
+{% highlight c# tabtitle="MauiProgram.cs" hl_lines="4 20" %}
+using Microsoft.Maui.Controls.Hosting;
+using Microsoft.Maui.Controls.Xaml;
+using Microsoft.Maui.Hosting;
+using Syncfusion.Maui.Core.Hosting;
+
+namespace GettingStarted
+{
+    public class MauiProgram 
+    {
+        public static MauiApp CreateMauiApp()
+        {
+            var builder = MauiApp.CreateBuilder();
+            builder
+                .UseMauiApp<App>()
+                .ConfigureFonts(fonts =>
+                {
+                    fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+                });
+
+            builder.ConfigureSyncfusionCore();
+            return builder.Build();
+        }
+    }
+}
+{% endhighlight %} 
+{% endtabs %}
+
+## Step 4: Add a Basic Popup
 
  1. To initialize the control, import the `Syncfusion.Maui.Popup` namespace into your code.
  2. Initialize [SfPopup](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html).
@@ -72,39 +105,6 @@ public partial class MainPage : ContentPage
 }
 
 {% endhighlight %}
-{% endtabs %}
-
-## Step 4: Register the handler
-
-The `Syncfusion.Maui.Core` NuGet is a dependent package for all Syncfusion controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion core.
-
-{% tabs %}
-{% highlight c# tabtitle="MauiProgram.cs" hl_lines="4 20" %}
-using Microsoft.Maui.Controls.Hosting;
-using Microsoft.Maui.Controls.Xaml;
-using Microsoft.Maui.Hosting;
-using Syncfusion.Maui.Core.Hosting;
-
-namespace GettingStarted
-{
-    public class MauiProgram 
-    {
-        public static MauiApp CreateMauiApp()
-        {
-            var builder = MauiApp.CreateBuilder();
-            builder
-                .UseMauiApp<App>()
-                .ConfigureFonts(fonts =>
-                {
-                    fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-                });
-
-            builder.ConfigureSyncfusionCore();
-            return builder.Build();
-        }
-    }
-}
-{% endhighlight %} 
 {% endtabs %}
 
 ## Step 5: Displaying popup
