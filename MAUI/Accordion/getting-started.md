@@ -7,48 +7,44 @@ control: SfAccordion
 documentation: ug
 ---
 
-# Getting Started with MAUI Accordion (SfAccordion)
+# Getting Started with MAUI Accordion
 
-This section provides a quick overview of how to get started with the Accordion (SfAccordion) for .NET MAUI. Walk-through the entire process of creating the real world of this control.
-
+This section guides you through setting up and configuring a [Accordion](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.SfAccordion.html) in your .NET MAUI application. Follow the steps below to add a basic Accordion to your project.
 
 To get start quickly with .NET MAUI Accordion, you can check on this video:
 
 <style>#MAUIAccordionVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUIAccordionVideoTutorial' src='https://www.youtube.com/embed/AdZpwD3W2xE'></iframe>
 
-## Creating an application using the .NET MAUI Accordion
+## Prerequisites
+Before proceeding, ensure the following are in place:
 
- 1. Create a new .NET MAUI application in Visual Studio.
- 2. Syncfusion .NET MAUI components are available on [nuget.org](https://www.nuget.org/). To add SfAccordion to your project, open the NuGet package manager in Visual Studio, search for `Syncfusion.Maui.Expander` and install it.
- 3. Import the control namespace `Syncfusion.Maui.Accordion` in XAML or C# code.
- 4. Initialize the `SfAccordion` control.
+ 1. Install [.NET 7 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/7.0) or later.
+ 2. Set up a .NET MAUI environment with Visual Studio 2022 (v17.3 or later) or VS Code. For VS Code users, ensure that the .NET MAUI workload is installed and configured as described [here](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-8.0&tabs=visual-studio-code).
+
+## Step 1: Create a .NET MAUI project
+
+### Visual Studio
+
+ 1. Go to **File > New > Project** and choose the **.NET MAUI App** template.
+ 2. Name the project and choose a location, then click **Next**.
+ 3. Select the .NET framework version and click **Create**.
+
+### Visual Studio Code
+
+ 1. Open the command palette by pressing `Ctrl+Shift+P` and type **.NET:New Project** and enter.
+ 2. Choose the **.NET MAUI App** template.
+ 3. Select the project location, type the project name and press enter.
+ 4. Then choose **Create project**.
  
-{% tabs %}
-{% highlight xaml hl_lines="4" %}
-<ContentPage   
-    . . .
-      xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Accordion;assembly=Syncfusion.Maui.Expander">
-    <syncfusion:SfAccordion />
-</ContentPage>
-{% endhighlight %}
+ ## Step 2: Install the Syncfusion MAUI Expander NuGet Package
+ 
+ 1. In **Solution Explorer**, right-click the project and choose **Manage NuGet Packages**.
+ 2. Search for [Syncfusion.Maui.Expander](https://www.nuget.org/packages/Syncfusion.Maui.Expander) and install the latest version.
+ 3. Ensure the necessary dependencies are installed correctly, and the project is restored.
 
-{% highlight c# hl_lines="8" %}
-using Syncfusion.Maui.Accordion;
-. . .
-public partial class MainPage : ContentPage
-{
-    public MainPage()
-    {
-        InitializeComponent();
-        SfAccordion accordion = new SfAccordion();
-    }
-}
-{% endhighlight %}
-{% endtabs %}
+## Step 3: Register the handler
 
-## Register the handler
-
-The `Syncfusion.Maui.Core` NuGet package is a dependency for all Syncfusion controls in .NET MAUI. In the `MauiProgram.cs` file, you need to register the handler for Syncfusion core.
+The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) is a dependent package for all Syncfusion controls in .NET MAUI. In the `MauiProgram.cs` file, you need to register the handler for Syncfusion core.
 
 {% tabs %}
 {% highlight c# tabtitle="MauiProgram.cs" hl_lines="4 20" %}
@@ -78,10 +74,38 @@ namespace GettingStarted
 }
 {% endhighlight %} 
 {% endtabs %}
+ 
+ ## Step 4: Add a Basic Accordion
+ 
+ 1. To initialize the control, import the `Syncfusion.Maui.Accordion` namespace into your code.
+ 2. Initialize [SfAccordion](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.SfAccordion.html).
+ 
+{% tabs %}
+{% highlight xaml hl_lines="4" %}
+<ContentPage   
+    . . .
+      xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Accordion;assembly=Syncfusion.Maui.Expander">
+    <syncfusion:SfAccordion />
+</ContentPage>
+{% endhighlight %}
 
-## Defining accordion items 
+{% highlight c# hl_lines="8" %}
+using Syncfusion.Maui.Accordion;
+. . .
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        SfAccordion accordion = new SfAccordion();
+    }
+}
+{% endhighlight %}
+{% endtabs %}
 
-The [SfAccordion](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.SfAccordion.html) is a layout control with a vertically stacked list of accordion [items](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.SfAccordion.html#Syncfusion_Maui_Accordion_SfAccordion_Items) that comprise a [header](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.AccordionItem.html#Syncfusion_Maui_Accordion_AccordionItem_Header) and [content](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.AccordionItem.html#Syncfusion_Maui_Accordion_AccordionItem_Content). You can load any view in the header and content sections. Users can expand or collapse the content view by tapping header. 
+## Step 5: Define the accordion items
+
+Create the [AccordionItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.AccordionItem.html) instance that comprise a [header](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.AccordionItem.html#Syncfusion_Maui_Accordion_AccordionItem_Header) & [content](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.AccordionItem.html#Syncfusion_Maui_Accordion_AccordionItem_Content) and add it into [Items](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.SfAccordion.html#Syncfusion_Maui_Accordion_SfAccordion_Items) of `SfAccordion`.
 
 In this example, a Grid is loaded in both the header and content of accordion items.
 
@@ -159,9 +183,13 @@ N> When loading Label as direct children of `Header` or `Content` of `AccordionI
 {% endhighlight %}
 {% endtabs %}
 
-Now, run the application to render the following output.
+## Step 6: Running the Application
 
-![.NET MAUI Accordion with items](Images/getting-started/maui-accordion-with-defining-accordion-items.gif)
+Press **F5** to build and run the application. Once compiled, the Accordion will be displayed with the data provided.
+
+Here is the result of the previous codes,
+
+![.NET MAUI Accordion with items](Images/getting-started/maui-accordion-with-defining-accordion-items.png)
 
 You can download accordion sample for .NET MAUI [here](https://github.com/SyncfusionExamples/getting-started-with-.net-maui-accordion).
 
