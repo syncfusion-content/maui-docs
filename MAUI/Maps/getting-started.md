@@ -450,7 +450,7 @@ Add the basic maps elements such as data labels, legend, and tooltip as shown in
 public MainPage()
 {
     InitializeComponent();
-	ViewModel viewModel = new ViewModel();
+    ViewModel viewModel = new ViewModel();
     this.BindingContext = viewModel;
     SfMaps maps = new SfMaps();
     MapShapeLayer layer = new MapShapeLayer();
