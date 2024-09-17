@@ -10,7 +10,7 @@ keywords: .net maui maps, .net maui maps library.
 
 # Getting started with MAUI Maps (SfMaps)
 
-This section explains the steps required to add the maps control with the shape layer and its elements such as data labels, tooltip, markers, and legends. This section covers only basic features needed to know to get started with Syncfusion maps. Follow the steps below to add a basic treeMap view to your project.
+This section explains the steps required to add the maps control with the shape layer and its elements such as data labels, tooltip, markers, and legends. This section covers only basic features needed to know to get started with Syncfusion maps. Follow the steps below to add a basic maps view to your project.
 
 To get start quickly with our .NET MAUI Maps, you can check the below video.
 
@@ -36,7 +36,7 @@ Before proceeding, ensure the following are setup:
 3. Select the project location, type the project name and press enter.
 4. Then choose **Create project.**
 
-## Step 2: Install the Syncfusion MAUI TreeMap NuGet Package
+## Step 2: Install the Syncfusion MAUI Maps NuGet Package
 
 1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
 2. Search for [Syncfusion.Maui.Maps](https://www.nuget.org/packages/Syncfusion.Maui.Maps/) and install the latest version.
