@@ -498,8 +498,5 @@ We have passed the optional parameters such as {{'[canIncludeHiddenColumns](http
 
 ## Upcoming Features   
 
-*	Right to left (Mac and iOS)
-*	Accessibility
 *	Custom selection
 *	Swiping
-*	Row drag and drop

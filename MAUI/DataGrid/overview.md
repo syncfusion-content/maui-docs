@@ -24,6 +24,8 @@ The .NET MAUI DataGrid control is used to display and manipulate data in a tabul
 
 * **Column Drag and Drop** - Interactive support to drag and drop columns.
 
+* **Row drag and drop** - Interaction support to drag and drop rows.
+
 * **Editing** - Interactive support to edit with different column types.
 
 * **Sorting** - Interactively sort one or more columns.
@@ -57,5 +59,11 @@ The .NET MAUI DataGrid control is used to display and manipulate data in a tabul
 * **Unbound column** - It allows adding additional columns that are not bound with data objects from the underlying data source.
 
 * **Unbound Row** - It allows adding rows at the top and bottom of the DataGrid which are not bound with data objects from the underlying data source.
+
+* **Theme** - Use a dark or light theme.
+
+* **Accessibility** - The DataGrid can easily be accessed by screen readers.
+
+* **Right to Left (RTL)** - Right-to-left direction support for users working in RTL languages like Hebrew and Arabic.
 
 N> You can refer to our [MAUI DataGrid](https://www.syncfusion.com/maui-controls/maui-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [MAUI DataGrid example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/DataGrid) to learn about various features and how to easily configure them, with built-in support for creating stunning visual effects.
