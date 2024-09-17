@@ -209,7 +209,7 @@ Content = autocomplete;
 {% endhighlight %}
 {% endtabs %}
 
-N> Set the 'SocialMediaViewModel' instance as the **BindingContext** of your control. This is done to bind the properties of 'SocialMediaViewModel' to the Autocomplete.
+N> Set the BindingContext of your page to an instance of SocialMediaViewModel. This allows you to bind the properties of SocialMediaViewModel to the Autocomplete control.
 
 **Step 3:** Set the **TextMemberPath** and **DisplayMemberPath**.
 

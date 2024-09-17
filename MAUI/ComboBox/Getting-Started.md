@@ -215,7 +215,7 @@ Content = comboBox;
 {% endhighlight %}
 {% endtabs %}
 
-N> Set the SocialMediaViewModel instance as the BindingContext of your control; this is done to bind properties of SocialMediaViewModel to ComboBox.
+N> Set the BindingContext of your page to an instance of SocialMediaViewModel. This allows you to bind the properties of SocialMediaViewModel to the ComboBox control.
 
 **Step 3:** Setting TextMemberPath and DisplayMemberPath.
 
