@@ -9,7 +9,7 @@ keywords: .net maui, .net maui digital gauge, digital gauge, character segments,
 ---
 # Getting Started with the .NET MAUI DigitalGauge
 
-This section explains how to add the [.NET MAUI DigitalGauge](https://www.syncfusion.com/maui-controls/maui-digital-gauge) control. This section covers only the basic features needed to get started with Syncfusion DigitalGauge. Follow the steps below to add a basic scheduler view to your project.
+This section explains how to add the [.NET MAUI DigitalGauge](https://www.syncfusion.com/maui-controls/maui-digital-gauge) control. This section covers only the basic features needed to get started with Syncfusion DigitalGauge. Follow the steps below to add a basic digital gauge view to your project.
 
 ## Prerequisites
 
