@@ -23,6 +23,12 @@ Before proceeding, ensure the following are set up:
 
 ## Step 1: Create a New MAUI Project
 
+### Visual Studio
+
+1. Go to **File > New > Project** and choose the **.NET MAUI App** template.
+2. Name the project and choose a location, then click Next.
+3. Select the .NET framework version and click Create.
+
 ### Visual Studio Code
 
 1. Open the command palette by pressing `Ctrl+Shift+P` and type **.NET:New Project** and enter.
@@ -35,12 +41,6 @@ Before proceeding, ensure the following are set up:
 1.  In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
 2.  Search for [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) and install the latest version.
 3.  Ensure the necessary dependencies are installed correctly, and the project is restored.
-
-## Step 2: Install the Syncfusion MAUI Core NuGet Package
-
-1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
-1. Search for [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) and install the latest version.
-1. Ensure the necessary dependencies are installed correctly, and the project is restored.
 
 ## Step 3: Register the handler
 

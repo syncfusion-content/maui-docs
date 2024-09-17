@@ -106,8 +106,6 @@ namespace BusyIndicatorSample
 {  
 	public partial class MainPage : ContentPage                  
 	{ 
-	    SfEffectsView effectsView;
-
 		public MainPage()   
 		{   
 			InitializeComponent();       

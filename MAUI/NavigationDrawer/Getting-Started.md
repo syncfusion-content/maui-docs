@@ -31,12 +31,6 @@ Before proceeding, ensure the following are set up:
 3. Select the project location, type the project name and press enter.
 4. Then choose **Create project.**
 
-## Step 2: Install the Syncfusion MAUI Core NuGet Package
-
-1.  In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
-2.  Search for [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) and install the latest version.
-3.  Ensure the necessary dependencies are installed correctly, and the project is restored.
-
 ## Step 2: Install the Syncfusion MAUI NavigationDrawer NuGet Package
 
 1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
@@ -55,7 +49,7 @@ using Microsoft.Maui.Controls.Hosting;
 using Microsoft.Maui.Controls.Xaml;
 using Syncfusion.Maui.Core.Hosting;
 
-namespace NavigationDrawerSample
+namespace NavigationDrawerGettingStarted
 {
     public static class MauiProgram
     {
@@ -145,7 +139,7 @@ The default position of the navigation pane is on the left, so change the drawer
 
 using Syncfusion.Maui.NavigationDrawer;
 
-namespace NavigationSample;
+namespace NavigationDrawerGettingStarted;
 
 public partial class NavigationDrawerPage : ContentPage
 {
@@ -216,7 +210,7 @@ Create an ImageButton and set the required image to the `Source` property. To en
 	
 {% highlight c# %} 
 
-namespace NavigationSample;
+namespace NavigationDrawerGettingStarted;
 
 public partial class NavigationDrawerPage : ContentPage
 {
@@ -387,7 +381,7 @@ Create a ListView with items and set it as [DrawerContentView.](https://help.syn
 	
 {% highlight c# %}
 
-namespace NavigationSample;
+namespace NavigationDrawerGettingStarted;
 
 public partial class NavigationDrawerPage : ContentPage
 {
