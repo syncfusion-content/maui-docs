@@ -20,7 +20,7 @@ To get start quickly with our .NET MAUI Rotator, you can check the below video.
 Before proceeding, ensure the following are in place:
 
 1.Install [.NET 7 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/7.0) or later.
-2.Set up a .NET MAUI environment with Visual Studio 2022 (v17.3 or later) or VS Code. For VS Code users, ensure that the .NET MAUI workload is installed and configured as described [here](https://github.com/dotnet/maui/wiki/VS-Code-setup).
+2.Set up a .NET MAUI environment with Visual Studio 2022 (v17.3 or later) or VS Code. For VS Code users, ensure that the .NET MAUI workload is installed and configured as described [here](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-8.0&tabs=visual-studio-code).
 
 ## Step 1: Create a New MAUI Project
 
@@ -150,8 +150,6 @@ We can populate the rotator’s items by using any one of the following ways,
 The below is an simple example for adding rotator items using SfRotatorItem, for more details on populating data click [Here](https://help.syncfusion.com/maui/rotator/Populating-data)
 
 The following code example illustrates to add list of Images in Rotator ,
-
-N> Ensure that the images mentioned in the code snippets are located in the **Resources** folder of your sample project.
 
 {% tabs %}
 
