@@ -14,7 +14,7 @@ The Kanban Board was created from the scratch using the upgraded APIs and perfor
 
 ## API migration
 
-Syncfusion's .NET MAUI Kanban control is compatible with .NET 8.0. To initialize the control, import the Kanban namespace and Initialize [SfKanban]() as shown in the following code sample. 
+To initialize the control, import the Kanban namespace and Initialize [SfKanban]() as shown in the following code sample. 
 
 <table>
 <tr>
@@ -118,7 +118,7 @@ The following table illustrates the API migration for the kanban.
 * **Multiple Category Support:** Assign cards to multiple categories for better organization.
 * **Custom Empty Column Template:** Define a custom template for columns with no cards.
 
-## Upcoming Improvements
+## Upcoming improvements
 
 * **Memory Optimization:** Control loading will be optimized for mobile devices.
 * **Drag UI Enhancements:** The drag UI and invalidation indicator will be improved.

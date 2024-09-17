@@ -85,23 +85,23 @@ The following types are used in [SplineRangeAreaSeries]():
 
 {% highlight xaml %}
 
-    <chart:SfCartesianChart>
+<chart:SfCartesianChart>
 
-        <chart:SfCartesianChart.XAxes>
-            <chart:CategoryAxis/>
-        </chart:SfCartesianChart.XAxes>
+    <chart:SfCartesianChart.XAxes>
+        <chart:CategoryAxis/>
+    </chart:SfCartesianChart.XAxes>
 
-        <chart:SfCartesianChart.YAxes>
-            <chart:NumericalAxis/>
-        </chart:SfCartesianChart.YAxes>  
+    <chart:SfCartesianChart.YAxes>
+        <chart:NumericalAxis/>
+    </chart:SfCartesianChart.YAxes>  
 
-        <chart:SplineRangeAreaSeries ItemsSource="{Binding Data}"
-                                     XBindingPath="XValue"
-                                     High="HighValue"
-                                     Low="LowValue"
-                                     Type="Cardinal"/>
+    <chart:SplineRangeAreaSeries ItemsSource="{Binding Data}"
+                                    XBindingPath="XValue"
+                                    High="HighValue"
+                                    Low="LowValue"
+                                    Type="Cardinal"/>
 
-    </chart:SfCartesianChart>
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
