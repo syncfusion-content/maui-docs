@@ -308,4 +308,4 @@ The following `SfParallaxView` is created as a result of the previous codes.
 
 You can find the complete getting started sample from this [link](https://github.com/SyncfusionExamples/MAUI-Parallax-View-Sample-Demos).
 
-N> [\#11230](https://github.com/dotnet/maui/issues/11230) In Android, when an image's pixel size cannot stretch to fit the Parallax View Source control during loading, it results in a Java.Lang.RuntimeException. It is necessary to use the image as Parallax View Content without pixelation.
+N> [\#11230](https://github.com/dotnet/maui/issues/11230) In Android, when an image's pixel size cannot stretch to fit the Parallax View Source control during loading, it results in a Java.Lang.RuntimeException. It is necessary to use the image as Parallax View Content without degradation.
