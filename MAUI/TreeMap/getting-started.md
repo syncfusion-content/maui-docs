@@ -11,6 +11,11 @@ documentation: ug
 
 This section provides a quick overview of how to get started with the [.NET MAUI SfTreeMap](https://www.syncfusion.com/maui-controls/maui-tree-map) for .NET MAUI and a walk-through to configure the .NET MAUI TreeMap in a real-time scenario. Follow the steps below to add .NET MAUI TreeMap control to your project.
 
+To get start quickly with our .NET MAUI TreeMap, you can check the below video.
+
+{% youtube
+"youtube:https://youtu.be/ZqorS_FjHxg?si=ojSLI-inAq9_1-aI"%}
+
 ## Prerequisites
 
 Before proceeding, ensure the following are setup:
@@ -40,7 +45,7 @@ Before proceeding, ensure the following are setup:
 
 ## Step 3: Register the handler
 
-The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion core.
+The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion controls of .NET MAUI. In the **MauiProgram.cs** file, register the handler for Syncfusion core.
 
 {% tabs %}
 {% highlight C# tabtitle="MauiProgram.cs" hl_lines="1 8" %}
@@ -69,7 +74,7 @@ public static class MauiProgram
 
 ## Step 4: Add .NET MAUI TreeMap control
 
-1. To initialize the control, import the .NET MAUI TreeMap namespace into your code.
+1. To initialize the control, import the `Syncfusion.Maui.TreeMap` namespace into your code.
 2. Initialize [SfTreeMap](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html).
 
 {% tabs %}

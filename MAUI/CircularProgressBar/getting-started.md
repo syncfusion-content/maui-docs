@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting started with .NET MAUI Circular ProgressBar
 
-This section explains the steps required to add the circular progress bar control with the progress and its customizable elements such as indeterminate, segment, progress fill, and track fill. This section covers only the basic features needed to know and gets started with the Syncfusion circular progress bar. Follow the steps below to add a basic circular progress bar to your project.
+This section explains the steps required to add the circular progress bar control with the progress and its customizable elements such as indeterminate, segment, progress fill, and track fill. This section covers only the basic features needed to know and gets started with the Syncfusion circular progress bar. Follow the steps below to add a .NET MAUI Circular progress bar to your project.
 
 To get start quickly with our .NET MAUI Circular ProgressBar, check the following video.
 
@@ -22,7 +22,7 @@ Before proceeding, ensure the following are set up:
 1. Install [.NET 7 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/7.0) or later is installed.
 2. Set up a .NET MAUI environment with Visual Studio 2022 (v17.3 or later) or VS Code. For VS Code users, ensure that the .NET MAUI workload is installed and configured as described [here.](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-8.0&tabs=visual-studio-code)
 
-## Step 1: Create a New MAUI Project
+## Step 1: Create a New .NET MAUI Project
 
 ### Visual Studio
 
@@ -45,7 +45,7 @@ Before proceeding, ensure the following are set up:
 
 ## Step 3: Register the handler
 
-The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion core.
+The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion controls of .NET MAUI. In the **MauiProgram.cs** file, register the handler for Syncfusion core.
 
 {% tabs %}
 {% highlight C# tabtitle="MauiProgram.cs" hl_lines="1 10" %}
@@ -75,9 +75,10 @@ namespace GettingStarted
 {% endhighlight %}
 {% endtabs %}
 
-## Step 4: Add a Basic Circular ProgressBar view.
+## Step 4: Add .NET MAUI Circular ProgressBar control
 
-Add the following namespace.
+1. To initialize the control, import the `Syncfusion.Maui.ProgressBar` namespace into your code.
+2. Initialize [SfCircularProgressBar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfCircularProgressBar.html).
 
 {% tabs %}
 

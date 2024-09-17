@@ -12,13 +12,18 @@ keywords: .net maui imageEditor, .net maui image editing, image view maui.
 
 This section explains the steps to create and load an image to the [.Net MAUI ImageEditor(SfImageEditor)](https://www.syncfusion.com/maui-controls/maui-image-editor) control. Follow the steps below to add .NET MAUI ImageEditor control to your project.
 
+To get start quickly with our .NET MAUI ImageEditor, you can check the below video.
+
+{% youtube
+"youtube:https://youtu.be/Gkkh52xSehM?si=_WKWcnGgob0DofXe"%}
+
 ## Prerequisites
 
 Before proceeding, ensure the following are setup:
 1. Install [.NET 7 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/7.0) or later is installed.
 2. Set up a .NET MAUI environment with Visual Studio 2022 (v17.3 or later) or VS Code. For VS Code users, ensure that the .NET MAUI workload is installed and configured as described [here.](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-8.0&tabs=visual-studio-code)
 
-## Step 1: Create a New MAUI Project
+## Step 1: Create a New .NET MAUI Project
 
 ### Visual Studio
 
@@ -41,7 +46,7 @@ Before proceeding, ensure the following are setup:
 
 ## Step 3: Register the handler
 
-The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion .NET MAUI controls. In the **MauiProgram.cs **file, register the handler for Syncfusion core.
+The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion .NET MAUI controls. In the **MauiProgram.cs** file, register the handler for Syncfusion core.
 
 {% tabs %}
 {% highlight C# tabtitle="MauiProgram.cs" hl_lines="1 10" %}
@@ -74,7 +79,7 @@ namespace GettingStarted
 
 ## Step 4: Add .NET MAUI ImageEditor
 
-1. To initialize the control, import the **ImageEditor** namespace into your code.
+1. To initialize the control, import the `Syncfusion.Maui.ImageEditor` namespace into your code.
 2. Initialize [SfImageEditor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html).
 
 {% tabs %}
