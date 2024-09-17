@@ -76,7 +76,7 @@ namespace Rotator
 
 {% endhighlight %} 
 
-## Step 4:  Add a Basic Rotator
+## Step 4: Add a Basic Rotator
 
 Step 1: Add the NuGet to the project as discussed in the above reference section. 
 
