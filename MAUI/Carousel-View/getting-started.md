@@ -7,17 +7,45 @@ control: Carousel
 documentation: ug
 ---
 
-# Getting Started with .NET MAUI Carousel (SfCarousel)
+# Getting Started with .NET MAUI Carousel
 
-This section explains how to add the Carousel control and bind data to it. This section covers only the basic features needed to get started with the Syncfusion [.NET MAUI Carousel](https://www.syncfusion.com/maui-controls/maui-carousel) control.
+This section guides you through setting up and configuring a [Carousel](https://www.syncfusion.com/maui-controls/maui-carousel) in your .NET MAUI application. Follow the steps below to add a basic Carousel to your project.
 
-## Adding a .NET MAUI Carousel reference
+To get start quickly with our .NET MAUI Carousel, you can check the below video.
 
-The Syncfusion .NET MAUI controls are available in [Nuget.org](https://www.nuget.org/). To add [.NET MAUI Carousel](https://www.syncfusion.com/maui-controls/maui-carousel) to your project, open the NuGet package manager in Visual Studio, search for [`Syncfusion.Maui.Carousel`](https://www.nuget.org/packages/Syncfusion.Maui.Carousel), and install it.
+{% youtube "https://www.youtube.com/watch?v=pFEqZKlLsi4" %}
 
-## Handler registration 
+### Prerequisites
 
-In the MauiProgram.cs file, register the handler for the Syncfusion core.
+Before proceeding, ensure the following are in place:
+
+1. Install [.NET 7 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/7.0) or later.
+2. Set up a .NET MAUI environment with Visual Studio 2022 (v17.3 or later) or VS Code. For VS Code users, ensure that the .NET MAUI workload is installed and configured as described [here](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-8.0&tabs=visual-studio-code).
+
+## Step 1: Create a New MAUI Project
+
+### Visual Studio
+
+1.  Go to **File > New > Project** and choose the **.NET MAUI App** template.
+2.  Name the project and choose a location, then click **Next**.
+3.  Select the .NET framework version and click **Create**.
+
+### Visual Studio Code
+
+1.  Open the command palette by pressing `Ctrl+Shift+P`` and type **.NET:New Project** and enter.
+2.  Choose the **.NET MAUI App** template.
+3.  Select the project location, type the project name and press enter.
+4.  Then choose **Create project**
+
+## Step 2: Install the Syncfusion MAUI Inputs NuGet Package
+
+1. In **Solution Explorer**, right-click the project and choose **Manage NuGet Packages**.
+2. Search for [Syncfusion.Maui.Carousel](https://www.nuget.org/packages/Syncfusion.Maui.Carousel) and install the latest version.
+Ensure the necessary dependencies are installed correctly, and the project is restored.
+
+## Step 3: Register the handler
+
+ [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) NuGet is a dependent package for all Syncfusion controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion core.
 
 {% highlight c# hl_lines="6 17" %}
 using Microsoft.Maui;
@@ -49,7 +77,7 @@ namespace CarouselSample
 
 {% endhighlight %} 
 
-## Adding the .NET MAUI Carousel control
+## Step 4: Add a Basic Carousel
 
 Step 1: Add the NuGet to the project as discussed in the above reference section. 
 
@@ -68,9 +96,7 @@ Step 2: Add the namespace as shown in the following code sample.
 {% endhighlight %}
 {% endtabs %}
 
-## Initialize Carousel
-
-Now, add the [SfCarousel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html) control with a required optimal name using the included namespace.
+Step 3: Add the [SfCarousel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html) control with a required optimal name using the included namespace.
 
 {% tabs %}
 
@@ -89,35 +115,60 @@ this.Content = carousel;
 
 {% endtabs %}
 
-## Add Carousel Items
+## Step 5: Add Carousel Items
 
 We can populate the carousel's items by using any one of the following ways,
 
 * Through [SfCarouselItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarouselItem.html)
 
-* Through [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_ItemTemplate)
+* Through Model
 
-The below is an simple example for adding Carousel items using SfCarouselItem, for more details on populating data click [Here](https://help.syncfusion.com/maui/carousel-view/populating-data)
+The below is a simple example for adding Carousel items through Model, for more details on populating data click [Here](https://help.syncfusion.com/maui/carousel-view/populating-data)
 
 The following code example illustrates how to create a list of Images in Carousel,
 
 {% highlight C# %}
 
+// Model
+
+public class CarouselModel
+{
+    public CarouselModel(string imageString)
+    {
+        Image = imageString;
+    }
+    private string _image;
+
+    public string Image
+    {
+        get { return _image; }
+        set { _image = value; }
+    }
+}
+
+//View Model
+
 public class CarouselViewModel
 {
-    public ObservableCollection<SfCarouselItem> CarouselItems;
     public CarouselViewModel()
     {
-        CarouselItems = new ObservableCollection<SfCarouselItem>();
-        CarouselItems.Add(new SfCarouselItem() { ImageName = "carousel_person1.png" });
-        CarouselItems.Add(new SfCarouselItem() { ImageName = "carousel_person2.png" });
-        CarouselItems.Add(new SfCarouselItem() { ImageName = "carousel_person3.png" });
-        CarouselItems.Add(new SfCarouselItem() { ImageName = "carousel_person4.png" });
-        CarouselItems.Add(new SfCarouselItem() { ImageName = "carousel_person5.png" });
+        ImageCollection.Add(new CarouselModel("carousel_person1.png"));
+        ImageCollection.Add(new CarouselModel("carousel_person2.png"));
+        ImageCollection.Add(new CarouselModel("carousel_person3.png"));
+        ImageCollection.Add(new CarouselModel("carousel_person4.png"));
+        ImageCollection.Add(new CarouselModel("carousel_person5.png"));
+    }
+    private List<CarouselModel> imageCollection = new List<CarouselModel>();
+    public List<CarouselModel> ImageCollection
+    {
+        get { return imageCollection; }
+        set { imageCollection = value; }
     }
 }
 
 {% endhighlight %}
+
+N> The images used in the above view model should be added in the Resources folder of the Application.
 
 The following code example illustrates how to add the collection in Carousel,
 
@@ -155,9 +206,9 @@ namespace CarouselSample
             InitializeComponent();
 
             CarouselViewModel carouselViewModel = new CarouselViewModel();
-            SfCarousel carousel = new SfCarousel();
+            this.BindingContext = carouselViewModel;
 
-            carousel.BindingContext = carouselViewModel;
+            SfCarousel carousel = new SfCarousel();
             carousel.SetBinding(SfCarousel.ItemsSourceProperty, "CarouselItems");
 
             this.Content = carousel;
@@ -169,7 +220,7 @@ namespace CarouselSample
 
 {% endtabs %}
 
-## Setting the height and width of the carousel item
+## Step 6: Setting the height and width of the carousel item
 
 [ItemHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_ItemHeight) and [ItemWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_ItemWidth) properties are used to change the height and width of carouselItem in carousel panel.
 
@@ -198,7 +249,7 @@ carousel.SetBinding(SfCarousel.ItemsSourceProperty, "CarouselItems");
 
 {% endtabs %}
 
-## Set Desire Item to be Selected
+## Step 7: Set Desire Item to be Selected
 
 We can bring particular item to the center of the screen using [SelectedIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_SelectedIndex) property in [SfCarousel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html) control.
 
@@ -233,6 +284,6 @@ N> The [SelectedIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carou
 
 ![OverView image for Carousel](images/gettingstarted.png)
 
-N> You can find the complete getting started sample from this [link.](https://github.com/SyncfusionExamples/Getting-Started-with-.NET-MAUI-SfCarousel)
+N> You can find the complete getting started sample from this [link](https://github.com/SyncfusionExamples/Getting-Started-with-.NET-MAUI-SfCarousel).
 
 N> You can also explore our [.NET MAUI Carousel Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/Carousel) that shows you how to render and configure the Carousel in .NET MAUI.

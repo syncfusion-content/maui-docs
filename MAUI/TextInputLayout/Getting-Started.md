@@ -8,25 +8,43 @@ documentation: ug
 keywords: .net maui text input layout, syncfusion text input layout, text input layout maui, .net maui hint label.
 ---
 
-# Getting Started with .NET MAUI TextInputLayout (SfTextInputLayout)
+# Getting Started with .NET MAUI TextInputLayout
 
-This section explains the steps required to configure the [.NET MAUI TextInputLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html) (SfTextInputLayout) control with floating label.
+This section guides you through setting up and configuring a [TextInputLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html) in your .NET MAUI application. Follow the steps below to add a basic TextInputLayout to your project.
 
 To get start quickly with our .NET MAUI TextInputLayout, you can check the below video.
 
 {% youtube "https://www.youtube.com/watch?v=VKo3vNBzNbw" %}
 
-## Creating an application using the .NET MAUI Text Input Layout
+## Prerequisites
 
-This section explains the steps required to work with the [SfTextInputLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html) control for .NET MAUI.
+Before proceeding, ensure the following are in place:
 
-## Adding .NET MAUI Text Input Layout reference
+1.Install [.NET 7 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/7.0) or later.
+2.Set up a .NET MAUI environment with Visual Studio 2022 (v17.3 or later) or VS Code. For VS Code users, ensure that the .NET MAUI workload is installed and configured as described [here](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-8.0&tabs=visual-studio-code).
 
-The Syncfusion .NET MAUI controls are available in the [Nuget.org](https://www.nuget.org/). To add [.NET MAUI Text Input Layout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html) to your project, open the NuGet package manager in Visual Studio, search for [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) and then install it.
+## Step 1: Create a New MAUI Project
 
-## Handler registration 
+### Visual Studio
+1.Go to **File > New > Project** and choose the **.NET MAUI App** template.
+2.Name the project and choose a location, then click **Next**.
+3.Select the .NET framework version and click **Create**.
 
- In the MauiProgram.cs file, register the handler for Syncfusion core.
+### Visual Studio Code
+1.Open the command palette by pressing `Ctrl+Shift+P` and type **.NET:New Project** and enter.
+2.Choose the **.NET MAUI** App template.
+3.Select the project location, type the project name and press enter.
+4.Then choose **Create project.
+
+## Step 2: Install the Syncfusion MAUI TextInputLayout NuGet Package
+
+1.In **Solution Explorer**, right-click the project and choose **Manage NuGet Packages**.
+2.Search for [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) and install the latest version.
+3.Ensure the necessary dependencies are installed correctly, and the project is restored.
+
+## Step 3: Register the Handler
+
+[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) nuget is a dependent package for all Syncfusion controls of .NET MAUI. In the **MauiProgram.cs file**, register the handler for Syncfusion core.
 
 {% highlight c# hl_lines="6 17" %}   
 using Microsoft.Maui;
@@ -58,7 +76,11 @@ namespace TextInputLayoutSample
 
 {% endhighlight %}
 
-## Adding a namespace
+## Step 4: Add a Basic TextInputLayout
+
+Step 1: Add the NuGet to the project as discussed in the above reference section.
+
+Step 2: Add the namespace as shown in the following code sample.
 
 Add the following namespace to add [.NET MAUI Text Input Layout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html).
 
@@ -80,7 +102,9 @@ Add the following namespace to add [.NET MAUI Text Input Layout](https://help.sy
 
 ### Adding the .NET MAUI Text Input Layout control
 
-Add any input view control such as [`Entry`](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/entry) and [`Editor`](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/editor), [`SfAutocomplete`](https://help.syncfusion.com/maui/autocomplete/overview), [`SfComboBox`](https://help.syncfusion.com/maui/combobox/overview) controls and add hint label (floating label).
+Add any input view control such as [Entry](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/entry) and [Editor](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/editor), [SfAutocomplete](https://help.syncfusion.com/maui/autocomplete/overview), [SfComboBox](https://help.syncfusion.com/maui/combobox/overview) controls and add hint label (floating label).
+
+## Initialize TextInputLayout
 
 {% tabs %} 
 

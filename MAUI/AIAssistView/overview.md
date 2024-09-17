@@ -9,11 +9,11 @@ documentation: ug
 
 # Overview of .NET MAUI AI AssistView (SfAIAssistView)
 
-The Syncfusion .NET MAUI AI AssistView control is used to enhance interaction between users and AI services. It offers a user-friendly interface for creating intelligent and responsive applications with AI services, allowing users to customize the appearance easily.
+The Syncfusion .NET MAUI AI AssistView control is a component for integrating AI services into .NET MAUI apps. It provides a user-friendly interface, making it easier for developers to create applications that interact with AI. AI AssistView enables developers can customize both appearance and functionality, allowing them to match their app's design and requirements. It simplifies the process of building intelligent, responsive applications by leveraging AI to improve the user experience.
 
 ## Key features
 
-* `Item types` : Support for various item types such as text, image, hyperlink, and card items.
-* `Control template` : Offers a customizable control template to display any view or control.
-* `Suggestions` : Offers quick options to choose from and expedite the conversation flow.
-* `Styling` : Allows to customize the appearance of request and response items.
+* `Content types` : Supports displaying various formats, such as text, images, hyperlinks, and cards, enabling a rich and dynamic user experience.
+* `Control template` : Allows you to customize the control's layout by defining your own templates for displaying any type of view or control.
+* `Suggestions` : Provides quick response options to help users speed up conversations or interactions.
+* `Styling` : Allows to customize the appearance of the AI AssistView control, including all types of items, editor, and header, through styling options.

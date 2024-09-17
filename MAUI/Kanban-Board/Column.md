@@ -31,7 +31,6 @@ kanban.MaximumColumnWidth = 340;
 
 {% endtabs %}
 
-
 You can also define the exact column width using [`ColumnWidth`]() property of [`SfKanban`]().
 
 {% tabs %}
@@ -72,21 +71,21 @@ kanban.ColumnMappingPath = "ID";
 
 {% endtabs %}
 
-### Multiple category for a column
+### Category for a column
 
-More than one category can be mapped to a column by assigning multiple values to [Categories]() collection of [`KanbanColumn`](). For e.g., you can map "In progress, Validate" types under "In progress" column.
+You can assign a specific category to a column by setting the [Categories]() property of the [`KanbanColumn`](). This will display cards with the specified category under the corresponding column. For example, to map the "In Progress" category to the "In Progress" column
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<kanban:KanbanColumn x:Name="progressColumn" Categories="In Progress,Validated" />
+<kanban:KanbanColumn x:Name="progressColumn" Categories="In Progress" />
 
 {% endhighlight %}
 
 {% highlight C# %} 
 
-progressColumn.Categories = new List<object>() { "In Progress", "Validated" };
+progressColumn.Categories = new List<object>() { "In Progress" };
 
 {% endhighlight %}
 
@@ -103,7 +102,7 @@ Header shows the category [`Title`](), items count, min and max informations of 
 <kanban:SfKanban.HeaderTemplate >
     <DataTemplate>
         <StackLayout WidthRequest="300" HeightRequest="40"  BackgroundColor="Silver">
-            <Label Margin="10" Text="{Binding Path=Title}" TextColor="Purple" HorizontalOptions="Start" />
+            <Label Margin="10" Text="{Binding Title}" TextColor="Purple" HorizontalOptions="Start" />
         </StackLayout>
     </DataTemplate>
 </kanban:SfKanban.HeaderTemplate>
@@ -112,8 +111,10 @@ Header shows the category [`Title`](), items count, min and max informations of 
 
 {% highlight C# %} 
 
-    var headerTemplate = new DataTemplate(() => {
-    StackLayout root = new StackLayout() { 
+var headerTemplate = new DataTemplate(() => 
+{
+    StackLayout root = new StackLayout()
+    { 
         WidthRequest = 300, 
         HeightRequest = 40, 
         BackgroundColor = Color.Silver 
@@ -125,14 +126,12 @@ Header shows the category [`Title`](), items count, min and max informations of 
     label.HorizontalOptions = LayoutOptions.Start; 
     root.Children.Add(label);
     return root;
-    });
-    kanban.HeaderTemplate = headerTemplate;
+});
+kanban.HeaderTemplate = headerTemplate;
 
 {% endhighlight %}
 
 {% endtabs %}
-
-The following output is displayed as a result of the above code example.
 
 ## Expand/Collapse Column
 
@@ -162,8 +161,6 @@ kanban.Columns.Add(column2);
 {% endhighlight %}
 
 {% endtabs %}
-
-The following output is displayed as a result of the above code example.
 
 ## Enable/Disable Drag & Drop 
 
@@ -210,8 +207,6 @@ progressColumn.AllowDrop = false;
 {% endhighlight %}
 
 {% endtabs %}
-
-The following output demonstrates the above example code.
 
 ## Items Count
 
@@ -265,19 +260,19 @@ todoColumn.MaximumLimit = 1;
 
 {% highlight C# %}
 
-     KanbanColumn todoColumn = new KanbanColumn();
-     todoColumn.Title = "To Do";
-     todoColumn.MaximumLimit = 5;
-     todoColumn.MinimumLimit = 3;
-     KanbanErrorBarSettings kanbanErrorBarSettings = new KanbanErrorBarSettings()
-     {
-         Fill = Colors.Green,
-         MaxValidationFill = Colors.Red,
-         MinValidationFill = Colors.Orange,
-         Height = 4,
-     };
-     todoColumn.ErrorBarSettings = kanbanErrorBarSettings;
-     kanban.Columns.Add(todoColumn);
+KanbanColumn todoColumn = new KanbanColumn();
+todoColumn.Title = "To Do";
+todoColumn.MaximumLimit = 5;
+todoColumn.MinimumLimit = 3;
+KanbanErrorBarSettings kanbanErrorBarSettings = new KanbanErrorBarSettings()
+{
+    Fill = Colors.Green,
+    MaxValidationFill = Colors.Red,
+    MinValidationFill = Colors.Orange,
+    Height = 4,
+};
+todoColumn.ErrorBarSettings = kanbanErrorBarSettings;
+kanban.Columns.Add(todoColumn);
 
 {% endhighlight %}
 
