@@ -7,17 +7,43 @@ control: Rotator
 documentation: ug
 ---
 
-# Getting Started with .NET MAUI Rotator (SfRotator)
+# Getting Started with .NET MAUI Rotator
 
-This section explains how to add the Rotator control and bind data to it. This section covers only the basic features needed to get started with the Syncfusion [`.NET MAUI Rotator`](https://www.syncfusion.com/maui-controls/maui-rotator) control.
+This section guides you through setting up and configuring a [Rotator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html?tabs=tabid-1) in your .NET MAUI application. Follow the steps below to add a basic Rotator to your project.
 
-## Adding a .NET MAUI Rotator reference
+To get start quickly with our .NET MAUI Rotator, you can check the below video.
 
-The Syncfusion .NET MAUI controls are available in [Nuget.org](https://www.nuget.org/). To add [`.NET MAUI Rotator`](https://www.syncfusion.com/maui-controls/maui-rotator) to your project, open the NuGet package manager in Visual Studio, search for [`Syncfusion.Maui.Rotator`](https://www.nuget.org/packages/Syncfusion.Maui.Rotator), and install it.
+{% youtube "https://www.youtube.com/watch?v=EjyvLta5u4o" %}
 
-## Handler registration 
+## Prerequisites
 
-In the MauiProgram.cs file, register the handler for the Syncfusion core.
+Before proceeding, ensure the following are in place:
+
+1.Install [.NET 7 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/7.0) or later.
+2.Set up a .NET MAUI environment with Visual Studio 2022 (v17.3 or later) or VS Code. For VS Code users, ensure that the .NET MAUI workload is installed and configured as described [here](https://github.com/dotnet/maui/wiki/VS-Code-setup).
+
+## Step 1: Create a New MAUI Project
+
+### Visual Studio
+1.Go to **File > New > Project** and choose the **.NET MAUI App** template.
+2.Name the project and choose a location, then click **Next**.
+3.Select the .NET framework version and click **Create**.
+
+### Visual Studio Code
+1.Open the command palette by pressing `Ctrl+Shift+P` and type **.NET:New Project** and enter.
+2.Choose the **.NET MAUI** App template.
+3.Select the project location, type the project name and press enter.
+4.Then choose **Create project.
+
+## Step 2: Install the Syncfusion MAUI Rotator NuGet Package
+
+1.In **Solution Explorer**, right-click the project and choose **Manage NuGet Packages**.
+2.Search for [Syncfusion.Maui.Rotator](https://www.nuget.org/packages/Syncfusion.Maui.Rotator) and install the latest version.
+3.Ensure the necessary dependencies are installed correctly, and the project is restored.
+
+## Step 3: Register the Handler
+
+[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) nuget is a dependent package for all Syncfusion controls of .NET MAUI. In the **MauiProgram.cs file**, register the handler for Syncfusion core.
 
 {% highlight c# hl_lines="6 17" %}
 
@@ -50,7 +76,7 @@ namespace Rotator
 
 {% endhighlight %} 
 
-## Adding the .NET MAUI Rotator control
+## Step 4: Add a Basic Rotator
 
 Step 1: Add the NuGet to the project as discussed in the above reference section. 
 
@@ -72,7 +98,7 @@ Step 2: Add the namespace as shown in the following code sample.
 
 ## Create a Simple SfRotator 
 
-The [`SfRotator`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html?tabs=tabid-1)control is configured entirely in C# code or by using XAML markup.
+The [SfRotator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html?tabs=tabid-1)control is configured entirely in C# code or by using XAML markup.
 
 {% tabs %}
 
@@ -117,13 +143,15 @@ public partial class RotatorControlPage : ContentPage
 
 We can populate the rotator’s items by using any one of the following ways,
 
-* Through [`SfRotatorItem`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotatorItem.html)
+* Through [SfRotatorItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotatorItem.html)
 
-* Through [`ItemTemplate`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html#Syncfusion_Maui_Rotator_SfRotator_ItemTemplate)
+* Through [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html#Syncfusion_Maui_Rotator_SfRotator_ItemTemplate)
 
 The below is an simple example for adding rotator items using SfRotatorItem, for more details on populating data click [Here](https://help.syncfusion.com/maui/rotator/Populating-data)
 
 The following code example illustrates to add list of Images in Rotator ,
+
+N> Ensure that the images mentioned in the code snippets are located in the **Resources** folder of your sample project.
 
 {% tabs %}
 
@@ -159,10 +187,12 @@ namespace Rotator
 {% endtabs %}
 
 ![Rotator Items](images/RotatorItems.png)
+
+N> Ensure that the images mentioned in the code snippets are located in the **Resources** folder of your sample project.
  
 ## Setting Navigation Mode
 
-[`SfRotator`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html?tabs=tabid-1) provides option to display the navigating items either in Thumbnail or Dots mode. The navigation mode for navigating the items can be decided using [`NavigationStripMode`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html#Syncfusion_Maui_Rotator_SfRotator_NavigationStripMode) property.
+[SfRotator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html?tabs=tabid-1) provides option to display the navigating items either in Thumbnail or Dots mode. The navigation mode for navigating the items can be decided using [NavigationStripMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html#Syncfusion_Maui_Rotator_SfRotator_NavigationStripMode) property.
 
 {% tabs %}
 
@@ -255,7 +285,7 @@ namespace Rotator
 
 ## Customizing Position
 
-The placement position of navigation strip items such as [`Thumbnail`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Rotator.NavigationStripMode.html#Syncfusion_Maui_Core_Rotator_NavigationStripMode_Thumbnail) or [`Dots`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Rotator.NavigationStripMode.html#Syncfusion_Maui_Core_Rotator_NavigationStripMode_Dots) can be customized in [`SfRotator`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html?tabs=tabid-1). This can be specified using [`NavigationStripMode`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html#Syncfusion_Maui_Rotator_SfRotator_NavigationStripMode) property.   
+The placement position of navigation strip items such as [Thumbnail](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Rotator.NavigationStripMode.html#Syncfusion_Maui_Core_Rotator_NavigationStripMode_Thumbnail) or [Dots](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Rotator.NavigationStripMode.html#Syncfusion_Maui_Core_Rotator_NavigationStripMode_Dots) can be customized in [SfRotator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html?tabs=tabid-1). This can be specified using [NavigationStripMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html#Syncfusion_Maui_Rotator_SfRotator_NavigationStripMode) property.   
 
 {% tabs %}
 
